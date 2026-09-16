@@ -44,8 +44,23 @@ writing any code.
 
 ## Workflow
 
+Work happens in a git worktree, one per branch, never in the primary checkout.
+Worktrees keep an in-progress encoding from colliding with a review of someone
+else's, and they matter more here than in most repositories because a Lean
+build is slow enough that switching branches in place means rebuilding.
+
 ```sh
-lake exe cache get                        # first time only
+scripts/new-worktree.sh my-branch         # worktree + Mathlib cache, ready to build
+cd ../testimony-worktrees/my-branch
+```
+
+`.lake/` is gitignored, so a fresh worktree does not inherit it from the
+checkout you branched from. The script runs `lake exe cache get` for you;
+skipping it means the first build compiles Mathlib from source, which takes
+hours rather than minutes.
+
+```sh
+lake exe cache get                        # what the script runs for you
 lake build                                # tier 1
 lake lint                                 # tier 2
 lake exe axiom-audit                      # tier 3

@@ -21,6 +21,20 @@ Before writing Lean, read the [style guide](docs/src/style-guide.md) and
 4. **No collapsing relation types.**
 5. **Respectful discourse.** Debate the encoding, not the person.
 
+## Work in a worktree
+
+Every change is made on a branch in its own git worktree, never in the primary
+checkout:
+
+```sh
+scripts/new-worktree.sh my-branch
+cd ../testimony-worktrees/my-branch
+```
+
+The script creates the worktree *and* runs `lake exe cache get` in it. That
+second step is not optional: `.lake/` is gitignored, so a new worktree does not
+inherit it, and without the cache the first build compiles Mathlib from source.
+
 ## Before opening a pull request
 
 ```sh
