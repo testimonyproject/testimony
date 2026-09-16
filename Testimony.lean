@@ -5,3 +5,4 @@ import Testimony.Provenance
 import Testimony.Intertext
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
+import Testimony.Arguments.BornOfAVirgin

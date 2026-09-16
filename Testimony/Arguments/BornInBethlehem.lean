@@ -9,7 +9,7 @@ interpretation and its premise package. A rival (non-predictive) reading and
 the assumption manifest are the next steps of Phase 1.
 -/
 
-namespace Testimony.Arguments
+namespace Testimony.Arguments.BornInBethlehem
 
 open Testimony
 
@@ -62,4 +62,4 @@ def christianPackage : PremisePackage :=
 
 def jesus : Person := ⟨"Jesus of Nazareth"⟩
 
-end Testimony.Arguments
+end Testimony.Arguments.BornInBethlehem
