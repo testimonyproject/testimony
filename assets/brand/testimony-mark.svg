@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f3a5f"/>
+      <stop offset="100%" stop-color="#0d1b2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#ink)"/>
+
+  <!-- Turnstile ⊢ : the mark of formal derivation, drawn as a scroll-rod -->
+  <g stroke="#e8c87a" stroke-width="26" stroke-linecap="round" fill="none">
+    <!-- vertical bar -->
+    <line x1="150" y1="128" x2="150" y2="384"/>
+    <!-- horizontal bar -->
+    <line x1="150" y1="256" x2="374" y2="256"/>
+  </g>
+
+  <!-- Scroll finials on the vertical: testimony as written witness -->
+  <circle cx="150" cy="128" r="22" fill="#e8c87a"/>
+  <circle cx="150" cy="384" r="22" fill="#e8c87a"/>
+
+  <!-- QED tombstone: the proof completed, set at the end of the entailment -->
+  <rect x="392" y="230" width="52" height="52" rx="6" fill="#f2f2f0"/>
+</svg>
