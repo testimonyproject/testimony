@@ -11,7 +11,13 @@
   "postCreateCommand": "lake exe cache get",
   "customizations": {
     "vscode": {
-      "extensions": ["leanprover.lean4"]
+      "extensions": [
+        "leanprover.lean4",
+        "anthropic.claude-code",
+        "ms-azuretools.vscode-containers",
+        "github.vscode-github-actions",
+        "tamasfe.even-better-toml"
+      ]
     }
   }
 }
