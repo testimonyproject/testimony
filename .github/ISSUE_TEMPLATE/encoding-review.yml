@@ -1,0 +1,67 @@
+name: Encoding review
+description: Challenge whether a formalisation faithfully represents the argument it claims to. No Lean required.
+title: "[Encoding] "
+labels: ["encoding-review", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is the contribution the project most needs.** A subtly wrong
+        formalisation is worse than none, and no proof assistant can catch it —
+        only a reader who knows the text and the literature can.
+
+        You do not need to read or write Lean. Describe the problem in prose
+        and cite your sources; a maintainer will pair with you on the encoding.
+
+  - type: input
+    id: location
+    attributes:
+      label: Which encoding?
+      description: Argument module, premise name, or a link to the line on the docs site.
+      placeholder: "Testimony/Arguments/BornOfAVirgin.lean — premise `almahMeansVirgin`"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem?
+      options:
+        - The premise misstates what the cited source says
+        - The relation type is wrong (e.g. quotation encoded as prediction)
+        - A rival interpretation is missing or misrepresented
+        - The confidence or classification is wrong
+        - A premise is doing hidden work that is not stated
+        - The citation is wrong, missing, or unverifiable
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong, and what would be right?
+      description: Quote the encoding if you can, then say what it should be instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: |
+        Commentaries, lexica, journal articles, critical editions. Page or
+        section numbers where you have them. Sources that *disagree* with your
+        position are welcome and useful — the library encodes disputes rather
+        than resolving them.
+    validations:
+      required: true
+
+  - type: input
+    id: tradition
+    attributes:
+      label: Which interpretive tradition are you arguing from?
+      description: |
+        Optional, and not a loyalty test. It helps the encoding attribute the
+        reading correctly rather than presenting it as neutral.
+      placeholder: "Critical scholarship / Rabbinic / Reformed / none in particular"

@@ -1,0 +1,46 @@
+name: Lean or tooling issue
+description: Types, proofs, tactics, build, CI, docs generation. No theology required.
+title: "[Lean] "
+labels: ["lean", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You can treat the theological content as opaque data. The engineering
+        problems — typed scripture references, provenance tracking, assumption
+        manifests, axiom auditing, generated documentation — stand on their own.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Type or API design
+        - Proof or tactic
+        - Tooling (bibgen, argtex, linter, axiom audit)
+        - Build, lake, or CI
+        - Documentation generation
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is the problem?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Commands you ran and what happened. Paste errors verbatim.
+      render: shell
+
+  - type: input
+    id: versions
+    attributes:
+      label: Toolchain
+      description: Output of `lean --version`, and your OS.
+      placeholder: "Lean 4.33.1, macOS 26.5"

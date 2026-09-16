@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://testimonyproject.info/
+    about: Architecture, scope and limits, style guide, and the bibliography.
+  - name: Scope and limits
+    url: https://testimonyproject.info/scope-and-limits.html
+    about: What a proof assistant can and cannot establish here. Worth reading before filing.
