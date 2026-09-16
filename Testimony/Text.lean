@@ -15,8 +15,12 @@ inductive Book
   | psalms | isaiah | jeremiah | ezekiel | daniel
   | hosea | micah | zechariah | malachi
   | matthew | mark | luke | john | acts
-  | romans | firstCorinthians | galatians | hebrews | revelation
-  -- …to be completed to the full corpus
+  | romans | firstCorinthians | secondCorinthians | galatians | ephesians
+  | philippians | colossians | firstThessalonians | secondThessalonians
+  | firstTimothy | secondTimothy | titus | philemon | hebrews | james
+  | firstPeter | secondPeter | firstJohn | secondJohn | thirdJohn | jude
+  | revelation
+  -- The New Testament is complete; the Old Testament is still partial.
 deriving Repr, DecidableEq
 
 /-- Canonical boundaries differ by tradition. Results are always relative to a
