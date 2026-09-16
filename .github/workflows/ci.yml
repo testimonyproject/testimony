@@ -6,9 +6,18 @@ on:
   pull_request:
 
 jobs:
+  image:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/devcontainer-image.yml
+    with:
+      push: ${{ github.event_name == 'push' }}
+
   build:
+    needs: image
     runs-on: ubuntu-latest
-    container: ghcr.io/testimonyproject/testimony/devcontainer:latest
+    container: ${{ needs.image.outputs.image }}
     steps:
       - uses: actions/checkout@v4
 
@@ -51,8 +60,9 @@ jobs:
           lake exe argtex --check
 
   docs:
+    needs: image
     runs-on: ubuntu-latest
-    container: ghcr.io/testimonyproject/testimony/devcontainer:latest
+    container: ${{ needs.image.outputs.image }}
     steps:
       - uses: actions/checkout@v4
       - name: Build book

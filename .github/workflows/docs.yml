@@ -15,12 +15,19 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  image:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/devcontainer-image.yml
+
   deploy:
+    needs: image
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    container: ghcr.io/testimonyproject/testimony/devcontainer:latest
+    container: ${{ needs.image.outputs.image }}
     steps:
       - uses: actions/checkout@v4
 

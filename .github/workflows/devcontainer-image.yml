@@ -2,15 +2,36 @@ name: Devcontainer image
 
 # Builds the image that .devcontainer/devcontainer.json, ci.yml and docs.yml
 # all run in, so "reproducible locally" and "reproducible in CI" stay the
-# same claim. Runs on the pin changing, not on every push.
+# same claim.
+#
+# ci.yml and docs.yml call this as a reusable workflow (`uses:` + `needs:`)
+# rather than relying on it having finished from a separate, same-push
+# trigger — the two used to race, and whichever pulled the image first lost
+# when a Dockerfile change and other commits landed in the same push.
+# docker/build-push-action's GHA cache makes an unchanged rebuild cheap, so
+# calling it on every run costs little.
+#
+# `push` is false for pull_request runs: a fork PR's GITHUB_TOKEN can't write
+# packages, and a same-repo PR shouldn't mutate the shared `:latest` tag
+# before merging anyway. Skipping the push still validates the Dockerfile
+# builds; downstream jobs fall back to the last published image.
 on:
-  push:
-    branches: [main]
-    paths:
-      - .devcontainer/**
-      - lean-toolchain
-      - .github/workflows/devcontainer-image.yml
   workflow_dispatch:
+    inputs:
+      push:
+        description: Push the built image to GHCR (false just validates the build)
+        type: boolean
+        default: true
+  workflow_call:
+    inputs:
+      push:
+        description: Push the built image to GHCR (false just validates the build)
+        type: boolean
+        default: true
+    outputs:
+      image:
+        description: Fully qualified, always-current devcontainer image ref
+        value: ${{ jobs.build-and-push.outputs.image }}
 
 permissions:
   contents: read
@@ -19,10 +40,13 @@ permissions:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    outputs:
+      image: ghcr.io/testimonyproject/testimony/devcontainer:latest
     steps:
       - uses: actions/checkout@v4
 
-      - uses: docker/login-action@v3
+      - if: inputs.push
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -34,7 +58,7 @@ jobs:
         with:
           context: .
           file: .devcontainer/Dockerfile
-          push: true
+          push: ${{ inputs.push }}
           tags: ghcr.io/testimonyproject/testimony/devcontainer:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
