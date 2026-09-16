@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -q '\\.lean'; then cd \"$CLAUDE_PROJECT_DIR\" && python3 scripts/testimony_lint.py 2>&1 | tail -20; fi"
+            "command": "\"$CLAUDE_PROJECT_DIR\"/scripts/lint_hook.sh"
           }
         ]
       }
