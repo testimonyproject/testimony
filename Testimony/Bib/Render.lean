@@ -13,6 +13,19 @@ acceptably under classic BibTeX.
 
 namespace Testimony.Bib
 
+/-- Escape the characters BibTeX and LaTeX treat specially.
+
+Applied to free-text field values, not to structural braces or identifiers. An
+unescaped `&` in a note field — "Reprint of the T. & T. Clark translation" —
+produces a misplaced-alignment-tab error deep inside the generated `.bbl`,
+which is a long way from where a contributor would think to look. -/
+def texEscape (s : String) : String :=
+  s.foldl (init := "") fun acc c =>
+    acc ++ match c with
+      | '&' => "\\&" | '%' => "\\%" | '$' => "\\$"
+      | '#' => "\\#" | '_' => "\\_"
+      | c => c.toString
+
 /-- Render a year, marking approximate dates with `c.` and negative years BCE. -/
 def renderYear (y : Year) : String :=
   let n := if y.value < 0 then toString (-y.value) ++ " BCE" else toString y.value
@@ -22,11 +35,11 @@ def renderYear (y : Year) : String :=
 organisations so BibTeX does not treat them as a personal name. -/
 def agentBibtex : Agent → String
   | .person given family suffix =>
-    let base := family ++ ", " ++ given
+    let base := texEscape family ++ ", " ++ texEscape given
     match suffix with
-    | some s => base ++ ", " ++ s
+    | some s => base ++ ", " ++ texEscape s
     | none => base
-  | .corporate name => "{" ++ name ++ "}"
+  | .corporate name => "{" ++ texEscape name ++ "}"
 
 /-- A name for display: `Given Family`. -/
 def agentDisplay : Agent → String
@@ -85,9 +98,9 @@ def field (name : String) : Option String → List String
 
 /-- Fields common to every entry, derived from `WorkCore`. -/
 def coreFields (c : WorkCore) : List String :=
-  let title := match c.subtitle with
+  let title := texEscape (match c.subtitle with
     | some s => c.title ++ ": " ++ s
-    | none => c.title
+    | none => c.title)
   field "author" (if c.contributors.authors.isEmpty then none
                   else some (agentsBibtex c.contributors.authors))
   ++ field "editor" (if c.contributors.editors.isEmpty then none
@@ -99,37 +112,45 @@ def coreFields (c : WorkCore) : List String :=
   ++ (c.identifiers.flatMap fun i =>
         let (n, v) := identifierBibtex i
         field n (some v))
-  ++ field "note" c.note
+  ++ field "note" (c.note.map texEscape)
 
 /-- The fields particular to each entry variant. -/
 def variantFields : BibEntry → List String
   | .book d =>
-    field "publisher" (some d.publisher) ++ field "address" d.place
-    ++ field "edition" d.edition ++ field "series" d.series
-    ++ field "number" d.seriesNumber ++ field "volume" d.volume
+    field "publisher" (some (texEscape d.publisher))
+    ++ field "address" (d.place.map texEscape)
+    ++ field "edition" (d.edition.map texEscape)
+    ++ field "series" (d.series.map texEscape)
+    ++ field "number" (d.seriesNumber.map texEscape)
+    ++ field "volume" (d.volume.map texEscape)
   | .inCollection d =>
-    field "booktitle" (some d.containerTitle)
+    field "booktitle" (some (texEscape d.containerTitle))
     ++ field "editor" (if d.containerEditors.isEmpty then none
                        else some (agentsBibtex d.containerEditors))
-    ++ field "publisher" (some d.publisher) ++ field "address" d.place
-    ++ field "edition" d.edition
+    ++ field "publisher" (some (texEscape d.publisher))
+    ++ field "address" (d.place.map texEscape)
+    ++ field "edition" (d.edition.map texEscape)
     ++ field "pages" (d.pages.map fun (a, b) => toString a ++ "--" ++ toString b)
   | .article d =>
-    field "journal" (some d.journal) ++ field "volume" d.volume
+    field "journal" (some (texEscape d.journal)) ++ field "volume" d.volume
     ++ field "number" d.issue
     ++ field "pages" (d.pages.map fun (a, b) => toString a ++ "--" ++ toString b)
-  | .thesis d => field "school" (some d.institution) ++ field "type" (some d.kind)
+  | .thesis d =>
+    field "school" (some (texEscape d.institution))
+    ++ field "type" (some (texEscape d.kind))
   | .criticalEdition d =>
-    field "publisher" (some d.publisher) ++ field "address" d.place
-    ++ field "edition" d.edition ++ field "note" (d.siglum.map (fun s => "siglum: " ++ s))
+    field "publisher" (some (texEscape d.publisher))
+    ++ field "address" (d.place.map texEscape)
+    ++ field "edition" (d.edition.map texEscape)
+    ++ field "note" (d.siglum.map fun s => "siglum: " ++ texEscape s)
   | .ancientWork d =>
-    field "howpublished" d.originalTitle
+    field "howpublished" (d.originalTitle.map texEscape)
     ++ field "note" (d.composed.map fun y => "composed " ++ renderYear y)
     ++ field "crossref" d.editionUsed
   | .dataset d =>
     field "version" d.version ++ field "note" (d.commit.map fun c => "commit " ++ c)
-    ++ field "howpublished" d.maintainer
-  | .webPage d => field "organization" d.site
+    ++ field "howpublished" (d.maintainer.map texEscape)
+  | .webPage d => field "organization" (d.site.map texEscape)
 
 /-- One entry in BibTeX form. -/
 def toBibtex (e : BibEntry) : String :=
@@ -208,6 +229,10 @@ build rather than silently rewriting `references.bib`. -/
   "  publisher = {Wm. B. Eerdmans},\n" ++
   "  address = {Grand Rapids},\n" ++
   "  series = {New International Commentary on the New Testament}\n}"
+
+-- The `&` in the note field must survive as `\\&`, or the generated .bbl
+-- breaks with a misplaced-alignment-tab error.
+#guard ((toBibtex keilDelitzschMinorProphets).splitOn "T. \\& T. Clark").length == 2
 
 #guard toMarkdown motyerIsaiah ==
   "- **`motyer-isaiah-1993`** — J. Alec Motyer. " ++

@@ -97,6 +97,15 @@ changing foundations.
 
 - **An assumption-manifest browser** on the docs site: every theorem, every
   premise it rests on, every citation, cross-linked.
+- **Literate sources.** Prose and Lean interleaved in the `.lean` files, in the
+  coqdoc tradition, rendering to PDF. This is currently **blocked on tooling**
+  rather than on effort. Alectryon plus LeanInk was the path, and
+  [LeanInk is archived](https://github.com/leanprover/LeanInk) — last pushed in
+  July 2024, pinned to Lean v4.6.0-rc1. [Verso](https://github.com/leanprover/verso)
+  is actively developed and has a TeX backend, but it is HTML-first and inverts
+  the model: documents embed Lean rather than Lean files carrying prose. Until
+  one of those changes, `lake exe argtex` covers the part that matters most —
+  the arguments themselves, typeset as logic.
 - **Probabilistic and evidential reasoning**, in a separate namespace, never
   conflated with deduction. Cumulative-case apologetics is Bayesian in
   structure, and pretending otherwise would misrepresent it.

@@ -51,7 +51,9 @@ jobs:
         run: lake exe axiom-audit
 
       - name: Generated files are current
-        run: lake exe bibgen --check
+        run: |
+          lake exe bibgen --check
+          lake exe argtex --check
 
   docs:
     runs-on: ubuntu-latest

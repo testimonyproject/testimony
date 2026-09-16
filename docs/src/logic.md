@@ -56,6 +56,37 @@ discharge a goal.
 proved to handle the same goals with less machinery and no new proof
 obligations.
 
+## Rendering an argument as logic
+
+`lake exe argtex` writes `docs/latex/arguments.tex`: every package set the way
+a logic paper would set it — a legend of numbered propositional variables with
+each one's claim, classification and source, then the premises and conclusion
+in ordinary notation.
+
+```sh
+lake exe argtex
+cd docs/latex && tectonic arguments.tex    # or xelatex / lualatex
+```
+
+A Unicode engine is required: the claims contain Greek and Hebrew. Citations
+render as live `\cite` commands against the generated `references.bib`.
+
+Atoms are numbered rather than named, which is the usual convention and the
+point of rendering at all. It separates an argument's *shape* from its content:
+
+```
+(12)  (P₄ ∧ P₅ ∧ P₁) → P₁₂
+(13)  (P₈ ∧ P₂) → P₁₂
+(14)  (P₉ ∧ P₁₀) → P₁₃
+(15)  (P₁₂ ∧ P₃ ∧ P₆ ∧ P₇ ∧ P₁₃ ∧ P₁₁) → P₁₄
+  ⊢   P₁₄
+```
+
+That is sola fide. Premises (12) and (13) both conclude `P₁₂`, one by way of
+`P₁` (Paul's ἔργα νόμου) and one by way of `P₂` (Jesus' σῴζω at Luke 7:50). The
+argument's redundancy — the reason neither lexical premise is load-bearing — is
+visible on the page before you read a word of the legend.
+
 ## Writing an argument
 
 An argument module has five parts.

@@ -131,7 +131,7 @@ def baseCite : Claim → AtomMeta
     , kind := .textual
     , source := scriptureWithCalvin [{ ref := .verse ⟨.titus, 3, 5⟩ }] "III.xiv.5" }
   | .luke7_50FaithHasSavedYou =>
-    { label := "Luke 7:50 — Jesus says 'your faith has saved you' after declaring sins forgiven"
+    { label := "Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.luke, 7, 50⟩ }]
@@ -169,7 +169,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .reformedProtestant
         , confidence := .wellSupported } }
   | .james2_24Compatible =>
-    { label := "James 2:24 is compatible with Paul, using 'justify' in a different sense"
+    { label := "James 2:24 is compatible with Paul, using ‘justify’ in a different sense"
     , kind := .interpretive
       -- No longer assumed: derived from `james2TargetsDeadFaith` and
       -- `worksAreFruitNotGround` via `jamesHarmonisation`.

@@ -15,7 +15,8 @@ Run them in this order. Each catches what the previous one cannot.
 | 3 | `lake exe axiom-audit` | `sorry`, `native_decide`, undeclared axioms |
 | 4 | `python3 scripts/testimony_lint.py` | The project-specific rules below |
 
-Plus `lake exe bibgen --check` for generated-file drift.
+Plus `lake exe bibgen --check` and `lake exe argtex --check` for
+generated-file drift.
 
 **`lake build` passing is not "it builds".** Three further gates exist, and
 tier 3 in particular catches things nothing else will — a `decide` proof that

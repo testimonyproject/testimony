@@ -103,9 +103,46 @@ inductive PassageRange
   | range (r : Pericope)
 deriving Repr, DecidableEq
 
+/-- The standard scholarly abbreviation for a book, following SBL style. Used
+wherever a reference is rendered for a human reader. -/
+def Book.abbrev : Book → String
+  | .genesis => "Gen" | .exodus => "Exod" | .leviticus => "Lev"
+  | .numbers => "Num" | .deuteronomy => "Deut"
+  | .psalms => "Ps" | .isaiah => "Isa" | .jeremiah => "Jer"
+  | .ezekiel => "Ezek" | .daniel => "Dan" | .hosea => "Hos"
+  | .micah => "Mic" | .zechariah => "Zech" | .malachi => "Mal"
+  | .matthew => "Matt" | .mark => "Mark" | .luke => "Luke" | .john => "John"
+  | .acts => "Acts" | .romans => "Rom"
+  | .firstCorinthians => "1 Cor" | .secondCorinthians => "2 Cor"
+  | .galatians => "Gal" | .ephesians => "Eph" | .philippians => "Phil"
+  | .colossians => "Col"
+  | .firstThessalonians => "1 Thess" | .secondThessalonians => "2 Thess"
+  | .firstTimothy => "1 Tim" | .secondTimothy => "2 Tim"
+  | .titus => "Titus" | .philemon => "Phlm" | .hebrews => "Heb"
+  | .james => "Jas" | .firstPeter => "1 Pet" | .secondPeter => "2 Pet"
+  | .firstJohn => "1 John" | .secondJohn => "2 John" | .thirdJohn => "3 John"
+  | .jude => "Jude" | .revelation => "Rev"
+
+/-- A verse reference as a reader expects it: `Matt 2:1`. -/
+def Passage.render (p : Passage) : String :=
+  s!"{p.book.abbrev} {p.chapter}:{p.verse}"
+
+/-- A range as a reader expects it: `Luke 2:4-7`, or `Matt 1:18-2:3` when it
+crosses a chapter boundary. -/
+def Pericope.render (r : Pericope) : String :=
+  if r.startChapter == r.endChapter then
+    s!"{r.book.abbrev} {r.startChapter}:{r.startVerse}-{r.endVerse}"
+  else
+    s!"{r.book.abbrev} {r.startChapter}:{r.startVerse}-{r.endChapter}:{r.endVerse}"
+
 /-- The book a range belongs to. Ranges never span books, by construction. -/
 def PassageRange.book : PassageRange → Book
   | .verse p => p.book
   | .range r => r.book
+
+/-- A verse or range as a reader expects it. -/
+def PassageRange.render : PassageRange → String
+  | .verse p => p.render
+  | .range r => r.render
 
 end Testimony

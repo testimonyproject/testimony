@@ -21,3 +21,8 @@ name = "Testimony"
 name = "bibgen"
 root = "Testimony.Tools.Bibgen"
 supportInterpreter = true
+
+[[lean_exe]]
+name = "argtex"
+root = "Testimony.Tools.Argtex"
+supportInterpreter = true

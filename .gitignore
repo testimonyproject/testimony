@@ -1,3 +1,13 @@
 .lake/
 docs/book/
 .claude/settings.local.json
+
+# LaTeX build products. `arguments.tex` is generated but committed, like the
+# bibliography chapter; everything the TeX engine derives from it is not.
+docs/latex/*.pdf
+docs/latex/*.aux
+docs/latex/*.bbl
+docs/latex/*.blg
+docs/latex/*.log
+docs/latex/*.xdv
+docs/latex/references.bib
