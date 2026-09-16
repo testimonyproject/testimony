@@ -9,6 +9,11 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  # The `deploy` job's container: pulls a GHCR package. ci.yml has no
+  # explicit permissions block and inherits a broader default that already
+  # covers this; this workflow's explicit block (needed for Pages) does not,
+  # so it must ask for package read access itself.
+  packages: read
 
 concurrency:
   group: pages
