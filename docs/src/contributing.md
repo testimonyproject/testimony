@@ -59,6 +59,12 @@ checkout you branched from. The script runs `lake exe cache get` for you;
 skipping it means the first build compiles Mathlib from source, which takes
 hours rather than minutes.
 
+The worktree script fixes the repository *layout*; it does not fix the
+*toolchain*. For that, open a worktree in the devcontainer
+(`.devcontainer/`) instead of installing elan, tectonic and mdbook by hand —
+it is the same image CI builds in, so a discrepancy between "works for me"
+and "works in CI" means the image is wrong, not your machine.
+
 ```sh
 lake exe cache get                        # what the script runs for you
 lake build                                # tier 1

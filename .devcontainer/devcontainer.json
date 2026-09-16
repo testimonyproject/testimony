@@ -1,0 +1,17 @@
+{
+  "name": "Testimony",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspaces/testimony",
+  // Each worktree needs its own .lake/, so the Mathlib olean fetch happens
+  // here rather than at image-build time — see scripts/new-worktree.sh and
+  // GH issue #11.
+  "postCreateCommand": "lake exe cache get",
+  "customizations": {
+    "vscode": {
+      "extensions": ["leanprover.lean4"]
+    }
+  }
+}
