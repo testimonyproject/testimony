@@ -9,3 +9,7 @@ rev = "master"
 
 [[lean_lib]]
 name = "Testimony"
+[[lean_exe]]
+name = "bibgen"
+root = "Testimony.Tools.Bibgen"
+supportInterpreter = true

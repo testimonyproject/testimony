@@ -1,12 +1,19 @@
 -- Testimony: a Lean 4 library for machine-checkable models of biblical
--- Messianic arguments. See README.md and DESIGN.md.
+-- arguments. See the documentation site, or docs/src/ in this repository.
 import Testimony.Text
+import Testimony.Attr
 import Testimony.Bib.Core
 import Testimony.Bib.Attr
 import Testimony.Bib.Works
 import Testimony.Bib.Registry
+import Testimony.Bib.Render
 import Testimony.Provenance
 import Testimony.Intertext
+import Testimony.Logic.Basic
+import Testimony.Logic.Decide
+import Testimony.Logic.Package
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin
+import Testimony.Arguments.SolaFide
+import Testimony.Arguments.SolaScriptura
