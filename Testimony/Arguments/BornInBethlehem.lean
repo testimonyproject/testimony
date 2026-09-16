@@ -22,8 +22,6 @@ namespace Testimony.Arguments.BornInBethlehem
 
 open Testimony Testimony.Bib Testimony.Logic
 
-set_option maxRecDepth 20000
-
 /-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/
 @[nolint defsWithUnderscore] def micah5_2 : Passage := ⟨.micah, 5, 2⟩
 
@@ -48,13 +46,6 @@ inductive Claim
   /-- Jesus satisfies the Bethlehem criterion. **The conclusion.** -/
   | jesusSatisfiesCriterion
 deriving DecidableEq, Repr
-
-instance : FiniteAtoms Claim where
-  elems :=
-    [ .micahPredictsBethlehem, .matthewQuotesMicah, .matthewIntendsFulfilment
-    , .jesusBornInBethlehem, .micahIsNearTermOracle, .messiahBornInBethlehem
-    , .jesusSatisfiesCriterion ]
-  complete a := by cases a <;> simp
 
 /-- Shorthand for an atomic formula. -/
 abbrev p (c : Claim) : Formula Claim := .atom c
@@ -181,19 +172,35 @@ def critical : ArgumentPackage Claim :=
   , conclusion := p .jesusSatisfiesCriterion
   , conclusionLabel := fulfillmentLabel jesus bornInBethlehem }
 
+/-! ### Results -/
+
 /-- Given the Christian premises, the conclusion follows. -/
 @[headline]
 theorem christian_establishes : Establishes christian := by
-  apply entails_of_check
-  decide
+  intro w hw
+  simp only [christian, toCriterion, toFulfilment, conjOf, p, List.mem_cons,
+    List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
+    FFL.Propositional.Formula.Boolean.val] at hw ⊢
+  tauto
 
 #print axioms christian_establishes
+
+/-- The critical reading, written down: Micah's oracle concerns a contemporary
+Judaean ruler, so no messianic birthplace criterion arises and nothing about
+Jesus follows from it. -/
+def criticalReading : Valuation Claim := fun a =>
+  match a with
+  | .micahPredictsBethlehem => False
+  | .messiahBornInBethlehem => False
+  | .jesusSatisfiesCriterion => False
+  | _ => True
 
 /-- The critical reading does not establish the conclusion. -/
 @[headline]
 theorem critical_not_establishes : ¬ Establishes critical := by
-  apply not_entails_of_check
-  decide
+  refine not_entails_of_countermodel criticalReading ?_ ?_ <;>
+    simp [critical, toCriterion, toFulfilment, conjOf, p, notP,
+      FFL.Propositional.Formula.Boolean.val, criticalReading]
 
 #print axioms critical_not_establishes
 

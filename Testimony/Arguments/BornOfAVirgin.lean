@@ -28,8 +28,6 @@ namespace Testimony.Arguments.BornOfAVirgin
 
 open Testimony Testimony.Bib Testimony.Logic
 
-set_option maxRecDepth 40000
-
 /-- Isaiah 7:14 — the sign of the *almah* who conceives and bears a son. -/
 @[nolint defsWithUnderscore] def isaiah7_14 : Passage := ⟨.isaiah, 7, 14⟩
 
@@ -62,14 +60,6 @@ inductive Claim
   /-- Jesus satisfies the virgin-birth criterion. **The conclusion.** -/
   | jesusSatisfiesCriterion
 deriving DecidableEq, Repr
-
-instance : FiniteAtoms Claim where
-  elems :=
-    [ .isaiahPredictsVirginBirth, .almahMeansVirgin, .lxxRendersParthenos
-    , .matthewQuotesIsaiah, .matthewIntendsFulfilment, .maryConceivedAsVirgin
-    , .independentAttestation, .isaiahIsNearTermSignToAhaz
-    , .messiahBornOfVirgin, .jesusSatisfiesCriterion ]
-  complete a := by cases a <;> simp
 
 /-- Shorthand for an atomic formula. -/
 abbrev p (c : Claim) : Formula Claim := .atom c
@@ -245,31 +235,58 @@ def critical : ArgumentPackage Claim :=
   , conclusion := p .jesusSatisfiesCriterion
   , conclusionLabel := fulfillmentLabel jesus bornOfAVirgin }
 
+/-! ### Results -/
+
 /-- Given the Christian premises, the conclusion follows. -/
 @[headline]
 theorem christian_establishes : Establishes christian := by
-  apply entails_of_check
-  decide
+  intro w hw
+  simp only [christian, toCriterion, toFulfilment, conjOf, p, List.mem_cons,
+    List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
+    FFL.Propositional.Formula.Boolean.val] at hw ⊢
+  tauto
 
 #print axioms christian_establishes
+
+/-- The critical reading, written down: עַלְמָה means "young woman", Isaiah's
+sign was given to Ahaz, and no virgin-birth criterion arises. -/
+def criticalReading : Valuation Claim := fun a =>
+  match a with
+  | .almahMeansVirgin => False
+  | .isaiahPredictsVirginBirth => False
+  | .messiahBornOfVirgin => False
+  | .jesusSatisfiesCriterion => False
+  | _ => True
 
 /-- The critical reading does not establish the conclusion. -/
 @[headline]
 theorem critical_not_establishes : ¬ Establishes critical := by
-  apply not_entails_of_check
-  decide
+  refine not_entails_of_countermodel criticalReading ?_ ?_ <;>
+    simp [critical, toCriterion, toFulfilment, conjOf, p, notP,
+      FFL.Propositional.Formula.Boolean.val, criticalReading]
 
 #print axioms critical_not_establishes
+
+/-- A reading that grants everything except the lexical premise. -/
+def withoutAlmahReading : Valuation Claim := fun a =>
+  match a with
+  | .almahMeansVirgin => False
+  | .messiahBornOfVirgin => False
+  | .jesusSatisfiesCriterion => False
+  | _ => True
 
 /-- The lexical premise about עַלְמָה is load-bearing: remove it and the
 argument collapses, everything else retained.
 
-This is the same shape of result as `SolaFide.worksOfLaw_is_load_bearing`. Two
-of the library's worked arguments turn on the sense of a single word. -/
+Unlike sola fide, this argument has only one strand. There is no dominical
+saying about a virgin birth to fall back on, so defeating the lexical premise
+defeats the argument — which is why this is the weaker of the two messianic
+arguments encoded here. -/
 @[headline]
 theorem almah_is_load_bearing : ¬ Establishes christianWithoutAlmah := by
-  apply not_entails_of_check
-  decide
+  refine not_entails_of_countermodel withoutAlmahReading ?_ ?_ <;>
+    simp [christianWithoutAlmah, christian, toCriterion, toFulfilment, conjOf, p,
+      FFL.Propositional.Formula.Boolean.val, withoutAlmahReading]
 
 #print axioms almah_is_load_bearing
 

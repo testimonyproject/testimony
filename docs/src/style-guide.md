@@ -58,11 +58,16 @@ declaration alone with the reason recorded inline: a constructor named
 
 - **Rivals are not optional.** An argument module encoding a Christian reading
   without at least one rival package is incomplete, not merely unpolished.
-  Write the rival *before* proving anything.
-- **At most twelve atoms** per argument type. Decompose rather than exceed it.
+  Write the rival *before* proving anything. Rule L5 enforces this.
+- **There is no atom budget.** Entailment is settled by `tauto` and refuted by
+  named countermodels, neither of which enumerates valuations.
 - **State reduced packages explicitly**; do not filter premises out of an
   existing package.
-- **Never `native_decide`, never `sorry`.**
+- **Name your countermodels after the position they encode.** A countermodel is
+  the rival's reading written down, and a reader should be able to see what it
+  commits to.
+- **Never `native_decide`, never `sorry`.** This also rules out `bv_decide`,
+  which adds a per-theorem native axiom.
 
 ## Layout
 
@@ -80,7 +85,7 @@ linter.
 | L2 | No `native_decide` |
 | L3 | `BibEntry` values are defined only in `Testimony/Bib/Works.lean` |
 | L4 | Every `BibEntry` definition carries `@[bib_entry]` |
-| L5 | An atom type has at most 12 constructors |
+| L5 | An argument module encodes at least one rival package |
 | L6 | Every `@[headline]` theorem is followed by `#print axioms` |
 | L7 | Citation keys match `^[a-z0-9]+(-[a-z0-9]+)*$` |
 | L8 | No trailing whitespace; lines at most 100 columns |

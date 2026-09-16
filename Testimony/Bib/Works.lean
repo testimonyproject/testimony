@@ -215,6 +215,60 @@ Hebrew text. -/
       , identifiers := [.url "https://github.com/openscriptures/morphhb"] }
   , license := some "CC BY 4.0" }
 
+/-- Marshall's NIGTC commentary on Luke — a commentary on the Greek text, which
+is what an argument about the sense of σῴζω needs. -/
+@[bib_entry] def marshallLuke : BibEntry := .book
+  { core :=
+      { key := "marshall-luke-1978"
+      , contributors := { authors := [.person "I. Howard" "Marshall"] }
+      , title := "The Gospel of Luke"
+      , subtitle := some "A Commentary on the Greek Text"
+      , year := some { value := 1978 }
+      , identifiers := [.isbn "9780802835123"] }
+  , publisher := "Wm. B. Eerdmans"
+  , place := some "Grand Rapids"
+  , series := some "New International Greek Testament Commentary" }
+
+/-- Moo on James, for the reading that James's target is a barren faith rather
+than Paul's doctrine of justification. -/
+@[bib_entry] def mooJames : BibEntry := .book
+  { core :=
+      { key := "moo-james-2000"
+      , contributors := { authors := [.person "Douglas J." "Moo"] }
+      , title := "The Letter of James"
+      , year := some { value := 2000 }
+      , identifiers := [.isbn "9780851119779"] }
+  , publisher := "Apollos"
+  , place := some "Leicester"
+  , series := some "Pillar New Testament Commentary" }
+
+/-- Johnson's Anchor Bible commentary on James — the standard critical
+treatment, and a check on reading James too readily as Paul's ally. -/
+@[bib_entry] def johnsonJames : BibEntry := .book
+  { core :=
+      { key := "johnson-james-1995"
+      , contributors := { authors := [.person "Luke Timothy" "Johnson"] }
+      , title := "The Letter of James"
+      , subtitle := some "A New Translation with Introduction and Commentary"
+      , year := some { value := 1995 }
+      , identifiers := [.isbn "9780385413602"] }
+  , publisher := "Doubleday"
+  , place := some "New York"
+  , series := some "Anchor Bible" }
+
+/-- The Westminster Confession of Faith, for the Reformed formulation that
+saving faith is never alone. Public catalogues list only print-on-demand
+reprints, with no scholarly edition to tie an identifier to, so this entry
+carries none. -/
+@[bib_entry] def westminsterConfession : BibEntry := .book
+  { core :=
+      { key := "westminster-confession-1647"
+      , contributors := { authors := [.corporate "Westminster Assembly"] }
+      , title := "The Westminster Confession of Faith"
+      , year := some { value := 1647 }
+      , note := some "Cited by chapter and section; no critical edition catalogued." }
+  , publisher := "Westminster Assembly" }
+
 derive_bib_registry registry
 
 end Testimony.Bib

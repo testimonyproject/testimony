@@ -31,8 +31,6 @@ namespace Testimony.Arguments.SolaScriptura
 
 open Testimony Testimony.Bib Testimony.Logic
 
-set_option maxRecDepth 20000
-
 /-- The atomic claims this argument is built from. -/
 inductive Claim
   /-- 2 Timothy 3:16 — all scripture is God-breathed and profitable. -/
@@ -62,15 +60,6 @@ inductive Claim
   /-- A doctrine is binding only if scripture teaches it. -/
   | onlyScripturalDoctrineIsBinding
 deriving DecidableEq, Repr
-
-instance : FiniteAtoms Claim where
-  elems :=
-    [ .timothy3_16GodBreathed, .timothy3_17ThoroughlyEquips
-    , .mark7TraditionCanNullify, .acts17BereansTested, .scriptureIsSufficient
-    , .scriptureIsPerspicuous, .scriptureIsSoleInfallibleRule
-    , .thessalonians2_15TraditionBinding, .magisteriumIsInfallible
-    , .solaScripturaIsTaughtByScripture, .onlyScripturalDoctrineIsBinding ]
-  complete a := by cases a <;> simp
 
 /-- Shorthand for an atomic formula. -/
 abbrev p (c : Claim) : Formula Claim := .atom c
@@ -214,21 +203,34 @@ def selfRefutation : ArgumentPackage Claim :=
   , conclusion := notP .scriptureIsSoleInfallibleRule
   , conclusionLabel := "scripture is not the sole infallible rule of faith" }
 
+/-! ### Results -/
+
 /-- Given the Protestant premises, the conclusion follows. -/
 @[headline]
 theorem protestant_establishes : Establishes protestant := by
-  apply entails_of_check
-  decide
+  intro w hw
+  simp only [protestant, toSoleRule, conjOf, p, List.mem_cons, List.not_mem_nil,
+    or_false, forall_eq_or_imp, forall_eq, FFL.Propositional.Formula.Boolean.val] at hw ⊢
+  tauto
 
 #print axioms protestant_establishes
+
+/-- The Catholic and Orthodox reading, written down: scripture and apostolic
+tradition together, interpreted by the magisterium, so scripture is not the
+*sole* infallible rule. -/
+def traditionReading : Valuation Claim := fun a =>
+  match a with
+  | .scriptureIsSoleInfallibleRule => False
+  | _ => True
 
 /-- The Catholic/Orthodox premises do not establish sola scriptura — they
 entail its negation. -/
 @[headline]
 theorem traditionAndMagisterium_not_establishes :
     ¬ Establishes traditionAndMagisterium := by
-  apply not_entails_of_check
-  decide
+  refine not_entails_of_countermodel traditionReading ?_ ?_ <;>
+    simp [traditionAndMagisterium, conjOf, p, notP,
+      FFL.Propositional.Formula.Boolean.val, traditionReading]
 
 #print axioms traditionAndMagisterium_not_establishes
 
@@ -242,8 +244,11 @@ reduces to `solaScripturaIsTaughtByScripture`, which is where the argument
 between the traditions actually lives. -/
 @[headline]
 theorem selfRefutation_is_valid : Establishes selfRefutation := by
-  apply entails_of_check
-  decide
+  intro w hw
+  simp only [selfRefutation, selfRefutationStep, conjOf, p, notP, List.mem_cons,
+    List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
+    FFL.Propositional.Formula.Boolean.val] at hw ⊢
+  tauto
 
 #print axioms selfRefutation_is_valid
 

@@ -17,20 +17,26 @@ verdict left to the reader.
 ## What it produces
 
 ```lean
-theorem reformed_establishes           : Establishes reformed
-theorem newPerspective_not_establishes : ¬ Establishes newPerspective
-theorem worksOfLaw_is_load_bearing     : ¬ Establishes reformedWithoutLexicalPremise
+theorem reformed_establishes       : Establishes reformed
+theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw
+theorem sozo_not_load_bearing       : Establishes reformedWithoutSozo
+theorem lexical_premises_jointly_load_bearing :
+    ¬ Establishes reformedWithoutEitherLexicalPremise
 ```
 
-The third is the most useful kind. It says: strip out the premise that Paul's
-ἔργα νόμου means works in general rather than Jewish covenant boundary markers,
-keep everything else, and the Reformed argument for sola fide collapses.
+Read together, those say something prose arguments rarely establish. Sola fide
+runs on **two independent strands** — Paul's ἔργα νόμου, and Jesus' "your faith
+has saved you" at Luke 7:50 — and *neither* disputed lexical premise carries
+the argument by itself. Only their disjunction does, so an opponent must defeat
+both readings rather than either.
 
-That result is neither Protestant nor Catholic. It is a description of where
-the disagreement actually lives, and both sides can accept it.
+A corollary: the New Perspective on Paul, which rejects the traditional reading
+of ἔργα νόμου while still affirming justification by faith, **establishes the
+conclusion too**.
 
-So far **two of the three fully worked arguments turn on the sense of a single
-word** — the other being עַלְמָה in Isaiah 7:14.
+The virgin-birth argument makes the contrast. It has a single strand, so
+defeating עַלְמָה in Isaiah 7:14 defeats it outright — a structural weakness the
+library states plainly rather than glossing.
 
 ## Documentation
 

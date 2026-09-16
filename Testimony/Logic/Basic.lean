@@ -1,53 +1,32 @@
 import Foundation.Propositional.Boolean.Basic
 
 /-!
-# Testimony.Logic.Basic — the formula type and finite atom enumeration
+# Testimony.Logic.Basic — the formula type
 
 Syntax and semantics come from FormalizedFormalLogic/Foundation; this library
-does not reimplement them. What it adds is a `Bool`-valued evaluator, because
-Foundation's Boolean valuations are `Prop`-valued:
+does not reimplement them.
 
-```
-abbrev Boolean.Valuation (α : Type*) := α → Prop
-def val (v : Valuation α) : Formula α → Prop
-```
-
-That is the right definition for metatheory and the wrong one for deciding
-whether a particular argument is valid. `bval` below is the decidable mirror,
-proved to agree with `val` in `Testimony.Logic.Decide`.
+Entailment is checked with Mathlib's `tauto`, which is goal-directed, and
+refuted by exhibiting a countermodel (see `Testimony.Logic.Entail`). Neither
+approach enumerates valuations, so there is no bound on how many atoms an
+argument may use.
 -/
 
 namespace Testimony.Logic
 
-open FFL.Propositional
-
 /-- A propositional formula over cited atoms, from Foundation. -/
 abbrev Formula (α : Type) := FFL.Propositional.Formula α
 
-/-- A `Prop`-valued valuation, from Foundation. -/
+/-- A valuation of atoms, from Foundation. -/
 abbrev Valuation (α : Type) := FFL.Propositional.Boolean.Valuation α
 
-/-- An atom type with a finite, enumerated carrier.
-
-Arguments in this library range over finitely many cited claims, which is what
-makes validity decidable by truth table. `complete` is the obligation that the
-enumeration really is exhaustive; it is discharged by `decide` for the small
-enumerations used here. -/
-class FiniteAtoms (α : Type) where
-  /-- Every atom of the argument. -/
-  elems : List α
-  /-- The enumeration is exhaustive. -/
-  complete : ∀ a : α, a ∈ elems
-
-/-- `Bool`-valued evaluation, the decidable mirror of `Formula.Boolean.val`.
-
-Foundation defines negation as `φ ➝ ⊥` and verum as `⊥ ➝ ⊥`, so five cases
-cover the whole language. -/
-def bval {α : Type} (v : α → Bool) : Formula α → Bool
-  | .atom a => v a
-  | .falsum => false
-  | .and p q => bval v p && bval v q
-  | .or p q => bval v p || bval v q
-  | .imp p q => !(bval v p) || bval v q
+/-- The atoms occurring in a formula, with repeats. Used to generate the
+assumption manifest. -/
+def atomsOf {α : Type} : Formula α → List α
+  | .atom a => [a]
+  | .falsum => []
+  | .and p q => atomsOf p ++ atomsOf q
+  | .or p q => atomsOf p ++ atomsOf q
+  | .imp p q => atomsOf p ++ atomsOf q
 
 end Testimony.Logic

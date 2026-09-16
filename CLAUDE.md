@@ -15,8 +15,9 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
   and page range against a public catalogue (Open Library, Crossref). If it
   cannot be verified, the field is `none`. A wrong ISBN survives review; a gap
   does not.
-- **Never use `sorry` or `native_decide`.** `native_decide` adds
-  `Lean.ofReduceBool` to the trust base. `lake exe axiom-audit` fails on both.
+- **Never use `sorry`, `native_decide`, or `bv_decide`.** `native_decide` adds
+  `Lean.ofReduceBool`; `bv_decide` adds a per-theorem `_native.bv_decide.ax`.
+  `lake exe axiom-audit` fails on all of them.
 - **Never add a premise without a `Source`.** It will not compile —
   `Source.primary` is required and `ArgumentPackage.cite` is total.
 - **Never encode a Christian reading without at least one rival package**, and
@@ -51,7 +52,7 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Bib/` | `Core` types, `Attr` registry attribute, `Works` entries, `Render`, `Registry` guards |
 | `Testimony/Provenance.lean` | `Reference`, `Source`, `Tradition`, `Confidence` |
 | `Testimony/Intertext.lean` | Typed relations between passages |
-| `Testimony/Logic/` | `Basic` formula + atoms, `Decide` entailment + bridges, `Package` arguments + manifests |
+| `Testimony/Logic/` | `Basic` formula + atoms, `Entail` entailment + countermodels, `Package` arguments + manifests |
 | `Testimony/Argument.lean` | Criteria, definitions, `Satisfies` |
 | `Testimony/Arguments/` | The worked arguments |
 | `scripts/` | Domain linter and its tests |
@@ -78,4 +79,9 @@ from source.
   stay at the bottom of `Works.lean`.
 - `List.filter` over a derived `DecidableEq (Formula α)` does not kernel-reduce;
   state reduced packages explicitly instead.
-- Truth-table proofs need `set_option maxRecDepth 20000` (40000 at 10+ atoms).
+- Qualify `FFL.Propositional.Formula.Boolean.val` in full — `Formula` is also
+  an abbrev in `Testimony.Logic`, so the short name resolves to the wrong
+  namespace and the proof silently falls back to `sorryAx`.
+- Prove `Establishes` with `intro w hw; simp only [...] at hw ⊢; tauto`.
+  Refute with a named countermodel via `not_entails_of_countermodel`.
+- There is no atom budget; the 2^n truth-table checker was removed.

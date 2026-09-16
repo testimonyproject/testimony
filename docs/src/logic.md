@@ -1,66 +1,60 @@
 # Encoding arguments
 
-## Why there is an adapter
+## How entailment is settled
 
-Foundation's Boolean semantics uses `Prop`-valued valuations:
+An argument is a list of premises and a conclusion, both formulas over cited
+atoms. Two questions get asked of it, and they are answered by different means.
 
-```lean
-abbrev Boolean.Valuation (α : Type*) := α → Prop
-def val (v : Valuation α) : Formula α → Prop
-```
+**Does the conclusion follow?** Mathlib's `tauto`, a goal-directed classical
+tableau. It produces an ordinary proof term, so the trust base is unchanged,
+and its cost tracks the argument's structure rather than its atom count.
 
-That is the right definition for metatheory — soundness and completeness proofs
-quantify over arbitrary valuations — and the wrong one for deciding whether a
-particular argument is valid. Entailment against `Prop`-valued valuations is
-not decidable, so `by decide` is unavailable.
-
-`Testimony.Logic` therefore adds a `Bool`-valued mirror and proves it agrees:
+**Does it fail to follow?** Name a countermodel — a valuation satisfying every
+premise while falsifying the conclusion:
 
 ```lean
-def bval (v : α → Bool) : Formula α → Bool
-
-theorem bval_iff_val (v : α → Bool) (φ : Formula α) :
-    bval v φ = true ↔ Formula.Boolean.val (fun a => v a = true) φ
+theorem not_entails_of_countermodel
+    (w : Valuation α)
+    (hsat : ∀ φ ∈ prems, Formula.Boolean.val w φ)
+    (hfail : ¬ Formula.Boolean.val w concl) : ¬ Entails prems concl
 ```
 
-with a finite atom enumeration and a truth-table check over it:
+Checking a named valuation is linear. Searching for one is not, which is why
+the library asks the author to supply it.
 
-```lean
-class FiniteAtoms (α : Type) where
-  elems    : List α
-  complete : ∀ a : α, a ∈ elems
+That turns out to be a feature rather than a chore. "A countermodel exists"
+tells a reader nothing; a named valuation **is the rival's reading, written
+down**. So countermodels here carry the rival's name — `nppReading`,
+`tridentineReading`, `criticalReading` — and a reader can inspect what the
+opposing position actually commits to.
 
-def checkEntails [DecidableEq α] [FiniteAtoms α]
-    (prems : List (Formula α)) (concl : Formula α) : Bool
+### There is no atom budget
+
+An earlier version decided entailment by exhaustive truth table, which cost
+`2^n` and forced a twelve-atom cap on every argument. Both are gone. An
+argument tracing a theme across the canon may use as many atoms as it needs.
+
+### What was rejected, and why
+
+**`bv_decide`**, Lean's SAT-solver tactic, is fast and unusable here. It emits
+a per-theorem native axiom:
+
+```
+'bvtest' depends on axioms: [propext, Classical.choice, Quot.sound,
+                             bvtest._native.bv_decide.ax_1_5]
 ```
 
-Two bridge theorems connect the computation to the semantics:
+That is an external solver's certificate entering the trust base. For a library
+whose claim is that every assumption is declared, it is not a trade worth
+making, and `axiom-audit` would reject it.
 
-```lean
-theorem entails_of_check     : checkEntails prems concl = true  →   Entails prems concl
-theorem not_entails_of_check : checkEntails prems concl = false → ¬ Entails prems concl
-```
+**Foundation's proof calculi** supply soundness and completeness metatheorems
+for the Tait calculus, but no executable decision procedure, so they cannot
+discharge a goal.
 
-The second is why the adapter exists. Without it, "these premises do not
-establish that conclusion" would require constructing a countermodel by hand
-for every rival package. With it, the countermodel falls out of the failing
-check, and rival packages become mechanically comparable.
-
-Going from `Bool`-valued enumeration to arbitrary `Prop`-valued valuations uses
-classical choice. Both `Classical.choice` and `propext` are inside the
-[axiom allowlist](./scope-and-limits.md#the-trust-base), so this does not widen
-the declared trust base.
-
-## The atom budget
-
-`checkEntails` enumerates `2^n` valuations, so **an atom type carries at most
-twelve constructors** — 4096 valuations, which the kernel handles in seconds.
-Proofs need `set_option maxRecDepth 20000` (40000 for ten or more atoms).
-
-Exceeding the budget is a signal to decompose the argument. It is never a
-reason to reach for `native_decide`, which is prohibited and which the axiom
-audit would reject anyway. Rule L5 of the [domain linter](./style-guide.md)
-enforces the budget.
+**A hand-rolled pruning search** was written and then deleted once `tauto`
+proved to handle the same goals with less machinery and no new proof
+obligations.
 
 ## Writing an argument
 
@@ -78,10 +72,6 @@ inductive Claim
   | worksOfLawMeansWorksGenerally
   ...
 deriving DecidableEq, Repr
-
-instance : FiniteAtoms Claim where
-  elems := [...]
-  complete a := by cases a <;> simp
 ```
 
 **2. A total citation function.** Because it is total, an uncited atom does not
@@ -103,33 +93,50 @@ def cite : Claim → AtomMeta
 the encoding honest; it is much easier to build a strawman after you have a
 proof you like.
 
-**4. Theorems**, tagged `@[headline]` and followed by `#print axioms`:
+**4. Theorems**, tagged `@[headline]` and followed by `#print axioms`. To
+establish, unfold the package and call `tauto`:
 
 ```lean
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
-  apply entails_of_check
-  decide
-
-#print axioms reformed_establishes
+  intro w hw
+  simp only [reformed, sharedPremises, paulineToFaithAlone, conjOf, p,
+    List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
+    FFL.Propositional.Formula.Boolean.val] at hw ⊢
+  tauto
 ```
 
-**5. The load-bearing result**, where there is a disputed premise. State the
-reduced package explicitly rather than filtering a premise out of an existing
-one: `List.filter` over a derived `DecidableEq (Formula α)` does not reduce in
-the kernel, so a `decide` proof built on it fails and falls back to `sorryAx`.
+To refute, name the rival's reading and check it:
 
 ```lean
-def reformedWithoutLexicalPremise : ArgumentPackage Claim :=
-  { reformed with
-    name := "Reformed, minus the lexical premise"
-    premises := [ ... everything except the disputed premise ... ] }
+def tridentineReading : Valuation Claim := fun a =>
+  match a with
+  | .salvationByGraceThroughFaithNotWorks => False
+  | _ => True
 
 @[headline]
-theorem worksOfLaw_is_load_bearing : ¬ Establishes reformedWithoutLexicalPremise := by
-  apply not_entails_of_check
-  decide
+theorem tridentine_not_establishes : ¬ Establishes tridentine := by
+  refine not_entails_of_countermodel tridentineReading ?_ ?_ <;>
+    simp [tridentine, conjOf, p, notP,
+      FFL.Propositional.Formula.Boolean.val, tridentineReading]
 ```
+
+Qualify `FFL.Propositional.Formula.Boolean.val` in full: `Formula` is also an
+abbreviation in `Testimony.Logic`, and the unqualified name resolves there.
+
+**5. The load-bearing results**, where there is a disputed premise. State the
+reduced package explicitly:
+
+```lean
+def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=
+  { reformed with
+    name := "Reformed, minus the Pauline lexical premise"
+    premises := [ ... everything except the disputed premise ... ] }
+```
+
+Then ask whether the argument survives. Where an argument has **two independent
+strands**, as sola fide does, neither disputed premise is load-bearing alone —
+only their disjunction is, and that is the more interesting result.
 
 ## Manifests
 

@@ -31,23 +31,27 @@ follows over every valuation.
 theorem reformed_establishes : Establishes reformed
 ```
 
-**A rival package does not establish the conclusion.** This is not a failure to
-find a proof; a countermodel is exhibited.
+**A rival package does not establish the conclusion.** Not a failure to find a
+proof — a countermodel is named, and it *is* the rival's reading written down.
 
 ```lean
-theorem newPerspective_not_establishes : ¬ Establishes newPerspective
+theorem tridentine_not_establishes : ¬ Establishes tridentine
 ```
 
-**A particular premise is load-bearing.** Remove it, retain everything else,
-and the argument collapses.
+**A premise is, or is not, load-bearing.** Remove it, retain everything else,
+and see whether the argument survives.
 
 ```lean
-theorem worksOfLaw_is_load_bearing : ¬ Establishes reformedWithoutLexicalPremise
+theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw
+theorem lexical_premises_jointly_load_bearing :
+    ¬ Establishes reformedWithoutEitherLexicalPremise
 ```
 
-That last kind is the most useful thing the library does. It locates precisely
-where a disagreement lives — and so far, two of the three fully worked
-arguments turn out to hinge on the sense of a single word.
+That last pair is the most useful thing the library does. Sola fide runs on two
+independent strands — Paul's ἔργα νόμου and Jesus' "your faith has saved you"
+at Luke 7:50 — so neither lexical premise carries it alone. An opponent must
+defeat both. The virgin-birth argument, by contrast, has only one strand, and
+defeating עַלְמָה defeats it outright.
 
 ## Getting started
 

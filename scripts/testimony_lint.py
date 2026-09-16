@@ -19,8 +19,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 MAX_LINE = 100
-MAX_ATOMS = 12
+MIN_PACKAGES = 2
 WORKS_FILE = "Testimony/Bib/Works.lean"
+ARGUMENTS_DIR = "Testimony/Arguments/"
 CITE_KEY_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
 ENTRY_CTORS = (
@@ -36,7 +37,10 @@ RULE_TEXT = {
     "L2": "no `native_decide` — it adds Lean.ofReduceBool to the trust base",
     "L3": "BibEntry values must be defined in Testimony/Bib/Works.lean",
     "L4": "every BibEntry definition must carry @[bib_entry]",
-    "L5": f"an atom type must have at most {MAX_ATOMS} constructors",
+    # L5 previously capped atoms at 12, because entailment was decided by an
+    # exhaustive 2^n truth table. That checker is gone, so the cap is gone with
+    # it; the id is reused rather than renumbered to keep references stable.
+    "L5": "an argument module must encode at least one rival package",
     "L6": "every @[headline] theorem must be followed by `#print axioms`",
     "L7": "citation keys must match ^[a-z0-9]+(-[a-z0-9]+)*$",
     "L8": f"no trailing whitespace; lines at most {MAX_LINE} columns",
@@ -109,23 +113,13 @@ def lint_text(path: str, text: str) -> list[Finding]:
                 ):
                     add("L4", n)
 
-    # L5: atom types (those given a FiniteAtoms instance) stay inside budget.
-    atom_types = set(re.findall(r"instance\s*:\s*FiniteAtoms\s+(\w+)", text))
-    for name in atom_types:
-        start = None
-        for n, line in enumerate(code, 1):
-            if re.match(rf"\s*inductive\s+{re.escape(name)}\b", line):
-                start = n
-                break
-        if start is None:
-            continue
-        count = 0
-        for line in code[start:]:
-            if re.match(r"\s*(deriving|end|instance|def|theorem|structure)\b", line):
-                break
-            count += len(re.findall(r"\|\s*\w+", line))
-        if count > MAX_ATOMS:
-            add("L5", start, f"{name} has {count}")
+    # L5: rivals are not optional. An argument module that encodes a Christian
+    # reading without at least one rival package is incomplete, not merely
+    # unpolished — so require two ArgumentPackage definitions.
+    if path.startswith(ARGUMENTS_DIR):
+        pkgs = re.findall(r"\bdef\s+(\w+)\s*:\s*ArgumentPackage\b", text)
+        if 0 < len(pkgs) < MIN_PACKAGES:
+            add("L5", 1, f"only {len(pkgs)} package ({pkgs[0]})")
 
     # L6: headline results must display their trust base.
     for n, line in enumerate(code, 1):

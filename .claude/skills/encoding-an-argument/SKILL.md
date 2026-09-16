@@ -21,9 +21,9 @@ the whole encoding worthless.
 
 ## 1 — the atom type
 
-One constructor per atomic claim. **At most twelve** (rule L5): the checker
-enumerates `2^n` valuations. Every constructor needs a docstring saying what it
-asserts.
+One constructor per atomic claim, each with a docstring saying what it asserts.
+There is no limit on how many: entailment is settled by `tauto` and refuted by
+named countermodels, neither of which enumerates valuations.
 
 ```lean
 inductive Claim
@@ -36,11 +36,6 @@ inductive Claim
   conclusion.** -/
   | salvationByGraceThroughFaithNotWorks
 deriving DecidableEq, Repr
-
-instance : FiniteAtoms Claim where
-  elems := [ .romans3_28, .worksOfLawMeansWorksGenerally,
-             .salvationByGraceThroughFaithNotWorks ]
-  complete a := by cases a <;> simp
 ```
 
 Include the atom the *rival* needs, and the atom the strongest *objection*
@@ -98,23 +93,40 @@ For a fulfilment argument, `conclusionLabel` must be
 
 ## 4 — the theorems
 
-```lean
-set_option maxRecDepth 20000   -- 40000 at ten or more atoms
+To establish, unfold and call `tauto`:
 
+```lean
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
-  apply entails_of_check
-  decide
+  intro w hw
+  simp only [reformed, sharedPremises, paulineToFaithAlone, conjOf, p,
+    List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
+    FFL.Propositional.Formula.Boolean.val] at hw ⊢
+  tauto
 
 #print axioms reformed_establishes
+```
+
+To refute, **name the rival's reading** and check it. The valuation is the
+rival's position written down, so name it after that position:
+
+```lean
+def tridentineReading : Valuation Claim := fun a =>
+  match a with
+  | .salvationByGraceThroughFaithNotWorks => False
+  | _ => True
 
 @[headline]
-theorem newPerspective_not_establishes : ¬ Establishes newPerspective := by
-  apply not_entails_of_check
-  decide
-
-#print axioms newPerspective_not_establishes
+theorem tridentine_not_establishes : ¬ Establishes tridentine := by
+  refine not_entails_of_countermodel tridentineReading ?_ ?_ <;>
+    simp [tridentine, conjOf, p, notP,
+      FFL.Propositional.Formula.Boolean.val, tridentineReading]
 ```
+
+**Qualify `FFL.Propositional.Formula.Boolean.val` in full.** `Formula` is also
+an abbreviation in `Testimony.Logic`, so the short name resolves to a
+nonexistent constant, the tactic fails, and the proof falls back to `sorryAx` —
+which only `lake exe axiom-audit` will catch.
 
 `@[headline]` marks a result the library claims; rule L6 requires the
 `#print axioms` line after it.
@@ -122,9 +134,13 @@ theorem newPerspective_not_establishes : ¬ Establishes newPerspective := by
 ## 5 — the load-bearing result
 
 The most valuable thing an encoding produces. **State the reduced package
-explicitly** — do not filter a premise out of an existing one, because
-`List.filter` over a derived `DecidableEq (Formula α)` does not kernel-reduce,
-so `decide` fails and falls back to `sorryAx`.
+explicitly** rather than filtering a premise out of an existing one.
+
+Where an argument has two independent routes to its conclusion — as sola fide
+does, through Paul and through Jesus' words in Luke — neither disputed premise
+will be load-bearing on its own. Check each separately, then check both
+together; the interesting result is usually that only the *disjunction* carries
+the argument.
 
 ```lean
 def reformedWithoutLexicalPremise : ArgumentPackage Claim :=
@@ -133,9 +149,10 @@ def reformedWithoutLexicalPremise : ArgumentPackage Claim :=
     premises := [ /- everything except the disputed premise -/ ] }
 
 @[headline]
-theorem worksOfLaw_is_load_bearing : ¬ Establishes reformedWithoutLexicalPremise := by
-  apply not_entails_of_check
-  decide
+theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw := by
+  intro w hw
+  simp only [reformedWithoutWorksOfLaw, reformed, /- … -/] at hw ⊢
+  tauto
 ```
 
 ## 6 — read the manifest

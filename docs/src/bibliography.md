@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/deanberris/testimony/blob/main/references.bib).
 
-14 entries, of which 4 carry no stable public identifier.
+18 entries, of which 5 carry no stable public identifier.
 
 - **`na28-2012`** — Barbara Aland, Kurt Aland, Institut für neutestamentliche Textforschung (ed.). *Novum Testamentum Graece*. 2012. ISBN 9781619700321. ISBN is the Hendrickson / German Bible Society printing.
 - **`benzmuller-godel-2014`** — Christoph Benzmüller, Bruno Woltzenlogel Paleo. *Automating Gödel's Ontological Proof of God's Existence with Higher-order Automated Theorem Provers*. 2014. [DOI 10.3233/978-1-61499-419-0-93](https://doi.org/10.3233/978-1-61499-419-0-93).
@@ -16,9 +16,13 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/deanberris/t
 - **`etcbc-bhsa`** — Eep Talstra Centre for Bible and Computer. *Biblia Hebraica Stuttgartensia (Amstelodamensis)*. [https://github.com/ETCBC/bhsa](https://github.com/ETCBC/bhsa).
 - **`bhs-1997`** — Karl Elliger, Wilhelm Rudolph (ed.). *Biblia Hebraica Stuttgartensia*. 1997. *(no public identifier)*
 - **`france-matthew-2007`** — R. T. France. *The Gospel of Matthew*. 2007. ISBN 9780802825018.
+- **`johnson-james-1995`** — Luke Timothy Johnson. *The Letter of James: A New Translation with Introduction and Commentary*. 1995. ISBN 9780385413602.
 - **`keil-delitzsch-minor-prophets-1949`** — Carl Friedrich Keil, Franz Delitzsch. *Biblical Commentary on the Old Testament: The Twelve Minor Prophets*. Translated by James Martin. 1949. *(no public identifier)* Reprint of the T. & T. Clark translation; original German 1866–68.
+- **`marshall-luke-1978`** — I. Howard Marshall. *The Gospel of Luke: A Commentary on the Greek Text*. 1978. ISBN 9780802835123.
+- **`moo-james-2000`** — Douglas J. Moo. *The Letter of James*. 2000. ISBN 9780851119779.
 - **`motyer-isaiah-1993`** — J. Alec Motyer. *The Prophecy of Isaiah: An Introduction and Commentary*. 1993. *(no public identifier)*
 - **`openscriptures-oshb`** — Open Scriptures. *Open Scriptures Hebrew Bible*. [https://github.com/openscriptures/morphhb](https://github.com/openscriptures/morphhb).
 - **`tanner-decrees-1990`** — Norman P. Tanner (ed.). *Decrees of the Ecumenical Councils*. 1990. ISBN 9780878404902.
 - **`ubs5-2014`** — United Bible Societies (ed.). *The Greek New Testament*. 2014. *(no public identifier)*
+- **`westminster-confession-1647`** — Westminster Assembly. *The Westminster Confession of Faith*. 1647. *(no public identifier)* Cited by chapter and section; no critical edition catalogued.
 - **`wright-what-paul-said-1997`** — N. T. Wright. *What Saint Paul Really Said: Was Paul of Tarsus the Real Founder of Christianity?*. 1997. ISBN 9780802844453.

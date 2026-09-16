@@ -54,20 +54,20 @@ class RuleTests(unittest.TestCase):
         text = '@[bib_entry] def alpha : BibEntry := .book\n  { core := c }\n'
         self.assertNotIn("L4", rules(self.lint(text, path="Testimony/Bib/Works.lean")))
 
-    def test_L5_atom_budget_exceeded(self):
-        ctors = "\n".join(f"  | c{i}" for i in range(13))
-        text = f"inductive Claim\n{ctors}\nderiving DecidableEq\n\ninstance : FiniteAtoms Claim where\n  elems := []\n"
-        self.assertIn("L5", rules(self.lint(text)))
+    def test_L5_argument_module_without_a_rival(self):
+        text = "def christian : ArgumentPackage Claim := x\n"
+        found = self.lint(text, path="Testimony/Arguments/Foo.lean")
+        self.assertIn("L5", rules(found))
 
-    def test_L5_within_budget(self):
-        ctors = "\n".join(f"  | c{i}" for i in range(11))
-        text = f"inductive Claim\n{ctors}\nderiving DecidableEq\n\ninstance : FiniteAtoms Claim where\n  elems := []\n"
-        self.assertNotIn("L5", rules(self.lint(text)))
+    def test_L5_argument_module_with_a_rival(self):
+        text = ("def christian : ArgumentPackage Claim := x\n"
+                "def critical : ArgumentPackage Claim := y\n")
+        found = self.lint(text, path="Testimony/Arguments/Foo.lean")
+        self.assertNotIn("L5", rules(found))
 
-    def test_L5_ignores_inductives_without_finiteatoms(self):
-        ctors = "\n".join(f"  | c{i}" for i in range(20))
-        text = f"inductive Book\n{ctors}\nderiving DecidableEq\n"
-        self.assertNotIn("L5", rules(self.lint(text)))
+    def test_L5_ignores_modules_outside_arguments(self):
+        text = "def christian : ArgumentPackage Claim := x\n"
+        self.assertNotIn("L5", rules(self.lint(text, path="Testimony/Logic/Package.lean")))
 
     def test_L6_headline_without_print_axioms(self):
         text = "@[headline]\ntheorem foo : True := trivial\n"

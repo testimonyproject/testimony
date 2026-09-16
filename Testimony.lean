@@ -10,7 +10,7 @@ import Testimony.Bib.Render
 import Testimony.Provenance
 import Testimony.Intertext
 import Testimony.Logic.Basic
-import Testimony.Logic.Decide
+import Testimony.Logic.Entail
 import Testimony.Logic.Package
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem

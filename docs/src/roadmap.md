@@ -8,12 +8,26 @@ Four arguments are worked end to end, each with at least one rival package:
 |---|---|
 | Bethlehem (Micah 5:2) | Christian package establishes; critical reading does not; `Satisfies` witness |
 | Virgin birth (Isaiah 7:14) | Establishes; critical reading does not; **עַלְמָה is load-bearing** |
-| Sola fide | Reformed establishes; New Perspective and Tridentine do not; **ἔργα νόμου is load-bearing** |
+| Sola fide | Reformed establishes; **so does the New Perspective**; Trent does not; **neither lexical premise is load-bearing alone**; the James harmonisation is |
 | Sola scriptura *(seeded)* | Protestant establishes; Catholic/Orthodox does not; self-refutation objection is valid |
 
-A pattern has already emerged that was not designed for: **two of the three
-fully worked arguments turn on the sense of a single word.** Whether that
-generalises is an empirical question the library is now equipped to answer.
+Two findings emerged that were not designed for.
+
+**Redundancy defeats a lexical dispute.** Sola fide runs on two independent
+strands — Paul's ἔργα νόμου and Jesus' σέσωκέν σε at Luke 7:50 — and neither
+lexical premise carries the argument alone. Only their disjunction does. An
+opponent must defeat both readings, not either.
+
+**Which is why the virgin-birth argument is the weaker one.** It has a single
+strand, so defeating עַלְמָה defeats it outright. There is no dominical saying
+about a virgin birth to fall back on. The contrast between the two arguments is
+a structural fact about them, not a matter of taste, and the library states it
+in a form either side can check.
+
+A corollary worth noting: because the New Perspective rejects the traditional
+reading of Paul's phrase while still affirming justification by faith, it
+**establishes the conclusion too**. Winning the ἔργα νόμου argument is not a
+defeat of sola fide.
 
 ## Near term
 

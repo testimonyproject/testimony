@@ -1,4 +1,4 @@
-import Testimony.Logic.Decide
+import Testimony.Logic.Entail
 import Testimony.Provenance
 
 /-!
@@ -29,14 +29,6 @@ structure AtomMeta where
   /-- Who says so, where, and with what confidence. -/
   source : Source
 deriving Repr
-
-/-- The atoms occurring in a formula, with repeats. -/
-def atomsOf : Formula α → List α
-  | .atom a => [a]
-  | .falsum => []
-  | .and p q => atomsOf p ++ atomsOf q
-  | .or p q => atomsOf p ++ atomsOf q
-  | .imp p q => atomsOf p ++ atomsOf q
 
 /-- The conjunction of a list of formulas. An empty conjunction is verum,
 which Foundation defines as `⊥ ➝ ⊥`. Used to keep multi-premise inference
