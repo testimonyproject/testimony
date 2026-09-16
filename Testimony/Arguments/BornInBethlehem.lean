@@ -1,4 +1,5 @@
 import Testimony.Argument
+import Testimony.Bib.Works
 
 /-!
 # Arguments.BornInBethlehem — Phase 1 vertical-slice seed
@@ -11,9 +12,12 @@ the assumption manifest are the next steps of Phase 1.
 
 namespace Testimony.Arguments.BornInBethlehem
 
-open Testimony
+open Testimony Testimony.Bib
 
+/-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/
 def micah5_2 : Passage := ⟨.micah, 5, 2⟩
+
+/-- Matthew 2:6 — Matthew's citation of Micah in the chief priests' answer. -/
 def matthew2_6 : Passage := ⟨.matthew, 2, 6⟩
 
 /-- Matthew explicitly quotes Micah — this much is uncontroversial verbal
@@ -22,19 +26,23 @@ def quotationEdge : IntertextEdge :=
   { fromPassage := matthew2_6
   , toPassage := micah5_2
   , relation := .quotation
-  , source := { citation := "NA28 marginal cross-reference; UBS5 index of quotations"
-              , tradition := .criticalScholarship
-              , confidence := .consensus } }
+  , source :=
+      { primary := .work na28 (.apparatus matthew2_6)
+      , supporting := [.work ubs5 .whole]
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
 
 /-- The Christian predictive reading of Micah 5:2. -/
 def predictiveReading : Interpretation :=
   { passage := micah5_2
   , reading := "Micah 5:2 predicts the Messiah's birthplace as Bethlehem"
   , asRelation := some .prediction
-  , source := { citation := "Keil & Delitzsch, Commentary on the Minor Prophets, ad loc."
-              , tradition := .christianTypological
-              , confidence := .wellSupported } }
+  , source :=
+      { primary := .work keilDelitzschMinorProphets (.adLoc micah5_2)
+      , tradition := .christianTypological
+      , confidence := .wellSupported } }
 
+/-- The criterion this argument establishes a candidate must meet. -/
 def bornInBethlehem : FulfillmentCriterion :=
   { name := "born in Bethlehem", basis := predictiveReading }
 
@@ -46,20 +54,28 @@ def christianPackage : PremisePackage :=
   , premises :=
     [ { name := "Micah 5:2 is a forward-looking Messianic prediction"
       , kind := .interpretive
-      , source := { citation := "Keil & Delitzsch, ad loc."
-                  , tradition := .christianTypological
-                  , confidence := .wellSupported } }
+      , source :=
+          { primary := .work keilDelitzschMinorProphets (.adLoc micah5_2)
+          , tradition := .christianTypological
+          , confidence := .wellSupported } }
+      -- Disputed in critical scholarship; honesty required. Note this premise
+      -- cites scripture alone, which `Source.isScriptureOnly` will surface.
     , { name := "Jesus of Nazareth was born in Bethlehem"
       , kind := .historical
-      , source := { citation := "Matthew 2:1; Luke 2:4–7"
-                  , tradition := .christianHistoricalGrammatical
-                  , confidence := .disputed } }  -- disputed in critical scholarship; honesty required
+      , source :=
+          { primary := .scripture
+              [ { ref := .verse ⟨.matthew, 2, 1⟩ }
+              , { ref := .range ⟨.luke, 2, 4, 2, 7⟩ } ]
+          , tradition := .christianHistoricalGrammatical
+          , confidence := .disputed } }
     , { name := "Matthew's quotation intends predictive fulfilment"
       , kind := .interpretive
-      , source := { citation := "France, The Gospel of Matthew (NICNT), ad loc."
-                  , tradition := .christianHistoricalGrammatical
-                  , confidence := .wellSupported } } ] }
+      , source :=
+          { primary := .work franceMatthew (.adLoc matthew2_6)
+          , tradition := .christianHistoricalGrammatical
+          , confidence := .wellSupported } } ] }
 
+/-- The candidate this argument concerns. -/
 def jesus : Person := ⟨"Jesus of Nazareth"⟩
 
 end Testimony.Arguments.BornInBethlehem

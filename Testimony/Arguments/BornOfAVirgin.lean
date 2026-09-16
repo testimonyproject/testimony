@@ -1,4 +1,5 @@
 import Testimony.Argument
+import Testimony.Bib.Works
 
 /-!
 # Arguments.BornOfAVirgin — Phase 2 vertical-slice seed
@@ -23,9 +24,12 @@ multiple-attestation premise below.
 
 namespace Testimony.Arguments.BornOfAVirgin
 
-open Testimony
+open Testimony Testimony.Bib
 
+/-- Isaiah 7:14 — the sign of the `almah` who conceives and bears a son. -/
 def isaiah7_14 : Passage := ⟨.isaiah, 7, 14⟩
+
+/-- Matthew 1:23 — Matthew's citation of Isaiah via the LXX. -/
 def matthew1_23 : Passage := ⟨.matthew, 1, 23⟩
 
 /-- Matthew explicitly quotes Isaiah — uncontroversial verbal citation,
@@ -35,9 +39,11 @@ def quotationEdge : IntertextEdge :=
   { fromPassage := matthew1_23
   , toPassage := isaiah7_14
   , relation := .quotation
-  , source := { citation := "NA28 marginal cross-reference; UBS5 index of quotations"
-              , tradition := .criticalScholarship
-              , confidence := .consensus } }
+  , source :=
+      { primary := .work na28 (.apparatus matthew1_23)
+      , supporting := [.work ubs5 .whole]
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
 
 /-- The Christian predictive reading of Isaiah 7:14. Far more contested than
 Micah 5:2 — see the module doc above. -/
@@ -45,10 +51,12 @@ def predictiveReading : Interpretation :=
   { passage := isaiah7_14
   , reading := "Isaiah 7:14 predicts a virgin conceiving and bearing 'Immanuel', ultimately fulfilled in the virgin birth of the Messiah"
   , asRelation := some .prediction
-  , source := { citation := "J.A. Motyer, The Prophecy of Isaiah (IVP, 1993), ad loc."
-              , tradition := .christianTypological
-              , confidence := .disputed } }
+  , source :=
+      { primary := .work motyerIsaiah (.adLoc isaiah7_14)
+      , tradition := .christianTypological
+      , confidence := .disputed } }
 
+/-- The criterion this argument establishes a candidate must meet. -/
 def bornOfAVirgin : FulfillmentCriterion :=
   { name := "born of a virgin", basis := predictiveReading }
 
@@ -60,26 +68,41 @@ def christianPackage : PremisePackage :=
   , premises :=
     [ { name := "Isaiah 7:14 is a forward-looking Messianic prediction of a virgin birth, not solely a near-term sign to Ahaz"
       , kind := .interpretive
-      , source := { citation := "Motyer, The Prophecy of Isaiah, ad loc."
-                  , tradition := .christianTypological
-                  , confidence := .disputed } }  -- the almah/parthenos and near/far-fulfilment dispute is the crux of this argument
+      , source :=
+          { primary := .work motyerIsaiah (.adLoc isaiah7_14)
+          , tradition := .christianTypological
+          -- The almah/parthenos and near/far-fulfilment dispute is the crux
+          -- of this argument.
+          , confidence := .disputed } }
     , { name := "Mary, betrothed to Joseph, conceived Jesus while a virgin, before she and Joseph came together"
       , kind := .historical
-      , source := { citation := "Matthew 1:18–25; Luke 1:26–38, 34–35"
-                  , tradition := .christianHistoricalGrammatical
-                  , confidence := .disputed } }  -- a miraculous conception is outside ordinary historical method; critical scholarship disputes or denies it
+      -- A miraculous conception is outside ordinary historical method;
+      -- critical scholarship disputes or denies it. This premise also cites
+      -- scripture alone — `Source.isScriptureOnly` surfaces that.
+      , source :=
+          { primary := .scripture
+              [ { ref := .range ⟨.matthew, 1, 18, 1, 25⟩ }
+              , { ref := .range ⟨.luke, 1, 26, 1, 38⟩ } ]
+          , tradition := .christianHistoricalGrammatical
+          , confidence := .disputed } }
     , { name := "Matthew's and Luke's birth narratives are independent traditions that nonetheless agree on the virgin conception, satisfying a criterion of multiple attestation"
       , kind := .historical
-      , source := { citation := "R.E. Brown, The Birth of the Messiah (Doubleday, 1993), 26–38"
-                  , tradition := .christianHistoricalGrammatical
-                  , confidence := .plausible } }  -- independence of Matthew's and Luke's sources is itself debated
+      -- Independence of Matthew's and Luke's sources is itself debated.
+      , source :=
+          { primary := .work brownBirthMessiah (.pages 26 38)
+          , tradition := .christianHistoricalGrammatical
+          , confidence := .plausible } }
     , { name := "Matthew's quotation of Isaiah 7:14 (via LXX 'parthenos') intends the virgin conception of Jesus as prophetic fulfilment"
       , kind := .interpretive
-      , source := { citation := "R.T. France, The Gospel of Matthew (NICNT), ad loc."
-                  , tradition := .christianHistoricalGrammatical
-                  , confidence := .wellSupported } } ] }
+      , source :=
+          { primary := .work franceMatthew (.adLoc matthew1_23)
+          , tradition := .christianHistoricalGrammatical
+          , confidence := .wellSupported } } ] }
 
+/-- The candidate this argument concerns. -/
 def jesus : Person := ⟨"Jesus of Nazareth"⟩
+
+/-- Mary, whose virginity at conception is the contested historical claim. -/
 def mary : Person := ⟨"Mary of Nazareth"⟩
 
 end Testimony.Arguments.BornOfAVirgin

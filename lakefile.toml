@@ -2,5 +2,10 @@ name = "testimony"
 version = "0.1.0"
 defaultTargets = ["Testimony"]
 
+[[require]]
+name = "Foundation"
+git = "https://github.com/FormalizedFormalLogic/Foundation"
+rev = "master"
+
 [[lean_lib]]
 name = "Testimony"

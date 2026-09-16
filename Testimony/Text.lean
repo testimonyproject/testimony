@@ -52,4 +52,17 @@ structure Pericope where
   endVerse : Nat
 deriving Repr, DecidableEq
 
+/-- Either a single verse or a contiguous range. Scripture citations quantify
+over this, so `Matthew 2:1; Luke 2:4–7` is two `PassageRange` values rather than
+one opaque string. -/
+inductive PassageRange
+  | verse (p : Passage)
+  | range (r : Pericope)
+deriving Repr, DecidableEq
+
+/-- The book a range belongs to. Ranges never span books, by construction. -/
+def PassageRange.book : PassageRange → Book
+  | .verse p => p.book
+  | .range r => r.book
+
 end Testimony
