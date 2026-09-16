@@ -1,0 +1,6 @@
+name = "testimony"
+version = "0.1.0"
+defaultTargets = ["Testimony"]
+
+[[lean_lib]]
+name = "Testimony"
