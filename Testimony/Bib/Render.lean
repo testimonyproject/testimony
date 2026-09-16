@@ -164,6 +164,75 @@ def bibtexFile (es : List BibEntry) : String :=
   "% Source of truth: Testimony/Bib/Works.lean\n\n" ++
   String.intercalate "\n\n" (es.map toBibtex) ++ "\n"
 
+/-- A trailing clause for an optional field, or nothing if it is absent. -/
+def mdClause (s : Option String) : String :=
+  match s with
+  | some v => " " ++ v ++ "."
+  | none => ""
+
+/-- An imprint for display: `Place: Publisher`, or the publisher alone where no
+place is recorded. -/
+def imprintDisplay (publisher : String) (place : Option String) : String :=
+  match place with
+  | some p => p ++ ": " ++ publisher
+  | none => publisher
+
+/-- A page range for display, with an en dash, collapsing a single page. -/
+def pagesDisplay : Nat × Nat → String
+  | (a, b) => if a == b then toString a else toString a ++ "–" ++ toString b
+
+/-- The variant-specific part of a Markdown line: everything that lives in an
+entry's own constructor rather than in its `WorkCore`.
+
+Without this the Markdown bibliography renders every entry as though it were a
+bare title, and the information that makes a citation checkable is exactly what
+goes missing — a dictionary article loses the dictionary and its page range, a
+critical edition loses its siglum, a journal article loses its journal, and a
+dataset loses the version that makes an appeal to it reproducible. The BibTeX
+path never had this gap; the Markdown path did, and `docs/src/bibliography.md`
+is the copy a reader actually sees. -/
+def variantMarkdown : BibEntry → String
+  | .book d =>
+    " " ++ imprintDisplay d.publisher d.place ++ "."
+    ++ mdClause d.edition
+    ++ mdClause (match d.series, d.seriesNumber with
+                 | some s, some n => some (s ++ " " ++ n)
+                 | some s, none => some s
+                 | none, some n => some n
+                 | none, none => none)
+    ++ mdClause (d.volume.map fun v => "Vol. " ++ v)
+    ++ mdClause (d.totalVolumes.map fun n => toString n ++ " vols")
+  | .inCollection d =>
+    " In *" ++ d.containerTitle ++ "*"
+    ++ (if d.containerEditors.isEmpty then ""
+        else ", ed. " ++ agentsDisplay d.containerEditors)
+    ++ (match d.pages with
+        | some ps => ", " ++ pagesDisplay ps
+        | none => "")
+    ++ ". " ++ imprintDisplay d.publisher d.place ++ "."
+    ++ mdClause d.edition
+  | .article d =>
+    " *" ++ d.journal ++ "*"
+    ++ (match d.volume with | some v => " " ++ v | none => "")
+    ++ (match d.issue with | some i => "." ++ i | none => "")
+    ++ (match d.pages with | some ps => ": " ++ pagesDisplay ps | none => "")
+    ++ "."
+  | .thesis d => " " ++ d.kind ++ ", " ++ d.institution ++ "."
+  | .criticalEdition d =>
+    " " ++ imprintDisplay d.publisher d.place ++ "."
+    ++ mdClause d.edition
+    ++ mdClause (d.siglum.map fun s => "Siglum " ++ s)
+  | .ancientWork d =>
+    mdClause d.originalTitle
+    ++ mdClause (d.composed.map fun y => "Composed " ++ renderYear y)
+    ++ mdClause (d.editionUsed.map fun k => "Cited through `" ++ k ++ "`")
+  | .dataset d =>
+    mdClause d.maintainer
+    ++ mdClause (d.version.map fun v => "Version " ++ v)
+    ++ mdClause (d.commit.map fun c => "Commit `" ++ c ++ "`")
+    ++ mdClause d.license
+  | .webPage d => mdClause d.site
+
 /-- One entry as a Markdown bibliography line. Entries with no stable public
 identifier are marked, so an unverifiable reference is visibly so. -/
 def toMarkdown (e : BibEntry) : String :=
@@ -188,7 +257,8 @@ def toMarkdown (e : BibEntry) : String :=
   let note := match c.note with
     | some n => " " ++ n
     | none => ""
-  "- **`" ++ c.key ++ "`** — " ++ who ++ "*" ++ title ++ "*." ++ trans ++ year ++ ids ++ note
+  "- **`" ++ c.key ++ "`** — " ++ who ++ "*" ++ title ++ "*." ++ trans
+    ++ variantMarkdown e ++ year ++ ids ++ note
 
 /-- The whole bibliography as a Markdown chapter, sorted by author family
 name. -/
@@ -236,7 +306,26 @@ build rather than silently rewriting `references.bib`. -/
 
 #guard toMarkdown motyerIsaiah ==
   "- **`motyer-isaiah-1993`** — J. Alec Motyer. " ++
-  "*The Prophecy of Isaiah: An Introduction and Commentary*. 1993." ++
+  "*The Prophecy of Isaiah: An Introduction and Commentary*." ++
+  " InterVarsity Press. 1993." ++
   " *(no public identifier)*"
+
+-- The variant clause is the whole point of `variantMarkdown`: a dictionary
+-- article must keep its dictionary, its editors and its pages.
+#guard toMarkdown berryVirginBirth ==
+  "- **`berry-virgin-birth-2003`** — Everett Berry. *Virgin, Virgin Birth*." ++
+  " In *Holman Illustrated Bible Dictionary*, ed. Chad Brand, Charles Draper," ++
+  " Archie England, Trent C. Butler, 1653–1654." ++
+  " Nashville, TN: Holman Bible Publishers. 2003." ++
+  " ISBN 9780805428360. ISBN is the containing volume's."
+
+-- A critical edition must keep the siglum it is cited by.
+#guard ((toMarkdown na28).splitOn "Siglum NA28.").length == 2
+
+-- A series and its number read as one unit, not two sentences.
+#guard ((toMarkdown chiltonIsaiahTargum).splitOn "The Aramaic Bible 11.").length == 2
+
+-- A dataset must keep the version or commit that makes it reproducible.
+#guard ((toMarkdown bhsaDataset).splitOn "ETCBC, Vrije Universiteit Amsterdam.").length == 2
 
 end Testimony.Bib

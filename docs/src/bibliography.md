@@ -6,23 +6,29 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-18 entries, of which 5 carry no stable public identifier.
+24 entries, of which 6 carry no stable public identifier.
 
-- **`na28-2012`** — Barbara Aland, Kurt Aland, Institut für neutestamentliche Textforschung (ed.). *Novum Testamentum Graece*. 2012. ISBN 9781619700321. ISBN is the Hendrickson / German Bible Society printing.
-- **`benzmuller-godel-2014`** — Christoph Benzmüller, Bruno Woltzenlogel Paleo. *Automating Gödel's Ontological Proof of God's Existence with Higher-order Automated Theorem Provers*. 2014. [DOI 10.3233/978-1-61499-419-0-93](https://doi.org/10.3233/978-1-61499-419-0-93).
-- **`brown-birth-messiah-1993`** — Raymond E. Brown. *The Birth of the Messiah: A Commentary on the Infancy Narratives in the Gospels of Matthew and Luke*. 1993. ISBN 9780385472029.
-- **`calvin-institutes-1960`** — John Calvin. *Institutes of the Christian Religion*. Translated by Ford Lewis Battles. 1960. ISBN 9780664220211. Original Latin 1559.
-- **`dunn-new-perspective-2005`** — James D. G. Dunn. *The New Perspective on Paul*. 2005. ISBN 9783161486777.
-- **`etcbc-bhsa`** — Eep Talstra Centre for Bible and Computer. *Biblia Hebraica Stuttgartensia (Amstelodamensis)*. [https://github.com/ETCBC/bhsa](https://github.com/ETCBC/bhsa).
-- **`bhs-1997`** — Karl Elliger, Wilhelm Rudolph (ed.). *Biblia Hebraica Stuttgartensia*. 1997. *(no public identifier)*
-- **`france-matthew-2007`** — R. T. France. *The Gospel of Matthew*. 2007. ISBN 9780802825018.
-- **`johnson-james-1995`** — Luke Timothy Johnson. *The Letter of James: A New Translation with Introduction and Commentary*. 1995. ISBN 9780385413602.
-- **`keil-delitzsch-minor-prophets-1949`** — Carl Friedrich Keil, Franz Delitzsch. *Biblical Commentary on the Old Testament: The Twelve Minor Prophets*. Translated by James Martin. 1949. *(no public identifier)* Reprint of the T. & T. Clark translation; original German 1866–68.
-- **`marshall-luke-1978`** — I. Howard Marshall. *The Gospel of Luke: A Commentary on the Greek Text*. 1978. ISBN 9780802835123.
-- **`moo-james-2000`** — Douglas J. Moo. *The Letter of James*. 2000. ISBN 9780851119779.
-- **`motyer-isaiah-1993`** — J. Alec Motyer. *The Prophecy of Isaiah: An Introduction and Commentary*. 1993. *(no public identifier)*
-- **`openscriptures-oshb`** — Open Scriptures. *Open Scriptures Hebrew Bible*. [https://github.com/openscriptures/morphhb](https://github.com/openscriptures/morphhb).
-- **`tanner-decrees-1990`** — Norman P. Tanner (ed.). *Decrees of the Ecumenical Councils*. 1990. ISBN 9780878404902.
-- **`ubs5-2014`** — United Bible Societies (ed.). *The Greek New Testament*. 2014. *(no public identifier)*
-- **`westminster-confession-1647`** — Westminster Assembly. *The Westminster Confession of Faith*. 1647. *(no public identifier)* Cited by chapter and section; no critical edition catalogued.
-- **`wright-what-paul-said-1997`** — N. T. Wright. *What Saint Paul Really Said: Was Paul of Tarsus the Real Founder of Christianity?*. 1997. ISBN 9780802844453.
+- **`na28-2012`** — Barbara Aland, Kurt Aland, Institut für neutestamentliche Textforschung (ed.). *Novum Testamentum Graece*. Stuttgart: Deutsche Bibelgesellschaft. 28th revised edition. Siglum NA28. 2012. ISBN 9781619700321. ISBN is the Hendrickson / German Bible Society printing.
+- **`benzmuller-godel-2014`** — Christoph Benzmüller, Bruno Woltzenlogel Paleo. *Automating Gödel's Ontological Proof of God's Existence with Higher-order Automated Theorem Provers*. In *ECAI 2014*. IOS Press. Frontiers in Artificial Intelligence and Applications 263. 2014. [DOI 10.3233/978-1-61499-419-0-93](https://doi.org/10.3233/978-1-61499-419-0-93).
+- **`berry-virgin-birth-2003`** — Everett Berry. *Virgin, Virgin Birth*. In *Holman Illustrated Bible Dictionary*, ed. Chad Brand, Charles Draper, Archie England, Trent C. Butler, 1653–1654. Nashville, TN: Holman Bible Publishers. 2003. ISBN 9780805428360. ISBN is the containing volume's.
+- **`brown-birth-messiah-1993`** — Raymond E. Brown. *The Birth of the Messiah: A Commentary on the Infancy Narratives in the Gospels of Matthew and Luke*. New York: Doubleday. new updated edition. Anchor Bible Reference Library. 1993. ISBN 9780385472029.
+- **`calvin-institutes-1960`** — John Calvin. *Institutes of the Christian Religion*. Translated by Ford Lewis Battles. Philadelphia: Westminster Press. Library of Christian Classics. 2 vols. 1960. ISBN 9780664220211. Original Latin 1559.
+- **`chilton-isaiah-targum-1987`** — Bruce D. Chilton. *The Isaiah Targum: Introduction, Translation, Apparatus and Notes*. Wilmington, DE: Michael Glazier. The Aramaic Bible 11. 1987. ISBN 9780894534805.
+- **`dunn-new-perspective-2005`** — James D. G. Dunn. *The New Perspective on Paul*. Tübingen: Mohr Siebeck. Wissenschaftliche Untersuchungen zum Neuen Testament. 2005. ISBN 9783161486777.
+- **`etcbc-bhsa`** — Eep Talstra Centre for Bible and Computer. *Biblia Hebraica Stuttgartensia (Amstelodamensis)*. ETCBC, Vrije Universiteit Amsterdam. [https://github.com/ETCBC/bhsa](https://github.com/ETCBC/bhsa).
+- **`bhs-1997`** — Karl Elliger, Wilhelm Rudolph (ed.). *Biblia Hebraica Stuttgartensia*. Stuttgart: Deutsche Bibelgesellschaft. 5th edition. Siglum BHS. 1997. *(no public identifier)*
+- **`france-matthew-2007`** — R. T. France. *The Gospel of Matthew*. Grand Rapids: Wm. B. Eerdmans. New International Commentary on the New Testament. 2007. ISBN 9780802825018.
+- **`johnson-james-1995`** — Luke Timothy Johnson. *The Letter of James: A New Translation with Introduction and Commentary*. New York: Doubleday. Anchor Bible. 1995. ISBN 9780385413602.
+- **`keil-delitzsch-minor-prophets-1949`** — Carl Friedrich Keil, Franz Delitzsch. *Biblical Commentary on the Old Testament: The Twelve Minor Prophets*. Translated by James Martin. Grand Rapids: Wm. B. Eerdmans. 1949. *(no public identifier)* Reprint of the T. & T. Clark translation; original German 1866–68.
+- **`marshall-luke-1978`** — I. Howard Marshall. *The Gospel of Luke: A Commentary on the Greek Text*. Grand Rapids: Wm. B. Eerdmans. New International Greek Testament Commentary. 1978. ISBN 9780802835123.
+- **`miravalle-introduction-mary-2020`** — Mark I. Miravalle. *Introduction to Mary: The Heart of Marian Doctrine and Devotion*. Goleta, CA: Queenship Publishing. 2020. ISBN 9781882972067. ISBN is shared with the 1993 and 1997 Queenship printings; pagination cited is the 2020 printing's.
+- **`miravalle-meet-mary-2007`** — Mark I. Miravalle. *Meet Mary: Getting to Know the Mother of God*. Manchester, NH: Sophia Institute Press. 2007. ISBN 9781933184326.
+- **`moo-james-2000`** — Douglas J. Moo. *The Letter of James*. Leicester: Apollos. Pillar New Testament Commentary. 2000. ISBN 9780851119779.
+- **`motyer-isaiah-1993`** — J. Alec Motyer. *The Prophecy of Isaiah: An Introduction and Commentary*. InterVarsity Press. 1993. *(no public identifier)*
+- **`openscriptures-oshb`** — Open Scriptures. *Open Scriptures Hebrew Bible*. CC BY 4.0. [https://github.com/openscriptures/morphhb](https://github.com/openscriptures/morphhb).
+- **`rico-gentry-infant-king-2020`** — Christophe Rico, Peter J. Gentry. *The Mother of the Infant King, Isaiah 7:14: 'almâ and parthenos in the World of the Bible — A Linguistic Perspective*. Eugene, OR: Wipf & Stock. 2020. *(no public identifier)* Three 2020 printings catalogued (ISBNs 9781498230162, 9781498230179, 9781498230186); none could be tied to a printing.
+- **`tanner-decrees-1990`** — Norman P. Tanner (ed.). *Decrees of the Ecumenical Councils*. Washington, DC: Georgetown University Press. 2 vols. 1990. ISBN 9780878404902.
+- **`ubs5-2014`** — United Bible Societies (ed.). *The Greek New Testament*. Stuttgart: Deutsche Bibelgesellschaft. 5th revised edition. Siglum UBS5. 2014. *(no public identifier)*
+- **`wegner-virgin-births-2011`** — Paul D. Wegner. *How Many Virgin Births Are in the Bible? (Isaiah 7:14): A Prophetic Pattern Approach*. *Journal of the Evangelical Theological Society* 54.3: 467–484. 2011. [https://etsjets.org/wp-content/uploads/2012/01/files_JETS-PDFs_54_54-3_JETS_54-3_467-484_Wegner.pdf](https://etsjets.org/wp-content/uploads/2012/01/files_JETS-PDFs_54_54-3_JETS_54-3_467-484_Wegner.pdf).
+- **`westminster-confession-1647`** — Westminster Assembly. *The Westminster Confession of Faith*. Westminster Assembly. 1647. *(no public identifier)* Cited by chapter and section; no critical edition catalogued.
+- **`wright-what-paul-said-1997`** — N. T. Wright. *What Saint Paul Really Said: Was Paul of Tarsus the Real Founder of Christianity?*. Grand Rapids: Wm. B. Eerdmans. 1997. ISBN 9780802844453.

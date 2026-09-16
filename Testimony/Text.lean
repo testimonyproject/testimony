@@ -67,6 +67,11 @@ inductive TextualTradition
   | vulgate
   /-- The Syriac Peshitta. -/
   | peshitta
+  /-- Targum Jonathan, the Aramaic rendering of the Prophets. Distinguished
+  from the Hebrew it renders because its vocabulary is evidence about how the
+  Hebrew was *understood* in Aramaic-speaking Judaism, which is a different
+  question from what the Hebrew says. -/
+  | targum
 deriving Repr, DecidableEq
 
 /-- A verse-level reference: book, chapter, verse. -/

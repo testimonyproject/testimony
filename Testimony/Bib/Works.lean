@@ -269,6 +269,117 @@ carries none. -/
       , note := some "Cited by chapter and section; no critical edition catalogued." }
   , publisher := "Westminster Assembly" }
 
+/-- Miravalle's short Mariology. The source for the two scriptural strands added
+to `BornOfAVirgin`: Genesis 3:15 read as protoevangelium, and Micah 5:2--3 read
+as naming a mother and no father. -/
+@[bib_entry] def miravalleMeetMary : BibEntry := .book
+  { core :=
+      { key := "miravalle-meet-mary-2007"
+      , contributors := { authors := [.person "Mark I." "Miravalle"] }
+      , title := "Meet Mary"
+      , subtitle := some "Getting to Know the Mother of God"
+      , year := some { value := 2007 }
+      , identifiers := [.isbn "9781933184326"] }
+  , publisher := "Sophia Institute Press"
+  , place := some "Manchester, NH" }
+
+/-- Miravalle's survey of Marian doctrine, which collates the papal teaching the
+`catholic` package in `BornOfAVirgin` appeals to. Open Library catalogues the
+1993 Santa Barbara and 1997 printings, not the 2020 Goleta printing cited here;
+the ISBN is carried across all three, so it is the catalogued identifier and the
+year and place are not. -/
+@[bib_entry] def miravalleIntroductionToMary : BibEntry := .book
+  { core :=
+      { key := "miravalle-introduction-mary-2020"
+      , contributors := { authors := [.person "Mark I." "Miravalle"] }
+      , title := "Introduction to Mary"
+      , subtitle := some "The Heart of Marian Doctrine and Devotion"
+      , year := some { value := 2020 }
+      , identifiers := [.isbn "9781882972067"]
+      , note := some
+          ("ISBN is shared with the 1993 and 1997 Queenship printings; " ++
+           "pagination cited is the 2020 printing's.") }
+  , publisher := "Queenship Publishing"
+  , place := some "Goleta, CA" }
+
+/-- Berry's dictionary article on the virgin birth. Cited for two things the
+`BornOfAVirgin` argument turns on: that how Isaiah 7:14 was fulfilled in Ahaz's
+own day is itself an open question, and that the semantic range of עַלְמָה does
+not exclude the sense "virgin". Open Library records the imprint as B&H
+Publishing Group; the volume's title page reads Holman Bible Publishers. -/
+@[bib_entry] def berryVirginBirth : BibEntry := .inCollection
+  { core :=
+      { key := "berry-virgin-birth-2003"
+      , contributors := { authors := [.person "Everett" "Berry"] }
+      , title := "Virgin, Virgin Birth"
+      , year := some { value := 2003 }
+      , identifiers := [.isbn "9780805428360"]
+      , note := some "ISBN is the containing volume's." }
+  , containerTitle := "Holman Illustrated Bible Dictionary"
+  , containerEditors :=
+      [ .person "Chad" "Brand", .person "Charles" "Draper"
+      , .person "Archie" "England", .person "Trent C." "Butler" ]
+  , publisher := "Holman Bible Publishers"
+  , place := some "Nashville, TN"
+  , pages := some (1653, 1654) }
+
+/-- Chilton's translation of Targum Jonathan to Isaiah, with introduction,
+apparatus and notes. The citable text for the Targum's rendering of עַלְמָה at
+Isaiah 7:14 as עוּלֵימְתָא, "young woman" — evidence that tells against the
+Christian reading, and is encoded in `BornOfAVirgin` as such. -/
+@[bib_entry] def chiltonIsaiahTargum : BibEntry := .book
+  { core :=
+      { key := "chilton-isaiah-targum-1987"
+      , contributors := { authors := [.person "Bruce D." "Chilton"] }
+      , title := "The Isaiah Targum"
+      , subtitle := some "Introduction, Translation, Apparatus and Notes"
+      , year := some { value := 1987 }
+      , identifiers := [.isbn "9780894534805"] }
+  , publisher := "Michael Glazier"
+  , place := some "Wilmington, DE"
+  , series := some "The Aramaic Bible"
+  , seriesNumber := some "11" }
+
+/-- Rico and Gentry's linguistic monograph on Isaiah 7:14 — the hardest
+sustained case that עַלְמָה denotes a young virgin and that παρθένος means
+virgin throughout Semitic Koine. Open Library records three 2020 Wipf & Stock
+printings under ISBNs 9781498230162, 9781498230179 and 9781498230186 and does
+not distinguish them, so no single identifier is recorded here. -/
+@[bib_entry] def ricoGentryInfantKing : BibEntry := .book
+  { core :=
+      { key := "rico-gentry-infant-king-2020"
+      , contributors :=
+          { authors := [.person "Christophe" "Rico", .person "Peter J." "Gentry"] }
+      , title := "The Mother of the Infant King, Isaiah 7:14"
+      , subtitle := some
+          "'almâ and parthenos in the World of the Bible — A Linguistic Perspective"
+      , year := some { value := 2020 }
+      , note := some
+          ("Three 2020 printings catalogued (ISBNs 9781498230162, " ++
+           "9781498230179, 9781498230186); none could be tied to a printing.") }
+  , publisher := "Wipf & Stock"
+  , place := some "Eugene, OR" }
+
+/-- Wegner's article, the clearest evangelical statement of the case *against*
+reading Isaiah 7:14 as a direct prediction of a virgin birth. Cited for the
+rival lexical premise, so that the objection is stated by someone who holds it.
+JETS registers no DOIs; the identifier is the publisher's own open PDF. -/
+@[bib_entry] def wegnerVirginBirths : BibEntry := .article
+  { core :=
+      { key := "wegner-virgin-births-2011"
+      , contributors := { authors := [.person "Paul D." "Wegner"] }
+      , title := "How Many Virgin Births Are in the Bible? (Isaiah 7:14)"
+      , subtitle := some "A Prophetic Pattern Approach"
+      , year := some { value := 2011 }
+      , identifiers :=
+          [ .url ("https://etsjets.org/wp-content/uploads/2012/01/" ++
+                  "files_JETS-PDFs_54_54-3_JETS_54-3_467-484_Wegner.pdf")
+                 (some "2026-09-16") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "54"
+  , issue := some "3"
+  , pages := some (467, 484) }
+
 derive_bib_registry registry
 
 end Testimony.Bib

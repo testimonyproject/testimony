@@ -52,11 +52,18 @@ def document : String :=
     "Matthew 2:5--6 quotes Micah 5:2 as grounds for the Messiah's birthplace." ++
   package Testimony.Arguments.BornInBethlehem.christian ++
   package Testimony.Arguments.BornInBethlehem.critical ++
-  section_ "Born of a virgin (Isaiah 7:14)"
-    ("A single-stranded argument, and so the weaker one: defeating the " ++
-     "lexical premise defeats it outright.") ++
+  section_ "Born of a virgin (Isaiah 7:14, Genesis 3:15, Micah 5:2--3)"
+    ("Three scriptural strands. No single interpretive hinge carries the " ++
+     "argument; only all three together do. The magisterial strand is kept " ++
+     "separate, because its authority premise is not granted here.") ++
   package Testimony.Arguments.BornOfAVirgin.christian ++
   package Testimony.Arguments.BornOfAVirgin.critical ++
+  package Testimony.Arguments.BornOfAVirgin.semantic ++
+  package Testimony.Arguments.BornOfAVirgin.lexicalCritical ++
+  package Testimony.Arguments.BornOfAVirgin.criticalDenial ++
+  package Testimony.Arguments.BornOfAVirgin.criticalDenialUnderBerry ++
+  package Testimony.Arguments.BornOfAVirgin.catholic ++
+  package Testimony.Arguments.BornOfAVirgin.magisterialDenied ++
   postamble
 
 /-- Read a file, treating absence as empty so `--check` reports it as stale. -/
