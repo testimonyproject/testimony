@@ -1,6 +1,28 @@
 name = "testimony"
 version = "0.1.0"
 defaultTargets = ["Testimony"]
+# Batteries ships the environment-linter driver; `lake lint` runs it.
+lintDriver = "batteries/runLinter"
+
+# Tier 1 of four (see docs/src/style-guide.md): feedback in the editor rather
+# than in CI. A docstring here states what a premise asserts and who holds it,
+# so an undocumented declaration is very nearly an uncited one.
+[leanOptions]
+linter.missingDocs = true
+
+[[require]]
+name = "Foundation"
+git = "https://github.com/FormalizedFormalLogic/Foundation"
+rev = "master"
 
 [[lean_lib]]
 name = "Testimony"
+[[lean_exe]]
+name = "bibgen"
+root = "Testimony.Tools.Bibgen"
+supportInterpreter = true
+
+[[lean_exe]]
+name = "argtex"
+root = "Testimony.Tools.Argtex"
+supportInterpreter = true

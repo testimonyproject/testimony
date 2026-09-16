@@ -15,31 +15,49 @@ namespace Testimony
 much of the Messianic-prophecy debate is precisely about which of these a
 given link is. -/
 inductive RelationType
-  | quotation        -- explicit verbal citation
-  | allusion         -- probable intentional reference, not verbatim
-  | echo             -- faint verbal/thematic resonance
-  | typology         -- pattern/antitype correspondence
-  | promise          -- covenant promise taken up later
-  | prediction       -- forward-looking prophecy in original intent
-  | messianicTheme   -- royal/messianic motif
-  | retrospective    -- later text reinterprets earlier text
-  | thematic         -- shared theme without direct dependence
+  /-- Explicit verbal citation. -/
+  | quotation
+  /-- Probable intentional reference, not verbatim. -/
+  | allusion
+  /-- Faint verbal or thematic resonance. -/
+  | echo
+  /-- Pattern and antitype correspondence. -/
+  | typology
+  /-- A covenant promise taken up later. -/
+  | promise
+  /-- Forward-looking prophecy in the original author's intent. The most
+  contested classification, and the one most arguments turn on. -/
+  | prediction
+  /-- A royal or messianic motif. -/
+  | messianicTheme
+  /-- A later text reinterpreting an earlier one. -/
+  | retrospective
+  /-- Shared theme without direct dependence. -/
+  | thematic
 deriving Repr, DecidableEq
 
 /-- A directed intertextual edge with provenance. `source` cites who claims
 this relation holds, with what confidence. -/
 structure IntertextEdge where
-  fromPassage : Passage      -- the later/citing text
-  toPassage : Passage        -- the earlier/cited text
+  /-- The later, citing text. -/
+  fromPassage : Passage
+  /-- The earlier, cited text. -/
+  toPassage : Passage
+  /-- How the two are related. -/
   relation : RelationType
+  /-- Who claims this relation holds, and with what confidence. -/
   source : Source
 deriving Repr
 
 /-- An interpretation: a tradition's reading of what a passage claims. -/
 structure Interpretation where
+  /-- The passage being interpreted. -/
   passage : Passage
-  reading : String           -- prose summary of the interpretation
-  asRelation : Option RelationType  -- how it construes the intertextual role
+  /-- Prose summary of the reading. -/
+  reading : String
+  /-- How the reading construes the passage's intertextual role, if at all. -/
+  asRelation : Option RelationType
+  /-- Whose reading this is. -/
   source : Source
 deriving Repr
 
