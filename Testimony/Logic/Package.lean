@@ -93,7 +93,7 @@ end ArgumentPackage
 
 /-- Under this package's premises, its conclusion follows. The shape of every
 result in the library: *given premise package P, conclusion C follows*. -/
-def Establishes [DecidableEq α] [FiniteAtoms α] (pkg : ArgumentPackage α) : Prop :=
+def Establishes (pkg : ArgumentPackage α) : Prop :=
   Entails pkg.premises pkg.conclusion
 
 end Testimony.Logic

@@ -31,10 +31,10 @@ open Testimony Testimony.Bib Testimony.Logic
 set_option maxRecDepth 40000
 
 /-- Isaiah 7:14 — the sign of the *almah* who conceives and bears a son. -/
-def isaiah7_14 : Passage := ⟨.isaiah, 7, 14⟩
+@[nolint defsWithUnderscore] def isaiah7_14 : Passage := ⟨.isaiah, 7, 14⟩
 
 /-- Matthew 1:23 — Matthew's citation of Isaiah via the Septuagint. -/
-def matthew1_23 : Passage := ⟨.matthew, 1, 23⟩
+@[nolint defsWithUnderscore] def matthew1_23 : Passage := ⟨.matthew, 1, 23⟩
 
 /-- The atomic claims this argument is built from. -/
 inductive Claim
@@ -278,8 +278,6 @@ criterion. -/
 @[headline]
 theorem jesus_satisfies_virgin_birth : Satisfies jesus bornOfAVirgin :=
   ⟨{ α := Claim
-   , decEq := inferInstance
-   , finite := inferInstance
    , pkg := christian
    , valid := christian_establishes
    , concludes := rfl }⟩

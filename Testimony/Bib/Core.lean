@@ -27,7 +27,9 @@ parts so that renderers can produce any citation style, and so that corporate
 authors (Deutsche Bibelgesellschaft, United Bible Societies) are representable
 without pretending to be people. -/
 inductive Agent
+  /-- A person, with name parts kept separate for rendering. -/
   | person (given : String) (family : String) (suffix : Option String := none)
+  /-- An organisation, which has no given and family name. -/
   | corporate (name : String)
 deriving Repr, DecidableEq
 
@@ -42,24 +44,35 @@ separately from authors because critical editions and translated commentaries
 (Keil & Delitzsch, trans. James Martin) cannot be rendered correctly without
 them. -/
 structure Contributors where
+  /-- Those who wrote the work. -/
   authors : List Agent := []
+  /-- Those who edited it — often the only contributors a critical edition
+  has. -/
   editors : List Agent := []
+  /-- Those who translated it. -/
   translators : List Agent := []
 deriving Repr, DecidableEq
 
 /-- A year of publication or composition. `value` is negative for BCE dates;
 `approximate` marks the `c.` of an uncertain composition date. -/
 structure Year where
+  /-- The year; negative for BCE. -/
   value : Int
+  /-- Whether the date is approximate — the `c.` of an uncertain composition
+  date. -/
   approximate : Bool := false
 deriving Repr, DecidableEq
 
 /-- A stable public identifier. This is the field that makes a reference
 *checkable* by a reader who does not have the book to hand. -/
 inductive Identifier
+  /-- A Digital Object Identifier, resolvable at doi.org. -/
   | doi (s : String)
+  /-- An International Standard Book Number, for a specific printing. -/
   | isbn (s : String)
+  /-- An International Standard Serial Number, for a periodical. -/
   | issn (s : String)
+  /-- An OCLC WorldCat record number. -/
   | oclc (s : String)
   /-- `accessed` is an ISO-8601 date, required by most style guides for web
   resources. -/
@@ -80,24 +93,39 @@ def Identifier.uri : Identifier → Option String
 
 /-- Fields every entry type carries. -/
 structure WorkCore where
+  /-- The stable handle for this entry. -/
   key : CiteKey
+  /-- Who is responsible for the work. -/
   contributors : Contributors
+  /-- The work's title. -/
   title : String
+  /-- Its subtitle, where it has one. -/
   subtitle : Option String := none
+  /-- Year of publication. -/
   year : Option Year := none
+  /-- Stable public identifiers. An empty list renders as unverified. -/
   identifiers : List Identifier := []
+  /-- Anything a reader needs in order to follow the citation. -/
   note : Option String := none
 deriving Repr, DecidableEq
 
 /-- A monograph or commentary. -/
 structure BookData where
+  /-- Fields shared with every entry type. -/
   core : WorkCore
+  /-- The publisher. -/
   publisher : String
+  /-- Place of publication. -/
   place : Option String := none
+  /-- Edition statement, e.g. "2nd edition". -/
   edition : Option String := none
+  /-- Series the volume belongs to, e.g. NICNT. -/
   series : Option String := none
+  /-- Number within that series. -/
   seriesNumber : Option String := none
+  /-- Which volume, for a multi-volume work. -/
   volume : Option String := none
+  /-- How many volumes the work runs to. -/
   totalVolumes : Option Nat := none
 deriving Repr, DecidableEq
 
@@ -105,29 +133,44 @@ deriving Repr, DecidableEq
 title; `containerTitle` is the volume's. Lexicon entries are cited this way,
 with `Locus.sv`. -/
 structure InCollectionData where
+  /-- Fields shared with every entry type; `core.title` is the chapter title. -/
   core : WorkCore
+  /-- Title of the containing volume. -/
   containerTitle : String
+  /-- Editors of the containing volume. -/
   containerEditors : List Agent := []
+  /-- The publisher. -/
   publisher : String
+  /-- Place of publication. -/
   place : Option String := none
+  /-- Edition statement. -/
   edition : Option String := none
+  /-- First and last page of the chapter. -/
   pages : Option (Nat × Nat) := none
 deriving Repr, DecidableEq
 
 /-- A journal article. -/
 structure ArticleData where
+  /-- Fields shared with every entry type. -/
   core : WorkCore
+  /-- The journal it appeared in. -/
   journal : String
+  /-- Volume number. -/
   volume : Option String := none
+  /-- Issue number. -/
   issue : Option String := none
+  /-- First and last page. -/
   pages : Option (Nat × Nat) := none
 deriving Repr, DecidableEq
 
 /-- A dissertation or thesis. `kind` is the degree description, e.g.
 `"PhD diss."`. -/
 structure ThesisData where
+  /-- Fields shared with every entry type. -/
   core : WorkCore
+  /-- The degree, e.g. "PhD diss.". -/
   kind : String
+  /-- The awarding institution. -/
   institution : String
 deriving Repr, DecidableEq
 
@@ -135,10 +178,15 @@ deriving Repr, DecidableEq
 because it is cited by siglum and apparatus rather than by page, and because its
 editors matter more than its author (it has none). -/
 structure EditionData where
+  /-- Fields shared with every entry type. -/
   core : WorkCore
+  /-- The publisher. -/
   publisher : String
+  /-- Place of publication. -/
   place : Option String := none
+  /-- Edition statement, e.g. "28th revised edition". -/
   edition : Option String := none
+  /-- The siglum scholars cite it by, e.g. "NA28". -/
   siglum : Option String := none
 deriving Repr, DecidableEq
 
@@ -146,37 +194,59 @@ deriving Repr, DecidableEq
 Josephus, *Ant.* 18.63, *in* a named Loeb volume; `editionUsed` records which.
 The link is by key rather than by value to keep `BibEntry` non-recursive. -/
 structure AncientWorkData where
+  /-- Fields shared with every entry type; `core.title` is the conventional
+  title. -/
   core : WorkCore
+  /-- The title in its original language. -/
   originalTitle : Option String := none
+  /-- Approximate date of composition. -/
   composed : Option Year := none
+  /-- The modern edition this work is cited through, by key. Checked against
+  the registry. -/
   editionUsed : Option CiteKey := none
 deriving Repr, DecidableEq
 
 /-- A linguistic or textual dataset: BHSA, OSHB, STEPBible. `version` and
 `commit` are what make an appeal to the data reproducible. -/
 structure DatasetData where
+  /-- Fields shared with every entry type. -/
   core : WorkCore
+  /-- Released version, without which an appeal to the data is not
+  reproducible. -/
   version : Option String := none
+  /-- Exact revision, where the dataset lives in version control. -/
   commit : Option String := none
+  /-- Licence the data is published under. -/
   license : Option String := none
+  /-- Who maintains it. -/
   maintainer : Option String := none
 deriving Repr, DecidableEq
 
 /-- A web page. -/
 structure WebPageData where
+  /-- Fields shared with every entry type. -/
   core : WorkCore
+  /-- The site the page belongs to. -/
   site : Option String := none
 deriving Repr, DecidableEq
 
 /-- A bibliography entry. -/
 inductive BibEntry
+  /-- A monograph or commentary. -/
   | book (d : BookData)
+  /-- A chapter or essay within an edited volume. -/
   | inCollection (d : InCollectionData)
+  /-- A journal article. -/
   | article (d : ArticleData)
+  /-- A dissertation or thesis. -/
   | thesis (d : ThesisData)
+  /-- A critical edition of a text. -/
   | criticalEdition (d : EditionData)
+  /-- An ancient work, cited through a modern edition. -/
   | ancientWork (d : AncientWorkData)
+  /-- A linguistic or textual dataset. -/
   | dataset (d : DatasetData)
+  /-- A web page. -/
   | webPage (d : WebPageData)
 deriving Repr, DecidableEq
 
@@ -215,9 +285,13 @@ def BibEntry.editionUsed : BibEntry → Option CiteKey
 
 /-- A pinpoint within a cited work. -/
 inductive Locus
+  /-- The work as a whole. -/
   | whole
+  /-- A single page. -/
   | page (n : Nat)
+  /-- A contiguous page range. -/
   | pages (start finish : Nat)
+  /-- Several discontinuous pages. -/
   | pageList (ns : List Nat)
   /-- A canonical division, e.g. `"Ant. 18.63"` or a section number. Named
   `sectionRef` because `section` is a Lean keyword. -/

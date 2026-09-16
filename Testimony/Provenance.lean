@@ -19,25 +19,43 @@ open Testimony.Bib
 
 /-- Interpretive tradition attributing a claim. -/
 inductive Tradition
+  /-- Christian reading that finds Christ prefigured in the pattern of earlier
+  texts. -/
   | christianTypological
+  /-- Christian reading that seeks the author's intent in its historical
+  setting. -/
   | christianHistoricalGrammatical
+  /-- Jewish interpretation of the Second Temple period. -/
   | secondTempleJewish
+  /-- Rabbinic Jewish interpretation. -/
   | rabbinicJewish
+  /-- Historical-critical biblical scholarship. -/
   | criticalScholarship
+  /-- Reformed Protestant confessional theology. -/
   | reformedProtestant
+  /-- Roman Catholic magisterial teaching. -/
   | romanCatholic
+  /-- Eastern Orthodox theology. -/
   | easternOrthodox
 deriving Repr, DecidableEq
 
 /-- Confidence a source attaches to a claim. Deliberately coarse. -/
 inductive Confidence
-  | disputed | plausible | wellSupported | consensus
+  /-- Actively contested by competent scholars. -/
+  | disputed
+  /-- Defensible, but not established. -/
+  | plausible
+  /-- Well supported, though not universally held. -/
+  | wellSupported
+  /-- Accepted across traditions, including by those with no stake in it. -/
+  | consensus
 deriving Repr, DecidableEq
 
 /-- A citation of scripture. Typed against `PassageRange` rather than stored as
 prose, so that citations are traversable — "what cites Isaiah 7:14?" is an
 answerable question — and so that `Source.isScriptureOnly` is computable. -/
 structure ScriptureCitation where
+  /-- The verse or range cited. -/
   ref : PassageRange
   /-- Which text-form is being cited, where it matters (the LXX's `parthenos`
   against the Masoretic `almah`, for instance). -/
@@ -51,7 +69,9 @@ a premise grounded *only* in scripture is epistemically different from one
 grounded in scholarship. For a project that argues from scripture, being able to
 surface that distinction mechanically is a defence against circularity. -/
 inductive Reference
+  /-- A catalogued work, at a pinpoint within it. -/
   | work (entry : BibEntry) (locus : Locus := .whole)
+  /-- Scripture itself. -/
   | scripture (refs : List ScriptureCitation)
 deriving Repr, DecidableEq
 
@@ -70,9 +90,14 @@ def Reference.entry : Reference → Option BibEntry
 `primary` is required; `supporting` is for the additional references a premise
 may rest on (a text plus the commentary that reads it that way). -/
 structure Source where
+  /-- The reference this claim principally rests on. Required, which is what
+  makes an uncited source unrepresentable. -/
   primary : Reference
+  /-- Further references the claim draws on. -/
   supporting : List Reference := []
+  /-- Which interpretive tradition advances this claim. -/
   tradition : Tradition
+  /-- How firmly the tradition holds it. -/
   confidence : Confidence
 deriving Repr, DecidableEq
 
@@ -96,7 +121,16 @@ def Source.entries (s : Source) : List BibEntry :=
 /-- Classification of an unproven premise — the vocabulary of the assumption
 manifest. -/
 inductive PremiseKind
-  | textual | linguistic | historical | theological | interpretive
+  /-- What a text says — wording, variants, attestation. -/
+  | textual
+  /-- What the words mean — lexis, morphology, syntax. -/
+  | linguistic
+  /-- What happened — events, persons, dates. -/
+  | historical
+  /-- What doctrine holds. -/
+  | theological
+  /-- How a passage is to be read. -/
+  | interpretive
 deriving Repr, DecidableEq
 
 /-- A premise: a named assumption with kind and provenance.
@@ -105,8 +139,11 @@ Note that this structure carries *metadata only*. The propositional content of a
 premise lives in the logic layer (`Testimony.Logic`), where it can be reasoned
 with; this record is what the assumption manifest prints. -/
 structure Premise where
+  /-- A prose statement of what is assumed. -/
   name : String
+  /-- The kind of assumption it is. -/
   kind : PremiseKind
+  /-- Who says so, where. -/
   source : Source
 deriving Repr, DecidableEq
 

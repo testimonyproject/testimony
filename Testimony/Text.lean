@@ -8,6 +8,10 @@ identifiers) arrives in Phase 3.
 
 namespace Testimony
 
+-- `missingDocs` is disabled for this declaration alone: a constructor named
+-- `genesis` is documented by its name, and dozens of docstrings restating book
+-- titles would bury the docstrings that carry real content.
+set_option linter.missingDocs false in
 /-- A book of the biblical corpus. Extend as needed; the canon a book belongs
 to is a separate question (see `Canon`). -/
 inductive Book
@@ -26,33 +30,66 @@ deriving Repr, DecidableEq
 /-- Canonical boundaries differ by tradition. Results are always relative to a
 declared canon. -/
 inductive Canon
-  | protestant | catholic | orthodox | ethiopian | tanakh
+  /-- The 66-book Protestant canon. -/
+  | protestant
+  /-- The Catholic canon, including the deuterocanonical books. -/
+  | catholic
+  /-- The Eastern Orthodox canon. -/
+  | orthodox
+  /-- The broader Ethiopian Orthodox Tewahedo canon. -/
+  | ethiopian
+  /-- The Hebrew Bible, in its Jewish ordering. -/
+  | tanakh
 deriving Repr, DecidableEq
 
 /-- Language of a textual witness. -/
 inductive Language
-  | hebrew | aramaic | greek
+  /-- Biblical Hebrew. -/
+  | hebrew
+  /-- Biblical Aramaic, as in parts of Daniel and Ezra. -/
+  | aramaic
+  /-- Koine Greek. -/
+  | greek
 deriving Repr, DecidableEq
 
 /-- Textual tradition a reading is drawn from. -/
 inductive TextualTradition
-  | masoretic | septuagint | deadSeaScrolls | naZarene28  -- NA28
-  | vulgate | peshitta
+  /-- The Masoretic Text, the traditional Hebrew text. -/
+  | masoretic
+  /-- The Septuagint, the ancient Greek translation of the Hebrew scriptures.
+  Its rendering of Isaiah 7:14 is load-bearing for the virgin-birth argument. -/
+  | septuagint
+  /-- The Qumran biblical manuscripts. -/
+  | deadSeaScrolls
+  /-- Nestle-Aland 28, the standard critical Greek New Testament. -/
+  | nestleAland28
+  /-- Jerome's Latin Vulgate. -/
+  | vulgate
+  /-- The Syriac Peshitta. -/
+  | peshitta
 deriving Repr, DecidableEq
 
 /-- A verse-level reference: book, chapter, verse. -/
 structure Passage where
+  /-- The book referenced. -/
   book : Book
+  /-- The chapter number, as traditionally versified. -/
   chapter : Nat
+  /-- The verse number, as traditionally versified. -/
   verse : Nat
 deriving Repr, DecidableEq
 
 /-- A contiguous range of verses within one book. -/
 structure Pericope where
+  /-- The book referenced; ranges never span books. -/
   book : Book
+  /-- Chapter of the first verse in the range. -/
   startChapter : Nat
+  /-- The first verse in the range. -/
   startVerse : Nat
+  /-- Chapter of the last verse in the range. -/
   endChapter : Nat
+  /-- The last verse in the range, inclusive. -/
   endVerse : Nat
 deriving Repr, DecidableEq
 
@@ -60,7 +97,9 @@ deriving Repr, DecidableEq
 over this, so `Matthew 2:1; Luke 2:4–7` is two `PassageRange` values rather than
 one opaque string. -/
 inductive PassageRange
+  /-- A single verse. -/
   | verse (p : Passage)
+  /-- A contiguous range of verses. -/
   | range (r : Pericope)
 deriving Repr, DecidableEq
 

@@ -18,6 +18,7 @@ open Testimony.Logic
 
 /-- A person referenced by historical or textual claims. -/
 structure Person where
+  /-- The person's name, as the library refers to them. -/
   name : String
 deriving Repr, DecidableEq
 
@@ -55,14 +56,10 @@ places the structure in `Type 1`, which is harmless here. -/
 structure SatisfactionWitness (person : Person) (c : FulfillmentCriterion) where
   /-- The atom type of the argument. -/
   α : Type
-  /-- Atoms must be comparable for the truth-table check. -/
-  decEq : DecidableEq α
-  /-- Atoms must be finitely enumerable for the truth-table check. -/
-  finite : FiniteAtoms α
   /-- The cited argument. -/
   pkg : ArgumentPackage α
-  /-- Its premises entail its conclusion. -/
-  valid : @Establishes α decEq finite pkg
+  /-- Its premises entail its conclusion, over every valuation. -/
+  valid : Establishes pkg
   /-- Its conclusion is the one claimed. -/
   concludes : pkg.conclusionLabel = fulfillmentLabel person c
 

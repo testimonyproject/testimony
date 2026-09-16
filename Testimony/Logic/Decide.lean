@@ -69,8 +69,7 @@ def checkEntails [DecidableEq α] [FiniteAtoms α]
     !(prems.all fun φ => bval v φ) || bval v concl
 
 /-- Semantic entailment, over Foundation's valuations. -/
-def Entails [DecidableEq α] [FiniteAtoms α]
-    (prems : List (Formula α)) (concl : Formula α) : Prop :=
+def Entails (prems : List (Formula α)) (concl : Formula α) : Prop :=
   ∀ w : Valuation α, (∀ φ ∈ prems, Formula.Boolean.val w φ) →
     Formula.Boolean.val w concl
 
@@ -127,7 +126,11 @@ theorem not_entails_of_check [DecidableEq α] [FiniteAtoms α]
 These pin the checker's behaviour before any argument depends on it. -/
 
 /-- Two atoms, for the sanity checks below. -/
-inductive Pair | p | q
+inductive Pair
+  /-- First test atom. -/
+  | p
+  /-- Second test atom. -/
+  | q
 deriving DecidableEq, Repr
 
 instance : FiniteAtoms Pair where

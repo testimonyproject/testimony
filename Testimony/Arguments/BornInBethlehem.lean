@@ -25,10 +25,10 @@ open Testimony Testimony.Bib Testimony.Logic
 set_option maxRecDepth 20000
 
 /-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/
-def micah5_2 : Passage := ⟨.micah, 5, 2⟩
+@[nolint defsWithUnderscore] def micah5_2 : Passage := ⟨.micah, 5, 2⟩
 
 /-- Matthew 2:6 — Matthew's citation of Micah. -/
-def matthew2_6 : Passage := ⟨.matthew, 2, 6⟩
+@[nolint defsWithUnderscore] def matthew2_6 : Passage := ⟨.matthew, 2, 6⟩
 
 /-- The atomic claims this argument is built from. -/
 inductive Claim
@@ -203,8 +203,6 @@ premises through a machine-checked entailment to a claim about a person. -/
 @[headline]
 theorem jesus_satisfies_bethlehem : Satisfies jesus bornInBethlehem :=
   ⟨{ α := Claim
-   , decEq := inferInstance
-   , finite := inferInstance
    , pkg := christian
    , valid := christian_establishes
    , concludes := rfl }⟩
