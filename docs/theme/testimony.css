@@ -1,0 +1,68 @@
+/* Testimony — brand styling for the docs site.
+   Palette matches assets/brand/README.md. */
+
+:root {
+  --testimony-ink: #0d1b2a;
+  --testimony-ink-light: #1f3a5f;
+  --testimony-gold: #e8c87a;
+  --testimony-gold-deep: #c9a24d;
+  --testimony-bone: #f2f2f0;
+  --testimony-slate: #9fb3c8;
+}
+
+/* Masthead: the mark beside the title on the introduction page. */
+.testimony-masthead {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0 0 1.5rem;
+}
+
+.testimony-masthead img {
+  width: 96px;
+  height: 96px;
+  flex: 0 0 auto;
+  border-radius: 18px;
+}
+
+.testimony-masthead-text h1 {
+  margin: 0 0 0.25rem;
+  border-bottom: none;
+}
+
+.testimony-masthead-text p {
+  margin: 0;
+  color: var(--testimony-slate);
+}
+
+/* Sidebar mark, above the chapter list. */
+.testimony-sidebar-brand {
+  display: block;
+  padding: 1rem 1rem 0.5rem;
+  text-align: center;
+}
+
+.testimony-sidebar-brand img {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+}
+
+/* Gold accent on the turnstile used inline in prose. */
+.turnstile {
+  color: var(--testimony-gold-deep);
+  font-weight: 600;
+}
+
+/* Keep the masthead legible on narrow screens. */
+@media (max-width: 620px) {
+  .testimony-masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .testimony-masthead img {
+    width: 72px;
+    height: 72px;
+  }
+}

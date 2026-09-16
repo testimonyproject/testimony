@@ -10,6 +10,10 @@ default-theme = "light"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/testimonyproject/testimony"
 edit-url-template = "https://github.com/testimonyproject/testimony/edit/main/docs/{path}"
+additional-css = ["theme/testimony.css"]
+
+[output.html.print]
+enable = true
 
 [output.html.fold]
 enable = true

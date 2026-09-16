@@ -1,6 +1,13 @@
+<div class="testimony-masthead">
+  <img src="./assets/testimony-512.png" alt="The Testimony mark: a turnstile with a cross inscribed at its intersection.">
+  <div class="testimony-masthead-text">
+
 # Testimony
 
 **A Lean 4 library for machine-checkable models of biblical arguments.**
+
+  </div>
+</div>
 
 Testimony formalises Christian arguments from Scripture — that Jesus of
 Nazareth is the promised Messiah, that salvation is by grace through faith —
