@@ -4,7 +4,7 @@
 # Bibliography
 
 Every work cited anywhere in the library, generated from the Lean source.
-Machine-readable BibTeX is at [`references.bib`](https://github.com/deanberris/testimony/blob/main/references.bib).
+Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
 18 entries, of which 5 carry no stable public identifier.
 

@@ -40,7 +40,7 @@ library states plainly rather than glossing.
 
 ## Documentation
 
-📖 **[Read the documentation](https://deanberris.github.io/testimony/)**
+📖 **[Read the documentation](https://testimonyproject.github.io/testimony/)**
 
 - [Rationale](docs/src/rationale.md) — why machine-check testimony
 - [Scope and limits](docs/src/scope-and-limits.md) — what Lean does *not* settle
@@ -75,4 +75,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-Code: Apache-2.0. Data and documentation: CC-BY 4.0.
+Two licences, split by what the file is:
+
+- **Code** — Lean sources, `scripts/`, build tooling: [Apache License
+  2.0](LICENSE).
+- **Documentation and data** — `docs/`, the encoded premises, citations and
+  generated prose: [Creative Commons Attribution 4.0
+  International](LICENSE-CC-BY-4.0).
+
+Scripture and the commentary literature are quoted for citation and criticism;
+those works remain under their own terms, recorded per entry in the
+[bibliography](docs/src/bibliography.md).

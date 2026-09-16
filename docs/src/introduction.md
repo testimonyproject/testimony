@@ -65,4 +65,14 @@ Lean v4.33.1 by the Foundation dependency.
 
 ## License
 
-Code: Apache-2.0. Data and documentation: CC-BY 4.0.
+Two licences, split by what the file is:
+
+- **Code** — Lean sources, `scripts/`, build tooling: [Apache License
+  2.0](https://github.com/testimonyproject/testimony/blob/main/LICENSE).
+- **Documentation and data** — this site, the encoded premises, citations and
+  generated prose: [Creative Commons Attribution 4.0
+  International](https://github.com/testimonyproject/testimony/blob/main/LICENSE-CC-BY-4.0).
+
+Scripture and the commentary literature are quoted for citation and criticism;
+those works remain under their own terms, recorded per entry in the
+[bibliography](./bibliography.md).

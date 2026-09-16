@@ -200,7 +200,7 @@ def bibliographyMarkdown (es : List BibEntry) : String :=
   "# Bibliography\n\n" ++
   "Every work cited anywhere in the library, generated from the Lean source.\n" ++
   "Machine-readable BibTeX is at [`references.bib`](" ++
-  "https://github.com/deanberris/testimony/blob/main/references.bib).\n\n" ++
+  "https://github.com/testimonyproject/testimony/blob/main/references.bib).\n\n" ++
   s!"{es.length} entries, of which {unverified} carry no stable public identifier.\n\n" ++
   String.intercalate "\n" (sorted.map toMarkdown) ++ "\n"
 
