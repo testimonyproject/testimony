@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Testimony — light-background variant (slides, print, papers).
+       Navy strokes on white; the cross is inscribed in the same way but in
+       white, so it reads as a cut-out rather than an overlay. -->
+  <rect width="512" height="512" rx="96" fill="#ffffff"/>
+
+  <g stroke="#16293f" stroke-width="52" stroke-linecap="round" fill="none">
+    <line x1="150" y1="104" x2="150" y2="408"/>
+    <line x1="92" y1="256" x2="388" y2="256"/>
+  </g>
+
+  <circle cx="150" cy="104" r="38" fill="#16293f"/>
+  <circle cx="150" cy="408" r="38" fill="#16293f"/>
+
+  <g stroke="#ffffff" stroke-width="28" stroke-linecap="butt" fill="none">
+    <line x1="150" y1="196" x2="150" y2="356"/>
+    <line x1="92" y1="256" x2="212" y2="256"/>
+  </g>
+
+  <rect x="404" y="220" width="72" height="72" rx="6" fill="#16293f"/>
+</svg>

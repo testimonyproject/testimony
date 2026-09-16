@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Testimony — primary mark (W2).
+       Turnstile ⊢ with scroll finials; the crossbar extends left of the
+       vertical so a white Latin cross of traditional proportion (crossbar at
+       the upper third) is inscribed within the gold strokes. QED tombstone
+       closes the entailment. Gold 52 / white 28. -->
   <defs>
     <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#1f3a5f"/>
@@ -7,18 +12,18 @@
   </defs>
   <rect width="512" height="512" rx="96" fill="url(#ink)"/>
 
-  <!-- Turnstile ⊢ : the mark of formal derivation, drawn as a scroll-rod -->
-  <g stroke="#e8c87a" stroke-width="26" stroke-linecap="round" fill="none">
-    <!-- vertical bar -->
-    <line x1="150" y1="128" x2="150" y2="384"/>
-    <!-- horizontal bar -->
-    <line x1="150" y1="256" x2="374" y2="256"/>
+  <g stroke="#e8c87a" stroke-width="52" stroke-linecap="round" fill="none">
+    <line x1="150" y1="104" x2="150" y2="408"/>
+    <line x1="92" y1="256" x2="388" y2="256"/>
   </g>
 
-  <!-- Scroll finials on the vertical: testimony as written witness -->
-  <circle cx="150" cy="128" r="22" fill="#e8c87a"/>
-  <circle cx="150" cy="384" r="22" fill="#e8c87a"/>
+  <circle cx="150" cy="104" r="38" fill="#e8c87a"/>
+  <circle cx="150" cy="408" r="38" fill="#e8c87a"/>
 
-  <!-- QED tombstone: the proof completed, set at the end of the entailment -->
-  <rect x="392" y="230" width="52" height="52" rx="6" fill="#f2f2f0"/>
+  <g stroke="#f2f2f0" stroke-width="28" stroke-linecap="butt" fill="none">
+    <line x1="150" y1="196" x2="150" y2="356"/>
+    <line x1="92" y1="256" x2="212" y2="256"/>
+  </g>
+
+  <rect x="404" y="220" width="72" height="72" rx="6" fill="#f2f2f0"/>
 </svg>

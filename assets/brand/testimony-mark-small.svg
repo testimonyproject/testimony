@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Testimony — simplified mark for small sizes (≤48px).
+       QED square and finials dropped; strokes heavier and the mark fills more
+       of the tile. Standard practice for fine-detail logos at favicon sizes. -->
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f3a5f"/>
+      <stop offset="100%" stop-color="#0d1b2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#ink)"/>
+
+  <g stroke="#e8c87a" stroke-width="70" stroke-linecap="round" fill="none">
+    <line x1="196" y1="88" x2="196" y2="424"/>
+    <line x1="120" y1="256" x2="424" y2="256"/>
+  </g>
+
+  <g stroke="#f2f2f0" stroke-width="36" stroke-linecap="butt" fill="none">
+    <line x1="196" y1="176" x2="196" y2="368"/>
+    <line x1="120" y1="256" x2="272" y2="256"/>
+  </g>
+</svg>
