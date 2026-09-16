@@ -1,1 +1,3 @@
 .lake/
+docs/book/
+.claude/settings.local.json

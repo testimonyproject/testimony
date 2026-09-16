@@ -10,10 +10,58 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Install elan
         run: |
           curl -sSfL https://github.com/leanprover/elan/releases/latest/download/elan-x86_64-unknown-linux-gnu.tar.gz | tar xz
           ./elan-init -y --default-toolchain none
           echo "$HOME/.elan/bin" >> $GITHUB_PATH
+
+      # Mathlib arrives transitively via Foundation; without the cache this
+      # step would compile it from source.
+      - name: Cache .lake
+        uses: actions/cache@v4
+        with:
+          path: .lake
+          key: lake-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}
+          restore-keys: lake-${{ runner.os }}-
+
+      - name: Fetch Mathlib oleans
+        run: lake exe cache get
+
+      # Tier 1: type checking, plus linter.missingDocs.
       - name: Build
         run: lake build
+
+      # Tier 4 first among the checks: sub-second, so it fails fast.
+      - name: Domain linter tests
+        run: python3 scripts/test_testimony_lint.py
+
+      - name: Domain linter
+        run: python3 scripts/testimony_lint.py
+
+      # Tier 2: Batteries environment linters.
+      - name: Environment linters
+        run: lake lint
+
+      # Tier 3: the trust base. Catches sorry, native_decide, and any
+      # undeclared axiom reaching in through imports — including a `decide`
+      # proof that failed silently and still produced a successful build.
+      - name: Axiom audit
+        run: lake exe axiom-audit
+
+      - name: Generated files are current
+        run: lake exe bibgen --check
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install mdBook
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz \
+            | tar -xz -C "$HOME/.local/bin"
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+      - name: Build book
+        run: mdbook build docs

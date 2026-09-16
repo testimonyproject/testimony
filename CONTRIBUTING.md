@@ -1,43 +1,35 @@
 # Contributing to Testimony
 
-Thank you for considering a contribution. Two kinds of expertise make this
-project work, and **you only need one of them**.
+The full guide lives in the documentation:
+**[Contributing](docs/src/contributing.md)**.
 
-## If you know Lean (no theology required)
+Two kinds of expertise make this project work, and **you only need one of
+them**: theology or biblical studies (no Lean required), or Lean (no theology
+required).
 
-- Improve type design, proofs, and tactics in `Testimony/`.
-- Build tooling: the assumption-manifest generator, cross-reference reports,
-  doc-gen integration, CI.
-- Review PRs for Lean idiom and mathlib alignment.
-
-Treat the theological content as opaque data if you like — the engineering
-problems (typed references, provenance tracking, manifest generation) stand on
-their own.
-
-## If you know theology or biblical studies (no Lean required)
-
-- Propose premise packages: what does a given tradition actually assume?
-- Source citations for interpretations (commentaries, journal articles,
-  critical editions).
-- Review encodings: does the formal statement faithfully represent the
-  argument it claims to represent? **A subtly wrong formalisation is worse
-  than none** — this review is the most valuable contribution the project
-  can receive.
-- File issues in plain English; maintainers will pair with you on the Lean.
+Before writing Lean, read the [style guide](docs/src/style-guide.md) and
+[Encoding arguments](docs/src/logic.md).
 
 ## Ground rules
 
-1. **Honesty over advocacy.** The library models arguments; it does not
-   campaign. Rival interpretations are encoded with the same care as the
-   Christian ones.
-2. **Every premise carries a source.** Uncited premises don't merge.
-3. **No collapsing relation types.** If a passage is disputed between
-   "prediction" and "typology", encode both, attributed.
-4. **Respectful discourse.** People of all faiths and none are welcome here.
-   Debate the encoding, not the person.
+1. **Honesty over advocacy.** Rival interpretations are encoded with the same
+   care as the Christian ones.
+2. **Every premise carries a source** — enforced by the type system, not by
+   review.
+3. **No invented identifiers.** Verify against a public catalogue, or leave the
+   field `none`.
+4. **No collapsing relation types.**
+5. **Respectful discourse.** Debate the encoding, not the person.
 
-## Workflow
+## Before opening a pull request
 
-- `lake build` must pass; CI runs it on every PR.
-- Small PRs, one concern each.
-- Discuss significant design changes in an issue before implementing.
+```sh
+lake build                           # tier 1
+lake lint                            # tier 2
+lake exe axiom-audit                 # tier 3
+python3 scripts/testimony_lint.py    # tier 4
+lake exe bibgen --check
+```
+
+All five run in CI. `lake build` passing on its own is not enough — see
+[the style guide](docs/src/style-guide.md#the-four-tiers).

@@ -1,0 +1,16 @@
+[book]
+title = "Testimony"
+description = "Machine-checkable models of biblical arguments, with every premise sourced and contestable."
+authors = ["The Testimony contributors"]
+language = "en"
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/deanberris/testimony"
+edit-url-template = "https://github.com/deanberris/testimony/edit/main/docs/{path}"
+
+[output.html.fold]
+enable = true
+level = 1
