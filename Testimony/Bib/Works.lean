@@ -380,6 +380,24 @@ JETS registers no DOIs; the identifier is the publisher's own open PDF. -/
   , issue := some "3"
   , pages := some (467, 484) }
 
+/-- Postell's compositional case for reading Isaiah 7:14 messianically. The
+source for the fourth strand in `BornOfAVirgin`, and for the parity argument
+that Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14. JETS
+registers no DOIs; the identifier is the society's own open PDF. -/
+@[bib_entry] def postellIsaiahMessianic : BibEntry := .article
+  { core :=
+      { key := "postell-isaiah-messianic-2025"
+      , contributors := { authors := [.person "Seth D." "Postell"] }
+      , title := "Is Isaiah 7:14 Messianic?"
+      , year := some { value := 2025 }
+      , identifiers :=
+          [ .url "https://etsjets.org/wp-content/uploads/JETS_68.3_465_Postell.pdf"
+                 (some "2026-09-16") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "68"
+  , issue := some "3"
+  , pages := some (465, 493) }
+
 derive_bib_registry registry
 
 end Testimony.Bib

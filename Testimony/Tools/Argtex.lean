@@ -62,6 +62,7 @@ def document : String :=
   package Testimony.Arguments.BornOfAVirgin.lexicalCritical ++
   package Testimony.Arguments.BornOfAVirgin.criticalDenial ++
   package Testimony.Arguments.BornOfAVirgin.criticalDenialUnderBerry ++
+  package Testimony.Arguments.BornOfAVirgin.criticalDenialUnderParity ++
   package Testimony.Arguments.BornOfAVirgin.catholic ++
   package Testimony.Arguments.BornOfAVirgin.magisterialDenied ++
   postamble
