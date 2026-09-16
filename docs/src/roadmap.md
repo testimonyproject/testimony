@@ -7,7 +7,7 @@ Four arguments are worked end to end, each with at least one rival package:
 | Argument | Result |
 |---|---|
 | Bethlehem (Micah 5:2) | Christian package establishes; critical reading does not; `Satisfies` witness |
-| Virgin birth (Isaiah 7:14) | Establishes; critical reading does not; **עַלְמָה is load-bearing** |
+| Virgin birth (Isaiah 7:14, Genesis 3:15, Micah 5:2–3) | Establishes; four strands; **no single interpretive hinge is load-bearing, only all four jointly** |
 | Sola fide | Reformed establishes; **so does the New Perspective**; Trent does not; **neither lexical premise is load-bearing alone**; the James harmonisation is |
 | Sola scriptura *(seeded)* | Protestant establishes; Catholic/Orthodox does not; self-refutation objection is valid |
 
@@ -18,11 +18,20 @@ strands — Paul's ἔργα νόμου and Jesus' σέσωκέν σε at Luke 7
 lexical premise carries the argument alone. Only their disjunction does. An
 opponent must defeat both readings, not either.
 
-**Which is why the virgin-birth argument is the weaker one.** It has a single
-strand, so defeating עַלְמָה defeats it outright. There is no dominical saying
-about a virgin birth to fall back on. The contrast between the two arguments is
-a structural fact about them, not a matter of taste, and the library states it
-in a form either side can check.
+**The virgin-birth argument was the weaker one, and stopped being so.** It
+began single-stranded, and `almah_is_load_bearing` recorded that defeating
+עַלְמָה defeated it outright. Adding the protoevangelium (Genesis 3:15), Michean
+(Micah 5:2–3) and compositional (Isaiah 2–12) strands changed the structure, not
+the Isaianic evidence: `almah_not_load_bearing` now holds, while
+`almah_is_load_bearing_alone` preserves the original finding about the Isaianic
+strand taken by itself.
+
+The same module carries a *referential* reply that answers the lexical dispute
+without entering it — עַלְמָה need not mean "virgin" for Mary to be one — and
+`compatibility_does_not_establish_criterion` records its price: the reply is
+purely defensive. The contrast between these arguments is a structural fact
+about them, not a matter of taste, and the library states it in a form either
+side can check.
 
 A corollary worth noting: because the New Perspective rejects the traditional
 reading of Paul's phrase while still affirming justification by faith, it
@@ -31,23 +40,23 @@ defeat of sola fide.
 
 ## Near term
 
-**More messianic prophecies.** The canonical dozen — Isaiah 53, Psalm 22,
+**More messianic prophecies** ([#1](https://github.com/testimonyproject/testimony/issues/1), [#2](https://github.com/testimonyproject/testimony/issues/2)). The canonical dozen — Isaiah 53, Psalm 22,
 Zechariah 9:9, Daniel 9, Psalm 110 — each with competing packages. Then the
 first aggregate result: a `MessiahDefinition` with several criteria and a
 `MeetsDefinition` theorem, which will expose how sensitive a cumulative case is
 to its weakest link.
 
-**The remaining solas.** *Sola gratia*, *solus Christus*, *soli Deo gloria*,
+**The remaining solas** ([#3](https://github.com/testimonyproject/testimony/issues/3)). *Sola gratia*, *solus Christus*, *soli Deo gloria*,
 and completing *sola scriptura* past its seed.
 
-**Corpus grounding.** Importers so `Passage` values resolve against real text
+**Corpus grounding** ([#4](https://github.com/testimonyproject/testimony/issues/4)). Importers so `Passage` values resolve against real text
 data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite actual
 morphological annotation rather than a commentary's report of it — which
 matters most for exactly the lexical premises that keep turning out to be
 load-bearing.
 
-**Old Testament `Book` completion.** The New Testament is complete; the Old is
-partial.
+**Old Testament `Book` completion** ([#5](https://github.com/testimonyproject/testimony/issues/5)). The New Testament is
+complete; the Old is partial. A good first contribution.
 
 ## Systematic theology
 
@@ -56,7 +65,8 @@ wants: confessional standards state positions in numbered articles, and the
 relations between doctrinal loci are exactly the dependency structure the
 manifest machinery tracks.
 
-- **Confessional standards as versioned, citable axiom sets** — the Nicene
+- **Confessional standards as versioned, citable axiom sets**
+  ([#6](https://github.com/testimonyproject/testimony/issues/6)) — the Nicene
   Creed, the Chalcedonian Definition, the Westminster Confession, the Catechism
   of the Catholic Church. Each becomes an `ArgumentPackage` whose atoms cite
   specific articles.
@@ -95,9 +105,9 @@ changing foundations.
 
 ## Infrastructure
 
-- **An assumption-manifest browser** on the docs site: every theorem, every
+- **An assumption-manifest browser** ([#7](https://github.com/testimonyproject/testimony/issues/7)) on the docs site: every theorem, every
   premise it rests on, every citation, cross-linked.
-- **Literate sources.** Prose and Lean interleaved in the `.lean` files, in the
+- **Literate sources** ([#9](https://github.com/testimonyproject/testimony/issues/9)). Prose and Lean interleaved in the `.lean` files, in the
   coqdoc tradition, rendering to PDF. This is currently **blocked on tooling**
   rather than on effort. Alectryon plus LeanInk was the path, and
   [LeanInk is archived](https://github.com/leanprover/LeanInk) — last pushed in
@@ -106,15 +116,32 @@ changing foundations.
   the model: documents embed Lean rather than Lean files carrying prose. Until
   one of those changes, `lake exe argtex` covers the part that matters most —
   the arguments themselves, typeset as logic.
-- **Probabilistic and evidential reasoning**, in a separate namespace, never
+- **Probabilistic and evidential reasoning** ([#10](https://github.com/testimonyproject/testimony/issues/10)), in a separate
+  namespace, never
   conflated with deduction. Cumulative-case apologetics is Bayesian in
   structure, and pretending otherwise would misrepresent it.
-- **API documentation.** doc-gen4 arrives transitively via Foundation and the
+- **API documentation** ([#8](https://github.com/testimonyproject/testimony/issues/8)). doc-gen4 arrives transitively via Foundation and the
   `Testimony:docs` facet works, but `lake build Testimony:docs` generates
   documentation for the entire Mathlib closure, which is far too slow to run in
   CI. Publishing API docs needs either a way to scope generation to this
   library's own modules, or a separately cached job. It is deliberately absent
   from the docs workflow until then.
+
+## Development environment
+
+- **A devcontainer** ([#11](https://github.com/testimonyproject/testimony/issues/11)), so that the toolchain is consistent and
+  not only the worktree layout. Contributors should not have to install elan
+  and match Lean v4.33.1 by hand.
+- **Enforcing the worktree rule** ([#12](https://github.com/testimonyproject/testimony/issues/12)). Every other hard rule in
+  CLAUDE.md is enforced by a command; this one is documented and unchecked.
+
+## How deferred work is tracked
+
+Everything above is a [GitHub issue](https://github.com/testimonyproject/testimony/issues); the
+[`roadmap`](https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Aroadmap) label marks the items seeded from
+this page, and [`infra`](https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Ainfra) the build and
+developer-environment ones. This page says *why* a thing is worth doing; the
+issue is where its state lives. When the two disagree, the issue is current.
 
 ## What will not change
 
