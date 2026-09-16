@@ -58,7 +58,9 @@ lake build
 
 Requires [elan](https://github.com/leanprover/elan). Lean v4.33.1, pinned by
 the [Foundation](https://github.com/FormalizedFormalLogic/Foundation)
-dependency.
+dependency. Alternatively, open the repo in the devcontainer
+(`.devcontainer/`) for elan, the pinned toolchain, tectonic, mdbook and
+python3 preinstalled — the same image CI builds in.
 
 ## Contributing
 

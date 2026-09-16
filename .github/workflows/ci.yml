@@ -8,14 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: ghcr.io/testimonyproject/testimony/devcontainer:latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install elan
-        run: |
-          curl -sSfL https://github.com/leanprover/elan/releases/latest/download/elan-x86_64-unknown-linux-gnu.tar.gz | tar xz
-          ./elan-init -y --default-toolchain none
-          echo "$HOME/.elan/bin" >> $GITHUB_PATH
 
       # Mathlib arrives transitively via Foundation; without the cache this
       # step would compile it from source.
@@ -57,13 +52,8 @@ jobs:
 
   docs:
     runs-on: ubuntu-latest
+    container: ghcr.io/testimonyproject/testimony/devcontainer:latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install mdBook
-        run: |
-          mkdir -p "$HOME/.local/bin"
-          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz \
-            | tar -xz -C "$HOME/.local/bin"
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
       - name: Build book
         run: mdbook build docs
