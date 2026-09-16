@@ -13,8 +13,8 @@ heavily disputed, and the dispute is lexical: the Hebrew עַלְמָה (*almah*
 within the prophet's own generation (cf. Isa 8:3–4) — is read by most critical
 and much Jewish scholarship as having nothing to do with a future Messiah.
 
-The argument now runs on **three scriptural strands**, following Miravalle's
-presentation, and that changes its shape.
+The argument now runs on **four scriptural strands**, and that changes its
+shape.
 
 **The Isaianic strand** is the one above, hinging on *almah*.
 
@@ -78,6 +78,27 @@ Berry also supplies a *defensive* lexical premise — that the semantic range of
 עַלְמָה does not exclude "virgin" — and `admissibility_is_not_enough` measures
 what it is worth: nothing, on its own. *May mean* is not *does mean*, and the
 whole Isaianic strand lives in that gap.
+
+**The compositional strand** (Postell) declines the lexical fight altogether.
+Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatological vision at
+2:1–4 and 11:1–12:6; on the principle that an oracle's meaning in a finished
+book is set by its literary placement rather than by the events it describes —
+argued from the making of canonical Jeremiah — 7:14 anticipates a future,
+miraculous birth. The hinge is `compositionGovernsMeaning`, and a reader who
+holds that an oracle's historical setting fixes its sense rejects it outright.
+
+Postell also supplies the module's sharpest rival-defeater. `parityDefeats`
+`NearTermExclusion` observes that Isaiah 9:5–6 and 11:1–10 are read as messianic
+without reservation *and* stand on the same near-term Assyrian timeline as 7:14
+— the invasion of 8:7–8, the oppressor's rod of 10:5. So a near-term setting
+cannot be what rules out messianic reference, or it would rule out 9 and 11 too.
+`parity_blocks_critical_denial` checks it. Notably the Targum is cited *for*
+this premise: it reads 9:5–6 and 11:1 messianically while declining to read 7:14
+so, which makes it a hostile witness and therefore a strong one.
+
+That gives the critical exclusion step two independent defeaters. Berry's is
+evidential — we do not know how the sign was fulfilled in Ahaz's day. Postell's
+is structural — the near-term setting was never the right kind of reason.
 
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other two strands
@@ -160,6 +181,19 @@ inductive Claim
   | matthewQuotesIsaiah
   /-- Matthew's quotation intends the virgin conception as fulfilment. -/
   | matthewIntendsFulfilment
+  /-- Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatological vision
+  at 2:1–4 and 11:1–12:6. -/
+  | isaiah2to12FramedByEschatology
+  /-- An oracle's meaning in the finished book is set by its literary placement,
+  not by the historical events it describes. **The compositional hinge.** -/
+  | compositionGovernsMeaning
+  /-- Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation. -/
+  | isaiah9And11AreMessianic
+  /-- Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14. -/
+  | isaiah9And11ShareTheAssyrianTimeline
+  /-- Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth
+  rather than one in Ahaz's generation. -/
+  | compositionalReadingYieldsFutureBirth
   /-- Genesis 3:15 promises victory over the serpent through "her seed". -/
   | genesis3_15SeedOfTheWoman
   /-- Genesis 3:15 is the protoevangelium: the first promise of a redeemer. -/
@@ -461,6 +495,58 @@ def cite : Claim → AtomMeta
         { primary := .work franceMatthew (.adLoc matthew1_23)
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
+  | .isaiah2to12FramedByEschatology =>
+    { label := "Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology"
+    , kind := .textual
+    , source :=
+        { primary := .work postellIsaiahMessianic (.pages 483 490)
+        , supporting :=
+            [ .scripture
+                [ { ref := .range ⟨.isaiah, 2, 1, 2, 4⟩ }
+                , { ref := .range ⟨.isaiah, 11, 1, 12, 6⟩ } ] ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .compositionGovernsMeaning =>
+    { label := "An oracle's meaning in the finished book is set by its literary placement"
+    , kind := .interpretive
+      -- The compositional crux, argued from the making of canonical Jeremiah
+      -- (Jer 36): the second scroll's oracles mean what their placement in the
+      -- book makes them mean. A reader who holds that the historical setting of
+      -- an oracle fixes its sense rejects this outright.
+    , source :=
+        { primary := .work postellIsaiahMessianic (.pages 483 486)
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .isaiah9And11AreMessianic =>
+    { label := "Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation"
+    , kind := .interpretive
+      -- Cited to the Targum as well as to Postell, and the Targum is the
+      -- stronger witness here precisely because it is hostile elsewhere: it
+      -- reads 9:5-6 and 11:1 messianically while declining to read 7:14 so.
+    , source :=
+        { primary := .work postellIsaiahMessianic (.pages 487 489)
+        , supporting := [.work chiltonIsaiahTargum .whole]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .isaiah9And11ShareTheAssyrianTimeline =>
+    { label := "Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14"
+    , kind := .textual
+    , source :=
+        { primary := .work postellIsaiahMessianic (.pages 487 489)
+        , supporting :=
+            [ .scripture
+                [ { ref := .range ⟨.isaiah, 8, 7, 8, 8⟩ }
+                , { ref := .range ⟨.isaiah, 9, 8, 9, 11⟩ }
+                , { ref := .verse ⟨.isaiah, 10, 5⟩ } ] ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .compositionalReadingYieldsFutureBirth =>
+    { label := "Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth"
+    , kind := .interpretive
+    , source :=
+        { primary := .work postellIsaiahMessianic (.pages 490 493)
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
   | .genesis3_15SeedOfTheWoman =>
     { label := "Genesis 3:15 promises victory over the serpent through 'her seed'"
     , kind := .textual
@@ -637,6 +723,34 @@ def genesisToCriterion : Formula Claim :=
         , p .seedReckonedThroughFather, p .seedOfTheWomanImpliesNoHumanFather ])
        (p .messiahBornOfVirgin)
 
+/-- Compositional strand: from Isaiah 7's placement in an eschatologically
+framed unit, the principle that placement governs meaning, and the future birth
+that follows, the criterion follows.
+
+The weak joint is the last step. Postell's argument delivers a *miraculous*
+birth; it is `matthewIntendsFulfilment` that says which miracle. A reader who
+grants the composition and stops short of Matthew is entitled to. -/
+def compositionalToCriterion : Formula Claim :=
+  .imp (conjOf
+        [ p .isaiah2to12FramedByEschatology, p .compositionGovernsMeaning
+        , p .compositionalReadingYieldsFutureBirth, p .matthewIntendsFulfilment ])
+       (p .messiahBornOfVirgin)
+
+/-- **Postell's parity argument.** Isaiah 9:5–6 and 11:1–10 are read as
+messianic without reservation, and they stand on the same near-term Assyrian
+timeline as 7:14 — the Assyrian invasion of 8:7–8, the oppressor's rod of 10:5.
+So a near-term geopolitical setting cannot be what rules out messianic
+reference, because if it were it would rule out 9 and 11 as well.
+
+This is a second, independent defeater of the same critical step that Berry's
+objection attacks, and it is the stronger of the two: Berry says the near-term
+fulfilment is unclear, while parity says the near-term setting was never the
+right kind of reason. -/
+def parityDefeatsNearTermExclusion : Formula Claim :=
+  .imp (conjOf
+        [ p .isaiah9And11AreMessianic, p .isaiah9And11ShareTheAssyrianTimeline ])
+       (notP .nearTermExcludesMessianicSense)
+
 /-- Michean strand: from the maternal-only wording and the inference drawn from
 it, the criterion follows. -/
 def micahToCriterion : Formula Claim :=
@@ -742,8 +856,11 @@ def christian : ArgumentPackage Claim :=
       , p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
       , p .seedReckonedThroughFather, p .seedOfTheWomanImpliesNoHumanFather
       , p .micah5_3NamesMotherOnly, p .maternalSilenceImpliesNoHumanFather
+      , p .isaiah2to12FramedByEschatology, p .compositionGovernsMeaning
+      , p .compositionalReadingYieldsFutureBirth
       , p .maryConceivedAsVirgin, p .independentAttestation
-      , toCriterion, genesisToCriterion, micahToCriterion, toFulfilment ]
+      , toCriterion, genesisToCriterion, micahToCriterion
+      , compositionalToCriterion, toFulfilment ]
   , conclusion := p .jesusSatisfiesCriterion
   , conclusionLabel := fulfillmentLabel jesus bornOfAVirgin }
 
@@ -790,8 +907,11 @@ def christianWithoutAlmah : ArgumentPackage Claim :=
       , p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
       , p .seedReckonedThroughFather, p .seedOfTheWomanImpliesNoHumanFather
       , p .micah5_3NamesMotherOnly, p .maternalSilenceImpliesNoHumanFather
+      , p .isaiah2to12FramedByEschatology, p .compositionGovernsMeaning
+      , p .compositionalReadingYieldsFutureBirth
       , p .maryConceivedAsVirgin, p .independentAttestation
-      , toCriterion, genesisToCriterion, micahToCriterion, toFulfilment ] }
+      , toCriterion, genesisToCriterion, micahToCriterion
+      , compositionalToCriterion, toFulfilment ] }
 
 /-- The Isaianic strand by itself, with the lexical premise removed: the
 argument exactly as this module encoded it before the other two strands were
@@ -809,15 +929,18 @@ def isaianicStrandWithoutAlmah : ArgumentPackage Claim :=
 textual and historical premise retained. -/
 def christianWithoutAnyHinge : ArgumentPackage Claim :=
   { christian with
-    name := "Scriptural reading, minus all three interpretive hinges"
+    name := "Scriptural reading, minus all four interpretive hinges"
     premises :=
       [ p .isaiahPredictsVirginBirth, p .lxxRendersParthenos
       , p .matthewQuotesIsaiah, p .matthewIntendsFulfilment
       , p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
       , p .seedReckonedThroughFather
       , p .micah5_3NamesMotherOnly
+      , p .isaiah2to12FramedByEschatology
+      , p .compositionalReadingYieldsFutureBirth
       , p .maryConceivedAsVirgin, p .independentAttestation
-      , toCriterion, genesisToCriterion, micahToCriterion, toFulfilment ] }
+      , toCriterion, genesisToCriterion, micahToCriterion
+      , compositionalToCriterion, toFulfilment ] }
 
 /-- The critical reading: the quotation, the Septuagint rendering and the
 wording of Genesis and Micah are all granted, and every inference drawn from
@@ -859,6 +982,16 @@ def criticalDenialUnderBerry : ArgumentPackage Claim :=
     premises :=
       [ p .isaiahIsNearTermSignToAhaz, p .nearTermFulfilmentIsUnclear
       , berryBlocksExclusion, criticalExclusion ] }
+
+/-- The critical denial with Postell's parity argument in play, and the
+exclusion premise no longer simply granted. -/
+def criticalDenialUnderParity : ArgumentPackage Claim :=
+  { criticalDenial with
+    name := "Critical denial, with the parity argument in play"
+    premises :=
+      [ p .isaiahIsNearTermSignToAhaz, p .isaiah9And11AreMessianic
+      , p .isaiah9And11ShareTheAssyrianTimeline
+      , parityDefeatsNearTermExclusion, criticalExclusion ] }
 
 /-- The Isaianic strand with Berry's defensive lexical premise in place of the
 assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* it. -/
@@ -929,7 +1062,7 @@ def lexicalCriticalUnderCompatibility : ArgumentPackage Claim :=
 theorem christian_establishes : Establishes christian := by
   intro w hw
   simp only [christian, toCriterion, genesisToCriterion, micahToCriterion,
-    toFulfilment, conjOf, p, List.mem_cons, List.not_mem_nil, or_false,
+    compositionalToCriterion, toFulfilment, conjOf, p, List.mem_cons, List.not_mem_nil, or_false,
     forall_eq_or_imp, forall_eq, FFL.Propositional.Formula.Boolean.val] at hw ⊢
   tauto
 
@@ -941,7 +1074,8 @@ scriptural package with a further strand bolted on. -/
 theorem catholic_establishes : Establishes catholic := by
   intro w hw
   simp only [catholic, christian, toCriterion, genesisToCriterion, micahToCriterion,
-    magisterialToCriterion, toFulfilment, conjOf, p, List.mem_cons, List.not_mem_nil,
+    compositionalToCriterion, magisterialToCriterion, toFulfilment, conjOf, p,
+    List.mem_cons, List.not_mem_nil,
     or_false, forall_eq_or_imp, forall_eq,
     FFL.Propositional.Formula.Boolean.val] at hw ⊢
   tauto
@@ -1023,6 +1157,31 @@ theorem berry_blocks_critical_denial : ¬ Establishes criticalDenialUnderBerry :
 
 #print axioms berry_blocks_critical_denial
 
+/-- The parity reading, written down: a near-term Assyrian setting is simply not
+the kind of reason that rules out messianic reference, since Isaiah 9 and 11 sit
+on that same timeline and are read messianically anyway. -/
+def parityReading : Valuation Claim := fun a =>
+  match a with
+  | .nearTermExcludesMessianicSense => False
+  | _ => True
+
+/-- **Postell's parity argument blocks the critical denial too**, and by a
+different route from Berry's.
+
+Berry's objection is evidential — we do not know how the sign was fulfilled in
+Ahaz's day. Parity is structural — the near-term setting was never the right
+kind of reason, because Isaiah 9:5–6 and 11:1–10 stand on the same Assyrian
+timeline and are read messianically without embarrassment. An opponent who
+answers Berry by settling the near-term referent has not touched this. -/
+@[headline]
+theorem parity_blocks_critical_denial : ¬ Establishes criticalDenialUnderParity := by
+  refine not_entails_of_countermodel parityReading ?_ ?_ <;>
+    simp [criticalDenialUnderParity, criticalDenial, criticalExclusion,
+      parityDefeatsNearTermExclusion, conjOf, p, notP,
+      FFL.Propositional.Formula.Boolean.val, parityReading]
+
+#print axioms parity_blocks_critical_denial
+
 /-- The Reformed objection, written down: papal teaching says what it says, and
 saying it settles nothing, because Scripture is the supreme judge. -/
 def reformedReading : Valuation Claim := fun a =>
@@ -1059,7 +1218,8 @@ not the Isaianic evidence but the number of strands. -/
 theorem almah_not_load_bearing : Establishes christianWithoutAlmah := by
   intro w hw
   simp only [christianWithoutAlmah, christian, toCriterion, genesisToCriterion,
-    micahToCriterion, toFulfilment, conjOf, p, List.mem_cons, List.not_mem_nil,
+    micahToCriterion, compositionalToCriterion, toFulfilment, conjOf, p,
+    List.mem_cons, List.not_mem_nil,
     or_false, forall_eq_or_imp, forall_eq,
     FFL.Propositional.Formula.Boolean.val] at hw ⊢
   tauto
@@ -1203,25 +1363,27 @@ def noHingeReading : Valuation Claim := fun a =>
   | .almahMeansVirgin => False
   | .seedOfTheWomanImpliesNoHumanFather => False
   | .maternalSilenceImpliesNoHumanFather => False
+  | .compositionGovernsMeaning => False
   | .messiahBornOfVirgin => False
   | .jesusSatisfiesCriterion => False
   | _ => True
 
 /-- **The result worth having.** No single hinge carries the argument, but the
-three of them jointly do: remove all three and the criterion no longer follows,
+four of them jointly do: remove all three and the criterion no longer follows,
 with every textual and historical premise retained.
 
 So the argument no longer hangs on the sense of עַלְמָה alone. It hangs on that
 *or* on the matrilineal wording of Genesis 3:15 *or* on Micah's maternal
-silence — and an opponent must defeat all three. That is a materially stronger
-position than the single-stranded version, and a materially weaker one than
-three independent arguments would be: the two new hinges are `disputed` for
-good reason, and the module doc says why. -/
+silence *or* on Postell's compositional reading — and an opponent must defeat
+all four. That is a materially stronger position than the single-stranded
+version, and a materially weaker one than four independent arguments would be:
+three of the four hinges are `disputed` for good reason, and the module doc
+says why. -/
 @[headline]
 theorem hinges_jointly_load_bearing : ¬ Establishes christianWithoutAnyHinge := by
   refine not_entails_of_countermodel noHingeReading ?_ ?_ <;>
     simp [christianWithoutAnyHinge, christian, toCriterion, genesisToCriterion,
-      micahToCriterion, toFulfilment, conjOf, p,
+      micahToCriterion, compositionalToCriterion, toFulfilment, conjOf, p,
       FFL.Propositional.Formula.Boolean.val, noHingeReading]
 
 #print axioms hinges_jointly_load_bearing

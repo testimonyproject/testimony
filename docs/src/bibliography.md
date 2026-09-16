@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-24 entries, of which 6 carry no stable public identifier.
+25 entries, of which 6 carry no stable public identifier.
 
 - **`na28-2012`** — Barbara Aland, Kurt Aland, Institut für neutestamentliche Textforschung (ed.). *Novum Testamentum Graece*. Stuttgart: Deutsche Bibelgesellschaft. 28th revised edition. Siglum NA28. 2012. ISBN 9781619700321. ISBN is the Hendrickson / German Bible Society printing.
 - **`benzmuller-godel-2014`** — Christoph Benzmüller, Bruno Woltzenlogel Paleo. *Automating Gödel's Ontological Proof of God's Existence with Higher-order Automated Theorem Provers*. In *ECAI 2014*. IOS Press. Frontiers in Artificial Intelligence and Applications 263. 2014. [DOI 10.3233/978-1-61499-419-0-93](https://doi.org/10.3233/978-1-61499-419-0-93).
@@ -26,6 +26,7 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - **`moo-james-2000`** — Douglas J. Moo. *The Letter of James*. Leicester: Apollos. Pillar New Testament Commentary. 2000. ISBN 9780851119779.
 - **`motyer-isaiah-1993`** — J. Alec Motyer. *The Prophecy of Isaiah: An Introduction and Commentary*. InterVarsity Press. 1993. *(no public identifier)*
 - **`openscriptures-oshb`** — Open Scriptures. *Open Scriptures Hebrew Bible*. CC BY 4.0. [https://github.com/openscriptures/morphhb](https://github.com/openscriptures/morphhb).
+- **`postell-isaiah-messianic-2025`** — Seth D. Postell. *Is Isaiah 7:14 Messianic?*. *Journal of the Evangelical Theological Society* 68.3: 465–493. 2025. [https://etsjets.org/wp-content/uploads/JETS_68.3_465_Postell.pdf](https://etsjets.org/wp-content/uploads/JETS_68.3_465_Postell.pdf).
 - **`rico-gentry-infant-king-2020`** — Christophe Rico, Peter J. Gentry. *The Mother of the Infant King, Isaiah 7:14: 'almâ and parthenos in the World of the Bible — A Linguistic Perspective*. Eugene, OR: Wipf & Stock. 2020. *(no public identifier)* Three 2020 printings catalogued (ISBNs 9781498230162, 9781498230179, 9781498230186); none could be tied to a printing.
 - **`tanner-decrees-1990`** — Norman P. Tanner (ed.). *Decrees of the Ecumenical Councils*. Washington, DC: Georgetown University Press. 2 vols. 1990. ISBN 9780878404902.
 - **`ubs5-2014`** — United Bible Societies (ed.). *The Greek New Testament*. Stuttgart: Deutsche Bibelgesellschaft. 5th revised edition. Siglum UBS5. 2014. *(no public identifier)*
