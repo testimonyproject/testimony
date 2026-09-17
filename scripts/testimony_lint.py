@@ -23,6 +23,7 @@ MIN_PACKAGES = 2
 WORKS_FILE = "Testimony/Bib/Works.lean"
 ARGUMENTS_DIR = "Testimony/Arguments/"
 CITE_KEY_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+ARGUMENT_PACKAGE_RE = re.compile(r"\bdef\s+(\w+)\s*:\s*ArgumentPackage\b")
 
 ENTRY_CTORS = (
     "book", "inCollection", "article", "thesis",
@@ -40,7 +41,7 @@ RULE_TEXT = {
     # L5 previously capped atoms at 12, because entailment was decided by an
     # exhaustive 2^n truth table. That checker is gone, so the cap is gone with
     # it; the id is reused rather than renumbered to keep references stable.
-    "L5": "an argument module must encode at least one rival package",
+    "L5": "an argument must encode at least one rival package",
     "L6": "every @[headline] theorem must be followed by `#print axioms`",
     "L7": "citation keys must match ^[a-z0-9]+(-[a-z0-9]+)*$",
     "L8": f"no trailing whitespace; lines at most {MAX_LINE} columns",
@@ -113,14 +114,6 @@ def lint_text(path: str, text: str) -> list[Finding]:
                 ):
                     add("L4", n)
 
-    # L5: rivals are not optional. An argument module that encodes a Christian
-    # reading without at least one rival package is incomplete, not merely
-    # unpolished — so require two ArgumentPackage definitions.
-    if path.startswith(ARGUMENTS_DIR):
-        pkgs = re.findall(r"\bdef\s+(\w+)\s*:\s*ArgumentPackage\b", text)
-        if 0 < len(pkgs) < MIN_PACKAGES:
-            add("L5", 1, f"only {len(pkgs)} package ({pkgs[0]})")
-
     # L6: headline results must display their trust base.
     for n, line in enumerate(code, 1):
         if "@[headline]" not in line:
@@ -137,11 +130,59 @@ def lint_text(path: str, text: str) -> list[Finding]:
     return sorted(findings, key=lambda f: (f.line, f.rule))
 
 
-def lint_path(p: Path) -> list[Finding]:
+def argument_unit(path: str) -> str | None:
+    """The argument a file belongs to, or `None` if it is not argument code.
+
+    An argument is either a single module or a directory of them, so
+    `Arguments/BornOfAVirgin.lean` and `Arguments/BornOfAVirgin/Lines.lean` both
+    belong to `BornOfAVirgin`.
+    """
+    if not path.startswith(ARGUMENTS_DIR):
+        return None
+    rest = path[len(ARGUMENTS_DIR):]
+    head = rest.split("/", 1)[0]
+    return head[: -len(".lean")] if head.endswith(".lean") else head
+
+
+def lint_units(files: dict[str, str]) -> list[Finding]:
+    """L5, which is a rule about arguments rather than about files.
+
+    Rivals are not optional: an argument encoding a Christian reading without at
+    least one rival package is incomplete, not merely unpolished.
+
+    Counted per argument rather than per file, because an argument is now
+    allowed to be a directory. Splitting a monolith must not let it lose its
+    rival, and the packages of a split argument all live in one file of it while
+    the rest have none — which a per-file count would either wave through or
+    complain about, depending on the file.
+    """
+    units: dict[str, list[tuple[str, str]]] = {}
+    for path, text in sorted(files.items()):
+        unit = argument_unit(path)
+        if unit is None:
+            continue
+        units.setdefault(unit, [])
+        for name in ARGUMENT_PACKAGE_RE.findall(text):
+            units[unit].append((path, name))
+
+    findings: list[Finding] = []
+    for unit, found in sorted(units.items()):
+        if not found or len(found) >= MIN_PACKAGES:
+            continue
+        path, name = found[0]
+        extra = f"{unit}: only {len(found)} package ({name})"
+        findings.append(Finding("L5", path, 1, RULE_TEXT["L5"] + f" ({extra})"))
+    return findings
+
+
+def _rel(p: Path) -> str:
+    """A repository-relative POSIX path, as the rules expect to match on."""
     rel = p.as_posix()
-    for prefix in ("./",):
-        rel = rel[len(prefix):] if rel.startswith(prefix) else rel
-    return lint_text(rel, p.read_text(encoding="utf-8"))
+    return rel[len("./"):] if rel.startswith("./") else rel
+
+
+def lint_path(p: Path) -> list[Finding]:
+    return lint_text(_rel(p), p.read_text(encoding="utf-8"))
 
 
 def main(argv: list[str]) -> int:
@@ -149,7 +190,10 @@ def main(argv: list[str]) -> int:
     files: list[Path] = []
     for t in targets:
         files.extend(sorted(t.rglob("*.lean")) if t.is_dir() else [t])
-    findings = [f for p in files for f in lint_path(p)]
+    texts = {_rel(p): p.read_text(encoding="utf-8") for p in files}
+    findings = [f for path, text in texts.items() for f in lint_text(path, text)]
+    findings += lint_units(texts)
+    findings.sort(key=lambda f: (f.path, f.line, f.rule))
     for f in findings:
         print(f)
     n = len(files)

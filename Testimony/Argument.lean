@@ -41,6 +41,24 @@ structure MessiahDefinition where
   source : Source
 deriving Repr
 
+/-! ### The people arguments are about
+
+`Person` values are compared by name, and two arguments about the same person
+must therefore spell the name identically or their conclusions silently fail to
+match. Naming them once removes the possibility. -/
+
+namespace People
+
+/-- Jesus of Nazareth: the candidate every fulfilment argument in the library
+concerns. -/
+def jesus : Person := ⟨"Jesus of Nazareth"⟩
+
+/-- Mary of Nazareth, whose virginity at the conception is the contested
+historical claim of `BornOfAVirgin`. -/
+def mary : Person := ⟨"Mary of Nazareth"⟩
+
+end People
+
 /-- The conclusion label a fulfilment argument must carry for its package to
 count as a witness. Making the convention a function rather than a comment is
 what lets `SatisfactionWitness.concludes` check it. -/

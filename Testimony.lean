@@ -9,9 +9,13 @@ import Testimony.Bib.Registry
 import Testimony.Bib.Render
 import Testimony.Provenance
 import Testimony.Intertext
+import Testimony.Scripture
 import Testimony.Logic.Basic
+import Testimony.Logic.Notation
 import Testimony.Logic.Entail
 import Testimony.Logic.Package
+import Testimony.Logic.Line
+import Testimony.Logic.Tactic
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin

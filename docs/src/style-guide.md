@@ -26,6 +26,7 @@ silently fails and falls back to `sorryAx` produces a *successful build*.
 
 - `lowerCamelCase` for definitions, `snake_case` for theorem names, after
   mathlib convention.
+- Lines of reason are named `<strand>Line`: `isaianicLine`, `paulineLine`.
 - **Scripture-reference defs are the one exception**: `micah5_2`,
   `isaiah7_14`, `matthew1_23`. The underscores are meaningful — they are
   chapter and verse. These carry `@[nolint defsWithUnderscore]`, so the
@@ -62,17 +63,68 @@ declaration alone with the reason recorded inline: a constructor named
   Write the rival *before* proving anything. Rule L5 enforces this.
 - **There is no atom budget.** Entailment is settled by `tauto` and refuted by
   named countermodels, neither of which enumerates valuations.
+- **Compose arguments from lines of reason.** A strand is a `Line` — its own
+  grounds, its own inference step, what it delivers — and a package is
+  `caseOf lines shared closing`. A variant package is then a named difference
+  (`Line.onGrounds`) rather than a retyped premise list.
 - **State reduced packages explicitly**; do not filter premises out of an
-  existing package.
+  existing package. `List.filter` over a derived `DecidableEq (Formula α)` does
+  not reduce in the kernel, and `Line.onGrounds` says the same thing better.
 - **Name your countermodels after the position they encode.** A countermodel is
   the rival's reading written down, and a reader should be able to see what it
   commits to.
 - **Never `native_decide`, never `sorry`.** This also rules out `bv_decide`,
   which adds a per-theorem native axiom.
+- **Use `establish` and `refute_with`**, never the hand-written `simp only`
+  recipe. See *Proof tactics* below.
+
+## Proof tactics
+
+`Testimony.Logic.Tactic` provides two, and they are not conveniences.
+
+```lean
+theorem christian_establishes : Establishes christian := by
+  establish [christian, isaianicLine, sharedGrounds, toCriterion, toFulfilment]
+
+theorem critical_not_establishes : ¬ Establishes critical := by
+  refute_with criticalReading [critical, criticalLine, toCriterion]
+```
+
+The bracketed list names what to unfold: the package, the lines it is built
+from, the inference steps. Everything generic — `caseOf`, `conjOf`, `p`,
+`notP`, the list-membership lemmas, and the semantics — is supplied by the
+tactic.
+
+**This closes a silent-failure hole.** `Formula` is an abbreviation in
+`Testimony.Logic` as well as a structure in Foundation, so inside an argument
+module the short name `Formula.Boolean.val` resolves to the wrong namespace.
+The semantics then never unfold, `simp` leaves the hypothesis alone, and the
+proof term rests on `sorryAx` — with a **successful build**. Only tier 3 catches
+it, and only afterwards. Written once inside a macro quotation, where
+identifiers resolve at the definition site rather than the call site, the
+mistake is no longer available to make.
+
+This is the same move as `Source.primary` being a required field rather than a
+review rule: make the bad state unrepresentable instead of checking for it.
+
+`refute_with` takes an **identifier**, not a term, so a countermodel must be a
+named definition. That enforces the rule above it — a countermodel is the
+rival's reading written down, and an inline valuation would satisfy the checker
+while telling a reader nothing.
 
 ## Layout
 
 Line width at most 100 columns; no trailing whitespace.
+
+An argument is one module until it approaches ~500 lines, at which point it
+becomes a directory: `Atoms`, `Sources`, `Lines`, `Packages`, `Results`, with
+the root module reduced to imports and the module docstring. Dependencies run
+one way, so there are no import cycles. `BornOfAVirgin/` and `SolaFide/` are
+the worked examples; `BornInBethlehem` and `SolaScriptura` are small enough to
+stay single files, and the structure is not mandatory below that size.
+
+Material shared *across* arguments goes further out: passages and citation
+bundles in `Testimony.Scripture`, `Person` values in `Testimony.People`.
 
 ## Domain linter rules
 
@@ -86,7 +138,7 @@ linter.
 | L2 | No `native_decide` |
 | L3 | `BibEntry` values are defined only in `Testimony/Bib/Works.lean` |
 | L4 | Every `BibEntry` definition carries `@[bib_entry]` |
-| L5 | An argument module encodes at least one rival package |
+| L5 | An argument encodes at least one rival package — counted across its directory, not per file |
 | L6 | Every `@[headline]` theorem is followed by `#print axioms` |
 | L7 | Citation keys match `^[a-z0-9]+(-[a-z0-9]+)*$` |
 | L8 | No trailing whitespace; lines at most 100 columns |

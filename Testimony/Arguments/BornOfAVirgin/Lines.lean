@@ -1,0 +1,289 @@
+import Testimony.Arguments.BornOfAVirgin.Atoms
+import Testimony.Logic.Line
+
+/-!
+# Arguments.BornOfAVirgin.Lines — the steps, and the lines of reason
+
+Every inference this argument makes, and the four strands they compose into.
+
+Inference steps carry no `confidence` field of their own — a step is a claim
+that *these premises license that conclusion*, which is a different kind of
+claim from an atom, and the library does not pretend to grade it. Where a step
+is contestable even though the atoms it joins are well supported, the docstring
+says so; `berryBlocksExclusion` is the clearest case.
+-/
+
+namespace Testimony.Arguments.BornOfAVirgin
+
+open Testimony Testimony.Bib Testimony.Logic
+
+/-! ### Inference steps
+
+One per strand, each delivering the same criterion, plus the steps that close
+the argument and the steps the rivals need. Keeping them separate is what makes
+the load-bearing results possible: a strand can be removed without touching the
+others. -/
+
+/-- Isaianic strand: from the predictive reading, the lexical premise and
+Matthew's intent, the criterion follows. -/
+def toCriterion : Formula Claim :=
+  .imp (conjOf
+        [ p .isaiahPredictsVirginBirth, p .almahMeansVirgin
+        , p .matthewIntendsFulfilment ])
+       (p .messiahBornOfVirgin)
+
+/-- Protoevangelium strand: from Genesis 3:15 read as promise, the patrilineal
+idiom, and the inference drawn from its departure, the criterion follows. -/
+def genesisToCriterion : Formula Claim :=
+  .imp (conjOf
+        [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
+        , p .seedReckonedThroughFather, p .seedOfTheWomanImpliesNoHumanFather ])
+       (p .messiahBornOfVirgin)
+
+/-- Compositional strand: from Isaiah 7's placement in an eschatologically
+framed unit, the principle that placement governs meaning, and the future birth
+that follows, the criterion follows.
+
+The weak joint is the last step. Postell's argument delivers a *miraculous*
+birth; it is `matthewIntendsFulfilment` that says which miracle. A reader who
+grants the composition and stops short of Matthew is entitled to. -/
+def compositionalToCriterion : Formula Claim :=
+  .imp (conjOf
+        [ p .isaiah2to12FramedByEschatology, p .compositionGovernsMeaning
+        , p .compositionalReadingYieldsFutureBirth, p .matthewIntendsFulfilment ])
+       (p .messiahBornOfVirgin)
+
+/-- **Postell's parity argument.** Isaiah 9:5–6 and 11:1–10 are read as
+messianic without reservation, and they stand on the same near-term Assyrian
+timeline as 7:14 — the Assyrian invasion of 8:7–8, the oppressor's rod of 10:5.
+So a near-term geopolitical setting cannot be what rules out messianic
+reference, because if it were it would rule out 9 and 11 as well.
+
+This is a second, independent defeater of the same critical step that Berry's
+objection attacks, and it is the stronger of the two: Berry says the near-term
+fulfilment is unclear, while parity says the near-term setting was never the
+right kind of reason. -/
+def parityDefeatsNearTermExclusion : Formula Claim :=
+  .imp (conjOf
+        [ p .isaiah9And11AreMessianic, p .isaiah9And11ShareTheAssyrianTimeline ])
+       (notP .nearTermExcludesMessianicSense)
+
+/-- Michean strand: from the maternal-only wording and the inference drawn from
+it, the criterion follows. -/
+def micahToCriterion : Formula Claim :=
+  .imp (conjOf
+        [ p .micah5_3NamesMotherOnly, p .maternalSilenceImpliesNoHumanFather ])
+       (p .messiahBornOfVirgin)
+
+/-- Magisterial strand: from papal teaching and the authority granted it, the
+criterion follows. Encoded, but deliberately kept out of `christian`. -/
+def magisterialToCriterion : Formula Claim :=
+  .imp (conjOf
+        [ p .magisteriumTeachesVirginalConception
+        , p .magisteriumIsDoctrinallyAuthoritative ])
+       (p .messiahBornOfVirgin)
+
+/-- The critical inference, made explicit: granted that Isaiah 7:14 was a sign
+to Ahaz, and that such a sign is not also a prediction of a virgin conception,
+the predictive reading is denied.
+
+The earlier encoding of this module simply asserted the denial as a premise of
+`critical`. That was a weaker rival than the critical case actually is, and it
+left nothing for an objection to engage. -/
+def criticalExclusion : Formula Claim :=
+  .imp (conjOf
+        [ p .isaiahIsNearTermSignToAhaz, p .nearTermExcludesMessianicSense ])
+       (notP .isaiahPredictsVirginBirth)
+
+/-- Berry's objection: if how the sign was fulfilled in Ahaz's own day is
+itself unsettled, the near-term reading is not secure enough to exclude a
+further referent.
+
+The step is contestable even though both atoms it joins are `wellSupported` —
+an unclear fulfilment is still a fulfilment, and Brown would answer that Isaiah
+8:3–4 settles the referent well enough. Inference steps carry no confidence
+field of their own, so this is where that is recorded. -/
+def berryBlocksExclusion : Formula Claim :=
+  .imp (p .nearTermFulfilmentIsUnclear) (notP .nearTermExcludesMessianicSense)
+
+/-! #### The referential strand
+
+Sense against reference. The steps below never claim that עַלְמָה *means*
+virgin; they claim that a virgin *is* an עַלְמָה, which is a different and far
+cheaper claim, and then ask what the lexical objection is left with. -/
+
+/-- If virginity is compatible with the denotation of עַלְמָה, and Mary was both
+an עַלְמָה and a virgin, then Mary answers Isaiah's description — without the
+word having to carry the sense. -/
+def toDescriptionFit : Formula Claim :=
+  .imp (conjOf
+        [ p .almahDenotesMarriageableYoungWoman, p .virginityCompatibleWithAlmah
+        , p .maryWasAnAlmah, p .maryConceivedAsVirgin ])
+       (p .maryFitsIsaianicDescription)
+
+/-- ... and if she answers it, the fulfilment claim never needed the lexical
+sense in the first place. -/
+def descriptionFitDefeatsLexicalDemand : Formula Claim :=
+  .imp (p .maryFitsIsaianicDescription)
+       (notP .lexicalSenseRequiredForFulfilment)
+
+/-- The lexical objection in full: עַלְמָה does not denote virginity, Matthew's
+claim requires that it does, so the fulfilment claim fails. Stated as the
+objector would state it, so that the reply has something real to answer. -/
+def lexicalObjection : Formula Claim :=
+  .imp (conjOf
+        [ notP .almahMeansVirgin, p .lexicalSenseRequiredForFulfilment ])
+       (notP .jesusSatisfiesCriterion)
+
+/-- The versional route to the lexical premise: the Targum and the Three read
+the broad term, so the narrow sense is not the word's. -/
+def versionalObjection : Formula Claim :=
+  .imp (conjOf
+        [ p .targumRendersUlemta, p .theThreeRenderNeanis
+        , p .versionalDivergenceRefutesVirginSense ])
+       (notP .almahMeansVirgin)
+
+/-- **The tension, dissolved.** If virginity is compatible with עַלְמָה, the
+versions are not contradicting one another about the referent at all: the
+Septuagint and the Peshitta render with the narrower term because they read the
+referent as a virgin, the Targum and the Three render with the broader one, and
+both are faithful renderings of a word whose denotation admits both. The
+divergence stops being evidence about the sense. -/
+def compatibilityDissolvesDivergence : Formula Claim :=
+  .imp (conjOf
+        [ p .virginityCompatibleWithAlmah, p .lxxRendersParthenos
+        , p .peshittaRendersBtulta ])
+       (notP .versionalDivergenceRefutesVirginSense)
+
+/-- From the criterion and the historical claim, the fulfilment follows. -/
+def toFulfilment : Formula Claim :=
+  .imp (conjOf [p .messiahBornOfVirgin, p .maryConceivedAsVirgin])
+       (p .jesusSatisfiesCriterion)
+
+/-! ### The lines of reason
+
+Four strands converge on the criterion, and each is a `Line`: its own grounds,
+its own licensing step, and what it delivers. The packages are assembled from
+these rather than from flat premise lists, so a variant package is a *named
+difference* — one line on different grounds — instead of twenty premises retyped
+with one missing.
+
+`grounds` are the premises a line contributes of its own. What the strands hold
+in common (Mary's conception, the agreement of the two narratives) is passed to
+`caseOf` as shared, because it belongs to no single strand. -/
+
+/-- **The Isaianic line.** The predictive reading, the lexical premise, the
+Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
+`almahMeansVirgin`, and the whole lexical dispute is about that one ground. -/
+def isaianicLine : Line Claim :=
+  { name := "Isaianic strand (Isaiah 7:14)"
+  , grounds :=
+      [ p .isaiahPredictsVirginBirth, p .almahMeansVirgin, p .lxxRendersParthenos
+      , p .matthewQuotesIsaiah, p .matthewIntendsFulfilment ]
+  , step := toCriterion
+  , delivers := p .messiahBornOfVirgin }
+
+/-- **The protoevangelium line.** Genesis 3:15 read as promise, the patrilineal
+idiom, and the inference drawn from its departure. Its hinge is
+`seedOfTheWomanImpliesNoHumanFather`, and the module doc says why that hinge is
+weaker than the argument needs. -/
+def protoevangeliumLine : Line Claim :=
+  { name := "Protoevangelium strand (Genesis 3:15)"
+  , grounds :=
+      [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
+      , p .seedReckonedThroughFather, p .seedOfTheWomanImpliesNoHumanFather ]
+  , step := genesisToCriterion
+  , delivers := p .messiahBornOfVirgin }
+
+/-- **The Michean line.** The maternal-only wording of Micah 5:3 and the
+inference drawn from it. Its hinge is an argument from silence, and the rival
+says so. -/
+def micheanLine : Line Claim :=
+  { name := "Michean strand (Micah 5:2–3)"
+  , grounds :=
+      [ p .micah5_3NamesMotherOnly, p .maternalSilenceImpliesNoHumanFather ]
+  , step := micahToCriterion
+  , delivers := p .messiahBornOfVirgin }
+
+/-- **The compositional line.** Isaiah 7's placement in an eschatologically
+framed unit, the principle that placement governs meaning, and the future birth
+that follows. Its hinge is `compositionGovernsMeaning`. -/
+def compositionalLine : Line Claim :=
+  { name := "Compositional strand (Isaiah 2–12)"
+  , grounds :=
+      [ p .isaiah2to12FramedByEschatology, p .compositionGovernsMeaning
+      , p .compositionalReadingYieldsFutureBirth ]
+  , step := compositionalToCriterion
+  , delivers := p .messiahBornOfVirgin }
+
+/-- **The magisterial line.** Papal teaching and the authority granted it.
+
+Encoded as a line like the others and deliberately kept out of `christian`: its
+second ground is one this library's author does not grant. Keeping it a line
+rather than folding it into a package is what lets
+`magisterial_authority_is_load_bearing` ask what the route is worth on its
+own. -/
+def magisterialLine : Line Claim :=
+  { name := "Magisterial strand (papal teaching)"
+  , grounds :=
+      [ p .magisteriumTeachesVirginalConception
+      , p .magisteriumIsDoctrinallyAuthoritative ]
+  , step := magisterialToCriterion
+  , delivers := p .messiahBornOfVirgin }
+
+/-- **The referential line.** The shared lexical ground, the Rebekah datum,
+and the two facts about Mary, delivering that she answers Isaiah's description
+without the word having to carry the sense.
+
+`qumranConfirmsAlmah` is a ground here because the reply has to be about the
+sense rather than the text: if the Hebrew were in doubt the dispute would not
+be purely semantic, and the line would not be the cheap move it is. -/
+def referentialLine : Line Claim :=
+  { name := "Referential reading: a virgin is an עַלְמָה"
+  , grounds :=
+      [ p .almahDenotesMarriageableYoungWoman, p .virginityCompatibleWithAlmah
+      , p .maryWasAnAlmah, p .maryConceivedAsVirgin
+      , p .qumranConfirmsAlmah ]
+  , step := toDescriptionFit
+  , delivers := p .maryFitsIsaianicDescription }
+
+/-- **The versional line**, stated as the objector would state it: the Targum
+and the Three read the broad term, Qumran settles the Hebrew, and Matthew's
+claim is taken to need the narrow sense — so the word does not denote
+virginity. -/
+def versionalLine : Line Claim :=
+  { name := "Lexical objection from the ancient versions"
+  , grounds :=
+      [ p .targumRendersUlemta, p .theThreeRenderNeanis, p .qumranConfirmsAlmah
+      , p .versionalDivergenceRefutesVirginSense
+      , p .lexicalSenseRequiredForFulfilment ]
+  , step := versionalObjection
+  , delivers := notP .almahMeansVirgin }
+
+/-- **The critical line**: the sign was given to Ahaz, and such a sign is not
+also a prediction of a virgin conception, so the predictive reading is denied.
+
+Its grounds are what the two defeaters attack. Berry replaces the second with
+`nearTermFulfilmentIsUnclear` plus `berryBlocksExclusion`; parity replaces it
+with Isaiah 9 and 11 plus `parityDefeatsNearTermExclusion`. -/
+def criticalExclusionLine : Line Claim :=
+  { name := "Critical denial of the predictive reading of Isaiah 7:14"
+  , grounds :=
+      [ p .isaiahIsNearTermSignToAhaz, p .nearTermExcludesMessianicSense ]
+  , step := criticalExclusion
+  , delivers := notP .isaiahPredictsVirginBirth }
+
+/-! ### What the strands share -/
+
+/-- The premises no single strand owns: Mary's conception, and the agreement of
+the two birth narratives about it. Every scriptural package needs them and
+none of the four strands delivers them. -/
+def sharedGrounds : List (Formula Claim) :=
+  [ p .maryConceivedAsVirgin, p .independentAttestation ]
+
+/-- The four scriptural strands, in the order the module doc introduces them.
+`christian` is exactly these four on shared ground. -/
+def scripturalLines : List (Line Claim) :=
+  [ isaianicLine, protoevangeliumLine, micheanLine, compositionalLine ]
+
+end Testimony.Arguments.BornOfAVirgin
