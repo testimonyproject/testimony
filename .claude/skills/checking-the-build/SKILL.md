@@ -90,13 +90,13 @@ tool without `--check` and commit what it writes.
 | Tool | Owns |
 |---|---|
 | `bibgen` | `references.bib`, `docs/src/bibliography.md` |
-| `argtex` | `docs/latex/arguments.tex` |
+| `argtex` | `docs/latex/arguments.tex` — the same harvest as `argdoc`, set for print |
 | `statusgen` | the marked block in `docs/src/roadmap.md` |
 | `argdoc` | `docs/src/arguments/*.md`, the marked block in `docs/src/SUMMARY.md` |
 
-`argdoc` is the one a change to an argument almost always moves, because it
-renders the module docstrings as well as the declarations: editing a docstring
-is editing the published page.
+`argdoc` and `argtex` are the two a change to an argument almost always moves:
+both render the module docstrings as well as the declarations, so editing a
+docstring is editing the published page and the PDF alike.
 
 ## Reporting
 

@@ -1,17 +1,21 @@
-import Testimony.Logic.Latex
-import Testimony.Arguments.SolaFide
-import Testimony.Arguments.SolaScriptura
-import Testimony.Arguments.BornInBethlehem
-import Testimony.Arguments.BornOfAVirgin
+import Testimony.Tools.Pages
 
 /-!
-# argtex — render every argument as traditional propositional logic
+# argtex — render every argument as a printable document
 
-`lake exe argtex` writes `docs/latex/arguments.tex`: each package as a legend
-of numbered propositional variables with their claims and sources, followed by
-its premises and conclusion in ordinary logical notation.
+`lake exe argtex` writes `docs/latex/arguments.tex`: each argument as a section
+of prose and notation, with a legend of numbered propositional variables giving
+every claim, who holds it and where they say so.
 
-Compile with a Unicode engine — the claims contain Greek and Hebrew:
+The prose is the library's own. Until `Testimony.Tools.Pages` existed this tool
+rendered packages and nothing else, under a hand-written paragraph per argument
+— prose that said less than the module docstring it was paraphrasing, and that
+nothing stopped from contradicting it. The document is now assembled from the
+same harvest the documentation site is, so the PDF and the site are two
+settings of one text rather than two accounts of it.
+
+Compile with a Unicode engine — the claims contain Greek and Hebrew, and the
+rendered statements contain `¬`, `→` and `⊢`:
 
 ```sh
 lake exe argtex
@@ -19,65 +23,36 @@ cd docs/latex && tectonic arguments.tex
 ```
 -/
 
-open Testimony.Logic.Latex
+open Lean Testimony Testimony.Doc Testimony.Logic
 
 /-- Where the rendered document is written. -/
 def texPath : System.FilePath := "docs/latex/arguments.tex"
 
-/-- A `\section*` heading with a prose introduction. -/
-def section_ (title intro : String) : String :=
-  "\\section*{" ++ escape title ++ "}\n\n" ++ intro ++ "\n\n"
+/-- The document's title. -/
+def documentTitle : String := "Testimony: arguments in propositional form"
+
+/-- The standing note under the title.
+
+Hand-written, and the only hand-written prose in the document: what the
+notation means and what the document does *not* claim are facts about the
+library rather than about any one argument, so no docstring carries them. -/
+def note : String :=
+  "\\noindent Each argument below is set as its Lean source sets it: the module " ++
+  "docstrings as prose, in the order they are written, and under each one the " ++
+  "package, line of reason, countermodel or result it introduces. Atoms are " ++
+  "numbered propositional variables, numbered once per argument, so a variable " ++
+  "means the same claim in every position within it; the legend gives each one's " ++
+  "claim, its classification, the tradition that holds it and the source that " ++
+  "carries it.\n\n" ++
+  "\\noindent Nothing here asserts that the premises are true --- only that the " ++
+  "conclusion does or does not follow from them.\n\n"
 
 /-- The whole document. -/
 def document : String :=
-  preamble "Testimony: arguments in propositional form" ++
-  "\\noindent Each argument below is a named premise package. Atoms are " ++
-  "numbered propositional variables; the legend gives each one's claim, its " ++
-  "classification, and the source that carries it. Nothing here asserts that " ++
-  "the premises are true --- only that the conclusion does or does not follow " ++
-  "from them.\n\n" ++
-  section_ "Sola fide"
-    ("Two independent strands, Pauline and dominical. Neither lexical premise " ++
-     "carries the argument alone; only their disjunction does.") ++
-  package Testimony.Arguments.SolaFide.reformed ++
-  package Testimony.Arguments.SolaFide.newPerspective ++
-  package Testimony.Arguments.SolaFide.tridentine ++
-  section_ "Sola scriptura"
-    ("Four positions on tradition and three objections that do not reduce to " ++
-     "one another. The dispute is not over whether doctrine develops --- both " ++
-     "sides hold that it does --- but over what authenticates a development.") ++
-  package Testimony.Arguments.SolaScriptura.protestant ++
-  package Testimony.Arguments.SolaScriptura.tradition0 ++
-  package Testimony.Arguments.SolaScriptura.tridentine ++
-  package Testimony.Arguments.SolaScriptura.vaticanI ++
-  package Testimony.Arguments.SolaScriptura.orthodox ++
-  package Testimony.Arguments.SolaScriptura.selfRefutation ++
-  package Testimony.Arguments.SolaScriptura.canonObjection ++
-  package Testimony.Arguments.SolaScriptura.interpretiveRegress ++
-  section_ "Born in Bethlehem (Micah 5:2)"
-    "Matthew 2:5--6 quotes Micah 5:2 as grounds for the Messiah's birthplace." ++
-  package Testimony.Arguments.BornInBethlehem.christian ++
-  package Testimony.Arguments.BornInBethlehem.critical ++
-  section_ "Born of a virgin (Isaiah 7:14, Genesis 3:15, Micah 5:2--3)"
-    ("Four scriptural strands. No single interpretive hinge carries the " ++
-     "argument; only all four together do. The magisterial strand is kept " ++
-     "separate, because its authority premise is not granted here. Wegner's " ++
-     "grammatical objection is given at full strength and then followed back " ++
-     "to the reading that supplies its load-bearing premise.") ++
-  package Testimony.Arguments.BornOfAVirgin.christian ++
-  package Testimony.Arguments.BornOfAVirgin.critical ++
-  package Testimony.Arguments.BornOfAVirgin.semantic ++
-  package Testimony.Arguments.BornOfAVirgin.lexicalCritical ++
-  package Testimony.Arguments.BornOfAVirgin.criticalDenial ++
-  package Testimony.Arguments.BornOfAVirgin.criticalDenialUnderBerry ++
-  package Testimony.Arguments.BornOfAVirgin.criticalDenialUnderParity ++
-  package Testimony.Arguments.BornOfAVirgin.catholic ++
-  package Testimony.Arguments.BornOfAVirgin.magisterialDenied ++
-  package Testimony.Arguments.BornOfAVirgin.wegnerLexical ++
-  package Testimony.Arguments.BornOfAVirgin.wegnerWithoutOrdinaryPregnancy ++
-  package Testimony.Arguments.BornOfAVirgin.wegnerCircle ++
-  package Testimony.Arguments.BornOfAVirgin.wegnerUnderUsageParity ++
-  postamble
+  Latex.preamble documentTitle ++ note ++ Latex.contents ++
+  String.join (arguments.filterMap fun a =>
+    (bodyOf a.ns).map fun b => Latex.sectionHeading a.title ++ b.latex) ++
+  Latex.postamble
 
 /-- Read a file, treating absence as empty so `--check` reports it as stale. -/
 def readOrEmpty (p : System.FilePath) : IO String := do

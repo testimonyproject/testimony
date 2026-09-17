@@ -1,5 +1,5 @@
 import Testimony.Logic.Latex
-import Testimony.Logic.Line
+import Testimony.Logic.Page
 
 /-!
 # Testimony.Logic.Markdown — arguments as Markdown, with typeset notation
@@ -42,7 +42,7 @@ Inline math, which needs no `\\`, is written the way mdBook documents:
 
 namespace Testimony.Logic.Markdown
 
-open Testimony Testimony.Bib
+open Testimony Testimony.Bib Testimony.Logic.Page
 
 variable {α : Type}
 
@@ -210,42 +210,7 @@ def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String 
   String.intercalate "\n" rows ++ "\n\n</div>\n\n" ++
   "※ grounded in scripture alone: the reading is assumed, not argued for.\n"
 
-/-! ### Items -/
-
-/-- One element of a generated page.
-
-`prose` is a module docstring, lifted whole; the rest are declarations, each
-carrying its own docstring and whatever rendering its type admits. The cases
-are the shapes an argument module actually declares, and `other` is the
-honest fallback — a declaration the renderer has no special reading of is
-still listed, with its signature, rather than silently dropped. -/
-inductive Item (α : Type)
-  /-- Prose lifted from a module docstring. Already Markdown. -/
-  | prose (markdown : String)
-  /-- A named position: its premises and its conclusion. -/
-  | package (decl doc : String) (pkg : ArgumentPackage α)
-  /-- A named line of reason: its grounds, its step, what it delivers. -/
-  | line (decl doc : String) (l : Line α)
-  /-- A named formula, usually an inference step. -/
-  | formula (decl doc : String) (φ : Formula α)
-  /-- A named list of formulas, usually grounds shared between lines. -/
-  | formulas (decl doc : String) (φs : List (Formula α))
-  /-- A declaration shown by its signature alone: a countermodel, whose content
-  is a function, or anything else the renderer does not read. -/
-  | other (decl doc signature : String)
-  /-- A result, with the statement as Lean states it. -/
-  | result (decl doc statement : String) (proposed : Bool)
-
-namespace Item
-
-/-- Every atom this item mentions, in the order it mentions them. What the
-page's legend is built from. -/
-def atoms [DecidableEq α] : Item α → List α
-  | .package _ _ pkg => pkg.atoms
-  | .line _ _ l => (l.premises ++ [l.delivers]).flatMap atomsOf
-  | .formula _ _ φ => atomsOf φ
-  | .formulas _ _ φs => φs.flatMap atomsOf
-  | _ => []
+/-! ### The page -/
 
 /-- The label a declaration is introduced by: an anchor to link to, then its
 name, then whatever the item wants said beside it.
@@ -254,12 +219,9 @@ Declarations are deliberately not headings. A generated page's heading
 structure is the prose's own — the module docstrings decide what the sections
 are — and a heading per declaration would bury that under sixty entries of
 scaffolding. The anchor is what a link needs; the rest is a label. -/
-def anchor (d : String) (suffix : String) : String :=
+def declLabel (d : String) (suffix : String) : String :=
   "<a id=\"" ++ d ++ "\"></a>\n**`" ++ d ++ "`**" ++ suffix ++ "\n"
 
-end Item
-
-/-! ### The page -/
 
 /-- A fenced block of Lean, for the declarations that are read as code rather
 than as notation. -/
@@ -269,7 +231,7 @@ def leanBlock (body : String) : String := "```lean\n" ++ body ++ "\n```\n"
 def item [DecidableEq α] (order : List α) : Item α → String
   | .prose md => demote md ++ "\n"
   | .package d doc pkg =>
-      Item.anchor d (" — " ++ escape pkg.name) ++ "\n" ++ doc ++ "\n\n" ++
+      declLabel d (" — " ++ escape pkg.name) ++ "\n" ++ doc ++ "\n\n" ++
       derivation order pkg.premises pkg.conclusion ++
       (if pkg.scriptureOnlyAtoms.isEmpty then
          "\nNo premise here rests on scripture alone.\n"
@@ -278,43 +240,20 @@ def item [DecidableEq α] (order : List α) : Item α → String
          String.intercalate ", "
            (pkg.scriptureOnlyAtoms.map fun m => escape m.label) ++ ".\n")
   | .line d doc l =>
-      Item.anchor d (" — " ++ escape l.name) ++ "\n" ++ doc ++ "\n\n" ++
+      declLabel d (" — " ++ escape l.name) ++ "\n" ++ doc ++ "\n\n" ++
       derivation order l.premises l.delivers
   | .formula d doc φ =>
-      Item.anchor d "" ++ "\n" ++ doc ++ "\n\n" ++
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
       display (Latex.formula order φ)
   | .formulas d doc φs =>
-      Item.anchor d "" ++ "\n" ++ doc ++ "\n\n" ++
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
       display (aligned (φs.zipIdx.map fun (φ, i) =>
         row ("\\text{(" ++ toString (i + 1) ++ ")}") (Latex.formula order φ)))
   | .other d doc sig =>
-      Item.anchor d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock sig
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock sig
   | .result d doc stmt proposed =>
-      Item.anchor d (if proposed then " ⚗" else "") ++ "\n" ++ doc ++ "\n\n" ++
+      declLabel d (if proposed then " ⚗" else "") ++ "\n" ++ doc ++ "\n\n" ++
       leanBlock stmt
-
-/-- The atom ordering a page uses.
-
-`allAtoms` is the atom type's own constructor order, which is the order
-`Atoms.lean` declares them in and therefore the order its prose groups them by.
-The page keeps that order and drops what it does not mention, so the legend
-reads as the source reads. An atom mentioned but not listed — which would mean
-the caller passed something other than the constructors — is kept at the end
-rather than silently dropped. -/
-def atomOrder [DecidableEq α] (allAtoms : List α) (items : List (Item α)) : List α :=
-  let mentioned := (items.flatMap Item.atoms).eraseDups
-  allAtoms.filter (mentioned.contains ·) ++ mentioned.filter (!allAtoms.contains ·)
-
-/-- The `cite` of the first package on the page.
-
-Every package in an argument shares one `cite` — it is what makes the atom
-type's claims a single manifest rather than a per-package one — so the first
-package's is the argument's. An argument with no package has nothing to
-legend, and cannot occur: rule L5 requires at least two. -/
-def citeOf : List (Item α) → Option (α → AtomMeta)
-  | [] => none
-  | .package _ _ pkg :: _ => some pkg.cite
-  | _ :: rest => citeOf rest
 
 /-- The body of a generated page: the legend, then every item in source order.
 

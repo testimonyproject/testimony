@@ -1982,7 +1982,8 @@ The gap between *may mean* and *does mean* is where this argument lives, and
 Berry is useful against the critical denial without narrowing it.
 
 ```lean
-theorem admissibility_is_not_enough : ¬Establishes isaianicStrandOnAdmissibility
+theorem admissibility_is_not_enough : ¬Establishes
+    isaianicStrandOnAdmissibility
 -- axioms: propext, Quot.sound
 ```
 
@@ -2046,7 +2047,8 @@ defensible choices about how much of the referent's description to make
 explicit.
 
 ```lean
-theorem compatibility_defeats_lexical_objection : ¬Establishes lexicalCriticalUnderCompatibility
+theorem compatibility_defeats_lexical_objection : ¬Establishes
+    lexicalCriticalUnderCompatibility
 -- axioms: propext, Quot.sound
 ```
 
@@ -2082,7 +2084,8 @@ the fulfilment claim. Winning `almahMeansVirgin` outright was never necessary,
 and this says so in a form either side can check.
 
 ```lean
-theorem compatibility_does_not_establish_criterion : ¬Establishes semanticReachingForCriterion
+theorem compatibility_does_not_establish_criterion : ¬Establishes
+    semanticReachingForCriterion
 -- axioms: propext, Quot.sound
 ```
 
@@ -2134,7 +2137,8 @@ sides grant, but the reading of the sign that makes the pregnancy an ordinary
 one. The next result follows that premise back to where it comes from.
 
 ```lean
-theorem wegner_needs_ordinary_pregnancy : ¬Establishes wegnerWithoutOrdinaryPregnancy
+theorem wegner_needs_ordinary_pregnancy : ¬Establishes
+    wegnerWithoutOrdinaryPregnancy
 -- axioms: propext, Quot.sound
 ```
 
@@ -2348,7 +2352,8 @@ The scriptural package minus the lexical premise has a model, so
 `almah_not_load_bearing` is not vacuous.
 
 ```lean
-theorem christianWithoutAlmah_is_satisfiable : Satisfiable christianWithoutAlmah.premises
+theorem christianWithoutAlmah_is_satisfiable : Satisfiable
+    christianWithoutAlmah.premises
 -- axioms: propext, Quot.sound
 ```
 

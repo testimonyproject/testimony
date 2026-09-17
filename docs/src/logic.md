@@ -129,11 +129,19 @@ lake exe argdoc            # rewrite docs/src/arguments/ and the SUMMARY block
 lake exe argdoc --check    # CI: fail if a committed page is stale
 ```
 
-Two things differ from the LaTeX rendering. The atoms are numbered **once for
-the whole page** rather than per package, so \\(P_{9}\\) means the same claim
-in the Protestant position and in the Tridentine one and a reader can compare
-them. And the notation is typeset in the browser by MathJax, from the same
-`Testimony.Logic.Latex` renderer the PDF uses — the formulas are written once.
+`lake exe argtex` writes the same document for print, from the same harvest:
+
+```sh
+lake exe argtex                          # rewrite docs/latex/arguments.tex
+cd docs/latex && tectonic arguments.tex  # ... and render it
+```
+
+The atoms are numbered **once for the whole argument** rather than per package,
+so \\(P_{9}\\) means the same claim in the Protestant position and in the
+Tridentine one and a reader can compare them. Only the setting differs between
+the two: Markdown tables and MathJax on the site, `longtable` and live `\cite`
+commands in the PDF. The formulas themselves are rendered once, by
+`Testimony.Logic.Latex`, because what TeX wants is what MathJax reads.
 
 The practical consequence is for how you write docstrings. They are not
 commentary for the next contributor; they are the page. A module docstring that
