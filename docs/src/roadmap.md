@@ -10,7 +10,7 @@ fails CI when the committed copy has drifted.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **35 headline results**, listed below in source order.
+**4 arguments**, carrying **50 headline results**, listed below in source order.
 
 ### Born in Bethlehem — Micah 5:2
 
@@ -59,13 +59,28 @@ fails CI when the committed copy has drifted.
 | `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEitherLexicalPremise` | **The result worth having.** Neither lexical premise carries the argument alone, but their *disjunction* does: remove both and sola fide no longer follows, with everything else … |
 | `james_harmonisation_is_load_bearing` | `¬Establishes reformedWithoutJamesHarmonisation` | The argument genuinely depends on answering James. |
 
-### Sola scriptura (seeded)
+### Sola scriptura
 
 | Result | Statement | What it claims |
 |---|---|---|
-| `protestant_establishes` | `Establishes protestant` | Given the Protestant premises, the conclusion follows. |
-| `traditionAndMagisterium_not_establishes` | `¬Establishes traditionAndMagisterium` | The Catholic/Orthodox premises do not establish sola scriptura — they entail its negation. |
-| `selfRefutation_is_valid` | `Establishes selfRefutation` | The self-refutation objection is valid: granted that only scriptural doctrine binds and that scripture does not teach sola scriptura, sola scriptura fails by its own standard. |
+| `protestant_establishes` | `Establishes protestant` | Given the Protestant premises, on either route, the conclusion follows. |
+| `tradition0_establishes` | `Establishes tradition0` | **Tradition 0 establishes it too.** Geisler rejects Mathison's claim that tradition is hermeneutically necessary; he does not reject sola scriptura. |
+| `tridentine_not_establishes` | `¬Establishes tridentine` | The two-source premises do not establish sola scriptura — they entail its negation. |
+| `vaticanI_not_establishes` | `¬Establishes vaticanI` | Tradition III likewise entails the negation — by a different premise from Tradition II's, which is why the two are separate packages. |
+| `orthodox_not_establishes` | `¬Establishes orthodox` | Orthodoxy also entails the negation, and on its own premise. |
+| `selfRefutation_is_valid` | `Establishes selfRefutation` | The self-refutation objection is valid: granted that only scriptural doctrine binds and that scripture does not teach sola scriptura, the position fails by its own standard. |
+| `canonObjection_is_valid` | `Establishes canonObjection` | The canon objection is valid on its own grounds: if the canon is known through the Church's reception and identifying it requires an infallible authority, then an authority … |
+| `interpretiveRegress_is_valid` | `Establishes interpretiveRegress` | The interpretive-authority regress is valid on its own grounds. |
+| `hinge_not_load_bearing_for_conclusion` | `Establishes protestantWithoutHinge` | **The hinge is not load-bearing for the conclusion.** Strip it and the eliminative line still delivers the sole rule. |
+| `hinge_is_load_bearing_within_classical_strand` | `¬Establishes classicalStrandWithoutHinge` | Within the classical strand taken alone the hinge is still load-bearing: remove it and that strand yields nothing. |
+| `classical_answer_blocks_self_refutation` | `¬Establishes selfRefutationAnswered` | **The classical answer blocks the objection.** Assert that scripture teaches the principle and the objection no longer delivers its denial. |
+| `scoping_blocks_self_refutation` | `¬Establishes selfRefutationUnderScope` | **And the final-arbiter answer blocks it too, without the hinge.** This is the answer the seed did not encode. |
+| `parity_blocks_canon_objection` | `¬Establishes canonObjectionUnderParity` | **The parity reply blocks the canon objection.** |
+| `canon_parity_does_not_establish_sole_rule` | `¬Establishes canonParityReachingForSoleRule` | **And blocking is all it does.** The same grounds, asked for the conclusion rather than for the block, deliver nothing. |
+| `parity_blocks_interpretive_regress` | `¬Establishes interpretiveRegressUnderParity` | **The parity reply blocks the interpretive-authority regress.** |
+| `regress_parity_does_not_establish_difference` | `¬Establishes regressParityReachingForDifference` | **And blocking is all this one does either.** That choosing an authority is private judgement defeats the charge that Tradition I collapses into Tradition 0; it does not show that … |
+| `circle_grounds_neither_consensus` | `¬Establishes traditionICircle` | **Geisler's circularity charge against Tradition I, shown rather than alleged.** The creedal consensus is said to rest on scripture's clarity, and scripture's clear sense is said … |
+| `circle_grounds_neither_perspicuity` | `¬Establishes traditionICircleForPerspicuity` | **And the other end is no better off.** The same two legs, asked for the perspicuity instead of the consensus, fail in the same way and for the same reason. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -119,8 +134,10 @@ first aggregate result: a `MessiahDefinition` with several criteria and a
 `MeetsDefinition` theorem, which will expose how sensitive a cumulative case is
 to its weakest link.
 
-**The remaining solas** ([#3](https://github.com/testimonyproject/testimony/issues/3)). *Sola gratia*, *solus Christus*, *soli Deo gloria*,
-and completing *sola scriptura* past its seed.
+**The remaining solas** ([#3](https://github.com/testimonyproject/testimony/issues/3)). *Sola gratia*, *solus Christus* and
+*soli Deo gloria*. *Sola scriptura* is no longer a seed: it now carries four
+positions on tradition, three objections that do not reduce to one another, and
+the two answers to the self-refutation objection.
 
 **Corpus grounding** ([#4](https://github.com/testimonyproject/testimony/issues/4)). Importers so `Passage` values resolve against real text
 data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite actual

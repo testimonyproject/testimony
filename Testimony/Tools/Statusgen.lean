@@ -165,7 +165,7 @@ def sections : List (Name × String) :=
   , (`Testimony.Arguments.BornOfAVirgin,
       "Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3")
   , (`Testimony.Arguments.SolaFide, "Sola fide")
-  , (`Testimony.Arguments.SolaScriptura, "Sola scriptura (seeded)") ]
+  , (`Testimony.Arguments.SolaScriptura, "Sola scriptura") ]
 
 #guard !headlines.isEmpty
 #guard headlines.all fun h => sections.any fun (ns, _) => ns == h.argument
