@@ -398,6 +398,240 @@ registers no DOIs; the identifier is the society's own open PDF. -/
   , issue := some "3"
   , pages := some (465, 493) }
 
+/-! ### Sola scriptura
+
+Added for `Arguments.SolaScriptura`: the Protestant taxonomy and its critics,
+the Orthodox doctrine of Tradition, the canon objection in its classical form,
+and the sufficiency of Scripture. -/
+
+/-- Mathison's account of sola scriptura, and the source of the Tradition 0 /
+Tradition 1 / Tradition 2 taxonomy that separates the Protestant positions from
+one another. The thesis cited is that the self-refutation and canon objections
+tell against Tradition 0 and not against Tradition 1. -/
+@[bib_entry] def mathisonShapeSolaScriptura : BibEntry := .book
+  { core :=
+      { key := "mathison-shape-sola-scriptura-2001"
+      , contributors := { authors := [.person "Keith A." "Mathison"] }
+      , title := "The Shape of Sola Scriptura"
+      , year := some { value := 2001 }
+      , identifiers := [.isbn "9781885767745"] }
+  , publisher := "Canon Press"
+  , place := some "Moscow, ID" }
+
+/-- Oberman's essays, and the source of the Tradition I / Tradition II
+distinction Mathison adapts. Geisler's review identifies this as the work
+Mathison builds on. The identifier is the T. & T. Clark printing; Eerdmans
+reissued the volume in 1992. -/
+@[bib_entry] def obermanDawn : BibEntry := .book
+  { core :=
+      { key := "oberman-dawn-1986"
+      , contributors := { authors := [.person "Heiko A." "Oberman"] }
+      , title := "The Dawn of the Reformation"
+      , subtitle := some "Essays in Late Medieval and Early Reformation Thought"
+      , year := some { value := 1986 }
+      , identifiers := [.isbn "9780567093714"]
+      , note := some
+          "Eerdmans reissued the volume in 1992 under ISBN 9780802806550." }
+  , publisher := "T. & T. Clark"
+  , place := some "Edinburgh" }
+
+/-- Kruger on the canon's self-authentication. Cited for the parity reply to the
+canon objection: that Rome's own model is self-authenticating too, so the
+circularity charge does not discriminate between the positions. -/
+@[bib_entry] def krugerCanonRevisited : BibEntry := .book
+  { core :=
+      { key := "kruger-canon-revisited-2012"
+      , contributors := { authors := [.person "Michael J." "Kruger"] }
+      , title := "Canon Revisited"
+      , subtitle := some
+          "Establishing the Origins and Authority of the New Testament Books"
+      , year := some { value := 2012 }
+      , identifiers := [.isbn "9781433505003"] }
+  , publisher := "Crossway"
+  , place := some "Wheaton, IL" }
+
+/-- Florovsky on Scripture, Church and Tradition. The source for the Orthodox
+premise that authority rests in the mind of the Church rather than in an
+infallible interpretive organ — the premise that separates the Orthodox package
+from the Roman one, which the seed encoding conflated. -/
+@[bib_entry] def florovskyBibleChurchTradition : BibEntry := .book
+  { core :=
+      { key := "florovsky-bible-church-tradition-1972"
+      , contributors := { authors := [.person "Georges" "Florovsky"] }
+      , title := "Bible, Church, Tradition"
+      , subtitle := some "An Eastern Orthodox View"
+      , year := some { value := 1972 }
+      , identifiers := [.isbn "9780913124024"]
+      , note := some
+          ("Volume 1 of the Collected Works. A later reprint " ++
+           "(ISBN 9780473635909) paginates differently.") }
+  , publisher := "Nordland Publishing Company"
+  , place := some "Belmont, MA"
+  , series := some "The Collected Works of Georges Florovsky"
+  , seriesNumber := some "1" }
+
+/-- Ware's standard introduction to Orthodoxy, cited with Florovsky for the
+Orthodox doctrine of Tradition. The identifier is the revised Penguin edition;
+the work was first published in 1963. -/
+@[bib_entry] def wareOrthodoxChurch : BibEntry := .book
+  { core :=
+      { key := "ware-orthodox-church-1993"
+      , contributors := { authors := [.person "Timothy" "Ware"] }
+      , title := "The Orthodox Church"
+      , year := some { value := 1993 }
+      , identifiers := [.isbn "9780140146561"]
+      , note := some "New edition; first published 1963." }
+  , publisher := "Penguin Books"
+  , place := some "London" }
+
+/-- Newman's development thesis: the deposit is closed while understanding
+develops, so later formulations make explicit what was implicit. The principal
+rival to the Tradition 1 package, because it accepts that mechanism and rejects
+the filter placed on it. -/
+@[bib_entry] def newmanDevelopment : BibEntry := .book
+  { core :=
+      { key := "newman-development-1845"
+      , contributors := { authors := [.person "John Henry" "Newman"] }
+      , title := "An Essay on the Development of Christian Doctrine"
+      , year := some { value := 1845 }
+      , identifiers := [.isbn "9780268009212"]
+      , note := some
+          "ISBN is the University of Notre Dame Press edition." }
+  , publisher := "James Toovey"
+  , place := some "London" }
+
+/-- Grudem's systematic theology, cited for the contemporary statement of
+Scripture's sufficiency. `scriptureIsSufficient` carries the preservation claim
+in `SolaScriptura` and needs support beyond a single section of Calvin. -/
+@[bib_entry] def grudemSystematicTheology : BibEntry := .book
+  { core :=
+      { key := "grudem-systematic-theology-1994"
+      , contributors := { authors := [.person "Wayne A." "Grudem"] }
+      , title := "Systematic Theology"
+      , subtitle := some "An Introduction to Biblical Doctrine"
+      , year := some { value := 1994 }
+      , identifiers := [.isbn "9780310286707"]
+      , note := some
+          ("A second edition appeared in 2020; section references here are " ++
+           "the first edition's.") }
+  , publisher := "Zondervan"
+  , place := some "Grand Rapids" }
+
+/-- Webster's dogmatic account of Scripture, the academic counterpart to Grudem
+on sufficiency. -/
+@[bib_entry] def websterHolyScripture : BibEntry := .book
+  { core :=
+      { key := "webster-holy-scripture-2003"
+      , contributors := { authors := [.person "John" "Webster"] }
+      , title := "Holy Scripture"
+      , subtitle := some "A Dogmatic Sketch"
+      , year := some { value := 2003 }
+      , identifiers := [.isbn "9780521538466"] }
+  , publisher := "Cambridge University Press"
+  , place := some "Cambridge" }
+
+/-- Bavinck's prolegomena, cited with Grudem and Webster for the Reformed
+doctrine of Scripture. -/
+@[bib_entry] def bavinckProlegomena : BibEntry := .book
+  { core :=
+      { key := "bavinck-prolegomena-2003"
+      , contributors :=
+          { authors := [.person "Herman" "Bavinck"]
+          , editors := [.person "John" "Bolt"]
+          , translators := [.person "John" "Vriend"] }
+      , title := "Reformed Dogmatics"
+      , subtitle := some "Volume 1: Prolegomena"
+      , year := some { value := 2003 }
+      , identifiers := [.isbn "9780801026553"] }
+  , publisher := "Baker Academic"
+  , place := some "Grand Rapids"
+  , volume := some "1" }
+
+/-- The Lutheran confessions in the Kolb–Wengert translation. Cited for Formula
+of Concord Article X, which defines adiaphora as rites "neither commanded nor
+forbidden in the Word of God" — the wider of the two statements this library
+uses for the premise that practices need no scriptural warrant, Westminster I.6
+being the narrower. -/
+@[bib_entry] def bookOfConcord : BibEntry := .book
+  { core :=
+      { key := "kolb-wengert-book-of-concord-2000"
+      , contributors :=
+          { editors := [.person "Robert" "Kolb", .person "Timothy J." "Wengert"] }
+      , title := "The Book of Concord"
+      , subtitle := some "The Confessions of the Evangelical Lutheran Church"
+      , year := some { value := 2000 }
+      , identifiers := [.isbn "9780800627409"]
+      , note := some "Open Library records the printing as January 2001." }
+  , publisher := "Fortress Press"
+  , place := some "Minneapolis" }
+
+/-- Schaff's Nicene and Post-Nicene Fathers, first series volume 4: the standard
+public-domain English text of Augustine's anti-Manichaean writings, and the
+edition the canon objection is cited through — Augustine's *Contra epistolam
+Manichaei* 5.6, by section reference into this volume. Reprinted under
+many imprints, none of which the catalogue ties to an identifier, so the entry
+records the electronic text instead. -/
+@[bib_entry] def npnfAugustineManichaeans : BibEntry := .book
+  { core :=
+      { key := "npnf1-04-1887"
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title :=
+          "A Select Library of the Nicene and Post-Nicene Fathers of the Christian Church"
+      , subtitle := some
+          ("First Series, Volume 4: St. Augustin — The Writings Against the " ++
+           "Manichaeans and Against the Donatists")
+      , year := some { value := 1887 }
+      , identifiers :=
+          [ .url "https://www.ccel.org/ccel/schaff/npnf104.html" (some "2026-09-17") ]
+      , note := some
+          ("Public domain; reprinted under several imprints, none tied to a " ++
+           "catalogue identifier.") }
+  , publisher := "Christian Literature Company"
+  , place := some "Buffalo, NY" }
+
+/-- Cross and Judisch's argument that Mathison's solo/sola distinction
+collapses: under both, the individual retains ultimate interpretive authority,
+exercised directly in the one case and indirectly in the other. The strongest
+statement of the interpretive-authority regress, and the rival the final-arbiter
+package has to answer. -/
+@[bib_entry] def crossJudischInterpretiveAuthority : BibEntry := .webPage
+  { core :=
+      { key := "cross-judisch-interpretive-authority-2009"
+      , contributors :=
+          { authors := [.person "Bryan" "Cross", .person "Neal" "Judisch"] }
+      , title :=
+          "Solo Scriptura, Sola Scriptura, and the Question of Interpretive Authority"
+      , year := some { value := 2009 }
+      , identifiers :=
+          [ .url ("https://www.calledtocommunion.com/2009/11/solo-scriptura-" ++
+                  "sola-scriptura-and-the-question-of-interpretive-authority/")
+                 (some "2026-09-17") ] }
+  , site := some "Called to Communion" }
+
+/-- Geisler's review of Mathison: the Protestant critique of Tradition I, from
+the side Mathison files under Tradition 0. Two claims are cited. First, that
+Tradition 0 is a caricature — tradition can be *informative* without being
+*normative*, and the Anabaptist position appeals to the Spirit's witness and to
+the community of believers rather than to "me alone". Second, that Tradition I
+is viciously circular: the consensus of the Church is said to rest on the
+clarity of Scripture, while the clear sense of Scripture is said to require the
+consensus of the Church. -/
+@[bib_entry] def geislerReviewMathison : BibEntry := .article
+  { core :=
+      { key := "geisler-review-mathison-2005"
+      , contributors := { authors := [.person "Norman L." "Geisler"] }
+      , title :=
+          "A Critical Review of The Shape of Sola Scriptura by Keith Mathison"
+      , year := some { value := 2005 }
+      , identifiers :=
+          [ .url "https://www.galaxie.com/article/caj04-1-04" (some "2026-09-17") ]
+      , note := some
+          ("Spring 2005 issue; a subscription is required for the full text.") }
+  , journal := "Christian Apologetics Journal"
+  , volume := some "4"
+  , issue := some "1"
+  , pages := some (117, 128) }
+
 derive_bib_registry registry
 
 end Testimony.Bib
