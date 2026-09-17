@@ -1,4 +1,5 @@
 import Testimony.Logic.Entail
+import Testimony.Logic.Notation
 import Testimony.Provenance
 
 /-!

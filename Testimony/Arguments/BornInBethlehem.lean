@@ -1,5 +1,8 @@
 import Testimony.Attr
 import Testimony.Argument
+import Testimony.Logic.Line
+import Testimony.Logic.Tactic
+import Testimony.Scripture
 import Testimony.Bib.Works
 
 /-!
@@ -16,17 +19,18 @@ generated manifest via `scriptureOnlyAtoms`, and it should be: the historicity
 of the Bethlehem birth is disputed in critical scholarship, and an argument
 that assumes it on the authority of the texts whose reading is in question is
 assuming part of what it sets out to show.
+
+The argument is short enough to stay in one file. It runs on a **single line of
+reason**, which is exactly why it is the weakest of the fulfilment arguments
+and why `critical_not_establishes` costs the rival so little: deny the one
+interpretive premise and nothing is left standing. Compare `BornOfAVirgin`,
+which runs on four.
 -/
 
 namespace Testimony.Arguments.BornInBethlehem
 
 open Testimony Testimony.Bib Testimony.Logic
-
-/-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/
-@[nolint defsWithUnderscore] def micah5_2 : Passage := ⟨.micah, 5, 2⟩
-
-/-- Matthew 2:6 — Matthew's citation of Micah. -/
-@[nolint defsWithUnderscore] def matthew2_6 : Passage := ⟨.matthew, 2, 6⟩
+open Testimony.People Testimony.Scripture
 
 /-- The atomic claims this argument is built from. -/
 inductive Claim
@@ -47,23 +51,13 @@ inductive Claim
   | jesusSatisfiesCriterion
 deriving DecidableEq, Repr
 
-/-- Shorthand for an atomic formula. -/
-abbrev p (c : Claim) : Formula Claim := .atom c
-
-/-- Negation, as Foundation defines it. -/
-abbrev notP (c : Claim) : Formula Claim := .imp (.atom c) .falsum
-
 /-- Matthew explicitly quotes Micah — uncontroversial verbal citation, attested
 across traditions. -/
 def quotationEdge : IntertextEdge :=
   { fromPassage := matthew2_6
   , toPassage := micah5_2
   , relation := .quotation
-  , source :=
-      { primary := .work na28 (.apparatus matthew2_6)
-      , supporting := [.work ubs5 .whole]
-      , tradition := .criticalScholarship
-      , confidence := .consensus } }
+  , source := na28Apparatus matthew2_6 }
 
 /-- The Christian predictive reading of Micah 5:2. -/
 def predictiveReading : Interpretation :=
@@ -79,8 +73,19 @@ def predictiveReading : Interpretation :=
 def bornInBethlehem : FulfillmentCriterion :=
   { name := "born in Bethlehem", basis := predictiveReading }
 
-/-- The candidate this argument concerns. -/
-def jesus : Person := ⟨"Jesus of Nazareth"⟩
+/-- Keil and Delitzsch on Micah 5:2, the commentary this argument's
+interpretive premises rest on. -/
+private def keilOnMicah : Source :=
+  { primary := .work keilDelitzschMinorProphets (.adLoc micah5_2)
+  , tradition := .christianTypological
+  , confidence := .wellSupported }
+
+/-- France on Matthew 2:6, the commentary this argument's claims about
+Matthew's intent rest on. -/
+private def franceOnMatthew : Source :=
+  { primary := .work franceMatthew (.adLoc matthew2_6)
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
 
 /-- Citation and classification for every atom. Total, so nothing is
 uncited. -/
@@ -88,34 +93,22 @@ def cite : Claim → AtomMeta
   | .micahPredictsBethlehem =>
     { label := "Micah 5:2 is a forward-looking Messianic prediction"
     , kind := .interpretive
-    , source :=
-        { primary := .work keilDelitzschMinorProphets (.adLoc micah5_2)
-        , tradition := .christianTypological
-        , confidence := .wellSupported } }
+    , source := keilOnMicah }
   | .matthewQuotesMicah =>
     { label := "Matthew 2:6 quotes Micah 5:2"
     , kind := .textual
-    , source :=
-        { primary := .work na28 (.apparatus matthew2_6)
-        , supporting := [.work ubs5 .whole]
-        , tradition := .criticalScholarship
-        , confidence := .consensus } }
+    , source := na28Apparatus matthew2_6 }
   | .matthewIntendsFulfilment =>
     { label := "Matthew's quotation intends predictive fulfilment"
     , kind := .interpretive
-    , source :=
-        { primary := .work franceMatthew (.adLoc matthew2_6)
-        , tradition := .christianHistoricalGrammatical
-        , confidence := .wellSupported } }
+    , source := franceOnMatthew }
   | .jesusBornInBethlehem =>
     { label := "Jesus of Nazareth was born in Bethlehem"
     , kind := .historical
       -- Scripture alone, and disputed in critical scholarship. Surfaced by
       -- `scriptureOnlyAtoms`.
     , source :=
-        { primary := .scripture
-            [ { ref := .verse ⟨.matthew, 2, 1⟩ }
-            , { ref := .range ⟨.luke, 2, 4, 2, 7⟩ } ]
+        { primary := .scripture bethlehemBirthNarratives
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .micahIsNearTermOracle =>
@@ -128,18 +121,15 @@ def cite : Claim → AtomMeta
   | .messiahBornInBethlehem =>
     { label := "The Messiah must be born in Bethlehem"
     , kind := .interpretive
-    , source :=
-        { primary := .work keilDelitzschMinorProphets (.adLoc micah5_2)
-        , supporting := [.work franceMatthew (.adLoc matthew2_6)]
-        , tradition := .christianTypological
-        , confidence := .wellSupported } }
+    , source := { keilOnMicah with supporting := [.work franceMatthew (.adLoc matthew2_6)] } }
   | .jesusSatisfiesCriterion =>
     { label := "Jesus of Nazareth satisfies the Bethlehem criterion"
     , kind := .interpretive
-    , source :=
-        { primary := .work franceMatthew (.adLoc matthew2_6)
-        , tradition := .christianHistoricalGrammatical
-        , confidence := .wellSupported } }
+    , source := franceOnMatthew }
+
+/-! ### The line of reason
+
+One strand, and the argument's whole weight is on it. -/
 
 /-- From the predictive reading and Matthew's intent, the criterion follows. -/
 def toCriterion : Formula Claim :=
@@ -151,37 +141,47 @@ def toFulfilment : Formula Claim :=
   .imp (conjOf [p .messiahBornInBethlehem, p .jesusBornInBethlehem])
        (p .jesusSatisfiesCriterion)
 
+/-- **The predictive line.** Micah's oracle read as prophecy, Matthew's
+quotation read as a fulfilment claim, and the criterion that follows. -/
+def predictiveLine : Line Claim :=
+  { name := "Predictive reading of Micah 5:2"
+  , grounds :=
+      [ p .micahPredictsBethlehem, p .matthewQuotesMicah
+      , p .matthewIntendsFulfilment ]
+  , step := toCriterion
+  , delivers := p .messiahBornInBethlehem }
+
+/-- The critical line: the quotation is granted and the prediction denied, so
+the same step delivers nothing. -/
+def criticalLine : Line Claim :=
+  { predictiveLine with
+    name := "Critical reading of Micah 5:2 as a near-term oracle"
+    grounds :=
+      [ p .matthewQuotesMicah, p .micahIsNearTermOracle
+      , notP .micahPredictsBethlehem ] }
+
+/-! ### Packages -/
+
 /-- The Christian predictive argument. -/
 def christian : ArgumentPackage Claim :=
   { name := "Christian predictive reading of Micah 5:2"
   , cite := cite
-  , premises :=
-      [ p .micahPredictsBethlehem, p .matthewQuotesMicah
-      , p .matthewIntendsFulfilment, p .jesusBornInBethlehem
-      , toCriterion, toFulfilment ]
+  , premises := caseOf [predictiveLine] [p .jesusBornInBethlehem] [toFulfilment]
   , conclusion := p .jesusSatisfiesCriterion
   , conclusionLabel := fulfillmentLabel jesus bornInBethlehem }
 
 /-- The critical reading: the quotation is granted, the prediction is not. -/
 def critical : ArgumentPackage Claim :=
-  { name := "Critical reading of Micah 5:2 as a near-term oracle"
-  , cite := cite
-  , premises :=
-      [ p .matthewQuotesMicah, p .micahIsNearTermOracle
-      , notP .micahPredictsBethlehem, toCriterion, toFulfilment ]
-  , conclusion := p .jesusSatisfiesCriterion
-  , conclusionLabel := fulfillmentLabel jesus bornInBethlehem }
+  { christian with
+    name := "Critical reading of Micah 5:2 as a near-term oracle"
+    premises := caseOf [criticalLine] [] [toFulfilment] }
 
 /-! ### Results -/
 
 /-- Given the Christian premises, the conclusion follows. -/
 @[headline]
 theorem christian_establishes : Establishes christian := by
-  intro w hw
-  simp only [christian, toCriterion, toFulfilment, conjOf, p, List.mem_cons,
-    List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-    FFL.Propositional.Formula.Boolean.val] at hw ⊢
-  tauto
+  establish [christian, predictiveLine, toCriterion, toFulfilment]
 
 #print axioms christian_establishes
 
@@ -198,9 +198,8 @@ def criticalReading : Valuation Claim := fun a =>
 /-- The critical reading does not establish the conclusion. -/
 @[headline]
 theorem critical_not_establishes : ¬ Establishes critical := by
-  refine not_entails_of_countermodel criticalReading ?_ ?_ <;>
-    simp [critical, toCriterion, toFulfilment, conjOf, p, notP,
-      FFL.Propositional.Formula.Boolean.val, criticalReading]
+  refute_with criticalReading [critical, christian, criticalLine, predictiveLine,
+    toCriterion, toFulfilment]
 
 #print axioms critical_not_establishes
 

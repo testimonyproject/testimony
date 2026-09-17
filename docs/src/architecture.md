@@ -24,12 +24,13 @@ boundary visible at all times.
 | Module | Contents |
 |---|---|
 | `Testimony.Text` | `Book`, `Passage`, `Pericope`, `PassageRange`, `Canon`, `TextualTradition` |
+| `Testimony.Scripture` | Named passages, citation bundles, and the `Source` helpers arguments share |
 | `Testimony.Bib` | Typed bibliography entries, the `@[bib_entry]` registry, BibTeX and Markdown rendering |
 | `Testimony.Provenance` | `Reference`, `Source`, `Tradition`, `Confidence`, `PremiseKind` |
 | `Testimony.Intertext` | `RelationType`, `IntertextEdge`, `Interpretation` |
-| `Testimony.Logic` | Formula type, decidable entailment, `ArgumentPackage`, manifests |
+| `Testimony.Logic` | Formula type, entailment and countermodels, `ArgumentPackage`, manifests, `Line` lines of reason, the `establish`/`refute_with` tactics |
 | `Testimony.Argument` | `FulfillmentCriterion`, `MessiahDefinition`, `Satisfies`, `MeetsDefinition` |
-| `Testimony.Arguments.*` | The worked arguments |
+| `Testimony.Arguments.*` | The worked arguments. A large one is a directory — `Atoms`, `Sources`, `Lines`, `Packages`, `Results` |
 
 ## Two structural enforcements
 

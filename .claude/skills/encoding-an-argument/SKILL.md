@@ -1,6 +1,6 @@
 ---
 name: encoding-an-argument
-description: Use when adding a new argument to the Testimony library, encoding a theological or exegetical claim as a machine-checkable ArgumentPackage, or adding a rival reading to an existing argument. Covers atom design, the atom budget, rival packages, entailment proofs, and load-bearing-premise results.
+description: Use when adding a new argument to the Testimony library, encoding a theological or exegetical claim as a machine-checkable ArgumentPackage, or adding a rival reading to an existing argument. Covers atom design, scripture bundles, lines of reason, rival packages, the establish and refute_with tactics, load-bearing-premise results, and when to split an argument into a directory.
 ---
 
 # Encoding an argument
@@ -70,21 +70,48 @@ the people who actually hold its premises.
 
 See the `adding-a-citation` skill for new bibliography entries.
 
-## 3 — the packages, rivals first
+## 3 — the lines of reason
 
-Write the rival before proving anything. It is far too easy to build a
-strawman once you have a proof you like.
+An argument is a small number of *lines of reason*, not a heap of premises.
+Each is a `Line`: its own grounds, the single step licensing them, and what it
+delivers.
+
+```lean
+def paulineLine : Line Claim :=
+  { name := "Pauline strand (ἔργα νόμου)"
+  , grounds := [p .worksOfLawMeansWorksGenerally]
+  , step := paulineToFaithAlone
+  , delivers := p .justificationByFaithAlone }
+```
+
+`grounds` are the premises the line contributes *of its own*. What several
+lines rest on in common is passed separately, because it belongs to no single
+strand.
+
+Build the package with `caseOf lines shared closing`, which lays out every
+line's grounds first, then the shared premises, then every line's step, then
+the steps that close the argument:
 
 ```lean
 def reformed : ArgumentPackage Claim :=
   { name := "Reformed (sola fide)"
   , cite := reformedCite
-  , premises := [ p .romans3_28, p .worksOfLawMeansWorksGenerally, toConclusion ]
+  , premises := caseOf [paulineLine, dominicalLine] sharedGrounds closingSteps
   , conclusion := p .salvationByGraceThroughFaithNotWorks
   , conclusionLabel := "salvation by grace through faith, not works" }
 ```
 
-Use `p c` for `.atom c`, `notP c` for negation (`.imp (.atom c) .falsum`), and
+A single line that concludes exactly what it delivers can skip `caseOf`:
+`someLine.asPackage cite "the label"`.
+
+## 3b — the packages, rivals first
+
+Write the rival before proving anything. It is far too easy to build a
+strawman once you have a proof you like.
+
+`p c` (for `.atom c`) and `notP c` (for `.imp (.atom c) .falsum`) are generic
+over the atom type and come from `Testimony.Logic.Notation` — do not redeclare
+them in the argument module. Use `p`, `notP`, and
 `conjOf [...]` for multi-premise inference steps. A rival typically shares the
 prooftexts and the inference steps, denying one premise.
 
@@ -93,19 +120,21 @@ For a fulfilment argument, `conclusionLabel` must be
 
 ## 4 — the theorems
 
-To establish, unfold and call `tauto`:
+To establish, use `establish` and name what to unfold — the package, its
+lines, its steps, any shared premise list:
 
 ```lean
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
-  intro w hw
-  simp only [reformed, sharedPremises, paulineToFaithAlone, conjOf, p,
-    List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-    FFL.Propositional.Formula.Boolean.val] at hw ⊢
-  tauto
+  establish [reformed, paulineLine, dominicalLine, sharedGrounds, closingSteps,
+    paulineToFaithAlone, dominicalToFaithAlone, toSalvation]
 
 #print axioms reformed_establishes
 ```
+
+If `tauto` fails with the package still folded up in the hypothesis, something
+in the chain is missing from the list — add it. The failure is loud, which is
+the point: nothing here can succeed vacuously.
 
 To refute, **name the rival's reading** and check it. The valuation is the
 rival's position written down, so name it after that position:
@@ -118,23 +147,29 @@ def tridentineReading : Valuation Claim := fun a =>
 
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
-  refine not_entails_of_countermodel tridentineReading ?_ ?_ <;>
-    simp [tridentine, conjOf, p, notP,
-      FFL.Propositional.Formula.Boolean.val, tridentineReading]
+  refute_with tridentineReading [tridentine, reformed]
 ```
 
-**Qualify `FFL.Propositional.Formula.Boolean.val` in full.** `Formula` is also
-an abbreviation in `Testimony.Logic`, so the short name resolves to a
-nonexistent constant, the tactic fails, and the proof falls back to `sorryAx` —
-which only `lake exe axiom-audit` will catch.
+`refute_with` takes an **identifier**, so the countermodel has to be a named
+definition. An inline valuation will not typecheck, which is the style rule
+made mechanical.
+
+**Never hand-write the `simp only` recipe these tactics replace.** `Formula` is
+also an abbreviation in `Testimony.Logic`, so a hand-written proof saying
+`Formula.Boolean.val` resolves the wrong namespace, `simp` does nothing, and
+the proof falls back to `sorryAx` — with a successful build that only
+`lake exe axiom-audit` will catch. The tactics write the qualified name once,
+inside a macro quotation, where a call site cannot reach it.
 
 `@[headline]` marks a result the library claims; rule L6 requires the
 `#print axioms` line after it.
 
 ## 5 — the load-bearing result
 
-The most valuable thing an encoding produces. **State the reduced package
-explicitly** rather than filtering a premise out of an existing one.
+The most valuable thing an encoding produces. Drop the premise from the line
+that contributes it, with `Line.onGrounds` — never by filtering a premise out
+of an existing package, and never by retyping the premise list, where a reader
+cannot see which premise went.
 
 Where an argument has two independent routes to its conclusion — as sola fide
 does, through Paul and through Jesus' words in Luke — neither disputed premise
@@ -143,16 +178,16 @@ together; the interesting result is usually that only the *disjunction* carries
 the argument.
 
 ```lean
-def reformedWithoutLexicalPremise : ArgumentPackage Claim :=
+def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=
   { reformed with
-    name := "Reformed, minus the lexical premise"
-    premises := [ /- everything except the disputed premise -/ ] }
+    name := "Reformed, minus the Pauline lexical premise"
+    premises :=
+      caseOf [paulineLine.onGrounds [], dominicalLine] sharedGrounds closingSteps }
 
 @[headline]
 theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw := by
-  intro w hw
-  simp only [reformedWithoutWorksOfLaw, reformed, /- … -/] at hw ⊢
-  tauto
+  establish [reformedWithoutWorksOfLaw, reformed, Line.onGrounds, paulineLine,
+    dominicalLine, sharedGrounds, closingSteps, /- … the steps -/]
 ```
 
 ## 6 — read the manifest
@@ -172,6 +207,29 @@ State the dispute in prose before any code: what the argument claims, where it
 is contested, and what the strongest objection is. `BornOfAVirgin.lean` is the
 model. A reader should be able to understand the disagreement without reading
 the Lean.
+
+## 7b — one file, or a directory
+
+Start in one module. When it approaches ~500 lines, split it, keeping the root
+module as imports plus the module docstring:
+
+| File | Contents |
+|---|---|
+| `Atoms.lean` | the `Claim` atoms, and any recurring `Source` values |
+| `Sources.lean` | `cite` |
+| `Lines.lean` | the inference steps and the lines of reason |
+| `Packages.lean` | the positions and the variants |
+| `Results.lean` | the `@[headline]` results |
+
+Dependencies run in that order, so there are no cycles. `BornOfAVirgin/` and
+`SolaFide/` are the worked examples. Rule L5 counts packages across the whole
+directory, so splitting cannot lose the rival.
+
+Anything shared with *another* argument goes further out: passages and citation
+bundles in `Testimony.Scripture`, `Person` values in `Testimony.People`. Check
+`Testimony.Scripture` before writing a passage literal — the passage may
+already be named, and a bundle such as `virginConceptionNarratives` or
+`bethlehemBirthNarratives` may already collect the verses you want.
 
 ## 8 — verify
 

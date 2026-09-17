@@ -11,3 +11,4 @@ docs/latex/*.blg
 docs/latex/*.log
 docs/latex/*.xdv
 docs/latex/references.bib
+__pycache__/

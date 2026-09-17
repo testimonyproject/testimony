@@ -1,5 +1,7 @@
 import Testimony.Attr
-import Testimony.Logic.Package
+import Testimony.Logic.Line
+import Testimony.Logic.Tactic
+import Testimony.Scripture
 import Testimony.Bib.Works
 
 /-!
@@ -29,7 +31,7 @@ The Protestant package answers the objection by asserting
 
 namespace Testimony.Arguments.SolaScriptura
 
-open Testimony Testimony.Bib Testimony.Logic
+open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
 /-- The atomic claims this argument is built from. -/
 inductive Claim
@@ -61,19 +63,6 @@ inductive Claim
   | onlyScripturalDoctrineIsBinding
 deriving DecidableEq, Repr
 
-/-- Shorthand for an atomic formula. -/
-abbrev p (c : Claim) : Formula Claim := .atom c
-
-/-- Negation, as Foundation defines it: `φ ➝ ⊥`. -/
-abbrev notP (c : Claim) : Formula Claim := .imp (.atom c) .falsum
-
-/-- A scripture citation supported by Calvin. -/
-private def scriptureWithCalvin (refs : List ScriptureCitation) (loc : String) : Source :=
-  { primary := .scripture refs
-  , supporting := [.work calvinInstitutes (.sectionRef loc)]
-  , tradition := .reformedProtestant
-  , confidence := .wellSupported }
-
 /-- Citation and classification for every atom. Total, so nothing is
 uncited. -/
 def cite : Claim → AtomMeta
@@ -96,24 +85,15 @@ def cite : Claim → AtomMeta
   | .scriptureIsSufficient =>
     { label := "Scripture is a sufficient rule of faith"
     , kind := .theological
-    , source :=
-        { primary := .work calvinInstitutes (.sectionRef "I.vii")
-        , tradition := .reformedProtestant
-        , confidence := .disputed } }
+    , source := calvinHolds "I.vii" .disputed }
   | .scriptureIsPerspicuous =>
     { label := "Scripture is clear on what is necessary for salvation"
     , kind := .theological
-    , source :=
-        { primary := .work calvinInstitutes (.sectionRef "I.vii.5")
-        , tradition := .reformedProtestant
-        , confidence := .disputed } }
+    , source := calvinHolds "I.vii.5" .disputed }
   | .scriptureIsSoleInfallibleRule =>
     { label := "Scripture is the sole infallible rule of faith"
     , kind := .theological
-    , source :=
-        { primary := .work calvinInstitutes (.sectionRef "I.vii–ix")
-        , tradition := .reformedProtestant
-        , confidence := .disputed } }
+    , source := calvinHolds "I.vii–ix" .disputed }
   | .thessalonians2_15TraditionBinding =>
     { label := "2 Thessalonians 2:15 — hold to the traditions taught by word or letter"
     , kind := .textual
@@ -138,17 +118,17 @@ def cite : Claim → AtomMeta
       -- The crux of the self-refutation objection: denied by Catholic and
       -- Orthodox critics, and conceded by some Protestants to be an inference
       -- rather than an explicit teaching.
-    , source :=
-        { primary := .work calvinInstitutes (.sectionRef "I.vii.4")
-        , tradition := .reformedProtestant
-        , confidence := .disputed } }
+    , source := calvinHolds "I.vii.4" .disputed }
   | .onlyScripturalDoctrineIsBinding =>
     { label := "A doctrine is binding only if scripture teaches it"
     , kind := .theological
-    , source :=
-        { primary := .work calvinInstitutes (.sectionRef "IV.x.8")
-        , tradition := .reformedProtestant
-        , confidence := .disputed } }
+    , source := calvinHolds "IV.x.8" .disputed }
+
+/-! ### Lines of reason
+
+Three, and they disagree. The Protestant line and the self-refutation objection
+run on the same hinge — `solaScripturaIsTaughtByScripture` — from opposite
+sides, which is the whole of the dispute encoded in two lines. -/
 
 /-- Sufficiency and perspicuity, together with the prooftexts, yield the sole
 infallible rule. -/
@@ -159,59 +139,78 @@ def toSoleRule : Formula Claim :=
         , p .solaScripturaIsTaughtByScripture ])
        (p .scriptureIsSoleInfallibleRule)
 
+/-- Binding tradition and an infallible interpreter of it together deny that
+scripture is the *sole* infallible rule. -/
+def traditionDeniesSoleRule : Formula Claim :=
+  .imp (conjOf [p .thessalonians2_15TraditionBinding, p .magisteriumIsInfallible])
+       (notP .scriptureIsSoleInfallibleRule)
+
 /-- If a doctrine binds only when scripture teaches it, and scripture does not
 teach sola scriptura, then sola scriptura does not bind. -/
 def selfRefutationStep : Formula Claim :=
   .imp (conjOf [p .onlyScripturalDoctrineIsBinding, notP .solaScripturaIsTaughtByScripture])
        (notP .scriptureIsSoleInfallibleRule)
 
-/-- The Protestant position, which answers the self-refutation objection by
-holding that scripture does teach the principle. -/
-def protestant : ArgumentPackage Claim :=
+/-- **The Protestant line.** The prooftexts, sufficiency and perspicuity, and
+the answer to the self-refutation objection. -/
+def protestantLine : Line Claim :=
   { name := "Protestant (sola scriptura)"
-  , cite := cite
-  , premises :=
+  , grounds :=
       [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
       , p .mark7TraditionCanNullify, p .acts17BereansTested
       , p .scriptureIsSufficient, p .scriptureIsPerspicuous
-      , p .solaScripturaIsTaughtByScripture, toSoleRule ]
-  , conclusion := p .scriptureIsSoleInfallibleRule
-  , conclusionLabel := "scripture is the sole infallible rule of faith" }
+      , p .solaScripturaIsTaughtByScripture ]
+  , step := toSoleRule
+  , delivers := p .scriptureIsSoleInfallibleRule }
+
+/-- **The Catholic and Orthodox line.** Scripture with apostolic tradition,
+interpreted by the magisterium. -/
+def traditionLine : Line Claim :=
+  { name := "Catholic/Orthodox (scripture with tradition)"
+  , grounds :=
+      [ p .timothy3_16GodBreathed, p .thessalonians2_15TraditionBinding
+      , p .magisteriumIsInfallible ]
+  , step := traditionDeniesSoleRule
+  , delivers := notP .scriptureIsSoleInfallibleRule }
+
+/-- **The self-refutation line.** The objection that sola scriptura fails by
+its own standard. -/
+def selfRefutationLine : Line Claim :=
+  { name := "Self-refutation objection to sola scriptura"
+  , grounds :=
+      [ p .onlyScripturalDoctrineIsBinding
+      , notP .solaScripturaIsTaughtByScripture ]
+  , step := selfRefutationStep
+  , delivers := notP .scriptureIsSoleInfallibleRule }
+
+/-! ### Packages -/
+
+/-- The Protestant position, which answers the self-refutation objection by
+holding that scripture does teach the principle. -/
+def protestant : ArgumentPackage Claim :=
+  protestantLine.asPackage cite "scripture is the sole infallible rule of faith"
 
 /-- The Catholic and Orthodox position: scripture and apostolic tradition
-together, interpreted by the magisterium. -/
+together, interpreted by the magisterium.
+
+Its line *delivers* the denial, so the package is not the line as it stands:
+the question asked of these premises is whether sola scriptura follows, and the
+answer is that they entail its negation. -/
 def traditionAndMagisterium : ArgumentPackage Claim :=
-  { name := "Catholic/Orthodox (scripture with tradition)"
-  , cite := cite
-  , premises :=
-      [ p .timothy3_16GodBreathed, p .thessalonians2_15TraditionBinding
-      , p .magisteriumIsInfallible
-      , .imp (conjOf [p .thessalonians2_15TraditionBinding, p .magisteriumIsInfallible])
-             (notP .scriptureIsSoleInfallibleRule) ]
-  , conclusion := p .scriptureIsSoleInfallibleRule
-  , conclusionLabel := "scripture is the sole infallible rule of faith" }
+  { traditionLine.asPackage cite "scripture is the sole infallible rule of faith" with
+    conclusion := p .scriptureIsSoleInfallibleRule }
 
 /-- The self-refutation objection, stated as a package concluding the negation
 of sola scriptura. -/
 def selfRefutation : ArgumentPackage Claim :=
-  { name := "Self-refutation objection to sola scriptura"
-  , cite := cite
-  , premises :=
-      [ p .onlyScripturalDoctrineIsBinding
-      , notP .solaScripturaIsTaughtByScripture
-      , selfRefutationStep ]
-  , conclusion := notP .scriptureIsSoleInfallibleRule
-  , conclusionLabel := "scripture is not the sole infallible rule of faith" }
+  selfRefutationLine.asPackage cite "scripture is not the sole infallible rule of faith"
 
 /-! ### Results -/
 
 /-- Given the Protestant premises, the conclusion follows. -/
 @[headline]
 theorem protestant_establishes : Establishes protestant := by
-  intro w hw
-  simp only [protestant, toSoleRule, conjOf, p, List.mem_cons, List.not_mem_nil,
-    or_false, forall_eq_or_imp, forall_eq, FFL.Propositional.Formula.Boolean.val] at hw ⊢
-  tauto
+  establish [protestant, protestantLine, toSoleRule]
 
 #print axioms protestant_establishes
 
@@ -228,9 +227,8 @@ entail its negation. -/
 @[headline]
 theorem traditionAndMagisterium_not_establishes :
     ¬ Establishes traditionAndMagisterium := by
-  refine not_entails_of_countermodel traditionReading ?_ ?_ <;>
-    simp [traditionAndMagisterium, conjOf, p, notP,
-      FFL.Propositional.Formula.Boolean.val, traditionReading]
+  refute_with traditionReading [traditionAndMagisterium, traditionLine,
+    traditionDeniesSoleRule]
 
 #print axioms traditionAndMagisterium_not_establishes
 
@@ -244,11 +242,7 @@ reduces to `solaScripturaIsTaughtByScripture`, which is where the argument
 between the traditions actually lives. -/
 @[headline]
 theorem selfRefutation_is_valid : Establishes selfRefutation := by
-  intro w hw
-  simp only [selfRefutation, selfRefutationStep, conjOf, p, notP, List.mem_cons,
-    List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-    FFL.Propositional.Formula.Boolean.val] at hw ⊢
-  tauto
+  establish [selfRefutation, selfRefutationLine, selfRefutationStep]
 
 #print axioms selfRefutation_is_valid
 

@@ -12,6 +12,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import testimony_lint as L  # noqa: E402
 
 
+ONE_PACKAGE = "def christian : ArgumentPackage Claim := x\n"
+TWO_PACKAGES = ONE_PACKAGE + "def critical : ArgumentPackage Claim := y\n"
+
+
 def rules(findings):
     return sorted({f.rule for f in findings})
 
@@ -55,19 +59,57 @@ class RuleTests(unittest.TestCase):
         self.assertNotIn("L4", rules(self.lint(text, path="Testimony/Bib/Works.lean")))
 
     def test_L5_argument_module_without_a_rival(self):
-        text = "def christian : ArgumentPackage Claim := x\n"
-        found = self.lint(text, path="Testimony/Arguments/Foo.lean")
+        found = L.lint_units({"Testimony/Arguments/Foo.lean": ONE_PACKAGE})
         self.assertIn("L5", rules(found))
 
     def test_L5_argument_module_with_a_rival(self):
-        text = ("def christian : ArgumentPackage Claim := x\n"
-                "def critical : ArgumentPackage Claim := y\n")
-        found = self.lint(text, path="Testimony/Arguments/Foo.lean")
+        found = L.lint_units({"Testimony/Arguments/Foo.lean": TWO_PACKAGES})
         self.assertNotIn("L5", rules(found))
 
     def test_L5_ignores_modules_outside_arguments(self):
-        text = "def christian : ArgumentPackage Claim := x\n"
-        self.assertNotIn("L5", rules(self.lint(text, path="Testimony/Logic/Package.lean")))
+        found = L.lint_units({"Testimony/Logic/Package.lean": ONE_PACKAGE})
+        self.assertNotIn("L5", rules(found))
+
+    def test_L5_counts_packages_across_an_argument_directory(self):
+        """A split argument keeps its rival even when the two are in one file of
+        it and the other files hold none."""
+        found = L.lint_units({
+            "Testimony/Arguments/Foo/Atoms.lean": "inductive Claim | a\n",
+            "Testimony/Arguments/Foo/Packages.lean": TWO_PACKAGES,
+            "Testimony/Arguments/Foo/Results.lean": "theorem t : True := trivial\n",
+        })
+        self.assertNotIn("L5", rules(found))
+
+    def test_L5_directory_argument_without_a_rival(self):
+        found = L.lint_units({
+            "Testimony/Arguments/Foo/Atoms.lean": "inductive Claim | a\n",
+            "Testimony/Arguments/Foo/Packages.lean": ONE_PACKAGE,
+        })
+        self.assertIn("L5", rules(found))
+        self.assertIn("Foo", str(found[0]))
+
+    def test_L5_counts_a_rival_declared_in_another_file_of_the_argument(self):
+        """The rule is about the argument, not the file: two files with one
+        package each is a rival, and a per-file count would have missed it."""
+        found = L.lint_units({
+            "Testimony/Arguments/Foo/Christian.lean": ONE_PACKAGE,
+            "Testimony/Arguments/Foo/Critical.lean": "def critical : ArgumentPackage Claim := y\n",
+        })
+        self.assertNotIn("L5", rules(found))
+
+    def test_L5_ignores_an_argument_with_no_packages_at_all(self):
+        """Scaffolding on its way to an argument is not yet an argument."""
+        found = L.lint_units({"Testimony/Arguments/Foo/Atoms.lean": "inductive Claim | a\n"})
+        self.assertNotIn("L5", rules(found))
+
+    def test_L5_is_not_a_per_file_rule(self):
+        """L5 does not fire from `lint_text`; only `lint_units` decides it."""
+        self.assertNotIn("L5", rules(self.lint(ONE_PACKAGE, path="Testimony/Arguments/Foo.lean")))
+
+    def test_argument_unit_maps_both_layouts(self):
+        self.assertEqual("Foo", L.argument_unit("Testimony/Arguments/Foo.lean"))
+        self.assertEqual("Foo", L.argument_unit("Testimony/Arguments/Foo/Lines.lean"))
+        self.assertIsNone(L.argument_unit("Testimony/Logic/Package.lean"))
 
     def test_L6_headline_without_print_axioms(self):
         text = "@[headline]\ntheorem foo : True := trivial\n"

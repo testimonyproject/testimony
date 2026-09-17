@@ -87,6 +87,68 @@ That is sola fide. Premises (12) and (13) both conclude `P₁₂`, one by way of
 argument's redundancy — the reason neither lexical premise is load-bearing — is
 visible on the page before you read a word of the legend.
 
+## Lines of reason
+
+An argument is not a heap of premises. It is a small number of *lines of
+reason*, each resting on its own grounds, each licensed by its own inference
+step, converging on a shared conclusion. `BornOfAVirgin` runs on four strands;
+`SolaFide` on two.
+
+A `Line` makes that structure a value rather than a remark in a docstring:
+
+```lean
+structure Line (α : Type) where
+  name     : String
+  grounds  : List (Formula α)   -- what this line contributes of its own
+  step     : Formula α          -- the inference licensing what it delivers
+  delivers : Formula α
+```
+
+and `caseOf lines shared closing` assembles a premise list from them — every
+line's grounds, then the premises the lines hold in common, then every line's
+step, then the steps that close the argument. Grounds before steps, so that the
+material the case rests on comes first and the inferences that move it come
+last.
+
+This buys three things.
+
+**Variants become differences.** "The scriptural reading minus the lexical
+premise" is one line with one ground dropped, written as
+`isaianicLine.onGrounds [...]`, instead of twenty premises retyped with one
+missing — where a reader cannot see which one went and a slip in the other
+nineteen is invisible. Every load-bearing result in the library needs such a
+variant, so this is most of what the packages do.
+
+**A line can be checked alone.** `Line.asPackage` turns one into an
+`ArgumentPackage`, so `Establishes` applies to a single strand.
+
+**A large argument survives being split.** Because the strands are values, they
+can live in their own module: over about five hundred lines an argument becomes
+a directory of `Atoms`, `Sources`, `Lines`, `Packages` and `Results`.
+
+## Sharing scripture between arguments
+
+Arguments overlap in the texts they read. `Testimony.Scripture` names the
+passages once and collects the groups that travel together — the two infancy
+narratives, the pair of Genesis verses calling Rebekah both עַלְמָה and בְּתוּלָה,
+the Assyrian timeline of Isaiah 8–10 — as `List ScriptureCitation` bundles. A
+bundle is a clique in the citation graph, and naming it means an argument cites
+the evidence rather than assembling it:
+
+```lean
+| .maryConceivedAsVirgin =>
+  { label := "Mary conceived Jesus while a virgin"
+  , kind := .historical
+  , source :=
+      { primary := .scripture virginConceptionNarratives
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+```
+
+The module also holds the `Source` shapes several arguments build — `calvinHolds`,
+`na28Apparatus`, `scriptureWithCalvin` — so that a premise cites a *claim* and
+not a re-spelled citation.
+
 ## Writing an argument
 
 An argument module has five parts.
@@ -125,16 +187,13 @@ the encoding honest; it is much easier to build a strawman after you have a
 proof you like.
 
 **4. Theorems**, tagged `@[headline]` and followed by `#print axioms`. To
-establish, unfold the package and call `tauto`:
+establish, name what to unfold:
 
 ```lean
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
-  intro w hw
-  simp only [reformed, sharedPremises, paulineToFaithAlone, conjOf, p,
-    List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-    FFL.Propositional.Formula.Boolean.val] at hw ⊢
-  tauto
+  establish [reformed, paulineLine, dominicalLine, sharedGrounds,
+    closingSteps, paulineToFaithAlone, dominicalToFaithAlone, toSalvation]
 ```
 
 To refute, name the rival's reading and check it:
@@ -147,22 +206,31 @@ def tridentineReading : Valuation Claim := fun a =>
 
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
-  refine not_entails_of_countermodel tridentineReading ?_ ?_ <;>
-    simp [tridentine, conjOf, p, notP,
-      FFL.Propositional.Formula.Boolean.val, tridentineReading]
+  refute_with tridentineReading [tridentine, reformed]
 ```
 
-Qualify `FFL.Propositional.Formula.Boolean.val` in full: `Formula` is also an
-abbreviation in `Testimony.Logic`, and the unqualified name resolves there.
+The bracketed list is only what to unfold. The generic half of the recipe —
+`caseOf`, `conjOf`, `p`, `notP`, the list-membership lemmas that turn
+`∀ φ ∈ prems` into a conjunction, and the fully qualified semantics — lives
+inside the tactics, in `Testimony.Logic.Tactic`.
 
-**5. The load-bearing results**, where there is a disputed premise. State the
-reduced package explicitly:
+That is not tidiness. `Formula` is an abbreviation in `Testimony.Logic` as well
+as a structure in Foundation, so a hand-written proof that says
+`Formula.Boolean.val` resolves the wrong one, `simp` does nothing, and the
+proof term falls back to `sorryAx` — with a successful build. Written once
+inside a macro quotation, where identifiers resolve at the definition site, the
+mistake cannot be made at a call site. `refute_with` also takes an identifier
+rather than a term, so a countermodel must be a named definition.
+
+**5. The load-bearing results**, where there is a disputed premise. Drop the
+premise from the line that contributes it:
 
 ```lean
 def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus the Pauline lexical premise"
-    premises := [ ... everything except the disputed premise ... ] }
+    premises :=
+      caseOf [paulineLine.onGrounds [], dominicalLine] sharedGrounds closingSteps }
 ```
 
 Then ask whether the argument survives. Where an argument has **two independent
