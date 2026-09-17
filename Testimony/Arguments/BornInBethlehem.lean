@@ -215,4 +215,24 @@ theorem jesus_satisfies_bethlehem : Satisfies jesus bornInBethlehem :=
 
 #print axioms jesus_satisfies_bethlehem
 
+/-! ### Satisfiability
+
+`Entails` is vacuously true over a premise set with no model, so a package built
+from contradictory premises would establish its conclusion with every gate
+passing. Only the package carrying a positive `Establishes` result needs
+checking: `critical` has a countermodel already, and a countermodel is a
+valuation satisfying every premise.
+
+Not tagged `@[headline]` — a claim about the health of the encoding rather than
+about Micah. -/
+
+/-- The reading on which every claim in this argument holds at once. -/
+def everythingHoldsReading : Valuation Claim := fun _ => True
+
+/-- The Christian package has a model, so `christian_establishes` is not
+vacuous. -/
+theorem christian_is_satisfiable : Satisfiable christian.premises := by
+  satisfied_by everythingHoldsReading [christian, predictiveLine, toCriterion,
+    toFulfilment]
+
 end Testimony.Arguments.BornInBethlehem

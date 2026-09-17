@@ -438,4 +438,85 @@ theorem circle_parity_does_not_clear_the_charge :
 
 #print axioms circle_parity_does_not_clear_the_charge
 
+/-! ### Satisfiability
+
+`Entails` quantifies over the valuations satisfying the premises, so a premise
+set with no model entails everything — including the negation of what its own
+author intended. A package built from contradictory premises would `Establishes`
+its conclusion, the proof would close, and every gate would pass.
+
+Only packages carrying a positive `Establishes` result need checking here. A
+package with a `¬ Establishes` result is satisfiable already: its countermodel
+is a valuation on which every premise holds.
+
+These are not tagged `@[headline]`. They are claims about the health of the
+encoding, not about the dispute. -/
+
+/-- The reading on which every claim in this argument holds at once. Not a
+position anyone occupies — it is the witness that the packages built only from
+positive grounds are coherent. -/
+def everythingHoldsReading : Valuation Claim := fun _ => True
+
+/-- The Protestant package has a model, so `protestant_establishes` is not
+vacuous. -/
+theorem protestant_is_satisfiable : Satisfiable protestant.premises := by
+  satisfied_by everythingHoldsReading [protestant, classicalLine, eliminativeLine,
+    sharedGrounds, toSoleRule, eliminativeToSoleRule]
+
+/-- Tradition 0's package has a model. -/
+theorem tradition0_is_satisfiable : Satisfiable tradition0.premises := by
+  satisfied_by everythingHoldsReading [tradition0, tradition0Line, tradition0ToSoleRule]
+
+/-- The Protestant package minus the hinge has a model, so
+`hinge_not_load_bearing_for_conclusion` is not vacuous either — which matters,
+since a load-bearing result that held only because its premises were
+contradictory would be precisely backwards. -/
+theorem protestantWithoutHinge_is_satisfiable :
+    Satisfiable protestantWithoutHinge.premises := by
+  satisfied_by everythingHoldsReading [protestantWithoutHinge, protestant,
+    Line.onGrounds, classicalLine, eliminativeLine, sharedGrounds, toSoleRule,
+    eliminativeToSoleRule]
+
+/-- Geisler's charge has a model. -/
+theorem geislerCircle_is_satisfiable : Satisfiable geislerCircle.premises := by
+  satisfied_by everythingHoldsReading [geislerCircle, geislerCircleLine, circleStep]
+
+/-- The world the self-refutation objection describes: scripture does not teach
+the principle, so the sole rule does not bind. -/
+def selfRefutationOwnReading : Valuation Claim := fun a =>
+  match a with
+  | .solaScripturaIsTaughtByScripture => False
+  | .scriptureIsSoleInfallibleRule => False
+  | _ => True
+
+/-- The self-refutation objection has a model. -/
+theorem selfRefutation_is_satisfiable : Satisfiable selfRefutation.premises := by
+  satisfied_by selfRefutationOwnReading [selfRefutation, selfRefutationLine,
+    selfRefutationStep]
+
+/-- The world the canon objection describes: the canon comes through the
+Church, so scripture is not the sole infallible rule. -/
+def canonObjectionOwnReading : Valuation Claim := fun a =>
+  match a with
+  | .scriptureIsSoleInfallibleRule => False
+  | _ => True
+
+/-- The canon objection has a model. -/
+theorem canonObjection_is_satisfiable : Satisfiable canonObjection.premises := by
+  satisfied_by canonObjectionOwnReading [canonObjection, canonObjectionLine,
+    canonObjectionStep]
+
+/-- The world the regress describes: sola scriptura does not differ in
+principle from solo scriptura. -/
+def interpretiveRegressOwnReading : Valuation Claim := fun a =>
+  match a with
+  | .traditionIDiffersInPrincipleFromTradition0 => False
+  | _ => True
+
+/-- The interpretive-authority regress has a model. -/
+theorem interpretiveRegress_is_satisfiable :
+    Satisfiable interpretiveRegress.premises := by
+  satisfied_by interpretiveRegressOwnReading [interpretiveRegress,
+    interpretiveRegressLine, interpretiveRegressStep]
+
 end Testimony.Arguments.SolaScriptura

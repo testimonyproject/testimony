@@ -106,6 +106,29 @@ macro_rules
              List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
              FFL.Propositional.Formula.Boolean.val]))
 
+/-- Prove `Satisfiable prems` by naming a valuation that models every premise.
+
+The mirror of `refute_with`: same unfolding recipe, opposite purpose. Where a
+countermodel is the rival's reading written down, a model is the position's
+own — the way things are if it is right. Both are named definitions for the
+same reason, that an inline valuation satisfies the checker and tells a reader
+nothing. -/
+syntax "satisfied_by" ppSpace ident (ppSpace "[" simpLemma,+ "]")? : tactic
+
+macro_rules
+  | `(tactic| satisfied_by $v:ident) =>
+    `(tactic| satisfied_by $v [Testimony.Logic.caseOf])
+  | `(tactic| satisfied_by $v:ident [$ls,*]) =>
+    `(tactic|
+        (refine Testimony.Logic.satisfiable_of_model $v ?_ <;>
+           simp [$ls,*, $v:ident, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
+             Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+             Testimony.Logic.p, Testimony.Logic.notP,
+             List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
+             List.cons_append, List.nil_append, List.append_nil,
+             List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
+             FFL.Propositional.Formula.Boolean.val]))
+
 /-! ### Sanity checks
 
 These tactics are the library's only route to a proof about an argument, so a
@@ -134,5 +157,19 @@ def affirmingConsequentReading : Valuation Pair := fun a => a = Pair.q
 theorem refute_with_refutes_affirming_the_consequent :
     ¬ Entails (α := Pair) [p .q, .imp (p .p) (p .q)] (p .p) := by
   refute_with affirmingConsequentReading
+
+/-- The reading on which both atoms hold. -/
+def bothHoldReading : Valuation Pair := fun _ => True
+
+/-- `satisfied_by` proves a premise set has a model. -/
+theorem satisfied_by_models_a_consistent_pair :
+    Satisfiable (α := Pair) [p .p, .imp (p .p) (p .q)] := by
+  satisfied_by bothHoldReading
+
+/-- And a contradictory premise set has none, so it entails anything — the
+hazard `entails_of_unsatisfiable` names, exhibited. -/
+theorem contradictory_premises_entail_anything :
+    Entails (α := Pair) [p .p, notP .p] (p .q) := by
+  establish
 
 end Testimony.Logic
