@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-37 entries, of which 6 carry no stable public identifier.
+38 entries, of which 6 carry no stable public identifier.
 
 - **`na28-2012`** — Barbara Aland, Kurt Aland, Institut für neutestamentliche Textforschung (ed.). *Novum Testamentum Graece*. Stuttgart: Deutsche Bibelgesellschaft. 28th revised edition. Siglum NA28. 2012. ISBN 9781619700321. ISBN is the Hendrickson / German Bible Society printing.
 - **`bavinck-prolegomena-2003`** — Herman Bavinck. *Reformed Dogmatics: Volume 1: Prolegomena*. Translated by John Vriend. Grand Rapids: Baker Academic. Vol. 1. 2003. ISBN 9780801026553.
@@ -21,6 +21,7 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - **`bhs-1997`** — Karl Elliger, Wilhelm Rudolph (ed.). *Biblia Hebraica Stuttgartensia*. Stuttgart: Deutsche Bibelgesellschaft. 5th edition. Siglum BHS. 1997. *(no public identifier)*
 - **`florovsky-bible-church-tradition-1972`** — Georges Florovsky. *Bible, Church, Tradition: An Eastern Orthodox View*. Belmont, MA: Nordland Publishing Company. The Collected Works of Georges Florovsky 1. 1972. ISBN 9780913124024. Volume 1 of the Collected Works. A later reprint (ISBN 9780473635909) paginates differently.
 - **`france-matthew-2007`** — R. T. France. *The Gospel of Matthew*. Grand Rapids: Wm. B. Eerdmans. New International Commentary on the New Testament. 2007. ISBN 9780802825018.
+- **`geisler-review-mathison-2005`** — Norman L. Geisler. *A Critical Review of The Shape of Sola Scriptura by Keith Mathison*. *Christian Apologetics Journal* 4.1: 117–128. 2005. [https://www.galaxie.com/article/caj04-1-04](https://www.galaxie.com/article/caj04-1-04). Spring 2005 issue; a subscription is required for the full text.
 - **`grudem-systematic-theology-1994`** — Wayne A. Grudem. *Systematic Theology: An Introduction to Biblical Doctrine*. Grand Rapids: Zondervan. 1994. ISBN 9780310286707. A second edition appeared in 2020; section references here are the first edition's.
 - **`johnson-james-1995`** — Luke Timothy Johnson. *The Letter of James: A New Translation with Introduction and Commentary*. New York: Doubleday. Anchor Bible. 1995. ISBN 9780385413602.
 - **`keil-delitzsch-minor-prophets-1949`** — Carl Friedrich Keil, Franz Delitzsch. *Biblical Commentary on the Old Testament: The Twelve Minor Prophets*. Translated by James Martin. Grand Rapids: Wm. B. Eerdmans. 1949. *(no public identifier)* Reprint of the T. & T. Clark translation; original German 1866–68.
@@ -33,7 +34,7 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - **`moo-james-2000`** — Douglas J. Moo. *The Letter of James*. Leicester: Apollos. Pillar New Testament Commentary. 2000. ISBN 9780851119779.
 - **`motyer-isaiah-1993`** — J. Alec Motyer. *The Prophecy of Isaiah: An Introduction and Commentary*. InterVarsity Press. 1993. *(no public identifier)*
 - **`newman-development-1845`** — John Henry Newman. *An Essay on the Development of Christian Doctrine*. London: James Toovey. 1845. ISBN 9780268009212. ISBN is the University of Notre Dame Press edition.
-- **`oberman-harvest-1963`** — Heiko A. Oberman. *The Harvest of Medieval Theology: Gabriel Biel and Late Medieval Nominalism*. Cambridge, MA: Harvard University Press. 1963. ISBN 9780801020377. ISBN is the Baker Academic reprint; first published by Harvard University Press, 1963.
+- **`oberman-dawn-1986`** — Heiko A. Oberman. *The Dawn of the Reformation: Essays in Late Medieval and Early Reformation Thought*. Edinburgh: T. & T. Clark. 1986. ISBN 9780567093714. Eerdmans reissued the volume in 1992 under ISBN 9780802806550.
 - **`openscriptures-oshb`** — Open Scriptures. *Open Scriptures Hebrew Bible*. CC BY 4.0. [https://github.com/openscriptures/morphhb](https://github.com/openscriptures/morphhb).
 - **`postell-isaiah-messianic-2025`** — Seth D. Postell. *Is Isaiah 7:14 Messianic?*. *Journal of the Evangelical Theological Society* 68.3: 465–493. 2025. [https://etsjets.org/wp-content/uploads/JETS_68.3_465_Postell.pdf](https://etsjets.org/wp-content/uploads/JETS_68.3_465_Postell.pdf).
 - **`rico-gentry-infant-king-2020`** — Christophe Rico, Peter J. Gentry. *The Mother of the Infant King, Isaiah 7:14: 'almâ and parthenos in the World of the Bible — A Linguistic Perspective*. Eugene, OR: Wipf & Stock. 2020. *(no public identifier)* Three 2020 printings catalogued (ISBNs 9781498230162, 9781498230179, 9781498230186); none could be tied to a printing.

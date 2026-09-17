@@ -418,22 +418,22 @@ tell against Tradition 0 and not against Tradition 1. -/
   , publisher := "Canon Press"
   , place := some "Moscow, ID" }
 
-/-- Oberman on late-medieval theology, and the origin of the Tradition I /
-Tradition II distinction Mathison adapts. The identifier recorded is the Baker
-Academic reprint, the printing the catalogue could confirm. -/
-@[bib_entry] def obermanHarvest : BibEntry := .book
+/-- Oberman's essays, and the source of the Tradition I / Tradition II
+distinction Mathison adapts. Geisler's review identifies this as the work
+Mathison builds on. The identifier is the T. & T. Clark printing; Eerdmans
+reissued the volume in 1992. -/
+@[bib_entry] def obermanDawn : BibEntry := .book
   { core :=
-      { key := "oberman-harvest-1963"
+      { key := "oberman-dawn-1986"
       , contributors := { authors := [.person "Heiko A." "Oberman"] }
-      , title := "The Harvest of Medieval Theology"
-      , subtitle := some "Gabriel Biel and Late Medieval Nominalism"
-      , year := some { value := 1963 }
-      , identifiers := [.isbn "9780801020377"]
+      , title := "The Dawn of the Reformation"
+      , subtitle := some "Essays in Late Medieval and Early Reformation Thought"
+      , year := some { value := 1986 }
+      , identifiers := [.isbn "9780567093714"]
       , note := some
-          ("ISBN is the Baker Academic reprint; first published by " ++
-           "Harvard University Press, 1963.") }
-  , publisher := "Harvard University Press"
-  , place := some "Cambridge, MA" }
+          "Eerdmans reissued the volume in 1992 under ISBN 9780802806550." }
+  , publisher := "T. & T. Clark"
+  , place := some "Edinburgh" }
 
 /-- Kruger on the canon's self-authentication. Cited for the parity reply to the
 canon objection: that Rome's own model is self-authenticating too, so the
@@ -607,6 +607,30 @@ package has to answer. -/
                   "sola-scriptura-and-the-question-of-interpretive-authority/")
                  (some "2026-09-17") ] }
   , site := some "Called to Communion" }
+
+/-- Geisler's review of Mathison: the Protestant critique of Tradition I, from
+the side Mathison files under Tradition 0. Two claims are cited. First, that
+Tradition 0 is a caricature — tradition can be *informative* without being
+*normative*, and the Anabaptist position appeals to the Spirit's witness and to
+the community of believers rather than to "me alone". Second, that Tradition I
+is viciously circular: the consensus of the Church is said to rest on the
+clarity of Scripture, while the clear sense of Scripture is said to require the
+consensus of the Church. -/
+@[bib_entry] def geislerReviewMathison : BibEntry := .article
+  { core :=
+      { key := "geisler-review-mathison-2005"
+      , contributors := { authors := [.person "Norman L." "Geisler"] }
+      , title :=
+          "A Critical Review of The Shape of Sola Scriptura by Keith Mathison"
+      , year := some { value := 2005 }
+      , identifiers :=
+          [ .url "https://www.galaxie.com/article/caj04-1-04" (some "2026-09-17") ]
+      , note := some
+          ("Spring 2005 issue; a subscription is required for the full text.") }
+  , journal := "Christian Apologetics Journal"
+  , volume := some "4"
+  , issue := some "1"
+  , pages := some (117, 128) }
 
 derive_bib_registry registry
 
