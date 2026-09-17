@@ -143,6 +143,22 @@ class RuleTests(unittest.TestCase):
         found = L.lint_doc("docs/src/roadmap.md", text, {"almah_not_load_bearing"})
         self.assertNotIn("L9", rules(found))
 
+    def test_L9_qualified_name_of_a_removed_result(self):
+        """A page may cite a result by its full name; the rule follows it."""
+        text = "`Testimony.Arguments.SolaFide.deleted_result` settled the case.\n"
+        found = L.lint_doc("docs/src/logic.md", text, {"reformed_establishes"})
+        self.assertIn("L9", rules(found))
+
+    def test_L9_qualified_name_of_a_result_that_exists(self):
+        text = "`Testimony.Arguments.SolaFide.reformed_establishes` holds.\n"
+        found = L.lint_doc("docs/src/logic.md", text, {"reformed_establishes"})
+        self.assertNotIn("L9", rules(found))
+
+    def test_L9_ignores_dotted_tokens_that_are_not_names(self):
+        """Namespace segments are capitalised; a filename's are not."""
+        text = "Run `scripts/testimony_lint.py`, or `testimony_lint.py` in place.\n"
+        self.assertEqual([], L.lint_doc("CONTRIBUTING.md", text, set()))
+
     def test_L9_reads_declarations_in_lean_blocks(self):
         """README and the introduction restate theorems as Lean, not in prose."""
         text = "```lean\ntheorem gone_missing : Establishes reformed\n```\n"
