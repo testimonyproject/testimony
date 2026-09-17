@@ -1,5 +1,14 @@
 # Encoding arguments
 
+> This page assumes you are writing an encoding. If you are here to *review*
+> one — which is the contribution this project most needs, and needs no Lean —
+> start with [Reading the logic](./reading-the-logic.md) instead.
+>
+> If you are writing, the [Pedagogy](./style-guide.md#pedagogy) rule applies to
+> everything below: assume a reader who knows the theology and not the logic,
+> and elucidate or link rather than leaving a notion to be inferred.
+
+
 ## How entailment is settled
 
 An argument is a list of premises and a conclusion, both formulas over cited

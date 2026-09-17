@@ -88,6 +88,7 @@ def reference : Reference → String
       let loc := locus l
       if loc.isEmpty then "\\cite{" ++ e.key ++ "}"
       else "\\cite[" ++ loc ++ "]{" ++ e.key ++ "}"
+  | .proposal r => "\\emph{proposed:} " ++ escape r
 
 /-- Every reference a source rests on. -/
 def source (s : Source) : String :=

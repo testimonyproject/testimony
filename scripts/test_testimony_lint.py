@@ -119,6 +119,102 @@ class RuleTests(unittest.TestCase):
         text = "@[headline]\ntheorem foo : True := trivial\n\n#print axioms foo\n"
         self.assertNotIn("L6", rules(self.lint(text)))
 
+    def test_L6_headline_in_attribute_list(self):
+        """`@[headline, proposed]` must still be checked for #print axioms.
+
+        A plain substring test for "@[headline]" misses this, which would let a
+        result carrying two attributes skip its trust base silently.
+        """
+        text = "@[headline, proposed]\ntheorem foo : True := trivial\n"
+        self.assertIn("L6", rules(self.lint(text)))
+
+    def test_L6_headline_in_attribute_list_satisfied(self):
+        text = (
+            "@[headline, proposed]\ntheorem foo : True := trivial\n\n"
+            "#print axioms foo\n"
+        )
+        self.assertNotIn("L6", rules(self.lint(text)))
+
+    def test_L10_proposed_without_rationale(self):
+        text = (
+            "/-- A result with no account of what it adds. -/\n"
+            "@[headline, proposed]\ntheorem foo : True := trivial\n\n"
+            "#print axioms foo\n"
+        )
+        self.assertIn("L10", rules(self.lint(text)))
+
+    def test_L10_proposed_with_rationale(self):
+        text = (
+            "/-- A result that says what it adds.\n\n"
+            "**What is novel here.** Nobody was found arguing this.\n-/\n"
+            "@[headline, proposed]\ntheorem foo : True := trivial\n\n"
+            "#print axioms foo\n"
+        )
+        self.assertNotIn("L10", rules(self.lint(text)))
+
+    def test_L10_proposed_with_no_docstring_at_all(self):
+        text = "@[proposed]\ntheorem foo : True := trivial\n"
+        self.assertIn("L10", rules(self.lint(text)))
+
+    def test_L10_untagged_result_is_not_asked_for_a_rationale(self):
+        text = (
+            "/-- An ordinary reported result. -/\n"
+            "@[headline]\ntheorem foo : True := trivial\n\n"
+            "#print axioms foo\n"
+        )
+        self.assertNotIn("L10", rules(self.lint(text)))
+
+    def test_L11_establishes_without_a_model(self):
+        found = L.lint_units({
+            "Testimony/Arguments/Foo/Results.lean":
+                "theorem a : Establishes christian := by\n  establish [christian]\n",
+        })
+        self.assertIn("L11", rules(found))
+        self.assertIn("christian", str([f for f in found if f.rule == "L11"][0]))
+
+    def test_L11_establishes_with_a_model(self):
+        found = L.lint_units({
+            "Testimony/Arguments/Foo/Results.lean":
+                "theorem a : Establishes christian := by\n  establish [christian]\n"
+                "theorem b : Satisfiable christian.premises := by\n"
+                "  satisfied_by allHolds [christian]\n",
+        })
+        self.assertNotIn("L11", rules(found))
+
+    def test_L11_negated_establishes_needs_no_model(self):
+        """A refuted package is satisfiable already: its countermodel is a
+        valuation on which every premise holds."""
+        found = L.lint_units({
+            "Testimony/Arguments/Foo/Results.lean":
+                "theorem a : \u00ac Establishes critical := by\n"
+                "  refute_with criticalReading [critical]\n",
+        })
+        self.assertNotIn("L11", rules(found))
+
+    def test_L11_model_may_live_in_another_file_of_the_argument(self):
+        found = L.lint_units({
+            "Testimony/Arguments/Foo/Results.lean":
+                "theorem a : Establishes christian := by\n  establish [christian]\n",
+            "Testimony/Arguments/Foo/Models.lean":
+                "theorem b : Satisfiable christian.premises := by\n"
+                "  satisfied_by allHolds [christian]\n",
+        })
+        self.assertNotIn("L11", rules(found))
+
+    def test_L11_ignores_modules_outside_arguments(self):
+        found = L.lint_units({
+            "Testimony/Logic/Entail.lean":
+                "theorem a : Establishes christian := by\n  establish [christian]\n",
+        })
+        self.assertNotIn("L11", rules(found))
+
+    def test_L11_does_not_read_establishes_from_a_comment(self):
+        found = L.lint_units({
+            "Testimony/Arguments/Foo/Results.lean":
+                "-- theorem a : Establishes christian := by\n",
+        })
+        self.assertNotIn("L11", rules(found))
+
     def test_L7_bad_citation_key(self):
         self.assertIn("L7", rules(self.lint('  { key := "France_Matthew2007"\n')))
 

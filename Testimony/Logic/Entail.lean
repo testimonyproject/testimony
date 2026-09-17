@@ -54,6 +54,36 @@ theorem not_entails_of_countermodel {prems : List (Formula α)} {concl : Formula
     (hfail : ¬ Formula.Boolean.val w concl) : ¬ Entails prems concl :=
   fun h => hfail (h w hsat)
 
+/-- A premise set is *satisfiable* when some valuation makes every premise
+true — when the position it encodes describes a possible way for things to be.
+
+This is not a technicality. `Entails` quantifies over the valuations satisfying
+the premises, so a premise set with **no** model entails everything vacuously,
+including the negation of what its own author intended. A package assembled
+from contradictory premises would therefore `Establishes` its conclusion, the
+proof would close, and all four gates would pass — a claim that is true only
+because nothing could make its assumptions hold at once. -/
+def Satisfiable (prems : List (Formula α)) : Prop :=
+  ∃ w : Valuation α, ∀ φ ∈ prems, Formula.Boolean.val w φ
+
+/-- A valuation satisfying every premise witnesses satisfiability. This is how
+every `Satisfiable` result in the library is proved: by naming the reading on
+which the position holds together — its own world, rather than a rival's. -/
+theorem satisfiable_of_model {prems : List (Formula α)}
+    (w : Valuation α) (hsat : ∀ φ ∈ prems, Formula.Boolean.val w φ) :
+    Satisfiable prems :=
+  ⟨w, hsat⟩
+
+/-- **The hazard, as a theorem.** An unsatisfiable premise set entails
+everything, so an `Establishes` result over one says nothing at all.
+
+Stated here rather than left as a remark, because it is the one way a result in
+this library can be simultaneously proved, axiom-clean and worthless. -/
+theorem entails_of_unsatisfiable {prems : List (Formula α)}
+    (h : ¬ Satisfiable prems) (concl : Formula α) : Entails prems concl := by
+  intro w hw
+  exact absurd ⟨w, hw⟩ h
+
 /-- Entailment is monotone in the premises: adding premises cannot destroy an
 entailment. -/
 theorem entails_of_subset {prems prems' : List (Formula α)} {concl : Formula α}

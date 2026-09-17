@@ -73,17 +73,28 @@ inductive Reference
   | work (entry : BibEntry) (locus : Locus := .whole)
   /-- Scripture itself. -/
   | scripture (refs : List ScriptureCitation)
+  /-- A claim this library advances without a source in the literature that
+  holds it. `rationale` states what is being proposed and why, because a
+  proposed premise still has to say something where a citation would go — the
+  field is required for the same reason `primary` is.
+
+  This is not a licence to assert. A proposed reference marks the claim as the
+  library's own construction wherever it is rendered, so a reader can always
+  tell what is reported from what is assembled here. -/
+  | proposal (rationale : String)
 deriving Repr, DecidableEq
 
 /-- Whether this reference is scripture rather than scholarship. -/
 def Reference.isScripture : Reference → Bool
   | .scripture _ => true
   | .work _ _ => false
+  | .proposal _ => false
 
 /-- The bibliography entry a reference cites, if it cites one. -/
 def Reference.entry : Reference → Option BibEntry
   | .work e _ => some e
   | .scripture _ => none
+  | .proposal _ => none
 
 /-- Who says so, where, and with what confidence.
 

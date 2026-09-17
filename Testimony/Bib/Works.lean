@@ -632,6 +632,41 @@ consensus of the Church. -/
   , issue := some "1"
   , pages := some (117, 128) }
 
+/-- Barrett on the authority of Scripture. Cited for the parity reply to the
+charge of circularity: that any appeal to an ultimate authority is necessarily
+circular, since there is no higher authority to appeal to. The same move Kruger
+makes on the canon and Mathison on interpretive authority, made here about
+perspicuity. -/
+@[bib_entry] def barrettGodsWordAlone : BibEntry := .book
+  { core :=
+      { key := "barrett-gods-word-alone-2016"
+      , contributors := { authors := [.person "Matthew" "Barrett"] }
+      , title := "God's Word Alone"
+      , subtitle := some "The Authority of Scripture"
+      , year := some { value := 2016 }
+      , identifiers := [.isbn "9780310515722"] }
+  , publisher := "Zondervan"
+  , place := some "Grand Rapids"
+  , series := some "The Five Solas Series" }
+
+/-- Allen and Swain on retrieval. Cited for the reply that the church's
+tradition holds a ministerial authority that is itself *established by and
+accountable to* Scripture — which, if it holds, denies that the creedal
+consensus is a precondition of reading Scripture rather than a product of
+it. -/
+@[bib_entry] def allenSwainReformedCatholicity : BibEntry := .book
+  { core :=
+      { key := "allen-swain-reformed-catholicity-2015"
+      , contributors :=
+          { authors := [.person "Michael" "Allen", .person "Scott R." "Swain"] }
+      , title := "Reformed Catholicity"
+      , subtitle := some
+          "The Promise of Retrieval for Theology and Biblical Interpretation"
+      , year := some { value := 2015 }
+      , identifiers := [.isbn "9780801049798"] }
+  , publisher := "Baker Academic"
+  , place := some "Grand Rapids" }
+
 derive_bib_registry registry
 
 end Testimony.Bib

@@ -56,6 +56,47 @@ The one exception is `Book`, where `missingDocs` is disabled for that
 declaration alone with the reason recorded inline: a constructor named
 `genesis` is documented by its name.
 
+## Pedagogy
+
+**Write for a reader who knows the theology and not the logic.**
+
+[Contributing](./contributing.md) says the review this project most needs is the
+one only a theologian or biblical scholar can do, and that it requires no Lean.
+That promise is only kept if the encoding explains itself. A proof that nobody
+competent to judge the *theology* can read has not been reviewed; it has only
+been checked.
+
+So: assume no logical training, and never leave a technical notion to be
+inferred.
+
+- **Elucidate where you use it, or link an explainer.** The primer is
+  [Reading the logic](./reading-the-logic.md). Prefer linking it to
+  re-explaining the basics; extend it when an argument needs a notion it does
+  not cover.
+- **A countermodel's docstring says what the reading *is*.** Not "the valuation
+  refuting X" — the position, in the words its holders would use.
+  `tridentineReading` is "everything else stands, and scripture is not the sole
+  infallible rule", which a reader can evaluate. A valuation described as a
+  valuation tells them nothing.
+- **A model's docstring says whose world it is.** Same rule, opposite sign: the
+  way things look if the position is right.
+- **Gloss logical vocabulary exactly as you gloss Greek and Hebrew.** This
+  library already explains ἔργα νόμου and עַלְמָה where they appear, because it
+  does not assume its reader is a Semitist. "Independent", "satisfiable",
+  "countermodel" and "vacuous" get the same courtesy, for the same reason.
+- **A notion the primer cannot carry is a reason to reconsider the encoding**,
+  not a reason to shrug. If an argument can only be stated in a fragment whose
+  countermodels are unreadable, say so in the module docstring and explain them
+  in prose beside the Lean.
+
+### This one is not enforced by a command
+
+Every other rule on this page names the check that catches it. This one cannot:
+you can lint that a docstring exists — `missingDocs` and `docBlame` already do —
+but not whether it explains anything. It is enforced in review, and it is the
+rule most easily lost in a hurry, which is why it is written down at this
+length.
+
 ## Encoding
 
 - **Rivals are not optional.** An argument module encoding a Christian reading

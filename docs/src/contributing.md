@@ -37,11 +37,27 @@ writing any code.
    Christian ones.
 2. **Every premise carries a source.** Uncited premises do not merge — and,
    as of the citation layer, do not compile.
-3. **No invented identifiers.** Verify against a public catalogue, or leave the
-   field `none`.
-4. **No collapsing relation types.** If a passage is disputed between
+3. **Original arguments are welcome, and are marked.** The rule has never been
+   that an uncited argument is unwelcome; it is that a reader must be able to
+   tell what the library *reports* from what it *constructs*. So a contribution
+   nobody in the literature advances is encoded like any other, tagged
+   `@[proposed]`, and counted separately in the status table. Its premises, if
+   they are themselves uncited, carry `Reference.proposal` — which still
+   demands a rationale where a citation would go. Rule L10 requires the
+   docstring to say what is novel and what would settle whether anyone has said
+   it before. Soundness and provenance are different axes: a proposed result is
+   checked by exactly the same machinery as every other one, and the tag says
+   nothing about whether it holds.
+4. **No vacuous claims.** A package that establishes its conclusion must name a
+   valuation on which all its premises hold. Without one the premises may be
+   jointly unsatisfiable, in which case they entail everything and the result
+   says nothing. Rule L11 checks it.
+5. **No invented identifiers.** Verify against a public catalogue, or leave the
+   field `none`. This is not in tension with the rule above: a proposal says so
+   in plain words, where a fabricated ISBN pretends to be a citation.
+6. **No collapsing relation types.** If a passage is disputed between
    "prediction" and "typology", encode both, attributed.
-5. **Respectful discourse.** People of all faiths and none are welcome here.
+7. **Respectful discourse.** People of all faiths and none are welcome here.
    Debate the encoding, not the person.
 
 ## Workflow

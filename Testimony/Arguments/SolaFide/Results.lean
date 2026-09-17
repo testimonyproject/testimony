@@ -128,4 +128,58 @@ theorem james_harmonisation_is_load_bearing :
 
 #print axioms james_harmonisation_is_load_bearing
 
+/-! ### Satisfiability
+
+`Entails` is vacuously true over a premise set with no model, so a package
+built from contradictory premises would establish its conclusion and every gate
+would pass. Only packages carrying a positive `Establishes` result need
+checking: one with a `¬ Establishes` result is satisfiable already, because its
+countermodel satisfies every premise.
+
+Not tagged `@[headline]` — these are claims about the health of the encoding
+rather than about justification. -/
+
+/-- The reading on which every claim in this argument holds at once: the
+witness that the packages built from positive grounds are coherent. -/
+def everythingHoldsReading : Valuation Claim := fun _ => True
+
+/-- The Reformed package has a model, so `reformed_establishes` is not
+vacuous. -/
+theorem reformed_is_satisfiable : Satisfiable reformed.premises := by
+  satisfied_by everythingHoldsReading [reformed, paulineLine, dominicalLine, jamesLine,
+    sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
+    dominicalToFaithAlone, jamesHarmonisation, toSalvation]
+
+/-- The New Perspective's own world: Paul's ἔργα νόμου denotes the covenant
+boundary markers rather than works in general, and justification is by faith
+regardless. The all-holds reading cannot serve here — this package *denies* a
+premise, which is the whole point of it. -/
+def newPerspectiveOwnReading : Valuation Claim := fun a =>
+  match a with
+  | .worksOfLawMeansWorksGenerally => False
+  | _ => True
+
+/-- The New Perspective package has a model. -/
+theorem newPerspective_is_satisfiable : Satisfiable newPerspective.premises := by
+  satisfied_by newPerspectiveOwnReading [newPerspective, reformed, Line.onGrounds,
+    paulineLine, dominicalLine, jamesLine, sharedGrounds, prooftexts, closingSteps,
+    paulineToFaithAlone, dominicalToFaithAlone, jamesHarmonisation, toSalvation]
+
+/-- The Reformed package minus the Pauline lexical premise has a model, so
+`worksOfLaw_not_load_bearing` is not vacuous. A load-bearing result that held
+only because its premises could not all be true would be exactly backwards. -/
+theorem reformedWithoutWorksOfLaw_is_satisfiable :
+    Satisfiable reformedWithoutWorksOfLaw.premises := by
+  satisfied_by everythingHoldsReading [reformedWithoutWorksOfLaw, reformed,
+    Line.onGrounds, paulineLine, dominicalLine, jamesLine, sharedGrounds, prooftexts,
+    closingSteps, paulineToFaithAlone, dominicalToFaithAlone, jamesHarmonisation,
+    toSalvation]
+
+/-- And the same minus the dominical lexical premise. -/
+theorem reformedWithoutSozo_is_satisfiable :
+    Satisfiable reformedWithoutSozo.premises := by
+  satisfied_by everythingHoldsReading [reformedWithoutSozo, reformed, Line.onGrounds,
+    paulineLine, dominicalLine, jamesLine, sharedGrounds, prooftexts, closingSteps,
+    paulineToFaithAlone, dominicalToFaithAlone, jamesHarmonisation, toSalvation]
+
 end Testimony.Arguments.SolaFide

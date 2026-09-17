@@ -462,4 +462,98 @@ theorem jesus_satisfies_virgin_birth : Satisfies jesus bornOfAVirgin :=
 
 #print axioms jesus_satisfies_virgin_birth
 
+/-! ### Satisfiability
+
+`Entails` is vacuously true over a premise set with no model, so a package built
+from contradictory premises would establish its conclusion with every gate
+passing. Only packages carrying a positive `Establishes` result need checking:
+one with a `¬ Establishes` result is satisfiable already, its countermodel being
+a valuation on which every premise holds.
+
+Several packages here *deny* a premise, so the all-holds reading will not serve
+them — a model has to be the position's own world, which is the same discipline
+the countermodels follow.
+
+Not tagged `@[headline]`: these are claims about the health of the encoding. -/
+
+/-- The reading on which every claim holds at once. -/
+def everythingHoldsReading : Valuation Claim := fun _ => True
+
+/-- The scriptural package has a model. -/
+theorem christian_is_satisfiable : Satisfiable christian.premises := by
+  satisfied_by everythingHoldsReading [christian, scripturalLines, isaianicLine,
+    protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds, toCriterion,
+    genesisToCriterion, micahToCriterion, compositionalToCriterion, toFulfilment]
+
+/-- The Roman Catholic package has a model. -/
+theorem catholic_is_satisfiable : Satisfiable catholic.premises := by
+  satisfied_by everythingHoldsReading [catholic, christian, magisterialLine,
+    scripturalLines, isaianicLine, protoevangeliumLine, micheanLine, compositionalLine,
+    sharedGrounds, toCriterion, genesisToCriterion, micahToCriterion,
+    compositionalToCriterion, magisterialToCriterion, toFulfilment]
+
+/-- The magisterial route has a model. -/
+theorem magisterialOnly_is_satisfiable : Satisfiable magisterialOnly.premises := by
+  satisfied_by everythingHoldsReading [magisterialOnly, christian, magisterialLine,
+    magisterialToCriterion, toFulfilment]
+
+/-- The scriptural package minus the lexical premise has a model, so
+`almah_not_load_bearing` is not vacuous. -/
+theorem christianWithoutAlmah_is_satisfiable :
+    Satisfiable christianWithoutAlmah.premises := by
+  satisfied_by everythingHoldsReading [christianWithoutAlmah, christian,
+    isaianicWithoutAlmah, Line.onGrounds, scripturalLines, isaianicLine,
+    protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds, toCriterion,
+    genesisToCriterion, micahToCriterion, compositionalToCriterion, toFulfilment]
+
+/-- The critical denial's own world: the sign was Ahaz's, so Isaiah 7:14 is not
+a prediction of a virgin birth. -/
+def criticalDenialOwnReading : Valuation Claim := fun a =>
+  match a with
+  | .isaiahPredictsVirginBirth => False
+  | _ => True
+
+/-- The critical denial has a model. -/
+theorem criticalDenial_is_satisfiable : Satisfiable criticalDenial.premises := by
+  satisfied_by criticalDenialOwnReading [criticalDenial, criticalExclusionLine,
+    criticalExclusion]
+
+/-- The referential argument's own world: Mary answers Isaiah's description, so
+the fulfilment claim never required the lexical sense. -/
+def referentialOwnReading : Valuation Claim := fun a =>
+  match a with
+  | .lexicalSenseRequiredForFulfilment => False
+  | _ => True
+
+/-- The referential argument has a model. -/
+theorem semantic_is_satisfiable : Satisfiable semantic.premises := by
+  satisfied_by referentialOwnReading [semantic, referentialLine, toDescriptionFit,
+    descriptionFitDefeatsLexicalDemand]
+
+/-- The lexical objection's own world: the versions read the broad term, so
+עַלְמָה does not denote virginity and the criterion is not met. -/
+def lexicalObjectionOwnReading : Valuation Claim := fun a =>
+  match a with
+  | .almahMeansVirgin => False
+  | .jesusSatisfiesCriterion => False
+  | _ => True
+
+/-- The lexical objection has a model. -/
+theorem lexicalCritical_is_satisfiable : Satisfiable lexicalCritical.premises := by
+  satisfied_by lexicalObjectionOwnReading [lexicalCritical, versionalLine,
+    versionalObjection, lexicalObjection]
+
+/-- Wegner's own world: the one clear Isaianic referent is not a virgin, so the
+word does not denote virginity. -/
+def wegnerOwnReading : Valuation Claim := fun a =>
+  match a with
+  | .almahMeansVirgin => False
+  | _ => True
+
+/-- Wegner's objection has a model. -/
+theorem wegnerLexical_is_satisfiable : Satisfiable wegnerLexical.premises := by
+  satisfied_by wegnerOwnReading [wegnerLexical, wegnerLine, wegnerClosingSteps,
+    harahYieldsPresentPregnancy, ordinaryPregnancyExcludesVirginity,
+    referentYieldsLexicalConclusion]
+
 end Testimony.Arguments.BornOfAVirgin

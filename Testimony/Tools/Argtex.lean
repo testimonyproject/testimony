@@ -43,11 +43,17 @@ def document : String :=
   package Testimony.Arguments.SolaFide.newPerspective ++
   package Testimony.Arguments.SolaFide.tridentine ++
   section_ "Sola scriptura"
-    ("Seeded. The self-refutation objection is encoded alongside the " ++
-     "position it tells against.") ++
+    ("Four positions on tradition and three objections that do not reduce to " ++
+     "one another. The dispute is not over whether doctrine develops --- both " ++
+     "sides hold that it does --- but over what authenticates a development.") ++
   package Testimony.Arguments.SolaScriptura.protestant ++
-  package Testimony.Arguments.SolaScriptura.traditionAndMagisterium ++
+  package Testimony.Arguments.SolaScriptura.tradition0 ++
+  package Testimony.Arguments.SolaScriptura.tridentine ++
+  package Testimony.Arguments.SolaScriptura.vaticanI ++
+  package Testimony.Arguments.SolaScriptura.orthodox ++
   package Testimony.Arguments.SolaScriptura.selfRefutation ++
+  package Testimony.Arguments.SolaScriptura.canonObjection ++
+  package Testimony.Arguments.SolaScriptura.interpretiveRegress ++
   section_ "Born in Bethlehem (Micah 5:2)"
     "Matthew 2:5--6 quotes Micah 5:2 as grounds for the Messiah's birthplace." ++
   package Testimony.Arguments.BornInBethlehem.christian ++

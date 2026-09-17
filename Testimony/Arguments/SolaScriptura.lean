@@ -1,249 +1,135 @@
-import Testimony.Attr
-import Testimony.Logic.Line
-import Testimony.Logic.Tactic
-import Testimony.Scripture
-import Testimony.Bib.Works
+import Testimony.Arguments.SolaScriptura.Atoms
+import Testimony.Arguments.SolaScriptura.Sources
+import Testimony.Arguments.SolaScriptura.Lines
+import Testimony.Arguments.SolaScriptura.Packages
+import Testimony.Arguments.SolaScriptura.Results
 
 /-!
 # Arguments.SolaScriptura — scripture as the sole infallible rule of faith
 
-A seed encoding: the atoms, citations and packages are complete; the full set
-of derivations is left to a follow-up.
+The formal principle of the Reformation. Sola fide is a claim *within*
+scripture's teaching; sola scriptura is a claim *about* scripture's authority,
+and so must answer objections the material principle never faces.
 
-The formal principle of the Reformation is harder to encode than the material
-one. Sola fide is a claim *within* scripture's teaching; sola scriptura is a
-claim *about* scripture's authority, and so must answer an objection the
-material principle never faces.
+## What the dispute is not about
 
-**The self-refutation objection.** If a doctrine is binding only when scripture
-teaches it, and scripture does not teach sola scriptura, then sola scriptura is
-not binding by its own standard. This is encoded in `selfRefutation` and the
-result `selfRefutation_defeats_unwarranted_claim` — the objection succeeds
-against a package that does not also hold that scripture teaches the principle.
-Encoding an objection that tells against the position is not a concession; the
+**It is not about whether doctrine develops.** Both Rome and the Protestant
+position encoded here hold that the deposit is closed while understanding of it
+deepens — `doctrineDevelopsWithoutNewRevelation` is shared ground, held by
+Newman and by Mathison alike. The disagreement is entirely over what
+*authenticates* a development: derivability from scripture, or the authority of
+the developing body. An encoding that opposed a static Protestantism to a
+developing Rome would describe a dispute neither party is having.
+
+## Four positions, not two
+
+Mathison's taxonomy, after Oberman, separates what the seed encoding collapsed:
+
+| Position | What it holds |
+|---|---|
+| **Tradition 0** | Tradition carries no binding authority; creeds inform without norming |
+| **Tradition I** | Tradition is ministerial — real authority, fallible, subordinate to scripture |
+| **Tradition II** | Two coordinate sources of revelation, canonised at Trent |
+| **Tradition III** | The magisterium is the one real source, resting on Vatican I |
+
+Orthodoxy is a fifth thing again, and not a variant of Rome: authority rests in
+the mind of the Church, expressed in the consensus of the Fathers and in
+conciliar decisions received by the whole Church. Florovsky rejects the
+two-sources model outright. The seed grounded a single "Catholic/Orthodox" line
+on `magisteriumIsInfallible`, which attributes to Orthodoxy a premise it does
+not hold.
+
+`tradition0_establishes` is the result that most repays the split: the position
+Mathison calls "solo scriptura" and judges unbiblical and unworkable reaches the
+conclusion too, once stated by Geisler — who holds it — rather than by its
+critic.
+
+## Three objections, which do not reduce to one another
+
+**Self-refutation.** If a doctrine binds only when scripture teaches it, and
+scripture does not teach sola scriptura, the position fails by its own standard.
+
+**The canon objection.** If the canon is known through the Church's reception,
+an authority outside scripture is needed to identify scripture. Augustine
+supplies the classical form: *ego vero Evangelio non crederem, nisi me
+catholicae Ecclesiae commoveret auctoritas*.
+
+**The interpretive-authority regress.** Cross and Judisch argue that the
+individual retains ultimate interpretive authority, exercised indirectly by
+choosing which body to submit to, so Tradition I is not principled distinct
+from Tradition 0 — "when I submit (so long as I agree), the one to whom I
+submit is me."
+
+Encoding objections that tell against the position is not a concession; the
 project's ground rules require rival readings to be encoded with the same care
-as the ones being argued for, and an argument whose strongest objection is
-missing is not being honestly represented.
+as the ones argued for.
 
-The Protestant package answers the objection by asserting
-`solaScripturaIsTaughtByScripture`, which is itself disputed and is marked so.
+## The hinge does two jobs, and they come apart
+
+The seed asserted in prose that the dispute reduces to
+`solaScripturaIsTaughtByScripture`. Split into the two roles that premise
+actually plays, the claim is both weaker and sharper than that.
+
+It is **not** load-bearing for reaching the conclusion:
+`hinge_not_load_bearing_for_conclusion` shows the eliminative line delivering
+the sole rule without it. It **is** load-bearing within the classical strand
+taken alone.
+
+And against the self-refutation objection it is one of *two* answers, not the
+only one. The objection's step is a conjunction, so either conjunct may be
+denied: `classical_answer_blocks_self_refutation` denies that scripture fails to
+teach the principle, and `scoping_blocks_self_refutation` denies instead that
+the bindingness rule governs a claim about where binding doctrine comes from —
+the final-arbiter reading, on which scripture is not the only arbiter but the
+last one. The objection succeeds only against a position refusing both.
+
+**Redundancy does not defend a position here**, which is where this argument
+parts company with `SolaFide`. There, a second strand defeated an attack on a
+premise. These objections are not premise attacks: each independently delivers
+the negation of the conclusion, so a further route to the conclusion does
+nothing against them. What answers an objection is denying one of *its*
+grounds.
+
+## The parity reply, and what it is worth
+
+Kruger on the canon and Mathison on interpretive authority make the same move:
+concede the circularity, deny that it discriminates between the positions. Each
+gets two results, because blocking an objection and establishing a conclusion
+are different things — `parity_blocks_canon_objection` with
+`canon_parity_does_not_establish_sole_rule`, and
+`parity_blocks_interpretive_regress` with
+`regress_parity_does_not_establish_difference`. The replies neutralise; they do
+not establish. `compatibility_does_not_establish_criterion` records the same
+lesson in `BornOfAVirgin`, for a different argument and a different reply.
+
+## The circle inside Protestantism
+
+`circle_grounds_neither_consensus` encodes Geisler's charge against Tradition I:
+the creedal consensus is said to rest on scripture's clarity, while scripture's
+clear sense is said to be unobtainable without that consensus. Both legs in
+place, neither end follows — a cycle of implications is satisfied outright by a
+valuation on which every node in it is false.
+
+That charge is made from inside the Reformation, against the position this
+module encodes as the Protestant one. It is conditional like every result here:
+deny either leg and the circle is not there.
+
+## A limitation worth stating
+
+The final-arbiter reading turns on a distinction between **doctrine**, which
+requires scriptural adjudication, and **practice** neither commanded nor
+forbidden, which does not. That is a *scope* distinction, and this fragment is
+propositional: it cannot quantify. The distinction is carried by atom design and
+by this docstring, not by the logic. What the encoding shows is what follows
+given the distinction, not that the distinction can be drawn.
+
+## Where things are
+
+| File | Contents |
+|---|---|
+| `Atoms.lean` | the `Claim` atoms |
+| `Sources.lean` | `cite`, with each position cited from a source that holds it |
+| `Lines.lean` | the inference steps, the lines, and the replies as substituted grounds |
+| `Packages.lean` | the positions, the objections, and the variants the results refute |
+| `Results.lean` | every `@[headline]` result, with its trust base |
 -/
-
-namespace Testimony.Arguments.SolaScriptura
-
-open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
-
-/-- The atomic claims this argument is built from. -/
-inductive Claim
-  /-- 2 Timothy 3:16 — all scripture is God-breathed and profitable. -/
-  | timothy3_16GodBreathed
-  /-- 2 Timothy 3:17 — that the man of God may be complete, equipped for every
-  good work. -/
-  | timothy3_17ThoroughlyEquips
-  /-- Mark 7:8–13 — Jesus rebukes tradition that nullifies the command of
-  God. -/
-  | mark7TraditionCanNullify
-  /-- Acts 17:11 — the Bereans tested apostolic preaching against scripture. -/
-  | acts17BereansTested
-  /-- Scripture is a sufficient rule of faith. -/
-  | scriptureIsSufficient
-  /-- Scripture is clear on what is necessary for salvation. -/
-  | scriptureIsPerspicuous
-  /-- Scripture is the sole infallible rule of faith. **The conclusion.** -/
-  | scriptureIsSoleInfallibleRule
-  /-- 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
-  The Catholic and Orthodox counter-text. -/
-  | thessalonians2_15TraditionBinding
-  /-- The magisterium is an infallible interpreter of scripture. -/
-  | magisteriumIsInfallible
-  /-- Scripture itself teaches sola scriptura. The hinge of the
-  self-refutation objection. -/
-  | solaScripturaIsTaughtByScripture
-  /-- A doctrine is binding only if scripture teaches it. -/
-  | onlyScripturalDoctrineIsBinding
-deriving DecidableEq, Repr
-
-/-- Citation and classification for every atom. Total, so nothing is
-uncited. -/
-def cite : Claim → AtomMeta
-  | .timothy3_16GodBreathed =>
-    { label := "2 Timothy 3:16 — all scripture is God-breathed and profitable"
-    , kind := .textual
-    , source := scriptureWithCalvin [{ ref := .verse ⟨.secondTimothy, 3, 16⟩ }] "I.vii.1" }
-  | .timothy3_17ThoroughlyEquips =>
-    { label := "2 Timothy 3:17 — that the man of God may be complete, equipped for every good work"
-    , kind := .textual
-    , source := scriptureWithCalvin [{ ref := .verse ⟨.secondTimothy, 3, 17⟩ }] "I.vii.1" }
-  | .mark7TraditionCanNullify =>
-    { label := "Mark 7:8–13 — Jesus rebukes tradition that nullifies God's command"
-    , kind := .textual
-    , source := scriptureWithCalvin [{ ref := .range ⟨.mark, 7, 8, 7, 13⟩ }] "IV.x.8" }
-  | .acts17BereansTested =>
-    { label := "Acts 17:11 — the Bereans tested apostolic preaching against scripture"
-    , kind := .textual
-    , source := scriptureWithCalvin [{ ref := .verse ⟨.acts, 17, 11⟩ }] "I.vii.2" }
-  | .scriptureIsSufficient =>
-    { label := "Scripture is a sufficient rule of faith"
-    , kind := .theological
-    , source := calvinHolds "I.vii" .disputed }
-  | .scriptureIsPerspicuous =>
-    { label := "Scripture is clear on what is necessary for salvation"
-    , kind := .theological
-    , source := calvinHolds "I.vii.5" .disputed }
-  | .scriptureIsSoleInfallibleRule =>
-    { label := "Scripture is the sole infallible rule of faith"
-    , kind := .theological
-    , source := calvinHolds "I.vii–ix" .disputed }
-  | .thessalonians2_15TraditionBinding =>
-    { label := "2 Thessalonians 2:15 — hold to the traditions taught by word or letter"
-    , kind := .textual
-    , source :=
-        { primary := .scripture [{ ref := .verse ⟨.secondThessalonians, 2, 15⟩ }]
-        , supporting :=
-            [.work tannerDecrees
-              (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions")]
-        , tradition := .romanCatholic
-        , confidence := .wellSupported } }
-  | .magisteriumIsInfallible =>
-    { label := "The magisterium is an infallible interpreter of scripture"
-    , kind := .theological
-    , source :=
-        { primary := .work tannerDecrees
-            (.sectionRef "Trent, Session IV (1546), Decree on the Vulgate Edition")
-        , tradition := .romanCatholic
-        , confidence := .wellSupported } }
-  | .solaScripturaIsTaughtByScripture =>
-    { label := "Scripture itself teaches that scripture is the sole infallible rule"
-    , kind := .interpretive
-      -- The crux of the self-refutation objection: denied by Catholic and
-      -- Orthodox critics, and conceded by some Protestants to be an inference
-      -- rather than an explicit teaching.
-    , source := calvinHolds "I.vii.4" .disputed }
-  | .onlyScripturalDoctrineIsBinding =>
-    { label := "A doctrine is binding only if scripture teaches it"
-    , kind := .theological
-    , source := calvinHolds "IV.x.8" .disputed }
-
-/-! ### Lines of reason
-
-Three, and they disagree. The Protestant line and the self-refutation objection
-run on the same hinge — `solaScripturaIsTaughtByScripture` — from opposite
-sides, which is the whole of the dispute encoded in two lines. -/
-
-/-- Sufficiency and perspicuity, together with the prooftexts, yield the sole
-infallible rule. -/
-def toSoleRule : Formula Claim :=
-  .imp (conjOf
-        [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
-        , p .scriptureIsSufficient, p .scriptureIsPerspicuous
-        , p .solaScripturaIsTaughtByScripture ])
-       (p .scriptureIsSoleInfallibleRule)
-
-/-- Binding tradition and an infallible interpreter of it together deny that
-scripture is the *sole* infallible rule. -/
-def traditionDeniesSoleRule : Formula Claim :=
-  .imp (conjOf [p .thessalonians2_15TraditionBinding, p .magisteriumIsInfallible])
-       (notP .scriptureIsSoleInfallibleRule)
-
-/-- If a doctrine binds only when scripture teaches it, and scripture does not
-teach sola scriptura, then sola scriptura does not bind. -/
-def selfRefutationStep : Formula Claim :=
-  .imp (conjOf [p .onlyScripturalDoctrineIsBinding, notP .solaScripturaIsTaughtByScripture])
-       (notP .scriptureIsSoleInfallibleRule)
-
-/-- **The Protestant line.** The prooftexts, sufficiency and perspicuity, and
-the answer to the self-refutation objection. -/
-def protestantLine : Line Claim :=
-  { name := "Protestant (sola scriptura)"
-  , grounds :=
-      [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
-      , p .mark7TraditionCanNullify, p .acts17BereansTested
-      , p .scriptureIsSufficient, p .scriptureIsPerspicuous
-      , p .solaScripturaIsTaughtByScripture ]
-  , step := toSoleRule
-  , delivers := p .scriptureIsSoleInfallibleRule }
-
-/-- **The Catholic and Orthodox line.** Scripture with apostolic tradition,
-interpreted by the magisterium. -/
-def traditionLine : Line Claim :=
-  { name := "Catholic/Orthodox (scripture with tradition)"
-  , grounds :=
-      [ p .timothy3_16GodBreathed, p .thessalonians2_15TraditionBinding
-      , p .magisteriumIsInfallible ]
-  , step := traditionDeniesSoleRule
-  , delivers := notP .scriptureIsSoleInfallibleRule }
-
-/-- **The self-refutation line.** The objection that sola scriptura fails by
-its own standard. -/
-def selfRefutationLine : Line Claim :=
-  { name := "Self-refutation objection to sola scriptura"
-  , grounds :=
-      [ p .onlyScripturalDoctrineIsBinding
-      , notP .solaScripturaIsTaughtByScripture ]
-  , step := selfRefutationStep
-  , delivers := notP .scriptureIsSoleInfallibleRule }
-
-/-! ### Packages -/
-
-/-- The Protestant position, which answers the self-refutation objection by
-holding that scripture does teach the principle. -/
-def protestant : ArgumentPackage Claim :=
-  protestantLine.asPackage cite "scripture is the sole infallible rule of faith"
-
-/-- The Catholic and Orthodox position: scripture and apostolic tradition
-together, interpreted by the magisterium.
-
-Its line *delivers* the denial, so the package is not the line as it stands:
-the question asked of these premises is whether sola scriptura follows, and the
-answer is that they entail its negation. -/
-def traditionAndMagisterium : ArgumentPackage Claim :=
-  { traditionLine.asPackage cite "scripture is the sole infallible rule of faith" with
-    conclusion := p .scriptureIsSoleInfallibleRule }
-
-/-- The self-refutation objection, stated as a package concluding the negation
-of sola scriptura. -/
-def selfRefutation : ArgumentPackage Claim :=
-  selfRefutationLine.asPackage cite "scripture is not the sole infallible rule of faith"
-
-/-! ### Results -/
-
-/-- Given the Protestant premises, the conclusion follows. -/
-@[headline]
-theorem protestant_establishes : Establishes protestant := by
-  establish [protestant, protestantLine, toSoleRule]
-
-#print axioms protestant_establishes
-
-/-- The Catholic and Orthodox reading, written down: scripture and apostolic
-tradition together, interpreted by the magisterium, so scripture is not the
-*sole* infallible rule. -/
-def traditionReading : Valuation Claim := fun a =>
-  match a with
-  | .scriptureIsSoleInfallibleRule => False
-  | _ => True
-
-/-- The Catholic/Orthodox premises do not establish sola scriptura — they
-entail its negation. -/
-@[headline]
-theorem traditionAndMagisterium_not_establishes :
-    ¬ Establishes traditionAndMagisterium := by
-  refute_with traditionReading [traditionAndMagisterium, traditionLine,
-    traditionDeniesSoleRule]
-
-#print axioms traditionAndMagisterium_not_establishes
-
-/-- The self-refutation objection is valid: granted that only scriptural
-doctrine binds and that scripture does not teach sola scriptura, sola scriptura
-fails by its own standard.
-
-This says nothing about whether the objection is *sound* — the Protestant
-package denies its second premise. What the library shows is that the dispute
-reduces to `solaScripturaIsTaughtByScripture`, which is where the argument
-between the traditions actually lives. -/
-@[headline]
-theorem selfRefutation_is_valid : Establishes selfRefutation := by
-  establish [selfRefutation, selfRefutationLine, selfRefutationStep]
-
-#print axioms selfRefutation_is_valid
-
-end Testimony.Arguments.SolaScriptura
