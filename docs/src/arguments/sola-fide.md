@@ -5,7 +5,7 @@
 
 *This page is generated from [`Testimony/Arguments/SolaFide`](https://github.com/testimonyproject/testimony/blob/main/Testimony/Arguments/SolaFide). Every heading and paragraph below is a docstring in those files; every formula is rendered from the encoding they check. If the page and the source disagree, the page is the one that is wrong, and regenerating it is the fix.*
 
-Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](./../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
+Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
 ## Arguments.SolaFide — justification by grace through faith, not works
 
@@ -82,21 +82,21 @@ generated manifest rather than as a remark in a docstring.
 
 | | claim | kind | held | source |
 |---|---|---|---|---|
-| \\(P_{1}\\) | Ephesians 2:8–9 teaches salvation by grace through faith, not of works | textual | Reformed Protestant, well supported | Eph 2:8-9; `calvin-institutes-1960`, §III.xi.7 |
-| \\(P_{2}\\) | Romans 3:28 teaches justification by faith apart from works of the law | textual | Reformed Protestant, well supported | Rom 3:28; `calvin-institutes-1960`, §III.xi.19 |
-| \\(P_{3}\\) | Galatians 2:16 teaches that no one is justified by works of the law | textual | Reformed Protestant, well supported | Gal 2:16; `calvin-institutes-1960`, §III.xi.19 |
-| \\(P_{4}\\) | Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes | textual | Reformed Protestant, well supported | Rom 4:4-5; `calvin-institutes-1960`, §III.xi.18 |
-| \\(P_{5}\\) | Titus 3:5 teaches that God saved us not by works done in righteousness | textual | Reformed Protestant, well supported | Titus 3:5; `calvin-institutes-1960`, §III.xiv.5 |
-| \\(P_{6}\\) | Paul's ἔργα νόμου denotes human works in general, not boundary markers | linguistic | Reformed Protestant, disputed | `calvin-institutes-1960`, §III.xi.19 |
-| \\(P_{7}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; `marshall-luke-1978`, ad loc. Luke 7:50 |
-| \\(P_{8}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, disputed | `marshall-luke-1978`, ad loc. Luke 7:50; Luke 7:47-50 |
-| \\(P_{9}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | `moo-james-2000`, ad loc. Jas 2:14; `johnson-james-1995`, ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{10}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | `westminster-confession-1647`, §XI.2; `calvin-institutes-1960`, §III.xvi.1 |
-| \\(P_{11}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; `moo-james-2000`, ad loc. Jas 2:24; `calvin-institutes-1960`, §III.xvii.11 |
-| \\(P_{12}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | `calvin-institutes-1960`, §I.vii |
-| \\(P_{13}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | `calvin-institutes-1960`, §III.xi.1 |
-| \\(P_{14}\\) | Salvation is by grace through faith, and not by works | theological | Reformed Protestant, well supported | `calvin-institutes-1960`, §III.xi–xviii |
-| \\(P_{15}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | `tanner-decrees-1990`, §Trent, Session VI (1547), Decree on Justification, ch. 16 |
+| \\(P_{1}\\) | Ephesians 2:8–9 teaches salvation by grace through faith, not of works | textual | Reformed Protestant, well supported | Eph 2:8-9; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.7 |
+| \\(P_{2}\\) | Romans 3:28 teaches justification by faith apart from works of the law | textual | Reformed Protestant, well supported | Rom 3:28; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19 |
+| \\(P_{3}\\) | Galatians 2:16 teaches that no one is justified by works of the law | textual | Reformed Protestant, well supported | Gal 2:16; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19 |
+| \\(P_{4}\\) | Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes | textual | Reformed Protestant, well supported | Rom 4:4-5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.18 |
+| \\(P_{5}\\) | Titus 3:5 teaches that God saved us not by works done in righteousness | textual | Reformed Protestant, well supported | Titus 3:5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xiv.5 |
+| \\(P_{6}\\) | Paul's ἔργα νόμου denotes human works in general, not boundary markers | linguistic | Reformed Protestant, disputed | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19 |
+| \\(P_{7}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
+| \\(P_{8}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, disputed | [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50; Luke 7:47-50 |
+| \\(P_{9}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
+| \\(P_{10}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
+| \\(P_{11}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
+| \\(P_{12}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii |
+| \\(P_{13}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1 |
+| \\(P_{14}\\) | Salvation is by grace through faith, and not by works | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii |
+| \\(P_{15}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
 
 </div>
 

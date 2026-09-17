@@ -147,15 +147,20 @@ def locus : Locus → String
   | .apparatus p => "app. " ++ escape p.render
   | .sv w => "s.v. " ++ escape w
 
+/-- Where the generated pages sit relative to the bibliography chapter. -/
+def bibliographyPath : String := "../bibliography.md"
+
 /-- A reference. Scripture renders as the passage; a work renders as its cite
-key, which is what the [bibliography](./../bibliography.md) is indexed by; a
-proposal is marked as the library's own construction. -/
+key, linked to its entry in the bibliography — `Bib.Render.toMarkdown` puts an
+anchor of that name on every line — and a proposal is marked as the library's
+own construction. -/
 def reference : Reference → String
   | .scripture refs =>
       String.intercalate "; " (refs.map fun r => escape r.ref.render)
   | .work e l =>
+      let link := "[`" ++ e.key ++ "`](" ++ bibliographyPath ++ "#" ++ e.key ++ ")"
       let loc := locus l
-      if loc.isEmpty then "`" ++ e.key ++ "`" else "`" ++ e.key ++ "`, " ++ loc
+      if loc.isEmpty then link else link ++ ", " ++ loc
   | .proposal r => "*proposed:* " ++ escape r
 
 /-- Every reference a source rests on. -/
