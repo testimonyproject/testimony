@@ -48,12 +48,16 @@ writing any code.
    it before. Soundness and provenance are different axes: a proposed result is
    checked by exactly the same machinery as every other one, and the tag says
    nothing about whether it holds.
-4. **No invented identifiers.** Verify against a public catalogue, or leave the
+4. **No vacuous claims.** A package that establishes its conclusion must name a
+   valuation on which all its premises hold. Without one the premises may be
+   jointly unsatisfiable, in which case they entail everything and the result
+   says nothing. Rule L11 checks it.
+5. **No invented identifiers.** Verify against a public catalogue, or leave the
    field `none`. This is not in tension with the rule above: a proposal says so
    in plain words, where a fabricated ISBN pretends to be a citation.
-5. **No collapsing relation types.** If a passage is disputed between
+6. **No collapsing relation types.** If a passage is disputed between
    "prediction" and "typology", encode both, attributed.
-6. **Respectful discourse.** People of all faiths and none are welcome here.
+7. **Respectful discourse.** People of all faiths and none are welcome here.
    Debate the encoding, not the person.
 
 ## Workflow

@@ -37,6 +37,12 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
   what can be generated; linter rule L9 fails on a page naming a result that no
   longer exists; the rest — a paragraph that still *describes* a result
   wrongly — is yours to fix in the same commit.
+- **Never assert an entailment over premises you have not shown satisfiable.**
+  `Entails` quantifies over the valuations satisfying the premises, so a premise
+  set with no model entails *everything*, `establish` closes the goal, and every
+  other gate passes. A package carrying `Establishes` needs a named model;
+  linter rule L11 fails without one. A `¬ Establishes` package needs none — its
+  countermodel already satisfies every premise.
 - **Never claim "it builds" from `lake build` alone.** Four gates exist, plus
   three `--check` runs for the generated files.
 - **Never work in the primary checkout.** Every change is made on a branch in
