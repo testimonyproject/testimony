@@ -5,6 +5,9 @@
     "context": ".."
   },
   "workspaceFolder": "/workspaces/testimony",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
   // Each worktree needs its own .lake/, so the Mathlib olean fetch happens
   // here rather than at image-build time — see scripts/new-worktree.sh and
   // GH issue #11.
