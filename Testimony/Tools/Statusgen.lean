@@ -181,12 +181,17 @@ def renderSection (ns : Name) (title : String) : String :=
   "| Result | Statement | What it claims |\n|---|---|---|\n" ++
   String.join rows ++ "\n"
 
-/-- The generated block: a count, then one table per argument. -/
+/-- The generated block: a count, then one table per argument.
+
+The count says how many arguments and results there are, and nothing about how
+finished they are. `SolaScriptura` is a seed encoding by its own module
+docstring, so a generated "worked end to end" would be the very thing this tool
+exists to prevent — a page contradicting the source. How far an argument has
+got is editorial, and belongs to its heading in `sections`. -/
 def statusMarkdown : String :=
   let counted :=
-    s!"**{sections.length} arguments**, worked end to end and each with at " ++
-    s!"least one rival package, carrying **{headlines.length} headline " ++
-    "results**, listed below in source order.\n\n"
+    s!"**{sections.length} arguments**, carrying **{headlines.length} " ++
+    "headline results**, listed below in source order.\n\n"
   counted ++ String.join (sections.map fun (ns, title) => renderSection ns title)
 
 end Testimony.Status

@@ -10,7 +10,7 @@ fails CI when the committed copy has drifted.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, worked end to end and each with at least one rival package, carrying **35 headline results**, listed below in source order.
+**4 arguments**, carrying **35 headline results**, listed below in source order.
 
 ### Born in Bethlehem — Micah 5:2
 
