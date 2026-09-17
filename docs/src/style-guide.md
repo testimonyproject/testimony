@@ -15,8 +15,9 @@ Run them in this order. Each catches what the previous one cannot.
 | 3 | `lake exe axiom-audit` | `sorry`, `native_decide`, undeclared axioms |
 | 4 | `python3 scripts/testimony_lint.py` | The project-specific rules below |
 
-Plus `lake exe bibgen --check`, `lake exe argtex --check` and
-`lake exe statusgen --check` for generated-file drift.
+Plus `lake exe bibgen --check`, `lake exe argtex --check`,
+`lake exe statusgen --check` and `lake exe argdoc --check` for generated-file
+drift.
 
 **`lake build` passing is not "it builds".** Three further gates exist, and
 tier 3 in particular catches things nothing else will — a `decide` proof that
@@ -209,6 +210,14 @@ it, delete it, or add one, and the table moves on the next run;
 `lake exe statusgen --check` fails CI if the committed copy has not. The block
 between the two `<!-- ... statusgen -->` markers in `docs/src/roadmap.md` is
 generated: do not edit it by hand.
+
+The argument pages under `docs/src/arguments/` go further: `lake exe argdoc`
+writes each one whole, from the module docstrings and the declarations of the
+argument's own files. A docstring is therefore documentation in the ordinary
+sense — write it for a reader, because a reader will meet it on the site — and
+there is nothing to keep in step, because there is no second copy. Do not edit
+those pages, or the `<!-- ... argdoc -->` block in `docs/src/SUMMARY.md`, by
+hand.
 
 **What cannot be generated is checked.** Prose about *why* an argument matters
 is not derivable from theorem statements, so it stays hand-written. Rule L9

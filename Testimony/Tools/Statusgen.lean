@@ -1,4 +1,5 @@
 import Testimony
+import Testimony.Tools.Docs
 
 /-!
 # statusgen — generate the roadmap's status table from the Lean source
@@ -32,7 +33,7 @@ written by hand, because *why* an argument is worth making is not derivable
 from its statements.
 -/
 
-open Lean Elab Command
+open Lean Elab Command Testimony.Doc
 
 namespace Testimony.Status
 
@@ -52,25 +53,6 @@ structure Headline where
   rather than reported from a source. -/
   proposed : Bool := false
   deriving Inhabited, Repr
-
-/-- Namespaces every statement is spelled with, whichever argument it belongs
-to. An argument's own namespace is not listed here — it is taken from the
-declaration, so a new argument needs no entry. -/
-def sharedPrefixes : List String :=
-  [ "Testimony.Logic.", "Testimony.People.", "Testimony.", "Logic.", "People." ]
-
-/-- Strip the namespaces from a pretty-printed statement, so that it reads as
-it does in the source file rather than as the pretty-printer spells it from
-outside the argument's namespace.
-
-The argument's own namespace comes first and in both forms — fully qualified,
-and as the pretty-printer shortens it inside `Testimony` — because
-`sharedPrefixes` would otherwise eat the `Testimony.` in front of it and leave
-`Arguments.BornOfAVirgin.christian` standing. -/
-def stripNamespaces (ns : Name) (s : String) : String :=
-  let qualified := ns.toString ++ "."
-  let shortened := (qualified.splitOn "Testimony.").getLast!
-  (qualified :: shortened :: sharedPrefixes).foldl (fun acc p => acc.replace p "") s
 
 /-- How much of a docstring's first sentence the table carries. A summary is
 one sentence by construction, but a sentence can be a paragraph long, and a
@@ -159,32 +141,29 @@ elab "derive_headline_table " tableName:ident : command => do
 derive_headline_table headlines
 
 /-- The arguments the table presents, in order, with the heading each appears
-under. Editorial: an argument's title is prose about what it argues from, which
-is not derivable from the names of its theorems.
+under. Taken from `Testimony.Doc.arguments`, which `argdoc` reads too: an
+argument's title is editorial prose, and one editorial list is better than two.
 
-Every namespace carrying a headline result must appear here — `#guard` below
+Every namespace carrying a headline result must appear there — `#guard` below
 fails the build otherwise, so adding an argument cannot silently omit it from
 the status table. -/
-def sections : List (Name × String) :=
-  [ (`Testimony.Arguments.BornInBethlehem, "Born in Bethlehem — Micah 5:2")
-  , (`Testimony.Arguments.BornOfAVirgin,
-      "Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3")
-  , (`Testimony.Arguments.SolaFide, "Sola fide")
-  , (`Testimony.Arguments.SolaScriptura, "Sola scriptura") ]
+def sections : List Argument := arguments
 
 #guard !headlines.isEmpty
-#guard headlines.all fun h => sections.any fun (ns, _) => ns == h.argument
+#guard headlines.all fun h => sections.any fun a => a.ns == h.argument
 
 /-- The results belonging to one argument, in source order. -/
 def resultsOf (ns : Name) : List Headline := headlines.filter (·.argument == ns)
 
-/-- One argument's heading and table. -/
-def renderSection (ns : Name) (title : String) : String :=
-  let rows := (resultsOf ns).map fun h =>
+/-- One argument's heading and table. The heading links to the argument's own
+generated page, where the same results are set with their full docstrings and
+the premises they rest on. -/
+def renderSection (a : Argument) : String :=
+  let rows := (resultsOf a.ns).map fun h =>
     let mark := if h.proposed then " ⚗" else ""
     "| `" ++ cell h.name ++ "`" ++ mark ++ " | `" ++ cell h.statement ++ "` | "
       ++ cell h.summary ++ " |\n"
-  "### " ++ title ++ "\n\n" ++
+  "### [" ++ a.title ++ "](./arguments/" ++ a.slug ++ ".md)\n\n" ++
   "| Result | Statement | What it claims |\n|---|---|---|\n" ++
   String.join rows ++ "\n"
 
@@ -211,7 +190,7 @@ def statusMarkdown : String :=
   let counted :=
     s!"**{sections.length} arguments**, carrying **{headlines.length} " ++
     "headline results**, listed below in source order." ++ proposedNote ++ "\n\n"
-  counted ++ String.join (sections.map fun (ns, title) => renderSection ns title)
+  counted ++ String.join (sections.map renderSection)
 
 end Testimony.Status
 

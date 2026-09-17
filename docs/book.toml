@@ -11,6 +11,8 @@ preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/testimonyproject/testimony"
 edit-url-template = "https://github.com/testimonyproject/testimony/edit/main/docs/{path}"
 additional-css = ["theme/testimony.css"]
+# Generated argument pages set their notation as LaTeX; MathJax typesets it.
+mathjax-support = true
 
 [output.html.print]
 enable = true

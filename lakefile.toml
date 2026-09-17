@@ -31,3 +31,8 @@ supportInterpreter = true
 name = "statusgen"
 root = "Testimony.Tools.Statusgen"
 supportInterpreter = true
+
+[[lean_exe]]
+name = "argdoc"
+root = "Testimony.Tools.Argdoc"
+supportInterpreter = true

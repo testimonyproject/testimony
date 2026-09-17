@@ -59,6 +59,7 @@ jobs:
           lake exe bibgen --check
           lake exe argtex --check
           lake exe statusgen --check
+          lake exe argdoc --check
 
   docs:
     needs: image

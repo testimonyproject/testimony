@@ -31,6 +31,8 @@ boundary visible at all times.
 | `Testimony.Logic` | Formula type, entailment and countermodels, `ArgumentPackage`, manifests, `Line` lines of reason, the `establish`/`refute_with` tactics |
 | `Testimony.Argument` | `FulfillmentCriterion`, `MessiahDefinition`, `Satisfies`, `MeetsDefinition` |
 | `Testimony.Arguments.*` | The worked arguments. A large one is a directory — `Atoms`, `Sources`, `Lines`, `Packages`, `Results` |
+| `Testimony.Logic.Latex`, `Testimony.Logic.Markdown` | The two renderings of a package: traditional notation for print, and the same notation for the browser |
+| `Testimony.Tools.*` | The generators — `Bibgen`, `Argtex`, `Statusgen`, `Argdoc` — over `Docs`, the catalogue they share |
 
 ## Two structural enforcements
 
@@ -47,6 +49,32 @@ atomic proposition without a citation does not compile.
 
 Neither of these requires a linter, a review checklist, or a proof obligation
 at the use site. They are consequences of the types.
+
+## The documentation is generated from the library
+
+Four executables write files that live in the repository, and each has a
+`--check` mode CI runs, so a committed copy that has fallen behind the source
+fails the build rather than misleading a reader.
+
+| Tool | Writes | From |
+|---|---|---|
+| `bibgen` | `references.bib`, `docs/src/bibliography.md` | the `@[bib_entry]` registry |
+| `argtex` | `docs/latex/arguments.tex` | every package it names |
+| `statusgen` | the marked block in `docs/src/roadmap.md` | every `@[headline]` result |
+| `argdoc` | `docs/src/arguments/*.md`, the marked block in `docs/src/SUMMARY.md` | every documented declaration in an argument's namespace |
+
+`argdoc` is the one that reads the *prose*. An argument module is written as a
+literate document — a module docstring saying what the dispute is, `/-! ### … -/`
+blocks marking its sections, a docstring on every package, line and result —
+and `argdoc` walks the environment for all of it, in source order, interleaving
+the module docstrings with the declarations they introduce. What a reader meets
+on the site is the file, typeset: the same paragraphs, with the formulas set as
+notation and the atoms numbered against one legend for the page.
+
+That is why there is no hand-written page describing an argument. There is
+nothing to keep in step, because there is no second copy — the docstring is the
+documentation, and `lake exe argdoc --check` fails if what is committed is not
+what the source now says.
 
 ## Dependencies
 

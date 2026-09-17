@@ -92,15 +92,17 @@ python3 scripts/testimony_lint.py         # tier 4
 lake exe bibgen --check                   # generated files current
 lake exe argtex --check
 lake exe statusgen --check
+lake exe argdoc --check
 ```
 
 All of these run in CI. Small pull requests, one concern each. Discuss
 significant design changes in an issue first.
 
 If the change touches `Testimony/Arguments/`, it is not finished when it
-compiles: the documentation moves with it. Run `lake exe statusgen` and commit
-the regenerated block in the [roadmap](./roadmap.md), and say what the encoding
-now does on any page that describes it — see [Documentation moves with the
+compiles: the documentation moves with it. Run `lake exe statusgen` and
+`lake exe argdoc` and commit what they regenerate — the block in the
+[roadmap](./roadmap.md) and the argument's own page — and say what the encoding
+now does on any hand-written page that describes it — see [Documentation moves with the
 argument](./style-guide.md#documentation-moves-with-the-argument). Rule L9
 fails the build if a page names a result the library no longer has, which is
 how the roadmap went wrong once already.
