@@ -89,7 +89,7 @@ fails CI when the committed copy has drifted.
 
 <!-- END GENERATED: lake exe statusgen -->
 
-Three findings emerged that were not designed for.
+Seven findings emerged that were not designed for.
 
 **Redundancy defeats a lexical dispute.** Sola fide runs on two independent
 strands — Paul's ἔργα νόμου and Jesus' σέσωκέν σε at Luke 7:50 — and neither
@@ -130,6 +130,58 @@ A corollary worth noting: because the New Perspective rejects the traditional
 reading of Paul's phrase while still affirming justification by faith, it
 **establishes the conclusion too**. Winning the ἔργα νόμου argument is not a
 defeat of sola fide.
+
+**The same reply, six times.** The major objections to sola scriptura turn out
+to share a form: *an authority outside scripture is needed to make scripture
+usable* — to fix the canon, to supply the vocabulary Nicaea settled on, to
+identify which unwritten apostolic teaching is genuine, to license a
+development. And the reply is the same every time: *so do you.* Kruger on the
+canon, Mathison on interpretive authority, Athanasius answering the Arian charge
+that ὁμοούσιος is unscriptural, Whitaker on unwritten tradition, Geisler on who
+may interpret the Old Testament, Barrett on perspicuity — six instances across
+seventeen centuries, by people arguing against each other.
+
+What the library adds is the price. `parity_blocks_canon_objection` and
+`parity_blocks_interpretive_regress` show the move works; `canon_parity_does_not_establish_sole_rule`
+and `regress_parity_does_not_establish_difference` show that working is all it
+does. It neutralises an objection and establishes nothing, because conceding a
+charge is not answering it. That is the lesson
+`compatibility_does_not_establish_criterion` already recorded for the
+virgin-birth argument, now shown to be a property of the *move* rather than of
+any one dispute.
+
+**A premise can be load-bearing in one role and not another.** The sola
+scriptura seed asserted in prose that the whole dispute reduces to whether
+scripture teaches the principle. Split into the two jobs that premise does, the
+claim is both weaker and sharper. It is *not* load-bearing for reaching the
+conclusion — `hinge_not_load_bearing_for_conclusion` strips it and the
+eliminative line still delivers — while `hinge_is_load_bearing_within_classical_strand`
+holds within that strand alone. Against the self-refutation objection it is one
+of *two* answers rather than the only one, since the objection's step is a
+conjunction and either conjunct may be denied:
+`classical_answer_blocks_self_refutation` denies one and
+`scoping_blocks_self_refutation` the other. "The dispute reduces to the hinge"
+was pointing at something true and describing it too broadly.
+
+**A position its own cataloguer calls unworkable establishes the conclusion.**
+Mathison files "solo scriptura" as Tradition 0 and judges it "unbiblical,
+illogical, and unworkable". `tradition0_establishes` shows that, stated by
+Geisler — who holds a version of it — rather than by its critic, it reaches sola
+scriptura by its own route. This is the second time the pattern has appeared;
+the New Perspective does the same for sola fide. Both results come from the same
+discipline: encode a rival from a source that *holds* it, never from a
+description of it.
+
+**And one finding about the method rather than about an argument.** `Entails`
+quantifies over the valuations satisfying the premises, so a premise set with no
+model entails everything. A package assembled from contradictory premises would
+establish its conclusion, the proof would close, and all four gates would pass —
+a claim simultaneously proved, axiom-clean and empty. Nothing checked for it, and
+`Satisfiable` did not exist. Twenty packages were audited, every one in the
+library carrying a positive `Establishes` result, and **none was unsatisfiable**:
+no result here was vacuous. Rule L11 now fails the build for a package that
+establishes a conclusion without exhibiting a model, so that is a standing check
+rather than a snapshot.
 
 ## Near term
 
