@@ -193,6 +193,21 @@ class RuleTests(unittest.TestCase):
         self.assertIn("ArgumentPackage.manifest", names)
         self.assertIn("manifest", names)
 
+    def test_declared_names_ignores_inline_comments(self):
+        """`-- def gone_result` is a comment, not a declaration. Without this,
+        commenting a theorem out would leave documentation citing it passing."""
+        names = L.declared_names(
+            {"Testimony/A.lean": "def live := 0 -- def gone_result : Nat := 0\n"}
+        )
+        self.assertIn("live", names)
+        self.assertNotIn("gone_result", names)
+
+    def test_strip_comments_keeps_dashes_inside_strings(self):
+        """`argtex` emits LaTeX en-dashes: `2:5--6` is text, not a comment, and
+        cutting there would hide the rest of the line from every rule."""
+        line = '  "Matthew 2:5--6 quotes Micah 5:2." ++'
+        self.assertEqual([line], L._strip_comments([line]))
+
     def test_doc_files_excludes_generated_pages(self):
         """`bibgen` owns the bibliography; L9 does not second-guess it."""
         found = [str(p) for p in L.doc_files(Path("."))]

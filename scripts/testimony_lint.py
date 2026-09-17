@@ -109,22 +109,53 @@ class Finding:
 
 
 def _strip_comments(lines: list[str]) -> list[str]:
-    """Blank out block comments so prose does not trip code rules."""
-    out, depth = [], 0
+    """Blank out comments so prose does not trip code rules.
+
+    Block comments nest, and `--` runs to the end of its line — but only
+    outside a string literal. `argtex` emits LaTeX en-dashes, so
+    `"Matthew 2:5--6 quotes Micah"` is text rather than a comment, and cutting
+    there would hide code from every rule below.
+
+    Inline comments matter to L9 in particular: `def live := 0 -- def gone ...`
+    would otherwise put `gone` in the set of declared names, and documentation
+    naming a deleted result would pass.
+    """
+    out, depth, in_string = [], 0, False
     for line in lines:
         kept, i = [], 0
         while i < len(line):
-            if line.startswith("/-", i):
-                depth += 1
+            if depth:
+                if line.startswith("/-", i):
+                    depth += 1
+                elif line.startswith("-/", i):
+                    depth -= 1
+                else:
+                    kept.append(" ")
+                    i += 1
+                    continue
+                kept.append("  ")
                 i += 2
-            elif line.startswith("-/", i) and depth:
-                depth -= 1
-                i += 2
-            else:
-                kept.append(" " if depth else line[i])
+            elif in_string:
+                if line[i] == "\\" and i + 1 < len(line):
+                    kept.append(line[i : i + 2])
+                    i += 2
+                    continue
+                if line[i] == '"':
+                    in_string = False
+                kept.append(line[i])
                 i += 1
-        text = "".join(kept)
-        out.append("" if text.strip().startswith("--") else text)
+            elif line.startswith("/-", i):
+                depth += 1
+                kept.append("  ")
+                i += 2
+            elif line.startswith("--", i):
+                break
+            else:
+                if line[i] == '"':
+                    in_string = True
+                kept.append(line[i])
+                i += 1
+        out.append("".join(kept))
     return out
 
 
