@@ -79,6 +79,16 @@ def rebekahAlmahAndBetulah : List ScriptureCitation :=
   [ verseIn .masoretic ⟨.genesis, 24, 43⟩
   , verseIn .masoretic ⟨.genesis, 24, 16⟩ ]
 
+/-- Genesis 24:43 and Song 6:8 — the two passages besides Isaiah 7:14 that
+Wegner calls the clearest evidence for the sense of עַלְמָה.
+
+Cited together because the parity reply needs them together: if one clear
+referent settled the word's denotation, these two would settle it for
+virginity. Masoretic, since the claim is about the Hebrew. -/
+def clearAlmahPassages : List ScriptureCitation :=
+  [ verseIn .masoretic ⟨.genesis, 24, 43⟩
+  , verseIn .masoretic ⟨.songOfSongs, 6, 8⟩ ]
+
 /-! ### The Bethlehem oracle -/
 
 /-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/

@@ -69,6 +69,39 @@ objection no longer reaches its conclusion — because once virginity is
 compatible with the word, four translators making four different choices about
 how much of the referent to make explicit is not evidence about the sense.
 
+**Wegner's objection is encoded in its sharpest form, and the module shows the
+circle in it rather than alleging one.** Wegner does not merely say that
+עַלְמָה means "young woman". He says that הָרָה at Isaiah 7:14 is a predicate
+adjective, so the clause reads "the עַלְמָה *is* pregnant" — already, when the
+sign is given — and a pregnant woman is not a virgin; the one clear Isaianic
+case then settles the word. `wegner_establishes` grants him every premise and
+checks that the argument goes through, because a rival worth answering has to
+be stated at full strength first.
+
+The parse is not the weak point, and the encoding says so by granting it
+throughout: Rydelnik — cited here through Postell, who reports him at 474 —
+reads the same predicate adjective and draws the opposite conclusion, that the
+virgin *is* pregnant and the sign is therefore as deep as Sheol. What the
+grammar does not supply is that the pregnancy is an *ordinary* one, and that is
+the premise that excludes virginity. `wegner_needs_ordinary_pregnancy` removes
+it and the objection stops. `readingSuppliesOrdinaryPregnancy` then supplies it
+the way Wegner's own case does — from the near-term reading of the sign — and
+with the lexical conclusion turned back against that reading, the two legs
+close. `circle_grounds_neither_end` and `circle_grounds_neither_denial` are the
+result: keep every uncontested datum, and *neither* end follows, because a
+cycle of implications is satisfied outright by a valuation on which all of its
+nodes are false. Nothing enters the loop, so nothing comes out of it. That is a
+demonstration rather than a complaint, and it is conditional in the usual way:
+a defender of Wegner should deny `readingSuppliesOrdinaryPregnancy` and argue
+that the near-term reading stands on the historical evidence alone.
+
+Postell's second reply is independent of the first and survives that defence.
+The other clear עַלְמָה passages Wegner himself lists are cases of virgins, so a
+single referent cannot be what settles the denotation — the same principle
+would settle it the other way. `usage_parity_blocks_wegner` checks it, and the
+atom is marked `plausible` rather than `wellSupported` because Postell's "in
+fact virgins" is stronger than Wegner's own discussion of Song 6:8.
+
 The critical case against the Isaianic strand is now *derived* rather than
 assumed. `critical` used to carry `¬isaiahPredictsVirginBirth` as a bare
 premise; it now carries the step that produces it — that a sign given for

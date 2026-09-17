@@ -4,10 +4,11 @@ import Testimony.Arguments.BornOfAVirgin.Lines
 /-!
 # Arguments.BornOfAVirgin.Packages — the positions, and the variants
 
-Fifteen packages. Four are positions someone holds; the rest exist to be
+A handful of these packages are positions someone holds; the rest exist to be
 *refuted*, because "this premise is load-bearing" is proved by removing it and
 exhibiting a countermodel, and the package with it removed has to be written
-down to be refuted.
+down to be refuted. So the file grows with every result, and counting it here
+would only be one more thing to keep current.
 
 Each variant is a named difference from `christian`: one line on different
 grounds, or one fewer line. Before `Line` existed each restated the whole
@@ -190,6 +191,87 @@ def semanticReachingForCriterion : ArgumentPackage Claim :=
     premises := semantic.premises ++ [toFulfilment]
     conclusion := p .jesusSatisfiesCriterion
     conclusionLabel := fulfillmentLabel jesus bornOfAVirgin }
+
+/-! ### Wegner's objection, and the circle in it
+
+Four variants of one line, each a named difference. `wegnerLine` grants
+everything Wegner needs; the rest take one ground away and put in its place the
+step that is supposed to supply it. -/
+
+/-- **Wegner's objection at full strength**, granted every premise it needs:
+the predicate-adjective parse, the near-term setting of the sign, the ordinary
+pregnancy that setting supplies, and the principle that the Isaianic referent
+settles the word's denotation.
+
+Stated first and in full, because the results that follow are about where its
+weight rests and are worth nothing against a weakened rival. -/
+def wegnerLexical : ArgumentPackage Claim :=
+  { name := "Wegner's grammatical objection: the עַלְמָה is already pregnant"
+  , cite := cite
+  , premises := caseOf [wegnerLine] [] wegnerClosingSteps
+  , conclusion := notP .almahMeansVirgin
+  , conclusionLabel := "עַלְמָה at Isaiah 7:14 does not denote a virgin" }
+
+/-- Wegner's line with the ordinary pregnancy no longer granted. It is the one
+ground that goes; the parse, the near-term setting and the referent principle
+all stay. -/
+def wegnerWithoutTheOrdinaryPregnancy : Line Claim :=
+  wegnerLine.onGrounds
+    [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
+    , p .oneReferentSettlesDenotation ]
+
+/-- The same objection with the ordinary pregnancy derived instead of assumed —
+derived as Wegner derives it, from the reading of the sign, which is not
+granted either. -/
+def wegnerWithoutOrdinaryPregnancy : ArgumentPackage Claim :=
+  { wegnerLexical with
+    name := "Wegner's objection, with the ordinary pregnancy no longer assumed"
+    premises :=
+      caseOf [wegnerWithoutTheOrdinaryPregnancy] []
+        (readingSuppliesOrdinaryPregnancy :: wegnerClosingSteps) }
+
+/-- Wegner's line as it stands inside the circle: the ordinary pregnancy gone
+from its grounds, and the demand that עַלְמָה carry the sense — which is what the
+return leg needs — put in. -/
+def wegnerInTheCircle : Line Claim :=
+  wegnerLine.onGrounds
+    [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
+    , p .oneReferentSettlesDenotation, p .lexicalSenseRequiredForFulfilment ]
+
+/-- **Both legs of the circle at once**, with every uncontested datum retained:
+the parse, the near-term setting, the referent principle, and the demand that
+עַלְמָה carry the sense. Asked for the lexical conclusion. -/
+def wegnerCircle : ArgumentPackage Claim :=
+  { wegnerLexical with
+    name := "Wegner's objection with both legs of the circle in place"
+    premises :=
+      caseOf [wegnerInTheCircle] []
+        (readingSuppliesOrdinaryPregnancy ::
+          lexicalConclusionTellsAgainstPrediction :: wegnerClosingSteps) }
+
+/-- The same circle, asked for its other end: the denial of the predictive
+reading, which is what the lexical conclusion was wanted for. -/
+def wegnerCircleForTheDenial : ArgumentPackage Claim :=
+  { wegnerCircle with
+    name := "The same circle, asked for the denial of the predictive reading"
+    conclusion := notP .isaiahPredictsVirginBirth
+    conclusionLabel := "Isaiah 7:14 is not a prediction of a virgin birth" }
+
+/-- Wegner's line with Postell's usage datum in place of the referent
+principle. The parse and the ordinary pregnancy both stay: this reply concedes
+the referent and contests only what may be inferred from it. -/
+def wegnerUnderParity : Line Claim :=
+  wegnerLine.onGrounds
+    [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
+    , p .pregnancyAtTheSignIsOrdinary, p .otherClearAlmahCasesAreVirgins ]
+
+/-- Wegner's objection with Postell's usage parity in play. -/
+def wegnerUnderUsageParity : ArgumentPackage Claim :=
+  { wegnerLexical with
+    name := "Wegner's objection, with the usage parity reply in play"
+    premises :=
+      caseOf [wegnerUnderParity] []
+        (usageParityBlocksReferentInference :: wegnerClosingSteps) }
 
 /-- The lexical objection with its versional support, stated as its holder
 would state it. -/

@@ -57,6 +57,25 @@ inductive Claim
   /-- The split among the ancient versions shows עַלְמָה does not denote
   virginity. The critical inference from the versions. -/
   | versionalDivergenceRefutesVirginSense
+  /-- הָרָה at Isaiah 7:14 is a predicate adjective, so the clause reads "the
+  עַלְמָה *is* pregnant". **Wegner's grammatical premise**, and not the contested
+  step: Rydelnik parses it the same way. -/
+  | harahIsPredicateAdjective
+  /-- The עַלְמָה of Isaiah 7:14 is already pregnant at the moment the sign is
+  given. -/
+  | isaianicAlmahIsAlreadyPregnant
+  /-- The pregnancy the sign announces is an ordinary conception. **The step
+  the parse does not supply**, and the one Rydelnik denies. -/
+  | pregnancyAtTheSignIsOrdinary
+  /-- The עַלְמָה of Isaiah 7:14 is not a virgin. Wegner's conclusion about the
+  referent, and his ground for the lexical conclusion. -/
+  | isaianicAlmahIsNotAVirgin
+  /-- What the עַלְמָה of Isaiah 7:14 turns out to be settles what עַלְמָה denotes.
+  **Wegner's method**, and the principle Rico and Gentry reject. -/
+  | oneReferentSettlesDenotation
+  /-- In the other clear עַלְמָה passages Wegner lists — Genesis 24:43 and Song
+  6:8 — the women are virgins. Postell's usage reply. -/
+  | otherClearAlmahCasesAreVirgins
   /-- Matthew 1:23 quotes Isaiah 7:14. -/
   | matthewQuotesIsaiah
   /-- Matthew's quotation intends the virgin conception as fulfilment. -/
@@ -127,7 +146,7 @@ deriving DecidableEq, Repr
 
 /-! ### Recurring sources
 
-Four works carry this argument, and each carries several atoms at the same
+Five works carry this argument, and each carries several atoms at the same
 pinpoint with the same confidence. Written out at every atom, the citation was
 repeated rather than the claim — and a `Source` differing from its neighbour by
 one field is hard to read as deliberate.
@@ -170,6 +189,18 @@ the interpretive principle come from different pages and carry different
 confidence. -/
 def postellOnIsaiah (l : Locus) (confidence : Confidence) : Source :=
   { primary := .work postellIsaiahMessianic l
+  , tradition := .christianHistoricalGrammatical
+  , confidence := confidence }
+
+/-- Wegner on the sense of עַלְמָה, at a given pinpoint.
+
+Like `postellOnIsaiah`, the pinpoint carries weight: the grammatical claim is
+at 471 and the near-term reconstruction that makes its conclusion bite is at
+476–478, and they are not equally secure. Wegner is an evangelical arguing
+*against* a virgin-birth prediction here, which is what makes him the module's
+strongest lexical rival rather than one more critical voice. -/
+def wegnerOnAlmah (l : Locus) (confidence : Confidence) : Source :=
+  { primary := .work wegnerVirginBirths l
   , tradition := .christianHistoricalGrammatical
   , confidence := confidence }
 
