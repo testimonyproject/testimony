@@ -105,6 +105,28 @@ inductive Claim
   /-- A development is authenticated by the authority of the developing body.
   Newman's answer to what licenses a development. -/
   | developmentIsAuthenticatedByTheChurch
+  /-- The creedal consensus rests on the clarity of scripture. The first leg of
+  Geisler's circle. -/
+  | creedalConsensusRestsOnPerspicuity
+  /-- Scripture's clear sense is not obtainable without the creedal consensus.
+  The second leg, and the one every reply below denies. -/
+  | perspicuityRequiresCreedalConsensus
+  /-- Tradition I's reasoning is circular. Geisler's charge. -/
+  | traditionIReasoningIsCircular
+  /-- The circularity defeats Tradition I. -/
+  | circularityDefeatsTraditionI
+  /-- Any appeal to an ultimate authority is circular, there being no higher
+  authority to appeal to. Barrett's parity reply. -/
+  | everyUltimateAuthorityIsCircular
+  /-- The creedal consensus is established by and accountable to scripture — a
+  product of reading it rather than a precondition of it. Allen and Swain. -/
+  | creedalConsensusIsDerivedFromScripture
+  /-- Scripture itself bounds the interpretive office: elders are commended to
+  the word, required to hold to it, and forbidden to domineer. **Proposed.** -/
+  | scriptureBoundsTheInterpretiveOffice
+  /-- Perspicuity is claimed only for what is necessary for salvation, not for
+  all of scripture alike. Westminster I.7. -/
+  | perspicuityIsLimitedToSalvationEssentials
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaScriptura

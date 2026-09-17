@@ -8,7 +8,7 @@ this project forbids `native_decide`; these rules do.
 Source-level and sub-second, so it can run on every file write rather than only
 in CI.
 
-Rules L1-L8 are about Lean files. L9 is about the prose: a documentation page
+Rules L1-L8 and L10 are about Lean files. L9 is about the prose: a documentation page
 naming a theorem the library no longer has is drift of exactly the kind this
 project exists to rule out, and it has happened. It runs only over the whole
 library, because deciding that a name does not exist means having read every
@@ -94,7 +94,20 @@ RULE_TEXT = {
     "L7": "citation keys must match ^[a-z0-9]+(-[a-z0-9]+)*$",
     "L8": f"no trailing whitespace; lines at most {MAX_LINE} columns",
     "L9": "documentation names a Lean result that does not exist",
+    "L10": "every @[proposed] result must say what is novel about it",
 }
+
+
+# Attributes are matched inside a bracket list, because a declaration may carry
+# more than one: `@[headline, proposed]` is not caught by a plain substring test
+# for `@[headline]`, and a result that slipped past L6 that way would be exactly
+# the silent gap these rules exist to close.
+HEADLINE_ATTR_RE = re.compile(r"@\[[^\]]*\bheadline\b[^\]]*\]")
+PROPOSED_ATTR_RE = re.compile(r"@\[[^\]]*\bproposed\b[^\]]*\]")
+
+# What an @[proposed] docstring has to contain. The phrase is fixed so the rule
+# is mechanical: a contribution is welcome, but it must say what it is adding.
+NOVELTY_PHRASE = "What is novel"
 
 
 @dataclass(frozen=True)
@@ -196,7 +209,7 @@ def lint_text(path: str, text: str) -> list[Finding]:
 
     # L6: headline results must display their trust base.
     for n, line in enumerate(code, 1):
-        if "@[headline]" not in line:
+        if not HEADLINE_ATTR_RE.search(line):
             continue
         name = None
         for follow in code[n - 1:]:
@@ -207,7 +220,40 @@ def lint_text(path: str, text: str) -> list[Finding]:
         if name and not re.search(rf"#print\s+axioms\s+{re.escape(name)}\b", text):
             add("L6", n, name or "?")
 
+    # L10: a proposed result must state what it is contributing.
+    for n, line in enumerate(code, 1):
+        if not PROPOSED_ATTR_RE.search(line):
+            continue
+        doc = _doc_comment_above(lines, n)
+        if NOVELTY_PHRASE not in doc:
+            name = None
+            for follow in code[n - 1:]:
+                m = re.search(r"\b(?:theorem|lemma|def)\s+(\w+)", follow)
+                if m:
+                    name = m.group(1)
+                    break
+            add("L10", n, f'{name or "?"} — docstring must contain "{NOVELTY_PHRASE}"')
+
     return sorted(findings, key=lambda f: (f.line, f.rule))
+
+
+def _doc_comment_above(lines: list[str], lineno: int) -> str:
+    """The doc comment immediately above a 1-indexed line, or "".
+
+    Reads the raw lines rather than the stripped ones, because the docstring is
+    exactly what `_strip_comments` removes.
+    """
+    i = lineno - 2  # 0-indexed line above the attribute
+    while i >= 0 and not lines[i].strip():
+        i -= 1
+    if i < 0 or "-/" not in lines[i]:
+        return ""
+    end = i
+    while i >= 0 and "/--" not in lines[i]:
+        i -= 1
+    if i < 0:
+        return ""
+    return "\n".join(lines[i:end + 1])
 
 
 def argument_unit(path: str) -> str | None:

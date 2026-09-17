@@ -6,9 +6,11 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-38 entries, of which 6 carry no stable public identifier.
+40 entries, of which 6 carry no stable public identifier.
 
 - **`na28-2012`** — Barbara Aland, Kurt Aland, Institut für neutestamentliche Textforschung (ed.). *Novum Testamentum Graece*. Stuttgart: Deutsche Bibelgesellschaft. 28th revised edition. Siglum NA28. 2012. ISBN 9781619700321. ISBN is the Hendrickson / German Bible Society printing.
+- **`allen-swain-reformed-catholicity-2015`** — Michael Allen, Scott R. Swain. *Reformed Catholicity: The Promise of Retrieval for Theology and Biblical Interpretation*. Grand Rapids: Baker Academic. 2015. ISBN 9780801049798.
+- **`barrett-gods-word-alone-2016`** — Matthew Barrett. *God's Word Alone: The Authority of Scripture*. Grand Rapids: Zondervan. The Five Solas Series. 2016. ISBN 9780310515722.
 - **`bavinck-prolegomena-2003`** — Herman Bavinck. *Reformed Dogmatics: Volume 1: Prolegomena*. Translated by John Vriend. Grand Rapids: Baker Academic. Vol. 1. 2003. ISBN 9780801026553.
 - **`benzmuller-godel-2014`** — Christoph Benzmüller, Bruno Woltzenlogel Paleo. *Automating Gödel's Ontological Proof of God's Existence with Higher-order Automated Theorem Provers*. In *ECAI 2014*. IOS Press. Frontiers in Artificial Intelligence and Applications 263. 2014. [DOI 10.3233/978-1-61499-419-0-93](https://doi.org/10.3233/978-1-61499-419-0-93).
 - **`berry-virgin-birth-2003`** — Everett Berry. *Virgin, Virgin Birth*. In *Holman Illustrated Bible Dictionary*, ed. Chad Brand, Charles Draper, Archie England, Trent C. Butler, 1653–1654. Nashville, TN: Holman Bible Publishers. 2003. ISBN 9780805428360. ISBN is the containing volume's.

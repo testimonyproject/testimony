@@ -119,6 +119,51 @@ class RuleTests(unittest.TestCase):
         text = "@[headline]\ntheorem foo : True := trivial\n\n#print axioms foo\n"
         self.assertNotIn("L6", rules(self.lint(text)))
 
+    def test_L6_headline_in_attribute_list(self):
+        """`@[headline, proposed]` must still be checked for #print axioms.
+
+        A plain substring test for "@[headline]" misses this, which would let a
+        result carrying two attributes skip its trust base silently.
+        """
+        text = "@[headline, proposed]\ntheorem foo : True := trivial\n"
+        self.assertIn("L6", rules(self.lint(text)))
+
+    def test_L6_headline_in_attribute_list_satisfied(self):
+        text = (
+            "@[headline, proposed]\ntheorem foo : True := trivial\n\n"
+            "#print axioms foo\n"
+        )
+        self.assertNotIn("L6", rules(self.lint(text)))
+
+    def test_L10_proposed_without_rationale(self):
+        text = (
+            "/-- A result with no account of what it adds. -/\n"
+            "@[headline, proposed]\ntheorem foo : True := trivial\n\n"
+            "#print axioms foo\n"
+        )
+        self.assertIn("L10", rules(self.lint(text)))
+
+    def test_L10_proposed_with_rationale(self):
+        text = (
+            "/-- A result that says what it adds.\n\n"
+            "**What is novel here.** Nobody was found arguing this.\n-/\n"
+            "@[headline, proposed]\ntheorem foo : True := trivial\n\n"
+            "#print axioms foo\n"
+        )
+        self.assertNotIn("L10", rules(self.lint(text)))
+
+    def test_L10_proposed_with_no_docstring_at_all(self):
+        text = "@[proposed]\ntheorem foo : True := trivial\n"
+        self.assertIn("L10", rules(self.lint(text)))
+
+    def test_L10_untagged_result_is_not_asked_for_a_rationale(self):
+        text = (
+            "/-- An ordinary reported result. -/\n"
+            "@[headline]\ntheorem foo : True := trivial\n\n"
+            "#print axioms foo\n"
+        )
+        self.assertNotIn("L10", rules(self.lint(text)))
+
     def test_L7_bad_citation_key(self):
         self.assertIn("L7", rules(self.lint('  { key := "France_Matthew2007"\n')))
 

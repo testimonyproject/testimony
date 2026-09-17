@@ -143,6 +143,42 @@ def classicalStrandWithoutHinge : ArgumentPackage Claim :=
     [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
     , p .scriptureIsSufficient, p .scriptureIsPerspicuous ]).asPackage cite soleRuleLabel
 
+/-! ### Geisler's charge, and the three replies -/
+
+/-- Geisler's charge, stated as its holder states it. -/
+def geislerCircle : ArgumentPackage Claim :=
+  geislerCircleLine.asPackage cite "Tradition I's reasoning is circular"
+
+/-- The charge pressed home to a defeat. -/
+def circleDefeats : ArgumentPackage Claim :=
+  circleDefeatsLine.asPackage cite "the circularity defeats Tradition I"
+
+/-- The charge with Allen and Swain's accountability reply in play. -/
+def geislerCircleUnderAccountability : ArgumentPackage Claim :=
+  { geislerCircle with
+    name := "Geisler's charge, with the accountability reply in play"
+    premises := circleUnderAccountability.premises }
+
+/-- The charge with the proposed scriptural-bounding reply in play. -/
+def geislerCircleUnderScripturalBounding : ArgumentPackage Claim :=
+  { geislerCircle with
+    name := "Geisler's charge, with the scriptural-bounding reply in play"
+    premises := circleUnderScripturalBounding.premises }
+
+/-- The defeat with Barrett's parity reply in play. -/
+def circleDefeatUnderParity : ArgumentPackage Claim :=
+  { circleDefeats with
+    name := "The circularity defeat, with the parity reply in play"
+    premises := defeatUnderParity.premises }
+
+/-- The same parity grounds, asked to show the circle is not there. -/
+def circleParityReachingForVindication : ArgumentPackage Claim :=
+  { circleDefeats with
+    name := "Barrett's parity reply, asked to clear the charge"
+    premises := defeatUnderParity.premises
+    conclusion := notP .traditionIReasoningIsCircular
+    conclusionLabel := "Tradition I's reasoning is not circular" }
+
 /-! ### Geisler's circle -/
 
 /-- Both legs of the circle Geisler alleges in Tradition I, asked for the

@@ -224,6 +224,78 @@ def regressUnderParity : Line Claim :=
   interpretiveRegressLine.onGrounds
     [p .traditionHasMinisterialAuthority, p .choosingAnAuthorityIsItselfPrivateJudgment]
 
+/-! ### Geisler's charge as an argument, and the replies to it
+
+The cycle results above are a formal fact: a cycle of implications grounds
+neither end. The line below is the *dialectical* fact — Geisler charging
+circularity, and what answers the charge. They are different claims, and both
+are worth having.
+
+Every reply denies the second leg, that scripture's clear sense is unobtainable
+without the consensus. Barrett's is the exception: it concedes the circle and
+denies that circularity is a defect peculiar to Tradition I, which is why
+`circleDefeatsLine` carries the universality claim as a ground of its own. -/
+
+/-- Both legs together make the reasoning circular. -/
+def circleStep : Formula Claim :=
+  .imp (conjOf
+        [ p .creedalConsensusRestsOnPerspicuity
+        , p .perspicuityRequiresCreedalConsensus ])
+       (p .traditionIReasoningIsCircular)
+
+/-- Circularity defeats the position **if** it is not a feature of every appeal
+to an ultimate authority. Geisler's charge needs the second conjunct, and it is
+what Barrett denies. -/
+def circularityDefeats : Formula Claim :=
+  .imp (conjOf
+        [ p .traditionIReasoningIsCircular
+        , notP .everyUltimateAuthorityIsCircular ])
+       (p .circularityDefeatsTraditionI)
+
+/-- **Geisler's circularity charge.** -/
+def geislerCircleLine : Line Claim :=
+  { name := "Geisler's circularity charge against Tradition I"
+  , grounds :=
+      [ p .creedalConsensusRestsOnPerspicuity
+      , p .perspicuityRequiresCreedalConsensus ]
+  , step := circleStep
+  , delivers := p .traditionIReasoningIsCircular }
+
+/-- The charge pressed home: the circularity defeats the position. -/
+def circleDefeatsLine : Line Claim :=
+  { name := "The circularity defeats Tradition I"
+  , grounds :=
+      [ p .traditionIReasoningIsCircular
+      , notP .everyUltimateAuthorityIsCircular ]
+  , step := circularityDefeats
+  , delivers := p .circularityDefeatsTraditionI }
+
+/-- **Allen and Swain's reply.** The consensus is established by and
+accountable to scripture, so it is a product of reading scripture rather than a
+precondition of it. -/
+def circleUnderAccountability : Line Claim :=
+  geislerCircleLine.onGrounds
+    [ p .creedalConsensusRestsOnPerspicuity
+    , p .creedalConsensusIsDerivedFromScripture ]
+
+/-- **The proposed reply.** Scripture itself bounds the interpretive office —
+elders commended to the word (Acts 20:32), required to hold to it (Titus 1:9),
+forbidden to domineer (1 Peter 5:2–3) — so the consensus's own warrant is read
+off scripture, and perspicuity is in any case claimed only for what is
+necessary for salvation. -/
+def circleUnderScripturalBounding : Line Claim :=
+  geislerCircleLine.onGrounds
+    [ p .creedalConsensusRestsOnPerspicuity
+    , p .scriptureBoundsTheInterpretiveOffice
+    , p .perspicuityIsLimitedToSalvationEssentials ]
+
+/-- **Barrett's parity reply.** The circle is conceded; what is denied is that
+it is peculiar to this position. -/
+def defeatUnderParity : Line Claim :=
+  circleDefeatsLine.onGrounds
+    [ p .traditionIReasoningIsCircular
+    , p .everyUltimateAuthorityIsCircular ]
+
 /-! ### Shared grounds and closing steps -/
 
 /-- What the Protestant packages rest on beyond any single line: the prooftexts

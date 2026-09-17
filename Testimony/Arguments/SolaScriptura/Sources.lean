@@ -236,5 +236,64 @@ def cite : Claim → AtomMeta
     { label := "A development is authenticated by the authority of the developing body"
     , kind := .theological
     , source := heldBy newmanDevelopment "ch. 2" .romanCatholic .wellSupported }
+  | .creedalConsensusRestsOnPerspicuity =>
+    { label := "The creedal consensus rests on the clarity of scripture"
+    , kind := .interpretive
+    , source := heldBy mathisonShapeSolaScriptura "279–280" .reformedProtestant }
+  | .perspicuityRequiresCreedalConsensus =>
+    { label := "Scripture's clear sense is not obtainable without the creedal consensus"
+    , kind := .interpretive
+    , source := heldBy mathisonShapeSolaScriptura "275" .reformedProtestant }
+  | .traditionIReasoningIsCircular =>
+    { label := "Tradition I's reasoning is circular"
+    , kind := .interpretive
+    , source := heldBy geislerReviewMathison "122–123" .christianHistoricalGrammatical }
+  | .circularityDefeatsTraditionI =>
+    { label := "The circularity defeats Tradition I"
+    , kind := .theological
+    , source := heldBy geislerReviewMathison "123" .christianHistoricalGrammatical }
+  | .everyUltimateAuthorityIsCircular =>
+    { label :=
+        "Any appeal to an ultimate authority is circular, there being no higher " ++
+        "authority to appeal to"
+    , kind := .theological
+    , source := heldBy barrettGodsWordAlone "ch. 11" .reformedProtestant }
+  | .creedalConsensusIsDerivedFromScripture =>
+    { label :=
+        "The creedal consensus is established by and accountable to scripture — " ++
+        "a product of reading it, not a precondition of it"
+    , kind := .theological
+    , source := heldBy allenSwainReformedCatholicity "ch. 3" .reformedProtestant }
+  | .scriptureBoundsTheInterpretiveOffice =>
+    { label :=
+        "Scripture itself bounds the interpretive office: elders are commended " ++
+        "to the word, required to hold to it, and forbidden to domineer"
+    , kind := .textual
+      -- **Proposed.** The passages are cited, and the claim that they bound the
+      -- office rather than merely describing it is the library's own assembly:
+      -- no source was found advancing these texts as an answer to Geisler.
+    , source :=
+        { primary := .proposal
+            ("Advanced here, not found in the literature as a reply to the " ++
+             "circularity charge. The texts are cited; the use is assembled. " ++
+             "Note it claims only that scripture *bounds* the office, not that " ++
+             "it *confers* it — conferral invites the recognition/conferral " ++
+             "distinction Mathison himself presses against Rome.")
+        , supporting :=
+            [ .scripture
+                [ { ref := .verse ⟨.acts, 20, 32⟩ }
+                , { ref := .verse ⟨.titus, 1, 9⟩ }
+                , { ref := .range ⟨.firstPeter, 5, 2, 5, 3⟩ } ] ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .plausible } }
+  | .perspicuityIsLimitedToSalvationEssentials =>
+    { label :=
+        "Perspicuity is claimed only for what is necessary for salvation, not " ++
+        "for all of scripture alike"
+    , kind := .theological
+    , source :=
+        { primary := .work westminsterConfession (.sectionRef "I.7")
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
 
 end Testimony.Arguments.SolaScriptura

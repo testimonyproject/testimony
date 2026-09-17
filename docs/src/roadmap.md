@@ -10,7 +10,7 @@ fails CI when the committed copy has drifted.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **50 headline results**, listed below in source order.
+**4 arguments**, carrying **55 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### Born in Bethlehem — Micah 5:2
 
@@ -81,6 +81,11 @@ fails CI when the committed copy has drifted.
 | `regress_parity_does_not_establish_difference` | `¬Establishes regressParityReachingForDifference` | **And blocking is all this one does either.** That choosing an authority is private judgement defeats the charge that Tradition I collapses into Tradition 0; it does not show that … |
 | `circle_grounds_neither_consensus` | `¬Establishes traditionICircle` | **Geisler's circularity charge against Tradition I, shown rather than alleged.** The creedal consensus is said to rest on scripture's clarity, and scripture's clear sense is said … |
 | `circle_grounds_neither_perspicuity` | `¬Establishes traditionICircleForPerspicuity` | **And the other end is no better off.** The same two legs, asked for the perspicuity instead of the consensus, fail in the same way and for the same reason. |
+| `geislerCircle_is_valid` | `Establishes geislerCircle` | Geisler's charge is valid on its own grounds: grant that the consensus rests on scripture's clarity and that scripture's clear sense requires the consensus, and the reasoning is … |
+| `accountability_blocks_the_circle` | `¬Establishes geislerCircleUnderAccountability` | **Allen and Swain's reply blocks the charge.** If the creedal consensus is established by and accountable to scripture, it is what reading scripture produces rather than what … |
+| `scripturalBounding_blocks_the_circle` ⚗ | `¬Establishes geislerCircleUnderScripturalBounding` | **The scriptural-bounding reply blocks the charge too, and on scriptural rather than confessional grounds.** **What is novel here.** No source was found advancing these texts as … |
+| `parity_blocks_the_circularity_defeat` | `¬Establishes circleDefeatUnderParity` | **Barrett's parity reply blocks the defeat.** Concede the circle; deny that it is a defect peculiar to this position, since any appeal to an ultimate authority is circular. |
+| `circle_parity_does_not_clear_the_charge` | `¬Establishes circleParityReachingForVindication` | **And blocking is all it does, again.** The parity reply cannot clear the charge, because it grants it: what it denies is that the charge is damaging, not that it is true. |
 
 <!-- END GENERATED: lake exe statusgen -->
 

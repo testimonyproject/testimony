@@ -313,4 +313,129 @@ theorem circle_grounds_neither_perspicuity :
 
 #print axioms circle_grounds_neither_perspicuity
 
+/-! ### Geisler's charge, and the three replies
+
+The cycle results above are a formal fact about a cycle of implications. These
+are about the charge as an argument: whether it goes through, and what answers
+it. Two replies deny its second leg; Barrett's concedes the circle and denies
+that circularity is peculiar to this position. -/
+
+/-- Geisler's charge is valid on its own grounds: grant that the consensus
+rests on scripture's clarity and that scripture's clear sense requires the
+consensus, and the reasoning is circular. -/
+@[headline]
+theorem geislerCircle_is_valid : Establishes geislerCircle := by
+  establish [geislerCircle, geislerCircleLine, circleStep]
+
+#print axioms geislerCircle_is_valid
+
+/-- The reading on which the consensus is a product of scripture rather than a
+precondition of reading it. -/
+def accountabilityReading : Valuation Claim := fun a =>
+  match a with
+  | .perspicuityRequiresCreedalConsensus => False
+  | .traditionIReasoningIsCircular => False
+  | _ => True
+
+/-- **Allen and Swain's reply blocks the charge.** If the creedal consensus is
+established by and accountable to scripture, it is what reading scripture
+produces rather than what reading scripture presupposes, and the second leg
+fails.
+
+What this costs is worth stating: Geisler quotes Mathison saying that it is "to
+the Church that we must turn for the true interpretation of the Scripture" and
+that without the early rule of faith "hermeneutical chaos and anarchy" reigns.
+If that is Tradition I, the reply defends a weaker position than the one
+charged. -/
+@[headline]
+theorem accountability_blocks_the_circle :
+    ¬ Establishes geislerCircleUnderAccountability := by
+  refute_with accountabilityReading [geislerCircleUnderAccountability, geislerCircle,
+    circleUnderAccountability, Line.onGrounds, geislerCircleLine, circleStep]
+
+#print axioms accountability_blocks_the_circle
+
+/-- The reading on which scripture bounds the interpretive office, and
+perspicuity is claimed only for salvation essentials. -/
+def scripturallyBoundedOfficeReading : Valuation Claim := fun a =>
+  match a with
+  | .perspicuityRequiresCreedalConsensus => False
+  | .traditionIReasoningIsCircular => False
+  | _ => True
+
+/-- **The scriptural-bounding reply blocks the charge too, and on scriptural
+rather than confessional grounds.**
+
+**What is novel here.** No source was found advancing these texts as an answer
+to the circularity charge; the passages are cited and the use is assembled in
+this library. Acts 20:32 commends the Ephesian elders to "the word of his
+grace" rather than to their own office; Titus 1:9 constitutes the office by
+holding to "the trustworthy word as taught"; 1 Peter 5:2–3 forbids domineering.
+If scripture bounds the interpretive office, the consensus's own warrant is
+read off scripture, so it cannot be a precondition of reading scripture — and
+Westminster I.7 restricts the perspicuity claim to what is necessary for
+salvation, which is not the set of boundaries the creeds fix.
+
+**What would settle whether it is really new.** Mark Thompson's *A Clear and
+Present Word* treats the church-as-interpreter objection at length and was not
+available here; Vanhoozer's *Biblical Authority after Babel* covers the same
+ground. Either may already make this argument, in which case this result should
+be recited to them and the tag dropped.
+
+**What it deliberately does not claim.** That scripture *confers* the office.
+Conferral invites the recognition/conferral distinction Mathison presses
+against Rome over the canon, and boundedness is all the reply needs. It also
+does not escape the regress: a critic may say the texts are read this way
+because of a tradition. It moves the dispute to far less contested ground; it
+does not leave it. -/
+@[headline, proposed]
+theorem scripturalBounding_blocks_the_circle :
+    ¬ Establishes geislerCircleUnderScripturalBounding := by
+  refute_with scripturallyBoundedOfficeReading [geislerCircleUnderScripturalBounding,
+    geislerCircle, circleUnderScripturalBounding, Line.onGrounds, geislerCircleLine,
+    circleStep]
+
+#print axioms scripturalBounding_blocks_the_circle
+
+/-- The reading on which the circularity is granted and is universal. -/
+def universalCircularityReading : Valuation Claim := fun a =>
+  match a with
+  | .circularityDefeatsTraditionI => False
+  | _ => True
+
+/-- **Barrett's parity reply blocks the defeat.** Concede the circle; deny that
+it is a defect peculiar to this position, since any appeal to an ultimate
+authority is circular.
+
+The sixth instance of one move. Kruger on the canon, Mathison on interpretive
+authority, Athanasius on ὁμοούσιος, Whitaker on unwritten tradition, Geisler
+himself on who may interpret the Old Testament, and now Barrett on perspicuity
+— against Geisler, who deploys it himself elsewhere. -/
+@[headline]
+theorem parity_blocks_the_circularity_defeat :
+    ¬ Establishes circleDefeatUnderParity := by
+  refute_with universalCircularityReading [circleDefeatUnderParity, circleDefeats,
+    defeatUnderParity, Line.onGrounds, circleDefeatsLine, circularityDefeats]
+
+#print axioms parity_blocks_the_circularity_defeat
+
+/-- The reading on which the circle is conceded outright. -/
+def circularityConcededReading : Valuation Claim := fun _ => True
+
+/-- **And blocking is all it does, again.** The parity reply cannot clear the
+charge, because it grants it: what it denies is that the charge is damaging,
+not that it is true. A position defended only by this reply is circular and
+keeping company.
+
+Third time the pairing appears in this module, which is the point — it is a
+property of the move, not of the objection it answers. -/
+@[headline]
+theorem circle_parity_does_not_clear_the_charge :
+    ¬ Establishes circleParityReachingForVindication := by
+  refute_with circularityConcededReading [circleParityReachingForVindication,
+    circleDefeats, defeatUnderParity, Line.onGrounds, circleDefeatsLine,
+    circularityDefeats]
+
+#print axioms circle_parity_does_not_clear_the_charge
+
 end Testimony.Arguments.SolaScriptura
