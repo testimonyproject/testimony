@@ -11,7 +11,7 @@ Four arguments are worked end to end, each with at least one rival package:
 | Sola fide | Reformed establishes; **so does the New Perspective**; Trent does not; **neither lexical premise is load-bearing alone**; the James harmonisation is |
 | Sola scriptura *(seeded)* | Protestant establishes; Catholic/Orthodox does not; self-refutation objection is valid |
 
-Two findings emerged that were not designed for.
+Three findings emerged that were not designed for.
 
 **Redundancy defeats a lexical dispute.** Sola fide runs on two independent
 strands — Paul's ἔργα νόμου and Jesus' σέσωκέν σε at Luke 7:50 — and neither
@@ -32,6 +32,21 @@ without entering it — עַלְמָה need not mean "virgin" for Mary to be one
 purely defensive. The contrast between these arguments is a structural fact
 about them, not a matter of taste, and the library states it in a form either
 side can check.
+
+**A rival's circularity, shown rather than alleged**
+([#13](https://github.com/testimonyproject/testimony/issues/13)). Wegner's
+sharper form of the lexical objection — הָרָה at Isaiah 7:14 is a predicate
+adjective, so the עַלְמָה is *already pregnant* and therefore no virgin — is
+encoded at full strength, and `wegner_establishes` checks that it goes through.
+What the grammar does not supply is that the pregnancy is an *ordinary* one:
+that comes from the near-term reading of the sign, which the lexical conclusion
+was then wanted to support. With both legs in place,
+`circle_grounds_neither_end` and `circle_grounds_neither_denial` show that
+neither end follows, because a cycle of implications is satisfied outright by a
+valuation on which every node in it is false. Postell's charge of circular
+reasoning becomes a checkable result rather than an accusation — and, like
+every result here, a conditional one: deny that the near-term reading needs the
+lexical conclusion and the circle is not there.
 
 A corollary worth noting: because the New Perspective rejects the traditional
 reading of Paul's phrase while still affirming justification by faith, it

@@ -53,9 +53,11 @@ def document : String :=
   package Testimony.Arguments.BornInBethlehem.christian ++
   package Testimony.Arguments.BornInBethlehem.critical ++
   section_ "Born of a virgin (Isaiah 7:14, Genesis 3:15, Micah 5:2--3)"
-    ("Three scriptural strands. No single interpretive hinge carries the " ++
-     "argument; only all three together do. The magisterial strand is kept " ++
-     "separate, because its authority premise is not granted here.") ++
+    ("Four scriptural strands. No single interpretive hinge carries the " ++
+     "argument; only all four together do. The magisterial strand is kept " ++
+     "separate, because its authority premise is not granted here. Wegner's " ++
+     "grammatical objection is given at full strength and then followed back " ++
+     "to the reading that supplies its load-bearing premise.") ++
   package Testimony.Arguments.BornOfAVirgin.christian ++
   package Testimony.Arguments.BornOfAVirgin.critical ++
   package Testimony.Arguments.BornOfAVirgin.semantic ++
@@ -65,6 +67,10 @@ def document : String :=
   package Testimony.Arguments.BornOfAVirgin.criticalDenialUnderParity ++
   package Testimony.Arguments.BornOfAVirgin.catholic ++
   package Testimony.Arguments.BornOfAVirgin.magisterialDenied ++
+  package Testimony.Arguments.BornOfAVirgin.wegnerLexical ++
+  package Testimony.Arguments.BornOfAVirgin.wegnerWithoutOrdinaryPregnancy ++
+  package Testimony.Arguments.BornOfAVirgin.wegnerCircle ++
+  package Testimony.Arguments.BornOfAVirgin.wegnerUnderUsageParity ++
   postamble
 
 /-- Read a file, treating absence as empty so `--check` reports it as stale. -/

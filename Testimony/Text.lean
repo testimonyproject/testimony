@@ -16,7 +16,7 @@ set_option linter.missingDocs false in
 to is a separate question (see `Canon`). -/
 inductive Book
   | genesis | exodus | leviticus | numbers | deuteronomy
-  | psalms | isaiah | jeremiah | ezekiel | daniel
+  | psalms | songOfSongs | isaiah | jeremiah | ezekiel | daniel
   | hosea | micah | zechariah | malachi
   | matthew | mark | luke | john | acts
   | romans | firstCorinthians | secondCorinthians | galatians | ephesians
@@ -113,7 +113,8 @@ wherever a reference is rendered for a human reader. -/
 def Book.abbrev : Book → String
   | .genesis => "Gen" | .exodus => "Exod" | .leviticus => "Lev"
   | .numbers => "Num" | .deuteronomy => "Deut"
-  | .psalms => "Ps" | .isaiah => "Isa" | .jeremiah => "Jer"
+  | .psalms => "Ps" | .songOfSongs => "Song" | .isaiah => "Isa"
+  | .jeremiah => "Jer"
   | .ezekiel => "Ezek" | .daniel => "Dan" | .hosea => "Hos"
   | .micah => "Mic" | .zechariah => "Zech" | .malachi => "Mal"
   | .matthew => "Matt" | .mark => "Mark" | .luke => "Luke" | .john => "John"

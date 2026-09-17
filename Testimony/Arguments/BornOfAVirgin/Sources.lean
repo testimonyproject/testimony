@@ -143,6 +143,71 @@ def cite : Claim → AtomMeta
     , kind := .interpretive
     , source :=
         { brownOnBirth with supporting := [.work chiltonIsaiahTargum .whole] } }
+  | .harahIsPredicateAdjective =>
+    { label := "הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant"
+    , kind := .linguistic
+      -- Deliberately not the contested step, and granted throughout. Wegner
+      -- puts it at "most likely" and cites Williams' grammar §75; Rydelnik
+      -- parses the clause exactly the same way and draws the opposite
+      -- conclusion from it, that the virgin *is* pregnant and the sign is
+      -- therefore as deep as Sheol (Isa 7:11).
+    , source :=
+        { wegnerOnAlmah (.page 471) .wellSupported with
+          supporting := [.work postellIsaiahMessianic (.page 474)] } }
+  | .isaianicAlmahIsAlreadyPregnant =>
+    { label := "The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given"
+    , kind := .interpretive
+      -- Granted on both sides of the dispute over this verse: Wegner reads a
+      -- present pregnancy and so does Rydelnik. What they disagree about is
+      -- what kind of pregnancy it is.
+    , source :=
+        { wegnerOnAlmah (.pages 471 472) .wellSupported with
+          supporting := [.work postellIsaiahMessianic (.page 468)] } }
+  | .pregnancyAtTheSignIsOrdinary =>
+    { label := "The pregnancy Isaiah 7:14 announces is an ordinary conception"
+    , kind := .interpretive
+      -- The hinge of Wegner's objection, and not a lexical claim at all. He
+      -- gets it from the near-term reading of the sign: the child born within
+      -- nine months, everything in the oracle discharged by 701 BC. Rydelnik,
+      -- parsing הָרָה as Wegner does, denies it outright.
+    , source :=
+        { wegnerOnAlmah (.pages 476 478) .disputed with
+          supporting := [.work postellIsaiahMessianic (.page 474)] } }
+  | .isaianicAlmahIsNotAVirgin =>
+    { label := "The עַלְמָה of Isaiah 7:14 is not a virgin"
+    , kind := .interpretive
+      -- Wegner's conclusion about the referent. Postell states the step it
+      -- rests on baldly: "since the עַלְמָה in Isaiah 7:14 is already pregnant,
+      -- she obviously cannot be a virgin" (468).
+    , source :=
+        { wegnerOnAlmah (.pages 471 472) .disputed with
+          supporting := [.work postellIsaiahMessianic (.page 468)] } }
+  | .oneReferentSettlesDenotation =>
+    { label := "What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes"
+    , kind := .linguistic
+      -- Wegner's method: Isaiah 7:14 is used as proof that the word cannot
+      -- mean "virgin". Rico and Gentry deny the principle — "the analysis of
+      -- the Immanuel oracle does not by itself allow one to draw a conclusion
+      -- concerning the meaning of the word" — and hold that the other
+      -- occurrences settle it the other way (quoted at Postell 468 n. 22).
+    , source :=
+        { wegnerOnAlmah (.pages 471 472) .disputed with
+          supporting :=
+            [ .work postellIsaiahMessianic (.page 468)
+            , .work ricoGentryInfantKing (.page 152) ] } }
+  | .otherClearAlmahCasesAreVirgins =>
+    { label := "In the other clear עַלְמָה passages Wegner lists, the women are virgins"
+    , kind := .linguistic
+      -- Postell at 468 n. 22, of the three passages Wegner calls clearest.
+      -- Marked `plausible` rather than `wellSupported` because it is stronger
+      -- than Wegner's own text: Genesis 24:43 is uncontested, but Wegner's
+      -- discussion of Song 6:8 allows that some of the עֲלָמוֹת in the harem
+      -- would not be virgins.
+    , source :=
+        { postellOnIsaiah (.page 468) .plausible with
+          supporting :=
+            [ .work wegnerVirginBirths (.pages 471 472)
+            , .scripture clearAlmahPassages ] } }
   | .matthewQuotesIsaiah =>
     { label := "Matthew 1:23 quotes Isaiah 7:14"
     , kind := .textual

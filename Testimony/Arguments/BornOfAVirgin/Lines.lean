@@ -160,6 +160,72 @@ def toFulfilment : Formula Claim :=
   .imp (conjOf [p .messiahBornOfVirgin, p .maryConceivedAsVirgin])
        (p .jesusSatisfiesCriterion)
 
+/-! #### Wegner's grammatical objection, and the circle Postell finds in it
+
+The sharpest form of the lexical case. Each link is a step of its own, because
+the result worth having is not whether the objection is valid — it is — but
+which link carries its weight, and where that link comes from. -/
+
+/-- Wegner's grammatical step: if הָרָה is a predicate adjective, the עַלְמָה of
+the sign is pregnant already, at the moment the sign is given. -/
+def harahYieldsPresentPregnancy : Formula Claim :=
+  .imp (p .harahIsPredicateAdjective) (p .isaianicAlmahIsAlreadyPregnant)
+
+/-- ... and if that pregnancy is an ordinary conception, the woman it describes
+is not a virgin.
+
+The second conjunct does all the work, and it is not a grammatical claim.
+Rydelnik parses הָרָה exactly as Wegner does and reads the same clause as the
+miracle itself — the virgin *is* pregnant — which is available to him precisely
+because the parse leaves this open. -/
+def ordinaryPregnancyExcludesVirginity : Formula Claim :=
+  .imp (conjOf
+        [ p .isaianicAlmahIsAlreadyPregnant, p .pregnancyAtTheSignIsOrdinary ])
+       (p .isaianicAlmahIsNotAVirgin)
+
+/-- ... and if what the one clear Isaianic referent turns out to be settles what
+the word denotes, the lexical conclusion follows. -/
+def referentYieldsLexicalConclusion : Formula Claim :=
+  .imp (conjOf
+        [ p .isaianicAlmahIsNotAVirgin, p .oneReferentSettlesDenotation ])
+       (notP .almahMeansVirgin)
+
+/-- **Where the ordinary pregnancy comes from.** Not from the grammar: from the
+near-term reading of the sign, which has the child born within nine months and
+the whole oracle discharged by 701 BC.
+
+This is Postell's charge, written as a formula rather than repeated as a
+complaint: "because Wegner rejects the messianic interpretation on
+grammatical-historical grounds, he assumes that עַלְמָה cannot mean 'virgin' in
+Isaiah 7:14" (468 n. 22). -/
+def readingSuppliesOrdinaryPregnancy : Formula Claim :=
+  .imp (conjOf
+        [ p .isaiahIsNearTermSignToAhaz, notP .isaiahPredictsVirginBirth ])
+       (p .pregnancyAtTheSignIsOrdinary)
+
+/-- **The return leg.** The lexical conclusion is then turned against the
+predictive reading, which is what the critical case does with it and what
+`critical` already assumes.
+
+Wegner's own version of this step is weaker — Postell reports it as decreasing
+the likelihood of a virgin-birth prediction without ruling it out (469) — and
+the encoding states the strong form on purpose. The strong form is the one on
+which the two legs make a closed circle, and stating it is what lets
+`circle_grounds_neither_end` be checked rather than asserted. On the weaker
+form the loop is evidential rather than deductive, which is the difference
+between a vicious circle and mutual support. -/
+def lexicalConclusionTellsAgainstPrediction : Formula Claim :=
+  .imp (conjOf
+        [ notP .almahMeansVirgin, p .lexicalSenseRequiredForFulfilment ])
+       (notP .isaiahPredictsVirginBirth)
+
+/-- **Postell's usage parity.** If a single clear referent settled the
+denotation, the other clear עַלְמָה passages would settle it in the opposite
+direction, since the women there are virgins. So that principle is not
+available to the objection: it proves too much, and the wrong way. -/
+def usageParityBlocksReferentInference : Formula Claim :=
+  .imp (p .otherClearAlmahCasesAreVirgins) (notP .oneReferentSettlesDenotation)
+
 /-! ### The lines of reason
 
 Four strands converge on the criterion, and each is a `Line`: its own grounds,
@@ -259,6 +325,34 @@ def versionalLine : Line Claim :=
       , p .lexicalSenseRequiredForFulfilment ]
   , step := versionalObjection
   , delivers := notP .almahMeansVirgin }
+
+/-- **The Wegner line.** The predicate-adjective parse, the near-term setting
+of the sign, the ordinary pregnancy that setting supplies, and the principle
+that the Isaianic referent settles the word's denotation — delivering that the
+עַלְמָה of the sign is pregnant when it is given.
+
+The line stops at the pregnancy and the two further moves are closing steps,
+because that is where the argument actually divides: the parse is common
+ground, and everything contestable happens after it.
+
+`lexicalSenseRequiredForFulfilment` is not among its grounds and is not
+Wegner's view. He holds a prophetic pattern, on which Matthew's use of the
+verse survives the lexical finding, so the objection stops at the lexical
+conclusion rather than running on to the fulfilment claim. -/
+def wegnerLine : Line Claim :=
+  { name := "Wegner's grammatical objection (Isaiah 7:14)"
+  , grounds :=
+      [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
+      , p .pregnancyAtTheSignIsOrdinary, p .oneReferentSettlesDenotation ]
+  , step := harahYieldsPresentPregnancy
+  , delivers := p .isaianicAlmahIsAlreadyPregnant }
+
+/-- The two steps that carry Wegner's line to its lexical conclusion: the
+pregnancy excludes virginity, and the referent settles the word. Passed to
+`caseOf` as closing steps, so that a variant can change the grounds without
+retyping them. -/
+def wegnerClosingSteps : List (Formula Claim) :=
+  [ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
 
 /-- **The critical line**: the sign was given to Ahaz, and such a sign is not
 also a prediction of a virgin conception, so the predictive reading is denied.
