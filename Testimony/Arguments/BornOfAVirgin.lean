@@ -48,8 +48,8 @@ that Matthew's claim therefore never required the sense the objection demands.
 
 That reply has a price, and `compatibility_does_not_establish_criterion` names
 it: the argument is purely defensive. It defeats the objection without
-delivering the criterion, which still has to come from one of the three
-prophetic strands. What it buys is that *losing* the lexical dispute no longer
+delivering the criterion, which still has to come from one of the four
+scriptural strands. What it buys is that *losing* the lexical dispute no longer
 costs the fulfilment claim.
 
 **The versional evidence is encoded in full, including the half that tells
@@ -139,9 +139,9 @@ evidential — we do not know how the sign was fulfilled in Ahaz's day. Postell'
 is structural — the near-term setting was never the right kind of reason.
 
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
-hinge carries the argument any more — strip *almah* and the other two strands
+hinge carries the argument any more — strip *almah* and the other three strands
 still deliver the criterion, which `almah_not_load_bearing` records. Strip all
-three and the argument collapses. `almah_is_load_bearing_alone` keeps the
+four and the argument collapses. `almah_is_load_bearing_alone` keeps the
 pre-Miravalle finding on the books: within the Isaianic strand taken by itself,
 the lexical premise still carries everything.
 
@@ -151,7 +151,7 @@ a Roman Catholic premise; this library's author does not grant that magisterial
 teaching settles doctrinal questions, and the encoding says so rather than
 quietly folding it in. `catholic` is the package for a reader who does grant it.
 `magisterial_authority_is_load_bearing` shows what follows for a reader who does
-not: that route yields nothing on its own, and the three scriptural strands have
+not: that route yields nothing on its own, and the four scriptural strands have
 to carry the argument by themselves. The rival is cited to Westminster I.x.
 
 Matthew's and Luke's birth narratives agree on the virgin conception while

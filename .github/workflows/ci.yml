@@ -58,6 +58,7 @@ jobs:
         run: |
           lake exe bibgen --check
           lake exe argtex --check
+          lake exe statusgen --check
 
   docs:
     needs: image

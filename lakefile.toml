@@ -26,3 +26,8 @@ supportInterpreter = true
 name = "argtex"
 root = "Testimony.Tools.Argtex"
 supportInterpreter = true
+
+[[lean_exe]]
+name = "statusgen"
+root = "Testimony.Tools.Statusgen"
+supportInterpreter = true

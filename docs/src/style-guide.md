@@ -15,8 +15,8 @@ Run them in this order. Each catches what the previous one cannot.
 | 3 | `lake exe axiom-audit` | `sorry`, `native_decide`, undeclared axioms |
 | 4 | `python3 scripts/testimony_lint.py` | The project-specific rules below |
 
-Plus `lake exe bibgen --check` and `lake exe argtex --check` for
-generated-file drift.
+Plus `lake exe bibgen --check`, `lake exe argtex --check` and
+`lake exe statusgen --check` for generated-file drift.
 
 **`lake build` passing is not "it builds".** Three further gates exist, and
 tier 3 in particular catches things nothing else will — a `decide` proof that
@@ -142,8 +142,43 @@ linter.
 | L6 | Every `@[headline]` theorem is followed by `#print axioms` |
 | L7 | Citation keys match `^[a-z0-9]+(-[a-z0-9]+)*$` |
 | L8 | No trailing whitespace; lines at most 100 columns |
+| L9 | No documentation page names a Lean result that does not exist |
 
 Run its own tests with `python3 scripts/test_testimony_lint.py`.
+
+## Documentation moves with the argument
+
+A change under `Testimony/Arguments/` is not finished when it compiles. The
+pages that carry results — `README.md`, [Introduction](./introduction.md),
+[Encoding arguments](./logic.md), [Rationale](./rationale.md), [Scope and
+limits](./scope-and-limits.md), [Roadmap](./roadmap.md) — and the module
+docstring of the argument itself state what the library claims, and a page
+asserting the opposite of a proven theorem is the failure this project exists
+to rule out. It has happened: the roadmap spent two commits saying the
+virgin-birth argument was single-stranded and that its lexical premise was
+load-bearing, after the theorem saying so had been replaced.
+
+Two mechanisms hold the line, and between them they cover different halves of
+the problem.
+
+**What can be generated is generated.** The roadmap's status table is emitted
+from the `@[headline]` results by `lake exe statusgen`, the way `bibgen` emits
+the bibliography and `argtex` the rendered arguments. Rename a theorem, restate
+it, delete it, or add one, and the table moves on the next run;
+`lake exe statusgen --check` fails CI if the committed copy has not. The block
+between the two `<!-- ... statusgen -->` markers in `docs/src/roadmap.md` is
+generated: do not edit it by hand.
+
+**What cannot be generated is checked.** Prose about *why* an argument matters
+is not derivable from theorem statements, so it stays hand-written. Rule L9
+then reads every result name the prose cites, in backticks or declared in a
+Lean code block, and fails if the library no longer declares it. That is the
+specific way the roadmap went wrong, and it is now a linter finding rather than
+a matter of someone happening to reread the page.
+
+What is left over is judgement: whether a paragraph's *description* of a result
+still describes it. Say what the encoding now does, in the same commit that
+changes it.
 
 ## `@[headline]`
 

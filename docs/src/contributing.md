@@ -24,9 +24,11 @@ writing any code.
 
 - Type design, proofs, tactics. The theological content can be treated as
   opaque data; the engineering problems stand on their own.
-- Tooling: `bibgen`, the domain linter, doc generation, CI.
-- The logic layer: the decidability adapter and its bridge theorems are the
-  most interesting code in the repository.
+- Tooling: `bibgen`, `argtex`, `statusgen`, the domain linter, doc generation,
+  CI.
+- The logic layer: lines of reason, the countermodel bridge and the
+  `establish`/`refute_with` tactics are the most interesting code in the
+  repository.
 
 ## Ground rules
 
@@ -72,10 +74,20 @@ lake lint                                 # tier 2
 lake exe axiom-audit                      # tier 3
 python3 scripts/testimony_lint.py         # tier 4
 lake exe bibgen --check                   # generated files current
+lake exe argtex --check
+lake exe statusgen --check
 ```
 
 All of these run in CI. Small pull requests, one concern each. Discuss
 significant design changes in an issue first.
+
+If the change touches `Testimony/Arguments/`, it is not finished when it
+compiles: the documentation moves with it. Run `lake exe statusgen` and commit
+the regenerated block in the [roadmap](./roadmap.md), and say what the encoding
+now does on any page that describes it — see [Documentation moves with the
+argument](./style-guide.md#documentation-moves-with-the-argument). Rule L9
+fails the build if a page names a result the library no longer has, which is
+how the roadmap went wrong once already.
 
 See the [style guide](./style-guide.md) for conventions, and
 [Encoding arguments](./logic.md) for how to write a new one.

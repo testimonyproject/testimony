@@ -8,8 +8,9 @@ The shape of every result: *given premise package P, conclusion C follows*.
 
 `Satisfies` was formerly a placeholder (`pkg.premises ≠ []`) because `Premise`
 carried no propositional content. It is now grounded in `Establishes`: a person
-satisfies a criterion when there exists a cited argument package, valid by
-truth table, whose conclusion is labelled with that person and criterion.
+satisfies a criterion when there exists a cited argument package whose premises
+entail its conclusion, and whose conclusion is labelled with that person and
+criterion.
 -/
 
 namespace Testimony

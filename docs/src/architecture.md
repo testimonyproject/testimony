@@ -57,5 +57,6 @@ doc-gen4 and axiom-audit. Foundation pins Lean v4.33.1.
 
 Foundation supplies the formula type, the Hilbert systems, the Boolean and
 Kripke semantics, and the metatheory; Testimony reimplements none of it. What
-Testimony adds is a decidability adapter, explained in
-[Encoding arguments](./logic.md).
+Testimony adds is the provenance layer over the formulas, lines of reason, and
+the `establish`/`refute_with` tactics that settle entailment and refutation —
+explained in [Encoding arguments](./logic.md).

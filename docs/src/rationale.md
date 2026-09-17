@@ -38,20 +38,26 @@ manifest is then generated from the premises rather than maintained beside
 them, and cannot drift out of step with the argument it describes.
 
 **Validity becomes mechanical.** Whether the conclusion follows is settled by
-truth table, checked by Lean's kernel. This is the least interesting guarantee
-the library offers, and it is worth having anyway: it means no disagreement
-about an argument is ever a disagreement about whether it is valid.
+a proof term, produced by `tauto` and checked by Lean's kernel; where it does
+not follow, a named countermodel says so. This is the least interesting
+guarantee the library offers, and it is worth having anyway: it means no
+disagreement about an argument is ever a disagreement about whether it is
+valid.
 
 **Disagreement becomes locatable.** This is the real payoff. Encode the
 Reformed reading of justification, encode the New Perspective alongside it, and
 the library will tell you that the two packages differ in exactly one premise —
 whether Paul's ἔργα νόμου means works in general or Jewish covenant boundary
-markers — and that this premise is load-bearing: remove it and the Reformed
-argument collapses while everything else stays.
+markers — and then tell you what that premise is worth. It turns out not to be
+worth the argument: `worksOfLaw_not_load_bearing` holds, because the dominical
+strand at Luke 7:50 carries the conclusion without it, and the New Perspective
+package establishes the conclusion too. Only the *disjunction* of the two
+lexical premises is load-bearing.
 
 That result is not Protestant or Catholic. It is a description of the
-disagreement that both sides can accept, and it is the kind of thing prose
-almost never delivers.
+disagreement that both sides can accept — including the part neither side
+expected, that the famous dispute is not where the argument's weight rests —
+and it is the kind of thing prose almost never delivers.
 
 **Circularity becomes visible.** A premise grounded only in Scripture is
 epistemically different from one grounded in scholarship, and the library types
