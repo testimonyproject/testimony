@@ -234,7 +234,12 @@ def variantMarkdown : BibEntry → String
   | .webPage d => mdClause d.site
 
 /-- One entry as a Markdown bibliography line. Entries with no stable public
-identifier are marked, so an unverifiable reference is visibly so. -/
+identifier are marked, so an unverifiable reference is visibly so.
+
+The line opens with an anchor named after the cite key, because a list item
+gets no `id` of its own the way a heading does. It is what the generated
+argument pages link their cite keys to: `bibliography.md#calvin-institutes-1960`
+lands a reader on the entry rather than at the top of a forty-entry page. -/
 def toMarkdown (e : BibEntry) : String :=
   let c := e.core
   let who :=
@@ -257,8 +262,8 @@ def toMarkdown (e : BibEntry) : String :=
   let note := match c.note with
     | some n => " " ++ n
     | none => ""
-  "- **`" ++ c.key ++ "`** — " ++ who ++ "*" ++ title ++ "*." ++ trans
-    ++ variantMarkdown e ++ year ++ ids ++ note
+  "- <a id=\"" ++ c.key ++ "\"></a>**`" ++ c.key ++ "`** — " ++ who
+    ++ "*" ++ title ++ "*." ++ trans ++ variantMarkdown e ++ year ++ ids ++ note
 
 /-- The whole bibliography as a Markdown chapter, sorted by author family
 name. -/
@@ -304,8 +309,10 @@ build rather than silently rewriting `references.bib`. -/
 -- breaks with a misplaced-alignment-tab error.
 #guard ((toBibtex keilDelitzschMinorProphets).splitOn "T. \\& T. Clark").length == 2
 
+-- The anchor is what an argument page's cite key links to; the exact-match
+-- guards below pin it along with the rest of the line.
 #guard toMarkdown motyerIsaiah ==
-  "- **`motyer-isaiah-1993`** — J. Alec Motyer. " ++
+  "- <a id=\"motyer-isaiah-1993\"></a>**`motyer-isaiah-1993`** — J. Alec Motyer. " ++
   "*The Prophecy of Isaiah: An Introduction and Commentary*." ++
   " InterVarsity Press. 1993." ++
   " *(no public identifier)*"
@@ -313,7 +320,8 @@ build rather than silently rewriting `references.bib`. -/
 -- The variant clause is the whole point of `variantMarkdown`: a dictionary
 -- article must keep its dictionary, its editors and its pages.
 #guard toMarkdown berryVirginBirth ==
-  "- **`berry-virgin-birth-2003`** — Everett Berry. *Virgin, Virgin Birth*." ++
+  "- <a id=\"berry-virgin-birth-2003\"></a>**`berry-virgin-birth-2003`** — " ++
+  "Everett Berry. *Virgin, Virgin Birth*." ++
   " In *Holman Illustrated Bible Dictionary*, ed. Chad Brand, Charles Draper," ++
   " Archie England, Trent C. Butler, 1653–1654." ++
   " Nashville, TN: Holman Bible Publishers. 2003." ++

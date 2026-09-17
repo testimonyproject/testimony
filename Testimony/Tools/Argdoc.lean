@@ -242,7 +242,7 @@ def preamble (a : Argument) : String :=
   "is wrong, and regenerating it is the fix.*\n\n" ++
   "Atoms are numbered propositional variables, numbered once for the whole page, so " ++
   "the same variable means the same claim in every position below. " ++
-  "[Reading the logic](./../reading-the-logic.md) is the short version of what the " ++
+  "[Reading the logic](../reading-the-logic.md) is the short version of what the " ++
   "notation means. A result marked ⚗ is one this library constructs rather than " ++
   "reports.\n\n"
 

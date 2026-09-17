@@ -5,7 +5,7 @@
 
 *This page is generated from [`Testimony/Arguments/BornInBethlehem`](https://github.com/testimonyproject/testimony/blob/main/Testimony/Arguments/BornInBethlehem). Every heading and paragraph below is a docstring in those files; every formula is rendered from the encoding they check. If the page and the source disagree, the page is the one that is wrong, and regenerating it is the fix.*
 
-Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](./../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
+Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
 ## Arguments.BornInBethlehem — Phase 1 vertical slice
 
@@ -33,13 +33,13 @@ which runs on four.
 
 | | claim | kind | held | source |
 |---|---|---|---|---|
-| \\(P_{1}\\) | Micah 5:2 is a forward-looking Messianic prediction | interpretive | Christian, typological, well supported | `keil-delitzsch-minor-prophets-1949`, ad loc. Mic 5:2 |
-| \\(P_{2}\\) | Matthew 2:6 quotes Micah 5:2 | textual | critical scholarship, consensus | `na28-2012`, app. Matt 2:6; `ubs5-2014` |
-| \\(P_{3}\\) | Matthew's quotation intends predictive fulfilment | interpretive | Christian, historical-grammatical, well supported | `france-matthew-2007`, ad loc. Matt 2:6 |
+| \\(P_{1}\\) | Micah 5:2 is a forward-looking Messianic prediction | interpretive | Christian, typological, well supported | [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:2 |
+| \\(P_{2}\\) | Matthew 2:6 quotes Micah 5:2 | textual | critical scholarship, consensus | [`na28-2012`](../bibliography.md#na28-2012), app. Matt 2:6; [`ubs5-2014`](../bibliography.md#ubs5-2014) |
+| \\(P_{3}\\) | Matthew's quotation intends predictive fulfilment | interpretive | Christian, historical-grammatical, well supported | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6 |
 | \\(P_{4}\\) | Jesus of Nazareth was born in Bethlehem ※ | historical | Christian, historical-grammatical, disputed | Matt 2:1; Luke 2:4-7 |
-| \\(P_{5}\\) | Micah 5:2 is a near-term oracle about a contemporary Judaean ruler | interpretive | critical scholarship, plausible | `brown-birth-messiah-1993` |
-| \\(P_{6}\\) | The Messiah must be born in Bethlehem | interpretive | Christian, typological, well supported | `keil-delitzsch-minor-prophets-1949`, ad loc. Mic 5:2; `france-matthew-2007`, ad loc. Matt 2:6 |
-| \\(P_{7}\\) | Jesus of Nazareth satisfies the Bethlehem criterion | interpretive | Christian, historical-grammatical, well supported | `france-matthew-2007`, ad loc. Matt 2:6 |
+| \\(P_{5}\\) | Micah 5:2 is a near-term oracle about a contemporary Judaean ruler | interpretive | critical scholarship, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{6}\\) | The Messiah must be born in Bethlehem | interpretive | Christian, typological, well supported | [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:2; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6 |
+| \\(P_{7}\\) | Jesus of Nazareth satisfies the Bethlehem criterion | interpretive | Christian, historical-grammatical, well supported | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6 |
 
 </div>
 

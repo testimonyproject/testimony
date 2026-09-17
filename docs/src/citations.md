@@ -67,7 +67,10 @@ reference resolves.
    ```
 
    Citation keys are `family-shorttitle-year`, lowercase, hyphen-separated.
-   Rule L7 and a compile-time `#guard` both check the format.
+   Rule L7 and a compile-time `#guard` both check the format. The key is also
+   the entry's anchor in the generated bibliography, so it is what every
+   citation on an [argument page](./arguments/sola-scriptura.md) links to —
+   `bibliography.md#moo-romans-2018` lands a reader on the entry.
 
 3. **Cite it** from a `Source`, with a pinpoint:
 
@@ -122,7 +125,8 @@ which is how the library surfaces circularity. See
 `lake exe bibgen` writes two files from the Lean source, both committed:
 
 - `references.bib` — biblatex-flavoured, for Zotero, pandoc and LaTeX
-- `docs/src/bibliography.md` — the bibliography chapter of this book
+- `docs/src/bibliography.md` — the bibliography chapter of this book, each
+  entry carrying an anchor named after its cite key
 
 Neither is edited by hand. `lake exe bibgen --check` verifies they match.
 
