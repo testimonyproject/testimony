@@ -56,10 +56,16 @@ LEAN_SYNTAX_RE = re.compile(
     r"\b(?:syntax|elab|macro|notation)\b[^\n\"]*\"\s*([A-Za-z_][A-Za-z0-9_'!?]*)\s*\""
 )
 
-# A mention worth checking: theorem-shaped, which is what prose restates.
+# A mention worth checking: theorem-shaped, which is what prose restates,
+# optionally qualified by the namespace it lives in — prose cites both
+# `almah_not_load_bearing` and `Testimony.Arguments.BornOfAVirgin.almah_...`.
+# Namespace segments are capitalised, as Lean's are, which is what keeps
+# `testimony_lint.py` and `micah5_2.tex` from looking like qualified names.
 # `lowerCamelCase` definitions are not checked — too many English words in
 # backticks would match, and it is the results that drift.
-DOC_MENTION_RE = re.compile(r"^[a-z][A-Za-z0-9']*(?:_[A-Za-z0-9'!?]+)+$")
+DOC_MENTION_RE = re.compile(
+    r"^(?:[A-Z][A-Za-z0-9_']*\.)*[a-z][A-Za-z0-9']*(?:_[A-Za-z0-9'!?]+)+$"
+)
 INLINE_CODE_RE = re.compile(r"`([^`\n]+)`")
 LEAN_FENCE_RE = re.compile(r"^\s*```lean\b")
 FENCE_RE = re.compile(r"^\s*```")
@@ -270,6 +276,10 @@ def lint_doc(path: str, text: str, declared: set[str]) -> list[Finding]:
     theorem, and named a result that had been replaced. Generated pages cannot
     drift; prose can, and this is the part of it a machine can check — that
     every result a page names is a result the library still has.
+
+    A qualified mention is judged by its last segment as well as whole, since
+    a theorem declared inside a `namespace` block is written unqualified in the
+    source: the rule catches a result that is gone, not a namespace typo.
     """
     return [
         Finding("L9", path, n, RULE_TEXT["L9"] + f" (`{name}`)")

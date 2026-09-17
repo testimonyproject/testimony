@@ -1,7 +1,4 @@
-import Testimony.Arguments.SolaFide
-import Testimony.Arguments.SolaScriptura
-import Testimony.Arguments.BornInBethlehem
-import Testimony.Arguments.BornOfAVirgin
+import Testimony
 
 /-!
 # statusgen — generate the roadmap's status table from the Lean source
@@ -17,6 +14,13 @@ the results this library claims, so the table is every headline theorem in the
 environment, with its statement as Lean states it and the first sentence of its
 docstring. A result that is renamed, restated or deleted moves the table on the
 next run; a result that is added appears without anyone remembering to add it.
+
+That last claim is why this module imports the library root rather than the
+argument modules one by one, as `argtex` does. `argtex` names every package it
+renders, so a module missing from its imports fails to compile; here a missing
+import would simply mean fewer results, silently, and the `#guard` below could
+not see the gap it is meant to catch. Importing `Testimony` makes the table's
+scope the library's own.
 
 ```sh
 lake exe statusgen            # rewrite the generated block in docs/src/roadmap.md
@@ -46,24 +50,24 @@ structure Headline where
   summary : String
   deriving Inhabited, Repr
 
-/-- Namespaces stripped from a pretty-printed statement, so that it reads as
+/-- Namespaces every statement is spelled with, whichever argument it belongs
+to. An argument's own namespace is not listed here — it is taken from the
+declaration, so a new argument needs no entry. -/
+def sharedPrefixes : List String :=
+  [ "Testimony.Logic.", "Testimony.People.", "Testimony.", "Logic.", "People." ]
+
+/-- Strip the namespaces from a pretty-printed statement, so that it reads as
 it does in the source file rather than as the pretty-printer spells it from
-outside the argument's namespace. Both the fully qualified form and the form
-the pretty-printer shortens to inside `Testimony` are listed, longest first. -/
-def strippedPrefixes : List String :=
-  [ "Testimony.Arguments.BornInBethlehem."
-  , "Testimony.Arguments.BornOfAVirgin."
-  , "Testimony.Arguments.SolaFide."
-  , "Testimony.Arguments.SolaScriptura."
-  , "Arguments.BornInBethlehem."
-  , "Arguments.BornOfAVirgin."
-  , "Arguments.SolaFide."
-  , "Arguments.SolaScriptura."
-  , "Testimony.Logic."
-  , "Testimony.People."
-  , "Testimony."
-  , "Logic."
-  , "People." ]
+outside the argument's namespace.
+
+The argument's own namespace comes first and in both forms — fully qualified,
+and as the pretty-printer shortens it inside `Testimony` — because
+`sharedPrefixes` would otherwise eat the `Testimony.` in front of it and leave
+`Arguments.BornOfAVirgin.christian` standing. -/
+def stripNamespaces (ns : Name) (s : String) : String :=
+  let qualified := ns.toString ++ "."
+  let shortened := (qualified.splitOn "Testimony.").getLast!
+  (qualified :: shortened :: sharedPrefixes).foldl (fun acc p => acc.replace p "") s
 
 /-- How much of a docstring's first sentence the table carries. A summary is
 one sentence by construction, but a sentence can be a paragraph long, and a
@@ -125,7 +129,7 @@ elab "derive_headline_table " tableName:ident : command => do
     let stmt ← liftTermElabM do
       let fmt ← Lean.PrettyPrinter.ppExpr info.type
       pure (fmt.pretty (width := 1000))
-    let stripped := strippedPrefixes.foldl (fun s p => s.replace p "") (oneLine stmt)
+    let stripped := stripNamespaces decl.getPrefix (oneLine stmt)
     let doc := (← findDocString? env decl).getD ""
     let mod := match env.getModuleIdxFor? decl with
       | some idx => (env.header.moduleNames[idx.toNat]!).toString
