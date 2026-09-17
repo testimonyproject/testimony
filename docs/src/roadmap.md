@@ -2,14 +2,72 @@
 
 ## Where the library is
 
-Four arguments are worked end to end, each with at least one rival package:
+Every result this library claims is tagged `@[headline]` in the Lean source,
+and the table below is generated from those tags by `lake exe statusgen`. It is
+not a summary someone maintains beside the arguments: rename a theorem, restate
+it, or delete it, and the next run moves the table. `lake exe statusgen --check`
+fails CI when the committed copy has drifted.
 
-| Argument | Result |
-|---|---|
-| Bethlehem (Micah 5:2) | Christian package establishes; critical reading does not; `Satisfies` witness |
-| Virgin birth (Isaiah 7:14, Genesis 3:15, Micah 5:2–3) | Establishes; four strands; **no single interpretive hinge is load-bearing, only all four jointly** |
-| Sola fide | Reformed establishes; **so does the New Perspective**; Trent does not; **neither lexical premise is load-bearing alone**; the James harmonisation is |
-| Sola scriptura *(seeded)* | Protestant establishes; Catholic/Orthodox does not; self-refutation objection is valid |
+<!-- BEGIN GENERATED: lake exe statusgen -->
+
+**4 arguments**, worked end to end and each with at least one rival package, carrying **35 headline results**, listed below in source order.
+
+### Born in Bethlehem — Micah 5:2
+
+| Result | Statement | What it claims |
+|---|---|---|
+| `christian_establishes` | `Establishes christian` | Given the Christian premises, the conclusion follows. |
+| `critical_not_establishes` | `¬Establishes critical` | The critical reading does not establish the conclusion. |
+| `jesus_satisfies_bethlehem` | `Satisfies jesus bornInBethlehem` | End to end: under the Christian package, Jesus satisfies the Bethlehem criterion. |
+
+### Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
+
+| Result | Statement | What it claims |
+|---|---|---|
+| `christian_establishes` | `Establishes christian` | Given the scriptural premises, the conclusion follows. |
+| `catholic_establishes` | `Establishes catholic` | The Roman Catholic package establishes it too, unsurprisingly: it is the scriptural package with a further strand bolted on. |
+| `magisterialOnly_establishes` | `Establishes magisterialOnly` | The magisterial route carries the conclusion on its own, for a reader who grants the authority it claims. |
+| `critical_not_establishes` | `¬Establishes critical` | The critical reading does not establish the conclusion. |
+| `criticalDenial_establishes` | `Establishes criticalDenial` | The critical case for the denial does go through on its own terms. |
+| `berry_blocks_critical_denial` | `¬Establishes criticalDenialUnderBerry` | **Berry's objection blocks the critical denial.** Grant that Isaiah 7:14 was a sign to Ahaz, and grant with Berry that how it was fulfilled in Ahaz's own day is an open question, … |
+| `parity_blocks_critical_denial` | `¬Establishes criticalDenialUnderParity` | **Postell's parity argument blocks the critical denial too**, and by a different route from Berry's. |
+| `magisterial_authority_is_load_bearing` | `¬Establishes magisterialDenied` | **What the magisterial strand is worth to a reader who does not grant the magisterium's authority: nothing.** Deny that premise and the route collapses outright, however firmly … |
+| `almah_not_load_bearing` | `Establishes christianWithoutAlmah` | **The lexical premise no longer carries the argument.** Strip `almah` and the protoevangelium and Michean strands still deliver the criterion. |
+| `almah_is_load_bearing_alone` | `¬Establishes isaianicStrandWithoutAlmah` | Within the Isaianic strand taken alone, the lexical premise is still load-bearing: remove it and that strand yields nothing. |
+| `admissibility_is_not_enough` | `¬Establishes isaianicStrandOnAdmissibility` | **Admissibility is not enough.** Berry's lexical point is defensive — the semantic range of עַלְמָה does not *exclude* the sense "virgin" — and defensive is all it is. |
+| `semantic_establishes` | `Establishes semantic` | **The referential argument goes through.** Granted only what both sides grant about the word — that עַלְמָה denotes a young woman of marriageable age, and that being a virgin does … |
+| `lexicalCritical_establishes` | `Establishes lexicalCritical` | The lexical objection, written down and granted its own premises. |
+| `compatibility_defeats_lexical_objection` | `¬Establishes lexicalCriticalUnderCompatibility` | **The referential reply defeats the lexical objection.** Keep every versional datum — the Targum's עוּלֵימְתָא, the Three's νεᾶνις, the Septuagint's παρθένος, the Peshitta's … |
+| `compatibility_does_not_establish_criterion` | `¬Establishes semanticReachingForCriterion` | **What the referential argument costs.** It is purely defensive. |
+| `wegner_establishes` | `Establishes wegnerLexical` | **Wegner's objection is valid on its own terms.** Grant the predicate-adjective parse, grant that the pregnancy it reports is an ordinary one, and grant that the one clear … |
+| `wegner_needs_ordinary_pregnancy` | `¬Establishes wegnerWithoutOrdinaryPregnancy` | **The grammar is not what carries the objection.** Derive the ordinary pregnancy the way Wegner derives it — from the near-term reading of the sign — rather than granting it, and … |
+| `circle_grounds_neither_end` | `¬Establishes wegnerCircle` | **The circle, shown rather than alleged.** Put both legs in place — the reading supplying the ordinary pregnancy, and the lexical conclusion turned back against the reading — keep … |
+| `circle_grounds_neither_denial` | `¬Establishes wegnerCircleForTheDenial` | **And the other end of it is no better off.** The same premises, asked for the denial of the predictive reading instead of the lexical conclusion, fail in the same way and on the … |
+| `usage_parity_blocks_wegner` | `¬Establishes wegnerUnderUsageParity` | **Postell's second reply, and it is independent of the first.** Concede the parse, concede the ordinary pregnancy, concede that the woman of Isaiah 7:14 is no virgin — and the … |
+| `hinges_jointly_load_bearing` | `¬Establishes christianWithoutAnyHinge` | **The result worth having.** No single hinge carries the argument, but the four of them jointly do: remove all four and the criterion no longer follows, with every textual and … |
+| `jesus_satisfies_virgin_birth` | `Satisfies jesus bornOfAVirgin` | End to end: under the scriptural package, Jesus satisfies the virgin-birth criterion. |
+
+### Sola fide
+
+| Result | Statement | What it claims |
+|---|---|---|
+| `reformed_establishes` | `Establishes reformed` | Given the Reformed premises, the conclusion follows. |
+| `newPerspective_establishes` | `Establishes newPerspective` | **The New Perspective establishes it too.** Dunn and Wright reject the traditional reading of ἔργα νόμου; they do not reject justification by faith. |
+| `tridentine_not_establishes` | `¬Establishes tridentine` | The Tridentine premises do not establish the conclusion — they entail its negation. |
+| `worksOfLaw_not_load_bearing` | `Establishes reformedWithoutWorksOfLaw` | The Pauline lexical premise is **not** load-bearing on its own: strip it and the dominical strand still carries the argument. |
+| `sozo_not_load_bearing` | `Establishes reformedWithoutSozo` | Nor is the dominical lexical premise: strip it and the Pauline strand still carries the argument. |
+| `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEitherLexicalPremise` | **The result worth having.** Neither lexical premise carries the argument alone, but their *disjunction* does: remove both and sola fide no longer follows, with everything else … |
+| `james_harmonisation_is_load_bearing` | `¬Establishes reformedWithoutJamesHarmonisation` | The argument genuinely depends on answering James. |
+
+### Sola scriptura (seeded)
+
+| Result | Statement | What it claims |
+|---|---|---|
+| `protestant_establishes` | `Establishes protestant` | Given the Protestant premises, the conclusion follows. |
+| `traditionAndMagisterium_not_establishes` | `¬Establishes traditionAndMagisterium` | The Catholic/Orthodox premises do not establish sola scriptura — they entail its negation. |
+| `selfRefutation_is_valid` | `Establishes selfRefutation` | The self-refutation objection is valid: granted that only scriptural doctrine binds and that scripture does not teach sola scriptura, sola scriptura fails by its own standard. |
+
+<!-- END GENERATED: lake exe statusgen -->
 
 Three findings emerged that were not designed for.
 
@@ -19,7 +77,7 @@ lexical premise carries the argument alone. Only their disjunction does. An
 opponent must defeat both readings, not either.
 
 **The virgin-birth argument was the weaker one, and stopped being so.** It
-began single-stranded, and `almah_is_load_bearing` recorded that defeating
+began single-stranded, and the library's result then recorded that defeating
 עַלְמָה defeated it outright. Adding the protoevangelium (Genesis 3:15), Michean
 (Micah 5:2–3) and compositional (Isaiah 2–12) strands changed the structure, not
 the Isaianic evidence: `almah_not_load_bearing` now holds, while

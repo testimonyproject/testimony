@@ -131,6 +131,59 @@ class RuleTests(unittest.TestCase):
     def test_L8_long_line(self):
         self.assertIn("L8", rules(self.lint("-- " + "x" * 120 + "\n")))
 
+    def test_L9_documentation_naming_a_removed_result(self):
+        """The incident this rule exists for: a page citing a theorem that was
+        replaced, which stayed wrong until someone happened to reread it."""
+        text = "`almah_is_load_bearing` recorded that defeating the word defeats it.\n"
+        found = L.lint_doc("docs/src/roadmap.md", text, {"almah_not_load_bearing"})
+        self.assertIn("L9", rules(found))
+
+    def test_L9_documentation_naming_a_result_that_exists(self):
+        text = "`almah_not_load_bearing` now holds.\n"
+        found = L.lint_doc("docs/src/roadmap.md", text, {"almah_not_load_bearing"})
+        self.assertNotIn("L9", rules(found))
+
+    def test_L9_reads_declarations_in_lean_blocks(self):
+        """README and the introduction restate theorems as Lean, not in prose."""
+        text = "```lean\ntheorem gone_missing : Establishes reformed\n```\n"
+        found = L.lint_doc("README.md", text, {"reformed_establishes"})
+        self.assertIn("L9", rules(found))
+
+    def test_L9_ignores_other_code_blocks(self):
+        """A shell block or a transcript is not a claim about this library."""
+        text = "```\n'bvtest' depends on axioms: [propext, bvtest._native.bv_decide.ax_1_5]\n```\n"
+        self.assertEqual([], L.lint_doc("docs/src/logic.md", text, set()))
+
+    def test_L9_ignores_prose_that_is_not_a_result_name(self):
+        text = (
+            "Run `python3 scripts/testimony_lint.py`, never `native_decide`, and use\n"
+            "`snake_case` for theorem names and `lowerCamelCase` for definitions.\n"
+        )
+        self.assertEqual([], L.lint_doc("docs/src/style-guide.md", text, set()))
+
+    def test_L9_is_not_a_lean_file_rule(self):
+        """L9 does not fire from `lint_text`; only `lint_doc` decides it."""
+        self.assertNotIn("L9", rules(self.lint("-- `no_such_theorem` in a comment\n")))
+
+    def test_declared_names_sees_more_than_theorems(self):
+        """Prose cites atom constructors, tactics and qualified names too."""
+        names = L.declared_names({
+            "Testimony/Arguments/Foo.lean": "inductive Claim\n  | romans3_28\n",
+            "Testimony/Logic/Tactic.lean": 'syntax "refute_with" ppSpace ident : tactic\n',
+            "Testimony/Logic/Package.lean": "def ArgumentPackage.manifest : List AtomMeta := x\n",
+        })
+        self.assertIn("romans3_28", names)
+        self.assertIn("refute_with", names)
+        self.assertIn("ArgumentPackage.manifest", names)
+        self.assertIn("manifest", names)
+
+    def test_doc_files_excludes_generated_pages(self):
+        """`bibgen` owns the bibliography; L9 does not second-guess it."""
+        found = [str(p) for p in L.doc_files(Path("."))]
+        self.assertIn("README.md", found)
+        self.assertIn("docs/src/roadmap.md", found)
+        self.assertNotIn("docs/src/bibliography.md", found)
+
     def test_clean_file_has_no_findings(self):
         text = "/-- A thing. -/\ndef x : Nat := 1\n"
         self.assertEqual([], self.lint(text))

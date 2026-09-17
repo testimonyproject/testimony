@@ -6,9 +6,10 @@ before the claims, on purpose.
 ## What Lean settles
 
 Exactly one thing: whether a conclusion follows from the premises as encoded.
-Lean's kernel checks that the truth-table computation is correct and that the
-bridge from it to the semantics is proved. Nothing else is verified by the
-machine.
+Where it does, `tauto` produces an ordinary proof term and Lean's kernel checks
+it; where it does not, a named valuation satisfies every premise while
+falsifying the conclusion, and the kernel checks that. Nothing else is verified
+by the machine.
 
 ## What Lean does not settle
 
@@ -23,8 +24,8 @@ can check it, and it is the most common way a formalisation goes wrong. This is
 why encodings need review by people who know the literature, and why a subtly
 wrong formalisation is worse than none.
 
-**Whether the atoms carve the argument correctly.** Choosing eleven atomic
-claims for sola fide is already an interpretive act. A different carving might
+**Whether the atoms carve the argument correctly.** Choosing which atomic
+claims carve sola fide is already an interpretive act. A different carving might
 make a different premise load-bearing. The atoms are visible and arguable, and
 that is the best the method offers.
 

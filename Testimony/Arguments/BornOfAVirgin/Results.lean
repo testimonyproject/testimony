@@ -146,7 +146,7 @@ outright, however firmly the teaching itself is attested.
 
 This is why `christian` excludes it. A reader who holds with Westminster I.x
 that Scripture is the supreme judge of controversies loses the whole of
-`magisterialOnly` and must get the criterion from the three scriptural strands
+`magisterialOnly` and must get the criterion from the four scriptural strands
 or not at all. -/
 @[headline]
 theorem magisterial_authority_is_load_bearing : ¬ Establishes magisterialDenied := by
@@ -417,10 +417,10 @@ theorem usage_parity_blocks_wegner : ¬ Establishes wegnerUnderUsageParity := by
 
 #print axioms usage_parity_blocks_wegner
 
-/-- A reading on which none of the three interpretive hinges holds: *almah*
+/-- A reading on which none of the four interpretive hinges holds: *almah*
 means "young woman", the matrilineal wording of Genesis 3:15 implies nothing
-about a father, and Micah's silence is only silence. Every textual observation
-is granted. -/
+about a father, Micah's silence is only silence, and Isaiah's composition does
+not govern the sense of 7:14. Every textual observation is granted. -/
 def noHingeReading : Valuation Claim := fun a =>
   match a with
   | .almahMeansVirgin => False
@@ -432,7 +432,7 @@ def noHingeReading : Valuation Claim := fun a =>
   | _ => True
 
 /-- **The result worth having.** No single hinge carries the argument, but the
-four of them jointly do: remove all three and the criterion no longer follows,
+four of them jointly do: remove all four and the criterion no longer follows,
 with every textual and historical premise retained.
 
 So the argument no longer hangs on the sense of עַלְמָה alone. It hangs on that

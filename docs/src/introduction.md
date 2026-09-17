@@ -57,8 +57,13 @@ theorem lexical_premises_jointly_load_bearing :
 That last pair is the most useful thing the library does. Sola fide runs on two
 independent strands — Paul's ἔργα νόμου and Jesus' "your faith has saved you"
 at Luke 7:50 — so neither lexical premise carries it alone. An opponent must
-defeat both. The virgin-birth argument, by contrast, has only one strand, and
-defeating עַלְמָה defeats it outright.
+defeat both. The virgin-birth argument began with a single strand, where
+defeating עַלְמָה defeated it outright; it now runs on four, and no single
+interpretive hinge is load-bearing — only all four jointly.
+
+Which argument has which shape is a fact about the encodings rather than a
+matter of emphasis, and the [roadmap](./roadmap.md) lists every result the
+library claims, generated from the Lean source by `lake exe statusgen`.
 
 ## Getting started
 

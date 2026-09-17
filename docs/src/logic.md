@@ -87,6 +87,25 @@ That is sola fide. Premises (12) and (13) both conclude `P₁₂`, one by way of
 argument's redundancy — the reason neither lexical premise is load-bearing — is
 visible on the page before you read a word of the legend.
 
+## Publishing what the library claims
+
+`lake exe statusgen` writes the roadmap's status table from the environment:
+every `@[headline]` declaration, with its statement as Lean states it and the
+first sentence of its docstring, grouped by argument in source order.
+
+```sh
+lake exe statusgen           # rewrite the generated block in docs/src/roadmap.md
+lake exe statusgen --check   # CI: fail if the committed block is stale
+```
+
+Nothing selects the rows. `@[headline]` already marks the results the library
+claims rather than the lemmas supporting them, so the table is the tag's
+contents; an argument whose results change moves the table, and one whose
+namespace is new fails the build until it is given a heading in `sections`.
+The prose around the block is written by hand, because *why* an argument is
+worth making does not follow from its statements — and rule L9 checks that the
+names that prose cites still exist.
+
 ## Lines of reason
 
 An argument is not a heap of premises. It is a small number of *lines of

@@ -8,8 +8,15 @@ this project forbids `native_decide`; these rules do.
 Source-level and sub-second, so it can run on every file write rather than only
 in CI.
 
+Rules L1-L8 are about Lean files. L9 is about the prose: a documentation page
+naming a theorem the library no longer has is drift of exactly the kind this
+project exists to rule out, and it has happened. It runs only over the whole
+library, because deciding that a name does not exist means having read every
+declaration.
+
 Usage:
-    python3 scripts/testimony_lint.py [paths...]     # default: Testimony/
+    python3 scripts/testimony_lint.py            # Testimony/ and the prose docs
+    python3 scripts/testimony_lint.py [paths...] # those files only; no L9
 """
 from __future__ import annotations
 
@@ -24,6 +31,41 @@ WORKS_FILE = "Testimony/Bib/Works.lean"
 ARGUMENTS_DIR = "Testimony/Arguments/"
 CITE_KEY_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 ARGUMENT_PACKAGE_RE = re.compile(r"\bdef\s+(\w+)\s*:\s*ArgumentPackage\b")
+
+# L9. Pages that carry results in prose, plus the two rule files. The
+# generated bibliography is excluded: bibgen owns it, and `--check` guards it.
+DOC_PATHS = (
+    "README.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "docs/src/*.md",
+)
+GENERATED_DOCS = frozenset({"docs/src/bibliography.md"})
+
+# What counts as a declaration in a Lean file. Constructors and structure
+# fields are included: `romans3_28` is an atom constructor, and prose cites it.
+LEAN_DECL_RE = re.compile(
+    r"\b(?:theorem|lemma|def|abbrev|structure|inductive|instance|class|axiom|opaque)"
+    r"\s+([A-Za-z_][A-Za-z0-9_.'!?]*)"
+)
+LEAN_CTOR_RE = re.compile(r"^\s*\|\s*([A-Za-z_][A-Za-z0-9_.'!?]*)", re.M)
+LEAN_FIELD_RE = re.compile(r"^\s{2,}([a-z][A-Za-z0-9_']*)\s*:[^=]", re.M)
+# `syntax "establish" ...`, `elab "derive_bib_registry " name:ident ...`: the
+# tactic and command names prose refers to are string literals, not identifiers.
+LEAN_SYNTAX_RE = re.compile(
+    r"\b(?:syntax|elab|macro|notation)\b[^\n\"]*\"\s*([A-Za-z_][A-Za-z0-9_'!?]*)\s*\""
+)
+
+# A mention worth checking: theorem-shaped, which is what prose restates.
+# `lowerCamelCase` definitions are not checked — too many English words in
+# backticks would match, and it is the results that drift.
+DOC_MENTION_RE = re.compile(r"^[a-z][A-Za-z0-9']*(?:_[A-Za-z0-9'!?]+)+$")
+INLINE_CODE_RE = re.compile(r"`([^`\n]+)`")
+LEAN_FENCE_RE = re.compile(r"^\s*```lean\b")
+FENCE_RE = re.compile(r"^\s*```")
+# Theorem-shaped tokens that name something other than a declaration here:
+# Lean tactics this project forbids, and a naming convention.
+NOT_DECLARATIONS = frozenset({"native_decide", "bv_decide", "snake_case"})
 
 ENTRY_CTORS = (
     "book", "inCollection", "article", "thesis",
@@ -45,6 +87,7 @@ RULE_TEXT = {
     "L6": "every @[headline] theorem must be followed by `#print axioms`",
     "L7": "citation keys must match ^[a-z0-9]+(-[a-z0-9]+)*$",
     "L8": f"no trailing whitespace; lines at most {MAX_LINE} columns",
+    "L9": "documentation names a Lean result that does not exist",
 }
 
 
@@ -175,6 +218,74 @@ def lint_units(files: dict[str, str]) -> list[Finding]:
     return findings
 
 
+def declared_names(texts: dict[str, str]) -> set[str]:
+    """Every name the Lean sources declare, plus the last segment of each.
+
+    `ArgumentPackage.manifest` is declared and cited both ways, so both
+    `ArgumentPackage.manifest` and `manifest` count as existing.
+
+    Comments are stripped first: a docstring recalling a theorem that was
+    deleted must not make the prose citing it look sound.
+    """
+    names: set[str] = set()
+    for text in texts.values():
+        code = "\n".join(_strip_comments(text.splitlines()))
+        for pattern in (LEAN_DECL_RE, LEAN_CTOR_RE, LEAN_FIELD_RE, LEAN_SYNTAX_RE):
+            names.update(pattern.findall(code))
+    return names | {n.rsplit(".", 1)[-1] for n in names}
+
+
+def doc_mentions(text: str) -> list[tuple[int, str]]:
+    """Lean results a documentation page names.
+
+    Two forms carry results: a name in backticks, and a declaration inside a
+    ```lean block — README and the introduction both restate theorems that way.
+    """
+    found: list[tuple[int, str]] = []
+    in_lean_fence = False
+    in_fence = False
+    for n, line in enumerate(text.splitlines(), 1):
+        if FENCE_RE.match(line):
+            if in_fence:
+                in_fence, in_lean_fence = False, False
+            else:
+                in_fence = True
+                in_lean_fence = bool(LEAN_FENCE_RE.match(line))
+            continue
+        if in_lean_fence:
+            found.extend((n, m) for m in LEAN_DECL_RE.findall(line))
+        elif not in_fence:
+            found.extend((n, m.group(1)) for m in INLINE_CODE_RE.finditer(line))
+    return [
+        (n, name)
+        for n, name in found
+        if DOC_MENTION_RE.match(name) and name not in NOT_DECLARATIONS
+    ]
+
+
+def lint_doc(path: str, text: str, declared: set[str]) -> list[Finding]:
+    """L9, which is a rule about prose rather than about Lean.
+
+    The roadmap once spent two commits asserting the opposite of a proven
+    theorem, and named a result that had been replaced. Generated pages cannot
+    drift; prose can, and this is the part of it a machine can check — that
+    every result a page names is a result the library still has.
+    """
+    return [
+        Finding("L9", path, n, RULE_TEXT["L9"] + f" (`{name}`)")
+        for n, name in doc_mentions(text)
+        if name.rsplit(".", 1)[-1] not in declared and name not in declared
+    ]
+
+
+def doc_files(root: Path) -> list[Path]:
+    """The documentation pages L9 reads, in a stable order."""
+    found: list[Path] = []
+    for pattern in DOC_PATHS:
+        found.extend(sorted(root.glob(pattern)))
+    return [p for p in found if _rel(p) not in GENERATED_DOCS]
+
+
 def _rel(p: Path) -> str:
     """A repository-relative POSIX path, as the rules expect to match on."""
     rel = p.as_posix()
@@ -186,6 +297,7 @@ def lint_path(p: Path) -> list[Finding]:
 
 
 def main(argv: list[str]) -> int:
+    whole_library = not argv[1:]
     targets = [Path(a) for a in argv[1:]] or [Path("Testimony")]
     files: list[Path] = []
     for t in targets:
@@ -193,10 +305,19 @@ def main(argv: list[str]) -> int:
     texts = {_rel(p): p.read_text(encoding="utf-8") for p in files}
     findings = [f for path, text in texts.items() for f in lint_text(path, text)]
     findings += lint_units(texts)
+
+    # L9 asks whether a name exists, which only the whole library can answer.
+    docs: list[Path] = []
+    if whole_library:
+        declared = declared_names(texts)
+        docs = doc_files(Path("."))
+        for p in docs:
+            findings += lint_doc(_rel(p), p.read_text(encoding="utf-8"), declared)
+
     findings.sort(key=lambda f: (f.path, f.line, f.rule))
     for f in findings:
         print(f)
-    n = len(files)
+    n = len(files) + len(docs)
     if findings:
         print(f"\ntestimony-lint: {len(findings)} finding(s) in {n} file(s)", file=sys.stderr)
         return 1

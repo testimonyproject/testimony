@@ -34,9 +34,15 @@ A corollary: the New Perspective on Paul, which rejects the traditional reading
 of ἔργα νόμου while still affirming justification by faith, **establishes the
 conclusion too**.
 
-The virgin-birth argument makes the contrast. It has a single strand, so
-defeating עַלְמָה in Isaiah 7:14 defeats it outright — a structural weakness the
-library states plainly rather than glossing.
+The virgin-birth argument used to make the contrast, and no longer does. It
+began single-stranded, so defeating עַלְמָה in Isaiah 7:14 defeated it outright.
+Three further strands — the protoevangelium of Genesis 3:15, Micah 5:2–3, and
+Isaiah's own composition — changed its shape rather than its evidence:
+`almah_not_load_bearing` now holds, while `hinges_jointly_load_bearing` records
+that the four hinges still carry it jointly. The library states the structure
+plainly whichever way it comes out, and the
+[roadmap](docs/src/roadmap.md) lists every result it claims — generated from
+the Lean source, not restated by hand.
 
 ## Documentation
 

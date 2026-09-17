@@ -165,9 +165,9 @@ def motyerOnIsaiah : Source :=
 /-- Miravalle's *Meet Your Mother* at pages 9–10.
 
 Eight atoms and three intertextual edges cite exactly this, which is a fact
-about the argument worth being able to see: **both** non-Isaianic scriptural
-strands rest on one source, in one tradition, at one pinpoint. Every one of
-them is `disputed`. -/
+about the argument worth being able to see: **both** the protoevangelium and
+Michean strands rest on one source, in one tradition, at one pinpoint. Every one
+of them is `disputed`. -/
 def miravalleOnMary : Source :=
   { primary := .work miravalleMeetMary (.pages 9 10)
   , tradition := .romanCatholic
