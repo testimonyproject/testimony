@@ -213,11 +213,12 @@ generated: do not edit it by hand.
 
 The argument pages under `docs/src/arguments/` go further: `lake exe argdoc`
 writes each one whole, from the module docstrings and the declarations of the
-argument's own files. A docstring is therefore documentation in the ordinary
-sense — write it for a reader, because a reader will meet it on the site — and
-there is nothing to keep in step, because there is no second copy. Do not edit
-those pages, or the `<!-- ... argdoc -->` block in `docs/src/SUMMARY.md`, by
-hand.
+argument's own files, and `lake exe argtex` sets the same material for print.
+A docstring is therefore documentation in the ordinary sense — write it for a
+reader, because a reader will meet it on the site and in the PDF — and there is
+nothing to keep in step, because there is no second copy. Do not edit those
+pages, `docs/latex/arguments.tex`, or the `<!-- ... argdoc -->` block in
+`docs/src/SUMMARY.md`, by hand.
 
 **What cannot be generated is checked.** Prose about *why* an argument matters
 is not derivable from theorem statements, so it stays hand-written. Rule L9

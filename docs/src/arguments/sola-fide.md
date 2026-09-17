@@ -675,7 +675,8 @@ sense of Paul's ἔργα νόμου. It hangs on that *or* on the sense of Jesu
 σέσωκέν σε — and an opponent must defeat both.
 
 ```lean
-theorem lexical_premises_jointly_load_bearing : ¬Establishes reformedWithoutEitherLexicalPremise
+theorem lexical_premises_jointly_load_bearing : ¬Establishes
+    reformedWithoutEitherLexicalPremise
 -- axioms: propext, Quot.sound
 ```
 
@@ -704,7 +705,8 @@ An argument for sola fide that does not engage James 2:24 is not merely
 impolite; it is invalid.
 
 ```lean
-theorem james_harmonisation_is_load_bearing : ¬Establishes reformedWithoutJamesHarmonisation
+theorem james_harmonisation_is_load_bearing : ¬Establishes
+    reformedWithoutJamesHarmonisation
 -- axioms: propext, Quot.sound
 ```
 
@@ -775,7 +777,8 @@ The Reformed package minus the Pauline lexical premise has a model, so
 only because its premises could not all be true would be exactly backwards.
 
 ```lean
-theorem reformedWithoutWorksOfLaw_is_satisfiable : Satisfiable reformedWithoutWorksOfLaw.premises
+theorem reformedWithoutWorksOfLaw_is_satisfiable : Satisfiable
+    reformedWithoutWorksOfLaw.premises
 -- axioms: propext, Quot.sound
 ```
 
@@ -785,6 +788,7 @@ theorem reformedWithoutWorksOfLaw_is_satisfiable : Satisfiable reformedWithoutWo
 And the same minus the dominical lexical premise.
 
 ```lean
-theorem reformedWithoutSozo_is_satisfiable : Satisfiable reformedWithoutSozo.premises
+theorem reformedWithoutSozo_is_satisfiable : Satisfiable
+    reformedWithoutSozo.premises
 -- axioms: propext, Quot.sound
 ```

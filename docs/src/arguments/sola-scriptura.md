@@ -1417,7 +1417,8 @@ self-refutation objection.
 eliminative line still delivers the sole rule.
 
 ```lean
-theorem hinge_not_load_bearing_for_conclusion : Establishes protestantWithoutHinge
+theorem hinge_not_load_bearing_for_conclusion : Establishes
+    protestantWithoutHinge
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -1443,7 +1444,8 @@ Within the classical strand taken alone the hinge is still load-bearing:
 remove it and that strand yields nothing.
 
 ```lean
-theorem hinge_is_load_bearing_within_classical_strand : ¬Establishes classicalStrandWithoutHinge
+theorem hinge_is_load_bearing_within_classical_strand : ¬Establishes
+    classicalStrandWithoutHinge
 -- axioms: propext, Quot.sound
 ```
 
@@ -1471,7 +1473,8 @@ def scriptureTeachesItReading : Valuation Claim :=
 the principle and the objection no longer delivers its denial.
 
 ```lean
-theorem classical_answer_blocks_self_refutation : ¬Establishes selfRefutationAnswered
+theorem classical_answer_blocks_self_refutation : ¬Establishes
+    selfRefutationAnswered
 -- axioms: propext, Quot.sound
 ```
 
@@ -1565,7 +1568,8 @@ rather than for the block, deliver nothing. The parity reply is purely
 defensive: it neutralises the objection without establishing the position.
 
 ```lean
-theorem canon_parity_does_not_establish_sole_rule : ¬Establishes canonParityReachingForSoleRule
+theorem canon_parity_does_not_establish_sole_rule : ¬Establishes
+    canonParityReachingForSoleRule
 -- axioms: propext, Quot.sound
 ```
 
@@ -1592,7 +1596,8 @@ def mathisonParityReading : Valuation Claim :=
 **The parity reply blocks the interpretive-authority regress.**
 
 ```lean
-theorem parity_blocks_interpretive_regress : ¬Establishes interpretiveRegressUnderParity
+theorem parity_blocks_interpretive_regress : ¬Establishes
+    interpretiveRegressUnderParity
 -- axioms: propext, Quot.sound
 ```
 
@@ -1621,7 +1626,8 @@ private judgement defeats the charge that Tradition I collapses into Tradition
 shape, twice, against two different objections.
 
 ```lean
-theorem regress_parity_does_not_establish_difference : ¬Establishes regressParityReachingForDifference
+theorem regress_parity_does_not_establish_difference : ¬Establishes
+    regressParityReachingForDifference
 -- axioms: propext, Quot.sound
 ```
 
@@ -1672,7 +1678,8 @@ perspicuity instead of the consensus, fail in the same way and for the same
 reason.
 
 ```lean
-theorem circle_grounds_neither_perspicuity : ¬Establishes traditionICircleForPerspicuity
+theorem circle_grounds_neither_perspicuity : ¬Establishes
+    traditionICircleForPerspicuity
 -- axioms: propext, Quot.sound
 ```
 
@@ -1725,7 +1732,8 @@ If that is Tradition I, the reply defends a weaker position than the one
 charged.
 
 ```lean
-theorem accountability_blocks_the_circle : ¬Establishes geislerCircleUnderAccountability
+theorem accountability_blocks_the_circle : ¬Establishes
+    geislerCircleUnderAccountability
 -- axioms: propext, Quot.sound
 ```
 
@@ -1774,7 +1782,8 @@ because of a tradition. It moves the dispute to far less contested ground; it
 does not leave it.
 
 ```lean
-theorem scripturalBounding_blocks_the_circle : ¬Establishes geislerCircleUnderScripturalBounding
+theorem scripturalBounding_blocks_the_circle : ¬Establishes
+    geislerCircleUnderScripturalBounding
 -- axioms: propext, Quot.sound
 ```
 
@@ -1804,7 +1813,8 @@ himself on who may interpret the Old Testament, and now Barrett on perspicuity
 — against Geisler, who deploys it himself elsewhere.
 
 ```lean
-theorem parity_blocks_the_circularity_defeat : ¬Establishes circleDefeatUnderParity
+theorem parity_blocks_the_circularity_defeat : ¬Establishes
+    circleDefeatUnderParity
 -- axioms: propext, Quot.sound
 ```
 
@@ -1830,7 +1840,8 @@ Third time the pairing appears in this module, which is the point — it is a
 property of the move, not of the objection it answers.
 
 ```lean
-theorem circle_parity_does_not_clear_the_charge : ¬Establishes circleParityReachingForVindication
+theorem circle_parity_does_not_clear_the_charge : ¬Establishes
+    circleParityReachingForVindication
 -- axioms: propext, Quot.sound
 ```
 
@@ -1890,7 +1901,8 @@ since a load-bearing result that held only because its premises were
 contradictory would be precisely backwards.
 
 ```lean
-theorem protestantWithoutHinge_is_satisfiable : Satisfiable protestantWithoutHinge.premises
+theorem protestantWithoutHinge_is_satisfiable : Satisfiable
+    protestantWithoutHinge.premises
 -- axioms: propext, Quot.sound
 ```
 
@@ -1975,6 +1987,7 @@ def interpretiveRegressOwnReading : Valuation Claim :=
 The interpretive-authority regress has a model.
 
 ```lean
-theorem interpretiveRegress_is_satisfiable : Satisfiable interpretiveRegress.premises
+theorem interpretiveRegress_is_satisfiable : Satisfiable
+    interpretiveRegress.premises
 -- axioms: propext, Quot.sound
 ```

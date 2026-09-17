@@ -31,8 +31,9 @@ boundary visible at all times.
 | `Testimony.Logic` | Formula type, entailment and countermodels, `ArgumentPackage`, manifests, `Line` lines of reason, the `establish`/`refute_with` tactics |
 | `Testimony.Argument` | `FulfillmentCriterion`, `MessiahDefinition`, `Satisfies`, `MeetsDefinition` |
 | `Testimony.Arguments.*` | The worked arguments. A large one is a directory — `Atoms`, `Sources`, `Lines`, `Packages`, `Results` |
-| `Testimony.Logic.Latex`, `Testimony.Logic.Markdown` | The two renderings of a package: traditional notation for print, and the same notation for the browser |
-| `Testimony.Tools.*` | The generators — `Bibgen`, `Argtex`, `Statusgen`, `Argdoc` — over `Docs`, the catalogue they share |
+| `Testimony.Logic.Page` | `Item` — what a generated page is made of, before either rendering |
+| `Testimony.Logic.Latex`, `Testimony.Logic.Markdown` | The two renderings of it: traditional notation for print, and the same notation for the browser |
+| `Testimony.Tools.*` | The generators — `Bibgen`, `Argtex`, `Statusgen`, `Argdoc` — over `Docs`, the catalogue they share, and `Pages`, the harvest the two document generators read |
 
 ## Two structural enforcements
 
@@ -59,22 +60,27 @@ fails the build rather than misleading a reader.
 | Tool | Writes | From |
 |---|---|---|
 | `bibgen` | `references.bib`, `docs/src/bibliography.md` | the `@[bib_entry]` registry |
-| `argtex` | `docs/latex/arguments.tex` | every package it names |
+| `argtex` | `docs/latex/arguments.tex` | the same harvest as `argdoc` |
 | `statusgen` | the marked block in `docs/src/roadmap.md` | every `@[headline]` result |
 | `argdoc` | `docs/src/arguments/*.md`, the marked block in `docs/src/SUMMARY.md` | every documented declaration in an argument's namespace |
 
-`argdoc` is the one that reads the *prose*. An argument module is written as a
-literate document — a module docstring saying what the dispute is, `/-! ### … -/`
-blocks marking its sections, a docstring on every package, line and result —
-and `argdoc` walks the environment for all of it, in source order, interleaving
-the module docstrings with the declarations they introduce. What a reader meets
-on the site is the file, typeset: the same paragraphs, with the formulas set as
-notation and the atoms numbered against one legend for the page.
+`argdoc` and `argtex` are the two that read the *prose*. An argument module is
+written as a literate document — a module docstring saying what the dispute is,
+`/-! ### … -/` blocks marking its sections, a docstring on every package, line
+and result — and `Testimony.Tools.Pages` walks the environment for all of it, in
+source order, interleaving the module docstrings with the declarations they
+introduce. What a reader meets, on the site or in the PDF, is the file typeset:
+the same paragraphs, with the formulas set as notation and the atoms numbered
+against one legend for the whole argument.
+
+The two tools share that harvest rather than each doing their own, so the page
+and the PDF are two settings of one text. Only the setting differs: Markdown
+tables and MathJax on the site, `longtable` and `\cite` in print.
 
 That is why there is no hand-written page describing an argument. There is
 nothing to keep in step, because there is no second copy — the docstring is the
-documentation, and `lake exe argdoc --check` fails if what is committed is not
-what the source now says.
+documentation, and `--check` fails if what is committed is not what the source
+now says.
 
 ## Dependencies
 
