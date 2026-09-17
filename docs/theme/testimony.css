@@ -66,3 +66,65 @@
     height: 72px;
   }
 }
+
+/* Generated argument pages (`lake exe argdoc`).
+
+   The legend is a five-column table of every atom the page numbers, and the
+   derivations are MathJax display blocks. Both want more room than the default
+   column, and the legend wants its columns fixed: without that the claim — the
+   one column a reader is actually reading — is squeezed by the source column
+   beside it. */
+
+:root {
+  --content-max-width: 860px;
+}
+
+.testimony-legend table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* Fixed columns are measured including their padding, and mdBook's default
+   20px each side leaves a 4.5rem column barely a word wide. */
+.testimony-legend th,
+.testimony-legend td {
+  padding: 0.4rem 0.6rem;
+}
+
+.testimony-legend th:first-child,
+.testimony-legend td:first-child {
+  width: 2.5rem;
+  text-align: center;
+}
+
+.testimony-legend th:nth-child(2),
+.testimony-legend td:nth-child(2) {
+  width: 33%;
+}
+
+.testimony-legend th:nth-child(3),
+.testimony-legend td:nth-child(3) {
+  width: 6rem;
+}
+
+.testimony-legend th:nth-child(4),
+.testimony-legend td:nth-child(4) {
+  width: 9.5rem;
+}
+
+.testimony-legend td {
+  vertical-align: top;
+}
+
+/* Cite keys are long and hyphenated; let them break rather than widen the
+   column they sit in. */
+.testimony-legend code {
+  font-size: 0.8em;
+  overflow-wrap: anywhere;
+}
+
+/* A long premise scrolls rather than pushing the page sideways. */
+.testimony-math {
+  overflow-x: auto;
+  margin: 1rem 0;
+}

@@ -8,11 +8,15 @@ not a summary someone maintains beside the arguments: rename a theorem, restate
 it, or delete it, and the next run moves the table. `lake exe statusgen --check`
 fails CI when the committed copy has drifted.
 
+Each heading links to that argument's own page, where the same results are set
+out with their docstrings, the premises they rest on, and the rival readings
+they are checked against — also generated, by `lake exe argdoc`.
+
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
 **4 arguments**, carrying **55 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
-### Born in Bethlehem — Micah 5:2
+### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
 | Result | Statement | What it claims |
 |---|---|---|
@@ -20,7 +24,7 @@ fails CI when the committed copy has drifted.
 | `critical_not_establishes` | `¬Establishes critical` | The critical reading does not establish the conclusion. |
 | `jesus_satisfies_bethlehem` | `Satisfies jesus bornInBethlehem` | End to end: under the Christian package, Jesus satisfies the Bethlehem criterion. |
 
-### Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
+### [Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3](./arguments/born-of-a-virgin.md)
 
 | Result | Statement | What it claims |
 |---|---|---|
@@ -47,7 +51,7 @@ fails CI when the committed copy has drifted.
 | `hinges_jointly_load_bearing` | `¬Establishes christianWithoutAnyHinge` | **The result worth having.** No single hinge carries the argument, but the four of them jointly do: remove all four and the criterion no longer follows, with every textual and … |
 | `jesus_satisfies_virgin_birth` | `Satisfies jesus bornOfAVirgin` | End to end: under the scriptural package, Jesus satisfies the virgin-birth criterion. |
 
-### Sola fide
+### [Sola fide](./arguments/sola-fide.md)
 
 | Result | Statement | What it claims |
 |---|---|---|
@@ -59,7 +63,7 @@ fails CI when the committed copy has drifted.
 | `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEitherLexicalPremise` | **The result worth having.** Neither lexical premise carries the argument alone, but their *disjunction* does: remove both and sola fide no longer follows, with everything else … |
 | `james_harmonisation_is_load_bearing` | `¬Establishes reformedWithoutJamesHarmonisation` | The argument genuinely depends on answering James. |
 
-### Sola scriptura
+### [Sola scriptura](./arguments/sola-scriptura.md)
 
 | Result | Statement | What it claims |
 |---|---|---|

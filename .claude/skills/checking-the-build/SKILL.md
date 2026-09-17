@@ -22,6 +22,9 @@ lake lint                            # 2
 lake exe axiom-audit                 # 3
 python3 scripts/testimony_lint.py    # 4
 lake exe bibgen --check              # generated files
+lake exe argtex --check
+lake exe statusgen --check
+lake exe argdoc --check
 ```
 
 ### Tier 1 — `lake build`
@@ -75,10 +78,25 @@ python3 scripts/test_testimony_lint.py
 
 ```sh
 lake exe bibgen --check
+lake exe argtex --check
+lake exe statusgen --check
+lake exe argdoc --check
 ```
 
-Fails if `references.bib` or `docs/src/bibliography.md` are stale. Fix with
-`lake exe bibgen` and commit both.
+Four tools own files that live in the repository. Each `--check` fails if what
+is committed is not what the Lean source now says; the fix is always to run the
+tool without `--check` and commit what it writes.
+
+| Tool | Owns |
+|---|---|
+| `bibgen` | `references.bib`, `docs/src/bibliography.md` |
+| `argtex` | `docs/latex/arguments.tex` |
+| `statusgen` | the marked block in `docs/src/roadmap.md` |
+| `argdoc` | `docs/src/arguments/*.md`, the marked block in `docs/src/SUMMARY.md` |
+
+`argdoc` is the one a change to an argument almost always moves, because it
+renders the module docstrings as well as the declarations: editing a docstring
+is editing the published page.
 
 ## Reporting
 

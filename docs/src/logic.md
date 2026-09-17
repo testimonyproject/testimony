@@ -115,6 +115,33 @@ The prose around the block is written by hand, because *why* an argument is
 worth making does not follow from its statements — and rule L9 checks that the
 names that prose cites still exist.
 
+## Publishing the argument itself
+
+`lake exe argdoc` writes one page per argument under `docs/src/arguments/`, and
+that page is the Lean file read back out: every module docstring in source
+order, every `/-! ### … -/` section where the source puts it, and after each
+docstring the declaration it introduces — a package as premises above a
+turnstile, a line of reason as grounds and step, a result as Lean states it
+with the axioms it rests on, a countermodel as the function it is.
+
+```sh
+lake exe argdoc            # rewrite docs/src/arguments/ and the SUMMARY block
+lake exe argdoc --check    # CI: fail if a committed page is stale
+```
+
+Two things differ from the LaTeX rendering. The atoms are numbered **once for
+the whole page** rather than per package, so \\(P_{9}\\) means the same claim
+in the Protestant position and in the Tridentine one and a reader can compare
+them. And the notation is typeset in the browser by MathJax, from the same
+`Testimony.Logic.Latex` renderer the PDF uses — the formulas are written once.
+
+The practical consequence is for how you write docstrings. They are not
+commentary for the next contributor; they are the page. A module docstring that
+says what the dispute is *not* about, or which of two answers to an objection
+the position takes, is read by whoever opens the argument on the site, and it
+is the only prose about that argument anywhere — there is no hand-written page
+to fall out of step with it.
+
 ## Lines of reason
 
 An argument is not a heap of premises. It is a small number of *lines of
