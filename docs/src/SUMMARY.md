@@ -9,6 +9,7 @@
 
 # How
 
+- [Reading the logic](./reading-the-logic.md)
 - [Architecture](./architecture.md)
 - [Encoding arguments](./logic.md)
 - [Citations](./citations.md)
