@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **55 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **53 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -79,17 +79,15 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `hinge_is_load_bearing_within_classical_strand` | `¬Establishes classicalStrandWithoutHinge` | Within the classical strand taken alone the hinge is still load-bearing: remove it and that strand yields nothing. |
 | `classical_answer_blocks_self_refutation` | `¬Establishes selfRefutationAnswered` | **The classical answer blocks the objection.** Assert that scripture teaches the principle and the objection no longer delivers its denial. |
 | `scoping_blocks_self_refutation` | `¬Establishes selfRefutationUnderScope` | **And the final-arbiter answer blocks it too, without the hinge.** This is the answer the seed did not encode. |
-| `parity_blocks_canon_objection` | `¬Establishes canonObjectionUnderParity` | **The parity reply blocks the canon objection.** |
-| `canon_parity_does_not_establish_sole_rule` | `¬Establishes canonParityReachingForSoleRule` | **And blocking is all it does.** The same grounds, asked for the conclusion rather than for the block, deliver nothing. |
-| `parity_blocks_interpretive_regress` | `¬Establishes interpretiveRegressUnderParity` | **The parity reply blocks the interpretive-authority regress.** |
-| `regress_parity_does_not_establish_difference` | `¬Establishes regressParityReachingForDifference` | **And blocking is all this one does either.** That choosing an authority is private judgement defeats the charge that Tradition I collapses into Tradition 0; it does not show that … |
+| `parity_leaves_the_canon_open` | `Independent canonUnderParity.premises (p Claim.scriptureIsSoleInfallibleRule)` | **The parity reply leaves the canon question open.** Granted Kruger's grounds, the sole infallible rule neither follows nor fails: his own reading has it, and the reading on which … |
+| `parity_leaves_the_distinction_open` | `Independent regressUnderParity.premises (p Claim.traditionIDiffersInPrincipleFromTradition0)` | **And the same for interpretive authority.** That choosing an authority is itself private judgement defeats the charge that Tradition I collapses into Tradition 0; it does not … |
 | `circle_grounds_neither_consensus` | `¬Establishes traditionICircle` | **Geisler's circularity charge against Tradition I, shown rather than alleged.** The creedal consensus is said to rest on scripture's clarity, and scripture's clear sense is said … |
 | `circle_grounds_neither_perspicuity` | `¬Establishes traditionICircleForPerspicuity` | **And the other end is no better off.** The same two legs, asked for the perspicuity instead of the consensus, fail in the same way and for the same reason. |
 | `geislerCircle_is_valid` | `Establishes geislerCircle` | Geisler's charge is valid on its own grounds: grant that the consensus rests on scripture's clarity and that scripture's clear sense requires the consensus, and the reasoning is … |
 | `accountability_blocks_the_circle` | `¬Establishes geislerCircleUnderAccountability` | **Allen and Swain's reply blocks the charge.** If the creedal consensus is established by and accountable to scripture, it is what reading scripture produces rather than what … |
 | `scripturalBounding_blocks_the_circle` ⚗ | `¬Establishes geislerCircleUnderScripturalBounding` | **The scriptural-bounding reply blocks the charge too, and on scriptural rather than confessional grounds.** **What is novel here.** No source was found advancing these texts as … |
-| `parity_blocks_the_circularity_defeat` | `¬Establishes circleDefeatUnderParity` | **Barrett's parity reply blocks the defeat.** Concede the circle; deny that it is a defect peculiar to this position, since any appeal to an ultimate authority is circular. |
-| `circle_parity_does_not_clear_the_charge` | `¬Establishes circleParityReachingForVindication` | **And blocking is all it does, again.** The parity reply cannot clear the charge, because it grants it: what it denies is that the charge is damaging, not that it is true. |
+| `parity_leaves_the_defeat_open` | `Independent defeatUnderParity.premises (p Claim.circularityDefeatsTraditionI)` | **Barrett's parity reply leaves the defeat open.** Concede the circle; deny that it is a defect peculiar to this position, since any appeal to an ultimate authority is circular. |
+| `circle_parity_concedes_the_charge` | `Establishes circleParityConcedingTheCharge` | **The reply does not merely fail to clear the charge — it grants it.** This is the second question, kept because it is worth asking and restated because the answer is stronger … |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -145,14 +143,37 @@ that ὁμοούσιος is unscriptural, Whitaker on unwritten tradition, Geisl
 may interpret the Old Testament, Barrett on perspicuity — six instances across
 seventeen centuries, by people arguing against each other.
 
-What the library adds is the price. `parity_blocks_canon_objection` and
-`parity_blocks_interpretive_regress` show the move works; `canon_parity_does_not_establish_sole_rule`
-and `regress_parity_does_not_establish_difference` show that working is all it
-does. It neutralises an objection and establishes nothing, because conceding a
-charge is not answering it. That is the lesson
-`compatibility_does_not_establish_criterion` already recorded for the
-virgin-birth argument, now shown to be a property of the *move* rather than of
-any one dispute.
+What the library adds is the price, and it has a name: **a parity reply renders
+the disputed proposition independent of the premise set.** Granted the reply's
+grounds, the proposition neither follows nor fails — two readings satisfy those
+grounds, one with it and one without. `parity_leaves_the_canon_open` and
+`parity_leaves_the_distinction_open` say exactly that, and saying it once is the
+whole finding: blocking the objection and establishing nothing are not two
+facts about the move but one fact seen from either side. It neutralises an
+objection and establishes nothing, because conceding a charge is not answering
+it. That is the lesson `compatibility_does_not_establish_criterion` already
+recorded for the virgin-birth argument, now shown to be a property of the
+*move* rather than of any one dispute.
+
+**And naming a shape finds the cases that do not fit it.** The three parity
+replies in the sola scriptura argument were each written as a pair of results,
+"it blocks" and "it establishes nothing". Two of the pairs were genuine
+independence claims. The third was not: its halves asked about *different
+propositions* over the same premises — whether the circularity defeats
+Tradition I, and whether Tradition I's reasoning is circular — while being
+presented as complements. Nothing checked that, because nothing required the
+proposition to be named once. Under `Independent` it has to be, and the defect
+was visible immediately. Restated, the first half is
+`parity_leaves_the_defeat_open` and the second is stronger than it was:
+`circle_parity_concedes_the_charge` shows the reply does not merely fail to
+clear the charge but grants it outright, since the charge is one of its own
+grounds.
+
+The notion is Foundation's — `Independent φ` there is `𝓢 ⊬ φ ∧ 𝓢 ⊬ ∼φ`, over
+provability. `Testimony.Logic.Independent` is its semantic counterpart, over
+the entailment this library uses, and `leaves_open` proves one from the two
+readings the premises admit. Both readings stay named, for the same reason
+every countermodel here is named.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether

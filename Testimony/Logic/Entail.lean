@@ -84,6 +84,63 @@ theorem entails_of_unsatisfiable {prems : List (Formula α)}
   intro w hw
   exact absurd ⟨w, hw⟩ h
 
+/-- A proposition is *independent* of a premise set when the set entails
+neither it nor its negation — when the premises settle the question neither
+way.
+
+The term is Foundation's. `Foundation/Logic/Entailment.lean` defines
+`Independent φ` as `𝓢 ⊬ φ ∧ 𝓢 ⊬ ∼φ`, and this is the same notion over the
+entailment this library actually uses. It is a counterpart rather than an
+instance, deliberately: Foundation's is *proof-theoretic*, built on `Prf : S →
+F → Type*`, so instantiating it would mean declaring `Prf prems φ := PLift
+(Entails prems φ)` — wrapping a semantics in an interface meant for
+derivations, to borrow a definition. It would also misdescribe the method.
+Nothing here is refuted by a failed proof search; every refutation is a named
+countermodel, which is why `refute_with` takes an identifier. Borrow the
+vocabulary, not the plumbing.
+
+**Why the library needs it.** A *parity reply* — concede the objection's point
+and deny that it discriminates, *yes, that is circular, so is yours* — was
+being recorded as two results each time: one that it blocks the objection, one
+that it establishes nothing. Those are not two facts about the reply. They are
+one fact, stated twice, and stating it twice is what let a pair through in
+which the two halves were about different propositions. Named once, the shape
+is checkable. -/
+def Independent (prems : List (Formula α)) (φ : Formula α) : Prop :=
+  ¬ Entails prems φ ∧ ¬ Entails prems (.imp φ .falsum)
+
+/-- Two countermodels establish independence: a reading of the premises on
+which the proposition fails, and a reading of the same premises on which it
+holds.
+
+Both are named, for the reason `not_entails_of_countermodel` is proved from a
+named valuation rather than an existence claim — a countermodel *is* a reading,
+and a parity reply leaves exactly two of them available. `wf` is the reading on
+which the proposition does not hold; `wt` is the reading on which it does. -/
+theorem independent_of_countermodels {prems : List (Formula α)} {φ : Formula α}
+    (wf wt : Valuation α)
+    (hfsat : ∀ ψ ∈ prems, Formula.Boolean.val wf ψ)
+    (hfail : ¬ Formula.Boolean.val wf φ)
+    (htsat : ∀ ψ ∈ prems, Formula.Boolean.val wt ψ)
+    (hhold : Formula.Boolean.val wt φ) :
+    Independent prems φ :=
+  ⟨not_entails_of_countermodel wf hfsat hfail,
+   not_entails_of_countermodel wt htsat fun h => h hhold⟩
+
+/-- **An independence result needs no separate satisfiability witness.** A
+premise set that settles nothing about some proposition has a model already:
+an unsatisfiable set entails everything, including the proposition and its
+negation.
+
+This is why rule L11 asks for a model only of the packages carrying a positive
+`Establishes` result. Stated as a theorem rather than left as a remark in the
+linter, because the exemption is a fact about entailment and not a convention
+about checking. -/
+theorem satisfiable_of_independent {prems : List (Formula α)} {φ : Formula α}
+    (h : Independent prems φ) : Satisfiable prems := by
+  by_contra hns
+  exact h.1 (entails_of_unsatisfiable hns φ)
+
 /-- Entailment is monotone in the premises: adding premises cannot destroy an
 entailment. -/
 theorem entails_of_subset {prems prems' : List (Formula α)} {concl : Formula α}
@@ -116,6 +173,14 @@ which `q` holds and `p` does not. -/
 theorem affirming_consequent_invalid :
     ¬ Entails (α := Pair) [.atom .q, .imp (.atom .p) (.atom .q)] (.atom .p) := by
   refine not_entails_of_countermodel (fun a => a = Pair.q) ?_ ?_ <;>
+    simp [Formula.Boolean.val]
+
+/-- And `p` is independent of those premises, not merely unentailed by them:
+the reading above leaves `p` false, and the reading on which both atoms hold
+leaves it true, while both satisfy every premise. -/
+theorem p_independent_of_affirming_the_consequent :
+    Independent (α := Pair) [.atom .q, .imp (.atom .p) (.atom .q)] (.atom .p) := by
+  refine independent_of_countermodels (fun a => a = Pair.q) (fun _ => True) ?_ ?_ ?_ ?_ <;>
     simp [Formula.Boolean.val]
 
 end Testimony.Logic

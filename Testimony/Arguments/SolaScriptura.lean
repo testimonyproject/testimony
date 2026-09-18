@@ -93,14 +93,25 @@ grounds.
 ## The parity reply, and what it is worth
 
 Kruger on the canon and Mathison on interpretive authority make the same move:
-concede the circularity, deny that it discriminates between the positions. Each
-gets two results, because blocking an objection and establishing a conclusion
-are different things — `parity_blocks_canon_objection` with
-`canon_parity_does_not_establish_sole_rule`, and
-`parity_blocks_interpretive_regress` with
-`regress_parity_does_not_establish_difference`. The replies neutralise; they do
-not establish. `compatibility_does_not_establish_criterion` records the same
-lesson in `BornOfAVirgin`, for a different argument and a different reply.
+concede the circularity, deny that it discriminates between the positions. What
+the move achieves is that the disputed proposition comes out *independent* of
+the reply's grounds: neither it nor its denial follows, because two readings
+satisfy those grounds and disagree about it. `parity_leaves_the_canon_open` and
+`parity_leaves_the_distinction_open` are those results.
+
+Each used to be a *pair* — one result that the reply blocks the objection,
+another that it establishes nothing — and the pair is what hid a defect. Over
+Barrett's parity reply to Geisler the two halves asked about different
+propositions while being presented as complements; `parity_leaves_the_defeat_open`
+is the claim that was meant, and `circle_parity_concedes_the_charge` is the
+second question restated, since that reply does not merely fail to clear the
+charge of circularity but grants it as one of its own grounds.
+
+The replies neutralise; they do not establish.
+`compatibility_does_not_establish_criterion` records the same lesson in
+`BornOfAVirgin`, for a different argument and a different reply — and *not* as
+an independence claim, because its two results range over different premise
+sets.
 
 ## The circle inside Protestantism
 

@@ -122,7 +122,7 @@ length.
 
 ## Proof tactics
 
-`Testimony.Logic.Tactic` provides two, and they are not conveniences.
+`Testimony.Logic.Tactic` provides four, and they are not conveniences.
 
 ```lean
 theorem christian_establishes : Establishes christian := by
@@ -130,6 +130,14 @@ theorem christian_establishes : Establishes christian := by
 
 theorem critical_not_establishes : ¬ Establishes critical := by
   refute_with criticalReading [critical, criticalLine, toCriterion]
+
+theorem christian_is_satisfiable : Satisfiable christian.premises := by
+  satisfied_by christianOwnReading [christian, isaianicLine, sharedGrounds]
+
+theorem parity_leaves_the_canon_open :
+    Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
+  leaves_open parityEstablishesNothingReading krugerParityReading
+    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
 ```
 
 The bracketed list names what to unfold: the package, the lines it is built
@@ -152,7 +160,21 @@ review rule: make the bad state unrepresentable instead of checking for it.
 `refute_with` takes an **identifier**, not a term, so a countermodel must be a
 named definition. That enforces the rule above it — a countermodel is the
 rival's reading written down, and an inline valuation would satisfy the checker
-while telling a reader nothing.
+while telling a reader nothing. `leaves_open` takes two, in the order of
+`Independent`'s two halves: first the reading on which the proposition fails,
+then the reading on which it holds.
+
+**Prefer `Independent` to a pair of refutations.** When a reply is recorded as
+"it blocks the objection" and "it establishes nothing" over the *same* premise
+set, those are the two halves of one independence claim and should be stated as
+one. Written as a pair, nothing checks that the two halves are about the same
+proposition, and a pair whose halves were not has already reached `main`. The
+primer's entry is [Independence](./reading-the-logic.md#independence-the-premises-settle-nothing-either-way).
+
+Two premise sets asked two different questions are *not* this pattern —
+`compatibility_defeats_lexical_objection` and
+`compatibility_does_not_establish_criterion` range over different premise sets,
+and forcing `Independent` onto them would be false.
 
 ## Layout
 
@@ -185,6 +207,8 @@ linter.
 | L7 | Citation keys match `^[a-z0-9]+(-[a-z0-9]+)*$` |
 | L8 | No trailing whitespace; lines at most 100 columns |
 | L9 | No documentation page names a Lean result that does not exist |
+| L10 | Every `@[proposed]` result says what is novel about it |
+| L11 | A package with a positive `Establishes` result is shown satisfiable |
 
 Run its own tests with `python3 scripts/test_testimony_lint.py`.
 

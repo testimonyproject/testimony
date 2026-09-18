@@ -272,6 +272,22 @@ theorem tridentine_not_establishes : ¬ Establishes tridentine := by
   refute_with tridentineReading [tridentine, reformed]
 ```
 
+To record that a premise set settles a question neither way — which is what a
+parity reply does — name both readings:
+
+```lean
+@[headline]
+theorem parity_leaves_the_canon_open :
+    Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
+  leaves_open parityEstablishesNothingReading krugerParityReading
+    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
+```
+
+`Independent prems φ` is `¬ Entails prems φ ∧ ¬ Entails prems ∼φ`, the semantic
+counterpart of Foundation's proof-theoretic `Independent`. Use it in place of a
+pair of `¬ Establishes` results over the same premises: one result cannot be
+about two different propositions, and a pair can.
+
 The bracketed list is only what to unfold. The generic half of the recipe —
 `caseOf`, `conjOf`, `p`, `notP`, the list-membership lemmas that turn
 `∀ φ ∈ prems` into a conjunction, and the fully qualified semantics — lives
