@@ -257,9 +257,31 @@ messianic prophecies, where the premises are simpler.
 
 ## Philosophical theology
 
-This is why the substrate choice matters. Foundation supplies modal logic and
-Kripke semantics, so the arguments that need `□` and `◇` are reachable without
-changing foundations.
+This is why the substrate choice matters — though not quite in the way this
+page used to claim. Foundation itself has **no** modal logic: its structure is
+`Logic`, `Propositional`, `FirstOrder`, `SecondOrder`, `Meta` and `Vorspiel`,
+and the `FirstOrder/Kripke` modules are Kripke semantics for *intuitionistic
+first-order* logic, with no `□` and no `◇`.
+
+The modal logic is a sibling package,
+[`FormalizedFormalLogic/ModalLogic`](https://github.com/FormalizedFormalLogic/ModalLogic),
+which depends on Foundation and so shares the `Semantics` and `Entailment`
+interfaces this library already builds on. That is a smaller claim than the one
+this paragraph made before, and a true one: the arguments needing `□` and `◇`
+are reachable by *adding a dependency in the same family*, not by changing
+foundations. The family also has neighbourhood semantics — which is what the
+omnipotence paradoxes usually want, normal modal logic being too strong for
+them — and a Lean 4 formalisation of Gödel's ontological argument. See
+[#61](https://github.com/testimonyproject/testimony/issues/61) for the survey
+and [#52](https://github.com/testimonyproject/testimony/issues/52) for the
+work, which begins with a toolchain reconciliation.
+
+**Nearer than the modal work, and currently invisible on this page**:
+Foundation's `FirstOrder` is complete and unused here. Every argument so far is
+propositional, and `SolaScriptura` records what that costs — its
+doctrine/practice scope distinction "is carried by atom design and by this
+docstring, not by the logic", because a propositional fragment cannot quantify.
+That limitation is closable with no new dependency at all.
 
 - **Divine attributes and their alleged incompatibilities.** The omnipotence
   paradoxes, and the foreknowledge/freedom problem — where the formal question
