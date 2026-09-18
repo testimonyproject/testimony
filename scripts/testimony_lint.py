@@ -121,8 +121,16 @@ RULE_TEXT = {
 # excluding `roadmap.md` wholesale would exempt its prose along with its table.
 GENERATED_BEGIN_RE = re.compile(r"^\s*<!--\s*BEGIN GENERATED\b")
 GENERATED_END_RE = re.compile(r"^\s*<!--\s*END GENERATED\b")
-# A markdown table row cannot be wrapped: a newline ends the row.
+# A markdown table row cannot be wrapped: a newline ends the row. A row is
+# recognised two ways, because markdown writes them two ways: a leading `|`,
+# and — for a table whose rows carry no outer pipes — membership in a block
+# opened by a delimiter row (`--- | ---`). Both are consulted only outside a
+# code fence, where a line beginning with `|` is a code sample.
 TABLE_ROW_RE = re.compile(r"^\s*\|")
+# A fenced code block, ``` or ~~~, indented at most three spaces. The run is
+# captured because the closing fence must be the same character and at least
+# as long.
+CODE_FENCE_RE = re.compile(r"^ {0,3}(`{3,}|~{3,})")
 # YAML frontmatter, opened and closed by `---` on its own line.
 FRONTMATTER_FENCE = "---"
 
@@ -571,6 +579,56 @@ def is_generated_doc(path: str) -> bool:
     return path in GENERATED_DOCS or path.startswith(GENERATED_DOC_DIRS)
 
 
+def _opens_frontmatter(lines: list[str]) -> bool:
+    """Whether the page opens a YAML frontmatter block that is also closed.
+
+    The closing fence is required. `---` on line 1 is not necessarily
+    frontmatter — it is also a thematic break, and a block someone interrupted
+    is not one either — and an unterminated block would exempt every remaining
+    line of the page silently, which is the one failure a width rule cannot
+    afford.
+    """
+    if not lines or lines[0].strip() != FRONTMATTER_FENCE:
+        return False
+    return any(line.strip() == FRONTMATTER_FENCE for line in lines[1:])
+
+
+def _closes_fence(line: str, fence: str) -> bool:
+    """Whether `line` closes a code fence opened by the run `fence`.
+
+    Same character, at least as long, and nothing else on the line — the
+    CommonMark rule, so that ```` ```lean ```` inside a ```` ```` ```` block
+    does not close it.
+    """
+    stripped = line.strip()
+    return stripped.startswith(fence) and set(stripped) == {fence[0]}
+
+
+def _is_table_delimiter(line: str) -> bool:
+    """Whether `line` is the `--- | ---` row that makes the line above a table
+    header. Pipes, hyphens, alignment colons and space, and at least one pipe:
+    without the pipe `---` is a thematic break or a setext underline."""
+    stripped = line.strip()
+    return (
+        "|" in stripped
+        and "-" in stripped
+        and set(stripped) <= set("|-: \t")
+    )
+
+
+def _continues_table(line: str, lines: list[str], n: int, in_table: bool) -> bool:
+    """Whether line `n` (1-based) belongs to a table, given the state at `n-1`.
+
+    A table is entered at its *header* — the line above a delimiter row — and
+    left at the first blank line or line without a pipe, which is where a GFM
+    table ends. Entering at the header rather than at the delimiter is what
+    lets the header itself be exempt without a second pass.
+    """
+    if in_table:
+        return bool(line.strip()) and "|" in line
+    return "|" in line and n < len(lines) and _is_table_delimiter(lines[n])
+
+
 def lint_markdown(path: str, text: str) -> list[Finding]:
     """L12: hand-written markdown, at most `MAX_LINE` columns.
 
@@ -594,12 +652,18 @@ def lint_markdown(path: str, text: str) -> list[Finding]:
 
     *Table rows* cannot be wrapped at all — a newline ends the row — so the
     choice is between exempting them and forbidding wide tables, and a wide
-    table is often the honest shape for the data.
+    table is often the honest shape for the data. A row is recognised either
+    by its leading `|` or by sitting in a block a delimiter row opened, because
+    markdown permits both `| a | b |` and a bare `a | b`; the block runs from
+    the header above the delimiter to the blank line that ends the table.
 
     *YAML frontmatter* carries the skills' `description:`, a single scalar the
     skill loader reads whole; the longest is 392 characters. A folded scalar
     would wrap it and preserve the string, but only if the loader is a real
     YAML parser, and finding out otherwise by breaking a skill is a poor trade.
+    It must be *closed* to count: a page opening with `---` and never repeating
+    it has a thematic break, not frontmatter, and reading it as frontmatter
+    would exempt the whole page without a word.
 
     *Links are not exempt*, and that is a decision rather than an oversight. An
     inline link genuinely cannot be broken across lines, which looks like the
@@ -611,29 +675,47 @@ def lint_markdown(path: str, text: str) -> list[Finding]:
 
     Code fences are not exempt either. A sample too wide for 100 columns is too
     wide for the rendered page, and the Lean inside one is held to 100 by L8
-    wherever it also lives in a source file.
+    wherever it also lives in a source file. Fences are nonetheless tracked, so
+    that the other exemptions stop at the fence: a `|` inside a sample is code,
+    not a table row, and a fenced sample of a `BEGIN GENERATED` marker — which
+    a page explaining the markers would carry — opens nothing over the prose
+    after it.
     """
     if is_generated_doc(path):
         return []
     lines = text.splitlines()
-    in_frontmatter = bool(lines) and lines[0].strip() == FRONTMATTER_FENCE
+    in_frontmatter = _opens_frontmatter(lines)
     in_generated = False
+    in_table = False
+    fence: str | None = None
     findings: list[Finding] = []
     for n, line in enumerate(lines, 1):
+        exempt = False
         if in_frontmatter:
             if n > 1 and line.strip() == FRONTMATTER_FENCE:
                 in_frontmatter = False
-            continue
-        if in_generated:
+            exempt = True
+        elif fence is not None:
+            # Inside a fence nothing else is read: a `|` there is a code
+            # sample, not a table row, and a marker there is a sample of a
+            # marker. The line is still held to the width, fence and all.
+            if _closes_fence(line, fence):
+                fence = None
+        elif (opening := CODE_FENCE_RE.match(line)) is not None:
+            fence = opening.group(1)
+            in_table = False
+        elif in_generated:
             if GENERATED_END_RE.match(line):
                 in_generated = False
-            continue
-        if GENERATED_BEGIN_RE.match(line):
+            exempt = True
+        elif GENERATED_BEGIN_RE.match(line):
             in_generated = True
-            continue
-        if TABLE_ROW_RE.match(line):
-            continue
-        if len(line) > MAX_LINE:
+            in_table = False
+            exempt = True
+        else:
+            in_table = _continues_table(line, lines, n, in_table)
+            exempt = in_table or bool(TABLE_ROW_RE.match(line))
+        if not exempt and len(line) > MAX_LINE:
             findings.append(
                 Finding("L12", path, n, RULE_TEXT["L12"] + f" ({len(line)} columns)")
             )
@@ -662,8 +744,20 @@ def doc_files(root: Path) -> list[Path]:
 
 
 def _rel(p: Path) -> str:
-    """A repository-relative POSIX path, as the rules expect to match on."""
-    rel = p.as_posix()
+    """A repository-relative POSIX path, as the rules expect to match on.
+
+    Absolute paths are made relative to the working directory, which is the
+    repository root for every way the linter is run. The file-write hook hands
+    it whatever path the editor used — an absolute one — and
+    `is_generated_doc` matches on a repository-relative prefix, so an
+    unnormalised path would miss `docs/src/arguments/` and report a generated
+    page nobody is allowed to hand-edit. A path outside the repository is left
+    as it is: it names something no rule about generated pages is about.
+    """
+    try:
+        rel = p.resolve().relative_to(Path.cwd().resolve()).as_posix()
+    except ValueError:
+        rel = p.as_posix()
     return rel[len("./"):] if rel.startswith("./") else rel
 
 

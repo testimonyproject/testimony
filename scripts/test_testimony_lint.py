@@ -396,6 +396,35 @@ class RuleTests(unittest.TestCase):
         text = "  | a | " + "b" * 120 + " |\n"
         self.assertEqual([], L.lint_markdown("docs/src/architecture.md", text))
 
+    def test_L12_a_table_row_without_outer_pipes_may_be_wide(self):
+        """Markdown does not require the outer pipes, so a leading `|` cannot be
+        the whole test for a row. The block is recognised from its delimiter
+        row, which makes the line above it a header and the lines below it
+        rows, until the blank line that ends the table."""
+        text = (
+            "Result | Notes\n"
+            "--- | ---\n"
+            "`parity_leaves_the_canon_open` | " + "prose " * 30 + "\n"
+        )
+        self.assertEqual([], L.lint_markdown("docs/src/roadmap.md", text))
+
+    def test_L12_prose_after_a_table_is_not_exempt(self):
+        """A GFM table ends at the first blank line. Prose under one is prose."""
+        text = (
+            "Result | Notes\n"
+            "--- | ---\n"
+            "a | b\n"
+            "\n"
+            + "q" * 120 + "\n"
+        )
+        self.assertEqual([5], [f.line for f in L.lint_markdown("docs/src/roadmap.md", text)])
+
+    def test_L12_a_thematic_break_does_not_open_a_table(self):
+        """`---` with no pipe is a horizontal rule, not a delimiter row, so the
+        line above it is a heading rather than a table header."""
+        text = "x" * 120 + "\n---\n"
+        self.assertEqual([1], [f.line for f in L.lint_markdown("docs/src/logic.md", text)])
+
     def test_L12_generated_block_is_exempt(self):
         """The roadmap's status table is pretty-printed Lean statements that
         `statusgen` rewrites on every run and nobody may hand-edit."""
@@ -491,6 +520,62 @@ class RuleTests(unittest.TestCase):
         wherever it also lives in a source file."""
         text = "```sh\ncurl -s " + "x" * 120 + "\n```\n"
         self.assertIn("L12", rules(L.lint_markdown("docs/src/citations.md", text)))
+
+    def test_L12_a_pipe_inside_a_code_fence_is_not_a_table_row(self):
+        """The table exemption is read only outside a fence. A wide line that
+        happens to begin with `|` in a code sample is a wide line."""
+        text = "```text\n|" + "x" * 120 + "\n```\n"
+        found = L.lint_markdown("docs/src/style-guide.md", text)
+        self.assertEqual([2], [f.line for f in found])
+
+    def test_L12_a_generated_marker_inside_a_code_fence_is_a_sample(self):
+        """A page explaining the markers shows one in a fence. That sample must
+        not open a real exemption over the prose after the fence — which is how
+        a whole page would go silently unchecked."""
+        text = (
+            "```markdown\n"
+            "<!-- BEGIN GENERATED: lake exe statusgen -->\n"
+            "```\n"
+            "\n"
+            + "q" * 120 + "\n"
+        )
+        found = L.lint_markdown("docs/src/style-guide.md", text)
+        self.assertEqual([5], [f.line for f in found])
+
+    def test_L12_a_longer_fence_is_not_closed_by_a_shorter_one(self):
+        """A fence closes on the same character, at least as long, and nothing
+        else — so a nested ``` inside a ```` block leaves the fence open."""
+        text = (
+            "````markdown\n"
+            "```\n"
+            "|" + "x" * 120 + "\n"
+            "```\n"
+            "````\n"
+        )
+        self.assertEqual([3], [f.line for f in L.lint_markdown("docs/src/logic.md", text)])
+
+    def test_L12_unclosed_frontmatter_is_not_frontmatter(self):
+        """A page opening with `---` and never closing it is a thematic break or
+        an interrupted block, not frontmatter. Reading it as frontmatter would
+        exempt the whole page, which is the one way a width rule fails without
+        anybody noticing."""
+        text = "---\n\nSome prose.\n\n" + "q" * 120 + "\n"
+        found = L.lint_markdown(".claude/skills/x/SKILL.md", text)
+        self.assertEqual([5], [f.line for f in found])
+
+    def test_L12_an_absolute_path_to_a_generated_page_is_exempt(self):
+        """The file-write hook passes `tool_input.file_path`, which is absolute.
+        `is_generated_doc` matches a repository-relative prefix, so without
+        normalising the path the rule would fire on the generated line 6 of
+        every page `argdoc` writes."""
+        absolute = Path.cwd() / "docs" / "src" / "arguments" / "sola-fide.md"
+        self.assertEqual("docs/src/arguments/sola-fide.md", L._rel(absolute))
+        self.assertTrue(L.is_generated_doc(L._rel(absolute)))
+
+    def test_rel_leaves_a_path_outside_the_repository_alone(self):
+        """Nothing about generated pages is about a path elsewhere on disk, and
+        a relative path that escapes the root would be misleading."""
+        self.assertEqual("/etc/hosts", L._rel(Path("/etc/hosts")))
 
     def test_L12_is_not_a_lean_file_rule(self):
         """L12 does not fire from `lint_text`; only `lint_markdown` decides it,

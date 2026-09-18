@@ -314,11 +314,14 @@ Four things are exempt.
   not the path, so the prose on either side of a block is still held to the
   width — excluding the file would have exempted the page along with the table.
 - **Table rows.** A newline ends a markdown table row, so a wide row cannot be
-  wrapped at all.
+  wrapped at all. A row counts as one either by its leading `|` or by sitting
+  in a block opened by a delimiter row, since markdown allows both `| a | b |`
+  and a bare `a | b`.
 - **YAML frontmatter.** A skill's `description:` is one scalar the loader reads
   whole. A folded scalar would wrap it while preserving the string, but only if
   the loader is a real YAML parser, and finding that out by breaking a skill is
-  a poor trade.
+  a poor trade. The block has to be closed: a page that opens with `---` and
+  never repeats it has a thematic break, not frontmatter.
 
 **Long links are not exempt, deliberately.** An inline link cannot be broken
 across lines, which sounds like the argument the table rows win on — but unlike
@@ -326,7 +329,10 @@ a table row a link has a second form that fits: `[text][ref]`, with the URL
 defined elsewhere in the file. So **a link that will not fit becomes a
 reference link**; the roadmap's issue links and the [Independence][independence]
 link above are both written that way. Code fences are not exempt either: a
-sample too wide for 100 columns is too wide for the rendered page.
+sample too wide for 100 columns is too wide for the rendered page. They are
+still tracked, so that the other exemptions stop at the fence — a `|` in a
+sample is code rather than a table row, and a page that fences a sample of a
+`BEGIN GENERATED` marker opens no exemption over the prose that follows it.
 
 ## Documentation moves with the argument
 
