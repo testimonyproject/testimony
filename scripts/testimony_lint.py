@@ -362,6 +362,113 @@ def lint_satisfiability(files: dict[str, str]) -> list[Finding]:
     return findings
 
 
+# Where the imported declarations L9 may legitimately be cited by name live.
+# Foundation only, and deliberately: this library leans on it directly — prose
+# names `weakening`, `of_mem`, `models_imply` — and scanning its 205 files costs
+# under a tenth of a second. Mathlib is forty times larger, and nothing here
+# cites a Mathlib lemma in prose; if that changes, measure before widening.
+IMPORTED_ROOTS = (Path(".lake/packages/Foundation"),)
+
+# A class field as Foundation writes them, with binders before the colon:
+#
+#     protected class Imp where
+#       models_imply {𝓜 : M} {φ ψ : F} : 𝓜 ⊧ φ 🡒 ψ ↔ (𝓜 ⊧ φ → 𝓜 ⊧ ψ)
+#
+# `LEAN_FIELD_RE` wants the colon to follow the name, so it misses these — and
+# `models_imply` is precisely the sort of name this library's prose wants to
+# cite. This pattern is looser on purpose, and loose is safe *here* and only
+# here: an over-broad imported set means the rule accepts a name in prose that
+# upstream might not have, which is a weaker check. An over-broad set of names
+# declared *locally* would mean the rule stops noticing deletions, which is the
+# rule's whole purpose, so `declared_names` keeps the strict pattern.
+IMPORTED_FIELD_RE = re.compile(r"^\s{2,}([a-z][A-Za-z0-9_']*)\b[^:=\n]*:", re.M)
+
+
+def imported_names(roots: tuple[Path, ...] = IMPORTED_ROOTS) -> set[str]:
+    """Declarations this library imports rather than declares.
+
+    L9 asks whether a name a page mentions is a name the library has. Before
+    this, "has" meant "declares here", so prose naming a Foundation lemma read
+    as a dangling reference — which pushed documentation away from being
+    specific, exactly backwards for a project whose case rests on borrowing a
+    definition rather than restating it.
+
+    Missing packages are not an error. A fresh clone has no `.lake/` until
+    `lake exe cache get` runs, and a linter that refused to run before the
+    first build would be worse than one that occasionally cannot confirm an
+    imported name.
+    """
+    names: set[str] = set()
+    for root in roots:
+        if not root.is_dir():
+            continue
+        for p in sorted(root.rglob("*.lean")):
+            text = p.read_text(encoding="utf-8", errors="replace")
+            for pattern in (LEAN_DECL_RE, LEAN_CTOR_RE, IMPORTED_FIELD_RE, LEAN_SYNTAX_RE):
+                names.update(pattern.findall(text))
+    return names | {n.rsplit(".", 1)[-1] for n in names}
+
+
+def _keep_only_docstrings(lines: list[str]) -> list[str]:
+    """Blank out everything that is not a doc comment, keeping line numbers.
+
+    The inverse of `_strip_comments`, and needed for the same reason read the
+    other way round. A docstring under `Testimony/` is *published prose*:
+    `argdoc` and `argtex` render every module and declaration docstring in
+    `Testimony/Arguments/` into the site and the PDF verbatim, and doc-gen4
+    publishes the rest. A paragraph there naming a result the library no longer
+    has is exactly the drift L9 exists to catch, and until this function
+    existed the rule could not see it — `declared_names` strips comments before
+    collecting names, correctly, which left docstring prose read by nothing.
+
+    Doc comments only: `/-- … -/` and `/-! … -/`. An ordinary `/- … -/` block
+    or a `--` line comment is a note to whoever opens the file, not something
+    this project publishes, and holding private notes to the same standard
+    would make the rule tiresome without making a page safer.
+    """
+    out: list[str] = []
+    depth = 0
+    for line in lines:
+        kept, i = [], 0
+        while i < len(line):
+            if depth:
+                if line.startswith("-/", i):
+                    depth -= 1
+                    kept.append("  ")
+                    i += 2
+                    continue
+                kept.append(line[i])
+                i += 1
+                continue
+            if line.startswith("/--", i) or line.startswith("/-!", i):
+                depth = 1
+                kept.append("   ")
+                i += 3
+                continue
+            kept.append(" ")
+            i += 1
+        out.append("".join(kept))
+    return out
+
+
+def lint_lean_prose(path: str, text: str, declared: set[str]) -> list[Finding]:
+    """L9 again, over the docstrings in a Lean file rather than a page.
+
+    Same rule and same message: a result named in prose must be a result the
+    library still has. It reached `main` once without this — the root
+    `SolaScriptura` docstring kept a paragraph naming four results a commit had
+    just deleted, `argdoc` rendered it into the published page, and the page
+    contradicted itself a few paragraphs from where it said the packages were
+    gone. A review bot caught it; no gate could.
+    """
+    prose = "\n".join(_keep_only_docstrings(text.splitlines()))
+    return [
+        Finding("L9", path, n, RULE_TEXT["L9"] + f" (`{name}`)")
+        for n, name in doc_mentions(prose)
+        if name.rsplit(".", 1)[-1] not in declared and name not in declared
+    ]
+
+
 def declared_names(texts: dict[str, str]) -> set[str]:
     """Every name the Lean sources declare, plus the last segment of each.
 
@@ -455,9 +562,19 @@ def main(argv: list[str]) -> int:
     findings += lint_units(texts)
 
     # L9 asks whether a name exists, which only the whole library can answer.
+    # It reads two kinds of prose: the documentation pages, and the docstrings
+    # in the Lean sources, which `argdoc` and `argtex` publish verbatim.
+    #
+    # `docs/src/arguments/*.md` is deliberately not read. Those pages are
+    # generated from the docstrings now linted above, so a stale name is caught
+    # at its source, and `lake exe argdoc --check` catches a page that has
+    # drifted from it. Linting both would report one defect twice and tempt
+    # someone to edit a generated file.
     docs: list[Path] = []
     if whole_library:
-        declared = declared_names(texts)
+        declared = declared_names(texts) | imported_names()
+        for path, text in texts.items():
+            findings += lint_lean_prose(path, text, declared)
         docs = doc_files(Path("."))
         for p in docs:
             findings += lint_doc(_rel(p), p.read_text(encoding="utf-8"), declared)

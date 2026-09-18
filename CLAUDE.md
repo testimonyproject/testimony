@@ -41,9 +41,9 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
 - **Never change an argument without the documentation it implies.** A page
   asserting the opposite of a proven theorem is the failure this library exists
   to rule out, and it has happened. `lake exe statusgen --check` regenerates
-  what can be generated; linter rule L9 fails on a page naming a result that no
-  longer exists; the rest — a paragraph that still *describes* a result
-  wrongly — is yours to fix in the same commit.
+  what can be generated; linter rule L9 fails on a page *or a docstring* naming
+  a result that no longer exists; the rest — a paragraph that still *describes*
+  a result wrongly — is yours to fix in the same commit.
 - **Never assert an entailment over premises you have not shown satisfiable.**
   `Entails` quantifies over the valuations satisfying the premises, so a premise
   set with no model entails *everything*, `establish` closes the goal, and every

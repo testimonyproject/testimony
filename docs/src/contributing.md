@@ -105,8 +105,9 @@ compiles: the documentation moves with it. Run `lake exe statusgen` and
 [roadmap](./roadmap.md) and the argument's own page — and say what the encoding
 now does on any hand-written page that describes it — see [Documentation moves with the
 argument](./style-guide.md#documentation-moves-with-the-argument). Rule L9
-fails the build if a page names a result the library no longer has, which is
-how the roadmap went wrong once already.
+fails the build if a page *or a docstring* names a result the library no longer
+has, which is how the roadmap went wrong once, and a published argument page a
+second time.
 
 See the [style guide](./style-guide.md) for conventions, and
 [Encoding arguments](./logic.md) for how to write a new one.
