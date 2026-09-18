@@ -2498,7 +2498,9 @@ What the Protestant packages rest on beyond any single line: the prooftexts that
 \subsection*{Arguments.SolaScriptura.Packages — the positions, and the variants results refute}
 Four positions on tradition, three objections, two parity replies, and the variants each result needs. The rivals were written before anything was proved about the position argued for.
 
-Three packages are built to be \emph{refuted}. A reply is shown to block an objection by writing the objection's line on the reply's grounds and exhibiting a countermodel; a reply is shown to be purely defensive by asking the same grounds for the conclusion and exhibiting another.
+Several packages are built to be \emph{refuted}. A reply is shown to block an objection by writing the objection's line on the reply's grounds and exhibiting a countermodel.
+
+The parity replies have no packages at all. What they do is that the disputed proposition comes out \emph{independent} of the reply's grounds — neither entailed nor refuted by them — and \texttt{Independent} takes a premise list and a formula, so the reply's \texttt{Line} is all it needs.
 
 \paragraph*{The positions}
 \leavevmode\par
@@ -2619,48 +2621,10 @@ The objection with the final-arbiter answer in place of the ground it needed.
   \vdash \quad & \lnot P_{9}
 \end{align*}
 \emph{No premise here rests on scripture alone.}
-\paragraph*{The parity replies, and what they cost}
+\paragraph*{The parity replies}
 \leavevmode\par
-\par\medskip\noindent\textbf{\texttt{canon\allowbreak{}Objection\allowbreak{}Under\allowbreak{}Parity}} --- Canon objection, with the parity reply in play\par\nobreak\noindent
-The canon objection with Kruger's parity reply in play.
+No package here. What a parity reply does is stated as \texttt{Independent} over the reply's own line — see \texttt{Results} — and independence is a claim about a premise set and a proposition, not about a package's conclusion. Four packages used to stand here, two per reply, because \texttt{Establishes} is package-shaped and the reply had to be asked its question twice: once for the block and once for the conclusion. One statement replaces each pair, and the scaffolding goes with them.
 
-\begin{align*}
-  \text{(1)} \quad & P_{16} \\
-  \text{(2)} \quad & P_{18} \\
-  \text{(3)} \quad & (P_{16} \land P_{17}) \rightarrow \lnot P_{9} \\
-  \vdash \quad & \lnot P_{9}
-\end{align*}
-\emph{No premise here rests on scripture alone.}
-\par\medskip\noindent\textbf{\texttt{canon\allowbreak{}Parity\allowbreak{}Reaching\allowbreak{}For\allowbreak{}Sole\allowbreak{}Rule}} --- Kruger's parity reply, asked for the sole rule\par\nobreak\noindent
-The same grounds, asked for the conclusion instead of for the block.
-
-\begin{align*}
-  \text{(1)} \quad & P_{16} \\
-  \text{(2)} \quad & P_{18} \\
-  \text{(3)} \quad & (P_{16} \land P_{17}) \rightarrow \lnot P_{9} \\
-  \vdash \quad & P_{9}
-\end{align*}
-\emph{No premise here rests on scripture alone.}
-\par\medskip\noindent\textbf{\texttt{interpretive\allowbreak{}Regress\allowbreak{}Under\allowbreak{}Parity}} --- Interpretive-authority regress, with the parity reply in play\par\nobreak\noindent
-The interpretive-authority regress with Mathison's parity reply in play.
-
-\begin{align*}
-  \text{(1)} \quad & P_{19} \\
-  \text{(2)} \quad & P_{22} \\
-  \text{(3)} \quad & (P_{19} \land P_{21}) \rightarrow \lnot P_{20} \\
-  \vdash \quad & \lnot P_{20}
-\end{align*}
-\emph{No premise here rests on scripture alone.}
-\par\medskip\noindent\textbf{\texttt{regress\allowbreak{}Parity\allowbreak{}Reaching\allowbreak{}For\allowbreak{}Difference}} --- Mathison's parity reply, asked for the distinction\par\nobreak\noindent
-The same grounds, asked to deliver the distinction rather than to block its denial.
-
-\begin{align*}
-  \text{(1)} \quad & P_{19} \\
-  \text{(2)} \quad & P_{22} \\
-  \text{(3)} \quad & (P_{19} \land P_{21}) \rightarrow \lnot P_{20} \\
-  \vdash \quad & P_{20}
-\end{align*}
-\emph{No premise here rests on scripture alone.}
 \paragraph*{The hinge, in its two roles}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{protestant\allowbreak{}Without\allowbreak{}Hinge}} --- Protestant, minus the claim that scripture teaches the principle\par\nobreak\noindent
@@ -2740,24 +2704,16 @@ The charge with the proposed scriptural-bounding reply in play.
   \vdash \quad & P_{31}
 \end{align*}
 \emph{No premise here rests on scripture alone.}
-\par\medskip\noindent\textbf{\texttt{circle\allowbreak{}Defeat\allowbreak{}Under\allowbreak{}Parity}} --- The circularity defeat, with the parity reply in play\par\nobreak\noindent
-The defeat with Barrett's parity reply in play.
+\par\medskip\noindent\textbf{\texttt{circle\allowbreak{}Parity\allowbreak{}Conceding\allowbreak{}The\allowbreak{}Charge}} --- Barrett's parity reply, asked about the charge itself\par\nobreak\noindent
+Barrett's parity grounds, asked about the charge itself.
+
+Not "asked to clear the charge", which is what this package used to ask. The reply concedes the circle — \texttt{tradition\allowbreak{}IReasoning\allowbreak{}Is\allowbreak{}Circular} is one of its grounds — so the interesting question is not whether it fails to deliver the denial but that it delivers the charge. Asked the weaker question the answer is "no"; asked this one it is "yes, by its own premises".
 
 \begin{align*}
   \text{(1)} \quad & P_{31} \\
   \text{(2)} \quad & P_{33} \\
   \text{(3)} \quad & (P_{31} \land \lnot P_{33}) \rightarrow P_{32} \\
-  \vdash \quad & P_{32}
-\end{align*}
-\emph{No premise here rests on scripture alone.}
-\par\medskip\noindent\textbf{\texttt{circle\allowbreak{}Parity\allowbreak{}Reaching\allowbreak{}For\allowbreak{}Vindication}} --- Barrett's parity reply, asked to clear the charge\par\nobreak\noindent
-The same parity grounds, asked to show the circle is not there.
-
-\begin{align*}
-  \text{(1)} \quad & P_{31} \\
-  \text{(2)} \quad & P_{33} \\
-  \text{(3)} \quad & (P_{31} \land \lnot P_{33}) \rightarrow P_{32} \\
-  \vdash \quad & \lnot P_{31}
+  \vdash \quad & P_{31}
 \end{align*}
 \emph{No premise here rests on scripture alone.}
 \paragraph*{Geisler's circle}
@@ -2945,8 +2901,22 @@ theorem scoping_blocks_self_refutation : ¬Establishes selfRefutationUnderScope
 \end{verbatim}}
 \paragraph*{The parity replies, and what they are worth}
 \leavevmode\par
-Kruger on the canon and Mathison on interpretive authority make the same move: concede the circularity, deny that it discriminates between the positions. Each gets two results, because blocking an objection and establishing a conclusion are different things — the lesson \texttt{compatibility\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}establish\_\allowbreak{}criterion} already records for a different argument.
+Kruger on the canon and Mathison on interpretive authority make the same move: concede the circularity, deny that it discriminates between the positions.
 
+Each used to get two results — one that it blocks the objection, one that it establishes nothing — and that is one result too many. A premise set that entails neither a proposition nor its negation leaves that proposition \emph{independent} of it, and blocking and establishing-nothing are the two halves of that single fact. Foundation names the notion for provability; \texttt{Testimony.Logic.Independent} is its semantic counterpart, and \texttt{leaves\_\allowbreak{}open} proves it from the two readings the premises admit.
+
+The gain is not brevity. Stated as a pair, nothing checks that the two halves are about the same proposition — and in the Geisler case below they were not.
+
+\par\medskip\noindent\textbf{\texttt{parity\allowbreak{}Establishes\allowbreak{}Nothing\allowbreak{}Reading}}\par\nobreak\noindent
+The reading on which the parity point is granted and the sole rule still does not follow: the canon came through the Church, the rival's authority is self-authenticating too, and scripture is not the sole infallible rule.
+
+{\small\begin{verbatim}
+def parityEstablishesNothingReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.scriptureIsSoleInfallibleRule => False
+    | x => True
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{kruger\allowbreak{}Parity\allowbreak{}Reading}}\par\nobreak\noindent
 Kruger's reading: the canon's reception is conceded, and the demand for an infallible identifying authority is refused, because the rival's own authority is self-authenticating too.
 
@@ -2959,30 +2929,27 @@ def krugerParityReading : Valuation Claim :=
       False
     | x => True
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{parity\_\allowbreak{}blocks\_\allowbreak{}canon\_\allowbreak{}objection}}\par\nobreak\noindent
-\textbf{The parity reply blocks the canon objection.}
+\par\medskip\noindent\textbf{\texttt{parity\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}canon\_\allowbreak{}open}}\par\nobreak\noindent
+\textbf{The parity reply leaves the canon question open.} Granted Kruger's grounds, the sole infallible rule neither follows nor fails: his own reading has it, and the reading on which the parity point is conceded and the sole rule still denied has it not. Both satisfy every premise.
+
+That is the whole of what the reply achieves, in one claim. It blocks the canon objection — the objection's denial is no longer entailed — and it establishes nothing, because the conclusion is not entailed either. The parity move is purely defensive, and this is the form that says so without saying it twice.
 
 {\small\begin{verbatim}
-theorem parity_blocks_canon_objection : ¬Establishes canonObjectionUnderParity
+theorem parity_leaves_the_canon_open : Independent canonUnderParity.premises
+    (p Claim.scriptureIsSoleInfallibleRule)
 -- axioms: propext, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{parity\allowbreak{}Establishes\allowbreak{}Nothing\allowbreak{}Reading}}\par\nobreak\noindent
-The reading on which the parity point is granted and the sole rule still does not follow.
+\par\medskip\noindent\textbf{\texttt{distinction\allowbreak{}Unestablished\allowbreak{}Reading}}\par\nobreak\noindent
+The reading on which the parity point is granted and the distinction still does not follow: tradition is ministerial, choosing an authority is private judgement, and sola scriptura does not differ in principle from solo scriptura.
 
 {\small\begin{verbatim}
-def parityEstablishesNothingReading : Valuation Claim :=
+def distinctionUnestablishedReading : Valuation Claim :=
   fun a =>
     match a with
-    | Claim.scriptureIsSoleInfallibleRule => False
+    |
+    Claim.traditionIDiffersInPrincipleFromTradition0 =>
+      False
     | x => True
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{canon\_\allowbreak{}parity\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}establish\_\allowbreak{}sole\_\allowbreak{}rule}}\par\nobreak\noindent
-\textbf{And blocking is all it does.} The same grounds, asked for the conclusion rather than for the block, deliver nothing. The parity reply is purely defensive: it neutralises the objection without establishing the position.
-
-{\small\begin{verbatim}
-theorem canon_parity_does_not_establish_sole_rule : ¬Establishes
-    canonParityReachingForSoleRule
--- axioms: propext, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{mathison\allowbreak{}Parity\allowbreak{}Reading}}\par\nobreak\noindent
 Mathison's reading: ministerial authority is retained, and the claim that the individual keeps ultimate interpretive authority is refused, because choosing Rome is itself an act of private judgement.
@@ -2996,32 +2963,15 @@ def mathisonParityReading : Valuation Claim :=
       False
     | x => True
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{parity\_\allowbreak{}blocks\_\allowbreak{}interpretive\_\allowbreak{}regress}}\par\nobreak\noindent
-\textbf{The parity reply blocks the interpretive-authority regress.}
+\par\medskip\noindent\textbf{\texttt{parity\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}distinction\_\allowbreak{}open}}\par\nobreak\noindent
+\textbf{And the same for interpretive authority.} That choosing an authority is itself private judgement defeats the charge that Tradition I collapses into Tradition 0; it does not show that Tradition I differs from it in principle. Both readings satisfy Mathison's grounds, so his grounds settle the question neither way.
+
+The same shape, twice, against two different objections — which is the point. It is a property of the move, not of the objection it answers.
 
 {\small\begin{verbatim}
-theorem parity_blocks_interpretive_regress : ¬Establishes
-    interpretiveRegressUnderParity
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{distinction\allowbreak{}Unestablished\allowbreak{}Reading}}\par\nobreak\noindent
-The reading on which the parity point is granted and the distinction still does not follow.
-
-{\small\begin{verbatim}
-def distinctionUnestablishedReading : Valuation Claim :=
-  fun a =>
-    match a with
-    |
-    Claim.traditionIDiffersInPrincipleFromTradition0 =>
-      False
-    | x => True
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{regress\_\allowbreak{}parity\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}establish\_\allowbreak{}difference}}\par\nobreak\noindent
-\textbf{And blocking is all this one does either.} That choosing an authority is private judgement defeats the charge that Tradition I collapses into Tradition 0; it does not show that Tradition I differs from it in principle. The same shape, twice, against two different objections.
-
-{\small\begin{verbatim}
-theorem regress_parity_does_not_establish_difference : ¬Establishes
-    regressParityReachingForDifference
+theorem parity_leaves_the_distinction_open : Independent
+    regressUnderParity.premises (p
+    Claim.traditionIDiffersInPrincipleFromTradition0)
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \paragraph*{Geisler's circle}
@@ -3114,7 +3064,7 @@ theorem scripturalBounding_blocks_the_circle : ¬Establishes
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{universal\allowbreak{}Circularity\allowbreak{}Reading}}\par\nobreak\noindent
-The reading on which the circularity is granted and is universal.
+Barrett's own reading: the circle is granted, it is granted to be universal, and so it does not defeat this position in particular.
 
 {\small\begin{verbatim}
 def universalCircularityReading : Valuation Claim :=
@@ -3123,31 +3073,31 @@ def universalCircularityReading : Valuation Claim :=
     | Claim.circularityDefeatsTraditionI => False
     | x => True
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{parity\_\allowbreak{}blocks\_\allowbreak{}the\_\allowbreak{}circularity\_\allowbreak{}defeat}}\par\nobreak\noindent
-\textbf{Barrett's parity reply blocks the defeat.} Concede the circle; deny that it is a defect peculiar to this position, since any appeal to an ultimate authority is circular.
+\par\medskip\noindent\textbf{\texttt{universality\allowbreak{}Does\allowbreak{}Not\allowbreak{}Acquit\allowbreak{}Reading}}\par\nobreak\noindent
+The sceptic's reading of the same grounds: the circle is granted and its universality is granted, and the defeat lands anyway. That every ultimate authority reasons in a circle is read as a charge against all of them rather than an acquittal of any — including Tradition I.
+
+{\small\begin{verbatim}
+def universalityDoesNotAcquitReading : Valuation Claim :=
+  fun x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{parity\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}defeat\_\allowbreak{}open}}\par\nobreak\noindent
+\textbf{Barrett's parity reply leaves the defeat open.} Concede the circle; deny that it is a defect peculiar to this position, since any appeal to an ultimate authority is circular. On his grounds the defeat does not follow — and neither does its failure, because the same grounds are satisfied by the reading on which universal circularity convicts everyone rather than excusing anyone.
 
 The sixth instance of one move. Kruger on the canon, Mathison on interpretive authority, Athanasius on ὁμοούσιος, Whitaker on unwritten tradition, Geisler himself on who may interpret the Old Testament, and now Barrett on perspicuity — against Geisler, who deploys it himself elsewhere.
 
+\textbf{This result is not what it was.} It stood as half of a pair whose other half asked a \emph{different question of the same premises} — whether the reply clears the charge of circularity, not whether it blocks the defeat — and the pair was presented as though the two were complements. Naming the shape exposed that: an independence claim has to say which proposition is left open, and only one of the two could be named.
+
 {\small\begin{verbatim}
-theorem parity_blocks_the_circularity_defeat : ¬Establishes
-    circleDefeatUnderParity
+theorem parity_leaves_the_defeat_open : Independent defeatUnderParity.premises
+    (p Claim.circularityDefeatsTraditionI)
 -- axioms: propext, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{circularity\allowbreak{}Conceded\allowbreak{}Reading}}\par\nobreak\noindent
-The reading on which the circle is conceded outright.
+\par\medskip\noindent\textbf{\texttt{circle\_\allowbreak{}parity\_\allowbreak{}concedes\_\allowbreak{}the\_\allowbreak{}charge}}\par\nobreak\noindent
+\textbf{The reply does not merely fail to clear the charge — it grants it.} This is the second question, kept because it is worth asking and restated because the answer is stronger than "establishes nothing". Barrett's grounds include \texttt{tradition\allowbreak{}IReasoning\allowbreak{}Is\allowbreak{}Circular} outright: what the parity move denies is that the circularity is damaging, not that it is there. A position defended only by this reply is circular and keeping company, and that now follows from the reply's own premises rather than from the failure of a rival reading.
 
 {\small\begin{verbatim}
-def circularityConcededReading : Valuation Claim :=
-  fun x => True
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{circle\_\allowbreak{}parity\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}clear\_\allowbreak{}the\_\allowbreak{}charge}}\par\nobreak\noindent
-\textbf{And blocking is all it does, again.} The parity reply cannot clear the charge, because it grants it: what it denies is that the charge is damaging, not that it is true. A position defended only by this reply is circular and keeping company.
-
-Third time the pairing appears in this module, which is the point — it is a property of the move, not of the objection it answers.
-
-{\small\begin{verbatim}
-theorem circle_parity_does_not_clear_the_charge : ¬Establishes
-    circleParityReachingForVindication
+theorem circle_parity_concedes_the_charge : Establishes
+    circleParityConcedingTheCharge
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \paragraph*{Satisfiability}
@@ -3192,6 +3142,14 @@ Geisler's charge has a model.
 
 {\small\begin{verbatim}
 theorem geislerCircle_is_satisfiable : Satisfiable geislerCircle.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{circle\allowbreak{}Parity\allowbreak{}Conceding\allowbreak{}The\allowbreak{}Charge\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Barrett's parity grounds have a model — the sceptic's reading, which grants the circle, grants its universality, and lets the defeat land.
+
+{\small\begin{verbatim}
+theorem circleParityConcedingTheCharge_is_satisfiable : Satisfiable
+    circleParityConcedingTheCharge.premises
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{self\allowbreak{}Refutation\allowbreak{}Own\allowbreak{}Reading}}\par\nobreak\noindent

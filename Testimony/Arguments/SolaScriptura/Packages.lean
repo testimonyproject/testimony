@@ -7,10 +7,14 @@ Four positions on tradition, three objections, two parity replies, and the
 variants each result needs. The rivals were written before anything was proved
 about the position argued for.
 
-Three packages are built to be *refuted*. A reply is shown to block an
+Several packages are built to be *refuted*. A reply is shown to block an
 objection by writing the objection's line on the reply's grounds and exhibiting
-a countermodel; a reply is shown to be purely defensive by asking the same
-grounds for the conclusion and exhibiting another.
+a countermodel.
+
+The parity replies have no packages at all. What they do is that the disputed
+proposition comes out *independent* of the reply's grounds — neither entailed
+nor refuted by them — and `Independent` takes a premise list and a formula, so
+the reply's `Line` is all it needs.
 -/
 
 namespace Testimony.Arguments.SolaScriptura
@@ -91,36 +95,16 @@ def selfRefutationUnderScope : ArgumentPackage Claim :=
     name := "Self-refutation objection, answered by scoping the bindingness rule"
     premises := selfRefutationUnderFinalArbiter.premises }
 
-/-! ### The parity replies, and what they cost -/
+/-! ### The parity replies
 
-/-- The canon objection with Kruger's parity reply in play. -/
-def canonObjectionUnderParity : ArgumentPackage Claim :=
-  { canonObjection with
-    name := "Canon objection, with the parity reply in play"
-    premises := canonUnderParity.premises }
-
-/-- The same grounds, asked for the conclusion instead of for the block. -/
-def canonParityReachingForSoleRule : ArgumentPackage Claim :=
-  { canonObjection with
-    name := "Kruger's parity reply, asked for the sole rule"
-    premises := canonUnderParity.premises
-    conclusion := p .scriptureIsSoleInfallibleRule
-    conclusionLabel := soleRuleLabel }
-
-/-- The interpretive-authority regress with Mathison's parity reply in play. -/
-def interpretiveRegressUnderParity : ArgumentPackage Claim :=
-  { interpretiveRegress with
-    name := "Interpretive-authority regress, with the parity reply in play"
-    premises := regressUnderParity.premises }
-
-/-- The same grounds, asked to deliver the distinction rather than to block its
-denial. -/
-def regressParityReachingForDifference : ArgumentPackage Claim :=
-  { interpretiveRegress with
-    name := "Mathison's parity reply, asked for the distinction"
-    premises := regressUnderParity.premises
-    conclusion := p .traditionIDiffersInPrincipleFromTradition0
-    conclusionLabel := "sola scriptura differs in principle from solo scriptura" }
+No package here. What a parity reply does is stated as `Independent` over the
+reply's own line — see `Results` — and independence is a claim about a premise
+set and a proposition, not about a package's conclusion. Four packages used to
+stand here, two per reply, because `Establishes` is package-shaped and the
+reply had to be asked its question twice: once for the block and once for the
+conclusion. One statement replaces each pair, and the scaffolding goes with
+them.
+-/
 
 /-! ### The hinge, in its two roles -/
 
@@ -165,19 +149,19 @@ def geislerCircleUnderScripturalBounding : ArgumentPackage Claim :=
     name := "Geisler's charge, with the scriptural-bounding reply in play"
     premises := circleUnderScripturalBounding.premises }
 
-/-- The defeat with Barrett's parity reply in play. -/
-def circleDefeatUnderParity : ArgumentPackage Claim :=
-  { circleDefeats with
-    name := "The circularity defeat, with the parity reply in play"
-    premises := defeatUnderParity.premises }
+/-- Barrett's parity grounds, asked about the charge itself.
 
-/-- The same parity grounds, asked to show the circle is not there. -/
-def circleParityReachingForVindication : ArgumentPackage Claim :=
+Not "asked to clear the charge", which is what this package used to ask. The
+reply concedes the circle — `traditionIReasoningIsCircular` is one of its
+grounds — so the interesting question is not whether it fails to deliver the
+denial but that it delivers the charge. Asked the weaker question the answer is
+"no"; asked this one it is "yes, by its own premises". -/
+def circleParityConcedingTheCharge : ArgumentPackage Claim :=
   { circleDefeats with
-    name := "Barrett's parity reply, asked to clear the charge"
+    name := "Barrett's parity reply, asked about the charge itself"
     premises := defeatUnderParity.premises
-    conclusion := notP .traditionIReasoningIsCircular
-    conclusionLabel := "Tradition I's reasoning is not circular" }
+    conclusion := p .traditionIReasoningIsCircular
+    conclusionLabel := "Tradition I's reasoning is circular" }
 
 /-! ### Geisler's circle -/
 

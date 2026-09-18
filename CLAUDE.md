@@ -24,6 +24,11 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
   write the rival before proving anything.
 - **Never collapse relation types.** Quotation ≠ allusion ≠ typology ≠
   prediction. Disputed cases get both, attributed.
+- **Never record a parity reply as two results.** "It blocks the objection" and
+  "it establishes nothing" over one premise set are one fact: the disputed
+  proposition is `Independent` of that set. Stated as a pair, nothing checks
+  that the halves are about the same proposition — and a pair whose halves were
+  not reached `main`.
 - **Never restate a premise list to make a variant package.** A variant is a
   named difference: one `Line` on different grounds, via `Line.onGrounds`.
   Retyping twenty premises to drop one hides which one went.
@@ -82,7 +87,7 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Bib/` | `Core` types, `Attr` registry attribute, `Works` entries, `Render`, `Registry` guards |
 | `Testimony/Provenance.lean` | `Reference`, `Source`, `Tradition`, `Confidence` |
 | `Testimony/Intertext.lean` | Typed relations between passages |
-| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`/`refute_with`) |
+| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels + `Independent`, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`/`refute_with`/`satisfied_by`/`leaves_open`) |
 | `Testimony/Argument.lean` | Criteria, definitions, `Satisfies`, `People` |
 | `Testimony/Arguments/` | The worked arguments. Over ~500 lines an argument becomes a directory: `Atoms`, `Sources`, `Lines`, `Packages`, `Results`, with the root module reduced to imports and the module docstring |
 | `Testimony/Logic/Page` | `Item` — what a generated page is made of, before either rendering |
@@ -112,8 +117,10 @@ from source.
   stay at the bottom of `Works.lean`.
 - `List.filter` over a derived `DecidableEq (Formula α)` does not kernel-reduce;
   state reduced packages explicitly instead.
-- **Never hand-write the entailment proof recipe.** Use `establish [defs...]`
-  and `refute_with <namedValuation> [defs...]` from `Testimony.Logic.Tactic`.
+- **Never hand-write the entailment proof recipe.** Use `establish [defs...]`,
+  `refute_with <namedValuation> [defs...]`, `satisfied_by <namedValuation>
+  [defs...]` and `leaves_open <falsifies> <verifies> [defs...]` from
+  `Testimony.Logic.Tactic`.
   The bracketed list names only what to unfold — the package, its lines, its
   steps. This used to be a documentation rule: `Formula` is also an abbrev in
   `Testimony.Logic`, so an unqualified `Formula.Boolean.val` resolves to the

@@ -2,9 +2,9 @@ import Testimony.Logic.Line
 import Mathlib.Tactic.Tauto
 
 /-!
-# Testimony.Logic.Tactic — `establish` and `refute_with`
+# Testimony.Logic.Tactic — `establish`, `refute_with`, `satisfied_by`, `leaves_open`
 
-Two tactics, replacing a recipe that was copied into every result in the
+Four tactics, replacing a recipe that was copied into every result in the
 library.
 
 ## Why this is a soundness fix and not a convenience
@@ -35,6 +35,11 @@ theorem christian_establishes : Establishes christian := by
 
 theorem critical_not_establishes : ¬ Establishes critical := by
   refute_with criticalReading [critical, criticalExclusion, toCriterion]
+
+theorem parity_leaves_the_canon_open :
+    Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
+  leaves_open parityEstablishesNothingReading krugerParityReading
+    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
 ```
 
 The bracketed list names the definitions to unfold — the package, the lines of
@@ -43,7 +48,8 @@ the tactic: `caseOf`, `conjOf`, `p`, `notP`, the list-membership lemmas that
 turn `∀ φ ∈ prems` into a conjunction, and the semantics.
 
 `refute_with` takes an **identifier**, not a term, so the countermodel has to be
-a named definition. That is deliberate. The style guide asks for countermodels
+a named definition, and `leaves_open` takes two for the same reason. That is
+deliberate. The style guide asks for countermodels
 named after the position they encode, because a countermodel *is* the rival's
 reading written down; an inline valuation would satisfy the checker and tell a
 reader nothing.
@@ -129,6 +135,35 @@ macro_rules
              List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
              FFL.Propositional.Formula.Boolean.val]))
 
+/-- Prove `Independent prems φ` by naming the two readings a parity reply
+leaves available: one on which the proposition fails, and one on which it
+holds, both satisfying every premise.
+
+The order is the order of `Independent`'s two halves — first the reading that
+refutes the proposition, then the reading that refutes its negation. Read it as
+the claim the theorem makes: *these premises admit this reading, and also that
+one, so they settle nothing either way.*
+
+Two identifiers rather than one, for the same reason `refute_with` takes an
+identifier at all. An independence result is two rival readings of one premise
+set, and both of them are positions someone holds. -/
+syntax "leaves_open" ppSpace ident ppSpace ident (ppSpace "[" simpLemma,+ "]")? : tactic
+
+macro_rules
+  | `(tactic| leaves_open $vf:ident $vt:ident) =>
+    `(tactic| leaves_open $vf $vt [Testimony.Logic.caseOf])
+  | `(tactic| leaves_open $vf:ident $vt:ident [$ls,*]) =>
+    `(tactic|
+        (refine Testimony.Logic.independent_of_countermodels $vf $vt ?_ ?_ ?_ ?_ <;>
+           simp [$ls,*, $vf:ident, $vt:ident, Testimony.Logic.caseOf,
+             Testimony.Logic.Line.asPackage,
+             Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+             Testimony.Logic.p, Testimony.Logic.notP,
+             List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
+             List.cons_append, List.nil_append, List.append_nil,
+             List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
+             FFL.Propositional.Formula.Boolean.val]))
+
 /-! ### Sanity checks
 
 These tactics are the library's only route to a proof about an argument, so a
@@ -165,6 +200,14 @@ def bothHoldReading : Valuation Pair := fun _ => True
 theorem satisfied_by_models_a_consistent_pair :
     Satisfiable (α := Pair) [p .p, .imp (p .p) (p .q)] := by
   satisfied_by bothHoldReading
+
+/-- `leaves_open` proves independence: from `q` and `p → q`, the premises
+settle nothing about `p` either way. `affirmingConsequentReading` is the
+reading on which `p` fails; `bothHoldReading` is the reading on which it
+holds. -/
+theorem leaves_open_shows_p_is_independent :
+    Independent (α := Pair) [p .q, .imp (p .p) (p .q)] (p .p) := by
+  leaves_open affirmingConsequentReading bothHoldReading
 
 /-- And a contradictory premise set has none, so it entails anything — the
 hazard `entails_of_unsatisfiable` names, exhibited. -/

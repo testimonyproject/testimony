@@ -11,6 +11,9 @@ the end.
 
 ## Four ideas, and then you can read anything here
 
+(A fifth, further down, is needed only for the replies that settle nothing;
+come back to it when you meet one.)
+
 ### An atom is a claim, quoted
 
 An **atom** is one indivisible claim, written down once and given a name. The
@@ -81,6 +84,39 @@ conceding a charge is not answering it.
 The library states both halves. `compatibility_does_not_establish_criterion` is
 the result recording that a reply of this kind is purely defensive. When you see
 a pair like that, the second half is not a hedge; it is the price.
+
+## A fifth idea, for the replies that settle nothing
+
+### Independence: the premises settle nothing either way
+
+Sometimes the two halves above are not two facts. Take a set of premises and
+one disputed claim. Three things can be true of them:
+
+- the premises **entail** the claim — grant them and you are stuck with it;
+- the premises entail its **denial** — grant them and you are stuck without it;
+- the premises do **neither**. There is a way of reading them on which the
+  claim holds, and another way, equally faithful to every premise, on which it
+  does not.
+
+The third is **independence**: *the premises settle nothing either way.* It is
+shown by exhibiting both readings — two countermodels rather than one, each
+satisfying every premise, disagreeing only about the claim in dispute.
+
+This is exactly what a parity reply produces. "It blocks the objection" means
+the denial does not follow; "it establishes nothing" means the claim does not
+follow either. Together they say the reply leaves the question open, and
+`parity_leaves_the_canon_open` says it in one result instead of two.
+
+A pair of results can hide a mistake that a single result cannot, and this is
+not hypothetical. One of the three parity replies in the sola scriptura
+argument was written as a pair whose halves were about *different claims* over
+the same premises, while being presented as complements. Restating the pattern
+as independence forced the claim to be named once, and the mismatch was
+immediate.
+
+Reading an independence result, your job is the same as ever and now doubled:
+**are both readings ones someone would actually hold?** A reading nobody
+occupies proves the premises settle nothing only in a sense nobody cares about.
 
 ## What to look for when you review
 

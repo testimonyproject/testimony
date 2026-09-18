@@ -196,10 +196,27 @@ theorem scoping_blocks_self_refutation : ¬ Establishes selfRefutationUnderScope
 /-! ### The parity replies, and what they are worth
 
 Kruger on the canon and Mathison on interpretive authority make the same move:
-concede the circularity, deny that it discriminates between the positions. Each
-gets two results, because blocking an objection and establishing a conclusion
-are different things — the lesson `compatibility_does_not_establish_criterion`
-already records for a different argument. -/
+concede the circularity, deny that it discriminates between the positions.
+
+Each used to get two results — one that it blocks the objection, one that it
+establishes nothing — and that is one result too many. A premise set that
+entails neither a proposition nor its negation leaves that proposition
+*independent* of it, and blocking and establishing-nothing are the two halves
+of that single fact. Foundation names the notion for provability;
+`Testimony.Logic.Independent` is its semantic counterpart, and `leaves_open`
+proves it from the two readings the premises admit.
+
+The gain is not brevity. Stated as a pair, nothing checks that the two halves
+are about the same proposition — and in the Geisler case below they were
+not. -/
+
+/-- The reading on which the parity point is granted and the sole rule still
+does not follow: the canon came through the Church, the rival's authority is
+self-authenticating too, and scripture is not the sole infallible rule. -/
+def parityEstablishesNothingReading : Valuation Claim := fun a =>
+  match a with
+  | .scriptureIsSoleInfallibleRule => False
+  | _ => True
 
 /-- Kruger's reading: the canon's reception is conceded, and the demand for an
 infallible identifying authority is refused, because the rival's own authority
@@ -209,32 +226,31 @@ def krugerParityReading : Valuation Claim := fun a =>
   | .identifyingCanonRequiresInfallibleAuthority => False
   | _ => True
 
-/-- **The parity reply blocks the canon objection.** -/
+/-- **The parity reply leaves the canon question open.** Granted Kruger's
+grounds, the sole infallible rule neither follows nor fails: his own reading
+has it, and the reading on which the parity point is conceded and the sole rule
+still denied has it not. Both satisfy every premise.
+
+That is the whole of what the reply achieves, in one claim. It blocks the canon
+objection — the objection's denial is no longer entailed — and it establishes
+nothing, because the conclusion is not entailed either. The parity move is
+purely defensive, and this is the form that says so without saying it twice. -/
 @[headline]
-theorem parity_blocks_canon_objection : ¬ Establishes canonObjectionUnderParity := by
-  refute_with krugerParityReading [canonObjectionUnderParity, canonObjection,
-    canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
+theorem parity_leaves_the_canon_open :
+    Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
+  leaves_open parityEstablishesNothingReading krugerParityReading
+    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
 
-#print axioms parity_blocks_canon_objection
+#print axioms parity_leaves_the_canon_open
 
-/-- The reading on which the parity point is granted and the sole rule still
-does not follow. -/
-def parityEstablishesNothingReading : Valuation Claim := fun a =>
+/-- The reading on which the parity point is granted and the distinction still
+does not follow: tradition is ministerial, choosing an authority is private
+judgement, and sola scriptura does not differ in principle from solo
+scriptura. -/
+def distinctionUnestablishedReading : Valuation Claim := fun a =>
   match a with
-  | .scriptureIsSoleInfallibleRule => False
+  | .traditionIDiffersInPrincipleFromTradition0 => False
   | _ => True
-
-/-- **And blocking is all it does.** The same grounds, asked for the conclusion
-rather than for the block, deliver nothing. The parity reply is purely
-defensive: it neutralises the objection without establishing the position. -/
-@[headline]
-theorem canon_parity_does_not_establish_sole_rule :
-    ¬ Establishes canonParityReachingForSoleRule := by
-  refute_with parityEstablishesNothingReading [canonParityReachingForSoleRule,
-    canonObjection, canonUnderParity, Line.onGrounds, canonObjectionLine,
-    canonObjectionStep]
-
-#print axioms canon_parity_does_not_establish_sole_rule
 
 /-- Mathison's reading: ministerial authority is retained, and the claim that
 the individual keeps ultimate interpretive authority is refused, because
@@ -244,35 +260,23 @@ def mathisonParityReading : Valuation Claim := fun a =>
   | .individualRetainsUltimateInterpretiveAuthority => False
   | _ => True
 
-/-- **The parity reply blocks the interpretive-authority regress.** -/
+/-- **And the same for interpretive authority.** That choosing an authority is
+itself private judgement defeats the charge that Tradition I collapses into
+Tradition 0; it does not show that Tradition I differs from it in principle.
+Both readings satisfy Mathison's grounds, so his grounds settle the question
+neither way.
+
+The same shape, twice, against two different objections — which is the point.
+It is a property of the move, not of the objection it answers. -/
 @[headline]
-theorem parity_blocks_interpretive_regress :
-    ¬ Establishes interpretiveRegressUnderParity := by
-  refute_with mathisonParityReading [interpretiveRegressUnderParity,
-    interpretiveRegress, regressUnderParity, Line.onGrounds,
-    interpretiveRegressLine, interpretiveRegressStep]
+theorem parity_leaves_the_distinction_open :
+    Independent regressUnderParity.premises
+      (p .traditionIDiffersInPrincipleFromTradition0) := by
+  leaves_open distinctionUnestablishedReading mathisonParityReading
+    [regressUnderParity, Line.onGrounds, interpretiveRegressLine,
+      interpretiveRegressStep]
 
-#print axioms parity_blocks_interpretive_regress
-
-/-- The reading on which the parity point is granted and the distinction still
-does not follow. -/
-def distinctionUnestablishedReading : Valuation Claim := fun a =>
-  match a with
-  | .traditionIDiffersInPrincipleFromTradition0 => False
-  | _ => True
-
-/-- **And blocking is all this one does either.** That choosing an authority is
-private judgement defeats the charge that Tradition I collapses into Tradition
-0; it does not show that Tradition I differs from it in principle. The same
-shape, twice, against two different objections. -/
-@[headline]
-theorem regress_parity_does_not_establish_difference :
-    ¬ Establishes regressParityReachingForDifference := by
-  refute_with distinctionUnestablishedReading [regressParityReachingForDifference,
-    interpretiveRegress, regressUnderParity, Line.onGrounds,
-    interpretiveRegressLine, interpretiveRegressStep]
-
-#print axioms regress_parity_does_not_establish_difference
+#print axioms parity_leaves_the_distinction_open
 
 /-! ### Geisler's circle -/
 
@@ -397,46 +401,58 @@ theorem scripturalBounding_blocks_the_circle :
 
 #print axioms scripturalBounding_blocks_the_circle
 
-/-- The reading on which the circularity is granted and is universal. -/
+/-- Barrett's own reading: the circle is granted, it is granted to be
+universal, and so it does not defeat this position in particular. -/
 def universalCircularityReading : Valuation Claim := fun a =>
   match a with
   | .circularityDefeatsTraditionI => False
   | _ => True
 
-/-- **Barrett's parity reply blocks the defeat.** Concede the circle; deny that
-it is a defect peculiar to this position, since any appeal to an ultimate
-authority is circular.
+/-- The sceptic's reading of the same grounds: the circle is granted and its
+universality is granted, and the defeat lands anyway. That every ultimate
+authority reasons in a circle is read as a charge against all of them rather
+than an acquittal of any — including Tradition I. -/
+def universalityDoesNotAcquitReading : Valuation Claim := fun _ => True
+
+/-- **Barrett's parity reply leaves the defeat open.** Concede the circle; deny
+that it is a defect peculiar to this position, since any appeal to an ultimate
+authority is circular. On his grounds the defeat does not follow — and neither
+does its failure, because the same grounds are satisfied by the reading on
+which universal circularity convicts everyone rather than excusing anyone.
 
 The sixth instance of one move. Kruger on the canon, Mathison on interpretive
 authority, Athanasius on ὁμοούσιος, Whitaker on unwritten tradition, Geisler
 himself on who may interpret the Old Testament, and now Barrett on perspicuity
-— against Geisler, who deploys it himself elsewhere. -/
+— against Geisler, who deploys it himself elsewhere.
+
+**This result is not what it was.** It stood as half of a pair whose other half
+asked a *different question of the same premises* — whether the reply clears
+the charge of circularity, not whether it blocks the defeat — and the pair was
+presented as though the two were complements. Naming the shape exposed that:
+an independence claim has to say which proposition is left open, and only one
+of the two could be named. -/
 @[headline]
-theorem parity_blocks_the_circularity_defeat :
-    ¬ Establishes circleDefeatUnderParity := by
-  refute_with universalCircularityReading [circleDefeatUnderParity, circleDefeats,
-    defeatUnderParity, Line.onGrounds, circleDefeatsLine, circularityDefeats]
+theorem parity_leaves_the_defeat_open :
+    Independent defeatUnderParity.premises (p .circularityDefeatsTraditionI) := by
+  leaves_open universalCircularityReading universalityDoesNotAcquitReading
+    [defeatUnderParity, Line.onGrounds, circleDefeatsLine, circularityDefeats]
 
-#print axioms parity_blocks_the_circularity_defeat
+#print axioms parity_leaves_the_defeat_open
 
-/-- The reading on which the circle is conceded outright. -/
-def circularityConcededReading : Valuation Claim := fun _ => True
-
-/-- **And blocking is all it does, again.** The parity reply cannot clear the
-charge, because it grants it: what it denies is that the charge is damaging,
-not that it is true. A position defended only by this reply is circular and
-keeping company.
-
-Third time the pairing appears in this module, which is the point — it is a
-property of the move, not of the objection it answers. -/
+/-- **The reply does not merely fail to clear the charge — it grants it.** This
+is the second question, kept because it is worth asking and restated because
+the answer is stronger than "establishes nothing". Barrett's grounds include
+`traditionIReasoningIsCircular` outright: what the parity move denies is that
+the circularity is damaging, not that it is there. A position defended only by
+this reply is circular and keeping company, and that now follows from the
+reply's own premises rather than from the failure of a rival reading. -/
 @[headline]
-theorem circle_parity_does_not_clear_the_charge :
-    ¬ Establishes circleParityReachingForVindication := by
-  refute_with circularityConcededReading [circleParityReachingForVindication,
-    circleDefeats, defeatUnderParity, Line.onGrounds, circleDefeatsLine,
-    circularityDefeats]
+theorem circle_parity_concedes_the_charge :
+    Establishes circleParityConcedingTheCharge := by
+  establish [circleParityConcedingTheCharge, circleDefeats, defeatUnderParity,
+    Line.onGrounds, circleDefeatsLine, circularityDefeats]
 
-#print axioms circle_parity_does_not_clear_the_charge
+#print axioms circle_parity_concedes_the_charge
 
 /-! ### Satisfiability
 
@@ -480,6 +496,14 @@ theorem protestantWithoutHinge_is_satisfiable :
 /-- Geisler's charge has a model. -/
 theorem geislerCircle_is_satisfiable : Satisfiable geislerCircle.premises := by
   satisfied_by everythingHoldsReading [geislerCircle, geislerCircleLine, circleStep]
+
+/-- Barrett's parity grounds have a model — the sceptic's reading, which grants
+the circle, grants its universality, and lets the defeat land. -/
+theorem circleParityConcedingTheCharge_is_satisfiable :
+    Satisfiable circleParityConcedingTheCharge.premises := by
+  satisfied_by universalityDoesNotAcquitReading [circleParityConcedingTheCharge,
+    circleDefeats, defeatUnderParity, Line.onGrounds, circleDefeatsLine,
+    circularityDefeats]
 
 /-- The world the self-refutation objection describes: scripture does not teach
 the principle, so the sole rule does not bind. -/

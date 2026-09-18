@@ -760,10 +760,14 @@ Four positions on tradition, three objections, two parity replies, and the
 variants each result needs. The rivals were written before anything was proved
 about the position argued for.
 
-Three packages are built to be *refuted*. A reply is shown to block an
+Several packages are built to be *refuted*. A reply is shown to block an
 objection by writing the objection's line on the reply's grounds and exhibiting
-a countermodel; a reply is shown to be purely defensive by asking the same
-grounds for the conclusion and exhibiting another.
+a countermodel.
+
+The parity replies have no packages at all. What they do is that the disputed
+proposition comes out *independent* of the reply's grounds — neither entailed
+nor refuted by them — and `Independent` takes a premise list and a formula, so
+the reply's `Line` is all it needs.
 
 #### The positions
 
@@ -977,80 +981,15 @@ needed.
 
 No premise here rests on scripture alone.
 
-#### The parity replies, and what they cost
+#### The parity replies
 
-<a id="canonObjectionUnderParity"></a>
-**`canonObjectionUnderParity`** — Canon objection, with the parity reply in play
-
-The canon objection with Kruger's parity reply in play.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{16} \\
-\text{(2)} \quad &amp; P_{18} \\
-\text{(3)} \quad &amp; (P_{16} \land P_{17}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="canonParityReachingForSoleRule"></a>
-**`canonParityReachingForSoleRule`** — Kruger's parity reply, asked for the sole rule
-
-The same grounds, asked for the conclusion instead of for the block.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{16} \\
-\text{(2)} \quad &amp; P_{18} \\
-\text{(3)} \quad &amp; (P_{16} \land P_{17}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="interpretiveRegressUnderParity"></a>
-**`interpretiveRegressUnderParity`** — Interpretive-authority regress, with the parity reply in play
-
-The interpretive-authority regress with Mathison's parity reply in play.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{19} \\
-\text{(2)} \quad &amp; P_{22} \\
-\text{(3)} \quad &amp; (P_{19} \land P_{21}) \rightarrow \lnot P_{20} \\[4pt]
-\vdash \quad &amp; \lnot P_{20}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="regressParityReachingForDifference"></a>
-**`regressParityReachingForDifference`** — Mathison's parity reply, asked for the distinction
-
-The same grounds, asked to deliver the distinction rather than to block its
-denial.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{19} \\
-\text{(2)} \quad &amp; P_{22} \\
-\text{(3)} \quad &amp; (P_{19} \land P_{21}) \rightarrow \lnot P_{20} \\[4pt]
-\vdash \quad &amp; P_{20}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
+No package here. What a parity reply does is stated as `Independent` over the
+reply's own line — see `Results` — and independence is a claim about a premise
+set and a proposition, not about a package's conclusion. Four packages used to
+stand here, two per reply, because `Establishes` is package-shaped and the
+reply had to be asked its question twice: once for the block and once for the
+conclusion. One statement replaces each pair, and the scaffolding goes with
+them.
 
 #### The hinge, in its two roles
 
@@ -1180,28 +1119,16 @@ The charge with the proposed scriptural-bounding reply in play.
 
 No premise here rests on scripture alone.
 
-<a id="circleDefeatUnderParity"></a>
-**`circleDefeatUnderParity`** — The circularity defeat, with the parity reply in play
+<a id="circleParityConcedingTheCharge"></a>
+**`circleParityConcedingTheCharge`** — Barrett's parity reply, asked about the charge itself
 
-The defeat with Barrett's parity reply in play.
+Barrett's parity grounds, asked about the charge itself.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{31} \\
-\text{(2)} \quad &amp; P_{33} \\
-\text{(3)} \quad &amp; (P_{31} \land \lnot P_{33}) \rightarrow P_{32} \\[4pt]
-\vdash \quad &amp; P_{32}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="circleParityReachingForVindication"></a>
-**`circleParityReachingForVindication`** — Barrett's parity reply, asked to clear the charge
-
-The same parity grounds, asked to show the circle is not there.
+Not "asked to clear the charge", which is what this package used to ask. The
+reply concedes the circle — `traditionIReasoningIsCircular` is one of its
+grounds — so the interesting question is not whether it fails to deliver the
+denial but that it delivers the charge. Asked the weaker question the answer is
+"no"; asked this one it is "yes, by its own premises".
 
 <div class="testimony-math">
 \[
@@ -1209,7 +1136,7 @@ The same parity grounds, asked to show the circle is not there.
 \text{(1)} \quad &amp; P_{31} \\
 \text{(2)} \quad &amp; P_{33} \\
 \text{(3)} \quad &amp; (P_{31} \land \lnot P_{33}) \rightarrow P_{32} \\[4pt]
-\vdash \quad &amp; \lnot P_{31}
+\vdash \quad &amp; P_{31}
 \end{aligned}
 \]
 </div>
@@ -1514,10 +1441,34 @@ theorem scoping_blocks_self_refutation : ¬Establishes selfRefutationUnderScope
 #### The parity replies, and what they are worth
 
 Kruger on the canon and Mathison on interpretive authority make the same move:
-concede the circularity, deny that it discriminates between the positions. Each
-gets two results, because blocking an objection and establishing a conclusion
-are different things — the lesson `compatibility_does_not_establish_criterion`
-already records for a different argument.
+concede the circularity, deny that it discriminates between the positions.
+
+Each used to get two results — one that it blocks the objection, one that it
+establishes nothing — and that is one result too many. A premise set that
+entails neither a proposition nor its negation leaves that proposition
+*independent* of it, and blocking and establishing-nothing are the two halves
+of that single fact. Foundation names the notion for provability;
+`Testimony.Logic.Independent` is its semantic counterpart, and `leaves_open`
+proves it from the two readings the premises admit.
+
+The gain is not brevity. Stated as a pair, nothing checks that the two halves
+are about the same proposition — and in the Geisler case below they were
+not.
+
+<a id="parityEstablishesNothingReading"></a>
+**`parityEstablishesNothingReading`**
+
+The reading on which the parity point is granted and the sole rule still
+does not follow: the canon came through the Church, the rival's authority is
+self-authenticating too, and scripture is not the sole infallible rule.
+
+```lean
+def parityEstablishesNothingReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.scriptureIsSoleInfallibleRule => False
+    | x => True
+```
 
 <a id="krugerParityReading"></a>
 **`krugerParityReading`**
@@ -1536,41 +1487,41 @@ def krugerParityReading : Valuation Claim :=
     | x => True
 ```
 
-<a id="parity_blocks_canon_objection"></a>
-**`parity_blocks_canon_objection`**
+<a id="parity_leaves_the_canon_open"></a>
+**`parity_leaves_the_canon_open`**
 
-**The parity reply blocks the canon objection.**
+**The parity reply leaves the canon question open.** Granted Kruger's
+grounds, the sole infallible rule neither follows nor fails: his own reading
+has it, and the reading on which the parity point is conceded and the sole rule
+still denied has it not. Both satisfy every premise.
+
+That is the whole of what the reply achieves, in one claim. It blocks the canon
+objection — the objection's denial is no longer entailed — and it establishes
+nothing, because the conclusion is not entailed either. The parity move is
+purely defensive, and this is the form that says so without saying it twice.
 
 ```lean
-theorem parity_blocks_canon_objection : ¬Establishes canonObjectionUnderParity
+theorem parity_leaves_the_canon_open : Independent canonUnderParity.premises
+    (p Claim.scriptureIsSoleInfallibleRule)
 -- axioms: propext, Quot.sound
 ```
 
-<a id="parityEstablishesNothingReading"></a>
-**`parityEstablishesNothingReading`**
+<a id="distinctionUnestablishedReading"></a>
+**`distinctionUnestablishedReading`**
 
-The reading on which the parity point is granted and the sole rule still
-does not follow.
+The reading on which the parity point is granted and the distinction still
+does not follow: tradition is ministerial, choosing an authority is private
+judgement, and sola scriptura does not differ in principle from solo
+scriptura.
 
 ```lean
-def parityEstablishesNothingReading : Valuation Claim :=
+def distinctionUnestablishedReading : Valuation Claim :=
   fun a =>
     match a with
-    | Claim.scriptureIsSoleInfallibleRule => False
+    |
+    Claim.traditionIDiffersInPrincipleFromTradition0 =>
+      False
     | x => True
-```
-
-<a id="canon_parity_does_not_establish_sole_rule"></a>
-**`canon_parity_does_not_establish_sole_rule`**
-
-**And blocking is all it does.** The same grounds, asked for the conclusion
-rather than for the block, deliver nothing. The parity reply is purely
-defensive: it neutralises the objection without establishing the position.
-
-```lean
-theorem canon_parity_does_not_establish_sole_rule : ¬Establishes
-    canonParityReachingForSoleRule
--- axioms: propext, Quot.sound
 ```
 
 <a id="mathisonParityReading"></a>
@@ -1590,44 +1541,22 @@ def mathisonParityReading : Valuation Claim :=
     | x => True
 ```
 
-<a id="parity_blocks_interpretive_regress"></a>
-**`parity_blocks_interpretive_regress`**
+<a id="parity_leaves_the_distinction_open"></a>
+**`parity_leaves_the_distinction_open`**
 
-**The parity reply blocks the interpretive-authority regress.**
+**And the same for interpretive authority.** That choosing an authority is
+itself private judgement defeats the charge that Tradition I collapses into
+Tradition 0; it does not show that Tradition I differs from it in principle.
+Both readings satisfy Mathison's grounds, so his grounds settle the question
+neither way.
 
-```lean
-theorem parity_blocks_interpretive_regress : ¬Establishes
-    interpretiveRegressUnderParity
--- axioms: propext, Quot.sound
-```
-
-<a id="distinctionUnestablishedReading"></a>
-**`distinctionUnestablishedReading`**
-
-The reading on which the parity point is granted and the distinction still
-does not follow.
+The same shape, twice, against two different objections — which is the point.
+It is a property of the move, not of the objection it answers.
 
 ```lean
-def distinctionUnestablishedReading : Valuation Claim :=
-  fun a =>
-    match a with
-    |
-    Claim.traditionIDiffersInPrincipleFromTradition0 =>
-      False
-    | x => True
-```
-
-<a id="regress_parity_does_not_establish_difference"></a>
-**`regress_parity_does_not_establish_difference`**
-
-**And blocking is all this one does either.** That choosing an authority is
-private judgement defeats the charge that Tradition I collapses into Tradition
-0; it does not show that Tradition I differs from it in principle. The same
-shape, twice, against two different objections.
-
-```lean
-theorem regress_parity_does_not_establish_difference : ¬Establishes
-    regressParityReachingForDifference
+theorem parity_leaves_the_distinction_open : Independent
+    regressUnderParity.premises (p
+    Claim.traditionIDiffersInPrincipleFromTradition0)
 -- axioms: propext, Quot.sound
 ```
 
@@ -1790,7 +1719,8 @@ theorem scripturalBounding_blocks_the_circle : ¬Establishes
 <a id="universalCircularityReading"></a>
 **`universalCircularityReading`**
 
-The reading on which the circularity is granted and is universal.
+Barrett's own reading: the circle is granted, it is granted to be
+universal, and so it does not defeat this position in particular.
 
 ```lean
 def universalCircularityReading : Valuation Claim :=
@@ -1800,48 +1730,60 @@ def universalCircularityReading : Valuation Claim :=
     | x => True
 ```
 
-<a id="parity_blocks_the_circularity_defeat"></a>
-**`parity_blocks_the_circularity_defeat`**
+<a id="universalityDoesNotAcquitReading"></a>
+**`universalityDoesNotAcquitReading`**
 
-**Barrett's parity reply blocks the defeat.** Concede the circle; deny that
-it is a defect peculiar to this position, since any appeal to an ultimate
-authority is circular.
+The sceptic's reading of the same grounds: the circle is granted and its
+universality is granted, and the defeat lands anyway. That every ultimate
+authority reasons in a circle is read as a charge against all of them rather
+than an acquittal of any — including Tradition I.
+
+```lean
+def universalityDoesNotAcquitReading : Valuation Claim :=
+  fun x => True
+```
+
+<a id="parity_leaves_the_defeat_open"></a>
+**`parity_leaves_the_defeat_open`**
+
+**Barrett's parity reply leaves the defeat open.** Concede the circle; deny
+that it is a defect peculiar to this position, since any appeal to an ultimate
+authority is circular. On his grounds the defeat does not follow — and neither
+does its failure, because the same grounds are satisfied by the reading on
+which universal circularity convicts everyone rather than excusing anyone.
 
 The sixth instance of one move. Kruger on the canon, Mathison on interpretive
 authority, Athanasius on ὁμοούσιος, Whitaker on unwritten tradition, Geisler
 himself on who may interpret the Old Testament, and now Barrett on perspicuity
 — against Geisler, who deploys it himself elsewhere.
 
+**This result is not what it was.** It stood as half of a pair whose other half
+asked a *different question of the same premises* — whether the reply clears
+the charge of circularity, not whether it blocks the defeat — and the pair was
+presented as though the two were complements. Naming the shape exposed that:
+an independence claim has to say which proposition is left open, and only one
+of the two could be named.
+
 ```lean
-theorem parity_blocks_the_circularity_defeat : ¬Establishes
-    circleDefeatUnderParity
+theorem parity_leaves_the_defeat_open : Independent defeatUnderParity.premises
+    (p Claim.circularityDefeatsTraditionI)
 -- axioms: propext, Quot.sound
 ```
 
-<a id="circularityConcededReading"></a>
-**`circularityConcededReading`**
+<a id="circle_parity_concedes_the_charge"></a>
+**`circle_parity_concedes_the_charge`**
 
-The reading on which the circle is conceded outright.
-
-```lean
-def circularityConcededReading : Valuation Claim :=
-  fun x => True
-```
-
-<a id="circle_parity_does_not_clear_the_charge"></a>
-**`circle_parity_does_not_clear_the_charge`**
-
-**And blocking is all it does, again.** The parity reply cannot clear the
-charge, because it grants it: what it denies is that the charge is damaging,
-not that it is true. A position defended only by this reply is circular and
-keeping company.
-
-Third time the pairing appears in this module, which is the point — it is a
-property of the move, not of the objection it answers.
+**The reply does not merely fail to clear the charge — it grants it.** This
+is the second question, kept because it is worth asking and restated because
+the answer is stronger than "establishes nothing". Barrett's grounds include
+`traditionIReasoningIsCircular` outright: what the parity move denies is that
+the circularity is damaging, not that it is there. A position defended only by
+this reply is circular and keeping company, and that now follows from the
+reply's own premises rather than from the failure of a rival reading.
 
 ```lean
-theorem circle_parity_does_not_clear_the_charge : ¬Establishes
-    circleParityReachingForVindication
+theorem circle_parity_concedes_the_charge : Establishes
+    circleParityConcedingTheCharge
 -- axioms: propext, Quot.sound
 ```
 
@@ -1913,6 +1855,18 @@ Geisler's charge has a model.
 
 ```lean
 theorem geislerCircle_is_satisfiable : Satisfiable geislerCircle.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="circleParityConcedingTheCharge_is_satisfiable"></a>
+**`circleParityConcedingTheCharge_is_satisfiable`**
+
+Barrett's parity grounds have a model — the sceptic's reading, which grants
+the circle, grants its universality, and lets the defeat land.
+
+```lean
+theorem circleParityConcedingTheCharge_is_satisfiable : Satisfiable
+    circleParityConcedingTheCharge.premises
 -- axioms: propext, Quot.sound
 ```
 
