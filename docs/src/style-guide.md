@@ -105,6 +105,12 @@ length.
   Write the rival *before* proving anything. Rule L5 enforces this.
 - **There is no atom budget.** Entailment is settled by `tauto` and refuted by
   named countermodels, neither of which enumerates valuations.
+- **Write formulas in Foundation's notation.** `🡒`, `⋏`, `⋎`, `∼`, and `⋀` for
+  the conjunction of a list — not the raw constructors `.imp`, `.and`, `.or`.
+  They build the same terms, but only the notation is what Foundation's
+  `@[simp]` truth lemmas are indexed under, and those lemmas are where the
+  proof recipes get their semantics. `p` and `notP` stay: a reader of a rival's
+  premise list should not have to decode the encoding of negation.
 - **Compose arguments from lines of reason.** A strand is a `Line` — its own
   grounds, its own inference step, what it delivers — and a package is
   `caseOf lines shared closing`. A variant package is then a named difference
@@ -141,13 +147,14 @@ theorem parity_leaves_the_canon_open :
 ```
 
 The bracketed list names what to unfold: the package, the lines it is built
-from, the inference steps. Everything generic — `caseOf`, `conjOf`, `p`,
+from, the inference steps. Everything generic — `caseOf`, `p`,
 `notP`, the list-membership lemmas, and the semantics — is supplied by the
 tactic.
 
 **This closes a silent-failure hole.** `Formula` is an abbreviation in
 `Testimony.Logic` as well as a structure in Foundation, so inside an argument
-module the short name `Formula.Boolean.val` resolves to the wrong namespace.
+module the short name `Formula.Boolean.val` used to resolve to the wrong
+namespace.
 The semantics then never unfold, `simp` leaves the hypothesis alone, and the
 proof term rests on `sorryAx` — with a **successful build**. Only tier 3 catches
 it, and only afterwards. Written once inside a macro quotation, where
