@@ -18,6 +18,31 @@ atoms. Two questions get asked of it, and they are answered by different means.
 tableau. It produces an ordinary proof term, so the trust base is unchanged,
 and its cost tracks the argument's structure rather than its atom count.
 
+`Entails` is not defined here. It is Foundation's logical consequence relation,
+`T ⊨[M] φ`, at this library's premise lists:
+
+```lean
+def premiseSet (prems : List (Formula α)) : Set (Formula α) := {φ | φ ∈ prems}
+
+def Entails (prems : List (Formula α)) (concl : Formula α) : Prop :=
+  premiseSet prems ⊨[Valuation α] concl
+```
+
+**Why two shapes.** Consequence is about a *set* of premises — order and
+repetition make no difference to it, and Foundation states it over `Set F`
+accordingly. A package's premises are a *list*, because `manifest` is computed
+by walking them and `Set F` is `F → Prop`, which cannot be walked. The
+generated assumption manifest, the atom legend and the numbered derivation on
+every argument page all depend on that walk. `premiseSet` is the one step
+between the two, and `entails_iff` states the relation back in the
+`∀ φ ∈ prems` form every result is written in.
+
+Borrowing rather than restating is what makes Foundation's own results
+available: monotonicity, the relation between consequence and satisfiability,
+and compactness are inherited rather than re-proved. A definition of entailment
+written locally could be subtly wrong, and every result in the catalogue would
+inherit the error while each one still looked correct.
+
 **Does it fail to follow?** Name a countermodel — a valuation satisfying every
 premise while falsifying the conclusion:
 

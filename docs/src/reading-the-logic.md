@@ -9,6 +9,31 @@ This page is the minimum you need to answer that. It is not a logic course, and
 it deliberately teaches nothing you will not use. Links to real courses are at
 the end.
 
+### The library borrows its logic rather than inventing it
+
+One thing worth knowing before the four ideas, because it is the reason you can
+trust the rest.
+
+This project does not define what "follows from" means. That definition comes
+from [Foundation](https://github.com/FormalizedFormalLogic/Foundation), a
+general-purpose formal-logic library, and this project uses it as written —
+the same relation a logician would recognise, with the same name. What is local
+here is only the *cataloguing*: which claims, whose, cited to what.
+
+That division is deliberate and it is the whole basis of the guarantee. A
+library that wrote its own definition of entailment could get that definition
+subtly wrong, and every result in the catalogue would inherit the mistake
+without any of them looking wrong. Borrowing a definition that thousands of
+other theorems already depend on removes that failure mode. When you read
+`Entails` here, you are reading Foundation's *logical consequence relation*,
+narrowed to this project's premise lists.
+
+The same goes in the other direction: because the relation is Foundation's,
+facts Foundation has already proved about it hold here for free — that adding
+premises never destroys an entailment, that a premise is entailed by the set it
+belongs to, and more besides. None of those had to be re-proved, so none of
+them could be re-proved wrongly.
+
 ## Four ideas, and then you can read anything here
 
 (A fifth, further down, is needed only for the replies that settle nothing;
