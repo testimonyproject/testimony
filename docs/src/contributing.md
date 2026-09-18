@@ -61,6 +61,39 @@ writing any code.
 7. **Respectful discourse.** People of all faiths and none are welcome here.
    Debate the encoding, not the person.
 
+## Editor setup
+
+Lean source here is Unicode, and one glyph needs help: implication is `➝`
+(U+279D), which has no abbreviation in the Lean 4 extension's input method — and
+neither does Foundation's `🡒`, which it aliases. So the extension alone gives no
+way to enter it but copy-paste. The devcontainer now ships one, under
+`customizations.vscode.settings`, so inside `.devcontainer/` you type `\fimp`
+and get `➝` with nothing to configure:
+
+```jsonc
+"lean4.input.customTranslations": { "fimp": "➝" }
+```
+
+Working outside the container, put the same line in your own `settings.json`.
+Do **not** bind `\imp`: it is already one of six abbreviations for `→` (U+2192),
+Lean's own function arrow, and a custom translation silently shadows the
+built-in one. Every other connective is typable out of the box — `⋏` is
+`\curlywedge`, `⋎` is `\curlyvee`, `∼` is `\sim`, `⋀` is `\And` or
+`\bigwedge`, `⊧` is `\models`, `⊨` is `\vDash`. The rest of the library's
+non-ASCII is the Hebrew, Greek and Syriac of quoted scripture, which is copied
+from a critical edition rather than typed.
+
+**Fonts are yours, not the container's, and cannot be fixed in the Dockerfile.**
+`editor.fontFamily` is resolved by the VS Code UI process on your own machine,
+not in the container, so neither `devcontainer.json` nor
+`.devcontainer/Dockerfile` can change how your editor renders a character;
+installing a font in the image does nothing for editor rendering. This project
+therefore sets no font at all, and none is needed: `➝` is in Dingbats and shows
+in ordinary programming fonts, in GitHub and in pull-request diffs. Only
+Foundation's `🡒` — Supplemental Arrows-C, covered by almost nothing, and not by
+a Nerd Font patch, which adds glyphs in the Private Use Area — renders as an
+empty box, and this library does not write it.
+
 ## Workflow
 
 Work happens in a git worktree, one per branch, never in the primary checkout.

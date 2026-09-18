@@ -240,8 +240,12 @@ abbreviations for `→` (U+2192), alongside `\to`, `\r`, `\r-`, `\->` and
 `\fimp`, `\impl`, `\Imp` and `\fto` are all free and share a prefix with
 nothing.
 
-Issue #66 proposes shipping the translation in the dev container, so that every
-contributor gets it without configuring anything.
+The dev container ships this translation under
+`customizations.vscode.settings`, so in `.devcontainer/` it is already there and
+nothing needs configuring; outside it, add the line to your own
+`settings.json`. See [Editor setup](./contributing.md#editor-setup), which also
+records why the font half cannot be shipped — `editor.fontFamily` is resolved on
+the contributor's own machine, so no container setting reaches it.
 
 **None of this reaches a reader of the site.** The generated argument pages
 render formulas through `Logic.Markdown` and `Logic.Latex` as `\rightarrow`, so
