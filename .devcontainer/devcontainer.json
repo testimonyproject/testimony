@@ -14,6 +14,22 @@
   "postCreateCommand": "lake exe cache get",
   "customizations": {
     "vscode": {
+      // `\fimp` types `➝` (U+279D), the implication this library writes —
+      // an alias for Foundation's `🡒` declared in Testimony/Logic/Notation.
+      // Neither glyph has a built-in abbreviation, so without this the only
+      // way to enter implication is to copy-paste it. Do not bind `\imp`:
+      // it is already one of six abbreviations for `→` (U+2192), and a
+      // custom translation silently shadows the built-in one.
+      //
+      // Only the *input* half belongs here. `editor.fontFamily` is resolved
+      // by the VS Code UI process on the contributor's own machine, so
+      // neither this file nor the Dockerfile can change how the editor
+      // renders a glyph — see docs/src/contributing.md.
+      "settings": {
+        "lean4.input.customTranslations": {
+          "fimp": "➝"
+        }
+      },
       "extensions": [
         "leanprover.lean4",
         "anthropic.claude-code",
