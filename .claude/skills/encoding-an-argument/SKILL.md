@@ -109,11 +109,13 @@ A single line that concludes exactly what it delivers can skip `caseOf`:
 Write the rival before proving anything. It is far too easy to build a
 strawman once you have a proof you like.
 
-`p c` (for `.atom c`) and `notP c` (for `.imp (.atom c) .falsum`) are generic
+`p c` (for `.atom c`) and `notP c` (for Foundation's `∼(.atom c)`) are generic
 over the atom type and come from `Testimony.Logic.Notation` — do not redeclare
-them in the argument module. Use `p`, `notP`, and
-`conjOf [...]` for multi-premise inference steps. A rival typically shares the
-prooftexts and the inference steps, denying one premise.
+them in the argument module. Use `p`, `notP`, Foundation's connective notation
+(`➝`, `⋏`, `⋎`) and `⋀ [...]` for multi-premise inference steps — never the
+raw `.imp`/`.and` constructors, which the truth lemmas are not indexed under.
+A rival typically shares the prooftexts and the inference steps, denying one
+premise.
 
 For a fulfilment argument, `conclusionLabel` must be
 `fulfillmentLabel person criterion` so a `SatisfactionWitness` can be built.
@@ -154,12 +156,13 @@ theorem tridentine_not_establishes : ¬ Establishes tridentine := by
 definition. An inline valuation will not typecheck, which is the style rule
 made mechanical.
 
-**Never hand-write the `simp only` recipe these tactics replace.** `Formula` is
-also an abbreviation in `Testimony.Logic`, so a hand-written proof saying
-`Formula.Boolean.val` resolves the wrong namespace, `simp` does nothing, and
-the proof falls back to `sorryAx` — with a successful build that only
-`lake exe axiom-audit` will catch. The tactics write the qualified name once,
-inside a macro quotation, where a call site cannot reach it.
+**Never hand-write the `simp only` recipe these tactics replace.** A
+hand-written proof has to name the semantics, and naming it wrongly is silent:
+`Formula` is also an abbreviation in `Testimony.Logic`, so a proof saying
+`Formula.Boolean.val` resolved the wrong namespace, `simp` did nothing, and the
+proof fell back to `sorryAx` — with a successful build that only
+`lake exe axiom-audit` catches. The tactics name Foundation's truth lemmas
+once, inside a macro quotation, where a call site cannot reach them.
 
 `@[headline]` marks a result the library claims; rule L6 requires the
 `#print axioms` line after it.

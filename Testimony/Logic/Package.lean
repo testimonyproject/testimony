@@ -12,6 +12,13 @@ enforcement `Source.primary` provides one layer up.
 
 `manifest` is the assumption manifest README.md promises. It is *generated* from
 the premises rather than maintained alongside them, so it cannot drift.
+
+A `conjOf` used to live here, folding a premise list into a conjunction so that
+a multi-premise inference step read well at the encoding site. It was
+Foundation's `⋀` (`List.conj₂`) rewritten — the same three cases, down to
+`⋀[]` being the `⊥ ➝ ⊥` that `Formula`'s `LogicalNeutral` instance calls `⊤` —
+and Foundation ships `@[simp] models_list_conj₂` for it, which the proof
+recipes now use instead of unfolding a conjunction the library built itself.
 -/
 
 namespace Testimony.Logic
@@ -30,14 +37,6 @@ structure AtomMeta where
   /-- Who says so, where, and with what confidence. -/
   source : Source
 deriving Repr
-
-/-- The conjunction of a list of formulas. An empty conjunction is verum,
-which Foundation defines as `⊥ ➝ ⊥`. Used to keep multi-premise inference
-steps readable at the encoding site. -/
-def conjOf : List (Formula α) → Formula α
-  | [] => .imp .falsum .falsum
-  | [φ] => φ
-  | φ :: rest => .and φ (conjOf rest)
 
 /-- A named position: its premises, its conclusion, and a citation for every
 atom either mentions. -/

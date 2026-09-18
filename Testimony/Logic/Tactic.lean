@@ -44,8 +44,10 @@ theorem parity_leaves_the_canon_open :
 
 The bracketed list names the definitions to unfold — the package, the lines of
 reason it is built from, the inference steps. Everything generic is supplied by
-the tactic: `caseOf`, `conjOf`, `p`, `notP`, the list-membership lemmas that
-turn `∀ φ ∈ prems` into a conjunction, and the semantics.
+the tactic: `caseOf`, `p`, `notP`, the list-membership lemmas that turn
+`∀ φ ∈ prems` into a conjunction, and Foundation's truth lemmas for the
+connectives — including the one for `⋀`, the list conjunction that replaced
+this library's own `conjOf`.
 
 `refute_with` takes an **identifier**, not a term, so the countermodel has to be
 a named definition, and `leaves_open` takes two for the same reason. That is
@@ -67,7 +69,13 @@ of reason, its inference steps, any shared premise list. The generic half of
 the recipe is supplied here rather than at the call site: the argument
 vocabulary that has to be unfolded to reach a premise list, the list lemmas
 that turn `∀ φ ∈ premises` into a conjunction `tauto` can work on, and
-Foundation's semantics under its full name.
+Foundation's truth lemmas for the connectives.
+
+The first step crosses `entails_iff`. `Entails` is Foundation's consequence
+relation, stated over a set of premises; every result in the library is stated
+over the list. The bridge between them is a proved equivalence rather than a
+definitional one: Foundation's `⊧*` is a class, so converting it to the
+`∀ φ ∈ prems` form goes through `modelsSet_premiseSet_iff`.
 
 The brackets take at least one lemma, or are omitted entirely; an empty
 `[]` is a parse error rather than a tactic that quietly does nothing. An
@@ -81,14 +89,19 @@ macro_rules
   | `(tactic| establish) => `(tactic| establish [Testimony.Logic.caseOf])
   | `(tactic| establish [$ls,*]) =>
     `(tactic|
-        (intro w hw;
+        (refine Testimony.Logic.entails_iff.mpr ?_;
+         intro w hw;
          simp only [$ls,*, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-           Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+           Testimony.Logic.Line.premises,
            Testimony.Logic.p, Testimony.Logic.notP,
            List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
            List.cons_append, List.nil_append, List.append_nil,
            List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-           FFL.Propositional.Formula.Boolean.val] at hw ⊢;
+           FFL.Semantics.Imp.models_imply, FFL.Semantics.And.models_and,
+           FFL.Semantics.Or.models_or, FFL.Semantics.Not.models_not,
+           FFL.Semantics.Top.models_verum, FFL.Semantics.Bot.models_falsum,
+           FFL.Semantics.models_list_conj₂,
+           FFL.Propositional.Formula.Boolean.models_atom] at hw ⊢;
          tauto))
 
 /-- Refute `Establishes pkg` by exhibiting a named countermodel: a valuation
@@ -105,12 +118,16 @@ macro_rules
     `(tactic|
         (refine Testimony.Logic.not_entails_of_countermodel $v ?_ ?_ <;>
            simp [$ls,*, $v:ident, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-             Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+             Testimony.Logic.Line.premises,
              Testimony.Logic.p, Testimony.Logic.notP,
              List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
              List.cons_append, List.nil_append, List.append_nil,
              List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-             FFL.Propositional.Formula.Boolean.val]))
+             FFL.Semantics.Imp.models_imply, FFL.Semantics.And.models_and,
+           FFL.Semantics.Or.models_or, FFL.Semantics.Not.models_not,
+           FFL.Semantics.Top.models_verum, FFL.Semantics.Bot.models_falsum,
+           FFL.Semantics.models_list_conj₂,
+           FFL.Propositional.Formula.Boolean.models_atom]))
 
 /-- Prove `Satisfiable prems` by naming a valuation that models every premise.
 
@@ -128,12 +145,16 @@ macro_rules
     `(tactic|
         (refine Testimony.Logic.satisfiable_of_model $v ?_ <;>
            simp [$ls,*, $v:ident, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-             Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+             Testimony.Logic.Line.premises,
              Testimony.Logic.p, Testimony.Logic.notP,
              List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
              List.cons_append, List.nil_append, List.append_nil,
              List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-             FFL.Propositional.Formula.Boolean.val]))
+             FFL.Semantics.Imp.models_imply, FFL.Semantics.And.models_and,
+           FFL.Semantics.Or.models_or, FFL.Semantics.Not.models_not,
+           FFL.Semantics.Top.models_verum, FFL.Semantics.Bot.models_falsum,
+           FFL.Semantics.models_list_conj₂,
+           FFL.Propositional.Formula.Boolean.models_atom]))
 
 /-- Prove `Independent prems φ` by naming the two readings a parity reply
 leaves available: one on which the proposition fails, and one on which it
@@ -157,12 +178,16 @@ macro_rules
         (refine Testimony.Logic.independent_of_countermodels $vf $vt ?_ ?_ ?_ ?_ <;>
            simp [$ls,*, $vf:ident, $vt:ident, Testimony.Logic.caseOf,
              Testimony.Logic.Line.asPackage,
-             Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+             Testimony.Logic.Line.premises,
              Testimony.Logic.p, Testimony.Logic.notP,
              List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
              List.cons_append, List.nil_append, List.append_nil,
              List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-             FFL.Propositional.Formula.Boolean.val]))
+             FFL.Semantics.Imp.models_imply, FFL.Semantics.And.models_and,
+           FFL.Semantics.Or.models_or, FFL.Semantics.Not.models_not,
+           FFL.Semantics.Top.models_verum, FFL.Semantics.Bot.models_falsum,
+           FFL.Semantics.models_list_conj₂,
+           FFL.Propositional.Formula.Boolean.models_atom]))
 
 /-! ### Sanity checks
 
@@ -176,13 +201,13 @@ they always have a package to unfold.
 
 /-- `establish` proves a valid entailment: modus ponens. -/
 theorem establish_proves_modus_ponens :
-    Entails (α := Pair) [p .p, .imp (p .p) (p .q)] (p .q) := by
+    Entails (α := Pair) [p .p, p .p ➝ p .q] (p .q) := by
   establish
 
 /-- `establish` handles negated atoms too: modus tollens, with `notP` on both
 sides. -/
 theorem establish_proves_modus_tollens :
-    Entails (α := Pair) [notP .q, .imp (p .p) (p .q)] (notP .p) := by
+    Entails (α := Pair) [notP .q, p .p ➝ p .q] (notP .p) := by
   establish
 
 /-- The reading on which `q` holds and `p` does not. -/
@@ -190,7 +215,7 @@ def affirmingConsequentReading : Valuation Pair := fun a => a = Pair.q
 
 /-- `refute_with` refutes an invalid one: affirming the consequent. -/
 theorem refute_with_refutes_affirming_the_consequent :
-    ¬ Entails (α := Pair) [p .q, .imp (p .p) (p .q)] (p .p) := by
+    ¬ Entails (α := Pair) [p .q, p .p ➝ p .q] (p .p) := by
   refute_with affirmingConsequentReading
 
 /-- The reading on which both atoms hold. -/
@@ -198,7 +223,7 @@ def bothHoldReading : Valuation Pair := fun _ => True
 
 /-- `satisfied_by` proves a premise set has a model. -/
 theorem satisfied_by_models_a_consistent_pair :
-    Satisfiable (α := Pair) [p .p, .imp (p .p) (p .q)] := by
+    Satisfiable (α := Pair) [p .p, p .p ➝ p .q] := by
   satisfied_by bothHoldReading
 
 /-- `leaves_open` proves independence: from `q` and `p → q`, the premises
@@ -206,7 +231,7 @@ settle nothing about `p` either way. `affirmingConsequentReading` is the
 reading on which `p` fails; `bothHoldReading` is the reading on which it
 holds. -/
 theorem leaves_open_shows_p_is_independent :
-    Independent (α := Pair) [p .q, .imp (p .p) (p .q)] (p .p) := by
+    Independent (α := Pair) [p .q, p .p ➝ p .q] (p .p) := by
   leaves_open affirmingConsequentReading bothHoldReading
 
 /-- And a contradictory premise set has none, so it entails anything — the

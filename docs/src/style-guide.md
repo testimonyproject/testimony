@@ -105,6 +105,14 @@ length.
   Write the rival *before* proving anything. Rule L5 enforces this.
 - **There is no atom budget.** Entailment is settled by `tauto` and refuted by
   named countermodels, neither of which enumerates valuations.
+- **Write formulas in Foundation's notation.** `➝`, `⋏`, `⋎`, `∼`, and `⋀` for
+  the conjunction of a list — not the raw constructors `.imp`, `.and`, `.or`.
+  They build the same terms, but only the notation is what Foundation's
+  `@[simp]` truth lemmas are indexed under, and those lemmas are where the
+  proof recipes get their semantics. `p` and `notP` stay: a reader of a rival's
+  premise list should not have to decode the encoding of negation. Implication
+  is written `➝`, an alias for Foundation's `🡒` — see
+  [Typing the connectives](#typing-the-connectives).
 - **Compose arguments from lines of reason.** A strand is a `Line` — its own
   grounds, its own inference step, what it delivers — and a package is
   `caseOf lines shared closing`. A variant package is then a named difference
@@ -141,13 +149,14 @@ theorem parity_leaves_the_canon_open :
 ```
 
 The bracketed list names what to unfold: the package, the lines it is built
-from, the inference steps. Everything generic — `caseOf`, `conjOf`, `p`,
+from, the inference steps. Everything generic — `caseOf`, `p`,
 `notP`, the list-membership lemmas, and the semantics — is supplied by the
 tactic.
 
 **This closes a silent-failure hole.** `Formula` is an abbreviation in
 `Testimony.Logic` as well as a structure in Foundation, so inside an argument
-module the short name `Formula.Boolean.val` resolves to the wrong namespace.
+module the short name `Formula.Boolean.val` used to resolve to the wrong
+namespace.
 The semantics then never unfold, `simp` leaves the hypothesis alone, and the
 proof term rests on `sorryAx` — with a **successful build**. Only tier 3 catches
 it, and only afterwards. Written once inside a macro quotation, where
@@ -169,12 +178,76 @@ then the reading on which it holds.
 set, those are the two halves of one independence claim and should be stated as
 one. Written as a pair, nothing checks that the two halves are about the same
 proposition, and a pair whose halves were not has already reached `main`. The
-primer's entry is [Independence](./reading-the-logic.md#independence-the-premises-settle-nothing-either-way).
+primer's entry is [Independence][independence].
+
+[independence]: ./reading-the-logic.md#independence-the-premises-settle-nothing-either-way
 
 Two premise sets asked two different questions are *not* this pattern —
 `compatibility_defeats_lexical_objection` and
 `compatibility_does_not_establish_criterion` range over different premise sets,
 and forcing `Independent` onto them would be false.
+
+## Typing the connectives
+
+Write implication as **`➝`** (U+279D, TRIANGLE-HEADED RIGHTWARDS ARROW). The
+other connectives are Foundation's as written: `⋏`, `⋎`, `∼`, and `⋀` for the
+conjunction of a list.
+
+**`➝` is an alias, not a divergence.** Foundation binds implication to `🡒` —
+U+1F852, in the Supplemental Arrows-C block — and that is the only token it
+declares. `Testimony.Logic.Notation` adds a second notation for the same class:
+
+```lean
+scoped infixr:60 " ➝ " => FFL.HArrow.hArrow
+macro_rules | `($x ➝ $y) => `(binop% FFL.HArrow.hArrow $x $y)
+```
+
+Both parse to `FFL.HArrow.hArrow`, Foundation's own class, with the same
+`binop%` elaborator, so nothing about the encoding diverges from Foundation
+except the character on the page. It is `scoped`, so it applies where
+`Testimony.Logic` is open — every module here — and nowhere else. `➝` occurs
+nowhere in Mathlib, Foundation, Batteries or any other dependency, so it
+shadows nothing.
+
+**Why bother.** Foundation's `🡒` is a poor character to build a corpus on, for
+two reasons that compound:
+
+- *Almost nothing renders it.* Supplemental Arrows-C is covered by Symbola,
+  Unifont and PragmataPro, and not by Fira Code, JetBrains Mono, Iosevka,
+  Cascadia Code or DejaVu Sans Mono. A Nerd Font patch does not help — Nerd
+  Fonts add glyphs in the Private Use Area, not in this block. It shows as an
+  empty box in GitHub, in pull-request diffs, and in most editors.
+- *Nothing types it.* The Lean 4 extension has no abbreviation producing
+  U+1F852; `\to` and `\r` both give `→` (U+2192), which is Lean's function
+  arrow and will not elaborate as Foundation's implication.
+
+A catalogue whose whole claim is that anyone can read and contest it should not
+be written in a character most readers cannot see and no contributor can type.
+
+**Typing `➝`.** It has no built-in abbreviation either, so add one:
+
+```jsonc
+// settings.json
+"lean4.input.customTranslations": { "fimp": "➝" }
+```
+
+which makes `\fimp` produce it — *f* for formula, since the arrow this
+library writes is the one between formulas rather than Lean's own.
+
+Do **not** bind `\imp`. It is already taken: `\imp` is one of six
+abbreviations for `→` (U+2192), alongside `\to`, `\r`, `\r-`, `\->` and
+`\rightarrow`, and a custom translation shadows the built-in one.
+`\fimp`, `\impl`, `\Imp` and `\fto` are all free and share a prefix with
+nothing.
+
+Issue #66 proposes shipping the translation in the dev container, so that every
+contributor gets it without configuring anything.
+
+**None of this reaches a reader of the site.** The generated argument pages
+render formulas through `Logic.Markdown` and `Logic.Latex` as `\rightarrow`, so
+every published page shows an ordinary arrow whichever glyph the source uses.
+This is an authoring concern only — which is exactly why it was worth fixing
+cheaply.
 
 ## Layout
 

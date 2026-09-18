@@ -18,14 +18,40 @@ atoms. Two questions get asked of it, and they are answered by different means.
 tableau. It produces an ordinary proof term, so the trust base is unchanged,
 and its cost tracks the argument's structure rather than its atom count.
 
+`Entails` is a thin local wrapper; the relation it names is not this library's.
+It is Foundation's logical consequence, `T ⊨[M] φ`, at this library's premise
+lists:
+
+```lean
+def premiseSet (prems : List (Formula α)) : Set (Formula α) := {φ | φ ∈ prems}
+
+def Entails (prems : List (Formula α)) (concl : Formula α) : Prop :=
+  premiseSet prems ⊨[Valuation α] concl
+```
+
+**Why two shapes.** Consequence is about a *set* of premises — order and
+repetition make no difference to it, and Foundation states it over `Set F`
+accordingly. A package's premises are a *list*, because `manifest` is computed
+by walking them and `Set F` is `F → Prop`, which cannot be walked. The
+generated assumption manifest, the atom legend and the numbered derivation on
+every argument page all depend on that walk. `premiseSet` is the one step
+between the two, and `entails_iff` states the relation back in the
+`∀ φ ∈ prems` form every result is written in.
+
+Borrowing rather than restating is what makes Foundation's own results
+available: monotonicity, the relation between consequence and satisfiability,
+and compactness are inherited rather than re-proved. A definition of entailment
+written locally could be subtly wrong, and every result in the catalogue would
+inherit the error while each one still looked correct.
+
 **Does it fail to follow?** Name a countermodel — a valuation satisfying every
 premise while falsifying the conclusion:
 
 ```lean
 theorem not_entails_of_countermodel
     (w : Valuation α)
-    (hsat : ∀ φ ∈ prems, Formula.Boolean.val w φ)
-    (hfail : ¬ Formula.Boolean.val w concl) : ¬ Entails prems concl
+    (hsat : ∀ φ ∈ prems, w ⊧ φ)
+    (hfail : ¬ w ⊧ concl) : ¬ Entails prems concl
 ```
 
 Checking a named valuation is linear. Searching for one is not, which is why
@@ -289,16 +315,22 @@ pair of `¬ Establishes` results over the same premises: one result cannot be
 about two different propositions, and a pair can.
 
 The bracketed list is only what to unfold. The generic half of the recipe —
-`caseOf`, `conjOf`, `p`, `notP`, the list-membership lemmas that turn
-`∀ φ ∈ prems` into a conjunction, and the fully qualified semantics — lives
-inside the tactics, in `Testimony.Logic.Tactic`.
+`caseOf`, `p`, `notP`, the list-membership lemmas that turn `∀ φ ∈ prems` into
+a conjunction, and Foundation's truth lemmas for the connectives — lives inside
+the tactics, in `Testimony.Logic.Tactic`.
 
-That is not tidiness. `Formula` is an abbreviation in `Testimony.Logic` as well
-as a structure in Foundation, so a hand-written proof that says
-`Formula.Boolean.val` resolves the wrong one, `simp` does nothing, and the
-proof term falls back to `sorryAx` — with a successful build. Written once
-inside a macro quotation, where identifiers resolve at the definition site, the
-mistake cannot be made at a call site. `refute_with` also takes an identifier
+That is not tidiness. A hand-written proof has to name the semantics, and the
+semantics used to be named by unfolding `Formula.Boolean.val`. `Formula` is an
+abbreviation in `Testimony.Logic` as well as a structure in Foundation, so a
+proof written inside an argument module resolved the wrong one, `simp` did
+nothing, and the proof term fell back to `sorryAx` — with a successful build.
+
+Formulas are now written in Foundation's own notation — `➝`, `⋏`, `⋎`, `∼`,
+and `⋀` for the conjunction of a list — so the recipe reaches for Foundation's
+own `@[simp]` truth lemmas, one per connective, rather than reconstructing them
+by unfolding the definition of the semantics. Those lemmas live in Foundation's
+namespaces and have no ambiguous siblings here: name one wrongly and it is an
+unknown identifier, not a silent no-op. `refute_with` also takes an identifier
 rather than a term, so a countermodel must be a named definition.
 
 **5. The load-bearing results**, where there is a disputed premise. Drop the

@@ -28,73 +28,63 @@ open Testimony Testimony.Logic
 /-- Sufficiency and perspicuity, with the prooftexts and the claim that
 scripture teaches the principle, yield the sole infallible rule. -/
 def toSoleRule : Formula Claim :=
-  .imp (conjOf
-        [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
-        , p .scriptureIsSufficient, p .scriptureIsPerspicuous
-        , p .solaScripturaIsTaughtByScripture ])
-       (p .scriptureIsSoleInfallibleRule)
+  ⋀ [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
+    , p .scriptureIsSufficient, p .scriptureIsPerspicuous
+    , p .solaScripturaIsTaughtByScripture ] ➝ p .scriptureIsSoleInfallibleRule
 
 /-- The eliminative route: scripture is infallible, nothing else is, so
 scripture is the *sole* infallible rule. It never asserts that scripture
 teaches the principle. -/
 def eliminativeToSoleRule : Formula Claim :=
-  .imp (conjOf [p .scriptureIsInfallible, p .noOtherRuleIsInfallible])
-       (p .scriptureIsSoleInfallibleRule)
+  ⋀ [p .scriptureIsInfallible, p .noOtherRuleIsInfallible] ➝ p .scriptureIsSoleInfallibleRule
 
 /-- Geisler's route: the historical-grammatical method suffices, so creeds may
 inform without binding, and no second infallible rule is needed. -/
 def tradition0ToSoleRule : Formula Claim :=
-  .imp (conjOf
-        [ p .historicalGrammaticalMethodSuffices, p .creedsAreInformativeNotNormative
-        , p .scriptureIsInfallible, p .noOtherRuleIsInfallible ])
-       (p .scriptureIsSoleInfallibleRule)
+  ⋀ [ p .historicalGrammaticalMethodSuffices, p .creedsAreInformativeNotNormative
+    , p .scriptureIsInfallible, p .noOtherRuleIsInfallible ] ➝ p .scriptureIsSoleInfallibleRule
 
 /-! ### Steps denying it -/
 
 /-- **Tradition II.** Binding unwritten tradition as a coordinate source denies
 that scripture is the sole rule. -/
 def tridentineDeniesSoleRule : Formula Claim :=
-  .imp (conjOf
-        [ p .thessalonians2_15TraditionBinding
-        , p .traditionIsCoordinateSourceOfRevelation ])
-       (notP .scriptureIsSoleInfallibleRule)
+  ⋀ [ p .thessalonians2_15TraditionBinding
+    , p .traditionIsCoordinateSourceOfRevelation ] ➝ notP .scriptureIsSoleInfallibleRule
 
 /-- **Tradition III.** An infallible magisterium is a second infallible rule,
 whatever is said about sources. -/
 def magisterialDeniesSoleRule : Formula Claim :=
-  .imp (p .magisteriumIsInfallible) (notP .scriptureIsSoleInfallibleRule)
+  p .magisteriumIsInfallible ➝ notP .scriptureIsSoleInfallibleRule
 
 /-- **Orthodoxy.** The mind of the Church interpreting infallibly is likewise a
 second infallible rule — and it is not the magisterial premise. -/
 def orthodoxDeniesSoleRule : Formula Claim :=
-  .imp (p .churchMindIsInfallibleInterpreter) (notP .scriptureIsSoleInfallibleRule)
+  p .churchMindIsInfallibleInterpreter ➝ notP .scriptureIsSoleInfallibleRule
 
 /-! ### The three objections -/
 
 /-- If a doctrine binds only when scripture teaches it, and scripture does not
 teach sola scriptura, then sola scriptura does not bind. -/
 def selfRefutationStep : Formula Claim :=
-  .imp (conjOf [p .onlyScripturalDoctrineIsBinding, notP .solaScripturaIsTaughtByScripture])
-       (notP .scriptureIsSoleInfallibleRule)
+  ⋀ [p .onlyScripturalDoctrineIsBinding, notP .solaScripturaIsTaughtByScripture]
+  ➝ notP .scriptureIsSoleInfallibleRule
 
 /-- If the canon is known only through the Church's reception, and identifying
 the canon requires an infallible authority, then an infallible authority
 outside scripture is needed to identify scripture. -/
 def canonObjectionStep : Formula Claim :=
-  .imp (conjOf
-        [ p .canonKnownThroughChurchReception
-        , p .identifyingCanonRequiresInfallibleAuthority ])
-       (notP .scriptureIsSoleInfallibleRule)
+  ⋀ [ p .canonKnownThroughChurchReception
+    , p .identifyingCanonRequiresInfallibleAuthority ] ➝ notP .scriptureIsSoleInfallibleRule
 
 /-- Cross and Judisch: if the individual retains ultimate interpretive
 authority, exercised indirectly by choosing the body to submit to, then
 Tradition I's ministerial authority is not a principled difference from
 Tradition 0. -/
 def interpretiveRegressStep : Formula Claim :=
-  .imp (conjOf
-        [ p .traditionHasMinisterialAuthority
-        , p .individualRetainsUltimateInterpretiveAuthority ])
-       (notP .traditionIDiffersInPrincipleFromTradition0)
+  ⋀ [ p .traditionHasMinisterialAuthority
+    , p .individualRetainsUltimateInterpretiveAuthority ]
+  ➝ notP .traditionIDiffersInPrincipleFromTradition0
 
 /-! ### Geisler's circle
 
@@ -104,12 +94,12 @@ said to require the consensus of the Church. -/
 
 /-- Leg one: the creedal consensus rests on scripture's clarity. -/
 def consensusRestsOnPerspicuity : Formula Claim :=
-  .imp (p .scriptureIsPerspicuous) (p .creedalConsensusIsHermeneuticallyNecessary)
+  p .scriptureIsPerspicuous ➝ p .creedalConsensusIsHermeneuticallyNecessary
 
 /-- Leg two: scripture's clear sense is not obtainable without that
 consensus. -/
 def perspicuityRestsOnConsensus : Formula Claim :=
-  .imp (p .creedalConsensusIsHermeneuticallyNecessary) (p .scriptureIsPerspicuous)
+  p .creedalConsensusIsHermeneuticallyNecessary ➝ p .scriptureIsPerspicuous
 
 /-! ### The lines -/
 
@@ -238,19 +228,15 @@ denies that circularity is a defect peculiar to Tradition I, which is why
 
 /-- Both legs together make the reasoning circular. -/
 def circleStep : Formula Claim :=
-  .imp (conjOf
-        [ p .creedalConsensusRestsOnPerspicuity
-        , p .perspicuityRequiresCreedalConsensus ])
-       (p .traditionIReasoningIsCircular)
+  ⋀ [ p .creedalConsensusRestsOnPerspicuity
+    , p .perspicuityRequiresCreedalConsensus ] ➝ p .traditionIReasoningIsCircular
 
 /-- Circularity defeats the position **if** it is not a feature of every appeal
 to an ultimate authority. Geisler's charge needs the second conjunct, and it is
 what Barrett denies. -/
 def circularityDefeats : Formula Claim :=
-  .imp (conjOf
-        [ p .traditionIReasoningIsCircular
-        , notP .everyUltimateAuthorityIsCircular ])
-       (p .circularityDefeatsTraditionI)
+  ⋀ [ p .traditionIReasoningIsCircular
+    , notP .everyUltimateAuthorityIsCircular ] ➝ p .circularityDefeatsTraditionI
 
 /-- **Geisler's circularity charge.** -/
 def geislerCircleLine : Line Claim :=

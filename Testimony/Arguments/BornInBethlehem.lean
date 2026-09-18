@@ -133,13 +133,11 @@ One strand, and the argument's whole weight is on it. -/
 
 /-- From the predictive reading and Matthew's intent, the criterion follows. -/
 def toCriterion : Formula Claim :=
-  .imp (conjOf [p .micahPredictsBethlehem, p .matthewIntendsFulfilment])
-       (p .messiahBornInBethlehem)
+  ⋀ [p .micahPredictsBethlehem, p .matthewIntendsFulfilment] ➝ p .messiahBornInBethlehem
 
 /-- From the criterion and the historical claim, the fulfilment follows. -/
 def toFulfilment : Formula Claim :=
-  .imp (conjOf [p .messiahBornInBethlehem, p .jesusBornInBethlehem])
-       (p .jesusSatisfiesCriterion)
+  ⋀ [p .messiahBornInBethlehem, p .jesusBornInBethlehem] ➝ p .jesusSatisfiesCriterion
 
 /-- **The predictive line.** Micah's oracle read as prophecy, Matthew's
 quotation read as a fulfilment claim, and the criterion that follows. -/
