@@ -99,8 +99,15 @@ one disputed claim. Three things can be true of them:
   does not.
 
 The third is **independence**: *the premises settle nothing either way.* It is
-shown by exhibiting both readings — two countermodels rather than one, each
-satisfying every premise, disagreeing only about the claim in dispute.
+shown by exhibiting both readings — two of them rather than one, each satisfying
+every premise, one with the disputed claim true and one with it false.
+
+They need not agree about anything else, and usually do not. Each is a whole
+position, not the other with one atom flipped: Kruger's reading refuses that
+identifying the canon requires an infallible authority, while the reading that
+concedes his point and still denies the sole rule refuses something else
+entirely. What independence asks of the pair is only that both satisfy every
+premise and that they disagree about the claim in dispute.
 
 This is exactly what a parity reply produces. "It blocks the objection" means
 the denial does not follow; "it establishes nothing" means the claim does not
