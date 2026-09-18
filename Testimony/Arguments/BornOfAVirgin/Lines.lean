@@ -186,7 +186,8 @@ Wegner's own version of this step is weaker — Postell reports it as decreasing
 the likelihood of a virgin-birth prediction without ruling it out (469) — and
 the encoding states the strong form on purpose. The strong form is the one on
 which the two legs make a closed circle, and stating it is what lets
-`circle_grounds_neither_end` be checked rather than asserted. On the weaker
+`circle_leaves_the_lexical_conclusion_open` be checked rather than asserted. On
+the weaker
 form the loop is evidential rather than deductive, which is the difference
 between a vicious circle and mutual support. -/
 def lexicalConclusionTellsAgainstPrediction : Formula Claim :=

@@ -87,10 +87,12 @@ the premise that excludes virginity. `wegner_needs_ordinary_pregnancy` removes
 it and the objection stops. `readingSuppliesOrdinaryPregnancy` then supplies it
 the way Wegner's own case does — from the near-term reading of the sign — and
 with the lexical conclusion turned back against that reading, the two legs
-close. `circle_grounds_neither_end` and `circle_grounds_neither_denial` are the
-result: keep every uncontested datum, and *neither* end follows, because a
-cycle of implications is satisfied outright by a valuation on which all of its
-nodes are false. Nothing enters the loop, so nothing comes out of it. That is a
+close. `circle_leaves_the_lexical_conclusion_open` and
+`circle_leaves_the_denial_open` are the result: keep every uncontested datum,
+and *neither* end is settled — not established, and not refuted either. A cycle
+of implications is satisfied outright by a valuation on which all of its nodes
+are false, and equally by one granting Wegner's own conclusion. Nothing enters
+the loop, so nothing comes out of it, in either direction. That is a
 demonstration rather than a complaint, and it is conditional in the usual way:
 a defender of Wegner should deny `readingSuppliesOrdinaryPregnancy` and argue
 that the near-term reading stands on the historical evidence alone.

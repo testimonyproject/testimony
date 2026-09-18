@@ -333,6 +333,23 @@ theorem wegner_needs_ordinary_pregnancy : ¬ Establishes wegnerWithoutOrdinaryPr
 
 #print axioms wegner_needs_ordinary_pregnancy
 
+/-- Wegner's own conclusion granted: עַלְמָה does not denote a virgin, and
+Isaiah 7:14 is not a prediction of a virgin birth. The same two legs of the
+circle are satisfied on this reading as on the one below — the first because
+its antecedent fails, the second because its consequent holds — which is what
+makes the circle silent in *both* directions rather than merely unhelpful in
+one.
+
+Not a convenience: it is the position Wegner argues for, and the reading had to
+be found rather than assumed. The all-true valuation that serves the same
+purpose in `SolaScriptura` does not work here, because `wegnerCircle` carries
+negated grounds. -/
+def wegnerConclusionGrantedReading : Valuation Claim := fun a =>
+  match a with
+  | .almahMeansVirgin => False
+  | .isaiahPredictsVirginBirth => False
+  | _ => True
+
 /-- The reading that exhibits the circle: the predictive reading of Isaiah 7:14
 stands, עַלְמָה may denote a virgin, and the pregnancy the sign announces is not
 an ordinary one. Every uncontested datum in Wegner's case is granted — the
@@ -364,13 +381,15 @@ near-term reading rests on the historical setting and stands without the
 lexical finding — in which case the premise is false and the circle is not
 there. That premise is where a defender of Wegner should press. -/
 @[headline]
-theorem circle_grounds_neither_end : ¬ Establishes wegnerCircle := by
-  refute_with circleUngroundedReading [wegnerCircle, wegnerLexical, wegnerInTheCircle,
-    wegnerLine, Line.onGrounds, wegnerClosingSteps, readingSuppliesOrdinaryPregnancy,
-    lexicalConclusionTellsAgainstPrediction, harahYieldsPresentPregnancy,
-    ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
+theorem circle_leaves_the_lexical_conclusion_open :
+    Independent wegnerCircle.premises (notP .almahMeansVirgin) := by
+  leaves_open circleUngroundedReading wegnerConclusionGrantedReading
+    [wegnerCircle, wegnerLexical, wegnerInTheCircle, wegnerLine, Line.onGrounds,
+      wegnerClosingSteps, readingSuppliesOrdinaryPregnancy,
+      lexicalConclusionTellsAgainstPrediction, harahYieldsPresentPregnancy,
+      ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
 
-#print axioms circle_grounds_neither_end
+#print axioms circle_leaves_the_lexical_conclusion_open
 
 /-- **And the other end of it is no better off.** The same premises, asked for
 the denial of the predictive reading instead of the lexical conclusion, fail in
@@ -380,14 +399,15 @@ Both results are needed to make the point. A circle is not an argument that
 fails to establish one of its nodes; it is one that establishes neither, having
 no premise outside itself. -/
 @[headline]
-theorem circle_grounds_neither_denial : ¬ Establishes wegnerCircleForTheDenial := by
-  refute_with circleUngroundedReading [wegnerCircleForTheDenial, wegnerCircle,
-    wegnerLexical, wegnerInTheCircle, wegnerLine, Line.onGrounds, wegnerClosingSteps,
-    readingSuppliesOrdinaryPregnancy, lexicalConclusionTellsAgainstPrediction,
-    harahYieldsPresentPregnancy, ordinaryPregnancyExcludesVirginity,
-    referentYieldsLexicalConclusion]
+theorem circle_leaves_the_denial_open :
+    Independent wegnerCircle.premises (notP .isaiahPredictsVirginBirth) := by
+  leaves_open circleUngroundedReading wegnerConclusionGrantedReading
+    [wegnerCircle, wegnerLexical, wegnerInTheCircle, wegnerLine, Line.onGrounds,
+      wegnerClosingSteps, readingSuppliesOrdinaryPregnancy,
+      lexicalConclusionTellsAgainstPrediction, harahYieldsPresentPregnancy,
+      ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
 
-#print axioms circle_grounds_neither_denial
+#print axioms circle_leaves_the_denial_open
 
 /-- Postell's usage reading, written down: the עַלְמָה of Isaiah 7:14 is granted
 to be no virgin, and a single referent still does not settle what the word
