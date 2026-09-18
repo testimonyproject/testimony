@@ -46,8 +46,7 @@ def tridentine : ArgumentPackage Claim :=
     premises :=
       [ p .ephesians2_8_9, p .romans3_28, p .galatians2_16, p .titus3_5
       , p .scriptureSelfConsistent, p .worksMeritIncreaseOfJustification
-      , .imp (p .worksMeritIncreaseOfJustification)
-             (notP .salvationByGraceThroughFaithNotWorks) ] }
+      , p .worksMeritIncreaseOfJustification 🡒 notP .salvationByGraceThroughFaithNotWorks ] }
 
 /-- The Reformed package without the Pauline lexical premise. -/
 def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=

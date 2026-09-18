@@ -83,12 +83,16 @@ macro_rules
     `(tactic|
         (intro w hw;
          simp only [$ls,*, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-           Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+           Testimony.Logic.Line.premises,
            Testimony.Logic.p, Testimony.Logic.notP,
            List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
            List.cons_append, List.nil_append, List.append_nil,
            List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-           FFL.Propositional.Formula.Boolean.val] at hw ⊢;
+           FFL.Semantics.Imp.models_imply, FFL.Semantics.And.models_and,
+           FFL.Semantics.Or.models_or, FFL.Semantics.Not.models_not,
+           FFL.Semantics.Top.models_verum, FFL.Semantics.Bot.models_falsum,
+           FFL.Semantics.models_list_conj₂,
+           FFL.Propositional.Formula.Boolean.models_atom] at hw ⊢;
          tauto))
 
 /-- Refute `Establishes pkg` by exhibiting a named countermodel: a valuation
@@ -105,12 +109,16 @@ macro_rules
     `(tactic|
         (refine Testimony.Logic.not_entails_of_countermodel $v ?_ ?_ <;>
            simp [$ls,*, $v:ident, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-             Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+             Testimony.Logic.Line.premises,
              Testimony.Logic.p, Testimony.Logic.notP,
              List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
              List.cons_append, List.nil_append, List.append_nil,
              List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-             FFL.Propositional.Formula.Boolean.val]))
+             FFL.Semantics.Imp.models_imply, FFL.Semantics.And.models_and,
+           FFL.Semantics.Or.models_or, FFL.Semantics.Not.models_not,
+           FFL.Semantics.Top.models_verum, FFL.Semantics.Bot.models_falsum,
+           FFL.Semantics.models_list_conj₂,
+           FFL.Propositional.Formula.Boolean.models_atom]))
 
 /-- Prove `Satisfiable prems` by naming a valuation that models every premise.
 
@@ -128,12 +136,16 @@ macro_rules
     `(tactic|
         (refine Testimony.Logic.satisfiable_of_model $v ?_ <;>
            simp [$ls,*, $v:ident, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-             Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+             Testimony.Logic.Line.premises,
              Testimony.Logic.p, Testimony.Logic.notP,
              List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
              List.cons_append, List.nil_append, List.append_nil,
              List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-             FFL.Propositional.Formula.Boolean.val]))
+             FFL.Semantics.Imp.models_imply, FFL.Semantics.And.models_and,
+           FFL.Semantics.Or.models_or, FFL.Semantics.Not.models_not,
+           FFL.Semantics.Top.models_verum, FFL.Semantics.Bot.models_falsum,
+           FFL.Semantics.models_list_conj₂,
+           FFL.Propositional.Formula.Boolean.models_atom]))
 
 /-- Prove `Independent prems φ` by naming the two readings a parity reply
 leaves available: one on which the proposition fails, and one on which it
@@ -157,12 +169,16 @@ macro_rules
         (refine Testimony.Logic.independent_of_countermodels $vf $vt ?_ ?_ ?_ ?_ <;>
            simp [$ls,*, $vf:ident, $vt:ident, Testimony.Logic.caseOf,
              Testimony.Logic.Line.asPackage,
-             Testimony.Logic.Line.premises, Testimony.Logic.conjOf,
+             Testimony.Logic.Line.premises,
              Testimony.Logic.p, Testimony.Logic.notP,
              List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
              List.cons_append, List.nil_append, List.append_nil,
              List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-             FFL.Propositional.Formula.Boolean.val]))
+             FFL.Semantics.Imp.models_imply, FFL.Semantics.And.models_and,
+           FFL.Semantics.Or.models_or, FFL.Semantics.Not.models_not,
+           FFL.Semantics.Top.models_verum, FFL.Semantics.Bot.models_falsum,
+           FFL.Semantics.models_list_conj₂,
+           FFL.Propositional.Formula.Boolean.models_atom]))
 
 /-! ### Sanity checks
 
@@ -176,13 +192,13 @@ they always have a package to unfold.
 
 /-- `establish` proves a valid entailment: modus ponens. -/
 theorem establish_proves_modus_ponens :
-    Entails (α := Pair) [p .p, .imp (p .p) (p .q)] (p .q) := by
+    Entails (α := Pair) [p .p, p .p 🡒 p .q] (p .q) := by
   establish
 
 /-- `establish` handles negated atoms too: modus tollens, with `notP` on both
 sides. -/
 theorem establish_proves_modus_tollens :
-    Entails (α := Pair) [notP .q, .imp (p .p) (p .q)] (notP .p) := by
+    Entails (α := Pair) [notP .q, p .p 🡒 p .q] (notP .p) := by
   establish
 
 /-- The reading on which `q` holds and `p` does not. -/
@@ -190,7 +206,7 @@ def affirmingConsequentReading : Valuation Pair := fun a => a = Pair.q
 
 /-- `refute_with` refutes an invalid one: affirming the consequent. -/
 theorem refute_with_refutes_affirming_the_consequent :
-    ¬ Entails (α := Pair) [p .q, .imp (p .p) (p .q)] (p .p) := by
+    ¬ Entails (α := Pair) [p .q, p .p 🡒 p .q] (p .p) := by
   refute_with affirmingConsequentReading
 
 /-- The reading on which both atoms hold. -/
@@ -198,7 +214,7 @@ def bothHoldReading : Valuation Pair := fun _ => True
 
 /-- `satisfied_by` proves a premise set has a model. -/
 theorem satisfied_by_models_a_consistent_pair :
-    Satisfiable (α := Pair) [p .p, .imp (p .p) (p .q)] := by
+    Satisfiable (α := Pair) [p .p, p .p 🡒 p .q] := by
   satisfied_by bothHoldReading
 
 /-- `leaves_open` proves independence: from `q` and `p → q`, the premises
@@ -206,7 +222,7 @@ settle nothing about `p` either way. `affirmingConsequentReading` is the
 reading on which `p` fails; `bothHoldReading` is the reading on which it
 holds. -/
 theorem leaves_open_shows_p_is_independent :
-    Independent (α := Pair) [p .q, .imp (p .p) (p .q)] (p .p) := by
+    Independent (α := Pair) [p .q, p .p 🡒 p .q] (p .p) := by
   leaves_open affirmingConsequentReading bothHoldReading
 
 /-- And a contradictory premise set has none, so it entails anything — the

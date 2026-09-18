@@ -32,15 +32,15 @@ trade worth making, and `axiom-audit` would reject it.
 
 namespace Testimony.Logic
 
-open FFL.Propositional
+open FFL FFL.Propositional
 
 variable {α : Type}
 
 /-- Semantic entailment: every valuation satisfying all the premises satisfies
 the conclusion. -/
 def Entails (prems : List (Formula α)) (concl : Formula α) : Prop :=
-  ∀ w : Valuation α, (∀ φ ∈ prems, Formula.Boolean.val w φ) →
-    Formula.Boolean.val w concl
+  ∀ w : Valuation α, (∀ φ ∈ prems, w ⊧ φ) →
+    w ⊧ concl
 
 /-- A countermodel refutes an entailment.
 
@@ -50,8 +50,8 @@ result in the library is proved: not by failing to find a proof, but by naming
 the reading on which the argument does not go through. -/
 theorem not_entails_of_countermodel {prems : List (Formula α)} {concl : Formula α}
     (w : Valuation α)
-    (hsat : ∀ φ ∈ prems, Formula.Boolean.val w φ)
-    (hfail : ¬ Formula.Boolean.val w concl) : ¬ Entails prems concl :=
+    (hsat : ∀ φ ∈ prems, w ⊧ φ)
+    (hfail : ¬ w ⊧ concl) : ¬ Entails prems concl :=
   fun h => hfail (h w hsat)
 
 /-- A premise set is *satisfiable* when some valuation makes every premise
@@ -64,13 +64,13 @@ from contradictory premises would therefore `Establishes` its conclusion, the
 proof would close, and all four gates would pass — a claim that is true only
 because nothing could make its assumptions hold at once. -/
 def Satisfiable (prems : List (Formula α)) : Prop :=
-  ∃ w : Valuation α, ∀ φ ∈ prems, Formula.Boolean.val w φ
+  ∃ w : Valuation α, ∀ φ ∈ prems, w ⊧ φ
 
 /-- A valuation satisfying every premise witnesses satisfiability. This is how
 every `Satisfiable` result in the library is proved: by naming the reading on
 which the position holds together — its own world, rather than a rival's. -/
 theorem satisfiable_of_model {prems : List (Formula α)}
-    (w : Valuation α) (hsat : ∀ φ ∈ prems, Formula.Boolean.val w φ) :
+    (w : Valuation α) (hsat : ∀ φ ∈ prems, w ⊧ φ) :
     Satisfiable prems :=
   ⟨w, hsat⟩
 
@@ -89,8 +89,10 @@ neither it nor its negation — when the premises settle the question neither
 way.
 
 The term is Foundation's. `Foundation/Logic/Entailment.lean` defines
-`Independent φ` as `𝓢 ⊬ φ ∧ 𝓢 ⊬ ∼φ`, and this is the same notion over the
-entailment this library actually uses. It is a counterpart rather than an
+`Independent φ` as `𝓢 ⊬ φ ∧ 𝓢 ⊬ ∼φ`, and this is the same notion, in the same
+notation, over the entailment this library actually uses — `∼` here is
+Foundation's own, which `Formula α` carries through its `LogicalConnective`
+instance. It is a counterpart rather than an
 instance, deliberately: Foundation's is *proof-theoretic*, built on `Prf : S →
 F → Type*`, so instantiating it would mean declaring `Prf prems φ := PLift
 (Entails prems φ)` — wrapping a semantics in an interface meant for
@@ -107,7 +109,7 @@ one fact, stated twice, and stating it twice is what let a pair through in
 which the two halves were about different propositions. Named once, the shape
 is checkable. -/
 def Independent (prems : List (Formula α)) (φ : Formula α) : Prop :=
-  ¬ Entails prems φ ∧ ¬ Entails prems (.imp φ .falsum)
+  ¬ Entails prems φ ∧ ¬ Entails prems (∼φ)
 
 /-- Two countermodels establish independence: a reading of the premises on
 which the proposition fails, and a reading of the same premises on which it
@@ -119,10 +121,10 @@ and a parity reply leaves exactly two of them available. `wf` is the reading on
 which the proposition does not hold; `wt` is the reading on which it does. -/
 theorem independent_of_countermodels {prems : List (Formula α)} {φ : Formula α}
     (wf wt : Valuation α)
-    (hfsat : ∀ ψ ∈ prems, Formula.Boolean.val wf ψ)
-    (hfail : ¬ Formula.Boolean.val wf φ)
-    (htsat : ∀ ψ ∈ prems, Formula.Boolean.val wt ψ)
-    (hhold : Formula.Boolean.val wt φ) :
+    (hfsat : ∀ ψ ∈ prems, wf ⊧ ψ)
+    (hfail : ¬ wf ⊧ φ)
+    (htsat : ∀ ψ ∈ prems, wt ⊧ ψ)
+    (hhold : wt ⊧ φ) :
     Independent prems φ :=
   ⟨not_entails_of_countermodel wf hfsat hfail,
    not_entails_of_countermodel wt htsat fun h => h hhold⟩
@@ -162,25 +164,24 @@ deriving DecidableEq, Repr
 
 /-- Modus ponens is valid. -/
 theorem modus_ponens_valid :
-    Entails (α := Pair) [.atom .p, .imp (.atom .p) (.atom .q)] (.atom .q) := by
+    Entails (α := Pair) [.atom .p, .atom .p 🡒 .atom .q] (.atom .q) := by
   intro w hw
   simp only [List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-    Formula.Boolean.val] at hw ⊢
+    Semantics.Imp.models_imply, Formula.Boolean.models_atom] at hw ⊢
   tauto
 
 /-- Affirming the consequent is not valid, and here is why: the reading on
 which `q` holds and `p` does not. -/
 theorem affirming_consequent_invalid :
-    ¬ Entails (α := Pair) [.atom .q, .imp (.atom .p) (.atom .q)] (.atom .p) := by
-  refine not_entails_of_countermodel (fun a => a = Pair.q) ?_ ?_ <;>
-    simp [Formula.Boolean.val]
+    ¬ Entails (α := Pair) [.atom .q, .atom .p 🡒 .atom .q] (.atom .p) := by
+  refine not_entails_of_countermodel (fun a => a = Pair.q) ?_ ?_ <;> simp
 
 /-- And `p` is independent of those premises, not merely unentailed by them:
 the reading above leaves `p` false, and the reading on which both atoms hold
 leaves it true, while both satisfy every premise. -/
 theorem p_independent_of_affirming_the_consequent :
-    Independent (α := Pair) [.atom .q, .imp (.atom .p) (.atom .q)] (.atom .p) := by
+    Independent (α := Pair) [.atom .q, .atom .p 🡒 .atom .q] (.atom .p) := by
   refine independent_of_countermodels (fun a => a = Pair.q) (fun _ => True) ?_ ?_ ?_ ?_ <;>
-    simp [Formula.Boolean.val]
+    simp
 
 end Testimony.Logic

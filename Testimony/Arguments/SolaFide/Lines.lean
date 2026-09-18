@@ -25,30 +25,27 @@ without being one of the lines `caseOf` treats as converging. -/
 /-- **The Pauline strand.** From Romans and Galatians to justification by faith
 alone, by way of the disputed lexical premise about ἔργα νόμου. -/
 def paulineToFaithAlone : Formula Claim :=
-  .imp (conjOf [p .romans3_28, p .galatians2_16, p .worksOfLawMeansWorksGenerally])
-       (p .justificationByFaithAlone)
+  ⋀ [p .romans3_28, p .galatians2_16, p .worksOfLawMeansWorksGenerally]
+  🡒 p .justificationByFaithAlone
 
 /-- **The dominical strand.** From Jesus' own words at Luke 7:50 to
 justification by faith alone, by way of the disputed lexical premise about
 σῴζω. Independent of Paul, and of the ἔργα νόμου dispute. -/
 def dominicalToFaithAlone : Formula Claim :=
-  .imp (conjOf [p .luke7_50FaithHasSavedYou, p .sozoIsSoteriological])
-       (p .justificationByFaithAlone)
+  ⋀ [p .luke7_50FaithHasSavedYou, p .sozoIsSoteriological] 🡒 p .justificationByFaithAlone
 
 /-- The harmonisation of James: because James's target is barren faith, and
 works are the fruit of saving faith rather than its ground, James 2:24 does not
 contradict Paul. Derived rather than assumed. -/
 def jamesHarmonisation : Formula Claim :=
-  .imp (conjOf [p .james2TargetsDeadFaith, p .worksAreFruitNotGround])
-       (p .james2_24Compatible)
+  ⋀ [p .james2TargetsDeadFaith, p .worksAreFruitNotGround] 🡒 p .james2_24Compatible
 
 /-- The inference from justification by faith alone to the full claim about
 salvation, requiring the remaining prooftexts and the harmonisation of James. -/
 def toSalvation : Formula Claim :=
-  .imp (conjOf
-        [ p .justificationByFaithAlone, p .ephesians2_8_9, p .romans4_4_5
-        , p .titus3_5, p .james2_24Compatible, p .scriptureSelfConsistent ])
-       (p .salvationByGraceThroughFaithNotWorks)
+  ⋀ [ p .justificationByFaithAlone, p .ephesians2_8_9, p .romans4_4_5
+    , p .titus3_5, p .james2_24Compatible, p .scriptureSelfConsistent ]
+  🡒 p .salvationByGraceThroughFaithNotWorks
 
 /-- The Pauline line. Its only distinctive ground is the lexical premise; the
 prooftexts its step reads are shared with every other package, which is exactly
