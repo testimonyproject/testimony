@@ -12,3 +12,6 @@ docs/latex/*.log
 docs/latex/*.xdv
 docs/latex/references.bib
 __pycache__/
+
+# Worktrees created for background agents; never part of a change.
+.claude/worktrees/

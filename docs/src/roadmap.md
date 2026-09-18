@@ -45,8 +45,8 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `compatibility_does_not_establish_criterion` | `¬Establishes semanticReachingForCriterion` | **What the referential argument costs.** It is purely defensive. |
 | `wegner_establishes` | `Establishes wegnerLexical` | **Wegner's objection is valid on its own terms.** Grant the predicate-adjective parse, grant that the pregnancy it reports is an ordinary one, and grant that the one clear … |
 | `wegner_needs_ordinary_pregnancy` | `¬Establishes wegnerWithoutOrdinaryPregnancy` | **The grammar is not what carries the objection.** Derive the ordinary pregnancy the way Wegner derives it — from the near-term reading of the sign — rather than granting it, and … |
-| `circle_grounds_neither_end` | `¬Establishes wegnerCircle` | **The circle, shown rather than alleged.** Put both legs in place — the reading supplying the ordinary pregnancy, and the lexical conclusion turned back against the reading — keep … |
-| `circle_grounds_neither_denial` | `¬Establishes wegnerCircleForTheDenial` | **And the other end of it is no better off.** The same premises, asked for the denial of the predictive reading instead of the lexical conclusion, fail in the same way and on the … |
+| `circle_leaves_the_lexical_conclusion_open` | `Independent wegnerCircle.premises (notP Claim.almahMeansVirgin)` | **The circle, shown rather than alleged.** Put both legs in place — the reading supplying the ordinary pregnancy, and the lexical conclusion turned back against the reading — keep … |
+| `circle_leaves_the_denial_open` | `Independent wegnerCircle.premises (notP Claim.isaiahPredictsVirginBirth)` | **And the other end of it is no better off.** The same premises, asked for the denial of the predictive reading instead of the lexical conclusion, fail in the same way and on the … |
 | `usage_parity_blocks_wegner` | `¬Establishes wegnerUnderUsageParity` | **Postell's second reply, and it is independent of the first.** Concede the parse, concede the ordinary pregnancy, concede that the woman of Isaiah 7:14 is no virgin — and the … |
 | `hinges_jointly_load_bearing` | `¬Establishes christianWithoutAnyHinge` | **The result worth having.** No single hinge carries the argument, but the four of them jointly do: remove all four and the criterion no longer follows, with every textual and … |
 | `jesus_satisfies_virgin_birth` | `Satisfies jesus bornOfAVirgin` | End to end: under the scriptural package, Jesus satisfies the virgin-birth criterion. |
@@ -81,8 +81,8 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `scoping_blocks_self_refutation` | `¬Establishes selfRefutationUnderScope` | **And the final-arbiter answer blocks it too, without the hinge.** This is the answer the seed did not encode. |
 | `parity_leaves_the_canon_open` | `Independent canonUnderParity.premises (p Claim.scriptureIsSoleInfallibleRule)` | **The parity reply leaves the canon question open.** Granted Kruger's grounds, the sole infallible rule neither follows nor fails: his own reading has it, and the reading on which … |
 | `parity_leaves_the_distinction_open` | `Independent regressUnderParity.premises (p Claim.traditionIDiffersInPrincipleFromTradition0)` | **And the same for interpretive authority.** That choosing an authority is itself private judgement defeats the charge that Tradition I collapses into Tradition 0; it does not … |
-| `circle_grounds_neither_consensus` | `¬Establishes traditionICircle` | **Geisler's circularity charge against Tradition I, shown rather than alleged.** The creedal consensus is said to rest on scripture's clarity, and scripture's clear sense is said … |
-| `circle_grounds_neither_perspicuity` | `¬Establishes traditionICircleForPerspicuity` | **And the other end is no better off.** The same two legs, asked for the perspicuity instead of the consensus, fail in the same way and for the same reason. |
+| `circle_leaves_the_consensus_open` | `Independent traditionICircle.premises (p Claim.creedalConsensusIsHermeneuticallyNecessary)` | **Geisler's circularity charge against Tradition I, shown rather than alleged.** The creedal consensus is said to rest on scripture's clarity, and scripture's clear sense is said … |
+| `circle_leaves_the_perspicuity_open` | `Independent traditionICircle.premises (p Claim.scriptureIsPerspicuous)` | **And the other end is no better off.** The same two legs, asked about perspicuity instead of the consensus, leave it open in the same way and on the same two readings. |
 | `geislerCircle_is_valid` | `Establishes geislerCircle` | Geisler's charge is valid on its own grounds: grant that the consensus rests on scripture's clarity and that scripture's clear sense requires the consensus, and the reasoning is … |
 | `accountability_blocks_the_circle` | `¬Establishes geislerCircleUnderAccountability` | **Allen and Swain's reply blocks the charge.** If the creedal consensus is established by and accountable to scripture, it is what reading scripture produces rather than what … |
 | `scripturalBounding_blocks_the_circle` ⚗ | `¬Establishes geislerCircleUnderScripturalBounding` | **The scriptural-bounding reply blocks the charge too, and on scriptural rather than confessional grounds.** **What is novel here.** No source was found advancing these texts as … |
@@ -121,9 +121,10 @@ encoded at full strength, and `wegner_establishes` checks that it goes through.
 What the grammar does not supply is that the pregnancy is an *ordinary* one:
 that comes from the near-term reading of the sign, which the lexical conclusion
 was then wanted to support. With both legs in place,
-`circle_grounds_neither_end` and `circle_grounds_neither_denial` show that
-neither end follows, because a cycle of implications is satisfied outright by a
-valuation on which every node in it is false. Postell's charge of circular
+`circle_leaves_the_lexical_conclusion_open` and `circle_leaves_the_denial_open`
+show that neither end is settled either way, because a cycle of implications is
+satisfied outright by a valuation on which every node in it is false, and
+equally by one granting Wegner's conclusion. Postell's charge of circular
 reasoning becomes a checkable result rather than an accusation — and, like
 every result here, a conditional one: deny that the near-term reading needs the
 lexical conclusion and the circle is not there.

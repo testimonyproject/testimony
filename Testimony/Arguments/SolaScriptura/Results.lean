@@ -288,34 +288,53 @@ def neitherEndReading : Valuation Claim := fun a =>
   | .scriptureIsPerspicuous => False
   | _ => True
 
+/-- The reading on which both ends of the circle obtain: the consensus is
+hermeneutically necessary and scripture is clear. A cycle of implications is
+satisfied by this as readily as by the reading on which every node is false,
+which is what it means for the cycle to settle nothing. -/
+def bothEndsHoldReading : Valuation Claim := fun _ => True
+
 /-- **Geisler's circularity charge against Tradition I, shown rather than
 alleged.** The creedal consensus is said to rest on scripture's clarity, and
 scripture's clear sense is said to be unobtainable without that consensus. Put
-both legs in place and the consensus does not follow, because a cycle of
-implications is satisfied outright by a valuation on which every node in it is
-false.
+both legs in place and the consensus is left *independent* of them: it does not
+follow, and neither does its denial.
+
+A cycle of implications is satisfied outright by a valuation on which every
+node in it is false, and equally by one on which every node is true. Nothing
+enters such a loop from outside, so nothing comes out of it — in either
+direction. That second direction is what this result gained when it stopped
+being a bare `¬ Establishes`: a circle is not merely silent about whether its
+nodes hold, it is silent about whether they fail.
 
 Like every result here this is conditional: deny either leg and the circle is
 not there. What it settles is that the charge is structural rather than
 rhetorical — and it is made from inside Protestantism, against the position
 this module encodes as the Protestant one. -/
 @[headline]
-theorem circle_grounds_neither_consensus : ¬ Establishes traditionICircle := by
-  refute_with neitherEndReading [traditionICircle, consensusRestsOnPerspicuity,
-    perspicuityRestsOnConsensus]
+theorem circle_leaves_the_consensus_open :
+    Independent traditionICircle.premises
+      (p .creedalConsensusIsHermeneuticallyNecessary) := by
+  leaves_open neitherEndReading bothEndsHoldReading
+    [traditionICircle, consensusRestsOnPerspicuity, perspicuityRestsOnConsensus]
 
-#print axioms circle_grounds_neither_consensus
+#print axioms circle_leaves_the_consensus_open
 
-/-- **And the other end is no better off.** The same two legs, asked for the
-perspicuity instead of the consensus, fail in the same way and for the same
-reason. -/
+/-- **And the other end is no better off.** The same two legs, asked about
+perspicuity instead of the consensus, leave it open in the same way and on the
+same two readings.
+
+Both results are needed, and they are not two halves of one claim: a circle has
+two ends, and each is a separate proposition the premises fail to settle. What
+*is* one claim is each result's own two directions, which is why each is an
+`Independent` rather than a pair. -/
 @[headline]
-theorem circle_grounds_neither_perspicuity :
-    ¬ Establishes traditionICircleForPerspicuity := by
-  refute_with neitherEndReading [traditionICircleForPerspicuity, traditionICircle,
-    consensusRestsOnPerspicuity, perspicuityRestsOnConsensus]
+theorem circle_leaves_the_perspicuity_open :
+    Independent traditionICircle.premises (p .scriptureIsPerspicuous) := by
+  leaves_open neitherEndReading bothEndsHoldReading
+    [traditionICircle, consensusRestsOnPerspicuity, perspicuityRestsOnConsensus]
 
-#print axioms circle_grounds_neither_perspicuity
+#print axioms circle_leaves_the_perspicuity_open
 
 /-! ### Geisler's charge, and the three replies
 
@@ -449,8 +468,8 @@ reply's own premises rather than from the failure of a rival reading. -/
 @[headline]
 theorem circle_parity_concedes_the_charge :
     Establishes circleParityConcedingTheCharge := by
-  establish [circleParityConcedingTheCharge, circleDefeats, defeatUnderParity,
-    Line.onGrounds, circleDefeatsLine, circularityDefeats]
+  granted [circleParityConcedingTheCharge, circleDefeats, defeatUnderParity,
+    Line.onGrounds, circleDefeatsLine]
 
 #print axioms circle_parity_concedes_the_charge
 

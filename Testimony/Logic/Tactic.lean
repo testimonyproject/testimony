@@ -2,9 +2,10 @@ import Testimony.Logic.Line
 import Mathlib.Tactic.Tauto
 
 /-!
-# Testimony.Logic.Tactic — `establish`, `refute_with`, `satisfied_by`, `leaves_open`
+# Testimony.Logic.Tactic — the five proof recipes
 
-Four tactics, replacing a recipe that was copied into every result in the
+`establish`, `refute_with`, `satisfied_by`, `leaves_open` and `granted`. Five
+tactics, replacing a recipe that was copied into every result in the
 library.
 
 ## Why this is a soundness fix and not a convenience
@@ -189,6 +190,34 @@ macro_rules
            FFL.Semantics.models_list_conj₂,
            FFL.Propositional.Formula.Boolean.models_atom]))
 
+/-- Prove `Establishes pkg` where the conclusion is one of the premises.
+
+Not a shortcut for `establish`, which would also close such a goal — a
+different claim, stated differently on purpose. `establish` says the conclusion
+*follows*; this says it was *granted*, and the distinction is the whole content
+of the result at the one place the library uses it. A reply that concedes the
+charge it answers entails that charge, because the charge is one of its own
+grounds, and searching for a proof of something sitting in the premise list
+would hide exactly what is worth seeing.
+
+Foundation's `of_mem`, reached through `entails_of_mem`. The bracketed
+arguments are the definitions to unfold, as elsewhere; what has to reduce here
+is the premise *list*, not the semantics, so the goal the recipe leaves is a
+membership. -/
+syntax "granted" (ppSpace "[" simpLemma,+ "]")? : tactic
+
+macro_rules
+  | `(tactic| granted) => `(tactic| granted [Testimony.Logic.caseOf])
+  | `(tactic| granted [$ls,*]) =>
+    `(tactic|
+        (refine Testimony.Logic.entails_of_mem ?_;
+         simp [$ls,*, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
+           Testimony.Logic.Line.premises,
+           Testimony.Logic.p, Testimony.Logic.notP,
+           List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
+           List.cons_append, List.nil_append, List.append_nil,
+           List.mem_cons, List.not_mem_nil]))
+
 /-! ### Sanity checks
 
 These tactics are the library's only route to a proof about an argument, so a
@@ -233,6 +262,11 @@ holds. -/
 theorem leaves_open_shows_p_is_independent :
     Independent (α := Pair) [p .q, p .p ➝ p .q] (p .p) := by
   leaves_open affirmingConsequentReading bothHoldReading
+
+/-- `granted` proves what a premise list already contains. -/
+theorem granted_proves_a_premise :
+    Entails (α := Pair) [p .q, p .p ➝ p .q] (p .q) := by
+  granted
 
 /-- And a contradictory premise set has none, so it entails anything — the
 hazard `entails_of_unsatisfiable` names, exhibited. -/
