@@ -211,25 +211,25 @@ rather than a snapshot.
 
 ## Near term
 
-**More messianic prophecies** ([#1](https://github.com/testimonyproject/testimony/issues/1), [#2](https://github.com/testimonyproject/testimony/issues/2)). The canonical dozen — Isaiah 53, Psalm 22,
-Zechariah 9:9, Daniel 9, Psalm 110 — each with competing packages. Then the
-first aggregate result: a `MessiahDefinition` with several criteria and a
-`MeetsDefinition` theorem, which will expose how sensitive a cumulative case is
-to its weakest link.
+**More messianic prophecies** ([#1], [#2]). The canonical dozen — Isaiah 53,
+Psalm 22, Zechariah 9:9, Daniel 9, Psalm 110 — each with competing packages.
+Then the first aggregate result: a `MessiahDefinition` with several criteria
+and a `MeetsDefinition` theorem, which will expose how sensitive a cumulative
+case is to its weakest link.
 
-**The remaining solas** ([#3](https://github.com/testimonyproject/testimony/issues/3)). *Sola gratia*, *solus Christus* and
+**The remaining solas** ([#3]). *Sola gratia*, *solus Christus* and
 *soli Deo gloria*. *Sola scriptura* is no longer a seed: it now carries four
 positions on tradition, three objections that do not reduce to one another, and
 the two answers to the self-refutation objection.
 
-**Corpus grounding** ([#4](https://github.com/testimonyproject/testimony/issues/4)). Importers so `Passage` values resolve against real text
-data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite actual
-morphological annotation rather than a commentary's report of it — which
+**Corpus grounding** ([#4]). Importers so `Passage` values resolve against real
+text data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite
+actual morphological annotation rather than a commentary's report of it — which
 matters most for exactly the lexical premises that keep turning out to be
 load-bearing.
 
-**Old Testament `Book` completion** ([#5](https://github.com/testimonyproject/testimony/issues/5)). The New Testament is
-complete; the Old is partial. A good first contribution.
+**Old Testament `Book` completion** ([#5]). The New Testament is complete; the
+Old is partial. A good first contribution.
 
 ## Systematic theology
 
@@ -300,10 +300,10 @@ That limitation is closable with no new dependency at all.
 
 ## Infrastructure
 
-- **An assumption-manifest browser** ([#7](https://github.com/testimonyproject/testimony/issues/7)) on the docs site: every theorem, every
-  premise it rests on, every citation, cross-linked.
-- **Literate sources** ([#9](https://github.com/testimonyproject/testimony/issues/9)). Prose and Lean interleaved in the `.lean` files, in the
-  coqdoc tradition, rendering to PDF. This is currently **blocked on tooling**
+- **An assumption-manifest browser** ([#7]) on the docs site: every theorem,
+  every premise it rests on, every citation, cross-linked.
+- **Literate sources** ([#9]). Prose and Lean interleaved in the `.lean` files,
+  in the coqdoc tradition, rendering to PDF. This is currently **blocked on tooling**
   rather than on effort. Alectryon plus LeanInk was the path, and
   [LeanInk is archived](https://github.com/leanprover/LeanInk) — last pushed in
   July 2024, pinned to Lean v4.6.0-rc1. [Verso](https://github.com/leanprover/verso)
@@ -311,12 +311,11 @@ That limitation is closable with no new dependency at all.
   the model: documents embed Lean rather than Lean files carrying prose. Until
   one of those changes, `lake exe argtex` covers the part that matters most —
   the arguments themselves, typeset as logic.
-- **Probabilistic and evidential reasoning** ([#10](https://github.com/testimonyproject/testimony/issues/10)), in a separate
-  namespace, never
-  conflated with deduction. Cumulative-case apologetics is Bayesian in
+- **Probabilistic and evidential reasoning** ([#10]), in a separate namespace,
+  never conflated with deduction. Cumulative-case apologetics is Bayesian in
   structure, and pretending otherwise would misrepresent it.
-- **API documentation** ([#8](https://github.com/testimonyproject/testimony/issues/8)). doc-gen4 arrives transitively via Foundation and the
-  `Testimony:docs` facet works, but `lake build Testimony:docs` generates
+- **API documentation** ([#8]). doc-gen4 arrives transitively via Foundation
+  and the `Testimony:docs` facet works, but `lake build Testimony:docs` generates
   documentation for the entire Mathlib closure, which is far too slow to run in
   CI. Publishing API docs needs either a way to scope generation to this
   library's own modules, or a separately cached job. It is deliberately absent
@@ -324,22 +323,41 @@ That limitation is closable with no new dependency at all.
 
 ## Development environment
 
-- **A devcontainer** ([#11](https://github.com/testimonyproject/testimony/issues/11)), so that the toolchain is consistent and
-  not only the worktree layout. Contributors should not have to install elan
-  and match Lean v4.33.1 by hand.
-- **Enforcing the worktree rule** ([#12](https://github.com/testimonyproject/testimony/issues/12)). Every other hard rule in
-  CLAUDE.md is enforced by a command; this one is documented and unchecked.
+- **A devcontainer** ([#11]), so that the toolchain is consistent and not only
+  the worktree layout. Contributors should not have to install elan and match
+  Lean v4.33.1 by hand.
+- **Enforcing the worktree rule** ([#12]). Every other hard rule in CLAUDE.md
+  is enforced by a command; this one is documented and unchecked.
 
 ## How deferred work is tracked
 
-Everything above is a [GitHub issue](https://github.com/testimonyproject/testimony/issues); the
-[`roadmap`](https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Aroadmap) label marks the items seeded from
-this page, and [`infra`](https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Ainfra) the build and
-developer-environment ones. This page says *why* a thing is worth doing; the
-issue is where its state lives. When the two disagree, the issue is current.
+Everything above is a [GitHub issue][issues]; the [`roadmap`][label-roadmap]
+label marks the items seeded from this page, and [`infra`][label-infra] the
+build and developer-environment ones. This page says *why* a thing is worth
+doing; the issue is where its state lives. When the two disagree, the issue is
+current.
 
 ## What will not change
 
 The conditional form of every result, the requirement that rivals be encoded
 with equal care, and the prohibition on undeclared axioms. These are what make
 the rest worth reading.
+
+<!-- The issues this page seeds, as reference links: an inline link to one of
+     them is wider than the 100 columns rule L12 holds this file to, and a
+     reference link is the form that fits. -->
+
+[#1]: https://github.com/testimonyproject/testimony/issues/1
+[#2]: https://github.com/testimonyproject/testimony/issues/2
+[#3]: https://github.com/testimonyproject/testimony/issues/3
+[#4]: https://github.com/testimonyproject/testimony/issues/4
+[#5]: https://github.com/testimonyproject/testimony/issues/5
+[#7]: https://github.com/testimonyproject/testimony/issues/7
+[#8]: https://github.com/testimonyproject/testimony/issues/8
+[#9]: https://github.com/testimonyproject/testimony/issues/9
+[#10]: https://github.com/testimonyproject/testimony/issues/10
+[#11]: https://github.com/testimonyproject/testimony/issues/11
+[#12]: https://github.com/testimonyproject/testimony/issues/12
+[issues]: https://github.com/testimonyproject/testimony/issues
+[label-roadmap]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Aroadmap
+[label-infra]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Ainfra
