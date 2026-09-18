@@ -293,8 +293,46 @@ linter.
 | L9 | No prose names a Lean result that does not exist — pages and docstrings alike |
 | L10 | Every `@[proposed]` result says what is novel about it |
 | L11 | A package with a positive `Establishes` result is shown satisfiable |
+| L12 | Hand-written markdown is at most 100 columns |
 
 Run its own tests with `python3 scripts/test_testimony_lint.py`.
+
+### What L12 exempts, and the one thing it does not
+
+L8 has held Lean to 100 columns all along. L12 is its counterpart for prose,
+which is at least as much of the deliverable: a reviewer who does not read Lean
+reads the primer, the style guide and the roadmap. It counts characters rather
+than bytes, so a line of Hebrew is as long as it looks.
+
+Four things are exempt.
+
+- **Generated pages.** `docs/src/bibliography.md` and `docs/src/arguments/*.md`
+  belong to `bibgen` and `argdoc`, and their `--check` runs already guard them.
+- **Generated *blocks* inside hand-written pages.** The roadmap's status table
+  sits between `<!-- BEGIN GENERATED: lake exe statusgen -->` markers and
+  `SUMMARY.md`'s argument list between `argdoc`'s. The rule reads the markers,
+  not the path, so the prose on either side of a block is still held to the
+  width — excluding the file would have exempted the page along with the table.
+- **Table rows.** A newline ends a markdown table row, so a wide row cannot be
+  wrapped at all. A row counts as one either by its leading `|` or by sitting
+  in a block opened by a delimiter row, since markdown allows both `| a | b |`
+  and a bare `a | b`.
+- **YAML frontmatter.** A skill's `description:` is one scalar the loader reads
+  whole. A folded scalar would wrap it while preserving the string, but only if
+  the loader is a real YAML parser, and finding that out by breaking a skill is
+  a poor trade. The block has to be closed: a page that opens with `---` and
+  never repeats it has a thematic break, not frontmatter.
+
+**Long links are not exempt, deliberately.** An inline link cannot be broken
+across lines, which sounds like the argument the table rows win on — but unlike
+a table row a link has a second form that fits: `[text][ref]`, with the URL
+defined elsewhere in the file. So **a link that will not fit becomes a
+reference link**; the roadmap's issue links and the [Independence][independence]
+link above are both written that way. Code fences are not exempt either: a
+sample too wide for 100 columns is too wide for the rendered page. They are
+still tracked, so that the other exemptions stop at the fence — a `|` in a
+sample is code rather than a table row, and a page that fences a sample of a
+`BEGIN GENERATED` marker opens no exemption over the prose that follows it.
 
 ## Documentation moves with the argument
 

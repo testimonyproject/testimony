@@ -64,9 +64,11 @@ the term so it reduces; do not reach for `native_decide`, which is prohibited.
 ### Tier 4 — `python3 scripts/testimony_lint.py`
 
 Project rules no general-purpose Lean linter knows: uncited `BibEntry` literals
-outside `Works.lean` (L3), untagged registry entries (L4), the twelve-atom
-budget (L5), `@[headline]` theorems without `#print axioms` (L6), citation-key
-format (L7), layout (L8).
+outside `Works.lean` (L3), untagged registry entries (L4), an argument with no
+rival package (L5), `@[headline]` theorems without `#print axioms` (L6),
+citation-key format (L7), layout (L8), prose naming a result the library no
+longer has (L9), and the same 100-column limit over hand-written markdown that
+L8 applies to Lean (L12).
 
 Sub-second, so run it freely. If you change the linter, run its own tests:
 

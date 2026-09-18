@@ -13,7 +13,8 @@ arguments. L9 is about the prose: a documentation page
 naming a theorem the library no longer has is drift of exactly the kind this
 project exists to rule out, and it has happened. It runs only over the whole
 library, because deciding that a name does not exist means having read every
-declaration.
+declaration. L12 is about the prose too, but about its shape rather than its
+claims: hand-written markdown is held to the same 100 columns as Lean.
 
 Usage:
     python3 scripts/testimony_lint.py            # Testimony/ and the prose docs
@@ -21,6 +22,7 @@ Usage:
 """
 from __future__ import annotations
 
+import os
 import re
 import sys
 from dataclasses import dataclass
@@ -42,6 +44,18 @@ DOC_PATHS = (
     "docs/src/*.md",
 )
 GENERATED_DOCS = frozenset({"docs/src/bibliography.md"})
+# `argdoc` writes a page per argument here, from the module and declaration
+# docstrings. Whole directories rather than named files, because the set of
+# arguments changes and a rule that had to be told about each new one would
+# start failing on the commit that adds it.
+GENERATED_DOC_DIRS = ("docs/src/arguments/",)
+
+# L12. Where the hand-written markdown is. A walk rather than a glob list: the
+# skills, the brand notes and the docs tree all carry prose, and a rule that
+# only knew about `docs/src/` would stop applying the moment prose moved.
+# `.lake/` holds the dependencies' own READMEs, and `docs/book/` the rendered
+# site; neither is ours to hold to a width.
+MARKDOWN_SKIP_DIRS = frozenset({".git", ".lake", "book", "node_modules"})
 
 # What counts as a declaration in a Lean file. Constructors and structure
 # fields are included: `romans3_28` is an atom constructor, and prose cites it.
@@ -97,7 +111,28 @@ RULE_TEXT = {
     "L9": "documentation names a Lean result that does not exist",
     "L10": "every @[proposed] result must say what is novel about it",
     "L11": "a package with an Establishes result must be shown satisfiable",
+    "L12": f"hand-written markdown: lines at most {MAX_LINE} columns",
 }
+
+# L12. A generated block inside a hand-written page: `statusgen` writes the
+# roadmap's status table between these, `argdoc` the argument list in
+# `SUMMARY.md`. Matched on the marker rather than on the path, because the
+# page around the block is hand-written and must still be held to the width —
+# excluding `roadmap.md` wholesale would exempt its prose along with its table.
+GENERATED_BEGIN_RE = re.compile(r"^\s*<!--\s*BEGIN GENERATED\b")
+GENERATED_END_RE = re.compile(r"^\s*<!--\s*END GENERATED\b")
+# A markdown table row cannot be wrapped: a newline ends the row. A row is
+# recognised two ways, because markdown writes them two ways: a leading `|`,
+# and — for a table whose rows carry no outer pipes — membership in a block
+# opened by a delimiter row (`--- | ---`). Both are consulted only outside a
+# code fence, where a line beginning with `|` is a code sample.
+TABLE_ROW_RE = re.compile(r"^\s*\|")
+# A fenced code block, ``` or ~~~, indented at most three spaces. The run is
+# captured because the closing fence must be the same character and at least
+# as long.
+CODE_FENCE_RE = re.compile(r"^ {0,3}(`{3,}|~{3,})")
+# YAML frontmatter, opened and closed by `---` on its own line.
+FRONTMATTER_FENCE = "---"
 
 
 # Attributes are matched inside a bracket list, because a declaration may carry
@@ -533,17 +568,196 @@ def lint_doc(path: str, text: str, declared: set[str]) -> list[Finding]:
     ]
 
 
+def is_generated_doc(path: str) -> bool:
+    """Whether a markdown page is written by a generator rather than by hand.
+
+    Shared by L9 and L12, because they exempt the same pages for the same
+    reason: a generator owns the file, its `--check` run guards it, and a rule
+    firing there would ask someone to hand-edit what they are forbidden to
+    hand-edit.
+    """
+    return path in GENERATED_DOCS or path.startswith(GENERATED_DOC_DIRS)
+
+
+def _opens_frontmatter(lines: list[str]) -> bool:
+    """Whether the page opens a YAML frontmatter block that is also closed.
+
+    The closing fence is required. `---` on line 1 is not necessarily
+    frontmatter — it is also a thematic break, and a block someone interrupted
+    is not one either — and an unterminated block would exempt every remaining
+    line of the page silently, which is the one failure a width rule cannot
+    afford.
+    """
+    if not lines or lines[0].strip() != FRONTMATTER_FENCE:
+        return False
+    return any(line.strip() == FRONTMATTER_FENCE for line in lines[1:])
+
+
+def _closes_fence(line: str, fence: str) -> bool:
+    """Whether `line` closes a code fence opened by the run `fence`.
+
+    Same character, at least as long, and nothing else on the line — the
+    CommonMark rule, so that ```` ```lean ```` inside a ```` ```` ```` block
+    does not close it.
+    """
+    stripped = line.strip()
+    return stripped.startswith(fence) and set(stripped) == {fence[0]}
+
+
+def _is_table_delimiter(line: str) -> bool:
+    """Whether `line` is the `--- | ---` row that makes the line above a table
+    header. Pipes, hyphens, alignment colons and space, and at least one pipe:
+    without the pipe `---` is a thematic break or a setext underline."""
+    stripped = line.strip()
+    return (
+        "|" in stripped
+        and "-" in stripped
+        and set(stripped) <= set("|-: \t")
+    )
+
+
+def _continues_table(line: str, lines: list[str], n: int, in_table: bool) -> bool:
+    """Whether line `n` (1-based) belongs to a table, given the state at `n-1`.
+
+    A table is entered at its *header* — the line above a delimiter row — and
+    left at the first blank line or line without a pipe, which is where a GFM
+    table ends. Entering at the header rather than at the delimiter is what
+    lets the header itself be exempt without a second pass.
+    """
+    if in_table:
+        return bool(line.strip()) and "|" in line
+    return "|" in line and n < len(lines) and _is_table_delimiter(lines[n])
+
+
+def lint_markdown(path: str, text: str) -> list[Finding]:
+    """L12: hand-written markdown, at most `MAX_LINE` columns.
+
+    The prose is as much of the deliverable as the Lean, and more of it gets
+    read: someone who does not read Lean reads the primer, the style guide and
+    the roadmap. L8 has held Lean to 100 columns all along; this is its
+    counterpart, and it counts *characters*, not bytes — the corpus is full of
+    Greek, Hebrew and mathematical symbols, and a byte count would fail lines
+    that are not long, on the files most worth writing carefully.
+
+    Four things are exempt, and one conspicuously is not.
+
+    *Generated pages* (`is_generated_doc`) are somebody else's output.
+
+    *Generated blocks inside hand-written pages* are the reason a path-level
+    exemption is not enough. The roadmap's status table is 60-odd rows of
+    pretty-printed Lean statements between `<!-- BEGIN GENERATED: lake exe
+    statusgen -->` markers, rewritten on every run and forbidden to hand-edit;
+    `SUMMARY.md` has the same shape under `argdoc`. The rule reads the markers,
+    so the prose on either side of the block is still held to the width.
+
+    *Table rows* cannot be wrapped at all — a newline ends the row — so the
+    choice is between exempting them and forbidding wide tables, and a wide
+    table is often the honest shape for the data. A row is recognised either
+    by its leading `|` or by sitting in a block a delimiter row opened, because
+    markdown permits both `| a | b |` and a bare `a | b`; the block runs from
+    the header above the delimiter to the blank line that ends the table.
+
+    *YAML frontmatter* carries the skills' `description:`, a single scalar the
+    skill loader reads whole; the longest is 392 characters. A folded scalar
+    would wrap it and preserve the string, but only if the loader is a real
+    YAML parser, and finding out otherwise by breaking a skill is a poor trade.
+    It must be *closed* to count: a page opening with `---` and never repeating
+    it has a thematic break, not frontmatter, and reading it as frontmatter
+    would exempt the whole page without a word.
+
+    *Links are not exempt*, and that is a decision rather than an oversight. An
+    inline link genuinely cannot be broken across lines, which looks like the
+    same argument the table rows win on — but unlike a table row a link has a
+    second form that fits: `[text][ref]`, with the URL defined elsewhere in the
+    file. `style-guide.md` already does this once. So a link that will not fit
+    is not an exception to the width; it is a link that should be a reference
+    link.
+
+    Code fences are not exempt either. A sample too wide for 100 columns is too
+    wide for the rendered page, and the Lean inside one is held to 100 by L8
+    wherever it also lives in a source file. Fences are nonetheless tracked, so
+    that the other exemptions stop at the fence: a `|` inside a sample is code,
+    not a table row, and a fenced sample of a `BEGIN GENERATED` marker — which
+    a page explaining the markers would carry — opens nothing over the prose
+    after it.
+    """
+    if is_generated_doc(path):
+        return []
+    lines = text.splitlines()
+    in_frontmatter = _opens_frontmatter(lines)
+    in_generated = False
+    in_table = False
+    fence: str | None = None
+    findings: list[Finding] = []
+    for n, line in enumerate(lines, 1):
+        exempt = False
+        if in_frontmatter:
+            if n > 1 and line.strip() == FRONTMATTER_FENCE:
+                in_frontmatter = False
+            exempt = True
+        elif fence is not None:
+            # Inside a fence nothing else is read: a `|` there is a code
+            # sample, not a table row, and a marker there is a sample of a
+            # marker. The line is still held to the width, fence and all.
+            if _closes_fence(line, fence):
+                fence = None
+        elif (opening := CODE_FENCE_RE.match(line)) is not None:
+            fence = opening.group(1)
+            in_table = False
+        elif in_generated:
+            if GENERATED_END_RE.match(line):
+                in_generated = False
+            exempt = True
+        elif GENERATED_BEGIN_RE.match(line):
+            in_generated = True
+            in_table = False
+            exempt = True
+        else:
+            in_table = _continues_table(line, lines, n, in_table)
+            exempt = in_table or bool(TABLE_ROW_RE.match(line))
+        if not exempt and len(line) > MAX_LINE:
+            findings.append(
+                Finding("L12", path, n, RULE_TEXT["L12"] + f" ({len(line)} columns)")
+            )
+    return findings
+
+
+def markdown_files(root: Path) -> list[Path]:
+    """The hand-written markdown L12 reads, in a stable order."""
+    found: list[Path] = []
+    for dirpath, dirs, names in os.walk(root):
+        dirs[:] = sorted(d for d in dirs if d not in MARKDOWN_SKIP_DIRS)
+        for name in sorted(names):
+            if name.endswith(".md"):
+                p = Path(dirpath) / name
+                if not is_generated_doc(_rel(p)):
+                    found.append(p)
+    return found
+
+
 def doc_files(root: Path) -> list[Path]:
     """The documentation pages L9 reads, in a stable order."""
     found: list[Path] = []
     for pattern in DOC_PATHS:
         found.extend(sorted(root.glob(pattern)))
-    return [p for p in found if _rel(p) not in GENERATED_DOCS]
+    return [p for p in found if not is_generated_doc(_rel(p))]
 
 
 def _rel(p: Path) -> str:
-    """A repository-relative POSIX path, as the rules expect to match on."""
-    rel = p.as_posix()
+    """A repository-relative POSIX path, as the rules expect to match on.
+
+    Absolute paths are made relative to the working directory, which is the
+    repository root for every way the linter is run. The file-write hook hands
+    it whatever path the editor used — an absolute one — and
+    `is_generated_doc` matches on a repository-relative prefix, so an
+    unnormalised path would miss `docs/src/arguments/` and report a generated
+    page nobody is allowed to hand-edit. A path outside the repository is left
+    as it is: it names something no rule about generated pages is about.
+    """
+    try:
+        rel = p.resolve().relative_to(Path.cwd().resolve()).as_posix()
+    except ValueError:
+        rel = p.as_posix()
     return rel[len("./"):] if rel.startswith("./") else rel
 
 
@@ -555,8 +769,18 @@ def main(argv: list[str]) -> int:
     whole_library = not argv[1:]
     targets = [Path(a) for a in argv[1:]] or [Path("Testimony")]
     files: list[Path] = []
+    # Named markdown is linted where it is named, so the file-write hook can
+    # hand this a page as readily as a module. A named `.lean` file, or a
+    # directory, keeps the old behaviour.
+    named_markdown: list[Path] = []
     for t in targets:
-        files.extend(sorted(t.rglob("*.lean")) if t.is_dir() else [t])
+        if t.is_dir():
+            files.extend(sorted(t.rglob("*.lean")))
+            named_markdown.extend(markdown_files(t))
+        elif t.suffix == ".md":
+            named_markdown.append(t)
+        else:
+            files.append(t)
     texts = {_rel(p): p.read_text(encoding="utf-8") for p in files}
     findings = [f for path, text in texts.items() for f in lint_text(path, text)]
     findings += lint_units(texts)
@@ -579,10 +803,16 @@ def main(argv: list[str]) -> int:
         for p in docs:
             findings += lint_doc(_rel(p), p.read_text(encoding="utf-8"), declared)
 
+    # L12 needs no cross-file knowledge, so it runs over whatever was named —
+    # and over all of the hand-written markdown when nothing was.
+    pages = markdown_files(Path(".")) if whole_library else named_markdown
+    for p in pages:
+        findings += lint_markdown(_rel(p), p.read_text(encoding="utf-8"))
+
     findings.sort(key=lambda f: (f.path, f.line, f.rule))
     for f in findings:
         print(f)
-    n = len(files) + len(docs)
+    n = len({_rel(p) for p in (*files, *docs, *pages)})
     if findings:
         print(f"\ntestimony-lint: {len(findings)} finding(s) in {n} file(s)", file=sys.stderr)
         return 1
