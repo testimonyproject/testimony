@@ -36,11 +36,53 @@ open FFL FFL.Propositional
 
 variable {α : Type}
 
+/-- A premise list, as the *set* Foundation's consequence relation takes.
+
+Two shapes, and the library needs both. A premise **set** is what entailment is
+about: consequence does not care what order the premises come in or whether one
+was written twice, and Foundation states it over `Set F` accordingly. A premise
+**list** is what a package can be read off — `ArgumentPackage.manifest` is
+*computed* by walking `premises` and citing each atom it meets, and `Set F` is
+`F → Prop`, which cannot be walked. The generated assumption manifest, the atom
+legend and the numbered derivation on every argument page all exist because the
+premises are a list.
+
+So the field stays a list and the relation is Foundation's, with this the one
+step between them. -/
+def premiseSet (prems : List (Formula α)) : Set (Formula α) := {φ | φ ∈ prems}
+
+@[simp] theorem mem_premiseSet {prems : List (Formula α)} {φ : Formula α} :
+    φ ∈ premiseSet prems ↔ φ ∈ prems := Iff.rfl
+
+/-- A valuation models the premise set exactly when it satisfies every premise
+in the list. The bridge between Foundation's `⊧*` and the `∀ φ ∈ prems` form
+every result in this library is stated in. -/
+@[simp] theorem modelsSet_premiseSet_iff {w : Valuation α} {prems : List (Formula α)} :
+    w ⊧* premiseSet prems ↔ ∀ φ ∈ prems, w ⊧ φ :=
+  ⟨fun h φ hφ => h.models_set hφ, fun h => ⟨fun _ hφ => h _ hφ⟩⟩
+
 /-- Semantic entailment: every valuation satisfying all the premises satisfies
-the conclusion. -/
+the conclusion.
+
+This **is** Foundation's logical consequence, `T ⊨[M] φ`, over the Boolean
+valuations — not a reimplementation of it. The library used to spell the
+quantifier out by hand, which meant re-proving facts Foundation already has:
+monotonicity, the relation to satisfiability, compactness. Borrowing the
+definition rather than the shape is what makes those available here, and it is
+the reason `entails_of_subset` below is three words long. -/
 def Entails (prems : List (Formula α)) (concl : Formula α) : Prop :=
-  ∀ w : Valuation α, (∀ φ ∈ prems, w ⊧ φ) →
-    w ⊧ concl
+  premiseSet prems ⊨[Valuation α] concl
+
+/-- Entailment in the shape the rest of the library states it in: quantify over
+valuations, assume every premise, conclude.
+
+`Entails` is Foundation's consequence relation over a set; this says the same
+thing over the list, and is what the proof tactics and every result below are
+written against. Definitionally an iff, so nothing is lost crossing it. -/
+theorem entails_iff {prems : List (Formula α)} {concl : Formula α} :
+    Entails prems concl ↔ ∀ w : Valuation α, (∀ φ ∈ prems, w ⊧ φ) → w ⊧ concl :=
+  ⟨fun h w hw => h (modelsSet_premiseSet_iff.mpr hw),
+   fun h _ hw => h _ (modelsSet_premiseSet_iff.mp hw)⟩
 
 /-- A countermodel refutes an entailment.
 
@@ -52,7 +94,7 @@ theorem not_entails_of_countermodel {prems : List (Formula α)} {concl : Formula
     (w : Valuation α)
     (hsat : ∀ φ ∈ prems, w ⊧ φ)
     (hfail : ¬ w ⊧ concl) : ¬ Entails prems concl :=
-  fun h => hfail (h w hsat)
+  fun h => hfail (entails_iff.mp h w hsat)
 
 /-- A premise set is *satisfiable* when some valuation makes every premise
 true — when the position it encodes describes a possible way for things to be.
@@ -64,7 +106,14 @@ from contradictory premises would therefore `Establishes` its conclusion, the
 proof would close, and all four gates would pass — a claim that is true only
 because nothing could make its assumptions hold at once. -/
 def Satisfiable (prems : List (Formula α)) : Prop :=
-  ∃ w : Valuation α, ∀ φ ∈ prems, w ⊧ φ
+  Semantics.Satisfiable (Valuation α) (premiseSet prems)
+
+/-- Satisfiability in the shape the library states it in, as `entails_iff` is
+for entailment. -/
+theorem satisfiable_iff {prems : List (Formula α)} :
+    Satisfiable prems ↔ ∃ w : Valuation α, ∀ φ ∈ prems, w ⊧ φ :=
+  ⟨fun ⟨w, hw⟩ => ⟨w, modelsSet_premiseSet_iff.mp hw⟩,
+   fun ⟨w, hw⟩ => ⟨w, modelsSet_premiseSet_iff.mpr hw⟩⟩
 
 /-- A valuation satisfying every premise witnesses satisfiability. This is how
 every `Satisfiable` result in the library is proved: by naming the reading on
@@ -72,7 +121,7 @@ which the position holds together — its own world, rather than a rival's. -/
 theorem satisfiable_of_model {prems : List (Formula α)}
     (w : Valuation α) (hsat : ∀ φ ∈ prems, w ⊧ φ) :
     Satisfiable prems :=
-  ⟨w, hsat⟩
+  satisfiable_iff.mpr ⟨w, hsat⟩
 
 /-- **The hazard, as a theorem.** An unsatisfiable premise set entails
 everything, so an `Establishes` result over one says nothing at all.
@@ -80,9 +129,8 @@ everything, so an `Establishes` result over one says nothing at all.
 Stated here rather than left as a remark, because it is the one way a result in
 this library can be simultaneously proved, axiom-clean and worthless. -/
 theorem entails_of_unsatisfiable {prems : List (Formula α)}
-    (h : ¬ Satisfiable prems) (concl : Formula α) : Entails prems concl := by
-  intro w hw
-  exact absurd ⟨w, hw⟩ h
+    (h : ¬ Satisfiable prems) (concl : Formula α) : Entails prems concl :=
+  entails_iff.mpr fun w hw => absurd (satisfiable_iff.mpr ⟨w, hw⟩) h
 
 /-- A proposition is *independent* of a premise set when the set entails
 neither it nor its negation — when the premises settle the question neither
@@ -144,10 +192,20 @@ theorem satisfiable_of_independent {prems : List (Formula α)} {φ : Formula α}
   exact h.1 (entails_of_unsatisfiable hns φ)
 
 /-- Entailment is monotone in the premises: adding premises cannot destroy an
-entailment. -/
+entailment. Foundation's `weakening`, at this library's premise lists. -/
 theorem entails_of_subset {prems prems' : List (Formula α)} {concl : Formula α}
     (hsub : ∀ φ ∈ prems, φ ∈ prems') (h : Entails prems concl) : Entails prems' concl :=
-  fun w hw => h w fun φ hφ => hw φ (hsub φ hφ)
+  Semantics.weakening h fun _ hφ => hsub _ hφ
+
+/-- A premise is entailed by the set it belongs to. Foundation's `of_mem`.
+
+Trivial as a fact and not as a result: it is what a reply *conceding* the
+charge it answers amounts to, and `circle_parity_concedes_the_charge` is
+exactly this shape — Barrett's parity grounds entail the circularity because
+the circularity is one of them. -/
+theorem entails_of_mem {prems : List (Formula α)} {concl : Formula α}
+    (h : concl ∈ prems) : Entails prems concl :=
+  Semantics.of_mem (by simpa using h)
 
 /-! ### Sanity checks
 
@@ -165,6 +223,7 @@ deriving DecidableEq, Repr
 /-- Modus ponens is valid. -/
 theorem modus_ponens_valid :
     Entails (α := Pair) [.atom .p, .atom .p 🡒 .atom .q] (.atom .q) := by
+  refine entails_iff.mpr ?_
   intro w hw
   simp only [List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
     Semantics.Imp.models_imply, Formula.Boolean.models_atom] at hw ⊢

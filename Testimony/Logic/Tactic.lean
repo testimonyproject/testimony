@@ -67,7 +67,11 @@ of reason, its inference steps, any shared premise list. The generic half of
 the recipe is supplied here rather than at the call site: the argument
 vocabulary that has to be unfolded to reach a premise list, the list lemmas
 that turn `∀ φ ∈ premises` into a conjunction `tauto` can work on, and
-Foundation's semantics under its full name.
+Foundation's truth lemmas for the connectives.
+
+The first step crosses `entails_iff`. `Entails` is Foundation's consequence
+relation, stated over a set of premises; every result in the library is stated
+over the list, and the bridge between them is definitional.
 
 The brackets take at least one lemma, or are omitted entirely; an empty
 `[]` is a parse error rather than a tactic that quietly does nothing. An
@@ -81,7 +85,8 @@ macro_rules
   | `(tactic| establish) => `(tactic| establish [Testimony.Logic.caseOf])
   | `(tactic| establish [$ls,*]) =>
     `(tactic|
-        (intro w hw;
+        (refine Testimony.Logic.entails_iff.mpr ?_;
+         intro w hw;
          simp only [$ls,*, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
            Testimony.Logic.Line.premises,
            Testimony.Logic.p, Testimony.Logic.notP,
