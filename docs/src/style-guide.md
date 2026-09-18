@@ -228,11 +228,20 @@ be written in a character most readers cannot see and no contributor can type.
 
 ```jsonc
 // settings.json
-"lean4.input.customTranslations": { "imp": "➝" }
+"lean4.input.customTranslations": { "fimp": "➝" }
 ```
 
-which makes `\imp` produce it. #66 proposes shipping this in the dev container
-so that every contributor gets it without configuring anything.
+which makes `\fimp` produce it — *f* for formula, since the arrow this
+library writes is the one between formulas rather than Lean's own.
+
+Do **not** bind `\imp`. It is already taken: `\imp` is one of six
+abbreviations for `→` (U+2192), alongside `\to`, `\r`, `\r-`, `\->` and
+`\rightarrow`, and a custom translation shadows the built-in one.
+`\fimp`, `\impl`, `\Imp` and `\fto` are all free and share a prefix with
+nothing.
+
+Issue #66 proposes shipping the translation in the dev container, so that every
+contributor gets it without configuring anything.
 
 **None of this reaches a reader of the site.** The generated argument pages
 render formulas through `Logic.Markdown` and `Logic.Latex` as `\rightarrow`, so
