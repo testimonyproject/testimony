@@ -176,7 +176,9 @@ then the reading on which it holds.
 set, those are the two halves of one independence claim and should be stated as
 one. Written as a pair, nothing checks that the two halves are about the same
 proposition, and a pair whose halves were not has already reached `main`. The
-primer's entry is [Independence](./reading-the-logic.md#independence-the-premises-settle-nothing-either-way).
+primer's entry is [Independence][independence].
+
+[independence]: ./reading-the-logic.md#independence-the-premises-settle-nothing-either-way
 
 Two premise sets asked two different questions are *not* this pattern —
 `compatibility_defeats_lexical_objection` and

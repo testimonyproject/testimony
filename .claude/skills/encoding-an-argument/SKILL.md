@@ -113,8 +113,9 @@ strawman once you have a proof you like.
 over the atom type and come from `Testimony.Logic.Notation` — do not redeclare
 them in the argument module. Use `p`, `notP`, Foundation's connective notation
 (`🡒`, `⋏`, `⋎`) and `⋀ [...]` for multi-premise inference steps — never the
-raw `.imp`/`.and` constructors, which the truth lemmas are not indexed under. A rival typically shares the
-prooftexts and the inference steps, denying one premise.
+raw `.imp`/`.and` constructors, which the truth lemmas are not indexed under.
+A rival typically shares the prooftexts and the inference steps, denying one
+premise.
 
 For a fulfilment argument, `conclusionLabel` must be
 `fulfillmentLabel person criterion` so a `SatisfactionWitness` can be built.

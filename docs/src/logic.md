@@ -329,8 +329,8 @@ and `⋀` for the conjunction of a list — so the recipe reaches for Foundation
 own `@[simp]` truth lemmas, one per connective, rather than reconstructing them
 by unfolding the definition of the semantics. Those lemmas live in Foundation's
 namespaces and have no ambiguous siblings here: name one wrongly and it is an
-unknown identifier, not a silent no-op. `refute_with` also takes an identifier rather than a term, so a
-countermodel must be a named definition.
+unknown identifier, not a silent no-op. `refute_with` also takes an identifier
+rather than a term, so a countermodel must be a named definition.
 
 **5. The load-bearing results**, where there is a disputed premise. Drop the
 premise from the line that contributes it:
