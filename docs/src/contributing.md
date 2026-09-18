@@ -27,7 +27,8 @@ writing any code.
 - Tooling: `bibgen`, `argtex`, `statusgen`, the domain linter, doc generation,
   CI.
 - The logic layer: lines of reason, the countermodel bridge and the
-  `establish`/`refute_with`/`satisfied_by`/`leaves_open` tactics are the most
+  `establish`/`refute_with`/`satisfied_by`/`leaves_open`/`granted` tactics are
+  the most
   interesting code in the
   repository.
 

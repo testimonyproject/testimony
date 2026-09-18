@@ -249,13 +249,9 @@ def wegnerCircle : ArgumentPackage Claim :=
         (readingSuppliesOrdinaryPregnancy ::
           lexicalConclusionTellsAgainstPrediction :: wegnerClosingSteps) }
 
-/-- The same circle, asked for its other end: the denial of the predictive
-reading, which is what the lexical conclusion was wanted for. -/
-def wegnerCircleForTheDenial : ArgumentPackage Claim :=
-  { wegnerCircle with
-    name := "The same circle, asked for the denial of the predictive reading"
-    conclusion := notP .isaiahPredictsVirginBirth
-    conclusionLabel := "Isaiah 7:14 is not a prediction of a virgin birth" }
+-- A package asking the circle for its other end used to stand here. Both ends
+-- are now asked of `wegnerCircle.premises` directly, since `Independent` takes
+-- a premise list and a proposition rather than a package's own conclusion.
 
 /-- Wegner's line with Postell's usage datum in place of the referent
 principle. The parse and the ordinary pregnancy both stay: this reply concedes

@@ -115,11 +115,13 @@ sets.
 
 ## The circle inside Protestantism
 
-`circle_grounds_neither_consensus` encodes Geisler's charge against Tradition I:
-the creedal consensus is said to rest on scripture's clarity, while scripture's
-clear sense is said to be unobtainable without that consensus. Both legs in
-place, neither end follows — a cycle of implications is satisfied outright by a
-valuation on which every node in it is false.
+`circle_leaves_the_consensus_open` encodes Geisler's charge against Tradition
+I: the creedal consensus is said to rest on scripture's clarity, while
+scripture's clear sense is said to be unobtainable without that consensus. Both
+legs in place, neither end is settled either way — a cycle of implications is
+satisfied outright by a valuation on which every node in it is false, and
+equally by one on which every node is true. `circle_leaves_the_perspicuity_open`
+says the same of the other end.
 
 That charge is made from inside the Reformation, against the position this
 module encodes as the Protestant one. It is conditional like every result here:

@@ -117,11 +117,13 @@ sets.
 
 ### The circle inside Protestantism
 
-`circle_grounds_neither_consensus` encodes Geisler's charge against Tradition I:
-the creedal consensus is said to rest on scripture's clarity, while scripture's
-clear sense is said to be unobtainable without that consensus. Both legs in
-place, neither end follows — a cycle of implications is satisfied outright by a
-valuation on which every node in it is false.
+`circle_leaves_the_consensus_open` encodes Geisler's charge against Tradition
+I: the creedal consensus is said to rest on scripture's clarity, while
+scripture's clear sense is said to be unobtainable without that consensus. Both
+legs in place, neither end is settled either way — a cycle of implications is
+satisfied outright by a valuation on which every node in it is false, and
+equally by one on which every node is true. `circle_leaves_the_perspicuity_open`
+says the same of the other end.
 
 That charge is made from inside the Reformation, against the position this
 module encodes as the Protestant one. It is conditional like every result here:
@@ -1174,23 +1176,6 @@ consensus.
 
 No premise here rests on scripture alone.
 
-<a id="traditionICircleForPerspicuity"></a>
-**`traditionICircleForPerspicuity`** — Tradition I's hermeneutical circle, asked for perspicuity
-
-The same two legs, asked for the other end.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{8} \rightarrow P_{27} \\
-\text{(2)} \quad &amp; P_{27} \rightarrow P_{8} \\[4pt]
-\vdash \quad &amp; P_{8}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
 ## Arguments.SolaScriptura.Results — what does and does not follow
 
 The results this module exists for are the two on the hinge. The seed asserted
@@ -1590,15 +1575,34 @@ def neitherEndReading : Valuation Claim :=
     | x => True
 ```
 
-<a id="circle_grounds_neither_consensus"></a>
-**`circle_grounds_neither_consensus`**
+<a id="bothEndsHoldReading"></a>
+**`bothEndsHoldReading`**
+
+The reading on which both ends of the circle obtain: the consensus is
+hermeneutically necessary and scripture is clear. A cycle of implications is
+satisfied by this as readily as by the reading on which every node is false,
+which is what it means for the cycle to settle nothing.
+
+```lean
+def bothEndsHoldReading : Valuation Claim :=
+  fun x => True
+```
+
+<a id="circle_leaves_the_consensus_open"></a>
+**`circle_leaves_the_consensus_open`**
 
 **Geisler's circularity charge against Tradition I, shown rather than
 alleged.** The creedal consensus is said to rest on scripture's clarity, and
 scripture's clear sense is said to be unobtainable without that consensus. Put
-both legs in place and the consensus does not follow, because a cycle of
-implications is satisfied outright by a valuation on which every node in it is
-false.
+both legs in place and the consensus is left *independent* of them: it does not
+follow, and neither does its denial.
+
+A cycle of implications is satisfied outright by a valuation on which every
+node in it is false, and equally by one on which every node is true. Nothing
+enters such a loop from outside, so nothing comes out of it — in either
+direction. That second direction is what this result gained when it stopped
+being a bare `¬ Establishes`: a circle is not merely silent about whether its
+nodes hold, it is silent about whether they fail.
 
 Like every result here this is conditional: deny either leg and the circle is
 not there. What it settles is that the charge is structural rather than
@@ -1606,20 +1610,27 @@ rhetorical — and it is made from inside Protestantism, against the position
 this module encodes as the Protestant one.
 
 ```lean
-theorem circle_grounds_neither_consensus : ¬Establishes traditionICircle
+theorem circle_leaves_the_consensus_open : Independent
+    traditionICircle.premises (p
+    Claim.creedalConsensusIsHermeneuticallyNecessary)
 -- axioms: propext, Quot.sound
 ```
 
-<a id="circle_grounds_neither_perspicuity"></a>
-**`circle_grounds_neither_perspicuity`**
+<a id="circle_leaves_the_perspicuity_open"></a>
+**`circle_leaves_the_perspicuity_open`**
 
-**And the other end is no better off.** The same two legs, asked for the
-perspicuity instead of the consensus, fail in the same way and for the same
-reason.
+**And the other end is no better off.** The same two legs, asked about
+perspicuity instead of the consensus, leave it open in the same way and on the
+same two readings.
+
+Both results are needed, and they are not two halves of one claim: a circle has
+two ends, and each is a separate proposition the premises fail to settle. What
+*is* one claim is each result's own two directions, which is why each is an
+`Independent` rather than a pair.
 
 ```lean
-theorem circle_grounds_neither_perspicuity : ¬Establishes
-    traditionICircleForPerspicuity
+theorem circle_leaves_the_perspicuity_open : Independent
+    traditionICircle.premises (p Claim.scriptureIsPerspicuous)
 -- axioms: propext, Quot.sound
 ```
 
@@ -1795,7 +1806,7 @@ reply's own premises rather than from the failure of a rival reading.
 ```lean
 theorem circle_parity_concedes_the_charge : Establishes
     circleParityConcedingTheCharge
--- axioms: propext, Quot.sound
+-- axioms: propext
 ```
 
 #### Satisfiability

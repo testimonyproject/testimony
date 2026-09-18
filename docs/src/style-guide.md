@@ -130,7 +130,7 @@ length.
 
 ## Proof tactics
 
-`Testimony.Logic.Tactic` provides four, and they are not conveniences.
+`Testimony.Logic.Tactic` provides five, and they are not conveniences.
 
 ```lean
 theorem christian_establishes : Establishes christian := by
@@ -146,7 +146,18 @@ theorem parity_leaves_the_canon_open :
     Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
   leaves_open parityEstablishesNothingReading krugerParityReading
     [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
+
+theorem circle_parity_concedes_the_charge :
+    Establishes circleParityConcedingTheCharge := by
+  granted [circleParityConcedingTheCharge, circleDefeats, defeatUnderParity,
+    Line.onGrounds, circleDefeatsLine]
 ```
+
+**`granted` is not a faster `establish`.** `establish` would close the same
+goal, by searching for a proof of something that is sitting in the premise
+list. The two say different things — that the conclusion *follows*, against
+that it was *granted* — and where a reply concedes the charge it answers, which
+it is matters more than that the goal closes.
 
 The bracketed list names what to unfold: the package, the lines it is built
 from, the inference steps. Everything generic — `caseOf`, `p`,

@@ -28,7 +28,7 @@ boundary visible at all times.
 | `Testimony.Bib` | Typed bibliography entries, the `@[bib_entry]` registry, BibTeX and Markdown rendering |
 | `Testimony.Provenance` | `Reference`, `Source`, `Tradition`, `Confidence`, `PremiseKind` |
 | `Testimony.Intertext` | `RelationType`, `IntertextEdge`, `Interpretation` |
-| `Testimony.Logic` | Formula type, entailment, independence and countermodels, `ArgumentPackage`, manifests, `Line` lines of reason, the `establish`/`refute_with`/`satisfied_by`/`leaves_open` tactics |
+| `Testimony.Logic` | Formula type, entailment, independence and countermodels, `ArgumentPackage`, manifests, `Line` lines of reason, the `establish`/`refute_with`/`satisfied_by`/`leaves_open`/`granted` tactics |
 | `Testimony.Argument` | `FulfillmentCriterion`, `MessiahDefinition`, `Satisfies`, `MeetsDefinition` |
 | `Testimony.Arguments.*` | The worked arguments. A large one is a directory — `Atoms`, `Sources`, `Lines`, `Packages`, `Results` |
 | `Testimony.Logic.Page` | `Item` — what a generated page is made of, before either rendering |
@@ -92,6 +92,7 @@ doc-gen4 and axiom-audit. Foundation pins Lean v4.33.1.
 Foundation supplies the formula type, the Hilbert systems, the Boolean and
 Kripke semantics, and the metatheory; Testimony reimplements none of it. What
 Testimony adds is the provenance layer over the formulas, lines of reason, and
-the `establish`/`refute_with`/`satisfied_by`/`leaves_open` tactics that settle
+the `establish`/`refute_with`/`satisfied_by`/`leaves_open`/`granted` tactics
+that settle
 entailment, refutation, satisfiability and independence —
 explained in [Encoding arguments](./logic.md).
