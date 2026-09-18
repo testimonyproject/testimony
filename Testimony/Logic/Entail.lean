@@ -78,7 +78,13 @@ valuations, assume every premise, conclude.
 
 `Entails` is Foundation's consequence relation over a set; this says the same
 thing over the list, and is what the proof tactics and every result below are
-written against. Definitionally an iff, so nothing is lost crossing it. -/
+written against.
+
+A *proved* equivalence, not a definitional one — `Iff.rfl` will not close it.
+Only `premiseSet` membership is definitional; Foundation's `⊧*` is a class with
+a field, so reaching the `∀ φ ∈ prems` form goes through
+`modelsSet_premiseSet_iff`. Nothing is lost crossing it, but it costs a
+rewrite rather than nothing. -/
 theorem entails_iff {prems : List (Formula α)} {concl : Formula α} :
     Entails prems concl ↔ ∀ w : Valuation α, (∀ φ ∈ prems, w ⊧ φ) → w ⊧ concl :=
   ⟨fun h w hw => h (modelsSet_premiseSet_iff.mpr hw),
@@ -226,7 +232,8 @@ theorem modus_ponens_valid :
   refine entails_iff.mpr ?_
   intro w hw
   simp only [List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
-    Semantics.Imp.models_imply, Formula.Boolean.models_atom] at hw ⊢
+    FFL.Semantics.Imp.models_imply,
+    FFL.Propositional.Formula.Boolean.models_atom] at hw ⊢
   tauto
 
 /-- Affirming the consequent is not valid, and here is why: the reading on

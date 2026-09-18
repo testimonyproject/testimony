@@ -18,8 +18,9 @@ atoms. Two questions get asked of it, and they are answered by different means.
 tableau. It produces an ordinary proof term, so the trust base is unchanged,
 and its cost tracks the argument's structure rather than its atom count.
 
-`Entails` is not defined here. It is Foundation's logical consequence relation,
-`T ⊨[M] φ`, at this library's premise lists:
+`Entails` is a thin local wrapper; the relation it names is not this library's.
+It is Foundation's logical consequence, `T ⊨[M] φ`, at this library's premise
+lists:
 
 ```lean
 def premiseSet (prems : List (Formula α)) : Set (Formula α) := {φ | φ ∈ prems}

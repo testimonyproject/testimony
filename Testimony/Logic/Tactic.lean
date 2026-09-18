@@ -44,8 +44,10 @@ theorem parity_leaves_the_canon_open :
 
 The bracketed list names the definitions to unfold — the package, the lines of
 reason it is built from, the inference steps. Everything generic is supplied by
-the tactic: `caseOf`, `conjOf`, `p`, `notP`, the list-membership lemmas that
-turn `∀ φ ∈ prems` into a conjunction, and the semantics.
+the tactic: `caseOf`, `p`, `notP`, the list-membership lemmas that turn
+`∀ φ ∈ prems` into a conjunction, and Foundation's truth lemmas for the
+connectives — including the one for `⋀`, the list conjunction that replaced
+this library's own `conjOf`.
 
 `refute_with` takes an **identifier**, not a term, so the countermodel has to be
 a named definition, and `leaves_open` takes two for the same reason. That is
@@ -71,7 +73,9 @@ Foundation's truth lemmas for the connectives.
 
 The first step crosses `entails_iff`. `Entails` is Foundation's consequence
 relation, stated over a set of premises; every result in the library is stated
-over the list, and the bridge between them is definitional.
+over the list. The bridge between them is a proved equivalence rather than a
+definitional one: Foundation's `⊧*` is a class, so converting it to the
+`∀ φ ∈ prems` form goes through `modelsSet_premiseSet_iff`.
 
 The brackets take at least one lemma, or are omitted entirely; an empty
 `[]` is a parse error rather than a tactic that quietly does nothing. An
