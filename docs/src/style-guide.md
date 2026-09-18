@@ -110,7 +110,9 @@ length.
   They build the same terms, but only the notation is what Foundation's
   `@[simp]` truth lemmas are indexed under, and those lemmas are where the
   proof recipes get their semantics. `p` and `notP` stay: a reader of a rival's
-  premise list should not have to decode the encoding of negation.
+  premise list should not have to decode the encoding of negation. See
+  [Typing the connectives](#typing-the-connectives) — the arrow is not the one
+  you think it is.
 - **Compose arguments from lines of reason.** A strand is a `Line` — its own
   grounds, its own inference step, what it delivers — and a package is
   `caseOf lines shared closing`. A variant package is then a named difference
@@ -184,6 +186,54 @@ Two premise sets asked two different questions are *not* this pattern —
 `compatibility_defeats_lexical_objection` and
 `compatibility_does_not_establish_criterion` range over different premise sets,
 and forcing `Independent` onto them would be false.
+
+## Typing the connectives
+
+The implication is **`🡒`, U+1F852 RIGHTWARDS SANS-SERIF ARROW**. It is not
+`→` (U+2192), not `->`, and not `➝` (U+279D). Foundation binds exactly one
+token for it, in `Foundation/Vorspiel/NotationClass.lean`:
+
+```lean
+infixr:60 " 🡒 " => HArrow.hArrow
+```
+
+There is no alternative spelling that parses. This matters more than it sounds,
+because the two obvious ways to get the character both fail:
+
+**It has no input abbreviation.** The Lean 4 extension's abbreviation map has no
+entry producing U+1F852; `\to` and `\r` both give `→` (U+2192), which is
+Lean's own function arrow and will not elaborate as Foundation's implication.
+Until the extension ships one, add your own:
+
+```jsonc
+// settings.json
+"lean4.input.customTranslations": { "imp": "🡒" }
+```
+
+which makes `\imp` produce it. Copy-paste from this page works too.
+
+**Most fonts do not have the glyph**, so it shows as a box — including in
+GitHub's web UI, in pull requests, and in any editor without a font covering
+Supplemental Arrows-C (U+1F800–U+1F8FF). Neither Fira Code, JetBrains Mono,
+Iosevka, Cascadia Code nor DejaVu Sans Mono covers it, and a Nerd Font patch
+does not help: Nerd Fonts add glyphs in the Private Use Area, not in this
+block. Fonts that do cover it include Symbola and Unifont Upper (both free) and
+PragmataPro (commercial). Set a fallback rather than changing your editor font:
+
+```jsonc
+"editor.fontFamily": "'Your Font', 'Symbola', monospace"
+```
+
+FormalizedFormalLogic maintains
+[Begriffsschrift](https://github.com/FormalizedFormalLogic/Begriffsschrift), a
+typeface for proof assistants built for exactly this problem. It is an
+experimental fork of Iosevka and describes itself as work in progress, so treat
+it as promising rather than as the answer.
+
+**None of this reaches a reader of the site.** The generated argument pages
+render formulas through `Logic.Markdown` and `Logic.Latex` as `\rightarrow`,
+so every published page shows an ordinary arrow. The glyph is an authoring
+concern only.
 
 ## Layout
 
