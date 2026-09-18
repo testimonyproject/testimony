@@ -261,6 +261,69 @@ class RuleTests(unittest.TestCase):
         found = L.lint_doc("README.md", text, {"reformed_establishes"})
         self.assertIn("L9", rules(found))
 
+    def test_L9_docstring_naming_a_removed_result(self):
+        """The second incident: the root `SolaScriptura` docstring kept a
+        paragraph naming four results the same commit deleted, and `argdoc`
+        published it into a page that then contradicted itself."""
+        text = (
+            "/-!\n"
+            "Each reply gets two results, `parity_blocks_canon_objection` with\n"
+            "`canon_parity_does_not_establish_sole_rule`.\n"
+            "-/\n"
+            "def live := 1\n"
+        )
+        found = L.lint_lean_prose("Testimony/Arguments/X.lean", text,
+                                  {"parity_leaves_the_canon_open"})
+        self.assertIn("L9", rules(found))
+
+    def test_L9_docstring_naming_a_result_that_exists(self):
+        text = "/-- `parity_leaves_the_canon_open` states it once. -/\ndef live := 1\n"
+        found = L.lint_lean_prose("Testimony/Arguments/X.lean", text,
+                                  {"parity_leaves_the_canon_open"})
+        self.assertNotIn("L9", rules(found))
+
+    def test_L9_docstring_rule_ignores_code(self):
+        """Only prose is prose. A deleted name surviving as an identifier in
+        code is a build error, not a documentation defect, and reporting it
+        here would double up on the compiler."""
+        text = "def gone_result := 1\n-- and `also_gone_result` in a note\n"
+        self.assertEqual([], L.lint_lean_prose("Testimony/X.lean", text, set()))
+
+    def test_L9_docstring_rule_reports_the_docstring_line(self):
+        """A finding has to point at the paragraph, not at the declaration."""
+        text = "def a := 1\ndef b := 2\n/-- names `gone_result` here -/\ndef c := 3\n"
+        found = L.lint_lean_prose("Testimony/X.lean", text, set())
+        self.assertEqual([3], [f.line for f in found])
+
+    def test_L9_accepts_an_imported_name(self):
+        """Prose may name a result this library imports rather than declares.
+        Before it could, the rule pushed documentation away from being
+        specific — the opposite of what it is for. `models_imply` is the real
+        case: #60 described Foundation's truth lemmas rather than naming them,
+        purely to keep this rule quiet."""
+        text = "/-- Reached through `models_imply`, upstream. -/\ndef x := 1\n"
+        self.assertIn("L9", rules(L.lint_lean_prose("Testimony/X.lean", text, set())))
+        self.assertNotIn(
+            "L9", rules(L.lint_lean_prose("Testimony/X.lean", text, {"models_imply"}))
+        )
+
+    @unittest.skipUnless(
+        any(r.is_dir() for r in L.IMPORTED_ROOTS),
+        "needs .lake/packages — run `lake exe cache get` first",
+    )
+    def test_imported_names_finds_a_class_field_with_binders(self):
+        """Foundation writes `models_imply {𝓜 : M} {φ ψ : F} : …`, with binders
+        before the colon, which the strict field pattern misses."""
+        found = L.imported_names()
+        self.assertIn("models_imply", found)
+        self.assertIn("weakening", found)
+
+    def test_imported_names_survive_a_missing_package(self):
+        """A fresh clone has no `.lake/` until the first cache fetch, and a
+        linter that refused to run before the first build would be worse than
+        one that cannot confirm an imported name."""
+        self.assertEqual(set(), L.imported_names((Path("nonexistent-package"),)))
+
     def test_L9_ignores_other_code_blocks(self):
         """A shell block or a transcript is not a claim about this library."""
         text = "```\n'bvtest' depends on axioms: [propext, bvtest._native.bv_decide.ax_1_5]\n```\n"

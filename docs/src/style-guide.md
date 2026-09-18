@@ -279,7 +279,7 @@ linter.
 | L6 | Every `@[headline]` theorem is followed by `#print axioms` |
 | L7 | Citation keys match `^[a-z0-9]+(-[a-z0-9]+)*$` |
 | L8 | No trailing whitespace; lines at most 100 columns |
-| L9 | No documentation page names a Lean result that does not exist |
+| L9 | No prose names a Lean result that does not exist — pages and docstrings alike |
 | L10 | Every `@[proposed]` result says what is novel about it |
 | L11 | A package with a positive `Establishes` result is shown satisfiable |
 
@@ -323,6 +323,25 @@ then reads every result name the prose cites, in backticks or declared in a
 Lean code block, and fails if the library no longer declares it. That is the
 specific way the roadmap went wrong, and it is now a linter finding rather than
 a matter of someone happening to reread the page.
+
+**A docstring counts as prose.** L9 reads the `/-- … -/` and `/-! … -/` blocks
+in the Lean sources as well as the pages, because `argdoc` and `argtex` publish
+them verbatim — a module docstring naming a deleted result reaches the site and
+the PDF exactly as a stale page would, and once did. Ordinary `/- … -/` and
+`--` comments are left alone: they are notes to whoever opens the file, not
+something this project publishes.
+
+**A name the library imports counts as existing.** Prose may cite Foundation's
+own results — `of_mem`, `models_imply` — and the rule reads Foundation's
+declarations alongside this library's so that it does not report them missing.
+Before it did, the rule pushed documentation towards describing a lemma rather
+than naming it, which is the opposite of what it is for.
+
+The generated pages under `docs/src/arguments/` are deliberately *not* read. A
+stale name there comes from a docstring, which is now checked at its source,
+and `lake exe argdoc --check` catches a page that has drifted from one. Reading
+both would report a single defect twice and invite someone to edit a generated
+file.
 
 What is left over is judgement: whether a paragraph's *description* of a result
 still describes it. Say what the encoding now does, in the same commit that
