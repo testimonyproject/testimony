@@ -75,5 +75,13 @@ underlying API was removed.
   namespace, never conflated with deduction.
 - **Corpus grounding.** `Passage` values are references, not text. They do not
   yet resolve against real manuscript data.
-- **Modal logic.** Needed for divine-attribute arguments; reachable from the
-  chosen substrate but not yet used. See the [roadmap](./roadmap.md).
+- **Modal logic.** Needed for divine-attribute arguments. *Not* part of
+  Foundation, contrary to what this page said until recently: it is a sibling
+  package in the same family, depending on Foundation and sharing its
+  interfaces, so reaching it means adding a dependency rather than changing
+  substrate. See the [roadmap](./roadmap.md).
+- **Quantification.** Every argument here is propositional, so a claim whose
+  force depends on *scope* — this holds of doctrine but not of practice — is
+  carried by atom design and by prose rather than by the logic. Foundation's
+  first-order fragment would close this and is already a dependency; it is
+  unused, not unavailable.
