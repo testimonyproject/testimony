@@ -1,4 +1,4 @@
-import Testimony.Logic.Basic
+import Testimony.Logic.Notation
 import Mathlib.Tactic.Tauto
 
 /-!
@@ -222,7 +222,7 @@ deriving DecidableEq, Repr
 
 /-- Modus ponens is valid. -/
 theorem modus_ponens_valid :
-    Entails (α := Pair) [.atom .p, .atom .p 🡒 .atom .q] (.atom .q) := by
+    Entails (α := Pair) [.atom .p, .atom .p ➝ .atom .q] (.atom .q) := by
   refine entails_iff.mpr ?_
   intro w hw
   simp only [List.mem_cons, List.not_mem_nil, or_false, forall_eq_or_imp, forall_eq,
@@ -232,14 +232,14 @@ theorem modus_ponens_valid :
 /-- Affirming the consequent is not valid, and here is why: the reading on
 which `q` holds and `p` does not. -/
 theorem affirming_consequent_invalid :
-    ¬ Entails (α := Pair) [.atom .q, .atom .p 🡒 .atom .q] (.atom .p) := by
+    ¬ Entails (α := Pair) [.atom .q, .atom .p ➝ .atom .q] (.atom .p) := by
   refine not_entails_of_countermodel (fun a => a = Pair.q) ?_ ?_ <;> simp
 
 /-- And `p` is independent of those premises, not merely unentailed by them:
 the reading above leaves `p` false, and the reading on which both atoms hold
 leaves it true, while both satisfy every premise. -/
 theorem p_independent_of_affirming_the_consequent :
-    Independent (α := Pair) [.atom .q, .atom .p 🡒 .atom .q] (.atom .p) := by
+    Independent (α := Pair) [.atom .q, .atom .p ➝ .atom .q] (.atom .p) := by
   refine independent_of_countermodels (fun a => a = Pair.q) (fun _ => True) ?_ ?_ ?_ ?_ <;>
     simp
 

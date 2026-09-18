@@ -28,13 +28,13 @@ others. -/
 Matthew's intent, the criterion follows. -/
 def toCriterion : Formula Claim :=
   ⋀ [ p .isaiahPredictsVirginBirth, p .almahMeansVirgin
-    , p .matthewIntendsFulfilment ] 🡒 p .messiahBornOfVirgin
+    , p .matthewIntendsFulfilment ] ➝ p .messiahBornOfVirgin
 
 /-- Protoevangelium strand: from Genesis 3:15 read as promise, the patrilineal
 idiom, and the inference drawn from its departure, the criterion follows. -/
 def genesisToCriterion : Formula Claim :=
   ⋀ [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
-    , p .seedReckonedThroughFather, p .seedOfTheWomanImpliesNoHumanFather ] 🡒 p .messiahBornOfVirgin
+    , p .seedReckonedThroughFather, p .seedOfTheWomanImpliesNoHumanFather ] ➝ p .messiahBornOfVirgin
 
 /-- Compositional strand: from Isaiah 7's placement in an eschatologically
 framed unit, the principle that placement governs meaning, and the future birth
@@ -46,7 +46,7 @@ grants the composition and stops short of Matthew is entitled to. -/
 def compositionalToCriterion : Formula Claim :=
   ⋀ [ p .isaiah2to12FramedByEschatology, p .compositionGovernsMeaning
     , p .compositionalReadingYieldsFutureBirth, p .matthewIntendsFulfilment ]
-  🡒 p .messiahBornOfVirgin
+  ➝ p .messiahBornOfVirgin
 
 /-- **Postell's parity argument.** Isaiah 9:5–6 and 11:1–10 are read as
 messianic without reservation, and they stand on the same near-term Assyrian
@@ -60,18 +60,18 @@ fulfilment is unclear, while parity says the near-term setting was never the
 right kind of reason. -/
 def parityDefeatsNearTermExclusion : Formula Claim :=
   ⋀ [ p .isaiah9And11AreMessianic, p .isaiah9And11ShareTheAssyrianTimeline ]
-  🡒 notP .nearTermExcludesMessianicSense
+  ➝ notP .nearTermExcludesMessianicSense
 
 /-- Michean strand: from the maternal-only wording and the inference drawn from
 it, the criterion follows. -/
 def micahToCriterion : Formula Claim :=
-  ⋀ [ p .micah5_3NamesMotherOnly, p .maternalSilenceImpliesNoHumanFather ] 🡒 p .messiahBornOfVirgin
+  ⋀ [ p .micah5_3NamesMotherOnly, p .maternalSilenceImpliesNoHumanFather ] ➝ p .messiahBornOfVirgin
 
 /-- Magisterial strand: from papal teaching and the authority granted it, the
 criterion follows. Encoded, but deliberately kept out of `christian`. -/
 def magisterialToCriterion : Formula Claim :=
   ⋀ [ p .magisteriumTeachesVirginalConception
-    , p .magisteriumIsDoctrinallyAuthoritative ] 🡒 p .messiahBornOfVirgin
+    , p .magisteriumIsDoctrinallyAuthoritative ] ➝ p .messiahBornOfVirgin
 
 /-- The critical inference, made explicit: granted that Isaiah 7:14 was a sign
 to Ahaz, and that such a sign is not also a prediction of a virgin conception,
@@ -82,7 +82,7 @@ The earlier encoding of this module simply asserted the denial as a premise of
 left nothing for an objection to engage. -/
 def criticalExclusion : Formula Claim :=
   ⋀ [ p .isaiahIsNearTermSignToAhaz, p .nearTermExcludesMessianicSense ]
-  🡒 notP .isaiahPredictsVirginBirth
+  ➝ notP .isaiahPredictsVirginBirth
 
 /-- Berry's objection: if how the sign was fulfilled in Ahaz's own day is
 itself unsettled, the near-term reading is not secure enough to exclude a
@@ -93,7 +93,7 @@ an unclear fulfilment is still a fulfilment, and Brown would answer that Isaiah
 8:3–4 settles the referent well enough. Inference steps carry no confidence
 field of their own, so this is where that is recorded. -/
 def berryBlocksExclusion : Formula Claim :=
-  p .nearTermFulfilmentIsUnclear 🡒 notP .nearTermExcludesMessianicSense
+  p .nearTermFulfilmentIsUnclear ➝ notP .nearTermExcludesMessianicSense
 
 /-! #### The referential strand
 
@@ -106,24 +106,24 @@ an עַלְמָה and a virgin, then Mary answers Isaiah's description — witho
 word having to carry the sense. -/
 def toDescriptionFit : Formula Claim :=
   ⋀ [ p .almahDenotesMarriageableYoungWoman, p .virginityCompatibleWithAlmah
-    , p .maryWasAnAlmah, p .maryConceivedAsVirgin ] 🡒 p .maryFitsIsaianicDescription
+    , p .maryWasAnAlmah, p .maryConceivedAsVirgin ] ➝ p .maryFitsIsaianicDescription
 
 /-- ... and if she answers it, the fulfilment claim never needed the lexical
 sense in the first place. -/
 def descriptionFitDefeatsLexicalDemand : Formula Claim :=
-  p .maryFitsIsaianicDescription 🡒 notP .lexicalSenseRequiredForFulfilment
+  p .maryFitsIsaianicDescription ➝ notP .lexicalSenseRequiredForFulfilment
 
 /-- The lexical objection in full: עַלְמָה does not denote virginity, Matthew's
 claim requires that it does, so the fulfilment claim fails. Stated as the
 objector would state it, so that the reply has something real to answer. -/
 def lexicalObjection : Formula Claim :=
-  ⋀ [ notP .almahMeansVirgin, p .lexicalSenseRequiredForFulfilment ] 🡒 notP .jesusSatisfiesCriterion
+  ⋀ [ notP .almahMeansVirgin, p .lexicalSenseRequiredForFulfilment ] ➝ notP .jesusSatisfiesCriterion
 
 /-- The versional route to the lexical premise: the Targum and the Three read
 the broad term, so the narrow sense is not the word's. -/
 def versionalObjection : Formula Claim :=
   ⋀ [ p .targumRendersUlemta, p .theThreeRenderNeanis
-    , p .versionalDivergenceRefutesVirginSense ] 🡒 notP .almahMeansVirgin
+    , p .versionalDivergenceRefutesVirginSense ] ➝ notP .almahMeansVirgin
 
 /-- **The tension, dissolved.** If virginity is compatible with עַלְמָה, the
 versions are not contradicting one another about the referent at all: the
@@ -133,11 +133,11 @@ both are faithful renderings of a word whose denotation admits both. The
 divergence stops being evidence about the sense. -/
 def compatibilityDissolvesDivergence : Formula Claim :=
   ⋀ [ p .virginityCompatibleWithAlmah, p .lxxRendersParthenos
-    , p .peshittaRendersBtulta ] 🡒 notP .versionalDivergenceRefutesVirginSense
+    , p .peshittaRendersBtulta ] ➝ notP .versionalDivergenceRefutesVirginSense
 
 /-- From the criterion and the historical claim, the fulfilment follows. -/
 def toFulfilment : Formula Claim :=
-  ⋀ [p .messiahBornOfVirgin, p .maryConceivedAsVirgin] 🡒 p .jesusSatisfiesCriterion
+  ⋀ [p .messiahBornOfVirgin, p .maryConceivedAsVirgin] ➝ p .jesusSatisfiesCriterion
 
 /-! #### Wegner's grammatical objection, and the circle Postell finds in it
 
@@ -148,7 +148,7 @@ which link carries its weight, and where that link comes from. -/
 /-- Wegner's grammatical step: if הָרָה is a predicate adjective, the עַלְמָה of
 the sign is pregnant already, at the moment the sign is given. -/
 def harahYieldsPresentPregnancy : Formula Claim :=
-  p .harahIsPredicateAdjective 🡒 p .isaianicAlmahIsAlreadyPregnant
+  p .harahIsPredicateAdjective ➝ p .isaianicAlmahIsAlreadyPregnant
 
 /-- ... and if that pregnancy is an ordinary conception, the woman it describes
 is not a virgin.
@@ -159,12 +159,12 @@ miracle itself — the virgin *is* pregnant — which is available to him precis
 because the parse leaves this open. -/
 def ordinaryPregnancyExcludesVirginity : Formula Claim :=
   ⋀ [ p .isaianicAlmahIsAlreadyPregnant, p .pregnancyAtTheSignIsOrdinary ]
-  🡒 p .isaianicAlmahIsNotAVirgin
+  ➝ p .isaianicAlmahIsNotAVirgin
 
 /-- ... and if what the one clear Isaianic referent turns out to be settles what
 the word denotes, the lexical conclusion follows. -/
 def referentYieldsLexicalConclusion : Formula Claim :=
-  ⋀ [ p .isaianicAlmahIsNotAVirgin, p .oneReferentSettlesDenotation ] 🡒 notP .almahMeansVirgin
+  ⋀ [ p .isaianicAlmahIsNotAVirgin, p .oneReferentSettlesDenotation ] ➝ notP .almahMeansVirgin
 
 /-- **Where the ordinary pregnancy comes from.** Not from the grammar: from the
 near-term reading of the sign, which has the child born within nine months and
@@ -176,7 +176,7 @@ grammatical-historical grounds, he assumes that עַלְמָה cannot mean 'virg
 Isaiah 7:14" (468 n. 22). -/
 def readingSuppliesOrdinaryPregnancy : Formula Claim :=
   ⋀ [ p .isaiahIsNearTermSignToAhaz, notP .isaiahPredictsVirginBirth ]
-  🡒 p .pregnancyAtTheSignIsOrdinary
+  ➝ p .pregnancyAtTheSignIsOrdinary
 
 /-- **The return leg.** The lexical conclusion is then turned against the
 predictive reading, which is what the critical case does with it and what
@@ -191,14 +191,14 @@ form the loop is evidential rather than deductive, which is the difference
 between a vicious circle and mutual support. -/
 def lexicalConclusionTellsAgainstPrediction : Formula Claim :=
   ⋀ [ notP .almahMeansVirgin, p .lexicalSenseRequiredForFulfilment ]
-  🡒 notP .isaiahPredictsVirginBirth
+  ➝ notP .isaiahPredictsVirginBirth
 
 /-- **Postell's usage parity.** If a single clear referent settled the
 denotation, the other clear עַלְמָה passages would settle it in the opposite
 direction, since the women there are virgins. So that principle is not
 available to the objection: it proves too much, and the wrong way. -/
 def usageParityBlocksReferentInference : Formula Claim :=
-  p .otherClearAlmahCasesAreVirgins 🡒 notP .oneReferentSettlesDenotation
+  p .otherClearAlmahCasesAreVirgins ➝ notP .oneReferentSettlesDenotation
 
 /-! ### The lines of reason
 

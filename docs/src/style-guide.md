@@ -105,14 +105,14 @@ length.
   Write the rival *before* proving anything. Rule L5 enforces this.
 - **There is no atom budget.** Entailment is settled by `tauto` and refuted by
   named countermodels, neither of which enumerates valuations.
-- **Write formulas in Foundation's notation.** `🡒`, `⋏`, `⋎`, `∼`, and `⋀` for
+- **Write formulas in Foundation's notation.** `➝`, `⋏`, `⋎`, `∼`, and `⋀` for
   the conjunction of a list — not the raw constructors `.imp`, `.and`, `.or`.
   They build the same terms, but only the notation is what Foundation's
   `@[simp]` truth lemmas are indexed under, and those lemmas are where the
   proof recipes get their semantics. `p` and `notP` stay: a reader of a rival's
-  premise list should not have to decode the encoding of negation. See
-  [Typing the connectives](#typing-the-connectives) — the arrow is not the one
-  you think it is.
+  premise list should not have to decode the encoding of negation. Implication
+  is written `➝`, an alias for Foundation's `🡒` — see
+  [Typing the connectives](#typing-the-connectives).
 - **Compose arguments from lines of reason.** A strand is a `Line` — its own
   grounds, its own inference step, what it delivers — and a package is
   `caseOf lines shared closing`. A variant package is then a named difference
@@ -189,51 +189,56 @@ and forcing `Independent` onto them would be false.
 
 ## Typing the connectives
 
-The implication is **`🡒`, U+1F852 RIGHTWARDS SANS-SERIF ARROW**. It is not
-`→` (U+2192), not `->`, and not `➝` (U+279D). Foundation binds exactly one
-token for it, in `Foundation/Vorspiel/NotationClass.lean`:
+Write implication as **`➝`** (U+279D, TRIANGLE-HEADED RIGHTWARDS ARROW). The
+other connectives are Foundation's as written: `⋏`, `⋎`, `∼`, and `⋀` for the
+conjunction of a list.
+
+**`➝` is an alias, not a divergence.** Foundation binds implication to `🡒` —
+U+1F852, in the Supplemental Arrows-C block — and that is the only token it
+declares. `Testimony.Logic.Notation` adds a second notation for the same class:
 
 ```lean
-infixr:60 " 🡒 " => HArrow.hArrow
+scoped infixr:60 " ➝ " => FFL.HArrow.hArrow
+macro_rules | `($x ➝ $y) => `(binop% FFL.HArrow.hArrow $x $y)
 ```
 
-There is no alternative spelling that parses. This matters more than it sounds,
-because the two obvious ways to get the character both fail:
+Both parse to `FFL.HArrow.hArrow`, Foundation's own class, with the same
+`binop%` elaborator, so nothing about the encoding diverges from Foundation
+except the character on the page. It is `scoped`, so it applies where
+`Testimony.Logic` is open — every module here — and nowhere else. `➝` occurs
+nowhere in Mathlib, Foundation, Batteries or any other dependency, so it
+shadows nothing.
 
-**It has no input abbreviation.** The Lean 4 extension's abbreviation map has no
-entry producing U+1F852; `\to` and `\r` both give `→` (U+2192), which is
-Lean's own function arrow and will not elaborate as Foundation's implication.
-Until the extension ships one, add your own:
+**Why bother.** Foundation's `🡒` is a poor character to build a corpus on, for
+two reasons that compound:
+
+- *Almost nothing renders it.* Supplemental Arrows-C is covered by Symbola,
+  Unifont and PragmataPro, and not by Fira Code, JetBrains Mono, Iosevka,
+  Cascadia Code or DejaVu Sans Mono. A Nerd Font patch does not help — Nerd
+  Fonts add glyphs in the Private Use Area, not in this block. It shows as an
+  empty box in GitHub, in pull-request diffs, and in most editors.
+- *Nothing types it.* The Lean 4 extension has no abbreviation producing
+  U+1F852; `\to` and `\r` both give `→` (U+2192), which is Lean's function
+  arrow and will not elaborate as Foundation's implication.
+
+A catalogue whose whole claim is that anyone can read and contest it should not
+be written in a character most readers cannot see and no contributor can type.
+
+**Typing `➝`.** It has no built-in abbreviation either, so add one:
 
 ```jsonc
 // settings.json
-"lean4.input.customTranslations": { "imp": "🡒" }
+"lean4.input.customTranslations": { "imp": "➝" }
 ```
 
-which makes `\imp` produce it. Copy-paste from this page works too.
-
-**Most fonts do not have the glyph**, so it shows as a box — including in
-GitHub's web UI, in pull requests, and in any editor without a font covering
-Supplemental Arrows-C (U+1F800–U+1F8FF). Neither Fira Code, JetBrains Mono,
-Iosevka, Cascadia Code nor DejaVu Sans Mono covers it, and a Nerd Font patch
-does not help: Nerd Fonts add glyphs in the Private Use Area, not in this
-block. Fonts that do cover it include Symbola and Unifont Upper (both free) and
-PragmataPro (commercial). Set a fallback rather than changing your editor font:
-
-```jsonc
-"editor.fontFamily": "'Your Font', 'Symbola', monospace"
-```
-
-FormalizedFormalLogic maintains
-[Begriffsschrift](https://github.com/FormalizedFormalLogic/Begriffsschrift), a
-typeface for proof assistants built for exactly this problem. It is an
-experimental fork of Iosevka and describes itself as work in progress, so treat
-it as promising rather than as the answer.
+which makes `\imp` produce it. #66 proposes shipping this in the dev container
+so that every contributor gets it without configuring anything.
 
 **None of this reaches a reader of the site.** The generated argument pages
-render formulas through `Logic.Markdown` and `Logic.Latex` as `\rightarrow`,
-so every published page shows an ordinary arrow. The glyph is an authoring
-concern only.
+render formulas through `Logic.Markdown` and `Logic.Latex` as `\rightarrow`, so
+every published page shows an ordinary arrow whichever glyph the source uses.
+This is an authoring concern only — which is exactly why it was worth fixing
+cheaply.
 
 ## Layout
 

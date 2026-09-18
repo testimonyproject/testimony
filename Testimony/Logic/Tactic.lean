@@ -197,13 +197,13 @@ they always have a package to unfold.
 
 /-- `establish` proves a valid entailment: modus ponens. -/
 theorem establish_proves_modus_ponens :
-    Entails (α := Pair) [p .p, p .p 🡒 p .q] (p .q) := by
+    Entails (α := Pair) [p .p, p .p ➝ p .q] (p .q) := by
   establish
 
 /-- `establish` handles negated atoms too: modus tollens, with `notP` on both
 sides. -/
 theorem establish_proves_modus_tollens :
-    Entails (α := Pair) [notP .q, p .p 🡒 p .q] (notP .p) := by
+    Entails (α := Pair) [notP .q, p .p ➝ p .q] (notP .p) := by
   establish
 
 /-- The reading on which `q` holds and `p` does not. -/
@@ -211,7 +211,7 @@ def affirmingConsequentReading : Valuation Pair := fun a => a = Pair.q
 
 /-- `refute_with` refutes an invalid one: affirming the consequent. -/
 theorem refute_with_refutes_affirming_the_consequent :
-    ¬ Entails (α := Pair) [p .q, p .p 🡒 p .q] (p .p) := by
+    ¬ Entails (α := Pair) [p .q, p .p ➝ p .q] (p .p) := by
   refute_with affirmingConsequentReading
 
 /-- The reading on which both atoms hold. -/
@@ -219,7 +219,7 @@ def bothHoldReading : Valuation Pair := fun _ => True
 
 /-- `satisfied_by` proves a premise set has a model. -/
 theorem satisfied_by_models_a_consistent_pair :
-    Satisfiable (α := Pair) [p .p, p .p 🡒 p .q] := by
+    Satisfiable (α := Pair) [p .p, p .p ➝ p .q] := by
   satisfied_by bothHoldReading
 
 /-- `leaves_open` proves independence: from `q` and `p → q`, the premises
@@ -227,7 +227,7 @@ settle nothing about `p` either way. `affirmingConsequentReading` is the
 reading on which `p` fails; `bothHoldReading` is the reading on which it
 holds. -/
 theorem leaves_open_shows_p_is_independent :
-    Independent (α := Pair) [p .q, p .p 🡒 p .q] (p .p) := by
+    Independent (α := Pair) [p .q, p .p ➝ p .q] (p .p) := by
   leaves_open affirmingConsequentReading bothHoldReading
 
 /-- And a contradictory premise set has none, so it entails anything — the

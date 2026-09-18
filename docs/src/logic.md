@@ -324,7 +324,7 @@ abbreviation in `Testimony.Logic` as well as a structure in Foundation, so a
 proof written inside an argument module resolved the wrong one, `simp` did
 nothing, and the proof term fell back to `sorryAx` — with a successful build.
 
-Formulas are now written in Foundation's own notation — `🡒`, `⋏`, `⋎`, `∼`,
+Formulas are now written in Foundation's own notation — `➝`, `⋏`, `⋎`, `∼`,
 and `⋀` for the conjunction of a list — so the recipe reaches for Foundation's
 own `@[simp]` truth lemmas, one per connective, rather than reconstructing them
 by unfolding the definition of the semantics. Those lemmas live in Foundation's

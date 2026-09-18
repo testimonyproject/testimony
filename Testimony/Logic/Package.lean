@@ -16,7 +16,7 @@ the premises rather than maintained alongside them, so it cannot drift.
 A `conjOf` used to live here, folding a premise list into a conjunction so that
 a multi-premise inference step read well at the encoding site. It was
 Foundation's `⋀` (`List.conj₂`) rewritten — the same three cases, down to
-`⋀[]` being the `⊥ 🡒 ⊥` that `Formula`'s `LogicalNeutral` instance calls `⊤` —
+`⋀[]` being the `⊥ ➝ ⊥` that `Formula`'s `LogicalNeutral` instance calls `⊤` —
 and Foundation ships `@[simp] models_list_conj₂` for it, which the proof
 recipes now use instead of unfolding a conjunction the library built itself.
 -/
