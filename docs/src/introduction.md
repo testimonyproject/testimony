@@ -1,5 +1,6 @@
 <div class="testimony-masthead">
-  <img src="./assets/testimony-512.png" alt="The Testimony mark: a turnstile with a cross inscribed at its intersection.">
+  <img src="./assets/testimony-512.png"
+       alt="The Testimony mark: a turnstile with a cross inscribed at its intersection.">
   <div class="testimony-masthead-text">
 
 # Testimony

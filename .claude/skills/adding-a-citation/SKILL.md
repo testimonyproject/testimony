@@ -19,7 +19,8 @@ carry no identifier. That is the rule working.
 
 ```sh
 # Open Library search
-curl -s "https://openlibrary.org/search.json?q=TITLE+AUTHOR&fields=title,author_name,publisher,publish_date,isbn&limit=3"
+curl -s "https://openlibrary.org/search.json?q=TITLE+AUTHOR\
+&fields=title,author_name,publisher,publish_date,isbn&limit=3"
 
 # Crossref, for anything with a DOI
 curl -s "https://api.crossref.org/works?query.bibliographic=TITLE&rows=3"

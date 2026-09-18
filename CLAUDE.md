@@ -50,6 +50,11 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
   other gate passes. A package carrying `Establishes` needs a named model;
   linter rule L11 fails without one. A `¬ Establishes` package needs none — its
   countermodel already satisfies every premise.
+- **Never let a line of prose run past 100 columns.** Rule L12 holds
+  hand-written markdown to the width L8 has always held Lean to. Generated
+  pages, generated blocks inside hand-written pages, table rows and YAML
+  frontmatter are exempt; long links are *not* — a link that will not fit
+  becomes a reference link, `[text][ref]`, defined elsewhere in the file.
 - **Never claim "it builds" from `lake build` alone.** Four gates exist, plus
   three `--check` runs for the generated files.
 - **Never work in the primary checkout.** Every change is made on a branch in
@@ -65,7 +70,7 @@ lake exe cache get                   # what that script runs; fetches Mathlib ol
 lake build                           # tier 1: missingDocs + Lean linters
 lake lint                            # tier 2: Batteries environment linters
 lake exe axiom-audit                 # tier 3: trust base
-python3 scripts/testimony_lint.py    # tier 4: project rules L1-L9
+python3 scripts/testimony_lint.py    # tier 4: project rules L1-L12
 lake exe bibgen --check              # generated files current
 lake exe statusgen                   # regenerate the roadmap's status table
 lake exe argdoc                      # regenerate docs/src/arguments/ from the docstrings
