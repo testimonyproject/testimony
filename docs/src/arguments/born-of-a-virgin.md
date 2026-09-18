@@ -89,10 +89,12 @@ the premise that excludes virginity. `wegner_needs_ordinary_pregnancy` removes
 it and the objection stops. `readingSuppliesOrdinaryPregnancy` then supplies it
 the way Wegner's own case does — from the near-term reading of the sign — and
 with the lexical conclusion turned back against that reading, the two legs
-close. `circle_grounds_neither_end` and `circle_grounds_neither_denial` are the
-result: keep every uncontested datum, and *neither* end follows, because a
-cycle of implications is satisfied outright by a valuation on which all of its
-nodes are false. Nothing enters the loop, so nothing comes out of it. That is a
+close. `circle_leaves_the_lexical_conclusion_open` and
+`circle_leaves_the_denial_open` are the result: keep every uncontested datum,
+and *neither* end is settled — not established, and not refuted either. A cycle
+of implications is satisfied outright by a valuation on which all of its nodes
+are false, and equally by one granting Wegner's own conclusion. Nothing enters
+the loop, so nothing comes out of it, in either direction. That is a
 demonstration rather than a complaint, and it is conditional in the usual way:
 a defender of Wegner should deny `readingSuppliesOrdinaryPregnancy` and argue
 that the near-term reading stands on the historical evidence alone.
@@ -776,7 +778,8 @@ Wegner's own version of this step is weaker — Postell reports it as decreasing
 the likelihood of a virgin-birth prediction without ruling it out (469) — and
 the encoding states the strong form on purpose. The strong form is the one on
 which the two legs make a closed circle, and stating it is what lets
-`circle_grounds_neither_end` be checked rather than asserted. On the weaker
+`circle_leaves_the_lexical_conclusion_open` be checked rather than asserted. On
+the weaker
 form the loop is evidential rather than deductive, which is the difference
 between a vicious circle and mutual support.
 
@@ -1610,31 +1613,6 @@ the parse, the near-term setting, the referent principle, and the demand that
 
 No premise here rests on scripture alone.
 
-<a id="wegnerCircleForTheDenial"></a>
-**`wegnerCircleForTheDenial`** — The same circle, asked for the denial of the predictive reading
-
-The same circle, asked for its other end: the denial of the predictive
-reading, which is what the lexical conclusion was wanted for.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{36} \\
-\text{(3)} \quad &amp; P_{19} \\
-\text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; P_{15} \rightarrow P_{16} \\
-\text{(6)} \quad &amp; (P_{36} \land \lnot P_{1}) \rightarrow P_{17} \\
-\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{1} \\
-\text{(8)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{18} \\
-\text{(9)} \quad &amp; (P_{18} \land P_{19}) \rightarrow \lnot P_{2} \\[4pt]
-\vdash \quad &amp; \lnot P_{1}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
 <a id="wegnerUnderParity"></a>
 **`wegnerUnderParity`** — Wegner's grammatical objection (Isaiah 7:14)
 
@@ -2142,6 +2120,30 @@ theorem wegner_needs_ordinary_pregnancy : ¬Establishes
 -- axioms: propext, Quot.sound
 ```
 
+<a id="wegnerConclusionGrantedReading"></a>
+**`wegnerConclusionGrantedReading`**
+
+Wegner's own conclusion granted: עַלְמָה does not denote a virgin, and
+Isaiah 7:14 is not a prediction of a virgin birth. The same two legs of the
+circle are satisfied on this reading as on the one below — the first because
+its antecedent fails, the second because its consequent holds — which is what
+makes the circle silent in *both* directions rather than merely unhelpful in
+one.
+
+Not a convenience: it is the position Wegner argues for, and the reading had to
+be found rather than assumed. The all-true valuation that serves the same
+purpose in `SolaScriptura` does not work here, because `wegnerCircle` carries
+negated grounds.
+
+```lean
+def wegnerConclusionGrantedReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.almahMeansVirgin => False
+    | Claim.isaiahPredictsVirginBirth => False
+    | x => True
+```
+
 <a id="circleUngroundedReading"></a>
 **`circleUngroundedReading`**
 
@@ -2160,8 +2162,8 @@ def circleUngroundedReading : Valuation Claim :=
     | x => True
 ```
 
-<a id="circle_grounds_neither_end"></a>
-**`circle_grounds_neither_end`**
+<a id="circle_leaves_the_lexical_conclusion_open"></a>
+**`circle_leaves_the_lexical_conclusion_open`**
 
 **The circle, shown rather than alleged.** Put both legs in place — the
 reading supplying the ordinary pregnancy, and the lexical conclusion turned
@@ -2184,12 +2186,13 @@ lexical finding — in which case the premise is false and the circle is not
 there. That premise is where a defender of Wegner should press.
 
 ```lean
-theorem circle_grounds_neither_end : ¬Establishes wegnerCircle
+theorem circle_leaves_the_lexical_conclusion_open : Independent
+    wegnerCircle.premises (notP Claim.almahMeansVirgin)
 -- axioms: propext, Quot.sound
 ```
 
-<a id="circle_grounds_neither_denial"></a>
-**`circle_grounds_neither_denial`**
+<a id="circle_leaves_the_denial_open"></a>
+**`circle_leaves_the_denial_open`**
 
 **And the other end of it is no better off.** The same premises, asked for
 the denial of the predictive reading instead of the lexical conclusion, fail in
@@ -2200,7 +2203,8 @@ fails to establish one of its nodes; it is one that establishes neither, having
 no premise outside itself.
 
 ```lean
-theorem circle_grounds_neither_denial : ¬Establishes wegnerCircleForTheDenial
+theorem circle_leaves_the_denial_open : Independent wegnerCircle.premises
+    (notP Claim.isaiahPredictsVirginBirth)
 -- axioms: propext, Quot.sound
 ```
 

@@ -174,11 +174,10 @@ def traditionICircle : ArgumentPackage Claim :=
   , conclusion := p .creedalConsensusIsHermeneuticallyNecessary
   , conclusionLabel := "the creedal consensus is hermeneutically necessary" }
 
-/-- The same two legs, asked for the other end. -/
-def traditionICircleForPerspicuity : ArgumentPackage Claim :=
-  { traditionICircle with
-    name := "Tradition I's hermeneutical circle, asked for perspicuity"
-    conclusion := p .scriptureIsPerspicuous
-    conclusionLabel := "scripture is clear on what is necessary for salvation" }
+-- A second package asking the circle for its other end used to stand here. It
+-- is gone for the reason the parity scaffolding went: `Independent` takes a
+-- premise list and a proposition, so both ends of the circle are asked of one
+-- package, and a variant whose only difference was its conclusion was a way of
+-- putting a question that the question can now be put without.
 
 end Testimony.Arguments.SolaScriptura
