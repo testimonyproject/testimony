@@ -358,8 +358,11 @@ That limitation is closable with no new dependency at all.
 
 ## Infrastructure
 
-- **An assumption-manifest browser** ([#7]) on the docs site: every theorem,
-  every premise it rests on, every citation, cross-linked.
+- **Premise-to-result cross-links** ([#7]) on the docs site. `lake exe argdoc`
+  already generates a page per argument that numbers every claim with its
+  source and lists every package and result. Missing is the link from each
+  result to the premises it rests on, and back from a premise to every result
+  that would fall with it.
 - **Literate sources** ([#9]). Prose and Lean interleaved in the `.lean` files,
   in the coqdoc tradition, rendering to PDF. This is currently **blocked on tooling**
   rather than on effort. Alectryon plus LeanInk was the path, and
