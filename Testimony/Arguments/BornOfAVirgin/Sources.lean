@@ -415,6 +415,30 @@ def cite : Claim → AtomMeta
             , .scripture sharedTimetable ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
+  | .micahRulerFacesAssyria =>
+    { label := "Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion"
+    , kind := .textual
+      -- What the text says. Postell cites it by the Hebrew numbering, as
+      -- Micah 5:1 and 5:4–5 (481 n. 72).
+    , source :=
+        { primary := .scripture micahAssyrianSetting
+        , supporting := [.work postellIsaiahMessianic (.page 481)]
+        , tradition := .criticalScholarship
+        , confidence := .consensus } }
+  | .micahRulerReadMessianically =>
+    { label := "Micah 5:2 was read messianically in first-century Judaism"
+    , kind := .historical
+      -- Granted by the critic's own authority: "there was an expectation of
+      -- the Messiah's birth at Bethlehem (Mt 2:4-6; Jn 7:42)" (Brown 1972, 26
+      -- n. 64). Postell: recognised as messianic by ancient Jewish
+      -- interpreters (481 n. 72).
+    , source :=
+        { primary := .work postellIsaiahMessianic (.page 481)
+        , supporting :=
+            [ .work brownProblemVirginalConception (.page 26)
+            , .scripture bethlehemExpectation ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
   | .genesis3_15IsEtiology =>
     { label := "Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants"
     , kind := .interpretive

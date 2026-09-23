@@ -95,6 +95,14 @@ where it is cited `disputed`. -/
 def berryBlocksExclusion : Formula Claim :=
   p .nearTermFulfilmentIsUnclear ➝ notP .nearTermExcludesMessianicSense
 
+/-- Postell's second counterexample: an oracle set against the Assyrian invasion,
+read messianically, so a near-term Assyrian setting does not exclude a messianic
+sense. The same inference as `parityDefeatsNearTermExclusion`, from a different
+oracle in a different book (Postell 481 n. 72). -/
+def micahParityDefeatsNearTermExclusion : Formula Claim :=
+  ⋀ [ p .micahRulerFacesAssyria, p .micahRulerReadMessianically ]
+  ➝ notP .nearTermExcludesMessianicSense
+
 /-- Motyer's inference: the sign of 7:14 is given to the dynasty, and the
 timetable that answers Ahaz's crisis passes to Maher-shalal-hash-baz, so the
 child of 7:14 is not a near-term sign to Ahaz. "Either we must identify
@@ -417,6 +425,20 @@ def motyerLine : Line Claim :=
       , supporting := [.work comptonImmanuelProphecy (.page 5)]
       , tradition := .christianHistoricalGrammatical
       , confidence := .disputed } }
+
+/-- **Postell's Micah counterexample**, as an argument: the ruler of Micah 5 is
+set against the Assyrian invasion and was read messianically, so a near-term
+setting does not exclude a messianic sense. -/
+def micahLine : Line Claim :=
+  { name := "Postell's Micah counterexample to the near-term exclusion"
+  , grounds := [ p .micahRulerFacesAssyria, p .micahRulerReadMessianically ]
+  , step := micahParityDefeatsNearTermExclusion
+  , delivers := notP .nearTermExcludesMessianicSense
+    -- `plausible`, as for the Isaiah counterexample and for the same reason:
+    -- no source cited grants both grounds and keeps the exclusion. A critic's
+    -- likeliest answer is a disanalogy — Micah 5 is not a sign to Ahaz — and
+    -- the same answer would meet `postellLine`.
+  , inference := some (postellOnIsaiah (.page 481) .plausible) }
 
 /-! ### What the strands share -/
 

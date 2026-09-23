@@ -130,6 +130,12 @@ inductive Claim
   /-- Isaiah 8:4 gives Maher-shalal-hash-baz the timetable that 7:16 gives the
   child of 7:14: before he can speak, Damascus and Samaria are despoiled. -/
   | maherShalalHashBazRepeatsTheTimetable
+  /-- Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion:
+  "when the Assyrian comes into our land". -/
+  | micahRulerFacesAssyria
+  /-- Micah 5:2 was read messianically in first-century Judaism: the Messiah
+  was expected from Bethlehem. -/
+  | micahRulerReadMessianically
   /-- Genesis 3:15 is an etiology of the enmity between snakes and humans, and
   "her seed" is simply her descendants. The critical reading. -/
   | genesis3_15IsEtiology

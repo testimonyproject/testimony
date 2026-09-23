@@ -179,6 +179,11 @@ def postellParity : ArgumentPackage Claim :=
   postellLine.asPackage cite
     "a near-term sign to Ahaz does not exclude a messianic sense"
 
+/-- Postell's Micah counterexample as a position of its own, with the same
+conclusion as Berry's and Postell's Isaiah argument. -/
+def micahParity : ArgumentPackage Claim :=
+  micahLine.asPackage cite "a near-term sign to Ahaz does not exclude a messianic sense"
+
 /-- Motyer's reply as a position of its own: Isaiah 7:14 is not a near-term
 sign to Ahaz. -/
 def motyerReply : ArgumentPackage Claim :=

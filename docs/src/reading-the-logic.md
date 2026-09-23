@@ -212,15 +212,16 @@ entailment fact. In a dispute, **defeat** is the relation just described.
   them, made as large as it can be. A dispute can have several.
 
 The Isaiah 7:14 dispute shows both. Against the scriptural reading alone,
-nothing is forced: the critic and the scriptural reading each rest on a premise
-rated `disputed`, so each defeats the other, the grounded extension is empty,
-and there are two preferred extensions, one for each side. Add the replies:
-Berry, Postell and Motyer. Each defeats the critic, by denying a premise the
-critic's case turns on, and the critic cannot defeat them back, because those
-contested premises are its weakest. Now the grounded extension is the
-scriptural reading with all three replies: they defend it against its only
-defeater. The replies have not proved the predictive reading. They have answered
-the objection to it, which is what a reply is for.
+nothing is forced: the critic and the scriptural reading each rest on something
+rated `disputed`, so each defeats the other, and the grounded extension is
+empty. Add the replies. Each defeats the critic, by denying a premise the
+critic's case turns on. The critic defeats two of them back, because their
+inferences are as contested as its premises; it cannot defeat Postell's two
+counterexamples, whose inference no cited source contests. So those two stand
+unanswered, and they defend everything else the critic attacked: the grounded
+extension is the scriptural reading with all the replies. The replies have not
+proved the predictive reading. They have answered the objection to it, which is
+what a reply is for.
 
 Reading a dispute, check the two things the machine cannot: **is each position
 one someone holds, and is each rating one its source would stand behind?**

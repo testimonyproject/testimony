@@ -67,6 +67,18 @@ def immanuelAddressees : List ScriptureCitation :=
   [ rangeIn .masoretic ⟨.isaiah, 7, 13, 7, 14⟩
   , verseIn .masoretic ⟨.isaiah, 7, 16⟩ ]
 
+/-- Micah 5:5–6 — the ruler from Bethlehem shepherds his people "when the
+Assyrian comes into our land", and delivers them from Assyria. English verse
+numbering; 5:4–5 in the Hebrew. -/
+def micahAssyrianSetting : List ScriptureCitation :=
+  [rangeIn .masoretic ⟨.micah, 5, 5, 5, 6⟩]
+
+/-- Matthew 2:4–6 and John 7:42 — the chief priests and scribes, and the crowd,
+expecting the Messiah from Bethlehem on the strength of Micah 5:2. -/
+def bethlehemExpectation : List ScriptureCitation :=
+  [ { ref := .range ⟨.matthew, 2, 4, 2, 6⟩ }
+  , { ref := .verse ⟨.john, 7, 42⟩ } ]
+
 /-- Isaiah 7:16 and 8:4 — the same timetable, given first to the child of 7:14
 and then to Maher-shalal-hash-baz. -/
 def sharedTimetable : List ScriptureCitation :=

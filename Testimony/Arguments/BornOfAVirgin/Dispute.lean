@@ -6,14 +6,14 @@ import Testimony.Logic.Dispute
 
 The results in `Results.lean` ask what each package entails. This module asks
 what happens when the packages meet: the scriptural reading, the critical
-denial of the predictive reading, and three replies to that denial — Berry's
-objection, Postell's parity argument, and Motyer's reply, with Compton's —
-taken together as one dispute.
+denial of the predictive reading, and four replies to that denial — Berry's
+objection, Postell's two counterexamples (Isaiah 9 and 11, and Micah 5), and
+Motyer's reply, with Compton's — taken together as one dispute.
 
 Who defeats whom is not stipulated. Each defeat below is a theorem about the
 packages' premises, and so is each absence of one (see `Testimony.Logic.Dispute`
 for how an attack is derived from entailment and filtered by cited confidence).
-The defeats, all four proved, are these:
+The defeats are these:
 
 - **The critical denial defeats the scriptural reading.** It entails the
   negation of the scriptural premise that Isaiah 7:14 predicts a virgin birth,
@@ -22,23 +22,27 @@ The defeats, all four proved, are these:
   none of the critic's premises, but it concludes the opposite, so it rebuts;
   and the weakest link on each side is `disputed`, so neither outranks the
   other.
-- **Berry and Postell each defeat the critical denial**, by contradicting its
-  premise that a near-term sign excludes a messianic sense, cited `disputed`.
+- **Berry and both of Postell's counterexamples defeat the critical denial**,
+  by contradicting its premise that a near-term sign excludes a messianic
+  sense, cited `disputed`.
 - **Motyer defeats it too**, by contradicting its other premise: that 7:14 is
   a near-term sign to Ahaz at all, also cited `disputed`.
-- **The critical denial defeats Berry and Motyer back, but not Postell.** It
-  rebuts all three. Berry's and Motyer's inferences are contested — a cited
-  source grants each one's grounds and denies its conclusion — so they are no
-  stronger than the critic. Postell's inference is not, and he outranks it.
+- **The critical denial defeats Berry and Motyer back, but neither
+  counterexample.** It rebuts all four. Berry's and Motyer's inferences are
+  contested — a cited source grants each one's grounds and denies its
+  conclusion — so they are no stronger than the critic. Postell's inference is
+  not, and both counterexamples outrank it.
 
 ## What follows
 
 Faced with the scriptural reading alone, **nothing prevails**: the two defeat
 each other, and the grounded extension is empty. Add the replies and **the
-scriptural reading prevails**. Nothing defeats Postell; he defeats the critic,
-which is the only party that defeats the scriptural reading, Berry or Motyer;
-and so all four stand. The critical denial belongs to no admissible set at all,
-because nothing answers Postell. Take Postell away and nothing prevails again.
+scriptural reading prevails**. Nothing defeats Postell's counterexamples; they
+defeat the critic, which is the only party that defeats the scriptural reading,
+Berry or Motyer; and so all five stand. The critical denial belongs to no
+admissible set at all, because nothing answers Postell. Take away either
+counterexample and the scriptural reading still prevails; take away both and
+nothing does.
 
 This is the result entailment could not state. Adding premises never removes a
 conclusion; adding arguments can change what a dispute forces, and here it
@@ -67,15 +71,20 @@ the critic, and heard alone Motyer settles nothing
 (`nothing_prevails_on_motyer_alone`).
 
 Postell's inference is `plausible`. It is a counterexample to the exclusion —
-two oracles on the same Assyrian timeline, read messianically — and no source
-cited here grants his grounds and keeps the exclusion. **The verdict rests on
-that rating.** Without Postell, every party is defeated by someone and nothing
-prevails (`nothing_prevails_without_postell`); and rated `disputed`, his
-inference would tie him with the critic as Berry's and Motyer's do. A critic
-who granted that Isaiah 9 and 11 are messianic on the Assyrian timeline, and
-still held the exclusion, would be the source to find. Postell's argument is
-described in `Lines.lean` as the stronger of the two; the ratings now register
-that, and it is what decides the dispute.
+an oracle on the Assyrian timeline, read messianically — and he gives two:
+Isaiah 9 and 11, and Micah 5, whose messianic reading Brown himself grants. No
+source cited here grants either set of grounds and keeps the exclusion.
+
+**The verdict rests on that inference.** Without Postell's Isaiah argument the
+scriptural reading still prevails, on the Micah counterexample
+(`scriptural_reading_prevails_without_postell`), so an attack on the grounds of
+either — dating Isaiah 11 later, say — leaves it standing. Without both, every
+party is defeated by someone and nothing prevails
+(`nothing_prevails_without_the_counterexamples`). The two share one inference,
+so they share one weakness: rated `disputed`, it would tie both with the critic
+as Berry's and Motyer's do. A critic who granted that such an oracle is read
+messianically and still held the exclusion — most likely by denying that
+Micah 5 or Isaiah 9 is a *sign* to Ahaz — would be the source to find.
 
 ## What the church fathers add, and what they cannot
 
@@ -128,6 +137,38 @@ theorem postellParity_is_satisfiable : Satisfiable postellParity.premises := by
   satisfied_by repliesStandReading [postellParity, postellLine,
     parityDefeatsNearTermExclusion]
 
+/-! #### Postell's Micah counterexample
+
+Postell's second counterexample is Micah 5, the Bethlehem oracle: a ruler set
+against the Assyrian invasion, and read messianically in first-century Judaism
+— which Brown, the critic's own authority, grants. It is the same inference as
+the Isaiah counterexample from a different oracle, so it guards against an
+attack on Postell's grounds and not against one on his inference. -/
+
+/-- **The rival reading, written first**: Micah's ruler is a near-term Davidic
+king, and the messianic reading of him came later. Both grounds hold — the
+Assyrian setting and the first-century expectation — and so does the
+exclusion. -/
+def laterMessianicReading : Valuation Claim := fun a =>
+  match a with
+  | .isaiahPredictsVirginBirth => False
+  | _ => True
+
+/-- The Micah counterexample rests on its inference: on the later-reading
+account both grounds hold and the exclusion stands. -/
+theorem micah_parity_rests_on_its_inference :
+    ¬ Entails micahLine.grounds (notP .nearTermExcludesMessianicSense) := by
+  refute_with laterMessianicReading [micahLine]
+
+/-- The Micah counterexample delivers its conclusion. -/
+theorem micahParity_establishes : Establishes micahParity := by
+  establish [micahParity, micahLine, micahParityDefeatsNearTermExclusion]
+
+/-- The Micah counterexample has a model. -/
+theorem micahParity_is_satisfiable : Satisfiable micahParity.premises := by
+  satisfied_by repliesStandReading [micahParity, micahLine,
+    micahParityDefeatsNearTermExclusion]
+
 /-! #### Motyer's reply
 
 Motyer's reply, with Compton's, denies the critic's *other* premise: that 7:14 is
@@ -160,7 +201,7 @@ theorem motyer_rests_on_his_inference :
 
 /-- The world Motyer describes, with Berry and Postell: the sign is not a
 near-term one, and a near-term sign would not exclude a messianic sense anyway.
-Everything else holds — the scriptural reading and all three replies with it. -/
+Everything else holds — the scriptural reading and all four replies with it. -/
 def motyerReading : Valuation Claim := fun a =>
   match a with
   | .isaiahIsNearTermSignToAhaz => False
@@ -195,6 +236,10 @@ theorem berryObjection_strength : berryObjection.strength = 0 := by decide
 
 /-- Postell's premises are cited `wellSupported` and his inference `plausible`. -/
 theorem postellParity_strength : postellParity.strength = 1 := by decide
+
+/-- The Micah counterexample's grounds are cited `consensus` and
+`wellSupported`, and its inference `plausible`. -/
+theorem micahParity_strength : micahParity.strength = 1 := by decide
 
 /-- Motyer's observations are cited `consensus` and `wellSupported`, but his
 inference is `disputed`, and he is no stronger than it. -/
@@ -273,6 +318,14 @@ theorem postell_defeats_critical : Defeats postellParity criticalDenial :=
       postellParity_establishes⟩,
     by decide⟩
 
+/-- **The Micah counterexample defeats the critical denial**, on the same
+premise as Berry and Postell. -/
+theorem micah_defeats_critical : Defeats micahParity criticalDenial :=
+  .inl ⟨p .nearTermExcludesMessianicSense,
+    ⟨by simp [criticalDenial, criticalExclusionLine, Line.asPackage, Line.premises],
+      micahParity_establishes⟩,
+    by decide⟩
+
 /-- **Motyer defeats the critical denial**, by entailing the negation of its
 other premise: that 7:14 is a near-term sign to Ahaz, cited `disputed`. -/
 theorem motyer_defeats_critical : Defeats motyerReply criticalDenial :=
@@ -325,6 +378,30 @@ theorem critical_does_not_defeat_postell : ¬ Defeats criticalDenial postellPari
   · satisfied_by laterOraclesReading [criticalDenial, criticalExclusionLine,
       criticalExclusion, parityDefeatsNearTermExclusion]
 
+/-- The critic's world, with Micah 5:2 read of a near-term Davidic king and not
+messianically. The Micah step holds in it, because one of its grounds fails. -/
+def royalMicahReading : Valuation Claim := fun a =>
+  match a with
+  | .isaiahPredictsVirginBirth => False
+  | .micahRulerReadMessianically => False
+  | _ => True
+
+/-- **The critical denial does not defeat the Micah counterexample**, for the
+reason it does not defeat Postell: it is weaker, and it contradicts none of the
+counterexample's premises. -/
+theorem critical_does_not_defeat_micah : ¬ Defeats criticalDenial micahParity := by
+  refine not_defeats_of_outweighed
+    (by rw [criticalDenial_strength, micahParity_strength]; decide) ?_
+  intro φ hφ
+  simp only [micahParity, micahLine, Line.asPackage, Line.premises,
+    List.cons_append, List.nil_append, List.mem_cons, List.not_mem_nil,
+    or_false] at hφ
+  rcases hφ with rfl | rfl | rfl
+  · satisfied_by criticalReading [criticalDenial, criticalExclusionLine, criticalExclusion]
+  · satisfied_by criticalReading [criticalDenial, criticalExclusionLine, criticalExclusion]
+  · satisfied_by royalMicahReading [criticalDenial, criticalExclusionLine,
+      criticalExclusion, micahParityDefeatsNearTermExclusion]
+
 /-! ### The dispute -/
 
 /-- The parties to the dispute over Isaiah 7:14. -/
@@ -339,21 +416,25 @@ inductive Party
   | postell
   /-- Motyer's reply to the near-term reading itself. -/
   | motyer
+  /-- Postell's Micah counterexample to the near-term exclusion. -/
+  | micah
 deriving DecidableEq
 
-/-- A statement about every party is a statement about each of the five. -/
+/-- A statement about every party is a statement about each of the six. -/
 theorem Party.forall_iff {P : Party → Prop} :
-    (∀ x, P x) ↔ P .scriptural ∧ P .critical ∧ P .berry ∧ P .postell ∧ P .motyer :=
-  ⟨fun h => ⟨h _, h _, h _, h _, h _⟩,
-    fun ⟨h₁, h₂, h₃, h₄, h₅⟩ x => by cases x <;> assumption⟩
+    (∀ x, P x) ↔
+      P .scriptural ∧ P .critical ∧ P .berry ∧ P .postell ∧ P .motyer ∧ P .micah :=
+  ⟨fun h => ⟨h _, h _, h _, h _, h _, h _⟩,
+    fun ⟨h₁, h₂, h₃, h₄, h₅, h₆⟩ x => by cases x <;> assumption⟩
 
-/-- Some party satisfies `P` just when one of the five does. -/
+/-- Some party satisfies `P` just when one of the six does. -/
 theorem Party.exists_iff {P : Party → Prop} :
-    (∃ x, P x) ↔ P .scriptural ∨ P .critical ∨ P .berry ∨ P .postell ∨ P .motyer := by
+    (∃ x, P x) ↔
+      P .scriptural ∨ P .critical ∨ P .berry ∨ P .postell ∨ P .motyer ∨ P .micah := by
   constructor
   · rintro ⟨x, hx⟩
     cases x <;> simp_all
-  · rintro (h | h | h | h | h) <;> exact ⟨_, h⟩
+  · rintro (h | h | h | h | h | h) <;> exact ⟨_, h⟩
 
 /-- The package each party argues from. -/
 def partyNode : Party → ArgumentPackage Claim
@@ -362,6 +443,7 @@ def partyNode : Party → ArgumentPackage Claim
   | .berry => berryObjection
   | .postell => postellParity
   | .motyer => motyerReply
+  | .micah => micahParity
 
 /-- The dispute over Isaiah 7:14: every party's premises have a model, every
 party establishes its conclusion, and every party's inferences are rated. -/
@@ -373,25 +455,28 @@ def isaiahDispute : Dispute Claim Party where
     | .berry => berryObjection_is_satisfiable
     | .postell => postellParity_is_satisfiable
     | .motyer => motyerReply_is_satisfiable
+    | .micah => micahParity_is_satisfiable
   sound
     | .scriptural => christian_establishes
     | .critical => criticalDenial_establishes
     | .berry => berryObjection_establishes
     | .postell => postellParity_establishes
     | .motyer => motyerReply_establishes
+    | .micah => micahParity_establishes
   rated i := by
     cases i <;> simp [partyNode, christian, criticalDenial, criticalExclusionLine,
       berryObjection, berryLine, postellParity, postellLine, motyerReply, motyerLine,
-      Line.asPackage]
+      micahParity, micahLine, Line.asPackage]
 
-/-- **The scriptural reading and all three replies stand together**, in the
-world Motyer describes: none of the four defeats another. One fact, settling
-twelve ordered pairs. -/
+/-- **The scriptural reading and all four replies stand together**, in the
+world Motyer describes: none of the five defeats another. One fact, settling
+twenty ordered pairs. -/
 theorem replies_stand_with_the_scriptural_reading :
-    isaiahDispute.StandTogether [.scriptural, .berry, .postell, .motyer] := by
+    isaiahDispute.StandTogether [.scriptural, .berry, .postell, .motyer, .micah] := by
   satisfied_by motyerReading [Dispute.StandTogether, isaiahDispute, partyNode,
     berryObjection, berryLine, berryBlocksExclusion, postellParity, postellLine,
-    parityDefeatsNearTermExclusion, motyerReply, motyerLine,
+    parityDefeatsNearTermExclusion, micahParity, micahLine,
+    micahParityDefeatsNearTermExclusion, motyerReply, motyerLine,
     timetablePassesToMaherShalalHashBaz, christian, scripturalLines,
     isaianicLine, protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds,
     toCriterion, genesisToCriterion, micahToCriterion, compositionalToCriterion,
@@ -404,26 +489,31 @@ def partyDefeats : Party → Party → Prop
   | .berry, .critical => True
   | .postell, .critical => True
   | .motyer, .critical => True
+  | .micah, .critical => True
   | .critical, .berry => True
   | .critical, .motyer => True
   | _, _ => False
 
-/-- **Who defeats whom**, all twenty-five pairs: the critic and the scriptural
+/-- **Who defeats whom**, all thirty-six pairs: the critic and the scriptural
 reading defeat each other; each reply defeats the critic; the critic defeats
-Berry and Motyer back, but not Postell; nothing else. -/
+Berry and Motyer back, but neither of Postell's counterexamples; nothing
+else. -/
 theorem isaiahDispute_defeats : ∀ i j, isaiahDispute.defeats i j ↔ partyDefeats i j := by
   defeat_table [partyDefeats] using [critical_defeats_christian, christian_defeats_critical,
     berry_defeats_critical, postell_defeats_critical, motyer_defeats_critical,
-    critical_defeats_berry, critical_defeats_motyer, critical_does_not_defeat_postell,
+    micah_defeats_critical, critical_defeats_berry, critical_defeats_motyer,
+    critical_does_not_defeat_postell, critical_does_not_defeat_micah,
     replies_stand_with_the_scriptural_reading]
 
-/-- **Heard out, the scriptural reading prevails.** Nothing defeats Postell, so
-he is in the grounded extension from the first step. He defeats the critic —
-the only party that defeats the scriptural reading, Berry or Motyer — so at the
-second step all three join him; and nothing defends the critic. -/
+/-- **Heard out, the scriptural reading prevails.** Nothing defeats either of
+Postell's counterexamples, so both are in the grounded extension from the first
+step. They defeat the critic — the only party that defeats the scriptural
+reading, Berry or Motyer — so at the second step all three join them; and
+nothing defends the critic. -/
 @[headline]
 theorem scriptural_reading_prevails_once_replies_are_heard :
-    grounded isaiahDispute.defeats = {.scriptural, .berry, .postell, .motyer} := by
+    grounded isaiahDispute.defeats =
+      {.scriptural, .berry, .postell, .motyer, .micah} := by
   grounded_by 2 [isaiahDispute_defeats, partyDefeats, Party.forall_iff, Party.exists_iff]
 
 #print axioms scriptural_reading_prevails_once_replies_are_heard
@@ -488,22 +578,43 @@ theorem nothing_prevails_on_motyer_alone : grounded motyerAlone.defeats = ∅ :=
 
 #print axioms nothing_prevails_on_motyer_alone
 
-/-- Every party but Postell. -/
+/-- Every party but Postell's Isaiah counterexample. -/
 abbrev withoutPostell := isaiahDispute.restrict (· ≠ Party.postell)
 
-/-- **Without Postell, nothing prevails.** Berry and Motyer each tie with the
-critic, as the scriptural reading does, so every party is defeated by someone.
-The verdict rests on the one reply the critic cannot answer. -/
+/-- **Without Postell's Isaiah argument, the scriptural reading still
+prevails.** His Micah counterexample is defeated by nothing, and it defends the
+scriptural reading against the critic, as the Isaiah argument did. An attack on
+the grounds of either counterexample leaves the verdict standing. -/
 @[headline]
-theorem nothing_prevails_without_postell : grounded withoutPostell.defeats = ∅ :=
+theorem scriptural_reading_prevails_without_postell :
+    (⟨.scriptural, by decide⟩ : {i // i ≠ Party.postell}) ∈
+      grounded withoutPostell.defeats :=
+  iterate_subset_grounded 2 (by
+    simp [characteristic, Defends, Dispute.restrict_defeats, Subtype.forall,
+      Subtype.exists, isaiahDispute_defeats, partyDefeats, Party.forall_iff,
+      Party.exists_iff])
+
+#print axioms scriptural_reading_prevails_without_postell
+
+/-- Every party but the two counterexamples. -/
+abbrev withoutParity :=
+  isaiahDispute.restrict (· ∉ [Party.postell, .micah])
+
+/-- **Without the counterexamples, nothing prevails.** Berry and Motyer each tie
+with the critic, as the scriptural reading does, so every party is defeated by
+someone. The verdict rests on the one kind of reply the critic cannot answer —
+an oracle on the Assyrian timeline, read messianically — and so on the rating
+of that inference. -/
+@[headline]
+theorem nothing_prevails_without_the_counterexamples :
+    grounded withoutParity.defeats = ∅ :=
   grounded_eq_empty_of_attacked fun ⟨a, ha⟩ => by
-    cases a
+    cases a <;> simp at ha
     · exact ⟨⟨.critical, by decide⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
     · exact ⟨⟨.scriptural, by decide⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
     · exact ⟨⟨.critical, by decide⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact absurd rfl ha
     · exact ⟨⟨.critical, by decide⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
 
-#print axioms nothing_prevails_without_postell
+#print axioms nothing_prevails_without_the_counterexamples
 
 end Testimony.Arguments.BornOfAVirgin
