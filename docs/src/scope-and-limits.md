@@ -16,7 +16,15 @@ by the machine.
 **Whether the premises are true.** That Micah 5:2 is a forward-looking
 prediction is an interpretive claim held by some traditions and denied by
 others. The library records who holds it, with what confidence, and on what
-authority. It does not adjudicate.
+authority. It does not adjudicate the claim.
+
+**Whether the confidence ratings are right.** A rating records how firmly a
+source holds a claim, and elsewhere it is information for a reader. In a
+*dispute* it is more: which position defeats which depends on the ratings, so a
+dispute's outcome is conditional on them in exactly the way a result is
+conditional on its premises. Lean checks what follows from the ratings. Whether
+a rating is fair to its source is a judgement it cannot make, and the Isaiah
+7:14 dispute names the one rating that decides it.
 
 **Whether the encoding is faithful.** That a Lean formula represents the
 argument a commentary actually makes is a human judgement. No proof assistant

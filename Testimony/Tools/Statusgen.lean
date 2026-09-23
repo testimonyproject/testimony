@@ -96,7 +96,9 @@ namespace Testimony.Status
 open Testimony in
 /-- Generates `def <name> : List Headline` from every `@[headline]` declaration
 in the environment, ordered by the module and line they are declared on, so the
-table reads in source order.
+table reads in source order. Modules are taken in import order, not by name: an
+argument split into a directory is read as it is built, so its packages' results
+come before a module that imports them — `Dispute` after `Results`, not before.
 
 Unlike `derive_bib_registry`, this reads the tag attribute's *imported* state as
 well as the local one: the results live in the argument modules and the table is
@@ -107,7 +109,7 @@ elab "derive_headline_table " tableName:ident : command => do
   for i in [0 : env.header.moduleNames.size] do
     decls := decls ++ headlineAttr.ext.getModuleEntries env i
   decls := decls ++ (headlineAttr.ext.getState env).toArray
-  let mut rows : Array (String × Nat × Headline) := #[]
+  let mut rows : Array (Nat × Nat × Headline) := #[]
   for decl in decls do
     let some info := env.find? decl
       | throwError "statusgen: {decl} is tagged @[headline] but is not in the environment"
@@ -117,8 +119,8 @@ elab "derive_headline_table " tableName:ident : command => do
     let stripped := stripNamespaces decl.getPrefix (oneLine stmt)
     let doc := (← findDocString? env decl).getD ""
     let mod := match env.getModuleIdxFor? decl with
-      | some idx => (env.header.moduleNames[idx.toNat]!).toString
-      | none => env.mainModule.toString
+      | some idx => idx.toNat
+      | none => env.header.moduleNames.size
     let line := (← findDeclarationRanges? decl).map (·.range.pos.line) |>.getD 0
     rows := rows.push (mod, line,
       { argument := decl.getPrefix

@@ -3,6 +3,7 @@ import Testimony.Arguments.BornOfAVirgin.Sources
 import Testimony.Arguments.BornOfAVirgin.Lines
 import Testimony.Arguments.BornOfAVirgin.Packages
 import Testimony.Arguments.BornOfAVirgin.Results
+import Testimony.Arguments.BornOfAVirgin.Dispute
 
 /-!
 # Arguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
@@ -140,6 +141,22 @@ That gives the critical exclusion step two independent defeaters. Berry's is
 evidential — we do not know how the sign was fulfilled in Ahaz's day. Postell's
 is structural — the near-term setting was never the right kind of reason.
 
+**Taken together, the four positions make a dispute, and the dispute has an
+outcome the entailment results cannot state.** `Dispute.lean` treats the
+scriptural reading, the critical denial, Berry and Postell as the nodes of an
+argumentation framework and proves who defeats whom — a defeat being an attack
+derived from entailment that the cited confidences do not block. Against the
+scriptural reading alone, `critical_prevails_unanswered`: the critical denial
+defeats it, and the scriptural reading cannot answer, because its weakest
+premise is `disputed` and the critic's are `wellSupported`
+(`christian_does_not_defeat_critical`). Hear Berry and Postell, and
+`nothing_prevails_once_replies_are_heard`. The dispute then has two
+resolutions: `scriptural_reading_reinstated`, with the two replies defending
+the scriptural reading, and `critical_denial_remains_defensible`, with the
+critic defending itself against both. The replies reinstate the predictive
+reading as defensible; they do not make it forced, because the exchange between
+them and the critic is between premises rated alike.
+
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands
 still deliver the criterion, which `almah_not_load_bearing` records. Strip all
@@ -173,6 +190,7 @@ that no one could hold in view. The dependencies run one way.
 | `Lines.lean` | the inference steps, and the lines of reason they compose into |
 | `Packages.lean` | the positions, and the variant packages the results refute |
 | `Results.lean` | every `@[headline]` result, with its trust base |
+| `Dispute.lean` | the four positions as one dispute: who defeats whom, and who prevails |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in

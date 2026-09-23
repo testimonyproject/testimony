@@ -473,6 +473,80 @@ theorem circle_parity_concedes_the_charge :
 
 #print axioms circle_parity_concedes_the_charge
 
+/-! ### Refusing a ground, and denying it
+
+Every reply above is written the same way, as the objection's own line with a
+ground replaced. That shape covers two different moves. A reply can **deny** the
+ground — entail its negation — or merely **refuse** it, declining to grant it
+without asserting the opposite. A denial is an *attack*, and in a dispute an
+attack can defeat (`Testimony.Logic.Dispute`). A refusal attacks nothing: it
+takes the ground away, which is what `Line.onGrounds` encodes, and the question
+it leaves is an entailment question the results above already answer.
+
+Five of the seven replies here refuse. Each refusal is shown by a reading that
+grants the reply's grounds and keeps the refused ground true. The other two
+deny, and each denial is an entailment. -/
+
+/-- **Kruger refuses the canon objection's ground; he does not deny it.** On
+the reading that grants his grounds and still denies the sole rule, identifying
+the canon does require an infallible authority. -/
+theorem kruger_refuses_rather_than_denies :
+    ¬ Entails canonUnderParity.premises
+      (∼(p .identifyingCanonRequiresInfallibleAuthority)) := by
+  refute_with parityEstablishesNothingReading
+    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
+
+/-- **Mathison refuses the regress's ground.** Granted his grounds, the
+individual may still retain ultimate interpretive authority. -/
+theorem mathison_refuses_rather_than_denies :
+    ¬ Entails regressUnderParity.premises
+      (∼(p .individualRetainsUltimateInterpretiveAuthority)) := by
+  refute_with distinctionUnestablishedReading
+    [regressUnderParity, Line.onGrounds, interpretiveRegressLine,
+      interpretiveRegressStep]
+
+/-- **The final-arbiter answer refuses the self-refutation objection's ground.**
+Scoping the bindingness rule to first-order doctrine does not deny that only
+scriptural doctrine binds. -/
+theorem final_arbiter_refuses_rather_than_denies :
+    ¬ Entails selfRefutationUnderFinalArbiter.premises
+      (∼(p .onlyScripturalDoctrineIsBinding)) := by
+  refute_with hingeDeniedReading
+    [selfRefutationUnderFinalArbiter, Line.onGrounds, selfRefutationLine,
+      selfRefutationStep]
+
+/-- **Allen and Swain refuse the circle's second leg.** A consensus accountable
+to scripture does not, by itself, deny that perspicuity requires the
+consensus. -/
+theorem accountability_refuses_rather_than_denies :
+    ¬ Entails circleUnderAccountability.premises
+      (∼(p .perspicuityRequiresCreedalConsensus)) := by
+  refute_with bothEndsHoldReading
+    [circleUnderAccountability, Line.onGrounds, geislerCircleLine, circleStep]
+
+/-- **The scriptural-bounding reply refuses the same leg.** -/
+theorem scriptural_bounding_refuses_rather_than_denies :
+    ¬ Entails circleUnderScripturalBounding.premises
+      (∼(p .perspicuityRequiresCreedalConsensus)) := by
+  refute_with bothEndsHoldReading
+    [circleUnderScripturalBounding, Line.onGrounds, geislerCircleLine, circleStep]
+
+/-- **The classical answer denies the self-refutation objection's ground.** It
+asserts that scripture teaches the principle, which is the negation of what the
+objection assumes. -/
+theorem classical_answer_denies_the_ground :
+    Entails selfRefutationUnderClassicalAnswer.premises
+      (∼(notP .solaScripturaIsTaughtByScripture)) := by
+  establish [selfRefutationUnderClassicalAnswer, Line.onGrounds, selfRefutationLine,
+    selfRefutationStep]
+
+/-- **Barrett denies the ground Geisler's charge needs.** He asserts that every
+appeal to an ultimate authority is circular, the negation of what the charge
+assumes. -/
+theorem barrett_denies_the_ground :
+    Entails defeatUnderParity.premises (∼(notP .everyUltimateAuthorityIsCircular)) := by
+  establish [defeatUnderParity, Line.onGrounds, circleDefeatsLine, circularityDefeats]
+
 /-! ### Satisfiability
 
 `Entails` quantifies over the valuations satisfying the premises, so a premise

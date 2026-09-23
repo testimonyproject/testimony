@@ -348,6 +348,75 @@ Then ask whether the argument survives. Where an argument has **two independent
 strands**, as sola fide does, neither disputed premise is load-bearing alone —
 only their disjunction is, and that is the more interesting result.
 
+## Disputes
+
+Every result above is about one package. A **dispute** is about several: which
+of them defeats which, and which survive together. `Testimony.Logic.Framework`
+is Dung's abstract argumentation, over any relation; `Testimony.Logic.Dispute`
+makes the nodes argument packages and derives the relation from entailment.
+`Arguments/BornOfAVirgin/Dispute.lean` is the worked example.
+
+**Nothing about the relation is stipulated.** One package *attacks* another when
+its premises entail the negation of one of the other's premises (`UnderminesOn`)
+or of its conclusion (`Rebuts`). An attack is a *defeat* unless the cited
+confidences block it: a position's strength is its weakest link — the lowest
+rank among its premises that are atoms or denials of atoms — and an attack fails
+only when what it attacks is strictly stronger. Inference steps have no rank, so
+an attack on a step always succeeds. A denied atom ranks `disputed`, because the
+citation rates the claim, not its denial.
+
+Why confidence at all: without it, premise attacks between classical arguments
+are always mutual, and Dung's semantics reduce to a consistency check (Cayrol,
+1995). The consequence is that **ratings become premises** of every dispute that
+uses them, and a rating change can reverse a result. Say so in the module
+docstring, and say which rating decides the outcome.
+
+Encoding a dispute has four steps.
+
+**1. Every node is an argument.** `Dispute` requires each node's premises to be
+satisfiable and to establish its conclusion — a node with contradictory premises
+would attack everything. A reply written with `Line.onGrounds` keeps the
+objection's conclusion and so is not a node; write the reply as its own `Line`,
+with what it concludes as `delivers`.
+
+**2. Prove the defeat table, every ordered pair.** Four shapes cover it:
+
+```lean
+-- undermining: the premise, its membership, the entailment, the ranks
+theorem berry_defeats_critical : Defeats berryObjection criticalDenial :=
+  .inl ⟨p .nearTermExcludesMessianicSense,
+    ⟨by simp [criticalDenial, criticalExclusionLine, Line.asPackage, Line.premises],
+      berryObjection_establishes⟩,
+    by decide⟩
+
+-- rebutting: the entailment, then the strengths
+theorem critical_defeats_berry : Defeats criticalDenial berryObjection :=
+  .inr ⟨by establish [Rebuts, criticalDenial, berryObjection, …],
+    by rw [criticalDenial_strength, berryObjection_strength]; decide⟩
+
+-- no attack: name the world in which both positions stand
+theorem berry_does_not_defeat_postell : ¬ Defeats berryObjection postellParity :=
+  not_defeats_of_joint_model (by satisfied_by repliesStandReading […])
+
+-- the diagonal, for free
+isaiahDispute.not_defeats_self i
+```
+
+An attack that the ratings block needs both halves stated: that it is an
+attack, and that it fails — `christian_rebuts_critical` and
+`christian_does_not_defeat_critical`. Strengths are computed by `decide`, and
+are worth stating as results of their own, because they are what a reader
+contests.
+
+**3. Collect the table** as one `↔` against a function by cases, proved by
+`cases i <;> cases j` and the pairwise results.
+
+**4. State what survives.** `grounded_eq_of_iterate` proves a grounded
+extension: give the iterate of the characteristic function from `∅` and show it
+defends nothing new. `preferred_of_blocked` proves a preferred extension: show
+the set is admissible and that everything outside it conflicts with something
+inside. Credulous and sceptical acceptance follow from exhibited extensions.
+
 ## Manifests
 
 Generated from the premises, never maintained beside them:

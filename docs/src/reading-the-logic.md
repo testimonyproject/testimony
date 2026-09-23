@@ -150,6 +150,77 @@ Reading an independence result, your job is the same as ever and now doubled:
 **are both readings ones someone would actually hold?** A reading nobody
 occupies proves the premises settle nothing only in a sense nobody cares about.
 
+## A sixth idea, for when positions meet
+
+### A dispute asks who prevails, not what follows
+
+Everything above asks one question of one position: *do these premises force
+that conclusion?* A dispute asks a different question of several positions at
+once: *given who defeats whom, which positions can be held, and which can hold
+their ground against every attacker?*
+
+Entailment cannot answer that, for a structural reason. Adding a premise never
+takes a conclusion away — whatever follows from some premises still follows
+when you add more. So in the entailment results a reply can only be encoded by
+*removing* something from the objection. That is right for a reply that
+declines to grant a premise. It cannot express a reply that answers an
+objection by contradicting it and wins.
+
+A dispute can. Positions become the nodes of a graph, an arrow from one to
+another means the first defeats the second, and the question is which sets of
+nodes survive together. This is Dung's theory of argumentation (1995), and the
+library proves its main results rather than assuming them.
+
+### Attack, refusal and defeat
+
+One position **attacks** another when its premises entail the negation of one
+of the other's premises, or of its conclusion. It is a fact about entailment,
+so it is proved, and so is its absence — by naming a world in which both
+positions hold.
+
+A reply that merely **refuses** a premise — *I do not grant that* — attacks
+nothing. It is a different move, and the entailment results already handle it.
+Kruger's parity reply on the canon is a refusal; Berry's objection on Isaiah
+7:14 is an attack, because it asserts the negation of what the critic assumes.
+
+An attack is a **defeat** unless what it attacks is strictly better supported.
+Every atom in the library carries a cited confidence, from `disputed` to
+`consensus`, and a position is judged by its **weakest link**: it is no stronger
+than the least supported thing it assumes. Without that comparison, attacks
+between positions built from premises come in pairs — if you contradict what I
+assume, I contradict what you conclude — and nobody ever prevails.
+
+**This is the one place where a confidence rating decides a result.** Elsewhere
+a rating tells you how firmly a premise is held. In a dispute it can decide who
+wins, and contesting the rating is contesting the result.
+
+A note on vocabulary: several older results say a reply "defeats" an objection
+— `compatibility_defeats_lexical_objection` is one. There the word means the
+objection no longer reaches its conclusion once the reply is granted, an
+entailment fact. In a dispute, **defeat** is the relation just described.
+
+### Grounded and preferred: two ways to say who survives
+
+- The **grounded extension** is what the dispute *forces*: the positions left
+  standing if you accept only what cannot be resisted. When two sides defeat
+  each other, it takes neither.
+- A **preferred extension** is one way the dispute *can be resolved*: a set of
+  positions that do not defeat one another and answer every defeat on any of
+  them, made as large as it can be. A dispute can have several.
+
+The Isaiah 7:14 dispute shows both. Against the scriptural reading alone the
+critical denial prevails: it is the grounded extension. Its premises are rated
+`wellSupported` and the scriptural reading's weakest is `disputed`, so the
+scriptural reading's rebuttal fails. Add Berry and Postell, who each defeat the
+critic and are defeated back, and nothing is forced any more. There are now two
+resolutions: the scriptural reading with both replies defending it, or the
+critic alone. The replies have not proved the predictive reading. They have made
+it one of two defensible resolutions, which is what a good reply to a strong
+objection usually does.
+
+Reading a dispute, check the two things the machine cannot: **is each position
+one someone holds, and is each rating one its source would stand behind?**
+
 ## What to look for when you review
 
 The machine checks that the reasoning is valid. **Everything that makes the
@@ -165,6 +236,9 @@ encoding honest is outside what it checks**, and that is your part:
   two sides, the encoding has hidden the dispute instead of showing it.
 - **Is a premise missing?** Especially one the argument needs and its author
   would rather not state.
+- **Is a confidence rating deciding a dispute?** In a dispute the ratings are
+  premises. A rating nobody would defend can hand a position a win it has not
+  earned.
 - **Does the prose match the theorems?** Generated tables cannot drift, but a
   paragraph that names a result correctly and describes it wrongly will pass
   every check in this repository.
@@ -186,6 +260,12 @@ For the logic itself, in increasing order of commitment:
   [Classical Logic](https://plato.stanford.edu/entries/logic-classical/), and
   [Modal Logic](https://plato.stanford.edu/entries/logic-modal/) — reference
   articles rather than tutorials, but authoritative and free.
+
+For disputes, the Stanford Encyclopedia's
+[Argument and Argumentation](https://plato.stanford.edu/entries/argument/)
+introduces Dung's frameworks, and
+[Defeasible Reasoning](https://plato.stanford.edu/entries/reasoning-defeasible/)
+covers the grounded and preferred semantics this library uses.
 
 Modal logic is listed because arguments about what *cannot* be otherwise need
 it, and the library does not yet have it.

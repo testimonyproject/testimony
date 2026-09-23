@@ -1809,6 +1809,113 @@ theorem circle_parity_concedes_the_charge : Establishes
 -- axioms: propext
 ```
 
+#### Refusing a ground, and denying it
+
+Every reply above is written the same way, as the objection's own line with a
+ground replaced. That shape covers two different moves. A reply can **deny** the
+ground — entail its negation — or merely **refuse** it, declining to grant it
+without asserting the opposite. A denial is an *attack*, and in a dispute an
+attack can defeat (`Testimony.Logic.Dispute`). A refusal attacks nothing: it
+takes the ground away, which is what `Line.onGrounds` encodes, and the question
+it leaves is an entailment question the results above already answer.
+
+Five of the seven replies here refuse. Each refusal is shown by a reading that
+grants the reply's grounds and keeps the refused ground true. The other two
+deny, and each denial is an entailment.
+
+<a id="kruger_refuses_rather_than_denies"></a>
+**`kruger_refuses_rather_than_denies`**
+
+**Kruger refuses the canon objection's ground; he does not deny it.** On
+the reading that grants his grounds and still denies the sole rule, identifying
+the canon does require an infallible authority.
+
+```lean
+theorem kruger_refuses_rather_than_denies : ¬Entails canonUnderParity.premises
+    (∼p Claim.identifyingCanonRequiresInfallibleAuthority)
+-- axioms: propext, Quot.sound
+```
+
+<a id="mathison_refuses_rather_than_denies"></a>
+**`mathison_refuses_rather_than_denies`**
+
+**Mathison refuses the regress's ground.** Granted his grounds, the
+individual may still retain ultimate interpretive authority.
+
+```lean
+theorem mathison_refuses_rather_than_denies : ¬Entails
+    regressUnderParity.premises (∼p
+    Claim.individualRetainsUltimateInterpretiveAuthority)
+-- axioms: propext, Quot.sound
+```
+
+<a id="final_arbiter_refuses_rather_than_denies"></a>
+**`final_arbiter_refuses_rather_than_denies`**
+
+**The final-arbiter answer refuses the self-refutation objection's ground.**
+Scoping the bindingness rule to first-order doctrine does not deny that only
+scriptural doctrine binds.
+
+```lean
+theorem final_arbiter_refuses_rather_than_denies : ¬Entails
+    selfRefutationUnderFinalArbiter.premises (∼p
+    Claim.onlyScripturalDoctrineIsBinding)
+-- axioms: propext, Quot.sound
+```
+
+<a id="accountability_refuses_rather_than_denies"></a>
+**`accountability_refuses_rather_than_denies`**
+
+**Allen and Swain refuse the circle's second leg.** A consensus accountable
+to scripture does not, by itself, deny that perspicuity requires the
+consensus.
+
+```lean
+theorem accountability_refuses_rather_than_denies : ¬Entails
+    circleUnderAccountability.premises (∼p
+    Claim.perspicuityRequiresCreedalConsensus)
+-- axioms: propext, Quot.sound
+```
+
+<a id="scriptural_bounding_refuses_rather_than_denies"></a>
+**`scriptural_bounding_refuses_rather_than_denies`**
+
+**The scriptural-bounding reply refuses the same leg.**
+
+```lean
+theorem scriptural_bounding_refuses_rather_than_denies : ¬Entails
+    circleUnderScripturalBounding.premises (∼p
+    Claim.perspicuityRequiresCreedalConsensus)
+-- axioms: propext, Quot.sound
+```
+
+<a id="classical_answer_denies_the_ground"></a>
+**`classical_answer_denies_the_ground`**
+
+**The classical answer denies the self-refutation objection's ground.** It
+asserts that scripture teaches the principle, which is the negation of what the
+objection assumes.
+
+```lean
+theorem classical_answer_denies_the_ground : Entails
+    selfRefutationUnderClassicalAnswer.premises (∼notP
+    Claim.solaScripturaIsTaughtByScripture)
+-- axioms: propext, Quot.sound
+```
+
+<a id="barrett_denies_the_ground"></a>
+**`barrett_denies_the_ground`**
+
+**Barrett denies the ground Geisler's charge needs.** He asserts that every
+appeal to an ultimate authority is circular, the negation of what the charge
+assumes.
+
+```lean
+theorem barrett_denies_the_ground : Entails defeatUnderParity.premises (∼notP
+    Claim.everyUltimateAuthorityIsCircular)
+-- axioms: propext, Quot.sound
+```
+
 #### Satisfiability
 
 `Entails` quantifies over the valuations satisfying the premises, so a premise

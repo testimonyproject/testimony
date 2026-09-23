@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **53 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **58 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -50,6 +50,11 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `usage_parity_blocks_wegner` | `¬Establishes wegnerUnderUsageParity` | **Postell's second reply, and it is independent of the first.** Concede the parse, concede the ordinary pregnancy, concede that the woman of Isaiah 7:14 is no virgin — and the … |
 | `hinges_jointly_load_bearing` | `¬Establishes christianWithoutAnyHinge` | **The result worth having.** No single hinge carries the argument, but the four of them jointly do: remove all four and the criterion no longer follows, with every textual and … |
 | `jesus_satisfies_virgin_birth` | `Satisfies jesus bornOfAVirgin` | End to end: under the scriptural package, Jesus satisfies the virgin-birth criterion. |
+| `christian_does_not_defeat_critical` | `¬Defeats christian criticalDenial` | **The scriptural reading cannot answer the critic by itself.** Its rebuttal is an attack, but not a defeat: its weakest premise is `disputed` and the critical denial's are … |
+| `critical_prevails_unanswered` | `Framework.grounded exchange.defeats = {Exchange.critical}` | **Unanswered, the critical denial prevails.** It is the grounded extension of the exchange: nothing defeats it, and it defeats the scriptural reading, which nothing then defends. |
+| `nothing_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = ∅` | **Heard out, nothing prevails.** Every party in the dispute is defeated by someone, so nothing is forced, and the grounded extension is empty. |
+| `scriptural_reading_reinstated` | `Framework.Preferred isaiahDispute.defeats {Party.scriptural, Party.berry, Party.postell}` | **The replies reinstate the scriptural reading.** The scriptural reading, Berry and Postell together are a preferred extension: they do not defeat one another, and the only party … |
+| `critical_denial_remains_defensible` | `Framework.Preferred isaiahDispute.defeats {Party.critical}` | **The critical denial remains defensible.** Alone, it is also a preferred extension: it defeats both replies, and the scriptural reading, and nothing it defeats can stand beside … |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -91,7 +96,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- END GENERATED: lake exe statusgen -->
 
-Seven findings emerged that were not designed for.
+Eight findings emerged that were not designed for.
 
 **Redundancy defeats a lexical dispute.** Sola fide runs on two independent
 strands — Paul's ἔργα νόμου and Jesus' σέσωκέν σε at Luke 7:50 — and neither
@@ -175,6 +180,29 @@ provability. `Testimony.Logic.Independent` is its semantic counterpart, over
 the entailment this library uses, and `leaves_open` proves one from the two
 readings the premises admit. Both readings stay named, for the same reason
 every countermodel here is named.
+
+**Answering an objection is two moves, and only one of them can win.** Every
+reply in the library was written the same way, as the objection's own line with
+a ground replaced. Asked which of them *contradict* the ground and which merely
+*decline* it, they split. Kruger on the canon, Mathison on interpretive
+authority, the final-arbiter answer and both replies to Geisler's circle decline
+it: `kruger_refuses_rather_than_denies` shows Kruger's premises leave the
+requirement he refuses standing. Berry and Postell deny theirs, as do the
+classical answer to self-refutation and Barrett. A refusal takes a ground away,
+and its effect is the independence finding above. A denial is an *attack*, and
+an attack can defeat.
+
+Entailment cannot say that one argument defeats another, because adding
+premises never removes a conclusion. A dispute can. The Isaiah 7:14 positions,
+taken as an argumentation framework with defeats proved from their premises and
+their cited confidences, show that the critical denial prevails against the
+scriptural reading alone (`critical_prevails_unanswered`). Once Berry and
+Postell are heard, nothing prevails (`nothing_prevails_once_replies_are_heard`),
+and the scriptural reading is reinstated as one of two resolutions
+(`scriptural_reading_reinstated`, `critical_denial_remains_defensible`). It is
+not forced, because the premises the replies and the critic contest are rated
+alike. That makes the ratings premises of the result, and says which one to
+contest.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether

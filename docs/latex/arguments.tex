@@ -240,6 +240,8 @@ Postell also supplies the module's sharpest rival-defeater. \texttt{parity\allow
 
 That gives the critical exclusion step two independent defeaters. Berry's is evidential — we do not know how the sign was fulfilled in Ahaz's day. Postell's is structural — the near-term setting was never the right kind of reason.
 
+\textbf{Taken together, the four positions make a dispute, and the dispute has an outcome the entailment results cannot state.} \texttt{Dispute.lean} treats the scriptural reading, the critical denial, Berry and Postell as the nodes of an argumentation framework and proves who defeats whom — a defeat being an attack derived from entailment that the cited confidences do not block. Against the scriptural reading alone, \texttt{critical\_\allowbreak{}prevails\_\allowbreak{}unanswered}: the critical denial defeats it, and the scriptural reading cannot answer, because its weakest premise is \texttt{disputed} and the critic's are \texttt{well\allowbreak{}Supported} (\texttt{christian\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}critical}). Hear Berry and Postell, and \texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}once\_\allowbreak{}replies\_\allowbreak{}are\_\allowbreak{}heard}. The dispute then has two resolutions: \texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}reinstated}, with the two replies defending the scriptural reading, and \texttt{critical\_\allowbreak{}denial\_\allowbreak{}remains\_\allowbreak{}defensible}, with the critic defending itself against both. The replies reinstate the predictive reading as defensible; they do not make it forced, because the exchange between them and the critic is between premises rated alike.
+
 \texttt{hinges\_\allowbreak{}jointly\_\allowbreak{}load\_\allowbreak{}bearing} is the result worth having. No single interpretive hinge carries the argument any more — strip \emph{almah} and the other three strands still deliver the criterion, which \texttt{almah\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing} records. Strip all four and the argument collapses. \texttt{almah\_\allowbreak{}is\_\allowbreak{}load\_\allowbreak{}bearing\_\allowbreak{}alone} keeps the pre-Miravalle finding on the books: within the Isaianic strand taken by itself, the lexical premise still carries everything.
 
 \textbf{The magisterial strand is encoded separately and is not part of \texttt{christian}.} Papal teaching on Mary's virginity in conceiving, as collated by Miravalle, is a Roman Catholic premise; this library's author does not grant that magisterial teaching settles doctrinal questions, and the encoding says so rather than quietly folding it in. \texttt{catholic} is the package for a reader who does grant it. \texttt{magisterial\_\allowbreak{}authority\_\allowbreak{}is\_\allowbreak{}load\_\allowbreak{}bearing} shows what follows for a reader who does not: that route yields nothing on its own, and the four scriptural strands have to carry the argument by themselves. The rival is cited to Westminster I.x.
@@ -259,6 +261,7 @@ This argument is a directory, because at fourteen hundred lines it was one file 
 \texttt{Lines.lean} & the inference steps, and the lines of reason they compose into \\
 \texttt{Packages.lean} & the positions, and the variant packages the results refute \\
 \texttt{Results.lean} & every \texttt{@[headline]} result, with its trust base \\
+\texttt{Dispute.lean} & the four positions as one dispute: who defeats whom, and who prevails \\
 \bottomrule
 \end{longtable}
 Shared material lives further out: passages and citation bundles in \texttt{Testimony.Scripture}, the \texttt{Line} and \texttt{case\allowbreak{}Of} vocabulary in \texttt{Testimony.Logic.Line}, and the \texttt{establish} and \texttt{refute\_\allowbreak{}with} tactics in \texttt{Testimony.Logic.Tactic}.
@@ -713,6 +716,27 @@ Its grounds are what the two defeaters attack. Berry replaces the second with \t
   \text{(3)} \quad & (P_{36} \land P_{37}) \rightarrow \lnot P_{1} \\
   \vdash \quad & \lnot P_{1}
 \end{align*}
+\paragraph*{The two defeaters, as arguments in their own right}
+\leavevmode\par
+\texttt{critical\allowbreak{}Denial\allowbreak{}Under\allowbreak{}Berry} and \texttt{critical\allowbreak{}Denial\allowbreak{}Under\allowbreak{}Parity} ask what the critical line is left with once a reply is in play. The lines below ask something else: what each reply \emph{concludes}, taken on its own. Written this way a reply is a position with premises of its own, and so a node that can defeat, and be defeated by, the line it answers — see \texttt{Dispute.lean}.
+
+\par\medskip\noindent\textbf{\texttt{berry\allowbreak{}Line}} --- Berry's objection to the near-term exclusion\par\nobreak\noindent
+\textbf{Berry's objection}, as an argument: the near-term fulfilment is unclear, so the near-term reading does not exclude the messianic sense.
+
+\begin{align*}
+  \text{(1)} \quad & P_{38} \\
+  \text{(2)} \quad & P_{38} \rightarrow \lnot P_{37} \\
+  \vdash \quad & \lnot P_{37}
+\end{align*}
+\par\medskip\noindent\textbf{\texttt{postell\allowbreak{}Line}} --- Postell's parity argument against the near-term exclusion\par\nobreak\noindent
+\textbf{Postell's parity argument}, as an argument: Isaiah 9 and 11 are messianic on the same near-term timeline, so a near-term setting does not exclude the messianic sense.
+
+\begin{align*}
+  \text{(1)} \quad & P_{25} \\
+  \text{(2)} \quad & P_{26} \\
+  \text{(3)} \quad & (P_{25} \land P_{26}) \rightarrow \lnot P_{37} \\
+  \vdash \quad & \lnot P_{37}
+\end{align*}
 \paragraph*{What the strands share}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{shared\allowbreak{}Grounds}}\par\nobreak\noindent
@@ -961,6 +985,25 @@ The same case with Berry's observation in play, and the exclusion premise no lon
   \text{(3)} \quad & P_{38} \rightarrow \lnot P_{37} \\
   \text{(4)} \quad & (P_{36} \land P_{37}) \rightarrow \lnot P_{1} \\
   \vdash \quad & \lnot P_{1}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{berry\allowbreak{}Objection}} --- Berry's objection to the near-term exclusion\par\nobreak\noindent
+Berry's objection as a position of its own: its conclusion is that the near-term reading does not exclude the messianic sense.
+
+\begin{align*}
+  \text{(1)} \quad & P_{38} \\
+  \text{(2)} \quad & P_{38} \rightarrow \lnot P_{37} \\
+  \vdash \quad & \lnot P_{37}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{postell\allowbreak{}Parity}} --- Postell's parity argument against the near-term exclusion\par\nobreak\noindent
+Postell's parity argument as a position of its own, with the same conclusion as Berry's reached from different grounds.
+
+\begin{align*}
+  \text{(1)} \quad & P_{25} \\
+  \text{(2)} \quad & P_{26} \\
+  \text{(3)} \quad & (P_{25} \land P_{26}) \rightarrow \lnot P_{37} \\
+  \vdash \quad & \lnot P_{37}
 \end{align*}
 \emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{critical\allowbreak{}Denial\allowbreak{}Under\allowbreak{}Parity}} --- Critical denial, with the parity argument in play\par\nobreak\noindent
@@ -1598,6 +1641,385 @@ Wegner's objection has a model.
 {\small\begin{verbatim}
 theorem wegnerLexical_is_satisfiable : Satisfiable wegnerLexical.premises
 -- axioms: propext, Quot.sound
+\end{verbatim}}
+\subsection*{Arguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14}
+The results in \texttt{Results.lean} ask what each package entails. This module asks what happens when the packages meet: the scriptural reading, the critical denial of the predictive reading, and the two replies to that denial — Berry's objection and Postell's parity argument — taken together as one dispute.
+
+Who defeats whom is not stipulated. Each defeat below is a theorem about the packages' premises, and so is each absence of one (see \texttt{Testimony.Logic.Dispute} for how an attack is derived from entailment and filtered by cited confidence). The defeats, all four proved, are these:
+
+\begin{itemize}
+  \item \textbf{The critical denial defeats the scriptural reading.} It entails the
+\end{itemize}
+  negation of the scriptural premise that Isaiah 7:14 predicts a virgin birth,   a premise cited as \texttt{disputed}.
+
+\begin{itemize}
+  \item \textbf{The scriptural reading does not defeat the critical denial}, although it
+\end{itemize}
+  attacks it. It concludes the opposite, so it rebuts; but its weakest premise   is \texttt{disputed} and the critical denial's are \texttt{well\allowbreak{}Supported}, so the rebuttal   fails. On the library's own ratings the scriptural reading cannot answer the   critic by itself.
+
+\begin{itemize}
+  \item \textbf{Berry and Postell each defeat the critical denial}, by contradicting its
+\end{itemize}
+  premise that a near-term sign excludes a messianic sense.
+
+\begin{itemize}
+  \item \textbf{The critical denial defeats each of them back.} It holds that premise, so
+\end{itemize}
+  it rebuts both; and all three rest on \texttt{well\allowbreak{}Supported} premises, so neither   side of the exchange outranks the other.
+
+\subsubsection*{What follows}
+Faced with the scriptural reading alone, \textbf{the critical denial prevails}: it is the grounded extension of that exchange, and the scriptural reading is excluded from it. Add Berry and Postell and \textbf{nothing prevails any more}: the grounded extension is empty. The dispute then has two ways to be resolved, proved as its two preferred extensions:
+
+\begin{itemize}
+  \item the scriptural reading together with Berry and Postell, who defend it; or
+  \item the critical denial alone, which defends itself against both replies.
+\end{itemize}
+This is the result entailment could not state. Adding premises never removes a conclusion; adding arguments can remove one from what a dispute forces. The replies do not show the predictive reading is right. They reinstate it as a defensible resolution of the dispute — one of two, and only one of two, because the ratings make the exchange between the replies and the critic a standoff.
+
+\subsubsection*{What the ratings decide}
+These outcomes rest on the cited confidences as much as on the premises. Postell's argument is described in \texttt{Lines.lean} as the stronger of the two defeaters; the ratings do not register that, because both of its premises are cited \texttt{well\allowbreak{}Supported}, as Berry's is. And the premise that settles the exchange with the critic — that a near-term sign excludes a messianic sense — is rated \texttt{well\allowbreak{}Supported} on Brown's authority. Rated \texttt{disputed}, both replies would defeat the critic without being defeated back, and the scriptural reading would join the grounded extension. The rating is a premise of this result, and contesting it is contesting the result.
+
+\paragraph*{The replies as positions}
+\leavevmode\par
+Each reply is an argument in its own right, so it must hold together and deliver its conclusion before it can take part in a dispute.
+
+\par\medskip\noindent\textbf{\texttt{replies\allowbreak{}Stand\allowbreak{}Reading}}\par\nobreak\noindent
+The world Berry and Postell describe: everything holds except that a near-term sign excludes a messianic sense. The scriptural reading holds in it too, which is what the joint-model results below use it for.
+
+{\small\begin{verbatim}
+def repliesStandReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.nearTermExcludesMessianicSense => False
+    | x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{berry\allowbreak{}Objection\_\allowbreak{}establishes}}\par\nobreak\noindent
+Berry's objection delivers its conclusion.
+
+{\small\begin{verbatim}
+theorem berryObjection_establishes : Establishes berryObjection
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{berry\allowbreak{}Objection\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Berry's objection has a model.
+
+{\small\begin{verbatim}
+theorem berryObjection_is_satisfiable : Satisfiable berryObjection.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{postell\allowbreak{}Parity\_\allowbreak{}establishes}}\par\nobreak\noindent
+Postell's parity argument delivers its conclusion.
+
+{\small\begin{verbatim}
+theorem postellParity_establishes : Establishes postellParity
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{postell\allowbreak{}Parity\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Postell's parity argument has a model.
+
+{\small\begin{verbatim}
+theorem postellParity_is_satisfiable : Satisfiable postellParity.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\paragraph*{Strength: the weakest link of each position}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{christian\_\allowbreak{}strength}}\par\nobreak\noindent
+The scriptural reading is no stronger than its least supported premise, which is cited \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem christian_strength : christian.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{critical\allowbreak{}Denial\_\allowbreak{}strength}}\par\nobreak\noindent
+The critical denial rests on two premises cited \texttt{well\allowbreak{}Supported}.
+
+{\small\begin{verbatim}
+theorem criticalDenial_strength : criticalDenial.strength = 2
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{berry\allowbreak{}Objection\_\allowbreak{}strength}}\par\nobreak\noindent
+Berry's one ranked premise is cited \texttt{well\allowbreak{}Supported}.
+
+{\small\begin{verbatim}
+theorem berryObjection_strength : berryObjection.strength = 2
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{postell\allowbreak{}Parity\_\allowbreak{}strength}}\par\nobreak\noindent
+Both of Postell's ranked premises are cited \texttt{well\allowbreak{}Supported}.
+
+{\small\begin{verbatim}
+theorem postellParity_strength : postellParity.strength = 2
+-- axioms: propext
+\end{verbatim}}
+\paragraph*{Who defeats whom}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}defeats\_\allowbreak{}christian}}\par\nobreak\noindent
+\textbf{The critical denial defeats the scriptural reading.} It entails the negation of the premise that Isaiah 7:14 predicts a virgin birth, and that premise, cited \texttt{disputed}, does not outrank it.
+
+{\small\begin{verbatim}
+theorem critical_defeats_christian : Defeats criticalDenial christian
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{christian\_\allowbreak{}rebuts\_\allowbreak{}critical}}\par\nobreak\noindent
+The scriptural reading does attack the critical denial: it concludes the opposite.
+
+{\small\begin{verbatim}
+theorem christian_rebuts_critical : Rebuts christian criticalDenial
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{christian\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}undermine\_\allowbreak{}critical}}\par\nobreak\noindent
+But it undermines none of the critical denial's premises. For each of them there is a world in which the scriptural reading holds and that premise does too: the near-term setting and the exclusion hold where everything does, and the exclusion step holds where Berry and Postell are right.
+
+{\small\begin{verbatim}
+theorem christian_does_not_undermine_critical : ∀ (φ : Formula Claim),
+    ¬UnderminesOn christian criticalDenial φ
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{christian\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}critical}}\par\nobreak\noindent
+\textbf{The scriptural reading cannot answer the critic by itself.} Its rebuttal is an attack, but not a defeat: its weakest premise is \texttt{disputed} and the critical denial's are \texttt{well\allowbreak{}Supported}.
+
+{\small\begin{verbatim}
+theorem christian_does_not_defeat_critical : ¬Defeats christian criticalDenial
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{berry\_\allowbreak{}defeats\_\allowbreak{}critical}}\par\nobreak\noindent
+\textbf{Berry defeats the critical denial.} He entails the negation of its premise that a near-term sign excludes a messianic sense, and that premise is cited no higher than Berry's own.
+
+{\small\begin{verbatim}
+theorem berry_defeats_critical : Defeats berryObjection criticalDenial
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{postell\_\allowbreak{}defeats\_\allowbreak{}critical}}\par\nobreak\noindent
+\textbf{Postell defeats the critical denial}, on the same premise from different grounds.
+
+{\small\begin{verbatim}
+theorem postell_defeats_critical : Defeats postellParity criticalDenial
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}defeats\_\allowbreak{}berry}}\par\nobreak\noindent
+\textbf{The critical denial defeats Berry back.} It holds the premise Berry denies, so it rebuts his conclusion, and Berry is no stronger than it.
+
+{\small\begin{verbatim}
+theorem critical_defeats_berry : Defeats criticalDenial berryObjection
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}defeats\_\allowbreak{}postell}}\par\nobreak\noindent
+\textbf{The critical denial defeats Postell back}, for the same reason.
+
+{\small\begin{verbatim}
+theorem critical_defeats_postell : Defeats criticalDenial postellParity
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\paragraph*{Who does not defeat whom}
+\leavevmode\par
+The scriptural reading, Berry and Postell can all be held at once, in the world \texttt{replies\allowbreak{}Stand\allowbreak{}Reading} describes, so none of them attacks another. Each result below names that world.
+
+\par\medskip\noindent\textbf{\texttt{christian\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}berry}}\par\nobreak\noindent
+The scriptural reading and Berry stand together.
+
+{\small\begin{verbatim}
+theorem christian_does_not_defeat_berry : ¬Defeats christian berryObjection
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{berry\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}christian}}\par\nobreak\noindent
+Berry and the scriptural reading stand together.
+
+{\small\begin{verbatim}
+theorem berry_does_not_defeat_christian : ¬Defeats berryObjection christian
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{christian\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}postell}}\par\nobreak\noindent
+The scriptural reading and Postell stand together.
+
+{\small\begin{verbatim}
+theorem christian_does_not_defeat_postell : ¬Defeats christian postellParity
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{postell\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}christian}}\par\nobreak\noindent
+Postell and the scriptural reading stand together.
+
+{\small\begin{verbatim}
+theorem postell_does_not_defeat_christian : ¬Defeats postellParity christian
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{berry\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}postell}}\par\nobreak\noindent
+Berry and Postell stand together: they are two routes to one conclusion.
+
+{\small\begin{verbatim}
+theorem berry_does_not_defeat_postell : ¬Defeats berryObjection postellParity
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{postell\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}berry}}\par\nobreak\noindent
+Postell and Berry stand together.
+
+{\small\begin{verbatim}
+theorem postell_does_not_defeat_berry : ¬Defeats postellParity berryObjection
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\paragraph*{The exchange: the scriptural reading against the critic}
+\leavevmode\par
+Before either reply is heard, the dispute has two parties.
+
+\par\medskip\noindent\textbf{\texttt{exchange\allowbreak{}Node}}\par\nobreak\noindent
+The package each party of the exchange argues from.
+
+{\small\begin{verbatim}
+def exchangeNode : Exchange → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | Exchange.scriptural =>
+      christian
+    | Exchange.critical =>
+      criticalDenial
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{exchange\allowbreak{}Node\_\allowbreak{}consistent}}\par\nobreak\noindent
+Each party's premises can hold together.
+
+{\small\begin{verbatim}
+theorem exchangeNode_consistent : ∀ (i : Exchange), Satisfiable (exchangeNode
+    i).premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{exchange\allowbreak{}Node\_\allowbreak{}sound}}\par\nobreak\noindent
+Each party establishes its conclusion.
+
+{\small\begin{verbatim}
+theorem exchangeNode_sound : ∀ (i : Exchange), Establishes (exchangeNode i)
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{exchange}}\par\nobreak\noindent
+The exchange as a dispute.
+
+{\small\begin{verbatim}
+def exchange : Dispute Claim Exchange :=
+  { node := exchangeNode,
+    consistent := exchangeNode_consistent,
+    sound := exchangeNode_sound }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{exchange\_\allowbreak{}defeats}}\par\nobreak\noindent
+Who defeats whom in the exchange: the critic defeats the scriptural reading, and nothing else.
+
+{\small\begin{verbatim}
+theorem exchange_defeats : ∀ (i j : Exchange), exchange.defeats i j ↔ i =
+    Exchange.critical ∧ j = Exchange.scriptural
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}prevails\_\allowbreak{}unanswered}}\par\nobreak\noindent
+\textbf{Unanswered, the critical denial prevails.} It is the grounded extension of the exchange: nothing defeats it, and it defeats the scriptural reading, which nothing then defends.
+
+{\small\begin{verbatim}
+theorem critical_prevails_unanswered : Framework.grounded exchange.defeats =
+    {Exchange.critical}
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\paragraph*{The dispute: the replies heard}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node}}\par\nobreak\noindent
+The package each party of the dispute argues from.
+
+{\small\begin{verbatim}
+def partyNode : Party → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | Party.scriptural =>
+      christian
+    | Party.critical =>
+      criticalDenial
+    | Party.berry =>
+      berryObjection
+    | Party.postell =>
+      postellParity
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node\_\allowbreak{}consistent}}\par\nobreak\noindent
+Each party's premises can hold together.
+
+{\small\begin{verbatim}
+theorem partyNode_consistent : ∀ (i : Party), Satisfiable (partyNode
+    i).premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node\_\allowbreak{}sound}}\par\nobreak\noindent
+Each party establishes its conclusion.
+
+{\small\begin{verbatim}
+theorem partyNode_sound : ∀ (i : Party), Establishes (partyNode i)
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute}}\par\nobreak\noindent
+The dispute over Isaiah 7:14, with both replies in play.
+
+{\small\begin{verbatim}
+def isaiahDispute : Dispute Claim Party :=
+  { node := partyNode,
+    consistent := partyNode_consistent,
+    sound := partyNode_sound }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Defeats}}\par\nobreak\noindent
+The defeats of the dispute, as a table.
+
+{\small\begin{verbatim}
+def partyDefeats : Party → Party → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Party.critical,
+      Party.scriptural => True
+    | Party.berry,
+      Party.critical => True
+    | Party.postell,
+      Party.critical => True
+    | Party.critical,
+      Party.berry => True
+    | Party.critical,
+      Party.postell => True
+    | x, x_2 => False
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
+\textbf{Who defeats whom}, all sixteen pairs proved: the critic defeats the scriptural reading; the critic and each reply defeat each other; nothing else.
+
+{\small\begin{verbatim}
+theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
+    partyDefeats i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}once\_\allowbreak{}replies\_\allowbreak{}are\_\allowbreak{}heard}}\par\nobreak\noindent
+\textbf{Heard out, nothing prevails.} Every party in the dispute is defeated by someone, so nothing is forced, and the grounded extension is empty. The critical denial, which prevailed over the scriptural reading alone, no longer does.
+
+{\small\begin{verbatim}
+theorem nothing_prevails_once_replies_are_heard : Framework.grounded
+    isaiahDispute.defeats = ∅
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}reinstated}}\par\nobreak\noindent
+\textbf{The replies reinstate the scriptural reading.} The scriptural reading, Berry and Postell together are a preferred extension: they do not defeat one another, and the only party that defeats any of them — the critic — is defeated by Berry.
+
+{\small\begin{verbatim}
+theorem scriptural_reading_reinstated : Framework.Preferred
+    isaiahDispute.defeats {Party.scriptural, Party.berry, Party.postell}
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}denial\_\allowbreak{}remains\_\allowbreak{}defensible}}\par\nobreak\noindent
+\textbf{The critical denial remains defensible.} Alone, it is also a preferred extension: it defeats both replies, and the scriptural reading, and nothing it defeats can stand beside it.
+
+{\small\begin{verbatim}
+theorem critical_denial_remains_defensible : Framework.Preferred
+    isaiahDispute.defeats {Party.critical}
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}credulously\_\allowbreak{}accepted}}\par\nobreak\noindent
+\textbf{So the dispute leaves the predictive reading open.} The scriptural reading is accepted on one resolution of the dispute and rejected on another.
+
+{\small\begin{verbatim}
+theorem scriptural_reading_credulously_accepted :
+    Framework.CredulouslyAccepted isaiahDispute.defeats Party.scriptural
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}not\_\allowbreak{}skeptically\_\allowbreak{}accepted}}\par\nobreak\noindent
+Not every resolution accepts the scriptural reading: the critic's does not.
+
+{\small\begin{verbatim}
+theorem scriptural_reading_not_skeptically_accepted :
+    ¬Framework.SkepticallyAccepted isaiahDispute.defeats Party.scriptural
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \clearpage
 \section*{Sola fide}
@@ -3106,6 +3528,73 @@ theorem parity_leaves_the_defeat_open : Independent defeatUnderParity.premises
 theorem circle_parity_concedes_the_charge : Establishes
     circleParityConcedingTheCharge
 -- axioms: propext
+\end{verbatim}}
+\paragraph*{Refusing a ground, and denying it}
+\leavevmode\par
+Every reply above is written the same way, as the objection's own line with a ground replaced. That shape covers two different moves. A reply can \textbf{deny} the ground — entail its negation — or merely \textbf{refuse} it, declining to grant it without asserting the opposite. A denial is an \emph{attack}, and in a dispute an attack can defeat (\texttt{Testimony.Logic.Dispute}). A refusal attacks nothing: it takes the ground away, which is what \texttt{Line.on\allowbreak{}Grounds} encodes, and the question it leaves is an entailment question the results above already answer.
+
+Five of the seven replies here refuse. Each refusal is shown by a reading that grants the reply's grounds and keeps the refused ground true. The other two deny, and each denial is an entailment.
+
+\par\medskip\noindent\textbf{\texttt{kruger\_\allowbreak{}refuses\_\allowbreak{}rather\_\allowbreak{}than\_\allowbreak{}denies}}\par\nobreak\noindent
+\textbf{Kruger refuses the canon objection's ground; he does not deny it.} On the reading that grants his grounds and still denies the sole rule, identifying the canon does require an infallible authority.
+
+{\small\begin{verbatim}
+theorem kruger_refuses_rather_than_denies : ¬Entails canonUnderParity.premises
+    (∼p Claim.identifyingCanonRequiresInfallibleAuthority)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mathison\_\allowbreak{}refuses\_\allowbreak{}rather\_\allowbreak{}than\_\allowbreak{}denies}}\par\nobreak\noindent
+\textbf{Mathison refuses the regress's ground.} Granted his grounds, the individual may still retain ultimate interpretive authority.
+
+{\small\begin{verbatim}
+theorem mathison_refuses_rather_than_denies : ¬Entails
+    regressUnderParity.premises (∼p
+    Claim.individualRetainsUltimateInterpretiveAuthority)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{final\_\allowbreak{}arbiter\_\allowbreak{}refuses\_\allowbreak{}rather\_\allowbreak{}than\_\allowbreak{}denies}}\par\nobreak\noindent
+\textbf{The final-arbiter answer refuses the self-refutation objection's ground.} Scoping the bindingness rule to first-order doctrine does not deny that only scriptural doctrine binds.
+
+{\small\begin{verbatim}
+theorem final_arbiter_refuses_rather_than_denies : ¬Entails
+    selfRefutationUnderFinalArbiter.premises (∼p
+    Claim.onlyScripturalDoctrineIsBinding)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{accountability\_\allowbreak{}refuses\_\allowbreak{}rather\_\allowbreak{}than\_\allowbreak{}denies}}\par\nobreak\noindent
+\textbf{Allen and Swain refuse the circle's second leg.} A consensus accountable to scripture does not, by itself, deny that perspicuity requires the consensus.
+
+{\small\begin{verbatim}
+theorem accountability_refuses_rather_than_denies : ¬Entails
+    circleUnderAccountability.premises (∼p
+    Claim.perspicuityRequiresCreedalConsensus)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}bounding\_\allowbreak{}refuses\_\allowbreak{}rather\_\allowbreak{}than\_\allowbreak{}denies}}\par\nobreak\noindent
+\textbf{The scriptural-bounding reply refuses the same leg.}
+
+{\small\begin{verbatim}
+theorem scriptural_bounding_refuses_rather_than_denies : ¬Entails
+    circleUnderScripturalBounding.premises (∼p
+    Claim.perspicuityRequiresCreedalConsensus)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{classical\_\allowbreak{}answer\_\allowbreak{}denies\_\allowbreak{}the\_\allowbreak{}ground}}\par\nobreak\noindent
+\textbf{The classical answer denies the self-refutation objection's ground.} It asserts that scripture teaches the principle, which is the negation of what the objection assumes.
+
+{\small\begin{verbatim}
+theorem classical_answer_denies_the_ground : Entails
+    selfRefutationUnderClassicalAnswer.premises (∼notP
+    Claim.solaScripturaIsTaughtByScripture)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{barrett\_\allowbreak{}denies\_\allowbreak{}the\_\allowbreak{}ground}}\par\nobreak\noindent
+\textbf{Barrett denies the ground Geisler's charge needs.} He asserts that every appeal to an ultimate authority is circular, the negation of what the charge assumes.
+
+{\small\begin{verbatim}
+theorem barrett_denies_the_ground : Entails defeatUnderParity.premises (∼notP
+    Claim.everyUltimateAuthorityIsCircular)
+-- axioms: propext, Quot.sound
 \end{verbatim}}
 \paragraph*{Satisfiability}
 \leavevmode\par

@@ -162,6 +162,18 @@ def criticalDenialUnderBerry : ArgumentPackage Claim :=
         [ p .isaiahIsNearTermSignToAhaz, p .nearTermFulfilmentIsUnclear
         , berryBlocksExclusion ]).premises }
 
+/-- Berry's objection as a position of its own: its conclusion is that the
+near-term reading does not exclude the messianic sense. -/
+def berryObjection : ArgumentPackage Claim :=
+  berryLine.asPackage cite
+    "a near-term sign to Ahaz does not exclude a messianic sense"
+
+/-- Postell's parity argument as a position of its own, with the same conclusion
+as Berry's reached from different grounds. -/
+def postellParity : ArgumentPackage Claim :=
+  postellLine.asPackage cite
+    "a near-term sign to Ahaz does not exclude a messianic sense"
+
 /-- The critical denial with Postell's parity argument in play, and the
 exclusion premise no longer simply granted. -/
 def criticalDenialUnderParity : ArgumentPackage Claim :=

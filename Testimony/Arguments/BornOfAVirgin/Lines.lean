@@ -342,6 +342,32 @@ def criticalExclusionLine : Line Claim :=
   , step := criticalExclusion
   , delivers := notP .isaiahPredictsVirginBirth }
 
+/-! ### The two defeaters, as arguments in their own right
+
+`criticalDenialUnderBerry` and `criticalDenialUnderParity` ask what the critical
+line is left with once a reply is in play. The lines below ask something else:
+what each reply *concludes*, taken on its own. Written this way a reply is a
+position with premises of its own, and so a node that can defeat, and be
+defeated by, the line it answers — see `Dispute.lean`. -/
+
+/-- **Berry's objection**, as an argument: the near-term fulfilment is unclear,
+so the near-term reading does not exclude the messianic sense. -/
+def berryLine : Line Claim :=
+  { name := "Berry's objection to the near-term exclusion"
+  , grounds := [p .nearTermFulfilmentIsUnclear]
+  , step := berryBlocksExclusion
+  , delivers := notP .nearTermExcludesMessianicSense }
+
+/-- **Postell's parity argument**, as an argument: Isaiah 9 and 11 are messianic
+on the same near-term timeline, so a near-term setting does not exclude the
+messianic sense. -/
+def postellLine : Line Claim :=
+  { name := "Postell's parity argument against the near-term exclusion"
+  , grounds :=
+      [ p .isaiah9And11AreMessianic, p .isaiah9And11ShareTheAssyrianTimeline ]
+  , step := parityDefeatsNearTermExclusion
+  , delivers := notP .nearTermExcludesMessianicSense }
+
 /-! ### What the strands share -/
 
 /-- The premises no single strand owns: Mary's conception, and the agreement of
