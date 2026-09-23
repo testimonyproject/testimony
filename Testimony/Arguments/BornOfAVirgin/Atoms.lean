@@ -276,7 +276,11 @@ def annunciationFormEdge : IntertextEdge :=
   , relation := .thematic
   , source :=
       { primary := .work johnsonSamsonTypeScene (.page 270)
-      , supporting := [.work youngImmanuelProphecy (.pages 113 114)]
+      , supporting :=
+          [ .work youngImmanuelProphecy (.pages 113 114)
+            -- "there is no proof that Is 7:14 played any major role in
+            -- shaping the Lucan account of the virginal conception"
+          , .work brownProblemVirginalConception (.page 31) ]
       , tradition := .criticalScholarship
       , confidence := .wellSupported } }
 

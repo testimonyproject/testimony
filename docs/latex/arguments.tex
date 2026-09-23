@@ -318,8 +318,8 @@ $P_{30}$ & Hebrew זֶרַע is ordinarily reckoned through the father & linguis
 $P_{31}$ & The matrilineal wording of Genesis 3:15 marks a birth with no human father & interpretive & Roman Catholic, disputed & \cite[9--10]{miravalle-meet-mary-2007} \\
 $P_{32}$ & Micah 5:3 names only the woman in labour as bearing the coming ruler & textual & Christian, typological, well supported & Mic 5:2-3; \cite[ad loc. Mic 5:3]{keil-delitzsch-minor-prophets-1949} \\
 $P_{33}$ & Micah's mention of a mother and no father indicates a birth with no human father & interpretive & Roman Catholic, disputed & \cite[9--10]{miravalle-meet-mary-2007} \\
-$P_{34}$ & Mary conceived Jesus while a virgin\textsuperscript{\dag} & historical & Christian, hist.-gramm., disputed & Matt 1:18-25; Luke 1:26-38 \\
-$P_{35}$ & Matthew and Luke are independent traditions agreeing on the virgin conception & historical & Christian, hist.-gramm., plausible & \cite[26--38]{brown-birth-messiah-1993}; \cite[71]{rhodea-did-matthew-conceive-2013} \\
+$P_{34}$ & Mary conceived Jesus while a virgin & historical & Christian, hist.-gramm., disputed & Matt 1:18-25; Luke 1:26-38; \cite[30--33]{brown-problem-virginal-conception-1972} \\
+$P_{35}$ & Matthew and Luke are independent traditions agreeing on the virgin conception & historical & Christian, hist.-gramm., plausible & \cite[26--38]{brown-birth-messiah-1993}; \cite[24]{brown-problem-virginal-conception-1972}; \cite[71]{rhodea-did-matthew-conceive-2013} \\
 $P_{36}$ & Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation & interpretive & critical scholarship, disputed & \cite{brown-birth-messiah-1993} \\
 $P_{37}$ & A sign given for Ahaz's generation is not also a prediction of a virgin birth & interpretive & critical scholarship, disputed & \cite{brown-birth-messiah-1993} \\
 $P_{38}$ & How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question & interpretive & Christian, hist.-gramm., well supported & \cite[1653--1654]{berry-virgin-birth-2003}; \cite[5--9]{compton-immanuel-prophecy-2007} \\
@@ -466,7 +466,9 @@ def annunciationFormEdge : IntertextEdge :=
         primary :=
           Reference.work Bib.johnsonSamsonTypeScene (Bib.Locus.page 270),
         supporting :=
-          [Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 113 114)],
+          [Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 113 114),
+            Reference.work Bib.brownProblemVirginalConception
+              (Bib.Locus.page 31)],
         tradition := Tradition.criticalScholarship,
         confidence := Confidence.wellSupported } }
 \end{verbatim}}
@@ -845,7 +847,7 @@ The scriptural argument: four strands, no appeal to magisterial authority.
   \text{(21)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{catholic}} --- Roman Catholic reading (Scripture and magisterial teaching)\par\nobreak\noindent
 The Roman Catholic package: the four scriptural strands \emph{and} the magisterial one. This is the position as actually held — Scripture and Tradition together — and it is kept distinct from \texttt{christian} because its extra premise is one this library's author does not grant.
 
@@ -876,7 +878,7 @@ The Roman Catholic package: the four scriptural strands \emph{and} the magisteri
   \text{(24)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{magisterial\allowbreak{}Only}} --- Magisterial teaching alone\par\nobreak\noindent
 The magisterial route on its own, with no exegetical premise at all.
 
@@ -888,7 +890,7 @@ The magisterial route on its own, with no exegetical premise at all.
   \text{(5)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{magisterial\allowbreak{}Denied}} --- Magisterial teaching, with its authority denied\par\nobreak\noindent
 The magisterial route as it stands for a reader who denies that magisterial teaching settles doctrinal questions, holding with Westminster I.x that Scripture is the supreme judge.
 
@@ -901,7 +903,7 @@ The magisterial route as it stands for a reader who denies that magisterial teac
   \text{(6)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{isaianic\allowbreak{}Without\allowbreak{}Almah}} --- Isaianic strand (Isaiah 7:14)\par\nobreak\noindent
 The Isaianic line with the lexical premise removed, everything else it rests on retained. The one difference that most of the results below turn on.
 
@@ -939,7 +941,7 @@ The scriptural package with the lexical premise removed, everything else retaine
   \text{(20)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{isaianic\allowbreak{}Strand\allowbreak{}Without\allowbreak{}Almah}} --- Isaianic strand alone, minus the lexical premise\par\nobreak\noindent
 The Isaianic strand by itself, with the lexical premise removed: the argument exactly as this module encoded it before the other three strands were added. Kept so that the earlier finding stays checkable.
 
@@ -954,7 +956,7 @@ The Isaianic strand by itself, with the lexical premise removed: the argument ex
   \text{(8)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{christian\allowbreak{}Without\allowbreak{}Any\allowbreak{}Hinge}} --- Scriptural reading, minus all four interpretive hinges\par\nobreak\noindent
 The scriptural package with all four interpretive hinges removed, every textual and historical premise retained.
 
@@ -978,7 +980,7 @@ The scriptural package with all four interpretive hinges removed, every textual 
   \text{(17)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{isaianic\allowbreak{}Strand\allowbreak{}On\allowbreak{}Admissibility}} --- Isaianic strand, with the lexical premise weakened to admissibility\par\nobreak\noindent
 The Isaianic strand with Berry's defensive lexical premise in place of the assertive one: עַלְמָה \emph{admits} the sense "virgin" rather than \emph{bearing} it.
 
@@ -994,7 +996,7 @@ The Isaianic strand with Berry's defensive lexical premise in place of the asser
   \text{(9)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{critical}} --- Critical reading: near-term sign, etiology, and silence\par\nobreak\noindent
 The critical reading: the quotation, the Septuagint rendering and the wording of Genesis and Micah are all granted, and every inference drawn from them is denied.
 
@@ -1020,7 +1022,7 @@ Written flat rather than from the lines above, because that is its shape: the te
   \text{(17)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{critical\allowbreak{}Denial}} --- Critical denial of the predictive reading of Isaiah 7:14\par\nobreak\noindent
 The critical case for denying the predictive reading, stated as an argument in its own right rather than assumed inside \texttt{critical}. Its conclusion is the denial, not anything about Jesus.
 
@@ -1096,7 +1098,7 @@ The referential argument: Mary answers Isaiah's description, so Matthew's claim 
   \text{(7)} \quad & P_{7} \rightarrow \lnot P_{8} \\
   \vdash \quad & \lnot P_{8}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \par\medskip\noindent\textbf{\texttt{semantic\allowbreak{}Reaching\allowbreak{}For\allowbreak{}Criterion}} --- Referential reading, asked for the criterion\par\nobreak\noindent
 The same premises, asked to deliver the criterion instead. They do not.
 
@@ -1111,7 +1113,7 @@ The same premises, asked to deliver the criterion instead. They do not.
   \text{(8)} \quad & (P_{46} \land P_{34}) \rightarrow P_{47} \\
   \vdash \quad & P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} Mary conceived Jesus while a virgin.
+\emph{No premise here rests on scripture alone.}
 \paragraph*{Wegner's objection, and the circle in it}
 \leavevmode\par
 Four variants of one line, each a named difference. \texttt{wegner\allowbreak{}Line} grants everything Wegner needs; the rest take one ground away and put in its place the step that is supposed to supply it.
@@ -1245,7 +1247,7 @@ Written flat: it is the objector's grounds and the replies to them side by side,
   \text{(14)} \quad & (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{47} \\
   \vdash \quad & \lnot P_{47}
 \end{align*}
-\emph{Grounded in scripture alone:} The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, 'virgin', Mary conceived Jesus while a virgin.
+\emph{Grounded in scripture alone:} The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, 'virgin'.
 \subsection*{Arguments.BornOfAVirgin.Results — what does and does not follow}
 Every result the module claims, each tagged \texttt{@[headline]} and each followed by \texttt{\#print axioms} so its trust base is visible in the source.
 

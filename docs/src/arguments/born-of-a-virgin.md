@@ -270,8 +270,8 @@ reader sees.
 | \\(P_{31}\\) | The matrilineal wording of Genesis 3:15 marks a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
 | \\(P_{32}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
 | \\(P_{33}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{34}\\) | Mary conceived Jesus while a virgin ※ | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38 |
-| \\(P_{35}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
+| \\(P_{34}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
+| \\(P_{35}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
 | \\(P_{36}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
 | \\(P_{37}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
 | \\(P_{38}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
@@ -480,7 +480,9 @@ def annunciationFormEdge : IntertextEdge :=
         primary :=
           Reference.work Bib.johnsonSamsonTypeScene (Bib.Locus.page 270),
         supporting :=
-          [Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 113 114)],
+          [Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 113 114),
+            Reference.work Bib.brownProblemVirginalConception
+              (Bib.Locus.page 31)],
         tradition := Tradition.criticalScholarship,
         confidence := Confidence.wellSupported } }
 ```
@@ -1285,7 +1287,7 @@ authority.
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="catholic"></a>
 **`catholic`** — Roman Catholic reading (Scripture and magisterial teaching)
@@ -1327,7 +1329,7 @@ one this library's author does not grant.
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="magisterialOnly"></a>
 **`magisterialOnly`** — Magisterial teaching alone
@@ -1347,7 +1349,7 @@ The magisterial route on its own, with no exegetical premise at all.
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="magisterialDenied"></a>
 **`magisterialDenied`** — Magisterial teaching, with its authority denied
@@ -1370,7 +1372,7 @@ Scripture is the supreme judge.
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="isaianicWithoutAlmah"></a>
 **`isaianicWithoutAlmah`** — Isaianic strand (Isaiah 7:14)
@@ -1426,7 +1428,7 @@ retained.
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="isaianicStrandWithoutAlmah"></a>
 **`isaianicStrandWithoutAlmah`** — Isaianic strand alone, minus the lexical premise
@@ -1451,7 +1453,7 @@ added. Kept so that the earlier finding stays checkable.
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="christianWithoutAnyHinge"></a>
 **`christianWithoutAnyHinge`** — Scriptural reading, minus all four interpretive hinges
@@ -1484,7 +1486,7 @@ textual and historical premise retained.
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="isaianicStrandOnAdmissibility"></a>
 **`isaianicStrandOnAdmissibility`** — Isaianic strand, with the lexical premise weakened to admissibility
@@ -1509,7 +1511,7 @@ assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* 
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="critical"></a>
 **`critical`** — Critical reading: near-term sign, etiology, and silence
@@ -1547,7 +1549,7 @@ four strands on shared ground; it is the refusal of four strands.
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="criticalDenial"></a>
 **`criticalDenial`** — Critical denial of the predictive reading of Isaiah 7:14
@@ -1689,7 +1691,7 @@ of the objection's premise*, not the criterion — see
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 <a id="semanticReachingForCriterion"></a>
 **`semanticReachingForCriterion`** — Referential reading, asked for the criterion
@@ -1712,7 +1714,7 @@ The same premises, asked to deliver the criterion instead. They do not.
 \]
 </div>
 
-Grounded in scripture alone: Mary conceived Jesus while a virgin.
+No premise here rests on scripture alone.
 
 #### Wegner's objection, and the circle in it
 
@@ -1934,7 +1936,7 @@ side, which is neither one line nor several converging ones.
 \]
 </div>
 
-Grounded in scripture alone: The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, 'virgin', Mary conceived Jesus while a virgin.
+Grounded in scripture alone: The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, 'virgin'.
 
 ## Arguments.BornOfAVirgin.Results — what does and does not follow
 

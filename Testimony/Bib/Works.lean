@@ -417,6 +417,44 @@ any long-forgotten 'fulfilment' in the time of Ahaz" (123). -/
   , issue := some "1"
   , pages := some (118, 125) }
 
+/-- Brown's assessment of the historicity of the virginal conception, which
+argues both sides and ends in "an unresolved problem" (33). For historicity:
+no parallel explains how early Christians came to the idea, "unless, of course,
+that is what really took place" (30–32); the charge of illegitimacy, as old
+perhaps as Christianity itself, which "those who deny the virginal conception
+cannot escape the task of explaining" (32–33); and a tradition older than both
+infancy narratives, since neither evangelist knew the other's (24). Against:
+the high Christology of the narratives, the dubious historicity of the infancy
+material, and the silence of the rest of the New Testament (24–29). -/
+@[bib_entry] def brownProblemVirginalConception : BibEntry := .article
+  { core :=
+      { key := "brown-problem-virginal-conception-1972"
+      , contributors := { authors := [.person "Raymond E." "Brown"] }
+      , title := "The Problem of the Virginal Conception of Jesus"
+      , year := some { value := 1972 }
+      , identifiers := [.doi "10.1177/004056397203300101"] }
+  , journal := "Theological Studies"
+  , volume := some "33"
+  , issue := some "1"
+  , pages := some (3, 34) }
+
+/-- Fitzmyer's reply: the New Testament data "are not unambiguous". Matthew's
+annunciation asserts the virginal conception clearly and Luke's only possibly,
+and whether either affirms it as historical fact or as a theologoumenon "is
+still a vital question" (572–575). Cited as the contest over the historical
+premise, not as support for it. -/
+@[bib_entry] def fitzmyerVirginalConceptionNT : BibEntry := .article
+  { core :=
+      { key := "fitzmyer-virginal-conception-nt-1973"
+      , contributors := { authors := [.person "Joseph A." "Fitzmyer"] }
+      , title := "The Virginal Conception of Jesus in the New Testament"
+      , year := some { value := 1973 }
+      , identifiers := [.doi "10.1177/004056397303400401"] }
+  , journal := "Theological Studies"
+  , volume := some "34"
+  , issue := some "4"
+  , pages := some (541, 575) }
+
 /-- Rhodea on Isaiah 7:14 and the virginal conception. Cited for three
 observations: Luke's account of the virginal conception makes no explicit
 reference to Isaiah 7:14, and whether it alludes to it is disputed — Davies and

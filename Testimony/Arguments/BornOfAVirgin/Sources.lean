@@ -323,10 +323,15 @@ def cite : Claim → AtomMeta
   | .maryConceivedAsVirgin =>
     { label := "Mary conceived Jesus while a virgin"
     , kind := .historical
-      -- Scripture alone. A miraculous conception is outside ordinary
-      -- historical method; critical scholarship disputes or denies it.
+      -- The historical case is Brown's (1972): no parallel explains how the
+      -- idea arose (30–32), and the charge of illegitimacy needs explaining by
+      -- anyone who denies it (32–33). His verdict is "an unresolved problem"
+      -- (33), and Fitzmyer (1973) finds the New Testament data "not
+      -- unambiguous" (572). So still `disputed`: the best historical case
+      -- leaves the question open, and the contest is recorded.
     , source :=
         { primary := .scripture virginConceptionNarratives
+        , supporting := [.work brownProblemVirginalConception (.pages 30 33)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .independentAttestation =>
@@ -339,7 +344,9 @@ def cite : Claim → AtomMeta
       -- to Isaiah 7:14 (see `lukeAllusionEdge`).
     , source :=
         { primary := .work brownBirthMessiah (.pages 26 38)
-        , supporting := [.work rhodeaDidMatthewConceive (.page 71)]
+        , supporting :=
+            [ .work brownProblemVirginalConception (.page 24)
+            , .work rhodeaDidMatthewConceive (.page 71) ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .plausible } }
   | .isaiahIsNearTermSignToAhaz =>
