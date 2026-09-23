@@ -61,6 +61,30 @@ def isaiah2to12Frame : List ScriptureCitation :=
   [ { ref := .range ⟨.isaiah, 2, 1, 2, 4⟩ }
   , { ref := .range ⟨.isaiah, 11, 1, 12, 6⟩ } ]
 
+/-- Isaiah 7:13–14 and 7:16 — the sign given to the house of David in the plural,
+and the singular "you" of the verse addressed to Ahaz. -/
+def immanuelAddressees : List ScriptureCitation :=
+  [ rangeIn .masoretic ⟨.isaiah, 7, 13, 7, 14⟩
+  , verseIn .masoretic ⟨.isaiah, 7, 16⟩ ]
+
+/-- Micah 5:5–6 — the ruler from Bethlehem shepherds his people "when the
+Assyrian comes into our land", and delivers them from Assyria. English verse
+numbering; 5:4–5 in the Hebrew. -/
+def micahAssyrianSetting : List ScriptureCitation :=
+  [rangeIn .masoretic ⟨.micah, 5, 5, 5, 6⟩]
+
+/-- Matthew 2:4–6 and John 7:42 — the chief priests and scribes, and the crowd,
+expecting the Messiah from Bethlehem on the strength of Micah 5:2. -/
+def bethlehemExpectation : List ScriptureCitation :=
+  [ { ref := .range ⟨.matthew, 2, 4, 2, 6⟩ }
+  , { ref := .verse ⟨.john, 7, 42⟩ } ]
+
+/-- Isaiah 7:16 and 8:4 — the same timetable, given first to the child of 7:14
+and then to Maher-shalal-hash-baz. -/
+def sharedTimetable : List ScriptureCitation :=
+  [ verseIn .masoretic ⟨.isaiah, 7, 16⟩
+  , verseIn .masoretic ⟨.isaiah, 8, 4⟩ ]
+
 /-- Isaiah 8:7–8, 9:8–11 and 10:5 — the Assyrian invasion, the oppressor's
 rod. The near-term timeline that Isaiah 7, 9 and 11 share, which is what
 Postell's parity argument turns on. -/
@@ -107,6 +131,15 @@ verses are taken together. -/
 
 /-- Matthew 1:23 — Matthew's citation of Isaiah 7:14 via the Septuagint. -/
 @[nolint defsWithUnderscore] def matthew1_23 : Passage := ⟨.matthew, 1, 23⟩
+
+/-- Luke 1:31 — Gabriel to Mary: "you will conceive in your womb and bear a son,
+and you shall call his name Jesus". Close in wording to Isaiah 7:14 in the
+Septuagint, and to the announcement to Hagar. -/
+@[nolint defsWithUnderscore] def luke1_31 : Passage := ⟨.luke, 1, 31⟩
+
+/-- Genesis 16:11 — the announcement to Hagar of the birth of Ishmael, the
+earliest instance of the birth-announcement form. -/
+@[nolint defsWithUnderscore] def genesis16_11 : Passage := ⟨.genesis, 16, 11⟩
 
 /-- Matthew 2:6 — Matthew's citation of Micah 5:2. -/
 @[nolint defsWithUnderscore] def matthew2_6 : Passage := ⟨.matthew, 2, 6⟩

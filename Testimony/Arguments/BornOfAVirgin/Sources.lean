@@ -27,17 +27,35 @@ def cite : Claim → AtomMeta
   | .isaiahPredictsVirginBirth =>
     { label := "Isaiah 7:14 is a Messianic prediction of a virgin birth"
     , kind := .interpretive
-    , source := motyerOnIsaiah }
+      -- The church's reading from the second century: Justin (Dial. 43, 66),
+      -- Irenaeus (Haer. III.21.6), Origen (Cels. I.35). Still `disputed`,
+      -- because the same texts record it contested from the start — Trypho's
+      -- reply (Dial. 67), Theodotion and Aquila (Haer. III.21.1). The fathers
+      -- attest the reading's age, not its standing.
+    , source :=
+        { motyerOnIsaiah with
+          supporting :=
+            [ .work motyerContextContent (.page 123)
+            , .work comptonImmanuelProphecy (.pages 12 14)
+            , .work justinDialogue (.sectionRef "66")
+            , .work irenaeusAgainstHeresies (.sectionRef "III.21.6")
+            , .work origenAgainstCelsus (.sectionRef "I.35") ] } }
   | .almahMeansVirgin =>
     { label := "עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman"
     , kind := .linguistic
       -- The Isaianic crux. The Hebrew term does not by itself carry the sense;
-      -- the Septuagint's παρθένος does.
+      -- the Septuagint's παρθένος does. Jerome argues it does (Jov. I.32):
+      -- עַלְמָה is a "hidden" virgin, as Rebekah is at Genesis 24:43. Origen
+      -- is not cited: his appeal to Deuteronomy 22 (Cels. I.34) is to a law
+      -- whose Hebrew reads נַעֲרָה בְתוּלָה, not עַלְמָה.
     , source :=
         { motyerOnIsaiah with
           supporting :=
             [ .work bhs (.apparatus isaiah7_14)
-            , .work berryVirginBirth (.pages 1653 1654) ] } }
+            , .work berryVirginBirth (.pages 1653 1654)
+            , .work motyerContextContent (.page 125)
+            , .work comptonImmanuelProphecy (.pages 7 8)
+            , .work jeromeAgainstJovinianus (.sectionRef "I.32") ] } }
   | .almahAdmitsVirginSense =>
     { label := "The semantic range of עַלְמָה does not exclude 'virgin' at Isaiah 7:14"
     , kind := .linguistic
@@ -48,6 +66,7 @@ def cite : Claim → AtomMeta
       -- measures the gap between this and `almahMeansVirgin`.
     , source :=
         { primary := .work berryVirginBirth (.pages 1653 1654)
+        , supporting := [.work youngImmanuelProphecy (.pages 120 124)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .almahDenotesMarriageableYoungWoman =>
@@ -118,6 +137,7 @@ def cite : Claim → AtomMeta
       -- Theodotion's version is arguably pre-Christian.
     , source :=
         { primary := .work ricoGentryInfantKing .whole
+        , supporting := [.work irenaeusAgainstHeresies (.sectionRef "III.21.1")]
         , tradition := .criticalScholarship
         , confidence := .consensus } }
   | .peshittaRendersBtulta =>
@@ -153,7 +173,9 @@ def cite : Claim → AtomMeta
       -- therefore as deep as Sheol (Isa 7:11).
     , source :=
         { wegnerOnAlmah (.page 471) .wellSupported with
-          supporting := [.work postellIsaiahMessianic (.page 474)] } }
+          supporting :=
+            [ .work postellIsaiahMessianic (.page 474)
+            , .work youngImmanuelProphecy (.pages 115 116) ] } }
   | .isaianicAlmahIsAlreadyPregnant =>
     { label := "The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given"
     , kind := .interpretive
@@ -162,14 +184,19 @@ def cite : Claim → AtomMeta
       -- what kind of pregnancy it is.
     , source :=
         { wegnerOnAlmah (.pages 471 472) .wellSupported with
-          supporting := [.work postellIsaiahMessianic (.page 468)] } }
+          supporting :=
+            [ .work postellIsaiahMessianic (.page 468)
+            , .work youngImmanuelProphecy (.pages 116 117) ] } }
   | .pregnancyAtTheSignIsOrdinary =>
     { label := "The pregnancy Isaiah 7:14 announces is an ordinary conception"
     , kind := .interpretive
       -- The hinge of Wegner's objection, and not a lexical claim at all. He
       -- gets it from the near-term reading of the sign: the child born within
       -- nine months, everything in the oracle discharged by 701 BC. Rydelnik,
-      -- parsing הָרָה as Wegner does, denies it outright.
+      -- parsing הָרָה as Wegner does, denies it outright. So do the fathers,
+      -- on the ground that an ordinary conception would be no sign: Justin
+      -- (Dial. 84), Irenaeus (Haer. III.21.6), and Origen (Cels. I.35), who
+      -- ties it to the sign offered "in the depth or in the height" (7:11).
     , source :=
         { wegnerOnAlmah (.pages 476 478) .disputed with
           supporting := [.work postellIsaiahMessianic (.page 474)] } }
@@ -207,6 +234,8 @@ def cite : Claim → AtomMeta
         { postellOnIsaiah (.page 468) .plausible with
           supporting :=
             [ .work wegnerVirginBirths (.pages 471 472)
+            , .work jeromeAgainstJovinianus (.sectionRef "I.32")
+            , .work comptonImmanuelProphecy (.page 8)
             , .scripture clearAlmahPassages ] } }
   | .matthewQuotesIsaiah =>
     { label := "Matthew 1:23 quotes Isaiah 7:14"
@@ -221,7 +250,9 @@ def cite : Claim → AtomMeta
     , kind := .textual
     , source :=
         { postellOnIsaiah (.pages 483 490) .wellSupported with
-          supporting := [.scripture isaiah2to12Frame] } }
+          supporting :=
+            [ .work motyerContextContent (.pages 122 123)
+            , .scripture isaiah2to12Frame ] } }
   | .compositionGovernsMeaning =>
     { label := "An oracle's meaning in the finished book is set by its literary placement"
     , kind := .interpretive
@@ -292,37 +323,120 @@ def cite : Claim → AtomMeta
   | .maryConceivedAsVirgin =>
     { label := "Mary conceived Jesus while a virgin"
     , kind := .historical
-      -- Scripture alone. A miraculous conception is outside ordinary
-      -- historical method; critical scholarship disputes or denies it.
+      -- The historical case is Brown's (1972): no parallel explains how the
+      -- idea arose (30–32), and the charge of illegitimacy needs explaining by
+      -- anyone who denies it (32–33). His verdict is "an unresolved problem"
+      -- (33), and Fitzmyer (1973) finds the New Testament data "not
+      -- unambiguous" (572). So still `disputed`: the best historical case
+      -- leaves the question open, and the contest is recorded.
     , source :=
         { primary := .scripture virginConceptionNarratives
+        , supporting := [.work brownProblemVirginalConception (.pages 30 33)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .independentAttestation =>
     { label :=
         "Matthew and Luke are independent traditions agreeing on the virgin conception"
     , kind := .historical
-      -- The independence of the two sources is itself debated.
+      -- The independence of the two sources is itself debated. Rhodea counts
+      -- Luke's account parallel to Matthew's and independent of it (71) — for
+      -- the conception, not for the prophecy: Luke makes no explicit reference
+      -- to Isaiah 7:14 (see `lukeAllusionEdge`).
     , source :=
         { primary := .work brownBirthMessiah (.pages 26 38)
+        , supporting :=
+            [ .work brownProblemVirginalConception (.page 24)
+            , .work rhodeaDidMatthewConceive (.page 71) ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .plausible } }
   | .isaiahIsNearTermSignToAhaz =>
     { label := "Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation"
     , kind := .interpretive
-    , source := brownOnBirth }
+      -- The reading Justin already answers, in Trypho's form: fulfilled in
+      -- Hezekiah (Dial. 67, 77). Origen's reply is a question — which child
+      -- of Ahaz's day was called Immanuel? — and his conclusion that the sign
+      -- was given to the house of David (Cels. I.35). Motyer denies it most
+      -- directly (1970, 120, 124): the sign confirms events after the fact,
+      -- and Maher-shalal-hash-baz, not Immanuel, carries the timetable. So
+      -- does Compton (2007, 12): 7:14 is addressed to the house of David, in
+      -- plural pronouns, and only 7:15–16, with a singular "you", to Ahaz.
+      -- `disputed` for that reason, on the definition that re-rated the
+      -- exclusion premise below.
+    , source := brownOnBirth .disputed }
   | .nearTermExcludesMessianicSense =>
     { label := "A sign given for Ahaz's generation is not also a prediction of a virgin birth"
     , kind := .interpretive
-    , source := brownOnBirth }
+      -- The premise Berry and Postell deny, and Motyer with them: `disputed`
+      -- by the library's own definition, since the contest is recorded here
+      -- in `berryLine` and `postellLine`. It was once cited `wellSupported`
+      -- on Brown's authority, which let the critic outrank both replies.
+      -- Compton (2007, 12–14) denies it on a third ground: the near-term part
+      -- of the oracle, 7:15–16, uses the child's infancy only as a measure of
+      -- time, and so does not need the child born in Ahaz's day.
+    , source := brownOnBirth .disputed }
   | .nearTermFulfilmentIsUnclear =>
     { label := "How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question"
     , kind := .interpretive
       -- Descriptively uncontroversial: the near-term referent has been taken
       -- for Isaiah's son, for Hezekiah, and for a son of Ahaz, with no
       -- settled answer. What is contestable is the use Berry puts it to.
+      -- Compton surveys the candidates (5) and finds that none fits (9).
     , source :=
         { primary := .work berryVirginBirth (.pages 1653 1654)
+        , supporting := [.work comptonImmanuelProphecy (.pages 5 9)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .signGivenToHouseOfDavid =>
+    { label := "Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz"
+    , kind := .textual
+      -- What the Hebrew says: שִׁמְעוּ־נָא בֵּית דָּוִד and לָכֶם in 7:13–14 are
+      -- plural, אַתָּה in 7:16 is singular. Compton builds on it (12), Motyer
+      -- notes the address to the dynasty (122). The grammar is not in dispute;
+      -- what it implies is, and that is left to the step that uses it.
+    , source :=
+        { primary := .scripture immanuelAddressees
+        , supporting :=
+            [ .work comptonImmanuelProphecy (.page 12)
+            , .work youngImmanuelProphecy (.page 112)
+            , .work motyerContextContent (.page 122) ]
+        , tradition := .criticalScholarship
+        , confidence := .consensus } }
+  | .maherShalalHashBazRepeatsTheTimetable =>
+    { label := "Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14"
+    , kind := .textual
+      -- Common ground: the parallel is what leads the critics who identify the
+      -- two children to identify them (Compton 5, citing Clements). Motyer
+      -- (124) and Compton (13) read it the other way. The observation is
+      -- shared; the reading of it is the step.
+    , source :=
+        { primary := .work motyerContextContent (.page 124)
+        , supporting :=
+            [ .work comptonImmanuelProphecy (.page 13)
+            , .scripture sharedTimetable ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .micahRulerFacesAssyria =>
+    { label := "Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion"
+    , kind := .textual
+      -- What the text says. Postell cites it by the Hebrew numbering, as
+      -- Micah 5:1 and 5:4–5 (481 n. 72).
+    , source :=
+        { primary := .scripture micahAssyrianSetting
+        , supporting := [.work postellIsaiahMessianic (.page 481)]
+        , tradition := .criticalScholarship
+        , confidence := .consensus } }
+  | .micahRulerReadMessianically =>
+    { label := "Micah 5:2 was read messianically in first-century Judaism"
+    , kind := .historical
+      -- Granted by the critic's own authority: "there was an expectation of
+      -- the Messiah's birth at Bethlehem (Mt 2:4-6; Jn 7:42)" (Brown 1972, 26
+      -- n. 64). Postell: recognised as messianic by ancient Jewish
+      -- interpreters (481 n. 72).
+    , source :=
+        { primary := .work postellIsaiahMessianic (.page 481)
+        , supporting :=
+            [ .work brownProblemVirginalConception (.page 26)
+            , .scripture bethlehemExpectation ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .genesis3_15IsEtiology =>

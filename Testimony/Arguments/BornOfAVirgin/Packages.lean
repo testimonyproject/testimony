@@ -34,7 +34,12 @@ def christian : ArgumentPackage Claim :=
   , cite := cite
   , premises := caseOf scripturalLines sharedGrounds [toFulfilment]
   , conclusion := p .jesusSatisfiesCriterion
-  , conclusionLabel := fulfillmentLabel jesus bornOfAVirgin }
+  , conclusionLabel := fulfillmentLabel jesus bornOfAVirgin
+    -- Each strand's inference is contested as its interpretive atoms are: by
+    -- the critical readings recorded against every one of them.
+  , inferences :=
+      [ motyerOnIsaiah, miravalleOnMary, postellOnIsaiah (.pages 490 493) .disputed
+      , franceOnMatthew .disputed ] }
 
 /-- The Roman Catholic package: the four scriptural strands *and* the
 magisterial one. This is the position as actually held — Scripture and Tradition
@@ -161,6 +166,28 @@ def criticalDenialUnderBerry : ArgumentPackage Claim :=
       (criticalExclusionLine.onGrounds
         [ p .isaiahIsNearTermSignToAhaz, p .nearTermFulfilmentIsUnclear
         , berryBlocksExclusion ]).premises }
+
+/-- Berry's objection as a position of its own: its conclusion is that the
+near-term reading does not exclude the messianic sense. -/
+def berryObjection : ArgumentPackage Claim :=
+  berryLine.asPackage cite
+    "a near-term sign to Ahaz does not exclude a messianic sense"
+
+/-- Postell's parity argument as a position of its own, with the same conclusion
+as Berry's reached from different grounds. -/
+def postellParity : ArgumentPackage Claim :=
+  postellLine.asPackage cite
+    "a near-term sign to Ahaz does not exclude a messianic sense"
+
+/-- Postell's Micah counterexample as a position of its own, with the same
+conclusion as Berry's and Postell's Isaiah argument. -/
+def micahParity : ArgumentPackage Claim :=
+  micahLine.asPackage cite "a near-term sign to Ahaz does not exclude a messianic sense"
+
+/-- Motyer's reply as a position of its own: Isaiah 7:14 is not a near-term
+sign to Ahaz. -/
+def motyerReply : ArgumentPackage Claim :=
+  motyerLine.asPackage cite "Isaiah 7:14 is not a near-term sign to Ahaz"
 
 /-- The critical denial with Postell's parity argument in play, and the
 exclusion premise no longer simply granted. -/

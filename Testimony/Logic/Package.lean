@@ -52,6 +52,10 @@ structure ArgumentPackage (α : Type) where
   conclusion : Formula α
   /-- A name for the conclusion, used to tie it to a `FulfillmentCriterion`. -/
   conclusionLabel : String
+  /-- Citations rating the position's inference steps — who holds that its
+  grounds carry it to its conclusion, and how firmly. Only a dispute reads
+  them, and a dispute requires them: see `Testimony.Logic.Dispute`. -/
+  inferences : List Source := []
 
 namespace ArgumentPackage
 

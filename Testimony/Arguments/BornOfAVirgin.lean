@@ -3,6 +3,7 @@ import Testimony.Arguments.BornOfAVirgin.Sources
 import Testimony.Arguments.BornOfAVirgin.Lines
 import Testimony.Arguments.BornOfAVirgin.Packages
 import Testimony.Arguments.BornOfAVirgin.Results
+import Testimony.Arguments.BornOfAVirgin.Dispute
 
 /-!
 # Arguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
@@ -140,6 +141,40 @@ That gives the critical exclusion step two independent defeaters. Berry's is
 evidential — we do not know how the sign was fulfilled in Ahaz's day. Postell's
 is structural — the near-term setting was never the right kind of reason.
 
+**Taken together, the positions make a dispute, and the dispute has an outcome
+the entailment results cannot state.** `Dispute.lean` treats the scriptural
+reading, the critical denial, Berry, Postell's two counterexamples and Motyer
+as the nodes of an
+argumentation framework and proves who defeats whom — a defeat being an attack
+derived from entailment that the cited confidences do not block. Against the
+scriptural reading alone, `nothing_prevails_unanswered`: the critical denial and
+the scriptural reading defeat each other, because the weakest premise on each
+side is `disputed` (`christian_defeats_critical`). Hear Berry and Postell, and
+`scriptural_reading_prevails_once_replies_are_heard`: nothing defeats Postell's
+counterexamples, they defeat the critic, and so they defend the scriptural
+reading — and Berry, and Motyer with Compton — against the only party that
+defeats them. The critic
+is left with no defence at all (`critical_denial_indefensible`). Inference
+steps are rated like premises, and Berry's and Motyer's are `disputed`, so
+alone they tie with the critic: `nothing_prevails_on_motyer_alone`, and
+`motyer_rests_on_his_inference` shows the weight of his reply is on that step.
+The outcome turns on Postell's inference being `plausible` — no cited source
+grants his grounds and keeps the exclusion. He gives two counterexamples, from
+Isaiah 9 and 11 and from Micah 5; either suffices
+(`scriptural_reading_prevails_without_postell`), and without both nothing
+prevails (`nothing_prevails_without_the_counterexamples`). It turns too on the
+critic's premises being `disputed`, as the replies, Motyer and Compton contest
+them.
+
+**Luke is a second witness to the conception, not to the prophecy.** His
+account is parallel to Matthew's and independent of it, but it never quotes
+Isaiah 7:14. Luke 1:31 is close to the Septuagint's wording, and whether that is
+an allusion is disputed: `lukeAllusionEdge` records it as one, attributed, and
+`annunciationFormEdge` records the rival reading, on which the wording is the
+stock birth-announcement form that Isaiah 7:14 itself uses. Luke adds to
+`independentAttestation`; he adds nothing to the rating of the predictive
+reading.
+
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands
 still deliver the criterion, which `almah_not_load_bearing` records. Strip all
@@ -173,6 +208,7 @@ that no one could hold in view. The dependencies run one way.
 | `Lines.lean` | the inference steps, and the lines of reason they compose into |
 | `Packages.lean` | the positions, and the variant packages the results refute |
 | `Results.lean` | every `@[headline]` result, with its trust base |
+| `Dispute.lean` | the five positions as one dispute: who defeats whom, and who prevails |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in

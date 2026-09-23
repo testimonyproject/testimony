@@ -31,13 +31,18 @@ inductive Agent
   | person (given : String) (family : String) (suffix : Option String := none)
   /-- An organisation, which has no given and family name. -/
   | corporate (name : String)
+  /-- A person known by one name, as ancient authors usually are — Origen,
+  Jerome, Justin Martyr. Splitting such a name into given and family parts
+  would invent a surname. -/
+  | single (name : String)
 deriving Repr, DecidableEq
 
 /-- The name a bibliography sorts by: a person's family name, or the
-organisation's name. -/
+organisation's or single name. -/
 def Agent.sortKey : Agent → String
   | .person _ family _ => family
   | .corporate name => name
+  | .single name => name
 
 /-- Contributors to a work, by role. Editors and translators are tracked
 separately from authors because critical editions and translated commentaries

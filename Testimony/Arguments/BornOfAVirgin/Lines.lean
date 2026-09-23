@@ -90,10 +90,32 @@ further referent.
 
 The step is contestable even though both atoms it joins are `wellSupported` —
 an unclear fulfilment is still a fulfilment, and Brown would answer that Isaiah
-8:3–4 settles the referent well enough. Inference steps carry no confidence
-field of their own, so this is where that is recorded. -/
+8:3–4 settles the referent well enough. The step is rated in `berryLine`,
+where it is cited `disputed`. -/
 def berryBlocksExclusion : Formula Claim :=
   p .nearTermFulfilmentIsUnclear ➝ notP .nearTermExcludesMessianicSense
+
+/-- Postell's second counterexample: an oracle set against the Assyrian invasion,
+read messianically, so a near-term Assyrian setting does not exclude a messianic
+sense. The same inference as `parityDefeatsNearTermExclusion`, from a different
+oracle in a different book (Postell 481 n. 72). -/
+def micahParityDefeatsNearTermExclusion : Formula Claim :=
+  ⋀ [ p .micahRulerFacesAssyria, p .micahRulerReadMessianically ]
+  ➝ notP .nearTermExcludesMessianicSense
+
+/-- Motyer's inference: the sign of 7:14 is given to the dynasty, and the
+timetable that answers Ahaz's crisis passes to Maher-shalal-hash-baz, so the
+child of 7:14 is not a near-term sign to Ahaz. "Either we must identify
+Maher-shalal-hash-baz with Immanuel, or we must project Immanuel into the
+undated future" (Motyer 1970, 124).
+
+This is the contested part of his reply, and it is a step rather than an atom
+on purpose, as Berry's and Postell's are: the two atoms it joins are what the
+text says, and the inference is what a reader who identifies the two children
+denies, and `motyerLine` rates it `disputed` for that reason. -/
+def timetablePassesToMaherShalalHashBaz : Formula Claim :=
+  ⋀ [ p .signGivenToHouseOfDavid, p .maherShalalHashBazRepeatsTheTimetable ]
+  ➝ notP .isaiahIsNearTermSignToAhaz
 
 /-! #### The referential strand
 
@@ -340,7 +362,83 @@ def criticalExclusionLine : Line Claim :=
   , grounds :=
       [ p .isaiahIsNearTermSignToAhaz, p .nearTermExcludesMessianicSense ]
   , step := criticalExclusion
-  , delivers := notP .isaiahPredictsVirginBirth }
+  , delivers := notP .isaiahPredictsVirginBirth
+    -- `consensus`: the step only applies the exclusion premise to 7:14, and
+    -- anyone who grants both grounds grants it. The critic's contest lives in
+    -- the grounds, where it is rated.
+  , inference := some (brownOnBirth .consensus) }
+
+/-! ### The two defeaters, as arguments in their own right
+
+`criticalDenialUnderBerry` and `criticalDenialUnderParity` ask what the critical
+line is left with once a reply is in play. The lines below ask something else:
+what each reply *concludes*, taken on its own. Written this way a reply is a
+position with premises of its own, and so a node that can defeat, and be
+defeated by, the line it answers — see `Dispute.lean`. -/
+
+/-- **Berry's objection**, as an argument: the near-term fulfilment is unclear,
+so the near-term reading does not exclude the messianic sense. -/
+def berryLine : Line Claim :=
+  { name := "Berry's objection to the near-term exclusion"
+  , grounds := [p .nearTermFulfilmentIsUnclear]
+  , step := berryBlocksExclusion
+  , delivers := notP .nearTermExcludesMessianicSense
+    -- `disputed`: Watts grants the ground — "the chronologies of this period
+    -- are very uncertain" — and still reads 7:14 of Hezekiah alone, as Compton
+    -- reports (5). An unclear fulfilment is still a fulfilment.
+  , inference := some
+      { primary := .work berryVirginBirth (.pages 1653 1654)
+      , supporting := [.work comptonImmanuelProphecy (.page 5)]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **Postell's parity argument**, as an argument: Isaiah 9 and 11 are messianic
+on the same near-term timeline, so a near-term setting does not exclude the
+messianic sense. -/
+def postellLine : Line Claim :=
+  { name := "Postell's parity argument against the near-term exclusion"
+  , grounds :=
+      [ p .isaiah9And11AreMessianic, p .isaiah9And11ShareTheAssyrianTimeline ]
+  , step := parityDefeatsNearTermExclusion
+  , delivers := notP .nearTermExcludesMessianicSense
+    -- `plausible`: a counterexample to the exclusion, and no source cited
+    -- here grants both grounds and keeps the exclusion. A critic's answer
+    -- would deny a ground — that 9 and 11 are messianic in Isaiah's own
+    -- sense — and the grounds are rated separately. Not `wellSupported`: the
+    -- argument is recent and unanswered, which is not the same as established.
+  , inference := some (postellOnIsaiah (.pages 487 489) .plausible) }
+
+/-- **Motyer's reply**, as an argument, with Compton: the sign is given to the
+house of David and the near-term timetable passes to Isaiah's son, so Isaiah
+7:14 is not a near-term sign to Ahaz. The first reply to deny the critic's
+near-term premise rather than its exclusion premise. -/
+def motyerLine : Line Claim :=
+  { name := "Motyer's reply to the near-term reading"
+  , grounds :=
+      [ p .signGivenToHouseOfDavid, p .maherShalalHashBazRepeatsTheTimetable ]
+  , step := timetablePassesToMaherShalalHashBaz
+  , delivers := notP .isaiahIsNearTermSignToAhaz
+    -- `disputed`: those who identify the two children grant both grounds and
+    -- keep the near-term sign — Clements, as Compton reports (5).
+  , inference := some
+      { primary := .work motyerContextContent (.page 124)
+      , supporting := [.work comptonImmanuelProphecy (.page 5)]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **Postell's Micah counterexample**, as an argument: the ruler of Micah 5 is
+set against the Assyrian invasion and was read messianically, so a near-term
+setting does not exclude a messianic sense. -/
+def micahLine : Line Claim :=
+  { name := "Postell's Micah counterexample to the near-term exclusion"
+  , grounds := [ p .micahRulerFacesAssyria, p .micahRulerReadMessianically ]
+  , step := micahParityDefeatsNearTermExclusion
+  , delivers := notP .nearTermExcludesMessianicSense
+    -- `plausible`, as for the Isaiah counterexample and for the same reason:
+    -- no source cited grants both grounds and keeps the exclusion. A critic's
+    -- likeliest answer is a disanalogy — Micah 5 is not a sign to Ahaz — and
+    -- the same answer would meet `postellLine`.
+  , inference := some (postellOnIsaiah (.page 481) .plausible) }
 
 /-! ### What the strands share -/
 

@@ -398,6 +398,153 @@ registers no DOIs; the identifier is the society's own open PDF. -/
   , issue := some "3"
   , pages := some (465, 493) }
 
+/-- Motyer's article on the setting of Isaiah 7:14: the most direct answer in
+the library to the near-term reading. The sign is a confirmation that follows
+events rather than a persuader for Ahaz (120); Maher-shalal-hash-baz, not
+Immanuel, carries the timetable of the Assyrian crisis (8:1–4), so Immanuel
+belongs to the undated future (124); and 7:14 cannot be severed from 8:8, 8:10,
+9:6–7 and 11:1–16, which make it "impossible to confine the Immanuel prophecy to
+any long-forgotten 'fulfilment' in the time of Ahaz" (123). -/
+@[bib_entry] def motyerContextContent : BibEntry := .article
+  { core :=
+      { key := "motyer-context-content-1970"
+      , contributors := { authors := [.person "J. A." "Motyer"] }
+      , title := "Context and Content in the Interpretation of Isaiah 7:14"
+      , year := some { value := 1970 }
+      , identifiers := [.doi "10.53751/001c.30667"] }
+  , journal := "Tyndale Bulletin"
+  , volume := some "21"
+  , issue := some "1"
+  , pages := some (118, 125) }
+
+/-- Brown's assessment of the historicity of the virginal conception, which
+argues both sides and ends in "an unresolved problem" (33). For historicity:
+no parallel explains how early Christians came to the idea, "unless, of course,
+that is what really took place" (30–32); the charge of illegitimacy, as old
+perhaps as Christianity itself, which "those who deny the virginal conception
+cannot escape the task of explaining" (32–33); and a tradition older than both
+infancy narratives, since neither evangelist knew the other's (24). Against:
+the high Christology of the narratives, the dubious historicity of the infancy
+material, and the silence of the rest of the New Testament (24–29). -/
+@[bib_entry] def brownProblemVirginalConception : BibEntry := .article
+  { core :=
+      { key := "brown-problem-virginal-conception-1972"
+      , contributors := { authors := [.person "Raymond E." "Brown"] }
+      , title := "The Problem of the Virginal Conception of Jesus"
+      , year := some { value := 1972 }
+      , identifiers := [.doi "10.1177/004056397203300101"] }
+  , journal := "Theological Studies"
+  , volume := some "33"
+  , issue := some "1"
+  , pages := some (3, 34) }
+
+/-- Fitzmyer's reply: the New Testament data "are not unambiguous". Matthew's
+annunciation asserts the virginal conception clearly and Luke's only possibly,
+and whether either affirms it as historical fact or as a theologoumenon "is
+still a vital question" (572–575). Cited as the contest over the historical
+premise, not as support for it. -/
+@[bib_entry] def fitzmyerVirginalConceptionNT : BibEntry := .article
+  { core :=
+      { key := "fitzmyer-virginal-conception-nt-1973"
+      , contributors := { authors := [.person "Joseph A." "Fitzmyer"] }
+      , title := "The Virginal Conception of Jesus in the New Testament"
+      , year := some { value := 1973 }
+      , identifiers := [.doi "10.1177/004056397303400401"] }
+  , journal := "Theological Studies"
+  , volume := some "34"
+  , issue := some "4"
+  , pages := some (541, 575) }
+
+/-- Rhodea on Isaiah 7:14 and the virginal conception. Cited for three
+observations: Luke's account of the virginal conception makes no explicit
+reference to Isaiah 7:14, and whether it alludes to it is disputed — Davies and
+Allison find an influence, Fitzmyer discusses and rejects the possible
+allusions (71 n. 66); Luke's account is parallel to Matthew's and independent
+of it (71); and both gospels trace Jesus' Davidic descent through Joseph, with
+nothing in the New Testament placing Mary in David's line (74). -/
+@[bib_entry] def rhodeaDidMatthewConceive : BibEntry := .article
+  { core :=
+      { key := "rhodea-did-matthew-conceive-2013"
+      , contributors := { authors := [.person "Greg" "Rhodea"] }
+      , title := "Did Matthew Conceive a Virgin?"
+      , subtitle := some "Isaiah 7:14 and the Birth of Jesus"
+      , year := some { value := 2013 }
+      , identifiers :=
+          [ .url ("https://etsjets.org/wp-content/uploads/2013/03/" ++
+                  "files_JETS-PDFs_56_56-1_JETS_56-1_63-77_Rhodea.pdf")
+                 (some "2026-09-23") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "56"
+  , issue := some "1"
+  , pages := some (63, 77) }
+
+/-- Johnson on the birth-announcement type-scene. Cited for the classification
+it reports: the "annunciation" form recognised by Neff, Conrad and Brown (*The
+Birth of the Messiah*, 155–59) takes in Ishmael (Gen 16:11–12), Isaac, Samson,
+John, Jesus — and Immanuel (Isa 7:14–17) itself (270 n. 6). -/
+@[bib_entry] def johnsonSamsonTypeScene : BibEntry := .article
+  { core :=
+      { key := "johnson-samson-type-scene-2010"
+      , contributors := { authors := [.person "Benjamin J. M." "Johnson"] }
+      , title := "What Type of Son Is Samson?"
+      , subtitle := some "Reading Judges 13 as a Biblical Type-Scene"
+      , year := some { value := 2010 }
+      , identifiers :=
+          [ .url ("https://etsjets.org/wp-content/uploads/2010/10/" ++
+                  "files_JETS-PDFs_53_53-2_JETS_53-2_269-286_Johnson.pdf")
+                 (some "2026-09-23") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "53"
+  , issue := some "2"
+  , pages := some (269, 286) }
+
+/-- The first half of Young's two-part study of Isaiah 7:14–16; it ends "(to be
+concluded)", and its verdict on a near-term fulfilment belongs to the second
+part, which is not cited here. What this part establishes: the imposed sign is
+given in the plural, in contrast with the singular of the sign offered in 7:11
+(112); הָרָה is a verbal adjective with present reference, not a participle
+(115–117); the "behold" formula is the one used to announce the births to Hagar
+and to Samson's mother (113–114); and Ugaritic *ǵlmt* is never used of a married
+woman (120–124). Read from the Galaxie text, which preserves the journal's
+pagination. -/
+@[bib_entry] def youngImmanuelProphecy : BibEntry := .article
+  { core :=
+      { key := "young-immanuel-prophecy-1953"
+      , contributors := { authors := [.person "Edward J." "Young"] }
+      , title := "The Immanuel Prophecy: Isaiah 7:14–16"
+      , year := some { value := 1953 }
+      , identifiers :=
+          [ .url "https://www.galaxie.com/article/wtj15-2-01" (some "2026-09-23") ]
+      , note := some "First of two parts; the second appeared in a later issue." }
+  , journal := "Westminster Theological Journal"
+  , volume := some "15"
+  , issue := some "2"
+  , pages := some (97, 124) }
+
+/-- Compton's case that Isaiah 7:14 is wholly messianic while 7:15–16 speaks to
+Ahaz. It disputes both premises of the critical denial. The sign of 7:14 is
+addressed to the house of David, with plural pronouns that rule out Ahaz, and so
+"does not function as confirmation of Ahaz's promised deliverance" (12); every
+near-term candidate fails, since neither Hezekiah's mother nor
+Maher-shalal-hash-baz's was a virgin and Hezekiah was already born (9). And the
+near-term part of the oracle measures time by the child's infancy, which "does
+not depend on the fact that the child in view was not born for several
+centuries" (14). -/
+@[bib_entry] def comptonImmanuelProphecy : BibEntry := .article
+  { core :=
+      { key := "compton-immanuel-prophecy-2007"
+      , contributors := { authors := [.person "R. Bruce" "Compton"] }
+      , title := "The Immanuel Prophecy in Isaiah 7:14–16 and Its Use in Matthew 1:23"
+      , subtitle := some "Harmonizing Historical Context and Single Meaning"
+      , year := some { value := 2007 }
+      , identifiers :=
+          [ .url ("https://dbts.edu/wp-content/uploads/2025/10/" ++
+                  "The-Immanueal-Prophecy-in-Isaiah-7-14-16-Compton.pdf")
+                 (some "2026-09-23") ] }
+  , journal := "Detroit Baptist Seminary Journal"
+  , volume := some "12"
+  , pages := some (3, 15) }
+
 /-! ### Sola scriptura
 
 Added for `Arguments.SolaScriptura`: the Protestant taxonomy and its critics,
@@ -666,6 +813,108 @@ it. -/
       , identifiers := [.isbn "9780801049798"] }
   , publisher := "Baker Academic"
   , place := some "Grand Rapids" }
+
+/-! ### The church fathers on Isaiah 7:14
+
+Four second- to fourth-century witnesses to the predictive reading, each cited
+through the nineteenth-century translation series whose text was consulted, in
+the revision New Advent publishes. The series carry no ISBN; the entries are
+rendered unverified rather than given the ISBN of a later reprint. -/
+
+/-- *The Ante-Nicene Fathers*, volume 1: the edition through which Justin's
+*Dialogue with Trypho* (tr. Marcus Dods and George Reith) and Irenaeus'
+*Against Heresies* (tr. Alexander Roberts and William Rambaut) are cited. -/
+@[bib_entry] def anf1 : BibEntry := .book
+  { core :=
+      { key := "roberts-ante-nicene-fathers-1-1885"
+      , contributors :=
+          { editors := [.person "Alexander" "Roberts", .person "James" "Donaldson"
+                       , .person "A. Cleveland" "Coxe"] }
+      , title := "The Ante-Nicene Fathers"
+      , year := some { value := 1885 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "1" }
+
+/-- *The Ante-Nicene Fathers*, volume 4: the edition through which Origen's
+*Against Celsus* (tr. Frederick Crombie) is cited. -/
+@[bib_entry] def anf4 : BibEntry := .book
+  { core :=
+      { key := "roberts-ante-nicene-fathers-4-1885"
+      , contributors :=
+          { editors := [.person "Alexander" "Roberts", .person "James" "Donaldson"
+                       , .person "A. Cleveland" "Coxe"] }
+      , title := "The Ante-Nicene Fathers"
+      , year := some { value := 1885 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "4" }
+
+/-- *Nicene and Post-Nicene Fathers*, second series, volume 6: the edition
+through which Jerome's *Against Jovinianus* (tr. W. H. Fremantle, G. Lewis and
+W. G. Martley) is cited. -/
+@[bib_entry] def npnf2v6 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-2-6-1893"
+      , contributors :=
+          { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"] }
+      , title := "Nicene and Post-Nicene Fathers, Second Series"
+      , subtitle := some "St. Jerome: Letters and Select Works"
+      , year := some { value := 1893 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "6" }
+
+/-- Justin's *Dialogue with Trypho*, the earliest sustained Christian argument
+from Isaiah 7:14 and the earliest record of the Jewish reply to it: Trypho
+answers that the text says "young woman" and that the prophecy was fulfilled
+in Hezekiah (67). Cited for both halves. -/
+@[bib_entry] def justinDialogue : BibEntry := .ancientWork
+  { core :=
+      { key := "justin-dialogue-with-trypho-160"
+      , contributors := { authors := [.single "Justin Martyr"] }
+      , title := "Dialogue with Trypho" }
+  , originalTitle := some "Πρὸς Τρύφωνα Ἰουδαῖον Διάλογος"
+  , composed := some { value := 160, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-1-1885" }
+
+/-- Irenaeus, *Against Heresies* III.21: the defence of the Septuagint's
+παρθένος against the renderings of Theodotion and Aquila, and the argument that
+a young woman's ordinary conception would be no sign. -/
+@[bib_entry] def irenaeusAgainstHeresies : BibEntry := .ancientWork
+  { core :=
+      { key := "irenaeus-against-heresies-180"
+      , contributors := { authors := [.single "Irenaeus"] }
+      , title := "Against Heresies" }
+  , originalTitle := some "Adversus haereses"
+  , composed := some { value := 180, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-1-1885" }
+
+/-- Origen, *Against Celsus* I.34–35: what sign an ordinary birth would be, and
+the question which child of Ahaz's day was called Immanuel. -/
+@[bib_entry] def origenAgainstCelsus : BibEntry := .ancientWork
+  { core :=
+      { key := "origen-against-celsus-248"
+      , contributors := { authors := [.single "Origen"] }
+      , title := "Against Celsus" }
+  , originalTitle := some "Κατὰ Κέλσου"
+  , composed := some { value := 248, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-4-1885" }
+
+/-- Jerome, *Against Jovinianus* I.32: the lexical argument that עַלְמָה is a
+"hidden" virgin, from Genesis 24:43, with the challenge to produce a passage
+where it is used of a married woman. -/
+@[bib_entry] def jeromeAgainstJovinianus : BibEntry := .ancientWork
+  { core :=
+      { key := "jerome-against-jovinianus-393"
+      , contributors := { authors := [.single "Jerome"] }
+      , title := "Against Jovinianus" }
+  , originalTitle := some "Adversus Jovinianum"
+  , composed := some { value := 393 }
+  , editionUsed := some "schaff-nicene-post-nicene-fathers-2-6-1893" }
 
 derive_bib_registry registry
 

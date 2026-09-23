@@ -32,7 +32,7 @@ def renderYear (y : Year) : String :=
   if y.approximate then "c. " ++ n else n
 
 /-- A name in BibTeX form: `Family, Given` for people, braced for
-organisations so BibTeX does not treat them as a personal name. -/
+organisations and single names so BibTeX does not split them. -/
 def agentBibtex : Agent → String
   | .person given family suffix =>
     let base := texEscape family ++ ", " ++ texEscape given
@@ -40,6 +40,7 @@ def agentBibtex : Agent → String
     | some s => base ++ ", " ++ texEscape s
     | none => base
   | .corporate name => "{" ++ texEscape name ++ "}"
+  | .single name => "{" ++ texEscape name ++ "}"
 
 /-- A name for display: `Given Family`. -/
 def agentDisplay : Agent → String
@@ -49,6 +50,7 @@ def agentDisplay : Agent → String
     | some s => base ++ " " ++ s
     | none => base
   | .corporate name => name
+  | .single name => name
 
 /-- BibTeX joins names with ` and `. -/
 def agentsBibtex (as : List Agent) : String := String.intercalate " and " (as.map agentBibtex)
@@ -286,6 +288,7 @@ build rather than silently rewriting `references.bib`. -/
 
 #guard agentBibtex (.person "R. T." "France") == "France, R. T."
 #guard agentBibtex (.corporate "United Bible Societies") == "{United Bible Societies}"
+#guard agentBibtex (.single "Justin Martyr") == "{Justin Martyr}"
 #guard agentDisplay (.person "R. T." "France") == "R. T. France"
 #guard renderYear { value := 2007 } == "2007"
 #guard renderYear { value := -250, approximate := true } == "c. 250 BCE"

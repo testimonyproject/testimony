@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **53 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **61 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -50,6 +50,14 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `usage_parity_blocks_wegner` | `¬Establishes wegnerUnderUsageParity` | **Postell's second reply, and it is independent of the first.** Concede the parse, concede the ordinary pregnancy, concede that the woman of Isaiah 7:14 is no virgin — and the … |
 | `hinges_jointly_load_bearing` | `¬Establishes christianWithoutAnyHinge` | **The result worth having.** No single hinge carries the argument, but the four of them jointly do: remove all four and the criterion no longer follows, with every textual and … |
 | `jesus_satisfies_virgin_birth` | `Satisfies jesus bornOfAVirgin` | End to end: under the scriptural package, Jesus satisfies the virgin-birth criterion. |
+| `motyer_rests_on_his_inference` | `¬Entails motyerLine.grounds (notP Claim.isaiahIsNearTermSignToAhaz)` | **Motyer's reply rests on his inference, not on his observations.** On the reading that identifies the two children, the sign is given to the house of David, 8:4 repeats the … |
+| `christian_defeats_critical` | `Defeats christian criticalDenial` | **The scriptural reading answers the critic.** Its rebuttal is a defeat: the weakest link on each side is `disputed`, so neither outranks the other, and each defeats the other. |
+| `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell, Party.motyer, Party.micah}` | **Heard out, the scriptural reading prevails.** Nothing defeats either of Postell's counterexamples, so both are in the grounded extension from the first step. |
+| `critical_denial_indefensible` | `∀ (S : Set Party), Framework.Admissible isaiahDispute.defeats S → Party.critical ∉ S` | **The critical denial cannot be defended.** No admissible set contains it: Postell defeats it, and nothing defeats Postell. |
+| `nothing_prevails_unanswered` | `Framework.grounded unanswered.defeats = ∅` | **Unanswered, nothing prevails.** The scriptural reading and the critical denial defeat each other, so neither is forced, and the grounded extension is empty. |
+| `nothing_prevails_on_motyer_alone` | `Framework.grounded motyerAlone.defeats = ∅` | **Motyer alone does not settle it.** He and the critic defeat each other, as the scriptural reading and the critic do, so nothing is forced. |
+| `scriptural_reading_prevails_without_postell` | `⟨Party.scriptural, ⋯⟩ ∈ Framework.grounded withoutPostell.defeats` | **Without Postell's Isaiah argument, the scriptural reading still prevails.** His Micah counterexample is defeated by nothing, and it defends the scriptural reading against the … |
+| `nothing_prevails_without_the_counterexamples` | `Framework.grounded withoutParity.defeats = ∅` | **Without the counterexamples, nothing prevails.** Berry and Motyer each tie with the critic, as the scriptural reading does, so every party is defeated by someone. |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -91,7 +99,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- END GENERATED: lake exe statusgen -->
 
-Seven findings emerged that were not designed for.
+Eight findings emerged that were not designed for.
 
 **Redundancy defeats a lexical dispute.** Sola fide runs on two independent
 strands — Paul's ἔργα νόμου and Jesus' σέσωκέν σε at Luke 7:50 — and neither
@@ -175,6 +183,39 @@ provability. `Testimony.Logic.Independent` is its semantic counterpart, over
 the entailment this library uses, and `leaves_open` proves one from the two
 readings the premises admit. Both readings stay named, for the same reason
 every countermodel here is named.
+
+**Answering an objection is two moves, and only one of them can win.** Every
+reply in the library was written the same way, as the objection's own line with
+a ground replaced. Asked which of them *contradict* the ground and which merely
+*decline* it, they split. Kruger on the canon, Mathison on interpretive
+authority, the final-arbiter answer and both replies to Geisler's circle decline
+it: `kruger_refuses_rather_than_denies` shows Kruger's premises leave the
+requirement he refuses standing. Berry and Postell deny theirs, as do the
+classical answer to self-refutation and Barrett. A refusal takes a ground away,
+and its effect is the independence finding above. A denial is an *attack*, and
+an attack can defeat.
+
+Entailment cannot say that one argument defeats another, because adding
+premises never removes a conclusion. A dispute can. The Isaiah 7:14 positions,
+taken as an argumentation framework with defeats proved from their premises and
+their cited confidences, show that against the scriptural reading alone nothing
+prevails (`nothing_prevails_unanswered`): each defeats the other. Once Berry and
+Postell are heard, the scriptural reading prevails
+(`scriptural_reading_prevails_once_replies_are_heard`), and the critic cannot be
+defended at all (`critical_denial_indefensible`). Two corrections got it
+there. The first draft rated the critic's exclusion premise `wellSupported`
+while recording, in the same argument, two scholars who contest it; rated as
+the library defines `disputed`, it became the critic's weakest link. Then the
+replies' inferences, unrated, had let each reply be weighed by its observations
+alone, so that where an encoding put a contested move — atom or step — decided
+who prevailed. Rated, Berry's and Motyer's steps are `disputed` and tie with the
+critic (`nothing_prevails_on_motyer_alone`). The verdict rests on Postell's
+inference — an oracle on the Assyrian timeline, read messianically, refutes the
+exclusion — rated `plausible` because no source cited grants its grounds and
+keeps the exclusion. He gives it two instances, Isaiah 9 and 11 and Micah 5:
+either suffices (`scriptural_reading_prevails_without_postell`), and without
+both nothing prevails (`nothing_prevails_without_the_counterexamples`). That
+makes the ratings premises of the result, and says which one to contest.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether
