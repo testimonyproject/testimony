@@ -120,6 +120,15 @@ verses are taken together. -/
 /-- Matthew 1:23 — Matthew's citation of Isaiah 7:14 via the Septuagint. -/
 @[nolint defsWithUnderscore] def matthew1_23 : Passage := ⟨.matthew, 1, 23⟩
 
+/-- Luke 1:31 — Gabriel to Mary: "you will conceive in your womb and bear a son,
+and you shall call his name Jesus". Close in wording to Isaiah 7:14 in the
+Septuagint, and to the announcement to Hagar. -/
+@[nolint defsWithUnderscore] def luke1_31 : Passage := ⟨.luke, 1, 31⟩
+
+/-- Genesis 16:11 — the announcement to Hagar of the birth of Ishmael, the
+earliest instance of the birth-announcement form. -/
+@[nolint defsWithUnderscore] def genesis16_11 : Passage := ⟨.genesis, 16, 11⟩
+
 /-- Matthew 2:6 — Matthew's citation of Micah 5:2. -/
 @[nolint defsWithUnderscore] def matthew2_6 : Passage := ⟨.matthew, 2, 6⟩
 

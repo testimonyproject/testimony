@@ -333,9 +333,13 @@ def cite : Claim → AtomMeta
     { label :=
         "Matthew and Luke are independent traditions agreeing on the virgin conception"
     , kind := .historical
-      -- The independence of the two sources is itself debated.
+      -- The independence of the two sources is itself debated. Rhodea counts
+      -- Luke's account parallel to Matthew's and independent of it (71) — for
+      -- the conception, not for the prophecy: Luke makes no explicit reference
+      -- to Isaiah 7:14 (see `lukeAllusionEdge`).
     , source :=
         { primary := .work brownBirthMessiah (.pages 26 38)
+        , supporting := [.work rhodeaDidMatthewConceive (.page 71)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .plausible } }
   | .isaiahIsNearTermSignToAhaz =>

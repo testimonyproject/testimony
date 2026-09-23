@@ -417,6 +417,49 @@ any long-forgotten 'fulfilment' in the time of Ahaz" (123). -/
   , issue := some "1"
   , pages := some (118, 125) }
 
+/-- Rhodea on Isaiah 7:14 and the virginal conception. Cited for three
+observations: Luke's account of the virginal conception makes no explicit
+reference to Isaiah 7:14, and whether it alludes to it is disputed — Davies and
+Allison find an influence, Fitzmyer discusses and rejects the possible
+allusions (71 n. 66); Luke's account is parallel to Matthew's and independent
+of it (71); and both gospels trace Jesus' Davidic descent through Joseph, with
+nothing in the New Testament placing Mary in David's line (74). -/
+@[bib_entry] def rhodeaDidMatthewConceive : BibEntry := .article
+  { core :=
+      { key := "rhodea-did-matthew-conceive-2013"
+      , contributors := { authors := [.person "Greg" "Rhodea"] }
+      , title := "Did Matthew Conceive a Virgin?"
+      , subtitle := some "Isaiah 7:14 and the Birth of Jesus"
+      , year := some { value := 2013 }
+      , identifiers :=
+          [ .url ("https://etsjets.org/wp-content/uploads/2013/03/" ++
+                  "files_JETS-PDFs_56_56-1_JETS_56-1_63-77_Rhodea.pdf")
+                 (some "2026-09-23") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "56"
+  , issue := some "1"
+  , pages := some (63, 77) }
+
+/-- Johnson on the birth-announcement type-scene. Cited for the classification
+it reports: the "annunciation" form recognised by Neff, Conrad and Brown (*The
+Birth of the Messiah*, 155–59) takes in Ishmael (Gen 16:11–12), Isaac, Samson,
+John, Jesus — and Immanuel (Isa 7:14–17) itself (270 n. 6). -/
+@[bib_entry] def johnsonSamsonTypeScene : BibEntry := .article
+  { core :=
+      { key := "johnson-samson-type-scene-2010"
+      , contributors := { authors := [.person "Benjamin J. M." "Johnson"] }
+      , title := "What Type of Son Is Samson?"
+      , subtitle := some "Reading Judges 13 as a Biblical Type-Scene"
+      , year := some { value := 2010 }
+      , identifiers :=
+          [ .url ("https://etsjets.org/wp-content/uploads/2010/10/" ++
+                  "files_JETS-PDFs_53_53-2_JETS_53-2_269-286_Johnson.pdf")
+                 (some "2026-09-23") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "53"
+  , issue := some "2"
+  , pages := some (269, 286) }
+
 /-- The first half of Young's two-part study of Isaiah 7:14–16; it ends "(to be
 concluded)", and its verdict on a near-term fulfilment belongs to the second
 part, which is not cited here. What this part establishes: the imposed sign is

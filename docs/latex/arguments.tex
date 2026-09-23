@@ -242,6 +242,8 @@ That gives the critical exclusion step two independent defeaters. Berry's is evi
 
 \textbf{Taken together, the positions make a dispute, and the dispute has an outcome the entailment results cannot state.} \texttt{Dispute.lean} treats the scriptural reading, the critical denial, Berry, Postell and Motyer as the nodes of an argumentation framework and proves who defeats whom — a defeat being an attack derived from entailment that the cited confidences do not block. Against the scriptural reading alone, \texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}unanswered}: the critical denial and the scriptural reading defeat each other, because the weakest premise on each side is \texttt{disputed} (\texttt{christian\_\allowbreak{}defeats\_\allowbreak{}critical}). Hear Berry and Postell, and \texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}prevails\_\allowbreak{}once\_\allowbreak{}replies\_\allowbreak{}are\_\allowbreak{}heard}: nothing defeats Postell, he defeats the critic, and so he defends the scriptural reading — and Berry, and Motyer with Compton — against the only party that defeats them. The critic is left with no defence at all (\texttt{critical\_\allowbreak{}denial\_\allowbreak{}indefensible}). Inference steps are rated like premises, and Berry's and Motyer's are \texttt{disputed}, so alone they tie with the critic: \texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}on\_\allowbreak{}motyer\_\allowbreak{}alone}, and \texttt{motyer\_\allowbreak{}rests\_\allowbreak{}on\_\allowbreak{}his\_\allowbreak{}inference} shows the weight of his reply is on that step. The outcome turns on Postell's inference being \texttt{plausible} — no cited source grants his grounds and keeps the exclusion — and without him nothing prevails (\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}without\_\allowbreak{}postell}). It turns too on the critic's premises being \texttt{disputed}, as the replies, Motyer and Compton contest them.
 
+\textbf{Luke is a second witness to the conception, not to the prophecy.} His account is parallel to Matthew's and independent of it, but it never quotes Isaiah 7:14. Luke 1:31 is close to the Septuagint's wording, and whether that is an allusion is disputed: \texttt{luke\allowbreak{}Allusion\allowbreak{}Edge} records it as one, attributed, and \texttt{annunciation\allowbreak{}Form\allowbreak{}Edge} records the rival reading, on which the wording is the stock birth-announcement form that Isaiah 7:14 itself uses. Luke adds to \texttt{independent\allowbreak{}Attestation}; he adds nothing to the rating of the predictive reading.
+
 \texttt{hinges\_\allowbreak{}jointly\_\allowbreak{}load\_\allowbreak{}bearing} is the result worth having. No single interpretive hinge carries the argument any more — strip \emph{almah} and the other three strands still deliver the criterion, which \texttt{almah\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing} records. Strip all four and the argument collapses. \texttt{almah\_\allowbreak{}is\_\allowbreak{}load\_\allowbreak{}bearing\_\allowbreak{}alone} keeps the pre-Miravalle finding on the books: within the Isaianic strand taken by itself, the lexical premise still carries everything.
 
 \textbf{The magisterial strand is encoded separately and is not part of \texttt{christian}.} Papal teaching on Mary's virginity in conceiving, as collated by Miravalle, is a Roman Catholic premise; this library's author does not grant that magisterial teaching settles doctrinal questions, and the encoding says so rather than quietly folding it in. \texttt{catholic} is the package for a reader who does grant it. \texttt{magisterial\_\allowbreak{}authority\_\allowbreak{}is\_\allowbreak{}load\_\allowbreak{}bearing} shows what follows for a reader who does not: that route yields nothing on its own, and the four scriptural strands have to carry the argument by themselves. The rival is cited to Westminster I.x.
@@ -317,7 +319,7 @@ $P_{31}$ & The matrilineal wording of Genesis 3:15 marks a birth with no human f
 $P_{32}$ & Micah 5:3 names only the woman in labour as bearing the coming ruler & textual & Christian, typological, well supported & Mic 5:2-3; \cite[ad loc. Mic 5:3]{keil-delitzsch-minor-prophets-1949} \\
 $P_{33}$ & Micah's mention of a mother and no father indicates a birth with no human father & interpretive & Roman Catholic, disputed & \cite[9--10]{miravalle-meet-mary-2007} \\
 $P_{34}$ & Mary conceived Jesus while a virgin\textsuperscript{\dag} & historical & Christian, hist.-gramm., disputed & Matt 1:18-25; Luke 1:26-38 \\
-$P_{35}$ & Matthew and Luke are independent traditions agreeing on the virgin conception & historical & Christian, hist.-gramm., plausible & \cite[26--38]{brown-birth-messiah-1993} \\
+$P_{35}$ & Matthew and Luke are independent traditions agreeing on the virgin conception & historical & Christian, hist.-gramm., plausible & \cite[26--38]{brown-birth-messiah-1993}; \cite[71]{rhodea-did-matthew-conceive-2013} \\
 $P_{36}$ & Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation & interpretive & critical scholarship, disputed & \cite{brown-birth-messiah-1993} \\
 $P_{37}$ & A sign given for Ahaz's generation is not also a prediction of a virgin birth & interpretive & critical scholarship, disputed & \cite{brown-birth-messiah-1993} \\
 $P_{38}$ & How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question & interpretive & Christian, hist.-gramm., well supported & \cite[1653--1654]{berry-virgin-birth-2003}; \cite[5--9]{compton-immanuel-prophecy-2007} \\
@@ -431,6 +433,42 @@ def micahMaternalEdge : IntertextEdge :=
   { fromPassage := Scripture.matthew1_23, toPassage := Scripture.micah5_3,
     relation := RelationType.messianicTheme,
     source := miravalleOnMary }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{luke\allowbreak{}Allusion\allowbreak{}Edge}}\par\nobreak\noindent
+\textbf{Luke's annunciation, read as an allusion to Isaiah 7:14.} Luke never quotes the verse, but Luke 1:31 is close to its Septuagint wording, and Luke 1:27 and 1:32 bring in the house and the throne of David, as Isaiah 7:13 and 9:6–7 do. Whether that is an allusion is disputed, and both sides are recorded here: Davies and Allison find an influence from Isaiah 7:14, Fitzmyer rejects it, as Rhodea reports (71 n. 66). Typed \texttt{.allusion}, never \texttt{.quotation}: that is the difference between Luke and Matthew. See \texttt{annunciation\allowbreak{}Form\allowbreak{}Edge} for the rival reading of the same wording.
+
+{\small\begin{verbatim}
+def lukeAllusionEdge : IntertextEdge :=
+  { fromPassage := Scripture.luke1_31, toPassage := Scripture.isaiah7_14,
+    relation := RelationType.allusion,
+    source :=
+      {
+        primary :=
+          Reference.work Bib.rhodeaDidMatthewConceive (Bib.Locus.page 71),
+        supporting :=
+          [Reference.scripture
+              [Scripture.verseIn TextualTradition.nestleAland28
+                  Scripture.luke1_31,
+                Scripture.verseIn TextualTradition.septuagint
+                  Scripture.isaiah7_14]],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.disputed } }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{annunciation\allowbreak{}Form\allowbreak{}Edge}}\par\nobreak\noindent
+\textbf{The rival reading: the wording is the birth-announcement form.} Luke 1:31 is as close to the announcement to Hagar (Gen 16:11) as to Isaiah 7:14, and Isaiah 7:14 is itself an instance of the form, which Brown and others trace through Ishmael, Isaac, Samson, John and Jesus (Johnson 270 n. 6; Young 113–14). On this reading the shared wording is shared form, not dependence — typed \texttt{.thematic}.
+
+{\small\begin{verbatim}
+def annunciationFormEdge : IntertextEdge :=
+  { fromPassage := Scripture.luke1_31, toPassage := Scripture.genesis16_11,
+    relation := RelationType.thematic,
+    source :=
+      {
+        primary :=
+          Reference.work Bib.johnsonSamsonTypeScene (Bib.Locus.page 270),
+        supporting :=
+          [Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 113 114)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.wellSupported } }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{predictive\allowbreak{}Reading}}\par\nobreak\noindent
 The Christian predictive reading of Isaiah 7:14. Far more contested than Micah 5:2 — see the module doc.

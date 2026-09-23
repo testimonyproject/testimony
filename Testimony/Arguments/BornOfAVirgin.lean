@@ -161,6 +161,15 @@ grants his grounds and keeps the exclusion — and without him nothing prevails
 (`nothing_prevails_without_postell`). It turns too on the critic's premises
 being `disputed`, as the replies, Motyer and Compton contest them.
 
+**Luke is a second witness to the conception, not to the prophecy.** His
+account is parallel to Matthew's and independent of it, but it never quotes
+Isaiah 7:14. Luke 1:31 is close to the Septuagint's wording, and whether that is
+an allusion is disputed: `lukeAllusionEdge` records it as one, attributed, and
+`annunciationFormEdge` records the rival reading, on which the wording is the
+stock birth-announcement form that Isaiah 7:14 itself uses. Luke adds to
+`independentAttestation`; he adds nothing to the rating of the predictive
+reading.
+
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands
 still deliver the criterion, which `almah_not_load_bearing` records. Strip all

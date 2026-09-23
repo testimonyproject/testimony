@@ -162,6 +162,15 @@ grants his grounds and keeps the exclusion — and without him nothing prevails
 (`nothing_prevails_without_postell`). It turns too on the critic's premises
 being `disputed`, as the replies, Motyer and Compton contest them.
 
+**Luke is a second witness to the conception, not to the prophecy.** His
+account is parallel to Matthew's and independent of it, but it never quotes
+Isaiah 7:14. Luke 1:31 is close to the Septuagint's wording, and whether that is
+an allusion is disputed: `lukeAllusionEdge` records it as one, attributed, and
+`annunciationFormEdge` records the rival reading, on which the wording is the
+stock birth-announcement form that Isaiah 7:14 itself uses. Luke adds to
+`independentAttestation`; he adds nothing to the rating of the predictive
+reading.
+
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands
 still deliver the criterion, which `almah_not_load_bearing` records. Strip all
@@ -262,7 +271,7 @@ reader sees.
 | \\(P_{32}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
 | \\(P_{33}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
 | \\(P_{34}\\) | Mary conceived Jesus while a virgin ※ | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38 |
-| \\(P_{35}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38 |
+| \\(P_{35}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
 | \\(P_{36}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
 | \\(P_{37}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
 | \\(P_{38}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
@@ -420,6 +429,60 @@ def micahMaternalEdge : IntertextEdge :=
   { fromPassage := Scripture.matthew1_23, toPassage := Scripture.micah5_3,
     relation := RelationType.messianicTheme,
     source := miravalleOnMary }
+```
+
+<a id="lukeAllusionEdge"></a>
+**`lukeAllusionEdge`**
+
+**Luke's annunciation, read as an allusion to Isaiah 7:14.** Luke never
+quotes the verse, but Luke 1:31 is close to its Septuagint wording, and Luke
+1:27 and 1:32 bring in the house and the throne of David, as Isaiah 7:13 and
+9:6–7 do. Whether that is an allusion is disputed, and both sides are recorded
+here: Davies and Allison find an influence from Isaiah 7:14, Fitzmyer rejects
+it, as Rhodea reports (71 n. 66). Typed `.allusion`, never `.quotation`: that
+is the difference between Luke and Matthew. See `annunciationFormEdge` for the
+rival reading of the same wording.
+
+```lean
+def lukeAllusionEdge : IntertextEdge :=
+  { fromPassage := Scripture.luke1_31, toPassage := Scripture.isaiah7_14,
+    relation := RelationType.allusion,
+    source :=
+      {
+        primary :=
+          Reference.work Bib.rhodeaDidMatthewConceive (Bib.Locus.page 71),
+        supporting :=
+          [Reference.scripture
+              [Scripture.verseIn TextualTradition.nestleAland28
+                  Scripture.luke1_31,
+                Scripture.verseIn TextualTradition.septuagint
+                  Scripture.isaiah7_14]],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.disputed } }
+```
+
+<a id="annunciationFormEdge"></a>
+**`annunciationFormEdge`**
+
+**The rival reading: the wording is the birth-announcement form.** Luke 1:31
+is as close to the announcement to Hagar (Gen 16:11) as to Isaiah 7:14, and
+Isaiah 7:14 is itself an instance of the form, which Brown and others trace
+through Ishmael, Isaac, Samson, John and Jesus (Johnson 270 n. 6; Young 113–14).
+On this reading the shared wording is shared form, not dependence — typed
+`.thematic`.
+
+```lean
+def annunciationFormEdge : IntertextEdge :=
+  { fromPassage := Scripture.luke1_31, toPassage := Scripture.genesis16_11,
+    relation := RelationType.thematic,
+    source :=
+      {
+        primary :=
+          Reference.work Bib.johnsonSamsonTypeScene (Bib.Locus.page 270),
+        supporting :=
+          [Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 113 114)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.wellSupported } }
 ```
 
 <a id="predictiveReading"></a>

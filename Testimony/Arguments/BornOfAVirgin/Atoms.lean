@@ -245,6 +245,41 @@ def micahMaternalEdge : IntertextEdge :=
   , relation := .messianicTheme
   , source := miravalleOnMary }
 
+/-- **Luke's annunciation, read as an allusion to Isaiah 7:14.** Luke never
+quotes the verse, but Luke 1:31 is close to its Septuagint wording, and Luke
+1:27 and 1:32 bring in the house and the throne of David, as Isaiah 7:13 and
+9:6–7 do. Whether that is an allusion is disputed, and both sides are recorded
+here: Davies and Allison find an influence from Isaiah 7:14, Fitzmyer rejects
+it, as Rhodea reports (71 n. 66). Typed `.allusion`, never `.quotation`: that
+is the difference between Luke and Matthew. See `annunciationFormEdge` for the
+rival reading of the same wording. -/
+def lukeAllusionEdge : IntertextEdge :=
+  { fromPassage := luke1_31
+  , toPassage := isaiah7_14
+  , relation := .allusion
+  , source :=
+      { primary := .work rhodeaDidMatthewConceive (.page 71)
+      , supporting :=
+          [.scripture [verseIn .nestleAland28 luke1_31, verseIn .septuagint isaiah7_14]]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **The rival reading: the wording is the birth-announcement form.** Luke 1:31
+is as close to the announcement to Hagar (Gen 16:11) as to Isaiah 7:14, and
+Isaiah 7:14 is itself an instance of the form, which Brown and others trace
+through Ishmael, Isaac, Samson, John and Jesus (Johnson 270 n. 6; Young 113–14).
+On this reading the shared wording is shared form, not dependence — typed
+`.thematic`. -/
+def annunciationFormEdge : IntertextEdge :=
+  { fromPassage := luke1_31
+  , toPassage := genesis16_11
+  , relation := .thematic
+  , source :=
+      { primary := .work johnsonSamsonTypeScene (.page 270)
+      , supporting := [.work youngImmanuelProphecy (.pages 113 114)]
+      , tradition := .criticalScholarship
+      , confidence := .wellSupported } }
+
 /-- The Christian predictive reading of Isaiah 7:14. Far more contested than
 Micah 5:2 — see the module doc. -/
 def predictiveReading : Interpretation :=
