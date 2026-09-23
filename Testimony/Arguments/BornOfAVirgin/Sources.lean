@@ -66,6 +66,7 @@ def cite : Claim → AtomMeta
       -- measures the gap between this and `almahMeansVirgin`.
     , source :=
         { primary := .work berryVirginBirth (.pages 1653 1654)
+        , supporting := [.work youngImmanuelProphecy (.pages 120 124)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .almahDenotesMarriageableYoungWoman =>
@@ -172,7 +173,9 @@ def cite : Claim → AtomMeta
       -- therefore as deep as Sheol (Isa 7:11).
     , source :=
         { wegnerOnAlmah (.page 471) .wellSupported with
-          supporting := [.work postellIsaiahMessianic (.page 474)] } }
+          supporting :=
+            [ .work postellIsaiahMessianic (.page 474)
+            , .work youngImmanuelProphecy (.pages 115 116) ] } }
   | .isaianicAlmahIsAlreadyPregnant =>
     { label := "The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given"
     , kind := .interpretive
@@ -181,7 +184,9 @@ def cite : Claim → AtomMeta
       -- what kind of pregnancy it is.
     , source :=
         { wegnerOnAlmah (.pages 471 472) .wellSupported with
-          supporting := [.work postellIsaiahMessianic (.page 468)] } }
+          supporting :=
+            [ .work postellIsaiahMessianic (.page 468)
+            , .work youngImmanuelProphecy (.pages 116 117) ] } }
   | .pregnancyAtTheSignIsOrdinary =>
     { label := "The pregnancy Isaiah 7:14 announces is an ordinary conception"
     , kind := .interpretive
@@ -381,6 +386,7 @@ def cite : Claim → AtomMeta
         { primary := .scripture immanuelAddressees
         , supporting :=
             [ .work comptonImmanuelProphecy (.page 12)
+            , .work youngImmanuelProphecy (.page 112)
             , .work motyerContextContent (.page 122) ]
         , tradition := .criticalScholarship
         , confidence := .consensus } }

@@ -417,6 +417,29 @@ any long-forgotten 'fulfilment' in the time of Ahaz" (123). -/
   , issue := some "1"
   , pages := some (118, 125) }
 
+/-- The first half of Young's two-part study of Isaiah 7:14–16; it ends "(to be
+concluded)", and its verdict on a near-term fulfilment belongs to the second
+part, which is not cited here. What this part establishes: the imposed sign is
+given in the plural, in contrast with the singular of the sign offered in 7:11
+(112); הָרָה is a verbal adjective with present reference, not a participle
+(115–117); the "behold" formula is the one used to announce the births to Hagar
+and to Samson's mother (113–114); and Ugaritic *ǵlmt* is never used of a married
+woman (120–124). Read from the Galaxie text, which preserves the journal's
+pagination. -/
+@[bib_entry] def youngImmanuelProphecy : BibEntry := .article
+  { core :=
+      { key := "young-immanuel-prophecy-1953"
+      , contributors := { authors := [.person "Edward J." "Young"] }
+      , title := "The Immanuel Prophecy: Isaiah 7:14–16"
+      , year := some { value := 1953 }
+      , identifiers :=
+          [ .url "https://www.galaxie.com/article/wtj15-2-01" (some "2026-09-23") ]
+      , note := some "First of two parts; the second appeared in a later issue." }
+  , journal := "Westminster Theological Journal"
+  , volume := some "15"
+  , issue := some "2"
+  , pages := some (97, 124) }
+
 /-- Compton's case that Isaiah 7:14 is wholly messianic while 7:15–16 speaks to
 Ahaz. It disputes both premises of the critical denial. The sign of 7:14 is
 addressed to the house of David, with plural pronouns that rule out Ahaz, and so

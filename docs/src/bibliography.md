@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-49 entries, of which 13 carry no stable public identifier.
+50 entries, of which 13 carry no stable public identifier.
 
 - <a id="na28-2012"></a>**`na28-2012`** — Barbara Aland, Kurt Aland, Institut für neutestamentliche Textforschung (ed.). *Novum Testamentum Graece*. Stuttgart: Deutsche Bibelgesellschaft. 28th revised edition. Siglum NA28. 2012. ISBN 9781619700321. ISBN is the Hendrickson / German Bible Society printing.
 - <a id="allen-swain-reformed-catholicity-2015"></a>**`allen-swain-reformed-catholicity-2015`** — Michael Allen, Scott R. Swain. *Reformed Catholicity: The Promise of Retrieval for Theology and Biblical Interpretation*. Grand Rapids: Baker Academic. 2015. ISBN 9780801049798.
@@ -57,3 +57,4 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - <a id="wegner-virgin-births-2011"></a>**`wegner-virgin-births-2011`** — Paul D. Wegner. *How Many Virgin Births Are in the Bible? (Isaiah 7:14): A Prophetic Pattern Approach*. *Journal of the Evangelical Theological Society* 54.3: 467–484. 2011. [https://etsjets.org/wp-content/uploads/2012/01/files_JETS-PDFs_54_54-3_JETS_54-3_467-484_Wegner.pdf](https://etsjets.org/wp-content/uploads/2012/01/files_JETS-PDFs_54_54-3_JETS_54-3_467-484_Wegner.pdf).
 - <a id="westminster-confession-1647"></a>**`westminster-confession-1647`** — Westminster Assembly. *The Westminster Confession of Faith*. Westminster Assembly. 1647. *(no public identifier)* Cited by chapter and section; no critical edition catalogued.
 - <a id="wright-what-paul-said-1997"></a>**`wright-what-paul-said-1997`** — N. T. Wright. *What Saint Paul Really Said: Was Paul of Tarsus the Real Founder of Christianity?*. Grand Rapids: Wm. B. Eerdmans. 1997. ISBN 9780802844453.
+- <a id="young-immanuel-prophecy-1953"></a>**`young-immanuel-prophecy-1953`** — Edward J. Young. *The Immanuel Prophecy: Isaiah 7:14–16*. *Westminster Theological Journal* 15.2: 97–124. 1953. [https://www.galaxie.com/article/wtj15-2-01](https://www.galaxie.com/article/wtj15-2-01). First of two parts; the second appeared in a later issue.
