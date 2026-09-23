@@ -337,7 +337,11 @@ def cite : Claim → AtomMeta
   | .nearTermExcludesMessianicSense =>
     { label := "A sign given for Ahaz's generation is not also a prediction of a virgin birth"
     , kind := .interpretive
-    , source := brownOnBirth }
+      -- The premise Berry and Postell deny, and Motyer with them: `disputed`
+      -- by the library's own definition, since the contest is recorded here
+      -- in `berryLine` and `postellLine`. It was once cited `wellSupported`
+      -- on Brown's authority, which let the critic outrank both replies.
+    , source := brownOnBirth .disputed }
   | .nearTermFulfilmentIsUnclear =>
     { label := "How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question"
     , kind := .interpretive

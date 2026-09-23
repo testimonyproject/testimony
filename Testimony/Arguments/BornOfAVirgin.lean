@@ -146,16 +146,15 @@ outcome the entailment results cannot state.** `Dispute.lean` treats the
 scriptural reading, the critical denial, Berry and Postell as the nodes of an
 argumentation framework and proves who defeats whom — a defeat being an attack
 derived from entailment that the cited confidences do not block. Against the
-scriptural reading alone, `critical_prevails_unanswered`: the critical denial
-defeats it, and the scriptural reading cannot answer, because its weakest
-premise is `disputed` and the critic's are `wellSupported`
-(`christian_does_not_defeat_critical`). Hear Berry and Postell, and
-`nothing_prevails_once_replies_are_heard`. The dispute then has two
-resolutions: `scriptural_reading_reinstated`, with the two replies defending
-the scriptural reading, and `critical_denial_remains_defensible`, with the
-critic defending itself against both. The replies reinstate the predictive
-reading as defensible; they do not make it forced, because the exchange between
-them and the critic is between premises rated alike.
+scriptural reading alone, `nothing_prevails_unanswered`: the critical denial and
+the scriptural reading defeat each other, because the weakest premise on each
+side is `disputed` (`christian_defeats_critical`). Hear Berry and Postell, and
+`scriptural_reading_prevails_once_replies_are_heard`: nothing defeats the
+replies, they defeat the critic, and so they defend the scriptural reading
+against its only defeater. The critic is left with no defence at all
+(`critical_denial_indefensible`). That outcome turns on the critic's exclusion
+premise being rated `disputed`, as the replies contest it; rated
+`wellSupported`, as it once was, it made the dispute a standoff.
 
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands

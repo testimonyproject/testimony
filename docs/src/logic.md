@@ -390,9 +390,9 @@ theorem berry_defeats_critical : Defeats berryObjection criticalDenial :=
     by decide⟩
 
 -- rebutting: the entailment, then the strengths
-theorem critical_defeats_berry : Defeats criticalDenial berryObjection :=
-  .inr ⟨by establish [Rebuts, criticalDenial, berryObjection, …],
-    by rw [criticalDenial_strength, berryObjection_strength]; decide⟩
+theorem christian_defeats_critical : Defeats christian criticalDenial :=
+  .inr ⟨christian_rebuts_critical,
+    by rw [christian_strength, criticalDenial_strength]; decide⟩
 
 -- no attack: name the world in which both positions stand
 theorem berry_does_not_defeat_postell : ¬ Defeats berryObjection postellParity :=
@@ -402,11 +402,11 @@ theorem berry_does_not_defeat_postell : ¬ Defeats berryObjection postellParity 
 isaiahDispute.not_defeats_self i
 ```
 
-An attack that the ratings block needs both halves stated: that it is an
-attack, and that it fails — `christian_rebuts_critical` and
-`christian_does_not_defeat_critical`. Strengths are computed by `decide`, and
-are worth stating as results of their own, because they are what a reader
-contests.
+An attack the ratings block needs both of its routes closed: each undermining,
+by a named world in which the attacker's premises hold alongside the premise,
+and the rebuttal, by strength. `critical_does_not_defeat_berry` is the example.
+Strengths are computed by `decide`, and are worth stating as results of their
+own, because they are what a reader contests.
 
 **3. Collect the table** as one `↔` against a function by cases, proved by
 `cases i <;> cases j` and the pairwise results.

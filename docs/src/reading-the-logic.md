@@ -208,15 +208,16 @@ entailment fact. In a dispute, **defeat** is the relation just described.
   positions that do not defeat one another and answer every defeat on any of
   them, made as large as it can be. A dispute can have several.
 
-The Isaiah 7:14 dispute shows both. Against the scriptural reading alone the
-critical denial prevails: it is the grounded extension. Its premises are rated
-`wellSupported` and the scriptural reading's weakest is `disputed`, so the
-scriptural reading's rebuttal fails. Add Berry and Postell, who each defeat the
-critic and are defeated back, and nothing is forced any more. There are now two
-resolutions: the scriptural reading with both replies defending it, or the
-critic alone. The replies have not proved the predictive reading. They have made
-it one of two defensible resolutions, which is what a good reply to a strong
-objection usually does.
+The Isaiah 7:14 dispute shows both. Against the scriptural reading alone,
+nothing is forced: the critic and the scriptural reading each rest on a premise
+rated `disputed`, so each defeats the other, the grounded extension is empty,
+and there are two preferred extensions, one for each side. Add Berry and
+Postell. Each defeats the critic, by denying the premise the critic's case
+turns on, and the critic cannot defeat them back, because that contested
+premise is its weakest. Now the grounded extension is the scriptural reading
+with both replies: they defend it against its only defeater. The replies have
+not proved the predictive reading. They have answered the objection to it, which
+is what a reply is for.
 
 Reading a dispute, check the two things the machine cannot: **is each position
 one someone holds, and is each rating one its source would stand behind?**

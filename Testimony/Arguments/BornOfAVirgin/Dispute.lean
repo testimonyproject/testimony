@@ -17,45 +17,50 @@ The defeats, all four proved, are these:
 - **The critical denial defeats the scriptural reading.** It entails the
   negation of the scriptural premise that Isaiah 7:14 predicts a virgin birth,
   a premise cited as `disputed`.
-- **The scriptural reading does not defeat the critical denial**, although it
-  attacks it. It concludes the opposite, so it rebuts; but its weakest premise
-  is `disputed` and the critical denial's are `wellSupported`, so the rebuttal
-  fails. On the library's own ratings the scriptural reading cannot answer the
-  critic by itself.
+- **The scriptural reading defeats the critical denial back.** It undermines
+  none of the critic's premises, but it concludes the opposite, so it rebuts;
+  and the weakest premise on each side is cited `disputed`, so neither
+  outranks the other.
 - **Berry and Postell each defeat the critical denial**, by contradicting its
-  premise that a near-term sign excludes a messianic sense.
-- **The critical denial defeats each of them back.** It holds that premise, so
-  it rebuts both; and all three rest on `wellSupported` premises, so neither
-  side of the exchange outranks the other.
+  premise that a near-term sign excludes a messianic sense — the premise that
+  is the critic's weakest.
+- **The critical denial does not defeat either of them.** It rebuts both, but
+  its weakest premise is the one they contest, cited `disputed`, and theirs are
+  cited `wellSupported`. It contradicts nothing they rest on.
 
 ## What follows
 
-Faced with the scriptural reading alone, **the critical denial prevails**: it
-is the grounded extension of that exchange, and the scriptural reading is
-excluded from it. Add Berry and Postell and **nothing prevails any more**: the
-grounded extension is empty. The dispute then has two ways to be resolved,
-proved as its two preferred extensions:
+Faced with the scriptural reading alone, **nothing prevails**: the two defeat
+each other, the grounded extension is empty, and each is a resolution of the
+exchange on its own. Add Berry and Postell and **the scriptural reading
+prevails**. The replies are defeated by nothing, they defeat the critic, and in
+doing so they defend the scriptural reading against its only defeater: the
+grounded extension is the scriptural reading with both replies. The critical
+denial belongs to no admissible set at all, because nothing answers Berry.
 
-- the scriptural reading together with Berry and Postell, who defend it; or
-- the critical denial alone, which defends itself against both replies.
-
-This is the result entailment could not state. Adding premises never removes
-a conclusion; adding arguments can remove one from what a dispute forces. The
-replies do not show the predictive reading is right. They reinstate it as a
-defensible resolution of the dispute — one of two, and only one of two, because
-the ratings make the exchange between the replies and the critic a standoff.
+This is the result entailment could not state. Adding premises never removes a
+conclusion; adding arguments can change what a dispute forces, and here it
+turns an open question into a settled one. The replies do not show that the
+predictive reading is true. They show that, on these premises and these
+ratings, the case against it does not survive them.
 
 ## What the ratings decide
 
-These outcomes rest on the cited confidences as much as on the premises.
-Postell's argument is described in `Lines.lean` as the stronger of the two
-defeaters; the ratings do not register that, because both of its premises are
-cited `wellSupported`, as Berry's is. And the premise that settles the
-exchange with the critic — that a near-term sign excludes a messianic sense —
-is rated `wellSupported` on Brown's authority. Rated `disputed`, both replies
-would defeat the critic without being defeated back, and the scriptural
-reading would join the grounded extension. The rating is a premise of this
-result, and contesting it is contesting the result.
+These outcomes rest on the cited confidences as much as on the premises. The
+premise that decides the exchange with the critic — that a near-term sign
+excludes a messianic sense — was once cited `wellSupported` on Brown's
+authority. So rated, the critic defeated both replies back, and the dispute
+ended in a standoff with two resolutions. It is cited `disputed` because Berry,
+Postell and Motyer contest it, and this argument records the contest in its own
+lines: the rating follows the library's definition, not the result.
+
+What the result now rests on are the replies' own ratings. Berry's premise, that
+how the sign was fulfilled in Ahaz's day is an open question, and Postell's two
+observations about Isaiah 9 and 11 are all cited `wellSupported`. Rate them
+`disputed` and the replies and the critic would tie, and the standoff would
+return. Postell's argument is described in `Lines.lean` as the stronger of the
+two; the ratings do not register that, and do not need to. Every rating here is
+a premise of the result, and contesting one is contesting the result.
 
 ## What the church fathers add, and what they cannot
 
@@ -65,19 +70,13 @@ prediction itself, for עַלְמָה as a virgin, and — the argument they sha
 that an ordinary conception would have been no sign at all. That strengthens
 the attestation of the scriptural premises, and none of it changes a rating.
 
-It cannot, for two reasons. The first is what `disputed` means here: *actively
-contested by competent scholars*. The fathers are the earliest witnesses to the
-contest as well as to the reading. Justin records Trypho's answer — "young
-woman", and fulfilled in Hezekiah — and Irenaeus names Theodotion and Aquila.
-An older witness does not make a contested claim uncontested.
-
-The second is structural. The critic defeats the scriptural reading by
-undermining its predictive premise, and that attack fails only if the premise
-outranks the critic, whose weakest link is `wellSupported`: only a `consensus`
-rating would block it. The scriptural reading's own rebuttal succeeds only if
-*every* claim it rests on is rated at least `wellSupported`, across all four
-strands. Under the weakest-link rule, support for one premise changes nothing
-unless it lifts the lowest.
+It cannot, because of what `disputed` means here: *actively contested by
+competent scholars*. The fathers are the earliest witnesses to the contest as
+well as to the reading. Justin records Trypho's answer — "young woman", and
+fulfilled in Hezekiah — and Irenaeus names Theodotion and Aquila. An older
+witness does not make a contested claim uncontested. What moved the result was
+the same definition applied to the other side: the critic's exclusion premise
+is contested too, and the library records who contests it.
 -/
 
 namespace Testimony.Arguments.BornOfAVirgin
@@ -120,8 +119,9 @@ theorem postellParity_is_satisfiable : Satisfiable postellParity.premises := by
 which is cited `disputed`. -/
 theorem christian_strength : christian.strength = 0 := by decide
 
-/-- The critical denial rests on two premises cited `wellSupported`. -/
-theorem criticalDenial_strength : criticalDenial.strength = 2 := by decide
+/-- The critical denial's weakest premise is the exclusion Berry and Postell
+contest, cited `disputed`. -/
+theorem criticalDenial_strength : criticalDenial.strength = 0 := by decide
 
 /-- Berry's one ranked premise is cited `wellSupported`. -/
 theorem berryObjection_strength : berryObjection.strength = 2 := by decide
@@ -170,20 +170,19 @@ theorem christian_does_not_undermine_critical (φ : Formula Claim) :
       genesisToCriterion, micahToCriterion, compositionalToCriterion, toFulfilment,
       criticalExclusion]
 
-/-- **The scriptural reading cannot answer the critic by itself.** Its rebuttal
-is an attack, but not a defeat: its weakest premise is `disputed` and the
-critical denial's are `wellSupported`. -/
+/-- **The scriptural reading answers the critic.** Its rebuttal is a defeat:
+the weakest premise on each side is cited `disputed`, so neither outranks the
+other, and each defeats the other. -/
 @[headline]
-theorem christian_does_not_defeat_critical : ¬ Defeats christian criticalDenial := by
-  rintro (⟨φ, hu, _⟩ | ⟨_, hweak⟩)
-  · exact christian_does_not_undermine_critical φ hu
-  · exact hweak (by rw [christian_strength, criticalDenial_strength]; decide)
+theorem christian_defeats_critical : Defeats christian criticalDenial :=
+  .inr ⟨christian_rebuts_critical,
+    by rw [christian_strength, criticalDenial_strength]; decide⟩
 
-#print axioms christian_does_not_defeat_critical
+#print axioms christian_defeats_critical
 
 /-- **Berry defeats the critical denial.** He entails the negation of its
-premise that a near-term sign excludes a messianic sense, and that premise is
-cited no higher than Berry's own. -/
+premise that a near-term sign excludes a messianic sense, and that premise, cited
+`disputed`, does not outrank him. -/
 theorem berry_defeats_critical : Defeats berryObjection criticalDenial :=
   .inl ⟨p .nearTermExcludesMessianicSense,
     ⟨by simp [criticalDenial, criticalExclusionLine, Line.asPackage, Line.premises],
@@ -198,18 +197,55 @@ theorem postell_defeats_critical : Defeats postellParity criticalDenial :=
       postellParity_establishes⟩,
     by decide⟩
 
-/-- **The critical denial defeats Berry back.** It holds the premise Berry
-denies, so it rebuts his conclusion, and Berry is no stronger than it. -/
-theorem critical_defeats_berry : Defeats criticalDenial berryObjection :=
-  .inr ⟨by establish [Rebuts, criticalDenial, berryObjection, criticalExclusionLine,
-      berryLine, criticalExclusion],
-    by rw [criticalDenial_strength, berryObjection_strength]; decide⟩
+/-- The critic's world, with the near-term fulfilment taken as settled: the sign
+was given to Ahaz, was discharged in his day, and excludes anything further.
+Berry's step holds in it, because its antecedent fails. -/
+def settledFulfilmentReading : Valuation Claim := fun a =>
+  match a with
+  | .isaiahPredictsVirginBirth => False
+  | .nearTermFulfilmentIsUnclear => False
+  | _ => True
 
-/-- **The critical denial defeats Postell back**, for the same reason. -/
-theorem critical_defeats_postell : Defeats criticalDenial postellParity :=
-  .inr ⟨by establish [Rebuts, criticalDenial, postellParity, criticalExclusionLine,
-      postellLine, criticalExclusion],
-    by rw [criticalDenial_strength, postellParity_strength]; decide⟩
+/-- The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of
+7:14 — the way out of the parity argument open to a reader who dates them
+later. Postell's step holds in it, because one of its grounds fails. -/
+def laterOraclesReading : Valuation Claim := fun a =>
+  match a with
+  | .isaiahPredictsVirginBirth => False
+  | .isaiah9And11ShareTheAssyrianTimeline => False
+  | _ => True
+
+/-- **The critical denial does not defeat Berry.** It rebuts him, but it is the
+weaker of the two: its weakest premise is the one he contests. And it
+contradicts nothing he rests on — the critical reading grants his premise, and
+the settled-fulfilment reading his step. -/
+theorem critical_does_not_defeat_berry : ¬ Defeats criticalDenial berryObjection := by
+  rintro (⟨φ, ⟨hmem, hent⟩, _⟩ | ⟨_, hweak⟩)
+  · simp only [berryObjection, berryLine, Line.asPackage, Line.premises,
+      List.cons_append, List.nil_append, List.mem_cons, List.not_mem_nil,
+      or_false] at hmem
+    rcases hmem with rfl | rfl <;> revert hent
+    · refute_with criticalReading [criticalDenial, criticalExclusionLine,
+        criticalExclusion]
+    · refute_with settledFulfilmentReading [criticalDenial, criticalExclusionLine,
+        criticalExclusion, berryBlocksExclusion]
+  · exact hweak (by rw [criticalDenial_strength, berryObjection_strength]; decide)
+
+/-- **The critical denial does not defeat Postell**, for the same reason: it is
+weaker, and it contradicts none of his premises. -/
+theorem critical_does_not_defeat_postell : ¬ Defeats criticalDenial postellParity := by
+  rintro (⟨φ, ⟨hmem, hent⟩, _⟩ | ⟨_, hweak⟩)
+  · simp only [postellParity, postellLine, Line.asPackage, Line.premises,
+      List.cons_append, List.nil_append, List.mem_cons, List.not_mem_nil,
+      or_false] at hmem
+    rcases hmem with rfl | rfl | rfl <;> revert hent
+    · refute_with criticalReading [criticalDenial, criticalExclusionLine,
+        criticalExclusion]
+    · refute_with criticalReading [criticalDenial, criticalExclusionLine,
+        criticalExclusion]
+    · refute_with laterOraclesReading [criticalDenial, criticalExclusionLine,
+        criticalExclusion, parityDefeatsNearTermExclusion]
+  · exact hweak (by rw [criticalDenial_strength, postellParity_strength]; decide)
 
 /-! ### Who does not defeat whom
 
@@ -292,34 +328,43 @@ theorem exchangeNode_sound : ∀ i, Establishes (exchangeNode i)
 def exchange : Dispute Claim Exchange :=
   ⟨exchangeNode, exchangeNode_consistent, exchangeNode_sound⟩
 
-/-- Who defeats whom in the exchange: the critic defeats the scriptural reading,
-and nothing else. -/
-theorem exchange_defeats (i j : Exchange) :
-    exchange.defeats i j ↔ i = .critical ∧ j = .scriptural := by
-  cases i <;> cases j <;> simp only [reduceCtorEq, and_false, false_and, and_self,
-    iff_true, iff_false]
+/-- Who defeats whom in the exchange: each party defeats the other. -/
+theorem exchange_defeats (i j : Exchange) : exchange.defeats i j ↔ i ≠ j := by
+  cases i <;> cases j <;> simp only [ne_eq, not_true_eq_false, reduceCtorEq,
+    not_false_eq_true, iff_true, iff_false]
   · exact exchange.not_defeats_self .scriptural
-  · exact christian_does_not_defeat_critical
+  · exact christian_defeats_critical
   · exact critical_defeats_christian
   · exact exchange.not_defeats_self .critical
 
-/-- **Unanswered, the critical denial prevails.** It is the grounded extension of
-the exchange: nothing defeats it, and it defeats the scriptural reading, which
-nothing then defends. -/
+/-- **Unanswered, nothing prevails.** The scriptural reading and the critical
+denial defeat each other, so neither is forced, and the grounded extension is
+empty. -/
 @[headline]
-theorem critical_prevails_unanswered : grounded exchange.defeats = {.critical} := by
-  refine grounded_eq_of_iterate 1 ?_ ?_
-  · ext a
-    cases a <;> simp [characteristic, Defends, exchange_defeats]
-  · intro a ha
-    cases a
-    · obtain ⟨c, hc, hcb⟩ := ha .critical ((exchange_defeats _ _).mpr ⟨rfl, rfl⟩)
-      simp only [Set.mem_singleton_iff] at hc
-      subst hc
-      exact absurd ((exchange_defeats _ _).mp hcb).2 (by decide)
-    · exact rfl
+theorem nothing_prevails_unanswered : grounded exchange.defeats = ∅ := by
+  refine grounded_eq_of_iterate 0 rfl ?_
+  intro a ha
+  obtain ⟨c, hc, _⟩ := ha _ ((exchange_defeats (if a = .critical then .scriptural
+    else .critical) a).mpr (by cases a <;> decide))
+  exact hc
 
-#print axioms critical_prevails_unanswered
+#print axioms nothing_prevails_unanswered
+
+/-- A party of the exchange, standing alone, is a resolution of it: it defeats
+the only party that defeats it, and nothing else remains to be added. -/
+theorem exchange_alone_preferred (x : Exchange) : Preferred exchange.defeats {x} := by
+  refine preferred_of_blocked ⟨?_, ?_⟩ ?_
+  · intro a ha b hb
+    simp only [Set.mem_singleton_iff] at ha hb
+    subst ha hb
+    exact exchange.not_defeats_self _
+  · intro a ha b hb
+    simp only [Set.mem_singleton_iff] at ha
+    subst ha
+    refine ⟨a, rfl, (exchange_defeats _ _).mpr ?_⟩
+    exact fun h => (exchange_defeats _ _).mp hb h.symm
+  · intro a ha
+    exact ⟨x, rfl, .inl ((exchange_defeats _ _).mpr ha)⟩
 
 /-! ### The dispute: the replies heard -/
 
@@ -334,6 +379,19 @@ inductive Party
   /-- Postell's parity argument against it. -/
   | postell
 deriving DecidableEq
+
+/-- A statement about every party is a statement about each of the four. -/
+theorem Party.forall_iff {P : Party → Prop} :
+    (∀ x, P x) ↔ P .scriptural ∧ P .critical ∧ P .berry ∧ P .postell :=
+  ⟨fun h => ⟨h _, h _, h _, h _⟩, fun ⟨h₁, h₂, h₃, h₄⟩ x => by cases x <;> assumption⟩
+
+/-- Some party satisfies `P` just when one of the four does. -/
+theorem Party.exists_iff {P : Party → Prop} :
+    (∃ x, P x) ↔ P .scriptural ∨ P .critical ∨ P .berry ∨ P .postell := by
+  constructor
+  · rintro ⟨x, hx⟩
+    cases x <;> simp_all
+  · rintro (h | h | h | h) <;> exact ⟨_, h⟩
 
 /-- The package each party of the dispute argues from. -/
 def partyNode : Party → ArgumentPackage Claim
@@ -363,25 +421,25 @@ def isaiahDispute : Dispute Claim Party :=
 /-- The defeats of the dispute, as a table. -/
 def partyDefeats : Party → Party → Prop
   | .critical, .scriptural => True
+  | .scriptural, .critical => True
   | .berry, .critical => True
   | .postell, .critical => True
-  | .critical, .berry => True
-  | .critical, .postell => True
   | _, _ => False
 
-/-- **Who defeats whom**, all sixteen pairs proved: the critic defeats the
-scriptural reading; the critic and each reply defeat each other; nothing else. -/
+/-- **Who defeats whom**, all sixteen pairs proved: the critic and the
+scriptural reading defeat each other; each reply defeats the critic; nothing
+else. -/
 theorem isaiahDispute_defeats (i j : Party) :
     isaiahDispute.defeats i j ↔ partyDefeats i j := by
   cases i <;> cases j <;> simp only [partyDefeats, iff_true, iff_false]
   all_goals first
     | exact isaiahDispute.not_defeats_self _
     | exact critical_defeats_christian
-    | exact christian_does_not_defeat_critical
+    | exact christian_defeats_critical
     | exact berry_defeats_critical
     | exact postell_defeats_critical
-    | exact critical_defeats_berry
-    | exact critical_defeats_postell
+    | exact critical_does_not_defeat_berry
+    | exact critical_does_not_defeat_postell
     | exact christian_does_not_defeat_berry
     | exact berry_does_not_defeat_christian
     | exact christian_does_not_defeat_postell
@@ -389,81 +447,43 @@ theorem isaiahDispute_defeats (i j : Party) :
     | exact berry_does_not_defeat_postell
     | exact postell_does_not_defeat_berry
 
-/-- **Heard out, nothing prevails.** Every party in the dispute is defeated by
-someone, so nothing is forced, and the grounded extension is empty. The critical
-denial, which prevailed over the scriptural reading alone, no longer does. -/
+/-- **Heard out, the scriptural reading prevails.** Nothing defeats Berry or
+Postell, so both are in the grounded extension from the first step; they defeat
+the critic, the scriptural reading's only defeater, so at the second step it
+joins them; and nothing defends the critic. -/
 @[headline]
-theorem nothing_prevails_once_replies_are_heard : grounded isaiahDispute.defeats = ∅ := by
-  refine grounded_eq_of_iterate 0 rfl ?_
-  intro a ha
-  -- Each party has a defeater, and the empty set answers none of them.
-  have defeater : ∃ b, isaiahDispute.defeats b a := by
-    cases a
-    · exact ⟨.critical, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.berry, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.critical, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.critical, (isaiahDispute_defeats _ _).mpr trivial⟩
-  obtain ⟨b, hb⟩ := defeater
-  obtain ⟨c, hc, _⟩ := ha b hb
-  exact hc
-
-#print axioms nothing_prevails_once_replies_are_heard
-
-/-- **The replies reinstate the scriptural reading.** The scriptural reading,
-Berry and Postell together are a preferred extension: they do not defeat one
-another, and the only party that defeats any of them — the critic — is defeated
-by Berry. -/
-@[headline]
-theorem scriptural_reading_reinstated :
-    Preferred isaiahDispute.defeats {.scriptural, .berry, .postell} := by
-  refine preferred_of_blocked ⟨?_, ?_⟩ ?_
-  · intro a ha b hb hab
-    rw [isaiahDispute_defeats] at hab
-    simp only [Set.mem_insert_iff, Set.mem_singleton_iff] at ha hb
-    rcases ha with rfl | rfl | rfl <;> rcases hb with rfl | rfl | rfl <;> exact hab
-  · intro a _ b hb
-    refine ⟨.berry, by simp, ?_⟩
-    rw [isaiahDispute_defeats] at hb ⊢
-    cases b <;> cases a <;> simp_all [partyDefeats]
+theorem scriptural_reading_prevails_once_replies_are_heard :
+    grounded isaiahDispute.defeats = {.scriptural, .berry, .postell} := by
+  refine grounded_eq_of_iterate 2 ?_ ?_
+  · ext a
+    cases a <;> simp [characteristic, Defends, isaiahDispute_defeats, partyDefeats,
+      Party.forall_iff, Party.exists_iff]
   · intro a ha
-    cases a <;> simp at ha
-    exact ⟨.berry, by simp, .inr ((isaiahDispute_defeats _ _).mpr trivial)⟩
+    cases a <;> simp_all [characteristic, Defends, isaiahDispute_defeats, partyDefeats,
+      Party.forall_iff, Party.exists_iff]
 
-#print axioms scriptural_reading_reinstated
+#print axioms scriptural_reading_prevails_once_replies_are_heard
 
-/-- **The critical denial remains defensible.** Alone, it is also a preferred
-extension: it defeats both replies, and the scriptural reading, and nothing it
-defeats can stand beside it. -/
+/-- **The critical denial cannot be defended.** No admissible set contains it:
+Berry defeats it, and nothing defeats Berry. -/
 @[headline]
-theorem critical_denial_remains_defensible :
-    Preferred isaiahDispute.defeats {.critical} := by
-  refine preferred_of_blocked ⟨?_, ?_⟩ ?_
-  · intro a ha b hb
-    simp only [Set.mem_singleton_iff] at ha hb
-    subst ha hb
-    exact isaiahDispute.not_defeats_self _
-  · intro a ha b hb
-    simp only [Set.mem_singleton_iff] at ha
-    subst ha
-    refine ⟨.critical, rfl, ?_⟩
-    rw [isaiahDispute_defeats] at hb ⊢
-    cases b <;> simp_all [partyDefeats]
-  · intro a ha
-    refine ⟨.critical, rfl, .inr ?_⟩
-    rw [isaiahDispute_defeats]
-    cases a <;> simp_all [partyDefeats]
+theorem critical_denial_indefensible (S : Set Party)
+    (hS : Admissible isaiahDispute.defeats S) : Party.critical ∉ S := by
+  intro hc
+  obtain ⟨c, _, hcb⟩ := hS.2 _ hc .berry ((isaiahDispute_defeats _ _).mpr trivial)
+  rw [isaiahDispute_defeats] at hcb
+  cases c <;> exact hcb
 
-#print axioms critical_denial_remains_defensible
+#print axioms critical_denial_indefensible
 
-/-- **So the dispute leaves the predictive reading open.** The scriptural
-reading is accepted on one resolution of the dispute and rejected on another. -/
-theorem scriptural_reading_credulously_accepted :
-    CredulouslyAccepted isaiahDispute.defeats .scriptural :=
-  ⟨_, scriptural_reading_reinstated, by simp⟩
+/-- So every resolution of the dispute accepts the scriptural reading. -/
+theorem scriptural_reading_skeptically_accepted :
+    SkepticallyAccepted isaiahDispute.defeats .scriptural :=
+  .of_grounded (by rw [scriptural_reading_prevails_once_replies_are_heard]; simp)
 
-/-- Not every resolution accepts the scriptural reading: the critic's does not. -/
-theorem scriptural_reading_not_skeptically_accepted :
-    ¬ SkepticallyAccepted isaiahDispute.defeats .scriptural :=
-  fun h => by simpa using h _ critical_denial_remains_defensible
+/-- And none accepts the critical denial. -/
+theorem critical_denial_not_credulously_accepted :
+    ¬ CredulouslyAccepted isaiahDispute.defeats .critical :=
+  fun ⟨S, hS, hc⟩ => critical_denial_indefensible S hS.1 hc
 
 end Testimony.Arguments.BornOfAVirgin

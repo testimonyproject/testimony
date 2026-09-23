@@ -24,7 +24,7 @@ source holds a claim, and elsewhere it is information for a reader. In a
 dispute's outcome is conditional on them in exactly the way a result is
 conditional on its premises. Lean checks what follows from the ratings. Whether
 a rating is fair to its source is a judgement it cannot make, and the Isaiah
-7:14 dispute names the one rating that decides it.
+7:14 dispute names the ratings it rests on.
 
 **Whether the encoding is faithful.** That a Lean formula represents the
 argument a commentary actually makes is a human judgement. No proof assistant
