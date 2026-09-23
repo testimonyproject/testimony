@@ -35,7 +35,8 @@ def cite : Claim → AtomMeta
     , source :=
         { motyerOnIsaiah with
           supporting :=
-            [ .work justinDialogue (.sectionRef "66")
+            [ .work motyerContextContent (.page 123)
+            , .work justinDialogue (.sectionRef "66")
             , .work irenaeusAgainstHeresies (.sectionRef "III.21.6")
             , .work origenAgainstCelsus (.sectionRef "I.35") ] } }
   | .almahMeansVirgin =>
@@ -51,6 +52,7 @@ def cite : Claim → AtomMeta
           supporting :=
             [ .work bhs (.apparatus isaiah7_14)
             , .work berryVirginBirth (.pages 1653 1654)
+            , .work motyerContextContent (.page 125)
             , .work jeromeAgainstJovinianus (.sectionRef "I.32") ] } }
   | .almahAdmitsVirginSense =>
     { label := "The semantic range of עַלְמָה does not exclude 'virgin' at Isaiah 7:14"
@@ -240,7 +242,9 @@ def cite : Claim → AtomMeta
     , kind := .textual
     , source :=
         { postellOnIsaiah (.pages 483 490) .wellSupported with
-          supporting := [.scripture isaiah2to12Frame] } }
+          supporting :=
+            [ .work motyerContextContent (.pages 122 123)
+            , .scripture isaiah2to12Frame ] } }
   | .compositionGovernsMeaning =>
     { label := "An oracle's meaning in the finished book is set by its literary placement"
     , kind := .interpretive
@@ -332,7 +336,9 @@ def cite : Claim → AtomMeta
       -- The reading Justin already answers, in Trypho's form: fulfilled in
       -- Hezekiah (Dial. 67, 77). Origen's reply is a question — which child
       -- of Ahaz's day was called Immanuel? — and his conclusion that the sign
-      -- was given to the house of David (Cels. I.35).
+      -- was given to the house of David (Cels. I.35). Motyer denies it most
+      -- directly (1970, 120, 124): the sign confirms events after the fact,
+      -- and Maher-shalal-hash-baz, not Immanuel, carries the timetable.
     , source := brownOnBirth }
   | .nearTermExcludesMessianicSense =>
     { label := "A sign given for Ahaz's generation is not also a prediction of a virgin birth"

@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-47 entries, of which 13 carry no stable public identifier.
+48 entries, of which 13 carry no stable public identifier.
 
 - <a id="na28-2012"></a>**`na28-2012`** — Barbara Aland, Kurt Aland, Institut für neutestamentliche Textforschung (ed.). *Novum Testamentum Graece*. Stuttgart: Deutsche Bibelgesellschaft. 28th revised edition. Siglum NA28. 2012. ISBN 9781619700321. ISBN is the Hendrickson / German Bible Society printing.
 - <a id="allen-swain-reformed-catholicity-2015"></a>**`allen-swain-reformed-catholicity-2015`** — Michael Allen, Scott R. Swain. *Reformed Catholicity: The Promise of Retrieval for Theology and Biblical Interpretation*. Grand Rapids: Baker Academic. 2015. ISBN 9780801049798.
@@ -37,6 +37,7 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - <a id="miravalle-meet-mary-2007"></a>**`miravalle-meet-mary-2007`** — Mark I. Miravalle. *Meet Mary: Getting to Know the Mother of God*. Manchester, NH: Sophia Institute Press. 2007. ISBN 9781933184326.
 - <a id="miravalle-introduction-mary-2020"></a>**`miravalle-introduction-mary-2020`** — Mark I. Miravalle. *Introduction to Mary: The Heart of Marian Doctrine and Devotion*. Goleta, CA: Queenship Publishing. 2020. ISBN 9781882972067. ISBN is shared with the 1993 and 1997 Queenship printings; pagination cited is the 2020 printing's.
 - <a id="moo-james-2000"></a>**`moo-james-2000`** — Douglas J. Moo. *The Letter of James*. Leicester: Apollos. Pillar New Testament Commentary. 2000. ISBN 9780851119779.
+- <a id="motyer-context-content-1970"></a>**`motyer-context-content-1970`** — J. A. Motyer. *Context and Content in the Interpretation of Isaiah 7:14*. *Tyndale Bulletin* 21.1: 118–125. 1970. [DOI 10.53751/001c.30667](https://doi.org/10.53751/001c.30667).
 - <a id="motyer-isaiah-1993"></a>**`motyer-isaiah-1993`** — J. Alec Motyer. *The Prophecy of Isaiah: An Introduction and Commentary*. InterVarsity Press. 1993. *(no public identifier)*
 - <a id="newman-development-1845"></a>**`newman-development-1845`** — John Henry Newman. *An Essay on the Development of Christian Doctrine*. London: James Toovey. 1845. ISBN 9780268009212. ISBN is the University of Notre Dame Press edition.
 - <a id="oberman-dawn-1986"></a>**`oberman-dawn-1986`** — Heiko A. Oberman. *The Dawn of the Reformation: Essays in Late Medieval and Early Reformation Thought*. Edinburgh: T. & T. Clark. 1986. ISBN 9780567093714. Eerdmans reissued the volume in 1992 under ISBN 9780802806550.

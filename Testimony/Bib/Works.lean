@@ -398,6 +398,25 @@ registers no DOIs; the identifier is the society's own open PDF. -/
   , issue := some "3"
   , pages := some (465, 493) }
 
+/-- Motyer's article on the setting of Isaiah 7:14: the most direct answer in
+the library to the near-term reading. The sign is a confirmation that follows
+events rather than a persuader for Ahaz (120); Maher-shalal-hash-baz, not
+Immanuel, carries the timetable of the Assyrian crisis (8:1–4), so Immanuel
+belongs to the undated future (124); and 7:14 cannot be severed from 8:8, 8:10,
+9:6–7 and 11:1–16, which make it "impossible to confine the Immanuel prophecy to
+any long-forgotten 'fulfilment' in the time of Ahaz" (123). -/
+@[bib_entry] def motyerContextContent : BibEntry := .article
+  { core :=
+      { key := "motyer-context-content-1970"
+      , contributors := { authors := [.person "J. A." "Motyer"] }
+      , title := "Context and Content in the Interpretation of Isaiah 7:14"
+      , year := some { value := 1970 }
+      , identifiers := [.doi "10.53751/001c.30667"] }
+  , journal := "Tyndale Bulletin"
+  , volume := some "21"
+  , issue := some "1"
+  , pages := some (118, 125) }
+
 /-! ### Sola scriptura
 
 Added for `Arguments.SolaScriptura`: the Protestant taxonomy and its critics,
