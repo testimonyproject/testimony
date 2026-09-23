@@ -360,10 +360,13 @@ makes the nodes argument packages and derives the relation from entailment.
 its premises entail the negation of one of the other's premises (`UnderminesOn`)
 or of its conclusion (`Rebuts`). An attack is a *defeat* unless the cited
 confidences block it: a position's strength is its weakest link — the lowest
-rank among its premises that are atoms or denials of atoms — and an attack fails
-only when what it attacks is strictly stronger. Inference steps have no rank, so
-an attack on a step always succeeds. A denied atom ranks `disputed`, because the
-citation rates the claim, not its denial.
+rank among its premises, inference steps included — and an attack fails only
+when what it attacks is strictly stronger. A denied atom ranks `disputed`,
+because the citation rates the claim, not its denial. A step ranks at the
+citation in its line's `inference` field, and `Dispute` refuses a node without
+one: rate a step `disputed` when a cited source grants its grounds and denies
+its conclusion. Leaving steps unrated would let the placement of a contested
+move — atom or step — decide who prevails.
 
 Why confidence at all: without it, premise attacks between classical arguments
 are always mutual, and Dung's semantics reduce to a consistency check (Cayrol,
@@ -404,7 +407,7 @@ isaiahDispute.not_defeats_self i
 
 An attack the ratings block needs both of its routes closed: each undermining,
 by a named world in which the attacker's premises hold alongside the premise,
-and the rebuttal, by strength. `critical_does_not_defeat_berry` is the example.
+and the rebuttal, by strength. `critical_does_not_defeat_postell` is the example.
 Strengths are computed by `decide`, and are worth stating as results of their
 own, because they are what a reader contests.
 

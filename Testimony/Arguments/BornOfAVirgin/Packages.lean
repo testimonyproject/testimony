@@ -34,7 +34,12 @@ def christian : ArgumentPackage Claim :=
   , cite := cite
   , premises := caseOf scripturalLines sharedGrounds [toFulfilment]
   , conclusion := p .jesusSatisfiesCriterion
-  , conclusionLabel := fulfillmentLabel jesus bornOfAVirgin }
+  , conclusionLabel := fulfillmentLabel jesus bornOfAVirgin
+    -- Each strand's inference is contested as its interpretive atoms are: by
+    -- the critical readings recorded against every one of them.
+  , inferences :=
+      [ motyerOnIsaiah, miravalleOnMary, postellOnIsaiah (.pages 490 493) .disputed
+      , franceOnMatthew .disputed ] }
 
 /-- The Roman Catholic package: the four scriptural strands *and* the
 magisterial one. This is the position as actually held — Scripture and Tradition

@@ -186,7 +186,10 @@ Kruger's parity reply on the canon is a refusal; Berry's objection on Isaiah
 An attack is a **defeat** unless what it attacks is strictly better supported.
 Every atom in the library carries a cited confidence, from `disputed` to
 `consensus`, and a position is judged by its **weakest link**: it is no stronger
-than the least supported thing it assumes. Without that comparison, attacks
+than the least supported thing it assumes. That includes its inferences. A
+step from observations to a conclusion is rated on its own, and it is
+`disputed` when someone grants the observations and denies the conclusion.
+Without that comparison, attacks
 between positions built from premises come in pairs — if you contradict what I
 assume, I contradict what you conclude — and nobody ever prevails.
 

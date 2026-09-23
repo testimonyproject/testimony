@@ -53,9 +53,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `christian_defeats_critical` | `Defeats christian criticalDenial` | **The scriptural reading answers the critic.** Its rebuttal is a defeat: the weakest premise on each side is cited `disputed`, so neither outranks the other, and each defeats the … |
 | `motyer_rests_on_his_inference` | `¬Entails motyerLine.grounds (notP Claim.isaiahIsNearTermSignToAhaz)` | **Motyer's reply rests on his inference, not on his observations.** On the reading that identifies the two children, the sign is given to the house of David, 8:4 repeats the … |
 | `nothing_prevails_unanswered` | `Framework.grounded exchange.defeats = ∅` | **Unanswered, nothing prevails.** The scriptural reading and the critical denial defeat each other, so neither is forced, and the grounded extension is empty. |
-| `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell, Party.motyer}` | **Heard out, the scriptural reading prevails.** Nothing defeats Berry, Postell or Motyer, so all three are in the grounded extension from the first step; they defeat the critic, … |
-| `critical_denial_indefensible` | `∀ (S : Set Party), Framework.Admissible isaiahDispute.defeats S → Party.critical ∉ S` | **The critical denial cannot be defended.** No admissible set contains it: Berry defeats it, and nothing defeats Berry. |
-| `scriptural_reading_prevails_on_motyer_alone` | `Framework.grounded motyerHearing.defeats = {Hearing.scriptural, Hearing.motyer}` | **Motyer alone reinstates the scriptural reading.** Without Berry or Postell, nothing defeats Motyer; he defeats the critic, and so defends the scriptural reading against it. |
+| `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell, Party.motyer}` | **Heard out, the scriptural reading prevails.** Nothing defeats Postell, so he is in the grounded extension from the first step. |
+| `critical_denial_indefensible` | `∀ (S : Set Party), Framework.Admissible isaiahDispute.defeats S → Party.critical ∉ S` | **The critical denial cannot be defended.** No admissible set contains it: Postell defeats it, and nothing defeats Postell. |
+| `nothing_prevails_on_motyer_alone` | `Framework.grounded motyerHearing.defeats = ∅` | **Motyer alone does not settle it.** Heard without Berry or Postell, he and the critic defeat each other, as the scriptural reading and the critic do, so nothing is forced and the … |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -200,15 +200,17 @@ their cited confidences, show that against the scriptural reading alone nothing
 prevails (`nothing_prevails_unanswered`): each defeats the other. Once Berry and
 Postell are heard, the scriptural reading prevails
 (`scriptural_reading_prevails_once_replies_are_heard`), and the critic cannot be
-defended at all (`critical_denial_indefensible`); Motyer's reply alone, which
-denies the critic's other premise, is enough
-(`scriptural_reading_prevails_on_motyer_alone`). The first draft of this
-result was a standoff, because it rated the critic's exclusion premise
-`wellSupported` while recording, in the same argument, two scholars who contest
-it. Rated as the library defines `disputed` — and the near-term premise with
-it, which Motyer and Compton deny — the critic is no stronger than the premises
-the replies contest. That makes the ratings premises of the result, and says
-which ones to contest: now, the replies' own.
+defended at all (`critical_denial_indefensible`). Two corrections got it
+there. The first draft rated the critic's exclusion premise `wellSupported`
+while recording, in the same argument, two scholars who contest it; rated as
+the library defines `disputed`, it became the critic's weakest link. Then the
+replies' inferences, unrated, had let each reply be weighed by its observations
+alone, so that where an encoding put a contested move — atom or step — decided
+who prevailed. Rated, Berry's and Motyer's steps are `disputed` and tie with the
+critic (`nothing_prevails_on_motyer_alone`); the verdict rests on Postell's
+alone, rated `plausible` because no source cited grants his grounds and keeps
+the exclusion. That makes the ratings premises of the result, and says which
+one to contest.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether

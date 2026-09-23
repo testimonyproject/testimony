@@ -149,17 +149,16 @@ derived from entailment that the cited confidences do not block. Against the
 scriptural reading alone, `nothing_prevails_unanswered`: the critical denial and
 the scriptural reading defeat each other, because the weakest premise on each
 side is `disputed` (`christian_defeats_critical`). Hear Berry and Postell, and
-`scriptural_reading_prevails_once_replies_are_heard`: nothing defeats the
-replies — Berry, Postell, and Motyer with Compton — they defeat the critic, and
-so they defend the scriptural reading against its only defeater. The critic is
-left with no defence at all (`critical_denial_indefensible`), and Motyer, who
-denies the critic's other premise, is enough on his own
-(`scriptural_reading_prevails_on_motyer_alone`). His reply rests on an
-inference rather than an observation, and `motyer_rests_on_his_inference` says
-so. That outcome turns on the critic's premises
-being rated `disputed`, as the replies, Motyer and Compton contest them; with
-the exclusion premise rated `wellSupported`, as it once was, the dispute was a
-standoff.
+`scriptural_reading_prevails_once_replies_are_heard`: nothing defeats Postell,
+he defeats the critic, and so he defends the scriptural reading — and Berry,
+and Motyer with Compton — against the only party that defeats them. The critic
+is left with no defence at all (`critical_denial_indefensible`). Inference
+steps are rated like premises, and Berry's and Motyer's are `disputed`, so
+alone they tie with the critic: `nothing_prevails_on_motyer_alone`, and
+`motyer_rests_on_his_inference` shows the weight of his reply is on that step.
+The outcome turns on Postell's inference being `plausible` — no cited source
+grants his grounds and keeps the exclusion — and on the critic's premises being
+`disputed`, as the replies, Motyer and Compton contest them.
 
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands

@@ -136,7 +136,9 @@ from source.
   `compatibility_defeats_lexical_objection` state an entailment fact. In
   `Testimony.Logic.Dispute`, `Defeats` is an attack that survives the
   confidence preference, and it makes every cited `Confidence` load-bearing: a
-  changed rating can change who prevails in a dispute.
+  changed rating can change who prevails in a dispute. Inference steps count
+  too: a `Dispute` refuses a node whose package cites no `inference`, and a step
+  is `disputed` when a cited source grants its grounds and denies its conclusion.
 - `refute_with` takes an identifier, not a term, so a countermodel must be a
   named definition — the rival's reading, written down.
 - There is no atom budget; the 2^n truth-table checker was removed.

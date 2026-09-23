@@ -52,10 +52,15 @@ than the least supported thing it assumes.
   strictly higher than the attacker's strength.
 - A **rebutting** attack defeats unless the rebutted argument is strictly
   stronger than the attacker.
-- An undermining attack on an *inference step* always defeats. Steps carry no
-  confidence in this library — the confidence of the atoms a step joins is not
-  the confidence of the inference — so there is nothing to weigh against it.
-  ASPIC+ treats attacks on inferences the same way.
+
+Inference steps are weighed too, as ASPIC+'s weakest-link principle weighs
+defeasible rules alongside premises. The confidence of the atoms a step joins
+is not the confidence of the inference, so a step is rated on its own, by a
+citation of its own: `disputed` when a cited source grants the step's grounds
+and denies its conclusion. Without this, where an encoding puts a contested
+move — in an atom, where it is rated, or in a step, where it was not — would
+decide who prevails, and that is a modelling choice, not a fact about the
+positions.
 
 **This makes the confidence ratings load-bearing.** Before this module a
 rating was information for a reader; in a dispute it decides who prevails. A
@@ -69,8 +74,12 @@ premise that *denies* an atom ranks as `disputed`, the lowest rank. The citation
 for an atom rates the claim as its label states it; nothing in the library rates
 that claim's denial, and a denial of a consensus claim does not inherit the
 consensus. Ranking denials at the bottom is the conservative choice: a denial
-never outranks anything by default. Any other formula is an inference step, and
-has no rank.
+never outranks anything by default.
+
+Any other formula is an inference step, and ranks at the lowest of the
+package's `inferences` — every step as weak as the weakest cited inference, the
+same conservative choice. A package with no cited inference has unranked steps,
+and a `Dispute` refuses it: every node must carry at least one.
 -/
 
 namespace Testimony
@@ -92,12 +101,20 @@ variable {α : Type}
 
 namespace ArgumentPackage
 
+/-- The rank of the package's inference steps: the lowest confidence among its
+cited inferences, if it cites any. -/
+def inferenceRank (pkg : ArgumentPackage α) : Option ℕ :=
+  match pkg.inferences with
+  | [] => none
+  | s :: rest => some ((rest.map (·.confidence.rank)).foldr min s.confidence.rank)
+
 /-- The rank of a premise of this package, if it has one: an atom at its cited
-confidence, a denied atom at the bottom, an inference step not at all. -/
+confidence, a denied atom at the bottom, an inference step at the package's
+inference rank. -/
 def rankOf (pkg : ArgumentPackage α) : Formula α → Option ℕ
   | .atom a => some (pkg.cite a).source.confidence.rank
   | .imp (.atom _) .falsum => some 0
-  | _ => none
+  | _ => pkg.inferenceRank
 
 /-- **Weakest link**: the lowest rank among the package's ranked premises. A
 package with no ranked premise is as strong as a package can be. -/
@@ -122,7 +139,7 @@ def Attacks (a b : ArgumentPackage α) : Prop :=
   (∃ φ, UnderminesOn a b φ) ∨ Rebuts a b
 
 /-- Premise `φ` of `b` is strictly stronger than an attacker of strength `s`. An
-unranked premise — an inference step — never is. -/
+unranked premise — an uncited inference step — never is. -/
 def Outranks (b : ArgumentPackage α) (φ : Formula α) (s : ℕ) : Prop :=
   match b.rankOf φ with
   | some r => s < r
@@ -180,12 +197,14 @@ theorem not_defeats_self {a : ArgumentPackage α} (hsat : Satisfiable a.premises
   · exact (entails_iff.mp hent w hw) (entails_iff.mp hest w hw)
 
 /-- **A dispute**: argument packages indexed by `ι`, each of them an argument in
-the full sense — premises that can hold together, and a conclusion they
-deliver.
+the full sense — premises that can hold together, a conclusion they deliver,
+and inferences someone has rated.
 
-The two fields are what make the nodes arguments rather than premise lists. A
-node whose premises had no model would attack everything; a node that did not
-establish its conclusion would be arguing for nothing. -/
+The fields are what make the nodes arguments rather than premise lists. A node
+whose premises had no model would attack everything; a node that did not
+establish its conclusion would be arguing for nothing; and a node with unrated
+steps would be weighed by its premises alone, however contested its
+inferences. -/
 structure Dispute (α : Type) (ι : Type) where
   /-- The package at each node. -/
   node : ι → ArgumentPackage α
@@ -193,6 +212,8 @@ structure Dispute (α : Type) (ι : Type) where
   consistent : ∀ i, Satisfiable (node i).premises
   /-- Every node establishes its conclusion. -/
   sound : ∀ i, Establishes (node i)
+  /-- Every node's inference steps are rated. -/
+  rated : ∀ i, (node i).inferences ≠ []
 
 namespace Dispute
 

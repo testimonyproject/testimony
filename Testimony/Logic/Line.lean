@@ -51,6 +51,10 @@ structure Line (α : Type) where
   step : Formula α
   /-- What the line delivers, if its grounds are granted. -/
   delivers : Formula α
+  /-- A citation rating the step itself: `disputed` when a cited source grants
+  the grounds and denies what the line delivers. A line that enters a dispute
+  must carry one. -/
+  inference : Option Source := none
 
 namespace Line
 
@@ -69,7 +73,8 @@ def asPackage (l : Line α) (cite : α → AtomMeta) (conclusionLabel : String) 
   , cite := cite
   , premises := l.premises
   , conclusion := l.delivers
-  , conclusionLabel := conclusionLabel }
+  , conclusionLabel := conclusionLabel
+  , inferences := l.inference.toList }
 
 /-- The same line with different grounds, keeping its name, step and
 conclusion.

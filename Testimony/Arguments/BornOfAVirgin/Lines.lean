@@ -90,8 +90,8 @@ further referent.
 
 The step is contestable even though both atoms it joins are `wellSupported` —
 an unclear fulfilment is still a fulfilment, and Brown would answer that Isaiah
-8:3–4 settles the referent well enough. Inference steps carry no confidence
-field of their own, so this is where that is recorded. -/
+8:3–4 settles the referent well enough. The step is rated in `berryLine`,
+where it is cited `disputed`. -/
 def berryBlocksExclusion : Formula Claim :=
   p .nearTermFulfilmentIsUnclear ➝ notP .nearTermExcludesMessianicSense
 
@@ -104,8 +104,7 @@ undated future" (Motyer 1970, 124).
 This is the contested part of his reply, and it is a step rather than an atom
 on purpose, as Berry's and Postell's are: the two atoms it joins are what the
 text says, and the inference is what a reader who identifies the two children
-denies. Inference steps carry no confidence field; an attack on one always
-defeats. -/
+denies, and `motyerLine` rates it `disputed` for that reason. -/
 def timetablePassesToMaherShalalHashBaz : Formula Claim :=
   ⋀ [ p .signGivenToHouseOfDavid, p .maherShalalHashBazRepeatsTheTimetable ]
   ➝ notP .isaiahIsNearTermSignToAhaz
@@ -355,7 +354,11 @@ def criticalExclusionLine : Line Claim :=
   , grounds :=
       [ p .isaiahIsNearTermSignToAhaz, p .nearTermExcludesMessianicSense ]
   , step := criticalExclusion
-  , delivers := notP .isaiahPredictsVirginBirth }
+  , delivers := notP .isaiahPredictsVirginBirth
+    -- `consensus`: the step only applies the exclusion premise to 7:14, and
+    -- anyone who grants both grounds grants it. The critic's contest lives in
+    -- the grounds, where it is rated.
+  , inference := some (brownOnBirth .consensus) }
 
 /-! ### The two defeaters, as arguments in their own right
 
@@ -371,7 +374,15 @@ def berryLine : Line Claim :=
   { name := "Berry's objection to the near-term exclusion"
   , grounds := [p .nearTermFulfilmentIsUnclear]
   , step := berryBlocksExclusion
-  , delivers := notP .nearTermExcludesMessianicSense }
+  , delivers := notP .nearTermExcludesMessianicSense
+    -- `disputed`: Watts grants the ground — "the chronologies of this period
+    -- are very uncertain" — and still reads 7:14 of Hezekiah alone, as Compton
+    -- reports (5). An unclear fulfilment is still a fulfilment.
+  , inference := some
+      { primary := .work berryVirginBirth (.pages 1653 1654)
+      , supporting := [.work comptonImmanuelProphecy (.page 5)]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
 
 /-- **Postell's parity argument**, as an argument: Isaiah 9 and 11 are messianic
 on the same near-term timeline, so a near-term setting does not exclude the
@@ -381,7 +392,13 @@ def postellLine : Line Claim :=
   , grounds :=
       [ p .isaiah9And11AreMessianic, p .isaiah9And11ShareTheAssyrianTimeline ]
   , step := parityDefeatsNearTermExclusion
-  , delivers := notP .nearTermExcludesMessianicSense }
+  , delivers := notP .nearTermExcludesMessianicSense
+    -- `plausible`: a counterexample to the exclusion, and no source cited
+    -- here grants both grounds and keeps the exclusion. A critic's answer
+    -- would deny a ground — that 9 and 11 are messianic in Isaiah's own
+    -- sense — and the grounds are rated separately. Not `wellSupported`: the
+    -- argument is recent and unanswered, which is not the same as established.
+  , inference := some (postellOnIsaiah (.pages 487 489) .plausible) }
 
 /-- **Motyer's reply**, as an argument, with Compton: the sign is given to the
 house of David and the near-term timetable passes to Isaiah's son, so Isaiah
@@ -392,7 +409,14 @@ def motyerLine : Line Claim :=
   , grounds :=
       [ p .signGivenToHouseOfDavid, p .maherShalalHashBazRepeatsTheTimetable ]
   , step := timetablePassesToMaherShalalHashBaz
-  , delivers := notP .isaiahIsNearTermSignToAhaz }
+  , delivers := notP .isaiahIsNearTermSignToAhaz
+    -- `disputed`: those who identify the two children grant both grounds and
+    -- keep the near-term sign — Clements, as Compton reports (5).
+  , inference := some
+      { primary := .work motyerContextContent (.page 124)
+      , supporting := [.work comptonImmanuelProphecy (.page 5)]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
 
 /-! ### What the strands share -/
 

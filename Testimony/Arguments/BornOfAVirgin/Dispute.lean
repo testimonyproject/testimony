@@ -20,26 +20,26 @@ The defeats, all four proved, are these:
   a premise cited as `disputed`.
 - **The scriptural reading defeats the critical denial back.** It undermines
   none of the critic's premises, but it concludes the opposite, so it rebuts;
-  and the weakest premise on each side is cited `disputed`, so neither
-  outranks the other.
+  and the weakest link on each side is `disputed`, so neither outranks the
+  other.
 - **Berry and Postell each defeat the critical denial**, by contradicting its
   premise that a near-term sign excludes a messianic sense, cited `disputed`.
 - **Motyer defeats it too**, by contradicting its other premise: that 7:14 is
   a near-term sign to Ahaz at all, also cited `disputed`.
-- **The critical denial defeats none of them.** It rebuts all three, but both
-  of its premises are cited `disputed` and theirs are no lower than
-  `wellSupported`. It contradicts nothing they rest on.
+- **The critical denial defeats Berry and Motyer back, but not Postell.** It
+  rebuts all three. Berry's and Motyer's inferences are contested — a cited
+  source grants each one's grounds and denies its conclusion — so they are no
+  stronger than the critic. Postell's inference is not, and he outranks it.
 
 ## What follows
 
 Faced with the scriptural reading alone, **nothing prevails**: the two defeat
 each other, the grounded extension is empty, and each is a resolution of the
 exchange on its own. Add the replies and **the scriptural reading prevails**.
-The replies are defeated by nothing, they defeat the critic, and in doing so
-they defend the scriptural reading against its only defeater: the grounded
-extension is the scriptural reading with all three. The critical denial belongs
-to no admissible set at all, because nothing answers Berry. And the verdict
-does not hang on one pair of replies: heard alone, Motyer is enough.
+Nothing defeats Postell; he defeats the critic, which is the only party that
+defeats the scriptural reading, Berry or Motyer; and so all four stand. The
+critical denial belongs to no admissible set at all, because nothing answers
+Postell.
 
 This is the result entailment could not state. Adding premises never removes a
 conclusion; adding arguments can change what a dispute forces, and here it
@@ -49,48 +49,33 @@ ratings, the case against it does not survive them.
 
 ## What the ratings decide
 
-These outcomes rest on the cited confidences as much as on the premises. The
-premise that decides the exchange with the critic — that a near-term sign
-excludes a messianic sense — was once cited `wellSupported` on Brown's
-authority. So rated, the critic defeated both replies back, and the dispute
-ended in a standoff with two resolutions. It is cited `disputed` because Berry,
-Postell and Motyer contest it, and this argument records the contest in its own
-lines: the rating follows the library's definition, not the result.
+These outcomes rest on the cited confidences as much as on the premises, and
+the inferences are rated as the premises are: `disputed` when a cited source
+grants a step's grounds and denies its conclusion. Before they were rated, a
+reply that put its contested move in a step was weighed by its observations
+alone, and every reply outranked the critic. Rated, only one does.
 
-What the result now rests on are the replies' own ratings. Berry's premise, that
-how the sign was fulfilled in Ahaz's day is an open question, and Postell's two
-observations about Isaiah 9 and 11 are all cited `wellSupported`; so is
-Motyer's observation that 8:4 repeats the timetable of 7:16, and his other,
-that the sign of 7:13–14 is given in the plural to the house of David, is
-`consensus`. Rate all of them `disputed` and the replies and the critic would
-tie, and the standoff would return. Postell's argument is described in
-`Lines.lean` as the stronger of the two; the ratings do not register that, and
-do not need to. Every rating here is a premise of the result, and contesting one
-is contesting the result.
+The critic's two premises are `disputed`: Berry, Postell and Motyer contest the
+exclusion, Motyer and Compton the near-term sign. Its inference is `consensus`,
+because it only applies the exclusion to 7:14.
 
-The critic's other premise, that 7:14 was a near-term sign to Ahaz fulfilled in
-Isaiah's generation, is cited `disputed` on the same definition: Motyer and
-Compton deny it outright. Rated `wellSupported`, it would outrank Motyer's
-reply and his attack on it would fail.
+Berry's inference is `disputed`. Watts grants that the chronology is uncertain
+and still reads 7:14 of Hezekiah, as Compton reports. Motyer's is `disputed` for
+the same reason: those who identify the two children grant both his
+observations and keep the near-term sign, and `motyer_rests_on_his_inference`
+proves that the whole weight of his reply falls on that step. So each ties with
+the critic, and heard alone Motyer settles nothing
+(`nothing_prevails_on_motyer_alone`).
 
-## Where Motyer's contest lies
-
-Each reply puts what the text says in its atoms and its contested move in its
-step, and Motyer's is the plainest case. His atoms are the plural address of
-7:13–14 and the repeated timetable of 8:4 — observations the critics who
-identify the two children share, and rely on. His step is the inference that
-the timetable has passed to Isaiah's son, so the child of 7:14 is not a
-near-term sign. That is where a reader who contests him disagrees, and
-`motyer_rests_on_his_inference` proves it is where the whole weight falls: on
-the reading that identifies the two children, both observations hold and the
-near-term sign stands.
-
-The library does not rank an inference, so a contested step does not lower a
-reply's strength as a contested premise would. It is not sheltered either. An
-attack on a step always defeats, whatever the attacker's strength, so a
-position that granted Motyer's observations and held the near-term reading
-would defeat him outright. The critical denial as encoded does not grant them,
-which is a fact about this encoding of the critic, not about the critics.
+Postell's inference is `plausible`. It is a counterexample to the exclusion —
+two oracles on the same Assyrian timeline, read messianically — and no source
+cited here grants his grounds and keeps the exclusion. **The verdict rests on
+that rating.** Rate his inference `disputed` and the critic defeats him back,
+nothing is unattacked, and the dispute returns to a standoff. A critic who
+answered Postell by granting that Isaiah 9 and 11 are messianic on the Assyrian
+timeline, and still held the exclusion, would be the source to find. Postell's
+argument is described in `Lines.lean` as the stronger of the two; the ratings
+now register that, and it is what decides the dispute.
 
 ## What the church fathers add, and what they cannot
 
@@ -153,11 +138,12 @@ theorem christian_strength : christian.strength = 0 := by decide
 `disputed`. -/
 theorem criticalDenial_strength : criticalDenial.strength = 0 := by decide
 
-/-- Berry's one ranked premise is cited `wellSupported`. -/
-theorem berryObjection_strength : berryObjection.strength = 2 := by decide
+/-- Berry's premise is cited `wellSupported`, but his inference is `disputed`,
+and he is no stronger than it. -/
+theorem berryObjection_strength : berryObjection.strength = 0 := by decide
 
-/-- Both of Postell's ranked premises are cited `wellSupported`. -/
-theorem postellParity_strength : postellParity.strength = 2 := by decide
+/-- Postell's premises are cited `wellSupported` and his inference `plausible`. -/
+theorem postellParity_strength : postellParity.strength = 1 := by decide
 
 /-! ### Who defeats whom -/
 
@@ -227,15 +213,6 @@ theorem postell_defeats_critical : Defeats postellParity criticalDenial :=
       postellParity_establishes⟩,
     by decide⟩
 
-/-- The critic's world, with the near-term fulfilment taken as settled: the sign
-was given to Ahaz, was discharged in his day, and excludes anything further.
-Berry's step holds in it, because its antecedent fails. -/
-def settledFulfilmentReading : Valuation Claim := fun a =>
-  match a with
-  | .isaiahPredictsVirginBirth => False
-  | .nearTermFulfilmentIsUnclear => False
-  | _ => True
-
 /-- The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of
 7:14 — the way out of the parity argument open to a reader who dates them
 later. Postell's step holds in it, because one of its grounds fails. -/
@@ -245,24 +222,17 @@ def laterOraclesReading : Valuation Claim := fun a =>
   | .isaiah9And11ShareTheAssyrianTimeline => False
   | _ => True
 
-/-- **The critical denial does not defeat Berry.** It rebuts him, but it is the
-weaker of the two: its premises are cited `disputed`, below his. And it
-contradicts nothing he rests on — the critical reading grants his premise, and
-the settled-fulfilment reading his step. -/
-theorem critical_does_not_defeat_berry : ¬ Defeats criticalDenial berryObjection := by
-  rintro (⟨φ, ⟨hmem, hent⟩, _⟩ | ⟨_, hweak⟩)
-  · simp only [berryObjection, berryLine, Line.asPackage, Line.premises,
-      List.cons_append, List.nil_append, List.mem_cons, List.not_mem_nil,
-      or_false] at hmem
-    rcases hmem with rfl | rfl <;> revert hent
-    · refute_with criticalReading [criticalDenial, criticalExclusionLine,
-        criticalExclusion]
-    · refute_with settledFulfilmentReading [criticalDenial, criticalExclusionLine,
-        criticalExclusion, berryBlocksExclusion]
-  · exact hweak (by rw [criticalDenial_strength, berryObjection_strength]; decide)
+/-- **The critical denial defeats Berry back.** It holds the premise Berry
+denies, so it rebuts him, and Berry is no stronger than it: his inference is
+contested as the critic's premises are. -/
+theorem critical_defeats_berry : Defeats criticalDenial berryObjection :=
+  .inr ⟨by establish [Rebuts, criticalDenial, berryObjection, criticalExclusionLine,
+      berryLine, criticalExclusion],
+    by rw [criticalDenial_strength, berryObjection_strength]; decide⟩
 
-/-- **The critical denial does not defeat Postell**, for the same reason: it is
-weaker, and it contradicts none of his premises. -/
+/-- **The critical denial does not defeat Postell.** It rebuts him, but it is
+the weaker of the two: its premises are `disputed`, and his inference is
+`plausible`. And it contradicts none of his premises. -/
 theorem critical_does_not_defeat_postell : ¬ Defeats criticalDenial postellParity := by
   rintro (⟨φ, ⟨hmem, hent⟩, _⟩ | ⟨_, hweak⟩)
   · simp only [postellParity, postellLine, Line.asPackage, Line.premises,
@@ -333,7 +303,8 @@ Motyer's reply, with Compton's, denies the critic's *other* premise: that 7:14 i
 a near-term sign to Ahaz at all. It is built as Berry's and Postell's are. Its
 grounds are what the text says — the sign given to the house of David in the
 plural, and 8:4 repeating for Maher-shalal-hash-baz the timetable 7:16 gives the
-child — and the contested move is the step that joins them. -/
+child — and the contested move is the step that joins them, rated `disputed`
+because a cited reading grants the grounds and denies what the step concludes. -/
 
 /-- **The rival reading, written first**: the one that identifies the two
 children. Isaiah 8:1–4 retells the sign of 7:14–16 for Isaiah's own son, so the
@@ -374,9 +345,9 @@ theorem motyerReply_is_satisfiable : Satisfiable motyerReply.premises := by
   satisfied_by motyerReading [motyerReply, motyerLine,
     timetablePassesToMaherShalalHashBaz]
 
-/-- Motyer's two observations are cited `consensus` and `wellSupported`; his
-inference, as a step, carries no rank. -/
-theorem motyerReply_strength : motyerReply.strength = 2 := by decide
+/-- Motyer's observations are cited `consensus` and `wellSupported`, but his
+inference is `disputed`, and he is no stronger than it. -/
+theorem motyerReply_strength : motyerReply.strength = 0 := by decide
 
 /-- **Motyer defeats the critical denial.** He entails the negation of its
 premise that 7:14 is a near-term sign to Ahaz, and that premise, cited
@@ -387,35 +358,13 @@ theorem motyer_defeats_critical : Defeats motyerReply criticalDenial :=
       motyerReply_establishes⟩,
     by decide⟩
 
-/-- The critic's world, with 8:4 read as setting no timetable for the child of
-7:14. Motyer's step holds in it, because one of its grounds fails. -/
-def unsharedTimetableReading : Valuation Claim := fun a =>
-  match a with
-  | .isaiahPredictsVirginBirth => False
-  | .maherShalalHashBazRepeatsTheTimetable => False
-  | _ => True
-
-/-- **The critical denial does not defeat Motyer.** It rebuts him, but its
-premises are cited `disputed`, below his. And it contradicts nothing he rests
-on: the critical reading grants both his observations, and the
-unshared-timetable reading his step.
-
-A position that granted both observations *and* held the near-term reading
-would defeat him outright, because an attack on a step always succeeds. The
-critical denial as encoded does not grant them. -/
-theorem critical_does_not_defeat_motyer : ¬ Defeats criticalDenial motyerReply := by
-  rintro (⟨φ, ⟨hmem, hent⟩, _⟩ | ⟨_, hweak⟩)
-  · simp only [motyerReply, motyerLine, Line.asPackage, Line.premises,
-      List.cons_append, List.nil_append, List.mem_cons, List.not_mem_nil,
-      or_false] at hmem
-    rcases hmem with rfl | rfl | rfl <;> revert hent
-    · refute_with criticalReading [criticalDenial, criticalExclusionLine,
-        criticalExclusion]
-    · refute_with criticalReading [criticalDenial, criticalExclusionLine,
-        criticalExclusion]
-    · refute_with unsharedTimetableReading [criticalDenial, criticalExclusionLine,
-        criticalExclusion, timetablePassesToMaherShalalHashBaz]
-  · exact hweak (by rw [criticalDenial_strength, motyerReply_strength]; decide)
+/-- **The critical denial defeats Motyer back.** It holds the near-term premise
+he denies, so it rebuts him, and he is no stronger than it: his inference is
+contested by the readers who identify the two children. -/
+theorem critical_defeats_motyer : Defeats criticalDenial motyerReply :=
+  .inr ⟨by establish [Rebuts, criticalDenial, motyerReply, criticalExclusionLine,
+      motyerLine, criticalExclusion],
+    by rw [criticalDenial_strength, motyerReply_strength]; decide⟩
 
 /-- The scriptural reading and Motyer stand together. -/
 theorem christian_does_not_defeat_motyer : ¬ Defeats christian motyerReply :=
@@ -488,7 +437,9 @@ theorem exchangeNode_sound : ∀ i, Establishes (exchangeNode i)
 
 /-- The exchange as a dispute. -/
 def exchange : Dispute Claim Exchange :=
-  ⟨exchangeNode, exchangeNode_consistent, exchangeNode_sound⟩
+  ⟨exchangeNode, exchangeNode_consistent, exchangeNode_sound,
+    fun i => by cases i <;> simp [exchangeNode, christian, criticalDenial,
+      criticalExclusionLine, Line.asPackage]⟩
 
 /-- Who defeats whom in the exchange: each party defeats the other. -/
 theorem exchange_defeats (i j : Exchange) : exchange.defeats i j ↔ i ≠ j := by
@@ -584,7 +535,10 @@ theorem partyNode_sound : ∀ i, Establishes (partyNode i)
 
 /-- The dispute over Isaiah 7:14, with all three replies in play. -/
 def isaiahDispute : Dispute Claim Party :=
-  ⟨partyNode, partyNode_consistent, partyNode_sound⟩
+  ⟨partyNode, partyNode_consistent, partyNode_sound,
+    fun i => by cases i <;> simp [partyNode, christian, criticalDenial,
+      criticalExclusionLine, berryObjection, berryLine, postellParity, postellLine,
+      motyerReply, motyerLine, Line.asPackage]⟩
 
 /-- The defeats of the dispute, as a table. -/
 def partyDefeats : Party → Party → Prop
@@ -593,11 +547,13 @@ def partyDefeats : Party → Party → Prop
   | .berry, .critical => True
   | .postell, .critical => True
   | .motyer, .critical => True
+  | .critical, .berry => True
+  | .critical, .motyer => True
   | _, _ => False
 
 /-- **Who defeats whom**, all twenty-five pairs proved: the critic and the
-scriptural reading defeat each other; each reply defeats the critic; nothing
-else. -/
+scriptural reading defeat each other; each reply defeats the critic; the critic
+defeats Berry and Motyer back, but not Postell; nothing else. -/
 theorem isaiahDispute_defeats (i j : Party) :
     isaiahDispute.defeats i j ↔ partyDefeats i j := by
   cases i <;> cases j <;> simp only [partyDefeats, iff_true, iff_false]
@@ -608,9 +564,9 @@ theorem isaiahDispute_defeats (i j : Party) :
     | exact berry_defeats_critical
     | exact postell_defeats_critical
     | exact motyer_defeats_critical
-    | exact critical_does_not_defeat_berry
+    | exact critical_defeats_berry
     | exact critical_does_not_defeat_postell
-    | exact critical_does_not_defeat_motyer
+    | exact critical_defeats_motyer
     | exact christian_does_not_defeat_berry
     | exact berry_does_not_defeat_christian
     | exact christian_does_not_defeat_postell
@@ -624,10 +580,10 @@ theorem isaiahDispute_defeats (i j : Party) :
     | exact postell_does_not_defeat_motyer
     | exact motyer_does_not_defeat_postell
 
-/-- **Heard out, the scriptural reading prevails.** Nothing defeats Berry,
-Postell or Motyer, so all three are in the grounded extension from the first
-step; they defeat the critic, the scriptural reading's only defeater, so at the
-second step it joins them; and nothing defends the critic. -/
+/-- **Heard out, the scriptural reading prevails.** Nothing defeats Postell, so
+he is in the grounded extension from the first step. He defeats the critic —
+the only party that defeats the scriptural reading, Berry or Motyer — so at the
+second step all three join him; and nothing defends the critic. -/
 @[headline]
 theorem scriptural_reading_prevails_once_replies_are_heard :
     grounded isaiahDispute.defeats = {.scriptural, .berry, .postell, .motyer} := by
@@ -642,12 +598,12 @@ theorem scriptural_reading_prevails_once_replies_are_heard :
 #print axioms scriptural_reading_prevails_once_replies_are_heard
 
 /-- **The critical denial cannot be defended.** No admissible set contains it:
-Berry defeats it, and nothing defeats Berry. -/
+Postell defeats it, and nothing defeats Postell. -/
 @[headline]
 theorem critical_denial_indefensible (S : Set Party)
     (hS : Admissible isaiahDispute.defeats S) : Party.critical ∉ S := by
   intro hc
-  obtain ⟨c, _, hcb⟩ := hS.2 _ hc .berry ((isaiahDispute_defeats _ _).mpr trivial)
+  obtain ⟨c, _, hcb⟩ := hS.2 _ hc .postell ((isaiahDispute_defeats _ _).mpr trivial)
   rw [isaiahDispute_defeats] at hcb
   cases c <;> exact hcb
 
@@ -665,8 +621,8 @@ theorem critical_denial_not_credulously_accepted :
 
 /-! ### Motyer alone
 
-Berry and Postell deny the same premise, and both rest on ratings a reader can
-contest. Motyer denies the other one. Heard without them, he is enough. -/
+Motyer denies the critic's other premise, and his reply is the only one that
+does. Heard without Berry or Postell, he is not enough. -/
 
 /-- The three parties of the hearing: the scriptural reading, the critic, and
 Motyer. -/
@@ -713,13 +669,16 @@ theorem hearingNode_sound : ∀ i, Establishes (hearingNode i)
 
 /-- The scriptural reading and the critic, with only Motyer heard. -/
 def motyerHearing : Dispute Claim Hearing :=
-  ⟨hearingNode, hearingNode_consistent, hearingNode_sound⟩
+  ⟨hearingNode, hearingNode_consistent, hearingNode_sound,
+    fun i => by cases i <;> simp [hearingNode, christian, criticalDenial,
+      criticalExclusionLine, motyerReply, motyerLine, Line.asPackage]⟩
 
 /-- The defeats of the hearing, as a table. -/
 def hearingDefeats : Hearing → Hearing → Prop
   | .critical, .scriptural => True
   | .scriptural, .critical => True
   | .motyer, .critical => True
+  | .critical, .motyer => True
   | _, _ => False
 
 /-- Who defeats whom in the hearing, all nine pairs. -/
@@ -731,25 +690,28 @@ theorem motyerHearing_defeats (i j : Hearing) :
     | exact critical_defeats_christian
     | exact christian_defeats_critical
     | exact motyer_defeats_critical
-    | exact critical_does_not_defeat_motyer
+    | exact critical_defeats_motyer
     | exact christian_does_not_defeat_motyer
     | exact motyer_does_not_defeat_christian
 
-/-- **Motyer alone reinstates the scriptural reading.** Without Berry or
-Postell, nothing defeats Motyer; he defeats the critic, and so defends the
-scriptural reading against it. The verdict does not hang on one pair of
-replies, or on the premise they contest. -/
+/-- **Motyer alone does not settle it.** Heard without Berry or Postell, he and
+the critic defeat each other, as the scriptural reading and the critic do, so
+nothing is forced and the grounded extension is empty. His inference is
+contested as the critic's premises are, and a contested reply cannot carry the
+verdict alone. -/
 @[headline]
-theorem scriptural_reading_prevails_on_motyer_alone :
-    grounded motyerHearing.defeats = {.scriptural, .motyer} := by
-  refine grounded_eq_of_iterate 2 ?_ ?_
-  · ext a
-    cases a <;> simp [characteristic, Defends, motyerHearing_defeats, hearingDefeats,
-      Hearing.forall_iff, Hearing.exists_iff]
-  · intro a ha
-    cases a <;> simp_all [characteristic, Defends, motyerHearing_defeats, hearingDefeats,
-      Hearing.forall_iff, Hearing.exists_iff]
+theorem nothing_prevails_on_motyer_alone : grounded motyerHearing.defeats = ∅ := by
+  refine grounded_eq_of_iterate 0 rfl ?_
+  intro a ha
+  have defeater : ∃ b, motyerHearing.defeats b a := by
+    cases a
+    · exact ⟨.critical, (motyerHearing_defeats _ _).mpr trivial⟩
+    · exact ⟨.motyer, (motyerHearing_defeats _ _).mpr trivial⟩
+    · exact ⟨.critical, (motyerHearing_defeats _ _).mpr trivial⟩
+  obtain ⟨b, hb⟩ := defeater
+  obtain ⟨c, hc, _⟩ := ha b hb
+  exact hc
 
-#print axioms scriptural_reading_prevails_on_motyer_alone
+#print axioms nothing_prevails_on_motyer_alone
 
 end Testimony.Arguments.BornOfAVirgin
