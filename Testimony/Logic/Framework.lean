@@ -239,6 +239,14 @@ theorem grounded_eq_of_iterate {S : Set ι} (n : ℕ)
     grounded R = S :=
   le_antisymm (OrderHom.lfp_le _ hstable) (hS ▸ iterate_subset_grounded n)
 
+/-- **When every position is defeated, nothing prevails.** Each has a defeater,
+and the empty set answers none of them. -/
+theorem grounded_eq_empty_of_attacked (h : ∀ a, ∃ b, R b a) : grounded R = ∅ :=
+  grounded_eq_of_iterate 0 rfl fun a ha =>
+    let ⟨b, hb⟩ := h a
+    let ⟨c, hc, _⟩ := ha b hb
+    absurd hc (Set.notMem_empty c)
+
 /-- **A preferred extension, by exhibition.** An admissible set is maximal when
 everything outside it is in conflict with something inside it — no larger set
 could hold both and stay conflict-free. -/

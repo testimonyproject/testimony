@@ -226,6 +226,80 @@ def defeats (i j : ι) : Prop := Defeats (d.node i) (d.node j)
 theorem not_defeats_self (i : ι) : ¬ d.defeats i i :=
   Logic.not_defeats_self (d.consistent i) (d.sound i)
 
+/-- The dispute among some of the parties only: a hearing in which the others
+are not heard. -/
+def restrict (P : ι → Prop) : Dispute α {i // P i} :=
+  ⟨fun i => d.node i.1, fun i => d.consistent i.1, fun i => d.sound i.1,
+    fun i => d.rated i.1⟩
+
+/-- In a hearing, who defeats whom is what it was in the full dispute. -/
+theorem restrict_defeats (P : ι → Prop) (i j : {i // P i}) :
+    (d.restrict P).defeats i j ↔ d.defeats i.1 j.1 := Iff.rfl
+
+/-- The parties `l` **stand together**: one valuation satisfies every premise and
+every conclusion of each of them. It is proved by naming that valuation — the
+world in which none of them has to give way. -/
+def StandTogether (l : List ι) : Prop :=
+  Satisfiable (l.flatMap fun i => (d.node i).premises ++ [(d.node i).conclusion])
+
+/-- **Parties that stand together do not defeat one another.** One named world
+settles every ordered pair in the group at once. -/
+theorem StandTogether.not_defeats {d : Dispute α ι} {l : List ι} (h : d.StandTogether l)
+    {i j : ι} (hi : i ∈ l) (hj : j ∈ l) : ¬ d.defeats i j := by
+  obtain ⟨w, hw⟩ := satisfiable_iff.mp h
+  have holds : ∀ k ∈ l, (∀ φ ∈ (d.node k).premises, w ⊧ φ) ∧ w ⊧ (d.node k).conclusion :=
+    fun k hk => ⟨fun φ hφ => hw φ (List.mem_flatMap.mpr ⟨k, hk, by simp [hφ]⟩),
+      hw _ (List.mem_flatMap.mpr ⟨k, hk, by simp⟩)⟩
+  refine not_defeats_of_joint_model (satisfiable_iff.mpr ⟨w, fun φ hφ => ?_⟩)
+  simp only [List.mem_append, List.mem_singleton] at hφ
+  rcases hφ with (hφ | hφ) | rfl
+  · exact (holds i hi).1 φ hφ
+  · exact (holds j hj).1 φ hφ
+  · exact (holds j hj).2
+
 end Dispute
+
+/-- **An attack that the ratings block, and nothing else.** `a` is weaker than
+`b`, so its rebuttal fails; and each of `b`'s premises can hold alongside all of
+`a`'s, so it undermines nothing. -/
+theorem not_defeats_of_outweighed {a b : ArgumentPackage α} (hweak : a.strength < b.strength)
+    (hmodels : ∀ φ ∈ b.premises, Satisfiable (a.premises ++ [φ])) : ¬ Defeats a b := by
+  rintro (⟨φ, ⟨hmem, hent⟩, _⟩ | ⟨_, hw⟩)
+  · obtain ⟨w, hw⟩ := satisfiable_iff.mp (hmodels φ hmem)
+    exact (entails_iff.mp hent w fun ψ hψ => hw ψ (by simp [hψ])) (hw φ (by simp))
+  · exact hw hweak
+
+/-- `defeat_table [defs] using [facts]` proves `d.defeats i j ↔ table i j` for
+every pair of a finite dispute: it splits on both parties, reduces the table by
+`defs`, and closes each goal from the diagonal or from one of `facts` — a
+defeat, a non-defeat, or a `StandTogether` group, whose memberships it decides. -/
+syntax "defeat_table" ppSpace "[" Lean.Parser.Tactic.simpLemma,+ "]" ppSpace "using"
+  ppSpace "[" term,+ "]" : tactic
+
+open Lean in
+macro_rules
+  | `(tactic| defeat_table [$ls,*] using [$facts,*]) => do
+    let direct ← facts.getElems.mapM fun f => `(tacticSeq| exact $f)
+    let grouped ← facts.getElems.mapM fun f =>
+      `(tacticSeq| exact Dispute.StandTogether.not_defeats $f (by decide) (by decide))
+    let diagonal ← `(tacticSeq| exact Dispute.not_defeats_self _ _)
+    let alts := #[diagonal] ++ direct ++ grouped
+    `(tactic| (intro i j; cases i <;> cases j <;>
+        simp only [$ls,*, iff_true, iff_false] <;> first $[| $alts]*))
+
+/-- `grounded_by n [lemmas]` proves `grounded R = S` for a finite dispute: `S` is
+the `n`-th iterate of the characteristic function from `∅`, and defends nothing
+more. Each membership is decided by `simp` with `lemmas` — the defeat table,
+and the enumeration of the parties. -/
+syntax "grounded_by" ppSpace num ppSpace "[" Lean.Parser.Tactic.simpLemma,+ "]" : tactic
+
+macro_rules
+  | `(tactic| grounded_by $n [$ls,*]) =>
+    `(tactic|
+        (refine Framework.grounded_eq_of_iterate $n ?_ ?_
+         · ext a
+           cases a <;> simp [Framework.characteristic, Framework.Defends, $ls,*]
+         · intro a ha
+           cases a <;> simp_all [Framework.characteristic, Framework.Defends, $ls,*]))
 
 end Testimony.Logic

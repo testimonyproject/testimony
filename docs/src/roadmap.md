@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **59 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **60 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -50,12 +50,13 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `usage_parity_blocks_wegner` | `¬Establishes wegnerUnderUsageParity` | **Postell's second reply, and it is independent of the first.** Concede the parse, concede the ordinary pregnancy, concede that the woman of Isaiah 7:14 is no virgin — and the … |
 | `hinges_jointly_load_bearing` | `¬Establishes christianWithoutAnyHinge` | **The result worth having.** No single hinge carries the argument, but the four of them jointly do: remove all four and the criterion no longer follows, with every textual and … |
 | `jesus_satisfies_virgin_birth` | `Satisfies jesus bornOfAVirgin` | End to end: under the scriptural package, Jesus satisfies the virgin-birth criterion. |
-| `christian_defeats_critical` | `Defeats christian criticalDenial` | **The scriptural reading answers the critic.** Its rebuttal is a defeat: the weakest premise on each side is cited `disputed`, so neither outranks the other, and each defeats the … |
 | `motyer_rests_on_his_inference` | `¬Entails motyerLine.grounds (notP Claim.isaiahIsNearTermSignToAhaz)` | **Motyer's reply rests on his inference, not on his observations.** On the reading that identifies the two children, the sign is given to the house of David, 8:4 repeats the … |
-| `nothing_prevails_unanswered` | `Framework.grounded exchange.defeats = ∅` | **Unanswered, nothing prevails.** The scriptural reading and the critical denial defeat each other, so neither is forced, and the grounded extension is empty. |
+| `christian_defeats_critical` | `Defeats christian criticalDenial` | **The scriptural reading answers the critic.** Its rebuttal is a defeat: the weakest link on each side is `disputed`, so neither outranks the other, and each defeats the other. |
 | `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell, Party.motyer}` | **Heard out, the scriptural reading prevails.** Nothing defeats Postell, so he is in the grounded extension from the first step. |
 | `critical_denial_indefensible` | `∀ (S : Set Party), Framework.Admissible isaiahDispute.defeats S → Party.critical ∉ S` | **The critical denial cannot be defended.** No admissible set contains it: Postell defeats it, and nothing defeats Postell. |
-| `nothing_prevails_on_motyer_alone` | `Framework.grounded motyerHearing.defeats = ∅` | **Motyer alone does not settle it.** Heard without Berry or Postell, he and the critic defeat each other, as the scriptural reading and the critic do, so nothing is forced and the … |
+| `nothing_prevails_unanswered` | `Framework.grounded unanswered.defeats = ∅` | **Unanswered, nothing prevails.** The scriptural reading and the critical denial defeat each other, so neither is forced, and the grounded extension is empty. |
+| `nothing_prevails_on_motyer_alone` | `Framework.grounded motyerAlone.defeats = ∅` | **Motyer alone does not settle it.** He and the critic defeat each other, as the scriptural reading and the critic do, so nothing is forced. |
+| `nothing_prevails_without_postell` | `Framework.grounded withoutPostell.defeats = ∅` | **Without Postell, nothing prevails.** Berry and Motyer each tie with the critic, as the scriptural reading does, so every party is defeated by someone. |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -208,8 +209,8 @@ replies' inferences, unrated, had let each reply be weighed by its observations
 alone, so that where an encoding put a contested move — atom or step — decided
 who prevailed. Rated, Berry's and Motyer's steps are `disputed` and tie with the
 critic (`nothing_prevails_on_motyer_alone`); the verdict rests on Postell's
-alone, rated `plausible` because no source cited grants his grounds and keeps
-the exclusion. That makes the ratings premises of the result, and says which
+alone (`nothing_prevails_without_postell`), rated `plausible` because no source
+cited grants his grounds and keeps the exclusion. That makes the ratings premises of the result, and says which
 one to contest.
 
 **A premise can be load-bearing in one role and not another.** The sola

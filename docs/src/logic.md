@@ -382,7 +382,8 @@ would attack everything. A reply written with `Line.onGrounds` keeps the
 objection's conclusion and so is not a node; write the reply as its own `Line`,
 with what it concludes as `delivers`.
 
-**2. Prove the defeat table, every ordered pair.** Four shapes cover it:
+**2. Prove the defeats that hold, and group the ones that do not.** Each defeat
+is a named result — the attack, then the comparison of strengths:
 
 ```lean
 -- undermining: the premise, its membership, the entailment, the ranks
@@ -396,29 +397,36 @@ theorem berry_defeats_critical : Defeats berryObjection criticalDenial :=
 theorem christian_defeats_critical : Defeats christian criticalDenial :=
   .inr ⟨christian_rebuts_critical,
     by rw [christian_strength, criticalDenial_strength]; decide⟩
-
--- no attack: name the world in which both positions stand
-theorem berry_does_not_defeat_postell : ¬ Defeats berryObjection postellParity :=
-  not_defeats_of_joint_model (by satisfied_by repliesStandReading […])
-
--- the diagonal, for free
-isaiahDispute.not_defeats_self i
 ```
 
-An attack the ratings block needs both of its routes closed: each undermining,
-by a named world in which the attacker's premises hold alongside the premise,
-and the rebuttal, by strength. `critical_does_not_defeat_postell` is the example.
+The absences come in two shapes, and neither is written pair by pair. Parties
+that can all hold at once **stand together**: one named world settles every
+ordered pair among them. An attack the ratings block is **outweighed**: the
+attacker is weaker, and each premise it might undermine holds alongside it.
+
+```lean
+theorem replies_stand_with_the_scriptural_reading :
+    isaiahDispute.StandTogether [.scriptural, .berry, .postell, .motyer] := by
+  satisfied_by motyerReading […]
+
+theorem critical_does_not_defeat_postell : ¬ Defeats criticalDenial postellParity :=
+  not_defeats_of_outweighed (by …) (…)   -- one named world per premise
+```
+
 Strengths are computed by `decide`, and are worth stating as results of their
 own, because they are what a reader contests.
 
-**3. Collect the table** as one `↔` against a function by cases, proved by
-`cases i <;> cases j` and the pairwise results.
+**3. Collect the table.** `defeat_table [table] using [facts]` proves the `↔`
+against a table for every ordered pair, from the defeats, the groups and the
+diagonal.
 
-**4. State what survives.** `grounded_eq_of_iterate` proves a grounded
-extension: give the iterate of the characteristic function from `∅` and show it
-defends nothing new. `preferred_of_blocked` proves a preferred extension: show
-the set is admissible and that everything outside it conflicts with something
-inside. Credulous and sceptical acceptance follow from exhibited extensions.
+**4. State what survives.** `grounded_by n [lemmas]` proves a grounded
+extension as the `n`-th iterate of the characteristic function from `∅`.
+`grounded_eq_empty_of_attacked` proves that nothing prevails when every party
+has a defeater. `Dispute.restrict` hears only some of the parties, keeping the
+defeats already proved, which is how a result says what one party is worth:
+take it away and see what survives. `preferred_of_blocked` proves a preferred
+extension, and credulous and sceptical acceptance follow from exhibited ones.
 
 ## Manifests
 

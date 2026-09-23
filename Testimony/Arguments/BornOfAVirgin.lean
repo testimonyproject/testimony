@@ -157,8 +157,9 @@ steps are rated like premises, and Berry's and Motyer's are `disputed`, so
 alone they tie with the critic: `nothing_prevails_on_motyer_alone`, and
 `motyer_rests_on_his_inference` shows the weight of his reply is on that step.
 The outcome turns on Postell's inference being `plausible` — no cited source
-grants his grounds and keeps the exclusion — and on the critic's premises being
-`disputed`, as the replies, Motyer and Compton contest them.
+grants his grounds and keeps the exclusion — and without him nothing prevails
+(`nothing_prevails_without_postell`). It turns too on the critic's premises
+being `disputed`, as the replies, Motyer and Compton contest them.
 
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands

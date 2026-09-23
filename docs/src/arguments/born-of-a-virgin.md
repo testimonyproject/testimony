@@ -158,8 +158,9 @@ steps are rated like premises, and Berry's and Motyer's are `disputed`, so
 alone they tie with the critic: `nothing_prevails_on_motyer_alone`, and
 `motyer_rests_on_his_inference` shows the weight of his reply is on that step.
 The outcome turns on Postell's inference being `plausible` — no cited source
-grants his grounds and keeps the exclusion — and on the critic's premises being
-`disputed`, as the replies, Motyer and Compton contest them.
+grants his grounds and keeps the exclusion — and without him nothing prevails
+(`nothing_prevails_without_postell`). It turns too on the critic's premises
+being `disputed`, as the replies, Motyer and Compton contest them.
 
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands
@@ -2650,12 +2651,11 @@ The defeats, all four proved, are these:
 ### What follows
 
 Faced with the scriptural reading alone, **nothing prevails**: the two defeat
-each other, the grounded extension is empty, and each is a resolution of the
-exchange on its own. Add the replies and **the scriptural reading prevails**.
-Nothing defeats Postell; he defeats the critic, which is the only party that
-defeats the scriptural reading, Berry or Motyer; and so all four stand. The
-critical denial belongs to no admissible set at all, because nothing answers
-Postell.
+each other, and the grounded extension is empty. Add the replies and **the
+scriptural reading prevails**. Nothing defeats Postell; he defeats the critic,
+which is the only party that defeats the scriptural reading, Berry or Motyer;
+and so all four stand. The critical denial belongs to no admissible set at all,
+because nothing answers Postell. Take Postell away and nothing prevails again.
 
 This is the result entailment could not state. Adding premises never removes a
 conclusion; adding arguments can change what a dispute forces, and here it
@@ -2686,12 +2686,13 @@ the critic, and heard alone Motyer settles nothing
 Postell's inference is `plausible`. It is a counterexample to the exclusion —
 two oracles on the same Assyrian timeline, read messianically — and no source
 cited here grants his grounds and keeps the exclusion. **The verdict rests on
-that rating.** Rate his inference `disputed` and the critic defeats him back,
-nothing is unattacked, and the dispute returns to a standoff. A critic who
-answered Postell by granting that Isaiah 9 and 11 are messianic on the Assyrian
-timeline, and still held the exclusion, would be the source to find. Postell's
-argument is described in `Lines.lean` as the stronger of the two; the ratings
-now register that, and it is what decides the dispute.
+that rating.** Without Postell, every party is defeated by someone and nothing
+prevails (`nothing_prevails_without_postell`); and rated `disputed`, his
+inference would tie him with the critic as Berry's and Motyer's do. A critic
+who granted that Isaiah 9 and 11 are messianic on the Assyrian timeline, and
+still held the exclusion, would be the source to find. Postell's argument is
+described in `Lines.lean` as the stronger of the two; the ratings now register
+that, and it is what decides the dispute.
 
 ### What the church fathers add, and what they cannot
 
@@ -2719,7 +2720,7 @@ deliver its conclusion before it can take part in a dispute.
 
 The world Berry and Postell describe: everything holds except that a
 near-term sign excludes a messianic sense. The scriptural reading holds in it
-too, which is what the joint-model results below use it for.
+too.
 
 ```lean
 def repliesStandReading : Valuation Claim :=
@@ -2769,234 +2770,7 @@ theorem postellParity_is_satisfiable : Satisfiable postellParity.premises
 -- axioms: propext, Quot.sound
 ```
 
-#### Strength: the weakest link of each position
-
-<a id="christian_strength"></a>
-**`christian_strength`**
-
-The scriptural reading is no stronger than its least supported premise,
-which is cited `disputed`.
-
-```lean
-theorem christian_strength : christian.strength = 0
--- axioms: propext
-```
-
-<a id="criticalDenial_strength"></a>
-**`criticalDenial_strength`**
-
-Both of the critical denial's premises are contested, and cited
-`disputed`.
-
-```lean
-theorem criticalDenial_strength : criticalDenial.strength = 0
--- axioms: propext
-```
-
-<a id="berryObjection_strength"></a>
-**`berryObjection_strength`**
-
-Berry's premise is cited `wellSupported`, but his inference is `disputed`,
-and he is no stronger than it.
-
-```lean
-theorem berryObjection_strength : berryObjection.strength = 0
--- axioms: propext
-```
-
-<a id="postellParity_strength"></a>
-**`postellParity_strength`**
-
-Postell's premises are cited `wellSupported` and his inference `plausible`.
-
-```lean
-theorem postellParity_strength : postellParity.strength = 1
--- axioms: propext
-```
-
-#### Who defeats whom
-
-<a id="critical_defeats_christian"></a>
-**`critical_defeats_christian`**
-
-**The critical denial defeats the scriptural reading.** It entails the
-negation of the premise that Isaiah 7:14 predicts a virgin birth, and that
-premise, cited `disputed`, does not outrank it.
-
-```lean
-theorem critical_defeats_christian : Defeats criticalDenial christian
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="christian_rebuts_critical"></a>
-**`christian_rebuts_critical`**
-
-The scriptural reading does attack the critical denial: it concludes the
-opposite.
-
-```lean
-theorem christian_rebuts_critical : Rebuts christian criticalDenial
--- axioms: propext, Quot.sound
-```
-
-<a id="christian_does_not_undermine_critical"></a>
-**`christian_does_not_undermine_critical`**
-
-But it undermines none of the critical denial's premises. For each of them
-there is a world in which the scriptural reading holds and that premise does
-too: the near-term setting and the exclusion hold where everything does, and the
-exclusion step holds where Berry and Postell are right.
-
-```lean
-theorem christian_does_not_undermine_critical : ∀ (φ : Formula Claim),
-    ¬UnderminesOn christian criticalDenial φ
--- axioms: propext, Quot.sound
-```
-
-<a id="christian_defeats_critical"></a>
-**`christian_defeats_critical`**
-
-**The scriptural reading answers the critic.** Its rebuttal is a defeat:
-the weakest premise on each side is cited `disputed`, so neither outranks the
-other, and each defeats the other.
-
-```lean
-theorem christian_defeats_critical : Defeats christian criticalDenial
--- axioms: propext, Quot.sound
-```
-
-<a id="berry_defeats_critical"></a>
-**`berry_defeats_critical`**
-
-**Berry defeats the critical denial.** He entails the negation of its
-premise that a near-term sign excludes a messianic sense, and that premise, cited
-`disputed`, does not outrank him.
-
-```lean
-theorem berry_defeats_critical : Defeats berryObjection criticalDenial
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="postell_defeats_critical"></a>
-**`postell_defeats_critical`**
-
-**Postell defeats the critical denial**, on the same premise from different
-grounds.
-
-```lean
-theorem postell_defeats_critical : Defeats postellParity criticalDenial
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="laterOraclesReading"></a>
-**`laterOraclesReading`**
-
-The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of
-7:14 — the way out of the parity argument open to a reader who dates them
-later. Postell's step holds in it, because one of its grounds fails.
-
-```lean
-def laterOraclesReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.isaiahPredictsVirginBirth => False
-    | Claim.isaiah9And11ShareTheAssyrianTimeline =>
-      False
-    | x => True
-```
-
-<a id="critical_defeats_berry"></a>
-**`critical_defeats_berry`**
-
-**The critical denial defeats Berry back.** It holds the premise Berry
-denies, so it rebuts him, and Berry is no stronger than it: his inference is
-contested as the critic's premises are.
-
-```lean
-theorem critical_defeats_berry : Defeats criticalDenial berryObjection
--- axioms: propext, Quot.sound
-```
-
-<a id="critical_does_not_defeat_postell"></a>
-**`critical_does_not_defeat_postell`**
-
-**The critical denial does not defeat Postell.** It rebuts him, but it is
-the weaker of the two: its premises are `disputed`, and his inference is
-`plausible`. And it contradicts none of his premises.
-
-```lean
-theorem critical_does_not_defeat_postell : ¬Defeats criticalDenial
-    postellParity
--- axioms: propext, Quot.sound
-```
-
-#### Who does not defeat whom
-
-The scriptural reading, Berry and Postell can all be held at once, in the world
-`repliesStandReading` describes, so none of them attacks another. Each result
-below names that world.
-
-<a id="christian_does_not_defeat_berry"></a>
-**`christian_does_not_defeat_berry`**
-
-The scriptural reading and Berry stand together.
-
-```lean
-theorem christian_does_not_defeat_berry : ¬Defeats christian berryObjection
--- axioms: propext, Quot.sound
-```
-
-<a id="berry_does_not_defeat_christian"></a>
-**`berry_does_not_defeat_christian`**
-
-Berry and the scriptural reading stand together.
-
-```lean
-theorem berry_does_not_defeat_christian : ¬Defeats berryObjection christian
--- axioms: propext, Quot.sound
-```
-
-<a id="christian_does_not_defeat_postell"></a>
-**`christian_does_not_defeat_postell`**
-
-The scriptural reading and Postell stand together.
-
-```lean
-theorem christian_does_not_defeat_postell : ¬Defeats christian postellParity
--- axioms: propext, Quot.sound
-```
-
-<a id="postell_does_not_defeat_christian"></a>
-**`postell_does_not_defeat_christian`**
-
-Postell and the scriptural reading stand together.
-
-```lean
-theorem postell_does_not_defeat_christian : ¬Defeats postellParity christian
--- axioms: propext, Quot.sound
-```
-
-<a id="berry_does_not_defeat_postell"></a>
-**`berry_does_not_defeat_postell`**
-
-Berry and Postell stand together: they are two routes to one conclusion.
-
-```lean
-theorem berry_does_not_defeat_postell : ¬Defeats berryObjection postellParity
--- axioms: propext, Quot.sound
-```
-
-<a id="postell_does_not_defeat_berry"></a>
-**`postell_does_not_defeat_berry`**
-
-Postell and Berry stand together.
-
-```lean
-theorem postell_does_not_defeat_berry : ¬Defeats postellParity berryObjection
--- axioms: propext, Quot.sound
-```
-
-#### Motyer's reply
+##### Motyer's reply
 
 Motyer's reply, with Compton's, denies the critic's *other* premise: that 7:14 is
 a near-term sign to Ahaz at all. It is built as Berry's and Postell's are. Its
@@ -3041,7 +2815,7 @@ theorem motyer_rests_on_his_inference : ¬Entails motyerLine.grounds (notP
 
 The world Motyer describes, with Berry and Postell: the sign is not a
 near-term one, and a near-term sign would not exclude a messianic sense anyway.
-Everything else holds.
+Everything else holds — the scriptural reading and all three replies with it.
 
 ```lean
 def motyerReading : Valuation Claim :=
@@ -3072,6 +2846,54 @@ theorem motyerReply_is_satisfiable : Satisfiable motyerReply.premises
 -- axioms: propext, Quot.sound
 ```
 
+#### Strength: the weakest link of each position
+
+Premises and inferences alike: a position is no stronger than the least
+supported thing it assumes, and an inference is something it assumes.
+
+<a id="christian_strength"></a>
+**`christian_strength`**
+
+The scriptural reading is no stronger than its least supported premise,
+which is cited `disputed`.
+
+```lean
+theorem christian_strength : christian.strength = 0
+-- axioms: propext
+```
+
+<a id="criticalDenial_strength"></a>
+**`criticalDenial_strength`**
+
+Both of the critical denial's premises are contested, and cited
+`disputed`.
+
+```lean
+theorem criticalDenial_strength : criticalDenial.strength = 0
+-- axioms: propext
+```
+
+<a id="berryObjection_strength"></a>
+**`berryObjection_strength`**
+
+Berry's premise is cited `wellSupported`, but his inference is `disputed`,
+and he is no stronger than it.
+
+```lean
+theorem berryObjection_strength : berryObjection.strength = 0
+-- axioms: propext
+```
+
+<a id="postellParity_strength"></a>
+**`postellParity_strength`**
+
+Postell's premises are cited `wellSupported` and his inference `plausible`.
+
+```lean
+theorem postellParity_strength : postellParity.strength = 1
+-- axioms: propext
+```
+
 <a id="motyerReply_strength"></a>
 **`motyerReply_strength`**
 
@@ -3083,183 +2905,157 @@ theorem motyerReply_strength : motyerReply.strength = 0
 -- axioms: propext
 ```
 
+#### The defeats
+
+Each is an attack the ratings do not block, proved by the attack and the
+comparison of strengths.
+
+<a id="critical_defeats_christian"></a>
+**`critical_defeats_christian`**
+
+**The critical denial defeats the scriptural reading.** It entails the
+negation of the premise that Isaiah 7:14 predicts a virgin birth, and that
+premise, cited `disputed`, does not outrank it.
+
+```lean
+theorem critical_defeats_christian : Defeats criticalDenial christian
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="christian_rebuts_critical"></a>
+**`christian_rebuts_critical`**
+
+The scriptural reading does attack the critical denial: it concludes the
+opposite.
+
+```lean
+theorem christian_rebuts_critical : Rebuts christian criticalDenial
+-- axioms: propext, Quot.sound
+```
+
+<a id="christian_does_not_undermine_critical"></a>
+**`christian_does_not_undermine_critical`**
+
+But it undermines none of the critical denial's premises. For each of them
+there is a world in which the scriptural reading holds and that premise does
+too: the near-term setting and the exclusion hold where everything does, and the
+exclusion step holds where Berry and Postell are right.
+
+```lean
+theorem christian_does_not_undermine_critical : ∀ (φ : Formula Claim),
+    ¬UnderminesOn christian criticalDenial φ
+-- axioms: propext, Quot.sound
+```
+
+<a id="christian_defeats_critical"></a>
+**`christian_defeats_critical`**
+
+**The scriptural reading answers the critic.** Its rebuttal is a defeat:
+the weakest link on each side is `disputed`, so neither outranks the other, and
+each defeats the other.
+
+```lean
+theorem christian_defeats_critical : Defeats christian criticalDenial
+-- axioms: propext, Quot.sound
+```
+
+<a id="berry_defeats_critical"></a>
+**`berry_defeats_critical`**
+
+**Berry defeats the critical denial.** He entails the negation of its
+premise that a near-term sign excludes a messianic sense, and that premise,
+cited `disputed`, does not outrank him.
+
+```lean
+theorem berry_defeats_critical : Defeats berryObjection criticalDenial
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="postell_defeats_critical"></a>
+**`postell_defeats_critical`**
+
+**Postell defeats the critical denial**, on the same premise from different
+grounds.
+
+```lean
+theorem postell_defeats_critical : Defeats postellParity criticalDenial
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
 <a id="motyer_defeats_critical"></a>
 **`motyer_defeats_critical`**
 
-**Motyer defeats the critical denial.** He entails the negation of its
-premise that 7:14 is a near-term sign to Ahaz, and that premise, cited
-`disputed`, does not outrank him.
+**Motyer defeats the critical denial**, by entailing the negation of its
+other premise: that 7:14 is a near-term sign to Ahaz, cited `disputed`.
 
 ```lean
 theorem motyer_defeats_critical : Defeats motyerReply criticalDenial
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+<a id="critical_defeats_berry"></a>
+**`critical_defeats_berry`**
+
+**The critical denial defeats Berry back.** It holds the premise Berry
+denies, so it rebuts him, and Berry is no stronger than it: his inference is
+contested as the critic's premises are.
+
+```lean
+theorem critical_defeats_berry : Defeats criticalDenial berryObjection
+-- axioms: propext, Quot.sound
+```
+
 <a id="critical_defeats_motyer"></a>
 **`critical_defeats_motyer`**
 
-**The critical denial defeats Motyer back.** It holds the near-term premise
-he denies, so it rebuts him, and he is no stronger than it: his inference is
-contested by the readers who identify the two children.
+**The critical denial defeats Motyer back**, for the same reason: it holds
+the near-term premise he denies, and his inference is contested by the readers
+who identify the two children.
 
 ```lean
 theorem critical_defeats_motyer : Defeats criticalDenial motyerReply
 -- axioms: propext, Quot.sound
 ```
 
-<a id="christian_does_not_defeat_motyer"></a>
-**`christian_does_not_defeat_motyer`**
+#### What does not defeat
 
-The scriptural reading and Motyer stand together.
+<a id="laterOraclesReading"></a>
+**`laterOraclesReading`**
+
+The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of
+7:14 — the way out of the parity argument open to a reader who dates them
+later. Postell's step holds in it, because one of its grounds fails.
 
 ```lean
-theorem christian_does_not_defeat_motyer : ¬Defeats christian motyerReply
+def laterOraclesReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.isaiahPredictsVirginBirth => False
+    | Claim.isaiah9And11ShareTheAssyrianTimeline =>
+      False
+    | x => True
+```
+
+<a id="critical_does_not_defeat_postell"></a>
+**`critical_does_not_defeat_postell`**
+
+**The critical denial does not defeat Postell.** It rebuts him, but it is
+the weaker of the two: its premises are `disputed`, and his inference is
+`plausible`. And it contradicts none of his premises: the critical reading
+grants both his observations, and the later-oracles reading his step.
+
+```lean
+theorem critical_does_not_defeat_postell : ¬Defeats criticalDenial
+    postellParity
 -- axioms: propext, Quot.sound
 ```
 
-<a id="motyer_does_not_defeat_christian"></a>
-**`motyer_does_not_defeat_christian`**
-
-Motyer and the scriptural reading stand together.
-
-```lean
-theorem motyer_does_not_defeat_christian : ¬Defeats motyerReply christian
--- axioms: propext, Quot.sound
-```
-
-<a id="berry_does_not_defeat_motyer"></a>
-**`berry_does_not_defeat_motyer`**
-
-Berry and Motyer stand together.
-
-```lean
-theorem berry_does_not_defeat_motyer : ¬Defeats berryObjection motyerReply
--- axioms: propext, Quot.sound
-```
-
-<a id="motyer_does_not_defeat_berry"></a>
-**`motyer_does_not_defeat_berry`**
-
-Motyer and Berry stand together.
-
-```lean
-theorem motyer_does_not_defeat_berry : ¬Defeats motyerReply berryObjection
--- axioms: propext, Quot.sound
-```
-
-<a id="postell_does_not_defeat_motyer"></a>
-**`postell_does_not_defeat_motyer`**
-
-Postell and Motyer stand together.
-
-```lean
-theorem postell_does_not_defeat_motyer : ¬Defeats postellParity motyerReply
--- axioms: propext, Quot.sound
-```
-
-<a id="motyer_does_not_defeat_postell"></a>
-**`motyer_does_not_defeat_postell`**
-
-Motyer and Postell stand together.
-
-```lean
-theorem motyer_does_not_defeat_postell : ¬Defeats motyerReply postellParity
--- axioms: propext, Quot.sound
-```
-
-#### The exchange: the scriptural reading against the critic
-
-Before either reply is heard, the dispute has two parties.
-
-<a id="exchangeNode"></a>
-**`exchangeNode`**
-
-The package each party of the exchange argues from.
-
-```lean
-def exchangeNode : Exchange → ArgumentPackage Claim :=
-  fun x =>
-    match x with
-    | Exchange.scriptural =>
-      christian
-    | Exchange.critical =>
-      criticalDenial
-```
-
-<a id="exchangeNode_consistent"></a>
-**`exchangeNode_consistent`**
-
-Each party's premises can hold together.
-
-```lean
-theorem exchangeNode_consistent : ∀ (i : Exchange), Satisfiable (exchangeNode
-    i).premises
--- axioms: propext, Quot.sound
-```
-
-<a id="exchangeNode_sound"></a>
-**`exchangeNode_sound`**
-
-Each party establishes its conclusion.
-
-```lean
-theorem exchangeNode_sound : ∀ (i : Exchange), Establishes (exchangeNode i)
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="exchange"></a>
-**`exchange`**
-
-The exchange as a dispute.
-
-```lean
-def exchange : Dispute Claim Exchange :=
-  { node := exchangeNode,
-    consistent := exchangeNode_consistent,
-    sound := exchangeNode_sound,
-    rated := exchange._proof_1 }
-```
-
-<a id="exchange_defeats"></a>
-**`exchange_defeats`**
-
-Who defeats whom in the exchange: each party defeats the other.
-
-```lean
-theorem exchange_defeats : ∀ (i j : Exchange), exchange.defeats i j ↔ i ≠ j
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="nothing_prevails_unanswered"></a>
-**`nothing_prevails_unanswered`**
-
-**Unanswered, nothing prevails.** The scriptural reading and the critical
-denial defeat each other, so neither is forced, and the grounded extension is
-empty.
-
-```lean
-theorem nothing_prevails_unanswered : Framework.grounded exchange.defeats = ∅
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="exchange_alone_preferred"></a>
-**`exchange_alone_preferred`**
-
-A party of the exchange, standing alone, is a resolution of it: it defeats
-the only party that defeats it, and nothing else remains to be added.
-
-```lean
-theorem exchange_alone_preferred : ∀ (x : Exchange), Framework.Preferred
-    exchange.defeats {x}
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-#### The dispute: the replies heard
+#### The dispute
 
 <a id="partyNode"></a>
 **`partyNode`**
 
-The package each party of the dispute argues from.
+The package each party argues from.
 
 ```lean
 def partyNode : Party → ArgumentPackage Claim :=
@@ -3277,38 +3073,32 @@ def partyNode : Party → ArgumentPackage Claim :=
       motyerReply
 ```
 
-<a id="partyNode_consistent"></a>
-**`partyNode_consistent`**
-
-Each party's premises can hold together.
-
-```lean
-theorem partyNode_consistent : ∀ (i : Party), Satisfiable (partyNode
-    i).premises
--- axioms: propext, Quot.sound
-```
-
-<a id="partyNode_sound"></a>
-**`partyNode_sound`**
-
-Each party establishes its conclusion.
-
-```lean
-theorem partyNode_sound : ∀ (i : Party), Establishes (partyNode i)
--- axioms: propext, Classical.choice, Quot.sound
-```
-
 <a id="isaiahDispute"></a>
 **`isaiahDispute`**
 
-The dispute over Isaiah 7:14, with all three replies in play.
+The dispute over Isaiah 7:14: every party's premises have a model, every
+party establishes its conclusion, and every party's inferences are rated.
 
 ```lean
 def isaiahDispute : Dispute Claim Party :=
   { node := partyNode,
-    consistent := partyNode_consistent,
-    sound := partyNode_sound,
-    rated := isaiahDispute._proof_1 }
+    consistent := isaiahDispute._proof_1,
+    sound := isaiahDispute._proof_2,
+    rated := isaiahDispute._proof_3 }
+```
+
+<a id="replies_stand_with_the_scriptural_reading"></a>
+**`replies_stand_with_the_scriptural_reading`**
+
+**The scriptural reading and all three replies stand together**, in the
+world Motyer describes: none of the four defeats another. One fact, settling
+twelve ordered pairs.
+
+```lean
+theorem replies_stand_with_the_scriptural_reading :
+    isaiahDispute.StandTogether [Party.scriptural, Party.berry, Party.postell,
+    Party.motyer]
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="partyDefeats"></a>
@@ -3340,9 +3130,9 @@ def partyDefeats : Party → Party → Prop :=
 <a id="isaiahDispute_defeats"></a>
 **`isaiahDispute_defeats`**
 
-**Who defeats whom**, all twenty-five pairs proved: the critic and the
-scriptural reading defeat each other; each reply defeats the critic; the critic
-defeats Berry and Motyer back, but not Postell; nothing else.
+**Who defeats whom**, all twenty-five pairs: the critic and the scriptural
+reading defeat each other; each reply defeats the critic; the critic defeats
+Berry and Motyer back, but not Postell; nothing else.
 
 ```lean
 theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
@@ -3399,104 +3189,87 @@ theorem critical_denial_not_credulously_accepted :
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-#### Motyer alone
+#### Hearings
 
-Motyer denies the critic's other premise, and his reply is the only one that
-does. Heard without Berry or Postell, he is not enough.
+The same dispute with some parties not heard. Each hearing is a restriction of
+`isaiahDispute`, so its defeats are the ones already proved. In each of these,
+every party has a defeater, and so nothing prevails.
 
-<a id="hearingNode"></a>
-**`hearingNode`**
+<a id="unanswered"></a>
+**`unanswered`**
 
-The package each party of the hearing argues from.
+The scriptural reading and the critic alone.
 
 ```lean
-def hearingNode : Hearing → ArgumentPackage Claim :=
-  fun x =>
-    match x with
-    | Hearing.scriptural =>
-      christian
-    | Hearing.critical =>
-      criticalDenial
-    | Hearing.motyer =>
-      motyerReply
+def unanswered : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical] } :=
+  isaiahDispute.restrict fun x =>
+    x ∈
+      [Party.scriptural,
+        Party.critical]
 ```
 
-<a id="hearingNode_consistent"></a>
-**`hearingNode_consistent`**
+<a id="nothing_prevails_unanswered"></a>
+**`nothing_prevails_unanswered`**
 
-Each party's premises can hold together.
-
-```lean
-theorem hearingNode_consistent : ∀ (i : Hearing), Satisfiable (hearingNode
-    i).premises
--- axioms: propext, Quot.sound
-```
-
-<a id="hearingNode_sound"></a>
-**`hearingNode_sound`**
-
-Each party establishes its conclusion.
+**Unanswered, nothing prevails.** The scriptural reading and the critical
+denial defeat each other, so neither is forced, and the grounded extension is
+empty.
 
 ```lean
-theorem hearingNode_sound : ∀ (i : Hearing), Establishes (hearingNode i)
+theorem nothing_prevails_unanswered : Framework.grounded unanswered.defeats =
+    ∅
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="motyerHearing"></a>
-**`motyerHearing`**
+<a id="motyerAlone"></a>
+**`motyerAlone`**
 
-The scriptural reading and the critic, with only Motyer heard.
-
-```lean
-def motyerHearing : Dispute Claim Hearing :=
-  { node := hearingNode,
-    consistent := hearingNode_consistent,
-    sound := hearingNode_sound,
-    rated := motyerHearing._proof_1 }
-```
-
-<a id="hearingDefeats"></a>
-**`hearingDefeats`**
-
-The defeats of the hearing, as a table.
+The scriptural reading, the critic, and Motyer.
 
 ```lean
-def hearingDefeats : Hearing → Hearing → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Hearing.critical,
-      Hearing.scriptural => True
-    | Hearing.scriptural,
-      Hearing.critical => True
-    | Hearing.motyer,
-      Hearing.critical => True
-    | Hearing.critical,
-      Hearing.motyer => True
-    | x, x_2 => False
-```
-
-<a id="motyerHearing_defeats"></a>
-**`motyerHearing_defeats`**
-
-Who defeats whom in the hearing, all nine pairs.
-
-```lean
-theorem motyerHearing_defeats : ∀ (i j : Hearing), motyerHearing.defeats i j ↔
-    hearingDefeats i j
--- axioms: propext, Classical.choice, Quot.sound
+def motyerAlone : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical,
+    Party.motyer] } :=
+  isaiahDispute.restrict fun x =>
+    x ∈
+      [Party.scriptural,
+        Party.critical,
+        Party.motyer]
 ```
 
 <a id="nothing_prevails_on_motyer_alone"></a>
 **`nothing_prevails_on_motyer_alone`**
 
-**Motyer alone does not settle it.** Heard without Berry or Postell, he and
-the critic defeat each other, as the scriptural reading and the critic do, so
-nothing is forced and the grounded extension is empty. His inference is
+**Motyer alone does not settle it.** He and the critic defeat each other, as
+the scriptural reading and the critic do, so nothing is forced. His inference is
 contested as the critic's premises are, and a contested reply cannot carry the
 verdict alone.
 
 ```lean
 theorem nothing_prevails_on_motyer_alone : Framework.grounded
-    motyerHearing.defeats = ∅
+    motyerAlone.defeats = ∅
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="withoutPostell"></a>
+**`withoutPostell`**
+
+Every party but Postell.
+
+```lean
+def withoutPostell : Dispute Claim { i // i ≠ Party.postell } :=
+  isaiahDispute.restrict fun x =>
+    x ≠ Party.postell
+```
+
+<a id="nothing_prevails_without_postell"></a>
+**`nothing_prevails_without_postell`**
+
+**Without Postell, nothing prevails.** Berry and Motyer each tie with the
+critic, as the scriptural reading does, so every party is defeated by someone.
+The verdict rests on the one reply the critic cannot answer.
+
+```lean
+theorem nothing_prevails_without_postell : Framework.grounded
+    withoutPostell.defeats = ∅
 -- axioms: propext, Classical.choice, Quot.sound
 ```
