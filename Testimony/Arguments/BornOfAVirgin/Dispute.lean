@@ -56,6 +56,28 @@ is rated `wellSupported` on Brown's authority. Rated `disputed`, both replies
 would defeat the critic without being defeated back, and the scriptural
 reading would join the grounded extension. The rating is a premise of this
 result, and contesting it is contesting the result.
+
+## What the church fathers add, and what they cannot
+
+The predictive reading is not a modern apologetic. Justin, Irenaeus, Origen and
+Jerome all argue it, and `Sources.lean` cites them for it: for the
+prediction itself, for עַלְמָה as a virgin, and — the argument they share —
+that an ordinary conception would have been no sign at all. That strengthens
+the attestation of the scriptural premises, and none of it changes a rating.
+
+It cannot, for two reasons. The first is what `disputed` means here: *actively
+contested by competent scholars*. The fathers are the earliest witnesses to the
+contest as well as to the reading. Justin records Trypho's answer — "young
+woman", and fulfilled in Hezekiah — and Irenaeus names Theodotion and Aquila.
+An older witness does not make a contested claim uncontested.
+
+The second is structural. The critic defeats the scriptural reading by
+undermining its predictive premise, and that attack fails only if the premise
+outranks the critic, whose weakest link is `wellSupported`: only a `consensus`
+rating would block it. The scriptural reading's own rebuttal succeeds only if
+*every* claim it rests on is rated at least `wellSupported`, across all four
+strands. Under the weakest-link rule, support for one premise changes nothing
+unless it lifts the lowest.
 -/
 
 namespace Testimony.Arguments.BornOfAVirgin

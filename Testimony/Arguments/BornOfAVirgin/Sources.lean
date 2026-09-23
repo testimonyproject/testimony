@@ -27,17 +27,31 @@ def cite : Claim → AtomMeta
   | .isaiahPredictsVirginBirth =>
     { label := "Isaiah 7:14 is a Messianic prediction of a virgin birth"
     , kind := .interpretive
-    , source := motyerOnIsaiah }
+      -- The church's reading from the second century: Justin (Dial. 43, 66),
+      -- Irenaeus (Haer. III.21.6), Origen (Cels. I.35). Still `disputed`,
+      -- because the same texts record it contested from the start — Trypho's
+      -- reply (Dial. 67), Theodotion and Aquila (Haer. III.21.1). The fathers
+      -- attest the reading's age, not its standing.
+    , source :=
+        { motyerOnIsaiah with
+          supporting :=
+            [ .work justinDialogue (.sectionRef "66")
+            , .work irenaeusAgainstHeresies (.sectionRef "III.21.6")
+            , .work origenAgainstCelsus (.sectionRef "I.35") ] } }
   | .almahMeansVirgin =>
     { label := "עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman"
     , kind := .linguistic
       -- The Isaianic crux. The Hebrew term does not by itself carry the sense;
-      -- the Septuagint's παρθένος does.
+      -- the Septuagint's παρθένος does. Jerome argues it does (Jov. I.32):
+      -- עַלְמָה is a "hidden" virgin, as Rebekah is at Genesis 24:43. Origen
+      -- is not cited: his appeal to Deuteronomy 22 (Cels. I.34) is to a law
+      -- whose Hebrew reads נַעֲרָה בְתוּלָה, not עַלְמָה.
     , source :=
         { motyerOnIsaiah with
           supporting :=
             [ .work bhs (.apparatus isaiah7_14)
-            , .work berryVirginBirth (.pages 1653 1654) ] } }
+            , .work berryVirginBirth (.pages 1653 1654)
+            , .work jeromeAgainstJovinianus (.sectionRef "I.32") ] } }
   | .almahAdmitsVirginSense =>
     { label := "The semantic range of עַלְמָה does not exclude 'virgin' at Isaiah 7:14"
     , kind := .linguistic
@@ -118,6 +132,7 @@ def cite : Claim → AtomMeta
       -- Theodotion's version is arguably pre-Christian.
     , source :=
         { primary := .work ricoGentryInfantKing .whole
+        , supporting := [.work irenaeusAgainstHeresies (.sectionRef "III.21.1")]
         , tradition := .criticalScholarship
         , confidence := .consensus } }
   | .peshittaRendersBtulta =>
@@ -169,7 +184,10 @@ def cite : Claim → AtomMeta
       -- The hinge of Wegner's objection, and not a lexical claim at all. He
       -- gets it from the near-term reading of the sign: the child born within
       -- nine months, everything in the oracle discharged by 701 BC. Rydelnik,
-      -- parsing הָרָה as Wegner does, denies it outright.
+      -- parsing הָרָה as Wegner does, denies it outright. So do the fathers,
+      -- on the ground that an ordinary conception would be no sign: Justin
+      -- (Dial. 84), Irenaeus (Haer. III.21.6), and Origen (Cels. I.35), who
+      -- ties it to the sign offered "in the depth or in the height" (7:11).
     , source :=
         { wegnerOnAlmah (.pages 476 478) .disputed with
           supporting := [.work postellIsaiahMessianic (.page 474)] } }
@@ -207,6 +225,7 @@ def cite : Claim → AtomMeta
         { postellOnIsaiah (.page 468) .plausible with
           supporting :=
             [ .work wegnerVirginBirths (.pages 471 472)
+            , .work jeromeAgainstJovinianus (.sectionRef "I.32")
             , .scripture clearAlmahPassages ] } }
   | .matthewQuotesIsaiah =>
     { label := "Matthew 1:23 quotes Isaiah 7:14"
@@ -310,6 +329,10 @@ def cite : Claim → AtomMeta
   | .isaiahIsNearTermSignToAhaz =>
     { label := "Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation"
     , kind := .interpretive
+      -- The reading Justin already answers, in Trypho's form: fulfilled in
+      -- Hezekiah (Dial. 67, 77). Origen's reply is a question — which child
+      -- of Ahaz's day was called Immanuel? — and his conclusion that the sign
+      -- was given to the house of David (Cels. I.35).
     , source := brownOnBirth }
   | .nearTermExcludesMessianicSense =>
     { label := "A sign given for Ahaz's generation is not also a prediction of a virgin birth"

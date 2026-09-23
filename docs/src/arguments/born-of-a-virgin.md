@@ -224,8 +224,8 @@ reader sees.
 
 | | claim | kind | held | source |
 |---|---|---|---|---|
-| \\(P_{1}\\) | Isaiah 7:14 is a Messianic prediction of a virgin birth | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14 |
-| \\(P_{2}\\) | עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman | linguistic | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654 |
+| \\(P_{1}\\) | Isaiah 7:14 is a Messianic prediction of a virgin birth | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35 |
+| \\(P_{2}\\) | עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman | linguistic | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32 |
 | \\(P_{3}\\) | The semantic range of עַלְמָה does not exclude 'virgin' at Isaiah 7:14 | linguistic | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654 |
 | \\(P_{4}\\) | עַלְמָה denotes a young woman of marriageable age | linguistic | critical scholarship, consensus | [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020); [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011) |
 | \\(P_{5}\\) | Being a virgin does not exclude a woman from the denotation of עַלְמָה | linguistic | critical scholarship, consensus | Gen 24:43; Gen 24:16; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020) |
@@ -234,7 +234,7 @@ reader sees.
 | \\(P_{8}\\) | Matthew's fulfilment claim requires that עַלְמָה itself denote virginity | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
 | \\(P_{9}\\) | The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος | textual | critical scholarship, consensus | [`na28-2012`](../bibliography.md#na28-2012), app. Matt 1:23; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
 | \\(P_{10}\\) | Targum Jonathan renders עַלְמָה at Isaiah 7:14 as עוּלֵימְתָא, 'young woman' | textual | critical scholarship, consensus | [`chilton-isaiah-targum-1987`](../bibliography.md#chilton-isaiah-targum-1987), ad loc. Isa 7:14; Isa 7:14 |
-| \\(P_{11}\\) | Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις | textual | critical scholarship, consensus | [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020) |
+| \\(P_{11}\\) | Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις | textual | critical scholarship, consensus | [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020); [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.1 |
 | \\(P_{12}\\) | The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, 'virgin' ※ | textual | critical scholarship, consensus | Isa 7:14 |
 | \\(P_{13}\\) | 1QIsaᵃ reads עַלְמָה, so no textual variant bears on the sense | textual | critical scholarship, consensus | [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; Isa 7:14 |
 | \\(P_{14}\\) | The split among the ancient versions shows עַלְמָה does not denote virginity | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993); [`chilton-isaiah-targum-1987`](../bibliography.md#chilton-isaiah-targum-1987) |
@@ -243,7 +243,7 @@ reader sees.
 | \\(P_{17}\\) | The pregnancy Isaiah 7:14 announces is an ordinary conception | interpretive | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474 |
 | \\(P_{18}\\) | The עַלְמָה of Isaiah 7:14 is not a virgin | interpretive | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468 |
 | \\(P_{19}\\) | What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes | linguistic | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152 |
-| \\(P_{20}\\) | In the other clear עַלְמָה passages Wegner lists, the women are virgins | linguistic | Christian, historical-grammatical, plausible | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; Gen 24:43; Song 6:8 |
+| \\(P_{20}\\) | In the other clear עַלְמָה passages Wegner lists, the women are virgins | linguistic | Christian, historical-grammatical, plausible | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32; Gen 24:43; Song 6:8 |
 | \\(P_{21}\\) | Matthew 1:23 quotes Isaiah 7:14 | textual | critical scholarship, consensus | [`na28-2012`](../bibliography.md#na28-2012), app. Matt 1:23; [`ubs5-2014`](../bibliography.md#ubs5-2014) |
 | \\(P_{22}\\) | Matthew's quotation intends the virgin conception as fulfilment | interpretive | Christian, historical-grammatical, well supported | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
 | \\(P_{23}\\) | Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology | textual | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–490; Isa 2:1-4; Isa 11:1-12:6 |
@@ -2608,6 +2608,28 @@ is rated `wellSupported` on Brown's authority. Rated `disputed`, both replies
 would defeat the critic without being defeated back, and the scriptural
 reading would join the grounded extension. The rating is a premise of this
 result, and contesting it is contesting the result.
+
+### What the church fathers add, and what they cannot
+
+The predictive reading is not a modern apologetic. Justin, Irenaeus, Origen and
+Jerome all argue it, and `Sources.lean` cites them for it: for the
+prediction itself, for עַלְמָה as a virgin, and — the argument they share —
+that an ordinary conception would have been no sign at all. That strengthens
+the attestation of the scriptural premises, and none of it changes a rating.
+
+It cannot, for two reasons. The first is what `disputed` means here: *actively
+contested by competent scholars*. The fathers are the earliest witnesses to the
+contest as well as to the reading. Justin records Trypho's answer — "young
+woman", and fulfilled in Hezekiah — and Irenaeus names Theodotion and Aquila.
+An older witness does not make a contested claim uncontested.
+
+The second is structural. The critic defeats the scriptural reading by
+undermining its predictive premise, and that attack fails only if the premise
+outranks the critic, whose weakest link is `wellSupported`: only a `consensus`
+rating would block it. The scriptural reading's own rebuttal succeeds only if
+*every* claim it rests on is rated at least `wellSupported`, across all four
+strands. Under the weakest-link rule, support for one premise changes nothing
+unless it lifts the lowest.
 
 #### The replies as positions
 

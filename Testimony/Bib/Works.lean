@@ -667,6 +667,108 @@ it. -/
   , publisher := "Baker Academic"
   , place := some "Grand Rapids" }
 
+/-! ### The church fathers on Isaiah 7:14
+
+Four second- to fourth-century witnesses to the predictive reading, each cited
+through the nineteenth-century translation series whose text was consulted, in
+the revision New Advent publishes. The series carry no ISBN; the entries are
+rendered unverified rather than given the ISBN of a later reprint. -/
+
+/-- *The Ante-Nicene Fathers*, volume 1: the edition through which Justin's
+*Dialogue with Trypho* (tr. Marcus Dods and George Reith) and Irenaeus'
+*Against Heresies* (tr. Alexander Roberts and William Rambaut) are cited. -/
+@[bib_entry] def anf1 : BibEntry := .book
+  { core :=
+      { key := "roberts-ante-nicene-fathers-1-1885"
+      , contributors :=
+          { editors := [.person "Alexander" "Roberts", .person "James" "Donaldson"
+                       , .person "A. Cleveland" "Coxe"] }
+      , title := "The Ante-Nicene Fathers"
+      , year := some { value := 1885 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "1" }
+
+/-- *The Ante-Nicene Fathers*, volume 4: the edition through which Origen's
+*Against Celsus* (tr. Frederick Crombie) is cited. -/
+@[bib_entry] def anf4 : BibEntry := .book
+  { core :=
+      { key := "roberts-ante-nicene-fathers-4-1885"
+      , contributors :=
+          { editors := [.person "Alexander" "Roberts", .person "James" "Donaldson"
+                       , .person "A. Cleveland" "Coxe"] }
+      , title := "The Ante-Nicene Fathers"
+      , year := some { value := 1885 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "4" }
+
+/-- *Nicene and Post-Nicene Fathers*, second series, volume 6: the edition
+through which Jerome's *Against Jovinianus* (tr. W. H. Fremantle, G. Lewis and
+W. G. Martley) is cited. -/
+@[bib_entry] def npnf2v6 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-2-6-1893"
+      , contributors :=
+          { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"] }
+      , title := "Nicene and Post-Nicene Fathers, Second Series"
+      , subtitle := some "St. Jerome: Letters and Select Works"
+      , year := some { value := 1893 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "6" }
+
+/-- Justin's *Dialogue with Trypho*, the earliest sustained Christian argument
+from Isaiah 7:14 and the earliest record of the Jewish reply to it: Trypho
+answers that the text says "young woman" and that the prophecy was fulfilled
+in Hezekiah (67). Cited for both halves. -/
+@[bib_entry] def justinDialogue : BibEntry := .ancientWork
+  { core :=
+      { key := "justin-dialogue-with-trypho-160"
+      , contributors := { authors := [.single "Justin Martyr"] }
+      , title := "Dialogue with Trypho" }
+  , originalTitle := some "Πρὸς Τρύφωνα Ἰουδαῖον Διάλογος"
+  , composed := some { value := 160, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-1-1885" }
+
+/-- Irenaeus, *Against Heresies* III.21: the defence of the Septuagint's
+παρθένος against the renderings of Theodotion and Aquila, and the argument that
+a young woman's ordinary conception would be no sign. -/
+@[bib_entry] def irenaeusAgainstHeresies : BibEntry := .ancientWork
+  { core :=
+      { key := "irenaeus-against-heresies-180"
+      , contributors := { authors := [.single "Irenaeus"] }
+      , title := "Against Heresies" }
+  , originalTitle := some "Adversus haereses"
+  , composed := some { value := 180, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-1-1885" }
+
+/-- Origen, *Against Celsus* I.34–35: what sign an ordinary birth would be, and
+the question which child of Ahaz's day was called Immanuel. -/
+@[bib_entry] def origenAgainstCelsus : BibEntry := .ancientWork
+  { core :=
+      { key := "origen-against-celsus-248"
+      , contributors := { authors := [.single "Origen"] }
+      , title := "Against Celsus" }
+  , originalTitle := some "Κατὰ Κέλσου"
+  , composed := some { value := 248, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-4-1885" }
+
+/-- Jerome, *Against Jovinianus* I.32: the lexical argument that עַלְמָה is a
+"hidden" virgin, from Genesis 24:43, with the challenge to produce a passage
+where it is used of a married woman. -/
+@[bib_entry] def jeromeAgainstJovinianus : BibEntry := .ancientWork
+  { core :=
+      { key := "jerome-against-jovinianus-393"
+      , contributors := { authors := [.single "Jerome"] }
+      , title := "Against Jovinianus" }
+  , originalTitle := some "Adversus Jovinianum"
+  , composed := some { value := 393 }
+  , editionUsed := some "schaff-nicene-post-nicene-fathers-2-6-1893" }
+
 derive_bib_registry registry
 
 end Testimony.Bib
