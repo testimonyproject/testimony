@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **61 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **68 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -43,13 +43,15 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `lexicalCritical_establishes` | `Establishes lexicalCritical` | The lexical objection, written down and granted its own premises. |
 | `compatibility_defeats_lexical_objection` | `¬Establishes lexicalCriticalUnderCompatibility` | **The referential reply defeats the lexical objection.** Keep every versional datum — the Targum's עוּלֵימְתָא, the Three's νεᾶνις, the Septuagint's παρθένος, the Peshitta's … |
 | `compatibility_does_not_establish_criterion` | `¬Establishes semanticReachingForCriterion` | **What the referential argument costs.** It is purely defensive. |
+| `hinges_jointly_load_bearing` | `¬Establishes christianWithoutAnyHinge` | **The result worth having.** No single hinge carries the argument, but the four of them jointly do: remove all four and the criterion no longer follows, with every textual and … |
+| `jesus_satisfies_virgin_birth` | `Satisfies jesus bornOfAVirgin` | End to end: under the scriptural package, Jesus satisfies the virgin-birth criterion. |
 | `wegner_establishes` | `Establishes wegnerLexical` | **Wegner's objection is valid on its own terms.** Grant the predicate-adjective parse, grant that the pregnancy it reports is an ordinary one, and grant that the one clear … |
 | `wegner_needs_ordinary_pregnancy` | `¬Establishes wegnerWithoutOrdinaryPregnancy` | **The grammar is not what carries the objection.** Derive the ordinary pregnancy the way Wegner derives it — from the near-term reading of the sign — rather than granting it, and … |
 | `circle_leaves_the_lexical_conclusion_open` | `Independent wegnerCircle.premises (notP Claim.almahMeansVirgin)` | **The circle, shown rather than alleged.** Put both legs in place — the reading supplying the ordinary pregnancy, and the lexical conclusion turned back against the reading — keep … |
 | `circle_leaves_the_denial_open` | `Independent wegnerCircle.premises (notP Claim.isaiahPredictsVirginBirth)` | **And the other end of it is no better off.** The same premises, asked for the denial of the predictive reading instead of the lexical conclusion, fail in the same way and on the … |
 | `usage_parity_blocks_wegner` | `¬Establishes wegnerUnderUsageParity` | **Postell's second reply, and it is independent of the first.** Concede the parse, concede the ordinary pregnancy, concede that the woman of Isaiah 7:14 is no virgin — and the … |
-| `hinges_jointly_load_bearing` | `¬Establishes christianWithoutAnyHinge` | **The result worth having.** No single hinge carries the argument, but the four of them jointly do: remove all four and the criterion no longer follows, with every textual and … |
-| `jesus_satisfies_virgin_birth` | `Satisfies jesus bornOfAVirgin` | End to end: under the scriptural package, Jesus satisfies the virgin-birth criterion. |
+| `sign_leaves_the_lexical_conclusion_open` | `Independent wegnerUnderTheSign.premises (notP Claim.almahMeansVirgin)` | **The sign argument blocks Wegner's objection, and settles nothing about the word.** Keep the parse, the near-term setting and the referent principle, put the fathers' two grounds … |
+| `reply_leaves_the_pregnancy_open` | `Independent signArgumentUnderReply.premises (notP Claim.pregnancyAtTheSignIsOrdinary)` | **The near-term reply blocks the sign argument back, and settles nothing about the pregnancy.** Put the reply's grounds and step where the fathers' first ground was, keep the … |
 | `motyer_rests_on_his_inference` | `¬Entails motyerLine.grounds (notP Claim.isaiahIsNearTermSignToAhaz)` | **Motyer's reply rests on his inference, not on his observations.** On the reading that identifies the two children, the sign is given to the house of David, 8:4 repeats the … |
 | `christian_defeats_critical` | `Defeats christian criticalDenial` | **The scriptural reading answers the critic.** Its rebuttal is a defeat: the weakest link on each side is `disputed`, so neither outranks the other, and each defeats the other. |
 | `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell, Party.motyer, Party.micah}` | **Heard out, the scriptural reading prevails.** Nothing defeats either of Postell's counterexamples, so both are in the grounded extension from the first step. |
@@ -58,6 +60,11 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `nothing_prevails_on_motyer_alone` | `Framework.grounded motyerAlone.defeats = ∅` | **Motyer alone does not settle it.** He and the critic defeat each other, as the scriptural reading and the critic do, so nothing is forced. |
 | `scriptural_reading_prevails_without_postell` | `⟨Party.scriptural, ⋯⟩ ∈ Framework.grounded withoutPostell.defeats` | **Without Postell's Isaiah argument, the scriptural reading still prevails.** His Micah counterexample is defeated by nothing, and it defends the scriptural reading against the … |
 | `nothing_prevails_without_the_counterexamples` | `Framework.grounded withoutParity.defeats = ∅` | **Without the counterexamples, nothing prevails.** Berry and Motyer each tie with the critic, as the scriptural reading does, so every party is defeated by someone. |
+| `reply_rests_on_its_inference` | `¬Entails ordinarySignLine.grounds (notP Claim.signMustBeExtraordinary)` | **The reply rests on its inference, not on its observations.** On Rydelnik's reading Isaiah's children are signs, 7:16 dates the deliverance by a child's infancy, and the sign of … |
+| `nothing_prevails_over_wegner` | `Framework.grounded wegnerDispute.defeats = ∅` | **Nothing prevails.** Every party is defeated by someone — Wegner and the reply by the fathers, the fathers by both — so nothing is forced, and the grounded extension is empty. |
+| `sign_is_one_resolution` | `Framework.Preferred wegnerDispute.defeats {WegnerParty.sign}` | **One resolution: the fathers.** The sign argument alone is admissible — it defeats both of its defeaters — and it is in conflict with both of the other parties, so no larger set … |
+| `wegner_is_the_other_resolution` | `Framework.Preferred wegnerDispute.defeats {WegnerParty.wegner, WegnerParty.reply}` | **The other resolution: Wegner, with the near-term reply.** Neither defeats the other, and between them they answer the fathers, who are the only party to defeat either. |
+| `nothing_prevails_without_the_reply` | `Framework.grounded signAgainstWegner.defeats = ∅` | **Without the reply, nothing prevails either.** Wegner and the fathers defeat each other, so the reply is not what keeps the fathers from prevailing: Wegner's rebuttal does, … |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -136,6 +143,16 @@ equally by one granting Wegner's conclusion. Postell's charge of circular
 reasoning becomes a checkable result rather than an accusation — and, like
 every result here, a conditional one: deny that the near-term reading needs the
 lexical conclusion and the circle is not there.
+
+The oldest answer to the objection goes to the same premise
+([#73](https://github.com/testimonyproject/testimony/issues/73)). Justin,
+Irenaeus and Origen argue that an ordinary conception would have been no sign.
+Encoded against its rival, that a sign need not be a miracle,
+`sign_leaves_the_lexical_conclusion_open` shows that it blocks Wegner and
+settles nothing about the word. As a dispute, the three positions tie
+(`nothing_prevails_over_wegner`), and the tie is a fact about two ratings. It
+turns on whether the sign of 7:14 must be the kind offered at 7:11, and on
+whether the reply's inference survives Rydelnik, who grants its grounds.
 
 A corollary worth noting: because the New Perspective rejects the traditional
 reading of Paul's phrase while still affirming justification by faith, it

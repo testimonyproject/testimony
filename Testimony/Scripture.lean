@@ -54,6 +54,19 @@ def rangeIn (t : TextualTradition) (r : Pericope) : ScriptureCitation :=
 /-- Isaiah 7:14 — the sign of the *almah* who conceives and bears a son. -/
 @[nolint defsWithUnderscore] def isaiah7_14 : Passage := ⟨.isaiah, 7, 14⟩
 
+/-- Isaiah 7:10–11 — the sign offered to Ahaz, "deep as Sheol or high as
+heaven", which he refuses. The fathers read the sign of 7:14 by it. -/
+def depthOrHeightOffer : List ScriptureCitation :=
+  [rangeIn .masoretic ⟨.isaiah, 7, 10, 7, 11⟩]
+
+/-- Isaiah 8:18, 20:3 and 37:30 — signs elsewhere in Isaiah that are ordinary
+events: the prophet's children, his walking stripped, a harvest of what grows
+of itself. -/
+def ordinaryIsaianicSigns : List ScriptureCitation :=
+  [ verseIn .masoretic ⟨.isaiah, 8, 18⟩
+  , verseIn .masoretic ⟨.isaiah, 20, 3⟩
+  , verseIn .masoretic ⟨.isaiah, 37, 30⟩ ]
+
 /-- Isaiah 2:1–4 and 11:1–12:6 — the eschatological frame of Isaiah 2–12,
 within which Isaiah 7 sits. Postell's compositional premise cites the frame,
 not either end of it. -/

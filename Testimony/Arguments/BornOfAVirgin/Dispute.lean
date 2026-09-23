@@ -90,9 +90,12 @@ Micah 5 or Isaiah 9 is a *sign* to Ahaz — would be the source to find.
 
 The predictive reading is not a modern apologetic. Justin, Irenaeus, Origen and
 Jerome all argue it, and `Sources.lean` cites them for it: for the
-prediction itself, for עַלְמָה as a virgin, and — the argument they share —
-that an ordinary conception would have been no sign at all. That strengthens
-the attestation of the scriptural premises, and none of it changes a rating.
+prediction itself and for עַלְמָה as a virgin. That strengthens the attestation
+of the scriptural premises, and none of it changes a rating. The argument they
+share — that an ordinary conception would have been no sign at all — is
+encoded as an argument in its own right, `signLine`. It answers Wegner's
+objection rather than the critical denial, so it is weighed in `Dispute.Wegner`
+and not here.
 
 It cannot, because of what `disputed` means here: *actively contested by
 competent scholars*. The fathers are the earliest witnesses to the contest as

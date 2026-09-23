@@ -106,6 +106,30 @@ would settle it the other way. `usage_parity_blocks_wegner` checks it, and the
 atom is marked `plausible` rather than `wellSupported` because Postell's "in
 fact virgins" is stronger than Wegner's own discussion of Song 6:8.
 
+**The oldest reply goes to the ordinary pregnancy itself.** Justin, Irenaeus
+and Origen answer the near-term reading with one argument. The oracle promised a
+*sign*, offered "in the depth or in the height" (7:11), and an ordinary
+conception happens to every woman who is not barren, so it would be no sign.
+Rydelnik makes the same move today. `signLine` encodes it, and it denies the one
+ground of Wegner's objection that the grammar does not supply.
+`sign_leaves_the_lexical_conclusion_open` measures what that buys: with the
+fathers' grounds in place of the ordinary pregnancy, Wegner's lexical
+conclusion is independent of what remains. The objection is blocked, and
+nothing is shown about the word.
+
+The rival is written first, and Wegner holds it himself: a sign need not be a
+miracle. Isaiah's own children are "signs and portents" (8:18), and this sign
+is dated by a child's infancy (7:16), so its point may be its timing. Rhodea
+argues the same. `reply_leaves_the_pregnancy_open` shows that the reply blocks
+the fathers in turn, without supplying Wegner's ordinary pregnancy.
+
+`Dispute.Wegner` puts the three positions together. Every one of them has a
+`disputed` weakest link, so the dispute ties (`nothing_prevails_over_wegner`).
+Both the fathers alone and Wegner with the reply are defensible resolutions of
+it. What would decide it is one of two ratings: whether the sign of 7:14 must be
+the kind offered at 7:11, and whether the reply's inference survives Rydelnik,
+who grants its grounds and denies its conclusion.
+
 The critical case against the Isaianic strand is now *derived* rather than
 assumed. `critical` used to carry `¬isaiahPredictsVirginBirth` as a bare
 premise; it now carries the step that produces it — that a sign given for
@@ -200,16 +224,23 @@ itself debated, and is marked `plausible` rather than `wellSupported`.
 ### Where things are
 
 This argument is a directory, because at fourteen hundred lines it was one file
-that no one could hold in view. The dependencies run one way.
+that no one could hold in view. The dependencies run one way. Where a file
+outgrew three hundred lines of code, the material for the dispute over Wegner's
+objection, and the citations for the dispute over the critical denial, went
+into modules of their own beside it.
 
 | File | Contents |
 |---|---|
 | `Atoms.lean` | the `Claim` atoms, the recurring sources, the intertextual edges, the criterion |
 | `Sources.lean` | `cite`: a citation and a classification for every atom |
+| `Sources/NearTerm.lean` | the citations of the dispute over the critical denial |
+| `Sources/Wegner.lean` | the citations of the dispute over Wegner's objection |
 | `Lines.lean` | the inference steps, and the lines of reason they compose into |
 | `Packages.lean` | the positions, and the variant packages the results refute |
-| `Results.lean` | every `@[headline]` result, with its trust base |
-| `Dispute.lean` | the five positions as one dispute: who defeats whom, and who prevails |
+| `Results.lean` | the `@[headline]` results about the strands, with their trust base |
+| `Results/Wegner.lean` | the results about Wegner's objection, its circle, and the sign |
+| `Dispute.lean` | the critical denial, the scriptural reading and four replies as one dispute |
+| `Dispute/Wegner.lean` | Wegner, the fathers' sign argument and the near-term reply as another |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in
@@ -262,35 +293,39 @@ reader sees.
 | \\(P_{18}\\) | The עַלְמָה of Isaiah 7:14 is not a virgin | interpretive | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468 |
 | \\(P_{19}\\) | What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes | linguistic | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152 |
 | \\(P_{20}\\) | In the other clear עַלְמָה passages Wegner lists, the women are virgins | linguistic | Christian, historical-grammatical, plausible | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 8; Gen 24:43; Song 6:8 |
-| \\(P_{21}\\) | Matthew 1:23 quotes Isaiah 7:14 | textual | critical scholarship, consensus | [`na28-2012`](../bibliography.md#na28-2012), app. Matt 1:23; [`ubs5-2014`](../bibliography.md#ubs5-2014) |
-| \\(P_{22}\\) | Matthew's quotation intends the virgin conception as fulfilment | interpretive | Christian, historical-grammatical, well supported | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
-| \\(P_{23}\\) | Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology | textual | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–490; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), pp. 122–123; Isa 2:1-4; Isa 11:1-12:6 |
-| \\(P_{24}\\) | An oracle's meaning in the finished book is set by its literary placement | interpretive | Christian, historical-grammatical, disputed | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486 |
-| \\(P_{25}\\) | Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation | interpretive | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; [`chilton-isaiah-targum-1987`](../bibliography.md#chilton-isaiah-targum-1987) |
-| \\(P_{26}\\) | Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14 | textual | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; Isa 8:7-8; Isa 9:8-11; Isa 10:5 |
-| \\(P_{27}\\) | Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth | interpretive | Christian, historical-grammatical, disputed | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493 |
-| \\(P_{28}\\) | Genesis 3:15 promises victory over the serpent through 'her seed' | textual | critical scholarship, consensus | Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
-| \\(P_{29}\\) | Genesis 3:15 is the protoevangelium, the first promise of a redeemer | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{30}\\) | Hebrew זֶרַע is ordinarily reckoned through the father | linguistic | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
-| \\(P_{31}\\) | The matrilineal wording of Genesis 3:15 marks a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{32}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
-| \\(P_{33}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{34}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
-| \\(P_{35}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
-| \\(P_{36}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{37}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{38}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
-| \\(P_{39}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
-| \\(P_{40}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
-| \\(P_{41}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
-| \\(P_{42}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
-| \\(P_{43}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{44}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{45}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{46}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{47}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
-| \\(P_{48}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{49}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| \\(P_{21}\\) | The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 | interpretive | Christian, typological, disputed | [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11 |
+| \\(P_{22}\\) | An ordinary conception is nothing extraordinary: it happens to all women | interpretive | Christian, typological, consensus | [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 64 |
+| \\(P_{23}\\) | Signs elsewhere in Isaiah are ordinary events: his children, 8:18 | textual | critical scholarship, consensus | Isa 8:18; Isa 20:3; Isa 37:30; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 64; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 470 |
+| \\(P_{24}\\) | Isaiah 7:16 dates the deliverance by a child's infancy | textual | critical scholarship, consensus | Isa 7:16; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 477; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 14 |
+| \\(P_{25}\\) | Matthew 1:23 quotes Isaiah 7:14 | textual | critical scholarship, consensus | [`na28-2012`](../bibliography.md#na28-2012), app. Matt 1:23; [`ubs5-2014`](../bibliography.md#ubs5-2014) |
+| \\(P_{26}\\) | Matthew's quotation intends the virgin conception as fulfilment | interpretive | Christian, historical-grammatical, well supported | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| \\(P_{27}\\) | Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology | textual | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–490; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), pp. 122–123; Isa 2:1-4; Isa 11:1-12:6 |
+| \\(P_{28}\\) | An oracle's meaning in the finished book is set by its literary placement | interpretive | Christian, historical-grammatical, disputed | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486 |
+| \\(P_{29}\\) | Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation | interpretive | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; [`chilton-isaiah-targum-1987`](../bibliography.md#chilton-isaiah-targum-1987) |
+| \\(P_{30}\\) | Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14 | textual | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; Isa 8:7-8; Isa 9:8-11; Isa 10:5 |
+| \\(P_{31}\\) | Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth | interpretive | Christian, historical-grammatical, disputed | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493 |
+| \\(P_{32}\\) | Genesis 3:15 promises victory over the serpent through 'her seed' | textual | critical scholarship, consensus | Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
+| \\(P_{33}\\) | Genesis 3:15 is the protoevangelium, the first promise of a redeemer | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
+| \\(P_{34}\\) | Hebrew זֶרַע is ordinarily reckoned through the father | linguistic | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
+| \\(P_{35}\\) | The matrilineal wording of Genesis 3:15 marks a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
+| \\(P_{36}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
+| \\(P_{37}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
+| \\(P_{38}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
+| \\(P_{39}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
+| \\(P_{40}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{41}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{42}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
+| \\(P_{43}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
+| \\(P_{44}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
+| \\(P_{45}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
+| \\(P_{46}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
+| \\(P_{47}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{48}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{49}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{50}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{51}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
+| \\(P_{52}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
+| \\(P_{53}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
 
 </div>
 
@@ -553,14 +588,430 @@ def bornOfAVirgin : FulfillmentCriterion :=
     basis := predictiveReading }
 ```
 
+## Arguments.BornOfAVirgin.Sources.NearTerm — the citations of the near-term dispute
+
+The atoms of the dispute over the critical denial, cited here and dispatched
+from `cite` by name: the critic's two premises, that 7:14 was a near-term sign
+to Ahaz and that such a sign excludes a messianic sense, and the grounds of the
+replies to them — Berry's, Postell's Micah counterexample, and Motyer's with
+Compton's. (Postell's Isaiah counterexample rests on atoms the compositional
+strand also uses, and is cited with them in `Sources.lean`.)
+
+They sit apart for the reason `Sources.Wegner` does: `cite` stays one total
+function, and each value below is reached from exactly one of its cases.
+
+<a id="isaiahIsNearTermSignToAhazCited"></a>
+**`isaiahIsNearTermSignToAhazCited`**
+
+`isaiahIsNearTermSignToAhaz`. The reading Justin already answers, in Trypho's
+form: fulfilled in Hezekiah (Dial. 67, 77). Origen's reply is a question — which
+child of Ahaz's day was called Immanuel? — and his conclusion that the sign was
+given to the house of David (Cels. I.35). Motyer denies it most directly (1970,
+120, 124): the sign confirms events after the fact, and Maher-shalal-hash-baz,
+not Immanuel, carries the timetable. So does Compton (2007, 12): 7:14 is
+addressed to the house of David, in plural pronouns, and only 7:15–16, with a
+singular "you", to Ahaz. `disputed` for that reason, on the definition that
+re-rated the exclusion premise.
+
+```lean
+def isaiahIsNearTermSignToAhazCited : AtomMeta :=
+  {
+    label :=
+      "Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation",
+    kind := PremiseKind.interpretive,
+    source := brownOnBirth Confidence.disputed }
+```
+
+<a id="nearTermExcludesMessianicSenseCited"></a>
+**`nearTermExcludesMessianicSenseCited`**
+
+`nearTermExcludesMessianicSense`. The premise Berry and Postell deny, and
+Motyer with them: `disputed` by the library's own definition, since the contest
+is recorded in `berryLine` and `postellLine`. It was once cited `wellSupported`
+on Brown's authority, which let the critic outrank both replies. Compton (2007,
+12–14) denies it on a third ground: the near-term part of the oracle, 7:15–16,
+uses the child's infancy only as a measure of time, and so does not need the
+child born in Ahaz's day.
+
+```lean
+def nearTermExcludesMessianicSenseCited : AtomMeta :=
+  {
+    label :=
+      "A sign given for Ahaz's generation is not also a prediction of a virgin birth",
+    kind := PremiseKind.interpretive,
+    source := brownOnBirth Confidence.disputed }
+```
+
+<a id="nearTermFulfilmentIsUnclearCited"></a>
+**`nearTermFulfilmentIsUnclearCited`**
+
+`nearTermFulfilmentIsUnclear`. Descriptively uncontroversial: the near-term
+referent has been taken for Isaiah's son, for Hezekiah, and for a son of Ahaz,
+with no settled answer. What is contestable is the use Berry puts it to. Compton
+surveys the candidates (5) and finds that none fits (9).
+
+```lean
+def nearTermFulfilmentIsUnclearCited : AtomMeta :=
+  {
+    label :=
+      "How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question",
+    kind := PremiseKind.interpretive,
+    source :=
+      {
+        primary :=
+          Reference.work Bib.berryVirginBirth (Bib.Locus.pages 1653 1654),
+        supporting :=
+          [Reference.work Bib.comptonImmanuelProphecy (Bib.Locus.pages 5 9)],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.wellSupported } }
+```
+
+<a id="signGivenToHouseOfDavidCited"></a>
+**`signGivenToHouseOfDavidCited`**
+
+`signGivenToHouseOfDavid`. What the Hebrew says: שִׁמְעוּ־נָא בֵּית דָּוִד and
+לָכֶם in 7:13–14 are plural, אַתָּה in 7:16 is singular. Compton builds on it
+(12), Motyer notes the address to the dynasty (122). The grammar is not in
+dispute; what it implies is, and that is left to the step that uses it.
+
+```lean
+def signGivenToHouseOfDavidCited : AtomMeta :=
+  {
+    label :=
+      "Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz",
+    kind := PremiseKind.textual,
+    source :=
+      { primary := Reference.scripture Scripture.immanuelAddressees,
+        supporting :=
+          [Reference.work Bib.comptonImmanuelProphecy (Bib.Locus.page 12),
+            Reference.work Bib.youngImmanuelProphecy (Bib.Locus.page 112),
+            Reference.work Bib.motyerContextContent (Bib.Locus.page 122)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+```
+
+<a id="maherShalalHashBazRepeatsTheTimetableCited"></a>
+**`maherShalalHashBazRepeatsTheTimetableCited`**
+
+`maherShalalHashBazRepeatsTheTimetable`. Common ground: the parallel is what
+leads the critics who identify the two children to identify them (Compton 5,
+citing Clements). Motyer (124) and Compton (13) read it the other way. The
+observation is shared; the reading of it is the step.
+
+```lean
+def maherShalalHashBazRepeatsTheTimetableCited : AtomMeta :=
+  {
+    label :=
+      "Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14",
+    kind := PremiseKind.textual,
+    source :=
+      { primary := Reference.work Bib.motyerContextContent (Bib.Locus.page 124),
+        supporting :=
+          [Reference.work Bib.comptonImmanuelProphecy (Bib.Locus.page 13),
+            Reference.scripture Scripture.sharedTimetable],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.wellSupported } }
+```
+
+<a id="micahRulerFacesAssyriaCited"></a>
+**`micahRulerFacesAssyriaCited`**
+
+`micahRulerFacesAssyria`. What the text says. Postell cites it by the Hebrew
+numbering, as Micah 5:1 and 5:4–5 (481 n. 72).
+
+```lean
+def micahRulerFacesAssyriaCited : AtomMeta :=
+  {
+    label :=
+      "Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion",
+    kind := PremiseKind.textual,
+    source :=
+      { primary := Reference.scripture Scripture.micahAssyrianSetting,
+        supporting :=
+          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 481)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+```
+
+<a id="micahRulerReadMessianicallyCited"></a>
+**`micahRulerReadMessianicallyCited`**
+
+`micahRulerReadMessianically`. Granted by the critic's own authority: "there
+was an expectation of the Messiah's birth at Bethlehem (Mt 2:4-6; Jn 7:42)"
+(Brown 1972, 26 n. 64). Postell: recognised as messianic by ancient Jewish
+interpreters (481 n. 72).
+
+```lean
+def micahRulerReadMessianicallyCited : AtomMeta :=
+  { label := "Micah 5:2 was read messianically in first-century Judaism",
+    kind := PremiseKind.historical,
+    source :=
+      {
+        primary :=
+          Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 481),
+        supporting :=
+          [Reference.work Bib.brownProblemVirginalConception
+              (Bib.Locus.page 26),
+            Reference.scripture Scripture.bethlehemExpectation],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.wellSupported } }
+```
+
+## Arguments.BornOfAVirgin.Sources.Wegner — the citations of the sign dispute
+
+The atoms of the dispute over Wegner's objection, cited here and dispatched from
+`cite` by name. They are the parse of הָרָה, the pregnancy it reports, what that
+pregnancy is taken to show, and the fathers' sign argument against it with the
+near-term reply to that.
+
+They sit apart because `cite` is one total function over every atom. It keeps
+that guarantee: each value below is reached from exactly one of its cases, so an
+atom still cannot go uncited. What moves is only where the citation is written,
+which keeps `Sources.lean` short enough to read.
+
+<a id="harahIsPredicateAdjectiveCited"></a>
+**`harahIsPredicateAdjectiveCited`**
+
+`harahIsPredicateAdjective`. Deliberately not the contested step, and granted
+throughout. Wegner puts it at "most likely" and cites Williams' grammar §75;
+Rydelnik parses the clause exactly the same way and draws the opposite conclusion
+from it, that the virgin *is* pregnant and the sign is therefore as deep as Sheol
+(Isa 7:11).
+
+```lean
+def harahIsPredicateAdjectiveCited : AtomMeta :=
+  {
+    label :=
+      "הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant",
+    kind := PremiseKind.linguistic,
+    source :=
+      have __src :=
+        wegnerOnAlmah (Bib.Locus.page 471)
+          Confidence.wellSupported;
+      { primary := __src.primary,
+        supporting :=
+          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 474),
+            Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 115 116)],
+        tradition := __src.tradition, confidence := __src.confidence } }
+```
+
+<a id="isaianicAlmahIsAlreadyPregnantCited"></a>
+**`isaianicAlmahIsAlreadyPregnantCited`**
+
+`isaianicAlmahIsAlreadyPregnant`. Granted on both sides of the dispute over
+this verse: Wegner reads a present pregnancy and so does Rydelnik. What they
+disagree about is what kind of pregnancy it is.
+
+```lean
+def isaianicAlmahIsAlreadyPregnantCited : AtomMeta :=
+  {
+    label :=
+      "The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given",
+    kind := PremiseKind.interpretive,
+    source :=
+      have __src :=
+        wegnerOnAlmah (Bib.Locus.pages 471 472)
+          Confidence.wellSupported;
+      { primary := __src.primary,
+        supporting :=
+          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 468),
+            Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 116 117)],
+        tradition := __src.tradition, confidence := __src.confidence } }
+```
+
+<a id="pregnancyAtTheSignIsOrdinaryCited"></a>
+**`pregnancyAtTheSignIsOrdinaryCited`**
+
+`pregnancyAtTheSignIsOrdinary`. The hinge of Wegner's objection, and not a
+lexical claim at all. He gets it from the near-term reading of the sign: the
+child born within nine months, everything in the oracle discharged by 701 BC.
+Rydelnik, parsing הָרָה as Wegner does, denies it outright. So do the fathers, on
+the ground that an ordinary conception would be no sign, and `signLine` is that
+argument.
+
+```lean
+def pregnancyAtTheSignIsOrdinaryCited : AtomMeta :=
+  { label := "The pregnancy Isaiah 7:14 announces is an ordinary conception",
+    kind := PremiseKind.interpretive,
+    source :=
+      have __src :=
+        wegnerOnAlmah (Bib.Locus.pages 476 478)
+          Confidence.disputed;
+      { primary := __src.primary,
+        supporting :=
+          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 474)],
+        tradition := __src.tradition, confidence := __src.confidence } }
+```
+
+<a id="isaianicAlmahIsNotAVirginCited"></a>
+**`isaianicAlmahIsNotAVirginCited`**
+
+`isaianicAlmahIsNotAVirgin`. Wegner's conclusion about the referent. Postell
+states the step it rests on baldly: "since the עַלְמָה in Isaiah 7:14 is already
+pregnant, she obviously cannot be a virgin" (468).
+
+```lean
+def isaianicAlmahIsNotAVirginCited : AtomMeta :=
+  { label := "The עַלְמָה of Isaiah 7:14 is not a virgin",
+    kind := PremiseKind.interpretive,
+    source :=
+      have __src :=
+        wegnerOnAlmah (Bib.Locus.pages 471 472)
+          Confidence.disputed;
+      { primary := __src.primary,
+        supporting :=
+          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 468)],
+        tradition := __src.tradition, confidence := __src.confidence } }
+```
+
+<a id="oneReferentSettlesDenotationCited"></a>
+**`oneReferentSettlesDenotationCited`**
+
+`oneReferentSettlesDenotation`. Wegner's method: Isaiah 7:14 is used as proof
+that the word cannot mean "virgin". Rico and Gentry deny the principle — "the
+analysis of the Immanuel oracle does not by itself allow one to draw a conclusion
+concerning the meaning of the word" — and hold that the other occurrences settle
+it the other way (quoted at Postell 468 n. 22).
+
+```lean
+def oneReferentSettlesDenotationCited : AtomMeta :=
+  {
+    label :=
+      "What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes",
+    kind := PremiseKind.linguistic,
+    source :=
+      have __src :=
+        wegnerOnAlmah (Bib.Locus.pages 471 472)
+          Confidence.disputed;
+      { primary := __src.primary,
+        supporting :=
+          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 468),
+            Reference.work Bib.ricoGentryInfantKing (Bib.Locus.page 152)],
+        tradition := __src.tradition, confidence := __src.confidence } }
+```
+
+<a id="otherClearAlmahCasesAreVirginsCited"></a>
+**`otherClearAlmahCasesAreVirginsCited`**
+
+`otherClearAlmahCasesAreVirgins`. Postell at 468 n. 22, of the three passages
+Wegner calls clearest. Marked `plausible` rather than `wellSupported` because it
+is stronger than Wegner's own text: Genesis 24:43 is uncontested, but Wegner's
+discussion of Song 6:8 allows that some of the עֲלָמוֹת in the harem would not be
+virgins.
+
+```lean
+def otherClearAlmahCasesAreVirginsCited : AtomMeta
+```
+
+<a id="signMustBeExtraordinaryCited"></a>
+**`signMustBeExtraordinaryCited`**
+
+`signMustBeExtraordinary`. Origen's form of it: "What kind of sign, then,
+would that have been — a young woman who was not a virgin giving birth to a
+child?", tied to the sign offered "in the depth or in the height" (Cels. I.35).
+Justin (Dial. 84) and Irenaeus (Haer. III.21.6) argue the same. Rydelnik makes
+the move today, as Postell reports (474). `disputed`: Wegner grants that the
+sign offered at 7:11 would have been miraculous, but holds that a sign may be an
+everyday occurrence and reads the one given at 7:14, after Ahaz refused the
+first, as one (469–470, 477–478); Rhodea holds that a sign does not require a
+miracle, and that 7:11 does not make this one (64 and n. 10).
+
+```lean
+def signMustBeExtraordinaryCited : AtomMeta
+```
+
+<a id="ordinaryConceptionIsNoMarvelCited"></a>
+**`ordinaryConceptionIsNoMarvelCited`**
+
+`ordinaryConceptionIsNoMarvel`. Irenaeus: "what great thing or what sign
+should have been in this, that a young woman conceiving by a man should bring
+forth — a thing which happens to all women that produce offspring?" Justin asks
+why God would give "a sign which is not common to all the first-born sons"
+(Dial. 84). `consensus`, because the rival grants it: its point is that the
+sign need not be a marvel, not that an ordinary conception is one (Rhodea
+64).
+
+```lean
+def ordinaryConceptionIsNoMarvelCited : AtomMeta :=
+  {
+    label :=
+      "An ordinary conception is nothing extraordinary: it happens to all women",
+    kind := PremiseKind.interpretive,
+    source :=
+      {
+        primary :=
+          Reference.work Bib.irenaeusAgainstHeresies
+            (Bib.Locus.sectionRef "III.21.6"),
+        supporting :=
+          [Reference.work Bib.justinDialogue (Bib.Locus.sectionRef "84"),
+            Reference.work Bib.rhodeaDidMatthewConceive (Bib.Locus.page 64)],
+        tradition := Tradition.christianTypological,
+        confidence := Confidence.consensus } }
+```
+
+<a id="isaianicSignsAreOrdinaryEventsCited"></a>
+**`isaianicSignsAreOrdinaryEventsCited`**
+
+`isaianicSignsAreOrdinaryEvents`. What the text says: Rhodea lists
+non-supernatural signs "including elsewhere in Isaiah" (64), and Wegner a sign
+as "a common, everyday occurrence that has significance because of what it
+means, foretells, or predicts" (470). Rydelnik, as Postell reports him (474),
+grants the first of them: Isaiah's children are the "signs and wonders" of 8:18.
+
+```lean
+def isaianicSignsAreOrdinaryEventsCited : AtomMeta :=
+  {
+    label :=
+      "Signs elsewhere in Isaiah are ordinary events: his children, 8:18",
+    kind := PremiseKind.textual,
+    source :=
+      { primary := Reference.scripture Scripture.ordinaryIsaianicSigns,
+        supporting :=
+          [Reference.work Bib.rhodeaDidMatthewConceive (Bib.Locus.page 64),
+            Reference.work Bib.wegnerVirginBirths (Bib.Locus.page 470)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+```
+
+<a id="signDatedByAChildsInfancyCited"></a>
+**`signDatedByAChildsInfancyCited`**
+
+`signDatedByAChildsInfancy`. What 7:16 says, and common ground about which
+child is left open: Wegner reads it of the child of 7:14 (477), Rydelnik of
+Shear-jashub (Postell 474), and Compton of a child whose infancy only measures
+the time (14).
+
+```lean
+def signDatedByAChildsInfancyCited : AtomMeta :=
+  { label := "Isaiah 7:16 dates the deliverance by a child's infancy",
+    kind := PremiseKind.textual,
+    source :=
+      {
+        primary :=
+          Reference.scripture
+            [Scripture.verseIn TextualTradition.masoretic
+                { book := Book.isaiah, chapter := 7, verse := 16 }],
+        supporting :=
+          [Reference.work Bib.wegnerVirginBirths (Bib.Locus.page 477),
+            Reference.work Bib.comptonImmanuelProphecy (Bib.Locus.page 14)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+```
+
 ## Arguments.BornOfAVirgin.Sources — a citation for every atom
 
 `cite` is total, so an atom without a citation does not compile. This is the
-file that makes that obligation concrete, and it is the largest in the
-argument: forty atoms, each with a prose statement of what it asserts, a
-classification, and who says so at what pinpoint with what confidence.
+file that makes that obligation concrete: every atom, each with a prose
+statement of what it asserts, a classification, and who says so at what
+pinpoint with what confidence.
 
-Four `Source` values recur across it and are defined in `Atoms`. Where an atom
+It was once the largest file in the argument, and the atoms of its two disputes
+are now cited in modules of their own: `Sources.NearTerm` for the dispute over
+the critical denial, `Sources.Wegner` for the dispute over Wegner's objection.
+`cite` reaches each of those citations by name from one of its cases, so it is
+still one total function, and a new atom still cannot be left out of it.
+
+Several `Source` values recur across it and are defined in `Atoms`. Where an atom
 cites one of them with something further, it says `{ ... with supporting := }`,
 so what a reader sees is the part that differs.
 
@@ -603,7 +1054,7 @@ Matthew's intent, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48}
+(P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52}
 \]
 </div>
 
@@ -615,7 +1066,7 @@ idiom, and the inference drawn from its departure, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{48}
+(P_{32} \land P_{33} \land P_{34} \land P_{35}) \rightarrow P_{52}
 \]
 </div>
 
@@ -632,7 +1083,7 @@ grants the composition and stops short of Matthew is entitled to.
 
 <div class="testimony-math">
 \[
-(P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{48}
+(P_{27} \land P_{28} \land P_{31} \land P_{26}) \rightarrow P_{52}
 \]
 </div>
 
@@ -652,7 +1103,7 @@ right kind of reason.
 
 <div class="testimony-math">
 \[
-(P_{25} \land P_{26}) \rightarrow \lnot P_{37}
+(P_{29} \land P_{30}) \rightarrow \lnot P_{41}
 \]
 </div>
 
@@ -664,7 +1115,7 @@ it, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{32} \land P_{33}) \rightarrow P_{48}
+(P_{36} \land P_{37}) \rightarrow P_{52}
 \]
 </div>
 
@@ -676,7 +1127,7 @@ criterion follows. Encoded, but deliberately kept out of `christian`.
 
 <div class="testimony-math">
 \[
-(P_{45} \land P_{46}) \rightarrow P_{48}
+(P_{49} \land P_{50}) \rightarrow P_{52}
 \]
 </div>
 
@@ -693,7 +1144,7 @@ left nothing for an objection to engage.
 
 <div class="testimony-math">
 \[
-(P_{36} \land P_{37}) \rightarrow \lnot P_{1}
+(P_{40} \land P_{41}) \rightarrow \lnot P_{1}
 \]
 </div>
 
@@ -711,7 +1162,7 @@ where it is cited `disputed`.
 
 <div class="testimony-math">
 \[
-P_{38} \rightarrow \lnot P_{37}
+P_{42} \rightarrow \lnot P_{41}
 \]
 </div>
 
@@ -725,7 +1176,7 @@ oracle in a different book (Postell 481 n. 72).
 
 <div class="testimony-math">
 \[
-(P_{41} \land P_{42}) \rightarrow \lnot P_{37}
+(P_{45} \land P_{46}) \rightarrow \lnot P_{41}
 \]
 </div>
 
@@ -745,7 +1196,7 @@ denies, and `motyerLine` rates it `disputed` for that reason.
 
 <div class="testimony-math">
 \[
-(P_{39} \land P_{40}) \rightarrow \lnot P_{36}
+(P_{43} \land P_{44}) \rightarrow \lnot P_{40}
 \]
 </div>
 
@@ -764,7 +1215,7 @@ word having to carry the sense.
 
 <div class="testimony-math">
 \[
-(P_{4} \land P_{5} \land P_{6} \land P_{34}) \rightarrow P_{7}
+(P_{4} \land P_{5} \land P_{6} \land P_{38}) \rightarrow P_{7}
 \]
 </div>
 
@@ -789,7 +1240,7 @@ objector would state it, so that the reply has something real to answer.
 
 <div class="testimony-math">
 \[
-(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{49}
+(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{53}
 \]
 </div>
 
@@ -828,7 +1279,7 @@ From the criterion and the historical claim, the fulfilment follows.
 
 <div class="testimony-math">
 \[
-(P_{48} \land P_{34}) \rightarrow P_{49}
+(P_{52} \land P_{38}) \rightarrow P_{53}
 \]
 </div>
 
@@ -893,7 +1344,7 @@ Isaiah 7:14" (468 n. 22).
 
 <div class="testimony-math">
 \[
-(P_{36} \land \lnot P_{1}) \rightarrow P_{17}
+(P_{40} \land \lnot P_{1}) \rightarrow P_{17}
 \]
 </div>
 
@@ -933,6 +1384,44 @@ P_{20} \rightarrow \lnot P_{19}
 \]
 </div>
 
+##### The fathers' sign argument, and the near-term reply
+
+Wegner's objection needs the pregnancy to be an ordinary one. The oldest
+Christian answer to the near-term reading denies exactly that, and it does so
+without touching the word: the oracle promised a *sign*, and an ordinary
+conception would have been none.
+
+<a id="extraordinarySignExcludesOrdinaryPregnancy"></a>
+**`extraordinarySignExcludesOrdinaryPregnancy`**
+
+**The sign argument.** If the sign of 7:14 must be extraordinary, and an
+ordinary conception is nothing extraordinary, the pregnancy the sign announces
+is not an ordinary one.
+
+The step assumes that the conception is the sign rather than one part of it.
+Wegner counts three parts in 7:14 and more in 7:15–16 (469, 477), but he does
+not grant the first ground and deny the conclusion: he denies the first
+ground.
+
+<div class="testimony-math">
+\[
+(P_{21} \land P_{22}) \rightarrow \lnot P_{17}
+\]
+</div>
+
+<a id="ordinarySignsAnswerTheDemand"></a>
+**`ordinarySignsAnswerTheDemand`**
+
+**The near-term reply.** Signs elsewhere in Isaiah are ordinary events, and
+this one is dated by a child's infancy, so its point is its timing and it need
+not be extraordinary.
+
+<div class="testimony-math">
+\[
+(P_{23} \land P_{24}) \rightarrow \lnot P_{21}
+\]
+</div>
+
 #### The lines of reason
 
 Four strands converge on the criterion, and each is a `Line`: its own grounds,
@@ -958,10 +1447,10 @@ Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
 \text{(1)} \quad &amp; P_{1} \\
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{9} \\
-\text{(4)} \quad &amp; P_{21} \\
-\text{(5)} \quad &amp; P_{22} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48} \\[4pt]
-\vdash \quad &amp; P_{48}
+\text{(4)} \quad &amp; P_{25} \\
+\text{(5)} \quad &amp; P_{26} \\
+\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52} \\[4pt]
+\vdash \quad &amp; P_{52}
 \end{aligned}
 \]
 </div>
@@ -977,12 +1466,12 @@ weaker than the argument needs.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{28} \\
-\text{(2)} \quad &amp; P_{29} \\
-\text{(3)} \quad &amp; P_{30} \\
-\text{(4)} \quad &amp; P_{31} \\
-\text{(5)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{48} \\[4pt]
-\vdash \quad &amp; P_{48}
+\text{(1)} \quad &amp; P_{32} \\
+\text{(2)} \quad &amp; P_{33} \\
+\text{(3)} \quad &amp; P_{34} \\
+\text{(4)} \quad &amp; P_{35} \\
+\text{(5)} \quad &amp; (P_{32} \land P_{33} \land P_{34} \land P_{35}) \rightarrow P_{52} \\[4pt]
+\vdash \quad &amp; P_{52}
 \end{aligned}
 \]
 </div>
@@ -997,10 +1486,10 @@ says so.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{32} \\
-\text{(2)} \quad &amp; P_{33} \\
-\text{(3)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{48} \\[4pt]
-\vdash \quad &amp; P_{48}
+\text{(1)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{37} \\
+\text{(3)} \quad &amp; (P_{36} \land P_{37}) \rightarrow P_{52} \\[4pt]
+\vdash \quad &amp; P_{52}
 \end{aligned}
 \]
 </div>
@@ -1015,11 +1504,11 @@ that follows. Its hinge is `compositionGovernsMeaning`.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{23} \\
-\text{(2)} \quad &amp; P_{24} \\
-\text{(3)} \quad &amp; P_{27} \\
-\text{(4)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{48} \\[4pt]
-\vdash \quad &amp; P_{48}
+\text{(1)} \quad &amp; P_{27} \\
+\text{(2)} \quad &amp; P_{28} \\
+\text{(3)} \quad &amp; P_{31} \\
+\text{(4)} \quad &amp; (P_{27} \land P_{28} \land P_{31} \land P_{26}) \rightarrow P_{52} \\[4pt]
+\vdash \quad &amp; P_{52}
 \end{aligned}
 \]
 </div>
@@ -1038,10 +1527,10 @@ own.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{45} \\
-\text{(2)} \quad &amp; P_{46} \\
-\text{(3)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{48} \\[4pt]
-\vdash \quad &amp; P_{48}
+\text{(1)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{50} \\
+\text{(3)} \quad &amp; (P_{49} \land P_{50}) \rightarrow P_{52} \\[4pt]
+\vdash \quad &amp; P_{52}
 \end{aligned}
 \]
 </div>
@@ -1063,9 +1552,9 @@ be purely semantic, and the line would not be the cheap move it is.
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{34} \\
+\text{(4)} \quad &amp; P_{38} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{34}) \rightarrow P_{7} \\[4pt]
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{38}) \rightarrow P_{7} \\[4pt]
 \vdash \quad &amp; P_{7}
 \end{aligned}
 \]
@@ -1114,7 +1603,7 @@ conclusion rather than running on to the fulfilment claim.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{40} \\
 \text{(3)} \quad &amp; P_{17} \\
 \text{(4)} \quad &amp; P_{19} \\
 \text{(5)} \quad &amp; P_{15} \rightarrow P_{16} \\[4pt]
@@ -1140,6 +1629,43 @@ retyping them.
 \]
 </div>
 
+<a id="signLine"></a>
+**`signLine`** — The fathers' sign argument (Isaiah 7:11, 14)
+
+**The fathers' sign argument.** Justin, Irenaeus and Origen, and Rydelnik
+today: the sign of 7:14 must be extraordinary, an ordinary conception is not, so
+the pregnancy is no ordinary one. It denies the ground of Wegner's line that the
+parse does not supply, and nothing else.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{21} \\
+\text{(2)} \quad &amp; P_{22} \\
+\text{(3)} \quad &amp; (P_{21} \land P_{22}) \rightarrow \lnot P_{17} \\[4pt]
+\vdash \quad &amp; \lnot P_{17}
+\end{aligned}
+\]
+</div>
+
+<a id="ordinarySignLine"></a>
+**`ordinarySignLine`** — The near-term reply: a sign need not be a miracle
+
+**The near-term reply**, as an argument: signs in Isaiah are ordinary
+events, and this one is dated by a child's infancy, so it need not be
+extraordinary. Wegner (469–470) and Rhodea (64–65).
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{23} \\
+\text{(2)} \quad &amp; P_{24} \\
+\text{(3)} \quad &amp; (P_{23} \land P_{24}) \rightarrow \lnot P_{21} \\[4pt]
+\vdash \quad &amp; \lnot P_{21}
+\end{aligned}
+\]
+</div>
+
 <a id="criticalExclusionLine"></a>
 **`criticalExclusionLine`** — Critical denial of the predictive reading of Isaiah 7:14
 
@@ -1153,9 +1679,9 @@ with Isaiah 9 and 11 plus `parityDefeatsNearTermExclusion`.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{37} \\
-\text{(3)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{41} \\
+\text{(3)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -1178,9 +1704,9 @@ so the near-term reading does not exclude the messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{38} \\
-\text{(2)} \quad &amp; P_{38} \rightarrow \lnot P_{37} \\[4pt]
-\vdash \quad &amp; \lnot P_{37}
+\text{(1)} \quad &amp; P_{42} \\
+\text{(2)} \quad &amp; P_{42} \rightarrow \lnot P_{41} \\[4pt]
+\vdash \quad &amp; \lnot P_{41}
 \end{aligned}
 \]
 </div>
@@ -1195,10 +1721,10 @@ messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{25} \\
-\text{(2)} \quad &amp; P_{26} \\
-\text{(3)} \quad &amp; (P_{25} \land P_{26}) \rightarrow \lnot P_{37} \\[4pt]
-\vdash \quad &amp; \lnot P_{37}
+\text{(1)} \quad &amp; P_{29} \\
+\text{(2)} \quad &amp; P_{30} \\
+\text{(3)} \quad &amp; (P_{29} \land P_{30}) \rightarrow \lnot P_{41} \\[4pt]
+\vdash \quad &amp; \lnot P_{41}
 \end{aligned}
 \]
 </div>
@@ -1214,10 +1740,10 @@ near-term premise rather than its exclusion premise.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{39} \\
-\text{(2)} \quad &amp; P_{40} \\
-\text{(3)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{36} \\[4pt]
-\vdash \quad &amp; \lnot P_{36}
+\text{(1)} \quad &amp; P_{43} \\
+\text{(2)} \quad &amp; P_{44} \\
+\text{(3)} \quad &amp; (P_{43} \land P_{44}) \rightarrow \lnot P_{40} \\[4pt]
+\vdash \quad &amp; \lnot P_{40}
 \end{aligned}
 \]
 </div>
@@ -1232,10 +1758,10 @@ setting does not exclude a messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{42} \\
-\text{(3)} \quad &amp; (P_{41} \land P_{42}) \rightarrow \lnot P_{37} \\[4pt]
-\vdash \quad &amp; \lnot P_{37}
+\text{(1)} \quad &amp; P_{45} \\
+\text{(2)} \quad &amp; P_{46} \\
+\text{(3)} \quad &amp; (P_{45} \land P_{46}) \rightarrow \lnot P_{41} \\[4pt]
+\vdash \quad &amp; \lnot P_{41}
 \end{aligned}
 \]
 </div>
@@ -1252,8 +1778,8 @@ none of the four strands delivers them.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{34} \\
-\text{(2)} \quad &amp; P_{35}
+\text{(1)} \quad &amp; P_{38} \\
+\text{(2)} \quad &amp; P_{39}
 \end{aligned}
 \]
 </div>
@@ -1303,25 +1829,25 @@ authority.
 \text{(1)} \quad &amp; P_{1} \\
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{9} \\
-\text{(4)} \quad &amp; P_{21} \\
-\text{(5)} \quad &amp; P_{22} \\
-\text{(6)} \quad &amp; P_{28} \\
-\text{(7)} \quad &amp; P_{29} \\
-\text{(8)} \quad &amp; P_{30} \\
-\text{(9)} \quad &amp; P_{31} \\
-\text{(10)} \quad &amp; P_{32} \\
-\text{(11)} \quad &amp; P_{33} \\
-\text{(12)} \quad &amp; P_{23} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; P_{27} \\
-\text{(15)} \quad &amp; P_{34} \\
-\text{(16)} \quad &amp; P_{35} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48} \\
-\text{(18)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{48} \\
-\text{(19)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{48} \\
-\text{(20)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{48} \\
-\text{(21)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(4)} \quad &amp; P_{25} \\
+\text{(5)} \quad &amp; P_{26} \\
+\text{(6)} \quad &amp; P_{32} \\
+\text{(7)} \quad &amp; P_{33} \\
+\text{(8)} \quad &amp; P_{34} \\
+\text{(9)} \quad &amp; P_{35} \\
+\text{(10)} \quad &amp; P_{36} \\
+\text{(11)} \quad &amp; P_{37} \\
+\text{(12)} \quad &amp; P_{27} \\
+\text{(13)} \quad &amp; P_{28} \\
+\text{(14)} \quad &amp; P_{31} \\
+\text{(15)} \quad &amp; P_{38} \\
+\text{(16)} \quad &amp; P_{39} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52} \\
+\text{(18)} \quad &amp; (P_{32} \land P_{33} \land P_{34} \land P_{35}) \rightarrow P_{52} \\
+\text{(19)} \quad &amp; (P_{36} \land P_{37}) \rightarrow P_{52} \\
+\text{(20)} \quad &amp; (P_{27} \land P_{28} \land P_{31} \land P_{26}) \rightarrow P_{52} \\
+\text{(21)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1339,31 +1865,31 @@ one this library's author does not grant.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{45} \\
-\text{(2)} \quad &amp; P_{46} \\
-\text{(3)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{48} \\
+\text{(1)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{50} \\
+\text{(3)} \quad &amp; (P_{49} \land P_{50}) \rightarrow P_{52} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{9} \\
-\text{(7)} \quad &amp; P_{21} \\
-\text{(8)} \quad &amp; P_{22} \\
-\text{(9)} \quad &amp; P_{28} \\
-\text{(10)} \quad &amp; P_{29} \\
-\text{(11)} \quad &amp; P_{30} \\
-\text{(12)} \quad &amp; P_{31} \\
-\text{(13)} \quad &amp; P_{32} \\
-\text{(14)} \quad &amp; P_{33} \\
-\text{(15)} \quad &amp; P_{23} \\
-\text{(16)} \quad &amp; P_{24} \\
-\text{(17)} \quad &amp; P_{27} \\
-\text{(18)} \quad &amp; P_{34} \\
-\text{(19)} \quad &amp; P_{35} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48} \\
-\text{(21)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{48} \\
-\text{(22)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{48} \\
-\text{(23)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{48} \\
-\text{(24)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(7)} \quad &amp; P_{25} \\
+\text{(8)} \quad &amp; P_{26} \\
+\text{(9)} \quad &amp; P_{32} \\
+\text{(10)} \quad &amp; P_{33} \\
+\text{(11)} \quad &amp; P_{34} \\
+\text{(12)} \quad &amp; P_{35} \\
+\text{(13)} \quad &amp; P_{36} \\
+\text{(14)} \quad &amp; P_{37} \\
+\text{(15)} \quad &amp; P_{27} \\
+\text{(16)} \quad &amp; P_{28} \\
+\text{(17)} \quad &amp; P_{31} \\
+\text{(18)} \quad &amp; P_{38} \\
+\text{(19)} \quad &amp; P_{39} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52} \\
+\text{(21)} \quad &amp; (P_{32} \land P_{33} \land P_{34} \land P_{35}) \rightarrow P_{52} \\
+\text{(22)} \quad &amp; (P_{36} \land P_{37}) \rightarrow P_{52} \\
+\text{(23)} \quad &amp; (P_{27} \land P_{28} \land P_{31} \land P_{26}) \rightarrow P_{52} \\
+\text{(24)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1378,12 +1904,12 @@ The magisterial route on its own, with no exegetical premise at all.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{45} \\
-\text{(2)} \quad &amp; P_{46} \\
-\text{(3)} \quad &amp; P_{34} \\
-\text{(4)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{48} \\
-\text{(5)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(1)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{50} \\
+\text{(3)} \quad &amp; P_{38} \\
+\text{(4)} \quad &amp; (P_{49} \land P_{50}) \rightarrow P_{52} \\
+\text{(5)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1400,13 +1926,13 @@ Scripture is the supreme judge.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{45} \\
-\text{(2)} \quad &amp; \lnot P_{46} \\
-\text{(3)} \quad &amp; P_{47} \\
-\text{(4)} \quad &amp; P_{34} \\
-\text{(5)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{48} \\
-\text{(6)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(1)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; \lnot P_{50} \\
+\text{(3)} \quad &amp; P_{51} \\
+\text{(4)} \quad &amp; P_{38} \\
+\text{(5)} \quad &amp; (P_{49} \land P_{50}) \rightarrow P_{52} \\
+\text{(6)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1425,10 +1951,10 @@ on.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
 \text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; P_{21} \\
-\text{(4)} \quad &amp; P_{22} \\
-\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48} \\[4pt]
-\vdash \quad &amp; P_{48}
+\text{(3)} \quad &amp; P_{25} \\
+\text{(4)} \quad &amp; P_{26} \\
+\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52} \\[4pt]
+\vdash \quad &amp; P_{52}
 \end{aligned}
 \]
 </div>
@@ -1444,25 +1970,25 @@ retained.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
 \text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; P_{21} \\
-\text{(4)} \quad &amp; P_{22} \\
-\text{(5)} \quad &amp; P_{28} \\
-\text{(6)} \quad &amp; P_{29} \\
-\text{(7)} \quad &amp; P_{30} \\
-\text{(8)} \quad &amp; P_{31} \\
-\text{(9)} \quad &amp; P_{32} \\
-\text{(10)} \quad &amp; P_{33} \\
-\text{(11)} \quad &amp; P_{23} \\
-\text{(12)} \quad &amp; P_{24} \\
-\text{(13)} \quad &amp; P_{27} \\
-\text{(14)} \quad &amp; P_{34} \\
-\text{(15)} \quad &amp; P_{35} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48} \\
-\text{(17)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{48} \\
-\text{(18)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{48} \\
-\text{(19)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{48} \\
-\text{(20)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(3)} \quad &amp; P_{25} \\
+\text{(4)} \quad &amp; P_{26} \\
+\text{(5)} \quad &amp; P_{32} \\
+\text{(6)} \quad &amp; P_{33} \\
+\text{(7)} \quad &amp; P_{34} \\
+\text{(8)} \quad &amp; P_{35} \\
+\text{(9)} \quad &amp; P_{36} \\
+\text{(10)} \quad &amp; P_{37} \\
+\text{(11)} \quad &amp; P_{27} \\
+\text{(12)} \quad &amp; P_{28} \\
+\text{(13)} \quad &amp; P_{31} \\
+\text{(14)} \quad &amp; P_{38} \\
+\text{(15)} \quad &amp; P_{39} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52} \\
+\text{(17)} \quad &amp; (P_{32} \land P_{33} \land P_{34} \land P_{35}) \rightarrow P_{52} \\
+\text{(18)} \quad &amp; (P_{36} \land P_{37}) \rightarrow P_{52} \\
+\text{(19)} \quad &amp; (P_{27} \land P_{28} \land P_{31} \land P_{26}) \rightarrow P_{52} \\
+\text{(20)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1481,13 +2007,13 @@ added. Kept so that the earlier finding stays checkable.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
 \text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; P_{21} \\
-\text{(4)} \quad &amp; P_{22} \\
-\text{(5)} \quad &amp; P_{34} \\
-\text{(6)} \quad &amp; P_{35} \\
-\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48} \\
-\text{(8)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(3)} \quad &amp; P_{25} \\
+\text{(4)} \quad &amp; P_{26} \\
+\text{(5)} \quad &amp; P_{38} \\
+\text{(6)} \quad &amp; P_{39} \\
+\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52} \\
+\text{(8)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1505,22 +2031,22 @@ textual and historical premise retained.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
 \text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; P_{21} \\
-\text{(4)} \quad &amp; P_{22} \\
-\text{(5)} \quad &amp; P_{28} \\
-\text{(6)} \quad &amp; P_{29} \\
-\text{(7)} \quad &amp; P_{30} \\
-\text{(8)} \quad &amp; P_{32} \\
-\text{(9)} \quad &amp; P_{23} \\
-\text{(10)} \quad &amp; P_{27} \\
-\text{(11)} \quad &amp; P_{34} \\
-\text{(12)} \quad &amp; P_{35} \\
-\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48} \\
-\text{(14)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{48} \\
-\text{(15)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{48} \\
-\text{(16)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{48} \\
-\text{(17)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(3)} \quad &amp; P_{25} \\
+\text{(4)} \quad &amp; P_{26} \\
+\text{(5)} \quad &amp; P_{32} \\
+\text{(6)} \quad &amp; P_{33} \\
+\text{(7)} \quad &amp; P_{34} \\
+\text{(8)} \quad &amp; P_{36} \\
+\text{(9)} \quad &amp; P_{27} \\
+\text{(10)} \quad &amp; P_{31} \\
+\text{(11)} \quad &amp; P_{38} \\
+\text{(12)} \quad &amp; P_{39} \\
+\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52} \\
+\text{(14)} \quad &amp; (P_{32} \land P_{33} \land P_{34} \land P_{35}) \rightarrow P_{52} \\
+\text{(15)} \quad &amp; (P_{36} \land P_{37}) \rightarrow P_{52} \\
+\text{(16)} \quad &amp; (P_{27} \land P_{28} \land P_{31} \land P_{26}) \rightarrow P_{52} \\
+\text{(17)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1539,13 +2065,13 @@ assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* 
 \text{(1)} \quad &amp; P_{1} \\
 \text{(2)} \quad &amp; P_{3} \\
 \text{(3)} \quad &amp; P_{9} \\
-\text{(4)} \quad &amp; P_{21} \\
-\text{(5)} \quad &amp; P_{22} \\
-\text{(6)} \quad &amp; P_{34} \\
-\text{(7)} \quad &amp; P_{35} \\
-\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48} \\
-\text{(9)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(4)} \quad &amp; P_{25} \\
+\text{(5)} \quad &amp; P_{26} \\
+\text{(6)} \quad &amp; P_{38} \\
+\text{(7)} \quad &amp; P_{39} \\
+\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52} \\
+\text{(9)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1567,23 +2093,23 @@ four strands on shared ground; it is the refusal of four strands.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{21} \\
-\text{(3)} \quad &amp; P_{28} \\
-\text{(4)} \quad &amp; P_{32} \\
-\text{(5)} \quad &amp; P_{36} \\
-\text{(6)} \quad &amp; P_{37} \\
-\text{(7)} \quad &amp; P_{43} \\
-\text{(8)} \quad &amp; P_{44} \\
+\text{(2)} \quad &amp; P_{25} \\
+\text{(3)} \quad &amp; P_{32} \\
+\text{(4)} \quad &amp; P_{36} \\
+\text{(5)} \quad &amp; P_{40} \\
+\text{(6)} \quad &amp; P_{41} \\
+\text{(7)} \quad &amp; P_{47} \\
+\text{(8)} \quad &amp; P_{48} \\
 \text{(9)} \quad &amp; \lnot P_{2} \\
-\text{(10)} \quad &amp; \lnot P_{29} \\
-\text{(11)} \quad &amp; \lnot P_{31} \\
-\text{(12)} \quad &amp; \lnot P_{33} \\
-\text{(13)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{1} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{48} \\
-\text{(15)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{48} \\
-\text{(16)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{48} \\
-\text{(17)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(10)} \quad &amp; \lnot P_{33} \\
+\text{(11)} \quad &amp; \lnot P_{35} \\
+\text{(12)} \quad &amp; \lnot P_{37} \\
+\text{(13)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{1} \\
+\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{26}) \rightarrow P_{52} \\
+\text{(15)} \quad &amp; (P_{32} \land P_{33} \land P_{34} \land P_{35}) \rightarrow P_{52} \\
+\text{(16)} \quad &amp; (P_{36} \land P_{37}) \rightarrow P_{52} \\
+\text{(17)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1600,9 +2126,9 @@ denial, not anything about Jesus.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{37} \\
-\text{(3)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{41} \\
+\text{(3)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -1619,10 +2145,10 @@ no longer simply granted.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{38} \\
-\text{(3)} \quad &amp; P_{38} \rightarrow \lnot P_{37} \\
-\text{(4)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{42} \\
+\text{(3)} \quad &amp; P_{42} \rightarrow \lnot P_{41} \\
+\text{(4)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -1639,9 +2165,9 @@ near-term reading does not exclude the messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{38} \\
-\text{(2)} \quad &amp; P_{38} \rightarrow \lnot P_{37} \\[4pt]
-\vdash \quad &amp; \lnot P_{37}
+\text{(1)} \quad &amp; P_{42} \\
+\text{(2)} \quad &amp; P_{42} \rightarrow \lnot P_{41} \\[4pt]
+\vdash \quad &amp; \lnot P_{41}
 \end{aligned}
 \]
 </div>
@@ -1657,10 +2183,10 @@ as Berry's reached from different grounds.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{25} \\
-\text{(2)} \quad &amp; P_{26} \\
-\text{(3)} \quad &amp; (P_{25} \land P_{26}) \rightarrow \lnot P_{37} \\[4pt]
-\vdash \quad &amp; \lnot P_{37}
+\text{(1)} \quad &amp; P_{29} \\
+\text{(2)} \quad &amp; P_{30} \\
+\text{(3)} \quad &amp; (P_{29} \land P_{30}) \rightarrow \lnot P_{41} \\[4pt]
+\vdash \quad &amp; \lnot P_{41}
 \end{aligned}
 \]
 </div>
@@ -1676,10 +2202,10 @@ conclusion as Berry's and Postell's Isaiah argument.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{42} \\
-\text{(3)} \quad &amp; (P_{41} \land P_{42}) \rightarrow \lnot P_{37} \\[4pt]
-\vdash \quad &amp; \lnot P_{37}
+\text{(1)} \quad &amp; P_{45} \\
+\text{(2)} \quad &amp; P_{46} \\
+\text{(3)} \quad &amp; (P_{45} \land P_{46}) \rightarrow \lnot P_{41} \\[4pt]
+\vdash \quad &amp; \lnot P_{41}
 \end{aligned}
 \]
 </div>
@@ -1695,10 +2221,10 @@ sign to Ahaz.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{39} \\
-\text{(2)} \quad &amp; P_{40} \\
-\text{(3)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{36} \\[4pt]
-\vdash \quad &amp; \lnot P_{36}
+\text{(1)} \quad &amp; P_{43} \\
+\text{(2)} \quad &amp; P_{44} \\
+\text{(3)} \quad &amp; (P_{43} \land P_{44}) \rightarrow \lnot P_{40} \\[4pt]
+\vdash \quad &amp; \lnot P_{40}
 \end{aligned}
 \]
 </div>
@@ -1714,11 +2240,11 @@ exclusion premise no longer simply granted.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{25} \\
-\text{(3)} \quad &amp; P_{26} \\
-\text{(4)} \quad &amp; (P_{25} \land P_{26}) \rightarrow \lnot P_{37} \\
-\text{(5)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{29} \\
+\text{(3)} \quad &amp; P_{30} \\
+\text{(4)} \quad &amp; (P_{29} \land P_{30}) \rightarrow \lnot P_{41} \\
+\text{(5)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -1740,9 +2266,9 @@ of the objection's premise*, not the criterion — see
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{34} \\
+\text{(4)} \quad &amp; P_{38} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{34}) \rightarrow P_{7} \\
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{38}) \rightarrow P_{7} \\
 \text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\[4pt]
 \vdash \quad &amp; \lnot P_{8}
 \end{aligned}
@@ -1762,12 +2288,12 @@ The same premises, asked to deliver the criterion instead. They do not.
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{34} \\
+\text{(4)} \quad &amp; P_{38} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{34}) \rightarrow P_{7} \\
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{38}) \rightarrow P_{7} \\
 \text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
-\text{(8)} \quad &amp; (P_{48} \land P_{34}) \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; P_{49}
+\text{(8)} \quad &amp; (P_{52} \land P_{38}) \rightarrow P_{53} \\[4pt]
+\vdash \quad &amp; P_{53}
 \end{aligned}
 \]
 </div>
@@ -1795,7 +2321,7 @@ weight rests and are worth nothing against a weakened rival.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{40} \\
 \text{(3)} \quad &amp; P_{17} \\
 \text{(4)} \quad &amp; P_{19} \\
 \text{(5)} \quad &amp; P_{15} \rightarrow P_{16} \\
@@ -1819,7 +2345,7 @@ all stay.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{40} \\
 \text{(3)} \quad &amp; P_{19} \\
 \text{(4)} \quad &amp; P_{15} \rightarrow P_{16} \\[4pt]
 \vdash \quad &amp; P_{16}
@@ -1838,10 +2364,10 @@ granted either.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{40} \\
 \text{(3)} \quad &amp; P_{19} \\
 \text{(4)} \quad &amp; P_{15} \rightarrow P_{16} \\
-\text{(5)} \quad &amp; (P_{36} \land \lnot P_{1}) \rightarrow P_{17} \\
+\text{(5)} \quad &amp; (P_{40} \land \lnot P_{1}) \rightarrow P_{17} \\
 \text{(6)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{18} \\
 \text{(7)} \quad &amp; (P_{18} \land P_{19}) \rightarrow \lnot P_{2} \\[4pt]
 \vdash \quad &amp; \lnot P_{2}
@@ -1862,7 +2388,7 @@ return leg needs — put in.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{40} \\
 \text{(3)} \quad &amp; P_{19} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{15} \rightarrow P_{16} \\[4pt]
@@ -1882,11 +2408,11 @@ the parse, the near-term setting, the referent principle, and the demand that
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{40} \\
 \text{(3)} \quad &amp; P_{19} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{15} \rightarrow P_{16} \\
-\text{(6)} \quad &amp; (P_{36} \land \lnot P_{1}) \rightarrow P_{17} \\
+\text{(6)} \quad &amp; (P_{40} \land \lnot P_{1}) \rightarrow P_{17} \\
 \text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{1} \\
 \text{(8)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{18} \\
 \text{(9)} \quad &amp; (P_{18} \land P_{19}) \rightarrow \lnot P_{2} \\[4pt]
@@ -1908,7 +2434,7 @@ the referent and contests only what may be inferred from it.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{40} \\
 \text{(3)} \quad &amp; P_{17} \\
 \text{(4)} \quad &amp; P_{20} \\
 \text{(5)} \quad &amp; P_{15} \rightarrow P_{16} \\[4pt]
@@ -1926,7 +2452,7 @@ Wegner's objection with Postell's usage parity in play.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{40} \\
 \text{(3)} \quad &amp; P_{17} \\
 \text{(4)} \quad &amp; P_{20} \\
 \text{(5)} \quad &amp; P_{15} \rightarrow P_{16} \\
@@ -1934,6 +2460,130 @@ Wegner's objection with Postell's usage parity in play.
 \text{(7)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{18} \\
 \text{(8)} \quad &amp; (P_{18} \land P_{19}) \rightarrow \lnot P_{2} \\[4pt]
 \vdash \quad &amp; \lnot P_{2}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+#### The fathers' sign argument, and the reply to it
+
+<a id="signArgument"></a>
+**`signArgument`** — The fathers' sign argument (Isaiah 7:11, 14)
+
+The fathers' sign argument as a position of its own: its conclusion is that
+the pregnancy of Isaiah 7:14 is not an ordinary one, and nothing about the
+word.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{21} \\
+\text{(2)} \quad &amp; P_{22} \\
+\text{(3)} \quad &amp; (P_{21} \land P_{22}) \rightarrow \lnot P_{17} \\[4pt]
+\vdash \quad &amp; \lnot P_{17}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="ordinarySignReply"></a>
+**`ordinarySignReply`** — The near-term reply: a sign need not be a miracle
+
+The near-term reply as a position of its own: the sign of Isaiah 7:14 need
+not be extraordinary.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{23} \\
+\text{(2)} \quad &amp; P_{24} \\
+\text{(3)} \quad &amp; (P_{23} \land P_{24}) \rightarrow \lnot P_{21} \\[4pt]
+\vdash \quad &amp; \lnot P_{21}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="wegnerUnderSign"></a>
+**`wegnerUnderSign`** — Wegner's grammatical objection (Isaiah 7:14)
+
+Wegner's line with the sign argument in play: the ordinary pregnancy no
+longer granted, and the fathers' two grounds in its place. The parse, the
+near-term setting and the referent principle all stay.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{15} \\
+\text{(2)} \quad &amp; P_{40} \\
+\text{(3)} \quad &amp; P_{21} \\
+\text{(4)} \quad &amp; P_{22} \\
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{15} \rightarrow P_{16} \\[4pt]
+\vdash \quad &amp; P_{16}
+\end{aligned}
+\]
+</div>
+
+<a id="wegnerUnderTheSign"></a>
+**`wegnerUnderTheSign`** — Wegner's objection, with the fathers' sign argument in play
+
+Wegner's objection with the fathers' sign argument in play.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{15} \\
+\text{(2)} \quad &amp; P_{40} \\
+\text{(3)} \quad &amp; P_{21} \\
+\text{(4)} \quad &amp; P_{22} \\
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{15} \rightarrow P_{16} \\
+\text{(7)} \quad &amp; (P_{21} \land P_{22}) \rightarrow \lnot P_{17} \\
+\text{(8)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{18} \\
+\text{(9)} \quad &amp; (P_{18} \land P_{19}) \rightarrow \lnot P_{2} \\[4pt]
+\vdash \quad &amp; \lnot P_{2}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="signUnderReply"></a>
+**`signUnderReply`** — The fathers' sign argument (Isaiah 7:11, 14)
+
+The sign argument with the near-term reply in play: its first ground no
+longer granted, and the reply's grounds in its place.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{22} \\
+\text{(2)} \quad &amp; P_{23} \\
+\text{(3)} \quad &amp; P_{24} \\
+\text{(4)} \quad &amp; (P_{21} \land P_{22}) \rightarrow \lnot P_{17} \\[4pt]
+\vdash \quad &amp; \lnot P_{17}
+\end{aligned}
+\]
+</div>
+
+<a id="signArgumentUnderReply"></a>
+**`signArgumentUnderReply`** — The fathers' sign argument, with the near-term reply in play
+
+The fathers' sign argument with the near-term reply in play.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{22} \\
+\text{(2)} \quad &amp; P_{23} \\
+\text{(3)} \quad &amp; P_{24} \\
+\text{(4)} \quad &amp; (P_{21} \land P_{22}) \rightarrow \lnot P_{17} \\
+\text{(5)} \quad &amp; (P_{23} \land P_{24}) \rightarrow \lnot P_{21} \\[4pt]
+\vdash \quad &amp; \lnot P_{17}
 \end{aligned}
 \]
 </div>
@@ -1955,8 +2605,8 @@ would state it.
 \text{(4)} \quad &amp; P_{14} \\
 \text{(5)} \quad &amp; P_{8} \\
 \text{(6)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{49} \\[4pt]
-\vdash \quad &amp; \lnot P_{49}
+\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{53} \\[4pt]
+\vdash \quad &amp; \lnot P_{53}
 \end{aligned}
 \]
 </div>
@@ -1983,13 +2633,13 @@ side, which is neither one line nor several converging ones.
 \text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{5} \\
 \text{(8)} \quad &amp; P_{6} \\
-\text{(9)} \quad &amp; P_{34} \\
-\text{(10)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{34}) \rightarrow P_{7} \\
+\text{(9)} \quad &amp; P_{38} \\
+\text{(10)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{38}) \rightarrow P_{7} \\
 \text{(11)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
 \text{(12)} \quad &amp; (P_{5} \land P_{9} \land P_{12}) \rightarrow \lnot P_{14} \\
 \text{(13)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{49} \\[4pt]
-\vdash \quad &amp; \lnot P_{49}
+\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{53} \\[4pt]
+\vdash \quad &amp; \lnot P_{53}
 \end{aligned}
 \]
 </div>
@@ -1998,8 +2648,10 @@ Grounded in scripture alone: The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘ
 
 ## Arguments.BornOfAVirgin.Results — what does and does not follow
 
-Every result the module claims, each tagged `@[headline]` and each followed by
-`#print axioms` so its trust base is visible in the source.
+Every result about the strands, each tagged `@[headline]` and each followed by
+`#print axioms` so its trust base is visible in the source. The results about
+Wegner's objection — its validity, its circle, and the replies to it, the
+fathers' sign argument among them — are in `Results.Wegner`.
 
 Entailments are established with `establish`; refutations name a countermodel
 and use `refute_with`. A countermodel here is the rival's reading written down
@@ -2351,182 +3003,6 @@ theorem compatibility_does_not_establish_criterion : ¬Establishes
 -- axioms: propext, Quot.sound
 ```
 
-##### Wegner's objection, and the circle in it
-
-<a id="wegner_establishes"></a>
-**`wegner_establishes`**
-
-**Wegner's objection is valid on its own terms.** Grant the
-predicate-adjective parse, grant that the pregnancy it reports is an ordinary
-one, and grant that the one clear Isaianic referent settles what the word
-denotes, and the lexical conclusion follows.
-
-Stated first, and at full strength, because the results below are about where
-its weight rests and are worth nothing if the argument was weak to begin
-with.
-
-```lean
-theorem wegner_establishes : Establishes wegnerLexical
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="rydelnikReading"></a>
-**`rydelnikReading`**
-
-Rydelnik's reading, written down: הָרָה is the predicate adjective Wegner
-says it is, and what it announces is the miracle rather than an ordinary
-conception — the virgin is pregnant, a sign as deep as Sheol.
-
-```lean
-def rydelnikReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.pregnancyAtTheSignIsOrdinary => False
-    | Claim.isaianicAlmahIsNotAVirgin => False
-    | x => True
-```
-
-<a id="wegner_needs_ordinary_pregnancy"></a>
-**`wegner_needs_ordinary_pregnancy`**
-
-**The grammar is not what carries the objection.** Derive the ordinary
-pregnancy the way Wegner derives it — from the near-term reading of the sign —
-rather than granting it, and the argument no longer reaches its conclusion,
-with the parse itself untouched.
-
-So the load-bearing premise is not `harahIsPredicateAdjective`, which both
-sides grant, but the reading of the sign that makes the pregnancy an ordinary
-one. The next result follows that premise back to where it comes from.
-
-```lean
-theorem wegner_needs_ordinary_pregnancy : ¬Establishes
-    wegnerWithoutOrdinaryPregnancy
--- axioms: propext, Quot.sound
-```
-
-<a id="wegnerConclusionGrantedReading"></a>
-**`wegnerConclusionGrantedReading`**
-
-Wegner's own conclusion granted: עַלְמָה does not denote a virgin, and
-Isaiah 7:14 is not a prediction of a virgin birth. The same two legs of the
-circle are satisfied on this reading as on the one below — the first because
-its antecedent fails, the second because its consequent holds — which is what
-makes the circle silent in *both* directions rather than merely unhelpful in
-one.
-
-Not a convenience: it is the position Wegner argues for, and the reading had to
-be found rather than assumed. The all-true valuation that serves the same
-purpose in `SolaScriptura` does not work here, because `wegnerCircle` carries
-negated grounds.
-
-```lean
-def wegnerConclusionGrantedReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.almahMeansVirgin => False
-    | Claim.isaiahPredictsVirginBirth => False
-    | x => True
-```
-
-<a id="circleUngroundedReading"></a>
-**`circleUngroundedReading`**
-
-The reading that exhibits the circle: the predictive reading of Isaiah 7:14
-stands, עַלְמָה may denote a virgin, and the pregnancy the sign announces is not
-an ordinary one. Every uncontested datum in Wegner's case is granted — the
-parse, the near-term setting, the referent principle — and the two legs of the
-circle are satisfied because each is an implication whose antecedent fails.
-
-```lean
-def circleUngroundedReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.pregnancyAtTheSignIsOrdinary => False
-    | Claim.isaianicAlmahIsNotAVirgin => False
-    | x => True
-```
-
-<a id="circle_leaves_the_lexical_conclusion_open"></a>
-**`circle_leaves_the_lexical_conclusion_open`**
-
-**The circle, shown rather than alleged.** Put both legs in place — the
-reading supplying the ordinary pregnancy, and the lexical conclusion turned
-back against the reading — keep every uncontested datum, and the lexical
-conclusion does not follow.
-
-`circleUngroundedReading` is why: a cycle of implications is satisfied outright
-by a valuation on which every node in it is false, because each leg then has a
-false antecedent. Nothing enters such a loop from outside, so nothing comes out
-of it. That is what it means for an argument to be circular rather than sound,
-and it is checkable rather than merely assertable.
-
-What this does **not** show is that Wegner is wrong. `wegner_establishes`
-records that his argument is valid; what the circle costs is the claim that it
-is an *independent* route to the lexical conclusion. And the result is
-conditional on `readingSuppliesOrdinaryPregnancy`, which is Postell's reading
-of Wegner's procedure, not Wegner's own account of it. He would say the
-near-term reading rests on the historical setting and stands without the
-lexical finding — in which case the premise is false and the circle is not
-there. That premise is where a defender of Wegner should press.
-
-```lean
-theorem circle_leaves_the_lexical_conclusion_open : Independent
-    wegnerCircle.premises (notP Claim.almahMeansVirgin)
--- axioms: propext, Quot.sound
-```
-
-<a id="circle_leaves_the_denial_open"></a>
-**`circle_leaves_the_denial_open`**
-
-**And the other end of it is no better off.** The same premises, asked for
-the denial of the predictive reading instead of the lexical conclusion, fail in
-the same way and on the same reading.
-
-Both results are needed to make the point. A circle is not an argument that
-fails to establish one of its nodes; it is one that establishes neither, having
-no premise outside itself.
-
-```lean
-theorem circle_leaves_the_denial_open : Independent wegnerCircle.premises
-    (notP Claim.isaiahPredictsVirginBirth)
--- axioms: propext, Quot.sound
-```
-
-<a id="usageParityReading"></a>
-**`usageParityReading`**
-
-Postell's usage reading, written down: the עַלְמָה of Isaiah 7:14 is granted
-to be no virgin, and a single referent still does not settle what the word
-denotes — because the other clear cases would settle it the other way.
-
-```lean
-def usageParityReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.oneReferentSettlesDenotation => False
-    | x => True
-```
-
-<a id="usage_parity_blocks_wegner"></a>
-**`usage_parity_blocks_wegner`**
-
-**Postell's second reply, and it is independent of the first.** Concede the
-parse, concede the ordinary pregnancy, concede that the woman of Isaiah 7:14 is
-no virgin — and the lexical conclusion still does not follow, because the
-principle that carries it there would carry the other clear cases the opposite
-way.
-
-This one survives the defence suggested above. An opponent who shows that the
-near-term reading stands on its own, and so that there is no circle, has not
-touched the usage parity: the method is still selective. Between them the two
-replies leave the objection needing both a non-circular route to the ordinary
-pregnancy and a reason to privilege this occurrence over Genesis 24:43.
-
-```lean
-theorem usage_parity_blocks_wegner : ¬Establishes wegnerUnderUsageParity
--- axioms: propext, Quot.sound
-```
-
 <a id="noHingeReading"></a>
 **`noHingeReading`**
 
@@ -2718,6 +3194,300 @@ theorem lexicalCritical_is_satisfiable : Satisfiable lexicalCritical.premises
 -- axioms: propext, Quot.sound
 ```
 
+## Arguments.BornOfAVirgin.Results.Wegner — Wegner's objection, and the sign
+
+What follows from Wegner's grammatical objection and from the replies to it:
+that it is valid, where its weight rests, the circle in it, Postell's usage
+parity, and the fathers' sign argument together with the near-term reply to
+that. `Dispute.Wegner` then asks who prevails when these meet.
+
+Every result is tagged `@[headline]` and followed by `#print axioms`, as in
+`Results.lean`, and every countermodel is a named reading.
+
+#### Wegner's objection, and the circle in it
+
+<a id="wegner_establishes"></a>
+**`wegner_establishes`**
+
+**Wegner's objection is valid on its own terms.** Grant the
+predicate-adjective parse, grant that the pregnancy it reports is an ordinary
+one, and grant that the one clear Isaianic referent settles what the word
+denotes, and the lexical conclusion follows.
+
+Stated first, and at full strength, because the results below are about where
+its weight rests and are worth nothing if the argument was weak to begin
+with.
+
+```lean
+theorem wegner_establishes : Establishes wegnerLexical
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="rydelnikReading"></a>
+**`rydelnikReading`**
+
+Rydelnik's reading, written down: הָרָה is the predicate adjective Wegner
+says it is, and what it announces is the miracle rather than an ordinary
+conception — the virgin is pregnant, a sign as deep as Sheol.
+
+```lean
+def rydelnikReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pregnancyAtTheSignIsOrdinary => False
+    | Claim.isaianicAlmahIsNotAVirgin => False
+    | x => True
+```
+
+<a id="wegner_needs_ordinary_pregnancy"></a>
+**`wegner_needs_ordinary_pregnancy`**
+
+**The grammar is not what carries the objection.** Derive the ordinary
+pregnancy the way Wegner derives it — from the near-term reading of the sign —
+rather than granting it, and the argument no longer reaches its conclusion,
+with the parse itself untouched.
+
+So the load-bearing premise is not `harahIsPredicateAdjective`, which both
+sides grant, but the reading of the sign that makes the pregnancy an ordinary
+one. The next result follows that premise back to where it comes from.
+
+```lean
+theorem wegner_needs_ordinary_pregnancy : ¬Establishes
+    wegnerWithoutOrdinaryPregnancy
+-- axioms: propext, Quot.sound
+```
+
+<a id="wegnerConclusionGrantedReading"></a>
+**`wegnerConclusionGrantedReading`**
+
+Wegner's own conclusion granted: עַלְמָה does not denote a virgin, and
+Isaiah 7:14 is not a prediction of a virgin birth. The same two legs of the
+circle are satisfied on this reading as on the one below — the first because
+its antecedent fails, the second because its consequent holds — which is what
+makes the circle silent in *both* directions rather than merely unhelpful in
+one.
+
+Not a convenience: it is the position Wegner argues for, and the reading had to
+be found rather than assumed. The all-true valuation that serves the same
+purpose in `SolaScriptura` does not work here, because `wegnerCircle` carries
+negated grounds.
+
+```lean
+def wegnerConclusionGrantedReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.almahMeansVirgin => False
+    | Claim.isaiahPredictsVirginBirth => False
+    | x => True
+```
+
+<a id="circleUngroundedReading"></a>
+**`circleUngroundedReading`**
+
+The reading that exhibits the circle: the predictive reading of Isaiah 7:14
+stands, עַלְמָה may denote a virgin, and the pregnancy the sign announces is not
+an ordinary one. Every uncontested datum in Wegner's case is granted — the
+parse, the near-term setting, the referent principle — and the two legs of the
+circle are satisfied because each is an implication whose antecedent fails.
+
+```lean
+def circleUngroundedReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pregnancyAtTheSignIsOrdinary => False
+    | Claim.isaianicAlmahIsNotAVirgin => False
+    | x => True
+```
+
+<a id="circle_leaves_the_lexical_conclusion_open"></a>
+**`circle_leaves_the_lexical_conclusion_open`**
+
+**The circle, shown rather than alleged.** Put both legs in place — the
+reading supplying the ordinary pregnancy, and the lexical conclusion turned
+back against the reading — keep every uncontested datum, and the lexical
+conclusion does not follow.
+
+`circleUngroundedReading` is why: a cycle of implications is satisfied outright
+by a valuation on which every node in it is false, because each leg then has a
+false antecedent. Nothing enters such a loop from outside, so nothing comes out
+of it. That is what it means for an argument to be circular rather than sound,
+and it is checkable rather than merely assertable.
+
+What this does **not** show is that Wegner is wrong. `wegner_establishes`
+records that his argument is valid; what the circle costs is the claim that it
+is an *independent* route to the lexical conclusion. And the result is
+conditional on `readingSuppliesOrdinaryPregnancy`, which is Postell's reading
+of Wegner's procedure, not Wegner's own account of it. He would say the
+near-term reading rests on the historical setting and stands without the
+lexical finding — in which case the premise is false and the circle is not
+there. That premise is where a defender of Wegner should press.
+
+```lean
+theorem circle_leaves_the_lexical_conclusion_open : Independent
+    wegnerCircle.premises (notP Claim.almahMeansVirgin)
+-- axioms: propext, Quot.sound
+```
+
+<a id="circle_leaves_the_denial_open"></a>
+**`circle_leaves_the_denial_open`**
+
+**And the other end of it is no better off.** The same premises, asked for
+the denial of the predictive reading instead of the lexical conclusion, fail in
+the same way and on the same reading.
+
+Both results are needed to make the point. A circle is not an argument that
+fails to establish one of its nodes; it is one that establishes neither, having
+no premise outside itself.
+
+```lean
+theorem circle_leaves_the_denial_open : Independent wegnerCircle.premises
+    (notP Claim.isaiahPredictsVirginBirth)
+-- axioms: propext, Quot.sound
+```
+
+<a id="usageParityReading"></a>
+**`usageParityReading`**
+
+Postell's usage reading, written down: the עַלְמָה of Isaiah 7:14 is granted
+to be no virgin, and a single referent still does not settle what the word
+denotes — because the other clear cases would settle it the other way.
+
+```lean
+def usageParityReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.oneReferentSettlesDenotation => False
+    | x => True
+```
+
+<a id="usage_parity_blocks_wegner"></a>
+**`usage_parity_blocks_wegner`**
+
+**Postell's second reply, and it is independent of the first.** Concede the
+parse, concede the ordinary pregnancy, concede that the woman of Isaiah 7:14 is
+no virgin — and the lexical conclusion still does not follow, because the
+principle that carries it there would carry the other clear cases the opposite
+way.
+
+This one survives the defence suggested above. An opponent who shows that the
+near-term reading stands on its own, and so that there is no circle, has not
+touched the usage parity: the method is still selective. Between them the two
+replies leave the objection needing both a non-circular route to the ordinary
+pregnancy and a reason to privilege this occurrence over Genesis 24:43.
+
+```lean
+theorem usage_parity_blocks_wegner : ¬Establishes wegnerUnderUsageParity
+-- axioms: propext, Quot.sound
+```
+
+#### The fathers' sign argument
+
+Justin, Irenaeus and Origen answer the near-term reading with one argument. The
+oracle promised a *sign*, one offered "in the depth or in the height" (7:11),
+and an ordinary conception happens to every woman who is not barren. So the
+pregnancy of 7:14 is not an ordinary one, and that is the ground of Wegner's
+objection that the grammar does not supply.
+
+The near-term reply is that a sign need not be a miracle. Isaiah's own children
+are "signs and portents" (8:18), and this sign is dated by a child's infancy
+(7:16), so its point may be its timing.
+
+<a id="referentialSignReading"></a>
+**`referentialSignReading`**
+
+The fathers' sign, with the word left to the lexicon: the pregnancy of 7:14
+is no ordinary one, and עַלְמָה still does not denote a virgin. It is the
+referential reading's world, in which Mary is an עַלְמָה without the word
+carrying the sense. Every premise of Wegner's objection under the sign argument
+holds in it, and so does his lexical conclusion.
+
+```lean
+def referentialSignReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.almahMeansVirgin => False
+    | Claim.pregnancyAtTheSignIsOrdinary => False
+    | Claim.isaianicAlmahIsNotAVirgin => False
+    | x => True
+```
+
+<a id="sign_leaves_the_lexical_conclusion_open"></a>
+**`sign_leaves_the_lexical_conclusion_open`**
+
+**The sign argument blocks Wegner's objection, and settles nothing about
+the word.** Keep the parse, the near-term setting and the referent principle,
+put the fathers' two grounds where the ordinary pregnancy was, and the lexical
+conclusion is independent of what is left. On Rydelnik's reading it fails: the
+virgin is pregnant, a sign as deep as Sheol. On `referentialSignReading` it
+holds.
+
+So the argument answers the objection where `wegner_needs_ordinary_pregnancy`
+says its weight rests, and does no more. It does not show that עַלְמָה denotes a
+virgin, because it is not about the word at all.
+
+```lean
+theorem sign_leaves_the_lexical_conclusion_open : Independent
+    wegnerUnderTheSign.premises (notP Claim.almahMeansVirgin)
+-- axioms: propext, Quot.sound
+```
+
+<a id="nearTermSignReading"></a>
+**`nearTermSignReading`**
+
+The near-term reading of the sign, in Wegner's world: a sign need not be a
+miracle, the pregnancy is an ordinary one, and עַלְמָה does not denote a
+virgin.
+
+```lean
+def nearTermSignReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.signMustBeExtraordinary => False
+    | Claim.almahMeansVirgin => False
+    | x => True
+```
+
+<a id="marvelAnywayReading"></a>
+**`marvelAnywayReading`**
+
+A sign that need not be a marvel, and is one all the same: the reader who
+grants the near-term reply and still holds that the pregnancy of 7:14 is no
+ordinary one, on other grounds than the sign.
+
+```lean
+def marvelAnywayReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.signMustBeExtraordinary => False
+    | Claim.pregnancyAtTheSignIsOrdinary => False
+    | x => True
+```
+
+<a id="reply_leaves_the_pregnancy_open"></a>
+**`reply_leaves_the_pregnancy_open`**
+
+**The near-term reply blocks the sign argument back, and settles nothing
+about the pregnancy.** Put the reply's grounds and step where the fathers' first
+ground was, keep the second, and whether the pregnancy is an ordinary one is
+independent of what is left: it is on `nearTermSignReading` and it is not on
+`marvelAnywayReading`.
+
+This is the reply's whole reach. It takes away the fathers' reason for denying
+the ordinary pregnancy; it does not supply Wegner's reason for asserting it,
+which still comes from the near-term reading of the sign.
+
+```lean
+theorem reply_leaves_the_pregnancy_open : Independent
+    signArgumentUnderReply.premises (notP Claim.pregnancyAtTheSignIsOrdinary)
+-- axioms: propext, Quot.sound
+```
+
+#### Satisfiability
+
+As in `Results.lean`: only a package with a positive `Establishes` result needs
+a model named, and the sign argument and the reply are given theirs in
+`Dispute.Wegner`, where they are established.
+
 <a id="wegnerOwnReading"></a>
 **`wegnerOwnReading`**
 
@@ -2830,9 +3600,12 @@ Micah 5 or Isaiah 9 is a *sign* to Ahaz — would be the source to find.
 
 The predictive reading is not a modern apologetic. Justin, Irenaeus, Origen and
 Jerome all argue it, and `Sources.lean` cites them for it: for the
-prediction itself, for עַלְמָה as a virgin, and — the argument they share —
-that an ordinary conception would have been no sign at all. That strengthens
-the attestation of the scriptural premises, and none of it changes a rating.
+prediction itself and for עַלְמָה as a virgin. That strengthens the attestation
+of the scriptural premises, and none of it changes a rating. The argument they
+share — that an ordinary conception would have been no sign at all — is
+encoded as an argument in its own right, `signLine`. It answers Wegner's
+objection rather than the critical denial, so it is weighed in `Dispute.Wegner`
+and not here.
 
 It cannot, because of what `disputed` means here: *actively contested by
 competent scholars*. The fathers are the earliest witnesses to the contest as
@@ -3542,5 +4315,375 @@ of that inference.
 ```lean
 theorem nothing_prevails_without_the_counterexamples : Framework.grounded
     withoutParity.defeats = ∅
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+## Arguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner's objection
+
+The sign argument attacks Wegner's objection, not the critical denial of the
+predictive reading, so it belongs to a dispute of its own rather than to
+`isaiahDispute`. Three positions meet here: Wegner's objection at full
+strength, the fathers' sign argument against its ordinary pregnancy, and the
+near-term reply that a sign need not be a miracle.
+
+As in `Dispute.lean`, who defeats whom is proved, not stipulated:
+
+- **The sign argument defeats Wegner.** It entails the negation of his premise
+  that the pregnancy is an ordinary one, cited `disputed`.
+- **Wegner defeats the sign argument back.** He holds that premise, and so
+  concludes the opposite of the fathers; and each side's weakest link is
+  `disputed`.
+- **The reply defeats the sign argument**, by entailing the negation of its
+  premise that the sign must be extraordinary, also cited `disputed`.
+- **The sign argument defeats the reply back**, for the same reason Wegner
+  defeats it: it holds the premise the reply denies, and the reply's inference
+  is `disputed`.
+- **Wegner and the reply do not attack each other.** They stand together in
+  Wegner's own world, and Wegner is cited for both.
+
+### What follows
+
+**Nothing prevails.** Every party is defeated by someone, so the grounded
+extension is empty (`nothing_prevails_over_wegner`). It can be resolved two
+ways, and each is proved to be a preferred extension: the fathers alone
+(`sign_is_one_resolution`), or Wegner with the near-term reply
+(`wegner_is_the_other_resolution`). Each side is defensible and neither is
+forced. Hear only Wegner and the fathers and it is the same
+(`nothing_prevails_without_the_reply`): the reply is not what holds the fathers
+back. Wegner's rebuttal is, because the fathers' weakest link is no stronger
+than his.
+
+### What the ratings decide
+
+Every party's weakest link is `disputed`, so every attack succeeds and the
+dispute ties. Two ratings would break the tie, and they break it in opposite
+directions.
+
+**The fathers' ground, `signMustBeExtraordinary`.** It is `disputed` because
+Wegner and Rhodea contest it. Rated `plausible`, it would make the sign
+argument stronger than both rivals, since its other ground is `consensus` and
+its inference `plausible`. Wegner's rebuttal and the reply's undermining would
+then both fail. Nothing would defeat the fathers, and the fathers would defeat
+Wegner outright.
+
+**The reply's inference.** It is `disputed` because Rydelnik grants both of its
+grounds and denies what it concludes (`reply_rests_on_its_inference`). Rated
+`plausible`, it would make the reply stronger than the fathers, whose rebuttal
+would then fail. The reply would stand unanswered, and it would defend Wegner
+against the only party that defeats him.
+
+So the question this dispute cannot settle is the one the sources divide on:
+whether the sign of 7:14 must be the kind of sign offered at 7:11. Neither the
+age of the fathers' argument nor its modern restatement changes that rating,
+for the reason `Dispute.lean` gives: an older witness does not make a contested
+claim uncontested.
+
+#### The sign argument and the reply as positions
+
+<a id="signArgument_establishes"></a>
+**`signArgument_establishes`**
+
+The fathers' sign argument delivers its conclusion.
+
+```lean
+theorem signArgument_establishes : Establishes signArgument
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="signArgument_is_satisfiable"></a>
+**`signArgument_is_satisfiable`**
+
+The fathers' sign argument has a model: Rydelnik's reading, in which the
+virgin is pregnant and the sign is as deep as Sheol.
+
+```lean
+theorem signArgument_is_satisfiable : Satisfiable signArgument.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="ordinarySignReply_establishes"></a>
+**`ordinarySignReply_establishes`**
+
+The near-term reply delivers its conclusion.
+
+```lean
+theorem ordinarySignReply_establishes : Establishes ordinarySignReply
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="ordinarySignReply_is_satisfiable"></a>
+**`ordinarySignReply_is_satisfiable`**
+
+The near-term reply has a model: the near-term reading of the sign.
+
+```lean
+theorem ordinarySignReply_is_satisfiable : Satisfiable
+    ordinarySignReply.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="reply_rests_on_its_inference"></a>
+**`reply_rests_on_its_inference`**
+
+**The reply rests on its inference, not on its observations.** On
+Rydelnik's reading Isaiah's children are signs, 7:16 dates the deliverance by a
+child's infancy, and the sign of 7:14 is extraordinary all the same. The two
+grounds do not decide the question; the step does, and that is why it is rated
+`disputed`.
+
+```lean
+theorem reply_rests_on_its_inference : ¬Entails ordinarySignLine.grounds (notP
+    Claim.signMustBeExtraordinary)
+-- axioms: propext, Quot.sound
+```
+
+#### Strength
+
+<a id="wegnerLexical_strength"></a>
+**`wegnerLexical_strength`**
+
+Wegner is no stronger than his contested grounds: the ordinary pregnancy,
+the near-term setting and the referent principle, each cited `disputed`.
+
+```lean
+theorem wegnerLexical_strength : wegnerLexical.strength = 0
+-- axioms: propext
+```
+
+<a id="signArgument_strength"></a>
+**`signArgument_strength`**
+
+The fathers' second ground is `consensus` and their inference `plausible`,
+but their first ground is `disputed`, and they are no stronger than it.
+
+```lean
+theorem signArgument_strength : signArgument.strength = 0
+-- axioms: propext
+```
+
+<a id="ordinarySignReply_strength"></a>
+**`ordinarySignReply_strength`**
+
+The reply's grounds are `consensus`, but its inference is `disputed`.
+
+```lean
+theorem ordinarySignReply_strength : ordinarySignReply.strength = 0
+-- axioms: propext
+```
+
+#### The defeats
+
+<a id="sign_defeats_wegner"></a>
+**`sign_defeats_wegner`**
+
+**The sign argument defeats Wegner.** It entails the negation of his premise
+that the pregnancy is an ordinary one, which, cited `disputed`, does not
+outrank it.
+
+```lean
+theorem sign_defeats_wegner : Defeats signArgument wegnerLexical
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wegner_defeats_sign"></a>
+**`wegner_defeats_sign`**
+
+**Wegner defeats the sign argument back.** He holds the premise it denies,
+so he rebuts it, and it is no stronger than he is.
+
+```lean
+theorem wegner_defeats_sign : Defeats wegnerLexical signArgument
+-- axioms: propext, Quot.sound
+```
+
+<a id="reply_defeats_sign"></a>
+**`reply_defeats_sign`**
+
+**The reply defeats the sign argument.** It entails the negation of the
+fathers' premise that the sign must be extraordinary, cited `disputed`.
+
+```lean
+theorem reply_defeats_sign : Defeats ordinarySignReply signArgument
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="sign_defeats_reply"></a>
+**`sign_defeats_reply`**
+
+**The sign argument defeats the reply back.** It holds the premise the reply
+denies, and the reply's inference is contested as that premise is.
+
+```lean
+theorem sign_defeats_reply : Defeats signArgument ordinarySignReply
+-- axioms: propext, Quot.sound
+```
+
+#### The dispute
+
+<a id="wegnerPartyNode"></a>
+**`wegnerPartyNode`**
+
+The package each party argues from.
+
+```lean
+def wegnerPartyNode : WegnerParty → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | WegnerParty.wegner =>
+      wegnerLexical
+    | WegnerParty.sign =>
+      signArgument
+    | WegnerParty.reply =>
+      ordinarySignReply
+```
+
+<a id="wegnerDispute"></a>
+**`wegnerDispute`**
+
+The dispute over Wegner's objection: every party's premises have a model,
+every party establishes its conclusion, and every party's inferences are
+rated.
+
+```lean
+def wegnerDispute : Dispute Claim WegnerParty :=
+  { node := wegnerPartyNode,
+    consistent := wegnerDispute._proof_1,
+    sound := wegnerDispute._proof_2,
+    rated := wegnerDispute._proof_3 }
+```
+
+<a id="wegner_stands_with_the_reply"></a>
+**`wegner_stands_with_the_reply`**
+
+**Wegner and the near-term reply stand together**, in Wegner's own world:
+the word does not denote a virgin, and the sign need not be a miracle.
+
+```lean
+theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether
+    [WegnerParty.wegner, WegnerParty.reply]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wegnerPartyDefeats"></a>
+**`wegnerPartyDefeats`**
+
+The defeats of the dispute, as a table.
+
+```lean
+def wegnerPartyDefeats : WegnerParty → WegnerParty → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | WegnerParty.sign,
+      WegnerParty.wegner => True
+    | WegnerParty.wegner,
+      WegnerParty.sign => True
+    | WegnerParty.reply,
+      WegnerParty.sign => True
+    | WegnerParty.sign,
+      WegnerParty.reply => True
+    | x, x_2 => False
+```
+
+<a id="wegnerDispute_defeats"></a>
+**`wegnerDispute_defeats`**
+
+**Who defeats whom**, all nine pairs: the fathers and Wegner defeat each
+other, the fathers and the reply defeat each other, and nothing else.
+
+```lean
+theorem wegnerDispute_defeats : ∀ (i j : WegnerParty), wegnerDispute.defeats i
+    j ↔ wegnerPartyDefeats i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="nothing_prevails_over_wegner"></a>
+**`nothing_prevails_over_wegner`**
+
+**Nothing prevails.** Every party is defeated by someone — Wegner and the
+reply by the fathers, the fathers by both — so nothing is forced, and the
+grounded extension is empty.
+
+```lean
+theorem nothing_prevails_over_wegner : Framework.grounded
+    wegnerDispute.defeats = ∅
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="sign_is_one_resolution"></a>
+**`sign_is_one_resolution`**
+
+**One resolution: the fathers.** The sign argument alone is admissible — it
+defeats both of its defeaters — and it is in conflict with both of the other
+parties, so no larger set is.
+
+```lean
+theorem sign_is_one_resolution : Framework.Preferred wegnerDispute.defeats
+    {WegnerParty.sign}
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wegner_is_the_other_resolution"></a>
+**`wegner_is_the_other_resolution`**
+
+**The other resolution: Wegner, with the near-term reply.** Neither defeats
+the other, and between them they answer the fathers, who are the only party to
+defeat either. The fathers are in conflict with both, so no larger set is
+admissible.
+
+```lean
+theorem wegner_is_the_other_resolution : Framework.Preferred
+    wegnerDispute.defeats {WegnerParty.wegner, WegnerParty.reply}
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="sign_not_skeptically_accepted"></a>
+**`sign_not_skeptically_accepted`**
+
+So the dispute does not force the fathers' reading.
+
+```lean
+theorem sign_not_skeptically_accepted : ¬Framework.SkepticallyAccepted
+    wegnerDispute.defeats WegnerParty.sign
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wegner_not_skeptically_accepted"></a>
+**`wegner_not_skeptically_accepted`**
+
+Nor does it force Wegner's.
+
+```lean
+theorem wegner_not_skeptically_accepted : ¬Framework.SkepticallyAccepted
+    wegnerDispute.defeats WegnerParty.wegner
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+#### A hearing without the reply
+
+<a id="signAgainstWegner"></a>
+**`signAgainstWegner`**
+
+Wegner and the fathers alone.
+
+```lean
+def signAgainstWegner : Dispute Claim { i // i ∈ [WegnerParty.wegner,
+    WegnerParty.sign] } :=
+  wegnerDispute.restrict fun x =>
+    x ∈
+      [WegnerParty.wegner,
+        WegnerParty.sign]
+```
+
+<a id="nothing_prevails_without_the_reply"></a>
+**`nothing_prevails_without_the_reply`**
+
+**Without the reply, nothing prevails either.** Wegner and the fathers
+defeat each other, so the reply is not what keeps the fathers from prevailing:
+Wegner's rebuttal does, because the fathers' weakest link is no stronger than
+his.
+
+```lean
+theorem nothing_prevails_without_the_reply : Framework.grounded
+    signAgainstWegner.defeats = ∅
 -- axioms: propext, Classical.choice, Quot.sound
 ```
