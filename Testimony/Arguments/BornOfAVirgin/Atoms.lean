@@ -124,6 +124,12 @@ inductive Claim
   /-- How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open
   question. Berry's objection to the premise above. -/
   | nearTermFulfilmentIsUnclear
+  /-- The sign of Isaiah 7:13–14 is given to the house of David, in the
+  plural; the "you" of 7:16 is singular, and is Ahaz. -/
+  | signGivenToHouseOfDavid
+  /-- Isaiah 8:4 gives Maher-shalal-hash-baz the timetable that 7:16 gives the
+  child of 7:14: before he can speak, Damascus and Samaria are despoiled. -/
+  | maherShalalHashBazRepeatsTheTimetable
   /-- Genesis 3:15 is an etiology of the enmity between snakes and humans, and
   "her seed" is simply her descendants. The critical reading. -/
   | genesis3_15IsEtiology

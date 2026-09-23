@@ -370,6 +370,34 @@ def cite : Claim → AtomMeta
         , supporting := [.work comptonImmanuelProphecy (.pages 5 9)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
+  | .signGivenToHouseOfDavid =>
+    { label := "Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz"
+    , kind := .textual
+      -- What the Hebrew says: שִׁמְעוּ־נָא בֵּית דָּוִד and לָכֶם in 7:13–14 are
+      -- plural, אַתָּה in 7:16 is singular. Compton builds on it (12), Motyer
+      -- notes the address to the dynasty (122). The grammar is not in dispute;
+      -- what it implies is, and that is left to the step that uses it.
+    , source :=
+        { primary := .scripture immanuelAddressees
+        , supporting :=
+            [ .work comptonImmanuelProphecy (.page 12)
+            , .work motyerContextContent (.page 122) ]
+        , tradition := .criticalScholarship
+        , confidence := .consensus } }
+  | .maherShalalHashBazRepeatsTheTimetable =>
+    { label := "Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14"
+    , kind := .textual
+      -- Common ground: the parallel is what leads the critics who identify the
+      -- two children to identify them (Compton 5, citing Clements). Motyer
+      -- (124) and Compton (13) read it the other way. The observation is
+      -- shared; the reading of it is the step.
+    , source :=
+        { primary := .work motyerContextContent (.page 124)
+        , supporting :=
+            [ .work comptonImmanuelProphecy (.page 13)
+            , .scripture sharedTimetable ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
   | .genesis3_15IsEtiology =>
     { label := "Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants"
     , kind := .interpretive

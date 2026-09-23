@@ -142,18 +142,22 @@ That gives the critical exclusion step two independent defeaters. Berry's is
 evidential — we do not know how the sign was fulfilled in Ahaz's day. Postell's
 is structural — the near-term setting was never the right kind of reason.
 
-**Taken together, the four positions make a dispute, and the dispute has an
-outcome the entailment results cannot state.** `Dispute.lean` treats the
-scriptural reading, the critical denial, Berry and Postell as the nodes of an
+**Taken together, the positions make a dispute, and the dispute has an outcome
+the entailment results cannot state.** `Dispute.lean` treats the scriptural
+reading, the critical denial, Berry, Postell and Motyer as the nodes of an
 argumentation framework and proves who defeats whom — a defeat being an attack
 derived from entailment that the cited confidences do not block. Against the
 scriptural reading alone, `nothing_prevails_unanswered`: the critical denial and
 the scriptural reading defeat each other, because the weakest premise on each
 side is `disputed` (`christian_defeats_critical`). Hear Berry and Postell, and
 `scriptural_reading_prevails_once_replies_are_heard`: nothing defeats the
-replies, they defeat the critic, and so they defend the scriptural reading
-against its only defeater. The critic is left with no defence at all
-(`critical_denial_indefensible`). That outcome turns on the critic's premises
+replies — Berry, Postell, and Motyer with Compton — they defeat the critic, and
+so they defend the scriptural reading against its only defeater. The critic is
+left with no defence at all (`critical_denial_indefensible`), and Motyer, who
+denies the critic's other premise, is enough on his own
+(`scriptural_reading_prevails_on_motyer_alone`). His reply rests on an
+inference rather than an observation, and `motyer_rests_on_his_inference` says
+so. That outcome turns on the critic's premises
 being rated `disputed`, as the replies, Motyer and Compton contest them; with
 the exclusion premise rated `wellSupported`, as it once was, the dispute was a
 standoff.
@@ -191,7 +195,7 @@ that no one could hold in view. The dependencies run one way.
 | `Lines.lean` | the inference steps, and the lines of reason they compose into |
 | `Packages.lean` | the positions, and the variant packages the results refute |
 | `Results.lean` | every `@[headline]` result, with its trust base |
-| `Dispute.lean` | the four positions as one dispute: who defeats whom, and who prevails |
+| `Dispute.lean` | the five positions as one dispute: who defeats whom, and who prevails |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in
@@ -262,13 +266,15 @@ reader sees.
 | \\(P_{36}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
 | \\(P_{37}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
 | \\(P_{38}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
-| \\(P_{39}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{40}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{41}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{42}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{43}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
-| \\(P_{44}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{45}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| \\(P_{39}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
+| \\(P_{40}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
+| \\(P_{41}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{42}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{43}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{44}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{45}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
+| \\(P_{46}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
+| \\(P_{47}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
 
 </div>
 
@@ -525,7 +531,7 @@ Matthew's intent, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44}
+(P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46}
 \]
 </div>
 
@@ -537,7 +543,7 @@ idiom, and the inference drawn from its departure, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{44}
+(P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{46}
 \]
 </div>
 
@@ -554,7 +560,7 @@ grants the composition and stops short of Matthew is entitled to.
 
 <div class="testimony-math">
 \[
-(P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{44}
+(P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{46}
 \]
 </div>
 
@@ -586,7 +592,7 @@ it, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{32} \land P_{33}) \rightarrow P_{44}
+(P_{32} \land P_{33}) \rightarrow P_{46}
 \]
 </div>
 
@@ -598,7 +604,7 @@ criterion follows. Encoded, but deliberately kept out of `christian`.
 
 <div class="testimony-math">
 \[
-(P_{41} \land P_{42}) \rightarrow P_{44}
+(P_{43} \land P_{44}) \rightarrow P_{46}
 \]
 </div>
 
@@ -634,6 +640,27 @@ field of their own, so this is where that is recorded.
 <div class="testimony-math">
 \[
 P_{38} \rightarrow \lnot P_{37}
+\]
+</div>
+
+<a id="timetablePassesToMaherShalalHashBaz"></a>
+**`timetablePassesToMaherShalalHashBaz`**
+
+Motyer's inference: the sign of 7:14 is given to the dynasty, and the
+timetable that answers Ahaz's crisis passes to Maher-shalal-hash-baz, so the
+child of 7:14 is not a near-term sign to Ahaz. "Either we must identify
+Maher-shalal-hash-baz with Immanuel, or we must project Immanuel into the
+undated future" (Motyer 1970, 124).
+
+This is the contested part of his reply, and it is a step rather than an atom
+on purpose, as Berry's and Postell's are: the two atoms it joins are what the
+text says, and the inference is what a reader who identifies the two children
+denies. Inference steps carry no confidence field; an attack on one always
+defeats.
+
+<div class="testimony-math">
+\[
+(P_{39} \land P_{40}) \rightarrow \lnot P_{36}
 \]
 </div>
 
@@ -677,7 +704,7 @@ objector would state it, so that the reply has something real to answer.
 
 <div class="testimony-math">
 \[
-(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{45}
+(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{47}
 \]
 </div>
 
@@ -716,7 +743,7 @@ From the criterion and the historical claim, the fulfilment follows.
 
 <div class="testimony-math">
 \[
-(P_{44} \land P_{34}) \rightarrow P_{45}
+(P_{46} \land P_{34}) \rightarrow P_{47}
 \]
 </div>
 
@@ -848,8 +875,8 @@ Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
 \text{(3)} \quad &amp; P_{9} \\
 \text{(4)} \quad &amp; P_{21} \\
 \text{(5)} \quad &amp; P_{22} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44} \\[4pt]
-\vdash \quad &amp; P_{44}
+\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46} \\[4pt]
+\vdash \quad &amp; P_{46}
 \end{aligned}
 \]
 </div>
@@ -869,8 +896,8 @@ weaker than the argument needs.
 \text{(2)} \quad &amp; P_{29} \\
 \text{(3)} \quad &amp; P_{30} \\
 \text{(4)} \quad &amp; P_{31} \\
-\text{(5)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{44} \\[4pt]
-\vdash \quad &amp; P_{44}
+\text{(5)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{46} \\[4pt]
+\vdash \quad &amp; P_{46}
 \end{aligned}
 \]
 </div>
@@ -887,8 +914,8 @@ says so.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{32} \\
 \text{(2)} \quad &amp; P_{33} \\
-\text{(3)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{44} \\[4pt]
-\vdash \quad &amp; P_{44}
+\text{(3)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{46} \\[4pt]
+\vdash \quad &amp; P_{46}
 \end{aligned}
 \]
 </div>
@@ -906,8 +933,8 @@ that follows. Its hinge is `compositionGovernsMeaning`.
 \text{(1)} \quad &amp; P_{23} \\
 \text{(2)} \quad &amp; P_{24} \\
 \text{(3)} \quad &amp; P_{27} \\
-\text{(4)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{44} \\[4pt]
-\vdash \quad &amp; P_{44}
+\text{(4)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{46} \\[4pt]
+\vdash \quad &amp; P_{46}
 \end{aligned}
 \]
 </div>
@@ -926,10 +953,10 @@ own.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{42} \\
-\text{(3)} \quad &amp; (P_{41} \land P_{42}) \rightarrow P_{44} \\[4pt]
-\vdash \quad &amp; P_{44}
+\text{(1)} \quad &amp; P_{43} \\
+\text{(2)} \quad &amp; P_{44} \\
+\text{(3)} \quad &amp; (P_{43} \land P_{44}) \rightarrow P_{46} \\[4pt]
+\vdash \quad &amp; P_{46}
 \end{aligned}
 \]
 </div>
@@ -1091,6 +1118,25 @@ messianic sense.
 \]
 </div>
 
+<a id="motyerLine"></a>
+**`motyerLine`** — Motyer's reply to the near-term reading
+
+**Motyer's reply**, as an argument, with Compton: the sign is given to the
+house of David and the near-term timetable passes to Isaiah's son, so Isaiah
+7:14 is not a near-term sign to Ahaz. The first reply to deny the critic's
+near-term premise rather than its exclusion premise.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{39} \\
+\text{(2)} \quad &amp; P_{40} \\
+\text{(3)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{36} \\[4pt]
+\vdash \quad &amp; \lnot P_{36}
+\end{aligned}
+\]
+</div>
+
 #### What the strands share
 
 <a id="sharedGrounds"></a>
@@ -1167,12 +1213,12 @@ authority.
 \text{(14)} \quad &amp; P_{27} \\
 \text{(15)} \quad &amp; P_{34} \\
 \text{(16)} \quad &amp; P_{35} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44} \\
-\text{(18)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{44} \\
-\text{(19)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{44} \\
-\text{(20)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{44} \\
-\text{(21)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46} \\
+\text{(18)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{46} \\
+\text{(19)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{46} \\
+\text{(20)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{46} \\
+\text{(21)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1190,9 +1236,9 @@ one this library's author does not grant.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{42} \\
-\text{(3)} \quad &amp; (P_{41} \land P_{42}) \rightarrow P_{44} \\
+\text{(1)} \quad &amp; P_{43} \\
+\text{(2)} \quad &amp; P_{44} \\
+\text{(3)} \quad &amp; (P_{43} \land P_{44}) \rightarrow P_{46} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{9} \\
@@ -1209,12 +1255,12 @@ one this library's author does not grant.
 \text{(17)} \quad &amp; P_{27} \\
 \text{(18)} \quad &amp; P_{34} \\
 \text{(19)} \quad &amp; P_{35} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44} \\
-\text{(21)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{44} \\
-\text{(22)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{44} \\
-\text{(23)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{44} \\
-\text{(24)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46} \\
+\text{(21)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{46} \\
+\text{(22)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{46} \\
+\text{(23)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{46} \\
+\text{(24)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1229,12 +1275,12 @@ The magisterial route on its own, with no exegetical premise at all.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{42} \\
+\text{(1)} \quad &amp; P_{43} \\
+\text{(2)} \quad &amp; P_{44} \\
 \text{(3)} \quad &amp; P_{34} \\
-\text{(4)} \quad &amp; (P_{41} \land P_{42}) \rightarrow P_{44} \\
-\text{(5)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(4)} \quad &amp; (P_{43} \land P_{44}) \rightarrow P_{46} \\
+\text{(5)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1251,13 +1297,13 @@ Scripture is the supreme judge.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; \lnot P_{42} \\
-\text{(3)} \quad &amp; P_{43} \\
+\text{(1)} \quad &amp; P_{43} \\
+\text{(2)} \quad &amp; \lnot P_{44} \\
+\text{(3)} \quad &amp; P_{45} \\
 \text{(4)} \quad &amp; P_{34} \\
-\text{(5)} \quad &amp; (P_{41} \land P_{42}) \rightarrow P_{44} \\
-\text{(6)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(5)} \quad &amp; (P_{43} \land P_{44}) \rightarrow P_{46} \\
+\text{(6)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1278,8 +1324,8 @@ on.
 \text{(2)} \quad &amp; P_{9} \\
 \text{(3)} \quad &amp; P_{21} \\
 \text{(4)} \quad &amp; P_{22} \\
-\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44} \\[4pt]
-\vdash \quad &amp; P_{44}
+\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46} \\[4pt]
+\vdash \quad &amp; P_{46}
 \end{aligned}
 \]
 </div>
@@ -1308,12 +1354,12 @@ retained.
 \text{(13)} \quad &amp; P_{27} \\
 \text{(14)} \quad &amp; P_{34} \\
 \text{(15)} \quad &amp; P_{35} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44} \\
-\text{(17)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{44} \\
-\text{(18)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{44} \\
-\text{(19)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{44} \\
-\text{(20)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46} \\
+\text{(17)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{46} \\
+\text{(18)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{46} \\
+\text{(19)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{46} \\
+\text{(20)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1336,9 +1382,9 @@ added. Kept so that the earlier finding stays checkable.
 \text{(4)} \quad &amp; P_{22} \\
 \text{(5)} \quad &amp; P_{34} \\
 \text{(6)} \quad &amp; P_{35} \\
-\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44} \\
-\text{(8)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46} \\
+\text{(8)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1366,12 +1412,12 @@ textual and historical premise retained.
 \text{(10)} \quad &amp; P_{27} \\
 \text{(11)} \quad &amp; P_{34} \\
 \text{(12)} \quad &amp; P_{35} \\
-\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44} \\
-\text{(14)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{44} \\
-\text{(15)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{44} \\
-\text{(16)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{44} \\
-\text{(17)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46} \\
+\text{(14)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{46} \\
+\text{(15)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{46} \\
+\text{(16)} \quad &amp; (P_{23} \land P_{24} \land P_{27} \land P_{22}) \rightarrow P_{46} \\
+\text{(17)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1394,9 +1440,9 @@ assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* 
 \text{(5)} \quad &amp; P_{22} \\
 \text{(6)} \quad &amp; P_{34} \\
 \text{(7)} \quad &amp; P_{35} \\
-\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44} \\
-\text{(9)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46} \\
+\text{(9)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1423,18 +1469,18 @@ four strands on shared ground; it is the refusal of four strands.
 \text{(4)} \quad &amp; P_{32} \\
 \text{(5)} \quad &amp; P_{36} \\
 \text{(6)} \quad &amp; P_{37} \\
-\text{(7)} \quad &amp; P_{39} \\
-\text{(8)} \quad &amp; P_{40} \\
+\text{(7)} \quad &amp; P_{41} \\
+\text{(8)} \quad &amp; P_{42} \\
 \text{(9)} \quad &amp; \lnot P_{2} \\
 \text{(10)} \quad &amp; \lnot P_{29} \\
 \text{(11)} \quad &amp; \lnot P_{31} \\
 \text{(12)} \quad &amp; \lnot P_{33} \\
 \text{(13)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{1} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{44} \\
-\text{(15)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{44} \\
-\text{(16)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{44} \\
-\text{(17)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{22}) \rightarrow P_{46} \\
+\text{(15)} \quad &amp; (P_{28} \land P_{29} \land P_{30} \land P_{31}) \rightarrow P_{46} \\
+\text{(16)} \quad &amp; (P_{32} \land P_{33}) \rightarrow P_{46} \\
+\text{(17)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1518,6 +1564,25 @@ as Berry's reached from different grounds.
 
 No premise here rests on scripture alone.
 
+<a id="motyerReply"></a>
+**`motyerReply`** — Motyer's reply to the near-term reading
+
+Motyer's reply as a position of its own: Isaiah 7:14 is not a near-term
+sign to Ahaz.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{39} \\
+\text{(2)} \quad &amp; P_{40} \\
+\text{(3)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{36} \\[4pt]
+\vdash \quad &amp; \lnot P_{36}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
 <a id="criticalDenialUnderParity"></a>
 **`criticalDenialUnderParity`** — Critical denial, with the parity argument in play
 
@@ -1579,8 +1644,8 @@ The same premises, asked to deliver the criterion instead. They do not.
 \text{(5)} \quad &amp; P_{13} \\
 \text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{34}) \rightarrow P_{7} \\
 \text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
-\text{(8)} \quad &amp; (P_{44} \land P_{34}) \rightarrow P_{45} \\[4pt]
-\vdash \quad &amp; P_{45}
+\text{(8)} \quad &amp; (P_{46} \land P_{34}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
 \end{aligned}
 \]
 </div>
@@ -1768,8 +1833,8 @@ would state it.
 \text{(4)} \quad &amp; P_{14} \\
 \text{(5)} \quad &amp; P_{8} \\
 \text{(6)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{45} \\[4pt]
-\vdash \quad &amp; \lnot P_{45}
+\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{47} \\[4pt]
+\vdash \quad &amp; \lnot P_{47}
 \end{aligned}
 \]
 </div>
@@ -1801,8 +1866,8 @@ side, which is neither one line nor several converging ones.
 \text{(11)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
 \text{(12)} \quad &amp; (P_{5} \land P_{9} \land P_{12}) \rightarrow \lnot P_{14} \\
 \text{(13)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{45} \\[4pt]
-\vdash \quad &amp; \lnot P_{45}
+\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{47} \\[4pt]
+\vdash \quad &amp; \lnot P_{47}
 \end{aligned}
 \]
 </div>
@@ -2559,8 +2624,9 @@ theorem wegnerLexical_is_satisfiable : Satisfiable wegnerLexical.premises
 
 The results in `Results.lean` ask what each package entails. This module asks
 what happens when the packages meet: the scriptural reading, the critical
-denial of the predictive reading, and the two replies to that denial — Berry's
-objection and Postell's parity argument — taken together as one dispute.
+denial of the predictive reading, and three replies to that denial — Berry's
+objection, Postell's parity argument, and Motyer's reply, with Compton's —
+taken together as one dispute.
 
 Who defeats whom is not stipulated. Each defeat below is a theorem about the
 packages' premises, and so is each absence of one (see `Testimony.Logic.Dispute`
@@ -2576,19 +2642,22 @@ The defeats, all four proved, are these:
   outranks the other.
 - **Berry and Postell each defeat the critical denial**, by contradicting its
   premise that a near-term sign excludes a messianic sense, cited `disputed`.
-- **The critical denial does not defeat either of them.** It rebuts both, but
-  both of its premises are cited `disputed` and theirs `wellSupported`. It
-  contradicts nothing they rest on.
+- **Motyer defeats it too**, by contradicting its other premise: that 7:14 is
+  a near-term sign to Ahaz at all, also cited `disputed`.
+- **The critical denial defeats none of them.** It rebuts all three, but both
+  of its premises are cited `disputed` and theirs are no lower than
+  `wellSupported`. It contradicts nothing they rest on.
 
 ### What follows
 
 Faced with the scriptural reading alone, **nothing prevails**: the two defeat
 each other, the grounded extension is empty, and each is a resolution of the
-exchange on its own. Add Berry and Postell and **the scriptural reading
-prevails**. The replies are defeated by nothing, they defeat the critic, and in
-doing so they defend the scriptural reading against its only defeater: the
-grounded extension is the scriptural reading with both replies. The critical
-denial belongs to no admissible set at all, because nothing answers Berry.
+exchange on its own. Add the replies and **the scriptural reading prevails**.
+The replies are defeated by nothing, they defeat the critic, and in doing so
+they defend the scriptural reading against its only defeater: the grounded
+extension is the scriptural reading with all three. The critical denial belongs
+to no admissible set at all, because nothing answers Berry. And the verdict
+does not hang on one pair of replies: heard alone, Motyer is enough.
 
 This is the result entailment could not state. Adding premises never removes a
 conclusion; adding arguments can change what a dispute forces, and here it
@@ -2608,19 +2677,38 @@ lines: the rating follows the library's definition, not the result.
 
 What the result now rests on are the replies' own ratings. Berry's premise, that
 how the sign was fulfilled in Ahaz's day is an open question, and Postell's two
-observations about Isaiah 9 and 11 are all cited `wellSupported`. Rate them
-`disputed` and the replies and the critic would tie, and the standoff would
-return. Postell's argument is described in `Lines.lean` as the stronger of the
-two; the ratings do not register that, and do not need to. Every rating here is
-a premise of the result, and contesting one is contesting the result.
+observations about Isaiah 9 and 11 are all cited `wellSupported`; so is
+Motyer's observation that 8:4 repeats the timetable of 7:16, and his other,
+that the sign of 7:13–14 is given in the plural to the house of David, is
+`consensus`. Rate all of them `disputed` and the replies and the critic would
+tie, and the standoff would return. Postell's argument is described in
+`Lines.lean` as the stronger of the two; the ratings do not register that, and
+do not need to. Every rating here is a premise of the result, and contesting one
+is contesting the result.
 
 The critic's other premise, that 7:14 was a near-term sign to Ahaz fulfilled in
 Isaiah's generation, is cited `disputed` on the same definition: Motyer and
-Compton deny it outright. That rating decides nothing in this dispute, where
-the critic is already as weak as a position can be. It would decide a dispute
-in which a reply attacked that premise, as Motyer's would: rated
-`wellSupported`, the premise would outrank such a reply and the attack would
-fail.
+Compton deny it outright. Rated `wellSupported`, it would outrank Motyer's
+reply and his attack on it would fail.
+
+### Where Motyer's contest lies
+
+Each reply puts what the text says in its atoms and its contested move in its
+step, and Motyer's is the plainest case. His atoms are the plural address of
+7:13–14 and the repeated timetable of 8:4 — observations the critics who
+identify the two children share, and rely on. His step is the inference that
+the timetable has passed to Isaiah's son, so the child of 7:14 is not a
+near-term sign. That is where a reader who contests him disagrees, and
+`motyer_rests_on_his_inference` proves it is where the whole weight falls: on
+the reading that identifies the two children, both observations hold and the
+near-term sign stands.
+
+The library does not rank an inference, so a contested step does not lower a
+reply's strength as a contested premise would. It is not sheltered either. An
+attack on a step always defeats, whatever the attacker's strength, so a
+position that granted Motyer's observations and held the near-term reading
+would defeat him outright. The critical denial as encoded does not grant them,
+which is a fact about this encoding of the critic, not about the critics.
 
 ### What the church fathers add, and what they cannot
 
@@ -2941,6 +3029,197 @@ theorem postell_does_not_defeat_berry : ¬Defeats postellParity berryObjection
 -- axioms: propext, Quot.sound
 ```
 
+#### Motyer's reply
+
+Motyer's reply, with Compton's, denies the critic's *other* premise: that 7:14 is
+a near-term sign to Ahaz at all. It is built as Berry's and Postell's are. Its
+grounds are what the text says — the sign given to the house of David in the
+plural, and 8:4 repeating for Maher-shalal-hash-baz the timetable 7:16 gives the
+child — and the contested move is the step that joins them.
+
+<a id="sameChildReading"></a>
+**`sameChildReading`**
+
+**The rival reading, written first**: the one that identifies the two
+children. Isaiah 8:1–4 retells the sign of 7:14–16 for Isaiah's own son, so the
+sign was a near-term one after all. Both of Motyer's observations hold in it —
+it is the reading his inference has to rule out.
+
+```lean
+def sameChildReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.isaiahPredictsVirginBirth => False
+    | x => True
+```
+
+<a id="motyer_rests_on_his_inference"></a>
+**`motyer_rests_on_his_inference`**
+
+**Motyer's reply rests on his inference, not on his observations.** On the
+reading that identifies the two children, the sign is given to the house of
+David, 8:4 repeats the timetable of 7:16, and 7:14 is still a near-term sign to
+Ahaz. The two grounds do not decide the question; the step does, and a reader
+who contests the reply contests the step.
+
+```lean
+theorem motyer_rests_on_his_inference : ¬Entails motyerLine.grounds (notP
+    Claim.isaiahIsNearTermSignToAhaz)
+-- axioms: propext, Quot.sound
+```
+
+<a id="motyerReading"></a>
+**`motyerReading`**
+
+The world Motyer describes, with Berry and Postell: the sign is not a
+near-term one, and a near-term sign would not exclude a messianic sense anyway.
+Everything else holds.
+
+```lean
+def motyerReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.isaiahIsNearTermSignToAhaz => False
+    | Claim.nearTermExcludesMessianicSense => False
+    | x => True
+```
+
+<a id="motyerReply_establishes"></a>
+**`motyerReply_establishes`**
+
+Motyer's reply delivers its conclusion.
+
+```lean
+theorem motyerReply_establishes : Establishes motyerReply
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="motyerReply_is_satisfiable"></a>
+**`motyerReply_is_satisfiable`**
+
+Motyer's reply has a model.
+
+```lean
+theorem motyerReply_is_satisfiable : Satisfiable motyerReply.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="motyerReply_strength"></a>
+**`motyerReply_strength`**
+
+Motyer's two observations are cited `consensus` and `wellSupported`; his
+inference, as a step, carries no rank.
+
+```lean
+theorem motyerReply_strength : motyerReply.strength = 2
+-- axioms: propext
+```
+
+<a id="motyer_defeats_critical"></a>
+**`motyer_defeats_critical`**
+
+**Motyer defeats the critical denial.** He entails the negation of its
+premise that 7:14 is a near-term sign to Ahaz, and that premise, cited
+`disputed`, does not outrank him.
+
+```lean
+theorem motyer_defeats_critical : Defeats motyerReply criticalDenial
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="unsharedTimetableReading"></a>
+**`unsharedTimetableReading`**
+
+The critic's world, with 8:4 read as setting no timetable for the child of
+7:14. Motyer's step holds in it, because one of its grounds fails.
+
+```lean
+def unsharedTimetableReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.isaiahPredictsVirginBirth => False
+    | Claim.maherShalalHashBazRepeatsTheTimetable =>
+      False
+    | x => True
+```
+
+<a id="critical_does_not_defeat_motyer"></a>
+**`critical_does_not_defeat_motyer`**
+
+**The critical denial does not defeat Motyer.** It rebuts him, but its
+premises are cited `disputed`, below his. And it contradicts nothing he rests
+on: the critical reading grants both his observations, and the
+unshared-timetable reading his step.
+
+A position that granted both observations *and* held the near-term reading
+would defeat him outright, because an attack on a step always succeeds. The
+critical denial as encoded does not grant them.
+
+```lean
+theorem critical_does_not_defeat_motyer : ¬Defeats criticalDenial motyerReply
+-- axioms: propext, Quot.sound
+```
+
+<a id="christian_does_not_defeat_motyer"></a>
+**`christian_does_not_defeat_motyer`**
+
+The scriptural reading and Motyer stand together.
+
+```lean
+theorem christian_does_not_defeat_motyer : ¬Defeats christian motyerReply
+-- axioms: propext, Quot.sound
+```
+
+<a id="motyer_does_not_defeat_christian"></a>
+**`motyer_does_not_defeat_christian`**
+
+Motyer and the scriptural reading stand together.
+
+```lean
+theorem motyer_does_not_defeat_christian : ¬Defeats motyerReply christian
+-- axioms: propext, Quot.sound
+```
+
+<a id="berry_does_not_defeat_motyer"></a>
+**`berry_does_not_defeat_motyer`**
+
+Berry and Motyer stand together.
+
+```lean
+theorem berry_does_not_defeat_motyer : ¬Defeats berryObjection motyerReply
+-- axioms: propext, Quot.sound
+```
+
+<a id="motyer_does_not_defeat_berry"></a>
+**`motyer_does_not_defeat_berry`**
+
+Motyer and Berry stand together.
+
+```lean
+theorem motyer_does_not_defeat_berry : ¬Defeats motyerReply berryObjection
+-- axioms: propext, Quot.sound
+```
+
+<a id="postell_does_not_defeat_motyer"></a>
+**`postell_does_not_defeat_motyer`**
+
+Postell and Motyer stand together.
+
+```lean
+theorem postell_does_not_defeat_motyer : ¬Defeats postellParity motyerReply
+-- axioms: propext, Quot.sound
+```
+
+<a id="motyer_does_not_defeat_postell"></a>
+**`motyer_does_not_defeat_postell`**
+
+Motyer and Postell stand together.
+
+```lean
+theorem motyer_does_not_defeat_postell : ¬Defeats motyerReply postellParity
+-- axioms: propext, Quot.sound
+```
+
 #### The exchange: the scriptural reading against the critic
 
 Before either reply is heard, the dispute has two parties.
@@ -3046,6 +3325,8 @@ def partyNode : Party → ArgumentPackage Claim :=
       berryObjection
     | Party.postell =>
       postellParity
+    | Party.motyer =>
+      motyerReply
 ```
 
 <a id="partyNode_consistent"></a>
@@ -3072,7 +3353,7 @@ theorem partyNode_sound : ∀ (i : Party), Establishes (partyNode i)
 <a id="isaiahDispute"></a>
 **`isaiahDispute`**
 
-The dispute over Isaiah 7:14, with both replies in play.
+The dispute over Isaiah 7:14, with all three replies in play.
 
 ```lean
 def isaiahDispute : Dispute Claim Party :=
@@ -3098,13 +3379,15 @@ def partyDefeats : Party → Party → Prop :=
       Party.critical => True
     | Party.postell,
       Party.critical => True
+    | Party.motyer,
+      Party.critical => True
     | x, x_2 => False
 ```
 
 <a id="isaiahDispute_defeats"></a>
 **`isaiahDispute_defeats`**
 
-**Who defeats whom**, all sixteen pairs proved: the critic and the
+**Who defeats whom**, all twenty-five pairs proved: the critic and the
 scriptural reading defeat each other; each reply defeats the critic; nothing
 else.
 
@@ -3117,15 +3400,15 @@ theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
 <a id="scriptural_reading_prevails_once_replies_are_heard"></a>
 **`scriptural_reading_prevails_once_replies_are_heard`**
 
-**Heard out, the scriptural reading prevails.** Nothing defeats Berry or
-Postell, so both are in the grounded extension from the first step; they defeat
-the critic, the scriptural reading's only defeater, so at the second step it
-joins them; and nothing defends the critic.
+**Heard out, the scriptural reading prevails.** Nothing defeats Berry,
+Postell or Motyer, so all three are in the grounded extension from the first
+step; they defeat the critic, the scriptural reading's only defeater, so at the
+second step it joins them; and nothing defends the critic.
 
 ```lean
 theorem scriptural_reading_prevails_once_replies_are_heard :
     Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry,
-    Party.postell}
+    Party.postell, Party.motyer}
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -3160,5 +3443,103 @@ And none accepts the critical denial.
 ```lean
 theorem critical_denial_not_credulously_accepted :
     ¬Framework.CredulouslyAccepted isaiahDispute.defeats Party.critical
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+#### Motyer alone
+
+Berry and Postell deny the same premise, and both rest on ratings a reader can
+contest. Motyer denies the other one. Heard without them, he is enough.
+
+<a id="hearingNode"></a>
+**`hearingNode`**
+
+The package each party of the hearing argues from.
+
+```lean
+def hearingNode : Hearing → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | Hearing.scriptural =>
+      christian
+    | Hearing.critical =>
+      criticalDenial
+    | Hearing.motyer =>
+      motyerReply
+```
+
+<a id="hearingNode_consistent"></a>
+**`hearingNode_consistent`**
+
+Each party's premises can hold together.
+
+```lean
+theorem hearingNode_consistent : ∀ (i : Hearing), Satisfiable (hearingNode
+    i).premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="hearingNode_sound"></a>
+**`hearingNode_sound`**
+
+Each party establishes its conclusion.
+
+```lean
+theorem hearingNode_sound : ∀ (i : Hearing), Establishes (hearingNode i)
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="motyerHearing"></a>
+**`motyerHearing`**
+
+The scriptural reading and the critic, with only Motyer heard.
+
+```lean
+def motyerHearing : Dispute Claim Hearing :=
+  { node := hearingNode,
+    consistent := hearingNode_consistent,
+    sound := hearingNode_sound }
+```
+
+<a id="hearingDefeats"></a>
+**`hearingDefeats`**
+
+The defeats of the hearing, as a table.
+
+```lean
+def hearingDefeats : Hearing → Hearing → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Hearing.critical,
+      Hearing.scriptural => True
+    | Hearing.scriptural,
+      Hearing.critical => True
+    | Hearing.motyer,
+      Hearing.critical => True
+    | x, x_2 => False
+```
+
+<a id="motyerHearing_defeats"></a>
+**`motyerHearing_defeats`**
+
+Who defeats whom in the hearing, all nine pairs.
+
+```lean
+theorem motyerHearing_defeats : ∀ (i j : Hearing), motyerHearing.defeats i j ↔
+    hearingDefeats i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="scriptural_reading_prevails_on_motyer_alone"></a>
+**`scriptural_reading_prevails_on_motyer_alone`**
+
+**Motyer alone reinstates the scriptural reading.** Without Berry or
+Postell, nothing defeats Motyer; he defeats the critic, and so defends the
+scriptural reading against it. The verdict does not hang on one pair of
+replies, or on the premise they contest.
+
+```lean
+theorem scriptural_reading_prevails_on_motyer_alone : Framework.grounded
+    motyerHearing.defeats = {Hearing.scriptural, Hearing.motyer}
 -- axioms: propext, Classical.choice, Quot.sound
 ```

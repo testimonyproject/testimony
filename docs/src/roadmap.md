@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **57 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **59 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -51,9 +51,11 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `hinges_jointly_load_bearing` | `¬Establishes christianWithoutAnyHinge` | **The result worth having.** No single hinge carries the argument, but the four of them jointly do: remove all four and the criterion no longer follows, with every textual and … |
 | `jesus_satisfies_virgin_birth` | `Satisfies jesus bornOfAVirgin` | End to end: under the scriptural package, Jesus satisfies the virgin-birth criterion. |
 | `christian_defeats_critical` | `Defeats christian criticalDenial` | **The scriptural reading answers the critic.** Its rebuttal is a defeat: the weakest premise on each side is cited `disputed`, so neither outranks the other, and each defeats the … |
+| `motyer_rests_on_his_inference` | `¬Entails motyerLine.grounds (notP Claim.isaiahIsNearTermSignToAhaz)` | **Motyer's reply rests on his inference, not on his observations.** On the reading that identifies the two children, the sign is given to the house of David, 8:4 repeats the … |
 | `nothing_prevails_unanswered` | `Framework.grounded exchange.defeats = ∅` | **Unanswered, nothing prevails.** The scriptural reading and the critical denial defeat each other, so neither is forced, and the grounded extension is empty. |
-| `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell}` | **Heard out, the scriptural reading prevails.** Nothing defeats Berry or Postell, so both are in the grounded extension from the first step; they defeat the critic, the scriptural … |
+| `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell, Party.motyer}` | **Heard out, the scriptural reading prevails.** Nothing defeats Berry, Postell or Motyer, so all three are in the grounded extension from the first step; they defeat the critic, … |
 | `critical_denial_indefensible` | `∀ (S : Set Party), Framework.Admissible isaiahDispute.defeats S → Party.critical ∉ S` | **The critical denial cannot be defended.** No admissible set contains it: Berry defeats it, and nothing defeats Berry. |
+| `scriptural_reading_prevails_on_motyer_alone` | `Framework.grounded motyerHearing.defeats = {Hearing.scriptural, Hearing.motyer}` | **Motyer alone reinstates the scriptural reading.** Without Berry or Postell, nothing defeats Motyer; he defeats the critic, and so defends the scriptural reading against it. |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -198,7 +200,9 @@ their cited confidences, show that against the scriptural reading alone nothing
 prevails (`nothing_prevails_unanswered`): each defeats the other. Once Berry and
 Postell are heard, the scriptural reading prevails
 (`scriptural_reading_prevails_once_replies_are_heard`), and the critic cannot be
-defended at all (`critical_denial_indefensible`). The first draft of this
+defended at all (`critical_denial_indefensible`); Motyer's reply alone, which
+denies the critic's other premise, is enough
+(`scriptural_reading_prevails_on_motyer_alone`). The first draft of this
 result was a standoff, because it rated the critic's exclusion premise
 `wellSupported` while recording, in the same argument, two scholars who contest
 it. Rated as the library defines `disputed` — and the near-term premise with

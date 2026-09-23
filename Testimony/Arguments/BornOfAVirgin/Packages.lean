@@ -174,6 +174,11 @@ def postellParity : ArgumentPackage Claim :=
   postellLine.asPackage cite
     "a near-term sign to Ahaz does not exclude a messianic sense"
 
+/-- Motyer's reply as a position of its own: Isaiah 7:14 is not a near-term
+sign to Ahaz. -/
+def motyerReply : ArgumentPackage Claim :=
+  motyerLine.asPackage cite "Isaiah 7:14 is not a near-term sign to Ahaz"
+
 /-- The critical denial with Postell's parity argument in play, and the
 exclusion premise no longer simply granted. -/
 def criticalDenialUnderParity : ArgumentPackage Claim :=

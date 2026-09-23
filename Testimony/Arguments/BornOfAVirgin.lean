@@ -141,18 +141,22 @@ That gives the critical exclusion step two independent defeaters. Berry's is
 evidential — we do not know how the sign was fulfilled in Ahaz's day. Postell's
 is structural — the near-term setting was never the right kind of reason.
 
-**Taken together, the four positions make a dispute, and the dispute has an
-outcome the entailment results cannot state.** `Dispute.lean` treats the
-scriptural reading, the critical denial, Berry and Postell as the nodes of an
+**Taken together, the positions make a dispute, and the dispute has an outcome
+the entailment results cannot state.** `Dispute.lean` treats the scriptural
+reading, the critical denial, Berry, Postell and Motyer as the nodes of an
 argumentation framework and proves who defeats whom — a defeat being an attack
 derived from entailment that the cited confidences do not block. Against the
 scriptural reading alone, `nothing_prevails_unanswered`: the critical denial and
 the scriptural reading defeat each other, because the weakest premise on each
 side is `disputed` (`christian_defeats_critical`). Hear Berry and Postell, and
 `scriptural_reading_prevails_once_replies_are_heard`: nothing defeats the
-replies, they defeat the critic, and so they defend the scriptural reading
-against its only defeater. The critic is left with no defence at all
-(`critical_denial_indefensible`). That outcome turns on the critic's premises
+replies — Berry, Postell, and Motyer with Compton — they defeat the critic, and
+so they defend the scriptural reading against its only defeater. The critic is
+left with no defence at all (`critical_denial_indefensible`), and Motyer, who
+denies the critic's other premise, is enough on his own
+(`scriptural_reading_prevails_on_motyer_alone`). His reply rests on an
+inference rather than an observation, and `motyer_rests_on_his_inference` says
+so. That outcome turns on the critic's premises
 being rated `disputed`, as the replies, Motyer and Compton contest them; with
 the exclusion premise rated `wellSupported`, as it once was, the dispute was a
 standoff.
@@ -190,7 +194,7 @@ that no one could hold in view. The dependencies run one way.
 | `Lines.lean` | the inference steps, and the lines of reason they compose into |
 | `Packages.lean` | the positions, and the variant packages the results refute |
 | `Results.lean` | every `@[headline]` result, with its trust base |
-| `Dispute.lean` | the four positions as one dispute: who defeats whom, and who prevails |
+| `Dispute.lean` | the five positions as one dispute: who defeats whom, and who prevails |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in

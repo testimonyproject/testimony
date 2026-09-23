@@ -61,6 +61,18 @@ def isaiah2to12Frame : List ScriptureCitation :=
   [ { ref := .range ⟨.isaiah, 2, 1, 2, 4⟩ }
   , { ref := .range ⟨.isaiah, 11, 1, 12, 6⟩ } ]
 
+/-- Isaiah 7:13–14 and 7:16 — the sign given to the house of David in the plural,
+and the singular "you" of the verse addressed to Ahaz. -/
+def immanuelAddressees : List ScriptureCitation :=
+  [ rangeIn .masoretic ⟨.isaiah, 7, 13, 7, 14⟩
+  , verseIn .masoretic ⟨.isaiah, 7, 16⟩ ]
+
+/-- Isaiah 7:16 and 8:4 — the same timetable, given first to the child of 7:14
+and then to Maher-shalal-hash-baz. -/
+def sharedTimetable : List ScriptureCitation :=
+  [ verseIn .masoretic ⟨.isaiah, 7, 16⟩
+  , verseIn .masoretic ⟨.isaiah, 8, 4⟩ ]
+
 /-- Isaiah 8:7–8, 9:8–11 and 10:5 — the Assyrian invasion, the oppressor's
 rod. The near-term timeline that Isaiah 7, 9 and 11 share, which is what
 Postell's parity argument turns on. -/

@@ -95,6 +95,21 @@ field of their own, so this is where that is recorded. -/
 def berryBlocksExclusion : Formula Claim :=
   p .nearTermFulfilmentIsUnclear ➝ notP .nearTermExcludesMessianicSense
 
+/-- Motyer's inference: the sign of 7:14 is given to the dynasty, and the
+timetable that answers Ahaz's crisis passes to Maher-shalal-hash-baz, so the
+child of 7:14 is not a near-term sign to Ahaz. "Either we must identify
+Maher-shalal-hash-baz with Immanuel, or we must project Immanuel into the
+undated future" (Motyer 1970, 124).
+
+This is the contested part of his reply, and it is a step rather than an atom
+on purpose, as Berry's and Postell's are: the two atoms it joins are what the
+text says, and the inference is what a reader who identifies the two children
+denies. Inference steps carry no confidence field; an attack on one always
+defeats. -/
+def timetablePassesToMaherShalalHashBaz : Formula Claim :=
+  ⋀ [ p .signGivenToHouseOfDavid, p .maherShalalHashBazRepeatsTheTimetable ]
+  ➝ notP .isaiahIsNearTermSignToAhaz
+
 /-! #### The referential strand
 
 Sense against reference. The steps below never claim that עַלְמָה *means*
@@ -367,6 +382,17 @@ def postellLine : Line Claim :=
       [ p .isaiah9And11AreMessianic, p .isaiah9And11ShareTheAssyrianTimeline ]
   , step := parityDefeatsNearTermExclusion
   , delivers := notP .nearTermExcludesMessianicSense }
+
+/-- **Motyer's reply**, as an argument, with Compton: the sign is given to the
+house of David and the near-term timetable passes to Isaiah's son, so Isaiah
+7:14 is not a near-term sign to Ahaz. The first reply to deny the critic's
+near-term premise rather than its exclusion premise. -/
+def motyerLine : Line Claim :=
+  { name := "Motyer's reply to the near-term reading"
+  , grounds :=
+      [ p .signGivenToHouseOfDavid, p .maherShalalHashBazRepeatsTheTimetable ]
+  , step := timetablePassesToMaherShalalHashBaz
+  , delivers := notP .isaiahIsNearTermSignToAhaz }
 
 /-! ### What the strands share -/
 
