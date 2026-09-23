@@ -210,8 +210,8 @@ alone, so that where an encoding put a contested move — atom or step — decid
 who prevailed. Rated, Berry's and Motyer's steps are `disputed` and tie with the
 critic (`nothing_prevails_on_motyer_alone`); the verdict rests on Postell's
 alone (`nothing_prevails_without_postell`), rated `plausible` because no source
-cited grants his grounds and keeps the exclusion. That makes the ratings premises of the result, and says which
-one to contest.
+cited grants his grounds and keeps the exclusion. That makes the ratings
+premises of the result, and says which one to contest.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether
