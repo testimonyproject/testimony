@@ -153,9 +153,10 @@ side is `disputed` (`christian_defeats_critical`). Hear Berry and Postell, and
 `scriptural_reading_prevails_once_replies_are_heard`: nothing defeats the
 replies, they defeat the critic, and so they defend the scriptural reading
 against its only defeater. The critic is left with no defence at all
-(`critical_denial_indefensible`). That outcome turns on the critic's exclusion
-premise being rated `disputed`, as the replies contest it; rated
-`wellSupported`, as it once was, it made the dispute a standoff.
+(`critical_denial_indefensible`). That outcome turns on the critic's premises
+being rated `disputed`, as the replies, Motyer and Compton contest them; with
+the exclusion premise rated `wellSupported`, as it once was, the dispute was a
+standoff.
 
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands
@@ -258,7 +259,7 @@ reader sees.
 | \\(P_{33}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
 | \\(P_{34}\\) | Mary conceived Jesus while a virgin ※ | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38 |
 | \\(P_{35}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38 |
-| \\(P_{36}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{36}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
 | \\(P_{37}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
 | \\(P_{38}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
 | \\(P_{39}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
@@ -310,8 +311,9 @@ def miravalleOnMary : Source :=
 Brown's *Birth of the Messiah*, taken whole: the critical case.
 
 `confidence` defaults to `wellSupported`, which is what the critical readings
-are. It is passed explicitly for the one premise Brown's case *presupposes*
-rather than argues.
+are. It is passed explicitly where a critical premise is contested: the one
+Brown's case *presupposes* rather than argues, and both premises of the
+critical denial, each denied by scholars this argument cites.
 
 ```lean
 def brownOnBirth : optParam Confidence Confidence.wellSupported → Source :=
@@ -2573,11 +2575,10 @@ The defeats, all four proved, are these:
   and the weakest premise on each side is cited `disputed`, so neither
   outranks the other.
 - **Berry and Postell each defeat the critical denial**, by contradicting its
-  premise that a near-term sign excludes a messianic sense — the premise that
-  is the critic's weakest.
+  premise that a near-term sign excludes a messianic sense, cited `disputed`.
 - **The critical denial does not defeat either of them.** It rebuts both, but
-  its weakest premise is the one they contest, cited `disputed`, and theirs are
-  cited `wellSupported`. It contradicts nothing they rest on.
+  both of its premises are cited `disputed` and theirs `wellSupported`. It
+  contradicts nothing they rest on.
 
 ### What follows
 
@@ -2613,6 +2614,14 @@ return. Postell's argument is described in `Lines.lean` as the stronger of the
 two; the ratings do not register that, and do not need to. Every rating here is
 a premise of the result, and contesting one is contesting the result.
 
+The critic's other premise, that 7:14 was a near-term sign to Ahaz fulfilled in
+Isaiah's generation, is cited `disputed` on the same definition: Motyer and
+Compton deny it outright. That rating decides nothing in this dispute, where
+the critic is already as weak as a position can be. It would decide a dispute
+in which a reply attacked that premise, as Motyer's would: rated
+`wellSupported`, the premise would outrank such a reply and the attack would
+fail.
+
 ### What the church fathers add, and what they cannot
 
 The predictive reading is not a modern apologetic. Justin, Irenaeus, Origen and
@@ -2626,8 +2635,8 @@ competent scholars*. The fathers are the earliest witnesses to the contest as
 well as to the reading. Justin records Trypho's answer — "young woman", and
 fulfilled in Hezekiah — and Irenaeus names Theodotion and Aquila. An older
 witness does not make a contested claim uncontested. What moved the result was
-the same definition applied to the other side: the critic's exclusion premise
-is contested too, and the library records who contests it.
+the same definition applied to the other side: both of the critic's premises
+are contested too, and the library records who contests them.
 
 #### The replies as positions
 
@@ -2705,8 +2714,8 @@ theorem christian_strength : christian.strength = 0
 <a id="criticalDenial_strength"></a>
 **`criticalDenial_strength`**
 
-The critical denial's weakest premise is the exclusion Berry and Postell
-contest, cited `disputed`.
+Both of the critical denial's premises are contested, and cited
+`disputed`.
 
 ```lean
 theorem criticalDenial_strength : criticalDenial.strength = 0
@@ -2844,7 +2853,7 @@ def laterOraclesReading : Valuation Claim :=
 **`critical_does_not_defeat_berry`**
 
 **The critical denial does not defeat Berry.** It rebuts him, but it is the
-weaker of the two: its weakest premise is the one he contests. And it
+weaker of the two: its premises are cited `disputed`, below his. And it
 contradicts nothing he rests on — the critical reading grants his premise, and
 the settled-fulfilment reading his step.
 

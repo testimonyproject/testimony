@@ -176,8 +176,9 @@ def miravalleOnMary : Source :=
 /-- Brown's *Birth of the Messiah*, taken whole: the critical case.
 
 `confidence` defaults to `wellSupported`, which is what the critical readings
-are. It is passed explicitly for the one premise Brown's case *presupposes*
-rather than argues. -/
+are. It is passed explicitly where a critical premise is contested: the one
+Brown's case *presupposes* rather than argues, and both premises of the
+critical denial, each denied by scholars this argument cites. -/
 def brownOnBirth (confidence : Confidence := .wellSupported) : Source :=
   { primary := .work brownBirthMessiah .whole
   , tradition := .criticalScholarship

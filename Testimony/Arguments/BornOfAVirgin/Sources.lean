@@ -344,7 +344,9 @@ def cite : Claim → AtomMeta
       -- and Maher-shalal-hash-baz, not Immanuel, carries the timetable. So
       -- does Compton (2007, 12): 7:14 is addressed to the house of David, in
       -- plural pronouns, and only 7:15–16, with a singular "you", to Ahaz.
-    , source := brownOnBirth }
+      -- `disputed` for that reason, on the definition that re-rated the
+      -- exclusion premise below.
+    , source := brownOnBirth .disputed }
   | .nearTermExcludesMessianicSense =>
     { label := "A sign given for Ahaz's generation is not also a prediction of a virgin birth"
     , kind := .interpretive

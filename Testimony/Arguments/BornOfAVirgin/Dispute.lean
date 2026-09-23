@@ -22,11 +22,10 @@ The defeats, all four proved, are these:
   and the weakest premise on each side is cited `disputed`, so neither
   outranks the other.
 - **Berry and Postell each defeat the critical denial**, by contradicting its
-  premise that a near-term sign excludes a messianic sense — the premise that
-  is the critic's weakest.
+  premise that a near-term sign excludes a messianic sense, cited `disputed`.
 - **The critical denial does not defeat either of them.** It rebuts both, but
-  its weakest premise is the one they contest, cited `disputed`, and theirs are
-  cited `wellSupported`. It contradicts nothing they rest on.
+  both of its premises are cited `disputed` and theirs `wellSupported`. It
+  contradicts nothing they rest on.
 
 ## What follows
 
@@ -62,6 +61,14 @@ return. Postell's argument is described in `Lines.lean` as the stronger of the
 two; the ratings do not register that, and do not need to. Every rating here is
 a premise of the result, and contesting one is contesting the result.
 
+The critic's other premise, that 7:14 was a near-term sign to Ahaz fulfilled in
+Isaiah's generation, is cited `disputed` on the same definition: Motyer and
+Compton deny it outright. That rating decides nothing in this dispute, where
+the critic is already as weak as a position can be. It would decide a dispute
+in which a reply attacked that premise, as Motyer's would: rated
+`wellSupported`, the premise would outrank such a reply and the attack would
+fail.
+
 ## What the church fathers add, and what they cannot
 
 The predictive reading is not a modern apologetic. Justin, Irenaeus, Origen and
@@ -75,8 +82,8 @@ competent scholars*. The fathers are the earliest witnesses to the contest as
 well as to the reading. Justin records Trypho's answer — "young woman", and
 fulfilled in Hezekiah — and Irenaeus names Theodotion and Aquila. An older
 witness does not make a contested claim uncontested. What moved the result was
-the same definition applied to the other side: the critic's exclusion premise
-is contested too, and the library records who contests it.
+the same definition applied to the other side: both of the critic's premises
+are contested too, and the library records who contests them.
 -/
 
 namespace Testimony.Arguments.BornOfAVirgin
@@ -119,8 +126,8 @@ theorem postellParity_is_satisfiable : Satisfiable postellParity.premises := by
 which is cited `disputed`. -/
 theorem christian_strength : christian.strength = 0 := by decide
 
-/-- The critical denial's weakest premise is the exclusion Berry and Postell
-contest, cited `disputed`. -/
+/-- Both of the critical denial's premises are contested, and cited
+`disputed`. -/
 theorem criticalDenial_strength : criticalDenial.strength = 0 := by decide
 
 /-- Berry's one ranked premise is cited `wellSupported`. -/
@@ -216,7 +223,7 @@ def laterOraclesReading : Valuation Claim := fun a =>
   | _ => True
 
 /-- **The critical denial does not defeat Berry.** It rebuts him, but it is the
-weaker of the two: its weakest premise is the one he contests. And it
+weaker of the two: its premises are cited `disputed`, below his. And it
 contradicts nothing he rests on — the critical reading grants his premise, and
 the settled-fulfilment reading his step. -/
 theorem critical_does_not_defeat_berry : ¬ Defeats criticalDenial berryObjection := by

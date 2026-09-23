@@ -201,9 +201,10 @@ Postell are heard, the scriptural reading prevails
 defended at all (`critical_denial_indefensible`). The first draft of this
 result was a standoff, because it rated the critic's exclusion premise
 `wellSupported` while recording, in the same argument, two scholars who contest
-it. Rated as the library defines `disputed`, the premise is the critic's weakest
-link. That makes the ratings premises of the result, and says which ones to
-contest: now, the replies' own.
+it. Rated as the library defines `disputed` — and the near-term premise with
+it, which Motyer and Compton deny — the critic is no stronger than the premises
+the replies contest. That makes the ratings premises of the result, and says
+which ones to contest: now, the replies' own.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether

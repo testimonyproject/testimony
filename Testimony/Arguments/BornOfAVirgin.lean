@@ -152,9 +152,10 @@ side is `disputed` (`christian_defeats_critical`). Hear Berry and Postell, and
 `scriptural_reading_prevails_once_replies_are_heard`: nothing defeats the
 replies, they defeat the critic, and so they defend the scriptural reading
 against its only defeater. The critic is left with no defence at all
-(`critical_denial_indefensible`). That outcome turns on the critic's exclusion
-premise being rated `disputed`, as the replies contest it; rated
-`wellSupported`, as it once was, it made the dispute a standoff.
+(`critical_denial_indefensible`). That outcome turns on the critic's premises
+being rated `disputed`, as the replies, Motyer and Compton contest them; with
+the exclusion premise rated `wellSupported`, as it once was, the dispute was a
+standoff.
 
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands
