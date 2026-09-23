@@ -223,6 +223,32 @@ available to the objection: it proves too much, and the wrong way. -/
 def usageParityBlocksReferentInference : Formula Claim :=
   p .otherClearAlmahCasesAreVirgins ➝ notP .oneReferentSettlesDenotation
 
+/-! #### The fathers' sign argument, and the near-term reply
+
+Wegner's objection needs the pregnancy to be an ordinary one. The oldest
+Christian answer to the near-term reading denies exactly that, and it does so
+without touching the word: the oracle promised a *sign*, and an ordinary
+conception would have been none. -/
+
+/-- **The sign argument.** If the sign of 7:14 must be extraordinary, and an
+ordinary conception is nothing extraordinary, the pregnancy the sign announces
+is not an ordinary one.
+
+The step assumes that the conception is the sign rather than one part of it.
+Wegner counts three parts in 7:14 and more in 7:15–16 (469, 477), but he does
+not grant the first ground and deny the conclusion: he denies the first
+ground. -/
+def extraordinarySignExcludesOrdinaryPregnancy : Formula Claim :=
+  ⋀ [ p .signMustBeExtraordinary, p .ordinaryConceptionIsNoMarvel ]
+  ➝ notP .pregnancyAtTheSignIsOrdinary
+
+/-- **The near-term reply.** Signs elsewhere in Isaiah are ordinary events, and
+this one is dated by a child's infancy, so its point is its timing and it need
+not be extraordinary. -/
+def ordinarySignsAnswerTheDemand : Formula Claim :=
+  ⋀ [ p .isaianicSignsAreOrdinaryEvents, p .signDatedByAChildsInfancy ]
+  ➝ notP .signMustBeExtraordinary
+
 /-! ### The lines of reason
 
 Four strands converge on the criterion, and each is a `Line`: its own grounds,
@@ -350,6 +376,45 @@ pregnancy excludes virginity, and the referent settles the word. Passed to
 retyping them. -/
 def wegnerClosingSteps : List (Formula Claim) :=
   [ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
+
+/-- **The fathers' sign argument.** Justin, Irenaeus and Origen, and Rydelnik
+today: the sign of 7:14 must be extraordinary, an ordinary conception is not, so
+the pregnancy is no ordinary one. It denies the ground of Wegner's line that the
+parse does not supply, and nothing else. -/
+def signLine : Line Claim :=
+  { name := "The fathers' sign argument (Isaiah 7:11, 14)"
+  , grounds := [ p .signMustBeExtraordinary, p .ordinaryConceptionIsNoMarvel ]
+  , step := extraordinarySignExcludesOrdinaryPregnancy
+  , delivers := notP .pregnancyAtTheSignIsOrdinary
+    -- `plausible`: no source cited here grants both grounds and holds the
+    -- pregnancy ordinary. The rival denies the first ground instead, and the
+    -- grounds are rated separately. Not `wellSupported`: the step reads the
+    -- conception as the whole of the sign.
+  , inference := some
+      { primary := .work irenaeusAgainstHeresies (.sectionRef "III.21.6")
+      , supporting := [.work origenAgainstCelsus (.sectionRef "I.35")]
+      , tradition := .christianTypological
+      , confidence := .plausible } }
+
+/-- **The near-term reply**, as an argument: signs in Isaiah are ordinary
+events, and this one is dated by a child's infancy, so it need not be
+extraordinary. Wegner (469–470) and Rhodea (64–65). -/
+def ordinarySignLine : Line Claim :=
+  { name := "The near-term reply: a sign need not be a miracle"
+  , grounds := [ p .isaianicSignsAreOrdinaryEvents, p .signDatedByAChildsInfancy ]
+  , step := ordinarySignsAnswerTheDemand
+  , delivers := notP .signMustBeExtraordinary
+    -- `disputed`: Rydelnik grants both grounds — Isaiah's children are the
+    -- "signs and wonders" of 8:18, and 7:16 dates by Shear-jashub's infancy —
+    -- and still reads the pregnancy of 7:14 as a sign as deep as Sheol, as
+    -- Postell reports (474).
+  , inference := some
+      { primary := .work rhodeaDidMatthewConceive (.pages 64 65)
+      , supporting :=
+          [ .work wegnerVirginBirths (.pages 469 470)
+          , .work postellIsaiahMessianic (.page 474) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
 
 /-- **The critical line**: the sign was given to Ahaz, and such a sign is not
 also a prediction of a virgin conception, so the predictive reading is denied.

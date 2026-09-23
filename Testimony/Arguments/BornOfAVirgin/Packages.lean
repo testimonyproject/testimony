@@ -237,7 +237,12 @@ def wegnerLexical : ArgumentPackage Claim :=
   , cite := cite
   , premises := caseOf [wegnerLine] [] wegnerClosingSteps
   , conclusion := notP .almahMeansVirgin
-  , conclusionLabel := "עַלְמָה at Isaiah 7:14 does not denote a virgin" }
+  , conclusionLabel := "עַלְמָה at Isaiah 7:14 does not denote a virgin"
+    -- `consensus`: each step only draws out its grounds — a present pregnancy
+    -- from the parse, no virgin from an ordinary one, the word from the
+    -- referent — and anyone who grants the grounds grants them. Wegner's
+    -- contest lives in the grounds, where it is rated.
+  , inferences := [wegnerOnAlmah (.pages 471 472) .consensus] }
 
 /-- Wegner's line with the ordinary pregnancy no longer granted. It is the one
 ground that goes; the parse, the near-term setting and the referent principle
@@ -295,6 +300,49 @@ def wegnerUnderUsageParity : ArgumentPackage Claim :=
     premises :=
       caseOf [wegnerUnderParity] []
         (usageParityBlocksReferentInference :: wegnerClosingSteps) }
+
+/-! ### The fathers' sign argument, and the reply to it -/
+
+/-- The fathers' sign argument as a position of its own: its conclusion is that
+the pregnancy of Isaiah 7:14 is not an ordinary one, and nothing about the
+word. -/
+def signArgument : ArgumentPackage Claim :=
+  signLine.asPackage cite "the pregnancy Isaiah 7:14 announces is not an ordinary one"
+
+/-- The near-term reply as a position of its own: the sign of Isaiah 7:14 need
+not be extraordinary. -/
+def ordinarySignReply : ArgumentPackage Claim :=
+  ordinarySignLine.asPackage cite "the sign of Isaiah 7:14 need not be extraordinary"
+
+/-- Wegner's line with the sign argument in play: the ordinary pregnancy no
+longer granted, and the fathers' two grounds in its place. The parse, the
+near-term setting and the referent principle all stay. -/
+def wegnerUnderSign : Line Claim :=
+  wegnerLine.onGrounds
+    [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
+    , p .signMustBeExtraordinary, p .ordinaryConceptionIsNoMarvel
+    , p .oneReferentSettlesDenotation ]
+
+/-- Wegner's objection with the fathers' sign argument in play. -/
+def wegnerUnderTheSign : ArgumentPackage Claim :=
+  { wegnerLexical with
+    name := "Wegner's objection, with the fathers' sign argument in play"
+    premises :=
+      caseOf [wegnerUnderSign] []
+        (extraordinarySignExcludesOrdinaryPregnancy :: wegnerClosingSteps) }
+
+/-- The sign argument with the near-term reply in play: its first ground no
+longer granted, and the reply's grounds in its place. -/
+def signUnderReply : Line Claim :=
+  signLine.onGrounds
+    [ p .ordinaryConceptionIsNoMarvel, p .isaianicSignsAreOrdinaryEvents
+    , p .signDatedByAChildsInfancy ]
+
+/-- The fathers' sign argument with the near-term reply in play. -/
+def signArgumentUnderReply : ArgumentPackage Claim :=
+  { signArgument with
+    name := "The fathers' sign argument, with the near-term reply in play"
+    premises := caseOf [signUnderReply] [] [ordinarySignsAnswerTheDemand] }
 
 /-- The lexical objection with its versional support, stated as its holder
 would state it. -/

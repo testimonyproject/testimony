@@ -3,7 +3,9 @@ import Testimony.Arguments.BornOfAVirgin.Sources
 import Testimony.Arguments.BornOfAVirgin.Lines
 import Testimony.Arguments.BornOfAVirgin.Packages
 import Testimony.Arguments.BornOfAVirgin.Results
+import Testimony.Arguments.BornOfAVirgin.Results.Wegner
 import Testimony.Arguments.BornOfAVirgin.Dispute
+import Testimony.Arguments.BornOfAVirgin.Dispute.Wegner
 
 /-!
 # Arguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
@@ -105,6 +107,30 @@ would settle it the other way. `usage_parity_blocks_wegner` checks it, and the
 atom is marked `plausible` rather than `wellSupported` because Postell's "in
 fact virgins" is stronger than Wegner's own discussion of Song 6:8.
 
+**The oldest reply goes to the ordinary pregnancy itself.** Justin, Irenaeus
+and Origen answer the near-term reading with one argument. The oracle promised a
+*sign*, offered "in the depth or in the height" (7:11), and an ordinary
+conception happens to every woman who is not barren, so it would be no sign.
+Rydelnik makes the same move today. `signLine` encodes it, and it denies the one
+ground of Wegner's objection that the grammar does not supply.
+`sign_leaves_the_lexical_conclusion_open` measures what that buys: with the
+fathers' grounds in place of the ordinary pregnancy, Wegner's lexical
+conclusion is independent of what remains. The objection is blocked, and
+nothing is shown about the word.
+
+The rival is written first, and Wegner holds it himself: a sign need not be a
+miracle. Isaiah's own children are "signs and portents" (8:18), and this sign
+is dated by a child's infancy (7:16), so its point may be its timing. Rhodea
+argues the same. `reply_leaves_the_pregnancy_open` shows that the reply blocks
+the fathers in turn, without supplying Wegner's ordinary pregnancy.
+
+`Dispute.Wegner` puts the three positions together. Every one of them has a
+`disputed` weakest link, so the dispute ties (`nothing_prevails_over_wegner`).
+Both the fathers alone and Wegner with the reply are defensible resolutions of
+it. What would decide it is one of two ratings: whether the sign of 7:14 must be
+the kind offered at 7:11, and whether the reply's inference survives Rydelnik,
+who grants its grounds and denies its conclusion.
+
 The critical case against the Isaianic strand is now *derived* rather than
 assumed. `critical` used to carry `¬isaiahPredictsVirginBirth` as a bare
 premise; it now carries the step that produces it — that a sign given for
@@ -199,16 +225,23 @@ itself debated, and is marked `plausible` rather than `wellSupported`.
 ## Where things are
 
 This argument is a directory, because at fourteen hundred lines it was one file
-that no one could hold in view. The dependencies run one way.
+that no one could hold in view. The dependencies run one way. Where a file
+outgrew three hundred lines of code, the material for the dispute over Wegner's
+objection, and the citations for the dispute over the critical denial, went
+into modules of their own beside it.
 
 | File | Contents |
 |---|---|
 | `Atoms.lean` | the `Claim` atoms, the recurring sources, the intertextual edges, the criterion |
 | `Sources.lean` | `cite`: a citation and a classification for every atom |
+| `Sources/NearTerm.lean` | the citations of the dispute over the critical denial |
+| `Sources/Wegner.lean` | the citations of the dispute over Wegner's objection |
 | `Lines.lean` | the inference steps, and the lines of reason they compose into |
 | `Packages.lean` | the positions, and the variant packages the results refute |
-| `Results.lean` | every `@[headline]` result, with its trust base |
-| `Dispute.lean` | the five positions as one dispute: who defeats whom, and who prevails |
+| `Results.lean` | the `@[headline]` results about the strands, with their trust base |
+| `Results/Wegner.lean` | the results about Wegner's objection, its circle, and the sign |
+| `Dispute.lean` | the critical denial, the scriptural reading and four replies as one dispute |
+| `Dispute/Wegner.lean` | Wegner, the fathers' sign argument and the near-term reply as another |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in

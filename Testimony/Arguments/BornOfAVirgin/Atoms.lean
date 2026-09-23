@@ -76,6 +76,20 @@ inductive Claim
   /-- In the other clear עַלְמָה passages Wegner lists — Genesis 24:43 and Song
   6:8 — the women are virgins. Postell's usage reply. -/
   | otherClearAlmahCasesAreVirgins
+  /-- The sign given at Isaiah 7:14 must be extraordinary, as the sign offered
+  "deep as Sheol or high as heaven" at 7:11 would have been. **The fathers'
+  hinge**, and the premise the near-term reply denies. -/
+  | signMustBeExtraordinary
+  /-- An ordinary conception is nothing extraordinary: it happens to every
+  woman who is not barren. -/
+  | ordinaryConceptionIsNoMarvel
+  /-- Signs elsewhere in Isaiah are ordinary events: the prophet's children are
+  "signs and portents" (8:18), and so are his walking stripped (20:3) and a
+  harvest of what grows of itself (37:30). -/
+  | isaianicSignsAreOrdinaryEvents
+  /-- Isaiah 7:16 dates the deliverance by a child's infancy: the land is
+  deserted before he knows how to refuse evil and choose good. -/
+  | signDatedByAChildsInfancy
   /-- Matthew 1:23 quotes Isaiah 7:14. -/
   | matthewQuotesIsaiah
   /-- Matthew's quotation intends the virgin conception as fulfilment. -/
