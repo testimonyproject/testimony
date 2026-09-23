@@ -417,6 +417,30 @@ any long-forgotten 'fulfilment' in the time of Ahaz" (123). -/
   , issue := some "1"
   , pages := some (118, 125) }
 
+/-- Compton's case that Isaiah 7:14 is wholly messianic while 7:15–16 speaks to
+Ahaz. It disputes both premises of the critical denial. The sign of 7:14 is
+addressed to the house of David, with plural pronouns that rule out Ahaz, and so
+"does not function as confirmation of Ahaz's promised deliverance" (12); every
+near-term candidate fails, since neither Hezekiah's mother nor
+Maher-shalal-hash-baz's was a virgin and Hezekiah was already born (9). And the
+near-term part of the oracle measures time by the child's infancy, which "does
+not depend on the fact that the child in view was not born for several
+centuries" (14). -/
+@[bib_entry] def comptonImmanuelProphecy : BibEntry := .article
+  { core :=
+      { key := "compton-immanuel-prophecy-2007"
+      , contributors := { authors := [.person "R. Bruce" "Compton"] }
+      , title := "The Immanuel Prophecy in Isaiah 7:14–16 and Its Use in Matthew 1:23"
+      , subtitle := some "Harmonizing Historical Context and Single Meaning"
+      , year := some { value := 2007 }
+      , identifiers :=
+          [ .url ("https://dbts.edu/wp-content/uploads/2025/10/" ++
+                  "The-Immanueal-Prophecy-in-Isaiah-7-14-16-Compton.pdf")
+                 (some "2026-09-23") ] }
+  , journal := "Detroit Baptist Seminary Journal"
+  , volume := some "12"
+  , pages := some (3, 15) }
+
 /-! ### Sola scriptura
 
 Added for `Arguments.SolaScriptura`: the Protestant taxonomy and its critics,

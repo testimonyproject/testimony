@@ -36,6 +36,7 @@ def cite : Claim → AtomMeta
         { motyerOnIsaiah with
           supporting :=
             [ .work motyerContextContent (.page 123)
+            , .work comptonImmanuelProphecy (.pages 12 14)
             , .work justinDialogue (.sectionRef "66")
             , .work irenaeusAgainstHeresies (.sectionRef "III.21.6")
             , .work origenAgainstCelsus (.sectionRef "I.35") ] } }
@@ -53,6 +54,7 @@ def cite : Claim → AtomMeta
             [ .work bhs (.apparatus isaiah7_14)
             , .work berryVirginBirth (.pages 1653 1654)
             , .work motyerContextContent (.page 125)
+            , .work comptonImmanuelProphecy (.pages 7 8)
             , .work jeromeAgainstJovinianus (.sectionRef "I.32") ] } }
   | .almahAdmitsVirginSense =>
     { label := "The semantic range of עַלְמָה does not exclude 'virgin' at Isaiah 7:14"
@@ -228,6 +230,7 @@ def cite : Claim → AtomMeta
           supporting :=
             [ .work wegnerVirginBirths (.pages 471 472)
             , .work jeromeAgainstJovinianus (.sectionRef "I.32")
+            , .work comptonImmanuelProphecy (.page 8)
             , .scripture clearAlmahPassages ] } }
   | .matthewQuotesIsaiah =>
     { label := "Matthew 1:23 quotes Isaiah 7:14"
@@ -338,7 +341,9 @@ def cite : Claim → AtomMeta
       -- of Ahaz's day was called Immanuel? — and his conclusion that the sign
       -- was given to the house of David (Cels. I.35). Motyer denies it most
       -- directly (1970, 120, 124): the sign confirms events after the fact,
-      -- and Maher-shalal-hash-baz, not Immanuel, carries the timetable.
+      -- and Maher-shalal-hash-baz, not Immanuel, carries the timetable. So
+      -- does Compton (2007, 12): 7:14 is addressed to the house of David, in
+      -- plural pronouns, and only 7:15–16, with a singular "you", to Ahaz.
     , source := brownOnBirth }
   | .nearTermExcludesMessianicSense =>
     { label := "A sign given for Ahaz's generation is not also a prediction of a virgin birth"
@@ -347,6 +352,9 @@ def cite : Claim → AtomMeta
       -- by the library's own definition, since the contest is recorded here
       -- in `berryLine` and `postellLine`. It was once cited `wellSupported`
       -- on Brown's authority, which let the critic outrank both replies.
+      -- Compton (2007, 12–14) denies it on a third ground: the near-term part
+      -- of the oracle, 7:15–16, uses the child's infancy only as a measure of
+      -- time, and so does not need the child born in Ahaz's day.
     , source := brownOnBirth .disputed }
   | .nearTermFulfilmentIsUnclear =>
     { label := "How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question"
@@ -354,8 +362,10 @@ def cite : Claim → AtomMeta
       -- Descriptively uncontroversial: the near-term referent has been taken
       -- for Isaiah's son, for Hezekiah, and for a son of Ahaz, with no
       -- settled answer. What is contestable is the use Berry puts it to.
+      -- Compton surveys the candidates (5) and finds that none fits (9).
     , source :=
         { primary := .work berryVirginBirth (.pages 1653 1654)
+        , supporting := [.work comptonImmanuelProphecy (.pages 5 9)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .genesis3_15IsEtiology =>
