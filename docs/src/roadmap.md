@@ -286,9 +286,6 @@ actual morphological annotation rather than a commentary's report of it — whic
 matters most for exactly the lexical premises that keep turning out to be
 load-bearing.
 
-**Old Testament `Book` completion** ([#5]). The New Testament is complete; the
-Old is partial. A good first contribution.
-
 ## Systematic theology
 
 The natural extension. Doctrine is already structured the way this library
@@ -409,7 +406,6 @@ the rest worth reading.
 [#2]: https://github.com/testimonyproject/testimony/issues/2
 [#3]: https://github.com/testimonyproject/testimony/issues/3
 [#4]: https://github.com/testimonyproject/testimony/issues/4
-[#5]: https://github.com/testimonyproject/testimony/issues/5
 [#7]: https://github.com/testimonyproject/testimony/issues/7
 [#8]: https://github.com/testimonyproject/testimony/issues/8
 [#9]: https://github.com/testimonyproject/testimony/issues/9

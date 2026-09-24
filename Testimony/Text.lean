@@ -16,15 +16,21 @@ set_option linter.missingDocs false in
 to is a separate question (see `Canon`). -/
 inductive Book
   | genesis | exodus | leviticus | numbers | deuteronomy
-  | psalms | songOfSongs | isaiah | jeremiah | ezekiel | daniel
-  | hosea | micah | zechariah | malachi
+  | joshua | judges | ruth | firstSamuel | secondSamuel
+  | firstKings | secondKings | firstChronicles | secondChronicles
+  | ezra | nehemiah | esther
+  | job | psalms | proverbs | ecclesiastes | songOfSongs
+  | isaiah | jeremiah | lamentations | ezekiel | daniel
+  | hosea | joel | amos | obadiah | jonah | micah
+  | nahum | habakkuk | zephaniah | haggai | zechariah | malachi
   | matthew | mark | luke | john | acts
   | romans | firstCorinthians | secondCorinthians | galatians | ephesians
   | philippians | colossians | firstThessalonians | secondThessalonians
   | firstTimothy | secondTimothy | titus | philemon | hebrews | james
   | firstPeter | secondPeter | firstJohn | secondJohn | thirdJohn | jude
   | revelation
-  -- The New Testament is complete; the Old Testament is still partial.
+  -- Both Testaments are complete for the 66-book Protestant canon; the
+  -- deuterocanonical books are not yet represented.
 deriving Repr, DecidableEq
 
 /-- Canonical boundaries differ by tradition. Results are always relative to a
@@ -113,10 +119,19 @@ wherever a reference is rendered for a human reader. -/
 def Book.abbrev : Book → String
   | .genesis => "Gen" | .exodus => "Exod" | .leviticus => "Lev"
   | .numbers => "Num" | .deuteronomy => "Deut"
-  | .psalms => "Ps" | .songOfSongs => "Song" | .isaiah => "Isa"
-  | .jeremiah => "Jer"
-  | .ezekiel => "Ezek" | .daniel => "Dan" | .hosea => "Hos"
-  | .micah => "Mic" | .zechariah => "Zech" | .malachi => "Mal"
+  | .joshua => "Josh" | .judges => "Judg" | .ruth => "Ruth"
+  | .firstSamuel => "1 Sam" | .secondSamuel => "2 Sam"
+  | .firstKings => "1 Kgs" | .secondKings => "2 Kgs"
+  | .firstChronicles => "1 Chr" | .secondChronicles => "2 Chr"
+  | .ezra => "Ezra" | .nehemiah => "Neh" | .esther => "Esth"
+  | .job => "Job" | .psalms => "Ps" | .proverbs => "Prov"
+  | .ecclesiastes => "Eccl" | .songOfSongs => "Song"
+  | .isaiah => "Isa" | .jeremiah => "Jer" | .lamentations => "Lam"
+  | .ezekiel => "Ezek" | .daniel => "Dan"
+  | .hosea => "Hos" | .joel => "Joel" | .amos => "Amos" | .obadiah => "Obad"
+  | .jonah => "Jonah" | .micah => "Mic" | .nahum => "Nah" | .habakkuk => "Hab"
+  | .zephaniah => "Zeph" | .haggai => "Hag" | .zechariah => "Zech"
+  | .malachi => "Mal"
   | .matthew => "Matt" | .mark => "Mark" | .luke => "Luke" | .john => "John"
   | .acts => "Acts" | .romans => "Rom"
   | .firstCorinthians => "1 Cor" | .secondCorinthians => "2 Cor"
