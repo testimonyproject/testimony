@@ -254,9 +254,11 @@ def baseCite : Claim → AtomMeta
     , kind := .linguistic
       -- Melanchthon reads 7:50 as the remission of sins received by faith: "the
       -- remission of sins is properly received by faith, although love,
-      -- confession, and other good fruits ought to follow". A Reformation
-      -- confession, not a philological study; Marshall's NIGTC note on 7:50
-      -- remains the modern commentary to check, and is kept as a lead. Rated
+      -- confession, and other good fruits ought to follow". Padilla reads the
+      -- saying the same way — the episode is about "soteriology", and "Jesus's
+      -- love, demonstrated in forgiveness, is received by faith" (pp. 54–55) —
+      -- though neither argues the word against the healing sense; Marshall's
+      -- NIGTC note on 7:50 is still the philological study to check. Rated
       -- `wellSupported`, not `disputed`: `disputed` means contested by
       -- competent scholars, and a search for one arguing the healing sense *at
       -- 7:50* (Crossref and the open web, September 2026) found none. The
@@ -266,29 +268,33 @@ def baseCite : Claim → AtomMeta
     , source :=
         { primary := .work bookOfConcord melanchthonOnLuke7
         , supporting :=
-            [.scripture [{ ref := .range luke7_47to50 }], .work marshallLuke (.adLoc luke7_50)]
+            [ .work padillaNarrativeCriticism (.pages 54 55)
+            , .scripture [{ ref := .range luke7_47to50 }]
+            , .work marshallLuke (.adLoc luke7_50) ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .luke7_47LoveIsEvidence =>
     { label := "Luke 7:47 — her love is the evidence of her forgiveness, not its ground"
     , kind := .interpretive
       -- ὅτι in 7:47a can be read causally ("forgiven because she loved") or as
-      -- giving the evidence ("forgiven, as her great love shows"). Melanchthon
-      -- reads it the second way: "Christ interprets Himself when He adds: Thy
-      -- faith hath saved thee", so "Christ did not mean that the woman, by that
-      -- work of love, had merited the remission of sins". 7:47b and the parable
-      -- of 7:41–43 run the same way, from forgiveness to love. Kilgallen,
-      -- "Forgiveness of Sins (Luke 7:36-50)", NovT 40 (1998) 105–116, is the
-      -- modern study to check. `plausible`, because the causal reading has a
+      -- giving the evidence ("forgiven, as her great love shows"). Padilla
+      -- reads it the second way, from the parable of 7:41–43: her actions "stem
+      -- from the fact that she loves much because she has been forgiven much"
+      -- (p. 54). So does Melanchthon: "Christ interprets Himself when He adds:
+      -- Thy faith hath saved thee", so the woman did not merit "the remission of
+      -- sins" by "that work of love". 7:47b runs the same way. Kilgallen,
+      -- "Forgiveness of Sins (Luke 7:36-50)", NovT 40 (1998) 105–116, is a
+      -- further study to check. `plausible`, because the causal reading has a
       -- history — Trent counts beginning to love God among the dispositions to
       -- justification (Session VI, ch. 6) — and the grammar alone does not
       -- exclude it.
     , source :=
-        { primary := .work bookOfConcord melanchthonOnLuke7
+        { primary := .work padillaNarrativeCriticism (.pages 54 54)
         , supporting :=
-            [ .scripture [{ ref := .range luke7_41to43 }, { ref := .verse luke7_47 }]
+            [ .work bookOfConcord melanchthonOnLuke7
+            , .scripture [{ ref := .range luke7_41to43 }, { ref := .verse luke7_47 }]
             , .scripture [{ ref := .range luke7_47to50 }] ]
-        , tradition := .reformedProtestant
+        , tradition := .christianHistoricalGrammatical
         , confidence := .plausible } }
   | .james2TargetsDeadFaith =>
     { label := "James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine"

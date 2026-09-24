@@ -194,9 +194,10 @@ rests on an absence: no cited source argues that σῴζω at Luke 7:50 means
 healing, so nothing in the dispute attacks the dominical case but Trent. A search
 for one found none, so that premise is rated `wellSupported`; and the dominical
 case carries the Reformed reading of 7:47 — her love is the evidence of her
-forgiveness, not its ground — as a premise. Both premises are cited to
-Melanchthon's *Apology of the Augsburg Confession*, which reads 7:47 by 7:50;
-a modern commentary arguing either is still to be checked.
+forgiveness, not its ground — as a premise. That reading is cited to Osvaldo
+Padilla's narrative-critical study of Luke 7:36–50 and to Melanchthon's
+*Apology of the Augsburg Confession*, which reads 7:47 by 7:50; both read 7:50
+as salvation received by faith.
 
 **Authorship is not a premise, and the encoding says what that costs.**
 Ephesians, Titus and 1 and 2 Peter are each disputed, and each dispute is
