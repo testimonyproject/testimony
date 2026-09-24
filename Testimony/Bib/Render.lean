@@ -98,7 +98,26 @@ def field (name : String) : Option String → List String
   | none => []
   | some v => ["  " ++ name ++ " = {" ++ v ++ "}"]
 
-/-- Fields common to every entry, derived from `WorkCore`. -/
+/-- The note a variant contributes of its own — a critical edition's siglum, an
+ancient work's date of composition, a dataset's commit — already escaped. -/
+def variantNote : BibEntry → Option String
+  | .criticalEdition d => d.siglum.map fun s => "siglum: " ++ texEscape s
+  | .ancientWork d => d.composed.map fun y => "composed " ++ renderYear y
+  | .dataset d => d.commit.map fun c => "commit " ++ c
+  | _ => none
+
+/-- The single `note` an entry renders: the work's own note and its variant's,
+joined. BibTeX keeps one value per field, so emitting the two separately would
+silently drop one of them. -/
+def noteField (e : BibEntry) : Option String :=
+  match e.core.note, variantNote e with
+  | some c, some v =>
+    some (texEscape (c.dropEndWhile (· == '.')).toString ++ "; " ++ v)
+  | some c, none => some (texEscape c)
+  | none, v => v
+
+/-- Fields common to every entry, derived from `WorkCore` — except `note`,
+which `noteField` assembles from the core and the variant together. -/
 def coreFields (c : WorkCore) : List String :=
   let title := texEscape (match c.subtitle with
     | some s => c.title ++ ": " ++ s
@@ -114,7 +133,6 @@ def coreFields (c : WorkCore) : List String :=
   ++ (c.identifiers.flatMap fun i =>
         let (n, v) := identifierBibtex i
         field n (some v))
-  ++ field "note" (c.note.map texEscape)
 
 /-- The fields particular to each entry variant. -/
 def variantFields : BibEntry → List String
@@ -144,19 +162,17 @@ def variantFields : BibEntry → List String
     field "publisher" (some (texEscape d.publisher))
     ++ field "address" (d.place.map texEscape)
     ++ field "edition" (d.edition.map texEscape)
-    ++ field "note" (d.siglum.map fun s => "siglum: " ++ texEscape s)
   | .ancientWork d =>
     field "howpublished" (d.originalTitle.map texEscape)
-    ++ field "note" (d.composed.map fun y => "composed " ++ renderYear y)
     ++ field "crossref" d.editionUsed
   | .dataset d =>
-    field "version" d.version ++ field "note" (d.commit.map fun c => "commit " ++ c)
+    field "version" d.version
     ++ field "howpublished" (d.maintainer.map texEscape)
   | .webPage d => field "organization" (d.site.map texEscape)
 
 /-- One entry in BibTeX form. -/
 def toBibtex (e : BibEntry) : String :=
-  let fields := coreFields e.core ++ variantFields e
+  let fields := coreFields e.core ++ field "note" (noteField e) ++ variantFields e
   "@" ++ entryType e ++ "{" ++ e.key ++ ",\n"
     ++ String.intercalate ",\n" fields ++ "\n}"
 
@@ -311,6 +327,21 @@ build rather than silently rewriting `references.bib`. -/
 -- The `&` in the note field must survive as `\\&`, or the generated .bbl
 -- breaks with a misplaced-alignment-tab error.
 #guard ((toBibtex keilDelitzschMinorProphets).splitOn "T. \\& T. Clark").length == 2
+
+/-- The field names an entry renders, in order. -/
+def bibtexFieldNames (e : BibEntry) : List String :=
+  (coreFields e.core ++ field "note" (noteField e) ++ variantFields e).map fun l =>
+    ((l.splitOn " = ").headD "").replace " " ""
+
+-- BibTeX keeps one value per field and drops or warns about a repeat, so a
+-- repeated field loses information far from its cause. No entry may carry one.
+#guard registry.all fun e => (bibtexFieldNames e).eraseDups.length == (bibtexFieldNames e).length
+
+-- A critical edition with a note of its own keeps both it and its siglum, in
+-- one field.
+#guard ((toBibtex na28).splitOn "  note = {").length == 2
+#guard ((toBibtex na28).splitOn
+  "note = {ISBN is the Hendrickson / German Bible Society printing; siglum: NA28}").length == 2
 
 -- The anchor is what an argument page's cite key links to; the exact-match
 -- guards below pin it along with the rest of the line.
