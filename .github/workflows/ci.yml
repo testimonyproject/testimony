@@ -58,9 +58,11 @@ jobs:
       # through the kernel, into the environment as it stood before that
       # module, independently of the elaborator and of every tactic. A tactic
       # cannot make the kernel accept a false theorem; this checks that nothing
-      # reached the environment without the kernel's say-so.
+      # reached the environment without the kernel's say-so. The script first
+      # builds the tools and removes build output of deleted modules: .lake/ is
+      # restored from a cache, and leanchecker replays whatever .olean it finds.
       - name: Kernel replay
-        run: lake env leanchecker Testimony
+        run: scripts/kernel-replay.sh
 
       - name: Generated files are current
         run: |

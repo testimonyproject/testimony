@@ -72,7 +72,7 @@ lake exe cache get                   # what that script runs; fetches Mathlib ol
 lake build                           # tier 1: missingDocs + Lean linters
 lake lint                            # tier 2: Batteries environment linters
 lake exe axiom-audit                 # tier 3: trust base
-lake env leanchecker Testimony       # tier 3, continued: kernel replay of every module
+scripts/kernel-replay.sh             # tier 3, continued: kernel replay of every module
 python3 scripts/testimony_lint.py    # tier 4: project rules L1-L12
 lake exe bibgen --check              # generated files current
 lake exe statusgen                   # regenerate the roadmap's status table
