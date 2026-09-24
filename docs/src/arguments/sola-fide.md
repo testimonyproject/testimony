@@ -81,7 +81,10 @@ justification, while establishing grace and "not by works" by its own route
 the strands are needed for. Grace and "not by works" follow from the texts that
 say so in terms, given an answer to James, with every lexical premise removed
 (`grace_and_works_rest_on_no_lexical_premise`). The lexical disputes decide
-*through faith alone*.
+*through faith alone*. And each part has its own closing step, which shows what
+the answer to James is for: grace follows without it
+(`grace_needs_no_answer_to_james`), "not by works" does not
+(`james_harmonisation_is_load_bearing`).
 
 **The New Perspective's reading of ἔργα νόμου has a reason, and its critics
 answer the reason.** Sanders' covenantal nomism — in by grace, staying in by
@@ -472,20 +475,30 @@ P_{23} \land P_{24}
 \]
 </div>
 
-<a id="toGraceNotWorks"></a>
-**`toGraceNotWorks`**
+<a id="toGrace"></a>
+**`toGrace`**
 
-*By grace, and not by works*, from the texts that say so in terms: a gift
-through faith and "not of works" (Ephesians 2:8–9), a gift and not wages
-(Romans 4:4–5), mercy and "not by works" (Titus 3:5) — provided James 2:24 is
-answered, and scripture does not contradict itself.
-
-No strand is needed for this part. What it needs is the texts, and an answer to
-James.
+*By grace*, from the texts that say so: a gift through faith (Ephesians
+2:8), a gift and not wages (Romans 4:4–5), mercy (Titus 3:5). Neither a strand
+nor the answer to James is needed for this part.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24}
+(P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23}
+\]
+</div>
+
+<a id="toNotByWorks"></a>
+**`toNotByWorks`**
+
+*Not by works*, from the same texts, which say "not of works" in terms —
+provided James 2:24 is answered, and scripture does not contradict itself. No
+strand is needed for this part either; what it needs, and grace does not, is an
+answer to James.
+
+<div class="testimony-math">
+\[
+(P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24}
 \]
 </div>
 
@@ -734,14 +747,14 @@ The same, with James unanswered.
 <a id="conclusionSteps"></a>
 **`conclusionSteps`**
 
-The two steps to the three parts of the conclusion: grace and works
-together, then faith.
+The three steps to the three parts of the conclusion, one each.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(2)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25}
+\text{(1)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(3)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25}
 \end{aligned}
 \]
 </div>
@@ -756,8 +769,9 @@ to the parts of the conclusion.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(3)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25}
+\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(3)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(4)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25}
 \end{aligned}
 \]
 </div>
@@ -801,8 +815,9 @@ yoke in Acts.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -880,8 +895,9 @@ on the New Perspective's behalf.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -923,9 +939,10 @@ shows that the two questions are independent.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\
-\text{(22)} \quad &amp; \lnot P_{26} \\[4pt]
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\
+\text{(23)} \quad &amp; \lnot P_{26} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -962,8 +979,9 @@ of justification. Everything else in the Reformed case is granted.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1001,8 +1019,9 @@ apostolic strand was written against.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1045,12 +1064,13 @@ leans on Romans instead.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\
-\text{(22)} \quad &amp; \lnot P_{11} \\
-\text{(23)} \quad &amp; \lnot P_{12} \\
-\text{(24)} \quad &amp; \lnot P_{13} \\
-\text{(25)} \quad &amp; \lnot P_{14} \\[4pt]
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\
+\text{(23)} \quad &amp; \lnot P_{11} \\
+\text{(24)} \quad &amp; \lnot P_{12} \\
+\text{(25)} \quad &amp; \lnot P_{13} \\
+\text{(26)} \quad &amp; \lnot P_{14} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1171,8 +1191,9 @@ The Reformed package without the ἔργα νόμου premise.
 \text{(16)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(20)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1206,8 +1227,9 @@ The Reformed package without the dominical lexical premise.
 \text{(16)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(20)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1242,8 +1264,9 @@ apostolic strand is untouched.
 \text{(15)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(17)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(20)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1277,8 +1300,9 @@ genitive stays.
 \text{(14)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1312,8 +1336,9 @@ theirs.
 \text{(14)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1346,8 +1371,9 @@ The reading of Galatians as a polemic stays, and so does the answer to James.
 \text{(13)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(14)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(15)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(17)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24}
 \end{aligned}
 \]
@@ -1382,8 +1408,9 @@ Paul alone carry sola fide on Gathercole's history?
 \text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
 \text{(15)} \quad &amp; (\lnot P_{27} \land P_{8}) \rightarrow P_{6} \\
 \text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1415,8 +1442,9 @@ The same on Sanders' reading of Judaism.
 \text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
 \text{(15)} \quad &amp; P_{27} \rightarrow \lnot P_{6} \\
 \text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
@@ -1448,9 +1476,45 @@ The Reformed package without the premises that harmonise James.
 \text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
 \text{(15)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
-\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="graceWithoutJamesHarmonisation"></a>
+**`graceWithoutJamesHarmonisation`** — Grace alone, minus the James harmonisation
+
+The same, asked only about the first part of the conclusion: is salvation by
+grace, with James 2:24 left unanswered?
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; P_{7} \\
+\text{(4)} \quad &amp; P_{17} \\
+\text{(5)} \quad &amp; P_{10} \\
+\text{(6)} \quad &amp; P_{1} \\
+\text{(7)} \quad &amp; P_{2} \\
+\text{(8)} \quad &amp; P_{3} \\
+\text{(9)} \quad &amp; P_{4} \\
+\text{(10)} \quad &amp; P_{5} \\
+\text{(11)} \quad &amp; P_{16} \\
+\text{(12)} \quad &amp; P_{9} \\
+\text{(13)} \quad &amp; P_{21} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
+\text{(15)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
+\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23}
 \end{aligned}
 \]
 </div>
@@ -1851,6 +1915,21 @@ theorem james_harmonisation_is_load_bearing : ¬Establishes
 -- axioms: propext, Quot.sound
 ```
 
+<a id="grace_needs_no_answer_to_james"></a>
+**`grace_needs_no_answer_to_james`**
+
+**But grace does not need it.** Remove the answer to James and salvation by
+grace still follows, from Ephesians 2:8, Romans 4:4–5 and Titus 3:5 alone.
+James 2:24 is load-bearing for *not by works*, the part it appears to contradict,
+and for nothing else — which the single closing step this argument once had
+could not show.
+
+```lean
+theorem grace_needs_no_answer_to_james : Establishes
+    graceWithoutJamesHarmonisation
+-- axioms: propext, Quot.sound
+```
+
 #### Satisfiability
 
 `Entails` is vacuously true over a premise set with no model, so a package
@@ -2097,5 +2176,17 @@ The critics' Pauline package has a model, so
 ```lean
 theorem paulineStrandOnTheCritics_is_satisfiable : Satisfiable
     paulineStrandOnTheCritics.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="graceWithoutJamesHarmonisation_is_satisfiable"></a>
+**`graceWithoutJamesHarmonisation_is_satisfiable`**
+
+With the answer to James removed, the package asked about grace still has a
+model, so `grace_needs_no_answer_to_james` is not vacuous.
+
+```lean
+theorem graceWithoutJamesHarmonisation_is_satisfiable : Satisfiable
+    graceWithoutJamesHarmonisation.premises
 -- axioms: propext, Quot.sound
 ```

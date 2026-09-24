@@ -79,7 +79,10 @@ justification, while establishing grace and "not by works" by its own route
 the strands are needed for. Grace and "not by works" follow from the texts that
 say so in terms, given an answer to James, with every lexical premise removed
 (`grace_and_works_rest_on_no_lexical_premise`). The lexical disputes decide
-*through faith alone*.
+*through faith alone*. And each part has its own closing step, which shows what
+the answer to James is for: grace follows without it
+(`grace_needs_no_answer_to_james`), "not by works" does not
+(`james_harmonisation_is_load_bearing`).
 
 **The New Perspective's reading of ἔργα νόμου has a reason, and its critics
 answer the reason.** Sanders' covenantal nomism — in by grace, staying in by

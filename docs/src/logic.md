@@ -104,7 +104,9 @@ obligations.
 on every implication in the context, so each inference step added to a case
 multiplies its cost however simple the step is: splitting `SolaFide`'s closing
 step in three took `reformed_establishes` to twenty times the default heartbeat
-budget. On four `SolaFide` goals with no heartbeat limit, `tauto`, `simp_all`
+budget, and the argument was carried with two closing steps until the recipe
+changed; it now has the three, and `reformed_establishes` takes about two
+thousand heartbeats. On four `SolaFide` goals with no heartbeat limit, `tauto`, `simp_all`
 and `aesop` each failed to finish in fifteen minutes; Mathlib's `itauto`
 (Dyckhoff's G4ip, *J. Symbolic Logic* 57(3), 1992), complete for intuitionistic
 logic, took six. The Horn path takes four seconds — about two thousand
@@ -186,8 +188,9 @@ point of rendering at all. It separates an argument's *shape* from its content:
 (17)  (P₁₆ ∧ P₁₇) → P₂₂
 (18)  (P₉ ∧ P₁₀) → P₂₂
 (19)  (P₁₈ ∧ P₁₉) → P₂₀
-(20)  (P₁ ∧ P₄ ∧ P₅ ∧ P₂₀ ∧ P₂₁) → P₂₃ ∧ P₂₄
-(21)  (P₂₂ ∧ P₁) → P₂₅
+(20)  (P₁ ∧ P₄ ∧ P₅) → P₂₃
+(21)  (P₁ ∧ P₄ ∧ P₅ ∧ P₂₀ ∧ P₂₁) → P₂₄
+(22)  (P₂₂ ∧ P₁) → P₂₅
   ⊢   P₂₃ ∧ P₂₄ ∧ P₂₅
 ```
 
@@ -196,9 +199,10 @@ of `P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστο
 Christ), one by way of `P₁₇` (Jesus' σῴζω at Luke 7:50), and one by way of
 `P₁₀` (Peter's yoke at Acts 15:10). The argument's redundancy — the reason no
 disputed premise is load-bearing on its own — is visible on the page before you
-read a word of the legend. So is the split in the conclusion: (20) reaches grace
-and "not by works" (`P₂₃ ∧ P₂₄`) without `P₂₂` at all, and only (21), "through
-faith" (`P₂₅`), needs a strand.
+read a word of the legend. So is the split in the conclusion, one step per part:
+(20) reaches grace (`P₂₃`) from the texts alone; (21) reaches "not by works"
+(`P₂₄`) from the same texts and the answer to James (`P₂₀`); only (22),
+"through faith" (`P₂₅`), needs a strand (`P₂₂`).
 
 ## Publishing what the library claims
 
@@ -361,7 +365,7 @@ establish, name what to unfold:
 theorem reformed_establishes : Establishes reformed := by
   establish [reformed, paulineLine, dominicalLine, apostolicLine, sharedGrounds,
     closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
-    toGraceNotWorks, toThroughFaith, solaFide]
+    toGrace, toNotByWorks, toThroughFaith, solaFide]
 ```
 
 To refute, name the rival's reading and check it:
