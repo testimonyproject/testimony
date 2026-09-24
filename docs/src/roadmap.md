@@ -322,9 +322,6 @@ actual morphological annotation rather than a commentary's report of it — whic
 matters most for exactly the lexical premises that keep turning out to be
 load-bearing.
 
-**Old Testament `Book` completion** ([#5]). The New Testament is complete; the
-Old is partial. A good first contribution.
-
 ## Systematic theology
 
 The natural extension. Doctrine is already structured the way this library
@@ -423,8 +420,6 @@ That limitation is closable with no new dependency at all.
 - **A devcontainer** ([#11]), so that the toolchain is consistent and not only
   the worktree layout. Contributors should not have to install elan and match
   Lean v4.33.1 by hand.
-- **Enforcing the worktree rule** ([#12]). Every other hard rule in CLAUDE.md
-  is enforced by a command; this one is documented and unchecked.
 
 ## How deferred work is tracked
 
@@ -448,13 +443,11 @@ the rest worth reading.
 [#2]: https://github.com/testimonyproject/testimony/issues/2
 [#3]: https://github.com/testimonyproject/testimony/issues/3
 [#4]: https://github.com/testimonyproject/testimony/issues/4
-[#5]: https://github.com/testimonyproject/testimony/issues/5
 [#7]: https://github.com/testimonyproject/testimony/issues/7
 [#8]: https://github.com/testimonyproject/testimony/issues/8
 [#9]: https://github.com/testimonyproject/testimony/issues/9
 [#10]: https://github.com/testimonyproject/testimony/issues/10
 [#11]: https://github.com/testimonyproject/testimony/issues/11
-[#12]: https://github.com/testimonyproject/testimony/issues/12
 [issues]: https://github.com/testimonyproject/testimony/issues
 [label-roadmap]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Aroadmap
 [label-infra]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Ainfra

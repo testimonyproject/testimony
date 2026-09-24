@@ -61,6 +61,8 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
   its own git worktree, created by `scripts/new-worktree.sh`. A worktree that
   was not created by that script has no `.lake/` — it is gitignored, so it is
   not inherited — and its first `lake build` compiles Mathlib from source.
+  `.githooks/pre-commit`, armed by that script, refuses a commit made in the
+  primary checkout.
 
 ## Commands, in order
 

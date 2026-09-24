@@ -1,5 +1,6 @@
 import Testimony
 import Testimony.Tools.Docs
+import Testimony.Logic.Markdown
 
 /-!
 # statusgen — generate the roadmap's status table from the Lean source
@@ -34,6 +35,7 @@ from its statements.
 -/
 
 open Lean Elab Command Testimony.Doc
+open Testimony.Logic.Markdown (oneLine cell splice)
 
 namespace Testimony.Status
 
@@ -59,11 +61,6 @@ one sentence by construction, but a sentence can be a paragraph long, and a
 table cell is not where a reader should meet it — the source is. -/
 def summaryWidth : Nat := 180
 
-/-- Collapse whitespace runs to single spaces, so a pretty-printed statement or
-a docstring sentence fits one Markdown table cell. -/
-def oneLine (s : String) : String :=
-  String.intercalate " " ((s.replace "\n" " ").splitOn " " |>.filter (· ≠ ""))
-
 /-- The first sentence of a docstring: everything up to the first period that
 ends a word. Docstrings here open with what the result claims, so the first
 sentence is the summary; the rest is the argument for it. -/
@@ -85,9 +82,6 @@ def clip (width : Nat) (s : String) : String :=
     let head := (s.take width).toString
     let kept := (head.splitOn " ").dropLast
     (if kept.isEmpty then head else String.intercalate " " kept) ++ " …"
-
-/-- Escape the one character a Markdown table cell cannot carry. -/
-def cell (s : String) : String := (oneLine s).replace "|" "\\|"
 
 end Testimony.Status
 
@@ -207,26 +201,13 @@ def beginMarker : String := "<!-- BEGIN GENERATED: lake exe statusgen -->"
 /-- Closing marker. -/
 def endMarker : String := "<!-- END GENERATED: lake exe statusgen -->"
 
-/-- Replace the marked block of `doc` with `body`, or report why it could not
-be found. A missing marker is an error rather than an append: the page decides
-where the table goes. -/
-def splice (doc body : String) : Except String String :=
-  match doc.splitOn beginMarker with
-  | [before, rest] =>
-    match rest.splitOn endMarker with
-    | [_, after] =>
-      .ok (before ++ beginMarker ++ "\n\n" ++ body ++ endMarker ++ after)
-    | parts =>
-      .error s!"expected exactly one {endMarker}, found {parts.length - 1}"
-  | parts => .error s!"expected exactly one {beginMarker}, found {parts.length - 1}"
-
 /-- Entry point. -/
 def main (args : List String) : IO UInt32 := do
   unless ← roadmapPath.pathExists do
     IO.eprintln s!"statusgen: {roadmapPath} does not exist"
     return 1
   let doc ← IO.FS.readFile roadmapPath
-  match splice doc statusMarkdown with
+  match splice beginMarker endMarker doc statusMarkdown with
   | .error e =>
     IO.eprintln s!"statusgen: {roadmapPath}: {e}"
     return 1

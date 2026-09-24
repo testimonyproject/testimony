@@ -56,6 +56,21 @@ def oneLine (s : String) : String :=
 /-- Escape what a Markdown table cell cannot carry. -/
 def cell (s : String) : String := (oneLine s).replace "|" "\\|"
 
+/-- Replace the block of `doc` between `beginMarker` and `endMarker` with
+`body`, or report why it could not be found. A missing marker is an error
+rather than an append: the page decides where the block goes. `body` is placed
+verbatim after a blank line, so a caller that wants one before the closing
+marker supplies it. -/
+def splice (beginMarker endMarker doc body : String) : Except String String :=
+  match doc.splitOn beginMarker with
+  | [before, rest] =>
+    match rest.splitOn endMarker with
+    | [_, after] =>
+      .ok (before ++ beginMarker ++ "\n\n" ++ body ++ endMarker ++ after)
+    | parts =>
+      .error s!"expected exactly one {endMarker}, found {parts.length - 1}"
+  | parts => .error s!"expected exactly one {beginMarker}, found {parts.length - 1}"
+
 /-- Escape the characters Markdown reads as formatting.
 
 Atom labels, cite loci and scripture references are prose written for a reader,
