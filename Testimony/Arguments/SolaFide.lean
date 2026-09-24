@@ -46,11 +46,13 @@ bet, on a different word — rated `wellSupported`, because no scholar found
 argues the healing sense at 7:50. It also carries its answer to "she loved
 much" (7:47): `luke7_47LoveIsEvidence`, that her love is the evidence of her
 forgiveness and not its ground, as 7:47b and the parable of the two debtors
-(7:41–43) read it. Both premises are cited to Melanchthon's *Apology of the
-Augsburg Confession*, which answers "she loved much" with Jesus' own words:
-"Christ interprets Himself when He adds: Thy faith hath saved thee". That is a
-Reformation confession, not a modern commentary; Marshall at 7:50 and Kilgallen
-on 7:36–50 are named as the modern studies to check.
+(7:41–43) read it. The reading of 7:47 is cited to Osvaldo Padilla's
+narrative-critical study of the episode: her actions "stem from the fact that
+she loves much because she has been forgiven much". Both premises are also
+Melanchthon's, in the *Apology of the Augsburg Confession*, which answers "she
+loved much" with Jesus' own words: "Christ interprets Himself when He adds: Thy
+faith hath saved thee". Neither argues σῴζω against the healing sense word by
+word; Marshall's commentary at 7:50 is named as the philological study to check.
 
 **The apostolic strand** rests on Peter as Luke reports him. At the Jerusalem
 council (Acts 15) the demand Galatians answers is made again — "unless you are

@@ -229,6 +229,25 @@ is what an argument about the sense of σῴζω needs. -/
   , place := some "Grand Rapids"
   , series := some "New International Greek Testament Commentary" }
 
+/-- Padilla's narrative-critical reading of Luke 7:36–50: the woman "loves much
+because she has been forgiven much" (p. 54), and the passage is "about how
+Jesus's love, demonstrated in forgiveness, is received by faith" (p. 55). The
+modern exegete for the dominical strand's reading of 7:47 and 7:50. Checked
+against the publisher's own copy of the issue; the journal registers no DOI. -/
+@[bib_entry] def padillaNarrativeCriticism : BibEntry := .article
+  { core :=
+      { key := "padilla-narrative-criticism-2021"
+      , contributors := { authors := [.person "Osvaldo" "Padilla"] }
+      , title := "Narrative Criticism in the Gospels and Acts"
+      , year := some { value := 2021 }
+      , identifiers :=
+          [ .url "https://www.sebts.edu/wp-content/uploads/2023/06/Issue-12.2.pdf"
+                 (some "2026-09-24") ] }
+  , journal := "Southeastern Theological Review"
+  , volume := some "12"
+  , issue := some "2"
+  , pages := some (35, 55) }
+
 /-- Moo on James, for the reading that James's target is a barren faith rather
 than Paul's doctrine of justification. -/
 @[bib_entry] def mooJames : BibEntry := .book

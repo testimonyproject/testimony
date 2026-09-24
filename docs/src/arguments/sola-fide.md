@@ -47,11 +47,13 @@ bet, on a different word — rated `wellSupported`, because no scholar found
 argues the healing sense at 7:50. It also carries its answer to "she loved
 much" (7:47): `luke7_47LoveIsEvidence`, that her love is the evidence of her
 forgiveness and not its ground, as 7:47b and the parable of the two debtors
-(7:41–43) read it. Both premises are cited to Melanchthon's *Apology of the
-Augsburg Confession*, which answers "she loved much" with Jesus' own words:
-"Christ interprets Himself when He adds: Thy faith hath saved thee". That is a
-Reformation confession, not a modern commentary; Marshall at 7:50 and Kilgallen
-on 7:36–50 are named as the modern studies to check.
+(7:41–43) read it. The reading of 7:47 is cited to Osvaldo Padilla's
+narrative-critical study of the episode: her actions "stem from the fact that
+she loves much because she has been forgiven much". Both premises are also
+Melanchthon's, in the *Apology of the Augsburg Confession*, which answers "she
+loved much" with Jesus' own words: "Christ interprets Himself when He adds: Thy
+faith hath saved thee". Neither argues σῴζω against the healing sense word by
+word; Marshall's commentary at 7:50 is named as the philological study to check.
 
 **The apostolic strand** rests on Peter as Luke reports him. At the Jerusalem
 council (Acts 15) the demand Galatians answers is made again — "unless you are
@@ -218,8 +220,8 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{15}\\) | 2 Peter was written by the apostle Peter | historical | Christian, historical-grammatical, disputed | [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003); 2 Pet 1:1 |
 | \\(P_{16}\\) | δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains | interpretive | critical scholarship, disputed | [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26 |
 | \\(P_{17}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
-| \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
-| \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground | interpretive | Reformed Protestant, plausible | [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
+| \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–55; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
+| \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground | interpretive | Christian, historical-grammatical, plausible | [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
 | \\(P_{20}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
 | \\(P_{21}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
 | \\(P_{22}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
@@ -2516,7 +2518,8 @@ much" (7:47) is the text a rival would use to make love, not faith, the ground
 of her forgiveness. The dominical case does not leave that open: it carries
 `luke7_47LoveIsEvidence` — her love is the evidence of forgiveness, not its
 ground, as 7:47b and the parable of 7:41–43 read it — as a premise of its own.
-It is Melanchthon's reading in the *Apology of the Augsburg Confession*: "Christ
+It is Padilla's reading — she "loves much because she has been forgiven much" —
+and Melanchthon's in the *Apology of the Augsburg Confession*: "Christ
 interprets Himself when He adds: Thy faith hath saved thee", so the woman did
 not merit forgiveness "by that work of love". It is rated `plausible`, because
 Trent counts beginning to love God among the dispositions to justification

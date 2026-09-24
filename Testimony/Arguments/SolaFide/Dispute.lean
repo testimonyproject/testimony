@@ -81,7 +81,8 @@ much" (7:47) is the text a rival would use to make love, not faith, the ground
 of her forgiveness. The dominical case does not leave that open: it carries
 `luke7_47LoveIsEvidence` — her love is the evidence of forgiveness, not its
 ground, as 7:47b and the parable of 7:41–43 read it — as a premise of its own.
-It is Melanchthon's reading in the *Apology of the Augsburg Confession*: "Christ
+It is Padilla's reading — she "loves much because she has been forgiven much" —
+and Melanchthon's in the *Apology of the Augsburg Confession*: "Christ
 interprets Himself when He adds: Thy faith hath saved thee", so the woman did
 not merit forgiveness "by that work of love". It is rated `plausible`, because
 Trent counts beginning to love God among the dispositions to justification
