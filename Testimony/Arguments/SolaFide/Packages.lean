@@ -153,21 +153,28 @@ def apocalypticOnGraceAndWorks : ArgumentPackage Claim :=
     conclusion := graceNotWorks
     conclusionLabel := "salvation by grace, not by works" }
 
-/-- The Tridentine position: works performed in grace merit an increase of
-justification, which denies the second part of the conclusion — salvation not
-by works. Trent also denies that justification is forensic only.
+/-- Trent's premises, given the line that carries its definition to merit: four
+prooftexts it shares with the Reformed, scripture's self-consistency, what its
+definition rules out, and the step from merit to the denial of "not by works"
+(ch. 16).
 
-Not built from the lines above, and that is the point: it shares four
+Not built from the Reformed lines, and that is the point: it shares four
 prooftexts with them and nothing else, so `caseOf` would misdescribe it. -/
+def tridentinePremises (line : Line Claim) : List (Formula Claim) :=
+  [ p .ephesians2_8_9, p .romans3_28, p .galatians2_16, p .titus3_5
+  , p .scriptureSelfConsistent ] ++ line.premises ++ trentDefinitionSteps ++
+  [p .worksMeritIncreaseOfJustification ➝ notP .salvationNotByWorks]
+
+/-- The Tridentine position: justification is the renewal of the inward man,
+that renewal grows through good works, so works performed in grace merit an
+increase of justification — which denies the second part of the conclusion,
+salvation not by works. The same definition denies that justification is
+forensic only. -/
 def tridentine : ArgumentPackage Claim :=
   { reformed with
     name := "Tridentine (Council of Trent, Session VI)"
     cite := tridentineCite
-    premises :=
-      [ p .ephesians2_8_9, p .romans3_28, p .galatians2_16, p .titus3_5
-      , p .scriptureSelfConsistent, notP .justificationIsForensicOnly
-      , p .worksMeritIncreaseOfJustification
-      , p .worksMeritIncreaseOfJustification ➝ notP .salvationNotByWorks ] }
+    premises := tridentinePremises tridentineLine }
 
 /-! ### Variants
 

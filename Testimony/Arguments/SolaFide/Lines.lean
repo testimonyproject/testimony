@@ -227,6 +227,40 @@ def jervellLine : Line Claim :=
         , tradition := .criticalScholarship
         , confidence := .disputed } }
 
+/-- Trent's step from its definition to merit: if justification *is* the
+renewal of the inward man, and that renewal grows through good works, then good
+works increase justification (Session VI, ch. 10 and canon 24). Rated
+`consensus`, as `trentOnMerit` is: the Reformed deny the definition, not the
+inference, and canon 24 condemns the Reformed alternative by name — that works
+are "merely the fruits and signs of Justification obtained". -/
+def trentOnIncrease : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), canon 24")
+  , supporting :=
+      [ .work tannerDecrees
+          (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 10") ]
+  , tradition := .romanCatholic
+  , confidence := .consensus }
+
+/-- **Trent's line.** From its definition of justification — the renewal of the
+inward man, not remission of sins only — and the growth of that renewal through
+good works, to merit: good works increase justification (Session VI, ch. 10,
+canon 24). The Reformed grant the growth and deny the definition, so the step
+carries the objection only as far as the definition does. -/
+def tridentineLine : Line Claim :=
+  { name := "Trent (justification as renewal)"
+  , grounds := [p .justificationIncludesSanctification, p .renewalGrowsThroughGoodWorks]
+  , step :=
+      ⋀ [p .justificationIncludesSanctification, p .renewalGrowsThroughGoodWorks]
+        ➝ p .worksMeritIncreaseOfJustification
+  , delivers := p .worksMeritIncreaseOfJustification
+  , inference := some trentOnIncrease }
+
+/-- What Trent's definition rules out: justification as forensic only (canon 11),
+and justification as distinct from the sanctification that follows it. -/
+def trentDefinitionSteps : List (Formula Claim) :=
+  [ p .justificationIncludesSanctification ➝ notP .justificationIsForensicOnly
+  , p .justificationIncludesSanctification ➝ notP .justificationDistinctFromSanctification ]
+
 /-- The prooftexts the strands read. Shared by every Reformed package, and by
 the New Perspective. -/
 def prooftexts : List (Formula Claim) :=

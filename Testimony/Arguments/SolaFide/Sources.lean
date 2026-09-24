@@ -245,18 +245,26 @@ def baseCite : Claim → AtomMeta
   | .sozoIsSoteriological =>
     { label := "σῴζω in Luke 7:50 denotes salvation, not physical healing"
     , kind := .linguistic
-      -- The same formula appears at Luke 8:48, 17:19 and 18:42, where the
-      -- context is healing; at 7:50 there is no illness, and the saying follows
-      -- "your sins are forgiven" (7:48) and the table's question "who is this
-      -- who even forgives sins?" (7:49). Rated `wellSupported`, not `disputed`:
+      -- **Proposed.** No scholarly work arguing the case at 7:50 has been read
+      -- for this library. Marshall's commentary was cited here before, but his
+      -- note on 7:50 has not been checked against the text, so it is kept as a
+      -- lead, not as the source. Rated `wellSupported`, not `disputed`:
       -- `disputed` means contested by competent scholars, and a search for one
       -- arguing the healing sense *at 7:50* (Crossref and the open web,
       -- September 2026) found none. The ambiguity of the formula elsewhere is
       -- why it is not `consensus`. A cited argument for healing here would
       -- lower it again, and would enter `Dispute.lean` as a party.
     , source :=
-        { primary := .work marshallLuke (.adLoc luke7_50)
-        , supporting := [.scripture [{ ref := .range luke7_47to50 }]]
+        { primary := .proposal
+            ("The plain reading of the pericope, advanced here without a verified " ++
+             "scholarly source. The same formula means \"made you well\" at Luke " ++
+             "8:48, 17:19 and 18:42, where there is illness; at 7:50 there is none, " ++
+             "and the saying follows \"your sins are forgiven\" (7:48) and the " ++
+             "table's question \"who is this who even forgives sins?\" (7:49). " ++
+             "Settled by a commentator who argues it at 7:50 — Marshall's NIGTC " ++
+             "Luke is the first to check.")
+        , supporting :=
+            [.scripture [{ ref := .range luke7_47to50 }], .work marshallLuke (.adLoc luke7_50)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .luke7_47LoveIsEvidence =>
@@ -266,13 +274,20 @@ def baseCite : Claim → AtomMeta
       -- giving the evidence ("forgiven, as her great love shows"). The text
       -- decides it: 7:47b ("the one forgiven little loves little") runs from
       -- forgiveness to love, and so does the parable the verse applies (7:41–43),
-      -- where the debtor loves more *because* more was cancelled. Scripture is
-      -- the primary source because no commentator's reading of 7:47 has been
-      -- verified from the commentary itself; `plausible`, because the causal
-      -- reading has a history and the grammar alone does not exclude it.
+      -- where the debtor loves more *because* more was cancelled. **Proposed**,
+      -- because no commentator's reading of 7:47 has been verified from the
+      -- commentary itself; `plausible`, because the causal reading has a
+      -- history and the grammar alone does not exclude it.
     , source :=
-        { primary := .scripture [{ ref := .range luke7_41to43 }, { ref := .verse luke7_47 }]
-        , supporting := [.scripture [{ ref := .range luke7_47to50 }]]
+        { primary := .proposal
+            ("The evidential reading of ὅτι in 7:47a, advanced here from the text " ++
+             "without a verified scholarly source: 7:47b and the parable of " ++
+             "7:41–43 both run from forgiveness to love. Settled by a commentator " ++
+             "who argues it — Kilgallen, \"Forgiveness of Sins (Luke 7:36-50)\", " ++
+             "NovT 40 (1998) 105–116, is the first to check.")
+        , supporting :=
+            [ .scripture [{ ref := .range luke7_41to43 }, { ref := .verse luke7_47 }]
+            , .scripture [{ ref := .range luke7_47to50 }] ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .plausible } }
   | .james2TargetsDeadFaith =>
@@ -374,6 +389,46 @@ def baseCite : Claim → AtomMeta
     , source :=
         { primary := .work tannerDecrees
             (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 16")
+        , tradition := .romanCatholic
+        , confidence := .wellSupported } }
+  | .justificationIncludesSanctification =>
+    { label := "Justification is not remission of sins only, but renewal of the inward man"
+    , kind := .theological
+      -- `disputed`: Westminster XI.1 denies it in terms — God justifies "not by
+      -- infusing righteousness into them, but by pardoning their sins".
+    , source :=
+        { primary := .work tannerDecrees
+            (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7")
+        , supporting :=
+            [.work tannerDecrees (.sectionRef "Trent, Session VI (1547), canon 11")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .justificationDistinctFromSanctification =>
+    { label := "Justification and sanctification are inseparable but distinct"
+    , kind := .theological
+      -- `disputed`: Trent's canon 11 anathematises justification "by the sole
+      -- imputation of the justice of Christ, or by the sole remission of sins".
+      -- Calvin: as Christ cannot be divided, the two are inseparable, yet
+      -- Scripture "classes them separately" (III.xi.6).
+    , source :=
+        { primary := .work westminsterConfession (.sectionRef "XIII.1")
+        , supporting :=
+            [ .work westminsterConfession (.sectionRef "XI.1")
+            , .work calvinInstitutes (.sectionRef "III.xi.6") ]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .renewalGrowsThroughGoodWorks =>
+    { label := "The inward renewal of the justified grows as they do good works in grace"
+    , kind := .theological
+      -- Common ground. Trent: the justified, "faith co-operating with good
+      -- works, increase in that justice" (ch. 10). Westminster: the regenerate
+      -- are "further sanctified, really and personally", "more and more"
+      -- (XIII.1). They agree that the renewal grows and disagree about what to
+      -- call it, which is where the dispute moves: to the definition.
+    , source :=
+        { primary := .work tannerDecrees
+            (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 10")
+        , supporting := [.work westminsterConfession (.sectionRef "XIII.1")]
         , tradition := .romanCatholic
         , confidence := .wellSupported } }
   | .worksOfLawMeansWorksGenerally =>

@@ -116,6 +116,19 @@ inductive Claim
   /-- Works performed in grace merit an increase of justification. The
   Tridentine claim. -/
   | worksMeritIncreaseOfJustification
+  /-- Justification is not the remission of sins only, but also the
+  sanctification and renewal of the inward man. **Trent's definition of what
+  justification is**, from which its objection to "not by works" follows. -/
+  | justificationIncludesSanctification
+  /-- Justification and sanctification are inseparable but distinct:
+  justification is God's pardon and acceptance, and sanctification is the
+  renewal that follows it. **The Reformed distinction** that Trent's definition
+  denies. -/
+  | justificationDistinctFromSanctification
+  /-- The inward renewal of the justified grows as they do good works in grace.
+  Common ground: Trent calls the growth an increase of justification, and the
+  Reformed call it sanctification. -/
+  | renewalGrowsThroughGoodWorks
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide
