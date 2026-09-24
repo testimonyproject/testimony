@@ -19,8 +19,10 @@ almost always a *Horn* problem: facts, and inference steps from a conjunction of
 literals to an atom or a conjunction of atoms. Horn entailment is decidable in
 linear time (Dowling and Gallier, 1984), and backward chaining over Horn clauses
 — SLD resolution, Prolog's procedure — is what `establish` runs, as Lean's
-`solve_by_elim`, after currying each step with `and_imp` and splitting
-conjunctive heads with `imp_and`. If that leaves the goal open, `establish`
+`solve_by_elim`, after currying each step with `and_imp`, splitting conjunctive
+heads with `imp_and`, and currying a negated conjunction with `not_and` — the
+shape of a goal that rebuts a conjunctive conclusion, which the sola fide
+dispute needs. If that leaves the goal open, `establish`
 fails rather than silently searching; `establish_by_search` runs Mathlib's
 `tauto`, a general classical search whose cost is exponential in the number of
 inference steps, for a step that genuinely cannot be Horn. No result in the

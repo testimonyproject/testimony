@@ -24,6 +24,41 @@ namespace Testimony.Arguments.SolaFide
 
 open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
+/-! ### Rated inferences
+
+A dispute weighs a position's inference steps as well as its premises (see
+`Testimony.Logic.Dispute`), and a step is rated `disputed` when a cited source
+grants its grounds and denies its conclusion. These are the ratings the
+positions in `SolaFide.Dispute` carry. -/
+
+/-- **Every Reformed strand's step is contested, by Trent.** Trent grants what
+each strand reads — Romans 3:28 and Galatians 2:16, that Jesus' words save, that
+salvation is through grace — and anathematises the conclusion each draws:
+justification by faith alone (Session VI, canon 9). -/
+def trentAgainstFaithAlone : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), canon 9")
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- Trent's own step, from merit to the denial of "not by works". Rated
+`consensus`: the step is conceded on both sides — it is *why* the Reformed deny
+merit — and the dispute is over its premise, not its inference. -/
+def trentOnMerit : Source :=
+  { primary := .work tannerDecrees
+      (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 16")
+  , tradition := .romanCatholic
+  , confidence := .consensus }
+
+/-- The apocalyptic reading's step, from Christ's faithfulness and God's
+deliverance to the denial that faith is the condition. Rated `plausible`: no
+source cited here grants both grounds and affirms faith as the condition of
+justification. -/
+def campbellOnDeliverance : Source :=
+  { primary := .work campbellDeliveranceOfGod .whole
+  , supporting := [.work martynGalatians .whole]
+  , tradition := .criticalScholarship
+  , confidence := .plausible }
+
 /-- The Reformed reading of ἔργα νόμου, cited to the tradition that holds it and
 to its modern defenders against the New Perspective. Disputed precisely because
 the New Perspective denies it; see `newPerspectiveCite`. -/
@@ -135,6 +170,17 @@ def baseCite : Claim → AtomMeta
             , .work dasPaulLawCovenant .whole ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
+  | .lukeKeepsTheLaw =>
+    { label := "Acts 15:20–21, 21:20–24: Jewish believers keep the law; gentiles keep part"
+    , kind := .interpretive
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .range ⟨.acts, 15, 20, 15, 21⟩ }
+              , { ref := .range ⟨.acts, 21, 20, 21, 24⟩ } ]
+        , supporting := [.work jervellLukePeopleOfGod .whole]
+        , tradition := .criticalScholarship
+        , confidence := .wellSupported } }
   | .ephesiansIsPauline =>
     { label := "Ephesians was written by Paul"
     , kind := .historical

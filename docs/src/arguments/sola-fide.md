@@ -128,6 +128,13 @@ but is ever accompanied with all other saving graces, and is no dead faith, but
 worketh by love". `james_harmonisation_is_load_bearing` shows the argument
 genuinely depends on this: drop it and sola fide does not follow.
 
+**Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
+Sanders, the critics and Jervell as parties, nothing prevails outright — but
+sola fide from Luke 7:50 is accepted on every resolution, because Trent and the
+apocalyptic reading each defeat the other's only answer. That verdict rests on
+the two rivals answering each other, and on no cited source arguing that σῴζω at
+Luke 7:50 means healing; `Dispute.lean` states both.
+
 ### Where things are
 
 | File | Contents |
@@ -137,6 +144,7 @@ genuinely depends on this: drop it and sola fide does not follow.
 | `Lines.lean` | the inference steps, the three strands, the apocalyptic rival, what they share |
 | `Packages.lean` | the positions, and the variants that remove a named premise |
 | `Results.lean` | every `@[headline]` result, with its trust base |
+| `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
 
 ## Arguments.SolaFide.Atoms — the atomic claims
 
@@ -162,6 +170,13 @@ letters. That is the
 disagreement made mechanical: it shows up as a difference in the generated
 manifest rather than as a remark in a docstring.
 
+#### Rated inferences
+
+A dispute weighs a position's inference steps as well as its premises (see
+`Testimony.Logic.Dispute`), and a step is rated `disputed` when a cited source
+grants its grounds and denies its conclusion. These are the ratings the
+positions in `SolaFide.Dispute` carry.
+
 ## The claims, numbered
 
 <div class="testimony-legend">
@@ -178,28 +193,79 @@ manifest rather than as a remark in a docstring.
 | \\(P_{8}\\) | Galatians opposes requiring circumcision, besides faith, for justification | interpretive | critical scholarship, well supported | Gal 2:3-5; Gal 5:2-4; [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 5:2; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2; Acts 15:1; Acts 15:5; Acts 15:19; [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:1 |
 | \\(P_{9}\\) | Acts 15:9–11 — Peter: hearts cleansed by faith; saved through grace | textual | Christian, historical-grammatical, well supported | Acts 15:9-11; [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:9 |
 | \\(P_{10}\\) | The yoke refused at Acts 15:10 is the whole law as a condition of salvation | interpretive | Christian, historical-grammatical, disputed | [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001) |
-| \\(P_{11}\\) | Ephesians was written by Paul | historical | Christian, historical-grammatical, disputed | [`hoehner-ephesians-2002`](../bibliography.md#hoehner-ephesians-2002); Eph 1:1 |
-| \\(P_{12}\\) | Titus was written by Paul | historical | Christian, historical-grammatical, disputed | [`mounce-pastoral-epistles-2000`](../bibliography.md#mounce-pastoral-epistles-2000); Titus 1:1 |
-| \\(P_{13}\\) | 1 Peter was written by the apostle Peter | historical | Christian, historical-grammatical, disputed | [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005); [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003); 1 Pet 1:1 |
-| \\(P_{14}\\) | 2 Peter was written by the apostle Peter | historical | Christian, historical-grammatical, disputed | [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003); 2 Pet 1:1 |
-| \\(P_{15}\\) | δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains | interpretive | critical scholarship, disputed | [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26 |
-| \\(P_{16}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
-| \\(P_{17}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, disputed | [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50; Luke 7:47-50 |
-| \\(P_{18}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{19}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
-| \\(P_{20}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
-| \\(P_{21}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii; 2 Pet 3:15-16; [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003), ad loc. 2 Pet 3:16 |
-| \\(P_{22}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015); [`mannermaa-christ-present-faith-2005`](../bibliography.md#mannermaa-christ-present-faith-2005) |
-| \\(P_{23}\\) | Salvation is by grace, a gift and not wages owed | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:18-19; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:18 |
-| \\(P_{24}\\) | Salvation is not by works: no work is its ground | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{25}\\) | Salvation is received through faith | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:3-5; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:5 |
-| \\(P_{26}\\) | Justification is forensic only: pardon and imputation, not infusion | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2 |
-| \\(P_{27}\\) | Second Temple Judaism: in by grace, staying in by works | historical | critical scholarship, disputed | [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977) |
-| \\(P_{28}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
+| \\(P_{11}\\) | Acts 15:20–21, 21:20–24: Jewish believers keep the law; gentiles keep part | interpretive | critical scholarship, well supported | Acts 15:20-21; Acts 21:20-24; [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972) |
+| \\(P_{12}\\) | Ephesians was written by Paul | historical | Christian, historical-grammatical, disputed | [`hoehner-ephesians-2002`](../bibliography.md#hoehner-ephesians-2002); Eph 1:1 |
+| \\(P_{13}\\) | Titus was written by Paul | historical | Christian, historical-grammatical, disputed | [`mounce-pastoral-epistles-2000`](../bibliography.md#mounce-pastoral-epistles-2000); Titus 1:1 |
+| \\(P_{14}\\) | 1 Peter was written by the apostle Peter | historical | Christian, historical-grammatical, disputed | [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005); [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003); 1 Pet 1:1 |
+| \\(P_{15}\\) | 2 Peter was written by the apostle Peter | historical | Christian, historical-grammatical, disputed | [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003); 2 Pet 1:1 |
+| \\(P_{16}\\) | δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains | interpretive | critical scholarship, disputed | [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26 |
+| \\(P_{17}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
+| \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, disputed | [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50; Luke 7:47-50 |
+| \\(P_{19}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
+| \\(P_{20}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
+| \\(P_{21}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
+| \\(P_{22}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii; 2 Pet 3:15-16; [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003), ad loc. 2 Pet 3:16 |
+| \\(P_{23}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015); [`mannermaa-christ-present-faith-2005`](../bibliography.md#mannermaa-christ-present-faith-2005) |
+| \\(P_{24}\\) | Salvation is by grace, a gift and not wages owed | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:18-19; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:18 |
+| \\(P_{25}\\) | Salvation is not by works: no work is its ground | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
+| \\(P_{26}\\) | Salvation is received through faith | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:3-5; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:5 |
+| \\(P_{27}\\) | Justification is forensic only: pardon and imputation, not infusion | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2 |
+| \\(P_{28}\\) | Second Temple Judaism: in by grace, staying in by works | historical | critical scholarship, disputed | [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977) |
+| \\(P_{29}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
 
 </div>
 
 ※ grounded in scripture alone: the reading is assumed, not argued for.
+
+<a id="trentAgainstFaithAlone"></a>
+**`trentAgainstFaithAlone`**
+
+**Every Reformed strand's step is contested, by Trent.** Trent grants what
+each strand reads — Romans 3:28 and Galatians 2:16, that Jesus' words save, that
+salvation is through grace — and anathematises the conclusion each draws:
+justification by faith alone (Session VI, canon 9).
+
+```lean
+def trentAgainstFaithAlone : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef "Trent, Session VI (1547), canon 9"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="trentOnMerit"></a>
+**`trentOnMerit`**
+
+Trent's own step, from merit to the denial of "not by works". Rated
+`consensus`: the step is conceded on both sides — it is *why* the Reformed deny
+merit — and the dispute is over its premise, not its inference.
+
+```lean
+def trentOnMerit : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef
+          "Trent, Session VI (1547), Decree on Justification, ch. 16"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
+```
+
+<a id="campbellOnDeliverance"></a>
+**`campbellOnDeliverance`**
+
+The apocalyptic reading's step, from Christ's faithfulness and God's
+deliverance to the denial that faith is the condition. Rated `plausible`: no
+source cited here grants both grounds and affirms faith as the condition of
+justification.
+
+```lean
+def campbellOnDeliverance : Source :=
+  { primary := Reference.work Bib.campbellDeliveranceOfGod,
+    supporting := [Reference.work Bib.martynGalatians],
+    tradition := Tradition.criticalScholarship,
+    confidence := Confidence.plausible }
+```
 
 <a id="reformedWorksOfLawSource"></a>
 **`reformedWorksOfLawSource`**
@@ -401,7 +467,7 @@ general rather than for one ethnic marker.
 
 <div class="testimony-math">
 \[
-(P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22}
+(P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23}
 \]
 </div>
 
@@ -414,7 +480,7 @@ justification by faith alone, by way of the disputed lexical premise about
 
 <div class="testimony-math">
 \[
-(P_{16} \land P_{17}) \rightarrow P_{22}
+(P_{17} \land P_{18}) \rightarrow P_{23}
 \]
 </div>
 
@@ -432,7 +498,7 @@ condition of salvation, what is left is faith, and grace.
 
 <div class="testimony-math">
 \[
-(P_{9} \land P_{10}) \rightarrow P_{22}
+(P_{9} \land P_{10}) \rightarrow P_{23}
 \]
 </div>
 
@@ -445,7 +511,7 @@ contradict Paul. Derived rather than assumed.
 
 <div class="testimony-math">
 \[
-(P_{18} \land P_{19}) \rightarrow P_{20}
+(P_{19} \land P_{20}) \rightarrow P_{21}
 \]
 </div>
 
@@ -459,7 +525,7 @@ and the Tridentine position each do, over different parts.
 
 <div class="testimony-math">
 \[
-P_{23} \land P_{24} \land P_{25}
+P_{24} \land P_{25} \land P_{26}
 \]
 </div>
 
@@ -471,7 +537,7 @@ reading keeps.
 
 <div class="testimony-math">
 \[
-P_{23} \land P_{24}
+P_{24} \land P_{25}
 \]
 </div>
 
@@ -484,7 +550,7 @@ nor the answer to James is needed for this part.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23}
+(P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24}
 \]
 </div>
 
@@ -498,7 +564,7 @@ answer to James.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24}
+(P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25}
 \]
 </div>
 
@@ -510,7 +576,7 @@ is the only part of the conclusion the three strands are needed for.
 
 <div class="testimony-math">
 \[
-(P_{22} \land P_{1}) \rightarrow P_{25}
+(P_{23} \land P_{1}) \rightarrow P_{26}
 \]
 </div>
 
@@ -534,8 +600,8 @@ grounds omitted the ἔργα νόμου premise would misdescribe Paul.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\[4pt]
-\vdash \quad &amp; P_{22}
+\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\[4pt]
+\vdash \quad &amp; P_{23}
 \end{aligned}
 \]
 </div>
@@ -549,9 +615,9 @@ distinctive ground is the other lexical premise.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{17} \\
-\text{(2)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\[4pt]
-\vdash \quad &amp; P_{22}
+\text{(1)} \quad &amp; P_{18} \\
+\text{(2)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\[4pt]
+\vdash \quad &amp; P_{23}
 \end{aligned}
 \]
 </div>
@@ -572,8 +638,8 @@ they are two premises about two texts, and an opponent has to answer both.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{10} \\
-\text{(2)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\[4pt]
-\vdash \quad &amp; P_{22}
+\text{(2)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\[4pt]
+\vdash \quad &amp; P_{23}
 \end{aligned}
 \]
 </div>
@@ -587,10 +653,10 @@ text that stands against it.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{18} \\
-\text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\[4pt]
-\vdash \quad &amp; P_{20}
+\text{(1)} \quad &amp; P_{19} \\
+\text{(2)} \quad &amp; P_{20} \\
+\text{(3)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\[4pt]
+\vdash \quad &amp; P_{21}
 \end{aligned}
 \]
 </div>
@@ -607,7 +673,7 @@ condition, not the gift.
 
 <div class="testimony-math">
 \[
-(\lnot P_{7} \land P_{15}) \rightarrow \lnot P_{22}
+(\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23}
 \]
 </div>
 
@@ -621,7 +687,7 @@ more gracious than the one it replaces.
 
 <div class="testimony-math">
 \[
-P_{15} \rightarrow P_{23} \land P_{24}
+P_{16} \rightarrow P_{24} \land P_{25}
 \]
 </div>
 
@@ -635,9 +701,9 @@ what the two Reformed strands deliver.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; \lnot P_{7} \\
-\text{(2)} \quad &amp; P_{15} \\
-\text{(3)} \quad &amp; (\lnot P_{7} \land P_{15}) \rightarrow \lnot P_{22} \\[4pt]
-\vdash \quad &amp; \lnot P_{22}
+\text{(2)} \quad &amp; P_{16} \\
+\text{(3)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23} \\[4pt]
+\vdash \quad &amp; \lnot P_{23}
 \end{aligned}
 \]
 </div>
@@ -654,8 +720,8 @@ ground is Sanders'; the inference is Dunn's, and is cited as his.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{27} \\
-\text{(2)} \quad &amp; P_{27} \rightarrow \lnot P_{6} \\[4pt]
+\text{(1)} \quad &amp; P_{28} \\
+\text{(2)} \quad &amp; P_{28} \rightarrow \lnot P_{6} \\[4pt]
 \vdash \quad &amp; \lnot P_{6}
 \end{aligned}
 \]
@@ -674,9 +740,30 @@ historical claim about Judaism that is argued on the evidence.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; \lnot P_{27} \\
-\text{(2)} \quad &amp; (\lnot P_{27} \land P_{8}) \rightarrow P_{6} \\[4pt]
+\text{(1)} \quad &amp; \lnot P_{28} \\
+\text{(2)} \quad &amp; P_{8} \\
+\text{(3)} \quad &amp; (\lnot P_{28} \land P_{8}) \rightarrow P_{6} \\[4pt]
 \vdash \quad &amp; P_{6}
+\end{aligned}
+\]
+</div>
+
+<a id="jervellLine"></a>
+**`jervellLine`** — Law-observant Luke (Jervell)
+
+**Jervell's reading of the yoke.** If Luke presents the Jewish believers as
+keeping the law (Acts 21:20–24), and the decree as laying part of it on
+gentiles (Acts 15:20–21), then what Peter refuses at 15:10 is not the law as a
+condition of salvation but the whole of Israel's law laid on gentiles. The
+step is contested: Bruce grants both texts and reads the yoke as the law taken
+as a condition of salvation.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{11} \\
+\text{(2)} \quad &amp; P_{11} \rightarrow \lnot P_{10} \\[4pt]
+\vdash \quad &amp; \lnot P_{10}
 \end{aligned}
 \]
 </div>
@@ -695,7 +782,7 @@ the New Perspective.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{4} \\
 \text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{16} \\
+\text{(6)} \quad &amp; P_{17} \\
 \text{(7)} \quad &amp; P_{9}
 \end{aligned}
 \]
@@ -715,11 +802,11 @@ harmonisation, and scripture's self-consistency.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{4} \\
 \text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{16} \\
+\text{(6)} \quad &amp; P_{17} \\
 \text{(7)} \quad &amp; P_{9} \\
-\text{(8)} \quad &amp; P_{18} \\
-\text{(9)} \quad &amp; P_{19} \\
-\text{(10)} \quad &amp; P_{21}
+\text{(8)} \quad &amp; P_{19} \\
+\text{(9)} \quad &amp; P_{20} \\
+\text{(10)} \quad &amp; P_{22}
 \end{aligned}
 \]
 </div>
@@ -737,9 +824,9 @@ The same, with James unanswered.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{4} \\
 \text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{16} \\
+\text{(6)} \quad &amp; P_{17} \\
 \text{(7)} \quad &amp; P_{9} \\
-\text{(8)} \quad &amp; P_{21}
+\text{(8)} \quad &amp; P_{22}
 \end{aligned}
 \]
 </div>
@@ -752,9 +839,9 @@ The three steps to the three parts of the conclusion, one each.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(3)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25}
+\text{(1)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(3)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26}
 \end{aligned}
 \]
 </div>
@@ -768,10 +855,10 @@ to the parts of the conclusion.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(3)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(4)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25}
+\text{(1)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(3)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(4)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26}
 \end{aligned}
 \]
 </div>
@@ -799,26 +886,26 @@ yoke in Acts.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{17} \\
+\text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{10} \\
 \text{(6)} \quad &amp; P_{1} \\
 \text{(7)} \quad &amp; P_{2} \\
 \text{(8)} \quad &amp; P_{3} \\
 \text{(9)} \quad &amp; P_{4} \\
 \text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{16} \\
+\text{(11)} \quad &amp; P_{17} \\
 \text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{18} \\
-\text{(14)} \quad &amp; P_{19} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(13)} \quad &amp; P_{19} \\
+\text{(14)} \quad &amp; P_{20} \\
+\text{(15)} \quad &amp; P_{22} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -835,8 +922,8 @@ The Pauline line without the ἔργα νόμου premise.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\[4pt]
-\vdash \quad &amp; P_{22}
+\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\[4pt]
+\vdash \quad &amp; P_{23}
 \end{aligned}
 \]
 </div>
@@ -851,8 +938,8 @@ The Pauline line without the objective genitive.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\[4pt]
-\vdash \quad &amp; P_{22}
+\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\[4pt]
+\vdash \quad &amp; P_{23}
 \end{aligned}
 \]
 </div>
@@ -878,27 +965,27 @@ on the New Perspective's behalf.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{27} \\
-\text{(4)} \quad &amp; P_{17} \\
+\text{(3)} \quad &amp; P_{28} \\
+\text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{1} \\
 \text{(6)} \quad &amp; P_{2} \\
 \text{(7)} \quad &amp; P_{3} \\
 \text{(8)} \quad &amp; P_{4} \\
 \text{(9)} \quad &amp; P_{5} \\
-\text{(10)} \quad &amp; P_{16} \\
+\text{(10)} \quad &amp; P_{17} \\
 \text{(11)} \quad &amp; P_{9} \\
-\text{(12)} \quad &amp; P_{18} \\
-\text{(13)} \quad &amp; P_{19} \\
-\text{(14)} \quad &amp; P_{21} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; P_{27} \rightarrow \lnot P_{6} \\
-\text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(12)} \quad &amp; P_{19} \\
+\text{(13)} \quad &amp; P_{20} \\
+\text{(14)} \quad &amp; P_{22} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(16)} \quad &amp; P_{28} \rightarrow \lnot P_{6} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -923,27 +1010,27 @@ shows that the two questions are independent.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{17} \\
+\text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{10} \\
 \text{(6)} \quad &amp; P_{1} \\
 \text{(7)} \quad &amp; P_{2} \\
 \text{(8)} \quad &amp; P_{3} \\
 \text{(9)} \quad &amp; P_{4} \\
 \text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{16} \\
+\text{(11)} \quad &amp; P_{17} \\
 \text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{18} \\
-\text{(14)} \quad &amp; P_{19} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\
-\text{(23)} \quad &amp; \lnot P_{26} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(13)} \quad &amp; P_{19} \\
+\text{(14)} \quad &amp; P_{20} \\
+\text{(15)} \quad &amp; P_{22} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; \lnot P_{27} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -963,26 +1050,26 @@ of justification. Everything else in the Reformed case is granted.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; \lnot P_{7} \\
-\text{(4)} \quad &amp; P_{17} \\
+\text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{10} \\
 \text{(6)} \quad &amp; P_{1} \\
 \text{(7)} \quad &amp; P_{2} \\
 \text{(8)} \quad &amp; P_{3} \\
 \text{(9)} \quad &amp; P_{4} \\
 \text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{16} \\
+\text{(11)} \quad &amp; P_{17} \\
 \text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{18} \\
-\text{(14)} \quad &amp; P_{19} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(13)} \quad &amp; P_{19} \\
+\text{(14)} \quad &amp; P_{20} \\
+\text{(15)} \quad &amp; P_{22} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1003,26 +1090,26 @@ apostolic strand was written against.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{17} \\
+\text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; \lnot P_{10} \\
 \text{(6)} \quad &amp; P_{1} \\
 \text{(7)} \quad &amp; P_{2} \\
 \text{(8)} \quad &amp; P_{3} \\
 \text{(9)} \quad &amp; P_{4} \\
 \text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{16} \\
+\text{(11)} \quad &amp; P_{17} \\
 \text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{18} \\
-\text{(14)} \quad &amp; P_{19} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(13)} \quad &amp; P_{19} \\
+\text{(14)} \quad &amp; P_{20} \\
+\text{(15)} \quad &amp; P_{22} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1048,30 +1135,30 @@ leans on Romans instead.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{17} \\
+\text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{10} \\
 \text{(6)} \quad &amp; P_{1} \\
 \text{(7)} \quad &amp; P_{2} \\
 \text{(8)} \quad &amp; P_{3} \\
 \text{(9)} \quad &amp; P_{4} \\
 \text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{16} \\
+\text{(11)} \quad &amp; P_{17} \\
 \text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{18} \\
-\text{(14)} \quad &amp; P_{19} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(22)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\
-\text{(23)} \quad &amp; \lnot P_{11} \\
-\text{(24)} \quad &amp; \lnot P_{12} \\
-\text{(25)} \quad &amp; \lnot P_{13} \\
-\text{(26)} \quad &amp; \lnot P_{14} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(13)} \quad &amp; P_{19} \\
+\text{(14)} \quad &amp; P_{20} \\
+\text{(15)} \quad &amp; P_{22} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; \lnot P_{12} \\
+\text{(24)} \quad &amp; \lnot P_{13} \\
+\text{(25)} \quad &amp; \lnot P_{14} \\
+\text{(26)} \quad &amp; \lnot P_{15} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1096,13 +1183,13 @@ nobody holds.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; \lnot P_{7} \\
-\text{(2)} \quad &amp; P_{15} \\
+\text{(2)} \quad &amp; P_{16} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; (\lnot P_{7} \land P_{15}) \rightarrow \lnot P_{22} \\
-\text{(6)} \quad &amp; P_{15} \rightarrow P_{23} \land P_{24} \\
-\text{(7)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23} \\
+\text{(6)} \quad &amp; P_{16} \rightarrow P_{24} \land P_{25} \\
+\text{(7)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1119,13 +1206,13 @@ conclusion: by grace, and not by works.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; \lnot P_{7} \\
-\text{(2)} \quad &amp; P_{15} \\
+\text{(2)} \quad &amp; P_{16} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; (\lnot P_{7} \land P_{15}) \rightarrow \lnot P_{22} \\
-\text{(6)} \quad &amp; P_{15} \rightarrow P_{23} \land P_{24} \\
-\text{(7)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24}
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23} \\
+\text{(6)} \quad &amp; P_{16} \rightarrow P_{24} \land P_{25} \\
+\text{(7)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -1149,11 +1236,11 @@ prooftexts with them and nothing else, so `caseOf` would misdescribe it.
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{21} \\
-\text{(6)} \quad &amp; \lnot P_{26} \\
-\text{(7)} \quad &amp; P_{28} \\
-\text{(8)} \quad &amp; P_{28} \rightarrow \lnot P_{24} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(5)} \quad &amp; P_{22} \\
+\text{(6)} \quad &amp; \lnot P_{27} \\
+\text{(7)} \quad &amp; P_{29} \\
+\text{(8)} \quad &amp; P_{29} \rightarrow \lnot P_{25} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1175,26 +1262,26 @@ The Reformed package without the ἔργα νόμου premise.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{17} \\
+\text{(3)} \quad &amp; P_{18} \\
 \text{(4)} \quad &amp; P_{10} \\
 \text{(5)} \quad &amp; P_{1} \\
 \text{(6)} \quad &amp; P_{2} \\
 \text{(7)} \quad &amp; P_{3} \\
 \text{(8)} \quad &amp; P_{4} \\
 \text{(9)} \quad &amp; P_{5} \\
-\text{(10)} \quad &amp; P_{16} \\
+\text{(10)} \quad &amp; P_{17} \\
 \text{(11)} \quad &amp; P_{9} \\
-\text{(12)} \quad &amp; P_{18} \\
-\text{(13)} \quad &amp; P_{19} \\
-\text{(14)} \quad &amp; P_{21} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(12)} \quad &amp; P_{19} \\
+\text{(13)} \quad &amp; P_{20} \\
+\text{(14)} \quad &amp; P_{22} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(16)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1218,19 +1305,19 @@ The Reformed package without the dominical lexical premise.
 \text{(7)} \quad &amp; P_{3} \\
 \text{(8)} \quad &amp; P_{4} \\
 \text{(9)} \quad &amp; P_{5} \\
-\text{(10)} \quad &amp; P_{16} \\
+\text{(10)} \quad &amp; P_{17} \\
 \text{(11)} \quad &amp; P_{9} \\
-\text{(12)} \quad &amp; P_{18} \\
-\text{(13)} \quad &amp; P_{19} \\
-\text{(14)} \quad &amp; P_{21} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(12)} \quad &amp; P_{19} \\
+\text{(13)} \quad &amp; P_{20} \\
+\text{(14)} \quad &amp; P_{22} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(16)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(18)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1255,19 +1342,19 @@ apostolic strand is untouched.
 \text{(6)} \quad &amp; P_{3} \\
 \text{(7)} \quad &amp; P_{4} \\
 \text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{16} \\
+\text{(9)} \quad &amp; P_{17} \\
 \text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{18} \\
-\text{(12)} \quad &amp; P_{19} \\
-\text{(13)} \quad &amp; P_{21} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(20)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(11)} \quad &amp; P_{19} \\
+\text{(12)} \quad &amp; P_{20} \\
+\text{(13)} \quad &amp; P_{22} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(15)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(20)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1291,19 +1378,19 @@ genitive stays.
 \text{(5)} \quad &amp; P_{3} \\
 \text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{16} \\
+\text{(8)} \quad &amp; P_{17} \\
 \text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{18} \\
-\text{(11)} \quad &amp; P_{19} \\
-\text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(14)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(10)} \quad &amp; P_{19} \\
+\text{(11)} \quad &amp; P_{20} \\
+\text{(12)} \quad &amp; P_{22} \\
+\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(14)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(16)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1327,19 +1414,19 @@ theirs.
 \text{(5)} \quad &amp; P_{3} \\
 \text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{16} \\
+\text{(8)} \quad &amp; P_{17} \\
 \text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{18} \\
-\text{(11)} \quad &amp; P_{19} \\
-\text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(14)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(10)} \quad &amp; P_{19} \\
+\text{(11)} \quad &amp; P_{20} \\
+\text{(12)} \quad &amp; P_{22} \\
+\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(14)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(16)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1362,19 +1449,19 @@ The reading of Galatians as a polemic stays, and so does the answer to James.
 \text{(4)} \quad &amp; P_{3} \\
 \text{(5)} \quad &amp; P_{4} \\
 \text{(6)} \quad &amp; P_{5} \\
-\text{(7)} \quad &amp; P_{16} \\
+\text{(7)} \quad &amp; P_{17} \\
 \text{(8)} \quad &amp; P_{9} \\
-\text{(9)} \quad &amp; P_{18} \\
-\text{(10)} \quad &amp; P_{19} \\
-\text{(11)} \quad &amp; P_{21} \\
-\text{(12)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(13)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(14)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24}
+\text{(9)} \quad &amp; P_{19} \\
+\text{(10)} \quad &amp; P_{20} \\
+\text{(11)} \quad &amp; P_{22} \\
+\text{(12)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(13)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(14)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(15)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -1394,24 +1481,25 @@ Paul alone carry sola fide on Gathercole's history?
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; \lnot P_{27} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{3} \\
-\text{(7)} \quad &amp; P_{4} \\
-\text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{16} \\
-\text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{18} \\
+\text{(3)} \quad &amp; \lnot P_{28} \\
+\text{(4)} \quad &amp; P_{8} \\
+\text{(5)} \quad &amp; P_{1} \\
+\text{(6)} \quad &amp; P_{2} \\
+\text{(7)} \quad &amp; P_{3} \\
+\text{(8)} \quad &amp; P_{4} \\
+\text{(9)} \quad &amp; P_{5} \\
+\text{(10)} \quad &amp; P_{17} \\
+\text{(11)} \quad &amp; P_{9} \\
 \text{(12)} \quad &amp; P_{19} \\
-\text{(13)} \quad &amp; P_{21} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; (\lnot P_{27} \land P_{8}) \rightarrow P_{6} \\
-\text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(13)} \quad &amp; P_{20} \\
+\text{(14)} \quad &amp; P_{22} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(16)} \quad &amp; (\lnot P_{28} \land P_{8}) \rightarrow P_{6} \\
+\text{(17)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(20)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1428,24 +1516,24 @@ The same on Sanders' reading of Judaism.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{27} \\
+\text{(3)} \quad &amp; P_{28} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{3} \\
 \text{(7)} \quad &amp; P_{4} \\
 \text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{16} \\
+\text{(9)} \quad &amp; P_{17} \\
 \text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{18} \\
-\text{(12)} \quad &amp; P_{19} \\
-\text{(13)} \quad &amp; P_{21} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; P_{27} \rightarrow \lnot P_{6} \\
-\text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(11)} \quad &amp; P_{19} \\
+\text{(12)} \quad &amp; P_{20} \\
+\text{(13)} \quad &amp; P_{22} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(15)} \quad &amp; P_{28} \rightarrow \lnot P_{6} \\
+\text{(16)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1463,23 +1551,23 @@ The Reformed package without the premises that harmonise James.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{17} \\
+\text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{10} \\
 \text{(6)} \quad &amp; P_{1} \\
 \text{(7)} \quad &amp; P_{2} \\
 \text{(8)} \quad &amp; P_{3} \\
 \text{(9)} \quad &amp; P_{4} \\
 \text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{16} \\
+\text{(11)} \quad &amp; P_{17} \\
 \text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{21} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\text{(13)} \quad &amp; P_{22} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(15)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1498,23 +1586,23 @@ grace, with James 2:24 left unanswered?
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{17} \\
+\text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{10} \\
 \text{(6)} \quad &amp; P_{1} \\
 \text{(7)} \quad &amp; P_{2} \\
 \text{(8)} \quad &amp; P_{3} \\
 \text{(9)} \quad &amp; P_{4} \\
 \text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{16} \\
+\text{(11)} \quad &amp; P_{17} \\
 \text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{21} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{24} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(13)} \quad &amp; P_{22} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(15)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
@@ -2189,4 +2277,1150 @@ model, so `grace_needs_no_answer_to_james` is not vacuous.
 theorem graceWithoutJamesHarmonisation_is_satisfiable : Satisfiable
     graceWithoutJamesHarmonisation.premises
 -- axioms: propext, Quot.sound
+```
+
+## Arguments.SolaFide.Dispute — who prevails over sola fide
+
+The results in `Results.lean` ask what each package entails. This module asks
+what happens when the positions meet: the three Reformed strands, each argued
+alone; Trent; the apocalyptic reading of Martyn and Campbell; Sanders and Dunn on
+covenantal nomism, and the critics who answer them; and Jervell on the yoke of
+Acts 15. Who defeats whom is not stipulated — each defeat, and each absence of
+one, is a theorem about the positions' premises (see `Testimony.Logic.Dispute`).
+
+### The ratings decide nothing here
+
+Every party's weakest link is `disputed`: each Reformed strand rests on a
+contested reading, Trent and the apocalyptic reading each deny an atom (and a
+denial ranks at the bottom), and so on. So no rating blocks any attack, and the
+outcome is fixed entirely by who contradicts whom. That is unlike the dispute
+over Isaiah 7:14, where one inference rated `plausible` carried the verdict.
+
+### Who defeats whom
+
+- **Trent and each Reformed strand defeat each other.** Trent denies "not by
+  works"; each strand concludes it.
+- **The apocalyptic reading and Paul defeat each other**: it denies the objective
+  genitive, and Paul concludes faith alone. **Luke and Acts defeat it**, and it
+  defeats neither — it contradicts nothing they rest on.
+- **The apocalyptic reading defeats Trent, and Trent does not defeat it.** They
+  agree that justification is not by faith alone; but the apocalyptic reading
+  holds "not by works" — God's deliverance is conditioned on nothing a person
+  does — and nothing Trent holds contradicts its grounds.
+- **Sanders defeats Paul**, by denying the ἔργα νόμου premise; Paul and the
+  critics each defeat Sanders back.
+- **Jervell and Acts defeat each other**, over the yoke.
+
+### What follows
+
+**Nothing prevails outright** (`nothing_prevails_over_sola_fide`): every party
+is defeated by someone, and the grounded extension is empty.
+
+**But sola fide from Luke 7:50 is accepted on every resolution**
+(`dominical_case_skeptically_accepted`). Trent cannot be defended — the
+apocalyptic reading defeats it, and whatever answers the apocalyptic reading
+also defeats Trent (`trent_indefensible`). Nor can the apocalyptic reading —
+the dominical case defeats it, and only Trent could answer the dominical case
+(`apocalyptic_indefensible`). So every maximal defensible position holds the
+dominical case.
+
+### What the verdict rests on
+
+Three things, each stated as a result or a limitation rather than left implicit.
+
+**The two rivals answering each other.** Remove the apocalyptic reading and
+Trent defends itself against the three strands; sola fide is then accepted on
+some resolutions and not others
+(`sola_fide_not_forced_without_the_apocalyptic_reading`). The verdict is not
+that sola fide answers Trent. It is that Trent cannot answer a rival that
+agrees with it about faith and disagrees with it about works.
+
+**An absence.** The dominical case is attacked by no one but Trent, because no
+source cited here argues that σῴζω at Luke 7:50 means healing. The premise is
+rated `disputed`, as it should be — the same formula means "made you well" at
+Luke 8:48, 17:19 and 18:42 — but a rating is not a party. A cited argument for
+the healing reading would attack the dominical case, and could change the
+verdict. Finding one is the obvious next step.
+
+**The parties chosen.** A dispute is over the arguments put into it. Hays's
+subjective genitive is represented through the apocalyptic reading, which holds
+it; a Hays party of its own, the *Joint Declaration*, and a party for the
+Finnish reading would each be new arguments to weigh.
+
+#### The positions
+
+Each party is an argument in its own right: premises that can hold together, a
+conclusion they deliver, and an inference someone has rated. The Reformed case
+enters as three parties, one per strand, because a dispute weighs arguments
+whole: one package holding all three strands would be defeated by a
+contradiction of any one of them, and the redundancy the results prove would
+count for nothing.
+
+<a id="paulineCase"></a>
+**`paulineCase`** — Sola fide from Paul (Galatians 2:16)
+
+The Pauline strand, argued alone: sola fide from Galatians 2:16.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; P_{7} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{17} \\
+\text{(10)} \quad &amp; P_{9} \\
+\text{(11)} \quad &amp; P_{19} \\
+\text{(12)} \quad &amp; P_{20} \\
+\text{(13)} \quad &amp; P_{22} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
+\text{(15)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="dominicalCase"></a>
+**`dominicalCase`** — Sola fide from Jesus' words (Luke 7:50)
+
+The dominical strand, argued alone: sola fide from Luke 7:50.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{18} \\
+\text{(2)} \quad &amp; P_{1} \\
+\text{(3)} \quad &amp; P_{2} \\
+\text{(4)} \quad &amp; P_{3} \\
+\text{(5)} \quad &amp; P_{4} \\
+\text{(6)} \quad &amp; P_{5} \\
+\text{(7)} \quad &amp; P_{17} \\
+\text{(8)} \quad &amp; P_{9} \\
+\text{(9)} \quad &amp; P_{19} \\
+\text{(10)} \quad &amp; P_{20} \\
+\text{(11)} \quad &amp; P_{22} \\
+\text{(12)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
+\text{(13)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(14)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="apostolicCase"></a>
+**`apostolicCase`** — Sola fide from Peter (Acts 15:9–11)
+
+The apostolic strand, argued alone: sola fide from Peter at Jerusalem.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{10} \\
+\text{(2)} \quad &amp; P_{1} \\
+\text{(3)} \quad &amp; P_{2} \\
+\text{(4)} \quad &amp; P_{3} \\
+\text{(5)} \quad &amp; P_{4} \\
+\text{(6)} \quad &amp; P_{5} \\
+\text{(7)} \quad &amp; P_{17} \\
+\text{(8)} \quad &amp; P_{9} \\
+\text{(9)} \quad &amp; P_{19} \\
+\text{(10)} \quad &amp; P_{20} \\
+\text{(11)} \quad &amp; P_{22} \\
+\text{(12)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
+\text{(13)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
+\text{(14)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="tridentineCase"></a>
+**`tridentineCase`** — Trent, against 'not by works'
+
+Trent, as the argument it makes: works done in grace merit an increase of
+justification, so salvation is not apart from works.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{1} \\
+\text{(2)} \quad &amp; P_{2} \\
+\text{(3)} \quad &amp; P_{3} \\
+\text{(4)} \quad &amp; P_{5} \\
+\text{(5)} \quad &amp; P_{22} \\
+\text{(6)} \quad &amp; \lnot P_{27} \\
+\text{(7)} \quad &amp; P_{29} \\
+\text{(8)} \quad &amp; P_{29} \rightarrow \lnot P_{25} \\[4pt]
+\vdash \quad &amp; \lnot P_{25}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="apocalypticCase"></a>
+**`apocalypticCase`** — Apocalyptic reading, against faith as the condition
+
+The apocalyptic reading, as the argument it makes: faith is not the
+condition of justification. It keeps grace and "not by works", by its own
+step.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; \lnot P_{7} \\
+\text{(2)} \quad &amp; P_{16} \\
+\text{(3)} \quad &amp; P_{3} \\
+\text{(4)} \quad &amp; P_{8} \\
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23} \\
+\text{(6)} \quad &amp; P_{16} \rightarrow P_{24} \land P_{25} \\
+\text{(7)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; \lnot P_{23}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="sandersCase"></a>
+**`sandersCase`** — Covenantal nomism (Sanders, Dunn)
+
+Sanders and Dunn: covenantal nomism, so ἔργα νόμου are the boundary
+markers.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{28} \\
+\text{(2)} \quad &amp; P_{28} \rightarrow \lnot P_{6} \\[4pt]
+\vdash \quad &amp; \lnot P_{6}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="criticsCase"></a>
+**`criticsCase`** — Variegated nomism (Gathercole, Carson et al.)
+
+Gathercole and *Variegated Nomism*: not covenantal nomism, so ἔργα νόμου are
+works in general.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; \lnot P_{28} \\
+\text{(2)} \quad &amp; P_{8} \\
+\text{(3)} \quad &amp; (\lnot P_{28} \land P_{8}) \rightarrow P_{6} \\[4pt]
+\vdash \quad &amp; P_{6}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="jervellCase"></a>
+**`jervellCase`** — Law-observant Luke (Jervell)
+
+Jervell: Luke is law-observant, so the yoke is not the law as a condition of
+salvation.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{11} \\
+\text{(2)} \quad &amp; P_{11} \rightarrow \lnot P_{10} \\[4pt]
+\vdash \quad &amp; \lnot P_{10}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+#### Each position holds together and delivers its conclusion
+
+<a id="paulineCase_establishes"></a>
+**`paulineCase_establishes`**
+
+The Pauline case delivers sola fide.
+
+```lean
+theorem paulineCase_establishes : Establishes paulineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="paulineCase_is_satisfiable"></a>
+**`paulineCase_is_satisfiable`**
+
+The Pauline case has a model.
+
+```lean
+theorem paulineCase_is_satisfiable : Satisfiable paulineCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="dominicalCase_establishes"></a>
+**`dominicalCase_establishes`**
+
+The dominical case delivers sola fide.
+
+```lean
+theorem dominicalCase_establishes : Establishes dominicalCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="dominicalCase_is_satisfiable"></a>
+**`dominicalCase_is_satisfiable`**
+
+The dominical case has a model.
+
+```lean
+theorem dominicalCase_is_satisfiable : Satisfiable dominicalCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="apostolicCase_establishes"></a>
+**`apostolicCase_establishes`**
+
+The apostolic case delivers sola fide.
+
+```lean
+theorem apostolicCase_establishes : Establishes apostolicCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="apostolicCase_is_satisfiable"></a>
+**`apostolicCase_is_satisfiable`**
+
+The apostolic case has a model.
+
+```lean
+theorem apostolicCase_is_satisfiable : Satisfiable apostolicCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineCase_establishes"></a>
+**`tridentineCase_establishes`**
+
+Trent's case delivers its conclusion: salvation is not apart from works.
+
+```lean
+theorem tridentineCase_establishes : Establishes tridentineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineCase_is_satisfiable"></a>
+**`tridentineCase_is_satisfiable`**
+
+Trent's case has a model.
+
+```lean
+theorem tridentineCase_is_satisfiable : Satisfiable tridentineCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalypticCase_establishes"></a>
+**`apocalypticCase_establishes`**
+
+The apocalyptic case delivers its conclusion.
+
+```lean
+theorem apocalypticCase_establishes : Establishes apocalypticCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalypticCase_is_satisfiable"></a>
+**`apocalypticCase_is_satisfiable`**
+
+The apocalyptic case has a model.
+
+```lean
+theorem apocalypticCase_is_satisfiable : Satisfiable apocalypticCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="sandersCase_establishes"></a>
+**`sandersCase_establishes`**
+
+Sanders' case delivers its conclusion.
+
+```lean
+theorem sandersCase_establishes : Establishes sandersCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="sandersCase_is_satisfiable"></a>
+**`sandersCase_is_satisfiable`**
+
+Sanders' case has a model.
+
+```lean
+theorem sandersCase_is_satisfiable : Satisfiable sandersCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="criticsCase_establishes"></a>
+**`criticsCase_establishes`**
+
+The critics' case delivers its conclusion.
+
+```lean
+theorem criticsCase_establishes : Establishes criticsCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="criticsCase_is_satisfiable"></a>
+**`criticsCase_is_satisfiable`**
+
+The critics' case has a model.
+
+```lean
+theorem criticsCase_is_satisfiable : Satisfiable criticsCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="jervellCase_establishes"></a>
+**`jervellCase_establishes`**
+
+Jervell's case delivers its conclusion.
+
+```lean
+theorem jervellCase_establishes : Establishes jervellCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="jervellCase_is_satisfiable"></a>
+**`jervellCase_is_satisfiable`**
+
+Jervell's case has a model.
+
+```lean
+theorem jervellCase_is_satisfiable : Satisfiable jervellCase.premises
+-- axioms: propext, Quot.sound
+```
+
+#### Strength: every position's weakest link is `disputed`
+
+Every party rests on something cited `disputed`, or denies an atom, which ranks
+at the bottom; so every party's strength is `0`, and no rating blocks any
+attack. In this dispute the ratings decide nothing, and the verdict is fixed by
+who contradicts whom.
+
+<a id="paulineCase_strength"></a>
+**`paulineCase_strength`**
+
+The Pauline case rests on its lexical premises, cited `disputed`.
+
+```lean
+theorem paulineCase_strength : paulineCase.strength = 0
+-- axioms: propext
+```
+
+<a id="dominicalCase_strength"></a>
+**`dominicalCase_strength`**
+
+The dominical case rests on the σῴζω premise, cited `disputed`.
+
+```lean
+theorem dominicalCase_strength : dominicalCase.strength = 0
+-- axioms: propext
+```
+
+<a id="apostolicCase_strength"></a>
+**`apostolicCase_strength`**
+
+The apostolic case rests on the yoke premise, cited `disputed`.
+
+```lean
+theorem apostolicCase_strength : apostolicCase.strength = 0
+-- axioms: propext
+```
+
+<a id="tridentineCase_strength"></a>
+**`tridentineCase_strength`**
+
+Trent denies the forensic account, and a denial ranks at the bottom.
+
+```lean
+theorem tridentineCase_strength : tridentineCase.strength = 0
+-- axioms: propext
+```
+
+<a id="apocalypticCase_strength"></a>
+**`apocalypticCase_strength`**
+
+The apocalyptic case denies the objective genitive.
+
+```lean
+theorem apocalypticCase_strength : apocalypticCase.strength = 0
+-- axioms: propext
+```
+
+<a id="sandersCase_strength"></a>
+**`sandersCase_strength`**
+
+Sanders' case rests on covenantal nomism, cited `disputed`.
+
+```lean
+theorem sandersCase_strength : sandersCase.strength = 0
+-- axioms: propext
+```
+
+<a id="criticsCase_strength"></a>
+**`criticsCase_strength`**
+
+The critics' case denies covenantal nomism.
+
+```lean
+theorem criticsCase_strength : criticsCase.strength = 0
+-- axioms: propext
+```
+
+<a id="jervellCase_strength"></a>
+**`jervellCase_strength`**
+
+Jervell's step is contested, by Bruce.
+
+```lean
+theorem jervellCase_strength : jervellCase.strength = 0
+-- axioms: propext
+```
+
+#### The defeats
+
+<a id="trent_defeats_pauline"></a>
+**`trent_defeats_pauline`**
+
+**Trent defeats the Pauline case.** It entails the denial of "not by works",
+so it rebuts sola fide.
+
+```lean
+theorem trent_defeats_pauline : Defeats tridentineCase paulineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="trent_defeats_dominical"></a>
+**`trent_defeats_dominical`**
+
+**Trent defeats the dominical case**, on the same rebuttal.
+
+```lean
+theorem trent_defeats_dominical : Defeats tridentineCase dominicalCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="trent_defeats_apostolic"></a>
+**`trent_defeats_apostolic`**
+
+**Trent defeats the apostolic case**, on the same rebuttal.
+
+```lean
+theorem trent_defeats_apostolic : Defeats tridentineCase apostolicCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="pauline_defeats_trent"></a>
+**`pauline_defeats_trent`**
+
+**The Pauline case defeats Trent back.** It entails "not by works", which Trent denies.
+
+```lean
+theorem pauline_defeats_trent : Defeats paulineCase tridentineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="dominical_defeats_trent"></a>
+**`dominical_defeats_trent`**
+
+**The dominical case defeats Trent back.**
+
+```lean
+theorem dominical_defeats_trent : Defeats dominicalCase tridentineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="apostolic_defeats_trent"></a>
+**`apostolic_defeats_trent`**
+
+**The apostolic case defeats Trent back.**
+
+```lean
+theorem apostolic_defeats_trent : Defeats apostolicCase tridentineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalyptic_defeats_trent"></a>
+**`apocalyptic_defeats_trent`**
+
+**The apocalyptic reading defeats Trent.** It holds "not by works" by its
+own step — God's deliverance is conditioned on nothing a person does — and Trent
+denies it.
+
+```lean
+theorem apocalyptic_defeats_trent : Defeats apocalypticCase tridentineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalyptic_defeats_pauline"></a>
+**`apocalyptic_defeats_pauline`**
+
+**The apocalyptic reading defeats the Pauline case.** It denies the
+objective genitive, a premise of Paul's strand cited `disputed`.
+
+```lean
+theorem apocalyptic_defeats_pauline : Defeats apocalypticCase paulineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="pauline_defeats_apocalyptic"></a>
+**`pauline_defeats_apocalyptic`**
+
+**The Pauline case defeats the apocalyptic reading back.** It entails
+justification by faith alone.
+
+```lean
+theorem pauline_defeats_apocalyptic : Defeats paulineCase apocalypticCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="dominical_defeats_apocalyptic"></a>
+**`dominical_defeats_apocalyptic`**
+
+**The dominical case defeats the apocalyptic reading**, on the same rebuttal
+— and the apocalyptic reading contradicts nothing it rests on.
+
+```lean
+theorem dominical_defeats_apocalyptic : Defeats dominicalCase apocalypticCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="apostolic_defeats_apocalyptic"></a>
+**`apostolic_defeats_apocalyptic`**
+
+**The apostolic case defeats the apocalyptic reading**, likewise.
+
+```lean
+theorem apostolic_defeats_apocalyptic : Defeats apostolicCase apocalypticCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="sanders_defeats_pauline"></a>
+**`sanders_defeats_pauline`**
+
+**Sanders defeats the Pauline case.** Covenantal nomism, with Dunn's
+inference, denies the ἔργα νόμου premise.
+
+```lean
+theorem sanders_defeats_pauline : Defeats sandersCase paulineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="pauline_defeats_sanders"></a>
+**`pauline_defeats_sanders`**
+
+**The Pauline case defeats Sanders back.** It holds the premise Sanders' conclusion denies.
+
+```lean
+theorem pauline_defeats_sanders : Defeats paulineCase sandersCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="sanders_defeats_critics"></a>
+**`sanders_defeats_critics`**
+
+**Sanders defeats the critics.** Their conclusions contradict.
+
+```lean
+theorem sanders_defeats_critics : Defeats sandersCase criticsCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="critics_defeat_sanders"></a>
+**`critics_defeat_sanders`**
+
+**The critics defeat Sanders.** They deny covenantal nomism, his ground.
+
+```lean
+theorem critics_defeat_sanders : Defeats criticsCase sandersCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="jervell_defeats_apostolic"></a>
+**`jervell_defeats_apostolic`**
+
+**Jervell defeats the apostolic case.** He denies the yoke premise.
+
+```lean
+theorem jervell_defeats_apostolic : Defeats jervellCase apostolicCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="apostolic_defeats_jervell"></a>
+**`apostolic_defeats_jervell`**
+
+**The apostolic case defeats Jervell back.** It holds the premise his conclusion denies.
+
+```lean
+theorem apostolic_defeats_jervell : Defeats apostolicCase jervellCase
+-- axioms: propext, Quot.sound
+```
+
+#### What does not defeat
+
+Most pairs of parties are compatible: some world holds both. Seven such worlds
+settle every such pair at once (`Dispute.StandTogether`). Three pairs conflict
+in one direction only, and those are shown premise by premise.
+
+<a id="criticsJervellReading"></a>
+**`criticsJervellReading`**
+
+The critics' world with Jervell's: covenantal nomism fails, and the yoke is
+Israel's law for gentiles. The Pauline and dominical cases hold in it.
+
+```lean
+def criticsJervellReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.secondTempleCovenantalNomism => False
+    | Claim.acts15YokeIsLawAsCondition => False
+    | x => True
+```
+
+<a id="trentSandersJervellReading"></a>
+**`trentSandersJervellReading`**
+
+Trent's world with Sanders' and Jervell's.
+
+```lean
+def trentSandersJervellReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
+    | Claim.worksOfLawMeansWorksGenerally => False
+    | Claim.acts15YokeIsLawAsCondition => False
+    | x => True
+```
+
+<a id="trentCriticsJervellReading"></a>
+**`trentCriticsJervellReading`**
+
+Trent's world with the critics' and Jervell's.
+
+```lean
+def trentCriticsJervellReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
+    | Claim.secondTempleCovenantalNomism => False
+    | Claim.acts15YokeIsLawAsCondition => False
+    | x => True
+```
+
+<a id="apocalypticSandersJervellReading"></a>
+**`apocalypticSandersJervellReading`**
+
+The apocalyptic world with Sanders' and Jervell's.
+
+```lean
+def apocalypticSandersJervellReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pistisChristouObjective => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.worksOfLawMeansWorksGenerally => False
+    | Claim.acts15YokeIsLawAsCondition => False
+    | x => True
+```
+
+<a id="apocalypticCriticsJervellReading"></a>
+**`apocalypticCriticsJervellReading`**
+
+The apocalyptic world with the critics' and Jervell's.
+
+```lean
+def apocalypticCriticsJervellReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pistisChristouObjective => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.secondTempleCovenantalNomism => False
+    | Claim.acts15YokeIsLawAsCondition => False
+    | x => True
+```
+
+<a id="apocalypticWithFaithReading"></a>
+**`apocalypticWithFaithReading`**
+
+The apocalyptic world in which salvation is still received through faith —
+faith is not the condition, but it is the means. Grace and "not by works" hold.
+
+```lean
+def apocalypticWithFaithReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pistisChristouObjective => False
+    | Claim.justificationByFaithAlone => False
+    | x => True
+```
+
+<a id="apocalypticHealingReading"></a>
+**`apocalypticHealingReading`**
+
+The same, with Jesus' σέσωκέν σε read as healing.
+
+```lean
+def apocalypticHealingReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pistisChristouObjective => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.sozoIsSoteriological => False
+    | x => True
+```
+
+<a id="apocalypticJervellReading"></a>
+**`apocalypticJervellReading`**
+
+The same, with the yoke read as Jervell reads it.
+
+```lean
+def apocalypticJervellReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pistisChristouObjective => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.acts15YokeIsLawAsCondition => False
+    | x => True
+```
+
+<a id="trentWithoutDeliveranceReading"></a>
+**`trentWithoutDeliveranceReading`**
+
+Trent's world, with the objective genitive and the apocalyptic reading of
+δικαιοσύνη θεοῦ both denied.
+
+```lean
+def trentWithoutDeliveranceReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
+    | Claim.pistisChristouObjective => False
+    | Claim.righteousnessOfGodIsDeliverance => False
+    | x => True
+```
+
+<a id="trentWithoutFaithAloneReading"></a>
+**`trentWithoutFaithAloneReading`**
+
+Trent's world, in which justification is not by faith alone — the
+apocalyptic reading's conclusion, which Trent shares.
+
+```lean
+def trentWithoutFaithAloneReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
+    | Claim.justificationByFaithAlone => False
+    | x => True
+```
+
+<a id="apocalyptic_does_not_defeat_dominical"></a>
+**`apocalyptic_does_not_defeat_dominical`**
+
+**The apocalyptic reading does not defeat the dominical case.** It
+contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω — and
+it does not deny its conclusion: it grants grace and "not by works", and it can
+grant that salvation is received through faith while denying that faith is its
+condition.
+
+```lean
+theorem apocalyptic_does_not_defeat_dominical : ¬Defeats apocalypticCase
+    dominicalCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalyptic_does_not_defeat_apostolic"></a>
+**`apocalyptic_does_not_defeat_apostolic`**
+
+**Nor the apostolic case**, for the same reasons.
+
+```lean
+theorem apocalyptic_does_not_defeat_apostolic : ¬Defeats apocalypticCase
+    apostolicCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="trent_does_not_defeat_apocalyptic"></a>
+**`trent_does_not_defeat_apocalyptic`**
+
+**Trent does not defeat the apocalyptic reading.** They agree on its
+conclusion — justification is not by faith alone — and Trent contradicts none of
+its premises: nothing Trent holds settles the genitive, or what δικαιοσύνη θεοῦ
+names. So the apocalyptic reading's "not by works" stands against Trent
+unanswered.
+
+```lean
+theorem trent_does_not_defeat_apocalyptic : ¬Defeats tridentineCase
+    apocalypticCase
+-- axioms: propext, Quot.sound
+```
+
+#### The dispute
+
+<a id="partyNode"></a>
+**`partyNode`**
+
+The package each party argues from.
+
+```lean
+def partyNode : Party → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | Party.pauline => paulineCase
+    | Party.dominical => dominicalCase
+    | Party.apostolic => apostolicCase
+    | Party.trent => tridentineCase
+    | Party.apocalyptic => apocalypticCase
+    | Party.sanders => sandersCase
+    | Party.critics => criticsCase
+    | Party.jervell => jervellCase
+```
+
+<a id="solaFideDispute"></a>
+**`solaFideDispute`**
+
+The dispute over sola fide: every party's premises have a model, every party
+establishes its conclusion, and every party's inferences are rated.
+
+```lean
+def solaFideDispute : Dispute Claim Party :=
+  { node := partyNode,
+    consistent := solaFideDispute._proof_1,
+    sound := solaFideDispute._proof_2,
+    rated := solaFideDispute._proof_3 }
+```
+
+<a id="reformed_strands_stand_with_the_critics"></a>
+**`reformed_strands_stand_with_the_critics`**
+
+The Reformed strands and the critics stand together, where covenantal nomism
+fails and everything else holds.
+
+```lean
+theorem reformed_strands_stand_with_the_critics :
+    solaFideDispute.StandTogether [Party.pauline, Party.dominical,
+    Party.apostolic, Party.critics]
+-- axioms: propext, Quot.sound
+```
+
+<a id="paul_and_luke_stand_with_jervell"></a>
+**`paul_and_luke_stand_with_jervell`**
+
+Paul and Luke stand with the critics and with Jervell.
+
+```lean
+theorem paul_and_luke_stand_with_jervell : solaFideDispute.StandTogether
+    [Party.pauline, Party.dominical, Party.jervell, Party.critics]
+-- axioms: propext, Quot.sound
+```
+
+<a id="luke_and_acts_stand_with_sanders"></a>
+**`luke_and_acts_stand_with_sanders`**
+
+Luke and Acts stand with Sanders: neither rests on ἔργα νόμου.
+
+```lean
+theorem luke_and_acts_stand_with_sanders : solaFideDispute.StandTogether
+    [Party.dominical, Party.apostolic, Party.sanders]
+-- axioms: propext, Quot.sound
+```
+
+<a id="trent_stands_with_sanders_and_jervell"></a>
+**`trent_stands_with_sanders_and_jervell`**
+
+Trent stands with Sanders and Jervell.
+
+```lean
+theorem trent_stands_with_sanders_and_jervell : solaFideDispute.StandTogether
+    [Party.trent, Party.sanders, Party.jervell]
+-- axioms: propext, Quot.sound
+```
+
+<a id="trent_stands_with_the_critics_and_jervell"></a>
+**`trent_stands_with_the_critics_and_jervell`**
+
+Trent stands with the critics and Jervell.
+
+```lean
+theorem trent_stands_with_the_critics_and_jervell :
+    solaFideDispute.StandTogether [Party.trent, Party.critics, Party.jervell]
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalyptic_stands_with_sanders_and_jervell"></a>
+**`apocalyptic_stands_with_sanders_and_jervell`**
+
+The apocalyptic reading stands with Sanders and Jervell.
+
+```lean
+theorem apocalyptic_stands_with_sanders_and_jervell :
+    solaFideDispute.StandTogether [Party.apocalyptic, Party.sanders,
+    Party.jervell]
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalyptic_stands_with_the_critics_and_jervell"></a>
+**`apocalyptic_stands_with_the_critics_and_jervell`**
+
+The apocalyptic reading stands with the critics and Jervell.
+
+```lean
+theorem apocalyptic_stands_with_the_critics_and_jervell :
+    solaFideDispute.StandTogether [Party.apocalyptic, Party.critics,
+    Party.jervell]
+-- axioms: propext, Quot.sound
+```
+
+<a id="partyDefeats"></a>
+**`partyDefeats`**
+
+The defeats of the dispute, as a table.
+
+```lean
+def partyDefeats : Party → Party → Prop
+```
+
+<a id="solaFideDispute_defeats"></a>
+**`solaFideDispute_defeats`**
+
+**Who defeats whom**, all sixty-four pairs. Trent and each Reformed strand
+defeat each other. The apocalyptic reading and Paul defeat each other; Luke and
+Acts defeat it, and it defeats neither; it defeats Trent, and Trent does not
+defeat it. Sanders defeats Paul and the critics, and both defeat him back.
+Jervell and Acts defeat each other. Nothing else.
+
+```lean
+theorem solaFideDispute_defeats : ∀ (i j : Party), solaFideDispute.defeats i j
+    ↔ partyDefeats i j
+-- axioms: propext, Quot.sound
+```
+
+#### What the dispute decides
+
+<a id="nothing_prevails_over_sola_fide"></a>
+**`nothing_prevails_over_sola_fide`**
+
+**Nothing prevails outright.** Every party is defeated by some other: each
+Reformed strand by Trent, Trent by each strand and by the apocalyptic reading,
+the apocalyptic reading by Paul, Sanders by the critics, the critics by
+Sanders, Jervell by Acts. The grounded extension — what the dispute forces,
+before any choice between rivals — is empty.
+
+```lean
+theorem nothing_prevails_over_sola_fide : Framework.grounded
+    solaFideDispute.defeats = ∅
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trent_indefensible"></a>
+**`trent_indefensible`**
+
+**Trent cannot be defended.** The apocalyptic reading defeats it — it holds
+"not by works" on grounds Trent does not contradict — and the only parties that
+defeat the apocalyptic reading are the Reformed strands, each of which also
+defeats Trent. No position can hold Trent and answer the apocalyptic reading at
+once.
+
+```lean
+theorem trent_indefensible : ∀ (S : Set Party), Framework.Admissible
+    solaFideDispute.defeats S → Party.trent ∉ S
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalyptic_indefensible"></a>
+**`apocalyptic_indefensible`**
+
+**Nor can the apocalyptic reading.** The dominical case defeats it, and the
+only party that defeats the dominical case is Trent — which the apocalyptic
+reading itself defeats.
+
+```lean
+theorem apocalyptic_indefensible : ∀ (S : Set Party), Framework.Admissible
+    solaFideDispute.defeats S → Party.apocalyptic ∉ S
+-- axioms: propext, Quot.sound
+```
+
+<a id="dominical_case_skeptically_accepted"></a>
+**`dominical_case_skeptically_accepted`**
+
+**Sola fide from Luke 7:50 is accepted on every resolution.** Its only
+defeater is Trent, which no admissible position can hold; it defeats back the
+only other party it conflicts with, the apocalyptic reading, which no admissible
+position can hold either. So every preferred extension — every maximal
+defensible position — contains it.
+
+This is the dispute's verdict, and it is narrower than it sounds. It is not
+reached by the grounded semantics, which forces nothing
+(`nothing_prevails_over_sola_fide`). It rests on the two rivals to sola fide
+defeating each other: remove the apocalyptic reading and Trent can be defended
+again (`sola_fide_not_forced_without_the_apocalyptic_reading`). And the
+dominical case is attacked by no one but Trent because no source cited here
+argues that σῴζω at Luke 7:50 means healing; its premise is rated `disputed`,
+but the dispute has no party that disputes it.
+
+```lean
+theorem dominical_case_skeptically_accepted : Framework.SkepticallyAccepted
+    solaFideDispute.defeats Party.dominical
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="withoutApocalyptic"></a>
+**`withoutApocalyptic`**
+
+The dispute without the apocalyptic reading.
+
+```lean
+def withoutApocalyptic : Dispute Claim { i // i ≠ Party.apocalyptic } :=
+  solaFideDispute.restrict fun x =>
+    x ≠ Party.apocalyptic
+```
+
+<a id="sola_fide_not_forced_without_the_apocalyptic_reading"></a>
+**`sola_fide_not_forced_without_the_apocalyptic_reading`**
+
+**Without the apocalyptic reading, sola fide is no longer forced.** Trent,
+heard against the three Reformed strands alone, defends itself: it defeats each
+of them back. So some maximal defensible position holds Trent, and that position
+cannot hold the dominical case, which Trent defeats.
+
+The verdict of `dominical_case_skeptically_accepted` therefore rests on one
+rival to sola fide answering the other: on the apocalyptic reading holding
+"not by works" where Trent denies it.
+
+```lean
+theorem sola_fide_not_forced_without_the_apocalyptic_reading :
+    ¬Framework.SkepticallyAccepted withoutApocalyptic.defeats
+    ⟨Party.dominical, ⋯⟩
+-- axioms: propext, Classical.choice, Quot.sound
 ```

@@ -158,7 +158,8 @@ line of reason: *these grounds, therefore that*. What leaves it:
 - **An implication inside an antecedent**, `(A ➝ B) ➝ C`. State `A ➝ B` as its
   own step instead.
 - **A negated consequent** is fine in a premise (`sandersLine` delivers
-  `notP`), but a conclusion that is a negation or a disjunction is not Horn.
+  `notP`), and so is a negated conclusion — of an atom, or of a conjunction, as
+  a rebuttal of `solaFide` is. A conclusion that is a disjunction is not Horn.
 
 When `establish` fails, check the unfold list first: a missing definition looks
 the same as a non-Horn step. If a step genuinely cannot be Horn,

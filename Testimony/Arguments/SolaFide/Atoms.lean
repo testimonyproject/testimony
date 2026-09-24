@@ -53,6 +53,11 @@ inductive Claim
   salvation, and not only Israel's marks of belonging. **The disputed apostolic
   premise.** -/
   | acts15YokeIsLawAsCondition
+  /-- Acts 15:20–21 and 21:20–24 — the decree lays on gentile believers part of
+  what the law of Moses requires, and the Jewish believers in Jerusalem are
+  "all zealous for the law". Jervell's ground for reading Luke as law-observant.
+  -/
+  | lukeKeepsTheLaw
   /-- Ephesians was written by Paul. -/
   | ephesiansIsPauline
   /-- Titus was written by Paul. -/
