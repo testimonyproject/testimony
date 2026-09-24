@@ -112,6 +112,12 @@ checkout you branched from. The script runs `lake exe cache get` for you;
 skipping it means the first build compiles Mathlib from source, which takes
 hours rather than minutes.
 
+The script also points `core.hooksPath` at `.githooks/`, whose `pre-commit`
+refuses a commit made in the primary checkout. The setting is shared by every
+worktree, so it arms the rule for the primary checkout as soon as the first
+worktree exists. A checkout that has never run the script has no hook; running
+`git config core.hooksPath .githooks` once installs it by hand.
+
 The worktree script fixes the repository *layout*; it does not fix the
 *toolchain*. For that, open a worktree in the devcontainer
 (`.devcontainer/`) instead of installing elan, tectonic and mdbook by hand —
