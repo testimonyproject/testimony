@@ -1047,6 +1047,246 @@ one. -/
       , identifiers := [.isbn "9780802847744"] }
   , publisher := "Wm. B. Eerdmans" }
 
+/-! ### Sola fide: beyond the law, and the other apostles
+
+Evidence that Paul's refusal reaches past circumcision to works as such, and
+the witness of Peter and James at the Jerusalem council (Acts 15). Then the
+authorship of the letters that evidence draws on, catalogued from both sides:
+Ephesians, Titus, 1 and 2 Peter are each disputed, and a reader is owed the
+scholarship that disputes them as well as the scholarship that answers it. -/
+
+/-- Westerholm's defence of the "Lutheran" Paul against the New Perspective.
+He argues that Paul contrasts grace with human works as such, from texts where
+the law is not in view: Romans 4:4–5, 9:11–12 and 11:6. -/
+@[bib_entry] def westerholmPerspectives : BibEntry := .book
+  { core :=
+      { key := "westerholm-perspectives-2003"
+      , contributors := { authors := [.person "Stephen" "Westerholm"] }
+      , title := "Perspectives Old and New on Paul"
+      , subtitle := some "The \"Lutheran\" Paul and His Critics"
+      , year := some { value := 2003 }
+      , identifiers := [.isbn "9780802848093"] }
+  , publisher := "Wm. B. Eerdmans" }
+
+/-- Das on Paul and the law. His argument is that Paul's case assumes the law
+requires the whole of it to be kept (Galatians 3:10, 5:3), so that the law as
+a whole is refused as a means of justification, and not only its ethnic
+markers. -/
+@[bib_entry] def dasPaulLawCovenant : BibEntry := .book
+  { core :=
+      { key := "das-paul-law-covenant-2001"
+      , contributors := { authors := [.person "A. Andrew" "Das"] }
+      , title := "Paul, the Law, and the Covenant"
+      , year := some { value := 2001 }
+      , identifiers := [.isbn "9781565634633"] }
+  , publisher := "Hendrickson Publishers" }
+
+/-- Schreiner's account of the doctrine itself, historical and exegetical,
+including its answer to James 2. -/
+@[bib_entry] def schreinerFaithAlone : BibEntry := .book
+  { core :=
+      { key := "schreiner-faith-alone-2015"
+      , contributors := { authors := [.person "Thomas R." "Schreiner"] }
+      , title := "Faith Alone"
+      , subtitle := some
+          ("The Doctrine of Justification: What the Reformers Taught… " ++
+           "and Why It Still Matters")
+      , year := some { value := 2015 }
+      , identifiers := [.isbn "9780310515784"] }
+  , publisher := "Zondervan Academic"
+  , place := some "Grand Rapids, MI"
+  , series := some "The Five Solas Series" }
+
+/-- Moo's commentary on Galatians: the Reformed exegesis of 2:16 and of the
+circumcision polemic in 5:2–4. -/
+@[bib_entry] def mooGalatians : BibEntry := .book
+  { core :=
+      { key := "moo-galatians-2013"
+      , contributors := { authors := [.person "Douglas J." "Moo"] }
+      , title := "Galatians"
+      , year := some { value := 2013 }
+      , identifiers := [.isbn "9780801027543"] }
+  , publisher := "Baker Academic"
+  , place := some "Grand Rapids, MI"
+  , series := some "Baker Exegetical Commentary on the New Testament" }
+
+/-- Bruce on Acts, cited for the Jerusalem council: the demand of 15:1 and 15:5,
+and Peter's reply in 15:7–11. The catalogue lists two 1988 printings of the
+revised edition; this is the one it ties to the series. -/
+@[bib_entry] def bruceActs : BibEntry := .book
+  { core :=
+      { key := "bruce-acts-1988"
+      , contributors := { authors := [.person "F. F." "Bruce"] }
+      , title := "The Book of the Acts"
+      , year := some { value := 1988 }
+      , identifiers := [.isbn "9780802824189"] }
+  , publisher := "Eerdmans"
+  , place := some "Grand Rapids"
+  , edition := some "revised"
+  , series := some "New International Commentary on the New Testament" }
+
+/-- Jervell's reading of Luke-Acts: Luke presents the church as the restored
+Israel, and the law as still in force for Jewish believers. On that reading
+Acts 15 refuses to lay Israel's law on gentiles as a mark of belonging, and
+does not refuse the law as a means of salvation. The rival to the apostolic
+strand in `SolaFide`. -/
+@[bib_entry] def jervellLukePeopleOfGod : BibEntry := .book
+  { core :=
+      { key := "jervell-luke-people-god-1972"
+      , contributors := { authors := [.person "Jacob" "Jervell"] }
+      , title := "Luke and the People of God"
+      , subtitle := some "A New Look at Luke-Acts"
+      , year := some { value := 1972 }
+      , identifiers := [.isbn "9780806612324"] }
+  , publisher := "Augsburg Publishing House"
+  , place := some "Minneapolis" }
+
+/-- Jobes on 1 Peter. Cited for the letter's account of salvation through
+faith (1:3–9, 1:18–19), and for her defence of Petrine authorship. -/
+@[bib_entry] def jobesFirstPeter : BibEntry := .book
+  { core :=
+      { key := "jobes-1-peter-2005"
+      , contributors := { authors := [.person "Karen H." "Jobes"] }
+      , title := "1 Peter"
+      , year := some { value := 2005 }
+      , identifiers := [.isbn "9780801026744"] }
+  , publisher := "Baker Academic"
+  , series := some "Baker Exegetical Commentary on the New Testament" }
+
+/-- Schreiner on 1 and 2 Peter and Jude. Cited for 2 Peter 3:15–16, where the
+writer counts Paul's letters with "the other Scriptures", and for his defence
+of Petrine authorship of both letters. -/
+@[bib_entry] def schreinerPeterJude : BibEntry := .book
+  { core :=
+      { key := "schreiner-peter-jude-2003"
+      , contributors := { authors := [.person "Thomas R." "Schreiner"] }
+      , title := "1, 2 Peter, Jude"
+      , year := some { value := 2003 }
+      , identifiers := [.isbn "9780805401370"] }
+  , publisher := "Broadman & Holman"
+  , place := some "Nashville, TN"
+  , series := some "New American Commentary"
+  , seriesNumber := some "37" }
+
+/-- Achtemeier's Hermeneia commentary on 1 Peter, which concludes that the
+letter was not written by the apostle. The critical case on 1 Peter's
+authorship, stated by a scholar who holds it. -/
+@[bib_entry] def achtemeierFirstPeter : BibEntry := .book
+  { core :=
+      { key := "achtemeier-1-peter-1996"
+      , contributors :=
+          { authors := [.person "Paul J." "Achtemeier"]
+          , editors := [.person "Eldon Jay" "Epp"] }
+      , title := "1 Peter"
+      , subtitle := some "A Commentary on First Peter"
+      , year := some { value := 1996 }
+      , identifiers := [.isbn "9780800660307"] }
+  , publisher := "Fortress Press"
+  , place := some "Minneapolis"
+  , series := some "Hermeneia" }
+
+/-- Bauckham on Jude and 2 Peter. He reads 2 Peter as a testament, a genre
+whose readers would have recognised it as written in Peter's name after his
+death. The standard case that 2 Peter is not by the apostle. -/
+@[bib_entry] def bauckhamJude2Peter : BibEntry := .book
+  { core :=
+      { key := "bauckham-jude-2-peter-1983"
+      , contributors := { authors := [.person "Richard J." "Bauckham"] }
+      , title := "Jude, 2 Peter"
+      , year := some { value := 1983 }
+      , identifiers := [.isbn "9780849902499"] }
+  , publisher := "Word Books"
+  , place := some "Waco, TX"
+  , series := some "Word Biblical Commentary"
+  , seriesNumber := some "50" }
+
+/-- Lincoln on Ephesians, which argues that the letter is by a follower of
+Paul rather than by Paul. Also cited for the reading that Ephesians 2:8–9
+restates Paul's "works of the law" as works in general. -/
+@[bib_entry] def lincolnEphesians : BibEntry := .book
+  { core :=
+      { key := "lincoln-ephesians-1990"
+      , contributors := { authors := [.person "Andrew T." "Lincoln"] }
+      , title := "Ephesians"
+      , year := some { value := 1990 }
+      , identifiers := [.isbn "9780849902413"] }
+  , publisher := "Thomas Nelson"
+  , place := some "Dallas, TX"
+  , series := some "Word Biblical Commentary"
+  , seriesNumber := some "42" }
+
+/-- Hoehner on Ephesians, whose introduction is an extended defence of Pauline
+authorship. The reply to Lincoln. -/
+@[bib_entry] def hoehnerEphesians : BibEntry := .book
+  { core :=
+      { key := "hoehner-ephesians-2002"
+      , contributors := { authors := [.person "Harold W." "Hoehner"] }
+      , title := "Ephesians"
+      , subtitle := some "An Exegetical Commentary"
+      , year := some { value := 2002 }
+      , identifiers := [.isbn "9780801026140"] }
+  , publisher := "Baker Academic" }
+
+/-- Dibelius and Conzelmann on the Pastoral Epistles: the classic critical
+statement that 1–2 Timothy and Titus are pseudonymous. -/
+@[bib_entry] def dibeliusConzelmannPastorals : BibEntry := .book
+  { core :=
+      { key := "dibelius-conzelmann-pastoral-epistles-1972"
+      , contributors :=
+          { authors := [.person "Martin" "Dibelius", .person "Hans" "Conzelmann"]
+          , editors := [.person "Helmut" "Koester"]
+          , translators := [.person "Philip" "Buttolph", .person "Adela" "Yarbro"] }
+      , title := "The Pastoral Epistles"
+      , subtitle := some "A Commentary on the Pastoral Epistles"
+      , year := some { value := 1972 }
+      , identifiers := [.isbn "9780800660024"] }
+  , publisher := "Fortress Press"
+  , place := some "Philadelphia"
+  , series := some "Hermeneia" }
+
+/-- Mounce on the Pastoral Epistles, whose introduction defends Pauline
+authorship of 1–2 Timothy and Titus. -/
+@[bib_entry] def mouncePastorals : BibEntry := .book
+  { core :=
+      { key := "mounce-pastoral-epistles-2000"
+      , contributors := { authors := [.person "William D." "Mounce"] }
+      , title := "Pastoral Epistles"
+      , year := some { value := 2000 }
+      , identifiers := [.isbn "9780849902451"] }
+  , publisher := "Thomas Nelson"
+  , series := some "Word Biblical Commentary"
+  , seriesNumber := some "46" }
+
+/-- Marshall's ICC commentary on the Pastoral Epistles. A mediating position:
+the letters are not by Paul's own hand but were written after his death by
+those close to him, without intent to deceive. Neither the traditional nor the
+critical view, and cited so that the dispute is not presented as two-sided
+when it is not. -/
+@[bib_entry] def marshallPastorals : BibEntry := .book
+  { core :=
+      { key := "marshall-pastoral-epistles-1999"
+      , contributors := { authors := [.person "I. Howard" "Marshall"] }
+      , title := "A Critical and Exegetical Commentary on the Pastoral Epistles"
+      , year := some { value := 1999 }
+      , identifiers := [.isbn "9780567086617"] }
+  , publisher := "T. & T. Clark"
+  , series := some "International Critical Commentary" }
+
+/-- Ehrman on forgery in early Christianity. He argues that Ephesians, the
+Pastorals, 1 Peter and 2 Peter were all written in apostles' names by others,
+and that ancient readers regarded such writing as deceit. The strongest
+statement of the critical position, covering every letter in dispute here. -/
+@[bib_entry] def ehrmanForgery : BibEntry := .book
+  { core :=
+      { key := "ehrman-forgery-counterforgery-2014"
+      , contributors := { authors := [.person "Bart D." "Ehrman"] }
+      , title := "Forgery and Counter-Forgery"
+      , subtitle := some "The Use of Literary Deceit in Early Christian Polemics"
+      , year := some { value := 2014 }
+      , identifiers := [.isbn "9780199928033"] }
+  , publisher := "Oxford University Press"
+  , place := some "New York" }
+
 /-! ### The church fathers on Isaiah 7:14
 
 Four second- to fourth-century witnesses to the predictive reading, each cited

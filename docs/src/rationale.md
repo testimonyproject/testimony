@@ -53,7 +53,7 @@ worth the argument: `worksOfLaw_not_load_bearing` holds, because the dominical
 strand at Luke 7:50 carries the conclusion without it, and the New Perspective
 package establishes the conclusion too. What is load-bearing is a
 *disjunction*: Paul's two disputed readings of Galatians 2:16 — ἔργα νόμου and
-πίστις Χριστοῦ — or Jesus' σῴζω at Luke 7:50.
+πίστις Χριστοῦ — or Jesus' σῴζω at Luke 7:50, or Peter's yoke at Acts 15:10.
 
 That result is not Protestant or Catholic. It is a description of the
 disagreement that both sides can accept — including the part neither side

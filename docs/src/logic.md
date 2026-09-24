@@ -110,18 +110,20 @@ Atoms are numbered rather than named, which is the usual convention and the
 point of rendering at all. It separates an argument's *shape* from its content:
 
 ```
-(14)  (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₁₆
-(15)  (P₁₀ ∧ P₁₁) → P₁₆
-(16)  (P₁₂ ∧ P₁₃) → P₁₄
-(17)  (P₁₆ ∧ P₁ ∧ P₄ ∧ P₅ ∧ P₁₄ ∧ P₁₅) → P₁₇
-  ⊢   P₁₇
+(16)  (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₂₂
+(17)  (P₁₆ ∧ P₁₇) → P₂₂
+(18)  (P₉ ∧ P₁₀) → P₂₂
+(19)  (P₁₈ ∧ P₁₉) → P₂₀
+(20)  (P₂₂ ∧ P₁ ∧ P₄ ∧ P₅ ∧ P₂₀ ∧ P₂₁) → P₂₃
+  ⊢   P₂₃
 ```
 
-That is sola fide. Premises (14) and (15) both conclude `P₁₆`: one by way of
-`P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστοῦ read as faith in Christ),
-the other by way of `P₁₁` (Jesus' σῴζω at Luke 7:50). The argument's
-redundancy — the reason no lexical premise is load-bearing on its own — is
-visible on the page before you read a word of the legend.
+That is sola fide. Premises (16), (17) and (18) all conclude `P₂₂`: one by way
+of `P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστοῦ read as faith in
+Christ), one by way of `P₁₇` (Jesus' σῴζω at Luke 7:50), and one by way of
+`P₁₀` (Peter's yoke at Acts 15:10). The argument's redundancy — the reason no
+disputed premise is load-bearing on its own — is visible on the page before you
+read a word of the legend.
 
 ## Publishing what the library claims
 
@@ -182,7 +184,7 @@ to fall out of step with it.
 An argument is not a heap of premises. It is a small number of *lines of
 reason*, each resting on its own grounds, each licensed by its own inference
 step, converging on a shared conclusion. `BornOfAVirgin` runs on four strands;
-`SolaFide` on two.
+`SolaFide` on three.
 
 A `Line` makes that structure a value rather than a remark in a docstring:
 
@@ -338,16 +340,17 @@ rather than a term, so a countermodel must be a named definition.
 premise from the line that contributes it:
 
 ```lean
-def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=
+def reformedWithoutSozo : ArgumentPackage Claim :=
   { reformed with
-    name := "Reformed, minus the Pauline lexical premise"
+    name := "Reformed, minus the dominical lexical premise"
     premises :=
-      caseOf [paulineLine.onGrounds [], dominicalLine] sharedGrounds closingSteps }
+      caseOf [paulineLine, dominicalLine.onGrounds [], apostolicLine]
+        sharedGrounds closingSteps }
 ```
 
-Then ask whether the argument survives. Where an argument has **two independent
-strands**, as sola fide does, neither disputed premise is load-bearing alone —
-only their disjunction is, and that is the more interesting result.
+Then ask whether the argument survives. Where an argument has **independent
+strands**, as sola fide has three, no strand's disputed premise is load-bearing
+alone — only their disjunction is, and that is the more interesting result.
 
 ## Disputes
 

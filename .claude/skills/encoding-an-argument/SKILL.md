@@ -174,23 +174,26 @@ that contributes it, with `Line.onGrounds` — never by filtering a premise out
 of an existing package, and never by retyping the premise list, where a reader
 cannot see which premise went.
 
-Where an argument has two independent routes to its conclusion — as sola fide
-does, through Paul and through Jesus' words in Luke — neither disputed premise
-will be load-bearing on its own. Check each separately, then check both
-together; the interesting result is usually that only the *disjunction* carries
-the argument.
+Where an argument has independent routes to its conclusion — as sola fide
+does, through Paul, through Jesus' words in Luke, and through Peter at the
+Jerusalem council — no disputed premise will be load-bearing on its own. Check
+each separately, then all together; the interesting result is usually that only
+the *disjunction* carries the argument. Adding a strand changes which
+combinations are decisive, so re-check the joint results too, and state what
+the new strand changed as a result of its own.
 
 ```lean
-def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=
+def reformedWithoutSozo : ArgumentPackage Claim :=
   { reformed with
-    name := "Reformed, minus the Pauline lexical premise"
+    name := "Reformed, minus the dominical lexical premise"
     premises :=
-      caseOf [paulineLine.onGrounds [], dominicalLine] sharedGrounds closingSteps }
+      caseOf [paulineLine, dominicalLine.onGrounds [], apostolicLine]
+        sharedGrounds closingSteps }
 
 @[headline]
-theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw := by
-  establish [reformedWithoutWorksOfLaw, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, sharedGrounds, closingSteps, /- … the steps -/]
+theorem sozo_not_load_bearing : Establishes reformedWithoutSozo := by
+  establish [reformedWithoutSozo, reformed, Line.onGrounds, paulineLine,
+    dominicalLine, apostolicLine, sharedGrounds, closingSteps, /- … the steps -/]
 ```
 
 ## 6 — read the manifest

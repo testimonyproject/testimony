@@ -21,15 +21,16 @@ theorem reformed_establishes       : Establishes reformed
 theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw
 theorem sozo_not_load_bearing       : Establishes reformedWithoutSozo
 theorem lexical_premises_jointly_load_bearing :
-    ¬ Establishes reformedWithoutEitherLexicalPremise
+    ¬ Establishes reformedWithoutEveryStrandsPremise
 ```
 
 Read together, those say something prose arguments rarely establish. Sola fide
-runs on **two independent strands** — Paul's ἔργα νόμου, and Jesus' "your faith
-has saved you" at Luke 7:50 — and *no* disputed lexical premise carries the
-argument by itself. Only a disjunction does — Paul's two readings of Galatians
-2:16, or Jesus' σῴζω — so an opponent must defeat a reading in each strand,
-not one reading.
+runs on **three independent strands** — Paul's ἔργα νόμου, Jesus' "your faith
+has saved you" at Luke 7:50, and Peter's refusal of the law's yoke at Acts
+15:10 — and *no* disputed premise carries the argument by itself. Only a
+disjunction does — Paul's two readings of Galatians 2:16, or Jesus' σῴζω, or
+Peter's yoke — so an opponent must defeat a reading in each strand, not one
+reading.
 
 A corollary: the New Perspective on Paul, which rejects the traditional reading
 of ἔργα νόμου while still affirming justification by faith, **establishes the

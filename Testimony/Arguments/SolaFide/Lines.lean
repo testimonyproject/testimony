@@ -4,9 +4,10 @@ import Testimony.Logic.Line
 /-!
 # Arguments.SolaFide.Lines — the strands, and what they share
 
-Two strands deliver justification by faith alone, by different words in
-different authors. A third line answers James, and a fourth — the apocalyptic
-reading — denies what the first two deliver. What every package holds in
+Three strands deliver justification by faith alone, by different words from
+different speakers: Paul, Jesus, and Peter at Jerusalem. A fourth line answers
+James, and a fifth — the apocalyptic reading — denies what the strands
+deliver. What every package holds in
 common is collected here too, so that a variant package is a named difference
 rather than a retyped list.
 -/
@@ -17,7 +18,7 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
 /-! ### Lines of reason
 
-Two strands deliver the conclusion, and a third line answers James. The James
+Three strands deliver the conclusion, and a fourth line answers James. The James
 harmonisation is deliberately *not* a strand: it does not reach
 `justificationByFaithAlone` by an independent route, it supplies a premise the
 closing step needs. So it contributes its grounds and its step to the case
@@ -43,6 +44,17 @@ justification by faith alone, by way of the disputed lexical premise about
 σῴζω. Independent of Paul, and of the ἔργα νόμου dispute. -/
 def dominicalToFaithAlone : Formula Claim :=
   ⋀ [p .luke7_50FaithHasSavedYou, p .sozoIsSoteriological] ➝ p .justificationByFaithAlone
+
+/-- **The apostolic strand.** From Peter's speech at the Jerusalem council to
+justification by faith alone, by way of the disputed premise about the yoke.
+
+The council answers the same demand Galatians answers: circumcision and the law
+of Moses as a condition of salvation (Acts 15:1, 15:5). Peter's reply names
+faith as what cleansed the gentiles' hearts and grace as how Jew and gentile
+alike are saved, and refuses the yoke. If the yoke is the whole law as a
+condition of salvation, what is left is faith, and grace. -/
+def apostolicToFaithAlone : Formula Claim :=
+  ⋀ [p .acts15_9_11, p .acts15YokeIsLawAsCondition] ➝ p .justificationByFaithAlone
 
 /-- The harmonisation of James: because James's target is barren faith, and
 works are the fruit of saving faith rather than its ground, James 2:24 does not
@@ -83,6 +95,20 @@ def dominicalLine : Line Claim :=
   , step := dominicalToFaithAlone
   , delivers := p .justificationByFaithAlone }
 
+/-- The apostolic line, resting on Peter as Luke reports him rather than on Paul
+or on Jesus. Its distinctive ground is the premise about the yoke.
+
+It is logically independent of the Pauline strand: no premise is shared. It is
+not dialectically independent. A reader who takes ἔργα νόμου as Israel's
+boundary markers will read Peter's yoke the same way, as Jervell does, so the
+two premises tend to be won or lost together. What the encoding shows is that
+they are two premises about two texts, and an opponent has to answer both. -/
+def apostolicLine : Line Claim :=
+  { name := "Apostolic strand (Acts 15:7–11)"
+  , grounds := [p .acts15YokeIsLawAsCondition]
+  , step := apostolicToFaithAlone
+  , delivers := p .justificationByFaithAlone }
+
 /-- The James line: not a route to the conclusion but the answer to the one
 text that stands against it. -/
 def jamesLine : Line Claim :=
@@ -109,13 +135,13 @@ def apocalypticLine : Line Claim :=
   , step := deliveranceNotFaithAlone
   , delivers := notP .justificationByFaithAlone }
 
-/-- The prooftexts both strands read, and the hermeneutical premise the closing
-step needs. Shared by every Reformed package, and by the New Perspective. -/
+/-- The prooftexts the strands read. Shared by every Reformed package, and by
+the New Perspective. -/
 def prooftexts : List (Formula Claim) :=
   [ p .ephesians2_8_9, p .romans3_28, p .galatians2_16, p .romans4_4_5
-  , p .titus3_5, p .luke7_50FaithHasSavedYou ]
+  , p .titus3_5, p .luke7_50FaithHasSavedYou, p .acts15_9_11 ]
 
-/-- Everything the two strands share: the prooftexts, the grounds of the James
+/-- Everything the strands share: the prooftexts, the grounds of the James
 harmonisation, and scripture's self-consistency. -/
 def sharedGrounds : List (Formula Claim) :=
   prooftexts ++ jamesLine.grounds ++ [p .scriptureSelfConsistent]

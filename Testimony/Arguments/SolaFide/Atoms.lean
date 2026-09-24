@@ -5,10 +5,10 @@ import Testimony.Scripture
 /-!
 # Arguments.SolaFide.Atoms — the atomic claims
 
-The prooftexts of both strands, the three disputed lexical premises, the
-reading of Galatians as a polemic, the apocalyptic rival's premise, the James
-premises, and the conclusions. See `Testimony.Arguments.SolaFide` for the
-dispute this encodes.
+The prooftexts of the three strands, their four disputed premises, the reading
+of Galatians as a polemic, the authorship of the disputed letters, the
+apocalyptic rival's premise, the James premises, and the conclusions. See
+`Testimony.Arguments.SolaFide` for the dispute this encodes.
 -/
 
 namespace Testimony.Arguments.SolaFide
@@ -42,6 +42,24 @@ inductive Claim
   addition to faith, as a condition of justification (Galatians 2:3–5,
   5:2–4). -/
   | galatiansOpposesCircumcisionAsRequirement
+  /-- Acts 15:9–11 — at the Jerusalem council, answering the demand that
+  gentile believers be circumcised and keep the law of Moses (15:1, 15:5), Peter
+  says that God cleansed their hearts by faith, and that "we believe that we
+  will be saved through the grace of the Lord Jesus, just as they will". -/
+  | acts15_9_11
+  /-- The yoke Peter refuses at Acts 15:10 — one "that neither our fathers nor
+  we have been able to bear" — is the law as a whole taken as a condition of
+  salvation, and not only Israel's marks of belonging. **The disputed apostolic
+  premise.** -/
+  | acts15YokeIsLawAsCondition
+  /-- Ephesians was written by Paul. -/
+  | ephesiansIsPauline
+  /-- Titus was written by Paul. -/
+  | titusIsPauline
+  /-- 1 Peter was written by the apostle Peter. -/
+  | firstPeterIsPetrine
+  /-- 2 Peter was written by the apostle Peter. -/
+  | secondPeterIsPetrine
   /-- δικαιοσύνη θεοῦ in Romans names God's act of delivering the world in
   Christ, not a status granted to those who meet the condition of faith. The
   apocalyptic reading. -/
