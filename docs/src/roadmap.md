@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **86 headline results**, listed below in source order. 2 of them are marked ⚗: results this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **86 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -93,7 +93,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `nothing_prevails_over_sola_fide` | `Framework.grounded solaFideDispute.defeats = ∅` | **Nothing prevails outright.** Every party is defeated by some other: each Reformed strand by Trent, Trent by each strand and by the apocalyptic reading, the apocalyptic reading … |
 | `trent_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.trent ∉ S` | **Trent cannot be defended.** The apocalyptic reading defeats it — it holds "not by works" on grounds Trent does not contradict — and the only parties that defeat the apocalyptic … |
 | `apocalyptic_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.apocalyptic ∉ S` | **Nor can the apocalyptic reading.** The dominical case defeats it, and the only party that defeats the dominical case is Trent — which the apocalyptic reading itself defeats. |
-| `dominical_case_skeptically_accepted` ⚗ | `Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Sola fide from Luke 7:50 is accepted on every resolution.** Its only defeater is Trent, which no admissible position can hold; it defeats back the only other party it conflicts … |
+| `dominical_case_skeptically_accepted` | `Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Sola fide from Luke 7:50 is accepted on every resolution.** Its only defeater is Trent, which no admissible position can hold; it defeats back the only other party it conflicts … |
 | `sola_fide_not_forced_without_the_apocalyptic_reading` | `¬Framework.SkepticallyAccepted withoutApocalyptic.defeats ⟨Party.dominical, ⋯⟩` | **Without the apocalyptic reading, sola fide is no longer forced.** Trent, heard against the three Reformed strands alone, defends itself: it defeats each of them back. |
 
 ### [Sola scriptura](./arguments/sola-scriptura.md)
@@ -194,9 +194,9 @@ rests on an absence: no cited source argues that σῴζω at Luke 7:50 means
 healing, so nothing in the dispute attacks the dominical case but Trent. A search
 for one found none, so that premise is rated `wellSupported`; and the dominical
 case carries the Reformed reading of 7:47 — her love is the evidence of her
-forgiveness, not its ground — as a premise. No scholarly work arguing either
-premise has been read, so both are the library's proposals, and the verdict
-that rests on them is tagged `proposed` until a commentator is found.
+forgiveness, not its ground — as a premise. Both premises are cited to
+Melanchthon's *Apology of the Augsburg Confession*, which reads 7:47 by 7:50;
+a modern commentary arguing either is still to be checked.
 
 **Authorship is not a premise, and the encoding says what that costs.**
 Ephesians, Titus and 1 and 2 Peter are each disputed, and each dispute is

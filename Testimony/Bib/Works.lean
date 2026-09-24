@@ -698,7 +698,9 @@ doctrine of Scripture. -/
 of Concord Article X, which defines adiaphora as rites "neither commanded nor
 forbidden in the Word of God" — the wider of the two statements this library
 uses for the premise that practices need no scriptural warrant, Westminster I.6
-being the narrower. -/
+being the narrower. Also cited for Melanchthon's *Apology of the Augsburg
+Confession*, which reads Luke 7:47 ("she loved much") by 7:50 ("thy faith hath
+saved thee") — the dominical strand of sola fide. -/
 @[bib_entry] def bookOfConcord : BibEntry := .book
   { core :=
       { key := "kolb-wengert-book-of-concord-2000"

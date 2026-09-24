@@ -47,10 +47,11 @@ bet, on a different word — rated `wellSupported`, because no scholar found
 argues the healing sense at 7:50. It also carries its answer to "she loved
 much" (7:47): `luke7_47LoveIsEvidence`, that her love is the evidence of her
 forgiveness and not its ground, as 7:47b and the parable of the two debtors
-(7:41–43) read it. Both premises are the library's **proposals**: no scholarly
-work arguing either has been read here, so each is cited as advanced from the
-plain reading of the pericope, with the commentary to check named, and the
-verdict resting on them is tagged `proposed`.
+(7:41–43) read it. Both premises are cited to Melanchthon's *Apology of the
+Augsburg Confession*, which answers "she loved much" with Jesus' own words:
+"Christ interprets Himself when He adds: Thy faith hath saved thee". That is a
+Reformation confession, not a modern commentary; Marshall at 7:50 and Kilgallen
+on 7:36–50 are named as the modern studies to check.
 
 **The apostolic strand** rests on Peter as Luke reports him. At the Jerusalem
 council (Acts 15) the demand Galatians answers is made again — "unless you are
@@ -217,8 +218,8 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{15}\\) | 2 Peter was written by the apostle Peter | historical | Christian, historical-grammatical, disputed | [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003); 2 Pet 1:1 |
 | \\(P_{16}\\) | δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains | interpretive | critical scholarship, disputed | [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26 |
 | \\(P_{17}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
-| \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | *proposed:* The plain reading of the pericope, advanced here without a verified scholarly source. The same formula means "made you well" at Luke 8:48, 17:19 and 18:42, where there is illness; at 7:50 there is none, and the saying follows "your sins are forgiven" (7:48) and the table's question "who is this who even forgives sins?" (7:49). Settled by a commentator who argues it at 7:50 — Marshall's NIGTC Luke is the first to check.; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
-| \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground | interpretive | Christian, historical-grammatical, plausible | *proposed:* The evidential reading of ὅτι in 7:47a, advanced here from the text without a verified scholarly source: 7:47b and the parable of 7:41–43 both run from forgiveness to love. Settled by a commentator who argues it — Kilgallen, "Forgiveness of Sins (Luke 7:36-50)", NovT 40 (1998) 105–116, is the first to check.; Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
+| \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
+| \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground | interpretive | Reformed Protestant, plausible | [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
 | \\(P_{20}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
 | \\(P_{21}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
 | \\(P_{22}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
@@ -270,6 +271,20 @@ def trentOnMerit : Source :=
         (Bib.Locus.sectionRef
           "Trent, Session VI (1547), Decree on Justification, ch. 16"),
     tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
+```
+
+<a id="melanchthonOnLuke7"></a>
+**`melanchthonOnLuke7`**
+
+Where Melanchthon reads Luke 7:47 by 7:50, in the *Apology of the Augsburg
+Confession* (1531): the part of Article IV on love and the fulfilling of the
+law. The *Concordia Triglotta* numbers it Article III, 31–34; the reference is
+given by article and topic because paragraph numbers differ between editions.
+
+```lean
+def melanchthonOnLuke7 : Bib.Locus :=
+  Bib.Locus.sectionRef
+    "Apology IV, on love and the fulfilling of the law: Luke 7:47–50"
 ```
 
 <a id="campbellOnDeliverance"></a>
@@ -2501,9 +2516,11 @@ much" (7:47) is the text a rival would use to make love, not faith, the ground
 of her forgiveness. The dominical case does not leave that open: it carries
 `luke7_47LoveIsEvidence` — her love is the evidence of forgiveness, not its
 ground, as 7:47b and the parable of 7:41–43 read it — as a premise of its own.
-It is the library's proposal, rated `plausible`: advanced from the text, not
-argued for from a commentator. So is the σῴζω premise, and so the verdict that
-rests on both is tagged `proposed`. No party here denies either.
+It is Melanchthon's reading in the *Apology of the Augsburg Confession*: "Christ
+interprets Himself when He adds: Thy faith hath saved thee", so the woman did
+not merit forgiveness "by that work of love". It is rated `plausible`, because
+Trent counts beginning to love God among the dispositions to justification
+(Session VI, ch. 6); but no party here argues that reading of 7:47.
 
 **The parties chosen.** A dispute is over the arguments put into it. Hays's
 subjective genitive is represented through the apocalyptic reading, which holds
@@ -3638,7 +3655,7 @@ theorem apocalyptic_indefensible : ∀ (S : Set Party), Framework.Admissible
 ```
 
 <a id="dominical_case_skeptically_accepted"></a>
-**`dominical_case_skeptically_accepted`** ⚗
+**`dominical_case_skeptically_accepted`**
 
 **Sola fide from Luke 7:50 is accepted on every resolution.** Its only
 defeater is Trent, which no admissible position can hold; it defeats back the
@@ -3654,21 +3671,6 @@ again (`sola_fide_not_forced_without_the_apocalyptic_reading`). And the
 dominical case is attacked by no one but Trent because no source cited here
 argues that σῴζω at Luke 7:50 means healing, and none argues that the woman's
 love at 7:47 was the ground of her forgiveness.
-
-**Proposed, not reported.** The dominical case rests on two premises no
-scholarly work read here argues: that σῴζω at 7:50 means salvation, and that
-the woman's love at 7:47 is the evidence of her forgiveness rather than its
-ground. Both are cited as the library's proposals, from the plain reading of
-the pericope.
-
-**What is novel here.** The dominical case's two distinctive premises, and so
-the verdict that rests on them: the library advances both from the text, with
-7:47 answered in advance, and cites no one for either.
-
-**What would settle whether it is really new.** Marshall's NIGTC commentary at
-Luke 7:50, and Kilgallen, "Forgiveness of Sins (Luke 7:36-50)", *Novum
-Testamentum* 40 (1998) 105–116, at 7:47. If either argues the reading, the
-premise should be cited to it and, once both are, the tag dropped.
 
 ```lean
 theorem dominical_case_skeptically_accepted : Framework.SkepticallyAccepted
