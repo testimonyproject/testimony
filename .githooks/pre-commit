@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Refuse a commit made in the primary checkout.
+#
+# CLAUDE.md: "Never work in the primary checkout. Every change is made on a
+# branch in its own git worktree, created by scripts/new-worktree.sh." Every
+# other hard rule there is enforced by a command; this is the command for this
+# one.
+#
+# In the primary checkout the per-worktree git directory *is* the common one;
+# in a linked worktree it is `.git/worktrees/<name>` beneath it. Installed by
+# scripts/new-worktree.sh, which points `core.hooksPath` at `.githooks/`.
+set -euo pipefail
+
+git_dir=$(cd "$(git rev-parse --git-dir)" && pwd -P)
+common_dir=$(cd "$(git rev-parse --git-common-dir)" && pwd -P)
+
+if [[ "$git_dir" == "$common_dir" ]]; then
+  echo "pre-commit: refusing to commit in the primary checkout." >&2
+  echo "pre-commit: make a worktree for the branch instead:" >&2
+  echo "pre-commit:   scripts/new-worktree.sh <branch>" >&2
+  exit 1
+fi

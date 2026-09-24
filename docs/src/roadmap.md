@@ -358,8 +358,11 @@ That limitation is closable with no new dependency at all.
 
 ## Infrastructure
 
-- **An assumption-manifest browser** ([#7]) on the docs site: every theorem,
-  every premise it rests on, every citation, cross-linked.
+- **Premise-to-result cross-links** ([#7]) on the docs site. `lake exe argdoc`
+  already generates a page per argument that numbers every claim with its
+  source and lists every package and result. Missing is the link from each
+  result to the premises it rests on, and back from a premise to every result
+  that would fall with it.
 - **Literate sources** ([#9]). Prose and Lean interleaved in the `.lean` files,
   in the coqdoc tradition, rendering to PDF. This is currently **blocked on tooling**
   rather than on effort. Alectryon plus LeanInk was the path, and
@@ -384,8 +387,6 @@ That limitation is closable with no new dependency at all.
 - **A devcontainer** ([#11]), so that the toolchain is consistent and not only
   the worktree layout. Contributors should not have to install elan and match
   Lean v4.33.1 by hand.
-- **Enforcing the worktree rule** ([#12]). Every other hard rule in CLAUDE.md
-  is enforced by a command; this one is documented and unchecked.
 
 ## How deferred work is tracked
 
@@ -415,7 +416,6 @@ the rest worth reading.
 [#9]: https://github.com/testimonyproject/testimony/issues/9
 [#10]: https://github.com/testimonyproject/testimony/issues/10
 [#11]: https://github.com/testimonyproject/testimony/issues/11
-[#12]: https://github.com/testimonyproject/testimony/issues/12
 [issues]: https://github.com/testimonyproject/testimony/issues
 [label-roadmap]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Aroadmap
 [label-infra]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Ainfra
