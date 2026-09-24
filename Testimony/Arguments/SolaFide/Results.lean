@@ -58,13 +58,15 @@ def tridentineReading : Valuation Claim := fun a =>
   match a with
   | .salvationNotByWorks => False
   | .justificationIsForensicOnly => False
+  | .justificationDistinctFromSanctification => False
   | _ => True
 
 /-- The Tridentine premises do not establish the conclusion — they entail the
 negation of its second part, that salvation is not by works. -/
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
-  refute_with tridentineReading [tridentine, reformed, solaFide]
+  refute_with tridentineReading [tridentine, tridentinePremises, tridentineLine,
+    trentDefinitionSteps, Line.premises, reformed, solaFide]
 
 #print axioms tridentine_not_establishes
 
@@ -298,8 +300,10 @@ in faith — and sola fide still follows. Proved by weakening, like
 
 On what justification *is*, Mannermaa sides with Trent against the Reformed
 account, and on sola fide with the Reformed against Trent. This result and
-`tridentine_not_establishes` together show the two questions are independent:
-Trent's disagreement with sola fide is over merit, not over infusion. -/
+`tridentine_not_establishes` together show that denying the forensic account
+does not by itself deny sola fide. What Trent's denial rests on is narrower:
+that justification includes the sanctification that grows through works
+(`trent_objection_rests_on_its_definition`). -/
 @[headline]
 theorem forensic_justification_not_load_bearing : Establishes finnish :=
   entails_of_subset (fun _ h => List.mem_append_left _ h) reformed_establishes

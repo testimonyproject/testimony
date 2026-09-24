@@ -46,7 +46,10 @@ bet, on a different word — rated `wellSupported`, because no scholar found
 argues the healing sense at 7:50. It also carries its answer to "she loved
 much" (7:47): `luke7_47LoveIsEvidence`, that her love is the evidence of her
 forgiveness and not its ground, as 7:47b and the parable of the two debtors
-(7:41–43) read it. That premise is cited to Scripture alone.
+(7:41–43) read it. Both premises are the library's **proposals**: no scholarly
+work arguing either has been read here, so each is cited as advanced from the
+plain reading of the pericope, with the commentary to check named, and the
+verdict resting on them is tagged `proposed`.
 
 **The apostolic strand** rests on Peter as Luke reports him. At the Jerusalem
 council (Acts 15) the demand Galatians answers is made again — "unless you are
@@ -108,7 +111,16 @@ merely, but also the sanctification and renewal of the inward man" — and so
 does Mannermaa's Finnish reading of Luther, for which Christ himself is present
 in faith. The Finnish package denies the forensic account and establishes sola
 fide (`forensic_justification_not_load_bearing`); Trent denies it and does not.
-So Trent's disagreement with sola fide is over merit, not over infusion.
+So denying the forensic account is not enough to deny sola fide. What Trent's
+objection needs is its fuller definition: justification includes the renewal of
+the inward man, and that renewal grows through good works, so works increase
+justification. Both sides grant the growth; the Reformed call it sanctification,
+distinct from justification and following it (Westminster XIII.1; Calvin,
+*Institutes* III.xi.6). Put the distinction in place of Trent's definition and
+Trent's case no longer denies "not by works"
+(`trent_objection_rests_on_its_definition`). The dispute over merit is a
+dispute over what justification is — but over sanctification, not over
+infusion as such.
 
 **Authorship.** Ephesians, Titus and 1 and 2 Peter are each disputed, and each
 dispute is catalogued from both sides — Hoehner and Lincoln on Ephesians,

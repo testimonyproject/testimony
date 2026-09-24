@@ -47,7 +47,10 @@ bet, on a different word — rated `wellSupported`, because no scholar found
 argues the healing sense at 7:50. It also carries its answer to "she loved
 much" (7:47): `luke7_47LoveIsEvidence`, that her love is the evidence of her
 forgiveness and not its ground, as 7:47b and the parable of the two debtors
-(7:41–43) read it. That premise is cited to Scripture alone.
+(7:41–43) read it. Both premises are the library's **proposals**: no scholarly
+work arguing either has been read here, so each is cited as advanced from the
+plain reading of the pericope, with the commentary to check named, and the
+verdict resting on them is tagged `proposed`.
 
 **The apostolic strand** rests on Peter as Luke reports him. At the Jerusalem
 council (Acts 15) the demand Galatians answers is made again — "unless you are
@@ -109,7 +112,16 @@ merely, but also the sanctification and renewal of the inward man" — and so
 does Mannermaa's Finnish reading of Luther, for which Christ himself is present
 in faith. The Finnish package denies the forensic account and establishes sola
 fide (`forensic_justification_not_load_bearing`); Trent denies it and does not.
-So Trent's disagreement with sola fide is over merit, not over infusion.
+So denying the forensic account is not enough to deny sola fide. What Trent's
+objection needs is its fuller definition: justification includes the renewal of
+the inward man, and that renewal grows through good works, so works increase
+justification. Both sides grant the growth; the Reformed call it sanctification,
+distinct from justification and following it (Westminster XIII.1; Calvin,
+*Institutes* III.xi.6). Put the distinction in place of Trent's definition and
+Trent's case no longer denies "not by works"
+(`trent_objection_rests_on_its_definition`). The dispute over merit is a
+dispute over what justification is — but over sanctification, not over
+infusion as such.
 
 **Authorship.** Ephesians, Titus and 1 and 2 Peter are each disputed, and each
 dispute is catalogued from both sides — Hoehner and Lincoln on Ephesians,
@@ -205,8 +217,8 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{15}\\) | 2 Peter was written by the apostle Peter | historical | Christian, historical-grammatical, disputed | [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003); 2 Pet 1:1 |
 | \\(P_{16}\\) | δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains | interpretive | critical scholarship, disputed | [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26 |
 | \\(P_{17}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
-| \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50; Luke 7:47-50 |
-| \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground ※ | interpretive | Christian, historical-grammatical, plausible | Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
+| \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | *proposed:* The plain reading of the pericope, advanced here without a verified scholarly source. The same formula means "made you well" at Luke 8:48, 17:19 and 18:42, where there is illness; at 7:50 there is none, and the saying follows "your sins are forgiven" (7:48) and the table's question "who is this who even forgives sins?" (7:49). Settled by a commentator who argues it at 7:50 — Marshall's NIGTC Luke is the first to check.; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
+| \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground | interpretive | Christian, historical-grammatical, plausible | *proposed:* The evidential reading of ὅτι in 7:47a, advanced here from the text without a verified scholarly source: 7:47b and the parable of 7:41–43 both run from forgiveness to love. Settled by a commentator who argues it — Kilgallen, "Forgiveness of Sins (Luke 7:36-50)", NovT 40 (1998) 105–116, is the first to check.; Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
 | \\(P_{20}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
 | \\(P_{21}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
 | \\(P_{22}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
@@ -218,6 +230,9 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{28}\\) | Justification is forensic only: pardon and imputation, not infusion | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2 |
 | \\(P_{29}\\) | Second Temple Judaism: in by grace, staying in by works | historical | critical scholarship, disputed | [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977) |
 | \\(P_{30}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
+| \\(P_{31}\\) | Justification is not remission of sins only, but renewal of the inward man | theological | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11 |
+| \\(P_{32}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6 |
+| \\(P_{33}\\) | The inward renewal of the justified grows as they do good works in grace | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1 |
 
 </div>
 
@@ -778,6 +793,64 @@ as a condition of salvation.
 \]
 </div>
 
+<a id="trentOnIncrease"></a>
+**`trentOnIncrease`**
+
+Trent's step from its definition to merit: if justification *is* the
+renewal of the inward man, and that renewal grows through good works, then good
+works increase justification (Session VI, ch. 10 and canon 24). Rated
+`consensus`, as `trentOnMerit` is: the Reformed deny the definition, not the
+inference, and canon 24 condemns the Reformed alternative by name — that works
+are "merely the fruits and signs of Justification obtained".
+
+```lean
+def trentOnIncrease : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef "Trent, Session VI (1547), canon 24"),
+    supporting :=
+      [Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef
+            "Trent, Session VI (1547), Decree on Justification, ch. 10")],
+    tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
+```
+
+<a id="tridentineLine"></a>
+**`tridentineLine`** — Trent (justification as renewal)
+
+**Trent's line.** From its definition of justification — the renewal of the
+inward man, not remission of sins only — and the growth of that renewal through
+good works, to merit: good works increase justification (Session VI, ch. 10,
+canon 24). The Reformed grant the growth and deny the definition, so the step
+carries the objection only as far as the definition does.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{31} \\
+\text{(2)} \quad &amp; P_{33} \\
+\text{(3)} \quad &amp; (P_{31} \land P_{33}) \rightarrow P_{30} \\[4pt]
+\vdash \quad &amp; P_{30}
+\end{aligned}
+\]
+</div>
+
+<a id="trentDefinitionSteps"></a>
+**`trentDefinitionSteps`**
+
+What Trent's definition rules out: justification as forensic only (canon 11),
+and justification as distinct from the sanctification that follows it.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{31} \rightarrow \lnot P_{28} \\
+\text{(2)} \quad &amp; P_{31} \rightarrow \lnot P_{32}
+\end{aligned}
+\]
+</div>
+
 <a id="prooftexts"></a>
 **`prooftexts`**
 
@@ -921,7 +994,7 @@ yoke in Acts.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="dominicalWithoutSozo"></a>
 **`dominicalWithoutSozo`** — Dominical strand (σῴζω at Luke 7:50)
@@ -1018,7 +1091,7 @@ on the New Perspective's behalf.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="finnish"></a>
 **`finnish`** — Finnish reading of Luther (Mannermaa)
@@ -1064,7 +1137,7 @@ shows that the two questions are independent.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="subjectiveGenitive"></a>
 **`subjectiveGenitive`** — Subjective genitive (πίστις Χριστοῦ as Christ's faithfulness)
@@ -1104,7 +1177,7 @@ of justification. Everything else in the Reformed case is granted.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="lawObservantLuke"></a>
 **`lawObservantLuke`** — Law-observant Luke (the yoke as Israel's law for gentiles)
@@ -1145,7 +1218,7 @@ apostolic strand was written against.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="criticalAuthorship"></a>
 **`criticalAuthorship`** — Reformed, with the critical view of authorship
@@ -1195,7 +1268,7 @@ leans on Romans instead.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="apocalyptic"></a>
 **`apocalyptic`** — Apocalyptic reading of Paul (Martyn, Campbell)
@@ -1251,15 +1324,39 @@ conclusion: by grace, and not by works.
 
 No premise here rests on scripture alone.
 
+<a id="tridentinePremises"></a>
+**`tridentinePremises`**
+
+Trent's premises, given the line that carries its definition to merit: four
+prooftexts it shares with the Reformed, scripture's self-consistency, what its
+definition rules out, and the step from merit to the denial of "not by works"
+(ch. 16).
+
+Not built from the Reformed lines, and that is the point: it shares four
+prooftexts with them and nothing else, so `caseOf` would misdescribe it.
+
+```lean
+def tridentinePremises : Line Claim → List (Formula Claim) :=
+  fun line =>
+    [p Claim.ephesians2_8_9,
+            p Claim.romans3_28,
+            p Claim.galatians2_16,
+            p Claim.titus3_5,
+            p Claim.scriptureSelfConsistent] ++
+          line.premises ++
+        trentDefinitionSteps ++
+      [p Claim.worksMeritIncreaseOfJustification 🡒
+          notP Claim.salvationNotByWorks]
+```
+
 <a id="tridentine"></a>
 **`tridentine`** — Tridentine (Council of Trent, Session VI)
 
-The Tridentine position: works performed in grace merit an increase of
-justification, which denies the second part of the conclusion — salvation not
-by works. Trent also denies that justification is forensic only.
-
-Not built from the lines above, and that is the point: it shares four
-prooftexts with them and nothing else, so `caseOf` would misdescribe it.
+The Tridentine position: justification is the renewal of the inward man,
+that renewal grows through good works, so works performed in grace merit an
+increase of justification — which denies the second part of the conclusion,
+salvation not by works. The same definition denies that justification is
+forensic only.
 
 <div class="testimony-math">
 \[
@@ -1269,9 +1366,12 @@ prooftexts with them and nothing else, so `caseOf` would misdescribe it.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
 \text{(5)} \quad &amp; P_{23} \\
-\text{(6)} \quad &amp; \lnot P_{28} \\
-\text{(7)} \quad &amp; P_{30} \\
-\text{(8)} \quad &amp; P_{30} \rightarrow \lnot P_{26} \\[4pt]
+\text{(6)} \quad &amp; P_{31} \\
+\text{(7)} \quad &amp; P_{33} \\
+\text{(8)} \quad &amp; (P_{31} \land P_{33}) \rightarrow P_{30} \\
+\text{(9)} \quad &amp; P_{31} \rightarrow \lnot P_{28} \\
+\text{(10)} \quad &amp; P_{31} \rightarrow \lnot P_{32} \\
+\text{(11)} \quad &amp; P_{30} \rightarrow \lnot P_{26} \\[4pt]
 \vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
@@ -1319,7 +1419,7 @@ The Reformed package without the ἔργα νόμου premise.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="reformedWithoutSozo"></a>
 **`reformedWithoutSozo`** — Reformed, minus the dominical lexical premise
@@ -1356,7 +1456,7 @@ The Reformed package without the dominical lexical premise.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="reformedWithoutWorksOfLawOrSozo"></a>
 **`reformedWithoutWorksOfLawOrSozo`** — Reformed, minus the ἔργα νόμου and σῴζω premises
@@ -1394,7 +1494,7 @@ apostolic strand is untouched.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="reformedWithoutEveryStrandsPremise"></a>
 **`reformedWithoutEveryStrandsPremise`** — Reformed, minus the ἔργα νόμου, σῴζω and yoke premises
@@ -1431,7 +1531,7 @@ genitive stays.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="reformedWithoutPistisChristouSozoOrYoke"></a>
 **`reformedWithoutPistisChristouSozoOrYoke`** — Reformed, minus the πίστις Χριστοῦ, σῴζω and yoke premises
@@ -1468,7 +1568,7 @@ theirs.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="graceAndWorksWithoutAnyLexicalPremise"></a>
 **`graceAndWorksWithoutAnyLexicalPremise`** — Grace and works, minus every lexical premise
@@ -1504,7 +1604,7 @@ The reading of Galatians as a polemic stays, and so does the answer to James.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="paulineStrandOnTheCritics"></a>
 **`paulineStrandOnTheCritics`** — Pauline strand alone, on variegated nomism
@@ -1611,7 +1711,7 @@ The Reformed package without the premises that harmonise James.
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="graceWithoutJamesHarmonisation"></a>
 **`graceWithoutJamesHarmonisation`** — Grace alone, minus the James harmonisation
@@ -1647,7 +1747,7 @@ grace, with James 2:24 left unanswered?
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 ## Arguments.SolaFide.Results — what does and does not follow
 
@@ -1702,6 +1802,7 @@ def tridentineReading : Valuation Claim :=
     match a with
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
+    | Claim.justificationDistinctFromSanctification => False
     | x => True
 ```
 
@@ -1957,8 +2058,10 @@ in faith — and sola fide still follows. Proved by weakening, like
 
 On what justification *is*, Mannermaa sides with Trent against the Reformed
 account, and on sola fide with the Reformed against Trent. This result and
-`tridentine_not_establishes` together show the two questions are independent:
-Trent's disagreement with sola fide is over merit, not over infusion.
+`tridentine_not_establishes` together show that denying the forensic account
+does not by itself deny sola fide. What Trent's denial rests on is narrower:
+that justification includes the sanctification that grows through works
+(`trent_objection_rests_on_its_definition`).
 
 ```lean
 theorem forensic_justification_not_load_bearing : Establishes finnish
@@ -2331,16 +2434,24 @@ one, is a theorem about the positions' premises (see `Testimony.Logic.Dispute`).
 ### The ratings decide nothing here
 
 Every party's weakest link is `disputed`: each Reformed strand's inference to
-faith alone is the one Trent's canon 9 denies, Trent and the apocalyptic reading
-each deny an atom (and a denial ranks at the bottom), and so on. So no rating
-blocks any attack, and the outcome is fixed entirely by who contradicts whom.
+faith alone is the one Trent's canon 9 denies, and each holds the Reformed
+distinction between justification and sanctification, which Trent anathematises;
+Trent rests on its own definition of justification, which Westminster denies;
+the apocalyptic reading denies an atom (and a denial ranks at the bottom); and
+so on. So no rating blocks any attack, and the outcome is fixed entirely by who
+contradicts whom.
 That is unlike the dispute over Isaiah 7:14, where one inference rated
 `plausible` carried the verdict.
 
 ### Who defeats whom
 
 - **Trent and each Reformed strand defeat each other.** Trent denies "not by
-  works"; each strand concludes it.
+  works"; each strand concludes it. Trent also undermines each strand: its
+  definition of justification — the renewal of the inward man — contradicts the
+  distinction between justification and sanctification that each strand holds.
+  That is where the objection comes from: with the distinction in place of the
+  definition, Trent's case no longer denies "not by works"
+  (`trent_objection_rests_on_its_definition`).
 - **The apocalyptic reading and Paul defeat each other**: it denies the objective
   genitive, and Paul concludes faith alone. **Luke and Acts defeat it**, and it
   defeats neither — it contradicts nothing they rest on.
@@ -2390,8 +2501,9 @@ much" (7:47) is the text a rival would use to make love, not faith, the ground
 of her forgiveness. The dominical case does not leave that open: it carries
 `luke7_47LoveIsEvidence` — her love is the evidence of forgiveness, not its
 ground, as 7:47b and the parable of 7:41–43 read it — as a premise of its own.
-It is cited to Scripture alone, and rated `plausible`, so it is assumed rather
-than argued for from a commentator; no party here denies it either.
+It is the library's proposal, rated `plausible`: advanced from the text, not
+argued for from a commentator. So is the σῴζω premise, and so the verdict that
+rests on both is tagged `proposed`. No party here denies either.
 
 **The parties chosen.** A dispute is over the arguments put into it. Hays's
 subjective genitive is represented through the apocalyptic reading, which holds
@@ -2406,6 +2518,25 @@ enters as three parties, one per strand, because a dispute weighs arguments
 whole: one package holding all three strands would be defeated by a
 contradiction of any one of them, and the redundancy the results prove would
 count for nothing.
+
+<a id="reformedOntology"></a>
+**`reformedOntology`**
+
+What the Reformed hold about what justification *is*, where Trent is heard:
+justification and sanctification are distinct, and sanctification follows. It
+carries no strand's conclusion — the strands reach sola fide without it — but
+it is the premise Trent's definition contradicts, so it belongs to each
+Reformed party, and Trent's attack on each lands on it as well as on "not by
+works". Not added to `reformed`, because the other packages built from it, the
+Finnish reading among them, would then hold it on their authors' behalf.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{32}
+\end{aligned}
+\]
+</div>
 
 <a id="paulineCase"></a>
 **`paulineCase`** — Sola fide from Paul (Galatians 2:16)
@@ -2428,11 +2559,12 @@ The Pauline strand, argued alone: sola fide from Galatians 2:16.
 \text{(11)} \quad &amp; P_{20} \\
 \text{(12)} \quad &amp; P_{21} \\
 \text{(13)} \quad &amp; P_{23} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
-\text{(18)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\text{(14)} \quad &amp; P_{32} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
 \vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
@@ -2460,17 +2592,18 @@ The dominical strand, argued alone: sola fide from Luke 7:50.
 \text{(10)} \quad &amp; P_{20} \\
 \text{(11)} \quad &amp; P_{21} \\
 \text{(12)} \quad &amp; P_{23} \\
-\text{(13)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
-\text{(14)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
-\text{(17)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\text{(13)} \quad &amp; P_{32} \\
+\text{(14)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(18)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
 \vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+No premise here rests on scripture alone.
 
 <a id="apostolicCase"></a>
 **`apostolicCase`** — Sola fide from Peter (Acts 15:9–11)
@@ -2491,11 +2624,12 @@ The apostolic strand, argued alone: sola fide from Peter at Jerusalem.
 \text{(9)} \quad &amp; P_{20} \\
 \text{(10)} \quad &amp; P_{21} \\
 \text{(11)} \quad &amp; P_{23} \\
-\text{(12)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
-\text{(13)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
-\text{(16)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\text{(12)} \quad &amp; P_{32} \\
+\text{(13)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(14)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(17)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
 \vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
@@ -2506,8 +2640,9 @@ No premise here rests on scripture alone.
 <a id="tridentineCase"></a>
 **`tridentineCase`** — Trent, against 'not by works'
 
-Trent, as the argument it makes: works done in grace merit an increase of
-justification, so salvation is not apart from works.
+Trent, as the argument it makes: justification is the renewal of the inward
+man, that renewal grows through good works, so works done in grace merit an
+increase of justification, and salvation is not apart from works.
 
 <div class="testimony-math">
 \[
@@ -2517,9 +2652,12 @@ justification, so salvation is not apart from works.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
 \text{(5)} \quad &amp; P_{23} \\
-\text{(6)} \quad &amp; \lnot P_{28} \\
-\text{(7)} \quad &amp; P_{30} \\
-\text{(8)} \quad &amp; P_{30} \rightarrow \lnot P_{26} \\[4pt]
+\text{(6)} \quad &amp; P_{31} \\
+\text{(7)} \quad &amp; P_{33} \\
+\text{(8)} \quad &amp; (P_{31} \land P_{33}) \rightarrow P_{30} \\
+\text{(9)} \quad &amp; P_{31} \rightarrow \lnot P_{28} \\
+\text{(10)} \quad &amp; P_{31} \rightarrow \lnot P_{32} \\
+\text{(11)} \quad &amp; P_{30} \rightarrow \lnot P_{26} \\[4pt]
 \vdash \quad &amp; \lnot P_{26}
 \end{aligned}
 \]
@@ -2688,6 +2826,75 @@ theorem tridentineCase_is_satisfiable : Satisfiable tridentineCase.premises
 -- axioms: propext, Quot.sound
 ```
 
+#### Where Trent's objection comes from
+
+Trent's objection to "not by works" is not a separate thesis about works. It
+follows from what Trent says justification *is*: the renewal of the inward man,
+not remission of sins only (ch. 7). Grant that, grant that the renewal grows as
+the justified do good works (ch. 10), and good works increase justification
+(canon 24), which denies "not by works" (ch. 16). The Reformed grant the growth
+— Westminster XIII.1 calls it sanctification — and deny the definition.
+
+<a id="tridentineCaseOnTheReformedDistinction"></a>
+**`tridentineCaseOnTheReformedDistinction`** — Trent, on the Reformed distinction
+
+Trent's case with its definition of justification exchanged for the
+Reformed distinction: everything else Trent holds, including that the renewal
+grows through good works, and justification and sanctification distinct.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{1} \\
+\text{(2)} \quad &amp; P_{2} \\
+\text{(3)} \quad &amp; P_{3} \\
+\text{(4)} \quad &amp; P_{5} \\
+\text{(5)} \quad &amp; P_{23} \\
+\text{(6)} \quad &amp; P_{33} \\
+\text{(7)} \quad &amp; (P_{31} \land P_{33}) \rightarrow P_{30} \\
+\text{(8)} \quad &amp; P_{31} \rightarrow \lnot P_{28} \\
+\text{(9)} \quad &amp; P_{31} \rightarrow \lnot P_{32} \\
+\text{(10)} \quad &amp; P_{30} \rightarrow \lnot P_{26} \\
+\text{(11)} \quad &amp; P_{32} \\[4pt]
+\vdash \quad &amp; \lnot P_{26}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="reformedDistinctionReading"></a>
+**`reformedDistinctionReading`**
+
+Trent's world, with the Reformed distinction in place of its definition: the
+renewal grows, but it is sanctification, so it increases nothing called
+justification, and salvation is not by works.
+
+```lean
+def reformedDistinctionReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.justificationIncludesSanctification => False
+    | Claim.worksMeritIncreaseOfJustification => False
+    | x => True
+```
+
+<a id="trent_objection_rests_on_its_definition"></a>
+**`trent_objection_rests_on_its_definition`**
+
+**Trent's objection rests on its definition of justification.** Keep all of
+Trent's case except its definition, grant the Reformed distinction instead,
+and "not apart from works" no longer follows — though both sides still hold
+that the renewal of the justified grows through good works. So the dispute over
+works is, at bottom, a dispute over what justification *is*: whether the
+renewal that grows is justification or the sanctification that follows it.
+
+```lean
+theorem trent_objection_rests_on_its_definition : ¬Establishes
+    tridentineCaseOnTheReformedDistinction
+-- axioms: propext, Quot.sound
+```
+
 <a id="apocalypticCase_establishes"></a>
 **`apocalypticCase_establishes`**
 
@@ -2778,7 +2985,8 @@ who contradicts whom.
 <a id="paulineCase_strength"></a>
 **`paulineCase_strength`**
 
-The Pauline case rests on its lexical premises, cited `disputed`.
+The Pauline case rests on its lexical premises, cited `disputed`, as well as
+on the Reformed distinction.
 
 ```lean
 theorem paulineCase_strength : paulineCase.strength = 0
@@ -2788,9 +2996,9 @@ theorem paulineCase_strength : paulineCase.strength = 0
 <a id="dominicalCase_strength"></a>
 **`dominicalCase_strength`**
 
-The dominical case's premises are `wellSupported` or better, except the
-reading of 7:47, which is `plausible`; its weakest link is its inference, which
-Trent's canon 9 denies.
+The dominical case rests on the Reformed distinction, cited `disputed`, and
+on an inference Trent's canon 9 denies. Its own two premises rank higher: σῴζω
+`wellSupported`, and the reading of 7:47 `plausible`.
 
 ```lean
 theorem dominicalCase_strength : dominicalCase.strength = 0
@@ -2810,7 +3018,7 @@ theorem apostolicCase_strength : apostolicCase.strength = 0
 <a id="tridentineCase_strength"></a>
 **`tridentineCase_strength`**
 
-Trent denies the forensic account, and a denial ranks at the bottom.
+Trent rests on its definition of justification, cited `disputed`.
 
 ```lean
 theorem tridentineCase_strength : tridentineCase.strength = 0
@@ -3070,6 +3278,7 @@ def trentSandersJervellReading : Valuation Claim :=
     | Claim.justificationIsForensicOnly => False
     | Claim.worksOfLawMeansWorksGenerally => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.justificationDistinctFromSanctification => False
     | x => True
 ```
 
@@ -3086,6 +3295,7 @@ def trentCriticsJervellReading : Valuation Claim :=
     | Claim.justificationIsForensicOnly => False
     | Claim.secondTempleCovenantalNomism => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.justificationDistinctFromSanctification => False
     | x => True
 ```
 
@@ -3180,6 +3390,7 @@ def trentWithoutDeliveranceReading : Valuation Claim :=
     | Claim.justificationIsForensicOnly => False
     | Claim.pistisChristouObjective => False
     | Claim.righteousnessOfGodIsDeliverance => False
+    | Claim.justificationDistinctFromSanctification => False
     | x => True
 ```
 
@@ -3196,6 +3407,7 @@ def trentWithoutFaithAloneReading : Valuation Claim :=
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
     | Claim.justificationByFaithAlone => False
+    | Claim.justificationDistinctFromSanctification => False
     | x => True
 ```
 
@@ -3426,7 +3638,7 @@ theorem apocalyptic_indefensible : ∀ (S : Set Party), Framework.Admissible
 ```
 
 <a id="dominical_case_skeptically_accepted"></a>
-**`dominical_case_skeptically_accepted`**
+**`dominical_case_skeptically_accepted`** ⚗
 
 **Sola fide from Luke 7:50 is accepted on every resolution.** Its only
 defeater is Trent, which no admissible position can hold; it defeats back the
@@ -3442,6 +3654,21 @@ again (`sola_fide_not_forced_without_the_apocalyptic_reading`). And the
 dominical case is attacked by no one but Trent because no source cited here
 argues that σῴζω at Luke 7:50 means healing, and none argues that the woman's
 love at 7:47 was the ground of her forgiveness.
+
+**Proposed, not reported.** The dominical case rests on two premises no
+scholarly work read here argues: that σῴζω at 7:50 means salvation, and that
+the woman's love at 7:47 is the evidence of her forgiveness rather than its
+ground. Both are cited as the library's proposals, from the plain reading of
+the pericope.
+
+**What is novel here.** The dominical case's two distinctive premises, and so
+the verdict that rests on them: the library advances both from the text, with
+7:47 answered in advance, and cites no one for either.
+
+**What would settle whether it is really new.** Marshall's NIGTC commentary at
+Luke 7:50, and Kilgallen, "Forgiveness of Sins (Luke 7:36-50)", *Novum
+Testamentum* 40 (1998) 105–116, at 7:47. If either argues the reading, the
+premise should be cited to it and, once both are, the tag dropped.
 
 ```lean
 theorem dominical_case_skeptically_accepted : Framework.SkepticallyAccepted

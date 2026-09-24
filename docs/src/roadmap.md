@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **85 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **86 headline results**, listed below in source order. 2 of them are marked ⚗: results this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -89,10 +89,11 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `sanders_costs_the_pauline_strand` | `¬Establishes paulineStrandOnSanders` | **And Sanders costs it.** Grant covenantal nomism, and with Dunn's inference the ἔργα νόμου premise is denied; leave Luke and Acts out, and sola fide does not follow from Paul. |
 | `james_harmonisation_is_load_bearing` | `¬Establishes reformedWithoutJamesHarmonisation` | The argument genuinely depends on answering James. |
 | `grace_needs_no_answer_to_james` | `Establishes graceWithoutJamesHarmonisation` | **But grace does not need it.** Remove the answer to James and salvation by grace still follows, from Ephesians 2:8, Romans 4:4–5 and Titus 3:5 alone. |
+| `trent_objection_rests_on_its_definition` | `¬Establishes tridentineCaseOnTheReformedDistinction` | **Trent's objection rests on its definition of justification.** Keep all of Trent's case except its definition, grant the Reformed distinction instead, and "not apart from works" … |
 | `nothing_prevails_over_sola_fide` | `Framework.grounded solaFideDispute.defeats = ∅` | **Nothing prevails outright.** Every party is defeated by some other: each Reformed strand by Trent, Trent by each strand and by the apocalyptic reading, the apocalyptic reading … |
 | `trent_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.trent ∉ S` | **Trent cannot be defended.** The apocalyptic reading defeats it — it holds "not by works" on grounds Trent does not contradict — and the only parties that defeat the apocalyptic … |
 | `apocalyptic_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.apocalyptic ∉ S` | **Nor can the apocalyptic reading.** The dominical case defeats it, and the only party that defeats the dominical case is Trent — which the apocalyptic reading itself defeats. |
-| `dominical_case_skeptically_accepted` | `Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Sola fide from Luke 7:50 is accepted on every resolution.** Its only defeater is Trent, which no admissible position can hold; it defeats back the only other party it conflicts … |
+| `dominical_case_skeptically_accepted` ⚗ | `Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Sola fide from Luke 7:50 is accepted on every resolution.** Its only defeater is Trent, which no admissible position can hold; it defeats back the only other party it conflicts … |
 | `sola_fide_not_forced_without_the_apocalyptic_reading` | `¬Framework.SkepticallyAccepted withoutApocalyptic.defeats ⟨Party.dominical, ⋯⟩` | **Without the apocalyptic reading, sola fide is no longer forced.** Trent, heard against the three Reformed strands alone, defends itself: it defeats each of them back. |
 
 ### [Sola scriptura](./arguments/sola-scriptura.md)
@@ -171,7 +172,12 @@ carries sola fide (`critics_carry_the_pauline_strand`); on Sanders' he does not
 historical one about Second Temple soteriology. And what justification *is* —
 forensic, or Christ present in faith — turns out to be a separate question
 again: the Finnish reading of Luther denies the forensic account with Trent and
-still establishes sola fide (`forensic_justification_not_load_bearing`).
+still establishes sola fide (`forensic_justification_not_load_bearing`). What
+Trent's objection does rest on is its fuller definition — justification is the
+renewal of the inward man, which grows through good works — against the
+Reformed distinction of justification from the sanctification that follows it.
+Put the distinction in its place and Trent's case no longer denies "not by
+works" (`trent_objection_rests_on_its_definition`).
 
 **Sola fide survives its rivals only because they answer each other.** Weighed
 as a dispute — the three strands argued separately, Trent, the apocalyptic
@@ -188,7 +194,9 @@ rests on an absence: no cited source argues that σῴζω at Luke 7:50 means
 healing, so nothing in the dispute attacks the dominical case but Trent. A search
 for one found none, so that premise is rated `wellSupported`; and the dominical
 case carries the Reformed reading of 7:47 — her love is the evidence of her
-forgiveness, not its ground — as a premise, cited to Scripture alone.
+forgiveness, not its ground — as a premise. No scholarly work arguing either
+premise has been read, so both are the library's proposals, and the verdict
+that rests on them is tagged `proposed` until a commentator is found.
 
 **Authorship is not a premise, and the encoding says what that costs.**
 Ephesians, Titus and 1 and 2 Peter are each disputed, and each dispute is
