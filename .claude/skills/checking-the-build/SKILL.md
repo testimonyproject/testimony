@@ -20,6 +20,7 @@ Run all four. In order.
 lake build                           # 1
 lake lint                            # 2
 lake exe axiom-audit                 # 3
+lake env leanchecker Testimony       # 3, continued: kernel replay
 python3 scripts/testimony_lint.py    # 4
 lake exe bibgen --check              # generated files
 lake exe argtex --check
@@ -60,6 +61,14 @@ If it reports `sorryAx` on a theorem you believe you proved, a tactic failed
 silently. The usual cause is `decide` on a term that does not kernel-reduce —
 for instance `List.filter` over a derived `DecidableEq (Formula α)`. Restate
 the term so it reduces; do not reach for `native_decide`, which is prohibited.
+
+**Then `lake env leanchecker Testimony`.** It replays every declaration of
+every `Testimony` module through the kernel, into the environment as it stood
+before that module — independently of the elaborator and of every tactic. The
+audit asks which axioms a proof rests on; the replay re-checks the proof. About
+seventy seconds. It is what makes a change to a proof *recipe* — such as
+`establish` moving from `tauto` to backward chaining — safe by construction: a
+tactic can fail to find a proof, but it cannot get a false one past the kernel.
 
 ### Tier 4 — `python3 scripts/testimony_lint.py`
 

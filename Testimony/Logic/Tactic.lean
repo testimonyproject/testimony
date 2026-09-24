@@ -313,6 +313,16 @@ theorem establish_proves_modus_tollens :
 /-- The reading on which `q` holds and `p` does not. -/
 def affirmingConsequentReading : Valuation Pair := fun a => a = Pair.q
 
+/-- And `establish` does not prove it. A tactic cannot make the kernel accept a
+false theorem, so this is not what keeps the library sound; it pins that the
+Horn path fails, rather than proving something vacuous, on the canonical
+invalid inference. The library-wide version of this check — `establish` fails
+on every package the library refutes — is recorded in `docs/src/logic.md`. -/
+example : True := by
+  fail_if_success
+    have : Entails (α := Pair) [p .q, p .p ➝ p .q] (p .p) := by establish
+  trivial
+
 /-- `refute_with` refutes an invalid one: affirming the consequent. -/
 theorem refute_with_refutes_affirming_the_consequent :
     ¬ Entails (α := Pair) [p .q, p .p ➝ p .q] (p .p) := by
