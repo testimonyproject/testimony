@@ -56,19 +56,6 @@ def summaryMarkdown : String :=
   String.join (arguments.map fun a =>
     "- [" ++ a.title ++ "](./arguments/" ++ a.slug ++ ".md)\n")
 
-/-- Replace the marked block of `doc` with `body`, or report why it could not
-be found. A missing marker is an error rather than an append: the page decides
-where the block goes. -/
-def splice (beginMarker endMarker doc body : String) : Except String String :=
-  match doc.splitOn beginMarker with
-  | [before, rest] =>
-    match rest.splitOn endMarker with
-    | [_, after] =>
-      .ok (before ++ beginMarker ++ "\n\n" ++ body ++ "\n" ++ endMarker ++ after)
-    | parts =>
-      .error s!"expected exactly one {endMarker}, found {parts.length - 1}"
-  | parts => .error s!"expected exactly one {beginMarker}, found {parts.length - 1}"
-
 end Testimony.Doc
 
 open Testimony.Doc
@@ -112,7 +99,8 @@ def main (args : List String) : IO UInt32 := do
     IO.eprintln s!"argdoc: {summaryPath} does not exist"
     return 1
   let summary ← IO.FS.readFile summaryPath
-  let updated ← match splice beginMarker endMarker summary summaryMarkdown with
+  let body := summaryMarkdown ++ "\n"
+  let updated ← match Testimony.Logic.Markdown.splice beginMarker endMarker summary body with
     | .error e => do IO.eprintln s!"argdoc: {summaryPath}: {e}"; return 1
     | .ok s => pure s
   let stray ← strayPages
