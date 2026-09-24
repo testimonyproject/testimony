@@ -248,6 +248,43 @@ against the publisher's own copy of the issue; the journal registers no DOI. -/
   , issue := some "2"
   , pages := some (35, 55) }
 
+/-- Calvin's commentary on John, for 6:29: faith is "a passive work, to which no
+reward can be paid", which "bestows on man no other righteousness than that which
+he receives from Christ". The Reformed reading of the Johannine strand's hinge.
+The 1847 Calvin Translation Society edition, as scanned by the Internet Archive
+and transcribed by the Christian Classics Ethereal Library. -/
+@[bib_entry] def calvinJohn : BibEntry := .book
+  { core :=
+      { key := "calvin-commentary-john-1847"
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentary on the Gospel According to John"
+      , year := some { value := 1847 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryongosp01calvuoft"
+                 (some "2026-09-24") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "1" }
+
+/-- Aquinas's lectures on John, for 6:29 (cap. 6, lect. 3, n. 901): Paul
+distinguishes faith "only from external works", and to believe *in* God as one's
+end "is proper to faith living through the love of charity". The rival reading
+of the Johannine strand's hinge. Cited by the Marietti paragraph numbers, which
+this translation keeps; the passage was read in Larcher's translation. -/
+@[bib_entry] def aquinasJohn : BibEntry := .book
+  { core :=
+      { key := "aquinas-commentary-john-2012"
+      , contributors :=
+          { authors := [.single "Thomas Aquinas"]
+          , editors := [.person "Daniel A." "Keating", .person "Matthew" "Levering"]
+          , translators := [.person "Fabian R." "Larcher", .person "James A." "Weisheipl"] }
+      , title := "Commentary on the Gospel of John, Chapters 6–12"
+      , year := some { value := 2012 }
+      , identifiers := [.isbn "9780813217741"] }
+  , publisher := "Catholic University of America Press" }
+
 /-- Moo on James, for the reading that James's target is a barren faith rather
 than Paul's doctrine of justification. -/
 @[bib_entry] def mooJames : BibEntry := .book

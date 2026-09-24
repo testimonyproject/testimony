@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **86 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **88 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -95,6 +95,8 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `apocalyptic_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.apocalyptic ∉ S` | **Nor can the apocalyptic reading.** The dominical case defeats it, and the only party that defeats the dominical case is Trent — which the apocalyptic reading itself defeats. |
 | `dominical_case_skeptically_accepted` | `Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Sola fide from Luke 7:50 is accepted on every resolution.** Its only defeater is Trent, which no admissible position can hold; it defeats back the only other party it conflicts … |
 | `sola_fide_not_forced_without_the_apocalyptic_reading` | `¬Framework.SkepticallyAccepted withoutApocalyptic.defeats ⟨Party.dominical, ⋯⟩` | **Without the apocalyptic reading, sola fide is no longer forced.** Trent, heard against the three Reformed strands alone, defends itself: it defeats each of them back. |
+| `johannine_strand_establishes` | `Establishes johannineCase` | **John alone delivers sola fide.** Grant that the believing of 6:29 is trust, and the work God requires is no work at all: sola fide follows from John without Paul, Luke or Acts. |
+| `johannine_strand_rests_on_believing_as_trust` | `¬Establishes thomistOnJohn` | **The Johannine strand rests on believing as trust.** Grant Aquinas every text the strand reads, and read their believing as he does — faith living through charity — and sola fide … |
 
 ### [Sola scriptura](./arguments/sola-scriptura.md)
 
@@ -151,6 +153,15 @@ still carry the argument (`pistisChristou_not_load_bearing`). The genitive is
 the hinge of Paul's route, not of the conclusion, and it does not follow the
 Old/New Perspective line: Dunn holds the objective genitive and the New
 Perspective together.
+
+A fourth strand, from John's Gospel, has the same shape and is encoded
+alongside the other three but not yet inside the Reformed case. "This is the
+work of God, that you believe in him whom he has sent" (John 6:29) delivers sola
+fide if its believing is trust, as Calvin reads it
+(`johannine_strand_establishes`), and not if it is faith living through
+charity, as Aquinas reads it (`johannine_strand_rests_on_believing_as_trust`).
+Folding it into the Reformed case changes every joint result above, so it is a
+step of its own ([#86]).
 
 **Sola fide's rivals deny different parts of it.** The conclusion is three
 atoms — by grace, not by works, through faith — because a single atom could not
@@ -507,6 +518,7 @@ the rest worth reading.
 [#9]: https://github.com/testimonyproject/testimony/issues/9
 [#10]: https://github.com/testimonyproject/testimony/issues/10
 [#11]: https://github.com/testimonyproject/testimony/issues/11
+[#86]: https://github.com/testimonyproject/testimony/issues/86
 [issues]: https://github.com/testimonyproject/testimony/issues
 [label-roadmap]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Aroadmap
 [label-infra]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Ainfra

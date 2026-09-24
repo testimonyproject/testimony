@@ -195,6 +195,30 @@ more. -/
 the one who is forgiven little loves little." -/
 @[nolint defsWithUnderscore] def luke7_47 : Passage := ⟨.luke, 7, 47⟩
 
+/-- John 3:16–18 — whoever believes in the Son has eternal life; whoever does not
+believe is condemned already. -/
+@[nolint defsWithUnderscore] def john3_16to18 : Pericope := ⟨.john, 3, 16, 3, 18⟩
+
+/-- John 3:36 — whoever believes in the Son has eternal life; whoever does not
+obey (ἀπειθῶν) the Son shall not see life. -/
+@[nolint defsWithUnderscore] def john3_36 : Passage := ⟨.john, 3, 36⟩
+
+/-- John 5:24 — whoever hears Jesus' word and believes has eternal life and does
+not come into judgement. -/
+@[nolint defsWithUnderscore] def john5_24 : Passage := ⟨.john, 5, 24⟩
+
+/-- John 6:28–29 — "What must we do, to be doing the works of God?" — "This is
+the work of God, that you believe in him whom he has sent." -/
+@[nolint defsWithUnderscore] def john6_28to29 : Pericope := ⟨.john, 6, 28, 6, 29⟩
+
+/-- John 6:29 — "This is the work of God, that you believe in him whom he has
+sent." -/
+@[nolint defsWithUnderscore] def john6_29 : Passage := ⟨.john, 6, 29⟩
+
+/-- John 20:31 — the Gospel's stated purpose: that believing, you may have life
+in his name. -/
+@[nolint defsWithUnderscore] def john20_31 : Passage := ⟨.john, 20, 31⟩
+
 /-- Luke 7:47–50 — the saying in its context, following the declaration that
 her sins are forgiven rather than a healing. This is what makes 7:50 the strong
 case for the soteriological sense of σῴζω. -/

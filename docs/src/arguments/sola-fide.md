@@ -68,6 +68,16 @@ premises are about different texts, and logically independent; they are not
 dialectically independent, since a reader who takes ἔργα νόμου as boundary
 markers will read the yoke the same way.
 
+**A Johannine strand** is encoded alongside, but not yet inside, the Reformed
+case (`Johannine.lean`). Asked what they must do "to be doing the works of God",
+the crowd is told: "This is the work of God, that you believe in him whom he has
+sent" (John 6:28–29). Calvin reads that believing as trust, which "brings
+nothing to God"; Aquinas as faith living through charity, the principle of good
+works. John alone delivers sola fide on Calvin's reading
+(`johannine_strand_establishes`) and not on Aquinas's
+(`johannine_strand_rests_on_believing_as_trust`). It is not yet one of the
+strands of `reformed`, so what follows about three strands is still exact.
+
 Encoding three strands yields a result no single strand could: no disputed
 premise is load-bearing on its own, because any strand carries the conclusion
 without the others. What is load-bearing is a disjunction — both Pauline
@@ -165,6 +175,7 @@ Luke 7:50 means healing, or that her love at 7:47 earned her forgiveness;
 | `Packages.lean` | the positions, and the variants that remove a named premise |
 | `Results.lean` | every `@[headline]` result, with its trust base |
 | `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
+| `Johannine.lean` | the Johannine strand and Aquinas's rival reading, encoded alone |
 
 ## Arguments.SolaFide.Atoms — the atomic claims
 
@@ -236,6 +247,10 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{31}\\) | Justification is not remission of sins only, but renewal of the inward man | theological | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11 |
 | \\(P_{32}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6 |
 | \\(P_{33}\\) | The inward renewal of the justified grows as they do good works in grace | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1 |
+| \\(P_{34}\\) | John 6:28–29 — the work God requires is that you believe in him whom he sent | textual | Christian, historical-grammatical, consensus | John 6:28-29; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901 |
+| \\(P_{35}\\) | John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son ※ | textual | Christian, historical-grammatical, consensus | John 3:16-18; John 3:36; John 5:24; John 20:31 |
+| \\(P_{36}\\) | The believing of John 6:29 is trust, which brings nothing and receives Christ | interpretive | Reformed Protestant, disputed | [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29 |
+| \\(P_{37}\\) | The believing of John 6:29 is faith living through charity, the source of works | interpretive | Roman Catholic, disputed | [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 |
 
 </div>
 
@@ -3709,4 +3724,272 @@ theorem sola_fide_not_forced_without_the_apocalyptic_reading :
     ¬Framework.SkepticallyAccepted withoutApocalyptic.defeats
     ⟨Party.dominical, ⋯⟩
 -- axioms: propext, Classical.choice, Quot.sound
+```
+
+## Arguments.SolaFide.Johannine — "this is the work of God, that you believe"
+
+A fourth strand for sola fide, from John's Gospel, encoded on its own. Asked
+what they must do "to be doing the works of God", the crowd is told: "This is
+the work of God, that you believe in him whom he has sent" (John 6:28–29). The
+question of works is put to Jesus in terms, and he answers with believing. The
+Gospel says the same throughout: eternal life, and passing out of judgement,
+through believing in the Son (3:16–18, 3:36, 5:24), and it states its own
+purpose in those terms (20:31).
+
+### The hinge: what believing is
+
+Both sides grant the verse. What divides them is what its believing is.
+
+- **Calvin** reads it as trust. Christ calls faith a work only improperly:
+  faith "brings nothing to God, but, on the contrary, places man before God as
+  empty and poor, that he may be filled with Christ", and "bestows on man no
+  other righteousness than that which he receives from Christ". It is "a
+  passive work, to which no reward can be paid".
+- **Aquinas** reads it as faith formed by charity. Paul distinguishes faith
+  "only from external works"; to believe *in* him (*in illum*), as one's end,
+  "is proper to faith living through the love of charity", and faith so living
+  "is the principle of all our good works" (*Super Ioannem* 6, lect. 3, n. 901).
+  That is Trent's account of justifying faith (Session VI, ch. 7): faith
+  without hope and charity "neither unites man perfectly with Christ, nor makes
+  him a living member of His body".
+
+So the strand has the same shape as the others: shared texts, and a reading on
+which everything turns. Grant Aquinas his reading and the texts no longer
+deliver faith alone (`johannine_strand_rests_on_believing_as_trust`).
+
+### John has no word for justification
+
+δικαιόω does not occur in John. The strand's step therefore runs from eternal
+life through believing to justification by faith alone, and that is an
+inference, not a reading of a word. It is cited to Calvin, whose comment on 6:29
+speaks of the righteousness faith receives from Christ, and rated `plausible`:
+no cited source grants the strand's grounds and denies that step, but none argues
+the bridge from John's vocabulary to Paul's at length either.
+
+### What is not yet done
+
+The strand is encoded alone, as a package of its own. It is **not** yet part of
+`reformed` or of the sola fide dispute, and that is deliberate. Adding a fourth
+strand to `reformed` changes the joint results — no premise removed from the
+other three strands defeats sola fide while John's strand stands — and a
+Johannine party in `Dispute.lean` changes the defeat table. Both are the next
+step, tracked in issue #86, and every statement elsewhere that sola fide "runs
+on three strands" remains true of `reformed` until then.
+
+Nor does it encode the obedience reading of 3:36, where the opposite of the one
+who believes is the one who "does not obey" (ἀπειθῶν): no source arguing that
+Johannine faith therefore includes obedience has been verified yet.
+
+#### The lines
+
+<a id="calvinOnJohnSix"></a>
+**`calvinOnJohnSix`**
+
+Calvin's step from John to justification. John has no δικαιόω, so the
+bridge from eternal life through believing to justification by faith alone is
+an inference of its own. Rated `plausible`: no cited source grants the strand's
+grounds and denies the step, but the bridge rests on Calvin's comment rather
+than on an argument from John's vocabulary.
+
+```lean
+def calvinOnJohnSix : Source :=
+  {
+    primary :=
+      Reference.work Bib.calvinJohn (Bib.Locus.adLoc Scripture.john6_29),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.plausible }
+```
+
+<a id="aquinasOnFormedFaith"></a>
+**`aquinasOnFormedFaith`**
+
+Aquinas's step: faith living through charity is not bare trust. Rated
+`consensus`: Calvin concedes it — his trust is precisely a faith that brings
+nothing — and the two divide over the premise, not the inference.
+
+```lean
+def aquinasOnFormedFaith : Source :=
+  {
+    primary :=
+      Reference.work Bib.aquinasJohn
+        (Bib.Locus.sectionRef "cap. 6, lect. 3, n. 901"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
+```
+
+<a id="johannineToFaithAlone"></a>
+**`johannineToFaithAlone`**
+
+**The Johannine strand.** From the work God requires (6:28–29), and eternal
+life through believing (3:16–18, 3:36, 5:24, 20:31), to justification by faith
+alone — by way of the reading of that believing as trust.
+
+<div class="testimony-math">
+\[
+(P_{34} \land P_{35} \land P_{36}) \rightarrow P_{24}
+\]
+</div>
+
+<a id="johannineLine"></a>
+**`johannineLine`** — Johannine strand (John 6:29)
+
+The Johannine line. Its texts are its own grounds, not shared prooftexts,
+because the strand is not yet part of `reformed`.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{34} \\
+\text{(2)} \quad &amp; P_{35} \\
+\text{(3)} \quad &amp; P_{36} \\
+\text{(4)} \quad &amp; (P_{34} \land P_{35} \land P_{36}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
+\end{aligned}
+\]
+</div>
+
+<a id="thomistLine"></a>
+**`thomistLine`** — Faith formed by charity (Aquinas on John 6:29)
+
+**Aquinas's line.** The believing of 6:29 is faith living through charity,
+and so not the bare trust the strand needs. The denial is derived, not assumed:
+it follows from Aquinas's own reading of the verse.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{37} \\
+\text{(2)} \quad &amp; P_{37} \rightarrow \lnot P_{36} \\[4pt]
+\vdash \quad &amp; \lnot P_{36}
+\end{aligned}
+\]
+</div>
+
+#### The packages
+
+<a id="johannineCase"></a>
+**`johannineCase`** — Sola fide from John (6:28–29)
+
+Sola fide from John alone: the Johannine line, with the grounds and closing
+steps every Reformed strand shares.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{34} \\
+\text{(2)} \quad &amp; P_{35} \\
+\text{(3)} \quad &amp; P_{36} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{17} \\
+\text{(10)} \quad &amp; P_{9} \\
+\text{(11)} \quad &amp; P_{20} \\
+\text{(12)} \quad &amp; P_{21} \\
+\text{(13)} \quad &amp; P_{23} \\
+\text{(14)} \quad &amp; (P_{34} \land P_{35} \land P_{36}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(18)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+<a id="thomistOnJohn"></a>
+**`thomistOnJohn`** — Aquinas on John 6:29 (faith formed by charity)
+
+Aquinas on John: every text the Johannine strand reads, and every shared
+ground, with its believing read as faith formed by charity. The rival the strand
+is written against.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{34} \\
+\text{(2)} \quad &amp; P_{35} \\
+\text{(3)} \quad &amp; P_{37} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{17} \\
+\text{(10)} \quad &amp; P_{9} \\
+\text{(11)} \quad &amp; P_{20} \\
+\text{(12)} \quad &amp; P_{21} \\
+\text{(13)} \quad &amp; P_{23} \\
+\text{(14)} \quad &amp; (P_{34} \land P_{35} \land P_{36}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; P_{37} \rightarrow \lnot P_{36} \\
+\text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+#### Results
+
+<a id="johannine_strand_establishes"></a>
+**`johannine_strand_establishes`**
+
+**John alone delivers sola fide.** Grant that the believing of 6:29 is
+trust, and the work God requires is no work at all: sola fide follows from John
+without Paul, Luke or Acts.
+
+```lean
+theorem johannine_strand_establishes : Establishes johannineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="thomistReading"></a>
+**`thomistReading`**
+
+Aquinas's world: every text holds, and the believing of 6:29 is faith living
+through charity — so not bare trust, not faith alone, and salvation is not
+received through faith alone. Grace and "not by works" still hold: Aquinas
+excludes external works, and grants that faith is God's gift.
+
+```lean
+def thomistReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.johannineBelievingIsTrust => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.salvationThroughFaith => False
+    | x => True
+```
+
+<a id="johannine_strand_rests_on_believing_as_trust"></a>
+**`johannine_strand_rests_on_believing_as_trust`**
+
+**The Johannine strand rests on believing as trust.** Grant Aquinas every
+text the strand reads, and read their believing as he does — faith living
+through charity — and sola fide no longer follows. So John's Gospel, like
+Paul's Galatians and Luke's σῴζω, carries the conclusion only through a reading:
+here, of what it is to believe *in* him.
+
+```lean
+theorem johannine_strand_rests_on_believing_as_trust : ¬Establishes
+    thomistOnJohn
+-- axioms: propext, Quot.sound
+```
+
+<a id="johannineCase_is_satisfiable"></a>
+**`johannineCase_is_satisfiable`**
+
+The Johannine case has a model, so `johannine_strand_establishes` is not
+vacuous.
+
+```lean
+theorem johannineCase_is_satisfiable : Satisfiable johannineCase.premises
+-- axioms: propext, Quot.sound
 ```

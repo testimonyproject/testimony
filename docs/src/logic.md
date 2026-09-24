@@ -155,10 +155,10 @@ after the axiom audit. The audit
 itself reports every `Establishes` result resting on `propext` and `Quot.sound`
 at most — no `sorryAx`, no `Classical.choice`.
 
-**It proves nothing the library refutes.** For each of the 27 results of the
+**It proves nothing the library refutes.** For each of the 28 results of the
 form `¬ Establishes pkg`, `establish` was run on `pkg` with the refutation's own
 unfolding list, which reduces the premises to atoms, so a failure is the
-entailment failing and not a definition left folded. All 27 fail, each with
+entailment failing and not a definition left folded. All 28 fail, each with
 `horn_close`'s message, and nothing else fails. `Tactic.lean` pins the same
 check on affirming the consequent, the canonical invalid inference.
 
