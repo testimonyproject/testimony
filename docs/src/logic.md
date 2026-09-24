@@ -143,10 +143,11 @@ differences are four additions: the syntax of `establish_by_search`,
 `establish_by_search_proves_cases`. So every result states what it stated
 before, over the same definitions; only proof terms changed.
 
-**The kernel re-checks every proof.** `lake env leanchecker Testimony` replays
-every declaration of all 53 `Testimony` modules through the kernel, into the
-environment as it stood before each module, independently of the elaborator and
-of every tactic. It passes, and now runs in CI after the axiom audit. The audit
+**The kernel re-checks every proof.** `scripts/kernel-replay.sh` runs
+`leanchecker`, which replays every declaration of all 53 `Testimony` modules
+through the kernel, into the environment as it stood before each module,
+independently of the elaborator and of every tactic. It passes, and runs in CI
+after the axiom audit. The audit
 itself reports every `Establishes` result resting on `propext` and `Quot.sound`
 at most — no `sorryAx`, no `Classical.choice`.
 
