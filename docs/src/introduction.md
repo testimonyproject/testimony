@@ -52,15 +52,16 @@ and see whether the argument survives.
 ```lean
 theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw
 theorem lexical_premises_jointly_load_bearing :
-    ¬ Establishes reformedWithoutEitherLexicalPremise
+    ¬ Establishes reformedWithoutEveryStrandsPremise
 ```
 
-That last pair is the most useful thing the library does. Sola fide runs on two
-independent strands — Paul's ἔργα νόμου and Jesus' "your faith has saved you"
-at Luke 7:50 — so neither lexical premise carries it alone. An opponent must
-defeat both. The virgin-birth argument began with a single strand, where
-defeating עַלְמָה defeated it outright; it now runs on four, and no single
-interpretive hinge is load-bearing — only all four jointly.
+That last pair is the most useful thing the library does. Sola fide runs on
+three independent strands — Paul's ἔργα νόμου, Jesus' "your faith has saved
+you" at Luke 7:50, and Peter's refusal of the law's yoke at Acts 15:10 — so no
+strand's disputed premise carries it alone. An opponent must defeat all three.
+The virgin-birth argument began with a single strand, where defeating עַלְמָה
+defeated it outright; it now runs on four, and no single interpretive hinge is
+load-bearing — only all four jointly.
 
 Which argument has which shape is a fact about the encodings rather than a
 matter of emphasis, and the [roadmap](./roadmap.md) lists every result the

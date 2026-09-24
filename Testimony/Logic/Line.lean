@@ -6,7 +6,7 @@ import Testimony.Logic.Package
 An argument is not a heap of premises. It is a small number of *lines of
 reason*, each resting on its own grounds, each licensed by its own inference
 step, converging on a shared conclusion. `BornOfAVirgin` runs on four; `SolaFide`
-on two. Before this module the structure was real but implicit: it lived in the
+on three. Before this module the structure was real but implicit: it lived in the
 module docstring and in the order of a twenty-one element premise list, and
 every variant package restated the whole list to change one entry.
 

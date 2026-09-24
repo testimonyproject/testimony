@@ -12,8 +12,10 @@ part over what Paul's ἔργα νόμου denotes; Dunn and Hays part over the 
 in πίστις Χριστοῦ; the apocalyptic reading parts from both.
 
 `baseCite` carries the default citation of every atom; `reformedCite`,
-`newPerspectiveCite`, `subjectiveGenitiveCite` and `apocalypticCite` each
-override the one atom where their position parts from it. That is the
+`newPerspectiveCite`, `subjectiveGenitiveCite`, `apocalypticCite` and
+`lawObservantLukeCite` each override the one atom where their position parts
+from it, and `criticalAuthorshipCite` the four atoms on who wrote the disputed
+letters. That is the
 disagreement made mechanical: it shows up as a difference in the generated
 manifest rather than as a remark in a docstring.
 -/
@@ -28,9 +30,20 @@ the New Perspective denies it; see `newPerspectiveCite`. -/
 def reformedWorksOfLawSource : Source :=
   { primary := .work calvinInstitutes (.sectionRef "III.xi.19")
   , supporting :=
-      [ .work gathercoleWhereIsBoasting .whole
+      [ .work westerholmPerspectives .whole
+      , .work dasPaulLawCovenant .whole
+      , .work gathercoleWhereIsBoasting .whole
       , .work carsonVariegatedNomism1 .whole
-      , .work piperFutureOfJustification .whole ]
+      , .work piperFutureOfJustification .whole
+        -- Where Paul sets grace against works with no law in view (Romans
+        -- 4:4–5, 9:11–12, 11:6), and where he and James treat the law as a
+        -- whole kept or broken entire (Galatians 3:10, 5:3; James 2:10).
+        -- Romans is undisputed; this is why the premise leans on it rather
+        -- than on Ephesians 2:9.
+      , .scripture
+          [ { ref := .range ⟨.romans, 9, 11, 9, 12⟩ }, { ref := .verse ⟨.romans, 11, 6⟩ }
+          , { ref := .verse ⟨.galatians, 3, 10⟩ }, { ref := .verse ⟨.galatians, 5, 3⟩ }
+          , { ref := .verse ⟨.james, 2, 10⟩ } ] ]
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
@@ -40,7 +53,13 @@ def baseCite : Claim → AtomMeta
   | .ephesians2_8_9 =>
     { label := "Ephesians 2:8–9 teaches salvation by grace through faith, not of works"
     , kind := .textual
-    , source := scriptureWithCalvin [{ ref := .range ⟨.ephesians, 2, 8, 2, 9⟩ }] "III.xi.7" }
+      -- What the text teaches does not depend on who wrote it; whether it is
+      -- evidence of *Paul's* usage does. See `ephesiansIsPauline`.
+    , source :=
+        let s := scriptureWithCalvin [{ ref := .range ⟨.ephesians, 2, 8, 2, 9⟩ }] "III.xi.7"
+        { s with
+          supporting :=
+            s.supporting ++ [.work lincolnEphesians (.adLoc ⟨.ephesians, 2, 9⟩)] } }
   | .romans3_28 =>
     { label := "Romans 3:28 teaches justification by faith apart from works of the law"
     , kind := .textual
@@ -82,9 +101,74 @@ def baseCite : Claim → AtomMeta
             .scripture
               [ { ref := .range ⟨.galatians, 2, 3, 2, 5⟩ }
               , { ref := .range ⟨.galatians, 5, 2, 5, 4⟩ } ]
-        , supporting := [.work martynGalatians (.adLoc ⟨.galatians, 5, 2⟩)]
+        , supporting :=
+            [ .work martynGalatians (.adLoc ⟨.galatians, 5, 2⟩)
+            , .work mooGalatians (.adLoc ⟨.galatians, 5, 2⟩)
+              -- Luke reports the same demand, refused at Jerusalem by Peter and
+              -- James (Acts 15:1, 15:5, 15:19).
+            , .scripture
+                [ { ref := .verse ⟨.acts, 15, 1⟩ }, { ref := .verse ⟨.acts, 15, 5⟩ }
+                , { ref := .verse ⟨.acts, 15, 19⟩ } ]
+            , .work bruceActs (.adLoc ⟨.acts, 15, 1⟩) ]
         , tradition := .criticalScholarship
         , confidence := .wellSupported } }
+  | .acts15_9_11 =>
+    { label := "Acts 15:9–11 — Peter: hearts cleansed by faith; saved through grace"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.acts, 15, 9, 15, 11⟩ }]
+        , supporting := [.work bruceActs (.adLoc ⟨.acts, 15, 9⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .acts15YokeIsLawAsCondition =>
+    { label := "The yoke refused at Acts 15:10 is the whole law as a condition of salvation"
+    , kind := .interpretive
+      -- Galatians 5:1 calls the same thing a "yoke of slavery". James 2:10,
+      -- like Galatians 3:10 and 5:3, treats the law as a whole that is kept
+      -- or broken entire, which is why the yoke is the whole law.
+    , source :=
+        { primary := .work bruceActs (.adLoc ⟨.acts, 15, 10⟩)
+        , supporting :=
+            [ .scripture
+                [ { ref := .verse ⟨.acts, 15, 10⟩ }, { ref := .verse ⟨.galatians, 5, 1⟩ }
+                , { ref := .verse ⟨.james, 2, 10⟩ } ]
+            , .work dasPaulLawCovenant .whole ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .ephesiansIsPauline =>
+    { label := "Ephesians was written by Paul"
+    , kind := .historical
+    , source :=
+        { primary := .work hoehnerEphesians .whole
+        , supporting := [.scripture [{ ref := .verse ⟨.ephesians, 1, 1⟩ }]]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .titusIsPauline =>
+    { label := "Titus was written by Paul"
+    , kind := .historical
+    , source :=
+        { primary := .work mouncePastorals .whole
+        , supporting := [.scripture [{ ref := .verse ⟨.titus, 1, 1⟩ }]]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .firstPeterIsPetrine =>
+    { label := "1 Peter was written by the apostle Peter"
+    , kind := .historical
+    , source :=
+        { primary := .work jobesFirstPeter .whole
+        , supporting :=
+            [ .work schreinerPeterJude .whole
+            , .scripture [{ ref := .verse ⟨.firstPeter, 1, 1⟩ }] ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .secondPeterIsPetrine =>
+    { label := "2 Peter was written by the apostle Peter"
+    , kind := .historical
+    , source :=
+        { primary := .work schreinerPeterJude .whole
+        , supporting := [.scripture [{ ref := .verse ⟨.secondPeter, 1, 1⟩ }]]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
   | .righteousnessOfGodIsDeliverance =>
     { label := "δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains"
     , kind := .interpretive
@@ -102,6 +186,7 @@ def baseCite : Claim → AtomMeta
   | .titus3_5 =>
     { label := "Titus 3:5 teaches that God saved us not by works done in righteousness"
     , kind := .textual
+      -- As Ephesians 2:8–9: see `titusIsPauline`.
     , source := scriptureWithCalvin [{ ref := .verse ⟨.titus, 3, 5⟩ }] "III.xiv.5" }
   | .luke7_50FaithHasSavedYou =>
     { label := "Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven"
@@ -156,7 +241,13 @@ def baseCite : Claim → AtomMeta
   | .scriptureSelfConsistent =>
     { label := "Scripture does not contradict itself"
     , kind := .theological
-    , source := calvinHolds "I.vii" }
+      -- 2 Peter 3:15–16 counts Paul's letters among "the other Scriptures",
+      -- one apostolic writer reading another as consistent with scripture.
+    , source :=
+        { calvinHolds "I.vii" with
+          supporting :=
+            [ .scripture [{ ref := .range ⟨.secondPeter, 3, 15, 3, 16⟩ }]
+            , .work schreinerPeterJude (.adLoc ⟨.secondPeter, 3, 16⟩) ] } }
   | .justificationByFaithAlone =>
     { label := "Justification is by faith alone"
     , kind := .theological
@@ -165,11 +256,21 @@ def baseCite : Claim → AtomMeta
       -- words mean, which a propositional atom cannot hold.
     , source :=
         { calvinHolds "III.xi.1" with
-          supporting := [.work mannermaaChristPresentInFaith .whole] } }
+          supporting :=
+            [ .work schreinerFaithAlone .whole
+            , .work mannermaaChristPresentInFaith .whole ] } }
   | .salvationByGraceThroughFaithNotWorks =>
     { label := "Salvation is by grace through faith, and not by works"
     , kind := .theological
-    , source := calvinHolds "III.xi–xviii" }
+      -- 1 Peter: believers are "guarded through faith for a salvation" (1:5),
+      -- ransomed "not with perishable things" but by Christ's blood (1:18–19).
+    , source :=
+        { calvinHolds "III.xi–xviii" with
+          supporting :=
+            [ .scripture
+                [ { ref := .range ⟨.firstPeter, 1, 3, 1, 5⟩ }
+                , { ref := .range ⟨.firstPeter, 1, 18, 1, 19⟩ } ]
+            , .work jobesFirstPeter (.adLoc ⟨.firstPeter, 1, 5⟩) ] } }
   | .worksMeritIncreaseOfJustification =>
     { label := "Works performed in grace merit an increase of justification"
     , kind := .theological
@@ -220,6 +321,61 @@ def subjectiveGenitiveCite : Claim → AtomMeta
     , source :=
         { primary := .work haysFaithOfJesusChrist .whole
         , supporting := [.scripture [{ ref := .verse ⟨.galatians, 2, 16⟩ }]]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | c => baseCite c
+
+/-- Jervell's reading of Luke-Acts: what Acts 15 withholds from gentiles is
+Israel's law as a mark of belonging, and the law is not refused as a means of
+salvation. Everything else as `baseCite`. -/
+def lawObservantLukeCite : Claim → AtomMeta
+  | .acts15YokeIsLawAsCondition =>
+    { label := "The yoke of Acts 15:10 is Israel's law laid on gentiles, not the law as such"
+    , kind := .interpretive
+    , source :=
+        { primary := .work jervellLukePeopleOfGod .whole
+        , supporting := [.scripture [{ ref := .range ⟨.acts, 15, 19, 15, 21⟩ }]]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | c => baseCite c
+
+/-- The critical view of authorship: Ephesians and Titus are not by Paul, and
+1 and 2 Peter not by Peter. Each atom is cited to a scholar who holds that view
+of that letter, with Ehrman for the case across all four. Marshall's mediating
+view of the Pastorals — written by Paul's circle after his death, without
+intent to deceive — is cited with the critical side, because it too denies that
+Paul wrote Titus. -/
+def criticalAuthorshipCite : Claim → AtomMeta
+  | .ephesiansIsPauline =>
+    { label := "Ephesians was written by a follower of Paul, not by Paul"
+    , kind := .historical
+    , source :=
+        { primary := .work lincolnEphesians .whole
+        , supporting := [.work ehrmanForgery .whole]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | .titusIsPauline =>
+    { label := "Titus was written in Paul's name after his death"
+    , kind := .historical
+    , source :=
+        { primary := .work dibeliusConzelmannPastorals .whole
+        , supporting := [.work marshallPastorals .whole, .work ehrmanForgery .whole]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | .firstPeterIsPetrine =>
+    { label := "1 Peter was written in Peter's name by another"
+    , kind := .historical
+    , source :=
+        { primary := .work achtemeierFirstPeter .whole
+        , supporting := [.work ehrmanForgery .whole]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | .secondPeterIsPetrine =>
+    { label := "2 Peter is a testament written in Peter's name after his death"
+    , kind := .historical
+    , source :=
+        { primary := .work bauckhamJude2Peter .whole
+        , supporting := [.work ehrmanForgery .whole]
         , tradition := .criticalScholarship
         , confidence := .disputed } }
   | c => baseCite c

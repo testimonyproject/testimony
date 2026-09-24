@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **71 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **74 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -73,11 +73,14 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `reformed_establishes` | `Establishes reformed` | Given the Reformed premises, the conclusion follows. |
 | `newPerspective_establishes` | `Establishes newPerspective` | **The New Perspective establishes it too.** Dunn and Wright reject the traditional reading of ἔργα νόμου; they do not reject justification by faith. |
 | `tridentine_not_establishes` | `¬Establishes tridentine` | The Tridentine premises do not establish the conclusion — they entail its negation. |
-| `worksOfLaw_not_load_bearing` | `Establishes reformedWithoutWorksOfLaw` | The ἔργα νόμου premise is **not** load-bearing on its own: strip it and the dominical strand still carries the argument. |
-| `sozo_not_load_bearing` | `Establishes reformedWithoutSozo` | Nor is the dominical lexical premise: strip it and the Pauline strand still carries the argument. |
-| `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEitherLexicalPremise` | **The result worth having.** Neither the ἔργα νόμου premise nor the dominical premise carries the argument alone, but their *disjunction* does: remove both and sola fide no longer … |
-| `pistisChristou_not_load_bearing` | `Establishes subjectiveGenitive` | **The objective genitive is not load-bearing for sola fide as a whole.** Grant Hays that πίστις Χριστοῦ is Christ's own faithfulness, keep everything else, and the conclusion … |
-| `pistisChristou_and_sozo_jointly_load_bearing` | `¬Establishes reformedWithoutPistisChristouOrSozo` | **Within the Pauline strand, faith in Christ is load-bearing.** Deny the objective genitive and the dominical premise, keep the ἔργα νόμου premise and the reading of Galatians as … |
+| `worksOfLaw_not_load_bearing` | `Establishes reformedWithoutWorksOfLaw` | The ἔργα νόμου premise is **not** load-bearing on its own: strip it and the other strands still carry the argument. |
+| `sozo_not_load_bearing` | `Establishes reformedWithoutSozo` | Nor is the dominical lexical premise: strip it and the other strands still carry the argument. |
+| `apostolic_strand_survives_paul_and_luke` | `Establishes reformedWithoutWorksOfLawOrSozo` | **The two disputes that used to decide the argument no longer do.** Deny both the ἔργα νόμου premise and the dominical premise — the pair whose joint removal defeated sola fide … |
+| `pistisChristou_not_load_bearing` | `Establishes subjectiveGenitive` | The objective genitive is not load-bearing for sola fide as a whole. |
+| `acts15Yoke_not_load_bearing` | `Establishes lawObservantLuke` | **Nor is the yoke.** Grant Jervell that the yoke of Acts 15:10 is Israel's law laid on gentiles, not the law as a condition of salvation, keep everything else, and the conclusion … |
+| `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEveryStrandsPremise` | **The result worth having.** No strand's disputed premise carries the argument alone, but together they do: remove the ἔργα νόμου premise from Paul, σῴζω from Luke and the yoke … |
+| `pistisChristou_jointly_load_bearing` | `¬Establishes reformedWithoutPistisChristouSozoOrYoke` | **Within the Pauline strand, faith in Christ is load-bearing.** Deny the objective genitive, and the disputed premise of each other strand, keep the ἔργα νόμου premise and the … |
+| `authorship_not_load_bearing` | `Establishes criticalAuthorship` | **Authorship is not load-bearing.** Grant every critical conclusion — that Ephesians and Titus are not by Paul, and 1 and 2 Peter not by Peter — and the conclusion still follows. |
 | `apocalyptic_not_establishes` | `¬Establishes apocalyptic` | **The apocalyptic reading does not establish sola fide.** It denies the premise the conclusion's "through faith" depends on — that faith is the condition of justification — while … |
 | `james_harmonisation_is_load_bearing` | `¬Establishes reformedWithoutJamesHarmonisation` | The argument genuinely depends on answering James. |
 
@@ -109,23 +112,42 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- END GENERATED: lake exe statusgen -->
 
-Eight findings emerged that were not designed for.
+Nine findings emerged that were not designed for.
 
-**Redundancy defeats a lexical dispute.** Sola fide runs on two independent
-strands — Paul's ἔργα νόμου and Jesus' σέσωκέν σε at Luke 7:50 — and neither
-lexical premise carries the argument alone. Only their disjunction does. An
-opponent must defeat both readings, not either.
+**Redundancy defeats a lexical dispute.** Sola fide runs on three independent
+strands — Paul's ἔργα νόμου, Jesus' σέσωκέν σε at Luke 7:50, and Peter's refusal
+of the law's "yoke" at the Jerusalem council (Acts 15:10) — and no strand's
+disputed premise carries the argument alone. Only their disjunction does. An
+opponent must defeat all three readings, not one.
 
-The πίστις Χριστοῦ dispute was expected to add a third strand, and did not.
+Before Acts 15 was encoded the argument had two strands, and defeating Paul's
+reading and Luke's together defeated it. That is no longer true, and the change
+is recorded as a result rather than left to be inferred from the old one's
+absence: `apostolic_strand_survives_paul_and_luke`. The apostolic premise is
+logically independent of the Pauline one but not dialectically: a reader who
+takes ἔργα νόμου as Israel's boundary markers will read Peter's yoke the same
+way, as Jervell does. The encoding cannot make that reader answer twice; it
+does show that there are two texts to answer.
+
+The πίστις Χριστοῦ dispute was expected to add a strand of its own, and did not.
 Every text where the phrase occurs sets it against νόμος, so a route through the
 genitive still passes through what ἔργα νόμου denotes. Encoded honestly, it is a
 second disputed premise *inside* the Pauline strand. Deny it together with the
-dominical premise and sola fide fails
-(`pistisChristou_and_sozo_jointly_load_bearing`); deny it alone and Luke 7:50
-still carries the argument (`pistisChristou_not_load_bearing`). The genitive is
+other strands' premises and sola fide fails
+(`pistisChristou_jointly_load_bearing`); deny it alone and the other strands
+still carry the argument (`pistisChristou_not_load_bearing`). The genitive is
 the hinge of Paul's route, not of the conclusion, and it does not follow the
 Old/New Perspective line: Dunn holds the objective genitive and the New
 Perspective together.
+
+**Authorship is not a premise, and the encoding says what that costs.**
+Ephesians, Titus and 1 and 2 Peter are each disputed, and each dispute is
+catalogued from both sides. Grant every critical conclusion and sola fide still
+follows (`authorship_not_load_bearing`), because the case reads them as
+canonical scripture rather than as an apostle's testimony. The cost is that
+they cannot then be evidence of what *Paul* meant by "works", so the premise
+that he meant works in general rests on Romans 4, 9 and 11, which nobody
+disputes.
 
 **The virgin-birth argument was the weaker one, and stopped being so.** It
 began single-stranded, and the library's result then recorded that defeating
