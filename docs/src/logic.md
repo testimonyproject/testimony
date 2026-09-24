@@ -14,9 +14,18 @@
 An argument is a list of premises and a conclusion, both formulas over cited
 atoms. Two questions get asked of it, and they are answered by different means.
 
-**Does the conclusion follow?** Mathlib's `tauto`, a goal-directed classical
-tableau. It produces an ordinary proof term, so the trust base is unchanged,
-and its cost tracks the argument's structure rather than its atom count.
+**Does the conclusion follow?** Once a package is unfolded, what is left is
+almost always a *Horn* problem: facts, and inference steps from a conjunction of
+literals to an atom or a conjunction of atoms. Horn entailment is decidable in
+linear time (Dowling and Gallier, 1984), and backward chaining over Horn clauses
+— SLD resolution, Prolog's procedure — is what `establish` runs, as Lean's
+`solve_by_elim`, after currying each step with `and_imp` and splitting
+conjunctive heads with `imp_and`. If that leaves the goal open, `establish`
+fails rather than silently searching; `establish_by_search` runs Mathlib's
+`tauto`, a general classical search whose cost is exponential in the number of
+inference steps, for a step that genuinely cannot be Horn. No result in the
+library needs it. Both produce ordinary proof terms, so the trust base is
+unchanged.
 
 `Entails` is a thin local wrapper; the relation it names is not this library's.
 It is Foundation's logical consequence, `T ⊨[M] φ`, at this library's premise
@@ -90,6 +99,18 @@ discharge a goal.
 **A hand-rolled pruning search** was written and then deleted once `tauto`
 proved to handle the same goals with less machinery and no new proof
 obligations.
+
+**`tauto` alone** was the recipe until the arguments outgrew it. It case-splits
+on every implication in the context, so each inference step added to a case
+multiplies its cost however simple the step is: splitting `SolaFide`'s closing
+step in three took `reformed_establishes` to twenty times the default heartbeat
+budget. Mathlib's `itauto` (Dyckhoff's G4ip, *J. Symbolic Logic* 57(3), 1992) is
+complete for intuitionistic logic and no faster on these goals. The Horn path
+proves the same goals in about two thousand heartbeats where `tauto` took about
+four million, because it is the procedure the goals' shape calls for. It is also
+constructive where `tauto` is classical, so every `Establishes` result now rests
+on `propext` and `Quot.sound` alone; `Classical.choice` remains in the trust
+base only for the dispute results, which come from the Dung semantics.
 
 ## Rendering an argument as logic
 

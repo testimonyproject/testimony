@@ -22,8 +22,9 @@ the whole encoding worthless.
 ## 1 — the atom type
 
 One constructor per atomic claim, each with a docstring saying what it asserts.
-There is no limit on how many: entailment is settled by `tauto` and refuted by
-named countermodels, neither of which enumerates valuations.
+There is no limit on how many: entailment is settled by backward chaining and
+refuted by named countermodels, neither of which enumerates valuations. There
+*is* a structural budget — see "Keep steps Horn" below.
 
 ```lean
 inductive Claim
@@ -135,9 +136,48 @@ theorem reformed_establishes : Establishes reformed := by
 #print axioms reformed_establishes
 ```
 
-If `tauto` fails with the package still folded up in the hypothesis, something
-in the chain is missing from the list — add it. The failure is loud, which is
-the point: nothing here can succeed vacuously.
+If `establish` fails with the package still folded up in the hypothesis,
+something in the chain is missing from the list — add it. The failure is loud,
+which is the point: nothing here can succeed vacuously.
+
+### Keep steps Horn
+
+`establish` proves by backward chaining (SLD resolution, via `solve_by_elim`)
+over the premises read as Horn clauses, and **fails** if they are not Horn —
+there is no silent fallback. That needs every inference step to be
+
+- a **conjunction of literals** (atoms, or `notP` atoms) as antecedent, and
+- an **atom, or a conjunction of atoms**, as consequent.
+
+Everything in the library is written this way, and it is the natural shape of a
+line of reason: *these grounds, therefore that*. What leaves it:
+
+- **A disjunction** in a premise or consequent. Where two routes reach a claim,
+  write two lines rather than one step with `⋎`; `caseOf` already treats lines
+  as alternatives.
+- **An implication inside an antecedent**, `(A ➝ B) ➝ C`. State `A ➝ B` as its
+  own step instead.
+- **A negated consequent** is fine in a premise (`sandersLine` delivers
+  `notP`), but a conclusion that is a negation or a disjunction is not Horn.
+
+When `establish` fails, check the unfold list first: a missing definition looks
+the same as a non-Horn step. If a step genuinely cannot be Horn,
+`establish_by_search` proves it with `tauto`, and the call site then says the
+cost was accepted. That cost compounds: `tauto` case-splits on every
+implication in the context, so each added step multiplies the work — splitting
+`SolaFide`'s closing step in three once took a proof to twenty times the
+default heartbeat budget. Never raise `maxHeartbeats` to get an argument
+through; ask which step stopped being Horn.
+
+Two further economies:
+
+- **Weakening for inert premises.** A package that adds premises no step reads —
+  `criticalAuthorship`, `finnish` — establishes by `entails_of_subset` from the
+  package it extends. That is cheaper than re-proving, and it states *why* the
+  premises are not load-bearing.
+- **Leave out lines a result does not ask about.** A package asking whether one
+  strand carries the argument alone (`paulineStrandOnTheCritics`) should not
+  carry the other strands' steps with their grounds removed.
 
 To refute, **name the rival's reading** and check it. The valuation is the
 rival's position written down, so name it after that position:

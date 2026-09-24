@@ -2,11 +2,11 @@ import Testimony.Logic.Line
 import Mathlib.Tactic.Tauto
 
 /-!
-# Testimony.Logic.Tactic — the five proof recipes
+# Testimony.Logic.Tactic — the proof recipes
 
-`establish`, `refute_with`, `satisfied_by`, `leaves_open` and `granted`. Five
-tactics, replacing a recipe that was copied into every result in the
-library.
+`establish`, `refute_with`, `satisfied_by`, `leaves_open` and `granted`, plus
+`establish_by_search` for the rare non-Horn case. They replace a recipe that
+was copied into every result in the library.
 
 ## Why this is a soundness fix and not a convenience
 
@@ -62,14 +62,62 @@ namespace Testimony.Logic
 
 open Lean.Parser.Tactic
 
+/-- Close a goal whose hypotheses are Horn clauses over atoms, by backward
+chaining.
+
+**Why Horn.** After `establish` has unfolded a package, what is left is almost
+always a Horn problem: facts (atoms, or negated atoms), and inference steps of
+the form *conjunction of literals → atom, or conjunction of atoms*, with a
+conjunction of atoms to prove. Horn entailment is decidable in linear time by
+unit propagation (Dowling and Gallier, "Linear-time algorithms for testing the
+satisfiability of propositional Horn formulae", *J. Logic Programming* 1(3),
+1984), and backward chaining over Horn clauses is SLD resolution — Prolog's
+procedure. `tauto` is neither: it is a general classical search that case-splits
+on every implication in the context, so its cost is exponential in the number
+of inference steps, however simple each one is. Adding a single closing step to
+`SolaFide` once took `reformed_establishes` from within the default heartbeat
+budget to twenty times over it.
+
+**How.** `and_imp` curries every step (`A ∧ B → C` becomes `A → B → C`) and
+`imp_and` splits a conjunctive head (`A → B ∧ C` becomes `(A → B) ∧ (A → C)`),
+so every hypothesis is a fact or a clause with one atomic head; `casesm*` puts
+each in the context separately; the goal is split into its conjuncts; and
+`solve_by_elim` — SLD resolution over the context — proves each. On the
+`SolaFide` packages this takes about two thousand heartbeats where `tauto` took
+about four million.
+
+**Why no fallback.** When this was written every `establish` in the library
+proved on the Horn path, and a silent fallback to `tauto` would have had one
+effect only: to hide the moment an encoding stopped being Horn, and got
+exponentially slower. So `horn_close` fails, naming the likely cause, and a
+step that genuinely cannot be Horn is proved with `establish_by_search`, where
+the cost is visible at the call site. The proof term is ordinary either way,
+so the trust base is unchanged. -/
+syntax (name := hornClose) "horn_close" : tactic
+
+macro_rules
+  | `(tactic| horn_close) =>
+    `(tactic|
+        first
+          | (try simp only [and_imp, imp_and] at *
+             casesm* _ ∧ _
+             repeat' refine ⟨?_, ?_⟩
+             all_goals solve_by_elim (maxDepth := 24)
+             done)
+          | fail "establish: the premises are not Horn, or a definition in the chain is \
+missing from the list. Check the list first; then look for a step with a \
+disjunction or a nested implication, and restate it as separate lines. If it \
+genuinely cannot be Horn, use `establish_by_search`, which runs `tauto`.")
+
 /-- Prove `Establishes pkg`: introduce the valuation, unfold the package and
-the semantics, and close the goal with `tauto`.
+the semantics, and close the goal with `horn_close` — backward chaining over the
+premises as Horn clauses.
 
 The bracketed arguments are the definitions to unfold — the package, its lines
 of reason, its inference steps, any shared premise list. The generic half of
 the recipe is supplied here rather than at the call site: the argument
 vocabulary that has to be unfolded to reach a premise list, the list lemmas
-that turn `∀ φ ∈ premises` into a conjunction `tauto` can work on, and
+that turn `∀ φ ∈ premises` into a conjunction of Horn clauses, and
 Foundation's truth lemmas for the connectives.
 
 The first step crosses `entails_iff`. `Entails` is Foundation's consequence
@@ -84,11 +132,13 @@ argument always has a package to unfold, so the bare form is for the
 hand-worked entailments in the sanity checks below. -/
 syntax "establish" (ppSpace "[" simpLemma,+ "]")? : tactic
 
+/-- The unfolding half of `establish`, shared with `establish_by_search` so that
+the simp set is written down once. Leaves the premises as a conjunction in the
+context and the conclusion as the goal. Not for use in argument modules. -/
+syntax (name := establishUnfold) "establish_unfold" "[" simpLemma,+ "]" : tactic
+
 macro_rules
-  -- The bare form routes through the bracketed one with a lemma that is
-  -- already in the fixed set, so the recipe below stays written down once.
-  | `(tactic| establish) => `(tactic| establish [Testimony.Logic.caseOf])
-  | `(tactic| establish [$ls,*]) =>
+  | `(tactic| establish_unfold [$ls,*]) =>
     `(tactic|
         (refine Testimony.Logic.entails_iff.mpr ?_;
          intro w hw;
@@ -102,8 +152,29 @@ macro_rules
            FFL.Semantics.Or.models_or, FFL.Semantics.Not.models_not,
            FFL.Semantics.Top.models_verum, FFL.Semantics.Bot.models_falsum,
            FFL.Semantics.models_list_conj₂,
-           FFL.Propositional.Formula.Boolean.models_atom] at hw ⊢;
-         tauto))
+           FFL.Propositional.Formula.Boolean.models_atom] at hw ⊢))
+
+macro_rules
+  -- The bare form routes through the bracketed one with a lemma that is
+  -- already in the fixed set, so the recipe below stays written down once.
+  | `(tactic| establish) => `(tactic| establish [Testimony.Logic.caseOf])
+  | `(tactic| establish [$ls,*]) =>
+    `(tactic| (establish_unfold [$ls,*]; horn_close))
+
+/-- `establish`, closed by `tauto` instead of by backward chaining: for a
+package with a step that genuinely cannot be written as a Horn clause — a
+disjunction in a premise, an implication inside an antecedent. `tauto`
+case-splits on every implication in the context, so its cost is exponential in
+the number of inference steps; using this is a statement, at the call site,
+that the cost has been accepted. No result in the library needed it when it was
+introduced. -/
+syntax (name := establishBySearch) "establish_by_search" (ppSpace "[" simpLemma,+ "]")? : tactic
+
+macro_rules
+  | `(tactic| establish_by_search) =>
+    `(tactic| establish_by_search [Testimony.Logic.caseOf])
+  | `(tactic| establish_by_search [$ls,*]) =>
+    `(tactic| (establish_unfold [$ls,*]; tauto))
 
 /-- Refute `Establishes pkg` by exhibiting a named countermodel: a valuation
 satisfying every premise while falsifying the conclusion.
@@ -273,5 +344,14 @@ hazard `entails_of_unsatisfiable` names, exhibited. -/
 theorem contradictory_premises_entail_anything :
     Entails (α := Pair) [p .p, notP .p] (p .q) := by
   establish
+
+/-- `establish` refuses a case that is not Horn — reasoning by cases over a
+disjunction — rather than searching, and `establish_by_search` proves it. Both
+halves are pinned: if `establish` ever started accepting this, it would have
+regained a hidden exponential path. -/
+theorem establish_by_search_proves_cases :
+    Entails (α := Pair) [p .p ⋎ p .q, p .p ➝ p .q] (p .q) := by
+  fail_if_success establish
+  establish_by_search
 
 end Testimony.Logic

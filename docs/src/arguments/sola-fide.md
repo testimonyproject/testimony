@@ -1477,7 +1477,7 @@ Given the Reformed premises, the conclusion follows.
 
 ```lean
 theorem reformed_establishes : Establishes reformed
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="newPerspective_establishes"></a>
@@ -1494,7 +1494,7 @@ the New Perspective dispute its premise, not this result.
 
 ```lean
 theorem newPerspective_establishes : Establishes newPerspective
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="tridentineReading"></a>
@@ -1532,7 +1532,7 @@ the other strands still carry the argument.
 
 ```lean
 theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="sozo_not_load_bearing"></a>
@@ -1543,7 +1543,7 @@ carry the argument.
 
 ```lean
 theorem sozo_not_load_bearing : Establishes reformedWithoutSozo
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="apostolic_strand_survives_paul_and_luke"></a>
@@ -1560,7 +1560,7 @@ left to be inferred from the absence of an old one.
 ```lean
 theorem apostolic_strand_survives_paul_and_luke : Establishes
     reformedWithoutWorksOfLawOrSozo
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="pistisChristou_not_load_bearing"></a>
@@ -1577,7 +1577,7 @@ its Pauline route, and not its conclusion.
 
 ```lean
 theorem pistisChristou_not_load_bearing : Establishes subjectiveGenitive
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="acts15Yoke_not_load_bearing"></a>
@@ -1589,7 +1589,7 @@ else, and the conclusion still follows by Paul and by Luke 7:50.
 
 ```lean
 theorem acts15Yoke_not_load_bearing : Establishes lawObservantLuke
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="neitherLexicalReading"></a>
@@ -1685,7 +1685,7 @@ in `criticalAuthorship`: the letters cannot then serve as evidence of what
 
 ```lean
 theorem authorship_not_load_bearing : Establishes criticalAuthorship
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="apocalypticReading"></a>
@@ -1734,7 +1734,7 @@ exactly: it is over *through faith*, and not over grace or works.
 ```lean
 theorem apocalyptic_establishes_grace_not_works : Establishes
     apocalypticOnGraceAndWorks
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="grace_and_works_rest_on_no_lexical_premise"></a>
@@ -1752,7 +1752,7 @@ are excluded.
 ```lean
 theorem grace_and_works_rest_on_no_lexical_premise : Establishes
     graceAndWorksWithoutAnyLexicalPremise
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="forensic_justification_not_load_bearing"></a>
@@ -1770,7 +1770,7 @@ Trent's disagreement with sola fide is over merit, not over infusion.
 
 ```lean
 theorem forensic_justification_not_load_bearing : Establishes finnish
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="critics_carry_the_pauline_strand"></a>
@@ -1784,7 +1784,7 @@ rather than assumed.
 ```lean
 theorem critics_carry_the_pauline_strand : Establishes
     paulineStrandOnTheCritics
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="sandersReading"></a>

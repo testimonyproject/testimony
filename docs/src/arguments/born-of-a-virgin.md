@@ -2670,7 +2670,7 @@ Given the scriptural premises, the conclusion follows.
 
 ```lean
 theorem christian_establishes : Establishes christian
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="catholic_establishes"></a>
@@ -2681,7 +2681,7 @@ scriptural package with a further strand bolted on.
 
 ```lean
 theorem catholic_establishes : Establishes catholic
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="magisterialOnly_establishes"></a>
@@ -2692,7 +2692,7 @@ grants the authority it claims.
 
 ```lean
 theorem magisterialOnly_establishes : Establishes magisterialOnly
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="criticalReading"></a>
@@ -2735,7 +2735,7 @@ possible.
 
 ```lean
 theorem criticalDenial_establishes : Establishes criticalDenial
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="berryReading"></a>
@@ -2850,7 +2850,7 @@ not the Isaianic evidence but the number of strands.
 
 ```lean
 theorem almah_not_load_bearing : Establishes christianWithoutAlmah
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="withoutAlmahReading"></a>
@@ -2917,7 +2917,7 @@ reference, not sense, and it is cheaper for exactly that reason.
 
 ```lean
 theorem semantic_establishes : Establishes semantic
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="lexicalCritical_establishes"></a>
@@ -2927,7 +2927,7 @@ The lexical objection, written down and granted its own premises.
 
 ```lean
 theorem lexicalCritical_establishes : Establishes lexicalCritical
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="compatibilityReading"></a>
@@ -3052,7 +3052,7 @@ criterion.
 
 ```lean
 theorem jesus_satisfies_virgin_birth : Satisfies jesus bornOfAVirgin
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 #### Satisfiability
@@ -3220,7 +3220,7 @@ with.
 
 ```lean
 theorem wegner_establishes : Establishes wegnerLexical
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="rydelnikReading"></a>
@@ -3642,7 +3642,7 @@ Berry's objection delivers its conclusion.
 
 ```lean
 theorem berryObjection_establishes : Establishes berryObjection
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="berryObjection_is_satisfiable"></a>
@@ -3662,7 +3662,7 @@ Postell's parity argument delivers its conclusion.
 
 ```lean
 theorem postellParity_establishes : Establishes postellParity
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="postellParity_is_satisfiable"></a>
@@ -3718,7 +3718,7 @@ The Micah counterexample delivers its conclusion.
 
 ```lean
 theorem micahParity_establishes : Establishes micahParity
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="micahParity_is_satisfiable"></a>
@@ -3794,7 +3794,7 @@ Motyer's reply delivers its conclusion.
 
 ```lean
 theorem motyerReply_establishes : Establishes motyerReply
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="motyerReply_is_satisfiable"></a>
@@ -3891,7 +3891,7 @@ premise, cited `disputed`, does not outrank it.
 
 ```lean
 theorem critical_defeats_christian : Defeats criticalDenial christian
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="christian_rebuts_critical"></a>
@@ -3940,7 +3940,7 @@ cited `disputed`, does not outrank him.
 
 ```lean
 theorem berry_defeats_critical : Defeats berryObjection criticalDenial
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="postell_defeats_critical"></a>
@@ -3951,7 +3951,7 @@ grounds.
 
 ```lean
 theorem postell_defeats_critical : Defeats postellParity criticalDenial
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="micah_defeats_critical"></a>
@@ -3962,7 +3962,7 @@ premise as Berry and Postell.
 
 ```lean
 theorem micah_defeats_critical : Defeats micahParity criticalDenial
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="motyer_defeats_critical"></a>
@@ -3973,7 +3973,7 @@ other premise: that 7:14 is a near-term sign to Ahaz, cited `disputed`.
 
 ```lean
 theorem motyer_defeats_critical : Defeats motyerReply criticalDenial
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="critical_defeats_berry"></a>
@@ -4109,7 +4109,7 @@ twenty ordered pairs.
 theorem replies_stand_with_the_scriptural_reading :
     isaiahDispute.StandTogether [Party.scriptural, Party.berry, Party.postell,
     Party.motyer, Party.micah]
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="partyDefeats"></a>
@@ -4151,7 +4151,7 @@ else.
 ```lean
 theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
     partyDefeats i j
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="scriptural_reading_prevails_once_replies_are_heard"></a>
@@ -4179,7 +4179,7 @@ Postell defeats it, and nothing defeats Postell.
 ```lean
 theorem critical_denial_indefensible : ∀ (S : Set Party), Framework.Admissible
     isaiahDispute.defeats S → Party.critical ∉ S
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="scriptural_reading_skeptically_accepted"></a>
@@ -4201,7 +4201,7 @@ And none accepts the critical denial.
 ```lean
 theorem critical_denial_not_credulously_accepted :
     ¬Framework.CredulouslyAccepted isaiahDispute.defeats Party.critical
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 #### Hearings
@@ -4387,7 +4387,7 @@ The fathers' sign argument delivers its conclusion.
 
 ```lean
 theorem signArgument_establishes : Establishes signArgument
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="signArgument_is_satisfiable"></a>
@@ -4408,7 +4408,7 @@ The near-term reply delivers its conclusion.
 
 ```lean
 theorem ordinarySignReply_establishes : Establishes ordinarySignReply
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="ordinarySignReply_is_satisfiable"></a>
@@ -4482,7 +4482,7 @@ outrank it.
 
 ```lean
 theorem sign_defeats_wegner : Defeats signArgument wegnerLexical
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="wegner_defeats_sign"></a>
@@ -4504,7 +4504,7 @@ fathers' premise that the sign must be extraordinary, cited `disputed`.
 
 ```lean
 theorem reply_defeats_sign : Defeats ordinarySignReply signArgument
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="sign_defeats_reply"></a>
@@ -4561,7 +4561,7 @@ the word does not denote a virgin, and the sign need not be a miracle.
 ```lean
 theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether
     [WegnerParty.wegner, WegnerParty.reply]
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="wegnerPartyDefeats"></a>
@@ -4593,7 +4593,7 @@ other, the fathers and the reply defeat each other, and nothing else.
 ```lean
 theorem wegnerDispute_defeats : ∀ (i j : WegnerParty), wegnerDispute.defeats i
     j ↔ wegnerPartyDefeats i j
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="nothing_prevails_over_wegner"></a>

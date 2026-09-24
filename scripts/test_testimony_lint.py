@@ -318,6 +318,19 @@ class RuleTests(unittest.TestCase):
         self.assertIn("models_imply", found)
         self.assertIn("weakening", found)
 
+    @unittest.skipUnless(L.toolchain_init(), "needs `lean` on the path")
+    def test_imported_names_include_core_lemmas(self):
+        """`establish` is documented in terms of core Lean's `and_imp` and
+        `imp_and`, which Foundation does not declare."""
+        found = L.imported_names()
+        self.assertIn("and_imp", found)
+        self.assertIn("imp_and", found)
+
+    def test_L9_accepts_a_tactic_name(self):
+        """A tactic is cited in backticks but declared by `syntax`, not by
+        `theorem`; the docs name `solve_by_elim` as `native_decide` is named."""
+        self.assertEqual([], L.lint_doc("docs/src/logic.md", "run `solve_by_elim`\n", set()))
+
     def test_imported_names_survive_a_missing_package(self):
         """A fresh clone has no `.lake/` until the first cache fetch, and a
         linter that refused to run before the first build would be worse than

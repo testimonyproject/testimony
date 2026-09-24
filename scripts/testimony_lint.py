@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import os
 import re
+import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -86,7 +87,9 @@ LEAN_FENCE_RE = re.compile(r"^\s*```lean\b")
 FENCE_RE = re.compile(r"^\s*```")
 # Theorem-shaped tokens that name something other than a declaration here:
 # Lean tactics this project forbids, and a naming convention.
-NOT_DECLARATIONS = frozenset({"native_decide", "bv_decide", "snake_case"})
+# Tactic names, which prose cites in backticks but no source file declares with
+# `theorem` or `def`.
+NOT_DECLARATIONS = frozenset({"native_decide", "bv_decide", "solve_by_elim", "snake_case"})
 
 ENTRY_CTORS = (
     "book", "inCollection", "article", "thesis",
@@ -398,11 +401,50 @@ def lint_satisfiability(files: dict[str, str]) -> list[Finding]:
 
 
 # Where the imported declarations L9 may legitimately be cited by name live.
-# Foundation only, and deliberately: this library leans on it directly — prose
-# names `weakening`, `of_mem`, `models_imply` — and scanning its 205 files costs
-# under a tenth of a second. Mathlib is forty times larger, and nothing here
-# cites a Mathlib lemma in prose; if that changes, measure before widening.
+# Foundation, because this library leans on it directly — prose names
+# `weakening`, `of_mem`, `models_imply` — and scanning its 205 files costs under
+# a fifth of a second. Mathlib is forty times larger, and nothing here cites a
+# Mathlib lemma in prose; if that changes, measure before widening.
 IMPORTED_ROOTS = (Path(".lake/packages/Foundation"),)
+
+
+def toolchain_init() -> Path | None:
+    """The Lean toolchain's `Init` sources, where core lemmas live.
+
+    `establish` is documented in terms of `and_imp` and `imp_and`, which are
+    core Lean rather than Foundation. Measured before widening, as the note on
+    `IMPORTED_ROOTS` asks: 630 files, about half a second.
+
+    Located with `lean --print-prefix` when `lean` is on the path, and otherwise
+    from the pinned `lean-toolchain` under elan's home, so the rule does not
+    depend on how the shell was set up. If neither finds it the root is simply
+    absent, as a missing package is.
+    """
+    try:
+        out = subprocess.run(
+            ["lean", "--print-prefix"], capture_output=True, text=True, timeout=30
+        )
+        if out.returncode == 0:
+            root = Path(out.stdout.strip()) / "src" / "lean" / "Init"
+            if root.is_dir():
+                return root
+    except (OSError, subprocess.SubprocessError):
+        pass
+    try:
+        pinned = Path("lean-toolchain").read_text(encoding="utf-8").strip()
+    except OSError:
+        return None
+    # elan's directory name for `leanprover/lean4:v4.33.1`.
+    name = pinned.replace("/", "--").replace(":", "---")
+    elan = Path(os.environ.get("ELAN_HOME", Path.home() / ".elan"))
+    root = elan / "toolchains" / name / "src" / "lean" / "Init"
+    return root if root.is_dir() else None
+
+
+def imported_roots() -> tuple[Path, ...]:
+    """Every root `imported_names` reads by default."""
+    init = toolchain_init()
+    return IMPORTED_ROOTS + ((init,) if init else ())
 
 # A class field as Foundation writes them, with binders before the colon:
 #
@@ -419,7 +461,7 @@ IMPORTED_ROOTS = (Path(".lake/packages/Foundation"),)
 IMPORTED_FIELD_RE = re.compile(r"^\s{2,}([a-z][A-Za-z0-9_']*)\b[^:=\n]*:", re.M)
 
 
-def imported_names(roots: tuple[Path, ...] = IMPORTED_ROOTS) -> set[str]:
+def imported_names(roots: tuple[Path, ...] | None = None) -> set[str]:
     """Declarations this library imports rather than declares.
 
     L9 asks whether a name a page mentions is a name the library has. Before
@@ -434,7 +476,7 @@ def imported_names(roots: tuple[Path, ...] = IMPORTED_ROOTS) -> set[str]:
     imported name.
     """
     names: set[str] = set()
-    for root in roots:
+    for root in imported_roots() if roots is None else roots:
         if not root.is_dir():
             continue
         for p in sorted(root.rglob("*.lean")):

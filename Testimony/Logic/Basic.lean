@@ -6,8 +6,8 @@ import Foundation.Propositional.Boolean.Basic
 Syntax and semantics come from FormalizedFormalLogic/Foundation; this library
 does not reimplement them.
 
-Entailment is checked with Mathlib's `tauto`, which is goal-directed, and
-refuted by exhibiting a countermodel (see `Testimony.Logic.Entail`). Neither
+Entailment is checked by backward chaining over the premises as Horn clauses,
+and refuted by exhibiting a countermodel (see `Testimony.Logic.Entail`). Neither
 approach enumerates valuations, so there is no bound on how many atoms an
 argument may use.
 -/

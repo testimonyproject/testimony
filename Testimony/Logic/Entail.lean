@@ -12,9 +12,13 @@ is.
 
 Two standard tools replace it, and neither enumerates valuations.
 
-**To establish**: Mathlib's `tauto`, a goal-directed classical tableau. Its
-cost tracks the argument's structure rather than its atom count, and it
-produces an ordinary proof term, so the trust base is unchanged.
+**To establish**: backward chaining over the premises read as Horn clauses —
+SLD resolution, as Lean's `solve_by_elim` — which is what `establish` in
+`Testimony.Logic.Tactic` runs. Its cost grows with the length of the chain of
+inference, not with the number of atoms or of steps, and it produces an
+ordinary proof term, so the trust base is unchanged. Mathlib's `tauto`, which
+this replaced, case-splits on every implication and is kept only for the
+non-Horn case, as `establish_by_search`.
 
 **To refute**: exhibit a countermodel. `not_entails_of_countermodel` turns a
 valuation satisfying every premise while falsifying the conclusion into a

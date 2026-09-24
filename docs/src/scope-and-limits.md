@@ -6,8 +6,8 @@ before the claims, on purpose.
 ## What Lean settles
 
 Exactly one thing: whether a conclusion follows from the premises as encoded.
-Where it does, `tauto` produces an ordinary proof term and Lean's kernel checks
-it; where it does not, a named valuation satisfies every premise while
+Where it does, `establish` produces an ordinary proof term and Lean's kernel
+checks it; where it does not, a named valuation satisfies every premise while
 falsifying the conclusion, and the kernel checks that. Nothing else is verified
 by the machine.
 

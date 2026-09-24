@@ -212,7 +212,7 @@ Given the Christian premises, the conclusion follows.
 
 ```lean
 theorem christian_establishes : Establishes christian
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="criticalReading"></a>
@@ -251,7 +251,7 @@ premises through a machine-checked entailment to a claim about a person.
 
 ```lean
 theorem jesus_satisfies_bethlehem : Satisfies jesus bornInBethlehem
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 #### Satisfiability
