@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **79 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **80 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -88,6 +88,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `critics_carry_the_pauline_strand` | `Establishes paulineStrandOnTheCritics` | **The critics carry the Pauline strand.** Deny covenantal nomism with Gathercole, keep the reading of Galatians as a polemic, leave Luke and Acts out, and sola fide follows from … |
 | `sanders_costs_the_pauline_strand` | `¬Establishes paulineStrandOnSanders` | **And Sanders costs it.** Grant covenantal nomism, and with Dunn's inference the ἔργα νόμου premise is denied; leave Luke and Acts out, and sola fide does not follow from Paul. |
 | `james_harmonisation_is_load_bearing` | `¬Establishes reformedWithoutJamesHarmonisation` | The argument genuinely depends on answering James. |
+| `grace_needs_no_answer_to_james` | `Establishes graceWithoutJamesHarmonisation` | **But grace does not need it.** Remove the answer to James and salvation by grace still follows, from Ephesians 2:8, Romans 4:4–5 and Titus 3:5 alone. |
 
 ### [Sola scriptura](./arguments/sola-scriptura.md)
 

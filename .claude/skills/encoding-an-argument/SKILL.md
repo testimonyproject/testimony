@@ -130,8 +130,8 @@ lines, its steps, any shared premise list:
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
   establish [reformed, paulineLine, dominicalLine, sharedGrounds, closingSteps,
-    paulineToFaithAlone, dominicalToFaithAlone, toGraceNotWorks, toThroughFaith,
-    solaFide]
+    paulineToFaithAlone, dominicalToFaithAlone, toGrace, toNotByWorks,
+    toThroughFaith, solaFide]
 
 #print axioms reformed_establishes
 ```
@@ -164,10 +164,11 @@ When `establish` fails, check the unfold list first: a missing definition looks
 the same as a non-Horn step. If a step genuinely cannot be Horn,
 `establish_by_search` proves it with `tauto`, and the call site then says the
 cost was accepted. That cost compounds: `tauto` case-splits on every
-implication in the context, so each added step multiplies the work — splitting
-`SolaFide`'s closing step in three once took a proof to twenty times the
-default heartbeat budget. Never raise `maxHeartbeats` to get an argument
-through; ask which step stopped being Horn.
+implication in the context, so each added step multiplies the work.
+Splitting `SolaFide`'s closing step in three once took a proof to twenty times
+the default heartbeat budget under `tauto`; on the Horn path the same split
+costs about two thousand heartbeats, a hundredth of the budget. Never raise
+`maxHeartbeats` to get an argument through; ask which step stopped being Horn.
 
 Two further economies:
 

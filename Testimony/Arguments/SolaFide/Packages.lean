@@ -259,4 +259,12 @@ def reformedWithoutJamesHarmonisation : ArgumentPackage Claim :=
       caseOf [paulineLine, dominicalLine, apostolicLine] sharedGroundsWithoutJames
         conclusionSteps }
 
+/-- The same, asked only about the first part of the conclusion: is salvation by
+grace, with James 2:24 left unanswered? -/
+def graceWithoutJamesHarmonisation : ArgumentPackage Claim :=
+  { reformedWithoutJamesHarmonisation with
+    name := "Grace alone, minus the James harmonisation"
+    conclusion := p .salvationByGrace
+    conclusionLabel := "salvation by grace" }
+
 end Testimony.Arguments.SolaFide

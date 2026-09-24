@@ -75,17 +75,20 @@ reading keeps. -/
 def graceNotWorks : Formula Claim :=
   ⋀ [p .salvationByGrace, p .salvationNotByWorks]
 
-/-- *By grace, and not by works*, from the texts that say so in terms: a gift
-through faith and "not of works" (Ephesians 2:8–9), a gift and not wages
-(Romans 4:4–5), mercy and "not by works" (Titus 3:5) — provided James 2:24 is
-answered, and scripture does not contradict itself.
+/-- *By grace*, from the texts that say so: a gift through faith (Ephesians
+2:8), a gift and not wages (Romans 4:4–5), mercy (Titus 3:5). Neither a strand
+nor the answer to James is needed for this part. -/
+def toGrace : Formula Claim :=
+  ⋀ [p .ephesians2_8_9, p .romans4_4_5, p .titus3_5] ➝ p .salvationByGrace
 
-No strand is needed for this part. What it needs is the texts, and an answer to
-James. -/
-def toGraceNotWorks : Formula Claim :=
+/-- *Not by works*, from the same texts, which say "not of works" in terms —
+provided James 2:24 is answered, and scripture does not contradict itself. No
+strand is needed for this part either; what it needs, and grace does not, is an
+answer to James. -/
+def toNotByWorks : Formula Claim :=
   ⋀ [ p .ephesians2_8_9, p .romans4_4_5, p .titus3_5
     , p .james2_24Compatible, p .scriptureSelfConsistent ]
-  ➝ graceNotWorks
+  ➝ p .salvationNotByWorks
 
 /-- *Through faith*, from justification by faith alone and Ephesians 2:8. This
 is the only part of the conclusion the three strands are needed for. -/
@@ -217,9 +220,8 @@ def sharedGrounds : List (Formula Claim) :=
 def sharedGroundsWithoutJames : List (Formula Claim) :=
   prooftexts ++ [p .scriptureSelfConsistent]
 
-/-- The two steps to the three parts of the conclusion: grace and works
-together, then faith. -/
-def conclusionSteps : List (Formula Claim) := [toGraceNotWorks, toThroughFaith]
+/-- The three steps to the three parts of the conclusion, one each. -/
+def conclusionSteps : List (Formula Claim) := [toGrace, toNotByWorks, toThroughFaith]
 
 /-- The steps that close the argument: the James harmonisation, then the steps
 to the parts of the conclusion. -/
