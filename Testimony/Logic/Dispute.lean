@@ -269,6 +269,22 @@ theorem not_defeats_of_outweighed {a b : ArgumentPackage α} (hweak : a.strength
     exact (entails_iff.mp hent w fun ψ hψ => hw ψ (by simp [hψ])) (hw φ (by simp))
   · exact hw hweak
 
+/-- **An attack that is simply not there**, shown premise by premise. Each of
+`b`'s premises can hold alongside all of `a`'s, so `a` undermines none; and `b`'s
+conclusion can too, so `a` does not rebut it.
+
+This is how the absence of a defeat is proved between positions that cannot
+both be held — where `not_defeats_of_joint_model` does not apply, because no one
+world holds both, but the conflict runs only one way. -/
+theorem not_defeats_of_models {a b : ArgumentPackage α}
+    (hunder : ∀ φ ∈ b.premises, Satisfiable (a.premises ++ [φ]))
+    (hreb : Satisfiable (a.premises ++ [b.conclusion])) : ¬ Defeats a b := by
+  rintro (⟨φ, ⟨hmem, hent⟩, _⟩ | ⟨hr, _⟩)
+  · obtain ⟨w, hw⟩ := satisfiable_iff.mp (hunder φ hmem)
+    exact (entails_iff.mp hent w fun ψ hψ => hw ψ (by simp [hψ])) (hw φ (by simp))
+  · obtain ⟨w, hw⟩ := satisfiable_iff.mp hreb
+    exact (entails_iff.mp hr w fun ψ hψ => hw ψ (by simp [hψ])) (hw _ (by simp))
+
 /-- `defeat_table [defs] using [facts]` proves `d.defeats i j ↔ table i j` for
 every pair of a finite dispute: it splits on both parties, reduces the table by
 `defs`, and closes each goal from the diagonal or from one of `facts` — a

@@ -78,9 +78,12 @@ of inference steps, however simple each one is. Adding a single closing step to
 `SolaFide` once took `reformed_establishes` from within the default heartbeat
 budget to twenty times over it.
 
-**How.** `and_imp` curries every step (`A ∧ B → C` becomes `A → B → C`) and
+**How.** `and_imp` curries every step (`A ∧ B → C` becomes `A → B → C`),
 `imp_and` splits a conjunctive head (`A → B ∧ C` becomes `(A → B) ∧ (A → C)`),
-so every hypothesis is a fact or a clause with one atomic head; `casesm*` puts
+and `not_and` does for a negated conjunction what `and_imp` does for an
+implication (`¬(A ∧ B)` becomes `A → ¬B`) — the shape of a goal that rebuts a
+conjunctive conclusion. So every hypothesis is a fact or a clause with one
+atomic head; `casesm*` puts
 each in the context separately; the goal is split into its conjuncts; and
 `solve_by_elim` — SLD resolution over the context — proves each. On the
 `SolaFide` packages this takes about two thousand heartbeats where `tauto` took
@@ -99,7 +102,7 @@ macro_rules
   | `(tactic| horn_close) =>
     `(tactic|
         first
-          | (try simp only [and_imp, imp_and] at *
+          | (try simp only [and_imp, imp_and, not_and] at *
              casesm* _ ∧ _
              repeat' refine ⟨?_, ?_⟩
              all_goals solve_by_elim (maxDepth := 24)

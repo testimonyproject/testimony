@@ -3,6 +3,7 @@ import Testimony.Arguments.SolaFide.Sources
 import Testimony.Arguments.SolaFide.Lines
 import Testimony.Arguments.SolaFide.Packages
 import Testimony.Arguments.SolaFide.Results
+import Testimony.Arguments.SolaFide.Dispute
 
 /-!
 # Arguments.SolaFide — justification by grace through faith, not works
@@ -126,6 +127,13 @@ but is ever accompanied with all other saving graces, and is no dead faith, but
 worketh by love". `james_harmonisation_is_load_bearing` shows the argument
 genuinely depends on this: drop it and sola fide does not follow.
 
+**Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
+Sanders, the critics and Jervell as parties, nothing prevails outright — but
+sola fide from Luke 7:50 is accepted on every resolution, because Trent and the
+apocalyptic reading each defeat the other's only answer. That verdict rests on
+the two rivals answering each other, and on no cited source arguing that σῴζω at
+Luke 7:50 means healing; `Dispute.lean` states both.
+
 ## Where things are
 
 | File | Contents |
@@ -135,4 +143,5 @@ genuinely depends on this: drop it and sola fide does not follow.
 | `Lines.lean` | the inference steps, the three strands, the apocalyptic rival, what they share |
 | `Packages.lean` | the positions, and the variants that remove a named premise |
 | `Results.lean` | every `@[headline]` result, with its trust base |
+| `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
 -/

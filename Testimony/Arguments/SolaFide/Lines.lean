@@ -193,7 +193,8 @@ assumed but derived: from the reading of Galatians as a polemic, and from a
 historical claim about Judaism that is argued on the evidence. -/
 def criticsLine : Line Claim :=
   { name := "Variegated nomism (Gathercole, Carson et al.)"
-  , grounds := [notP .secondTempleCovenantalNomism]
+  , grounds :=
+      [notP .secondTempleCovenantalNomism, p .galatiansOpposesCircumcisionAsRequirement]
   , step :=
       ⋀ [notP .secondTempleCovenantalNomism, p .galatiansOpposesCircumcisionAsRequirement]
       ➝ p .worksOfLawMeansWorksGenerally
@@ -203,6 +204,23 @@ def criticsLine : Line Claim :=
         { primary := .work gathercoleWhereIsBoasting .whole
         , supporting := [.work carsonVariegatedNomism1 .whole]
         , tradition := .reformedProtestant
+        , confidence := .disputed } }
+
+/-- **Jervell's reading of the yoke.** If Luke presents the Jewish believers as
+keeping the law (Acts 21:20–24), and the decree as laying part of it on
+gentiles (Acts 15:20–21), then what Peter refuses at 15:10 is not the law as a
+condition of salvation but the whole of Israel's law laid on gentiles. The
+step is contested: Bruce grants both texts and reads the yoke as the law taken
+as a condition of salvation. -/
+def jervellLine : Line Claim :=
+  { name := "Law-observant Luke (Jervell)"
+  , grounds := [p .lukeKeepsTheLaw]
+  , step := p .lukeKeepsTheLaw ➝ notP .acts15YokeIsLawAsCondition
+  , delivers := notP .acts15YokeIsLawAsCondition
+  , inference :=
+      some
+        { primary := .work jervellLukePeopleOfGod .whole
+        , tradition := .criticalScholarship
         , confidence := .disputed } }
 
 /-- The prooftexts the strands read. Shared by every Reformed package, and by
