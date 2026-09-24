@@ -70,20 +70,39 @@ Paul's phrase, turns out to establish the conclusion too. Nor does winning the
 genitive for Hays: that costs the Reformed case its Pauline route, and not its
 conclusion.
 
-**The apocalyptic reading** of Martyn and Campbell is a rival to both
-perspectives. It takes the genitive as subjective and δικαιοσύνη θεοῦ as God's
-act of deliverance, and denies that faith is the condition of justification. It
-does not establish the conclusion. It does keep part of it — grace, and "not by
-works" — and the encoding cannot say so, because the conclusion is one atom.
-Splitting it would let a package establish half of it, and would restate every
-result here; the conclusion stays whole, and this paragraph records the cost.
+**The conclusion has three parts** — salvation is *by grace*, *not by works*,
+and *through faith* — and they are separate atoms, because the rivals divide
+over different parts. The Tridentine position denies the second: works done in
+grace merit an increase of justification. The apocalyptic reading of Martyn and
+Campbell denies the third: taking the genitive as subjective and δικαιοσύνη
+θεοῦ as God's act of deliverance, it denies that faith is the condition of
+justification, while establishing grace and "not by works" by its own route
+(`apocalyptic_establishes_grace_not_works`). The split also shows which part
+the strands are needed for. Grace and "not by works" follow from the texts that
+say so in terms, given an answer to James, with every lexical premise removed
+(`grace_and_works_rest_on_no_lexical_premise`). The lexical disputes decide
+*through faith alone*.
 
-Two positions are cited rather than encoded. The Reformed critics of the New
-Perspective — Gathercole, the *Variegated Nomism* volume, Piper — defend the
-ἔργα νόμου premise; they add no route, so they appear in its citation, not as
-a package of their own. Mannermaa's Finnish reading of Luther affirms every
-atom here and differs over what justification *is*, union with Christ rather
-than a forensic verdict, which a propositional atom cannot hold.
+**The New Perspective's reading of ἔργα νόμου has a reason, and its critics
+answer the reason.** Sanders' covenantal nomism — in by grace, staying in by
+works — is the ground, and Dunn's inference from it to the boundary-marker
+reading is the step, cited as his (`sandersLine`). Gathercole and the
+*Variegated Nomism* volume deny the ground: Second Temple Judaism also held
+final vindication according to works, so the demand Galatians refuses is a
+demand for obedience, and the Reformed reading follows (`criticsLine`). On the
+critics' history Paul alone carries sola fide
+(`critics_carry_the_pauline_strand`); on Sanders' he does not
+(`sanders_costs_the_pauline_strand`). The ἔργα νόμου dispute is a dispute
+about Second Temple Judaism before it is one about Paul's Greek.
+
+**What justification is** is a separate question, and the encoding keeps it
+separate. The Reformed account is forensic: pardon and imputation, not infusion
+(Westminster XI.1). Trent denies it — justification is "not remission of sins
+merely, but also the sanctification and renewal of the inward man" — and so
+does Mannermaa's Finnish reading of Luther, for which Christ himself is present
+in faith. The Finnish package denies the forensic account and establishes sola
+fide (`forensic_justification_not_load_bearing`); Trent denies it and does not.
+So Trent's disagreement with sola fide is over merit, not over infusion.
 
 **Authorship.** Ephesians, Titus and 1 and 2 Peter are each disputed, and each
 dispute is catalogued from both sides — Hoehner and Lincoln on Ephesians,
@@ -119,8 +138,9 @@ genuinely depends on this: drop it and sola fide does not follow.
 ## Arguments.SolaFide.Atoms — the atomic claims
 
 The prooftexts of the three strands, their four disputed premises, the reading
-of Galatians as a polemic, the authorship of the disputed letters, the
-apocalyptic rival's premise, the James premises, and the conclusions. See
+of Galatians as a polemic, the authorship of the disputed letters, the rivals'
+premises — covenantal nomism, forensic justification, the apocalyptic reading —
+the James premises, and the three parts of the conclusion. See
 `Testimony.Arguments.SolaFide` for the dispute this encodes.
 
 ## Arguments.SolaFide.Sources — a citation for every atom
@@ -167,8 +187,12 @@ manifest rather than as a remark in a docstring.
 | \\(P_{20}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
 | \\(P_{21}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii; 2 Pet 3:15-16; [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003), ad loc. 2 Pet 3:16 |
 | \\(P_{22}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015); [`mannermaa-christ-present-faith-2005`](../bibliography.md#mannermaa-christ-present-faith-2005) |
-| \\(P_{23}\\) | Salvation is by grace through faith, and not by works | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:3-5; 1 Pet 1:18-19; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:5 |
-| \\(P_{24}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
+| \\(P_{23}\\) | Salvation is by grace, a gift and not wages owed | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:18-19; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:18 |
+| \\(P_{24}\\) | Salvation is not by works: no work is its ground | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
+| \\(P_{25}\\) | Salvation is received through faith | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:3-5; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:5 |
+| \\(P_{26}\\) | Justification is forensic only: pardon and imputation, not infusion | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2 |
+| \\(P_{27}\\) | Second Temple Judaism: in by grace, staying in by works | historical | critical scholarship, disputed | [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977) |
+| \\(P_{28}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
 
 </div>
 
@@ -257,6 +281,78 @@ Paul wrote Titus.
 
 ```lean
 def criticalAuthorshipCite : Claim → AtomMeta
+```
+
+<a id="criticsCite"></a>
+**`criticsCite`**
+
+The New Perspective's critics: Second Temple Judaism was not uniformly
+covenantal nomism, because final vindication according to works was widely
+held. Gathercole primary, the *Variegated Nomism* volume in support.
+
+```lean
+def criticsCite : Claim → AtomMeta :=
+  fun x =>
+    match x with
+    | Claim.secondTempleCovenantalNomism =>
+      {
+        label :=
+          "Second Temple Judaism also held final vindication according to works",
+        kind := PremiseKind.historical,
+        source :=
+          { primary := Reference.work Bib.gathercoleWhereIsBoasting,
+            supporting := [Reference.work Bib.carsonVariegatedNomism1],
+            tradition := Tradition.reformedProtestant,
+            confidence := Confidence.disputed } }
+    | c => reformedCite c
+```
+
+<a id="tridentineCite"></a>
+**`tridentineCite`**
+
+The Tridentine reading of what justification is: "not remission of sins
+merely, but also the sanctification and renewal of the inward man". Everything
+else as `baseCite`.
+
+```lean
+def tridentineCite : Claim → AtomMeta :=
+  fun x =>
+    match x with
+    | Claim.justificationIsForensicOnly =>
+      { label := "Justification is not forensic only: it renews the inward man",
+        kind := PremiseKind.theological,
+        source :=
+          {
+            primary :=
+              Reference.work Bib.tannerDecrees
+                (Bib.Locus.sectionRef
+                  "Trent, Session VI (1547), Decree on Justification, ch. 7"),
+            tradition := Tradition.romanCatholic,
+            confidence := Confidence.wellSupported } }
+    | c => baseCite c
+```
+
+<a id="finnishCite"></a>
+**`finnishCite`**
+
+The Finnish reading of Luther: justification is not forensic only, because
+Christ himself is present in faith and is the believer's righteousness.
+Everything else as `reformedCite`.
+
+```lean
+def finnishCite : Claim → AtomMeta :=
+  fun x =>
+    match x with
+    | Claim.justificationIsForensicOnly =>
+      {
+        label :=
+          "Justification is not forensic only: Christ is present in faith",
+        kind := PremiseKind.theological,
+        source :=
+          { primary := Reference.work Bib.mannermaaChristPresentInFaith,
+            tradition := Tradition.criticalScholarship,
+            confidence := Confidence.disputed } }
+    | c => reformedCite c
 ```
 
 <a id="apocalypticCite"></a>
@@ -350,15 +446,58 @@ contradict Paul. Derived rather than assumed.
 \]
 </div>
 
-<a id="toSalvation"></a>
-**`toSalvation`**
+<a id="solaFide"></a>
+**`solaFide`**
 
-The inference from justification by faith alone to the full claim about
-salvation, requiring the remaining prooftexts and the harmonisation of James.
+**The conclusion**, in its three parts: salvation is by grace, not by works,
+and through faith. Stated as three atoms rather than one so that a position can
+be shown to hold some parts and deny another — which the apocalyptic reading
+and the Tridentine position each do, over different parts.
 
 <div class="testimony-math">
 \[
-(P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23}
+P_{23} \land P_{24} \land P_{25}
+\]
+</div>
+
+<a id="graceNotWorks"></a>
+**`graceNotWorks`**
+
+The first two parts: by grace, and not by works. What the apocalyptic
+reading keeps.
+
+<div class="testimony-math">
+\[
+P_{23} \land P_{24}
+\]
+</div>
+
+<a id="toGraceNotWorks"></a>
+**`toGraceNotWorks`**
+
+*By grace, and not by works*, from the texts that say so in terms: a gift
+through faith and "not of works" (Ephesians 2:8–9), a gift and not wages
+(Romans 4:4–5), mercy and "not by works" (Titus 3:5) — provided James 2:24 is
+answered, and scripture does not contradict itself.
+
+No strand is needed for this part. What it needs is the texts, and an answer to
+James.
+
+<div class="testimony-math">
+\[
+(P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24}
+\]
+</div>
+
+<a id="toThroughFaith"></a>
+**`toThroughFaith`**
+
+*Through faith*, from justification by faith alone and Ephesians 2:8. This
+is the only part of the conclusion the three strands are needed for.
+
+<div class="testimony-math">
+\[
+(P_{22} \land P_{1}) \rightarrow P_{25}
 \]
 </div>
 
@@ -459,6 +598,20 @@ condition, not the gift.
 \]
 </div>
 
+<a id="deliveranceIsGrace"></a>
+**`deliveranceIsGrace`**
+
+What the apocalyptic reading keeps. If δικαιοσύνη θεοῦ is God's act of
+deliverance, it is sheer gift, conditioned on nothing a person does: by grace,
+and not by works. Campbell's inference, and his reason for calling the reading
+more gracious than the one it replaces.
+
+<div class="testimony-math">
+\[
+P_{15} \rightarrow P_{23} \land P_{24}
+\]
+</div>
+
 <a id="apocalypticLine"></a>
 **`apocalypticLine`** — Apocalyptic reading (δικαιοσύνη θεοῦ as deliverance)
 
@@ -472,6 +625,45 @@ what the two Reformed strands deliver.
 \text{(2)} \quad &amp; P_{15} \\
 \text{(3)} \quad &amp; (\lnot P_{7} \land P_{15}) \rightarrow \lnot P_{22} \\[4pt]
 \vdash \quad &amp; \lnot P_{22}
+\end{aligned}
+\]
+</div>
+
+<a id="sandersLine"></a>
+**`sandersLine`** — Covenantal nomism (Sanders, Dunn)
+
+**The New Perspective's reason** for its reading of ἔργα νόμου. If Second
+Temple Judaism was covenantal nomism — in by grace, staying in by works — then
+Paul's opponents were not seeking to earn salvation, and what he refuses is not
+works as such but the marks that kept gentiles out: the boundary markers. The
+ground is Sanders'; the inference is Dunn's, and is cited as his.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{27} \\
+\text{(2)} \quad &amp; P_{27} \rightarrow \lnot P_{6} \\[4pt]
+\vdash \quad &amp; \lnot P_{6}
+\end{aligned}
+\]
+</div>
+
+<a id="criticsLine"></a>
+**`criticsLine`** — Variegated nomism (Gathercole, Carson et al.)
+
+**The critics' reply.** If Second Temple Judaism also held final vindication
+according to works, then the demand Galatians refuses — circumcision added to
+faith as a requirement — is a demand for obedience, and what Paul refuses in
+refusing it is works as such. So the Reformed reading of ἔργα νόμου is not
+assumed but derived: from the reading of Galatians as a polemic, and from a
+historical claim about Judaism that is argued on the evidence.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; \lnot P_{27} \\
+\text{(2)} \quad &amp; (\lnot P_{27} \land P_{8}) \rightarrow P_{6} \\[4pt]
+\vdash \quad &amp; P_{6}
 \end{aligned}
 \]
 </div>
@@ -539,27 +731,42 @@ The same, with James unanswered.
 \]
 </div>
 
+<a id="conclusionSteps"></a>
+**`conclusionSteps`**
+
+The two steps to the three parts of the conclusion: grace and works
+together, then faith.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(2)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25}
+\end{aligned}
+\]
+</div>
+
 <a id="closingSteps"></a>
 **`closingSteps`**
 
-The steps that close the argument once a strand has delivered
-justification by faith alone: the James harmonisation, then the inference to
-salvation.
+The steps that close the argument: the James harmonisation, then the steps
+to the parts of the conclusion.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(2)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23}
+\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(3)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25}
 \end{aligned}
 \]
 </div>
 
 ## Arguments.SolaFide.Packages — the positions, and the variants
 
-Seven positions — Reformed, New Perspective, subjective genitive, law-observant
-Luke, critical authorship, apocalyptic, Tridentine — and reduced Reformed
-packages, each missing a named premise.
+The positions — Reformed, New Perspective, subjective genitive,
+law-observant Luke, Finnish, critical authorship, apocalyptic, Tridentine — and
+reduced Reformed packages, each missing a named premise.
 Whether a premise is load-bearing is shown by removing it and then either
 establishing the conclusion anyway or naming a countermodel.
 
@@ -594,13 +801,46 @@ yoke in Acts.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
 
 No premise here rests on scripture alone.
+
+<a id="paulineWithoutWorksOfLaw"></a>
+**`paulineWithoutWorksOfLaw`** — Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)
+
+The Pauline line without the ἔργα νόμου premise.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{7} \\
+\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\[4pt]
+\vdash \quad &amp; P_{22}
+\end{aligned}
+\]
+</div>
+
+<a id="paulineWithoutPistisChristou"></a>
+**`paulineWithoutPistisChristou`** — Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)
+
+The Pauline line without the objective genitive.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\[4pt]
+\vdash \quad &amp; P_{22}
+\end{aligned}
+\]
+</div>
 
 <a id="newPerspective"></a>
 **`newPerspective`** — New Perspective on Paul
@@ -610,6 +850,10 @@ The New Perspective on Paul: it denies the traditional reading of ἔργα
 actually hold. It keeps the objective genitive, as Dunn does, so the one
 Pauline ground it denies is the ἔργα νόμου premise.
 
+The denial is not assumed: `sandersLine` derives it from covenantal nomism, so
+the package rests on Sanders' account of Judaism and Dunn's inference from it,
+which is where its critics engage it.
+
 It takes no position on the yoke of Acts 15:10: the apostolic line keeps its
 step and loses its ground, so the package neither grants nor denies the premise
 on the New Perspective's behalf.
@@ -618,8 +862,8 @@ on the New Perspective's behalf.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; \lnot P_{6} \\
-\text{(3)} \quad &amp; P_{7} \\
+\text{(2)} \quad &amp; P_{7} \\
+\text{(3)} \quad &amp; P_{27} \\
 \text{(4)} \quad &amp; P_{17} \\
 \text{(5)} \quad &amp; P_{1} \\
 \text{(6)} \quad &amp; P_{2} \\
@@ -632,11 +876,57 @@ on the New Perspective's behalf.
 \text{(13)} \quad &amp; P_{19} \\
 \text{(14)} \quad &amp; P_{21} \\
 \text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(16)} \quad &amp; P_{27} \rightarrow \lnot P_{6} \\
+\text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
+\text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="finnish"></a>
+**`finnish`** — Finnish reading of Luther (Mannermaa)
+
+The Finnish reading of Luther (Mannermaa): the Reformed case, with the
+forensic account of justification denied. Christ himself is present in faith
+and is the believer's righteousness, so justification is not a declaration
+only.
+
+On what justification *is*, this sides with Trent against the Reformed
+account; on sola fide it sides with the Reformed. The encoding shows both, and
+shows that the two questions are independent.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; P_{7} \\
+\text{(4)} \quad &amp; P_{17} \\
+\text{(5)} \quad &amp; P_{10} \\
+\text{(6)} \quad &amp; P_{1} \\
+\text{(7)} \quad &amp; P_{2} \\
+\text{(8)} \quad &amp; P_{3} \\
+\text{(9)} \quad &amp; P_{4} \\
+\text{(10)} \quad &amp; P_{5} \\
+\text{(11)} \quad &amp; P_{16} \\
+\text{(12)} \quad &amp; P_{9} \\
+\text{(13)} \quad &amp; P_{18} \\
+\text{(14)} \quad &amp; P_{19} \\
+\text{(15)} \quad &amp; P_{21} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
+\text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
+\text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; \lnot P_{26} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -672,8 +962,9 @@ of justification. Everything else in the Reformed case is granted.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -710,8 +1001,9 @@ apostolic strand was written against.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -753,12 +1045,13 @@ leans on Romans instead.
 \text{(17)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(19)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(20)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\
-\text{(21)} \quad &amp; \lnot P_{11} \\
-\text{(22)} \quad &amp; \lnot P_{12} \\
-\text{(23)} \quad &amp; \lnot P_{13} \\
-\text{(24)} \quad &amp; \lnot P_{14} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(21)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; \lnot P_{11} \\
+\text{(23)} \quad &amp; \lnot P_{12} \\
+\text{(24)} \quad &amp; \lnot P_{13} \\
+\text{(25)} \quad &amp; \lnot P_{14} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -787,8 +1080,32 @@ nobody holds.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; (\lnot P_{7} \land P_{15}) \rightarrow \lnot P_{22} \\
-\text{(6)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(6)} \quad &amp; P_{15} \rightarrow P_{23} \land P_{24} \\
+\text{(7)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="apocalypticOnGraceAndWorks"></a>
+**`apocalypticOnGraceAndWorks`** — Apocalyptic reading, on grace and works only
+
+The apocalyptic reading, asked only about the first two parts of the
+conclusion: by grace, and not by works.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; \lnot P_{7} \\
+\text{(2)} \quad &amp; P_{15} \\
+\text{(3)} \quad &amp; P_{3} \\
+\text{(4)} \quad &amp; P_{8} \\
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{15}) \rightarrow \lnot P_{22} \\
+\text{(6)} \quad &amp; P_{15} \rightarrow P_{23} \land P_{24} \\
+\text{(7)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24}
 \end{aligned}
 \]
 </div>
@@ -799,7 +1116,8 @@ No premise here rests on scripture alone.
 **`tridentine`** — Tridentine (Council of Trent, Session VI)
 
 The Tridentine position: works performed in grace merit an increase of
-justification, which is incompatible with the conclusion as stated.
+justification, which denies the second part of the conclusion — salvation not
+by works. Trent also denies that justification is forensic only.
 
 Not built from the lines above, and that is the point: it shares four
 prooftexts with them and nothing else, so `caseOf` would misdescribe it.
@@ -812,9 +1130,10 @@ prooftexts with them and nothing else, so `caseOf` would misdescribe it.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
 \text{(5)} \quad &amp; P_{21} \\
-\text{(6)} \quad &amp; P_{24} \\
-\text{(7)} \quad &amp; P_{24} \rightarrow \lnot P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(6)} \quad &amp; \lnot P_{26} \\
+\text{(7)} \quad &amp; P_{28} \\
+\text{(8)} \quad &amp; P_{28} \rightarrow \lnot P_{24} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -825,38 +1144,6 @@ No premise here rests on scripture alone.
 
 Each removes named premises from `reformed` and keeps the rest. The Pauline
 strand has two lexical premises, so it has two reduced forms.
-
-<a id="paulineWithoutWorksOfLaw"></a>
-**`paulineWithoutWorksOfLaw`** — Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)
-
-The Pauline line without the ἔργα νόμου premise.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\[4pt]
-\vdash \quad &amp; P_{22}
-\end{aligned}
-\]
-</div>
-
-<a id="paulineWithoutPistisChristou"></a>
-**`paulineWithoutPistisChristou`** — Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)
-
-The Pauline line without the objective genitive.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\[4pt]
-\vdash \quad &amp; P_{22}
-\end{aligned}
-\]
-</div>
 
 <a id="reformedWithoutWorksOfLaw"></a>
 **`reformedWithoutWorksOfLaw`** — Reformed, minus the ἔργα νόμου premise
@@ -884,8 +1171,9 @@ The Reformed package without the ἔργα νόμου premise.
 \text{(16)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(20)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -918,8 +1206,9 @@ The Reformed package without the dominical lexical premise.
 \text{(16)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(18)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(19)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(20)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -953,8 +1242,9 @@ apostolic strand is untouched.
 \text{(15)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(17)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(18)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(19)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -987,8 +1277,9 @@ genitive stays.
 \text{(14)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -1021,8 +1312,112 @@ theirs.
 \text{(14)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
 \text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="graceAndWorksWithoutAnyLexicalPremise"></a>
+**`graceAndWorksWithoutAnyLexicalPremise`** — Grace and works, minus every lexical premise
+
+The Reformed package with **every** lexical premise removed — both of
+Paul's, Luke's σῴζω and the yoke of Acts 15 — asked only about grace and works.
+The reading of Galatians as a polemic stays, and so does the answer to James.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{1} \\
+\text{(3)} \quad &amp; P_{2} \\
+\text{(4)} \quad &amp; P_{3} \\
+\text{(5)} \quad &amp; P_{4} \\
+\text{(6)} \quad &amp; P_{5} \\
+\text{(7)} \quad &amp; P_{16} \\
+\text{(8)} \quad &amp; P_{9} \\
+\text{(9)} \quad &amp; P_{18} \\
+\text{(10)} \quad &amp; P_{19} \\
+\text{(11)} \quad &amp; P_{21} \\
+\text{(12)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
+\text{(13)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
+\text{(14)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
+\text{(15)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(17)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="paulineStrandOnTheCritics"></a>
+**`paulineStrandOnTheCritics`** — Pauline strand alone, on variegated nomism
+
+The New Perspective's critics (Gathercole, the *Variegated Nomism* volume),
+on the Pauline strand alone: the ἔργα νόμου premise derived from a denial of
+covenantal nomism rather than assumed, and the other two strands left out. Does
+Paul alone carry sola fide on Gathercole's history?
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{7} \\
+\text{(3)} \quad &amp; \lnot P_{27} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{16} \\
+\text{(10)} \quad &amp; P_{9} \\
+\text{(11)} \quad &amp; P_{18} \\
+\text{(12)} \quad &amp; P_{19} \\
+\text{(13)} \quad &amp; P_{21} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
+\text{(15)} \quad &amp; (\lnot P_{27} \land P_{8}) \rightarrow P_{6} \\
+\text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="paulineStrandOnSanders"></a>
+**`paulineStrandOnSanders`** — Pauline strand alone, on covenantal nomism
+
+The same on Sanders' reading of Judaism.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{7} \\
+\text{(3)} \quad &amp; P_{27} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{16} \\
+\text{(10)} \quad &amp; P_{9} \\
+\text{(11)} \quad &amp; P_{18} \\
+\text{(12)} \quad &amp; P_{19} \\
+\text{(13)} \quad &amp; P_{21} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
+\text{(15)} \quad &amp; P_{27} \rightarrow \lnot P_{6} \\
+\text{(16)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{20} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -1053,8 +1448,9 @@ The Reformed package without the premises that harmonise James.
 \text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{22} \\
 \text{(15)} \quad &amp; (P_{16} \land P_{17}) \rightarrow P_{22} \\
 \text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{22} \land P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{20} \land P_{21}) \rightarrow P_{23} \land P_{24} \\
+\text{(18)} \quad &amp; (P_{22} \land P_{1}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{23} \land P_{24} \land P_{25}
 \end{aligned}
 \]
 </div>
@@ -1105,21 +1501,23 @@ theorem newPerspective_establishes : Establishes newPerspective
 **`tridentineReading`**
 
 The Tridentine reading, as a valuation: works merit an increase of
-justification, so salvation is not by faith apart from works.
+justification, so salvation is not apart from works; and justification renews
+the inward man, so it is not forensic only.
 
 ```lean
 def tridentineReading : Valuation Claim :=
   fun a =>
     match a with
-    | Claim.salvationByGraceThroughFaithNotWorks => False
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
     | x => True
 ```
 
 <a id="tridentine_not_establishes"></a>
 **`tridentine_not_establishes`**
 
-The Tridentine premises do not establish the conclusion — they entail its
-negation.
+The Tridentine premises do not establish the conclusion — they entail the
+negation of its second part, that salvation is not by works.
 
 ```lean
 theorem tridentine_not_establishes : ¬Establishes tridentine
@@ -1209,7 +1607,7 @@ def neitherLexicalReading : Valuation Claim :=
     | Claim.sozoIsSoteriological => False
     | Claim.acts15YokeIsLawAsCondition => False
     | Claim.justificationByFaithAlone => False
-    | Claim.salvationByGraceThroughFaithNotWorks => False
+    | Claim.salvationThroughFaith => False
     | x => True
 ```
 
@@ -1248,7 +1646,7 @@ def neitherPistisNorSozoReading : Valuation Claim :=
     | Claim.sozoIsSoteriological => False
     | Claim.acts15YokeIsLawAsCondition => False
     | Claim.justificationByFaithAlone => False
-    | Claim.salvationByGraceThroughFaithNotWorks => False
+    | Claim.salvationThroughFaith => False
     | x => True
 ```
 
@@ -1279,7 +1677,9 @@ Ephesians and Titus are not by Paul, and 1 and 2 Peter not by Peter — and the
 conclusion still follows.
 
 The case reads these letters as canonical scripture rather than as an apostle's
-testimony, so their authorship is no premise of it. What that costs is stated
+testimony, so their authorship is no premise of it — which is why this is proved
+by weakening (`entails_of_subset`) from `reformed_establishes`: the premises
+added are ones no step reads. What that costs is stated
 in `criticalAuthorship`: the letters cannot then serve as evidence of what
 *Paul* meant, and the ἔργα νόμου premise rests on Romans instead.
 
@@ -1301,7 +1701,7 @@ def apocalypticReading : Valuation Claim :=
     match a with
     | Claim.pistisChristouObjective => False
     | Claim.justificationByFaithAlone => False
-    | Claim.salvationByGraceThroughFaithNotWorks => False
+    | Claim.salvationThroughFaith => False
     | x => True
 ```
 
@@ -1309,17 +1709,115 @@ def apocalypticReading : Valuation Claim :=
 **`apocalyptic_not_establishes`**
 
 **The apocalyptic reading does not establish sola fide.** It denies the
-premise the conclusion's "through faith" depends on — that faith is the
-condition of justification — while granting that justification is not by the
-works of the law.
+premise the conclusion's third part depends on — that faith is the condition of
+justification — and so does not reach "through faith".
 
-The conclusion is one atom, so this result cannot say what the reading keeps:
-grace, and "not by works". Splitting the conclusion would let a package
-establish half of it, and would restate every result here; the module docstring
-records the choice not to.
+What it keeps is stated as its own result,
+`apocalyptic_establishes_grace_not_works`.
 
 ```lean
 theorem apocalyptic_not_establishes : ¬Establishes apocalyptic
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalyptic_establishes_grace_not_works"></a>
+**`apocalyptic_establishes_grace_not_works`**
+
+**What the apocalyptic reading keeps: grace, and not by works.** If
+δικαιοσύνη θεοῦ is God's act of deliverance, salvation is sheer gift,
+conditioned on nothing a person does. The reading establishes the first two
+parts of the conclusion by its own route, and denies the third.
+
+So the dispute between the apocalyptic and Reformed readings is located
+exactly: it is over *through faith*, and not over grace or works.
+
+```lean
+theorem apocalyptic_establishes_grace_not_works : Establishes
+    apocalypticOnGraceAndWorks
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="grace_and_works_rest_on_no_lexical_premise"></a>
+**`grace_and_works_rest_on_no_lexical_premise`**
+
+**Grace, and not by works, rest on no lexical premise.** Remove every one —
+ἔργα νόμου and πίστις Χριστοῦ from Paul, σῴζω from Luke, the yoke from Acts —
+and the first two parts of the conclusion still follow, from the texts that say
+"not of works" in terms and the answer to James.
+
+The lexical disputes decide *through faith alone*: whether the texts that
+exclude works also name faith as the means. They do not decide whether works
+are excluded.
+
+```lean
+theorem grace_and_works_rest_on_no_lexical_premise : Establishes
+    graceAndWorksWithoutAnyLexicalPremise
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="forensic_justification_not_load_bearing"></a>
+**`forensic_justification_not_load_bearing`**
+
+**Forensic justification is not load-bearing.** Grant the Finnish reading of
+Luther that justification is not a declaration only — Christ himself is present
+in faith — and sola fide still follows. Proved by weakening, like
+`authorship_not_load_bearing`: no step reads the forensic premise.
+
+On what justification *is*, Mannermaa sides with Trent against the Reformed
+account, and on sola fide with the Reformed against Trent. This result and
+`tridentine_not_establishes` together show the two questions are independent:
+Trent's disagreement with sola fide is over merit, not over infusion.
+
+```lean
+theorem forensic_justification_not_load_bearing : Establishes finnish
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="critics_carry_the_pauline_strand"></a>
+**`critics_carry_the_pauline_strand`**
+
+**The critics carry the Pauline strand.** Deny covenantal nomism with
+Gathercole, keep the reading of Galatians as a polemic, leave Luke and Acts out,
+and sola fide follows from Paul alone — with the ἔργα νόμου premise derived
+rather than assumed.
+
+```lean
+theorem critics_carry_the_pauline_strand : Establishes
+    paulineStrandOnTheCritics
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="sandersReading"></a>
+**`sandersReading`**
+
+Sanders' world, with only Paul to go on: covenantal nomism, so the ἔργα
+νόμου premise fails and Paul does not reach faith alone.
+
+```lean
+def sandersReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.worksOfLawMeansWorksGenerally => False
+    | Claim.sozoIsSoteriological => False
+    | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.salvationThroughFaith => False
+    | x => True
+```
+
+<a id="sanders_costs_the_pauline_strand"></a>
+**`sanders_costs_the_pauline_strand`**
+
+**And Sanders costs it.** Grant covenantal nomism, and with Dunn's inference
+the ἔργα νόμου premise is denied; leave Luke and Acts out, and sola fide does
+not follow from Paul.
+
+Between them, this and `critics_carry_the_pauline_strand` locate the ἔργα νόμου
+dispute where the literature has it: in a historical question about Second
+Temple Judaism, before any question about Paul's Greek.
+
+```lean
+theorem sanders_costs_the_pauline_strand : ¬Establishes paulineStrandOnSanders
 -- axioms: propext, Quot.sound
 ```
 
@@ -1333,7 +1831,7 @@ def jamesUnharmonisedReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.james2_24Compatible => False
-    | Claim.salvationByGraceThroughFaithNotWorks => False
+    | Claim.salvationNotByWorks => False
     | x => True
 ```
 
@@ -1526,5 +2024,78 @@ vacuous.
 ```lean
 theorem reformedWithoutWorksOfLawOrSozo_is_satisfiable : Satisfiable
     reformedWithoutWorksOfLawOrSozo.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalypticOnGraceAndWorks_is_satisfiable"></a>
+**`apocalypticOnGraceAndWorks_is_satisfiable`**
+
+The apocalyptic package, asked about grace and works, has a model.
+
+```lean
+theorem apocalypticOnGraceAndWorks_is_satisfiable : Satisfiable
+    apocalypticOnGraceAndWorks.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="graceAndWorksWithoutAnyLexicalPremise_is_satisfiable"></a>
+**`graceAndWorksWithoutAnyLexicalPremise_is_satisfiable`**
+
+With every lexical premise removed, the package still has a model.
+
+```lean
+theorem graceAndWorksWithoutAnyLexicalPremise_is_satisfiable : Satisfiable
+    graceAndWorksWithoutAnyLexicalPremise.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="finnishReading"></a>
+**`finnishReading`**
+
+Mannermaa's world: justification is not forensic only, and everything else
+holds.
+
+```lean
+def finnishReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.justificationIsForensicOnly => False
+    | x => True
+```
+
+<a id="finnish_is_satisfiable"></a>
+**`finnish_is_satisfiable`**
+
+The Finnish package has a model, so
+`forensic_justification_not_load_bearing` is not vacuous.
+
+```lean
+theorem finnish_is_satisfiable : Satisfiable finnish.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="criticsReading"></a>
+**`criticsReading`**
+
+Gathercole's world: Second Temple Judaism was not uniformly covenantal
+nomism, and everything else holds.
+
+```lean
+def criticsReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.secondTempleCovenantalNomism => False
+    | x => True
+```
+
+<a id="paulineStrandOnTheCritics_is_satisfiable"></a>
+**`paulineStrandOnTheCritics_is_satisfiable`**
+
+The critics' Pauline package has a model, so
+`critics_carry_the_pauline_strand` is not vacuous.
+
+```lean
+theorem paulineStrandOnTheCritics_is_satisfiable : Satisfiable
+    paulineStrandOnTheCritics.premises
 -- axioms: propext, Quot.sound
 ```

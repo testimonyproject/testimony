@@ -1,5 +1,6 @@
 import Testimony.Arguments.SolaFide.Atoms
 import Testimony.Logic.Line
+import Testimony.Bib.Works
 
 /-!
 # Arguments.SolaFide.Lines — the strands, and what they share
@@ -62,12 +63,34 @@ contradict Paul. Derived rather than assumed. -/
 def jamesHarmonisation : Formula Claim :=
   ⋀ [p .james2TargetsDeadFaith, p .worksAreFruitNotGround] ➝ p .james2_24Compatible
 
-/-- The inference from justification by faith alone to the full claim about
-salvation, requiring the remaining prooftexts and the harmonisation of James. -/
-def toSalvation : Formula Claim :=
-  ⋀ [ p .justificationByFaithAlone, p .ephesians2_8_9, p .romans4_4_5
-    , p .titus3_5, p .james2_24Compatible, p .scriptureSelfConsistent ]
-  ➝ p .salvationByGraceThroughFaithNotWorks
+/-- **The conclusion**, in its three parts: salvation is by grace, not by works,
+and through faith. Stated as three atoms rather than one so that a position can
+be shown to hold some parts and deny another — which the apocalyptic reading
+and the Tridentine position each do, over different parts. -/
+def solaFide : Formula Claim :=
+  ⋀ [p .salvationByGrace, p .salvationNotByWorks, p .salvationThroughFaith]
+
+/-- The first two parts: by grace, and not by works. What the apocalyptic
+reading keeps. -/
+def graceNotWorks : Formula Claim :=
+  ⋀ [p .salvationByGrace, p .salvationNotByWorks]
+
+/-- *By grace, and not by works*, from the texts that say so in terms: a gift
+through faith and "not of works" (Ephesians 2:8–9), a gift and not wages
+(Romans 4:4–5), mercy and "not by works" (Titus 3:5) — provided James 2:24 is
+answered, and scripture does not contradict itself.
+
+No strand is needed for this part. What it needs is the texts, and an answer to
+James. -/
+def toGraceNotWorks : Formula Claim :=
+  ⋀ [ p .ephesians2_8_9, p .romans4_4_5, p .titus3_5
+    , p .james2_24Compatible, p .scriptureSelfConsistent ]
+  ➝ graceNotWorks
+
+/-- *Through faith*, from justification by faith alone and Ephesians 2:8. This
+is the only part of the conclusion the three strands are needed for. -/
+def toThroughFaith : Formula Claim :=
+  ⋀ [p .justificationByFaithAlone, p .ephesians2_8_9] ➝ p .salvationThroughFaith
 
 /-- The Pauline line. Its grounds are the reading of Galatians as a polemic and
 the two disputed lexical premises, about ἔργα νόμου and about πίστις Χριστοῦ.
@@ -127,6 +150,13 @@ def deliveranceNotFaithAlone : Formula Claim :=
   ⋀ [notP .pistisChristouObjective, p .righteousnessOfGodIsDeliverance]
   ➝ notP .justificationByFaithAlone
 
+/-- What the apocalyptic reading keeps. If δικαιοσύνη θεοῦ is God's act of
+deliverance, it is sheer gift, conditioned on nothing a person does: by grace,
+and not by works. Campbell's inference, and his reason for calling the reading
+more gracious than the one it replaces. -/
+def deliveranceIsGrace : Formula Claim :=
+  p .righteousnessOfGodIsDeliverance ➝ graceNotWorks
+
 /-- The apocalyptic line: a rival route from Paul, delivering the denial of
 what the two Reformed strands deliver. -/
 def apocalypticLine : Line Claim :=
@@ -134,6 +164,43 @@ def apocalypticLine : Line Claim :=
   , grounds := [notP .pistisChristouObjective, p .righteousnessOfGodIsDeliverance]
   , step := deliveranceNotFaithAlone
   , delivers := notP .justificationByFaithAlone }
+
+/-- **The New Perspective's reason** for its reading of ἔργα νόμου. If Second
+Temple Judaism was covenantal nomism — in by grace, staying in by works — then
+Paul's opponents were not seeking to earn salvation, and what he refuses is not
+works as such but the marks that kept gentiles out: the boundary markers. The
+ground is Sanders'; the inference is Dunn's, and is cited as his. -/
+def sandersLine : Line Claim :=
+  { name := "Covenantal nomism (Sanders, Dunn)"
+  , grounds := [p .secondTempleCovenantalNomism]
+  , step := p .secondTempleCovenantalNomism ➝ notP .worksOfLawMeansWorksGenerally
+  , delivers := notP .worksOfLawMeansWorksGenerally
+  , inference :=
+      some
+        { primary := .work dunnNewPerspective .whole
+        , supporting := [.work wrightWhatPaulSaid .whole]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+
+/-- **The critics' reply.** If Second Temple Judaism also held final vindication
+according to works, then the demand Galatians refuses — circumcision added to
+faith as a requirement — is a demand for obedience, and what Paul refuses in
+refusing it is works as such. So the Reformed reading of ἔργα νόμου is not
+assumed but derived: from the reading of Galatians as a polemic, and from a
+historical claim about Judaism that is argued on the evidence. -/
+def criticsLine : Line Claim :=
+  { name := "Variegated nomism (Gathercole, Carson et al.)"
+  , grounds := [notP .secondTempleCovenantalNomism]
+  , step :=
+      ⋀ [notP .secondTempleCovenantalNomism, p .galatiansOpposesCircumcisionAsRequirement]
+      ➝ p .worksOfLawMeansWorksGenerally
+  , delivers := p .worksOfLawMeansWorksGenerally
+  , inference :=
+      some
+        { primary := .work gathercoleWhereIsBoasting .whole
+        , supporting := [.work carsonVariegatedNomism1 .whole]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
 
 /-- The prooftexts the strands read. Shared by every Reformed package, and by
 the New Perspective. -/
@@ -150,9 +217,12 @@ def sharedGrounds : List (Formula Claim) :=
 def sharedGroundsWithoutJames : List (Formula Claim) :=
   prooftexts ++ [p .scriptureSelfConsistent]
 
-/-- The steps that close the argument once a strand has delivered
-justification by faith alone: the James harmonisation, then the inference to
-salvation. -/
-def closingSteps : List (Formula Claim) := [jamesLine.step, toSalvation]
+/-- The two steps to the three parts of the conclusion: grace and works
+together, then faith. -/
+def conclusionSteps : List (Formula Claim) := [toGraceNotWorks, toThroughFaith]
+
+/-- The steps that close the argument: the James harmonisation, then the steps
+to the parts of the conclusion. -/
+def closingSteps : List (Formula Claim) := jamesLine.step :: conclusionSteps
 
 end Testimony.Arguments.SolaFide

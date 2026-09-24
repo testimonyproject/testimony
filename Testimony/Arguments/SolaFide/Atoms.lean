@@ -6,8 +6,9 @@ import Testimony.Scripture
 # Arguments.SolaFide.Atoms — the atomic claims
 
 The prooftexts of the three strands, their four disputed premises, the reading
-of Galatians as a polemic, the authorship of the disputed letters, the
-apocalyptic rival's premise, the James premises, and the conclusions. See
+of Galatians as a polemic, the authorship of the disputed letters, the rivals'
+premises — covenantal nomism, forensic justification, the apocalyptic reading —
+the James premises, and the three parts of the conclusion. See
 `Testimony.Arguments.SolaFide` for the dispute this encodes.
 -/
 
@@ -83,9 +84,24 @@ inductive Claim
   | scriptureSelfConsistent
   /-- Justification is by faith alone. -/
   | justificationByFaithAlone
-  /-- Salvation is by grace through faith, and not by works. **The
+  /-- Salvation is by grace: a gift, not wages owed. **First part of the
   conclusion.** -/
-  | salvationByGraceThroughFaithNotWorks
+  | salvationByGrace
+  /-- Salvation is not by works: no work, however done, is its ground. **Second
+  part of the conclusion**, and the one the Tridentine position denies. -/
+  | salvationNotByWorks
+  /-- Salvation is received through faith: faith is the means by which it is
+  received. **Third part of the conclusion**, and the one the apocalyptic
+  reading denies. -/
+  | salvationThroughFaith
+  /-- Justification is forensic only: a declaration — pardon, and the
+  imputation of Christ's righteousness — and not an infusion of righteousness.
+  The Reformed account of what justification *is*, denied by Trent and by the
+  Finnish reading of Luther alike. -/
+  | justificationIsForensicOnly
+  /-- Second Temple Judaism held entry to the covenant to be by grace, and works
+  to be the means of staying in it: Sanders' *covenantal nomism*. -/
+  | secondTempleCovenantalNomism
   /-- Works performed in grace merit an increase of justification. The
   Tridentine claim. -/
   | worksMeritIncreaseOfJustification

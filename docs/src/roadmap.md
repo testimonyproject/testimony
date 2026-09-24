@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **74 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **79 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -72,7 +72,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 |---|---|---|
 | `reformed_establishes` | `Establishes reformed` | Given the Reformed premises, the conclusion follows. |
 | `newPerspective_establishes` | `Establishes newPerspective` | **The New Perspective establishes it too.** Dunn and Wright reject the traditional reading of ἔργα νόμου; they do not reject justification by faith. |
-| `tridentine_not_establishes` | `¬Establishes tridentine` | The Tridentine premises do not establish the conclusion — they entail its negation. |
+| `tridentine_not_establishes` | `¬Establishes tridentine` | The Tridentine premises do not establish the conclusion — they entail the negation of its second part, that salvation is not by works. |
 | `worksOfLaw_not_load_bearing` | `Establishes reformedWithoutWorksOfLaw` | The ἔργα νόμου premise is **not** load-bearing on its own: strip it and the other strands still carry the argument. |
 | `sozo_not_load_bearing` | `Establishes reformedWithoutSozo` | Nor is the dominical lexical premise: strip it and the other strands still carry the argument. |
 | `apostolic_strand_survives_paul_and_luke` | `Establishes reformedWithoutWorksOfLawOrSozo` | **The two disputes that used to decide the argument no longer do.** Deny both the ἔργα νόμου premise and the dominical premise — the pair whose joint removal defeated sola fide … |
@@ -81,7 +81,12 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEveryStrandsPremise` | **The result worth having.** No strand's disputed premise carries the argument alone, but together they do: remove the ἔργα νόμου premise from Paul, σῴζω from Luke and the yoke … |
 | `pistisChristou_jointly_load_bearing` | `¬Establishes reformedWithoutPistisChristouSozoOrYoke` | **Within the Pauline strand, faith in Christ is load-bearing.** Deny the objective genitive, and the disputed premise of each other strand, keep the ἔργα νόμου premise and the … |
 | `authorship_not_load_bearing` | `Establishes criticalAuthorship` | **Authorship is not load-bearing.** Grant every critical conclusion — that Ephesians and Titus are not by Paul, and 1 and 2 Peter not by Peter — and the conclusion still follows. |
-| `apocalyptic_not_establishes` | `¬Establishes apocalyptic` | **The apocalyptic reading does not establish sola fide.** It denies the premise the conclusion's "through faith" depends on — that faith is the condition of justification — while … |
+| `apocalyptic_not_establishes` | `¬Establishes apocalyptic` | **The apocalyptic reading does not establish sola fide.** It denies the premise the conclusion's third part depends on — that faith is the condition of justification — and so does … |
+| `apocalyptic_establishes_grace_not_works` | `Establishes apocalypticOnGraceAndWorks` | **What the apocalyptic reading keeps: grace, and not by works.** If δικαιοσύνη θεοῦ is God's act of deliverance, salvation is sheer gift, conditioned on nothing a person does. |
+| `grace_and_works_rest_on_no_lexical_premise` | `Establishes graceAndWorksWithoutAnyLexicalPremise` | **Grace, and not by works, rest on no lexical premise.** Remove every one — ἔργα νόμου and πίστις Χριστοῦ from Paul, σῴζω from Luke, the yoke from Acts — and the first two parts … |
+| `forensic_justification_not_load_bearing` | `Establishes finnish` | **Forensic justification is not load-bearing.** Grant the Finnish reading of Luther that justification is not a declaration only — Christ himself is present in faith — and sola … |
+| `critics_carry_the_pauline_strand` | `Establishes paulineStrandOnTheCritics` | **The critics carry the Pauline strand.** Deny covenantal nomism with Gathercole, keep the reading of Galatians as a polemic, leave Luke and Acts out, and sola fide follows from … |
+| `sanders_costs_the_pauline_strand` | `¬Establishes paulineStrandOnSanders` | **And Sanders costs it.** Grant covenantal nomism, and with Dunn's inference the ἔργα νόμου premise is denied; leave Luke and Acts out, and sola fide does not follow from Paul. |
 | `james_harmonisation_is_load_bearing` | `¬Establishes reformedWithoutJamesHarmonisation` | The argument genuinely depends on answering James. |
 
 ### [Sola scriptura](./arguments/sola-scriptura.md)
@@ -112,7 +117,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- END GENERATED: lake exe statusgen -->
 
-Nine findings emerged that were not designed for.
+Eleven findings emerged that were not designed for.
 
 **Redundancy defeats a lexical dispute.** Sola fide runs on three independent
 strands — Paul's ἔργα νόμου, Jesus' σέσωκέν σε at Luke 7:50, and Peter's refusal
@@ -139,6 +144,28 @@ still carry the argument (`pistisChristou_not_load_bearing`). The genitive is
 the hinge of Paul's route, not of the conclusion, and it does not follow the
 Old/New Perspective line: Dunn holds the objective genitive and the New
 Perspective together.
+
+**Sola fide's rivals deny different parts of it.** The conclusion is three
+atoms — by grace, not by works, through faith — because a single atom could not
+say what a rival keeps. Trent denies the second, by merit. The apocalyptic
+reading denies the third and establishes the first two by its own route
+(`apocalyptic_establishes_grace_not_works`). And the split shows which part the
+strands are for: remove every lexical premise from every strand and grace and
+"not by works" still follow, from the texts that say so in terms and the answer
+to James (`grace_and_works_rest_on_no_lexical_premise`). The lexical disputes
+decide *through faith alone* — whether the texts that exclude works also name
+faith as the means — and, as encoded, nothing else.
+
+**The ἔργα νόμου dispute is a dispute about Judaism.** The New Perspective's
+reading of Paul's phrase is not a bare premise but an inference, Dunn's, from
+Sanders' covenantal nomism; its critics answer by denying the ground, and
+derive the Reformed reading from the denial. On their history Paul alone
+carries sola fide (`critics_carry_the_pauline_strand`); on Sanders' he does not
+(`sanders_costs_the_pauline_strand`). What the lexical question turns on is a
+historical one about Second Temple soteriology. And what justification *is* —
+forensic, or Christ present in faith — turns out to be a separate question
+again: the Finnish reading of Luther denies the forensic account with Trent and
+still establishes sola fide (`forensic_justification_not_load_bearing`).
 
 **Authorship is not a premise, and the encoding says what that costs.**
 Ephesians, Titus and 1 and 2 Peter are each disputed, and each dispute is
