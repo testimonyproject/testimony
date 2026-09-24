@@ -104,10 +104,12 @@ obligations.
 on every implication in the context, so each inference step added to a case
 multiplies its cost however simple the step is: splitting `SolaFide`'s closing
 step in three took `reformed_establishes` to twenty times the default heartbeat
-budget. Mathlib's `itauto` (Dyckhoff's G4ip, *J. Symbolic Logic* 57(3), 1992) is
-complete for intuitionistic logic and no faster on these goals. The Horn path
-proves the same goals in about two thousand heartbeats where `tauto` took about
-four million, because it is the procedure the goals' shape calls for. It is also
+budget. On four `SolaFide` goals with no heartbeat limit, `tauto`, `simp_all`
+and `aesop` each failed to finish in fifteen minutes; Mathlib's `itauto`
+(Dyckhoff's G4ip, *J. Symbolic Logic* 57(3), 1992), complete for intuitionistic
+logic, took six. The Horn path takes four seconds — about two thousand
+heartbeats a goal where `tauto` took about four million — because it is the
+procedure the goals' shape calls for. It is also
 constructive where `tauto` is classical, so every `Establishes` result now rests
 on `propext` and `Quot.sound` alone; `Classical.choice` remains in the trust
 base only for the dispute results, which come from the Dung semantics.
