@@ -384,8 +384,6 @@ That limitation is closable with no new dependency at all.
 - **A devcontainer** ([#11]), so that the toolchain is consistent and not only
   the worktree layout. Contributors should not have to install elan and match
   Lean v4.33.1 by hand.
-- **Enforcing the worktree rule** ([#12]). Every other hard rule in CLAUDE.md
-  is enforced by a command; this one is documented and unchecked.
 
 ## How deferred work is tracked
 
@@ -415,7 +413,6 @@ the rest worth reading.
 [#9]: https://github.com/testimonyproject/testimony/issues/9
 [#10]: https://github.com/testimonyproject/testimony/issues/10
 [#11]: https://github.com/testimonyproject/testimony/issues/11
-[#12]: https://github.com/testimonyproject/testimony/issues/12
 [issues]: https://github.com/testimonyproject/testimony/issues
 [label-roadmap]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Aroadmap
 [label-infra]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Ainfra

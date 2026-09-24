@@ -32,6 +32,11 @@ if [[ -e "$dest" ]]; then
   exit 1
 fi
 
+# Arm the pre-commit hook that refuses commits in the primary checkout. The
+# setting is shared by every worktree of the repository, so the first worktree
+# made this way protects the primary checkout too.
+git -C "$repo_root" config core.hooksPath .githooks
+
 git -C "$repo_root" fetch --quiet origin "$base" 2>/dev/null || true
 mkdir -p "$(dirname "$dest")"
 git -C "$repo_root" worktree add -b "$branch" "$dest" "$base"
