@@ -81,9 +81,11 @@ much" (7:47) is the text a rival would use to make love, not faith, the ground
 of her forgiveness. The dominical case does not leave that open: it carries
 `luke7_47LoveIsEvidence` — her love is the evidence of forgiveness, not its
 ground, as 7:47b and the parable of 7:41–43 read it — as a premise of its own.
-It is the library's proposal, rated `plausible`: advanced from the text, not
-argued for from a commentator. So is the σῴζω premise, and so the verdict that
-rests on both is tagged `proposed`. No party here denies either.
+It is Melanchthon's reading in the *Apology of the Augsburg Confession*: "Christ
+interprets Himself when He adds: Thy faith hath saved thee", so the woman did
+not merit forgiveness "by that work of love". It is rated `plausible`, because
+Trent counts beginning to love God among the dispositions to justification
+(Session VI, ch. 6); but no party here argues that reading of 7:47.
 
 **The parties chosen.** A dispute is over the arguments put into it. Hays's
 subjective genitive is represented through the apocalyptic reading, which holds
@@ -1240,23 +1242,8 @@ defeating each other: remove the apocalyptic reading and Trent can be defended
 again (`sola_fide_not_forced_without_the_apocalyptic_reading`). And the
 dominical case is attacked by no one but Trent because no source cited here
 argues that σῴζω at Luke 7:50 means healing, and none argues that the woman's
-love at 7:47 was the ground of her forgiveness.
-
-**Proposed, not reported.** The dominical case rests on two premises no
-scholarly work read here argues: that σῴζω at 7:50 means salvation, and that
-the woman's love at 7:47 is the evidence of her forgiveness rather than its
-ground. Both are cited as the library's proposals, from the plain reading of
-the pericope.
-
-**What is novel here.** The dominical case's two distinctive premises, and so
-the verdict that rests on them: the library advances both from the text, with
-7:47 answered in advance, and cites no one for either.
-
-**What would settle whether it is really new.** Marshall's NIGTC commentary at
-Luke 7:50, and Kilgallen, "Forgiveness of Sins (Luke 7:36-50)", *Novum
-Testamentum* 40 (1998) 105–116, at 7:47. If either argues the reading, the
-premise should be cited to it and, once both are, the tag dropped. -/
-@[headline, proposed]
+love at 7:47 was the ground of her forgiveness. -/
+@[headline]
 theorem dominical_case_skeptically_accepted :
     SkepticallyAccepted solaFideDispute.defeats .dominical := by
   intro S hS

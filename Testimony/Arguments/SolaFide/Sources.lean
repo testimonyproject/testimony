@@ -49,6 +49,13 @@ def trentOnMerit : Source :=
   , tradition := .romanCatholic
   , confidence := .consensus }
 
+/-- Where Melanchthon reads Luke 7:47 by 7:50, in the *Apology of the Augsburg
+Confession* (1531): the part of Article IV on love and the fulfilling of the
+law. The *Concordia Triglotta* numbers it Article III, 31–34; the reference is
+given by article and topic because paragraph numbers differ between editions. -/
+def melanchthonOnLuke7 : Locus :=
+  .sectionRef "Apology IV, on love and the fulfilling of the law: Luke 7:47–50"
+
 /-- The apocalyptic reading's step, from Christ's faithfulness and God's
 deliverance to the denial that faith is the condition. Rated `plausible`: no
 source cited here grants both grounds and affirms faith as the condition of
@@ -245,24 +252,19 @@ def baseCite : Claim → AtomMeta
   | .sozoIsSoteriological =>
     { label := "σῴζω in Luke 7:50 denotes salvation, not physical healing"
     , kind := .linguistic
-      -- **Proposed.** No scholarly work arguing the case at 7:50 has been read
-      -- for this library. Marshall's commentary was cited here before, but his
-      -- note on 7:50 has not been checked against the text, so it is kept as a
-      -- lead, not as the source. Rated `wellSupported`, not `disputed`:
-      -- `disputed` means contested by competent scholars, and a search for one
-      -- arguing the healing sense *at 7:50* (Crossref and the open web,
-      -- September 2026) found none. The ambiguity of the formula elsewhere is
-      -- why it is not `consensus`. A cited argument for healing here would
-      -- lower it again, and would enter `Dispute.lean` as a party.
+      -- Melanchthon reads 7:50 as the remission of sins received by faith: "the
+      -- remission of sins is properly received by faith, although love,
+      -- confession, and other good fruits ought to follow". A Reformation
+      -- confession, not a philological study; Marshall's NIGTC note on 7:50
+      -- remains the modern commentary to check, and is kept as a lead. Rated
+      -- `wellSupported`, not `disputed`: `disputed` means contested by
+      -- competent scholars, and a search for one arguing the healing sense *at
+      -- 7:50* (Crossref and the open web, September 2026) found none. The
+      -- formula means "made you well" at 8:48, 17:19 and 18:42, which is why it
+      -- is not `consensus`. A cited argument for healing here would lower it,
+      -- and would enter `Dispute.lean` as a party.
     , source :=
-        { primary := .proposal
-            ("The plain reading of the pericope, advanced here without a verified " ++
-             "scholarly source. The same formula means \"made you well\" at Luke " ++
-             "8:48, 17:19 and 18:42, where there is illness; at 7:50 there is none, " ++
-             "and the saying follows \"your sins are forgiven\" (7:48) and the " ++
-             "table's question \"who is this who even forgives sins?\" (7:49). " ++
-             "Settled by a commentator who argues it at 7:50 — Marshall's NIGTC " ++
-             "Luke is the first to check.")
+        { primary := .work bookOfConcord melanchthonOnLuke7
         , supporting :=
             [.scripture [{ ref := .range luke7_47to50 }], .work marshallLuke (.adLoc luke7_50)]
         , tradition := .christianHistoricalGrammatical
@@ -271,24 +273,22 @@ def baseCite : Claim → AtomMeta
     { label := "Luke 7:47 — her love is the evidence of her forgiveness, not its ground"
     , kind := .interpretive
       -- ὅτι in 7:47a can be read causally ("forgiven because she loved") or as
-      -- giving the evidence ("forgiven, as her great love shows"). The text
-      -- decides it: 7:47b ("the one forgiven little loves little") runs from
-      -- forgiveness to love, and so does the parable the verse applies (7:41–43),
-      -- where the debtor loves more *because* more was cancelled. **Proposed**,
-      -- because no commentator's reading of 7:47 has been verified from the
-      -- commentary itself; `plausible`, because the causal reading has a
-      -- history and the grammar alone does not exclude it.
+      -- giving the evidence ("forgiven, as her great love shows"). Melanchthon
+      -- reads it the second way: "Christ interprets Himself when He adds: Thy
+      -- faith hath saved thee", so "Christ did not mean that the woman, by that
+      -- work of love, had merited the remission of sins". 7:47b and the parable
+      -- of 7:41–43 run the same way, from forgiveness to love. Kilgallen,
+      -- "Forgiveness of Sins (Luke 7:36-50)", NovT 40 (1998) 105–116, is the
+      -- modern study to check. `plausible`, because the causal reading has a
+      -- history — Trent counts beginning to love God among the dispositions to
+      -- justification (Session VI, ch. 6) — and the grammar alone does not
+      -- exclude it.
     , source :=
-        { primary := .proposal
-            ("The evidential reading of ὅτι in 7:47a, advanced here from the text " ++
-             "without a verified scholarly source: 7:47b and the parable of " ++
-             "7:41–43 both run from forgiveness to love. Settled by a commentator " ++
-             "who argues it — Kilgallen, \"Forgiveness of Sins (Luke 7:36-50)\", " ++
-             "NovT 40 (1998) 105–116, is the first to check.")
+        { primary := .work bookOfConcord melanchthonOnLuke7
         , supporting :=
             [ .scripture [{ ref := .range luke7_41to43 }, { ref := .verse luke7_47 }]
             , .scripture [{ ref := .range luke7_47to50 }] ]
-        , tradition := .christianHistoricalGrammatical
+        , tradition := .reformedProtestant
         , confidence := .plausible } }
   | .james2TargetsDeadFaith =>
     { label := "James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine"
