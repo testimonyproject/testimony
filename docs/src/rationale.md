@@ -38,7 +38,8 @@ manifest is then generated from the premises rather than maintained beside
 them, and cannot drift out of step with the argument it describes.
 
 **Validity becomes mechanical.** Whether the conclusion follows is settled by
-a proof term, produced by `tauto` and checked by Lean's kernel; where it does
+a proof term, produced by backward chaining over the premises and checked by
+Lean's kernel; where it does
 not follow, a named countermodel says so. This is the least interesting
 guarantee the library offers, and it is worth having anyway: it means no
 disagreement about an argument is ever a disagreement about whether it is

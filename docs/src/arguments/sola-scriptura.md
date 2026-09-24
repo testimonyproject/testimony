@@ -1192,7 +1192,7 @@ Given the Protestant premises, on either route, the conclusion follows.
 
 ```lean
 theorem protestant_establishes : Establishes protestant
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="tradition0_establishes"></a>
@@ -1206,7 +1206,7 @@ who holds it rather than by its critic.
 
 ```lean
 theorem tradition0_establishes : Establishes tradition0
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="tridentineReading"></a>
@@ -1296,7 +1296,7 @@ fails by its own standard.
 
 ```lean
 theorem selfRefutation_is_valid : Establishes selfRefutation
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="canonObjection_is_valid"></a>
@@ -1309,7 +1309,7 @@ scripture.
 
 ```lean
 theorem canonObjection_is_valid : Establishes canonObjection
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="interpretiveRegress_is_valid"></a>
@@ -1322,7 +1322,7 @@ submits to is anything other than the one submitting.
 
 ```lean
 theorem interpretiveRegress_is_valid : Establishes interpretiveRegress
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 #### The hinge, in its two roles
@@ -1342,7 +1342,7 @@ eliminative line still delivers the sole rule.
 ```lean
 theorem hinge_not_load_bearing_for_conclusion : Establishes
     protestantWithoutHinge
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="hingeDeniedReading"></a>
@@ -1650,7 +1650,7 @@ consensus, and the reasoning is circular.
 
 ```lean
 theorem geislerCircle_is_valid : Establishes geislerCircle
--- axioms: propext, Classical.choice, Quot.sound
+-- axioms: propext, Quot.sound
 ```
 
 <a id="accountabilityReading"></a>

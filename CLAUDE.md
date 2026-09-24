@@ -94,7 +94,7 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Bib/` | `Core` types, `Attr` registry attribute, `Works` entries, `Render`, `Registry` guards |
 | `Testimony/Provenance.lean` | `Reference`, `Source`, `Tradition`, `Confidence` |
 | `Testimony/Intertext.lean` | Typed relations between passages |
-| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels + `Independent`, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`/`refute_with`/`satisfied_by`/`leaves_open`/`granted`), `Framework` Dung semantics (grounded, preferred), `Dispute` packages as its nodes, defeat derived from entailment and cited confidence |
+| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels + `Independent`, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`, Horn-only, and `establish_by_search`/`refute_with`/`satisfied_by`/`leaves_open`/`granted`), `Framework` Dung semantics (grounded, preferred), `Dispute` packages as its nodes, defeat derived from entailment and cited confidence |
 | `Testimony/Argument.lean` | Criteria, definitions, `Satisfies`, `People` |
 | `Testimony/Arguments/` | The worked arguments. Over ~500 lines an argument becomes a directory: `Atoms`, `Sources`, `Lines`, `Packages`, `Results`, with the root module reduced to imports and the module docstring |
 | `Testimony/Logic/Page` | `Item` — what a generated page is made of, before either rendering |
@@ -141,6 +141,12 @@ from source.
   changed rating can change who prevails in a dispute. Inference steps count
   too: a `Dispute` refuses a node whose package cites no `inference`, and a step
   is `disputed` when a cited source grants its grounds and denies its conclusion.
+- **`establish` is Horn-only, on purpose.** It proves by backward chaining
+  (`solve_by_elim`) after currying each step, and fails rather than falling back
+  to `tauto`, whose cost is exponential in the number of inference steps. Keep
+  steps as *conjunction of literals → atom or conjunction of atoms*; write
+  alternatives as separate lines, not as a `⋎`. `establish_by_search` exists for
+  a step that genuinely cannot be Horn. Never raise `maxHeartbeats`.
 - `refute_with` takes an identifier, not a term, so a countermodel must be a
   named definition — the rival's reading, written down.
 - There is no atom budget; the 2^n truth-table checker was removed.

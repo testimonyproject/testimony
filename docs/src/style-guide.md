@@ -103,8 +103,15 @@ length.
 - **Rivals are not optional.** An argument module encoding a Christian reading
   without at least one rival package is incomplete, not merely unpolished.
   Write the rival *before* proving anything. Rule L5 enforces this.
-- **There is no atom budget.** Entailment is settled by `tauto` and refuted by
-  named countermodels, neither of which enumerates valuations.
+- **There is no atom budget.** Entailment is settled by backward chaining and
+  refuted by named countermodels, neither of which enumerates valuations.
+- **Keep inference steps Horn.** A step is a conjunction of literals implying an
+  atom or a conjunction of atoms. Then `establish` proves by SLD resolution,
+  whose cost grows with the length of the chain rather than the number of
+  steps. A step with a disjunction anywhere, or an implication inside an
+  antecedent, makes `establish` fail; `establish_by_search` would prove it with
+  `tauto`, whose cost is exponential in the number of steps. Encode alternatives
+  as separate lines instead.
 - **Write formulas in Foundation's notation.** `➝`, `⋏`, `⋎`, `∼`, and `⋀` for
   the conjunction of a list — not the raw constructors `.imp`, `.and`, `.or`.
   They build the same terms, but only the notation is what Foundation's
