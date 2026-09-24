@@ -32,9 +32,9 @@ inductive Claim
   /-- Paul's ἔργα νόμου denotes human works in general, not Jewish covenant
   boundary markers. **The disputed premise.** -/
   | worksOfLawMeansWorksGenerally
-  /-- Salvation is by grace through faith, and not by works. **The
-  conclusion.** -/
-  | salvationByGraceThroughFaithNotWorks
+  /-- Salvation is received through faith. **Third part of the conclusion**,
+  the one the apocalyptic reading denies. -/
+  | salvationThroughFaith
 deriving DecidableEq, Repr
 ```
 
@@ -97,8 +97,8 @@ def reformed : ArgumentPackage Claim :=
   { name := "Reformed (sola fide)"
   , cite := reformedCite
   , premises := caseOf [paulineLine, dominicalLine] sharedGrounds closingSteps
-  , conclusion := p .salvationByGraceThroughFaithNotWorks
-  , conclusionLabel := "salvation by grace through faith, not works" }
+  , conclusion := solaFide   -- ⋀ of the three parts, so rivals can hold some
+  , conclusionLabel := "salvation by grace, not by works, through faith" }
 ```
 
 A single line that concludes exactly what it delivers can skip `caseOf`:
@@ -129,7 +129,8 @@ lines, its steps, any shared premise list:
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
   establish [reformed, paulineLine, dominicalLine, sharedGrounds, closingSteps,
-    paulineToFaithAlone, dominicalToFaithAlone, toSalvation]
+    paulineToFaithAlone, dominicalToFaithAlone, toGraceNotWorks, toThroughFaith,
+    solaFide]
 
 #print axioms reformed_establishes
 ```
@@ -144,12 +145,13 @@ rival's position written down, so name it after that position:
 ```lean
 def tridentineReading : Valuation Claim := fun a =>
   match a with
-  | .salvationByGraceThroughFaithNotWorks => False
+  | .salvationNotByWorks => False
+  | .justificationIsForensicOnly => False
   | _ => True
 
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
-  refute_with tridentineReading [tridentine, reformed]
+  refute_with tridentineReading [tridentine, reformed, solaFide]
 ```
 
 `refute_with` takes an **identifier**, so the countermodel has to be a named

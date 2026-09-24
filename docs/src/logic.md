@@ -114,8 +114,9 @@ point of rendering at all. It separates an argument's *shape* from its content:
 (17)  (P₁₆ ∧ P₁₇) → P₂₂
 (18)  (P₉ ∧ P₁₀) → P₂₂
 (19)  (P₁₈ ∧ P₁₉) → P₂₀
-(20)  (P₂₂ ∧ P₁ ∧ P₄ ∧ P₅ ∧ P₂₀ ∧ P₂₁) → P₂₃
-  ⊢   P₂₃
+(20)  (P₁ ∧ P₄ ∧ P₅ ∧ P₂₀ ∧ P₂₁) → P₂₃ ∧ P₂₄
+(21)  (P₂₂ ∧ P₁) → P₂₅
+  ⊢   P₂₃ ∧ P₂₄ ∧ P₂₅
 ```
 
 That is sola fide. Premises (16), (17) and (18) all conclude `P₂₂`: one by way
@@ -123,7 +124,9 @@ of `P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστο
 Christ), one by way of `P₁₇` (Jesus' σῴζω at Luke 7:50), and one by way of
 `P₁₀` (Peter's yoke at Acts 15:10). The argument's redundancy — the reason no
 disputed premise is load-bearing on its own — is visible on the page before you
-read a word of the legend.
+read a word of the legend. So is the split in the conclusion: (20) reaches grace
+and "not by works" (`P₂₃ ∧ P₂₄`) without `P₂₂` at all, and only (21), "through
+faith" (`P₂₅`), needs a strand.
 
 ## Publishing what the library claims
 
@@ -284,8 +287,9 @@ establish, name what to unfold:
 ```lean
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
-  establish [reformed, paulineLine, dominicalLine, sharedGrounds,
-    closingSteps, paulineToFaithAlone, dominicalToFaithAlone, toSalvation]
+  establish [reformed, paulineLine, dominicalLine, apostolicLine, sharedGrounds,
+    closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
+    toGraceNotWorks, toThroughFaith, solaFide]
 ```
 
 To refute, name the rival's reading and check it:
@@ -293,12 +297,13 @@ To refute, name the rival's reading and check it:
 ```lean
 def tridentineReading : Valuation Claim := fun a =>
   match a with
-  | .salvationByGraceThroughFaithNotWorks => False
+  | .salvationNotByWorks => False
+  | .justificationIsForensicOnly => False
   | _ => True
 
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
-  refute_with tridentineReading [tridentine, reformed]
+  refute_with tridentineReading [tridentine, reformed, solaFide]
 ```
 
 To record that a premise set settles a question neither way — which is what a

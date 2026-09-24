@@ -68,20 +68,39 @@ Paul's phrase, turns out to establish the conclusion too. Nor does winning the
 genitive for Hays: that costs the Reformed case its Pauline route, and not its
 conclusion.
 
-**The apocalyptic reading** of Martyn and Campbell is a rival to both
-perspectives. It takes the genitive as subjective and δικαιοσύνη θεοῦ as God's
-act of deliverance, and denies that faith is the condition of justification. It
-does not establish the conclusion. It does keep part of it — grace, and "not by
-works" — and the encoding cannot say so, because the conclusion is one atom.
-Splitting it would let a package establish half of it, and would restate every
-result here; the conclusion stays whole, and this paragraph records the cost.
+**The conclusion has three parts** — salvation is *by grace*, *not by works*,
+and *through faith* — and they are separate atoms, because the rivals divide
+over different parts. The Tridentine position denies the second: works done in
+grace merit an increase of justification. The apocalyptic reading of Martyn and
+Campbell denies the third: taking the genitive as subjective and δικαιοσύνη
+θεοῦ as God's act of deliverance, it denies that faith is the condition of
+justification, while establishing grace and "not by works" by its own route
+(`apocalyptic_establishes_grace_not_works`). The split also shows which part
+the strands are needed for. Grace and "not by works" follow from the texts that
+say so in terms, given an answer to James, with every lexical premise removed
+(`grace_and_works_rest_on_no_lexical_premise`). The lexical disputes decide
+*through faith alone*.
 
-Two positions are cited rather than encoded. The Reformed critics of the New
-Perspective — Gathercole, the *Variegated Nomism* volume, Piper — defend the
-ἔργα νόμου premise; they add no route, so they appear in its citation, not as
-a package of their own. Mannermaa's Finnish reading of Luther affirms every
-atom here and differs over what justification *is*, union with Christ rather
-than a forensic verdict, which a propositional atom cannot hold.
+**The New Perspective's reading of ἔργα νόμου has a reason, and its critics
+answer the reason.** Sanders' covenantal nomism — in by grace, staying in by
+works — is the ground, and Dunn's inference from it to the boundary-marker
+reading is the step, cited as his (`sandersLine`). Gathercole and the
+*Variegated Nomism* volume deny the ground: Second Temple Judaism also held
+final vindication according to works, so the demand Galatians refuses is a
+demand for obedience, and the Reformed reading follows (`criticsLine`). On the
+critics' history Paul alone carries sola fide
+(`critics_carry_the_pauline_strand`); on Sanders' he does not
+(`sanders_costs_the_pauline_strand`). The ἔργα νόμου dispute is a dispute
+about Second Temple Judaism before it is one about Paul's Greek.
+
+**What justification is** is a separate question, and the encoding keeps it
+separate. The Reformed account is forensic: pardon and imputation, not infusion
+(Westminster XI.1). Trent denies it — justification is "not remission of sins
+merely, but also the sanctification and renewal of the inward man" — and so
+does Mannermaa's Finnish reading of Luther, for which Christ himself is present
+in faith. The Finnish package denies the forensic account and establishes sola
+fide (`forensic_justification_not_load_bearing`); Trent denies it and does not.
+So Trent's disagreement with sola fide is over merit, not over infusion.
 
 **Authorship.** Ephesians, Titus and 1 and 2 Peter are each disputed, and each
 dispute is catalogued from both sides — Hoehner and Lincoln on Ephesians,

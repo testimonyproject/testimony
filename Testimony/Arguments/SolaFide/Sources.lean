@@ -251,26 +251,55 @@ def baseCite : Claim → AtomMeta
   | .justificationByFaithAlone =>
     { label := "Justification is by faith alone"
     , kind := .theological
-      -- Mannermaa's Luther affirms this too, while reading justification as
-      -- union with Christ present in faith. The difference is in what the
-      -- words mean, which a propositional atom cannot hold.
+      -- Mannermaa's Luther affirms this too, while denying that justification
+      -- is forensic only; see `justificationIsForensicOnly` and `finnishCite`.
     , source :=
         { calvinHolds "III.xi.1" with
           supporting :=
             [ .work schreinerFaithAlone .whole
             , .work mannermaaChristPresentInFaith .whole ] } }
-  | .salvationByGraceThroughFaithNotWorks =>
-    { label := "Salvation is by grace through faith, and not by works"
+  | .salvationByGrace =>
+    { label := "Salvation is by grace, a gift and not wages owed"
     , kind := .theological
-      -- 1 Peter: believers are "guarded through faith for a salvation" (1:5),
-      -- ransomed "not with perishable things" but by Christ's blood (1:18–19).
+      -- 1 Peter 1:18–19: ransomed "not with perishable things" but by Christ's
+      -- blood.
     , source :=
         { calvinHolds "III.xi–xviii" with
           supporting :=
-            [ .scripture
-                [ { ref := .range ⟨.firstPeter, 1, 3, 1, 5⟩ }
-                , { ref := .range ⟨.firstPeter, 1, 18, 1, 19⟩ } ]
+            [ .scripture [{ ref := .range ⟨.firstPeter, 1, 18, 1, 19⟩ }]
+            , .work jobesFirstPeter (.adLoc ⟨.firstPeter, 1, 18⟩) ] } }
+  | .salvationNotByWorks =>
+    { label := "Salvation is not by works: no work is its ground"
+    , kind := .theological
+    , source :=
+        { calvinHolds "III.xi–xviii" with
+          supporting := [.work schreinerFaithAlone .whole] } }
+  | .salvationThroughFaith =>
+    { label := "Salvation is received through faith"
+    , kind := .theological
+      -- 1 Peter 1:5: believers are "guarded through faith for a salvation".
+    , source :=
+        { calvinHolds "III.xi–xviii" with
+          supporting :=
+            [ .scripture [{ ref := .range ⟨.firstPeter, 1, 3, 1, 5⟩ }]
             , .work jobesFirstPeter (.adLoc ⟨.firstPeter, 1, 5⟩) ] } }
+  | .justificationIsForensicOnly =>
+    { label := "Justification is forensic only: pardon and imputation, not infusion"
+    , kind := .theological
+    , source :=
+        { primary := .work westminsterConfession (.sectionRef "XI.1")
+        , supporting := [.work calvinInstitutes (.sectionRef "III.xi.2")]
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
+  | .secondTempleCovenantalNomism =>
+    { label := "Second Temple Judaism: in by grace, staying in by works"
+    , kind := .historical
+    , source :=
+        { primary := .work sandersPaulPalestinianJudaism .whole
+        , tradition := .criticalScholarship
+          -- Disputed by Gathercole and the *Variegated Nomism* volume; see
+          -- `criticsCite`.
+        , confidence := .disputed } }
   | .worksMeritIncreaseOfJustification =>
     { label := "Works performed in grace merit an increase of justification"
     , kind := .theological
@@ -379,6 +408,47 @@ def criticalAuthorshipCite : Claim → AtomMeta
         , tradition := .criticalScholarship
         , confidence := .disputed } }
   | c => baseCite c
+
+/-- The New Perspective's critics: Second Temple Judaism was not uniformly
+covenantal nomism, because final vindication according to works was widely
+held. Gathercole primary, the *Variegated Nomism* volume in support. -/
+def criticsCite : Claim → AtomMeta
+  | .secondTempleCovenantalNomism =>
+    { label := "Second Temple Judaism also held final vindication according to works"
+    , kind := .historical
+    , source :=
+        { primary := .work gathercoleWhereIsBoasting .whole
+        , supporting := [.work carsonVariegatedNomism1 .whole]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | c => reformedCite c
+
+/-- The Tridentine reading of what justification is: "not remission of sins
+merely, but also the sanctification and renewal of the inward man". Everything
+else as `baseCite`. -/
+def tridentineCite : Claim → AtomMeta
+  | .justificationIsForensicOnly =>
+    { label := "Justification is not forensic only: it renews the inward man"
+    , kind := .theological
+    , source :=
+        { primary := .work tannerDecrees
+            (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7")
+        , tradition := .romanCatholic
+        , confidence := .wellSupported } }
+  | c => baseCite c
+
+/-- The Finnish reading of Luther: justification is not forensic only, because
+Christ himself is present in faith and is the believer's righteousness.
+Everything else as `reformedCite`. -/
+def finnishCite : Claim → AtomMeta
+  | .justificationIsForensicOnly =>
+    { label := "Justification is not forensic only: Christ is present in faith"
+    , kind := .theological
+    , source :=
+        { primary := .work mannermaaChristPresentInFaith .whole
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | c => reformedCite c
 
 /-- The apocalyptic reading: the genitive is subjective, and it is Campbell's
 reason for reading it so that the citation records. -/
