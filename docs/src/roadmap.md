@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **68 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **71 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -73,9 +73,12 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `reformed_establishes` | `Establishes reformed` | Given the Reformed premises, the conclusion follows. |
 | `newPerspective_establishes` | `Establishes newPerspective` | **The New Perspective establishes it too.** Dunn and Wright reject the traditional reading of ἔργα νόμου; they do not reject justification by faith. |
 | `tridentine_not_establishes` | `¬Establishes tridentine` | The Tridentine premises do not establish the conclusion — they entail its negation. |
-| `worksOfLaw_not_load_bearing` | `Establishes reformedWithoutWorksOfLaw` | The Pauline lexical premise is **not** load-bearing on its own: strip it and the dominical strand still carries the argument. |
+| `worksOfLaw_not_load_bearing` | `Establishes reformedWithoutWorksOfLaw` | The ἔργα νόμου premise is **not** load-bearing on its own: strip it and the dominical strand still carries the argument. |
 | `sozo_not_load_bearing` | `Establishes reformedWithoutSozo` | Nor is the dominical lexical premise: strip it and the Pauline strand still carries the argument. |
-| `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEitherLexicalPremise` | **The result worth having.** Neither lexical premise carries the argument alone, but their *disjunction* does: remove both and sola fide no longer follows, with everything else … |
+| `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEitherLexicalPremise` | **The result worth having.** Neither the ἔργα νόμου premise nor the dominical premise carries the argument alone, but their *disjunction* does: remove both and sola fide no longer … |
+| `pistisChristou_not_load_bearing` | `Establishes subjectiveGenitive` | **The objective genitive is not load-bearing for sola fide as a whole.** Grant Hays that πίστις Χριστοῦ is Christ's own faithfulness, keep everything else, and the conclusion … |
+| `pistisChristou_and_sozo_jointly_load_bearing` | `¬Establishes reformedWithoutPistisChristouOrSozo` | **Within the Pauline strand, faith in Christ is load-bearing.** Deny the objective genitive and the dominical premise, keep the ἔργα νόμου premise and the reading of Galatians as … |
+| `apocalyptic_not_establishes` | `¬Establishes apocalyptic` | **The apocalyptic reading does not establish sola fide.** It denies the premise the conclusion's "through faith" depends on — that faith is the condition of justification — while … |
 | `james_harmonisation_is_load_bearing` | `¬Establishes reformedWithoutJamesHarmonisation` | The argument genuinely depends on answering James. |
 
 ### [Sola scriptura](./arguments/sola-scriptura.md)
@@ -112,6 +115,17 @@ Eight findings emerged that were not designed for.
 strands — Paul's ἔργα νόμου and Jesus' σέσωκέν σε at Luke 7:50 — and neither
 lexical premise carries the argument alone. Only their disjunction does. An
 opponent must defeat both readings, not either.
+
+The πίστις Χριστοῦ dispute was expected to add a third strand, and did not.
+Every text where the phrase occurs sets it against νόμος, so a route through the
+genitive still passes through what ἔργα νόμου denotes. Encoded honestly, it is a
+second disputed premise *inside* the Pauline strand. Deny it together with the
+dominical premise and sola fide fails
+(`pistisChristou_and_sozo_jointly_load_bearing`); deny it alone and Luke 7:50
+still carries the argument (`pistisChristou_not_load_bearing`). The genitive is
+the hinge of Paul's route, not of the conclusion, and it does not follow the
+Old/New Perspective line: Dunn holds the objective genitive and the New
+Perspective together.
 
 **The virgin-birth argument was the weaker one, and stopped being so.** It
 began single-stranded, and the library's result then recorded that defeating

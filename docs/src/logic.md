@@ -110,16 +110,17 @@ Atoms are numbered rather than named, which is the usual convention and the
 point of rendering at all. It separates an argument's *shape* from its content:
 
 ```
-(12)  (P₄ ∧ P₅ ∧ P₁) → P₁₂
-(13)  (P₈ ∧ P₂) → P₁₂
-(14)  (P₉ ∧ P₁₀) → P₁₃
-(15)  (P₁₂ ∧ P₃ ∧ P₆ ∧ P₇ ∧ P₁₃ ∧ P₁₁) → P₁₄
-  ⊢   P₁₄
+(14)  (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₁₆
+(15)  (P₁₀ ∧ P₁₁) → P₁₆
+(16)  (P₁₂ ∧ P₁₃) → P₁₄
+(17)  (P₁₆ ∧ P₁ ∧ P₄ ∧ P₅ ∧ P₁₄ ∧ P₁₅) → P₁₇
+  ⊢   P₁₇
 ```
 
-That is sola fide. Premises (12) and (13) both conclude `P₁₂`, one by way of
-`P₁` (Paul's ἔργα νόμου) and one by way of `P₂` (Jesus' σῴζω at Luke 7:50). The
-argument's redundancy — the reason neither lexical premise is load-bearing — is
+That is sola fide. Premises (14) and (15) both conclude `P₁₆`: one by way of
+`P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστοῦ read as faith in Christ),
+the other by way of `P₁₁` (Jesus' σῴζω at Luke 7:50). The argument's
+redundancy — the reason no lexical premise is load-bearing on its own — is
 visible on the page before you read a word of the legend.
 
 ## Publishing what the library claims

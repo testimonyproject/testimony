@@ -8,7 +8,9 @@ Entailments are established with `establish`; refutations name a countermodel �
 the rival's own reading, written down as a valuation — and use `refute_with`.
 
 `lexical_premises_jointly_load_bearing` is the result the two-strand encoding
-exists to make possible.
+exists to make possible. `pistisChristou_and_sozo_jointly_load_bearing` is its
+counterpart for the second Pauline premise: the Pauline strand now rests on two
+disputed readings of Galatians 2:16, and losing either costs the strand.
 -/
 
 namespace Testimony.Arguments.SolaFide
@@ -59,7 +61,7 @@ theorem tridentine_not_establishes : ¬ Establishes tridentine := by
 
 #print axioms tridentine_not_establishes
 
-/-- The Pauline lexical premise is **not** load-bearing on its own: strip it and
+/-- The ἔργα νόμου premise is **not** load-bearing on its own: strip it and
 the dominical strand still carries the argument. -/
 @[headline]
 theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw := by
@@ -79,8 +81,9 @@ theorem sozo_not_load_bearing : Establishes reformedWithoutSozo := by
 
 #print axioms sozo_not_load_bearing
 
-/-- A reading on which neither lexical premise holds: Paul's phrase is about
-boundary markers, and Jesus' σέσωκέν σε is about healing. -/
+/-- A reading on which neither the ἔργα νόμου premise nor the dominical premise
+holds: Paul's phrase is about boundary markers, and Jesus' σέσωκέν σε is about
+healing. -/
 def neitherLexicalReading : Valuation Claim := fun a =>
   match a with
   | .worksOfLawMeansWorksGenerally => False
@@ -89,13 +92,15 @@ def neitherLexicalReading : Valuation Claim := fun a =>
   | .salvationByGraceThroughFaithNotWorks => False
   | _ => True
 
-/-- **The result worth having.** Neither lexical premise carries the argument
-alone, but their *disjunction* does: remove both and sola fide no longer
-follows, with everything else retained.
+/-- **The result worth having.** Neither the ἔργα νόμου premise nor the dominical
+premise carries the argument alone, but their *disjunction* does: remove both
+and sola fide no longer follows, with everything else retained.
 
 So the Reformation's material principle, as encoded here, does not hang on the
 sense of Paul's ἔργα νόμου. It hangs on that *or* on the sense of Jesus'
-σέσωκέν σε — and an opponent must defeat both. -/
+σέσωκέν σε — and an opponent must defeat both. The same holds with the
+πίστις Χριστοῦ premise in place of ἔργα νόμου; see
+`pistisChristou_and_sozo_jointly_load_bearing`. -/
 @[headline]
 theorem lexical_premises_jointly_load_bearing :
     ¬ Establishes reformedWithoutEitherLexicalPremise := by
@@ -105,6 +110,77 @@ theorem lexical_premises_jointly_load_bearing :
     toSalvation]
 
 #print axioms lexical_premises_jointly_load_bearing
+
+/-- **The objective genitive is not load-bearing for sola fide as a whole.** Grant
+Hays that πίστις Χριστοῦ is Christ's own faithfulness, keep everything else,
+and the conclusion still follows — by Luke 7:50.
+
+The genitive is the hinge of the Pauline strand, as
+`pistisChristou_and_sozo_jointly_load_bearing` shows. It is not the hinge of the
+argument. A reader who wins the genitive for Hays has cost the Reformed case
+its Pauline route, and not its conclusion. -/
+@[headline]
+theorem pistisChristou_not_load_bearing : Establishes subjectiveGenitive := by
+  establish [subjectiveGenitive, reformed, Line.onGrounds, paulineLine, dominicalLine,
+    jamesLine, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
+    dominicalToFaithAlone, jamesHarmonisation, toSalvation]
+
+#print axioms pistisChristou_not_load_bearing
+
+/-- A reading on which Galatians 2:16 names Christ's faithfulness rather than
+faith in Christ, and Jesus' σέσωκέν σε is about healing. -/
+def neitherPistisNorSozoReading : Valuation Claim := fun a =>
+  match a with
+  | .pistisChristouObjective => False
+  | .sozoIsSoteriological => False
+  | .justificationByFaithAlone => False
+  | .salvationByGraceThroughFaithNotWorks => False
+  | _ => True
+
+/-- **Within the Pauline strand, faith in Christ is load-bearing.** Deny the
+objective genitive and the dominical premise, keep the ἔργα νόμου premise and
+the reading of Galatians as a polemic against circumcision, and sola fide no
+longer follows.
+
+Excluding works is not enough to reach *faith alone*. Galatians 2:16 must also
+name the believer's faith as the means, and on the subjective genitive it does
+not. So the Pauline strand rests on two disputed readings of one verse, and the
+argument as a whole on those two *or* on Luke 7:50. -/
+@[headline]
+theorem pistisChristou_and_sozo_jointly_load_bearing :
+    ¬ Establishes reformedWithoutPistisChristouOrSozo := by
+  refute_with neitherPistisNorSozoReading [reformedWithoutPistisChristouOrSozo, reformed,
+    Line.onGrounds, paulineLine, dominicalLine, jamesLine, sharedGrounds, prooftexts,
+    closingSteps, paulineToFaithAlone, dominicalToFaithAlone, jamesHarmonisation,
+    toSalvation]
+
+#print axioms pistisChristou_and_sozo_jointly_load_bearing
+
+/-- The apocalyptic reading, as a valuation: πίστις Χριστοῦ is Christ's
+faithfulness, δικαιοσύνη θεοῦ is God's deliverance, and faith is not the
+condition of justification. Everything else it grants. -/
+def apocalypticReading : Valuation Claim := fun a =>
+  match a with
+  | .pistisChristouObjective => False
+  | .justificationByFaithAlone => False
+  | .salvationByGraceThroughFaithNotWorks => False
+  | _ => True
+
+/-- **The apocalyptic reading does not establish sola fide.** It denies the
+premise the conclusion's "through faith" depends on — that faith is the
+condition of justification — while granting that justification is not by the
+works of the law.
+
+The conclusion is one atom, so this result cannot say what the reading keeps:
+grace, and "not by works". Splitting the conclusion would let a package
+establish half of it, and would restate every result here; the module docstring
+records the choice not to. -/
+@[headline]
+theorem apocalyptic_not_establishes : ¬ Establishes apocalyptic := by
+  refute_with apocalypticReading [apocalyptic, reformed, apocalypticLine,
+    deliveranceNotFaithAlone, toSalvation]
+
+#print axioms apocalyptic_not_establishes
 
 /-- A reading on which James 2:24 stands unharmonised against Paul. -/
 def jamesUnharmonisedReading : Valuation Claim := fun a =>
@@ -165,7 +241,21 @@ theorem newPerspective_is_satisfiable : Satisfiable newPerspective.premises := b
     paulineLine, dominicalLine, jamesLine, sharedGrounds, prooftexts, closingSteps,
     paulineToFaithAlone, dominicalToFaithAlone, jamesHarmonisation, toSalvation]
 
-/-- The Reformed package minus the Pauline lexical premise has a model, so
+/-- Hays's own world: πίστις Χριστοῦ is Christ's faithfulness, and everything
+else in the Reformed case holds. -/
+def subjectiveGenitiveReading : Valuation Claim := fun a =>
+  match a with
+  | .pistisChristouObjective => False
+  | _ => True
+
+/-- The subjective-genitive package has a model, so
+`pistisChristou_not_load_bearing` is not vacuous. -/
+theorem subjectiveGenitive_is_satisfiable : Satisfiable subjectiveGenitive.premises := by
+  satisfied_by subjectiveGenitiveReading [subjectiveGenitive, reformed, Line.onGrounds,
+    paulineLine, dominicalLine, jamesLine, sharedGrounds, prooftexts, closingSteps,
+    paulineToFaithAlone, dominicalToFaithAlone, jamesHarmonisation, toSalvation]
+
+/-- The Reformed package minus the ἔργα νόμου premise has a model, so
 `worksOfLaw_not_load_bearing` is not vacuous. A load-bearing result that held
 only because its premises could not all be true would be exactly backwards. -/
 theorem reformedWithoutWorksOfLaw_is_satisfiable :
