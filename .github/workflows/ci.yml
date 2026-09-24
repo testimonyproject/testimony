@@ -54,6 +54,14 @@ jobs:
       - name: Axiom audit
         run: lake exe axiom-audit
 
+      # Tier 3, continued: replay every declaration of every Testimony module
+      # through the kernel, into the environment as it stood before that
+      # module, independently of the elaborator and of every tactic. A tactic
+      # cannot make the kernel accept a false theorem; this checks that nothing
+      # reached the environment without the kernel's say-so.
+      - name: Kernel replay
+        run: lake env leanchecker Testimony
+
       - name: Generated files are current
         run: |
           lake exe bibgen --check

@@ -114,6 +114,54 @@ constructive where `tauto` is classical, so every `Establishes` result now rests
 on `propext` and `Quot.sound` alone; `Classical.choice` remains in the trust
 base only for the dispute results, which come from the Dung semantics.
 
+### Why a faster recipe cannot have made a result wrong
+
+Speed is not correctness, so the change of recipe was checked, not assumed.
+The argument rests on how Lean is built, and each part of it was then verified
+on the library itself.
+
+**The recipe is not in the trust base.** Lean follows the LCF architecture: a
+tactic does not certify anything, it constructs a proof term, and the kernel
+checks that term against the theorem's statement. A tactic can fail to find a
+proof; it cannot make the kernel accept a false one. What `establish` proves is
+`Establishes pkg`, which unfolds to Foundation's *semantic* consequence — every
+valuation satisfying the premises satisfies the conclusion — so a successful
+`establish` is a kernel-checked proof of exactly that, whatever algorithm found
+it. What is trusted is the kernel, the axioms each result reports, and the
+statements themselves. The three checks below cover what is not already
+covered by the kernel.
+
+**Every statement is unchanged.** The change touched no argument module: in
+`Testimony/Logic` it rewrote the tactic macros and two comments. To make that
+mechanical rather than argued, the commit before the change (`5cb6bc0`, still
+on `tauto`) and the commit after were both built, and every `Testimony`
+declaration was printed with its fully elaborated type — and, for definitions,
+its value — under `pp.all`, so that no notation could hide a difference. Of the
+2,429 declarations that existed before, all 2,429 are identical. The only
+differences are four additions: the syntax of `establish_by_search`,
+`establish_unfold` and `horn_close`, and the sanity theorem
+`establish_by_search_proves_cases`. So every result states what it stated
+before, over the same definitions; only proof terms changed.
+
+**The kernel re-checks every proof.** `lake env leanchecker Testimony` replays
+every declaration of all 53 `Testimony` modules through the kernel, into the
+environment as it stood before each module, independently of the elaborator and
+of every tactic. It passes, and now runs in CI after the axiom audit. The audit
+itself reports every `Establishes` result resting on `propext` and `Quot.sound`
+at most — no `sorryAx`, no `Classical.choice`.
+
+**It proves nothing the library refutes.** For each of the 26 results of the
+form `¬ Establishes pkg`, `establish` was run on `pkg` with the refutation's own
+unfolding list, which reduces the premises to atoms, so a failure is the
+entailment failing and not a definition left folded. All 26 fail, each with
+`horn_close`'s message, and nothing else fails. `Tactic.lean` pins the same
+check on affirming the consequent, the canonical invalid inference.
+
+What the change does *not* claim is completeness beyond Horn: SLD resolution is
+complete for Horn clauses, and `establish` fails — it does not silently succeed
+or fall back — on anything else. A failure is never read as a refutation; that
+is what countermodels are for.
+
 ## Rendering an argument as logic
 
 `lake exe argtex` writes `docs/latex/arguments.tex`: every package set the way
