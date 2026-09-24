@@ -74,8 +74,14 @@ inductive Claim
   you", immediately after declaring her sins forgiven. -/
   | luke7_50FaithHasSavedYou
   /-- σῴζω in Luke 7:50 denotes salvation rather than physical healing. **The
-  disputed dominical premise.** -/
+  dominical strand's lexical premise.** -/
   | sozoIsSoteriological
+  /-- Luke 7:47 — "her sins, which are many, are forgiven, for she loved much":
+  her love is the evidence of her forgiveness, not its ground. The half-verse
+  that follows ("the one who is forgiven little loves little") and the parable
+  of the two debtors (7:41–43) put the forgiveness first and the love after it.
+  The Reformed answer, in advance, to reading 7:47 as salvation by love. -/
+  | luke7_47LoveIsEvidence
   /-- James 2:14–26 targets a barren faith — mere assent, which the demons also
   have — rather than Paul's doctrine of justification. -/
   | james2TargetsDeadFaith

@@ -231,7 +231,7 @@ def reformedWithoutSozo : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus the dominical lexical premise"
     premises :=
-      caseOf [paulineLine, dominicalLine.onGrounds [], apostolicLine]
+      caseOf [paulineLine, dominicalLine.onGrounds [p .luke7_47LoveIsEvidence], apostolicLine]
         sharedGrounds closingSteps }
 
 @[headline]

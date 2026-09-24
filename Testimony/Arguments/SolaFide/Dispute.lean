@@ -13,11 +13,12 @@ one, is a theorem about the positions' premises (see `Testimony.Logic.Dispute`).
 
 ## The ratings decide nothing here
 
-Every party's weakest link is `disputed`: each Reformed strand rests on a
-contested reading, Trent and the apocalyptic reading each deny an atom (and a
-denial ranks at the bottom), and so on. So no rating blocks any attack, and the
-outcome is fixed entirely by who contradicts whom. That is unlike the dispute
-over Isaiah 7:14, where one inference rated `plausible` carried the verdict.
+Every party's weakest link is `disputed`: each Reformed strand's inference to
+faith alone is the one Trent's canon 9 denies, Trent and the apocalyptic reading
+each deny an atom (and a denial ranks at the bottom), and so on. So no rating
+blocks any attack, and the outcome is fixed entirely by who contradicts whom.
+That is unlike the dispute over Isaiah 7:14, where one inference rated
+`plausible` carried the verdict.
 
 ## Who defeats whom
 
@@ -59,11 +60,21 @@ that sola fide answers Trent. It is that Trent cannot answer a rival that
 agrees with it about faith and disagrees with it about works.
 
 **An absence.** The dominical case is attacked by no one but Trent, because no
-source cited here argues that σῴζω at Luke 7:50 means healing. The premise is
-rated `disputed`, as it should be — the same formula means "made you well" at
-Luke 8:48, 17:19 and 18:42 — but a rating is not a party. A cited argument for
-the healing reading would attack the dominical case, and could change the
-verdict. Finding one is the obvious next step.
+source cited here argues that σῴζω at Luke 7:50 means healing. That absence is
+now also its rating: the premise is `wellSupported`, not `disputed`, because a
+search for a scholar arguing the healing sense *at 7:50* found none, and at 7:50
+there is no illness — the saying follows "your sins are forgiven". It is not
+`consensus`, because the same formula means "made you well" at Luke 8:48, 17:19
+and 18:42. A cited argument for the healing reading would attack the dominical
+case, lower the rating, and could change the verdict.
+
+**An objection answered in advance.** "Her sins are forgiven, for she loved
+much" (7:47) is the text a rival would use to make love, not faith, the ground
+of her forgiveness. The dominical case does not leave that open: it carries
+`luke7_47LoveIsEvidence` — her love is the evidence of forgiveness, not its
+ground, as 7:47b and the parable of 7:41–43 read it — as a premise of its own.
+It is cited to Scripture alone, and rated `plausible`, so it is assumed rather
+than argued for from a commentator; no party here denies it either.
 
 **The parties chosen.** A dispute is over the arguments put into it. Hays's
 subjective genitive is represented through the apocalyptic reading, which holds
@@ -147,7 +158,8 @@ theorem paulineCase_establishes : Establishes paulineCase := by
   establish [paulineCase, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -159,6 +171,7 @@ theorem paulineCase_is_satisfiable : Satisfiable paulineCase.premises := by
       tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase, criticsCase,
       jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds, paulineLine,
       dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
+      dominicalWithoutSozo,
       paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
       dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
       toThroughFaith, conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -169,7 +182,8 @@ theorem dominicalCase_establishes : Establishes dominicalCase := by
   establish [dominicalCase, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -181,6 +195,7 @@ theorem dominicalCase_is_satisfiable : Satisfiable dominicalCase.premises := by
       tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase, criticsCase,
       jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds, paulineLine,
       dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
+      dominicalWithoutSozo,
       paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
       dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
       toThroughFaith, conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -191,7 +206,8 @@ theorem apostolicCase_establishes : Establishes apostolicCase := by
   establish [apostolicCase, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -203,6 +219,7 @@ theorem apostolicCase_is_satisfiable : Satisfiable apostolicCase.premises := by
       tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase, criticsCase,
       jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds, paulineLine,
       dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
+      dominicalWithoutSozo,
       paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
       dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
       toThroughFaith, conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -213,7 +230,8 @@ theorem tridentineCase_establishes : Establishes tridentineCase := by
   establish [tridentineCase, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -225,6 +243,7 @@ theorem tridentineCase_is_satisfiable : Satisfiable tridentineCase.premises := b
       tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase, criticsCase,
       jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds, paulineLine,
       dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
+      dominicalWithoutSozo,
       paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
       dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
       toThroughFaith, conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -235,7 +254,8 @@ theorem apocalypticCase_establishes : Establishes apocalypticCase := by
   establish [apocalypticCase, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -247,6 +267,7 @@ theorem apocalypticCase_is_satisfiable : Satisfiable apocalypticCase.premises :=
       tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase, criticsCase,
       jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds, paulineLine,
       dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
+      dominicalWithoutSozo,
       paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
       dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
       toThroughFaith, conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -257,7 +278,8 @@ theorem sandersCase_establishes : Establishes sandersCase := by
   establish [sandersCase, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -269,6 +291,7 @@ theorem sandersCase_is_satisfiable : Satisfiable sandersCase.premises := by
       tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase, criticsCase,
       jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds, paulineLine,
       dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
+      dominicalWithoutSozo,
       paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
       dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
       toThroughFaith, conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -279,7 +302,8 @@ theorem criticsCase_establishes : Establishes criticsCase := by
   establish [criticsCase, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -291,6 +315,7 @@ theorem criticsCase_is_satisfiable : Satisfiable criticsCase.premises := by
       tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase, criticsCase,
       jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds, paulineLine,
       dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
+      dominicalWithoutSozo,
       paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
       dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
       toThroughFaith, conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -301,7 +326,8 @@ theorem jervellCase_establishes : Establishes jervellCase := by
   establish [jervellCase, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -313,6 +339,7 @@ theorem jervellCase_is_satisfiable : Satisfiable jervellCase.premises := by
       tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase, criticsCase,
       jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds, paulineLine,
       dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
+      dominicalWithoutSozo,
       paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
       dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
       toThroughFaith, conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -327,7 +354,9 @@ who contradicts whom. -/
 
 /-- The Pauline case rests on its lexical premises, cited `disputed`. -/
 theorem paulineCase_strength : paulineCase.strength = 0 := by decide
-/-- The dominical case rests on the σῴζω premise, cited `disputed`. -/
+/-- The dominical case's premises are `wellSupported` or better, except the
+reading of 7:47, which is `plausible`; its weakest link is its inference, which
+Trent's canon 9 denies. -/
 theorem dominicalCase_strength : dominicalCase.strength = 0 := by decide
 /-- The apostolic case rests on the yoke premise, cited `disputed`. -/
 theorem apostolicCase_strength : apostolicCase.strength = 0 := by decide
@@ -350,7 +379,8 @@ theorem trent_defeats_pauline : Defeats tridentineCase paulineCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -362,7 +392,8 @@ theorem trent_defeats_dominical : Defeats tridentineCase dominicalCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -374,7 +405,8 @@ theorem trent_defeats_apostolic : Defeats tridentineCase apostolicCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -386,7 +418,8 @@ theorem pauline_defeats_trent : Defeats paulineCase tridentineCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -398,7 +431,8 @@ theorem dominical_defeats_trent : Defeats dominicalCase tridentineCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -410,7 +444,8 @@ theorem apostolic_defeats_trent : Defeats apostolicCase tridentineCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -424,7 +459,8 @@ theorem apocalyptic_defeats_trent : Defeats apocalypticCase tridentineCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -439,7 +475,8 @@ theorem apocalyptic_defeats_pauline : Defeats apocalypticCase paulineCase :=
         apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase,
         criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds,
         paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine,
-        paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds, prooftexts,
+        paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+        sharedGrounds, prooftexts,
         closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
         jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
         graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]⟩,
@@ -451,7 +488,8 @@ theorem pauline_defeats_apocalyptic : Defeats paulineCase apocalypticCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -464,7 +502,8 @@ theorem dominical_defeats_apocalyptic : Defeats dominicalCase apocalypticCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -476,7 +515,8 @@ theorem apostolic_defeats_apocalyptic : Defeats apostolicCase apocalypticCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -491,7 +531,8 @@ theorem sanders_defeats_pauline : Defeats sandersCase paulineCase :=
         apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase,
         criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds,
         paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine,
-        paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds, prooftexts,
+        paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+        sharedGrounds, prooftexts,
         closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
         jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
         graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]⟩,
@@ -502,7 +543,8 @@ theorem pauline_defeats_sanders : Defeats paulineCase sandersCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -514,7 +556,8 @@ theorem sanders_defeats_critics : Defeats sandersCase criticsCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -528,7 +571,8 @@ theorem critics_defeat_sanders : Defeats criticsCase sandersCase :=
         dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic,
         sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
         Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-        criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+        criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+        sharedGrounds,
         prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
         jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
         graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]⟩,
@@ -541,7 +585,8 @@ theorem jervell_defeats_apostolic : Defeats jervellCase apostolicCase :=
         apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase,
         criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed, Line.onGrounds,
         paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine,
-        paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds, prooftexts,
+        paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+        sharedGrounds, prooftexts,
         closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
         jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
         graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]⟩,
@@ -552,7 +597,8 @@ theorem apostolic_defeats_jervell : Defeats apostolicCase jervellCase :=
   .inr ⟨by establish [Rebuts, paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine,
       apocalypticCase, apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage,
       Line.premises, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou,
+      jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+      paulineWithoutPistisChristou,
       sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
       apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
       conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -653,10 +699,10 @@ def trentWithoutFaithAloneReading : Valuation Claim := fun a =>
   | _ => True
 
 /-- **The apocalyptic reading does not defeat the dominical case.** It
-contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω — and
-it does not deny its conclusion: it grants grace and "not by works", and it can
-grant that salvation is received through faith while denying that faith is its
-condition. -/
+contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω, not
+the reading of 7:47 — and it does not deny its conclusion: it grants grace and
+"not by works", and it can grant that salvation is received through faith while
+denying that faith is its condition. -/
 theorem apocalyptic_does_not_defeat_dominical : ¬ Defeats apocalypticCase dominicalCase := by
   refine not_defeats_of_models ?_ ?_
   · intro φ hφ
@@ -665,13 +711,14 @@ theorem apocalyptic_does_not_defeat_dominical : ¬ Defeats apocalypticCase domin
         List.map_nil, List.cons_append, List.nil_append, List.append_nil, List.mem_cons,
         List.not_mem_nil, or_false] at hφ
     rcases hφ with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl |
-      rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+      rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
     all_goals first
       | (· satisfied_by apocalypticWithFaithReading [apocalypticCase, paulineCase, dominicalCase,
           apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase,
           criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
           Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-          criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+          criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+          paulineWithoutPistisChristou, sharedGrounds,
           prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
           apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
           conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -680,7 +727,8 @@ theorem apocalyptic_does_not_defeat_dominical : ¬ Defeats apocalypticCase domin
           apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase,
           criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
           Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-          criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+          criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+          paulineWithoutPistisChristou, sharedGrounds,
           prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
           apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
           conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -689,7 +737,8 @@ theorem apocalyptic_does_not_defeat_dominical : ¬ Defeats apocalypticCase domin
       dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic,
       sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
       Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -709,7 +758,8 @@ theorem apocalyptic_does_not_defeat_apostolic : ¬ Defeats apocalypticCase apost
           apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase,
           criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
           Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-          criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+          criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+          paulineWithoutPistisChristou, sharedGrounds,
           prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
           apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
           conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -718,7 +768,8 @@ theorem apocalyptic_does_not_defeat_apostolic : ¬ Defeats apocalypticCase apost
           apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase,
           criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
           Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-          criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+          criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+          paulineWithoutPistisChristou, sharedGrounds,
           prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
           apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
           conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -727,7 +778,8 @@ theorem apocalyptic_does_not_defeat_apostolic : ¬ Defeats apocalypticCase apost
       dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic,
       sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
       Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -749,7 +801,8 @@ theorem trent_does_not_defeat_apocalyptic : ¬ Defeats tridentineCase apocalypti
           apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase,
           criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
           Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-          criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+          criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+          paulineWithoutPistisChristou, sharedGrounds,
           prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
           apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
           conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -758,7 +811,8 @@ theorem trent_does_not_defeat_apocalyptic : ¬ Defeats tridentineCase apocalypti
           apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic, sandersCase,
           criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
           Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-          criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+          criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
+          paulineWithoutPistisChristou, sharedGrounds,
           prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
           apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
           conclusionSteps, solaFide, graceNotWorks, jervellLine, apocalypticLine,
@@ -767,7 +821,8 @@ theorem trent_does_not_defeat_apocalyptic : ¬ Defeats tridentineCase apocalypti
       dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic,
       sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
       Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -840,7 +895,8 @@ theorem reformed_strands_stand_with_the_critics :
       dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase, apocalyptic,
       sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed, reformed,
       Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -852,7 +908,8 @@ theorem paul_and_luke_stand_with_jervell :
       paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase,
       apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed,
       reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -864,7 +921,8 @@ theorem luke_and_acts_stand_with_sanders :
       paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase,
       apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed,
       reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -876,7 +934,8 @@ theorem trent_stands_with_sanders_and_jervell :
       paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase,
       apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed,
       reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -888,7 +947,8 @@ theorem trent_stands_with_the_critics_and_jervell :
       paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase,
       apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed,
       reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -900,7 +960,8 @@ theorem apocalyptic_stands_with_sanders_and_jervell :
       paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase,
       apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed,
       reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -912,7 +973,8 @@ theorem apocalyptic_stands_with_the_critics_and_jervell :
       paulineCase, dominicalCase, apostolicCase, tridentineCase, tridentine, apocalypticCase,
       apocalyptic, sandersCase, criticsCase, jervellCase, Line.asPackage, Line.premises, reformed,
       reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-      criticsLine, paulineWithoutWorksOfLaw, paulineWithoutPistisChristou, sharedGrounds,
+      criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
+      sharedGrounds,
       prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
       jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
       graceNotWorks, jervellLine, apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace]
@@ -1022,8 +1084,8 @@ reached by the grounded semantics, which forces nothing
 defeating each other: remove the apocalyptic reading and Trent can be defended
 again (`sola_fide_not_forced_without_the_apocalyptic_reading`). And the
 dominical case is attacked by no one but Trent because no source cited here
-argues that σῴζω at Luke 7:50 means healing; its premise is rated `disputed`,
-but the dispute has no party that disputes it. -/
+argues that σῴζω at Luke 7:50 means healing, and none argues that the woman's
+love at 7:47 was the ground of her forgiveness. -/
 @[headline]
 theorem dominical_case_skeptically_accepted :
     SkepticallyAccepted solaFideDispute.defeats .dominical := by

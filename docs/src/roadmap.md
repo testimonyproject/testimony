@@ -185,7 +185,10 @@ apocalyptic reading defeats Trent too (`trent_indefensible`). Remove the
 apocalyptic reading and Trent defends itself again
 (`sola_fide_not_forced_without_the_apocalyptic_reading`). The verdict also
 rests on an absence: no cited source argues that σῴζω at Luke 7:50 means
-healing, so nothing in the dispute attacks the dominical case but Trent.
+healing, so nothing in the dispute attacks the dominical case but Trent. A search
+for one found none, so that premise is rated `wellSupported`; and the dominical
+case carries the Reformed reading of 7:47 — her love is the evidence of her
+forgiveness, not its ground — as a premise, cited to Scripture alone.
 
 **Authorship is not a premise, and the encoding says what that costs.**
 Ephesians, Titus and 1 and 2 Peter are each disputed, and each dispute is

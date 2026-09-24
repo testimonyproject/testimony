@@ -187,6 +187,14 @@ across `SolaFide`; the rest are cited once each but belong with them. -/
 Jesus. -/
 @[nolint defsWithUnderscore] def luke7_50 : Passage := ⟨.luke, 7, 50⟩
 
+/-- Luke 7:41–43 — the parable of the two debtors: the one forgiven more loves
+more. -/
+@[nolint defsWithUnderscore] def luke7_41to43 : Pericope := ⟨.luke, 7, 41, 7, 43⟩
+
+/-- Luke 7:47 — "her sins, which are many, are forgiven, for she loved much; but
+the one who is forgiven little loves little." -/
+@[nolint defsWithUnderscore] def luke7_47 : Passage := ⟨.luke, 7, 47⟩
+
 /-- Luke 7:47–50 — the saying in its context, following the declaration that
 her sins are forgiven rather than a healing. This is what makes 7:50 the strong
 case for the soteriological sense of σῴζω. -/

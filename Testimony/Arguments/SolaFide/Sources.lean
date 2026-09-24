@@ -245,14 +245,36 @@ def baseCite : Claim → AtomMeta
   | .sozoIsSoteriological =>
     { label := "σῴζω in Luke 7:50 denotes salvation, not physical healing"
     , kind := .linguistic
-      -- The dominical counterpart to the ἔργα νόμου dispute. The same formula
-      -- appears at Luke 8:48, 17:19 and 18:42, where the context is healing;
-      -- Luke 7:50 is the strong case because it follows forgiveness of sins.
+      -- The same formula appears at Luke 8:48, 17:19 and 18:42, where the
+      -- context is healing; at 7:50 there is no illness, and the saying follows
+      -- "your sins are forgiven" (7:48) and the table's question "who is this
+      -- who even forgives sins?" (7:49). Rated `wellSupported`, not `disputed`:
+      -- `disputed` means contested by competent scholars, and a search for one
+      -- arguing the healing sense *at 7:50* (Crossref and the open web,
+      -- September 2026) found none. The ambiguity of the formula elsewhere is
+      -- why it is not `consensus`. A cited argument for healing here would
+      -- lower it again, and would enter `Dispute.lean` as a party.
     , source :=
         { primary := .work marshallLuke (.adLoc luke7_50)
         , supporting := [.scripture [{ ref := .range luke7_47to50 }]]
         , tradition := .christianHistoricalGrammatical
-        , confidence := .disputed } }
+        , confidence := .wellSupported } }
+  | .luke7_47LoveIsEvidence =>
+    { label := "Luke 7:47 — her love is the evidence of her forgiveness, not its ground"
+    , kind := .interpretive
+      -- ὅτι in 7:47a can be read causally ("forgiven because she loved") or as
+      -- giving the evidence ("forgiven, as her great love shows"). The text
+      -- decides it: 7:47b ("the one forgiven little loves little") runs from
+      -- forgiveness to love, and so does the parable the verse applies (7:41–43),
+      -- where the debtor loves more *because* more was cancelled. Scripture is
+      -- the primary source because no commentator's reading of 7:47 has been
+      -- verified from the commentary itself; `plausible`, because the causal
+      -- reading has a history and the grammar alone does not exclude it.
+    , source :=
+        { primary := .scripture [{ ref := .range luke7_41to43 }, { ref := .verse luke7_47 }]
+        , supporting := [.scripture [{ ref := .range luke7_47to50 }]]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .plausible } }
   | .james2TargetsDeadFaith =>
     { label := "James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine"
     , kind := .interpretive
