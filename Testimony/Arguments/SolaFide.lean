@@ -41,8 +41,12 @@ genitive, because Dunn does.
 and in 8:48, 17:19 and 18:42 the context is physical healing, which is why most
 translations render "made you well" there. The argument therefore rests on
 **Luke 7:50**, where the saying follows "your sins are forgiven" rather than a
-healing, and carries `sozoIsSoteriological` as its own disputed premise. It is
-a second bet, on a different word.
+healing, and carries `sozoIsSoteriological` as its own premise. It is a second
+bet, on a different word — rated `wellSupported`, because no scholar found
+argues the healing sense at 7:50. It also carries its answer to "she loved
+much" (7:47): `luke7_47LoveIsEvidence`, that her love is the evidence of her
+forgiveness and not its ground, as 7:47b and the parable of the two debtors
+(7:41–43) read it. That premise is cited to Scripture alone.
 
 **The apostolic strand** rests on Peter as Luke reports him. At the Jerusalem
 council (Acts 15) the demand Galatians answers is made again — "unless you are
@@ -132,7 +136,8 @@ Sanders, the critics and Jervell as parties, nothing prevails outright — but
 sola fide from Luke 7:50 is accepted on every resolution, because Trent and the
 apocalyptic reading each defeat the other's only answer. That verdict rests on
 the two rivals answering each other, and on no cited source arguing that σῴζω at
-Luke 7:50 means healing; `Dispute.lean` states both.
+Luke 7:50 means healing, or that her love at 7:47 earned her forgiveness;
+`Dispute.lean` states both.
 
 ## Where things are
 

@@ -186,25 +186,26 @@ Atoms are numbered rather than named, which is the usual convention and the
 point of rendering at all. It separates an argument's *shape* from its content:
 
 ```
-(16)  (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₂₂
-(17)  (P₁₆ ∧ P₁₇) → P₂₂
-(18)  (P₉ ∧ P₁₀) → P₂₂
-(19)  (P₁₈ ∧ P₁₉) → P₂₀
-(20)  (P₁ ∧ P₄ ∧ P₅) → P₂₃
-(21)  (P₁ ∧ P₄ ∧ P₅ ∧ P₂₀ ∧ P₂₁) → P₂₄
-(22)  (P₂₂ ∧ P₁) → P₂₅
-  ⊢   P₂₃ ∧ P₂₄ ∧ P₂₅
+(17)  (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₂₄
+(18)  (P₁₇ ∧ P₁₈ ∧ P₁₉) → P₂₄
+(19)  (P₉ ∧ P₁₀) → P₂₄
+(20)  (P₂₀ ∧ P₂₁) → P₂₂
+(21)  (P₁ ∧ P₄ ∧ P₅) → P₂₅
+(22)  (P₁ ∧ P₄ ∧ P₅ ∧ P₂₂ ∧ P₂₃) → P₂₆
+(23)  (P₂₄ ∧ P₁) → P₂₇
+  ⊢   P₂₅ ∧ P₂₆ ∧ P₂₇
 ```
 
-That is sola fide. Premises (16), (17) and (18) all conclude `P₂₂`: one by way
+That is sola fide. Premises (17), (18) and (19) all conclude `P₂₄`: one by way
 of `P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστοῦ read as faith in
-Christ), one by way of `P₁₇` (Jesus' σῴζω at Luke 7:50), and one by way of
-`P₁₀` (Peter's yoke at Acts 15:10). The argument's redundancy — the reason no
-disputed premise is load-bearing on its own — is visible on the page before you
-read a word of the legend. So is the split in the conclusion, one step per part:
-(20) reaches grace (`P₂₃`) from the texts alone; (21) reaches "not by works"
-(`P₂₄`) from the same texts and the answer to James (`P₂₀`); only (22),
-"through faith" (`P₂₅`), needs a strand (`P₂₂`).
+Christ), one by way of `P₁₈` and `P₁₉` (Jesus' σῴζω at Luke 7:50, and 7:47 read
+as love evidencing forgiveness), and one by way of `P₁₀` (Peter's yoke at Acts
+15:10). The argument's redundancy — the reason no disputed premise is
+load-bearing on its own — is visible on the page before you read a word of the
+legend. So is the split in the conclusion, one step per part: (21) reaches grace
+(`P₂₅`) from the texts alone; (22) reaches "not by works" (`P₂₆`) from the same
+texts and the answer to James (`P₂₂`); only (23), "through faith" (`P₂₇`), needs
+a strand (`P₂₄`).
 
 ## Publishing what the library claims
 
@@ -427,7 +428,7 @@ def reformedWithoutSozo : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus the dominical lexical premise"
     premises :=
-      caseOf [paulineLine, dominicalLine.onGrounds [], apostolicLine]
+      caseOf [paulineLine, dominicalLine.onGrounds [p .luke7_47LoveIsEvidence], apostolicLine]
         sharedGrounds closingSteps }
 ```
 

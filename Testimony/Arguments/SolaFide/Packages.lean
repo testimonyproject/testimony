@@ -28,6 +28,11 @@ def reformed : ArgumentPackage Claim :=
   , conclusion := solaFide
   , conclusionLabel := "salvation by grace, not by works, through faith" }
 
+/-- The dominical line without the σῴζω premise. The reading of 7:47 stays: it
+is not the premise being tested. -/
+def dominicalWithoutSozo : Line Claim :=
+  dominicalLine.onGrounds [p .luke7_47LoveIsEvidence]
+
 /-- The Pauline line without the ἔργα νόμου premise. -/
 def paulineWithoutWorksOfLaw : Line Claim :=
   paulineLine.onGrounds
@@ -182,7 +187,7 @@ def reformedWithoutSozo : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus the dominical lexical premise"
     premises :=
-      caseOf [paulineLine, dominicalLine.onGrounds [], apostolicLine]
+      caseOf [paulineLine, dominicalWithoutSozo, apostolicLine]
         sharedGrounds closingSteps }
 
 /-- The Reformed package with the ἔργα νόμου premise **and** the dominical
@@ -192,7 +197,7 @@ def reformedWithoutWorksOfLawOrSozo : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus the ἔργα νόμου and σῴζω premises"
     premises :=
-      caseOf [paulineWithoutWorksOfLaw, dominicalLine.onGrounds [], apostolicLine]
+      caseOf [paulineWithoutWorksOfLaw, dominicalWithoutSozo, apostolicLine]
         sharedGrounds closingSteps }
 
 /-- The Reformed package with a disputed premise removed from **every** strand:
@@ -203,7 +208,7 @@ def reformedWithoutEveryStrandsPremise : ArgumentPackage Claim :=
     name := "Reformed, minus the ἔργα νόμου, σῴζω and yoke premises"
     premises :=
       caseOf
-        [paulineWithoutWorksOfLaw, dominicalLine.onGrounds [], apostolicLine.onGrounds []]
+        [paulineWithoutWorksOfLaw, dominicalWithoutSozo, apostolicLine.onGrounds []]
         sharedGrounds closingSteps }
 
 /-- The same with the objective genitive removed in place of ἔργα νόμου: the
@@ -214,7 +219,7 @@ def reformedWithoutPistisChristouSozoOrYoke : ArgumentPackage Claim :=
     name := "Reformed, minus the πίστις Χριστοῦ, σῴζω and yoke premises"
     premises :=
       caseOf
-        [ paulineWithoutPistisChristou, dominicalLine.onGrounds []
+        [ paulineWithoutPistisChristou, dominicalWithoutSozo
         , apostolicLine.onGrounds [] ]
         sharedGrounds closingSteps }
 
@@ -227,7 +232,7 @@ def graceAndWorksWithoutAnyLexicalPremise : ArgumentPackage Claim :=
     premises :=
       caseOf
         [ paulineLine.onGrounds [p .galatiansOpposesCircumcisionAsRequirement]
-        , dominicalLine.onGrounds [], apostolicLine.onGrounds [] ]
+        , dominicalWithoutSozo, apostolicLine.onGrounds [] ]
         sharedGrounds closingSteps
     conclusion := graceNotWorks
     conclusionLabel := "salvation by grace, not by works" }

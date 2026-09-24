@@ -42,8 +42,12 @@ genitive, because Dunn does.
 and in 8:48, 17:19 and 18:42 the context is physical healing, which is why most
 translations render "made you well" there. The argument therefore rests on
 **Luke 7:50**, where the saying follows "your sins are forgiven" rather than a
-healing, and carries `sozoIsSoteriological` as its own disputed premise. It is
-a second bet, on a different word.
+healing, and carries `sozoIsSoteriological` as its own premise. It is a second
+bet, on a different word — rated `wellSupported`, because no scholar found
+argues the healing sense at 7:50. It also carries its answer to "she loved
+much" (7:47): `luke7_47LoveIsEvidence`, that her love is the evidence of her
+forgiveness and not its ground, as 7:47b and the parable of the two debtors
+(7:41–43) read it. That premise is cited to Scripture alone.
 
 **The apostolic strand** rests on Peter as Luke reports him. At the Jerusalem
 council (Acts 15) the demand Galatians answers is made again — "unless you are
@@ -133,7 +137,8 @@ Sanders, the critics and Jervell as parties, nothing prevails outright — but
 sola fide from Luke 7:50 is accepted on every resolution, because Trent and the
 apocalyptic reading each defeat the other's only answer. That verdict rests on
 the two rivals answering each other, and on no cited source arguing that σῴζω at
-Luke 7:50 means healing; `Dispute.lean` states both.
+Luke 7:50 means healing, or that her love at 7:47 earned her forgiveness;
+`Dispute.lean` states both.
 
 ### Where things are
 
@@ -200,18 +205,19 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{15}\\) | 2 Peter was written by the apostle Peter | historical | Christian, historical-grammatical, disputed | [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003); 2 Pet 1:1 |
 | \\(P_{16}\\) | δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains | interpretive | critical scholarship, disputed | [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26 |
 | \\(P_{17}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
-| \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, disputed | [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50; Luke 7:47-50 |
-| \\(P_{19}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{20}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
-| \\(P_{21}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
-| \\(P_{22}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii; 2 Pet 3:15-16; [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003), ad loc. 2 Pet 3:16 |
-| \\(P_{23}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015); [`mannermaa-christ-present-faith-2005`](../bibliography.md#mannermaa-christ-present-faith-2005) |
-| \\(P_{24}\\) | Salvation is by grace, a gift and not wages owed | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:18-19; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:18 |
-| \\(P_{25}\\) | Salvation is not by works: no work is its ground | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{26}\\) | Salvation is received through faith | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:3-5; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:5 |
-| \\(P_{27}\\) | Justification is forensic only: pardon and imputation, not infusion | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2 |
-| \\(P_{28}\\) | Second Temple Judaism: in by grace, staying in by works | historical | critical scholarship, disputed | [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977) |
-| \\(P_{29}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
+| \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50; Luke 7:47-50 |
+| \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground ※ | interpretive | Christian, historical-grammatical, plausible | Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
+| \\(P_{20}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
+| \\(P_{21}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
+| \\(P_{22}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
+| \\(P_{23}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii; 2 Pet 3:15-16; [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003), ad loc. 2 Pet 3:16 |
+| \\(P_{24}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015); [`mannermaa-christ-present-faith-2005`](../bibliography.md#mannermaa-christ-present-faith-2005) |
+| \\(P_{25}\\) | Salvation is by grace, a gift and not wages owed | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:18-19; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:18 |
+| \\(P_{26}\\) | Salvation is not by works: no work is its ground | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
+| \\(P_{27}\\) | Salvation is received through faith | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:3-5; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:5 |
+| \\(P_{28}\\) | Justification is forensic only: pardon and imputation, not infusion | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2 |
+| \\(P_{29}\\) | Second Temple Judaism: in by grace, staying in by works | historical | critical scholarship, disputed | [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977) |
+| \\(P_{30}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
 
 </div>
 
@@ -467,7 +473,7 @@ general rather than for one ethnic marker.
 
 <div class="testimony-math">
 \[
-(P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23}
+(P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24}
 \]
 </div>
 
@@ -475,12 +481,14 @@ general rather than for one ethnic marker.
 **`dominicalToFaithAlone`**
 
 **The dominical strand.** From Jesus' own words at Luke 7:50 to
-justification by faith alone, by way of the disputed lexical premise about
-σῴζω. Independent of Paul, and of the ἔργα νόμου dispute.
+justification by faith alone, by way of the lexical premise about σῴζω and the
+reading of 7:47 that answers "she loved much": her love shows her forgiveness
+and does not earn it, so what Jesus names as saving her is her faith.
+Independent of Paul, and of the ἔργα νόμου dispute.
 
 <div class="testimony-math">
 \[
-(P_{17} \land P_{18}) \rightarrow P_{23}
+(P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24}
 \]
 </div>
 
@@ -498,7 +506,7 @@ condition of salvation, what is left is faith, and grace.
 
 <div class="testimony-math">
 \[
-(P_{9} \land P_{10}) \rightarrow P_{23}
+(P_{9} \land P_{10}) \rightarrow P_{24}
 \]
 </div>
 
@@ -511,7 +519,7 @@ contradict Paul. Derived rather than assumed.
 
 <div class="testimony-math">
 \[
-(P_{19} \land P_{20}) \rightarrow P_{21}
+(P_{20} \land P_{21}) \rightarrow P_{22}
 \]
 </div>
 
@@ -525,7 +533,7 @@ and the Tridentine position each do, over different parts.
 
 <div class="testimony-math">
 \[
-P_{24} \land P_{25} \land P_{26}
+P_{25} \land P_{26} \land P_{27}
 \]
 </div>
 
@@ -537,7 +545,7 @@ reading keeps.
 
 <div class="testimony-math">
 \[
-P_{24} \land P_{25}
+P_{25} \land P_{26}
 \]
 </div>
 
@@ -550,7 +558,7 @@ nor the answer to James is needed for this part.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24}
+(P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25}
 \]
 </div>
 
@@ -564,7 +572,7 @@ answer to James.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25}
+(P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26}
 \]
 </div>
 
@@ -576,7 +584,7 @@ is the only part of the conclusion the three strands are needed for.
 
 <div class="testimony-math">
 \[
-(P_{23} \land P_{1}) \rightarrow P_{26}
+(P_{24} \land P_{1}) \rightarrow P_{27}
 \]
 </div>
 
@@ -600,8 +608,8 @@ grounds omitted the ἔργα νόμου premise would misdescribe Paul.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
@@ -610,14 +618,16 @@ grounds omitted the ἔργα νόμου premise would misdescribe Paul.
 **`dominicalLine`** — Dominical strand (σῴζω at Luke 7:50)
 
 The dominical line, resting on Jesus' words rather than Paul's. Its
-distinctive ground is the other lexical premise.
+distinctive grounds are the other lexical premise, and the reading of 7:47 that
+keeps the woman's love from being the ground of her forgiveness.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{18} \\
-\text{(2)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(2)} \quad &amp; P_{19} \\
+\text{(3)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
@@ -638,8 +648,8 @@ they are two premises about two texts, and an opponent has to answer both.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{10} \\
-\text{(2)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(2)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
@@ -653,10 +663,10 @@ text that stands against it.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{19} \\
-\text{(2)} \quad &amp; P_{20} \\
-\text{(3)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\[4pt]
-\vdash \quad &amp; P_{21}
+\text{(1)} \quad &amp; P_{20} \\
+\text{(2)} \quad &amp; P_{21} \\
+\text{(3)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\[4pt]
+\vdash \quad &amp; P_{22}
 \end{aligned}
 \]
 </div>
@@ -673,7 +683,7 @@ condition, not the gift.
 
 <div class="testimony-math">
 \[
-(\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23}
+(\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24}
 \]
 </div>
 
@@ -687,7 +697,7 @@ more gracious than the one it replaces.
 
 <div class="testimony-math">
 \[
-P_{16} \rightarrow P_{24} \land P_{25}
+P_{16} \rightarrow P_{25} \land P_{26}
 \]
 </div>
 
@@ -702,8 +712,8 @@ what the two Reformed strands deliver.
 \begin{aligned}
 \text{(1)} \quad &amp; \lnot P_{7} \\
 \text{(2)} \quad &amp; P_{16} \\
-\text{(3)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23} \\[4pt]
-\vdash \quad &amp; \lnot P_{23}
+\text{(3)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24} \\[4pt]
+\vdash \quad &amp; \lnot P_{24}
 \end{aligned}
 \]
 </div>
@@ -720,8 +730,8 @@ ground is Sanders'; the inference is Dunn's, and is cited as his.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{28} \\
-\text{(2)} \quad &amp; P_{28} \rightarrow \lnot P_{6} \\[4pt]
+\text{(1)} \quad &amp; P_{29} \\
+\text{(2)} \quad &amp; P_{29} \rightarrow \lnot P_{6} \\[4pt]
 \vdash \quad &amp; \lnot P_{6}
 \end{aligned}
 \]
@@ -740,9 +750,9 @@ historical claim about Judaism that is argued on the evidence.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; \lnot P_{28} \\
+\text{(1)} \quad &amp; \lnot P_{29} \\
 \text{(2)} \quad &amp; P_{8} \\
-\text{(3)} \quad &amp; (\lnot P_{28} \land P_{8}) \rightarrow P_{6} \\[4pt]
+\text{(3)} \quad &amp; (\lnot P_{29} \land P_{8}) \rightarrow P_{6} \\[4pt]
 \vdash \quad &amp; P_{6}
 \end{aligned}
 \]
@@ -804,9 +814,9 @@ harmonisation, and scripture's self-consistency.
 \text{(5)} \quad &amp; P_{5} \\
 \text{(6)} \quad &amp; P_{17} \\
 \text{(7)} \quad &amp; P_{9} \\
-\text{(8)} \quad &amp; P_{19} \\
-\text{(9)} \quad &amp; P_{20} \\
-\text{(10)} \quad &amp; P_{22}
+\text{(8)} \quad &amp; P_{20} \\
+\text{(9)} \quad &amp; P_{21} \\
+\text{(10)} \quad &amp; P_{23}
 \end{aligned}
 \]
 </div>
@@ -826,7 +836,7 @@ The same, with James unanswered.
 \text{(5)} \quad &amp; P_{5} \\
 \text{(6)} \quad &amp; P_{17} \\
 \text{(7)} \quad &amp; P_{9} \\
-\text{(8)} \quad &amp; P_{22}
+\text{(8)} \quad &amp; P_{23}
 \end{aligned}
 \]
 </div>
@@ -839,9 +849,9 @@ The three steps to the three parts of the conclusion, one each.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(3)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26}
+\text{(1)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(3)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27}
 \end{aligned}
 \]
 </div>
@@ -855,10 +865,10 @@ to the parts of the conclusion.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(3)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(4)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26}
+\text{(1)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(3)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(4)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27}
 \end{aligned}
 \]
 </div>
@@ -887,30 +897,47 @@ yoke in Acts.
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
 \text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{10} \\
-\text{(6)} \quad &amp; P_{1} \\
-\text{(7)} \quad &amp; P_{2} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{17} \\
-\text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{10} \\
+\text{(7)} \quad &amp; P_{1} \\
+\text{(8)} \quad &amp; P_{2} \\
+\text{(9)} \quad &amp; P_{3} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{17} \\
+\text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{22} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(15)} \quad &amp; P_{21} \\
+\text{(16)} \quad &amp; P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
+
+<a id="dominicalWithoutSozo"></a>
+**`dominicalWithoutSozo`** — Dominical strand (σῴζω at Luke 7:50)
+
+The dominical line without the σῴζω premise. The reading of 7:47 stays: it
+is not the premise being tested.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{19} \\
+\text{(2)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
+\end{aligned}
+\]
+</div>
 
 <a id="paulineWithoutWorksOfLaw"></a>
 **`paulineWithoutWorksOfLaw`** — Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)
@@ -922,8 +949,8 @@ The Pauline line without the ἔργα νόμου premise.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
@@ -938,8 +965,8 @@ The Pauline line without the objective genitive.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
@@ -965,32 +992,33 @@ on the New Perspective's behalf.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{28} \\
+\text{(3)} \quad &amp; P_{29} \\
 \text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{1} \\
-\text{(6)} \quad &amp; P_{2} \\
-\text{(7)} \quad &amp; P_{3} \\
-\text{(8)} \quad &amp; P_{4} \\
-\text{(9)} \quad &amp; P_{5} \\
-\text{(10)} \quad &amp; P_{17} \\
-\text{(11)} \quad &amp; P_{9} \\
-\text{(12)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{1} \\
+\text{(7)} \quad &amp; P_{2} \\
+\text{(8)} \quad &amp; P_{3} \\
+\text{(9)} \quad &amp; P_{4} \\
+\text{(10)} \quad &amp; P_{5} \\
+\text{(11)} \quad &amp; P_{17} \\
+\text{(12)} \quad &amp; P_{9} \\
 \text{(13)} \quad &amp; P_{20} \\
-\text{(14)} \quad &amp; P_{22} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(16)} \quad &amp; P_{28} \rightarrow \lnot P_{6} \\
-\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(14)} \quad &amp; P_{21} \\
+\text{(15)} \quad &amp; P_{23} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; P_{29} \rightarrow \lnot P_{6} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="finnish"></a>
 **`finnish`** — Finnish reading of Luther (Mannermaa)
@@ -1011,31 +1039,32 @@ shows that the two questions are independent.
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
 \text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{10} \\
-\text{(6)} \quad &amp; P_{1} \\
-\text{(7)} \quad &amp; P_{2} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{17} \\
-\text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{10} \\
+\text{(7)} \quad &amp; P_{1} \\
+\text{(8)} \quad &amp; P_{2} \\
+\text{(9)} \quad &amp; P_{3} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{17} \\
+\text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{22} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\
-\text{(23)} \quad &amp; \lnot P_{27} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(15)} \quad &amp; P_{21} \\
+\text{(16)} \quad &amp; P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\
+\text{(24)} \quad &amp; \lnot P_{28} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="subjectiveGenitive"></a>
 **`subjectiveGenitive`** — Subjective genitive (πίστις Χριστοῦ as Christ's faithfulness)
@@ -1051,30 +1080,31 @@ of justification. Everything else in the Reformed case is granted.
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; \lnot P_{7} \\
 \text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{10} \\
-\text{(6)} \quad &amp; P_{1} \\
-\text{(7)} \quad &amp; P_{2} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{17} \\
-\text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{10} \\
+\text{(7)} \quad &amp; P_{1} \\
+\text{(8)} \quad &amp; P_{2} \\
+\text{(9)} \quad &amp; P_{3} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{17} \\
+\text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{22} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(15)} \quad &amp; P_{21} \\
+\text{(16)} \quad &amp; P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="lawObservantLuke"></a>
 **`lawObservantLuke`** — Law-observant Luke (the yoke as Israel's law for gentiles)
@@ -1091,30 +1121,31 @@ apostolic strand was written against.
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
 \text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; \lnot P_{10} \\
-\text{(6)} \quad &amp; P_{1} \\
-\text{(7)} \quad &amp; P_{2} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{17} \\
-\text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; \lnot P_{10} \\
+\text{(7)} \quad &amp; P_{1} \\
+\text{(8)} \quad &amp; P_{2} \\
+\text{(9)} \quad &amp; P_{3} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{17} \\
+\text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{22} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(15)} \quad &amp; P_{21} \\
+\text{(16)} \quad &amp; P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="criticalAuthorship"></a>
 **`criticalAuthorship`** — Reformed, with the critical view of authorship
@@ -1136,34 +1167,35 @@ leans on Romans instead.
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
 \text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{10} \\
-\text{(6)} \quad &amp; P_{1} \\
-\text{(7)} \quad &amp; P_{2} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{17} \\
-\text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{10} \\
+\text{(7)} \quad &amp; P_{1} \\
+\text{(8)} \quad &amp; P_{2} \\
+\text{(9)} \quad &amp; P_{3} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{17} \\
+\text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{22} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(19)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(22)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\
-\text{(23)} \quad &amp; \lnot P_{12} \\
-\text{(24)} \quad &amp; \lnot P_{13} \\
-\text{(25)} \quad &amp; \lnot P_{14} \\
-\text{(26)} \quad &amp; \lnot P_{15} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(15)} \quad &amp; P_{21} \\
+\text{(16)} \quad &amp; P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\
+\text{(24)} \quad &amp; \lnot P_{12} \\
+\text{(25)} \quad &amp; \lnot P_{13} \\
+\text{(26)} \quad &amp; \lnot P_{14} \\
+\text{(27)} \quad &amp; \lnot P_{15} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="apocalyptic"></a>
 **`apocalyptic`** — Apocalyptic reading of Paul (Martyn, Campbell)
@@ -1186,10 +1218,10 @@ nobody holds.
 \text{(2)} \quad &amp; P_{16} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23} \\
-\text{(6)} \quad &amp; P_{16} \rightarrow P_{24} \land P_{25} \\
-\text{(7)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24} \\
+\text{(6)} \quad &amp; P_{16} \rightarrow P_{25} \land P_{26} \\
+\text{(7)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
@@ -1209,10 +1241,10 @@ conclusion: by grace, and not by works.
 \text{(2)} \quad &amp; P_{16} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23} \\
-\text{(6)} \quad &amp; P_{16} \rightarrow P_{24} \land P_{25} \\
-\text{(7)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25}
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24} \\
+\text{(6)} \quad &amp; P_{16} \rightarrow P_{25} \land P_{26} \\
+\text{(7)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
@@ -1236,11 +1268,11 @@ prooftexts with them and nothing else, so `caseOf` would misdescribe it.
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{22} \\
-\text{(6)} \quad &amp; \lnot P_{27} \\
-\text{(7)} \quad &amp; P_{29} \\
-\text{(8)} \quad &amp; P_{29} \rightarrow \lnot P_{25} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(5)} \quad &amp; P_{23} \\
+\text{(6)} \quad &amp; \lnot P_{28} \\
+\text{(7)} \quad &amp; P_{30} \\
+\text{(8)} \quad &amp; P_{30} \rightarrow \lnot P_{26} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
@@ -1263,30 +1295,31 @@ The Reformed package without the ἔργα νόμου premise.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
 \text{(3)} \quad &amp; P_{18} \\
-\text{(4)} \quad &amp; P_{10} \\
-\text{(5)} \quad &amp; P_{1} \\
-\text{(6)} \quad &amp; P_{2} \\
-\text{(7)} \quad &amp; P_{3} \\
-\text{(8)} \quad &amp; P_{4} \\
-\text{(9)} \quad &amp; P_{5} \\
-\text{(10)} \quad &amp; P_{17} \\
-\text{(11)} \quad &amp; P_{9} \\
-\text{(12)} \quad &amp; P_{19} \\
+\text{(4)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{10} \\
+\text{(6)} \quad &amp; P_{1} \\
+\text{(7)} \quad &amp; P_{2} \\
+\text{(8)} \quad &amp; P_{3} \\
+\text{(9)} \quad &amp; P_{4} \\
+\text{(10)} \quad &amp; P_{5} \\
+\text{(11)} \quad &amp; P_{17} \\
+\text{(12)} \quad &amp; P_{9} \\
 \text{(13)} \quad &amp; P_{20} \\
-\text{(14)} \quad &amp; P_{22} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(16)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(21)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(14)} \quad &amp; P_{21} \\
+\text{(15)} \quad &amp; P_{23} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="reformedWithoutSozo"></a>
 **`reformedWithoutSozo`** — Reformed, minus the dominical lexical premise
@@ -1299,30 +1332,31 @@ The Reformed package without the dominical lexical premise.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{10} \\
-\text{(5)} \quad &amp; P_{1} \\
-\text{(6)} \quad &amp; P_{2} \\
-\text{(7)} \quad &amp; P_{3} \\
-\text{(8)} \quad &amp; P_{4} \\
-\text{(9)} \quad &amp; P_{5} \\
-\text{(10)} \quad &amp; P_{17} \\
-\text{(11)} \quad &amp; P_{9} \\
-\text{(12)} \quad &amp; P_{19} \\
+\text{(4)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{10} \\
+\text{(6)} \quad &amp; P_{1} \\
+\text{(7)} \quad &amp; P_{2} \\
+\text{(8)} \quad &amp; P_{3} \\
+\text{(9)} \quad &amp; P_{4} \\
+\text{(10)} \quad &amp; P_{5} \\
+\text{(11)} \quad &amp; P_{17} \\
+\text{(12)} \quad &amp; P_{9} \\
 \text{(13)} \quad &amp; P_{20} \\
-\text{(14)} \quad &amp; P_{22} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(16)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(18)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(21)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(14)} \quad &amp; P_{21} \\
+\text{(15)} \quad &amp; P_{23} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(19)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="reformedWithoutWorksOfLawOrSozo"></a>
 **`reformedWithoutWorksOfLawOrSozo`** — Reformed, minus the ἔργα νόμου and σῴζω premises
@@ -1336,30 +1370,31 @@ apostolic strand is untouched.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{10} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{3} \\
-\text{(7)} \quad &amp; P_{4} \\
-\text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{17} \\
-\text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{19} \\
+\text{(3)} \quad &amp; P_{19} \\
+\text{(4)} \quad &amp; P_{10} \\
+\text{(5)} \quad &amp; P_{1} \\
+\text{(6)} \quad &amp; P_{2} \\
+\text{(7)} \quad &amp; P_{3} \\
+\text{(8)} \quad &amp; P_{4} \\
+\text{(9)} \quad &amp; P_{5} \\
+\text{(10)} \quad &amp; P_{17} \\
+\text{(11)} \quad &amp; P_{9} \\
 \text{(12)} \quad &amp; P_{20} \\
-\text{(13)} \quad &amp; P_{22} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(15)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(20)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(13)} \quad &amp; P_{21} \\
+\text{(14)} \quad &amp; P_{23} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="reformedWithoutEveryStrandsPremise"></a>
 **`reformedWithoutEveryStrandsPremise`** — Reformed, minus the ἔργα νόμου, σῴζω and yoke premises
@@ -1373,29 +1408,30 @@ genitive stays.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{1} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{17} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{19} \\
+\text{(3)} \quad &amp; P_{19} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{17} \\
+\text{(10)} \quad &amp; P_{9} \\
 \text{(11)} \quad &amp; P_{20} \\
-\text{(12)} \quad &amp; P_{22} \\
-\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(14)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(16)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(12)} \quad &amp; P_{21} \\
+\text{(13)} \quad &amp; P_{23} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="reformedWithoutPistisChristouSozoOrYoke"></a>
 **`reformedWithoutPistisChristouSozoOrYoke`** — Reformed, minus the πίστις Χριστοῦ, σῴζω and yoke premises
@@ -1409,29 +1445,30 @@ theirs.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; P_{1} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{17} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{19} \\
+\text{(3)} \quad &amp; P_{19} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{17} \\
+\text{(10)} \quad &amp; P_{9} \\
 \text{(11)} \quad &amp; P_{20} \\
-\text{(12)} \quad &amp; P_{22} \\
-\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(14)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(16)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(12)} \quad &amp; P_{21} \\
+\text{(13)} \quad &amp; P_{23} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="graceAndWorksWithoutAnyLexicalPremise"></a>
 **`graceAndWorksWithoutAnyLexicalPremise`** — Grace and works, minus every lexical premise
@@ -1444,29 +1481,30 @@ The reading of Galatians as a polemic stays, and so does the answer to James.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{1} \\
-\text{(3)} \quad &amp; P_{2} \\
-\text{(4)} \quad &amp; P_{3} \\
-\text{(5)} \quad &amp; P_{4} \\
-\text{(6)} \quad &amp; P_{5} \\
-\text{(7)} \quad &amp; P_{17} \\
-\text{(8)} \quad &amp; P_{9} \\
-\text{(9)} \quad &amp; P_{19} \\
+\text{(2)} \quad &amp; P_{19} \\
+\text{(3)} \quad &amp; P_{1} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
+\text{(7)} \quad &amp; P_{5} \\
+\text{(8)} \quad &amp; P_{17} \\
+\text{(9)} \quad &amp; P_{9} \\
 \text{(10)} \quad &amp; P_{20} \\
-\text{(11)} \quad &amp; P_{22} \\
-\text{(12)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(13)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(14)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(15)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25}
+\text{(11)} \quad &amp; P_{21} \\
+\text{(12)} \quad &amp; P_{23} \\
+\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(14)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="paulineStrandOnTheCritics"></a>
 **`paulineStrandOnTheCritics`** — Pauline strand alone, on variegated nomism
@@ -1481,7 +1519,7 @@ Paul alone carry sola fide on Gathercole's history?
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; \lnot P_{28} \\
+\text{(3)} \quad &amp; \lnot P_{29} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{1} \\
 \text{(6)} \quad &amp; P_{2} \\
@@ -1490,16 +1528,16 @@ Paul alone carry sola fide on Gathercole's history?
 \text{(9)} \quad &amp; P_{5} \\
 \text{(10)} \quad &amp; P_{17} \\
 \text{(11)} \quad &amp; P_{9} \\
-\text{(12)} \quad &amp; P_{19} \\
-\text{(13)} \quad &amp; P_{20} \\
-\text{(14)} \quad &amp; P_{22} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(16)} \quad &amp; (\lnot P_{28} \land P_{8}) \rightarrow P_{6} \\
-\text{(17)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(20)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(12)} \quad &amp; P_{20} \\
+\text{(13)} \quad &amp; P_{21} \\
+\text{(14)} \quad &amp; P_{23} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(16)} \quad &amp; (\lnot P_{29} \land P_{8}) \rightarrow P_{6} \\
+\text{(17)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
@@ -1516,7 +1554,7 @@ The same on Sanders' reading of Judaism.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{28} \\
+\text{(3)} \quad &amp; P_{29} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{3} \\
@@ -1524,16 +1562,16 @@ The same on Sanders' reading of Judaism.
 \text{(8)} \quad &amp; P_{5} \\
 \text{(9)} \quad &amp; P_{17} \\
 \text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{19} \\
-\text{(12)} \quad &amp; P_{20} \\
-\text{(13)} \quad &amp; P_{22} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(15)} \quad &amp; P_{28} \rightarrow \lnot P_{6} \\
-\text{(16)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(11)} \quad &amp; P_{20} \\
+\text{(12)} \quad &amp; P_{21} \\
+\text{(13)} \quad &amp; P_{23} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; P_{29} \rightarrow \lnot P_{6} \\
+\text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
@@ -1552,27 +1590,28 @@ The Reformed package without the premises that harmonise James.
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
 \text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{10} \\
-\text{(6)} \quad &amp; P_{1} \\
-\text{(7)} \quad &amp; P_{2} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{17} \\
-\text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{22} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(15)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{10} \\
+\text{(7)} \quad &amp; P_{1} \\
+\text{(8)} \quad &amp; P_{2} \\
+\text{(9)} \quad &amp; P_{3} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{17} \\
+\text{(13)} \quad &amp; P_{9} \\
+\text{(14)} \quad &amp; P_{23} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="graceWithoutJamesHarmonisation"></a>
 **`graceWithoutJamesHarmonisation`** — Grace alone, minus the James harmonisation
@@ -1587,27 +1626,28 @@ grace, with James 2:24 left unanswered?
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
 \text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{10} \\
-\text{(6)} \quad &amp; P_{1} \\
-\text{(7)} \quad &amp; P_{2} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{17} \\
-\text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{22} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(15)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24}
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{10} \\
+\text{(7)} \quad &amp; P_{1} \\
+\text{(8)} \quad &amp; P_{2} \\
+\text{(9)} \quad &amp; P_{3} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{17} \\
+\text{(13)} \quad &amp; P_{9} \\
+\text{(14)} \quad &amp; P_{23} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 ## Arguments.SolaFide.Results — what does and does not follow
 
@@ -2290,11 +2330,12 @@ one, is a theorem about the positions' premises (see `Testimony.Logic.Dispute`).
 
 ### The ratings decide nothing here
 
-Every party's weakest link is `disputed`: each Reformed strand rests on a
-contested reading, Trent and the apocalyptic reading each deny an atom (and a
-denial ranks at the bottom), and so on. So no rating blocks any attack, and the
-outcome is fixed entirely by who contradicts whom. That is unlike the dispute
-over Isaiah 7:14, where one inference rated `plausible` carried the verdict.
+Every party's weakest link is `disputed`: each Reformed strand's inference to
+faith alone is the one Trent's canon 9 denies, Trent and the apocalyptic reading
+each deny an atom (and a denial ranks at the bottom), and so on. So no rating
+blocks any attack, and the outcome is fixed entirely by who contradicts whom.
+That is unlike the dispute over Isaiah 7:14, where one inference rated
+`plausible` carried the verdict.
 
 ### Who defeats whom
 
@@ -2336,11 +2377,21 @@ that sola fide answers Trent. It is that Trent cannot answer a rival that
 agrees with it about faith and disagrees with it about works.
 
 **An absence.** The dominical case is attacked by no one but Trent, because no
-source cited here argues that σῴζω at Luke 7:50 means healing. The premise is
-rated `disputed`, as it should be — the same formula means "made you well" at
-Luke 8:48, 17:19 and 18:42 — but a rating is not a party. A cited argument for
-the healing reading would attack the dominical case, and could change the
-verdict. Finding one is the obvious next step.
+source cited here argues that σῴζω at Luke 7:50 means healing. That absence is
+now also its rating: the premise is `wellSupported`, not `disputed`, because a
+search for a scholar arguing the healing sense *at 7:50* found none, and at 7:50
+there is no illness — the saying follows "your sins are forgiven". It is not
+`consensus`, because the same formula means "made you well" at Luke 8:48, 17:19
+and 18:42. A cited argument for the healing reading would attack the dominical
+case, lower the rating, and could change the verdict.
+
+**An objection answered in advance.** "Her sins are forgiven, for she loved
+much" (7:47) is the text a rival would use to make love, not faith, the ground
+of her forgiveness. The dominical case does not leave that open: it carries
+`luke7_47LoveIsEvidence` — her love is the evidence of forgiveness, not its
+ground, as 7:47b and the parable of 7:41–43 read it — as a premise of its own.
+It is cited to Scripture alone, and rated `plausible`, so it is assumed rather
+than argued for from a commentator; no party here denies it either.
 
 **The parties chosen.** A dispute is over the arguments put into it. Hays's
 subjective genitive is represented through the apocalyptic reading, which holds
@@ -2374,15 +2425,15 @@ The Pauline strand, argued alone: sola fide from Galatians 2:16.
 \text{(8)} \quad &amp; P_{5} \\
 \text{(9)} \quad &amp; P_{17} \\
 \text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{19} \\
-\text{(12)} \quad &amp; P_{20} \\
-\text{(13)} \quad &amp; P_{22} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{23} \\
-\text{(15)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(11)} \quad &amp; P_{20} \\
+\text{(12)} \quad &amp; P_{21} \\
+\text{(13)} \quad &amp; P_{23} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+\text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(18)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
@@ -2398,27 +2449,28 @@ The dominical strand, argued alone: sola fide from Luke 7:50.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{18} \\
-\text{(2)} \quad &amp; P_{1} \\
-\text{(3)} \quad &amp; P_{2} \\
-\text{(4)} \quad &amp; P_{3} \\
-\text{(5)} \quad &amp; P_{4} \\
-\text{(6)} \quad &amp; P_{5} \\
-\text{(7)} \quad &amp; P_{17} \\
-\text{(8)} \quad &amp; P_{9} \\
-\text{(9)} \quad &amp; P_{19} \\
+\text{(2)} \quad &amp; P_{19} \\
+\text{(3)} \quad &amp; P_{1} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
+\text{(7)} \quad &amp; P_{5} \\
+\text{(8)} \quad &amp; P_{17} \\
+\text{(9)} \quad &amp; P_{9} \\
 \text{(10)} \quad &amp; P_{20} \\
-\text{(11)} \quad &amp; P_{22} \\
-\text{(12)} \quad &amp; (P_{17} \land P_{18}) \rightarrow P_{23} \\
-\text{(13)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(16)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(11)} \quad &amp; P_{21} \\
+\text{(12)} \quad &amp; P_{23} \\
+\text{(13)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{24} \\
+\text{(14)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(17)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: Luke 7:47 — her love is the evidence of her forgiveness, not its ground.
 
 <a id="apostolicCase"></a>
 **`apostolicCase`** — Sola fide from Peter (Acts 15:9–11)
@@ -2436,15 +2488,15 @@ The apostolic strand, argued alone: sola fide from Peter at Jerusalem.
 \text{(6)} \quad &amp; P_{5} \\
 \text{(7)} \quad &amp; P_{17} \\
 \text{(8)} \quad &amp; P_{9} \\
-\text{(9)} \quad &amp; P_{19} \\
-\text{(10)} \quad &amp; P_{20} \\
-\text{(11)} \quad &amp; P_{22} \\
-\text{(12)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{23} \\
-\text{(13)} \quad &amp; (P_{19} \land P_{20}) \rightarrow P_{21} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{24} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{21} \land P_{22}) \rightarrow P_{25} \\
-\text{(16)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{24} \land P_{25} \land P_{26}
+\text{(9)} \quad &amp; P_{20} \\
+\text{(10)} \quad &amp; P_{21} \\
+\text{(11)} \quad &amp; P_{23} \\
+\text{(12)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{24} \\
+\text{(13)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(14)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+\text{(16)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; P_{25} \land P_{26} \land P_{27}
 \end{aligned}
 \]
 </div>
@@ -2464,11 +2516,11 @@ justification, so salvation is not apart from works.
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{22} \\
-\text{(6)} \quad &amp; \lnot P_{27} \\
-\text{(7)} \quad &amp; P_{29} \\
-\text{(8)} \quad &amp; P_{29} \rightarrow \lnot P_{25} \\[4pt]
-\vdash \quad &amp; \lnot P_{25}
+\text{(5)} \quad &amp; P_{23} \\
+\text{(6)} \quad &amp; \lnot P_{28} \\
+\text{(7)} \quad &amp; P_{30} \\
+\text{(8)} \quad &amp; P_{30} \rightarrow \lnot P_{26} \\[4pt]
+\vdash \quad &amp; \lnot P_{26}
 \end{aligned}
 \]
 </div>
@@ -2489,10 +2541,10 @@ step.
 \text{(2)} \quad &amp; P_{16} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{23} \\
-\text{(6)} \quad &amp; P_{16} \rightarrow P_{24} \land P_{25} \\
-\text{(7)} \quad &amp; (P_{23} \land P_{1}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; \lnot P_{23}
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24} \\
+\text{(6)} \quad &amp; P_{16} \rightarrow P_{25} \land P_{26} \\
+\text{(7)} \quad &amp; (P_{24} \land P_{1}) \rightarrow P_{27} \\[4pt]
+\vdash \quad &amp; \lnot P_{24}
 \end{aligned}
 \]
 </div>
@@ -2508,8 +2560,8 @@ markers.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{28} \\
-\text{(2)} \quad &amp; P_{28} \rightarrow \lnot P_{6} \\[4pt]
+\text{(1)} \quad &amp; P_{29} \\
+\text{(2)} \quad &amp; P_{29} \rightarrow \lnot P_{6} \\[4pt]
 \vdash \quad &amp; \lnot P_{6}
 \end{aligned}
 \]
@@ -2526,9 +2578,9 @@ works in general.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; \lnot P_{28} \\
+\text{(1)} \quad &amp; \lnot P_{29} \\
 \text{(2)} \quad &amp; P_{8} \\
-\text{(3)} \quad &amp; (\lnot P_{28} \land P_{8}) \rightarrow P_{6} \\[4pt]
+\text{(3)} \quad &amp; (\lnot P_{29} \land P_{8}) \rightarrow P_{6} \\[4pt]
 \vdash \quad &amp; P_{6}
 \end{aligned}
 \]
@@ -2736,7 +2788,9 @@ theorem paulineCase_strength : paulineCase.strength = 0
 <a id="dominicalCase_strength"></a>
 **`dominicalCase_strength`**
 
-The dominical case rests on the σῴζω premise, cited `disputed`.
+The dominical case's premises are `wellSupported` or better, except the
+reading of 7:47, which is `plausible`; its weakest link is its inference, which
+Trent's canon 9 denies.
 
 ```lean
 theorem dominicalCase_strength : dominicalCase.strength = 0
@@ -3149,10 +3203,10 @@ def trentWithoutFaithAloneReading : Valuation Claim :=
 **`apocalyptic_does_not_defeat_dominical`**
 
 **The apocalyptic reading does not defeat the dominical case.** It
-contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω — and
-it does not deny its conclusion: it grants grace and "not by works", and it can
-grant that salvation is received through faith while denying that faith is its
-condition.
+contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω, not
+the reading of 7:47 — and it does not deny its conclusion: it grants grace and
+"not by works", and it can grant that salvation is received through faith while
+denying that faith is its condition.
 
 ```lean
 theorem apocalyptic_does_not_defeat_dominical : ¬Defeats apocalypticCase
@@ -3386,8 +3440,8 @@ reached by the grounded semantics, which forces nothing
 defeating each other: remove the apocalyptic reading and Trent can be defended
 again (`sola_fide_not_forced_without_the_apocalyptic_reading`). And the
 dominical case is attacked by no one but Trent because no source cited here
-argues that σῴζω at Luke 7:50 means healing; its premise is rated `disputed`,
-but the dispute has no party that disputes it.
+argues that σῴζω at Luke 7:50 means healing, and none argues that the woman's
+love at 7:47 was the ground of her forgiveness.
 
 ```lean
 theorem dominical_case_skeptically_accepted : Framework.SkepticallyAccepted

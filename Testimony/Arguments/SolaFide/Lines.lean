@@ -41,10 +41,13 @@ def paulineToFaithAlone : Formula Claim :=
   ➝ p .justificationByFaithAlone
 
 /-- **The dominical strand.** From Jesus' own words at Luke 7:50 to
-justification by faith alone, by way of the disputed lexical premise about
-σῴζω. Independent of Paul, and of the ἔργα νόμου dispute. -/
+justification by faith alone, by way of the lexical premise about σῴζω and the
+reading of 7:47 that answers "she loved much": her love shows her forgiveness
+and does not earn it, so what Jesus names as saving her is her faith.
+Independent of Paul, and of the ἔργα νόμου dispute. -/
 def dominicalToFaithAlone : Formula Claim :=
-  ⋀ [p .luke7_50FaithHasSavedYou, p .sozoIsSoteriological] ➝ p .justificationByFaithAlone
+  ⋀ [p .luke7_50FaithHasSavedYou, p .sozoIsSoteriological, p .luke7_47LoveIsEvidence]
+    ➝ p .justificationByFaithAlone
 
 /-- **The apostolic strand.** From Peter's speech at the Jerusalem council to
 justification by faith alone, by way of the disputed premise about the yoke.
@@ -114,10 +117,11 @@ def paulineLine : Line Claim :=
   , delivers := p .justificationByFaithAlone }
 
 /-- The dominical line, resting on Jesus' words rather than Paul's. Its
-distinctive ground is the other lexical premise. -/
+distinctive grounds are the other lexical premise, and the reading of 7:47 that
+keeps the woman's love from being the ground of her forgiveness. -/
 def dominicalLine : Line Claim :=
   { name := "Dominical strand (σῴζω at Luke 7:50)"
-  , grounds := [p .sozoIsSoteriological]
+  , grounds := [p .sozoIsSoteriological, p .luke7_47LoveIsEvidence]
   , step := dominicalToFaithAlone
   , delivers := p .justificationByFaithAlone }
 
