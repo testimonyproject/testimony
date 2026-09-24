@@ -814,6 +814,239 @@ it. -/
   , publisher := "Baker Academic"
   , place := some "Grand Rapids" }
 
+/-! ### Sola fide: the wider debate
+
+The positions `SolaFide` did not yet cite from their own sources (#27): the
+origin of the New Perspective, both sides of the πίστις Χριστοῦ dispute, the
+apocalyptic reading, the New Perspective's critics and a reply to them, the
+Finnish reading of Luther, and Catholic exegesis alongside the conciliar text.
+Each identifier was resolved at edition level in Open Library, or in Crossref
+for a DOI. -/
+
+/-- Sanders' comparison of Paul with Palestinian Judaism, the source of
+*covenantal nomism*: that Second Temple Judaism held entry to the covenant to be
+by grace and works to be the means of staying in it. The New Perspective's
+starting point, and so the primary source for its premises rather than Dunn or
+Wright, who build on it. -/
+@[bib_entry] def sandersPaulPalestinianJudaism : BibEntry := .book
+  { core :=
+      { key := "sanders-paul-palestinian-judaism-1977"
+      , contributors := { authors := [.person "E. P." "Sanders"] }
+      , title := "Paul and Palestinian Judaism"
+      , subtitle := some "A Comparison of Patterns of Religion"
+      , year := some { value := 1977 }
+      , identifiers := [.isbn "9780800604998"]
+      , note := some "First American edition; published the same year by SCM, London." }
+  , publisher := "Fortress Press"
+  , place := some "Philadelphia" }
+
+/-- Hays on the narrative substructure of Galatians: the case for reading
+πίστις Χριστοῦ as a subjective genitive, "the faithfulness of Christ". On that
+reading Galatians 2:16 and Romans 3:22 name Christ's faithfulness as the ground
+of justification, not the believer's faith, and the Pauline strand reaches its
+conclusion by a different route. -/
+@[bib_entry] def haysFaithOfJesusChrist : BibEntry := .book
+  { core :=
+      { key := "hays-faith-jesus-christ-2002"
+      , contributors := { authors := [.person "Richard B." "Hays"] }
+      , title := "The Faith of Jesus Christ"
+      , subtitle := some "The Narrative Substructure of Galatians 3:1–4:11"
+      , year := some { value := 2002 }
+      , identifiers := [.isbn "9780802849571"]
+      , note := some
+          "First edition 1983, SBL Dissertation Series 56 (Scholars Press)." }
+  , publisher := "Wm. B. Eerdmans"
+  , place := some "Grand Rapids"
+  , edition := some "2nd"
+  , series := some "The Biblical Resource Series" }
+
+/-- Dunn's reply to Hays, the standard statement of the objective genitive:
+πίστις Χριστοῦ is "faith in Christ". Cited so that the traditional reading of
+the phrase is stated by a New Perspective scholar, which shows the genitive
+dispute cuts across the Old/New Perspective line. -/
+@[bib_entry] def dunnOnceMorePistisChristou : BibEntry := .inCollection
+  { core :=
+      { key := "dunn-once-more-pistis-christou-1991"
+      , contributors := { authors := [.person "James D. G." "Dunn"] }
+      , title := "Once More, Pistis Christou"
+      , year := some { value := 1991 }
+      , identifiers := [.doi "10.15699/9781589835849-048", .isbn "9781555406240"]
+      , note := some
+          ("Society of Biblical Literature Seminar Papers 30. The ISBN is the " ++
+           "Scholars Press volume's; the DOI is SBL Press's 2010 digital reissue, " ++
+           "with the same pagination.") }
+  , containerTitle := "Society of Biblical Literature 1991 Seminar Papers"
+  , containerEditors := [.person "Eugene H." "Lovering" (some "Jr.")]
+  , publisher := "Scholars Press"
+  , pages := some (730, 744) }
+
+/-- Matlock's lexical-semantic critique of the πίστις Χριστοῦ debate. Its
+argument is that the grammar of the genitive cannot settle the question, which
+counts against letting either reading bear weight on grammar alone. -/
+@[bib_entry] def matlockDetheologizing : BibEntry := .article
+  { core :=
+      { key := "matlock-detheologizing-2000"
+      , contributors := { authors := [.person "R. Barry" "Matlock"] }
+      , title := "Detheologizing the ΠΙΣΤΙΣ ΧΡΙΣΤΟΥ Debate"
+      , subtitle := some "Cautionary Remarks from a Lexical Semantic Perspective"
+      , year := some { value := 2000 }
+      , identifiers := [.doi "10.1163/156853600506573"] }
+  , journal := "Novum Testamentum"
+  , volume := some "42"
+  , issue := some "1"
+  , pages := some (1, 23) }
+
+/-- Martyn's Anchor Bible commentary on Galatians, the founding statement of the
+apocalyptic reading. It rejects the traditional reading of justification and
+also the New Perspective's framing of it: the question is God's invasive
+deliverance of the world, not how an individual is accepted or how Jew and
+gentile are related. -/
+@[bib_entry] def martynGalatians : BibEntry := .book
+  { core :=
+      { key := "martyn-galatians-1997"
+      , contributors := { authors := [.person "J. Louis" "Martyn"] }
+      , title := "Galatians"
+      , subtitle := some "A New Translation with Introduction and Commentary"
+      , year := some { value := 1997 }
+      , identifiers := [.isbn "9780385088381"] }
+  , publisher := "Doubleday"
+  , place := some "New York"
+  , series := some "Anchor Bible"
+  , seriesNumber := some "33A" }
+
+/-- Campbell's apocalyptic rereading of justification. He argues at length
+that the "justification theory" behind the traditional reading, which the
+Reformed package encodes, is not Paul's own. The most thorough rival to the
+`reformed` package, from a direction that is neither Tridentine nor New
+Perspective. -/
+@[bib_entry] def campbellDeliveranceOfGod : BibEntry := .book
+  { core :=
+      { key := "campbell-deliverance-god-2009"
+      , contributors := { authors := [.person "Douglas A." "Campbell"] }
+      , title := "The Deliverance of God"
+      , subtitle := some "An Apocalyptic Rereading of Justification in Paul"
+      , year := some { value := 2009 }
+      , identifiers := [.isbn "9780802831262"] }
+  , publisher := "Wm. B. Eerdmans"
+  , place := some "Grand Rapids" }
+
+/-- Gathercole's study of early Jewish soteriology. It argues that final
+vindication *according to works* was widely held in Second Temple Judaism,
+contrary to Sanders, so that Paul's "where is boasting?" (Romans 3:27) targets
+confidence in obedience and not only ethnic privilege. The critique that
+engages Sanders on his own evidence. -/
+@[bib_entry] def gathercoleWhereIsBoasting : BibEntry := .book
+  { core :=
+      { key := "gathercole-where-boasting-2002"
+      , contributors := { authors := [.person "Simon J." "Gathercole"] }
+      , title := "Where Is Boasting?"
+      , subtitle := some "Early Jewish Soteriology and Paul's Response in Romans 1–5"
+      , year := some { value := 2002 }
+      , identifiers := [.isbn "9780802839916"] }
+  , publisher := "Wm. B. Eerdmans"
+  , place := some "Grand Rapids" }
+
+/-- The first volume of *Justification and Variegated Nomism*: a survey of
+Second Temple literature, genre by genre, testing whether covenantal nomism
+describes it. Cited as a whole for the conclusion that covenantal nomism is too
+broad a category. Essays cited from it individually belong as `.inCollection`
+entries. -/
+@[bib_entry] def carsonVariegatedNomism1 : BibEntry := .book
+  { core :=
+      { key := "carson-variegated-nomism-1-2001"
+      , contributors :=
+          { editors :=
+              [ .person "D. A." "Carson", .person "Peter T." "O'Brien"
+              , .person "Mark A." "Seifrid" ] }
+      , title := "Justification and Variegated Nomism"
+      , subtitle := some "The Complexities of Second Temple Judaism"
+      , year := some { value := 2001 }
+      , identifiers := [.isbn "9783161469947"]
+      , note := some "Co-published by Baker Academic, ISBN 9780801022722." }
+  , publisher := "Mohr Siebeck"
+  , series := some "Wissenschaftliche Untersuchungen zum Neuen Testament, 2. Reihe"
+  , seriesNumber := some "140"
+  , volume := some "1"
+  , totalVolumes := some 2 }
+
+/-- Piper's response to Wright. It defends imputed righteousness and the
+traditional reading of justification against the New Perspective's
+reconstruction. The popular-level Reformed critique that `newPerspective`
+should be read beside. -/
+@[bib_entry] def piperFutureOfJustification : BibEntry := .book
+  { core :=
+      { key := "piper-future-justification-2007"
+      , contributors := { authors := [.person "John" "Piper"] }
+      , title := "The Future of Justification"
+      , subtitle := some "A Response to N. T. Wright"
+      , year := some { value := 2007 }
+      , identifiers := [.isbn "9781581349641"] }
+  , publisher := "Crossway Books" }
+
+/-- Wright's reply to Piper and his other critics. Cited so that the New
+Perspective answers its critics in its own words, rather than being represented
+only by statements that predate them. -/
+@[bib_entry] def wrightJustification : BibEntry := .book
+  { core :=
+      { key := "wright-justification-2009"
+      , contributors := { authors := [.person "N. T." "Wright"] }
+      , title := "Justification"
+      , subtitle := some "God's Plan and Paul's Vision"
+      , year := some { value := 2009 }
+      , identifiers := [.isbn "9780830838639"] }
+  , publisher := "IVP Academic"
+  , place := some "Downers Grove, IL" }
+
+/-- Mannermaa's reading of Luther, the founding text of the Finnish school. It
+reads justification through union with Christ really present in faith, close to
+theosis. It matters here because it cuts across the Protestant/Catholic
+division rather than sitting on one side of it. -/
+@[bib_entry] def mannermaaChristPresentInFaith : BibEntry := .book
+  { core :=
+      { key := "mannermaa-christ-present-faith-2005"
+      , contributors :=
+          { authors := [.person "Tuomo" "Mannermaa"]
+          , editors := [.person "Kirsi" "Stjerna"] }
+      , title := "Christ Present in Faith"
+      , subtitle := some "Luther's View of Justification"
+      , year := some { value := 2005 }
+      , identifiers := [.isbn "9780800637118"] }
+  , publisher := "Fortress Press"
+  , place := some "Minneapolis" }
+
+/-- Fitzmyer's Anchor Bible commentary on Romans: Catholic exegesis of the
+central texts. Until now the library cited Catholic teaching on justification
+only through the conciliar decree. -/
+@[bib_entry] def fitzmyerRomans : BibEntry := .book
+  { core :=
+      { key := "fitzmyer-romans-1993"
+      , contributors := { authors := [.person "Joseph A." "Fitzmyer"] }
+      , title := "Romans"
+      , subtitle := some "A New Translation with Introduction and Commentary"
+      , year := some { value := 1993 }
+      , identifiers := [.isbn "9780385233170"] }
+  , publisher := "Doubleday"
+  , place := some "New York"
+  , series := some "Anchor Bible"
+  , seriesNumber := some "33" }
+
+/-- The Lutheran–Catholic *Joint Declaration on the Doctrine of Justification*
+(1999). Its claim is that the sixteenth-century condemnations do not apply to
+the partner's teaching as stated there. It bears on whether the `tridentine`
+package still states a live Catholic position, and not only a historical
+one. -/
+@[bib_entry] def jointDeclarationJustification : BibEntry := .book
+  { core :=
+      { key := "lwf-catholic-joint-declaration-2000"
+      , contributors :=
+          { authors :=
+              [ .corporate "Lutheran World Federation"
+              , .corporate "Catholic Church" ] }
+      , title := "Joint Declaration on the Doctrine of Justification"
+      , year := some { value := 2000 }
+      , identifiers := [.isbn "9780802847744"] }
+  , publisher := "Wm. B. Eerdmans" }
+
 /-! ### The church fathers on Isaiah 7:14
 
 Four second- to fourth-century witnesses to the predictive reading, each cited
