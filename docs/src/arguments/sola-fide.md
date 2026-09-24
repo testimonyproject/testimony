@@ -14,11 +14,27 @@ and its disputed step is identified mechanically.
 
 The argument runs on **two independent strands**, and that is the point.
 
-**The Pauline strand** turns on `worksOfLawMeansWorksGenerally`: whether Paul's
-ἔργα νόμου denotes human works in general, or specifically the covenant
-boundary markers — circumcision, food laws, sabbath — that marked Jews off from
-gentiles, as Dunn and Wright argue. This is the most contested step in the
-traditional case.
+**The Pauline strand** reads Galatians 2:16 as the centre of a polemic. The
+Teachers in Galatia required believers to be circumcised as well as to believe,
+and Paul answers that a person is justified "not by works of the law but through
+faith in Jesus Christ". It rests on two disputed readings of that verse.
+
+The first is `worksOfLawMeansWorksGenerally`: whether ἔργα νόμου denotes human
+works in general, or specifically the covenant boundary markers — circumcision,
+food laws, sabbath — that marked Jews off from gentiles, as Dunn and Wright
+argue, building on Sanders' account of Second Temple Judaism. Only on the first
+reading does refusing circumcision mean refusing every work as a requirement.
+
+The second is `pistisChristouObjective`: whether πίστις Χριστοῦ is faith *in*
+Christ, as Dunn holds, or Christ's own faithfulness, as Hays holds. Only on the
+first does the verse name the believer's faith as the means of justification.
+Excluding works is not yet *faith alone*.
+
+The genitive dispute is a premise inside the Pauline strand, not a third
+strand. Every πίστις Χριστοῦ text sets it against νόμος, so no route through the
+genitive avoids the question of what ἔργα νόμου denotes. Nor does it follow the
+Old/New Perspective line: the New Perspective package keeps the objective
+genitive, because Dunn does.
 
 **The dominical strand** rests on Jesus' own words rather than Paul's. ἡ πίστις
 σου σέσωκέν σε — "your faith has saved you" — occurs four times in Luke (7:50,
@@ -29,13 +45,30 @@ translations render "made you well" there. The argument therefore rests on
 healing, and carries `sozoIsSoteriological` as its own disputed premise. It is
 a second bet, on a different word.
 
-Encoding both strands yields a result the single-strand version could not:
-neither lexical premise is load-bearing on its own, because either strand
-carries the conclusion without the other. Only their *disjunction* is
-load-bearing. A reader who wins the ἔργα νόμου argument outright does not
-thereby defeat sola fide — and the New Perspective, which accepts justification
-by faith while rejecting the traditional reading of Paul's phrase, turns out to
-establish the conclusion too.
+Encoding both strands yields a result the single-strand version could not: no
+lexical premise is load-bearing on its own, because either strand carries the
+conclusion without the other. What is load-bearing is a disjunction — both
+Pauline readings, *or* the dominical one. A reader who wins the ἔργα νόμου
+argument outright does not thereby defeat sola fide, and the New Perspective,
+which accepts justification by faith while rejecting the traditional reading of
+Paul's phrase, turns out to establish the conclusion too. Nor does winning the
+genitive for Hays: that costs the Reformed case its Pauline route, and not its
+conclusion.
+
+**The apocalyptic reading** of Martyn and Campbell is a rival to both
+perspectives. It takes the genitive as subjective and δικαιοσύνη θεοῦ as God's
+act of deliverance, and denies that faith is the condition of justification. It
+does not establish the conclusion. It does keep part of it — grace, and "not by
+works" — and the encoding cannot say so, because the conclusion is one atom.
+Splitting it would let a package establish half of it, and would restate every
+result here; the conclusion stays whole, and this paragraph records the cost.
+
+Two positions are cited rather than encoded. The Reformed critics of the New
+Perspective — Gathercole, the *Variegated Nomism* volume, Piper — defend the
+ἔργα νόμου premise; they add no route, so they appear in its citation, not as
+a package of their own. Mannermaa's Finnish reading of Luther affirms every
+atom here and differs over what justification *is*, union with Christ rather
+than a forensic verdict, which a propositional atom cannot hold.
 
 **James 2:24** — "a person is justified by works and not by faith alone", the
 only occurrence of *faith alone* in the New Testament — is no longer assumed
@@ -53,28 +86,31 @@ genuinely depends on this: drop it and sola fide does not follow.
 | File | Contents |
 |---|---|
 | `Atoms.lean` | the `Claim` atoms |
-| `Sources.lean` | `baseCite`, and the two rival citations of the ἔργα νόμου premise |
-| `Lines.lean` | the inference steps, the two strands, and what they share |
-| `Packages.lean` | the three positions, and the variants the results refute |
+| `Sources.lean` | `baseCite`, and each position's citation of the premise it disputes |
+| `Lines.lean` | the inference steps, the two strands, the apocalyptic rival, and what they share |
+| `Packages.lean` | the five positions, and the variants that remove a named premise |
 | `Results.lean` | every `@[headline]` result, with its trust base |
 
 ## Arguments.SolaFide.Atoms — the atomic claims
 
-The prooftexts of both strands, the two disputed lexical premises, the James
+The prooftexts of both strands, the three disputed lexical premises, the
+reading of Galatians as a polemic, the apocalyptic rival's premise, the James
 premises, and the conclusions. See `Testimony.Arguments.SolaFide` for the
 dispute this encodes.
 
 ## Arguments.SolaFide.Sources — a citation for every atom
 
-Three `cite` functions, not one. The atoms are shared across the three
-positions; the *citation* for `worksOfLawMeansWorksGenerally` is not, because
-the Reformed tradition and the New Perspective disagree about what Paul's
-phrase denotes and each is cited to its own scholarship.
+Several `cite` functions, not one. The atoms are shared across the positions;
+the *citation* of a disputed premise is not, because each side of a dispute is
+cited to its own scholarship. The Reformed tradition and the New Perspective
+part over what Paul's ἔργα νόμου denotes; Dunn and Hays part over the genitive
+in πίστις Χριστοῦ; the apocalyptic reading parts from both.
 
-`baseCite` carries everything neither side disputes the wording of;
-`reformedCite` and `newPerspectiveCite` override the one atom where they part.
-That is the disagreement made mechanical: it shows up as a difference in the
-generated manifest rather than as a remark in a docstring.
+`baseCite` carries the default citation of every atom; `reformedCite`,
+`newPerspectiveCite`, `subjectiveGenitiveCite` and `apocalypticCite` each
+override the one atom where their position parts from it. That is the
+disagreement made mechanical: it shows up as a difference in the generated
+manifest rather than as a remark in a docstring.
 
 ## The claims, numbered
 
@@ -83,24 +119,47 @@ generated manifest rather than as a remark in a docstring.
 | | claim | kind | held | source |
 |---|---|---|---|---|
 | \\(P_{1}\\) | Ephesians 2:8–9 teaches salvation by grace through faith, not of works | textual | Reformed Protestant, well supported | Eph 2:8-9; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.7 |
-| \\(P_{2}\\) | Romans 3:28 teaches justification by faith apart from works of the law | textual | Reformed Protestant, well supported | Rom 3:28; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19 |
-| \\(P_{3}\\) | Galatians 2:16 teaches that no one is justified by works of the law | textual | Reformed Protestant, well supported | Gal 2:16; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19 |
+| \\(P_{2}\\) | Romans 3:28 teaches justification by faith apart from works of the law | textual | Reformed Protestant, well supported | Rom 3:28; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19; [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:28 |
+| \\(P_{3}\\) | Galatians 2:16 teaches that no one is justified by works of the law | textual | Reformed Protestant, well supported | Gal 2:16; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19; [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16 |
 | \\(P_{4}\\) | Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes | textual | Reformed Protestant, well supported | Rom 4:4-5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.18 |
 | \\(P_{5}\\) | Titus 3:5 teaches that God saved us not by works done in righteousness | textual | Reformed Protestant, well supported | Titus 3:5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xiv.5 |
-| \\(P_{6}\\) | Paul's ἔργα νόμου denotes human works in general, not boundary markers | linguistic | Reformed Protestant, disputed | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19 |
-| \\(P_{7}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
-| \\(P_{8}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, disputed | [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50; Luke 7:47-50 |
-| \\(P_{9}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{10}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
-| \\(P_{11}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
-| \\(P_{12}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii |
-| \\(P_{13}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1 |
-| \\(P_{14}\\) | Salvation is by grace through faith, and not by works | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii |
-| \\(P_{15}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
+| \\(P_{6}\\) | Paul's ἔργα νόμου denotes human works in general, not boundary markers | linguistic | Reformed Protestant, disputed | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19; [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001); [`piper-future-justification-2007`](../bibliography.md#piper-future-justification-2007) |
+| \\(P_{7}\\) | πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness | linguistic | critical scholarship, disputed | [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9 |
+| \\(P_{8}\\) | Galatians opposes requiring circumcision, besides faith, for justification | interpretive | critical scholarship, well supported | Gal 2:3-5; Gal 5:2-4; [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 5:2 |
+| \\(P_{9}\\) | δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains | interpretive | critical scholarship, disputed | [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26 |
+| \\(P_{10}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
+| \\(P_{11}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, disputed | [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50; Luke 7:47-50 |
+| \\(P_{12}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
+| \\(P_{13}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
+| \\(P_{14}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
+| \\(P_{15}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii |
+| \\(P_{16}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1; [`mannermaa-christ-present-faith-2005`](../bibliography.md#mannermaa-christ-present-faith-2005) |
+| \\(P_{17}\\) | Salvation is by grace through faith, and not by works | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii |
+| \\(P_{18}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
 
 </div>
 
 ※ grounded in scripture alone: the reading is assumed, not argued for.
+
+<a id="reformedWorksOfLawSource"></a>
+**`reformedWorksOfLawSource`**
+
+The Reformed reading of ἔργα νόμου, cited to the tradition that holds it and
+to its modern defenders against the New Perspective. Disputed precisely because
+the New Perspective denies it; see `newPerspectiveCite`.
+
+```lean
+def reformedWorksOfLawSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.19"),
+    supporting :=
+      [Reference.work Bib.gathercoleWhereIsBoasting,
+        Reference.work Bib.carsonVariegatedNomism1,
+        Reference.work Bib.piperFutureOfJustification],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
 
 <a id="baseCite"></a>
 **`baseCite`**
@@ -126,13 +185,7 @@ def reformedCite : Claim → AtomMeta :=
         label :=
           "Paul's ἔργα νόμου denotes human works in general, not boundary markers",
         kind := PremiseKind.linguistic,
-        source :=
-          {
-            primary :=
-              Reference.work Bib.calvinInstitutes
-                (Bib.Locus.sectionRef "III.xi.19"),
-            tradition := Tradition.reformedProtestant,
-            confidence := Confidence.disputed } }
+        source := reformedWorksOfLawSource }
     | c => baseCite c
 ```
 
@@ -144,26 +197,34 @@ the covenant boundary markers, so Paul is not addressing human effort in
 general.
 
 ```lean
-def newPerspectiveCite : Claim → AtomMeta :=
-  fun x =>
-    match x with
-    | Claim.worksOfLawMeansWorksGenerally =>
-      {
-        label :=
-          "Paul's ἔργα νόμου denotes Jewish covenant boundary markers, not works in general",
-        kind := PremiseKind.linguistic,
-        source :=
-          { primary := Reference.work Bib.dunnNewPerspective,
-            supporting := [Reference.work Bib.wrightWhatPaulSaid],
-            tradition := Tradition.criticalScholarship,
-            confidence := Confidence.wellSupported } }
-    | c => baseCite c
+def newPerspectiveCite : Claim → AtomMeta
+```
+
+<a id="subjectiveGenitiveCite"></a>
+**`subjectiveGenitiveCite`**
+
+Hays's reading of the genitive: πίστις Χριστοῦ is Christ's own
+faithfulness. Everything else as `baseCite`.
+
+```lean
+def subjectiveGenitiveCite : Claim → AtomMeta
+```
+
+<a id="apocalypticCite"></a>
+**`apocalypticCite`**
+
+The apocalyptic reading: the genitive is subjective, and it is Campbell's
+reason for reading it so that the citation records.
+
+```lean
+def apocalypticCite : Claim → AtomMeta
 ```
 
 ## Arguments.SolaFide.Lines — the strands, and what they share
 
 Two strands deliver justification by faith alone, by different words in
-different authors. A third line answers James. What every package holds in
+different authors. A third line answers James, and a fourth — the apocalyptic
+reading — denies what the first two deliver. What every package holds in
 common is collected here too, so that a variant package is a named difference
 rather than a retyped list.
 
@@ -179,11 +240,19 @@ without being one of the lines `caseOf` treats as converging.
 **`paulineToFaithAlone`**
 
 **The Pauline strand.** From Romans and Galatians to justification by faith
-alone, by way of the disputed lexical premise about ἔργα νόμου.
+alone, read from Galatians 2:16 as the centre of the letter's polemic.
+
+Each premise does its own work. Galatians 2:16 excludes works of the law; read
+as an objective genitive, it also names faith in Christ as the means of
+justification. The polemic says what is being refused: circumcision *added to*
+faith as a requirement. That is where *alone* comes from. The Galatians already
+believed, and adding a work to their faith is what Paul says severs them from
+Christ (5:4). Only the ἔργα νόμου premise lets circumcision stand for works in
+general rather than for one ethnic marker.
 
 <div class="testimony-math">
 \[
-(P_{2} \land P_{3} \land P_{6}) \rightarrow P_{13}
+(P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16}
 \]
 </div>
 
@@ -196,7 +265,7 @@ justification by faith alone, by way of the disputed lexical premise about
 
 <div class="testimony-math">
 \[
-(P_{7} \land P_{8}) \rightarrow P_{13}
+(P_{10} \land P_{11}) \rightarrow P_{16}
 \]
 </div>
 
@@ -209,7 +278,7 @@ contradict Paul. Derived rather than assumed.
 
 <div class="testimony-math">
 \[
-(P_{9} \land P_{10}) \rightarrow P_{11}
+(P_{12} \land P_{13}) \rightarrow P_{14}
 \]
 </div>
 
@@ -221,23 +290,32 @@ salvation, requiring the remaining prooftexts and the harmonisation of James.
 
 <div class="testimony-math">
 \[
-(P_{13} \land P_{1} \land P_{4} \land P_{5} \land P_{11} \land P_{12}) \rightarrow P_{14}
+(P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17}
 \]
 </div>
 
 <a id="paulineLine"></a>
-**`paulineLine`** — Pauline strand (ἔργα νόμου)
+**`paulineLine`** — Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)
 
-The Pauline line. Its only distinctive ground is the lexical premise; the
-prooftexts its step reads are shared with every other package, which is exactly
-why denying the premise does not cost the argument its prooftexts.
+The Pauline line. Its grounds are the reading of Galatians as a polemic and
+the two disputed lexical premises, about ἔργα νόμου and about πίστις Χριστοῦ.
+The prooftexts its step reads are shared with every other package, which is
+exactly why denying a lexical premise does not cost the argument its
+prooftexts.
+
+The genitive dispute is a premise *inside* this strand, not a third strand.
+Every πίστις Χριστοῦ text sets it against νόμος, so a route through the genitive
+still passes through what ἔργα νόμου denotes. A line on the genitive whose
+grounds omitted the ἔργα νόμου premise would misdescribe Paul.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{6} \\
-\text{(2)} \quad &amp; (P_{2} \land P_{3} \land P_{6}) \rightarrow P_{13} \\[4pt]
-\vdash \quad &amp; P_{13}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; P_{7} \\
+\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16} \\[4pt]
+\vdash \quad &amp; P_{16}
 \end{aligned}
 \]
 </div>
@@ -251,9 +329,9 @@ distinctive ground is the other lexical premise.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{13} \\[4pt]
-\vdash \quad &amp; P_{13}
+\text{(1)} \quad &amp; P_{11} \\
+\text{(2)} \quad &amp; (P_{10} \land P_{11}) \rightarrow P_{16} \\[4pt]
+\vdash \quad &amp; P_{16}
 \end{aligned}
 \]
 </div>
@@ -267,10 +345,43 @@ text that stands against it.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{10} \\
-\text{(3)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{11} \\[4pt]
-\vdash \quad &amp; P_{11}
+\text{(1)} \quad &amp; P_{12} \\
+\text{(2)} \quad &amp; P_{13} \\
+\text{(3)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{14} \\[4pt]
+\vdash \quad &amp; P_{14}
+\end{aligned}
+\]
+</div>
+
+<a id="deliveranceNotFaithAlone"></a>
+**`deliveranceNotFaithAlone`**
+
+**The apocalyptic reading** (Martyn, Campbell). If πίστις Χριστοῦ is Christ's
+own faithfulness, and δικαιοσύνη θεοῦ is God's act of deliverance, then faith is
+not the condition on which justification is granted. So justification by faith
+alone, in the sense the Reformed and New Perspective packages share, is
+denied. Grace and "not by works" are not denied: the reading rejects the
+condition, not the gift.
+
+<div class="testimony-math">
+\[
+(\lnot P_{7} \land P_{9}) \rightarrow \lnot P_{16}
+\]
+</div>
+
+<a id="apocalypticLine"></a>
+**`apocalypticLine`** — Apocalyptic reading (δικαιοσύνη θεοῦ as deliverance)
+
+The apocalyptic line: a rival route from Paul, delivering the denial of
+what the two Reformed strands deliver.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; \lnot P_{7} \\
+\text{(2)} \quad &amp; P_{9} \\
+\text{(3)} \quad &amp; (\lnot P_{7} \land P_{9}) \rightarrow \lnot P_{16} \\[4pt]
+\vdash \quad &amp; \lnot P_{16}
 \end{aligned}
 \]
 </div>
@@ -289,7 +400,7 @@ step needs. Shared by every Reformed package, and by the New Perspective.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{4} \\
 \text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{7}
+\text{(6)} \quad &amp; P_{10}
 \end{aligned}
 \]
 </div>
@@ -308,10 +419,10 @@ harmonisation, and scripture's self-consistency.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{4} \\
 \text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{7} \\
-\text{(7)} \quad &amp; P_{9} \\
-\text{(8)} \quad &amp; P_{10} \\
-\text{(9)} \quad &amp; P_{12}
+\text{(6)} \quad &amp; P_{10} \\
+\text{(7)} \quad &amp; P_{12} \\
+\text{(8)} \quad &amp; P_{13} \\
+\text{(9)} \quad &amp; P_{15}
 \end{aligned}
 \]
 </div>
@@ -329,8 +440,8 @@ The same, with James unanswered.
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{4} \\
 \text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{7} \\
-\text{(7)} \quad &amp; P_{12}
+\text{(6)} \quad &amp; P_{10} \\
+\text{(7)} \quad &amp; P_{15}
 \end{aligned}
 \]
 </div>
@@ -345,44 +456,48 @@ salvation.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{11} \\
-\text{(2)} \quad &amp; (P_{13} \land P_{1} \land P_{4} \land P_{5} \land P_{11} \land P_{12}) \rightarrow P_{14}
+\text{(1)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{14} \\
+\text{(2)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17}
 \end{aligned}
 \]
 </div>
 
 ## Arguments.SolaFide.Packages — the positions, and the variants
 
-Three positions — Reformed, New Perspective, Tridentine — and four reduced
-Reformed packages that exist to be refuted, because "this premise is
-load-bearing" is shown by removing it and naming a countermodel.
+Five positions — Reformed, New Perspective, subjective genitive, apocalyptic,
+Tridentine — and reduced Reformed packages, each missing a named premise.
+Whether a premise is load-bearing is shown by removing it and then either
+establishing the conclusion anyway or naming a countermodel.
 
 #### Packages
 
 <a id="reformed"></a>
 **`reformed`** — Reformed (sola fide)
 
-The classical Protestant position: both strands, both lexical premises.
+The classical Protestant position: both strands, and all three lexical
+premises — ἔργα νόμου and πίστις Χριστοῦ in Paul, σῴζω in Luke.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{6} \\
-\text{(2)} \quad &amp; P_{8} \\
-\text{(3)} \quad &amp; P_{1} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{7} \\
-\text{(9)} \quad &amp; P_{9} \\
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; P_{7} \\
+\text{(4)} \quad &amp; P_{11} \\
+\text{(5)} \quad &amp; P_{1} \\
+\text{(6)} \quad &amp; P_{2} \\
+\text{(7)} \quad &amp; P_{3} \\
+\text{(8)} \quad &amp; P_{4} \\
+\text{(9)} \quad &amp; P_{5} \\
 \text{(10)} \quad &amp; P_{10} \\
 \text{(11)} \quad &amp; P_{12} \\
-\text{(12)} \quad &amp; (P_{2} \land P_{3} \land P_{6}) \rightarrow P_{13} \\
-\text{(13)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{13} \\
-\text{(14)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{11} \\
-\text{(15)} \quad &amp; (P_{13} \land P_{1} \land P_{4} \land P_{5} \land P_{11} \land P_{12}) \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(12)} \quad &amp; P_{13} \\
+\text{(13)} \quad &amp; P_{15} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16} \\
+\text{(15)} \quad &amp; (P_{10} \land P_{11}) \rightarrow P_{16} \\
+\text{(16)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{14} \\
+\text{(17)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
 \end{aligned}
 \]
 </div>
@@ -394,27 +509,93 @@ No premise here rests on scripture alone.
 
 The New Perspective on Paul: it denies the traditional reading of ἔργα
 νόμου while accepting justification by faith, which is what Dunn and Wright
-actually hold.
+actually hold. It keeps the objective genitive, as Dunn does, so the one
+Pauline ground it denies is the ἔργα νόμου premise.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; \lnot P_{6} \\
-\text{(2)} \quad &amp; P_{8} \\
-\text{(3)} \quad &amp; P_{1} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{7} \\
-\text{(9)} \quad &amp; P_{9} \\
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; \lnot P_{6} \\
+\text{(3)} \quad &amp; P_{7} \\
+\text{(4)} \quad &amp; P_{11} \\
+\text{(5)} \quad &amp; P_{1} \\
+\text{(6)} \quad &amp; P_{2} \\
+\text{(7)} \quad &amp; P_{3} \\
+\text{(8)} \quad &amp; P_{4} \\
+\text{(9)} \quad &amp; P_{5} \\
 \text{(10)} \quad &amp; P_{10} \\
 \text{(11)} \quad &amp; P_{12} \\
-\text{(12)} \quad &amp; (P_{2} \land P_{3} \land P_{6}) \rightarrow P_{13} \\
-\text{(13)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{13} \\
-\text{(14)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{11} \\
-\text{(15)} \quad &amp; (P_{13} \land P_{1} \land P_{4} \land P_{5} \land P_{11} \land P_{12}) \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(12)} \quad &amp; P_{13} \\
+\text{(13)} \quad &amp; P_{15} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16} \\
+\text{(15)} \quad &amp; (P_{10} \land P_{11}) \rightarrow P_{16} \\
+\text{(16)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{14} \\
+\text{(17)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="subjectiveGenitive"></a>
+**`subjectiveGenitive`** — Subjective genitive (πίστις Χριστοῦ as Christ's faithfulness)
+
+The subjective genitive (Hays): πίστις Χριστοῦ in Galatians 2:16 is Christ's
+own faithfulness, so the verse does not name the believer's faith as the means
+of justification. Everything else in the Reformed case is granted.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; \lnot P_{7} \\
+\text{(4)} \quad &amp; P_{11} \\
+\text{(5)} \quad &amp; P_{1} \\
+\text{(6)} \quad &amp; P_{2} \\
+\text{(7)} \quad &amp; P_{3} \\
+\text{(8)} \quad &amp; P_{4} \\
+\text{(9)} \quad &amp; P_{5} \\
+\text{(10)} \quad &amp; P_{10} \\
+\text{(11)} \quad &amp; P_{12} \\
+\text{(12)} \quad &amp; P_{13} \\
+\text{(13)} \quad &amp; P_{15} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16} \\
+\text{(15)} \quad &amp; (P_{10} \land P_{11}) \rightarrow P_{16} \\
+\text{(16)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{14} \\
+\text{(17)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="apocalyptic"></a>
+**`apocalyptic`** — Apocalyptic reading of Paul (Martyn, Campbell)
+
+The apocalyptic reading of Paul (Martyn, Campbell). It rejects the
+traditional reading's framing of justification and also the New Perspective's.
+The question is neither how an individual is accepted nor how Jew and gentile
+are related, but God's deliverance of the world in Christ.
+
+It shares Galatians with the Reformed reading — the text of 2:16 and the
+circumcision polemic — and closes with the same step to salvation. It does not
+share the dominical strand, which neither Martyn nor Campbell argues from; to
+grant it Luke 7:50 would be to encode a position nobody holds.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; \lnot P_{7} \\
+\text{(2)} \quad &amp; P_{9} \\
+\text{(3)} \quad &amp; P_{3} \\
+\text{(4)} \quad &amp; P_{8} \\
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{9}) \rightarrow \lnot P_{16} \\
+\text{(6)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
 \end{aligned}
 \]
 </div>
@@ -437,10 +618,10 @@ prooftexts with them and nothing else, so `caseOf` would misdescribe it.
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{12} \\
-\text{(6)} \quad &amp; P_{15} \\
-\text{(7)} \quad &amp; P_{15} \rightarrow \lnot P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(5)} \quad &amp; P_{15} \\
+\text{(6)} \quad &amp; P_{18} \\
+\text{(7)} \quad &amp; P_{18} \rightarrow \lnot P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
 \end{aligned}
 \]
 </div>
@@ -448,28 +629,30 @@ prooftexts with them and nothing else, so `caseOf` would misdescribe it.
 No premise here rests on scripture alone.
 
 <a id="reformedWithoutWorksOfLaw"></a>
-**`reformedWithoutWorksOfLaw`** — Reformed, minus the Pauline lexical premise
+**`reformedWithoutWorksOfLaw`** — Reformed, minus the ἔργα νόμου premise
 
-The Reformed package without the Pauline lexical premise.
+The Reformed package without the ἔργα νόμου premise.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{1} \\
-\text{(3)} \quad &amp; P_{2} \\
-\text{(4)} \quad &amp; P_{3} \\
-\text{(5)} \quad &amp; P_{4} \\
-\text{(6)} \quad &amp; P_{5} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{9} \\
+\text{(2)} \quad &amp; P_{7} \\
+\text{(3)} \quad &amp; P_{11} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
 \text{(9)} \quad &amp; P_{10} \\
 \text{(10)} \quad &amp; P_{12} \\
-\text{(11)} \quad &amp; (P_{2} \land P_{3} \land P_{6}) \rightarrow P_{13} \\
-\text{(12)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{13} \\
-\text{(13)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{11} \\
-\text{(14)} \quad &amp; (P_{13} \land P_{1} \land P_{4} \land P_{5} \land P_{11} \land P_{12}) \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(11)} \quad &amp; P_{13} \\
+\text{(12)} \quad &amp; P_{15} \\
+\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16} \\
+\text{(14)} \quad &amp; (P_{10} \land P_{11}) \rightarrow P_{16} \\
+\text{(15)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{14} \\
+\text{(16)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
 \end{aligned}
 \]
 </div>
@@ -484,21 +667,23 @@ The Reformed package without the dominical lexical premise.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{6} \\
-\text{(2)} \quad &amp; P_{1} \\
-\text{(3)} \quad &amp; P_{2} \\
-\text{(4)} \quad &amp; P_{3} \\
-\text{(5)} \quad &amp; P_{4} \\
-\text{(6)} \quad &amp; P_{5} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{9} \\
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; P_{7} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
 \text{(9)} \quad &amp; P_{10} \\
 \text{(10)} \quad &amp; P_{12} \\
-\text{(11)} \quad &amp; (P_{2} \land P_{3} \land P_{6}) \rightarrow P_{13} \\
-\text{(12)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{13} \\
-\text{(13)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{11} \\
-\text{(14)} \quad &amp; (P_{13} \land P_{1} \land P_{4} \land P_{5} \land P_{11} \land P_{12}) \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(11)} \quad &amp; P_{13} \\
+\text{(12)} \quad &amp; P_{15} \\
+\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16} \\
+\text{(14)} \quad &amp; (P_{10} \land P_{11}) \rightarrow P_{16} \\
+\text{(15)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{14} \\
+\text{(16)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
 \end{aligned}
 \]
 </div>
@@ -506,27 +691,61 @@ The Reformed package without the dominical lexical premise.
 No premise here rests on scripture alone.
 
 <a id="reformedWithoutEitherLexicalPremise"></a>
-**`reformedWithoutEitherLexicalPremise`** — Reformed, minus both lexical premises
+**`reformedWithoutEitherLexicalPremise`** — Reformed, minus the ἔργα νόμου and σῴζω premises
 
-The Reformed package with **both** lexical premises removed.
+The Reformed package with the ἔργα νόμου premise **and** the dominical
+lexical premise removed — one from each strand. The objective genitive stays.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{7} \\
-\text{(7)} \quad &amp; P_{9} \\
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{7} \\
+\text{(3)} \quad &amp; P_{1} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
+\text{(7)} \quad &amp; P_{5} \\
 \text{(8)} \quad &amp; P_{10} \\
 \text{(9)} \quad &amp; P_{12} \\
-\text{(10)} \quad &amp; (P_{2} \land P_{3} \land P_{6}) \rightarrow P_{13} \\
-\text{(11)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{13} \\
-\text{(12)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{11} \\
-\text{(13)} \quad &amp; (P_{13} \land P_{1} \land P_{4} \land P_{5} \land P_{11} \land P_{12}) \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(10)} \quad &amp; P_{13} \\
+\text{(11)} \quad &amp; P_{15} \\
+\text{(12)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16} \\
+\text{(13)} \quad &amp; (P_{10} \land P_{11}) \rightarrow P_{16} \\
+\text{(14)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{14} \\
+\text{(15)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="reformedWithoutPistisChristouOrSozo"></a>
+**`reformedWithoutPistisChristouOrSozo`** — Reformed, minus the πίστις Χριστοῦ and σῴζω premises
+
+The Reformed package with the objective genitive **and** the dominical
+lexical premise removed. The ἔργα νόμου premise stays.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; P_{1} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
+\text{(7)} \quad &amp; P_{5} \\
+\text{(8)} \quad &amp; P_{10} \\
+\text{(9)} \quad &amp; P_{12} \\
+\text{(10)} \quad &amp; P_{13} \\
+\text{(11)} \quad &amp; P_{15} \\
+\text{(12)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16} \\
+\text{(13)} \quad &amp; (P_{10} \land P_{11}) \rightarrow P_{16} \\
+\text{(14)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{14} \\
+\text{(15)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
 \end{aligned}
 \]
 </div>
@@ -541,19 +760,21 @@ The Reformed package without the premises that harmonise James.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{6} \\
-\text{(2)} \quad &amp; P_{8} \\
-\text{(3)} \quad &amp; P_{1} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{7} \\
-\text{(9)} \quad &amp; P_{12} \\
-\text{(10)} \quad &amp; (P_{2} \land P_{3} \land P_{6}) \rightarrow P_{13} \\
-\text{(11)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{13} \\
-\text{(12)} \quad &amp; (P_{13} \land P_{1} \land P_{4} \land P_{5} \land P_{11} \land P_{12}) \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; P_{7} \\
+\text{(4)} \quad &amp; P_{11} \\
+\text{(5)} \quad &amp; P_{1} \\
+\text{(6)} \quad &amp; P_{2} \\
+\text{(7)} \quad &amp; P_{3} \\
+\text{(8)} \quad &amp; P_{4} \\
+\text{(9)} \quad &amp; P_{5} \\
+\text{(10)} \quad &amp; P_{10} \\
+\text{(11)} \quad &amp; P_{15} \\
+\text{(12)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{16} \\
+\text{(13)} \quad &amp; (P_{10} \land P_{11}) \rightarrow P_{16} \\
+\text{(14)} \quad &amp; (P_{16} \land P_{1} \land P_{4} \land P_{5} \land P_{14} \land P_{15}) \rightarrow P_{17} \\[4pt]
+\vdash \quad &amp; P_{17}
 \end{aligned}
 \]
 </div>
@@ -566,7 +787,9 @@ Entailments are established with `establish`; refutations name a countermodel �
 the rival's own reading, written down as a valuation — and use `refute_with`.
 
 `lexical_premises_jointly_load_bearing` is the result the two-strand encoding
-exists to make possible.
+exists to make possible. `pistisChristou_and_sozo_jointly_load_bearing` is its
+counterpart for the second Pauline premise: the Pauline strand now rests on two
+disputed readings of Galatians 2:16, and losing either costs the strand.
 
 #### Results
 
@@ -627,7 +850,7 @@ theorem tridentine_not_establishes : ¬Establishes tridentine
 <a id="worksOfLaw_not_load_bearing"></a>
 **`worksOfLaw_not_load_bearing`**
 
-The Pauline lexical premise is **not** load-bearing on its own: strip it and
+The ἔργα νόμου premise is **not** load-bearing on its own: strip it and
 the dominical strand still carries the argument.
 
 ```lean
@@ -649,8 +872,9 @@ theorem sozo_not_load_bearing : Establishes reformedWithoutSozo
 <a id="neitherLexicalReading"></a>
 **`neitherLexicalReading`**
 
-A reading on which neither lexical premise holds: Paul's phrase is about
-boundary markers, and Jesus' σέσωκέν σε is about healing.
+A reading on which neither the ἔργα νόμου premise nor the dominical premise
+holds: Paul's phrase is about boundary markers, and Jesus' σέσωκέν σε is about
+healing.
 
 ```lean
 def neitherLexicalReading : Valuation Claim :=
@@ -666,17 +890,107 @@ def neitherLexicalReading : Valuation Claim :=
 <a id="lexical_premises_jointly_load_bearing"></a>
 **`lexical_premises_jointly_load_bearing`**
 
-**The result worth having.** Neither lexical premise carries the argument
-alone, but their *disjunction* does: remove both and sola fide no longer
-follows, with everything else retained.
+**The result worth having.** Neither the ἔργα νόμου premise nor the dominical
+premise carries the argument alone, but their *disjunction* does: remove both
+and sola fide no longer follows, with everything else retained.
 
 So the Reformation's material principle, as encoded here, does not hang on the
 sense of Paul's ἔργα νόμου. It hangs on that *or* on the sense of Jesus'
-σέσωκέν σε — and an opponent must defeat both.
+σέσωκέν σε — and an opponent must defeat both. The same holds with the
+πίστις Χριστοῦ premise in place of ἔργα νόμου; see
+`pistisChristou_and_sozo_jointly_load_bearing`.
 
 ```lean
 theorem lexical_premises_jointly_load_bearing : ¬Establishes
     reformedWithoutEitherLexicalPremise
+-- axioms: propext, Quot.sound
+```
+
+<a id="pistisChristou_not_load_bearing"></a>
+**`pistisChristou_not_load_bearing`**
+
+**The objective genitive is not load-bearing for sola fide as a whole.** Grant
+Hays that πίστις Χριστοῦ is Christ's own faithfulness, keep everything else,
+and the conclusion still follows — by Luke 7:50.
+
+The genitive is the hinge of the Pauline strand, as
+`pistisChristou_and_sozo_jointly_load_bearing` shows. It is not the hinge of the
+argument. A reader who wins the genitive for Hays has cost the Reformed case
+its Pauline route, and not its conclusion.
+
+```lean
+theorem pistisChristou_not_load_bearing : Establishes subjectiveGenitive
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="neitherPistisNorSozoReading"></a>
+**`neitherPistisNorSozoReading`**
+
+A reading on which Galatians 2:16 names Christ's faithfulness rather than
+faith in Christ, and Jesus' σέσωκέν σε is about healing.
+
+```lean
+def neitherPistisNorSozoReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pistisChristouObjective => False
+    | Claim.sozoIsSoteriological => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.salvationByGraceThroughFaithNotWorks => False
+    | x => True
+```
+
+<a id="pistisChristou_and_sozo_jointly_load_bearing"></a>
+**`pistisChristou_and_sozo_jointly_load_bearing`**
+
+**Within the Pauline strand, faith in Christ is load-bearing.** Deny the
+objective genitive and the dominical premise, keep the ἔργα νόμου premise and
+the reading of Galatians as a polemic against circumcision, and sola fide no
+longer follows.
+
+Excluding works is not enough to reach *faith alone*. Galatians 2:16 must also
+name the believer's faith as the means, and on the subjective genitive it does
+not. So the Pauline strand rests on two disputed readings of one verse, and the
+argument as a whole on those two *or* on Luke 7:50.
+
+```lean
+theorem pistisChristou_and_sozo_jointly_load_bearing : ¬Establishes
+    reformedWithoutPistisChristouOrSozo
+-- axioms: propext, Quot.sound
+```
+
+<a id="apocalypticReading"></a>
+**`apocalypticReading`**
+
+The apocalyptic reading, as a valuation: πίστις Χριστοῦ is Christ's
+faithfulness, δικαιοσύνη θεοῦ is God's deliverance, and faith is not the
+condition of justification. Everything else it grants.
+
+```lean
+def apocalypticReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pistisChristouObjective => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.salvationByGraceThroughFaithNotWorks => False
+    | x => True
+```
+
+<a id="apocalyptic_not_establishes"></a>
+**`apocalyptic_not_establishes`**
+
+**The apocalyptic reading does not establish sola fide.** It denies the
+premise the conclusion's "through faith" depends on — that faith is the
+condition of justification — while granting that justification is not by the
+works of the law.
+
+The conclusion is one atom, so this result cannot say what the reading keeps:
+grace, and "not by works". Splitting the conclusion would let a package
+establish half of it, and would restate every result here; the module docstring
+records the choice not to.
+
+```lean
+theorem apocalyptic_not_establishes : ¬Establishes apocalyptic
 -- axioms: propext, Quot.sound
 ```
 
@@ -769,10 +1083,36 @@ theorem newPerspective_is_satisfiable : Satisfiable newPerspective.premises
 -- axioms: propext, Quot.sound
 ```
 
+<a id="subjectiveGenitiveReading"></a>
+**`subjectiveGenitiveReading`**
+
+Hays's own world: πίστις Χριστοῦ is Christ's faithfulness, and everything
+else in the Reformed case holds.
+
+```lean
+def subjectiveGenitiveReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.pistisChristouObjective => False
+    | x => True
+```
+
+<a id="subjectiveGenitive_is_satisfiable"></a>
+**`subjectiveGenitive_is_satisfiable`**
+
+The subjective-genitive package has a model, so
+`pistisChristou_not_load_bearing` is not vacuous.
+
+```lean
+theorem subjectiveGenitive_is_satisfiable : Satisfiable
+    subjectiveGenitive.premises
+-- axioms: propext, Quot.sound
+```
+
 <a id="reformedWithoutWorksOfLaw_is_satisfiable"></a>
 **`reformedWithoutWorksOfLaw_is_satisfiable`**
 
-The Reformed package minus the Pauline lexical premise has a model, so
+The Reformed package minus the ἔργα νόμου premise has a model, so
 `worksOfLaw_not_load_bearing` is not vacuous. A load-bearing result that held
 only because its premises could not all be true would be exactly backwards.
 

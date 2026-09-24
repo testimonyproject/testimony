@@ -26,9 +26,10 @@ theorem lexical_premises_jointly_load_bearing :
 
 Read together, those say something prose arguments rarely establish. Sola fide
 runs on **two independent strands** — Paul's ἔργα νόμου, and Jesus' "your faith
-has saved you" at Luke 7:50 — and *neither* disputed lexical premise carries
-the argument by itself. Only their disjunction does, so an opponent must defeat
-both readings rather than either.
+has saved you" at Luke 7:50 — and *no* disputed lexical premise carries the
+argument by itself. Only a disjunction does — Paul's two readings of Galatians
+2:16, or Jesus' σῴζω — so an opponent must defeat a reading in each strand,
+not one reading.
 
 A corollary: the New Perspective on Paul, which rejects the traditional reading
 of ἔργα νόμου while still affirming justification by faith, **establishes the

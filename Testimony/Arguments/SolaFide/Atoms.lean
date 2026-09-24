@@ -5,7 +5,8 @@ import Testimony.Scripture
 /-!
 # Arguments.SolaFide.Atoms — the atomic claims
 
-The prooftexts of both strands, the two disputed lexical premises, the James
+The prooftexts of both strands, the three disputed lexical premises, the
+reading of Galatians as a polemic, the apocalyptic rival's premise, the James
 premises, and the conclusions. See `Testimony.Arguments.SolaFide` for the
 dispute this encodes.
 -/
@@ -30,8 +31,21 @@ inductive Claim
   /-- Titus 3:5 teaches that God saved us not by works done in righteousness. -/
   | titus3_5
   /-- Paul's ἔργα νόμου denotes human works in general, not specifically the
-  Jewish covenant boundary markers. **The disputed Pauline premise.** -/
+  Jewish covenant boundary markers. **The first disputed Pauline premise.** -/
   | worksOfLawMeansWorksGenerally
+  /-- πίστις Χριστοῦ in Galatians 2:16 — and at Romans 3:22 and Philippians 3:9 —
+  is an objective genitive: faith *in* Christ, not Christ's own faithfulness.
+  **The second disputed Pauline premise**, and the one that makes the believer's
+  faith, not only the exclusion of works, part of what Galatians 2:16 says. -/
+  | pistisChristouObjective
+  /-- Galatians is a polemic against requiring circumcision of believers, in
+  addition to faith, as a condition of justification (Galatians 2:3–5,
+  5:2–4). -/
+  | galatiansOpposesCircumcisionAsRequirement
+  /-- δικαιοσύνη θεοῦ in Romans names God's act of delivering the world in
+  Christ, not a status granted to those who meet the condition of faith. The
+  apocalyptic reading. -/
+  | righteousnessOfGodIsDeliverance
   /-- Luke 7:50 — Jesus tells the woman who anointed him, "your faith has saved
   you", immediately after declaring her sins forgiven. -/
   | luke7_50FaithHasSavedYou
