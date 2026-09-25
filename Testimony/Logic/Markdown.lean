@@ -242,6 +242,42 @@ def declLabel (d : String) (suffix : String) : String :=
 than as notation. -/
 def leanBlock (body : String) : String := "```lean\n" ++ body ++ "\n```\n"
 
+/-- The formulas of a list, inline and joined. -/
+def inlineFormulas [DecidableEq α] (order : List α) (φs : List (Formula α)) : String :=
+  String.intercalate ", " (φs.map fun φ => inlineMath (Latex.formula order φ))
+
+/-- One claim an explanation rests on: its number, what it says, how firmly it
+is held and by whom. -/
+def restingClaim [DecidableEq α] (order : List α) (cite : α → AtomMeta) (a : α) : String :=
+  let m := cite a
+  "  - " ++ inlineMath (Latex.varName (order.idxOf a)) ++ " " ++ escape m.label ++ " — *" ++
+    confidence m.source.confidence ++ "*: " ++ source m.source
+
+/-- Why one position stands against another, as a list a reader can check line
+by line against the theorems it summarises. -/
+def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : String :=
+  let given := if e.granted.isEmpty then "" else " and " ++ inlineFormulas order e.granted
+  "**Why *" ++ escape e.holder ++ "* stands against *" ++ escape e.rival ++ "*.**\n\n" ++
+  "- **The crux:** " ++ inlineMath (Latex.formula order e.crux) ++ ", a premise of *" ++
+    escape e.holder ++ "*.\n" ++
+  "- **What it does:** " ++
+    (if e.derives then "its conclusion does not follow without it."
+     else "its conclusion follows without it — the crux is its answer to *" ++
+       escape e.rival ++ "*.") ++ "\n" ++
+  (if e.granted.isEmpty then "" else
+    "- **Granted:** " ++ inlineFormulas order e.granted ++
+    ", which the break also needs.\n") ++
+  "- **Where the rival breaks:** " ++ inlineFormulas order e.core ++
+    " cannot be held together with " ++ inlineMath (Latex.formula order e.crux) ++ given ++
+    "; each is needed for the break, and without the crux they stand.\n" ++
+  "- **What this rests on:**\n" ++
+    String.intercalate "\n" (e.restsOn.map (restingClaim order e.cite)) ++
+    (if Page.Explanation.isLiteral e.crux then "" else
+      "\n  - the step itself — *" ++
+      String.intercalate "; " (e.inferences.map fun s =>
+        confidence s.confidence ++ "*: " ++ source s) ++
+      (if e.inferences.isEmpty then "unrated*" else "")) ++ "\n"
+
 /-- Render one item against the page's atom ordering. -/
 def item [DecidableEq α] (order : List α) : Item α → String
   | .prose md => demote md ++ "\n"
@@ -269,6 +305,8 @@ def item [DecidableEq α] (order : List α) : Item α → String
   | .result d doc stmt proposed =>
       declLabel d (if proposed then " ⚗" else "") ++ "\n" ++ doc ++ "\n\n" ++
       leanBlock stmt
+  | .because d doc e =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ explanation order e
 
 /-- The body of a generated page: the legend, then every item in source order.
 

@@ -3900,6 +3900,36 @@ theorem sola_fide_not_forced_without_the_apocalyptic_reading :
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+#### Why the dominical case stands against Trent
+
+The verdicts above say *that* the dominical case is accepted and Trent is not.
+This says *why*, at the level of the claims: the Reformed distinction between
+justification and sanctification is the crux, and it breaks Trent at exactly
+two of its premises.
+
+<a id="whyTheDominicalCaseStandsAgainstTrent"></a>
+**`whyTheDominicalCaseStandsAgainstTrent`**
+
+**Why the dominical case stands against Trent.** The crux is the Reformed
+distinction between justification and subsequent sanctification (Westminster
+XIII.1; Calvin, *Institutes* III.xi.6). Trent cannot hold it: its definition of
+justification as including sanctification (Session VI, ch. 7), with the step
+from that definition to denying the distinction, contradicts it, and both are
+needed. Nothing else in Trent's case does.
+
+The crux is not part of the dominical case's derivation — sola fide follows
+from Luke 7:50 without it — so it is the dominical case's *answer* to Trent, and
+it is only as strong as its citation, which is `disputed`: Trent's canon 11
+denies it. That is exactly what the verdict against Trent rests on.
+
+**Why *Sola fide from Jesus' words (Luke 7:50)* stands against *Trent, against 'not by works'*.**
+
+- **The crux:** \\(P_{32}\\), a premise of *Sola fide from Jesus' words (Luke 7:50)*.
+- **What it does:** its conclusion follows without it — the crux is its answer to *Trent, against 'not by works'*.
+- **Where the rival breaks:** \\(P_{31}\\), \\(P_{31} \rightarrow \lnot P_{32}\\) cannot be held together with \\(P_{32}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{32}\\) Justification and sanctification are inseparable but distinct — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+
 ## Arguments.SolaFide.Johannine — "this is the work of God, that you believe"
 
 A fourth strand for sola fide, from John's Gospel, encoded on its own. Asked
@@ -4339,3 +4369,28 @@ theorem lutherOnGalatians_is_satisfiable : Satisfiable
     lutherOnGalatians.premises
 -- axioms: propext, Quot.sound
 ```
+
+<a id="whyLutherAnswersAquinas"></a>
+**`whyLutherAnswersAquinas`**
+
+**Why Luther's answer stands against Aquinas.** The crux is Luther's step:
+from Galatians 3:11–12 and the law's command of love, the believing that
+justifies is not faith formed by charity. With the two texts granted, Aquinas's
+reading of John 6:29 cannot keep its one distinctive ground — that the believing
+is formed by charity — and that ground alone breaks.
+
+Unlike the Reformed distinction against Trent, this crux is part of Luther's
+case: without the step, the texts do not deliver his conclusion. So the answer
+is exactly as strong as the step, which is rated `disputed` — the step is
+Luther's, and the texts are granted by both sides.
+
+**Why *Luther on Galatians 3:11–12 (against faith formed by charity)* stands against *Aquinas on John 6:29 (faith formed by charity)*.**
+
+- **The crux:** \\((P_{38} \land P_{39}) \rightarrow \lnot P_{37}\\), a premise of *Luther on Galatians 3:11–12 (against faith formed by charity)*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{38}\\), \\(P_{39}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{37}\\) cannot be held together with \\((P_{38} \land P_{39}) \rightarrow \lnot P_{37}\\) and \\(P_{38}\\), \\(P_{39}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{38}\\) Galatians 3:11–12 — none is justified by the law; the law is not of faith — *consensus*: Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
+  - \\(P_{39}\\) Love of God and neighbour is what the law commands — *consensus*: Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12
+  - the step itself — *disputed*: [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11

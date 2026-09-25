@@ -3,6 +3,7 @@ import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Witness
+import Testimony.Logic.Because
 
 /-!
 # Arguments.SolaFide.Dispute — who prevails over sola fide
@@ -819,5 +820,34 @@ theorem sola_fide_not_forced_without_the_apocalyptic_reading :
     (s := Witness.listSub _ [.trent]) (x := ⟨.trent, by decide⟩) (by decide +kernel)
 
 #print axioms sola_fide_not_forced_without_the_apocalyptic_reading
+
+/-! ### Why the dominical case stands against Trent
+
+The verdicts above say *that* the dominical case is accepted and Trent is not.
+This says *why*, at the level of the claims: the Reformed distinction between
+justification and sanctification is the crux, and it breaks Trent at exactly
+two of its premises. -/
+
+/-- **Why the dominical case stands against Trent.** The crux is the Reformed
+distinction between justification and subsequent sanctification (Westminster
+XIII.1; Calvin, *Institutes* III.xi.6). Trent cannot hold it: its definition of
+justification as including sanctification (Session VI, ch. 7), with the step
+from that definition to denying the distinction, contradicts it, and both are
+needed. Nothing else in Trent's case does.
+
+The crux is not part of the dominical case's derivation — sola fide follows
+from Luke 7:50 without it — so it is the dominical case's *answer* to Trent, and
+it is only as strong as its citation, which is `disputed`: Trent's canon 11
+denies it. That is exactly what the verdict against Trent rests on. -/
+def whyTheDominicalCaseStandsAgainstTrent : Because dominicalCase tridentineCase :=
+  Because.ofChecks (p .justificationDistinctFromSanctification)
+    (dominicalLine.grounds ++ sharedGrounds) (dominicalLine.step :: closingSteps) []
+    [ p .justificationIncludesSanctification
+    , p .justificationIncludesSanctification ➝ notP .justificationDistinctFromSanctification ]
+    .answers dominicalCase_establishes dominicalCase_is_satisfiable
+    (by simp [dominicalCase, caseOf, reformedOntology])
+    (by simp)
+    (by simp [solaFideDefs, caseOf, Line.premises])
+    (by decide +kernel)
 
 end Testimony.Arguments.SolaFide

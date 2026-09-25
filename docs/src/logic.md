@@ -608,6 +608,61 @@ one party is worth: take it away and see what survives. A verdict re-checks
 itself when a party is added, and a witness that no longer holds fails to
 check.
 
+**4. Say why a position stands against a rival.** A verdict says *who*
+survives; a reader also asks *why*. `Because P R` (`Testimony.Logic.Because`)
+answers for one pair, as one checked object. It names a **crux**, one of `P`'s
+premises, and proves:
+
+- `P`'s premises have a model and establish its conclusion;
+- where the crux sits: `P`'s premises are `before ++ crux :: after`;
+- a **core** of `R`'s premises cannot be held with the crux, together with any
+  **granted** grounds of `P` the break needs, stated rather than hidden;
+- the core is minimal: drop any one of its premises and the rest hold with the
+  crux, so the core is exactly where `R` breaks;
+- the core and the granted grounds hold together without the crux, so the crux
+  does the breaking, not the grounds;
+- `R`'s premises have a model: it falls to the crux, not to itself;
+- the crux's **role**. It `derives` when `P`'s conclusion does not follow without
+  it, so it is part of `P`'s case. It `answers` when the conclusion follows
+  anyway, so the crux is held only as `P`'s answer to `R`.
+
+The role is proved, not chosen. The dominical case for sola fide turns out to
+hold the Reformed distinction between justification and sanctification only as
+its answer to Trent: its conclusion follows from its other premises. Luther's
+step from Galatians is part of his case against Aquinas.
+
+```lean
+def whyLutherAnswersAquinas : Because lutherOnGalatians thomistOnJohn :=
+  Because.ofChecks lutherLine.step lutherLine.grounds [] lutherLine.grounds
+    [p .johannineBelievingIsFormedByCharity] .derives
+    luther_answers_aquinas_from_galatians lutherOnGalatians_is_satisfiable
+    (by simp [lutherOnGalatians, Line.asPackage, Line.premises])
+    (fun φ hφ => by simp [lutherOnGalatians, Line.asPackage, Line.premises, hφ])
+    (by simp [solaFideDefs, caseOf, Line.onGrounds])
+    (by decide +kernel)
+```
+
+`Because.ofChecks` takes the engine's check as one `decide +kernel`: the break,
+its minimality, the crux being needed, the rival standing and the role. It also
+takes the facts the engine cannot decide. `P` holds, and its premises have a
+model; both are theorems the argument already has. The split and the two
+membership claims are proved by unfolding. The split has to be declared,
+because equality on `Formula` does not reduce in the kernel. Declaring it is
+also the honest form, since it names the occurrence of the crux that is meant.
+
+From a `Because` follow `not_together`, that the two positions cannot be held
+at once, and `undermines`, that a one-premise core with nothing granted is an
+attack in the dispute's own sense.
+
+**What it claims, and what it does not.** It is conditional on its crux: *if
+the crux holds, `P` stands and `R` cannot be held, and this is the premise of
+`R` that fails.* It says nothing about whether the crux is true. The rendered
+explanation therefore ends with what it rests on: the crux and the granted
+grounds, each with its rating and citation. When the crux is a step rather than
+a claim, the step's own rating is listed too. A `Because` in an argument's
+module is harvested into its page and the PDF like any other result, and its
+docstring is the prose above the explanation.
+
 ## Manifests
 
 Generated from the premises, never maintained beside them:
