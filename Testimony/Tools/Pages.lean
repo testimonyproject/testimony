@@ -210,6 +210,9 @@ elab "derive_argument_bodies " tableName:ident : command => do
                 | some (Expr.const c _) => some c
                 | _ => none
             `(Logic.Page.Item.package $(quote dname) $(quote doc) $(mkIdent n))
+          else if headIs ``Logic.Because then
+            `(Logic.Page.Item.because $(quote dname) $(quote doc)
+                (Logic.Because.view $(mkIdent n)))
           else if headIs ``Logic.Line then
             `(Logic.Page.Item.line $(quote dname) $(quote doc) $(mkIdent n))
           else if headIs ``Logic.Formula then

@@ -1,4 +1,5 @@
 import Testimony.Arguments.SolaFide.Results
+import Testimony.Logic.Because
 
 /-!
 # Arguments.SolaFide.Johannine — "this is the work of God, that you believe"
@@ -282,5 +283,24 @@ def lutherReading : Valuation Claim := fun a =>
 not vacuous. -/
 theorem lutherOnGalatians_is_satisfiable : Satisfiable lutherOnGalatians.premises := by
   satisfied_by lutherReading [solaFideDefs]
+
+/-- **Why Luther's answer stands against Aquinas.** The crux is Luther's step:
+from Galatians 3:11–12 and the law's command of love, the believing that
+justifies is not faith formed by charity. With the two texts granted, Aquinas's
+reading of John 6:29 cannot keep its one distinctive ground — that the believing
+is formed by charity — and that ground alone breaks.
+
+Unlike the Reformed distinction against Trent, this crux is part of Luther's
+case: without the step, the texts do not deliver his conclusion. So the answer
+is exactly as strong as the step, which is rated `disputed` — the step is
+Luther's, and the texts are granted by both sides. -/
+def whyLutherAnswersAquinas : Because lutherOnGalatians thomistOnJohn :=
+  Because.ofChecks lutherLine.step lutherLine.grounds [] lutherLine.grounds
+    [p .johannineBelievingIsFormedByCharity] .derives
+    luther_answers_aquinas_from_galatians lutherOnGalatians_is_satisfiable
+    (by simp [lutherOnGalatians, Line.asPackage, Line.premises])
+    (fun φ hφ => by simp [lutherOnGalatians, Line.asPackage, Line.premises, hφ])
+    (by simp [solaFideDefs, caseOf, Line.onGrounds])
+    (by decide +kernel)
 
 end Testimony.Arguments.SolaFide

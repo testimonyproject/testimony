@@ -28,7 +28,7 @@ boundary visible at all times.
 | `Testimony.Bib` | Typed bibliography entries, the `@[bib_entry]` registry, BibTeX and Markdown rendering |
 | `Testimony.Provenance` | `Reference`, `Source`, `Tradition`, `Confidence`, `PremiseKind` |
 | `Testimony.Intertext` | `RelationType`, `IntertextEdge`, `Interpretation` |
-| `Testimony.Logic` | Formula type, entailment, independence and countermodels, `ArgumentPackage`, manifests, `Line` lines of reason, the `establish`/`refute_with`/`satisfied_by`/`leaves_open`/`granted` tactics, `Horn`, which decides who defeats whom, `Solver`, which decides what survives, and `Witness`, which states why |
+| `Testimony.Logic` | Formula type, entailment, independence and countermodels, `ArgumentPackage`, manifests, `Line` lines of reason, the `establish`/`refute_with`/`satisfied_by`/`leaves_open`/`granted` tactics, `Horn`, which decides who defeats whom, `Solver`, which decides what survives, and `Witness`, which states why, and `Because`, which says why one position stands against another |
 | `Testimony.Argument` | `FulfillmentCriterion`, `MessiahDefinition`, `Satisfies`, `MeetsDefinition` |
 | `Testimony.Arguments.*` | The worked arguments. A large one is a directory — `Atoms`, `Sources`, `Lines`, `Packages`, `Results` |
 | `Testimony.Logic.Page` | `Item` — what a generated page is made of, before either rendering |

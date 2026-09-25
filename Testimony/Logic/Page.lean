@@ -21,6 +21,44 @@ open Testimony
 
 variable {α : Type}
 
+/-- Why one position stands against another, as a page shows it: the data of a
+`Because` (`Testimony.Logic.Because`), without its proofs. -/
+structure Explanation (α : Type) where
+  /-- The position that stands. -/
+  holder : String
+  /-- The rival it stands against. -/
+  rival : String
+  /-- Citation and classification for every atom, the holder's. -/
+  cite : α → AtomMeta
+  /-- The premise the explanation turns on. -/
+  crux : Formula α
+  /-- Further premises of the holder the break needs. -/
+  granted : List (Formula α)
+  /-- The premises of the rival that cannot be held with the crux. -/
+  core : List (Formula α)
+  /-- Whether the holder's conclusion needs the crux, or the crux only answers
+  the rival. -/
+  derives : Bool
+  /-- The holder's cited inferences: what rates a crux that is a step rather
+  than a claim. -/
+  inferences : List Source
+
+namespace Explanation
+
+/-- Whether a formula is a claim or a denied claim, as against a step. -/
+def isLiteral : Formula α → Bool
+  | .atom _ => true
+  | .imp (.atom _) .falsum => true
+  | _ => false
+
+/-- The claims an explanation rests on, each once: the crux, when it is a
+claim, and the granted grounds. A crux that is a step rests on the step's own
+rating instead, not on the claims it mentions — some of which are the rival's. -/
+def restsOn [DecidableEq α] (e : Explanation α) : List α :=
+  ((if isLiteral e.crux then atomsOf e.crux else []) ++ e.granted.flatMap atomsOf).eraseDups
+
+end Explanation
+
 /-- One element of a generated page.
 
 `prose` is a module docstring, lifted whole; the rest are declarations, each
@@ -44,6 +82,8 @@ inductive Item (α : Type)
   | other (decl doc source : String)
   /-- A result, with the statement as Lean states it. -/
   | result (decl doc statement : String) (proposed : Bool)
+  /-- Why one position stands against another: a `Because`. -/
+  | because (decl doc : String) (e : Explanation α)
 
 namespace Item
 
@@ -53,6 +93,7 @@ def atoms [DecidableEq α] : Item α → List α
   | .line _ _ l => (l.premises ++ [l.delivers]).flatMap atomsOf
   | .formula _ _ φ => atomsOf φ
   | .formulas _ _ φs => φs.flatMap atomsOf
+  | .because _ _ e => (e.crux :: e.granted ++ e.core).flatMap atomsOf
   | _ => []
 
 end Item

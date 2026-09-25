@@ -387,6 +387,41 @@ def scriptureNote [DecidableEq α] (pkg : ArgumentPackage α) : String :=
     "\\emph{Grounded in scripture alone:} " ++
     String.intercalate ", " (pkg.scriptureOnlyAtoms.map fun m => escape m.label) ++ ".\n"
 
+/-- The formulas of a list, inline and joined. -/
+def inlineFormulas [DecidableEq α] (order : List α) (φs : List (Formula α)) : String :=
+  String.intercalate ", " (φs.map fun φ => "\\(" ++ formula order φ ++ "\\)")
+
+/-- Why one position stands against another, as an itemised list. -/
+def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : String :=
+  let given := if e.granted.isEmpty then "" else " and " ++ inlineFormulas order e.granted
+  let claim (a : α) : String :=
+    let m := e.cite a
+    "\\item \\(" ++ varName (order.idxOf a) ++ "\\) " ++ escape m.label ++ " --- \\emph{" ++
+      confidence m.source.confidence ++ "}: " ++ source m.source ++ "\n"
+  "\\paragraph{Why \\emph{" ++ escape e.holder ++ "} stands against \\emph{" ++
+    escape e.rival ++ "}.}\n" ++
+  "\\begin{itemize}\n" ++
+  "\\item \\textbf{The crux:} \\(" ++ formula order e.crux ++ "\\), a premise of \\emph{" ++
+    escape e.holder ++ "}.\n" ++
+  "\\item \\textbf{What it does:} " ++
+    (if e.derives then "its conclusion does not follow without it."
+     else "its conclusion follows without it --- the crux is its answer to \\emph{" ++
+       escape e.rival ++ "}.") ++ "\n" ++
+  (if e.granted.isEmpty then "" else
+    "\\item \\textbf{Granted:} " ++ inlineFormulas order e.granted ++
+    ", which the break also needs.\n") ++
+  "\\item \\textbf{Where the rival breaks:} " ++ inlineFormulas order e.core ++
+    " cannot be held together with \\(" ++ formula order e.crux ++ "\\)" ++ given ++
+    "; each is needed for the break, and without the crux they stand.\n" ++
+  "\\item \\textbf{What this rests on:}\n\\begin{itemize}\n" ++
+    String.join (e.restsOn.map claim) ++
+    (if Page.Explanation.isLiteral e.crux then "" else
+      "\\item the step itself --- \\emph{" ++
+      String.intercalate "; " (e.inferences.map fun s =>
+        confidence s.confidence ++ "}: " ++ source s) ++
+      (if e.inferences.isEmpty then "unrated}" else "") ++ "\n") ++
+  "\\end{itemize}\n\\end{itemize}\n"
+
 /-- Render one item against the document's atom ordering. -/
 def item [DecidableEq α] (order : List α) : Page.Item α → String
   | .prose md => prose md
@@ -408,6 +443,7 @@ def item [DecidableEq α] (order : List α) : Page.Item α → String
   | .result d doc stmt proposed =>
       declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
       prose doc ++ verbatim stmt
+  | .because d doc e => declLabel d "" ++ prose doc ++ explanation order e
 
 /-- One argument's body: its introductory prose, its legend, then every item in
 source order. The heading above it is the caller's, as the page title is in the
