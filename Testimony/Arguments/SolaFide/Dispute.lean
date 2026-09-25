@@ -457,21 +457,115 @@ def apocalypticCriticsJervellReading : Valuation Claim := fun a =>
 contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω, not
 the reading of 7:47 — and it does not deny its conclusion: it grants grace and
 "not by works", and it can grant that salvation is received through faith while
-denying that faith is its condition. -/
+denying that faith is its condition. Why, premise by premise:
+`apocalyptic_grants_sola_fide_as_stated` and
+`apocalyptic_grants_the_dominical_step_by_healing`. -/
 theorem apocalyptic_does_not_defeat_dominical : ¬ Defeats apocalypticCase dominicalCase :=
   Horn.not_defeats_of_defeats? apocalypticCase_strength dominicalCase_strength (by decide +kernel)
 
-/-- **Nor the apostolic case**, for the same reasons. -/
+/-- **Nor the apostolic case**, for the same reasons
+(`apocalyptic_grants_the_apostolic_step_with_jervell`). -/
 theorem apocalyptic_does_not_defeat_apostolic : ¬ Defeats apocalypticCase apostolicCase :=
   Horn.not_defeats_of_defeats? apocalypticCase_strength apostolicCase_strength (by decide +kernel)
 
 /-- **Trent does not defeat the apocalyptic reading.** They agree on its
 conclusion — justification is not by faith alone — and Trent contradicts none of
 its premises: nothing Trent holds settles the genitive, or what δικαιοσύνη θεοῦ
-names. So the apocalyptic reading's "not by works" stands against Trent
-unanswered. -/
+names (`trent_grants_the_subjective_genitive`,
+`trent_grants_the_apocalyptic_conclusion`). So the apocalyptic reading's "not
+by works" stands against Trent unanswered. -/
 theorem trent_does_not_defeat_apocalyptic : ¬ Defeats tridentineCase apocalypticCase :=
   Horn.not_defeats_of_defeats? tridentineCase_strength apocalypticCase_strength (by decide +kernel)
+
+/-! ### Why these are not counters
+
+The three absences above are computed, and a computation names no reason. The
+readings below do: each is a way of holding one position that leaves one
+premise or conclusion of another standing, and each result checks that the
+reading holds everything the first position holds as well. -/
+
+/-- The apocalyptic world in which salvation is still received through faith —
+faith is not the condition, but it is the means. Grace and "not by works" hold. -/
+def apocalypticWithFaithReading : Valuation Claim := fun a =>
+  match a with
+  | .pistisChristouObjective => False
+  | .justificationByFaithAlone => False
+  | _ => True
+
+/-- **The apocalyptic reading grants what the Reformed strands conclude.** Grace,
+"not by works", and salvation received through faith all hold in its world;
+what it denies is that faith is the condition. So it rebuts neither Luke's case
+nor Acts'. -/
+theorem apocalyptic_grants_sola_fide_as_stated :
+    Grants apocalypticCase dominicalCase.conclusion := by
+  satisfied_by apocalypticWithFaithReading [Grants, solaFideDefs]
+
+/-- The apocalyptic world, with Jesus' σέσωκέν σε read as healing. -/
+def apocalypticHealingReading : Valuation Claim := fun a =>
+  match a with
+  | .pistisChristouObjective => False
+  | .justificationByFaithAlone => False
+  | .sozoIsSoteriological => False
+  | _ => True
+
+/-- **The apocalyptic reader can grant the dominical step**, by reading σέσωκέν σε
+at Luke 7:50 as healing rather than salvation: the step then has a ground that
+fails, and holds without delivering faith alone. So the apocalyptic reading
+does not undermine the dominical case on its step — it answers Luke only by
+disputing the lexical premise, which is where the dominical case is open. -/
+theorem apocalyptic_grants_the_dominical_step_by_healing :
+    Grants apocalypticCase dominicalToFaithAlone := by
+  satisfied_by apocalypticHealingReading [Grants, solaFideDefs]
+
+/-- The apocalyptic world, with the yoke read as Jervell reads it. -/
+def apocalypticJervellReading : Valuation Claim := fun a =>
+  match a with
+  | .pistisChristouObjective => False
+  | .justificationByFaithAlone => False
+  | .acts15YokeIsLawAsCondition => False
+  | _ => True
+
+/-- **The apocalyptic reader can grant the apostolic step**, by reading the yoke
+of Acts 15:10 as Jervell does — Israel's law for gentiles, not the law as a
+condition of salvation. -/
+theorem apocalyptic_grants_the_apostolic_step_with_jervell :
+    Grants apocalypticCase apostolicToFaithAlone := by
+  satisfied_by apocalypticJervellReading [Grants, solaFideDefs]
+
+/-- Trent's world, with the objective genitive and the apocalyptic reading of
+δικαιοσύνη θεοῦ both denied. -/
+def trentWithoutDeliveranceReading : Valuation Claim := fun a =>
+  match a with
+  | .salvationNotByWorks => False
+  | .justificationIsForensicOnly => False
+  | .pistisChristouObjective => False
+  | .righteousnessOfGodIsDeliverance => False
+  | .justificationDistinctFromSanctification => False
+  | _ => True
+
+/-- **Trent can grant the subjective genitive.** Nothing Trent holds settles how
+πίστις Χριστοῦ is read, so the apocalyptic reading's denial of the objective
+genitive stands against Trent unanswered. -/
+theorem trent_grants_the_subjective_genitive :
+    Grants tridentineCase (notP .pistisChristouObjective) := by
+  satisfied_by trentWithoutDeliveranceReading [Grants, solaFideDefs]
+
+/-- Trent's world, in which justification is not by faith alone — the
+apocalyptic reading's conclusion, which Trent shares. -/
+def trentWithoutFaithAloneReading : Valuation Claim := fun a =>
+  match a with
+  | .salvationNotByWorks => False
+  | .justificationIsForensicOnly => False
+  | .justificationByFaithAlone => False
+  | .justificationDistinctFromSanctification => False
+  | _ => True
+
+/-- **Trent grants the apocalyptic reading's conclusion**: justification is not
+by faith alone. They agree on it for different reasons, so Trent does not rebut
+the apocalyptic reading. -/
+theorem trent_grants_the_apocalyptic_conclusion :
+    Grants tridentineCase apocalypticCase.conclusion := by
+  satisfied_by trentWithoutFaithAloneReading [Grants, solaFideDefs]
 
 /-! ### The dispute -/
 

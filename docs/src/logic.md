@@ -516,6 +516,27 @@ own, because they are what a reader contests. They are also why the engine
 takes them as arguments: a strength looks up every atom's citation, the most
 expensive part of a decision, and a dispute proves each party's once.
 
+**Say why an absence is not a counter.** A computed absence names no reason, and
+the reason is often the point: the critic is not answered by Postell's step,
+because a critic can date Isaiah 9 and 11 later. `Grants a φ` states that some
+reading holds everything `a` holds and `φ` too; it is proved with
+`satisfied_by` and a named reading, and gives `¬ UnderminesOn a b φ` when `φ`
+is `b`'s premise and `¬ Rebuts a b` when it is `b`'s conclusion:
+
+```lean
+/-- The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline … -/
+def laterOraclesReading : Valuation Claim := …
+
+theorem critic_grants_postells_step_by_dating_the_oracles_later :
+    Grants criticalDenial parityDefeatsNearTermExclusion := by
+  satisfied_by laterOraclesReading [Grants, bornOfAVirginDefs]
+```
+
+One reading, one premise, one line: nothing depends on it, adding a premise
+elsewhere cannot break it, and its docstring carries the explanation into the
+generated page. Write one wherever the absence of a counter is something a
+reader would ask about.
+
 Parties that can all hold at once **stand together**, and that is still worth
 stating with a named world — `replies_stand_with_the_scriptural_reading` is the
 reading on which none of five positions has to give way — though the table no

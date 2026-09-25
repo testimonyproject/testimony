@@ -433,19 +433,6 @@ theorem not_satisfiable_of_satisfiable? {Γ : List (Formula α)}
   obtain ⟨w, hw⟩ := satisfiable_iff.mp hs
   exact not_satisfiable_of_clausesSatisfiable? h ⟨w, (clausesOf_sound hcs).mp hw⟩
 
-omit [DecidableEq α] in
-/-- Premises entail a negation exactly when they cannot hold together with what
-it negates. This is what lets one satisfiability check decide an attack. -/
-theorem entails_neg_iff {Γ : List (Formula α)} {φ : Formula α} :
-    Entails Γ (∼φ) ↔ ¬ Satisfiable (Γ ++ [φ]) := by
-  rw [entails_iff, satisfiable_iff]
-  simp only [List.mem_append, List.mem_singleton, FFL.Semantics.Not.models_not]
-  constructor
-  · rintro h ⟨w, hw⟩
-    exact h w (fun ψ hψ => hw ψ (.inl hψ)) (hw φ (.inr rfl))
-  · intro h w hw hφ
-    exact h ⟨w, fun ψ hψ => hψ.elim (hw ψ) (fun e => e ▸ hφ)⟩
-
 /-! ### Attacks and defeats
 
 The strengths of the two packages are arguments rather than computed inside:

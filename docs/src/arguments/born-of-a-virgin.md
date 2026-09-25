@@ -4010,7 +4010,7 @@ the weaker of the two: its premises are `disputed`, and his inference is
 `plausible`. And it contradicts none of his premises: the critic can grant both
 his observations, and can grant his step too, by dating Isaiah 9 and 11 later
 than 7:14 — off its Assyrian timeline — so that one of the step's grounds
-fails.
+fails (`critic_grants_postells_step_by_dating_the_oracles_later`).
 
 ```lean
 theorem critical_does_not_defeat_postell : ¬Defeats criticalDenial
@@ -4024,11 +4024,73 @@ theorem critical_does_not_defeat_postell : ¬Defeats criticalDenial
 **The critical denial does not defeat the Micah counterexample**, for the
 reason it does not defeat Postell: it is weaker, and it contradicts none of the
 counterexample's premises. The critic can grant its step by reading Micah 5:2
-of a near-term Davidic king rather than messianically.
+of a near-term Davidic king rather than messianically
+(`critic_grants_the_micah_step_by_a_royal_reading`).
 
 ```lean
 theorem critical_does_not_defeat_micah : ¬Defeats criticalDenial micahParity
 -- axioms: propext, Classical.choice, Quot.sound
+```
+
+#### Why these are not counters
+
+The two absences above are computed; the readings below say why.
+
+<a id="laterOraclesReading"></a>
+**`laterOraclesReading`**
+
+The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of
+7:14 — the way out of the parity argument open to a reader who dates them
+later. Postell's step holds in it, because one of its grounds fails.
+
+```lean
+def laterOraclesReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.isaiahPredictsVirginBirth => False
+    | Claim.isaiah9And11ShareTheAssyrianTimeline =>
+      False
+    | x => True
+```
+
+<a id="critic_grants_postells_step_by_dating_the_oracles_later"></a>
+**`critic_grants_postells_step_by_dating_the_oracles_later`**
+
+**The critic can grant Postell's step**, by dating Isaiah 9 and 11 later than
+7:14: then the parity step has a ground that fails, and the critic holds it
+without giving up the exclusion.
+
+```lean
+theorem critic_grants_postells_step_by_dating_the_oracles_later : Grants
+    criticalDenial parityDefeatsNearTermExclusion
+-- axioms: propext, Quot.sound
+```
+
+<a id="royalMicahReading"></a>
+**`royalMicahReading`**
+
+The critic's world, with Micah 5:2 read of a near-term Davidic king and not
+messianically. The Micah step holds in it, because one of its grounds fails.
+
+```lean
+def royalMicahReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.isaiahPredictsVirginBirth => False
+    | Claim.micahRulerReadMessianically => False
+    | x => True
+```
+
+<a id="critic_grants_the_micah_step_by_a_royal_reading"></a>
+**`critic_grants_the_micah_step_by_a_royal_reading`**
+
+**The critic can grant the Micah step**, by reading Micah 5:2 of a near-term
+Davidic king rather than messianically.
+
+```lean
+theorem critic_grants_the_micah_step_by_a_royal_reading : Grants
+    criticalDenial micahParityDefeatsNearTermExclusion
+-- axioms: propext, Quot.sound
 ```
 
 #### The dispute
