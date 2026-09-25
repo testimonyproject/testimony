@@ -579,6 +579,14 @@ statement about *every* set follows from the enumeration because every set of
 parties is one of the enumerated ones (`exists_sublist`); each check is proved
 correct once, against `Testimony.Logic.Framework`'s definitions.
 
+The enumeration is exponential in the parties, and some such cost is
+unavoidable in the worst case: credulous acceptance under the preferred
+semantics is NP-complete, and sceptical acceptance Π₂ᵖ-complete. But the
+preferred semantics decomposes along the defeat graph's strongly connected
+components, so the cost need only be exponential in the largest one; the
+module docstring of `Testimony.Logic.Solver` gives the results and their
+sources. At the size of the disputes here, whole-set enumeration is adequate.
+
 `Dispute.restrict` hears only some of the parties, and `Finite.restrict` gives
 the solver the same hearing, which is how a result says what one party is
 worth: take it away and see what survives. A verdict re-checks itself when a

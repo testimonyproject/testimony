@@ -29,9 +29,31 @@ against the framework's own definitions:
   `not_skeptically_accepted`, `credulously_accepted`, `not_credulously_accepted`
   and `not_mem_admissible` turn a check into the statement `Framework` makes.
 
-Enumeration is exponential in the parties: 256 sets for eight. That is small
-for the kernel, and it is the honest cost of deciding preferred semantics, which
-is intractable in general.
+## What the enumeration costs, and what it need not
+
+Enumeration is exponential in the number of parties: 256 sets for eight, a
+small computation for the kernel. Some exponential cost is unavoidable
+in the worst case. The grounded extension is computed in polynomial time, but
+deciding whether a party belongs to *some* preferred extension is NP-complete,
+and deciding whether a set *is* preferred is coNP-complete (Dimopoulos and
+Torres, "Graph theoretical structures in logic programs and default theories",
+*Theoretical Computer Science* 170, 1996); deciding whether a party belongs to
+*every* preferred extension is Π₂ᵖ-complete (Dunne and Bench-Capon, "Coherence
+in finite argument systems", *Artificial Intelligence* 141, 2002). The hard
+instances are single tangles of mutual attack.
+
+The worst case is not the typical one. Preferred semantics decomposes along the
+strongly connected components of the defeat graph: each component is decided in
+turn, given the components that attack it (Baroni, Giacomin and Guida,
+"SCC-recursiveness: a general schema for argumentation semantics", *Artificial
+Intelligence* 168, 2005), so the cost is exponential only in the largest
+component. Some graphs are easy outright — an acyclic one has the grounded
+extension as its only preferred extension, and acceptance is tractable on
+bipartite graphs and graphs of bounded treewidth (Dunne, "Computational
+properties of argument systems satisfying graph-theoretic constraints",
+*Artificial Intelligence* 171, 2007). The disputes here are mostly mutual
+defeats in small components, so whole-set enumeration is adequate at their
+size; decomposing by component is the route when a dispute outgrows it.
 -/
 
 namespace Testimony.Logic.Solver
