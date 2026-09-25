@@ -4,6 +4,7 @@ import Testimony.Arguments.SolaFide.Lines
 import Testimony.Arguments.SolaFide.Packages
 import Testimony.Arguments.SolaFide.Results
 import Testimony.Arguments.SolaFide.Dispute
+import Testimony.Arguments.SolaFide.Johannine
 
 /-!
 # Arguments.SolaFide — justification by grace through faith, not works
@@ -66,6 +67,20 @@ laid on gentiles as a mark of belonging, as Jervell reads Luke. The two
 premises are about different texts, and logically independent; they are not
 dialectically independent, since a reader who takes ἔργα νόμου as boundary
 markers will read the yoke the same way.
+
+**A Johannine strand** is encoded alongside, but not yet inside, the Reformed
+case (`Johannine.lean`). Asked what they must do "to be doing the works of God",
+the crowd is told: "This is the work of God, that you believe in him whom he has
+sent" (John 6:28–29). Calvin reads that believing as trust, which "brings
+nothing to God"; Aquinas as faith living through charity, the principle of good
+works. John alone delivers sola fide on Calvin's reading
+(`johannine_strand_establishes`) and not on Aquinas's
+(`johannine_strand_rests_on_believing_as_trust`). Luther answers Aquinas from
+Galatians 3:11–12: the law commands love, and the law is not of faith, so a faith
+formed by charity would justify by the law (`luther_answers_aquinas_from_galatians`)
+— an answer that rests on his step, which Aquinas denies
+(`luther_answer_rests_on_his_step`). The strand is not yet one of the strands of
+`reformed`, so what follows about three strands is still exact.
 
 Encoding three strands yields a result no single strand could: no disputed
 premise is load-bearing on its own, because any strand carries the conclusion
@@ -164,4 +179,5 @@ Luke 7:50 means healing, or that her love at 7:47 earned her forgiveness;
 | `Packages.lean` | the positions, and the variants that remove a named premise |
 | `Results.lean` | every `@[headline]` result, with its trust base |
 | `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
+| `Johannine.lean` | the Johannine strand and Aquinas's rival reading, encoded alone |
 -/

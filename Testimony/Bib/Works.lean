@@ -248,6 +248,62 @@ against the publisher's own copy of the issue; the journal registers no DOI. -/
   , issue := some "2"
   , pages := some (35, 55) }
 
+/-- Calvin's commentary on John, for 6:29: faith is "a passive work, to which no
+reward can be paid", which "bestows on man no other righteousness than that which
+he receives from Christ". The Reformed reading of the Johannine strand's hinge.
+The 1847 Calvin Translation Society edition, as scanned by the Internet Archive
+and transcribed by the Christian Classics Ethereal Library. -/
+@[bib_entry] def calvinJohn : BibEntry := .book
+  { core :=
+      { key := "calvin-commentary-john-1847"
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentary on the Gospel According to John"
+      , year := some { value := 1847 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryongosp01calvuoft"
+                 (some "2026-09-24") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "1" }
+
+/-- Luther's 1535 lectures on Galatians, for his answer to faith formed by
+charity: at 3:11, "to speak of formed or unformed faith, a sort of double faith,
+is contrary to the Scriptures"; at 3:12, "if the law requires charity, charity
+is part of the Law and not of faith". Cited as the Project Gutenberg text of
+Theodore Graebner's translation, which is the text that was read; the printed
+edition behind it is not verified in a catalogue. -/
+@[bib_entry] def lutherGalatians : BibEntry := .book
+  { core :=
+      { key := "luther-commentary-galatians-1998"
+      , contributors :=
+          { authors := [.person "Martin" "Luther"]
+          , translators := [.person "Theodore" "Graebner"] }
+      , title := "Commentary on the Epistle to the Galatians"
+      , year := some { value := 1998 }
+      , identifiers :=
+          [ .url "https://www.gutenberg.org/ebooks/1549" (some "2026-09-25") ]
+      , note := some "Project Gutenberg eBook #1549; lectures of 1535." }
+  , publisher := "Project Gutenberg" }
+
+/-- Aquinas's lectures on John, for 6:29 (cap. 6, lect. 3, n. 901): Paul
+distinguishes faith "only from external works", and to believe *in* God as one's
+end "is proper to faith living through the love of charity". The rival reading
+of the Johannine strand's hinge. Cited by the Marietti paragraph numbers, which
+this translation keeps; the passage was read in Larcher's translation. -/
+@[bib_entry] def aquinasJohn : BibEntry := .book
+  { core :=
+      { key := "aquinas-commentary-john-2012"
+      , contributors :=
+          { authors := [.single "Thomas Aquinas"]
+          , editors := [.person "Daniel A." "Keating", .person "Matthew" "Levering"]
+          , translators := [.person "Fabian R." "Larcher", .person "James A." "Weisheipl"] }
+      , title := "Commentary on the Gospel of John, Chapters 6–12"
+      , year := some { value := 2012 }
+      , identifiers := [.isbn "9780813217741"] }
+  , publisher := "Catholic University of America Press" }
+
 /-- Moo on James, for the reading that James's target is a barren faith rather
 than Paul's doctrine of justification. -/
 @[bib_entry] def mooJames : BibEntry := .book

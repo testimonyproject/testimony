@@ -129,6 +129,28 @@ inductive Claim
   Common ground: Trent calls the growth an increase of justification, and the
   Reformed call it sanctification. -/
   | renewalGrowsThroughGoodWorks
+  /-- John 6:28–29 — asked what they must do to be doing the works of God, Jesus
+  answers: "This is the work of God, that you believe in him whom he has sent."
+  -/
+  | john6_29WorkIsBelieving
+  /-- John 3:16–18, 3:36, 5:24 and 20:31 — eternal life, and passing out of
+  judgement, through believing in the Son. -/
+  | johnLifeThroughBelieving
+  /-- The believing of John 6:29 is trust in Christ, which brings nothing to God
+  and receives righteousness from him: faith as a "passive work" (Calvin). **The
+  Johannine strand's hinge.** -/
+  | johannineBelievingIsTrust
+  /-- The believing of John 6:29 — believing *in* him, as one's end — is faith
+  living through charity, the source of good works (Aquinas). The rival reading
+  of the hinge, and Trent's (Session VI, ch. 7). -/
+  | johannineBelievingIsFormedByCharity
+  /-- Galatians 3:11–12 — no one is justified before God by the law; and the law
+  is not of faith, for "the one who does them shall live by them". -/
+  | gal3_11_12LawIsNotOfFaith
+  /-- Love of God and neighbour is what the law commands (Deuteronomy 6:5; the
+  two great commandments). Common ground: Luther argues from it, and Aquinas
+  would not deny it. -/
+  | lawCommandsCharity
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

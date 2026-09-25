@@ -437,6 +437,80 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work westminsterConfession (.sectionRef "XIII.1")]
         , tradition := .romanCatholic
         , confidence := .wellSupported } }
+  | .john6_29WorkIsBelieving =>
+    { label := "John 6:28–29 — the work God requires is that you believe in him whom he sent"
+    , kind := .textual
+      -- Shared ground: Calvin and Aquinas read the same verse, and divide over
+      -- what its believing is.
+    , source :=
+        { primary := .scripture [{ ref := .range john6_28to29 }]
+        , supporting :=
+            [ .work calvinJohn (.adLoc john6_29)
+            , .work aquinasJohn (.sectionRef "cap. 6, lect. 3, n. 901") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .johnLifeThroughBelieving =>
+    { label := "John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son"
+    , kind := .textual
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .range john3_16to18 }, { ref := .verse john3_36 }
+              , { ref := .verse john5_24 }, { ref := .verse john20_31 } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .johannineBelievingIsTrust =>
+    { label := "The believing of John 6:29 is trust, which brings nothing and receives Christ"
+    , kind := .interpretive
+      -- Calvin on 6:29: faith "brings nothing to God, but, on the contrary,
+      -- places man before God as empty and poor, that he may be filled with
+      -- Christ"; it is "a passive work, to which no reward can be paid".
+      -- `disputed`: Aquinas grants the verse and reads its believing as faith
+      -- living through charity (`johannineBelievingIsFormedByCharity`).
+    , source :=
+        { primary := .work calvinJohn (.adLoc john6_29)
+        , supporting := [.scripture [{ ref := .range john6_28to29 }]]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .johannineBelievingIsFormedByCharity =>
+    { label := "The believing of John 6:29 is faith living through charity, the source of works"
+    , kind := .interpretive
+      -- Aquinas on 6:29: Paul distinguishes faith "only from external works";
+      -- to believe *in* God as one's end "is proper to faith living through the
+      -- love of charity", and faith so living "is the principle of all our good
+      -- works". Trent: faith, "unless hope and charity be added thereto, neither
+      -- unites man perfectly with Christ" (Session VI, ch. 7). `disputed`:
+      -- Calvin grants the verse and reads its believing as bare trust.
+    , source :=
+        { primary := .work aquinasJohn (.sectionRef "cap. 6, lect. 3, n. 901")
+        , supporting :=
+            [ .work tannerDecrees
+                (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7") ]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .gal3_11_12LawIsNotOfFaith =>
+    { label := "Galatians 3:11–12 — none is justified by the law; the law is not of faith"
+    , kind := .textual
+      -- Shared ground: Aquinas and the Reformers both read the text; they
+      -- divide over what counts as "the law" in it.
+    , source :=
+        { primary := .scripture [{ ref := .range gal3_11to12 }]
+        , supporting := [.work lutherGalatians (.adLoc ⟨.galatians, 3, 11⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .lawCommandsCharity =>
+    { label := "Love of God and neighbour is what the law commands"
+    , kind := .textual
+      -- Luther on Galatians 3:12: "Does not the Law command charity? … the Law
+      -- commands nothing but charity", citing Deuteronomy 6:5, Exodus 20:6 and
+      -- Matthew 22:40. The texts are not in dispute; what follows from them is.
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .verse deut6_5 }, { ref := .range ⟨.matthew, 22, 37, 22, 40⟩ } ]
+        , supporting := [.work lutherGalatians (.adLoc ⟨.galatians, 3, 12⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .worksOfLawMeansWorksGenerally =>
     { label := "Paul's ἔργα νόμου denotes human works in general"
     , kind := .linguistic
