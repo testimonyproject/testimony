@@ -29,6 +29,11 @@ against the framework's own definitions:
   `not_skeptically_accepted`, `credulously_accepted`, `not_credulously_accepted`
   and `not_mem_admissible` turn a check into the statement `Framework` makes.
 
+Verdicts are normally stated with a witness instead (`Testimony.Logic.Witness`):
+a small declaration of why the verdict holds, checked in polynomial time, which
+is also the explanation. Enumeration is the fallback where no witness of the
+supported shapes exists.
+
 ## What the enumeration costs, and what it need not
 
 Enumeration is exponential in the number of parties: 256 sets for eight, a

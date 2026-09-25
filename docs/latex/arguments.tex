@@ -2673,6 +2673,24 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
     defeats := fun i j => decide (partyDefeats i j),
     spec := isaiahFinite._proof_2 }
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{replies\allowbreak{}Heard\allowbreak{}In\allowbreak{}Stages}}\par\nobreak\noindent
+How the scriptural reading prevails, in stages: nothing attacks Postell's two counterexamples, so they come first; they answer the critic, the only party that attacks the scriptural reading, Berry and Motyer, so those three come next.
+
+{\small\begin{verbatim}
+def repliesHeardInStages : List (List Party) :=
+  [[Party.postell, Party.micah],
+    [Party.scriptural,
+      Party.berry,
+      Party.motyer]]
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{critic\allowbreak{}Left\allowbreak{}Unanswered}}\par\nobreak\noindent
+And why the critic does not join them: the scriptural reading attacks it, and nothing among the five answers the scriptural reading.
+
+{\small\begin{verbatim}
+def criticLeftUnanswered : Witness.Table Party :=
+  [(Party.critical,
+      Party.scriptural)]
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}prevails\_\allowbreak{}once\_\allowbreak{}replies\_\allowbreak{}are\_\allowbreak{}heard}}\par\nobreak\noindent
 \textbf{Heard out, the scriptural reading prevails.} Nothing defeats either of Postell's counterexamples, so both are in the grounded extension from the first step. They defeat the critic — the only party that defeats the scriptural reading, Berry or Motyer — so at the second step all three join them; and nothing defends the critic.
 
@@ -2681,6 +2699,14 @@ theorem scriptural_reading_prevails_once_replies_are_heard :
     Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry,
     Party.postell, Party.motyer, Party.micah}
 -- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{critic\allowbreak{}Answered\allowbreak{}By\allowbreak{}Postell}}\par\nobreak\noindent
+Why the critical denial cannot be defended: Postell attacks it, and nothing answers Postell.
+
+{\small\begin{verbatim}
+def criticAnsweredByPostell : Witness.Table Party :=
+  [(Party.critical,
+      Party.postell)]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}denial\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{The critical denial cannot be defended.} No admissible set contains it: Postell defeats it, and nothing defeats Postell.
@@ -5407,6 +5433,20 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
 \end{verbatim}}
 \paragraph*{What the dispute decides}
 \leavevmode\par
+\par\medskip\noindent\textbf{\texttt{every\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
+A defeater for every party — the reason nothing prevails outright.
+
+{\small\begin{verbatim}
+def everyPartyDefeated : Witness.Table Party :=
+  [(Party.pauline, Party.trent),
+    (Party.dominical, Party.trent),
+    (Party.apostolic, Party.trent),
+    (Party.trent, Party.pauline),
+    (Party.apocalyptic, Party.pauline),
+    (Party.sanders, Party.pauline),
+    (Party.critics, Party.sanders),
+    (Party.jervell, Party.apostolic)]
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}over\_\allowbreak{}sola\_\allowbreak{}fide}}\par\nobreak\noindent
 \textbf{Nothing prevails outright.} Every party is defeated by some other: each Reformed strand by Trent, Trent by each strand and by the apocalyptic reading, the apocalyptic reading by Paul, Sanders by the critics, the critics by Sanders, Jervell by Acts. The grounded extension — what the dispute forces, before any choice between rivals — is empty.
 
@@ -5415,6 +5455,13 @@ theorem nothing_prevails_over_sola_fide : Framework.grounded
     solaFideDispute.defeats = ∅
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Answered\allowbreak{}By\allowbreak{}The\allowbreak{}Apocalyptic\allowbreak{}Reading}}\par\nobreak\noindent
+Why Trent cannot be defended: the apocalyptic reading attacks it, and every party that answers the apocalyptic reading — Paul, Luke, Acts — also attacks Trent.
+
+{\small\begin{verbatim}
+def trentAnsweredByTheApocalypticReading : Witness.Table Party :=
+  [(Party.trent, Party.apocalyptic)]
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{Trent cannot be defended.} The apocalyptic reading defeats it — it holds "not by works" on grounds Trent does not contradict — and the only parties that defeat the apocalyptic reading are the Reformed strands, each of which also defeats Trent. No position can hold Trent and answer the apocalyptic reading at once.
 
@@ -5422,6 +5469,13 @@ theorem nothing_prevails_over_sola_fide : Framework.grounded
 theorem trent_indefensible : ∀ (S : Set Party), Framework.Admissible
     solaFideDispute.defeats S → Party.trent ∉ S
 -- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apocalyptic\allowbreak{}Answered\allowbreak{}By\allowbreak{}Luke}}\par\nobreak\noindent
+Why the apocalyptic reading cannot be defended: the dominical case attacks it, and the only party that answers the dominical case is Trent, which the apocalyptic reading itself attacks.
+
+{\small\begin{verbatim}
+def apocalypticAnsweredByLuke : Witness.Table Party :=
+  [(Party.apocalyptic, Party.dominical)]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{Nor can the apocalyptic reading.} The dominical case defeats it, and the only party that defeats the dominical case is Trent — which the apocalyptic reading itself defeats.

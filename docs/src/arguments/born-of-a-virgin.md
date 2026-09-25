@@ -4245,6 +4245,33 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
     spec := isaiahFinite._proof_2 }
 ```
 
+<a id="repliesHeardInStages"></a>
+**`repliesHeardInStages`**
+
+How the scriptural reading prevails, in stages: nothing attacks Postell's
+two counterexamples, so they come first; they answer the critic, the only party
+that attacks the scriptural reading, Berry and Motyer, so those three come next.
+
+```lean
+def repliesHeardInStages : List (List Party) :=
+  [[Party.postell, Party.micah],
+    [Party.scriptural,
+      Party.berry,
+      Party.motyer]]
+```
+
+<a id="criticLeftUnanswered"></a>
+**`criticLeftUnanswered`**
+
+And why the critic does not join them: the scriptural reading attacks it,
+and nothing among the five answers the scriptural reading.
+
+```lean
+def criticLeftUnanswered : Witness.Table Party :=
+  [(Party.critical,
+      Party.scriptural)]
+```
+
 <a id="scriptural_reading_prevails_once_replies_are_heard"></a>
 **`scriptural_reading_prevails_once_replies_are_heard`**
 
@@ -4259,6 +4286,18 @@ theorem scriptural_reading_prevails_once_replies_are_heard :
     Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry,
     Party.postell, Party.motyer, Party.micah}
 -- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="criticAnsweredByPostell"></a>
+**`criticAnsweredByPostell`**
+
+Why the critical denial cannot be defended: Postell attacks it, and nothing
+answers Postell.
+
+```lean
+def criticAnsweredByPostell : Witness.Table Party :=
+  [(Party.critical,
+      Party.postell)]
 ```
 
 <a id="critical_denial_indefensible"></a>

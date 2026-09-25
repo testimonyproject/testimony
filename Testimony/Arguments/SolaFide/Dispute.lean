@@ -2,6 +2,7 @@ import Testimony.Arguments.SolaFide.Results
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
+import Testimony.Logic.Witness
 
 /-!
 # Arguments.SolaFide.Dispute — who prevails over sola fide
@@ -726,6 +727,12 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats where
 
 /-! ### What the dispute decides -/
 
+/-- A defeater for every party — the reason nothing prevails outright. -/
+def everyPartyDefeated : Witness.Table Party :=
+  [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
+  , (.apocalyptic, .pauline), (.sanders, .pauline), (.critics, .sanders)
+  , (.jervell, .apostolic) ]
+
 /-- **Nothing prevails outright.** Every party is defeated by some other: each
 Reformed strand by Trent, Trent by each strand and by the apocalyptic reading,
 the apocalyptic reading by Paul, Sanders by the critics, the critics by
@@ -733,9 +740,14 @@ Sanders, Jervell by Acts. The grounded extension — what the dispute forces,
 before any choice between rivals — is empty. -/
 @[headline]
 theorem nothing_prevails_over_sola_fide : grounded solaFideDispute.defeats = ∅ :=
-  (Solver.grounded_eq (F := solaFideFinite) [] (by decide +kernel)).trans (by ext; simp)
+  Witness.grounded_eq_empty (F := solaFideFinite) (t := everyPartyDefeated) (by decide +kernel)
 
 #print axioms nothing_prevails_over_sola_fide
+
+/-- Why Trent cannot be defended: the apocalyptic reading attacks it, and every
+party that answers the apocalyptic reading — Paul, Luke, Acts — also attacks
+Trent. -/
+def trentAnsweredByTheApocalypticReading : Witness.Table Party := [(.trent, .apocalyptic)]
 
 /-- **Trent cannot be defended.** The apocalyptic reading defeats it — it holds
 "not by works" on grounds Trent does not contradict — and the only parties that
@@ -745,9 +757,15 @@ once. -/
 @[headline]
 theorem trent_indefensible (S : Set Party)
     (hS : Admissible solaFideDispute.defeats S) : Party.trent ∉ S :=
-  Solver.not_mem_admissible (F := solaFideFinite) (by decide +kernel) S hS
+  Witness.not_mem_admissible_of_witness (F := solaFideFinite)
+    (t := trentAnsweredByTheApocalypticReading) (by decide +kernel) S hS
 
 #print axioms trent_indefensible
+
+/-- Why the apocalyptic reading cannot be defended: the dominical case attacks
+it, and the only party that answers the dominical case is Trent, which the
+apocalyptic reading itself attacks. -/
+def apocalypticAnsweredByLuke : Witness.Table Party := [(.apocalyptic, .dominical)]
 
 /-- **Nor can the apocalyptic reading.** The dominical case defeats it, and the
 only party that defeats the dominical case is Trent — which the apocalyptic
@@ -755,7 +773,8 @@ reading itself defeats. -/
 @[headline]
 theorem apocalyptic_indefensible (S : Set Party)
     (hS : Admissible solaFideDispute.defeats S) : Party.apocalyptic ∉ S :=
-  Solver.not_mem_admissible (F := solaFideFinite) (by decide +kernel) S hS
+  Witness.not_mem_admissible_of_witness (F := solaFideFinite)
+    (t := apocalypticAnsweredByLuke) (by decide +kernel) S hS
 
 #print axioms apocalyptic_indefensible
 
@@ -776,7 +795,8 @@ love at 7:47 was the ground of her forgiveness. -/
 @[headline]
 theorem dominical_case_skeptically_accepted :
     SkepticallyAccepted solaFideDispute.defeats .dominical :=
-  Solver.skeptically_accepted (F := solaFideFinite) (by decide +kernel)
+  Witness.skeptically_accepted_of_witness (F := solaFideFinite)
+    (t := trentAnsweredByTheApocalypticReading ++ apocalypticAnsweredByLuke) (by decide +kernel)
 
 #print axioms dominical_case_skeptically_accepted
 
@@ -794,8 +814,9 @@ rival to sola fide answering the other: on the apocalyptic reading holding
 @[headline]
 theorem sola_fide_not_forced_without_the_apocalyptic_reading :
     ¬ SkepticallyAccepted withoutApocalyptic.defeats ⟨.dominical, by decide⟩ :=
-  Solver.not_skeptically_accepted (F := solaFideFinite.restrict (· ≠ Party.apocalyptic))
-    (by decide +kernel)
+  Witness.not_skeptically_accepted_of_witness
+    (F := solaFideFinite.restrict (· ≠ Party.apocalyptic))
+    (s := Witness.listSub _ [.trent]) (x := ⟨.trent, by decide⟩) (by decide +kernel)
 
 #print axioms sola_fide_not_forced_without_the_apocalyptic_reading
 

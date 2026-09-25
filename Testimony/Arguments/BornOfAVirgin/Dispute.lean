@@ -2,6 +2,7 @@ import Testimony.Arguments.BornOfAVirgin.Results
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
+import Testimony.Logic.Witness
 
 /-!
 # Arguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14
@@ -482,6 +483,17 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats where
   defeats i j := decide (partyDefeats i j)
   spec i j := by rw [isaiahDispute_defeats]; simp
 
+/-- How the scriptural reading prevails, in stages: nothing attacks Postell's
+two counterexamples, so they come first; they answer the critic, the only party
+that attacks the scriptural reading, Berry and Motyer, so those three come next.
+-/
+def repliesHeardInStages : List (List Party) :=
+  [[.postell, .micah], [.scriptural, .berry, .motyer]]
+
+/-- And why the critic does not join them: the scriptural reading attacks it,
+and nothing among the five answers the scriptural reading. -/
+def criticLeftUnanswered : Witness.Table Party := [(.critical, .scriptural)]
+
 /-- **Heard out, the scriptural reading prevails.** Nothing defeats either of
 Postell's counterexamples, so both are in the grounded extension from the first
 step. They defeat the critic — the only party that defeats the scriptural
@@ -491,17 +503,23 @@ nothing defends the critic. -/
 theorem scriptural_reading_prevails_once_replies_are_heard :
     grounded isaiahDispute.defeats =
       {.scriptural, .berry, .postell, .motyer, .micah} :=
-  (Solver.grounded_eq (F := isaiahFinite) [.scriptural, .berry, .postell, .motyer, .micah]
-    (by decide +kernel)).trans (by ext; simp)
+  (Witness.grounded_eq_of_witness (F := isaiahFinite) (sts := repliesHeardInStages)
+    (t := criticLeftUnanswered) (by decide +kernel)).trans
+    (by ext x; cases x <;> simp [repliesHeardInStages])
 
 #print axioms scriptural_reading_prevails_once_replies_are_heard
+
+/-- Why the critical denial cannot be defended: Postell attacks it, and nothing
+answers Postell. -/
+def criticAnsweredByPostell : Witness.Table Party := [(.critical, .postell)]
 
 /-- **The critical denial cannot be defended.** No admissible set contains it:
 Postell defeats it, and nothing defeats Postell. -/
 @[headline]
 theorem critical_denial_indefensible (S : Set Party)
     (hS : Admissible isaiahDispute.defeats S) : Party.critical ∉ S :=
-  Solver.not_mem_admissible (F := isaiahFinite) (by decide +kernel) S hS
+  Witness.not_mem_admissible_of_witness (F := isaiahFinite) (t := criticAnsweredByPostell)
+    (by decide +kernel) S hS
 
 #print axioms critical_denial_indefensible
 
@@ -529,8 +547,10 @@ denial defeat each other, so neither is forced, and the grounded extension is
 empty. -/
 @[headline]
 theorem nothing_prevails_unanswered : grounded unanswered.defeats = ∅ :=
-  (Solver.grounded_eq (F := isaiahFinite.restrict (· ∈ [Party.scriptural, .critical])) []
-    (by decide +kernel)).trans (by ext; simp)
+  Witness.grounded_eq_empty
+    (F := isaiahFinite.restrict (· ∈ [Party.scriptural, .critical]))
+    (t := Witness.Table.sub _ [(.scriptural, .critical), (.critical, .scriptural)])
+    (by decide +kernel)
 
 #print axioms nothing_prevails_unanswered
 
@@ -543,8 +563,11 @@ contested as the critic's premises are, and a contested reply cannot carry the
 verdict alone. -/
 @[headline]
 theorem nothing_prevails_on_motyer_alone : grounded motyerAlone.defeats = ∅ :=
-  (Solver.grounded_eq (F := isaiahFinite.restrict (· ∈ [Party.scriptural, .critical, .motyer])) []
-    (by decide +kernel)).trans (by ext; simp)
+  Witness.grounded_eq_empty
+    (F := isaiahFinite.restrict (· ∈ [Party.scriptural, .critical, .motyer]))
+    (t := Witness.Table.sub _
+      [(.scriptural, .critical), (.critical, .scriptural), (.motyer, .critical)])
+    (by decide +kernel)
 
 #print axioms nothing_prevails_on_motyer_alone
 
@@ -559,7 +582,9 @@ the grounds of either counterexample leaves the verdict standing. -/
 theorem scriptural_reading_prevails_without_postell :
     (⟨.scriptural, by decide⟩ : {i // i ≠ Party.postell}) ∈
       grounded withoutPostell.defeats :=
-  Solver.mem_grounded (F := isaiahFinite.restrict (· ≠ Party.postell)) (by decide +kernel)
+  Witness.mem_grounded_of_stages (F := isaiahFinite.restrict (· ≠ Party.postell))
+    (sts := [Witness.listSub _ [.micah], Witness.listSub _ [.scriptural, .berry, .motyer]])
+    (by decide +kernel) (by decide)
 
 #print axioms scriptural_reading_prevails_without_postell
 
@@ -575,8 +600,11 @@ of that inference. -/
 @[headline]
 theorem nothing_prevails_without_the_counterexamples :
     grounded withoutParity.defeats = ∅ :=
-  (Solver.grounded_eq (F := isaiahFinite.restrict (· ∉ [Party.postell, .micah])) []
-    (by decide +kernel)).trans (by ext; simp)
+  Witness.grounded_eq_empty (F := isaiahFinite.restrict (· ∉ [Party.postell, .micah]))
+    (t := Witness.Table.sub _
+      [(.scriptural, .critical), (.critical, .scriptural), (.berry, .critical),
+        (.motyer, .critical)])
+    (by decide +kernel)
 
 #print axioms nothing_prevails_without_the_counterexamples
 
