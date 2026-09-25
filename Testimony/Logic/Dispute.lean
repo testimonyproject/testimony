@@ -325,19 +325,4 @@ theorem Grants.not_rebuts {a b : ArgumentPackage α} (h : Grants a b.conclusion)
     ¬ Rebuts a b :=
   fun hent => entails_neg_iff.mp hent h
 
-/-- `grounded_by n [lemmas]` proves `grounded R = S` for a finite dispute: `S` is
-the `n`-th iterate of the characteristic function from `∅`, and defends nothing
-more. Each membership is decided by `simp` with `lemmas` — the defeat table,
-and the enumeration of the parties. -/
-syntax "grounded_by" ppSpace num ppSpace "[" Lean.Parser.Tactic.simpLemma,+ "]" : tactic
-
-macro_rules
-  | `(tactic| grounded_by $n [$ls,*]) =>
-    `(tactic|
-        (refine Framework.grounded_eq_of_iterate $n ?_ ?_
-         · ext a
-           cases a <;> simp [Framework.characteristic, Framework.Defends, $ls,*]
-         · intro a ha
-           cases a <;> simp_all [Framework.characteristic, Framework.Defends, $ls,*]))
-
 end Testimony.Logic

@@ -1,6 +1,7 @@
 import Testimony.Arguments.BornOfAVirgin.Results.Wegner
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
+import Testimony.Logic.Solver
 
 /-!
 # Arguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner's objection
@@ -147,19 +148,6 @@ inductive WegnerParty
   | reply
 deriving DecidableEq
 
-/-- A statement about every party is a statement about each of the three. -/
-theorem WegnerParty.forall_iff {P : WegnerParty → Prop} :
-    (∀ x, P x) ↔ P .wegner ∧ P .sign ∧ P .reply :=
-  ⟨fun h => ⟨h _, h _, h _⟩, fun ⟨h₁, h₂, h₃⟩ x => by cases x <;> assumption⟩
-
-/-- Some party satisfies `P` just when one of the three does. -/
-theorem WegnerParty.exists_iff {P : WegnerParty → Prop} :
-    (∃ x, P x) ↔ P .wegner ∨ P .sign ∨ P .reply := by
-  constructor
-  · rintro ⟨x, hx⟩
-    cases x <;> simp_all
-  · rintro (h | h | h) <;> exact ⟨_, h⟩
-
 /-- The package each party argues from. -/
 @[bornOfAVirginDefs]
 def wegnerPartyNode : WegnerParty → ArgumentPackage Claim
@@ -218,16 +206,19 @@ theorem wegnerDispute_defeats :
     (wegnerPartyNode_strength j) ?_
   cases i <;> cases j <;> decide +kernel
 
+/-- The dispute in the form the verdict solver computes with. -/
+def wegnerFinite : Solver.Finite wegnerDispute.defeats where
+  parties := [.wegner, .sign, .reply]
+  complete i := by cases i <;> decide
+  defeats i j := decide (wegnerPartyDefeats i j)
+  spec i j := by rw [wegnerDispute_defeats]; simp
+
 /-- **Nothing prevails.** Every party is defeated by someone — Wegner and the
 reply by the fathers, the fathers by both — so nothing is forced, and the
 grounded extension is empty. -/
 @[headline]
 theorem nothing_prevails_over_wegner : grounded wegnerDispute.defeats = ∅ :=
-  grounded_eq_empty_of_attacked fun a => by
-    cases a
-    · exact ⟨.sign, (wegnerDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.wegner, (wegnerDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.sign, (wegnerDispute_defeats _ _).mpr trivial⟩
+  (Solver.grounded_eq (F := wegnerFinite) [] (by decide +kernel)).trans (by ext; simp)
 
 #print axioms nothing_prevails_over_wegner
 
@@ -235,12 +226,9 @@ theorem nothing_prevails_over_wegner : grounded wegnerDispute.defeats = ∅ :=
 defeats both of its defeaters — and it is in conflict with both of the other
 parties, so no larger set is. -/
 @[headline]
-theorem sign_is_one_resolution : Preferred wegnerDispute.defeats {.sign} := by
-  refine preferred_of_blocked ⟨?_, ?_⟩ ?_
-  · simp [ConflictFree, wegnerDispute_defeats, wegnerPartyDefeats]
-  · simp [Defends, wegnerDispute_defeats, wegnerPartyDefeats, WegnerParty.forall_iff]
-  · intro a ha
-    cases a <;> simp_all [wegnerDispute_defeats, wegnerPartyDefeats]
+theorem sign_is_one_resolution : Preferred wegnerDispute.defeats {.sign} :=
+  (show Solver.toSet [WegnerParty.sign] = {.sign} by ext; simp) ▸
+    Solver.preferred_eq (F := wegnerFinite) (by decide +kernel)
 
 #print axioms sign_is_one_resolution
 
@@ -250,12 +238,9 @@ defeat either. The fathers are in conflict with both, so no larger set is
 admissible. -/
 @[headline]
 theorem wegner_is_the_other_resolution :
-    Preferred wegnerDispute.defeats {.wegner, .reply} := by
-  refine preferred_of_blocked ⟨?_, ?_⟩ ?_
-  · simp [ConflictFree, wegnerDispute_defeats, wegnerPartyDefeats]
-  · simp [Defends, wegnerDispute_defeats, wegnerPartyDefeats, WegnerParty.forall_iff]
-  · intro a ha
-    cases a <;> simp_all [wegnerDispute_defeats, wegnerPartyDefeats]
+    Preferred wegnerDispute.defeats {.wegner, .reply} :=
+  (show Solver.toSet [WegnerParty.wegner, .reply] = {.wegner, .reply} by ext; simp) ▸
+    Solver.preferred_eq (F := wegnerFinite) (by decide +kernel)
 
 #print axioms wegner_is_the_other_resolution
 
@@ -280,10 +265,8 @@ Wegner's rebuttal does, because the fathers' weakest link is no stronger than
 his. -/
 @[headline]
 theorem nothing_prevails_without_the_reply : grounded signAgainstWegner.defeats = ∅ :=
-  grounded_eq_empty_of_attacked fun ⟨a, ha⟩ => by
-    cases a <;> simp at ha
-    · exact ⟨⟨.sign, by simp⟩, (wegnerDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨⟨.wegner, by simp⟩, (wegnerDispute_defeats _ _).mpr trivial⟩
+  (Solver.grounded_eq (F := wegnerFinite.restrict (· ∈ [WegnerParty.wegner, .sign])) []
+    (by decide +kernel)).trans (by ext; simp)
 
 #print axioms nothing_prevails_without_the_reply
 

@@ -4225,6 +4225,26 @@ theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+<a id="isaiahFinite"></a>
+**`isaiahFinite`**
+
+The dispute in the form the verdict solver computes with.
+
+```lean
+def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
+  {
+    parties :=
+      [Party.scriptural,
+        Party.critical,
+        Party.berry,
+        Party.postell,
+        Party.motyer,
+        Party.micah],
+    complete := isaiahFinite._proof_1,
+    defeats := fun i j => decide (partyDefeats i j),
+    spec := isaiahFinite._proof_2 }
+```
+
 <a id="scriptural_reading_prevails_once_replies_are_heard"></a>
 **`scriptural_reading_prevails_once_replies_are_heard`**
 
@@ -4688,6 +4708,24 @@ the kernel.
 theorem wegnerDispute_defeats : ∀ (i j : WegnerParty), wegnerDispute.defeats i
     j ↔ wegnerPartyDefeats i j
 -- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wegnerFinite"></a>
+**`wegnerFinite`**
+
+The dispute in the form the verdict solver computes with.
+
+```lean
+def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
+  {
+    parties :=
+      [WegnerParty.wegner,
+        WegnerParty.sign,
+        WegnerParty.reply],
+    complete := wegnerFinite._proof_1,
+    defeats := fun i j =>
+      decide (wegnerPartyDefeats i j),
+    spec := wegnerFinite._proof_2 }
 ```
 
 <a id="nothing_prevails_over_wegner"></a>

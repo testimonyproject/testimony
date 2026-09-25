@@ -3741,6 +3741,25 @@ theorem solaFideDispute_defeats : ∀ (i j : Party), solaFideDispute.defeats i j
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+<a id="solaFideFinite"></a>
+**`solaFideFinite`**
+
+The dispute in the form the verdict solver computes with: every party, and
+the table.
+
+```lean
+def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
+  {
+    parties :=
+      [Party.pauline, Party.dominical,
+        Party.apostolic, Party.trent,
+        Party.apocalyptic, Party.sanders,
+        Party.critics, Party.jervell],
+    complete := solaFideFinite._proof_1,
+    defeats := fun i j => decide (partyDefeats i j),
+    spec := solaFideFinite._proof_2 }
+```
+
 #### What the dispute decides
 
 <a id="nothing_prevails_over_sola_fide"></a>

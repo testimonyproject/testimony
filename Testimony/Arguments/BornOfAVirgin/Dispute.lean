@@ -1,6 +1,7 @@
 import Testimony.Arguments.BornOfAVirgin.Results
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
+import Testimony.Logic.Solver
 
 /-!
 # Arguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14
@@ -390,22 +391,6 @@ inductive Party
   | micah
 deriving DecidableEq
 
-/-- A statement about every party is a statement about each of the six. -/
-theorem Party.forall_iff {P : Party → Prop} :
-    (∀ x, P x) ↔
-      P .scriptural ∧ P .critical ∧ P .berry ∧ P .postell ∧ P .motyer ∧ P .micah :=
-  ⟨fun h => ⟨h _, h _, h _, h _, h _, h _⟩,
-    fun ⟨h₁, h₂, h₃, h₄, h₅, h₆⟩ x => by cases x <;> assumption⟩
-
-/-- Some party satisfies `P` just when one of the six does. -/
-theorem Party.exists_iff {P : Party → Prop} :
-    (∃ x, P x) ↔
-      P .scriptural ∨ P .critical ∨ P .berry ∨ P .postell ∨ P .motyer ∨ P .micah := by
-  constructor
-  · rintro ⟨x, hx⟩
-    cases x <;> simp_all
-  · rintro (h | h | h | h | h | h) <;> exact ⟨_, h⟩
-
 /-- The package each party argues from. -/
 @[bornOfAVirginDefs]
 def partyNode : Party → ArgumentPackage Claim
@@ -490,6 +475,13 @@ theorem isaiahDispute_defeats : ∀ i j, isaiahDispute.defeats i j ↔ partyDefe
   refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
   cases i <;> cases j <;> decide +kernel
 
+/-- The dispute in the form the verdict solver computes with. -/
+def isaiahFinite : Solver.Finite isaiahDispute.defeats where
+  parties := [.scriptural, .critical, .berry, .postell, .motyer, .micah]
+  complete i := by cases i <;> decide
+  defeats i j := decide (partyDefeats i j)
+  spec i j := by rw [isaiahDispute_defeats]; simp
+
 /-- **Heard out, the scriptural reading prevails.** Nothing defeats either of
 Postell's counterexamples, so both are in the grounded extension from the first
 step. They defeat the critic — the only party that defeats the scriptural
@@ -498,8 +490,9 @@ nothing defends the critic. -/
 @[headline]
 theorem scriptural_reading_prevails_once_replies_are_heard :
     grounded isaiahDispute.defeats =
-      {.scriptural, .berry, .postell, .motyer, .micah} := by
-  grounded_by 2 [isaiahDispute_defeats, partyDefeats, Party.forall_iff, Party.exists_iff]
+      {.scriptural, .berry, .postell, .motyer, .micah} :=
+  (Solver.grounded_eq (F := isaiahFinite) [.scriptural, .berry, .postell, .motyer, .micah]
+    (by decide +kernel)).trans (by ext; simp)
 
 #print axioms scriptural_reading_prevails_once_replies_are_heard
 
@@ -507,11 +500,8 @@ theorem scriptural_reading_prevails_once_replies_are_heard :
 Postell defeats it, and nothing defeats Postell. -/
 @[headline]
 theorem critical_denial_indefensible (S : Set Party)
-    (hS : Admissible isaiahDispute.defeats S) : Party.critical ∉ S := by
-  intro hc
-  obtain ⟨c, _, hcb⟩ := hS.2 _ hc .postell ((isaiahDispute_defeats _ _).mpr trivial)
-  rw [isaiahDispute_defeats] at hcb
-  cases c <;> exact hcb
+    (hS : Admissible isaiahDispute.defeats S) : Party.critical ∉ S :=
+  Solver.not_mem_admissible (F := isaiahFinite) (by decide +kernel) S hS
 
 #print axioms critical_denial_indefensible
 
@@ -539,10 +529,8 @@ denial defeat each other, so neither is forced, and the grounded extension is
 empty. -/
 @[headline]
 theorem nothing_prevails_unanswered : grounded unanswered.defeats = ∅ :=
-  grounded_eq_empty_of_attacked fun ⟨a, ha⟩ => by
-    cases a <;> simp at ha
-    · exact ⟨⟨.critical, by simp⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨⟨.scriptural, by simp⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
+  (Solver.grounded_eq (F := isaiahFinite.restrict (· ∈ [Party.scriptural, .critical])) []
+    (by decide +kernel)).trans (by ext; simp)
 
 #print axioms nothing_prevails_unanswered
 
@@ -555,11 +543,8 @@ contested as the critic's premises are, and a contested reply cannot carry the
 verdict alone. -/
 @[headline]
 theorem nothing_prevails_on_motyer_alone : grounded motyerAlone.defeats = ∅ :=
-  grounded_eq_empty_of_attacked fun ⟨a, ha⟩ => by
-    cases a <;> simp at ha
-    · exact ⟨⟨.critical, by simp⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨⟨.motyer, by simp⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨⟨.critical, by simp⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
+  (Solver.grounded_eq (F := isaiahFinite.restrict (· ∈ [Party.scriptural, .critical, .motyer])) []
+    (by decide +kernel)).trans (by ext; simp)
 
 #print axioms nothing_prevails_on_motyer_alone
 
@@ -574,10 +559,7 @@ the grounds of either counterexample leaves the verdict standing. -/
 theorem scriptural_reading_prevails_without_postell :
     (⟨.scriptural, by decide⟩ : {i // i ≠ Party.postell}) ∈
       grounded withoutPostell.defeats :=
-  iterate_subset_grounded 2 (by
-    simp [characteristic, Defends, Dispute.restrict_defeats, Subtype.forall,
-      Subtype.exists, isaiahDispute_defeats, partyDefeats, Party.forall_iff,
-      Party.exists_iff])
+  Solver.mem_grounded (F := isaiahFinite.restrict (· ≠ Party.postell)) (by decide +kernel)
 
 #print axioms scriptural_reading_prevails_without_postell
 
@@ -593,12 +575,8 @@ of that inference. -/
 @[headline]
 theorem nothing_prevails_without_the_counterexamples :
     grounded withoutParity.defeats = ∅ :=
-  grounded_eq_empty_of_attacked fun ⟨a, ha⟩ => by
-    cases a <;> simp at ha
-    · exact ⟨⟨.critical, by decide⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨⟨.scriptural, by decide⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨⟨.critical, by decide⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨⟨.critical, by decide⟩, (isaiahDispute_defeats _ _).mpr trivial⟩
+  (Solver.grounded_eq (F := isaiahFinite.restrict (· ∉ [Party.postell, .micah])) []
+    (by decide +kernel)).trans (by ext; simp)
 
 #print axioms nothing_prevails_without_the_counterexamples
 

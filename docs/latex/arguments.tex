@@ -2656,6 +2656,23 @@ theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
     partyDefeats i j
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Finite}}\par\nobreak\noindent
+The dispute in the form the verdict solver computes with.
+
+{\small\begin{verbatim}
+def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
+  {
+    parties :=
+      [Party.scriptural,
+        Party.critical,
+        Party.berry,
+        Party.postell,
+        Party.motyer,
+        Party.micah],
+    complete := isaiahFinite._proof_1,
+    defeats := fun i j => decide (partyDefeats i j),
+    spec := isaiahFinite._proof_2 }
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}prevails\_\allowbreak{}once\_\allowbreak{}replies\_\allowbreak{}are\_\allowbreak{}heard}}\par\nobreak\noindent
 \textbf{Heard out, the scriptural reading prevails.} Nothing defeats either of Postell's counterexamples, so both are in the grounded extension from the first step. They defeat the critic — the only party that defeats the scriptural reading, Berry or Motyer — so at the second step all three join them; and nothing defends the critic.
 
@@ -2972,6 +2989,21 @@ theorem wegnerPartyNode_strength : ∀ (i : WegnerParty), (wegnerPartyNode
 theorem wegnerDispute_defeats : ∀ (i j : WegnerParty), wegnerDispute.defeats i
     j ↔ wegnerPartyDefeats i j
 -- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Finite}}\par\nobreak\noindent
+The dispute in the form the verdict solver computes with.
+
+{\small\begin{verbatim}
+def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
+  {
+    parties :=
+      [WegnerParty.wegner,
+        WegnerParty.sign,
+        WegnerParty.reply],
+    complete := wegnerFinite._proof_1,
+    defeats := fun i j =>
+      decide (wegnerPartyDefeats i j),
+    spec := wegnerFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}over\_\allowbreak{}wegner}}\par\nobreak\noindent
 \textbf{Nothing prevails.} Every party is defeated by someone — Wegner and the reply by the fathers, the fathers by both — so nothing is forced, and the grounded extension is empty.
@@ -5357,6 +5389,21 @@ Every cell is computed from the parties' premises by \texttt{Horn.defeats?} and 
 theorem solaFideDispute_defeats : ∀ (i j : Party), solaFideDispute.defeats i j
     ↔ partyDefeats i j
 -- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Finite}}\par\nobreak\noindent
+The dispute in the form the verdict solver computes with: every party, and the table.
+
+{\small\begin{verbatim}
+def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
+  {
+    parties :=
+      [Party.pauline, Party.dominical,
+        Party.apostolic, Party.trent,
+        Party.apocalyptic, Party.sanders,
+        Party.critics, Party.jervell],
+    complete := solaFideFinite._proof_1,
+    defeats := fun i j => decide (partyDefeats i j),
+    spec := solaFideFinite._proof_2 }
 \end{verbatim}}
 \paragraph*{What the dispute decides}
 \leavevmode\par
