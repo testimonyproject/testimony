@@ -3879,8 +3879,8 @@ theorem motyerReply_strength : motyerReply.strength = 0
 
 #### The defeats
 
-Each is an attack the ratings do not block, proved by the attack and the
-comparison of strengths.
+Each is an attack the ratings do not block, decided from the two packages'
+premises by `Horn.defeats?` and checked by the kernel.
 
 <a id="critical_defeats_christian"></a>
 **`critical_defeats_christian`**
@@ -3891,7 +3891,7 @@ premise, cited `disputed`, does not outrank it.
 
 ```lean
 theorem critical_defeats_christian : Defeats criticalDenial christian
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="christian_rebuts_critical"></a>
@@ -3928,7 +3928,7 @@ each defeats the other.
 
 ```lean
 theorem christian_defeats_critical : Defeats christian criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="berry_defeats_critical"></a>
@@ -3940,7 +3940,7 @@ cited `disputed`, does not outrank him.
 
 ```lean
 theorem berry_defeats_critical : Defeats berryObjection criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="postell_defeats_critical"></a>
@@ -3951,7 +3951,7 @@ grounds.
 
 ```lean
 theorem postell_defeats_critical : Defeats postellParity criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="micah_defeats_critical"></a>
@@ -3962,7 +3962,7 @@ premise as Berry and Postell.
 
 ```lean
 theorem micah_defeats_critical : Defeats micahParity criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="motyer_defeats_critical"></a>
@@ -3973,7 +3973,7 @@ other premise: that 7:14 is a near-term sign to Ahaz, cited `disputed`.
 
 ```lean
 theorem motyer_defeats_critical : Defeats motyerReply criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="critical_defeats_berry"></a>
@@ -3985,7 +3985,7 @@ contested as the critic's premises are.
 
 ```lean
 theorem critical_defeats_berry : Defeats criticalDenial berryObjection
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="critical_defeats_motyer"></a>
@@ -3997,55 +3997,25 @@ who identify the two children.
 
 ```lean
 theorem critical_defeats_motyer : Defeats criticalDenial motyerReply
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 #### What does not defeat
-
-<a id="laterOraclesReading"></a>
-**`laterOraclesReading`**
-
-The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of
-7:14 — the way out of the parity argument open to a reader who dates them
-later. Postell's step holds in it, because one of its grounds fails.
-
-```lean
-def laterOraclesReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.isaiahPredictsVirginBirth => False
-    | Claim.isaiah9And11ShareTheAssyrianTimeline =>
-      False
-    | x => True
-```
 
 <a id="critical_does_not_defeat_postell"></a>
 **`critical_does_not_defeat_postell`**
 
 **The critical denial does not defeat Postell.** It rebuts him, but it is
 the weaker of the two: its premises are `disputed`, and his inference is
-`plausible`. And it contradicts none of his premises: the critical reading
-grants both his observations, and the later-oracles reading his step.
+`plausible`. And it contradicts none of his premises: the critic can grant both
+his observations, and can grant his step too, by dating Isaiah 9 and 11 later
+than 7:14 — off its Assyrian timeline — so that one of the step's grounds
+fails.
 
 ```lean
 theorem critical_does_not_defeat_postell : ¬Defeats criticalDenial
     postellParity
--- axioms: propext, Quot.sound
-```
-
-<a id="royalMicahReading"></a>
-**`royalMicahReading`**
-
-The critic's world, with Micah 5:2 read of a near-term Davidic king and not
-messianically. The Micah step holds in it, because one of its grounds fails.
-
-```lean
-def royalMicahReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.isaiahPredictsVirginBirth => False
-    | Claim.micahRulerReadMessianically => False
-    | x => True
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="critical_does_not_defeat_micah"></a>
@@ -4053,11 +4023,12 @@ def royalMicahReading : Valuation Claim :=
 
 **The critical denial does not defeat the Micah counterexample**, for the
 reason it does not defeat Postell: it is weaker, and it contradicts none of the
-counterexample's premises.
+counterexample's premises. The critic can grant its step by reading Micah 5:2
+of a near-term Davidic king rather than messianically.
 
 ```lean
 theorem critical_does_not_defeat_micah : ¬Defeats criticalDenial micahParity
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 #### The dispute
@@ -4140,6 +4111,40 @@ def partyDefeats : Party → Party → Prop :=
     | x, x_2 => False
 ```
 
+<a id="instDecidableRelPartyPartyDefeats"></a>
+**`instDecidableRelPartyPartyDefeats`**
+
+The table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
+```
+
+<a id="partyStrength"></a>
+**`partyStrength`**
+
+Each party's weakest link.
+
+```lean
+def partyStrength : Party → ℕ :=
+  fun x =>
+    match x with
+    | Party.postell => 1
+    | Party.micah => 1
+    | x => 0
+```
+
+<a id="partyNode_strength"></a>
+**`partyNode_strength`**
+
+Each party's strength is what `partyStrength` says.
+
+```lean
+theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
+    partyStrength i
+-- axioms: propext
+```
+
 <a id="isaiahDispute_defeats"></a>
 **`isaiahDispute_defeats`**
 
@@ -4148,10 +4153,14 @@ reading defeat each other; each reply defeats the critic; the critic defeats
 Berry and Motyer back, but neither of Postell's counterexamples; nothing
 else.
 
+Every cell is computed from the parties' premises by `Horn.defeats?` and
+checked by the kernel; the table is what the computation is checked
+against.
+
 ```lean
 theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
     partyDefeats i j
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="scriptural_reading_prevails_once_replies_are_heard"></a>
@@ -4179,7 +4188,7 @@ Postell defeats it, and nothing defeats Postell.
 ```lean
 theorem critical_denial_indefensible : ∀ (S : Set Party), Framework.Admissible
     isaiahDispute.defeats S → Party.critical ∉ S
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="scriptural_reading_skeptically_accepted"></a>
@@ -4201,7 +4210,7 @@ And none accepts the critical denial.
 ```lean
 theorem critical_denial_not_credulously_accepted :
     ¬Framework.CredulouslyAccepted isaiahDispute.defeats Party.critical
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 #### Hearings
@@ -4482,7 +4491,7 @@ outrank it.
 
 ```lean
 theorem sign_defeats_wegner : Defeats signArgument wegnerLexical
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="wegner_defeats_sign"></a>
@@ -4493,7 +4502,7 @@ so he rebuts it, and it is no stronger than he is.
 
 ```lean
 theorem wegner_defeats_sign : Defeats wegnerLexical signArgument
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="reply_defeats_sign"></a>
@@ -4504,7 +4513,7 @@ fathers' premise that the sign must be extraordinary, cited `disputed`.
 
 ```lean
 theorem reply_defeats_sign : Defeats ordinarySignReply signArgument
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="sign_defeats_reply"></a>
@@ -4515,7 +4524,7 @@ denies, and the reply's inference is contested as that premise is.
 
 ```lean
 theorem sign_defeats_reply : Defeats signArgument ordinarySignReply
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 #### The dispute
@@ -4584,16 +4593,39 @@ def wegnerPartyDefeats : WegnerParty → WegnerParty → Prop :=
     | x, x_2 => False
 ```
 
+<a id="instDecidableRelWegnerPartyWegnerPartyDefeats"></a>
+**`instDecidableRelWegnerPartyWegnerPartyDefeats`**
+
+The table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelWegnerPartyWegnerPartyDefeats : DecidableRel
+    wegnerPartyDefeats
+```
+
+<a id="wegnerPartyNode_strength"></a>
+**`wegnerPartyNode_strength`**
+
+Every party's weakest link ranks at the bottom.
+
+```lean
+theorem wegnerPartyNode_strength : ∀ (i : WegnerParty), (wegnerPartyNode
+    i).strength = 0
+-- axioms: propext
+```
+
 <a id="wegnerDispute_defeats"></a>
 **`wegnerDispute_defeats`**
 
 **Who defeats whom**, all nine pairs: the fathers and Wegner defeat each
-other, the fathers and the reply defeat each other, and nothing else.
+other, the fathers and the reply defeat each other, and nothing else. Every
+cell is computed from the parties' premises by `Horn.defeats?` and checked by
+the kernel.
 
 ```lean
 theorem wegnerDispute_defeats : ∀ (i j : WegnerParty), wegnerDispute.defeats i
     j ↔ wegnerPartyDefeats i j
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="nothing_prevails_over_wegner"></a>

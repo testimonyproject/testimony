@@ -17,7 +17,9 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
   does not.
 - **Never use `sorry`, `native_decide`, or `bv_decide`.** `native_decide` adds
   `Lean.ofReduceBool`; `bv_decide` adds a per-theorem `_native.bv_decide.ax`.
-  `lake exe axiom-audit` fails on all of them.
+  `lake exe axiom-audit` fails on all of them. `decide +kernel` is not one of
+  them: it has the kernel evaluate the decision and adds no axiom, and it is
+  how `Testimony.Logic.Horn` checks a dispute's defeat table.
 - **Never add a premise without a `Source`.** It will not compile —
   `Source.primary` is required and `ArgumentPackage.cite` is total.
 - **Never encode a Christian reading without at least one rival package**, and
@@ -99,7 +101,7 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Bib/` | `Core` types, `Attr` registry attribute, `Works` entries, `Render`, `Registry` guards |
 | `Testimony/Provenance.lean` | `Reference`, `Source`, `Tradition`, `Confidence` |
 | `Testimony/Intertext.lean` | Typed relations between passages |
-| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels + `Independent`, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`, Horn-only, and `establish_by_search`/`refute_with`/`satisfied_by`/`leaves_open`/`granted`), `Framework` Dung semantics (grounded, preferred), `Dispute` packages as its nodes, defeat derived from entailment and cited confidence |
+| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels + `Independent`, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`, Horn-only, and `establish_by_search`/`refute_with`/`satisfied_by`/`leaves_open`/`granted`), `Framework` Dung semantics (grounded, preferred), `Dispute` packages as its nodes, defeat derived from entailment and cited confidence, `Horn` the decision procedure that computes a dispute's defeat table |
 | `Testimony/Argument.lean` | Criteria, definitions, `Satisfies`, `People` |
 | `Testimony/Arguments/` | The worked arguments. Over ~500 lines an argument becomes a directory: `Atoms`, `Sources`, `Lines`, `Packages`, `Results`, with the root module reduced to imports and the module docstring |
 | `Testimony/Logic/Page` | `Item` — what a generated page is made of, before either rendering |

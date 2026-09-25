@@ -285,24 +285,6 @@ theorem not_defeats_of_models {a b : ArgumentPackage α}
   · obtain ⟨w, hw⟩ := satisfiable_iff.mp hreb
     exact (entails_iff.mp hr w fun ψ hψ => hw ψ (by simp [hψ])) (hw _ (by simp))
 
-/-- `defeat_table [defs] using [facts]` proves `d.defeats i j ↔ table i j` for
-every pair of a finite dispute: it splits on both parties, reduces the table by
-`defs`, and closes each goal from the diagonal or from one of `facts` — a
-defeat, a non-defeat, or a `StandTogether` group, whose memberships it decides. -/
-syntax "defeat_table" ppSpace "[" Lean.Parser.Tactic.simpLemma,+ "]" ppSpace "using"
-  ppSpace "[" term,+ "]" : tactic
-
-open Lean in
-macro_rules
-  | `(tactic| defeat_table [$ls,*] using [$facts,*]) => do
-    let direct ← facts.getElems.mapM fun f => `(tacticSeq| exact $f)
-    let grouped ← facts.getElems.mapM fun f =>
-      `(tacticSeq| exact Dispute.StandTogether.not_defeats $f (by decide) (by decide))
-    let diagonal ← `(tacticSeq| exact Dispute.not_defeats_self _ _)
-    let alts := #[diagonal] ++ direct ++ grouped
-    `(tactic| (intro i j; cases i <;> cases j <;>
-        simp only [$ls,*, iff_true, iff_false] <;> first $[| $alts]*))
-
 /-- `grounded_by n [lemmas]` proves `grounded R = S` for a finite dispute: `S` is
 the `n`-th iterate of the characteristic function from `∅`, and defends nothing
 more. Each membership is decided by `simp` with `lemmas` — the defeat table,

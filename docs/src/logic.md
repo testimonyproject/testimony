@@ -469,7 +469,7 @@ are always mutual, and Dung's semantics reduce to a consistency check (Cayrol,
 uses them, and a rating change can reverse a result. Say so in the module
 docstring, and say which rating decides the outcome.
 
-Encoding a dispute has four steps.
+Encoding a dispute has three steps.
 
 **1. Every node is an argument.** `Dispute` requires each node's premises to be
 satisfiable and to establish its conclusion — a node with contradictory premises
@@ -477,45 +477,62 @@ would attack everything. A reply written with `Line.onGrounds` keeps the
 objection's conclusion and so is not a node; write the reply as its own `Line`,
 with what it concludes as `delivers`.
 
-**2. Prove the defeats that hold, and group the ones that do not.** Each defeat
-is a named result — the attack, then the comparison of strengths:
+**2. State the table, and let the engine check it.** Write down who defeats
+whom as a table over the parties, give each party's strength, and prove the
+dispute's relation equal to the table. Every cell is computed from the
+premises and checked by the kernel — the defeats and the absences alike:
 
 ```lean
--- undermining: the premise, its membership, the entailment, the ranks
-theorem berry_defeats_critical : Defeats berryObjection criticalDenial :=
-  .inl ⟨p .nearTermExcludesMessianicSense,
-    ⟨by simp [criticalDenial, criticalExclusionLine, Line.asPackage, Line.premises],
-      berryObjection_establishes⟩,
-    by decide⟩
-
--- rebutting: the entailment, then the strengths
-theorem christian_defeats_critical : Defeats christian criticalDenial :=
-  .inr ⟨christian_rebuts_critical,
-    by rw [christian_strength, criticalDenial_strength]; decide⟩
+theorem isaiahDispute_defeats : ∀ i j, isaiahDispute.defeats i j ↔ partyDefeats i j := by
+  intro i j
+  refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
+  cases i <;> cases j <;> decide +kernel
 ```
 
-The absences come in two shapes, and neither is written pair by pair. Parties
-that can all hold at once **stand together**: one named world settles every
-ordered pair among them. An attack the ratings block is **outweighed**: the
-attacker is weaker, and each premise it might undermine holds alongside it.
+`Horn.defeats?` (`Testimony.Logic.Horn`) decides each pair by asking whether
+formulas can all hold together: `a` undermines `b` on `φ` exactly when `a`'s
+premises and `φ` cannot, and rebuts it exactly when `a`'s premises and `b`'s
+conclusion cannot. It translates the premises to clauses — atoms, denied atoms,
+and steps from a conjunction of literals to an atom, a conjunction or a
+contradiction — and decides them by unit propagation. Each answer carries its
+evidence: *satisfiable* only once a candidate model has been checked against
+every clause, *unsatisfiable* only when a clause is violated by atoms every
+model must have. So the procedure can fail to decide — a formula with a
+disjunction has no clauses, and it answers *unknown* — but it cannot decide
+wrongly, and its correctness theorems do not depend on it being complete.
+`decide +kernel` runs it inside the kernel and adds no axiom, unlike the banned
+`native_decide`.
+
+A single defeat worth naming is one line, from the same computation:
 
 ```lean
-theorem replies_stand_with_the_scriptural_reading :
-    isaiahDispute.StandTogether [.scriptural, .berry, .postell, .motyer] := by
-  satisfied_by motyerReading […]
-
-theorem critical_does_not_defeat_postell : ¬ Defeats criticalDenial postellParity :=
-  not_defeats_of_outweighed (by …) (…)   -- one named world per premise
+theorem berry_defeats_critical : Defeats berryObjection criticalDenial :=
+  Horn.defeats_of_defeats? berryObjection_strength criticalDenial_strength
+    (by decide +kernel)
 ```
 
 Strengths are computed by `decide`, and are worth stating as results of their
-own, because they are what a reader contests.
+own, because they are what a reader contests. They are also why the engine
+takes them as arguments: a strength looks up every atom's citation, the most
+expensive part of a decision, and a dispute proves each party's once.
 
-**3. Collect the table.** `defeat_table [table] using [facts]` proves the `↔`
-against a table for every ordered pair, from the defeats, the groups and the
-diagonal.
+Parties that can all hold at once **stand together**, and that is still worth
+stating with a named world — `replies_stand_with_the_scriptural_reading` is the
+reading on which none of five positions has to give way — though the table no
+longer needs it.
 
-**4. State what survives.** `grounded_by n [lemmas]` proves a grounded
+**What it costs.** One pair takes the kernel between a tenth and a quarter of
+a second. The sola fide table of sixty-four pairs checks as one theorem within
+the default heartbeat budget, and its module now builds in 24 seconds where
+the hand-written table took 31; the born-of-a-virgin disputes, thirty-six pairs
+and nine, build as fast as they did.
+
+**If the engine answers *unknown*** — a premise it cannot write as clauses —
+prove that cell by hand: a defeat from the attack and the comparison of
+strengths, an absence with `not_defeats_of_models` or
+`not_defeats_of_outweighed`, one named world per premise.
+
+**3. State what survives.** `grounded_by n [lemmas]` proves a grounded
 extension as the `n`-th iterate of the characteristic function from `∅`.
 `grounded_eq_empty_of_attacked` proves that nothing prevails when every party
 has a defeater. `Dispute.restrict` hears only some of the parties, keeping the
