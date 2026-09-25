@@ -29,6 +29,7 @@ open Testimony.People
 
 /-- The scriptural argument: four strands, no appeal to magisterial
 authority. -/
+@[bornOfAVirginDefs]
 def christian : ArgumentPackage Claim :=
   { name := "Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3"
   , cite := cite
@@ -45,12 +46,14 @@ def christian : ArgumentPackage Claim :=
 magisterial one. This is the position as actually held — Scripture and Tradition
 together — and it is kept distinct from `christian` because its extra premise is
 one this library's author does not grant. -/
+@[bornOfAVirginDefs]
 def catholic : ArgumentPackage Claim :=
   { christian with
     name := "Roman Catholic reading (Scripture and magisterial teaching)"
     premises := magisterialLine.premises ++ christian.premises }
 
 /-- The magisterial route on its own, with no exegetical premise at all. -/
+@[bornOfAVirginDefs]
 def magisterialOnly : ArgumentPackage Claim :=
   { christian with
     name := "Magisterial teaching alone"
@@ -60,6 +63,7 @@ def magisterialOnly : ArgumentPackage Claim :=
 /-- The magisterial route as it stands for a reader who denies that magisterial
 teaching settles doctrinal questions, holding with Westminster I.x that
 Scripture is the supreme judge. -/
+@[bornOfAVirginDefs]
 def magisterialDenied : ArgumentPackage Claim :=
   { christian with
     name := "Magisterial teaching, with its authority denied"
@@ -74,6 +78,7 @@ def magisterialDenied : ArgumentPackage Claim :=
 /-- The Isaianic line with the lexical premise removed, everything else it
 rests on retained. The one difference that most of the results below turn
 on. -/
+@[bornOfAVirginDefs]
 def isaianicWithoutAlmah : Line Claim :=
   isaianicLine.onGrounds
     [ p .isaiahPredictsVirginBirth, p .lxxRendersParthenos
@@ -81,6 +86,7 @@ def isaianicWithoutAlmah : Line Claim :=
 
 /-- The scriptural package with the lexical premise removed, everything else
 retained. -/
+@[bornOfAVirginDefs]
 def christianWithoutAlmah : ArgumentPackage Claim :=
   { christian with
     name := "Scriptural reading, minus the lexical premise"
@@ -91,6 +97,7 @@ def christianWithoutAlmah : ArgumentPackage Claim :=
 /-- The Isaianic strand by itself, with the lexical premise removed: the
 argument exactly as this module encoded it before the other three strands were
 added. Kept so that the earlier finding stays checkable. -/
+@[bornOfAVirginDefs]
 def isaianicStrandWithoutAlmah : ArgumentPackage Claim :=
   { christian with
     name := "Isaianic strand alone, minus the lexical premise"
@@ -98,6 +105,7 @@ def isaianicStrandWithoutAlmah : ArgumentPackage Claim :=
 
 /-- The scriptural package with all four interpretive hinges removed, every
 textual and historical premise retained. -/
+@[bornOfAVirginDefs]
 def christianWithoutAnyHinge : ArgumentPackage Claim :=
   { christian with
     name := "Scriptural reading, minus all four interpretive hinges"
@@ -115,6 +123,7 @@ def christianWithoutAnyHinge : ArgumentPackage Claim :=
 
 /-- The Isaianic strand with Berry's defensive lexical premise in place of the
 assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* it. -/
+@[bornOfAVirginDefs]
 def isaianicStrandOnAdmissibility : ArgumentPackage Claim :=
   { christian with
     name := "Isaianic strand, with the lexical premise weakened to admissibility"
@@ -133,6 +142,7 @@ them is denied.
 Written flat rather than from the lines above, because that is its shape: the
 texts first, then the critical readings of them, then the denials. It is not
 four strands on shared ground; it is the refusal of four strands. -/
+@[bornOfAVirginDefs]
 def critical : ArgumentPackage Claim :=
   { name := "Critical reading: near-term sign, etiology, and silence"
   , cite := cite
@@ -153,12 +163,14 @@ def critical : ArgumentPackage Claim :=
 /-- The critical case for denying the predictive reading, stated as an argument
 in its own right rather than assumed inside `critical`. Its conclusion is the
 denial, not anything about Jesus. -/
+@[bornOfAVirginDefs]
 def criticalDenial : ArgumentPackage Claim :=
   criticalExclusionLine.asPackage cite
     "Isaiah 7:14 is not a prediction of a virgin birth"
 
 /-- The same case with Berry's observation in play, and the exclusion premise
 no longer simply granted. -/
+@[bornOfAVirginDefs]
 def criticalDenialUnderBerry : ArgumentPackage Claim :=
   { criticalDenial with
     name := "Critical denial, with Berry's objection in play"
@@ -169,28 +181,33 @@ def criticalDenialUnderBerry : ArgumentPackage Claim :=
 
 /-- Berry's objection as a position of its own: its conclusion is that the
 near-term reading does not exclude the messianic sense. -/
+@[bornOfAVirginDefs]
 def berryObjection : ArgumentPackage Claim :=
   berryLine.asPackage cite
     "a near-term sign to Ahaz does not exclude a messianic sense"
 
 /-- Postell's parity argument as a position of its own, with the same conclusion
 as Berry's reached from different grounds. -/
+@[bornOfAVirginDefs]
 def postellParity : ArgumentPackage Claim :=
   postellLine.asPackage cite
     "a near-term sign to Ahaz does not exclude a messianic sense"
 
 /-- Postell's Micah counterexample as a position of its own, with the same
 conclusion as Berry's and Postell's Isaiah argument. -/
+@[bornOfAVirginDefs]
 def micahParity : ArgumentPackage Claim :=
   micahLine.asPackage cite "a near-term sign to Ahaz does not exclude a messianic sense"
 
 /-- Motyer's reply as a position of its own: Isaiah 7:14 is not a near-term
 sign to Ahaz. -/
+@[bornOfAVirginDefs]
 def motyerReply : ArgumentPackage Claim :=
   motyerLine.asPackage cite "Isaiah 7:14 is not a near-term sign to Ahaz"
 
 /-- The critical denial with Postell's parity argument in play, and the
 exclusion premise no longer simply granted. -/
+@[bornOfAVirginDefs]
 def criticalDenialUnderParity : ArgumentPackage Claim :=
   { criticalDenial with
     name := "Critical denial, with the parity argument in play"
@@ -204,6 +221,7 @@ def criticalDenialUnderParity : ArgumentPackage Claim :=
 claim never required עַלְמָה to denote virginity. Its conclusion is the *denial
 of the objection's premise*, not the criterion — see
 `compatibility_does_not_establish_criterion`. -/
+@[bornOfAVirginDefs]
 def semantic : ArgumentPackage Claim :=
   { name := "Referential reading: a virgin is an עַלְמָה"
   , cite := cite
@@ -212,6 +230,7 @@ def semantic : ArgumentPackage Claim :=
   , conclusionLabel := "Matthew's claim does not require עַלְמָה to denote virginity" }
 
 /-- The same premises, asked to deliver the criterion instead. They do not. -/
+@[bornOfAVirginDefs]
 def semanticReachingForCriterion : ArgumentPackage Claim :=
   { semantic with
     name := "Referential reading, asked for the criterion"
@@ -232,6 +251,7 @@ settles the word's denotation.
 
 Stated first and in full, because the results that follow are about where its
 weight rests and are worth nothing against a weakened rival. -/
+@[bornOfAVirginDefs]
 def wegnerLexical : ArgumentPackage Claim :=
   { name := "Wegner's grammatical objection: the עַלְמָה is already pregnant"
   , cite := cite
@@ -247,6 +267,7 @@ def wegnerLexical : ArgumentPackage Claim :=
 /-- Wegner's line with the ordinary pregnancy no longer granted. It is the one
 ground that goes; the parse, the near-term setting and the referent principle
 all stay. -/
+@[bornOfAVirginDefs]
 def wegnerWithoutTheOrdinaryPregnancy : Line Claim :=
   wegnerLine.onGrounds
     [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
@@ -255,6 +276,7 @@ def wegnerWithoutTheOrdinaryPregnancy : Line Claim :=
 /-- The same objection with the ordinary pregnancy derived instead of assumed —
 derived as Wegner derives it, from the reading of the sign, which is not
 granted either. -/
+@[bornOfAVirginDefs]
 def wegnerWithoutOrdinaryPregnancy : ArgumentPackage Claim :=
   { wegnerLexical with
     name := "Wegner's objection, with the ordinary pregnancy no longer assumed"
@@ -265,6 +287,7 @@ def wegnerWithoutOrdinaryPregnancy : ArgumentPackage Claim :=
 /-- Wegner's line as it stands inside the circle: the ordinary pregnancy gone
 from its grounds, and the demand that עַלְמָה carry the sense — which is what the
 return leg needs — put in. -/
+@[bornOfAVirginDefs]
 def wegnerInTheCircle : Line Claim :=
   wegnerLine.onGrounds
     [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
@@ -273,6 +296,7 @@ def wegnerInTheCircle : Line Claim :=
 /-- **Both legs of the circle at once**, with every uncontested datum retained:
 the parse, the near-term setting, the referent principle, and the demand that
 עַלְמָה carry the sense. Asked for the lexical conclusion. -/
+@[bornOfAVirginDefs]
 def wegnerCircle : ArgumentPackage Claim :=
   { wegnerLexical with
     name := "Wegner's objection with both legs of the circle in place"
@@ -288,12 +312,14 @@ def wegnerCircle : ArgumentPackage Claim :=
 /-- Wegner's line with Postell's usage datum in place of the referent
 principle. The parse and the ordinary pregnancy both stay: this reply concedes
 the referent and contests only what may be inferred from it. -/
+@[bornOfAVirginDefs]
 def wegnerUnderParity : Line Claim :=
   wegnerLine.onGrounds
     [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
     , p .pregnancyAtTheSignIsOrdinary, p .otherClearAlmahCasesAreVirgins ]
 
 /-- Wegner's objection with Postell's usage parity in play. -/
+@[bornOfAVirginDefs]
 def wegnerUnderUsageParity : ArgumentPackage Claim :=
   { wegnerLexical with
     name := "Wegner's objection, with the usage parity reply in play"
@@ -306,17 +332,20 @@ def wegnerUnderUsageParity : ArgumentPackage Claim :=
 /-- The fathers' sign argument as a position of its own: its conclusion is that
 the pregnancy of Isaiah 7:14 is not an ordinary one, and nothing about the
 word. -/
+@[bornOfAVirginDefs]
 def signArgument : ArgumentPackage Claim :=
   signLine.asPackage cite "the pregnancy Isaiah 7:14 announces is not an ordinary one"
 
 /-- The near-term reply as a position of its own: the sign of Isaiah 7:14 need
 not be extraordinary. -/
+@[bornOfAVirginDefs]
 def ordinarySignReply : ArgumentPackage Claim :=
   ordinarySignLine.asPackage cite "the sign of Isaiah 7:14 need not be extraordinary"
 
 /-- Wegner's line with the sign argument in play: the ordinary pregnancy no
 longer granted, and the fathers' two grounds in its place. The parse, the
 near-term setting and the referent principle all stay. -/
+@[bornOfAVirginDefs]
 def wegnerUnderSign : Line Claim :=
   wegnerLine.onGrounds
     [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
@@ -324,6 +353,7 @@ def wegnerUnderSign : Line Claim :=
     , p .oneReferentSettlesDenotation ]
 
 /-- Wegner's objection with the fathers' sign argument in play. -/
+@[bornOfAVirginDefs]
 def wegnerUnderTheSign : ArgumentPackage Claim :=
   { wegnerLexical with
     name := "Wegner's objection, with the fathers' sign argument in play"
@@ -333,12 +363,14 @@ def wegnerUnderTheSign : ArgumentPackage Claim :=
 
 /-- The sign argument with the near-term reply in play: its first ground no
 longer granted, and the reply's grounds in its place. -/
+@[bornOfAVirginDefs]
 def signUnderReply : Line Claim :=
   signLine.onGrounds
     [ p .ordinaryConceptionIsNoMarvel, p .isaianicSignsAreOrdinaryEvents
     , p .signDatedByAChildsInfancy ]
 
 /-- The fathers' sign argument with the near-term reply in play. -/
+@[bornOfAVirginDefs]
 def signArgumentUnderReply : ArgumentPackage Claim :=
   { signArgument with
     name := "The fathers' sign argument, with the near-term reply in play"
@@ -346,6 +378,7 @@ def signArgumentUnderReply : ArgumentPackage Claim :=
 
 /-- The lexical objection with its versional support, stated as its holder
 would state it. -/
+@[bornOfAVirginDefs]
 def lexicalCritical : ArgumentPackage Claim :=
   { name := "Lexical objection from the ancient versions"
   , cite := cite
@@ -358,6 +391,7 @@ key premise no longer simply granted.
 
 Written flat: it is the objector's grounds and the replies to them side by
 side, which is neither one line nor several converging ones. -/
+@[bornOfAVirginDefs]
 def lexicalCriticalUnderCompatibility : ArgumentPackage Claim :=
   { lexicalCritical with
     name := "Lexical objection, with the referential reply in play"

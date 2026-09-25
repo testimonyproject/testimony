@@ -125,20 +125,19 @@ def repliesStandReading : Valuation Claim := fun a =>
 
 /-- Berry's objection delivers its conclusion. -/
 theorem berryObjection_establishes : Establishes berryObjection := by
-  establish [berryObjection, berryLine, berryBlocksExclusion]
+  establish [bornOfAVirginDefs]
 
 /-- Berry's objection has a model. -/
 theorem berryObjection_is_satisfiable : Satisfiable berryObjection.premises := by
-  satisfied_by repliesStandReading [berryObjection, berryLine, berryBlocksExclusion]
+  satisfied_by repliesStandReading [bornOfAVirginDefs]
 
 /-- Postell's parity argument delivers its conclusion. -/
 theorem postellParity_establishes : Establishes postellParity := by
-  establish [postellParity, postellLine, parityDefeatsNearTermExclusion]
+  establish [bornOfAVirginDefs]
 
 /-- Postell's parity argument has a model. -/
 theorem postellParity_is_satisfiable : Satisfiable postellParity.premises := by
-  satisfied_by repliesStandReading [postellParity, postellLine,
-    parityDefeatsNearTermExclusion]
+  satisfied_by repliesStandReading [bornOfAVirginDefs]
 
 /-! #### Postell's Micah counterexample
 
@@ -161,16 +160,15 @@ def laterMessianicReading : Valuation Claim := fun a =>
 account both grounds hold and the exclusion stands. -/
 theorem micah_parity_rests_on_its_inference :
     ¬ Entails micahLine.grounds (notP .nearTermExcludesMessianicSense) := by
-  refute_with laterMessianicReading [micahLine]
+  refute_with laterMessianicReading [bornOfAVirginDefs]
 
 /-- The Micah counterexample delivers its conclusion. -/
 theorem micahParity_establishes : Establishes micahParity := by
-  establish [micahParity, micahLine, micahParityDefeatsNearTermExclusion]
+  establish [bornOfAVirginDefs]
 
 /-- The Micah counterexample has a model. -/
 theorem micahParity_is_satisfiable : Satisfiable micahParity.premises := by
-  satisfied_by repliesStandReading [micahParity, micahLine,
-    micahParityDefeatsNearTermExclusion]
+  satisfied_by repliesStandReading [bornOfAVirginDefs]
 
 /-! #### Motyer's reply
 
@@ -198,7 +196,7 @@ who contests the reply contests the step. -/
 @[headline]
 theorem motyer_rests_on_his_inference :
     ¬ Entails motyerLine.grounds (notP .isaiahIsNearTermSignToAhaz) := by
-  refute_with sameChildReading [motyerLine]
+  refute_with sameChildReading [bornOfAVirginDefs]
 
 #print axioms motyer_rests_on_his_inference
 
@@ -213,12 +211,11 @@ def motyerReading : Valuation Claim := fun a =>
 
 /-- Motyer's reply delivers its conclusion. -/
 theorem motyerReply_establishes : Establishes motyerReply := by
-  establish [motyerReply, motyerLine, timetablePassesToMaherShalalHashBaz]
+  establish [bornOfAVirginDefs]
 
 /-- Motyer's reply has a model. -/
 theorem motyerReply_is_satisfiable : Satisfiable motyerReply.premises := by
-  satisfied_by motyerReading [motyerReply, motyerLine,
-    timetablePassesToMaherShalalHashBaz]
+  satisfied_by motyerReading [bornOfAVirginDefs]
 
 /-! ### Strength: the weakest link of each position
 
@@ -258,17 +255,14 @@ negation of the premise that Isaiah 7:14 predicts a virgin birth, and that
 premise, cited `disputed`, does not outrank it. -/
 theorem critical_defeats_christian : Defeats criticalDenial christian :=
   .inl ⟨p .isaiahPredictsVirginBirth,
-    ⟨by simp [christian, scripturalLines, isaianicLine, caseOf],
+    ⟨by simp [bornOfAVirginDefs, caseOf],
       criticalDenial_establishes⟩,
     by decide⟩
 
 /-- The scriptural reading does attack the critical denial: it concludes the
 opposite. -/
 theorem christian_rebuts_critical : Rebuts christian criticalDenial := by
-  establish [Rebuts, criticalDenial, criticalExclusionLine, Line.asPackage, christian,
-    scripturalLines, isaianicLine, protoevangeliumLine, micheanLine, compositionalLine,
-    sharedGrounds, toCriterion, genesisToCriterion, micahToCriterion,
-    compositionalToCriterion, toFulfilment]
+  establish [Rebuts, bornOfAVirginDefs]
 
 /-- But it undermines none of the critical denial's premises. For each of them
 there is a world in which the scriptural reading holds and that premise does
@@ -281,18 +275,9 @@ theorem christian_does_not_undermine_critical (φ : Formula Claim) :
     List.cons_append, List.nil_append, List.mem_cons, List.not_mem_nil,
     or_false] at hmem
   rcases hmem with rfl | rfl | rfl <;> revert hent
-  · refute_with everythingHoldsReading [christian, scripturalLines,
-    isaianicLine, protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds,
-    toCriterion, genesisToCriterion, micahToCriterion, compositionalToCriterion,
-    toFulfilment]
-  · refute_with everythingHoldsReading [christian, scripturalLines,
-    isaianicLine, protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds,
-    toCriterion, genesisToCriterion, micahToCriterion, compositionalToCriterion,
-    toFulfilment]
-  · refute_with repliesStandReading [christian, scripturalLines,
-    isaianicLine, protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds,
-    toCriterion, genesisToCriterion, micahToCriterion, compositionalToCriterion,
-    toFulfilment, criticalExclusion]
+  · refute_with everythingHoldsReading [bornOfAVirginDefs]
+  · refute_with everythingHoldsReading [bornOfAVirginDefs]
+  · refute_with repliesStandReading [bornOfAVirginDefs]
 
 /-- **The scriptural reading answers the critic.** Its rebuttal is a defeat:
 the weakest link on each side is `disputed`, so neither outranks the other, and
@@ -341,16 +326,14 @@ theorem motyer_defeats_critical : Defeats motyerReply criticalDenial :=
 denies, so it rebuts him, and Berry is no stronger than it: his inference is
 contested as the critic's premises are. -/
 theorem critical_defeats_berry : Defeats criticalDenial berryObjection :=
-  .inr ⟨by establish [Rebuts, criticalDenial, berryObjection, criticalExclusionLine,
-      berryLine, criticalExclusion],
+  .inr ⟨by establish [Rebuts, bornOfAVirginDefs],
     by rw [criticalDenial_strength, berryObjection_strength]; decide⟩
 
 /-- **The critical denial defeats Motyer back**, for the same reason: it holds
 the near-term premise he denies, and his inference is contested by the readers
 who identify the two children. -/
 theorem critical_defeats_motyer : Defeats criticalDenial motyerReply :=
-  .inr ⟨by establish [Rebuts, criticalDenial, motyerReply, criticalExclusionLine,
-      motyerLine, criticalExclusion],
+  .inr ⟨by establish [Rebuts, bornOfAVirginDefs],
     by rw [criticalDenial_strength, motyerReply_strength]; decide⟩
 
 /-! ### What does not defeat -/
@@ -376,10 +359,9 @@ theorem critical_does_not_defeat_postell : ¬ Defeats criticalDenial postellPari
     List.cons_append, List.nil_append, List.mem_cons, List.not_mem_nil,
     or_false] at hφ
   rcases hφ with rfl | rfl | rfl
-  · satisfied_by criticalReading [criticalDenial, criticalExclusionLine, criticalExclusion]
-  · satisfied_by criticalReading [criticalDenial, criticalExclusionLine, criticalExclusion]
-  · satisfied_by laterOraclesReading [criticalDenial, criticalExclusionLine,
-      criticalExclusion, parityDefeatsNearTermExclusion]
+  · satisfied_by criticalReading [bornOfAVirginDefs]
+  · satisfied_by criticalReading [bornOfAVirginDefs]
+  · satisfied_by laterOraclesReading [bornOfAVirginDefs]
 
 /-- The critic's world, with Micah 5:2 read of a near-term Davidic king and not
 messianically. The Micah step holds in it, because one of its grounds fails. -/
@@ -400,10 +382,9 @@ theorem critical_does_not_defeat_micah : ¬ Defeats criticalDenial micahParity :
     List.cons_append, List.nil_append, List.mem_cons, List.not_mem_nil,
     or_false] at hφ
   rcases hφ with rfl | rfl | rfl
-  · satisfied_by criticalReading [criticalDenial, criticalExclusionLine, criticalExclusion]
-  · satisfied_by criticalReading [criticalDenial, criticalExclusionLine, criticalExclusion]
-  · satisfied_by royalMicahReading [criticalDenial, criticalExclusionLine,
-      criticalExclusion, micahParityDefeatsNearTermExclusion]
+  · satisfied_by criticalReading [bornOfAVirginDefs]
+  · satisfied_by criticalReading [bornOfAVirginDefs]
+  · satisfied_by royalMicahReading [bornOfAVirginDefs]
 
 /-! ### The dispute -/
 
@@ -440,6 +421,7 @@ theorem Party.exists_iff {P : Party → Prop} :
   · rintro (h | h | h | h | h | h) <;> exact ⟨_, h⟩
 
 /-- The package each party argues from. -/
+@[bornOfAVirginDefs]
 def partyNode : Party → ArgumentPackage Claim
   | .scriptural => christian
   | .critical => criticalDenial
@@ -450,6 +432,7 @@ def partyNode : Party → ArgumentPackage Claim
 
 /-- The dispute over Isaiah 7:14: every party's premises have a model, every
 party establishes its conclusion, and every party's inferences are rated. -/
+@[bornOfAVirginDefs]
 def isaiahDispute : Dispute Claim Party where
   node := partyNode
   consistent
@@ -467,23 +450,14 @@ def isaiahDispute : Dispute Claim Party where
     | .motyer => motyerReply_establishes
     | .micah => micahParity_establishes
   rated i := by
-    cases i <;> simp [partyNode, christian, criticalDenial, criticalExclusionLine,
-      berryObjection, berryLine, postellParity, postellLine, motyerReply, motyerLine,
-      micahParity, micahLine, Line.asPackage]
+    cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
 
 /-- **The scriptural reading and all four replies stand together**, in the
 world Motyer describes: none of the five defeats another. One fact, settling
 twenty ordered pairs. -/
 theorem replies_stand_with_the_scriptural_reading :
     isaiahDispute.StandTogether [.scriptural, .berry, .postell, .motyer, .micah] := by
-  satisfied_by motyerReading [Dispute.StandTogether, isaiahDispute, partyNode,
-    berryObjection, berryLine, berryBlocksExclusion, postellParity, postellLine,
-    parityDefeatsNearTermExclusion, micahParity, micahLine,
-    micahParityDefeatsNearTermExclusion, motyerReply, motyerLine,
-    timetablePassesToMaherShalalHashBaz, christian, scripturalLines,
-    isaianicLine, protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds,
-    toCriterion, genesisToCriterion, micahToCriterion, compositionalToCriterion,
-    toFulfilment]
+  satisfied_by motyerReading [Dispute.StandTogether, bornOfAVirginDefs]
 
 /-- The defeats of the dispute, as a table. -/
 def partyDefeats : Party → Party → Prop

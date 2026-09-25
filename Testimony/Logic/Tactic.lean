@@ -32,20 +32,22 @@ written down. Same idea, applied to a proof.
 
 ```lean
 theorem christian_establishes : Establishes christian := by
-  establish [christian, isaianicLine, genesisLine, sharedGrounds, toFulfilment]
+  establish [bornOfAVirginDefs]
 
 theorem critical_not_establishes : ¬ Establishes critical := by
-  refute_with criticalReading [critical, criticalExclusion, toCriterion]
+  refute_with criticalReading [bornOfAVirginDefs]
 
 theorem parity_leaves_the_canon_open :
     Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
   leaves_open parityEstablishesNothingReading krugerParityReading
-    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
+    [solaScripturaDefs]
 ```
 
-The bracketed list names the definitions to unfold — the package, the lines of
-reason it is built from, the inference steps. Everything generic is supplied by
-the tactic: `caseOf`, `p`, `notP`, the list-membership lemmas that turn
+The brackets name the definitions to unfold, and in an argument that is its
+unfold set (`Testimony.Attr`): the packages, the lines of reason they are built
+from, the inference steps, each tagged where it is written. Everything generic
+is supplied by the tactic: `caseOf`, `Line.onGrounds`, `p`, `notP`, the
+list-membership lemmas that turn
 `∀ φ ∈ prems` into a conjunction, and Foundation's truth lemmas for the
 connectives — including the one for `⋀`, the list conjunction that replaced
 this library's own `conjOf`.
@@ -108,7 +110,8 @@ macro_rules
              all_goals solve_by_elim (maxDepth := 24)
              done)
           | fail "establish: the premises are not Horn, or a definition in the chain is \
-missing from the list. Check the list first; then look for a step with a \
+not unfolded — missing its argument's unfold-set tag. Check the tags first; then look \
+for a step with a \
 disjunction or a nested implication, and restate it as separate lines. If it \
 genuinely cannot be Horn, use `establish_by_search`, which runs `tauto`.")
 
@@ -146,7 +149,7 @@ macro_rules
         (refine Testimony.Logic.entails_iff.mpr ?_;
          intro w hw;
          simp only [$ls,*, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-           Testimony.Logic.Line.premises,
+           Testimony.Logic.Line.premises, Testimony.Logic.Line.onGrounds,
            Testimony.Logic.p, Testimony.Logic.notP,
            List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
            List.cons_append, List.nil_append, List.append_nil,
@@ -193,7 +196,7 @@ macro_rules
     `(tactic|
         (refine Testimony.Logic.not_entails_of_countermodel $v ?_ ?_ <;>
            simp [$ls,*, $v:ident, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-             Testimony.Logic.Line.premises,
+             Testimony.Logic.Line.premises, Testimony.Logic.Line.onGrounds,
              Testimony.Logic.p, Testimony.Logic.notP,
              List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
              List.cons_append, List.nil_append, List.append_nil,
@@ -220,7 +223,7 @@ macro_rules
     `(tactic|
         (refine Testimony.Logic.satisfiable_of_model $v ?_ <;>
            simp [$ls,*, $v:ident, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-             Testimony.Logic.Line.premises,
+             Testimony.Logic.Line.premises, Testimony.Logic.Line.onGrounds,
              Testimony.Logic.p, Testimony.Logic.notP,
              List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
              List.cons_append, List.nil_append, List.append_nil,
@@ -253,7 +256,7 @@ macro_rules
         (refine Testimony.Logic.independent_of_countermodels $vf $vt ?_ ?_ ?_ ?_ <;>
            simp [$ls,*, $vf:ident, $vt:ident, Testimony.Logic.caseOf,
              Testimony.Logic.Line.asPackage,
-             Testimony.Logic.Line.premises,
+             Testimony.Logic.Line.premises, Testimony.Logic.Line.onGrounds,
              Testimony.Logic.p, Testimony.Logic.notP,
              List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
              List.cons_append, List.nil_append, List.append_nil,
@@ -286,7 +289,7 @@ macro_rules
     `(tactic|
         (refine Testimony.Logic.entails_of_mem ?_;
          simp [$ls,*, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
-           Testimony.Logic.Line.premises,
+           Testimony.Logic.Line.premises, Testimony.Logic.Line.onGrounds,
            Testimony.Logic.p, Testimony.Logic.notP,
            List.flatMap_cons, List.flatMap_nil, List.map_cons, List.map_nil,
            List.cons_append, List.nil_append, List.append_nil,

@@ -34,6 +34,7 @@ boundary visible at all times.
 | `Testimony.Logic.Page` | `Item` — what a generated page is made of, before either rendering |
 | `Testimony.Logic.Latex`, `Testimony.Logic.Markdown` | The two renderings of it: traditional notation for print, and the same notation for the browser |
 | `Testimony.Tools.*` | The generators — `Bibgen`, `Argtex`, `Statusgen`, `Argdoc` — over `Docs`, the catalogue they share, and `Pages`, the harvest the two document generators read |
+| `Testimony.Checks.*` | Checks that run in `lake build` over every argument: `Refutations`, that `establish` fails, as not Horn, on every package the library refutes |
 
 ## Two structural enforcements
 

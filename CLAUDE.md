@@ -83,6 +83,10 @@ python3 scripts/test_testimony_lint.py   # after touching the linter
 mdbook build docs                    # docs site
 ```
 
+`lake build` also runs `#check_refutations`: `establish` must fail, as not
+Horn, on every package the library refutes. Adding a refutation changes the
+count it reports, which is pinned.
+
 Tier 3 is the one that catches a `decide` proof which silently failed and fell
 back to `sorryAx` — that produces a *successful build*.
 
@@ -101,6 +105,7 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Logic/Page` | `Item` — what a generated page is made of, before either rendering |
 | `Testimony/Logic/Latex`, `Testimony/Logic/Markdown` | The two renderings of it: for print, and for the browser |
 | `Testimony/Tools/` | `Docs` (the shared catalogue), `Pages` (the harvest both document generators read), and the generators `Bibgen`, `Argtex`, `Statusgen`, `Argdoc`, each with `--check` |
+| `Testimony/Checks/` | Build-time checks over the whole library: `Refutations` (`establish` fails on every refuted package) |
 | `scripts/` | Domain linter and its tests |
 
 ## Skills
@@ -125,12 +130,18 @@ from source.
   stay at the bottom of `Works.lean`.
 - `List.filter` over a derived `DecidableEq (Formula α)` does not kernel-reduce;
   state reduced packages explicitly instead.
-- **Never hand-write the entailment proof recipe.** Use `establish [defs...]`,
-  `refute_with <namedValuation> [defs...]`, `satisfied_by <namedValuation>
-  [defs...]` and `leaves_open <falsifies> <verifies> [defs...]` from
-  `Testimony.Logic.Tactic`.
-  The bracketed list names only what to unfold — the package, its lines, its
-  steps. This used to be a documentation rule: `Formula` is also an abbrev in
+- **Never hand-write the entailment proof recipe.** Use `establish [set]`,
+  `refute_with <namedValuation> [set]`, `satisfied_by <namedValuation> [set]`
+  and `leaves_open <falsifies> <verifies> [set]` from `Testimony.Logic.Tactic`,
+  where `set` is the argument's unfold set (`solaFideDefs`, declared in
+  `Testimony/Attr.lean`).
+- **Tag a new definition, never extend a list.** A package, line, step or
+  shared premise list joins its argument's set where it is written:
+  `@[solaFideDefs] def ...`. An untagged one stays folded, and `establish`
+  reports "not Horn". A new argument adds its set to `Testimony/Attr.lean` and
+  to `Testimony/Checks/Refutations.lean`.
+- **The recipe's semantics are qualified inside the tactic.** This used to be a
+  documentation rule: `Formula` is also an abbrev in
   `Testimony.Logic`, so an unqualified `Formula.Boolean.val` resolves to the
   wrong namespace, `simp` does nothing, and the proof falls back to `sorryAx`
   with a *successful build*. The qualified name is now written once, inside the

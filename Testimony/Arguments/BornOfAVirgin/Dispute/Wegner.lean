@@ -71,22 +71,20 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 
 /-- The fathers' sign argument delivers its conclusion. -/
 theorem signArgument_establishes : Establishes signArgument := by
-  establish [signArgument, signLine, extraordinarySignExcludesOrdinaryPregnancy]
+  establish [bornOfAVirginDefs]
 
 /-- The fathers' sign argument has a model: Rydelnik's reading, in which the
 virgin is pregnant and the sign is as deep as Sheol. -/
 theorem signArgument_is_satisfiable : Satisfiable signArgument.premises := by
-  satisfied_by rydelnikReading [signArgument, signLine,
-    extraordinarySignExcludesOrdinaryPregnancy]
+  satisfied_by rydelnikReading [bornOfAVirginDefs]
 
 /-- The near-term reply delivers its conclusion. -/
 theorem ordinarySignReply_establishes : Establishes ordinarySignReply := by
-  establish [ordinarySignReply, ordinarySignLine, ordinarySignsAnswerTheDemand]
+  establish [bornOfAVirginDefs]
 
 /-- The near-term reply has a model: the near-term reading of the sign. -/
 theorem ordinarySignReply_is_satisfiable : Satisfiable ordinarySignReply.premises := by
-  satisfied_by nearTermSignReading [ordinarySignReply, ordinarySignLine,
-    ordinarySignsAnswerTheDemand]
+  satisfied_by nearTermSignReading [bornOfAVirginDefs]
 
 /-- **The reply rests on its inference, not on its observations.** On
 Rydelnik's reading Isaiah's children are signs, 7:16 dates the deliverance by a
@@ -96,7 +94,7 @@ grounds do not decide the question; the step does, and that is why it is rated
 @[headline]
 theorem reply_rests_on_its_inference :
     ¬ Entails ordinarySignLine.grounds (notP .signMustBeExtraordinary) := by
-  refute_with rydelnikReading [ordinarySignLine]
+  refute_with rydelnikReading [bornOfAVirginDefs]
 
 #print axioms reply_rests_on_its_inference
 
@@ -126,9 +124,7 @@ theorem sign_defeats_wegner : Defeats signArgument wegnerLexical :=
 /-- **Wegner defeats the sign argument back.** He holds the premise it denies,
 so he rebuts it, and it is no stronger than he is. -/
 theorem wegner_defeats_sign : Defeats wegnerLexical signArgument :=
-  .inr ⟨by establish [Rebuts, wegnerLexical, signArgument, wegnerLine, signLine,
-      wegnerClosingSteps, harahYieldsPresentPregnancy,
-      ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion],
+  .inr ⟨by establish [Rebuts, bornOfAVirginDefs],
     by rw [wegnerLexical_strength, signArgument_strength]; decide⟩
 
 /-- **The reply defeats the sign argument.** It entails the negation of the
@@ -142,8 +138,7 @@ theorem reply_defeats_sign : Defeats ordinarySignReply signArgument :=
 /-- **The sign argument defeats the reply back.** It holds the premise the reply
 denies, and the reply's inference is contested as that premise is. -/
 theorem sign_defeats_reply : Defeats signArgument ordinarySignReply :=
-  .inr ⟨by establish [Rebuts, signArgument, ordinarySignReply, signLine,
-      ordinarySignLine, extraordinarySignExcludesOrdinaryPregnancy],
+  .inr ⟨by establish [Rebuts, bornOfAVirginDefs],
     by rw [signArgument_strength, ordinarySignReply_strength]; decide⟩
 
 /-! ### The dispute -/
@@ -172,6 +167,7 @@ theorem WegnerParty.exists_iff {P : WegnerParty → Prop} :
   · rintro (h | h | h) <;> exact ⟨_, h⟩
 
 /-- The package each party argues from. -/
+@[bornOfAVirginDefs]
 def wegnerPartyNode : WegnerParty → ArgumentPackage Claim
   | .wegner => wegnerLexical
   | .sign => signArgument
@@ -180,6 +176,7 @@ def wegnerPartyNode : WegnerParty → ArgumentPackage Claim
 /-- The dispute over Wegner's objection: every party's premises have a model,
 every party establishes its conclusion, and every party's inferences are
 rated. -/
+@[bornOfAVirginDefs]
 def wegnerDispute : Dispute Claim WegnerParty where
   node := wegnerPartyNode
   consistent
@@ -191,17 +188,12 @@ def wegnerDispute : Dispute Claim WegnerParty where
     | .sign => signArgument_establishes
     | .reply => ordinarySignReply_establishes
   rated i := by
-    cases i <;> simp [wegnerPartyNode, wegnerLexical, signArgument, signLine,
-      ordinarySignReply, ordinarySignLine, Line.asPackage]
+    cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
 
 /-- **Wegner and the near-term reply stand together**, in Wegner's own world:
 the word does not denote a virgin, and the sign need not be a miracle. -/
 theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether [.wegner, .reply] := by
-  satisfied_by nearTermSignReading [Dispute.StandTogether, wegnerDispute,
-    wegnerPartyNode, wegnerLexical, wegnerLine, wegnerClosingSteps,
-    harahYieldsPresentPregnancy, ordinaryPregnancyExcludesVirginity,
-    referentYieldsLexicalConclusion, ordinarySignReply, ordinarySignLine,
-    ordinarySignsAnswerTheDemand]
+  satisfied_by nearTermSignReading [Dispute.StandTogether, bornOfAVirginDefs]
 
 /-- The defeats of the dispute, as a table. -/
 def wegnerPartyDefeats : WegnerParty → WegnerParty → Prop

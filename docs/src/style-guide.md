@@ -141,23 +141,22 @@ length.
 
 ```lean
 theorem christian_establishes : Establishes christian := by
-  establish [christian, isaianicLine, sharedGrounds, toCriterion, toFulfilment]
+  establish [bornOfAVirginDefs]
 
 theorem critical_not_establishes : ¬ Establishes critical := by
-  refute_with criticalReading [critical, criticalLine, toCriterion]
+  refute_with criticalReading [bornOfAVirginDefs]
 
 theorem christian_is_satisfiable : Satisfiable christian.premises := by
-  satisfied_by christianOwnReading [christian, isaianicLine, sharedGrounds]
+  satisfied_by christianOwnReading [bornOfAVirginDefs]
 
 theorem parity_leaves_the_canon_open :
     Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
   leaves_open parityEstablishesNothingReading krugerParityReading
-    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
+    [solaScripturaDefs]
 
 theorem circle_parity_concedes_the_charge :
     Establishes circleParityConcedingTheCharge := by
-  granted [circleParityConcedingTheCharge, circleDefeats, defeatUnderParity,
-    Line.onGrounds, circleDefeatsLine]
+  granted [solaScripturaDefs]
 ```
 
 **`granted` is not a faster `establish`.** `establish` would close the same
@@ -166,10 +165,12 @@ list. The two say different things — that the conclusion *follows*, against
 that it was *granted* — and where a reply concedes the charge it answers, which
 it is matters more than that the goal closes.
 
-The bracketed list names what to unfold: the package, the lines it is built
-from, the inference steps. Everything generic — `caseOf`, `p`,
-`notP`, the list-membership lemmas, and the semantics — is supplied by the
-tactic.
+The bracketed set names what to unfold: the argument's unfold set, declared in
+`Testimony/Attr.lean`, which holds its packages, lines and inference steps. A
+definition joins it where it is written, `@[bornOfAVirginDefs] def christian
+...`, rather than being added to the proofs that pass through it. Everything
+generic — `caseOf`, `Line.onGrounds`, `p`, `notP`, the list-membership lemmas,
+and the semantics — is supplied by the tactic.
 
 **This closes a silent-failure hole.** `Formula` is an abbreviation in
 `Testimony.Logic` as well as a structure in Foundation, so inside an argument

@@ -30,7 +30,11 @@ lake exe argdoc --check
 
 ### Tier 1 — `lake build`
 
-Catches type errors, and missing docstrings via `linter.missingDocs`.
+Catches type errors, and missing docstrings via `linter.missingDocs`. It also
+runs `#check_refutations` (`Testimony/Checks/Refutations.lean`): `establish` must
+fail, as not Horn, on every package the library refutes. It reports how many it
+checked, and the count is pinned with `#guard_msgs`, so adding a refutation
+means updating the number — the error shows the new one.
 
 Expect **zero warnings**, not just zero errors. A missing docstring is a
 warning, and in this library a docstring states what a premise asserts and who

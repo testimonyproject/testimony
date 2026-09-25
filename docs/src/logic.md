@@ -155,12 +155,16 @@ after the axiom audit. The audit
 itself reports every `Establishes` result resting on `propext` and `Quot.sound`
 at most — no `sorryAx`, no `Classical.choice`.
 
-**It proves nothing the library refutes.** For each of the 29 results of the
-form `¬ Establishes pkg`, `establish` was run on `pkg` with the refutation's own
-unfolding list, which reduces the premises to atoms, so a failure is the
-entailment failing and not a definition left folded. All 29 fail, each with
-`horn_close`'s message, and nothing else fails. `Tactic.lean` pins the same
-check on affirming the consequent, the canonical invalid inference.
+**It proves nothing the library refutes.** For every result of the form
+`¬ Establishes pkg`, `establish` is run on `pkg` with its argument's unfold set,
+and must fail with `horn_close`'s message. The set is the one the refutation's
+own proof unfolds — `refute_with` evaluates the countermodel on every premise,
+which it cannot do through a folded definition — so a failure is the entailment
+failing and not a definition left folded. This was a manual check; it is now
+`#check_refutations` in `Testimony/Checks/Refutations.lean`, which finds the
+refutations itself and runs in `lake build`, so CI runs it on every change.
+`Tactic.lean` pins the same check on affirming the consequent, the canonical
+invalid inference.
 
 What the change does *not* claim is completeness beyond Horn: SLD resolution is
 complete for Horn clauses, and `establish` fails — it does not silently succeed
@@ -361,14 +365,12 @@ the encoding honest; it is much easier to build a strawman after you have a
 proof you like.
 
 **4. Theorems**, tagged `@[headline]` and followed by `#print axioms`. To
-establish, name what to unfold:
+establish, name the argument's unfold set:
 
 ```lean
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
-  establish [reformed, paulineLine, dominicalLine, apostolicLine, sharedGrounds,
-    closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
-    toGrace, toNotByWorks, toThroughFaith, solaFide]
+  establish [solaFideDefs]
 ```
 
 To refute, name the rival's reading and check it:
@@ -382,7 +384,7 @@ def tridentineReading : Valuation Claim := fun a =>
 
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
-  refute_with tridentineReading [tridentine, reformed, solaFide]
+  refute_with tridentineReading [solaFideDefs]
 ```
 
 To record that a premise set settles a question neither way — which is what a
@@ -393,7 +395,7 @@ parity reply does — name both readings:
 theorem parity_leaves_the_canon_open :
     Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
   leaves_open parityEstablishesNothingReading krugerParityReading
-    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
+    [solaScripturaDefs]
 ```
 
 `Independent prems φ` is `¬ Entails prems φ ∧ ¬ Entails prems ∼φ`, the semantic
@@ -401,10 +403,15 @@ counterpart of Foundation's proof-theoretic `Independent`. Use it in place of a
 pair of `¬ Establishes` results over the same premises: one result cannot be
 about two different propositions, and a pair can.
 
-The bracketed list is only what to unfold. The generic half of the recipe —
-`caseOf`, `p`, `notP`, the list-membership lemmas that turn `∀ φ ∈ prems` into
-a conjunction, and Foundation's truth lemmas for the connectives — lives inside
-the tactics, in `Testimony.Logic.Tactic`.
+The bracketed set is only what to unfold. Each argument has one, declared in
+`Testimony/Attr.lean`, and a definition joins it where it is written —
+`@[solaFideDefs] def reformed ...` — so a new definition is tagged once rather
+than added to every proof that passes through it. An untagged one stays
+folded, and `establish` reports the premises as not Horn. The generic half of
+the recipe — `caseOf`, `Line.onGrounds`, `p`, `notP`, the list-membership
+lemmas that turn `∀ φ ∈ prems` into a conjunction, and Foundation's truth
+lemmas for the connectives — lives inside the tactics, in
+`Testimony.Logic.Tactic`.
 
 That is not tidiness. A hand-written proof has to name the semantics, and the
 semantics used to be named by unfolding `Formula.Boolean.val`. `Formula` is an

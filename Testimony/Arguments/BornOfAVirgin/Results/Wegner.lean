@@ -29,9 +29,7 @@ its weight rests and are worth nothing if the argument was weak to begin
 with. -/
 @[headline]
 theorem wegner_establishes : Establishes wegnerLexical := by
-  establish [wegnerLexical, wegnerLine, wegnerClosingSteps,
-    harahYieldsPresentPregnancy, ordinaryPregnancyExcludesVirginity,
-    referentYieldsLexicalConclusion]
+  establish [bornOfAVirginDefs]
 
 #print axioms wegner_establishes
 
@@ -54,10 +52,7 @@ sides grant, but the reading of the sign that makes the pregnancy an ordinary
 one. The next result follows that premise back to where it comes from. -/
 @[headline]
 theorem wegner_needs_ordinary_pregnancy : ¬ Establishes wegnerWithoutOrdinaryPregnancy := by
-  refute_with rydelnikReading [wegnerWithoutOrdinaryPregnancy, wegnerLexical,
-    wegnerWithoutTheOrdinaryPregnancy, wegnerLine, Line.onGrounds, wegnerClosingSteps,
-    readingSuppliesOrdinaryPregnancy, harahYieldsPresentPregnancy,
-    ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
+  refute_with rydelnikReading [bornOfAVirginDefs]
 
 #print axioms wegner_needs_ordinary_pregnancy
 
@@ -112,10 +107,7 @@ there. That premise is where a defender of Wegner should press. -/
 theorem circle_leaves_the_lexical_conclusion_open :
     Independent wegnerCircle.premises (notP .almahMeansVirgin) := by
   leaves_open circleUngroundedReading wegnerConclusionGrantedReading
-    [wegnerCircle, wegnerLexical, wegnerInTheCircle, wegnerLine, Line.onGrounds,
-      wegnerClosingSteps, readingSuppliesOrdinaryPregnancy,
-      lexicalConclusionTellsAgainstPrediction, harahYieldsPresentPregnancy,
-      ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
+    [bornOfAVirginDefs]
 
 #print axioms circle_leaves_the_lexical_conclusion_open
 
@@ -130,10 +122,7 @@ no premise outside itself. -/
 theorem circle_leaves_the_denial_open :
     Independent wegnerCircle.premises (notP .isaiahPredictsVirginBirth) := by
   leaves_open circleUngroundedReading wegnerConclusionGrantedReading
-    [wegnerCircle, wegnerLexical, wegnerInTheCircle, wegnerLine, Line.onGrounds,
-      wegnerClosingSteps, readingSuppliesOrdinaryPregnancy,
-      lexicalConclusionTellsAgainstPrediction, harahYieldsPresentPregnancy,
-      ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
+    [bornOfAVirginDefs]
 
 #print axioms circle_leaves_the_denial_open
 
@@ -158,10 +147,7 @@ replies leave the objection needing both a non-circular route to the ordinary
 pregnancy and a reason to privilege this occurrence over Genesis 24:43. -/
 @[headline]
 theorem usage_parity_blocks_wegner : ¬ Establishes wegnerUnderUsageParity := by
-  refute_with usageParityReading [wegnerUnderUsageParity, wegnerLexical,
-    wegnerUnderParity, wegnerLine, Line.onGrounds, wegnerClosingSteps,
-    usageParityBlocksReferentInference, harahYieldsPresentPregnancy,
-    ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
+  refute_with usageParityReading [bornOfAVirginDefs]
 
 #print axioms usage_parity_blocks_wegner
 
@@ -203,10 +189,7 @@ virgin, because it is not about the word at all. -/
 theorem sign_leaves_the_lexical_conclusion_open :
     Independent wegnerUnderTheSign.premises (notP .almahMeansVirgin) := by
   leaves_open rydelnikReading referentialSignReading
-    [wegnerUnderTheSign, wegnerLexical, wegnerUnderSign, wegnerLine, Line.onGrounds,
-      wegnerClosingSteps, extraordinarySignExcludesOrdinaryPregnancy,
-      harahYieldsPresentPregnancy, ordinaryPregnancyExcludesVirginity,
-      referentYieldsLexicalConclusion]
+    [bornOfAVirginDefs]
 
 #print axioms sign_leaves_the_lexical_conclusion_open
 
@@ -241,9 +224,7 @@ which still comes from the near-term reading of the sign. -/
 theorem reply_leaves_the_pregnancy_open :
     Independent signArgumentUnderReply.premises (notP .pregnancyAtTheSignIsOrdinary) := by
   leaves_open nearTermSignReading marvelAnywayReading
-    [signArgumentUnderReply, signArgument, signUnderReply, signLine, Line.onGrounds,
-      Line.asPackage, extraordinarySignExcludesOrdinaryPregnancy,
-      ordinarySignsAnswerTheDemand]
+    [bornOfAVirginDefs]
 
 #print axioms reply_leaves_the_pregnancy_open
 
@@ -262,8 +243,6 @@ def wegnerOwnReading : Valuation Claim := fun a =>
 
 /-- Wegner's objection has a model. -/
 theorem wegnerLexical_is_satisfiable : Satisfiable wegnerLexical.premises := by
-  satisfied_by wegnerOwnReading [wegnerLexical, wegnerLine, wegnerClosingSteps,
-    harahYieldsPresentPregnancy, ordinaryPregnancyExcludesVirginity,
-    referentYieldsLexicalConclusion]
+  satisfied_by wegnerOwnReading [bornOfAVirginDefs]
 
 end Testimony.Arguments.BornOfAVirgin

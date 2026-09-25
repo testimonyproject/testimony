@@ -132,15 +132,18 @@ def cite : Claim → AtomMeta
 One strand, and the argument's whole weight is on it. -/
 
 /-- From the predictive reading and Matthew's intent, the criterion follows. -/
+@[bornInBethlehemDefs]
 def toCriterion : Formula Claim :=
   ⋀ [p .micahPredictsBethlehem, p .matthewIntendsFulfilment] ➝ p .messiahBornInBethlehem
 
 /-- From the criterion and the historical claim, the fulfilment follows. -/
+@[bornInBethlehemDefs]
 def toFulfilment : Formula Claim :=
   ⋀ [p .messiahBornInBethlehem, p .jesusBornInBethlehem] ➝ p .jesusSatisfiesCriterion
 
 /-- **The predictive line.** Micah's oracle read as prophecy, Matthew's
 quotation read as a fulfilment claim, and the criterion that follows. -/
+@[bornInBethlehemDefs]
 def predictiveLine : Line Claim :=
   { name := "Predictive reading of Micah 5:2"
   , grounds :=
@@ -151,6 +154,7 @@ def predictiveLine : Line Claim :=
 
 /-- The critical line: the quotation is granted and the prediction denied, so
 the same step delivers nothing. -/
+@[bornInBethlehemDefs]
 def criticalLine : Line Claim :=
   { predictiveLine with
     name := "Critical reading of Micah 5:2 as a near-term oracle"
@@ -161,6 +165,7 @@ def criticalLine : Line Claim :=
 /-! ### Packages -/
 
 /-- The Christian predictive argument. -/
+@[bornInBethlehemDefs]
 def christian : ArgumentPackage Claim :=
   { name := "Christian predictive reading of Micah 5:2"
   , cite := cite
@@ -169,6 +174,7 @@ def christian : ArgumentPackage Claim :=
   , conclusionLabel := fulfillmentLabel jesus bornInBethlehem }
 
 /-- The critical reading: the quotation is granted, the prediction is not. -/
+@[bornInBethlehemDefs]
 def critical : ArgumentPackage Claim :=
   { christian with
     name := "Critical reading of Micah 5:2 as a near-term oracle"
@@ -179,7 +185,7 @@ def critical : ArgumentPackage Claim :=
 /-- Given the Christian premises, the conclusion follows. -/
 @[headline]
 theorem christian_establishes : Establishes christian := by
-  establish [christian, predictiveLine, toCriterion, toFulfilment]
+  establish [bornInBethlehemDefs]
 
 #print axioms christian_establishes
 
@@ -196,8 +202,7 @@ def criticalReading : Valuation Claim := fun a =>
 /-- The critical reading does not establish the conclusion. -/
 @[headline]
 theorem critical_not_establishes : ¬ Establishes critical := by
-  refute_with criticalReading [critical, christian, criticalLine, predictiveLine,
-    toCriterion, toFulfilment]
+  refute_with criticalReading [bornInBethlehemDefs]
 
 #print axioms critical_not_establishes
 
@@ -230,7 +235,6 @@ def everythingHoldsReading : Valuation Claim := fun _ => True
 /-- The Christian package has a model, so `christian_establishes` is not
 vacuous. -/
 theorem christian_is_satisfiable : Satisfiable christian.premises := by
-  satisfied_by everythingHoldsReading [christian, predictiveLine, toCriterion,
-    toFulfilment]
+  satisfied_by everythingHoldsReading [bornInBethlehemDefs]
 
 end Testimony.Arguments.BornInBethlehem
