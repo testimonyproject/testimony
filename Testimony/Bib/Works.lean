@@ -268,6 +268,25 @@ and transcribed by the Christian Classics Ethereal Library. -/
   , place := some "Edinburgh"
   , volume := some "1" }
 
+/-- Luther's 1535 lectures on Galatians, for his answer to faith formed by
+charity: at 3:11, "to speak of formed or unformed faith, a sort of double faith,
+is contrary to the Scriptures"; at 3:12, "if the law requires charity, charity
+is part of the Law and not of faith". Cited as the Project Gutenberg text of
+Theodore Graebner's translation, which is the text that was read; the printed
+edition behind it is not verified in a catalogue. -/
+@[bib_entry] def lutherGalatians : BibEntry := .book
+  { core :=
+      { key := "luther-commentary-galatians-1998"
+      , contributors :=
+          { authors := [.person "Martin" "Luther"]
+          , translators := [.person "Theodore" "Graebner"] }
+      , title := "Commentary on the Epistle to the Galatians"
+      , year := some { value := 1998 }
+      , identifiers :=
+          [ .url "https://www.gutenberg.org/ebooks/1549" (some "2026-09-25") ]
+      , note := some "Project Gutenberg eBook #1549; lectures of 1535." }
+  , publisher := "Project Gutenberg" }
+
 /-- Aquinas's lectures on John, for 6:29 (cap. 6, lect. 3, n. 901): Paul
 distinguishes faith "only from external works", and to believe *in* God as one's
 end "is proper to faith living through the love of charity". The rival reading

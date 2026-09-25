@@ -488,6 +488,29 @@ def baseCite : Claim → AtomMeta
                 (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7") ]
         , tradition := .romanCatholic
         , confidence := .disputed } }
+  | .gal3_11_12LawIsNotOfFaith =>
+    { label := "Galatians 3:11–12 — none is justified by the law; the law is not of faith"
+    , kind := .textual
+      -- Shared ground: Aquinas and the Reformers both read the text; they
+      -- divide over what counts as "the law" in it.
+    , source :=
+        { primary := .scripture [{ ref := .range gal3_11to12 }]
+        , supporting := [.work lutherGalatians (.adLoc ⟨.galatians, 3, 11⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .lawCommandsCharity =>
+    { label := "Love of God and neighbour is what the law commands"
+    , kind := .textual
+      -- Luther on Galatians 3:12: "Does not the Law command charity? … the Law
+      -- commands nothing but charity", citing Deuteronomy 6:5, Exodus 20:6 and
+      -- Matthew 22:40. The texts are not in dispute; what follows from them is.
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .verse deut6_5 }, { ref := .range ⟨.matthew, 22, 37, 22, 40⟩ } ]
+        , supporting := [.work lutherGalatians (.adLoc ⟨.galatians, 3, 12⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .worksOfLawMeansWorksGenerally =>
     { label := "Paul's ἔργα νόμου denotes human works in general"
     , kind := .linguistic

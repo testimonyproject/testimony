@@ -75,8 +75,12 @@ sent" (John 6:28–29). Calvin reads that believing as trust, which "brings
 nothing to God"; Aquinas as faith living through charity, the principle of good
 works. John alone delivers sola fide on Calvin's reading
 (`johannine_strand_establishes`) and not on Aquinas's
-(`johannine_strand_rests_on_believing_as_trust`). It is not yet one of the
-strands of `reformed`, so what follows about three strands is still exact.
+(`johannine_strand_rests_on_believing_as_trust`). Luther answers Aquinas from
+Galatians 3:11–12: the law commands love, and the law is not of faith, so a faith
+formed by charity would justify by the law (`luther_answers_aquinas_from_galatians`)
+— an answer that rests on his step, which Aquinas denies
+(`luther_answer_rests_on_his_step`). The strand is not yet one of the strands of
+`reformed`, so what follows about three strands is still exact.
 
 Encoding three strands yields a result no single strand could: no disputed
 premise is load-bearing on its own, because any strand carries the conclusion
@@ -251,6 +255,8 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{35}\\) | John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son ※ | textual | Christian, historical-grammatical, consensus | John 3:16-18; John 3:36; John 5:24; John 20:31 |
 | \\(P_{36}\\) | The believing of John 6:29 is trust, which brings nothing and receives Christ | interpretive | Reformed Protestant, disputed | [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29 |
 | \\(P_{37}\\) | The believing of John 6:29 is faith living through charity, the source of works | interpretive | Roman Catholic, disputed | [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 |
+| \\(P_{38}\\) | Galatians 3:11–12 — none is justified by the law; the law is not of faith | textual | Christian, historical-grammatical, consensus | Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11 |
+| \\(P_{39}\\) | Love of God and neighbour is what the law commands | textual | Christian, historical-grammatical, consensus | Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12 |
 
 </div>
 
@@ -3766,6 +3772,42 @@ speaks of the righteousness faith receives from Christ, and rated `plausible`:
 no cited source grants the strand's grounds and denies that step, but none argues
 the bridge from John's vocabulary to Paul's at length either.
 
+### Luther's answer, from Galatians 3
+
+Aquinas's reading is not left standing unanswered. Luther meets it head-on in
+his lectures on Galatians. At 3:11: "The scholastics misconstrue this passage by
+saying: 'The just shall live by faith, if it is a working faith, or a faith
+formed and performed by charitable works.' … To speak of formed or unformed
+faith, a sort of double faith, is contrary to the Scriptures." At 3:12: "Does
+not the Law command charity? … If the law requires charity, charity is part of
+the Law and not of faith." So a faith that justifies because charity forms it
+justifies by the law after all — and "the law is not of faith" (Galatians 3:12).
+
+The argument is encoded as a line of its own (`lutherLine`). Its grounds are
+both things Aquinas grants: the text of Galatians 3:11–12, and that love of God
+and neighbour is what the law commands (Deuteronomy 6:5). Its step is Luther's:
+from those, the believing that justifies is not faith formed by charity.
+Granted the step, Aquinas's reading of John 6:29 falls
+(`luther_answers_aquinas_from_galatians`). But the step is the whole of the
+answer: the texts alone do not exclude his reading
+(`luther_answer_rests_on_his_step`), and the step is rated `disputed`, because
+Aquinas grants both of its grounds and denies its conclusion. Nor does removing
+Aquinas's reading establish Calvin's: that the believing of 6:29 is not formed
+by charity is weaker than that it is trust.
+
+Calvin makes the neighbouring argument in the *Institutes* (III.xi.19), which
+the library already cites for `worksOfLawMeansWorksGenerally`: against those
+who "pretend that the works excluded are ceremonial, not moral works", he cites
+Galatians 3:10 and 3:12 — the curse on everyone who does not continue in *all*
+that the law commands — and concludes that "the whole Law is spoken of when the
+power of justifying is denied to it". Aquinas's distinction is between
+external and inward works rather than ceremonial and moral ones, so it is
+Luther's argument on 3:11–12, not Calvin's, that meets him directly.
+
+The Catholic reply rests on Galatians 5:6, "faith working through love", which
+Trent cites (Session VI, ch. 7). How Luther and Calvin read that verse is not
+yet encoded.
+
 ### What is not yet done
 
 The strand is encoded alone, as a package of its own. It is **not** yet part of
@@ -3991,5 +4033,141 @@ vacuous.
 
 ```lean
 theorem johannineCase_is_satisfiable : Satisfiable johannineCase.premises
+-- axioms: propext, Quot.sound
+```
+
+#### Luther's answer
+
+<a id="lutherOnGalatiansThree"></a>
+**`lutherOnGalatiansThree`**
+
+Luther's step, on Galatians 3:11–12: the law commands charity, and the law
+is not of faith, so faith formed by charity would justify by the law. Rated
+`disputed`: Aquinas grants both grounds — the text, and that the law commands
+love — and denies the conclusion, holding that justifying faith is formed by
+charity.
+
+```lean
+def lutherOnGalatiansThree : Source :=
+  {
+    primary :=
+      Reference.work Bib.lutherGalatians
+        (Bib.Locus.adLoc { book := Book.galatians, chapter := 3, verse := 12 }),
+    supporting :=
+      [Reference.work Bib.lutherGalatians
+          (Bib.Locus.adLoc
+            { book := Book.galatians, chapter := 3, verse := 11 })],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="lutherLine"></a>
+**`lutherLine`** — Luther on Galatians 3:11–12 (against faith formed by charity)
+
+**Luther's line.** From Galatians 3:11–12 and the law's command of love to
+the denial of Aquinas's reading: the believing that justifies is not faith formed
+by charity, since charity is what the law commands and the law is not of
+faith.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{38} \\
+\text{(2)} \quad &amp; P_{39} \\
+\text{(3)} \quad &amp; (P_{38} \land P_{39}) \rightarrow \lnot P_{37} \\[4pt]
+\vdash \quad &amp; \lnot P_{37}
+\end{aligned}
+\]
+</div>
+
+<a id="lutherOnGalatians"></a>
+**`lutherOnGalatians`** — Luther on Galatians 3:11–12 (against faith formed by charity)
+
+Luther's answer to Aquinas as an argument: what Aquinas grants, with
+Luther's step, against the reading of 6:29 as faith formed by charity.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{38} \\
+\text{(2)} \quad &amp; P_{39} \\
+\text{(3)} \quad &amp; (P_{38} \land P_{39}) \rightarrow \lnot P_{37} \\[4pt]
+\vdash \quad &amp; \lnot P_{37}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="galatiansTextsAlone"></a>
+**`galatiansTextsAlone`** — Galatians 3:11–12 and the law's command of love, without Luther's step
+
+The same grounds without Luther's step: Galatians 3:11–12, and that the law
+commands love.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{38} \\
+\text{(2)} \quad &amp; P_{39} \\[4pt]
+\vdash \quad &amp; \lnot P_{37}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="luther_answers_aquinas_from_galatians"></a>
+**`luther_answers_aquinas_from_galatians`**
+
+**Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants —
+Galatians 3:11–12, and that the law commands love — and Luther's step, and the
+believing of John 6:29 is not faith formed by charity: a faith that justified
+because charity formed it would justify by the law, and the law is not of faith.
+What this removes is Aquinas's reading; it does not by itself establish
+Calvin's.
+
+```lean
+theorem luther_answers_aquinas_from_galatians : Establishes lutherOnGalatians
+-- axioms: propext, Quot.sound
+```
+
+<a id="luther_answer_rests_on_his_step"></a>
+**`luther_answer_rests_on_his_step`**
+
+**Luther's answer rests on his step.** The texts alone do not exclude
+Aquinas's reading: in Aquinas's world Galatians 3:11–12 holds, the law commands
+love, and the believing of 6:29 is faith formed by charity. What decides it is
+whether faith formed by charity counts as justification "by the law" — Luther's
+step, which Aquinas denies.
+
+```lean
+theorem luther_answer_rests_on_his_step : ¬Establishes galatiansTextsAlone
+-- axioms: propext, Quot.sound
+```
+
+<a id="lutherReading"></a>
+**`lutherReading`**
+
+The Reformed world, in which the believing of John 6:29 is not faith formed
+by charity, and everything else holds.
+
+```lean
+def lutherReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.johannineBelievingIsFormedByCharity => False
+    | x => True
+```
+
+<a id="lutherOnGalatians_is_satisfiable"></a>
+**`lutherOnGalatians_is_satisfiable`**
+
+Luther's package has a model, so `luther_answers_aquinas_from_galatians` is
+not vacuous.
+
+```lean
+theorem lutherOnGalatians_is_satisfiable : Satisfiable
+    lutherOnGalatians.premises
 -- axioms: propext, Quot.sound
 ```

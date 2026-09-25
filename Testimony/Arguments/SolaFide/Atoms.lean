@@ -144,6 +144,13 @@ inductive Claim
   living through charity, the source of good works (Aquinas). The rival reading
   of the hinge, and Trent's (Session VI, ch. 7). -/
   | johannineBelievingIsFormedByCharity
+  /-- Galatians 3:11–12 — no one is justified before God by the law; and the law
+  is not of faith, for "the one who does them shall live by them". -/
+  | gal3_11_12LawIsNotOfFaith
+  /-- Love of God and neighbour is what the law commands (Deuteronomy 6:5; the
+  two great commandments). Common ground: Luther argues from it, and Aquinas
+  would not deny it. -/
+  | lawCommandsCharity
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

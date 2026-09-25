@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **88 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**4 arguments**, carrying **90 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -97,6 +97,8 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `sola_fide_not_forced_without_the_apocalyptic_reading` | `¬Framework.SkepticallyAccepted withoutApocalyptic.defeats ⟨Party.dominical, ⋯⟩` | **Without the apocalyptic reading, sola fide is no longer forced.** Trent, heard against the three Reformed strands alone, defends itself: it defeats each of them back. |
 | `johannine_strand_establishes` | `Establishes johannineCase` | **John alone delivers sola fide.** Grant that the believing of 6:29 is trust, and the work God requires is no work at all: sola fide follows from John without Paul, Luke or Acts. |
 | `johannine_strand_rests_on_believing_as_trust` | `¬Establishes thomistOnJohn` | **The Johannine strand rests on believing as trust.** Grant Aquinas every text the strand reads, and read their believing as he does — faith living through charity — and sola fide … |
+| `luther_answers_aquinas_from_galatians` | `Establishes lutherOnGalatians` | **Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants — Galatians 3:11–12, and that the law commands love — and Luther's step, and the believing of John 6:29 is … |
+| `luther_answer_rests_on_his_step` | `¬Establishes galatiansTextsAlone` | **Luther's answer rests on his step.** The texts alone do not exclude Aquinas's reading: in Aquinas's world Galatians 3:11–12 holds, the law commands love, and the believing of … |
 
 ### [Sola scriptura](./arguments/sola-scriptura.md)
 
@@ -160,6 +162,10 @@ work of God, that you believe in him whom he has sent" (John 6:29) delivers sola
 fide if its believing is trust, as Calvin reads it
 (`johannine_strand_establishes`), and not if it is faith living through
 charity, as Aquinas reads it (`johannine_strand_rests_on_believing_as_trust`).
+Luther answers that reading from Galatians 3:11–12 — charity is what the law
+commands, and the law is not of faith (`luther_answers_aquinas_from_galatians`)
+— though the texts alone do not settle it; his step does
+(`luther_answer_rests_on_his_step`).
 Folding it into the Reformed case changes every joint result above, so it is a
 step of its own ([#86]).
 

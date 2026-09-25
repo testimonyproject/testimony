@@ -195,6 +195,15 @@ more. -/
 the one who is forgiven little loves little." -/
 @[nolint defsWithUnderscore] def luke7_47 : Passage := ⟨.luke, 7, 47⟩
 
+/-- Deuteronomy 6:5 — "You shall love the LORD your God with all your heart and
+with all your soul and with all your might": love as what the law commands. -/
+@[nolint defsWithUnderscore] def deut6_5 : Passage := ⟨.deuteronomy, 6, 5⟩
+
+/-- Galatians 3:11–12 — no one is justified before God by the law, for "the
+righteous shall live by faith"; but the law is not of faith: "the one who does
+them shall live by them". -/
+@[nolint defsWithUnderscore] def gal3_11to12 : Pericope := ⟨.galatians, 3, 11, 3, 12⟩
+
 /-- John 3:16–18 — whoever believes in the Son has eternal life; whoever does not
 believe is condemned already. -/
 @[nolint defsWithUnderscore] def john3_16to18 : Pericope := ⟨.john, 3, 16, 3, 18⟩

@@ -75,8 +75,12 @@ sent" (John 6:28–29). Calvin reads that believing as trust, which "brings
 nothing to God"; Aquinas as faith living through charity, the principle of good
 works. John alone delivers sola fide on Calvin's reading
 (`johannine_strand_establishes`) and not on Aquinas's
-(`johannine_strand_rests_on_believing_as_trust`). It is not yet one of the
-strands of `reformed`, so what follows about three strands is still exact.
+(`johannine_strand_rests_on_believing_as_trust`). Luther answers Aquinas from
+Galatians 3:11–12: the law commands love, and the law is not of faith, so a faith
+formed by charity would justify by the law (`luther_answers_aquinas_from_galatians`)
+— an answer that rests on his step, which Aquinas denies
+(`luther_answer_rests_on_his_step`). The strand is not yet one of the strands of
+`reformed`, so what follows about three strands is still exact.
 
 Encoding three strands yields a result no single strand could: no disputed
 premise is load-bearing on its own, because any strand carries the conclusion
