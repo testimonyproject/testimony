@@ -3765,19 +3765,20 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
 <a id="everyPartyDefeated"></a>
 **`everyPartyDefeated`**
 
-A defeater for every party — the reason nothing prevails outright.
+Why nothing prevails outright: a defeater for every party.
 
-```lean
-def everyPartyDefeated : Witness.Table Party :=
-  [(Party.pauline, Party.trent),
-    (Party.dominical, Party.trent),
-    (Party.apostolic, Party.trent),
-    (Party.trent, Party.pauline),
-    (Party.apocalyptic, Party.pauline),
-    (Party.sanders, Party.pauline),
-    (Party.critics, Party.sanders),
-    (Party.jervell, Party.apostolic)]
-```
+**Nothing prevails outright: every party is defeated by another.**
+
+- *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+- *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*.
+- *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
+- *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
+- *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
+- *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
+- *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
+- *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
+
+Each defeat named here is a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="nothing_prevails_over_sola_fide"></a>
 **`nothing_prevails_over_sola_fide`**
@@ -3801,10 +3802,14 @@ Why Trent cannot be defended: the apocalyptic reading attacks it, and every
 party that answers the apocalyptic reading — Paul, Luke, Acts — also attacks
 Trent.
 
-```lean
-def trentAnsweredByTheApocalypticReading : Witness.Table Party :=
-  [(Party.trent, Party.apocalyptic)]
-```
+***Trent, against 'not by works'* cannot be defended: no admissible position holds it.**
+
+- *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and every answer to *Apocalyptic reading, against faith as the condition* fails:
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, but conflicts with *Trent, against 'not by works'*: *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Sola fide from Jesus' words (Luke 7:50)* defeats *Apocalyptic reading, against faith as the condition*, but conflicts with *Trent, against 'not by works'*: *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*.
+  - *Sola fide from Peter (Acts 15:9–11)* defeats *Apocalyptic reading, against faith as the condition*, but conflicts with *Trent, against 'not by works'*: *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
+
+Each defeat named here is a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="trent_indefensible"></a>
 **`trent_indefensible`**
@@ -3828,10 +3833,12 @@ Why the apocalyptic reading cannot be defended: the dominical case attacks
 it, and the only party that answers the dominical case is Trent, which the
 apocalyptic reading itself attacks.
 
-```lean
-def apocalypticAnsweredByLuke : Witness.Table Party :=
-  [(Party.apocalyptic, Party.dominical)]
-```
+***Apocalyptic reading, against faith as the condition* cannot be defended: no admissible position holds it.**
+
+- *Sola fide from Jesus' words (Luke 7:50)* defeats *Apocalyptic reading, against faith as the condition*, and every answer to *Sola fide from Jesus' words (Luke 7:50)* fails:
+  - *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*, but conflicts with *Apocalyptic reading, against faith as the condition*: *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*.
+
+Each defeat named here is a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="apocalyptic_indefensible"></a>
 **`apocalyptic_indefensible`**
@@ -3845,6 +3852,29 @@ theorem apocalyptic_indefensible : ∀ (S : Set Party), Framework.Admissible
     solaFideDispute.defeats S → Party.apocalyptic ∉ S
 -- axioms: propext, Classical.choice, Quot.sound
 ```
+
+<a id="dominicalCaseForced"></a>
+**`dominicalCaseForced`**
+
+Why the dominical case is accepted on every resolution: it answers Trent
+itself, and neither of its rivals can be defended — by the two strategies
+above.
+
+***Sola fide from Jesus' words (Luke 7:50)* is accepted on every resolution.**
+
+- *Sola fide from Jesus' words (Luke 7:50)* answers each of its attackers itself:
+  - *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+- No party in conflict with it can be defended:
+  - *Trent, against 'not by works'* cannot:
+    - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and every answer to *Apocalyptic reading, against faith as the condition* fails:
+      - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, but conflicts with *Trent, against 'not by works'*: *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+      - *Sola fide from Jesus' words (Luke 7:50)* defeats *Apocalyptic reading, against faith as the condition*, but conflicts with *Trent, against 'not by works'*: *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*.
+      - *Sola fide from Peter (Acts 15:9–11)* defeats *Apocalyptic reading, against faith as the condition*, but conflicts with *Trent, against 'not by works'*: *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
+  - *Apocalyptic reading, against faith as the condition* cannot:
+    - *Sola fide from Jesus' words (Luke 7:50)* defeats *Apocalyptic reading, against faith as the condition*, and every answer to *Sola fide from Jesus' words (Luke 7:50)* fails:
+      - *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*, but conflicts with *Apocalyptic reading, against faith as the condition*: *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*.
+
+Each defeat named here is a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="dominical_case_skeptically_accepted"></a>
 **`dominical_case_skeptically_accepted`**
@@ -3880,6 +3910,22 @@ def withoutApocalyptic : Dispute Claim { i // i ≠ Party.apocalyptic } :=
   solaFideDispute.restrict fun x =>
     x ≠ Party.apocalyptic
 ```
+
+<a id="trentDefendsItselfWithoutTheApocalypticReading"></a>
+**`trentDefendsItselfWithoutTheApocalypticReading`**
+
+Why, without the apocalyptic reading, Trent can be held: alone, it answers
+each Reformed strand that attacks it.
+
+***Sola fide from Jesus' words (Luke 7:50)* is not accepted on every resolution.**
+
+- *Trent, against 'not by works'* can be held alone; *Trent, against 'not by works'* conflicts with *Sola fide from Jesus' words (Luke 7:50)*: *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*, and *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+- *Trent, against 'not by works'* does not defeat itself, and answers each attack on it:
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*.
+  - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
+
+Each defeat named here is a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="sola_fide_not_forced_without_the_apocalyptic_reading"></a>
 **`sola_fide_not_forced_without_the_apocalyptic_reading`**

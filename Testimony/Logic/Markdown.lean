@@ -278,6 +278,28 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
         confidence s.confidence ++ "*: " ++ source s) ++
       (if e.inferences.isEmpty then "unrated*" else "")) ++ "\n"
 
+/-- One piece of a generated sentence. A defeat that a `Because` on the page
+explains links its verb to it. -/
+def seg (links : List Page.BecauseLink) : Page.Seg → String
+  | .text t => escape t
+  | .party n => "*" ++ escape n ++ "*"
+  | .defeat a b =>
+    let verb := match Page.becauseFor links a b with
+      | some d => "[defeats](#" ++ d ++ ")"
+      | none => "defeats"
+    "*" ++ escape a ++ "* " ++ verb ++ " *" ++ escape b ++ "*"
+
+/-- A verdict: its claim in bold, then its reasons as a nested list, then where
+its defeats come from. -/
+def verdict (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
+  let line (segs : List Page.Seg) := String.join (segs.map (seg links))
+  "**" ++ line v.claim ++ "**\n\n" ++
+  String.join (v.reasons.map fun (d, segs) =>
+    String.join (List.replicate d "  ") ++ "- " ++ line segs ++ "\n") ++
+  (if table.isEmpty then "" else
+    "\nEach defeat named here is a cell of the defeat table, [`" ++ table ++ "`](#" ++
+    table ++ "), computed from the parties' premises and checked by the kernel.\n")
+
 /-- Render one item against the page's atom ordering. -/
 def item [DecidableEq α] (order : List α) : Item α → String
   | .prose md => demote md ++ "\n"
@@ -307,6 +329,8 @@ def item [DecidableEq α] (order : List α) : Item α → String
       leanBlock stmt
   | .because d doc e =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ explanation order e
+  | .verdict d doc v links table =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ verdict v links table
 
 /-- The body of a generated page: the legend, then every item in source order.
 

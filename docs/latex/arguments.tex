@@ -2674,23 +2674,27 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
     spec := isaiahFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{replies\allowbreak{}Heard\allowbreak{}In\allowbreak{}Stages}}\par\nobreak\noindent
-How the scriptural reading prevails, in stages: nothing attacks Postell's two counterexamples, so they come first; they answer the critic, the only party that attacks the scriptural reading, Berry and Motyer, so those three come next.
+How the scriptural reading prevails, in stages: nothing attacks Postell's two counterexamples, so they come first; they answer the critic, the only party that attacks the scriptural reading, Berry and Motyer, so those three come next. And the critic does not join them: the scriptural reading attacks it, and nothing among the five answers the scriptural reading.
 
-{\small\begin{verbatim}
-def repliesHeardInStages : List (List Party) :=
-  [[Party.postell, Party.micah],
-    [Party.scriptural,
-      Party.berry,
-      Party.motyer]]
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{critic\allowbreak{}Left\allowbreak{}Unanswered}}\par\nobreak\noindent
-And why the critic does not join them: the scriptural reading attacks it, and nothing among the five answers the scriptural reading.
-
-{\small\begin{verbatim}
-def criticLeftUnanswered : Witness.Table Party :=
-  [(Party.critical,
-      Party.scriptural)]
-\end{verbatim}}
+\paragraph{What the dispute forces is exactly \emph{Postell's parity argument against the near-term exclusion}, \emph{Postell's Micah counterexample to the near-term exclusion}, \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, \emph{Berry's objection to the near-term exclusion}, \emph{Motyer's reply to the near-term reading}.}
+\begin{itemize}
+\item Stage 1: \emph{Postell's parity argument against the near-term exclusion}, \emph{Postell's Micah counterexample to the near-term exclusion}.
+\begin{itemize}
+\item \emph{Postell's parity argument against the near-term exclusion} is defeated by nothing.
+\item \emph{Postell's Micah counterexample to the near-term exclusion} is defeated by nothing.
+\end{itemize}
+\item Stage 2: \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, \emph{Berry's objection to the near-term exclusion}, \emph{Motyer's reply to the near-term reading}.
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, and \emph{Postell's parity argument against the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Berry's objection to the near-term exclusion}, and \emph{Postell's parity argument against the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Motyer's reply to the near-term reading}, and \emph{Postell's parity argument against the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\end{itemize}
+\item Nothing else is forced:
+\begin{itemize}
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}, and nothing forced defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}.
+\end{itemize}
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}prevails\_\allowbreak{}once\_\allowbreak{}replies\_\allowbreak{}are\_\allowbreak{}heard}}\par\nobreak\noindent
 \textbf{Heard out, the scriptural reading prevails.} Nothing defeats either of Postell's counterexamples, so both are in the grounded extension from the first step. They defeat the critic — the only party that defeats the scriptural reading, Berry or Motyer — so at the second step all three join them; and nothing defends the critic.
 
@@ -2703,11 +2707,11 @@ theorem scriptural_reading_prevails_once_replies_are_heard :
 \par\medskip\noindent\textbf{\texttt{critic\allowbreak{}Answered\allowbreak{}By\allowbreak{}Postell}}\par\nobreak\noindent
 Why the critical denial cannot be defended: Postell attacks it, and nothing answers Postell.
 
-{\small\begin{verbatim}
-def criticAnsweredByPostell : Witness.Table Party :=
-  [(Party.critical,
-      Party.postell)]
-\end{verbatim}}
+\paragraph{\emph{Critical denial of the predictive reading of Isaiah 7:14} cannot be defended: no admissible position holds it.}
+\begin{itemize}
+\item \emph{Postell's parity argument against the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}, and nothing defeats \emph{Postell's parity argument against the near-term exclusion}.
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}denial\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{The critical denial cannot be defended.} No admissible set contains it: Postell defeats it, and nothing defeats Postell.
 
@@ -2746,6 +2750,15 @@ def unanswered : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical] }
       [Party.scriptural,
         Party.critical]
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{each\allowbreak{}Defeats\allowbreak{}The\allowbreak{}Other}}\par\nobreak\noindent
+Why nothing prevails unanswered: the two defeat each other.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}.
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}unanswered}}\par\nobreak\noindent
 \textbf{Unanswered, nothing prevails.} The scriptural reading and the critical denial defeat each other, so neither is forced, and the grounded extension is empty.
 
@@ -2766,6 +2779,16 @@ def motyerAlone : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical,
         Party.critical,
         Party.motyer]
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{motyer\allowbreak{}Ties\allowbreak{}With\allowbreak{}The\allowbreak{}Critic}}\par\nobreak\noindent
+Why Motyer alone does not settle it: a defeater for each of the three.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}.
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Motyer's reply to the near-term reading}.
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}on\_\allowbreak{}motyer\_\allowbreak{}alone}}\par\nobreak\noindent
 \textbf{Motyer alone does not settle it.} He and the critic defeat each other, as the scriptural reading and the critic do, so nothing is forced. His inference is contested as the critic's premises are, and a contested reply cannot carry the verdict alone.
 
@@ -2782,6 +2805,23 @@ def withoutPostell : Dispute Claim { i // i ≠ Party.postell } :=
   isaiahDispute.restrict fun x =>
     x ≠ Party.postell
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{micah\allowbreak{}Carries\allowbreak{}The\allowbreak{}Verdict}}\par\nobreak\noindent
+How the scriptural reading prevails without Postell's Isaiah argument, in stages: the Micah counterexample first, then the three it defends.
+
+\paragraph{Grounded: \emph{Postell's Micah counterexample to the near-term exclusion}, \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, \emph{Berry's objection to the near-term exclusion}, \emph{Motyer's reply to the near-term reading}.}
+\begin{itemize}
+\item Stage 1: \emph{Postell's Micah counterexample to the near-term exclusion}.
+\begin{itemize}
+\item \emph{Postell's Micah counterexample to the near-term exclusion} is defeated by nothing.
+\end{itemize}
+\item Stage 2: \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, \emph{Berry's objection to the near-term exclusion}, \emph{Motyer's reply to the near-term reading}.
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, and \emph{Postell's Micah counterexample to the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Berry's objection to the near-term exclusion}, and \emph{Postell's Micah counterexample to the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Motyer's reply to the near-term reading}, and \emph{Postell's Micah counterexample to the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\end{itemize}
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}prevails\_\allowbreak{}without\_\allowbreak{}postell}}\par\nobreak\noindent
 \textbf{Without Postell's Isaiah argument, the scriptural reading still prevails.} His Micah counterexample is defeated by nothing, and it defends the scriptural reading against the critic, as the Isaiah argument did. An attack on the grounds of either counterexample leaves the verdict standing.
 
@@ -2800,6 +2840,17 @@ def withoutParity : Dispute Claim { i // i ∉ [Party.postell, Party.micah] } :=
       [Party.postell,
         Party.micah]
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{every\allowbreak{}Reply\allowbreak{}Ties\allowbreak{}With\allowbreak{}The\allowbreak{}Critic}}\par\nobreak\noindent
+Why nothing prevails without the counterexamples: the critic defeats every reply it faces, and the replies defeat it.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}.
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Berry's objection to the near-term exclusion}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Motyer's reply to the near-term reading}.
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}without\_\allowbreak{}the\_\allowbreak{}counterexamples}}\par\nobreak\noindent
 \textbf{Without the counterexamples, nothing prevails.} Berry and Motyer each tie with the critic, as the scriptural reading does, so every party is defeated by someone. The verdict rests on the one kind of reply the critic cannot answer — an oracle on the Assyrian timeline, read messianically — and so on the rating of that inference.
 
@@ -3031,6 +3082,16 @@ def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
       decide (wegnerPartyDefeats i j),
     spec := wegnerFinite._proof_2 }
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{every\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
+Why nothing prevails: a defeater for each party.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}.
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{The near-term reply: a sign need not be a miracle}.
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}over\_\allowbreak{}wegner}}\par\nobreak\noindent
 \textbf{Nothing prevails.} Every party is defeated by someone — Wegner and the reply by the fathers, the fathers by both — so nothing is forced, and the grounded extension is empty.
 
@@ -3039,6 +3100,23 @@ theorem nothing_prevails_over_wegner : Framework.grounded
     wegnerDispute.defeats = ∅
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{fathers\allowbreak{}Alone}}\par\nobreak\noindent
+Why the fathers alone are one resolution.
+
+\paragraph{A maximal defensible position: \emph{The fathers' sign argument (Isaiah 7:11, 14)}.}
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} does not defeat itself, and answers each attack on it:
+\begin{itemize}
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}, and \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}.
+\item \emph{The near-term reply: a sign need not be a miracle} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}, and \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{The near-term reply: a sign need not be a miracle}.
+\end{itemize}
+\item Nothing can be added to it:
+\begin{itemize}
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} conflicts with \emph{The fathers' sign argument (Isaiah 7:11, 14)}: \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}, and \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}.
+\item \emph{The near-term reply: a sign need not be a miracle} conflicts with \emph{The fathers' sign argument (Isaiah 7:11, 14)}: \emph{The near-term reply: a sign need not be a miracle} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}, and \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{The near-term reply: a sign need not be a miracle}.
+\end{itemize}
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{sign\_\allowbreak{}is\_\allowbreak{}one\_\allowbreak{}resolution}}\par\nobreak\noindent
 \textbf{One resolution: the fathers.} The sign argument alone is admissible — it defeats both of its defeaters — and it is in conflict with both of the other parties, so no larger set is.
 
@@ -3047,6 +3125,22 @@ theorem sign_is_one_resolution : Framework.Preferred wegnerDispute.defeats
     {WegnerParty.sign}
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}With\allowbreak{}The\allowbreak{}Reply}}\par\nobreak\noindent
+Why Wegner with the reply is the other resolution.
+
+\paragraph{A maximal defensible position: \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, \emph{The near-term reply: a sign need not be a miracle}.}
+\begin{itemize}
+\item None of \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, \emph{The near-term reply: a sign need not be a miracle} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, and \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{The near-term reply: a sign need not be a miracle}, and \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\end{itemize}
+\item Nothing can be added to it:
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} conflicts with \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}: \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, and \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\end{itemize}
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{wegner\_\allowbreak{}is\_\allowbreak{}the\_\allowbreak{}other\_\allowbreak{}resolution}}\par\nobreak\noindent
 \textbf{The other resolution: Wegner, with the near-term reply.} Neither defeats the other, and between them they answer the fathers, who are the only party to defeat either. The fathers are in conflict with both, so no larger set is admissible.
 
@@ -3084,6 +3178,15 @@ def signAgainstWegner : Dispute Claim { i // i ∈ [WegnerParty.wegner,
       [WegnerParty.wegner,
         WegnerParty.sign]
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}And\allowbreak{}The\allowbreak{}Fathers\allowbreak{}Tie}}\par\nobreak\noindent
+Why nothing prevails without the reply: Wegner and the fathers defeat each other.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}.
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}without\_\allowbreak{}the\_\allowbreak{}reply}}\par\nobreak\noindent
 \textbf{Without the reply, nothing prevails either.} Wegner and the fathers defeat each other, so the reply is not what keeps the fathers from prevailing: Wegner's rebuttal does, because the fathers' weakest link is no stronger than his.
 
@@ -5434,19 +5537,20 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
 \paragraph*{What the dispute decides}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{every\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
-A defeater for every party — the reason nothing prevails outright.
+Why nothing prevails outright: a defeater for every party.
 
-{\small\begin{verbatim}
-def everyPartyDefeated : Witness.Table Party :=
-  [(Party.pauline, Party.trent),
-    (Party.dominical, Party.trent),
-    (Party.apostolic, Party.trent),
-    (Party.trent, Party.pauline),
-    (Party.apocalyptic, Party.pauline),
-    (Party.sanders, Party.pauline),
-    (Party.critics, Party.sanders),
-    (Party.jervell, Party.apostolic)]
-\end{verbatim}}
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Paul (Galatians 2:16)}.
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}.
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Peter (Acts 15:9–11)}.
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Trent, against 'not by works'}.
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Apocalyptic reading, against faith as the condition}.
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Covenantal nomism (Sanders, Dunn)}.
+\item \emph{Covenantal nomism (Sanders, Dunn)} defeats \emph{Variegated nomism (Gathercole, Carson et al.)}.
+\item \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Law-observant Luke (Jervell)}.
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}over\_\allowbreak{}sola\_\allowbreak{}fide}}\par\nobreak\noindent
 \textbf{Nothing prevails outright.} Every party is defeated by some other: each Reformed strand by Trent, Trent by each strand and by the apocalyptic reading, the apocalyptic reading by Paul, Sanders by the critics, the critics by Sanders, Jervell by Acts. The grounded extension — what the dispute forces, before any choice between rivals — is empty.
 
@@ -5458,10 +5562,16 @@ theorem nothing_prevails_over_sola_fide : Framework.grounded
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Answered\allowbreak{}By\allowbreak{}The\allowbreak{}Apocalyptic\allowbreak{}Reading}}\par\nobreak\noindent
 Why Trent cannot be defended: the apocalyptic reading attacks it, and every party that answers the apocalyptic reading — Paul, Luke, Acts — also attacks Trent.
 
-{\small\begin{verbatim}
-def trentAnsweredByTheApocalypticReading : Witness.Table Party :=
-  [(Party.trent, Party.apocalyptic)]
-\end{verbatim}}
+\paragraph{\emph{Trent, against 'not by works'} cannot be defended: no admissible position holds it.}
+\begin{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition} defeats \emph{Trent, against 'not by works'}, and every answer to \emph{Apocalyptic reading, against faith as the condition} fails:
+\begin{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Paul (Galatians 2:16)}.
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}), and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}.
+\item \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Peter (Acts 15:9–11)}.
+\end{itemize}
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{Trent cannot be defended.} The apocalyptic reading defeats it — it holds "not by works" on grounds Trent does not contradict — and the only parties that defeat the apocalyptic reading are the Reformed strands, each of which also defeats Trent. No position can hold Trent and answer the apocalyptic reading at once.
 
@@ -5473,10 +5583,14 @@ theorem trent_indefensible : ∀ (S : Set Party), Framework.Admissible
 \par\medskip\noindent\textbf{\texttt{apocalyptic\allowbreak{}Answered\allowbreak{}By\allowbreak{}Luke}}\par\nobreak\noindent
 Why the apocalyptic reading cannot be defended: the dominical case attacks it, and the only party that answers the dominical case is Trent, which the apocalyptic reading itself attacks.
 
-{\small\begin{verbatim}
-def apocalypticAnsweredByLuke : Witness.Table Party :=
-  [(Party.apocalyptic, Party.dominical)]
-\end{verbatim}}
+\paragraph{\emph{Apocalyptic reading, against faith as the condition} cannot be defended: no admissible position holds it.}
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Apocalyptic reading, against faith as the condition}, and every answer to \emph{Sola fide from Jesus' words (Luke 7:50)} fails:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}, but conflicts with \emph{Apocalyptic reading, against faith as the condition}: \emph{Apocalyptic reading, against faith as the condition} defeats \emph{Trent, against 'not by works'}.
+\end{itemize}
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{Nor can the apocalyptic reading.} The dominical case defeats it, and the only party that defeats the dominical case is Trent — which the apocalyptic reading itself defeats.
 
@@ -5485,6 +5599,36 @@ theorem apocalyptic_indefensible : ∀ (S : Set Party), Framework.Admissible
     solaFideDispute.defeats S → Party.apocalyptic ∉ S
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{dominical\allowbreak{}Case\allowbreak{}Forced}}\par\nobreak\noindent
+Why the dominical case is accepted on every resolution: it answers Trent itself, and neither of its rivals can be defended — by the two strategies above.
+
+\paragraph{\emph{Sola fide from Jesus' words (Luke 7:50)} is accepted on every resolution.}
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} answers each of its attackers itself:
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\end{itemize}
+\item No party in conflict with it can be defended:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} cannot:
+\begin{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition} defeats \emph{Trent, against 'not by works'}, and every answer to \emph{Apocalyptic reading, against faith as the condition} fails:
+\begin{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Paul (Galatians 2:16)}.
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}), and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}.
+\item \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Peter (Acts 15:9–11)}.
+\end{itemize}
+\end{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition} cannot:
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Apocalyptic reading, against faith as the condition}, and every answer to \emph{Sola fide from Jesus' words (Luke 7:50)} fails:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}, but conflicts with \emph{Apocalyptic reading, against faith as the condition}: \emph{Apocalyptic reading, against faith as the condition} defeats \emph{Trent, against 'not by works'}.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{dominical\_\allowbreak{}case\_\allowbreak{}skeptically\_\allowbreak{}accepted}}\par\nobreak\noindent
 \textbf{Sola fide from Luke 7:50 is accepted on every resolution.} Its only defeater is Trent, which no admissible position can hold; it defeats back the only other party it conflicts with, the apocalyptic reading, which no admissible position can hold either. So every preferred extension — every maximal defensible position — contains it.
 
@@ -5503,6 +5647,20 @@ def withoutApocalyptic : Dispute Claim { i // i ≠ Party.apocalyptic } :=
   solaFideDispute.restrict fun x =>
     x ≠ Party.apocalyptic
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Defends\allowbreak{}Itself\allowbreak{}Without\allowbreak{}The\allowbreak{}Apocalyptic\allowbreak{}Reading}}\par\nobreak\noindent
+Why, without the apocalyptic reading, Trent can be held: alone, it answers each Reformed strand that attacks it.
+
+\paragraph{\emph{Sola fide from Jesus' words (Luke 7:50)} is not accepted on every resolution.}
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} can be held alone; \emph{Trent, against 'not by works'} conflicts with \emph{Sola fide from Jesus' words (Luke 7:50)}: \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}, and \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Trent, against 'not by works'} does not defeat itself, and answers each attack on it:
+\begin{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Paul (Galatians 2:16)}.
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}), and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}.
+\item \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Peter (Acts 15:9–11)}.
+\end{itemize}
+\end{itemize}
+\noindent Each defeat named here is a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the parties' premises and checked by the kernel.
 \par\medskip\noindent\textbf{\texttt{sola\_\allowbreak{}fide\_\allowbreak{}not\_\allowbreak{}forced\_\allowbreak{}without\_\allowbreak{}the\_\allowbreak{}apocalyptic\_\allowbreak{}reading}}\par\nobreak\noindent
 \textbf{Without the apocalyptic reading, sola fide is no longer forced.} Trent, heard against the three Reformed strands alone, defends itself: it defeats each of them back. So some maximal defensible position holds Trent, and that position cannot hold the dominical case, which Trent defeats.
 

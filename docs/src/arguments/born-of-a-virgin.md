@@ -4251,26 +4251,22 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
 How the scriptural reading prevails, in stages: nothing attacks Postell's
 two counterexamples, so they come first; they answer the critic, the only party
 that attacks the scriptural reading, Berry and Motyer, so those three come next.
+And the critic does not join them: the scriptural reading attacks it, and nothing
+among the five answers the scriptural reading.
 
-```lean
-def repliesHeardInStages : List (List Party) :=
-  [[Party.postell, Party.micah],
-    [Party.scriptural,
-      Party.berry,
-      Party.motyer]]
-```
+**What the dispute forces is exactly *Postell's parity argument against the near-term exclusion*, *Postell's Micah counterexample to the near-term exclusion*, *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*.**
 
-<a id="criticLeftUnanswered"></a>
-**`criticLeftUnanswered`**
+- Stage 1: *Postell's parity argument against the near-term exclusion*, *Postell's Micah counterexample to the near-term exclusion*.
+  - *Postell's parity argument against the near-term exclusion* is defeated by nothing.
+  - *Postell's Micah counterexample to the near-term exclusion* is defeated by nothing.
+- Stage 2: *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*.
+  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, and *Postell's parity argument against the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Berry's objection to the near-term exclusion*, and *Postell's parity argument against the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*, and *Postell's parity argument against the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+- Nothing else is forced:
+  - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* defeats *Critical denial of the predictive reading of Isaiah 7:14*, and nothing forced defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*.
 
-And why the critic does not join them: the scriptural reading attacks it,
-and nothing among the five answers the scriptural reading.
-
-```lean
-def criticLeftUnanswered : Witness.Table Party :=
-  [(Party.critical,
-      Party.scriptural)]
-```
+Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="scriptural_reading_prevails_once_replies_are_heard"></a>
 **`scriptural_reading_prevails_once_replies_are_heard`**
@@ -4294,11 +4290,11 @@ theorem scriptural_reading_prevails_once_replies_are_heard :
 Why the critical denial cannot be defended: Postell attacks it, and nothing
 answers Postell.
 
-```lean
-def criticAnsweredByPostell : Witness.Table Party :=
-  [(Party.critical,
-      Party.postell)]
-```
+***Critical denial of the predictive reading of Isaiah 7:14* cannot be defended: no admissible position holds it.**
+
+- *Postell's parity argument against the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*, and nothing defeats *Postell's parity argument against the near-term exclusion*.
+
+Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="critical_denial_indefensible"></a>
 **`critical_denial_indefensible`**
@@ -4353,6 +4349,18 @@ def unanswered : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical] }
         Party.critical]
 ```
 
+<a id="eachDefeatsTheOther"></a>
+**`eachDefeatsTheOther`**
+
+Why nothing prevails unanswered: the two defeat each other.
+
+**Nothing prevails outright: every party is defeated by another.**
+
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*.
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+
+Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
+
 <a id="nothing_prevails_unanswered"></a>
 **`nothing_prevails_unanswered`**
 
@@ -4381,6 +4389,19 @@ def motyerAlone : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical,
         Party.motyer]
 ```
 
+<a id="motyerTiesWithTheCritic"></a>
+**`motyerTiesWithTheCritic`**
+
+Why Motyer alone does not settle it: a defeater for each of the three.
+
+**Nothing prevails outright: every party is defeated by another.**
+
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*.
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*.
+
+Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
+
 <a id="nothing_prevails_on_motyer_alone"></a>
 **`nothing_prevails_on_motyer_alone`**
 
@@ -4405,6 +4426,23 @@ def withoutPostell : Dispute Claim { i // i ≠ Party.postell } :=
   isaiahDispute.restrict fun x =>
     x ≠ Party.postell
 ```
+
+<a id="micahCarriesTheVerdict"></a>
+**`micahCarriesTheVerdict`**
+
+How the scriptural reading prevails without Postell's Isaiah argument, in
+stages: the Micah counterexample first, then the three it defends.
+
+**Grounded: *Postell's Micah counterexample to the near-term exclusion*, *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*.**
+
+- Stage 1: *Postell's Micah counterexample to the near-term exclusion*.
+  - *Postell's Micah counterexample to the near-term exclusion* is defeated by nothing.
+- Stage 2: *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*.
+  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, and *Postell's Micah counterexample to the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Berry's objection to the near-term exclusion*, and *Postell's Micah counterexample to the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*, and *Postell's Micah counterexample to the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+
+Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="scriptural_reading_prevails_without_postell"></a>
 **`scriptural_reading_prevails_without_postell`**
@@ -4432,6 +4470,21 @@ def withoutParity : Dispute Claim { i // i ∉ [Party.postell, Party.micah] } :=
       [Party.postell,
         Party.micah]
 ```
+
+<a id="everyReplyTiesWithTheCritic"></a>
+**`everyReplyTiesWithTheCritic`**
+
+Why nothing prevails without the counterexamples: the critic defeats every
+reply it faces, and the replies defeat it.
+
+**Nothing prevails outright: every party is defeated by another.**
+
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*.
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Berry's objection to the near-term exclusion*.
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*.
+
+Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="nothing_prevails_without_the_counterexamples"></a>
 **`nothing_prevails_without_the_counterexamples`**
@@ -4767,6 +4820,19 @@ def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
     spec := wegnerFinite._proof_2 }
 ```
 
+<a id="everyWegnerPartyDefeated"></a>
+**`everyWegnerPartyDefeated`**
+
+Why nothing prevails: a defeater for each party.
+
+**Nothing prevails outright: every party is defeated by another.**
+
+- *The fathers' sign argument (Isaiah 7:11, 14)* defeats *Wegner's grammatical objection: the עַלְמָה is already pregnant*.
+- *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*.
+- *The fathers' sign argument (Isaiah 7:11, 14)* defeats *The near-term reply: a sign need not be a miracle*.
+
+Each defeat named here is a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the parties' premises and checked by the kernel.
+
 <a id="nothing_prevails_over_wegner"></a>
 **`nothing_prevails_over_wegner`**
 
@@ -4780,6 +4846,22 @@ theorem nothing_prevails_over_wegner : Framework.grounded
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+<a id="fathersAlone"></a>
+**`fathersAlone`**
+
+Why the fathers alone are one resolution.
+
+**A maximal defensible position: *The fathers' sign argument (Isaiah 7:11, 14)*.**
+
+- *The fathers' sign argument (Isaiah 7:11, 14)* does not defeat itself, and answers each attack on it:
+  - *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*, and *The fathers' sign argument (Isaiah 7:11, 14)* defeats *Wegner's grammatical objection: the עַלְמָה is already pregnant*.
+  - *The near-term reply: a sign need not be a miracle* defeats *The fathers' sign argument (Isaiah 7:11, 14)*, and *The fathers' sign argument (Isaiah 7:11, 14)* defeats *The near-term reply: a sign need not be a miracle*.
+- Nothing can be added to it:
+  - *Wegner's grammatical objection: the עַלְמָה is already pregnant* conflicts with *The fathers' sign argument (Isaiah 7:11, 14)*: *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*, and *The fathers' sign argument (Isaiah 7:11, 14)* defeats *Wegner's grammatical objection: the עַלְמָה is already pregnant*.
+  - *The near-term reply: a sign need not be a miracle* conflicts with *The fathers' sign argument (Isaiah 7:11, 14)*: *The near-term reply: a sign need not be a miracle* defeats *The fathers' sign argument (Isaiah 7:11, 14)*, and *The fathers' sign argument (Isaiah 7:11, 14)* defeats *The near-term reply: a sign need not be a miracle*.
+
+Each defeat named here is a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the parties' premises and checked by the kernel.
+
 <a id="sign_is_one_resolution"></a>
 **`sign_is_one_resolution`**
 
@@ -4792,6 +4874,21 @@ theorem sign_is_one_resolution : Framework.Preferred wegnerDispute.defeats
     {WegnerParty.sign}
 -- axioms: propext, Classical.choice, Quot.sound
 ```
+
+<a id="wegnerWithTheReply"></a>
+**`wegnerWithTheReply`**
+
+Why Wegner with the reply is the other resolution.
+
+**A maximal defensible position: *Wegner's grammatical objection: the עַלְמָה is already pregnant*, *The near-term reply: a sign need not be a miracle*.**
+
+- None of *Wegner's grammatical objection: the עַלְמָה is already pregnant*, *The near-term reply: a sign need not be a miracle* defeats another, and each attack on them is answered from among them:
+  - *The fathers' sign argument (Isaiah 7:11, 14)* defeats *Wegner's grammatical objection: the עַלְמָה is already pregnant*, and *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*.
+  - *The fathers' sign argument (Isaiah 7:11, 14)* defeats *The near-term reply: a sign need not be a miracle*, and *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*.
+- Nothing can be added to it:
+  - *The fathers' sign argument (Isaiah 7:11, 14)* conflicts with *Wegner's grammatical objection: the עַלְמָה is already pregnant*: *The fathers' sign argument (Isaiah 7:11, 14)* defeats *Wegner's grammatical objection: the עַלְמָה is already pregnant*, and *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*.
+
+Each defeat named here is a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="wegner_is_the_other_resolution"></a>
 **`wegner_is_the_other_resolution`**
@@ -4844,6 +4941,19 @@ def signAgainstWegner : Dispute Claim { i // i ∈ [WegnerParty.wegner,
       [WegnerParty.wegner,
         WegnerParty.sign]
 ```
+
+<a id="wegnerAndTheFathersTie"></a>
+**`wegnerAndTheFathersTie`**
+
+Why nothing prevails without the reply: Wegner and the fathers defeat each
+other.
+
+**Nothing prevails outright: every party is defeated by another.**
+
+- *The fathers' sign argument (Isaiah 7:11, 14)* defeats *Wegner's grammatical objection: the עַלְמָה is already pregnant*.
+- *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*.
+
+Each defeat named here is a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the parties' premises and checked by the kernel.
 
 <a id="nothing_prevails_without_the_reply"></a>
 **`nothing_prevails_without_the_reply`**

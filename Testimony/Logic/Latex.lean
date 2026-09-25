@@ -422,6 +422,41 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
       (if e.inferences.isEmpty then "unrated}" else "") ++ "\n") ++
   "\\end{itemize}\n\\end{itemize}\n"
 
+/-- One piece of a generated sentence. A defeat that a `Because` in the
+document explains names it. -/
+def seg (links : List Page.BecauseLink) : Page.Seg → String
+  | .text t => escape t
+  | .party n => "\\emph{" ++ escape n ++ "}"
+  | .defeat a b =>
+    "\\emph{" ++ escape a ++ "} defeats \\emph{" ++ escape b ++ "}" ++
+    match Page.becauseFor links a b with
+      | some d => " (\\texttt{" ++ codeEscape d ++ "})"
+      | none => ""
+
+/-- Nested `itemize` environments for a list of lines with depths: open one
+where the depth rises, close where it falls. LaTeX nests lists four deep at
+most, so a deeper line is set at the fourth level rather than failing the
+build. -/
+def nested (lines : List (Nat × String)) : String :=
+  let rec go : Nat → List (Nat × String) → String
+    | cur, [] => String.join (List.replicate cur "\\end{itemize}\n")
+    | cur, (d, l) :: rest =>
+      let depth := min d 3 + 1
+      let opens := String.join (List.replicate (depth - cur) "\\begin{itemize}\n")
+      let closes := String.join (List.replicate (cur - depth) "\\end{itemize}\n")
+      closes ++ opens ++ "\\item " ++ l ++ "\n" ++ go depth rest
+  go 0 lines
+
+/-- A verdict: its claim, its reasons as nested lists, and where its defeats
+come from. -/
+def verdict (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
+  let line (segs : List Page.Seg) := String.join (segs.map (seg links))
+  "\\paragraph{" ++ line v.claim ++ "}\n" ++
+  nested (v.reasons.map fun (d, segs) => (d, line segs)) ++
+  (if table.isEmpty then "" else
+    "\\noindent Each defeat named here is a cell of the defeat table, \\texttt{" ++
+    codeEscape table ++ "}, computed from the parties' premises and checked by the kernel.\n")
+
 /-- Render one item against the document's atom ordering. -/
 def item [DecidableEq α] (order : List α) : Page.Item α → String
   | .prose md => prose md
@@ -444,6 +479,7 @@ def item [DecidableEq α] (order : List α) : Page.Item α → String
       declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
       prose doc ++ verbatim stmt
   | .because d doc e => declLabel d "" ++ prose doc ++ explanation order e
+  | .verdict d doc v links table => declLabel d "" ++ prose doc ++ verdict v links table
 
 /-- One argument's body: its introductory prose, its legend, then every item in
 source order. The heading above it is the caller's, as the page title is in the

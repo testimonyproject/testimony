@@ -554,10 +554,12 @@ strengths, an absence with `not_defeats_of_models` or
 `not_defeats_of_outweighed`, one named world per premise.
 
 **3. State what survives, with its reason.** Describe the dispute once in
-solver form (`Testimony.Logic.Solver`) — every party listed, and the table as a
-Boolean. Then state each verdict with a **witness**: a small declaration of why
-it holds, which a checker proved sound once against `Testimony.Logic.Framework`
-confirms (`Testimony.Logic.Witness`):
+solver form (`Testimony.Logic.Solver`): every party listed, and the table as a
+Boolean. Then declare each verdict as a `Verdict` (`Testimony.Logic.Verdict`).
+It holds the verdict's claim and its **witness**, a small statement of why it
+holds. A checker proved sound once against `Testimony.Logic.Framework` confirms
+the witness (`Testimony.Logic.Witness`), and the result follows from
+`Verdict.holds`:
 
 ```lean
 def isaiahFinite : Solver.Finite isaiahDispute.defeats where
@@ -568,17 +570,32 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats where
 
 /-- Why the critical denial cannot be defended: Postell attacks it, and nothing
 answers Postell. -/
-def criticAnsweredByPostell : Witness.Table Party := [(.critical, .postell)]
+def criticAnsweredByPostell : Verdict isaiahDispute where
+  finite := isaiahFinite
+  claim := .indefensible .critical [(.critical, .postell)]
+  checked := by decide +kernel
 
 theorem critical_denial_indefensible (S : Set Party)
     (hS : Admissible isaiahDispute.defeats S) : Party.critical ∉ S :=
-  Witness.not_mem_admissible_of_witness (F := isaiahFinite) (t := criticAnsweredByPostell)
-    (by decide +kernel) S hS
+  criticAnsweredByPostell.holds S hS
 ```
 
-The witness is the reason, and its docstring says it in words; the check makes
-sure the words are true of the table. A wrong witness fails to check — it cannot
-prove a wrong verdict.
+A wrong witness fails to check, so it cannot prove a wrong verdict. And the
+page does not take the docstring's word for the reason. It renders the reason
+from the witness itself, naming each defeat by the two parties' packages:
+
+> ***Critical denial of the predictive reading of Isaiah 7:14* cannot be
+> defended: no admissible position holds it.**
+>
+> - *Postell's parity argument against the near-term exclusion* defeats
+>   *Critical denial of the predictive reading of Isaiah 7:14*, and nothing
+>   defeats *Postell's parity argument against the near-term exclusion*.
+
+So a docstring that drifts from its witness is visible: the generated list
+beneath it says otherwise, and changing the witness changes the page, which
+`argdoc --check` catches. A defeat that a `Because` on the same page explains
+links to it. Each page also names the defeat table's theorem, where every
+defeat mentioned is proved.
 
 | Verdict | Witness |
 |---|---|

@@ -175,6 +175,39 @@ elab "derive_argument_bodies " tableName:ident : command => do
           items := items.push (k, d.declarationRange.pos.line, true,
             ← `(Logic.Page.Item.prose $(quote md)))
 
+    -- What a verdict links to: the page's `Because` declarations, by the pair
+    -- they explain, and each dispute's defeat-table theorem — the one stating
+    -- `∀ i j, D.defeats i j ↔ …` — by the dispute it is about.
+    let mut becauseLinks : Array (TSyntax `term) := #[]
+    let mut tableOf : Std.HashMap Name Name := {}
+    for n in (declsOf.getD ns #[]) do
+      let some info := env.find? n | continue
+      if info.type.getAppFn.constName? == some ``Logic.Because then
+        becauseLinks := becauseLinks.push (← `(((Logic.Because.view $(mkIdent n)).holder,
+          (Logic.Because.view $(mkIdent n)).rival, $(quote n.getString!))))
+      if info matches .thmInfo _ then
+        let d? ← liftTermElabM <| Meta.forallTelescope info.type fun _ body => do
+          let lhs := body.getArg! 0
+          if body.isAppOfArity ``Iff 2 && lhs.isAppOfArity ``Logic.Dispute.defeats 5 then
+            pure (lhs.getArg! 2).constName?
+          else pure none
+        if let some d := d? then tableOf := tableOf.insert d n
+
+    -- The dispute a verdict is about, followed through hearings and the
+    -- abbreviations that name them, to the one whose table is proved.
+    let tableFor (ty : Expr) : String := Id.run do
+      let mut e := ty.getArg! 3
+      for _ in [0:8] do
+        if e.isAppOf ``Logic.Dispute.restrict then e := e.getArg! 2
+        else match e.constName? with
+          | some c =>
+            if let some t := tableOf[c]? then return t.getString!
+            match env.find? c |>.bind (·.value?) with
+            | some v => e := v
+            | none => return ""
+          | none => return ""
+      return ""
+
     -- The declarations: each rendered by what its type says it is.
     let mut atomTy : Option Name := none
     for n in (declsOf.getD ns #[]) do
@@ -213,6 +246,10 @@ elab "derive_argument_bodies " tableName:ident : command => do
           else if headIs ``Logic.Because then
             `(Logic.Page.Item.because $(quote dname) $(quote doc)
                 (Logic.Because.view $(mkIdent n)))
+          else if headIs ``Logic.Verdict then
+            `(Logic.Page.Item.verdict $(quote dname) $(quote doc)
+                (Logic.Verdict.view $(mkIdent n)) [$(becauseLinks),*]
+                $(quote (tableFor info.type)))
           else if headIs ``Logic.Line then
             `(Logic.Page.Item.line $(quote dname) $(quote doc) $(mkIdent n))
           else if headIs ``Logic.Formula then

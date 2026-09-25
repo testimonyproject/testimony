@@ -22,6 +22,7 @@ import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Witness
 import Testimony.Logic.Because
+import Testimony.Logic.Verdict
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin

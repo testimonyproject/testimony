@@ -2,7 +2,7 @@ import Testimony.Arguments.SolaFide.Results
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
-import Testimony.Logic.Witness
+import Testimony.Logic.Verdict
 import Testimony.Logic.Because
 
 /-!
@@ -728,11 +728,14 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats where
 
 /-! ### What the dispute decides -/
 
-/-- A defeater for every party — the reason nothing prevails outright. -/
-def everyPartyDefeated : Witness.Table Party :=
-  [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
-  , (.apocalyptic, .pauline), (.sanders, .pauline), (.critics, .sanders)
-  , (.jervell, .apostolic) ]
+/-- Why nothing prevails outright: a defeater for every party. -/
+def everyPartyDefeated : Verdict solaFideDispute where
+  finite := solaFideFinite
+  claim := .nothingGrounded
+    [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
+    , (.apocalyptic, .pauline), (.sanders, .pauline), (.critics, .sanders)
+    , (.jervell, .apostolic) ]
+  checked := by decide +kernel
 
 /-- **Nothing prevails outright.** Every party is defeated by some other: each
 Reformed strand by Trent, Trent by each strand and by the apocalyptic reading,
@@ -741,14 +744,17 @@ Sanders, Jervell by Acts. The grounded extension — what the dispute forces,
 before any choice between rivals — is empty. -/
 @[headline]
 theorem nothing_prevails_over_sola_fide : grounded solaFideDispute.defeats = ∅ :=
-  Witness.grounded_eq_empty (F := solaFideFinite) (t := everyPartyDefeated) (by decide +kernel)
+  everyPartyDefeated.holds
 
 #print axioms nothing_prevails_over_sola_fide
 
 /-- Why Trent cannot be defended: the apocalyptic reading attacks it, and every
 party that answers the apocalyptic reading — Paul, Luke, Acts — also attacks
 Trent. -/
-def trentAnsweredByTheApocalypticReading : Witness.Table Party := [(.trent, .apocalyptic)]
+def trentAnsweredByTheApocalypticReading : Verdict solaFideDispute where
+  finite := solaFideFinite
+  claim := .indefensible .trent [(.trent, .apocalyptic)]
+  checked := by decide +kernel
 
 /-- **Trent cannot be defended.** The apocalyptic reading defeats it — it holds
 "not by works" on grounds Trent does not contradict — and the only parties that
@@ -758,15 +764,17 @@ once. -/
 @[headline]
 theorem trent_indefensible (S : Set Party)
     (hS : Admissible solaFideDispute.defeats S) : Party.trent ∉ S :=
-  Witness.not_mem_admissible_of_witness (F := solaFideFinite)
-    (t := trentAnsweredByTheApocalypticReading) (by decide +kernel) S hS
+  trentAnsweredByTheApocalypticReading.holds S hS
 
 #print axioms trent_indefensible
 
 /-- Why the apocalyptic reading cannot be defended: the dominical case attacks
 it, and the only party that answers the dominical case is Trent, which the
 apocalyptic reading itself attacks. -/
-def apocalypticAnsweredByLuke : Witness.Table Party := [(.apocalyptic, .dominical)]
+def apocalypticAnsweredByLuke : Verdict solaFideDispute where
+  finite := solaFideFinite
+  claim := .indefensible .apocalyptic [(.apocalyptic, .dominical)]
+  checked := by decide +kernel
 
 /-- **Nor can the apocalyptic reading.** The dominical case defeats it, and the
 only party that defeats the dominical case is Trent — which the apocalyptic
@@ -774,10 +782,17 @@ reading itself defeats. -/
 @[headline]
 theorem apocalyptic_indefensible (S : Set Party)
     (hS : Admissible solaFideDispute.defeats S) : Party.apocalyptic ∉ S :=
-  Witness.not_mem_admissible_of_witness (F := solaFideFinite)
-    (t := apocalypticAnsweredByLuke) (by decide +kernel) S hS
+  apocalypticAnsweredByLuke.holds S hS
 
 #print axioms apocalyptic_indefensible
+
+/-- Why the dominical case is accepted on every resolution: it answers Trent
+itself, and neither of its rivals can be defended — by the two strategies
+above. -/
+def dominicalCaseForced : Verdict solaFideDispute where
+  finite := solaFideFinite
+  claim := .skeptical .dominical [(.trent, .apocalyptic), (.apocalyptic, .dominical)]
+  checked := by decide +kernel
 
 /-- **Sola fide from Luke 7:50 is accepted on every resolution.** Its only
 defeater is Trent, which no admissible position can hold; it defeats back the
@@ -796,13 +811,19 @@ love at 7:47 was the ground of her forgiveness. -/
 @[headline]
 theorem dominical_case_skeptically_accepted :
     SkepticallyAccepted solaFideDispute.defeats .dominical :=
-  Witness.skeptically_accepted_of_witness (F := solaFideFinite)
-    (t := trentAnsweredByTheApocalypticReading ++ apocalypticAnsweredByLuke) (by decide +kernel)
+  dominicalCaseForced.holds
 
 #print axioms dominical_case_skeptically_accepted
 
 /-- The dispute without the apocalyptic reading. -/
 abbrev withoutApocalyptic := solaFideDispute.restrict (· ≠ Party.apocalyptic)
+
+/-- Why, without the apocalyptic reading, Trent can be held: alone, it answers
+each Reformed strand that attacks it. -/
+def trentDefendsItselfWithoutTheApocalypticReading : Verdict withoutApocalyptic where
+  finite := solaFideFinite.restrict (· ≠ Party.apocalyptic)
+  claim := .notSkeptical ⟨.dominical, by decide⟩ ⟨.trent, by decide⟩ (Witness.listSub _ [.trent])
+  checked := by decide +kernel
 
 /-- **Without the apocalyptic reading, sola fide is no longer forced.** Trent,
 heard against the three Reformed strands alone, defends itself: it defeats each
@@ -815,9 +836,7 @@ rival to sola fide answering the other: on the apocalyptic reading holding
 @[headline]
 theorem sola_fide_not_forced_without_the_apocalyptic_reading :
     ¬ SkepticallyAccepted withoutApocalyptic.defeats ⟨.dominical, by decide⟩ :=
-  Witness.not_skeptically_accepted_of_witness
-    (F := solaFideFinite.restrict (· ≠ Party.apocalyptic))
-    (s := Witness.listSub _ [.trent]) (x := ⟨.trent, by decide⟩) (by decide +kernel)
+  trentDefendsItselfWithoutTheApocalypticReading.holds
 
 #print axioms sola_fide_not_forced_without_the_apocalyptic_reading
 

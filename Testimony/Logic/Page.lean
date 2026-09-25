@@ -59,6 +59,35 @@ def restsOn [DecidableEq α] (e : Explanation α) : List α :=
 
 end Explanation
 
+/-- A piece of a generated sentence. The renderers set each piece in their own
+medium: a party's name in italics, and a defeat with its verb linked to what
+explains it. -/
+inductive Seg
+  /-- Words, written by the generator. -/
+  | text (s : String)
+  /-- A party, by its package's name. -/
+  | party (name : String)
+  /-- "*a* defeats *b*", by the two packages' names. -/
+  | defeat (a b : String)
+
+/-- Why a verdict holds, as a page shows it: the claim, then the reasons as an
+indented list, both generated from a checked witness
+(`Testimony.Logic.Verdict`). -/
+structure Verdict where
+  /-- What the verdict says. -/
+  claim : List Seg
+  /-- The reasons, each with its depth in the list. -/
+  reasons : List (Nat × List Seg)
+
+/-- A `Because` on the page, found by the pair it explains: the holder's name,
+the rival's name, and the declaration. A defeat of the rival by the holder links
+to it. -/
+abbrev BecauseLink := String × String × String
+
+/-- The declaration explaining why `a` defeats `b`, if the page has one. -/
+def becauseFor (links : List BecauseLink) (a b : String) : Option String :=
+  (links.find? fun (h, r, _) => h == a && r == b).map (·.2.2)
+
 /-- One element of a generated page.
 
 `prose` is a module docstring, lifted whole; the rest are declarations, each
@@ -84,6 +113,10 @@ inductive Item (α : Type)
   | result (decl doc statement : String) (proposed : Bool)
   /-- Why one position stands against another: a `Because`. -/
   | because (decl doc : String) (e : Explanation α)
+  /-- A dispute's verdict, with the reasons generated from its witness, the
+  page's `Because` declarations to link its defeats to, and the theorem that
+  proves the defeat table (empty if none was found). -/
+  | verdict (decl doc : String) (v : Verdict) (links : List BecauseLink) (table : String)
 
 namespace Item
 

@@ -2,7 +2,7 @@ import Testimony.Arguments.BornOfAVirgin.Results.Wegner
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
-import Testimony.Logic.Witness
+import Testimony.Logic.Verdict
 
 /-!
 # Arguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner's objection
@@ -214,25 +214,41 @@ def wegnerFinite : Solver.Finite wegnerDispute.defeats where
   defeats i j := decide (wegnerPartyDefeats i j)
   spec i j := by rw [wegnerDispute_defeats]; simp
 
+/-- Why nothing prevails: a defeater for each party. -/
+def everyWegnerPartyDefeated : Verdict wegnerDispute where
+  finite := wegnerFinite
+  claim := .nothingGrounded [(.wegner, .sign), (.sign, .wegner), (.reply, .sign)]
+  checked := by decide +kernel
+
 /-- **Nothing prevails.** Every party is defeated by someone — Wegner and the
 reply by the fathers, the fathers by both — so nothing is forced, and the
 grounded extension is empty. -/
 @[headline]
 theorem nothing_prevails_over_wegner : grounded wegnerDispute.defeats = ∅ :=
-  Witness.grounded_eq_empty (F := wegnerFinite)
-    (t := [(.wegner, .sign), (.sign, .wegner), (.reply, .sign)]) (by decide +kernel)
+  everyWegnerPartyDefeated.holds
 
 #print axioms nothing_prevails_over_wegner
+
+/-- Why the fathers alone are one resolution. -/
+def fathersAlone : Verdict wegnerDispute where
+  finite := wegnerFinite
+  claim := .preferred [.sign]
+  checked := by decide +kernel
 
 /-- **One resolution: the fathers.** The sign argument alone is admissible — it
 defeats both of its defeaters — and it is in conflict with both of the other
 parties, so no larger set is. -/
 @[headline]
 theorem sign_is_one_resolution : Preferred wegnerDispute.defeats {.sign} :=
-  (show Solver.toSet [WegnerParty.sign] = {.sign} by ext; simp) ▸
-    Witness.preferred_of_witness (F := wegnerFinite) (by decide +kernel)
+  (show Solver.toSet [WegnerParty.sign] = {.sign} by ext; simp) ▸ fathersAlone.holds
 
 #print axioms sign_is_one_resolution
+
+/-- Why Wegner with the reply is the other resolution. -/
+def wegnerWithTheReply : Verdict wegnerDispute where
+  finite := wegnerFinite
+  claim := .preferred [.wegner, .reply]
+  checked := by decide +kernel
 
 /-- **The other resolution: Wegner, with the near-term reply.** Neither defeats
 the other, and between them they answer the fathers, who are the only party to
@@ -242,7 +258,7 @@ admissible. -/
 theorem wegner_is_the_other_resolution :
     Preferred wegnerDispute.defeats {.wegner, .reply} :=
   (show Solver.toSet [WegnerParty.wegner, .reply] = {.wegner, .reply} by ext; simp) ▸
-    Witness.preferred_of_witness (F := wegnerFinite) (by decide +kernel)
+    wegnerWithTheReply.holds
 
 #print axioms wegner_is_the_other_resolution
 
@@ -261,14 +277,20 @@ theorem wegner_not_skeptically_accepted :
 /-- Wegner and the fathers alone. -/
 abbrev signAgainstWegner := wegnerDispute.restrict (· ∈ [WegnerParty.wegner, .sign])
 
+/-- Why nothing prevails without the reply: Wegner and the fathers defeat each
+other. -/
+def wegnerAndTheFathersTie : Verdict signAgainstWegner where
+  finite := wegnerFinite.restrict (· ∈ [WegnerParty.wegner, .sign])
+  claim := .nothingGrounded (Witness.Table.sub _ [(.wegner, .sign), (.sign, .wegner)])
+  checked := by decide +kernel
+
 /-- **Without the reply, nothing prevails either.** Wegner and the fathers
 defeat each other, so the reply is not what keeps the fathers from prevailing:
 Wegner's rebuttal does, because the fathers' weakest link is no stronger than
 his. -/
 @[headline]
 theorem nothing_prevails_without_the_reply : grounded signAgainstWegner.defeats = ∅ :=
-  Witness.grounded_eq_empty (F := wegnerFinite.restrict (· ∈ [WegnerParty.wegner, .sign]))
-    (t := Witness.Table.sub _ [(.wegner, .sign), (.sign, .wegner)]) (by decide +kernel)
+  wegnerAndTheFathersTie.holds
 
 #print axioms nothing_prevails_without_the_reply
 
