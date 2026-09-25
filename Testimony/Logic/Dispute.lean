@@ -285,23 +285,45 @@ theorem not_defeats_of_models {a b : ArgumentPackage α}
   · obtain ⟨w, hw⟩ := satisfiable_iff.mp hreb
     exact (entails_iff.mp hr w fun ψ hψ => hw ψ (by simp [hψ])) (hw _ (by simp))
 
-/-- `defeat_table [defs] using [facts]` proves `d.defeats i j ↔ table i j` for
-every pair of a finite dispute: it splits on both parties, reduces the table by
-`defs`, and closes each goal from the diagonal or from one of `facts` — a
-defeat, a non-defeat, or a `StandTogether` group, whose memberships it decides. -/
-syntax "defeat_table" ppSpace "[" Lean.Parser.Tactic.simpLemma,+ "]" ppSpace "using"
-  ppSpace "[" term,+ "]" : tactic
+/-- Premises entail a negation exactly when they cannot hold together with what
+it negates. This is what lets one satisfiability check decide an attack, and
+one named reading explain the absence of one. -/
+theorem entails_neg_iff {Γ : List (Formula α)} {φ : Formula α} :
+    Entails Γ (∼φ) ↔ ¬ Satisfiable (Γ ++ [φ]) := by
+  rw [entails_iff, satisfiable_iff]
+  simp only [List.mem_append, List.mem_singleton, FFL.Semantics.Not.models_not]
+  constructor
+  · rintro h ⟨w, hw⟩
+    exact h w (fun ψ hψ => hw ψ (.inl hψ)) (hw φ (.inr rfl))
+  · intro h w hw hφ
+    exact h ⟨w, fun ψ hψ => hψ.elim (hw ψ) (fun e => e ▸ hφ)⟩
 
-open Lean in
-macro_rules
-  | `(tactic| defeat_table [$ls,*] using [$facts,*]) => do
-    let direct ← facts.getElems.mapM fun f => `(tacticSeq| exact $f)
-    let grouped ← facts.getElems.mapM fun f =>
-      `(tacticSeq| exact Dispute.StandTogether.not_defeats $f (by decide) (by decide))
-    let diagonal ← `(tacticSeq| exact Dispute.not_defeats_self _ _)
-    let alts := #[diagonal] ++ direct ++ grouped
-    `(tactic| (intro i j; cases i <;> cases j <;>
-        simp only [$ls,*, iff_true, iff_false] <;> first $[| $alts]*))
+/-- `a` **grants** `φ`: some reading holds everything `a` holds and `φ` as well.
+
+This is how a dispute says *why* one position does not attack another, and not
+only *that* it does not. The defeat table is computed (`Testimony.Logic.Horn`),
+and a computed absence names no reason. A `Grants` result names one: it is
+proved with `satisfied_by` and a named reading — the way someone holding `a`
+can also hold `φ` — and the reading's docstring says what that way is. When
+`φ` is a premise of `b`, `a` does not undermine `b` on it
+(`Grants.not_undermines`); when it is `b`'s conclusion, `a` does not rebut `b`
+(`Grants.not_rebuts`).
+
+Nothing depends on these results: the table stands without them. They are kept
+for what they teach, one premise at a time, and each is checked on its own, so
+adding a premise elsewhere cannot break one. -/
+def Grants (a : ArgumentPackage α) (φ : Formula α) : Prop :=
+  Satisfiable (a.premises ++ [φ])
+
+/-- What a position grants, it does not undermine. -/
+theorem Grants.not_undermines {a b : ArgumentPackage α} {φ : Formula α} (h : Grants a φ) :
+    ¬ UnderminesOn a b φ :=
+  fun ⟨_, hent⟩ => entails_neg_iff.mp hent h
+
+/-- A position that grants another's conclusion does not rebut it. -/
+theorem Grants.not_rebuts {a b : ArgumentPackage α} (h : Grants a b.conclusion) :
+    ¬ Rebuts a b :=
+  fun hent => entails_neg_iff.mp hent h
 
 /-- `grounded_by n [lemmas]` proves `grounded R = S` for a finite dispute: `S` is
 the `n`-th iterate of the characteristic function from `∅`, and defends nothing

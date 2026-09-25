@@ -1,5 +1,6 @@
 import Testimony.Arguments.BornOfAVirgin.Results.Wegner
 import Testimony.Logic.Dispute
+import Testimony.Logic.Horn
 
 /-!
 # Arguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner's objection
@@ -117,29 +118,22 @@ theorem ordinarySignReply_strength : ordinarySignReply.strength = 0 := by decide
 that the pregnancy is an ordinary one, which, cited `disputed`, does not
 outrank it. -/
 theorem sign_defeats_wegner : Defeats signArgument wegnerLexical :=
-  .inl ⟨p .pregnancyAtTheSignIsOrdinary,
-    ⟨by simp [wegnerLexical, wegnerLine, caseOf], signArgument_establishes⟩,
-    by decide⟩
+  Horn.defeats_of_defeats? signArgument_strength wegnerLexical_strength (by decide +kernel)
 
 /-- **Wegner defeats the sign argument back.** He holds the premise it denies,
 so he rebuts it, and it is no stronger than he is. -/
 theorem wegner_defeats_sign : Defeats wegnerLexical signArgument :=
-  .inr ⟨by establish [Rebuts, bornOfAVirginDefs],
-    by rw [wegnerLexical_strength, signArgument_strength]; decide⟩
+  Horn.defeats_of_defeats? wegnerLexical_strength signArgument_strength (by decide +kernel)
 
 /-- **The reply defeats the sign argument.** It entails the negation of the
 fathers' premise that the sign must be extraordinary, cited `disputed`. -/
 theorem reply_defeats_sign : Defeats ordinarySignReply signArgument :=
-  .inl ⟨p .signMustBeExtraordinary,
-    ⟨by simp [signArgument, signLine, Line.asPackage, Line.premises],
-      ordinarySignReply_establishes⟩,
-    by decide⟩
+  Horn.defeats_of_defeats? ordinarySignReply_strength signArgument_strength (by decide +kernel)
 
 /-- **The sign argument defeats the reply back.** It holds the premise the reply
 denies, and the reply's inference is contested as that premise is. -/
 theorem sign_defeats_reply : Defeats signArgument ordinarySignReply :=
-  .inr ⟨by establish [Rebuts, bornOfAVirginDefs],
-    by rw [signArgument_strength, ordinarySignReply_strength]; decide⟩
+  Horn.defeats_of_defeats? signArgument_strength ordinarySignReply_strength (by decide +kernel)
 
 /-! ### The dispute -/
 
@@ -203,12 +197,26 @@ def wegnerPartyDefeats : WegnerParty → WegnerParty → Prop
   | .sign, .reply => True
   | _, _ => False
 
+/-- The table is finite, so membership in it is decidable. -/
+instance : DecidableRel wegnerPartyDefeats := fun i j => by
+  cases i <;> cases j <;> unfold wegnerPartyDefeats <;> infer_instance
+
+/-- Every party's weakest link ranks at the bottom. -/
+theorem wegnerPartyNode_strength : ∀ i, (wegnerPartyNode i).strength = 0
+  | .wegner => wegnerLexical_strength
+  | .sign => signArgument_strength
+  | .reply => ordinarySignReply_strength
+
 /-- **Who defeats whom**, all nine pairs: the fathers and Wegner defeat each
-other, the fathers and the reply defeat each other, and nothing else. -/
+other, the fathers and the reply defeat each other, and nothing else. Every
+cell is computed from the parties' premises by `Horn.defeats?` and checked by
+the kernel. -/
 theorem wegnerDispute_defeats :
     ∀ i j, wegnerDispute.defeats i j ↔ wegnerPartyDefeats i j := by
-  defeat_table [wegnerPartyDefeats] using [sign_defeats_wegner, wegner_defeats_sign,
-    reply_defeats_sign, sign_defeats_reply, wegner_stands_with_the_reply]
+  intro i j
+  refine Horn.defeats_iff_of_defeats? (wegnerPartyNode_strength i)
+    (wegnerPartyNode_strength j) ?_
+  cases i <;> cases j <;> decide +kernel
 
 /-- **Nothing prevails.** Every party is defeated by someone — Wegner and the
 reply by the fathers, the fathers by both — so nothing is forced, and the

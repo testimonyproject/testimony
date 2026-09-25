@@ -3108,6 +3108,9 @@ theorem jervellCase_strength : jervellCase.strength = 0
 
 #### The defeats
 
+Each is decided from the two packages' premises by `Horn.defeats?` and checked
+by the kernel: the attack, and the comparison of strengths.
+
 <a id="trent_defeats_pauline"></a>
 **`trent_defeats_pauline`**
 
@@ -3116,7 +3119,7 @@ so it rebuts sola fide.
 
 ```lean
 theorem trent_defeats_pauline : Defeats tridentineCase paulineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="trent_defeats_dominical"></a>
@@ -3126,7 +3129,7 @@ theorem trent_defeats_pauline : Defeats tridentineCase paulineCase
 
 ```lean
 theorem trent_defeats_dominical : Defeats tridentineCase dominicalCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="trent_defeats_apostolic"></a>
@@ -3136,7 +3139,7 @@ theorem trent_defeats_dominical : Defeats tridentineCase dominicalCase
 
 ```lean
 theorem trent_defeats_apostolic : Defeats tridentineCase apostolicCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="pauline_defeats_trent"></a>
@@ -3146,7 +3149,7 @@ theorem trent_defeats_apostolic : Defeats tridentineCase apostolicCase
 
 ```lean
 theorem pauline_defeats_trent : Defeats paulineCase tridentineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="dominical_defeats_trent"></a>
@@ -3156,7 +3159,7 @@ theorem pauline_defeats_trent : Defeats paulineCase tridentineCase
 
 ```lean
 theorem dominical_defeats_trent : Defeats dominicalCase tridentineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="apostolic_defeats_trent"></a>
@@ -3166,7 +3169,7 @@ theorem dominical_defeats_trent : Defeats dominicalCase tridentineCase
 
 ```lean
 theorem apostolic_defeats_trent : Defeats apostolicCase tridentineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="apocalyptic_defeats_trent"></a>
@@ -3178,7 +3181,7 @@ denies it.
 
 ```lean
 theorem apocalyptic_defeats_trent : Defeats apocalypticCase tridentineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="apocalyptic_defeats_pauline"></a>
@@ -3189,7 +3192,7 @@ objective genitive, a premise of Paul's strand cited `disputed`.
 
 ```lean
 theorem apocalyptic_defeats_pauline : Defeats apocalypticCase paulineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="pauline_defeats_apocalyptic"></a>
@@ -3200,7 +3203,7 @@ justification by faith alone.
 
 ```lean
 theorem pauline_defeats_apocalyptic : Defeats paulineCase apocalypticCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="dominical_defeats_apocalyptic"></a>
@@ -3211,7 +3214,7 @@ theorem pauline_defeats_apocalyptic : Defeats paulineCase apocalypticCase
 
 ```lean
 theorem dominical_defeats_apocalyptic : Defeats dominicalCase apocalypticCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="apostolic_defeats_apocalyptic"></a>
@@ -3221,7 +3224,7 @@ theorem dominical_defeats_apocalyptic : Defeats dominicalCase apocalypticCase
 
 ```lean
 theorem apostolic_defeats_apocalyptic : Defeats apostolicCase apocalypticCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="sanders_defeats_pauline"></a>
@@ -3232,7 +3235,7 @@ inference, denies the ἔργα νόμου premise.
 
 ```lean
 theorem sanders_defeats_pauline : Defeats sandersCase paulineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="pauline_defeats_sanders"></a>
@@ -3242,7 +3245,7 @@ theorem sanders_defeats_pauline : Defeats sandersCase paulineCase
 
 ```lean
 theorem pauline_defeats_sanders : Defeats paulineCase sandersCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="sanders_defeats_critics"></a>
@@ -3252,7 +3255,7 @@ theorem pauline_defeats_sanders : Defeats paulineCase sandersCase
 
 ```lean
 theorem sanders_defeats_critics : Defeats sandersCase criticsCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="critics_defeat_sanders"></a>
@@ -3262,7 +3265,7 @@ theorem sanders_defeats_critics : Defeats sandersCase criticsCase
 
 ```lean
 theorem critics_defeat_sanders : Defeats criticsCase sandersCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="jervell_defeats_apostolic"></a>
@@ -3272,7 +3275,7 @@ theorem critics_defeat_sanders : Defeats criticsCase sandersCase
 
 ```lean
 theorem jervell_defeats_apostolic : Defeats jervellCase apostolicCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="apostolic_defeats_jervell"></a>
@@ -3282,14 +3285,16 @@ theorem jervell_defeats_apostolic : Defeats jervellCase apostolicCase
 
 ```lean
 theorem apostolic_defeats_jervell : Defeats apostolicCase jervellCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 #### What does not defeat
 
-Most pairs of parties are compatible: some world holds both. Seven such worlds
-settle every such pair at once (`Dispute.StandTogether`). Three pairs conflict
-in one direction only, and those are shown premise by premise.
+Most pairs of parties are compatible: some world holds both, and seven such
+worlds are named below (`Dispute.StandTogether`) — the readings on which whole
+groups of positions can be held at once. Three pairs conflict in one direction
+only. All of them, like every cell of the table, are decided by
+`Horn.defeats?` from the premises.
 
 <a id="criticsJervellReading"></a>
 **`criticsJervellReading`**
@@ -3372,6 +3377,58 @@ def apocalypticCriticsJervellReading : Valuation Claim :=
     | x => True
 ```
 
+<a id="apocalyptic_does_not_defeat_dominical"></a>
+**`apocalyptic_does_not_defeat_dominical`**
+
+**The apocalyptic reading does not defeat the dominical case.** It
+contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω, not
+the reading of 7:47 — and it does not deny its conclusion: it grants grace and
+"not by works", and it can grant that salvation is received through faith while
+denying that faith is its condition. Why, premise by premise:
+`apocalyptic_grants_sola_fide_as_stated` and
+`apocalyptic_grants_the_dominical_step_by_healing`.
+
+```lean
+theorem apocalyptic_does_not_defeat_dominical : ¬Defeats apocalypticCase
+    dominicalCase
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="apocalyptic_does_not_defeat_apostolic"></a>
+**`apocalyptic_does_not_defeat_apostolic`**
+
+**Nor the apostolic case**, for the same reasons
+(`apocalyptic_grants_the_apostolic_step_with_jervell`).
+
+```lean
+theorem apocalyptic_does_not_defeat_apostolic : ¬Defeats apocalypticCase
+    apostolicCase
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trent_does_not_defeat_apocalyptic"></a>
+**`trent_does_not_defeat_apocalyptic`**
+
+**Trent does not defeat the apocalyptic reading.** They agree on its
+conclusion — justification is not by faith alone — and Trent contradicts none of
+its premises: nothing Trent holds settles the genitive, or what δικαιοσύνη θεοῦ
+names (`trent_grants_the_subjective_genitive`,
+`trent_grants_the_apocalyptic_conclusion`). So the apocalyptic reading's "not
+by works" stands against Trent unanswered.
+
+```lean
+theorem trent_does_not_defeat_apocalyptic : ¬Defeats tridentineCase
+    apocalypticCase
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+#### Why these are not counters
+
+The three absences above are computed, and a computation names no reason. The
+readings below do: each is a way of holding one position that leaves one
+premise or conclusion of another standing, and each result checks that the
+reading holds everything the first position holds as well.
+
 <a id="apocalypticWithFaithReading"></a>
 **`apocalypticWithFaithReading`**
 
@@ -3387,10 +3444,24 @@ def apocalypticWithFaithReading : Valuation Claim :=
     | x => True
 ```
 
+<a id="apocalyptic_grants_sola_fide_as_stated"></a>
+**`apocalyptic_grants_sola_fide_as_stated`**
+
+**The apocalyptic reading grants what the Reformed strands conclude.** Grace,
+"not by works", and salvation received through faith all hold in its world;
+what it denies is that faith is the condition. So it rebuts neither Luke's case
+nor Acts'.
+
+```lean
+theorem apocalyptic_grants_sola_fide_as_stated : Grants apocalypticCase
+    dominicalCase.conclusion
+-- axioms: propext, Quot.sound
+```
+
 <a id="apocalypticHealingReading"></a>
 **`apocalypticHealingReading`**
 
-The same, with Jesus' σέσωκέν σε read as healing.
+The apocalyptic world, with Jesus' σέσωκέν σε read as healing.
 
 ```lean
 def apocalypticHealingReading : Valuation Claim :=
@@ -3402,10 +3473,25 @@ def apocalypticHealingReading : Valuation Claim :=
     | x => True
 ```
 
+<a id="apocalyptic_grants_the_dominical_step_by_healing"></a>
+**`apocalyptic_grants_the_dominical_step_by_healing`**
+
+**The apocalyptic reader can grant the dominical step**, by reading σέσωκέν σε
+at Luke 7:50 as healing rather than salvation: the step then has a ground that
+fails, and holds without delivering faith alone. So the apocalyptic reading
+does not undermine the dominical case on its step — it answers Luke only by
+disputing the lexical premise, which is where the dominical case is open.
+
+```lean
+theorem apocalyptic_grants_the_dominical_step_by_healing : Grants
+    apocalypticCase dominicalToFaithAlone
+-- axioms: propext, Quot.sound
+```
+
 <a id="apocalypticJervellReading"></a>
 **`apocalypticJervellReading`**
 
-The same, with the yoke read as Jervell reads it.
+The apocalyptic world, with the yoke read as Jervell reads it.
 
 ```lean
 def apocalypticJervellReading : Valuation Claim :=
@@ -3415,6 +3501,19 @@ def apocalypticJervellReading : Valuation Claim :=
     | Claim.justificationByFaithAlone => False
     | Claim.acts15YokeIsLawAsCondition => False
     | x => True
+```
+
+<a id="apocalyptic_grants_the_apostolic_step_with_jervell"></a>
+**`apocalyptic_grants_the_apostolic_step_with_jervell`**
+
+**The apocalyptic reader can grant the apostolic step**, by reading the yoke
+of Acts 15:10 as Jervell does — Israel's law for gentiles, not the law as a
+condition of salvation.
+
+```lean
+theorem apocalyptic_grants_the_apostolic_step_with_jervell : Grants
+    apocalypticCase apostolicToFaithAlone
+-- axioms: propext, Quot.sound
 ```
 
 <a id="trentWithoutDeliveranceReading"></a>
@@ -3435,6 +3534,19 @@ def trentWithoutDeliveranceReading : Valuation Claim :=
     | x => True
 ```
 
+<a id="trent_grants_the_subjective_genitive"></a>
+**`trent_grants_the_subjective_genitive`**
+
+**Trent can grant the subjective genitive.** Nothing Trent holds settles how
+πίστις Χριστοῦ is read, so the apocalyptic reading's denial of the objective
+genitive stands against Trent unanswered.
+
+```lean
+theorem trent_grants_the_subjective_genitive : Grants tridentineCase (notP
+    Claim.pistisChristouObjective)
+-- axioms: propext, Quot.sound
+```
+
 <a id="trentWithoutFaithAloneReading"></a>
 **`trentWithoutFaithAloneReading`**
 
@@ -3452,44 +3564,16 @@ def trentWithoutFaithAloneReading : Valuation Claim :=
     | x => True
 ```
 
-<a id="apocalyptic_does_not_defeat_dominical"></a>
-**`apocalyptic_does_not_defeat_dominical`**
+<a id="trent_grants_the_apocalyptic_conclusion"></a>
+**`trent_grants_the_apocalyptic_conclusion`**
 
-**The apocalyptic reading does not defeat the dominical case.** It
-contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω, not
-the reading of 7:47 — and it does not deny its conclusion: it grants grace and
-"not by works", and it can grant that salvation is received through faith while
-denying that faith is its condition.
+**Trent grants the apocalyptic reading's conclusion**: justification is not
+by faith alone. They agree on it for different reasons, so Trent does not rebut
+the apocalyptic reading.
 
 ```lean
-theorem apocalyptic_does_not_defeat_dominical : ¬Defeats apocalypticCase
-    dominicalCase
--- axioms: propext, Quot.sound
-```
-
-<a id="apocalyptic_does_not_defeat_apostolic"></a>
-**`apocalyptic_does_not_defeat_apostolic`**
-
-**Nor the apostolic case**, for the same reasons.
-
-```lean
-theorem apocalyptic_does_not_defeat_apostolic : ¬Defeats apocalypticCase
-    apostolicCase
--- axioms: propext, Quot.sound
-```
-
-<a id="trent_does_not_defeat_apocalyptic"></a>
-**`trent_does_not_defeat_apocalyptic`**
-
-**Trent does not defeat the apocalyptic reading.** They agree on its
-conclusion — justification is not by faith alone — and Trent contradicts none of
-its premises: nothing Trent holds settles the genitive, or what δικαιοσύνη θεοῦ
-names. So the apocalyptic reading's "not by works" stands against Trent
-unanswered.
-
-```lean
-theorem trent_does_not_defeat_apocalyptic : ¬Defeats tridentineCase
-    apocalypticCase
+theorem trent_grants_the_apocalyptic_conclusion : Grants tridentineCase
+    apocalypticCase.conclusion
 -- axioms: propext, Quot.sound
 ```
 
@@ -3618,6 +3702,25 @@ The defeats of the dispute, as a table.
 def partyDefeats : Party → Party → Prop
 ```
 
+<a id="instDecidableRelPartyPartyDefeats"></a>
+**`instDecidableRelPartyPartyDefeats`**
+
+The table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
+```
+
+<a id="partyNode_strength"></a>
+**`partyNode_strength`**
+
+Every party's weakest link ranks at the bottom.
+
+```lean
+theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength = 0
+-- axioms: propext
+```
+
 <a id="solaFideDispute_defeats"></a>
 **`solaFideDispute_defeats`**
 
@@ -3627,10 +3730,15 @@ Acts defeat it, and it defeats neither; it defeats Trent, and Trent does not
 defeat it. Sanders defeats Paul and the critics, and both defeat him back.
 Jervell and Acts defeat each other. Nothing else.
 
+Every cell is computed from the parties' premises by `Horn.defeats?` and
+checked by the kernel — the defeats, and the absences of defeat, alike. The
+table above is what the computation is checked against; none of it is
+assumed.
+
 ```lean
 theorem solaFideDispute_defeats : ∀ (i j : Party), solaFideDispute.defeats i j
     ↔ partyDefeats i j
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 #### What the dispute decides
@@ -3662,7 +3770,7 @@ once.
 ```lean
 theorem trent_indefensible : ∀ (S : Set Party), Framework.Admissible
     solaFideDispute.defeats S → Party.trent ∉ S
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="apocalyptic_indefensible"></a>
@@ -3675,7 +3783,7 @@ reading itself defeats.
 ```lean
 theorem apocalyptic_indefensible : ∀ (S : Set Party), Framework.Admissible
     solaFideDispute.defeats S → Party.apocalyptic ∉ S
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="dominical_case_skeptically_accepted"></a>

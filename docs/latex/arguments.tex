@@ -2423,14 +2423,14 @@ theorem motyerReply_strength : motyerReply.strength = 0
 \end{verbatim}}
 \paragraph*{The defeats}
 \leavevmode\par
-Each is an attack the ratings do not block, proved by the attack and the comparison of strengths.
+Each is an attack the ratings do not block, decided from the two packages' premises by \texttt{Horn.defeats?} and checked by the kernel.
 
 \par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}defeats\_\allowbreak{}christian}}\par\nobreak\noindent
 \textbf{The critical denial defeats the scriptural reading.} It entails the negation of the premise that Isaiah 7:14 predicts a virgin birth, and that premise, cited \texttt{disputed}, does not outrank it.
 
 {\small\begin{verbatim}
 theorem critical_defeats_christian : Defeats criticalDenial christian
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{christian\_\allowbreak{}rebuts\_\allowbreak{}critical}}\par\nobreak\noindent
 The scriptural reading does attack the critical denial: it concludes the opposite.
@@ -2452,52 +2452,71 @@ theorem christian_does_not_undermine_critical : ∀ (φ : Formula Claim),
 
 {\small\begin{verbatim}
 theorem christian_defeats_critical : Defeats christian criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{berry\_\allowbreak{}defeats\_\allowbreak{}critical}}\par\nobreak\noindent
 \textbf{Berry defeats the critical denial.} He entails the negation of its premise that a near-term sign excludes a messianic sense, and that premise, cited \texttt{disputed}, does not outrank him.
 
 {\small\begin{verbatim}
 theorem berry_defeats_critical : Defeats berryObjection criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{postell\_\allowbreak{}defeats\_\allowbreak{}critical}}\par\nobreak\noindent
 \textbf{Postell defeats the critical denial}, on the same premise from different grounds.
 
 {\small\begin{verbatim}
 theorem postell_defeats_critical : Defeats postellParity criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{micah\_\allowbreak{}defeats\_\allowbreak{}critical}}\par\nobreak\noindent
 \textbf{The Micah counterexample defeats the critical denial}, on the same premise as Berry and Postell.
 
 {\small\begin{verbatim}
 theorem micah_defeats_critical : Defeats micahParity criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{motyer\_\allowbreak{}defeats\_\allowbreak{}critical}}\par\nobreak\noindent
 \textbf{Motyer defeats the critical denial}, by entailing the negation of its other premise: that 7:14 is a near-term sign to Ahaz, cited \texttt{disputed}.
 
 {\small\begin{verbatim}
 theorem motyer_defeats_critical : Defeats motyerReply criticalDenial
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}defeats\_\allowbreak{}berry}}\par\nobreak\noindent
 \textbf{The critical denial defeats Berry back.} It holds the premise Berry denies, so it rebuts him, and Berry is no stronger than it: his inference is contested as the critic's premises are.
 
 {\small\begin{verbatim}
 theorem critical_defeats_berry : Defeats criticalDenial berryObjection
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}defeats\_\allowbreak{}motyer}}\par\nobreak\noindent
 \textbf{The critical denial defeats Motyer back}, for the same reason: it holds the near-term premise he denies, and his inference is contested by the readers who identify the two children.
 
 {\small\begin{verbatim}
 theorem critical_defeats_motyer : Defeats criticalDenial motyerReply
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \paragraph*{What does not defeat}
 \leavevmode\par
+\par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}postell}}\par\nobreak\noindent
+\textbf{The critical denial does not defeat Postell.} It rebuts him, but it is the weaker of the two: its premises are \texttt{disputed}, and his inference is \texttt{plausible}. And it contradicts none of his premises: the critic can grant both his observations, and can grant his step too, by dating Isaiah 9 and 11 later than 7:14 — off its Assyrian timeline — so that one of the step's grounds fails (\texttt{critic\_\allowbreak{}grants\_\allowbreak{}postells\_\allowbreak{}step\_\allowbreak{}by\_\allowbreak{}dating\_\allowbreak{}the\_\allowbreak{}oracles\_\allowbreak{}later}).
+
+{\small\begin{verbatim}
+theorem critical_does_not_defeat_postell : ¬Defeats criticalDenial
+    postellParity
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}micah}}\par\nobreak\noindent
+\textbf{The critical denial does not defeat the Micah counterexample}, for the reason it does not defeat Postell: it is weaker, and it contradicts none of the counterexample's premises. The critic can grant its step by reading Micah 5:2 of a near-term Davidic king rather than messianically (\texttt{critic\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}micah\_\allowbreak{}step\_\allowbreak{}by\_\allowbreak{}a\_\allowbreak{}royal\_\allowbreak{}reading}).
+
+{\small\begin{verbatim}
+theorem critical_does_not_defeat_micah : ¬Defeats criticalDenial micahParity
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\paragraph*{Why these are not counters}
+\leavevmode\par
+The two absences above are computed; the readings below say why.
+
 \par\medskip\noindent\textbf{\texttt{later\allowbreak{}Oracles\allowbreak{}Reading}}\par\nobreak\noindent
 The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of 7:14 — the way out of the parity argument open to a reader who dates them later. Postell's step holds in it, because one of its grounds fails.
 
@@ -2510,12 +2529,12 @@ def laterOraclesReading : Valuation Claim :=
       False
     | x => True
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}postell}}\par\nobreak\noindent
-\textbf{The critical denial does not defeat Postell.} It rebuts him, but it is the weaker of the two: its premises are \texttt{disputed}, and his inference is \texttt{plausible}. And it contradicts none of his premises: the critical reading grants both his observations, and the later-oracles reading his step.
+\par\medskip\noindent\textbf{\texttt{critic\_\allowbreak{}grants\_\allowbreak{}postells\_\allowbreak{}step\_\allowbreak{}by\_\allowbreak{}dating\_\allowbreak{}the\_\allowbreak{}oracles\_\allowbreak{}later}}\par\nobreak\noindent
+\textbf{The critic can grant Postell's step}, by dating Isaiah 9 and 11 later than 7:14: then the parity step has a ground that fails, and the critic holds it without giving up the exclusion.
 
 {\small\begin{verbatim}
-theorem critical_does_not_defeat_postell : ¬Defeats criticalDenial
-    postellParity
+theorem critic_grants_postells_step_by_dating_the_oracles_later : Grants
+    criticalDenial parityDefeatsNearTermExclusion
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{royal\allowbreak{}Micah\allowbreak{}Reading}}\par\nobreak\noindent
@@ -2529,11 +2548,12 @@ def royalMicahReading : Valuation Claim :=
     | Claim.micahRulerReadMessianically => False
     | x => True
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}micah}}\par\nobreak\noindent
-\textbf{The critical denial does not defeat the Micah counterexample}, for the reason it does not defeat Postell: it is weaker, and it contradicts none of the counterexample's premises.
+\par\medskip\noindent\textbf{\texttt{critic\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}micah\_\allowbreak{}step\_\allowbreak{}by\_\allowbreak{}a\_\allowbreak{}royal\_\allowbreak{}reading}}\par\nobreak\noindent
+\textbf{The critic can grant the Micah step}, by reading Micah 5:2 of a near-term Davidic king rather than messianically.
 
 {\small\begin{verbatim}
-theorem critical_does_not_defeat_micah : ¬Defeats criticalDenial micahParity
+theorem critic_grants_the_micah_step_by_a_royal_reading : Grants
+    criticalDenial micahParityDefeatsNearTermExclusion
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \paragraph*{The dispute}
@@ -2601,13 +2621,40 @@ def partyDefeats : Party → Party → Prop :=
       Party.motyer => True
     | x, x_2 => False
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
+The table is finite, so membership in it is decidable.
+
+{\small\begin{verbatim}
+def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Strength}}\par\nobreak\noindent
+Each party's weakest link.
+
+{\small\begin{verbatim}
+def partyStrength : Party → ℕ :=
+  fun x =>
+    match x with
+    | Party.postell => 1
+    | Party.micah => 1
+    | x => 0
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
+Each party's strength is what \texttt{party\allowbreak{}Strength} says.
+
+{\small\begin{verbatim}
+theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
+    partyStrength i
+-- axioms: propext
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all thirty-six pairs: the critic and the scriptural reading defeat each other; each reply defeats the critic; the critic defeats Berry and Motyer back, but neither of Postell's counterexamples; nothing else.
+
+Every cell is computed from the parties' premises by \texttt{Horn.defeats?} and checked by the kernel; the table is what the computation is checked against.
 
 {\small\begin{verbatim}
 theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
     partyDefeats i j
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}prevails\_\allowbreak{}once\_\allowbreak{}replies\_\allowbreak{}are\_\allowbreak{}heard}}\par\nobreak\noindent
 \textbf{Heard out, the scriptural reading prevails.} Nothing defeats either of Postell's counterexamples, so both are in the grounded extension from the first step. They defeat the critic — the only party that defeats the scriptural reading, Berry or Motyer — so at the second step all three join them; and nothing defends the critic.
@@ -2624,7 +2671,7 @@ theorem scriptural_reading_prevails_once_replies_are_heard :
 {\small\begin{verbatim}
 theorem critical_denial_indefensible : ∀ (S : Set Party), Framework.Admissible
     isaiahDispute.defeats S → Party.critical ∉ S
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}skeptically\_\allowbreak{}accepted}}\par\nobreak\noindent
 So every resolution of the dispute accepts the scriptural reading.
@@ -2640,7 +2687,7 @@ And none accepts the critical denial.
 {\small\begin{verbatim}
 theorem critical_denial_not_credulously_accepted :
     ¬Framework.CredulouslyAccepted isaiahDispute.defeats Party.critical
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \paragraph*{Hearings}
 \leavevmode\par
@@ -2829,28 +2876,28 @@ theorem ordinarySignReply_strength : ordinarySignReply.strength = 0
 
 {\small\begin{verbatim}
 theorem sign_defeats_wegner : Defeats signArgument wegnerLexical
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\_\allowbreak{}defeats\_\allowbreak{}sign}}\par\nobreak\noindent
 \textbf{Wegner defeats the sign argument back.} He holds the premise it denies, so he rebuts it, and it is no stronger than he is.
 
 {\small\begin{verbatim}
 theorem wegner_defeats_sign : Defeats wegnerLexical signArgument
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{reply\_\allowbreak{}defeats\_\allowbreak{}sign}}\par\nobreak\noindent
 \textbf{The reply defeats the sign argument.} It entails the negation of the fathers' premise that the sign must be extraordinary, cited \texttt{disputed}.
 
 {\small\begin{verbatim}
 theorem reply_defeats_sign : Defeats ordinarySignReply signArgument
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{sign\_\allowbreak{}defeats\_\allowbreak{}reply}}\par\nobreak\noindent
 \textbf{The sign argument defeats the reply back.} It holds the premise the reply denies, and the reply's inference is contested as that premise is.
 
 {\small\begin{verbatim}
 theorem sign_defeats_reply : Defeats signArgument ordinarySignReply
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \paragraph*{The dispute}
 \leavevmode\par
@@ -2903,13 +2950,28 @@ def wegnerPartyDefeats : WegnerParty → WegnerParty → Prop :=
       WegnerParty.reply => True
     | x, x_2 => False
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
+The table is finite, so membership in it is decidable.
+
+{\small\begin{verbatim}
+def instDecidableRelWegnerPartyWegnerPartyDefeats : DecidableRel
+    wegnerPartyDefeats
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
+Every party's weakest link ranks at the bottom.
+
+{\small\begin{verbatim}
+theorem wegnerPartyNode_strength : ∀ (i : WegnerParty), (wegnerPartyNode
+    i).strength = 0
+-- axioms: propext
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
-\textbf{Who defeats whom}, all nine pairs: the fathers and Wegner defeat each other, the fathers and the reply defeat each other, and nothing else.
+\textbf{Who defeats whom}, all nine pairs: the fathers and Wegner defeat each other, the fathers and the reply defeat each other, and nothing else. Every cell is computed from the parties' premises by \texttt{Horn.defeats?} and checked by the kernel.
 
 {\small\begin{verbatim}
 theorem wegnerDispute_defeats : ∀ (i j : WegnerParty), wegnerDispute.defeats i
     j ↔ wegnerPartyDefeats i j
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}over\_\allowbreak{}wegner}}\par\nobreak\noindent
 \textbf{Nothing prevails.} Every party is defeated by someone — Wegner and the reply by the fathers, the fathers by both — so nothing is forced, and the grounded extension is empty.
@@ -4860,128 +4922,130 @@ theorem jervellCase_strength : jervellCase.strength = 0
 \end{verbatim}}
 \paragraph*{The defeats}
 \leavevmode\par
+Each is decided from the two packages' premises by \texttt{Horn.defeats?} and checked by the kernel: the attack, and the comparison of strengths.
+
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}defeats\_\allowbreak{}pauline}}\par\nobreak\noindent
 \textbf{Trent defeats the Pauline case.} It entails the denial of "not by works", so it rebuts sola fide.
 
 {\small\begin{verbatim}
 theorem trent_defeats_pauline : Defeats tridentineCase paulineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}defeats\_\allowbreak{}dominical}}\par\nobreak\noindent
 \textbf{Trent defeats the dominical case}, on the same rebuttal.
 
 {\small\begin{verbatim}
 theorem trent_defeats_dominical : Defeats tridentineCase dominicalCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}defeats\_\allowbreak{}apostolic}}\par\nobreak\noindent
 \textbf{Trent defeats the apostolic case}, on the same rebuttal.
 
 {\small\begin{verbatim}
 theorem trent_defeats_apostolic : Defeats tridentineCase apostolicCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{pauline\_\allowbreak{}defeats\_\allowbreak{}trent}}\par\nobreak\noindent
 \textbf{The Pauline case defeats Trent back.} It entails "not by works", which Trent denies.
 
 {\small\begin{verbatim}
 theorem pauline_defeats_trent : Defeats paulineCase tridentineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{dominical\_\allowbreak{}defeats\_\allowbreak{}trent}}\par\nobreak\noindent
 \textbf{The dominical case defeats Trent back.}
 
 {\small\begin{verbatim}
 theorem dominical_defeats_trent : Defeats dominicalCase tridentineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apostolic\_\allowbreak{}defeats\_\allowbreak{}trent}}\par\nobreak\noindent
 \textbf{The apostolic case defeats Trent back.}
 
 {\small\begin{verbatim}
 theorem apostolic_defeats_trent : Defeats apostolicCase tridentineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}defeats\_\allowbreak{}trent}}\par\nobreak\noindent
 \textbf{The apocalyptic reading defeats Trent.} It holds "not by works" by its own step — God's deliverance is conditioned on nothing a person does — and Trent denies it.
 
 {\small\begin{verbatim}
 theorem apocalyptic_defeats_trent : Defeats apocalypticCase tridentineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}defeats\_\allowbreak{}pauline}}\par\nobreak\noindent
 \textbf{The apocalyptic reading defeats the Pauline case.} It denies the objective genitive, a premise of Paul's strand cited \texttt{disputed}.
 
 {\small\begin{verbatim}
 theorem apocalyptic_defeats_pauline : Defeats apocalypticCase paulineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{pauline\_\allowbreak{}defeats\_\allowbreak{}apocalyptic}}\par\nobreak\noindent
 \textbf{The Pauline case defeats the apocalyptic reading back.} It entails justification by faith alone.
 
 {\small\begin{verbatim}
 theorem pauline_defeats_apocalyptic : Defeats paulineCase apocalypticCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{dominical\_\allowbreak{}defeats\_\allowbreak{}apocalyptic}}\par\nobreak\noindent
 \textbf{The dominical case defeats the apocalyptic reading}, on the same rebuttal — and the apocalyptic reading contradicts nothing it rests on.
 
 {\small\begin{verbatim}
 theorem dominical_defeats_apocalyptic : Defeats dominicalCase apocalypticCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apostolic\_\allowbreak{}defeats\_\allowbreak{}apocalyptic}}\par\nobreak\noindent
 \textbf{The apostolic case defeats the apocalyptic reading}, likewise.
 
 {\small\begin{verbatim}
 theorem apostolic_defeats_apocalyptic : Defeats apostolicCase apocalypticCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{sanders\_\allowbreak{}defeats\_\allowbreak{}pauline}}\par\nobreak\noindent
 \textbf{Sanders defeats the Pauline case.} Covenantal nomism, with Dunn's inference, denies the ἔργα νόμου premise.
 
 {\small\begin{verbatim}
 theorem sanders_defeats_pauline : Defeats sandersCase paulineCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{pauline\_\allowbreak{}defeats\_\allowbreak{}sanders}}\par\nobreak\noindent
 \textbf{The Pauline case defeats Sanders back.} It holds the premise Sanders' conclusion denies.
 
 {\small\begin{verbatim}
 theorem pauline_defeats_sanders : Defeats paulineCase sandersCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{sanders\_\allowbreak{}defeats\_\allowbreak{}critics}}\par\nobreak\noindent
 \textbf{Sanders defeats the critics.} Their conclusions contradict.
 
 {\small\begin{verbatim}
 theorem sanders_defeats_critics : Defeats sandersCase criticsCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{critics\_\allowbreak{}defeat\_\allowbreak{}sanders}}\par\nobreak\noindent
 \textbf{The critics defeat Sanders.} They deny covenantal nomism, his ground.
 
 {\small\begin{verbatim}
 theorem critics_defeat_sanders : Defeats criticsCase sandersCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{jervell\_\allowbreak{}defeats\_\allowbreak{}apostolic}}\par\nobreak\noindent
 \textbf{Jervell defeats the apostolic case.} He denies the yoke premise.
 
 {\small\begin{verbatim}
 theorem jervell_defeats_apostolic : Defeats jervellCase apostolicCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apostolic\_\allowbreak{}defeats\_\allowbreak{}jervell}}\par\nobreak\noindent
 \textbf{The apostolic case defeats Jervell back.} It holds the premise his conclusion denies.
 
 {\small\begin{verbatim}
 theorem apostolic_defeats_jervell : Defeats apostolicCase jervellCase
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \paragraph*{What does not defeat}
 \leavevmode\par
-Most pairs of parties are compatible: some world holds both. Seven such worlds settle every such pair at once (\texttt{Dispute.Stand\allowbreak{}Together}). Three pairs conflict in one direction only, and those are shown premise by premise.
+Most pairs of parties are compatible: some world holds both, and seven such worlds are named below (\texttt{Dispute.Stand\allowbreak{}Together}) — the readings on which whole groups of positions can be held at once. Three pairs conflict in one direction only. All of them, like every cell of the table, are decided by \texttt{Horn.defeats?} from the premises.
 
 \par\medskip\noindent\textbf{\texttt{critics\allowbreak{}Jervell\allowbreak{}Reading}}\par\nobreak\noindent
 The critics' world with Jervell's: covenantal nomism fails, and the yoke is Israel's law for gentiles. The Pauline and dominical cases hold in it.
@@ -5048,6 +5112,34 @@ def apocalypticCriticsJervellReading : Valuation Claim :=
     | Claim.acts15YokeIsLawAsCondition => False
     | x => True
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}dominical}}\par\nobreak\noindent
+\textbf{The apocalyptic reading does not defeat the dominical case.} It contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω, not the reading of 7:47 — and it does not deny its conclusion: it grants grace and "not by works", and it can grant that salvation is received through faith while denying that faith is its condition. Why, premise by premise: \texttt{apocalyptic\_\allowbreak{}grants\_\allowbreak{}sola\_\allowbreak{}fide\_\allowbreak{}as\_\allowbreak{}stated} and \texttt{apocalyptic\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}dominical\_\allowbreak{}step\_\allowbreak{}by\_\allowbreak{}healing}.
+
+{\small\begin{verbatim}
+theorem apocalyptic_does_not_defeat_dominical : ¬Defeats apocalypticCase
+    dominicalCase
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}apostolic}}\par\nobreak\noindent
+\textbf{Nor the apostolic case}, for the same reasons (\texttt{apocalyptic\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}apostolic\_\allowbreak{}step\_\allowbreak{}with\_\allowbreak{}jervell}).
+
+{\small\begin{verbatim}
+theorem apocalyptic_does_not_defeat_apostolic : ¬Defeats apocalypticCase
+    apostolicCase
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}apocalyptic}}\par\nobreak\noindent
+\textbf{Trent does not defeat the apocalyptic reading.} They agree on its conclusion — justification is not by faith alone — and Trent contradicts none of its premises: nothing Trent holds settles the genitive, or what δικαιοσύνη θεοῦ names (\texttt{trent\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}subjective\_\allowbreak{}genitive}, \texttt{trent\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}apocalyptic\_\allowbreak{}conclusion}). So the apocalyptic reading's "not by works" stands against Trent unanswered.
+
+{\small\begin{verbatim}
+theorem trent_does_not_defeat_apocalyptic : ¬Defeats tridentineCase
+    apocalypticCase
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\paragraph*{Why these are not counters}
+\leavevmode\par
+The three absences above are computed, and a computation names no reason. The readings below do: each is a way of holding one position that leaves one premise or conclusion of another standing, and each result checks that the reading holds everything the first position holds as well.
+
 \par\medskip\noindent\textbf{\texttt{apocalyptic\allowbreak{}With\allowbreak{}Faith\allowbreak{}Reading}}\par\nobreak\noindent
 The apocalyptic world in which salvation is still received through faith — faith is not the condition, but it is the means. Grace and "not by works" hold.
 
@@ -5059,8 +5151,16 @@ def apocalypticWithFaithReading : Valuation Claim :=
     | Claim.justificationByFaithAlone => False
     | x => True
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}grants\_\allowbreak{}sola\_\allowbreak{}fide\_\allowbreak{}as\_\allowbreak{}stated}}\par\nobreak\noindent
+\textbf{The apocalyptic reading grants what the Reformed strands conclude.} Grace, "not by works", and salvation received through faith all hold in its world; what it denies is that faith is the condition. So it rebuts neither Luke's case nor Acts'.
+
+{\small\begin{verbatim}
+theorem apocalyptic_grants_sola_fide_as_stated : Grants apocalypticCase
+    dominicalCase.conclusion
+-- axioms: propext, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\allowbreak{}Healing\allowbreak{}Reading}}\par\nobreak\noindent
-The same, with Jesus' σέσωκέν σε read as healing.
+The apocalyptic world, with Jesus' σέσωκέν σε read as healing.
 
 {\small\begin{verbatim}
 def apocalypticHealingReading : Valuation Claim :=
@@ -5071,8 +5171,16 @@ def apocalypticHealingReading : Valuation Claim :=
     | Claim.sozoIsSoteriological => False
     | x => True
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}dominical\_\allowbreak{}step\_\allowbreak{}by\_\allowbreak{}healing}}\par\nobreak\noindent
+\textbf{The apocalyptic reader can grant the dominical step}, by reading σέσωκέν σε at Luke 7:50 as healing rather than salvation: the step then has a ground that fails, and holds without delivering faith alone. So the apocalyptic reading does not undermine the dominical case on its step — it answers Luke only by disputing the lexical premise, which is where the dominical case is open.
+
+{\small\begin{verbatim}
+theorem apocalyptic_grants_the_dominical_step_by_healing : Grants
+    apocalypticCase dominicalToFaithAlone
+-- axioms: propext, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\allowbreak{}Jervell\allowbreak{}Reading}}\par\nobreak\noindent
-The same, with the yoke read as Jervell reads it.
+The apocalyptic world, with the yoke read as Jervell reads it.
 
 {\small\begin{verbatim}
 def apocalypticJervellReading : Valuation Claim :=
@@ -5082,6 +5190,14 @@ def apocalypticJervellReading : Valuation Claim :=
     | Claim.justificationByFaithAlone => False
     | Claim.acts15YokeIsLawAsCondition => False
     | x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}apostolic\_\allowbreak{}step\_\allowbreak{}with\_\allowbreak{}jervell}}\par\nobreak\noindent
+\textbf{The apocalyptic reader can grant the apostolic step}, by reading the yoke of Acts 15:10 as Jervell does — Israel's law for gentiles, not the law as a condition of salvation.
+
+{\small\begin{verbatim}
+theorem apocalyptic_grants_the_apostolic_step_with_jervell : Grants
+    apocalypticCase apostolicToFaithAlone
+-- axioms: propext, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Without\allowbreak{}Deliverance\allowbreak{}Reading}}\par\nobreak\noindent
 Trent's world, with the objective genitive and the apocalyptic reading of δικαιοσύνη θεοῦ both denied.
@@ -5097,6 +5213,14 @@ def trentWithoutDeliveranceReading : Valuation Claim :=
     | Claim.justificationDistinctFromSanctification => False
     | x => True
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}subjective\_\allowbreak{}genitive}}\par\nobreak\noindent
+\textbf{Trent can grant the subjective genitive.} Nothing Trent holds settles how πίστις Χριστοῦ is read, so the apocalyptic reading's denial of the objective genitive stands against Trent unanswered.
+
+{\small\begin{verbatim}
+theorem trent_grants_the_subjective_genitive : Grants tridentineCase (notP
+    Claim.pistisChristouObjective)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Without\allowbreak{}Faith\allowbreak{}Alone\allowbreak{}Reading}}\par\nobreak\noindent
 Trent's world, in which justification is not by faith alone — the apocalyptic reading's conclusion, which Trent shares.
 
@@ -5110,28 +5234,12 @@ def trentWithoutFaithAloneReading : Valuation Claim :=
     | Claim.justificationDistinctFromSanctification => False
     | x => True
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}dominical}}\par\nobreak\noindent
-\textbf{The apocalyptic reading does not defeat the dominical case.} It contradicts nothing the dominical case rests on — not Luke 7:50, not σῴζω, not the reading of 7:47 — and it does not deny its conclusion: it grants grace and "not by works", and it can grant that salvation is received through faith while denying that faith is its condition.
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}apocalyptic\_\allowbreak{}conclusion}}\par\nobreak\noindent
+\textbf{Trent grants the apocalyptic reading's conclusion}: justification is not by faith alone. They agree on it for different reasons, so Trent does not rebut the apocalyptic reading.
 
 {\small\begin{verbatim}
-theorem apocalyptic_does_not_defeat_dominical : ¬Defeats apocalypticCase
-    dominicalCase
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}apostolic}}\par\nobreak\noindent
-\textbf{Nor the apostolic case}, for the same reasons.
-
-{\small\begin{verbatim}
-theorem apocalyptic_does_not_defeat_apostolic : ¬Defeats apocalypticCase
-    apostolicCase
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}apocalyptic}}\par\nobreak\noindent
-\textbf{Trent does not defeat the apocalyptic reading.} They agree on its conclusion — justification is not by faith alone — and Trent contradicts none of its premises: nothing Trent holds settles the genitive, or what δικαιοσύνη θεοῦ names. So the apocalyptic reading's "not by works" stands against Trent unanswered.
-
-{\small\begin{verbatim}
-theorem trent_does_not_defeat_apocalyptic : ¬Defeats tridentineCase
-    apocalypticCase
+theorem trent_grants_the_apocalyptic_conclusion : Grants tridentineCase
+    apocalypticCase.conclusion
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \paragraph*{The dispute}
@@ -5227,13 +5335,28 @@ The defeats of the dispute, as a table.
 {\small\begin{verbatim}
 def partyDefeats : Party → Party → Prop
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
+The table is finite, so membership in it is decidable.
+
+{\small\begin{verbatim}
+def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
+Every party's weakest link ranks at the bottom.
+
+{\small\begin{verbatim}
+theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength = 0
+-- axioms: propext
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all sixty-four pairs. Trent and each Reformed strand defeat each other. The apocalyptic reading and Paul defeat each other; Luke and Acts defeat it, and it defeats neither; it defeats Trent, and Trent does not defeat it. Sanders defeats Paul and the critics, and both defeat him back. Jervell and Acts defeat each other. Nothing else.
+
+Every cell is computed from the parties' premises by \texttt{Horn.defeats?} and checked by the kernel — the defeats, and the absences of defeat, alike. The table above is what the computation is checked against; none of it is assumed.
 
 {\small\begin{verbatim}
 theorem solaFideDispute_defeats : ∀ (i j : Party), solaFideDispute.defeats i j
     ↔ partyDefeats i j
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \paragraph*{What the dispute decides}
 \leavevmode\par
@@ -5251,7 +5374,7 @@ theorem nothing_prevails_over_sola_fide : Framework.grounded
 {\small\begin{verbatim}
 theorem trent_indefensible : ∀ (S : Set Party), Framework.Admissible
     solaFideDispute.defeats S → Party.trent ∉ S
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{Nor can the apocalyptic reading.} The dominical case defeats it, and the only party that defeats the dominical case is Trent — which the apocalyptic reading itself defeats.
@@ -5259,7 +5382,7 @@ theorem trent_indefensible : ∀ (S : Set Party), Framework.Admissible
 {\small\begin{verbatim}
 theorem apocalyptic_indefensible : ∀ (S : Set Party), Framework.Admissible
     solaFideDispute.defeats S → Party.apocalyptic ∉ S
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{dominical\_\allowbreak{}case\_\allowbreak{}skeptically\_\allowbreak{}accepted}}\par\nobreak\noindent
 \textbf{Sola fide from Luke 7:50 is accepted on every resolution.} Its only defeater is Trent, which no admissible position can hold; it defeats back the only other party it conflicts with, the apocalyptic reading, which no admissible position can hold either. So every preferred extension — every maximal defensible position — contains it.
