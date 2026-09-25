@@ -4266,7 +4266,33 @@ among the five answers the scriptural reading.
 - Nothing else is forced:
   - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* defeats *Critical denial of the predictive reading of Isaiah 7:14*, and nothing forced defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*.
 
-Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 5 defeats and 27 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+- *Postell's parity argument against the near-term exclusion*, weakest at *plausible*:
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489
+- *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+- *Berry's objection to the near-term exclusion*, weakest at *disputed*:
+  - an inference step — [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+- *Motyer's reply to the near-term reading*, weakest at *disputed*:
+  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+- *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481
 
 <a id="scriptural_reading_prevails_once_replies_are_heard"></a>
 **`scriptural_reading_prevails_once_replies_are_heard`**
@@ -4294,7 +4320,33 @@ answers Postell.
 
 - *Postell's parity argument against the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*, and nothing defeats *Postell's parity argument against the near-term exclusion*.
 
-Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 1 defeat and 6 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Postell's parity argument against the near-term exclusion*, weakest at *plausible*:
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489
+- *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+- *Berry's objection to the near-term exclusion*, weakest at *disputed*:
+  - an inference step — [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+- *Motyer's reply to the near-term reading*, weakest at *disputed*:
+  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+- *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481
 
 <a id="critical_denial_indefensible"></a>
 **`critical_denial_indefensible`**
@@ -4359,7 +4411,25 @@ Why nothing prevails unanswered: the two defeat each other.
 - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*.
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
 
-Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 2 defeats and 0 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 
 <a id="nothing_prevails_unanswered"></a>
 **`nothing_prevails_unanswered`**
@@ -4400,7 +4470,27 @@ Why Motyer alone does not settle it: a defeater for each of the three.
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
 - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*.
 
-Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 3 defeats and 0 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+- *Motyer's reply to the near-term reading*, weakest at *disputed*:
+  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 
 <a id="nothing_prevails_on_motyer_alone"></a>
 **`nothing_prevails_on_motyer_alone`**
@@ -4442,7 +4532,31 @@ stages: the Micah counterexample first, then the three it defends.
   - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Berry's objection to the near-term exclusion*, and *Postell's Micah counterexample to the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
   - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*, and *Postell's Micah counterexample to the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
 
-Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 4 defeats and 17 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+- *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481
+- *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+- *Berry's objection to the near-term exclusion*, weakest at *disputed*:
+  - an inference step — [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+- *Motyer's reply to the near-term reading*, weakest at *disputed*:
+  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 
 <a id="scriptural_reading_prevails_without_postell"></a>
 **`scriptural_reading_prevails_without_postell`**
@@ -4484,7 +4598,29 @@ reply it faces, and the replies defeat it.
 - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Berry's objection to the near-term exclusion*.
 - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*.
 
-Each defeat named here is a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 4 defeats and 0 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+- *Berry's objection to the near-term exclusion*, weakest at *disputed*:
+  - an inference step — [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+- *Motyer's reply to the near-term reading*, weakest at *disputed*:
+  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 
 <a id="nothing_prevails_without_the_counterexamples"></a>
 **`nothing_prevails_without_the_counterexamples`**
@@ -4831,7 +4967,16 @@ Why nothing prevails: a defeater for each party.
 - *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*.
 - *The fathers' sign argument (Isaiah 7:11, 14)* defeats *The near-term reply: a sign need not be a miracle*.
 
-Each defeat named here is a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 3 defeats and 0 absences of defeat, each a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *The fathers' sign argument (Isaiah 7:11, 14)*, weakest at *disputed*:
+  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
+- *Wegner's grammatical objection: the עַלְמָה is already pregnant*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152
+- *The near-term reply: a sign need not be a miracle*, weakest at *disputed*:
+  - an inference step — [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), pp. 64–65; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 469–470; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
 
 <a id="nothing_prevails_over_wegner"></a>
 **`nothing_prevails_over_wegner`**
@@ -4860,7 +5005,16 @@ Why the fathers alone are one resolution.
   - *Wegner's grammatical objection: the עַלְמָה is already pregnant* conflicts with *The fathers' sign argument (Isaiah 7:11, 14)*: *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*, and *The fathers' sign argument (Isaiah 7:11, 14)* defeats *Wegner's grammatical objection: the עַלְמָה is already pregnant*.
   - *The near-term reply: a sign need not be a miracle* conflicts with *The fathers' sign argument (Isaiah 7:11, 14)*: *The near-term reply: a sign need not be a miracle* defeats *The fathers' sign argument (Isaiah 7:11, 14)*, and *The fathers' sign argument (Isaiah 7:11, 14)* defeats *The near-term reply: a sign need not be a miracle*.
 
-Each defeat named here is a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 4 defeats and 1 absence of defeat, each a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *The fathers' sign argument (Isaiah 7:11, 14)*, weakest at *disputed*:
+  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
+- *Wegner's grammatical objection: the עַלְמָה is already pregnant*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152
+- *The near-term reply: a sign need not be a miracle*, weakest at *disputed*:
+  - an inference step — [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), pp. 64–65; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 469–470; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
 
 <a id="sign_is_one_resolution"></a>
 **`sign_is_one_resolution`**
@@ -4888,7 +5042,16 @@ Why Wegner with the reply is the other resolution.
 - Nothing can be added to it:
   - *The fathers' sign argument (Isaiah 7:11, 14)* conflicts with *Wegner's grammatical objection: the עַלְמָה is already pregnant*: *The fathers' sign argument (Isaiah 7:11, 14)* defeats *Wegner's grammatical objection: the עַלְמָה is already pregnant*, and *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*.
 
-Each defeat named here is a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 3 defeats and 4 absences of defeat, each a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Wegner's grammatical objection: the עַלְמָה is already pregnant*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152
+- *The near-term reply: a sign need not be a miracle*, weakest at *disputed*:
+  - an inference step — [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), pp. 64–65; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 469–470; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+- *The fathers' sign argument (Isaiah 7:11, 14)*, weakest at *disputed*:
+  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
 
 <a id="wegner_is_the_other_resolution"></a>
 **`wegner_is_the_other_resolution`**
@@ -4953,7 +5116,14 @@ other.
 - *The fathers' sign argument (Isaiah 7:11, 14)* defeats *Wegner's grammatical objection: the עַלְמָה is already pregnant*.
 - *Wegner's grammatical objection: the עַלְמָה is already pregnant* defeats *The fathers' sign argument (Isaiah 7:11, 14)*.
 
-Each defeat named here is a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the parties' premises and checked by the kernel.
+**What this rests on.** The reasons state 2 defeats and 0 absences of defeat, each a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *The fathers' sign argument (Isaiah 7:11, 14)*, weakest at *disputed*:
+  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
+- *Wegner's grammatical objection: the עַלְמָה is already pregnant*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152
 
 <a id="nothing_prevails_without_the_reply"></a>
 **`nothing_prevails_without_the_reply`**

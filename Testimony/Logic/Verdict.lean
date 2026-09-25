@@ -28,6 +28,23 @@ the verdict. The generated list is what the verdict claims.
 The explanation is generated, not proved: it reads the same data the checker
 reads, so it cannot name a defeat the table lacks without the check failing. It
 does not add anything the checker did not confirm.
+
+## What a verdict rests on
+
+`Verdict.cells` lists every cell of the defeat table the reasons state — the
+defeats they name, and the absences of defeat that "nothing defeats *c*" and
+"every answer to *c*" quantify over. `Verdict.view` lists every party those
+cells involve at its weakest link, with the citations that rate it: the readings
+a reader would have to contest to contest the verdict.
+
+**Stated, not proved: sufficiency.** The cells follow the checker's own walk,
+so the verdict should hold of any defeat table that agrees with this one on
+them. That is not yet a theorem: proving it needs each checker restated so that
+what it reads is recorded, and the soundness proofs redone over that record.
+Until then, the list is what the reasons say they use.
+
+**Not claimed: necessity.** Deny one of these readings and the verdict may
+still stand, by another route the witness did not take.
 -/
 
 namespace Testimony.Logic
@@ -176,8 +193,15 @@ def whyStages : List ι → ℕ → List (List ι) → List (ℕ × List Seg)
         | none => (1, [edge name y x, .text ", unanswered."])) ++
     whyStages (acc ++ st) (k + 1) rest
 
+/-- A claim and its reasons, as generated. -/
+structure Words where
+  /-- What the verdict says. -/
+  claim : List Seg
+  /-- The reasons, each with its depth in the list. -/
+  reasons : List (ℕ × List Seg)
+
 /-- **The words for a claim**, generated from its witness. -/
-def explain : Claim ι → Page.Verdict
+def explain : Claim ι → Words
   | .nothingGrounded t =>
     { claim := [.text "Nothing prevails outright: every party is defeated by another."]
       reasons := t.map fun (x, y) => (0, [edge name y x, .text "."]) }
@@ -233,6 +257,61 @@ def explain : Claim ι → Page.Verdict
               (1, [party name x, .text " conflicts with ", party name y, .text ": "] ++
                 conflictSegs F name x y ++ [.text "."])) }
 
+/-! ### What the words rest on
+
+Every reason above states a cell of the defeat table: that one party defeats
+another, or that it does not. "Nothing defeats *c*" and "every answer to *c*
+fails" are statements about every party's cell against *c*. `cells` lists them,
+following the same walk as `explain`. -/
+
+/-- Every party's cell against `x`: the statement "nothing else defeats `x`",
+or "these are all its attackers", reads all of them. -/
+def into (x : ι) : List (ι × ι) := F.parties.map (·, x)
+
+/-- The cells `whyIndefensible` states. -/
+def cellsIndefensible (t : Table ι) : ℕ → ι → List (ι × ι)
+  | 0, _ => []
+  | n + 1, b => match t.lookup b with
+    | none => []
+    | some c => (c, b) :: into F c ++ (attackersOf F c).flatMap fun e =>
+        if conflicts F e b then [(e, b), (b, e)] else cellsIndefensible t n e
+
+/-- The cells `whyAdmissible` states: none of `s` defeats another, and every
+attack on a member, with the member answering it. -/
+def cellsAdmissible (s : List ι) : List (ι × ι) :=
+  (s.flatMap fun a => s.map (a, ·)) ++ s.flatMap fun m =>
+    into F m ++ (attackersOf F m).filterMap fun y => (s.find? (F.defeats · y)).map (·, y)
+
+/-- The cells `whyStages` states. -/
+def cellsStages : List ι → List (List ι) → List (ι × ι)
+  | _, [] => []
+  | acc, st :: rest =>
+    (st.flatMap fun x => into F x ++ (attackersOf F x).filterMap fun y =>
+      (acc.find? (F.defeats · y)).map (·, y)) ++ cellsStages (acc ++ st) rest
+
+/-- **Every cell of the defeat table a claim's reasons state.** -/
+def cells : Claim ι → List (ι × ι)
+  | .nothingGrounded t => t.map fun (x, y) => (y, x)
+  | .grounded sts => cellsStages F [] sts
+  | .groundedExactly sts t =>
+    cellsStages F [] sts ++ (F.parties.filter (· ∉ sts.flatten)).flatMap fun x =>
+      match t.lookup x with
+      | some y => (y, x) :: sts.flatten.map (·, y)
+      | none => []
+  | .indefensible b t => cellsIndefensible F t (t.length + 1) b
+  | .skeptical a t =>
+    (a, a) :: into F a ++ (attackersOf F a).map (a, ·) ++
+      (F.parties.filter (· != a)).flatMap fun x =>
+        [(x, a), (a, x)] ++
+          (if conflicts F x a then cellsIndefensible F t (t.length + 1) x else [])
+  | .notSkeptical a x s => (x, a) :: (a, x) :: cellsAdmissible F s
+  | .credulous _ s => cellsAdmissible F s
+  | .preferred s =>
+    cellsAdmissible F s ++ (F.parties.filter (· ∉ s)).flatMap fun x =>
+      match s.find? (conflicts F x) with
+      | some y => [(x, y), (y, x)]
+      | none => []
+
 end Explain
 
 end Claim
@@ -254,10 +333,52 @@ variable {α : Type} {D : Dispute α ι}
 /-- **The verdict holds** of the dispute. -/
 theorem holds (v : Verdict D) : v.claim.Holds D.defeats := Claim.holds_of_check v.checked
 
+/-- The cells the verdict's reasons state, each once, in the order they are
+first stated. -/
+def cells (v : Verdict D) : List (ι × ι) := (v.claim.cells v.finite).eraseDups
+
+/-- The parties those cells involve, each once. -/
+def involved (v : Verdict D) : List ι := (v.cells.flatMap fun (a, b) => [a, b]).eraseDups
+
+/-- What a package holds at its weakest link: every claim cited at that rank,
+every denial if the rank is the bottom, and every inference rated at it. A
+denial is labelled as the package's own citation labels it, which in this
+library states the claim as the party holds it. A
+package with no rated premise has no weakest link. -/
+def weakestLink (pkg : ArgumentPackage α) : List Page.Held :=
+  let r := pkg.strength
+  let claims := pkg.premises.filterMap fun φ => match φ with
+    | .atom a =>
+      let m := pkg.cite a
+      if m.source.confidence.rank == r then some ⟨m.label, m.source.confidence, m.source⟩
+      else none
+    | .imp (.atom a) .falsum =>
+      let m := pkg.cite a
+      -- A party's own citation labels a denied atom as the party holds it, so
+      -- the label is shown as written; what is added is why it ranks where it does.
+      if r == 0 then some ⟨m.label ++ " (encoded as a denial, so it ranks disputed)",
+        .disputed, m.source⟩ else none
+    | _ => none
+  let hasStep := pkg.premises.any fun φ => match φ with
+    | .atom _ => false
+    | .imp (.atom _) .falsum => false
+    | _ => true
+  let steps := if hasStep && pkg.inferenceRank == some r then
+      (pkg.inferences.filter (·.confidence.rank == r)).map fun s =>
+        (⟨"an inference step", s.confidence, s⟩ : Page.Held)
+    else []
+  claims.foldl (fun acc h => if acc.any (·.what == h.what) then acc else acc ++ [h]) [] ++ steps
+
 /-- What a page renders: the claim and the reasons, generated from the witness,
-each party named by its package. -/
+each party named by its package; the cells of the defeat table the reasons
+state; and every party they involve, at its weakest link. -/
 def view (v : Verdict D) : Page.Verdict :=
-  v.claim.explain v.finite fun i => (D.node i).name
+  let name := fun i => (D.node i).name
+  let words := v.claim.explain v.finite name
+  { claim := words.claim
+    reasons := words.reasons
+    cells := v.cells.map fun (a, b) => (name a, name b, v.finite.defeats a b)
+    readings := v.involved.map fun i => ⟨name i, weakestLink (D.node i)⟩ }
 
 end Verdict
 

@@ -447,15 +447,43 @@ def nested (lines : List (Nat × String)) : String :=
       closes ++ opens ++ "\\item " ++ l ++ "\n" ++ go depth rest
   go 0 lines
 
-/-- A verdict: its claim, its reasons as nested lists, and where its defeats
-come from. -/
+/-- What a verdict rests on: how many cells of the table its reasons state,
+which of those defeats a `Because` explains, and every party involved at its
+weakest link. -/
+def restsOn (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
+  let defeats := (v.cells.filter (·.2.2)).length
+  let absences := v.cells.length - defeats
+  let count (n : Nat) (one many : String) := toString n ++ " " ++ (if n == 1 then one else many)
+  let tableRef := if table.isEmpty then "the defeat table"
+    else "the defeat table, \\texttt{" ++ codeEscape table ++ "}"
+  let explained := (v.cells.filterMap fun (a, b, d) =>
+    if d then (Page.becauseFor links a b).map (a, b, ·) else none)
+  let held (h : Page.Held) : String :=
+    "\\item " ++ escape h.what ++ " --- " ++ source h.source ++ "\n"
+  let reading (r : Page.Reading) : String :=
+    match r.weakest with
+    | [] => "\\item \\emph{" ++ escape r.party ++ "}: no rated premise.\n"
+    | h :: _ =>
+      "\\item \\emph{" ++ escape r.party ++ "}, weakest at \\emph{" ++
+      confidence h.confidence ++ "}:\n\\begin{itemize}\n" ++
+      String.join (r.weakest.map held) ++ "\\end{itemize}\n"
+  "\\par\\noindent\\textbf{What this rests on.} The reasons state " ++
+  count defeats "defeat" "defeats" ++ " and " ++
+  count absences "absence of defeat" "absences of defeat" ++ ", each a cell of " ++
+  tableRef ++ ", computed from the two parties' premises and checked by the kernel. " ++
+  "Whether an attack survives turns on the attacker's weakest link and on the rating " ++
+  "of what it attacks, so a changed rating can change the verdict. The weakest links:\n" ++
+  "\\begin{itemize}\n" ++ String.join (v.readings.map reading) ++ "\\end{itemize}\n" ++
+  String.join (explained.map fun (a, b, d) =>
+    "\\noindent Why \\emph{" ++ escape a ++ "} defeats \\emph{" ++ escape b ++
+    "}, at the level of the claims: \\texttt{" ++ codeEscape d ++ "}.\n")
+
+/-- A verdict: its claim, its reasons as nested lists, and what they rest on. -/
 def verdict (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
   let line (segs : List Page.Seg) := String.join (segs.map (seg links))
   "\\paragraph{" ++ line v.claim ++ "}\n" ++
   nested (v.reasons.map fun (d, segs) => (d, line segs)) ++
-  (if table.isEmpty then "" else
-    "\\noindent Each defeat named here is a cell of the defeat table, \\texttt{" ++
-    codeEscape table ++ "}, computed from the parties' premises and checked by the kernel.\n")
+  restsOn v links table
 
 /-- Render one item against the document's atom ordering. -/
 def item [DecidableEq α] (order : List α) : Page.Item α → String

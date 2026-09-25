@@ -289,16 +289,46 @@ def seg (links : List Page.BecauseLink) : Page.Seg → String
       | none => "defeats"
     "*" ++ escape a ++ "* " ++ verb ++ " *" ++ escape b ++ "*"
 
-/-- A verdict: its claim in bold, then its reasons as a nested list, then where
-its defeats come from. -/
+/-- A count with its noun, singular or plural. -/
+def count (n : Nat) (one many : String) : String :=
+  toString n ++ " " ++ (if n == 1 then one else many)
+
+/-- What a verdict rests on: how many cells of the table its reasons state,
+which of those defeats a `Because` explains, and every party involved at its
+weakest link. -/
+def restsOn (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
+  let defeats := (v.cells.filter (·.2.2)).length
+  let absences := v.cells.length - defeats
+  let tableRef := if table.isEmpty then "the defeat table"
+    else "the defeat table, [`" ++ table ++ "`](#" ++ table ++ ")"
+  let explained := (v.cells.filterMap fun (a, b, d) =>
+    if d then (Page.becauseFor links a b).map (a, b, ·) else none)
+  let held (h : Page.Held) : String :=
+    "  - " ++ escape h.what ++ " — " ++ source h.source ++ "\n"
+  let reading (r : Page.Reading) : String :=
+    match r.weakest with
+    | [] => "- *" ++ escape r.party ++ "*: no rated premise.\n"
+    | h :: _ =>
+      "- *" ++ escape r.party ++ "*, weakest at *" ++ confidence h.confidence ++ "*:\n" ++
+      String.join (r.weakest.map held)
+  "\n**What this rests on.** The reasons state " ++ count defeats "defeat" "defeats" ++
+  " and " ++ count absences "absence of defeat" "absences of defeat" ++ ", each a cell of " ++
+  tableRef ++ ", computed from the two parties' premises and checked by the kernel. " ++
+  "Whether an attack survives turns on the attacker's weakest link and on the rating " ++
+  "of what it attacks, so a changed rating can change the verdict. The weakest links:\n\n" ++
+  String.join (v.readings.map reading) ++
+  String.join (explained.map fun (a, b, d) =>
+    "\nWhy *" ++ escape a ++ "* defeats *" ++ escape b ++ "*, at the level of the claims: [`" ++
+    d ++ "`](#" ++ d ++ ").\n")
+
+/-- A verdict: its claim in bold, then its reasons as a nested list, then what
+they rest on. -/
 def verdict (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
   let line (segs : List Page.Seg) := String.join (segs.map (seg links))
   "**" ++ line v.claim ++ "**\n\n" ++
   String.join (v.reasons.map fun (d, segs) =>
     String.join (List.replicate d "  ") ++ "- " ++ line segs ++ "\n") ++
-  (if table.isEmpty then "" else
-    "\nEach defeat named here is a cell of the defeat table, [`" ++ table ++ "`](#" ++
-    table ++ "), computed from the parties' premises and checked by the kernel.\n")
+  restsOn v links table
 
 /-- Render one item against the page's atom ordering. -/
 def item [DecidableEq α] (order : List α) : Item α → String

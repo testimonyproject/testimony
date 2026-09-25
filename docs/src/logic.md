@@ -591,6 +591,15 @@ from the witness itself, naming each defeat by the two parties' packages:
 >   *Critical denial of the predictive reading of Isaiah 7:14*, and nothing
 >   defeats *Postell's parity argument against the near-term exclusion*.
 
+Under the reasons, the page says what they rest on: how many cells of the
+defeat table they state (defeats named, and the absences of defeat that
+"nothing defeats *c*" quantifies over), and every party those cells involve at
+its weakest link, each premise with its citation. Those are the readings to
+contest to contest the verdict. Two limits, stated in the module docstring:
+that the verdict holds of any table agreeing on those cells is stated but not
+yet proved, and denying one reading need not overturn the verdict, which may
+stand by another route.
+
 So a docstring that drifts from its witness is visible: the generated list
 beneath it says otherwise, and changing the witness changes the page, which
 `argdoc --check` catches. A defeat that a `Because` on the same page explains

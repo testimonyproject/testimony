@@ -70,14 +70,38 @@ inductive Seg
   /-- "*a* defeats *b*", by the two packages' names. -/
   | defeat (a b : String)
 
+/-- A premise a party holds at its weakest link: the claim (or its denial, or
+the party's inference), how firmly it is held, and who says so. -/
+structure Held where
+  /-- What is held. -/
+  what : String
+  /-- At what confidence. A denied claim ranks `disputed`, whatever its
+  citation, because the citation rates the claim and not its denial. -/
+  confidence : Confidence
+  /-- The citation that rates it. -/
+  source : Source
+
+/-- A party a verdict rests on, and its weakest link: the lowest rating among
+its premises and inferences, with every premise held at that rating. -/
+structure Reading where
+  /-- The party, by its package's name. -/
+  party : String
+  /-- Its weakest link; empty if it has no rated premise. -/
+  weakest : List Held
+
 /-- Why a verdict holds, as a page shows it: the claim, then the reasons as an
 indented list, both generated from a checked witness
-(`Testimony.Logic.Verdict`). -/
+(`Testimony.Logic.Verdict`); and what the reasons rest on. -/
 structure Verdict where
   /-- What the verdict says. -/
   claim : List Seg
   /-- The reasons, each with its depth in the list. -/
   reasons : List (Nat × List Seg)
+  /-- Every cell of the defeat table the reasons use: attacker, attacked, and
+  whether the one defeats the other. -/
+  cells : List (String × String × Bool)
+  /-- Every party those cells involve, at its weakest link. -/
+  readings : List Reading
 
 /-- A `Because` on the page, found by the pair it explains: the holder's name,
 the rival's name, and the declaration. A defeat of the rival by the holder links
