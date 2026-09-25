@@ -1,6 +1,7 @@
 import Testimony.Arguments.SolaFide.Results
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
+import Testimony.Logic.Solver
 
 /-!
 # Arguments.SolaFide.Dispute — who prevails over sola fide
@@ -715,6 +716,14 @@ theorem solaFideDispute_defeats :
   refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
   cases i <;> cases j <;> decide +kernel
 
+/-- The dispute in the form the verdict solver computes with: every party, and
+the table. -/
+def solaFideFinite : Solver.Finite solaFideDispute.defeats where
+  parties := [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders, .critics, .jervell]
+  complete i := by cases i <;> decide
+  defeats i j := decide (partyDefeats i j)
+  spec i j := by rw [solaFideDispute_defeats]; simp
+
 /-! ### What the dispute decides -/
 
 /-- **Nothing prevails outright.** Every party is defeated by some other: each
@@ -724,16 +733,7 @@ Sanders, Jervell by Acts. The grounded extension — what the dispute forces,
 before any choice between rivals — is empty. -/
 @[headline]
 theorem nothing_prevails_over_sola_fide : grounded solaFideDispute.defeats = ∅ :=
-  grounded_eq_empty_of_attacked fun a => by
-    cases a
-    · exact ⟨.trent, (solaFideDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.trent, (solaFideDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.trent, (solaFideDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.pauline, (solaFideDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.pauline, (solaFideDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.critics, (solaFideDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.sanders, (solaFideDispute_defeats _ _).mpr trivial⟩
-    · exact ⟨.apostolic, (solaFideDispute_defeats _ _).mpr trivial⟩
+  (Solver.grounded_eq (F := solaFideFinite) [] (by decide +kernel)).trans (by ext; simp)
 
 #print axioms nothing_prevails_over_sola_fide
 
@@ -744,12 +744,8 @@ defeats Trent. No position can hold Trent and answer the apocalyptic reading at
 once. -/
 @[headline]
 theorem trent_indefensible (S : Set Party)
-    (hS : Admissible solaFideDispute.defeats S) : Party.trent ∉ S := by
-  intro ht
-  obtain ⟨c, hc, hca⟩ := hS.2 _ ht .apocalyptic ((solaFideDispute_defeats _ _).mpr trivial)
-  rw [solaFideDispute_defeats] at hca
-  cases c <;> simp only [partyDefeats] at hca <;>
-    exact hS.1 _ hc _ ht ((solaFideDispute_defeats _ _).mpr trivial)
+    (hS : Admissible solaFideDispute.defeats S) : Party.trent ∉ S :=
+  Solver.not_mem_admissible (F := solaFideFinite) (by decide +kernel) S hS
 
 #print axioms trent_indefensible
 
@@ -758,12 +754,8 @@ only party that defeats the dominical case is Trent — which the apocalyptic
 reading itself defeats. -/
 @[headline]
 theorem apocalyptic_indefensible (S : Set Party)
-    (hS : Admissible solaFideDispute.defeats S) : Party.apocalyptic ∉ S := by
-  intro ha
-  obtain ⟨c, hc, hcd⟩ := hS.2 _ ha .dominical ((solaFideDispute_defeats _ _).mpr trivial)
-  rw [solaFideDispute_defeats] at hcd
-  cases c <;> simp only [partyDefeats] at hcd
-  exact hS.1 _ ha _ hc ((solaFideDispute_defeats _ _).mpr trivial)
+    (hS : Admissible solaFideDispute.defeats S) : Party.apocalyptic ∉ S :=
+  Solver.not_mem_admissible (F := solaFideFinite) (by decide +kernel) S hS
 
 #print axioms apocalyptic_indefensible
 
@@ -783,33 +775,8 @@ argues that σῴζω at Luke 7:50 means healing, and none argues that the woman
 love at 7:47 was the ground of her forgiveness. -/
 @[headline]
 theorem dominical_case_skeptically_accepted :
-    SkepticallyAccepted solaFideDispute.defeats .dominical := by
-  intro S hS
-  by_contra hD
-  have hT := trent_indefensible S hS.1
-  have hA := apocalyptic_indefensible S hS.1
-  have hadm : Admissible solaFideDispute.defeats (insert .dominical S) := by
-    refine ⟨?_, ?_⟩
-    · intro x hx y hy hxy
-      rcases Set.mem_insert_iff.mp hx with rfl | hx <;>
-        rcases Set.mem_insert_iff.mp hy with rfl | hy
-      · exact solaFideDispute.not_defeats_self _ hxy
-      · rw [solaFideDispute_defeats] at hxy
-        cases y <;> simp only [partyDefeats] at hxy
-        · exact hT hy
-        · exact hA hy
-      · rw [solaFideDispute_defeats] at hxy
-        cases x <;> simp only [partyDefeats] at hxy
-        exact hT hx
-      · exact hS.1.1 x hx y hy hxy
-    · intro x hx
-      rcases Set.mem_insert_iff.mp hx with rfl | hx
-      · intro b hb
-        rw [solaFideDispute_defeats] at hb
-        cases b <;> simp only [partyDefeats] at hb
-        exact ⟨.dominical, Set.mem_insert _ _, (solaFideDispute_defeats _ _).mpr trivial⟩
-      · exact (hS.1.2 x hx).mono (Set.subset_insert _ _)
-  exact hD (hS.eq_of_subset hadm (Set.subset_insert _ _) ▸ Set.mem_insert _ _)
+    SkepticallyAccepted solaFideDispute.defeats .dominical :=
+  Solver.skeptically_accepted (F := solaFideFinite) (by decide +kernel)
 
 #print axioms dominical_case_skeptically_accepted
 
@@ -826,27 +793,9 @@ rival to sola fide answering the other: on the apocalyptic reading holding
 "not by works" where Trent denies it. -/
 @[headline]
 theorem sola_fide_not_forced_without_the_apocalyptic_reading :
-    ¬ SkepticallyAccepted withoutApocalyptic.defeats ⟨.dominical, by decide⟩ := by
-  intro hskep
-  have hadm : Admissible withoutApocalyptic.defeats {⟨.trent, by decide⟩} := by
-    refine ⟨?_, ?_⟩
-    · intro x hx y hy hxy
-      simp only [Set.mem_singleton_iff] at hx hy
-      subst hx hy
-      exact withoutApocalyptic.not_defeats_self _ hxy
-    · intro x hx b hb
-      simp only [Set.mem_singleton_iff] at hx
-      subst hx
-      obtain ⟨b, hb'⟩ := b
-      rw [Dispute.restrict_defeats, solaFideDispute_defeats] at hb
-      refine ⟨⟨.trent, by decide⟩, rfl, ?_⟩
-      rw [Dispute.restrict_defeats, solaFideDispute_defeats]
-      cases b <;> first | exact absurd rfl hb' | simp_all [partyDefeats]
-  obtain ⟨P, hsub, hP⟩ := hadm.exists_preferred
-  have hd := hskep P hP
-  have ht : (⟨.trent, by decide⟩ : {i // i ≠ Party.apocalyptic}) ∈ P := hsub rfl
-  exact hP.1.1 _ ht _ hd
-    ((Dispute.restrict_defeats _ _ _ _).mpr ((solaFideDispute_defeats _ _).mpr trivial))
+    ¬ SkepticallyAccepted withoutApocalyptic.defeats ⟨.dominical, by decide⟩ :=
+  Solver.not_skeptically_accepted (F := solaFideFinite.restrict (· ≠ Party.apocalyptic))
+    (by decide +kernel)
 
 #print axioms sola_fide_not_forced_without_the_apocalyptic_reading
 
