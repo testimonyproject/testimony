@@ -27,6 +27,7 @@ open Testimony Testimony.Logic
 
 /-- Sufficiency and perspicuity, with the prooftexts and the claim that
 scripture teaches the principle, yield the sole infallible rule. -/
+@[solaScripturaDefs]
 def toSoleRule : Formula Claim :=
   ⋀ [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
     , p .scriptureIsSufficient, p .scriptureIsPerspicuous
@@ -35,11 +36,13 @@ def toSoleRule : Formula Claim :=
 /-- The eliminative route: scripture is infallible, nothing else is, so
 scripture is the *sole* infallible rule. It never asserts that scripture
 teaches the principle. -/
+@[solaScripturaDefs]
 def eliminativeToSoleRule : Formula Claim :=
   ⋀ [p .scriptureIsInfallible, p .noOtherRuleIsInfallible] ➝ p .scriptureIsSoleInfallibleRule
 
 /-- Geisler's route: the historical-grammatical method suffices, so creeds may
 inform without binding, and no second infallible rule is needed. -/
+@[solaScripturaDefs]
 def tradition0ToSoleRule : Formula Claim :=
   ⋀ [ p .historicalGrammaticalMethodSuffices, p .creedsAreInformativeNotNormative
     , p .scriptureIsInfallible, p .noOtherRuleIsInfallible ] ➝ p .scriptureIsSoleInfallibleRule
@@ -48,17 +51,20 @@ def tradition0ToSoleRule : Formula Claim :=
 
 /-- **Tradition II.** Binding unwritten tradition as a coordinate source denies
 that scripture is the sole rule. -/
+@[solaScripturaDefs]
 def tridentineDeniesSoleRule : Formula Claim :=
   ⋀ [ p .thessalonians2_15TraditionBinding
     , p .traditionIsCoordinateSourceOfRevelation ] ➝ notP .scriptureIsSoleInfallibleRule
 
 /-- **Tradition III.** An infallible magisterium is a second infallible rule,
 whatever is said about sources. -/
+@[solaScripturaDefs]
 def magisterialDeniesSoleRule : Formula Claim :=
   p .magisteriumIsInfallible ➝ notP .scriptureIsSoleInfallibleRule
 
 /-- **Orthodoxy.** The mind of the Church interpreting infallibly is likewise a
 second infallible rule — and it is not the magisterial premise. -/
+@[solaScripturaDefs]
 def orthodoxDeniesSoleRule : Formula Claim :=
   p .churchMindIsInfallibleInterpreter ➝ notP .scriptureIsSoleInfallibleRule
 
@@ -66,6 +72,7 @@ def orthodoxDeniesSoleRule : Formula Claim :=
 
 /-- If a doctrine binds only when scripture teaches it, and scripture does not
 teach sola scriptura, then sola scriptura does not bind. -/
+@[solaScripturaDefs]
 def selfRefutationStep : Formula Claim :=
   ⋀ [p .onlyScripturalDoctrineIsBinding, notP .solaScripturaIsTaughtByScripture]
   ➝ notP .scriptureIsSoleInfallibleRule
@@ -73,6 +80,7 @@ def selfRefutationStep : Formula Claim :=
 /-- If the canon is known only through the Church's reception, and identifying
 the canon requires an infallible authority, then an infallible authority
 outside scripture is needed to identify scripture. -/
+@[solaScripturaDefs]
 def canonObjectionStep : Formula Claim :=
   ⋀ [ p .canonKnownThroughChurchReception
     , p .identifyingCanonRequiresInfallibleAuthority ] ➝ notP .scriptureIsSoleInfallibleRule
@@ -81,6 +89,7 @@ def canonObjectionStep : Formula Claim :=
 authority, exercised indirectly by choosing the body to submit to, then
 Tradition I's ministerial authority is not a principled difference from
 Tradition 0. -/
+@[solaScripturaDefs]
 def interpretiveRegressStep : Formula Claim :=
   ⋀ [ p .traditionHasMinisterialAuthority
     , p .individualRetainsUltimateInterpretiveAuthority ]
@@ -93,11 +102,13 @@ said to rest on the clarity of scripture, while the clear sense of scripture is
 said to require the consensus of the Church. -/
 
 /-- Leg one: the creedal consensus rests on scripture's clarity. -/
+@[solaScripturaDefs]
 def consensusRestsOnPerspicuity : Formula Claim :=
   p .scriptureIsPerspicuous ➝ p .creedalConsensusIsHermeneuticallyNecessary
 
 /-- Leg two: scripture's clear sense is not obtainable without that
 consensus. -/
+@[solaScripturaDefs]
 def perspicuityRestsOnConsensus : Formula Claim :=
   p .creedalConsensusIsHermeneuticallyNecessary ➝ p .scriptureIsPerspicuous
 
@@ -105,6 +116,7 @@ def perspicuityRestsOnConsensus : Formula Claim :=
 
 /-- **The classical Protestant line**, running through the claim that scripture
 teaches the principle. -/
+@[solaScripturaDefs]
 def classicalLine : Line Claim :=
   { name := "Classical (scripture teaches the principle)"
   , grounds :=
@@ -115,6 +127,7 @@ def classicalLine : Line Claim :=
   , delivers := p .scriptureIsSoleInfallibleRule }
 
 /-- **The eliminative line**, which reaches the conclusion without the hinge. -/
+@[solaScripturaDefs]
 def eliminativeLine : Line Claim :=
   { name := "Eliminative (nothing else is infallible)"
   , grounds := [p .scriptureIsInfallible, p .noOtherRuleIsInfallible]
@@ -123,6 +136,7 @@ def eliminativeLine : Line Claim :=
 
 /-- **Tradition 0**, as Geisler states it rather than as Mathison describes
 it. -/
+@[solaScripturaDefs]
 def tradition0Line : Line Claim :=
   { name := "Tradition 0 (creeds informative, not normative)"
   , grounds :=
@@ -132,6 +146,7 @@ def tradition0Line : Line Claim :=
   , delivers := p .scriptureIsSoleInfallibleRule }
 
 /-- **Tradition II**, the Tridentine two-source position. -/
+@[solaScripturaDefs]
 def tridentineLine : Line Claim :=
   { name := "Tradition II (two coordinate sources)"
   , grounds :=
@@ -141,6 +156,7 @@ def tridentineLine : Line Claim :=
   , delivers := notP .scriptureIsSoleInfallibleRule }
 
 /-- **Tradition III**, resting on Vatican I rather than on Trent. -/
+@[solaScripturaDefs]
 def vaticanLine : Line Claim :=
   { name := "Tradition III (the magisterium as the one real source)"
   , grounds := [p .magisteriumIsInfallible]
@@ -148,6 +164,7 @@ def vaticanLine : Line Claim :=
   , delivers := notP .scriptureIsSoleInfallibleRule }
 
 /-- **The Orthodox line**, grounded on the mind of the Church. -/
+@[solaScripturaDefs]
 def orthodoxLine : Line Claim :=
   { name := "Orthodox (the mind of the Church)"
   , grounds := [p .churchMindIsInfallibleInterpreter]
@@ -155,6 +172,7 @@ def orthodoxLine : Line Claim :=
   , delivers := notP .scriptureIsSoleInfallibleRule }
 
 /-- **The self-refutation objection.** -/
+@[solaScripturaDefs]
 def selfRefutationLine : Line Claim :=
   { name := "Self-refutation objection"
   , grounds :=
@@ -164,6 +182,7 @@ def selfRefutationLine : Line Claim :=
   , delivers := notP .scriptureIsSoleInfallibleRule }
 
 /-- **The canon objection.** -/
+@[solaScripturaDefs]
 def canonObjectionLine : Line Claim :=
   { name := "Canon objection"
   , grounds :=
@@ -173,6 +192,7 @@ def canonObjectionLine : Line Claim :=
   , delivers := notP .scriptureIsSoleInfallibleRule }
 
 /-- **The interpretive-authority regress.** -/
+@[solaScripturaDefs]
 def interpretiveRegressLine : Line Claim :=
   { name := "Interpretive-authority regress"
   , grounds :=
@@ -189,12 +209,14 @@ argument; taking away the ground it needed is what a reply actually does. -/
 
 /-- The classical answer to self-refutation: scripture does teach the
 principle. -/
+@[solaScripturaDefs]
 def selfRefutationUnderClassicalAnswer : Line Claim :=
   selfRefutationLine.onGrounds
     [p .onlyScripturalDoctrineIsBinding, p .solaScripturaIsTaughtByScripture]
 
 /-- The final-arbiter answer: the bindingness rule governs first-order doctrine,
 not a claim about where binding doctrine comes from. -/
+@[solaScripturaDefs]
 def selfRefutationUnderFinalArbiter : Line Claim :=
   selfRefutationLine.onGrounds
     [ p .bindingnessAppliesToFirstOrderDoctrineOnly
@@ -204,12 +226,14 @@ def selfRefutationUnderFinalArbiter : Line Claim :=
 objection needed — that identifying it requires an *infallible* authority — is
 replaced by the observation that the rival's authority is self-authenticating
 too. -/
+@[solaScripturaDefs]
 def canonUnderParity : Line Claim :=
   canonObjectionLine.onGrounds
     [p .canonKnownThroughChurchReception, p .rivalAuthorityIsAlsoSelfAuthenticating]
 
 /-- Mathison's parity reply: choosing Rome is itself an act of private
 judgement, so private judgement does not separate the positions. -/
+@[solaScripturaDefs]
 def regressUnderParity : Line Claim :=
   interpretiveRegressLine.onGrounds
     [p .traditionHasMinisterialAuthority, p .choosingAnAuthorityIsItselfPrivateJudgment]
@@ -227,6 +251,7 @@ denies that circularity is a defect peculiar to Tradition I, which is why
 `circleDefeatsLine` carries the universality claim as a ground of its own. -/
 
 /-- Both legs together make the reasoning circular. -/
+@[solaScripturaDefs]
 def circleStep : Formula Claim :=
   ⋀ [ p .creedalConsensusRestsOnPerspicuity
     , p .perspicuityRequiresCreedalConsensus ] ➝ p .traditionIReasoningIsCircular
@@ -234,11 +259,13 @@ def circleStep : Formula Claim :=
 /-- Circularity defeats the position **if** it is not a feature of every appeal
 to an ultimate authority. Geisler's charge needs the second conjunct, and it is
 what Barrett denies. -/
+@[solaScripturaDefs]
 def circularityDefeats : Formula Claim :=
   ⋀ [ p .traditionIReasoningIsCircular
     , notP .everyUltimateAuthorityIsCircular ] ➝ p .circularityDefeatsTraditionI
 
 /-- **Geisler's circularity charge.** -/
+@[solaScripturaDefs]
 def geislerCircleLine : Line Claim :=
   { name := "Geisler's circularity charge against Tradition I"
   , grounds :=
@@ -248,6 +275,7 @@ def geislerCircleLine : Line Claim :=
   , delivers := p .traditionIReasoningIsCircular }
 
 /-- The charge pressed home: the circularity defeats the position. -/
+@[solaScripturaDefs]
 def circleDefeatsLine : Line Claim :=
   { name := "The circularity defeats Tradition I"
   , grounds :=
@@ -259,6 +287,7 @@ def circleDefeatsLine : Line Claim :=
 /-- **Allen and Swain's reply.** The consensus is established by and
 accountable to scripture, so it is a product of reading scripture rather than a
 precondition of it. -/
+@[solaScripturaDefs]
 def circleUnderAccountability : Line Claim :=
   geislerCircleLine.onGrounds
     [ p .creedalConsensusRestsOnPerspicuity
@@ -269,6 +298,7 @@ elders commended to the word (Acts 20:32), required to hold to it (Titus 1:9),
 forbidden to domineer (1 Peter 5:2–3) — so the consensus's own warrant is read
 off scripture, and perspicuity is in any case claimed only for what is
 necessary for salvation. -/
+@[solaScripturaDefs]
 def circleUnderScripturalBounding : Line Claim :=
   geislerCircleLine.onGrounds
     [ p .creedalConsensusRestsOnPerspicuity
@@ -277,6 +307,7 @@ def circleUnderScripturalBounding : Line Claim :=
 
 /-- **Barrett's parity reply.** The circle is conceded; what is denied is that
 it is peculiar to this position. -/
+@[solaScripturaDefs]
 def defeatUnderParity : Line Claim :=
   circleDefeatsLine.onGrounds
     [ p .traditionIReasoningIsCircular
@@ -287,6 +318,7 @@ def defeatUnderParity : Line Claim :=
 /-- What the Protestant packages rest on beyond any single line: the prooftexts
 that belong to no strand, the shared datum of 2 Thessalonians 2:15, and the
 commitments of the final-arbiter reading. -/
+@[solaScripturaDefs]
 def sharedGrounds : List (Formula Claim) :=
   [ p .mark7TraditionCanNullify, p .acts17BereansTested
   , p .thessalonians2_15TraditionBinding

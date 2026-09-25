@@ -119,12 +119,14 @@ def aquinasOnFormedFaith : Source :=
 /-- **The Johannine strand.** From the work God requires (6:28–29), and eternal
 life through believing (3:16–18, 3:36, 5:24, 20:31), to justification by faith
 alone — by way of the reading of that believing as trust. -/
+@[solaFideDefs]
 def johannineToFaithAlone : Formula Claim :=
   ⋀ [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust]
     ➝ p .justificationByFaithAlone
 
 /-- The Johannine line. Its texts are its own grounds, not shared prooftexts,
 because the strand is not yet part of `reformed`. -/
+@[solaFideDefs]
 def johannineLine : Line Claim :=
   { name := "Johannine strand (John 6:29)"
   , grounds :=
@@ -136,6 +138,7 @@ def johannineLine : Line Claim :=
 /-- **Aquinas's line.** The believing of 6:29 is faith living through charity,
 and so not the bare trust the strand needs. The denial is derived, not assumed:
 it follows from Aquinas's own reading of the verse. -/
+@[solaFideDefs]
 def thomistLine : Line Claim :=
   { name := "Faith formed by charity (Aquinas on John 6:29)"
   , grounds := [p .johannineBelievingIsFormedByCharity]
@@ -147,6 +150,7 @@ def thomistLine : Line Claim :=
 
 /-- Sola fide from John alone: the Johannine line, with the grounds and closing
 steps every Reformed strand shares. -/
+@[solaFideDefs]
 def johannineCase : ArgumentPackage Claim :=
   { reformed with
     name := "Sola fide from John (6:28–29)"
@@ -155,6 +159,7 @@ def johannineCase : ArgumentPackage Claim :=
 /-- Aquinas on John: every text the Johannine strand reads, and every shared
 ground, with its believing read as faith formed by charity. The rival the strand
 is written against. -/
+@[solaFideDefs]
 def thomistOnJohn : ArgumentPackage Claim :=
   { reformed with
     name := "Aquinas on John 6:29 (faith formed by charity)"
@@ -171,9 +176,7 @@ trust, and the work God requires is no work at all: sola fide follows from John
 without Paul, Luke or Acts. -/
 @[headline]
 theorem johannine_strand_establishes : Establishes johannineCase := by
-  establish [johannineCase, reformed, johannineLine, johannineToFaithAlone, sharedGrounds,
-    prooftexts, jamesLine, closingSteps, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms johannine_strand_establishes
 
@@ -195,20 +198,14 @@ Paul's Galatians and Luke's σῴζω, carries the conclusion only through a rea
 here, of what it is to believe *in* him. -/
 @[headline]
 theorem johannine_strand_rests_on_believing_as_trust : ¬ Establishes thomistOnJohn := by
-  refute_with thomistReading [thomistOnJohn, reformed, johannineLine, thomistLine,
-    Line.onGrounds, johannineToFaithAlone, sharedGrounds, prooftexts, jamesLine, closingSteps,
-    jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
-    graceNotWorks]
+  refute_with thomistReading [solaFideDefs]
 
 #print axioms johannine_strand_rests_on_believing_as_trust
 
 /-- The Johannine case has a model, so `johannine_strand_establishes` is not
 vacuous. -/
 theorem johannineCase_is_satisfiable : Satisfiable johannineCase.premises := by
-  satisfied_by everythingHoldsReading [johannineCase, reformed, johannineLine,
-    johannineToFaithAlone, sharedGrounds, prooftexts, jamesLine, closingSteps,
-    jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
-    graceNotWorks]
+  satisfied_by everythingHoldsReading [solaFideDefs]
 
 /-! ### Luther's answer -/
 
@@ -227,6 +224,7 @@ def lutherOnGalatiansThree : Source :=
 the denial of Aquinas's reading: the believing that justifies is not faith formed
 by charity, since charity is what the law commands and the law is not of
 faith. -/
+@[solaFideDefs]
 def lutherLine : Line Claim :=
   { name := "Luther on Galatians 3:11–12 (against faith formed by charity)"
   , grounds := [p .gal3_11_12LawIsNotOfFaith, p .lawCommandsCharity]
@@ -238,11 +236,13 @@ def lutherLine : Line Claim :=
 
 /-- Luther's answer to Aquinas as an argument: what Aquinas grants, with
 Luther's step, against the reading of 6:29 as faith formed by charity. -/
+@[solaFideDefs]
 def lutherOnGalatians : ArgumentPackage Claim :=
   lutherLine.asPackage baseCite "the believing of John 6:29 is not faith formed by charity"
 
 /-- The same grounds without Luther's step: Galatians 3:11–12, and that the law
 commands love. -/
+@[solaFideDefs]
 def galatiansTextsAlone : ArgumentPackage Claim :=
   { lutherOnGalatians with
     name := "Galatians 3:11–12 and the law's command of love, without Luther's step"
@@ -256,7 +256,7 @@ What this removes is Aquinas's reading; it does not by itself establish
 Calvin's. -/
 @[headline]
 theorem luther_answers_aquinas_from_galatians : Establishes lutherOnGalatians := by
-  establish [lutherOnGalatians, lutherLine, Line.asPackage, Line.premises]
+  establish [solaFideDefs]
 
 #print axioms luther_answers_aquinas_from_galatians
 
@@ -267,8 +267,7 @@ whether faith formed by charity counts as justification "by the law" — Luther'
 step, which Aquinas denies. -/
 @[headline]
 theorem luther_answer_rests_on_his_step : ¬ Establishes galatiansTextsAlone := by
-  refute_with thomistReading [galatiansTextsAlone, lutherOnGalatians, lutherLine,
-    Line.asPackage]
+  refute_with thomistReading [solaFideDefs]
 
 #print axioms luther_answer_rests_on_his_step
 
@@ -282,6 +281,6 @@ def lutherReading : Valuation Claim := fun a =>
 /-- Luther's package has a model, so `luther_answers_aquinas_from_galatians` is
 not vacuous. -/
 theorem lutherOnGalatians_is_satisfiable : Satisfiable lutherOnGalatians.premises := by
-  satisfied_by lutherReading [lutherOnGalatians, lutherLine, Line.asPackage, Line.premises]
+  satisfied_by lutherReading [solaFideDefs]
 
 end Testimony.Arguments.SolaFide

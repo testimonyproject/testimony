@@ -30,6 +30,7 @@ private def soleRuleLabel : String := "scripture is the sole infallible rule of 
 final-arbiter reading. Scripture is not the only authority but the only
 infallible one; tradition is ministerial, and practices neither commanded nor
 forbidden need no scriptural warrant. -/
+@[solaScripturaDefs]
 def protestant : ArgumentPackage Claim :=
   { name := "Protestant (sola scriptura as final arbiter)"
   , cite := cite
@@ -40,6 +41,7 @@ def protestant : ArgumentPackage Claim :=
 /-- **Tradition 0**, as Geisler states it: creeds inform without binding, and
 the historical-grammatical method does the work an authoritative interpreter
 was supposed to do. -/
+@[solaScripturaDefs]
 def tradition0 : ArgumentPackage Claim :=
   tradition0Line.asPackage cite soleRuleLabel
 
@@ -47,6 +49,7 @@ def tradition0 : ArgumentPackage Claim :=
 denial, so the package is not the line as it stands: the question asked of
 these premises is whether sola scriptura follows, and the answer is that they
 entail its negation. -/
+@[solaScripturaDefs]
 def tridentine : ArgumentPackage Claim :=
   { tridentineLine.asPackage cite soleRuleLabel with
     conclusion := p .scriptureIsSoleInfallibleRule }
@@ -54,12 +57,14 @@ def tridentine : ArgumentPackage Claim :=
 /-- **Tradition III**, resting on Vatican I. Kept separate from `tridentine`
 because Mathison argues it escapes several objections to the two-source view
 while incurring its own. -/
+@[solaScripturaDefs]
 def vaticanI : ArgumentPackage Claim :=
   { vaticanLine.asPackage cite soleRuleLabel with
     conclusion := p .scriptureIsSoleInfallibleRule }
 
 /-- **The Orthodox position**, on the mind of the Church rather than on a
 magisterium. -/
+@[solaScripturaDefs]
 def orthodox : ArgumentPackage Claim :=
   { orthodoxLine.asPackage cite soleRuleLabel with
     conclusion := p .scriptureIsSoleInfallibleRule }
@@ -67,15 +72,18 @@ def orthodox : ArgumentPackage Claim :=
 /-! ### The objections -/
 
 /-- The self-refutation objection, as a package concluding the negation. -/
+@[solaScripturaDefs]
 def selfRefutation : ArgumentPackage Claim :=
   selfRefutationLine.asPackage cite "scripture is not the sole infallible rule of faith"
 
 /-- The canon objection, likewise. -/
+@[solaScripturaDefs]
 def canonObjection : ArgumentPackage Claim :=
   canonObjectionLine.asPackage cite "scripture is not the sole infallible rule of faith"
 
 /-- The interpretive-authority regress, concluding that Tradition I is not
 principled distinct from Tradition 0. -/
+@[solaScripturaDefs]
 def interpretiveRegress : ArgumentPackage Claim :=
   interpretiveRegressLine.asPackage cite
     "sola scriptura does not differ in principle from solo scriptura"
@@ -83,6 +91,7 @@ def interpretiveRegress : ArgumentPackage Claim :=
 /-! ### The two answers to self-refutation -/
 
 /-- The objection with the classical answer in place of the ground it needed. -/
+@[solaScripturaDefs]
 def selfRefutationAnswered : ArgumentPackage Claim :=
   { selfRefutation with
     name := "Self-refutation objection, answered from scripture's own teaching"
@@ -90,6 +99,7 @@ def selfRefutationAnswered : ArgumentPackage Claim :=
 
 /-- The objection with the final-arbiter answer in place of the ground it
 needed. -/
+@[solaScripturaDefs]
 def selfRefutationUnderScope : ArgumentPackage Claim :=
   { selfRefutation with
     name := "Self-refutation objection, answered by scoping the bindingness rule"
@@ -110,6 +120,7 @@ them.
 
 /-- The Protestant position with the classical line stripped of the hinge. The
 eliminative line is untouched. -/
+@[solaScripturaDefs]
 def protestantWithoutHinge : ArgumentPackage Claim :=
   { protestant with
     name := "Protestant, minus the claim that scripture teaches the principle"
@@ -122,6 +133,7 @@ def protestantWithoutHinge : ArgumentPackage Claim :=
         sharedGrounds [] }
 
 /-- The classical line alone, stripped of the hinge. -/
+@[solaScripturaDefs]
 def classicalStrandWithoutHinge : ArgumentPackage Claim :=
   (classicalLine.onGrounds
     [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
@@ -130,20 +142,24 @@ def classicalStrandWithoutHinge : ArgumentPackage Claim :=
 /-! ### Geisler's charge, and the three replies -/
 
 /-- Geisler's charge, stated as its holder states it. -/
+@[solaScripturaDefs]
 def geislerCircle : ArgumentPackage Claim :=
   geislerCircleLine.asPackage cite "Tradition I's reasoning is circular"
 
 /-- The charge pressed home to a defeat. -/
+@[solaScripturaDefs]
 def circleDefeats : ArgumentPackage Claim :=
   circleDefeatsLine.asPackage cite "the circularity defeats Tradition I"
 
 /-- The charge with Allen and Swain's accountability reply in play. -/
+@[solaScripturaDefs]
 def geislerCircleUnderAccountability : ArgumentPackage Claim :=
   { geislerCircle with
     name := "Geisler's charge, with the accountability reply in play"
     premises := circleUnderAccountability.premises }
 
 /-- The charge with the proposed scriptural-bounding reply in play. -/
+@[solaScripturaDefs]
 def geislerCircleUnderScripturalBounding : ArgumentPackage Claim :=
   { geislerCircle with
     name := "Geisler's charge, with the scriptural-bounding reply in play"
@@ -156,6 +172,7 @@ reply concedes the circle — `traditionIReasoningIsCircular` is one of its
 grounds — so the interesting question is not whether it fails to deliver the
 denial but that it delivers the charge. Asked the weaker question the answer is
 "no"; asked this one it is "yes, by its own premises". -/
+@[solaScripturaDefs]
 def circleParityConcedingTheCharge : ArgumentPackage Claim :=
   { circleDefeats with
     name := "Barrett's parity reply, asked about the charge itself"
@@ -167,6 +184,7 @@ def circleParityConcedingTheCharge : ArgumentPackage Claim :=
 
 /-- Both legs of the circle Geisler alleges in Tradition I, asked for the
 consensus. -/
+@[solaScripturaDefs]
 def traditionICircle : ArgumentPackage Claim :=
   { name := "Tradition I's hermeneutical circle"
   , cite := cite

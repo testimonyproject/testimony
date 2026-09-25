@@ -123,22 +123,28 @@ For a fulfilment argument, `conclusionLabel` must be
 
 ## 4 — the theorems
 
-To establish, use `establish` and name what to unfold — the package, its
-lines, its steps, any shared premise list:
+Every definition a proof must unfold — the package, its lines, its steps, any
+shared premise list — is tagged with the argument's unfold set where it is
+written, and every proof names the set:
 
 ```lean
+/-- The Reformed position: ... -/
+@[solaFideDefs]
+def reformed : ArgumentPackage Claim := caseOf [...] sharedGrounds closingSteps
+
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
-  establish [reformed, paulineLine, dominicalLine, sharedGrounds, closingSteps,
-    paulineToFaithAlone, dominicalToFaithAlone, toGrace, toNotByWorks,
-    toThroughFaith, solaFide]
+  establish [solaFideDefs]
 
 #print axioms reformed_establishes
 ```
 
-If `establish` fails with the package still folded up in the hypothesis,
-something in the chain is missing from the list — add it. The failure is loud,
-which is the point: nothing here can succeed vacuously.
+A new argument declares its set in `Testimony/Attr.lean` (Lean will not let a
+module use a simp set it declares itself) and adds it to
+`Testimony/Checks/Refutations.lean`. If `establish` fails with a definition
+still folded up in the hypothesis, that definition is missing its tag — add
+it. The failure is loud, which is the point: nothing here can succeed
+vacuously.
 
 ### Keep steps Horn
 
@@ -161,8 +167,8 @@ line of reason: *these grounds, therefore that*. What leaves it:
   `notP`), and so is a negated conclusion — of an atom, or of a conjunction, as
   a rebuttal of `solaFide` is. A conclusion that is a disjunction is not Horn.
 
-When `establish` fails, check the unfold list first: a missing definition looks
-the same as a non-Horn step. If a step genuinely cannot be Horn,
+When `establish` fails, check the tags first: an untagged definition looks the
+same as a non-Horn step. If a step genuinely cannot be Horn,
 `establish_by_search` proves it with `tauto`, and the call site then says the
 cost was accepted. That cost compounds: `tauto` case-splits on every
 implication in the context, so each added step multiplies the work.
@@ -193,7 +199,7 @@ def tridentineReading : Valuation Claim := fun a =>
 
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
-  refute_with tridentineReading [tridentine, reformed, solaFide]
+  refute_with tridentineReading [solaFideDefs]
 ```
 
 `refute_with` takes an **identifier**, so the countermodel has to be a named
@@ -227,6 +233,7 @@ combinations are decisive, so re-check the joint results too, and state what
 the new strand changed as a result of its own.
 
 ```lean
+@[solaFideDefs]
 def reformedWithoutSozo : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus the dominical lexical premise"
@@ -236,8 +243,7 @@ def reformedWithoutSozo : ArgumentPackage Claim :=
 
 @[headline]
 theorem sozo_not_load_bearing : Establishes reformedWithoutSozo := by
-  establish [reformedWithoutSozo, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, sharedGrounds, closingSteps, /- … the steps -/]
+  establish [solaFideDefs]
 ```
 
 ## 6 — read the manifest

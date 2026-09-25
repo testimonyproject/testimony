@@ -23,12 +23,7 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 /-- Given the Reformed premises, the conclusion follows. -/
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
-  establish [reformed, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-    jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
-    paulineWithoutPistisChristou,
-    sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
-    apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
-    conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms reformed_establishes
 
@@ -42,12 +37,7 @@ fide, and this library says so in a form either side can check. The critics of
 the New Perspective dispute its premise, not this result. -/
 @[headline]
 theorem newPerspective_establishes : Establishes newPerspective := by
-  establish [newPerspective, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-    jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
-    paulineWithoutPistisChristou,
-    sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
-    apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
-    conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms newPerspective_establishes
 
@@ -65,8 +55,7 @@ def tridentineReading : Valuation Claim := fun a =>
 negation of its second part, that salvation is not by works. -/
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
-  refute_with tridentineReading [tridentine, tridentinePremises, tridentineLine,
-    trentDefinitionSteps, Line.premises, reformed, solaFide]
+  refute_with tridentineReading [solaFideDefs]
 
 #print axioms tridentine_not_establishes
 
@@ -74,13 +63,7 @@ theorem tridentine_not_establishes : ¬ Establishes tridentine := by
 the other strands still carry the argument. -/
 @[headline]
 theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw := by
-  establish [reformedWithoutWorksOfLaw, paulineWithoutWorksOfLaw, dominicalWithoutSozo, reformed,
-    Line.onGrounds,
-    paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine,
-    paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou, sharedGrounds,
-    prooftexts, closingSteps,
-    paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace,
-    toNotByWorks, toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms worksOfLaw_not_load_bearing
 
@@ -88,12 +71,7 @@ theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw := b
 carry the argument. -/
 @[headline]
 theorem sozo_not_load_bearing : Establishes reformedWithoutSozo := by
-  establish [reformedWithoutSozo, reformed, Line.onGrounds, paulineLine, dominicalLine,
-    apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms sozo_not_load_bearing
 
@@ -107,13 +85,7 @@ left to be inferred from the absence of an old one. -/
 @[headline]
 theorem apostolic_strand_survives_paul_and_luke :
     Establishes reformedWithoutWorksOfLawOrSozo := by
-  establish [reformedWithoutWorksOfLawOrSozo, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
-    reformed, Line.onGrounds,
-    paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine,
-    paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou, sharedGrounds,
-    prooftexts, closingSteps,
-    paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace,
-    toNotByWorks, toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms apostolic_strand_survives_paul_and_luke
 
@@ -127,12 +99,7 @@ argument. A reader who wins the genitive for Hays has cost the Reformed case
 its Pauline route, and not its conclusion. -/
 @[headline]
 theorem pistisChristou_not_load_bearing : Establishes subjectiveGenitive := by
-  establish [subjectiveGenitive, reformed, Line.onGrounds, paulineLine, dominicalLine,
-    apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms pistisChristou_not_load_bearing
 
@@ -141,12 +108,7 @@ law laid on gentiles, not the law as a condition of salvation, keep everything
 else, and the conclusion still follows by Paul and by Luke 7:50. -/
 @[headline]
 theorem acts15Yoke_not_load_bearing : Establishes lawObservantLuke := by
-  establish [lawObservantLuke, reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine,
-    jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo,
-    paulineWithoutPistisChristou,
-    sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone, dominicalToFaithAlone,
-    apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith,
-    conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms acts15Yoke_not_load_bearing
 
@@ -175,14 +137,7 @@ same holds with the πίστις Χριστοῦ premise in place of ἔργα �
 @[headline]
 theorem lexical_premises_jointly_load_bearing :
     ¬ Establishes reformedWithoutEveryStrandsPremise := by
-  refute_with neitherLexicalReading [reformedWithoutEveryStrandsPremise, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-    criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
-    sharedGrounds, prooftexts,
-    closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
-    jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
-    graceNotWorks]
+  refute_with neitherLexicalReading [solaFideDefs]
 
 #print axioms lexical_premises_jointly_load_bearing
 
@@ -210,13 +165,7 @@ of which costs it the conclusion. -/
 @[headline]
 theorem pistisChristou_jointly_load_bearing :
     ¬ Establishes reformedWithoutPistisChristouSozoOrYoke := by
-  refute_with neitherPistisNorSozoReading [reformedWithoutPistisChristouSozoOrYoke,
-    paulineWithoutPistisChristou, reformed, Line.onGrounds, paulineLine, dominicalLine,
-    apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  refute_with neitherPistisNorSozoReading [solaFideDefs]
 
 #print axioms pistisChristou_jointly_load_bearing
 
@@ -254,8 +203,7 @@ What it keeps is stated as its own result,
 `apocalyptic_establishes_grace_not_works`. -/
 @[headline]
 theorem apocalyptic_not_establishes : ¬ Establishes apocalyptic := by
-  refute_with apocalypticReading [apocalyptic, reformed, apocalypticLine, deliveranceNotFaithAlone,
-    deliveranceIsGrace, toThroughFaith, solaFide, graceNotWorks]
+  refute_with apocalypticReading [solaFideDefs]
 
 #print axioms apocalyptic_not_establishes
 
@@ -268,8 +216,7 @@ So the dispute between the apocalyptic and Reformed readings is located
 exactly: it is over *through faith*, and not over grace or works. -/
 @[headline]
 theorem apocalyptic_establishes_grace_not_works : Establishes apocalypticOnGraceAndWorks := by
-  establish [apocalypticOnGraceAndWorks, apocalyptic, reformed, apocalypticLine,
-    deliveranceNotFaithAlone, deliveranceIsGrace, toThroughFaith, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms apocalyptic_establishes_grace_not_works
 
@@ -284,12 +231,7 @@ are excluded. -/
 @[headline]
 theorem grace_and_works_rest_on_no_lexical_premise :
     Establishes graceAndWorksWithoutAnyLexicalPremise := by
-  establish [graceAndWorksWithoutAnyLexicalPremise, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms grace_and_works_rest_on_no_lexical_premise
 
@@ -316,12 +258,7 @@ and sola fide follows from Paul alone — with the ἔργα νόμου premise 
 rather than assumed. -/
 @[headline]
 theorem critics_carry_the_pauline_strand : Establishes paulineStrandOnTheCritics := by
-  establish [paulineStrandOnTheCritics, reformed, Line.onGrounds, paulineLine, dominicalLine,
-    apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms critics_carry_the_pauline_strand
 
@@ -345,12 +282,7 @@ dispute where the literature has it: in a historical question about Second
 Temple Judaism, before any question about Paul's Greek. -/
 @[headline]
 theorem sanders_costs_the_pauline_strand : ¬ Establishes paulineStrandOnSanders := by
-  refute_with sandersReading [paulineStrandOnSanders, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  refute_with sandersReading [solaFideDefs]
 
 #print axioms sanders_costs_the_pauline_strand
 
@@ -370,10 +302,7 @@ impolite; it is invalid. -/
 @[headline]
 theorem james_harmonisation_is_load_bearing :
     ¬ Establishes reformedWithoutJamesHarmonisation := by
-  refute_with jamesUnharmonisedReading [reformedWithoutJamesHarmonisation, reformed, paulineLine,
-    dominicalLine, apostolicLine, sharedGroundsWithoutJames, prooftexts, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, toGrace, toNotByWorks, toThroughFaith,
-    conclusionSteps, solaFide, graceNotWorks]
+  refute_with jamesUnharmonisedReading [solaFideDefs]
 
 #print axioms james_harmonisation_is_load_bearing
 
@@ -384,13 +313,7 @@ and for nothing else — which the single closing step this argument once had
 could not show. -/
 @[headline]
 theorem grace_needs_no_answer_to_james : Establishes graceWithoutJamesHarmonisation := by
-  establish [graceWithoutJamesHarmonisation, reformedWithoutJamesHarmonisation,
-    sharedGroundsWithoutJames, reformed, reformed, Line.onGrounds, paulineLine, dominicalLine,
-    apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  establish [solaFideDefs]
 
 #print axioms grace_needs_no_answer_to_james
 
@@ -412,12 +335,7 @@ def everythingHoldsReading : Valuation Claim := fun _ => True
 /-- The Reformed package has a model, so `reformed_establishes` is not
 vacuous. -/
 theorem reformed_is_satisfiable : Satisfiable reformed.premises := by
-  satisfied_by everythingHoldsReading [reformed, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by everythingHoldsReading [solaFideDefs]
 
 /-- The New Perspective's own world: Paul's ἔργα νόμου denotes the covenant
 boundary markers rather than works in general, and justification is by faith
@@ -430,12 +348,7 @@ def newPerspectiveOwnReading : Valuation Claim := fun a =>
 
 /-- The New Perspective package has a model. -/
 theorem newPerspective_is_satisfiable : Satisfiable newPerspective.premises := by
-  satisfied_by newPerspectiveOwnReading [newPerspective, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by newPerspectiveOwnReading [solaFideDefs]
 
 /-- Hays's own world: πίστις Χριστοῦ is Christ's faithfulness, and everything
 else in the Reformed case holds. -/
@@ -447,12 +360,7 @@ def subjectiveGenitiveReading : Valuation Claim := fun a =>
 /-- The subjective-genitive package has a model, so
 `pistisChristou_not_load_bearing` is not vacuous. -/
 theorem subjectiveGenitive_is_satisfiable : Satisfiable subjectiveGenitive.premises := by
-  satisfied_by subjectiveGenitiveReading [subjectiveGenitive, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by subjectiveGenitiveReading [solaFideDefs]
 
 /-- Jervell's world: the yoke is Israel's law for gentiles, and everything else
 in the Reformed case holds. -/
@@ -464,12 +372,7 @@ def lawObservantLukeReading : Valuation Claim := fun a =>
 /-- The law-observant package has a model, so `acts15Yoke_not_load_bearing` is
 not vacuous. -/
 theorem lawObservantLuke_is_satisfiable : Satisfiable lawObservantLuke.premises := by
-  satisfied_by lawObservantLukeReading [lawObservantLuke, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by lawObservantLukeReading [solaFideDefs]
 
 /-- The critics' world: none of the four disputed letters is by the apostle
 whose name it bears, and everything else holds. -/
@@ -484,65 +387,35 @@ def criticalAuthorshipReading : Valuation Claim := fun a =>
 /-- The critical-authorship package has a model, so
 `authorship_not_load_bearing` is not vacuous. -/
 theorem criticalAuthorship_is_satisfiable : Satisfiable criticalAuthorship.premises := by
-  satisfied_by criticalAuthorshipReading [criticalAuthorship, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by criticalAuthorshipReading [solaFideDefs]
 
 /-- The Reformed package minus the ἔργα νόμου premise has a model, so
 `worksOfLaw_not_load_bearing` is not vacuous. A load-bearing result that held
 only because its premises could not all be true would be exactly backwards. -/
 theorem reformedWithoutWorksOfLaw_is_satisfiable :
     Satisfiable reformedWithoutWorksOfLaw.premises := by
-  satisfied_by everythingHoldsReading [reformedWithoutWorksOfLaw, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-    criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
-    sharedGrounds, prooftexts,
-    closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
-    jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
-    graceNotWorks]
+  satisfied_by everythingHoldsReading [solaFideDefs]
 
 /-- And the same minus the dominical lexical premise. -/
 theorem reformedWithoutSozo_is_satisfiable :
     Satisfiable reformedWithoutSozo.premises := by
-  satisfied_by everythingHoldsReading [reformedWithoutSozo, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by everythingHoldsReading [solaFideDefs]
 
 /-- And the same minus both, so `apostolic_strand_survives_paul_and_luke` is not
 vacuous. -/
 theorem reformedWithoutWorksOfLawOrSozo_is_satisfiable :
     Satisfiable reformedWithoutWorksOfLawOrSozo.premises := by
-  satisfied_by everythingHoldsReading [reformedWithoutWorksOfLawOrSozo, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    reformed, Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine,
-    criticsLine, paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou,
-    sharedGrounds, prooftexts,
-    closingSteps, paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone,
-    jamesHarmonisation, toGrace, toNotByWorks, toThroughFaith, conclusionSteps, solaFide,
-    graceNotWorks]
+  satisfied_by everythingHoldsReading [solaFideDefs]
 
 /-- The apocalyptic package, asked about grace and works, has a model. -/
 theorem apocalypticOnGraceAndWorks_is_satisfiable :
     Satisfiable apocalypticOnGraceAndWorks.premises := by
-  satisfied_by apocalypticReading [apocalypticOnGraceAndWorks, apocalyptic, reformed,
-    apocalypticLine, deliveranceNotFaithAlone, deliveranceIsGrace, toThroughFaith, graceNotWorks]
+  satisfied_by apocalypticReading [solaFideDefs]
 
 /-- With every lexical premise removed, the package still has a model. -/
 theorem graceAndWorksWithoutAnyLexicalPremise_is_satisfiable :
     Satisfiable graceAndWorksWithoutAnyLexicalPremise.premises := by
-  satisfied_by everythingHoldsReading [graceAndWorksWithoutAnyLexicalPremise, reformed,
-    Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine,
-    paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou, sharedGrounds,
-    prooftexts, closingSteps,
-    paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace,
-    toNotByWorks, toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by everythingHoldsReading [solaFideDefs]
 
 /-- Mannermaa's world: justification is not forensic only, and everything else
 holds. -/
@@ -554,12 +427,7 @@ def finnishReading : Valuation Claim := fun a =>
 /-- The Finnish package has a model, so
 `forensic_justification_not_load_bearing` is not vacuous. -/
 theorem finnish_is_satisfiable : Satisfiable finnish.premises := by
-  satisfied_by finnishReading [finnish, reformed, Line.onGrounds, paulineLine, dominicalLine,
-    apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by finnishReading [solaFideDefs]
 
 /-- Gathercole's world: Second Temple Judaism was not uniformly covenantal
 nomism, and everything else holds. -/
@@ -572,23 +440,12 @@ def criticsReading : Valuation Claim := fun a =>
 `critics_carry_the_pauline_strand` is not vacuous. -/
 theorem paulineStrandOnTheCritics_is_satisfiable :
     Satisfiable paulineStrandOnTheCritics.premises := by
-  satisfied_by criticsReading [paulineStrandOnTheCritics, reformed, Line.onGrounds, paulineLine,
-    dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine, paulineWithoutWorksOfLaw,
-    dominicalWithoutSozo,
-    paulineWithoutPistisChristou, sharedGrounds, prooftexts, closingSteps, paulineToFaithAlone,
-    dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace, toNotByWorks,
-    toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by criticsReading [solaFideDefs]
 
 /-- With the answer to James removed, the package asked about grace still has a
 model, so `grace_needs_no_answer_to_james` is not vacuous. -/
 theorem graceWithoutJamesHarmonisation_is_satisfiable :
     Satisfiable graceWithoutJamesHarmonisation.premises := by
-  satisfied_by everythingHoldsReading [graceWithoutJamesHarmonisation,
-    reformedWithoutJamesHarmonisation, sharedGroundsWithoutJames, reformed, reformed,
-    Line.onGrounds, paulineLine, dominicalLine, apostolicLine, jamesLine, sandersLine, criticsLine,
-    paulineWithoutWorksOfLaw, dominicalWithoutSozo, paulineWithoutPistisChristou, sharedGrounds,
-    prooftexts, closingSteps,
-    paulineToFaithAlone, dominicalToFaithAlone, apostolicToFaithAlone, jamesHarmonisation, toGrace,
-    toNotByWorks, toThroughFaith, conclusionSteps, solaFide, graceNotWorks]
+  satisfied_by everythingHoldsReading [solaFideDefs]
 
 end Testimony.Arguments.SolaFide

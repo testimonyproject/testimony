@@ -28,9 +28,7 @@ open Testimony.People
 /-- Given the scriptural premises, the conclusion follows. -/
 @[headline]
 theorem christian_establishes : Establishes christian := by
-  establish [christian, scripturalLines, isaianicLine, protoevangeliumLine, micheanLine,
-    compositionalLine, sharedGrounds, toCriterion, genesisToCriterion,
-    micahToCriterion, compositionalToCriterion, toFulfilment]
+  establish [bornOfAVirginDefs]
 
 #print axioms christian_establishes
 
@@ -38,10 +36,7 @@ theorem christian_establishes : Establishes christian := by
 scriptural package with a further strand bolted on. -/
 @[headline]
 theorem catholic_establishes : Establishes catholic := by
-  establish [catholic, christian, magisterialLine, scripturalLines, isaianicLine,
-    protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds, toCriterion,
-    genesisToCriterion, micahToCriterion, compositionalToCriterion,
-    magisterialToCriterion, toFulfilment]
+  establish [bornOfAVirginDefs]
 
 #print axioms catholic_establishes
 
@@ -49,8 +44,7 @@ theorem catholic_establishes : Establishes catholic := by
 grants the authority it claims. -/
 @[headline]
 theorem magisterialOnly_establishes : Establishes magisterialOnly := by
-  establish [magisterialOnly, christian, magisterialLine, magisterialToCriterion,
-    toFulfilment]
+  establish [bornOfAVirginDefs]
 
 #print axioms magisterialOnly_establishes
 
@@ -71,8 +65,7 @@ def criticalReading : Valuation Claim := fun a =>
 /-- The critical reading does not establish the conclusion. -/
 @[headline]
 theorem critical_not_establishes : ¬ Establishes critical := by
-  refute_with criticalReading [critical, criticalExclusion, toCriterion,
-    genesisToCriterion, micahToCriterion, toFulfilment]
+  refute_with criticalReading [bornOfAVirginDefs]
 
 #print axioms critical_not_establishes
 
@@ -81,7 +74,7 @@ it as an argument rather than a bare assumption is what makes the next result
 possible. -/
 @[headline]
 theorem criticalDenial_establishes : Establishes criticalDenial := by
-  establish [criticalDenial, criticalExclusionLine, criticalExclusion]
+  establish [bornOfAVirginDefs]
 
 #print axioms criticalDenial_establishes
 
@@ -104,8 +97,7 @@ that runs through the near-term fulfilment — and leaves the argument where
 `hinges_jointly_load_bearing` puts it. -/
 @[headline]
 theorem berry_blocks_critical_denial : ¬ Establishes criticalDenialUnderBerry := by
-  refute_with berryReading [criticalDenialUnderBerry, criticalDenial,
-    criticalExclusionLine, Line.onGrounds, criticalExclusion, berryBlocksExclusion]
+  refute_with berryReading [bornOfAVirginDefs]
 
 #print axioms berry_blocks_critical_denial
 
@@ -127,9 +119,7 @@ timeline and are read messianically without embarrassment. An opponent who
 answers Berry by settling the near-term referent has not touched this. -/
 @[headline]
 theorem parity_blocks_critical_denial : ¬ Establishes criticalDenialUnderParity := by
-  refute_with parityReading [criticalDenialUnderParity, criticalDenial,
-    criticalExclusionLine, Line.onGrounds, criticalExclusion,
-    parityDefeatsNearTermExclusion]
+  refute_with parityReading [bornOfAVirginDefs]
 
 #print axioms parity_blocks_critical_denial
 
@@ -152,8 +142,7 @@ that Scripture is the supreme judge of controversies loses the whole of
 or not at all. -/
 @[headline]
 theorem magisterial_authority_is_load_bearing : ¬ Establishes magisterialDenied := by
-  refute_with reformedReading [magisterialDenied, christian, magisterialLine,
-    Line.onGrounds, magisterialToCriterion, toFulfilment]
+  refute_with reformedReading [bornOfAVirginDefs]
 
 #print axioms magisterial_authority_is_load_bearing
 
@@ -166,10 +155,7 @@ finding was right about the Isaianic strand taken by itself. What changed is
 not the Isaianic evidence but the number of strands. -/
 @[headline]
 theorem almah_not_load_bearing : Establishes christianWithoutAlmah := by
-  establish [christianWithoutAlmah, christian, isaianicWithoutAlmah,
-    Line.onGrounds, scripturalLines, isaianicLine, protoevangeliumLine, micheanLine,
-    compositionalLine, sharedGrounds, toCriterion, genesisToCriterion, micahToCriterion,
-    compositionalToCriterion, toFulfilment]
+  establish [bornOfAVirginDefs]
 
 #print axioms almah_not_load_bearing
 
@@ -189,9 +175,7 @@ because it is what makes `almah_not_load_bearing` informative — the Isaianic
 evidence did not get stronger, it got company. -/
 @[headline]
 theorem almah_is_load_bearing_alone : ¬ Establishes isaianicStrandWithoutAlmah := by
-  refute_with withoutAlmahReading [isaianicStrandWithoutAlmah, christian,
-    isaianicWithoutAlmah, isaianicLine, Line.onGrounds, sharedGrounds, toCriterion,
-    toFulfilment]
+  refute_with withoutAlmahReading [bornOfAVirginDefs]
 
 #print axioms almah_is_load_bearing_alone
 
@@ -205,8 +189,7 @@ The gap between *may mean* and *does mean* is where this argument lives, and
 Berry is useful against the critical denial without narrowing it. -/
 @[headline]
 theorem admissibility_is_not_enough : ¬ Establishes isaianicStrandOnAdmissibility := by
-  refute_with withoutAlmahReading [isaianicStrandOnAdmissibility, christian,
-    isaianicLine, Line.onGrounds, sharedGrounds, toCriterion, toFulfilment]
+  refute_with withoutAlmahReading [bornOfAVirginDefs]
 
 #print axioms admissibility_is_not_enough
 
@@ -222,15 +205,14 @@ Nothing here asserts that עַלְמָה *means* virgin. The argument is about
 reference, not sense, and it is cheaper for exactly that reason. -/
 @[headline]
 theorem semantic_establishes : Establishes semantic := by
-  establish [semantic, referentialLine, toDescriptionFit,
-    descriptionFitDefeatsLexicalDemand]
+  establish [bornOfAVirginDefs]
 
 #print axioms semantic_establishes
 
 /-- The lexical objection, written down and granted its own premises. -/
 @[headline]
 theorem lexicalCritical_establishes : Establishes lexicalCritical := by
-  establish [lexicalCritical, versionalLine, versionalObjection, lexicalObjection]
+  establish [bornOfAVirginDefs]
 
 #print axioms lexicalCritical_establishes
 
@@ -255,10 +237,7 @@ explicit. -/
 @[headline]
 theorem compatibility_defeats_lexical_objection :
     ¬ Establishes lexicalCriticalUnderCompatibility := by
-  refute_with compatibilityReading [lexicalCriticalUnderCompatibility,
-    lexicalCritical, versionalLine, toDescriptionFit,
-    descriptionFitDefeatsLexicalDemand, compatibilityDissolvesDivergence,
-    versionalObjection, lexicalObjection]
+  refute_with compatibilityReading [bornOfAVirginDefs]
 
 #print axioms compatibility_defeats_lexical_objection
 
@@ -285,9 +264,7 @@ and this says so in a form either side can check. -/
 @[headline]
 theorem compatibility_does_not_establish_criterion :
     ¬ Establishes semanticReachingForCriterion := by
-  refute_with compatibilityOnlyReading [semanticReachingForCriterion, semantic,
-    referentialLine, toDescriptionFit, descriptionFitDefeatsLexicalDemand,
-    toFulfilment]
+  refute_with compatibilityOnlyReading [bornOfAVirginDefs]
 
 #print axioms compatibility_does_not_establish_criterion
 
@@ -318,10 +295,7 @@ three of the four hinges are `disputed` for good reason, and the module doc
 says why. -/
 @[headline]
 theorem hinges_jointly_load_bearing : ¬ Establishes christianWithoutAnyHinge := by
-  refute_with noHingeReading [christianWithoutAnyHinge, christian,
-    isaianicWithoutAlmah, Line.onGrounds, scripturalLines, isaianicLine,
-    protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds, toCriterion,
-    genesisToCriterion, micahToCriterion, compositionalToCriterion, toFulfilment]
+  refute_with noHingeReading [bornOfAVirginDefs]
 
 #print axioms hinges_jointly_load_bearing
 
@@ -355,30 +329,21 @@ def everythingHoldsReading : Valuation Claim := fun _ => True
 
 /-- The scriptural package has a model. -/
 theorem christian_is_satisfiable : Satisfiable christian.premises := by
-  satisfied_by everythingHoldsReading [christian, scripturalLines, isaianicLine,
-    protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds, toCriterion,
-    genesisToCriterion, micahToCriterion, compositionalToCriterion, toFulfilment]
+  satisfied_by everythingHoldsReading [bornOfAVirginDefs]
 
 /-- The Roman Catholic package has a model. -/
 theorem catholic_is_satisfiable : Satisfiable catholic.premises := by
-  satisfied_by everythingHoldsReading [catholic, christian, magisterialLine,
-    scripturalLines, isaianicLine, protoevangeliumLine, micheanLine, compositionalLine,
-    sharedGrounds, toCriterion, genesisToCriterion, micahToCriterion,
-    compositionalToCriterion, magisterialToCriterion, toFulfilment]
+  satisfied_by everythingHoldsReading [bornOfAVirginDefs]
 
 /-- The magisterial route has a model. -/
 theorem magisterialOnly_is_satisfiable : Satisfiable magisterialOnly.premises := by
-  satisfied_by everythingHoldsReading [magisterialOnly, christian, magisterialLine,
-    magisterialToCriterion, toFulfilment]
+  satisfied_by everythingHoldsReading [bornOfAVirginDefs]
 
 /-- The scriptural package minus the lexical premise has a model, so
 `almah_not_load_bearing` is not vacuous. -/
 theorem christianWithoutAlmah_is_satisfiable :
     Satisfiable christianWithoutAlmah.premises := by
-  satisfied_by everythingHoldsReading [christianWithoutAlmah, christian,
-    isaianicWithoutAlmah, Line.onGrounds, scripturalLines, isaianicLine,
-    protoevangeliumLine, micheanLine, compositionalLine, sharedGrounds, toCriterion,
-    genesisToCriterion, micahToCriterion, compositionalToCriterion, toFulfilment]
+  satisfied_by everythingHoldsReading [bornOfAVirginDefs]
 
 /-- The critical denial's own world: the sign was Ahaz's, so Isaiah 7:14 is not
 a prediction of a virgin birth. -/
@@ -389,8 +354,7 @@ def criticalDenialOwnReading : Valuation Claim := fun a =>
 
 /-- The critical denial has a model. -/
 theorem criticalDenial_is_satisfiable : Satisfiable criticalDenial.premises := by
-  satisfied_by criticalDenialOwnReading [criticalDenial, criticalExclusionLine,
-    criticalExclusion]
+  satisfied_by criticalDenialOwnReading [bornOfAVirginDefs]
 
 /-- The referential argument's own world: Mary answers Isaiah's description, so
 the fulfilment claim never required the lexical sense. -/
@@ -401,8 +365,7 @@ def referentialOwnReading : Valuation Claim := fun a =>
 
 /-- The referential argument has a model. -/
 theorem semantic_is_satisfiable : Satisfiable semantic.premises := by
-  satisfied_by referentialOwnReading [semantic, referentialLine, toDescriptionFit,
-    descriptionFitDefeatsLexicalDemand]
+  satisfied_by referentialOwnReading [bornOfAVirginDefs]
 
 /-- The lexical objection's own world: the versions read the broad term, so
 עַלְמָה does not denote virginity and the criterion is not met. -/
@@ -414,7 +377,6 @@ def lexicalObjectionOwnReading : Valuation Claim := fun a =>
 
 /-- The lexical objection has a model. -/
 theorem lexicalCritical_is_satisfiable : Satisfiable lexicalCritical.premises := by
-  satisfied_by lexicalObjectionOwnReading [lexicalCritical, versionalLine,
-    versionalObjection, lexicalObjection]
+  satisfied_by lexicalObjectionOwnReading [bornOfAVirginDefs]
 
 end Testimony.Arguments.BornOfAVirgin

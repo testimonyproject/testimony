@@ -23,3 +23,4 @@ import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin
 import Testimony.Arguments.SolaFide
 import Testimony.Arguments.SolaScriptura
+import Testimony.Checks.Refutations

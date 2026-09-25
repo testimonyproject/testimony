@@ -19,8 +19,7 @@ open Testimony Testimony.Logic
 /-- Given the Protestant premises, on either route, the conclusion follows. -/
 @[headline]
 theorem protestant_establishes : Establishes protestant := by
-  establish [protestant, classicalLine, eliminativeLine, sharedGrounds,
-    toSoleRule, eliminativeToSoleRule]
+  establish [solaScripturaDefs]
 
 #print axioms protestant_establishes
 
@@ -31,7 +30,7 @@ reaches the same conclusion by a different route, once it is stated by someone
 who holds it rather than by its critic. -/
 @[headline]
 theorem tradition0_establishes : Establishes tradition0 := by
-  establish [tradition0, tradition0Line, tradition0ToSoleRule]
+  establish [solaScripturaDefs]
 
 #print axioms tradition0_establishes
 
@@ -46,7 +45,7 @@ def tridentineReading : Valuation Claim := fun a =>
 negation. -/
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
-  refute_with tridentineReading [tridentine, tridentineLine, tridentineDeniesSoleRule]
+  refute_with tridentineReading [solaScripturaDefs]
 
 #print axioms tridentine_not_establishes
 
@@ -61,7 +60,7 @@ def magisterialReading : Valuation Claim := fun a =>
 Tradition II's, which is why the two are separate packages. -/
 @[headline]
 theorem vaticanI_not_establishes : ¬ Establishes vaticanI := by
-  refute_with magisterialReading [vaticanI, vaticanLine, magisterialDeniesSoleRule]
+  refute_with magisterialReading [solaScripturaDefs]
 
 #print axioms vaticanI_not_establishes
 
@@ -77,7 +76,7 @@ encoding grounded a single "Catholic/Orthodox" line on magisterial
 infallibility, which attributes to Orthodoxy a premise it does not hold. -/
 @[headline]
 theorem orthodox_not_establishes : ¬ Establishes orthodox := by
-  refute_with orthodoxReading [orthodox, orthodoxLine, orthodoxDeniesSoleRule]
+  refute_with orthodoxReading [solaScripturaDefs]
 
 #print axioms orthodox_not_establishes
 
@@ -88,7 +87,7 @@ doctrine binds and that scripture does not teach sola scriptura, the position
 fails by its own standard. -/
 @[headline]
 theorem selfRefutation_is_valid : Establishes selfRefutation := by
-  establish [selfRefutation, selfRefutationLine, selfRefutationStep]
+  establish [solaScripturaDefs]
 
 #print axioms selfRefutation_is_valid
 
@@ -98,7 +97,7 @@ authority, then an authority outside scripture is needed to identify
 scripture. -/
 @[headline]
 theorem canonObjection_is_valid : Establishes canonObjection := by
-  establish [canonObjection, canonObjectionLine, canonObjectionStep]
+  establish [solaScripturaDefs]
 
 #print axioms canonObjection_is_valid
 
@@ -108,7 +107,7 @@ whether the canon can be identified, but whether the authority Tradition I
 submits to is anything other than the one submitting. -/
 @[headline]
 theorem interpretiveRegress_is_valid : Establishes interpretiveRegress := by
-  establish [interpretiveRegress, interpretiveRegressLine, interpretiveRegressStep]
+  establish [solaScripturaDefs]
 
 #print axioms interpretiveRegress_is_valid
 
@@ -124,8 +123,7 @@ self-refutation objection. -/
 eliminative line still delivers the sole rule. -/
 @[headline]
 theorem hinge_not_load_bearing_for_conclusion : Establishes protestantWithoutHinge := by
-  establish [protestantWithoutHinge, protestant, Line.onGrounds, classicalLine,
-    eliminativeLine, sharedGrounds, toSoleRule, eliminativeToSoleRule]
+  establish [solaScripturaDefs]
 
 #print axioms hinge_not_load_bearing_for_conclusion
 
@@ -142,8 +140,7 @@ remove it and that strand yields nothing. -/
 @[headline]
 theorem hinge_is_load_bearing_within_classical_strand :
     ¬ Establishes classicalStrandWithoutHinge := by
-  refute_with hingeDeniedReading [classicalStrandWithoutHinge, Line.onGrounds,
-    classicalLine, toSoleRule]
+  refute_with hingeDeniedReading [solaScripturaDefs]
 
 #print axioms hinge_is_load_bearing_within_classical_strand
 
@@ -162,9 +159,7 @@ the principle and the objection no longer delivers its denial. -/
 @[headline]
 theorem classical_answer_blocks_self_refutation :
     ¬ Establishes selfRefutationAnswered := by
-  refute_with scriptureTeachesItReading [selfRefutationAnswered, selfRefutation,
-    selfRefutationUnderClassicalAnswer, Line.onGrounds, selfRefutationLine,
-    selfRefutationStep]
+  refute_with scriptureTeachesItReading [solaScripturaDefs]
 
 #print axioms classical_answer_blocks_self_refutation
 
@@ -187,9 +182,7 @@ position that refuses both — which is what "the dispute reduces to the hinge"
 was gesturing at, and is narrower than that phrase suggests. -/
 @[headline]
 theorem scoping_blocks_self_refutation : ¬ Establishes selfRefutationUnderScope := by
-  refute_with finalArbiterReading [selfRefutationUnderScope, selfRefutation,
-    selfRefutationUnderFinalArbiter, Line.onGrounds, selfRefutationLine,
-    selfRefutationStep]
+  refute_with finalArbiterReading [solaScripturaDefs]
 
 #print axioms scoping_blocks_self_refutation
 
@@ -239,7 +232,7 @@ purely defensive, and this is the form that says so without saying it twice. -/
 theorem parity_leaves_the_canon_open :
     Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
   leaves_open parityEstablishesNothingReading krugerParityReading
-    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
+    [solaScripturaDefs]
 
 #print axioms parity_leaves_the_canon_open
 
@@ -273,8 +266,7 @@ theorem parity_leaves_the_distinction_open :
     Independent regressUnderParity.premises
       (p .traditionIDiffersInPrincipleFromTradition0) := by
   leaves_open distinctionUnestablishedReading mathisonParityReading
-    [regressUnderParity, Line.onGrounds, interpretiveRegressLine,
-      interpretiveRegressStep]
+    [solaScripturaDefs]
 
 #print axioms parity_leaves_the_distinction_open
 
@@ -316,7 +308,7 @@ theorem circle_leaves_the_consensus_open :
     Independent traditionICircle.premises
       (p .creedalConsensusIsHermeneuticallyNecessary) := by
   leaves_open neitherEndReading bothEndsHoldReading
-    [traditionICircle, consensusRestsOnPerspicuity, perspicuityRestsOnConsensus]
+    [solaScripturaDefs]
 
 #print axioms circle_leaves_the_consensus_open
 
@@ -332,7 +324,7 @@ two ends, and each is a separate proposition the premises fail to settle. What
 theorem circle_leaves_the_perspicuity_open :
     Independent traditionICircle.premises (p .scriptureIsPerspicuous) := by
   leaves_open neitherEndReading bothEndsHoldReading
-    [traditionICircle, consensusRestsOnPerspicuity, perspicuityRestsOnConsensus]
+    [solaScripturaDefs]
 
 #print axioms circle_leaves_the_perspicuity_open
 
@@ -348,7 +340,7 @@ rests on scripture's clarity and that scripture's clear sense requires the
 consensus, and the reasoning is circular. -/
 @[headline]
 theorem geislerCircle_is_valid : Establishes geislerCircle := by
-  establish [geislerCircle, geislerCircleLine, circleStep]
+  establish [solaScripturaDefs]
 
 #print axioms geislerCircle_is_valid
 
@@ -373,8 +365,7 @@ charged. -/
 @[headline]
 theorem accountability_blocks_the_circle :
     ¬ Establishes geislerCircleUnderAccountability := by
-  refute_with accountabilityReading [geislerCircleUnderAccountability, geislerCircle,
-    circleUnderAccountability, Line.onGrounds, geislerCircleLine, circleStep]
+  refute_with accountabilityReading [solaScripturaDefs]
 
 #print axioms accountability_blocks_the_circle
 
@@ -414,9 +405,7 @@ does not leave it. -/
 @[headline, proposed]
 theorem scripturalBounding_blocks_the_circle :
     ¬ Establishes geislerCircleUnderScripturalBounding := by
-  refute_with scripturallyBoundedOfficeReading [geislerCircleUnderScripturalBounding,
-    geislerCircle, circleUnderScripturalBounding, Line.onGrounds, geislerCircleLine,
-    circleStep]
+  refute_with scripturallyBoundedOfficeReading [solaScripturaDefs]
 
 #print axioms scripturalBounding_blocks_the_circle
 
@@ -454,7 +443,7 @@ of the two could be named. -/
 theorem parity_leaves_the_defeat_open :
     Independent defeatUnderParity.premises (p .circularityDefeatsTraditionI) := by
   leaves_open universalCircularityReading universalityDoesNotAcquitReading
-    [defeatUnderParity, Line.onGrounds, circleDefeatsLine, circularityDefeats]
+    [solaScripturaDefs]
 
 #print axioms parity_leaves_the_defeat_open
 
@@ -468,8 +457,7 @@ reply's own premises rather than from the failure of a rival reading. -/
 @[headline]
 theorem circle_parity_concedes_the_charge :
     Establishes circleParityConcedingTheCharge := by
-  granted [circleParityConcedingTheCharge, circleDefeats, defeatUnderParity,
-    Line.onGrounds, circleDefeatsLine]
+  granted [solaScripturaDefs]
 
 #print axioms circle_parity_concedes_the_charge
 
@@ -494,7 +482,7 @@ theorem kruger_refuses_rather_than_denies :
     ¬ Entails canonUnderParity.premises
       (∼(p .identifyingCanonRequiresInfallibleAuthority)) := by
   refute_with parityEstablishesNothingReading
-    [canonUnderParity, Line.onGrounds, canonObjectionLine, canonObjectionStep]
+    [solaScripturaDefs]
 
 /-- **Mathison refuses the regress's ground.** Granted his grounds, the
 individual may still retain ultimate interpretive authority. -/
@@ -502,8 +490,7 @@ theorem mathison_refuses_rather_than_denies :
     ¬ Entails regressUnderParity.premises
       (∼(p .individualRetainsUltimateInterpretiveAuthority)) := by
   refute_with distinctionUnestablishedReading
-    [regressUnderParity, Line.onGrounds, interpretiveRegressLine,
-      interpretiveRegressStep]
+    [solaScripturaDefs]
 
 /-- **The final-arbiter answer refuses the self-refutation objection's ground.**
 Scoping the bindingness rule to first-order doctrine does not deny that only
@@ -512,8 +499,7 @@ theorem final_arbiter_refuses_rather_than_denies :
     ¬ Entails selfRefutationUnderFinalArbiter.premises
       (∼(p .onlyScripturalDoctrineIsBinding)) := by
   refute_with hingeDeniedReading
-    [selfRefutationUnderFinalArbiter, Line.onGrounds, selfRefutationLine,
-      selfRefutationStep]
+    [solaScripturaDefs]
 
 /-- **Allen and Swain refuse the circle's second leg.** A consensus accountable
 to scripture does not, by itself, deny that perspicuity requires the
@@ -522,14 +508,14 @@ theorem accountability_refuses_rather_than_denies :
     ¬ Entails circleUnderAccountability.premises
       (∼(p .perspicuityRequiresCreedalConsensus)) := by
   refute_with bothEndsHoldReading
-    [circleUnderAccountability, Line.onGrounds, geislerCircleLine, circleStep]
+    [solaScripturaDefs]
 
 /-- **The scriptural-bounding reply refuses the same leg.** -/
 theorem scriptural_bounding_refuses_rather_than_denies :
     ¬ Entails circleUnderScripturalBounding.premises
       (∼(p .perspicuityRequiresCreedalConsensus)) := by
   refute_with bothEndsHoldReading
-    [circleUnderScripturalBounding, Line.onGrounds, geislerCircleLine, circleStep]
+    [solaScripturaDefs]
 
 /-- **The classical answer denies the self-refutation objection's ground.** It
 asserts that scripture teaches the principle, which is the negation of what the
@@ -537,15 +523,14 @@ objection assumes. -/
 theorem classical_answer_denies_the_ground :
     Entails selfRefutationUnderClassicalAnswer.premises
       (∼(notP .solaScripturaIsTaughtByScripture)) := by
-  establish [selfRefutationUnderClassicalAnswer, Line.onGrounds, selfRefutationLine,
-    selfRefutationStep]
+  establish [solaScripturaDefs]
 
 /-- **Barrett denies the ground Geisler's charge needs.** He asserts that every
 appeal to an ultimate authority is circular, the negation of what the charge
 assumes. -/
 theorem barrett_denies_the_ground :
     Entails defeatUnderParity.premises (∼(notP .everyUltimateAuthorityIsCircular)) := by
-  establish [defeatUnderParity, Line.onGrounds, circleDefeatsLine, circularityDefeats]
+  establish [solaScripturaDefs]
 
 /-! ### Satisfiability
 
@@ -569,12 +554,11 @@ def everythingHoldsReading : Valuation Claim := fun _ => True
 /-- The Protestant package has a model, so `protestant_establishes` is not
 vacuous. -/
 theorem protestant_is_satisfiable : Satisfiable protestant.premises := by
-  satisfied_by everythingHoldsReading [protestant, classicalLine, eliminativeLine,
-    sharedGrounds, toSoleRule, eliminativeToSoleRule]
+  satisfied_by everythingHoldsReading [solaScripturaDefs]
 
 /-- Tradition 0's package has a model. -/
 theorem tradition0_is_satisfiable : Satisfiable tradition0.premises := by
-  satisfied_by everythingHoldsReading [tradition0, tradition0Line, tradition0ToSoleRule]
+  satisfied_by everythingHoldsReading [solaScripturaDefs]
 
 /-- The Protestant package minus the hinge has a model, so
 `hinge_not_load_bearing_for_conclusion` is not vacuous either — which matters,
@@ -582,21 +566,17 @@ since a load-bearing result that held only because its premises were
 contradictory would be precisely backwards. -/
 theorem protestantWithoutHinge_is_satisfiable :
     Satisfiable protestantWithoutHinge.premises := by
-  satisfied_by everythingHoldsReading [protestantWithoutHinge, protestant,
-    Line.onGrounds, classicalLine, eliminativeLine, sharedGrounds, toSoleRule,
-    eliminativeToSoleRule]
+  satisfied_by everythingHoldsReading [solaScripturaDefs]
 
 /-- Geisler's charge has a model. -/
 theorem geislerCircle_is_satisfiable : Satisfiable geislerCircle.premises := by
-  satisfied_by everythingHoldsReading [geislerCircle, geislerCircleLine, circleStep]
+  satisfied_by everythingHoldsReading [solaScripturaDefs]
 
 /-- Barrett's parity grounds have a model — the sceptic's reading, which grants
 the circle, grants its universality, and lets the defeat land. -/
 theorem circleParityConcedingTheCharge_is_satisfiable :
     Satisfiable circleParityConcedingTheCharge.premises := by
-  satisfied_by universalityDoesNotAcquitReading [circleParityConcedingTheCharge,
-    circleDefeats, defeatUnderParity, Line.onGrounds, circleDefeatsLine,
-    circularityDefeats]
+  satisfied_by universalityDoesNotAcquitReading [solaScripturaDefs]
 
 /-- The world the self-refutation objection describes: scripture does not teach
 the principle, so the sole rule does not bind. -/
@@ -608,8 +588,7 @@ def selfRefutationOwnReading : Valuation Claim := fun a =>
 
 /-- The self-refutation objection has a model. -/
 theorem selfRefutation_is_satisfiable : Satisfiable selfRefutation.premises := by
-  satisfied_by selfRefutationOwnReading [selfRefutation, selfRefutationLine,
-    selfRefutationStep]
+  satisfied_by selfRefutationOwnReading [solaScripturaDefs]
 
 /-- The world the canon objection describes: the canon comes through the
 Church, so scripture is not the sole infallible rule. -/
@@ -620,8 +599,7 @@ def canonObjectionOwnReading : Valuation Claim := fun a =>
 
 /-- The canon objection has a model. -/
 theorem canonObjection_is_satisfiable : Satisfiable canonObjection.premises := by
-  satisfied_by canonObjectionOwnReading [canonObjection, canonObjectionLine,
-    canonObjectionStep]
+  satisfied_by canonObjectionOwnReading [solaScripturaDefs]
 
 /-- The world the regress describes: sola scriptura does not differ in
 principle from solo scriptura. -/
@@ -633,7 +611,6 @@ def interpretiveRegressOwnReading : Valuation Claim := fun a =>
 /-- The interpretive-authority regress has a model. -/
 theorem interpretiveRegress_is_satisfiable :
     Satisfiable interpretiveRegress.premises := by
-  satisfied_by interpretiveRegressOwnReading [interpretiveRegress,
-    interpretiveRegressLine, interpretiveRegressStep]
+  satisfied_by interpretiveRegressOwnReading [solaScripturaDefs]
 
 end Testimony.Arguments.SolaScriptura
