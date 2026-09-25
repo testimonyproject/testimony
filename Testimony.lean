@@ -20,6 +20,7 @@ import Testimony.Logic.Framework
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
+import Testimony.Logic.Witness
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin

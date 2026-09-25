@@ -553,9 +553,11 @@ prove that cell by hand: a defeat from the attack and the comparison of
 strengths, an absence with `not_defeats_of_models` or
 `not_defeats_of_outweighed`, one named world per premise.
 
-**3. State what survives.** Describe the dispute once for the verdict solver
-(`Testimony.Logic.Solver`) — every party listed, and the table as a Boolean —
-and each verdict is one computation:
+**3. State what survives, with its reason.** Describe the dispute once in
+solver form (`Testimony.Logic.Solver`) — every party listed, and the table as a
+Boolean. Then state each verdict with a **witness**: a small declaration of why
+it holds, which a checker proved sound once against `Testimony.Logic.Framework`
+confirms (`Testimony.Logic.Witness`):
 
 ```lean
 def isaiahFinite : Solver.Finite isaiahDispute.defeats where
@@ -564,33 +566,47 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats where
   defeats i j := decide (partyDefeats i j)
   spec i j := by rw [isaiahDispute_defeats]; simp
 
+/-- Why the critical denial cannot be defended: Postell attacks it, and nothing
+answers Postell. -/
+def criticAnsweredByPostell : Witness.Table Party := [(.critical, .postell)]
+
 theorem critical_denial_indefensible (S : Set Party)
     (hS : Admissible isaiahDispute.defeats S) : Party.critical ∉ S :=
-  Solver.not_mem_admissible (F := isaiahFinite) (by decide +kernel) S hS
+  Witness.not_mem_admissible_of_witness (F := isaiahFinite) (t := criticAnsweredByPostell)
+    (by decide +kernel) S hS
 ```
 
-The solver computes the grounded extension by iterating what a set defends from
-nothing, and checks that the result defends nothing more (`grounded_eq`,
-`mem_grounded`). For the preferred semantics it enumerates every set of parties
-— 256 for eight — keeps the admissible ones, and takes the maximal:
-`preferred_eq`, `skeptically_accepted`, `not_skeptically_accepted`,
-`credulously_accepted`, `not_credulously_accepted`, `not_mem_admissible`. A
-statement about *every* set follows from the enumeration because every set of
-parties is one of the enumerated ones (`exists_sublist`); each check is proved
-correct once, against `Testimony.Logic.Framework`'s definitions.
+The witness is the reason, and its docstring says it in words; the check makes
+sure the words are true of the table. A wrong witness fails to check — it cannot
+prove a wrong verdict.
 
-The enumeration is exponential in the parties, and some such cost is
-unavoidable in the worst case: credulous acceptance under the preferred
-semantics is NP-complete, and sceptical acceptance Π₂ᵖ-complete. But the
-preferred semantics decomposes along the defeat graph's strongly connected
-components, so the cost need only be exponential in the largest one; the
-module docstring of `Testimony.Logic.Solver` gives the results and their
-sources. At the size of the disputes here, whole-set enumeration is adequate.
+| Verdict | Witness |
+|---|---|
+| nothing is grounded | a defeater for every party |
+| these parties are grounded | stages, each defended by the ones before |
+| the grounded extension is exactly this | stages, and for each party outside an attacker left unanswered |
+| no admissible set holds `b` | the attacker `b` cannot answer, and why each answer to it fails |
+| every preferred extension holds `a` | `a` answers its attackers itself, and each rival cannot be defended |
+| some preferred extension leaves `a` out | an admissible set holding a rival |
+| this set is preferred | admissible, and everything outside conflicts with something inside |
+
+To find a witness, ask the untrusted finder — `#eval Witness.findSkeptical F a`,
+`findIndefensible`, `findDefeaters`, `findStages`, `findUnanswered` — and copy
+what it returns into the file. Checking a witness is polynomial. The sceptical
+witness is a sufficient condition, not a characterisation: where no witness of
+that shape exists, the solver's whole-set enumeration (`skeptically_accepted`,
+`preferred_eq`, `not_mem_admissible` and the rest) decides the verdict instead,
+at a cost exponential in the parties — some such cost is unavoidable in the
+worst case, since sceptical acceptance under the preferred semantics is
+Π₂ᵖ-complete (the module docstring of `Testimony.Logic.Solver` gives the
+results and their sources).
 
 `Dispute.restrict` hears only some of the parties, and `Finite.restrict` gives
-the solver the same hearing, which is how a result says what one party is
-worth: take it away and see what survives. A verdict re-checks itself when a
-party is added — the computation runs again over the new table.
+the checkers the same hearing; `Witness.Table.sub` and `Witness.listSub` write a
+hearing's witnesses in the parties' own names. That is how a result says what
+one party is worth: take it away and see what survives. A verdict re-checks
+itself when a party is added, and a witness that no longer holds fails to
+check.
 
 ## Manifests
 

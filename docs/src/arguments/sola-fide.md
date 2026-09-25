@@ -3762,6 +3762,23 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
 
 #### What the dispute decides
 
+<a id="everyPartyDefeated"></a>
+**`everyPartyDefeated`**
+
+A defeater for every party — the reason nothing prevails outright.
+
+```lean
+def everyPartyDefeated : Witness.Table Party :=
+  [(Party.pauline, Party.trent),
+    (Party.dominical, Party.trent),
+    (Party.apostolic, Party.trent),
+    (Party.trent, Party.pauline),
+    (Party.apocalyptic, Party.pauline),
+    (Party.sanders, Party.pauline),
+    (Party.critics, Party.sanders),
+    (Party.jervell, Party.apostolic)]
+```
+
 <a id="nothing_prevails_over_sola_fide"></a>
 **`nothing_prevails_over_sola_fide`**
 
@@ -3777,6 +3794,18 @@ theorem nothing_prevails_over_sola_fide : Framework.grounded
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+<a id="trentAnsweredByTheApocalypticReading"></a>
+**`trentAnsweredByTheApocalypticReading`**
+
+Why Trent cannot be defended: the apocalyptic reading attacks it, and every
+party that answers the apocalyptic reading — Paul, Luke, Acts — also attacks
+Trent.
+
+```lean
+def trentAnsweredByTheApocalypticReading : Witness.Table Party :=
+  [(Party.trent, Party.apocalyptic)]
+```
+
 <a id="trent_indefensible"></a>
 **`trent_indefensible`**
 
@@ -3790,6 +3819,18 @@ once.
 theorem trent_indefensible : ∀ (S : Set Party), Framework.Admissible
     solaFideDispute.defeats S → Party.trent ∉ S
 -- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="apocalypticAnsweredByLuke"></a>
+**`apocalypticAnsweredByLuke`**
+
+Why the apocalyptic reading cannot be defended: the dominical case attacks
+it, and the only party that answers the dominical case is Trent, which the
+apocalyptic reading itself attacks.
+
+```lean
+def apocalypticAnsweredByLuke : Witness.Table Party :=
+  [(Party.apocalyptic, Party.dominical)]
 ```
 
 <a id="apocalyptic_indefensible"></a>

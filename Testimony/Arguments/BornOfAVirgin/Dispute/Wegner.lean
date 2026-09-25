@@ -2,6 +2,7 @@ import Testimony.Arguments.BornOfAVirgin.Results.Wegner
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
+import Testimony.Logic.Witness
 
 /-!
 # Arguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner's objection
@@ -218,7 +219,8 @@ reply by the fathers, the fathers by both — so nothing is forced, and the
 grounded extension is empty. -/
 @[headline]
 theorem nothing_prevails_over_wegner : grounded wegnerDispute.defeats = ∅ :=
-  (Solver.grounded_eq (F := wegnerFinite) [] (by decide +kernel)).trans (by ext; simp)
+  Witness.grounded_eq_empty (F := wegnerFinite)
+    (t := [(.wegner, .sign), (.sign, .wegner), (.reply, .sign)]) (by decide +kernel)
 
 #print axioms nothing_prevails_over_wegner
 
@@ -228,7 +230,7 @@ parties, so no larger set is. -/
 @[headline]
 theorem sign_is_one_resolution : Preferred wegnerDispute.defeats {.sign} :=
   (show Solver.toSet [WegnerParty.sign] = {.sign} by ext; simp) ▸
-    Solver.preferred_eq (F := wegnerFinite) (by decide +kernel)
+    Witness.preferred_of_witness (F := wegnerFinite) (by decide +kernel)
 
 #print axioms sign_is_one_resolution
 
@@ -240,7 +242,7 @@ admissible. -/
 theorem wegner_is_the_other_resolution :
     Preferred wegnerDispute.defeats {.wegner, .reply} :=
   (show Solver.toSet [WegnerParty.wegner, .reply] = {.wegner, .reply} by ext; simp) ▸
-    Solver.preferred_eq (F := wegnerFinite) (by decide +kernel)
+    Witness.preferred_of_witness (F := wegnerFinite) (by decide +kernel)
 
 #print axioms wegner_is_the_other_resolution
 
@@ -265,8 +267,8 @@ Wegner's rebuttal does, because the fathers' weakest link is no stronger than
 his. -/
 @[headline]
 theorem nothing_prevails_without_the_reply : grounded signAgainstWegner.defeats = ∅ :=
-  (Solver.grounded_eq (F := wegnerFinite.restrict (· ∈ [WegnerParty.wegner, .sign])) []
-    (by decide +kernel)).trans (by ext; simp)
+  Witness.grounded_eq_empty (F := wegnerFinite.restrict (· ∈ [WegnerParty.wegner, .sign]))
+    (t := Witness.Table.sub _ [(.wegner, .sign), (.sign, .wegner)]) (by decide +kernel)
 
 #print axioms nothing_prevails_without_the_reply
 
