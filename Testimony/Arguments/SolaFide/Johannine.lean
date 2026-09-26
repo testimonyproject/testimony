@@ -182,13 +182,14 @@ theorem johannine_strand_establishes : Establishes johannineCase := by
 #print axioms johannine_strand_establishes
 
 /-- Aquinas's world: every text holds, and the believing of 6:29 is faith living
-through charity — so not bare trust, not faith alone, and salvation is not
-received through faith alone. Grace and "not by works" still hold: Aquinas
-excludes external works, and grants that faith is God's gift. -/
+through charity — so not bare trust, not faith alone, and faith without
+charity does not suffice. Grace and "not by works" still hold: Aquinas excludes
+external works, and grants that faith is God's gift. -/
 def thomistReading : Valuation Claim := fun a =>
   match a with
   | .johannineBelievingIsTrust => False
   | .justificationByFaithAlone => False
+  | .faithIsSufficient => False
   | .salvationThroughFaith => False
   | _ => True
 

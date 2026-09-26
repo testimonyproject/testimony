@@ -68,6 +68,17 @@ premises are about different texts, and logically independent; they are not
 dialectically independent, since a reader who takes ἔργα νόμου as boundary
 markers will read the yoke the same way.
 
+**Each strand delivers only what its texts say.** Paul argues for *alone*: the
+Galatians already believed, adding circumcision to their faith is what severs
+them from Christ, and 2:16 names faith as the one means (ἐὰν μή, "except
+through faith"). Luke 7:50 and Acts 15 say less: that her faith saved her, and
+that the gentiles are saved without the yoke — that faith *suffices*
+(`faithIsSufficient`), not that nothing else could be a condition. "Through
+faith", the part of the conclusion the strands are needed for, needs only that.
+The difference is not pedantry. A case is attacked on what it claims, and a
+Luke credited with *alone* would be attacked by the apocalyptic reading on a
+claim Luke never made.
+
 **A Johannine strand** is encoded alongside, but not yet inside, the Reformed
 case (`Johannine.lean`). Asked what they must do "to be doing the works of God",
 the crowd is told: "This is the work of God, that you believe in him whom he has
@@ -98,14 +109,15 @@ conclusion.
 and *through faith* — and they are separate atoms, because the rivals divide
 over different parts. The Tridentine position denies the second: works done in
 grace merit an increase of justification. The apocalyptic reading of Martyn and
-Campbell denies the third: taking the genitive as subjective and δικαιοσύνη
-θεοῦ as God's act of deliverance, it denies that faith is the condition of
-justification, while establishing grace and "not by works" by its own route
+Campbell does not reach the third: taking the genitive as subjective and
+δικαιοσύνη θεοῦ as God's act of deliverance, it denies that faith is the
+condition of justification, and so has no ground for "through faith" of its own,
+while establishing grace and "not by works" by its own route
 (`apocalyptic_establishes_grace_not_works`). The split also shows which part
 the strands are needed for. Grace and "not by works" follow from the texts that
 say so in terms, given an answer to James, with every lexical premise removed
 (`grace_and_works_rest_on_no_lexical_premise`). The lexical disputes decide
-*through faith alone*. And each part has its own closing step, which shows what
+*through faith*. And each part has its own closing step, which shows what
 the answer to James is for: grace follows without it
 (`grace_needs_no_answer_to_james`), "not by works" does not
 (`james_harmonisation_is_load_bearing`).
@@ -163,11 +175,15 @@ genuinely depends on this: drop it and sola fide does not follow.
 
 **Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
 Sanders, the critics and Jervell as parties, nothing prevails outright — but
-sola fide from Luke 7:50 is accepted on every resolution, because Trent and the
-apocalyptic reading each defeat the other's only answer. That verdict rests on
-the two rivals answering each other, and on no cited source arguing that σῴζω at
-Luke 7:50 means healing, or that her love at 7:47 earned her forgiveness;
-`Dispute.lean` states both.
+sola fide from Luke 7:50 is accepted on every resolution. Trent is its only
+defeater, and Trent cannot be defended: the apocalyptic reading defeats it, and
+only Paul answers the apocalyptic reading, and Paul defeats Trent too. The
+apocalyptic reading does not conflict with Luke at all — Luke says faith saved
+her, not that faith alone does — so the dispute between Campbell and the
+Reformed reading is between Campbell and Paul, over the genitive, and the
+dispute chooses neither. The verdict rests on the rivals answering each other,
+and on no cited source arguing that σῴζω at Luke 7:50 means healing, or that her
+love at 7:47 earned her forgiveness; `Dispute.lean` states both.
 
 ## Where things are
 
