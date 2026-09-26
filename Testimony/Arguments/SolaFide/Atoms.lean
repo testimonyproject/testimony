@@ -197,6 +197,26 @@ inductive Claim
   says, **read as a claim about what God does**; and, so stated, what the
   *Joint Declaration* confesses and Calvin grants. -/
   | justifyingGraceRenews
+  /-- Augustine glosses Paul's "being justified" as "being made righteous" —
+  "by Him, of course, who justifies the ungodly man, that he may become a godly
+  one" (*On the Spirit and the Letter* 26.45) — and the Latin West read
+  *iustificare* so after him. A claim about what Augustine wrote and what the
+  tradition received, not about what Paul meant. -/
+  | augustineReadsJustifyAsMakeRighteous
+  /-- Romans 4:6–8 says that David speaks of the blessing of the one to whom God
+  counts righteousness apart from works: "Blessed are those whose lawless deeds
+  are forgiven, and whose sins are covered; blessed is the man against whom the
+  Lord will not count his sin." -/
+  | romans4_6_8
+  /-- λογίζομαι in Romans 4:3–11 is the language of reckoning: to credit to
+  someone's account. The wage "is not counted as a gift but as his due" (4:4);
+  the one who does not work has faith "counted as righteousness" (4:5). -/
+  | logizomaiIsReckoning
+  /-- In Romans 4:6–8 Paul glosses "God counts righteousness apart from works" by
+  the psalm he quotes: lawless deeds forgiven, sins covered, sin not counted. The
+  righteousness counted to the ungodly is described, in Paul's own argument, as
+  sin not counted. -/
+  | countedRighteousnessIsSinNotCounted
   /-- Christ's death for our sins is the whole ground of justification: nothing
   added to it completes it, and to add a ground is to preach another gospel.
   **Paul's gospel, as Galatians reads it.** -/

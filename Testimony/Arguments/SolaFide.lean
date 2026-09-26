@@ -176,11 +176,12 @@ worketh by love". `james_harmonisation_is_load_bearing` shows the argument
 genuinely depends on this: drop it and sola fide does not follow.
 
 **Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
-Sanders, the critics, Jervell, Paul's gospel, Paul's word and Trent read as a
-claim about that word as parties, one thing prevails outright: Paul's word —
-δικαιόω does not denote the renewal of the inward man. It is the one party whose
-every link is rated above `disputed`, and it defeats Trent read as a claim about
-the word, which cannot be defended at all. Everything else ties. Every other
+Sanders, the critics, Jervell, Paul's gospel, Paul's word (lexically, and from
+Romans 4) and Trent read as a claim about that word as parties, one thing
+prevails outright: Paul's word — δικαιόω does not denote the renewal of the
+inward man. Its two routes are the only parties whose every link is rated above
+`disputed`, and each defeats Trent read as a claim about the word, which cannot
+be defended at all. Everything else ties. Every other
 party's weakest link is `disputed`, and every attack between Trent and a
 Reformed party runs both ways: Luke's case, Paul's gospel and Trent are each
 defensible, and none is accepted on every resolution. Luke's case, holding only
@@ -204,8 +205,14 @@ read as a claim about Paul's word or about what God does in justifying, and a
 checked `Dilemma` answers both. Read as a claim about the word, it falls to the
 lexical case — the forensic sense, Paul's own words for renewal, and the rule of
 least meaning (Joos, Silva; Barr's "illegitimate totality transfer") — at a step
-rated `wellSupported`. Read as a claim about what God does, nothing lexical
-reaches it, and it falls to Paul's gospel only at the `disputed` step above.
+rated `wellSupported`, and so does the Latin gloss Trent rests that reading on
+(Augustine: "being justified" is "being made righteous"). Read as a claim about
+what God does, nothing lexical or exegetical about the word reaches it, and it
+falls to Paul twice — to his gospel in Galatians and to Romans 4:5–8, "God
+justifies the ungodly" — each at a `disputed` step: Augustine grants Romans 4
+and reads it the other way. Romans 4 thus does two things: read for the word, it
+is a second route, rated `wellSupported`, to the lexical conclusion; read for
+the reality, it meets Trent where Galatians does, and no higher.
 
 ## Where things are
 

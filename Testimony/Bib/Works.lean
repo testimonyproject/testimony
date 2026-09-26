@@ -1654,6 +1654,45 @@ University Press, 1961). -/
   , publisher := "Wipf & Stock"
   , place := some "Eugene, OR" }
 
+/-- Schaff's Nicene and Post-Nicene Fathers, first series volume 5: Augustine's
+anti-Pelagian writings, among them *On the Spirit and the Letter*, whose
+chapter 45 (26.45 in the Latin numbering) glosses "being justified" as "being
+made righteous". Checked against the electronic text at CCEL. Reprinted under
+many imprints, none of which the catalogue ties to an identifier, so the entry
+records the electronic text instead. -/
+@[bib_entry] def npnfAugustineAntiPelagian : BibEntry := .book
+  { core :=
+      { key := "npnf1-05-1887"
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title :=
+          "A Select Library of the Nicene and Post-Nicene Fathers of the Christian Church"
+      , subtitle := some "First Series, Volume 5: St. Augustin — Anti-Pelagian Writings"
+      , year := some { value := 1887 }
+      , identifiers :=
+          [ .url "https://www.ccel.org/ccel/schaff/npnf105.html" (some "2026-09-26") ]
+      , note := some
+          ("Public domain; reprinted under several imprints, none tied to a " ++
+           "catalogue identifier.") }
+  , publisher := "Christian Literature Company"
+  , place := some "Buffalo, NY" }
+
+/-- McGrath's history of the doctrine of justification: how the Latin West,
+from Augustine, read *iustificare* as "to make righteous", and why the
+Reformers' distinction of justification from regeneration was new against that
+tradition. Verified at Open Library, ISBN 0521533899 (Cambridge University
+Press, 2005, third edition). -/
+@[bib_entry] def mcgrathIustitiaDei : BibEntry := .book
+  { core :=
+      { key := "mcgrath-iustitia-dei-2005"
+      , contributors := { authors := [.person "Alister E." "McGrath"] }
+      , title := "Iustitia Dei"
+      , subtitle := some "A History of the Christian Doctrine of Justification"
+      , year := some { value := 2005 }
+      , identifiers := [.isbn "9780521533898"] }
+  , publisher := "Cambridge University Press"
+  , place := some "Cambridge"
+  , edition := some "3rd edition" }
+
 derive_bib_registry registry
 
 end Testimony.Bib

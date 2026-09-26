@@ -441,7 +441,9 @@ def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
     "\\paragraph{" ++ toString (k + 1) ++ ". Read " ++ escape h.reading ++
       ".} The claim commits \\emph{" ++ escape d.rival ++ "} to \\(" ++
       formula order h.commits ++ "\\) --- so read by " ++ source h.source ++ " (\\emph{" ++
-      confidence h.source.confidence ++ "}).\n\n" ++
+      confidence h.source.confidence ++ "})." ++
+      (if h.grounds.isEmpty then "" else
+        " It rests the reading on " ++ inlineFormulas order h.grounds ++ ".") ++ "\n\n" ++
     String.join (h.fates.map fate))
 
 /-- What an opponent must reject: every minimal set of readings whose

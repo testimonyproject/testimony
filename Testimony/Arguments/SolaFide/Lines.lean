@@ -440,4 +440,73 @@ def lexicalLine : Line Claim :=
   , delivers := notP .paulsJustifyDenotesRenewal
   , inference := some leastMeaningSource }
 
+/-! ### Romans 4: the ungodly, justified
+
+An exegetical case, in two steps. The first is about Paul's argument: God
+"justifies the ungodly" (4:5), and what he counts to them is described in the
+psalm Paul quotes — lawless deeds forgiven, sin not counted (4:6–8). λογίζομαι is
+the language of reckoning, set against wages owed (4:4). So, in Paul's own
+argument, the righteousness counted to the ungodly is sin not counted. No source
+cited here grants the texts and the sense of the verb and denies that gloss.
+
+The second step is where the exegesis is put to work, and it goes two ways.
+
+- **Against a claim about Paul's word.** With the rule of least meaning, the
+  verb Paul glosses so does not also denote the renewal of the inward man.
+  Rated `wellSupported`, as the lexical case is.
+- **Against a claim about what God does.** That what is counted is sin not
+  counted, and that the verdict is forensic, excludes renewal from
+  justification. Augustine grants every word of Romans 4 and reads the verse
+  the other way — God "justifies the ungodly man, that he may become a godly
+  one" (*On the Spirit and the Letter* 26.45) — and Trent makes the justice
+  "whereby He maketh us just" justification's formal cause (ch. 7). So that step
+  is `disputed`, as the step from Galatians is. -/
+
+/-- The exegesis of Romans 4:3–8: reckoning language, set against wages, and the
+psalm's gloss on what is counted. Cited to Moo on Romans, and rated
+`wellSupported`: Augustine and Trent grant the texts and dispute what follows
+from them, not what Paul says the counting is. -/
+def romansFourExegesisSource : Source :=
+  { primary := .work mooRomans (.adLoc ⟨.romans, 4, 6⟩)
+  , supporting := [.work bdag (.sectionRef "s.v. λογίζομαι")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- The step from Paul's gloss, with the forensic sense of the verb, to "renewal
+is no part of justification". Cited to Moo on Romans 4:5 and Westminster XI.1,
+and rated `disputed`: Augustine grants the texts and reads "justifies the
+ungodly" as making the ungodly godly, and Trent's chapter 7 makes the justice
+"whereby He maketh us just" justification's formal cause. -/
+def romansFourReadingSource : Source :=
+  { primary := .work mooRomans (.adLoc ⟨.romans, 4, 5⟩)
+  , supporting := [.work westminsterConfession (.sectionRef "XI.1")]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **Romans 4:3–8, read**: God justifies the ungodly, and the righteousness he
+counts to them is, in Paul's own gloss, sin not counted. -/
+@[solaFideDefs]
+def romansFourExegesisLine : Line Claim :=
+  { name := "Romans 4:3–8 (the ungodly, justified)"
+  , grounds := [p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning]
+  , step :=
+      ⋀ [p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning]
+      ➝ p .countedRighteousnessIsSinNotCounted
+  , delivers := p .countedRighteousnessIsSinNotCounted
+  , inference := some romansFourExegesisSource }
+
+/-- From Paul's gloss, by the rule of least meaning: the verb he glosses so does
+not also denote renewal. -/
+@[solaFideDefs]
+def glossByLeastMeaning : Formula Claim :=
+  ⋀ [p .countedRighteousnessIsSinNotCounted, p .leastMeaning]
+  ➝ notP .paulsJustifyDenotesRenewal
+
+/-- From Paul's gloss, with the forensic sense of the verb: renewal is no part of
+justification. The step Augustine denies. -/
+@[solaFideDefs]
+def countedExcludesRenewal : Formula Claim :=
+  ⋀ [p .countedRighteousnessIsSinNotCounted, p .dikaioIsForensic]
+  ➝ notP .justificationIncludesSanctification
+
 end Testimony.Arguments.SolaFide

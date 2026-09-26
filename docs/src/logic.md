@@ -804,11 +804,13 @@ argument that answers only one reading has answered a rival of its own choosing.
 one of `R`'s premises, the **claim**, and a list of **horns**, at least two. Each
 horn carries:
 
-- a **reading**: what the claim commits `R` to under it, and who reads it that
-  way, with a rating. `R.readAs claim r` is `R` with the step
-  `claim ➝ r.commits` added, and the reading's citation among its inferences.
-  The reading is a named difference, like every variant here: `R`'s own
-  premises are untouched;
+- a **reading**: what the claim commits `R` to under it, who reads it that way,
+  with a rating, and any grounds `R` rests the reading on. `R.readAs claim r`
+  is `R` with those grounds and the step `claim ➝ r.commits` added, and the
+  reading's citation among its inferences. The reading is a named difference,
+  like every variant here: `R`'s own premises are untouched. Trent's reading of
+  Paul's word rests on Augustine's gloss, "being justified" as "being made
+  righteous", and the dilemma checks where that ground breaks too;
 - a proof that the reading is **fair**: `R` read that way still has a model, so
   no horn is a strawman that falls to itself;
 - its **fates**, never empty. Each fate is set against a named position `P`.
@@ -825,14 +827,17 @@ def whatTrentsDefinitionClaims : Dilemma tridentineCase where
   horns :=
     [ { reading := trentOnPaulsWord
       , fair := tridentineOnPaulsWord_is_satisfiable
-      , fates := [.falls lexicalCase whereTrentsWordReadingFalls]
+      , fates :=
+          [ .falls lexicalCase whereTrentsWordReadingFalls
+          , .falls lexicalCase whereTheLatinReadingFalls ]
       , answered := by simp }
     , { reading := trentOnWhatGodDoes
       , fair := tridentineOnWhatGodDoes_is_satisfiable
       , fates :=
           [ .unreached lexicalCase lexicalCase_establishes
               lexical_case_does_not_reach_what_god_does
-          , .falls galatianGospel whereTrentsGraceReadingFalls ]
+          , .falls galatianGospel whereTrentsGraceReadingFalls
+          , .falls romansFourCase whereRomansFourMeetsWhatGodDoes ]
       , answered := by simp } ]
   claim_mem := by simp [solaFideDefs, tridentinePremises, Line.premises]
   two := by simp

@@ -297,7 +297,9 @@ def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
     "**" ++ toString (k + 1) ++ ". Read " ++ escape h.reading ++ ".** The claim commits *" ++
       escape d.rival ++ "* to " ++ inlineMath (Latex.formula order h.commits) ++
       " — so read by " ++ source h.source ++ " (*" ++ confidence h.source.confidence ++
-      "*).\n\n" ++
+      "*)." ++
+      (if h.grounds.isEmpty then "" else
+        " It rests the reading on " ++ inlineFormulas order h.grounds ++ ".") ++ "\n\n" ++
     String.intercalate "\n" (h.fates.map fate))
 
 /-- What an opponent must reject: every minimal set of readings whose

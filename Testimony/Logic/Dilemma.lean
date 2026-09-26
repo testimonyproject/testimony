@@ -13,8 +13,9 @@ answers only one of them has answered a rival of its own choosing.
 A `Dilemma R` makes the choice impossible to dodge. It names one of `R`'s
 premises, the **claim**, and the **readings** it admits. Each reading says what
 the claim commits `R` to under it — a formula `commits`, with a citation for
-reading the claim that way — and `R.readAs claim r` is `R` with that
-commitment added as the step `claim ➝ commits`. Then, with a proof of each:
+reading the claim that way, and whatever grounds the rival rests the reading on
+— and `R.readAs claim r` is `R` with those grounds, and the commitment as the
+step `claim ➝ commits`, added. Then, with a proof of each:
 
 - **The claim is `R`'s own.**
 - **Every reading is fair.** `R` read that way still has a model: no horn is a
@@ -63,23 +64,26 @@ structure Reading (α : Type) where
   name : String
   /-- What the claim commits its holder to, read this way. -/
   commits : Formula α
+  /-- What the rival rests the reading on, if anything: grounds held for their
+  own sake, and the steps from them to what the reading commits it to. -/
+  grounds : List (Formula α) := []
   /-- Who reads the claim this way, and how firmly. -/
   source : Source
 
-/-- **A rival, read one way.** `R` with the step `claim ➝ r.commits` added, and
-the reading's citation among its inferences, under a name that says which
-reading. -/
+/-- **A rival, read one way.** `R` with the reading's own grounds and the step
+`claim ➝ r.commits` added, and the reading's citation among its inferences,
+under a name that says which reading. -/
 def ArgumentPackage.readAs (R : ArgumentPackage α) (claim : Formula α) (r : Reading α) :
     ArgumentPackage α :=
   { R with
     name := R.name ++ ", read " ++ r.name
-    premises := R.premises ++ [claim ➝ r.commits]
+    premises := R.premises ++ r.grounds ++ [claim ➝ r.commits]
     inferences := R.inferences ++ [r.source] }
 
 /-- Reading a rival one way keeps what it concludes: a reading only adds. -/
 theorem ArgumentPackage.readAs_establishes {R : ArgumentPackage α} {claim : Formula α}
     {r : Reading α} (h : Establishes R) : Establishes (R.readAs claim r) :=
-  entails_of_subset (fun _ hφ => List.mem_append_left _ hφ) h
+  entails_of_subset (fun _ hφ => List.mem_append_left _ (List.mem_append_left _ hφ)) h
 
 /-- What happens to one reading, against one position. -/
 inductive Fate (Ri : ArgumentPackage α)
@@ -144,7 +148,8 @@ def Fate.view {Ri : ArgumentPackage α} : Fate Ri → Page.Fate α
 def view (d : Dilemma R) : Page.Dilemma α :=
   { rival := R.name, cite := R.cite, claim := d.claim
   , horns := d.horns.map fun h =>
-      { reading := h.reading.name, commits := h.reading.commits, source := h.reading.source
+      { reading := h.reading.name, commits := h.reading.commits
+      , grounds := h.reading.grounds, source := h.reading.source
       , fates := h.fates.map Fate.view } }
 
 end Dilemma
