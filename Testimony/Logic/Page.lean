@@ -74,6 +74,8 @@ structure DilemmaHorn (α : Type) where
   reading : String
   /-- What the claim commits its holder to, read this way. -/
   commits : Formula α
+  /-- What the rival rests the reading on. -/
+  grounds : List (Formula α)
   /-- Who reads the claim this way. -/
   source : Source
   /-- What happens to the reading, against each position. -/
@@ -278,7 +280,7 @@ def atoms [DecidableEq α] : Item α → List α
   | .because _ _ e => (e.crux :: e.granted ++ e.core).flatMap atomsOf
   | .dilemma _ _ d =>
     atomsOf d.claim ++ d.horns.flatMap fun h =>
-      atomsOf h.commits ++ h.fates.flatMap fun f => match f.falls with
+      atomsOf h.commits ++ h.grounds.flatMap atomsOf ++ h.fates.flatMap fun f => match f.falls with
         | some e => (e.crux :: e.granted ++ e.core).flatMap atomsOf
         | none => []
   | _ => []

@@ -665,6 +665,51 @@ def baseCite : Claim → AtomMeta
             , .work gormanCruciformGod .whole ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
+  | .augustineReadsJustifyAsMakeRighteous =>
+    { label := "Augustine glosses \"being justified\" as \"being made righteous\", and the " ++
+        "Latin West read iustificare so"
+    , kind := .historical
+      -- `consensus`: what Augustine wrote, and what the tradition received,
+      -- is not in dispute. McGrath traces it; Trent, which declared the
+      -- Vulgate "authentic" (Session IV), inherited it.
+    , source :=
+        { primary := .work npnfAugustineAntiPelagian
+            (.sectionRef "On the Spirit and the Letter, ch. 45 (26.45)")
+        , supporting :=
+            [ .work mcgrathIustitiaDei .whole
+            , .work tannerDecrees
+                (.sectionRef "Trent, Session IV (1546), Decree on the Vulgate") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans4_6_8 =>
+    { label := "Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not " ++
+        "counted"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.romans, 4, 6, 4, 8⟩ }]
+        , supporting := [.work mooRomans (.adLoc ⟨.romans, 4, 6⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .logizomaiIsReckoning =>
+    { label := "λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account"
+    , kind := .linguistic
+      -- `wellSupported`: the standard lexicon and the commentators read the
+      -- verb in Romans 4 as crediting, and 4:4 sets it in the language of
+      -- wages; no source cited here reads it otherwise.
+    , source :=
+        { primary := .work bdag (.sectionRef "s.v. λογίζομαι")
+        , supporting := [.work mooRomans (.adLoc ⟨.romans, 4, 3⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .countedRighteousnessIsSinNotCounted =>
+    { label := "In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not " ++
+        "counted"
+    , kind := .interpretive
+    , source :=
+        { primary := .work mooRomans (.adLoc ⟨.romans, 4, 6⟩)
+        , supporting := [.scripture [{ ref := .range ⟨.romans, 4, 6, 4, 8⟩ }]]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
   | .worksOfLawMeansWorksGenerally =>
     { label := "Paul's ἔργα νόμου denotes human works in general"
     , kind := .linguistic

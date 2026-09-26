@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**5 arguments**, carrying **115 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**5 arguments**, carrying **117 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -91,9 +91,11 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `grace_needs_no_answer_to_james` | `Establishes graceWithoutJamesHarmonisation` | **But grace does not need it.** Remove the answer to James and salvation by grace still follows, from Ephesians 2:8, Romans 4:4–5 and Titus 3:5 alone. |
 | `galatianGospel_establishes` | `Establishes galatianGospel` | **Paul's gospel denies Trent's definition.** From Galatians 1:6–9, 2:21, 5:2–4 and 1 Corinthians 15:3, read as one claim, with the forensic sense of δικαιόω: justification is not … |
 | `lexicalCase_establishes` | `Establishes lexicalCase` | **Paul's δικαιόω does not denote the renewal of the inward man**, from the forensic sense, Paul's own words for renewal, and the rule of least meaning. |
+| `romansFourCase_establishes` | `Establishes romansFourCase` | **Romans 4 denies Trent's definition**: Paul glosses the righteousness God counts to the ungodly as sin not counted, and with the forensic sense of the verb, renewal is no part of … |
+| `romansFourOnTheWord_establishes` | `Establishes romansFourOnTheWord` | **Romans 4, read by the rule of least meaning, says what Paul's word means**: the verb Paul glosses as sin not counted does not also denote the renewal of the inward man. |
 | `trent_objection_rests_on_its_definition` | `¬Establishes tridentineCaseOnTheReformedDistinction` | **Trent's objection rests on its definition of justification.** Keep all of Trent's case except its definition, grant the Reformed distinction instead, and "not apart from works" … |
-| `only_pauls_word_prevails` | `Framework.grounded solaFideDispute.defeats = {Party.lexical}` | **Only Paul's word prevails outright.** The grounded extension — what the dispute forces before any choice between rivals — is exactly the lexical case: Paul's δικαιόω does not … |
-| `trent_on_pauls_word_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.trentOnPaulsWord ∉ S` | **Trent, read as a claim about Paul's word, cannot be defended.** No admissible set holds it: Paul's word defeats it, and nothing answers Paul's word. |
+| `only_pauls_word_prevails` | `Framework.grounded solaFideDispute.defeats = {Party.lexical, Party.romansOnTheWord}` | **Only Paul's word prevails outright.** The grounded extension — what the dispute forces before any choice between rivals — is exactly Paul's word, by its two routes: Paul's … |
+| `trent_on_pauls_word_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.trentOnPaulsWord ∉ S` | **Trent, read as a claim about Paul's word, cannot be defended.** No admissible set holds it: Paul's word defeats it, lexically and from Romans 4, and nothing answers either. |
 | `trent_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.trent` | **Trent can be defended.** Some maximal defensible position holds it, with Sanders and Jervell. |
 | `trent_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.trent` | **Nor is Trent forced.** A maximal defensible position holds Paul's case with Luke's and Peter's, and none of them can be held with Trent. |
 | `apocalyptic_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.apocalyptic` | **The apocalyptic reading can be defended.** Some maximal defensible position holds it, and holds Luke's case and Peter's with it: they claim that faith saves, and the apocalyptic … |
@@ -230,11 +232,14 @@ works" (`trent_objection_rests_on_its_definition`).
 neither is forced.** Weighed as a dispute — the three strands argued
 separately, Trent, the apocalyptic reading, Sanders, the critics, Jervell,
 Paul's gospel in Galatians, Paul's word, and Trent read as a claim about that
-word — one party prevails outright: Paul's word, that δικαιόω does not denote
-the renewal of the inward man (`only_pauls_word_prevails`). It rests on the
-forensic sense, Paul's own words for renewal, and the rule of least meaning
-(Joos; Silva; Barr), every link rated `wellSupported` or better, so Trent read
-as a claim about the word cannot be defended (`trent_on_pauls_word_indefensible`).
+word — one thing prevails outright: Paul's word, that δικαιόω does not denote
+the renewal of the inward man (`only_pauls_word_prevails`). It prevails by two
+routes: lexically, from the forensic sense, Paul's own words for renewal and the
+rule of least meaning (Joos; Silva; Barr); and exegetically, from Romans 4:3–8,
+where Paul glosses the righteousness counted to the ungodly as sin not counted.
+Every link of each is rated `wellSupported` or better, so Trent read as a claim
+about the word cannot be defended (`trent_on_pauls_word_indefensible`) — nor can
+the Latin gloss it rests on, "being justified" as "being made righteous".
 Every other party's weakest link is `disputed`, and every attack between Trent
 and a Reformed party runs both ways, including a claim a party derives on the
 way to its conclusion. So Luke's case, Paul's gospel and Trent — its definition
@@ -242,10 +247,12 @@ left unread — are each defensible and none forced (`dominical_case_defensible`
 `dominical_case_not_forced`, `gospel_defensible`, `gospel_not_forced`,
 `trent_defensible`, `trent_not_forced`). The dilemma `whatTrentsDefinitionClaims`
 says why: read as a claim about Paul's word, Trent's definition falls to the
-lexical case; read as a claim about what God does in justifying, nothing lexical
-reaches it, and it parts from Paul at one step, that a verdict on a finished
-work excludes the renewal wrought in us (`whereTrentPartsFromPaul`), rated
-`disputed`. Luke's case is
+lexical and exegetical cases; read as a claim about what God does in
+justifying, nothing about the word reaches it, and it parts from Paul at the
+step from Galatians, that a verdict on a finished work excludes the renewal
+wrought in us (`whereTrentPartsFromPaul`), and at the step from Romans 4 —
+each rated `disputed`, because Augustine and Trent grant the texts and read them
+the other way. Luke's case is
 attacked by no one but Trent, because no cited source argues that σῴζω at Luke
 7:50 means healing. A search
 for one found none, so that premise is rated `wellSupported`; and the dominical

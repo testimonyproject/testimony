@@ -332,6 +332,31 @@ def galatianGospel : ArgumentPackage Claim :=
     conclusionLabel := "justification is not the renewal of the inward man"
     inferences := [galatianGospelReadingSource, verdictNotRenewalSource] }
 
+/-- **Romans 4, on what Paul's word means.** Paul glosses the righteousness God
+counts to the ungodly as sin not counted; by the rule of least meaning, the verb
+he glosses so does not also denote the renewal of the inward man. An exegetical
+route to what the lexical case reaches lexically. -/
+@[solaFideDefs]
+def romansFourOnTheWord : ArgumentPackage Claim :=
+  { name := "Romans 4:3–8, on Paul's word (by the rule of least meaning)"
+  , cite := baseCite
+  , premises := caseOf [romansFourExegesisLine] [p .leastMeaning] [glossByLeastMeaning]
+  , conclusion := notP .paulsJustifyDenotesRenewal
+  , conclusionLabel := "Paul's δικαιόω does not denote the renewal of the inward man"
+  , inferences := [romansFourExegesisSource, leastMeaningSource] }
+
+/-- **Romans 4, against justification as renewal.** Paul glosses the righteousness
+God counts to the ungodly as sin not counted; with the forensic sense of the
+verb, justification is not the renewal of the inward man. -/
+@[solaFideDefs]
+def romansFourCase : ArgumentPackage Claim :=
+  { name := "Romans 4:3–8, against justification as renewal"
+  , cite := baseCite
+  , premises := caseOf [romansFourExegesisLine] [p .dikaioIsForensic] [countedExcludesRenewal]
+  , conclusion := notP .justificationIncludesSanctification
+  , conclusionLabel := "justification is not the renewal of the inward man"
+  , inferences := [romansFourExegesisSource, romansFourReadingSource] }
+
 /-! ### Paul's word, against justification as renewal -/
 
 /-- **Paul's word.** δικαιόω is forensic, Paul names renewal with words of its
