@@ -1,4 +1,5 @@
-import Testimony.Arguments.SolaFide.Dispute
+import Testimony.Arguments.SolaFide.Results
+import Testimony.Logic.Dispute
 import Testimony.Logic.Because
 
 /-!

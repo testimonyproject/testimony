@@ -174,17 +174,18 @@ worketh by love". `james_harmonisation_is_load_bearing` shows the argument
 genuinely depends on this: drop it and sola fide does not follow.
 
 **Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
-Sanders, the critics and Jervell as parties, nothing prevails outright, and
-nothing is forced. Every party's weakest link is `disputed`, so no rating
-breaks a tie, and every attack between Trent and a Reformed strand runs both
-ways: Luke's case and Trent are each defensible, and neither is accepted on
-every resolution. Luke's case, holding only Luke's words, meets Trent over
-faith's sufficiency, and the apocalyptic reading not at all — Luke says faith
-saved her, not that faith alone does — so the dispute between Campbell and the
-Reformed reading is between Campbell and Paul, over the genitive. What would
-decide between Trent and the Reformed readings is what justification *is*, and
-that the library argues rather than weighs: two checked explanations locate
-it, one for Luke's case and one for Paul's gospel (`Gospel.lean`).
+Sanders, the critics, Jervell, Paul's gospel, Paul's word and Trent read as a
+claim about that word as parties, one thing prevails outright: Paul's word —
+δικαιόω does not denote the renewal of the inward man. It is the one party whose
+every link is rated above `disputed`, and it defeats Trent read as a claim about
+the word, which cannot be defended at all. Everything else ties. Every other
+party's weakest link is `disputed`, and every attack between Trent and a
+Reformed party runs both ways: Luke's case, Paul's gospel and Trent are each
+defensible, and none is accepted on every resolution. Luke's case, holding only
+Luke's words, meets Trent over faith's sufficiency, and the apocalyptic reading
+not at all — Luke says faith saved her, not that faith alone does — so the
+dispute between Campbell and the Reformed reading is between Campbell and Paul,
+over the genitive.
 
 **Where Trent parts from Paul** (`Gospel.lean`). Paul's answer to anything added
 to the gospel is Galatians — another gospel, accursed (1:6–9); if righteousness
@@ -195,6 +196,14 @@ text, and — with the *Joint Declaration* (§22) and New Testament scholarship
 across traditions — the forensic sense of the verb. A checked `Because` finds
 where they part: one step, that a verdict on a finished work excludes the
 renewal wrought in us.
+
+**What Trent's definition claims** (`Definition.lean`). The definition can be
+read as a claim about Paul's word or about what God does in justifying, and a
+checked `Dilemma` answers both. Read as a claim about the word, it falls to the
+lexical case — the forensic sense, Paul's own words for renewal, and the rule of
+least meaning (Joos, Silva; Barr's "illegitimate totality transfer") — at a step
+rated `wellSupported`. Read as a claim about what God does, nothing lexical
+reaches it, and it falls to Paul's gospel only at the `disputed` step above.
 
 ### Where things are
 
@@ -208,6 +217,7 @@ renewal wrought in us.
 | `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
 | `Johannine.lean` | the Johannine strand and Aquinas's rival reading, encoded alone |
 | `Gospel.lean` | Paul's gospel in Galatians against Trent's definition, and where they part |
+| `Definition.lean` | Paul's word, and the dilemma over what Trent's definition claims |
 
 ## Arguments.SolaFide.Atoms — the atomic claims
 
@@ -292,7 +302,11 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{44}\\) | Galatians 5:2–4: you who would be justified by the law are severed from Christ | textual | Christian, historical-grammatical, consensus | Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2 |
 | \\(P_{45}\\) | Romans 8:33–34: it is God who justifies — who is to condemn? ※ | textual | Christian, historical-grammatical, consensus | Rom 8:33-34 |
 | \\(P_{46}\\) | In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous | linguistic | Christian, historical-grammatical, well supported | [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24 |
-| \\(P_{47}\\) | Christ's death for our sins is the whole ground of justification; to add to it is another gospel | interpretive | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
+| \\(P_{47}\\) | Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω ※ | textual | Christian, historical-grammatical, consensus | Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11 |
+| \\(P_{48}\\) | A word contributes the least meaning its context requires; one occurrence does not carry the whole concept | linguistic | Christian, historical-grammatical, well supported | [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004) |
+| \\(P_{49}\\) | Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006) |
+| \\(P_{50}\\) | When God justifies, he also renews: pardon and renewal are given together, not to be separated | theological | Christian, historical-grammatical, well supported | [`lwf-catholic-joint-declaration-2000`](../bibliography.md#lwf-catholic-joint-declaration-2000), §§22; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6; [`gorman-cruciform-god-2009`](../bibliography.md#gorman-cruciform-god-2009) |
+| \\(P_{51}\\) | Christ's death for our sins is the whole ground of justification; to add to it is another gospel | interpretive | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
 
 </div>
 
@@ -1128,8 +1142,8 @@ def verdictNotRenewalSource : Source :=
 \text{(2)} \quad &amp; P_{42} \\
 \text{(3)} \quad &amp; P_{43} \\
 \text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{47} \\[4pt]
-\vdash \quad &amp; P_{47}
+\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{51} \\[4pt]
+\vdash \quad &amp; P_{51}
 \end{aligned}
 \]
 </div>
@@ -1144,7 +1158,60 @@ part of it.
 
 <div class="testimony-math">
 \[
-(P_{47} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}
+(P_{51} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}
+\]
+</div>
+
+#### What Paul's word means
+
+Trent's definition can be read as a claim about Paul's word — that δικαιόω, in
+Paul, denotes the renewal of the inward man — and this line answers it on
+lexical ground alone. δικαιόω is forensic: its opposite is *condemn*. Paul has
+other words for renewal, and sets them beside it. And a word contributes the
+least meaning its context requires: nothing in a verdict's context requires a
+second, inward sense, and to supply one from the doctrine is what Barr called
+illegitimate totality transfer. So Paul's δικαιόω does not denote renewal.
+
+The line says nothing about what God does when he justifies. That is the other
+reading of Trent's definition, and this line does not reach it
+(`Testimony.Arguments.SolaFide.Definition`).
+
+<a id="leastMeaningSource"></a>
+**`leastMeaningSource`**
+
+The step from the forensic sense, Paul's own vocabulary for renewal, and the
+rule of least meaning to "δικαιόω does not denote renewal". Silva's method,
+applied as Moo applies it to Romans. Rated `wellSupported`: no source cited here
+grants the three grounds and denies the conclusion. Those who hold that
+δικαιόω means "make righteous" — VanLandingham, and the Latin tradition from
+Augustine — deny the forensic sense itself, and are weighed in that premise's
+rating; those who hold that God's verdict renews — Gorman, the *Joint
+Declaration* — make a claim about what God does, not about the word.
+
+```lean
+def leastMeaningSource : Source :=
+  { primary := Reference.work Bib.silvaBiblicalWords,
+    supporting :=
+      [Reference.work Bib.mooRomans (Bib.Locus.sectionRef "p. 80"),
+        Reference.work Bib.barrSemantics],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="lexicalLine"></a>
+**`lexicalLine`** — Paul's word (δικαιόω, by the rule of least meaning)
+
+**Paul's word**, read by the rule of least meaning.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{46} \\
+\text{(2)} \quad &amp; P_{47} \\
+\text{(3)} \quad &amp; P_{48} \\
+\text{(4)} \quad &amp; (P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49} \\[4pt]
+\vdash \quad &amp; \lnot P_{49}
+\end{aligned}
 \]
 </div>
 
@@ -1968,6 +2035,36 @@ grace, with James 2:24 left unanswered?
 
 No premise here rests on scripture alone.
 
+<a id="tridentineCase"></a>
+**`tridentineCase`** — Trent, against 'not by works'
+
+Trent, as the argument it makes in a dispute: justification is the renewal of
+the inward man, that renewal grows through good works, so works done in grace
+merit an increase of justification, and salvation is not apart from works. The
+same premises as `tridentine`, concluding what Trent denies.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{1} \\
+\text{(2)} \quad &amp; P_{2} \\
+\text{(3)} \quad &amp; P_{3} \\
+\text{(4)} \quad &amp; P_{5} \\
+\text{(5)} \quad &amp; P_{23} \\
+\text{(6)} \quad &amp; P_{32} \\
+\text{(7)} \quad &amp; P_{34} \\
+\text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
+\text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
+\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
+\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
+\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\[4pt]
+\vdash \quad &amp; \lnot P_{27}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
 #### Paul's gospel, against Trent's definition
 
 <a id="galatianGospel"></a>
@@ -1986,16 +2083,39 @@ not the renewal of the inward man: the direct denial of Trent's definition
 \text{(2)} \quad &amp; P_{42} \\
 \text{(3)} \quad &amp; P_{43} \\
 \text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{47} \\
+\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{51} \\
 \text{(6)} \quad &amp; P_{45} \\
 \text{(7)} \quad &amp; P_{46} \\
-\text{(8)} \quad &amp; (P_{47} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32} \\[4pt]
+\text{(8)} \quad &amp; (P_{51} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32} \\[4pt]
 \vdash \quad &amp; \lnot P_{32}
 \end{aligned}
 \]
 </div>
 
 Grounded in scripture alone: 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins, Romans 8:33–34: it is God who justifies — who is to condemn?.
+
+#### Paul's word, against justification as renewal
+
+<a id="lexicalCase"></a>
+**`lexicalCase`** — Paul's word (δικαιόω, by the rule of least meaning)
+
+**Paul's word.** δικαιόω is forensic, Paul names renewal with words of its
+own, and a word contributes the least meaning its context requires: so Paul's
+δικαιόω does not denote the renewal of the inward man.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{46} \\
+\text{(2)} \quad &amp; P_{47} \\
+\text{(3)} \quad &amp; P_{48} \\
+\text{(4)} \quad &amp; (P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49} \\[4pt]
+\vdash \quad &amp; \lnot P_{49}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω.
 
 ## Arguments.SolaFide.Results — what does and does not follow
 
@@ -2677,27 +2797,572 @@ theorem graceWithoutJamesHarmonisation_is_satisfiable : Satisfiable
 -- axioms: propext, Quot.sound
 ```
 
+## Arguments.SolaFide.Gospel — where Trent parts from Paul
+
+Paul's direct answer to anything added to the gospel is Galatians: another
+gospel, whoever preaches it accursed (1:6–9); if righteousness came by the law,
+Christ died for nothing (2:21); whoever would be justified by the law is severed
+from Christ (5:2–4). The gospel itself is that Christ died for our sins
+(1 Corinthians 15:3).
+
+Set against Trent's definition of justification — "not remission of sins
+merely, but also the sanctification and renewal of the inward man" (Session VI,
+ch. 7) — the question is exactly where the two part. This module answers it in
+three steps, each checked.
+
+**What Trent grants.** Every text of the line. And the forensic sense of
+Paul's verb: the *Joint Declaration* (1999), signed by the Catholic Church,
+confesses that God "no longer imputes to them their sin" (§22), and modern Greek
+scholarship across traditions reads δικαιόω as a verdict — the standard lexicon,
+Morris, Moo, Irons, Wright, and the Catholic exegete Fitzmyer
+(`dikaioIsForensic`, rated `wellSupported`).
+
+**What Trent denies.** One step: that a verdict on the ground of a finished work
+excludes the renewal wrought in us. The same paragraph of the *Joint
+Declaration* holds forgiveness and the love the Spirit effects "not to be
+separated", and Gorman reads the verdict as an effective word that transforms.
+
+**Where they part.** `whereTrentPartsFromPaul` finds it mechanically: the crux
+is that step, and what it breaks in Trent is its definition, and nothing else.
+
+What this does not show is that the step is true. It shows that it is the whole
+of the disagreement: grant it, and Trent's definition cannot stand; deny it, and
+Paul's gospel as encoded here does not reach Trent's definition at all.
+
+#### The gospel line holds
+
+<a id="galatianGospelReading"></a>
+**`galatianGospelReading`**
+
+The world of Paul's gospel as this line reads it: every text true, Christ's
+work the whole ground, the verdict forensic — and justification not the renewal
+of the inward man.
+
+```lean
+def galatianGospelReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.justificationIncludesSanctification => False
+    | x => True
+```
+
+<a id="galatianGospel_establishes"></a>
+**`galatianGospel_establishes`**
+
+**Paul's gospel denies Trent's definition.** From Galatians 1:6–9, 2:21,
+5:2–4 and 1 Corinthians 15:3, read as one claim, with the forensic sense of
+δικαιόω: justification is not the renewal of the inward man.
+
+```lean
+theorem galatianGospel_establishes : Establishes galatianGospel
+-- axioms: propext, Quot.sound
+```
+
+<a id="galatianGospel_is_satisfiable"></a>
+**`galatianGospel_is_satisfiable`**
+
+The gospel line's premises have a model.
+
+```lean
+theorem galatianGospel_is_satisfiable : Satisfiable galatianGospel.premises
+-- axioms: propext, Quot.sound
+```
+
+#### What Trent grants
+
+<a id="jointDeclarationReading"></a>
+**`jointDeclarationReading`**
+
+Trent's world, with the *Joint Declaration*'s confession added: God no longer
+imputes sin — the verb is forensic — and every text of the gospel line holds.
+Justification still includes renewal, faith without charity does not suffice,
+and justification is not by faith alone.
+
+```lean
+def jointDeclarationReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
+    | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
+    | x => True
+```
+
+<a id="trent_grants_the_gospel_texts"></a>
+**`trent_grants_the_gospel_texts`**
+
+**Trent can grant every text of the gospel line.** Nothing Trent holds denies
+that Christ died for our sins, that righteousness by the law would make his
+death needless, or that another gospel is accursed.
+
+```lean
+theorem trent_grants_the_gospel_texts : Grants tridentineCase (⋀[p
+    Claim.galatians1_6_9, p Claim.firstCorinthians15_3, p Claim.galatians2_21,
+    p Claim.galatians5_2_4, p Claim.romans8_33_34])
+-- axioms: propext, Quot.sound
+```
+
+<a id="trent_grants_the_forensic_sense"></a>
+**`trent_grants_the_forensic_sense`**
+
+**Trent can grant that Paul's verb is forensic**, as the *Joint Declaration*
+does: God no longer imputes sin. The lexical question is not where they part.
+
+```lean
+theorem trent_grants_the_forensic_sense : Grants tridentineCase (p
+    Claim.dikaioIsForensic)
+-- axioms: propext, Quot.sound
+```
+
+#### Where Trent parts from Paul
+
+<a id="whereTrentPartsFromPaul"></a>
+**`whereTrentPartsFromPaul`**
+
+**Where Trent parts from Paul.** The crux is one step: if justification is
+God's verdict on the ground of Christ's finished work, the renewal of the inward
+man is no part of it (`verdictExcludesRenewal`; Westminster XI.1). What it breaks
+in Trent is its definition — justification "not remission of sins merely, but
+also the sanctification and renewal of the inward man" (Session VI, ch. 7) — and
+nothing else in Trent's case: not its account of merit, not its reading of works.
+
+The break needs the gospel line's grounds as well, and says so: the four texts,
+Paul's reading of them, Romans 8:33–34 and the forensic sense of the verb. Trent
+can grant every one of those (`trent_grants_the_gospel_texts`,
+`trent_grants_the_forensic_sense`); it is the step that it denies, with the
+*Joint Declaration*: forgiveness and renewal are "not to be separated".
+
+**Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works'*.**
+
+- **The crux:** \\((P_{51} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{51}\\), \\(P_{45}\\), \\(P_{46}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{51} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\) and \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{51}\\), \\(P_{45}\\), \\(P_{46}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{41}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
+  - \\(P_{42}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
+  - \\(P_{43}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
+  - \\(P_{44}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
+  - \\(P_{51}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+  - \\(P_{45}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - the step itself — *disputed*: [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+
+## Arguments.SolaFide.Definition — what Trent's definition claims
+
+Trent defines justification as "not remission of sins merely, but also the
+sanctification and renewal of the inward man" (Session VI, ch. 7). The Reformed
+deny it, and `whereTrentPartsFromPaul` locates the denial at one step. But the
+definition can be read two ways, and the two readings meet different
+objections.
+
+**Read as a claim about Paul's word**, it says that δικαιόω, in Paul, denotes
+the renewal of the inward man. Trent invites the reading: chapter 8 sets out how
+"the Apostle's" words — justified "by faith and freely" — are to be understood,
+and chapter 7 says that the justified "are not only reputed, but are truly
+called, and are, just". Read so, the definition is a lexical claim, and it meets
+a lexical answer: δικαιόω is forensic, Paul names renewal with words of its own
+and sets them beside it (Titus 3:5–7; 1 Corinthians 6:11), and a word
+contributes the least meaning its context requires (Joos; Silva). To read
+renewal into the verdict from the doctrine is what Barr called illegitimate
+totality transfer. Every link of that answer is rated above `disputed`.
+
+**Read as a claim about what God does**, it says that when God justifies he
+also renews — pardon and renewal given together, "not to be separated", as the
+*Joint Declaration* (§22) confesses. Read so, no lexical argument reaches it:
+it can be held with every word the lexical case says about δικαιόω, and Calvin
+himself grants that justification and sanctification are inseparable. What
+still divides Trent from Paul, on this reading, is the step
+`whereTrentPartsFromPaul` names — that a verdict on a finished work excludes
+renewal from justification — and that step is `disputed`.
+
+`whatTrentsDefinitionClaims` is the dilemma, checked: each reading is fair — Trent
+read that way still has a model — and each is answered. The first falls to the
+lexical case at a step rated `wellSupported`; the second is untouched by it and
+falls to Paul's gospel at a step rated `disputed`. Which reading Trent means is
+not something the dilemma decides. What it shows is what each reading costs.
+
+`paulNamesRenewalOtherwise` is grounded in scripture alone — what the texts
+say, and no more — and the manifest lists it so.
+
+#### The lexical case holds
+
+<a id="lexicalReading"></a>
+**`lexicalReading`**
+
+The world of the lexical case: every word as it reads it, and δικαιόω
+denoting the verdict and not renewal.
+
+```lean
+def lexicalReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | x => True
+```
+
+<a id="lexicalCase_establishes"></a>
+**`lexicalCase_establishes`**
+
+**Paul's δικαιόω does not denote the renewal of the inward man**, from the
+forensic sense, Paul's own words for renewal, and the rule of least meaning.
+
+```lean
+theorem lexicalCase_establishes : Establishes lexicalCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="lexicalCase_is_satisfiable"></a>
+**`lexicalCase_is_satisfiable`**
+
+The lexical case's premises have a model.
+
+```lean
+theorem lexicalCase_is_satisfiable : Satisfiable lexicalCase.premises
+-- axioms: propext, Quot.sound
+```
+
+#### Two readings of Trent's definition
+
+<a id="trentReadsPaulsWord"></a>
+**`trentReadsPaulsWord`**
+
+Reading Trent's definition as a claim about Paul's word. Trent's chapter 8
+sets out how "the Apostle's" words are to be understood, and chapter 7 says the
+justified are "not only reputed, but are truly called, and are, just". Rated
+`disputed`: whether the council defines the word or the reality is itself
+argued.
+
+```lean
+def trentReadsPaulsWord : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef
+          "Trent, Session VI (1547), Decree on Justification, ch. 8"),
+    supporting :=
+      [Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef
+            "Trent, Session VI (1547), Decree on Justification, ch. 7")],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="trentReadsGrace"></a>
+**`trentReadsGrace`**
+
+Reading Trent's definition as a claim about what God does in justifying: in
+the *Joint Declaration*, forgiveness and the renewal the Spirit effects are two
+aspects of God's gracious action, "not to be separated" (§22). Rated
+`disputed`, for the same reason as the other reading.
+
+```lean
+def trentReadsGrace : Source :=
+  {
+    primary :=
+      Reference.work Bib.jointDeclarationJustification
+        (Bib.Locus.sectionRef "§22"),
+    supporting :=
+      [Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef
+            "Trent, Session VI (1547), Decree on Justification, ch. 7")],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="trentOnPaulsWord"></a>
+**`trentOnPaulsWord`**
+
+Trent's definition, **read as a claim about what Paul's word means**.
+
+```lean
+def trentOnPaulsWord : Reading Claim :=
+  { name := "as what Paul's word means",
+    commits := p Claim.paulsJustifyDenotesRenewal,
+    source := trentReadsPaulsWord }
+```
+
+<a id="trentOnWhatGodDoes"></a>
+**`trentOnWhatGodDoes`**
+
+Trent's definition, **read as a claim about what God does in justifying**.
+
+```lean
+def trentOnWhatGodDoes : Reading Claim :=
+  { name := "as what God does in justifying",
+    commits := p Claim.justifyingGraceRenews,
+    source := trentReadsGrace }
+```
+
+<a id="tridentineOnPaulsWord"></a>
+**`tridentineOnPaulsWord`** — Trent, against 'not by works', read as what Paul's word means
+
+Trent, with its definition read as a claim about Paul's word.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{1} \\
+\text{(2)} \quad &amp; P_{2} \\
+\text{(3)} \quad &amp; P_{3} \\
+\text{(4)} \quad &amp; P_{5} \\
+\text{(5)} \quad &amp; P_{23} \\
+\text{(6)} \quad &amp; P_{32} \\
+\text{(7)} \quad &amp; P_{34} \\
+\text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
+\text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
+\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
+\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
+\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\
+\text{(13)} \quad &amp; P_{32} \rightarrow P_{49} \\[4pt]
+\vdash \quad &amp; \lnot P_{27}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="tridentineOnWhatGodDoes"></a>
+**`tridentineOnWhatGodDoes`** — Trent, against 'not by works', read as what God does in justifying
+
+Trent, with its definition read as a claim about what God does.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{1} \\
+\text{(2)} \quad &amp; P_{2} \\
+\text{(3)} \quad &amp; P_{3} \\
+\text{(4)} \quad &amp; P_{5} \\
+\text{(5)} \quad &amp; P_{23} \\
+\text{(6)} \quad &amp; P_{32} \\
+\text{(7)} \quad &amp; P_{34} \\
+\text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
+\text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
+\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
+\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
+\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\
+\text{(13)} \quad &amp; P_{32} \rightarrow P_{50} \\[4pt]
+\vdash \quad &amp; \lnot P_{27}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="tridentineOnPaulsWord_establishes"></a>
+**`tridentineOnPaulsWord_establishes`**
+
+Trent, read either way, still concludes what it concluded: a reading only
+adds.
+
+```lean
+theorem tridentineOnPaulsWord_establishes : Establishes tridentineOnPaulsWord
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnPaulsWordReading"></a>
+**`trentOnPaulsWordReading`**
+
+Trent's world, reading Paul's word as it does: δικαιόω denotes making just,
+and not a verdict only; justification includes renewal, faith without charity
+does not suffice, and justification is not by faith alone.
+
+```lean
+def trentOnPaulsWordReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
+    | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.dikaioIsForensic => False
+    | x => True
+```
+
+<a id="tridentineOnPaulsWord_is_satisfiable"></a>
+**`tridentineOnPaulsWord_is_satisfiable`**
+
+**Trent, read as a claim about Paul's word, holds together.** The horn is
+fair: it does not fall to itself.
+
+```lean
+theorem tridentineOnPaulsWord_is_satisfiable : Satisfiable
+    tridentineOnPaulsWord.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentGrantsTheWordReading"></a>
+**`trentGrantsTheWordReading`**
+
+Trent read as a claim about what God does, with every word of the lexical
+case granted: δικαιόω forensic, Paul's own words for renewal, the rule of least
+meaning, and δικαιόω not denoting renewal. God, in justifying, also renews.
+
+```lean
+def trentGrantsTheWordReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
+    | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.paulsJustifyDenotesRenewal => False
+    | x => True
+```
+
+<a id="tridentineOnWhatGodDoes_is_satisfiable"></a>
+**`tridentineOnWhatGodDoes_is_satisfiable`**
+
+**Trent, read as a claim about what God does, holds together.**
+
+```lean
+theorem tridentineOnWhatGodDoes_is_satisfiable : Satisfiable
+    tridentineOnWhatGodDoes.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="lexical_case_does_not_reach_what_god_does"></a>
+**`lexical_case_does_not_reach_what_god_does`**
+
+**The lexical case does not reach the second reading.** Trent, read as a
+claim about what God does, can be held with every premise of the lexical case:
+the rule of least meaning governs what Paul's word says, and this reading says
+nothing about the word.
+
+```lean
+theorem lexical_case_does_not_reach_what_god_does : Satisfiable
+    (lexicalCase.premises ++ tridentineOnWhatGodDoes.premises)
+-- axioms: propext, Quot.sound
+```
+
+#### Where each reading falls
+
+<a id="whereTrentsWordReadingFalls"></a>
+**`whereTrentsWordReadingFalls`**
+
+**Why Paul's word stands against Trent, read as a claim about it.** The crux
+is the lexical step: with the forensic sense, Paul's own words for renewal and
+the rule of least meaning, δικαιόω does not denote renewal. What it breaks is
+Trent's definition together with the reading — nothing else in Trent — and
+every link of the break is rated above `disputed`.
+
+**Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
+
+- **The crux:** \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow P_{49}\\) cannot be held together with \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\) and \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{47}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(P_{48}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - the step itself — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+
+<a id="whereTrentsGraceReadingFalls"></a>
+**`whereTrentsGraceReadingFalls`**
+
+**Why Paul's gospel stands against Trent, read as a claim about what God
+does.** The same crux as `whereTrentPartsFromPaul`, and the same break: the step
+from a verdict on a finished work to "renewal is no part of justification",
+against Trent's definition. On this reading that step is all that divides them,
+and it is rated `disputed`.
+
+**Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
+
+- **The crux:** \\((P_{51} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{51}\\), \\(P_{45}\\), \\(P_{46}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{51} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\) and \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{51}\\), \\(P_{45}\\), \\(P_{46}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{41}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
+  - \\(P_{42}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
+  - \\(P_{43}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
+  - \\(P_{44}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
+  - \\(P_{51}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+  - \\(P_{45}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - the step itself — *disputed*: [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+
+#### The dilemma
+
+<a id="whatTrentsDefinitionClaims"></a>
+**`whatTrentsDefinitionClaims`**
+
+**What Trent's definition claims, read both ways.** Read as a claim about
+Paul's word, it falls to the lexical case, at a step rated `wellSupported`. Read
+as a claim about what God does, the lexical case does not reach it, and it falls
+to Paul's gospel at the step `whereTrentPartsFromPaul` names, rated `disputed`.
+Each reading is fair: Trent read either way still has a model.
+
+**Every reading of \\(P_{32}\\), answered.** *Trent, against 'not by works'* holds \\(P_{32}\\). It is read 2 ways here, and each reading is checked; none can be left out.
+
+**1. Read as what Paul's word means.** The claim commits *Trent, against 'not by works'* to \\(P_{49}\\) — so read by [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 (*disputed*).
+
+Against *Paul's word (δικαιόω, by the rule of least meaning)*, it falls.
+
+**Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
+
+- **The crux:** \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow P_{49}\\) cannot be held together with \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\) and \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{47}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(P_{48}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - the step itself — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+
+**2. Read as what God does in justifying.** The claim commits *Trent, against 'not by works'* to \\(P_{50}\\) — so read by [`lwf-catholic-joint-declaration-2000`](../bibliography.md#lwf-catholic-joint-declaration-2000), §§22; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 (*disputed*).
+
+Against *Paul's word (δικαιόω, by the rule of least meaning)*, it is not reached: *Paul's word (δικαιόω, by the rule of least meaning)* holds, and can be held together with it.
+
+Against *Paul's gospel (Galatians 1), against justification as renewal*, it falls.
+
+**Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
+
+- **The crux:** \\((P_{51} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{51}\\), \\(P_{45}\\), \\(P_{46}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{51} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\) and \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{51}\\), \\(P_{45}\\), \\(P_{46}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{41}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
+  - \\(P_{42}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
+  - \\(P_{43}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
+  - \\(P_{44}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
+  - \\(P_{51}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+  - \\(P_{45}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - the step itself — *disputed*: [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+
 ## Arguments.SolaFide.Dispute — who prevails over sola fide
 
 The results in `Results.lean` ask what each package entails. This module asks
 what happens when the positions meet: the three Reformed strands, each argued
 alone; Trent; the apocalyptic reading of Martyn and Campbell; Sanders and Dunn on
-covenantal nomism, and the critics who answer them; and Jervell on the yoke of
-Acts 15. Who defeats whom is not stipulated — each defeat, and each absence of
+covenantal nomism, and the critics who answer them; Jervell on the yoke of Acts
+15; Paul's gospel in Galatians, against Trent's definition; Paul's word, read by
+the rule of least meaning; and Trent with its definition read as a claim about
+that word. Who defeats whom is not stipulated — each defeat, and each absence of
 one, is a theorem about the positions' premises (see `Testimony.Logic.Dispute`).
 
-### The ratings decide nothing here
+### The ratings decide one thing here
 
-Every party's weakest link is `disputed`: each Reformed strand's inference is
-rated at Trent's canon 9, which denies it; Paul's and Peter's cases hold the
-Reformed distinction between justification and sanctification, which Trent
-anathematises; Trent rests on its own definition of justification, which
-Westminster denies;
-the apocalyptic reading denies an atom (and a denial ranks at the bottom); and
-so on. So no rating blocks any attack, and the outcome is fixed entirely by who
-contradicts whom.
-That is unlike the dispute over Isaiah 7:14, where one inference rated
-`plausible` carried the verdict.
+Every party's weakest link but one is `disputed`: each Reformed strand's
+inference is rated at Trent's canon 9, which denies it; Paul's and Peter's cases
+hold the Reformed distinction between justification and sanctification, which
+Trent anathematises; Trent rests on its own definition of justification, which
+Westminster denies; the apocalyptic reading denies an atom (and a denial ranks
+at the bottom); and so on. Between those parties no rating blocks any attack,
+and the outcome is fixed by who contradicts whom.
+
+The exception is Paul's word (`lexicalCase`): δικαιόω is forensic, Paul names
+renewal with words of its own, and a word contributes the least meaning its
+context requires — every link rated `wellSupported` or better. It contradicts
+one party, Trent read as a claim about Paul's word, and that is the one attack
+in the dispute the ratings decide.
 
 ### Who defeats whom
 
@@ -2722,17 +3387,31 @@ That is unlike the dispute over Isaiah 7:14, where one inference rated
 - **Sanders defeats Paul**, by denying the ἔργα νόμου premise; Paul and the
   critics each defeat Sanders back.
 - **Jervell and Acts defeat each other**, over the yoke.
+- **Paul's gospel and Trent defeat each other**, over Trent's definition: the
+  gospel line concludes that justification is not the renewal of the inward
+  man, and both rest on something rated `disputed`.
+- **Paul's word defeats Trent read as a claim about it, and not the reverse**
+  (`lexical_defeats_trent_on_pauls_word`,
+  `trent_on_pauls_word_does_not_defeat_lexical`). Read that way, Trent's case
+  derives that δικαιόω denotes renewal; Paul's word denies it, and Trent's
+  reply, from a definition rated `disputed`, fails against a case rated
+  `wellSupported`. Paul's word conflicts with nothing else — in particular not
+  with Trent's definition left unread, which says nothing about the word.
 
 ### What follows
 
-**Nothing prevails outright** (`nothing_prevails_over_sola_fide`): every party
-is defeated by someone, and the grounded extension is empty.
+**Only Paul's word prevails outright** (`only_pauls_word_prevails`): the
+grounded extension is exactly the lexical case. Every other party is defeated by
+someone it does not answer. And **Trent read as a claim about Paul's word cannot
+be defended at all** (`trent_on_pauls_word_indefensible`): Paul's word defeats
+it, and nothing answers Paul's word.
 
-**Nor does anything win on every resolution.** Luke's case and Trent are each
-defensible, and neither is forced (`dominical_case_defensible`,
-`dominical_case_not_forced`, `trent_defensible`, `trent_not_forced`). With every
-rating at the bottom, every attack between Trent and a Reformed strand runs
-both ways, and the dispute has no ground to choose between them.
+**Beyond that, nothing wins on every resolution.** Luke's case, Paul's gospel
+and Trent — its definition left unread — are each defensible, and none is forced
+(`dominical_case_defensible`, `dominical_case_not_forced`, `gospel_defensible`,
+`gospel_not_forced`, `trent_defensible`, `trent_not_forced`). Every attack
+between Trent and a Reformed party runs both ways, with every rating at the
+bottom, and the dispute has no ground to choose between them.
 
 **Between Paul and the apocalyptic reading, the dispute chooses neither.** Each
 defeats the other over πίστις Χριστοῦ; each is defensible, and neither is
@@ -2744,13 +3423,17 @@ not that faith alone does.
 
 Three things, each stated as a result or a limitation rather than left implicit.
 
-**What justification is.** Between Trent and the Reformed readings, what
-decides is not weighed here but argued: the definition of justification.
-`whyTheDominicalCaseStandsAgainstTrent` finds that Luke's case breaks Trent at
-its definition and the step from it to denying that faith suffices;
-`whereTrentPartsFromPaul` (`Gospel.lean`) finds that Paul's gospel breaks it at
-one step, that a verdict on a finished work excludes the renewal wrought in us.
-Settle that, and the dispute is settled; the ratings here cannot.
+**What Trent's definition claims.** Trent's definition can be read two ways,
+and the dilemma `whatTrentsDefinitionClaims` (`Definition.lean`) answers both.
+Read as a claim about Paul's word, it falls to Paul's word, and in this dispute
+it cannot be defended. Read as a claim about what God does in justifying, the
+lexical case does not reach it, and what divides it from Paul is one step, that
+a verdict on a finished work excludes the renewal wrought in us
+(`whereTrentPartsFromPaul`) — rated `disputed`. Trent unread stands for that
+second reading here: the reading adds a commitment no party denies. So the
+dispute does not settle between Trent and the Reformed; it shows that Trent can
+keep its definition only as a claim about the reality and not about Paul's word,
+and it names the one step on which that claim turns.
 
 **An absence.** The dominical case is attacked by no one but Trent, because no
 source cited here argues that σῴζω at Luke 7:50 means healing. That absence is
@@ -2776,7 +3459,9 @@ Trent counts beginning to love God among the dispositions to justification
 **The parties chosen.** A dispute is over the arguments put into it. Hays's
 subjective genitive is represented through the apocalyptic reading, which holds
 it; a Hays party of its own, the *Joint Declaration*, and a party for the
-Finnish reading would each be new arguments to weigh.
+Finnish reading would each be new arguments to weigh. So would a cited argument
+that Paul's δικαιόω, granted forensic, still denotes renewal: none was found,
+and the lexical case's rating says so.
 
 #### The positions
 
@@ -2903,35 +3588,6 @@ The apostolic strand, argued alone: sola fide from Peter at Jerusalem.
 \text{(17)} \quad &amp; P_{24} \rightarrow P_{25} \\
 \text{(18)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
 \vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="tridentineCase"></a>
-**`tridentineCase`** — Trent, against 'not by works'
-
-Trent, as the argument it makes: justification is the renewal of the inward
-man, that renewal grows through good works, so works done in grace merit an
-increase of justification, and salvation is not apart from works.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{23} \\
-\text{(6)} \quad &amp; P_{32} \\
-\text{(7)} \quad &amp; P_{34} \\
-\text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
-\text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
-\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
-\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\[4pt]
-\vdash \quad &amp; \lnot P_{27}
 \end{aligned}
 \]
 </div>
@@ -3249,12 +3905,13 @@ theorem jervellCase_is_satisfiable : Satisfiable jervellCase.premises
 -- axioms: propext, Quot.sound
 ```
 
-#### Strength: every position's weakest link is `disputed`
+#### Strength: every weakest link is `disputed`, but one
 
-Every party rests on something cited `disputed`, or denies an atom, which ranks
-at the bottom; so every party's strength is `0`, and no rating blocks any
-attack. In this dispute the ratings decide nothing, and the verdict is fixed by
-who contradicts whom.
+Every party but one rests on something cited `disputed`, or denies an atom,
+which ranks at the bottom; so its strength is `0`, and no rating blocks an
+attack between two of them. The exception is Paul's word, the lexical case:
+every link of it is rated `wellSupported` or better. So an attack on it from a
+party at the bottom does not defeat it, and its attack on such a party does.
 
 <a id="paulineCase_strength"></a>
 **`paulineCase_strength`**
@@ -3336,6 +3993,40 @@ Jervell's step is contested, by Bruce.
 
 ```lean
 theorem jervellCase_strength : jervellCase.strength = 0
+-- axioms: propext
+```
+
+<a id="galatianGospel_strength"></a>
+**`galatianGospel_strength`**
+
+Paul's gospel rests on its reading of Galatians and on the step from a
+verdict to "renewal is no part of justification", both cited `disputed`.
+
+```lean
+theorem galatianGospel_strength : galatianGospel.strength = 0
+-- axioms: propext
+```
+
+<a id="lexicalCase_strength"></a>
+**`lexicalCase_strength`**
+
+**Paul's word does not rest on anything disputed.** The forensic sense and
+the rule of least meaning are `wellSupported`, Paul's own words for renewal are
+`consensus`, and so is no step: the step from them is `wellSupported`. Its
+weakest link ranks `2` — the one party in this dispute above the bottom.
+
+```lean
+theorem lexicalCase_strength : lexicalCase.strength = 2
+-- axioms: propext
+```
+
+<a id="tridentineOnPaulsWord_strength"></a>
+**`tridentineOnPaulsWord_strength`**
+
+Trent read as a claim about Paul's word rests on everything Trent does.
+
+```lean
+theorem tridentineOnPaulsWord_strength : tridentineOnPaulsWord.strength = 0
 -- axioms: propext
 ```
 
@@ -3663,6 +4354,58 @@ theorem trent_defeats_apocalyptic : Defeats tridentineCase apocalypticCase
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+<a id="gospel_defeats_trent"></a>
+**`gospel_defeats_trent`**
+
+**Paul's gospel defeats Trent.** It entails the denial of Trent's
+definition — justification is not the renewal of the inward man — and so
+undermines Trent at that premise (`whereTrentPartsFromPaul` says where).
+
+```lean
+theorem gospel_defeats_trent : Defeats galatianGospel tridentineCase
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trent_defeats_gospel"></a>
+**`trent_defeats_gospel`**
+
+**Trent defeats Paul's gospel back**, by the same contradiction from the
+other side: its definition rebuts the gospel line's conclusion, and both rest on
+something rated `disputed`.
+
+```lean
+theorem trent_defeats_gospel : Defeats tridentineCase galatianGospel
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="lexical_defeats_trent_on_pauls_word"></a>
+**`lexical_defeats_trent_on_pauls_word`**
+
+**Paul's word defeats Trent read as a claim about it.** Trent, so read,
+derives that δικαιόω denotes renewal; Paul's word entails that it does not, and
+so rebuts the step by which Trent derives it (`RebutsStep`). The attack succeeds
+because Trent's weakest link is not above the lexical case's.
+
+```lean
+theorem lexical_defeats_trent_on_pauls_word : Defeats lexicalCase
+    tridentineOnPaulsWord
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trent_on_pauls_word_does_not_defeat_lexical"></a>
+**`trent_on_pauls_word_does_not_defeat_lexical`**
+
+**And the reply fails.** Trent, read as a claim about Paul's word, attacks
+the lexical case's step in turn — but its weakest link is Trent's definition,
+rated `disputed`, and the lexical case's is `wellSupported`. A weaker argument's
+rebuttal does not defeat a stronger one.
+
+```lean
+theorem trent_on_pauls_word_does_not_defeat_lexical : ¬Defeats
+    tridentineOnPaulsWord lexicalCase
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
 #### Why these are not counters
 
 The absences above are computed, and a computation names no reason. The
@@ -3846,6 +4589,10 @@ def partyNode : Party → ArgumentPackage Claim :=
     | Party.sanders => sandersCase
     | Party.critics => criticsCase
     | Party.jervell => jervellCase
+    | Party.gospel => galatianGospel
+    | Party.lexical => lexicalCase
+    | Party.trentOnPaulsWord =>
+      tridentineOnPaulsWord
 ```
 
 <a id="solaFideDispute"></a>
@@ -3961,24 +4708,41 @@ The table is finite, so membership in it is decidable.
 def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
 ```
 
+<a id="partyStrength"></a>
+**`partyStrength`**
+
+Each party's weakest link: at the bottom for all but Paul's word.
+
+```lean
+def partyStrength : Party → ℕ :=
+  fun x =>
+    match x with
+    | Party.lexical => 2
+    | x => 0
+```
+
 <a id="partyNode_strength"></a>
 **`partyNode_strength`**
 
-Every party's weakest link ranks at the bottom.
+Each party's weakest link, as its package computes it.
 
 ```lean
-theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength = 0
+theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
+    partyStrength i
 -- axioms: propext
 ```
 
 <a id="solaFideDispute_defeats"></a>
 **`solaFideDispute_defeats`**
 
-**Who defeats whom**, all sixty-four pairs. Trent and each Reformed strand
-defeat each other. The apocalyptic reading and Paul defeat each other; it and
-Luke's and Acts' cases do not conflict; it defeats Trent, and Trent does not
-defeat it. Sanders defeats Paul and the critics, and both defeat him back.
-Jervell and Acts defeat each other. Nothing else.
+**Who defeats whom**, all 121 pairs. Trent and each Reformed strand defeat
+each other. The apocalyptic reading and Paul defeat each other; it and Luke's
+and Acts' cases do not conflict; it and Trent defeat each other. Sanders defeats
+Paul and the critics, and both defeat him back. Jervell and Acts defeat each
+other. Paul's gospel and Trent defeat each other, over Trent's definition.
+Trent read as a claim about Paul's word meets everyone Trent meets, both ways,
+and one party more: Paul's word defeats it, and it does not defeat Paul's word
+back — its reply is weighed and fails. Nothing else.
 
 Every cell is computed from the parties' premises by `Horn.defeats?` and
 checked by the kernel — the defeats, and the absences of defeat, alike. The
@@ -4004,7 +4768,9 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
       [Party.pauline, Party.dominical,
         Party.apostolic, Party.trent,
         Party.apocalyptic, Party.sanders,
-        Party.critics, Party.jervell],
+        Party.critics, Party.jervell,
+        Party.gospel, Party.lexical,
+        Party.trentOnPaulsWord],
     complete := solaFideFinite._proof_1,
     defeats := fun i j => decide (partyDefeats i j),
     spec := solaFideFinite._proof_2 }
@@ -4015,11 +4781,11 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
 <a id="solaFideDispute_supports"></a>
 **`solaFideDispute_supports`**
 
-**Nothing supports anything** in the sola fide dispute, in all sixty-four
-pairs: no party's conclusion entails a claim another rests on. The critics'
-conclusion used to be one of Paul's premises; now the Pauline case rests on the
-critics' whole line instead (`paulineCase`), and the relation is the stronger
-one below. The Reformed strands, which share their conclusion, agree rather than
+**Nothing supports anything** in the sola fide dispute, in all 121 pairs: no
+party's conclusion entails a claim another rests on. The critics' conclusion
+used to be one of Paul's premises; now the Pauline case rests on the critics'
+whole line instead (`paulineCase`), and the relation is the stronger one
+below. The Reformed strands, which share their conclusion, agree rather than
 support (see `Testimony.Logic.Support`). Every cell is computed by `supports?`
 and checked by the kernel.
 
@@ -4032,14 +4798,16 @@ theorem solaFideDispute_supports : ∀ (i j : Party), ¬solaFideDispute.supports
 <a id="partyPartOf"></a>
 **`partyPartOf`**
 
-Whose case is part of whose, as a table: besides each party's own, one
-pair.
+Whose case is part of whose, as a table: besides each party's own, two
+pairs.
 
 ```lean
 def partyPartOf : Party → Party → Prop :=
   fun x x_1 =>
     match x, x_1 with
     | Party.critics, Party.pauline => True
+    | Party.trent,
+      Party.trentOnPaulsWord => True
     | i, j => i = j
 ```
 
@@ -4055,9 +4823,10 @@ def instDecidableRelPartyPartyPartOf : DecidableRel partyPartOf
 <a id="solaFideDispute_partOf"></a>
 **`solaFideDispute_partOf`**
 
-**Whose case is part of whose**, all sixty-four pairs: the critics' case is
-part of Paul's, since the Pauline case derives its ἔργα νόμου premise from the
-critics' line; and every case is part of itself. Nothing else. Every cell is
+**Whose case is part of whose**, all 121 pairs: the critics' case is part of
+Paul's, since the Pauline case derives its ἔργα νόμου premise from the critics'
+line; Trent's case is part of Trent's read as a claim about Paul's word, which
+only adds to it; and every case is part of itself. Nothing else. Every cell is
 computed by `partOf?` and checked by the kernel.
 
 ```lean
@@ -4078,39 +4847,59 @@ The dispute drawn: who defeats whom, and whose case is part of whose.
 <marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
 <marker id="tm-part" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#1f5fa8"/></marker>
 </defs>
-<path d="M206,64 Q236,184 299,289" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M200,65 Q182,199 200,332" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M194,64 Q131,170 101,289" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M306,109 Q288,199 306,288" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M344,214 Q312,245 313,289" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M336,194 Q230,131 111,101" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M300,292 Q270,173 207,67" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M306,291 Q324,202 306,112" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M312,292 Q344,261 343,217" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M292,312 Q248,311 217,343" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M200,335 Q218,202 200,68" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M214,344 Q259,345 289,313" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M100,292 Q163,186 193,67" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M88,292 Q89,248 57,217" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M56,214 Q55,259 87,289" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M108,100 Q214,163 333,193" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M61,189 Q137,139 187,63" style="stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3" marker-end="url(#tm-part)"/>
+<path d="M210,61 Q260,146 337,208" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M206,64 Q240,180 306,282" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M202,65 Q203,198 240,326" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M186,54 Q156,44 136,69" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M287,87 Q298,154 341,205" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M266,74 Q202,56 137,74" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M339,153 Q324,181 346,204" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M324,146 Q203,202 102,288" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M322,133 Q234,89 136,79" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M339,210 Q289,125 212,64" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M342,208 Q332,141 289,90" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M346,206 Q360,178 339,156" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M342,235 Q315,251 321,282" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M333,221 Q202,203 70,221" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M307,285 Q274,168 207,66" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M320,285 Q347,269 341,238" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M304,287 Q231,175 131,87" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M240,329 Q239,196 203,68" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M227,344 Q202,326 176,344" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M173,344 Q199,362 224,344" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M99,290 Q220,234 321,147" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M67,221 Q199,239 330,221" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M58,208 Q101,156 111,90" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M73,126 Q104,119 107,87" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M133,70 Q163,80 183,55" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M134,74 Q199,92 263,74" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M133,78 Q221,123 319,133" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M129,85 Q202,197 302,285" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M113,87 Q69,139 59,205" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M336,213 Q245,133 134,84" style="stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3" marker-end="url(#tm-part)"/>
+<path d="M160,329 Q196,201 197,68" style="stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3" marker-end="url(#tm-part)"/>
 <circle cx="200" cy="50" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
 <text x="200" y="55" text-anchor="middle" style="fill:var(--fg);font-size:14px">1</text>
-<circle cx="306" cy="94" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="306" y="99" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
-<circle cx="350" cy="200" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="350" y="205" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
-<circle cx="306" cy="306" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="306" y="311" text-anchor="middle" style="fill:var(--fg);font-size:14px">4</text>
-<circle cx="200" cy="350" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="200" y="355" text-anchor="middle" style="fill:var(--fg);font-size:14px">5</text>
-<circle cx="94" cy="306" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="94" y="311" text-anchor="middle" style="fill:var(--fg);font-size:14px">6</text>
-<circle cx="50" cy="200" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="50" y="205" text-anchor="middle" style="fill:var(--fg);font-size:14px">7</text>
-<circle cx="94" cy="94" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="94" y="99" text-anchor="middle" style="fill:var(--fg);font-size:14px">8</text>
+<circle cx="281" cy="74" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="281" y="79" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
+<circle cx="336" cy="138" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="336" y="143" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
+<circle cx="348" cy="221" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="348" y="226" text-anchor="middle" style="fill:var(--fg);font-size:14px">4</text>
+<circle cx="313" cy="298" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="313" y="303" text-anchor="middle" style="fill:var(--fg);font-size:14px">5</text>
+<circle cx="242" cy="344" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="242" y="349" text-anchor="middle" style="fill:var(--fg);font-size:14px">6</text>
+<circle cx="158" cy="344" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="158" y="349" text-anchor="middle" style="fill:var(--fg);font-size:14px">7</text>
+<circle cx="87" cy="298" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="87" y="303" text-anchor="middle" style="fill:var(--fg);font-size:14px">8</text>
+<circle cx="52" cy="221" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="52" y="226" text-anchor="middle" style="fill:var(--fg);font-size:14px">9</text>
+<circle cx="64" cy="138" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="64" y="143" text-anchor="middle" style="fill:var(--fg);font-size:14px">10</text>
+<circle cx="119" cy="74" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="119" y="79" text-anchor="middle" style="fill:var(--fg);font-size:14px">11</text>
 </svg>
 </div>
 
@@ -4126,52 +4915,156 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 6 | Covenantal nomism (Sanders, Dunn) |
 | 7 | Variegated nomism (Gathercole, Carson et al.) |
 | 8 | Law-observant Luke (Jervell) |
+| 9 | Paul's gospel (Galatians 1), against justification as renewal |
+| 10 | Paul's word (δικαιόω, by the rule of least meaning) |
+| 11 | Trent, against 'not by works', read as what Paul's word means |
 
 | From | To | Edge |
 |---|---|---|
 | 1 *Sola fide from Paul (Galatians 2:16)* | 4 *Trent, against 'not by works'* | defeats |
 | 1 *Sola fide from Paul (Galatians 2:16)* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
 | 1 *Sola fide from Paul (Galatians 2:16)* | 6 *Covenantal nomism (Sanders, Dunn)* | defeats |
+| 1 *Sola fide from Paul (Galatians 2:16)* | 11 *Trent, against 'not by works', read as what Paul's word means* | defeats |
 | 2 *Luke 7:50: "your faith has saved you"* | 4 *Trent, against 'not by works'* | defeats |
+| 2 *Luke 7:50: "your faith has saved you"* | 11 *Trent, against 'not by works', read as what Paul's word means* | defeats |
 | 3 *Sola fide from Peter (Acts 15:9–11)* | 4 *Trent, against 'not by works'* | defeats |
 | 3 *Sola fide from Peter (Acts 15:9–11)* | 8 *Law-observant Luke (Jervell)* | defeats |
+| 3 *Sola fide from Peter (Acts 15:9–11)* | 11 *Trent, against 'not by works', read as what Paul's word means* | defeats |
 | 4 *Trent, against 'not by works'* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
 | 4 *Trent, against 'not by works'* | 2 *Luke 7:50: "your faith has saved you"* | defeats |
 | 4 *Trent, against 'not by works'* | 3 *Sola fide from Peter (Acts 15:9–11)* | defeats |
 | 4 *Trent, against 'not by works'* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
+| 4 *Trent, against 'not by works'* | 9 *Paul's gospel (Galatians 1), against justification as renewal* | defeats |
 | 5 *Apocalyptic reading, against faith as the condition* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
 | 5 *Apocalyptic reading, against faith as the condition* | 4 *Trent, against 'not by works'* | defeats |
+| 5 *Apocalyptic reading, against faith as the condition* | 11 *Trent, against 'not by works', read as what Paul's word means* | defeats |
 | 6 *Covenantal nomism (Sanders, Dunn)* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
 | 6 *Covenantal nomism (Sanders, Dunn)* | 7 *Variegated nomism (Gathercole, Carson et al.)* | defeats |
 | 7 *Variegated nomism (Gathercole, Carson et al.)* | 6 *Covenantal nomism (Sanders, Dunn)* | defeats |
 | 8 *Law-observant Luke (Jervell)* | 3 *Sola fide from Peter (Acts 15:9–11)* | defeats |
+| 9 *Paul's gospel (Galatians 1), against justification as renewal* | 4 *Trent, against 'not by works'* | defeats |
+| 9 *Paul's gospel (Galatians 1), against justification as renewal* | 11 *Trent, against 'not by works', read as what Paul's word means* | defeats |
+| 10 *Paul's word (δικαιόω, by the rule of least meaning)* | 11 *Trent, against 'not by works', read as what Paul's word means* | defeats |
+| 11 *Trent, against 'not by works', read as what Paul's word means* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
+| 11 *Trent, against 'not by works', read as what Paul's word means* | 2 *Luke 7:50: "your faith has saved you"* | defeats |
+| 11 *Trent, against 'not by works', read as what Paul's word means* | 3 *Sola fide from Peter (Acts 15:9–11)* | defeats |
+| 11 *Trent, against 'not by works', read as what Paul's word means* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
+| 11 *Trent, against 'not by works', read as what Paul's word means* | 9 *Paul's gospel (Galatians 1), against justification as renewal* | defeats |
+| 4 *Trent, against 'not by works'* | 11 *Trent, against 'not by works', read as what Paul's word means* | is part of |
 | 7 *Variegated nomism (Gathercole, Carson et al.)* | 1 *Sola fide from Paul (Galatians 2:16)* | is part of |
+| 1 *Sola fide from Paul (Galatians 2:16)* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
+| 2 *Luke 7:50: "your faith has saved you"* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
+| 3 *Sola fide from Peter (Acts 15:9–11)* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
+| 5 *Apocalyptic reading, against faith as the condition* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
 | 6 *Covenantal nomism (Sanders, Dunn)* | 1 *Sola fide from Paul (Galatians 2:16)* | attack on a part — already a defeat |
+| 9 *Paul's gospel (Galatians 1), against justification as renewal* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
 
 The defeats are the cells of [`solaFideDispute_defeats`](#solaFideDispute_defeats), the supports the cells of [`solaFideDispute_supports`](#solaFideDispute_supports) and the parts the cells of [`solaFideDispute_partOf`](#solaFideDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 
 #### What the dispute decides
 
-<a id="everyPartyDefeated"></a>
-**`everyPartyDefeated`**
+<a id="onlyPaulsWordUnanswered"></a>
+**`onlyPaulsWordUnanswered`**
 
-Why nothing prevails outright: a defeater for every party.
+How the dispute is settled as far as it can be, in one stage: nothing
+defeats Paul's word, so it comes first; and nothing joins it, because every
+other party is defeated by someone it does not answer — each Reformed strand by
+Trent, Trent by Paul, the apocalyptic reading by Paul, Sanders by the critics,
+the critics by Sanders, Jervell by Acts, Paul's gospel by Trent, and Trent read
+as a claim about Paul's word by Paul's word itself.
 
-**Nothing prevails outright: every party is defeated by another.**
+**What the dispute forces is exactly *Paul's word (δικαιόω, by the rule of least meaning)*.**
 
-- *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
-- *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*.
-- *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
-- *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
-- *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
-- *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
-- *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
-- *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
+- Stage 1: *Paul's word (δικαιόω, by the rule of least meaning)*.
+  - *Paul's word (δικαιόω, by the rule of least meaning)* is defeated by nothing.
+- Nothing else is forced:
+  - *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*, and nothing forced defeats *Trent, against 'not by works'*.
+  - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and nothing forced defeats *Trent, against 'not by works'*.
+  - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and nothing forced defeats *Trent, against 'not by works'*.
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and nothing forced defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and nothing forced defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and nothing forced defeats *Variegated nomism (Gathercole, Carson et al.)*.
+  - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and nothing forced defeats *Covenantal nomism (Sanders, Dunn)*.
+  - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and nothing forced defeats *Sola fide from Peter (Acts 15:9–11)*.
+  - *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*, and nothing forced defeats *Trent, against 'not by works'*.
+  - *Paul's word (δικαιόω, by the rule of least meaning)* [defeats](#whereTrentsWordReadingFalls) *Trent, against 'not by works', read as what Paul's word means*, and nothing forced defeats *Paul's word (δικαιόω, by the rule of least meaning)*.
 
-**What this rests on.** The reasons state 8 defeats and 0 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 10 defeats and 16 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
+- *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
+  - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
+  - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
+  - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
+  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
+  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
+- *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
+  - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
+- *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
+  - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Law-observant Luke (Jervell)*, weakest at *disputed*:
+  - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+
+Why *Paul's word (δικαιόω, by the rule of least meaning)* defeats *Trent, against 'not by works', read as what Paul's word means*, at the level of the claims: [`whereTrentsWordReadingFalls`](#whereTrentsWordReadingFalls).
+
+<a id="only_pauls_word_prevails"></a>
+**`only_pauls_word_prevails`**
+
+**Only Paul's word prevails outright.** The grounded extension — what the
+dispute forces before any choice between rivals — is exactly the lexical case:
+Paul's δικαιόω does not denote the renewal of the inward man. Nothing defeats
+it: the one party that contradicts it, Trent read as a claim about Paul's word,
+rests on a definition rated `disputed`, and its reply fails against a case whose
+every link is rated `wellSupported` or better. Everything else is defeated by
+someone it does not answer.
+
+```lean
+theorem only_pauls_word_prevails : Framework.grounded solaFideDispute.defeats
+    = {Party.lexical}
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentsWordReadingAnswered"></a>
+**`trentsWordReadingAnswered`**
+
+Why Trent, read as a claim about Paul's word, cannot be defended: Paul's word
+defeats it, and nothing defeats Paul's word.
+
+***Trent, against 'not by works', read as what Paul's word means* cannot be defended: no admissible position holds it.**
+
+- *Paul's word (δικαιόω, by the rule of least meaning)* [defeats](#whereTrentsWordReadingFalls) *Trent, against 'not by works', read as what Paul's word means*, and nothing defeats *Paul's word (δικαιόω, by the rule of least meaning)*.
+
+**What this rests on.** The reasons state 1 defeat and 11 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
@@ -4184,6 +5077,8 @@ Why nothing prevails outright: a defeater for every party.
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Trent, against 'not by works'*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
   - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
   - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
@@ -4195,20 +5090,25 @@ Why nothing prevails outright: a defeater for every party.
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
 
-<a id="nothing_prevails_over_sola_fide"></a>
-**`nothing_prevails_over_sola_fide`**
+Why *Paul's word (δικαιόω, by the rule of least meaning)* defeats *Trent, against 'not by works', read as what Paul's word means*, at the level of the claims: [`whereTrentsWordReadingFalls`](#whereTrentsWordReadingFalls).
 
-**Nothing prevails outright.** Every party is defeated by some other: each
-Reformed strand by Trent, Trent by each strand and by the apocalyptic reading,
-the apocalyptic reading by Paul and by Trent, Sanders by the critics, the
-critics by
-Sanders, Jervell by Acts. The grounded extension — what the dispute forces,
-before any choice between rivals — is empty.
+<a id="trent_on_pauls_word_indefensible"></a>
+**`trent_on_pauls_word_indefensible`**
+
+**Trent, read as a claim about Paul's word, cannot be defended.** No
+admissible set holds it: Paul's word defeats it, and nothing answers Paul's word.
+This is the first horn of `whatTrentsDefinitionClaims`, weighed: if Trent's
+definition says what Paul's δικαιόω means, it falls, for a stated and cited
+reason, at a step rated `wellSupported`.
 
 ```lean
-theorem nothing_prevails_over_sola_fide : Framework.grounded
-    solaFideDispute.defeats = ∅
+theorem trent_on_pauls_word_indefensible : ∀ (S : Set Party),
+    Framework.Admissible solaFideDispute.defeats S → Party.trentOnPaulsWord ∉
+    S
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -4216,8 +5116,8 @@ theorem nothing_prevails_over_sola_fide : Framework.grounded
 **`trentStandsWithSandersAndJervell`**
 
 Why Trent can be defended: it stands with Sanders and Jervell, and answers
-every party that attacks it itself — each Reformed strand, and the apocalyptic
-reading, whose derived "not by works" it denies.
+every party that attacks it itself — each Reformed strand, Paul's gospel, and
+the apocalyptic reading, whose derived "not by works" it denies.
 
 ***Trent, against 'not by works'* is accepted on some resolution.**
 
@@ -4227,11 +5127,12 @@ reading, whose derived "not by works" it denies.
   - *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
   - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*.
+  - *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
 
-**What this rests on.** The reasons state 12 defeats and 17 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 14 defeats and 25 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
@@ -4258,18 +5159,31 @@ reading, whose derived "not by works" it denies.
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
   - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
+
+Why *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works'*, at the level of the claims: [`whereTrentPartsFromPaul`](#whereTrentPartsFromPaul).
 
 <a id="trent_defensible"></a>
 **`trent_defensible`**
 
 **Trent can be defended.** Some maximal defensible position holds it, with
-Sanders and Jervell. Every party that defeats Trent — Paul, Luke, Peter, the
-apocalyptic reading — Trent defeats back, and the ratings, all at the bottom,
-break no tie. In particular Trent answers the apocalyptic reading: that reading
-derives "not by works" on the way to its conclusion, and Trent denies it
-(`trent_defeats_apocalyptic`).
+Sanders and Jervell. Every party that defeats Trent — Paul, Luke, Peter, Paul's
+gospel, the apocalyptic reading — Trent defeats back, and the ratings, all at
+the bottom, break no tie. Paul's word does not attack it: Trent's definition,
+unread, says nothing about what δικαιόω means. In particular Trent answers the
+apocalyptic reading: that reading derives "not by works" on the way to its
+conclusion, and Trent denies it (`trent_defeats_apocalyptic`).
 
 ```lean
 theorem trent_defensible : Framework.CredulouslyAccepted
@@ -4290,12 +5204,15 @@ Trent.
   - *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
   - *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Luke 7:50: "your faith has saved you"*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
   - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 11 defeats and 25 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 15 defeats and 34 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
@@ -4322,6 +5239,16 @@ Trent.
   - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
 
 <a id="trent_not_forced"></a>
 **`trent_not_forced`**
@@ -4339,21 +5266,24 @@ theorem trent_not_forced : ¬Framework.SkepticallyAccepted
 **`apocalypticStandsWithLuke`**
 
 Why the apocalyptic reading can be defended: it stands with Luke's case, with
-Peter's, and with the critics, and answers the one party that defeats it — Paul
-— itself.
+Peter's, and with the critics, and answers every party that defeats it — Paul,
+Trent, and Trent read as a claim about Paul's word — itself.
 
 ***Apocalyptic reading, against faith as the condition* is accepted on some resolution.**
 
 - A position holding *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* can be held.
 - None of *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* defeats another, and each attack on them is answered from among them:
   - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Luke 7:50: "your faith has saved you"*, and *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
   - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 10 defeats and 26 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 14 defeats and 35 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -4380,6 +5310,16 @@ Peter's, and with the critics, and answers the one party that defeats it — Pau
   - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -4389,7 +5329,9 @@ Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by work
 **The apocalyptic reading can be defended.** Some maximal defensible position
 holds it, and holds Luke's case and Peter's with it: they claim that faith
 saves, and the apocalyptic reading grants that, denying only that faith is the
-condition. Its one defeater is Paul, whom it defeats back, over the genitive.
+condition. Among the Reformed parties its one defeater is Paul, whom it defeats
+back, over the genitive; Trent, read either way, it defeats back over "not by
+works".
 
 So the dispute between the Reformed reading and the apocalyptic one is where the
 literature has it: between Paul and Campbell, over πίστις Χριστοῦ — not between
@@ -4414,12 +5356,15 @@ and Paul defeats it.
   - *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
   - *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Luke 7:50: "your faith has saved you"*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
   - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 11 defeats and 25 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 15 defeats and 34 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
@@ -4446,6 +5391,16 @@ and Paul defeats it.
   - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
 
 <a id="apocalyptic_not_forced"></a>
 **`apocalyptic_not_forced`**
@@ -4465,20 +5420,24 @@ theorem apocalyptic_not_forced : ¬Framework.SkepticallyAccepted
 **`lukeStandsWithPeter`**
 
 Why Luke's case can be defended: it stands with Peter's, the apocalyptic
-reading and the critics, and answers its one defeater, Trent, itself.
+reading and the critics, and answers both its defeaters — Trent, and Trent read
+as a claim about Paul's word — itself.
 
 ***Luke 7:50: "your faith has saved you"* is accepted on some resolution.**
 
 - A position holding *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* can be held.
 - None of *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* defeats another, and each attack on them is answered from among them:
   - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Luke 7:50: "your faith has saved you"*, and *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
   - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 10 defeats and 26 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 14 defeats and 35 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -4505,6 +5464,16 @@ reading and the critics, and answers its one defeater, Trent, itself.
   - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -4513,9 +5482,9 @@ Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by work
 
 **Luke's case can be defended.** "Your faith has saved you", read as Luke
 says it, stands in six of the dispute's eight maximal defensible positions. Its
-only defeater is Trent, over what justification is: Trent's definition denies
-that faith without charity suffices, and Luke's words say her faith saved her.
-It defeats Trent back, and conflicts with no other party.
+only defeater is Trent, read or unread, over what justification is: Trent's
+definition denies that faith without charity suffices, and Luke's words say her
+faith saved her. It defeats Trent back, and conflicts with no other party.
 
 ```lean
 theorem dominical_case_defensible : Framework.CredulouslyAccepted
@@ -4537,11 +5506,12 @@ defeats it.
   - *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
   - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*.
+  - *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
 
-**What this rests on.** The reasons state 12 defeats and 17 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 14 defeats and 25 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
@@ -4568,8 +5538,20 @@ defeats it.
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
   - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
+
+Why *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works'*, at the level of the claims: [`whereTrentPartsFromPaul`](#whereTrentPartsFromPaul).
 
 <a id="dominical_case_not_forced"></a>
 **`dominical_case_not_forced`**
@@ -4578,17 +5560,172 @@ Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by work
 hold Luke's case with it.
 
 This is the dispute's verdict, stated plainly: between Trent and each Reformed
-strand, the dispute chooses neither. Every party's weakest link is `disputed`,
-so no rating breaks a tie, and every attack between Trent and the Reformed
-readings runs both ways. What decides between them is what justification *is*
-— and that is argued, not weighed: `whyTheDominicalCaseStandsAgainstTrent`
-locates Luke's disagreement with Trent at Trent's definition, and
-`whereTrentPartsFromPaul` (`Gospel.lean`) locates Paul's at one step, that a
-verdict on a finished work excludes the renewal wrought in us.
+party, the dispute chooses neither. Their weakest links are all `disputed`, so
+no rating breaks a tie, and every attack between Trent and the Reformed readings
+runs both ways. What decides between them is what justification *is* — and that
+is argued, not weighed: `whyTheDominicalCaseStandsAgainstTrent` locates Luke's
+disagreement with Trent at Trent's definition, and `whereTrentPartsFromPaul`
+(`Gospel.lean`) locates Paul's at one step, that a verdict on a finished work
+excludes the renewal wrought in us. The one thing the ratings do decide is that
+Trent cannot claim its definition as the meaning of Paul's word
+(`trent_on_pauls_word_indefensible`).
 
 ```lean
 theorem dominical_case_not_forced : ¬Framework.SkepticallyAccepted
     solaFideDispute.defeats Party.dominical
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="gospelStandsWithTheStrands"></a>
+**`gospelStandsWithTheStrands`**
+
+Why Paul's gospel can be defended: it stands with Paul's case, Luke's,
+Peter's, the critics and Paul's word, and answers both parties that defeat it —
+Trent, and Trent read as a claim about Paul's word — itself.
+
+***Paul's gospel (Galatians 1), against justification as renewal* is accepted on some resolution.**
+
+- A position holding *Paul's gospel (Galatians 1), against justification as renewal*, *Sola fide from Paul (Galatians 2:16)*, *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)*, *Paul's word (δικαιόω, by the rule of least meaning)* can be held.
+- None of *Paul's gospel (Galatians 1), against justification as renewal*, *Sola fide from Paul (Galatians 2:16)*, *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)*, *Paul's word (δικαιόω, by the rule of least meaning)* defeats another, and each attack on them is answered from among them:
+  - *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*, and *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Paul's gospel (Galatians 1), against justification as renewal*, and *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works', read as what Paul's word means*.
+  - *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*, and *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*.
+  - *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
+  - *Covenantal nomism (Sanders, Dunn)* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Paul (Galatians 2:16)*, and *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works', read as what Paul's word means*.
+  - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Luke 7:50: "your faith has saved you"*, and *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works', read as what Paul's word means*.
+  - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*.
+  - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
+  - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works', read as what Paul's word means*.
+  - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
+
+**What this rests on.** The reasons state 17 defeats and 54 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
+  - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
+  - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
+  - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
+  - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Trent, against 'not by works'*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
+  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
+  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
+- *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
+  - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
+- *Law-observant Luke (Jervell)*, weakest at *disputed*:
+  - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+
+Why *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works'*, at the level of the claims: [`whereTrentPartsFromPaul`](#whereTrentPartsFromPaul).
+
+<a id="gospel_defensible"></a>
+**`gospel_defensible`**
+
+**Paul's gospel can be defended**, with every Reformed strand and with Paul's
+word: some maximal defensible position holds them all.
+
+```lean
+theorem gospel_defensible : Framework.CredulouslyAccepted
+    solaFideDispute.defeats Party.gospel
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="gospelAnsweredByTrent"></a>
+**`gospelAnsweredByTrent`**
+
+Why Paul's gospel is not forced: a defensible position holds Trent, and Trent
+defeats it.
+
+***Paul's gospel (Galatians 1), against justification as renewal* is not accepted on every resolution.**
+
+- A position holding *Trent, against 'not by works'*, *Covenantal nomism (Sanders, Dunn)*, *Law-observant Luke (Jervell)* can be held, and it holds *Trent, against 'not by works'*; *Trent, against 'not by works'* conflicts with *Paul's gospel (Galatians 1), against justification as renewal*: *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*, and *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*.
+- None of *Trent, against 'not by works'*, *Covenantal nomism (Sanders, Dunn)*, *Law-observant Luke (Jervell)* defeats another, and each attack on them is answered from among them:
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*.
+  - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
+  - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*.
+  - *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*.
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
+  - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
+
+**What this rests on.** The reasons state 14 defeats and 25 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Trent, against 'not by works'*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
+  - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
+- *Law-observant Luke (Jervell)*, weakest at *disputed*:
+  - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
+  - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
+  - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
+  - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
+  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
+  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
+- *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
+  - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+
+Why *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works'*, at the level of the claims: [`whereTrentPartsFromPaul`](#whereTrentPartsFromPaul).
+
+Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
+
+<a id="gospel_not_forced"></a>
+**`gospel_not_forced`**
+
+**Nor is it forced.** Trent, with its definition left unread, is still
+defensible, and Paul's gospel cannot be held with it. What decides between them
+is the step `whereTrentPartsFromPaul` names — that a verdict on a finished work
+excludes renewal — and it is rated `disputed`. The lexical case does not decide
+it: read as a claim about what God does, Trent's definition is not reached by
+anything Paul's word says (`lexical_case_does_not_reach_what_god_does`).
+
+```lean
+theorem gospel_not_forced : ¬Framework.SkepticallyAccepted
+    solaFideDispute.defeats Party.gospel
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -5095,156 +6232,3 @@ Luther's, and the texts are granted by both sides.
   - \\(P_{39}\\) Galatians 3:11–12 — none is justified by the law; the law is not of faith — *consensus*: Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
   - \\(P_{40}\\) Love of God and neighbour is what the law commands — *consensus*: Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12
   - the step itself — *disputed*: [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
-
-## Arguments.SolaFide.Gospel — where Trent parts from Paul
-
-Paul's direct answer to anything added to the gospel is Galatians: another
-gospel, whoever preaches it accursed (1:6–9); if righteousness came by the law,
-Christ died for nothing (2:21); whoever would be justified by the law is severed
-from Christ (5:2–4). The gospel itself is that Christ died for our sins
-(1 Corinthians 15:3).
-
-Set against Trent's definition of justification — "not remission of sins
-merely, but also the sanctification and renewal of the inward man" (Session VI,
-ch. 7) — the question is exactly where the two part. This module answers it in
-three steps, each checked.
-
-**What Trent grants.** Every text of the line. And the forensic sense of
-Paul's verb: the *Joint Declaration* (1999), signed by the Catholic Church,
-confesses that God "no longer imputes to them their sin" (§22), and modern Greek
-scholarship across traditions reads δικαιόω as a verdict — the standard lexicon,
-Morris, Moo, Irons, Wright, and the Catholic exegete Fitzmyer
-(`dikaioIsForensic`, rated `wellSupported`).
-
-**What Trent denies.** One step: that a verdict on the ground of a finished work
-excludes the renewal wrought in us. The same paragraph of the *Joint
-Declaration* holds forgiveness and the love the Spirit effects "not to be
-separated", and Gorman reads the verdict as an effective word that transforms.
-
-**Where they part.** `whereTrentPartsFromPaul` finds it mechanically: the crux
-is that step, and what it breaks in Trent is its definition, and nothing else.
-
-What this does not show is that the step is true. It shows that it is the whole
-of the disagreement: grant it, and Trent's definition cannot stand; deny it, and
-Paul's gospel as encoded here does not reach Trent's definition at all.
-
-#### The gospel line holds
-
-<a id="galatianGospelReading"></a>
-**`galatianGospelReading`**
-
-The world of Paul's gospel as this line reads it: every text true, Christ's
-work the whole ground, the verdict forensic — and justification not the renewal
-of the inward man.
-
-```lean
-def galatianGospelReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.justificationIncludesSanctification => False
-    | x => True
-```
-
-<a id="galatianGospel_establishes"></a>
-**`galatianGospel_establishes`**
-
-**Paul's gospel denies Trent's definition.** From Galatians 1:6–9, 2:21,
-5:2–4 and 1 Corinthians 15:3, read as one claim, with the forensic sense of
-δικαιόω: justification is not the renewal of the inward man.
-
-```lean
-theorem galatianGospel_establishes : Establishes galatianGospel
--- axioms: propext, Quot.sound
-```
-
-<a id="galatianGospel_is_satisfiable"></a>
-**`galatianGospel_is_satisfiable`**
-
-The gospel line's premises have a model.
-
-```lean
-theorem galatianGospel_is_satisfiable : Satisfiable galatianGospel.premises
--- axioms: propext, Quot.sound
-```
-
-#### What Trent grants
-
-<a id="jointDeclarationReading"></a>
-**`jointDeclarationReading`**
-
-Trent's world, with the *Joint Declaration*'s confession added: God no longer
-imputes sin — the verb is forensic — and every text of the gospel line holds.
-Justification still includes renewal, faith without charity does not suffice,
-and justification is not by faith alone.
-
-```lean
-def jointDeclarationReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.salvationNotByWorks => False
-    | Claim.justificationIsForensicOnly => False
-    | Claim.justificationDistinctFromSanctification => False
-    | Claim.faithIsSufficient => False
-    | Claim.justificationByFaithAlone => False
-    | x => True
-```
-
-<a id="trent_grants_the_gospel_texts"></a>
-**`trent_grants_the_gospel_texts`**
-
-**Trent can grant every text of the gospel line.** Nothing Trent holds denies
-that Christ died for our sins, that righteousness by the law would make his
-death needless, or that another gospel is accursed.
-
-```lean
-theorem trent_grants_the_gospel_texts : Grants tridentineCase (⋀[p
-    Claim.galatians1_6_9, p Claim.firstCorinthians15_3, p Claim.galatians2_21,
-    p Claim.galatians5_2_4, p Claim.romans8_33_34])
--- axioms: propext, Quot.sound
-```
-
-<a id="trent_grants_the_forensic_sense"></a>
-**`trent_grants_the_forensic_sense`**
-
-**Trent can grant that Paul's verb is forensic**, as the *Joint Declaration*
-does: God no longer imputes sin. The lexical question is not where they part.
-
-```lean
-theorem trent_grants_the_forensic_sense : Grants tridentineCase (p
-    Claim.dikaioIsForensic)
--- axioms: propext, Quot.sound
-```
-
-#### Where Trent parts from Paul
-
-<a id="whereTrentPartsFromPaul"></a>
-**`whereTrentPartsFromPaul`**
-
-**Where Trent parts from Paul.** The crux is one step: if justification is
-God's verdict on the ground of Christ's finished work, the renewal of the inward
-man is no part of it (`verdictExcludesRenewal`; Westminster XI.1). What it breaks
-in Trent is its definition — justification "not remission of sins merely, but
-also the sanctification and renewal of the inward man" (Session VI, ch. 7) — and
-nothing else in Trent's case: not its account of merit, not its reading of works.
-
-The break needs the gospel line's grounds as well, and says so: the four texts,
-Paul's reading of them, Romans 8:33–34 and the forensic sense of the verb. Trent
-can grant every one of those (`trent_grants_the_gospel_texts`,
-`trent_grants_the_forensic_sense`); it is the step that it denies, with the
-*Joint Declaration*: forgiveness and renewal are "not to be separated".
-
-**Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works'*.**
-
-- **The crux:** \\((P_{47} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
-- **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{47}\\), \\(P_{45}\\), \\(P_{46}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{47} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\) and \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{47}\\), \\(P_{45}\\), \\(P_{46}\\); each is needed for the break, and without the crux they stand.
-- **What this rests on:**
-  - \\(P_{41}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
-  - \\(P_{42}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
-  - \\(P_{43}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
-  - \\(P_{44}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
-  - \\(P_{47}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
-  - \\(P_{45}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - the step itself — *disputed*: [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)

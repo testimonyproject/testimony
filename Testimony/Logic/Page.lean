@@ -59,6 +59,38 @@ def restsOn [DecidableEq α] (e : Explanation α) : List α :=
 
 end Explanation
 
+/-- What happens to one reading of a rival's claim against one position, as a
+page shows it: the position, and the explanation if the reading falls to it. -/
+structure Fate (α : Type) where
+  /-- The position the reading is set against. -/
+  against : String
+  /-- Why the reading falls, if it does; `none` when the position does not
+  reach it. -/
+  falls : Option (Explanation α)
+
+/-- One horn of a dilemma, as a page shows it. -/
+structure DilemmaHorn (α : Type) where
+  /-- The reading, as a phrase. -/
+  reading : String
+  /-- What the claim commits its holder to, read this way. -/
+  commits : Formula α
+  /-- Who reads the claim this way. -/
+  source : Source
+  /-- What happens to the reading, against each position. -/
+  fates : List (Fate α)
+
+/-- Every reading of a rival's claim, answered, as a page shows it: the data
+of a `Dilemma` (`Testimony.Logic.Dilemma`), without its proofs. -/
+structure Dilemma (α : Type) where
+  /-- The rival whose claim is read. -/
+  rival : String
+  /-- Citation and classification for every atom, the rival's. -/
+  cite : α → AtomMeta
+  /-- The claim read more than one way. -/
+  claim : Formula α
+  /-- One horn per reading. -/
+  horns : List (DilemmaHorn α)
+
 /-- What an opponent must reject, as a page shows it: the data of an
 `OpponentsBurden` (`Testimony.Logic.Burden`), without its proofs. -/
 structure Burden where
@@ -222,6 +254,8 @@ inductive Item (α : Type)
   | result (decl doc statement : String) (proposed : Bool)
   /-- Why one position stands against another: a `Because`. -/
   | because (decl doc : String) (e : Explanation α)
+  /-- Every reading of a rival's claim, answered: a `Dilemma`. -/
+  | dilemma (decl doc : String) (d : Dilemma α)
   /-- What an opponent must reject: an `OpponentsBurden` result, with the
   statement as Lean states it. -/
   | burden (decl doc statement : String) (b : Burden)
@@ -242,6 +276,11 @@ def atoms [DecidableEq α] : Item α → List α
   | .formula _ _ φ => atomsOf φ
   | .formulas _ _ φs => φs.flatMap atomsOf
   | .because _ _ e => (e.crux :: e.granted ++ e.core).flatMap atomsOf
+  | .dilemma _ _ d =>
+    atomsOf d.claim ++ d.horns.flatMap fun h =>
+      atomsOf h.commits ++ h.fates.flatMap fun f => match f.falls with
+        | some e => (e.crux :: e.granted ++ e.core).flatMap atomsOf
+        | none => []
   | _ => []
 
 end Item

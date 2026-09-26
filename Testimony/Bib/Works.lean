@@ -1607,6 +1607,53 @@ where it is used of a married woman. -/
   , composed := some { value := 393 }
   , editionUsed := some "schaff-nicene-post-nicene-fathers-2-6-1893" }
 
+/-- Joos's "Semantic Axiom Number One": of the meanings a word could have in a
+passage, the best is the one that contributes least to the total message — the
+rule of least meaning. Verified at Crossref, DOI 10.2307/412133. -/
+@[bib_entry] def joosSemanticAxiom : BibEntry := .article
+  { core :=
+      { key := "joos-semantic-axiom-1972"
+      , contributors := { authors := [.person "Martin" "Joos"] }
+      , title := "Semantic Axiom Number One"
+      , year := some { value := 1972 }
+      , identifiers := [.doi "10.2307/412133"] }
+  , journal := "Language"
+  , volume := some "48"
+  , issue := some "2"
+  , pages := some (257, 265) }
+
+/-- Silva's introduction to lexical semantics for biblical studies, which brings
+Joos's rule of least meaning, and Barr's critique of theological lexicography,
+to the words of the New Testament. Verified at Open Library, ISBN 0310479819
+(Zondervan, 1994, revised and expanded edition). -/
+@[bib_entry] def silvaBiblicalWords : BibEntry := .book
+  { core :=
+      { key := "silva-biblical-words-1994"
+      , contributors := { authors := [.person "Moisés" "Silva"] }
+      , title := "Biblical Words and Their Meaning"
+      , subtitle := some "An Introduction to Lexical Semantics"
+      , year := some { value := 1994 }
+      , identifiers := [.isbn "9780310479819"] }
+  , publisher := "Zondervan"
+  , place := some "Grand Rapids"
+  , edition := some "revised and expanded edition" }
+
+/-- Barr's critique of arguments from the Bible's vocabulary to its theology,
+which named "illegitimate totality transfer": reading into one occurrence of a
+word everything the word, or the doctrine it is used for, can carry. Verified at
+Open Library, ISBN 9781592446926 (Wipf & Stock, 2004, reprinting Oxford
+University Press, 1961). -/
+@[bib_entry] def barrSemantics : BibEntry := .book
+  { core :=
+      { key := "barr-semantics-2004"
+      , contributors := { authors := [.person "James" "Barr"] }
+      , title := "The Semantics of Biblical Language"
+      , year := some { value := 2004 }
+      , identifiers := [.isbn "9781592446926"]
+      , note := some "First published Oxford University Press, 1961." }
+  , publisher := "Wipf & Stock"
+  , place := some "Eugene, OR" }
+
 derive_bib_registry registry
 
 end Testimony.Bib

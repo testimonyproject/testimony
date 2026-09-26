@@ -401,4 +401,43 @@ def verdictExcludesRenewal : Formula Claim :=
   ⋀ [p .christsWorkIsTheWholeGround, p .dikaioIsForensic, p .romans8_33_34]
   ➝ notP .justificationIncludesSanctification
 
+/-! ### What Paul's word means
+
+Trent's definition can be read as a claim about Paul's word — that δικαιόω, in
+Paul, denotes the renewal of the inward man — and this line answers it on
+lexical ground alone. δικαιόω is forensic: its opposite is *condemn*. Paul has
+other words for renewal, and sets them beside it. And a word contributes the
+least meaning its context requires: nothing in a verdict's context requires a
+second, inward sense, and to supply one from the doctrine is what Barr called
+illegitimate totality transfer. So Paul's δικαιόω does not denote renewal.
+
+The line says nothing about what God does when he justifies. That is the other
+reading of Trent's definition, and this line does not reach it
+(`Testimony.Arguments.SolaFide.Definition`). -/
+
+/-- The step from the forensic sense, Paul's own vocabulary for renewal, and the
+rule of least meaning to "δικαιόω does not denote renewal". Silva's method,
+applied as Moo applies it to Romans. Rated `wellSupported`: no source cited here
+grants the three grounds and denies the conclusion. Those who hold that
+δικαιόω means "make righteous" — VanLandingham, and the Latin tradition from
+Augustine — deny the forensic sense itself, and are weighed in that premise's
+rating; those who hold that God's verdict renews — Gorman, the *Joint
+Declaration* — make a claim about what God does, not about the word. -/
+def leastMeaningSource : Source :=
+  { primary := .work silvaBiblicalWords .whole
+  , supporting := [.work mooRomans (.sectionRef "p. 80"), .work barrSemantics .whole]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- **Paul's word**, read by the rule of least meaning. -/
+@[solaFideDefs]
+def lexicalLine : Line Claim :=
+  { name := "Paul's word (δικαιόω, by the rule of least meaning)"
+  , grounds := [p .dikaioIsForensic, p .paulNamesRenewalOtherwise, p .leastMeaning]
+  , step :=
+      ⋀ [p .dikaioIsForensic, p .paulNamesRenewalOtherwise, p .leastMeaning]
+      ➝ notP .paulsJustifyDenotesRenewal
+  , delivers := notP .paulsJustifyDenotesRenewal
+  , inference := some leastMeaningSource }
+
 end Testimony.Arguments.SolaFide
