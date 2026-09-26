@@ -599,9 +599,9 @@ reading on which none of five positions has to give way — though the table no
 longer needs it.
 
 **What it costs.** One pair takes the kernel between a tenth and a quarter of
-a second. The sola fide table of sixty-four pairs checks as one theorem within
-the default heartbeat budget, and its module now builds in 24 seconds where
-the hand-written table took 31; the born-of-a-virgin disputes, thirty-six pairs
+a second. The sola fide table, now 121 pairs, checks as one theorem within the
+default heartbeat budget; at sixty-four pairs its module built in 24 seconds
+where the hand-written table took 31; the born-of-a-virgin disputes, thirty-six pairs
 and nine, build as fast as they did.
 
 **If the engine answers *unknown*** — a premise it cannot write as clauses —
@@ -792,6 +792,69 @@ grounds, each with its rating and citation. When the crux is a step rather than
 a claim, the step's own rating is listed too. A `Because` in an argument's
 module is harvested into its page and the PDF like any other result, and its
 docstring is the prose above the explanation.
+
+**5. Answer every reading of an ambiguous claim.** A rival's premise can be read
+more than one way, and the readings can meet different objections. Trent defines
+justification as "the sanctification and renewal of the inward man". Read as a
+claim about what Paul's word δικαιόω means, it is a lexical claim. Read as a
+claim about what God does in justifying, no lexical argument touches it. An
+argument that answers only one reading has answered a rival of its own choosing.
+
+`Dilemma R` (`Testimony.Logic.Dilemma`) makes that impossible to dodge. It names
+one of `R`'s premises, the **claim**, and a list of **horns**, at least two. Each
+horn carries:
+
+- a **reading**: what the claim commits `R` to under it, and who reads it that
+  way, with a rating. `R.readAs claim r` is `R` with the step
+  `claim ➝ r.commits` added, and the reading's citation among its inferences.
+  The reading is a named difference, like every variant here: `R`'s own
+  premises are untouched;
+- a proof that the reading is **fair**: `R` read that way still has a model, so
+  no horn is a strawman that falls to itself;
+- its **fates**, never empty. Each fate is set against a named position `P`.
+  Either the reading **falls**, carried by a `Because P (R.readAs claim r)` that
+  names the crux, or it is **not reached**: `P` holds, and `P`'s premises can be
+  held with `R` read that way.
+
+A reading enters only as part of a horn, with its fates, so a dilemma cannot
+list a reading and leave it unanswered (`Dilemma.answered`).
+
+```lean
+def whatTrentsDefinitionClaims : Dilemma tridentineCase where
+  claim := p .justificationIncludesSanctification
+  horns :=
+    [ { reading := trentOnPaulsWord
+      , fair := tridentineOnPaulsWord_is_satisfiable
+      , fates := [.falls lexicalCase whereTrentsWordReadingFalls]
+      , answered := by simp }
+    , { reading := trentOnWhatGodDoes
+      , fair := tridentineOnWhatGodDoes_is_satisfiable
+      , fates :=
+          [ .unreached lexicalCase lexicalCase_establishes
+              lexical_case_does_not_reach_what_god_does
+          , .falls galatianGospel whereTrentsGraceReadingFalls ]
+      , answered := by simp } ]
+  claim_mem := by simp [solaFideDefs, tridentinePremises, Line.premises]
+  two := by simp
+```
+
+**What it claims, and what it does not.** It does not claim that the readings
+are the only ones; it is a dilemma over the readings it names, each cited. A
+reader with a third reading has a third horn to add, and the certificate will
+not build until that horn is answered too. Nor does it say which reading the
+rival means. What it shows is what each reading costs: where it falls, to what,
+at which crux, rated how — and where nothing reaches it. The rendering sets the
+horns side by side, each with its explanations, so a reader can see when the
+choice of reading is a choice of which crux to defend.
+
+**No razor enters the solver.** The dilemma above turns on the rule of least
+meaning: a word contributes the least meaning its context requires (Joos;
+Silva), and one occurrence does not carry the whole doctrine (Barr's
+"illegitimate totality transfer"). It is tempting to build such a principle into
+the semantics as a preference. That would decide cases without ever appearing
+on a page — an uncited premise inside the machinery. So the rule enters as a
+premise, `leastMeaning`, cited and rated like any other, and contestable in the
+same way.
 
 ## Manifests
 

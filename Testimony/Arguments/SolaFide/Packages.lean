@@ -302,6 +302,18 @@ def graceWithoutJamesHarmonisation : ArgumentPackage Claim :=
     conclusion := p .salvationByGrace
     conclusionLabel := "salvation by grace" }
 
+/-- Trent, as the argument it makes in a dispute: justification is the renewal of
+the inward man, that renewal grows through good works, so works done in grace
+merit an increase of justification, and salvation is not apart from works. The
+same premises as `tridentine`, concluding what Trent denies. -/
+@[solaFideDefs]
+def tridentineCase : ArgumentPackage Claim :=
+  { tridentine with
+    name := "Trent, against 'not by works'"
+    conclusion := notP .salvationNotByWorks
+    conclusionLabel := "salvation is not apart from works"
+    inferences := [trentOnMerit, trentOnIncrease] }
+
 /-! ### Paul's gospel, against Trent's definition -/
 
 /-- **Paul's gospel, against justification as renewal.** Galatians and
@@ -319,5 +331,14 @@ def galatianGospel : ArgumentPackage Claim :=
     conclusion := notP .justificationIncludesSanctification
     conclusionLabel := "justification is not the renewal of the inward man"
     inferences := [galatianGospelReadingSource, verdictNotRenewalSource] }
+
+/-! ### Paul's word, against justification as renewal -/
+
+/-- **Paul's word.** δικαιόω is forensic, Paul names renewal with words of its
+own, and a word contributes the least meaning its context requires: so Paul's
+δικαιόω does not denote the renewal of the inward man. -/
+@[solaFideDefs]
+def lexicalCase : ArgumentPackage Claim :=
+  lexicalLine.asPackage baseCite "Paul's δικαιόω does not denote the renewal of the inward man"
 
 end Testimony.Arguments.SolaFide
