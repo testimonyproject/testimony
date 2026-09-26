@@ -80,6 +80,27 @@ never alone. Every text of James is a premise, 2:24 included. Jude, which does
 not address the question, is granted as consistent with the rest and nothing
 more.
 
+**What the early church said.** The readings are cited to the Reformers and to
+modern exegetes, and also to fathers whom Rome itself venerates and cites — to
+show that the claims Trent condemns were not coined in the sixteenth century.
+Clement of Rome: "not justified by ourselves … nor by works which we have
+wrought in holiness of heart; but by that faith through which, from the
+beginning, Almighty God has justified all men" (1 Clement 32.4). Polycarp: "by
+grace you are saved, not of works" (Philippians 1). The Epistle to Diognetus,
+which the Catechism cites (CCC 2271): "that the righteousness of One should
+justify many transgressors" (9). Hilary of Poitiers, a Doctor of the Church:
+"faith alone justifies" — *fides enim sola iustificat* (*Commentary on Matthew*
+8.6). Basil the Great, another: "to be justified by faith in Christ alone"
+(Homily 20, *Of Humility*).
+
+What they show is that faith's sufficiency, and the exclusion of works as
+ground, were early Christian claims. They do not show that the fathers held the
+Reformers' *forensic* account of what justification is: Augustine reads
+justification as a making righteous, and Trent follows him there; and
+Chrysostom's seventh homily on Romans, on 3:27–28, speaks of justification by
+faith without saying "faith alone". So the fathers are cited for what they say,
+and the ontology is argued from Paul.
+
 **The rival is Trent**, and it holds every one of these texts. It parts from
 the canonical witness at exactly one reading: that "justified" in James 2:24 is
 the *increase* of a justification already received, by works done in grace
@@ -147,12 +168,12 @@ it, the sense of "justified" in James 2:24.
 | \\(P_{21}\\) | Faith is necessary: no one is saved without it | theological | Christian, historical-grammatical, consensus | Heb 11:6; John 3:16-18; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8 |
 | \\(P_{22}\\) | Faith is sufficient: whoever believes is saved | theological | Reformed Protestant, disputed | Rom 4:4-5; John 5:24; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
 | \\(P_{23}\\) | Works are not the ground of justification | theological | Reformed Protestant, disputed | Rom 3:28; Eph 2:8-9; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{24}\\) | Justification is by faith alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19 |
+| \\(P_{24}\\) | Justification is by faith alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19; [`hilary-commentary-matthew-2013`](../bibliography.md#hilary-commentary-matthew-2013), §8.6; [`basil-ascetical-works-1999`](../bibliography.md#basil-ascetical-works-1999), §Homily 20, Of Humility |
 | \\(P_{25}\\) | Good works are the fruit and evidence of a true and lively faith | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2 |
 | \\(P_{26}\\) | Justification is by faith alone, by a faith that is never alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2 |
 | \\(P_{27}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
 | \\(P_{28}\\) | ‘Justified’ in James 2:24 is an increase of justification, by works done in grace | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24 |
-| \\(P_{29}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6 |
+| \\(P_{29}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
 
 </div>
 
@@ -248,14 +269,18 @@ Paul's reading on works, cited to the Reformed exegesis, and to the first
 Christian writer outside the New Testament to say it: Clement of Rome, writing
 that we are justified "not by ourselves … nor by works which we have wrought in
 holiness of heart, but by that faith through which, from the beginning, Almighty
-God has justified all men" (1 Clement 32.4).
+God has justified all men" (1 Clement 32.4); and to Polycarp, who writes to the
+Philippians "knowing that by grace you are saved, not of works" (Philippians
+1). Rome venerates both as saints.
 
 ```lean
 def paulineReadingSource : Source :=
   { primary := Reference.work Bib.schreinerFaithAlone,
     supporting :=
       [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.19"),
-        Reference.work Bib.anf1 (Bib.Locus.sectionRef "1 Clement 32.4")],
+        Reference.work Bib.anf1 (Bib.Locus.sectionRef "1 Clement 32.4"),
+        Reference.work Bib.anf1
+          (Bib.Locus.sectionRef "Polycarp, Epistle to the Philippians 1")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 ```
@@ -272,6 +297,12 @@ faith "the beginning of human salvation, the foundation and root of all
 justification". It denies the second (canon 9), so the reading is
 `disputed`.
 
+Two fathers Rome names Doctors of the Church say the second half in terms.
+Basil: "recognizing oneself as lacking true justice, to be justified by faith
+in Christ alone" (Homily 20, *Of Humility*). Hilary of Poitiers, of Jesus
+forgiving the paralytic: the Law could not absolve, "since faith alone
+justifies" — *fides enim sola iustificat* (*Commentary on Matthew* 8.6).
+
 ```lean
 def paulineFaithReadingSource : Source :=
   { primary := Reference.work Bib.schreinerFaithAlone,
@@ -279,7 +310,10 @@ def paulineFaithReadingSource : Source :=
       [Reference.work Bib.tannerDecrees
           (Bib.Locus.sectionRef
             "Trent, Session VI (1547), Decree on Justification, ch. 8"),
-        Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.19")],
+        Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.19"),
+        Reference.work Bib.basilAsceticalWorks
+          (Bib.Locus.sectionRef "Homily 20, Of Humility"),
+        Reference.work Bib.hilaryMatthew (Bib.Locus.sectionRef "8.6")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 ```

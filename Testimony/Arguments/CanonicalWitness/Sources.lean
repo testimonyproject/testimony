@@ -134,9 +134,14 @@ def cite : Claim → AtomMeta
   | .justificationByFaithAlone =>
     { label := "Justification is by faith alone"
     , kind := .theological
+      -- Not a Reformation coinage: Hilary, "faith alone justifies" (on Matthew
+      -- 9); Basil, "justified by faith in Christ alone" (Homily 20).
     , source :=
         { primary := .work westminsterConfession (.sectionRef "XI.2")
-        , supporting := [.work calvinInstitutes (.sectionRef "III.xi.19")]
+        , supporting :=
+            [ .work calvinInstitutes (.sectionRef "III.xi.19")
+            , .work hilaryMatthew (.sectionRef "8.6")
+            , .work basilAsceticalWorks (.sectionRef "Homily 20, Of Humility") ]
         , tradition := .reformedProtestant
         , confidence := .disputed } }
   | .worksAreFruitOfFaith =>
@@ -174,9 +179,14 @@ def cite : Claim → AtomMeta
   | .justificationDistinctFromSanctification =>
     { label := "Justification and sanctification are inseparable but distinct"
     , kind := .theological
+      -- The Epistle to Diognetus, 9: "that the righteousness of One should
+      -- justify many transgressors" — another's righteousness, not one's own
+      -- renewal. The Catechism cites the epistle itself (CCC 2271).
     , source :=
         { primary := .work westminsterConfession (.sectionRef "XIII.1")
-        , supporting := [.work calvinInstitutes (.sectionRef "III.xi.6")]
+        , supporting :=
+            [ .work calvinInstitutes (.sectionRef "III.xi.6")
+            , .work anf1 (.sectionRef "Epistle to Diognetus 9") ]
         , tradition := .reformedProtestant
         , confidence := .disputed } }
 

@@ -34,12 +34,15 @@ beginning of salvation, "without which it is impossible to please God". -/
 Christian writer outside the New Testament to say it: Clement of Rome, writing
 that we are justified "not by ourselves … nor by works which we have wrought in
 holiness of heart, but by that faith through which, from the beginning, Almighty
-God has justified all men" (1 Clement 32.4). -/
+God has justified all men" (1 Clement 32.4); and to Polycarp, who writes to the
+Philippians "knowing that by grace you are saved, not of works" (Philippians
+1). Rome venerates both as saints. -/
 def paulineReadingSource : Source :=
   { primary := .work schreinerFaithAlone .whole
   , supporting :=
       [ .work calvinInstitutes (.sectionRef "III.xi.19")
-      , .work anf1 (.sectionRef "1 Clement 32.4") ]
+      , .work anf1 (.sectionRef "1 Clement 32.4")
+      , .work anf1 (.sectionRef "Polycarp, Epistle to the Philippians 1") ]
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
@@ -50,12 +53,20 @@ believes … his faith is counted as righteousness" (Romans 4:5). Trent makes th
 first half of it: its chapter 8 reads the Apostle's "justified by faith" as
 faith "the beginning of human salvation, the foundation and root of all
 justification". It denies the second (canon 9), so the reading is
-`disputed`. -/
+`disputed`.
+
+Two fathers Rome names Doctors of the Church say the second half in terms.
+Basil: "recognizing oneself as lacking true justice, to be justified by faith
+in Christ alone" (Homily 20, *Of Humility*). Hilary of Poitiers, of Jesus
+forgiving the paralytic: the Law could not absolve, "since faith alone
+justifies" — *fides enim sola iustificat* (*Commentary on Matthew* 8.6). -/
 def paulineFaithReadingSource : Source :=
   { primary := .work schreinerFaithAlone .whole
   , supporting :=
       [ .work tannerDecrees (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 8")
-      , .work calvinInstitutes (.sectionRef "III.xi.19") ]
+      , .work calvinInstitutes (.sectionRef "III.xi.19")
+      , .work basilAsceticalWorks (.sectionRef "Homily 20, Of Humility")
+      , .work hilaryMatthew (.sectionRef "8.6") ]
   , tradition := .reformedProtestant
   , confidence := .disputed }
 

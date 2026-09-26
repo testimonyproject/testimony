@@ -342,11 +342,17 @@ def baseCite : Claim → AtomMeta
     , kind := .theological
       -- Mannermaa's Luther affirms this too, while denying that justification
       -- is forensic only; see `justificationIsForensicOnly` and `finnishCite`.
+      -- Nor is it a Reformation coinage: Clement of Rome, "not by works ... but
+      -- by that faith" (1 Clement 32.4); Hilary, "faith alone justifies" (on
+      -- Matthew 9); Basil, "justified by faith in Christ alone" (Homily 20).
     , source :=
         { calvinHolds "III.xi.1" with
           supporting :=
             [ .work schreinerFaithAlone .whole
-            , .work mannermaaChristPresentInFaith .whole ] } }
+            , .work mannermaaChristPresentInFaith .whole
+            , .work anf1 (.sectionRef "1 Clement 32.4")
+            , .work hilaryMatthew (.sectionRef "8.6")
+            , .work basilAsceticalWorks (.sectionRef "Homily 20, Of Humility") ] } }
   | .faithIsSufficient =>
     { label := "Faith is sufficient: whoever believes is saved"
     , kind := .theological
@@ -386,9 +392,14 @@ def baseCite : Claim → AtomMeta
   | .justificationIsForensicOnly =>
     { label := "Justification is forensic only: pardon and imputation, not infusion"
     , kind := .theological
+      -- The Epistle to Diognetus, 9: "that the wickedness of many should be hid
+      -- in a single righteous One, and that the righteousness of One should
+      -- justify many transgressors" — the exchange, not the renewal.
     , source :=
         { primary := .work westminsterConfession (.sectionRef "XI.1")
-        , supporting := [.work calvinInstitutes (.sectionRef "III.xi.2")]
+        , supporting :=
+            [ .work calvinInstitutes (.sectionRef "III.xi.2")
+            , .work anf1 (.sectionRef "Epistle to Diognetus 9") ]
         , tradition := .reformedProtestant
         , confidence := .wellSupported } }
   | .secondTempleCovenantalNomism =>
