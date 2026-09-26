@@ -61,6 +61,26 @@ def caseRejecting (lines : List (Line α)) (shared closing : List (Formula α))
     (drop : List ℕ) : List (Formula α) :=
   lines.flatMap Line.grounds ++ shared ++ keptSteps lines 0 drop ++ closing
 
+/-- **A named variant, made by rejecting readings.** `P` with the readings
+numbered in `drop` rejected, under a name that says which. This is how an
+argument states a specific burden a reader can check — "without Paul's
+reading" — as a package of its own, built by the same operation the burden
+quantifies over, so it cannot drift from it. -/
+def ArgumentPackage.rejecting (P : ArgumentPackage α) (name : String)
+    (lines : List (Line α)) (shared closing : List (Formula α)) (drop : List ℕ) :
+    ArgumentPackage α :=
+  { P with name, premises := caseRejecting lines shared closing drop }
+
+theorem keptSteps_mem {ls : List (Line α)} {i : ℕ} {T : List ℕ} {φ : Formula α}
+    (h : φ ∈ keptSteps ls i T) : φ ∈ ls.map Line.step := by
+  induction ls generalizing i with
+  | nil => simp [keptSteps] at h
+  | cons l ls ih =>
+    simp only [keptSteps, List.mem_append] at h
+    rcases h with h | h
+    · split at h <;> simp_all
+    · exact List.mem_cons_of_mem _ (ih h)
+
 theorem keptSteps_nil (ls : List (Line α)) (i : ℕ) : keptSteps ls i [] = ls.map Line.step := by
   induction ls generalizing i with
   | nil => rfl
@@ -127,6 +147,41 @@ theorem stands_without_one (b : OpponentsBurden P lines shared closing sets)
     by_cases hji : j = i
     · exact ⟨k, hk, by simp; omega⟩
     · exact ⟨j, hj, by simpa using hji⟩
+
+/-- **Rejecting readings never makes the rest inconsistent**: whatever is
+rejected, what remains is part of a case that has a model. -/
+theorem satisfiable_rejecting (b : OpponentsBurden P lines shared closing sets) (T : List ℕ) :
+    Satisfiable (caseRejecting lines shared closing T) := by
+  have hc := b.consistent
+  rw [b.premises_eq] at hc
+  obtain ⟨w, hw⟩ := satisfiable_iff.mp hc
+  refine satisfiable_iff.mpr ⟨w, fun φ hφ => hw φ ?_⟩
+  simp only [caseRejecting, caseOf, List.mem_append] at hφ ⊢
+  rcases hφ with ((h | h) | h) | h
+  · exact .inl (.inl (.inl h))
+  · exact .inl (.inl (.inr h))
+  · exact .inl (.inr (keptSteps_mem h))
+  · exact .inr h
+
+/-- **A named variant that leaves a reading of every set standing holds.** The
+checked form of "this corpus is not load-bearing". -/
+theorem establishes_rejecting (b : OpponentsBurden P lines shared closing sets)
+    {name : String} {T : List ℕ} (h : ∀ S ∈ sets, ∃ i ∈ S, i ∉ T) :
+    Establishes (P.rejecting name lines shared closing T) :=
+  b.stands_without T h
+
+/-- **A named variant that rejects a whole set fails.** The checked form of
+"these readings are jointly load-bearing". -/
+theorem not_establishes_rejecting (b : OpponentsBurden P lines shared closing sets)
+    {name : String} {S : List ℕ} (h : S ∈ sets) :
+    ¬ Establishes (P.rejecting name lines shared closing S) :=
+  b.overturns S h
+
+/-- A named variant's premises have a model. -/
+theorem rejecting_satisfiable (b : OpponentsBurden P lines shared closing sets)
+    {name : String} (T : List ℕ) :
+    Satisfiable (P.rejecting name lines shared closing T).premises :=
+  b.satisfiable_rejecting T
 
 /-- What a page renders: the burden's data, without its proofs. -/
 def view (_ : OpponentsBurden P lines shared closing sets) : Page.Burden :=

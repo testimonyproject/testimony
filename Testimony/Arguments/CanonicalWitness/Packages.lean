@@ -1,14 +1,21 @@
 import Testimony.Arguments.CanonicalWitness.Lines
 import Testimony.Logic.Package
+import Testimony.Logic.Burden
 
 /-!
 # Arguments.CanonicalWitness.Packages — the positions
 
 Trent first, because the rival is written before anything is proved. Then the
-canonical case, the case with James, and one variant: James read without the
-demonstrative sense of "justified". Which corpora's readings an opponent must
-reject is not a variant package but a computed result — the opponent's burden
-(`Testimony.Logic.Burden`), in `Testimony.Arguments.CanonicalWitness.Results`.
+canonical case, the case with James, and the specific burdens a reader can
+check one at a time: the case with one corpus's reading rejected, with the
+readings behind one part of faith alone rejected together, and with all but
+two rejected. Every text stays granted in each; what goes is the step that
+reads them.
+
+Each is built with `ArgumentPackage.rejecting`, the operation the opponent's
+burden quantifies over (`Testimony.Logic.Burden`), and its result is proved
+from that burden in `Testimony.Arguments.CanonicalWitness.Results`. So the
+named burdens are instances of the computed one, and cannot drift from it.
 -/
 
 namespace Testimony.Arguments.CanonicalWitness
@@ -59,6 +66,65 @@ def canonicalWithJames : ArgumentPackage Claim :=
   , conclusion := p .faithAloneNeverAlone
   , conclusionLabel := "justification is by faith alone, by a faith never alone"
   , inferences := (corpora ++ [jamesLine]).filterMap Line.inference }
+
+/-! ### One corpus's reading rejected -/
+
+-- A named burden is proved from the certificate, but its countermodel is
+-- checked premise by premise, which needs the rejecting operation unfolded.
+attribute [canonicalWitnessDefs] ArgumentPackage.rejecting caseRejecting keptSteps
+
+/-- Without Paul's reading. -/
+@[canonicalWitnessDefs]
+def withoutPaul : ArgumentPackage Claim :=
+  canonicalCase.rejecting "The canonical witness, without Paul's reading"
+    corpora [] [toFaithAlone] [Reading.paul]
+
+/-- Without Hebrews' reading. -/
+@[canonicalWitnessDefs]
+def withoutHebrews : ArgumentPackage Claim :=
+  canonicalCase.rejecting "The canonical witness, without Hebrews' reading"
+    corpora [] [toFaithAlone] [Reading.hebrews]
+
+/-- Without John's reading. -/
+@[canonicalWitnessDefs]
+def withoutJohn : ArgumentPackage Claim :=
+  canonicalCase.rejecting "The canonical witness, without John's reading"
+    corpora [] [toFaithAlone] [Reading.john]
+
+/-- Without Peter's reading. -/
+@[canonicalWitnessDefs]
+def withoutPeter : ArgumentPackage Claim :=
+  canonicalCase.rejecting "The canonical witness, without Peter's reading"
+    corpora [] [toFaithAlone] [Reading.peter]
+
+/-- Without the reading of Jesus' words. -/
+@[canonicalWitnessDefs]
+def withoutJesus : ArgumentPackage Claim :=
+  canonicalCase.rejecting "The canonical witness, without the reading of Jesus' words"
+    corpora [] [toFaithAlone] [Reading.jesus]
+
+/-! ### The opponent's two ways -/
+
+/-- Without the three readings that say works are not the ground — Paul's,
+Peter's and Jesus'. -/
+@[canonicalWitnessDefs]
+def withoutTheWorksWitnesses : ArgumentPackage Claim :=
+  canonicalCase.rejecting "The canonical witness, without Paul's, Peter's and Jesus' readings"
+    corpora [] [toFaithAlone] [Reading.paul, Reading.peter, Reading.jesus]
+
+/-- Without the two readings that say faith is necessary — Hebrews' and
+John's. -/
+@[canonicalWitnessDefs]
+def withoutTheNecessityWitnesses : ArgumentPackage Claim :=
+  canonicalCase.rejecting "The canonical witness, without Hebrews' and John's readings"
+    corpora [] [toFaithAlone] [Reading.hebrews, Reading.john]
+
+/-- Two corpora alone: Hebrews and Jesus' words, with Paul's, John's and
+Peter's readings rejected. -/
+@[canonicalWitnessDefs]
+def hebrewsAndJesus : ArgumentPackage Claim :=
+  canonicalCase.rejecting "Hebrews and Jesus' words alone"
+    corpora [] [toFaithAlone] [Reading.paul, Reading.john, Reading.peter]
 
 /-! ### James without its hinge -/
 

@@ -189,4 +189,38 @@ def notAloneIfWorksGround : Formula Claim :=
 def corpora : List (Line Claim) :=
   [paulineLine, hebrewsLine, johannineLine, petrineLine, dominicalLine]
 
+/-! ### The readings, by name
+
+What an opponent can reject is a corpus's reading. The burden numbers the
+readings by their place among the lines — the five corpora, then James — and
+these names say which is which, so every burden below reads as the corpora it
+concerns. `readings_named` checks each name against its line. -/
+
+namespace Reading
+
+/-- Paul's reading. -/
+abbrev paul : ℕ := 0
+/-- Hebrews' reading. -/
+abbrev hebrews : ℕ := 1
+/-- John's reading. -/
+abbrev john : ℕ := 2
+/-- Peter's reading. -/
+abbrev peter : ℕ := 3
+/-- The reading of Jesus' words. -/
+abbrev jesus : ℕ := 4
+/-- James's reading, after the five corpora. -/
+abbrev james : ℕ := 5
+
+end Reading
+
+/-- Each reading's name points at its own line. -/
+theorem readings_named :
+    (corpora ++ [jamesLine])[Reading.paul]? = some paulineLine ∧
+    (corpora ++ [jamesLine])[Reading.hebrews]? = some hebrewsLine ∧
+    (corpora ++ [jamesLine])[Reading.john]? = some johannineLine ∧
+    (corpora ++ [jamesLine])[Reading.peter]? = some petrineLine ∧
+    (corpora ++ [jamesLine])[Reading.jesus]? = some dominicalLine ∧
+    (corpora ++ [jamesLine])[Reading.james]? = some jamesLine :=
+  ⟨rfl, rfl, rfl, rfl, rfl, rfl⟩
+
 end Testimony.Arguments.CanonicalWitness
