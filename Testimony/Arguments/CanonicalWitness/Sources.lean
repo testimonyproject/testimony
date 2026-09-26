@@ -47,6 +47,10 @@ def cite : Claim → AtomMeta
   | .galatians2_16 =>
     { label := "Galatians 2:16: not justified by works of the law but through faith in Christ"
     , kind := .textual, source := textOnly [verse .galatians 2 16] }
+  | .galatians3_11 =>
+    { label := "Galatians 3:11: no one is justified before God by the law; the righteous shall " ++
+        "live by faith"
+    , kind := .textual, source := textOnly [verse .galatians 3 11] }
   | .ephesians2_8_9 =>
     { label := "Ephesians 2:8–9: saved by grace through faith, not of works"
     , kind := .textual, source := textOnly [verses .ephesians 2 8 9] }

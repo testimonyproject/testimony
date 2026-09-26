@@ -26,7 +26,8 @@ open Testimony Testimony.Logic
 holds all of them. -/
 @[canonicalWitnessDefs]
 def allTexts : List (Formula Claim) :=
-  paulineLine.grounds ++ hebrewsLine.grounds ++ johannineLine.grounds ++
+  paulineLine.grounds ++ paulineFaithLine.grounds ++ hebrewsLine.grounds ++
+    johannineLine.grounds ++
     petrineLine.grounds ++ dominicalLine.grounds ++
     [p .james2_14_17, p .james2_19, p .james2_21_23, p .james2_24, p .jude20_21]
 
@@ -73,11 +74,11 @@ def canonicalWithJames : ArgumentPackage Claim :=
 -- checked premise by premise, which needs the rejecting operation unfolded.
 attribute [canonicalWitnessDefs] ArgumentPackage.rejecting caseRejecting keptSteps
 
-/-- Without Paul's reading. -/
+/-- Without Paul: both his readings, on works and on faith. -/
 @[canonicalWitnessDefs]
 def withoutPaul : ArgumentPackage Claim :=
-  canonicalCase.rejecting "The canonical witness, without Paul's reading"
-    corpora [] [toFaithAlone] [Reading.paul]
+  canonicalCase.rejecting "The canonical witness, without Paul's readings"
+    corpora [] [toFaithAlone] [Reading.paul, Reading.paulOnFaith]
 
 /-- Without Hebrews' reading. -/
 @[canonicalWitnessDefs]
@@ -105,26 +106,37 @@ def withoutJesus : ArgumentPackage Claim :=
 
 /-! ### The opponent's two ways -/
 
-/-- Without the three readings that say works are not the ground — Paul's,
-Peter's and Jesus'. -/
+/-- Without the three readings that say works are not the ground — Paul's on
+works, Peter's and Jesus'. -/
 @[canonicalWitnessDefs]
 def withoutTheWorksWitnesses : ArgumentPackage Claim :=
-  canonicalCase.rejecting "The canonical witness, without Paul's, Peter's and Jesus' readings"
+  canonicalCase.rejecting
+    "The canonical witness, without Paul's on works, Peter's and Jesus' readings"
     corpora [] [toFaithAlone] [Reading.paul, Reading.peter, Reading.jesus]
 
-/-- Without the two readings that say faith is necessary — Hebrews' and
-John's. -/
+/-- Without the three readings that say faith is necessary — Paul's on faith,
+Hebrews' and John's. -/
 @[canonicalWitnessDefs]
 def withoutTheNecessityWitnesses : ArgumentPackage Claim :=
-  canonicalCase.rejecting "The canonical witness, without Hebrews' and John's readings"
-    corpora [] [toFaithAlone] [Reading.hebrews, Reading.john]
+  canonicalCase.rejecting
+    "The canonical witness, without Paul's on faith, Hebrews' and John's readings"
+    corpora [] [toFaithAlone] [Reading.paulOnFaith, Reading.hebrews, Reading.john]
+
+/-- Without the four readings that say faith is sufficient — Paul's on faith,
+John's, Peter's and Jesus'. -/
+@[canonicalWitnessDefs]
+def withoutTheSufficiencyWitnesses : ArgumentPackage Claim :=
+  canonicalCase.rejecting
+    "The canonical witness, without Paul's on faith, John's, Peter's and Jesus' readings"
+    corpora [] [toFaithAlone]
+    [Reading.paulOnFaith, Reading.john, Reading.peter, Reading.jesus]
 
 /-- Two corpora alone: Hebrews and Jesus' words, with Paul's, John's and
 Peter's readings rejected. -/
 @[canonicalWitnessDefs]
 def hebrewsAndJesus : ArgumentPackage Claim :=
   canonicalCase.rejecting "Hebrews and Jesus' words alone"
-    corpora [] [toFaithAlone] [Reading.paul, Reading.john, Reading.peter]
+    corpora [] [toFaithAlone] [Reading.paul, Reading.paulOnFaith, Reading.john, Reading.peter]
 
 /-! ### James without its hinge -/
 
@@ -145,5 +157,32 @@ def withJamesUndemonstrated : ArgumentPackage Claim :=
     premises :=
       caseOf (corpora ++ [jamesWithoutDemonstrative]) [p .jude20_21]
         [toFaithAlone, toNeverAlone] }
+
+/-! ### Paul on faith, on its own
+
+Paul's message about faith, apart from what he says about works: faith is
+necessary, and it is sufficient. Stated as its own position, so it can be set
+beside James and asked whether the two cohere — and so the answer can say what
+it rests on. -/
+
+/-- **Paul: faith is necessary and sufficient.** Romans 4:4–5, Galatians 2:16
+and 3:11, read as Paul's own claim about faith. -/
+@[canonicalWitnessDefs]
+def paulOnFaith : ArgumentPackage Claim :=
+  { paulineFaithLine.asPackage cite "faith is necessary and sufficient for justification" with
+    name := "Paul: faith is necessary and sufficient" }
+
+/-- **James read against sufficiency**, as Trent reads him: every text of James,
+with "that faith" in 2:14 and "not by faith alone" in 2:24 taken of faith as
+such. Then faith does not suffice. -/
+@[canonicalWitnessDefs]
+def jamesReadAgainstSufficiency : ArgumentPackage Claim :=
+  { name := "James read against the sufficiency of faith"
+  , cite := tridentineCite
+  , premises :=
+      [p .james2_14_17, p .james2_19, p .james2_21_23, p .james2_24, jamesAgainstSufficiency]
+  , conclusion := notP .faithIsSufficient
+  , conclusionLabel := "faith does not suffice"
+  , inferences := [trentAgainstSufficiencySource] }
 
 end Testimony.Arguments.CanonicalWitness
