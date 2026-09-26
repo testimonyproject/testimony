@@ -78,6 +78,27 @@ never alone. Every text of James is a premise, 2:24 included. Jude, which does
 not address the question, is granted as consistent with the rest and nothing
 more.
 
+**What the early church said.** The readings are cited to the Reformers and to
+modern exegetes, and also to fathers whom Rome itself venerates and cites — to
+show that the claims Trent condemns were not coined in the sixteenth century.
+Clement of Rome: "not justified by ourselves … nor by works which we have
+wrought in holiness of heart; but by that faith through which, from the
+beginning, Almighty God has justified all men" (1 Clement 32.4). Polycarp: "by
+grace you are saved, not of works" (Philippians 1). The Epistle to Diognetus,
+which the Catechism cites (CCC 2271): "that the righteousness of One should
+justify many transgressors" (9). Hilary of Poitiers, a Doctor of the Church:
+"faith alone justifies" — *fides enim sola iustificat* (*Commentary on Matthew*
+8.6). Basil the Great, another: "to be justified by faith in Christ alone"
+(Homily 20, *Of Humility*).
+
+What they show is that faith's sufficiency, and the exclusion of works as
+ground, were early Christian claims. They do not show that the fathers held the
+Reformers' *forensic* account of what justification is: Augustine reads
+justification as a making righteous, and Trent follows him there; and
+Chrysostom's seventh homily on Romans, on 3:27–28, speaks of justification by
+faith without saying "faith alone". So the fathers are cited for what they say,
+and the ontology is argued from Paul.
+
 **The rival is Trent**, and it holds every one of these texts. It parts from
 the canonical witness at exactly one reading: that "justified" in James 2:24 is
 the *increase* of a justification already received, by works done in grace

@@ -1417,6 +1417,42 @@ rendered unverified rather than given the ISBN of a later reprint. -/
   , place := some "Buffalo, NY"
   , volume := some "4" }
 
+/-- Basil of Caesarea, *Ascetical Works*, tr. M. Monica Wagner: Fathers of the
+Church volume 9, which carries Homily 20, "Of Humility" (p. 475). Verified at
+Open Library, ISBN 9780813209661 (Catholic University of America Press,
+1999). -/
+@[bib_entry] def basilAsceticalWorks : BibEntry := .book
+  { core :=
+      { key := "basil-ascetical-works-1999"
+      , contributors :=
+          { authors := [.person "Basil" "of Caesarea"]
+          , translators := [.person "M. Monica" "Wagner"] }
+      , title := "Ascetical Works"
+      , year := some { value := 1999 }
+      , identifiers := [.isbn "9780813209661"] }
+  , publisher := "Catholic University of America Press"
+  , place := some "Washington, DC"
+  , series := some "The Fathers of the Church"
+  , volume := some "9" }
+
+/-- Hilary of Poitiers, *Commentary on Matthew*, tr. D. H. Williams: Fathers of
+the Church volume 125. Verified at Open Library, ISBN 9780813201252, whose
+record names the series and volume (Catholic University of America Press,
+2013). -/
+@[bib_entry] def hilaryMatthew : BibEntry := .book
+  { core :=
+      { key := "hilary-commentary-matthew-2013"
+      , contributors :=
+          { authors := [.person "Hilary" "of Poitiers"]
+          , translators := [.person "D. H." "Williams"] }
+      , title := "Commentary on Matthew"
+      , year := some { value := 2013 }
+      , identifiers := [.isbn "9780813201252"] }
+  , publisher := "Catholic University of America Press"
+  , place := some "Washington, DC"
+  , series := some "The Fathers of the Church"
+  , volume := some "125" }
+
 /-- *Nicene and Post-Nicene Fathers*, second series, volume 6: the edition
 through which Jerome's *Against Jovinianus* (tr. W. H. Fremantle, G. Lewis and
 W. G. Martley) is cited. -/
