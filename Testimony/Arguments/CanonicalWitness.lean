@@ -24,25 +24,42 @@ and nothing turns on them.
 **The readings are where the argument is made.** Each corpus is a line whose
 single step reads its texts, and that step is cited and rated as a reading.
 Texts do not entail conclusions; readings do. And each corpus is made to
-deliver only what its own texts say. *Faith alone* is split into three parts:
+deliver only what its own texts say. Paul is read twice, because he says
+different things in different places: on works, and on faith. *Faith alone* is
+split into three parts:
 
-- that faith is **necessary** — Hebrews ("without faith it is impossible to
-  please God") and John ("whoever does not believe is condemned already");
-- that faith is **sufficient** — Paul, John, Peter and Jesus' words in Luke;
-- that works are **not the ground** — Paul, Peter at the Jerusalem council,
-  and Jesus' parable of the Pharisee and the tax collector.
+- that faith is **necessary** — Paul ("not justified by works of the law except
+  through faith", Galatians 2:16; "the righteous shall live by faith", 3:11),
+  Hebrews ("without faith it is impossible to please God") and John ("whoever
+  does not believe is condemned already");
+- that faith is **sufficient** — Paul ("to the one who does not work but
+  believes", Romans 4:5), John, Peter and Jesus' words in Luke;
+- that works are **not the ground** — Paul (Romans 3:28, Ephesians 2:9, Titus
+  3:5), Peter at the Jerusalem council, and Jesus' parable of the Pharisee and
+  the tax collector.
 
 No corpus carries more than its share, and no corpus is load-bearing: take any
 one reading away and the conclusion still follows. Two corpora are enough —
 Hebrews and Jesus' words. What an opponent must reject instead is computed,
 not chosen: the **opponent's burden** (`canonical_burden`) lists every minimal
 set of readings whose rejection overturns the case, and proves there is no
-other way. There are exactly two. To deny that works are not the ground, an
-opponent must reject three readings: Paul's, Peter's and Jesus'. To deny that
-faith is necessary, they must reject Hebrews' and John's — and Trent does not,
-since its chapter 8 calls faith "the beginning of human salvation … without
-which it is impossible to please God". Hebrews' reading is therefore rated
-`consensus`, and every other reading `disputed`.
+other way. There are exactly three, one for each part. To deny that works are
+not the ground, an opponent must reject three readings: Paul's on works,
+Peter's and Jesus'. To deny that faith is necessary, three: Paul's on faith,
+Hebrews' and John's — and Trent does not, since its chapter 8 reads the
+Apostle's "justified by faith" as faith "the beginning of human salvation …
+without which it is impossible to please God". To deny that faith suffices,
+four: Paul's on faith, John's, Peter's and Jesus'. That is the way Trent takes.
+Hebrews' reading is rated `consensus`, and every other reading `disputed`.
+
+**Paul on faith is stated on its own** (`paul_on_faith_establishes`): faith is
+necessary and sufficient, from Romans 4:4–5 and Galatians 2:16 and 3:11. It
+stands with James — every text of James, read with 2:14–17 as about faith
+without works, and without the contested demonstrative sense of "justified"
+(`paul_on_faith_stands_with_james`). And the harmony is shown to be a reading,
+not a given: read James's "that faith" (2:14) and "not by faith alone" (2:24)
+of faith as such, as Trent does, and the two cannot both be held
+(`james_against_sufficiency_contradicts_paul`).
 
 The burden is how this library lets several witnesses matter without counting
 them. Three corpora saying works are not the ground is not a score of three; it

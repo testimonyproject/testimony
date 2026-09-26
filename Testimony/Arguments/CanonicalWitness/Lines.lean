@@ -11,9 +11,12 @@ reading.
 
 A corpus delivers only what its texts say. Hebrews says faith is necessary, and
 nothing about works; the Johannine texts say faith is sufficient and necessary;
-Paul, Peter and Jesus say that works are not the ground and that faith is
-sufficient. *Faith alone* is the three together (`toFaithAlone`), so no corpus
-has to carry more than its own texts.
+Peter and Jesus say that works are not the ground and that faith is sufficient.
+Paul says all three, and he is read twice, because he says them in different
+places: on works (Romans 3:28, Ephesians 2:8–9, Titus 3:5), that works are not
+the ground; on faith (Romans 4:4–5, Galatians 2:16, 3:11), that faith is
+necessary and sufficient. *Faith alone* is the three together (`toFaithAlone`),
+so no reading has to carry more than its own texts.
 -/
 
 namespace Testimony.Arguments.CanonicalWitness
@@ -27,7 +30,7 @@ denies that faith alone follows (Session VI, canon 9). Hebrews' reading is
 `consensus`, because Trent makes it too — its chapter 8 calls faith the
 beginning of salvation, "without which it is impossible to please God". -/
 
-/-- The Pauline reading, cited to the Reformed exegesis, and to the first
+/-- Paul's reading on works, cited to the Reformed exegesis, and to the first
 Christian writer outside the New Testament to say it: Clement of Rome, writing
 that we are justified "not by ourselves … nor by works which we have wrought in
 holiness of heart, but by that faith through which, from the beginning, Almighty
@@ -37,6 +40,22 @@ def paulineReadingSource : Source :=
   , supporting :=
       [ .work calvinInstitutes (.sectionRef "III.xi.19")
       , .work anf1 (.sectionRef "1 Clement 32.4") ]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- Paul's reading on faith: that it is necessary — "not justified by works of
+the law except through faith" (Galatians 2:16, ἐὰν μή), "the righteous shall
+live by faith" (3:11) — and sufficient — "to the one who does not work but
+believes … his faith is counted as righteousness" (Romans 4:5). Trent makes the
+first half of it: its chapter 8 reads the Apostle's "justified by faith" as
+faith "the beginning of human salvation, the foundation and root of all
+justification". It denies the second (canon 9), so the reading is
+`disputed`. -/
+def paulineFaithReadingSource : Source :=
+  { primary := .work schreinerFaithAlone .whole
+  , supporting :=
+      [ .work tannerDecrees (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 8")
+      , .work calvinInstitutes (.sectionRef "III.xi.19") ]
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
@@ -78,6 +97,14 @@ def jamesReadingSource : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
+/-- Trent's use of James 2:24 against faith alone: the verse it quotes in chapter
+10, against the sufficiency canon 9 denies. -/
+def trentAgainstSufficiencySource : Source :=
+  { primary := .work tannerDecrees
+      (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 10 and canon 9")
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
 /-- Trent's reading of James 2:24: justification increased by works. -/
 def trentOnJamesSource : Source :=
   { primary := .work tannerDecrees
@@ -87,18 +114,31 @@ def trentOnJamesSource : Source :=
 
 /-! ### The lines -/
 
-/-- **Paul**, read as canon: the undisputed letters with Ephesians and Titus,
-whoever wrote them. -/
+/-- **Paul, on works**, read as canon: the undisputed letters with Ephesians and
+Titus, whoever wrote them. "Apart from works of the law" (Romans 3:28), "not of
+works" (Ephesians 2:9), "not by works done in righteousness" (Titus 3:5): works
+are not the ground. -/
 @[canonicalWitnessDefs]
 def paulineLine : Line Claim :=
-  { name := "Paul (Romans, Galatians, Ephesians, Titus)"
-  , grounds :=
-      [p .romans3_28, p .romans4_4_5, p .galatians2_16, p .ephesians2_8_9, p .titus3_5]
-  , step :=
-      ⋀ [p .romans3_28, p .romans4_4_5, p .galatians2_16, p .ephesians2_8_9, p .titus3_5]
-      ➝ p .worksAreNotTheGround ⋏ p .faithIsSufficient
-  , delivers := p .worksAreNotTheGround ⋏ p .faithIsSufficient
+  { name := "Paul, on works (Romans 3:28, Ephesians 2:8–9, Titus 3:5)"
+  , grounds := [p .romans3_28, p .ephesians2_8_9, p .titus3_5]
+  , step := ⋀ [p .romans3_28, p .ephesians2_8_9, p .titus3_5] ➝ p .worksAreNotTheGround
+  , delivers := p .worksAreNotTheGround
   , inference := some paulineReadingSource }
+
+/-- **Paul, on faith**: faith is necessary — no one is justified except through
+it (Galatians 2:16, 3:11) — and sufficient — to the one who does not work but
+believes, faith is counted as righteousness (Romans 4:4–5). Paul's own message,
+stated apart from what he says about works. -/
+@[canonicalWitnessDefs]
+def paulineFaithLine : Line Claim :=
+  { name := "Paul, on faith (Romans 4:4–5, Galatians 2:16, 3:11)"
+  , grounds := [p .romans4_4_5, p .galatians2_16, p .galatians3_11]
+  , step :=
+      ⋀ [p .romans4_4_5, p .galatians2_16, p .galatians3_11]
+      ➝ p .faithIsNecessary ⋏ p .faithIsSufficient
+  , delivers := p .faithIsNecessary ⋏ p .faithIsSufficient
+  , inference := some paulineFaithReadingSource }
 
 /-- **Hebrews**, read as its own corpus: faith is necessary. -/
 @[canonicalWitnessDefs]
@@ -179,48 +219,61 @@ its ground, and faith alone is denied. -/
 def trentOnJames : Formula Claim :=
   ⋀ [p .james2_24, notP .jamesJustifiesDemonstratively] ➝ notP .worksAreNotTheGround
 
+/-- **Trent's reading of James against sufficiency.** James says faith without
+works is dead and cannot save (2:14–17), and that a person is justified "not by
+faith alone" (2:24); read of faith as such, that denies that faith suffices.
+The rival to the reading on which James and Paul cohere: there, the faith that
+cannot save is the faith 2:14–17 describes, faith without works
+(`james2TargetsDeadFaith`). -/
+@[canonicalWitnessDefs]
+def jamesAgainstSufficiency : Formula Claim :=
+  ⋀ [p .james2_14_17, p .james2_24] ➝ notP .faithIsSufficient
+
 /-- And what follows from that: not faith alone. -/
 @[canonicalWitnessDefs]
 def notAloneIfWorksGround : Formula Claim :=
   notP .worksAreNotTheGround ➝ notP .justificationByFaithAlone
 
-/-- The five corpora. -/
+/-- The corpora, one reading each, Paul's two readings first. -/
 @[canonicalWitnessDefs]
 def corpora : List (Line Claim) :=
-  [paulineLine, hebrewsLine, johannineLine, petrineLine, dominicalLine]
+  [paulineLine, paulineFaithLine, hebrewsLine, johannineLine, petrineLine, dominicalLine]
 
 /-! ### The readings, by name
 
 What an opponent can reject is a corpus's reading. The burden numbers the
-readings by their place among the lines — the five corpora, then James — and
+readings by their place among the lines — the corpora, then James — and
 these names say which is which, so every burden below reads as the corpora it
 concerns. `readings_named` checks each name against its line. -/
 
 namespace Reading
 
-/-- Paul's reading. -/
+/-- Paul's reading on works. -/
 abbrev paul : ℕ := 0
+/-- Paul's reading on faith. -/
+abbrev paulOnFaith : ℕ := 1
 /-- Hebrews' reading. -/
-abbrev hebrews : ℕ := 1
+abbrev hebrews : ℕ := 2
 /-- John's reading. -/
-abbrev john : ℕ := 2
+abbrev john : ℕ := 3
 /-- Peter's reading. -/
-abbrev peter : ℕ := 3
+abbrev peter : ℕ := 4
 /-- The reading of Jesus' words. -/
-abbrev jesus : ℕ := 4
-/-- James's reading, after the five corpora. -/
-abbrev james : ℕ := 5
+abbrev jesus : ℕ := 5
+/-- James's reading, after the corpora. -/
+abbrev james : ℕ := 6
 
 end Reading
 
 /-- Each reading's name points at its own line. -/
 theorem readings_named :
     (corpora ++ [jamesLine])[Reading.paul]? = some paulineLine ∧
+    (corpora ++ [jamesLine])[Reading.paulOnFaith]? = some paulineFaithLine ∧
     (corpora ++ [jamesLine])[Reading.hebrews]? = some hebrewsLine ∧
     (corpora ++ [jamesLine])[Reading.john]? = some johannineLine ∧
     (corpora ++ [jamesLine])[Reading.peter]? = some petrineLine ∧
     (corpora ++ [jamesLine])[Reading.jesus]? = some dominicalLine ∧
     (corpora ++ [jamesLine])[Reading.james]? = some jamesLine :=
-  ⟨rfl, rfl, rfl, rfl, rfl, rfl⟩
+  ⟨rfl, rfl, rfl, rfl, rfl, rfl, rfl⟩
 
 end Testimony.Arguments.CanonicalWitness

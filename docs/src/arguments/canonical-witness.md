@@ -26,25 +26,42 @@ and nothing turns on them.
 **The readings are where the argument is made.** Each corpus is a line whose
 single step reads its texts, and that step is cited and rated as a reading.
 Texts do not entail conclusions; readings do. And each corpus is made to
-deliver only what its own texts say. *Faith alone* is split into three parts:
+deliver only what its own texts say. Paul is read twice, because he says
+different things in different places: on works, and on faith. *Faith alone* is
+split into three parts:
 
-- that faith is **necessary** — Hebrews ("without faith it is impossible to
-  please God") and John ("whoever does not believe is condemned already");
-- that faith is **sufficient** — Paul, John, Peter and Jesus' words in Luke;
-- that works are **not the ground** — Paul, Peter at the Jerusalem council,
-  and Jesus' parable of the Pharisee and the tax collector.
+- that faith is **necessary** — Paul ("not justified by works of the law except
+  through faith", Galatians 2:16; "the righteous shall live by faith", 3:11),
+  Hebrews ("without faith it is impossible to please God") and John ("whoever
+  does not believe is condemned already");
+- that faith is **sufficient** — Paul ("to the one who does not work but
+  believes", Romans 4:5), John, Peter and Jesus' words in Luke;
+- that works are **not the ground** — Paul (Romans 3:28, Ephesians 2:9, Titus
+  3:5), Peter at the Jerusalem council, and Jesus' parable of the Pharisee and
+  the tax collector.
 
 No corpus carries more than its share, and no corpus is load-bearing: take any
 one reading away and the conclusion still follows. Two corpora are enough —
 Hebrews and Jesus' words. What an opponent must reject instead is computed,
 not chosen: the **opponent's burden** (`canonical_burden`) lists every minimal
 set of readings whose rejection overturns the case, and proves there is no
-other way. There are exactly two. To deny that works are not the ground, an
-opponent must reject three readings: Paul's, Peter's and Jesus'. To deny that
-faith is necessary, they must reject Hebrews' and John's — and Trent does not,
-since its chapter 8 calls faith "the beginning of human salvation … without
-which it is impossible to please God". Hebrews' reading is therefore rated
-`consensus`, and every other reading `disputed`.
+other way. There are exactly three, one for each part. To deny that works are
+not the ground, an opponent must reject three readings: Paul's on works,
+Peter's and Jesus'. To deny that faith is necessary, three: Paul's on faith,
+Hebrews' and John's — and Trent does not, since its chapter 8 reads the
+Apostle's "justified by faith" as faith "the beginning of human salvation …
+without which it is impossible to please God". To deny that faith suffices,
+four: Paul's on faith, John's, Peter's and Jesus'. That is the way Trent takes.
+Hebrews' reading is rated `consensus`, and every other reading `disputed`.
+
+**Paul on faith is stated on its own** (`paul_on_faith_establishes`): faith is
+necessary and sufficient, from Romans 4:4–5 and Galatians 2:16 and 3:11. It
+stands with James — every text of James, read with 2:14–17 as about faith
+without works, and without the contested demonstrative sense of "justified"
+(`paul_on_faith_stands_with_james`). And the harmony is shown to be a reading,
+not a given: read James's "that faith" (2:14) and "not by faith alone" (2:24)
+of faith as such, as Trent does, and the two cannot both be held
+(`james_against_sufficiency_contradicts_paul`).
 
 The burden is how this library lets several witnesses matter without counting
 them. Three corpora saying works are not the ground is not a score of three; it
@@ -110,31 +127,32 @@ it, the sense of "justified" in James 2:24.
 | \\(P_{1}\\) | Romans 3:28: a person is justified by faith apart from works of the law ※ | textual | Christian, historical-grammatical, consensus | Rom 3:28 |
 | \\(P_{2}\\) | Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness ※ | textual | Christian, historical-grammatical, consensus | Rom 4:4-5 |
 | \\(P_{3}\\) | Galatians 2:16: not justified by works of the law but through faith in Christ ※ | textual | Christian, historical-grammatical, consensus | Gal 2:16 |
-| \\(P_{4}\\) | Ephesians 2:8–9: saved by grace through faith, not of works ※ | textual | Christian, historical-grammatical, consensus | Eph 2:8-9 |
-| \\(P_{5}\\) | Titus 3:5: saved not by works done in righteousness but by his mercy ※ | textual | Christian, historical-grammatical, consensus | Titus 3:5 |
-| \\(P_{6}\\) | Hebrews 10:38–39: the righteous one shall live by faith ※ | textual | Christian, historical-grammatical, consensus | Heb 10:38-39 |
-| \\(P_{7}\\) | Hebrews 11:6: without faith it is impossible to please God ※ | textual | Christian, historical-grammatical, consensus | Heb 11:6 |
-| \\(P_{8}\\) | John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already ※ | textual | Christian, historical-grammatical, consensus | John 3:16-18 |
-| \\(P_{9}\\) | John 5:24: whoever hears and believes has eternal life and does not come into judgement ※ | textual | Christian, historical-grammatical, consensus | John 5:24 |
-| \\(P_{10}\\) | John 6:28–29: the work of God is that you believe in him whom he has sent ※ | textual | Christian, historical-grammatical, consensus | John 6:28-29 |
-| \\(P_{11}\\) | Acts 10:43: everyone who believes in him receives forgiveness of sins ※ | textual | Christian, historical-grammatical, consensus | Acts 10:43 |
-| \\(P_{12}\\) | Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus ※ | textual | Christian, historical-grammatical, consensus | Acts 15:10-11 |
-| \\(P_{13}\\) | Luke 7:50: your faith has saved you ※ | textual | Christian, historical-grammatical, consensus | Luke 7:50 |
-| \\(P_{14}\\) | Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified ※ | textual | Christian, historical-grammatical, consensus | Luke 18:9-14 |
-| \\(P_{15}\\) | James 2:14–17: faith by itself, if it does not have works, is dead ※ | textual | Christian, historical-grammatical, consensus | Jas 2:14-17 |
-| \\(P_{16}\\) | James 2:19: even the demons believe, and shudder ※ | textual | Christian, historical-grammatical, consensus | Jas 2:19 |
-| \\(P_{17}\\) | James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled ※ | textual | Christian, historical-grammatical, consensus | Jas 2:21-23 |
-| \\(P_{18}\\) | James 2:24: a person is justified by works and not by faith alone ※ | textual | Christian, historical-grammatical, consensus | Jas 2:24 |
-| \\(P_{19}\\) | Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ ※ | textual | Christian, historical-grammatical, consensus | Jude 1:20-21 |
-| \\(P_{20}\\) | Faith is necessary: no one is saved without it | theological | Christian, historical-grammatical, consensus | Heb 11:6; John 3:16-18; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8 |
-| \\(P_{21}\\) | Faith is sufficient: whoever believes is saved | theological | Reformed Protestant, disputed | Rom 4:4-5; John 5:24; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{22}\\) | Works are not the ground of justification | theological | Reformed Protestant, disputed | Rom 3:28; Eph 2:8-9; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{23}\\) | Justification is by faith alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19 |
-| \\(P_{24}\\) | Good works are the fruit and evidence of a true and lively faith | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2 |
-| \\(P_{25}\\) | Justification is by faith alone, by a faith that is never alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2 |
-| \\(P_{26}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{27}\\) | ‘Justified’ in James 2:24 is an increase of justification, by works done in grace | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24 |
-| \\(P_{28}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6 |
+| \\(P_{4}\\) | Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith ※ | textual | Christian, historical-grammatical, consensus | Gal 3:11 |
+| \\(P_{5}\\) | Ephesians 2:8–9: saved by grace through faith, not of works ※ | textual | Christian, historical-grammatical, consensus | Eph 2:8-9 |
+| \\(P_{6}\\) | Titus 3:5: saved not by works done in righteousness but by his mercy ※ | textual | Christian, historical-grammatical, consensus | Titus 3:5 |
+| \\(P_{7}\\) | Hebrews 10:38–39: the righteous one shall live by faith ※ | textual | Christian, historical-grammatical, consensus | Heb 10:38-39 |
+| \\(P_{8}\\) | Hebrews 11:6: without faith it is impossible to please God ※ | textual | Christian, historical-grammatical, consensus | Heb 11:6 |
+| \\(P_{9}\\) | John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already ※ | textual | Christian, historical-grammatical, consensus | John 3:16-18 |
+| \\(P_{10}\\) | John 5:24: whoever hears and believes has eternal life and does not come into judgement ※ | textual | Christian, historical-grammatical, consensus | John 5:24 |
+| \\(P_{11}\\) | John 6:28–29: the work of God is that you believe in him whom he has sent ※ | textual | Christian, historical-grammatical, consensus | John 6:28-29 |
+| \\(P_{12}\\) | Acts 10:43: everyone who believes in him receives forgiveness of sins ※ | textual | Christian, historical-grammatical, consensus | Acts 10:43 |
+| \\(P_{13}\\) | Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus ※ | textual | Christian, historical-grammatical, consensus | Acts 15:10-11 |
+| \\(P_{14}\\) | Luke 7:50: your faith has saved you ※ | textual | Christian, historical-grammatical, consensus | Luke 7:50 |
+| \\(P_{15}\\) | Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified ※ | textual | Christian, historical-grammatical, consensus | Luke 18:9-14 |
+| \\(P_{16}\\) | James 2:14–17: faith by itself, if it does not have works, is dead ※ | textual | Christian, historical-grammatical, consensus | Jas 2:14-17 |
+| \\(P_{17}\\) | James 2:19: even the demons believe, and shudder ※ | textual | Christian, historical-grammatical, consensus | Jas 2:19 |
+| \\(P_{18}\\) | James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled ※ | textual | Christian, historical-grammatical, consensus | Jas 2:21-23 |
+| \\(P_{19}\\) | James 2:24: a person is justified by works and not by faith alone ※ | textual | Christian, historical-grammatical, consensus | Jas 2:24 |
+| \\(P_{20}\\) | Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ ※ | textual | Christian, historical-grammatical, consensus | Jude 1:20-21 |
+| \\(P_{21}\\) | Faith is necessary: no one is saved without it | theological | Christian, historical-grammatical, consensus | Heb 11:6; John 3:16-18; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8 |
+| \\(P_{22}\\) | Faith is sufficient: whoever believes is saved | theological | Reformed Protestant, disputed | Rom 4:4-5; John 5:24; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
+| \\(P_{23}\\) | Works are not the ground of justification | theological | Reformed Protestant, disputed | Rom 3:28; Eph 2:8-9; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
+| \\(P_{24}\\) | Justification is by faith alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19 |
+| \\(P_{25}\\) | Good works are the fruit and evidence of a true and lively faith | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2 |
+| \\(P_{26}\\) | Justification is by faith alone, by a faith that is never alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2 |
+| \\(P_{27}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
+| \\(P_{28}\\) | ‘Justified’ in James 2:24 is an increase of justification, by works done in grace | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24 |
+| \\(P_{29}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6 |
 
 </div>
 
@@ -209,9 +227,12 @@ reading.
 
 A corpus delivers only what its texts say. Hebrews says faith is necessary, and
 nothing about works; the Johannine texts say faith is sufficient and necessary;
-Paul, Peter and Jesus say that works are not the ground and that faith is
-sufficient. *Faith alone* is the three together (`toFaithAlone`), so no corpus
-has to carry more than its own texts.
+Peter and Jesus say that works are not the ground and that faith is sufficient.
+Paul says all three, and he is read twice, because he says them in different
+places: on works (Romans 3:28, Ephesians 2:8–9, Titus 3:5), that works are not
+the ground; on faith (Romans 4:4–5, Galatians 2:16, 3:11), that faith is
+necessary and sufficient. *Faith alone* is the three together (`toFaithAlone`),
+so no reading has to carry more than its own texts.
 
 #### The readings, rated
 
@@ -223,7 +244,7 @@ beginning of salvation, "without which it is impossible to please God".
 <a id="paulineReadingSource"></a>
 **`paulineReadingSource`**
 
-The Pauline reading, cited to the Reformed exegesis, and to the first
+Paul's reading on works, cited to the Reformed exegesis, and to the first
 Christian writer outside the New Testament to say it: Clement of Rome, writing
 that we are justified "not by ourselves … nor by works which we have wrought in
 holiness of heart, but by that faith through which, from the beginning, Almighty
@@ -235,6 +256,30 @@ def paulineReadingSource : Source :=
     supporting :=
       [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.19"),
         Reference.work Bib.anf1 (Bib.Locus.sectionRef "1 Clement 32.4")],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="paulineFaithReadingSource"></a>
+**`paulineFaithReadingSource`**
+
+Paul's reading on faith: that it is necessary — "not justified by works of
+the law except through faith" (Galatians 2:16, ἐὰν μή), "the righteous shall
+live by faith" (3:11) — and sufficient — "to the one who does not work but
+believes … his faith is counted as righteousness" (Romans 4:5). Trent makes the
+first half of it: its chapter 8 reads the Apostle's "justified by faith" as
+faith "the beginning of human salvation, the foundation and root of all
+justification". It denies the second (canon 9), so the reading is
+`disputed`.
+
+```lean
+def paulineFaithReadingSource : Source :=
+  { primary := Reference.work Bib.schreinerFaithAlone,
+    supporting :=
+      [Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef
+            "Trent, Session VI (1547), Decree on Justification, ch. 8"),
+        Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.19")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 ```
@@ -324,6 +369,22 @@ def jamesReadingSource : Source :=
     confidence := Confidence.disputed }
 ```
 
+<a id="trentAgainstSufficiencySource"></a>
+**`trentAgainstSufficiencySource`**
+
+Trent's use of James 2:24 against faith alone: the verse it quotes in chapter
+10, against the sufficiency canon 9 denies.
+
+```lean
+def trentAgainstSufficiencySource : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef
+          "Trent, Session VI (1547), Decree on Justification, ch. 10 and canon 9"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
 <a id="trentOnJamesSource"></a>
 **`trentOnJamesSource`**
 
@@ -342,21 +403,41 @@ def trentOnJamesSource : Source :=
 #### The lines
 
 <a id="paulineLine"></a>
-**`paulineLine`** — Paul (Romans, Galatians, Ephesians, Titus)
+**`paulineLine`** — Paul, on works (Romans 3:28, Ephesians 2:8–9, Titus 3:5)
 
-**Paul**, read as canon: the undisputed letters with Ephesians and Titus,
-whoever wrote them.
+**Paul, on works**, read as canon: the undisputed letters with Ephesians and
+Titus, whoever wrote them. "Apart from works of the law" (Romans 3:28), "not of
+works" (Ephesians 2:9), "not by works done in righteousness" (Titus 3:5): works
+are not the ground.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\[4pt]
-\vdash \quad &amp; P_{22} \land P_{21}
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\[4pt]
+\vdash \quad &amp; P_{23}
+\end{aligned}
+\]
+</div>
+
+<a id="paulineFaithLine"></a>
+**`paulineFaithLine`** — Paul, on faith (Romans 4:4–5, Galatians 2:16, 3:11)
+
+**Paul, on faith**: faith is necessary — no one is justified except through
+it (Galatians 2:16, 3:11) — and sufficient — to the one who does not work but
+believes, faith is counted as righteousness (Romans 4:4–5). Paul's own message,
+stated apart from what he says about works.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{2} \\
+\text{(2)} \quad &amp; P_{3} \\
+\text{(3)} \quad &amp; P_{4} \\
+\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\[4pt]
+\vdash \quad &amp; P_{21} \land P_{22}
 \end{aligned}
 \]
 </div>
@@ -369,10 +450,10 @@ whoever wrote them.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{6} \\
-\text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\[4pt]
-\vdash \quad &amp; P_{20}
+\text{(1)} \quad &amp; P_{7} \\
+\text{(2)} \quad &amp; P_{8} \\
+\text{(3)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\[4pt]
+\vdash \quad &amp; P_{21}
 \end{aligned}
 \]
 </div>
@@ -386,11 +467,11 @@ already.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; P_{10} \\
-\text{(4)} \quad &amp; (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\[4pt]
-\vdash \quad &amp; P_{21} \land P_{20}
+\text{(1)} \quad &amp; P_{9} \\
+\text{(2)} \quad &amp; P_{10} \\
+\text{(3)} \quad &amp; P_{11} \\
+\text{(4)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\[4pt]
+\vdash \quad &amp; P_{22} \land P_{21}
 \end{aligned}
 \]
 </div>
@@ -404,10 +485,10 @@ salvation through grace, without the yoke.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{11} \\
-\text{(2)} \quad &amp; P_{12} \\
-\text{(3)} \quad &amp; (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\[4pt]
-\vdash \quad &amp; P_{21} \land P_{22}
+\text{(1)} \quad &amp; P_{12} \\
+\text{(2)} \quad &amp; P_{13} \\
+\text{(3)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\[4pt]
+\vdash \quad &amp; P_{22} \land P_{23}
 \end{aligned}
 \]
 </div>
@@ -421,10 +502,10 @@ who went home justified.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{13} \\
-\text{(2)} \quad &amp; P_{14} \\
-\text{(3)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\[4pt]
-\vdash \quad &amp; P_{21} \land P_{22}
+\text{(1)} \quad &amp; P_{14} \\
+\text{(2)} \quad &amp; P_{15} \\
+\text{(3)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\[4pt]
+\vdash \quad &amp; P_{22} \land P_{23}
 \end{aligned}
 \]
 </div>
@@ -436,7 +517,7 @@ The three parts, together, are *faith alone*.
 
 <div class="testimony-math">
 \[
-(P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23}
+(P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24}
 \]
 </div>
 
@@ -451,15 +532,15 @@ righteousness. So works are the fruit of saving faith, not its ground.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{16} \\
-\text{(3)} \quad &amp; P_{17} \\
-\text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{26} \\
-\text{(6)} \quad &amp; P_{27} \\
-\text{(7)} \quad &amp; P_{28} \\
-\text{(8)} \quad &amp; (P_{15} \land P_{17} \land P_{26} \land P_{27} \land P_{28}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
+\text{(1)} \quad &amp; P_{16} \\
+\text{(2)} \quad &amp; P_{17} \\
+\text{(3)} \quad &amp; P_{18} \\
+\text{(4)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{27} \\
+\text{(6)} \quad &amp; P_{28} \\
+\text{(7)} \quad &amp; P_{29} \\
+\text{(8)} \quad &amp; (P_{16} \land P_{18} \land P_{27} \land P_{28} \land P_{29}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{25}
 \end{aligned}
 \]
 </div>
@@ -471,7 +552,7 @@ Faith alone, with its fruit, is faith that is never alone.
 
 <div class="testimony-math">
 \[
-(P_{23} \land P_{24}) \rightarrow P_{25}
+(P_{24} \land P_{25}) \rightarrow P_{26}
 \]
 </div>
 
@@ -484,7 +565,23 @@ its ground, and faith alone is denied.
 
 <div class="testimony-math">
 \[
-(P_{18} \land \lnot P_{27}) \rightarrow \lnot P_{22}
+(P_{19} \land \lnot P_{28}) \rightarrow \lnot P_{23}
+\]
+</div>
+
+<a id="jamesAgainstSufficiency"></a>
+**`jamesAgainstSufficiency`**
+
+**Trent's reading of James against sufficiency.** James says faith without
+works is dead and cannot save (2:14–17), and that a person is justified "not by
+faith alone" (2:24); read of faith as such, that denies that faith suffices.
+The rival to the reading on which James and Paul cohere: there, the faith that
+cannot save is the faith 2:14–17 describes, faith without works
+(`james2TargetsDeadFaith`).
+
+<div class="testimony-math">
+\[
+(P_{16} \land P_{19}) \rightarrow \lnot P_{22}
 \]
 </div>
 
@@ -495,18 +592,19 @@ And what follows from that: not faith alone.
 
 <div class="testimony-math">
 \[
-\lnot P_{22} \rightarrow \lnot P_{23}
+\lnot P_{23} \rightarrow \lnot P_{24}
 \]
 </div>
 
 <a id="corpora"></a>
 **`corpora`**
 
-The five corpora.
+The corpora, one reading each, Paul's two readings first.
 
 ```lean
 def corpora : List (Line Claim) :=
   [paulineLine,
+    paulineFaithLine,
     hebrewsLine,
     johannineLine,
     petrineLine,
@@ -516,7 +614,7 @@ def corpora : List (Line Claim) :=
 #### The readings, by name
 
 What an opponent can reject is a corpus's reading. The burden numbers the
-readings by their place among the lines — the five corpora, then James — and
+readings by their place among the lines — the corpora, then James — and
 these names say which is which, so every burden below reads as the corpora it
 concerns. `readings_named` checks each name against its line.
 
@@ -527,7 +625,8 @@ Each reading's name points at its own line.
 
 ```lean
 theorem readings_named : (corpora ++ [jamesLine])[Reading.paul]? = some
-    paulineLine ∧ (corpora ++ [jamesLine])[Reading.hebrews]? = some
+    paulineLine ∧ (corpora ++ [jamesLine])[Reading.paulOnFaith]? = some
+    paulineFaithLine ∧ (corpora ++ [jamesLine])[Reading.hebrews]? = some
     hebrewsLine ∧ (corpora ++ [jamesLine])[Reading.john]? = some johannineLine
     ∧ (corpora ++ [jamesLine])[Reading.peter]? = some petrineLine ∧ (corpora
     ++ [jamesLine])[Reading.jesus]? = some dominicalLine ∧ (corpora ++
@@ -559,11 +658,11 @@ holds all of them.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -576,7 +675,8 @@ holds all of them.
 \text{(16)} \quad &amp; P_{16} \\
 \text{(17)} \quad &amp; P_{17} \\
 \text{(18)} \quad &amp; P_{18} \\
-\text{(19)} \quad &amp; P_{19}
+\text{(19)} \quad &amp; P_{19} \\
+\text{(20)} \quad &amp; P_{20}
 \end{aligned}
 \]
 </div>
@@ -593,11 +693,11 @@ So works are part of the ground, and faith alone is denied.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -611,15 +711,16 @@ So works are part of the ground, and faith alone is denied.
 \text{(17)} \quad &amp; P_{17} \\
 \text{(18)} \quad &amp; P_{18} \\
 \text{(19)} \quad &amp; P_{19} \\
-\text{(20)} \quad &amp; \lnot P_{27} \\
-\text{(21)} \quad &amp; (P_{18} \land \lnot P_{27}) \rightarrow \lnot P_{22} \\
-\text{(22)} \quad &amp; \lnot P_{22} \rightarrow \lnot P_{23} \\[4pt]
-\vdash \quad &amp; \lnot P_{23}
+\text{(20)} \quad &amp; P_{20} \\
+\text{(21)} \quad &amp; \lnot P_{28} \\
+\text{(22)} \quad &amp; (P_{19} \land \lnot P_{28}) \rightarrow \lnot P_{23} \\
+\text{(23)} \quad &amp; \lnot P_{23} \rightarrow \lnot P_{24} \\[4pt]
+\vdash \quad &amp; \lnot P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
 
 <a id="canonicalCase"></a>
 **`canonicalCase`** — The canonical witness to faith alone
@@ -631,11 +732,11 @@ three parts of faith alone put together.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -644,18 +745,20 @@ three parts of faith alone put together.
 \text{(12)} \quad &amp; P_{12} \\
 \text{(13)} \quad &amp; P_{13} \\
 \text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-\text{(16)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-\text{(18)} \quad &amp; (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-\text{(19)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-\text{(20)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
+\text{(18)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
+\text{(20)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
+\text{(21)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
+\text{(22)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 
 <a id="canonicalWithJames"></a>
 **`canonicalWithJames`** — The canonical witness, with James
@@ -668,11 +771,11 @@ It concludes the Reformed formula — faith alone, but a faith never alone.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -685,41 +788,43 @@ It concludes the Reformed formula — faith alone, but a faith never alone.
 \text{(16)} \quad &amp; P_{16} \\
 \text{(17)} \quad &amp; P_{17} \\
 \text{(18)} \quad &amp; P_{18} \\
-\text{(19)} \quad &amp; P_{26} \\
+\text{(19)} \quad &amp; P_{19} \\
 \text{(20)} \quad &amp; P_{27} \\
 \text{(21)} \quad &amp; P_{28} \\
-\text{(22)} \quad &amp; P_{19} \\
-\text{(23)} \quad &amp; (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-\text{(24)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\
-\text{(25)} \quad &amp; (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-\text{(26)} \quad &amp; (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-\text{(27)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-\text{(28)} \quad &amp; (P_{15} \land P_{17} \land P_{26} \land P_{27} \land P_{28}) \rightarrow P_{24} \\
-\text{(29)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-\text{(30)} \quad &amp; (P_{23} \land P_{24}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
+\text{(22)} \quad &amp; P_{29} \\
+\text{(23)} \quad &amp; P_{20} \\
+\text{(24)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
+\text{(25)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
+\text{(26)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(27)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
+\text{(28)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
+\text{(29)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
+\text{(30)} \quad &amp; (P_{16} \land P_{18} \land P_{27} \land P_{28} \land P_{29}) \rightarrow P_{25} \\
+\text{(31)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\
+\text{(32)} \quad &amp; (P_{24} \land P_{25}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{26}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
 
 #### One corpus's reading rejected
 
 <a id="withoutPaul"></a>
-**`withoutPaul`** — The canonical witness, without Paul's reading
+**`withoutPaul`** — The canonical witness, without Paul's readings
 
-Without Paul's reading.
+Without Paul: both his readings, on works and on faith.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -728,17 +833,18 @@ Without Paul's reading.
 \text{(12)} \quad &amp; P_{12} \\
 \text{(13)} \quad &amp; P_{13} \\
 \text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\
-\text{(16)} \quad &amp; (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-\text{(17)} \quad &amp; (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-\text{(18)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-\text{(19)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(17)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
+\text{(18)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
+\text{(19)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
+\text{(20)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 
 <a id="withoutHebrews"></a>
 **`withoutHebrews`** — The canonical witness, without Hebrews' reading
@@ -749,11 +855,11 @@ Without Hebrews' reading.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -762,17 +868,19 @@ Without Hebrews' reading.
 \text{(12)} \quad &amp; P_{12} \\
 \text{(13)} \quad &amp; P_{13} \\
 \text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-\text{(16)} \quad &amp; (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-\text{(17)} \quad &amp; (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-\text{(18)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-\text{(19)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
+\text{(19)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
+\text{(20)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
+\text{(21)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 
 <a id="withoutJohn"></a>
 **`withoutJohn`** — The canonical witness, without John's reading
@@ -783,11 +891,11 @@ Without John's reading.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -796,17 +904,19 @@ Without John's reading.
 \text{(12)} \quad &amp; P_{12} \\
 \text{(13)} \quad &amp; P_{13} \\
 \text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-\text{(16)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-\text{(18)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-\text{(19)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
+\text{(18)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(19)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
+\text{(20)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
+\text{(21)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 
 <a id="withoutPeter"></a>
 **`withoutPeter`** — The canonical witness, without Peter's reading
@@ -817,11 +927,11 @@ Without Peter's reading.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -830,17 +940,19 @@ Without Peter's reading.
 \text{(12)} \quad &amp; P_{12} \\
 \text{(13)} \quad &amp; P_{13} \\
 \text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-\text{(16)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-\text{(18)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-\text{(19)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
+\text{(18)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
+\text{(20)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
+\text{(21)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 
 <a id="withoutJesus"></a>
 **`withoutJesus`** — The canonical witness, without the reading of Jesus' words
@@ -851,11 +963,11 @@ Without the reading of Jesus' words.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -864,35 +976,37 @@ Without the reading of Jesus' words.
 \text{(12)} \quad &amp; P_{12} \\
 \text{(13)} \quad &amp; P_{13} \\
 \text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-\text{(16)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\
-\text{(17)} \quad &amp; (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-\text{(18)} \quad &amp; (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-\text{(19)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
+\text{(18)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
+\text{(20)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
+\text{(21)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 
 #### The opponent's two ways
 
 <a id="withoutTheWorksWitnesses"></a>
-**`withoutTheWorksWitnesses`** — The canonical witness, without Paul's, Peter's and Jesus' readings
+**`withoutTheWorksWitnesses`** — The canonical witness, without Paul's on works, Peter's and Jesus' readings
 
-Without the three readings that say works are not the ground — Paul's,
-Peter's and Jesus'.
+Without the three readings that say works are not the ground — Paul's on
+works, Peter's and Jesus'.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -901,31 +1015,33 @@ Peter's and Jesus'.
 \text{(12)} \quad &amp; P_{12} \\
 \text{(13)} \quad &amp; P_{13} \\
 \text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\
-\text{(16)} \quad &amp; (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-\text{(17)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
+\text{(17)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
+\text{(19)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 
 <a id="withoutTheNecessityWitnesses"></a>
-**`withoutTheNecessityWitnesses`** — The canonical witness, without Hebrews' and John's readings
+**`withoutTheNecessityWitnesses`** — The canonical witness, without Paul's on faith, Hebrews' and John's readings
 
-Without the two readings that say faith is necessary — Hebrews' and
-John's.
+Without the three readings that say faith is necessary — Paul's on faith,
+Hebrews' and John's.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -934,16 +1050,51 @@ John's.
 \text{(12)} \quad &amp; P_{12} \\
 \text{(13)} \quad &amp; P_{13} \\
 \text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-\text{(16)} \quad &amp; (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-\text{(17)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-\text{(18)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
+\text{(18)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
+\text{(19)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+
+<a id="withoutTheSufficiencyWitnesses"></a>
+**`withoutTheSufficiencyWitnesses`** — The canonical witness, without Paul's on faith, John's, Peter's and Jesus' readings
+
+Without the four readings that say faith is sufficient — Paul's on faith,
+John's, Peter's and Jesus'.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{1} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
+\text{(7)} \quad &amp; P_{7} \\
+\text{(8)} \quad &amp; P_{8} \\
+\text{(9)} \quad &amp; P_{9} \\
+\text{(10)} \quad &amp; P_{10} \\
+\text{(11)} \quad &amp; P_{11} \\
+\text{(12)} \quad &amp; P_{12} \\
+\text{(13)} \quad &amp; P_{13} \\
+\text{(14)} \quad &amp; P_{14} \\
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
+\text{(17)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(18)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 
 <a id="hebrewsAndJesus"></a>
 **`hebrewsAndJesus`** — Hebrews and Jesus' words alone
@@ -955,11 +1106,11 @@ Peter's readings rejected.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -968,15 +1119,16 @@ Peter's readings rejected.
 \text{(12)} \quad &amp; P_{12} \\
 \text{(13)} \quad &amp; P_{13} \\
 \text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\
-\text{(16)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-\text{(17)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
+\text{(15)} \quad &amp; P_{15} \\
+\text{(16)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(17)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
+\text{(18)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
+\vdash \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 
 #### James without its hinge
 
@@ -990,14 +1142,14 @@ distinction between justification and sanctification, but not the sense of
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{16} \\
-\text{(3)} \quad &amp; P_{17} \\
-\text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{26} \\
-\text{(6)} \quad &amp; P_{28} \\
-\text{(7)} \quad &amp; (P_{15} \land P_{17} \land P_{26} \land P_{27} \land P_{28}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
+\text{(1)} \quad &amp; P_{16} \\
+\text{(2)} \quad &amp; P_{17} \\
+\text{(3)} \quad &amp; P_{18} \\
+\text{(4)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{27} \\
+\text{(6)} \quad &amp; P_{29} \\
+\text{(7)} \quad &amp; (P_{16} \land P_{18} \land P_{27} \land P_{28} \land P_{29}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{25}
 \end{aligned}
 \]
 </div>
@@ -1011,11 +1163,11 @@ The canonical witness with James, on that reading.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; P_{5} \\
-\text{(6)} \quad &amp; P_{6} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{6} \\
+\text{(4)} \quad &amp; P_{2} \\
+\text{(5)} \quad &amp; P_{3} \\
+\text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{7} \\
 \text{(8)} \quad &amp; P_{8} \\
 \text{(9)} \quad &amp; P_{9} \\
@@ -1028,23 +1180,74 @@ The canonical witness with James, on that reading.
 \text{(16)} \quad &amp; P_{16} \\
 \text{(17)} \quad &amp; P_{17} \\
 \text{(18)} \quad &amp; P_{18} \\
-\text{(19)} \quad &amp; P_{26} \\
-\text{(20)} \quad &amp; P_{28} \\
-\text{(21)} \quad &amp; P_{19} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-\text{(23)} \quad &amp; (P_{6} \land P_{7}) \rightarrow P_{20} \\
-\text{(24)} \quad &amp; (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-\text{(25)} \quad &amp; (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-\text{(26)} \quad &amp; (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-\text{(27)} \quad &amp; (P_{15} \land P_{17} \land P_{26} \land P_{27} \land P_{28}) \rightarrow P_{24} \\
-\text{(28)} \quad &amp; (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-\text{(29)} \quad &amp; (P_{23} \land P_{24}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
+\text{(19)} \quad &amp; P_{19} \\
+\text{(20)} \quad &amp; P_{27} \\
+\text{(21)} \quad &amp; P_{29} \\
+\text{(22)} \quad &amp; P_{20} \\
+\text{(23)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
+\text{(24)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
+\text{(25)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
+\text{(26)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
+\text{(27)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
+\text{(28)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
+\text{(29)} \quad &amp; (P_{16} \land P_{18} \land P_{27} \land P_{28} \land P_{29}) \rightarrow P_{25} \\
+\text{(30)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\
+\text{(31)} \quad &amp; (P_{24} \land P_{25}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{26}
 \end{aligned}
 \]
 </div>
 
-Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
+Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
+
+#### Paul on faith, on its own
+
+Paul's message about faith, apart from what he says about works: faith is
+necessary, and it is sufficient. Stated as its own position, so it can be set
+beside James and asked whether the two cohere — and so the answer can say what
+it rests on.
+
+<a id="paulOnFaith"></a>
+**`paulOnFaith`** — Paul: faith is necessary and sufficient
+
+**Paul: faith is necessary and sufficient.** Romans 4:4–5, Galatians 2:16
+and 3:11, read as Paul's own claim about faith.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{2} \\
+\text{(2)} \quad &amp; P_{3} \\
+\text{(3)} \quad &amp; P_{4} \\
+\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\[4pt]
+\vdash \quad &amp; P_{21} \land P_{22}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith.
+
+<a id="jamesReadAgainstSufficiency"></a>
+**`jamesReadAgainstSufficiency`** — James read against the sufficiency of faith
+
+**James read against sufficiency**, as Trent reads him: every text of James,
+with "that faith" in 2:14 and "not by faith alone" in 2:24 taken of faith as
+such. Then faith does not suffice.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{16} \\
+\text{(2)} \quad &amp; P_{17} \\
+\text{(3)} \quad &amp; P_{18} \\
+\text{(4)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; (P_{16} \land P_{19}) \rightarrow \lnot P_{22} \\[4pt]
+\vdash \quad &amp; \lnot P_{22}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone.
 
 ## Arguments.CanonicalWitness.Results — what the canonical witness establishes
 
@@ -1163,38 +1366,46 @@ instance of the burden, and is proved from it.
 <a id="canonical_burden"></a>
 **`canonical_burden`**
 
-**The opponent's burden against the canonical witness.** To overturn it, an
-opponent must reject Paul's, Peter's and Jesus' readings together — the three
-that say works are not the ground — or Hebrews' and John's together, the two
-that say faith is necessary. Nothing less overturns it, and nothing else does.
+**The opponent's burden against the canonical witness.** There are exactly
+three ways to overturn it, one for each part of faith alone:
 
-Trent does not take the second way. Its Decree on Justification calls faith the
-beginning of salvation, "without which it is impossible to please God", so
-Hebrews' reading is one it makes itself. That leaves the first: three readings,
-of three corpora, each rejected.
+- reject the three readings that say works are not the ground — Paul's on
+  works, Peter's and Jesus';
+- or the three that say faith is necessary — Paul's on faith, Hebrews' and
+  John's;
+- or the four that say faith is sufficient — Paul's on faith, John's, Peter's
+  and Jesus'.
+
+Nothing less overturns it, and nothing else does. Trent does not take the second
+way: its Decree on Justification reads the Apostle's "justified by faith" as
+faith "the beginning of human salvation … without which it is impossible to
+please God".
 
 ```lean
 theorem canonical_burden : OpponentsBurden canonicalCase corpora []
     [toFaithAlone] [[Reading.paul, Reading.peter, Reading.jesus],
-    [Reading.hebrews, Reading.john]]
+    [Reading.paulOnFaith, Reading.hebrews, Reading.john],
+    [Reading.paulOnFaith, Reading.john, Reading.peter, Reading.jesus]]
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
 **What an opponent must reject.** *The canonical witness to faith alone* concludes that justification is by faith alone. That conclusion is overturned exactly when every reading in one of these sets is rejected. Each set is minimal, and no other rejection overturns it:
 
-1. *Paul (Romans, Galatians, Ephesians, Titus)* (disputed); *Peter (Acts 10 and 15)* (disputed); *Jesus (Luke 7 and 18)* (disputed)
-2. *Hebrews* (consensus); *John* (disputed)
+1. *Paul, on works (Romans 3:28, Ephesians 2:8–9, Titus 3:5)* (disputed); *Peter (Acts 10 and 15)* (disputed); *Jesus (Luke 7 and 18)* (disputed)
+2. *Paul, on faith (Romans 4:4–5, Galatians 2:16, 3:11)* (disputed); *Hebrews* (consensus); *John* (disputed)
+3. *Paul, on faith (Romans 4:4–5, Galatians 2:16, 3:11)* (disputed); *John* (disputed); *Peter (Acts 10 and 15)* (disputed); *Jesus (Luke 7 and 18)* (disputed)
 
 #### No single corpus carries it
 
-Every set in the burden holds more than one reading, so no single rejection
-overturns the case. Here is each corpus, taken away in turn.
+Every set in the burden holds more than one corpus, so no single corpus's
+rejection overturns the case. Here is each, taken away in turn.
 
 <a id="paul_not_load_bearing"></a>
 **`paul_not_load_bearing`**
 
-**Paul's reading is not load-bearing.** Reject it, and Peter and Jesus
-still say that works are not the ground.
+**Paul is not load-bearing.** Reject both his readings, and Peter and Jesus
+still say that works are not the ground, Hebrews and John that faith is
+necessary, and John, Peter and Jesus that it suffices.
 
 ```lean
 theorem paul_not_load_bearing : Establishes withoutPaul
@@ -1204,7 +1415,7 @@ theorem paul_not_load_bearing : Establishes withoutPaul
 <a id="hebrews_not_load_bearing"></a>
 **`hebrews_not_load_bearing`**
 
-**Nor is Hebrews'.** John says faith is necessary too.
+**Nor is Hebrews.** Paul and John say faith is necessary too.
 
 ```lean
 theorem hebrews_not_load_bearing : Establishes withoutHebrews
@@ -1214,8 +1425,8 @@ theorem hebrews_not_load_bearing : Establishes withoutHebrews
 <a id="john_not_load_bearing"></a>
 **`john_not_load_bearing`**
 
-**Nor is John's.** Hebrews says faith is necessary, and three corpora say
-it is sufficient.
+**Nor is John.** Paul and Hebrews say faith is necessary, and Paul, Peter
+and Jesus that it is sufficient.
 
 ```lean
 theorem john_not_load_bearing : Establishes withoutJohn
@@ -1225,7 +1436,7 @@ theorem john_not_load_bearing : Establishes withoutJohn
 <a id="peter_not_load_bearing"></a>
 **`peter_not_load_bearing`**
 
-**Nor is Peter's.** Paul and Jesus still say that works are not the
+**Nor is Peter.** Paul and Jesus still say that works are not the
 ground.
 
 ```lean
@@ -1236,8 +1447,8 @@ theorem peter_not_load_bearing : Establishes withoutPeter
 <a id="jesus_not_load_bearing"></a>
 **`jesus_not_load_bearing`**
 
-**Nor is the reading of Jesus' words.** Paul and Peter still say that
-works are not the ground.
+**Nor are Jesus' words.** Paul and Peter still say that works are not the
+ground.
 
 ```lean
 theorem jesus_not_load_bearing : Establishes withoutJesus
@@ -1317,7 +1528,7 @@ theorem hebrewsAndJesus_is_satisfiable : Satisfiable hebrewsAndJesus.premises
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-#### The two ways, each written down
+#### The three ways, each written down
 
 Each way of overturning the case is a world an opponent could stand in: every
 text true, the readings of the other corpora granted, and faith alone false.
@@ -1326,9 +1537,9 @@ Naming that world is what makes the burden concrete.
 <a id="noWorksWitnessReading"></a>
 **`noWorksWitnessReading`**
 
-The first way: grant every text, and Hebrews' and John's readings, but none
-of Paul's, Peter's or Jesus'. Faith is necessary and sufficient, but works are
-not shown not to be the ground.
+The first way: grant every text and every reading on faith, but none of
+Paul's on works, Peter's or Jesus'. Faith is necessary and sufficient, but
+works are not shown not to be the ground.
 
 ```lean
 def noWorksWitnessReading : Valuation Claim :=
@@ -1343,9 +1554,8 @@ def noWorksWitnessReading : Valuation Claim :=
 **`works_witnesses_jointly_load_bearing`**
 
 **To deny that works are not the ground, an opponent must reject three
-readings** — Paul's, Peter's and Jesus'. With all three rejected, faith alone
-no longer follows; with any one kept, it does (`paul_not_load_bearing`,
-`peter_not_load_bearing`, `jesus_not_load_bearing`).
+readings** — Paul's on works, Peter's and Jesus'. With all three rejected,
+faith alone no longer follows; with any one kept, it does.
 
 ```lean
 theorem works_witnesses_jointly_load_bearing : ¬Establishes
@@ -1356,9 +1566,9 @@ theorem works_witnesses_jointly_load_bearing : ¬Establishes
 <a id="noNecessityWitnessReading"></a>
 **`noNecessityWitnessReading`**
 
-The second way: grant every text, and Paul's, Peter's and Jesus' readings,
-but neither Hebrews' nor John's. Faith is sufficient and works are not the
-ground, but faith is not shown to be necessary.
+The second way: grant every text, but not Paul's reading on faith, nor
+Hebrews', nor John's. Faith is sufficient and works are not the ground, but
+faith is not shown to be necessary.
 
 ```lean
 def noNecessityWitnessReading : Valuation Claim :=
@@ -1372,10 +1582,11 @@ def noNecessityWitnessReading : Valuation Claim :=
 <a id="necessity_witnesses_jointly_load_bearing"></a>
 **`necessity_witnesses_jointly_load_bearing`**
 
-**To deny that faith is necessary, an opponent must reject two readings** —
-Hebrews' and John's. Trent does not: it calls faith the beginning of
-salvation, without which it is impossible to please God. That part of faith
-alone is common ground.
+**To deny that faith is necessary, an opponent must reject three
+readings** — Paul's on faith, Hebrews' and John's. Trent does not: it reads
+Paul's "justified by faith" as faith the foundation of justification, without
+which it is impossible to please God. That part of faith alone is common
+ground.
 
 ```lean
 theorem necessity_witnesses_jointly_load_bearing : ¬Establishes
@@ -1383,28 +1594,59 @@ theorem necessity_witnesses_jointly_load_bearing : ¬Establishes
 -- axioms: propext, Quot.sound
 ```
 
+<a id="noSufficiencyWitnessReading"></a>
+**`noSufficiencyWitnessReading`**
+
+The third way: grant every text, but not Paul's reading on faith, nor
+John's, Peter's or Jesus'. Faith is necessary and works are not the ground, but
+faith is not shown to suffice.
+
+```lean
+def noSufficiencyWitnessReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
+    | x => True
+```
+
+<a id="sufficiency_witnesses_jointly_load_bearing"></a>
+**`sufficiency_witnesses_jointly_load_bearing`**
+
+**To deny that faith suffices, an opponent must reject four readings** —
+Paul's on faith, John's, Peter's and Jesus'. This is the way Trent takes
+(canon 9), and the widest of the three: four corpora say it.
+
+```lean
+theorem sufficiency_witnesses_jointly_load_bearing : ¬Establishes
+    withoutTheSufficiencyWitnesses
+-- axioms: propext, Quot.sound
+```
+
 <a id="canonicalWithJames_burden"></a>
 **`canonicalWithJames_burden`**
 
 **The opponent's burden against the canonical witness with James.** The
-two ways of overturning faith alone remain, and a third is added for the
-Reformed formula: rejecting James's reading alone. That set has one reading
-in it — James is the formula's single point of failure, as he is its only
-witness that works are the fruit of faith.
+three ways of overturning faith alone remain, and a fourth is added for the
+Reformed formula: rejecting James's reading alone. That set has one reading in
+it — James is the formula's single point of failure, as he is its only witness
+that works are the fruit of faith.
 
 ```lean
 theorem canonicalWithJames_burden : OpponentsBurden canonicalWithJames
     (corpora ++ [jamesLine]) [p Claim.jude20_21] [toFaithAlone, toNeverAlone]
-    [[Reading.paul, Reading.peter, Reading.jesus], [Reading.hebrews,
-    Reading.john], [Reading.james]]
+    [[Reading.paul, Reading.peter, Reading.jesus], [Reading.paulOnFaith,
+    Reading.hebrews, Reading.john], [Reading.paulOnFaith, Reading.john,
+    Reading.peter, Reading.jesus], [Reading.james]]
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
 **What an opponent must reject.** *The canonical witness, with James* concludes that justification is by faith alone, by a faith never alone. That conclusion is overturned exactly when every reading in one of these sets is rejected. Each set is minimal, and no other rejection overturns it:
 
-1. *Paul (Romans, Galatians, Ephesians, Titus)* (disputed); *Peter (Acts 10 and 15)* (disputed); *Jesus (Luke 7 and 18)* (disputed)
-2. *Hebrews* (consensus); *John* (disputed)
-3. *James 2* (disputed)
+1. *Paul, on works (Romans 3:28, Ephesians 2:8–9, Titus 3:5)* (disputed); *Peter (Acts 10 and 15)* (disputed); *Jesus (Luke 7 and 18)* (disputed)
+2. *Paul, on faith (Romans 4:4–5, Galatians 2:16, 3:11)* (disputed); *Hebrews* (consensus); *John* (disputed)
+3. *Paul, on faith (Romans 4:4–5, Galatians 2:16, 3:11)* (disputed); *John* (disputed); *Peter (Acts 10 and 15)* (disputed); *Jesus (Luke 7 and 18)* (disputed)
+4. *James 2* (disputed)
 
 #### James
 
@@ -1438,6 +1680,121 @@ theorem james_demonstrative_is_load_bearing : ¬Establishes
 -- axioms: propext, Quot.sound
 ```
 
+#### Paul on faith, beside James
+
+Paul's message about faith, stated on its own: faith is necessary and it is
+sufficient. Does James contradict it? Not on its texts: none of them says
+either. It turns on one reading — of whom James says "can that faith save
+him?" (2:14).
+
+<a id="paul_on_faith_establishes"></a>
+**`paul_on_faith_establishes`**
+
+**Paul: faith is necessary and sufficient.** From Romans 4:4–5 and
+Galatians 2:16 and 3:11 alone, on Paul's reading of them.
+
+```lean
+theorem paul_on_faith_establishes : Establishes paulOnFaith
+-- axioms: propext, Quot.sound
+```
+
+<a id="paulOnFaith_is_satisfiable"></a>
+**`paulOnFaith_is_satisfiable`**
+
+Paul's claim about faith has a model.
+
+```lean
+theorem paulOnFaith_is_satisfiable : Satisfiable paulOnFaith.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="paulWithJamesPlainlyReading"></a>
+**`paulWithJamesPlainlyReading`**
+
+James's world read plainly, beside Paul's: every text of James true, the
+faith James calls dead is faith without works, justification and sanctification
+distinct — and "justified" in 2:21–24 given its ordinary sense, not the
+demonstrative one. Faith is necessary and sufficient.
+
+```lean
+def paulWithJamesPlainlyReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.jamesJustifiesDemonstratively => False
+    | Claim.worksAreFruitOfFaith => False
+    | Claim.faithAloneNeverAlone => False
+    | x => True
+```
+
+<a id="paul_on_faith_stands_with_james"></a>
+**`paul_on_faith_stands_with_james`**
+
+**Paul's claim about faith stands with James.** Every text of James, the
+reading of 2:14–17 as about faith without works, and the distinction between
+justification and sanctification can all be held with faith necessary and
+sufficient — and without the demonstrative sense of "justified" on which James
+and Trent part. The harmony does not rest on that contested sense.
+
+```lean
+theorem paul_on_faith_stands_with_james : Satisfiable (paulOnFaith.premises ++
+    [paulOnFaith.conclusion] ++ jamesWithoutDemonstrative.premises)
+-- axioms: propext, Quot.sound
+```
+
+<a id="jamesAgainstSufficiencyReading"></a>
+**`jamesAgainstSufficiencyReading`**
+
+The world of James read against sufficiency: every text of James true, and
+faith, as such, not enough.
+
+```lean
+def jamesAgainstSufficiencyReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.faithAloneNeverAlone => False
+    | x => True
+```
+
+<a id="jamesReadAgainstSufficiency_is_satisfiable"></a>
+**`jamesReadAgainstSufficiency_is_satisfiable`**
+
+James read against sufficiency has a model: the rival is coherent.
+
+```lean
+theorem jamesReadAgainstSufficiency_is_satisfiable : Satisfiable
+    jamesReadAgainstSufficiency.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="jamesReadAgainstSufficiency_establishes"></a>
+**`jamesReadAgainstSufficiency_establishes`**
+
+The rival reading establishes what it says: faith does not suffice.
+
+```lean
+theorem jamesReadAgainstSufficiency_establishes : Establishes
+    jamesReadAgainstSufficiency
+-- axioms: propext, Quot.sound
+```
+
+<a id="james_against_sufficiency_contradicts_paul"></a>
+**`james_against_sufficiency_contradicts_paul`**
+
+**What the harmony rests on.** Read "that faith" in James 2:14 and "not by
+faith alone" in 2:24 of faith as such, as Trent does, and James and Paul's
+claim about faith cannot both be held. So the harmony is a reading, not a
+given: it rests on the faith James says cannot save being the faith 2:14–17
+describes — faith without works — which is `james2TargetsDeadFaith`, cited to
+Moo and Johnson.
+
+```lean
+theorem james_against_sufficiency_contradicts_paul : ¬Satisfiable
+    (paulOnFaith.premises ++ jamesReadAgainstSufficiency.premises)
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
 #### Why the canonical witness stands against Trent
 
 Both positions hold every text. They part at one reading: the sense of
@@ -1453,8 +1810,8 @@ of Trent — every text — the canonical witness holds too.
 
 **Why *The canonical witness, with James* stands against *Trent, reading James 2:24 as justification increased by works*.**
 
-- **The crux:** \\(P_{27}\\), a premise of *The canonical witness, with James*.
+- **The crux:** \\(P_{28}\\), a premise of *The canonical witness, with James*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(\lnot P_{27}\\) cannot be held together with \\(P_{27}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(\lnot P_{28}\\) cannot be held together with \\(P_{28}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{27}\\) ‘Justified’ in James 2:21–24 means shown to be righteous, not made righteous — *disputed*: [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11; Jas 2:21-23
+  - \\(P_{28}\\) ‘Justified’ in James 2:21–24 means shown to be righteous, not made righteous — *disputed*: [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11; Jas 2:21-23

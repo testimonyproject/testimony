@@ -27,6 +27,9 @@ inductive Claim
   /-- Galatians 2:16 says a person is not justified by works of the law but
   through faith in Christ. -/
   | galatians2_16
+  /-- Galatians 3:11 says no one is justified before God by the law, for the
+  righteous shall live by faith. -/
+  | galatians3_11
   /-- Ephesians 2:8–9 says we are saved by grace through faith, not of works, so
   that no one may boast. -/
   | ephesians2_8_9
