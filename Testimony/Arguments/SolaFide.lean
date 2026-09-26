@@ -5,6 +5,7 @@ import Testimony.Arguments.SolaFide.Packages
 import Testimony.Arguments.SolaFide.Results
 import Testimony.Arguments.SolaFide.Dispute
 import Testimony.Arguments.SolaFide.Johannine
+import Testimony.Arguments.SolaFide.Gospel
 
 /-!
 # Arguments.SolaFide — justification by grace through faith, not works
@@ -185,6 +186,16 @@ dispute chooses neither. The verdict rests on the rivals answering each other,
 and on no cited source arguing that σῴζω at Luke 7:50 means healing, or that her
 love at 7:47 earned her forgiveness; `Dispute.lean` states both.
 
+**Where Trent parts from Paul** (`Gospel.lean`). Paul's answer to anything added
+to the gospel is Galatians — another gospel, accursed (1:6–9); if righteousness
+came by the law, Christ died for nothing (2:21) — and the gospel is that Christ
+died for our sins (1 Corinthians 15:3). Read with the forensic sense of δικαιόω,
+it denies Trent's definition of justification as renewal. Trent grants every
+text, and — with the *Joint Declaration* (§22) and New Testament scholarship
+across traditions — the forensic sense of the verb. A checked `Because` finds
+where they part: one step, that a verdict on a finished work excludes the
+renewal wrought in us.
+
 ## Where things are
 
 | File | Contents |
@@ -196,4 +207,5 @@ love at 7:47 earned her forgiveness; `Dispute.lean` states both.
 | `Results.lean` | every `@[headline]` result, with its trust base |
 | `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
 | `Johannine.lean` | the Johannine strand and Aquinas's rival reading, encoded alone |
+| `Gospel.lean` | Paul's gospel in Galatians against Trent's definition, and where they part |
 -/

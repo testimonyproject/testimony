@@ -332,4 +332,67 @@ to the parts of the conclusion. -/
 @[solaFideDefs]
 def closingSteps : List (Formula Claim) := jamesLine.step :: conclusionSteps
 
+/-! ### Paul's gospel, against justification as renewal
+
+Galatians is a letter about another gospel. The Teachers did not deny Christ;
+they added circumcision to him, and Paul calls that addition a different gospel
+and its preachers accursed (1:6–9). What he sets against it is what he received:
+Christ died for our sins (1 Corinthians 15:3); if righteousness came by the law,
+Christ died for nothing (Galatians 2:21); whoever would be justified by the law
+is severed from Christ (5:2–4).
+
+This line reads those texts as one claim — Christ's work is the whole ground of
+justification — and carries it, with the forensic sense of Paul's verb, to the
+denial of Trent's definition: if justification is God's verdict on the ground
+of a finished work, the renewal wrought in us is no part of it. -/
+
+/-- Paul's reading of the gospel in Galatians: Christ's death is the whole ground,
+and adding a ground is another gospel. Cited to Moo on Galatians and to the
+Westminster Confession, and rated `disputed`: Trent grants every text and that
+Christ's passion merited justification (ch. 7), and denies that nothing is added
+(canons 24, 32). -/
+def galatianGospelReadingSource : Source :=
+  { primary := .work mooGalatians (.adLoc ⟨.galatians, 1, 6⟩)
+  , supporting := [.work westminsterConfession (.sectionRef "XI.1")]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- The step from a verdict on a finished work to "renewal is no part of
+justification": Westminster XI.1, God justifies "not by infusing righteousness
+into them, but by pardoning their sins, and by accounting and accepting their
+persons as righteous; not for anything wrought in them". Rated `disputed`, and
+the source that makes it so is Rome's own: the *Joint Declaration* (§22) grants
+the ground — God "no longer imputes to them their sin" — and denies the step:
+forgiveness and the love the Spirit effects "are not to be separated". Among
+New Testament scholars, Gorman takes the same side: the verdict is an effective
+word that transforms. -/
+def verdictNotRenewalSource : Source :=
+  { primary := .work westminsterConfession (.sectionRef "XI.1")
+  , supporting :=
+      [ .work calvinInstitutes (.sectionRef "III.xi.2")
+      , .work morrisApostolicPreaching .whole ]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **Paul's gospel**, as Galatians states it and 1 Corinthians summarises it. -/
+@[solaFideDefs]
+def galatianGospelLine : Line Claim :=
+  { name := "Paul's gospel (Galatians 1:6–9; 2:21; 5:2–4; 1 Corinthians 15:3)"
+  , grounds :=
+      [ p .galatians1_6_9, p .firstCorinthians15_3, p .galatians2_21, p .galatians5_2_4 ]
+  , step :=
+      ⋀ [ p .galatians1_6_9, p .firstCorinthians15_3, p .galatians2_21, p .galatians5_2_4 ]
+      ➝ p .christsWorkIsTheWholeGround
+  , delivers := p .christsWorkIsTheWholeGround
+  , inference := some galatianGospelReadingSource }
+
+/-- **The step where Trent parts from Paul.** If justification is God's verdict —
+δικαιόω is forensic, the opposite of condemning (Romans 8:33–34) — and its
+ground is Christ's finished work alone, then the renewal of the inward man is no
+part of it. -/
+@[solaFideDefs]
+def verdictExcludesRenewal : Formula Claim :=
+  ⋀ [p .christsWorkIsTheWholeGround, p .dikaioIsForensic, p .romans8_33_34]
+  ➝ notP .justificationIncludesSanctification
+
 end Testimony.Arguments.SolaFide

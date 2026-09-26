@@ -185,6 +185,16 @@ dispute chooses neither. The verdict rests on the rivals answering each other,
 and on no cited source arguing that σῴζω at Luke 7:50 means healing, or that her
 love at 7:47 earned her forgiveness; `Dispute.lean` states both.
 
+**Where Trent parts from Paul** (`Gospel.lean`). Paul's answer to anything added
+to the gospel is Galatians — another gospel, accursed (1:6–9); if righteousness
+came by the law, Christ died for nothing (2:21) — and the gospel is that Christ
+died for our sins (1 Corinthians 15:3). Read with the forensic sense of δικαιόω,
+it denies Trent's definition of justification as renewal. Trent grants every
+text, and — with the *Joint Declaration* (§22) and New Testament scholarship
+across traditions — the forensic sense of the verb. A checked `Because` finds
+where they part: one step, that a verdict on a finished work excludes the
+renewal wrought in us.
+
 ### Where things are
 
 | File | Contents |
@@ -196,6 +206,7 @@ love at 7:47 earned her forgiveness; `Dispute.lean` states both.
 | `Results.lean` | every `@[headline]` result, with its trust base |
 | `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
 | `Johannine.lean` | the Johannine strand and Aquinas's rival reading, encoded alone |
+| `Gospel.lean` | Paul's gospel in Galatians against Trent's definition, and where they part |
 
 ## Arguments.SolaFide.Atoms — the atomic claims
 
@@ -274,6 +285,13 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{38}\\) | The believing of John 6:29 is faith living through charity, the source of works | interpretive | Roman Catholic, disputed | [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 |
 | \\(P_{39}\\) | Galatians 3:11–12 — none is justified by the law; the law is not of faith | textual | Christian, historical-grammatical, consensus | Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11 |
 | \\(P_{40}\\) | Love of God and neighbour is what the law commands | textual | Christian, historical-grammatical, consensus | Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12 |
+| \\(P_{41}\\) | Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed | textual | Christian, historical-grammatical, consensus | Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6 |
+| \\(P_{42}\\) | 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins ※ | textual | Christian, historical-grammatical, consensus | 1 Cor 15:3 |
+| \\(P_{43}\\) | Galatians 2:21: if righteousness were through the law, Christ died for no purpose | textual | Christian, historical-grammatical, consensus | Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21 |
+| \\(P_{44}\\) | Galatians 5:2–4: you who would be justified by the law are severed from Christ | textual | Christian, historical-grammatical, consensus | Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2 |
+| \\(P_{45}\\) | Romans 8:33–34: it is God who justifies — who is to condemn? ※ | textual | Christian, historical-grammatical, consensus | Rom 8:33-34 |
+| \\(P_{46}\\) | In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous | linguistic | Christian, historical-grammatical, well supported | [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24 |
+| \\(P_{47}\\) | Christ's death for our sins is the whole ground of justification; to add to it is another gospel | interpretive | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
 
 </div>
 
@@ -1028,6 +1046,98 @@ to the parts of the conclusion.
 \text{(4)} \quad &amp; P_{24} \rightarrow P_{25} \\
 \text{(5)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28}
 \end{aligned}
+\]
+</div>
+
+#### Paul's gospel, against justification as renewal
+
+Galatians is a letter about another gospel. The Teachers did not deny Christ;
+they added circumcision to him, and Paul calls that addition a different gospel
+and its preachers accursed (1:6–9). What he sets against it is what he received:
+Christ died for our sins (1 Corinthians 15:3); if righteousness came by the law,
+Christ died for nothing (Galatians 2:21); whoever would be justified by the law
+is severed from Christ (5:2–4).
+
+This line reads those texts as one claim — Christ's work is the whole ground of
+justification — and carries it, with the forensic sense of Paul's verb, to the
+denial of Trent's definition: if justification is God's verdict on the ground
+of a finished work, the renewal wrought in us is no part of it.
+
+<a id="galatianGospelReadingSource"></a>
+**`galatianGospelReadingSource`**
+
+Paul's reading of the gospel in Galatians: Christ's death is the whole ground,
+and adding a ground is another gospel. Cited to Moo on Galatians and to the
+Westminster Confession, and rated `disputed`: Trent grants every text and that
+Christ's passion merited justification (ch. 7), and denies that nothing is added
+(canons 24, 32).
+
+```lean
+def galatianGospelReadingSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.mooGalatians
+        (Bib.Locus.adLoc { book := Book.galatians, chapter := 1, verse := 6 }),
+    supporting :=
+      [Reference.work Bib.westminsterConfession (Bib.Locus.sectionRef "XI.1")],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="verdictNotRenewalSource"></a>
+**`verdictNotRenewalSource`**
+
+The step from a verdict on a finished work to "renewal is no part of
+justification": Westminster XI.1, God justifies "not by infusing righteousness
+into them, but by pardoning their sins, and by accounting and accepting their
+persons as righteous; not for anything wrought in them". Rated `disputed`, and
+the source that makes it so is Rome's own: the *Joint Declaration* (§22) grants
+the ground — God "no longer imputes to them their sin" — and denies the step:
+forgiveness and the love the Spirit effects "are not to be separated". Among
+New Testament scholars, Gorman takes the same side: the verdict is an effective
+word that transforms.
+
+```lean
+def verdictNotRenewalSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.westminsterConfession (Bib.Locus.sectionRef "XI.1"),
+    supporting :=
+      [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.2"),
+        Reference.work Bib.morrisApostolicPreaching],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="galatianGospelLine"></a>
+**`galatianGospelLine`** — Paul's gospel (Galatians 1:6–9; 2:21; 5:2–4; 1 Corinthians 15:3)
+
+**Paul's gospel**, as Galatians states it and 1 Corinthians summarises it.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{42} \\
+\text{(3)} \quad &amp; P_{43} \\
+\text{(4)} \quad &amp; P_{44} \\
+\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{47} \\[4pt]
+\vdash \quad &amp; P_{47}
+\end{aligned}
+\]
+</div>
+
+<a id="verdictExcludesRenewal"></a>
+**`verdictExcludesRenewal`**
+
+**The step where Trent parts from Paul.** If justification is God's verdict —
+δικαιόω is forensic, the opposite of condemning (Romans 8:33–34) — and its
+ground is Christ's finished work alone, then the renewal of the inward man is no
+part of it.
+
+<div class="testimony-math">
+\[
+(P_{47} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}
 \]
 </div>
 
@@ -1849,6 +1959,35 @@ grace, with James 2:24 left unanswered?
 </div>
 
 No premise here rests on scripture alone.
+
+#### Paul's gospel, against Trent's definition
+
+<a id="galatianGospel"></a>
+**`galatianGospel`** — Paul's gospel (Galatians 1), against justification as renewal
+
+**Paul's gospel, against justification as renewal.** Galatians and
+1 Corinthians read as one claim — Christ's work is the whole ground — with the
+forensic sense of δικαιόω and Romans 8:33–34, concluding that justification is
+not the renewal of the inward man: the direct denial of Trent's definition
+(Session VI, ch. 7).
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{42} \\
+\text{(3)} \quad &amp; P_{43} \\
+\text{(4)} \quad &amp; P_{44} \\
+\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{47} \\
+\text{(6)} \quad &amp; P_{45} \\
+\text{(7)} \quad &amp; P_{46} \\
+\text{(8)} \quad &amp; (P_{47} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32} \\[4pt]
+\vdash \quad &amp; \lnot P_{32}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins, Romans 8:33–34: it is God who justifies — who is to condemn?.
 
 ## Arguments.SolaFide.Results — what does and does not follow
 
@@ -4879,3 +5018,153 @@ Luther's, and the texts are granted by both sides.
   - \\(P_{39}\\) Galatians 3:11–12 — none is justified by the law; the law is not of faith — *consensus*: Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
   - \\(P_{40}\\) Love of God and neighbour is what the law commands — *consensus*: Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12
   - the step itself — *disputed*: [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
+
+## Arguments.SolaFide.Gospel — where Trent parts from Paul
+
+Paul's direct answer to anything added to the gospel is Galatians: another
+gospel, whoever preaches it accursed (1:6–9); if righteousness came by the law,
+Christ died for nothing (2:21); whoever would be justified by the law is severed
+from Christ (5:2–4). The gospel itself is that Christ died for our sins
+(1 Corinthians 15:3).
+
+Set against Trent's definition of justification — "not remission of sins
+merely, but also the sanctification and renewal of the inward man" (Session VI,
+ch. 7) — the question is exactly where the two part. This module answers it in
+three steps, each checked.
+
+**What Trent grants.** Every text of the line. And the forensic sense of
+Paul's verb: the *Joint Declaration* (1999), signed by the Catholic Church,
+confesses that God "no longer imputes to them their sin" (§22), and modern Greek
+scholarship across traditions reads δικαιόω as a verdict — the standard lexicon,
+Morris, Moo, Irons, Wright, and the Catholic exegete Fitzmyer
+(`dikaioIsForensic`, rated `wellSupported`).
+
+**What Trent denies.** One step: that a verdict on the ground of a finished work
+excludes the renewal wrought in us. The same paragraph of the *Joint
+Declaration* holds forgiveness and the love the Spirit effects "not to be
+separated", and Gorman reads the verdict as an effective word that transforms.
+
+**Where they part.** `whereTrentPartsFromPaul` finds it mechanically: the crux
+is that step, and what it breaks in Trent is its definition, and nothing else.
+
+What this does not show is that the step is true. It shows that it is the whole
+of the disagreement: grant it, and Trent's definition cannot stand; deny it, and
+Paul's gospel as encoded here does not reach Trent's definition at all.
+
+#### The gospel line holds
+
+<a id="galatianGospelReading"></a>
+**`galatianGospelReading`**
+
+The world of Paul's gospel as this line reads it: every text true, Christ's
+work the whole ground, the verdict forensic — and justification not the renewal
+of the inward man.
+
+```lean
+def galatianGospelReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.justificationIncludesSanctification => False
+    | x => True
+```
+
+<a id="galatianGospel_establishes"></a>
+**`galatianGospel_establishes`**
+
+**Paul's gospel denies Trent's definition.** From Galatians 1:6–9, 2:21,
+5:2–4 and 1 Corinthians 15:3, read as one claim, with the forensic sense of
+δικαιόω: justification is not the renewal of the inward man.
+
+```lean
+theorem galatianGospel_establishes : Establishes galatianGospel
+-- axioms: propext, Quot.sound
+```
+
+<a id="galatianGospel_is_satisfiable"></a>
+**`galatianGospel_is_satisfiable`**
+
+The gospel line's premises have a model.
+
+```lean
+theorem galatianGospel_is_satisfiable : Satisfiable galatianGospel.premises
+-- axioms: propext, Quot.sound
+```
+
+#### What Trent grants
+
+<a id="jointDeclarationReading"></a>
+**`jointDeclarationReading`**
+
+Trent's world, with the *Joint Declaration*'s confession added: God no longer
+imputes sin — the verb is forensic — and every text of the gospel line holds.
+Justification still includes renewal, and is not by faith alone.
+
+```lean
+def jointDeclarationReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
+    | Claim.justificationDistinctFromSanctification => False
+    | x => True
+```
+
+<a id="trent_grants_the_gospel_texts"></a>
+**`trent_grants_the_gospel_texts`**
+
+**Trent can grant every text of the gospel line.** Nothing Trent holds denies
+that Christ died for our sins, that righteousness by the law would make his
+death needless, or that another gospel is accursed.
+
+```lean
+theorem trent_grants_the_gospel_texts : Grants tridentineCase (⋀[p
+    Claim.galatians1_6_9, p Claim.firstCorinthians15_3, p Claim.galatians2_21,
+    p Claim.galatians5_2_4, p Claim.romans8_33_34])
+-- axioms: propext, Quot.sound
+```
+
+<a id="trent_grants_the_forensic_sense"></a>
+**`trent_grants_the_forensic_sense`**
+
+**Trent can grant that Paul's verb is forensic**, as the *Joint Declaration*
+does: God no longer imputes sin. The lexical question is not where they part.
+
+```lean
+theorem trent_grants_the_forensic_sense : Grants tridentineCase (p
+    Claim.dikaioIsForensic)
+-- axioms: propext, Quot.sound
+```
+
+#### Where Trent parts from Paul
+
+<a id="whereTrentPartsFromPaul"></a>
+**`whereTrentPartsFromPaul`**
+
+**Where Trent parts from Paul.** The crux is one step: if justification is
+God's verdict on the ground of Christ's finished work, the renewal of the inward
+man is no part of it (`verdictExcludesRenewal`; Westminster XI.1). What it breaks
+in Trent is its definition — justification "not remission of sins merely, but
+also the sanctification and renewal of the inward man" (Session VI, ch. 7) — and
+nothing else in Trent's case: not its account of merit, not its reading of works.
+
+The break needs the gospel line's grounds as well, and says so: the four texts,
+Paul's reading of them, Romans 8:33–34 and the forensic sense of the verb. Trent
+can grant every one of those (`trent_grants_the_gospel_texts`,
+`trent_grants_the_forensic_sense`); it is the step that it denies, with the
+*Joint Declaration*: forgiveness and renewal are "not to be separated".
+
+**Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works'*.**
+
+- **The crux:** \\((P_{47} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{47}\\), \\(P_{45}\\), \\(P_{46}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{47} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\) and \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{47}\\), \\(P_{45}\\), \\(P_{46}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{41}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
+  - \\(P_{42}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
+  - \\(P_{43}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
+  - \\(P_{44}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
+  - \\(P_{47}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+  - \\(P_{45}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - the step itself — *disputed*: [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
