@@ -28,8 +28,12 @@ whatever defeats the part is aimed at the whole: an **attack on a part**
 (`partAttack_iff`). It too is reported and marked. One that is not already a
 defeat of the whole is worth reading closely: the whole holds more than the
 part, and the preference may weigh the same attack differently against it.
-They are **reported alongside the defeats, not added to them**: every verdict is
-computed from the defeats alone. Each derived attack is marked by whether it is
+
+## Reported, not counted
+
+Every derived attack — supported, secondary, or on a part — is **reported
+alongside the defeats, not added to them**: every verdict is computed from the
+defeats alone. Each derived attack is marked by whether it is
 already a defeat, so the two relations can be read against each other; one that
 is not is a question the dispute leaves open, not an answer it gives. A pair in
 which one party both supports and defeats the other is marked too: such a
