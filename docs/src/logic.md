@@ -495,9 +495,14 @@ makes the nodes argument packages and derives the relation from entailment.
 `Arguments/BornOfAVirgin/Dispute.lean` is the worked example.
 
 **Nothing about the relation is stipulated.** One package *attacks* another when
-its premises entail the negation of one of the other's premises (`UnderminesOn`)
-or of its conclusion (`Rebuts`). An attack is a *defeat* unless the cited
-confidences block it: a position's strength is its weakest link — the lowest
+its premises entail the negation of one of the other's premises (`UnderminesOn`),
+of its conclusion (`Rebuts`), or of a claim one of its steps delivers
+(`RebutsStep`). The third is a derived attack, and it is gated twice: the
+denied claim must be the head of one of the attacked package's own steps, and
+that package must entail it. A package answers for what it assumes, what it
+concludes and what it derives on the way — not for every consequence of what
+it holds, which would make every attack mutual. An attack is a *defeat* unless
+the cited confidences block it: a position's strength is its weakest link — the lowest
 rank among its premises, inference steps included — and an attack fails only
 when what it attacks is strictly stronger. A denied atom ranks `disputed`,
 because the citation rates the claim, not its denial. A step ranks at the
@@ -534,8 +539,12 @@ theorem isaiahDispute_defeats : ∀ i j, isaiahDispute.defeats i j ↔ partyDefe
 
 `Horn.defeats?` (`Testimony.Logic.Horn`) decides each pair by asking whether
 formulas can all hold together: `a` undermines `b` on `φ` exactly when `a`'s
-premises and `φ` cannot, and rebuts it exactly when `a`'s premises and `b`'s
-conclusion cannot. It translates the premises to clauses — atoms, denied atoms,
+premises and `φ` cannot, rebuts it exactly when `a`'s premises and `b`'s
+conclusion cannot, and rebuts it on the step `p ➝ ψ` exactly when `b`'s premises
+and `ψ`'s negation cannot, nor `a`'s premises and `ψ`. A rebuttal on a step is
+weighed against the step's rating, an upper bound on the strength of the
+sub-argument it ends, so the preference errs toward the package attacked.
+It translates the premises to clauses — atoms, denied atoms,
 and steps from a conjunction of literals to an atom, a conjunction or a
 contradiction — and decides them by unit propagation. Each answer carries its
 evidence: *satisfiable* only once a candidate model has been checked against
@@ -710,6 +719,20 @@ edge. With the defeats, supports and parts it lists the attacks they imply. A
 *c*'s. These are reported alongside the defeats and never added to them, so no
 verdict depends on them. Each is marked by whether it is already a defeat, and
 the page counts those that are not: questions the dispute leaves open.
+
+**A derived attack that is not already a defeat is a modelling question**, not
+a vote. Either the attacked case claims more than its sources do, or the attack
+is real and a verdict must move — and which, the encoding cannot decide for
+you. Sola fide is the worked example. When rebuttals on steps entered the
+relation, the apocalyptic reading attacked Luke's case and Peter's: both were
+encoded as deriving justification by faith *alone*, which Campbell denies. But
+Luke 7:50 says "your faith has saved you", not "faith alone"; Acts 15 says the
+gentiles are saved without the yoke. So the strands were re-encoded to deliver
+what their texts say, `faithIsSufficient`, and the attack disappeared with the
+over-claim — leaving the dispute between Campbell and the Reformed reading
+where the literature has it, between Campbell and Paul, over the genitive.
+Check the derived attacks before a dispute is merged: every rebuttal on a step
+should already be a defeat, or the difference should be the point.
 
 **4. Say why a position stands against a rival.** A verdict says *who*
 survives; a reader also asks *why*. `Because P R` (`Testimony.Logic.Because`)

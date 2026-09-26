@@ -164,20 +164,6 @@ theorem satisfiable_of_check {Γ : List (Formula α)} (h : satisfiable? Γ = som
 theorem not_satisfiable_of_check {Γ : List (Formula α)} (h : satisfiable? Γ = some false) :
     ¬ Satisfiable Γ := not_satisfiable_of_satisfiable? h
 
-omit [DecidableEq α] in
-/-- Premises entail a conclusion exactly when they cannot hold with its
-negation. -/
-theorem entails_iff_not_satisfiable {Γ : List (Formula α)} {φ : Formula α} :
-    Entails Γ φ ↔ ¬ Satisfiable (Γ ++ [∼φ]) := by
-  rw [entails_iff, satisfiable_iff]
-  simp only [List.mem_append, List.mem_singleton]
-  constructor
-  · rintro h ⟨w, hw⟩
-    exact hw _ (.inr rfl) (h w fun ψ hψ => hw ψ (.inl hψ))
-  · intro h w hw
-    by_contra hn
-    exact h ⟨w, fun ψ hψ => hψ.elim (hw ψ) (fun e => e ▸ hn)⟩
-
 /-- A role, decided by the engine: `answers` when the premises other than the
 crux cannot hold with the negated conclusion, `derives` when they can. -/
 def roleCheck (role : CruxRole) (rest : List (Formula α)) (conclusion : Formula α) : Bool :=
