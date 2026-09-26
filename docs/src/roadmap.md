@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**5 arguments**, carrying **110 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**5 arguments**, carrying **111 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -91,11 +91,12 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `grace_needs_no_answer_to_james` | `Establishes graceWithoutJamesHarmonisation` | **But grace does not need it.** Remove the answer to James and salvation by grace still follows, from Ephesians 2:8, Romans 4:4–5 and Titus 3:5 alone. |
 | `trent_objection_rests_on_its_definition` | `¬Establishes tridentineCaseOnTheReformedDistinction` | **Trent's objection rests on its definition of justification.** Keep all of Trent's case except its definition, grant the Reformed distinction instead, and "not apart from works" … |
 | `nothing_prevails_over_sola_fide` | `Framework.grounded solaFideDispute.defeats = ∅` | **Nothing prevails outright.** Every party is defeated by some other: each Reformed strand by Trent, Trent by each strand and by the apocalyptic reading, the apocalyptic reading … |
-| `trent_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.trent ∉ S` | **Trent cannot be defended.** The apocalyptic reading defeats it — it holds "not by works" on grounds Trent does not contradict — and the only party that defeats the apocalyptic … |
+| `trent_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.trent` | **Trent can be defended.** Some maximal defensible position holds it, with Sanders and Jervell. |
+| `trent_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.trent` | **Nor is Trent forced.** A maximal defensible position holds Paul's case with Luke's and Peter's, and none of them can be held with Trent. |
 | `apocalyptic_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.apocalyptic` | **The apocalyptic reading can be defended.** Some maximal defensible position holds it, and holds Luke's case and Peter's with it: they claim that faith saves, and the apocalyptic … |
 | `apocalyptic_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.apocalyptic` | **Nor is it forced.** A maximal defensible position holds Paul's case — faith alone, from Galatians 2:16 read with the objective genitive — and cannot hold the apocalyptic reading … |
-| `dominical_case_skeptically_accepted` | `Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Sola fide from Luke 7:50 is accepted on every resolution.** Its only defeater is Trent, which no admissible position can hold, and it conflicts with no other party: the … |
-| `sola_fide_not_forced_without_the_apocalyptic_reading` | `¬Framework.SkepticallyAccepted withoutApocalyptic.defeats ⟨Party.dominical, ⋯⟩` | **Without the apocalyptic reading, sola fide is no longer forced.** Trent, heard against the three Reformed strands alone, defends itself: it defeats each of them back. |
+| `dominical_case_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.dominical` | **Luke's case can be defended.** "Your faith has saved you", read as Luke says it, stands in six of the dispute's eight maximal defensible positions. |
+| `dominical_case_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Nor is it forced.** A maximal defensible position holds Trent, and cannot hold Luke's case with it. |
 | `johannine_strand_establishes` | `Establishes johannineCase` | **John alone delivers sola fide.** Grant that the believing of 6:29 is trust, and the work God requires is no work at all: sola fide follows from John without Paul, Luke or Acts. |
 | `johannine_strand_rests_on_believing_as_trust` | `¬Establishes thomistOnJohn` | **The Johannine strand rests on believing as trust.** Grant Aquinas every text the strand reads, and read their believing as he does — faith living through charity — and sola fide … |
 | `luther_answers_aquinas_from_galatians` | `Establishes lutherOnGalatians` | **Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants — Galatians 3:11–12, and that the law commands love — and Luther's step, and the believing of John 6:29 is … |
@@ -221,19 +222,22 @@ Reformed distinction of justification from the sanctification that follows it.
 Put the distinction in its place and Trent's case no longer denies "not by
 works" (`trent_objection_rests_on_its_definition`).
 
-**Sola fide survives its rivals only because they answer each other.** Weighed
-as a dispute — the three strands argued separately, Trent, the apocalyptic
-reading, Sanders, the critics and Jervell as parties — every position's weakest
-link is `disputed`, so the ratings decide nothing, and nothing prevails outright
-(`nothing_prevails_over_sola_fide`). Yet sola fide from Luke 7:50 is accepted on
-every resolution (`dominical_case_skeptically_accepted`), and the reason is not
-that it answers Trent. The apocalyptic reading holds "not by works" on grounds
-Trent does not contradict, so it defeats Trent, and whatever answers the
-apocalyptic reading defeats Trent too (`trent_indefensible`). Remove the
-apocalyptic reading and Trent defends itself again
-(`sola_fide_not_forced_without_the_apocalyptic_reading`). The verdict also
-rests on an absence: no cited source argues that σῴζω at Luke 7:50 means
-healing, so nothing in the dispute attacks the dominical case but Trent. A search
+**As a dispute, sola fide and Trent are each defensible, and neither is forced.**
+Weighed as a dispute — the three strands argued separately, Trent, the
+apocalyptic reading, Sanders, the critics and Jervell as parties — every
+position's weakest link is `disputed`, so the ratings decide nothing, and
+nothing prevails outright (`nothing_prevails_over_sola_fide`). Every attack
+between Trent and a Reformed strand runs both ways, including a claim a party
+derives on the way to its conclusion: Trent denies the apocalyptic reading's
+derived "not by works", so it answers that reading too. So Luke's case and
+Trent are each defensible and neither forced (`dominical_case_defensible`,
+`dominical_case_not_forced`, `trent_defensible`, `trent_not_forced`). What
+decides between them is what justification *is*, and the library locates it
+with checked explanations rather than weighing it: Luke's case breaks Trent at
+its definition, and Paul's gospel at one step, that a verdict on a finished work
+excludes the renewal wrought in us (`whereTrentPartsFromPaul`). Luke's case is
+attacked by no one but Trent, because no cited source argues that σῴζω at Luke
+7:50 means healing. A search
 for one found none, so that premise is rated `wellSupported`; and the dominical
 case carries the Reformed reading of 7:47 — her love is the evidence of her
 forgiveness, not its ground — as a premise. That reading is cited to Osvaldo
