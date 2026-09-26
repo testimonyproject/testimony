@@ -422,6 +422,28 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
           "\\emph{" ++ confidence s.confidence ++ "}: " ++ source s)) ++ "\n") ++
   "\\end{itemize}\n\\end{itemize}\n"
 
+/-- Every reading of a rival's claim, answered: each horn with what the claim
+commits the rival to, who reads it that way, and what happens to it against
+each position. -/
+def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
+  let claim := "\\(" ++ formula order d.claim ++ "\\)"
+  let fate (f : Page.Fate α) : String := match f.falls with
+    | some e => "Against \\emph{" ++ escape f.against ++ "}, it falls.\n" ++ explanation order e
+    | none =>
+      "Against \\emph{" ++ escape f.against ++ "}, it is not reached: \\emph{" ++
+        escape f.against ++ "} holds, and can be held together with it.\n\n"
+  let ways := d.horns.length
+  "\\paragraph{Every reading of " ++ claim ++ ", answered.} \\emph{" ++ escape d.rival ++
+    "} holds " ++ claim ++ ". It is read " ++ toString ways ++
+    (if ways == 1 then " way" else " ways") ++
+    " here, and each reading is checked; none can be left out.\n\n" ++
+  String.join (d.horns.zipIdx.map fun (h, k) =>
+    "\\paragraph{" ++ toString (k + 1) ++ ". Read " ++ escape h.reading ++
+      ".} The claim commits \\emph{" ++ escape d.rival ++ "} to \\(" ++
+      formula order h.commits ++ "\\) --- so read by " ++ source h.source ++ " (\\emph{" ++
+      confidence h.source.confidence ++ "}).\n\n" ++
+    String.join (h.fates.map fate))
+
 /-- What an opponent must reject: every minimal set of readings whose
 rejection overturns the case, each reading with its rating, and the readings no
 set needs. -/
@@ -594,6 +616,7 @@ def item [DecidableEq α] (order : List α) : Page.Item α → String
       declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
       prose doc ++ verbatim stmt
   | .because d doc e => declLabel d "" ++ prose doc ++ explanation order e
+  | .dilemma d doc dl => declLabel d "" ++ prose doc ++ dilemma order dl
   | .burden d doc stmt b => declLabel d "" ++ prose doc ++ verbatim stmt ++ burden b
   | .verdict d doc v links table => declLabel d "" ++ prose doc ++ verdict v links table
   | .graph d doc g defeats supports parts =>

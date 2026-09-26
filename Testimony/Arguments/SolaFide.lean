@@ -6,6 +6,7 @@ import Testimony.Arguments.SolaFide.Results
 import Testimony.Arguments.SolaFide.Dispute
 import Testimony.Arguments.SolaFide.Johannine
 import Testimony.Arguments.SolaFide.Gospel
+import Testimony.Arguments.SolaFide.Definition
 
 /-!
 # Arguments.SolaFide — justification by grace through faith, not works
@@ -175,17 +176,18 @@ worketh by love". `james_harmonisation_is_load_bearing` shows the argument
 genuinely depends on this: drop it and sola fide does not follow.
 
 **Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
-Sanders, the critics and Jervell as parties, nothing prevails outright, and
-nothing is forced. Every party's weakest link is `disputed`, so no rating
-breaks a tie, and every attack between Trent and a Reformed strand runs both
-ways: Luke's case and Trent are each defensible, and neither is accepted on
-every resolution. Luke's case, holding only Luke's words, meets Trent over
-faith's sufficiency, and the apocalyptic reading not at all — Luke says faith
-saved her, not that faith alone does — so the dispute between Campbell and the
-Reformed reading is between Campbell and Paul, over the genitive. What would
-decide between Trent and the Reformed readings is what justification *is*, and
-that the library argues rather than weighs: two checked explanations locate
-it, one for Luke's case and one for Paul's gospel (`Gospel.lean`).
+Sanders, the critics, Jervell, Paul's gospel, Paul's word and Trent read as a
+claim about that word as parties, one thing prevails outright: Paul's word —
+δικαιόω does not denote the renewal of the inward man. It is the one party whose
+every link is rated above `disputed`, and it defeats Trent read as a claim about
+the word, which cannot be defended at all. Everything else ties. Every other
+party's weakest link is `disputed`, and every attack between Trent and a
+Reformed party runs both ways: Luke's case, Paul's gospel and Trent are each
+defensible, and none is accepted on every resolution. Luke's case, holding only
+Luke's words, meets Trent over faith's sufficiency, and the apocalyptic reading
+not at all — Luke says faith saved her, not that faith alone does — so the
+dispute between Campbell and the Reformed reading is between Campbell and Paul,
+over the genitive.
 
 **Where Trent parts from Paul** (`Gospel.lean`). Paul's answer to anything added
 to the gospel is Galatians — another gospel, accursed (1:6–9); if righteousness
@@ -196,6 +198,14 @@ text, and — with the *Joint Declaration* (§22) and New Testament scholarship
 across traditions — the forensic sense of the verb. A checked `Because` finds
 where they part: one step, that a verdict on a finished work excludes the
 renewal wrought in us.
+
+**What Trent's definition claims** (`Definition.lean`). The definition can be
+read as a claim about Paul's word or about what God does in justifying, and a
+checked `Dilemma` answers both. Read as a claim about the word, it falls to the
+lexical case — the forensic sense, Paul's own words for renewal, and the rule of
+least meaning (Joos, Silva; Barr's "illegitimate totality transfer") — at a step
+rated `wellSupported`. Read as a claim about what God does, nothing lexical
+reaches it, and it falls to Paul's gospel only at the `disputed` step above.
 
 ## Where things are
 
@@ -209,4 +219,5 @@ renewal wrought in us.
 | `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
 | `Johannine.lean` | the Johannine strand and Aquinas's rival reading, encoded alone |
 | `Gospel.lean` | Paul's gospel in Galatians against Trent's definition, and where they part |
+| `Definition.lean` | Paul's word, and the dilemma over what Trent's definition claims |
 -/

@@ -174,6 +174,29 @@ inductive Claim
   opposite of condemning, as in Deuteronomy 25:1 and Romans 8:33–34 — and not to
   make virtuous. **The lexical premise.** -/
   | dikaioIsForensic
+  /-- Paul names renewal with words of its own — ἀνακαίνωσις, renewal (Titus
+  3:5; Romans 12:2), and ἁγιασμός, sanctification (Romans 6:19, 22) — and sets
+  them beside δικαιόω rather than inside it: "the washing of regeneration and
+  renewal of the Holy Spirit … so that being justified by his grace" (Titus
+  3:5–7); "you were washed, you were sanctified, you were justified" (1
+  Corinthians 6:11). -/
+  | paulNamesRenewalOtherwise
+  /-- A word contributes to a passage the least meaning its context requires,
+  and one occurrence of it does not carry everything the word — or the doctrine
+  it is used for — can carry: Joos's rule of least meaning, and Barr's
+  "illegitimate totality transfer", as Silva applies them to the words of the
+  New Testament. **The semantic razor.** -/
+  | leastMeaning
+  /-- Paul's word δικαιόω itself denotes the renewal of the inward man, and not
+  only the verdict: to be justified, in Paul's sense of the word, is to be made
+  inwardly just. What Trent's definition says, **read as a claim about Paul's
+  word**. -/
+  | paulsJustifyDenotesRenewal
+  /-- When God justifies, he also renews: pardon and the renewal of the inward
+  man are given together, and are not to be separated. What Trent's definition
+  says, **read as a claim about what God does**; and, so stated, what the
+  *Joint Declaration* confesses and Calvin grants. -/
+  | justifyingGraceRenews
   /-- Christ's death for our sins is the whole ground of justification: nothing
   added to it completes it, and to add a ground is to preach another gospel.
   **Paul's gospel, as Galatians reads it.** -/

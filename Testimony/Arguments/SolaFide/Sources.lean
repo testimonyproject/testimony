@@ -605,6 +605,66 @@ def baseCite : Claim → AtomMeta
             , .work anf1 (.sectionRef "Epistle to Diognetus 9") ]
         , tradition := .reformedProtestant
         , confidence := .disputed } }
+  | .paulNamesRenewalOtherwise =>
+    { label := "Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them " ++
+        "beside δικαιόω"
+    , kind := .textual
+      -- `consensus`: what the texts say, and no more. Trent itself builds its
+      -- chapter 7 on Titus 3:5–7, where renewal and being justified are named
+      -- side by side; whether they are one act is the question, not the words.
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .range ⟨.titus, 3, 5, 3, 7⟩ }, { ref := .verse ⟨.romans, 12, 2⟩ }
+              , { ref := .range ⟨.romans, 6, 19, 6, 22⟩ }
+              , { ref := .verse ⟨.firstCorinthians, 6, 11⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .leastMeaning =>
+    { label := "A word contributes the least meaning its context requires; one occurrence " ++
+        "does not carry the whole concept"
+    , kind := .linguistic
+      -- `wellSupported`, not `consensus`: a rule of method, which Joos states
+      -- as an axiom for choosing among a word's possible meanings, and which
+      -- yields where a context requires more. The lexicography it corrects —
+      -- reading a doctrine into each occurrence of its word — is what Barr
+      -- named illegitimate totality transfer.
+    , source :=
+        { primary := .work silvaBiblicalWords .whole
+        , supporting := [.work joosSemanticAxiom .whole, .work barrSemantics .whole]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .paulsJustifyDenotesRenewal =>
+    { label := "Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict"
+    , kind := .linguistic
+      -- `disputed`: Trent reads "the Apostle's" words (ch. 8), and says the
+      -- justified are "not only reputed, but are truly called, and are, just"
+      -- (ch. 7); VanLandingham renders δικαιόω "make righteous". Against it
+      -- stand the lexical premise and its authorities (`dikaioIsForensic`).
+    , source :=
+        { primary := .work tannerDecrees
+            (.sectionRef "Trent, Session VI (1547), Decree on Justification, chs. 7–8")
+        , supporting := [.work vanLandinghamJudgment .whole]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .justifyingGraceRenews =>
+    { label := "When God justifies, he also renews: pardon and renewal are given together, " ++
+        "not to be separated"
+    , kind := .theological
+      -- `wellSupported`: the *Joint Declaration* (§22) confesses it, Lutherans
+      -- and Catholics together, and Calvin grants it: as Christ cannot be
+      -- divided, justification and sanctification are inseparable (III.xi.6).
+      -- What the Reformed deny is not this but that renewal is *part of*
+      -- justification.
+    , source :=
+        { primary := .work jointDeclarationJustification (.sectionRef "§22")
+        , supporting :=
+            [ .work tannerDecrees
+                (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7")
+            , .work calvinInstitutes (.sectionRef "III.xi.6")
+            , .work gormanCruciformGod .whole ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
   | .worksOfLawMeansWorksGenerally =>
     { label := "Paul's ἔργα νόμου denotes human works in general"
     , kind := .linguistic

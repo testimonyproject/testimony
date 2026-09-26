@@ -278,6 +278,28 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
         String.intercalate "; " (e.inferences.map fun s =>
           "*" ++ confidence s.confidence ++ "*: " ++ source s))) ++ "\n"
 
+/-- Every reading of a rival's claim, answered: each horn with what the claim
+commits the rival to, who reads it that way, and what happens to it against
+each position — the explanation where it falls, and a sentence where it is not
+reached. -/
+def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
+  let claim := inlineMath (Latex.formula order d.claim)
+  let fate (f : Page.Fate α) : String := match f.falls with
+    | some e => "Against *" ++ escape f.against ++ "*, it falls.\n\n" ++ explanation order e
+    | none =>
+      "Against *" ++ escape f.against ++ "*, it is not reached: *" ++ escape f.against ++
+        "* holds, and can be held together with it.\n"
+  "**Every reading of " ++ claim ++ ", answered.** *" ++ escape d.rival ++ "* holds " ++
+    claim ++ ". It is read " ++ toString d.horns.length ++
+    (if d.horns.length == 1 then " way" else " ways") ++
+    " here, and each reading is checked; none can be left out.\n\n" ++
+  String.intercalate "\n" (d.horns.zipIdx.map fun (h, k) =>
+    "**" ++ toString (k + 1) ++ ". Read " ++ escape h.reading ++ ".** The claim commits *" ++
+      escape d.rival ++ "* to " ++ inlineMath (Latex.formula order h.commits) ++
+      " — so read by " ++ source h.source ++ " (*" ++ confidence h.source.confidence ++
+      "*).\n\n" ++
+    String.intercalate "\n" (h.fates.map fate))
+
 /-- What an opponent must reject: every minimal set of readings whose
 rejection overturns the case, each reading with its rating, and the readings no
 set needs. -/
@@ -468,6 +490,8 @@ def item [DecidableEq α] (order : List α) : Item α → String
       leanBlock stmt
   | .because d doc e =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ explanation order e
+  | .dilemma d doc dl =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ dilemma order dl
   | .burden d doc stmt b =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock stmt ++ "\n" ++ burden b
   | .verdict d doc v links table =>

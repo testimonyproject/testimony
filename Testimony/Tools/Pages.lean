@@ -266,6 +266,9 @@ elab "derive_argument_bodies " tableName:ident : command => do
           else if headIs ``Logic.Because then
             `(Logic.Page.Item.because $(quote dname) $(quote doc)
                 (Logic.Because.view $(mkIdent n)))
+          else if headIs ``Logic.Dilemma then
+            `(Logic.Page.Item.dilemma $(quote dname) $(quote doc)
+                (Logic.Dilemma.view $(mkIdent n)))
           else if headIs ``Logic.Verdict then
             `(Logic.Page.Item.verdict $(quote dname) $(quote doc)
                 (Logic.Verdict.view $(mkIdent n)) [$(becauseLinks),*]
