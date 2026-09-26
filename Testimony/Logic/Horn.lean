@@ -481,12 +481,12 @@ theorem mem_stepsOf {Γ : List (Formula α)} {p ψ : Formula α} :
   · rintro ⟨φ, hφ, rfl, hne⟩; exact ⟨hφ, hne⟩
   · rintro ⟨hφ, hne⟩; exact ⟨_, hφ, rfl, hne⟩
 
-/-- Whether `a`, of strength `s`, defeats `b` by rebutting what `b`'s step
-`p ➝ ψ` delivers: `some true` if `b`'s premises entail `ψ`, `a`'s entail its
-negation, and the step does not outrank `a`; `some false` if either entailment
-is shown to fail or the step outranks `a`; `none` otherwise. -/
-def stepRebuts? (a b : ArgumentPackage α) (s : ℕ) (p ψ : Formula α) : Option Bool :=
-  if Outranks b (p ➝ ψ) s then some false
+/-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, by rebutting
+what `b`'s step `p ➝ ψ` delivers: `some true` if `b`'s premises entail `ψ`,
+`a`'s entail its negation, and `b` is not stronger than `a`; `some false` if
+either entailment is shown to fail or `b` is stronger; `none` otherwise. -/
+def stepRebuts? (a b : ArgumentPackage α) (s t : ℕ) (ψ : Formula α) : Option Bool :=
+  if s < t then some false
   else if satisfiable? (b.premises ++ [∼ψ]) = some false ∧
       satisfiable? (a.premises ++ [ψ]) = some false then some true
   else if satisfiable? (b.premises ++ [∼ψ]) = some true ∨
@@ -497,7 +497,7 @@ def stepRebuts? (a b : ArgumentPackage α) (s : ℕ) (p ψ : Formula α) : Optio
 claim `b`'s steps deliver. -/
 def defeatChecks (a b : ArgumentPackage α) (s t : ℕ) : List (Option Bool) :=
   (rebuts? a b s t :: b.premises.map (undermines? a b s)) ++
-    (stepsOf b.premises).map fun q => stepRebuts? a b s q.1 q.2
+    (stepsOf b.premises).map fun q => stepRebuts? a b s t q.2
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`: `some true` if
 any way succeeds, `some false` if every way is shown to fail, `none` if some
@@ -532,9 +532,9 @@ theorem undermines?_false {a b : ArgumentPackage α} {φ : Formula α}
   · exact hno (by assumption)
   · exact entails_neg_iff.mp hent (satisfiable_of_satisfiable? (map_not_eq_some.mp h))
 
-theorem stepRebuts?_true {a b : ArgumentPackage α} {p ψ : Formula α}
-    (h : stepRebuts? a b a.strength p ψ = some true) :
-    Entails b.premises ψ ∧ Entails a.premises (∼ψ) ∧ ¬ Outranks b (p ➝ ψ) a.strength := by
+theorem stepRebuts?_true {a b : ArgumentPackage α} {ψ : Formula α}
+    (h : stepRebuts? a b a.strength b.strength ψ = some true) :
+    Entails b.premises ψ ∧ Entails a.premises (∼ψ) ∧ ¬ a.strength < b.strength := by
   unfold stepRebuts? at h
   split at h
   · simp at h
@@ -545,10 +545,9 @@ theorem stepRebuts?_true {a b : ArgumentPackage α} {p ψ : Formula α}
         entails_neg_iff.mpr (not_satisfiable_of_satisfiable? hc.2), hno⟩
     · split at h <;> simp at h
 
-theorem stepRebuts?_false {a b : ArgumentPackage α} {p ψ : Formula α}
-    (h : stepRebuts? a b a.strength p ψ = some false) :
-    ¬ (Entails b.premises ψ ∧ Entails a.premises (∼ψ) ∧
-      ¬ Outranks b (p ➝ ψ) a.strength) := by
+theorem stepRebuts?_false {a b : ArgumentPackage α} {ψ : Formula α}
+    (h : stepRebuts? a b a.strength b.strength ψ = some false) :
+    ¬ (Entails b.premises ψ ∧ Entails a.premises (∼ψ) ∧ ¬ a.strength < b.strength) := by
   unfold stepRebuts? at h
   rintro ⟨hb, ha, hno⟩
   split at h

@@ -175,16 +175,17 @@ worketh by love". `james_harmonisation_is_load_bearing` shows the argument
 genuinely depends on this: drop it and sola fide does not follow.
 
 **Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
-Sanders, the critics and Jervell as parties, nothing prevails outright — but
-sola fide from Luke 7:50 is accepted on every resolution. Trent is its only
-defeater, and Trent cannot be defended: the apocalyptic reading defeats it, and
-only Paul answers the apocalyptic reading, and Paul defeats Trent too. The
-apocalyptic reading does not conflict with Luke at all — Luke says faith saved
-her, not that faith alone does — so the dispute between Campbell and the
-Reformed reading is between Campbell and Paul, over the genitive, and the
-dispute chooses neither. The verdict rests on the rivals answering each other,
-and on no cited source arguing that σῴζω at Luke 7:50 means healing, or that her
-love at 7:47 earned her forgiveness; `Dispute.lean` states both.
+Sanders, the critics and Jervell as parties, nothing prevails outright, and
+nothing is forced. Every party's weakest link is `disputed`, so no rating
+breaks a tie, and every attack between Trent and a Reformed strand runs both
+ways: Luke's case and Trent are each defensible, and neither is accepted on
+every resolution. Luke's case, holding only Luke's words, meets Trent over
+faith's sufficiency, and the apocalyptic reading not at all — Luke says faith
+saved her, not that faith alone does — so the dispute between Campbell and the
+Reformed reading is between Campbell and Paul, over the genitive. What would
+decide between Trent and the Reformed readings is what justification *is*, and
+that the library argues rather than weighs: two checked explanations locate
+it, one for Luke's case and one for Paul's gospel (`Gospel.lean`).
 
 **Where Trent parts from Paul** (`Gospel.lean`). Paul's answer to anything added
 to the gospel is Galatians — another gospel, accursed (1:6–9); if righteousness

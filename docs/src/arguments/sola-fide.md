@@ -174,16 +174,17 @@ worketh by love". `james_harmonisation_is_load_bearing` shows the argument
 genuinely depends on this: drop it and sola fide does not follow.
 
 **Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
-Sanders, the critics and Jervell as parties, nothing prevails outright — but
-sola fide from Luke 7:50 is accepted on every resolution. Trent is its only
-defeater, and Trent cannot be defended: the apocalyptic reading defeats it, and
-only Paul answers the apocalyptic reading, and Paul defeats Trent too. The
-apocalyptic reading does not conflict with Luke at all — Luke says faith saved
-her, not that faith alone does — so the dispute between Campbell and the
-Reformed reading is between Campbell and Paul, over the genitive, and the
-dispute chooses neither. The verdict rests on the rivals answering each other,
-and on no cited source arguing that σῴζω at Luke 7:50 means healing, or that her
-love at 7:47 earned her forgiveness; `Dispute.lean` states both.
+Sanders, the critics and Jervell as parties, nothing prevails outright, and
+nothing is forced. Every party's weakest link is `disputed`, so no rating
+breaks a tie, and every attack between Trent and a Reformed strand runs both
+ways: Luke's case and Trent are each defensible, and neither is accepted on
+every resolution. Luke's case, holding only Luke's words, meets Trent over
+faith's sufficiency, and the apocalyptic reading not at all — Luke says faith
+saved her, not that faith alone does — so the dispute between Campbell and the
+Reformed reading is between Campbell and Paul, over the genitive. What would
+decide between Trent and the Reformed readings is what justification *is*, and
+that the library argues rather than weighs: two checked explanations locate
+it, one for Luke's case and one for Paul's gospel (`Gospel.lean`).
 
 **Where Trent parts from Paul** (`Gospel.lean`). Paul's answer to anything added
 to the gospel is Galatians — another gospel, accursed (1:6–9); if righteousness
@@ -939,14 +940,20 @@ carries the objection only as far as the definition does.
 <a id="trentDefinitionSteps"></a>
 **`trentDefinitionSteps`**
 
-What Trent's definition rules out: justification as forensic only (canon 11),
-and justification as distinct from the sanctification that follows it.
+What Trent's definition rules out: justification as forensic only (canon 11);
+justification as distinct from the sanctification that follows it; and faith
+as sufficient. If justification *is* the renewal of the inward man by infused
+charity, then faith "unless hope and charity be added thereto" does not unite
+a person perfectly with Christ (ch. 7), and whoever says that "nothing else is
+required to cooperate" is anathema (canon 9). Trent's denial of sufficiency is
+not a separate thesis: it follows from what Trent says justification is.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
-\text{(2)} \quad &amp; P_{32} \rightarrow \lnot P_{33}
+\text{(2)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
+\text{(3)} \quad &amp; P_{32} \rightarrow \lnot P_{25}
 \end{aligned}
 \]
 </div>
@@ -1572,7 +1579,8 @@ forensic only.
 \text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
 \text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
 \text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(11)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\[4pt]
+\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
+\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\[4pt]
 \vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
 \end{aligned}
 \]
@@ -2034,7 +2042,8 @@ theorem newPerspective_establishes : Establishes newPerspective
 
 The Tridentine reading, as a valuation: works merit an increase of
 justification, so salvation is not apart from works; and justification renews
-the inward man, so it is not forensic only.
+the inward man, so it is not forensic only, not distinct from sanctification,
+and not had by faith alone — faith without charity does not suffice.
 
 ```lean
 def tridentineReading : Valuation Claim :=
@@ -2043,6 +2052,8 @@ def tridentineReading : Valuation Claim :=
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
     | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
     | x => True
 ```
 
@@ -2677,10 +2688,11 @@ one, is a theorem about the positions' premises (see `Testimony.Logic.Dispute`).
 
 ### The ratings decide nothing here
 
-Every party's weakest link is `disputed`: each Reformed strand's inference to
-faith alone is the one Trent's canon 9 denies, and each holds the Reformed
-distinction between justification and sanctification, which Trent anathematises;
-Trent rests on its own definition of justification, which Westminster denies;
+Every party's weakest link is `disputed`: each Reformed strand's inference is
+rated at Trent's canon 9, which denies it; Paul's and Peter's cases hold the
+Reformed distinction between justification and sanctification, which Trent
+anathematises; Trent rests on its own definition of justification, which
+Westminster denies;
 the apocalyptic reading denies an atom (and a denial ranks at the bottom); and
 so on. So no rating blocks any attack, and the outcome is fixed entirely by who
 contradicts whom.
@@ -2689,21 +2701,24 @@ That is unlike the dispute over Isaiah 7:14, where one inference rated
 
 ### Who defeats whom
 
-- **Trent and each Reformed strand defeat each other.** Trent denies "not by
-  works"; each strand concludes it. Trent also undermines each strand: its
-  definition of justification — the renewal of the inward man — contradicts the
-  distinction between justification and sanctification that each strand holds.
-  That is where the objection comes from: with the distinction in place of the
-  definition, Trent's case no longer denies "not by works"
-  (`trent_objection_rests_on_its_definition`).
+- **Trent and each Reformed strand defeat each other.** Paul's and Peter's
+  cases conclude "not by works", which Trent denies; and Trent's definition of
+  justification — the renewal of the inward man — contradicts the distinction
+  between justification and sanctification they hold. That is where the
+  objection comes from: with the distinction in place of the definition, Trent's
+  case no longer denies "not by works"
+  (`trent_objection_rests_on_its_definition`). Luke's case holds only Luke's
+  words, and meets Trent over faith's sufficiency: Trent's definition, with
+  canon 9, denies that faith without charity suffices, and "your faith has
+  saved you" says hers did.
 - **The apocalyptic reading and Paul defeat each other**: it denies the objective
   genitive, and Paul concludes faith alone. **Luke and Acts do not conflict with
   it** either way. They say that faith saves, which it grants; it says that
   faith is not the condition, which they do not deny.
-- **The apocalyptic reading defeats Trent, and Trent does not defeat it.** They
-  agree that justification is not by faith alone; but the apocalyptic reading
-  holds "not by works" — God's deliverance is conditioned on nothing a person
-  does — and nothing Trent holds contradicts its grounds.
+- **The apocalyptic reading and Trent defeat each other.** They agree that
+  justification is not by faith alone; but the apocalyptic reading derives "not
+  by works" — God's deliverance is conditioned on nothing a person does — and
+  Trent denies it. Each attacks what the other holds.
 - **Sanders defeats Paul**, by denying the ἔργα νόμου premise; Paul and the
   critics each defeat Sanders back.
 - **Jervell and Acts defeat each other**, over the yoke.
@@ -2713,12 +2728,11 @@ That is unlike the dispute over Isaiah 7:14, where one inference rated
 **Nothing prevails outright** (`nothing_prevails_over_sola_fide`): every party
 is defeated by someone, and the grounded extension is empty.
 
-**But sola fide from Luke 7:50 is accepted on every resolution**
-(`dominical_case_skeptically_accepted`). Trent cannot be defended — the
-apocalyptic reading defeats it, and the only party that answers the apocalyptic
-reading, Paul, also defeats Trent (`trent_indefensible`). Trent is the dominical
-case's only defeater, so every maximal defensible position holds the dominical
-case.
+**Nor does anything win on every resolution.** Luke's case and Trent are each
+defensible, and neither is forced (`dominical_case_defensible`,
+`dominical_case_not_forced`, `trent_defensible`, `trent_not_forced`). With every
+rating at the bottom, every attack between Trent and a Reformed strand runs
+both ways, and the dispute has no ground to choose between them.
 
 **Between Paul and the apocalyptic reading, the dispute chooses neither.** Each
 defeats the other over πίστις Χριστοῦ; each is defensible, and neither is
@@ -2730,12 +2744,13 @@ not that faith alone does.
 
 Three things, each stated as a result or a limitation rather than left implicit.
 
-**The rivals answering each other.** Remove the apocalyptic reading and
-Trent defends itself against the three strands; sola fide is then accepted on
-some resolutions and not others
-(`sola_fide_not_forced_without_the_apocalyptic_reading`). The verdict is not
-that sola fide answers Trent. It is that Trent cannot answer a rival that
-agrees with it about faith and disagrees with it about works.
+**What justification is.** Between Trent and the Reformed readings, what
+decides is not weighed here but argued: the definition of justification.
+`whyTheDominicalCaseStandsAgainstTrent` finds that Luke's case breaks Trent at
+its definition and the step from it to denying that faith suffices;
+`whereTrentPartsFromPaul` (`Gospel.lean`) finds that Paul's gospel breaks it at
+one step, that a verdict on a finished work excludes the renewal wrought in us.
+Settle that, and the dispute is settled; the ratings here cannot.
 
 **An absence.** The dominical case is attacked by no one but Trent, because no
 source cited here argues that σῴζω at Luke 7:50 means healing. That absence is
@@ -2744,7 +2759,7 @@ search for a scholar arguing the healing sense *at 7:50* found none, and at 7:50
 there is no illness — the saying follows "your sins are forgiven". It is not
 `consensus`, because the same formula means "made you well" at Luke 8:48, 17:19
 and 18:42. A cited argument for the healing reading would attack the dominical
-case, lower the rating, and could change the verdict.
+case and lower the rating.
 
 **An objection answered in advance.** "Her sins are forgiven, for she loved
 much" (7:47) is the text a rival would use to make love, not faith, the ground
@@ -2836,33 +2851,25 @@ Greek. The critics' inference is rated with the rest, as Gathercole's.
 No premise here rests on scripture alone.
 
 <a id="dominicalCase"></a>
-**`dominicalCase`** — Sola fide from Jesus' words (Luke 7:50)
+**`dominicalCase`** — Luke 7:50: "your faith has saved you"
 
-The dominical strand, argued alone: sola fide from Luke 7:50.
+**Luke's case**: what Jesus says at Luke 7:50, and no more. "Your faith has
+saved you", read with σῴζω as salvation and the woman's love (7:47) as the
+evidence of her forgiveness rather than its ground: her faith sufficed.
+
+It carries nothing Luke does not say — not Paul's texts, not the answer to
+James, not the Reformed account of what justification is — and it does not
+claim what Paul argues, that faith *alone* saves. So it is attacked only by
+what denies Luke's own claim.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{18} \\
-\text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; P_{1} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{17} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{20} \\
-\text{(11)} \quad &amp; P_{21} \\
-\text{(12)} \quad &amp; P_{23} \\
-\text{(13)} \quad &amp; P_{33} \\
-\text{(14)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(18)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(1)} \quad &amp; P_{17} \\
+\text{(2)} \quad &amp; P_{18} \\
+\text{(3)} \quad &amp; P_{19} \\
+\text{(4)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{25}
 \end{aligned}
 \]
 </div>
@@ -2922,7 +2929,8 @@ increase of justification, and salvation is not apart from works.
 \text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
 \text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
 \text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(11)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\[4pt]
+\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
+\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\[4pt]
 \vdash \quad &amp; \lnot P_{27}
 \end{aligned}
 \]
@@ -3119,8 +3127,9 @@ grows through good works, and justification and sanctification distinct.
 \text{(7)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
 \text{(8)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
 \text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(10)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\
-\text{(11)} \quad &amp; P_{33} \\[4pt]
+\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
+\text{(11)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\
+\text{(12)} \quad &amp; P_{33} \\[4pt]
 \vdash \quad &amp; \lnot P_{27}
 \end{aligned}
 \]
@@ -3556,6 +3565,7 @@ def trentSandersJervellReading : Valuation Claim :=
     | Claim.worksOfLawMeansWorksGenerally => False
     | Claim.acts15YokeIsLawAsCondition => False
     | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
     | x => True
 ```
 
@@ -3573,6 +3583,7 @@ def trentCriticsJervellReading : Valuation Claim :=
     | Claim.secondTempleCovenantalNomism => False
     | Claim.acts15YokeIsLawAsCondition => False
     | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
     | x => True
 ```
 
@@ -3637,19 +3648,18 @@ theorem apocalyptic_does_not_defeat_apostolic : ¬Defeats apocalypticCase
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="trent_does_not_defeat_apocalyptic"></a>
-**`trent_does_not_defeat_apocalyptic`**
+<a id="trent_defeats_apocalyptic"></a>
+**`trent_defeats_apocalyptic`**
 
-**Trent does not defeat the apocalyptic reading.** They agree on its
-conclusion — justification is not by faith alone — and Trent contradicts none of
-its premises: nothing Trent holds settles the genitive, or what δικαιοσύνη θεοῦ
-names (`trent_grants_the_subjective_genitive`,
-`trent_grants_the_apocalyptic_conclusion`). So the apocalyptic reading's "not
-by works" stands against Trent unanswered.
+**Trent defeats the apocalyptic reading.** They agree on its conclusion —
+justification is not by faith alone — but the apocalyptic reading *derives*
+"not by works" on the way (God's deliverance is sheer gift, conditioned on
+nothing a person does), and Trent denies it: works done in grace merit an
+increase of justification. So Trent rebuts the apocalyptic reading on a claim
+it derives (`RebutsStep`).
 
 ```lean
-theorem trent_does_not_defeat_apocalyptic : ¬Defeats tridentineCase
-    apocalypticCase
+theorem trent_defeats_apocalyptic : Defeats tridentineCase apocalypticCase
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -3769,6 +3779,7 @@ def trentWithoutDeliveranceReading : Valuation Claim :=
     | Claim.pistisChristouObjective => False
     | Claim.righteousnessOfGodIsDeliverance => False
     | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
     | x => True
 ```
 
@@ -3799,6 +3810,7 @@ def trentWithoutFaithAloneReading : Valuation Claim :=
     | Claim.justificationIsForensicOnly => False
     | Claim.justificationByFaithAlone => False
     | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
     | x => True
 ```
 
@@ -4075,6 +4087,7 @@ The dispute drawn: who defeats whom, and whose case is part of whose.
 <path d="M300,292 Q270,173 207,67" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M306,291 Q324,202 306,112" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M312,292 Q344,261 343,217" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M292,312 Q248,311 217,343" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M200,335 Q218,202 200,68" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M214,344 Q259,345 289,313" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M100,292 Q163,186 193,67" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
@@ -4106,7 +4119,7 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | # | Party |
 |---|---|
 | 1 | Sola fide from Paul (Galatians 2:16) |
-| 2 | Sola fide from Jesus' words (Luke 7:50) |
+| 2 | Luke 7:50: "your faith has saved you" |
 | 3 | Sola fide from Peter (Acts 15:9–11) |
 | 4 | Trent, against 'not by works' |
 | 5 | Apocalyptic reading, against faith as the condition |
@@ -4119,12 +4132,13 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 1 *Sola fide from Paul (Galatians 2:16)* | 4 *Trent, against 'not by works'* | defeats |
 | 1 *Sola fide from Paul (Galatians 2:16)* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
 | 1 *Sola fide from Paul (Galatians 2:16)* | 6 *Covenantal nomism (Sanders, Dunn)* | defeats |
-| 2 *Sola fide from Jesus' words (Luke 7:50)* | 4 *Trent, against 'not by works'* | defeats |
+| 2 *Luke 7:50: "your faith has saved you"* | 4 *Trent, against 'not by works'* | defeats |
 | 3 *Sola fide from Peter (Acts 15:9–11)* | 4 *Trent, against 'not by works'* | defeats |
 | 3 *Sola fide from Peter (Acts 15:9–11)* | 8 *Law-observant Luke (Jervell)* | defeats |
 | 4 *Trent, against 'not by works'* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
-| 4 *Trent, against 'not by works'* | 2 *Sola fide from Jesus' words (Luke 7:50)* | defeats |
+| 4 *Trent, against 'not by works'* | 2 *Luke 7:50: "your faith has saved you"* | defeats |
 | 4 *Trent, against 'not by works'* | 3 *Sola fide from Peter (Acts 15:9–11)* | defeats |
+| 4 *Trent, against 'not by works'* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
 | 5 *Apocalyptic reading, against faith as the condition* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
 | 5 *Apocalyptic reading, against faith as the condition* | 4 *Trent, against 'not by works'* | defeats |
 | 6 *Covenantal nomism (Sanders, Dunn)* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
@@ -4146,7 +4160,7 @@ Why nothing prevails outright: a defeater for every party.
 **Nothing prevails outright: every party is defeated by another.**
 
 - *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
-- *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*.
+- *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*.
 - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
 - *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
 - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
@@ -4164,8 +4178,7 @@ Why nothing prevails outright: a defeater for every party.
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
-- *Sola fide from Jesus' words (Luke 7:50)*, weakest at *disputed*:
-  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -4188,7 +4201,8 @@ Why nothing prevails outright: a defeater for every party.
 
 **Nothing prevails outright.** Every party is defeated by some other: each
 Reformed strand by Trent, Trent by each strand and by the apocalyptic reading,
-the apocalyptic reading by Paul, Sanders by the critics, the critics by
+the apocalyptic reading by Paul and by Trent, Sanders by the critics, the
+critics by
 Sanders, Jervell by Acts. The grounded extension — what the dispute forces,
 before any choice between rivals — is empty.
 
@@ -4198,57 +4212,126 @@ theorem nothing_prevails_over_sola_fide : Framework.grounded
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="trentAnsweredByTheApocalypticReading"></a>
-**`trentAnsweredByTheApocalypticReading`**
+<a id="trentStandsWithSandersAndJervell"></a>
+**`trentStandsWithSandersAndJervell`**
 
-Why Trent cannot be defended: the apocalyptic reading attacks it, and the
-only party that answers the apocalyptic reading — Paul — also attacks Trent.
+Why Trent can be defended: it stands with Sanders and Jervell, and answers
+every party that attacks it itself — each Reformed strand, and the apocalyptic
+reading, whose derived "not by works" it denies.
 
-***Trent, against 'not by works'* cannot be defended: no admissible position holds it.**
+***Trent, against 'not by works'* is accepted on some resolution.**
 
-- *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and every answer to *Apocalyptic reading, against faith as the condition* fails:
-  - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, but conflicts with *Trent, against 'not by works'*: *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+- A position holding *Trent, against 'not by works'*, *Covenantal nomism (Sanders, Dunn)*, *Law-observant Luke (Jervell)* can be held.
+- None of *Trent, against 'not by works'*, *Covenantal nomism (Sanders, Dunn)*, *Law-observant Luke (Jervell)* defeats another, and each attack on them is answered from among them:
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*.
+  - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
+  - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*.
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
+  - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
 
-**What this rests on.** The reasons state 4 defeats and 7 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 12 defeats and 17 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
-- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
-  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
-  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+- *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
+  - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
+- *Law-observant Luke (Jervell)*, weakest at *disputed*:
+  - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
-- *Sola fide from Jesus' words (Luke 7:50)*, weakest at *disputed*:
-  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
-  - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
+- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
+  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
+  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
   - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+
+Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
+
+<a id="trent_defensible"></a>
+**`trent_defensible`**
+
+**Trent can be defended.** Some maximal defensible position holds it, with
+Sanders and Jervell. Every party that defeats Trent — Paul, Luke, Peter, the
+apocalyptic reading — Trent defeats back, and the ratings, all at the bottom,
+break no tie. In particular Trent answers the apocalyptic reading: that reading
+derives "not by works" on the way to its conclusion, and Trent denies it
+(`trent_defeats_apocalyptic`).
+
+```lean
+theorem trent_defensible : Framework.CredulouslyAccepted
+    solaFideDispute.defeats Party.trent
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentAnsweredByPaul"></a>
+**`trentAnsweredByPaul`**
+
+Why Trent is not forced: a defensible position holds Paul, and Paul defeats
+Trent.
+
+***Trent, against 'not by works'* is not accepted on every resolution.**
+
+- A position holding *Sola fide from Paul (Galatians 2:16)*, *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)* can be held, and it holds *Sola fide from Paul (Galatians 2:16)*; *Sola fide from Paul (Galatians 2:16)* conflicts with *Trent, against 'not by works'*: *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+- None of *Sola fide from Paul (Galatians 2:16)*, *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)* defeats another, and each attack on them is answered from among them:
+  - *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
+  - *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
+  - *Covenantal nomism (Sanders, Dunn)* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
+  - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
+  - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
+  - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
+  - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
+
+**What this rests on.** The reasons state 11 defeats and 25 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
+  - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
+  - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Trent, against 'not by works'*, weakest at *disputed*:
+  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
+  - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
+  - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
+  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
+  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
+- *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
+  - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
 
-<a id="trent_indefensible"></a>
-**`trent_indefensible`**
+<a id="trent_not_forced"></a>
+**`trent_not_forced`**
 
-**Trent cannot be defended.** The apocalyptic reading defeats it — it holds
-"not by works" on grounds Trent does not contradict — and the only party that
-defeats the apocalyptic reading is Paul's case, which also defeats Trent. No
-position can hold Trent and answer the apocalyptic reading at once.
+**Nor is Trent forced.** A maximal defensible position holds Paul's case with
+Luke's and Peter's, and none of them can be held with Trent.
 
 ```lean
-theorem trent_indefensible : ∀ (S : Set Party), Framework.Admissible
-    solaFideDispute.defeats S → Party.trent ∉ S
+theorem trent_not_forced : ¬Framework.SkepticallyAccepted
+    solaFideDispute.defeats Party.trent
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -4261,18 +4344,18 @@ Peter's, and with the critics, and answers the one party that defeats it — Pau
 
 ***Apocalyptic reading, against faith as the condition* is accepted on some resolution.**
 
-- A position holding *Sola fide from Jesus' words (Luke 7:50)*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* can be held.
-- None of *Sola fide from Jesus' words (Luke 7:50)*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* defeats another, and each attack on them is answered from among them:
-  - *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*, and *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
-  - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+- A position holding *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* can be held.
+- None of *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* defeats another, and each attack on them is answered from among them:
+  - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+  - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
   - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 9 defeats and 27 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 10 defeats and 26 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
-- *Sola fide from Jesus' words (Luke 7:50)*, weakest at *disputed*:
-  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -4298,7 +4381,7 @@ Peter's, and with the critics, and answers the one party that defeats it — Pau
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
 
-Why *Sola fide from Jesus' words (Luke 7:50)* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
+Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
 <a id="apocalyptic_defensible"></a>
 **`apocalyptic_defensible`**
@@ -4326,12 +4409,12 @@ and Paul defeats it.
 
 ***Apocalyptic reading, against faith as the condition* is not accepted on every resolution.**
 
-- A position holding *Sola fide from Paul (Galatians 2:16)*, *Sola fide from Jesus' words (Luke 7:50)*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)* can be held, and it holds *Sola fide from Paul (Galatians 2:16)*; *Sola fide from Paul (Galatians 2:16)* conflicts with *Apocalyptic reading, against faith as the condition*: *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*.
-- None of *Sola fide from Paul (Galatians 2:16)*, *Sola fide from Jesus' words (Luke 7:50)*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)* defeats another, and each attack on them is answered from among them:
+- A position holding *Sola fide from Paul (Galatians 2:16)*, *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)* can be held, and it holds *Sola fide from Paul (Galatians 2:16)*; *Sola fide from Paul (Galatians 2:16)* conflicts with *Apocalyptic reading, against faith as the condition*: *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*.
+- None of *Sola fide from Paul (Galatians 2:16)*, *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)* defeats another, and each attack on them is answered from among them:
   - *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
   - *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
-  - *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
+  - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
   - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*.
   - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
@@ -4347,8 +4430,7 @@ and Paul defeats it.
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
   - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
   - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
-- *Sola fide from Jesus' words (Luke 7:50)*, weakest at *disputed*:
-  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -4379,108 +4461,97 @@ theorem apocalyptic_not_forced : ¬Framework.SkepticallyAccepted
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="dominicalCaseForced"></a>
-**`dominicalCaseForced`**
+<a id="lukeStandsWithPeter"></a>
+**`lukeStandsWithPeter`**
 
-Why the dominical case is accepted on every resolution: it answers Trent
-itself, and Trent cannot be defended — by the strategy above.
+Why Luke's case can be defended: it stands with Peter's, the apocalyptic
+reading and the critics, and answers its one defeater, Trent, itself.
 
-***Sola fide from Jesus' words (Luke 7:50)* is accepted on every resolution.**
+***Luke 7:50: "your faith has saved you"* is accepted on some resolution.**
 
-- *Sola fide from Jesus' words (Luke 7:50)* answers each of its attackers itself:
-  - *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
-- No party in conflict with it can be defended:
-  - *Trent, against 'not by works'* cannot:
-    - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and every answer to *Apocalyptic reading, against faith as the condition* fails:
-      - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, but conflicts with *Trent, against 'not by works'*: *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+- A position holding *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* can be held.
+- None of *Luke 7:50: "your faith has saved you"*, *Sola fide from Peter (Acts 15:9–11)*, *Apocalyptic reading, against faith as the condition*, *Variegated nomism (Gathercole, Carson et al.)* defeats another, and each attack on them is answered from among them:
+  - *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+  - *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+  - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+  - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 6 defeats and 19 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 10 defeats and 26 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
-- *Sola fide from Jesus' words (Luke 7:50)*, weakest at *disputed*:
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
+  - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
+  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
+  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
+- *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
+  - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
-- *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
-  - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
-- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
-  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
-  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
 - *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
   - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
   - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
-- *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
-  - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
-  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
 
-Why *Sola fide from Jesus' words (Luke 7:50)* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
+Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
-<a id="dominical_case_skeptically_accepted"></a>
-**`dominical_case_skeptically_accepted`**
+<a id="dominical_case_defensible"></a>
+**`dominical_case_defensible`**
 
-**Sola fide from Luke 7:50 is accepted on every resolution.** Its only
-defeater is Trent, which no admissible position can hold, and it conflicts with
-no other party: the apocalyptic reading grants what Luke says — that faith
-saved her — and denies only what Luke does not say, that faith alone does. So
-every preferred extension — every maximal defensible position — contains it.
-
-This is the dispute's verdict, and it is narrower than it sounds. It is not
-reached by the grounded semantics, which forces nothing
-(`nothing_prevails_over_sola_fide`). It rests on the two rivals to sola fide
-defeating each other: remove the apocalyptic reading and Trent can be defended
-again (`sola_fide_not_forced_without_the_apocalyptic_reading`). And the
-dominical case is attacked by no one but Trent because no source cited here
-argues that σῴζω at Luke 7:50 means healing, and none argues that the woman's
-love at 7:47 was the ground of her forgiveness.
+**Luke's case can be defended.** "Your faith has saved you", read as Luke
+says it, stands in six of the dispute's eight maximal defensible positions. Its
+only defeater is Trent, over what justification is: Trent's definition denies
+that faith without charity suffices, and Luke's words say her faith saved her.
+It defeats Trent back, and conflicts with no other party.
 
 ```lean
-theorem dominical_case_skeptically_accepted : Framework.SkepticallyAccepted
+theorem dominical_case_defensible : Framework.CredulouslyAccepted
     solaFideDispute.defeats Party.dominical
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="withoutApocalyptic"></a>
-**`withoutApocalyptic`**
+<a id="lukeAnsweredByTrent"></a>
+**`lukeAnsweredByTrent`**
 
-The dispute without the apocalyptic reading.
+Why Luke's case is not forced: a defensible position holds Trent, and Trent
+defeats it.
 
-```lean
-def withoutApocalyptic : Dispute Claim { i // i ≠ Party.apocalyptic } :=
-  solaFideDispute.restrict fun x =>
-    x ≠ Party.apocalyptic
-```
+***Luke 7:50: "your faith has saved you"* is not accepted on every resolution.**
 
-<a id="trentDefendsItselfWithoutTheApocalypticReading"></a>
-**`trentDefendsItselfWithoutTheApocalypticReading`**
-
-Why, without the apocalyptic reading, Trent can be held: alone, it answers
-each Reformed strand that attacks it.
-
-***Sola fide from Jesus' words (Luke 7:50)* is not accepted on every resolution.**
-
-- *Trent, against 'not by works'* can be held alone; *Trent, against 'not by works'* conflicts with *Sola fide from Jesus' words (Luke 7:50)*: *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*, and *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
-- *Trent, against 'not by works'* does not defeat itself, and answers each attack on it:
+- A position holding *Trent, against 'not by works'*, *Covenantal nomism (Sanders, Dunn)*, *Law-observant Luke (Jervell)* can be held, and it holds *Trent, against 'not by works'*; *Trent, against 'not by works'* conflicts with *Luke 7:50: "your faith has saved you"*: *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
+- None of *Trent, against 'not by works'*, *Covenantal nomism (Sanders, Dunn)*, *Law-observant Luke (Jervell)* defeats another, and each attack on them is answered from among them:
   - *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
-  - *Sola fide from Jesus' words (Luke 7:50)* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Jesus' words (Luke 7:50)*.
+  - *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
+  - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*.
+  - *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
+  - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
 
-**What this rests on.** The reasons state 6 defeats and 4 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 12 defeats and 17 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
-- *Sola fide from Jesus' words (Luke 7:50)*, weakest at *disputed*:
-  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
+  - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
+- *Law-observant Luke (Jervell)*, weakest at *disputed*:
+  - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
@@ -4491,65 +4562,71 @@ each Reformed strand that attacks it.
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
-  - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
+- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
+  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
+  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
   - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
-- *Law-observant Luke (Jervell)*, weakest at *disputed*:
-  - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
 
-Why *Sola fide from Jesus' words (Luke 7:50)* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
+Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
-<a id="sola_fide_not_forced_without_the_apocalyptic_reading"></a>
-**`sola_fide_not_forced_without_the_apocalyptic_reading`**
+<a id="dominical_case_not_forced"></a>
+**`dominical_case_not_forced`**
 
-**Without the apocalyptic reading, sola fide is no longer forced.** Trent,
-heard against the three Reformed strands alone, defends itself: it defeats each
-of them back. So some maximal defensible position holds Trent, and that position
-cannot hold the dominical case, which Trent defeats.
+**Nor is it forced.** A maximal defensible position holds Trent, and cannot
+hold Luke's case with it.
 
-The verdict of `dominical_case_skeptically_accepted` therefore rests on one
-rival to sola fide answering the other: on the apocalyptic reading holding
-"not by works" where Trent denies it.
+This is the dispute's verdict, stated plainly: between Trent and each Reformed
+strand, the dispute chooses neither. Every party's weakest link is `disputed`,
+so no rating breaks a tie, and every attack between Trent and the Reformed
+readings runs both ways. What decides between them is what justification *is*
+— and that is argued, not weighed: `whyTheDominicalCaseStandsAgainstTrent`
+locates Luke's disagreement with Trent at Trent's definition, and
+`whereTrentPartsFromPaul` (`Gospel.lean`) locates Paul's at one step, that a
+verdict on a finished work excludes the renewal wrought in us.
 
 ```lean
-theorem sola_fide_not_forced_without_the_apocalyptic_reading :
-    ¬Framework.SkepticallyAccepted withoutApocalyptic.defeats
-    ⟨Party.dominical, ⋯⟩
+theorem dominical_case_not_forced : ¬Framework.SkepticallyAccepted
+    solaFideDispute.defeats Party.dominical
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-#### Why the dominical case stands against Trent
+#### Why Luke's case stands against Trent
 
-The verdicts above say *that* the dominical case is accepted and Trent is not.
-This says *why*, at the level of the claims: the Reformed distinction between
-justification and sanctification is the crux, and it breaks Trent at exactly
-two of its premises.
+The verdicts above say that Luke's case and Trent defeat each other, and that
+the dispute chooses neither. This says *why*, at the level of the claims. The
+two part over what justification
+*is*: Trent defines it as the renewal of the inward man by infused charity, and
+from that definition it follows that faith without charity does not suffice.
+Luke's words say that her faith saved her.
 
 <a id="whyTheDominicalCaseStandsAgainstTrent"></a>
 **`whyTheDominicalCaseStandsAgainstTrent`**
 
-**Why the dominical case stands against Trent.** The crux is the Reformed
-distinction between justification and subsequent sanctification (Westminster
-XIII.1; Calvin, *Institutes* III.xi.6). Trent cannot hold it: its definition of
-justification as including sanctification (Session VI, ch. 7), with the step
-from that definition to denying the distinction, contradicts it, and both are
-needed. Nothing else in Trent's case does.
+**Why Luke's case stands against Trent.** The crux is Luke's own step: from
+"your faith has saved you", with σῴζω as salvation and her love as the
+evidence of forgiveness, to faith's sufficiency. Trent cannot hold it with
+Luke's words: its definition of justification as the renewal of the inward man
+(Session VI, ch. 7), with the step from that definition to denying that faith
+suffices (canon 9), contradicts it — and both are needed. Nothing else in
+Trent's case does: not its account of merit, not its reading of works.
 
-The crux is not part of the dominical case's derivation — sola fide follows
-from Luke 7:50 without it — so it is the dominical case's *answer* to Trent, and
-it is only as strong as its citation, which is `disputed`: Trent's canon 11
-denies it. That is exactly what the verdict against Trent rests on.
+So the disagreement is not about what Luke says. It is about what justification
+is. Grant Trent's definition, and "your faith has saved you" cannot mean that
+faith sufficed; grant that it did, and Trent's definition cannot stand.
 
-**Why *Sola fide from Jesus' words (Luke 7:50)* stands against *Trent, against 'not by works'*.**
+**Why *Luke 7:50: "your faith has saved you"* stands against *Trent, against 'not by works'*.**
 
-- **The crux:** \\(P_{33}\\), a premise of *Sola fide from Jesus' words (Luke 7:50)*.
-- **What it does:** its conclusion follows without it — the crux is its answer to *Trent, against 'not by works'*.
-- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow \lnot P_{33}\\) cannot be held together with \\(P_{33}\\); each is needed for the break, and without the crux they stand.
+- **The crux:** \\((P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25}\\), a premise of *Luke 7:50: "your faith has saved you"*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{17}\\), \\(P_{18}\\), \\(P_{19}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow \lnot P_{25}\\) cannot be held together with \\((P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25}\\) and \\(P_{17}\\), \\(P_{18}\\), \\(P_{19}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{33}\\) Justification and sanctification are inseparable but distinct — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - \\(P_{17}\\) Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven — *consensus*: Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50
+  - \\(P_{18}\\) σῴζω in Luke 7:50 denotes salvation, not physical healing — *well supported*: [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–55; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50
+  - \\(P_{19}\\) Luke 7:47 — her love is the evidence of her forgiveness, not its ground — *plausible*: [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - the step itself — *disputed*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 
 ## Arguments.SolaFide.Johannine — "this is the work of God, that you believe"
 
@@ -5097,7 +5174,8 @@ theorem galatianGospel_is_satisfiable : Satisfiable galatianGospel.premises
 
 Trent's world, with the *Joint Declaration*'s confession added: God no longer
 imputes sin — the verb is forensic — and every text of the gospel line holds.
-Justification still includes renewal, and is not by faith alone.
+Justification still includes renewal, faith without charity does not suffice,
+and justification is not by faith alone.
 
 ```lean
 def jointDeclarationReading : Valuation Claim :=
@@ -5106,6 +5184,8 @@ def jointDeclarationReading : Valuation Claim :=
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
     | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
     | x => True
 ```
 

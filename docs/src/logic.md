@@ -542,8 +542,12 @@ formulas can all hold together: `a` undermines `b` on `φ` exactly when `a`'s
 premises and `φ` cannot, rebuts it exactly when `a`'s premises and `b`'s
 conclusion cannot, and rebuts it on the step `p ➝ ψ` exactly when `b`'s premises
 and `ψ`'s negation cannot, nor `a`'s premises and `ψ`. A rebuttal on a step is
-weighed against the step's rating, an upper bound on the strength of the
-sub-argument it ends, so the preference errs toward the package attacked.
+weighed as a rebuttal of the conclusion is, against the attacked package's
+weakest link: a claim a package derives on the way is no better protected than
+the claim it derives at the end. Weighing it against the step's own rating
+instead would let a well-rated inference shield a poorly-rated premise it
+needs — as it once shielded both Trent's definition and Campbell's
+deliverance, and with them the sola fide verdicts that rested on the gap.
 It translates the premises to clauses — atoms, denied atoms,
 and steps from a conjunction of literals to an atom, a conjunction or a
 contradiction — and decides them by unit propagation. Each answer carries its

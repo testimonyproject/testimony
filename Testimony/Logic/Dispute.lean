@@ -185,16 +185,16 @@ instance (b : ArgumentPackage α) (φ : Formula α) (s : ℕ) :
 /-- `a` **defeats** `b`: it attacks `b`, and what it attacks is not strictly
 stronger than it.
 
-A rebuttal on a step is weighed against the step: the sub-argument that
-delivers `ψ` is no stronger than the step that delivers it, and a step ranks at
-`b`'s inference rank. That is an upper bound on the sub-argument's strength —
-its premises may rank lower — so the preference errs toward `b`: a rebuttal on
-a step that would defeat `b` on the whole sub-argument may be blocked, but none
-is admitted that should not be. -/
+A rebuttal on a step is weighed as a rebuttal of the conclusion is: against
+`b`'s weakest link. A claim `b` derives on the way is no better protected than
+the claim it derives at the end. Weighing it against the step's own rating
+instead would let a well-rated inference shield a poorly-rated premise the
+inference needs — a `consensus` step from a `disputed` definition would carry
+the definition's conclusion at `consensus`. -/
 def Defeats (a b : ArgumentPackage α) : Prop :=
   (∃ φ, UnderminesOn a b φ ∧ ¬ Outranks b φ a.strength) ∨
   (Rebuts a b ∧ ¬ a.strength < b.strength) ∨
-  (∃ p ψ, RebutsStep a b p ψ ∧ ¬ Outranks b (p ➝ ψ) a.strength)
+  (∃ p ψ, RebutsStep a b p ψ ∧ ¬ a.strength < b.strength)
 
 /-- Defeat is attack that survives the preference. -/
 theorem Defeats.attacks {a b : ArgumentPackage α} (h : Defeats a b) : Attacks a b := by

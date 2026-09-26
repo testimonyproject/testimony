@@ -66,12 +66,15 @@ theorem galatianGospel_is_satisfiable : Satisfiable galatianGospel.premises := b
 
 /-- Trent's world, with the *Joint Declaration*'s confession added: God no longer
 imputes sin — the verb is forensic — and every text of the gospel line holds.
-Justification still includes renewal, and is not by faith alone. -/
+Justification still includes renewal, faith without charity does not suffice,
+and justification is not by faith alone. -/
 def jointDeclarationReading : Valuation Claim := fun a =>
   match a with
   | .salvationNotByWorks => False
   | .justificationIsForensicOnly => False
   | .justificationDistinctFromSanctification => False
+  | .faithIsSufficient => False
+  | .justificationByFaithAlone => False
   | _ => True
 
 /-- **Trent can grant every text of the gospel line.** Nothing Trent holds denies

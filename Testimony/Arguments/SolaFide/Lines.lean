@@ -296,12 +296,18 @@ def tridentineLine : Line Claim :=
   , delivers := p .worksMeritIncreaseOfJustification
   , inference := some trentOnIncrease }
 
-/-- What Trent's definition rules out: justification as forensic only (canon 11),
-and justification as distinct from the sanctification that follows it. -/
+/-- What Trent's definition rules out: justification as forensic only (canon 11);
+justification as distinct from the sanctification that follows it; and faith
+as sufficient. If justification *is* the renewal of the inward man by infused
+charity, then faith "unless hope and charity be added thereto" does not unite
+a person perfectly with Christ (ch. 7), and whoever says that "nothing else is
+required to cooperate" is anathema (canon 9). Trent's denial of sufficiency is
+not a separate thesis: it follows from what Trent says justification is. -/
 @[solaFideDefs]
 def trentDefinitionSteps : List (Formula Claim) :=
   [ p .justificationIncludesSanctification ➝ notP .justificationIsForensicOnly
-  , p .justificationIncludesSanctification ➝ notP .justificationDistinctFromSanctification ]
+  , p .justificationIncludesSanctification ➝ notP .justificationDistinctFromSanctification
+  , p .justificationIncludesSanctification ➝ notP .faithIsSufficient ]
 
 /-- The prooftexts the strands read. Shared by every Reformed package, and by
 the New Perspective. -/

@@ -43,12 +43,15 @@ theorem newPerspective_establishes : Establishes newPerspective := by
 
 /-- The Tridentine reading, as a valuation: works merit an increase of
 justification, so salvation is not apart from works; and justification renews
-the inward man, so it is not forensic only. -/
+the inward man, so it is not forensic only, not distinct from sanctification,
+and not had by faith alone — faith without charity does not suffice. -/
 def tridentineReading : Valuation Claim := fun a =>
   match a with
   | .salvationNotByWorks => False
   | .justificationIsForensicOnly => False
   | .justificationDistinctFromSanctification => False
+  | .faithIsSufficient => False
+  | .justificationByFaithAlone => False
   | _ => True
 
 /-- The Tridentine premises do not establish the conclusion — they entail the
