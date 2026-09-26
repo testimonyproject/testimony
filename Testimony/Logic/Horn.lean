@@ -454,9 +454,50 @@ def rebuts? (a b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
   if s < t then some false
   else (satisfiable? (a.premises ++ [b.conclusion])).map (!·)
 
-/-- Every way `a` could defeat `b`: the rebuttal, then each premise of `b`. -/
+/-- A premise as a step a rebuttal can land on: `p ➝ ψ` whose head is not `⊥`,
+as the pair `(p, ψ)`. A premise with head `⊥` denies something; it derives
+nothing. -/
+def stepOf? : Formula α → Option (Formula α × Formula α)
+  | .imp _ .falsum => none
+  | .imp p q => some (p, q)
+  | _ => none
+
+/-- The steps of a premise list a rebuttal can land on. -/
+def stepsOf (Γ : List (Formula α)) : List (Formula α × Formula α) := Γ.filterMap stepOf?
+
+omit [DecidableEq α] in
+theorem stepOf?_eq_some {φ p ψ : Formula α} :
+    stepOf? φ = some (p, ψ) ↔ φ = .imp p ψ ∧ ψ ≠ .falsum := by
+  cases φ with
+  | imp q r =>
+    cases r <;> simp [stepOf?] <;> rintro rfl rfl <;> simp
+  | _ => simp [stepOf?]
+
+omit [DecidableEq α] in
+theorem mem_stepsOf {Γ : List (Formula α)} {p ψ : Formula α} :
+    (p, ψ) ∈ stepsOf Γ ↔ (p ➝ ψ) ∈ Γ ∧ ψ ≠ ⊥ := by
+  simp only [stepsOf, List.mem_filterMap, stepOf?_eq_some]
+  constructor
+  · rintro ⟨φ, hφ, rfl, hne⟩; exact ⟨hφ, hne⟩
+  · rintro ⟨hφ, hne⟩; exact ⟨_, hφ, rfl, hne⟩
+
+/-- Whether `a`, of strength `s`, defeats `b` by rebutting what `b`'s step
+`p ➝ ψ` delivers: `some true` if `b`'s premises entail `ψ`, `a`'s entail its
+negation, and the step does not outrank `a`; `some false` if either entailment
+is shown to fail or the step outranks `a`; `none` otherwise. -/
+def stepRebuts? (a b : ArgumentPackage α) (s : ℕ) (p ψ : Formula α) : Option Bool :=
+  if Outranks b (p ➝ ψ) s then some false
+  else if satisfiable? (b.premises ++ [∼ψ]) = some false ∧
+      satisfiable? (a.premises ++ [ψ]) = some false then some true
+  else if satisfiable? (b.premises ++ [∼ψ]) = some true ∨
+      satisfiable? (a.premises ++ [ψ]) = some true then some false
+  else none
+
+/-- Every way `a` could defeat `b`: the rebuttal, each premise of `b`, and each
+claim `b`'s steps deliver. -/
 def defeatChecks (a b : ArgumentPackage α) (s t : ℕ) : List (Option Bool) :=
-  rebuts? a b s t :: b.premises.map (undermines? a b s)
+  (rebuts? a b s t :: b.premises.map (undermines? a b s)) ++
+    (stepsOf b.premises).map fun q => stepRebuts? a b s q.1 q.2
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`: `some true` if
 any way succeeds, `some false` if every way is shown to fail, `none` if some
@@ -491,6 +532,36 @@ theorem undermines?_false {a b : ArgumentPackage α} {φ : Formula α}
   · exact hno (by assumption)
   · exact entails_neg_iff.mp hent (satisfiable_of_satisfiable? (map_not_eq_some.mp h))
 
+theorem stepRebuts?_true {a b : ArgumentPackage α} {p ψ : Formula α}
+    (h : stepRebuts? a b a.strength p ψ = some true) :
+    Entails b.premises ψ ∧ Entails a.premises (∼ψ) ∧ ¬ Outranks b (p ➝ ψ) a.strength := by
+  unfold stepRebuts? at h
+  split at h
+  · simp at h
+  · rename_i hno
+    split at h
+    · rename_i hc
+      exact ⟨entails_iff_not_satisfiable.mpr (not_satisfiable_of_satisfiable? hc.1),
+        entails_neg_iff.mpr (not_satisfiable_of_satisfiable? hc.2), hno⟩
+    · split at h <;> simp at h
+
+theorem stepRebuts?_false {a b : ArgumentPackage α} {p ψ : Formula α}
+    (h : stepRebuts? a b a.strength p ψ = some false) :
+    ¬ (Entails b.premises ψ ∧ Entails a.premises (∼ψ) ∧
+      ¬ Outranks b (p ➝ ψ) a.strength) := by
+  unfold stepRebuts? at h
+  rintro ⟨hb, ha, hno⟩
+  split at h
+  · exact hno (by assumption)
+  · split at h
+    · simp at h
+    · split at h
+      · rename_i hc
+        rcases hc with hc | hc
+        · exact entails_iff_not_satisfiable.mp hb (satisfiable_of_satisfiable? hc)
+        · exact entails_neg_iff.mp ha (satisfiable_of_satisfiable? hc)
+      · simp at h
+
 theorem rebuts?_true {a b : ArgumentPackage α}
     (h : rebuts? a b a.strength b.strength = some true) :
     Rebuts a b ∧ ¬ a.strength < b.strength := by
@@ -520,11 +591,16 @@ theorem defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
     obtain ⟨x, hx, hxt⟩ := List.any_eq_true.mp hany
     have hxt : x = some true := by simpa using hxt
     subst hxt
-    rcases List.mem_cons.mp hx with hr | hu
-    · exact .inr (rebuts?_true hr.symm)
-    · obtain ⟨φ, hφ, he⟩ := List.mem_map.mp hu
-      obtain ⟨hent, hno⟩ := undermines?_true he
-      exact .inl ⟨φ, ⟨hφ, hent⟩, hno⟩
+    rcases List.mem_append.mp hx with hx | hx
+    · rcases List.mem_cons.mp hx with hr | hu
+      · exact .inr (.inl (rebuts?_true hr.symm))
+      · obtain ⟨φ, hφ, he⟩ := List.mem_map.mp hu
+        obtain ⟨hent, hno⟩ := undermines?_true he
+        exact .inl ⟨φ, ⟨hφ, hent⟩, hno⟩
+    · obtain ⟨⟨p, ψ⟩, hq, he⟩ := List.mem_map.mp hx
+      obtain ⟨hb, ha, hno⟩ := stepRebuts?_true he
+      obtain ⟨hmem, hne⟩ := mem_stepsOf.mp hq
+      exact .inr (.inr ⟨p, ψ, ⟨hmem, hne, hb, ha⟩, hno⟩)
   · split at h <;> simp at h
 
 /-- A non-defeat, decided. -/
@@ -538,11 +614,14 @@ theorem not_defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
   · split at h
     · rename_i hall
       have hall := List.all_eq_true.mp hall
-      rintro (⟨φ, ⟨hφ, hent⟩, hno⟩ | hr)
-      · have := hall _ (List.mem_cons_of_mem _ (List.mem_map_of_mem hφ))
+      rintro (⟨φ, ⟨hφ, hent⟩, hno⟩ | hr | ⟨p, ψ, ⟨hmem, hne, hb, ha⟩, hno⟩)
+      · have := hall _ (List.mem_append_left _ (List.mem_cons_of_mem _ (List.mem_map_of_mem hφ)))
         exact undermines?_false (by simpa using this) ⟨hent, hno⟩
-      · have := hall _ List.mem_cons_self
+      · have := hall _ (List.mem_append_left _ List.mem_cons_self)
         exact rebuts?_false (by simpa using this) hr
+      · have := hall _ (List.mem_append_right _
+          (List.mem_map.mpr ⟨(p, ψ), mem_stepsOf.mpr ⟨hmem, hne⟩, rfl⟩))
+        exact stepRebuts?_false (by simpa using this) ⟨hb, ha, hno⟩
     · simp at h
 
 /-- **A cell of a defeat table, from one computation.** If the decision agrees

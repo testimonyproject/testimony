@@ -38,6 +38,11 @@ already a defeat, so the two relations can be read against each other; one that
 is not is a question the dispute leaves open, not an answer it gives. A pair in
 which one party both supports and defeats the other is marked too: such a
 position lends the other a premise while undermining it.
+
+One derived attack *is* counted, and it is not drawn here as derived: a
+rebuttal of a claim a party derives by its own steps (`RebutsStep`,
+`Testimony.Logic.Dispute`). It is between a package and its own commitments,
+gated by entailment, and so part of the defeat relation itself.
 -/
 
 namespace Testimony.Logic
