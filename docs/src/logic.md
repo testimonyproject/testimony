@@ -635,37 +635,38 @@ itself when a party is added, and a witness that no longer holds fails to
 check.
 
 **Draw the dispute.** An `ArgumentMap` (`Testimony.Logic.Map`) is the
-dispute's graph as one declaration: the defeat table the solver uses, and a
-**support** table. One party supports another when its conclusion entails a
-claim the other rests on (`Testimony.Logic.Support`). Only a claim counts, an
-atom or a denied atom, never an inference step. A conclusion can entail a step
-vacuously, by denying its antecedent. Or it can entail the step by concluding
-what the step concludes, which is agreement, not support. Both happen in the
-library's disputes. The support table is proved like the defeat table, cell by
-cell, by `supports?` and `decide +kernel`:
+dispute's graph as one declaration: the defeat table the solver uses, and two
+tables of how parties stand together (`Testimony.Logic.Support`).
+
+- **Support.** One party supports another when its conclusion entails a claim
+  the other rests on. Only a claim counts, an atom or a denied atom, never an
+  inference step. A conclusion can entail a step vacuously, by denying its
+  antecedent. Or it can entail the step by concluding what the step concludes,
+  which is agreement, not support. Both happen in the library's disputes.
+- **Part of.** One party's case is part of another's when every premise of the
+  first follows from the second's premises. The Pauline strand derives its ἔργα
+  νόμου premise from the critics' line, which denies covenantal nomism, instead
+  of assuming it. So the critics' case is part of Paul's, and Sanders meets Paul
+  on the history of Second Temple Judaism, where the literature has the dispute.
+
+Both tables are proved like the defeat table, cell by cell, by `supports?` or
+`partOf?` and `decide +kernel`:
 
 ```lean
-theorem solaFideDispute_supports :
-    ∀ i j, solaFideDispute.supports i j ↔ partySupports i j := by
+theorem solaFideDispute_partOf : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
   intro i j
-  refine supports_iff_of_supports? ?_
+  refine partOf_iff_of_partOf? ?_
   cases i <;> cases j <;> decide +kernel
-
-def solaFideMap : ArgumentMap solaFideDispute where
-  finite := solaFideFinite
-  supports i j := decide (partySupports i j)
-  supports_spec i j := by rw [solaFideDispute_supports]; simp
 ```
 
 The page draws the graph, lists the parties by number, and tabulates every
-edge. With the defeats and supports it lists the attacks support implies. A
+edge. With the defeats, supports and parts it lists the attacks they imply. A
 **supported attack** is one where *a* supports a party that defeats *c*. A
-**secondary attack** is one where *a* defeats a party that supports *c*. These
-are reported alongside the defeats and never added to them, so no verdict
-depends on them. Each is marked by whether it is already a defeat, and the page
-counts those that are not: questions the dispute leaves open. In sola fide, the
-variegated-nomism critics lend Paul a premise, so they stand behind two attacks
-the defeats do not contain: on Trent, and on the apocalyptic reading.
+**secondary attack** is one where *a* defeats a party that supports *c*. An
+**attack on a part** is one where *a* defeats a party whose case is part of
+*c*'s. These are reported alongside the defeats and never added to them, so no
+verdict depends on them. Each is marked by whether it is already a defeat, and
+the page counts those that are not: questions the dispute leaves open.
 
 **4. Say why a position stands against a rival.** A verdict says *who*
 survives; a reader also asks *why*. `Because P R` (`Testimony.Logic.Because`)

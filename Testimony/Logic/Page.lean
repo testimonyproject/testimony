@@ -123,6 +123,10 @@ inductive EdgeKind
   | supportedAttack (alsoDefeats : Bool)
   /-- The first defeats a party that supports the second. -/
   | secondaryAttack (alsoDefeats : Bool)
+  /-- The first's whole case is part of the second's. -/
+  | partOf
+  /-- The first defeats a party whose case is part of the second's. -/
+  | partAttack (alsoDefeats : Bool)
 
 /-- A dispute's graph, as a page shows it (`Testimony.Logic.Map`): the parties,
 numbered, and every edge between them by number. -/
@@ -148,17 +152,20 @@ def EdgeKind.describe : EdgeKind → String
     "supported attack" ++ (if d then " — already a defeat" else " — not a defeat")
   | .secondaryAttack d =>
     "secondary attack" ++ (if d then " — already a defeat" else " — not a defeat")
+  | .partOf => "is part of"
+  | .partAttack d =>
+    "attack on a part" ++ (if d then " — already a defeat" else " — not a defeat")
 
 /-- Whether an edge is drawn: defeats and supports are; the attacks derived
 through support are listed in the table only. -/
 def EdgeKind.drawn : EdgeKind → Bool
-  | .defeat | .support _ => true
+  | .defeat | .support _ | .partOf => true
   | _ => false
 
 /-- The derived attacks that are not already defeats. -/
 def undirected (g : Graph) : Nat :=
   (g.edges.filter fun (_, _, k) => match k with
-    | .supportedAttack false | .secondaryAttack false => true
+    | .supportedAttack false | .secondaryAttack false | .partAttack false => true
     | _ => false).length
 
 /-- The pairs in which one party both supports and defeats the other. -/
@@ -198,9 +205,9 @@ inductive Item (α : Type)
   page's `Because` declarations to link its defeats to, and the theorem that
   proves the defeat table (empty if none was found). -/
   | verdict (decl doc : String) (v : Verdict) (links : List BecauseLink) (table : String)
-  /-- A dispute's graph, with the theorems proving its defeat table and its
-  support table (each empty if none was found). -/
-  | graph (decl doc : String) (g : Graph) (defeatTable supportTable : String)
+  /-- A dispute's graph, with the theorems proving its defeat, support and
+  part-of tables (each empty if none was found). -/
+  | graph (decl doc : String) (g : Graph) (defeatTable supportTable partTable : String)
 
 namespace Item
 

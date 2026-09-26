@@ -1,12 +1,16 @@
 import Testimony.Logic.Because
 
 /-!
-# Testimony.Logic.Support — one position lending another a premise
+# Testimony.Logic.Support — one position lending another a premise, or holding it
 
 A dispute's defeats say who stands against whom. Positions also stand *with*
-each other: the variegated-nomism critics conclude that Second Temple Judaism
-held final vindication according to works, and Paul's case needs ἔργα νόμου to
-mean works in general. The first delivers something the second rests on.
+each other, in two ways. One can deliver a claim another rests on: a case whose
+conclusion is that Paul's ἔργα νόμου is works in general lends that claim to any
+case that assumes it. Or one can hold another's whole case inside its own: the
+Pauline strand of the sola fide dispute derives its ἔργα νόμου premise from the
+critics' line rather than assuming it, and so the critics' case is **part of**
+Paul's (`PartOf`, below). No party in the library's current disputes supports
+another; that one is part of another.
 
 `Supports a b` is that relation: `a`'s conclusion entails a **claim** `b` rests
 on — an atom or a denied atom among `b`'s premises. It is decided by the Horn
@@ -106,12 +110,108 @@ theorem supports_iff_of_supports? {a b : ArgumentPackage α} {P : Prop} [Decidab
 
 end Decide
 
+/-! ### One position as part of another
+
+Support is one position lending another a claim. A position can also hold
+another's whole case: the Pauline strand rests on the critics' line, deriving
+its ἔργα νόμου premise from their denial of covenantal nomism. Then the critics'
+case is **part of** Paul's — every premise of it follows from Paul's premises —
+and whatever defeats the part is aimed at the whole. -/
+
+/-- `b` is **part of** `a`: every premise of `b` follows from `a`'s premises. -/
+def PartOf (b a : ArgumentPackage α) : Prop := ∀ φ ∈ b.premises, Entails a.premises φ
+
+section DecidePart
+
+variable [DecidableEq α]
+
+/-- Whether `a`'s premises entail `φ`, asked of the engine in a form it can
+decide: `φ`'s negation for a claim, and for a step `p → q`, `p` with `q`'s
+negation. `some false` is an entailment. -/
+def entailsCheck (Γ : List (Formula α)) : Formula α → Option Bool
+  | .imp p q => satisfiable? (Γ ++ [p, ∼q])
+  | φ => satisfiable? (Γ ++ [∼φ])
+
+omit [DecidableEq α] in
+theorem entails_imp_iff {Γ : List (Formula α)} {p q : Formula α} :
+    Entails Γ (.imp p q) ↔ ¬ Satisfiable (Γ ++ [p, ∼q]) := by
+  rw [entails_iff, satisfiable_iff]
+  simp only [List.mem_append, List.mem_cons, List.not_mem_nil, or_false]
+  constructor
+  · rintro h ⟨w, hw⟩
+    exact hw _ (.inr (.inr rfl)) (h w (fun ψ hψ => hw ψ (.inl hψ)) (hw _ (.inr (.inl rfl))))
+  · intro h w hw hp
+    by_contra hq
+    exact h ⟨w, fun ψ hψ => by
+      rcases hψ with hψ | rfl | rfl
+      · exact hw ψ hψ
+      · exact hp
+      · exact hq⟩
+
+theorem entails_of_entailsCheck {Γ : List (Formula α)} {φ : Formula α}
+    (h : entailsCheck Γ φ = some false) : Entails Γ φ := by
+  cases φ with
+  | imp p q => exact entails_imp_iff.mpr (not_satisfiable_of_satisfiable? h)
+  | _ => exact entails_iff_not_satisfiable.mpr (not_satisfiable_of_satisfiable? h)
+
+theorem not_entails_of_entailsCheck {Γ : List (Formula α)} {φ : Formula α}
+    (h : entailsCheck Γ φ = some true) : ¬ Entails Γ φ := by
+  cases φ with
+  | imp p q => exact fun he => entails_imp_iff.mp he (satisfiable_of_satisfiable? h)
+  | _ => exact fun he => entails_iff_not_satisfiable.mp he (satisfiable_of_satisfiable? h)
+
+/-- For each premise of `b`, whether `a`'s premises entail it. -/
+def partChecks (b a : ArgumentPackage α) : List (Option Bool) :=
+  b.premises.map (entailsCheck a.premises)
+
+/-- **Whether `b` is part of `a`**, decided by the engine. -/
+def partOf? (b a : ArgumentPackage α) : Option Bool :=
+  if (partChecks b a).all (· == some false) then some true
+  else if (partChecks b a).any (· == some true) then some false
+  else none
+
+theorem partOf_of_partOf? {b a : ArgumentPackage α} (h : partOf? b a = some true) :
+    PartOf b a := by
+  unfold partOf? at h
+  split at h
+  · rename_i hall
+    intro φ hφ
+    have hmem := List.mem_map_of_mem (f := entailsCheck a.premises) hφ
+    exact entails_of_entailsCheck (by simpa using List.all_eq_true.mp hall _ hmem)
+  · split at h <;> simp at h
+
+theorem not_partOf_of_partOf? {b a : ArgumentPackage α} (h : partOf? b a = some false) :
+    ¬ PartOf b a := by
+  unfold partOf? at h
+  split at h
+  · simp at h
+  · split at h
+    · rename_i _ hany
+      obtain ⟨r, hr, hr'⟩ := List.any_eq_true.mp hany
+      obtain ⟨φ, hφ, rfl⟩ := List.mem_map.mp (by simpa [partChecks] using hr)
+      exact fun hp => not_entails_of_entailsCheck (by simpa using hr') (hp φ hφ)
+    · simp at h
+
+/-- **A part-of table cell, from the engine.** -/
+theorem partOf_iff_of_partOf? {b a : ArgumentPackage α} {P : Prop} [Decidable P]
+    (h : partOf? b a = some (decide P)) : PartOf b a ↔ P := by
+  by_cases hP : P
+  · simp only [hP, decide_true] at h
+    exact ⟨fun _ => hP, fun _ => partOf_of_partOf? h⟩
+  · simp only [hP, decide_false] at h
+    exact ⟨fun hs => absurd hs (not_partOf_of_partOf? h), fun h' => absurd h' hP⟩
+
+end DecidePart
+
 namespace Dispute
 
 variable {ι : Type} (d : Dispute α ι)
 
 /-- In a dispute, node `i` supports node `j`. -/
 def supports (i j : ι) : Prop := Supports (d.node i) (d.node j)
+
+/-- In a dispute, node `i` is part of node `j`. -/
+def partOf (i j : ι) : Prop := PartOf (d.node i) (d.node j)
 
 end Dispute
 

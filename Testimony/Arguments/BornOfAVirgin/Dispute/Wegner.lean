@@ -223,11 +223,20 @@ theorem wegnerDispute_supports : ∀ i j, ¬ wegnerDispute.supports i j := by
   refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
   cases i <;> cases j <;> decide +kernel
 
+/-- **No case is part of another's** here, in all nine pairs, except each
+party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
+theorem wegnerDispute_partOf : ∀ i j, wegnerDispute.partOf i j ↔ i = j := by
+  intro i j
+  refine partOf_iff_of_partOf? ?_
+  cases i <;> cases j <;> decide +kernel
+
 /-- The dispute drawn: who defeats whom. -/
 def wegnerMap : ArgumentMap wegnerDispute where
   finite := wegnerFinite
   supports _ _ := false
   supports_spec i j := by simp [wegnerDispute_supports i j]
+  partOf i j := decide (i = j)
+  partOf_spec i j := by rw [wegnerDispute_partOf]; simp
 
 /-- Why nothing prevails: a defeater for each party. -/
 def everyWegnerPartyDefeated : Verdict wegnerDispute where

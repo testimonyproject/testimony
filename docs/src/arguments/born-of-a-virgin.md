@@ -4261,16 +4261,29 @@ theorem isaiahDispute_supports : ∀ (i j : Party), ¬isaiahDispute.supports i j
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+<a id="isaiahDispute_partOf"></a>
+**`isaiahDispute_partOf`**
+
+**No case is part of another's** here, in all thirty-six pairs, except each
+party's own. Every cell is computed by `partOf?` and checked by the kernel.
+
+```lean
+theorem isaiahDispute_partOf : ∀ (i j : Party), isaiahDispute.partOf i j ↔ i =
+    j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
 <a id="isaiahMap"></a>
 **`isaiahMap`**
 
 The dispute drawn: who defeats whom.
 
 <div class="argument-map">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="The dispute as a graph: parties numbered as in the table below, defeats solid, supports dashed">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="The dispute as a graph: parties numbered as in the table below, defeats solid, supports dashed, parts dotted">
 <defs>
 <marker id="tm-defeat" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#b3261e"/></marker>
 <marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
+<marker id="tm-part" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#1f5fa8"/></marker>
 </defs>
 <path d="M213,58 Q255,102 314,116" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M317,118 Q275,73 216,59" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
@@ -4295,7 +4308,7 @@ The dispute drawn: who defeats whom.
 </svg>
 </div>
 
-Solid red: defeats. Dashed green: supports.
+Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is part of another's.
 
 | # | Party |
 |---|---|
@@ -4317,7 +4330,7 @@ Solid red: defeats. Dashed green: supports.
 | 5 *Motyer's reply to the near-term reading* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
 | 6 *Postell's Micah counterexample to the near-term exclusion* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
 
-The defeats are the cells of [`isaiahDispute_defeats`](#isaiahDispute_defeats) and the supports the cells of [`isaiahDispute_supports`](#isaiahDispute_supports), each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+The defeats are the cells of [`isaiahDispute_defeats`](#isaiahDispute_defeats), the supports the cells of [`isaiahDispute_supports`](#isaiahDispute_supports) and the parts the cells of [`isaiahDispute_partOf`](#isaiahDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 
 <a id="repliesHeardInStages"></a>
 **`repliesHeardInStages`**
@@ -5043,16 +5056,29 @@ theorem wegnerDispute_supports : ∀ (i j : WegnerParty),
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+<a id="wegnerDispute_partOf"></a>
+**`wegnerDispute_partOf`**
+
+**No case is part of another's** here, in all nine pairs, except each
+party's own. Every cell is computed by `partOf?` and checked by the kernel.
+
+```lean
+theorem wegnerDispute_partOf : ∀ (i j : WegnerParty), wegnerDispute.partOf i j
+    ↔ i = j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
 <a id="wegnerMap"></a>
 **`wegnerMap`**
 
 The dispute drawn: who defeats whom.
 
 <div class="argument-map">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="The dispute as a graph: parties numbered as in the table below, defeats solid, supports dashed">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="The dispute as a graph: parties numbered as in the table below, defeats solid, supports dashed, parts dotted">
 <defs>
 <marker id="tm-defeat" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#b3261e"/></marker>
 <marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
+<marker id="tm-part" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#1f5fa8"/></marker>
 </defs>
 <path d="M208,63 Q249,170 321,259" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M322,262 Q281,155 209,66" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
@@ -5067,7 +5093,7 @@ The dispute drawn: who defeats whom.
 </svg>
 </div>
 
-Solid red: defeats. Dashed green: supports.
+Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is part of another's.
 
 | # | Party |
 |---|---|
@@ -5082,7 +5108,7 @@ Solid red: defeats. Dashed green: supports.
 | 2 *The fathers' sign argument (Isaiah 7:11, 14)* | 3 *The near-term reply: a sign need not be a miracle* | defeats |
 | 3 *The near-term reply: a sign need not be a miracle* | 2 *The fathers' sign argument (Isaiah 7:11, 14)* | defeats |
 
-The defeats are the cells of [`wegnerDispute_defeats`](#wegnerDispute_defeats) and the supports the cells of [`wegnerDispute_supports`](#wegnerDispute_supports), each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+The defeats are the cells of [`wegnerDispute_defeats`](#wegnerDispute_defeats), the supports the cells of [`wegnerDispute_supports`](#wegnerDispute_supports) and the parts the cells of [`wegnerDispute_partOf`](#wegnerDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 
 <a id="everyWegnerPartyDefeated"></a>
 **`everyWegnerPartyDefeated`**

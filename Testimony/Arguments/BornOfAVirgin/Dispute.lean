@@ -496,11 +496,20 @@ theorem isaiahDispute_supports : ∀ i j, ¬ isaiahDispute.supports i j := by
   refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
   cases i <;> cases j <;> decide +kernel
 
+/-- **No case is part of another's** here, in all thirty-six pairs, except each
+party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
+theorem isaiahDispute_partOf : ∀ i j, isaiahDispute.partOf i j ↔ i = j := by
+  intro i j
+  refine partOf_iff_of_partOf? ?_
+  cases i <;> cases j <;> decide +kernel
+
 /-- The dispute drawn: who defeats whom. -/
 def isaiahMap : ArgumentMap isaiahDispute where
   finite := isaiahFinite
   supports _ _ := false
   supports_spec i j := by simp [isaiahDispute_supports i j]
+  partOf i j := decide (i = j)
+  partOf_spec i j := by rw [isaiahDispute_partOf]; simp
 
 /-- How the scriptural reading prevails, in stages: nothing attacks Postell's
 two counterexamples, so they come first; they answer the critic, the only party

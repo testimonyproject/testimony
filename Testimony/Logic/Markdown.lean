@@ -361,6 +361,8 @@ def graphSvg (g : Page.Graph) : String :=
     let cy := (sy + ey) / 2 + ux * 18
     let style := match kind with
       | .defeat => "stroke:#b3261e;fill:none;stroke-width:1.6\" marker-end=\"url(#tm-defeat)"
+      | .partOf => "stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3\" " ++
+          "marker-end=\"url(#tm-part)"
       | _ => "stroke:#2e7d32;fill:none;stroke-width:1.6;stroke-dasharray:5 3\" " ++
           "marker-end=\"url(#tm-support)"
     "<path d=\"M" ++ px sx ++ "," ++ px sy ++ " Q" ++ px cx ++ "," ++ px cy ++ " " ++
@@ -379,8 +381,9 @@ def graphSvg (g : Page.Graph) : String :=
   "<div class=\"argument-map\">\n" ++
   "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\" width=\"400\" " ++
     "height=\"400\" role=\"img\" aria-label=\"The dispute as a graph: parties numbered " ++
-    "as in the table below, defeats solid, supports dashed\">\n" ++
-  "<defs>\n" ++ marker "tm-defeat" "#b3261e" ++ marker "tm-support" "#2e7d32" ++ "</defs>\n" ++
+    "as in the table below, defeats solid, supports dashed, parts dotted\">\n" ++
+  "<defs>\n" ++ marker "tm-defeat" "#b3261e" ++ marker "tm-support" "#2e7d32" ++
+    marker "tm-part" "#1f5fa8" ++ "</defs>\n" ++
   String.join (g.edges.filterMap fun (i, j, k) =>
     if Page.Graph.EdgeKind.drawn k then some (edge i j k) else none) ++
   String.join ((List.range n).map circle) ++
@@ -388,12 +391,13 @@ def graphSvg (g : Page.Graph) : String :=
 
 /-- A dispute's graph: drawn, then its parties by number, then every edge in a
 table, then what the derived attacks and the conflicts come to. -/
-def graph (g : Page.Graph) (defeatTable supportTable : String) : String :=
+def graph (g : Page.Graph) (defeatTable supportTable partTable : String) : String :=
   let name (k : Nat) := "*" ++ escape (g.nodes.getD k "") ++ "*"
   let ref (t : String) (fallback : String) :=
     if t.isEmpty then fallback else "[`" ++ t ++ "`](#" ++ t ++ ")"
   graphSvg g ++
-  "Solid red: defeats. Dashed green: supports.\n\n" ++
+  "Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is " ++
+  "part of another's.\n\n" ++
   "| # | Party |\n|---|---|\n" ++
   String.join (g.nodes.zipIdx.map fun (nm, k) =>
     "| " ++ toString (k + 1) ++ " | " ++ escape nm ++ " |\n") ++
@@ -402,10 +406,11 @@ def graph (g : Page.Graph) (defeatTable supportTable : String) : String :=
     "| " ++ toString (i + 1) ++ " " ++ name i ++ " | " ++ toString (j + 1) ++ " " ++ name j ++
     " | " ++ Page.Graph.EdgeKind.describe k ++ " |\n") ++
   "\nThe defeats are the cells of " ++ ref defeatTable "the defeat table" ++
-  " and the supports the cells of " ++ ref supportTable "the support table" ++
+  ", the supports the cells of " ++ ref supportTable "the support table" ++
+  " and the parts the cells of " ++ ref partTable "the part-of table" ++
   ", each computed from the parties' premises and checked by the kernel. " ++
-  "The attacks derived through support are reported, not counted: every verdict is " ++
-  "computed from the defeats alone. " ++
+  "The attacks derived through support and through parts are reported, not counted: " ++
+  "every verdict is computed from the defeats alone. " ++
   (match Page.Graph.undirected g with
     | 0 => "Every derived attack is already a defeat."
     | 1 => "One derived attack is not a defeat; the dispute leaves it open."
@@ -446,8 +451,8 @@ def item [DecidableEq α] (order : List α) : Item α → String
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ explanation order e
   | .verdict d doc v links table =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ verdict v links table
-  | .graph d doc g defeats supports =>
-      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ graph g defeats supports
+  | .graph d doc g defeats supports parts =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ graph g defeats supports parts
 
 /-- The body of a generated page: the legend, then every item in source order.
 

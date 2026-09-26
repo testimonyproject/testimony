@@ -2681,6 +2681,14 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
 theorem isaiahDispute_supports : ∀ (i j : Party), ¬isaiahDispute.supports i j
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
+\textbf{No case is part of another's} here, in all thirty-six pairs, except each party's own. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem isaiahDispute_partOf : ∀ (i j : Party), isaiahDispute.partOf i j ↔ i =
+    j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Map}}\par\nobreak\noindent
 The dispute drawn: who defeats whom.
 
@@ -2702,7 +2710,7 @@ The dispute drawn: who defeats whom.
 \draw[->,red!70!black,thick] (n5) to[bend left=10] (n1);
 \end{tikzpicture}
 \end{center}
-\noindent Solid: defeats. Dashed: supports.
+\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of another's.
 \begin{enumerate}
 \item Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3
 \item Critical denial of the predictive reading of Isaiah 7:14
@@ -2726,7 +2734,7 @@ The dispute drawn: who defeats whom.
 6 \emph{Postell's Micah counterexample to the near-term exclusion} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
 \bottomrule
 \end{longtable}
-\noindent The defeats are the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats} and the supports the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}supports}, each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\noindent The defeats are the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 \par\medskip\noindent\textbf{\texttt{replies\allowbreak{}Heard\allowbreak{}In\allowbreak{}Stages}}\par\nobreak\noindent
 How the scriptural reading prevails, in stages: nothing attacks Postell's two counterexamples, so they come first; they answer the critic, the only party that attacks the scriptural reading, Berry and Motyer, so those three come next. And the critic does not join them: the scriptural reading attacks it, and nothing among the five answers the scriptural reading.
 
@@ -3338,6 +3346,14 @@ theorem wegnerDispute_supports : ∀ (i j : WegnerParty),
     ¬wegnerDispute.supports i j
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
+\textbf{No case is part of another's} here, in all nine pairs, except each party's own. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem wegnerDispute_partOf : ∀ (i j : WegnerParty), wegnerDispute.partOf i j
+    ↔ i = j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Map}}\par\nobreak\noindent
 The dispute drawn: who defeats whom.
 
@@ -3352,7 +3368,7 @@ The dispute drawn: who defeats whom.
 \draw[->,red!70!black,thick] (n2) to[bend left=10] (n1);
 \end{tikzpicture}
 \end{center}
-\noindent Solid: defeats. Dashed: supports.
+\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of another's.
 \begin{enumerate}
 \item Wegner's grammatical objection: the עַלְמָה is already pregnant
 \item The fathers' sign argument (Isaiah 7:11, 14)
@@ -3369,7 +3385,7 @@ The dispute drawn: who defeats whom.
 3 \emph{The near-term reply: a sign need not be a miracle} & 2 \emph{The fathers' sign argument (Isaiah 7:11, 14)} & defeats \\
 \bottomrule
 \end{longtable}
-\noindent The defeats are the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats} and the supports the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}supports}, each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\noindent The defeats are the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 \par\medskip\noindent\textbf{\texttt{every\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
 Why nothing prevails: a defeater for each party.
 
@@ -5082,26 +5098,30 @@ What the Reformed hold about what justification \emph{is}, where Trent is heard:
 \par\medskip\noindent\textbf{\texttt{pauline\allowbreak{}Case}} --- Sola fide from Paul (Galatians 2:16)\par\nobreak\noindent
 The Pauline strand, argued alone: sola fide from Galatians 2:16.
 
+Its ἔργα νόμου premise is derived, not assumed: it rests on the critics' line, which denies covenantal nomism and reads Galatians as a polemic against circumcision as a requirement. That is where the literature puts the dispute (\texttt{critics\_\allowbreak{}carry\_\allowbreak{}the\_\allowbreak{}pauline\_\allowbreak{}strand}, \texttt{sanders\_\allowbreak{}costs\_\allowbreak{}the\_\allowbreak{}pauline\_\allowbreak{}strand}), and so Sanders meets Paul here on the history of Second Temple Judaism, not on Paul's Greek. The critics' inference is rated with the rest, as Gathercole's.
+
 \begin{align*}
   \text{(1)} \quad & P_{8} \\
-  \text{(2)} \quad & P_{6} \\
-  \text{(3)} \quad & P_{7} \\
-  \text{(4)} \quad & P_{1} \\
-  \text{(5)} \quad & P_{2} \\
-  \text{(6)} \quad & P_{3} \\
-  \text{(7)} \quad & P_{4} \\
-  \text{(8)} \quad & P_{5} \\
-  \text{(9)} \quad & P_{17} \\
-  \text{(10)} \quad & P_{9} \\
-  \text{(11)} \quad & P_{20} \\
-  \text{(12)} \quad & P_{21} \\
-  \text{(13)} \quad & P_{23} \\
-  \text{(14)} \quad & P_{32} \\
-  \text{(15)} \quad & (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-  \text{(16)} \quad & (P_{20} \land P_{21}) \rightarrow P_{22} \\
-  \text{(17)} \quad & (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
-  \text{(18)} \quad & (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
-  \text{(19)} \quad & (P_{24} \land P_{1}) \rightarrow P_{27} \\
+  \text{(2)} \quad & P_{7} \\
+  \text{(3)} \quad & \lnot P_{29} \\
+  \text{(4)} \quad & P_{8} \\
+  \text{(5)} \quad & P_{1} \\
+  \text{(6)} \quad & P_{2} \\
+  \text{(7)} \quad & P_{3} \\
+  \text{(8)} \quad & P_{4} \\
+  \text{(9)} \quad & P_{5} \\
+  \text{(10)} \quad & P_{17} \\
+  \text{(11)} \quad & P_{9} \\
+  \text{(12)} \quad & P_{20} \\
+  \text{(13)} \quad & P_{21} \\
+  \text{(14)} \quad & P_{23} \\
+  \text{(15)} \quad & P_{32} \\
+  \text{(16)} \quad & (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+  \text{(17)} \quad & (\lnot P_{29} \land P_{8}) \rightarrow P_{6} \\
+  \text{(18)} \quad & (P_{20} \land P_{21}) \rightarrow P_{22} \\
+  \text{(19)} \quad & (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+  \text{(20)} \quad & (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+  \text{(21)} \quad & (P_{24} \land P_{1}) \rightarrow P_{27} \\
   \vdash \quad & P_{25} \land P_{26} \land P_{27}
 \end{align*}
 \emph{No premise here rests on scripture alone.}
@@ -5884,32 +5904,40 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
 \end{verbatim}}
 \paragraph*{The dispute as a graph}
 \leavevmode\par
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Supports}}\par\nobreak\noindent
-Who supports whom, as a table: one pair. The variegated-nomism critics conclude that Paul's ἔργα νόμου is works in general, and that is a claim Paul's case rests on.
+\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
+\textbf{Nothing supports anything} in the sola fide dispute, in all sixty-four pairs: no party's conclusion entails a claim another rests on. The critics' conclusion used to be one of Paul's premises; now the Pauline case rests on the critics' whole line instead (\texttt{pauline\allowbreak{}Case}), and the relation is the stronger one below. The Reformed strands, which share their conclusion, agree rather than support (see \texttt{Testimony.Logic.Support}). Every cell is computed by \texttt{supports?} and checked by the kernel.
 
 {\small\begin{verbatim}
-def partySupports : Party → Party → Prop :=
+theorem solaFideDispute_supports : ∀ (i j : Party), ¬solaFideDispute.supports
+    i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
+Whose case is part of whose, as a table: besides each party's own, one pair.
+
+{\small\begin{verbatim}
+def partyPartOf : Party → Party → Prop :=
   fun x x_1 =>
     match x, x_1 with
     | Party.critics, Party.pauline => True
-    | x, x_2 => False
+    | i, j => i = j
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Supports}}\par\nobreak\noindent
+\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
 The table is finite, so membership in it is decidable.
 
 {\small\begin{verbatim}
-def instDecidableRelPartyPartySupports : DecidableRel partySupports
+def instDecidableRelPartyPartyPartOf : DecidableRel partyPartOf
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
-\textbf{Who supports whom}, all sixty-four pairs: the critics support Paul, and nothing else supports anything. A party supports another when its conclusion entails a claim the other rests on; the Reformed strands, which share their conclusion, agree rather than support, and are not counted (see \texttt{Testimony.Logic.Support}). Every cell is computed by \texttt{supports?} and checked by the kernel.
+\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
+\textbf{Whose case is part of whose}, all sixty-four pairs: the critics' case is part of Paul's, since the Pauline case derives its ἔργα νόμου premise from the critics' line; and every case is part of itself. Nothing else. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
 
 {\small\begin{verbatim}
-theorem solaFideDispute_supports : ∀ (i j : Party), solaFideDispute.supports i
-    j ↔ partySupports i j
+theorem solaFideDispute_partOf : ∀ (i j : Party), solaFideDispute.partOf i j ↔
+    partyPartOf i j
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Map}}\par\nobreak\noindent
-The dispute drawn: who defeats whom, and who supports whom.
+The dispute drawn: who defeats whom, and whose case is part of whose.
 
 \begin{center}
 \begin{tikzpicture}[>={Stealth[length=2mm]}]
@@ -5938,10 +5966,10 @@ The dispute drawn: who defeats whom, and who supports whom.
 \draw[->,red!70!black,thick] (n5) to[bend left=10] (n6);
 \draw[->,red!70!black,thick] (n6) to[bend left=10] (n5);
 \draw[->,red!70!black,thick] (n7) to[bend left=10] (n2);
-\draw[->,green!40!black,thick,dashed] (n6) to[bend left=10] (n0);
+\draw[->,blue!60!black,thick,dotted] (n6) to[bend left=10] (n0);
 \end{tikzpicture}
 \end{center}
-\noindent Solid: defeats. Dashed: supports.
+\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of another's.
 \begin{enumerate}
 \item Sola fide from Paul (Galatians 2:16)
 \item Sola fide from Jesus' words (Luke 7:50)
@@ -5974,14 +6002,11 @@ The dispute drawn: who defeats whom, and who supports whom.
 6 \emph{Covenantal nomism (Sanders, Dunn)} & 7 \emph{Variegated nomism (Gathercole, Carson et al.)} & defeats \\
 7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 6 \emph{Covenantal nomism (Sanders, Dunn)} & defeats \\
 8 \emph{Law-observant Luke (Jervell)} & 3 \emph{Sola fide from Peter (Acts 15:9–11)} & defeats \\
-7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & supports \\
-7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 4 \emph{Trent, against 'not by works'} & supported attack — not a defeat \\
-7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 5 \emph{Apocalyptic reading, against faith as the condition} & supported attack — not a defeat \\
-7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 6 \emph{Covenantal nomism (Sanders, Dunn)} & supported attack — already a defeat \\
-6 \emph{Covenantal nomism (Sanders, Dunn)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & secondary attack — already a defeat \\
+7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & is part of \\
+6 \emph{Covenantal nomism (Sanders, Dunn)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & attack on a part — already a defeat \\
 \bottomrule
 \end{longtable}
-\noindent The defeats are the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats} and the supports the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports}, each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. 2 derived attacks are not defeats; the dispute leaves them open.
+\noindent The defeats are the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 \paragraph*{What the dispute decides}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{every\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
@@ -6006,10 +6031,11 @@ Why nothing prevails outright: a defeater for every party.
 \end{itemize}
 \item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
 \begin{itemize}
-\item Paul's ἔργα νόμου denotes human works in general, not boundary markers --- \cite[III.xi.19]{calvin-institutes-1960}; \cite{westerholm-perspectives-2003}; \cite{das-paul-law-covenant-2001}; \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}; \cite{piper-future-justification-2007}; Rom 9:11-12; Rom 11:6; Gal 3:10; Gal 5:3; Jas 2:10
 \item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
 \item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
 \item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
 \end{itemize}
 \item \emph{Sola fide from Jesus' words (Luke 7:50)}, weakest at \emph{disputed}:
 \begin{itemize}
@@ -6075,10 +6101,11 @@ Why Trent cannot be defended: the apocalyptic reading attacks it, and every part
 \end{itemize}
 \item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
 \begin{itemize}
-\item Paul's ἔργα νόμου denotes human works in general, not boundary markers --- \cite[III.xi.19]{calvin-institutes-1960}; \cite{westerholm-perspectives-2003}; \cite{das-paul-law-covenant-2001}; \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}; \cite{piper-future-justification-2007}; Rom 9:11-12; Rom 11:6; Gal 3:10; Gal 5:3; Jas 2:10
 \item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
 \item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
 \item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
 \end{itemize}
 \item \emph{Sola fide from Jesus' words (Luke 7:50)}, weakest at \emph{disputed}:
 \begin{itemize}
@@ -6139,10 +6166,11 @@ Why the apocalyptic reading cannot be defended: the dominical case attacks it, a
 \end{itemize}
 \item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
 \begin{itemize}
-\item Paul's ἔργα νόμου denotes human works in general, not boundary markers --- \cite[III.xi.19]{calvin-institutes-1960}; \cite{westerholm-perspectives-2003}; \cite{das-paul-law-covenant-2001}; \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}; \cite{piper-future-justification-2007}; Rom 9:11-12; Rom 11:6; Gal 3:10; Gal 5:3; Jas 2:10
 \item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
 \item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
 \item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
 \end{itemize}
 \item \emph{Sola fide from Peter (Acts 15:9–11)}, weakest at \emph{disputed}:
 \begin{itemize}
@@ -6215,10 +6243,11 @@ Why the dominical case is accepted on every resolution: it answers Trent itself,
 \end{itemize}
 \item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
 \begin{itemize}
-\item Paul's ἔργα νόμου denotes human works in general, not boundary markers --- \cite[III.xi.19]{calvin-institutes-1960}; \cite{westerholm-perspectives-2003}; \cite{das-paul-law-covenant-2001}; \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}; \cite{piper-future-justification-2007}; Rom 9:11-12; Rom 11:6; Gal 3:10; Gal 5:3; Jas 2:10
 \item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
 \item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
 \item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
 \end{itemize}
 \item \emph{Sola fide from Peter (Acts 15:9–11)}, weakest at \emph{disputed}:
 \begin{itemize}
@@ -6295,10 +6324,11 @@ Why, without the apocalyptic reading, Trent can be held: alone, it answers each 
 \end{itemize}
 \item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
 \begin{itemize}
-\item Paul's ἔργα νόμου denotes human works in general, not boundary markers --- \cite[III.xi.19]{calvin-institutes-1960}; \cite{westerholm-perspectives-2003}; \cite{das-paul-law-covenant-2001}; \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}; \cite{piper-future-justification-2007}; Rom 9:11-12; Rom 11:6; Gal 3:10; Gal 5:3; Jas 2:10
 \item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
 \item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
 \item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
 \end{itemize}
 \item \emph{Sola fide from Peter (Acts 15:9–11)}, weakest at \emph{disputed}:
 \begin{itemize}

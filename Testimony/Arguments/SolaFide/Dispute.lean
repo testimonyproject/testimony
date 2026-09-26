@@ -123,13 +123,22 @@ Finnish reading among them, would then hold it on their authors' behalf. -/
 def reformedOntology : List (Formula Claim) :=
   [p .justificationDistinctFromSanctification]
 
-/-- The Pauline strand, argued alone: sola fide from Galatians 2:16. -/
+/-- The Pauline strand, argued alone: sola fide from Galatians 2:16.
+
+Its ἔργα νόμου premise is derived, not assumed: it rests on the critics' line,
+which denies covenantal nomism and reads Galatians as a polemic against
+circumcision as a requirement. That is where the literature puts the dispute
+(`critics_carry_the_pauline_strand`, `sanders_costs_the_pauline_strand`), and so
+Sanders meets Paul here on the history of Second Temple Judaism, not on Paul's
+Greek. The critics' inference is rated with the rest, as Gathercole's. -/
 @[solaFideDefs]
 def paulineCase : ArgumentPackage Claim :=
   { reformed with
     name := "Sola fide from Paul (Galatians 2:16)"
-    premises := caseOf [paulineLine] (sharedGrounds ++ reformedOntology) closingSteps
-    inferences := [trentAgainstFaithAlone] }
+    premises :=
+      caseOf [paulineWithoutWorksOfLaw, criticsLine] (sharedGrounds ++ reformedOntology)
+        closingSteps
+    inferences := trentAgainstFaithAlone :: criticsLine.inference.toList }
 
 /-- The dominical strand, argued alone: sola fide from Luke 7:50. -/
 @[solaFideDefs]
@@ -196,7 +205,7 @@ theorem paulineCase_establishes : Establishes paulineCase := by
 
 /-- The Pauline case has a model. -/
 theorem paulineCase_is_satisfiable : Satisfiable paulineCase.premises := by
-  satisfied_by everythingHoldsReading [solaFideDefs]
+  satisfied_by criticsReading [solaFideDefs]
 
 /-- The dominical case delivers sola fide. -/
 theorem dominicalCase_establishes : Establishes dominicalCase := by
@@ -729,34 +738,44 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats where
 
 /-! ### The dispute as a graph -/
 
-/-- Who supports whom, as a table: one pair. The variegated-nomism critics
-conclude that Paul's ἔργα νόμου is works in general, and that is a claim
-Paul's case rests on. -/
-def partySupports : Party → Party → Prop
-  | .critics, .pauline => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel partySupports := fun i j => by
-  cases i <;> cases j <;> unfold partySupports <;> infer_instance
-
-/-- **Who supports whom**, all sixty-four pairs: the critics support Paul, and
-nothing else supports anything. A party supports another when its conclusion
-entails a claim the other rests on; the Reformed strands, which share their
-conclusion, agree rather than support, and are not counted (see
-`Testimony.Logic.Support`). Every cell is computed by `supports?` and checked
-by the kernel. -/
-theorem solaFideDispute_supports :
-    ∀ i j, solaFideDispute.supports i j ↔ partySupports i j := by
+/-- **Nothing supports anything** in the sola fide dispute, in all sixty-four
+pairs: no party's conclusion entails a claim another rests on. The critics'
+conclusion used to be one of Paul's premises; now the Pauline case rests on the
+critics' whole line instead (`paulineCase`), and the relation is the stronger
+one below. The Reformed strands, which share their conclusion, agree rather than
+support (see `Testimony.Logic.Support`). Every cell is computed by `supports?`
+and checked by the kernel. -/
+theorem solaFideDispute_supports : ∀ i j, ¬ solaFideDispute.supports i j := by
   intro i j
-  refine supports_iff_of_supports? ?_
+  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
   cases i <;> cases j <;> decide +kernel
 
-/-- The dispute drawn: who defeats whom, and who supports whom. -/
+/-- Whose case is part of whose, as a table: besides each party's own, one
+pair. -/
+def partyPartOf : Party → Party → Prop
+  | .critics, .pauline => True
+  | i, j => i = j
+
+/-- The table is finite, so membership in it is decidable. -/
+instance : DecidableRel partyPartOf := fun i j => by
+  cases i <;> cases j <;> unfold partyPartOf <;> infer_instance
+
+/-- **Whose case is part of whose**, all sixty-four pairs: the critics' case is
+part of Paul's, since the Pauline case derives its ἔργα νόμου premise from the
+critics' line; and every case is part of itself. Nothing else. Every cell is
+computed by `partOf?` and checked by the kernel. -/
+theorem solaFideDispute_partOf : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
+  intro i j
+  refine partOf_iff_of_partOf? ?_
+  cases i <;> cases j <;> decide +kernel
+
+/-- The dispute drawn: who defeats whom, and whose case is part of whose. -/
 def solaFideMap : ArgumentMap solaFideDispute where
   finite := solaFideFinite
-  supports i j := decide (partySupports i j)
-  supports_spec i j := by rw [solaFideDispute_supports]; simp
+  supports _ _ := false
+  supports_spec i j := by simp [solaFideDispute_supports i j]
+  partOf i j := decide (partyPartOf i j)
+  partOf_spec i j := by rw [solaFideDispute_partOf]; simp
 
 /-! ### What the dispute decides -/
 

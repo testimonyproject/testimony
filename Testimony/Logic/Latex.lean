@@ -505,6 +505,7 @@ def graphTikz (g : Page.Graph) : String :=
   let edge (i j : Nat) (kind : Page.EdgeKind) : String :=
     let style := match kind with
       | .defeat => "->,red!70!black,thick"
+      | .partOf => "->,blue!60!black,thick,dotted"
       | _ => "->,green!40!black,thick,dashed"
     "\\draw[" ++ style ++ "] (n" ++ toString i ++ ") to[bend left=10] (n" ++ toString j ++
       ");\n"
@@ -516,12 +517,13 @@ def graphTikz (g : Page.Graph) : String :=
 
 /-- A dispute's graph: drawn, then its parties by number, then every edge in a
 table, then what the derived attacks and the conflicts come to. -/
-def graph (g : Page.Graph) (defeatTable supportTable : String) : String :=
+def graph (g : Page.Graph) (defeatTable supportTable partTable : String) : String :=
   let name (k : Nat) := "\\emph{" ++ escape (g.nodes.getD k "") ++ "}"
   let ref (t fallback : String) :=
     if t.isEmpty then fallback else "\\texttt{" ++ codeEscape t ++ "}"
   graphTikz g ++
-  "\\noindent Solid: defeats. Dashed: supports.\n" ++
+  "\\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of " ++
+  "another's.\n" ++
   "\\begin{enumerate}\n" ++
   String.join (g.nodes.map fun nm => "\\item " ++ escape nm ++ "\n") ++
   "\\end{enumerate}\n" ++
@@ -534,10 +536,11 @@ def graph (g : Page.Graph) (defeatTable supportTable : String) : String :=
     escape (Page.Graph.EdgeKind.describe k) ++ " \\\\\n") ++
   "\\bottomrule\n\\end{longtable}\n" ++
   "\\noindent The defeats are the cells of " ++ ref defeatTable "the defeat table" ++
-  " and the supports the cells of " ++ ref supportTable "the support table" ++
+  ", the supports the cells of " ++ ref supportTable "the support table" ++
+  " and the parts the cells of " ++ ref partTable "the part-of table" ++
   ", each computed from the parties' premises and checked by the kernel. " ++
-  "The attacks derived through support are reported, not counted: every verdict is " ++
-  "computed from the defeats alone. " ++
+  "The attacks derived through support and through parts are reported, not counted: " ++
+  "every verdict is computed from the defeats alone. " ++
   (match Page.Graph.undirected g with
     | 0 => "Every derived attack is already a defeat."
     | 1 => "One derived attack is not a defeat; the dispute leaves it open."
@@ -570,8 +573,8 @@ def item [DecidableEq α] (order : List α) : Page.Item α → String
       prose doc ++ verbatim stmt
   | .because d doc e => declLabel d "" ++ prose doc ++ explanation order e
   | .verdict d doc v links table => declLabel d "" ++ prose doc ++ verdict v links table
-  | .graph d doc g defeats supports =>
-      declLabel d "" ++ prose doc ++ graph g defeats supports
+  | .graph d doc g defeats supports parts =>
+      declLabel d "" ++ prose doc ++ graph g defeats supports parts
 
 /-- One argument's body: its introductory prose, its legend, then every item in
 source order. The heading above it is the caller's, as the page title is in the
