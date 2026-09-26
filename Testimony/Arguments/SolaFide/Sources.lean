@@ -533,6 +533,78 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work lutherGalatians (.adLoc ⟨.galatians, 3, 12⟩)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .galatians1_6_9 =>
+    { label := "Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.galatians, 1, 6, 1, 9⟩ }]
+        , supporting := [.work mooGalatians (.adLoc ⟨.galatians, 1, 6⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .firstCorinthians15_3 =>
+    { label := "1 Corinthians 15:3: the gospel of first importance — Christ died for our sins"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.firstCorinthians, 15, 3⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .galatians2_21 =>
+    { label := "Galatians 2:21: if righteousness were through the law, Christ died for no purpose"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.galatians, 2, 21⟩ }]
+        , supporting := [.work mooGalatians (.adLoc ⟨.galatians, 2, 21⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .galatians5_2_4 =>
+    { label := "Galatians 5:2–4: you who would be justified by the law are severed from Christ"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.galatians, 5, 2, 5, 4⟩ }]
+        , supporting := [.work mooGalatians (.adLoc ⟨.galatians, 5, 2⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans8_33_34 =>
+    { label := "Romans 8:33–34: it is God who justifies — who is to condemn?"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.romans, 8, 33, 8, 34⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .dikaioIsForensic =>
+    { label := "In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous"
+    , kind := .linguistic
+      -- `wellSupported`, not `consensus`. Held across traditions: the standard
+      -- lexicon ("render a favorable verdict, vindicate"); Morris's lexical
+      -- study, from its antithesis with condemnation; Moo; Irons's lexical
+      -- examination; Wright, for whom the verdict confers a status, not a
+      -- character; and Fitzmyer, a Catholic exegete, for whom the sinner hears
+      -- "a verdict of 'not guilty'". VanLandingham dissents: "make righteous".
+    , source :=
+        { primary := .work bdag (.sectionRef "s.v. δικαιόω")
+        , supporting :=
+            [ .work morrisApostolicPreaching .whole
+            , .work mooRomans (.sectionRef "p. 80")
+            , .work ironsRighteousnessOfGod .whole
+            , .work wrightJustification .whole
+            , .work fitzmyerRomans (.adLoc ⟨.romans, 3, 24⟩) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .christsWorkIsTheWholeGround =>
+    { label := "Christ's death for our sins is the whole ground of justification; to add to it " ++
+        "is another gospel"
+    , kind := .interpretive
+      -- `disputed`: Trent grants that Christ's passion merited justification
+      -- (Session VI, ch. 7), and denies that nothing is added — good works done
+      -- in grace truly merit its increase (canons 24, 32).
+    , source :=
+        { primary := .work westminsterConfession (.sectionRef "XI.1")
+        , supporting :=
+            [ .scripture [{ ref := .verse ⟨.galatians, 2, 21⟩ }]
+            , .work mooGalatians (.adLoc ⟨.galatians, 2, 21⟩)
+            , .work anf1 (.sectionRef "Epistle to Diognetus 9") ]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
   | .worksOfLawMeansWorksGenerally =>
     { label := "Paul's ἔργα νόμου denotes human works in general"
     , kind := .linguistic

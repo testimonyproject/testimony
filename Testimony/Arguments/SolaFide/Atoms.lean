@@ -155,6 +155,29 @@ inductive Claim
   two great commandments). Common ground: Luther argues from it, and Aquinas
   would not deny it. -/
   | lawCommandsCharity
+  /-- Galatians 1:6–9 says that whoever preaches a gospel contrary to the one
+  received — even an angel from heaven — is accursed. -/
+  | galatians1_6_9
+  /-- 1 Corinthians 15:3 says that Christ died for our sins in accordance with the
+  Scriptures: the gospel Paul received and delivered, "of first importance". -/
+  | firstCorinthians15_3
+  /-- Galatians 2:21 says that if righteousness were through the law, then Christ
+  died for no purpose. -/
+  | galatians2_21
+  /-- Galatians 5:2–4 says that if you accept circumcision, Christ will be of no
+  advantage to you; you who would be justified by the law are severed from
+  Christ. -/
+  | galatians5_2_4
+  /-- Romans 8:33–34 says: it is God who justifies — who is to condemn? -/
+  | romans8_33_34
+  /-- In Paul, δικαιόω is forensic: to declare righteous, a verdict — the
+  opposite of condemning, as in Deuteronomy 25:1 and Romans 8:33–34 — and not to
+  make virtuous. **The lexical premise.** -/
+  | dikaioIsForensic
+  /-- Christ's death for our sins is the whole ground of justification: nothing
+  added to it completes it, and to add a ground is to preach another gospel.
+  **Paul's gospel, as Galatians reads it.** -/
+  | christsWorkIsTheWholeGround
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

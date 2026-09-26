@@ -416,10 +416,10 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
   "\\item \\textbf{What this rests on:}\n\\begin{itemize}\n" ++
     String.join (e.restsOn.map claim) ++
     (if Page.Explanation.isLiteral e.crux then "" else
-      "\\item the step itself --- \\emph{" ++
-      String.intercalate "; " (e.inferences.map fun s =>
-        confidence s.confidence ++ "}: " ++ source s) ++
-      (if e.inferences.isEmpty then "unrated}" else "") ++ "\n") ++
+      "\\item the step itself --- " ++
+      (if e.inferences.isEmpty then "\\emph{unrated}" else
+        String.intercalate "; " (e.inferences.map fun s =>
+          "\\emph{" ++ confidence s.confidence ++ "}: " ++ source s)) ++ "\n") ++
   "\\end{itemize}\n\\end{itemize}\n"
 
 /-- What an opponent must reject: every minimal set of readings whose

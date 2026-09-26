@@ -1107,6 +1107,96 @@ only through the conciliar decree. -/
   , series := some "Anchor Bible"
   , seriesNumber := some "33" }
 
+/-- The standard lexicon of New Testament Greek (BDAG). Cited for δικαιόω, whose
+senses include "render a favorable verdict, vindicate". Verified at Open
+Library, ISBN 9780226039336 (3rd ed., University of Chicago Press, 2000). -/
+@[bib_entry] def bdag : BibEntry := .book
+  { core :=
+      { key := "bauer-danker-lexicon-2000"
+      , contributors :=
+          { authors := [.person "Walter" "Bauer"]
+          , editors := [.person "Frederick William" "Danker"] }
+      , title :=
+          "A Greek-English Lexicon of the New Testament and Other Early Christian " ++
+          "Literature"
+      , year := some { value := 2000 }
+      , identifiers := [.isbn "9780226039336"] }
+  , publisher := "University of Chicago Press"
+  , place := some "Chicago"
+  , edition := some "3rd" }
+
+/-- Morris's lexical study of the apostolic vocabulary of salvation — redeem,
+propitiate, reconcile, justify — against its Old Testament background. Cited for
+the forensic sense of δικαιόω and its antithesis with condemnation. Verified at
+Open Library, ISBN 9780802815125 (3rd ed., Eerdmans, 1965). -/
+@[bib_entry] def morrisApostolicPreaching : BibEntry := .book
+  { core :=
+      { key := "morris-apostolic-preaching-1965"
+      , contributors := { authors := [.person "Leon" "Morris"] }
+      , title := "The Apostolic Preaching of the Cross"
+      , year := some { value := 1965 }
+      , identifiers := [.isbn "9780802815125"] }
+  , publisher := "Eerdmans"
+  , place := some "Grand Rapids"
+  , edition := some "3rd" }
+
+/-- Moo's commentary on Romans (NICNT). Verified at Open Library, ISBN
+9780802823175 (Eerdmans, 1996). -/
+@[bib_entry] def mooRomans : BibEntry := .book
+  { core :=
+      { key := "moo-romans-1996"
+      , contributors := { authors := [.person "Douglas J." "Moo"] }
+      , title := "The Epistle to the Romans"
+      , year := some { value := 1996 }
+      , identifiers := [.isbn "9780802823175"] }
+  , publisher := "Eerdmans"
+  , place := some "Grand Rapids"
+  , series := some "New International Commentary on the New Testament" }
+
+/-- Irons's lexical examination of δικαιοσύνη and its Hebrew counterparts, against
+the covenant-faithfulness reading. Verified at Open Library, ISBN 9783161535185
+(Mohr Siebeck, 2015; WUNT II/386). -/
+@[bib_entry] def ironsRighteousnessOfGod : BibEntry := .book
+  { core :=
+      { key := "irons-righteousness-of-god-2015"
+      , contributors := { authors := [.person "Charles Lee" "Irons"] }
+      , title := "The Righteousness of God"
+      , subtitle := some "A Lexical Examination of the Covenant-Faithfulness Interpretation"
+      , year := some { value := 2015 }
+      , identifiers := [.isbn "9783161535185"] }
+  , publisher := "Mohr Siebeck"
+  , place := some "Tübingen"
+  , series := some "Wissenschaftliche Untersuchungen zum Neuen Testament, 2. Reihe"
+  , seriesNumber := some "386" }
+
+/-- Gorman's reading of justification as theosis: the verdict as an effective
+word that transforms. The modern exegete who grants the forensic sense and
+denies that the verdict stands apart from renewal. Verified at Open Library,
+ISBN 9780802862655 (Eerdmans, 2009). -/
+@[bib_entry] def gormanCruciformGod : BibEntry := .book
+  { core :=
+      { key := "gorman-cruciform-god-2009"
+      , contributors := { authors := [.person "Michael J." "Gorman"] }
+      , title := "Inhabiting the Cruciform God"
+      , subtitle := some "Kenosis, Justification, and Theosis in Paul's Narrative Soteriology"
+      , year := some { value := 2009 }
+      , identifiers := [.isbn "9780802862655"] }
+  , publisher := "Eerdmans"
+  , place := some "Grand Rapids" }
+
+/-- VanLandingham's argument that δικαιόω in Paul is best rendered "make
+righteous": the principal modern lexical dissent from the forensic sense.
+Verified at Open Library, ISBN 9781565633988 (Hendrickson, 2006). -/
+@[bib_entry] def vanLandinghamJudgment : BibEntry := .book
+  { core :=
+      { key := "vanlandingham-judgment-justification-2006"
+      , contributors := { authors := [.person "Chris" "VanLandingham"] }
+      , title := "Judgment and Justification in Early Judaism and the Apostle Paul"
+      , year := some { value := 2006 }
+      , identifiers := [.isbn "9781565633988"] }
+  , publisher := "Hendrickson"
+  , place := some "Peabody, MA" }
+
 /-- The Lutheran–Catholic *Joint Declaration on the Doctrine of Justification*
 (1999). Its claim is that the sixteenth-century condemnations do not apply to
 the partner's teaching as stated there. It bears on whether the `tridentine`

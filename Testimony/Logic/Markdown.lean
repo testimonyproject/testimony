@@ -273,10 +273,10 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
   "- **What this rests on:**\n" ++
     String.intercalate "\n" (e.restsOn.map (restingClaim order e.cite)) ++
     (if Page.Explanation.isLiteral e.crux then "" else
-      "\n  - the step itself — *" ++
-      String.intercalate "; " (e.inferences.map fun s =>
-        confidence s.confidence ++ "*: " ++ source s) ++
-      (if e.inferences.isEmpty then "unrated*" else "")) ++ "\n"
+      "\n  - the step itself — " ++
+      (if e.inferences.isEmpty then "*unrated*" else
+        String.intercalate "; " (e.inferences.map fun s =>
+          "*" ++ confidence s.confidence ++ "*: " ++ source s))) ++ "\n"
 
 /-- What an opponent must reject: every minimal set of readings whose
 rejection overturns the case, each reading with its rating, and the readings no

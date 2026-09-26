@@ -302,4 +302,22 @@ def graceWithoutJamesHarmonisation : ArgumentPackage Claim :=
     conclusion := p .salvationByGrace
     conclusionLabel := "salvation by grace" }
 
+/-! ### Paul's gospel, against Trent's definition -/
+
+/-- **Paul's gospel, against justification as renewal.** Galatians and
+1 Corinthians read as one claim — Christ's work is the whole ground — with the
+forensic sense of δικαιόω and Romans 8:33–34, concluding that justification is
+not the renewal of the inward man: the direct denial of Trent's definition
+(Session VI, ch. 7). -/
+@[solaFideDefs]
+def galatianGospel : ArgumentPackage Claim :=
+  { reformed with
+    name := "Paul's gospel (Galatians 1), against justification as renewal"
+    premises :=
+      galatianGospelLine.premises ++
+        [p .romans8_33_34, p .dikaioIsForensic, verdictExcludesRenewal]
+    conclusion := notP .justificationIncludesSanctification
+    conclusionLabel := "justification is not the renewal of the inward man"
+    inferences := [galatianGospelReadingSource, verdictNotRenewalSource] }
+
 end Testimony.Arguments.SolaFide
