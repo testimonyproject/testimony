@@ -25,6 +25,7 @@ import Testimony.Logic.Because
 import Testimony.Logic.Verdict
 import Testimony.Logic.Support
 import Testimony.Logic.Map
+import Testimony.Logic.Burden
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin

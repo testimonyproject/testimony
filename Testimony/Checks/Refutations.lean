@@ -93,7 +93,7 @@ elab "#check_refutations" : command => do
     throwError "#check_refutations found no refutation to check"
   logInfo m!"establish fails, as not Horn, on all {checked} refuted packages"
 
-/-- info: establish fails, as not Horn, on all 32 refuted packages -/
+/-- info: establish fails, as not Horn, on all 30 refuted packages -/
 #guard_msgs in
 #check_refutations
 

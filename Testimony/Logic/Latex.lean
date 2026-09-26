@@ -422,6 +422,28 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
       (if e.inferences.isEmpty then "unrated}" else "") ++ "\n") ++
   "\\end{itemize}\n\\end{itemize}\n"
 
+/-- What an opponent must reject: every minimal set of readings whose
+rejection overturns the case, each reading with its rating, and the readings no
+set needs. -/
+def burden (b : Page.Burden) : String :=
+  let reading (i : Nat) : String := match b.readings[i]? with
+    | some (n, some s) => "\\emph{" ++ escape n ++ "} (" ++ confidence s.confidence ++ ")"
+    | some (n, none) => "\\emph{" ++ escape n ++ "} (unrated)"
+    | none => "reading " ++ toString i
+  let spare := b.spare
+  "\\paragraph{What an opponent must reject.} \\emph{" ++ escape b.holder ++
+    "} concludes that " ++ escape b.conclusion ++ ". That conclusion is overturned " ++
+    "exactly when every reading in one of these sets is rejected. Each set is " ++
+    "minimal, and no other rejection overturns it:\n" ++
+  "\\begin{enumerate}\n" ++
+  String.join (b.sets.map fun S =>
+    "\\item " ++ String.intercalate "; " (S.map reading) ++ "\n") ++
+  "\\end{enumerate}\n" ++
+  (if spare.isEmpty then "" else
+    "No set contains " ++
+    String.intercalate ", " (spare.map fun n => "\\emph{" ++ escape n ++ "}") ++
+    ": an opponent never needs to reject it.\n")
+
 /-- One piece of a generated sentence. A defeat that a `Because` in the
 document explains names it. -/
 def seg (links : List Page.BecauseLink) : Page.Seg → String
@@ -572,6 +594,7 @@ def item [DecidableEq α] (order : List α) : Page.Item α → String
       declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
       prose doc ++ verbatim stmt
   | .because d doc e => declLabel d "" ++ prose doc ++ explanation order e
+  | .burden d doc stmt b => declLabel d "" ++ prose doc ++ verbatim stmt ++ burden b
   | .verdict d doc v links table => declLabel d "" ++ prose doc ++ verdict v links table
   | .graph d doc g defeats supports parts =>
       declLabel d "" ++ prose doc ++ graph g defeats supports parts

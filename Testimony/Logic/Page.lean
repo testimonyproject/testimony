@@ -59,6 +59,27 @@ def restsOn [DecidableEq α] (e : Explanation α) : List α :=
 
 end Explanation
 
+/-- What an opponent must reject, as a page shows it: the data of an
+`OpponentsBurden` (`Testimony.Logic.Burden`), without its proofs. -/
+structure Burden where
+  /-- The position the burden is on. -/
+  holder : String
+  /-- What it concludes. -/
+  conclusion : String
+  /-- Each line's name and the citation rating its reading, in order. -/
+  readings : List (String × Option Source)
+  /-- The minimal sets of readings whose rejection overturns the case, by
+  index into `readings`. -/
+  sets : List (List ℕ)
+
+namespace Burden
+
+/-- The readings that belong to no set: rejecting them never helps. -/
+def spare (b : Burden) : List String :=
+  (b.readings.zipIdx.filter fun (_, i) => !b.sets.any (·.contains i)).map (·.1.1)
+
+end Burden
+
 /-- A piece of a generated sentence. The renderers set each piece in their own
 medium: a party's name in italics, and a defeat with its verb linked to what
 explains it. -/
@@ -201,6 +222,9 @@ inductive Item (α : Type)
   | result (decl doc statement : String) (proposed : Bool)
   /-- Why one position stands against another: a `Because`. -/
   | because (decl doc : String) (e : Explanation α)
+  /-- What an opponent must reject: an `OpponentsBurden` result, with the
+  statement as Lean states it. -/
+  | burden (decl doc statement : String) (b : Burden)
   /-- A dispute's verdict, with the reasons generated from its witness, the
   page's `Because` declarations to link its defeats to, and the theorem that
   proves the defeat table (empty if none was found). -/

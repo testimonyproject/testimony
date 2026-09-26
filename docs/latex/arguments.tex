@@ -6670,11 +6670,13 @@ Unlike the Reformed distinction against Trent, this crux is part of Luther's cas
 \end{itemize}
   and Jesus' parable of the Pharisee and the tax collector.
 
-No corpus carries more than its share, and no corpus is load-bearing: take any one reading away and the conclusion still follows. Two corpora are enough — Hebrews and Jesus' words. The refutations say what an opponent must reject instead. To deny that works are not the ground, they must reject three readings: Paul's, Peter's and Jesus'. To deny that faith is necessary, they must reject Hebrews' and John's — and Trent does not, since its chapter 8 calls faith "the beginning of human salvation … without which it is impossible to please God". Hebrews' reading is therefore rated \texttt{consensus}, and every other reading \texttt{disputed}.
+No corpus carries more than its share, and no corpus is load-bearing: take any one reading away and the conclusion still follows. Two corpora are enough — Hebrews and Jesus' words. What an opponent must reject instead is computed, not chosen: the \textbf{opponent's burden} (\texttt{canonical\_\allowbreak{}burden}) lists every minimal set of readings whose rejection overturns the case, and proves there is no other way. There are exactly two. To deny that works are not the ground, an opponent must reject three readings: Paul's, Peter's and Jesus'. To deny that faith is necessary, they must reject Hebrews' and John's — and Trent does not, since its chapter 8 calls faith "the beginning of human salvation … without which it is impossible to please God". Hebrews' reading is therefore rated \texttt{consensus}, and every other reading \texttt{disputed}.
+
+The burden is how this library lets several witnesses matter without counting them. Three corpora saying works are not the ground is not a score of three; it is three readings an opponent has to break, each on its own texts.
 
 \textbf{James is coherence, not a witness to faith alone.} James 2 does not argue against works; it argues against a faith without them — the demons' assent of 2:19, the faith that says "go in peace" and gives nothing (2:14–17). Read with the distinction between justification and sanctification, James 2:21–24 uses "justified" demonstratively: Abraham's offering of Isaac \emph{showed} the faith already counted as righteousness in Genesis 15:6, which James himself quotes. So James adds what the other corpora do not say — that works are the fruit of saving faith — and with it the conclusion becomes the Reformed formula of the Westminster Confession (XI.2): justification by faith alone, by a faith that is never alone. Every text of James is a premise, 2:24 included. Jude, which does not address the question, is granted as consistent with the rest and nothing more.
 
-\textbf{The rival is Trent}, and it holds every one of these texts. It parts from the canonical witness at exactly one reading: that "justified" in James 2:24 is the \emph{increase} of a justification already received, by works done in grace (Session VI, ch. 10). On that reading works are part of the ground, and faith alone fails. The \texttt{Because} result finds that one atom mechanically, and the load-bearing result shows the Reformed formula needs it: without the demonstrative reading of James, "faith never alone" no longer follows.
+\textbf{The rival is Trent}, and it holds every one of these texts. It parts from the canonical witness at exactly one reading: that "justified" in James 2:24 is the \emph{increase} of a justification already received, by works done in grace (Session VI, ch. 10). On that reading works are part of the ground, and faith alone fails. The \texttt{Because} result finds that one atom mechanically, and the load-bearing result shows the Reformed formula needs it: without the demonstrative reading of James, "faith never alone" no longer follows. The burden with James says the same at the level of readings: rejecting James's reading alone overturns the formula, and nothing else about faith alone changes.
 
 What this argument does \emph{not} show is that the Reformed readings are right. It shows where the disagreement is. Every text is common ground; every reading is cited to the people who hold it; and the burden results name, corpus by corpus, what a reader must reject to deny the conclusion.
 
@@ -6961,7 +6963,7 @@ def corpora : List (Line Claim) :=
     dominicalLine]
 \end{verbatim}}
 \subsection*{Arguments.CanonicalWitness.Packages — the positions}
-Trent first, because the rival is written before anything is proved. Then the canonical case, the case with James, and the variants that take one corpus's reading away — its texts stay granted; what goes is the step that reads them.
+Trent first, because the rival is written before anything is proved. Then the canonical case, the case with James, and one variant: James read without the demonstrative sense of "justified". Which corpora's readings an opponent must reject is not a variant package but a computed result — the opponent's burden (\texttt{Testimony.Logic.Burden}), in \texttt{Testimony.Arguments.Canonical\allowbreak{}Witness.Results}.
 
 \par\medskip\noindent\textbf{\texttt{all\allowbreak{}Texts}}\par\nobreak\noindent
 Every text the argument cites, from every corpus and from James. The rival holds all of them.
@@ -7080,205 +7082,8 @@ Every text the argument cites, from every corpus and from James. The rival holds
   \vdash \quad & P_{25}
 \end{align*}
 \emph{Grounded in scripture alone:} Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
-\paragraph*{One corpus's reading taken away}
+\paragraph*{James without its hinge}
 \leavevmode\par
-Each variant keeps every text and drops one line's reading: the named difference is which line is missing from the list.
-
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Paul}} --- The canonical witness, without Paul's reading\par\nobreak\noindent
-Without Paul's reading.
-
-\begin{align*}
-  \text{(1)} \quad & P_{6} \\
-  \text{(2)} \quad & P_{7} \\
-  \text{(3)} \quad & P_{8} \\
-  \text{(4)} \quad & P_{9} \\
-  \text{(5)} \quad & P_{10} \\
-  \text{(6)} \quad & P_{11} \\
-  \text{(7)} \quad & P_{12} \\
-  \text{(8)} \quad & P_{13} \\
-  \text{(9)} \quad & P_{14} \\
-  \text{(10)} \quad & P_{1} \\
-  \text{(11)} \quad & P_{2} \\
-  \text{(12)} \quad & P_{3} \\
-  \text{(13)} \quad & P_{4} \\
-  \text{(14)} \quad & P_{5} \\
-  \text{(15)} \quad & (P_{6} \land P_{7}) \rightarrow P_{20} \\
-  \text{(16)} \quad & (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-  \text{(17)} \quad & (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-  \text{(18)} \quad & (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-  \text{(19)} \quad & (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-  \vdash \quad & P_{23}
-\end{align*}
-\emph{Grounded in scripture alone:} Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy.
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Hebrews}} --- The canonical witness, without Hebrews' reading\par\nobreak\noindent
-Without Hebrews' reading.
-
-\begin{align*}
-  \text{(1)} \quad & P_{1} \\
-  \text{(2)} \quad & P_{2} \\
-  \text{(3)} \quad & P_{3} \\
-  \text{(4)} \quad & P_{4} \\
-  \text{(5)} \quad & P_{5} \\
-  \text{(6)} \quad & P_{8} \\
-  \text{(7)} \quad & P_{9} \\
-  \text{(8)} \quad & P_{10} \\
-  \text{(9)} \quad & P_{11} \\
-  \text{(10)} \quad & P_{12} \\
-  \text{(11)} \quad & P_{13} \\
-  \text{(12)} \quad & P_{14} \\
-  \text{(13)} \quad & P_{6} \\
-  \text{(14)} \quad & P_{7} \\
-  \text{(15)} \quad & (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-  \text{(16)} \quad & (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-  \text{(17)} \quad & (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-  \text{(18)} \quad & (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-  \text{(19)} \quad & (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-  \vdash \quad & P_{23}
-\end{align*}
-\emph{Grounded in scripture alone:} Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God.
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}John}} --- The canonical witness, without John's reading\par\nobreak\noindent
-Without John's reading.
-
-\begin{align*}
-  \text{(1)} \quad & P_{1} \\
-  \text{(2)} \quad & P_{2} \\
-  \text{(3)} \quad & P_{3} \\
-  \text{(4)} \quad & P_{4} \\
-  \text{(5)} \quad & P_{5} \\
-  \text{(6)} \quad & P_{6} \\
-  \text{(7)} \quad & P_{7} \\
-  \text{(8)} \quad & P_{11} \\
-  \text{(9)} \quad & P_{12} \\
-  \text{(10)} \quad & P_{13} \\
-  \text{(11)} \quad & P_{14} \\
-  \text{(12)} \quad & P_{8} \\
-  \text{(13)} \quad & P_{9} \\
-  \text{(14)} \quad & P_{10} \\
-  \text{(15)} \quad & (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-  \text{(16)} \quad & (P_{6} \land P_{7}) \rightarrow P_{20} \\
-  \text{(17)} \quad & (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-  \text{(18)} \quad & (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-  \text{(19)} \quad & (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-  \vdash \quad & P_{23}
-\end{align*}
-\emph{Grounded in scripture alone:} Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent.
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Peter}} --- The canonical witness, without Peter's reading\par\nobreak\noindent
-Without Peter's reading.
-
-\begin{align*}
-  \text{(1)} \quad & P_{1} \\
-  \text{(2)} \quad & P_{2} \\
-  \text{(3)} \quad & P_{3} \\
-  \text{(4)} \quad & P_{4} \\
-  \text{(5)} \quad & P_{5} \\
-  \text{(6)} \quad & P_{6} \\
-  \text{(7)} \quad & P_{7} \\
-  \text{(8)} \quad & P_{8} \\
-  \text{(9)} \quad & P_{9} \\
-  \text{(10)} \quad & P_{10} \\
-  \text{(11)} \quad & P_{13} \\
-  \text{(12)} \quad & P_{14} \\
-  \text{(13)} \quad & P_{11} \\
-  \text{(14)} \quad & P_{12} \\
-  \text{(15)} \quad & (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-  \text{(16)} \quad & (P_{6} \land P_{7}) \rightarrow P_{20} \\
-  \text{(17)} \quad & (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-  \text{(18)} \quad & (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-  \text{(19)} \quad & (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-  \vdash \quad & P_{23}
-\end{align*}
-\emph{Grounded in scripture alone:} Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus.
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Jesus}} --- The canonical witness, without the reading of Jesus' words\par\nobreak\noindent
-Without Jesus' reading.
-
-\begin{align*}
-  \text{(1)} \quad & P_{1} \\
-  \text{(2)} \quad & P_{2} \\
-  \text{(3)} \quad & P_{3} \\
-  \text{(4)} \quad & P_{4} \\
-  \text{(5)} \quad & P_{5} \\
-  \text{(6)} \quad & P_{6} \\
-  \text{(7)} \quad & P_{7} \\
-  \text{(8)} \quad & P_{8} \\
-  \text{(9)} \quad & P_{9} \\
-  \text{(10)} \quad & P_{10} \\
-  \text{(11)} \quad & P_{11} \\
-  \text{(12)} \quad & P_{12} \\
-  \text{(13)} \quad & P_{13} \\
-  \text{(14)} \quad & P_{14} \\
-  \text{(15)} \quad & (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-  \text{(16)} \quad & (P_{6} \land P_{7}) \rightarrow P_{20} \\
-  \text{(17)} \quad & (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-  \text{(18)} \quad & (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-  \text{(19)} \quad & (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-  \vdash \quad & P_{23}
-\end{align*}
-\emph{Grounded in scripture alone:} Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
-\paragraph*{The opponent's burden}
-\leavevmode\par
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}The\allowbreak{}Works\allowbreak{}Witnesses}} --- The canonical witness, without Paul's, Peter's and Jesus' readings\par\nobreak\noindent
-Without the three readings that say works are not the ground — Paul's, Peter's and Jesus'.
-
-\begin{align*}
-  \text{(1)} \quad & P_{6} \\
-  \text{(2)} \quad & P_{7} \\
-  \text{(3)} \quad & P_{8} \\
-  \text{(4)} \quad & P_{9} \\
-  \text{(5)} \quad & P_{10} \\
-  \text{(6)} \quad & P_{1} \\
-  \text{(7)} \quad & P_{2} \\
-  \text{(8)} \quad & P_{3} \\
-  \text{(9)} \quad & P_{4} \\
-  \text{(10)} \quad & P_{5} \\
-  \text{(11)} \quad & P_{11} \\
-  \text{(12)} \quad & P_{12} \\
-  \text{(13)} \quad & P_{13} \\
-  \text{(14)} \quad & P_{14} \\
-  \text{(15)} \quad & (P_{6} \land P_{7}) \rightarrow P_{20} \\
-  \text{(16)} \quad & (P_{8} \land P_{9} \land P_{10}) \rightarrow P_{21} \land P_{20} \\
-  \text{(17)} \quad & (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-  \vdash \quad & P_{23}
-\end{align*}
-\emph{Grounded in scripture alone:} Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}The\allowbreak{}Necessity\allowbreak{}Witnesses}} --- The canonical witness, without Hebrews' and John's readings\par\nobreak\noindent
-Without the two readings that say faith is necessary — Hebrews' and John's.
-
-\begin{align*}
-  \text{(1)} \quad & P_{1} \\
-  \text{(2)} \quad & P_{2} \\
-  \text{(3)} \quad & P_{3} \\
-  \text{(4)} \quad & P_{4} \\
-  \text{(5)} \quad & P_{5} \\
-  \text{(6)} \quad & P_{11} \\
-  \text{(7)} \quad & P_{12} \\
-  \text{(8)} \quad & P_{13} \\
-  \text{(9)} \quad & P_{14} \\
-  \text{(10)} \quad & P_{6} \\
-  \text{(11)} \quad & P_{7} \\
-  \text{(12)} \quad & P_{8} \\
-  \text{(13)} \quad & P_{9} \\
-  \text{(14)} \quad & P_{10} \\
-  \text{(15)} \quad & (P_{1} \land P_{2} \land P_{3} \land P_{4} \land P_{5}) \rightarrow P_{22} \land P_{21} \\
-  \text{(16)} \quad & (P_{11} \land P_{12}) \rightarrow P_{21} \land P_{22} \\
-  \text{(17)} \quad & (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-  \text{(18)} \quad & (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-  \vdash \quad & P_{23}
-\end{align*}
-\emph{Grounded in scripture alone:} Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent.
-\par\medskip\noindent\textbf{\texttt{hebrews\allowbreak{}And\allowbreak{}Jesus}} --- Hebrews and Jesus' words alone\par\nobreak\noindent
-Two corpora are enough: Hebrews and Jesus' words.
-
-\begin{align*}
-  \text{(1)} \quad & P_{6} \\
-  \text{(2)} \quad & P_{7} \\
-  \text{(3)} \quad & P_{13} \\
-  \text{(4)} \quad & P_{14} \\
-  \text{(5)} \quad & (P_{6} \land P_{7}) \rightarrow P_{20} \\
-  \text{(6)} \quad & (P_{13} \land P_{14}) \rightarrow P_{21} \land P_{22} \\
-  \text{(7)} \quad & (P_{20} \land P_{21} \land P_{22}) \rightarrow P_{23} \\
-  \vdash \quad & P_{23}
-\end{align*}
-\emph{Grounded in scripture alone:} Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Without\allowbreak{}Demonstrative}} --- James 2\par\nobreak\noindent
 James without the demonstrative reading of "justified": his texts, and the distinction between justification and sanctification, but not the sense of 2:21–24 on which James and Trent part.
 
@@ -7329,7 +7134,7 @@ The canonical witness with James, on that reading.
 \end{align*}
 \emph{Grounded in scripture alone:} Romans 3:28: a person is justified by faith apart from works of the law, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
 \subsection*{Arguments.CanonicalWitness.Results — what the canonical witness establishes}
-Every result is conditional on its premises, as everywhere in the library; what this argument adds is that every premise but the readings is a text all parties accept as scripture. So each result says: \emph{grant these texts, read each corpus this way, and this follows} — and the refutations say exactly which readings an opponent has to reject.
+Every result is conditional on its premises, as everywhere in the library; what this argument adds is that every premise but the readings is a text all parties accept as scripture. So each result says: \emph{grant these texts, read each corpus this way, and this follows} — and the burden says exactly which readings an opponent has to reject.
 
 \paragraph*{The rival}
 \leavevmode\par
@@ -7397,132 +7202,56 @@ theorem canonicalWithJames_is_satisfiable : Satisfiable
     canonicalWithJames.premises
 -- axioms: propext, Quot.sound
 \end{verbatim}}
-\paragraph*{No single corpus carries it}
-\leavevmode\par
-\par\medskip\noindent\textbf{\texttt{paul\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing}}\par\nobreak\noindent
-\textbf{Paul's reading is not load-bearing.} Take it away and Peter and Jesus still say works are not the ground.
-
-{\small\begin{verbatim}
-theorem paul_not_load_bearing : Establishes withoutPaul
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{hebrews\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing}}\par\nobreak\noindent
-\textbf{Nor is Hebrews'.} John says faith is necessary too.
-
-{\small\begin{verbatim}
-theorem hebrews_not_load_bearing : Establishes withoutHebrews
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{john\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing}}\par\nobreak\noindent
-\textbf{Nor is John's.} Hebrews says faith is necessary, and three corpora say it is sufficient.
-
-{\small\begin{verbatim}
-theorem john_not_load_bearing : Establishes withoutJohn
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{peter\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing}}\par\nobreak\noindent
-\textbf{Nor is Peter's.}
-
-{\small\begin{verbatim}
-theorem peter_not_load_bearing : Establishes withoutPeter
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{jesus\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing}}\par\nobreak\noindent
-\textbf{Nor is the reading of Jesus' words.}
-
-{\small\begin{verbatim}
-theorem jesus_not_load_bearing : Establishes withoutJesus
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{hebrews\_\allowbreak{}and\_\allowbreak{}jesus\_\allowbreak{}suffice}}\par\nobreak\noindent
-\textbf{Two corpora suffice}: Hebrews, that faith is necessary, and Jesus' words, that it is sufficient and that works are not the ground.
-
-{\small\begin{verbatim}
-theorem hebrews_and_jesus_suffice : Establishes hebrewsAndJesus
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Paul\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
-Each variant keeps a subset of the canonical case's premises, so the world in which every text and reading holds is a model of each. Without Paul:
-
-{\small\begin{verbatim}
-theorem withoutPaul_is_satisfiable : Satisfiable withoutPaul.premises
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Hebrews\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
-Without Hebrews, the premises have a model.
-
-{\small\begin{verbatim}
-theorem withoutHebrews_is_satisfiable : Satisfiable withoutHebrews.premises
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}John\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
-Without John, the premises have a model.
-
-{\small\begin{verbatim}
-theorem withoutJohn_is_satisfiable : Satisfiable withoutJohn.premises
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Peter\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
-Without Peter, the premises have a model.
-
-{\small\begin{verbatim}
-theorem withoutPeter_is_satisfiable : Satisfiable withoutPeter.premises
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Jesus\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
-Without Jesus' words, the premises have a model.
-
-{\small\begin{verbatim}
-theorem withoutJesus_is_satisfiable : Satisfiable withoutJesus.premises
--- axioms: propext, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{hebrews\allowbreak{}And\allowbreak{}Jesus\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
-Hebrews and Jesus' words alone have a model.
-
-{\small\begin{verbatim}
-theorem hebrewsAndJesus_is_satisfiable : Satisfiable hebrewsAndJesus.premises
--- axioms: propext, Quot.sound
-\end{verbatim}}
 \paragraph*{What an opponent must reject}
 \leavevmode\par
-\par\medskip\noindent\textbf{\texttt{no\allowbreak{}Works\allowbreak{}Witness\allowbreak{}Reading}}\par\nobreak\noindent
-Grant every text, and Hebrews' and John's readings, but none of Paul's, Peter's or Jesus': faith is necessary and sufficient, but works are not shown not to be the ground.
+The texts are granted, so what an opponent can reject is a reading. The burden lists every minimal set of readings whose rejection overturns the case, and proves there is no other way (\texttt{Testimony.Logic.Burden}). The readings are numbered from zero in the order of \texttt{corpora} — Paul, Hebrews, John, Peter, Jesus' words — with James sixth.
+
+\par\medskip\noindent\textbf{\texttt{canonical\_\allowbreak{}burden}}\par\nobreak\noindent
+\textbf{The opponent's burden against the canonical witness.} To overturn it, an opponent must reject Paul's, Peter's and Jesus' readings together — the three that say works are not the ground — or Hebrews' and John's together, the two that say faith is necessary. Nothing less overturns it, and nothing else does.
+
+Trent does not take the second way. Its Decree on Justification calls faith the beginning of salvation, "without which it is impossible to please God", so Hebrews' reading is one it makes itself. That leaves the first: three readings, of three corpora, each rejected.
 
 {\small\begin{verbatim}
-def noWorksWitnessReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.worksAreNotTheGround => False
-    | Claim.justificationByFaithAlone => False
-    | x => True
+theorem canonical_burden : OpponentsBurden canonicalCase corpora []
+    [toFaithAlone] [[0, 3, 4], [1, 2]]
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{works\_\allowbreak{}witnesses\_\allowbreak{}jointly\_\allowbreak{}load\_\allowbreak{}bearing}}\par\nobreak\noindent
-\textbf{To deny that works are not the ground, an opponent must reject three readings} — Paul's, Peter's and Jesus'. With all three taken away, faith alone no longer follows; with any one of them kept, it does (\texttt{paul\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing}, \texttt{peter\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing}, \texttt{jesus\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing}).
+\paragraph{What an opponent must reject.} \emph{The canonical witness to faith alone} concludes that justification is by faith alone. That conclusion is overturned exactly when every reading in one of these sets is rejected. Each set is minimal, and no other rejection overturns it:
+\begin{enumerate}
+\item \emph{Paul (Romans, Galatians, Ephesians, Titus)} (disputed); \emph{Peter (Acts 10 and 15)} (disputed); \emph{Jesus (Luke 7 and 18)} (disputed)
+\item \emph{Hebrews} (consensus); \emph{John} (disputed)
+\end{enumerate}
+\par\medskip\noindent\textbf{\texttt{no\_\allowbreak{}corpus\_\allowbreak{}is\_\allowbreak{}load\_\allowbreak{}bearing}}\par\nobreak\noindent
+\textbf{No corpus carries it alone.} Reject any one corpus's reading and faith alone still follows, because every set in the burden holds two readings or more.
 
 {\small\begin{verbatim}
-theorem works_witnesses_jointly_load_bearing : ¬Establishes
-    withoutTheWorksWitnesses
--- axioms: propext, Quot.sound
+theorem no_corpus_is_load_bearing : ∀ (i : ℕ), Entails (caseRejecting corpora
+    [] [toFaithAlone] [i]) canonicalCase.conclusion
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{no\allowbreak{}Necessity\allowbreak{}Witness\allowbreak{}Reading}}\par\nobreak\noindent
-Grant every text, and Paul's, Peter's and Jesus' readings, but neither Hebrews' nor John's: faith is sufficient and works are not the ground, but faith is not shown to be necessary.
+\par\medskip\noindent\textbf{\texttt{hebrews\_\allowbreak{}and\_\allowbreak{}jesus\_\allowbreak{}suffice}}\par\nobreak\noindent
+\textbf{Two corpora are enough}: Hebrews, that faith is necessary, and Jesus' words, that it is sufficient and that works are not the ground. Reject Paul's, John's and Peter's readings, and faith alone still follows — the rejection leaves one reading of each set standing.
 
 {\small\begin{verbatim}
-def noNecessityWitnessReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.faithIsNecessary => False
-    | Claim.justificationByFaithAlone => False
-    | x => True
+theorem hebrews_and_jesus_suffice : Entails (caseRejecting corpora []
+    [toFaithAlone] [0, 2, 3]) canonicalCase.conclusion
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{necessity\_\allowbreak{}witnesses\_\allowbreak{}jointly\_\allowbreak{}load\_\allowbreak{}bearing}}\par\nobreak\noindent
-\textbf{To deny that faith is necessary, an opponent must reject two readings} — Hebrews' and John's. Trent does not: it calls faith the beginning of salvation, without which it is impossible to please God. That part of faith alone is common ground.
+\par\medskip\noindent\textbf{\texttt{canonical\allowbreak{}With\allowbreak{}James\_\allowbreak{}burden}}\par\nobreak\noindent
+\textbf{The opponent's burden against the canonical witness with James.} The two ways of overturning faith alone remain, and a third is added for the Reformed formula: rejecting James's reading alone. That set has one reading in it — James is the formula's single point of failure, as he is its only witness that works are the fruit of faith.
 
 {\small\begin{verbatim}
-theorem necessity_witnesses_jointly_load_bearing : ¬Establishes
-    withoutTheNecessityWitnesses
--- axioms: propext, Quot.sound
+theorem canonicalWithJames_burden : OpponentsBurden canonicalWithJames
+    (corpora ++ [jamesLine]) [p Claim.jude20_21] [toFaithAlone, toNeverAlone]
+    [[0, 3, 4], [1, 2], [5]]
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\paragraph{What an opponent must reject.} \emph{The canonical witness, with James} concludes that justification is by faith alone, by a faith never alone. That conclusion is overturned exactly when every reading in one of these sets is rejected. Each set is minimal, and no other rejection overturns it:
+\begin{enumerate}
+\item \emph{Paul (Romans, Galatians, Ephesians, Titus)} (disputed); \emph{Peter (Acts 10 and 15)} (disputed); \emph{Jesus (Luke 7 and 18)} (disputed)
+\item \emph{Hebrews} (consensus); \emph{John} (disputed)
+\item \emph{James 2} (disputed)
+\end{enumerate}
 \paragraph*{James}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Undemonstrated\allowbreak{}Reading}}\par\nobreak\noindent

@@ -250,9 +250,13 @@ elab "derive_argument_bodies " tableName:ident : command => do
               if axioms.isEmpty then "-- axioms: none beyond Lean's own"
               else "-- axioms: " ++ String.intercalate ", " (axioms.toList.map toString)
             let shown := wrapStatement ("theorem " ++ dname ++ " : " ++ stmt)
-            `(Logic.Page.Item.result $(quote dname) $(quote doc)
-                $(quote (shown ++ "\n" ++ note))
-                $(quote (proposedAttr.hasTag env n)))
+            if headIs ``Logic.OpponentsBurden then
+              `(Logic.Page.Item.burden $(quote dname) $(quote doc)
+                  $(quote (shown ++ "\n" ++ note)) (Logic.OpponentsBurden.view $(mkIdent n)))
+            else
+              `(Logic.Page.Item.result $(quote dname) $(quote doc)
+                  $(quote (shown ++ "\n" ++ note))
+                  $(quote (proposedAttr.hasTag env n)))
           else if headIs ``Logic.ArgumentPackage then do
             if atomTy.isNone then
               atomTy := match info.type.getAppArgs[0]? with

@@ -34,13 +34,19 @@ deliver only what its own texts say. *Faith alone* is split into three parts:
 
 No corpus carries more than its share, and no corpus is load-bearing: take any
 one reading away and the conclusion still follows. Two corpora are enough —
-Hebrews and Jesus' words. The refutations say what an opponent must reject
-instead. To deny that works are not the ground, they must reject three readings:
-Paul's, Peter's and Jesus'. To deny that faith is necessary, they must reject
-Hebrews' and John's — and Trent does not, since its chapter 8 calls faith "the
-beginning of human salvation … without which it is impossible to please God".
-Hebrews' reading is therefore rated `consensus`, and every other reading
-`disputed`.
+Hebrews and Jesus' words. What an opponent must reject instead is computed,
+not chosen: the **opponent's burden** (`canonical_burden`) lists every minimal
+set of readings whose rejection overturns the case, and proves there is no
+other way. There are exactly two. To deny that works are not the ground, an
+opponent must reject three readings: Paul's, Peter's and Jesus'. To deny that
+faith is necessary, they must reject Hebrews' and John's — and Trent does not,
+since its chapter 8 calls faith "the beginning of human salvation … without
+which it is impossible to please God". Hebrews' reading is therefore rated
+`consensus`, and every other reading `disputed`.
+
+The burden is how this library lets several witnesses matter without counting
+them. Three corpora saying works are not the ground is not a score of three; it
+is three readings an opponent has to break, each on its own texts.
 
 **James is coherence, not a witness to faith alone.** James 2 does not argue
 against works; it argues against a faith without them — the demons' assent of
@@ -61,7 +67,10 @@ the *increase* of a justification already received, by works done in grace
 (Session VI, ch. 10). On that reading works are part of the ground, and faith
 alone fails. The `Because` result finds that one atom mechanically, and the
 load-bearing result shows the Reformed formula needs it: without the
-demonstrative reading of James, "faith never alone" no longer follows.
+demonstrative reading of James, "faith never alone" no longer follows. The
+burden with James says the same at the level of readings: rejecting James's
+reading alone overturns the formula, and nothing else about faith alone
+changes.
 
 What this argument does *not* show is that the Reformed readings are right. It
 shows where the disagreement is. Every text is common ground; every reading is

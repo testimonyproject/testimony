@@ -5,8 +5,10 @@ import Testimony.Logic.Package
 # Arguments.CanonicalWitness.Packages — the positions
 
 Trent first, because the rival is written before anything is proved. Then the
-canonical case, the case with James, and the variants that take one corpus's
-reading away — its texts stay granted; what goes is the step that reads them.
+canonical case, the case with James, and one variant: James read without the
+demonstrative sense of "justified". Which corpora's readings an opponent must
+reject is not a variant package but a computed result — the opponent's burden
+(`Testimony.Logic.Burden`), in `Testimony.Arguments.CanonicalWitness.Results`.
 -/
 
 namespace Testimony.Arguments.CanonicalWitness
@@ -58,85 +60,7 @@ def canonicalWithJames : ArgumentPackage Claim :=
   , conclusionLabel := "justification is by faith alone, by a faith never alone"
   , inferences := (corpora ++ [jamesLine]).filterMap Line.inference }
 
-/-! ### One corpus's reading taken away
-
-Each variant keeps every text and drops one line's reading: the named difference
-is which line is missing from the list. -/
-
-/-- Without Paul's reading. -/
-@[canonicalWitnessDefs]
-def withoutPaul : ArgumentPackage Claim :=
-  { canonicalCase with
-    name := "The canonical witness, without Paul's reading"
-    premises :=
-      caseOf [hebrewsLine, johannineLine, petrineLine, dominicalLine] paulineLine.grounds
-        [toFaithAlone] }
-
-/-- Without Hebrews' reading. -/
-@[canonicalWitnessDefs]
-def withoutHebrews : ArgumentPackage Claim :=
-  { canonicalCase with
-    name := "The canonical witness, without Hebrews' reading"
-    premises :=
-      caseOf [paulineLine, johannineLine, petrineLine, dominicalLine] hebrewsLine.grounds
-        [toFaithAlone] }
-
-/-- Without John's reading. -/
-@[canonicalWitnessDefs]
-def withoutJohn : ArgumentPackage Claim :=
-  { canonicalCase with
-    name := "The canonical witness, without John's reading"
-    premises :=
-      caseOf [paulineLine, hebrewsLine, petrineLine, dominicalLine] johannineLine.grounds
-        [toFaithAlone] }
-
-/-- Without Peter's reading. -/
-@[canonicalWitnessDefs]
-def withoutPeter : ArgumentPackage Claim :=
-  { canonicalCase with
-    name := "The canonical witness, without Peter's reading"
-    premises :=
-      caseOf [paulineLine, hebrewsLine, johannineLine, dominicalLine] petrineLine.grounds
-        [toFaithAlone] }
-
-/-- Without Jesus' reading. -/
-@[canonicalWitnessDefs]
-def withoutJesus : ArgumentPackage Claim :=
-  { canonicalCase with
-    name := "The canonical witness, without the reading of Jesus' words"
-    premises :=
-      caseOf [paulineLine, hebrewsLine, johannineLine, petrineLine] dominicalLine.grounds
-        [toFaithAlone] }
-
-/-! ### The opponent's burden -/
-
-/-- Without the three readings that say works are not the ground — Paul's,
-Peter's and Jesus'. -/
-@[canonicalWitnessDefs]
-def withoutTheWorksWitnesses : ArgumentPackage Claim :=
-  { canonicalCase with
-    name := "The canonical witness, without Paul's, Peter's and Jesus' readings"
-    premises :=
-      caseOf [hebrewsLine, johannineLine]
-        (paulineLine.grounds ++ petrineLine.grounds ++ dominicalLine.grounds)
-        [toFaithAlone] }
-
-/-- Without the two readings that say faith is necessary — Hebrews' and
-John's. -/
-@[canonicalWitnessDefs]
-def withoutTheNecessityWitnesses : ArgumentPackage Claim :=
-  { canonicalCase with
-    name := "The canonical witness, without Hebrews' and John's readings"
-    premises :=
-      caseOf [paulineLine, petrineLine, dominicalLine]
-        (hebrewsLine.grounds ++ johannineLine.grounds) [toFaithAlone] }
-
-/-- Two corpora are enough: Hebrews and Jesus' words. -/
-@[canonicalWitnessDefs]
-def hebrewsAndJesus : ArgumentPackage Claim :=
-  { canonicalCase with
-    name := "Hebrews and Jesus' words alone"
-    premises := caseOf [hebrewsLine, dominicalLine] [] [toFaithAlone] }
+/-! ### James without its hinge -/
 
 /-- James without the demonstrative reading of "justified": his texts, and the
 distinction between justification and sanctification, but not the sense of

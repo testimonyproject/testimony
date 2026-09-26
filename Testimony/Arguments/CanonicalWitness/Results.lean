@@ -1,6 +1,7 @@
 import Testimony.Arguments.CanonicalWitness.Packages
 import Testimony.Logic.Tactic
 import Testimony.Logic.Because
+import Testimony.Logic.Burden
 
 /-!
 # Arguments.CanonicalWitness.Results — what the canonical witness establishes
@@ -8,7 +9,7 @@ import Testimony.Logic.Because
 Every result is conditional on its premises, as everywhere in the library; what
 this argument adds is that every premise but the readings is a text all parties
 accept as scripture. So each result says: *grant these texts, read each corpus
-this way, and this follows* — and the refutations say exactly which readings an
+this way, and this follows* — and the burden says exactly which readings an
 opponent has to reject.
 -/
 
@@ -72,118 +73,63 @@ held at once. -/
 theorem canonicalWithJames_is_satisfiable : Satisfiable canonicalWithJames.premises := by
   satisfied_by canonicalReading [canonicalWitnessDefs]
 
-/-! ### No single corpus carries it -/
+/-! ### What an opponent must reject
 
-/-- **Paul's reading is not load-bearing.** Take it away and Peter and Jesus
-still say works are not the ground. -/
+The texts are granted, so what an opponent can reject is a reading. The burden
+lists every minimal set of readings whose rejection overturns the case, and
+proves there is no other way (`Testimony.Logic.Burden`). The readings are
+numbered from zero in the order of `corpora` — Paul, Hebrews, John, Peter,
+Jesus' words — with James sixth. -/
+
+/-- **The opponent's burden against the canonical witness.** To overturn it, an
+opponent must reject Paul's, Peter's and Jesus' readings together — the three
+that say works are not the ground — or Hebrews' and John's together, the two
+that say faith is necessary. Nothing less overturns it, and nothing else does.
+
+Trent does not take the second way. Its Decree on Justification calls faith the
+beginning of salvation, "without which it is impossible to please God", so
+Hebrews' reading is one it makes itself. That leaves the first: three readings,
+of three corpora, each rejected. -/
 @[headline]
-theorem paul_not_load_bearing : Establishes withoutPaul := by
-  establish [canonicalWitnessDefs]
+theorem canonical_burden :
+    OpponentsBurden canonicalCase corpora [] [toFaithAlone] [[0, 3, 4], [1, 2]] :=
+  .of_check rfl (by decide +kernel)
 
-#print axioms paul_not_load_bearing
+#print axioms canonical_burden
 
-/-- **Nor is Hebrews'.** John says faith is necessary too. -/
+/-- **No corpus carries it alone.** Reject any one corpus's reading and faith
+alone still follows, because every set in the burden holds two readings or
+more. -/
 @[headline]
-theorem hebrews_not_load_bearing : Establishes withoutHebrews := by
-  establish [canonicalWitnessDefs]
+theorem no_corpus_is_load_bearing (i : ℕ) :
+    Entails (caseRejecting corpora [] [toFaithAlone] [i]) canonicalCase.conclusion :=
+  canonical_burden.stands_without_one (by decide) i
 
-#print axioms hebrews_not_load_bearing
+#print axioms no_corpus_is_load_bearing
 
-/-- **Nor is John's.** Hebrews says faith is necessary, and three corpora say it
-is sufficient. -/
+/-- **Two corpora are enough**: Hebrews, that faith is necessary, and Jesus'
+words, that it is sufficient and that works are not the ground. Reject Paul's,
+John's and Peter's readings, and faith alone still follows — the rejection
+leaves one reading of each set standing. -/
 @[headline]
-theorem john_not_load_bearing : Establishes withoutJohn := by
-  establish [canonicalWitnessDefs]
-
-#print axioms john_not_load_bearing
-
-/-- **Nor is Peter's.** -/
-@[headline]
-theorem peter_not_load_bearing : Establishes withoutPeter := by
-  establish [canonicalWitnessDefs]
-
-#print axioms peter_not_load_bearing
-
-/-- **Nor is the reading of Jesus' words.** -/
-@[headline]
-theorem jesus_not_load_bearing : Establishes withoutJesus := by
-  establish [canonicalWitnessDefs]
-
-#print axioms jesus_not_load_bearing
-
-/-- **Two corpora suffice**: Hebrews, that faith is necessary, and Jesus' words,
-that it is sufficient and that works are not the ground. -/
-@[headline]
-theorem hebrews_and_jesus_suffice : Establishes hebrewsAndJesus := by
-  establish [canonicalWitnessDefs]
+theorem hebrews_and_jesus_suffice :
+    Entails (caseRejecting corpora [] [toFaithAlone] [0, 2, 3]) canonicalCase.conclusion :=
+  canonical_burden.stands_without _ (by decide)
 
 #print axioms hebrews_and_jesus_suffice
 
-/-- Each variant keeps a subset of the canonical case's premises, so the world
-in which every text and reading holds is a model of each. Without Paul: -/
-theorem withoutPaul_is_satisfiable : Satisfiable withoutPaul.premises := by
-  satisfied_by canonicalReading [canonicalWitnessDefs]
-
-/-- Without Hebrews, the premises have a model. -/
-theorem withoutHebrews_is_satisfiable : Satisfiable withoutHebrews.premises := by
-  satisfied_by canonicalReading [canonicalWitnessDefs]
-
-/-- Without John, the premises have a model. -/
-theorem withoutJohn_is_satisfiable : Satisfiable withoutJohn.premises := by
-  satisfied_by canonicalReading [canonicalWitnessDefs]
-
-/-- Without Peter, the premises have a model. -/
-theorem withoutPeter_is_satisfiable : Satisfiable withoutPeter.premises := by
-  satisfied_by canonicalReading [canonicalWitnessDefs]
-
-/-- Without Jesus' words, the premises have a model. -/
-theorem withoutJesus_is_satisfiable : Satisfiable withoutJesus.premises := by
-  satisfied_by canonicalReading [canonicalWitnessDefs]
-
-/-- Hebrews and Jesus' words alone have a model. -/
-theorem hebrewsAndJesus_is_satisfiable : Satisfiable hebrewsAndJesus.premises := by
-  satisfied_by canonicalReading [canonicalWitnessDefs]
-
-/-! ### What an opponent must reject -/
-
-/-- Grant every text, and Hebrews' and John's readings, but none of Paul's,
-Peter's or Jesus': faith is necessary and sufficient, but works are not shown
-not to be the ground. -/
-def noWorksWitnessReading : Valuation Claim := fun a =>
-  match a with
-  | .worksAreNotTheGround => False
-  | .justificationByFaithAlone => False
-  | _ => True
-
-/-- **To deny that works are not the ground, an opponent must reject three
-readings** — Paul's, Peter's and Jesus'. With all three taken away, faith alone
-no longer follows; with any one of them kept, it does (`paul_not_load_bearing`,
-`peter_not_load_bearing`, `jesus_not_load_bearing`). -/
+/-- **The opponent's burden against the canonical witness with James.** The
+two ways of overturning faith alone remain, and a third is added for the
+Reformed formula: rejecting James's reading alone. That set has one reading
+in it — James is the formula's single point of failure, as he is its only
+witness that works are the fruit of faith. -/
 @[headline]
-theorem works_witnesses_jointly_load_bearing : ¬ Establishes withoutTheWorksWitnesses := by
-  refute_with noWorksWitnessReading [canonicalWitnessDefs]
+theorem canonicalWithJames_burden :
+    OpponentsBurden canonicalWithJames (corpora ++ [jamesLine]) [p .jude20_21]
+      [toFaithAlone, toNeverAlone] [[0, 3, 4], [1, 2], [5]] :=
+  .of_check rfl (by decide +kernel)
 
-#print axioms works_witnesses_jointly_load_bearing
-
-/-- Grant every text, and Paul's, Peter's and Jesus' readings, but neither
-Hebrews' nor John's: faith is sufficient and works are not the ground, but
-faith is not shown to be necessary. -/
-def noNecessityWitnessReading : Valuation Claim := fun a =>
-  match a with
-  | .faithIsNecessary => False
-  | .justificationByFaithAlone => False
-  | _ => True
-
-/-- **To deny that faith is necessary, an opponent must reject two readings** —
-Hebrews' and John's. Trent does not: it calls faith the beginning of salvation,
-without which it is impossible to please God. That part of faith alone is
-common ground. -/
-@[headline]
-theorem necessity_witnesses_jointly_load_bearing :
-    ¬ Establishes withoutTheNecessityWitnesses := by
-  refute_with noNecessityWitnessReading [canonicalWitnessDefs]
-
-#print axioms necessity_witnesses_jointly_load_bearing
+#print axioms canonicalWithJames_burden
 
 /-! ### James -/
 
