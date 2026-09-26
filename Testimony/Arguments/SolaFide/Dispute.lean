@@ -38,8 +38,9 @@ That is unlike the dispute over Isaiah 7:14, where one inference rated
   definition, Trent's case no longer denies "not by works"
   (`trent_objection_rests_on_its_definition`).
 - **The apocalyptic reading and Paul defeat each other**: it denies the objective
-  genitive, and Paul concludes faith alone. **Luke and Acts defeat it**, and it
-  defeats neither — it contradicts nothing they rest on.
+  genitive, and Paul concludes faith alone. **Luke and Acts do not conflict with
+  it** either way. They say that faith saves, which it grants; it says that
+  faith is not the condition, which they do not deny.
 - **The apocalyptic reading defeats Trent, and Trent does not defeat it.** They
   agree that justification is not by faith alone; but the apocalyptic reading
   holds "not by works" — God's deliverance is conditioned on nothing a person
@@ -55,17 +56,22 @@ is defeated by someone, and the grounded extension is empty.
 
 **But sola fide from Luke 7:50 is accepted on every resolution**
 (`dominical_case_skeptically_accepted`). Trent cannot be defended — the
-apocalyptic reading defeats it, and whatever answers the apocalyptic reading
-also defeats Trent (`trent_indefensible`). Nor can the apocalyptic reading —
-the dominical case defeats it, and only Trent could answer the dominical case
-(`apocalyptic_indefensible`). So every maximal defensible position holds the
-dominical case.
+apocalyptic reading defeats it, and the only party that answers the apocalyptic
+reading, Paul, also defeats Trent (`trent_indefensible`). Trent is the dominical
+case's only defeater, so every maximal defensible position holds the dominical
+case.
+
+**Between Paul and the apocalyptic reading, the dispute chooses neither.** Each
+defeats the other over πίστις Χριστοῦ; each is defensible, and neither is
+forced (`apocalyptic_defensible`, `apocalyptic_not_forced`). The apocalyptic
+reading stands with Luke's case and Peter's, which claim that faith saves and
+not that faith alone does.
 
 ## What the verdict rests on
 
 Three things, each stated as a result or a limitation rather than left implicit.
 
-**The two rivals answering each other.** Remove the apocalyptic reading and
+**The rivals answering each other.** Remove the apocalyptic reading and
 Trent defends itself against the three strands; sola fide is then accepted on
 some resolutions and not others
 (`sola_fide_not_forced_without_the_apocalyptic_reading`). The verdict is not
@@ -378,14 +384,19 @@ justification by faith alone. -/
 theorem pauline_defeats_apocalyptic : Defeats paulineCase apocalypticCase :=
   Horn.defeats_of_defeats? paulineCase_strength apocalypticCase_strength (by decide +kernel)
 
-/-- **The dominical case defeats the apocalyptic reading**, on the same rebuttal
-— and the apocalyptic reading contradicts nothing it rests on. -/
-theorem dominical_defeats_apocalyptic : Defeats dominicalCase apocalypticCase :=
-  Horn.defeats_of_defeats? dominicalCase_strength apocalypticCase_strength (by decide +kernel)
+/-- **The dominical case does not defeat the apocalyptic reading.** Luke 7:50
+says that faith saved her, not that faith alone does; the apocalyptic reading
+grants that faith saves, and denies only that faith is the condition. So Luke's
+case entails nothing the apocalyptic reading denies
+(`luke_grants_the_apocalyptic_conclusion`). -/
+theorem dominical_does_not_defeat_apocalyptic : ¬ Defeats dominicalCase apocalypticCase :=
+  Horn.not_defeats_of_defeats? dominicalCase_strength apocalypticCase_strength (by decide +kernel)
 
-/-- **The apostolic case defeats the apocalyptic reading**, likewise. -/
-theorem apostolic_defeats_apocalyptic : Defeats apostolicCase apocalypticCase :=
-  Horn.defeats_of_defeats? apostolicCase_strength apocalypticCase_strength (by decide +kernel)
+/-- **Nor does the apostolic case**, for the same reason: Peter at Jerusalem
+says faith suffices, not that it alone does
+(`peter_grants_the_apocalyptic_conclusion`). -/
+theorem apostolic_does_not_defeat_apocalyptic : ¬ Defeats apostolicCase apocalypticCase :=
+  Horn.not_defeats_of_defeats? apostolicCase_strength apocalypticCase_strength (by decide +kernel)
 
 /-- **Sanders defeats the Pauline case.** Covenantal nomism, with Dunn's
 inference, denies the ἔργα νόμου premise. -/
@@ -472,12 +483,12 @@ the reading of 7:47 — and it does not deny its conclusion: it grants grace and
 "not by works", and it can grant that salvation is received through faith while
 denying that faith is its condition. Why, premise by premise:
 `apocalyptic_grants_sola_fide_as_stated` and
-`apocalyptic_grants_the_dominical_step_by_healing`. -/
+`apocalyptic_grants_the_dominical_step`. -/
 theorem apocalyptic_does_not_defeat_dominical : ¬ Defeats apocalypticCase dominicalCase :=
   Horn.not_defeats_of_defeats? apocalypticCase_strength dominicalCase_strength (by decide +kernel)
 
 /-- **Nor the apostolic case**, for the same reasons
-(`apocalyptic_grants_the_apostolic_step_with_jervell`). -/
+(`apocalyptic_grants_the_apostolic_step`). -/
 theorem apocalyptic_does_not_defeat_apostolic : ¬ Defeats apocalypticCase apostolicCase :=
   Horn.not_defeats_of_defeats? apocalypticCase_strength apostolicCase_strength (by decide +kernel)
 
@@ -492,7 +503,7 @@ theorem trent_does_not_defeat_apocalyptic : ¬ Defeats tridentineCase apocalypti
 
 /-! ### Why these are not counters
 
-The three absences above are computed, and a computation names no reason. The
+The absences above are computed, and a computation names no reason. The
 readings below do: each is a way of holding one position that leaves one
 premise or conclusion of another standing, and each result checks that the
 reading holds everything the first position holds as well. -/
@@ -513,37 +524,39 @@ theorem apocalyptic_grants_sola_fide_as_stated :
     Grants apocalypticCase dominicalCase.conclusion := by
   satisfied_by apocalypticWithFaithReading [Grants, solaFideDefs]
 
-/-- The apocalyptic world, with Jesus' σέσωκέν σε read as healing. -/
-def apocalypticHealingReading : Valuation Claim := fun a =>
+/-- **The apocalyptic reader grants the dominical step outright.** Luke's step
+delivers that faith suffices — "your faith has saved you" — and the apocalyptic
+world holds that: faith is the means, though not the condition. -/
+theorem apocalyptic_grants_the_dominical_step :
+    Grants apocalypticCase dominicalToSufficiency := by
+  satisfied_by apocalypticWithFaithReading [Grants, solaFideDefs]
+
+/-- **And the apostolic step**, for the same reason: Peter says faith suffices,
+and the apocalyptic reading does not deny it. -/
+theorem apocalyptic_grants_the_apostolic_step :
+    Grants apocalypticCase apostolicToSufficiency := by
+  satisfied_by apocalypticWithFaithReading [Grants, solaFideDefs]
+
+/-- Luke's world without *alone*: every premise of the dominical case, faith
+sufficient, and justification not by faith alone — because nothing Luke says
+excludes another condition. -/
+def lukeWithoutAloneReading : Valuation Claim := fun a =>
   match a with
-  | .pistisChristouObjective => False
   | .justificationByFaithAlone => False
-  | .sozoIsSoteriological => False
   | _ => True
 
-/-- **The apocalyptic reader can grant the dominical step**, by reading σέσωκέν σε
-at Luke 7:50 as healing rather than salvation: the step then has a ground that
-fails, and holds without delivering faith alone. So the apocalyptic reading
-does not undermine the dominical case on its step — it answers Luke only by
-disputing the lexical premise, which is where the dominical case is open. -/
-theorem apocalyptic_grants_the_dominical_step_by_healing :
-    Grants apocalypticCase dominicalToFaithAlone := by
-  satisfied_by apocalypticHealingReading [Grants, solaFideDefs]
+/-- **Luke's case grants the apocalyptic conclusion.** Everything the dominical
+case holds is compatible with justification not being by faith alone, so it
+does not rebut the apocalyptic reading. Only Paul's case, which argues for
+*alone*, does. -/
+theorem luke_grants_the_apocalyptic_conclusion :
+    Grants dominicalCase apocalypticCase.conclusion := by
+  satisfied_by lukeWithoutAloneReading [Grants, solaFideDefs]
 
-/-- The apocalyptic world, with the yoke read as Jervell reads it. -/
-def apocalypticJervellReading : Valuation Claim := fun a =>
-  match a with
-  | .pistisChristouObjective => False
-  | .justificationByFaithAlone => False
-  | .acts15YokeIsLawAsCondition => False
-  | _ => True
-
-/-- **The apocalyptic reader can grant the apostolic step**, by reading the yoke
-of Acts 15:10 as Jervell does — Israel's law for gentiles, not the law as a
-condition of salvation. -/
-theorem apocalyptic_grants_the_apostolic_step_with_jervell :
-    Grants apocalypticCase apostolicToFaithAlone := by
-  satisfied_by apocalypticJervellReading [Grants, solaFideDefs]
+/-- **And Peter's case.** -/
+theorem peter_grants_the_apocalyptic_conclusion :
+    Grants apostolicCase apocalypticCase.conclusion := by
+  satisfied_by lukeWithoutAloneReading [Grants, solaFideDefs]
 
 /-- Trent's world, with the objective genitive and the apocalyptic reading of
 δικαιοσύνη θεοῦ both denied. -/
@@ -687,8 +700,6 @@ def partyDefeats : Party → Party → Prop
   | .apocalyptic, .trent => True
   | .apocalyptic, .pauline => True
   | .pauline, .apocalyptic => True
-  | .dominical, .apocalyptic => True
-  | .apostolic, .apocalyptic => True
   | .sanders, .pauline => True
   | .pauline, .sanders => True
   | .sanders, .critics => True
@@ -713,8 +724,8 @@ theorem partyNode_strength : ∀ i, (partyNode i).strength = 0
   | .jervell => jervellCase_strength
 
 /-- **Who defeats whom**, all sixty-four pairs. Trent and each Reformed strand
-defeat each other. The apocalyptic reading and Paul defeat each other; Luke and
-Acts defeat it, and it defeats neither; it defeats Trent, and Trent does not
+defeat each other. The apocalyptic reading and Paul defeat each other; it and
+Luke's and Acts' cases do not conflict; it defeats Trent, and Trent does not
 defeat it. Sanders defeats Paul and the critics, and both defeat him back.
 Jervell and Acts defeat each other. Nothing else.
 
@@ -799,19 +810,17 @@ theorem nothing_prevails_over_sola_fide : grounded solaFideDispute.defeats = ∅
 
 #print axioms nothing_prevails_over_sola_fide
 
-/-- Why Trent cannot be defended: the apocalyptic reading attacks it, and every
-party that answers the apocalyptic reading — Paul, Luke, Acts — also attacks
-Trent. -/
+/-- Why Trent cannot be defended: the apocalyptic reading attacks it, and the
+only party that answers the apocalyptic reading — Paul — also attacks Trent. -/
 def trentAnsweredByTheApocalypticReading : Verdict solaFideDispute where
   finite := solaFideFinite
   claim := .indefensible .trent [(.trent, .apocalyptic)]
   checked := by decide +kernel
 
 /-- **Trent cannot be defended.** The apocalyptic reading defeats it — it holds
-"not by works" on grounds Trent does not contradict — and the only parties that
-defeat the apocalyptic reading are the Reformed strands, each of which also
-defeats Trent. No position can hold Trent and answer the apocalyptic reading at
-once. -/
+"not by works" on grounds Trent does not contradict — and the only party that
+defeats the apocalyptic reading is Paul's case, which also defeats Trent. No
+position can hold Trent and answer the apocalyptic reading at once. -/
 @[headline]
 theorem trent_indefensible (S : Set Party)
     (hS : Admissible solaFideDispute.defeats S) : Party.trent ∉ S :=
@@ -819,37 +828,59 @@ theorem trent_indefensible (S : Set Party)
 
 #print axioms trent_indefensible
 
-/-- Why the apocalyptic reading cannot be defended: the dominical case attacks
-it, and the only party that answers the dominical case is Trent, which the
-apocalyptic reading itself attacks. -/
-def apocalypticAnsweredByLuke : Verdict solaFideDispute where
+/-- Why the apocalyptic reading can be defended: it stands with Luke's case, with
+Peter's, and with the critics, and answers the one party that defeats it — Paul
+— itself. -/
+def apocalypticStandsWithLuke : Verdict solaFideDispute where
   finite := solaFideFinite
-  claim := .indefensible .apocalyptic [(.apocalyptic, .dominical)]
+  claim := .credulous .apocalyptic [.dominical, .apostolic, .apocalyptic, .critics]
   checked := by decide +kernel
 
-/-- **Nor can the apocalyptic reading.** The dominical case defeats it, and the
-only party that defeats the dominical case is Trent — which the apocalyptic
-reading itself defeats. -/
-@[headline]
-theorem apocalyptic_indefensible (S : Set Party)
-    (hS : Admissible solaFideDispute.defeats S) : Party.apocalyptic ∉ S :=
-  apocalypticAnsweredByLuke.holds S hS
+/-- **The apocalyptic reading can be defended.** Some maximal defensible position
+holds it, and holds Luke's case and Peter's with it: they claim that faith
+saves, and the apocalyptic reading grants that, denying only that faith is the
+condition. Its one defeater is Paul, whom it defeats back, over the genitive.
 
-#print axioms apocalyptic_indefensible
+So the dispute between the Reformed reading and the apocalyptic one is where the
+literature has it: between Paul and Campbell, over πίστις Χριστοῦ — not between
+Campbell and Luke. -/
+@[headline]
+theorem apocalyptic_defensible :
+    CredulouslyAccepted solaFideDispute.defeats .apocalyptic :=
+  apocalypticStandsWithLuke.holds
+
+#print axioms apocalyptic_defensible
+
+/-- Why the apocalyptic reading is not forced: a defensible position holds Paul,
+and Paul defeats it. -/
+def apocalypticAnsweredByPaul : Verdict solaFideDispute where
+  finite := solaFideFinite
+  claim := .notSkeptical .apocalyptic .pauline [.pauline, .dominical, .apostolic, .critics]
+  checked := by decide +kernel
+
+/-- **Nor is it forced.** A maximal defensible position holds Paul's case —
+faith alone, from Galatians 2:16 read with the objective genitive — and cannot
+hold the apocalyptic reading with it. Between Paul and Campbell the dispute
+chooses neither: each is defensible, and neither is forced. -/
+@[headline]
+theorem apocalyptic_not_forced :
+    ¬ SkepticallyAccepted solaFideDispute.defeats .apocalyptic :=
+  apocalypticAnsweredByPaul.holds
+
+#print axioms apocalyptic_not_forced
 
 /-- Why the dominical case is accepted on every resolution: it answers Trent
-itself, and neither of its rivals can be defended — by the two strategies
-above. -/
+itself, and Trent cannot be defended — by the strategy above. -/
 def dominicalCaseForced : Verdict solaFideDispute where
   finite := solaFideFinite
-  claim := .skeptical .dominical [(.trent, .apocalyptic), (.apocalyptic, .dominical)]
+  claim := .skeptical .dominical [(.trent, .apocalyptic)]
   checked := by decide +kernel
 
 /-- **Sola fide from Luke 7:50 is accepted on every resolution.** Its only
-defeater is Trent, which no admissible position can hold; it defeats back the
-only other party it conflicts with, the apocalyptic reading, which no admissible
-position can hold either. So every preferred extension — every maximal
-defensible position — contains it.
+defeater is Trent, which no admissible position can hold, and it conflicts with
+no other party: the apocalyptic reading grants what Luke says — that faith
+saved her — and denies only what Luke does not say, that faith alone does. So
+every preferred extension — every maximal defensible position — contains it.
 
 This is the dispute's verdict, and it is narrower than it sounds. It is not
 reached by the grounded semantics, which forces nothing

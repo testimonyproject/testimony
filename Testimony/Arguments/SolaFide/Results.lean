@@ -121,6 +121,7 @@ def neitherLexicalReading : Valuation Claim := fun a =>
   | .sozoIsSoteriological => False
   | .acts15YokeIsLawAsCondition => False
   | .justificationByFaithAlone => False
+  | .faithIsSufficient => False
   | .salvationThroughFaith => False
   | _ => True
 
@@ -150,6 +151,7 @@ def neitherPistisNorSozoReading : Valuation Claim := fun a =>
   | .sozoIsSoteriological => False
   | .acts15YokeIsLawAsCondition => False
   | .justificationByFaithAlone => False
+  | .faithIsSufficient => False
   | .salvationThroughFaith => False
   | _ => True
 
@@ -192,12 +194,13 @@ def apocalypticReading : Valuation Claim := fun a =>
   match a with
   | .pistisChristouObjective => False
   | .justificationByFaithAlone => False
+  | .faithIsSufficient => False
   | .salvationThroughFaith => False
   | _ => True
 
-/-- **The apocalyptic reading does not establish sola fide.** It denies the
-premise the conclusion's third part depends on — that faith is the condition of
-justification — and so does not reach "through faith".
+/-- **The apocalyptic reading does not establish sola fide.** It does not reach
+the conclusion's third part, "through faith": nothing it holds says that faith
+suffices, and the faith alone from which Paul's strand derives it, it denies.
 
 What it keeps is stated as its own result,
 `apocalyptic_establishes_grace_not_works`. -/
@@ -225,7 +228,7 @@ theorem apocalyptic_establishes_grace_not_works : Establishes apocalypticOnGrace
 and the first two parts of the conclusion still follow, from the texts that say
 "not of works" in terms and the answer to James.
 
-The lexical disputes decide *through faith alone*: whether the texts that
+The lexical disputes decide *through faith*: whether the texts that
 exclude works also name faith as the means. They do not decide whether works
 are excluded. -/
 @[headline]
@@ -270,6 +273,7 @@ def sandersReading : Valuation Claim := fun a =>
   | .sozoIsSoteriological => False
   | .acts15YokeIsLawAsCondition => False
   | .justificationByFaithAlone => False
+  | .faithIsSufficient => False
   | .salvationThroughFaith => False
   | _ => True
 

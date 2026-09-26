@@ -347,6 +347,17 @@ def baseCite : Claim → AtomMeta
           supporting :=
             [ .work schreinerFaithAlone .whole
             , .work mannermaaChristPresentInFaith .whole ] } }
+  | .faithIsSufficient =>
+    { label := "Faith is sufficient: whoever believes is saved"
+    , kind := .theological
+      -- Trent denies it: faith is the beginning of justification, not the
+      -- whole of it (Session VI, ch. 8, canon 9).
+    , source :=
+        { primary :=
+            .scripture [{ ref := .verse luke7_50 }, { ref := .range ⟨.acts, 15, 9, 15, 11⟩ }]
+        , supporting := [.work schreinerFaithAlone .whole]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
   | .salvationByGrace =>
     { label := "Salvation is by grace, a gift and not wages owed"
     , kind := .theological

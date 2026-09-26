@@ -95,6 +95,10 @@ inductive Claim
   | scriptureSelfConsistent
   /-- Justification is by faith alone. -/
   | justificationByFaithAlone
+  /-- Faith is sufficient: whoever believes is saved. Weaker than faith alone —
+  it says faith saves, not that nothing else is a condition — and all that Luke
+  7:50 and Peter at Jerusalem say. -/
+  | faithIsSufficient
   /-- Salvation is by grace: a gift, not wages owed. **First part of the
   conclusion.** -/
   | salvationByGrace

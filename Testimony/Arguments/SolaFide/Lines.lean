@@ -5,10 +5,12 @@ import Testimony.Bib.Works
 /-!
 # Arguments.SolaFide.Lines — the strands, and what they share
 
-Three strands deliver justification by faith alone, by different words from
-different speakers: Paul, Jesus, and Peter at Jerusalem. A fourth line answers
-James, and a fifth — the apocalyptic reading — denies what the strands
-deliver. What every package holds in
+Three strands deliver the conclusion, by different words from different
+speakers: Paul, Jesus, and Peter at Jerusalem. Each delivers only what its own
+texts say. Paul's says justification is by faith *alone*; Jesus' words at Luke
+7:50 and Peter's at Jerusalem say that faith *suffices*, which is weaker, and is
+all the conclusion's "through faith" needs. A fourth line answers James, and a
+fifth — the apocalyptic reading — denies what Paul delivers. What every package holds in
 common is collected here too, so that a variant package is a named difference
 rather than a retyped list.
 -/
@@ -19,7 +21,16 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
 /-! ### Lines of reason
 
-Three strands deliver the conclusion, and a fourth line answers James. The James
+Three strands deliver the conclusion, and a fourth line answers James. They do
+not all deliver the same thing. Paul argues for *alone*: the polemic refuses
+circumcision added to faith, and Galatians 2:16 names faith as the one means
+(ἐὰν μή, "except through faith"). Luke 7:50 and Acts 15 say that faith saves,
+and that the woman's love and the law's yoke are not what does; they do not say
+that nothing else could. So they deliver `faithIsSufficient`. The difference
+matters in a dispute, where a case is attacked on what it derives as well as on
+what it assumes: credit Luke with *alone*, and a reading that denies faith
+alone — the apocalyptic reading — attacks Luke's case on a claim Luke never
+made. The James
 harmonisation is deliberately *not* a strand: it does not reach
 `justificationByFaithAlone` by an independent route, it supplies a premise the
 closing step needs. So it contributes its grounds and its step to the case
@@ -41,27 +52,29 @@ def paulineToFaithAlone : Formula Claim :=
     , p .pistisChristouObjective, p .worksOfLawMeansWorksGenerally ]
   ➝ p .justificationByFaithAlone
 
-/-- **The dominical strand.** From Jesus' own words at Luke 7:50 to
-justification by faith alone, by way of the lexical premise about σῴζω and the
-reading of 7:47 that answers "she loved much": her love shows her forgiveness
-and does not earn it, so what Jesus names as saving her is her faith.
-Independent of Paul, and of the ἔργα νόμου dispute. -/
+/-- **The dominical strand.** From Jesus' own words at Luke 7:50 to the
+sufficiency of faith, by way of the lexical premise about σῴζω and the reading
+of 7:47 that answers "she loved much": her love shows her forgiveness and does
+not earn it, so what Jesus names as saving her is her faith. It says her faith
+saved her, and no more — not that nothing else could have. Independent of
+Paul, and of the ἔργα νόμου dispute. -/
 @[solaFideDefs]
-def dominicalToFaithAlone : Formula Claim :=
+def dominicalToSufficiency : Formula Claim :=
   ⋀ [p .luke7_50FaithHasSavedYou, p .sozoIsSoteriological, p .luke7_47LoveIsEvidence]
-    ➝ p .justificationByFaithAlone
+    ➝ p .faithIsSufficient
 
 /-- **The apostolic strand.** From Peter's speech at the Jerusalem council to
-justification by faith alone, by way of the disputed premise about the yoke.
+the sufficiency of faith, by way of the disputed premise about the yoke.
 
 The council answers the same demand Galatians answers: circumcision and the law
 of Moses as a condition of salvation (Acts 15:1, 15:5). Peter's reply names
 faith as what cleansed the gentiles' hearts and grace as how Jew and gentile
 alike are saved, and refuses the yoke. If the yoke is the whole law as a
-condition of salvation, what is left is faith, and grace. -/
+condition of salvation, the gentiles are saved without it, by faith: faith
+suffices. -/
 @[solaFideDefs]
-def apostolicToFaithAlone : Formula Claim :=
-  ⋀ [p .acts15_9_11, p .acts15YokeIsLawAsCondition] ➝ p .justificationByFaithAlone
+def apostolicToSufficiency : Formula Claim :=
+  ⋀ [p .acts15_9_11, p .acts15YokeIsLawAsCondition] ➝ p .faithIsSufficient
 
 /-- The harmonisation of James: because James's target is barren faith, and
 works are the fruit of saving faith rather than its ground, James 2:24 does not
@@ -101,11 +114,19 @@ def toNotByWorks : Formula Claim :=
     , p .james2_24Compatible, p .scriptureSelfConsistent ]
   ➝ p .salvationNotByWorks
 
-/-- *Through faith*, from justification by faith alone and Ephesians 2:8. This
-is the only part of the conclusion the three strands are needed for. -/
+/-- Faith alone is at least faith sufficient: if nothing but faith is the
+condition, faith is enough. How Paul's strand, which argues the stronger claim,
+reaches the part of the conclusion the others reach directly. -/
+@[solaFideDefs]
+def faithAloneSuffices : Formula Claim :=
+  p .justificationByFaithAlone ➝ p .faithIsSufficient
+
+/-- *Through faith*, from the sufficiency of faith and Ephesians 2:8 (διὰ
+πίστεως: faith as the means). This is the only part of the conclusion the three
+strands are needed for, and it needs only what each of them says. -/
 @[solaFideDefs]
 def toThroughFaith : Formula Claim :=
-  ⋀ [p .justificationByFaithAlone, p .ephesians2_8_9] ➝ p .salvationThroughFaith
+  ⋀ [p .faithIsSufficient, p .ephesians2_8_9] ➝ p .salvationThroughFaith
 
 /-- The Pauline line. Its grounds are the reading of Galatians as a polemic and
 the two disputed lexical premises, about ἔργα νόμου and about πίστις Χριστοῦ.
@@ -133,8 +154,8 @@ keeps the woman's love from being the ground of her forgiveness. -/
 def dominicalLine : Line Claim :=
   { name := "Dominical strand (σῴζω at Luke 7:50)"
   , grounds := [p .sozoIsSoteriological, p .luke7_47LoveIsEvidence]
-  , step := dominicalToFaithAlone
-  , delivers := p .justificationByFaithAlone }
+  , step := dominicalToSufficiency
+  , delivers := p .faithIsSufficient }
 
 /-- The apostolic line, resting on Peter as Luke reports him rather than on Paul
 or on Jesus. Its distinctive ground is the premise about the yoke.
@@ -148,8 +169,8 @@ they are two premises about two texts, and an opponent has to answer both. -/
 def apostolicLine : Line Claim :=
   { name := "Apostolic strand (Acts 15:7–11)"
   , grounds := [p .acts15YokeIsLawAsCondition]
-  , step := apostolicToFaithAlone
-  , delivers := p .justificationByFaithAlone }
+  , step := apostolicToSufficiency
+  , delivers := p .faithIsSufficient }
 
 /-- The James line: not a route to the conclusion but the answer to the one
 text that stands against it. -/
@@ -180,7 +201,7 @@ def deliveranceIsGrace : Formula Claim :=
   p .righteousnessOfGodIsDeliverance ➝ graceNotWorks
 
 /-- The apocalyptic line: a rival route from Paul, delivering the denial of
-what the two Reformed strands deliver. -/
+what the Pauline strand delivers. -/
 @[solaFideDefs]
 def apocalypticLine : Line Claim :=
   { name := "Apocalyptic reading (δικαιοσύνη θεοῦ as deliverance)"
@@ -300,9 +321,11 @@ def sharedGrounds : List (Formula Claim) :=
 def sharedGroundsWithoutJames : List (Formula Claim) :=
   prooftexts ++ [p .scriptureSelfConsistent]
 
-/-- The three steps to the three parts of the conclusion, one each. -/
+/-- The steps to the three parts of the conclusion, one each, and the step by
+which faith alone gives faith sufficient. -/
 @[solaFideDefs]
-def conclusionSteps : List (Formula Claim) := [toGrace, toNotByWorks, toThroughFaith]
+def conclusionSteps : List (Formula Claim) :=
+  [toGrace, toNotByWorks, faithAloneSuffices, toThroughFaith]
 
 /-- The steps that close the argument: the James harmonisation, then the steps
 to the parts of the conclusion. -/
