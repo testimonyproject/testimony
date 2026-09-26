@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**4 arguments**, carrying **90 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**5 arguments**, carrying **102 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -99,6 +99,23 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `johannine_strand_rests_on_believing_as_trust` | `¬Establishes thomistOnJohn` | **The Johannine strand rests on believing as trust.** Grant Aquinas every text the strand reads, and read their believing as he does — faith living through charity — and sola fide … |
 | `luther_answers_aquinas_from_galatians` | `Establishes lutherOnGalatians` | **Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants — Galatians 3:11–12, and that the law commands love — and Luther's step, and the believing of John 6:29 is … |
 | `luther_answer_rests_on_his_step` | `¬Establishes galatiansTextsAlone` | **Luther's answer rests on his step.** The texts alone do not exclude Aquinas's reading: in Aquinas's world Galatians 3:11–12 holds, the law commands love, and the believing of … |
+
+### [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
+
+| Result | Statement | What it claims |
+|---|---|---|
+| `tridentine_establishes` | `Establishes tridentine` | **Trent's reading is coherent, and it denies faith alone.** Granting every text, Trent reaches its conclusion by its reading of James 2:24. |
+| `canonical_establishes` | `Establishes canonicalCase` | **From the texts all parties accept, faith alone follows**, on one reading per corpus: Paul, Hebrews, John, Peter and Jesus' words, each delivering only what its own texts say. |
+| `canonicalWithJames_establishes` | `Establishes canonicalWithJames` | **With James, the Reformed formula follows**: justification by faith alone, by a faith that is never alone. |
+| `paul_not_load_bearing` | `Establishes withoutPaul` | **Paul's reading is not load-bearing.** Take it away and Peter and Jesus still say works are not the ground. |
+| `hebrews_not_load_bearing` | `Establishes withoutHebrews` | **Nor is Hebrews'.** John says faith is necessary too. |
+| `john_not_load_bearing` | `Establishes withoutJohn` | **Nor is John's.** Hebrews says faith is necessary, and three corpora say it is sufficient. |
+| `peter_not_load_bearing` | `Establishes withoutPeter` | **Nor is Peter's.** |
+| `jesus_not_load_bearing` | `Establishes withoutJesus` | **Nor is the reading of Jesus' words.** |
+| `hebrews_and_jesus_suffice` | `Establishes hebrewsAndJesus` | **Two corpora suffice**: Hebrews, that faith is necessary, and Jesus' words, that it is sufficient and that works are not the ground. |
+| `works_witnesses_jointly_load_bearing` | `¬Establishes withoutTheWorksWitnesses` | **To deny that works are not the ground, an opponent must reject three readings** — Paul's, Peter's and Jesus'. |
+| `necessity_witnesses_jointly_load_bearing` | `¬Establishes withoutTheNecessityWitnesses` | **To deny that faith is necessary, an opponent must reject two readings** — Hebrews' and John's. |
+| `james_demonstrative_is_load_bearing` | `¬Establishes withJamesUndemonstrated` | **The sense of "justified" in James is load-bearing** for the formula. |
 
 ### [Sola scriptura](./arguments/sola-scriptura.md)
 

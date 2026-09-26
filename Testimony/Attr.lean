@@ -83,10 +83,13 @@ register_simp_attr bornOfAVirginDefs
 /-- The definitions the born-in-Bethlehem proofs unfold. -/
 register_simp_attr bornInBethlehemDefs
 
+/-- The definitions the canonical-witness proofs unfold. -/
+register_simp_attr canonicalWitnessDefs
+
 -- `register_simp_attr` also declares a simproc set, named with a `_proc` suffix
 -- the naming linter cannot see is generated.
 attribute [nolint defsWithUnderscore] Parser.Attr.solaFideDefs_proc
   Parser.Attr.solaScripturaDefs_proc Parser.Attr.bornOfAVirginDefs_proc
-  Parser.Attr.bornInBethlehemDefs_proc
+  Parser.Attr.bornInBethlehemDefs_proc Parser.Attr.canonicalWitnessDefs_proc
 
 end Testimony

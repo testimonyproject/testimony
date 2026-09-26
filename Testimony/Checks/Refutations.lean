@@ -1,5 +1,6 @@
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin
+import Testimony.Arguments.CanonicalWitness
 import Testimony.Arguments.SolaFide
 import Testimony.Arguments.SolaScriptura
 
@@ -39,6 +40,7 @@ be left out of it. -/
 def unfoldSets : List (Name × Name) :=
   [ (`Testimony.Arguments.BornInBethlehem, `bornInBethlehemDefs)
   , (`Testimony.Arguments.BornOfAVirgin, `bornOfAVirginDefs)
+  , (`Testimony.Arguments.CanonicalWitness, `canonicalWitnessDefs)
   , (`Testimony.Arguments.SolaFide, `solaFideDefs)
   , (`Testimony.Arguments.SolaScriptura, `solaScripturaDefs) ]
 
@@ -91,7 +93,7 @@ elab "#check_refutations" : command => do
     throwError "#check_refutations found no refutation to check"
   logInfo m!"establish fails, as not Horn, on all {checked} refuted packages"
 
-/-- info: establish fails, as not Horn, on all 29 refuted packages -/
+/-- info: establish fails, as not Horn, on all 32 refuted packages -/
 #guard_msgs in
 #check_refutations
 

@@ -28,6 +28,7 @@ import Testimony.Logic.Map
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin
+import Testimony.Arguments.CanonicalWitness
 import Testimony.Arguments.SolaFide
 import Testimony.Arguments.SolaScriptura
 import Testimony.Checks.Refutations
