@@ -112,6 +112,63 @@ abbrev BecauseLink := String × String × String
 def becauseFor (links : List BecauseLink) (a b : String) : Option String :=
   (links.find? fun (h, r, _) => h == a && r == b).map (·.2.2)
 
+/-- What an edge of a dispute's graph is. A support, and each attack derived
+through support, carries whether the same pair is already a defeat. -/
+inductive EdgeKind
+  /-- The first defeats the second. -/
+  | defeat
+  /-- The first's conclusion entails a claim the second rests on. -/
+  | support (alsoDefeats : Bool)
+  /-- The first supports a party that defeats the second. -/
+  | supportedAttack (alsoDefeats : Bool)
+  /-- The first defeats a party that supports the second. -/
+  | secondaryAttack (alsoDefeats : Bool)
+
+/-- A dispute's graph, as a page shows it (`Testimony.Logic.Map`): the parties,
+numbered, and every edge between them by number. -/
+structure Graph where
+  /-- The parties, by their packages' names, in the order they are numbered. -/
+  nodes : List String
+  /-- Every edge: from, to, and what it is. -/
+  edges : List (Nat × Nat × EdgeKind)
+
+namespace Graph
+
+/-- Where party `k` of `n` sits on the unit circle, the first at the top and the
+rest clockwise: the layout both renderings draw. -/
+def position (n k : Nat) : Float × Float :=
+  let θ := 3.141592653589793 / 2 - 2 * 3.141592653589793 * k.toFloat / n.toFloat
+  (Float.cos θ, Float.sin θ)
+
+/-- What an edge is, in words, for the table. -/
+def EdgeKind.describe : EdgeKind → String
+  | .defeat => "defeats"
+  | .support d => "supports" ++ (if d then " — and defeats" else "")
+  | .supportedAttack d =>
+    "supported attack" ++ (if d then " — already a defeat" else " — not a defeat")
+  | .secondaryAttack d =>
+    "secondary attack" ++ (if d then " — already a defeat" else " — not a defeat")
+
+/-- Whether an edge is drawn: defeats and supports are; the attacks derived
+through support are listed in the table only. -/
+def EdgeKind.drawn : EdgeKind → Bool
+  | .defeat | .support _ => true
+  | _ => false
+
+/-- The derived attacks that are not already defeats. -/
+def undirected (g : Graph) : Nat :=
+  (g.edges.filter fun (_, _, k) => match k with
+    | .supportedAttack false | .secondaryAttack false => true
+    | _ => false).length
+
+/-- The pairs in which one party both supports and defeats the other. -/
+def conflicted (g : Graph) : Nat :=
+  (g.edges.filter fun (_, _, k) => match k with
+    | .support true => true
+    | _ => false).length
+
+end Graph
+
 /-- One element of a generated page.
 
 `prose` is a module docstring, lifted whole; the rest are declarations, each
@@ -141,6 +198,9 @@ inductive Item (α : Type)
   page's `Because` declarations to link its defeats to, and the theorem that
   proves the defeat table (empty if none was found). -/
   | verdict (decl doc : String) (v : Verdict) (links : List BecauseLink) (table : String)
+  /-- A dispute's graph, with the theorems proving its defeat table and its
+  support table (each empty if none was found). -/
+  | graph (decl doc : String) (g : Graph) (defeatTable supportTable : String)
 
 namespace Item
 

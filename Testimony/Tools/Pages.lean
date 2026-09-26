@@ -180,6 +180,7 @@ elab "derive_argument_bodies " tableName:ident : command => do
     -- `∀ i j, D.defeats i j ↔ …` — by the dispute it is about.
     let mut becauseLinks : Array (TSyntax `term) := #[]
     let mut tableOf : Std.HashMap Name Name := {}
+    let mut supportTableOf : Std.HashMap Name Name := {}
     for n in (declsOf.getD ns #[]) do
       let some info := env.find? n | continue
       if info.type.getAppFn.constName? == some ``Logic.Because then
@@ -189,24 +190,32 @@ elab "derive_argument_bodies " tableName:ident : command => do
         let d? ← liftTermElabM <| Meta.forallTelescope info.type fun _ body => do
           let lhs := body.getArg! 0
           if body.isAppOfArity ``Iff 2 && lhs.isAppOfArity ``Logic.Dispute.defeats 5 then
-            pure (lhs.getArg! 2).constName?
+            pure ((lhs.getArg! 2).constName?.map (·, true))
+          else if body.isAppOfArity ``Iff 2 && lhs.isAppOfArity ``Logic.Dispute.supports 5 then
+            pure ((lhs.getArg! 2).constName?.map (·, false))
+          else if body.isAppOfArity ``Not 1 && lhs.isAppOfArity ``Logic.Dispute.supports 5 then
+            pure ((lhs.getArg! 2).constName?.map (·, false))
           else pure none
-        if let some d := d? then tableOf := tableOf.insert d n
+        match d? with
+        | some (d, true) => tableOf := tableOf.insert d n
+        | some (d, false) => supportTableOf := supportTableOf.insert d n
+        | none => pure ()
 
     -- The dispute a verdict is about, followed through hearings and the
     -- abbreviations that name them, to the one whose table is proved.
-    let tableFor (ty : Expr) : String := Id.run do
+    let tableIn (tables : Std.HashMap Name Name) (ty : Expr) : String := Id.run do
       let mut e := ty.getArg! 3
       for _ in [0:8] do
         if e.isAppOf ``Logic.Dispute.restrict then e := e.getArg! 2
         else match e.constName? with
           | some c =>
-            if let some t := tableOf[c]? then return t.getString!
+            if let some t := tables[c]? then return t.getString!
             match env.find? c |>.bind (·.value?) with
             | some v => e := v
             | none => return ""
           | none => return ""
       return ""
+    let tableFor := tableIn tableOf
 
     -- The declarations: each rendered by what its type says it is.
     let mut atomTy : Option Name := none
@@ -250,6 +259,10 @@ elab "derive_argument_bodies " tableName:ident : command => do
             `(Logic.Page.Item.verdict $(quote dname) $(quote doc)
                 (Logic.Verdict.view $(mkIdent n)) [$(becauseLinks),*]
                 $(quote (tableFor info.type)))
+          else if headIs ``Logic.ArgumentMap then
+            `(Logic.Page.Item.graph $(quote dname) $(quote doc)
+                (Logic.ArgumentMap.view $(mkIdent n)) $(quote (tableFor info.type))
+                $(quote (tableIn supportTableOf info.type)))
           else if headIs ``Logic.Line then
             `(Logic.Page.Item.line $(quote dname) $(quote doc) $(mkIdent n))
           else if headIs ``Logic.Formula then

@@ -485,6 +485,68 @@ def verdict (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) 
   nested (v.reasons.map fun (d, segs) => (d, line segs)) ++
   restsOn v links table
 
+/-- A coordinate in centimetres, to two places. -/
+def cm (x : Float) : String :=
+  let v := (x * 100).round
+  let neg := v < 0
+  let n := (if neg then -v else v).toUInt64.toNat
+  (if neg then "-" else "") ++ toString (n / 100) ++ "." ++
+    (if n % 100 < 10 then "0" else "") ++ toString (n % 100)
+
+/-- A dispute's graph drawn in TikZ, on the same circle as the web page:
+defeats solid, supports dashed, each edge bent a little to its left. -/
+def graphTikz (g : Page.Graph) : String :=
+  let n := g.nodes.length
+  let radius := 3.2
+  let node (k : Nat) : String :=
+    let (x, y) := Page.Graph.position n k
+    "\\node[draw,circle,minimum size=6mm,inner sep=0pt] (n" ++ toString k ++ ") at (" ++
+      cm (radius * x) ++ "," ++ cm (radius * y) ++ ") {" ++ toString (k + 1) ++ "};\n"
+  let edge (i j : Nat) (kind : Page.EdgeKind) : String :=
+    let style := match kind with
+      | .defeat => "->,red!70!black,thick"
+      | _ => "->,green!40!black,thick,dashed"
+    "\\draw[" ++ style ++ "] (n" ++ toString i ++ ") to[bend left=10] (n" ++ toString j ++
+      ");\n"
+  "\\begin{center}\n\\begin{tikzpicture}[>={Stealth[length=2mm]}]\n" ++
+  String.join ((List.range n).map node) ++
+  String.join (g.edges.filterMap fun (i, j, k) =>
+    if Page.Graph.EdgeKind.drawn k then some (edge i j k) else none) ++
+  "\\end{tikzpicture}\n\\end{center}\n"
+
+/-- A dispute's graph: drawn, then its parties by number, then every edge in a
+table, then what the derived attacks and the conflicts come to. -/
+def graph (g : Page.Graph) (defeatTable supportTable : String) : String :=
+  let name (k : Nat) := "\\emph{" ++ escape (g.nodes.getD k "") ++ "}"
+  let ref (t fallback : String) :=
+    if t.isEmpty then fallback else "\\texttt{" ++ codeEscape t ++ "}"
+  graphTikz g ++
+  "\\noindent Solid: defeats. Dashed: supports.\n" ++
+  "\\begin{enumerate}\n" ++
+  String.join (g.nodes.map fun nm => "\\item " ++ escape nm ++ "\n") ++
+  "\\end{enumerate}\n" ++
+  "\\begin{longtable}{@{}>{\\raggedright\\arraybackslash}p{0.3\\textwidth} " ++
+    ">{\\raggedright\\arraybackslash}p{0.3\\textwidth} " ++
+    ">{\\raggedright\\arraybackslash}p{0.3\\textwidth}@{}}\n" ++
+  "\\toprule\n\\textbf{From} & \\textbf{To} & \\textbf{Edge} \\\\\n\\midrule\n\\endhead\n" ++
+  String.join (g.edges.map fun (i, j, k) =>
+    toString (i + 1) ++ " " ++ name i ++ " & " ++ toString (j + 1) ++ " " ++ name j ++ " & " ++
+    escape (Page.Graph.EdgeKind.describe k) ++ " \\\\\n") ++
+  "\\bottomrule\n\\end{longtable}\n" ++
+  "\\noindent The defeats are the cells of " ++ ref defeatTable "the defeat table" ++
+  " and the supports the cells of " ++ ref supportTable "the support table" ++
+  ", each computed from the parties' premises and checked by the kernel. " ++
+  "The attacks derived through support are reported, not counted: every verdict is " ++
+  "computed from the defeats alone. " ++
+  (match Page.Graph.undirected g with
+    | 0 => "Every derived attack is already a defeat."
+    | 1 => "One derived attack is not a defeat; the dispute leaves it open."
+    | k => toString k ++ " derived attacks are not defeats; the dispute leaves them open.") ++
+  (match Page.Graph.conflicted g with
+    | 0 => ""
+    | _ => " A party that both supports and defeats another is marked in the table.") ++
+  "\n"
+
 /-- Render one item against the document's atom ordering. -/
 def item [DecidableEq α] (order : List α) : Page.Item α → String
   | .prose md => prose md
@@ -508,6 +570,8 @@ def item [DecidableEq α] (order : List α) : Page.Item α → String
       prose doc ++ verbatim stmt
   | .because d doc e => declLabel d "" ++ prose doc ++ explanation order e
   | .verdict d doc v links table => declLabel d "" ++ prose doc ++ verdict v links table
+  | .graph d doc g defeats supports =>
+      declLabel d "" ++ prose doc ++ graph g defeats supports
 
 /-- One argument's body: its introductory prose, its legend, then every item in
 source order. The heading above it is the caller's, as the page title is in the
@@ -541,6 +605,7 @@ logical symbols the rendered statements are full of. -/
 def preamble (title : String) : String :=
   "\\documentclass[11pt]{article}\n" ++
   "\\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec}\n" ++
+  "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
   "\\usepackage[hidelinks]{hyperref}\n" ++
   "\\geometry{margin=1in}\n" ++
   -- Long unbreakable words — a cite key, a declaration name in \\texttt — would

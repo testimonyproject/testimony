@@ -330,6 +330,91 @@ def verdict (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) 
     String.join (List.replicate d "  ") ++ "- " ++ line segs ++ "\n") ++
   restsOn v links table
 
+/-- A coordinate, rounded to a whole pixel. -/
+def px (x : Float) : String := toString x.round.toUInt64.toNat
+
+/-- A dispute's graph drawn as an inline SVG: the parties numbered on a circle,
+defeats as solid arrows, supports as dashed ones. Each edge bends a little to
+its left, so a mutual defeat is two arrows rather than one line.
+
+The SVG is a raw HTML block, which Markdown passes through only up to the first
+blank line; it therefore contains none. -/
+def graphSvg (g : Page.Graph) : String :=
+  let n := g.nodes.length
+  let c := 200.0
+  let radius := 150.0
+  let node := 15.0
+  let at' (k : Nat) := let (x, y) := Page.Graph.position n k; (c + radius * x, c - radius * y)
+  let edge (i j : Nat) (kind : Page.EdgeKind) : String :=
+    let (x1, y1) := at' i
+    let (x2, y2) := at' j
+    let dx := x2 - x1
+    let dy := y2 - y1
+    let len := Float.sqrt (dx * dx + dy * dy)
+    let ux := dx / len
+    let uy := dy / len
+    let sx := x1 + ux * node
+    let sy := y1 + uy * node
+    let ex := x2 - ux * (node + 3)
+    let ey := y2 - uy * (node + 3)
+    let cx := (sx + ex) / 2 - uy * 18
+    let cy := (sy + ey) / 2 + ux * 18
+    let style := match kind with
+      | .defeat => "stroke:#b3261e;fill:none;stroke-width:1.6\" marker-end=\"url(#tm-defeat)"
+      | _ => "stroke:#2e7d32;fill:none;stroke-width:1.6;stroke-dasharray:5 3\" " ++
+          "marker-end=\"url(#tm-support)"
+    "<path d=\"M" ++ px sx ++ "," ++ px sy ++ " Q" ++ px cx ++ "," ++ px cy ++ " " ++
+      px ex ++ "," ++ px ey ++ "\" style=\"" ++ style ++ "\"/>\n"
+  let circle (k : Nat) : String :=
+    let (x, y) := at' k
+    "<circle cx=\"" ++ px x ++ "\" cy=\"" ++ px y ++ "\" r=\"" ++ px node ++
+      "\" style=\"fill:var(--bg);stroke:var(--fg);stroke-width:1.2\"/>\n" ++
+    "<text x=\"" ++ px x ++ "\" y=\"" ++ px (y + 5) ++
+      "\" text-anchor=\"middle\" style=\"fill:var(--fg);font-size:14px\">" ++
+      toString (k + 1) ++ "</text>\n"
+  let marker (id colour : String) : String :=
+    "<marker id=\"" ++ id ++ "\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" " ++
+      "markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\">" ++
+      "<path d=\"M0,0 L10,5 L0,10 z\" style=\"fill:" ++ colour ++ "\"/></marker>\n"
+  "<div class=\"argument-map\">\n" ++
+  "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 400\" width=\"400\" " ++
+    "height=\"400\" role=\"img\" aria-label=\"The dispute as a graph: parties numbered " ++
+    "as in the table below, defeats solid, supports dashed\">\n" ++
+  "<defs>\n" ++ marker "tm-defeat" "#b3261e" ++ marker "tm-support" "#2e7d32" ++ "</defs>\n" ++
+  String.join (g.edges.filterMap fun (i, j, k) =>
+    if Page.Graph.EdgeKind.drawn k then some (edge i j k) else none) ++
+  String.join ((List.range n).map circle) ++
+  "</svg>\n</div>\n\n"
+
+/-- A dispute's graph: drawn, then its parties by number, then every edge in a
+table, then what the derived attacks and the conflicts come to. -/
+def graph (g : Page.Graph) (defeatTable supportTable : String) : String :=
+  let name (k : Nat) := "*" ++ escape (g.nodes.getD k "") ++ "*"
+  let ref (t : String) (fallback : String) :=
+    if t.isEmpty then fallback else "[`" ++ t ++ "`](#" ++ t ++ ")"
+  graphSvg g ++
+  "Solid red: defeats. Dashed green: supports.\n\n" ++
+  "| # | Party |\n|---|---|\n" ++
+  String.join (g.nodes.zipIdx.map fun (nm, k) =>
+    "| " ++ toString (k + 1) ++ " | " ++ escape nm ++ " |\n") ++
+  "\n| From | To | Edge |\n|---|---|---|\n" ++
+  String.join (g.edges.map fun (i, j, k) =>
+    "| " ++ toString (i + 1) ++ " " ++ name i ++ " | " ++ toString (j + 1) ++ " " ++ name j ++
+    " | " ++ Page.Graph.EdgeKind.describe k ++ " |\n") ++
+  "\nThe defeats are the cells of " ++ ref defeatTable "the defeat table" ++
+  " and the supports the cells of " ++ ref supportTable "the support table" ++
+  ", each computed from the parties' premises and checked by the kernel. " ++
+  "The attacks derived through support are reported, not counted: every verdict is " ++
+  "computed from the defeats alone. " ++
+  (match Page.Graph.undirected g with
+    | 0 => "Every derived attack is already a defeat."
+    | 1 => "One derived attack is not a defeat; the dispute leaves it open."
+    | k => toString k ++ " derived attacks are not defeats; the dispute leaves them open.") ++
+  (match Page.Graph.conflicted g with
+    | 0 => ""
+    | _ => " A party that both supports and defeats another is marked in the table.") ++
+  "\n"
+
 /-- Render one item against the page's atom ordering. -/
 def item [DecidableEq α] (order : List α) : Item α → String
   | .prose md => demote md ++ "\n"
@@ -361,6 +446,8 @@ def item [DecidableEq α] (order : List α) : Item α → String
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ explanation order e
   | .verdict d doc v links table =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ verdict v links table
+  | .graph d doc g defeats supports =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ graph g defeats supports
 
 /-- The body of a generated page: the legend, then every item in source order.
 

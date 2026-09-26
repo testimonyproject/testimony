@@ -3,6 +3,7 @@ import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
+import Testimony.Logic.Map
 
 /-!
 # Arguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner's objection
@@ -213,6 +214,20 @@ def wegnerFinite : Solver.Finite wegnerDispute.defeats where
   complete i := by cases i <;> decide
   defeats i j := decide (wegnerPartyDefeats i j)
   spec i j := by rw [wegnerDispute_defeats]; simp
+
+/-- **Nothing supports anything** among Wegner, the fathers and the reply, in
+all nine pairs. Every cell is computed by `supports?` and checked by the
+kernel. -/
+theorem wegnerDispute_supports : ∀ i j, ¬ wegnerDispute.supports i j := by
+  intro i j
+  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> decide +kernel
+
+/-- The dispute drawn: who defeats whom. -/
+def wegnerMap : ArgumentMap wegnerDispute where
+  finite := wegnerFinite
+  supports _ _ := false
+  supports_spec i j := by simp [wegnerDispute_supports i j]
 
 /-- Why nothing prevails: a defeater for each party. -/
 def everyWegnerPartyDefeated : Verdict wegnerDispute where

@@ -3,6 +3,7 @@ import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
+import Testimony.Logic.Map
 
 /-!
 # Arguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14
@@ -482,6 +483,24 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats where
   complete i := by cases i <;> decide
   defeats i j := decide (partyDefeats i j)
   spec i j := by rw [isaiahDispute_defeats]; simp
+
+/-- **Nothing supports anything** in the Isaiah dispute, in all thirty-six pairs:
+no party's conclusion entails a claim another rests on. Several conclusions do
+entail other parties' inference steps — Berry's and Postell's entail each
+other's, by entailing the step's own conclusion, and the replies entail the
+critic's, vacuously — but a step is not a claim, and neither kind of
+entailment lends a premise (see `Testimony.Logic.Support`). Every cell is
+computed by `supports?` and checked by the kernel. -/
+theorem isaiahDispute_supports : ∀ i j, ¬ isaiahDispute.supports i j := by
+  intro i j
+  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> decide +kernel
+
+/-- The dispute drawn: who defeats whom. -/
+def isaiahMap : ArgumentMap isaiahDispute where
+  finite := isaiahFinite
+  supports _ _ := false
+  supports_spec i j := by simp [isaiahDispute_supports i j]
 
 /-- How the scriptural reading prevails, in stages: nothing attacks Postell's
 two counterexamples, so they come first; they answer the critic, the only party

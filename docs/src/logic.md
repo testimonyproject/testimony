@@ -634,6 +634,39 @@ one party is worth: take it away and see what survives. A verdict re-checks
 itself when a party is added, and a witness that no longer holds fails to
 check.
 
+**Draw the dispute.** An `ArgumentMap` (`Testimony.Logic.Map`) is the
+dispute's graph as one declaration: the defeat table the solver uses, and a
+**support** table. One party supports another when its conclusion entails a
+claim the other rests on (`Testimony.Logic.Support`). Only a claim counts, an
+atom or a denied atom, never an inference step. A conclusion can entail a step
+vacuously, by denying its antecedent. Or it can entail the step by concluding
+what the step concludes, which is agreement, not support. Both happen in the
+library's disputes. The support table is proved like the defeat table, cell by
+cell, by `supports?` and `decide +kernel`:
+
+```lean
+theorem solaFideDispute_supports :
+    ∀ i j, solaFideDispute.supports i j ↔ partySupports i j := by
+  intro i j
+  refine supports_iff_of_supports? ?_
+  cases i <;> cases j <;> decide +kernel
+
+def solaFideMap : ArgumentMap solaFideDispute where
+  finite := solaFideFinite
+  supports i j := decide (partySupports i j)
+  supports_spec i j := by rw [solaFideDispute_supports]; simp
+```
+
+The page draws the graph, lists the parties by number, and tabulates every
+edge. With the defeats and supports it lists the attacks support implies. A
+**supported attack** is one where *a* supports a party that defeats *c*. A
+**secondary attack** is one where *a* defeats a party that supports *c*. These
+are reported alongside the defeats and never added to them, so no verdict
+depends on them. Each is marked by whether it is already a defeat, and the page
+counts those that are not: questions the dispute leaves open. In sola fide, the
+variegated-nomism critics lend Paul a premise, so they stand behind two attacks
+the defeats do not contain: on Trent, and on the apocalyptic reading.
+
 **4. Say why a position stands against a rival.** A verdict says *who*
 survives; a reader also asks *why*. `Because P R` (`Testimony.Logic.Because`)
 answers for one pair, as one checked object. It names a **crux**, one of `P`'s

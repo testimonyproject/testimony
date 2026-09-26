@@ -3760,6 +3760,136 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
     spec := solaFideFinite._proof_2 }
 ```
 
+#### The dispute as a graph
+
+<a id="partySupports"></a>
+**`partySupports`**
+
+Who supports whom, as a table: one pair. The variegated-nomism critics
+conclude that Paul's ἔργα νόμου is works in general, and that is a claim
+Paul's case rests on.
+
+```lean
+def partySupports : Party → Party → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Party.critics, Party.pauline => True
+    | x, x_2 => False
+```
+
+<a id="instDecidableRelPartyPartySupports"></a>
+**`instDecidableRelPartyPartySupports`**
+
+The table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelPartyPartySupports : DecidableRel partySupports
+```
+
+<a id="solaFideDispute_supports"></a>
+**`solaFideDispute_supports`**
+
+**Who supports whom**, all sixty-four pairs: the critics support Paul, and
+nothing else supports anything. A party supports another when its conclusion
+entails a claim the other rests on; the Reformed strands, which share their
+conclusion, agree rather than support, and are not counted (see
+`Testimony.Logic.Support`). Every cell is computed by `supports?` and checked
+by the kernel.
+
+```lean
+theorem solaFideDispute_supports : ∀ (i j : Party), solaFideDispute.supports i
+    j ↔ partySupports i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="solaFideMap"></a>
+**`solaFideMap`**
+
+The dispute drawn: who defeats whom, and who supports whom.
+
+<div class="argument-map">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="The dispute as a graph: parties numbered as in the table below, defeats solid, supports dashed">
+<defs>
+<marker id="tm-defeat" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#b3261e"/></marker>
+<marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
+</defs>
+<path d="M206,64 Q236,184 299,289" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M200,65 Q182,199 200,332" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M194,64 Q131,170 101,289" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M306,109 Q288,199 306,288" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M300,108 Q237,214 207,333" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M344,214 Q312,245 313,289" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M339,211 Q263,261 213,337" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M336,194 Q230,131 111,101" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M300,292 Q270,173 207,67" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M306,291 Q324,202 306,112" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M312,292 Q344,261 343,217" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M200,335 Q218,202 200,68" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M214,344 Q259,345 289,313" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M100,292 Q163,186 193,67" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M88,292 Q89,248 57,217" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M56,214 Q55,259 87,289" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M108,100 Q214,163 333,193" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M61,189 Q137,139 187,63" style="stroke:#2e7d32;fill:none;stroke-width:1.6;stroke-dasharray:5 3" marker-end="url(#tm-support)"/>
+<circle cx="200" cy="50" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="200" y="55" text-anchor="middle" style="fill:var(--fg);font-size:14px">1</text>
+<circle cx="306" cy="94" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="306" y="99" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
+<circle cx="350" cy="200" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="350" y="205" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
+<circle cx="306" cy="306" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="306" y="311" text-anchor="middle" style="fill:var(--fg);font-size:14px">4</text>
+<circle cx="200" cy="350" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="200" y="355" text-anchor="middle" style="fill:var(--fg);font-size:14px">5</text>
+<circle cx="94" cy="306" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="94" y="311" text-anchor="middle" style="fill:var(--fg);font-size:14px">6</text>
+<circle cx="50" cy="200" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="50" y="205" text-anchor="middle" style="fill:var(--fg);font-size:14px">7</text>
+<circle cx="94" cy="94" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="94" y="99" text-anchor="middle" style="fill:var(--fg);font-size:14px">8</text>
+</svg>
+</div>
+
+Solid red: defeats. Dashed green: supports.
+
+| # | Party |
+|---|---|
+| 1 | Sola fide from Paul (Galatians 2:16) |
+| 2 | Sola fide from Jesus' words (Luke 7:50) |
+| 3 | Sola fide from Peter (Acts 15:9–11) |
+| 4 | Trent, against 'not by works' |
+| 5 | Apocalyptic reading, against faith as the condition |
+| 6 | Covenantal nomism (Sanders, Dunn) |
+| 7 | Variegated nomism (Gathercole, Carson et al.) |
+| 8 | Law-observant Luke (Jervell) |
+
+| From | To | Edge |
+|---|---|---|
+| 1 *Sola fide from Paul (Galatians 2:16)* | 4 *Trent, against 'not by works'* | defeats |
+| 1 *Sola fide from Paul (Galatians 2:16)* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
+| 1 *Sola fide from Paul (Galatians 2:16)* | 6 *Covenantal nomism (Sanders, Dunn)* | defeats |
+| 2 *Sola fide from Jesus' words (Luke 7:50)* | 4 *Trent, against 'not by works'* | defeats |
+| 2 *Sola fide from Jesus' words (Luke 7:50)* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
+| 3 *Sola fide from Peter (Acts 15:9–11)* | 4 *Trent, against 'not by works'* | defeats |
+| 3 *Sola fide from Peter (Acts 15:9–11)* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
+| 3 *Sola fide from Peter (Acts 15:9–11)* | 8 *Law-observant Luke (Jervell)* | defeats |
+| 4 *Trent, against 'not by works'* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
+| 4 *Trent, against 'not by works'* | 2 *Sola fide from Jesus' words (Luke 7:50)* | defeats |
+| 4 *Trent, against 'not by works'* | 3 *Sola fide from Peter (Acts 15:9–11)* | defeats |
+| 5 *Apocalyptic reading, against faith as the condition* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
+| 5 *Apocalyptic reading, against faith as the condition* | 4 *Trent, against 'not by works'* | defeats |
+| 6 *Covenantal nomism (Sanders, Dunn)* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
+| 6 *Covenantal nomism (Sanders, Dunn)* | 7 *Variegated nomism (Gathercole, Carson et al.)* | defeats |
+| 7 *Variegated nomism (Gathercole, Carson et al.)* | 6 *Covenantal nomism (Sanders, Dunn)* | defeats |
+| 8 *Law-observant Luke (Jervell)* | 3 *Sola fide from Peter (Acts 15:9–11)* | defeats |
+| 7 *Variegated nomism (Gathercole, Carson et al.)* | 1 *Sola fide from Paul (Galatians 2:16)* | supports |
+| 7 *Variegated nomism (Gathercole, Carson et al.)* | 4 *Trent, against 'not by works'* | supported attack — not a defeat |
+| 7 *Variegated nomism (Gathercole, Carson et al.)* | 5 *Apocalyptic reading, against faith as the condition* | supported attack — not a defeat |
+| 7 *Variegated nomism (Gathercole, Carson et al.)* | 6 *Covenantal nomism (Sanders, Dunn)* | supported attack — already a defeat |
+| 6 *Covenantal nomism (Sanders, Dunn)* | 1 *Sola fide from Paul (Galatians 2:16)* | secondary attack — already a defeat |
+
+The defeats are the cells of [`solaFideDispute_defeats`](#solaFideDispute_defeats) and the supports the cells of [`solaFideDispute_supports`](#solaFideDispute_supports), each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. 2 derived attacks are not defeats; the dispute leaves them open.
+
 #### What the dispute decides
 
 <a id="everyPartyDefeated"></a>

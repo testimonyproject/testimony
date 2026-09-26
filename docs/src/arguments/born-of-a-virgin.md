@@ -4245,6 +4245,80 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
     spec := isaiahFinite._proof_2 }
 ```
 
+<a id="isaiahDispute_supports"></a>
+**`isaiahDispute_supports`**
+
+**Nothing supports anything** in the Isaiah dispute, in all thirty-six pairs:
+no party's conclusion entails a claim another rests on. Several conclusions do
+entail other parties' inference steps — Berry's and Postell's entail each
+other's, by entailing the step's own conclusion, and the replies entail the
+critic's, vacuously — but a step is not a claim, and neither kind of
+entailment lends a premise (see `Testimony.Logic.Support`). Every cell is
+computed by `supports?` and checked by the kernel.
+
+```lean
+theorem isaiahDispute_supports : ∀ (i j : Party), ¬isaiahDispute.supports i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="isaiahMap"></a>
+**`isaiahMap`**
+
+The dispute drawn: who defeats whom.
+
+<div class="argument-map">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="The dispute as a graph: parties numbered as in the table below, defeats solid, supports dashed">
+<defs>
+<marker id="tm-defeat" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#b3261e"/></marker>
+<marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
+</defs>
+<path d="M213,58 Q255,102 314,116" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M317,118 Q275,73 216,59" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M330,140 Q312,199 330,257" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M317,133 Q192,184 86,266" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M330,260 Q348,202 330,143" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M208,337 Q280,248 321,141" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M83,268 Q208,216 314,134" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M85,125 Q199,143 312,125" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<circle cx="200" cy="50" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="200" y="55" text-anchor="middle" style="fill:var(--fg);font-size:14px">1</text>
+<circle cx="330" cy="125" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="330" y="130" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
+<circle cx="330" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="330" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
+<circle cx="200" cy="350" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="200" y="355" text-anchor="middle" style="fill:var(--fg);font-size:14px">4</text>
+<circle cx="70" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="70" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">5</text>
+<circle cx="70" cy="125" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="70" y="130" text-anchor="middle" style="fill:var(--fg);font-size:14px">6</text>
+</svg>
+</div>
+
+Solid red: defeats. Dashed green: supports.
+
+| # | Party |
+|---|---|
+| 1 | Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3 |
+| 2 | Critical denial of the predictive reading of Isaiah 7:14 |
+| 3 | Berry's objection to the near-term exclusion |
+| 4 | Postell's parity argument against the near-term exclusion |
+| 5 | Motyer's reply to the near-term reading |
+| 6 | Postell's Micah counterexample to the near-term exclusion |
+
+| From | To | Edge |
+|---|---|---|
+| 1 *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
+| 2 *Critical denial of the predictive reading of Isaiah 7:14* | 1 *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* | defeats |
+| 2 *Critical denial of the predictive reading of Isaiah 7:14* | 3 *Berry's objection to the near-term exclusion* | defeats |
+| 2 *Critical denial of the predictive reading of Isaiah 7:14* | 5 *Motyer's reply to the near-term reading* | defeats |
+| 3 *Berry's objection to the near-term exclusion* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
+| 4 *Postell's parity argument against the near-term exclusion* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
+| 5 *Motyer's reply to the near-term reading* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
+| 6 *Postell's Micah counterexample to the near-term exclusion* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
+
+The defeats are the cells of [`isaiahDispute_defeats`](#isaiahDispute_defeats) and the supports the cells of [`isaiahDispute_supports`](#isaiahDispute_supports), each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
 <a id="repliesHeardInStages"></a>
 **`repliesHeardInStages`**
 
@@ -4955,6 +5029,60 @@ def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
       decide (wegnerPartyDefeats i j),
     spec := wegnerFinite._proof_2 }
 ```
+
+<a id="wegnerDispute_supports"></a>
+**`wegnerDispute_supports`**
+
+**Nothing supports anything** among Wegner, the fathers and the reply, in
+all nine pairs. Every cell is computed by `supports?` and checked by the
+kernel.
+
+```lean
+theorem wegnerDispute_supports : ∀ (i j : WegnerParty),
+    ¬wegnerDispute.supports i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wegnerMap"></a>
+**`wegnerMap`**
+
+The dispute drawn: who defeats whom.
+
+<div class="argument-map">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="The dispute as a graph: parties numbered as in the table below, defeats solid, supports dashed">
+<defs>
+<marker id="tm-defeat" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#b3261e"/></marker>
+<marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
+</defs>
+<path d="M208,63 Q249,170 321,259" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M322,262 Q281,155 209,66" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M315,275 Q202,257 88,275" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M85,275 Q199,293 312,275" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<circle cx="200" cy="50" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="200" y="55" text-anchor="middle" style="fill:var(--fg);font-size:14px">1</text>
+<circle cx="330" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="330" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
+<circle cx="70" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="70" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
+</svg>
+</div>
+
+Solid red: defeats. Dashed green: supports.
+
+| # | Party |
+|---|---|
+| 1 | Wegner's grammatical objection: the עַלְמָה is already pregnant |
+| 2 | The fathers' sign argument (Isaiah 7:11, 14) |
+| 3 | The near-term reply: a sign need not be a miracle |
+
+| From | To | Edge |
+|---|---|---|
+| 1 *Wegner's grammatical objection: the עַלְמָה is already pregnant* | 2 *The fathers' sign argument (Isaiah 7:11, 14)* | defeats |
+| 2 *The fathers' sign argument (Isaiah 7:11, 14)* | 1 *Wegner's grammatical objection: the עַלְמָה is already pregnant* | defeats |
+| 2 *The fathers' sign argument (Isaiah 7:11, 14)* | 3 *The near-term reply: a sign need not be a miracle* | defeats |
+| 3 *The near-term reply: a sign need not be a miracle* | 2 *The fathers' sign argument (Isaiah 7:11, 14)* | defeats |
+
+The defeats are the cells of [`wegnerDispute_defeats`](#wegnerDispute_defeats) and the supports the cells of [`wegnerDispute_supports`](#wegnerDispute_supports), each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 
 <a id="everyWegnerPartyDefeated"></a>
 **`everyWegnerPartyDefeated`**

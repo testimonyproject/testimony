@@ -3,6 +3,7 @@ import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
+import Testimony.Logic.Map
 import Testimony.Logic.Because
 
 /-!
@@ -725,6 +726,37 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats where
   complete i := by cases i <;> decide
   defeats i j := decide (partyDefeats i j)
   spec i j := by rw [solaFideDispute_defeats]; simp
+
+/-! ### The dispute as a graph -/
+
+/-- Who supports whom, as a table: one pair. The variegated-nomism critics
+conclude that Paul's ἔργα νόμου is works in general, and that is a claim
+Paul's case rests on. -/
+def partySupports : Party → Party → Prop
+  | .critics, .pauline => True
+  | _, _ => False
+
+/-- The table is finite, so membership in it is decidable. -/
+instance : DecidableRel partySupports := fun i j => by
+  cases i <;> cases j <;> unfold partySupports <;> infer_instance
+
+/-- **Who supports whom**, all sixty-four pairs: the critics support Paul, and
+nothing else supports anything. A party supports another when its conclusion
+entails a claim the other rests on; the Reformed strands, which share their
+conclusion, agree rather than support, and are not counted (see
+`Testimony.Logic.Support`). Every cell is computed by `supports?` and checked
+by the kernel. -/
+theorem solaFideDispute_supports :
+    ∀ i j, solaFideDispute.supports i j ↔ partySupports i j := by
+  intro i j
+  refine supports_iff_of_supports? ?_
+  cases i <;> cases j <;> decide +kernel
+
+/-- The dispute drawn: who defeats whom, and who supports whom. -/
+def solaFideMap : ArgumentMap solaFideDispute where
+  finite := solaFideFinite
+  supports i j := decide (partySupports i j)
+  supports_spec i j := by rw [solaFideDispute_supports]; simp
 
 /-! ### What the dispute decides -/
 

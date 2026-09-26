@@ -1,5 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec}
+\usepackage{tikz}\usetikzlibrary{arrows.meta}
 \usepackage[hidelinks]{hyperref}
 \geometry{margin=1in}
 \setlength{\emergencystretch}{3em}
@@ -2673,6 +2674,59 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
     defeats := fun i j => decide (partyDefeats i j),
     spec := isaiahFinite._proof_2 }
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
+\textbf{Nothing supports anything} in the Isaiah dispute, in all thirty-six pairs: no party's conclusion entails a claim another rests on. Several conclusions do entail other parties' inference steps — Berry's and Postell's entail each other's, by entailing the step's own conclusion, and the replies entail the critic's, vacuously — but a step is not a claim, and neither kind of entailment lends a premise (see \texttt{Testimony.Logic.Support}). Every cell is computed by \texttt{supports?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem isaiahDispute_supports : ∀ (i j : Party), ¬isaiahDispute.supports i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Map}}\par\nobreak\noindent
+The dispute drawn: who defeats whom.
+
+\begin{center}
+\begin{tikzpicture}[>={Stealth[length=2mm]}]
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n0) at (0.00,3.20) {1};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n1) at (2.77,1.60) {2};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n2) at (2.77,-1.60) {3};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n3) at (0.00,-3.20) {4};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n4) at (-2.77,-1.60) {5};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n5) at (-2.77,1.60) {6};
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n2);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n4) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n5) to[bend left=10] (n1);
+\end{tikzpicture}
+\end{center}
+\noindent Solid: defeats. Dashed: supports.
+\begin{enumerate}
+\item Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3
+\item Critical denial of the predictive reading of Isaiah 7:14
+\item Berry's objection to the near-term exclusion
+\item Postell's parity argument against the near-term exclusion
+\item Motyer's reply to the near-term reading
+\item Postell's Micah counterexample to the near-term exclusion
+\end{enumerate}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth}@{}}
+\toprule
+\textbf{From} & \textbf{To} & \textbf{Edge} \\
+\midrule
+\endhead
+1 \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & 1 \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} & defeats \\
+2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & 3 \emph{Berry's objection to the near-term exclusion} & defeats \\
+2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & 5 \emph{Motyer's reply to the near-term reading} & defeats \\
+3 \emph{Berry's objection to the near-term exclusion} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+4 \emph{Postell's parity argument against the near-term exclusion} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+5 \emph{Motyer's reply to the near-term reading} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+6 \emph{Postell's Micah counterexample to the near-term exclusion} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+\bottomrule
+\end{longtable}
+\noindent The defeats are the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats} and the supports the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}supports}, each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 \par\medskip\noindent\textbf{\texttt{replies\allowbreak{}Heard\allowbreak{}In\allowbreak{}Stages}}\par\nobreak\noindent
 How the scriptural reading prevails, in stages: nothing attacks Postell's two counterexamples, so they come first; they answer the critic, the only party that attacks the scriptural reading, Berry and Motyer, so those three come next. And the critic does not join them: the scriptural reading attacks it, and nothing among the five answers the scriptural reading.
 
@@ -3276,6 +3330,46 @@ def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
       decide (wegnerPartyDefeats i j),
     spec := wegnerFinite._proof_2 }
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
+\textbf{Nothing supports anything} among Wegner, the fathers and the reply, in all nine pairs. Every cell is computed by \texttt{supports?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem wegnerDispute_supports : ∀ (i j : WegnerParty),
+    ¬wegnerDispute.supports i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Map}}\par\nobreak\noindent
+The dispute drawn: who defeats whom.
+
+\begin{center}
+\begin{tikzpicture}[>={Stealth[length=2mm]}]
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n0) at (0.00,3.20) {1};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n1) at (2.77,-1.60) {2};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n2) at (-2.77,-1.60) {3};
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n2);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n1);
+\end{tikzpicture}
+\end{center}
+\noindent Solid: defeats. Dashed: supports.
+\begin{enumerate}
+\item Wegner's grammatical objection: the עַלְמָה is already pregnant
+\item The fathers' sign argument (Isaiah 7:11, 14)
+\item The near-term reply: a sign need not be a miracle
+\end{enumerate}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth}@{}}
+\toprule
+\textbf{From} & \textbf{To} & \textbf{Edge} \\
+\midrule
+\endhead
+1 \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} & 2 \emph{The fathers' sign argument (Isaiah 7:11, 14)} & defeats \\
+2 \emph{The fathers' sign argument (Isaiah 7:11, 14)} & 1 \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} & defeats \\
+2 \emph{The fathers' sign argument (Isaiah 7:11, 14)} & 3 \emph{The near-term reply: a sign need not be a miracle} & defeats \\
+3 \emph{The near-term reply: a sign need not be a miracle} & 2 \emph{The fathers' sign argument (Isaiah 7:11, 14)} & defeats \\
+\bottomrule
+\end{longtable}
+\noindent The defeats are the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats} and the supports the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}supports}, each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 \par\medskip\noindent\textbf{\texttt{every\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
 Why nothing prevails: a defeater for each party.
 
@@ -5788,6 +5882,106 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
     defeats := fun i j => decide (partyDefeats i j),
     spec := solaFideFinite._proof_2 }
 \end{verbatim}}
+\paragraph*{The dispute as a graph}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Supports}}\par\nobreak\noindent
+Who supports whom, as a table: one pair. The variegated-nomism critics conclude that Paul's ἔργα νόμου is works in general, and that is a claim Paul's case rests on.
+
+{\small\begin{verbatim}
+def partySupports : Party → Party → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Party.critics, Party.pauline => True
+    | x, x_2 => False
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Supports}}\par\nobreak\noindent
+The table is finite, so membership in it is decidable.
+
+{\small\begin{verbatim}
+def instDecidableRelPartyPartySupports : DecidableRel partySupports
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
+\textbf{Who supports whom}, all sixty-four pairs: the critics support Paul, and nothing else supports anything. A party supports another when its conclusion entails a claim the other rests on; the Reformed strands, which share their conclusion, agree rather than support, and are not counted (see \texttt{Testimony.Logic.Support}). Every cell is computed by \texttt{supports?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem solaFideDispute_supports : ∀ (i j : Party), solaFideDispute.supports i
+    j ↔ partySupports i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Map}}\par\nobreak\noindent
+The dispute drawn: who defeats whom, and who supports whom.
+
+\begin{center}
+\begin{tikzpicture}[>={Stealth[length=2mm]}]
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n0) at (0.00,3.20) {1};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n1) at (2.26,2.26) {2};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n2) at (3.20,0.00) {3};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n3) at (2.26,-2.26) {4};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n4) at (0.00,-3.20) {5};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n5) at (-2.26,-2.26) {6};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n6) at (-3.20,0.00) {7};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n7) at (-2.26,2.26) {8};
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n5);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n7);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n2);
+\draw[->,red!70!black,thick] (n4) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n4) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n5) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n5) to[bend left=10] (n6);
+\draw[->,red!70!black,thick] (n6) to[bend left=10] (n5);
+\draw[->,red!70!black,thick] (n7) to[bend left=10] (n2);
+\draw[->,green!40!black,thick,dashed] (n6) to[bend left=10] (n0);
+\end{tikzpicture}
+\end{center}
+\noindent Solid: defeats. Dashed: supports.
+\begin{enumerate}
+\item Sola fide from Paul (Galatians 2:16)
+\item Sola fide from Jesus' words (Luke 7:50)
+\item Sola fide from Peter (Acts 15:9–11)
+\item Trent, against 'not by works'
+\item Apocalyptic reading, against faith as the condition
+\item Covenantal nomism (Sanders, Dunn)
+\item Variegated nomism (Gathercole, Carson et al.)
+\item Law-observant Luke (Jervell)
+\end{enumerate}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth}@{}}
+\toprule
+\textbf{From} & \textbf{To} & \textbf{Edge} \\
+\midrule
+\endhead
+1 \emph{Sola fide from Paul (Galatians 2:16)} & 4 \emph{Trent, against 'not by works'} & defeats \\
+1 \emph{Sola fide from Paul (Galatians 2:16)} & 5 \emph{Apocalyptic reading, against faith as the condition} & defeats \\
+1 \emph{Sola fide from Paul (Galatians 2:16)} & 6 \emph{Covenantal nomism (Sanders, Dunn)} & defeats \\
+2 \emph{Sola fide from Jesus' words (Luke 7:50)} & 4 \emph{Trent, against 'not by works'} & defeats \\
+2 \emph{Sola fide from Jesus' words (Luke 7:50)} & 5 \emph{Apocalyptic reading, against faith as the condition} & defeats \\
+3 \emph{Sola fide from Peter (Acts 15:9–11)} & 4 \emph{Trent, against 'not by works'} & defeats \\
+3 \emph{Sola fide from Peter (Acts 15:9–11)} & 5 \emph{Apocalyptic reading, against faith as the condition} & defeats \\
+3 \emph{Sola fide from Peter (Acts 15:9–11)} & 8 \emph{Law-observant Luke (Jervell)} & defeats \\
+4 \emph{Trent, against 'not by works'} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & defeats \\
+4 \emph{Trent, against 'not by works'} & 2 \emph{Sola fide from Jesus' words (Luke 7:50)} & defeats \\
+4 \emph{Trent, against 'not by works'} & 3 \emph{Sola fide from Peter (Acts 15:9–11)} & defeats \\
+5 \emph{Apocalyptic reading, against faith as the condition} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & defeats \\
+5 \emph{Apocalyptic reading, against faith as the condition} & 4 \emph{Trent, against 'not by works'} & defeats \\
+6 \emph{Covenantal nomism (Sanders, Dunn)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & defeats \\
+6 \emph{Covenantal nomism (Sanders, Dunn)} & 7 \emph{Variegated nomism (Gathercole, Carson et al.)} & defeats \\
+7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 6 \emph{Covenantal nomism (Sanders, Dunn)} & defeats \\
+8 \emph{Law-observant Luke (Jervell)} & 3 \emph{Sola fide from Peter (Acts 15:9–11)} & defeats \\
+7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & supports \\
+7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 4 \emph{Trent, against 'not by works'} & supported attack — not a defeat \\
+7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 5 \emph{Apocalyptic reading, against faith as the condition} & supported attack — not a defeat \\
+7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 6 \emph{Covenantal nomism (Sanders, Dunn)} & supported attack — already a defeat \\
+6 \emph{Covenantal nomism (Sanders, Dunn)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & secondary attack — already a defeat \\
+\bottomrule
+\end{longtable}
+\noindent The defeats are the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats} and the supports the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports}, each computed from the parties' premises and checked by the kernel. The attacks derived through support are reported, not counted: every verdict is computed from the defeats alone. 2 derived attacks are not defeats; the dispute leaves them open.
 \paragraph*{What the dispute decides}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{every\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
