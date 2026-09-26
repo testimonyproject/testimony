@@ -278,6 +278,25 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
         confidence s.confidence ++ "*: " ++ source s) ++
       (if e.inferences.isEmpty then "unrated*" else "")) ++ "\n"
 
+/-- What an opponent must reject: every minimal set of readings whose
+rejection overturns the case, each reading with its rating, and the readings no
+set needs. -/
+def burden (b : Page.Burden) : String :=
+  let reading (i : Nat) : String := match b.readings[i]? with
+    | some (n, some s) => "*" ++ escape n ++ "* (" ++ confidence s.confidence ++ ")"
+    | some (n, none) => "*" ++ escape n ++ "* (unrated)"
+    | none => "reading " ++ toString i
+  let spare := b.spare
+  "**What an opponent must reject.** *" ++ escape b.holder ++ "* concludes that " ++
+    escape b.conclusion ++ ". That conclusion is overturned exactly when every " ++
+    "reading in one of these sets is rejected. Each set is minimal, and no other " ++
+    "rejection overturns it:\n\n" ++
+  String.join (b.sets.zipIdx.map fun (S, k) =>
+    toString (k + 1) ++ ". " ++ String.intercalate "; " (S.map reading) ++ "\n") ++
+  (if spare.isEmpty then "" else
+    "\nNo set contains " ++ String.intercalate ", " (spare.map fun n => "*" ++ escape n ++ "*") ++
+    ": an opponent never needs to reject it.\n")
+
 /-- One piece of a generated sentence. A defeat that a `Because` on the page
 explains links its verb to it. -/
 def seg (links : List Page.BecauseLink) : Page.Seg → String
@@ -449,6 +468,8 @@ def item [DecidableEq α] (order : List α) : Item α → String
       leanBlock stmt
   | .because d doc e =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ explanation order e
+  | .burden d doc stmt b =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock stmt ++ "\n" ++ burden b
   | .verdict d doc v links table =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ verdict v links table
   | .graph d doc g defeats supports parts =>

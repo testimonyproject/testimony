@@ -1202,6 +1202,21 @@ revised edition; this is the one it ties to the series. -/
   , edition := some "revised"
   , series := some "New International Commentary on the New Testament" }
 
+/-- Bruce on Hebrews, cited for 10:38–39 and 11:6: faith as what the righteous
+live by, and without which no one pleases God. The catalogue lists the revised
+edition under ISBN-10 0802825141. -/
+@[bib_entry] def bruceHebrews : BibEntry := .book
+  { core :=
+      { key := "bruce-hebrews-1990"
+      , contributors := { authors := [.person "F. F." "Bruce"] }
+      , title := "The Epistle to the Hebrews"
+      , year := some { value := 1990 }
+      , identifiers := [.isbn "9780802825148"] }
+  , publisher := "Eerdmans"
+  , place := some "Grand Rapids"
+  , edition := some "revised"
+  , series := some "New International Commentary on the New Testament" }
+
 /-- Jervell's reading of Luke-Acts: Luke presents the church as the restored
 Israel, and the law as still in force for Jewish believers. On that reading
 Acts 15 refuses to lay Israel's law on gentiles as a mark of belonging, and

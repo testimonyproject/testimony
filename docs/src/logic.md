@@ -288,7 +288,7 @@ step, then the steps that close the argument. Grounds before steps, so that the
 material the case rests on comes first and the inferences that move it come
 last.
 
-This buys three things.
+This buys four things.
 
 **Variants become differences.** "The scriptural reading minus the lexical
 premise" is one line with one ground dropped, written as
@@ -303,6 +303,49 @@ variant, so this is most of what the packages do.
 **A large argument survives being split.** Because the strands are values, they
 can live in their own module: over about five hundred lines an argument becomes
 a directory of `Atoms`, `Sources`, `Lines`, `Packages` and `Results`.
+
+**Independent lines matter without being counted.** A case on three lines is
+not three times as strong, and the library never says it is: three citations
+of one premise are one premise, and a tally of allies is a popularity axis. What
+independent lines change is what an opponent has to give up. `OpponentsBurden`
+(`Testimony.Logic.Burden`) states it: the minimal sets of *readings* — line
+steps, with every line's grounds still granted — whose rejection overturns the
+case. It proves three things of the list, each decided by the engine and
+checked by the kernel:
+
+- each set overturns the case: reject its readings and the conclusion fails;
+- each set is minimal: keep any one of its readings and the conclusion holds;
+- there is no other way: every rejection that overturns the case contains one
+  of the listed sets.
+
+The last is what makes it a burden rather than a selection. It is checked over
+every subset of the readings, which is exponential in the number of *lines* — a
+handful — and never in the number of atoms.
+
+**Name the burdens, too.** The certificate is for the logician; the reader of
+the page is a theologian, who learns from "Paul's reading is not load-bearing"
+stated as a result of its own, with a package they can read. So an argument
+keeps its specific burdens as named variants, built with
+`ArgumentPackage.rejecting` — the operation the certificate quantifies over —
+and proves each from the certificate:
+
+- `establishes_rejecting`: a named variant that leaves a reading of every set
+  standing still holds (`paul_not_load_bearing`);
+- `not_establishes_rejecting`, or `refute_with` and a named countermodel: a
+  named variant that rejects a whole set fails
+  (`works_witnesses_jointly_load_bearing`, where the countermodel is the world
+  that opponent stands in);
+- `rejecting_satisfiable`: every named variant has a model.
+
+A named burden is then an instance of the computed one and cannot drift from
+it, and the computed one guarantees that the named ones are not a flattering
+selection. Name the readings too (`Reading.paul`), so the certificate's
+statement reads as the corpora it concerns, and check each name against its
+line. The page renders the sets with each reading's rating, so a reader sees at
+once when overturning a case means rejecting a reading its rival itself makes.
+`CanonicalWitness` is the worked example: `canonical_burden` finds exactly two
+ways to overturn faith alone, and one of them runs through a reading Trent
+affirms.
 
 ## Sharing scripture between arguments
 

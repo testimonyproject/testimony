@@ -189,18 +189,19 @@ elab "derive_argument_bodies " tableName:ident : command => do
           (Logic.Because.view $(mkIdent n)).rival, $(quote n.getString!))))
       if info matches .thmInfo _ then
         -- Which table a theorem proves, if any: 0 defeats, 1 supports, 2 part-of.
+        -- Arities are checked before any argument is read: `getArg!` past the
+        -- end panics, and a panic here does not fail the build.
         let d? ← liftTermElabM <| Meta.forallTelescope info.type fun _ body => do
+          let isIff := body.isAppOfArity ``Iff 2
+          unless isIff || body.isAppOfArity ``Not 1 do return none
           let lhs := body.getArg! 0
           let rel (c : Name) := lhs.isAppOfArity c 5
-          let dispute := (lhs.getArg! 2).constName?
-          if body.isAppOfArity ``Iff 2 && rel ``Logic.Dispute.defeats then
-            pure (dispute.map (·, 0))
-          else if (body.isAppOfArity ``Iff 2 || body.isAppOfArity ``Not 1) &&
-              rel ``Logic.Dispute.supports then
-            pure (dispute.map (·, 1))
-          else if body.isAppOfArity ``Iff 2 && rel ``Logic.Dispute.partOf then
-            pure (dispute.map (·, 2))
-          else pure none
+          let kind? : Option Nat :=
+            if isIff && rel ``Logic.Dispute.defeats then some 0
+            else if rel ``Logic.Dispute.supports then some 1
+            else if isIff && rel ``Logic.Dispute.partOf then some 2
+            else none
+          pure <| kind?.bind fun k => (lhs.getArg! 2).constName?.map (·, k)
         match d? with
         | some (d, 0) => tableOf := tableOf.insert d n
         | some (d, 1) => supportTableOf := supportTableOf.insert d n
@@ -249,9 +250,13 @@ elab "derive_argument_bodies " tableName:ident : command => do
               if axioms.isEmpty then "-- axioms: none beyond Lean's own"
               else "-- axioms: " ++ String.intercalate ", " (axioms.toList.map toString)
             let shown := wrapStatement ("theorem " ++ dname ++ " : " ++ stmt)
-            `(Logic.Page.Item.result $(quote dname) $(quote doc)
-                $(quote (shown ++ "\n" ++ note))
-                $(quote (proposedAttr.hasTag env n)))
+            if headIs ``Logic.OpponentsBurden then
+              `(Logic.Page.Item.burden $(quote dname) $(quote doc)
+                  $(quote (shown ++ "\n" ++ note)) (Logic.OpponentsBurden.view $(mkIdent n)))
+            else
+              `(Logic.Page.Item.result $(quote dname) $(quote doc)
+                  $(quote (shown ++ "\n" ++ note))
+                  $(quote (proposedAttr.hasTag env n)))
           else if headIs ``Logic.ArgumentPackage then do
             if atomTy.isNone then
               atomTy := match info.type.getAppArgs[0]? with

@@ -22,6 +22,7 @@
 - [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 - [Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3](./arguments/born-of-a-virgin.md)
 - [Sola fide](./arguments/sola-fide.md)
+- [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 - [Sola scriptura](./arguments/sola-scriptura.md)
 
 <!-- END GENERATED: lake exe argdoc -->
