@@ -1,5 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec}
+\usepackage{tikz}\usetikzlibrary{arrows.meta}
 \usepackage[hidelinks]{hyperref}
 \geometry{margin=1in}
 \setlength{\emergencystretch}{3em}
@@ -2673,24 +2674,128 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
     defeats := fun i j => decide (partyDefeats i j),
     spec := isaiahFinite._proof_2 }
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
+\textbf{Nothing supports anything} in the Isaiah dispute, in all thirty-six pairs: no party's conclusion entails a claim another rests on. Several conclusions do entail other parties' inference steps — Berry's and Postell's entail each other's, by entailing the step's own conclusion, and the replies entail the critic's, vacuously — but a step is not a claim, and neither kind of entailment lends a premise (see \texttt{Testimony.Logic.Support}). Every cell is computed by \texttt{supports?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem isaiahDispute_supports : ∀ (i j : Party), ¬isaiahDispute.supports i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
+\textbf{No case is part of another's} here, in all thirty-six pairs, except each party's own. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem isaiahDispute_partOf : ∀ (i j : Party), isaiahDispute.partOf i j ↔ i =
+    j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Map}}\par\nobreak\noindent
+The dispute drawn: who defeats whom.
+
+\begin{center}
+\begin{tikzpicture}[>={Stealth[length=2mm]}]
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n0) at (0.00,3.20) {1};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n1) at (2.77,1.60) {2};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n2) at (2.77,-1.60) {3};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n3) at (0.00,-3.20) {4};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n4) at (-2.77,-1.60) {5};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n5) at (-2.77,1.60) {6};
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n2);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n4) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n5) to[bend left=10] (n1);
+\end{tikzpicture}
+\end{center}
+\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of another's.
+\begin{enumerate}
+\item Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3
+\item Critical denial of the predictive reading of Isaiah 7:14
+\item Berry's objection to the near-term exclusion
+\item Postell's parity argument against the near-term exclusion
+\item Motyer's reply to the near-term reading
+\item Postell's Micah counterexample to the near-term exclusion
+\end{enumerate}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth}@{}}
+\toprule
+\textbf{From} & \textbf{To} & \textbf{Edge} \\
+\midrule
+\endhead
+1 \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & 1 \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} & defeats \\
+2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & 3 \emph{Berry's objection to the near-term exclusion} & defeats \\
+2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & 5 \emph{Motyer's reply to the near-term reading} & defeats \\
+3 \emph{Berry's objection to the near-term exclusion} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+4 \emph{Postell's parity argument against the near-term exclusion} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+5 \emph{Motyer's reply to the near-term reading} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+6 \emph{Postell's Micah counterexample to the near-term exclusion} & 2 \emph{Critical denial of the predictive reading of Isaiah 7:14} & defeats \\
+\bottomrule
+\end{longtable}
+\noindent The defeats are the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 \par\medskip\noindent\textbf{\texttt{replies\allowbreak{}Heard\allowbreak{}In\allowbreak{}Stages}}\par\nobreak\noindent
-How the scriptural reading prevails, in stages: nothing attacks Postell's two counterexamples, so they come first; they answer the critic, the only party that attacks the scriptural reading, Berry and Motyer, so those three come next.
+How the scriptural reading prevails, in stages: nothing attacks Postell's two counterexamples, so they come first; they answer the critic, the only party that attacks the scriptural reading, Berry and Motyer, so those three come next. And the critic does not join them: the scriptural reading attacks it, and nothing among the five answers the scriptural reading.
 
-{\small\begin{verbatim}
-def repliesHeardInStages : List (List Party) :=
-  [[Party.postell, Party.micah],
-    [Party.scriptural,
-      Party.berry,
-      Party.motyer]]
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{critic\allowbreak{}Left\allowbreak{}Unanswered}}\par\nobreak\noindent
-And why the critic does not join them: the scriptural reading attacks it, and nothing among the five answers the scriptural reading.
-
-{\small\begin{verbatim}
-def criticLeftUnanswered : Witness.Table Party :=
-  [(Party.critical,
-      Party.scriptural)]
-\end{verbatim}}
+\paragraph{What the dispute forces is exactly \emph{Postell's parity argument against the near-term exclusion}, \emph{Postell's Micah counterexample to the near-term exclusion}, \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, \emph{Berry's objection to the near-term exclusion}, \emph{Motyer's reply to the near-term reading}.}
+\begin{itemize}
+\item Stage 1: \emph{Postell's parity argument against the near-term exclusion}, \emph{Postell's Micah counterexample to the near-term exclusion}.
+\begin{itemize}
+\item \emph{Postell's parity argument against the near-term exclusion} is defeated by nothing.
+\item \emph{Postell's Micah counterexample to the near-term exclusion} is defeated by nothing.
+\end{itemize}
+\item Stage 2: \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, \emph{Berry's objection to the near-term exclusion}, \emph{Motyer's reply to the near-term reading}.
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, and \emph{Postell's parity argument against the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Berry's objection to the near-term exclusion}, and \emph{Postell's parity argument against the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Motyer's reply to the near-term reading}, and \emph{Postell's parity argument against the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\end{itemize}
+\item Nothing else is forced:
+\begin{itemize}
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}, and nothing forced defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 5 defeats and 27 absences of defeat, each a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a Messianic prediction of a virgin birth --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[123]{motyer-context-content-1970}; \cite[12--14]{compton-immanuel-prophecy-2007}; \cite[66]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[I.35]{origen-against-celsus-248}
+\item עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[app. Isa 7:14]{bhs-1997}; \cite[1653--1654]{berry-virgin-birth-2003}; \cite[125]{motyer-context-content-1970}; \cite[7--8]{compton-immanuel-prophecy-2007}; \cite[I.32]{jerome-against-jovinianus-393}
+\item Genesis 3:15 is the protoevangelium, the first promise of a redeemer --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Hebrew זֶרַע is ordinarily reckoned through the father --- \cite[9--10]{miravalle-meet-mary-2007}; \cite[app. Gen 3:15]{bhs-1997}
+\item The matrilineal wording of Genesis 3:15 marks a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Micah's mention of a mother and no father indicates a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item An oracle's meaning in the finished book is set by its literary placement --- \cite[483--486]{postell-isaiah-messianic-2025}
+\item Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item Mary conceived Jesus while a virgin --- Matt 1:18-25; Luke 1:26-38; \cite[30--33]{brown-problem-virginal-conception-1972}
+\item an inference step --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}
+\item an inference step --- \cite[9--10]{miravalle-meet-mary-2007}
+\item an inference step --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item an inference step --- \cite[ad loc. Matt 1:23]{france-matthew-2007}
+\end{itemize}
+\item \emph{Postell's parity argument against the near-term exclusion}, weakest at \emph{plausible}:
+\begin{itemize}
+\item an inference step --- \cite[487--489]{postell-isaiah-messianic-2025}
+\end{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item A sign given for Ahaz's generation is not also a prediction of a virgin birth --- \cite{brown-birth-messiah-1993}
+\end{itemize}
+\item \emph{Berry's objection to the near-term exclusion}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[1653--1654]{berry-virgin-birth-2003}; \cite[5]{compton-immanuel-prophecy-2007}
+\end{itemize}
+\item \emph{Motyer's reply to the near-term reading}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[124]{motyer-context-content-1970}; \cite[5]{compton-immanuel-prophecy-2007}
+\end{itemize}
+\item \emph{Postell's Micah counterexample to the near-term exclusion}, weakest at \emph{plausible}:
+\begin{itemize}
+\item an inference step --- \cite[481]{postell-isaiah-messianic-2025}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}prevails\_\allowbreak{}once\_\allowbreak{}replies\_\allowbreak{}are\_\allowbreak{}heard}}\par\nobreak\noindent
 \textbf{Heard out, the scriptural reading prevails.} Nothing defeats either of Postell's counterexamples, so both are in the grounded extension from the first step. They defeat the critic — the only party that defeats the scriptural reading, Berry or Motyer — so at the second step all three join them; and nothing defends the critic.
 
@@ -2703,11 +2808,50 @@ theorem scriptural_reading_prevails_once_replies_are_heard :
 \par\medskip\noindent\textbf{\texttt{critic\allowbreak{}Answered\allowbreak{}By\allowbreak{}Postell}}\par\nobreak\noindent
 Why the critical denial cannot be defended: Postell attacks it, and nothing answers Postell.
 
-{\small\begin{verbatim}
-def criticAnsweredByPostell : Witness.Table Party :=
-  [(Party.critical,
-      Party.postell)]
-\end{verbatim}}
+\paragraph{\emph{Critical denial of the predictive reading of Isaiah 7:14} cannot be defended: no admissible position holds it.}
+\begin{itemize}
+\item \emph{Postell's parity argument against the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}, and nothing defeats \emph{Postell's parity argument against the near-term exclusion}.
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 1 defeat and 6 absences of defeat, each a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Postell's parity argument against the near-term exclusion}, weakest at \emph{plausible}:
+\begin{itemize}
+\item an inference step --- \cite[487--489]{postell-isaiah-messianic-2025}
+\end{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item A sign given for Ahaz's generation is not also a prediction of a virgin birth --- \cite{brown-birth-messiah-1993}
+\end{itemize}
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a Messianic prediction of a virgin birth --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[123]{motyer-context-content-1970}; \cite[12--14]{compton-immanuel-prophecy-2007}; \cite[66]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[I.35]{origen-against-celsus-248}
+\item עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[app. Isa 7:14]{bhs-1997}; \cite[1653--1654]{berry-virgin-birth-2003}; \cite[125]{motyer-context-content-1970}; \cite[7--8]{compton-immanuel-prophecy-2007}; \cite[I.32]{jerome-against-jovinianus-393}
+\item Genesis 3:15 is the protoevangelium, the first promise of a redeemer --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Hebrew זֶרַע is ordinarily reckoned through the father --- \cite[9--10]{miravalle-meet-mary-2007}; \cite[app. Gen 3:15]{bhs-1997}
+\item The matrilineal wording of Genesis 3:15 marks a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Micah's mention of a mother and no father indicates a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item An oracle's meaning in the finished book is set by its literary placement --- \cite[483--486]{postell-isaiah-messianic-2025}
+\item Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item Mary conceived Jesus while a virgin --- Matt 1:18-25; Luke 1:26-38; \cite[30--33]{brown-problem-virginal-conception-1972}
+\item an inference step --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}
+\item an inference step --- \cite[9--10]{miravalle-meet-mary-2007}
+\item an inference step --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item an inference step --- \cite[ad loc. Matt 1:23]{france-matthew-2007}
+\end{itemize}
+\item \emph{Berry's objection to the near-term exclusion}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[1653--1654]{berry-virgin-birth-2003}; \cite[5]{compton-immanuel-prophecy-2007}
+\end{itemize}
+\item \emph{Motyer's reply to the near-term reading}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[124]{motyer-context-content-1970}; \cite[5]{compton-immanuel-prophecy-2007}
+\end{itemize}
+\item \emph{Postell's Micah counterexample to the near-term exclusion}, weakest at \emph{plausible}:
+\begin{itemize}
+\item an inference step --- \cite[481]{postell-isaiah-messianic-2025}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{critical\_\allowbreak{}denial\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{The critical denial cannot be defended.} No admissible set contains it: Postell defeats it, and nothing defeats Postell.
 
@@ -2746,6 +2890,38 @@ def unanswered : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical] }
       [Party.scriptural,
         Party.critical]
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{each\allowbreak{}Defeats\allowbreak{}The\allowbreak{}Other}}\par\nobreak\noindent
+Why nothing prevails unanswered: the two defeat each other.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}.
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 2 defeats and 0 absences of defeat, each a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item A sign given for Ahaz's generation is not also a prediction of a virgin birth --- \cite{brown-birth-messiah-1993}
+\end{itemize}
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a Messianic prediction of a virgin birth --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[123]{motyer-context-content-1970}; \cite[12--14]{compton-immanuel-prophecy-2007}; \cite[66]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[I.35]{origen-against-celsus-248}
+\item עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[app. Isa 7:14]{bhs-1997}; \cite[1653--1654]{berry-virgin-birth-2003}; \cite[125]{motyer-context-content-1970}; \cite[7--8]{compton-immanuel-prophecy-2007}; \cite[I.32]{jerome-against-jovinianus-393}
+\item Genesis 3:15 is the protoevangelium, the first promise of a redeemer --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Hebrew זֶרַע is ordinarily reckoned through the father --- \cite[9--10]{miravalle-meet-mary-2007}; \cite[app. Gen 3:15]{bhs-1997}
+\item The matrilineal wording of Genesis 3:15 marks a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Micah's mention of a mother and no father indicates a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item An oracle's meaning in the finished book is set by its literary placement --- \cite[483--486]{postell-isaiah-messianic-2025}
+\item Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item Mary conceived Jesus while a virgin --- Matt 1:18-25; Luke 1:26-38; \cite[30--33]{brown-problem-virginal-conception-1972}
+\item an inference step --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}
+\item an inference step --- \cite[9--10]{miravalle-meet-mary-2007}
+\item an inference step --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item an inference step --- \cite[ad loc. Matt 1:23]{france-matthew-2007}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}unanswered}}\par\nobreak\noindent
 \textbf{Unanswered, nothing prevails.} The scriptural reading and the critical denial defeat each other, so neither is forced, and the grounded extension is empty.
 
@@ -2766,6 +2942,43 @@ def motyerAlone : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical,
         Party.critical,
         Party.motyer]
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{motyer\allowbreak{}Ties\allowbreak{}With\allowbreak{}The\allowbreak{}Critic}}\par\nobreak\noindent
+Why Motyer alone does not settle it: a defeater for each of the three.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}.
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Motyer's reply to the near-term reading}.
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 3 defeats and 0 absences of defeat, each a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item A sign given for Ahaz's generation is not also a prediction of a virgin birth --- \cite{brown-birth-messiah-1993}
+\end{itemize}
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a Messianic prediction of a virgin birth --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[123]{motyer-context-content-1970}; \cite[12--14]{compton-immanuel-prophecy-2007}; \cite[66]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[I.35]{origen-against-celsus-248}
+\item עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[app. Isa 7:14]{bhs-1997}; \cite[1653--1654]{berry-virgin-birth-2003}; \cite[125]{motyer-context-content-1970}; \cite[7--8]{compton-immanuel-prophecy-2007}; \cite[I.32]{jerome-against-jovinianus-393}
+\item Genesis 3:15 is the protoevangelium, the first promise of a redeemer --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Hebrew זֶרַע is ordinarily reckoned through the father --- \cite[9--10]{miravalle-meet-mary-2007}; \cite[app. Gen 3:15]{bhs-1997}
+\item The matrilineal wording of Genesis 3:15 marks a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Micah's mention of a mother and no father indicates a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item An oracle's meaning in the finished book is set by its literary placement --- \cite[483--486]{postell-isaiah-messianic-2025}
+\item Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item Mary conceived Jesus while a virgin --- Matt 1:18-25; Luke 1:26-38; \cite[30--33]{brown-problem-virginal-conception-1972}
+\item an inference step --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}
+\item an inference step --- \cite[9--10]{miravalle-meet-mary-2007}
+\item an inference step --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item an inference step --- \cite[ad loc. Matt 1:23]{france-matthew-2007}
+\end{itemize}
+\item \emph{Motyer's reply to the near-term reading}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[124]{motyer-context-content-1970}; \cite[5]{compton-immanuel-prophecy-2007}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}on\_\allowbreak{}motyer\_\allowbreak{}alone}}\par\nobreak\noindent
 \textbf{Motyer alone does not settle it.} He and the critic defeat each other, as the scriptural reading and the critic do, so nothing is forced. His inference is contested as the critic's premises are, and a contested reply cannot carry the verdict alone.
 
@@ -2782,6 +2995,58 @@ def withoutPostell : Dispute Claim { i // i ≠ Party.postell } :=
   isaiahDispute.restrict fun x =>
     x ≠ Party.postell
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{micah\allowbreak{}Carries\allowbreak{}The\allowbreak{}Verdict}}\par\nobreak\noindent
+How the scriptural reading prevails without Postell's Isaiah argument, in stages: the Micah counterexample first, then the three it defends.
+
+\paragraph{Grounded: \emph{Postell's Micah counterexample to the near-term exclusion}, \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, \emph{Berry's objection to the near-term exclusion}, \emph{Motyer's reply to the near-term reading}.}
+\begin{itemize}
+\item Stage 1: \emph{Postell's Micah counterexample to the near-term exclusion}.
+\begin{itemize}
+\item \emph{Postell's Micah counterexample to the near-term exclusion} is defeated by nothing.
+\end{itemize}
+\item Stage 2: \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, \emph{Berry's objection to the near-term exclusion}, \emph{Motyer's reply to the near-term reading}.
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, and \emph{Postell's Micah counterexample to the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Berry's objection to the near-term exclusion}, and \emph{Postell's Micah counterexample to the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Motyer's reply to the near-term reading}, and \emph{Postell's Micah counterexample to the near-term exclusion} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 4 defeats and 17 absences of defeat, each a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a Messianic prediction of a virgin birth --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[123]{motyer-context-content-1970}; \cite[12--14]{compton-immanuel-prophecy-2007}; \cite[66]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[I.35]{origen-against-celsus-248}
+\item עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[app. Isa 7:14]{bhs-1997}; \cite[1653--1654]{berry-virgin-birth-2003}; \cite[125]{motyer-context-content-1970}; \cite[7--8]{compton-immanuel-prophecy-2007}; \cite[I.32]{jerome-against-jovinianus-393}
+\item Genesis 3:15 is the protoevangelium, the first promise of a redeemer --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Hebrew זֶרַע is ordinarily reckoned through the father --- \cite[9--10]{miravalle-meet-mary-2007}; \cite[app. Gen 3:15]{bhs-1997}
+\item The matrilineal wording of Genesis 3:15 marks a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Micah's mention of a mother and no father indicates a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item An oracle's meaning in the finished book is set by its literary placement --- \cite[483--486]{postell-isaiah-messianic-2025}
+\item Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item Mary conceived Jesus while a virgin --- Matt 1:18-25; Luke 1:26-38; \cite[30--33]{brown-problem-virginal-conception-1972}
+\item an inference step --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}
+\item an inference step --- \cite[9--10]{miravalle-meet-mary-2007}
+\item an inference step --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item an inference step --- \cite[ad loc. Matt 1:23]{france-matthew-2007}
+\end{itemize}
+\item \emph{Postell's Micah counterexample to the near-term exclusion}, weakest at \emph{plausible}:
+\begin{itemize}
+\item an inference step --- \cite[481]{postell-isaiah-messianic-2025}
+\end{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item A sign given for Ahaz's generation is not also a prediction of a virgin birth --- \cite{brown-birth-messiah-1993}
+\end{itemize}
+\item \emph{Berry's objection to the near-term exclusion}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[1653--1654]{berry-virgin-birth-2003}; \cite[5]{compton-immanuel-prophecy-2007}
+\end{itemize}
+\item \emph{Motyer's reply to the near-term reading}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[124]{motyer-context-content-1970}; \cite[5]{compton-immanuel-prophecy-2007}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{scriptural\_\allowbreak{}reading\_\allowbreak{}prevails\_\allowbreak{}without\_\allowbreak{}postell}}\par\nobreak\noindent
 \textbf{Without Postell's Isaiah argument, the scriptural reading still prevails.} His Micah counterexample is defeated by nothing, and it defends the scriptural reading against the critic, as the Isaiah argument did. An attack on the grounds of either counterexample leaves the verdict standing.
 
@@ -2800,6 +3065,48 @@ def withoutParity : Dispute Claim { i // i ∉ [Party.postell, Party.micah] } :=
       [Party.postell,
         Party.micah]
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{every\allowbreak{}Reply\allowbreak{}Ties\allowbreak{}With\allowbreak{}The\allowbreak{}Critic}}\par\nobreak\noindent
+Why nothing prevails without the counterexamples: the critic defeats every reply it faces, and the replies defeat it.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}.
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3} defeats \emph{Critical denial of the predictive reading of Isaiah 7:14}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Berry's objection to the near-term exclusion}.
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14} defeats \emph{Motyer's reply to the near-term reading}.
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 4 defeats and 0 absences of defeat, each a cell of the defeat table, \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Critical denial of the predictive reading of Isaiah 7:14}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item A sign given for Ahaz's generation is not also a prediction of a virgin birth --- \cite{brown-birth-messiah-1993}
+\end{itemize}
+\item \emph{Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a Messianic prediction of a virgin birth --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[123]{motyer-context-content-1970}; \cite[12--14]{compton-immanuel-prophecy-2007}; \cite[66]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[I.35]{origen-against-celsus-248}
+\item עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[app. Isa 7:14]{bhs-1997}; \cite[1653--1654]{berry-virgin-birth-2003}; \cite[125]{motyer-context-content-1970}; \cite[7--8]{compton-immanuel-prophecy-2007}; \cite[I.32]{jerome-against-jovinianus-393}
+\item Genesis 3:15 is the protoevangelium, the first promise of a redeemer --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Hebrew זֶרַע is ordinarily reckoned through the father --- \cite[9--10]{miravalle-meet-mary-2007}; \cite[app. Gen 3:15]{bhs-1997}
+\item The matrilineal wording of Genesis 3:15 marks a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item Micah's mention of a mother and no father indicates a birth with no human father --- \cite[9--10]{miravalle-meet-mary-2007}
+\item An oracle's meaning in the finished book is set by its literary placement --- \cite[483--486]{postell-isaiah-messianic-2025}
+\item Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item Mary conceived Jesus while a virgin --- Matt 1:18-25; Luke 1:26-38; \cite[30--33]{brown-problem-virginal-conception-1972}
+\item an inference step --- \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}
+\item an inference step --- \cite[9--10]{miravalle-meet-mary-2007}
+\item an inference step --- \cite[490--493]{postell-isaiah-messianic-2025}
+\item an inference step --- \cite[ad loc. Matt 1:23]{france-matthew-2007}
+\end{itemize}
+\item \emph{Berry's objection to the near-term exclusion}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[1653--1654]{berry-virgin-birth-2003}; \cite[5]{compton-immanuel-prophecy-2007}
+\end{itemize}
+\item \emph{Motyer's reply to the near-term reading}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[124]{motyer-context-content-1970}; \cite[5]{compton-immanuel-prophecy-2007}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}without\_\allowbreak{}the\_\allowbreak{}counterexamples}}\par\nobreak\noindent
 \textbf{Without the counterexamples, nothing prevails.} Berry and Motyer each tie with the critic, as the scriptural reading does, so every party is defeated by someone. The verdict rests on the one kind of reply the critic cannot answer — an oracle on the Assyrian timeline, read messianically — and so on the rating of that inference.
 
@@ -3031,6 +3338,80 @@ def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
       decide (wegnerPartyDefeats i j),
     spec := wegnerFinite._proof_2 }
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
+\textbf{Nothing supports anything} among Wegner, the fathers and the reply, in all nine pairs. Every cell is computed by \texttt{supports?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem wegnerDispute_supports : ∀ (i j : WegnerParty),
+    ¬wegnerDispute.supports i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
+\textbf{No case is part of another's} here, in all nine pairs, except each party's own. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem wegnerDispute_partOf : ∀ (i j : WegnerParty), wegnerDispute.partOf i j
+    ↔ i = j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Map}}\par\nobreak\noindent
+The dispute drawn: who defeats whom.
+
+\begin{center}
+\begin{tikzpicture}[>={Stealth[length=2mm]}]
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n0) at (0.00,3.20) {1};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n1) at (2.77,-1.60) {2};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n2) at (-2.77,-1.60) {3};
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n2);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n1);
+\end{tikzpicture}
+\end{center}
+\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of another's.
+\begin{enumerate}
+\item Wegner's grammatical objection: the עַלְמָה is already pregnant
+\item The fathers' sign argument (Isaiah 7:11, 14)
+\item The near-term reply: a sign need not be a miracle
+\end{enumerate}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth}@{}}
+\toprule
+\textbf{From} & \textbf{To} & \textbf{Edge} \\
+\midrule
+\endhead
+1 \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} & 2 \emph{The fathers' sign argument (Isaiah 7:11, 14)} & defeats \\
+2 \emph{The fathers' sign argument (Isaiah 7:11, 14)} & 1 \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} & defeats \\
+2 \emph{The fathers' sign argument (Isaiah 7:11, 14)} & 3 \emph{The near-term reply: a sign need not be a miracle} & defeats \\
+3 \emph{The near-term reply: a sign need not be a miracle} & 2 \emph{The fathers' sign argument (Isaiah 7:11, 14)} & defeats \\
+\bottomrule
+\end{longtable}
+\noindent The defeats are the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{every\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
+Why nothing prevails: a defeater for each party.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}.
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{The near-term reply: a sign need not be a miracle}.
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 3 defeats and 0 absences of defeat, each a cell of the defeat table, \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 --- \cite[I.35]{origen-against-celsus-248}; \cite[84]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[474]{postell-isaiah-messianic-2025}; Isa 7:10-11
+\end{itemize}
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item The pregnancy Isaiah 7:14 announces is an ordinary conception --- \cite[476--478]{wegner-virgin-births-2011}; \cite[474]{postell-isaiah-messianic-2025}
+\item What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes --- \cite[471--472]{wegner-virgin-births-2011}; \cite[468]{postell-isaiah-messianic-2025}; \cite[152]{rico-gentry-infant-king-2020}
+\end{itemize}
+\item \emph{The near-term reply: a sign need not be a miracle}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[64--65]{rhodea-did-matthew-conceive-2013}; \cite[469--470]{wegner-virgin-births-2011}; \cite[474]{postell-isaiah-messianic-2025}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}over\_\allowbreak{}wegner}}\par\nobreak\noindent
 \textbf{Nothing prevails.} Every party is defeated by someone — Wegner and the reply by the fathers, the fathers by both — so nothing is forced, and the grounded extension is empty.
 
@@ -3039,6 +3420,39 @@ theorem nothing_prevails_over_wegner : Framework.grounded
     wegnerDispute.defeats = ∅
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{fathers\allowbreak{}Alone}}\par\nobreak\noindent
+Why the fathers alone are one resolution.
+
+\paragraph{A maximal defensible position: \emph{The fathers' sign argument (Isaiah 7:11, 14)}.}
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} does not defeat itself, and answers each attack on it:
+\begin{itemize}
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}, and \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}.
+\item \emph{The near-term reply: a sign need not be a miracle} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}, and \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{The near-term reply: a sign need not be a miracle}.
+\end{itemize}
+\item Nothing can be added to it:
+\begin{itemize}
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} conflicts with \emph{The fathers' sign argument (Isaiah 7:11, 14)}: \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}, and \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}.
+\item \emph{The near-term reply: a sign need not be a miracle} conflicts with \emph{The fathers' sign argument (Isaiah 7:11, 14)}: \emph{The near-term reply: a sign need not be a miracle} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}, and \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{The near-term reply: a sign need not be a miracle}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 4 defeats and 1 absence of defeat, each a cell of the defeat table, \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 --- \cite[I.35]{origen-against-celsus-248}; \cite[84]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[474]{postell-isaiah-messianic-2025}; Isa 7:10-11
+\end{itemize}
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item The pregnancy Isaiah 7:14 announces is an ordinary conception --- \cite[476--478]{wegner-virgin-births-2011}; \cite[474]{postell-isaiah-messianic-2025}
+\item What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes --- \cite[471--472]{wegner-virgin-births-2011}; \cite[468]{postell-isaiah-messianic-2025}; \cite[152]{rico-gentry-infant-king-2020}
+\end{itemize}
+\item \emph{The near-term reply: a sign need not be a miracle}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[64--65]{rhodea-did-matthew-conceive-2013}; \cite[469--470]{wegner-virgin-births-2011}; \cite[474]{postell-isaiah-messianic-2025}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{sign\_\allowbreak{}is\_\allowbreak{}one\_\allowbreak{}resolution}}\par\nobreak\noindent
 \textbf{One resolution: the fathers.} The sign argument alone is admissible — it defeats both of its defeaters — and it is in conflict with both of the other parties, so no larger set is.
 
@@ -3047,6 +3461,38 @@ theorem sign_is_one_resolution : Framework.Preferred wegnerDispute.defeats
     {WegnerParty.sign}
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}With\allowbreak{}The\allowbreak{}Reply}}\par\nobreak\noindent
+Why Wegner with the reply is the other resolution.
+
+\paragraph{A maximal defensible position: \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, \emph{The near-term reply: a sign need not be a miracle}.}
+\begin{itemize}
+\item None of \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, \emph{The near-term reply: a sign need not be a miracle} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, and \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{The near-term reply: a sign need not be a miracle}, and \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\end{itemize}
+\item Nothing can be added to it:
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} conflicts with \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}: \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, and \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 3 defeats and 4 absences of defeat, each a cell of the defeat table, \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item The pregnancy Isaiah 7:14 announces is an ordinary conception --- \cite[476--478]{wegner-virgin-births-2011}; \cite[474]{postell-isaiah-messianic-2025}
+\item What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes --- \cite[471--472]{wegner-virgin-births-2011}; \cite[468]{postell-isaiah-messianic-2025}; \cite[152]{rico-gentry-infant-king-2020}
+\end{itemize}
+\item \emph{The near-term reply: a sign need not be a miracle}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[64--65]{rhodea-did-matthew-conceive-2013}; \cite[469--470]{wegner-virgin-births-2011}; \cite[474]{postell-isaiah-messianic-2025}
+\end{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 --- \cite[I.35]{origen-against-celsus-248}; \cite[84]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[474]{postell-isaiah-messianic-2025}; Isa 7:10-11
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{wegner\_\allowbreak{}is\_\allowbreak{}the\_\allowbreak{}other\_\allowbreak{}resolution}}\par\nobreak\noindent
 \textbf{The other resolution: Wegner, with the near-term reply.} Neither defeats the other, and between them they answer the fathers, who are the only party to defeat either. The fathers are in conflict with both, so no larger set is admissible.
 
@@ -3084,6 +3530,27 @@ def signAgainstWegner : Dispute Claim { i // i ∈ [WegnerParty.wegner,
       [WegnerParty.wegner,
         WegnerParty.sign]
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}And\allowbreak{}The\allowbreak{}Fathers\allowbreak{}Tie}}\par\nobreak\noindent
+Why nothing prevails without the reply: Wegner and the fathers defeat each other.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)} defeats \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}.
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant} defeats \emph{The fathers' sign argument (Isaiah 7:11, 14)}.
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 2 defeats and 0 absences of defeat, each a cell of the defeat table, \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{The fathers' sign argument (Isaiah 7:11, 14)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 --- \cite[I.35]{origen-against-celsus-248}; \cite[84]{justin-dialogue-with-trypho-160}; \cite[III.21.6]{irenaeus-against-heresies-180}; \cite[474]{postell-isaiah-messianic-2025}; Isa 7:10-11
+\end{itemize}
+\item \emph{Wegner's grammatical objection: the עַלְמָה is already pregnant}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation --- \cite{brown-birth-messiah-1993}
+\item The pregnancy Isaiah 7:14 announces is an ordinary conception --- \cite[476--478]{wegner-virgin-births-2011}; \cite[474]{postell-isaiah-messianic-2025}
+\item What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes --- \cite[471--472]{wegner-virgin-births-2011}; \cite[468]{postell-isaiah-messianic-2025}; \cite[152]{rico-gentry-infant-king-2020}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}without\_\allowbreak{}the\_\allowbreak{}reply}}\par\nobreak\noindent
 \textbf{Without the reply, nothing prevails either.} Wegner and the fathers defeat each other, so the reply is not what keeps the fathers from prevailing: Wegner's rebuttal does, because the fathers' weakest link is no stronger than his.
 
@@ -4631,26 +5098,30 @@ What the Reformed hold about what justification \emph{is}, where Trent is heard:
 \par\medskip\noindent\textbf{\texttt{pauline\allowbreak{}Case}} --- Sola fide from Paul (Galatians 2:16)\par\nobreak\noindent
 The Pauline strand, argued alone: sola fide from Galatians 2:16.
 
+Its ἔργα νόμου premise is derived, not assumed: it rests on the critics' line, which denies covenantal nomism and reads Galatians as a polemic against circumcision as a requirement. That is where the literature puts the dispute (\texttt{critics\_\allowbreak{}carry\_\allowbreak{}the\_\allowbreak{}pauline\_\allowbreak{}strand}, \texttt{sanders\_\allowbreak{}costs\_\allowbreak{}the\_\allowbreak{}pauline\_\allowbreak{}strand}), and so Sanders meets Paul here on the history of Second Temple Judaism, not on Paul's Greek. The critics' inference is rated with the rest, as Gathercole's.
+
 \begin{align*}
   \text{(1)} \quad & P_{8} \\
-  \text{(2)} \quad & P_{6} \\
-  \text{(3)} \quad & P_{7} \\
-  \text{(4)} \quad & P_{1} \\
-  \text{(5)} \quad & P_{2} \\
-  \text{(6)} \quad & P_{3} \\
-  \text{(7)} \quad & P_{4} \\
-  \text{(8)} \quad & P_{5} \\
-  \text{(9)} \quad & P_{17} \\
-  \text{(10)} \quad & P_{9} \\
-  \text{(11)} \quad & P_{20} \\
-  \text{(12)} \quad & P_{21} \\
-  \text{(13)} \quad & P_{23} \\
-  \text{(14)} \quad & P_{32} \\
-  \text{(15)} \quad & (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-  \text{(16)} \quad & (P_{20} \land P_{21}) \rightarrow P_{22} \\
-  \text{(17)} \quad & (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
-  \text{(18)} \quad & (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
-  \text{(19)} \quad & (P_{24} \land P_{1}) \rightarrow P_{27} \\
+  \text{(2)} \quad & P_{7} \\
+  \text{(3)} \quad & \lnot P_{29} \\
+  \text{(4)} \quad & P_{8} \\
+  \text{(5)} \quad & P_{1} \\
+  \text{(6)} \quad & P_{2} \\
+  \text{(7)} \quad & P_{3} \\
+  \text{(8)} \quad & P_{4} \\
+  \text{(9)} \quad & P_{5} \\
+  \text{(10)} \quad & P_{17} \\
+  \text{(11)} \quad & P_{9} \\
+  \text{(12)} \quad & P_{20} \\
+  \text{(13)} \quad & P_{21} \\
+  \text{(14)} \quad & P_{23} \\
+  \text{(15)} \quad & P_{32} \\
+  \text{(16)} \quad & (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
+  \text{(17)} \quad & (\lnot P_{29} \land P_{8}) \rightarrow P_{6} \\
+  \text{(18)} \quad & (P_{20} \land P_{21}) \rightarrow P_{22} \\
+  \text{(19)} \quad & (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{25} \\
+  \text{(20)} \quad & (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{26} \\
+  \text{(21)} \quad & (P_{24} \land P_{1}) \rightarrow P_{27} \\
   \vdash \quad & P_{25} \land P_{26} \land P_{27}
 \end{align*}
 \emph{No premise here rests on scripture alone.}
@@ -5431,22 +5902,172 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
     defeats := fun i j => decide (partyDefeats i j),
     spec := solaFideFinite._proof_2 }
 \end{verbatim}}
+\paragraph*{The dispute as a graph}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
+\textbf{Nothing supports anything} in the sola fide dispute, in all sixty-four pairs: no party's conclusion entails a claim another rests on. The critics' conclusion used to be one of Paul's premises; now the Pauline case rests on the critics' whole line instead (\texttt{pauline\allowbreak{}Case}), and the relation is the stronger one below. The Reformed strands, which share their conclusion, agree rather than support (see \texttt{Testimony.Logic.Support}). Every cell is computed by \texttt{supports?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem solaFideDispute_supports : ∀ (i j : Party), ¬solaFideDispute.supports
+    i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
+Whose case is part of whose, as a table: besides each party's own, one pair.
+
+{\small\begin{verbatim}
+def partyPartOf : Party → Party → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Party.critics, Party.pauline => True
+    | i, j => i = j
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
+The table is finite, so membership in it is decidable.
+
+{\small\begin{verbatim}
+def instDecidableRelPartyPartyPartOf : DecidableRel partyPartOf
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
+\textbf{Whose case is part of whose}, all sixty-four pairs: the critics' case is part of Paul's, since the Pauline case derives its ἔργα νόμου premise from the critics' line; and every case is part of itself. Nothing else. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem solaFideDispute_partOf : ∀ (i j : Party), solaFideDispute.partOf i j ↔
+    partyPartOf i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Map}}\par\nobreak\noindent
+The dispute drawn: who defeats whom, and whose case is part of whose.
+
+\begin{center}
+\begin{tikzpicture}[>={Stealth[length=2mm]}]
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n0) at (0.00,3.20) {1};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n1) at (2.26,2.26) {2};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n2) at (3.20,0.00) {3};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n3) at (2.26,-2.26) {4};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n4) at (0.00,-3.20) {5};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n5) at (-2.26,-2.26) {6};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n6) at (-3.20,0.00) {7};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n7) at (-2.26,2.26) {8};
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n5);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n7);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n2);
+\draw[->,red!70!black,thick] (n4) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n4) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n5) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n5) to[bend left=10] (n6);
+\draw[->,red!70!black,thick] (n6) to[bend left=10] (n5);
+\draw[->,red!70!black,thick] (n7) to[bend left=10] (n2);
+\draw[->,blue!60!black,thick,dotted] (n6) to[bend left=10] (n0);
+\end{tikzpicture}
+\end{center}
+\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of another's.
+\begin{enumerate}
+\item Sola fide from Paul (Galatians 2:16)
+\item Sola fide from Jesus' words (Luke 7:50)
+\item Sola fide from Peter (Acts 15:9–11)
+\item Trent, against 'not by works'
+\item Apocalyptic reading, against faith as the condition
+\item Covenantal nomism (Sanders, Dunn)
+\item Variegated nomism (Gathercole, Carson et al.)
+\item Law-observant Luke (Jervell)
+\end{enumerate}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth}@{}}
+\toprule
+\textbf{From} & \textbf{To} & \textbf{Edge} \\
+\midrule
+\endhead
+1 \emph{Sola fide from Paul (Galatians 2:16)} & 4 \emph{Trent, against 'not by works'} & defeats \\
+1 \emph{Sola fide from Paul (Galatians 2:16)} & 5 \emph{Apocalyptic reading, against faith as the condition} & defeats \\
+1 \emph{Sola fide from Paul (Galatians 2:16)} & 6 \emph{Covenantal nomism (Sanders, Dunn)} & defeats \\
+2 \emph{Sola fide from Jesus' words (Luke 7:50)} & 4 \emph{Trent, against 'not by works'} & defeats \\
+2 \emph{Sola fide from Jesus' words (Luke 7:50)} & 5 \emph{Apocalyptic reading, against faith as the condition} & defeats \\
+3 \emph{Sola fide from Peter (Acts 15:9–11)} & 4 \emph{Trent, against 'not by works'} & defeats \\
+3 \emph{Sola fide from Peter (Acts 15:9–11)} & 5 \emph{Apocalyptic reading, against faith as the condition} & defeats \\
+3 \emph{Sola fide from Peter (Acts 15:9–11)} & 8 \emph{Law-observant Luke (Jervell)} & defeats \\
+4 \emph{Trent, against 'not by works'} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & defeats \\
+4 \emph{Trent, against 'not by works'} & 2 \emph{Sola fide from Jesus' words (Luke 7:50)} & defeats \\
+4 \emph{Trent, against 'not by works'} & 3 \emph{Sola fide from Peter (Acts 15:9–11)} & defeats \\
+5 \emph{Apocalyptic reading, against faith as the condition} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & defeats \\
+5 \emph{Apocalyptic reading, against faith as the condition} & 4 \emph{Trent, against 'not by works'} & defeats \\
+6 \emph{Covenantal nomism (Sanders, Dunn)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & defeats \\
+6 \emph{Covenantal nomism (Sanders, Dunn)} & 7 \emph{Variegated nomism (Gathercole, Carson et al.)} & defeats \\
+7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 6 \emph{Covenantal nomism (Sanders, Dunn)} & defeats \\
+8 \emph{Law-observant Luke (Jervell)} & 3 \emph{Sola fide from Peter (Acts 15:9–11)} & defeats \\
+7 \emph{Variegated nomism (Gathercole, Carson et al.)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & is part of \\
+6 \emph{Covenantal nomism (Sanders, Dunn)} & 1 \emph{Sola fide from Paul (Galatians 2:16)} & attack on a part — already a defeat \\
+\bottomrule
+\end{longtable}
+\noindent The defeats are the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 \paragraph*{What the dispute decides}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{every\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
-A defeater for every party — the reason nothing prevails outright.
+Why nothing prevails outright: a defeater for every party.
 
-{\small\begin{verbatim}
-def everyPartyDefeated : Witness.Table Party :=
-  [(Party.pauline, Party.trent),
-    (Party.dominical, Party.trent),
-    (Party.apostolic, Party.trent),
-    (Party.trent, Party.pauline),
-    (Party.apocalyptic, Party.pauline),
-    (Party.sanders, Party.pauline),
-    (Party.critics, Party.sanders),
-    (Party.jervell, Party.apostolic)]
-\end{verbatim}}
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Paul (Galatians 2:16)}.
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}.
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Peter (Acts 15:9–11)}.
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Trent, against 'not by works'}.
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Apocalyptic reading, against faith as the condition}.
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Covenantal nomism (Sanders, Dunn)}.
+\item \emph{Covenantal nomism (Sanders, Dunn)} defeats \emph{Variegated nomism (Gathercole, Carson et al.)}.
+\item \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Law-observant Luke (Jervell)}.
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 8 defeats and 0 absences of defeat, each a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Sola fide from Peter (Acts 15:9–11)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item The yoke refused at Acts 15:10 is the whole law as a condition of salvation --- \cite[ad loc. Acts 15:10]{bruce-acts-1988}; Acts 15:10; Gal 5:1; Jas 2:10; \cite{das-paul-law-covenant-2001}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition}, weakest at \emph{disputed}:
+\begin{itemize}
+\item πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) --- \cite{campbell-deliverance-god-2009}; \cite[ad loc. Gal 2:16]{martyn-galatians-1997}; \cite{hays-faith-jesus-christ-2002}
+\item δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains --- \cite{campbell-deliverance-god-2009}; \cite{martyn-galatians-1997}; Rom 3:21-26
+\end{itemize}
+\item \emph{Covenantal nomism (Sanders, Dunn)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism: in by grace, staying in by works --- \cite{sanders-paul-palestinian-judaism-1977}
+\item an inference step --- \cite{dunn-new-perspective-2005}; \cite{wright-what-paul-said-1997}
+\end{itemize}
+\item \emph{Variegated nomism (Gathercole, Carson et al.)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Law-observant Luke (Jervell)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite{jervell-luke-people-god-1972}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{nothing\_\allowbreak{}prevails\_\allowbreak{}over\_\allowbreak{}sola\_\allowbreak{}fide}}\par\nobreak\noindent
 \textbf{Nothing prevails outright.} Every party is defeated by some other: each Reformed strand by Trent, Trent by each strand and by the apocalyptic reading, the apocalyptic reading by Paul, Sanders by the critics, the critics by Sanders, Jervell by Acts. The grounded extension — what the dispute forces, before any choice between rivals — is empty.
 
@@ -5458,10 +6079,61 @@ theorem nothing_prevails_over_sola_fide : Framework.grounded
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Answered\allowbreak{}By\allowbreak{}The\allowbreak{}Apocalyptic\allowbreak{}Reading}}\par\nobreak\noindent
 Why Trent cannot be defended: the apocalyptic reading attacks it, and every party that answers the apocalyptic reading — Paul, Luke, Acts — also attacks Trent.
 
-{\small\begin{verbatim}
-def trentAnsweredByTheApocalypticReading : Witness.Table Party :=
-  [(Party.trent, Party.apocalyptic)]
-\end{verbatim}}
+\paragraph{\emph{Trent, against 'not by works'} cannot be defended: no admissible position holds it.}
+\begin{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition} defeats \emph{Trent, against 'not by works'}, and every answer to \emph{Apocalyptic reading, against faith as the condition} fails:
+\begin{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Paul (Galatians 2:16)}.
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}), and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}.
+\item \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Peter (Acts 15:9–11)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 10 defeats and 5 absences of defeat, each a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition}, weakest at \emph{disputed}:
+\begin{itemize}
+\item πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) --- \cite{campbell-deliverance-god-2009}; \cite[ad loc. Gal 2:16]{martyn-galatians-1997}; \cite{hays-faith-jesus-christ-2002}
+\item δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains --- \cite{campbell-deliverance-god-2009}; \cite{martyn-galatians-1997}; Rom 3:21-26
+\end{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Sola fide from Peter (Acts 15:9–11)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item The yoke refused at Acts 15:10 is the whole law as a condition of salvation --- \cite[ad loc. Acts 15:10]{bruce-acts-1988}; Acts 15:10; Gal 5:1; Jas 2:10; \cite{das-paul-law-covenant-2001}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Covenantal nomism (Sanders, Dunn)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism: in by grace, staying in by works --- \cite{sanders-paul-palestinian-judaism-1977}
+\item an inference step --- \cite{dunn-new-perspective-2005}; \cite{wright-what-paul-said-1997}
+\end{itemize}
+\item \emph{Variegated nomism (Gathercole, Carson et al.)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Law-observant Luke (Jervell)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite{jervell-luke-people-god-1972}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{Trent cannot be defended.} The apocalyptic reading defeats it — it holds "not by works" on grounds Trent does not contradict — and the only parties that defeat the apocalyptic reading are the Reformed strands, each of which also defeats Trent. No position can hold Trent and answer the apocalyptic reading at once.
 
@@ -5473,10 +6145,58 @@ theorem trent_indefensible : ∀ (S : Set Party), Framework.Admissible
 \par\medskip\noindent\textbf{\texttt{apocalyptic\allowbreak{}Answered\allowbreak{}By\allowbreak{}Luke}}\par\nobreak\noindent
 Why the apocalyptic reading cannot be defended: the dominical case attacks it, and the only party that answers the dominical case is Trent, which the apocalyptic reading itself attacks.
 
-{\small\begin{verbatim}
-def apocalypticAnsweredByLuke : Witness.Table Party :=
-  [(Party.apocalyptic, Party.dominical)]
-\end{verbatim}}
+\paragraph{\emph{Apocalyptic reading, against faith as the condition} cannot be defended: no admissible position holds it.}
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Apocalyptic reading, against faith as the condition}, and every answer to \emph{Sola fide from Jesus' words (Luke 7:50)} fails:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}, but conflicts with \emph{Apocalyptic reading, against faith as the condition}: \emph{Apocalyptic reading, against faith as the condition} defeats \emph{Trent, against 'not by works'}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 3 defeats and 8 absences of defeat, each a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition}, weakest at \emph{disputed}:
+\begin{itemize}
+\item πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) --- \cite{campbell-deliverance-god-2009}; \cite[ad loc. Gal 2:16]{martyn-galatians-1997}; \cite{hays-faith-jesus-christ-2002}
+\item δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains --- \cite{campbell-deliverance-god-2009}; \cite{martyn-galatians-1997}; Rom 3:21-26
+\end{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Sola fide from Peter (Acts 15:9–11)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item The yoke refused at Acts 15:10 is the whole law as a condition of salvation --- \cite[ad loc. Acts 15:10]{bruce-acts-1988}; Acts 15:10; Gal 5:1; Jas 2:10; \cite{das-paul-law-covenant-2001}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Covenantal nomism (Sanders, Dunn)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism: in by grace, staying in by works --- \cite{sanders-paul-palestinian-judaism-1977}
+\item an inference step --- \cite{dunn-new-perspective-2005}; \cite{wright-what-paul-said-1997}
+\end{itemize}
+\item \emph{Variegated nomism (Gathercole, Carson et al.)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Law-observant Luke (Jervell)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite{jervell-luke-people-god-1972}
+\end{itemize}
+\end{itemize}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{Nor can the apocalyptic reading.} The dominical case defeats it, and the only party that defeats the dominical case is Trent — which the apocalyptic reading itself defeats.
 
@@ -5485,6 +6205,81 @@ theorem apocalyptic_indefensible : ∀ (S : Set Party), Framework.Admissible
     solaFideDispute.defeats S → Party.apocalyptic ∉ S
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{dominical\allowbreak{}Case\allowbreak{}Forced}}\par\nobreak\noindent
+Why the dominical case is accepted on every resolution: it answers Trent itself, and neither of its rivals can be defended — by the two strategies above.
+
+\paragraph{\emph{Sola fide from Jesus' words (Luke 7:50)} is accepted on every resolution.}
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} answers each of its attackers itself:
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\end{itemize}
+\item No party in conflict with it can be defended:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} cannot:
+\begin{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition} defeats \emph{Trent, against 'not by works'}, and every answer to \emph{Apocalyptic reading, against faith as the condition} fails:
+\begin{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Paul (Galatians 2:16)}.
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}), and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}.
+\item \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Apocalyptic reading, against faith as the condition}, but conflicts with \emph{Trent, against 'not by works'}: \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Peter (Acts 15:9–11)}.
+\end{itemize}
+\end{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition} cannot:
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Apocalyptic reading, against faith as the condition}, and every answer to \emph{Sola fide from Jesus' words (Luke 7:50)} fails:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}, but conflicts with \emph{Apocalyptic reading, against faith as the condition}: \emph{Apocalyptic reading, against faith as the condition} defeats \emph{Trent, against 'not by works'}.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 10 defeats and 17 absences of defeat, each a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Sola fide from Peter (Acts 15:9–11)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item The yoke refused at Acts 15:10 is the whole law as a condition of salvation --- \cite[ad loc. Acts 15:10]{bruce-acts-1988}; Acts 15:10; Gal 5:1; Jas 2:10; \cite{das-paul-law-covenant-2001}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Apocalyptic reading, against faith as the condition}, weakest at \emph{disputed}:
+\begin{itemize}
+\item πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) --- \cite{campbell-deliverance-god-2009}; \cite[ad loc. Gal 2:16]{martyn-galatians-1997}; \cite{hays-faith-jesus-christ-2002}
+\item δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains --- \cite{campbell-deliverance-god-2009}; \cite{martyn-galatians-1997}; Rom 3:21-26
+\end{itemize}
+\item \emph{Covenantal nomism (Sanders, Dunn)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism: in by grace, staying in by works --- \cite{sanders-paul-palestinian-judaism-1977}
+\item an inference step --- \cite{dunn-new-perspective-2005}; \cite{wright-what-paul-said-1997}
+\end{itemize}
+\item \emph{Variegated nomism (Gathercole, Carson et al.)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Law-observant Luke (Jervell)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite{jervell-luke-people-god-1972}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
 \par\medskip\noindent\textbf{\texttt{dominical\_\allowbreak{}case\_\allowbreak{}skeptically\_\allowbreak{}accepted}}\par\nobreak\noindent
 \textbf{Sola fide from Luke 7:50 is accepted on every resolution.} Its only defeater is Trent, which no admissible position can hold; it defeats back the only other party it conflicts with, the apocalyptic reading, which no admissible position can hold either. So every preferred extension — every maximal defensible position — contains it.
 
@@ -5503,6 +6298,60 @@ def withoutApocalyptic : Dispute Claim { i // i ≠ Party.apocalyptic } :=
   solaFideDispute.restrict fun x =>
     x ≠ Party.apocalyptic
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Defends\allowbreak{}Itself\allowbreak{}Without\allowbreak{}The\allowbreak{}Apocalyptic\allowbreak{}Reading}}\par\nobreak\noindent
+Why, without the apocalyptic reading, Trent can be held: alone, it answers each Reformed strand that attacks it.
+
+\paragraph{\emph{Sola fide from Jesus' words (Luke 7:50)} is not accepted on every resolution.}
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} can be held alone; \emph{Trent, against 'not by works'} conflicts with \emph{Sola fide from Jesus' words (Luke 7:50)}: \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}, and \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Trent, against 'not by works'} does not defeat itself, and answers each attack on it:
+\begin{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Paul (Galatians 2:16)}.
+\item \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}), and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Jesus' words (Luke 7:50)}.
+\item \emph{Sola fide from Peter (Acts 15:9–11)} defeats \emph{Trent, against 'not by works'}, and \emph{Trent, against 'not by works'} defeats \emph{Sola fide from Peter (Acts 15:9–11)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 6 defeats and 4 absences of defeat, each a cell of the defeat table, \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Sola fide from Jesus' words (Luke 7:50)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Sola fide from Paul (Galatians 2:16)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness --- \cite{dunn-once-more-pistis-christou-1991}; \cite{matlock-detheologizing-2000}; Gal 2:16; Rom 3:22; Phil 3:9
+\item Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) --- \cite{sanders-paul-palestinian-judaism-1977}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Sola fide from Peter (Acts 15:9–11)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item The yoke refused at Acts 15:10 is the whole law as a condition of salvation --- \cite[ad loc. Acts 15:10]{bruce-acts-1988}; Acts 15:10; Gal 5:1; Jas 2:10; \cite{das-paul-law-covenant-2001}
+\item Justification and sanctification are inseparable but distinct --- \cite[XIII.1]{westminster-confession-1647}; \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.6]{calvin-institutes-1960}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Covenantal nomism (Sanders, Dunn)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism: in by grace, staying in by works --- \cite{sanders-paul-palestinian-judaism-1977}
+\item an inference step --- \cite{dunn-new-perspective-2005}; \cite{wright-what-paul-said-1997}
+\end{itemize}
+\item \emph{Variegated nomism (Gathercole, Carson et al.)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\item an inference step --- \cite{gathercole-where-boasting-2002}; \cite{carson-variegated-nomism-1-2001}
+\end{itemize}
+\item \emph{Law-observant Luke (Jervell)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite{jervell-luke-people-god-1972}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Sola fide from Jesus' words (Luke 7:50)} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
 \par\medskip\noindent\textbf{\texttt{sola\_\allowbreak{}fide\_\allowbreak{}not\_\allowbreak{}forced\_\allowbreak{}without\_\allowbreak{}the\_\allowbreak{}apocalyptic\_\allowbreak{}reading}}\par\nobreak\noindent
 \textbf{Without the apocalyptic reading, sola fide is no longer forced.} Trent, heard against the three Reformed strands alone, defends itself: it defeats each of them back. So some maximal defensible position holds Trent, and that position cannot hold the dominical case, which Trent defeats.
 

@@ -59,6 +59,123 @@ def restsOn [DecidableEq α] (e : Explanation α) : List α :=
 
 end Explanation
 
+/-- A piece of a generated sentence. The renderers set each piece in their own
+medium: a party's name in italics, and a defeat with its verb linked to what
+explains it. -/
+inductive Seg
+  /-- Words, written by the generator. -/
+  | text (s : String)
+  /-- A party, by its package's name. -/
+  | party (name : String)
+  /-- "*a* defeats *b*", by the two packages' names. -/
+  | defeat (a b : String)
+
+/-- A premise a party holds at its weakest link: the claim (or its denial, or
+the party's inference), how firmly it is held, and who says so. -/
+structure Held where
+  /-- What is held. -/
+  what : String
+  /-- At what confidence. A denied claim ranks `disputed`, whatever its
+  citation, because the citation rates the claim and not its denial. -/
+  confidence : Confidence
+  /-- The citation that rates it. -/
+  source : Source
+
+/-- A party a verdict rests on, and its weakest link: the lowest rating among
+its premises and inferences, with every premise held at that rating. -/
+structure Reading where
+  /-- The party, by its package's name. -/
+  party : String
+  /-- Its weakest link; empty if it has no rated premise. -/
+  weakest : List Held
+
+/-- Why a verdict holds, as a page shows it: the claim, then the reasons as an
+indented list, both generated from a checked witness
+(`Testimony.Logic.Verdict`); and what the reasons rest on. -/
+structure Verdict where
+  /-- What the verdict says. -/
+  claim : List Seg
+  /-- The reasons, each with its depth in the list. -/
+  reasons : List (Nat × List Seg)
+  /-- Every cell of the defeat table the reasons use: attacker, attacked, and
+  whether the one defeats the other. -/
+  cells : List (String × String × Bool)
+  /-- Every party those cells involve, at its weakest link. -/
+  readings : List Reading
+
+/-- A `Because` on the page, found by the pair it explains: the holder's name,
+the rival's name, and the declaration. A defeat of the rival by the holder links
+to it. -/
+abbrev BecauseLink := String × String × String
+
+/-- The declaration explaining why `a` defeats `b`, if the page has one. -/
+def becauseFor (links : List BecauseLink) (a b : String) : Option String :=
+  (links.find? fun (h, r, _) => h == a && r == b).map (·.2.2)
+
+/-- What an edge of a dispute's graph is. A support, and each attack derived
+through support, carries whether the same pair is already a defeat. -/
+inductive EdgeKind
+  /-- The first defeats the second. -/
+  | defeat
+  /-- The first's conclusion entails a claim the second rests on. -/
+  | support (alsoDefeats : Bool)
+  /-- The first supports a party that defeats the second. -/
+  | supportedAttack (alsoDefeats : Bool)
+  /-- The first defeats a party that supports the second. -/
+  | secondaryAttack (alsoDefeats : Bool)
+  /-- The first's whole case is part of the second's. -/
+  | partOf
+  /-- The first defeats a party whose case is part of the second's. -/
+  | partAttack (alsoDefeats : Bool)
+
+/-- A dispute's graph, as a page shows it (`Testimony.Logic.Map`): the parties,
+numbered, and every edge between them by number. -/
+structure Graph where
+  /-- The parties, by their packages' names, in the order they are numbered. -/
+  nodes : List String
+  /-- Every edge: from, to, and what it is. -/
+  edges : List (Nat × Nat × EdgeKind)
+
+namespace Graph
+
+/-- Where party `k` of `n` sits on the unit circle, the first at the top and the
+rest clockwise: the layout both renderings draw. -/
+def position (n k : Nat) : Float × Float :=
+  let θ := 3.141592653589793 / 2 - 2 * 3.141592653589793 * k.toFloat / n.toFloat
+  (Float.cos θ, Float.sin θ)
+
+/-- What an edge is, in words, for the table. -/
+def EdgeKind.describe : EdgeKind → String
+  | .defeat => "defeats"
+  | .support d => "supports" ++ (if d then " — and defeats" else "")
+  | .supportedAttack d =>
+    "supported attack" ++ (if d then " — already a defeat" else " — not a defeat")
+  | .secondaryAttack d =>
+    "secondary attack" ++ (if d then " — already a defeat" else " — not a defeat")
+  | .partOf => "is part of"
+  | .partAttack d =>
+    "attack on a part" ++ (if d then " — already a defeat" else " — not a defeat")
+
+/-- Whether an edge is drawn: defeats and supports are; the attacks derived
+through support are listed in the table only. -/
+def EdgeKind.drawn : EdgeKind → Bool
+  | .defeat | .support _ | .partOf => true
+  | _ => false
+
+/-- The derived attacks that are not already defeats. -/
+def undirected (g : Graph) : Nat :=
+  (g.edges.filter fun (_, _, k) => match k with
+    | .supportedAttack false | .secondaryAttack false | .partAttack false => true
+    | _ => false).length
+
+/-- The pairs in which one party both supports and defeats the other. -/
+def conflicted (g : Graph) : Nat :=
+  (g.edges.filter fun (_, _, k) => match k with
+    | .support true => true
+    | _ => false).length
+
+end Graph
+
 /-- One element of a generated page.
 
 `prose` is a module docstring, lifted whole; the rest are declarations, each
@@ -84,6 +201,13 @@ inductive Item (α : Type)
   | result (decl doc statement : String) (proposed : Bool)
   /-- Why one position stands against another: a `Because`. -/
   | because (decl doc : String) (e : Explanation α)
+  /-- A dispute's verdict, with the reasons generated from its witness, the
+  page's `Because` declarations to link its defeats to, and the theorem that
+  proves the defeat table (empty if none was found). -/
+  | verdict (decl doc : String) (v : Verdict) (links : List BecauseLink) (table : String)
+  /-- A dispute's graph, with the theorems proving its defeat, support and
+  part-of tables (each empty if none was found). -/
+  | graph (decl doc : String) (g : Graph) (defeatTable supportTable partTable : String)
 
 namespace Item
 

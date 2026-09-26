@@ -175,6 +175,54 @@ elab "derive_argument_bodies " tableName:ident : command => do
           items := items.push (k, d.declarationRange.pos.line, true,
             ← `(Logic.Page.Item.prose $(quote md)))
 
+    -- What a verdict links to: the page's `Because` declarations, by the pair
+    -- they explain, and each dispute's defeat-table theorem — the one stating
+    -- `∀ i j, D.defeats i j ↔ …` — by the dispute it is about.
+    let mut becauseLinks : Array (TSyntax `term) := #[]
+    let mut tableOf : Std.HashMap Name Name := {}
+    let mut supportTableOf : Std.HashMap Name Name := {}
+    let mut partTableOf : Std.HashMap Name Name := {}
+    for n in (declsOf.getD ns #[]) do
+      let some info := env.find? n | continue
+      if info.type.getAppFn.constName? == some ``Logic.Because then
+        becauseLinks := becauseLinks.push (← `(((Logic.Because.view $(mkIdent n)).holder,
+          (Logic.Because.view $(mkIdent n)).rival, $(quote n.getString!))))
+      if info matches .thmInfo _ then
+        -- Which table a theorem proves, if any: 0 defeats, 1 supports, 2 part-of.
+        let d? ← liftTermElabM <| Meta.forallTelescope info.type fun _ body => do
+          let lhs := body.getArg! 0
+          let rel (c : Name) := lhs.isAppOfArity c 5
+          let dispute := (lhs.getArg! 2).constName?
+          if body.isAppOfArity ``Iff 2 && rel ``Logic.Dispute.defeats then
+            pure (dispute.map (·, 0))
+          else if (body.isAppOfArity ``Iff 2 || body.isAppOfArity ``Not 1) &&
+              rel ``Logic.Dispute.supports then
+            pure (dispute.map (·, 1))
+          else if body.isAppOfArity ``Iff 2 && rel ``Logic.Dispute.partOf then
+            pure (dispute.map (·, 2))
+          else pure none
+        match d? with
+        | some (d, 0) => tableOf := tableOf.insert d n
+        | some (d, 1) => supportTableOf := supportTableOf.insert d n
+        | some (d, _) => partTableOf := partTableOf.insert d n
+        | none => pure ()
+
+    -- The dispute a verdict is about, followed through hearings and the
+    -- abbreviations that name them, to the one whose table is proved.
+    let tableIn (tables : Std.HashMap Name Name) (ty : Expr) : String := Id.run do
+      let mut e := ty.getArg! 3
+      for _ in [0:8] do
+        if e.isAppOf ``Logic.Dispute.restrict then e := e.getArg! 2
+        else match e.constName? with
+          | some c =>
+            if let some t := tables[c]? then return t.getString!
+            match env.find? c |>.bind (·.value?) with
+            | some v => e := v
+            | none => return ""
+          | none => return ""
+      return ""
+    let tableFor := tableIn tableOf
+
     -- The declarations: each rendered by what its type says it is.
     let mut atomTy : Option Name := none
     for n in (declsOf.getD ns #[]) do
@@ -213,6 +261,15 @@ elab "derive_argument_bodies " tableName:ident : command => do
           else if headIs ``Logic.Because then
             `(Logic.Page.Item.because $(quote dname) $(quote doc)
                 (Logic.Because.view $(mkIdent n)))
+          else if headIs ``Logic.Verdict then
+            `(Logic.Page.Item.verdict $(quote dname) $(quote doc)
+                (Logic.Verdict.view $(mkIdent n)) [$(becauseLinks),*]
+                $(quote (tableFor info.type)))
+          else if headIs ``Logic.ArgumentMap then
+            `(Logic.Page.Item.graph $(quote dname) $(quote doc)
+                (Logic.ArgumentMap.view $(mkIdent n)) $(quote (tableFor info.type))
+                $(quote (tableIn supportTableOf info.type))
+                $(quote (tableIn partTableOf info.type)))
           else if headIs ``Logic.Line then
             `(Logic.Page.Item.line $(quote dname) $(quote doc) $(mkIdent n))
           else if headIs ``Logic.Formula then

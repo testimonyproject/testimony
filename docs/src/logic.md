@@ -554,10 +554,12 @@ strengths, an absence with `not_defeats_of_models` or
 `not_defeats_of_outweighed`, one named world per premise.
 
 **3. State what survives, with its reason.** Describe the dispute once in
-solver form (`Testimony.Logic.Solver`) — every party listed, and the table as a
-Boolean. Then state each verdict with a **witness**: a small declaration of why
-it holds, which a checker proved sound once against `Testimony.Logic.Framework`
-confirms (`Testimony.Logic.Witness`):
+solver form (`Testimony.Logic.Solver`): every party listed, and the table as a
+Boolean. Then declare each verdict as a `Verdict` (`Testimony.Logic.Verdict`).
+It holds the verdict's claim and its **witness**, a small statement of why it
+holds. A checker proved sound once against `Testimony.Logic.Framework` confirms
+the witness (`Testimony.Logic.Witness`), and the result follows from
+`Verdict.holds`:
 
 ```lean
 def isaiahFinite : Solver.Finite isaiahDispute.defeats where
@@ -568,17 +570,41 @@ def isaiahFinite : Solver.Finite isaiahDispute.defeats where
 
 /-- Why the critical denial cannot be defended: Postell attacks it, and nothing
 answers Postell. -/
-def criticAnsweredByPostell : Witness.Table Party := [(.critical, .postell)]
+def criticAnsweredByPostell : Verdict isaiahDispute where
+  finite := isaiahFinite
+  claim := .indefensible .critical [(.critical, .postell)]
+  checked := by decide +kernel
 
 theorem critical_denial_indefensible (S : Set Party)
     (hS : Admissible isaiahDispute.defeats S) : Party.critical ∉ S :=
-  Witness.not_mem_admissible_of_witness (F := isaiahFinite) (t := criticAnsweredByPostell)
-    (by decide +kernel) S hS
+  criticAnsweredByPostell.holds S hS
 ```
 
-The witness is the reason, and its docstring says it in words; the check makes
-sure the words are true of the table. A wrong witness fails to check — it cannot
-prove a wrong verdict.
+A wrong witness fails to check, so it cannot prove a wrong verdict. And the
+page does not take the docstring's word for the reason. It renders the reason
+from the witness itself, naming each defeat by the two parties' packages:
+
+> ***Critical denial of the predictive reading of Isaiah 7:14* cannot be
+> defended: no admissible position holds it.**
+>
+> - *Postell's parity argument against the near-term exclusion* defeats
+>   *Critical denial of the predictive reading of Isaiah 7:14*, and nothing
+>   defeats *Postell's parity argument against the near-term exclusion*.
+
+Under the reasons, the page says what they rest on: how many cells of the
+defeat table they state (defeats named, and the absences of defeat that
+"nothing defeats *c*" quantifies over), and every party those cells involve at
+its weakest link, each premise with its citation. Those are the readings to
+contest to contest the verdict. Two limits, stated in the module docstring:
+that the verdict holds of any table agreeing on those cells is stated but not
+yet proved, and denying one reading need not overturn the verdict, which may
+stand by another route.
+
+So a docstring that drifts from its witness is visible: the generated list
+beneath it says otherwise, and changing the witness changes the page, which
+`argdoc --check` catches. A defeat that a `Because` on the same page explains
+links to it. Each page also names the defeat table's theorem, where every
+defeat mentioned is proved.
 
 | Verdict | Witness |
 |---|---|
@@ -607,6 +633,40 @@ hearing's witnesses in the parties' own names. That is how a result says what
 one party is worth: take it away and see what survives. A verdict re-checks
 itself when a party is added, and a witness that no longer holds fails to
 check.
+
+**Draw the dispute.** An `ArgumentMap` (`Testimony.Logic.Map`) is the
+dispute's graph as one declaration: the defeat table the solver uses, and two
+tables of how parties stand together (`Testimony.Logic.Support`).
+
+- **Support.** One party supports another when its conclusion entails a claim
+  the other rests on. Only a claim counts, an atom or a denied atom, never an
+  inference step. A conclusion can entail a step vacuously, by denying its
+  antecedent. Or it can entail the step by concluding what the step concludes,
+  which is agreement, not support. Both happen in the library's disputes.
+- **Part of.** One party's case is part of another's when every premise of the
+  first follows from the second's premises. The Pauline strand derives its ἔργα
+  νόμου premise from the critics' line, which denies covenantal nomism, instead
+  of assuming it. So the critics' case is part of Paul's, and Sanders meets Paul
+  on the history of Second Temple Judaism, where the literature has the dispute.
+
+Both tables are proved like the defeat table, cell by cell, by `supports?` or
+`partOf?` and `decide +kernel`:
+
+```lean
+theorem solaFideDispute_partOf : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
+  intro i j
+  refine partOf_iff_of_partOf? ?_
+  cases i <;> cases j <;> decide +kernel
+```
+
+The page draws the graph, lists the parties by number, and tabulates every
+edge. With the defeats, supports and parts it lists the attacks they imply. A
+**supported attack** is one where *a* supports a party that defeats *c*. A
+**secondary attack** is one where *a* defeats a party that supports *c*. An
+**attack on a part** is one where *a* defeats a party whose case is part of
+*c*'s. These are reported alongside the defeats and never added to them, so no
+verdict depends on them. Each is marked by whether it is already a defeat, and
+the page counts those that are not: questions the dispute leaves open.
 
 **4. Say why a position stands against a rival.** A verdict says *who*
 survives; a reader also asks *why*. `Because P R` (`Testimony.Logic.Because`)
