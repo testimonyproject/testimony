@@ -27,8 +27,10 @@ inductive Claim
   /-- 2 Timothy 3:17 — that the man of God may be complete, equipped for every
   good work. The sufficiency prooftext. -/
   | timothy3_17ThoroughlyEquips
-  /-- Mark 7:8–13 — Jesus rebukes tradition that nullifies the command of
-  God. -/
+  /-- Mark 7:1–13, with its parallel in Matthew 15:1–9 — Jesus rebukes the
+  elders' tradition, Corban above all, for voiding the command of God, and
+  quotes Isaiah 29:13 against it: "teaching as doctrines the commandments of
+  men". What the text says, not yet what follows from it. -/
   | mark7TraditionCanNullify
   /-- Acts 17:11 — the Bereans tested apostolic preaching against scripture.
   Scripture adjudicating rather than sourcing. -/
@@ -53,7 +55,11 @@ inductive Claim
   of the eliminative line. -/
   | noOtherRuleIsInfallible
   /-- Tradition is a coordinate source of revelation alongside scripture.
-  **Tradition II**, canonised at Trent. -/
+  **Tradition II**, Trent as Oberman and Mathison read it. Rated `disputed`:
+  Geiselmann grants Trent's Session IV and denies that it canonised two
+  coordinate sources — the draft's "partly … partly" (*partim … partim*) became
+  "and" (*et*), which leaves open whether Scripture holds all revealed content —
+  and Congar judges that Trent left the question open. -/
   | traditionIsCoordinateSourceOfRevelation
   /-- The magisterium is an infallible interpreter of scripture.
   **Tradition III**, resting on Vatican I. -/
@@ -127,6 +133,24 @@ inductive Claim
   /-- Perspicuity is claimed only for what is necessary for salvation, not for
   all of scripture alike. Westminster I.7. -/
   | perspicuityIsLimitedToSalvationEssentials
+  /-- **Mark 7's principle.** God's word judges human tradition: no commandment
+  of men may be taught as God's word, and a tradition that voids God's command
+  is void. Held by Rome as firmly as by the Reformers: the Church's teaching
+  office is "not above the word of God" (*Dei Verbum* 10). It is common ground
+  only while "God's word" is left as each side uses it — for Rome it includes
+  the apostolic Tradition. Read as "Scripture judges every tradition", it is the
+  Reformed claim, and Rome denies it. -/
+  | godsWordJudgesTradition
+  /-- A commandment of men may rightly be bound on the Church as God's word.
+  What the elders claimed for Corban, and what Isaiah 29:13 condemns. Trent,
+  read as receiving commandments of men, is committed to it; Mark 7's principle
+  denies it. -/
+  | mensCommandmentBindsAsGodsWord
+  /-- No apostolic teaching handed on outside Scripture survives, identifiable
+  as the word of God. **The step from Mark 7 to sola scriptura needs it**, and
+  Rome denies it: the apostles handed on by word as well as by letter
+  (2 Thessalonians 2:15). -/
+  | noApostolicWordOutsideScripture
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaScriptura
