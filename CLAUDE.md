@@ -158,6 +158,10 @@ Mathlib, doc-gen4 and axiom-audit). Do not bump it without checking Foundation.
 First build after a clone needs `lake exe cache get` or it will compile Mathlib
 from source.
 
+In a Claude Code cloud session, `.claude/hooks/session-start.sh` runs at start:
+it puts `lake` on `PATH` and installs `tectonic` and `mdbook`, pinned as the
+devcontainer pins them, so the PDF and the docs site can be rendered too.
+
 ## Gotchas found the hard way
 
 - `section` and `meta` are reserved; use `sectionRef` and `cite`.
