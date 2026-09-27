@@ -3,8 +3,9 @@ import Testimony.Arguments.SolaScriptura.Sources
 /-!
 # Arguments.SolaScriptura.Lines — the inference steps and the lines of reason
 
-Two lines reach the conclusion, three positions deny it, and three objections
-attack it from different directions. The objections do not reduce to one
+Three routes reach the conclusion — the classical line, the eliminative line,
+and Mark 7's, which takes two lines — three positions deny it, and three
+objections attack it from different directions. The objections do not reduce to one
 another: self-refutation says the doctrine fails its own standard, the canon
 objection says an authority outside scripture is needed to identify scripture,
 and the interpretive-authority regress says the authority claimed is the
@@ -39,6 +40,33 @@ teaches the principle. -/
 @[solaScripturaDefs]
 def eliminativeToSoleRule : Formula Claim :=
   ⋀ [p .scriptureIsInfallible, p .noOtherRuleIsInfallible] ➝ p .scriptureIsSoleInfallibleRule
+
+/-- **Mark 7's step**: from Jesus' rebuke of the elders' tradition to the
+principle it enacts — God's word judges human tradition. Rated `wellSupported`:
+no reader was found who grants the text and denies the principle, and Rome
+grants it in so many words (*Dei Verbum* 10). Not `consensus`, because the step
+generalises from one pericope. -/
+@[solaScripturaDefs]
+def mark7ToPrinciple : Formula Claim :=
+  p .mark7TraditionCanNullify ➝ p .godsWordJudgesTradition
+
+/-- What the principle says of a commandment of men: it may not be bound on the
+Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it. -/
+@[solaScripturaDefs]
+def principleExcludesMensCommandments : Formula Claim :=
+  p .godsWordJudgesTradition ➝ notP .mensCommandmentBindsAsGodsWord
+
+/-- **From Mark 7's principle to the sole rule.** If God's word judges human
+tradition, and no apostolic word survives outside Scripture, Scripture is the
+sole infallible rule. Rated `disputed`: Geiselmann holds that Scripture contains
+all revealed content and, as a Catholic after Vatican I, keeps the Magisterium
+as its infallible interpreter; Florovsky holds that tradition adds nothing to
+Scripture and keeps the mind of the Church as its interpreter. Neither adds a
+word to Scripture; both deny it is the *sole* infallible rule. -/
+@[solaScripturaDefs]
+def principleToSoleRule : Formula Claim :=
+  ⋀ [p .godsWordJudgesTradition, p .noApostolicWordOutsideScripture]
+  ➝ p .scriptureIsSoleInfallibleRule
 
 /-- Geisler's route: the historical-grammatical method suffices, so creeds may
 inform without binding, and no second infallible rule is needed. -/
@@ -134,6 +162,27 @@ def eliminativeLine : Line Claim :=
   , step := eliminativeToSoleRule
   , delivers := p .scriptureIsSoleInfallibleRule }
 
+/-- **Mark 7**, as a line of its own: Jesus' rebuke of the elders' tradition,
+and the principle it enacts. It delivers the principle, and no more. -/
+@[solaScripturaDefs]
+def mark7Line : Line Claim :=
+  { name := "Mark 7 (God's word judges human tradition)"
+  , grounds := [p .mark7TraditionCanNullify]
+  , step := mark7ToPrinciple
+  , delivers := p .godsWordJudgesTradition
+  , inference := some mark7PrincipleInference }
+
+/-- **From Mark 7 to the sole rule**: the principle, with the premise that no
+apostolic word survives outside Scripture. The principle is carried in by
+`mark7Line`; this line's own ground is the one Rome denies. -/
+@[solaScripturaDefs]
+def mark7SoleRuleLine : Line Claim :=
+  { name := "From Mark 7's principle to the sole rule"
+  , grounds := [p .noApostolicWordOutsideScripture]
+  , step := principleToSoleRule
+  , delivers := p .scriptureIsSoleInfallibleRule
+  , inference := some principleToSoleRuleInference }
+
 /-- **Tradition 0**, as Geisler states it rather than as Mathison describes
 it. -/
 @[solaScripturaDefs]
@@ -145,15 +194,20 @@ def tradition0Line : Line Claim :=
   , step := tradition0ToSoleRule
   , delivers := p .scriptureIsSoleInfallibleRule }
 
-/-- **Tradition II**, the Tridentine two-source position. -/
+/-- **Tradition II**, the Tridentine two-source position. Its step is rated
+`wellSupported`: once unwritten tradition is granted as a source of revelation
+alongside Scripture, no reader was found who denies that Scripture is then not
+the *sole* rule. Protestants deny the ground instead, and that dissent is
+weighed in the ground's own rating. -/
 @[solaScripturaDefs]
 def tridentineLine : Line Claim :=
-  { name := "Tradition II (two coordinate sources)"
+  { name := "Trent (Tradition II)"
   , grounds :=
       [ p .thessalonians2_15TraditionBinding
       , p .traditionIsCoordinateSourceOfRevelation ]
   , step := tridentineDeniesSoleRule
-  , delivers := notP .scriptureIsSoleInfallibleRule }
+  , delivers := notP .scriptureIsSoleInfallibleRule
+  , inference := some tridentineInference }
 
 /-- **Tradition III**, resting on Vatican I rather than on Trent. -/
 @[solaScripturaDefs]
@@ -315,12 +369,13 @@ def defeatUnderParity : Line Claim :=
 
 /-! ### Shared grounds and closing steps -/
 
-/-- What the Protestant packages rest on beyond any single line: the prooftexts
-that belong to no strand, the shared datum of 2 Thessalonians 2:15, and the
-commitments of the final-arbiter reading. -/
+/-- What the Protestant packages rest on beyond any single line: the prooftext
+that belongs to no strand, the shared datum of 2 Thessalonians 2:15, and the
+commitments of the final-arbiter reading. Mark 7 used to sit here too, a
+premise no step read; it is a line of its own now (`mark7Line`). -/
 @[solaScripturaDefs]
 def sharedGrounds : List (Formula Claim) :=
-  [ p .mark7TraditionCanNullify, p .acts17BereansTested
+  [ p .acts17BereansTested
   , p .thessalonians2_15TraditionBinding
   , p .doctrineDevelopsWithoutNewRevelation
   , p .traditionHasMinisterialAuthority

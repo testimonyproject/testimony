@@ -16,7 +16,8 @@ open Testimony Testimony.Logic
 
 /-! ### The positions -/
 
-/-- Given the Protestant premises, on either route, the conclusion follows. -/
+/-- Given the Protestant premises, on any of its three routes, the conclusion
+follows. -/
 @[headline]
 theorem protestant_establishes : Establishes protestant := by
   establish [solaScripturaDefs]
@@ -120,7 +121,8 @@ and — the result that matters — it is one of only two things that answer the
 self-refutation objection. -/
 
 /-- **The hinge is not load-bearing for the conclusion.** Strip it and the
-eliminative line still delivers the sole rule. -/
+eliminative line still delivers the sole rule, and so does Mark 7's — each on a
+premise of its own that the classical line does not need. -/
 @[headline]
 theorem hinge_not_load_bearing_for_conclusion : Establishes protestantWithoutHinge := by
   establish [solaScripturaDefs]

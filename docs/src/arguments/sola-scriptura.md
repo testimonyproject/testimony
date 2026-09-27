@@ -31,7 +31,7 @@ Mathison's taxonomy, after Oberman, separates what the seed encoding collapsed:
 |---|---|
 | **Tradition 0** | Tradition carries no binding authority; creeds inform without norming |
 | **Tradition I** | Tradition is ministerial — real authority, fallible, subordinate to scripture |
-| **Tradition II** | Two coordinate sources of revelation, canonised at Trent |
+| **Tradition II** | Two coordinate sources, as Mathison reads Trent; Geiselmann dissents |
 | **Tradition III** | The magisterium is the one real source, resting on Vatican I |
 
 Orthodoxy is a fifth thing again, and not a variant of Rome: authority rests in
@@ -129,6 +129,32 @@ That charge is made from inside the Reformation, against the position this
 module encodes as the Protestant one. It is conditional like every result here:
 deny either leg and the circle is not there.
 
+### What Mark 7 settles
+
+Jesus' rebuke of the elders' tradition (Mark 7:1–13; Matthew 15:1–9) is the
+text the Protestant case most often cites, and it used to sit among the shared
+grounds with no step reading it. It is a line of its own now, and it settles
+less than it is cited for. Its principle — God's word judges human tradition,
+and no commandment of men may be taught as God's word — is common ground: Rome
+holds it too. From the principle to sola scriptura needs one more premise, that
+no apostolic word survives outside Scripture, and Rome denies it.
+
+`whatTrentsTraditionIs` is the dilemma a reader of Mark 7 needs. Read as
+commandments of men, Trent's tradition is what Mark 7 condemns; read as the
+apostolic word handed on unwritten, which is what Trent says it receives, Mark 7
+does not reach it. Weighed as a dispute, Mark 7's principle — which both sides
+hold — prevails, Trent read as commandments of men cannot be defended, and
+between Mark 7's case for sola scriptura and Trent the dispute chooses neither
+(`Mark7.lean`, `Dispute.lean`, `Hearings.lean`).
+
+Weighing it moved a rating. `traditionIsCoordinateSourceOfRevelation` was
+`wellSupported`, which made no difference while no dispute read it. In the Mark 7
+dispute it would have decided who prevails, so it was audited: Geiselmann grants
+Trent's Session IV and denies that it canonised two coordinate sources, since the
+council replaced its draft's "partly … partly" with "and"; Congar judges that
+Trent left the question open. The claim is `disputed` now, and the Tridentine
+party is named "Trent (Tradition II)" rather than by the reading in dispute.
+
 ### A limitation worth stating
 
 The final-arbiter reading turns on a distinction between **doctrine**, which
@@ -146,7 +172,10 @@ given the distinction, not that the distinction can be drawn.
 | `Sources.lean` | `cite`, with each position cited from a source that holds it |
 | `Lines.lean` | the inference steps, the lines, and the replies as substituted grounds |
 | `Packages.lean` | the positions, the objections, and the variants the results refute |
-| `Results.lean` | every `@[headline]` result, with its trust base |
+| `Results.lean` | every `@[headline]` result on the positions and objections |
+| `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
+| `Dispute.lean` | the dispute over Mark 7, weighed, and its verdicts |
+| `Hearings.lean` | the same dispute heard against each reading of Trent |
 
 ## Arguments.SolaScriptura.Atoms — the atomic claims
 
@@ -172,6 +201,11 @@ than a Protestant account of Orthodoxy, and Tradition 0 cites Geisler rather
 than Mathison's description of it — Geisler's principal complaint being that
 the description is a caricature.
 
+#### Ratings for inference steps
+
+A step's rating is its own, cited to whoever grants its grounds and denies its
+conclusion — or, where no one was found who does, to whoever grants both.
+
 ## The claims, numbered
 
 <div class="testimony-legend">
@@ -180,7 +214,7 @@ the description is a caricature.
 |---|---|---|---|---|
 | \\(P_{1}\\) | 2 Timothy 3:16 — all scripture is God-breathed and profitable | textual | Reformed Protestant, well supported | 2 Tim 3:16; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii.1 |
 | \\(P_{2}\\) | 2 Timothy 3:17 — that the man of God may be complete, equipped for every good work | textual | Reformed Protestant, well supported | 2 Tim 3:17; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii.1 |
-| \\(P_{3}\\) | Mark 7:8–13 — Jesus rebukes tradition that nullifies God's command | textual | Reformed Protestant, well supported | Mark 7:8-13; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.8 |
+| \\(P_{3}\\) | Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command | textual | Christian, historical-grammatical, consensus | Mark 7:1-13; Matt 15:1-9; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.10 |
 | \\(P_{4}\\) | Acts 17:11 — the Bereans tested apostolic preaching against scripture | textual | Reformed Protestant, well supported | Acts 17:11; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii.2 |
 | \\(P_{5}\\) | 2 Thessalonians 2:15 — hold to the traditions taught by word or letter ※ | textual | Christian, historical-grammatical, consensus | 2 Thess 2:15 |
 | \\(P_{6}\\) | Scripture is infallible | theological | Christian, historical-grammatical, consensus | [`grudem-systematic-theology-1994`](../bibliography.md#grudem-systematic-theology-1994), §ch. 5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii |
@@ -190,7 +224,7 @@ the description is a caricature.
 | \\(P_{10}\\) | Scripture itself teaches that scripture is the sole infallible rule | interpretive | Reformed Protestant, disputed | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii.4 |
 | \\(P_{11}\\) | A doctrine is binding only if scripture teaches it | theological | Reformed Protestant, disputed | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.8 |
 | \\(P_{12}\\) | No candidate rule of faith other than scripture is infallible | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001) |
-| \\(P_{13}\\) | Tradition is a coordinate source of revelation alongside scripture | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001) |
+| \\(P_{13}\\) | Tradition is a coordinate source of revelation alongside scripture | theological | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966) |
 | \\(P_{14}\\) | The magisterium is an infallible interpreter of scripture | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001) |
 | \\(P_{15}\\) | The mind of the Church, in the consensus of the Fathers and in received conciliar decisions, infallibly interprets scripture | theological | Eastern Orthodox, well supported | [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972); [`ware-orthodox-church-1993`](../bibliography.md#ware-orthodox-church-1993) |
 | \\(P_{16}\\) | The canon is known through the Church's reception of it | historical | Roman Catholic, consensus | [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §Augustine, Contra epistolam Manichaei 5.6; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions |
@@ -214,10 +248,78 @@ the description is a caricature.
 | \\(P_{34}\\) | The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it | theological | Reformed Protestant, disputed | [`allen-swain-reformed-catholicity-2015`](../bibliography.md#allen-swain-reformed-catholicity-2015), §ch. 3 |
 | \\(P_{35}\\) | Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer | textual | Christian, historical-grammatical, plausible | *proposed:* Advanced here, not found in the literature as a reply to the circularity charge. The texts are cited; the use is assembled. Note it claims only that scripture \*bounds\* the office, not that it \*confers\* it — conferral invites the recognition/conferral distinction Mathison himself presses against Rome.; Acts 20:32; Titus 1:9; 1 Pet 5:2-3 |
 | \\(P_{36}\\) | Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.7 |
+| \\(P_{37}\\) | God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void | theological | Christian, historical-grammatical, consensus | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972) |
+| \\(P_{38}\\) | A commandment of men may rightly be bound on the Church as God's word | interpretive | Reformed Protestant, disputed | Mark 7:7; Isa 29:13; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23 |
+| \\(P_{39}\\) | No apostolic teaching handed on outside Scripture survives, identifiable as the word of God | theological | Reformed Protestant, disputed | [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6 |
 
 </div>
 
 ※ grounded in scripture alone: the reading is assumed, not argued for.
+
+<a id="mark7PrincipleInference"></a>
+**`mark7PrincipleInference`**
+
+The rating of Mark 7's step, from the rebuke to the principle. No reader was
+found who grants the text and denies the principle; Rome grants it outright —
+the teaching office is "not above the word of God" (*Dei Verbum* 10) — and
+Calvin applies Matthew 15:9 to the laws of worship he opposed. Rated
+`wellSupported` rather than `consensus`, because the step generalises from one
+pericope.
+
+```lean
+def mark7PrincipleInference : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef "Vatican II (1965), Dei Verbum 10"),
+    supporting :=
+      [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.x.23")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="principleToSoleRuleInference"></a>
+**`principleToSoleRuleInference`**
+
+The rating of the step from Mark 7's principle to the sole rule: `disputed`.
+Grant that God's word judges human tradition and that no apostolic teaching
+outside Scripture adds to it, and a reader may still deny that Scripture is the
+*sole* infallible rule. Geiselmann is that reader: he holds that Scripture
+contains all revealed content, grants the principle as every Catholic does, and
+as a Catholic after Vatican I still holds the Magisterium an infallible
+interpreter (*Pastor Aeternus* 4). Florovsky, for whom tradition adds nothing
+to Scripture, likewise keeps the mind of the Church as its authoritative
+interpreter.
+
+```lean
+def principleToSoleRuleInference : Source :=
+  { primary := Reference.work Bib.geiselmannMeaningOfTradition,
+    supporting :=
+      [Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef "Vatican I (1870), Pastor Aeternus, ch. 4"),
+        Reference.work Bib.florovskyBibleChurchTradition],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="tridentineInference"></a>
+**`tridentineInference`**
+
+The rating of Trent's step, from 2 Thessalonians 2:15 and tradition as a
+source of revelation to "Scripture is not the sole rule": `wellSupported`. Once
+the grounds are granted the conclusion all but follows, and no reader was found
+who grants both and denies it. Protestants deny the second ground instead, and
+that dissent is weighed in its own rating.
+
+```lean
+def tridentineInference : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef
+          "Trent, Session IV (1546), Decree on Sacred Books and Traditions"),
+    tradition := Tradition.romanCatholic,
+    confidence := Confidence.wellSupported }
+```
 
 <a id="cite"></a>
 **`cite`**
@@ -231,8 +333,9 @@ def cite : Claim → AtomMeta
 
 ## Arguments.SolaScriptura.Lines — the inference steps and the lines of reason
 
-Two lines reach the conclusion, three positions deny it, and three objections
-attack it from different directions. The objections do not reduce to one
+Three routes reach the conclusion — the classical line, the eliminative line,
+and Mark 7's, which takes two lines — three positions deny it, and three
+objections attack it from different directions. The objections do not reduce to one
 another: self-refutation says the doctrine fails its own standard, the canon
 objection says an authority outside scripture is needed to identify scripture,
 and the interpretive-authority regress says the authority claimed is the
@@ -270,6 +373,50 @@ teaches the principle.
 <div class="testimony-math">
 \[
 (P_{6} \land P_{12}) \rightarrow P_{9}
+\]
+</div>
+
+<a id="mark7ToPrinciple"></a>
+**`mark7ToPrinciple`**
+
+**Mark 7's step**: from Jesus' rebuke of the elders' tradition to the
+principle it enacts — God's word judges human tradition. Rated `wellSupported`:
+no reader was found who grants the text and denies the principle, and Rome
+grants it in so many words (*Dei Verbum* 10). Not `consensus`, because the step
+generalises from one pericope.
+
+<div class="testimony-math">
+\[
+P_{3} \rightarrow P_{37}
+\]
+</div>
+
+<a id="principleExcludesMensCommandments"></a>
+**`principleExcludesMensCommandments`**
+
+What the principle says of a commandment of men: it may not be bound on the
+Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it.
+
+<div class="testimony-math">
+\[
+P_{37} \rightarrow \lnot P_{38}
+\]
+</div>
+
+<a id="principleToSoleRule"></a>
+**`principleToSoleRule`**
+
+**From Mark 7's principle to the sole rule.** If God's word judges human
+tradition, and no apostolic word survives outside Scripture, Scripture is the
+sole infallible rule. Rated `disputed`: Geiselmann holds that Scripture contains
+all revealed content and, as a Catholic after Vatican I, keeps the Magisterium
+as its infallible interpreter; Florovsky holds that tradition adds nothing to
+Scripture and keeps the mind of the Church as its interpreter. Neither adds a
+word to Scripture; both deny it is the *sole* infallible rule.
+
+<div class="testimony-math">
+\[
+(P_{37} \land P_{39}) \rightarrow P_{9}
 \]
 </div>
 
@@ -431,6 +578,39 @@ teaches the principle.
 \]
 </div>
 
+<a id="mark7Line"></a>
+**`mark7Line`** — Mark 7 (God's word judges human tradition)
+
+**Mark 7**, as a line of its own: Jesus' rebuke of the elders' tradition,
+and the principle it enacts. It delivers the principle, and no more.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{3} \\
+\text{(2)} \quad &amp; P_{3} \rightarrow P_{37} \\[4pt]
+\vdash \quad &amp; P_{37}
+\end{aligned}
+\]
+</div>
+
+<a id="mark7SoleRuleLine"></a>
+**`mark7SoleRuleLine`** — From Mark 7's principle to the sole rule
+
+**From Mark 7 to the sole rule**: the principle, with the premise that no
+apostolic word survives outside Scripture. The principle is carried in by
+`mark7Line`; this line's own ground is the one Rome denies.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{39} \\
+\text{(2)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
+\vdash \quad &amp; P_{9}
+\end{aligned}
+\]
+</div>
+
 <a id="tradition0Line"></a>
 **`tradition0Line`** — Tradition 0 (creeds informative, not normative)
 
@@ -451,9 +631,13 @@ it.
 </div>
 
 <a id="tridentineLine"></a>
-**`tridentineLine`** — Tradition II (two coordinate sources)
+**`tridentineLine`** — Trent (Tradition II)
 
-**Tradition II**, the Tridentine two-source position.
+**Tradition II**, the Tridentine two-source position. Its step is rated
+`wellSupported`: once unwritten tradition is granted as a source of revelation
+alongside Scripture, no reader was found who denies that Scripture is then not
+the *sole* rule. Protestants deny the ground instead, and that dissent is
+weighed in the ground's own rating.
 
 <div class="testimony-math">
 \[
@@ -749,20 +933,20 @@ it is peculiar to this position.
 <a id="sharedGrounds"></a>
 **`sharedGrounds`**
 
-What the Protestant packages rest on beyond any single line: the prooftexts
-that belong to no strand, the shared datum of 2 Thessalonians 2:15, and the
-commitments of the final-arbiter reading.
+What the Protestant packages rest on beyond any single line: the prooftext
+that belongs to no strand, the shared datum of 2 Thessalonians 2:15, and the
+commitments of the final-arbiter reading. Mark 7 used to sit here too, a
+premise no step read; it is a line of its own now (`mark7Line`).
 
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{3} \\
-\text{(2)} \quad &amp; P_{4} \\
-\text{(3)} \quad &amp; P_{5} \\
-\text{(4)} \quad &amp; P_{28} \\
-\text{(5)} \quad &amp; P_{19} \\
-\text{(6)} \quad &amp; P_{24} \\
-\text{(7)} \quad &amp; P_{23}
+\text{(1)} \quad &amp; P_{4} \\
+\text{(2)} \quad &amp; P_{5} \\
+\text{(3)} \quad &amp; P_{28} \\
+\text{(4)} \quad &amp; P_{19} \\
+\text{(5)} \quad &amp; P_{24} \\
+\text{(6)} \quad &amp; P_{23}
 \end{aligned}
 \]
 </div>
@@ -787,10 +971,10 @@ the reply's `Line` is all it needs.
 <a id="protestant"></a>
 **`protestant`** — Protestant (sola scriptura as final arbiter)
 
-**The Protestant position**: two routes to the conclusion, on the
-final-arbiter reading. Scripture is not the only authority but the only
-infallible one; tradition is ministerial, and practices neither commanded nor
-forbidden need no scriptural warrant.
+**The Protestant position**: three routes to the conclusion, on the
+final-arbiter reading — the classical, the eliminative, and Mark 7's. Scripture
+is not the only authority but the only infallible one; tradition is ministerial,
+and practices neither commanded nor forbidden need no scriptural warrant.
 
 <div class="testimony-math">
 \[
@@ -803,14 +987,17 @@ forbidden need no scriptural warrant.
 \text{(6)} \quad &amp; P_{6} \\
 \text{(7)} \quad &amp; P_{12} \\
 \text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{28} \\
-\text{(12)} \quad &amp; P_{19} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; P_{23} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
-\text{(16)} \quad &amp; (P_{6} \land P_{12}) \rightarrow P_{9} \\[4pt]
+\text{(9)} \quad &amp; P_{39} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{28} \\
+\text{(13)} \quad &amp; P_{19} \\
+\text{(14)} \quad &amp; P_{24} \\
+\text{(15)} \quad &amp; P_{23} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
+\text{(17)} \quad &amp; (P_{6} \land P_{12}) \rightarrow P_{9} \\
+\text{(18)} \quad &amp; P_{3} \rightarrow P_{37} \\
+\text{(19)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
 \vdash \quad &amp; P_{9}
 \end{aligned}
 \]
@@ -841,7 +1028,7 @@ was supposed to do.
 No premise here rests on scripture alone.
 
 <a id="tridentine"></a>
-**`tridentine`** — Tradition II (two coordinate sources)
+**`tridentine`** — Trent (Tradition II)
 
 **Tradition II**, the Tridentine two-source position. Its line delivers the
 denial, so the package is not the line as it stands: the question asked of
@@ -1010,7 +1197,7 @@ them.
 **`protestantWithoutHinge`** — Protestant, minus the claim that scripture teaches the principle
 
 The Protestant position with the classical line stripped of the hinge. The
-eliminative line is untouched.
+eliminative and Mark 7 routes are untouched.
 
 <div class="testimony-math">
 \[
@@ -1022,14 +1209,17 @@ eliminative line is untouched.
 \text{(5)} \quad &amp; P_{6} \\
 \text{(6)} \quad &amp; P_{12} \\
 \text{(7)} \quad &amp; P_{3} \\
-\text{(8)} \quad &amp; P_{4} \\
-\text{(9)} \quad &amp; P_{5} \\
-\text{(10)} \quad &amp; P_{28} \\
-\text{(11)} \quad &amp; P_{19} \\
-\text{(12)} \quad &amp; P_{24} \\
-\text{(13)} \quad &amp; P_{23} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
-\text{(15)} \quad &amp; (P_{6} \land P_{12}) \rightarrow P_{9} \\[4pt]
+\text{(8)} \quad &amp; P_{39} \\
+\text{(9)} \quad &amp; P_{4} \\
+\text{(10)} \quad &amp; P_{5} \\
+\text{(11)} \quad &amp; P_{28} \\
+\text{(12)} \quad &amp; P_{19} \\
+\text{(13)} \quad &amp; P_{24} \\
+\text{(14)} \quad &amp; P_{23} \\
+\text{(15)} \quad &amp; (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
+\text{(16)} \quad &amp; (P_{6} \land P_{12}) \rightarrow P_{9} \\
+\text{(17)} \quad &amp; P_{3} \rightarrow P_{37} \\
+\text{(18)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
 \vdash \quad &amp; P_{9}
 \end{aligned}
 \]
@@ -1188,7 +1378,8 @@ come apart.
 <a id="protestant_establishes"></a>
 **`protestant_establishes`**
 
-Given the Protestant premises, on either route, the conclusion follows.
+Given the Protestant premises, on any of its three routes, the conclusion
+follows.
 
 ```lean
 theorem protestant_establishes : Establishes protestant
@@ -1337,7 +1528,8 @@ self-refutation objection.
 **`hinge_not_load_bearing_for_conclusion`**
 
 **The hinge is not load-bearing for the conclusion.** Strip it and the
-eliminative line still delivers the sole rule.
+eliminative line still delivers the sole rule, and so does Mark 7's — each on a
+premise of its own that the classical line does not need.
 
 ```lean
 theorem hinge_not_load_bearing_for_conclusion : Establishes
@@ -2073,4 +2265,1508 @@ The interpretive-authority regress has a model.
 theorem interpretiveRegress_is_satisfiable : Satisfiable
     interpretiveRegress.premises
 -- axioms: propext, Quot.sound
+```
+
+## Arguments.SolaScriptura.Mark7 — what Jesus' rebuke of tradition settles
+
+The Pharisees and scribes ask why Jesus' disciples eat with unwashed hands,
+against "the tradition of the elders". Jesus answers with Isaiah 29:13 — "in
+vain do they worship me, teaching as doctrines the commandments of men" — and
+with Corban: a gift vowed to God releases a son from supporting his father and
+mother, "thus making void the word of God by your tradition" (Mark 7:1–13;
+Matthew 15:1–9). The Protestant case has always cited it. Until now it only sat
+among the shared grounds, and no step read it.
+
+### What Mark 7 settles
+
+**The principle is common ground.** God's word judges human tradition: no
+commandment of men may be taught as God's word, and a tradition that voids
+God's command is void. Rome says the same — its teaching office is "not above
+the word of God" (*Dei Verbum* 10) — and so the principle is not a Protestant
+win. Trent, as it states its position, can hold every word of it
+(`trent_grants_marks_principle`).
+
+**It does not reach sola scriptura on its own.** From the principle to "Scripture
+is the sole infallible rule" needs one more premise: that no apostolic teaching
+handed on outside Scripture survives as God's word. Without it, Mark 7 leaves the
+sole rule open — neither it nor its denial follows
+(`mark7_without_the_hinge_leaves_the_sole_rule_open`). With it, the conclusion
+follows (`mark7Case_establishes`), and the premise is rated `disputed`: Rome
+denies it from 2 Thessalonians 2:15 ("by word *or* by letter"). The step itself
+is disputed too. A reader can grant the principle, and grant that nothing
+apostolic survives outside Scripture, and still deny that Scripture is the
+*sole* infallible rule: Florovsky, for whom tradition adds nothing to Scripture
+and the mind of the Church interprets it; or a Catholic who holds Scripture
+materially sufficient and the Magisterium infallible.
+
+### What Rome's "tradition" means
+
+The question the passage raises for a reader is whether the tradition Jesus
+condemns is the thing Rome means by Tradition. `whatTrentsTraditionIs` answers
+both readings.
+
+- **Read as commandments of men** — Calvin's reading of the laws of worship he
+  opposed, applying Matthew 15:9 to them (*Institutes* IV.x.23) — Trent's claim
+  is exactly what Mark 7 condemns. The reading cannot be held with Mark 7's
+  principle, at a step rated `wellSupported`.
+- **Read as the apostolic word handed on unwritten** — what Trent says it
+  receives, traditions "received by the Apostles from the mouth of Christ
+  himself, or from the Apostles themselves, the Holy Ghost dictating" (Session
+  IV, in Waterworth's translation) — Mark 7 does not reach it. Nothing in the principle is denied.
+  The reading meets the Mark 7 case only at the premise the step to sola
+  scriptura needs, that no apostolic word survives outside Scripture, and that
+  premise is `disputed`.
+
+So Mark 7 does not decide between Rome and the Reformers. It moves the question
+to what the sola scriptura argument already turned on: whether any unwritten
+apostolic word survives and can be identified — and, even granting that none
+does, whether the principle then makes Scripture the *sole* infallible rule.
+
+#### The quotation
+
+<a id="mark7QuotesIsaiah"></a>
+**`mark7QuotesIsaiah`**
+
+**Mark 7:6–7 quotes Isaiah 29:13.** Typed `.quotation`, not `.allusion`:
+Jesus introduces the words with "as it is written", and Mark gives them close to
+the Septuagint's wording.
+
+```lean
+def mark7QuotesIsaiah : IntertextEdge :=
+  { fromPassage := Scripture.mark7_7, toPassage := Scripture.isaiah29_13,
+    relation := RelationType.quotation,
+    source := Scripture.na28Apparatus Scripture.mark7_7 }
+```
+
+<a id="matthew15QuotesIsaiah"></a>
+**`matthew15QuotesIsaiah`**
+
+**Matthew 15:8–9 quotes the same verse**, in the parallel account.
+
+```lean
+def matthew15QuotesIsaiah : IntertextEdge :=
+  { fromPassage := Scripture.matthew15_9, toPassage := Scripture.isaiah29_13,
+    relation := RelationType.quotation,
+    source := Scripture.na28Apparatus Scripture.matthew15_9 }
+```
+
+#### The positions
+
+<a id="mark7Principle"></a>
+**`mark7Principle`** — Mark 7: God's word judges human tradition
+
+**Mark 7's principle**: Jesus' rebuke of the elders' tradition, and what it
+enacts — God's word judges human tradition, and no commandment of men is to be
+taught as God's word. It concludes the principle, and claims nothing about
+Scripture's place among the rules of faith.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{3} \\
+\text{(2)} \quad &amp; P_{3} \rightarrow P_{37} \\
+\text{(3)} \quad &amp; P_{37} \rightarrow \lnot P_{38} \\[4pt]
+\vdash \quad &amp; P_{37}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="mark7Case"></a>
+**`mark7Case`** — Sola scriptura from Mark 7
+
+**Mark 7's case for sola scriptura**: the principle, and the premise that no
+apostolic word survives outside Scripture.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{3} \\
+\text{(2)} \quad &amp; P_{39} \\
+\text{(3)} \quad &amp; P_{3} \rightarrow P_{37} \\
+\text{(4)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
+\vdash \quad &amp; P_{9}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="mark7CaseWithoutTheHinge"></a>
+**`mark7CaseWithoutTheHinge`** — Sola scriptura from Mark 7, without the premise about unwritten apostolic word
+
+Mark 7's case without the premise that no apostolic word survives outside
+Scripture: the text, the principle, and the step to the sole rule.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{3} \\
+\text{(2)} \quad &amp; P_{3} \rightarrow P_{37} \\
+\text{(3)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
+\vdash \quad &amp; P_{9}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="tridentineCase"></a>
+**`tridentineCase`** — Trent (Tradition II)
+
+**Trent (Tradition II)**, as Mathison reads it: 2 Thessalonians 2:15 and
+tradition as a source of revelation alongside Scripture, so Scripture is not the
+sole rule. Unread: it says what Trent receives, not whether it is apostolic word
+or a commandment of men. The package `tridentine` asks these premises whether
+sola scriptura follows; this one states what they conclude, which is what a
+dispute weighs.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{5} \\
+\text{(2)} \quad &amp; P_{13} \\
+\text{(3)} \quad &amp; (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\[4pt]
+\vdash \quad &amp; \lnot P_{9}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+
+#### Two readings of Trent's "tradition"
+
+<a id="trentReadAsMensCommandments"></a>
+**`trentReadAsMensCommandments`**
+
+Reading Trent's traditions as commandments of men: God "is worshipped with
+laws of human invention", Calvin says of the laws of worship he opposed, and he
+applies Matthew 15:9 to them — "in vain do they worship me, teaching for
+doctrines the commandments of men" (*Institutes* IV.x.23). Rated `disputed`:
+Trent, *Dei Verbum* 9–10 and the *Catechism* deny that what Trent receives is of
+human origin — the *Catechism* (§83) distinguishes the apostolic Tradition from
+the "theological, disciplinary, liturgical or devotional traditions" which "can
+be retained, modified or even abandoned". No one reads Trent as *claiming* human
+origin: this is a reading of what those traditions are, not of what Trent
+says.
+
+```lean
+def trentReadAsMensCommandments : Source :=
+  {
+    primary :=
+      Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.x.23"),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="trentReadAsApostolicWord"></a>
+**`trentReadAsApostolicWord`**
+
+Reading Trent's traditions as the apostolic word handed on unwritten: what
+Trent says it receives, the traditions "received by the Apostles from the mouth
+of Christ himself, or from the Apostles themselves, the Holy Ghost dictating"
+(Session IV, Waterworth 18). *Dei Verbum* 9 says the same: tradition "takes the
+word of God entrusted by Christ the Lord and the Holy Spirit to the Apostles,
+and hands it on". Rated `consensus` as an account of what Trent claims: Calvin
+and Chemnitz do not deny that Trent claims apostolic origin; they deny that the
+claim is true.
+
+```lean
+def trentReadAsApostolicWord : Source :=
+  { primary := Reference.work Bib.waterworthTrent (Bib.Locus.page 18),
+    supporting :=
+      [Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef
+            "Trent, Session IV (1546), Decree on Sacred Books and Traditions"),
+        Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef "Vatican II (1965), Dei Verbum 9"),
+        Reference.work Bib.catechismCatholicChurch (Bib.Locus.sectionRef "83")],
+    tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
+```
+
+<a id="asMensCommandments"></a>
+**`asMensCommandments`**
+
+Trent's tradition, **read as commandments of men**: what it receives
+alongside Scripture is a commandment of men, bound on the Church as God's
+word.
+
+```lean
+def asMensCommandments : Reading Claim :=
+  { name := "as commandments of men",
+    commits :=
+      p Claim.mensCommandmentBindsAsGodsWord,
+    source := trentReadAsMensCommandments }
+```
+
+<a id="asApostolicWord"></a>
+**`asApostolicWord`**
+
+Trent's tradition, **read as the apostolic word handed on unwritten**: some
+apostolic teaching outside Scripture survives as God's word.
+
+```lean
+def asApostolicWord : Reading Claim :=
+  { name := "as the apostolic word handed on unwritten",
+    commits :=
+      notP Claim.noApostolicWordOutsideScripture,
+    source := trentReadAsApostolicWord }
+```
+
+<a id="tridentineAsMensCommandments"></a>
+**`tridentineAsMensCommandments`** — Trent (Tradition II), read as commandments of men
+
+Trent, with its tradition read as commandments of men.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{5} \\
+\text{(2)} \quad &amp; P_{13} \\
+\text{(3)} \quad &amp; (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\
+\text{(4)} \quad &amp; P_{13} \rightarrow P_{38} \\[4pt]
+\vdash \quad &amp; \lnot P_{9}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+
+<a id="tridentineAsApostolicWord"></a>
+**`tridentineAsApostolicWord`** — Trent (Tradition II), read as the apostolic word handed on unwritten
+
+Trent, with its tradition read as the apostolic word handed on unwritten.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{5} \\
+\text{(2)} \quad &amp; P_{13} \\
+\text{(3)} \quad &amp; (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\
+\text{(4)} \quad &amp; P_{13} \rightarrow \lnot P_{39} \\[4pt]
+\vdash \quad &amp; \lnot P_{9}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+
+#### Readings, written down
+
+<a id="marksPrincipleReading"></a>
+**`marksPrincipleReading`**
+
+The Reformed world: Mark 7's text and principle, no commandment of men bound
+as God's word, no apostolic word outside Scripture, and sola scriptura.
+
+```lean
+def marksPrincipleReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.mensCommandmentBindsAsGodsWord => False
+    | x => True
+```
+
+<a id="romeGrantsMarksPrincipleReading"></a>
+**`romeGrantsMarksPrincipleReading`**
+
+Rome's world, granting Mark 7: God's word judges human tradition and no
+commandment of men may be bound as God's word; but apostolic teaching survives
+outside Scripture, so Scripture is not the sole infallible rule.
+
+```lean
+def romeGrantsMarksPrincipleReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.mensCommandmentBindsAsGodsWord => False
+    | Claim.noApostolicWordOutsideScripture => False
+    | Claim.scriptureIsSoleInfallibleRule => False
+    | x => True
+```
+
+<a id="mensCommandmentsReading"></a>
+**`mensCommandmentsReading`**
+
+A world in which Trent, its tradition read Calvin's way, holds together: its
+tradition is a commandment of men bound as God's word, and Scripture is not the
+sole rule. It must give up Mark 7's principle, so no one holds this world; it
+shows only that the reading is coherent on its own.
+
+```lean
+def mensCommandmentsReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.godsWordJudgesTradition => False
+    | Claim.scriptureIsSoleInfallibleRule => False
+    | x => True
+```
+
+#### Mark 7's principle, and what it reaches
+
+<a id="mark7Principle_establishes"></a>
+**`mark7Principle_establishes`**
+
+**Mark 7 delivers its principle**: God's word judges human tradition.
+
+```lean
+theorem mark7Principle_establishes : Establishes mark7Principle
+-- axioms: propext, Quot.sound
+```
+
+<a id="mark7Principle_is_satisfiable"></a>
+**`mark7Principle_is_satisfiable`**
+
+Mark 7's principle can be held without contradiction.
+
+```lean
+theorem mark7Principle_is_satisfiable : Satisfiable mark7Principle.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trent_grants_marks_principle"></a>
+**`trent_grants_marks_principle`**
+
+**Trent grants Mark 7's principle.** Trent's position, as it states it, can
+be held with the principle and everything Mark 7 says: the reading on which
+apostolic teaching survives outside Scripture, and no commandment of men is
+bound as God's word.
+
+```lean
+theorem trent_grants_marks_principle : Grants tridentineCase (p
+    Claim.godsWordJudgesTradition)
+-- axioms: propext, Quot.sound
+```
+
+<a id="mark7Case_establishes"></a>
+**`mark7Case_establishes`**
+
+**Mark 7's case for sola scriptura holds**, given its premise that no
+apostolic word survives outside Scripture.
+
+```lean
+theorem mark7Case_establishes : Establishes mark7Case
+-- axioms: propext, Quot.sound
+```
+
+<a id="mark7Case_is_satisfiable"></a>
+**`mark7Case_is_satisfiable`**
+
+Mark 7's case can be held without contradiction.
+
+```lean
+theorem mark7Case_is_satisfiable : Satisfiable mark7Case.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="mark7_without_the_hinge_leaves_the_sole_rule_open"></a>
+**`mark7_without_the_hinge_leaves_the_sole_rule_open`**
+
+**Without that premise, Mark 7 leaves the sole rule open.** Grant the text,
+the principle, and the step from them to the sole rule: sola scriptura neither
+follows nor fails. Rome's reading grants all of it and denies the sole rule;
+the Reformed reading grants all of it and holds the sole rule. One fact, not
+two: Mark 7 alone blocks no argument against sola scriptura and establishes
+none for it.
+
+```lean
+theorem mark7_without_the_hinge_leaves_the_sole_rule_open : Independent
+    mark7CaseWithoutTheHinge.premises (p Claim.scriptureIsSoleInfallibleRule)
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineCase_establishes"></a>
+**`tridentineCase_establishes`**
+
+Trent, as it states its position, holds together.
+
+```lean
+theorem tridentineCase_establishes : Establishes tridentineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineCase_is_satisfiable"></a>
+**`tridentineCase_is_satisfiable`**
+
+Trent's case can be held without contradiction: Rome's world.
+
+```lean
+theorem tridentineCase_is_satisfiable : Satisfiable tridentineCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineAsMensCommandments_establishes"></a>
+**`tridentineAsMensCommandments_establishes`**
+
+Trent read as commandments of men still concludes what Trent concludes.
+
+```lean
+theorem tridentineAsMensCommandments_establishes : Establishes
+    tridentineAsMensCommandments
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineAsApostolicWord_establishes"></a>
+**`tridentineAsApostolicWord_establishes`**
+
+Trent read as the apostolic word still concludes what Trent concludes.
+
+```lean
+theorem tridentineAsApostolicWord_establishes : Establishes
+    tridentineAsApostolicWord
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineAsMensCommandments_is_satisfiable"></a>
+**`tridentineAsMensCommandments_is_satisfiable`**
+
+**The first reading is fair**: Trent, read as receiving commandments of men,
+can be held without contradiction — so long as Mark 7's principle is not held
+with it.
+
+```lean
+theorem tridentineAsMensCommandments_is_satisfiable : Satisfiable
+    tridentineAsMensCommandments.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineAsApostolicWord_is_satisfiable"></a>
+**`tridentineAsApostolicWord_is_satisfiable`**
+
+**The second reading is fair**: Trent, read as receiving the apostolic word,
+can be held without contradiction.
+
+```lean
+theorem tridentineAsApostolicWord_is_satisfiable : Satisfiable
+    tridentineAsApostolicWord.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="mark7_does_not_reach_the_apostolic_word"></a>
+**`mark7_does_not_reach_the_apostolic_word`**
+
+**Mark 7 does not reach the second reading.** Trent, read as receiving the
+apostolic word, can be held with every premise of Mark 7's principle: it binds
+no commandment of men as God's word.
+
+```lean
+theorem mark7_does_not_reach_the_apostolic_word : Satisfiable
+    (mark7Principle.premises ++ tridentineAsApostolicWord.premises)
+-- axioms: propext, Quot.sound
+```
+
+#### Where each reading breaks
+
+<a id="whereTheMensCommandmentsReadingFalls"></a>
+**`whereTheMensCommandmentsReadingFalls`**
+
+**Why Mark 7 stands against Trent, read as commandments of men.** The crux is
+what the principle says of a commandment of men: it may not be bound as God's
+word. What it breaks is Trent's claim with the reading — tradition
+received alongside Scripture, and that tradition a commandment of men. Nothing
+else in Trent is touched. The crux is Mark 7's answer to the reading, not part
+of its case for the principle, which follows without it.
+
+**Why *Mark 7: God's word judges human tradition* stands against *Trent (Tradition II), read as commandments of men*.**
+
+- **The crux:** \\(P_{37} \rightarrow \lnot P_{38}\\), a premise of *Mark 7: God's word judges human tradition*.
+- **What it does:** its conclusion follows without it — the crux is its answer to *Trent (Tradition II), read as commandments of men*.
+- **Granted:** \\(P_{3}\\), \\(P_{3} \rightarrow P_{37}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{13}\\), \\(P_{13} \rightarrow P_{38}\\) cannot be held together with \\(P_{37} \rightarrow \lnot P_{38}\\) and \\(P_{3}\\), \\(P_{3} \rightarrow P_{37}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{3}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.10
+  - \\(P_{37}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - the step itself — *well supported*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+
+<a id="whereTheApostolicWordReadingFalls"></a>
+**`whereTheApostolicWordReadingFalls`**
+
+**Why Mark 7's case stands against Trent, read as the apostolic word.** Not
+at the principle, which this reading grants, but at the premise the step to
+sola scriptura needs: that no apostolic teaching survives outside Scripture.
+The reading denies exactly that, and the premise is rated `disputed`. The step
+from it to the sole rule is `disputed` too, so granting the premise would not
+alone settle the question.
+
+**Why *Sola scriptura from Mark 7* stands against *Trent (Tradition II), read as the apostolic word handed on unwritten*.**
+
+- **The crux:** \\(P_{39}\\), a premise of *Sola scriptura from Mark 7*.
+- **What it does:** its conclusion does not follow without it.
+- **Where the rival breaks:** \\(P_{13}\\), \\(P_{13} \rightarrow \lnot P_{39}\\) cannot be held together with \\(P_{39}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{39}\\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — *disputed*: [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+
+#### The dilemma
+
+<a id="whatTrentsTraditionIs"></a>
+**`whatTrentsTraditionIs`**
+
+**What Trent's tradition is, read both ways.** The claim is Trent's: tradition
+is received as a source of revelation alongside Scripture.
+
+Read as commandments of men, it cannot be held with Mark 7's principle, at a
+step rated `wellSupported`: Isaiah 29:13, as Jesus quotes it, says a commandment
+of men may not be bound as God's word.
+
+Read as the apostolic word handed on unwritten — what Trent says it receives —
+Mark 7's principle does not reach it. It cannot be held with Mark 7's case for
+sola scriptura, but only at that case's own premise that no apostolic word
+survives outside Scripture, which is `disputed`. That is the question the sola
+scriptura argument already turns on; Mark 7 does not settle it.
+
+Each reading is fair: Trent read either way can be held without contradiction. Which reading
+fits Trent is not something the dilemma decides; what it shows is what each
+costs.
+
+**Every reading of \\(P_{13}\\), answered.** *Trent (Tradition II)* holds \\(P_{13}\\). It is read 2 ways here, and each reading is checked; none can be left out.
+
+**1. Read as commandments of men.** The claim commits *Trent (Tradition II)* to \\(P_{38}\\) — so read by [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23 (*disputed*).
+
+Against *Mark 7: God's word judges human tradition*, it cannot be held. Where it breaks:
+
+**Why *Mark 7: God's word judges human tradition* stands against *Trent (Tradition II), read as commandments of men*.**
+
+- **The crux:** \\(P_{37} \rightarrow \lnot P_{38}\\), a premise of *Mark 7: God's word judges human tradition*.
+- **What it does:** its conclusion follows without it — the crux is its answer to *Trent (Tradition II), read as commandments of men*.
+- **Granted:** \\(P_{3}\\), \\(P_{3} \rightarrow P_{37}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{13}\\), \\(P_{13} \rightarrow P_{38}\\) cannot be held together with \\(P_{37} \rightarrow \lnot P_{38}\\) and \\(P_{3}\\), \\(P_{3} \rightarrow P_{37}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{3}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.10
+  - \\(P_{37}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - the step itself — *well supported*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+
+**2. Read as the apostolic word handed on unwritten.** The claim commits *Trent (Tradition II)* to \\(\lnot P_{39}\\) — so read by [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 18; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 9; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §83 (*consensus*).
+
+Against *Mark 7: God's word judges human tradition*, it is not reached: *Mark 7: God's word judges human tradition* holds, and can be held together with it.
+
+Against *Sola scriptura from Mark 7*, it cannot be held. Where it breaks:
+
+**Why *Sola scriptura from Mark 7* stands against *Trent (Tradition II), read as the apostolic word handed on unwritten*.**
+
+- **The crux:** \\(P_{39}\\), a premise of *Sola scriptura from Mark 7*.
+- **What it does:** its conclusion does not follow without it.
+- **Where the rival breaks:** \\(P_{13}\\), \\(P_{13} \rightarrow \lnot P_{39}\\) cannot be held together with \\(P_{39}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{39}\\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — *disputed*: [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+
+## Arguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers
+
+`Mark7.lean` asks what each position entails. This module asks what happens when
+they meet. Five parties: Mark 7's principle; Mark 7's case for sola scriptura;
+Trent, as it states its position; and Trent with its tradition read each of the
+two ways the dilemma `whatTrentsTraditionIs` names. Who defeats whom is not
+stipulated — each defeat, and each absence of one, is computed from the parties'
+premises and checked by the kernel (see `Testimony.Logic.Dispute`).
+
+### How to read the verdicts
+
+- **Defeats.** One position contradicts another — denies one of its premises,
+  its conclusion, or a claim it derives on the way — and is not the weaker of
+  the two. A defeat that runs both ways is a *standoff*.
+- **Weakest link.** A position is only as strong as its least-supported premise
+  or step. Ratings run from `disputed`, the lowest, through `plausible` and
+  `wellSupported`, to `consensus`.
+- **Forced.** Accepted however every standoff is resolved: nothing attacks it
+  that it cannot rule out.
+- **Can be defended.** Held by some consistent position that answers every
+  attack on its members, itself or through an ally.
+- **Not forced.** Some consistent position leaves it out. Not forced is not
+  false: the dispute, as argued, cannot make a reader accept it.
+- **Cannot be defended.** No consistent position can hold it and answer its
+  attackers.
+- **A defensible position that cannot be enlarged** (a *maximal* one) is a
+  consistent position answering every attack on its members, to which no other
+  party can be added without losing that. "Some maximal defensible position
+  holds it" means a reader can hold it and lose nothing by it.
+
+### The ratings decide one thing here
+
+Every party but one rests on something rated `disputed`. Mark 7's case rests on
+the premise that no apostolic word survives outside Scripture. Trent rests on
+tradition as a source of revelation alongside Scripture — a claim this module's
+audit moved from `wellSupported` to `disputed`, because Geiselmann grants
+Session IV and denies that it canonised two coordinate sources. The reading of
+Trent as commandments of men rests on Calvin's reading, which Rome denies.
+
+The exception is Mark 7's principle. Its text is `consensus`, and its step from
+the text is `wellSupported`: no one was found who grants Mark 7 and denies that
+God's word judges human tradition. So an attack on it from a party at the bottom
+fails, and its attack on such a party succeeds.
+
+### Who defeats whom
+
+- **Mark 7's principle defeats Trent read as commandments of men, and not the
+  reverse.** Read that way, Trent binds a commandment of men as God's word; the
+  principle denies that any may be. The reading's reply, from a claim rated
+  `disputed`, fails against the principle.
+- **Mark 7's case and Trent defeat each other, whichever way Trent is read.** One
+  concludes that Scripture is the sole infallible rule, the other that it is
+  not; and Trent read as the apostolic word also denies the premise Mark 7's case
+  needs. Each side's weakest link is `disputed`, so no rating breaks the tie.
+- **Mark 7's principle and Trent do not conflict**, read as Trent states it or
+  as the apostolic word (`trent_grants_marks_principle`).
+
+### What follows
+
+**Mark 7's principle is forced** (`marks_principle_prevails`), and it is common
+ground: Rome grants it. **Trent, read as commandments of men, cannot be defended**
+(`trent_as_mens_commandments_indefensible`). **Between Mark 7's case for sola
+scriptura and Trent, the dispute chooses neither**: each can be defended, and
+neither is forced (`mark7_case_defensible`, `mark7_case_not_forced`,
+`trent_defensible_against_mark7`, `trent_not_forced_against_mark7`). Mark 7 does
+not decide the Reformation's question. What would decide it is argued, not
+weighed: whether any apostolic word survives outside Scripture, and, even
+granting that none does, whether the principle then makes Scripture the *sole*
+infallible rule. Both are rated `disputed`.
+
+#### Strength
+
+<a id="mark7Principle_strength"></a>
+**`mark7Principle_strength`**
+
+**Mark 7's principle does not rest on anything disputed.** The text is
+`consensus`, and the step from it `wellSupported`, so its weakest link is well
+supported: `2` on the scale from `0`, disputed, to `3`, consensus.
+
+```lean
+theorem mark7Principle_strength : mark7Principle.strength = 2
+-- axioms: propext
+```
+
+<a id="mark7Case_strength"></a>
+**`mark7Case_strength`**
+
+Mark 7's case rests on the premise that no apostolic word survives outside
+Scripture, rated `disputed`.
+
+```lean
+theorem mark7Case_strength : mark7Case.strength = 0
+-- axioms: propext
+```
+
+<a id="tridentineCase_strength"></a>
+**`tridentineCase_strength`**
+
+Trent rests on tradition as a coordinate source of revelation, rated
+`disputed`.
+
+```lean
+theorem tridentineCase_strength : tridentineCase.strength = 0
+-- axioms: propext
+```
+
+<a id="tridentineAsMensCommandments_strength"></a>
+**`tridentineAsMensCommandments_strength`**
+
+Trent read as commandments of men rests on everything Trent does, and on
+Calvin's reading, rated `disputed`.
+
+```lean
+theorem tridentineAsMensCommandments_strength :
+    tridentineAsMensCommandments.strength = 0
+-- axioms: propext
+```
+
+<a id="tridentineAsApostolicWord_strength"></a>
+**`tridentineAsApostolicWord_strength`**
+
+Trent read as the apostolic word rests on everything Trent does.
+
+```lean
+theorem tridentineAsApostolicWord_strength :
+    tridentineAsApostolicWord.strength = 0
+-- axioms: propext
+```
+
+#### The dispute
+
+<a id="mark7PartyNode"></a>
+**`mark7PartyNode`**
+
+The package each party argues from.
+
+```lean
+def mark7PartyNode : Mark7Party → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | Mark7Party.principle =>
+      mark7Principle
+    | Mark7Party.mark7 =>
+      mark7Case
+    | Mark7Party.trent =>
+      tridentineCase
+    | Mark7Party.trentAsMensCommandments =>
+      tridentineAsMensCommandments
+    | Mark7Party.trentAsApostolicWord =>
+      tridentineAsApostolicWord
+```
+
+<a id="mark7Dispute"></a>
+**`mark7Dispute`**
+
+The dispute over Mark 7: every party's premises have a model, every party
+establishes its conclusion, and every party's inferences are rated.
+
+```lean
+def mark7Dispute : Dispute Claim Mark7Party :=
+  { node := mark7PartyNode,
+    consistent := mark7Dispute._proof_1,
+    sound := mark7Dispute._proof_2,
+    rated := mark7Dispute._proof_3 }
+```
+
+<a id="marks_principle_stands_with_trent"></a>
+**`marks_principle_stands_with_trent`**
+
+Mark 7's principle stands with Trent, as Trent states it and read as the
+apostolic word: Rome's world, in which the principle holds and apostolic
+teaching survives outside Scripture.
+
+```lean
+theorem marks_principle_stands_with_trent : mark7Dispute.StandTogether
+    [Mark7Party.principle, Mark7Party.trent, Mark7Party.trentAsApostolicWord]
+-- axioms: propext, Quot.sound
+```
+
+<a id="mark7PartyDefeats"></a>
+**`mark7PartyDefeats`**
+
+The defeats of the dispute, as a table.
+
+```lean
+def mark7PartyDefeats : Mark7Party → Mark7Party → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Mark7Party.principle,
+      Mark7Party.trentAsMensCommandments => True
+    | Mark7Party.mark7,
+      Mark7Party.trent => True
+    | Mark7Party.mark7,
+      Mark7Party.trentAsMensCommandments => True
+    | Mark7Party.mark7,
+      Mark7Party.trentAsApostolicWord => True
+    | Mark7Party.trent,
+      Mark7Party.mark7 => True
+    | Mark7Party.trentAsMensCommandments,
+      Mark7Party.mark7 => True
+    | Mark7Party.trentAsApostolicWord,
+      Mark7Party.mark7 => True
+    | x, x_2 => False
+```
+
+<a id="instDecidableRelMark7PartyMark7PartyDefeats"></a>
+**`instDecidableRelMark7PartyMark7PartyDefeats`**
+
+The table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelMark7PartyMark7PartyDefeats : DecidableRel
+    mark7PartyDefeats
+```
+
+<a id="mark7PartyStrength"></a>
+**`mark7PartyStrength`**
+
+Each party's weakest link: at the bottom for all but Mark 7's principle.
+
+```lean
+def mark7PartyStrength : Mark7Party → ℕ :=
+  fun x =>
+    match x with
+    | Mark7Party.principle => 2
+    | x => 0
+```
+
+<a id="mark7PartyNode_strength"></a>
+**`mark7PartyNode_strength`**
+
+Each party's weakest link, as its package computes it.
+
+```lean
+theorem mark7PartyNode_strength : ∀ (i : Mark7Party), (mark7PartyNode
+    i).strength = mark7PartyStrength i
+-- axioms: propext
+```
+
+<a id="mark7Dispute_defeats"></a>
+**`mark7Dispute_defeats`**
+
+**Who defeats whom**, all 25 pairs. Mark 7's principle defeats Trent read as
+commandments of men, and that reading's reply fails against it. Mark 7's case
+and Trent defeat each other, as Trent states it and read either way. Nothing
+else.
+
+Every cell is computed from the parties' premises by `Horn.defeats?` and checked
+by the kernel — the defeats, and the absences of defeat, alike.
+
+```lean
+theorem mark7Dispute_defeats : ∀ (i j : Mark7Party), mark7Dispute.defeats i j
+    ↔ mark7PartyDefeats i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="mark7Finite"></a>
+**`mark7Finite`**
+
+The dispute in the form the verdict solver computes with.
+
+```lean
+def mark7Finite : Solver.Finite mark7Dispute.defeats :=
+  {
+    parties :=
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trent,
+        Mark7Party.trentAsMensCommandments,
+        Mark7Party.trentAsApostolicWord],
+    complete := mark7Finite._proof_1,
+    defeats := fun i j =>
+      decide (mark7PartyDefeats i j),
+    spec := mark7Finite._proof_2 }
+```
+
+#### The dispute as a graph
+
+<a id="mark7Dispute_supports"></a>
+**`mark7Dispute_supports`**
+
+**Nothing supports anything** in the dispute over Mark 7, in all 25 pairs: no
+party's conclusion entails a claim another rests on. Mark 7's principle is
+*derived* inside Mark 7's case, not assumed there, so the relation between them
+is not support. Every cell is computed by `supports?` and checked by the
+kernel.
+
+```lean
+theorem mark7Dispute_supports : ∀ (i j : Mark7Party), ¬mark7Dispute.supports i
+    j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="mark7PartyPartOf"></a>
+**`mark7PartyPartOf`**
+
+Whose case is part of whose, as a table: besides each party's own, Trent's
+is part of each reading of it.
+
+```lean
+def mark7PartyPartOf : Mark7Party → Mark7Party → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Mark7Party.trent,
+      Mark7Party.trentAsMensCommandments => True
+    | Mark7Party.trent,
+      Mark7Party.trentAsApostolicWord => True
+    | i, j => i = j
+```
+
+<a id="instDecidableRelMark7PartyMark7PartyPartOf"></a>
+**`instDecidableRelMark7PartyMark7PartyPartOf`**
+
+The table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelMark7PartyMark7PartyPartOf : DecidableRel mark7PartyPartOf
+```
+
+<a id="mark7Dispute_partOf"></a>
+**`mark7Dispute_partOf`**
+
+**Whose case is part of whose**, all 25 pairs: Trent's case is part of each
+reading of it, which only adds to it; and every case is part of itself. Every
+cell is computed by `partOf?` and checked by the kernel.
+
+```lean
+theorem mark7Dispute_partOf : ∀ (i j : Mark7Party), mark7Dispute.partOf i j ↔
+    mark7PartyPartOf i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="mark7Map"></a>
+**`mark7Map`**
+
+The dispute over Mark 7 drawn: who defeats whom, and whose case is part of
+whose.
+
+<div class="argument-map">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="The dispute as a graph: parties numbered as in the table below, defeats solid, supports dashed, parts dotted">
+<defs>
+<marker id="tm-defeat" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#b3261e"/></marker>
+<marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
+<marker id="tm-part" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#1f5fa8"/></marker>
+</defs>
+<path d="M195,64 Q139,179 117,304" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M338,168 Q299,231 294,304" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M331,162 Q218,222 126,311" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M328,154 Q201,136 75,154" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M293,307 Q332,244 337,171" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M124,313 Q237,253 328,164" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M72,154 Q198,172 325,154" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M273,321 Q202,303 130,321" style="stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3" marker-end="url(#tm-part)"/>
+<path d="M276,313 Q185,224 72,164" style="stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3" marker-end="url(#tm-part)"/>
+<circle cx="200" cy="50" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="200" y="55" text-anchor="middle" style="fill:var(--fg);font-size:14px">1</text>
+<circle cx="343" cy="154" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="343" y="159" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
+<circle cx="288" cy="321" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="288" y="326" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
+<circle cx="112" cy="321" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="112" y="326" text-anchor="middle" style="fill:var(--fg);font-size:14px">4</text>
+<circle cx="57" cy="154" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="57" y="159" text-anchor="middle" style="fill:var(--fg);font-size:14px">5</text>
+</svg>
+</div>
+
+Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is part of another's.
+
+| # | Party |
+|---|---|
+| 1 | Mark 7: God's word judges human tradition |
+| 2 | Sola scriptura from Mark 7 |
+| 3 | Trent (Tradition II) |
+| 4 | Trent (Tradition II), read as commandments of men |
+| 5 | Trent (Tradition II), read as the apostolic word handed on unwritten |
+
+| From | To | Edge |
+|---|---|---|
+| 1 *Mark 7: God's word judges human tradition* | 4 *Trent (Tradition II), read as commandments of men* | defeats |
+| 2 *Sola scriptura from Mark 7* | 3 *Trent (Tradition II)* | defeats |
+| 2 *Sola scriptura from Mark 7* | 4 *Trent (Tradition II), read as commandments of men* | defeats |
+| 2 *Sola scriptura from Mark 7* | 5 *Trent (Tradition II), read as the apostolic word handed on unwritten* | defeats |
+| 3 *Trent (Tradition II)* | 2 *Sola scriptura from Mark 7* | defeats |
+| 4 *Trent (Tradition II), read as commandments of men* | 2 *Sola scriptura from Mark 7* | defeats |
+| 5 *Trent (Tradition II), read as the apostolic word handed on unwritten* | 2 *Sola scriptura from Mark 7* | defeats |
+| 3 *Trent (Tradition II)* | 4 *Trent (Tradition II), read as commandments of men* | is part of |
+| 3 *Trent (Tradition II)* | 5 *Trent (Tradition II), read as the apostolic word handed on unwritten* | is part of |
+| 2 *Sola scriptura from Mark 7* | 4 *Trent (Tradition II), read as commandments of men* | attack on a part — already a defeat |
+| 2 *Sola scriptura from Mark 7* | 5 *Trent (Tradition II), read as the apostolic word handed on unwritten* | attack on a part — already a defeat |
+
+The defeats are the cells of [`mark7Dispute_defeats`](#mark7Dispute_defeats), the supports the cells of [`mark7Dispute_supports`](#mark7Dispute_supports) and the parts the cells of [`mark7Dispute_partOf`](#mark7Dispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+#### What the dispute decides
+
+<a id="marksPrincipleUnanswered"></a>
+**`marksPrincipleUnanswered`**
+
+How the dispute is settled as far as it can be, in one stage: nothing defeats
+Mark 7's principle, so it comes first; and nothing joins it. Mark 7's case has
+Trent, and Trent has Mark 7's case — a standoff; Trent read as the apostolic word
+has Mark 7's case; and Trent read as commandments of men has the principle
+itself.
+
+**What the dispute forces is exactly *Mark 7: God's word judges human tradition*.**
+
+- Stage 1: *Mark 7: God's word judges human tradition*.
+  - *Mark 7: God's word judges human tradition* is defeated by nothing.
+- Nothing else is forced:
+  - *Trent (Tradition II)* defeats *Sola scriptura from Mark 7*, and nothing forced defeats *Trent (Tradition II)*.
+  - *Sola scriptura from Mark 7* defeats *Trent (Tradition II)*, and nothing forced defeats *Sola scriptura from Mark 7*.
+  - *Mark 7: God's word judges human tradition* [defeats](#whereTheMensCommandmentsReadingFalls) *Trent (Tradition II), read as commandments of men*, and nothing forced defeats *Mark 7: God's word judges human tradition*.
+  - *Sola scriptura from Mark 7* [defeats](#whereTheApostolicWordReadingFalls) *Trent (Tradition II), read as the apostolic word handed on unwritten*, and nothing forced defeats *Sola scriptura from Mark 7*.
+
+**What this rests on.** The reasons state 4 defeats and 7 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Mark 7: God's word judges human tradition*, weakest at *well supported*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Sola scriptura from Mark 7*, weakest at *disputed*:
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+- *Trent (Tradition II)*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+- *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+
+Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
+
+Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
+
+<a id="marks_principle_prevails"></a>
+**`marks_principle_prevails`**
+
+**Mark 7's principle prevails outright, and it is common ground.** The
+grounded extension — what the dispute forces before any choice between rivals —
+is exactly the principle: God's word judges human tradition, and no commandment
+of men may be taught as God's word. Nothing defeats it: the one party that
+contradicts it, Trent read as commandments of men, rests on a reading rated
+`disputed`, and its reply fails against a principle whose every link is rated
+`wellSupported` or better. And Trent, as it states its position, does not
+contradict it at all (`trent_grants_marks_principle`).
+
+What this does not claim: that sola scriptura is forced. Mark 7's case for it
+is not (`mark7_case_not_forced`).
+
+```lean
+theorem marks_principle_prevails : Framework.grounded mark7Dispute.defeats =
+    {Mark7Party.principle}
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="mensCommandmentsReadingAnswered"></a>
+**`mensCommandmentsReadingAnswered`**
+
+Why Trent, read as commandments of men, cannot be defended: Mark 7's
+principle defeats it, and nothing defeats the principle.
+
+***Trent (Tradition II), read as commandments of men* cannot be defended: no admissible position holds it.**
+
+- *Mark 7: God's word judges human tradition* [defeats](#whereTheMensCommandmentsReadingFalls) *Trent (Tradition II), read as commandments of men*, and nothing defeats *Mark 7: God's word judges human tradition*.
+
+**What this rests on.** The reasons state 1 defeat and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Mark 7: God's word judges human tradition*, weakest at *well supported*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Sola scriptura from Mark 7*, weakest at *disputed*:
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+- *Trent (Tradition II)*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+- *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+
+Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
+
+<a id="trent_as_mens_commandments_indefensible"></a>
+**`trent_as_mens_commandments_indefensible`**
+
+**Trent, read as commandments of men, cannot be defended.** No consistent
+position that answers its attackers can hold it: Mark 7's principle defeats it,
+and nothing answers the principle. This is the first horn of
+`whatTrentsTraditionIs`, weighed: if what Trent receives alongside Scripture
+were a commandment of men, Jesus' words in Mark 7
+would condemn it, at a step rated `wellSupported`.
+
+What this does not claim: that Trent's tradition *is* a commandment of men.
+Trent says the opposite, and Calvin's reading of it is rated `disputed`.
+
+```lean
+theorem trent_as_mens_commandments_indefensible : ∀ (S : Set Mark7Party),
+    Framework.Admissible mark7Dispute.defeats S →
+    Mark7Party.trentAsMensCommandments ∉ S
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="mark7StandsWithItsPrinciple"></a>
+**`mark7StandsWithItsPrinciple`**
+
+Why Mark 7's case can be defended: it stands with Mark 7's principle, and
+answers every party that defeats it — Trent, read or unread — itself.
+
+***Sola scriptura from Mark 7* is accepted on some resolution.**
+
+- A position holding *Mark 7: God's word judges human tradition*, *Sola scriptura from Mark 7* can be held.
+- None of *Mark 7: God's word judges human tradition*, *Sola scriptura from Mark 7* defeats another, and each attack on them is answered from among them:
+  - *Trent (Tradition II)* defeats *Sola scriptura from Mark 7*, and *Sola scriptura from Mark 7* defeats *Trent (Tradition II)*.
+  - *Trent (Tradition II), read as commandments of men* defeats *Sola scriptura from Mark 7*, and *Mark 7: God's word judges human tradition* [defeats](#whereTheMensCommandmentsReadingFalls) *Trent (Tradition II), read as commandments of men*.
+  - *Trent (Tradition II), read as the apostolic word handed on unwritten* defeats *Sola scriptura from Mark 7*, and *Sola scriptura from Mark 7* [defeats](#whereTheApostolicWordReadingFalls) *Trent (Tradition II), read as the apostolic word handed on unwritten*.
+
+**What this rests on.** The reasons state 6 defeats and 7 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Mark 7: God's word judges human tradition*, weakest at *well supported*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Sola scriptura from Mark 7*, weakest at *disputed*:
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+- *Trent (Tradition II)*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+- *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+
+Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
+
+Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
+
+<a id="mark7_case_defensible"></a>
+**`mark7_case_defensible`**
+
+**Sola scriptura from Mark 7 can be defended.** Some maximal defensible
+position holds it, with Mark 7's principle. Every party that defeats it — Trent,
+as it states its position and read either way — it defeats back.
+
+```lean
+theorem mark7_case_defensible : Framework.CredulouslyAccepted
+    mark7Dispute.defeats Mark7Party.mark7
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="mark7AnsweredByTrent"></a>
+**`mark7AnsweredByTrent`**
+
+Why Mark 7's case is not forced: a defensible position holds Trent, and Trent
+defeats it.
+
+***Sola scriptura from Mark 7* is not accepted on every resolution.**
+
+- A position holding *Mark 7: God's word judges human tradition*, *Trent (Tradition II)*, *Trent (Tradition II), read as the apostolic word handed on unwritten* can be held, and it holds *Trent (Tradition II)*; *Trent (Tradition II)* conflicts with *Sola scriptura from Mark 7*: *Trent (Tradition II)* defeats *Sola scriptura from Mark 7*, and *Sola scriptura from Mark 7* defeats *Trent (Tradition II)*.
+- None of *Mark 7: God's word judges human tradition*, *Trent (Tradition II)*, *Trent (Tradition II), read as the apostolic word handed on unwritten* defeats another, and each attack on them is answered from among them:
+  - *Sola scriptura from Mark 7* defeats *Trent (Tradition II)*, and *Trent (Tradition II)* defeats *Sola scriptura from Mark 7*.
+  - *Sola scriptura from Mark 7* [defeats](#whereTheApostolicWordReadingFalls) *Trent (Tradition II), read as the apostolic word handed on unwritten*, and *Trent (Tradition II)* defeats *Sola scriptura from Mark 7*.
+
+**What this rests on.** The reasons state 3 defeats and 13 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Trent (Tradition II)*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+- *Sola scriptura from Mark 7*, weakest at *disputed*:
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+- *Mark 7: God's word judges human tradition*, weakest at *well supported*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+- *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+
+Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
+
+<a id="mark7_case_not_forced"></a>
+**`mark7_case_not_forced`**
+
+**Nor is it forced.** A maximal defensible position holds Trent, with Mark 7's
+principle and with Trent read as the apostolic word, and cannot hold Mark 7's
+case with it. Their weakest links are all `disputed`, so no rating breaks the
+tie. What would decide it is argued, not weighed: whether any apostolic word
+survives outside Scripture (`whereTheApostolicWordReadingFalls`), and, even
+granting that none does, whether the principle then makes Scripture the *sole*
+infallible rule — a step Geiselmann and Florovsky deny.
+
+```lean
+theorem mark7_case_not_forced : ¬Framework.SkepticallyAccepted
+    mark7Dispute.defeats Mark7Party.mark7
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentStandsWithMarksPrinciple"></a>
+**`trentStandsWithMarksPrinciple`**
+
+Why Trent can be defended against Mark 7: it stands with Mark 7's principle
+and with its own reading as the apostolic word, and answers Mark 7's case
+itself.
+
+***Trent (Tradition II)* is accepted on some resolution.**
+
+- A position holding *Mark 7: God's word judges human tradition*, *Trent (Tradition II)*, *Trent (Tradition II), read as the apostolic word handed on unwritten* can be held.
+- None of *Mark 7: God's word judges human tradition*, *Trent (Tradition II)*, *Trent (Tradition II), read as the apostolic word handed on unwritten* defeats another, and each attack on them is answered from among them:
+  - *Sola scriptura from Mark 7* defeats *Trent (Tradition II)*, and *Trent (Tradition II)* defeats *Sola scriptura from Mark 7*.
+  - *Sola scriptura from Mark 7* [defeats](#whereTheApostolicWordReadingFalls) *Trent (Tradition II), read as the apostolic word handed on unwritten*, and *Trent (Tradition II)* defeats *Sola scriptura from Mark 7*.
+
+**What this rests on.** The reasons state 3 defeats and 13 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Mark 7: God's word judges human tradition*, weakest at *well supported*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Trent (Tradition II)*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+- *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+- *Sola scriptura from Mark 7*, weakest at *disputed*:
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+- *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+
+Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
+
+<a id="trent_defensible_against_mark7"></a>
+**`trent_defensible_against_mark7`**
+
+**Trent, as it states its position, can be defended against Mark 7** — and
+with Mark 7's principle. Some maximal defensible position holds Trent, the
+principle, and Trent read as the apostolic word. Granting everything Mark 7's
+principle says costs Trent nothing, so long as what it receives is the apostolic
+word and not a commandment of men.
+
+```lean
+theorem trent_defensible_against_mark7 : Framework.CredulouslyAccepted
+    mark7Dispute.defeats Mark7Party.trent
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentAnsweredByMark7"></a>
+**`trentAnsweredByMark7`**
+
+Why Trent is not forced: a defensible position holds Mark 7's case, and it
+defeats Trent.
+
+***Trent (Tradition II)* is not accepted on every resolution.**
+
+- A position holding *Mark 7: God's word judges human tradition*, *Sola scriptura from Mark 7* can be held, and it holds *Sola scriptura from Mark 7*; *Sola scriptura from Mark 7* conflicts with *Trent (Tradition II)*: *Sola scriptura from Mark 7* defeats *Trent (Tradition II)*, and *Trent (Tradition II)* defeats *Sola scriptura from Mark 7*.
+- None of *Mark 7: God's word judges human tradition*, *Sola scriptura from Mark 7* defeats another, and each attack on them is answered from among them:
+  - *Trent (Tradition II)* defeats *Sola scriptura from Mark 7*, and *Sola scriptura from Mark 7* defeats *Trent (Tradition II)*.
+  - *Trent (Tradition II), read as commandments of men* defeats *Sola scriptura from Mark 7*, and *Mark 7: God's word judges human tradition* [defeats](#whereTheMensCommandmentsReadingFalls) *Trent (Tradition II), read as commandments of men*.
+  - *Trent (Tradition II), read as the apostolic word handed on unwritten* defeats *Sola scriptura from Mark 7*, and *Sola scriptura from Mark 7* [defeats](#whereTheApostolicWordReadingFalls) *Trent (Tradition II), read as the apostolic word handed on unwritten*.
+
+**What this rests on.** The reasons state 6 defeats and 7 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Sola scriptura from Mark 7*, weakest at *disputed*:
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+- *Trent (Tradition II)*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+- *Mark 7: God's word judges human tradition*, weakest at *well supported*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+
+Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
+
+Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
+
+<a id="trent_not_forced_against_mark7"></a>
+**`trent_not_forced_against_mark7`**
+
+**Nor is Trent forced.** A maximal defensible position holds Mark 7's case
+for sola scriptura, and cannot hold Trent with it. Between them the dispute
+chooses neither.
+
+```lean
+theorem trent_not_forced_against_mark7 : ¬Framework.SkepticallyAccepted
+    mark7Dispute.defeats Mark7Party.trent
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+## Arguments.SolaScriptura.Hearings — Mark 7, heard against each reading of Trent
+
+The dispute over Mark 7 hears Trent three ways at once: as Trent states its
+position, and with its tradition read each of the two ways the dilemma
+`whatTrentsTraditionIs` names. A reader usually has one reading in mind, and
+asks what Mark 7 settles *if that is what Trent means*. Each question is
+answered by hearing the same dispute with the other readings set aside. Nothing
+is re-argued: a hearing keeps every defeat the full dispute proved.
+
+**If Rome's tradition were the commandments of men, would Mark 7 settle
+sola scriptura?** Heard against that reading alone (`mensCommandmentsHearing`),
+Mark 7's case is forced — but only because nothing left in the hearing contests
+it. The reading is the only party that attacks it, and the principle defeats the
+reading. Mark 7's case still rests on two things rated `disputed`: that no
+apostolic word survives outside Scripture, and the step from the principle to
+the *sole* rule. The reading of Trent as commandments of men contests neither,
+and the parties that would are set aside. This is the Protestant polemic at full
+strength — and it holds only on a reading of Trent that Trent itself denies.
+
+**If Rome's tradition is the apostolic word handed on unwritten, what does
+Mark 7 settle?** Heard against that reading (`apostolicWordHearing`), only the
+principle — which the reading grants. Mark 7's case and the reading defeat each
+other at one premise, that no apostolic word survives outside Scripture, and
+each side's weakest link is `disputed`. So the dispute chooses neither.
+
+The difference between the two hearings is the whole of what Mark 7 contributes:
+against Rome's tradition read as human, it leaves Mark 7's case unopposed;
+against it read as apostolic, it leaves the question where it was. Which it is,
+Mark 7 does not say.
+
+#### Heard against the reading as commandments of men
+
+<a id="mensCommandmentsHearing"></a>
+**`mensCommandmentsHearing`**
+
+Mark 7's principle and case, heard against Trent read as commandments of
+men. Not heard: Trent as it states its position, and Trent read as the
+apostolic word.
+
+```lean
+def mensCommandmentsHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
+    Mark7Party.mark7, Mark7Party.trentAsMensCommandments] } :=
+  mark7Dispute.restrict fun x =>
+    x ∈
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trentAsMensCommandments]
+```
+
+<a id="mensCommandmentsHearingFinite"></a>
+**`mensCommandmentsHearingFinite`**
+
+The hearing, in the form the verdict solver computes with.
+
+```lean
+def mensCommandmentsHearingFinite : Solver.Finite fun i j =>
+    mark7Dispute.defeats ↑i ↑j :=
+  mark7Finite.restrict fun x =>
+    x ∈
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trentAsMensCommandments]
+```
+
+<a id="mensCommandmentsHearingSettles"></a>
+**`mensCommandmentsHearingSettles`**
+
+How the hearing is settled, in two stages: nothing defeats Mark 7's
+principle, so it comes first; the principle defeats the reading, and with the
+reading answered Mark 7's case has no attacker left, so it comes second.
+
+**What the dispute forces is exactly *Mark 7: God's word judges human tradition*, *Sola scriptura from Mark 7*.**
+
+- Stage 1: *Mark 7: God's word judges human tradition*.
+  - *Mark 7: God's word judges human tradition* is defeated by nothing.
+- Stage 2: *Sola scriptura from Mark 7*.
+  - *Trent (Tradition II), read as commandments of men* defeats *Sola scriptura from Mark 7*, and *Mark 7: God's word judges human tradition* [defeats](#whereTheMensCommandmentsReadingFalls) *Trent (Tradition II), read as commandments of men*.
+- Nothing else is forced:
+  - *Mark 7: God's word judges human tradition* [defeats](#whereTheMensCommandmentsReadingFalls) *Trent (Tradition II), read as commandments of men*, and nothing forced defeats *Mark 7: God's word judges human tradition*.
+
+**What this rests on.** The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Mark 7: God's word judges human tradition*, weakest at *well supported*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Sola scriptura from Mark 7*, weakest at *disputed*:
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+- *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+
+Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
+
+<a id="mark7_forced_against_mens_commandments"></a>
+**`mark7_forced_against_mens_commandments`**
+
+**Against Rome's tradition read as commandments of men, Mark 7's case is
+unopposed.** Heard against that reading alone, Mark 7's principle and Mark 7's
+case for sola scriptura are both forced: the reading is the only party in the
+hearing that attacks the case, and the principle defeats it.
+
+What this does not claim: that Rome's tradition is the commandments of men —
+Trent says what it receives came from Christ and the apostles, and the reading
+that says otherwise is rated `disputed`. Nor that Mark 7's case is sound. It
+still rests on the premise that no apostolic word survives outside Scripture,
+and on a step Geiselmann and Florovsky deny, both `disputed`; no party heard
+here contests either. Trent as it states its position, and Trent read as the
+apostolic word, are set aside.
+
+```lean
+theorem mark7_forced_against_mens_commandments : Framework.grounded
+    mensCommandmentsHearing.defeats = Solver.toSet (Witness.listSub
+    (Membership.mem [Mark7Party.principle, Mark7Party.mark7,
+    Mark7Party.trentAsMensCommandments]) [Mark7Party.principle,
+    Mark7Party.mark7])
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+#### Heard against the reading as the apostolic word
+
+<a id="apostolicWordHearing"></a>
+**`apostolicWordHearing`**
+
+Mark 7's principle and case, heard against Trent read as the apostolic word
+handed on unwritten. Not heard: Trent as it states its position, and Trent read
+as commandments of men.
+
+```lean
+def apostolicWordHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
+    Mark7Party.mark7, Mark7Party.trentAsApostolicWord] } :=
+  mark7Dispute.restrict fun x =>
+    x ∈
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trentAsApostolicWord]
+```
+
+<a id="apostolicWordHearingFinite"></a>
+**`apostolicWordHearingFinite`**
+
+The hearing, in the form the verdict solver computes with.
+
+```lean
+def apostolicWordHearingFinite : Solver.Finite fun i j => mark7Dispute.defeats
+    ↑i ↑j :=
+  mark7Finite.restrict fun x =>
+    x ∈
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trentAsApostolicWord]
+```
+
+<a id="apostolicWordHearingSettles"></a>
+**`apostolicWordHearingSettles`**
+
+How the hearing is settled: nothing defeats Mark 7's principle, so it comes
+first; and nothing joins it, because Mark 7's case and the reading defeat each
+other.
+
+**What the dispute forces is exactly *Mark 7: God's word judges human tradition*.**
+
+- Stage 1: *Mark 7: God's word judges human tradition*.
+  - *Mark 7: God's word judges human tradition* is defeated by nothing.
+- Nothing else is forced:
+  - *Trent (Tradition II), read as the apostolic word handed on unwritten* defeats *Sola scriptura from Mark 7*, and nothing forced defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*.
+  - *Sola scriptura from Mark 7* [defeats](#whereTheApostolicWordReadingFalls) *Trent (Tradition II), read as the apostolic word handed on unwritten*, and nothing forced defeats *Sola scriptura from Mark 7*.
+
+**What this rests on.** The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Mark 7: God's word judges human tradition*, weakest at *well supported*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+- *Sola scriptura from Mark 7*, weakest at *disputed*:
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+- *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+
+Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
+
+<a id="against_the_apostolic_word_only_the_principle_is_forced"></a>
+**`against_the_apostolic_word_only_the_principle_is_forced`**
+
+**If Rome's tradition is the apostolic word, Mark 7 forces only its
+principle** — which that reading grants. Mark 7's case and the reading stand off
+at the premise that no apostolic word survives outside Scripture.
+
+```lean
+theorem against_the_apostolic_word_only_the_principle_is_forced :
+    Framework.grounded apostolicWordHearing.defeats = Solver.toSet
+    (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7,
+    Mark7Party.trentAsApostolicWord]) [Mark7Party.principle])
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="mark7AnsweredByTheApostolicWord"></a>
+**`mark7AnsweredByTheApostolicWord`**
+
+Why Mark 7's case is not forced in this hearing: a defensible position holds
+the reading, with the principle, and the reading defeats Mark 7's case.
+
+***Sola scriptura from Mark 7* is not accepted on every resolution.**
+
+- A position holding *Mark 7: God's word judges human tradition*, *Trent (Tradition II), read as the apostolic word handed on unwritten* can be held, and it holds *Trent (Tradition II), read as the apostolic word handed on unwritten*; *Trent (Tradition II), read as the apostolic word handed on unwritten* conflicts with *Sola scriptura from Mark 7*: *Trent (Tradition II), read as the apostolic word handed on unwritten* defeats *Sola scriptura from Mark 7*, and *Sola scriptura from Mark 7* [defeats](#whereTheApostolicWordReadingFalls) *Trent (Tradition II), read as the apostolic word handed on unwritten*.
+- None of *Mark 7: God's word judges human tradition*, *Trent (Tradition II), read as the apostolic word handed on unwritten* defeats another, and each attack on them is answered from among them:
+  - *Sola scriptura from Mark 7* [defeats](#whereTheApostolicWordReadingFalls) *Trent (Tradition II), read as the apostolic word handed on unwritten*, and *Trent (Tradition II), read as the apostolic word handed on unwritten* defeats *Sola scriptura from Mark 7*.
+
+**What this rests on.** The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
+  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+- *Sola scriptura from Mark 7*, weakest at *disputed*:
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+- *Mark 7: God's word judges human tradition*, weakest at *well supported*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+
+Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
+
+<a id="mark7_not_forced_against_the_apostolic_word"></a>
+**`mark7_not_forced_against_the_apostolic_word`**
+
+**So, against the apostolic word, sola scriptura from Mark 7 is not
+forced.** A defensible position that cannot be enlarged holds Mark 7's
+principle together with Trent read as the apostolic word, and cannot hold Mark
+7's case with them. What would decide is argued, not weighed: whether any
+apostolic word survives outside Scripture, and whether the principle would then
+make Scripture the *sole* rule. Both are rated `disputed`, and neither is
+something Mark 7 speaks to.
+
+```lean
+theorem mark7_not_forced_against_the_apostolic_word :
+    ¬Framework.SkepticallyAccepted apostolicWordHearing.defeats
+    ⟨Mark7Party.mark7, ⋯⟩
+-- axioms: propext, Classical.choice, Quot.sound
 ```

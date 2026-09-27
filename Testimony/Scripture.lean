@@ -244,6 +244,30 @@ is James's target. -/
 only occurrence of *faith alone* in the New Testament. -/
 @[nolint defsWithUnderscore] def james2_24 : Passage := ⟨.james, 2, 24⟩
 
+/-! ### Tradition and the word
+
+Mark 7 and its parallel, and the prophet both quote. -/
+
+/-- Mark 7:1–13 — the elders' tradition, the unwashed hands, and Corban: "you
+leave the commandment of God and hold to the tradition of men" (7:8). -/
+@[nolint defsWithUnderscore] def mark7_1to13 : Pericope := ⟨.mark, 7, 1, 7, 13⟩
+
+/-- Matthew 15:1–9 — the same dispute in Matthew, with the same quotation of
+Isaiah. -/
+@[nolint defsWithUnderscore] def matthew15_1to9 : Pericope := ⟨.matthew, 15, 1, 15, 9⟩
+
+/-- Mark 7:7 — "in vain do they worship me, teaching as doctrines the
+commandments of men": the end of Jesus' quotation of Isaiah, which begins at
+7:6. -/
+@[nolint defsWithUnderscore] def mark7_7 : Passage := ⟨.mark, 7, 7⟩
+
+/-- Matthew 15:9 — the same words of Isaiah, as Matthew gives them. -/
+@[nolint defsWithUnderscore] def matthew15_9 : Passage := ⟨.matthew, 15, 9⟩
+
+/-- Isaiah 29:13 — a people who honour God with their lips while their hearts
+are far from him, and whose fear of him is a commandment of men. -/
+@[nolint defsWithUnderscore] def isaiah29_13 : Passage := ⟨.isaiah, 29, 13⟩
+
 /-! ### Source helpers
 
 A `Source` written out is four fields, and some combinations recur often enough

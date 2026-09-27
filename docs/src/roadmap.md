@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**5 arguments**, carrying **123 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**5 arguments**, carrying **136 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -142,7 +142,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 | Result | Statement | What it claims |
 |---|---|---|
-| `protestant_establishes` | `Establishes protestant` | Given the Protestant premises, on either route, the conclusion follows. |
+| `protestant_establishes` | `Establishes protestant` | Given the Protestant premises, on any of its three routes, the conclusion follows. |
 | `tradition0_establishes` | `Establishes tradition0` | **Tradition 0 establishes it too.** Geisler rejects Mathison's claim that tradition is hermeneutically necessary; he does not reject sola scriptura. |
 | `tridentine_not_establishes` | `¬Establishes tridentine` | The two-source premises do not establish sola scriptura — they entail its negation. |
 | `vaticanI_not_establishes` | `¬Establishes vaticanI` | Tradition III likewise entails the negation — by a different premise from Tradition II's, which is why the two are separate packages. |
@@ -150,7 +150,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `selfRefutation_is_valid` | `Establishes selfRefutation` | The self-refutation objection is valid: granted that only scriptural doctrine binds and that scripture does not teach sola scriptura, the position fails by its own standard. |
 | `canonObjection_is_valid` | `Establishes canonObjection` | The canon objection is valid on its own grounds: if the canon is known through the Church's reception and identifying it requires an infallible authority, then an authority … |
 | `interpretiveRegress_is_valid` | `Establishes interpretiveRegress` | The interpretive-authority regress is valid on its own grounds. |
-| `hinge_not_load_bearing_for_conclusion` | `Establishes protestantWithoutHinge` | **The hinge is not load-bearing for the conclusion.** Strip it and the eliminative line still delivers the sole rule. |
+| `hinge_not_load_bearing_for_conclusion` | `Establishes protestantWithoutHinge` | **The hinge is not load-bearing for the conclusion.** Strip it and the eliminative line still delivers the sole rule, and so does Mark 7's — each on a premise of its own that the … |
 | `hinge_is_load_bearing_within_classical_strand` | `¬Establishes classicalStrandWithoutHinge` | Within the classical strand taken alone the hinge is still load-bearing: remove it and that strand yields nothing. |
 | `classical_answer_blocks_self_refutation` | `¬Establishes selfRefutationAnswered` | **The classical answer blocks the objection.** Assert that scripture teaches the principle and the objection no longer delivers its denial. |
 | `scoping_blocks_self_refutation` | `¬Establishes selfRefutationUnderScope` | **And the final-arbiter answer blocks it too, without the hinge.** This is the answer the seed did not encode. |
@@ -163,6 +163,19 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `scripturalBounding_blocks_the_circle` ⚗ | `¬Establishes geislerCircleUnderScripturalBounding` | **The scriptural-bounding reply blocks the charge too, and on scriptural rather than confessional grounds.** **What is novel here.** No source was found advancing these texts as … |
 | `parity_leaves_the_defeat_open` | `Independent defeatUnderParity.premises (p Claim.circularityDefeatsTraditionI)` | **Barrett's parity reply leaves the defeat open.** Concede the circle; deny that it is a defect peculiar to this position, since any appeal to an ultimate authority is circular. |
 | `circle_parity_concedes_the_charge` | `Establishes circleParityConcedingTheCharge` | **The reply does not merely fail to clear the charge — it grants it.** This is the second question, kept because it is worth asking and restated because the answer is stronger … |
+| `mark7Principle_establishes` | `Establishes mark7Principle` | **Mark 7 delivers its principle**: God's word judges human tradition. |
+| `trent_grants_marks_principle` | `Grants tridentineCase (p Claim.godsWordJudgesTradition)` | **Trent grants Mark 7's principle.** Trent's position, as it states it, can be held with the principle and everything Mark 7 says: the reading on which apostolic teaching survives … |
+| `mark7Case_establishes` | `Establishes mark7Case` | **Mark 7's case for sola scriptura holds**, given its premise that no apostolic word survives outside Scripture. |
+| `mark7_without_the_hinge_leaves_the_sole_rule_open` | `Independent mark7CaseWithoutTheHinge.premises (p Claim.scriptureIsSoleInfallibleRule)` | **Without that premise, Mark 7 leaves the sole rule open.** Grant the text, the principle, and the step from them to the sole rule: sola scriptura neither follows nor fails. |
+| `marks_principle_prevails` | `Framework.grounded mark7Dispute.defeats = {Mark7Party.principle}` | **Mark 7's principle prevails outright, and it is common ground.** The grounded extension — what the dispute forces before any choice between rivals — is exactly the principle: … |
+| `trent_as_mens_commandments_indefensible` | `∀ (S : Set Mark7Party), Framework.Admissible mark7Dispute.defeats S → Mark7Party.trentAsMensCommandments ∉ S` | **Trent, read as commandments of men, cannot be defended.** No consistent position that answers its attackers can hold it: Mark 7's principle defeats it, and nothing answers the … |
+| `mark7_case_defensible` | `Framework.CredulouslyAccepted mark7Dispute.defeats Mark7Party.mark7` | **Sola scriptura from Mark 7 can be defended.** Some maximal defensible position holds it, with Mark 7's principle. |
+| `mark7_case_not_forced` | `¬Framework.SkepticallyAccepted mark7Dispute.defeats Mark7Party.mark7` | **Nor is it forced.** A maximal defensible position holds Trent, with Mark 7's principle and with Trent read as the apostolic word, and cannot hold Mark 7's case with it. |
+| `trent_defensible_against_mark7` | `Framework.CredulouslyAccepted mark7Dispute.defeats Mark7Party.trent` | **Trent, as it states its position, can be defended against Mark 7** — and with Mark 7's principle. |
+| `trent_not_forced_against_mark7` | `¬Framework.SkepticallyAccepted mark7Dispute.defeats Mark7Party.trent` | **Nor is Trent forced.** A maximal defensible position holds Mark 7's case for sola scriptura, and cannot hold Trent with it. |
+| `mark7_forced_against_mens_commandments` | `Framework.grounded mensCommandmentsHearing.defeats = Solver.toSet (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7, Mark7Party.trentAsMensCommandments]) [Mark7Party.principle, Mark7Party.mark7])` | **Against Rome's tradition read as commandments of men, Mark 7's case is unopposed.** Heard against that reading alone, Mark 7's principle and Mark 7's case for sola scriptura are … |
+| `against_the_apostolic_word_only_the_principle_is_forced` | `Framework.grounded apostolicWordHearing.defeats = Solver.toSet (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7, Mark7Party.trentAsApostolicWord]) [Mark7Party.principle])` | **If Rome's tradition is the apostolic word, Mark 7 forces only its principle** — which that reading grants. |
+| `mark7_not_forced_against_the_apostolic_word` | `¬Framework.SkepticallyAccepted apostolicWordHearing.defeats ⟨Mark7Party.mark7, ⋯⟩` | **So, against the apostolic word, sola scriptura from Mark 7 is not forced.** A defensible position that cannot be enlarged holds Mark 7's principle together with Trent read as … |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -417,6 +430,35 @@ conjunction and either conjunct may be denied:
 `scoping_blocks_self_refutation` the other. "The dispute reduces to the hinge"
 was pointing at something true and describing it too broadly.
 
+**Jesus' rebuke of tradition settles less than it is cited for** ([#122]).
+Mark 7 used to sit among sola scriptura's shared grounds, cited and read by no
+step. As a line of its own, it delivers a principle — God's word judges human
+tradition, and no commandment of men may be taught as God's word — and the
+principle is common ground while "God's word" is left as each side uses it:
+Rome's teaching office is "not above the word of God" (*Dei Verbum* 10), and
+Trent can hold every word of it (`trent_grants_marks_principle`). Weighed as a
+dispute, the principle prevails (`marks_principle_prevails`); sola scriptura
+from Mark 7 and Trent can each be defended, and neither is forced
+(`mark7_case_defensible`, `mark7_case_not_forced`,
+`trent_defensible_against_mark7`, `trent_not_forced_against_mark7`). The dilemma
+`whatTrentsTraditionIs` says why. Read as commandments of men, Trent's tradition
+is what Mark 7 condemns and cannot be defended
+(`trent_as_mens_commandments_indefensible`); heard against that reading alone,
+Mark 7's case is unopposed (`mark7_forced_against_mens_commandments`), though it
+still rests on two premises rated `disputed` that no party left in that hearing
+contests. Read as the apostolic word handed on unwritten — what Trent says it
+receives — Mark 7 does not reach it (`mark7_does_not_reach_the_apostolic_word`,
+`against_the_apostolic_word_only_the_principle_is_forced`), and the dispute
+moves to what the sola scriptura argument already turned on: whether any
+apostolic word survives outside Scripture, and whether the principle would then
+make Scripture the *sole* infallible rule. Weighing the dispute also moved a
+rating. Trent's claim that tradition is a coordinate source of revelation had
+been `wellSupported`. Geiselmann grants Session IV and denies that it canonised
+two coordinate sources, since the council replaced its draft's "partly … partly"
+with "and", and Congar judges that Trent left the question open. So it is
+`disputed` now, and the Tridentine party is named "Trent (Tradition II)" rather
+than by the reading in dispute.
+
 **A position its own cataloguer calls unworkable establishes the conclusion.**
 Mathison files "solo scriptura" as Tradition 0 and judges it "unbiblical,
 illogical, and unworkable". `tradition0_establishes` shows that, stated by
@@ -447,8 +489,9 @@ case is to its weakest link.
 
 **The remaining solas** ([#3]). *Sola gratia*, *solus Christus* and
 *soli Deo gloria*. *Sola scriptura* is no longer a seed: it now carries four
-positions on tradition, three objections that do not reduce to one another, and
-the two answers to the self-refutation objection.
+positions on tradition, three objections that do not reduce to one another, the
+two answers to the self-refutation objection, and a dispute over what Jesus'
+rebuke of tradition in Mark 7 decides.
 
 **Corpus grounding** ([#4]). Importers so `Passage` values resolve against real
 text data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite
@@ -586,3 +629,4 @@ the rest worth reading.
 [issues]: https://github.com/testimonyproject/testimony/issues
 [label-roadmap]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Aroadmap
 [label-infra]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Ainfra
+[#122]: https://github.com/testimonyproject/testimony/issues/122

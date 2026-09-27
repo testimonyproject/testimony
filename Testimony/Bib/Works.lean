@@ -891,6 +891,100 @@ it. -/
   , publisher := "Baker Academic"
   , place := some "Grand Rapids" }
 
+/-! ### Sola scriptura: Mark 7 and the tradition Trent receives -/
+
+/-- Waterworth's English translation of Trent, the translation the library quotes
+Trent in. Hanover College's public transcription gives its pages (Session IV at
+17–21). Tanner remains the critical edition cited for Trent's text; this entry is
+cited where Waterworth's wording is quoted. Published without an ISBN. -/
+@[bib_entry] def waterworthTrent : BibEntry := .book
+  { core :=
+      { key := "waterworth-trent-1848"
+      , contributors :=
+          { authors := [.corporate "Council of Trent"]
+          , translators := [.person "J." "Waterworth"] }
+      , title := "The Canons and Decrees of the Sacred and Oecumenical Council of Trent"
+      , year := some { value := 1848 }
+      , note := some "Published without an ISBN; a public transcription is at Hanover College." }
+  , publisher := "C. Dolman"
+  , place := some "London" }
+
+/-- Geiselmann's argument that Trent, replacing its draft's "partim … partim"
+with "et", did not define Scripture and tradition as two partial sources, and
+left Scripture's material sufficiency open. The Catholic reader who grants Trent
+Session IV and denies that it canonised two coordinate sources. Catalogued
+without an ISBN; its contents were not seen, so it is cited whole. -/
+@[bib_entry] def geiselmannMeaningOfTradition : BibEntry := .book
+  { core :=
+      { key := "geiselmann-meaning-of-tradition-1966"
+      , contributors :=
+          { authors := [.person "Josef Rupert" "Geiselmann"]
+          , translators := [.person "W. J." "O'Hara"] }
+      , title := "The Meaning of Tradition"
+      , year := some { value := 1966 }
+      , note := some "Catalogued without an ISBN." }
+  , publisher := "Herder and Herder"
+  , place := some "New York"
+  , series := some "Quaestiones Disputatae"
+  , seriesNumber := some "15" }
+
+/-- Congar on Tradition and the traditions: the Catholic distinction between the
+apostolic Tradition and the human traditions of local churches, and his judgement
+that Trent did not settle whether Scripture is materially sufficient. Cited whole;
+its contents were not seen. -/
+@[bib_entry] def congarTraditionAndTraditions : BibEntry := .book
+  { core :=
+      { key := "congar-tradition-and-traditions-1966"
+      , contributors :=
+          { authors := [.person "Yves" "Congar"]
+          , translators := [.person "Michael" "Naseby", .person "Thomas" "Rainborough"] }
+      , title := "Tradition and Traditions"
+      , subtitle := some "An Historical and a Theological Essay"
+      , year := some { value := 1966 }
+      , note := some
+          ("The 1998 Basilica Press reprint carries ISBN 9780536001733; this " ++
+           "first English edition was catalogued without one.") }
+  , publisher := "Burns & Oates"
+  , place := some "London" }
+
+/-- The *Catechism of the Catholic Church*, cited for §83: the apostolic
+Tradition distinguished from the "theological, disciplinary, liturgical or
+devotional traditions" of local churches, which "can be retained, modified or
+even abandoned". Rome's own answer to the reading of its Tradition as
+commandments of men. -/
+@[bib_entry] def catechismCatholicChurch : BibEntry := .book
+  { core :=
+      { key := "catholic-church-catechism-2000"
+      , contributors := { authors := [.corporate "Catholic Church"] }
+      , title := "Catechism of the Catholic Church"
+      , year := some { value := 2000 }
+      , identifiers := [.isbn "9781574551105"] }
+  , publisher := "USCCB Publishing"
+  , edition := some "2nd edition" }
+
+/-- Whitaker's *Disputation*, the Elizabethan Reformed answer to Bellarmine. Its
+sixth question of the first controversy argues, against unwritten tradition,
+that "the papists have no such unwritten tradition which can be certainly shewn
+to have been always observed by the universal church" (506). Cited in the Parker
+Society edition; the modern reprints paginate differently. -/
+@[bib_entry] def whitakerDisputation : BibEntry := .book
+  { core :=
+      { key := "whitaker-disputation-1849"
+      , contributors :=
+          { authors := [.person "William" "Whitaker"]
+          , translators := [.person "William" "Fitzgerald"] }
+      , title := "A Disputation on Holy Scripture"
+      , subtitle := some "Against the Papists, Especially Bellarmine and Stapleton"
+      , year := some { value := 1849 }
+      , note := some
+          ("Latin original 1588. The Soli Deo Gloria reprint (2000) carries ISBN " ++
+           "9781573580908, the Wipf & Stock reprint (2004) ISBN 9781592445530; " ++
+           "neither is the pagination cited here.") }
+  , publisher := "Printed at the University Press"
+  , place := some "Cambridge"
+  , series := some "Parker Society"
+  , seriesNumber := some "45" }
+
 /-! ### Sola fide: the wider debate
 
 The positions `SolaFide` did not yet cite from their own sources (#27): the

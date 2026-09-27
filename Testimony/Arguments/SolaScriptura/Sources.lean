@@ -24,6 +24,51 @@ private def heldBy (entry : BibEntry) (loc : String) (tradition : Tradition)
   , tradition := tradition
   , confidence := confidence }
 
+/-! ### Ratings for inference steps
+
+A step's rating is its own, cited to whoever grants its grounds and denies its
+conclusion — or, where no one was found who does, to whoever grants both. -/
+
+/-- The rating of Mark 7's step, from the rebuke to the principle. No reader was
+found who grants the text and denies the principle; Rome grants it outright —
+the teaching office is "not above the word of God" (*Dei Verbum* 10) — and
+Calvin applies Matthew 15:9 to the laws of worship he opposed. Rated
+`wellSupported` rather than `consensus`, because the step generalises from one
+pericope. -/
+def mark7PrincipleInference : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Vatican II (1965), Dei Verbum 10")
+  , supporting := [.work calvinInstitutes (.sectionRef "IV.x.23")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- The rating of the step from Mark 7's principle to the sole rule: `disputed`.
+Grant that God's word judges human tradition and that no apostolic teaching
+outside Scripture adds to it, and a reader may still deny that Scripture is the
+*sole* infallible rule. Geiselmann is that reader: he holds that Scripture
+contains all revealed content, grants the principle as every Catholic does, and
+as a Catholic after Vatican I still holds the Magisterium an infallible
+interpreter (*Pastor Aeternus* 4). Florovsky, for whom tradition adds nothing
+to Scripture, likewise keeps the mind of the Church as its authoritative
+interpreter. -/
+def principleToSoleRuleInference : Source :=
+  { primary := .work geiselmannMeaningOfTradition .whole
+  , supporting :=
+      [ .work tannerDecrees (.sectionRef "Vatican I (1870), Pastor Aeternus, ch. 4")
+      , .work florovskyBibleChurchTradition .whole ]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of Trent's step, from 2 Thessalonians 2:15 and tradition as a
+source of revelation to "Scripture is not the sole rule": `wellSupported`. Once
+the grounds are granted the conclusion all but follows, and no reader was found
+who grants both and denies it. Protestants deny the second ground instead, and
+that dissent is weighed in its own rating. -/
+def tridentineInference : Source :=
+  { primary := .work tannerDecrees
+      (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions")
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
+
 /-- Citation and classification for every atom. Total, so nothing is
 uncited. -/
 def cite : Claim → AtomMeta
@@ -37,9 +82,17 @@ def cite : Claim → AtomMeta
     , kind := .textual
     , source := scriptureWithCalvin [{ ref := .verse ⟨.secondTimothy, 3, 17⟩ }] "I.vii.1" }
   | .mark7TraditionCanNullify =>
-    { label := "Mark 7:8–13 — Jesus rebukes tradition that nullifies God's command"
+    { label :=
+        "Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, " ++
+        "Corban above all, for voiding God's command"
     , kind := .textual
-    , source := scriptureWithCalvin [{ ref := .range ⟨.mark, 7, 8, 7, 13⟩ }] "IV.x.8" }
+      -- What the text says, which no party disputes: Rome and the Reformers
+      -- differ over what it reaches, not over what it reports.
+    , source :=
+        { primary := .scripture [{ ref := .range mark7_1to13 }, { ref := .range matthew15_1to9 }]
+        , supporting := [.work calvinInstitutes (.sectionRef "IV.x.10")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .acts17BereansTested =>
     { label := "Acts 17:11 — the Bereans tested apostolic preaching against scripture"
     , kind := .textual
@@ -104,12 +157,18 @@ def cite : Claim → AtomMeta
   | .traditionIsCoordinateSourceOfRevelation =>
     { label := "Tradition is a coordinate source of revelation alongside scripture"
     , kind := .theological
+      -- `disputed`, not `wellSupported` as it was; the atom's docstring gives
+      -- Geiselmann's and Congar's reasons. The rating was information for a
+      -- reader until the Mark 7 dispute made it decide who prevails.
     , source :=
         { primary := .work tannerDecrees
             (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions")
-        , supporting := [.work mathisonShapeSolaScriptura .whole]
+        , supporting :=
+            [ .work mathisonShapeSolaScriptura .whole
+            , .work geiselmannMeaningOfTradition .whole
+            , .work congarTraditionAndTraditions .whole ]
         , tradition := .romanCatholic
-        , confidence := .wellSupported } }
+        , confidence := .disputed } }
   | .magisteriumIsInfallible =>
     { label := "The magisterium is an infallible interpreter of scripture"
     , kind := .theological
@@ -286,6 +345,44 @@ def cite : Claim → AtomMeta
                 , { ref := .range ⟨.firstPeter, 5, 2, 5, 3⟩ } ] ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .plausible } }
+  | .godsWordJudgesTradition =>
+    { label :=
+        "God's word judges human tradition: no commandment of men may be taught " ++
+        "as God's word, and a tradition that voids God's command is void"
+    , kind := .theological
+      -- Common ground. "God's word" is left as each side uses it: for Rome it
+      -- includes apostolic Tradition, and the principle is granted on those
+      -- terms. Read as "Scripture only", it would be a different, disputed claim.
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Vatican II (1965), Dei Verbum 10")
+        , supporting :=
+            [ .work calvinInstitutes (.sectionRef "IV.x.23")
+            , .work florovskyBibleChurchTradition .whole ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .mensCommandmentBindsAsGodsWord =>
+    { label := "A commandment of men may rightly be bound on the Church as God's word"
+    , kind := .interpretive
+      -- What the elders claimed for Corban. Whether any tradition Rome holds
+      -- is bound so is what Calvin asserts and Rome denies.
+    , source :=
+        { primary := .scripture [{ ref := .verse mark7_7 }, { ref := .verse isaiah29_13 }]
+        , supporting := [.work calvinInstitutes (.sectionRef "IV.x.23")]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .noApostolicWordOutsideScripture =>
+    { label :=
+        "No apostolic teaching handed on outside Scripture survives, identifiable " ++
+        "as the word of God"
+    , kind := .theological
+      -- Whitaker: "the papists have no such unwritten tradition which can be
+      -- certainly shewn to have been always observed by the universal church".
+      -- Denied by Rome, from 2 Thessalonians 2:15 and Dei Verbum 9.
+    , source :=
+        { primary := .work whitakerDisputation (.page 506)
+        , supporting := [.work westminsterConfession (.sectionRef "I.6")]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
   | .perspicuityIsLimitedToSalvationEssentials =>
     { label :=
         "Perspicuity is claimed only for what is necessary for salvation, not " ++

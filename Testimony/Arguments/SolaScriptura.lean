@@ -3,6 +3,9 @@ import Testimony.Arguments.SolaScriptura.Sources
 import Testimony.Arguments.SolaScriptura.Lines
 import Testimony.Arguments.SolaScriptura.Packages
 import Testimony.Arguments.SolaScriptura.Results
+import Testimony.Arguments.SolaScriptura.Mark7
+import Testimony.Arguments.SolaScriptura.Dispute
+import Testimony.Arguments.SolaScriptura.Hearings
 
 /-!
 # Arguments.SolaScriptura — scripture as the sole infallible rule of faith
@@ -29,7 +32,7 @@ Mathison's taxonomy, after Oberman, separates what the seed encoding collapsed:
 |---|---|
 | **Tradition 0** | Tradition carries no binding authority; creeds inform without norming |
 | **Tradition I** | Tradition is ministerial — real authority, fallible, subordinate to scripture |
-| **Tradition II** | Two coordinate sources of revelation, canonised at Trent |
+| **Tradition II** | Two coordinate sources, as Mathison reads Trent; Geiselmann dissents |
 | **Tradition III** | The magisterium is the one real source, resting on Vatican I |
 
 Orthodoxy is a fifth thing again, and not a variant of Rome: authority rests in
@@ -127,6 +130,32 @@ That charge is made from inside the Reformation, against the position this
 module encodes as the Protestant one. It is conditional like every result here:
 deny either leg and the circle is not there.
 
+## What Mark 7 settles
+
+Jesus' rebuke of the elders' tradition (Mark 7:1–13; Matthew 15:1–9) is the
+text the Protestant case most often cites, and it used to sit among the shared
+grounds with no step reading it. It is a line of its own now, and it settles
+less than it is cited for. Its principle — God's word judges human tradition,
+and no commandment of men may be taught as God's word — is common ground: Rome
+holds it too. From the principle to sola scriptura needs one more premise, that
+no apostolic word survives outside Scripture, and Rome denies it.
+
+`whatTrentsTraditionIs` is the dilemma a reader of Mark 7 needs. Read as
+commandments of men, Trent's tradition is what Mark 7 condemns; read as the
+apostolic word handed on unwritten, which is what Trent says it receives, Mark 7
+does not reach it. Weighed as a dispute, Mark 7's principle — which both sides
+hold — prevails, Trent read as commandments of men cannot be defended, and
+between Mark 7's case for sola scriptura and Trent the dispute chooses neither
+(`Mark7.lean`, `Dispute.lean`, `Hearings.lean`).
+
+Weighing it moved a rating. `traditionIsCoordinateSourceOfRevelation` was
+`wellSupported`, which made no difference while no dispute read it. In the Mark 7
+dispute it would have decided who prevails, so it was audited: Geiselmann grants
+Trent's Session IV and denies that it canonised two coordinate sources, since the
+council replaced its draft's "partly … partly" with "and"; Congar judges that
+Trent left the question open. The claim is `disputed` now, and the Tridentine
+party is named "Trent (Tradition II)" rather than by the reading in dispute.
+
 ## A limitation worth stating
 
 The final-arbiter reading turns on a distinction between **doctrine**, which
@@ -144,5 +173,8 @@ given the distinction, not that the distinction can be drawn.
 | `Sources.lean` | `cite`, with each position cited from a source that holds it |
 | `Lines.lean` | the inference steps, the lines, and the replies as substituted grounds |
 | `Packages.lean` | the positions, the objections, and the variants the results refute |
-| `Results.lean` | every `@[headline]` result, with its trust base |
+| `Results.lean` | every `@[headline]` result on the positions and objections |
+| `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
+| `Dispute.lean` | the dispute over Mark 7, weighed, and its verdicts |
+| `Hearings.lean` | the same dispute heard against each reading of Trent |
 -/

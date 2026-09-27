@@ -10024,7 +10024,7 @@ Mathison's taxonomy, after Oberman, separates what the seed encoding collapsed:
 \endhead
 \textbf{Tradition 0} & Tradition carries no binding authority; creeds inform without norming \\
 \textbf{Tradition I} & Tradition is ministerial — real authority, fallible, subordinate to scripture \\
-\textbf{Tradition II} & Two coordinate sources of revelation, canonised at Trent \\
+\textbf{Tradition II} & Two coordinate sources, as Mathison reads Trent; Geiselmann dissents \\
 \textbf{Tradition III} & The magisterium is the one real source, resting on Vatican I \\
 \bottomrule
 \end{longtable}
@@ -10062,6 +10062,13 @@ The replies neutralise; they do not establish. \texttt{compatibility\_\allowbrea
 
 That charge is made from inside the Reformation, against the position this module encodes as the Protestant one. It is conditional like every result here: deny either leg and the circle is not there.
 
+\subsubsection*{What Mark 7 settles}
+Jesus' rebuke of the elders' tradition (Mark 7:1–13; Matthew 15:1–9) is the text the Protestant case most often cites, and it used to sit among the shared grounds with no step reading it. It is a line of its own now, and it settles less than it is cited for. Its principle — God's word judges human tradition, and no commandment of men may be taught as God's word — is common ground: Rome holds it too. From the principle to sola scriptura needs one more premise, that no apostolic word survives outside Scripture, and Rome denies it.
+
+\texttt{what\allowbreak{}Trents\allowbreak{}Tradition\allowbreak{}Is} is the dilemma a reader of Mark 7 needs. Read as commandments of men, Trent's tradition is what Mark 7 condemns; read as the apostolic word handed on unwritten, which is what Trent says it receives, Mark 7 does not reach it. Weighed as a dispute, Mark 7's principle — which both sides hold — prevails, Trent read as commandments of men cannot be defended, and between Mark 7's case for sola scriptura and Trent the dispute chooses neither (\texttt{Mark7.lean}, \texttt{Dispute.lean}, \texttt{Hearings.lean}).
+
+Weighing it moved a rating. \texttt{tradition\allowbreak{}Is\allowbreak{}Coordinate\allowbreak{}Source\allowbreak{}Of\allowbreak{}Revelation} was \texttt{well\allowbreak{}Supported}, which made no difference while no dispute read it. In the Mark 7 dispute it would have decided who prevails, so it was audited: Geiselmann grants Trent's Session IV and denies that it canonised two coordinate sources, since the council replaced its draft's "partly … partly" with "and"; Congar judges that Trent left the question open. The claim is \texttt{disputed} now, and the Tridentine party is named "Trent (Tradition II)" rather than by the reading in dispute.
+
 \subsubsection*{A limitation worth stating}
 The final-arbiter reading turns on a distinction between \textbf{doctrine}, which requires scriptural adjudication, and \textbf{practice} neither commanded nor forbidden, which does not. That is a \emph{scope} distinction, and this fragment is propositional: it cannot quantify. The distinction is carried by atom design and by this docstring, not by the logic. What the encoding shows is what follows given the distinction, not that the distinction can be drawn.
 
@@ -10075,7 +10082,10 @@ The final-arbiter reading turns on a distinction between \textbf{doctrine}, whic
 \texttt{Sources.lean} & \texttt{cite}, with each position cited from a source that holds it \\
 \texttt{Lines.lean} & the inference steps, the lines, and the replies as substituted grounds \\
 \texttt{Packages.lean} & the positions, the objections, and the variants the results refute \\
-\texttt{Results.lean} & every \texttt{@[headline]} result, with its trust base \\
+\texttt{Results.lean} & every \texttt{@[headline]} result on the positions and objections \\
+\texttt{Mark7.lean} & Mark 7 and the tradition Trent receives: the packages, the dilemma \\
+\texttt{Dispute.lean} & the dispute over Mark 7, weighed, and its verdicts \\
+\texttt{Hearings.lean} & the same dispute heard against each reading of Trent \\
 \bottomrule
 \end{longtable}
 \subsection*{Arguments.SolaScriptura.Atoms — the atomic claims}
@@ -10088,6 +10098,10 @@ Two atoms are worth flagging. \texttt{scripture\allowbreak{}Is\allowbreak{}Infal
 
 Where the positions disagree about an atom they are given the source that actually holds the claim: the Orthodox premise cites Florovsky and Ware rather than a Protestant account of Orthodoxy, and Tradition 0 cites Geisler rather than Mathison's description of it — Geisler's principal complaint being that the description is a caricature.
 
+\paragraph*{Ratings for inference steps}
+\leavevmode\par
+A step's rating is its own, cited to whoever grants its grounds and denies its conclusion — or, where no one was found who does, to whoever grants both.
+
 \subsection*{The claims, numbered}
 \begin{longtable}{@{}r >{\raggedright\arraybackslash}p{0.30\textwidth} l >{\raggedright\arraybackslash}p{0.19\textwidth} >{\raggedright\arraybackslash}p{0.21\textwidth}@{}}
 \toprule
@@ -10096,7 +10110,7 @@ Where the positions disagree about an atom they are given the source that actual
 \endhead
 $P_{1}$ & 2 Timothy 3:16 — all scripture is God-breathed and profitable & textual & Reformed Protestant, well supported & 2 Tim 3:16; \cite[I.vii.1]{calvin-institutes-1960} \\
 $P_{2}$ & 2 Timothy 3:17 — that the man of God may be complete, equipped for every good work & textual & Reformed Protestant, well supported & 2 Tim 3:17; \cite[I.vii.1]{calvin-institutes-1960} \\
-$P_{3}$ & Mark 7:8–13 — Jesus rebukes tradition that nullifies God's command & textual & Reformed Protestant, well supported & Mark 7:8-13; \cite[IV.x.8]{calvin-institutes-1960} \\
+$P_{3}$ & Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command & textual & Christian, hist.-gramm., consensus & Mark 7:1-13; Matt 15:1-9; \cite[IV.x.10]{calvin-institutes-1960} \\
 $P_{4}$ & Acts 17:11 — the Bereans tested apostolic preaching against scripture & textual & Reformed Protestant, well supported & Acts 17:11; \cite[I.vii.2]{calvin-institutes-1960} \\
 $P_{5}$ & 2 Thessalonians 2:15 — hold to the traditions taught by word or letter\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & 2 Thess 2:15 \\
 $P_{6}$ & Scripture is infallible & theological & Christian, hist.-gramm., consensus & \cite[ch. 5]{grudem-systematic-theology-1994}; \cite[I.vii]{calvin-institutes-1960} \\
@@ -10106,7 +10120,7 @@ $P_{9}$ & Scripture is the sole infallible rule of faith & theological & Reforme
 $P_{10}$ & Scripture itself teaches that scripture is the sole infallible rule & interpretive & Reformed Protestant, disputed & \cite[I.vii.4]{calvin-institutes-1960} \\
 $P_{11}$ & A doctrine is binding only if scripture teaches it & theological & Reformed Protestant, disputed & \cite[IV.x.8]{calvin-institutes-1960} \\
 $P_{12}$ & No candidate rule of faith other than scripture is infallible & theological & Reformed Protestant, disputed & \cite[I.6]{westminster-confession-1647}; \cite{mathison-shape-sola-scriptura-2001} \\
-$P_{13}$ & Tradition is a coordinate source of revelation alongside scripture & theological & Roman Catholic, well supported & \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001} \\
+$P_{13}$ & Tradition is a coordinate source of revelation alongside scripture & theological & Roman Catholic, disputed & \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966} \\
 $P_{14}$ & The magisterium is an infallible interpreter of scripture & theological & Roman Catholic, well supported & \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001} \\
 $P_{15}$ & The mind of the Church, in the consensus of the Fathers and in received conciliar decisions, infallibly interprets scripture & theological & Eastern Orthodox, well supported & \cite{florovsky-bible-church-tradition-1972}; \cite{ware-orthodox-church-1993} \\
 $P_{16}$ & The canon is known through the Church's reception of it & historical & Roman Catholic, consensus & \cite[Augustine, Contra epistolam Manichaei 5.6]{npnf1-04-1887}; \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990} \\
@@ -10130,12 +10144,54 @@ $P_{33}$ & Any appeal to an ultimate authority is circular, there being no highe
 $P_{34}$ & The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it & theological & Reformed Protestant, disputed & \cite[ch. 3]{allen-swain-reformed-catholicity-2015} \\
 $P_{35}$ & Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer & textual & Christian, hist.-gramm., plausible & \emph{proposed:} Advanced here, not found in the literature as a reply to the circularity charge. The texts are cited; the use is assembled. Note it claims only that scripture *bounds* the office, not that it *confers* it — conferral invites the recognition/conferral distinction Mathison himself presses against Rome.; Acts 20:32; Titus 1:9; 1 Pet 5:2-3 \\
 $P_{36}$ & Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike & theological & Reformed Protestant, well supported & \cite[I.7]{westminster-confession-1647} \\
+$P_{37}$ & God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void & theological & Christian, hist.-gramm., consensus & \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}; \cite{florovsky-bible-church-tradition-1972} \\
+$P_{38}$ & A commandment of men may rightly be bound on the Church as God's word & interpretive & Reformed Protestant, disputed & Mark 7:7; Isa 29:13; \cite[IV.x.23]{calvin-institutes-1960} \\
+$P_{39}$ & No apostolic teaching handed on outside Scripture survives, identifiable as the word of God & theological & Reformed Protestant, disputed & \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647} \\
 \bottomrule
 \end{longtable}
 
 \noindent\footnotesize \textsuperscript{\dag} grounded in scripture alone: the reading is assumed, not argued for.
 \normalsize
 
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Principle\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of Mark 7's step, from the rebuke to the principle. No reader was found who grants the text and denies the principle; Rome grants it outright — the teaching office is "not above the word of God" (\emph{Dei Verbum} 10) — and Calvin applies Matthew 15:9 to the laws of worship he opposed. Rated \texttt{well\allowbreak{}Supported} rather than \texttt{consensus}, because the step generalises from one pericope.
+
+{\small\begin{verbatim}
+def mark7PrincipleInference : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef "Vatican II (1965), Dei Verbum 10"),
+    supporting :=
+      [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.x.23")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{principle\allowbreak{}To\allowbreak{}Sole\allowbreak{}Rule\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of the step from Mark 7's principle to the sole rule: \texttt{disputed}. Grant that God's word judges human tradition and that no apostolic teaching outside Scripture adds to it, and a reader may still deny that Scripture is the \emph{sole} infallible rule. Geiselmann is that reader: he holds that Scripture contains all revealed content, grants the principle as every Catholic does, and as a Catholic after Vatican I still holds the Magisterium an infallible interpreter (\emph{Pastor Aeternus} 4). Florovsky, for whom tradition adds nothing to Scripture, likewise keeps the mind of the Church as its authoritative interpreter.
+
+{\small\begin{verbatim}
+def principleToSoleRuleInference : Source :=
+  { primary := Reference.work Bib.geiselmannMeaningOfTradition,
+    supporting :=
+      [Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef "Vatican I (1870), Pastor Aeternus, ch. 4"),
+        Reference.work Bib.florovskyBibleChurchTradition],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of Trent's step, from 2 Thessalonians 2:15 and tradition as a source of revelation to "Scripture is not the sole rule": \texttt{well\allowbreak{}Supported}. Once the grounds are granted the conclusion all but follows, and no reader was found who grants both and denies it. Protestants deny the second ground instead, and that dissent is weighed in its own rating.
+
+{\small\begin{verbatim}
+def tridentineInference : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef
+          "Trent, Session IV (1546), Decree on Sacred Books and Traditions"),
+    tradition := Tradition.romanCatholic,
+    confidence := Confidence.wellSupported }
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{cite}}\par\nobreak\noindent
 Citation and classification for every atom. Total, so nothing is uncited.
 
@@ -10143,7 +10199,7 @@ Citation and classification for every atom. Total, so nothing is uncited.
 def cite : Claim → AtomMeta
 \end{verbatim}}
 \subsection*{Arguments.SolaScriptura.Lines — the inference steps and the lines of reason}
-Two lines reach the conclusion, three positions deny it, and three objections attack it from different directions. The objections do not reduce to one another: self-refutation says the doctrine fails its own standard, the canon objection says an authority outside scripture is needed to identify scripture, and the interpretive-authority regress says the authority claimed is the claimant in disguise.
+Three routes reach the conclusion — the classical line, the eliminative line, and Mark 7's, which takes two lines — three positions deny it, and three objections attack it from different directions. The objections do not reduce to one another: self-refutation says the doctrine fails its own standard, the canon objection says an authority outside scripture is needed to identify scripture, and the interpretive-authority regress says the authority claimed is the claimant in disguise.
 
 \textbf{Redundancy does not defend the hinge here.} In \texttt{Sola\allowbreak{}Fide}, adding a second strand defeated an attack on a premise. These objections are not premise attacks: each independently delivers the negation of the conclusion, so a further route to the conclusion does nothing against them. What answers an objection is denying one of \emph{its} grounds, which is why every reply below is written with \texttt{Line.on\allowbreak{}Grounds} — the objection's own line, with the ground the reply refuses put back as what the reply offers instead.
 
@@ -10157,6 +10213,18 @@ Sufficiency and perspicuity, with the prooftexts and the claim that scripture te
 The eliminative route: scripture is infallible, nothing else is, so scripture is the \emph{sole} infallible rule. It never asserts that scripture teaches the principle.
 
 \[(P_{6} \land P_{12}) \rightarrow P_{9}\]
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}To\allowbreak{}Principle}}\par\nobreak\noindent
+\textbf{Mark 7's step}: from Jesus' rebuke of the elders' tradition to the principle it enacts — God's word judges human tradition. Rated \texttt{well\allowbreak{}Supported}: no reader was found who grants the text and denies the principle, and Rome grants it in so many words (\emph{Dei Verbum} 10). Not \texttt{consensus}, because the step generalises from one pericope.
+
+\[P_{3} \rightarrow P_{37}\]
+\par\medskip\noindent\textbf{\texttt{principle\allowbreak{}Excludes\allowbreak{}Mens\allowbreak{}Commandments}}\par\nobreak\noindent
+What the principle says of a commandment of men: it may not be bound on the Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it.
+
+\[P_{37} \rightarrow \lnot P_{38}\]
+\par\medskip\noindent\textbf{\texttt{principle\allowbreak{}To\allowbreak{}Sole\allowbreak{}Rule}}\par\nobreak\noindent
+\textbf{From Mark 7's principle to the sole rule.} If God's word judges human tradition, and no apostolic word survives outside Scripture, Scripture is the sole infallible rule. Rated \texttt{disputed}: Geiselmann holds that Scripture contains all revealed content and, as a Catholic after Vatican I, keeps the Magisterium as its infallible interpreter; Florovsky holds that tradition adds nothing to Scripture and keeps the mind of the Church as its interpreter. Neither adds a word to Scripture; both deny it is the \emph{sole} infallible rule.
+
+\[(P_{37} \land P_{39}) \rightarrow P_{9}\]
 \par\medskip\noindent\textbf{\texttt{tradition0\allowbreak{}To\allowbreak{}Sole\allowbreak{}Rule}}\par\nobreak\noindent
 Geisler's route: the historical-grammatical method suffices, so creeds may inform without binding, and no second infallible rule is needed.
 
@@ -10224,6 +10292,22 @@ Leg two: scripture's clear sense is not obtainable without that consensus.
   \text{(3)} \quad & (P_{6} \land P_{12}) \rightarrow P_{9} \\
   \vdash \quad & P_{9}
 \end{align*}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Line}} --- Mark 7 (God's word judges human tradition)\par\nobreak\noindent
+\textbf{Mark 7}, as a line of its own: Jesus' rebuke of the elders' tradition, and the principle it enacts. It delivers the principle, and no more.
+
+\begin{align*}
+  \text{(1)} \quad & P_{3} \\
+  \text{(2)} \quad & P_{3} \rightarrow P_{37} \\
+  \vdash \quad & P_{37}
+\end{align*}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Sole\allowbreak{}Rule\allowbreak{}Line}} --- From Mark 7's principle to the sole rule\par\nobreak\noindent
+\textbf{From Mark 7 to the sole rule}: the principle, with the premise that no apostolic word survives outside Scripture. The principle is carried in by \texttt{mark7\allowbreak{}Line}; this line's own ground is the one Rome denies.
+
+\begin{align*}
+  \text{(1)} \quad & P_{39} \\
+  \text{(2)} \quad & (P_{37} \land P_{39}) \rightarrow P_{9} \\
+  \vdash \quad & P_{9}
+\end{align*}
 \par\medskip\noindent\textbf{\texttt{tradition0\allowbreak{}Line}} --- Tradition 0 (creeds informative, not normative)\par\nobreak\noindent
 \textbf{Tradition 0}, as Geisler states it rather than as Mathison describes it.
 
@@ -10235,8 +10319,8 @@ Leg two: scripture's clear sense is not obtainable without that consensus.
   \text{(5)} \quad & (P_{26} \land P_{25} \land P_{6} \land P_{12}) \rightarrow P_{9} \\
   \vdash \quad & P_{9}
 \end{align*}
-\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Line}} --- Tradition II (two coordinate sources)\par\nobreak\noindent
-\textbf{Tradition II}, the Tridentine two-source position.
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Line}} --- Trent (Tradition II)\par\nobreak\noindent
+\textbf{Tradition II}, the Tridentine two-source position. Its step is rated \texttt{well\allowbreak{}Supported}: once unwritten tradition is granted as a source of revelation alongside Scripture, no reader was found who denies that Scripture is then not the \emph{sole} rule. Protestants deny the ground instead, and that dissent is weighed in the ground's own rating.
 
 \begin{align*}
   \text{(1)} \quad & P_{5} \\
@@ -10390,16 +10474,15 @@ The charge pressed home: the circularity defeats the position.
 \paragraph*{Shared grounds and closing steps}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{shared\allowbreak{}Grounds}}\par\nobreak\noindent
-What the Protestant packages rest on beyond any single line: the prooftexts that belong to no strand, the shared datum of 2 Thessalonians 2:15, and the commitments of the final-arbiter reading.
+What the Protestant packages rest on beyond any single line: the prooftext that belongs to no strand, the shared datum of 2 Thessalonians 2:15, and the commitments of the final-arbiter reading. Mark 7 used to sit here too, a premise no step read; it is a line of its own now (\texttt{mark7\allowbreak{}Line}).
 
 \begin{align*}
-  \text{(1)} \quad & P_{3} \\
-  \text{(2)} \quad & P_{4} \\
-  \text{(3)} \quad & P_{5} \\
-  \text{(4)} \quad & P_{28} \\
-  \text{(5)} \quad & P_{19} \\
-  \text{(6)} \quad & P_{24} \\
-  \text{(7)} \quad & P_{23} \\
+  \text{(1)} \quad & P_{4} \\
+  \text{(2)} \quad & P_{5} \\
+  \text{(3)} \quad & P_{28} \\
+  \text{(4)} \quad & P_{19} \\
+  \text{(5)} \quad & P_{24} \\
+  \text{(6)} \quad & P_{23} \\
 \end{align*}
 \subsection*{Arguments.SolaScriptura.Packages — the positions, and the variants results refute}
 Four positions on tradition, three objections, two parity replies, and the variants each result needs. The rivals were written before anything was proved about the position argued for.
@@ -10411,7 +10494,7 @@ The parity replies have no packages at all. What they do is that the disputed pr
 \paragraph*{The positions}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{protestant}} --- Protestant (sola scriptura as final arbiter)\par\nobreak\noindent
-\textbf{The Protestant position}: two routes to the conclusion, on the final-arbiter reading. Scripture is not the only authority but the only infallible one; tradition is ministerial, and practices neither commanded nor forbidden need no scriptural warrant.
+\textbf{The Protestant position}: three routes to the conclusion, on the final-arbiter reading — the classical, the eliminative, and Mark 7's. Scripture is not the only authority but the only infallible one; tradition is ministerial, and practices neither commanded nor forbidden need no scriptural warrant.
 
 \begin{align*}
   \text{(1)} \quad & P_{1} \\
@@ -10422,14 +10505,17 @@ The parity replies have no packages at all. What they do is that the disputed pr
   \text{(6)} \quad & P_{6} \\
   \text{(7)} \quad & P_{12} \\
   \text{(8)} \quad & P_{3} \\
-  \text{(9)} \quad & P_{4} \\
-  \text{(10)} \quad & P_{5} \\
-  \text{(11)} \quad & P_{28} \\
-  \text{(12)} \quad & P_{19} \\
-  \text{(13)} \quad & P_{24} \\
-  \text{(14)} \quad & P_{23} \\
-  \text{(15)} \quad & (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
-  \text{(16)} \quad & (P_{6} \land P_{12}) \rightarrow P_{9} \\
+  \text{(9)} \quad & P_{39} \\
+  \text{(10)} \quad & P_{4} \\
+  \text{(11)} \quad & P_{5} \\
+  \text{(12)} \quad & P_{28} \\
+  \text{(13)} \quad & P_{19} \\
+  \text{(14)} \quad & P_{24} \\
+  \text{(15)} \quad & P_{23} \\
+  \text{(16)} \quad & (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
+  \text{(17)} \quad & (P_{6} \land P_{12}) \rightarrow P_{9} \\
+  \text{(18)} \quad & P_{3} \rightarrow P_{37} \\
+  \text{(19)} \quad & (P_{37} \land P_{39}) \rightarrow P_{9} \\
   \vdash \quad & P_{9}
 \end{align*}
 \emph{Grounded in scripture alone:} 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
@@ -10445,7 +10531,7 @@ The parity replies have no packages at all. What they do is that the disputed pr
   \vdash \quad & P_{9}
 \end{align*}
 \emph{No premise here rests on scripture alone.}
-\par\medskip\noindent\textbf{\texttt{tridentine}} --- Tradition II (two coordinate sources)\par\nobreak\noindent
+\par\medskip\noindent\textbf{\texttt{tridentine}} --- Trent (Tradition II)\par\nobreak\noindent
 \textbf{Tradition II}, the Tridentine two-source position. Its line delivers the denial, so the package is not the line as it stands: the question asked of these premises is whether sola scriptura follows, and the answer is that they entail its negation.
 
 \begin{align*}
@@ -10534,7 +10620,7 @@ No package here. What a parity reply does is stated as \texttt{Independent} over
 \paragraph*{The hinge, in its two roles}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{protestant\allowbreak{}Without\allowbreak{}Hinge}} --- Protestant, minus the claim that scripture teaches the principle\par\nobreak\noindent
-The Protestant position with the classical line stripped of the hinge. The eliminative line is untouched.
+The Protestant position with the classical line stripped of the hinge. The eliminative and Mark 7 routes are untouched.
 
 \begin{align*}
   \text{(1)} \quad & P_{1} \\
@@ -10544,14 +10630,17 @@ The Protestant position with the classical line stripped of the hinge. The elimi
   \text{(5)} \quad & P_{6} \\
   \text{(6)} \quad & P_{12} \\
   \text{(7)} \quad & P_{3} \\
-  \text{(8)} \quad & P_{4} \\
-  \text{(9)} \quad & P_{5} \\
-  \text{(10)} \quad & P_{28} \\
-  \text{(11)} \quad & P_{19} \\
-  \text{(12)} \quad & P_{24} \\
-  \text{(13)} \quad & P_{23} \\
-  \text{(14)} \quad & (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
-  \text{(15)} \quad & (P_{6} \land P_{12}) \rightarrow P_{9} \\
+  \text{(8)} \quad & P_{39} \\
+  \text{(9)} \quad & P_{4} \\
+  \text{(10)} \quad & P_{5} \\
+  \text{(11)} \quad & P_{28} \\
+  \text{(12)} \quad & P_{19} \\
+  \text{(13)} \quad & P_{24} \\
+  \text{(14)} \quad & P_{23} \\
+  \text{(15)} \quad & (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
+  \text{(16)} \quad & (P_{6} \land P_{12}) \rightarrow P_{9} \\
+  \text{(17)} \quad & P_{3} \rightarrow P_{37} \\
+  \text{(18)} \quad & (P_{37} \land P_{39}) \rightarrow P_{9} \\
   \vdash \quad & P_{9}
 \end{align*}
 \emph{Grounded in scripture alone:} 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
@@ -10639,7 +10728,7 @@ The results this module exists for are the two on the hinge. The seed asserted i
 \paragraph*{The positions}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{protestant\_\allowbreak{}establishes}}\par\nobreak\noindent
-Given the Protestant premises, on either route, the conclusion follows.
+Given the Protestant premises, on any of its three routes, the conclusion follows.
 
 {\small\begin{verbatim}
 theorem protestant_establishes : Establishes protestant
@@ -10731,7 +10820,7 @@ theorem interpretiveRegress_is_valid : Establishes interpretiveRegress
 \texttt{sola\allowbreak{}Scriptura\allowbreak{}Is\allowbreak{}Taught\allowbreak{}By\allowbreak{}Scripture} does two jobs, and they come apart. It is not load-bearing for reaching the conclusion, because the eliminative line reaches it without the hinge. It is load-bearing within the classical strand, and — the result that matters — it is one of only two things that answer the self-refutation objection.
 
 \par\medskip\noindent\textbf{\texttt{hinge\_\allowbreak{}not\_\allowbreak{}load\_\allowbreak{}bearing\_\allowbreak{}for\_\allowbreak{}conclusion}}\par\nobreak\noindent
-\textbf{The hinge is not load-bearing for the conclusion.} Strip it and the eliminative line still delivers the sole rule.
+\textbf{The hinge is not load-bearing for the conclusion.} Strip it and the eliminative line still delivers the sole rule, and so does Mark 7's — each on a premise of its own that the classical line does not need.
 
 {\small\begin{verbatim}
 theorem hinge_not_load_bearing_for_conclusion : Establishes
@@ -11183,6 +11272,1149 @@ The interpretive-authority regress has a model.
 theorem interpretiveRegress_is_satisfiable : Satisfiable
     interpretiveRegress.premises
 -- axioms: propext, Quot.sound
+\end{verbatim}}
+\subsection*{Arguments.SolaScriptura.Mark7 — what Jesus' rebuke of tradition settles}
+The Pharisees and scribes ask why Jesus' disciples eat with unwashed hands, against "the tradition of the elders". Jesus answers with Isaiah 29:13 — "in vain do they worship me, teaching as doctrines the commandments of men" — and with Corban: a gift vowed to God releases a son from supporting his father and mother, "thus making void the word of God by your tradition" (Mark 7:1–13; Matthew 15:1–9). The Protestant case has always cited it. Until now it only sat among the shared grounds, and no step read it.
+
+\subsubsection*{What Mark 7 settles}
+\textbf{The principle is common ground.} God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void. Rome says the same — its teaching office is "not above the word of God" (\emph{Dei Verbum} 10) — and so the principle is not a Protestant win. Trent, as it states its position, can hold every word of it (\texttt{trent\_\allowbreak{}grants\_\allowbreak{}marks\_\allowbreak{}principle}).
+
+\textbf{It does not reach sola scriptura on its own.} From the principle to "Scripture is the sole infallible rule" needs one more premise: that no apostolic teaching handed on outside Scripture survives as God's word. Without it, Mark 7 leaves the sole rule open — neither it nor its denial follows (\texttt{mark7\_\allowbreak{}without\_\allowbreak{}the\_\allowbreak{}hinge\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}sole\_\allowbreak{}rule\_\allowbreak{}open}). With it, the conclusion follows (\texttt{mark7\allowbreak{}Case\_\allowbreak{}establishes}), and the premise is rated \texttt{disputed}: Rome denies it from 2 Thessalonians 2:15 ("by word \emph{or} by letter"). The step itself is disputed too. A reader can grant the principle, and grant that nothing apostolic survives outside Scripture, and still deny that Scripture is the \emph{sole} infallible rule: Florovsky, for whom tradition adds nothing to Scripture and the mind of the Church interprets it; or a Catholic who holds Scripture materially sufficient and the Magisterium infallible.
+
+\subsubsection*{What Rome's "tradition" means}
+The question the passage raises for a reader is whether the tradition Jesus condemns is the thing Rome means by Tradition. \texttt{what\allowbreak{}Trents\allowbreak{}Tradition\allowbreak{}Is} answers both readings.
+
+\begin{itemize}
+  \item \textbf{Read as commandments of men} — Calvin's reading of the laws of worship he
+\end{itemize}
+  opposed, applying Matthew 15:9 to them (\emph{Institutes} IV.x.23) — Trent's claim   is exactly what Mark 7 condemns. The reading cannot be held with Mark 7's   principle, at a step rated \texttt{well\allowbreak{}Supported}.
+
+\begin{itemize}
+  \item \textbf{Read as the apostolic word handed on unwritten} — what Trent says it
+\end{itemize}
+  receives, traditions "received by the Apostles from the mouth of Christ   himself, or from the Apostles themselves, the Holy Ghost dictating" (Session   IV, in Waterworth's translation) — Mark 7 does not reach it. Nothing in the principle is denied.   The reading meets the Mark 7 case only at the premise the step to sola   scriptura needs, that no apostolic word survives outside Scripture, and that   premise is \texttt{disputed}.
+
+So Mark 7 does not decide between Rome and the Reformers. It moves the question to what the sola scriptura argument already turned on: whether any unwritten apostolic word survives and can be identified — and, even granting that none does, whether the principle then makes Scripture the \emph{sole} infallible rule.
+
+\paragraph*{The quotation}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Quotes\allowbreak{}Isaiah}}\par\nobreak\noindent
+\textbf{Mark 7:6–7 quotes Isaiah 29:13.} Typed \texttt{.quotation}, not \texttt{.allusion}: Jesus introduces the words with "as it is written", and Mark gives them close to the Septuagint's wording.
+
+{\small\begin{verbatim}
+def mark7QuotesIsaiah : IntertextEdge :=
+  { fromPassage := Scripture.mark7_7, toPassage := Scripture.isaiah29_13,
+    relation := RelationType.quotation,
+    source := Scripture.na28Apparatus Scripture.mark7_7 }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew15\allowbreak{}Quotes\allowbreak{}Isaiah}}\par\nobreak\noindent
+\textbf{Matthew 15:8–9 quotes the same verse}, in the parallel account.
+
+{\small\begin{verbatim}
+def matthew15QuotesIsaiah : IntertextEdge :=
+  { fromPassage := Scripture.matthew15_9, toPassage := Scripture.isaiah29_13,
+    relation := RelationType.quotation,
+    source := Scripture.na28Apparatus Scripture.matthew15_9 }
+\end{verbatim}}
+\paragraph*{The positions}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Principle}} --- Mark 7: God's word judges human tradition\par\nobreak\noindent
+\textbf{Mark 7's principle}: Jesus' rebuke of the elders' tradition, and what it enacts — God's word judges human tradition, and no commandment of men is to be taught as God's word. It concludes the principle, and claims nothing about Scripture's place among the rules of faith.
+
+\begin{align*}
+  \text{(1)} \quad & P_{3} \\
+  \text{(2)} \quad & P_{3} \rightarrow P_{37} \\
+  \text{(3)} \quad & P_{37} \rightarrow \lnot P_{38} \\
+  \vdash \quad & P_{37}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Case}} --- Sola scriptura from Mark 7\par\nobreak\noindent
+\textbf{Mark 7's case for sola scriptura}: the principle, and the premise that no apostolic word survives outside Scripture.
+
+\begin{align*}
+  \text{(1)} \quad & P_{3} \\
+  \text{(2)} \quad & P_{39} \\
+  \text{(3)} \quad & P_{3} \rightarrow P_{37} \\
+  \text{(4)} \quad & (P_{37} \land P_{39}) \rightarrow P_{9} \\
+  \vdash \quad & P_{9}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Case\allowbreak{}Without\allowbreak{}The\allowbreak{}Hinge}} --- Sola scriptura from Mark 7, without the premise about unwritten apostolic word\par\nobreak\noindent
+Mark 7's case without the premise that no apostolic word survives outside Scripture: the text, the principle, and the step to the sole rule.
+
+\begin{align*}
+  \text{(1)} \quad & P_{3} \\
+  \text{(2)} \quad & P_{3} \rightarrow P_{37} \\
+  \text{(3)} \quad & (P_{37} \land P_{39}) \rightarrow P_{9} \\
+  \vdash \quad & P_{9}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Case}} --- Trent (Tradition II)\par\nobreak\noindent
+\textbf{Trent (Tradition II)}, as Mathison reads it: 2 Thessalonians 2:15 and tradition as a source of revelation alongside Scripture, so Scripture is not the sole rule. Unread: it says what Trent receives, not whether it is apostolic word or a commandment of men. The package \texttt{tridentine} asks these premises whether sola scriptura follows; this one states what they conclude, which is what a dispute weighs.
+
+\begin{align*}
+  \text{(1)} \quad & P_{5} \\
+  \text{(2)} \quad & P_{13} \\
+  \text{(3)} \quad & (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\
+  \vdash \quad & \lnot P_{9}
+\end{align*}
+\emph{Grounded in scripture alone:} 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+\paragraph*{Two readings of Trent's "tradition"}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Read\allowbreak{}As\allowbreak{}Mens\allowbreak{}Commandments}}\par\nobreak\noindent
+Reading Trent's traditions as commandments of men: God "is worshipped with laws of human invention", Calvin says of the laws of worship he opposed, and he applies Matthew 15:9 to them — "in vain do they worship me, teaching for doctrines the commandments of men" (\emph{Institutes} IV.x.23). Rated \texttt{disputed}: Trent, \emph{Dei Verbum} 9–10 and the \emph{Catechism} deny that what Trent receives is of human origin — the \emph{Catechism} (§83) distinguishes the apostolic Tradition from the "theological, disciplinary, liturgical or devotional traditions" which "can be retained, modified or even abandoned". No one reads Trent as \emph{claiming} human origin: this is a reading of what those traditions are, not of what Trent says.
+
+{\small\begin{verbatim}
+def trentReadAsMensCommandments : Source :=
+  {
+    primary :=
+      Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.x.23"),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Read\allowbreak{}As\allowbreak{}Apostolic\allowbreak{}Word}}\par\nobreak\noindent
+Reading Trent's traditions as the apostolic word handed on unwritten: what Trent says it receives, the traditions "received by the Apostles from the mouth of Christ himself, or from the Apostles themselves, the Holy Ghost dictating" (Session IV, Waterworth 18). \emph{Dei Verbum} 9 says the same: tradition "takes the word of God entrusted by Christ the Lord and the Holy Spirit to the Apostles, and hands it on". Rated \texttt{consensus} as an account of what Trent claims: Calvin and Chemnitz do not deny that Trent claims apostolic origin; they deny that the claim is true.
+
+{\small\begin{verbatim}
+def trentReadAsApostolicWord : Source :=
+  { primary := Reference.work Bib.waterworthTrent (Bib.Locus.page 18),
+    supporting :=
+      [Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef
+            "Trent, Session IV (1546), Decree on Sacred Books and Traditions"),
+        Reference.work Bib.tannerDecrees
+          (Bib.Locus.sectionRef "Vatican II (1965), Dei Verbum 9"),
+        Reference.work Bib.catechismCatholicChurch (Bib.Locus.sectionRef "83")],
+    tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{as\allowbreak{}Mens\allowbreak{}Commandments}}\par\nobreak\noindent
+Trent's tradition, \textbf{read as commandments of men}: what it receives alongside Scripture is a commandment of men, bound on the Church as God's word.
+
+{\small\begin{verbatim}
+def asMensCommandments : Reading Claim :=
+  { name := "as commandments of men",
+    commits :=
+      p Claim.mensCommandmentBindsAsGodsWord,
+    source := trentReadAsMensCommandments }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{as\allowbreak{}Apostolic\allowbreak{}Word}}\par\nobreak\noindent
+Trent's tradition, \textbf{read as the apostolic word handed on unwritten}: some apostolic teaching outside Scripture survives as God's word.
+
+{\small\begin{verbatim}
+def asApostolicWord : Reading Claim :=
+  { name := "as the apostolic word handed on unwritten",
+    commits :=
+      notP Claim.noApostolicWordOutsideScripture,
+    source := trentReadAsApostolicWord }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}As\allowbreak{}Mens\allowbreak{}Commandments}} --- Trent (Tradition II), read as commandments of men\par\nobreak\noindent
+Trent, with its tradition read as commandments of men.
+
+\begin{align*}
+  \text{(1)} \quad & P_{5} \\
+  \text{(2)} \quad & P_{13} \\
+  \text{(3)} \quad & (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\
+  \text{(4)} \quad & P_{13} \rightarrow P_{38} \\
+  \vdash \quad & \lnot P_{9}
+\end{align*}
+\emph{Grounded in scripture alone:} 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}As\allowbreak{}Apostolic\allowbreak{}Word}} --- Trent (Tradition II), read as the apostolic word handed on unwritten\par\nobreak\noindent
+Trent, with its tradition read as the apostolic word handed on unwritten.
+
+\begin{align*}
+  \text{(1)} \quad & P_{5} \\
+  \text{(2)} \quad & P_{13} \\
+  \text{(3)} \quad & (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\
+  \text{(4)} \quad & P_{13} \rightarrow \lnot P_{39} \\
+  \vdash \quad & \lnot P_{9}
+\end{align*}
+\emph{Grounded in scripture alone:} 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+\paragraph*{Readings, written down}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{marks\allowbreak{}Principle\allowbreak{}Reading}}\par\nobreak\noindent
+The Reformed world: Mark 7's text and principle, no commandment of men bound as God's word, no apostolic word outside Scripture, and sola scriptura.
+
+{\small\begin{verbatim}
+def marksPrincipleReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.mensCommandmentBindsAsGodsWord => False
+    | x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{rome\allowbreak{}Grants\allowbreak{}Marks\allowbreak{}Principle\allowbreak{}Reading}}\par\nobreak\noindent
+Rome's world, granting Mark 7: God's word judges human tradition and no commandment of men may be bound as God's word; but apostolic teaching survives outside Scripture, so Scripture is not the sole infallible rule.
+
+{\small\begin{verbatim}
+def romeGrantsMarksPrincipleReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.mensCommandmentBindsAsGodsWord => False
+    | Claim.noApostolicWordOutsideScripture => False
+    | Claim.scriptureIsSoleInfallibleRule => False
+    | x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mens\allowbreak{}Commandments\allowbreak{}Reading}}\par\nobreak\noindent
+A world in which Trent, its tradition read Calvin's way, holds together: its tradition is a commandment of men bound as God's word, and Scripture is not the sole rule. It must give up Mark 7's principle, so no one holds this world; it shows only that the reading is coherent on its own.
+
+{\small\begin{verbatim}
+def mensCommandmentsReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.godsWordJudgesTradition => False
+    | Claim.scriptureIsSoleInfallibleRule => False
+    | x => True
+\end{verbatim}}
+\paragraph*{Mark 7's principle, and what it reaches}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Principle\_\allowbreak{}establishes}}\par\nobreak\noindent
+\textbf{Mark 7 delivers its principle}: God's word judges human tradition.
+
+{\small\begin{verbatim}
+theorem mark7Principle_establishes : Establishes mark7Principle
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Principle\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Mark 7's principle can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem mark7Principle_is_satisfiable : Satisfiable mark7Principle.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}grants\_\allowbreak{}marks\_\allowbreak{}principle}}\par\nobreak\noindent
+\textbf{Trent grants Mark 7's principle.} Trent's position, as it states it, can be held with the principle and everything Mark 7 says: the reading on which apostolic teaching survives outside Scripture, and no commandment of men is bound as God's word.
+
+{\small\begin{verbatim}
+theorem trent_grants_marks_principle : Grants tridentineCase (p
+    Claim.godsWordJudgesTradition)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Case\_\allowbreak{}establishes}}\par\nobreak\noindent
+\textbf{Mark 7's case for sola scriptura holds}, given its premise that no apostolic word survives outside Scripture.
+
+{\small\begin{verbatim}
+theorem mark7Case_establishes : Establishes mark7Case
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Case\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Mark 7's case can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem mark7Case_is_satisfiable : Satisfiable mark7Case.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\_\allowbreak{}without\_\allowbreak{}the\_\allowbreak{}hinge\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}sole\_\allowbreak{}rule\_\allowbreak{}open}}\par\nobreak\noindent
+\textbf{Without that premise, Mark 7 leaves the sole rule open.} Grant the text, the principle, and the step from them to the sole rule: sola scriptura neither follows nor fails. Rome's reading grants all of it and denies the sole rule; the Reformed reading grants all of it and holds the sole rule. One fact, not two: Mark 7 alone blocks no argument against sola scriptura and establishes none for it.
+
+{\small\begin{verbatim}
+theorem mark7_without_the_hinge_leaves_the_sole_rule_open : Independent
+    mark7CaseWithoutTheHinge.premises (p Claim.scriptureIsSoleInfallibleRule)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Case\_\allowbreak{}establishes}}\par\nobreak\noindent
+Trent, as it states its position, holds together.
+
+{\small\begin{verbatim}
+theorem tridentineCase_establishes : Establishes tridentineCase
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Case\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Trent's case can be held without contradiction: Rome's world.
+
+{\small\begin{verbatim}
+theorem tridentineCase_is_satisfiable : Satisfiable tridentineCase.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}As\allowbreak{}Mens\allowbreak{}Commandments\_\allowbreak{}establishes}}\par\nobreak\noindent
+Trent read as commandments of men still concludes what Trent concludes.
+
+{\small\begin{verbatim}
+theorem tridentineAsMensCommandments_establishes : Establishes
+    tridentineAsMensCommandments
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}As\allowbreak{}Apostolic\allowbreak{}Word\_\allowbreak{}establishes}}\par\nobreak\noindent
+Trent read as the apostolic word still concludes what Trent concludes.
+
+{\small\begin{verbatim}
+theorem tridentineAsApostolicWord_establishes : Establishes
+    tridentineAsApostolicWord
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}As\allowbreak{}Mens\allowbreak{}Commandments\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+\textbf{The first reading is fair}: Trent, read as receiving commandments of men, can be held without contradiction — so long as Mark 7's principle is not held with it.
+
+{\small\begin{verbatim}
+theorem tridentineAsMensCommandments_is_satisfiable : Satisfiable
+    tridentineAsMensCommandments.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}As\allowbreak{}Apostolic\allowbreak{}Word\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+\textbf{The second reading is fair}: Trent, read as receiving the apostolic word, can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem tridentineAsApostolicWord_is_satisfiable : Satisfiable
+    tridentineAsApostolicWord.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}reach\_\allowbreak{}the\_\allowbreak{}apostolic\_\allowbreak{}word}}\par\nobreak\noindent
+\textbf{Mark 7 does not reach the second reading.} Trent, read as receiving the apostolic word, can be held with every premise of Mark 7's principle: it binds no commandment of men as God's word.
+
+{\small\begin{verbatim}
+theorem mark7_does_not_reach_the_apostolic_word : Satisfiable
+    (mark7Principle.premises ++ tridentineAsApostolicWord.premises)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\paragraph*{Where each reading breaks}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}}\par\nobreak\noindent
+\textbf{Why Mark 7 stands against Trent, read as commandments of men.} The crux is what the principle says of a commandment of men: it may not be bound as God's word. What it breaks is Trent's claim with the reading — tradition received alongside Scripture, and that tradition a commandment of men. Nothing else in Trent is touched. The crux is Mark 7's answer to the reading, not part of its case for the principle, which follows without it.
+
+\paragraph{Why \emph{Mark 7: God's word judges human tradition} stands against \emph{Trent (Tradition II), read as commandments of men}.}
+\begin{itemize}
+\item \textbf{The crux:} \(P_{37} \rightarrow \lnot P_{38}\), a premise of \emph{Mark 7: God's word judges human tradition}.
+\item \textbf{What it does:} its conclusion follows without it --- the crux is its answer to \emph{Trent (Tradition II), read as commandments of men}.
+\item \textbf{Granted:} \(P_{3}\), \(P_{3} \rightarrow P_{37}\), which the break also needs.
+\item \textbf{Where the rival breaks:} \(P_{13}\), \(P_{13} \rightarrow P_{38}\) cannot be held together with \(P_{37} \rightarrow \lnot P_{38}\) and \(P_{3}\), \(P_{3} \rightarrow P_{37}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(P_{3}\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command --- \emph{consensus}: Mark 7:1-13; Matt 15:1-9; \cite[IV.x.10]{calvin-institutes-1960}
+\item \(P_{37}\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void --- \emph{consensus}: \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}; \cite{florovsky-bible-church-tradition-1972}
+\item the step itself --- \emph{well supported}: \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}}\par\nobreak\noindent
+\textbf{Why Mark 7's case stands against Trent, read as the apostolic word.} Not at the principle, which this reading grants, but at the premise the step to sola scriptura needs: that no apostolic teaching survives outside Scripture. The reading denies exactly that, and the premise is rated \texttt{disputed}. The step from it to the sole rule is \texttt{disputed} too, so granting the premise would not alone settle the question.
+
+\paragraph{Why \emph{Sola scriptura from Mark 7} stands against \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}.}
+\begin{itemize}
+\item \textbf{The crux:} \(P_{39}\), a premise of \emph{Sola scriptura from Mark 7}.
+\item \textbf{What it does:} its conclusion does not follow without it.
+\item \textbf{Where the rival breaks:} \(P_{13}\), \(P_{13} \rightarrow \lnot P_{39}\) cannot be held together with \(P_{39}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(P_{39}\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \emph{disputed}: \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\end{itemize}
+\end{itemize}
+\paragraph*{The dilemma}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{what\allowbreak{}Trents\allowbreak{}Tradition\allowbreak{}Is}}\par\nobreak\noindent
+\textbf{What Trent's tradition is, read both ways.} The claim is Trent's: tradition is received as a source of revelation alongside Scripture.
+
+Read as commandments of men, it cannot be held with Mark 7's principle, at a step rated \texttt{well\allowbreak{}Supported}: Isaiah 29:13, as Jesus quotes it, says a commandment of men may not be bound as God's word.
+
+Read as the apostolic word handed on unwritten — what Trent says it receives — Mark 7's principle does not reach it. It cannot be held with Mark 7's case for sola scriptura, but only at that case's own premise that no apostolic word survives outside Scripture, which is \texttt{disputed}. That is the question the sola scriptura argument already turns on; Mark 7 does not settle it.
+
+Each reading is fair: Trent read either way can be held without contradiction. Which reading fits Trent is not something the dilemma decides; what it shows is what each costs.
+
+\paragraph{Every reading of \(P_{13}\), answered.} \emph{Trent (Tradition II)} holds \(P_{13}\). It is read 2 ways here, and each reading is checked; none can be left out.
+
+\paragraph{1. Read as commandments of men.} The claim commits \emph{Trent (Tradition II)} to \(P_{38}\) --- so read by \cite[IV.x.23]{calvin-institutes-1960} (\emph{disputed}).
+
+Against \emph{Mark 7: God's word judges human tradition}, it cannot be held. Where it breaks:
+\paragraph{Why \emph{Mark 7: God's word judges human tradition} stands against \emph{Trent (Tradition II), read as commandments of men}.}
+\begin{itemize}
+\item \textbf{The crux:} \(P_{37} \rightarrow \lnot P_{38}\), a premise of \emph{Mark 7: God's word judges human tradition}.
+\item \textbf{What it does:} its conclusion follows without it --- the crux is its answer to \emph{Trent (Tradition II), read as commandments of men}.
+\item \textbf{Granted:} \(P_{3}\), \(P_{3} \rightarrow P_{37}\), which the break also needs.
+\item \textbf{Where the rival breaks:} \(P_{13}\), \(P_{13} \rightarrow P_{38}\) cannot be held together with \(P_{37} \rightarrow \lnot P_{38}\) and \(P_{3}\), \(P_{3} \rightarrow P_{37}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(P_{3}\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command --- \emph{consensus}: Mark 7:1-13; Matt 15:1-9; \cite[IV.x.10]{calvin-institutes-1960}
+\item \(P_{37}\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void --- \emph{consensus}: \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}; \cite{florovsky-bible-church-tradition-1972}
+\item the step itself --- \emph{well supported}: \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\end{itemize}
+\paragraph{2. Read as the apostolic word handed on unwritten.} The claim commits \emph{Trent (Tradition II)} to \(\lnot P_{39}\) --- so read by \cite[18]{waterworth-trent-1848}; \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite[Vatican II (1965), Dei Verbum 9]{tanner-decrees-1990}; \cite[83]{catholic-church-catechism-2000} (\emph{consensus}).
+
+Against \emph{Mark 7: God's word judges human tradition}, it is not reached: \emph{Mark 7: God's word judges human tradition} holds, and can be held together with it.
+
+Against \emph{Sola scriptura from Mark 7}, it cannot be held. Where it breaks:
+\paragraph{Why \emph{Sola scriptura from Mark 7} stands against \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}.}
+\begin{itemize}
+\item \textbf{The crux:} \(P_{39}\), a premise of \emph{Sola scriptura from Mark 7}.
+\item \textbf{What it does:} its conclusion does not follow without it.
+\item \textbf{Where the rival breaks:} \(P_{13}\), \(P_{13} \rightarrow \lnot P_{39}\) cannot be held together with \(P_{39}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(P_{39}\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \emph{disputed}: \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\end{itemize}
+\end{itemize}
+\subsection*{Arguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers}
+\texttt{Mark7.lean} asks what each position entails. This module asks what happens when they meet. Five parties: Mark 7's principle; Mark 7's case for sola scriptura; Trent, as it states its position; and Trent with its tradition read each of the two ways the dilemma \texttt{what\allowbreak{}Trents\allowbreak{}Tradition\allowbreak{}Is} names. Who defeats whom is not stipulated — each defeat, and each absence of one, is computed from the parties' premises and checked by the kernel (see \texttt{Testimony.Logic.Dispute}).
+
+\subsubsection*{How to read the verdicts}
+\begin{itemize}
+  \item \textbf{Defeats.} One position contradicts another — denies one of its premises,
+\end{itemize}
+  its conclusion, or a claim it derives on the way — and is not the weaker of   the two. A defeat that runs both ways is a \emph{standoff}.
+
+\begin{itemize}
+  \item \textbf{Weakest link.} A position is only as strong as its least-supported premise
+\end{itemize}
+  or step. Ratings run from \texttt{disputed}, the lowest, through \texttt{plausible} and   \texttt{well\allowbreak{}Supported}, to \texttt{consensus}.
+
+\begin{itemize}
+  \item \textbf{Forced.} Accepted however every standoff is resolved: nothing attacks it
+\end{itemize}
+  that it cannot rule out.
+
+\begin{itemize}
+  \item \textbf{Can be defended.} Held by some consistent position that answers every
+\end{itemize}
+  attack on its members, itself or through an ally.
+
+\begin{itemize}
+  \item \textbf{Not forced.} Some consistent position leaves it out. Not forced is not
+\end{itemize}
+  false: the dispute, as argued, cannot make a reader accept it.
+
+\begin{itemize}
+  \item \textbf{Cannot be defended.} No consistent position can hold it and answer its
+\end{itemize}
+  attackers.
+
+\begin{itemize}
+  \item \textbf{A defensible position that cannot be enlarged} (a \emph{maximal} one) is a
+\end{itemize}
+  consistent position answering every attack on its members, to which no other   party can be added without losing that. "Some maximal defensible position   holds it" means a reader can hold it and lose nothing by it.
+
+\subsubsection*{The ratings decide one thing here}
+Every party but one rests on something rated \texttt{disputed}. Mark 7's case rests on the premise that no apostolic word survives outside Scripture. Trent rests on tradition as a source of revelation alongside Scripture — a claim this module's audit moved from \texttt{well\allowbreak{}Supported} to \texttt{disputed}, because Geiselmann grants Session IV and denies that it canonised two coordinate sources. The reading of Trent as commandments of men rests on Calvin's reading, which Rome denies.
+
+The exception is Mark 7's principle. Its text is \texttt{consensus}, and its step from the text is \texttt{well\allowbreak{}Supported}: no one was found who grants Mark 7 and denies that God's word judges human tradition. So an attack on it from a party at the bottom fails, and its attack on such a party succeeds.
+
+\subsubsection*{Who defeats whom}
+\begin{itemize}
+  \item **Mark 7's principle defeats Trent read as commandments of men, and not the
+\end{itemize}
+  reverse.** Read that way, Trent binds a commandment of men as God's word; the   principle denies that any may be. The reading's reply, from a claim rated   \texttt{disputed}, fails against the principle.
+
+\begin{itemize}
+  \item \textbf{Mark 7's case and Trent defeat each other, whichever way Trent is read.} One
+\end{itemize}
+  concludes that Scripture is the sole infallible rule, the other that it is   not; and Trent read as the apostolic word also denies the premise Mark 7's case   needs. Each side's weakest link is \texttt{disputed}, so no rating breaks the tie.
+
+\begin{itemize}
+  \item \textbf{Mark 7's principle and Trent do not conflict}, read as Trent states it or
+\end{itemize}
+  as the apostolic word (\texttt{trent\_\allowbreak{}grants\_\allowbreak{}marks\_\allowbreak{}principle}).
+
+\subsubsection*{What follows}
+\textbf{Mark 7's principle is forced} (\texttt{marks\_\allowbreak{}principle\_\allowbreak{}prevails}), and it is common ground: Rome grants it. \textbf{Trent, read as commandments of men, cannot be defended} (\texttt{trent\_\allowbreak{}as\_\allowbreak{}mens\_\allowbreak{}commandments\_\allowbreak{}indefensible}). \textbf{Between Mark 7's case for sola scriptura and Trent, the dispute chooses neither}: each can be defended, and neither is forced (\texttt{mark7\_\allowbreak{}case\_\allowbreak{}defensible}, \texttt{mark7\_\allowbreak{}case\_\allowbreak{}not\_\allowbreak{}forced}, \texttt{trent\_\allowbreak{}defensible\_\allowbreak{}against\_\allowbreak{}mark7}, \texttt{trent\_\allowbreak{}not\_\allowbreak{}forced\_\allowbreak{}against\_\allowbreak{}mark7}). Mark 7 does not decide the Reformation's question. What would decide it is argued, not weighed: whether any apostolic word survives outside Scripture, and, even granting that none does, whether the principle then makes Scripture the \emph{sole} infallible rule. Both are rated \texttt{disputed}.
+
+\paragraph*{Strength}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Principle\_\allowbreak{}strength}}\par\nobreak\noindent
+\textbf{Mark 7's principle does not rest on anything disputed.} The text is \texttt{consensus}, and the step from it \texttt{well\allowbreak{}Supported}, so its weakest link is well supported: \texttt{2} on the scale from \texttt{0}, disputed, to \texttt{3}, consensus.
+
+{\small\begin{verbatim}
+theorem mark7Principle_strength : mark7Principle.strength = 2
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
+Mark 7's case rests on the premise that no apostolic word survives outside Scripture, rated \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem mark7Case_strength : mark7Case.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
+Trent rests on tradition as a coordinate source of revelation, rated \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem tridentineCase_strength : tridentineCase.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}As\allowbreak{}Mens\allowbreak{}Commandments\_\allowbreak{}strength}}\par\nobreak\noindent
+Trent read as commandments of men rests on everything Trent does, and on Calvin's reading, rated \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem tridentineAsMensCommandments_strength :
+    tridentineAsMensCommandments.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}As\allowbreak{}Apostolic\allowbreak{}Word\_\allowbreak{}strength}}\par\nobreak\noindent
+Trent read as the apostolic word rests on everything Trent does.
+
+{\small\begin{verbatim}
+theorem tridentineAsApostolicWord_strength :
+    tridentineAsApostolicWord.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\paragraph*{The dispute}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Party\allowbreak{}Node}}\par\nobreak\noindent
+The package each party argues from.
+
+{\small\begin{verbatim}
+def mark7PartyNode : Mark7Party → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | Mark7Party.principle =>
+      mark7Principle
+    | Mark7Party.mark7 =>
+      mark7Case
+    | Mark7Party.trent =>
+      tridentineCase
+    | Mark7Party.trentAsMensCommandments =>
+      tridentineAsMensCommandments
+    | Mark7Party.trentAsApostolicWord =>
+      tridentineAsApostolicWord
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Dispute}}\par\nobreak\noindent
+The dispute over Mark 7: every party's premises have a model, every party establishes its conclusion, and every party's inferences are rated.
+
+{\small\begin{verbatim}
+def mark7Dispute : Dispute Claim Mark7Party :=
+  { node := mark7PartyNode,
+    consistent := mark7Dispute._proof_1,
+    sound := mark7Dispute._proof_2,
+    rated := mark7Dispute._proof_3 }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{marks\_\allowbreak{}principle\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}trent}}\par\nobreak\noindent
+Mark 7's principle stands with Trent, as Trent states it and read as the apostolic word: Rome's world, in which the principle holds and apostolic teaching survives outside Scripture.
+
+{\small\begin{verbatim}
+theorem marks_principle_stands_with_trent : mark7Dispute.StandTogether
+    [Mark7Party.principle, Mark7Party.trent, Mark7Party.trentAsApostolicWord]
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
+The defeats of the dispute, as a table.
+
+{\small\begin{verbatim}
+def mark7PartyDefeats : Mark7Party → Mark7Party → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Mark7Party.principle,
+      Mark7Party.trentAsMensCommandments => True
+    | Mark7Party.mark7,
+      Mark7Party.trent => True
+    | Mark7Party.mark7,
+      Mark7Party.trentAsMensCommandments => True
+    | Mark7Party.mark7,
+      Mark7Party.trentAsApostolicWord => True
+    | Mark7Party.trent,
+      Mark7Party.mark7 => True
+    | Mark7Party.trentAsMensCommandments,
+      Mark7Party.mark7 => True
+    | Mark7Party.trentAsApostolicWord,
+      Mark7Party.mark7 => True
+    | x, x_2 => False
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Mark7\allowbreak{}Party\allowbreak{}Mark7\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
+The table is finite, so membership in it is decidable.
+
+{\small\begin{verbatim}
+def instDecidableRelMark7PartyMark7PartyDefeats : DecidableRel
+    mark7PartyDefeats
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Party\allowbreak{}Strength}}\par\nobreak\noindent
+Each party's weakest link: at the bottom for all but Mark 7's principle.
+
+{\small\begin{verbatim}
+def mark7PartyStrength : Mark7Party → ℕ :=
+  fun x =>
+    match x with
+    | Mark7Party.principle => 2
+    | x => 0
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
+Each party's weakest link, as its package computes it.
+
+{\small\begin{verbatim}
+theorem mark7PartyNode_strength : ∀ (i : Mark7Party), (mark7PartyNode
+    i).strength = mark7PartyStrength i
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
+\textbf{Who defeats whom}, all 25 pairs. Mark 7's principle defeats Trent read as commandments of men, and that reading's reply fails against it. Mark 7's case and Trent defeat each other, as Trent states it and read either way. Nothing else.
+
+Every cell is computed from the parties' premises by \texttt{Horn.defeats?} and checked by the kernel — the defeats, and the absences of defeat, alike.
+
+{\small\begin{verbatim}
+theorem mark7Dispute_defeats : ∀ (i j : Mark7Party), mark7Dispute.defeats i j
+    ↔ mark7PartyDefeats i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Finite}}\par\nobreak\noindent
+The dispute in the form the verdict solver computes with.
+
+{\small\begin{verbatim}
+def mark7Finite : Solver.Finite mark7Dispute.defeats :=
+  {
+    parties :=
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trent,
+        Mark7Party.trentAsMensCommandments,
+        Mark7Party.trentAsApostolicWord],
+    complete := mark7Finite._proof_1,
+    defeats := fun i j =>
+      decide (mark7PartyDefeats i j),
+    spec := mark7Finite._proof_2 }
+\end{verbatim}}
+\paragraph*{The dispute as a graph}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
+\textbf{Nothing supports anything} in the dispute over Mark 7, in all 25 pairs: no party's conclusion entails a claim another rests on. Mark 7's principle is \emph{derived} inside Mark 7's case, not assumed there, so the relation between them is not support. Every cell is computed by \texttt{supports?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem mark7Dispute_supports : ∀ (i j : Mark7Party), ¬mark7Dispute.supports i
+    j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
+Whose case is part of whose, as a table: besides each party's own, Trent's is part of each reading of it.
+
+{\small\begin{verbatim}
+def mark7PartyPartOf : Mark7Party → Mark7Party → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Mark7Party.trent,
+      Mark7Party.trentAsMensCommandments => True
+    | Mark7Party.trent,
+      Mark7Party.trentAsApostolicWord => True
+    | i, j => i = j
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Mark7\allowbreak{}Party\allowbreak{}Mark7\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
+The table is finite, so membership in it is decidable.
+
+{\small\begin{verbatim}
+def instDecidableRelMark7PartyMark7PartyPartOf : DecidableRel mark7PartyPartOf
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
+\textbf{Whose case is part of whose}, all 25 pairs: Trent's case is part of each reading of it, which only adds to it; and every case is part of itself. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem mark7Dispute_partOf : ∀ (i j : Mark7Party), mark7Dispute.partOf i j ↔
+    mark7PartyPartOf i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Map}}\par\nobreak\noindent
+The dispute over Mark 7 drawn: who defeats whom, and whose case is part of whose.
+
+\begin{center}
+\begin{tikzpicture}[>={Stealth[length=2mm]}]
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n0) at (0.00,3.20) {1};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n1) at (3.04,0.99) {2};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n2) at (1.88,-2.59) {3};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n3) at (-1.88,-2.59) {4};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n4) at (-3.04,0.99) {5};
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n2);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n4) to[bend left=10] (n1);
+\draw[->,blue!60!black,thick,dotted] (n2) to[bend left=10] (n3);
+\draw[->,blue!60!black,thick,dotted] (n2) to[bend left=10] (n4);
+\end{tikzpicture}
+\end{center}
+\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of another's.
+\begin{enumerate}
+\item Mark 7: God's word judges human tradition
+\item Sola scriptura from Mark 7
+\item Trent (Tradition II)
+\item Trent (Tradition II), read as commandments of men
+\item Trent (Tradition II), read as the apostolic word handed on unwritten
+\end{enumerate}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth}@{}}
+\toprule
+\textbf{From} & \textbf{To} & \textbf{Edge} \\
+\midrule
+\endhead
+1 \emph{Mark 7: God's word judges human tradition} & 4 \emph{Trent (Tradition II), read as commandments of men} & defeats \\
+2 \emph{Sola scriptura from Mark 7} & 3 \emph{Trent (Tradition II)} & defeats \\
+2 \emph{Sola scriptura from Mark 7} & 4 \emph{Trent (Tradition II), read as commandments of men} & defeats \\
+2 \emph{Sola scriptura from Mark 7} & 5 \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} & defeats \\
+3 \emph{Trent (Tradition II)} & 2 \emph{Sola scriptura from Mark 7} & defeats \\
+4 \emph{Trent (Tradition II), read as commandments of men} & 2 \emph{Sola scriptura from Mark 7} & defeats \\
+5 \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} & 2 \emph{Sola scriptura from Mark 7} & defeats \\
+3 \emph{Trent (Tradition II)} & 4 \emph{Trent (Tradition II), read as commandments of men} & is part of \\
+3 \emph{Trent (Tradition II)} & 5 \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} & is part of \\
+2 \emph{Sola scriptura from Mark 7} & 4 \emph{Trent (Tradition II), read as commandments of men} & attack on a part — already a defeat \\
+2 \emph{Sola scriptura from Mark 7} & 5 \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} & attack on a part — already a defeat \\
+\bottomrule
+\end{longtable}
+\noindent The defeats are the cells of \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\paragraph*{What the dispute decides}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{marks\allowbreak{}Principle\allowbreak{}Unanswered}}\par\nobreak\noindent
+How the dispute is settled as far as it can be, in one stage: nothing defeats Mark 7's principle, so it comes first; and nothing joins it. Mark 7's case has Trent, and Trent has Mark 7's case — a standoff; Trent read as the apostolic word has Mark 7's case; and Trent read as commandments of men has the principle itself.
+
+\paragraph{What the dispute forces is exactly \emph{Mark 7: God's word judges human tradition}.}
+\begin{itemize}
+\item Stage 1: \emph{Mark 7: God's word judges human tradition}.
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition} is defeated by nothing.
+\end{itemize}
+\item Nothing else is forced:
+\begin{itemize}
+\item \emph{Trent (Tradition II)} defeats \emph{Sola scriptura from Mark 7}, and nothing forced defeats \emph{Trent (Tradition II)}.
+\item \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II)}, and nothing forced defeats \emph{Sola scriptura from Mark 7}.
+\item \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men} (\texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}), and nothing forced defeats \emph{Mark 7: God's word judges human tradition}.
+\item \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} (\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}), and nothing forced defeats \emph{Sola scriptura from Mark 7}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 4 defeats and 7 absences of defeat, each a cell of the defeat table, \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition}, weakest at \emph{well supported}:
+\begin{itemize}
+\item an inference step --- \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Sola scriptura from Mark 7}, weakest at \emph{disputed}:
+\begin{itemize}
+\item No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\item an inference step --- \cite{geiselmann-meaning-of-tradition-1966}; \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{florovsky-bible-church-tradition-1972}
+\end{itemize}
+\item \emph{Trent (Tradition II)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as commandments of men}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\item an inference step --- \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}.
+\noindent Why \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}.
+\par\medskip\noindent\textbf{\texttt{marks\_\allowbreak{}principle\_\allowbreak{}prevails}}\par\nobreak\noindent
+\textbf{Mark 7's principle prevails outright, and it is common ground.} The grounded extension — what the dispute forces before any choice between rivals — is exactly the principle: God's word judges human tradition, and no commandment of men may be taught as God's word. Nothing defeats it: the one party that contradicts it, Trent read as commandments of men, rests on a reading rated \texttt{disputed}, and its reply fails against a principle whose every link is rated \texttt{well\allowbreak{}Supported} or better. And Trent, as it states its position, does not contradict it at all (\texttt{trent\_\allowbreak{}grants\_\allowbreak{}marks\_\allowbreak{}principle}).
+
+What this does not claim: that sola scriptura is forced. Mark 7's case for it is not (\texttt{mark7\_\allowbreak{}case\_\allowbreak{}not\_\allowbreak{}forced}).
+
+{\small\begin{verbatim}
+theorem marks_principle_prevails : Framework.grounded mark7Dispute.defeats =
+    {Mark7Party.principle}
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Answered}}\par\nobreak\noindent
+Why Trent, read as commandments of men, cannot be defended: Mark 7's principle defeats it, and nothing defeats the principle.
+
+\paragraph{\emph{Trent (Tradition II), read as commandments of men} cannot be defended: no admissible position holds it.}
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men} (\texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}), and nothing defeats \emph{Mark 7: God's word judges human tradition}.
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 1 defeat and 5 absences of defeat, each a cell of the defeat table, \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition}, weakest at \emph{well supported}:
+\begin{itemize}
+\item an inference step --- \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as commandments of men}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\item an inference step --- \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Sola scriptura from Mark 7}, weakest at \emph{disputed}:
+\begin{itemize}
+\item No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\item an inference step --- \cite{geiselmann-meaning-of-tradition-1966}; \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{florovsky-bible-church-tradition-1972}
+\end{itemize}
+\item \emph{Trent (Tradition II)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}.
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}as\_\allowbreak{}mens\_\allowbreak{}commandments\_\allowbreak{}indefensible}}\par\nobreak\noindent
+\textbf{Trent, read as commandments of men, cannot be defended.} No consistent position that answers its attackers can hold it: Mark 7's principle defeats it, and nothing answers the principle. This is the first horn of \texttt{what\allowbreak{}Trents\allowbreak{}Tradition\allowbreak{}Is}, weighed: if what Trent receives alongside Scripture were a commandment of men, Jesus' words in Mark 7 would condemn it, at a step rated \texttt{well\allowbreak{}Supported}.
+
+What this does not claim: that Trent's tradition \emph{is} a commandment of men. Trent says the opposite, and Calvin's reading of it is rated \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem trent_as_mens_commandments_indefensible : ∀ (S : Set Mark7Party),
+    Framework.Admissible mark7Dispute.defeats S →
+    Mark7Party.trentAsMensCommandments ∉ S
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Stands\allowbreak{}With\allowbreak{}Its\allowbreak{}Principle}}\par\nobreak\noindent
+Why Mark 7's case can be defended: it stands with Mark 7's principle, and answers every party that defeats it — Trent, read or unread — itself.
+
+\paragraph{\emph{Sola scriptura from Mark 7} is accepted on some resolution.}
+\begin{itemize}
+\item A position holding \emph{Mark 7: God's word judges human tradition}, \emph{Sola scriptura from Mark 7} can be held.
+\item None of \emph{Mark 7: God's word judges human tradition}, \emph{Sola scriptura from Mark 7} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Trent (Tradition II)} defeats \emph{Sola scriptura from Mark 7}, and \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II)}.
+\item \emph{Trent (Tradition II), read as commandments of men} defeats \emph{Sola scriptura from Mark 7}, and \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men} (\texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}).
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} defeats \emph{Sola scriptura from Mark 7}, and \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} (\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}).
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 6 defeats and 7 absences of defeat, each a cell of the defeat table, \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition}, weakest at \emph{well supported}:
+\begin{itemize}
+\item an inference step --- \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Sola scriptura from Mark 7}, weakest at \emph{disputed}:
+\begin{itemize}
+\item No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\item an inference step --- \cite{geiselmann-meaning-of-tradition-1966}; \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{florovsky-bible-church-tradition-1972}
+\end{itemize}
+\item \emph{Trent (Tradition II)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as commandments of men}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\item an inference step --- \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}.
+\noindent Why \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}.
+\par\medskip\noindent\textbf{\texttt{mark7\_\allowbreak{}case\_\allowbreak{}defensible}}\par\nobreak\noindent
+\textbf{Sola scriptura from Mark 7 can be defended.} Some maximal defensible position holds it, with Mark 7's principle. Every party that defeats it — Trent, as it states its position and read either way — it defeats back.
+
+{\small\begin{verbatim}
+theorem mark7_case_defensible : Framework.CredulouslyAccepted
+    mark7Dispute.defeats Mark7Party.mark7
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Answered\allowbreak{}By\allowbreak{}Trent}}\par\nobreak\noindent
+Why Mark 7's case is not forced: a defensible position holds Trent, and Trent defeats it.
+
+\paragraph{\emph{Sola scriptura from Mark 7} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Mark 7: God's word judges human tradition}, \emph{Trent (Tradition II)}, \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} can be held, and it holds \emph{Trent (Tradition II)}; \emph{Trent (Tradition II)} conflicts with \emph{Sola scriptura from Mark 7}: \emph{Trent (Tradition II)} defeats \emph{Sola scriptura from Mark 7}, and \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II)}.
+\item None of \emph{Mark 7: God's word judges human tradition}, \emph{Trent (Tradition II)}, \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II)}, and \emph{Trent (Tradition II)} defeats \emph{Sola scriptura from Mark 7}.
+\item \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} (\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}), and \emph{Trent (Tradition II)} defeats \emph{Sola scriptura from Mark 7}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 3 defeats and 13 absences of defeat, each a cell of the defeat table, \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Trent (Tradition II)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\item \emph{Sola scriptura from Mark 7}, weakest at \emph{disputed}:
+\begin{itemize}
+\item No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\item an inference step --- \cite{geiselmann-meaning-of-tradition-1966}; \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{florovsky-bible-church-tradition-1972}
+\end{itemize}
+\item \emph{Mark 7: God's word judges human tradition}, weakest at \emph{well supported}:
+\begin{itemize}
+\item an inference step --- \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as commandments of men}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\item an inference step --- \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}.
+\par\medskip\noindent\textbf{\texttt{mark7\_\allowbreak{}case\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+\textbf{Nor is it forced.} A maximal defensible position holds Trent, with Mark 7's principle and with Trent read as the apostolic word, and cannot hold Mark 7's case with it. Their weakest links are all \texttt{disputed}, so no rating breaks the tie. What would decide it is argued, not weighed: whether any apostolic word survives outside Scripture (\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}), and, even granting that none does, whether the principle then makes Scripture the \emph{sole} infallible rule — a step Geiselmann and Florovsky deny.
+
+{\small\begin{verbatim}
+theorem mark7_case_not_forced : ¬Framework.SkepticallyAccepted
+    mark7Dispute.defeats Mark7Party.mark7
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Stands\allowbreak{}With\allowbreak{}Marks\allowbreak{}Principle}}\par\nobreak\noindent
+Why Trent can be defended against Mark 7: it stands with Mark 7's principle and with its own reading as the apostolic word, and answers Mark 7's case itself.
+
+\paragraph{\emph{Trent (Tradition II)} is accepted on some resolution.}
+\begin{itemize}
+\item A position holding \emph{Mark 7: God's word judges human tradition}, \emph{Trent (Tradition II)}, \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} can be held.
+\item None of \emph{Mark 7: God's word judges human tradition}, \emph{Trent (Tradition II)}, \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II)}, and \emph{Trent (Tradition II)} defeats \emph{Sola scriptura from Mark 7}.
+\item \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} (\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}), and \emph{Trent (Tradition II)} defeats \emph{Sola scriptura from Mark 7}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 3 defeats and 13 absences of defeat, each a cell of the defeat table, \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition}, weakest at \emph{well supported}:
+\begin{itemize}
+\item an inference step --- \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Trent (Tradition II)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\item \emph{Sola scriptura from Mark 7}, weakest at \emph{disputed}:
+\begin{itemize}
+\item No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\item an inference step --- \cite{geiselmann-meaning-of-tradition-1966}; \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{florovsky-bible-church-tradition-1972}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as commandments of men}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\item an inference step --- \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}.
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}defensible\_\allowbreak{}against\_\allowbreak{}mark7}}\par\nobreak\noindent
+\textbf{Trent, as it states its position, can be defended against Mark 7} — and with Mark 7's principle. Some maximal defensible position holds Trent, the principle, and Trent read as the apostolic word. Granting everything Mark 7's principle says costs Trent nothing, so long as what it receives is the apostolic word and not a commandment of men.
+
+{\small\begin{verbatim}
+theorem trent_defensible_against_mark7 : Framework.CredulouslyAccepted
+    mark7Dispute.defeats Mark7Party.trent
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Answered\allowbreak{}By\allowbreak{}Mark7}}\par\nobreak\noindent
+Why Trent is not forced: a defensible position holds Mark 7's case, and it defeats Trent.
+
+\paragraph{\emph{Trent (Tradition II)} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Mark 7: God's word judges human tradition}, \emph{Sola scriptura from Mark 7} can be held, and it holds \emph{Sola scriptura from Mark 7}; \emph{Sola scriptura from Mark 7} conflicts with \emph{Trent (Tradition II)}: \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II)}, and \emph{Trent (Tradition II)} defeats \emph{Sola scriptura from Mark 7}.
+\item None of \emph{Mark 7: God's word judges human tradition}, \emph{Sola scriptura from Mark 7} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Trent (Tradition II)} defeats \emph{Sola scriptura from Mark 7}, and \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II)}.
+\item \emph{Trent (Tradition II), read as commandments of men} defeats \emph{Sola scriptura from Mark 7}, and \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men} (\texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}).
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} defeats \emph{Sola scriptura from Mark 7}, and \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} (\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}).
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 6 defeats and 7 absences of defeat, each a cell of the defeat table, \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Sola scriptura from Mark 7}, weakest at \emph{disputed}:
+\begin{itemize}
+\item No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\item an inference step --- \cite{geiselmann-meaning-of-tradition-1966}; \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{florovsky-bible-church-tradition-1972}
+\end{itemize}
+\item \emph{Trent (Tradition II)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\item \emph{Mark 7: God's word judges human tradition}, weakest at \emph{well supported}:
+\begin{itemize}
+\item an inference step --- \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as commandments of men}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\item an inference step --- \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}.
+\noindent Why \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}.
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}not\_\allowbreak{}forced\_\allowbreak{}against\_\allowbreak{}mark7}}\par\nobreak\noindent
+\textbf{Nor is Trent forced.} A maximal defensible position holds Mark 7's case for sola scriptura, and cannot hold Trent with it. Between them the dispute chooses neither.
+
+{\small\begin{verbatim}
+theorem trent_not_forced_against_mark7 : ¬Framework.SkepticallyAccepted
+    mark7Dispute.defeats Mark7Party.trent
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\subsection*{Arguments.SolaScriptura.Hearings — Mark 7, heard against each reading of Trent}
+The dispute over Mark 7 hears Trent three ways at once: as Trent states its position, and with its tradition read each of the two ways the dilemma \texttt{what\allowbreak{}Trents\allowbreak{}Tradition\allowbreak{}Is} names. A reader usually has one reading in mind, and asks what Mark 7 settles \emph{if that is what Trent means}. Each question is answered by hearing the same dispute with the other readings set aside. Nothing is re-argued: a hearing keeps every defeat the full dispute proved.
+
+\textbf{If Rome's tradition were the commandments of men, would Mark 7 settle sola scriptura?} Heard against that reading alone (\texttt{mens\allowbreak{}Commandments\allowbreak{}Hearing}), Mark 7's case is forced — but only because nothing left in the hearing contests it. The reading is the only party that attacks it, and the principle defeats the reading. Mark 7's case still rests on two things rated \texttt{disputed}: that no apostolic word survives outside Scripture, and the step from the principle to the \emph{sole} rule. The reading of Trent as commandments of men contests neither, and the parties that would are set aside. This is the Protestant polemic at full strength — and it holds only on a reading of Trent that Trent itself denies.
+
+\textbf{If Rome's tradition is the apostolic word handed on unwritten, what does Mark 7 settle?} Heard against that reading (\texttt{apostolic\allowbreak{}Word\allowbreak{}Hearing}), only the principle — which the reading grants. Mark 7's case and the reading defeat each other at one premise, that no apostolic word survives outside Scripture, and each side's weakest link is \texttt{disputed}. So the dispute chooses neither.
+
+The difference between the two hearings is the whole of what Mark 7 contributes: against Rome's tradition read as human, it leaves Mark 7's case unopposed; against it read as apostolic, it leaves the question where it was. Which it is, Mark 7 does not say.
+
+\paragraph*{Heard against the reading as commandments of men}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{mens\allowbreak{}Commandments\allowbreak{}Hearing}}\par\nobreak\noindent
+Mark 7's principle and case, heard against Trent read as commandments of men. Not heard: Trent as it states its position, and Trent read as the apostolic word.
+
+{\small\begin{verbatim}
+def mensCommandmentsHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
+    Mark7Party.mark7, Mark7Party.trentAsMensCommandments] } :=
+  mark7Dispute.restrict fun x =>
+    x ∈
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trentAsMensCommandments]
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mens\allowbreak{}Commandments\allowbreak{}Hearing\allowbreak{}Finite}}\par\nobreak\noindent
+The hearing, in the form the verdict solver computes with.
+
+{\small\begin{verbatim}
+def mensCommandmentsHearingFinite : Solver.Finite fun i j =>
+    mark7Dispute.defeats ↑i ↑j :=
+  mark7Finite.restrict fun x =>
+    x ∈
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trentAsMensCommandments]
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mens\allowbreak{}Commandments\allowbreak{}Hearing\allowbreak{}Settles}}\par\nobreak\noindent
+How the hearing is settled, in two stages: nothing defeats Mark 7's principle, so it comes first; the principle defeats the reading, and with the reading answered Mark 7's case has no attacker left, so it comes second.
+
+\paragraph{What the dispute forces is exactly \emph{Mark 7: God's word judges human tradition}, \emph{Sola scriptura from Mark 7}.}
+\begin{itemize}
+\item Stage 1: \emph{Mark 7: God's word judges human tradition}.
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition} is defeated by nothing.
+\end{itemize}
+\item Stage 2: \emph{Sola scriptura from Mark 7}.
+\begin{itemize}
+\item \emph{Trent (Tradition II), read as commandments of men} defeats \emph{Sola scriptura from Mark 7}, and \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men} (\texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}).
+\end{itemize}
+\item Nothing else is forced:
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men} (\texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}), and nothing forced defeats \emph{Mark 7: God's word judges human tradition}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition}, weakest at \emph{well supported}:
+\begin{itemize}
+\item an inference step --- \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Sola scriptura from Mark 7}, weakest at \emph{disputed}:
+\begin{itemize}
+\item No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\item an inference step --- \cite{geiselmann-meaning-of-tradition-1966}; \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{florovsky-bible-church-tradition-1972}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as commandments of men}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\item an inference step --- \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Mark 7: God's word judges human tradition} defeats \emph{Trent (Tradition II), read as commandments of men}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Mens\allowbreak{}Commandments\allowbreak{}Reading\allowbreak{}Falls}.
+\par\medskip\noindent\textbf{\texttt{mark7\_\allowbreak{}forced\_\allowbreak{}against\_\allowbreak{}mens\_\allowbreak{}commandments}}\par\nobreak\noindent
+\textbf{Against Rome's tradition read as commandments of men, Mark 7's case is unopposed.} Heard against that reading alone, Mark 7's principle and Mark 7's case for sola scriptura are both forced: the reading is the only party in the hearing that attacks the case, and the principle defeats it.
+
+What this does not claim: that Rome's tradition is the commandments of men — Trent says what it receives came from Christ and the apostles, and the reading that says otherwise is rated \texttt{disputed}. Nor that Mark 7's case is sound. It still rests on the premise that no apostolic word survives outside Scripture, and on a step Geiselmann and Florovsky deny, both \texttt{disputed}; no party heard here contests either. Trent as it states its position, and Trent read as the apostolic word, are set aside.
+
+{\small\begin{verbatim}
+theorem mark7_forced_against_mens_commandments : Framework.grounded
+    mensCommandmentsHearing.defeats = Solver.toSet (Witness.listSub
+    (Membership.mem [Mark7Party.principle, Mark7Party.mark7,
+    Mark7Party.trentAsMensCommandments]) [Mark7Party.principle,
+    Mark7Party.mark7])
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\paragraph*{Heard against the reading as the apostolic word}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{apostolic\allowbreak{}Word\allowbreak{}Hearing}}\par\nobreak\noindent
+Mark 7's principle and case, heard against Trent read as the apostolic word handed on unwritten. Not heard: Trent as it states its position, and Trent read as commandments of men.
+
+{\small\begin{verbatim}
+def apostolicWordHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
+    Mark7Party.mark7, Mark7Party.trentAsApostolicWord] } :=
+  mark7Dispute.restrict fun x =>
+    x ∈
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trentAsApostolicWord]
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apostolic\allowbreak{}Word\allowbreak{}Hearing\allowbreak{}Finite}}\par\nobreak\noindent
+The hearing, in the form the verdict solver computes with.
+
+{\small\begin{verbatim}
+def apostolicWordHearingFinite : Solver.Finite fun i j => mark7Dispute.defeats
+    ↑i ↑j :=
+  mark7Finite.restrict fun x =>
+    x ∈
+      [Mark7Party.principle,
+        Mark7Party.mark7,
+        Mark7Party.trentAsApostolicWord]
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apostolic\allowbreak{}Word\allowbreak{}Hearing\allowbreak{}Settles}}\par\nobreak\noindent
+How the hearing is settled: nothing defeats Mark 7's principle, so it comes first; and nothing joins it, because Mark 7's case and the reading defeat each other.
+
+\paragraph{What the dispute forces is exactly \emph{Mark 7: God's word judges human tradition}.}
+\begin{itemize}
+\item Stage 1: \emph{Mark 7: God's word judges human tradition}.
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition} is defeated by nothing.
+\end{itemize}
+\item Nothing else is forced:
+\begin{itemize}
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} defeats \emph{Sola scriptura from Mark 7}, and nothing forced defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}.
+\item \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} (\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}), and nothing forced defeats \emph{Sola scriptura from Mark 7}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Mark 7: God's word judges human tradition}, weakest at \emph{well supported}:
+\begin{itemize}
+\item an inference step --- \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\item \emph{Sola scriptura from Mark 7}, weakest at \emph{disputed}:
+\begin{itemize}
+\item No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\item an inference step --- \cite{geiselmann-meaning-of-tradition-1966}; \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{florovsky-bible-church-tradition-1972}
+\end{itemize}
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}.
+\par\medskip\noindent\textbf{\texttt{against\_\allowbreak{}the\_\allowbreak{}apostolic\_\allowbreak{}word\_\allowbreak{}only\_\allowbreak{}the\_\allowbreak{}principle\_\allowbreak{}is\_\allowbreak{}forced}}\par\nobreak\noindent
+\textbf{If Rome's tradition is the apostolic word, Mark 7 forces only its principle} — which that reading grants. Mark 7's case and the reading stand off at the premise that no apostolic word survives outside Scripture.
+
+{\small\begin{verbatim}
+theorem against_the_apostolic_word_only_the_principle_is_forced :
+    Framework.grounded apostolicWordHearing.defeats = Solver.toSet
+    (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7,
+    Mark7Party.trentAsApostolicWord]) [Mark7Party.principle])
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Answered\allowbreak{}By\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word}}\par\nobreak\noindent
+Why Mark 7's case is not forced in this hearing: a defensible position holds the reading, with the principle, and the reading defeats Mark 7's case.
+
+\paragraph{\emph{Sola scriptura from Mark 7} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Mark 7: God's word judges human tradition}, \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} can be held, and it holds \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}; \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} conflicts with \emph{Sola scriptura from Mark 7}: \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} defeats \emph{Sola scriptura from Mark 7}, and \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} (\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}).
+\item None of \emph{Mark 7: God's word judges human tradition}, \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} (\texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}), and \emph{Trent (Tradition II), read as the apostolic word handed on unwritten} defeats \emph{Sola scriptura from Mark 7}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Tradition is a coordinate source of revelation alongside scripture --- \cite[Trent, Session IV (1546), Decree on Sacred Books and Traditions]{tanner-decrees-1990}; \cite{mathison-shape-sola-scriptura-2001}; \cite{geiselmann-meaning-of-tradition-1966}; \cite{congar-tradition-and-traditions-1966}
+\end{itemize}
+\item \emph{Sola scriptura from Mark 7}, weakest at \emph{disputed}:
+\begin{itemize}
+\item No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
+\item an inference step --- \cite{geiselmann-meaning-of-tradition-1966}; \cite[Vatican I (1870), Pastor Aeternus, ch. 4]{tanner-decrees-1990}; \cite{florovsky-bible-church-tradition-1972}
+\end{itemize}
+\item \emph{Mark 7: God's word judges human tradition}, weakest at \emph{well supported}:
+\begin{itemize}
+\item an inference step --- \cite[Vatican II (1965), Dei Verbum 10]{tanner-decrees-1990}; \cite[IV.x.23]{calvin-institutes-1960}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Sola scriptura from Mark 7} defeats \emph{Trent (Tradition II), read as the apostolic word handed on unwritten}, at the level of the claims: \texttt{where\allowbreak{}The\allowbreak{}Apostolic\allowbreak{}Word\allowbreak{}Reading\allowbreak{}Falls}.
+\par\medskip\noindent\textbf{\texttt{mark7\_\allowbreak{}not\_\allowbreak{}forced\_\allowbreak{}against\_\allowbreak{}the\_\allowbreak{}apostolic\_\allowbreak{}word}}\par\nobreak\noindent
+\textbf{So, against the apostolic word, sola scriptura from Mark 7 is not forced.} A defensible position that cannot be enlarged holds Mark 7's principle together with Trent read as the apostolic word, and cannot hold Mark 7's case with them. What would decide is argued, not weighed: whether any apostolic word survives outside Scripture, and whether the principle would then make Scripture the \emph{sole} rule. Both are rated \texttt{disputed}, and neither is something Mark 7 speaks to.
+
+{\small\begin{verbatim}
+theorem mark7_not_forced_against_the_apostolic_word :
+    ¬Framework.SkepticallyAccepted apostolicWordHearing.defeats
+    ⟨Mark7Party.mark7, ⋯⟩
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 
 \bibliographystyle{plain}
