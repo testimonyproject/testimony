@@ -3604,6 +3604,8 @@ Encoding three strands yields a result no single strand could: no disputed premi
 
 \textbf{Heard narrower} (\texttt{Hearings.lean}). Two questions a reader asks, answered by hearing the same dispute with some parties set aside. \emph{What did the Reformation itself decide?} Heard as Rome and the Reformers alone, only Paul's word is forced; Trent's definition, as a claim about what God does, and the Reformed strands tie. \emph{Without Trent, would Scripture establish sola fide?} Four things are then forced — Luke's "faith suffices", Paul's gospel, and Paul's word by both routes — but \emph{faith alone} is still not: Campbell on πίστις Χριστοῦ, Sanders and Dunn on ἔργα νόμου, and Jervell on the yoke each still stand against it. The obstacle then is modern exegesis, not Rome.
 
+\textbf{Jesus' own words} (\texttt{Jesus\allowbreak{}Words.lean}). \emph{What does Jesus himself say?} Luke 18:9–14 — the tax collector "went down to his house justified" — is his own teaching on justification and works, in Paul's word for it. Trent's case is consistent with every word of the parable, and with the tax collector bringing no meriting works. Trent never cites Luke 18; applied to it, its dispositions (Session VI, ch. 6) and canon 9 deny the step to "faith suffices". So Luke 18 meets Trent where Luke 7:50 does, at Trent's definition. Matthew 7:21–23 and 19:16–22 are read both ways, each reading cited and \texttt{disputed}, and neither text settles its question alone. Heard together, Jesus' words force nothing; heard without Trent, Luke's two sayings are forced (that faith sufficed, not that faith alone saves) and Matthew is not. This is a dispute of its own, kept apart from the one above for the reason the Johannine strand is.
+
 \subsubsection*{Where things are}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.45\textwidth} >{\raggedright\arraybackslash}p{0.45\textwidth}@{}}
 \toprule
@@ -3620,6 +3622,7 @@ Encoding three strands yields a result no single strand could: no disputed premi
 \texttt{Gospel.lean} & Paul's gospel in Galatians against Trent's definition, and where they part \\
 \texttt{Definition.lean} & Paul's word, and the dilemma over what Trent's definition claims \\
 \texttt{Hearings.lean} & the dispute heard narrower: the Reformation alone, and without Trent \\
+\texttt{Jesus\allowbreak{}Words.lean} & Luke 18, and both readings of Matthew 7 and 19: what Jesus' words decide \\
 \bottomrule
 \end{longtable}
 \subsection*{Arguments.SolaFide.Atoms — the atomic claims}
@@ -3695,6 +3698,15 @@ $P_{52}$ & Romans 4:6–8: righteousness counted apart from works — sins forgi
 $P_{53}$ & λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account & linguistic & Christian, hist.-gramm., well supported & \cite[s.v. λογίζομαι]{bauer-danker-lexicon-2000}; \cite[ad loc. Rom 4:3]{moo-romans-1996} \\
 $P_{54}$ & In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted & interpretive & Christian, hist.-gramm., well supported & \cite[ad loc. Rom 4:6]{moo-romans-1996}; Rom 4:6-8 \\
 $P_{55}$ & Christ's death for our sins is the whole ground of justification; to add to it is another gospel & interpretive & Reformed Protestant, disputed & \cite[XI.1]{westminster-confession-1647}; Gal 2:21; \cite[ad loc. Gal 2:21]{moo-galatians-2013}; \cite[Epistle to Diognetus 9]{roberts-ante-nicene-fathers-1-1885} \\
+$P_{56}$ & Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works & textual & Christian, hist.-gramm., consensus & Luke 18:9-14; \cite[201--207]{calvin-harmony-evangelists-2-1845} \\
+$P_{57}$ & δεδικαιωμένος at Luke 18:14 is God's verdict: accepted as righteous before God & linguistic & Christian, hist.-gramm., well supported & \cite[206--207]{calvin-harmony-evangelists-2-1845}; Luke 18:14 \\
+$P_{58}$ & The tax collector brings no works that merit, only a humble and contrite plea for mercy & interpretive & Christian, hist.-gramm., consensus & Luke 18:9-14; \cite[206--207]{calvin-harmony-evangelists-2-1845}; \cite[36]{waterworth-trent-1848} \\
+$P_{59}$ & Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works & textual & Christian, hist.-gramm., well supported & Matt 7:21-23; \cite[367--368]{calvin-harmony-evangelists-1845}; \cite[2826]{catholic-church-catechism-2000} \\
+$P_{60}$ & In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith & interpretive & Roman Catholic, disputed & \cite[2826]{catholic-church-catechism-2000}; \cite[1821]{catholic-church-catechism-2000} \\
+$P_{61}$ & In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith & interpretive & Reformed Protestant, disputed & \cite[367--368]{calvin-harmony-evangelists-1845} \\
+$P_{62}$ & Matthew 19:17 — "If you would enter life, keep the commandments" & textual & Christian, hist.-gramm., consensus & Matt 19:16-22; \cite[35]{waterworth-trent-1848} \\
+$P_{63}$ & In Matthew 19:17, keeping the commandments is the way to life, made possible by grace & interpretive & Roman Catholic, disputed & \cite[12]{john-paul-ii-veritatis-splendor-1993}; \cite[2052–2053]{catholic-church-catechism-2000}; \cite[35]{waterworth-trent-1848} \\
+$P_{64}$ & In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith & interpretive & Reformed Protestant, disputed & \cite[393--394]{calvin-harmony-evangelists-2-1845} \\
 \bottomrule
 \end{longtable}
 
@@ -3723,6 +3735,51 @@ def trentOnMerit : Source :=
         (Bib.Locus.sectionRef
           "Trent, Session VI (1547), Decree on Justification, ch. 16"),
     tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Against\allowbreak{}The\allowbreak{}Plea\allowbreak{}Alone}}\par\nobreak\noindent
+\textbf{The step from Luke 18 is contested, by Trent applied to it.} Trent never cites Luke 18, and grants that nothing before justification, "whether faith or works", merits it (ch. 8). But it requires the dispositions it lists — fear, hope, beginning to love God, penitence (ch. 6) — and anathematises whoever says "nothing else is required to co-operate" (canon 9). Read by those chapters, the tax collector's humility and contrition are dispositions his justification required, not a plea that sufficed alone. So the step from the plea to "faith suffices" is \texttt{disputed}.
+
+{\small\begin{verbatim}
+def trentAgainstThePleaAlone : Source :=
+  { primary := Reference.work Bib.waterworthTrent (Bib.Locus.page 45),
+    supporting := [Reference.work Bib.waterworthTrent (Bib.Locus.pages 33 34)],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{calvin\allowbreak{}Against\allowbreak{}Obedience\allowbreak{}As\allowbreak{}Ground}}\par\nobreak\noindent
+\textbf{The Catholic step from Matthew 7:21 is contested, by Calvin.} He grants the text, and that entry requires doing the Father's will, and denies that the doing is more than the fruit of faith: "These words, therefore, do not exclude faith, but presuppose it as the principle from which other good works flow."
+
+{\small\begin{verbatim}
+def calvinAgainstObedienceAsGround : Source :=
+  { primary := Reference.work Bib.calvinHarmony1 (Bib.Locus.pages 367 368),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{catechism\allowbreak{}Against\allowbreak{}Doing\allowbreak{}As\allowbreak{}Believing}}\par\nobreak\noindent
+\textbf{The Reformed step from Matthew 7:21 is contested, by the Catechism.} It grants the text and reads it the other way: "one enters the kingdom of heaven not by speaking words, but by doing 'the will of my Father in heaven'" (§2826).
+
+{\small\begin{verbatim}
+def catechismAgainstDoingAsBelieving : Source :=
+  {
+    primary :=
+      Reference.work Bib.catechismCatholicChurch (Bib.Locus.sectionRef "2826"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{calvin\allowbreak{}Against\allowbreak{}The\allowbreak{}Commandments\allowbreak{}As\allowbreak{}The\allowbreak{}Way}}\par\nobreak\noindent
+\textbf{The Catholic step from Matthew 19:17 is contested, by Calvin.} He grants the text — "we have no right, therefore, to deny that the keeping of the law is righteousness" — and denies that it is the way to life for any sinner: "this passage was erroneously interpreted by some of the ancients, whom the Papists have followed, as if Christ taught that, by keeping the law, we may merit eternal life." Calvin answers the claim to merit; the reading encoded here claims less — the way made possible by grace — and he denies that too, since for him no sinner keeps the law.
+
+{\small\begin{verbatim}
+def calvinAgainstTheCommandmentsAsTheWay : Source :=
+  { primary := Reference.work Bib.calvinHarmony2 (Bib.Locus.page 394),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{veritatis\allowbreak{}Splendor\allowbreak{}Against\allowbreak{}The\allowbreak{}Legal\allowbreak{}Reply}}\par\nobreak\noindent
+\textbf{The Reformed step from Matthew 19:17 is contested, by John Paul II.} He grants the text and reads it as the real path: Jesus "proposes them to us as the way and condition of salvation" (\emph{Veritatis Splendor} 12).
+
+{\small\begin{verbatim}
+def veritatisSplendorAgainstTheLegalReply : Source :=
+  { primary := Reference.work Bib.veritatisSplendor (Bib.Locus.sectionRef "12"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{melanchthon\allowbreak{}On\allowbreak{}Luke7}}\par\nobreak\noindent
 Where Melanchthon reads Luke 7:47 by 7:50, in the \emph{Apology of the Augsburg Confession} (1531): the part of Article IV on love and the fulfilling of the law. The \emph{Concordia Triglotta} numbers it Article III, 31–34; the reference is given by article and topic because paragraph numbers differ between editions.
@@ -8775,6 +8832,1026 @@ Why Peter's case for sola fide is not forced without Trent: a defensible positio
 {\small\begin{verbatim}
 theorem sola_fide_from_peter_not_forced_without_trent :
     ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, ⋯⟩
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\subsection*{Arguments.SolaFide.JesusWords — what Jesus' own words say about faith and works}
+The sola fide dispute weighs Paul, Peter and one saying of Jesus, Luke 7:50. A reader asks a narrower question with a sharper edge: \emph{what does Jesus himself say?} Three more passages are the ones each side cites.
+
+\textbf{Luke 18:9–14.} The Pharisee lists his fasting and his tithes; the tax collector stands far off, beats his breast, and prays "God, be merciful to me, a sinner"; and Jesus says that he went home justified — δεδικαιωμένος, the word Paul uses — "rather than the other". It is Jesus' own teaching on justification and works, and it uses the word itself.
+
+Two things here are common ground. The word pronounces a verdict: no reader cited here reads δεδικαιωμένος at 18:14 as the inner renewal itself, and Calvin reads it as "to stand before God as if we were righteous". That is a verdict, not \emph{only} a verdict: Trent holds both that the justified are reputed just and that they are made just (ch. 7), and that is where the parable and Trent part. And the tax collector brings no works that merit: Trent itself says that nothing that precedes justification, "whether faith or works", merits it (Session VI, ch. 8). So Trent's case is consistent with every word of the parable (\texttt{trent\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}parable}), though the Council never speaks to it.
+
+What divides them is the step from the plea to "faith suffices". Trent never cites Luke 18, but it requires the dispositions it lists — fear, hope, beginning to love God, penitence (ch. 6) — and anathematises whoever says that nothing else is required to cooperate (canon 9). Read by those chapters, the tax collector's humility and contrition are dispositions his justification required, not a plea that sufficed alone. The step is \texttt{disputed}, and Luke 18 meets Trent where Luke 7:50 does: at Trent's definition of justification (\texttt{why\allowbreak{}Luke\allowbreak{}Eighteen\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+
+The verdict sense at 18:14 is what the lexical case claims of δικαιόω in Paul, found in Jesus' own parable. It is not added to that case: a word's sense in Luke is evidence for, not a premise of, its sense in Paul, and the lexical case stands on its own citations.
+
+\textbf{Matthew 7:21–23.} "Not everyone who says to me, 'Lord, Lord,' will enter the kingdom of heaven, but the one who does the will of my Father"; and to those who prophesied in his name, "I never knew you". The text names no faith, and states its criterion as doing the Father's will. Rome reads it as condemning profession without obedience, obedience a condition of entry in its own right; Calvin reads the doing as including faith, and "I never knew you" as no union with Christ. Both readings are encoded as what they are — readings, cited and \texttt{disputed} — and neither is stated as what the text plainly says (\texttt{matthew7\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}ground\_\allowbreak{}open}).
+
+\textbf{Matthew 19:16–22.} "If you would enter life, keep the commandments" — words Trent quotes (Session VI, ch. 7). Rome reads them as the way to life, possible by grace (\emph{Veritatis Splendor} 12); Calvin reads them as Christ answering on the law's own terms, so that the young man may see he has not kept it and turn to faith. The same shape, and the same rating.
+
+\subsubsection*{What the dispute decides}
+Heard together — Luke 7:50, Luke 18, Trent, and each reading of Matthew 7 and 19 — nothing is forced (\texttt{jesus\_\allowbreak{}words\_\allowbreak{}force\_\allowbreak{}nothing}): nothing is accepted however every standoff — two parties defeating each other — is resolved. Every party is in a standoff the dispute cannot resolve: each Luke passage with Trent, and each Matthean reading with its rival. Heard without Trent, Luke 7:50 and Luke 18 are forced (\texttt{without\_\allowbreak{}trent\_\allowbreak{}luke\_\allowbreak{}is\_\allowbreak{}forced}) — that faith sufficed, not that faith alone saves — and Matthew still is not: the rival readings of Matthew 7 and 19 do not conflict with Luke, only with each other.
+
+Trent here is the party of the main dispute, whose conclusion is that salvation is not apart from works. It meets Luke through its definition of justification, not through that conclusion; Rome's readings of Matthew reach the same conclusion without the definition, and so do not conflict with Luke (\texttt{luke\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}rome\_\allowbreak{}on\_\allowbreak{}matthew}).
+
+So Jesus' words do not decide the Reformation dispute on their own. Heard without Trent, Luke's two sayings stand; Matthew's are argued in both directions, and the ratings cannot choose.
+
+This dispute is kept apart from the main sola fide dispute, as the Johannine strand is. Adding its parties there would change results that module states about its own twelve parties, and that is a change of its own to make and to report.
+
+\paragraph*{Luke 18:9–14}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{luke18\allowbreak{}To\allowbreak{}Sufficiency}}\par\nobreak\noindent
+\textbf{From the parable to faith's sufficiency.} The tax collector brings no works, only a plea for mercy, and goes home justified — God's verdict — so what justified him was not his works but his trust in God's mercy: faith sufficed. Rated \texttt{disputed}: Trent grants the text and the absence of works, and denies that the plea sufficed alone (Session VI, ch. 6 and canon 9).
+
+\[(P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25}\]
+\par\medskip\noindent\textbf{\texttt{luke18\allowbreak{}Line}} --- Luke 18:9–14 (the tax collector justified)\par\nobreak\noindent
+\textbf{Luke 18, as a line}: the parable, the verdict, and the plea without works, to faith's sufficiency.
+
+\begin{align*}
+  \text{(1)} \quad & P_{56} \\
+  \text{(2)} \quad & P_{57} \\
+  \text{(3)} \quad & P_{58} \\
+  \text{(4)} \quad & (P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25} \\
+  \vdash \quad & P_{25}
+\end{align*}
+\par\medskip\noindent\textbf{\texttt{luke18\allowbreak{}Case}} --- Luke 18:14: "this man went down to his house justified"\par\nobreak\noindent
+\textbf{Luke 18's case}: what the parable says, and no more. It claims that the tax collector's faith sufficed, not that faith \emph{alone} saves. Luke 7:50 makes the same claim, from a second saying.
+
+\begin{align*}
+  \text{(1)} \quad & P_{56} \\
+  \text{(2)} \quad & P_{57} \\
+  \text{(3)} \quad & P_{58} \\
+  \text{(4)} \quad & (P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25} \\
+  \vdash \quad & P_{25}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\paragraph*{Matthew 7:21–23}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}To\allowbreak{}Works}}\par\nobreak\noindent
+The Catholic step from Matthew 7:21: if doing the Father's will is a condition of entering the kingdom in its own right, salvation is not apart from works. Rated \texttt{disputed}: Calvin grants the text and denies that the doing is more than the fruit of faith.
+
+\[(P_{59} \land P_{60}) \rightarrow \lnot P_{27}\]
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}To\allowbreak{}Fruit}}\par\nobreak\noindent
+The Reformed step from Matthew 7:21: if doing the Father's will includes believing, and the rejected were never known, the doing is not a condition of entry in its own right but the fruit of faith. Rated \texttt{disputed}: the \emph{Catechism} grants the text and reads it the other way.
+
+\[(P_{59} \land P_{61}) \rightarrow \lnot P_{60}\]
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Obedience\allowbreak{}Line}} --- Matthew 7:21–23, read as obedience a condition of entry\par\nobreak\noindent
+\textbf{Matthew 7:21–23, read as Rome reads it}: doing the Father's will is a condition of entry in its own right, so salvation is not apart from works.
+
+\begin{align*}
+  \text{(1)} \quad & P_{59} \\
+  \text{(2)} \quad & P_{60} \\
+  \text{(3)} \quad & (P_{59} \land P_{60}) \rightarrow \lnot P_{27} \\
+  \vdash \quad & \lnot P_{27}
+\end{align*}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Faith\allowbreak{}Line}} --- Matthew 7:21–23, read as the doing including faith\par\nobreak\noindent
+\textbf{Matthew 7:21–23, read as Calvin reads it}: the doing includes believing, so obedience is not a condition of entry in its own right.
+
+\begin{align*}
+  \text{(1)} \quad & P_{59} \\
+  \text{(2)} \quad & P_{61} \\
+  \text{(3)} \quad & (P_{59} \land P_{61}) \rightarrow \lnot P_{60} \\
+  \vdash \quad & \lnot P_{60}
+\end{align*}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Obedience\allowbreak{}Case}} --- Matthew 7:21–23, read as obedience a condition of entry\par\nobreak\noindent
+Matthew 7:21–23, read as Rome reads it, as a party.
+
+\begin{align*}
+  \text{(1)} \quad & P_{59} \\
+  \text{(2)} \quad & P_{60} \\
+  \text{(3)} \quad & (P_{59} \land P_{60}) \rightarrow \lnot P_{27} \\
+  \vdash \quad & \lnot P_{27}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Faith\allowbreak{}Case}} --- Matthew 7:21–23, read as the doing including faith\par\nobreak\noindent
+Matthew 7:21–23, read as Calvin reads it, as a party.
+
+\begin{align*}
+  \text{(1)} \quad & P_{59} \\
+  \text{(2)} \quad & P_{61} \\
+  \text{(3)} \quad & (P_{59} \land P_{61}) \rightarrow \lnot P_{60} \\
+  \vdash \quad & \lnot P_{60}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\paragraph*{Matthew 19:16–22}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}To\allowbreak{}Works}}\par\nobreak\noindent
+The Catholic step from Matthew 19:17: if keeping the commandments is the way to life, salvation is not apart from works. Rated \texttt{disputed}: Calvin grants the text and denies that it is the way for any sinner.
+
+\[(P_{62} \land P_{63}) \rightarrow \lnot P_{27}\]
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}To\allowbreak{}Legal\allowbreak{}Reply}}\par\nobreak\noindent
+The Reformed step from Matthew 19:17: if Christ answers on the law's own terms to expose what the young man has not kept, the commandments are not offered as the way to life. Rated \texttt{disputed}: \emph{Veritatis Splendor} grants the text and reads it as the way.
+
+\[(P_{62} \land P_{64}) \rightarrow \lnot P_{63}\]
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Way\allowbreak{}Line}} --- Matthew 19:17, read as the commandments the way to life\par\nobreak\noindent
+\textbf{Matthew 19:17, read as Rome reads it}: the commandments are the way to life, so salvation is not apart from works.
+
+\begin{align*}
+  \text{(1)} \quad & P_{62} \\
+  \text{(2)} \quad & P_{63} \\
+  \text{(3)} \quad & (P_{62} \land P_{63}) \rightarrow \lnot P_{27} \\
+  \vdash \quad & \lnot P_{27}
+\end{align*}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Legal\allowbreak{}Line}} --- Matthew 19:17, read as the law exposing what he has not kept\par\nobreak\noindent
+\textbf{Matthew 19:17, read as Calvin reads it}: a legal reply, exposing what the young man has not kept.
+
+\begin{align*}
+  \text{(1)} \quad & P_{62} \\
+  \text{(2)} \quad & P_{64} \\
+  \text{(3)} \quad & (P_{62} \land P_{64}) \rightarrow \lnot P_{63} \\
+  \vdash \quad & \lnot P_{63}
+\end{align*}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Way\allowbreak{}Case}} --- Matthew 19:17, read as the commandments the way to life\par\nobreak\noindent
+Matthew 19:17, read as Rome reads it, as a party.
+
+\begin{align*}
+  \text{(1)} \quad & P_{62} \\
+  \text{(2)} \quad & P_{63} \\
+  \text{(3)} \quad & (P_{62} \land P_{63}) \rightarrow \lnot P_{27} \\
+  \vdash \quad & \lnot P_{27}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Legal\allowbreak{}Case}} --- Matthew 19:17, read as the law exposing what he has not kept\par\nobreak\noindent
+Matthew 19:17, read as Calvin reads it, as a party.
+
+\begin{align*}
+  \text{(1)} \quad & P_{62} \\
+  \text{(2)} \quad & P_{64} \\
+  \text{(3)} \quad & (P_{62} \land P_{64}) \rightarrow \lnot P_{63} \\
+  \vdash \quad & \lnot P_{63}
+\end{align*}
+\emph{No premise here rests on scripture alone.}
+\paragraph*{Readings, written down}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{rome\allowbreak{}On\allowbreak{}Jesus\allowbreak{}Words\allowbreak{}Reading}}\par\nobreak\noindent
+Rome's reading of Jesus' words: in Matthew 7 obedience is a condition of entry in its own right, in Matthew 19 the commandments are the way to life, and so salvation is not apart from works; faith, without the dispositions and the charity Trent requires, does not suffice.
+
+{\small\begin{verbatim}
+def romeOnJesusWordsReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.justificationIsForensicOnly => False
+    | Claim.justificationDistinctFromSanctification => False
+    | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.matthew7DoingIncludesBelieving => False
+    | Claim.matthew19LawExposesInability => False
+    | x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{calvin\allowbreak{}On\allowbreak{}Jesus\allowbreak{}Words\allowbreak{}Reading}}\par\nobreak\noindent
+Calvin's reading of Jesus' words: in Matthew 7 the doing includes believing and is not a condition of entry in its own right; in Matthew 19 Christ gives a legal reply, not the way to life; and in Luke the plea and the faith sufficed.
+
+{\small\begin{verbatim}
+def calvinOnJesusWordsReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.matthew7ObedienceIsAGround => False
+    | Claim.matthew19CommandmentsAreTheWayToLife => False
+    | x => True
+\end{verbatim}}
+\paragraph*{What each position holds}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{luke18\allowbreak{}Case\_\allowbreak{}establishes}}\par\nobreak\noindent
+\textbf{Luke 18 delivers faith's sufficiency}, given its step.
+
+{\small\begin{verbatim}
+theorem luke18Case_establishes : Establishes luke18Case
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{luke18\allowbreak{}Case\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Luke 18's case can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem luke18Case_is_satisfiable : Satisfiable luke18Case.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}parable}}\par\nobreak\noindent
+\textbf{Trent's case is consistent with every word of the parable.} Trent never cites Luke 18, but nothing in its decree denies that the tax collector pleaded for mercy, brought no meriting works, and went home justified by God's verdict: its case can be held with all of it, in Rome's reading, where faith without the dispositions does not suffice. What Trent's case, applied to the parable, denies is the step, not the text.
+
+{\small\begin{verbatim}
+theorem trent_grants_the_parable : Grants tridentineCase (⋀[p
+    Claim.luke18_9_14TaxCollectorJustified, p Claim.luke18JustifiedIsVerdict,
+    p Claim.taxCollectorBringsNoWorks])
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Obedience\allowbreak{}Case\_\allowbreak{}establishes}}\par\nobreak\noindent
+Matthew 7, read as Rome reads it, holds together and delivers its conclusion.
+
+{\small\begin{verbatim}
+theorem matthew7ObedienceCase_establishes : Establishes matthew7ObedienceCase
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Obedience\allowbreak{}Case\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Matthew 7, read as Rome reads it, can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem matthew7ObedienceCase_is_satisfiable : Satisfiable
+    matthew7ObedienceCase.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Faith\allowbreak{}Case\_\allowbreak{}establishes}}\par\nobreak\noindent
+Matthew 7, read as Calvin reads it, delivers its conclusion.
+
+{\small\begin{verbatim}
+theorem matthew7FaithCase_establishes : Establishes matthew7FaithCase
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Faith\allowbreak{}Case\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Matthew 7, read as Calvin reads it, can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem matthew7FaithCase_is_satisfiable : Satisfiable
+    matthew7FaithCase.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Way\allowbreak{}Case\_\allowbreak{}establishes}}\par\nobreak\noindent
+Matthew 19, read as Rome reads it, delivers its conclusion.
+
+{\small\begin{verbatim}
+theorem matthew19WayCase_establishes : Establishes matthew19WayCase
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Way\allowbreak{}Case\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Matthew 19, read as Rome reads it, can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem matthew19WayCase_is_satisfiable : Satisfiable
+    matthew19WayCase.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Legal\allowbreak{}Case\_\allowbreak{}establishes}}\par\nobreak\noindent
+Matthew 19, read as Calvin reads it, delivers its conclusion.
+
+{\small\begin{verbatim}
+theorem matthew19LegalCase_establishes : Establishes matthew19LegalCase
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Legal\allowbreak{}Case\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Matthew 19, read as Calvin reads it, can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem matthew19LegalCase_is_satisfiable : Satisfiable
+    matthew19LegalCase.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\paragraph*{What the texts leave open}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{matthew7\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}ground\_\allowbreak{}open}}\par\nobreak\noindent
+\textbf{Matthew 7:21–23 leaves open whether obedience is a condition of entry in its own right.} Its words — the criterion is doing the Father's will — neither say that the doing is such a condition nor that it is only the fruit of faith. Neither reading is what the text plainly says: both hold the words, and they differ only in what they add to them.
+
+{\small\begin{verbatim}
+theorem matthew7_leaves_the_ground_open : Independent [p
+    Claim.matthew7_21_23DoingTheWill] (p Claim.matthew7ObedienceIsAGround)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew19\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}way\_\allowbreak{}open}}\par\nobreak\noindent
+\textbf{Matthew 19:17 leaves open whether the commandments are the way to life.} "If you would enter life, keep the commandments" is held alike by the reading on which it is the way, and by the reading on which it is a legal reply.
+
+{\small\begin{verbatim}
+theorem matthew19_leaves_the_way_open : Independent [p
+    Claim.matthew19_17KeepTheCommandments] (p
+    Claim.matthew19CommandmentsAreTheWayToLife)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\paragraph*{Why Luke 18 stands against Trent}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{why\allowbreak{}Luke\allowbreak{}Eighteen\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}}\par\nobreak\noindent
+\textbf{Why Luke 18 stands against Trent.} The crux is Luke 18's own step: from the parable, the verdict, and the plea without works, to faith's sufficiency. Trent cannot hold it: its definition of justification as the renewal of the inward man (Session VI, ch. 7), with the step from that definition to denying that faith suffices (canon 9), contradicts it — and both are needed. Nothing else in Trent's case does.
+
+So Luke 18 meets Trent exactly where Luke 7:50 does (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}): not over what the parable says, which Trent's case is consistent with, but over what justification is. The dispositions of chapter 6 are why the step is rated \texttt{disputed}; they are not encoded as a premise of Trent's case, so the conflict found here runs through Trent's definition in chapter 7, which is.
+
+\paragraph{Why \emph{Luke 18:14: "this man went down to his house justified"} stands against \emph{Trent, against 'not by works'}.}
+\begin{itemize}
+\item \textbf{The crux:} \((P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25}\), a premise of \emph{Luke 18:14: "this man went down to his house justified"}.
+\item \textbf{What it does:} its conclusion does not follow without it.
+\item \textbf{Granted:} \(P_{56}\), \(P_{57}\), \(P_{58}\), which the break also needs.
+\item \textbf{Where the rival breaks:} \(P_{32}\), \(P_{32} \rightarrow \lnot P_{25}\) cannot be held together with \((P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25}\) and \(P_{56}\), \(P_{57}\), \(P_{58}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(P_{56}\) Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works --- \emph{consensus}: Luke 18:9-14; \cite[201--207]{calvin-harmony-evangelists-2-1845}
+\item \(P_{57}\) δεδικαιωμένος at Luke 18:14 is God's verdict: accepted as righteous before God --- \emph{well supported}: \cite[206--207]{calvin-harmony-evangelists-2-1845}; Luke 18:14
+\item \(P_{58}\) The tax collector brings no works that merit, only a humble and contrite plea for mercy --- \emph{consensus}: Luke 18:9-14; \cite[206--207]{calvin-harmony-evangelists-2-1845}; \cite[36]{waterworth-trent-1848}
+\item the step itself --- \emph{disputed}: \cite[45]{waterworth-trent-1848}; \cite[33--34]{waterworth-trent-1848}
+\end{itemize}
+\end{itemize}
+\paragraph*{Strength: every weakest link is \texttt{disputed}}
+\leavevmode\par
+A party's weakest link is the lowest-rated premise or step it rests on. An attack fails only when the party attacked is rated above its attacker at that link. Luke 18's words and its verdict are rated above \texttt{disputed}, but its step is not, and each Matthean reading rests on a reading rated \texttt{disputed}. Here every weakest link is \texttt{disputed} (written \texttt{0}), so every attack stands.
+
+\par\medskip\noindent\textbf{\texttt{luke18\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
+Luke 18's case rests on a step Trent contests: its weakest link is \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem luke18Case_strength : luke18Case.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Obedience\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
+Matthew 7, read as Rome reads it, rests on its reading: its weakest link is \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem matthew7ObedienceCase_strength : matthew7ObedienceCase.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Faith\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
+Matthew 7, read as Calvin reads it, rests on his: its weakest link is \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem matthew7FaithCase_strength : matthew7FaithCase.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Way\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
+Matthew 19, read as Rome reads it, rests on its reading: its weakest link is \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem matthew19WayCase_strength : matthew19WayCase.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Legal\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
+Matthew 19, read as Calvin reads it, rests on his: its weakest link is \texttt{disputed}.
+
+{\small\begin{verbatim}
+theorem matthew19LegalCase_strength : matthew19LegalCase.strength = 0
+-- axioms: propext
+\end{verbatim}}
+\paragraph*{The dispute over Jesus' words}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{words\allowbreak{}Party\allowbreak{}Node}}\par\nobreak\noindent
+The package each party argues from.
+
+{\small\begin{verbatim}
+def wordsPartyNode : WordsParty → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | WordsParty.luke7 => dominicalCase
+    | WordsParty.luke18 => luke18Case
+    | WordsParty.trent => tridentineCase
+    | WordsParty.matthew7Obedience =>
+      matthew7ObedienceCase
+    | WordsParty.matthew7Faith =>
+      matthew7FaithCase
+    | WordsParty.matthew19Way =>
+      matthew19WayCase
+    | WordsParty.matthew19Legal =>
+      matthew19LegalCase
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Dispute}}\par\nobreak\noindent
+The dispute over Jesus' words: every party's premises can be held without contradiction, every party establishes its conclusion, and every party's inferences are rated.
+
+{\small\begin{verbatim}
+def jesusWordsDispute : Dispute Claim WordsParty :=
+  { node := wordsPartyNode,
+    consistent := jesusWordsDispute._proof_1,
+    sound := jesusWordsDispute._proof_2,
+    rated := jesusWordsDispute._proof_3 }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{luke\allowbreak{}With\allowbreak{}Rome\allowbreak{}On\allowbreak{}Matthew\allowbreak{}Reading}}\par\nobreak\noindent
+\textbf{Rome's readings of Matthew stand with Luke's sayings.} One world holds Luke 7:50 and Luke 18 — faith sufficed — and Rome's readings of Matthew 7 and 19 — salvation is not apart from works. As encoded, faith's sufficiency and "not apart from works" are different claims, and Luke's sayings make only the first: whoever holds both is not contradicted by these texts.
+
+{\small\begin{verbatim}
+def lukeWithRomeOnMatthewReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.salvationNotByWorks => False
+    | Claim.matthew7DoingIncludesBelieving => False
+    | Claim.matthew19LawExposesInability => False
+    | x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{luke\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}rome\_\allowbreak{}on\_\allowbreak{}matthew}}\par\nobreak\noindent
+Luke's two sayings stand with Rome's readings of Matthew.
+
+{\small\begin{verbatim}
+theorem luke_stands_with_rome_on_matthew : jesusWordsDispute.StandTogether
+    [WordsParty.luke7, WordsParty.luke18, WordsParty.matthew7Obedience,
+    WordsParty.matthew19Way]
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{words\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
+The defeats of the dispute, as a table.
+
+{\small\begin{verbatim}
+def wordsPartyDefeats : WordsParty → WordsParty → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | WordsParty.luke7,
+      WordsParty.trent => True
+    | WordsParty.trent,
+      WordsParty.luke7 => True
+    | WordsParty.luke18,
+      WordsParty.trent => True
+    | WordsParty.trent,
+      WordsParty.luke18 => True
+    | WordsParty.matthew7Obedience,
+      WordsParty.matthew7Faith => True
+    | WordsParty.matthew7Faith,
+      WordsParty.matthew7Obedience => True
+    | WordsParty.matthew19Way,
+      WordsParty.matthew19Legal => True
+    | WordsParty.matthew19Legal,
+      WordsParty.matthew19Way => True
+    | x, x_2 => False
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Words\allowbreak{}Party\allowbreak{}Words\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
+The table is finite, so membership in it is decidable.
+
+{\small\begin{verbatim}
+def instDecidableRelWordsPartyWordsPartyDefeats : DecidableRel
+    wordsPartyDefeats
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{words\allowbreak{}Party\allowbreak{}Strength}}\par\nobreak\noindent
+Each party's weakest link: \texttt{disputed} for every one.
+
+{\small\begin{verbatim}
+def wordsPartyStrength : WordsParty → ℕ :=
+  fun x => 0
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{words\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
+Each party's weakest link, as its package computes it.
+
+{\small\begin{verbatim}
+theorem wordsPartyNode_strength : ∀ (i : WordsParty), (wordsPartyNode
+    i).strength = wordsPartyStrength i
+-- axioms: propext
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
+\textbf{Who defeats whom}, all 49 pairs: four standoffs, and nothing else. Luke 7:50 and Trent defeat each other, and so do Luke 18 and Trent, over Trent's definition of justification; each Matthean reading defeats its rival, and is defeated back. Every cell is computed from the parties' premises by \texttt{Horn.defeats?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem jesusWordsDispute_defeats : ∀ (i j : WordsParty),
+    jesusWordsDispute.defeats i j ↔ wordsPartyDefeats i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Finite}}\par\nobreak\noindent
+The dispute in the form the verdict solver computes with.
+
+{\small\begin{verbatim}
+def jesusWordsFinite : Solver.Finite jesusWordsDispute.defeats :=
+  {
+    parties :=
+      [WordsParty.luke7,
+        WordsParty.luke18,
+        WordsParty.trent,
+        WordsParty.matthew7Obedience,
+        WordsParty.matthew7Faith,
+        WordsParty.matthew19Way,
+        WordsParty.matthew19Legal],
+    complete := jesusWordsFinite._proof_1,
+    defeats := fun i j => decide (wordsPartyDefeats i j),
+    spec := jesusWordsFinite._proof_2 }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
+\textbf{Nothing supports anything, and no party's case is part of another's}, in all 49 pairs. Every cell is computed by \texttt{supports?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem jesusWordsDispute_supports : ∀ (i j : WordsParty),
+    ¬jesusWordsDispute.supports i j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
+Each party's case is part of its own and of no other's. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
+
+{\small\begin{verbatim}
+theorem jesusWordsDispute_partOf : ∀ (i j : WordsParty),
+    jesusWordsDispute.partOf i j ↔ i = j
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Map}}\par\nobreak\noindent
+The dispute over Jesus' words drawn: who defeats whom.
+
+\begin{center}
+\begin{tikzpicture}[>={Stealth[length=2mm]}]
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n0) at (0.00,3.20) {1};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n1) at (2.50,2.00) {2};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n2) at (3.12,-0.71) {3};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n3) at (1.39,-2.88) {4};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n4) at (-1.39,-2.88) {5};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n5) at (-3.12,-0.71) {6};
+\node[draw,circle,minimum size=6mm,inner sep=0pt] (n6) at (-2.50,2.00) {7};
+\draw[->,red!70!black,thick] (n0) to[bend left=10] (n2);
+\draw[->,red!70!black,thick] (n1) to[bend left=10] (n2);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n0);
+\draw[->,red!70!black,thick] (n2) to[bend left=10] (n1);
+\draw[->,red!70!black,thick] (n3) to[bend left=10] (n4);
+\draw[->,red!70!black,thick] (n4) to[bend left=10] (n3);
+\draw[->,red!70!black,thick] (n5) to[bend left=10] (n6);
+\draw[->,red!70!black,thick] (n6) to[bend left=10] (n5);
+\end{tikzpicture}
+\end{center}
+\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of another's.
+\begin{enumerate}
+\item Luke 7:50: "your faith has saved you"
+\item Luke 18:14: "this man went down to his house justified"
+\item Trent, against 'not by works'
+\item Matthew 7:21–23, read as obedience a condition of entry
+\item Matthew 7:21–23, read as the doing including faith
+\item Matthew 19:17, read as the commandments the way to life
+\item Matthew 19:17, read as the law exposing what he has not kept
+\end{enumerate}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth} >{\raggedright\arraybackslash}p{0.3\textwidth}@{}}
+\toprule
+\textbf{From} & \textbf{To} & \textbf{Edge} \\
+\midrule
+\endhead
+1 \emph{Luke 7:50: "your faith has saved you"} & 3 \emph{Trent, against 'not by works'} & defeats \\
+2 \emph{Luke 18:14: "this man went down to his house justified"} & 3 \emph{Trent, against 'not by works'} & defeats \\
+3 \emph{Trent, against 'not by works'} & 1 \emph{Luke 7:50: "your faith has saved you"} & defeats \\
+3 \emph{Trent, against 'not by works'} & 2 \emph{Luke 18:14: "this man went down to his house justified"} & defeats \\
+4 \emph{Matthew 7:21–23, read as obedience a condition of entry} & 5 \emph{Matthew 7:21–23, read as the doing including faith} & defeats \\
+5 \emph{Matthew 7:21–23, read as the doing including faith} & 4 \emph{Matthew 7:21–23, read as obedience a condition of entry} & defeats \\
+6 \emph{Matthew 19:17, read as the commandments the way to life} & 7 \emph{Matthew 19:17, read as the law exposing what he has not kept} & defeats \\
+7 \emph{Matthew 19:17, read as the law exposing what he has not kept} & 6 \emph{Matthew 19:17, read as the commandments the way to life} & defeats \\
+\bottomrule
+\end{longtable}
+\noindent The defeats are the cells of \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\paragraph*{What the dispute decides}
+\leavevmode\par
+A few words recur. \textbf{Forced}: accepted however every standoff is resolved. \textbf{Can be defended}: held by some consistent position that answers every attack on its members. \textbf{Not forced}: some consistent position leaves it out — which is not the same as false. A \emph{maximal} defensible position is one no other party can be added to without losing that.
+
+\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Settle\allowbreak{}Nothing}}\par\nobreak\noindent
+Why nothing is forced: every party has a defeater. Luke 7:50 and Luke 18 each have Trent, Trent has Luke 7:50, and each reading of Matthew has its rival.
+
+\paragraph{Nothing prevails outright: every party is defeated by another.}
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 7:50: "your faith has saved you"}.
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 18:14: "this man went down to his house justified"}.
+\item \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}.
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}.
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}.
+\item \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}.
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 7 defeats and 0 absences of defeat, each a cell of the defeat table, \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Luke 18:14: "this man went down to his house justified"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[45]{waterworth-trent-1848}; \cite[33--34]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as the doing including faith}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\item an inference step --- \cite[2826]{catholic-church-catechism-2000}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith --- \cite[2826]{catholic-church-catechism-2000}; \cite[1821]{catholic-church-catechism-2000}
+\item an inference step --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith --- \cite[393--394]{calvin-harmony-evangelists-2-1845}
+\item an inference step --- \cite[12]{john-paul-ii-veritatis-splendor-1993}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the commandments the way to life}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, keeping the commandments is the way to life, made possible by grace --- \cite[12]{john-paul-ii-veritatis-splendor-1993}; \cite[2052–2053]{catholic-church-catechism-2000}; \cite[35]{waterworth-trent-1848}
+\item an inference step --- \cite[394]{calvin-harmony-evangelists-2-1845}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
+\par\medskip\noindent\textbf{\texttt{jesus\_\allowbreak{}words\_\allowbreak{}force\_\allowbreak{}nothing}}\par\nobreak\noindent
+\textbf{Heard together, Jesus' words force nothing.} Every party is in a standoff the dispute cannot resolve — each Luke saying with Trent, over what justification is, and each reading of Matthew with its rival — and every weakest link is \texttt{disputed}, so no rating breaks a tie.
+
+What this does not claim: that Jesus' words are silent. Each party can be defended, and Trent grants every word of Luke 18 (\texttt{trent\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}parable}). What the dispute cannot do is choose between readings rated alike.
+
+{\small\begin{verbatim}
+theorem jesus_words_force_nothing : Framework.grounded
+    jesusWordsDispute.defeats = ∅
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{luke18\allowbreak{}Stands\allowbreak{}With\allowbreak{}Luke7}}\par\nobreak\noindent
+Why Luke 18 can be defended: it stands with Luke 7:50 and with Rome's readings of Matthew, and Trent, its one defeater, is defeated from within that position: by Luke 7:50, and by Luke 18 itself.
+
+\paragraph{\emph{Luke 18:14: "this man went down to his house justified"} is accepted on some resolution.}
+\begin{itemize}
+\item A position holding \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as obedience a condition of entry}, \emph{Matthew 19:17, read as the commandments the way to life} can be held.
+\item None of \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as obedience a condition of entry}, \emph{Matthew 19:17, read as the commandments the way to life} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 7:50: "your faith has saved you"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 18:14: "this man went down to his house justified"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}, and \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}.
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}, and \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Luke 18:14: "this man went down to his house justified"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[45]{waterworth-trent-1848}; \cite[33--34]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith --- \cite[2826]{catholic-church-catechism-2000}; \cite[1821]{catholic-church-catechism-2000}
+\item an inference step --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the commandments the way to life}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, keeping the commandments is the way to life, made possible by grace --- \cite[12]{john-paul-ii-veritatis-splendor-1993}; \cite[2052–2053]{catholic-church-catechism-2000}; \cite[35]{waterworth-trent-1848}
+\item an inference step --- \cite[394]{calvin-harmony-evangelists-2-1845}
+\end{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as the doing including faith}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\item an inference step --- \cite[2826]{catholic-church-catechism-2000}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith --- \cite[393--394]{calvin-harmony-evangelists-2-1845}
+\item an inference step --- \cite[12]{john-paul-ii-veritatis-splendor-1993}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
+\par\medskip\noindent\textbf{\texttt{luke18\_\allowbreak{}defensible}}\par\nobreak\noindent
+\textbf{Luke 18 can be defended.} Some maximal defensible position holds it, with Luke 7:50. Its only defeater is Trent, over Trent's definition of justification, and it defeats Trent back. It does not conflict with either reading of Matthew: the position that holds it here holds Rome's readings of Matthew 7 and 19 as well (\texttt{luke\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}rome\_\allowbreak{}on\_\allowbreak{}matthew}), and the position that holds Calvin's readings holds it too (\texttt{matthew7\allowbreak{}Rome\allowbreak{}Answered\allowbreak{}By\allowbreak{}Calvin}).
+
+{\small\begin{verbatim}
+theorem luke18_defensible : Framework.CredulouslyAccepted
+    jesusWordsDispute.defeats WordsParty.luke18
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{luke18\allowbreak{}Answered\allowbreak{}By\allowbreak{}Trent}}\par\nobreak\noindent
+Why Luke 18 is not forced: a defensible position holds Trent, and Trent defeats it.
+
+\paragraph{\emph{Luke 18:14: "this man went down to his house justified"} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Trent, against 'not by works'}, \emph{Matthew 7:21–23, read as obedience a condition of entry}, \emph{Matthew 19:17, read as the commandments the way to life} can be held, and it holds \emph{Trent, against 'not by works'}; \emph{Trent, against 'not by works'} conflicts with \emph{Luke 18:14: "this man went down to his house justified"}: \emph{Trent, against 'not by works'} defeats \emph{Luke 18:14: "this man went down to his house justified"}, and \emph{Luke 18:14: "this man went down to his house justified"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}Luke\allowbreak{}Eighteen\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item None of \emph{Trent, against 'not by works'}, \emph{Matthew 7:21–23, read as obedience a condition of entry}, \emph{Matthew 19:17, read as the commandments the way to life} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}), and \emph{Trent, against 'not by works'} defeats \emph{Luke 7:50: "your faith has saved you"}.
+\item \emph{Luke 18:14: "this man went down to his house justified"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}Luke\allowbreak{}Eighteen\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}), and \emph{Trent, against 'not by works'} defeats \emph{Luke 18:14: "this man went down to his house justified"}.
+\item \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}, and \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}.
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}, and \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 8 defeats and 17 absences of defeat, each a cell of the defeat table, \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Luke 18:14: "this man went down to his house justified"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[45]{waterworth-trent-1848}; \cite[33--34]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith --- \cite[2826]{catholic-church-catechism-2000}; \cite[1821]{catholic-church-catechism-2000}
+\item an inference step --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the commandments the way to life}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, keeping the commandments is the way to life, made possible by grace --- \cite[12]{john-paul-ii-veritatis-splendor-1993}; \cite[2052–2053]{catholic-church-catechism-2000}; \cite[35]{waterworth-trent-1848}
+\item an inference step --- \cite[394]{calvin-harmony-evangelists-2-1845}
+\end{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as the doing including faith}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\item an inference step --- \cite[2826]{catholic-church-catechism-2000}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith --- \cite[393--394]{calvin-harmony-evangelists-2-1845}
+\item an inference step --- \cite[12]{john-paul-ii-veritatis-splendor-1993}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Luke 18:14: "this man went down to his house justified"} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}Luke\allowbreak{}Eighteen\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
+\noindent Why \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
+\par\medskip\noindent\textbf{\texttt{luke18\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+\textbf{Nor is Luke 18 forced.} A maximal defensible position holds Trent, and cannot hold Luke 18 with it. What would decide is the step from the plea to "faith suffices" — rated \texttt{disputed}, because Trent requires the dispositions of chapter 6 and anathematises "nothing else is required" (canon 9) — and behind it Trent's definition of justification (\texttt{why\allowbreak{}Luke\allowbreak{}Eighteen\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+
+{\small\begin{verbatim}
+theorem luke18_not_forced : ¬Framework.SkepticallyAccepted
+    jesusWordsDispute.defeats WordsParty.luke18
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Rome\allowbreak{}Answered\allowbreak{}By\allowbreak{}Calvin}}\par\nobreak\noindent
+Why Rome's reading of Matthew 7 is not forced: a defensible position holds Calvin's, and it defeats Rome's.
+
+\paragraph{\emph{Matthew 7:21–23, read as obedience a condition of entry} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as the doing including faith}, \emph{Matthew 19:17, read as the law exposing what he has not kept} can be held, and it holds \emph{Matthew 7:21–23, read as the doing including faith}; \emph{Matthew 7:21–23, read as the doing including faith} conflicts with \emph{Matthew 7:21–23, read as obedience a condition of entry}: \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}, and \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}.
+\item None of \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as the doing including faith}, \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 7:50: "your faith has saved you"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 18:14: "this man went down to his house justified"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}, and \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}.
+\item \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}, and \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Matthew 7:21–23, read as the doing including faith}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\item an inference step --- \cite[2826]{catholic-church-catechism-2000}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith --- \cite[2826]{catholic-church-catechism-2000}; \cite[1821]{catholic-church-catechism-2000}
+\item an inference step --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\end{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Luke 18:14: "this man went down to his house justified"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[45]{waterworth-trent-1848}; \cite[33--34]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith --- \cite[393--394]{calvin-harmony-evangelists-2-1845}
+\item an inference step --- \cite[12]{john-paul-ii-veritatis-splendor-1993}
+\end{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the commandments the way to life}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, keeping the commandments is the way to life, made possible by grace --- \cite[12]{john-paul-ii-veritatis-splendor-1993}; \cite[2052–2053]{catholic-church-catechism-2000}; \cite[35]{waterworth-trent-1848}
+\item an inference step --- \cite[394]{calvin-harmony-evangelists-2-1845}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
+\par\medskip\noindent\textbf{\texttt{matthew7\_\allowbreak{}rome\_\allowbreak{}reading\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+\textbf{Rome's reading of Matthew 7 is not forced.} A maximal defensible position holds Calvin's reading — the doing includes believing, and is not a condition of entry in its own right — and cannot hold Rome's with it.
+
+{\small\begin{verbatim}
+theorem matthew7_rome_reading_not_forced : ¬Framework.SkepticallyAccepted
+    jesusWordsDispute.defeats WordsParty.matthew7Obedience
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew7\allowbreak{}Calvin\allowbreak{}Answered\allowbreak{}By\allowbreak{}Rome}}\par\nobreak\noindent
+Why Calvin's reading of Matthew 7 is not forced: a defensible position holds Rome's, and it defeats Calvin's.
+
+\paragraph{\emph{Matthew 7:21–23, read as the doing including faith} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as obedience a condition of entry}, \emph{Matthew 19:17, read as the commandments the way to life} can be held, and it holds \emph{Matthew 7:21–23, read as obedience a condition of entry}; \emph{Matthew 7:21–23, read as obedience a condition of entry} conflicts with \emph{Matthew 7:21–23, read as the doing including faith}: \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}, and \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}.
+\item None of \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as obedience a condition of entry}, \emph{Matthew 19:17, read as the commandments the way to life} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 7:50: "your faith has saved you"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 18:14: "this man went down to his house justified"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}, and \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}.
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}, and \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith --- \cite[2826]{catholic-church-catechism-2000}; \cite[1821]{catholic-church-catechism-2000}
+\item an inference step --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as the doing including faith}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\item an inference step --- \cite[2826]{catholic-church-catechism-2000}
+\end{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Luke 18:14: "this man went down to his house justified"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[45]{waterworth-trent-1848}; \cite[33--34]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the commandments the way to life}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, keeping the commandments is the way to life, made possible by grace --- \cite[12]{john-paul-ii-veritatis-splendor-1993}; \cite[2052–2053]{catholic-church-catechism-2000}; \cite[35]{waterworth-trent-1848}
+\item an inference step --- \cite[394]{calvin-harmony-evangelists-2-1845}
+\end{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith --- \cite[393--394]{calvin-harmony-evangelists-2-1845}
+\item an inference step --- \cite[12]{john-paul-ii-veritatis-splendor-1993}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
+\par\medskip\noindent\textbf{\texttt{matthew7\_\allowbreak{}calvin\_\allowbreak{}reading\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+\textbf{Nor is Calvin's.} A maximal defensible position holds Rome's reading — obedience a condition of entry — and cannot hold Calvin's with it. Between the two readings of Matthew 7 the dispute chooses neither, as the text itself does not (\texttt{matthew7\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}ground\_\allowbreak{}open}).
+
+{\small\begin{verbatim}
+theorem matthew7_calvin_reading_not_forced : ¬Framework.SkepticallyAccepted
+    jesusWordsDispute.defeats WordsParty.matthew7Faith
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Rome\allowbreak{}Answered\allowbreak{}By\allowbreak{}Calvin}}\par\nobreak\noindent
+Why Rome's reading of Matthew 19 is not forced: a defensible position holds Calvin's, and it defeats Rome's.
+
+\paragraph{\emph{Matthew 19:17, read as the commandments the way to life} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as the doing including faith}, \emph{Matthew 19:17, read as the law exposing what he has not kept} can be held, and it holds \emph{Matthew 19:17, read as the law exposing what he has not kept}; \emph{Matthew 19:17, read as the law exposing what he has not kept} conflicts with \emph{Matthew 19:17, read as the commandments the way to life}: \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}, and \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}.
+\item None of \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as the doing including faith}, \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 7:50: "your faith has saved you"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 18:14: "this man went down to his house justified"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}, and \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}.
+\item \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}, and \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith --- \cite[393--394]{calvin-harmony-evangelists-2-1845}
+\item an inference step --- \cite[12]{john-paul-ii-veritatis-splendor-1993}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the commandments the way to life}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, keeping the commandments is the way to life, made possible by grace --- \cite[12]{john-paul-ii-veritatis-splendor-1993}; \cite[2052–2053]{catholic-church-catechism-2000}; \cite[35]{waterworth-trent-1848}
+\item an inference step --- \cite[394]{calvin-harmony-evangelists-2-1845}
+\end{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Luke 18:14: "this man went down to his house justified"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[45]{waterworth-trent-1848}; \cite[33--34]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as the doing including faith}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\item an inference step --- \cite[2826]{catholic-church-catechism-2000}
+\end{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith --- \cite[2826]{catholic-church-catechism-2000}; \cite[1821]{catholic-church-catechism-2000}
+\item an inference step --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
+\par\medskip\noindent\textbf{\texttt{matthew19\_\allowbreak{}rome\_\allowbreak{}reading\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+\textbf{Rome's reading of Matthew 19 is not forced.} A maximal defensible position holds Calvin's reading — a legal reply, exposing what the young man has not kept — and cannot hold Rome's with it.
+
+{\small\begin{verbatim}
+theorem matthew19_rome_reading_not_forced : ¬Framework.SkepticallyAccepted
+    jesusWordsDispute.defeats WordsParty.matthew19Way
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{matthew19\allowbreak{}Calvin\allowbreak{}Answered\allowbreak{}By\allowbreak{}Rome}}\par\nobreak\noindent
+Why Calvin's reading of Matthew 19 is not forced: a defensible position holds Rome's, and it defeats Calvin's.
+
+\paragraph{\emph{Matthew 19:17, read as the law exposing what he has not kept} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as obedience a condition of entry}, \emph{Matthew 19:17, read as the commandments the way to life} can be held, and it holds \emph{Matthew 19:17, read as the commandments the way to life}; \emph{Matthew 19:17, read as the commandments the way to life} conflicts with \emph{Matthew 19:17, read as the law exposing what he has not kept}: \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}, and \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}.
+\item None of \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}, \emph{Matthew 7:21–23, read as obedience a condition of entry}, \emph{Matthew 19:17, read as the commandments the way to life} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 7:50: "your faith has saved you"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Trent, against 'not by works'} defeats \emph{Luke 18:14: "this man went down to his house justified"}, and \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'} (\texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}).
+\item \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}, and \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}.
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}, and \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Matthew 19:17, read as the commandments the way to life}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, keeping the commandments is the way to life, made possible by grace --- \cite[12]{john-paul-ii-veritatis-splendor-1993}; \cite[2052–2053]{catholic-church-catechism-2000}; \cite[35]{waterworth-trent-1848}
+\item an inference step --- \cite[394]{calvin-harmony-evangelists-2-1845}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith --- \cite[393--394]{calvin-harmony-evangelists-2-1845}
+\item an inference step --- \cite[12]{john-paul-ii-veritatis-splendor-1993}
+\end{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Luke 18:14: "this man went down to his house justified"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[45]{waterworth-trent-1848}; \cite[33--34]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith --- \cite[2826]{catholic-church-catechism-2000}; \cite[1821]{catholic-church-catechism-2000}
+\item an inference step --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\end{itemize}
+\item \emph{Trent, against 'not by works'}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Justification is not remission of sins only, but renewal of the inward man --- \cite[Trent, Session VI (1547), Decree on Justification, ch. 7]{tanner-decrees-1990}; \cite[Trent, Session VI (1547), canon 11]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as the doing including faith}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\item an inference step --- \cite[2826]{catholic-church-catechism-2000}
+\end{itemize}
+\end{itemize}
+\noindent Why \emph{Luke 7:50: "your faith has saved you"} defeats \emph{Trent, against 'not by works'}, at the level of the claims: \texttt{why\allowbreak{}The\allowbreak{}Dominical\allowbreak{}Case\allowbreak{}Stands\allowbreak{}Against\allowbreak{}Trent}.
+\par\medskip\noindent\textbf{\texttt{matthew19\_\allowbreak{}calvin\_\allowbreak{}reading\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+\textbf{Nor is Calvin's.} A maximal defensible position holds Rome's reading — the commandments the way to life — and cannot hold Calvin's with it. Between the two readings of Matthew 19 the dispute chooses neither (\texttt{matthew19\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}way\_\allowbreak{}open}).
+
+{\small\begin{verbatim}
+theorem matthew19_calvin_reading_not_forced : ¬Framework.SkepticallyAccepted
+    jesusWordsDispute.defeats WordsParty.matthew19Legal
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\paragraph*{Heard without Trent}
+\leavevmode\par
+\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Without\allowbreak{}Trent}}\par\nobreak\noindent
+Every party but Trent: Luke's two sayings, and both readings of each Matthean passage.
+
+{\small\begin{verbatim}
+def jesusWordsWithoutTrent : Dispute Claim { i // i ≠ WordsParty.trent } :=
+  jesusWordsDispute.restrict fun x =>
+    x ≠ WordsParty.trent
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Without\allowbreak{}Trent\allowbreak{}Finite}}\par\nobreak\noindent
+The hearing, in the form the verdict solver computes with.
+
+{\small\begin{verbatim}
+def jesusWordsWithoutTrentFinite : Solver.Finite fun i j =>
+    jesusWordsDispute.defeats ↑i ↑j :=
+  jesusWordsFinite.restrict fun x =>
+    x ≠ WordsParty.trent
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Trent\allowbreak{}Luke\allowbreak{}Settles}}\par\nobreak\noindent
+How the hearing is settled: with Trent unheard, nothing attacks Luke 7:50 or Luke 18, so both come first; and nothing joins them, because each reading of Matthew still has its rival.
+
+\paragraph{What the dispute forces is exactly \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}.}
+\begin{itemize}
+\item Stage 1: \emph{Luke 7:50: "your faith has saved you"}, \emph{Luke 18:14: "this man went down to his house justified"}.
+\begin{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"} is defeated by nothing.
+\item \emph{Luke 18:14: "this man went down to his house justified"} is defeated by nothing.
+\end{itemize}
+\item Nothing else is forced:
+\begin{itemize}
+\item \emph{Matthew 7:21–23, read as the doing including faith} defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}, and nothing forced defeats \emph{Matthew 7:21–23, read as the doing including faith}.
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry} defeats \emph{Matthew 7:21–23, read as the doing including faith}, and nothing forced defeats \emph{Matthew 7:21–23, read as obedience a condition of entry}.
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept} defeats \emph{Matthew 19:17, read as the commandments the way to life}, and nothing forced defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}.
+\item \emph{Matthew 19:17, read as the commandments the way to life} defeats \emph{Matthew 19:17, read as the law exposing what he has not kept}, and nothing forced defeats \emph{Matthew 19:17, read as the commandments the way to life}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 4 defeats and 20 absences of defeat, each a cell of the defeat table, \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Luke 7:50: "your faith has saved you"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
+\end{itemize}
+\item \emph{Luke 18:14: "this man went down to his house justified"}, weakest at \emph{disputed}:
+\begin{itemize}
+\item an inference step --- \cite[45]{waterworth-trent-1848}; \cite[33--34]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as obedience a condition of entry}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith --- \cite[2826]{catholic-church-catechism-2000}; \cite[1821]{catholic-church-catechism-2000}
+\item an inference step --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\end{itemize}
+\item \emph{Matthew 7:21–23, read as the doing including faith}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith --- \cite[367--368]{calvin-harmony-evangelists-1845}
+\item an inference step --- \cite[2826]{catholic-church-catechism-2000}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the commandments the way to life}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, keeping the commandments is the way to life, made possible by grace --- \cite[12]{john-paul-ii-veritatis-splendor-1993}; \cite[2052–2053]{catholic-church-catechism-2000}; \cite[35]{waterworth-trent-1848}
+\item an inference step --- \cite[394]{calvin-harmony-evangelists-2-1845}
+\end{itemize}
+\item \emph{Matthew 19:17, read as the law exposing what he has not kept}, weakest at \emph{disputed}:
+\begin{itemize}
+\item In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith --- \cite[393--394]{calvin-harmony-evangelists-2-1845}
+\item an inference step --- \cite[12]{john-paul-ii-veritatis-splendor-1993}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{without\_\allowbreak{}trent\_\allowbreak{}luke\_\allowbreak{}is\_\allowbreak{}forced}}\par\nobreak\noindent
+\textbf{Without Trent, Luke's two sayings are forced, and Matthew is not.} Heard without Trent, nothing attacks "your faith has saved you" or the tax collector justified: faith's sufficiency, from Jesus' own words, is forced twice over. The readings of Matthew 7 and 19 still stand off, each against its rival, because they conflict with each other and not with Luke.
+
+What this does not claim: that faith \emph{alone} is forced. Luke's sayings claim that faith sufficed, not that nothing else is a condition; and Rome's readings of Matthew, which say that salvation is not apart from works, can be held with them (\texttt{luke\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}rome\_\allowbreak{}on\_\allowbreak{}matthew}).
+
+{\small\begin{verbatim}
+theorem without_trent_luke_is_forced : Framework.grounded
+    jesusWordsWithoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x
+    ≠ WordsParty.trent) [WordsParty.luke7, WordsParty.luke18])
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \clearpage

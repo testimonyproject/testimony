@@ -8,6 +8,7 @@ import Testimony.Arguments.SolaFide.Johannine
 import Testimony.Arguments.SolaFide.Gospel
 import Testimony.Arguments.SolaFide.Definition
 import Testimony.Arguments.SolaFide.Hearings
+import Testimony.Arguments.SolaFide.JesusWords
 
 /-!
 # Arguments.SolaFide — justification by grace through faith, not works
@@ -226,6 +227,20 @@ both routes — but *faith alone* is still not: Campbell on πίστις Χρι�
 Sanders and Dunn on ἔργα νόμου, and Jervell on the yoke each still stand
 against it. The obstacle then is modern exegesis, not Rome.
 
+**Jesus' own words** (`JesusWords.lean`). *What does Jesus himself say?* Luke
+18:9–14 — the tax collector "went down to his house justified" — is his own
+teaching on justification and works, in Paul's word for it. Trent's case is
+consistent with every word of the parable, and with the tax collector bringing
+no meriting works. Trent never cites Luke 18; applied to it, its dispositions
+(Session VI, ch. 6) and canon 9 deny the step to "faith suffices". So Luke 18
+meets Trent where Luke 7:50 does, at Trent's definition. Matthew 7:21–23 and
+19:16–22 are read both ways, each reading cited and `disputed`, and neither text
+settles its question alone. Heard together, Jesus' words force nothing; heard
+without Trent, Luke's two sayings are forced (that faith sufficed, not that faith
+alone saves) and Matthew is not.
+This is a dispute of its own, kept apart from the one above for the reason the
+Johannine strand is.
+
 ## Where things are
 
 | File | Contents |
@@ -240,4 +255,5 @@ against it. The obstacle then is modern exegesis, not Rome.
 | `Gospel.lean` | Paul's gospel in Galatians against Trent's definition, and where they part |
 | `Definition.lean` | Paul's word, and the dilemma over what Trent's definition claims |
 | `Hearings.lean` | the dispute heard narrower: the Reformation alone, and without Trent |
+| `JesusWords.lean` | Luke 18, and both readings of Matthew 7 and 19: what Jesus' words decide |
 -/

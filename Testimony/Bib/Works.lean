@@ -962,6 +962,60 @@ commandments of men. -/
   , publisher := "USCCB Publishing"
   , edition := some "2nd edition" }
 
+/-- Calvin's *Harmony of the Evangelists*, volume 1, in Pringle's translation
+for the Calvin Translation Society: cited for Matthew 7:21–23, where "to do the
+will of the Father" includes "to believe in Christ" (367–368). Published without
+an ISBN; the public scan is given. -/
+@[bib_entry] def calvinHarmony1 : BibEntry := .book
+  { core :=
+      { key := "calvin-harmony-evangelists-1845"
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentary on a Harmony of the Evangelists, Matthew, Mark, and Luke"
+      , year := some { value := 1845 }
+      , identifiers :=
+          [ .url "https://archive.org/details/harmonyrevelatio01calvuoft"
+                 (some "2026-09-27") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "1"
+  , totalVolumes := some 3 }
+
+/-- Volume 2 of the same: cited for Luke 18:14, where "justified" means "to stand
+before God as if we were righteous" (206–207), and for Matthew 19:17, which
+Calvin reads as Christ answering on the law's own terms (393–394). -/
+@[bib_entry] def calvinHarmony2 : BibEntry := .book
+  { core :=
+      { key := "calvin-harmony-evangelists-2-1845"
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentary on a Harmony of the Evangelists, Matthew, Mark, and Luke"
+      , year := some { value := 1845 }
+      , identifiers :=
+          [ .url "https://archive.org/details/harmonyrevelatio02calvuoft"
+                 (some "2026-09-27") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "2"
+  , totalVolumes := some 3 }
+
+/-- John Paul II's encyclical on the Church's moral teaching, which opens with the
+rich young man (Matthew 19:16–22) and reads "keep the commandments" as the path
+of life: "God's commandments show man the path of life and they lead to it"
+(§12). The Catholic reading of Matthew 19:17, cited by section. -/
+@[bib_entry] def veritatisSplendor : BibEntry := .book
+  { core :=
+      { key := "john-paul-ii-veritatis-splendor-1993"
+      , contributors := { authors := [.person "John Paul" "II"] }
+      , title := "The Splendor of Truth"
+      , subtitle := some "Veritatis Splendor"
+      , year := some { value := 1993 }
+      , identifiers := [.isbn "9781555866792"] }
+  , publisher := "United States Catholic Conference"
+  , place := some "Washington, DC" }
+
 /-- Whitaker's *Disputation*, the Elizabethan Reformed answer to Bellarmine. Its
 sixth question of the first controversy argues, against unwritten tradition,
 that "the papists have no such unwritten tradition which can be certainly shewn
