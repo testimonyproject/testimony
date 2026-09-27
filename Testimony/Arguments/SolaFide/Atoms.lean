@@ -263,6 +263,77 @@ inductive Claim
   he has not kept it, may turn to faith. Calvin: "this reply of Christ is
   legal". -/
   | matthew19LawExposesInability
+  -- Baptism. Each sense of the word is its own atom — water, the Spirit, and
+  -- "fire" — so that no argument can pass from one to another unnoticed.
+  /-- **Water.** Christ commands baptism with water: "baptizing them in the name
+  of the Father and of the Son and of the Holy Spirit" (Matthew 28:19); "repent
+  and be baptized" (Acts 2:38). His ordinance, not a commandment of men. -/
+  | baptismCommandedByChrist
+  /-- Water baptism is the instrumental cause of justification: "the
+  instrumental cause is the sacrament of baptism, which is the sacrament of
+  faith" (Trent, Session VI, ch. 7). Trent's claim, as a claim about what
+  justifies. -/
+  | baptismIsInstrumentalCause
+  /-- The washing itself is necessary for salvation: desire for baptism may
+  justify, but whoever dies without the water is not saved — not the
+  catechumen who dies desiring it. Feeney's reading: "It is now: Baptism of
+  Water, or damnation!" -/
+  | waterItselfNecessaryForSalvation
+  /-- Justification "cannot be effected, without the laver of regeneration, or
+  the desire thereof" (Trent, Session VI, ch. 4). Trent's own qualification. -/
+  | baptismOrItsDesire
+  /-- Where only the desire for baptism is present, it "brings about the fruits
+  of Baptism without being a sacrament" (Catechism 1258): what justifies then
+  is not the washing. Rome's own teaching. -/
+  | desireBringsFruitsWithoutTheSacrament
+  /-- Luke 23:43 — to the thief on the cross, unbaptised, "Truly, I say to you,
+  today you will be with me in paradise". -/
+  | luke23_43ThiefPromisedParadise
+  /-- The thief's case bears on salvation under the Gospel, not only on the time
+  before baptism was commanded. The ground the argument from the thief needs:
+  held by Augustine, and by Aquinas quoting him; a reader who holds the washing
+  itself necessary for salvation must deny it. -/
+  | thiefBearsOnTheGospel
+  /-- **The Spirit.** Acts 8:14–17 — the Samaritans, baptized in Jesus' name,
+  receive the Spirit afterwards, when Peter and John lay hands on them. -/
+  | acts8WaterThenSpirit
+  /-- Acts 10:44–48 — the Spirit falls on Cornelius's household while Peter is
+  still speaking, and they are baptized afterwards. -/
+  | acts10SpiritThenWater
+  /-- God is not bound to water baptism: he gives the Spirit before it and after
+  it. "God has bound salvation to the sacrament of Baptism, but he himself is
+  not bound by his sacraments" (Catechism 1257). Common ground. -/
+  | godNotBoundToWater
+  /-- John 3:5 — "unless one is born of water and the Spirit, he cannot enter the
+  kingdom of God". -/
+  | john3_5WaterAndSpirit
+  /-- John 3:5 requires water baptism for entry into the kingdom. Trent: whoever
+  "wrests, to some sort of metaphor" these words is anathema (Session VII, On
+  Baptism, canon 2). -/
+  | john3_5RequiresWaterBaptism
+  /-- The water of John 3:5 is baptismal water. -/
+  | john3_5WaterIsBaptism
+  /-- The water of John 3:5 is natural birth — the waters of the womb — set
+  beside birth from the Spirit. -/
+  | john3_5WaterIsNaturalBirth
+  /-- The water of John 3:5 is the cleansing promised in Ezekiel 36:25–27 — clean
+  water sprinkled, and a new spirit put within — and not Christian baptism. -/
+  | john3_5WaterIsEzekielsCleansing
+  /-- The water of John 3:5 is the Spirit's own cleansing: "water and Spirit" name
+  one thing. Calvin: "this water is the Spirit who cleanseth us anew". -/
+  | john3_5WaterIsTheSpiritsCleansing
+  /-- **Fire.** Matthew 3:11 (Luke 3:16) — "he will baptize you with the Holy
+  Spirit and fire". What the fire is, the text does not say. -/
+  | matthew3_11SpiritAndFire
+  /-- The fire of Matthew 3:11 is judgment: the chaff burned with unquenchable
+  fire (3:12). -/
+  | fireIsJudgment
+  /-- The fire of Matthew 3:11 is purification: the Spirit takes away our
+  pollution as fire purifies gold. -/
+  | fireIsPurification
+  /-- The fire of Matthew 3:11 is Pentecost: "divided tongues as of fire" (Acts
+  2:3). -/
+  | fireIsPentecost
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

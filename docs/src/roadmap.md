@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**5 arguments**, carrying **148 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**5 arguments**, carrying **156 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -126,6 +126,14 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `matthew19_rome_reading_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.matthew19Way` | **Rome's reading of Matthew 19 is not forced.** A maximal defensible position holds Calvin's reading — a legal reply, exposing what the young man has not kept — and cannot hold … |
 | `matthew19_calvin_reading_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.matthew19Legal` | **Nor is Calvin's.** A maximal defensible position holds Rome's reading — the commandments the way to life — and cannot hold Calvin's with it. |
 | `without_trent_luke_is_forced` | `Framework.grounded jesusWordsWithoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ≠ WordsParty.trent) [WordsParty.luke7, WordsParty.luke18])` | **Without Trent, Luke's two sayings are forced, and Matthew is not.** Heard without Trent, nothing attacks "your faith has saved you" or the tax collector justified: faith's … |
+| `thiefCase_establishes` | `Establishes thiefCase` | **Grant the thief promised paradise unbaptised, and his case bearing on the Gospel, and it follows that the washing itself is not necessary for salvation.** |
+| `desireCase_establishes` | `Establishes desireCase` | **Grant Rome's own teaching that the desire brings the fruits of baptism, and the same follows.** |
+| `reformedOnTheDesire_establishes` | `Establishes reformedOnTheDesire` | **The Reformed answer delivers its conclusion**, given its step: the sacrament is not the instrument of justification. |
+| `actsCase_establishes` | `Establishes actsCase` | **Grant the two orders of Acts, and it follows that God is not bound to water.** |
+| `trent_grants_god_is_not_bound` | `Grants trentOnBaptism (p Claim.godNotBoundToWater)` | **Trent's instrumental cause is consistent with God not being bound to it.** Rome's world holds both: "God has bound salvation to the sacrament of Baptism, but he himself is not … |
+| `the_baptist_leaves_the_fire_open` | `Independent [p Claim.matthew3_11SpiritAndFire] (p Claim.fireIsJudgment)` | **The Baptist's words leave open whether the fire is judgment.** "He will baptize you with the Holy Spirit and fire" is held alike by Gregory Nazianzen, who reads the fire as the … |
+| `the_baptist_leaves_purification_open` | `Independent [p Claim.matthew3_11SpiritAndFire] (p Claim.fireIsPurification)` | **Nor whether it is purification.** |
+| `the_baptist_leaves_pentecost_open` | `Independent [p Claim.matthew3_11SpiritAndFire] (p Claim.fireIsPentecost)` | **Nor whether it is Pentecost**, as Cyril of Jerusalem reads it: "because the descent of the Holy Ghost was in fiery tongues". |
 
 ### [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 
@@ -277,6 +285,21 @@ reading stands off against its rival. Heard together, Jesus' words force
 nothing (`jesus_words_force_nothing`); heard without Trent, Luke's two sayings
 are forced (`without_trent_luke_is_forced`) — that faith sufficed, not faith
 alone — and Matthew is still not.
+
+**Baptism, with its senses kept apart** ([#122]). Trent makes water baptism the
+instrumental cause of justification, and chapter 4 qualifies it: "or the desire
+thereof". Water, the Spirit and "fire" are separate atoms, and the readings of
+the fire are encoded without a winner (`the_baptist_leaves_the_fire_open`). The
+dilemma `whatTrentsInstrumentalCauseClaims` finds that nobody on record holds
+the washing itself necessary for *justification* — even Feeney, who holds it
+necessary for salvation, grants that the desire justifies — and that Feeney's
+reading cannot be held with the thief read as Augustine reads him, nor with
+Rome's own teaching on the desire. Read in Trent's own words, the claim meets
+only the Reformed argument from the desire, at a step Aquinas contests. Of the
+readings of John 3:5's water (`whatJohnThreeFiveMeans`), only the baptismal one
+leaves Trent's step from the verse standing, and even then the step is
+disputed. Acts giving the Spirit before the water and after it is common ground
+(`trent_grants_god_is_not_bound`), not a Reformed win.
 
 **As a dispute, only Paul's word prevails; sola fide and Trent each stand, and
 neither is forced.** Weighed as a dispute — the three strands argued
