@@ -5,6 +5,19 @@ description: Use when adding a new argument to the Testimony library, encoding a
 
 # Encoding an argument
 
+## Who reads the result
+
+A theologian or a lay Christian, reading the generated page — not a logician
+reading the Lean. Every atom label, docstring, line name and result name ends up
+on that page, so write each for that reader:
+
+- an atom's docstring says what the claim is, in a sentence someone could
+  quote in a sermon or a seminar — the verse, the reader, the Greek word;
+- a result's name says what it establishes (`trent_on_pauls_word_indefensible`,
+  not `thm3`), and its docstring says what it claims *and what it does not*;
+- a result is worth adding only if it answers a question that reader asks. See
+  "Explaining a result" below for which certificate answers which question.
+
 ## Before writing any Lean
 
 Get these from the source literature, not from memory:
@@ -245,6 +258,23 @@ def reformedWithoutSozo : ArgumentPackage Claim :=
 theorem sozo_not_load_bearing : Establishes reformedWithoutSozo := by
   establish [solaFideDefs]
 ```
+
+## 5b — explaining a result
+
+Proving that a position holds, or that a dispute ties, answers *whether*. A
+reader asks *why*, and the library has a checked answer for each form of the
+question. Reach for them before writing prose that explains by hand.
+
+| The reader asks | Build | Module |
+|---|---|---|
+| Where exactly do these two part? | `Because P R` — the crux, and the core of `R` it breaks | `Logic.Because` |
+| What would an opponent have to give up? | `OpponentsBurden` — the minimal sets of readings | `Logic.Burden` |
+| What if the rival's claim means something else? | `Dilemma R` — every reading, each answered | `Logic.Dilemma` |
+| What does the dispute decide, and why? | a `Verdict` — the claim with its checked witness | `Logic.Verdict` |
+| What if only these parties were heard? | a hearing — `D.restrict` with its own verdicts | `Logic.Dispute` |
+
+The sola fide argument uses all five: `whereTrentPartsFromPaul`,
+`whatTrentsDefinitionClaims`, and the hearings in `SolaFide/Hearings.lean`.
 
 ## 6 — read the manifest
 

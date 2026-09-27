@@ -38,6 +38,25 @@ the verb he glosses so does not also denote renewal. Every link of each is rated
 `wellSupported` or better. Each contradicts one party, Trent read as a claim
 about Paul's word, and those are the attacks in the dispute the ratings decide.
 
+## How to read the verdicts
+
+A few words recur, and each has a plain meaning.
+
+- **Defeats.** One position contradicts another — denies one of its premises,
+  its conclusion, or a claim it derives on the way — and is not the weaker of
+  the two. Many defeats run both ways: a *standoff*.
+- **Weakest link.** A position is only as strong as its least-supported premise
+  or step. Ratings run from `disputed`, the lowest, through `plausible` and
+  `wellSupported`, to `consensus`. Denying a claim counts as `disputed`.
+- **Forced** (*prevails outright*, the *grounded* positions). Accepted however
+  every standoff is resolved: nothing attacks it that it cannot rule out.
+- **Can be defended** (*credulously accepted*). Held by some consistent position
+  that answers every attack on its members, itself or through an ally.
+- **Not forced.** Some consistent position leaves it out. Not forced is not
+  false: it means the dispute, as argued, cannot make a reader accept it.
+- **Cannot be defended.** No consistent position can hold it and answer its
+  attackers.
+
 ## Who defeats whom
 
 - **Trent and each Reformed strand defeat each other.** Paul's and Peter's
@@ -71,19 +90,23 @@ about Paul's word, and those are the attacks in the dispute the ratings decide.
   reply, from a definition rated `disputed`, fails against a case rated
   `wellSupported`. Romans 4, read for Paul's word, does the same, by exegesis
   rather than lexicography. Neither conflicts with anything else — in particular
-  not with Trent's definition left unread, which says nothing about the word.
+  not with Trent's case as Trent states it, whose definition, taken at face
+  value, says nothing about the word.
 
 ## What follows
 
 **Only Paul's word prevails outright** (`only_pauls_word_prevails`): the
 grounded extension is exactly its two routes, the lexical case and Romans 4 read
-for the word. Every other party is defeated by someone it does not answer. And
-**Trent read as a claim about Paul's word cannot be defended at all**
+for the word. Every other party is attacked by someone the dispute cannot rule
+out: some lose outright, and others stand off against a rival the dispute cannot
+choose between. And **Trent read as a claim about Paul's word cannot be defended
+at all**
 (`trent_on_pauls_word_indefensible`): both routes defeat it, and nothing
 answers either.
 
 **Beyond that, nothing wins on every resolution.** Luke's case, Paul's gospel
-and Trent — its definition left unread — are each defensible, and none is forced
+and Trent — as Trent states it, tied to neither reading — are each defensible,
+and none is forced
 (`dominical_case_defensible`, `dominical_case_not_forced`, `gospel_defensible`,
 `gospel_not_forced`, `trent_defensible`, `trent_not_forced`). Every attack
 between Trent and a Reformed party runs both ways, with every rating at the
@@ -101,12 +124,13 @@ Three things, each stated as a result or a limitation rather than left implicit.
 
 **What Trent's definition claims.** Trent's definition can be read two ways,
 and the dilemma `whatTrentsDefinitionClaims` (`Definition.lean`) answers both.
-Read as a claim about Paul's word, it falls to Paul's word, and in this dispute
-it cannot be defended. Read as a claim about what God does in justifying, the
+Read as a claim about Paul's word, it cannot be held with Paul's word, and in
+this dispute it cannot be defended. Read as a claim about what God does in justifying, the
 lexical case does not reach it, and what divides it from Paul is one step, that
 a verdict on a finished work excludes the renewal wrought in us
-(`whereTrentPartsFromPaul`) — rated `disputed`. Trent unread stands for that
-second reading here: the reading adds a commitment no party denies. So the
+(`whereTrentPartsFromPaul`) — rated `disputed`. Trent's case as Trent states it
+stands for that second reading here: the reading adds a commitment no party
+denies. So the
 dispute does not settle between Trent and the Reformed; it shows that Trent can
 keep its definition only as a claim about the reality and not about Paul's word,
 and it names the one step on which that claim turns.
@@ -930,12 +954,13 @@ def solaFideMap : ArgumentMap solaFideDispute where
 /-! ### What the dispute decides -/
 
 /-- How the dispute is settled as far as it can be, in one stage: nothing
-defeats either route to Paul's word, so both come first; and nothing joins
-them, because every
-other party is defeated by someone it does not answer — each Reformed strand by
-Trent, Trent by Paul, the apocalyptic reading by Paul, Sanders by the critics,
-the critics by Sanders, Jervell by Acts, Paul's gospel by Trent, and Trent read
-as a claim about Paul's word by Paul's word itself. -/
+defeats either route to Paul's word, so both come first; and nothing joins them,
+because every other party has an attacker that Paul's word does not rule out —
+each Reformed strand has Trent, Trent has Paul's case, the apocalyptic reading
+has Paul's case, Sanders has the critics and the critics Sanders, Jervell has
+Peter's case, Paul's gospel has Trent, and Trent read as a claim about Paul's
+word has Paul's word itself. Some of these are standoffs, not losses: Paul's
+gospel answers Trent as Trent answers it. -/
 def onlyPaulsWordUnanswered : Verdict solaFideDispute where
   finite := solaFideFinite
   claim := .groundedExactly [[.lexical, .romansOnTheWord]]
@@ -950,8 +975,9 @@ two routes: Paul's δικαιόω does not denote the renewal of the inward man,
 lexical case and by the exegesis of Romans 4. Nothing defeats either: the one
 party that contradicts them, Trent read as a claim about Paul's word, rests on a
 definition rated `disputed`, and its replies fail against cases whose every link
-is rated `wellSupported` or better. Everything else is defeated by someone it
-does not answer. -/
+is rated `wellSupported` or better. Nothing else is forced: every other party is
+attacked by someone the dispute cannot rule out, whether it loses outright or
+stands off against a rival the dispute cannot choose between. -/
 @[headline]
 theorem only_pauls_word_prevails :
     grounded solaFideDispute.defeats = {.lexical, .romansOnTheWord} :=
@@ -971,8 +997,8 @@ def trentsWordReadingAnswered : Verdict solaFideDispute where
 admissible set holds it: Paul's word defeats it, lexically and from Romans 4, and
 nothing answers either.
 This is the first horn of `whatTrentsDefinitionClaims`, weighed: if Trent's
-definition says what Paul's δικαιόω means, it falls, for a stated and cited
-reason, at a step rated `wellSupported`. -/
+definition says what Paul's δικαιόω means, it cannot be held, for a stated and
+cited reason, at a step rated `wellSupported`. -/
 @[headline]
 theorem trent_on_pauls_word_indefensible (S : Set Party)
     (hS : Admissible solaFideDispute.defeats S) : Party.trentOnPaulsWord ∉ S :=
@@ -1129,12 +1155,13 @@ def gospelAnsweredByTrent : Verdict solaFideDispute where
   claim := .notSkeptical .gospel .trent [.trent, .sanders, .jervell]
   checked := by decide +kernel
 
-/-- **Nor is it forced.** Trent, with its definition left unread, is still
-defensible, and Paul's gospel cannot be held with it. What decides between them
-is the step `whereTrentPartsFromPaul` names — that a verdict on a finished work
-excludes renewal — and it is rated `disputed`. The lexical case does not decide
-it: read as a claim about what God does, Trent's definition is not reached by
-anything Paul's word says (`lexical_case_does_not_reach_what_god_does`). -/
+/-- **Nor is it forced.** Trent, as Trent states it — tied to neither reading of
+its definition — is still defensible, and Paul's gospel cannot be held with it.
+What decides between them is the step `whereTrentPartsFromPaul` names — that a
+verdict on a finished work excludes renewal — and it is rated `disputed`. The
+lexical case does not decide it: read as a claim about what God does, Trent's
+definition is not reached by anything Paul's word says
+(`lexical_case_does_not_reach_what_god_does`). -/
 @[headline]
 theorem gospel_not_forced : ¬ SkepticallyAccepted solaFideDispute.defeats .gospel :=
   gospelAnsweredByTrent.holds

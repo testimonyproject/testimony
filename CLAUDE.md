@@ -7,6 +7,26 @@ establishes that a premise is true.
 
 Full docs: `docs/src/`. Read `docs/src/style-guide.md` before writing Lean.
 
+## Who it is for
+
+The product is read by theologians and lay Christians, not by logicians. Every
+piece of logical construction — a certificate, a hearing, a named burden, a
+result's name — is justified by a question such a reader asks, and is worth
+building only if the generated page answers it in words they can follow. So:
+
+- **Start from the reader's question**, not from what the machinery can prove:
+  "where exactly do Trent and Paul part?" is a `Because`; "what if the
+  definition means the word, not the reality?" is a `Dilemma`; "what did the
+  Reformation itself decide?" is a hearing.
+- **Every result says, in its docstring, what it claims and what it does not**,
+  in plain words, and names the texts, readers and ratings it turns on. The
+  docstring *is* the page.
+- **Report what the solver computes, whichever way it goes.** A verdict that
+  disappoints the argument's author is still the verdict, and the page says so.
+- **Never tune the encoding to reach a verdict**, and never drop a cited reader
+  because we judge him mistaken. Show where his reading breaks, or that it does
+  not; a rating moves only with a new, cited argument.
+
 ## Hard rules
 
 Stated as prohibitions on purpose. Each one is enforced by a command.
@@ -101,7 +121,7 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Bib/` | `Core` types, `Attr` registry attribute, `Works` entries, `Render`, `Registry` guards |
 | `Testimony/Provenance.lean` | `Reference`, `Source`, `Tradition`, `Confidence` |
 | `Testimony/Intertext.lean` | Typed relations between passages |
-| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels + `Independent`, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`, Horn-only, and `establish_by_search`/`refute_with`/`satisfied_by`/`leaves_open`/`granted`), `Framework` Dung semantics (grounded, preferred), `Dispute` packages as its nodes, defeat derived from entailment and cited confidence, `Horn` the decision procedure that computes a dispute's defeat table, `Solver` the verified solver that computes its verdicts, `Witness` the checked reasons they are stated with, `Verdict` a verdict and its witness as one declaration, rendered from the witness, `Support` one position lending another a premise, `Map` a dispute drawn with its defeats, supports and the attacks support implies, `Because` why one package stands against another, at a checked crux, `Burden` the minimal sets of readings an opponent must reject, complete |
+| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels + `Independent`, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`, Horn-only, and `establish_by_search`/`refute_with`/`satisfied_by`/`leaves_open`/`granted`), `Framework` Dung semantics (grounded, preferred), `Dispute` packages as its nodes, defeat derived from entailment and cited confidence, `Horn` the decision procedure that computes a dispute's defeat table, `Solver` the verified solver that computes its verdicts, `Witness` the checked reasons they are stated with, `Verdict` a verdict and its witness as one declaration, rendered from the witness, `Support` one position lending another a premise, `Map` a dispute drawn with its defeats, supports and the attacks support implies, `Because` why one package stands against another, at a checked crux, `Burden` the minimal sets of readings an opponent must reject, complete, `Dilemma` every reading of a rival's ambiguous claim, each answered |
 | `Testimony/Argument.lean` | Criteria, definitions, `Satisfies`, `People` |
 | `Testimony/Arguments/` | The worked arguments. Over ~500 lines an argument becomes a directory: `Atoms`, `Sources`, `Lines`, `Packages`, `Results`, with the root module reduced to imports and the module docstring |
 | `Testimony/Logic/Page` | `Item` — what a generated page is made of, before either rendering |
@@ -115,6 +135,21 @@ back to `sorryAx` — that produces a *successful build*.
 - `.claude/skills/adding-a-citation` — verifying and adding a bibliography entry
 - `.claude/skills/encoding-an-argument` — going from a commentary to a package
 - `.claude/skills/checking-the-build` — the four tiers and what each catches
+- `.claude/skills/supplementing-an-argument` — strengthening an existing
+  argument for a reader: finding the crux, researching a better-than-disputed
+  premise, auditing its rating, and reporting what the solver then computes
+
+## Agents
+
+For the research the supplementing workflow needs. Each returns findings, never
+edits; what enters the library is decided and encoded by the main session.
+
+- `.claude/agents/source-verifier.md` — checks identifiers and quotations
+  against public catalogues and texts
+- `.claude/agents/rating-auditor.md` — looks for a cited reader who grants a
+  step's grounds and denies its conclusion, and says what that makes its rating
+- `.claude/agents/reader-review.md` — reads a generated page as a theologian or
+  lay reader would, and flags what they could not follow
 
 ## Toolchain
 

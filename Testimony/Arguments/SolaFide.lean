@@ -7,6 +7,7 @@ import Testimony.Arguments.SolaFide.Dispute
 import Testimony.Arguments.SolaFide.Johannine
 import Testimony.Arguments.SolaFide.Gospel
 import Testimony.Arguments.SolaFide.Definition
+import Testimony.Arguments.SolaFide.Hearings
 
 /-!
 # Arguments.SolaFide — justification by grace through faith, not works
@@ -202,17 +203,28 @@ renewal wrought in us.
 
 **What Trent's definition claims** (`Definition.lean`). The definition can be
 read as a claim about Paul's word or about what God does in justifying, and a
-checked `Dilemma` answers both. Read as a claim about the word, it falls to the
-lexical case — the forensic sense, Paul's own words for renewal, and the rule of
-least meaning (Joos, Silva; Barr's "illegitimate totality transfer") — at a step
-rated `wellSupported`, and so does the Latin gloss Trent rests that reading on
-(Augustine: "being justified" is "being made righteous"). Read as a claim about
-what God does, nothing lexical or exegetical about the word reaches it, and it
-falls to Paul twice — to his gospel in Galatians and to Romans 4:5–8, "God
-justifies the ungodly" — each at a `disputed` step: Augustine grants Romans 4
-and reads it the other way. Romans 4 thus does two things: read for the word, it
-is a second route, rated `wellSupported`, to the lexical conclusion; read for
-the reality, it meets Trent where Galatians does, and no higher.
+checked `Dilemma` answers both. Read as a claim about the word, it cannot be held
+with the lexical case — the forensic sense, Paul's own words for renewal, and
+the rule of least meaning (Joos, Silva; Barr's "illegitimate totality
+transfer") — at a step rated `wellSupported`; nor can the step from the Latin
+gloss Trent rests that reading on (Augustine: "being justified" is "being made
+righteous") to what the Greek word denotes. Read as a claim about what God does,
+nothing about the word reaches it, and it conflicts with Paul twice — with his
+gospel in Galatians and with Romans 4:5–8, "God justifies the ungodly" — each
+at a `disputed` step: Augustine grants Romans 4 and reads it the other way.
+Romans 4 thus does two things: read for the word, it is a second route, rated
+`wellSupported`, to the lexical conclusion; read for the reality, it meets Trent
+where Galatians does, and no higher.
+
+**Heard narrower** (`Hearings.lean`). Two questions a reader asks, answered by
+hearing the same dispute with some parties set aside. *What did the Reformation
+itself decide?* Heard as Rome and the Reformers alone, only Paul's word is
+forced; Trent's definition, as a claim about what God does, and the Reformed
+strands tie. *Without Trent, would Scripture establish sola fide?* Four things
+are then forced — Luke's "faith suffices", Paul's gospel, and Paul's word by
+both routes — but *faith alone* is still not: Campbell on πίστις Χριστοῦ,
+Sanders and Dunn on ἔργα νόμου, and Jervell on the yoke each still stand
+against it. The obstacle then is modern exegesis, not Rome.
 
 ## Where things are
 
@@ -227,4 +239,5 @@ the reality, it meets Trent where Galatians does, and no higher.
 | `Johannine.lean` | the Johannine strand and Aquinas's rival reading, encoded alone |
 | `Gospel.lean` | Paul's gospel in Galatians against Trent's definition, and where they part |
 | `Definition.lean` | Paul's word, and the dilemma over what Trent's definition claims |
+| `Hearings.lean` | the dispute heard narrower: the Reformation alone, and without Trent |
 -/
