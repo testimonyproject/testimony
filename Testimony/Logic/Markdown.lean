@@ -280,12 +280,14 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
 
 /-- Every reading of a rival's claim, answered: each horn with what the claim
 commits the rival to, who reads it that way, and what happens to it against
-each position — the explanation where it falls, and a sentence where it is not
-reached. -/
+each position — the explanation where it cannot be held, and a sentence where
+it is not reached. -/
 def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
   let claim := inlineMath (Latex.formula order d.claim)
   let fate (f : Page.Fate α) : String := match f.falls with
-    | some e => "Against *" ++ escape f.against ++ "*, it falls.\n\n" ++ explanation order e
+    | some e =>
+      "Against *" ++ escape f.against ++ "*, it cannot be held. Where it breaks:\n\n" ++
+        explanation order e
     | none =>
       "Against *" ++ escape f.against ++ "*, it is not reached: *" ++ escape f.against ++
         "* holds, and can be held together with it.\n"

@@ -847,8 +847,11 @@ def whatTrentsDefinitionClaims : Dilemma tridentineCase where
 are the only ones; it is a dilemma over the readings it names, each cited. A
 reader with a third reading has a third horn to add, and the certificate will
 not build until that horn is answered too. Nor does it say which reading the
-rival means. What it shows is what each reading costs: where it falls, to what,
-at which crux, rated how — and where nothing reaches it. The rendering sets the
+rival means. What it shows is what each reading costs: where it cannot be held,
+against what, at which crux, rated how — and where nothing reaches it. A reading
+that cannot be held against a position at a `disputed` crux has not been
+refuted: whoever grants the crux rejects the reading, and whoever denies it need
+not. The rendering says "cannot be held", not "refuted", for that reason. The rendering sets the
 horns side by side, each with its explanations, so a reader can see when the
 choice of reading is a choice of which crux to defend.
 

@@ -428,7 +428,9 @@ each position. -/
 def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
   let claim := "\\(" ++ formula order d.claim ++ "\\)"
   let fate (f : Page.Fate α) : String := match f.falls with
-    | some e => "Against \\emph{" ++ escape f.against ++ "}, it falls.\n" ++ explanation order e
+    | some e =>
+      "Against \\emph{" ++ escape f.against ++ "}, it cannot be held. Where it breaks:\n" ++
+        explanation order e
     | none =>
       "Against \\emph{" ++ escape f.against ++ "}, it is not reached: \\emph{" ++
         escape f.against ++ "} holds, and can be held together with it.\n\n"

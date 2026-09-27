@@ -48,14 +48,20 @@ is counted to the ungodly is not a righteousness wrought in them. Trent can gran
 every word (`trent_grants_romans_four`), and Augustine reads the same verse the
 other way — God justifies the ungodly "that he may become a godly one". So the
 step is `disputed`, as the step from Galatians is. What Romans 4 adds is not
-strength but independence: on this reading, Paul meets Trent by two routes, and
-each must be answered on its own (`whereRomansFourMeetsWhatGodDoes`).
+strength but a second route: on this reading, Paul meets Trent from Galatians
+and from Romans 4, and each must be answered on its own
+(`whereRomansFourMeetsWhatGodDoes`). The two routes are not wholly independent:
+both rest on the forensic sense of the verb, so a reader who denies that sense
+denies both.
 
 `whatTrentsDefinitionClaims` is the dilemma, checked: each reading is fair — Trent
-read that way still has a model — and each is answered. The first falls to the
-lexical case at a step rated `wellSupported`, both as Trent states it and as it
-rests on the Latin gloss; the second is untouched by it and falls to Paul's
-gospel and to Romans 4, each at a step rated `disputed`. Which reading Trent means is
+read that way still has a model — and each is answered. The first cannot be held
+with Paul's word, three times over and each time at a step rated
+`wellSupported`: against the lexical case, as Trent states it and as it rests on
+the Latin gloss, and against Romans 4 read for the word. The second is untouched
+by anything about the word, and conflicts with Paul's gospel and with Romans 4,
+each time at a step rated `disputed` — so whoever grants that step rejects this
+reading, and whoever denies it need not. Which reading Trent means is
 not something the dilemma decides. What it shows is what each reading costs.
 
 `paulNamesRenewalOtherwise` is grounded in scripture alone — what the texts
@@ -152,8 +158,8 @@ def tridentineOnPaulsWord : ArgumentPackage Claim :=
 def tridentineOnWhatGodDoes : ArgumentPackage Claim :=
   tridentineCase.readAs (p .justificationIncludesSanctification) trentOnWhatGodDoes
 
-/-- Trent, read either way, still concludes what it concluded: a reading only
-adds. -/
+/-- Trent, read as a claim about Paul's word, still concludes what Trent
+concludes: a reading only adds premises. -/
 theorem tridentineOnPaulsWord_establishes : Establishes tridentineOnPaulsWord := by
   establish [solaFideDefs]
 
@@ -332,7 +338,8 @@ The crux is the step from Paul's gloss, with the forensic sense of the verb, to
 else. It is rated `disputed`, as the step from Galatians is — Augustine grants
 the same verses and reads them the other way, God justifying the ungodly "that
 he may become a godly one" — so on this reading of Trent, Paul meets it by two
-independent routes, each at a `disputed` step. -/
+routes, from Galatians and from Romans 4, each at a `disputed` step. The routes
+share one ground, the forensic sense of the verb. -/
 def whereRomansFourMeetsWhatGodDoes : Because romansFourCase tridentineOnWhatGodDoes :=
   Because.ofChecks countedExcludesRenewal
     (romansFourExegesisLine.grounds ++ [p .dikaioIsForensic, romansFourExegesisLine.step]) []
@@ -350,14 +357,25 @@ def whereRomansFourMeetsWhatGodDoes : Because romansFourCase tridentineOnWhatGod
 
 /-! ### The dilemma -/
 
-/-- **What Trent's definition claims, read both ways.** Read as a claim about
-Paul's word, it falls to the lexical case, at a step rated `wellSupported` — by
-the definition itself, and by the Latin gloss Trent rests that reading on. Read
-as a claim about what God does, the lexical case does not reach it, and it falls
-to Paul twice, each time at a step rated `disputed`: to his gospel in Galatians,
-at the step `whereTrentPartsFromPaul` names, and to Romans 4, at his reading of
-the ungodly justified. Each reading is fair: Trent read either way still has a
-model. -/
+/-- **What Trent's definition claims, read both ways.** The claim is Trent's
+definition — justification is the sanctification and renewal of the inward
+man.
+
+Read as a claim about what Paul's word means (δικαιόω denotes that renewal), it
+cannot be held with Paul's word, three times over, each at a step rated
+`wellSupported`: the lexical case against the definition as Trent states it; the
+lexical case against the Latin gloss the reading rests on ("being justified" as
+"being made righteous"); and Romans 4 read for the word.
+
+Read as a claim about what God does in justifying (he also renews), nothing
+about the word reaches it: neither the lexical case nor Romans 4 read for the
+word. It conflicts with Paul twice, each time at a step rated `disputed`: with
+his gospel in Galatians, at the step `whereTrentPartsFromPaul` names, and with
+Romans 4, at his reading of the ungodly justified. A reader who grants those
+steps rejects this reading; one who denies them, as Augustine and the *Joint
+Declaration* do, need not.
+
+Each reading is fair: Trent read either way still has a model. -/
 def whatTrentsDefinitionClaims : Dilemma tridentineCase where
   claim := p .justificationIncludesSanctification
   horns :=
