@@ -1114,6 +1114,157 @@ or damnation!" Catalogued without an ISBN; cited whole. -/
   , publisher := "St. Benedict Center"
   , place := some "Cambridge, MA" }
 
+/-! ### Spirit baptism -/
+
+/-- Dunn's re-examination of Spirit baptism, the standard scholarly case that it
+is part of conversion-initiation: "the chief element in conversion-initiation
+so that only those who had received the Spirit could be called Christians".
+Cited whole; the book is not public, and the catalogue does not confirm the
+1970 imprint. -/
+@[bib_entry] def dunnBaptismInTheHolySpirit : BibEntry := .book
+  { core :=
+      { key := "dunn-baptism-holy-spirit-1970"
+      , contributors := { authors := [.person "James D. G." "Dunn"] }
+      , title := "Baptism in the Holy Spirit"
+      , subtitle := some
+          ("A Re-examination of the New Testament Teaching on the Gift of the Spirit " ++
+           "in Relation to Pentecostalism Today")
+      , year := some { value := 1970 }
+      , identifiers := [.isbn "9780334000693"] }
+  , publisher := "SCM Press"
+  , place := some "London" }
+
+/-- Stott's pastoral case that Spirit baptism is given to every believer at
+conversion, and that God's purpose is to be sought in Scripture's didactic
+rather than its historical parts. Cited whole. -/
+@[bib_entry] def stottBaptismAndFullness : BibEntry := .book
+  { core :=
+      { key := "stott-baptism-fullness-1975"
+      , contributors := { authors := [.person "John R. W." "Stott"] }
+      , title := "Baptism and Fullness"
+      , subtitle := some "The Work of the Holy Spirit Today"
+      , year := some { value := 1975 }
+      , identifiers := [.isbn "9780851103877"] }
+  , publisher := "Inter-Varsity Press"
+  , place := some "London"
+  , edition := some "2nd edition" }
+
+/-- Stronstad's case that Luke writes as a theologian whose narratives teach, and
+that the gift of the Spirit in Luke-Acts is charismatic, for service. Cited
+whole. -/
+@[bib_entry] def stronstadCharismaticTheology : BibEntry := .book
+  { core :=
+      { key := "stronstad-charismatic-theology-1984"
+      , contributors := { authors := [.person "Roger" "Stronstad"] }
+      , title := "The Charismatic Theology of St. Luke"
+      , year := some { value := 1984 }
+      , identifiers := [.isbn "9780913573112"] }
+  , publisher := "Hendrickson"
+  , place := some "Peabody, MA" }
+
+/-- Menzies' monograph on the Spirit in Luke-Acts: the Pentecostal gift as
+prophetic empowerment. Menzies dates it 1994; the catalogue, May 1995. -/
+@[bib_entry] def menziesEmpoweredForWitness : BibEntry := .book
+  { core :=
+      { key := "menzies-empowered-witness-1994"
+      , contributors := { authors := [.person "Robert P." "Menzies"] }
+      , title := "Empowered for Witness"
+      , subtitle := some "The Spirit in Luke-Acts"
+      , year := some { value := 1994 }
+      , identifiers := [.isbn "9781850757214"]
+      , note := some "The catalogue gives May 1995 for this printing." }
+  , publisher := "Sheffield Academic Press"
+  , place := some "Sheffield"
+  , series := some "Journal of Pentecostal Theology Supplement Series"
+  , seriesNumber := some "6" }
+
+/-- Menzies' short statement of the Pentecostal reading: Luke's baptism in the
+Spirit "must be distinguished from the gift of the Spirit – and even the baptism
+in the Spirit in 1 Corinthians 12:13 – that Paul so clearly associates with
+conversion and regeneration". -/
+@[bib_entry] def menziesLukesUnderstanding : BibEntry := .webPage
+  { core :=
+      { key := "menzies-lukes-understanding-2017"
+      , contributors := { authors := [.person "Robert" "Menzies"] }
+      , title := "Luke's Understanding of the Baptism in the Holy Spirit"
+      , subtitle := some "A Pentecostal Perspective"
+      , year := some { value := 2017 }
+      , identifiers := [.url "https://pentecost.asia/articles/863/" (some "2026-09-27")] }
+  , site := some "Pentecost Asia" }
+
+/-- The Assemblies of God position paper, adopted by the General Presbytery in
+August 2010. It reads 1 Corinthians 12:13 as baptism *by* the Spirit into the
+body, "the Holy Spirit is the instrument", and summarises: "At conversion, the
+Spirit baptizes into Christ/the body of Christ; in a subsequent and distinct
+experience, Christ will baptize in the Holy Spirit." Its appendix reprints
+Fundamental Truths 7–8. -/
+@[bib_entry] def agBaptismPositionPaper : BibEntry := .webPage
+  { core :=
+      { key := "assemblies-of-god-baptism-holy-spirit-2010"
+      , contributors := { authors := [.corporate "General Presbytery of the Assemblies of God"] }
+      , title := "Baptism in the Holy Spirit"
+      , subtitle := some "Position Paper"
+      , year := some { value := 2010 }
+      , identifiers :=
+          [ .url ("https://ag.org/-/media/AGORG/Beliefs/Position-Papers/" ++
+                  "PP_Baptism_In_the_Holy_Spirit_GPM_08_2010.pdf") (some "2026-09-27") ] }
+  , site := some "Assemblies of God" }
+
+/-- Wesley's letters in Telford's standard edition. Cited for the letter to Joseph
+Benson of 28 December 1770: the "second change" is real, but to call it
+"receiving the Holy Ghost" is "not scriptural and not quite proper; for they all
+'received the Holy Ghost' when they were justified". Published without an
+ISBN. -/
+@[bib_entry] def wesleyLetters : BibEntry := .book
+  { core :=
+      { key := "wesley-letters-1931"
+      , contributors :=
+          { authors := [.person "John" "Wesley"], editors := [.person "John" "Telford"] }
+      , title := "The Letters of the Rev. John Wesley"
+      , year := some { value := 1931 }
+      , identifiers :=
+          [ .url ("https://wesley.nnu.edu/john-wesley/the-letters-of-john-wesley/" ++
+                  "wesleys-letters-1770/") (some "2026-09-27") ]
+      , note := some "Standard edition; the 1770 letters are in volume 5." }
+  , publisher := "Epworth Press"
+  , place := some "London" }
+
+/-- The Church of the Nazarene's *Manual*, 2023. Its Articles of Faith, X ¶10,
+hold the holiness reading as the denomination's creed: entire sanctification "is
+wrought by the baptism with or infilling of the Holy Spirit". Read in the
+published PDF (pp. 30–31); the ISBNs printed in it are not in the catalogue, and
+the one that is cannot be tied to this printing, so none is given. -/
+@[bib_entry] def nazareneManual : BibEntry := .book
+  { core :=
+      { key := "church-of-the-nazarene-manual-2023"
+      , contributors := { authors := [.corporate "Church of the Nazarene"] }
+      , title := "Manual 2023"
+      , subtitle := some "History, Constitution, Government, Sacraments and Rituals"
+      , year := some { value := 2023 }
+      , note := some "Published by the authority of the 30th General Assembly, 2023." }
+  , publisher := "Nazarene Publishing House"
+  , place := some "Kansas City, MO" }
+
+/-- The Nazarene Theological Seminary faculty on Article X: entire sanctification
+kept, but "our scholars no longer view the American holiness hermeneutic of the
+'baptism of the Spirit' as exegetically tenable". -/
+@[bib_entry] def nazareneWhitePaper : BibEntry := .article
+  { core :=
+      { key := "bassett-white-paper-article-x-2010"
+      , contributors :=
+          { authors :=
+              [ .person "Paul M." "Bassett", .person "Alex R. G." "Deasley"
+              , .person "Roger L." "Hahn", .person "Douglas S." "Hardy"
+              , .person "K. Steve" "McCormick", .person "Thomas A." "Noble" ] }
+      , title := "A White Paper on Article X"
+      , year := some { value := 2010 }
+      , identifiers :=
+          [ .url ("https://didache.nazarene.org/index.php/volume-10-1/" ++
+                  "812-didache-10-1-the-white-paper/file") (some "2026-09-27") ] }
+  , journal := "Didache: Faithful Teaching"
+  , volume := some "10"
+  , issue := some "1" }
+
 /-- Whitaker's *Disputation*, the Elizabethan Reformed answer to Bellarmine. Its
 sixth question of the first controversy argues, against unwritten tradition,
 that "the papists have no such unwritten tradition which can be certainly shewn

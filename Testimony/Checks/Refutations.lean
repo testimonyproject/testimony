@@ -3,6 +3,7 @@ import Testimony.Arguments.BornOfAVirgin
 import Testimony.Arguments.CanonicalWitness
 import Testimony.Arguments.SolaFide
 import Testimony.Arguments.SolaScriptura
+import Testimony.Arguments.SpiritBaptism
 
 /-!
 # Testimony.Checks.Refutations — `establish` proves nothing the library refutes
@@ -42,7 +43,8 @@ def unfoldSets : List (Name × Name) :=
   , (`Testimony.Arguments.BornOfAVirgin, `bornOfAVirginDefs)
   , (`Testimony.Arguments.CanonicalWitness, `canonicalWitnessDefs)
   , (`Testimony.Arguments.SolaFide, `solaFideDefs)
-  , (`Testimony.Arguments.SolaScriptura, `solaScripturaDefs) ]
+  , (`Testimony.Arguments.SolaScriptura, `solaScripturaDefs)
+  , (`Testimony.Arguments.SpiritBaptism, `spiritBaptismDefs) ]
 
 /-- The message `horn_close` fails with; the check requires it verbatim. -/
 def notHorn : String := "establish: the premises are not Horn"
