@@ -7663,6 +7663,46 @@ So Jesus' words do not decide the Reformation dispute on their own. Heard
 without Trent, Luke's two sayings stand; Matthew's are argued in both
 directions, and the ratings cannot choose.
 
+### Where it turns: two conceptions of justification
+
+Every standoff between Luke and Trent here runs through Trent's definition, not
+through a reading of Luke (`whyLukeEighteenStandsAgainstTrent`,
+`whyTheDominicalCaseStandsAgainstTrent`). The question is what *justification*
+is. For the Reformers it is a
+verdict: God declares the ungodly righteous, as a judge acquits. For Trent it is
+"not remission of sins merely, but also the sanctification and renewal of the
+inward man" (Session VI, ch. 7): the justified are not only reputed just but made
+just. Heard without Trent, Luke 7:50 and Luke 18 are forced
+(`without_trent_luke_is_forced`). So the parable does not divide them; the
+definition does.
+
+What can be shown against the definition without settling any doctrine first —
+from how words mean in their context — is checked in `whatTrentsDefinitionClaims`,
+and it depends on what the definition is taken to claim.
+
+- **As a claim about the word** — that δικαιόω, Paul's verb and the one behind
+  δεδικαιωμένος at Luke 18:14, *means* renewal in Paul — it fails, three times,
+  each at a step rated `wellSupported`. The verb is forensic; Paul names renewal
+  with other words and sets them beside it (Titus 3:5–7; 1 Corinthians 6:11); a
+  word contributes the least meaning its context requires; and the Latin gloss
+  Trent read Paul in,
+  *iustificare* as "to make righteous", does not fix what the Greek word
+  denotes. Luke 18 agrees: no reader cited here takes "justified" at 18:14 as the
+  renewal itself.
+- **As a claim about what God does** — that when he justifies he also renews,
+  pardon and renewal given together — nothing about the word reaches it. Trent
+  read so can be held with every premise of the lexical case
+  (`lexical_case_does_not_reach_what_god_does`), and it meets Paul only at steps
+  rated `disputed`.
+
+What this does not claim: that logic alone refutes Rome. Trent's case has a model
+on either reading, so no argument from consistency can touch it. What the check
+shows is narrower, and it is the honest limit of a contextual argument: the
+evidence of the word settles what the *word* means, and Rome cannot rest its
+definition on the word; whether God's justifying act also includes renewal is a
+claim the word's meaning leaves open, and there the dispute stands where Paul's
+own case leaves it.
+
 This dispute is kept apart from the main sola fide dispute, as the Johannine
 strand is. Adding its parties there would change results that module states
 about its own twelve parties, and that is a change of its own to make and to
@@ -8135,7 +8175,9 @@ So Luke 18 meets Trent exactly where Luke 7:50 does
 Trent's case is consistent with, but over what justification is. The
 dispositions of chapter 6 are why the step is rated `disputed`; they are not
 encoded as a premise of Trent's case, so the conflict found here runs through
-Trent's definition in chapter 7, which is.
+Trent's definition in chapter 7, which is. What can be shown against that
+definition from the meaning of the word, and what cannot, is checked in
+`whatTrentsDefinitionClaims`.
 
 **Why *Luke 18:14: "this man went down to his house justified"* stands against *Trent, against 'not by works'*.**
 
