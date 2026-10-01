@@ -76,43 +76,55 @@ directions, and the ratings cannot choose.
 
 ## Where it turns: two conceptions of justification
 
-Every standoff between Luke and Trent here runs through Trent's definition, not
-through a reading of Luke (`whyLukeEighteenStandsAgainstTrent`,
-`whyTheDominicalCaseStandsAgainstTrent`). The question is what *justification*
-is. For the Reformers it is a
-verdict: God declares the ungodly righteous, as a judge acquits. For Trent it is
-"not remission of sins merely, but also the sanctification and renewal of the
-inward man" (Session VI, ch. 7): the justified are not only reputed just but made
-just. Heard without Trent, Luke 7:50 and Luke 18 are forced
-(`without_trent_luke_is_forced`). So the parable does not divide them; the
-definition does.
+Every standoff between Luke and Trent here sets Luke's own step — from the
+saying to "faith sufficed", rated `disputed` — against Trent's definition of
+justification, with the step from it to canon 9. Nothing else in Trent's case
+meets Luke (`whyLukeEighteenStandsAgainstTrent`,
+`whyTheDominicalCaseStandsAgainstTrent`). Trent grants every word of the parable
+(`trent_grants_the_parable`), and Trent is the only party that meets Luke: heard
+without Trent, Luke 7:50 and Luke 18 are forced — that faith sufficed, not that
+faith alone saves (`without_trent_luke_is_forced`). The words do not divide
+them; what justification is does.
 
-What can be shown against the definition without settling any doctrine first —
-from how words mean in their context — is checked in `whatTrentsDefinitionClaims`,
-and it depends on what the definition is taken to claim.
+For the Reformers justification is a verdict: God declares the ungodly
+righteous, as a judge acquits. For Trent it is "not remission of sins merely,
+but also the sanctification and renewal of the inward man" (Session VI, ch. 7):
+the justified are not only reputed just but made just.
 
-- **As a claim about the word** — that δικαιόω, Paul's verb and the one behind
-  δεδικαιωμένος at Luke 18:14, *means* renewal in Paul — it fails, three times,
-  each at a step rated `wellSupported`. The verb is forensic; Paul names renewal
-  with other words and sets them beside it (Titus 3:5–7; 1 Corinthians 6:11); a
-  word contributes the least meaning its context requires; and the Latin gloss
-  Trent read Paul in,
-  *iustificare* as "to make righteous", does not fix what the Greek word
-  denotes. Luke 18 agrees: no reader cited here takes "justified" at 18:14 as the
-  renewal itself.
+What can be shown against that definition from how words mean in their context
+is checked in `whatTrentsDefinitionClaims`, and it depends on what the definition
+is taken to claim.
+
+- **As a claim about the word** — that δικαιόω, Paul's verb, *means* renewal in
+  Paul — it fails three times, each at a step rated `wellSupported`: against the
+  lexical case (the verb is forensic; Paul names renewal with other words and
+  sets them beside it, Titus 3:5–7 and 1 Corinthians 6:11; a word contributes the
+  least meaning its context requires); against the Latin gloss the reading rests
+  on, since *iustificare* as "to make righteous" does not fix what the Greek word
+  denotes; and against Romans 4 read for the word. Weighed in the main dispute,
+  Trent read so cannot be defended (`trent_on_pauls_word_indefensible`). Luke 18
+  corroborates without adding a fourth break: no reader cited here takes
+  "justified" at 18:14 as the renewal itself.
 - **As a claim about what God does** — that when he justifies he also renews,
   pardon and renewal given together — nothing about the word reaches it. Trent
   read so can be held with every premise of the lexical case
-  (`lexical_case_does_not_reach_what_god_does`), and it meets Paul only at steps
-  rated `disputed`.
+  (`lexical_case_does_not_reach_what_god_does`). It meets Paul (Galatians,
+  Romans 4) and Luke only at steps rated `disputed`; a reader who grants those
+  steps rejects it, and one who denies them, as Augustine and the *Joint
+  Declaration* do, need not.
 
-What this does not claim: that logic alone refutes Rome. Trent's case has a model
-on either reading, so no argument from consistency can touch it. What the check
-shows is narrower, and it is the honest limit of a contextual argument: the
-evidence of the word settles what the *word* means, and Rome cannot rest its
-definition on the word; whether God's justifying act also includes renewal is a
-claim the word's meaning leaves open, and there the dispute stands where Paul's
-own case leaves it.
+Which reading Trent means is itself rated `disputed`, and the check does not
+decide it. In this dispute Trent is heard as it states its definition, tied to
+neither reading, so the check changes no verdict above.
+
+What this does not claim: that logic alone refutes Rome. Trent's case holds
+together on either reading; neither reading refutes itself. What the check shows
+is narrower, and it is the honest limit of a contextual argument: the evidence
+of the word, rated `wellSupported`, tells against reading the definition as what
+the word means; whether God's justifying act also includes renewal is a claim
+the word's meaning leaves open, and there the dispute stands as the main
+dispute leaves it — a tie at the `disputed` step `whereTrentPartsFromPaul` names
+(`gospel_not_forced`).
 
 This dispute is kept apart from the main sola fide dispute, as the Johannine
 strand is. Adding its parties there would change results that module states
@@ -389,9 +401,9 @@ else in Trent's case does.
 So Luke 18 meets Trent exactly where Luke 7:50 does
 (`whyTheDominicalCaseStandsAgainstTrent`): not over what the parable says, which
 Trent's case is consistent with, but over what justification is. The
-dispositions of chapter 6 are why the step is rated `disputed`; they are not
-encoded as a premise of Trent's case, so the conflict found here runs through
-Trent's definition in chapter 7, which is. What can be shown against that
+dispositions of chapter 6 are why the step is rated `disputed`, but they are not
+a premise of Trent's case here; what the check breaks is Trent's definition in
+chapter 7, with the step from it to canon 9. What can be shown against that
 definition from the meaning of the word, and what cannot, is checked in
 `whatTrentsDefinitionClaims`. -/
 def whyLukeEighteenStandsAgainstTrent : Because luke18Case tridentineCase :=
