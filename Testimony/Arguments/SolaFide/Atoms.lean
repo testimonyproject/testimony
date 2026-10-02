@@ -221,6 +221,48 @@ inductive Claim
   added to it completes it, and to add a ground is to preach another gospel.
   **Paul's gospel, as Galatians reads it.** -/
   | christsWorkIsTheWholeGround
+  /-- Luke 18:9–14 — the Pharisee lists his fasting and his tithes; the tax
+  collector stands far off, beats his breast, and prays "God, be merciful to me,
+  a sinner"; and Jesus says that he, "rather than the other", went down to his
+  house justified. -/
+  | luke18_9_14TaxCollectorJustified
+  /-- δεδικαιωμένος at Luke 18:14 is God's verdict: the tax collector goes home
+  accepted as righteous before God. What δικαιόω means here, in Jesus' own
+  parable — not a claim about what else God gives with the verdict. -/
+  | luke18JustifiedIsVerdict
+  /-- The tax collector brings no works that merit, only a humble and contrite
+  plea for mercy; the Pharisee's works (18:11–12) do not justify him. His humility is in
+  the text, and this does not deny it: it says what he brings, not what his
+  humility is. -/
+  | taxCollectorBringsNoWorks
+  /-- Matthew 7:21–23 — not everyone who says "Lord, Lord" enters the kingdom,
+  but the one who does the will of the Father; to those who prophesied and did
+  mighty works in his name, "I never knew you". The criterion at the judgment is
+  doing the Father's will, not profession or mighty works. The text names no
+  faith. -/
+  | matthew7_21_23DoingTheWill
+  /-- **The Catholic reading of Matthew 7:21–23**: the passage condemns
+  professing without obeying, and doing the Father's will is a condition of
+  entering the kingdom in its own right, not only the fruit of faith. -/
+  | matthew7ObedienceIsAGround
+  /-- **The Reformed reading of Matthew 7:21–23**: to do the Father's will
+  includes believing in Christ, and "I never knew you" means he never counted
+  them his own — no union with him by faith, whatever they did in his name. -/
+  | matthew7DoingIncludesBelieving
+  /-- Matthew 19:16–22 — asked what good deed he must do to have eternal life,
+  Jesus tells the young man "If you would enter life, keep the commandments";
+  told to sell what he has and follow, he goes away sorrowful. Trent quotes
+  19:17 (Session VI, ch. 7). -/
+  | matthew19_17KeepTheCommandments
+  /-- **The Catholic reading of Matthew 19:17**: keeping the commandments is the
+  way to life — "God's commandments show man the path of life and they lead to
+  it" (*Veritatis Splendor* 12) — possible only by grace. -/
+  | matthew19CommandmentsAreTheWayToLife
+  /-- **The Reformed reading of Matthew 19:17**: Christ answers on the law's own
+  terms, what the righteousness of works requires, so that the young man, seeing
+  he has not kept it, may turn to faith. Calvin: "this reply of Christ is
+  legal". -/
+  | matthew19LawExposesInability
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

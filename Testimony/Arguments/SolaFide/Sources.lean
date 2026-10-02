@@ -49,6 +49,58 @@ def trentOnMerit : Source :=
   , tradition := .romanCatholic
   , confidence := .consensus }
 
+/-- **The step from Luke 18 is contested, by Trent applied to it.** Trent never
+cites Luke 18, and grants that nothing before justification, "whether faith or
+works", merits it (ch. 8). But it requires the dispositions it lists — fear,
+hope, beginning to love God, penitence (ch. 6) — and anathematises whoever says
+"nothing else is required to co-operate" (canon 9). Read by those chapters, the
+tax collector's humility and contrition are dispositions his justification
+required, not a plea that sufficed alone. So the step from the plea to "faith
+suffices" is `disputed`. -/
+def trentAgainstThePleaAlone : Source :=
+  { primary := .work waterworthTrent (.page 45)
+  , supporting := [.work waterworthTrent (.pages 33 34)]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- **The Catholic step from Matthew 7:21 is contested, by Calvin.** He grants
+the text, and that entry requires doing the Father's will, and denies that the
+doing is more than the fruit of faith: "These words, therefore, do not exclude faith, but presuppose
+it as the principle from which other good works flow." -/
+def calvinAgainstObedienceAsGround : Source :=
+  { primary := .work calvinHarmony1 (.pages 367 368)
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **The Reformed step from Matthew 7:21 is contested, by the Catechism.** It
+grants the text and reads it the other way: "one enters the kingdom of heaven
+not by speaking words, but by doing 'the will of my Father in heaven'" (§2826). -/
+def catechismAgainstDoingAsBelieving : Source :=
+  { primary := .work catechismCatholicChurch (.sectionRef "2826")
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- **The Catholic step from Matthew 19:17 is contested, by Calvin.** He grants
+the text — "we have no right, therefore, to deny that the keeping of the law is
+righteousness" — and denies that it is the way to life for any sinner: "this
+passage was erroneously interpreted by some of the ancients, whom the Papists
+have followed, as if Christ taught that, by keeping the law, we may merit
+eternal life." Calvin answers the claim to merit; the reading encoded here
+claims less — the way made possible by grace — and he denies that too, since
+for him no sinner keeps the law. -/
+def calvinAgainstTheCommandmentsAsTheWay : Source :=
+  { primary := .work calvinHarmony2 (.page 394)
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **The Reformed step from Matthew 19:17 is contested, by John Paul II.** He
+grants the text and reads it as the real path: Jesus "proposes them to us as the
+way and condition of salvation" (*Veritatis Splendor* 12). -/
+def veritatisSplendorAgainstTheLegalReply : Source :=
+  { primary := .work veritatisSplendor (.sectionRef "12")
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
 /-- Where Melanchthon reads Luke 7:47 by 7:50, in the *Apology of the Augsburg
 Confession* (1531): the part of Article IV on love and the fulfilling of the
 law. The *Concordia Triglotta* numbers it Article III, 31–34; the reference is
@@ -603,6 +655,105 @@ def baseCite : Claim → AtomMeta
             [ .scripture [{ ref := .verse ⟨.galatians, 2, 21⟩ }]
             , .work mooGalatians (.adLoc ⟨.galatians, 2, 21⟩)
             , .work anf1 (.sectionRef "Epistle to Diognetus 9") ]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .luke18_9_14TaxCollectorJustified =>
+    { label :=
+        "Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, " ++
+        "rather than the Pharisee who listed his works"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range luke18_9to14 }]
+        , supporting := [.work calvinHarmony2 (.pages 201 207)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .luke18JustifiedIsVerdict =>
+    { label := "δεδικαιωμένος at Luke 18:14 is God's verdict: accepted as righteous before God"
+    , kind := .linguistic
+      -- `wellSupported`: no reader was found who reads the word at 18:14 as
+      -- an inner transformation. Calvin: "to stand before God as if we were
+      -- righteous". Augustine and Trent's chapter 7 speak of the reality of
+      -- justification, or of another text, not of this word here.
+    , source :=
+        { primary := .work calvinHarmony2 (.pages 206 207)
+        , supporting := [.scripture [{ ref := .verse luke18_14 }]]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .taxCollectorBringsNoWorks =>
+    { label :=
+        "The tax collector brings no works that merit, only a humble and contrite " ++
+        "plea for mercy"
+    , kind := .interpretive
+      -- `consensus`: granted on every side. Trent: none of the things that
+      -- precede justification, "whether faith or works", merit it (ch. 8).
+    , source :=
+        { primary := .scripture [{ ref := .range luke18_9to14 }]
+        , supporting :=
+            [ .work calvinHarmony2 (.pages 206 207)
+            , .work waterworthTrent (.page 36) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .matthew7_21_23DoingTheWill =>
+    { label :=
+        "Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, " ++
+        "not profession or mighty works"
+    , kind := .textual
+      -- `wellSupported`: what the text says, granted by Calvin and by the
+      -- Catechism alike. It names no faith, and says nothing of what the doing
+      -- is — a ground, or a fruit.
+    , source :=
+        { primary := .scripture [{ ref := .range matthew7_21to23 }]
+        , supporting :=
+            [ .work calvinHarmony1 (.pages 367 368)
+            , .work catechismCatholicChurch (.sectionRef "2826") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .matthew7ObedienceIsAGround =>
+    { label :=
+        "In Matthew 7:21–23, doing the Father's will is a condition of entering the " ++
+        "kingdom in its own right, not only the fruit of faith"
+    , kind := .interpretive
+    , source :=
+        { primary := .work catechismCatholicChurch (.sectionRef "2826")
+        , supporting := [.work catechismCatholicChurch (.sectionRef "1821")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .matthew7DoingIncludesBelieving =>
+    { label :=
+        "In Matthew 7:21–23, doing the Father's will includes believing in Christ, " ++
+        "and \"I never knew you\" means no union with him by faith"
+    , kind := .interpretive
+    , source :=
+        { primary := .work calvinHarmony1 (.pages 367 368)
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .matthew19_17KeepTheCommandments =>
+    { label := "Matthew 19:17 — \"If you would enter life, keep the commandments\""
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range matthew19_16to22 }]
+        , supporting := [.work waterworthTrent (.page 35)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .matthew19CommandmentsAreTheWayToLife =>
+    { label :=
+        "In Matthew 19:17, keeping the commandments is the way to life, made " ++
+        "possible by grace"
+    , kind := .interpretive
+    , source :=
+        { primary := .work veritatisSplendor (.sectionRef "12")
+        , supporting :=
+            [ .work catechismCatholicChurch (.sectionRef "2052–2053")
+            , .work waterworthTrent (.page 35) ]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .matthew19LawExposesInability =>
+    { label :=
+        "In Matthew 19:17, Christ answers on the law's own terms, so that the young " ++
+        "man may see he has not kept it and turn to faith"
+    , kind := .interpretive
+    , source :=
+        { primary := .work calvinHarmony2 (.pages 393 394)
         , tradition := .reformedProtestant
         , confidence := .disputed } }
   | .paulNamesRenewalOtherwise =>

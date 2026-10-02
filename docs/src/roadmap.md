@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**5 arguments**, carrying **136 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**5 arguments**, carrying **148 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -114,6 +114,18 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `without_trent_luke_and_pauls_gospel_prevail` | `Framework.grounded withoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.trent, Party.trentOnPaulsWord]) [Party.dominical, Party.gospel, Party.lexical, Party.romansOnTheWord])` | **Without Trent, four things are forced.** Luke 7:50 — faith suffices; Paul's gospel — justification is not the renewal of the inward man; and Paul's word, by both routes — … |
 | `sola_fide_from_paul_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.pauline, ⋯⟩` | **Without Trent, sola fide from Paul is still not forced.** A maximal defensible position holds Campbell's apocalyptic reading — πίστις Χριστοῦ as Christ's own faithfulness — and … |
 | `sola_fide_from_peter_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, ⋯⟩` | **Nor from Peter.** A maximal defensible position holds Jervell's reading of Acts 15 — the yoke is not the law as a condition of salvation — and cannot hold Peter's case with it. |
+| `luke18Case_establishes` | `Establishes luke18Case` | **Luke 18 delivers faith's sufficiency**, given its step. |
+| `trent_grants_the_parable` | `Grants tridentineCase (⋀[p Claim.luke18_9_14TaxCollectorJustified, p Claim.luke18JustifiedIsVerdict, p Claim.taxCollectorBringsNoWorks])` | **Trent's case is consistent with every word of the parable.** Trent never cites Luke 18, but nothing in its decree denies that the tax collector pleaded for mercy, brought no … |
+| `matthew7_leaves_the_ground_open` | `Independent [p Claim.matthew7_21_23DoingTheWill] (p Claim.matthew7ObedienceIsAGround)` | **Matthew 7:21–23 leaves open whether obedience is a condition of entry in its own right.** Its words — the criterion is doing the Father's will — neither say that the doing is … |
+| `matthew19_leaves_the_way_open` | `Independent [p Claim.matthew19_17KeepTheCommandments] (p Claim.matthew19CommandmentsAreTheWayToLife)` | **Matthew 19:17 leaves open whether the commandments are the way to life.** "If you would enter life, keep the commandments" is held alike by the reading on which it is the way, … |
+| `jesus_words_force_nothing` | `Framework.grounded jesusWordsDispute.defeats = ∅` | **Heard together, Jesus' words force nothing.** Every party is in a standoff the dispute cannot resolve — each Luke saying with Trent, over what justification is, and each reading … |
+| `luke18_defensible` | `Framework.CredulouslyAccepted jesusWordsDispute.defeats WordsParty.luke18` | **Luke 18 can be defended.** Some maximal defensible position holds it, with Luke 7:50. |
+| `luke18_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.luke18` | **Nor is Luke 18 forced.** A maximal defensible position holds Trent, and cannot hold Luke 18 with it. |
+| `matthew7_rome_reading_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.matthew7Obedience` | **Rome's reading of Matthew 7 is not forced.** A maximal defensible position holds Calvin's reading — the doing includes believing, and is not a condition of entry in its own … |
+| `matthew7_calvin_reading_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.matthew7Faith` | **Nor is Calvin's.** A maximal defensible position holds Rome's reading — obedience a condition of entry — and cannot hold Calvin's with it. |
+| `matthew19_rome_reading_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.matthew19Way` | **Rome's reading of Matthew 19 is not forced.** A maximal defensible position holds Calvin's reading — a legal reply, exposing what the young man has not kept — and cannot hold … |
+| `matthew19_calvin_reading_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.matthew19Legal` | **Nor is Calvin's.** A maximal defensible position holds Rome's reading — the commandments the way to life — and cannot hold Calvin's with it. |
+| `without_trent_luke_is_forced` | `Framework.grounded jesusWordsWithoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ≠ WordsParty.trent) [WordsParty.luke7, WordsParty.luke18])` | **Without Trent, Luke's two sayings are forced, and Matthew is not.** Heard without Trent, nothing attacks "your faith has saved you" or the tax collector justified: faith's … |
 
 ### [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 
@@ -246,6 +258,25 @@ renewal of the inward man, which grows through good works — against the
 Reformed distinction of justification from the sanctification that follows it.
 Put the distinction in its place and Trent's case no longer denies "not by
 works" (`trent_objection_rests_on_its_definition`).
+
+**Jesus' own words decide less than either side cites them for** ([#122]).
+Luke 18:9–14, where the tax collector "went down to his house justified", is
+Jesus' own teaching on justification and works, in Paul's word for it. The word
+pronounces a verdict there, and the tax collector brings no meriting works.
+Trent never cites Luke 18, but its case is consistent with every word of the
+parable (`trent_grants_the_parable`), since nothing before justification,
+"whether faith or works", merits it (Session VI, ch. 8). What divides them is
+the step to "faith suffices", which Trent's dispositions (ch. 6) and canon 9,
+applied to the parable, deny; so Luke 18 can be defended and is not forced
+(`luke18_defensible`, `luke18_not_forced`), meeting Trent where Luke 7:50 does
+(`whyLukeEighteenStandsAgainstTrent`). Matthew 7:21–23 and 19:16–22 are encoded
+as readings, never as what the text plainly says: the texts alone leave open
+whether obedience is a ground and whether the commandments are the way to life
+(`matthew7_leaves_the_ground_open`, `matthew19_leaves_the_way_open`), and each
+reading stands off against its rival. Heard together, Jesus' words force
+nothing (`jesus_words_force_nothing`); heard without Trent, Luke's two sayings
+are forced (`without_trent_luke_is_forced`) — that faith sufficed, not faith
+alone — and Matthew is still not.
 
 **As a dispute, only Paul's word prevails; sola fide and Trent each stand, and
 neither is forced.** Weighed as a dispute — the three strands argued
