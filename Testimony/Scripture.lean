@@ -268,6 +268,29 @@ commandments of men": the end of Jesus' quotation of Isaiah, which begins at
 are far from him, and whose fear of him is a commandment of men. -/
 @[nolint defsWithUnderscore] def isaiah29_13 : Passage := ⟨.isaiah, 29, 13⟩
 
+/-! ### Jesus on works and the law -/
+
+/-- Luke 18:9–14 — the Pharisee and the tax collector: one lists his fasting
+and tithes, the other beats his breast and asks for mercy, and "this man went
+down to his house justified, rather than the other". -/
+@[nolint defsWithUnderscore] def luke18_9to14 : Pericope := ⟨.luke, 18, 9, 18, 14⟩
+
+/-- Luke 18:14 — "this man went down to his house justified (δεδικαιωμένος),
+rather than the other". -/
+@[nolint defsWithUnderscore] def luke18_14 : Passage := ⟨.luke, 18, 14⟩
+
+/-- Matthew 7:21–23 — "Not everyone who says to me, 'Lord, Lord,' will enter
+the kingdom of heaven, but the one who does the will of my Father"; and to
+those who prophesied in his name, "I never knew you". -/
+@[nolint defsWithUnderscore] def matthew7_21to23 : Pericope := ⟨.matthew, 7, 21, 7, 23⟩
+
+/-- Matthew 19:16–22 — the rich young man: "If you would enter life, keep the
+commandments"; told to sell what he has and follow, he goes away sorrowful. -/
+@[nolint defsWithUnderscore] def matthew19_16to22 : Pericope := ⟨.matthew, 19, 16, 19, 22⟩
+
+/-- Matthew 19:17 — "If you would enter life, keep the commandments." -/
+@[nolint defsWithUnderscore] def matthew19_17 : Passage := ⟨.matthew, 19, 17⟩
+
 /-! ### Source helpers
 
 A `Source` written out is four fields, and some combinations recur often enough
