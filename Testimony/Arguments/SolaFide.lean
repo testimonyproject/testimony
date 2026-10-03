@@ -11,6 +11,7 @@ import Testimony.Arguments.SolaFide.Hearings
 import Testimony.Arguments.SolaFide.JesusWords
 import Testimony.Arguments.SolaFide.Baptism
 import Testimony.Arguments.SolaFide.James
+import Testimony.Arguments.SolaFide.Vulgate
 
 /-!
 # Arguments.SolaFide — justification by grace through faith, not works

@@ -379,25 +379,63 @@ inductive Claim
   reading of what works do**, as a claim about God's verdict rather than about a
   word. -/
   | worksCauseIncreaseOfJustification
-  /-- Revelation 22:11, as Trent quotes it: "He that is just, let him be justified
-  still" (Vulgate, *iustificetur adhuc*). -/
+  /-- The text of Revelation 22:11 — what its inspired author wrote — says "He that
+  is just, let him be justified still" (the Vulgate's *iustificetur adhuc*).
+  Trent's "as it is written" (Session VI, ch. 10), read as a claim about the
+  inspired text. -/
   | rev22_11BeJustifiedStill
   /-- The Greek text of Revelation 22:11, as the critical editions print it, says
   "let the righteous still do righteousness" (δικαιοσύνην ποιησάτω ἔτι): it has
   no "be justified". -/
   | rev22_11GreekDoRighteousness
-  /-- Sirach 18:22, as Trent quotes it: "Be not afraid to be justified even to
-  death" (Vulgate). -/
+  /-- The text of Sirach 18:22 — what its inspired author wrote — says "Be not
+  afraid to be justified even to death" (the Vulgate's verse). Trent's "as it is
+  written", read as a claim about the inspired text. -/
   | sir18_22BeJustifiedToDeath
   /-- Sirach 18:22, in the Greek from which the Catholic Church's own translation
   is made, is about paying a vow promptly: "do not wait until death to fulfill
   them". It says nothing of growth in justice. -/
   | sir18_22GreekIsAVow
-  /-- A reading the original text does not support does not establish what the
-  text says: the Vulgate's authority is that of its use in the Church, not a
-  judgement on the text (Pius XII, *Divino Afflante Spiritu*). **The textual
-  principle.** -/
+  /-- The original text, "written by the inspired author himself, has more
+  authority and greater weight than any even the very best translation" (Pius
+  XII, *Divino Afflante Spiritu* §16): a reading the original lacks is not the
+  inspired author's word. Westminster says the same of the originals, which are
+  "authentical" and to which the Church is "finally to appeal" (I.8). **The
+  textual principle.** -/
   | originalTextDecides
+  /-- The Vulgate, "in the sense in which the Church has understood and
+  understands it", is "free from any error whatsoever in matters of faith and
+  morals", and "may be quoted safely and without fear of error in disputations";
+  its authenticity is "not ... primarily ... critical, but rather ... juridical"
+  (*Divino Afflante Spiritu* §21, on Trent's Session IV). -/
+  | vulgateFreeFromDoctrinalError
+  /-- Trent's "as it is written" at Revelation 22:11 and Sirach 18:22 quotes the
+  Vulgate as juridically authentic — a reading free from error in faith, to be
+  used in the Church's teaching — and not as what the inspired authors wrote.
+  Trent's citation, **read as Pius XII reads Trent's decree on the Vulgate**. -/
+  | trentQuotesTheVulgateJuridically
+  /-- A doctrine taught from the Vulgate is to be confirmed from the original
+  texts: its authority "by no means prevents — nay rather today it almost
+  demands — ... the corroboration and confirmation of this same doctrine by the
+  original texts" (*Divino Afflante Spiritu* §22). -/
+  | doctrineToBeConfirmedFromOriginals
+  /-- Revelation 22:11 and Sirach 18:22 confirm, from the original texts, the
+  increase of justification Trent quotes them for. -/
+  | latinTextsConfirmedFromOriginals
+  -- The Westminster Assembly's proof texts for works as fruit (XVI.2, XVI.5).
+  /-- Ephesians 2:10 — "we are his workmanship, created in Christ Jesus for good
+  works, which God prepared beforehand, that we should walk in them", following
+  "not a result of works, so that no one may boast" (2:9). -/
+  | ephesians2_10CreatedForGoodWorks
+  /-- James 2:18, 22 — "I will show you my faith by my works"; "faith was active
+  along with his works, and faith was completed by his works". -/
+  | james2_18ShowFaithByWorks
+  /-- Romans 6:22 — "the fruit you get leads to sanctification and its end,
+  eternal life". -/
+  | romans6_22FruitToSanctification
+  /-- Luke 17:10 — "when you have done all that you were commanded, say, 'We are
+  unworthy servants; we have only done what was our duty.'" -/
+  | luke17_10UnworthyServants
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

@@ -325,7 +325,7 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–55; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
 | \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground | interpretive | Christian, historical-grammatical, plausible | [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
 | \\(P_{20}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{21}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
+| \\(P_{21}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10 |
 | \\(P_{22}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
 | \\(P_{23}\\) | James 2:24 says a person is justified by works and not by faith alone | textual | Christian, historical-grammatical, consensus | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24 |
 | \\(P_{24}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii; 2 Pet 3:15-16; [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003), ad loc. 2 Pet 3:16 |
@@ -398,7 +398,15 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{91}\\) | The Greek of Revelation 22:11 says: let the righteous still do righteousness | textual | Christian, historical-grammatical, consensus | [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010), app. Rev 22:11; [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Revelation 22:11 |
 | \\(P_{92}\\) | Sirach 18:22 says: be not afraid to be justified even to death | textual | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10 |
 | \\(P_{93}\\) | The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice | textual | Christian, historical-grammatical, well supported | [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22 |
-| \\(P_{94}\\) | What the original text does not say, a translation does not establish | linguistic | Roman Catholic, consensus | [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21 |
+| \\(P_{94}\\) | The original text, written by the inspired author, outweighs any translation: a reading it lacks is not his word | linguistic | Christian, historical-grammatical, consensus | [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.8 |
+| \\(P_{95}\\) | The Vulgate, as the Church understands it, is free from error in faith and morals: its authenticity is juridical | theological | Roman Catholic, disputed | [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§21; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546) |
+| \\(P_{96}\\) | Trent quotes the Vulgate's Revelation 22:11 and Sirach 18:22 as juridically authentic, not as the inspired authors' words | interpretive | Roman Catholic, disputed | [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§20–21 |
+| \\(P_{97}\\) | A doctrine taught from the Vulgate is to be confirmed from the original texts | theological | Roman Catholic, well supported | [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§22; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.8 |
+| \\(P_{98}\\) | Revelation 22:11 and Sirach 18:22 confirm the increase of justification from the original texts | textual | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10 |
+| \\(P_{99}\\) | Ephesians 2:10: created in Christ Jesus for good works, after 'not a result of works' | textual | Christian, historical-grammatical, consensus | Eph 2:8-10; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2 |
+| \\(P_{100}\\) | James 2:18, 22: I will show you my faith by my works; faith completed by works | textual | Christian, historical-grammatical, consensus | Jas 2:18-22; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2 |
+| \\(P_{101}\\) | Romans 6:22: the fruit you get leads to sanctification, and its end is eternal life | textual | Christian, historical-grammatical, consensus | Rom 6:22; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2 |
+| \\(P_{102}\\) | Luke 17:10: having done all that was commanded, we are unworthy servants | textual | Christian, historical-grammatical, consensus | Luke 17:10; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5 |
 
 </div>
 
@@ -5760,7 +5768,7 @@ gospel answers Trent as Trent answers it.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -5772,7 +5780,7 @@ gospel answers Trent as Trent answers it.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent, against 'not by works'*, weakest at *disputed*:
@@ -5845,7 +5853,7 @@ too; one unanswered defeater is enough.)
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -5853,7 +5861,7 @@ too; one unanswered defeater is enough.)
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent, against 'not by works'*, weakest at *disputed*:
@@ -5930,7 +5938,7 @@ the apocalyptic reading, whose derived "not by works" it denies.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -5938,7 +5946,7 @@ the apocalyptic reading, whose derived "not by works" it denies.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -6011,7 +6019,7 @@ Trent.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6021,7 +6029,7 @@ Trent.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -6091,7 +6099,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -6103,7 +6111,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6179,7 +6187,7 @@ and Paul defeats it.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6190,7 +6198,7 @@ and Paul defeats it.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -6261,7 +6269,7 @@ as a claim about Paul's word — itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -6273,7 +6281,7 @@ as a claim about Paul's word — itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6351,13 +6359,13 @@ defeats it.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -6442,7 +6450,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6450,7 +6458,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -6528,7 +6536,7 @@ defeats it.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6536,7 +6544,7 @@ defeats it.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -7194,7 +7202,7 @@ about Paul's word by Paul's word itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -7206,7 +7214,7 @@ about Paul's word by Paul's word itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent, against 'not by works'*, weakest at *disputed*:
@@ -7276,7 +7284,7 @@ word, and answers every party that attacks it itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -7284,7 +7292,7 @@ word, and answers every party that attacks it itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
@@ -7335,7 +7343,7 @@ position holds Trent, and Trent defeats Paul.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -7353,7 +7361,7 @@ position holds Trent, and Trent defeats Paul.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
@@ -7444,7 +7452,7 @@ reading by Paul, and Jervell by Peter.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -7452,7 +7460,7 @@ reading by Paul, and Jervell by Peter.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -7518,13 +7526,13 @@ position holds the apocalyptic reading, and it defeats Paul over πίστις Χ
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -7586,7 +7594,7 @@ position holds Jervell, and he defeats it over the yoke.
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -7604,7 +7612,7 @@ position holds Jervell, and he defeats it over the yoke.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -10476,12 +10484,21 @@ him be justified still" is the Vulgate's *iustificetur adhuc* at Revelation
 do righteousness", and the Catholic Church's own translation renders it "The
 righteous must still do right". "Be not afraid to be justified even to death" is
 the Vulgate's Sirach 18:22; the Greek, as the same translation renders it, is
-about vows: "do not wait until death to fulfill them". That the original text
-decides what a verse says is Rome's own teaching about its own Vulgate: Trent's
-"authentic" was affirmed "not ... for critical reasons, but rather because of its
-legitimate use", and the original text "has more authority and greater weight
-than any even the very best translation" (Pius XII, *Divino Afflante Spiritu*
-§§21, 16).
+about vows: "do not wait until death to fulfill them". The original text, Pius
+XII teaches, "written by the inspired author himself, has more authority and
+greater weight than any even the very best translation" (*Divino Afflante
+Spiritu* §16), and Westminster says the same (I.8). So read as claims about what
+the inspired authors wrote, the two Latin readings cannot be defended.
+
+Pius XII does not say that a Latin reading the original lacks is an error. He
+says the reverse of the Vulgate as a whole: as the Church understands it, it is
+"free from any error whatsoever in matters of faith and morals", and its
+authenticity is "juridical" rather than critical (§21). Read that way, Trent's
+"as it is written" at these two verses quotes the Church's authentic Latin, not
+the apostle's words, and is consistent with everything Pius XII says
+(`Testimony.Arguments.SolaFide.Vulgate`). What it then rests on is the Church's
+authority, and Pius XII himself asks that a doctrine so taught be confirmed from
+the original texts (§22) — which at these two verses do not confirm it.
 
 ### The phrase "faith alone"
 
@@ -10538,12 +10555,27 @@ delivered.
 
 `james_warrants` lists, for each party, the claims it asserts on someone's word
 alone (`Testimony.Logic.Warrant`). Each of Trent's four readings rests at the
-reading itself on Trent's word. The Reformed harmony rests at "works are fruit,
-not ground" on Westminster's. The two readings of the Greek rest at "the
-original text decides" on Pius XII's — Rome's own word, which is what makes it
-decisive against Trent's Latin, and is still a word. James's word and James's
-faith rest on nothing but Scripture and evidence. The warrant is reported
-beside the verdicts and does not weigh in them.
+reading itself on Trent's word. The two readings of the Greek rest at "the
+original text outweighs any translation" on Pius XII's and Westminster's — both
+sides' word, which is what makes it decisive here, and is still a word. James's
+word, James's faith and the Reformed harmony rest on nothing but Scripture and
+evidence. The warrant is reported beside the verdicts and does not weigh in
+them.
+
+### Westminster's proof texts for "fruit, not ground"
+
+The Reformed harmony no longer assumes that works are the fruit of faith and not
+its ground. It derives it (`fruitLine`) from the texts the Westminster Assembly
+gave as proofs for it: good works "are the fruits and evidences of a true and
+lively faith" (XVI.2: James 2:18, 22; Ephesians 2:10; Romans 6:22), and "we
+cannot by our best works merit" (XVI.5: Ephesians 2:8–9; Luke 17:10). The step
+is rated `disputed`, because Trent grants the texts and the word: its chapter 16
+is "On the fruit of Justification, that is, on the merit of good works", and
+canon 24 condemns only those who call works "*merely* the fruits and signs". The
+dispute between them is whether the fruit is also merit. So the warrant moved —
+the harmony rests on Scripture now, not on the Confession's word — and the
+verdict did not: whether works are only fruit is still contested
+(`worksContested`).
 
 ### What is not yet audited
 
@@ -10631,17 +10663,17 @@ def trentWorksSource : Source :=
 **`textualSource`**
 
 The step from what the original text says, and the principle that it
-decides, to "the verse does not say what the Latin says". Rated
-`wellSupported`: Rome itself makes the original text the measure of a
-translation (*Divino Afflante Spiritu* §§16, 21), and no reader was found who
-grants both grounds and holds that the verse says what only the Latin says.
+outweighs any translation, to "the inspired text does not say what the Latin
+says". Rated `wellSupported`: Pius XII (*Divino Afflante Spiritu* §16) and
+Westminster (I.8) both make the original the measure of a translation, and no
+reader was found who grants both grounds and holds that the inspired author
+wrote what only the Latin has.
 
 ```lean
 def textualSource : Source :=
   {
     primary :=
-      Reference.work Bib.divinoAfflanteSpiritu
-        (Bib.Locus.sectionRef "§§16, 21"),
+      Reference.work Bib.divinoAfflanteSpiritu (Bib.Locus.sectionRef "§16"),
     supporting := [Reference.work Bib.sblgnt, Reference.work Bib.nabre],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
@@ -10781,7 +10813,8 @@ fruit and evidence.
 **`revelationTextLine`** — Revelation 22:11, in the Greek
 
 **Revelation 22:11 in Greek**: the verse says "let the righteous still do
-righteousness"; the original text decides what it says; so it does not say "be
+righteousness"; the original outweighs any translation; so its inspired text does
+not say "be
 justified still".
 
 <div class="testimony-math">
@@ -10799,7 +10832,8 @@ justified still".
 **`sirachTextLine`** — Sirach 18:22, in the Greek
 
 **Sirach 18:22 in Greek**: the verse is about paying a vow promptly; the
-original text decides what it says; so it does not speak of being justified more
+original outweighs any translation; so its inspired text does not speak of being
+justified more
 and more until death.
 
 <div class="testimony-math">
@@ -10853,18 +10887,68 @@ James's faith: the phrase James denies is not the Reformers' formula.
 
 No premise here rests on scripture alone.
 
-<a id="jamesHarmonyCase"></a>
-**`jamesHarmonyCase`** — Harmonisation of James 2:24
+<a id="fruitSource"></a>
+**`fruitSource`**
 
-The Reformed harmony of James with Paul: James's target is a barren faith,
-and works are the fruit of saving faith, not its ground.
+Westminster's reading of its proof texts: from Ephesians 2:8–10, James
+2:18–22, Romans 6:22 and Luke 17:10 to "works are the fruit and evidence of
+saving faith, not its ground" (XVI.2, XVI.5). Rated `disputed`: Trent grants the
+texts and calls works the fruit of justification, and holds the fruit to be
+merit (Session VI, ch. 16, canon 24).
+
+```lean
+def fruitSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.westminsterConfession
+        (Bib.Locus.sectionRef "XVI.2, XVI.5"),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="fruitLine"></a>
+**`fruitLine`** — Works as fruit (Westminster XVI.2, XVI.5, and its proofs)
+
+**Works as fruit, from Westminster's proof texts**: saved not as a result of
+works and created for good works (Ephesians 2:8–10); faith shown by works
+(James 2:18, 22); the fruit that leads to sanctification (Romans 6:22); unworthy
+servants who have done only their duty (Luke 17:10). So works are the fruit and
+evidence of saving faith, not its ground.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{20} \\
-\text{(2)} \quad &amp; P_{21} \\
-\text{(3)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\[4pt]
+\text{(1)} \quad &amp; P_{1} \\
+\text{(2)} \quad &amp; P_{99} \\
+\text{(3)} \quad &amp; P_{100} \\
+\text{(4)} \quad &amp; P_{101} \\
+\text{(5)} \quad &amp; P_{102} \\
+\text{(6)} \quad &amp; (P_{1} \land P_{99} \land P_{100} \land P_{101} \land P_{102}) \rightarrow P_{21} \\[4pt]
+\vdash \quad &amp; P_{21}
+\end{aligned}
+\]
+</div>
+
+<a id="jamesHarmonyCase"></a>
+**`jamesHarmonyCase`** — Harmonisation of James 2:24
+
+The Reformed harmony of James with Paul: James's target is a barren faith,
+and works are the fruit of saving faith, not its ground — derived from
+Westminster's proof texts rather than assumed. The James line here is the
+library's `jamesLine` with "fruit, not ground" taken from `fruitLine` instead of
+held as a ground.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{1} \\
+\text{(2)} \quad &amp; P_{99} \\
+\text{(3)} \quad &amp; P_{100} \\
+\text{(4)} \quad &amp; P_{101} \\
+\text{(5)} \quad &amp; P_{102} \\
+\text{(6)} \quad &amp; P_{20} \\
+\text{(7)} \quad &amp; (P_{1} \land P_{99} \land P_{100} \land P_{101} \land P_{102}) \rightarrow P_{21} \\
+\text{(8)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\[4pt]
 \vdash \quad &amp; P_{22}
 \end{aligned}
 \]
@@ -11483,7 +11567,7 @@ other.
   - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *James 2:24, read for the increase of justification*, weakest at *disputed*:
   - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
@@ -11498,10 +11582,10 @@ other.
   - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 
 <a id="james_words_prevail"></a>
 **`james_words_prevail`**
@@ -11546,7 +11630,7 @@ it, and nothing defeats James's word.
   - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *James 2:24, read by canon 24*, weakest at *disputed*:
   - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
@@ -11558,10 +11642,10 @@ it, and nothing defeats James's word.
   - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 
 <a id="trent_on_james_word_indefensible"></a>
 **`trent_on_james_word_indefensible`**
@@ -11598,7 +11682,7 @@ nothing defeats the Greek.
 **What this rests on.** The reasons state 1 defeat and 9 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
   - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
@@ -11610,7 +11694,7 @@ nothing defeats the Greek.
   - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *James 2:24, read for the increase of justification*, weakest at *disputed*:
   - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
@@ -11623,7 +11707,7 @@ nothing defeats the Greek.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 
 <a id="trent_on_revelation_indefensible"></a>
 **`trent_on_revelation_indefensible`**
@@ -11631,9 +11715,15 @@ nothing defeats the Greek.
 **Trent's Revelation 22:11 cannot be defended as a text for the increase of
 justification.** "He that is just, let him be justified still" is the Vulgate's
 *iustificetur adhuc*; the Greek, as the critical text prints it and the Catholic
-Church's own translation renders it, says "the righteous must still do right".
-That the original text decides what a verse says is Rome's own teaching on its
-own Vulgate (*Divino Afflante Spiritu* §§16, 21).
+Church's own translation renders it, says "the righteous must still do right";
+and the original, "written by the inspired author himself", outweighs any
+translation (*Divino Afflante Spiritu* §16).
+
+What this does not claim: that Trent's citation is a doctrinal error. Read as
+Pius XII reads Trent's decree on the Vulgate — a juridically authentic reading,
+free from error in faith — it is consistent with all he says, and rests on the
+Church's authority instead of the inspired text
+(`Testimony.Arguments.SolaFide.Vulgate`).
 
 ```lean
 theorem trent_on_revelation_indefensible : ∀ (S : Set JamesParty),
@@ -11656,7 +11746,7 @@ nothing defeats the Greek.
 
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
   - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
@@ -11668,7 +11758,7 @@ nothing defeats the Greek.
   - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *James 2:24, read for the increase of justification*, weakest at *disputed*:
   - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
@@ -11680,7 +11770,7 @@ nothing defeats the Greek.
   - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 
 <a id="trent_on_sirach_indefensible"></a>
 **`trent_on_sirach_indefensible`**
@@ -11722,12 +11812,12 @@ party that attacks it, the Reformed harmony, itself.
   - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *James 2:24, read for the increase of justification*, weakest at *disputed*:
   - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
@@ -11771,7 +11861,7 @@ which defeats it.
 **What this rests on.** The reasons state 2 defeats and 44 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *James 2:24, read by canon 24*, weakest at *disputed*:
   - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
@@ -11784,10 +11874,10 @@ which defeats it.
   - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *James 2:24, read for the increase of justification*, weakest at *disputed*:
   - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
@@ -11833,13 +11923,13 @@ works do itself.
   - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
   - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
 - *James 2:24, read for the increase of justification*, weakest at *disputed*:
   - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
@@ -11857,7 +11947,7 @@ works do itself.
 **`harmony_holds_fruit`**
 
 The Reformed harmony derives that works are the fruit of faith and not its
-ground; it holds it as a premise.
+ground, from Westminster's proof texts.
 
 ```lean
 theorem harmony_holds_fruit : Entails (jamesDispute.node
@@ -11902,15 +11992,15 @@ def worksContested : Contested jamesDispute (p Claim.worksAreFruitNotGround) :=
 
 **Where each position rests on someone's word alone** (`Testimony.Logic.Warrant`):
 each of Trent's four readings, at the reading itself — Trent's word; the Reformed
-harmony, at works as fruit and not ground — Westminster's word; and the two
-readings of the Greek, at the principle that the original text decides — Pius
-XII's word, which is Rome's own. James's word and James's faith rest on nothing
-but Scripture and evidence.
+and the two readings of the Greek, at the principle that the original outweighs
+any translation — the word of Pius XII and of Westminster alike. James's word,
+James's faith and the Reformed harmony, which now derives "fruit, not ground"
+from Westminster's proof texts, rest on nothing but Scripture and evidence.
 
 ```lean
 theorem james_warrants : jamesLexicalCase.restingOnAuthority = [] ∧
     jamesFaithCase.restingOnAuthority = [] ∧
-    jamesHarmonyCase.restingOnAuthority = [Claim.worksAreFruitNotGround] ∧
+    jamesHarmonyCase.restingOnAuthority = [] ∧
     catholicJamesOnTheWord.restingOnAuthority =
     [Claim.jamesJustifyDenotesIncrease] ∧
     catholicJamesOnWorks.restingOnAuthority =
@@ -11919,5 +12009,223 @@ theorem james_warrants : jamesLexicalCase.restingOnAuthority = [] ∧
     trentOnSirach.restingOnAuthority = [Claim.sir18_22BeJustifiedToDeath] ∧
     revelationTextCase.restingOnAuthority = [Claim.originalTextDecides] ∧
     sirachTextCase.restingOnAuthority = [Claim.originalTextDecides]
+-- axioms: propext
+```
+
+## Arguments.SolaFide.Vulgate — Trent's Latin texts, on Rome's own terms
+
+Two of the three texts Trent cites for the increase of justification say
+"justified" only in Latin (`Testimony.Arguments.SolaFide.James`). "He that is
+just, let him be justified still" is the Vulgate's Revelation 22:11, whose Greek
+says "let the righteous still do righteousness"; "Be not afraid to be justified
+even to death" is the Vulgate's Sirach 18:22, whose Greek is about paying vows.
+Trent introduces both with "as it is written" (Session VI, ch. 10), having
+declared the Vulgate "authentic" for "public lectures, disputations, sermons and
+expositions" (Session IV).
+
+The reader's question is whether Rome contradicts itself here — whether what
+Pius XII taught about the original texts in *Divino Afflante Spiritu* (1943)
+cannot be held together with Trent's use of these two readings. This module
+answers it from Rome's own words only: Trent's, Pius XII's, and the Catholic
+Church's own translation of the Greek.
+
+### The answer depends on what Trent's "as it is written" claims
+
+**Read as a claim about what the inspired authors wrote**, it cannot be held with
+Pius XII. He teaches that the original text, "written by the inspired author
+himself, has more authority and greater weight than any even the very best
+translation" (§16), and the original of these two verses — as the Church's own
+translation renders it — does not say "justified". Those commitments together
+have no model (`trent_as_the_inspired_text_contradicts_pius`). That is a
+contradiction on Rome's own terms, and every premise of it is Rome's.
+
+**Read as Pius XII reads Trent's decree on the Vulgate**, there is no
+contradiction. Pius XII denies that recourse to the originals "in any way
+derogates" from Trent (§20): the Vulgate's authenticity is "juridical" rather
+than critical, and the Vulgate, "in the sense in which the Church has understood
+and understands it", is "free from any error whatsoever in matters of faith and
+morals" and "may be quoted safely ... in disputations" (§21). On that reading
+Trent quotes the Church's authentic Latin, not the inspired authors' words, and
+everything Rome says can be held together (`pius_reading_is_consistent`).
+
+**What the consistent reading costs.** It moves the two texts' warrant from the
+inspired authors to the Church: the claims that carry it rest on Rome's word
+alone (`pius_reading_rests_on_authority`). And Pius XII asks that a doctrine
+taught from the Vulgate be confirmed from the original texts (§22), which at
+these two verses do not confirm it (`pius_finds_no_confirmation`). So on Rome's
+own terms the doctrine of the increase of justification is confirmed from the
+originals, if at all, by James 2:24 alone — where it is weighed in
+`Testimony.Arguments.SolaFide.James`.
+
+### What this does not show
+
+It does not show that Rome contradicts itself. Trent does not say which reading
+of its "as it is written" it means, and Pius XII supplies the reading on which
+there is no contradiction. What the module shows is the price of each reading:
+the first contradicts Pius XII; the second makes the two texts an appeal to the
+Church's authority, which Pius XII himself asks to be confirmed from the
+originals, and the originals do not confirm it.
+
+Nor does it show that the doctrine is false. Pius XII holds the Vulgate free
+from error in faith because Rome holds the doctrine true on other grounds; this
+module is about what these two texts can carry.
+
+#### Read as the inspired text
+
+<a id="romeOnTheInspiredText"></a>
+**`romeOnTheInspiredText`**
+
+**Rome's own commitments, with Trent's citation read as the inspired text**:
+Trent's "as it is written" at Revelation 22:11 as a claim about what its author
+wrote; the Greek as the Catholic Church's own translation renders it; Pius XII's
+principle that the original outweighs any translation; and the step from the
+last two to "the inspired text does not say 'be justified still'".
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{90} \\
+\text{(2)} \quad &amp; P_{91} \\
+\text{(3)} \quad &amp; P_{94} \\
+\text{(4)} \quad &amp; (P_{91} \land P_{94}) \rightarrow \lnot P_{90}
+\end{aligned}
+\]
+</div>
+
+<a id="trent_as_the_inspired_text_contradicts_pius"></a>
+**`trent_as_the_inspired_text_contradicts_pius`**
+
+**Trent's Revelation 22:11, read as what its inspired author wrote, cannot be
+held with Pius XII.** The original "has more authority and greater weight than
+any even the very best translation" (*Divino Afflante Spiritu* §16), and the
+original of Revelation 22:11, as the Catholic Church's own translation renders
+it, says "the righteous must still do right". With those, the claim that the
+inspired author wrote "let him be justified still" has no model. Every premise is
+Rome's own.
+
+What this does not claim: that Trent meant its citation so. Read as Pius XII
+reads Trent's Vulgate, there is no contradiction (`pius_reading_is_consistent`).
+
+```lean
+theorem trent_as_the_inspired_text_contradicts_pius : ¬Satisfiable
+    romeOnTheInspiredText
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+#### Read as Pius XII reads the Vulgate
+
+<a id="piusConfirmationSource"></a>
+**`piusConfirmationSource`**
+
+Pius XII's step: a doctrine taught from the Vulgate is to be confirmed from
+the original texts (§22), and the originals of Revelation 22:11 and Sirach 18:22
+do not say what the Latin says; so these two texts do not confirm the doctrine
+from the originals. Rated `wellSupported`: it is Pius XII's own demand, applied
+to texts whose originals the Church's own translation renders.
+
+```lean
+def piusConfirmationSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.divinoAfflanteSpiritu (Bib.Locus.sectionRef "§22"),
+    supporting := [Reference.work Bib.nabre],
+    tradition := Tradition.romanCatholic,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="piusOnTrentsVulgate"></a>
+**`piusOnTrentsVulgate`** — Pius XII, on Trent's Vulgate
+
+**Rome's own position on the two Latin texts, read as Pius XII reads Trent**:
+Trent quotes the Vulgate as juridically authentic; the Vulgate is free from error
+in faith and morals; the original outweighs any translation, and the originals
+of the two verses do not say "justified"; a doctrine taught from the Vulgate is
+to be confirmed from the originals. Concluded: the two texts do not confirm the
+increase of justification from the originals.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{96} \\
+\text{(2)} \quad &amp; P_{95} \\
+\text{(3)} \quad &amp; P_{94} \\
+\text{(4)} \quad &amp; P_{91} \\
+\text{(5)} \quad &amp; P_{93} \\
+\text{(6)} \quad &amp; P_{97} \\
+\text{(7)} \quad &amp; (P_{91} \land P_{94}) \rightarrow \lnot P_{90} \\
+\text{(8)} \quad &amp; (P_{93} \land P_{94}) \rightarrow \lnot P_{92} \\
+\text{(9)} \quad &amp; (P_{97} \land \lnot P_{90} \land \lnot P_{92}) \rightarrow \lnot P_{98} \\[4pt]
+\vdash \quad &amp; \lnot P_{98}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="piusReading"></a>
+**`piusReading`**
+
+**Rome's world, as Pius XII reads Trent**: the Vulgate juridically authentic
+and free from error in faith; Trent quoting it so; the originals of the two
+verses without "justified", and outweighing any translation; and the two texts,
+so read, not confirming the doctrine from the originals. Everything else as Trent
+holds it.
+
+```lean
+def piusReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.latinTextsConfirmedFromOriginals => False
+    | Claim.worksAreFruitNotGround => False
+    | x => True
+```
+
+<a id="pius_reading_is_consistent"></a>
+**`pius_reading_is_consistent`**
+
+**Read as Pius XII reads Trent's decree on the Vulgate, Rome is consistent.**
+Trent quoting the Vulgate as juridically authentic, the Vulgate free from error
+in faith and morals, the original outweighing any translation, the Greek of the
+two verses as the Church's own translation renders it, and the demand that a
+doctrine taught from the Vulgate be confirmed from the originals: all of it can be
+held together.
+
+```lean
+theorem pius_reading_is_consistent : Satisfiable piusOnTrentsVulgate.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="pius_finds_no_confirmation"></a>
+**`pius_finds_no_confirmation`**
+
+**On Pius XII's own terms, the two Latin texts do not confirm the increase
+of justification from the originals.** He asks that a doctrine taught from the
+Vulgate be confirmed from the original texts (§22); the originals of Revelation
+22:11 and Sirach 18:22 do not say "justified". So Trent's doctrine is confirmed
+from the originals, if at all, by James 2:24 alone.
+
+```lean
+theorem pius_finds_no_confirmation : Establishes piusOnTrentsVulgate
+-- axioms: propext, Quot.sound
+```
+
+<a id="pius_reading_rests_on_authority"></a>
+**`pius_reading_rests_on_authority`**
+
+**On that reading, the two texts rest on the Church's word.** The claims
+that carry Trent's citation — that it quotes the Vulgate as juridically
+authentic, and that the Vulgate is free from error in faith — are cited to
+Pius XII alone (`Testimony.Logic.Warrant`); so are the principle that the
+original outweighs any translation and the demand for confirmation from the
+originals, which Westminster holds too.
+
+```lean
+theorem pius_reading_rests_on_authority :
+    piusOnTrentsVulgate.restingOnAuthority =
+    [Claim.trentQuotesTheVulgateJuridically,
+    Claim.vulgateFreeFromDoctrinalError, Claim.originalTextDecides,
+    Claim.doctrineToBeConfirmedFromOriginals]
 -- axioms: propext
 ```

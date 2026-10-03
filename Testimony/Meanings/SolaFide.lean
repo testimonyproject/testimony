@@ -5,7 +5,7 @@ import Testimony.Arguments.SolaFide.Sources
 # Testimony.Meanings.SolaFide — what each sola fide claim says
 
 **A draft**, and the first argument given meanings. `means` is total over the
-argument's eighty-five atoms, as `cite` is: a new atom cannot be left without
+argument's atoms, as `cite` is: a new atom cannot be left without
 one. Each meaning says what the atom's docstring says, in the vocabulary of
 `Testimony.Semantics.Vocabulary`, and no more. Where the vocabulary cannot yet say
 it, the meaning is `opaque`, and `unanalysed` counts those.
@@ -281,6 +281,23 @@ def means : Claim → Statement
     .says sir18_22 (rl .growsThrough (wd .dikaioo sir18_22) (cn .worksOfFaith))
   | .sir18_22GreekIsAVow =>
     .denied (.says sir18_22 (rl .growsThrough (wd .dikaioo sir18_22) (cn .worksOfFaith)))
+  | .ephesians2_10CreatedForGoodWorks =>
+    .says (rg .ephesians 2 8 2 10) (rl .fruitOf (wd .erga (vs .ephesians 2 10)) (cn .grace))
+  | .james2_18ShowFaithByWorks =>
+    .says (rg .james 2 18 2 22)
+      (rl .fruitOf (wd .erga (vs .james 2 18)) (wd .pistis (vs .james 2 18)))
+  | .romans6_22FruitToSanctification =>
+    .says (vs .romans 6 22) (rl .growsThrough (cn .sanctification) (cn .worksOfFaith))
+  | .luke17_10UnworthyServants =>
+    .says (vs .luke 17 10) (.not (rl .merits (cn .works) (cn .eternalLife)))
+  | .vulgateFreeFromDoctrinalError =>
+    .opaque "The Vulgate is free from error in faith and morals; its authenticity is juridical"
+  | .trentQuotesTheVulgateJuridically =>
+    .opaque "Trent quotes the Vulgate's two verses as juridically authentic"
+  | .doctrineToBeConfirmedFromOriginals =>
+    .opaque "A doctrine taught from the Vulgate is to be confirmed from the originals"
+  | .latinTextsConfirmedFromOriginals =>
+    .opaque "Revelation 22:11 and Sirach 18:22 confirm the increase from the originals"
   | .originalTextDecides =>
     .opaque "What the original text does not say, a translation does not establish"
 
@@ -322,7 +339,10 @@ def all : List Claim :=
   , .jamesFaithAloneIsDeadFaith, .reformedFaithIsNoDeadFaith, .jamesFaithIsNotReformedFaith
   , .scriptureTeachesIncreaseOfJustification, .worksCauseIncreaseOfJustification
   , .rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness, .sir18_22BeJustifiedToDeath
-  , .sir18_22GreekIsAVow, .originalTextDecides ]
+  , .sir18_22GreekIsAVow, .originalTextDecides, .vulgateFreeFromDoctrinalError
+  , .trentQuotesTheVulgateJuridically, .doctrineToBeConfirmedFromOriginals
+  , .latinTextsConfirmedFromOriginals, .ephesians2_10CreatedForGoodWorks
+  , .james2_18ShowFaithByWorks, .romans6_22FruitToSanctification, .luke17_10UnworthyServants ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -337,12 +357,15 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **Seventy-eight of the eighty-five are analysed.** The seven that are not
-are the narrative texts of the thief and the tax collector, Galatians 1:6–9,
-Christ's command to baptise, Trent's "laver, or the desire thereof", and
-Luke's law-observance. Each needs a word the vocabulary lacks — a command, a
-curse, a disjunction, a story's outcome. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (91, 99) := by decide
+/-- **Ninety-five of the hundred and seven are analysed.** Of the twelve that are
+not, four are Pius XII's and Trent's claims about the Vulgate and one is the
+textual principle, whose content is a rule about texts and translations the
+vocabulary cannot yet state; the other seven are the narrative texts of the
+thief and the tax collector, Galatians 1:6–9, Christ's command to baptise,
+Trent's "laver, or the desire thereof", and Luke's law-observance. Each needs a
+word the vocabulary lacks — a command, a curse, a disjunction, a story's
+outcome. -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (95, 107) := by decide
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
