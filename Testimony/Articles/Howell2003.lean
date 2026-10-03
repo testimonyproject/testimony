@@ -428,22 +428,31 @@ def faithDenialAnswered : DenialAnswered hearing (p .jamesFaithIsNotReformedFait
   indefensible i hi S hS := by simp at hi; subst hi; exact howell_indefensible S hS
 
 /-- **Howell's move, as a dissent from James's faith**: his position set against
-the step that concludes the faith James denies is not the Reformers'. -/
-def howellDissent : Dissent Claim :=
-  { claim := p .jamesFaithIsNotReformedFaith
-  , grounds := Arguments.SolaFide.jamesFaithLine.grounds
-  , position := howellCase }
+the step that concludes the faith James denies is not the Reformers'. He holds
+that it *is* the Reformers' as a premise — a bare denial, which his article
+asserts and argues from no text — and that premise alone contradicts the step's
+conclusion. -/
+def howellAssessment : Assessment Claim where
+  dissenter := "Howell (2003)"
+  against := Arguments.SolaFide.jamesFaithLine.name
+  dissent :=
+    { claim := p .jamesFaithIsNotReformedFaith
+    , grounds := Arguments.SolaFide.jamesFaithLine.grounds
+    , position := howellCase }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := false, bareDenial := true
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
 
-/-- **Howell's dissent is a disagreement, not a critique.** He holds that the
-faith James denies *is* the Reformers' as a premise — a bare denial, which his
-article asserts and argues from no text — and that premise alone contradicts
-the step's conclusion. He gives no reason the step's grounds fail to yield it. So under
-either standard the dissent is not credible (`Testimony.Logic.Credibility`),
-whatever weight his article carries otherwise. -/
+/-- **Howell's dissent is a disagreement, not a critique, under every
+standard.** He gives no reason the step's grounds fail to yield its conclusion;
+he holds its denial. So whatever weight his article carries otherwise, it does
+not make James's faith step disputed (`Testimony.Logic.Credibility`). -/
 theorem howell_asserts_his_denial :
-    howellDissent.assertsDenial = true ∧
-      ¬ Satisfiable (howellDissent.asserted ++ [howellDissent.claim]) :=
-  ⟨by decide +kernel, Dissent.not_argued_of_check (by decide +kernel)⟩
+    howellAssessment.findings.kind = .asserted ∧
+      ∀ s, ¬ Dissent.Credible s howellAssessment.dissent := by
+  refine ⟨by decide, fun s => howellAssessment.complete ?_⟩
+  cases s <;> decide
 
 #print axioms howell_asserts_his_denial
 

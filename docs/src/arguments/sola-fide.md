@@ -408,6 +408,7 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{101}\\) | Romans 6:22: the fruit you get leads to sanctification, and its end is eternal life | textual | Christian, historical-grammatical, consensus | Rom 6:22; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2 |
 | \\(P_{102}\\) | Luke 17:10: having done all that was commanded, we are unworthy servants | textual | Christian, historical-grammatical, consensus | Luke 17:10; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5 |
 | \\(P_{103}\\) | 1 Cor 15:58; Heb 6:10; 10:35; 2 Tim 4:8: God rewards the labor of believers | textual | Christian, historical-grammatical, consensus | 1 Cor 15:58; Heb 6:10; Heb 10:35; 2 Tim 4:8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.6 |
+| \\(P_{104}\\) | James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10 |
 
 </div>
 
@@ -10535,7 +10536,13 @@ when none can.
 - **Can be defended, and not forced**: Trent's reading of what works do
   (`trent_on_works_defensible`, `trent_on_works_not_forced`), and, against it,
   the Reformed harmony. Whether works are only the fruit of justification is
-  contested, and the weighing confirms it (`worksContested`).
+  contested, and the weighing confirms it (`worksContested`). Trent's reading of
+  the reward texts (chapter 16, `trentRewardLine`) meets the harmony the same
+  way.
+- **Cannot be defended, at the cited ratings**: the renewal reading of James's
+  word (`renewalWordLine`), which James's word defeats. Under the tradition
+  standard it is a credible critique, and there the question is contested
+  (`Testimony.Arguments.SolaFide.Ratings`).
 
 So Trent's scriptural case for the increase of justification, weighed text by
 text, survives at one point only: James 2:24, read as a claim about what works
@@ -10578,15 +10585,24 @@ the harmony rests on Scripture now, not on the Confession's word — and the
 verdict did not: whether works are only fruit is still contested
 (`worksContested`).
 
-### What is not yet audited
+### What is audited, and how
 
-The steps of James's word and James's faith are rated `wellSupported` on the
-sources cited and on a search for a reader who grants their grounds and denies
-their conclusions; the search found the Latin tradition after Augustine denying
-the lexical premise itself, which is weighed in that premise's rating, and no
-one denying the step. A fuller audit, across the Catholic commentaries on James,
-is still to do, and a reader who grants the grounds and denies a conclusion would
-move that step to `disputed` and these verdicts with it.
+The steps of James's word and James's faith are cited at `wellSupported`. The
+lexical step's rating is now computed as well
+(`Testimony.Arguments.SolaFide.Ratings`). Its strongest known dissent, the
+renewal reading (`renewalWordLine`), reads James's word as Paul's and Paul's as
+renewal. It grants the step's grounds and argues its denial, but one of its
+grounds — that James's word is Paul's — rests on Trent's word alone. So the step
+stands at `wellSupported` under the evidence standard and is `disputed` under the
+tradition standard. This dispute weighs it at its cited rating, the first of
+these; the hearing under the tradition standard weighs it at the second, and
+there what James's word denotes is contested. A verified exegete holding that
+James's word is Paul's would make the renewal reading credible under both
+standards, and the step `disputed` under both.
+
+The faith step has no encoded dissent beyond Howell's, which asserts its denial
+(`Testimony.Articles.Howell2003`). A fuller audit, across the Catholic
+commentaries on James, is still to do.
 
 #### Inference ratings
 
@@ -10699,6 +10715,46 @@ def jamesHarmonySource : Source :=
           (Bib.Locus.sectionRef "III.xvii.11")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
+```
+
+<a id="trentRewardSource"></a>
+**`trentRewardSource`**
+
+Trent's step from the reward texts to "works are not merely fruit": eternal
+life is "a reward to be faithfully rendered to their good works and merits"
+(Session VI, ch. 16), and the good works of the justified truly merit it
+(canon 32). Rated `disputed`: Westminster grants that God rewards the good works
+of believers and holds the reward to be of grace, given to works accepted in
+Christ and not earned by them (XVI.5, XVI.6).
+
+```lean
+def trentRewardSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef "Trent, Session VI (1547), ch. 16, canon 32"),
+    supporting :=
+      [Reference.work Bib.westminsterConfession
+          (Bib.Locus.sectionRef "XVI.5, XVI.6")],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="renewalWordSource"></a>
+**`renewalWordSource`**
+
+The renewal reading's step: from Paul's δικαιόω as renewal, James's word as
+Paul's, and James's "justified by works" after Genesis 15:6, to "James's δικαιόω
+denotes the increase of justice" (Trent, Session VI, ch. 10). Rated `disputed`:
+the lexical case grants James's words and denies the conclusion.
+
+```lean
+def renewalWordSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef "Trent, Session VI (1547), ch. 10"),
+    supporting := [Reference.work Bib.vanLandinghamJudgment],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 ```
 
 #### The lines
@@ -10844,6 +10900,46 @@ and more until death.
 \text{(2)} \quad &amp; P_{94} \\
 \text{(3)} \quad &amp; (P_{93} \land P_{94}) \rightarrow \lnot P_{92} \\[4pt]
 \vdash \quad &amp; \lnot P_{92}
+\end{aligned}
+\]
+</div>
+
+<a id="trentRewardLine"></a>
+**`trentRewardLine`** — The reward of works (Trent, Session VI, ch. 16)
+
+**The reward of works, as Trent reads it**: God rewards the labor of
+believers (1 Corinthians 15:58, Hebrews 6:10, Hebrews 10:35, 2 Timothy 4:8); so
+works are not merely the fruit of justification.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{103} \\
+\text{(2)} \quad &amp; P_{103} \rightarrow \lnot P_{21} \\[4pt]
+\vdash \quad &amp; \lnot P_{21}
+\end{aligned}
+\]
+</div>
+
+<a id="renewalWordLine"></a>
+**`renewalWordLine`** — James's word, read through Paul's (the renewal reading)
+
+**James's word, read through Paul's** — the renewal reading: Paul's δικαιόω
+denotes the renewal of the inward man, as Augustine glossed it and VanLandingham
+argues from the lexicon; James uses the word as Paul does; and James says Abraham
+was justified by works at Genesis 22, after Genesis 15:6 had been spoken. So
+James's δικαιόω denotes the increase of the justice received. This is the
+strongest reading of the word against the lexical case that the library has
+found: it argues the increase from Paul's word rather than asserting it.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{50} \\
+\text{(2)} \quad &amp; P_{104} \\
+\text{(3)} \quad &amp; P_{82} \\
+\text{(4)} \quad &amp; (P_{50} \land P_{104} \land P_{82}) \rightarrow P_{84} \\[4pt]
+\vdash \quad &amp; P_{84}
 \end{aligned}
 \]
 </div>
@@ -11066,6 +11162,43 @@ What Sirach 18:22 says, in the Greek.
 </div>
 
 No premise here rests on scripture alone.
+
+<a id="trentOnReward"></a>
+**`trentOnReward`** — The reward of works (Trent, Session VI, ch. 16)
+
+Trent on the reward of works: what God rewards is not merely fruit.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{103} \\
+\text{(2)} \quad &amp; P_{103} \rightarrow \lnot P_{21} \\[4pt]
+\vdash \quad &amp; \lnot P_{21}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="renewalOnTheWord"></a>
+**`renewalOnTheWord`** — James's word, read through Paul's (the renewal reading)
+
+The renewal reading of James's word: it denotes the increase of justice,
+because Paul's does and James's is Paul's.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{50} \\
+\text{(2)} \quad &amp; P_{104} \\
+\text{(3)} \quad &amp; P_{82} \\
+\text{(4)} \quad &amp; (P_{50} \land P_{104} \land P_{82}) \rightarrow P_{84} \\[4pt]
+\vdash \quad &amp; P_{84}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: James 2:21–25: Abraham justified by works at Genesis 22, fulfilling Genesis 15:6; Rahab justified by works.
 
 #### Each position holds, and has a model
 
@@ -11291,6 +11424,47 @@ theorem sirachTextCase_is_satisfiable : Satisfiable sirachTextCase.premises
 -- axioms: propext, Quot.sound
 ```
 
+<a id="trentOnReward_establishes"></a>
+**`trentOnReward_establishes`**
+
+`trentOnReward` delivers its conclusion.
+
+```lean
+theorem trentOnReward_establishes : Establishes trentOnReward
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnReward_is_satisfiable"></a>
+**`trentOnReward_is_satisfiable`**
+
+`trentOnReward`'s premises can all be true.
+
+```lean
+theorem trentOnReward_is_satisfiable : Satisfiable trentOnReward.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="renewalOnTheWord_establishes"></a>
+**`renewalOnTheWord_establishes`**
+
+`renewalOnTheWord` delivers its conclusion.
+
+```lean
+theorem renewalOnTheWord_establishes : Establishes renewalOnTheWord
+-- axioms: propext, Quot.sound
+```
+
+<a id="renewalOnTheWord_is_satisfiable"></a>
+**`renewalOnTheWord_is_satisfiable`**
+
+`renewalOnTheWord`'s premises can all be true.
+
+```lean
+theorem renewalOnTheWord_is_satisfiable : Satisfiable
+    renewalOnTheWord.premises
+-- axioms: propext, Quot.sound
+```
+
 #### Strength
 
 <a id="jamesLexicalCase_strength"></a>
@@ -11384,6 +11558,26 @@ theorem sirachTextCase_strength : sirachTextCase.strength = 2
 -- axioms: propext
 ```
 
+<a id="trentOnReward_strength"></a>
+**`trentOnReward_strength`**
+
+Trent on the reward of works rests on its reading of the texts, `disputed`.
+
+```lean
+theorem trentOnReward_strength : trentOnReward.strength = 0
+-- axioms: propext
+```
+
+<a id="renewalOnTheWord_strength"></a>
+**`renewalOnTheWord_strength`**
+
+The renewal reading rests on Paul's word as renewal, `disputed`.
+
+```lean
+theorem renewalOnTheWord_strength : renewalOnTheWord.strength = 0
+-- axioms: propext
+```
+
 #### The dispute
 
 <a id="jamesPartyNode"></a>
@@ -11412,6 +11606,10 @@ def jamesPartyNode : JamesParty → ArgumentPackage Claim :=
       revelationTextCase
     | JamesParty.sirachText =>
       sirachTextCase
+    | JamesParty.trentOnReward =>
+      trentOnReward
+    | JamesParty.renewalOnTheWord =>
+      renewalOnTheWord
 ```
 
 <a id="jamesDispute"></a>
@@ -11448,6 +11646,12 @@ def jamesPartyDefeats : JamesParty → JamesParty → Prop :=
       JamesParty.trentOnRevelation => True
     | JamesParty.sirachText,
       JamesParty.trentOnSirach => True
+    | JamesParty.harmony,
+      JamesParty.trentOnReward => True
+    | JamesParty.trentOnReward,
+      JamesParty.harmony => True
+    | JamesParty.lexical,
+      JamesParty.renewalOnTheWord => True
     | x, x_2 => False
 ```
 
@@ -11492,10 +11696,13 @@ theorem jamesPartyNode_strength : ∀ (i : JamesParty), (jamesPartyNode
 <a id="jamesDispute_defeats"></a>
 **`jamesDispute_defeats`**
 
-**Who defeats whom**, all 81 pairs. James's word defeats Trent's reading of
-it, and the reading's reply fails. The Greek of Revelation 22:11 and of Sirach
-18:22 defeat Trent's Latin readings of them, and the replies fail. The Reformed
-harmony and Trent's reading of what works do defeat each other. Nothing else:
+**Who defeats whom**, all 121 pairs. James's word defeats Trent's reading of
+it, and the reading's reply fails; it defeats the renewal reading too, whose
+reply fails for the same reason — it rests on Paul's word as renewal, rated
+`disputed`, against a case rated `wellSupported`. The Greek of Revelation 22:11
+and of Sirach 18:22 defeat Trent's Latin readings of them, and the replies fail.
+The Reformed harmony defeats, and is defeated by, both of Trent's readings of
+what works do: canon 24's, and chapter 16's from the reward texts. Nothing else:
 in particular, nothing in the dispute contradicts James's faith, and James's
 word does not touch Trent's reading of what works do, which grants the word
 and makes a claim about God's verdict instead.
@@ -11526,7 +11733,9 @@ def jamesFinite : Solver.Finite jamesDispute.defeats :=
         JamesParty.trentOnRevelation,
         JamesParty.trentOnSirach,
         JamesParty.revelationText,
-        JamesParty.sirachText],
+        JamesParty.sirachText,
+        JamesParty.trentOnReward,
+        JamesParty.renewalOnTheWord],
     complete := jamesFinite._proof_1,
     defeats := fun i j => decide (jamesPartyDefeats i j),
     spec := jamesFinite._proof_2 }
@@ -11557,8 +11766,10 @@ other.
   - *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*, and nothing forced defeats *Harmonisation of James 2:24*.
   - *Revelation 22:11, in the Greek* defeats *Revelation 22:11, as Trent quotes it*, and nothing forced defeats *Revelation 22:11, in the Greek*.
   - *Sirach 18:22, in the Greek* defeats *Sirach 18:22, as Trent quotes it*, and nothing forced defeats *Sirach 18:22, in the Greek*.
+  - *Harmonisation of James 2:24* defeats *The reward of works (Trent, Session VI, ch. 16)*, and nothing forced defeats *Harmonisation of James 2:24*.
+  - *James's word (δικαιόω, by the rule of least meaning)* defeats *James's word, read through Paul's (the renewal reading)*, and nothing forced defeats *James's word (δικαιόω, by the rule of least meaning)*.
 
-**What this rests on.** The reasons state 5 defeats and 44 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 7 defeats and 52 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
   - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
@@ -11587,6 +11798,12 @@ other.
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
   - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
 
 <a id="james_words_prevail"></a>
 **`james_words_prevail`**
@@ -11618,7 +11835,7 @@ it, and nothing defeats James's word.
 
 - *James's word (δικαιόω, by the rule of least meaning)* defeats *James 2:24, read for the increase of justification*, and nothing defeats *James's word (δικαιόω, by the rule of least meaning)*.
 
-**What this rests on.** The reasons state 1 defeat and 9 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 1 defeat and 11 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
   - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
@@ -11647,6 +11864,12 @@ it, and nothing defeats James's word.
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
   - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
 
 <a id="trent_on_james_word_indefensible"></a>
 **`trent_on_james_word_indefensible`**
@@ -11680,7 +11903,7 @@ nothing defeats the Greek.
 
 - *Revelation 22:11, in the Greek* defeats *Revelation 22:11, as Trent quotes it*, and nothing defeats *Revelation 22:11, in the Greek*.
 
-**What this rests on.** The reasons state 1 defeat and 9 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 1 defeat and 11 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
   - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
@@ -11709,6 +11932,12 @@ nothing defeats the Greek.
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
   - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
 
 <a id="trent_on_revelation_indefensible"></a>
 **`trent_on_revelation_indefensible`**
@@ -11743,7 +11972,7 @@ nothing defeats the Greek.
 
 - *Sirach 18:22, in the Greek* defeats *Sirach 18:22, as Trent quotes it*, and nothing defeats *Sirach 18:22, in the Greek*.
 
-**What this rests on.** The reasons state 1 defeat and 9 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 1 defeat and 11 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
   - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
@@ -11772,6 +12001,12 @@ nothing defeats the Greek.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
   - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
 
 <a id="trent_on_sirach_indefensible"></a>
 **`trent_on_sirach_indefensible`**
@@ -11800,7 +12035,7 @@ party that attacks it, the Reformed harmony, itself.
 - None of *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *James 2:24, read by canon 24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* defeats another, and each attack on them is answered from among them:
   - *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*, and *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*.
 
-**What this rests on.** The reasons state 2 defeats and 44 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 2 defeats and 54 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
   - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
@@ -11829,6 +12064,12 @@ party that attacks it, the Reformed harmony, itself.
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
   - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
 
 <a id="trent_on_works_defensible"></a>
 **`trent_on_works_defensible`**
@@ -11858,8 +12099,9 @@ which defeats it.
 - A position holding *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Harmonisation of James 2:24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* can be held, and it holds *Harmonisation of James 2:24*; *Harmonisation of James 2:24* conflicts with *James 2:24, read by canon 24*: *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*, and *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*.
 - None of *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Harmonisation of James 2:24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* defeats another, and each attack on them is answered from among them:
   - *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*, and *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*.
+  - *The reward of works (Trent, Session VI, ch. 16)* defeats *Harmonisation of James 2:24*, and *Harmonisation of James 2:24* defeats *The reward of works (Trent, Session VI, ch. 16)*.
 
-**What this rests on.** The reasons state 2 defeats and 44 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 4 defeats and 53 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Harmonisation of James 2:24*, weakest at *disputed*:
   - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
@@ -11888,6 +12130,12 @@ which defeats it.
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
   - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
 
 <a id="trent_on_works_not_forced"></a>
 **`trent_on_works_not_forced`**
@@ -11913,8 +12161,9 @@ works do itself.
 - A position holding *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Harmonisation of James 2:24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* can be held.
 - None of *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Harmonisation of James 2:24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* defeats another, and each attack on them is answered from among them:
   - *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*, and *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*.
+  - *The reward of works (Trent, Session VI, ch. 16)* defeats *Harmonisation of James 2:24*, and *Harmonisation of James 2:24* defeats *The reward of works (Trent, Session VI, ch. 16)*.
 
-**What this rests on.** The reasons state 2 defeats and 44 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 4 defeats and 53 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
   - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
@@ -11943,6 +12192,12 @@ works do itself.
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
   - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
 
 <a id="harmony_holds_fruit"></a>
 **`harmony_holds_fruit`**
@@ -11991,8 +12246,11 @@ def worksContested : Contested jamesDispute (p Claim.worksAreFruitNotGround) :=
 <a id="james_warrants"></a>
 **`james_warrants`**
 
-**Where each position rests on someone's word alone** (`Testimony.Logic.Warrant`):
-each of Trent's four readings, at the reading itself — Trent's word; the Reformed
+**Where each position rests on someone's word alone** (`Testimony.Logic.Warrant`).
+Trent's reading of the reward texts rests on no one's word alone; the renewal
+reading does at one claim, Trent's, that James's δικαιόω is Paul's — for Paul's
+word as renewal it has VanLandingham's lexical case. Otherwise, each of Trent's
+four readings, at the reading itself — Trent's word; the Reformed
 and the two readings of the Greek, at the principle that the original outweighs
 any translation — the word of Pius XII and of Westminster alike. James's word,
 James's faith and the Reformed harmony, which now derives "fruit, not ground"
@@ -12009,7 +12267,9 @@ theorem james_warrants : jamesLexicalCase.restingOnAuthority = [] ∧
     trentOnRevelation.restingOnAuthority = [Claim.rev22_11BeJustifiedStill] ∧
     trentOnSirach.restingOnAuthority = [Claim.sir18_22BeJustifiedToDeath] ∧
     revelationTextCase.restingOnAuthority = [Claim.originalTextDecides] ∧
-    sirachTextCase.restingOnAuthority = [Claim.originalTextDecides]
+    sirachTextCase.restingOnAuthority = [Claim.originalTextDecides] ∧
+    trentOnReward.restingOnAuthority = [] ∧
+    renewalOnTheWord.restingOnAuthority = [Claim.jamesUsesDikaioAsPaul]
 -- axioms: propext
 ```
 
@@ -12235,285 +12495,714 @@ theorem pius_reading_rests_on_authority :
 
 A step is rated `disputed` when someone dissents from it. The reader's question
 is the next one: **is the dissent an argument, or only a disagreement?** This
-module asks it of the Roman Catholic dissents from two steps of the Reformed
-reading of James, using the checks of `Testimony.Logic.Credibility`: a credible
-dissent is consistent, denies the claim, grants the step's grounds, argues its
-denial by a step of its own rather than asserting it, and rests its grounds on
-what a stated standard admits. The **evidence** standard admits Scripture and
-evidence anyone can check; the **tradition** standard also admits a council's
-or a confession's word. Every result names the standard it holds under.
+module asks it of every dissent the library encodes from two steps of the
+Reformed reading of James, using the checks of `Testimony.Logic.Credibility`. A
+credible dissent:
 
-### What the checks find
+- is consistent;
+- denies the claim;
+- grants the step's grounds;
+- argues its denial by a step of its own, rather than asserting it;
+- rests its grounds on what a stated standard admits.
 
-**Works as fruit, not ground** (`fruitLine`, from Westminster's proof texts).
-Two dissents are encoded, and both are argued.
+There are two standards, and every result is computed under both. The
+**evidence** standard admits Scripture and evidence anyone can check; the
+**tradition** standard also admits a council's or a confession's word.
 
-- Trent's canon 24, applied to James 2:24: the works by which a person is
-  justified are a cause of the increase of justification. It is argued, and it
-  grants Westminster's texts — but the claim that works cause the increase rests
-  on the council's word alone. So it is a credible critique under the tradition
-  standard and not under the evidence standard
-  (`canon24_credible_under_tradition`, `canon24_rests_on_the_council`). Were it
-  the only dissent, the step's rating would turn on the authority question
-  (`canon24_alone_turns_on_authority`).
-- Trent's chapter 16, from the texts it quotes for the reward of good works
-  (1 Corinthians 15:58, Hebrews 6:10, Hebrews 10:35, 2 Timothy 4:8): what God
-  rewards is not merely fruit. Its grounds are Scripture, which Westminster
-  grants too (XVI.6); its step is Trent's reading of them, which the Reformed
-  deny. It is a credible critique under **both** standards
-  (`reward_credible_under_evidence`).
+### James's word: how a rating moves
 
-So the step is **disputed under both standards**, whatever the breadth of its
-support (`fruit_step_disputed`). That is a result against the Reformed side, and
-the page reports it: the dissent that keeps the step disputed is not an appeal
-to Trent's authority but Trent's reading of Scripture, and it is answered, if
-at all, by a better reading of the same texts — a step-against-step contest
-that a hearing, not this check, decides.
+The lexical step reads James's δικαιόω as the declarative sense the word has
+outside Paul (`jamesLexicalLine`). Two dissents from it are encoded.
 
-**James's word** (`jamesLexicalLine`: δικαιόω does not denote the increase of
-justice). The encoded dissent, Trent's reading of the word, is not an argument
-against the step: it holds that James's δικαιόω denotes the increase as a
-premise, and that premise alone denies the step's conclusion
-(`trent_on_the_word_is_asserted`). Against the register as encoded, the step's
-computed rating is its support (`word_register_leaves_support`).
+- **Trent's reading of the word** holds the increase of justice as a premise:
+  a disagreement, not a critique, under any standard.
+- **The renewal reading** argues it. Paul's δικαιόω denotes renewal, as
+  VanLandingham argues from the lexicon and Augustine glossed it; James's word
+  is Paul's; and James says Abraham was justified by works after Genesis 15:6.
+  This is the strongest dissent the library has found, and it is a critique —
+  but one of its grounds, that James's word is Paul's, rests on Trent's word
+  alone (chapter 10). No exegete's statement of it has been verified.
+
+So the step's rating turns on the authority question, and the page says so
+(`lexical_step_ratings`). Under the evidence standard its support stands at
+`wellSupported`, because every encoded dissent fails, the strongest among them.
+Under the tradition standard it is `disputed` by the renewal reading. Before the
+renewal reading was encoded, the same computation withheld any rating above
+`disputed` under both standards, because the strongest dissent was missing
+(`lexical_step_before_the_steelman`). Encoding it is what licenses the higher
+rating, and only where it fails.
+
+### Works as fruit, not ground
+
+Two dissents from Westminster's step are encoded, and both are argued.
+
+- **Canon 24, applied to James 2:24**: works cause the increase of
+  justification. The claim rests on the council's word alone, so it is a
+  critique under the tradition standard only.
+- **Chapter 16, from the reward texts** (1 Corinthians 15:58, Hebrews 6:10,
+  Hebrews 10:35, 2 Timothy 4:8): what God rewards is not merely fruit. Its
+  grounds are Scripture, which Westminster grants too (XVI.6); the denial is
+  Trent's reading of them.
+
+So the step is disputed under both standards (`fruit_step_ratings`). That is a
+result against the Reformed side, and it is reported as one.
+
+### The hearing under each standard
+
+Which dissents are critiques decides who is heard, and how each step is weighed.
+The hearing under a standard (`Testimony.Logic.Register`) is the James dispute
+(`jamesDispute`) among every party that is not a dissent and every dissent that
+is credible under the standard, with each rated step weighed at its computed
+rating under that standard. So the dissents heard and the ratings weighed come
+from one register, and the hearing's verdict and the step's rating cannot
+disagree about the standard.
+
+- **What James's δικαιόω denotes turns on the standard**
+  (`james_word_turns_on_the_standard`). Under the evidence standard the hearing
+  forces James's word, as the full dispute does: the renewal reading is not
+  heard. Under the tradition standard it is heard, the lexical step is weighed at
+  `disputed`, and the question is contested — James's word and the renewal
+  reading each survive, and neither is forced.
+- **Whether works are fruit and not ground is contested under both standards**
+  (`fruitContestedUnder`). The Reformed harmony and Trent's
+  reading of the reward texts each survive, and neither is forced.
+
+In both, the register's rating and the hearing's verdict agree: a step rated
+`disputed` under a standard is contested in the hearing under it, and the step
+whose support stands is forced.
+
+The full dispute still weighs every step at its *cited* rating. For the lexical
+step that is `wellSupported`, its computed rating under the evidence standard;
+under the tradition standard the hearing, not the full dispute, is the coherent
+result. Making every dispute weigh computed ratings is phase two of the design
+(`docs/src/computed-ratings.md`).
 
 ### What this does not show
 
-It does not show that the lexical step deserves a rating above `disputed`. A
-rating computed from the dissents that are encoded is only as good as those
-dissents, and the strongest one against this step is not yet encoded: that
-James uses δικαιόω as Paul does, and that Paul's denotes renewal, as Augustine
-read it. Until that dissent is written with its own grounds and checked, the
-steelman rule (`docs/src/computed-ratings.md`) withholds a computed rating
-above `disputed`, and the step keeps the rating it is cited at.
+A credible dissent does not show the step wrong, and an answered one does not
+show it right. Credibility says the dispute is a dispute between arguments;
+which prevails is what the hearing computes, from the ratings each side rests
+on.
 
-Nor does a credible dissent show the step wrong. It shows that the dispute is
-a dispute between arguments. Which one prevails is what a hearing computes.
+#### The dissents, assessed
 
-#### Trent on the reward of works
+<a id="canon24Assessment"></a>
+**`canon24Assessment`**
 
-<a id="trentRewardSource"></a>
-**`trentRewardSource`**
+**Canon 24, against "fruit, not ground"**: argued, and granting
+Westminster's proof texts. It asserts that good works are a cause of the
+increase of justification on the council's word alone, so it is a critique
+under the tradition standard and not under the evidence standard.
 
-Trent's step from the reward texts to "works are not merely fruit": eternal
-life is "a reward to be faithfully rendered to their good works and merits"
-(Session VI, ch. 16), and the good works of the justified truly merit it
-(canon 32). Rated `disputed`: Westminster grants that God rewards the good works
-of believers and holds the reward to be of grace, given to works accepted in
-Christ and not earned by them (XVI.5, XVI.6).
+**Dissent:** *Trent, canon 24*, against *Works as fruit (Westminster XVI.2, XVI.5, and its proofs)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
 
-```lean
-def trentRewardSource : Source :=
-  {
-    primary :=
-      Reference.work Bib.tannerDecrees
-        (Bib.Locus.sectionRef "Trent, Session VI (1547), ch. 16, canon 32"),
-    supporting :=
-      [Reference.work Bib.westminsterConfession
-          (Bib.Locus.sectionRef "XVI.5, XVI.6")],
-    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
-```
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✘ no | Good works are a cause of the increase of justification, not merely its fruits |
+| tradition | ✔ yes | — |
 
-<a id="trentRewardLine"></a>
-**`trentRewardLine`** — The reward of works (Trent, Session VI, ch. 16)
+<a id="rewardAssessment"></a>
+**`rewardAssessment`**
 
-**The reward of works, as Trent reads it**: God rewards the labor of
-believers (1 Corinthians 15:58, Hebrews 6:10, Hebrews 10:35, 2 Timothy 4:8); so
-works are not merely the fruit of justification.
+**Chapter 16, against "fruit, not ground"**: argued from the reward texts,
+which are Scripture and which Westminster grants. It is a critique under both
+standards.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{103} \\
-\text{(2)} \quad &amp; P_{103} \rightarrow \lnot P_{21} \\[4pt]
-\vdash \quad &amp; \lnot P_{21}
-\end{aligned}
-\]
-</div>
+**Dissent:** *Trent, Session VI, ch. 16*, against *Works as fruit (Westminster XVI.2, XVI.5, and its proofs)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
 
-<a id="trentOnReward"></a>
-**`trentOnReward`** — The reward of works (Trent, Session VI, ch. 16)
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✔ yes | — |
+| tradition | ✔ yes | — |
 
-Trent on the reward of works: what God rewards is not merely fruit.
+<a id="trentWordAssessment"></a>
+**`trentWordAssessment`**
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{103} \\
-\text{(2)} \quad &amp; P_{103} \rightarrow \lnot P_{21} \\[4pt]
-\vdash \quad &amp; \lnot P_{21}
-\end{aligned}
-\]
-</div>
+**Trent's reading of James's word, against the lexical step**: it holds that
+James's δικαιόω denotes the increase of justice as a premise, and that premise
+alone contradicts the step's conclusion. A disagreement, not a critique, under
+any standard.
 
-No premise here rests on scripture alone.
+**Dissent:** *Trent, Session VI, ch. 10*, against *James's word (δικαιόω, by the rule of least meaning)*. ✘ A disagreement, not a critique: what it asserts outright already contradicts the step's conclusion, so no step of its own argues it.
 
-#### The dissents
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✘ no | James's δικαιόω denotes the increase of the justice received |
+| tradition | ✘ no | — |
 
-<a id="canon24Dissent"></a>
-**`canon24Dissent`**
+<a id="renewalAssessment"></a>
+**`renewalAssessment`**
 
-**Canon 24's dissent from "fruit, not ground"**: Trent's reading of James
-2:24's works, set against the step Westminster draws from its proof texts.
+**The renewal reading, against the lexical step**: argued from Paul's word
+as renewal and James's word as Paul's, granting the lexical case's grounds. It
+is a critique under the tradition standard; under the evidence standard one of
+its grounds, that James's word is Paul's, rests on Trent's word alone.
 
-```lean
-def canon24Dissent : Dissent Claim :=
-  { claim := p Claim.worksAreFruitNotGround,
-    grounds := fruitLine.grounds,
-    position := catholicJamesOnWorks }
-```
+**Dissent:** *The renewal reading*, against *James's word (δικαιόω, by the rule of least meaning)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
 
-<a id="rewardDissent"></a>
-**`rewardDissent`**
-
-**Chapter 16's dissent from "fruit, not ground"**: Trent's reading of the
-reward texts, set against the same step.
-
-```lean
-def rewardDissent : Dissent Claim :=
-  { claim := p Claim.worksAreFruitNotGround,
-    grounds := fruitLine.grounds,
-    position := trentOnReward }
-```
-
-<a id="fruitRegister"></a>
-**`fruitRegister`**
-
-The dissents from "fruit, not ground" the library encodes.
-
-```lean
-def fruitRegister : List (Dissent Claim) :=
-  [canon24Dissent, rewardDissent]
-```
-
-<a id="wordDissent"></a>
-**`wordDissent`**
-
-**Trent's dissent from the lexical step**: its reading of James's δικαιόω as
-the increase of justice, set against the step that reads it as a declaration.
-
-```lean
-def wordDissent : Dissent Claim :=
-  { claim := notP Claim.jamesJustifyDenotesIncrease,
-    grounds := jamesLexicalLine.grounds,
-    position := catholicJamesOnTheWord }
-```
-
-#### Canon 24
-
-<a id="canon24_credible_under_tradition"></a>
-**`canon24_credible_under_tradition`**
-
-**Canon 24's dissent is a credible critique under the tradition standard.**
-It is consistent; it denies that works are fruit and not ground; it grants
-Westminster's proof texts; it argues the denial by a step from James 2:24 rather
-than asserting it; and what it asserts rests on Scripture or on Trent's word.
-
-```lean
-theorem canon24_credible_under_tradition : Dissent.Credible Standard.tradition
-    canon24Dissent
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="canon24_rests_on_the_council"></a>
-**`canon24_rests_on_the_council`**
-
-**Under the evidence standard it is not, because one of its grounds rests on
-the council's word alone**: that good works are a cause of the increase of
-justification. James's words are Scripture; that claim is canon 24's.
-
-```lean
-theorem canon24_rests_on_the_council : Dissent.meets Standard.evidence
-    canon24Dissent = false ∧ catholicJamesOnWorks.restingOnAuthority =
-    [Claim.worksCauseIncreaseOfJustification]
--- axioms: propext
-```
-
-<a id="canon24_alone_turns_on_authority"></a>
-**`canon24_alone_turns_on_authority`**
-
-**Were canon 24 the only dissent, the step's rating would turn on the
-authority question**: a step supported at `wellSupported` would keep that
-rating under the evidence standard and be `disputed` under the tradition
-standard.
-
-```lean
-theorem canon24_alone_turns_on_authority : computedRating
-    Confidence.wellSupported Standard.evidence [canon24Dissent] =
-    Confidence.wellSupported ∧ computedRating Confidence.wellSupported
-    Standard.tradition [canon24Dissent] = Confidence.disputed
--- axioms: propext
-```
-
-#### Chapter 16
-
-<a id="reward_credible_under_evidence"></a>
-**`reward_credible_under_evidence`**
-
-**Chapter 16's dissent is a credible critique under the evidence
-standard.** Its only asserted ground is the reward texts, which are Scripture
-and which Westminster grants; the denial comes from Trent's reading of them, a
-step, not from a premise.
-
-```lean
-theorem reward_credible_under_evidence : Dissent.Credible Standard.evidence
-    rewardDissent
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="reward_credible_under_tradition"></a>
-**`reward_credible_under_tradition`**
-
-**And so under the tradition standard**, which admits all the evidence
-standard does.
-
-```lean
-theorem reward_credible_under_tradition : Dissent.Credible Standard.tradition
-    rewardDissent
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="fruit_step_disputed"></a>
-**`fruit_step_disputed`**
-
-**"Fruit, not ground" is disputed under both standards, whatever its
-support.** Trent's reading of the reward texts is a credible critique on
-Scripture's own ground, so the computed rating is `disputed` under the evidence
-standard as under the tradition standard.
-
-```lean
-theorem fruit_step_disputed : ∀ (std : Standard) (support : Confidence),
-    computedRating support std fruitRegister = Confidence.disputed
--- axioms: propext
-```
-
-#### James's word
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✘ no | James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians |
+| tradition | ✔ yes | — |
 
 <a id="trent_on_the_word_is_asserted"></a>
 **`trent_on_the_word_is_asserted`**
 
-**Trent's reading of James's word is asserted, not argued, against the
-lexical step.** What it asserts outright includes that James's δικαιόω denotes
-the increase of justice, and that alone contradicts the step's conclusion: no
-step of its own is needed to reach the denial.
+**Trent's reading of James's word is a disagreement, not a critique.** What
+it asserts outright includes the increase of justice, which alone contradicts the
+lexical step's conclusion: no step of its own is needed to reach its denial.
 
 ```lean
-theorem trent_on_the_word_is_asserted : ¬Satisfiable (wordDissent.asserted ++
-    [wordDissent.claim])
+theorem trent_on_the_word_is_asserted : trentWordAssessment.findings.kind =
+    Findings.Kind.asserted ∧ ∀ (s : Standard), ¬Dissent.Credible s
+    trentWordAssessment.dissent
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="word_register_leaves_support"></a>
-**`word_register_leaves_support`**
+#### The steps, rated
 
-**Against the register as encoded, the lexical step's computed rating is its
-support, under either standard.** This is a fact about the encoded register,
-not a licence: the strongest dissent from this step is not yet encoded (see the
-module note), and until it is, the steelman rule withholds a rating above
+<a id="fruitStep"></a>
+**`fruitStep`**
+
+**"Works are fruit, not ground", rated by its register**: canon 24's
+dissent and chapter 16's. Chapter 16's is the strongest known: it argues from
+Scripture that both sides grant.
+
+**The rating, computed.** *Works as fruit (Westminster XVI.2, XVI.5, and its proofs)* is cited at *disputed* ([`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5). Dissents encoded: *Trent, canon 24*, *Trent, Session VI, ch. 16*. The strongest known: *Trent, Session VI, ch. 16*.
+
+| Standard | Rating | Why |
+|---|---|---|
+| evidence | **disputed** | a credible critique: Trent, Session VI, ch. 16 |
+| tradition | **disputed** | a credible critique: Trent, canon 24; Trent, Session VI, ch. 16 |
+
+<a id="fruit_step_ratings"></a>
+**`fruit_step_ratings`**
+
+**"Fruit, not ground" is disputed under both standards.** Under the evidence
+standard, by chapter 16's reading of the reward texts; under the tradition
+standard, by that and by canon 24. Whatever the step's support, a credible
+critique on Scripture's own ground keeps it disputed.
+
+```lean
+theorem fruit_step_ratings : fruitStep.ratings = [(Standard.evidence,
+    Computed.disputedBy ["Trent, Session VI, ch. 16"]), (Standard.tradition,
+    Computed.disputedBy ["Trent, canon 24", "Trent, Session VI, ch. 16"])]
+-- axioms: propext
+```
+
+<a id="lexicalStep"></a>
+**`lexicalStep`**
+
+**James's word, rated by its register**: Trent's reading of the word, and
+the renewal reading — the strongest known dissent, which argues the increase
+from Paul's word instead of asserting it.
+
+**The rating, computed.** *James's word (δικαιόω, by the rule of least meaning)* is cited at *well supported* ([`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)). Dissents encoded: *Trent, Session VI, ch. 10*, *The renewal reading*. The strongest known: *The renewal reading*.
+
+| Standard | Rating | Why |
+|---|---|---|
+| evidence | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
+| tradition | **disputed** | a credible critique: The renewal reading |
+
+<a id="lexical_step_ratings"></a>
+**`lexical_step_ratings`**
+
+**The lexical step's rating turns on the authority question.** Under the
+evidence standard its support stands at `wellSupported`: every encoded dissent
+fails a check, the strongest known among them, because the renewal reading's
+claim that James's word is Paul's rests on Trent alone. Under the tradition
+standard, which admits Trent's word, the renewal reading is a credible critique
+and the step is `disputed`.
+
+```lean
+theorem lexical_step_ratings : lexicalStep.ratings = [(Standard.evidence,
+    Computed.stands Confidence.wellSupported), (Standard.tradition,
+    Computed.disputedBy ["The renewal reading"])]
+-- axioms: propext
+```
+
+<a id="lexical_step_before_the_steelman"></a>
+**`lexical_step_before_the_steelman`**
+
+**Before the steelman was encoded, no rating above `disputed` was licensed.**
+With only Trent's reading of the word in the register, no dissent is credible,
+but the strongest known one is missing, so the rating is withheld under both
+standards. Encoding the renewal reading is what moves it: to `wellSupported`
+under the evidence standard, and to `disputed` under the tradition standard.
+
+```lean
+theorem lexical_step_before_the_steelman : (have __src := lexicalStep;
+ { step
+    := __src.step, support := __src.support, register := [trentWordAssessment]
+    }).ratings =
+ [(Standard.evidence, Computed.withheld),
+    (Standard.tradition, Computed.withheld)]
+-- axioms: propext
+```
+
+#### The hearing under each standard
+
+<a id="jamesRegister"></a>
+**`jamesRegister`**
+
+**The James dispute's register**: each party entered as a dissent from a step
+of the Reformed reading, assessed, and the two steps they are rated against. The
+other parties hold those steps, or are readings of texts answered by the texts
+themselves.
+
+```lean
+def jamesRegister : Register jamesDispute :=
+  {
+    assessmentOf := fun x =>
+      match x with
+      | JamesParty.trentOnTheWord =>
+        some trentWordAssessment
+      | JamesParty.trentOnWorks =>
+        some canon24Assessment
+      | JamesParty.trentOnReward =>
+        some rewardAssessment
+      | JamesParty.renewalOnTheWord =>
+        some renewalAssessment
+      | x => none,
+    ownPosition := jamesRegister._proof_1,
+    steps := [fruitStep, lexicalStep] }
+```
+
+<a id="ratedStrength"></a>
+**`ratedStrength`**
+
+Each party's weakest link, weighed at a standard's ratings: as cited, except
+that under the tradition standard James's word is weighed as `disputed`, its
+computed rating there.
+
+```lean
+def ratedStrength : Standard → JamesParty → ℕ :=
+  fun x x_1 =>
+    match x, x_1 with
+    | Standard.tradition, JamesParty.lexical => 0
+    | x, i => jamesPartyStrength i
+```
+
+<a id="rerated_strength"></a>
+**`rerated_strength`**
+
+Each party's weakest link, as the re-rated package computes it.
+
+```lean
+theorem rerated_strength : ∀ (s : Standard) (i : JamesParty),
+    ((jamesRegister.rerated s).node i).strength = ratedStrength s i
+-- axioms: propext, Quot.sound
+```
+
+<a id="ratedDefeats"></a>
+**`ratedDefeats`**
+
+Who defeats whom at a standard's ratings: under the evidence standard, as in
+the full dispute; under the tradition standard, also Trent's reading of the word
+and the renewal reading each defeat James's word, now that it is weighed as
 `disputed`.
 
 ```lean
-theorem word_register_leaves_support : ∀ (std : Standard) (support :
-    Confidence), computedRating support std [wordDissent] = support
--- axioms: propext
+def ratedDefeats : Standard → JamesParty → JamesParty → Prop :=
+  fun x x_1 x_2 =>
+    match x, x_1, x_2 with
+    | Standard.tradition, JamesParty.trentOnTheWord,
+      JamesParty.lexical => True
+    | Standard.tradition, JamesParty.renewalOnTheWord,
+      JamesParty.lexical => True
+    | x, i, j => jamesPartyDefeats i j
+```
+
+<a id="instDecidableRelJamesPartyRatedDefeats"></a>
+**`instDecidableRelJamesPartyRatedDefeats`**
+
+The table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelJamesPartyRatedDefeats : (s : Standard) → DecidableRel
+    (ratedDefeats s)
+```
+
+<a id="rerated_defeats"></a>
+**`rerated_defeats`**
+
+**Who defeats whom at each standard's ratings**, all 121 pairs under each
+standard, computed from the parties' premises and the re-rated inferences and
+checked by the kernel.
+
+```lean
+theorem rerated_defeats : ∀ (s : Standard) (i j : JamesParty),
+    (jamesRegister.rerated s).defeats i j ↔ ratedDefeats s i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="ratedFinite"></a>
+**`ratedFinite`**
+
+The dispute at a standard's ratings, in the form the verdict solver computes
+with.
+
+```lean
+def ratedFinite : (s : Standard) → Solver.Finite (jamesRegister.rerated
+    s).defeats :=
+  fun s =>
+    { parties := jamesFinite.parties,
+      complete := ratedFinite._proof_1,
+      defeats := fun i j => decide (ratedDefeats s i j),
+      spec := ⋯ }
+```
+
+<a id="jamesUnderEvidence"></a>
+**`jamesUnderEvidence`**
+
+The hearing under the evidence standard.
+
+```lean
+def jamesUnderEvidence : Dispute Claim { i // jamesRegister.admits
+    Standard.evidence i } :=
+  jamesRegister.hearing Standard.evidence
+```
+
+<a id="jamesUnderTradition"></a>
+**`jamesUnderTradition`**
+
+The hearing under the tradition standard.
+
+```lean
+def jamesUnderTradition : Dispute Claim { i // jamesRegister.admits
+    Standard.tradition i } :=
+  jamesRegister.hearing Standard.tradition
+```
+
+<a id="jamesUnderFinite"></a>
+**`jamesUnderFinite`**
+
+The hearing under a standard, in the form the verdict solver computes with.
+
+```lean
+def jamesUnderFinite : (s : Standard) → Solver.Finite fun i j =>
+    (jamesRegister.rerated s).defeats ↑i ↑j :=
+  fun s =>
+    (ratedFinite s).restrict
+      (jamesRegister.admits s)
+```
+
+<a id="jamesUnderEvidence_defeats"></a>
+**`jamesUnderEvidence_defeats`**
+
+**Who defeats whom in the hearing under the evidence standard**: as in the
+full dispute, among the parties heard.
+
+```lean
+theorem jamesUnderEvidence_defeats : ∀ (i j : { i // jamesRegister.admits
+    Standard.evidence i }), jamesUnderEvidence.defeats i j ↔ ratedDefeats
+    Standard.evidence ↑i ↑j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="jamesUnderTradition_defeats"></a>
+**`jamesUnderTradition_defeats`**
+
+**Who defeats whom in the hearing under the tradition standard**: James's
+word, weighed as `disputed`, and the renewal reading defeat each other.
+
+```lean
+theorem jamesUnderTradition_defeats : ∀ (i j : { i // jamesRegister.admits
+    Standard.tradition i }), jamesUnderTradition.defeats i j ↔ ratedDefeats
+    Standard.tradition ↑i ↑j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="underEvidenceSettled"></a>
+**`underEvidenceSettled`**
+
+How the hearing under the evidence standard is settled: James's word,
+James's faith and the Greek of both verses come first; Trent's Latin readings
+fall to the Greek; the Reformed harmony and chapter 16's reading of the reward
+texts defeat each other. Canon 24, the renewal reading and Trent's reading of the
+word are not heard.
+
+**What the dispute forces is exactly *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek*.**
+
+- Stage 1: *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek*.
+  - *James's word (δικαιόω, by the rule of least meaning)* is defeated by nothing.
+  - *James's faith (the faith James calls dead)* is defeated by nothing.
+  - *Revelation 22:11, in the Greek* is defeated by nothing.
+  - *Sirach 18:22, in the Greek* is defeated by nothing.
+- Nothing else is forced:
+  - *The reward of works (Trent, Session VI, ch. 16)* defeats *Harmonisation of James 2:24*, and nothing forced defeats *The reward of works (Trent, Session VI, ch. 16)*.
+  - *Revelation 22:11, in the Greek* defeats *Revelation 22:11, as Trent quotes it*, and nothing forced defeats *Revelation 22:11, in the Greek*.
+  - *Sirach 18:22, in the Greek* defeats *Sirach 18:22, as Trent quotes it*, and nothing forced defeats *Sirach 18:22, in the Greek*.
+  - *Harmonisation of James 2:24* defeats *The reward of works (Trent, Session VI, ch. 16)*, and nothing forced defeats *Harmonisation of James 2:24*.
+
+**What this rests on.** The reasons state 4 defeats and 40 absences of defeat, each a cell of the defeat table, [`jamesUnderEvidence_defeats`](#jamesUnderEvidence_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+
+<a id="underTraditionSettled"></a>
+**`underTraditionSettled`**
+
+How the hearing under the tradition standard is settled: James's faith and
+the Greek of both verses come first. James's word and the renewal reading defeat
+each other; so do the Reformed harmony and each of Trent's readings of what works
+do. Only Trent's reading of the word is not heard.
+
+**What the dispute forces is exactly *James's faith (the faith James calls dead)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek*.**
+
+- Stage 1: *James's faith (the faith James calls dead)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek*.
+  - *James's faith (the faith James calls dead)* is defeated by nothing.
+  - *Revelation 22:11, in the Greek* is defeated by nothing.
+  - *Sirach 18:22, in the Greek* is defeated by nothing.
+- Nothing else is forced:
+  - *James's word, read through Paul's (the renewal reading)* defeats *James's word (δικαιόω, by the rule of least meaning)*, and nothing forced defeats *James's word, read through Paul's (the renewal reading)*.
+  - *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*, and nothing forced defeats *James 2:24, read by canon 24*.
+  - *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*, and nothing forced defeats *Harmonisation of James 2:24*.
+  - *Revelation 22:11, in the Greek* defeats *Revelation 22:11, as Trent quotes it*, and nothing forced defeats *Revelation 22:11, in the Greek*.
+  - *Sirach 18:22, in the Greek* defeats *Sirach 18:22, as Trent quotes it*, and nothing forced defeats *Sirach 18:22, in the Greek*.
+  - *Harmonisation of James 2:24* defeats *The reward of works (Trent, Session VI, ch. 16)*, and nothing forced defeats *Harmonisation of James 2:24*.
+  - *James's word (δικαιόω, by the rule of least meaning)* defeats *James's word, read through Paul's (the renewal reading)*, and nothing forced defeats *James's word (δικαιόω, by the rule of least meaning)*.
+
+**What this rests on.** The reasons state 7 defeats and 42 absences of defeat, each a cell of the defeat table, [`jamesUnderTradition_defeats`](#jamesUnderTradition_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+
+<a id="renewal_holds_increase"></a>
+**`renewal_holds_increase`**
+
+The renewal reading holds that James's δικαιόω denotes the increase of
+justice.
+
+```lean
+theorem renewal_holds_increase : Entails (jamesDispute.node
+    JamesParty.renewalOnTheWord).premises (p
+    Claim.jamesJustifyDenotesIncrease)
+-- axioms: propext, Quot.sound
+```
+
+<a id="lexical_denies_increase"></a>
+**`lexical_denies_increase`**
+
+James's word denies it.
+
+```lean
+theorem lexical_denies_increase : Entails (jamesDispute.node
+    JamesParty.lexical).premises (∼p Claim.jamesJustifyDenotesIncrease)
+-- axioms: propext, Quot.sound
+```
+
+<a id="renewalHeard"></a>
+**`renewalHeard`**
+
+Why the renewal reading can be defended in the hearing under the tradition
+standard: it answers James's word itself, now that the two are rated alike.
+
+***James's word, read through Paul's (the renewal reading)* is accepted on some resolution.**
+
+- A position holding *James's faith (the faith James calls dead)*, *James's word, read through Paul's (the renewal reading)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* can be held.
+- None of *James's faith (the faith James calls dead)*, *James's word, read through Paul's (the renewal reading)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* defeats another, and each attack on them is answered from among them:
+  - *James's word (δικαιόω, by the rule of least meaning)* defeats *James's word, read through Paul's (the renewal reading)*, and *James's word, read through Paul's (the renewal reading)* defeats *James's word (δικαιόω, by the rule of least meaning)*.
+
+**What this rests on.** The reasons state 2 defeats and 39 absences of defeat, each a cell of the defeat table, [`jamesUnderTradition_defeats`](#jamesUnderTradition_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+
+<a id="lexicalHeard"></a>
+**`lexicalHeard`**
+
+Why James's word can be defended there: it answers the renewal reading
+itself.
+
+***James's word (δικαιόω, by the rule of least meaning)* is accepted on some resolution.**
+
+- A position holding *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* can be held.
+- None of *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* defeats another, and each attack on them is answered from among them:
+  - *James's word, read through Paul's (the renewal reading)* defeats *James's word (δικαιόω, by the rule of least meaning)*, and *James's word (δικαιόω, by the rule of least meaning)* defeats *James's word, read through Paul's (the renewal reading)*.
+
+**What this rests on.** The reasons state 2 defeats and 39 absences of defeat, each a cell of the defeat table, [`jamesUnderTradition_defeats`](#jamesUnderTradition_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+- *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
+  - Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)
+
+<a id="james_word_turns_on_the_standard"></a>
+**`james_word_turns_on_the_standard`**
+
+**What James's δικαιόω denotes turns on the standard, and the hearing and
+the rating agree.** Under the evidence standard the hearing forces James's word,
+with James's faith and the Greek of both verses: the renewal reading is not
+heard, because it rests on Trent's word that James's δικαιόω is Paul's. Under
+the tradition standard the renewal reading is heard, the lexical step is weighed
+at its computed rating there, `disputed`, and whether James's word denotes the
+increase of justice is contested: each side can be defended, and neither is
+forced.
+
+```lean
+theorem james_word_turns_on_the_standard : Framework.grounded
+    jamesUnderEvidence.defeats = Solver.toSet (Witness.listSub
+    (jamesRegister.admits Standard.evidence) [JamesParty.lexical,
+    JamesParty.faith, JamesParty.revelationText, JamesParty.sirachText]) ∧
+    Nonempty (Contested jamesUnderTradition (p
+    Claim.jamesJustifyDenotesIncrease))
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="under_tradition_forces"></a>
+**`under_tradition_forces`**
+
+**Under the tradition standard, what is forced is James's faith and the
+Greek of the two verses**, and no more.
+
+```lean
+theorem under_tradition_forces : Framework.grounded
+    jamesUnderTradition.defeats = Solver.toSet (Witness.listSub
+    (jamesRegister.admits Standard.tradition) [JamesParty.faith,
+    JamesParty.revelationText, JamesParty.sirachText])
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentOnReward_denies_fruit"></a>
+**`trentOnReward_denies_fruit`**
+
+Trent's reading of the reward texts denies that works are fruit and not
+ground.
+
+```lean
+theorem trentOnReward_denies_fruit : Entails (jamesDispute.node
+    JamesParty.trentOnReward).premises (∼p Claim.worksAreFruitNotGround)
+-- axioms: propext, Quot.sound
+```
+
+<a id="harmonyHeard"></a>
+**`harmonyHeard`**
+
+Why the Reformed harmony can be defended in a hearing: it answers chapter
+16's reading itself, and canon 24's where canon 24 is heard.
+
+```lean
+def harmonyHeard : (s : Standard) → Verdict (jamesRegister.hearing s)
+```
+
+<a id="rewardHeard"></a>
+**`rewardHeard`**
+
+Why chapter 16's reading of the reward texts can be defended in a hearing:
+it answers the Reformed harmony itself.
+
+```lean
+def rewardHeard : (s : Standard) → Verdict (jamesRegister.hearing s)
+```
+
+<a id="fruitContestedUnder"></a>
+**`fruitContestedUnder`**
+
+**Whether works are fruit and not ground is contested under every
+standard.** In the hearing under either standard, the Reformed harmony, which
+holds it, and chapter 16's reading of the reward texts, which denies it, can
+each be defended. The register's rating, `disputed` under both standards
+(`fruit_step_ratings`), and the hearing's verdict agree.
+
+```lean
+def fruitContestedUnder : (s : Standard) → Contested (jamesRegister.hearing s)
+    (p Claim.worksAreFruitNotGround)
 ```

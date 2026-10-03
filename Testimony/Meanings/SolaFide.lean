@@ -300,6 +300,7 @@ def means : Claim → Statement
     .opaque "Revelation 22:11 and Sirach 18:22 confirm the increase from the originals"
   | .originalTextDecides =>
     .opaque "What the original text does not say, a translation does not establish"
+  | .jamesUsesDikaioAsPaul => .sameSense .dikaioo (.passage james2_24) (.usage .paul)
   | .rewardTextsPromiseReward =>
     .opaque "God rewards the labor of believers (1 Cor 15:58; Heb 6:10; 10:35; 2 Tim 4:8)"
 
@@ -345,7 +346,7 @@ def all : List Claim :=
   , .trentQuotesTheVulgateJuridically, .doctrineToBeConfirmedFromOriginals
   , .latinTextsConfirmedFromOriginals, .ephesians2_10CreatedForGoodWorks
   , .james2_18ShowFaithByWorks, .romans6_22FruitToSanctification, .luke17_10UnworthyServants
-  , .rewardTextsPromiseReward ]
+  , .rewardTextsPromiseReward, .jamesUsesDikaioAsPaul ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -360,7 +361,7 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **Ninety-five of the hundred and eight are analysed.** Of the thirteen that
+/-- **Ninety-six of the hundred and nine are analysed.** Of the thirteen that
 are not, four are Pius XII's and Trent's claims about the Vulgate and one is the
 textual principle, whose content is a rule about texts and translations the
 vocabulary cannot yet state; the other eight are the narrative texts of the
@@ -368,7 +369,7 @@ thief and the tax collector, Galatians 1:6–9, Christ's command to baptise,
 Trent's "laver, or the desire thereof", Luke's law-observance, and the texts
 that promise a reward. Each needs a word the vocabulary lacks — a command, a
 curse, a disjunction, a story's outcome, a reward. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (95, 108) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (96, 109) := by decide
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
@@ -377,10 +378,13 @@ Matthew 3:11, three ways. Fifteen readings at six places; each pair is counted
 in both orders, so twenty-six ordered pairs. -/
 theorem contested_length : (HasMeanings.contested (α := Claim)).length = 26 := by decide
 
-/-- **Thirteen claims turn on δικαιόω**: the six Pauline texts that use it, the
-lexical case and Trent's reading of the word, Augustine's gloss, the verdict and
-the tax collector of Luke 18, James 2:24, and the claim that James uses it
-otherwise. -/
-theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 20 := by decide
+/-- **Twenty-one claims turn on δικαιόω**: six Pauline texts that use it or
+name renewal beside it; the forensic reading of Paul's word, the renewal reading,
+and Augustine's gloss; the verdict and the tax collector of Luke 18; James
+2:21–25, James 2:24, and whether 2:24 is compatible with Paul; the word outside
+Paul, Trent's reading of James's word, and the claim that James's word is
+Paul's; and Revelation 22:11 and Sirach 18:22, each in the Latin and in the
+Greek. -/
+theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 21 := by decide
 
 end Testimony.Meanings.SolaFide

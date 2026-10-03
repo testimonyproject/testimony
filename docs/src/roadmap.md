@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **177 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **179 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -143,7 +143,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `trent_as_the_inspired_text_contradicts_pius` | `¬Satisfiable romeOnTheInspiredText` | **Trent's Revelation 22:11, read as what its inspired author wrote, cannot be held with Pius XII.** The original "has more authority and greater weight than any even the very best … |
 | `pius_reading_is_consistent` | `Satisfiable piusOnTrentsVulgate.premises` | **Read as Pius XII reads Trent's decree on the Vulgate, Rome is consistent.** Trent quoting the Vulgate as juridically authentic, the Vulgate free from error in faith and morals, … |
 | `pius_finds_no_confirmation` | `Establishes piusOnTrentsVulgate` | **On Pius XII's own terms, the two Latin texts do not confirm the increase of justification from the originals.** He asks that a doctrine taught from the Vulgate be confirmed from … |
-| `fruit_step_disputed` | `∀ (std : Standard) (support : Confidence), computedRating support std fruitRegister = Confidence.disputed` | **"Fruit, not ground" is disputed under both standards, whatever its support.** Trent's reading of the reward texts is a credible critique on Scripture's own ground, so the … |
+| `fruit_step_ratings` | `fruitStep.ratings = [(Standard.evidence, Computed.disputedBy ["Trent, Session VI, ch. 16"]), (Standard.tradition, Computed.disputedBy ["Trent, canon 24", "Trent, Session VI, ch. 16"])]` | **"Fruit, not ground" is disputed under both standards.** Under the evidence standard, by chapter 16's reading of the reward texts; under the tradition standard, by that and by … |
+| `lexical_step_ratings` | `lexicalStep.ratings = [(Standard.evidence, Computed.stands Confidence.wellSupported), (Standard.tradition, Computed.disputedBy ["The renewal reading"])]` | **The lexical step's rating turns on the authority question.** Under the evidence standard its support stands at `wellSupported`: every encoded dissent fails a check, the … |
+| `james_word_turns_on_the_standard` | `Framework.grounded jamesUnderEvidence.defeats = Solver.toSet (Witness.listSub (jamesRegister.admits Standard.evidence) [JamesParty.lexical, JamesParty.faith, JamesParty.revelationText, JamesParty.sirachText]) ∧ Nonempty (Contested jamesUnderTradition (p Claim.jamesJustifyDenotesIncrease))` | **What James's δικαιόω denotes turns on the standard, and the hearing and the rating agree.** Under the evidence standard the hearing forces James's word, with James's faith and … |
 
 ### [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 
