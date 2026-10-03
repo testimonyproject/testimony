@@ -29,6 +29,7 @@ import Testimony.Logic.Burden
 import Testimony.Logic.Dilemma
 import Testimony.Logic.Contest
 import Testimony.Logic.Warrant
+import Testimony.Logic.Credibility
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin

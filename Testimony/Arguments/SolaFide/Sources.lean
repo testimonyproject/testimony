@@ -676,6 +676,23 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work westminsterConfession (.sectionRef "XVI.5")]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .rewardTextsPromiseReward =>
+    { label := "1 Cor 15:58; Heb 6:10; 10:35; 2 Tim 4:8: God rewards the labor of believers"
+    , kind := .textual
+      -- That God rewards it is common ground: Trent quotes these texts for it
+      -- (ch. 16), and Westminster grants that God is "pleased to accept and
+      -- reward" the good works of believers (XVI.6). What the reward makes of
+      -- the works is the dispute, and it is a step, not this premise.
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .verse ⟨.firstCorinthians, 15, 58⟩ }, { ref := .verse ⟨.hebrews, 6, 10⟩ }
+              , { ref := .verse ⟨.hebrews, 10, 35⟩ }, { ref := .verse ⟨.secondTimothy, 4, 8⟩ } ]
+        , supporting :=
+            [ .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 16")
+            , .work westminsterConfession (.sectionRef "XVI.6") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .james2_24NotByFaithAlone =>
     { label := "James 2:24 says a person is justified by works and not by faith alone"
     , kind := .textual

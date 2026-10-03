@@ -3,6 +3,7 @@ import Testimony.Meanings.SolaFide
 import Testimony.Arguments.SolaFide
 import Testimony.Arguments.SolaFide.James
 import Testimony.Logic.Contest
+import Testimony.Logic.Credibility
 
 /-!
 # Testimony.Articles.Howell2003 — an article, checked against the library
@@ -425,5 +426,25 @@ def faithDenialAnswered : DenialAnswered hearing (p .jamesFaithIsNotReformedFait
             Arguments.SolaFide.reformedJamesReading]))
     | sola q => exact absurd h (sola_does_not_deny q)
   indefensible i hi S hS := by simp at hi; subst hi; exact howell_indefensible S hS
+
+/-- **Howell's move, as a dissent from James's faith**: his position set against
+the step that concludes the faith James denies is not the Reformers'. -/
+def howellDissent : Dissent Claim :=
+  { claim := p .jamesFaithIsNotReformedFaith
+  , grounds := Arguments.SolaFide.jamesFaithLine.grounds
+  , position := howellCase }
+
+/-- **Howell's dissent is a disagreement, not a critique.** He holds that the
+faith James denies *is* the Reformers' as a premise — a bare denial, which his
+article asserts and argues from no text — and that premise alone contradicts
+the step's conclusion. He gives no reason the step's grounds fail to yield it. So under
+either standard the dissent is not credible (`Testimony.Logic.Credibility`),
+whatever weight his article carries otherwise. -/
+theorem howell_asserts_his_denial :
+    howellDissent.assertsDenial = true ∧
+      ¬ Satisfiable (howellDissent.asserted ++ [howellDissent.claim]) :=
+  ⟨by decide +kernel, Dissent.not_argued_of_check (by decide +kernel)⟩
+
+#print axioms howell_asserts_his_denial
 
 end Testimony.Articles.Howell2003
