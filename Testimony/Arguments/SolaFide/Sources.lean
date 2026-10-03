@@ -676,6 +676,20 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work westminsterConfession (.sectionRef "XVI.5")]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .jamesUsesDikaioAsPaul =>
+    { label := "James's δικαιόω has the sense Paul's has: the justification of Romans and " ++
+        "Galatians"
+    , kind := .linguistic
+      -- Trent reads it so: chapter 10 quotes James 2:24 for the increase of
+      -- "that justice received through the grace of Christ", the justice of
+      -- chapter 7, which it reads from Paul. No exegete's statement of the
+      -- claim has been verified, so it rests here on Trent's word alone.
+      -- `disputed`: the lexical case reads James's use as the declarative
+      -- sense the word has outside Paul (`dikaioIsDeclarativeOutsidePaul`).
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
   | .rewardTextsPromiseReward =>
     { label := "1 Cor 15:58; Heb 6:10; 10:35; 2 Tim 4:8: God rewards the labor of believers"
     , kind := .textual

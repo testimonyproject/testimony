@@ -114,6 +114,36 @@ def spare (b : Burden) : List String :=
 
 end Burden
 
+/-- A dissent, assessed, as a page shows it: the data of an `Assessment`
+(`Testimony.Logic.Credibility`), in words. -/
+structure Assessed where
+  /-- Who dissents. -/
+  dissenter : String
+  /-- What they dissent from. -/
+  against : String
+  /-- Whether the checks find a critique: an argued dissent, before any
+  standard is applied. -/
+  critique : Bool
+  /-- What kind of dissent it is, in a sentence. -/
+  kind : String
+  /-- Under each standard: its name, whether the dissent is credible under it,
+  and the claims it asserts that the standard does not admit, by their labels. -/
+  standards : List (String × Bool × List String)
+
+/-- A step's rating, computed from its register, as a page shows it: the data
+of a `RatedStep` (`Testimony.Logic.Credibility`), in words. -/
+structure Rated where
+  /-- The step. -/
+  step : String
+  /-- The citation that rates its support. -/
+  support : Source
+  /-- Every dissent encoded against it, by who dissents. -/
+  register : List String
+  /-- The strongest known dissent, if encoded. -/
+  steelman : Option String
+  /-- Under each standard: its name, the rating, and why, in a phrase. -/
+  ratings : List (String × Confidence × String)
+
 /-- A piece of a generated sentence. The renderers set each piece in their own
 medium: a party's name in italics, and a defeat with its verb linked to what
 explains it. -/
@@ -268,6 +298,10 @@ inductive Item (α : Type)
   /-- A dispute's graph, with the theorems proving its defeat, support and
   part-of tables (each empty if none was found). -/
   | graph (decl doc : String) (g : Graph) (defeatTable supportTable partTable : String)
+  /-- A dissent, assessed under every standard: an `Assessment`. -/
+  | assessed (decl doc : String) (a : Assessed)
+  /-- A step's rating, computed from its register: a `RatedStep`. -/
+  | rated (decl doc : String) (r : Rated)
 
 namespace Item
 

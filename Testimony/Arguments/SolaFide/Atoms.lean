@@ -442,6 +442,10 @@ inductive Claim
   work"; "your confidence, which has a great reward"; "the crown of
   righteousness, which the Lord, the righteous judge, will award to me". -/
   | rewardTextsPromiseReward
+  /-- James's δικαιόω has the sense Paul's has: the "justified" of James 2:24 is
+  the justification of Romans and Galatians, and not a second, declarative use
+  of the word. -/
+  | jamesUsesDikaioAsPaul
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

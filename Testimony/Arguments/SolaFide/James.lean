@@ -95,7 +95,13 @@ when none can.
 - **Can be defended, and not forced**: Trent's reading of what works do
   (`trent_on_works_defensible`, `trent_on_works_not_forced`), and, against it,
   the Reformed harmony. Whether works are only the fruit of justification is
-  contested, and the weighing confirms it (`worksContested`).
+  contested, and the weighing confirms it (`worksContested`). Trent's reading of
+  the reward texts (chapter 16, `trentRewardLine`) meets the harmony the same
+  way.
+- **Cannot be defended, at the cited ratings**: the renewal reading of James's
+  word (`renewalWordLine`), which James's word defeats. Under the tradition
+  standard it is a credible critique, and there the question is contested
+  (`Testimony.Arguments.SolaFide.Ratings`).
 
 So Trent's scriptural case for the increase of justification, weighed text by
 text, survives at one point only: James 2:24, read as a claim about what works
@@ -138,15 +144,24 @@ the harmony rests on Scripture now, not on the Confession's word — and the
 verdict did not: whether works are only fruit is still contested
 (`worksContested`).
 
-## What is not yet audited
+## What is audited, and how
 
-The steps of James's word and James's faith are rated `wellSupported` on the
-sources cited and on a search for a reader who grants their grounds and denies
-their conclusions; the search found the Latin tradition after Augustine denying
-the lexical premise itself, which is weighed in that premise's rating, and no
-one denying the step. A fuller audit, across the Catholic commentaries on James,
-is still to do, and a reader who grants the grounds and denies a conclusion would
-move that step to `disputed` and these verdicts with it.
+The steps of James's word and James's faith are cited at `wellSupported`. The
+lexical step's rating is now computed as well
+(`Testimony.Arguments.SolaFide.Ratings`). Its strongest known dissent, the
+renewal reading (`renewalWordLine`), reads James's word as Paul's and Paul's as
+renewal. It grants the step's grounds and argues its denial, but one of its
+grounds — that James's word is Paul's — rests on Trent's word alone. So the step
+stands at `wellSupported` under the evidence standard and is `disputed` under the
+tradition standard. This dispute weighs it at its cited rating, the first of
+these; the hearing under the tradition standard weighs it at the second, and
+there what James's word denotes is contested. A verified exegete holding that
+James's word is Paul's would make the renewal reading credible under both
+standards, and the step `disputed` under both.
+
+The faith step has no encoded dissent beyond Howell's, which asserts its denial
+(`Testimony.Articles.Howell2003`). A fuller audit, across the Catholic
+commentaries on James, is still to do.
 -/
 
 namespace Testimony.Arguments.SolaFide
@@ -209,6 +224,28 @@ def jamesHarmonySource : Source :=
   { primary := .work mooJames (.adLoc ⟨.james, 2, 24⟩)
   , supporting := [.work calvinInstitutes (.sectionRef "III.xvii.11")]
   , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- Trent's step from the reward texts to "works are not merely fruit": eternal
+life is "a reward to be faithfully rendered to their good works and merits"
+(Session VI, ch. 16), and the good works of the justified truly merit it
+(canon 32). Rated `disputed`: Westminster grants that God rewards the good works
+of believers and holds the reward to be of grace, given to works accepted in
+Christ and not earned by them (XVI.5, XVI.6). -/
+def trentRewardSource : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 16, canon 32")
+  , supporting := [.work westminsterConfession (.sectionRef "XVI.5, XVI.6")]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The renewal reading's step: from Paul's δικαιόω as renewal, James's word as
+Paul's, and James's "justified by works" after Genesis 15:6, to "James's δικαιόω
+denotes the increase of justice" (Trent, Session VI, ch. 10). Rated `disputed`:
+the lexical case grants James's words and denies the conclusion. -/
+def renewalWordSource : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")
+  , supporting := [.work vanLandinghamJudgment .whole]
+  , tradition := .romanCatholic
   , confidence := .disputed }
 
 /-! ### The lines -/
@@ -318,6 +355,35 @@ def sirachTextLine : Line Claim :=
   , delivers := notP .sir18_22BeJustifiedToDeath
   , inference := some textualSource }
 
+/-- **The reward of works, as Trent reads it**: God rewards the labor of
+believers (1 Corinthians 15:58, Hebrews 6:10, Hebrews 10:35, 2 Timothy 4:8); so
+works are not merely the fruit of justification. -/
+@[solaFideDefs]
+def trentRewardLine : Line Claim :=
+  { name := "The reward of works (Trent, Session VI, ch. 16)"
+  , grounds := [p .rewardTextsPromiseReward]
+  , step := p .rewardTextsPromiseReward ➝ notP .worksAreFruitNotGround
+  , delivers := notP .worksAreFruitNotGround
+  , inference := some trentRewardSource }
+
+/-- **James's word, read through Paul's** — the renewal reading: Paul's δικαιόω
+denotes the renewal of the inward man, as Augustine glossed it and VanLandingham
+argues from the lexicon; James uses the word as Paul does; and James says Abraham
+was justified by works at Genesis 22, after Genesis 15:6 had been spoken. So
+James's δικαιόω denotes the increase of the justice received. This is the
+strongest reading of the word against the lexical case that the library has
+found: it argues the increase from Paul's word rather than asserting it. -/
+@[solaFideDefs]
+def renewalWordLine : Line Claim :=
+  { name := "James's word, read through Paul's (the renewal reading)"
+  , grounds :=
+      [p .paulsJustifyDenotesRenewal, p .jamesUsesDikaioAsPaul, p .james2JustifiedByWorks]
+  , step :=
+      ⋀ [p .paulsJustifyDenotesRenewal, p .jamesUsesDikaioAsPaul, p .james2JustifiedByWorks]
+      ➝ p .jamesJustifyDenotesIncrease
+  , delivers := p .jamesJustifyDenotesIncrease
+  , inference := some renewalWordSource }
+
 /-! ### The positions -/
 
 /-- James's word: δικαιόω in James does not denote the increase of justice. -/
@@ -401,6 +467,17 @@ def revelationTextCase : ArgumentPackage Claim :=
 def sirachTextCase : ArgumentPackage Claim :=
   sirachTextLine.asPackage baseCite "Sirach 18:22 does not speak of growth in justification"
 
+/-- Trent on the reward of works: what God rewards is not merely fruit. -/
+@[solaFideDefs]
+def trentOnReward : ArgumentPackage Claim :=
+  trentRewardLine.asPackage baseCite "Works are not merely the fruit of justification"
+
+/-- The renewal reading of James's word: it denotes the increase of justice,
+because Paul's does and James's is Paul's. -/
+@[solaFideDefs]
+def renewalOnTheWord : ArgumentPackage Claim :=
+  renewalWordLine.asPackage baseCite "James's δικαιόω denotes the increase of justice"
+
 /-! ### Each position holds, and has a model -/
 
 /-- **The Reformed world of James**: every text as it reads, James's δικαιόω a
@@ -479,6 +556,18 @@ theorem sirachTextCase_establishes : Establishes sirachTextCase := by
 /-- `sirachTextCase`'s premises can all be true. -/
 theorem sirachTextCase_is_satisfiable : Satisfiable sirachTextCase.premises := by
   satisfied_by reformedJamesReading [solaFideDefs]
+/-- `trentOnReward` delivers its conclusion. -/
+theorem trentOnReward_establishes : Establishes trentOnReward := by
+  establish [solaFideDefs]
+/-- `trentOnReward`'s premises can all be true. -/
+theorem trentOnReward_is_satisfiable : Satisfiable trentOnReward.premises := by
+  satisfied_by tridentineJamesReading [solaFideDefs]
+/-- `renewalOnTheWord` delivers its conclusion. -/
+theorem renewalOnTheWord_establishes : Establishes renewalOnTheWord := by
+  establish [solaFideDefs]
+/-- `renewalOnTheWord`'s premises can all be true. -/
+theorem renewalOnTheWord_is_satisfiable : Satisfiable renewalOnTheWord.premises := by
+  satisfied_by tridentineJamesReading [solaFideDefs]
 
 /-! ### Strength -/
 
@@ -501,6 +590,10 @@ theorem trentOnSirach_strength : trentOnSirach.strength = 0 := by decide
 theorem revelationTextCase_strength : revelationTextCase.strength = 2 := by decide
 /-- Sirach 18:22 in Greek rests on nothing below `wellSupported`. -/
 theorem sirachTextCase_strength : sirachTextCase.strength = 2 := by decide
+/-- Trent on the reward of works rests on its reading of the texts, `disputed`. -/
+theorem trentOnReward_strength : trentOnReward.strength = 0 := by decide
+/-- The renewal reading rests on Paul's word as renewal, `disputed`. -/
+theorem renewalOnTheWord_strength : renewalOnTheWord.strength = 0 := by decide
 
 /-! ### The dispute -/
 
@@ -525,6 +618,10 @@ inductive JamesParty
   | revelationText
   /-- Sirach 18:22, in the Greek. -/
   | sirachText
+  /-- Trent on the reward of works: what God rewards is not merely fruit. -/
+  | trentOnReward
+  /-- The renewal reading: James's word is Paul's, and Paul's is renewal. -/
+  | renewalOnTheWord
 deriving DecidableEq
 
 /-- The package each party argues from. -/
@@ -539,6 +636,8 @@ def jamesPartyNode : JamesParty → ArgumentPackage Claim
   | .trentOnSirach => trentOnSirach
   | .revelationText => revelationTextCase
   | .sirachText => sirachTextCase
+  | .trentOnReward => trentOnReward
+  | .renewalOnTheWord => renewalOnTheWord
 
 /-- The dispute over James 2:24 and the increase of justification: every party's
 premises have a model, every party establishes its conclusion, and every party's
@@ -556,6 +655,8 @@ def jamesDispute : Dispute Claim JamesParty where
     | .trentOnSirach => trentOnSirach_is_satisfiable
     | .revelationText => revelationTextCase_is_satisfiable
     | .sirachText => sirachTextCase_is_satisfiable
+    | .trentOnReward => trentOnReward_is_satisfiable
+    | .renewalOnTheWord => renewalOnTheWord_is_satisfiable
   sound
     | .lexical => jamesLexicalCase_establishes
     | .faith => jamesFaithCase_establishes
@@ -566,6 +667,8 @@ def jamesDispute : Dispute Claim JamesParty where
     | .trentOnSirach => trentOnSirach_establishes
     | .revelationText => revelationTextCase_establishes
     | .sirachText => sirachTextCase_establishes
+    | .trentOnReward => trentOnReward_establishes
+    | .renewalOnTheWord => renewalOnTheWord_establishes
   rated i := by
     cases i <;> simp [solaFideDefs, Line.asPackage]
 
@@ -576,6 +679,9 @@ def jamesPartyDefeats : JamesParty → JamesParty → Prop
   | .trentOnWorks, .harmony => True
   | .revelationText, .trentOnRevelation => True
   | .sirachText, .trentOnSirach => True
+  | .harmony, .trentOnReward => True
+  | .trentOnReward, .harmony => True
+  | .lexical, .renewalOnTheWord => True
   | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
@@ -599,11 +705,16 @@ theorem jamesPartyNode_strength : ∀ i, (jamesPartyNode i).strength = jamesPart
   | .trentOnSirach => trentOnSirach_strength
   | .revelationText => revelationTextCase_strength
   | .sirachText => sirachTextCase_strength
+  | .trentOnReward => trentOnReward_strength
+  | .renewalOnTheWord => renewalOnTheWord_strength
 
-/-- **Who defeats whom**, all 81 pairs. James's word defeats Trent's reading of
-it, and the reading's reply fails. The Greek of Revelation 22:11 and of Sirach
-18:22 defeat Trent's Latin readings of them, and the replies fail. The Reformed
-harmony and Trent's reading of what works do defeat each other. Nothing else:
+/-- **Who defeats whom**, all 121 pairs. James's word defeats Trent's reading of
+it, and the reading's reply fails; it defeats the renewal reading too, whose
+reply fails for the same reason — it rests on Paul's word as renewal, rated
+`disputed`, against a case rated `wellSupported`. The Greek of Revelation 22:11
+and of Sirach 18:22 defeat Trent's Latin readings of them, and the replies fail.
+The Reformed harmony defeats, and is defeated by, both of Trent's readings of
+what works do: canon 24's, and chapter 16's from the reward texts. Nothing else:
 in particular, nothing in the dispute contradicts James's faith, and James's
 word does not touch Trent's reading of what works do, which grants the word
 and makes a claim about God's verdict instead.
@@ -620,7 +731,7 @@ theorem jamesDispute_defeats :
 def jamesFinite : Solver.Finite jamesDispute.defeats where
   parties :=
     [ .lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation
-    , .trentOnSirach, .revelationText, .sirachText ]
+    , .trentOnSirach, .revelationText, .sirachText, .trentOnReward, .renewalOnTheWord ]
   complete i := by cases i <;> decide
   defeats i j := decide (jamesPartyDefeats i j)
   spec i j := by rw [jamesDispute_defeats]; simp
@@ -637,7 +748,8 @@ def jamesWordsUnanswered : Verdict jamesDispute where
   finite := jamesFinite
   claim := .groundedExactly [[.lexical, .faith, .revelationText, .sirachText]]
     [ (.trentOnTheWord, .lexical), (.trentOnRevelation, .revelationText)
-    , (.trentOnSirach, .sirachText), (.harmony, .trentOnWorks), (.trentOnWorks, .harmony) ]
+    , (.trentOnSirach, .sirachText), (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
+    , (.trentOnReward, .harmony), (.renewalOnTheWord, .lexical) ]
   checked := by decide +kernel
 
 /-- **What James's words say, and what the Greek of Trent's other two texts says,
@@ -799,8 +911,11 @@ def worksContested : Contested jamesDispute (p .worksAreFruitNotGround) where
 
 /-! ### What each position rests on -/
 
-/-- **Where each position rests on someone's word alone** (`Testimony.Logic.Warrant`):
-each of Trent's four readings, at the reading itself — Trent's word; the Reformed
+/-- **Where each position rests on someone's word alone** (`Testimony.Logic.Warrant`).
+Trent's reading of the reward texts rests on no one's word alone; the renewal
+reading does at one claim, Trent's, that James's δικαιόω is Paul's — for Paul's
+word as renewal it has VanLandingham's lexical case. Otherwise, each of Trent's
+four readings, at the reading itself — Trent's word; the Reformed
 and the two readings of the Greek, at the principle that the original outweighs
 any translation — the word of Pius XII and of Westminster alike. James's word,
 James's faith and the Reformed harmony, which now derives "fruit, not ground"
@@ -814,7 +929,9 @@ theorem james_warrants :
     trentOnRevelation.restingOnAuthority = [.rev22_11BeJustifiedStill] ∧
     trentOnSirach.restingOnAuthority = [.sir18_22BeJustifiedToDeath] ∧
     revelationTextCase.restingOnAuthority = [.originalTextDecides] ∧
-    sirachTextCase.restingOnAuthority = [.originalTextDecides] := by
+    sirachTextCase.restingOnAuthority = [.originalTextDecides] ∧
+    trentOnReward.restingOnAuthority = [] ∧
+    renewalOnTheWord.restingOnAuthority = [.jamesUsesDikaioAsPaul] := by
   decide
 
 end Testimony.Arguments.SolaFide

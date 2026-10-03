@@ -470,6 +470,37 @@ def burden (b : Page.Burden) : String :=
     String.intercalate ", " (spare.map fun n => "\\emph{" ++ escape n ++ "}") ++
     ": an opponent never needs to reject it.\n")
 
+/-- A dissent, assessed under every standard: what kind it is, and under each
+standard whether it is credible, with what it rests on that the standard does
+not admit. -/
+def assessed (a : Page.Assessed) : String :=
+  "\\paragraph{Dissent.} \\emph{" ++ escape a.dissenter ++ "}, against \\emph{" ++
+    escape a.against ++ "}. " ++ (if a.critique then "\\textbf{A critique.} " else
+      "\\textbf{Not a critique.} ") ++ escape a.kind ++ "\n" ++
+  "\\begin{itemize}\n" ++
+  String.join (a.standards.map fun (s, ok, un) =>
+    "\\item Under the " ++ s ++ " standard: " ++
+      (if ok then "credible." else "not credible") ++
+      (if un.isEmpty then (if ok then "" else ".") else
+        "; it rests on what the standard does not accept: " ++
+          String.intercalate "; " (un.map escape) ++ ".") ++ "\n") ++
+  "\\end{itemize}\n"
+
+/-- A step's rating, computed from its register under every standard. -/
+def rated (r : Page.Rated) : String :=
+  "\\paragraph{The rating, computed.} \\emph{" ++ escape r.step ++ "} is cited at \\emph{" ++
+    confidence r.support.confidence ++ "} (" ++ source r.support ++ "). Dissents encoded: " ++
+    (if r.register.isEmpty then "none" else
+      String.intercalate ", " (r.register.map fun d => "\\emph{" ++ escape d ++ "}")) ++ ". " ++
+    (match r.steelman with
+      | some d => "The strongest known: \\emph{" ++ escape d ++ "}."
+      | none => "The strongest known dissent is not encoded.") ++ "\n" ++
+  "\\begin{itemize}\n" ++
+  String.join (r.ratings.map fun (s, c, why) =>
+    "\\item Under the " ++ s ++ " standard: \\textbf{" ++ confidence c ++ "} --- " ++
+      escape why ++ ".\n") ++
+  "\\end{itemize}\n"
+
 /-- One piece of a generated sentence. A defeat that a `Because` in the
 document explains names it. -/
 def seg (links : List Page.BecauseLink) : Page.Seg → String
@@ -625,6 +656,8 @@ def item [DecidableEq α] (order : List α) : Page.Item α → String
   | .verdict d doc v links table => declLabel d "" ++ prose doc ++ verdict v links table
   | .graph d doc g defeats supports parts =>
       declLabel d "" ++ prose doc ++ graph g defeats supports parts
+  | .assessed d doc a => declLabel d "" ++ prose doc ++ assessed a
+  | .rated d doc r => declLabel d "" ++ prose doc ++ rated r
 
 /-- One argument's body: its introductory prose, its legend, then every item in
 source order. The heading above it is the caller's, as the page title is in the

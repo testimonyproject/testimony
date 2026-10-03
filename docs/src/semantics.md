@@ -208,10 +208,11 @@ and denies its conclusion. That records that someone dissents, not whether the d
 argument or only "I disagree". [Computed ratings](./computed-ratings.md) sets out the design for
 telling them apart — five checks a dissent must pass to count as credible, under a stated standard
 of evidence — and its first phase is built. It finds that Howell's move is a disagreement, not a
-critique (`howell_asserts_his_denial`), while the James dispute's denial that works are fruit, not
-ground, stays credible under both standards (`fruit_step_disputed`). `Contested` and
-`DenialAnswered` remain the after-the-fact checks of whether a dissent survives the weighing: the
-Howell hearing shows one that does not (`faithDenialAnswered`), the James dispute one that does
+critique (`howell_asserts_his_denial`); that the James dispute's denial that works are fruit, not
+ground, stays credible under both standards (`fruit_step_ratings`); and that what James's δικαιόω
+denotes turns on the standard (`james_word_turns_on_the_standard`). `Contested` and
+`DenialAnswered` remain the checks of whether a dissent survives the weighing: the Howell hearing
+shows one that does not (`faithDenialAnswered`), the James dispute one that does
 (`worksContested`).
 
 ## What it would take to decide James

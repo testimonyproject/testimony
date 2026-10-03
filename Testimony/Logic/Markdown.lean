@@ -465,6 +465,31 @@ def graph (g : Page.Graph) (defeatTable supportTable partTable : String) : Strin
     | _ => " A party that both supports and defeats another is marked in the table.") ++
   "\n"
 
+/-- A dissent, assessed under every standard: what kind it is, and under each
+standard whether it is credible, with what it rests on that the standard does
+not admit. -/
+def assessed (a : Page.Assessed) : String :=
+  "**Dissent:** *" ++ escape a.dissenter ++ "*, against *" ++ escape a.against ++ "*. " ++
+    (if a.critique then "✔ " else "✘ ") ++ escape a.kind ++ "\n\n" ++
+  "| Standard | A credible critique? | Rests on what the standard does not accept |\n" ++
+  "|---|---|---|\n" ++
+  String.join (a.standards.map fun (s, ok, un) =>
+    "| " ++ s ++ " | " ++ (if ok then "✔ yes" else "✘ no") ++ " | " ++
+      (if un.isEmpty then "—" else String.intercalate "; " (un.map escape)) ++ " |\n")
+
+/-- A step's rating, computed from its register under every standard. -/
+def rated (r : Page.Rated) : String :=
+  "**The rating, computed.** *" ++ escape r.step ++ "* is cited at *" ++
+    confidence r.support.confidence ++ "* (" ++ source r.support ++ "). Dissents encoded: " ++
+    (if r.register.isEmpty then "none" else
+      String.intercalate ", " (r.register.map fun d => "*" ++ escape d ++ "*")) ++ ". " ++
+    (match r.steelman with
+      | some d => "The strongest known: *" ++ escape d ++ "*."
+      | none => "The strongest known dissent is not encoded.") ++ "\n\n" ++
+  "| Standard | Rating | Why |\n|---|---|---|\n" ++
+  String.join (r.ratings.map fun (s, c, why) =>
+    "| " ++ s ++ " | **" ++ confidence c ++ "** | " ++ escape why ++ " |\n")
+
 /-- Render one item against the page's atom ordering. -/
 def item [DecidableEq α] (order : List α) : Item α → String
   | .prose md => demote md ++ "\n"
@@ -502,6 +527,10 @@ def item [DecidableEq α] (order : List α) : Item α → String
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ verdict v links table
   | .graph d doc g defeats supports parts =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ graph g defeats supports parts
+  | .assessed d doc a =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ assessed a
+  | .rated d doc r =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ rated r
 
 /-- The body of a generated page: the legend, then every item in source order.
 

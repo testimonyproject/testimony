@@ -278,6 +278,12 @@ elab "derive_argument_bodies " tableName:ident : command => do
                 (Logic.ArgumentMap.view $(mkIdent n)) $(quote (tableFor info.type))
                 $(quote (tableIn supportTableOf info.type))
                 $(quote (tableIn partTableOf info.type)))
+          else if headIs ``Logic.Assessment then
+            `(Logic.Page.Item.assessed $(quote dname) $(quote doc)
+                (Logic.Assessment.view $(mkIdent n)))
+          else if headIs ``Logic.RatedStep then
+            `(Logic.Page.Item.rated $(quote dname) $(quote doc)
+                (Logic.RatedStep.view $(mkIdent n)))
           else if headIs ``Logic.Line then
             `(Logic.Page.Item.line $(quote dname) $(quote doc) $(mkIdent n))
           else if headIs ``Logic.Formula then
