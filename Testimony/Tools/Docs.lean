@@ -56,7 +56,10 @@ def arguments : List Argument :=
     , title := "The canonical witness — faith alone, from the texts all parties accept" }
   , { ns := `Testimony.Arguments.SolaScriptura
     , slug := "sola-scriptura"
-    , title := "Sola scriptura" } ]
+    , title := "Sola scriptura" }
+  , { ns := `Testimony.Arguments.SpiritBaptism
+    , slug := "spirit-baptism"
+    , title := "Spirit baptism — at conversion, after it, or in the sacraments" } ]
 
 /-- Namespaces every statement is spelled with, whichever argument it belongs
 to. An argument's own namespace is not listed here — it is taken from the

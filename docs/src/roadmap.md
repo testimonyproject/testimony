@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**5 arguments**, carrying **156 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **167 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -196,6 +196,22 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `mark7_forced_against_mens_commandments` | `Framework.grounded mensCommandmentsHearing.defeats = Solver.toSet (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7, Mark7Party.trentAsMensCommandments]) [Mark7Party.principle, Mark7Party.mark7])` | **Against Rome's tradition read as commandments of men, Mark 7's case is unopposed.** Heard against that reading alone, Mark 7's principle and Mark 7's case for sola scriptura are … |
 | `against_the_apostolic_word_only_the_principle_is_forced` | `Framework.grounded apostolicWordHearing.defeats = Solver.toSet (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7, Mark7Party.trentAsApostolicWord]) [Mark7Party.principle])` | **If Rome's tradition is the apostolic word, Mark 7 forces only its principle** — which that reading grants. |
 | `mark7_not_forced_against_the_apostolic_word` | `¬Framework.SkepticallyAccepted apostolicWordHearing.defeats ⟨Mark7Party.mark7, ⋯⟩` | **So, against the apostolic word, sola scriptura from Mark 7 is not forced.** A defensible position that cannot be enlarged holds Mark 7's principle together with Trent read as … |
+
+### [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
+
+| Result | Statement | What it claims |
+|---|---|---|
+| `conversionCase_establishes` | `Establishes conversionCase` | **Grant 1 Corinthians 12:13 read as Dunn and Stott read it, and every believer is baptized in the Spirit at conversion.** |
+| `pentecostalCase_establishes` | `Establishes pentecostalCase` | **Grant the Acts narratives as a pattern of empowerment, and a second Spirit baptism is to be sought.** |
+| `holinessCase_establishes` | `Establishes holinessCase` | **Grant that the second work of grace is the Spirit's baptism, and it is to be sought.** |
+| `sacramentalCase_establishes` | `Establishes sacramentalCase` | **Grant the Spirit given in water baptism and fully in confirmation, and the Spirit is given in the sacraments, not in an experience to be sought.** |
+| `spirit_baptism_forces_nothing` | `Framework.grounded spiritBaptismDispute.defeats = ∅` | **Nothing is forced.** Every view is in a standoff the dispute cannot resolve, and every weakest link is `disputed`, so no rating breaks a tie. |
+| `conversion_defensible` | `Framework.CredulouslyAccepted spiritBaptismDispute.defeats View.conversion` | **The conversion view can be defended**, with the sacramental view: some maximal defensible position — one no other party can join without losing that — holds both. |
+| `conversion_not_forced` | `¬Framework.SkepticallyAccepted spiritBaptismDispute.defeats View.conversion` | **Nor is it forced.** A maximal defensible position holds the Pentecostal and holiness views, and cannot hold the conversion view with them. |
+| `pentecostal_defensible` | `Framework.CredulouslyAccepted spiritBaptismDispute.defeats View.pentecostal` | **The Pentecostal view can be defended**, with the holiness view. |
+| `pentecostal_not_forced` | `¬Framework.SkepticallyAccepted spiritBaptismDispute.defeats View.pentecostal` | **Nor is it forced.** A maximal defensible position holds the conversion and sacramental views, and cannot hold the Pentecostal view with them. |
+| `holiness_defensible` | `Framework.CredulouslyAccepted spiritBaptismDispute.defeats View.holiness` | **The holiness view can be defended**, with the Pentecostal view. |
+| `sacramental_defensible` | `Framework.CredulouslyAccepted spiritBaptismDispute.defeats View.sacramental` | **The sacramental view can be defended**, with the conversion view. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -521,6 +537,23 @@ scriptura by its own route. This is the second time the pattern has appeared;
 the New Perspective does the same for sola fide. Both results come from the same
 discipline: encode a rival from a source that *holds* it, never from a
 description of it.
+
+**Spirit baptism, a question among Protestants, is an argument of its own**
+([#122]). At conversion (Dunn, Stott), after it (the Assemblies of God; the
+Church of the Nazarene), or in baptism and confirmation (Rome; Lutherans hold
+the first half): weighed as a dispute, nothing is forced
+(`spirit_baptism_forces_nothing`). The conversion and sacramental views can be
+held together against a second baptism to seek, the two subsequence views can be
+held together for one, and each camp can be defended and is not forced
+(`conversion_defensible`, `conversion_not_forced`, `pentecostal_defensible`,
+`pentecostal_not_forced`). It turns on the Acts narratives
+(`whatTheActsNarrativesAre`): read as a pattern, they meet the variety of Acts
+itself; the Pentecostal view cannot read them as transitions and keep its step
+to a second baptism. The holiness reading meets Wesley, who held the second work
+and declined to call it receiving the Holy Ghost, and the Nazarene seminary
+faculty, who keep entire sanctification and no longer hold the reading tenable.
+Tongues as initial evidence, and whether Paul and Luke mean the same by
+"baptized in the Spirit", are not yet encoded.
 
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no

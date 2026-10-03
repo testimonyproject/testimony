@@ -24,6 +24,7 @@
 - [Sola fide](./arguments/sola-fide.md)
 - [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 - [Sola scriptura](./arguments/sola-scriptura.md)
+- [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
 
 <!-- END GENERATED: lake exe argdoc -->
 
