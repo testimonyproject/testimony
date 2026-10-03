@@ -14,6 +14,7 @@
 - [Encoding arguments](./logic.md)
 - [Citations](./citations.md)
 - [Style guide](./style-guide.md)
+- [Meanings and articles (draft)](./semantics.md)
 
 # Arguments
 

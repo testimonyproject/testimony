@@ -34,4 +34,8 @@ import Testimony.Arguments.CanonicalWitness
 import Testimony.Arguments.SolaFide
 import Testimony.Arguments.SolaScriptura
 import Testimony.Arguments.SpiritBaptism
+import Testimony.Semantics.Grammar
+import Testimony.Semantics.Discourse
+import Testimony.Semantics.SolaFide
+import Testimony.Semantics.Howell
 import Testimony.Checks.Refutations
