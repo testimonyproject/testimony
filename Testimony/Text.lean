@@ -29,8 +29,12 @@ inductive Book
   | firstTimothy | secondTimothy | titus | philemon | hebrews | james
   | firstPeter | secondPeter | firstJohn | secondJohn | thirdJohn | jude
   | revelation
-  -- Both Testaments are complete for the 66-book Protestant canon; the
-  -- deuterocanonical books are not yet represented.
+  -- Deuterocanonical books, added as they are cited. Which canon holds a book
+  -- is a separate question (`Canon`): Trent cites Sirach as Scripture, and the
+  -- Protestant canon does not hold it.
+  | sirach
+  -- Both Testaments are complete for the 66-book Protestant canon; of the
+  -- deuterocanonical books, only those an argument cites are represented.
 deriving Repr, DecidableEq
 
 /-- Canonical boundaries differ by tradition. Results are always relative to a
@@ -143,6 +147,7 @@ def Book.abbrev : Book → String
   | .james => "Jas" | .firstPeter => "1 Pet" | .secondPeter => "2 Pet"
   | .firstJohn => "1 John" | .secondJohn => "2 John" | .thirdJohn => "3 John"
   | .jude => "Jude" | .revelation => "Rev"
+  | .sirach => "Sir"
 
 /-- A verse reference as a reader expects it: `Matt 2:1`. -/
 def Passage.render (p : Passage) : String :=

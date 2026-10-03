@@ -438,10 +438,15 @@ def baseCite : Claim → AtomMeta
         "Good works are the fruit and evidence of saving faith, not its ground"
     , kind := .theological
     , source :=
+      -- `disputed`: once weighed against Trent, the rating decides who prevails,
+      -- so it was audited. Trent anathematises exactly this — that good works
+      -- "are merely the fruits and signs of Justification obtained, but not a
+      -- cause of the increase thereof" (Session VI, canon 24). It was
+      -- `wellSupported` while no party denied it.
         { primary := .work westminsterConfession (.sectionRef "XI.2")
         , supporting := [.work calvinInstitutes (.sectionRef "III.xvi.1")]
         , tradition := .reformedProtestant
-        , confidence := .wellSupported } }
+        , confidence := .disputed } }
   | .james2_24Compatible =>
     { label := "James 2:24 is compatible with Paul, using ‘justify’ in a different sense"
     , kind := .interpretive
@@ -454,6 +459,141 @@ def baseCite : Claim → AtomMeta
             , .work calvinInstitutes (.sectionRef "III.xvii.11") ]
         , tradition := .reformedProtestant
         , confidence := .disputed } }
+  | .james2FaithWithoutWorksIsDead =>
+    { label := "James 2:14–26: faith without works cannot save, and is dead (2:17, 2:26)"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.james, 2, 14, 2, 26⟩ }]
+        , supporting := [.work mooJames (.adLoc james2_14), .work johnsonJames (.adLoc james2_14)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .james2JustifiedByWorks =>
+    { label := "James 2:21–25: Abraham justified by works at Genesis 22, fulfilling Genesis " ++
+        "15:6; Rahab justified by works"
+    , kind := .textual
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .range ⟨.james, 2, 21, 2, 25⟩ }, { ref := .verse ⟨.genesis, 15, 6⟩ }
+              , { ref := .range ⟨.genesis, 22, 9, 22, 12⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .dikaioIsDeclarativeOutsidePaul =>
+    { label := "Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote " ++
+        "making righteous"
+    , kind := .linguistic
+    , source :=
+      -- `wellSupported`, not `consensus`, as with Paul's word: the lexicon's
+      -- senses are declarative, and the texts plain — wisdom is "justified by
+      -- her works" (Matt 11:19), shown to be in the right. The Latin tradition
+      -- after Augustine, which reads the verb as "make righteous", denies it.
+        { primary := .work bdag (.sectionRef "s.v. δικαιόω")
+        , supporting :=
+            [ .scripture
+                [ { ref := .verse ⟨.deuteronomy, 25, 1⟩ }, { ref := .verse ⟨.matthew, 11, 19⟩ }
+                , { ref := .verse ⟨.luke, 7, 35⟩ } ] ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .jamesJustifyDenotesIncrease =>
+    { label := "James's δικαιόω denotes the increase of the justice received"
+    , kind := .linguistic
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .jamesFaithAloneIsDeadFaith =>
+    { label := "The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26"
+    , kind := .interpretive
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.james, 2, 14, 2, 26⟩ }]
+      -- `wellSupported`: James's own words join the two (2:17, 2:26), and Trent
+      -- reads them so — faith "unless hope and charity be added thereto" is the
+      -- faith of which "it is most truly said, that Faith without works is
+      -- dead" (Session VI, ch. 7). No reader was found who denies it.
+        , supporting :=
+            [ .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 7")
+            , .work mooJames (.adLoc james2_24) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .reformedFaithIsNoDeadFaith =>
+    { label := "The faith the Reformers say alone justifies is no dead faith, but works by love"
+    , kind := .historical
+    , source :=
+      -- `consensus` as a claim about what the formula means: its framers'
+      -- confession says so, "no dead faith, but worketh by love" (XI.2).
+        { primary := .work westminsterConfession (.sectionRef "XI.2")
+        , supporting := [.work calvinInstitutes (.sectionRef "III.xvi.1")]
+        , tradition := .reformedProtestant
+        , confidence := .consensus } }
+  | .jamesFaithIsNotReformedFaith =>
+    { label := "The faith James 2:24 denies justifies is not the faith of the Reformers' formula"
+    , kind := .interpretive
+    , source :=
+        { primary := .work mooJames (.adLoc james2_24)
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .scriptureTeachesIncreaseOfJustification =>
+    { label := "Scripture teaches an increase of justification by good works"
+    , kind := .theological
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .worksCauseIncreaseOfJustification =>
+    { label := "Good works are a cause of the increase of justification, not merely its fruits"
+    , kind := .theological
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), canon 24")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .rev22_11BeJustifiedStill =>
+    { label := "Revelation 22:11 says: he that is just, let him be justified still"
+    , kind := .textual
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .rev22_11GreekDoRighteousness =>
+    { label := "The Greek of Revelation 22:11 says: let the righteous still do righteousness"
+    , kind := .textual
+    , source :=
+      -- `consensus`: SBLGNT prints δικαιοσύνην ποιησάτω and marks no variation
+      -- there among the editions it compares, the Byzantine text included; the
+      -- Catholic Church's own translation renders it "The righteous must still
+      -- do right". "Be justified still" is the Vulgate's *iustificetur adhuc*.
+        { primary := .work sblgnt (.apparatus ⟨.revelation, 22, 11⟩)
+        , supporting := [.work nabre (.sectionRef "Revelation 22:11")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .sir18_22BeJustifiedToDeath =>
+    { label := "Sirach 18:22 says: be not afraid to be justified even to death"
+    , kind := .textual
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .sir18_22GreekIsAVow =>
+    { label := "The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice"
+    , kind := .textual
+    , source :=
+      -- `wellSupported`: the Catholic Church's own translation, from the Greek:
+      -- "Let nothing prevent the prompt payment of your vows; do not wait until
+      -- death to fulfill them." The Vulgate's verse differs ("Non impediaris
+      -- orare semper"), and Trent quotes the Latin.
+        { primary := .work nabre (.sectionRef "Sirach 18:22")
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .originalTextDecides =>
+    { label := "What the original text does not say, a translation does not establish"
+    , kind := .linguistic
+    , source :=
+      -- `consensus`: Rome says it of its own Vulgate. Trent's "authentic" was
+      -- affirmed "not ... for critical reasons, but rather because of its
+      -- legitimate use", and the original text "has more authority and greater
+      -- weight than any even the very best translation" (§§21, 16).
+        { primary := .work divinoAfflanteSpiritu (.sectionRef "§§16, 21")
+        , tradition := .romanCatholic
+        , confidence := .consensus } }
   | .james2_24NotByFaithAlone =>
     { label := "James 2:24 says a person is justified by works and not by faith alone"
     , kind := .textual

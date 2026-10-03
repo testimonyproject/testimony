@@ -1,6 +1,7 @@
 import Testimony.Semantics.Discourse
 import Testimony.Meanings.SolaFide
 import Testimony.Arguments.SolaFide
+import Testimony.Arguments.SolaFide.James
 import Testimony.Logic.Contest
 
 /-!
@@ -34,38 +35,40 @@ is weighed (`worksOfLawMeansWorksGenerally`, rated `disputed`).
 occur in the New Testament: one time, in James 2:24. There the inspired apostle
 denies that justification is from faith alone." To deny *sola fide* by this,
 James's "faith" and "justify" in 2:24 must be the ones the Reformers' formula
-uses of Paul. The move does not say so (`faithAlone_unstated`), and those are
-exactly the two senses the library's `james2_24Compatible` denies, on the
-authority of Moo and Calvin, rated `disputed` (`faithAlone_meets_the_library`).
-So the move holds only if that disputed claim is false. The article argues the
-sense of *works* at length and the sense of *faith* not at all, though the
-objector has raised it: by the article's own principle — consistency settles
-which word differs only with a reason — the move needs the argument it does not
-give. That is a finding about the move, not a verdict on James.
+uses. The move does not say so (`faithAlone_unstated`), and the first of the
+two is exactly what the library's `jamesFaithIsNotReformedFaith` denies
+(`faithAlone_meets_the_library`).
+
+**Heard in the dispute, the phrase argument cannot be defended**
+(`howell_indefensible`). Stated as a position — the verse, the senses the move
+needs made explicit, and its step — and heard with every party to the sola fide
+dispute and with James's own words about faith, it falls to those words. James
+calls the faith he denies justifies dead (2:17, 2:26); Trent reads it so (Session
+VI, ch. 7); and the Reformers' confession calls the faith that alone justifies
+"no dead faith, but worketh by love" (Westminster XI.2). Every link of that
+answer is rated `wellSupported` or better, and none rests on anyone's word alone,
+so the move's reply, from a denial at the bottom, fails against it. The denial
+it needs does not survive the weighing (`faithDenialAnswered`).
+
+**What that does not reach.** The article's other case from James — "works
+actually justify", Abraham "justified by doing a work that grew out of his faith"
+— is the Catholic reading of James's "by works", weighed in `SolaFide.James`.
+Read as a claim about James's word δικαιόω (the increase of justice) it cannot be
+defended there (`trent_on_james_word_indefensible`); read as a claim about what
+works do before God (Trent, canon 24) it can be, and is not forced
+(`trent_on_works_defensible`, `trent_on_works_not_forced`). The article argues
+from James's words, so its own route is the first; the doctrine survives on the
+second.
 
 **The objector is held to the same check.** His reply — James 2:14 "is dealing
 with the problem of those who claim faith but who don't show it by their
 works" — takes "faith" in 2:14 for "faith" in 2:24, and does not say so either
 (`deadFaith_unstated`). That is the Reformed reading's own unstated condition,
-and the library records it as such: `james2TargetsDeadFaith` reads the whole of
-2:14–26 one way, and is rated `disputed`.
+and here it is supplied: the faith of 2:24 is the faith of 2:14–26
+(`jamesFaithAloneIsDeadFaith`, rated `wellSupported`, and granted by Trent).
 
-**Heard in the dispute, the move can be defended.** Stated as a position —
-the verse, the senses the move needs made explicit, and its step — and heard
-with every party to the library's sola fide dispute, the move is neither
-indefensible nor forced (`howell_defensible`, `howell_not_forced`). Paul's case
-and Peter's case defeat it, and it defeats both back: every link on both sides is
-rated `disputed`, and the weighing cannot choose. The library does not show the
-move's claim cannot be held. What it shows is the price: the move stands only
-where James's words are Paul's, and that is exactly what is contested.
-
-**And the dispute it turns on is live, as a computed result.**
-`james2_24Compatible` is rated `disputed` because a reader denies it. Heard as
-positions, its holder and its denier can each be defended (`jamesContested`):
-the rating is what the weighing finds, not only what a citation says.
-
-What the checks do not do: they do not say which reading of James is right. The
-design note `docs/src/semantics.md` says what that would take.
+What the checks do not do: they do not say which reading of James's "by works"
+is right. The design note `docs/src/semantics.md` says what that would take.
 -/
 
 namespace Testimony.Articles.Howell2003
@@ -93,10 +96,11 @@ def jamesSays : Statement := means .james2_24NotByFaithAlone
 theorem jamesSays_is_the_library's :
     jamesSays = means .james2_24NotByFaithAlone := rfl
 
-/-- *Sola fide* as the Reformers state it, as a claim about Paul's words: faith,
-in Paul's sense, the only means of justification, in Paul's sense. -/
+/-- *Sola fide* as the Reformers state it: faith, in their sense, the only means
+of justification, in their sense. -/
 def solaFideOfPaul : Statement :=
-  .holds (rl .soleInstrumentOf (.word .pistis (.usage .paul)) (.word .dikaioo (.usage .paul)))
+  .holds (rl .soleInstrumentOf (.word .pistis (.usage .reformed))
+    (.word .dikaioo (.usage .reformed)))
 
 /-- **The Catholic, on works.** -/
 def worksMove : Move where
@@ -162,7 +166,7 @@ library**: `james2_24Compatible`, cited to Moo and Calvin and rated
 not argue that it is. -/
 theorem faithAlone_meets_the_library :
     faithAloneMove.meets (α := Arguments.SolaFide.Claim) =
-      [(.dikaioo, [.james2_24Compatible]), (.pistis, [.james2_24Compatible])] := by
+      [(.pistis, [.jamesFaithIsNotReformedFaith])] := by
   decide
 
 /-! ### What consistency settles, and what it does not
@@ -215,17 +219,19 @@ def howellInference : Source :=
   , confidence := .disputed }
 
 /-- **The phrase argument, as a position.** What James 2:24 says; what the move
-needs and does not state — that James's "justify" and "faith" are Paul's, which
-is the denial of `james2_24Compatible`; and the step from them to the move's
-conclusion, that justification is not by faith alone. -/
+needs and does not state — that James's "faith" is the faith of the Reformers'
+formula, and that James's words have Paul's senses, the denials of
+`jamesFaithIsNotReformedFaith` and of `james2_24Compatible`; and the step from
+them to the move's conclusion, that justification is not by faith alone. -/
 @[solaFideDefs]
 def howellCase : ArgumentPackage Claim :=
   { name := "Howell, on the phrase \"faith alone\""
   , cite := baseCite
   , premises :=
-      [ p .james2_24NotByFaithAlone, notP .james2_24Compatible
-      , ⋀ [p .james2_24NotByFaithAlone, notP .james2_24Compatible] ➝
-          notP .justificationByFaithAlone ]
+      [ p .james2_24NotByFaithAlone, notP .jamesFaithIsNotReformedFaith
+      , notP .james2_24Compatible
+      , ⋀ [p .james2_24NotByFaithAlone, notP .jamesFaithIsNotReformedFaith,
+            notP .james2_24Compatible] ➝ notP .justificationByFaithAlone ]
   , conclusion := notP .justificationByFaithAlone
   , conclusionLabel := "notByFaithAlone"
   , inferences := [howellInference] }
@@ -233,12 +239,12 @@ def howellCase : ArgumentPackage Claim :=
 /-- The move delivers its conclusion. -/
 theorem howellCase_establishes : Establishes howellCase := by establish [solaFideDefs]
 
-/-- **Howell's world**: James says what he says, in Paul's senses, and
-justification is not by faith alone; every other claim as Trent's world has it,
-so that nothing else is in question. -/
+/-- **Howell's world**: James says what he says, his "faith" the Reformers'
+faith and his words Paul's, and justification is not by faith alone. -/
 def howellReading : Valuation Claim := fun a =>
   match a with
   | .james2_24Compatible => False
+  | .jamesFaithIsNotReformedFaith => False
   | .justificationByFaithAlone => False
   | _ => True
 
@@ -246,49 +252,58 @@ def howellReading : Valuation Claim := fun a =>
 theorem howellCase_is_satisfiable : Satisfiable howellCase.premises := by
   satisfied_by howellReading [solaFideDefs]
 
-/-- Its weakest link is at the bottom: the sense it needs is a denial, and a
+/-- Its weakest link is at the bottom: the senses it needs are denials, and a
 denial ranks `disputed`. -/
 theorem howellCase_strength : howellCase.strength = 0 := by decide
 
-/-- The parties: Howell's move, and every party to the sola fide dispute. -/
-abbrev Party := Option Arguments.SolaFide.Party
-
-/-- Howell's move. -/
-abbrev howell : Party := none
+/-- The parties: Howell's move, James's faith, and every party to the sola fide
+dispute. -/
+inductive Party
+  /-- Howell's move from the phrase "faith alone". -/
+  | howell
+  /-- James's faith: the faith James 2:24 denies is not the Reformers' faith. -/
+  | faith
+  /-- A party to the sola fide dispute. -/
+  | sola (q : Arguments.SolaFide.Party)
+deriving DecidableEq
 
 /-- The package each party argues from. -/
 @[solaFideDefs]
 def node : Party → ArgumentPackage Claim
-  | none => howellCase
-  | some q => partyNode q
+  | .howell => howellCase
+  | .faith => Arguments.SolaFide.jamesFaithCase
+  | .sola q => partyNode q
 
-/-- **The sola fide dispute, with Howell heard.** -/
+/-- **The sola fide dispute, with Howell's move and James's faith heard.** -/
 def hearing : Dispute Claim Party where
   node := node
   consistent
-    | none => howellCase_is_satisfiable
-    | some q => solaFideDispute.consistent q
+    | .howell => howellCase_is_satisfiable
+    | .faith => Arguments.SolaFide.jamesFaithCase_is_satisfiable
+    | .sola q => solaFideDispute.consistent q
   sound
-    | none => howellCase_establishes
-    | some q => solaFideDispute.sound q
+    | .howell => howellCase_establishes
+    | .faith => Arguments.SolaFide.jamesFaithCase_establishes
+    | .sola q => solaFideDispute.sound q
   rated
-    | none => by simp [node, howellCase]
-    | some q => solaFideDispute.rated q
+    | .howell => by simp [node, howellCase]
+    | .faith => by simp [node, solaFideDefs, Line.asPackage]
+    | .sola q => solaFideDispute.rated q
 
-/-- Who Howell defeats, and who defeats him: Paul's case and Peter's, both ways.
-Paul's and Peter's cases derive that James 2:24 is compatible with Paul, which
-Howell denies, and conclude what he denies; Howell's move rebuts both. Luke's
-case does not answer James, and nothing else touches the verse. -/
-def howellDefeats : Arguments.SolaFide.Party → Bool
+/-- Who Howell's move defeats among the sola fide parties, and who defeats it:
+Paul's case and Peter's, both ways. -/
+def howellMeets : Arguments.SolaFide.Party → Bool
   | .pauline | .apostolic => true
   | _ => false
 
-/-- The defeats of the hearing, as a table: the dispute's own, and Howell's. -/
+/-- The defeats of the hearing, as a table: the sola fide dispute's own; Howell's
+standoffs with Paul's and Peter's cases; and James's faith over Howell. -/
 def defeatsTable : Party → Party → Prop
-  | none, none => False
-  | none, some q => howellDefeats q = true
-  | some q, none => howellDefeats q = true
-  | some q, some r => partyDefeats q r
+  | .faith, .howell => True
+  | .howell, .sola q => howellMeets q = true
+  | .sola q, .howell => howellMeets q = true
+  | .sola q, .sola r => partyDefeats q r
+  | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
 instance : DecidableRel defeatsTable := fun i j => by
@@ -296,94 +311,119 @@ instance : DecidableRel defeatsTable := fun i j => by
 
 /-- Each party's weakest link. -/
 def strength : Party → ℕ
-  | none => 0
-  | some q => partyStrength q
+  | .howell => 0
+  | .faith => 2
+  | .sola q => partyStrength q
 
-/-- **Who defeats whom in the hearing**, all 169 pairs: what the sola fide
-dispute already proved, and Howell's twenty-five, computed by `Horn.defeats?`
-and checked by the kernel. -/
+/-- Each party's weakest link, as its package computes it. -/
+theorem node_strength : ∀ i, (node i).strength = strength i
+  | .howell => howellCase_strength
+  | .faith => Arguments.SolaFide.jamesFaithCase_strength
+  | .sola q => partyNode_strength q
+
+/-- **Who defeats whom in the hearing**, all 196 pairs: what the sola fide
+dispute already proved; Howell's move and Paul's and Peter's cases, both ways;
+and James's faith over Howell's move, which cannot answer it. James's faith
+meets nothing else. Computed by `Horn.defeats?` and checked by the kernel. -/
 theorem hearing_defeats : ∀ i j, hearing.defeats i j ↔ defeatsTable i j := by
   intro i j
   cases i with
-  | some q =>
+  | howell =>
     cases j with
-    | some r => exact solaFideDispute_defeats q r
-    | none =>
-      refine Horn.defeats_iff_of_defeats? (partyNode_strength q) howellCase_strength ?_
-      cases q <;> decide +kernel
-  | none =>
-    cases j with
-    | none =>
-      refine Horn.defeats_iff_of_defeats? howellCase_strength howellCase_strength ?_
-      decide +kernel
-    | some r =>
-      refine Horn.defeats_iff_of_defeats? howellCase_strength (partyNode_strength r) ?_
+    | howell =>
+      exact Horn.defeats_iff_of_defeats? (node_strength .howell) (node_strength .howell)
+        (by decide +kernel)
+    | faith =>
+      exact Horn.defeats_iff_of_defeats? (node_strength .howell) (node_strength .faith)
+        (by decide +kernel)
+    | sola r =>
+      refine Horn.defeats_iff_of_defeats? (node_strength .howell) (node_strength (.sola r)) ?_
       cases r <;> decide +kernel
+  | faith =>
+    cases j with
+    | howell =>
+      exact Horn.defeats_iff_of_defeats? (node_strength .faith) (node_strength .howell)
+        (by decide +kernel)
+    | faith =>
+      exact Horn.defeats_iff_of_defeats? (node_strength .faith) (node_strength .faith)
+        (by decide +kernel)
+    | sola r =>
+      refine Horn.defeats_iff_of_defeats? (node_strength .faith) (node_strength (.sola r)) ?_
+      cases r <;> decide +kernel
+  | sola q =>
+    cases j with
+    | howell =>
+      refine Horn.defeats_iff_of_defeats? (node_strength (.sola q)) (node_strength .howell) ?_
+      cases q <;> decide +kernel
+    | faith =>
+      refine Horn.defeats_iff_of_defeats? (node_strength (.sola q)) (node_strength .faith) ?_
+      cases q <;> decide +kernel
+    | sola r => exact solaFideDispute_defeats q r
 
 /-- The hearing in the form the verdict solver computes with. -/
 def hearingFinite : Solver.Finite hearing.defeats where
-  parties := howell :: Arguments.SolaFide.solaFideFinite.parties.map some
-  complete i := by cases i with | none => decide | some q => cases q <;> decide
+  parties := .howell :: .faith :: Arguments.SolaFide.solaFideFinite.parties.map .sola
+  complete i := by cases i with | sola q => cases q <;> decide | _ => decide
   defeats i j := decide (defeatsTable i j)
   spec i j := by rw [hearing_defeats]; simp
 
-/-- Why Howell's move can be defended: it stands with Trent, Sanders and
-Jervell, and answers both its attackers — Paul's case and Peter's — itself. -/
-def howellStandsWithTrent : Verdict hearing where
+/-- Why Howell's move cannot be defended: James's faith defeats it, and nothing
+defeats James's faith. -/
+def howellAnswered : Verdict hearing where
   finite := hearingFinite
-  claim := .credulous howell [howell, some .trent, some .sanders, some .jervell]
+  claim := .indefensible .howell [(.howell, .faith)]
   checked := by decide +kernel
 
-/-- **Howell's move can be defended.** It is not indefensible: the library does
-not show that its claim cannot be held. It answers each party that attacks it,
-and the weighing cannot choose between them, because every link on both sides
-is rated at the bottom. -/
-theorem howell_defensible : CredulouslyAccepted hearing.defeats howell :=
-  howellStandsWithTrent.holds
+/-- **Howell's argument from the phrase "faith alone" cannot be defended.** It
+needs James's "faith" to be the faith the Reformers say alone justifies. James
+calls the faith he denies justifies dead (2:17, 2:26), Trent reads it so
+(Session VI, ch. 7), and the Reformers' own confession calls their faith "no
+dead faith" (Westminster XI.2). Every link of that answer is rated
+`wellSupported` or better, and the move's reply rests on a denial at the bottom.
 
-/-- Why Howell's move is not forced: a defensible position holds Paul's case,
-and Paul's case defeats it. -/
-def howellAnsweredByPaul : Verdict hearing where
-  finite := hearingFinite
-  claim := .notSkeptical howell (some .pauline)
-    [some .pauline, some .dominical, some .apostolic, some .critics]
-  checked := by decide +kernel
+What this does not claim: that James 2:24 is compatible with Paul, or that
+justification is by faith alone. Howell's move stands off against Paul's and
+Peter's cases as before; it falls to James's own words about faith, which a
+Catholic reader grants. Nor does it touch the Catholic reading of James's
+"by works" (`trent_on_works_defensible`). -/
+theorem howell_indefensible (S : Set Party) (hS : Admissible hearing.defeats S) :
+    Party.howell ∉ S :=
+  howellAnswered.holds S hS
 
-/-- **Nor is it forced.** A defensible position holds Paul's case with Luke's
-and Peter's, and Paul's and Peter's cases cannot be held with Howell's move. -/
-theorem howell_not_forced : ¬ SkepticallyAccepted hearing.defeats howell :=
-  howellAnsweredByPaul.holds
-
-/-- Why Paul's case can be defended in the hearing: with Luke's, Peter's and the
-critics', answering everyone who attacks it — Howell included. -/
-def paulStandsWithLuke : Verdict hearing where
-  finite := hearingFinite
-  claim := .credulous (some .pauline)
-    [some .pauline, some .dominical, some .apostolic, some .critics]
-  checked := by decide +kernel
-
-/-- Paul's case derives that James 2:24 is compatible with Paul. -/
-theorem pauline_holds_compatibility :
-    Entails (hearing.node (some .pauline)).premises (p .james2_24Compatible) := by
+/-- James's faith derives that the faith James denies is not the Reformers'. -/
+theorem faith_holds :
+    Entails (hearing.node .faith).premises (p .jamesFaithIsNotReformedFaith) := by
   establish [solaFideDefs, hearing]
 
 /-- Howell's move denies it. -/
-theorem howell_denies_compatibility :
-    Entails (hearing.node howell).premises (∼ p .james2_24Compatible) := by
+theorem howell_denies :
+    Entails (hearing.node .howell).premises (∼ p .jamesFaithIsNotReformedFaith) := by
   establish [solaFideDefs, hearing]
 
-/-- **Whether James uses "justify" and "faith" in Paul's senses is contested,
-and the weighing confirms it.** The rating `disputed` on `james2_24Compatible`
-is a citation: a reader grants the verse and denies the harmony. Heard as
-positions, the claim's holder — Paul's case — and its denier — Howell's move —
-can each be defended, and neither is forced. The dispute the rating records is
-live: it survives the weighing. -/
-def jamesContested : Contested hearing (p .james2_24Compatible) where
-  holder := some .pauline
-  denier := howell
-  holds := pauline_holds_compatibility
-  denies := howell_denies_compatibility
-  holderDefensible := paulStandsWithLuke.holds
-  denierDefensible := howell_defensible
+/-- No sola fide party denies it: each can be held with it. -/
+theorem sola_does_not_deny (q : Arguments.SolaFide.Party) :
+    ¬ Entails (hearing.node (.sola q)).premises (∼ p .jamesFaithIsNotReformedFaith) := by
+  rw [entails_neg_iff, not_not]
+  apply satisfiable_of_check
+  cases q <;> decide +kernel
+
+/-- **The denial that James's faith differs from the Reformers' is answered.**
+Its one holder in the hearing, Howell's move, cannot be defended. The dispute
+over the phrase "faith alone" is not live: the reading Howell needs is
+disputed in an article, and does not survive the weighing. -/
+def faithDenialAnswered : DenialAnswered hearing (p .jamesFaithIsNotReformedFaith) where
+  deniers := [.howell]
+  deny i hi := by simp at hi; subst hi; exact howell_denies
+  complete i h := by
+    cases i with
+    | howell => simp
+    | faith =>
+      exfalso
+      exact (entails_neg_iff.mp h)
+        (satisfiable_of_model Arguments.SolaFide.reformedJamesReading (by
+          simp [hearing, node, solaFideDefs, Line.asPackage, Line.premises,
+            Arguments.SolaFide.reformedJamesReading]))
+    | sola q => exact absurd h (sola_does_not_deny q)
+  indefensible i hi S hS := by simp at hi; subst hi; exact howell_indefensible S hS
 
 end Testimony.Articles.Howell2003

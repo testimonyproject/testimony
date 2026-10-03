@@ -80,6 +80,7 @@ printing the catalogue could confirm. -/
 @[bib_entry] def na28 : BibEntry := .criticalEdition
   { core :=
       { key := "na28-2012"
+      , role := .text
       , contributors :=
           { editors := [.person "Barbara" "Aland", .person "Kurt" "Aland"
                        , .corporate "Institut für neutestamentliche Textforschung"] }
@@ -97,6 +98,7 @@ confirmed against a public catalogue, so this entry renders as unverified. -/
 @[bib_entry] def ubs5 : BibEntry := .criticalEdition
   { core :=
       { key := "ubs5-2014"
+      , role := .text
       , contributors := { editors := [.corporate "United Bible Societies"] }
       , title := "The Greek New Testament"
       , year := some { value := 2014 } }
@@ -110,6 +112,7 @@ Bible. Unverified for the same reason as `ubs5`. -/
 @[bib_entry] def bhs : BibEntry := .criticalEdition
   { core :=
       { key := "bhs-1997"
+      , role := .text
       , contributors := { editors := [.person "Karl" "Elliger", .person "Wilhelm" "Rudolph"] }
       , title := "Biblia Hebraica Stuttgartensia"
       , year := some { value := 1997 } }
@@ -149,6 +152,7 @@ Trent's Decree on Justification, used by the `tridentine` package. -/
 @[bib_entry] def tannerDecrees : BibEntry := .book
   { core :=
       { key := "tanner-decrees-1990"
+      , role := .authority
       , contributors := { editors := [.person "Norman P." "Tanner"] }
       , title := "Decrees of the Ecumenical Councils"
       , year := some { value := 1990 }
@@ -162,6 +166,7 @@ citation text for the Reformed position. -/
 @[bib_entry] def calvinInstitutes : BibEntry := .book
   { core :=
       { key := "calvin-institutes-1960"
+      , role := .witness
       , contributors :=
           { authors := [.person "John" "Calvin"]
           , editors := [.person "John T." "McNeill"]
@@ -199,6 +204,7 @@ with a version to be reproducible. -/
 @[bib_entry] def bhsaDataset : BibEntry := .dataset
   { core :=
       { key := "etcbc-bhsa"
+      , role := .text
       , contributors :=
           { authors := [.corporate "Eep Talstra Centre for Bible and Computer"] }
       , title := "Biblia Hebraica Stuttgartensia (Amstelodamensis)"
@@ -210,6 +216,7 @@ Hebrew text. -/
 @[bib_entry] def oshbDataset : BibEntry := .dataset
   { core :=
       { key := "openscriptures-oshb"
+      , role := .text
       , contributors := { authors := [.corporate "Open Scriptures"] }
       , title := "Open Scriptures Hebrew Bible"
       , identifiers := [.url "https://github.com/openscriptures/morphhb"] }
@@ -256,6 +263,7 @@ and transcribed by the Christian Classics Ethereal Library. -/
 @[bib_entry] def calvinJohn : BibEntry := .book
   { core :=
       { key := "calvin-commentary-john-1847"
+      , role := .witness
       , contributors :=
           { authors := [.person "John" "Calvin"]
           , translators := [.person "William" "Pringle"] }
@@ -277,6 +285,7 @@ edition behind it is not verified in a catalogue. -/
 @[bib_entry] def lutherGalatians : BibEntry := .book
   { core :=
       { key := "luther-commentary-galatians-1998"
+      , role := .witness
       , contributors :=
           { authors := [.person "Martin" "Luther"]
           , translators := [.person "Theodore" "Graebner"] }
@@ -295,6 +304,7 @@ this translation keeps; the passage was read in Larcher's translation. -/
 @[bib_entry] def aquinasJohn : BibEntry := .book
   { core :=
       { key := "aquinas-commentary-john-2012"
+      , role := .witness
       , contributors :=
           { authors := [.single "Thomas Aquinas"]
           , editors := [.person "Daniel A." "Keating", .person "Matthew" "Levering"]
@@ -338,6 +348,7 @@ carries none. -/
 @[bib_entry] def westminsterConfession : BibEntry := .book
   { core :=
       { key := "westminster-confession-1647"
+      , role := .authority
       , contributors := { authors := [.corporate "Westminster Assembly"] }
       , title := "The Westminster Confession of Faith"
       , year := some { value := 1647 }
@@ -405,6 +416,7 @@ Christian reading, and is encoded in `BornOfAVirgin` as such. -/
 @[bib_entry] def chiltonIsaiahTargum : BibEntry := .book
   { core :=
       { key := "chilton-isaiah-targum-1987"
+      , role := .text
       , contributors := { authors := [.person "Bruce D." "Chilton"] }
       , title := "The Isaiah Targum"
       , subtitle := some "Introduction, Translation, Apparatus and Notes"
@@ -713,6 +725,7 @@ the filter placed on it. -/
 @[bib_entry] def newmanDevelopment : BibEntry := .book
   { core :=
       { key := "newman-development-1845"
+      , role := .witness
       , contributors := { authors := [.person "John Henry" "Newman"] }
       , title := "An Essay on the Development of Christian Doctrine"
       , year := some { value := 1845 }
@@ -779,6 +792,7 @@ saved thee") — the dominical strand of sola fide. -/
 @[bib_entry] def bookOfConcord : BibEntry := .book
   { core :=
       { key := "kolb-wengert-book-of-concord-2000"
+      , role := .authority
       , contributors :=
           { editors := [.person "Robert" "Kolb", .person "Timothy J." "Wengert"] }
       , title := "The Book of Concord"
@@ -798,6 +812,7 @@ records the electronic text instead. -/
 @[bib_entry] def npnfAugustineManichaeans : BibEntry := .book
   { core :=
       { key := "npnf1-04-1887"
+      , role := .witness
       , contributors := { editors := [.person "Philip" "Schaff"] }
       , title :=
           "A Select Library of the Nicene and Post-Nicene Fathers of the Christian Church"
@@ -900,6 +915,7 @@ cited where Waterworth's wording is quoted. Published without an ISBN. -/
 @[bib_entry] def waterworthTrent : BibEntry := .book
   { core :=
       { key := "waterworth-trent-1848"
+      , role := .authority
       , contributors :=
           { authors := [.corporate "Council of Trent"]
           , translators := [.person "J." "Waterworth"] }
@@ -955,6 +971,7 @@ commandments of men. -/
 @[bib_entry] def catechismCatholicChurch : BibEntry := .book
   { core :=
       { key := "catholic-church-catechism-2000"
+      , role := .authority
       , contributors := { authors := [.corporate "Catholic Church"] }
       , title := "Catechism of the Catholic Church"
       , year := some { value := 2000 }
@@ -969,6 +986,7 @@ an ISBN; the public scan is given. -/
 @[bib_entry] def calvinHarmony1 : BibEntry := .book
   { core :=
       { key := "calvin-harmony-evangelists-1845"
+      , role := .witness
       , contributors :=
           { authors := [.person "John" "Calvin"]
           , translators := [.person "William" "Pringle"] }
@@ -988,6 +1006,7 @@ Calvin reads as Christ answering on the law's own terms (393–394). -/
 @[bib_entry] def calvinHarmony2 : BibEntry := .book
   { core :=
       { key := "calvin-harmony-evangelists-2-1845"
+      , role := .witness
       , contributors :=
           { authors := [.person "John" "Calvin"]
           , translators := [.person "William" "Pringle"] }
@@ -1008,6 +1027,7 @@ of life: "God's commandments show man the path of life and they lead to it"
 @[bib_entry] def veritatisSplendor : BibEntry := .book
   { core :=
       { key := "john-paul-ii-veritatis-splendor-1993"
+      , role := .authority
       , contributors := { authors := [.person "John Paul" "II"] }
       , title := "The Splendor of Truth"
       , subtitle := some "Veritatis Splendor"
@@ -1054,6 +1074,7 @@ not included in baptism" (454). Published without an ISBN. -/
 @[bib_entry] def calvinActs1 : BibEntry := .book
   { core :=
       { key := "calvin-commentary-acts-1844"
+      , role := .witness
       , contributors :=
           { authors := [.person "John" "Calvin"]
           , editors := [.person "Henry" "Beveridge"]
@@ -1075,6 +1096,7 @@ faith in Christ and their desire for Baptism" (III q.69 a.4 ad 2). -/
 @[bib_entry] def aquinasSumma : BibEntry := .book
   { core :=
       { key := "aquinas-summa-1920"
+      , role := .witness
       , contributors :=
           { authors := [.person "Thomas" "Aquinas"]
           , translators := [.corporate "Fathers of the English Dominican Province"] }
@@ -1092,6 +1114,7 @@ consuming of the chaff (*Oration* 39.15). -/
 @[bib_entry] def npnfCyrilGregory : BibEntry := .book
   { core :=
       { key := "npnf2-07-1894"
+      , role := .witness
       , contributors := { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"] }
       , title := "A Select Library of Nicene and Post-Nicene Fathers of the Christian Church"
       , subtitle := some "Second Series, Volume 7: S. Cyril of Jerusalem, S. Gregory Nazianzen"
@@ -1107,6 +1130,7 @@ or damnation!" Catalogued without an ISBN; cited whole. -/
 @[bib_entry] def feeneyBreadOfLife : BibEntry := .book
   { core :=
       { key := "feeney-bread-of-life-1952"
+      , role := .witness
       , contributors := { authors := [.person "Leonard" "Feeney"] }
       , title := "Bread of Life"
       , year := some { value := 1952 }
@@ -1201,6 +1225,7 @@ Fundamental Truths 7–8. -/
 @[bib_entry] def agBaptismPositionPaper : BibEntry := .webPage
   { core :=
       { key := "assemblies-of-god-baptism-holy-spirit-2010"
+      , role := .authority
       , contributors := { authors := [.corporate "General Presbytery of the Assemblies of God"] }
       , title := "Baptism in the Holy Spirit"
       , subtitle := some "Position Paper"
@@ -1218,6 +1243,7 @@ ISBN. -/
 @[bib_entry] def wesleyLetters : BibEntry := .book
   { core :=
       { key := "wesley-letters-1931"
+      , role := .witness
       , contributors :=
           { authors := [.person "John" "Wesley"], editors := [.person "John" "Telford"] }
       , title := "The Letters of the Rev. John Wesley"
@@ -1237,6 +1263,7 @@ the one that is cannot be tied to this printing, so none is given. -/
 @[bib_entry] def nazareneManual : BibEntry := .book
   { core :=
       { key := "church-of-the-nazarene-manual-2023"
+      , role := .authority
       , contributors := { authors := [.corporate "Church of the Nazarene"] }
       , title := "Manual 2023"
       , subtitle := some "History, Constitution, Government, Sacraments and Rituals"
@@ -1273,6 +1300,7 @@ Society edition; the modern reprints paginate differently. -/
 @[bib_entry] def whitakerDisputation : BibEntry := .book
   { core :=
       { key := "whitaker-disputation-1849"
+      , role := .witness
       , contributors :=
           { authors := [.person "William" "Whitaker"]
           , translators := [.person "William" "Fitzgerald"] }
@@ -1510,6 +1538,7 @@ Library, ISBN 9780226039336 (3rd ed., University of Chicago Press, 2000). -/
 @[bib_entry] def bdag : BibEntry := .book
   { core :=
       { key := "bauer-danker-lexicon-2000"
+      , role := .text
       , contributors :=
           { authors := [.person "Walter" "Bauer"]
           , editors := [.person "Frederick William" "Danker"] }
@@ -1602,6 +1631,7 @@ one. -/
 @[bib_entry] def jointDeclarationJustification : BibEntry := .book
   { core :=
       { key := "lwf-catholic-joint-declaration-2000"
+      , role := .authority
       , contributors :=
           { authors :=
               [ .corporate "Lutheran World Federation"
@@ -1879,6 +1909,7 @@ rendered unverified rather than given the ISBN of a later reprint. -/
 @[bib_entry] def anf1 : BibEntry := .book
   { core :=
       { key := "roberts-ante-nicene-fathers-1-1885"
+      , role := .witness
       , contributors :=
           { editors := [.person "Alexander" "Roberts", .person "James" "Donaldson"
                        , .person "A. Cleveland" "Coxe"] }
@@ -1894,6 +1925,7 @@ rendered unverified rather than given the ISBN of a later reprint. -/
 @[bib_entry] def anf4 : BibEntry := .book
   { core :=
       { key := "roberts-ante-nicene-fathers-4-1885"
+      , role := .witness
       , contributors :=
           { editors := [.person "Alexander" "Roberts", .person "James" "Donaldson"
                        , .person "A. Cleveland" "Coxe"] }
@@ -1911,6 +1943,7 @@ Open Library, ISBN 9780813209661 (Catholic University of America Press,
 @[bib_entry] def basilAsceticalWorks : BibEntry := .book
   { core :=
       { key := "basil-ascetical-works-1999"
+      , role := .witness
       , contributors :=
           { authors := [.person "Basil" "of Caesarea"]
           , translators := [.person "M. Monica" "Wagner"] }
@@ -1929,6 +1962,7 @@ record names the series and volume (Catholic University of America Press,
 @[bib_entry] def hilaryMatthew : BibEntry := .book
   { core :=
       { key := "hilary-commentary-matthew-2013"
+      , role := .witness
       , contributors :=
           { authors := [.person "Hilary" "of Poitiers"]
           , translators := [.person "D. H." "Williams"] }
@@ -1946,6 +1980,7 @@ W. G. Martley) is cited. -/
 @[bib_entry] def npnf2v6 : BibEntry := .book
   { core :=
       { key := "schaff-nicene-post-nicene-fathers-2-6-1893"
+      , role := .witness
       , contributors :=
           { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"] }
       , title := "Nicene and Post-Nicene Fathers, Second Series"
@@ -1963,6 +1998,7 @@ in Hezekiah (67). Cited for both halves. -/
 @[bib_entry] def justinDialogue : BibEntry := .ancientWork
   { core :=
       { key := "justin-dialogue-with-trypho-160"
+      , role := .witness
       , contributors := { authors := [.single "Justin Martyr"] }
       , title := "Dialogue with Trypho" }
   , originalTitle := some "Πρὸς Τρύφωνα Ἰουδαῖον Διάλογος"
@@ -1975,6 +2011,7 @@ a young woman's ordinary conception would be no sign. -/
 @[bib_entry] def irenaeusAgainstHeresies : BibEntry := .ancientWork
   { core :=
       { key := "irenaeus-against-heresies-180"
+      , role := .witness
       , contributors := { authors := [.single "Irenaeus"] }
       , title := "Against Heresies" }
   , originalTitle := some "Adversus haereses"
@@ -1986,6 +2023,7 @@ the question which child of Ahaz's day was called Immanuel. -/
 @[bib_entry] def origenAgainstCelsus : BibEntry := .ancientWork
   { core :=
       { key := "origen-against-celsus-248"
+      , role := .witness
       , contributors := { authors := [.single "Origen"] }
       , title := "Against Celsus" }
   , originalTitle := some "Κατὰ Κέλσου"
@@ -1998,6 +2036,7 @@ where it is used of a married woman. -/
 @[bib_entry] def jeromeAgainstJovinianus : BibEntry := .ancientWork
   { core :=
       { key := "jerome-against-jovinianus-393"
+      , role := .witness
       , contributors := { authors := [.single "Jerome"] }
       , title := "Against Jovinianus" }
   , originalTitle := some "Adversus Jovinianum"
@@ -2060,6 +2099,7 @@ records the electronic text instead. -/
 @[bib_entry] def npnfAugustineAntiPelagian : BibEntry := .book
   { core :=
       { key := "npnf1-05-1887"
+      , role := .witness
       , contributors := { editors := [.person "Philip" "Schaff"] }
       , title :=
           "A Select Library of the Nicene and Post-Nicene Fathers of the Christian Church"
@@ -2090,6 +2130,60 @@ Press, 2005, third edition). -/
   , place := some "Cambridge"
   , edition := some "3rd edition" }
 
+/-! ### The increase of justification
+
+Added for `Arguments.SolaFide.James`: the critical text and the Catholic Church's
+own translation and teaching on the original text, against which the texts
+Trent cites for the increase of justification (Session VI, ch. 10) are read. -/
+
+/-- The SBL Greek New Testament, Holmes's critical text, whose apparatus compares
+it with Westcott–Hort, Tregelles, the NIV's text and the Byzantine text of
+Robinson–Pierpont. Cited for Revelation 22:11, where it marks no variation at
+δικαιοσύνην ποιησάτω. ISBN confirmed at Open Library. -/
+@[bib_entry] def sblgnt : BibEntry := .criticalEdition
+  { core :=
+      { key := "holmes-sblgnt-2010"
+      , role := .text
+      , contributors := { editors := [.person "Michael W." "Holmes"] }
+      , title := "The Greek New Testament: SBL Edition"
+      , year := some { value := 2010 }
+      , identifiers := [.isbn "9781589835351"] }
+  , publisher := "Society of Biblical Literature"
+  , siglum := some "SBLGNT" }
+
+/-- The New American Bible, Revised Edition: the translation of the United States
+Conference of Catholic Bishops. Cited for how the Catholic Church's own
+translators render Revelation 22:11 ("The righteous must still do right") and
+Sirach 18:22 ("do not wait until death to fulfill them"). Read on the bishops'
+site; no single printing's ISBN is recorded. -/
+@[bib_entry] def nabre : BibEntry := .webPage
+  { core :=
+      { key := "usccb-nabre-2011"
+      , role := .text
+      , contributors := { authors := [.corporate "United States Conference of Catholic Bishops"] }
+      , title := "New American Bible, Revised Edition"
+      , year := some { value := 2011 }
+      , identifiers := [.url "https://bible.usccb.org/bible" (some "2026-10-03")] }
+  , site := some "USCCB" }
+
+/-- Pius XII's encyclical on biblical studies. Cited for what Trent's declaring
+the Vulgate "authentic" means: an authority "not affirmed by the Council
+particularly for critical reasons, but rather because of its legitimate use"
+(§21), which does not prevent recourse to the original texts; and the original
+text "has more authority and greater weight than any even the very best
+translation" (§16). -/
+@[bib_entry] def divinoAfflanteSpiritu : BibEntry := .webPage
+  { core :=
+      { key := "pius-divino-afflante-spiritu-1943"
+      , role := .authority
+      , contributors := { authors := [.single "Pius XII"] }
+      , title := "Divino Afflante Spiritu"
+      , year := some { value := 1943 }
+      , identifiers :=
+          [ .url ("https://www.vatican.va/content/pius-xii/en/encyclicals/documents/" ++
+                  "hf_p-xii_enc_30091943_divino-afflante-spiritu.html") (some "2026-10-03") ] }
+  , site := some "The Holy See" }
+
 /-! ### Articles examined
 
 Published articles the library examines as commentary
@@ -2103,6 +2197,7 @@ page range is given there, and none is recorded. -/
 @[bib_entry] def howellSavedByFaithAlone : BibEntry := .webPage
   { core :=
       { key := "howell-saved-by-faith-alone-2003"
+      , role := .witness
       , contributors := { authors := [.person "Kenneth" "Howell"] }
       , title := "Aren't We Saved by Faith Alone?"
       , year := some { value := 2003 }

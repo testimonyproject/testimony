@@ -75,6 +75,12 @@ open Testimony.Arguments.SolaFide (Claim)
 @[nolint defsWithUnderscore] abbrev matt7_21 : PassageRange := vs .matthew 7 21
 /-- Matthew 19:17. -/
 @[nolint defsWithUnderscore] abbrev matt19_17 : PassageRange := vs .matthew 19 17
+/-- James 2:21–25. -/
+@[nolint defsWithUnderscore] abbrev james2_21_25 : PassageRange := rg .james 2 21 2 25
+/-- Revelation 22:11. -/
+@[nolint defsWithUnderscore] abbrev rev22_11 : PassageRange := vs .revelation 22 11
+/-- Sirach 18:22. -/
+@[nolint defsWithUnderscore] abbrev sir18_22 : PassageRange := vs .sirach 18 22
 /-- The letter to the Galatians, as a whole. -/
 abbrev galatians : PassageRange := rg .galatians 1 1 6 18
 
@@ -134,7 +140,7 @@ def means : Claim → Statement
     .also (.denied (.sameSense .dikaioo (.passage james2_24) (.usage .paul)))
       (.denied (.sameSense .pistis (.passage james2_24) (.usage .paul)))
   | .james2_24NotByFaithAlone =>
-    .says james2_24 <| .both (rl .groundOf (wd .erga james2_24) (wd .dikaioo james2_24))
+    .says james2_24 <| .both (rl .saidBy (wd .erga james2_24) (wd .dikaioo james2_24))
       (.not (rl .soleInstrumentOf (wd .pistis james2_24) (wd .dikaioo james2_24)))
   | .scriptureSelfConsistent => .principle .scriptureSelfConsistent
   | .justificationByFaithAlone => .holds faithAlone
@@ -253,6 +259,30 @@ def means : Claim → Statement
   | .fireIsJudgment => .means .pyr (.passage matt3_11) .judgment
   | .fireIsPurification => .means .pyr (.passage matt3_11) .purification
   | .fireIsPentecost => .means .pyr (.passage matt3_11) .pentecost
+  | .james2FaithWithoutWorksIsDead =>
+    .says james2_14_26 (.not (rl .sufficientFor (wd .pistis james2_14_26) (wd .sozo james2_14_26)))
+  | .james2JustifiedByWorks =>
+    .says james2_21_25 (rl .saidBy (wd .erga james2_21_25) (wd .dikaioo james2_21_25))
+  | .dikaioIsDeclarativeOutsidePaul =>
+    .also (.means .dikaioo (.passage (vs .matthew 11 19)) .showRighteous)
+      (.means .dikaioo (.passage (vs .deuteronomy 25 1)) .verdict)
+  | .jamesJustifyDenotesIncrease => .means .dikaioo (.usage .james) .makeRighteous
+  | .jamesFaithAloneIsDeadFaith => .means .pistis (.passage james2_24) .mereAssent
+  | .reformedFaithIsNoDeadFaith => .denied (.means .pistis (.usage .reformed) .mereAssent)
+  | .jamesFaithIsNotReformedFaith =>
+    .denied (.sameSense .pistis (.passage james2_24) (.usage .reformed))
+  | .scriptureTeachesIncreaseOfJustification =>
+    .holds (rl .growsThrough (cn .justification) (cn .worksOfFaith))
+  | .worksCauseIncreaseOfJustification =>
+    .holds (rl .groundOf (cn .worksOfFaith) (cn .increaseOfJustification))
+  | .rev22_11BeJustifiedStill => .occurs .dikaioo rev22_11
+  | .rev22_11GreekDoRighteousness => .denied (.occurs .dikaioo rev22_11)
+  | .sir18_22BeJustifiedToDeath =>
+    .says sir18_22 (rl .growsThrough (wd .dikaioo sir18_22) (cn .worksOfFaith))
+  | .sir18_22GreekIsAVow =>
+    .denied (.says sir18_22 (rl .growsThrough (wd .dikaioo sir18_22) (cn .worksOfFaith)))
+  | .originalTextDecides =>
+    .opaque "What the original text does not say, a translation does not establish"
 
 /-- Every sola fide atom, in declaration order. -/
 def all : List Claim :=
@@ -287,7 +317,12 @@ def all : List Claim :=
   , .godNotBoundToWater, .john3_5WaterAndSpirit, .john3_5RequiresWaterBaptism
   , .john3_5WaterIsBaptism, .john3_5WaterIsNaturalBirth, .john3_5WaterIsEzekielsCleansing
   , .john3_5WaterIsTheSpiritsCleansing, .matthew3_11SpiritAndFire, .fireIsJudgment
-  , .fireIsPurification, .fireIsPentecost ]
+  , .fireIsPurification, .fireIsPentecost, .james2FaithWithoutWorksIsDead
+  , .james2JustifiedByWorks, .dikaioIsDeclarativeOutsidePaul, .jamesJustifyDenotesIncrease
+  , .jamesFaithAloneIsDeadFaith, .reformedFaithIsNoDeadFaith, .jamesFaithIsNotReformedFaith
+  , .scriptureTeachesIncreaseOfJustification, .worksCauseIncreaseOfJustification
+  , .rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness, .sir18_22BeJustifiedToDeath
+  , .sir18_22GreekIsAVow, .originalTextDecides ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -307,7 +342,7 @@ are the narrative texts of the thief and the tax collector, Galatians 1:6–9,
 Christ's command to baptise, Trent's "laver, or the desire thereof", and
 Luke's law-observance. Each needs a word the vocabulary lacks — a command, a
 curse, a disjunction, a story's outcome. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (78, 85) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (91, 99) := by decide
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
@@ -320,6 +355,6 @@ theorem contested_length : (HasMeanings.contested (α := Claim)).length = 26 := 
 lexical case and Trent's reading of the word, Augustine's gloss, the verdict and
 the tax collector of Luke 18, James 2:24, and the claim that James uses it
 otherwise. -/
-theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 13 := by decide
+theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 20 := by decide
 
 end Testimony.Meanings.SolaFide

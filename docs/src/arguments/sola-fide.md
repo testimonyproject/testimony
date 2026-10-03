@@ -325,65 +325,80 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–55; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
 | \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground | interpretive | Christian, historical-grammatical, plausible | [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
 | \\(P_{20}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{21}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
+| \\(P_{21}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
 | \\(P_{22}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
-| \\(P_{23}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii; 2 Pet 3:15-16; [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003), ad loc. 2 Pet 3:16 |
-| \\(P_{24}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015); [`mannermaa-christ-present-faith-2005`](../bibliography.md#mannermaa-christ-present-faith-2005); [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §1 Clement 32.4; [`hilary-commentary-matthew-2013`](../bibliography.md#hilary-commentary-matthew-2013), §8.6; [`basil-ascetical-works-1999`](../bibliography.md#basil-ascetical-works-1999), §Homily 20, Of Humility |
-| \\(P_{25}\\) | Faith is sufficient: whoever believes is saved | theological | Reformed Protestant, disputed | Luke 7:50; Acts 15:9-11; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{26}\\) | Salvation is by grace, a gift and not wages owed | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:18-19; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:18 |
-| \\(P_{27}\\) | Salvation is not by works: no work is its ground | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{28}\\) | Salvation is received through faith | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:3-5; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:5 |
-| \\(P_{29}\\) | Justification is forensic only: pardon and imputation, not infusion | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
-| \\(P_{30}\\) | Second Temple Judaism: in by grace, staying in by works | historical | critical scholarship, disputed | [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977) |
-| \\(P_{31}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
-| \\(P_{32}\\) | Justification is not remission of sins only, but renewal of the inward man | theological | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11 |
-| \\(P_{33}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6 |
-| \\(P_{34}\\) | The inward renewal of the justified grows as they do good works in grace | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1 |
-| \\(P_{35}\\) | John 6:28–29 — the work God requires is that you believe in him whom he sent | textual | Christian, historical-grammatical, consensus | John 6:28-29; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901 |
-| \\(P_{36}\\) | John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son ※ | textual | Christian, historical-grammatical, consensus | John 3:16-18; John 3:36; John 5:24; John 20:31 |
-| \\(P_{37}\\) | The believing of John 6:29 is trust, which brings nothing and receives Christ | interpretive | Reformed Protestant, disputed | [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29 |
-| \\(P_{38}\\) | The believing of John 6:29 is faith living through charity, the source of works | interpretive | Roman Catholic, disputed | [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 |
-| \\(P_{39}\\) | Galatians 3:11–12 — none is justified by the law; the law is not of faith | textual | Christian, historical-grammatical, consensus | Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11 |
-| \\(P_{40}\\) | Love of God and neighbour is what the law commands | textual | Christian, historical-grammatical, consensus | Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12 |
-| \\(P_{41}\\) | Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed | textual | Christian, historical-grammatical, consensus | Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6 |
-| \\(P_{42}\\) | 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins ※ | textual | Christian, historical-grammatical, consensus | 1 Cor 15:3 |
-| \\(P_{43}\\) | Galatians 2:21: if righteousness were through the law, Christ died for no purpose | textual | Christian, historical-grammatical, consensus | Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21 |
-| \\(P_{44}\\) | Galatians 5:2–4: you who would be justified by the law are severed from Christ | textual | Christian, historical-grammatical, consensus | Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2 |
-| \\(P_{45}\\) | Romans 8:33–34: it is God who justifies — who is to condemn? ※ | textual | Christian, historical-grammatical, consensus | Rom 8:33-34 |
-| \\(P_{46}\\) | In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous | linguistic | Christian, historical-grammatical, well supported | [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24 |
-| \\(P_{47}\\) | Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω ※ | textual | Christian, historical-grammatical, consensus | Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11 |
-| \\(P_{48}\\) | A word contributes the least meaning its context requires; one occurrence does not carry the whole concept | linguistic | Christian, historical-grammatical, well supported | [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004) |
-| \\(P_{49}\\) | Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006) |
-| \\(P_{50}\\) | When God justifies, he also renews: pardon and renewal are given together, not to be separated | theological | Christian, historical-grammatical, well supported | [`lwf-catholic-joint-declaration-2000`](../bibliography.md#lwf-catholic-joint-declaration-2000), §§22; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6; [`gorman-cruciform-god-2009`](../bibliography.md#gorman-cruciform-god-2009) |
-| \\(P_{51}\\) | Augustine glosses "being justified" as "being made righteous", and the Latin West read iustificare so | historical | Christian, historical-grammatical, consensus | [`npnf1-05-1887`](../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [`mcgrath-iustitia-dei-2005`](../bibliography.md#mcgrath-iustitia-dei-2005); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on the Vulgate |
-| \\(P_{52}\\) | Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted | textual | Christian, historical-grammatical, consensus | Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6 |
-| \\(P_{53}\\) | λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account | linguistic | Christian, historical-grammatical, well supported | [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3 |
-| \\(P_{54}\\) | In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted | interpretive | Christian, historical-grammatical, well supported | [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8 |
-| \\(P_{55}\\) | Christ's death for our sins is the whole ground of justification; to add to it is another gospel | interpretive | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
-| \\(P_{56}\\) | Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works | textual | Christian, historical-grammatical, consensus | Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 201–207 |
-| \\(P_{57}\\) | δεδικαιωμένος at Luke 18:14 is God's verdict: accepted as righteous before God | linguistic | Christian, historical-grammatical, well supported | [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; Luke 18:14 |
-| \\(P_{58}\\) | The tax collector brings no works that merit, only a humble and contrite plea for mercy | interpretive | Christian, historical-grammatical, consensus | Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 36 |
-| \\(P_{59}\\) | Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works | textual | Christian, historical-grammatical, well supported | Matt 7:21-23; [`calvin-harmony-evangelists-1845`](../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2826 |
-| \\(P_{60}\\) | In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith | interpretive | Roman Catholic, disputed | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1821 |
-| \\(P_{61}\\) | In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith | interpretive | Reformed Protestant, disputed | [`calvin-harmony-evangelists-1845`](../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368 |
-| \\(P_{62}\\) | Matthew 19:17 — "If you would enter life, keep the commandments" | textual | Christian, historical-grammatical, consensus | Matt 19:16-22; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 35 |
-| \\(P_{63}\\) | In Matthew 19:17, keeping the commandments is the way to life, made possible by grace | interpretive | Roman Catholic, disputed | [`john-paul-ii-veritatis-splendor-1993`](../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 35 |
-| \\(P_{64}\\) | In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith | interpretive | Reformed Protestant, disputed | [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394 |
-| \\(P_{65}\\) | Water baptism is the instrumental cause of justification | theological | Roman Catholic, disputed | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 34–35; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2 |
-| \\(P_{66}\\) | The washing itself is necessary for salvation, though desire may justify | theological | Roman Catholic, disputed | [`feeney-bread-of-life-1952`](../bibliography.md#feeney-bread-of-life-1952) |
-| \\(P_{67}\\) | Justification cannot be effected without the laver of regeneration, or the desire thereof | textual | Roman Catholic, consensus | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.68 a.2 |
-| \\(P_{68}\\) | The desire for baptism brings about its fruits without being a sacrament | theological | Roman Catholic, consensus | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2 |
-| \\(P_{69}\\) | Luke 23:43 — the thief, unbaptised, is promised paradise | textual | Christian, historical-grammatical, consensus | Luke 23:43; [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31 |
-| \\(P_{70}\\) | The thief's case bears on salvation under the Gospel | interpretive | Christian, historical-grammatical, well supported | [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11 |
-| \\(P_{71}\\) | Acts 8:14–17 — the Samaritans, baptized, receive the Spirit afterwards | textual | Christian, historical-grammatical, consensus | Acts 8:14-17; [`calvin-commentary-acts-1844`](../bibliography.md#calvin-commentary-acts-1844), pp. 338–339 |
-| \\(P_{72}\\) | Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism | textual | Christian, historical-grammatical, consensus | Acts 10:44-48; [`calvin-commentary-acts-1844`](../bibliography.md#calvin-commentary-acts-1844), pp. 453–454 |
-| \\(P_{73}\\) | God is not bound to water baptism: he gives the Spirit before it and after it | theological | Christian, historical-grammatical, consensus | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1257; [`calvin-commentary-acts-1844`](../bibliography.md#calvin-commentary-acts-1844), p. 454; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2 |
-| \\(P_{74}\\) | John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom | textual | Christian, historical-grammatical, consensus | John 3:5; [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) |
-| \\(P_{75}\\) | John 3:5 requires water baptism for entry into the kingdom | interpretive | Roman Catholic, disputed | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 56; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1257 |
-| \\(P_{76}\\) | The water of John 3:5 is baptismal water | interpretive | Roman Catholic, disputed | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 56; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), p. 110 |
-| \\(P_{77}\\) | The water of John 3:5 is natural birth | interpretive | critical scholarship, disputed | [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) |
-| \\(P_{78}\\) | The water of John 3:5 is the cleansing promised in Ezekiel 36:25–27, not baptism | interpretive | Christian, historical-grammatical, disputed | [`carson-born-of-water-2019`](../bibliography.md#carson-born-of-water-2019); [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) |
-| \\(P_{79}\\) | The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one | interpretive | Reformed Protestant, disputed | [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25 |
+| \\(P_{23}\\) | James 2:24 says a person is justified by works and not by faith alone | textual | Christian, historical-grammatical, consensus | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24 |
+| \\(P_{24}\\) | Scripture does not contradict itself | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii; 2 Pet 3:15-16; [`schreiner-peter-jude-2003`](../bibliography.md#schreiner-peter-jude-2003), ad loc. 2 Pet 3:16 |
+| \\(P_{25}\\) | Justification is by faith alone | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.1; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015); [`mannermaa-christ-present-faith-2005`](../bibliography.md#mannermaa-christ-present-faith-2005); [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §1 Clement 32.4; [`hilary-commentary-matthew-2013`](../bibliography.md#hilary-commentary-matthew-2013), §8.6; [`basil-ascetical-works-1999`](../bibliography.md#basil-ascetical-works-1999), §Homily 20, Of Humility |
+| \\(P_{26}\\) | Faith is sufficient: whoever believes is saved | theological | Reformed Protestant, disputed | Luke 7:50; Acts 15:9-11; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
+| \\(P_{27}\\) | Salvation is by grace, a gift and not wages owed | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:18-19; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:18 |
+| \\(P_{28}\\) | Salvation is not by works: no work is its ground | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
+| \\(P_{29}\\) | Salvation is received through faith | theological | Reformed Protestant, well supported | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi–xviii; 1 Pet 1:3-5; [`jobes-1-peter-2005`](../bibliography.md#jobes-1-peter-2005), ad loc. 1 Pet 1:5 |
+| \\(P_{30}\\) | Justification is forensic only: pardon and imputation, not infusion | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
+| \\(P_{31}\\) | Second Temple Judaism: in by grace, staying in by works | historical | critical scholarship, disputed | [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977) |
+| \\(P_{32}\\) | Works performed in grace merit an increase of justification | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 16 |
+| \\(P_{33}\\) | Justification is not remission of sins only, but renewal of the inward man | theological | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11 |
+| \\(P_{34}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6 |
+| \\(P_{35}\\) | The inward renewal of the justified grows as they do good works in grace | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1 |
+| \\(P_{36}\\) | John 6:28–29 — the work God requires is that you believe in him whom he sent | textual | Christian, historical-grammatical, consensus | John 6:28-29; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901 |
+| \\(P_{37}\\) | John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son ※ | textual | Christian, historical-grammatical, consensus | John 3:16-18; John 3:36; John 5:24; John 20:31 |
+| \\(P_{38}\\) | The believing of John 6:29 is trust, which brings nothing and receives Christ | interpretive | Reformed Protestant, disputed | [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29 |
+| \\(P_{39}\\) | The believing of John 6:29 is faith living through charity, the source of works | interpretive | Roman Catholic, disputed | [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 |
+| \\(P_{40}\\) | Galatians 3:11–12 — none is justified by the law; the law is not of faith | textual | Christian, historical-grammatical, consensus | Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11 |
+| \\(P_{41}\\) | Love of God and neighbour is what the law commands | textual | Christian, historical-grammatical, consensus | Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12 |
+| \\(P_{42}\\) | Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed | textual | Christian, historical-grammatical, consensus | Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6 |
+| \\(P_{43}\\) | 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins ※ | textual | Christian, historical-grammatical, consensus | 1 Cor 15:3 |
+| \\(P_{44}\\) | Galatians 2:21: if righteousness were through the law, Christ died for no purpose | textual | Christian, historical-grammatical, consensus | Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21 |
+| \\(P_{45}\\) | Galatians 5:2–4: you who would be justified by the law are severed from Christ | textual | Christian, historical-grammatical, consensus | Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2 |
+| \\(P_{46}\\) | Romans 8:33–34: it is God who justifies — who is to condemn? ※ | textual | Christian, historical-grammatical, consensus | Rom 8:33-34 |
+| \\(P_{47}\\) | In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous | linguistic | Christian, historical-grammatical, well supported | [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24 |
+| \\(P_{48}\\) | Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω ※ | textual | Christian, historical-grammatical, consensus | Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11 |
+| \\(P_{49}\\) | A word contributes the least meaning its context requires; one occurrence does not carry the whole concept | linguistic | Christian, historical-grammatical, well supported | [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004) |
+| \\(P_{50}\\) | Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006) |
+| \\(P_{51}\\) | When God justifies, he also renews: pardon and renewal are given together, not to be separated | theological | Christian, historical-grammatical, well supported | [`lwf-catholic-joint-declaration-2000`](../bibliography.md#lwf-catholic-joint-declaration-2000), §§22; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6; [`gorman-cruciform-god-2009`](../bibliography.md#gorman-cruciform-god-2009) |
+| \\(P_{52}\\) | Augustine glosses "being justified" as "being made righteous", and the Latin West read iustificare so | historical | Christian, historical-grammatical, consensus | [`npnf1-05-1887`](../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [`mcgrath-iustitia-dei-2005`](../bibliography.md#mcgrath-iustitia-dei-2005); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on the Vulgate |
+| \\(P_{53}\\) | Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted | textual | Christian, historical-grammatical, consensus | Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6 |
+| \\(P_{54}\\) | λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account | linguistic | Christian, historical-grammatical, well supported | [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3 |
+| \\(P_{55}\\) | In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted | interpretive | Christian, historical-grammatical, well supported | [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8 |
+| \\(P_{56}\\) | Christ's death for our sins is the whole ground of justification; to add to it is another gospel | interpretive | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
+| \\(P_{57}\\) | Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works | textual | Christian, historical-grammatical, consensus | Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 201–207 |
+| \\(P_{58}\\) | δεδικαιωμένος at Luke 18:14 is God's verdict: accepted as righteous before God | linguistic | Christian, historical-grammatical, well supported | [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; Luke 18:14 |
+| \\(P_{59}\\) | The tax collector brings no works that merit, only a humble and contrite plea for mercy | interpretive | Christian, historical-grammatical, consensus | Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 36 |
+| \\(P_{60}\\) | Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works | textual | Christian, historical-grammatical, well supported | Matt 7:21-23; [`calvin-harmony-evangelists-1845`](../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2826 |
+| \\(P_{61}\\) | In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith | interpretive | Roman Catholic, disputed | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1821 |
+| \\(P_{62}\\) | In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith | interpretive | Reformed Protestant, disputed | [`calvin-harmony-evangelists-1845`](../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368 |
+| \\(P_{63}\\) | Matthew 19:17 — "If you would enter life, keep the commandments" | textual | Christian, historical-grammatical, consensus | Matt 19:16-22; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 35 |
+| \\(P_{64}\\) | In Matthew 19:17, keeping the commandments is the way to life, made possible by grace | interpretive | Roman Catholic, disputed | [`john-paul-ii-veritatis-splendor-1993`](../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 35 |
+| \\(P_{65}\\) | In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith | interpretive | Reformed Protestant, disputed | [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394 |
+| \\(P_{66}\\) | Water baptism is the instrumental cause of justification | theological | Roman Catholic, disputed | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 34–35; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2 |
+| \\(P_{67}\\) | The washing itself is necessary for salvation, though desire may justify | theological | Roman Catholic, disputed | [`feeney-bread-of-life-1952`](../bibliography.md#feeney-bread-of-life-1952) |
+| \\(P_{68}\\) | Justification cannot be effected without the laver of regeneration, or the desire thereof | textual | Roman Catholic, consensus | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.68 a.2 |
+| \\(P_{69}\\) | The desire for baptism brings about its fruits without being a sacrament | theological | Roman Catholic, consensus | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2 |
+| \\(P_{70}\\) | Luke 23:43 — the thief, unbaptised, is promised paradise | textual | Christian, historical-grammatical, consensus | Luke 23:43; [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31 |
+| \\(P_{71}\\) | The thief's case bears on salvation under the Gospel | interpretive | Christian, historical-grammatical, well supported | [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11 |
+| \\(P_{72}\\) | Acts 8:14–17 — the Samaritans, baptized, receive the Spirit afterwards | textual | Christian, historical-grammatical, consensus | Acts 8:14-17; [`calvin-commentary-acts-1844`](../bibliography.md#calvin-commentary-acts-1844), pp. 338–339 |
+| \\(P_{73}\\) | Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism | textual | Christian, historical-grammatical, consensus | Acts 10:44-48; [`calvin-commentary-acts-1844`](../bibliography.md#calvin-commentary-acts-1844), pp. 453–454 |
+| \\(P_{74}\\) | God is not bound to water baptism: he gives the Spirit before it and after it | theological | Christian, historical-grammatical, consensus | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1257; [`calvin-commentary-acts-1844`](../bibliography.md#calvin-commentary-acts-1844), p. 454; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2 |
+| \\(P_{75}\\) | John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom | textual | Christian, historical-grammatical, consensus | John 3:5; [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) |
+| \\(P_{76}\\) | John 3:5 requires water baptism for entry into the kingdom | interpretive | Roman Catholic, disputed | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 56; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1257 |
+| \\(P_{77}\\) | The water of John 3:5 is baptismal water | interpretive | Roman Catholic, disputed | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 56; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), p. 110 |
+| \\(P_{78}\\) | The water of John 3:5 is natural birth | interpretive | critical scholarship, disputed | [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) |
+| \\(P_{79}\\) | The water of John 3:5 is the cleansing promised in Ezekiel 36:25–27, not baptism | interpretive | Christian, historical-grammatical, disputed | [`carson-born-of-water-2019`](../bibliography.md#carson-born-of-water-2019); [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) |
+| \\(P_{80}\\) | The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one | interpretive | Reformed Protestant, disputed | [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25 |
+| \\(P_{81}\\) | James 2:14–26: faith without works cannot save, and is dead (2:17, 2:26) | textual | Christian, historical-grammatical, consensus | Jas 2:14-26; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:14 |
+| \\(P_{82}\\) | James 2:21–25: Abraham justified by works at Genesis 22, fulfilling Genesis 15:6; Rahab justified by works ※ | textual | Christian, historical-grammatical, consensus | Jas 2:21-25; Gen 15:6; Gen 22:9-12 |
+| \\(P_{83}\\) | Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous | linguistic | Christian, historical-grammatical, well supported | [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35 |
+| \\(P_{84}\\) | James's δικαιόω denotes the increase of the justice received | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10 |
+| \\(P_{85}\\) | The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 | interpretive | Christian, historical-grammatical, well supported | Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24 |
+| \\(P_{86}\\) | The faith the Reformers say alone justifies is no dead faith, but works by love | historical | Reformed Protestant, consensus | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1 |
+| \\(P_{87}\\) | The faith James 2:24 denies justifies is not the faith of the Reformers' formula | interpretive | Christian, historical-grammatical, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24 |
+| \\(P_{88}\\) | Scripture teaches an increase of justification by good works | theological | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10 |
+| \\(P_{89}\\) | Good works are a cause of the increase of justification, not merely its fruits | theological | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24 |
+| \\(P_{90}\\) | Revelation 22:11 says: he that is just, let him be justified still | textual | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10 |
+| \\(P_{91}\\) | The Greek of Revelation 22:11 says: let the righteous still do righteousness | textual | Christian, historical-grammatical, consensus | [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010), app. Rev 22:11; [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Revelation 22:11 |
+| \\(P_{92}\\) | Sirach 18:22 says: be not afraid to be justified even to death | textual | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10 |
+| \\(P_{93}\\) | The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice | textual | Christian, historical-grammatical, well supported | [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22 |
+| \\(P_{94}\\) | What the original text does not say, a translation does not establish | linguistic | Roman Catholic, consensus | [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21 |
 
 </div>
 
@@ -877,7 +892,7 @@ general rather than for one ethnic marker.
 
 <div class="testimony-math">
 \[
-(P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24}
+(P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25}
 \]
 </div>
 
@@ -893,7 +908,7 @@ Paul, and of the ἔργα νόμου dispute.
 
 <div class="testimony-math">
 \[
-(P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25}
+(P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26}
 \]
 </div>
 
@@ -912,7 +927,7 @@ suffices.
 
 <div class="testimony-math">
 \[
-(P_{9} \land P_{10}) \rightarrow P_{25}
+(P_{9} \land P_{10}) \rightarrow P_{26}
 \]
 </div>
 
@@ -939,7 +954,7 @@ and the Tridentine position each do, over different parts.
 
 <div class="testimony-math">
 \[
-P_{26} \land P_{27} \land P_{28}
+P_{27} \land P_{28} \land P_{29}
 \]
 </div>
 
@@ -951,7 +966,7 @@ reading keeps.
 
 <div class="testimony-math">
 \[
-P_{26} \land P_{27}
+P_{27} \land P_{28}
 \]
 </div>
 
@@ -964,7 +979,7 @@ nor the answer to James is needed for this part.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26}
+(P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27}
 \]
 </div>
 
@@ -978,7 +993,7 @@ answer to James.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27}
+(P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28}
 \]
 </div>
 
@@ -991,7 +1006,7 @@ reaches the part of the conclusion the others reach directly.
 
 <div class="testimony-math">
 \[
-P_{24} \rightarrow P_{25}
+P_{25} \rightarrow P_{26}
 \]
 </div>
 
@@ -1004,7 +1019,7 @@ strands are needed for, and it needs only what each of them says.
 
 <div class="testimony-math">
 \[
-(P_{25} \land P_{1}) \rightarrow P_{28}
+(P_{26} \land P_{1}) \rightarrow P_{29}
 \]
 </div>
 
@@ -1028,8 +1043,8 @@ grounds omitted the ἔργα νόμου premise would misdescribe Paul.
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
+\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{25}
 \end{aligned}
 \]
 </div>
@@ -1046,8 +1061,8 @@ keeps the woman's love from being the ground of her forgiveness.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{18} \\
 \text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
+\text{(3)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{26}
 \end{aligned}
 \]
 </div>
@@ -1068,8 +1083,8 @@ they are two premises about two texts, and an opponent has to answer both.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{10} \\
-\text{(2)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
+\text{(2)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{26}
 \end{aligned}
 \]
 </div>
@@ -1103,7 +1118,7 @@ condition, not the gift.
 
 <div class="testimony-math">
 \[
-(\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24}
+(\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{25}
 \]
 </div>
 
@@ -1117,7 +1132,7 @@ more gracious than the one it replaces.
 
 <div class="testimony-math">
 \[
-P_{16} \rightarrow P_{26} \land P_{27}
+P_{16} \rightarrow P_{27} \land P_{28}
 \]
 </div>
 
@@ -1132,8 +1147,8 @@ what the Pauline strand delivers.
 \begin{aligned}
 \text{(1)} \quad &amp; \lnot P_{7} \\
 \text{(2)} \quad &amp; P_{16} \\
-\text{(3)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24} \\[4pt]
-\vdash \quad &amp; \lnot P_{24}
+\text{(3)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{25} \\[4pt]
+\vdash \quad &amp; \lnot P_{25}
 \end{aligned}
 \]
 </div>
@@ -1150,8 +1165,8 @@ ground is Sanders'; the inference is Dunn's, and is cited as his.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{30} \rightarrow \lnot P_{6} \\[4pt]
+\text{(1)} \quad &amp; P_{31} \\
+\text{(2)} \quad &amp; P_{31} \rightarrow \lnot P_{6} \\[4pt]
 \vdash \quad &amp; \lnot P_{6}
 \end{aligned}
 \]
@@ -1170,9 +1185,9 @@ historical claim about Judaism that is argued on the evidence.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; \lnot P_{30} \\
+\text{(1)} \quad &amp; \lnot P_{31} \\
 \text{(2)} \quad &amp; P_{8} \\
-\text{(3)} \quad &amp; (\lnot P_{30} \land P_{8}) \rightarrow P_{6} \\[4pt]
+\text{(3)} \quad &amp; (\lnot P_{31} \land P_{8}) \rightarrow P_{6} \\[4pt]
 \vdash \quad &amp; P_{6}
 \end{aligned}
 \]
@@ -1233,10 +1248,10 @@ carries the objection only as far as the definition does.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{32} \\
-\text{(2)} \quad &amp; P_{34} \\
-\text{(3)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
+\text{(1)} \quad &amp; P_{33} \\
+\text{(2)} \quad &amp; P_{35} \\
+\text{(3)} \quad &amp; (P_{33} \land P_{35}) \rightarrow P_{32} \\[4pt]
+\vdash \quad &amp; P_{32}
 \end{aligned}
 \]
 </div>
@@ -1255,9 +1270,9 @@ not a separate thesis: it follows from what Trent says justification is.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
-\text{(2)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(3)} \quad &amp; P_{32} \rightarrow \lnot P_{25}
+\text{(1)} \quad &amp; P_{33} \rightarrow \lnot P_{30} \\
+\text{(2)} \quad &amp; P_{33} \rightarrow \lnot P_{34} \\
+\text{(3)} \quad &amp; P_{33} \rightarrow \lnot P_{26}
 \end{aligned}
 \]
 </div>
@@ -1300,7 +1315,7 @@ harmonisation, and scripture's self-consistency.
 \text{(7)} \quad &amp; P_{9} \\
 \text{(8)} \quad &amp; P_{20} \\
 \text{(9)} \quad &amp; P_{21} \\
-\text{(10)} \quad &amp; P_{23}
+\text{(10)} \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
@@ -1320,7 +1335,7 @@ The same, with James unanswered.
 \text{(5)} \quad &amp; P_{5} \\
 \text{(6)} \quad &amp; P_{17} \\
 \text{(7)} \quad &amp; P_{9} \\
-\text{(8)} \quad &amp; P_{23}
+\text{(8)} \quad &amp; P_{24}
 \end{aligned}
 \]
 </div>
@@ -1334,10 +1349,10 @@ which faith alone gives faith sufficient.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(3)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(4)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28}
+\text{(1)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(3)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(4)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29}
 \end{aligned}
 \]
 </div>
@@ -1352,10 +1367,10 @@ to the parts of the conclusion.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(3)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(4)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(5)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28}
+\text{(2)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(3)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(4)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(5)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29}
 \end{aligned}
 \]
 </div>
@@ -1428,12 +1443,12 @@ def verdictNotRenewalSource : Source :=
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{42} \\
-\text{(3)} \quad &amp; P_{43} \\
-\text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{55} \\[4pt]
-\vdash \quad &amp; P_{55}
+\text{(1)} \quad &amp; P_{42} \\
+\text{(2)} \quad &amp; P_{43} \\
+\text{(3)} \quad &amp; P_{44} \\
+\text{(4)} \quad &amp; P_{45} \\
+\text{(5)} \quad &amp; (P_{42} \land P_{43} \land P_{44} \land P_{45}) \rightarrow P_{56} \\[4pt]
+\vdash \quad &amp; P_{56}
 \end{aligned}
 \]
 </div>
@@ -1448,7 +1463,7 @@ part of it.
 
 <div class="testimony-math">
 \[
-(P_{55} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}
+(P_{56} \land P_{47} \land P_{46}) \rightarrow \lnot P_{33}
 \]
 </div>
 
@@ -1496,11 +1511,11 @@ def leastMeaningSource : Source :=
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{46} \\
-\text{(2)} \quad &amp; P_{47} \\
-\text{(3)} \quad &amp; P_{48} \\
-\text{(4)} \quad &amp; (P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49} \\[4pt]
-\vdash \quad &amp; \lnot P_{49}
+\text{(1)} \quad &amp; P_{47} \\
+\text{(2)} \quad &amp; P_{48} \\
+\text{(3)} \quad &amp; P_{49} \\
+\text{(4)} \quad &amp; (P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50} \\[4pt]
+\vdash \quad &amp; \lnot P_{50}
 \end{aligned}
 \]
 </div>
@@ -1578,10 +1593,10 @@ counts to them is, in Paul's own gloss, sin not counted.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{4} \\
-\text{(2)} \quad &amp; P_{52} \\
-\text{(3)} \quad &amp; P_{53} \\
-\text{(4)} \quad &amp; (P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54} \\[4pt]
-\vdash \quad &amp; P_{54}
+\text{(2)} \quad &amp; P_{53} \\
+\text{(3)} \quad &amp; P_{54} \\
+\text{(4)} \quad &amp; (P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55} \\[4pt]
+\vdash \quad &amp; P_{55}
 \end{aligned}
 \]
 </div>
@@ -1594,7 +1609,7 @@ not also denote renewal.
 
 <div class="testimony-math">
 \[
-(P_{54} \land P_{48}) \rightarrow \lnot P_{49}
+(P_{55} \land P_{49}) \rightarrow \lnot P_{50}
 \]
 </div>
 
@@ -1606,7 +1621,7 @@ justification. The step Augustine denies.
 
 <div class="testimony-math">
 \[
-(P_{54} \land P_{46}) \rightarrow \lnot P_{32}
+(P_{55} \land P_{47}) \rightarrow \lnot P_{33}
 \]
 </div>
 
@@ -1645,16 +1660,16 @@ yoke in Acts.
 \text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
 \text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; P_{24} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(23)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(24)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -1671,8 +1686,8 @@ is not the premise being tested.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{19} \\
-\text{(2)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
+\text{(2)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{26}
 \end{aligned}
 \]
 </div>
@@ -1687,8 +1702,8 @@ The Pauline line without the ἔργα νόμου premise.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
+\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{25}
 \end{aligned}
 \]
 </div>
@@ -1703,8 +1718,8 @@ The Pauline line without the objective genitive.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
+\text{(3)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{25}
 \end{aligned}
 \]
 </div>
@@ -1730,7 +1745,7 @@ on the New Perspective's behalf.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{30} \\
+\text{(3)} \quad &amp; P_{31} \\
 \text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{19} \\
 \text{(6)} \quad &amp; P_{1} \\
@@ -1742,17 +1757,17 @@ on the New Perspective's behalf.
 \text{(12)} \quad &amp; P_{9} \\
 \text{(13)} \quad &amp; P_{20} \\
 \text{(14)} \quad &amp; P_{21} \\
-\text{(15)} \quad &amp; P_{23} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(17)} \quad &amp; P_{30} \rightarrow \lnot P_{6} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; P_{24} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(17)} \quad &amp; P_{31} \rightarrow \lnot P_{6} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(23)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(24)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -1789,17 +1804,17 @@ shows that the two questions are independent.
 \text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
 \text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; P_{24} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(23)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(24)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\
-\text{(25)} \quad &amp; \lnot P_{29} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\
+\text{(25)} \quad &amp; \lnot P_{30} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -1831,16 +1846,16 @@ of justification. Everything else in the Reformed case is granted.
 \text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
 \text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; P_{24} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(23)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(24)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -1873,16 +1888,16 @@ apostolic strand was written against.
 \text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
 \text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; P_{24} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(23)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(24)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -1920,20 +1935,20 @@ leans on Romans instead.
 \text{(13)} \quad &amp; P_{9} \\
 \text{(14)} \quad &amp; P_{20} \\
 \text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; P_{24} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(23)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(24)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\
 \text{(25)} \quad &amp; \lnot P_{12} \\
 \text{(26)} \quad &amp; \lnot P_{13} \\
 \text{(27)} \quad &amp; \lnot P_{14} \\
 \text{(28)} \quad &amp; \lnot P_{15} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -1961,10 +1976,10 @@ nobody holds.
 \text{(2)} \quad &amp; P_{16} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24} \\
-\text{(6)} \quad &amp; P_{16} \rightarrow P_{26} \land P_{27} \\
-\text{(7)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{25} \\
+\text{(6)} \quad &amp; P_{16} \rightarrow P_{27} \land P_{28} \\
+\text{(7)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -1984,10 +1999,10 @@ conclusion: by grace, and not by works.
 \text{(2)} \quad &amp; P_{16} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24} \\
-\text{(6)} \quad &amp; P_{16} \rightarrow P_{26} \land P_{27} \\
-\text{(7)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27}
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{25} \\
+\text{(6)} \quad &amp; P_{16} \rightarrow P_{27} \land P_{28} \\
+\text{(7)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28}
 \end{aligned}
 \]
 </div>
@@ -2035,15 +2050,15 @@ forensic only.
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{23} \\
-\text{(6)} \quad &amp; P_{32} \\
-\text{(7)} \quad &amp; P_{34} \\
-\text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
-\text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
-\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
-\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(5)} \quad &amp; P_{24} \\
+\text{(6)} \quad &amp; P_{33} \\
+\text{(7)} \quad &amp; P_{35} \\
+\text{(8)} \quad &amp; (P_{33} \land P_{35}) \rightarrow P_{32} \\
+\text{(9)} \quad &amp; P_{33} \rightarrow \lnot P_{30} \\
+\text{(10)} \quad &amp; P_{33} \rightarrow \lnot P_{34} \\
+\text{(11)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\
+\text{(12)} \quad &amp; P_{32} \rightarrow \lnot P_{28} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -2077,16 +2092,16 @@ The Reformed package without the ἔργα νόμου premise.
 \text{(12)} \quad &amp; P_{9} \\
 \text{(13)} \quad &amp; P_{20} \\
 \text{(14)} \quad &amp; P_{21} \\
-\text{(15)} \quad &amp; P_{23} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(17)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; P_{24} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(19)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(22)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(23)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(22)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -2115,16 +2130,16 @@ The Reformed package without the dominical lexical premise.
 \text{(12)} \quad &amp; P_{9} \\
 \text{(13)} \quad &amp; P_{20} \\
 \text{(14)} \quad &amp; P_{21} \\
-\text{(15)} \quad &amp; P_{23} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(17)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; P_{24} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(19)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(22)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(23)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(22)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -2154,16 +2169,16 @@ apostolic strand is untouched.
 \text{(11)} \quad &amp; P_{9} \\
 \text{(12)} \quad &amp; P_{20} \\
 \text{(13)} \quad &amp; P_{21} \\
-\text{(14)} \quad &amp; P_{23} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(14)} \quad &amp; P_{24} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(18)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(21)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(22)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(21)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -2192,16 +2207,16 @@ genitive stays.
 \text{(10)} \quad &amp; P_{9} \\
 \text{(11)} \quad &amp; P_{20} \\
 \text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{23} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(15)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(13)} \quad &amp; P_{24} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(17)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(20)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(21)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(20)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -2230,16 +2245,16 @@ theirs.
 \text{(10)} \quad &amp; P_{9} \\
 \text{(11)} \quad &amp; P_{20} \\
 \text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{23} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(15)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(13)} \quad &amp; P_{24} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(17)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(20)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(21)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(20)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -2267,16 +2282,16 @@ The reading of Galatians as a polemic stays, and so does the answer to James.
 \text{(9)} \quad &amp; P_{9} \\
 \text{(10)} \quad &amp; P_{20} \\
 \text{(11)} \quad &amp; P_{21} \\
-\text{(12)} \quad &amp; P_{23} \\
-\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(14)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(12)} \quad &amp; P_{24} \\
+\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(14)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(19)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(20)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27}
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(19)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28}
 \end{aligned}
 \]
 </div>
@@ -2296,7 +2311,7 @@ Paul alone carry sola fide on Gathercole's history?
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; \lnot P_{30} \\
+\text{(3)} \quad &amp; \lnot P_{31} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{1} \\
 \text{(6)} \quad &amp; P_{2} \\
@@ -2307,15 +2322,15 @@ Paul alone carry sola fide on Gathercole's history?
 \text{(11)} \quad &amp; P_{9} \\
 \text{(12)} \quad &amp; P_{20} \\
 \text{(13)} \quad &amp; P_{21} \\
-\text{(14)} \quad &amp; P_{23} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(16)} \quad &amp; (\lnot P_{30} \land P_{8}) \rightarrow P_{6} \\
+\text{(14)} \quad &amp; P_{24} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; (\lnot P_{31} \land P_{8}) \rightarrow P_{6} \\
 \text{(17)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(20)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(21)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(20)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -2332,7 +2347,7 @@ The same on Sanders' reading of Judaism.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{30} \\
+\text{(3)} \quad &amp; P_{31} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{3} \\
@@ -2342,15 +2357,15 @@ The same on Sanders' reading of Judaism.
 \text{(10)} \quad &amp; P_{9} \\
 \text{(11)} \quad &amp; P_{20} \\
 \text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{23} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(15)} \quad &amp; P_{30} \rightarrow \lnot P_{6} \\
+\text{(13)} \quad &amp; P_{24} \\
+\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; P_{31} \rightarrow \lnot P_{6} \\
 \text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(19)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(20)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(19)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -2378,15 +2393,15 @@ The Reformed package without the premises that harmonise James.
 \text{(11)} \quad &amp; P_{5} \\
 \text{(12)} \quad &amp; P_{17} \\
 \text{(13)} \quad &amp; P_{9} \\
-\text{(14)} \quad &amp; P_{23} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(20)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(21)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(14)} \quad &amp; P_{24} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(20)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -2415,15 +2430,15 @@ grace, with James 2:24 left unanswered?
 \text{(11)} \quad &amp; P_{5} \\
 \text{(12)} \quad &amp; P_{17} \\
 \text{(13)} \quad &amp; P_{9} \\
-\text{(14)} \quad &amp; P_{23} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(20)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(21)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26}
+\text{(14)} \quad &amp; P_{24} \\
+\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(20)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27}
 \end{aligned}
 \]
 </div>
@@ -2445,15 +2460,15 @@ same premises as `tridentine`, concluding what Trent denies.
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{23} \\
-\text{(6)} \quad &amp; P_{32} \\
-\text{(7)} \quad &amp; P_{34} \\
-\text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
-\text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
-\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
-\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\[4pt]
-\vdash \quad &amp; \lnot P_{27}
+\text{(5)} \quad &amp; P_{24} \\
+\text{(6)} \quad &amp; P_{33} \\
+\text{(7)} \quad &amp; P_{35} \\
+\text{(8)} \quad &amp; (P_{33} \land P_{35}) \rightarrow P_{32} \\
+\text{(9)} \quad &amp; P_{33} \rightarrow \lnot P_{30} \\
+\text{(10)} \quad &amp; P_{33} \rightarrow \lnot P_{34} \\
+\text{(11)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\
+\text{(12)} \quad &amp; P_{32} \rightarrow \lnot P_{28} \\[4pt]
+\vdash \quad &amp; \lnot P_{28}
 \end{aligned}
 \]
 </div>
@@ -2474,15 +2489,15 @@ not the renewal of the inward man: the direct denial of Trent's definition
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{42} \\
-\text{(3)} \quad &amp; P_{43} \\
-\text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{55} \\
-\text{(6)} \quad &amp; P_{45} \\
-\text{(7)} \quad &amp; P_{46} \\
-\text{(8)} \quad &amp; (P_{55} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32} \\[4pt]
-\vdash \quad &amp; \lnot P_{32}
+\text{(1)} \quad &amp; P_{42} \\
+\text{(2)} \quad &amp; P_{43} \\
+\text{(3)} \quad &amp; P_{44} \\
+\text{(4)} \quad &amp; P_{45} \\
+\text{(5)} \quad &amp; (P_{42} \land P_{43} \land P_{44} \land P_{45}) \rightarrow P_{56} \\
+\text{(6)} \quad &amp; P_{46} \\
+\text{(7)} \quad &amp; P_{47} \\
+\text{(8)} \quad &amp; (P_{56} \land P_{47} \land P_{46}) \rightarrow \lnot P_{33} \\[4pt]
+\vdash \quad &amp; \lnot P_{33}
 \end{aligned}
 \]
 </div>
@@ -2501,12 +2516,12 @@ route to what the lexical case reaches lexically.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{4} \\
-\text{(2)} \quad &amp; P_{52} \\
-\text{(3)} \quad &amp; P_{53} \\
-\text{(4)} \quad &amp; P_{48} \\
-\text{(5)} \quad &amp; (P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54} \\
-\text{(6)} \quad &amp; (P_{54} \land P_{48}) \rightarrow \lnot P_{49} \\[4pt]
-\vdash \quad &amp; \lnot P_{49}
+\text{(2)} \quad &amp; P_{53} \\
+\text{(3)} \quad &amp; P_{54} \\
+\text{(4)} \quad &amp; P_{49} \\
+\text{(5)} \quad &amp; (P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55} \\
+\text{(6)} \quad &amp; (P_{55} \land P_{49}) \rightarrow \lnot P_{50} \\[4pt]
+\vdash \quad &amp; \lnot P_{50}
 \end{aligned}
 \]
 </div>
@@ -2524,12 +2539,12 @@ verb, justification is not the renewal of the inward man.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{4} \\
-\text{(2)} \quad &amp; P_{52} \\
-\text{(3)} \quad &amp; P_{53} \\
-\text{(4)} \quad &amp; P_{46} \\
-\text{(5)} \quad &amp; (P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54} \\
-\text{(6)} \quad &amp; (P_{54} \land P_{46}) \rightarrow \lnot P_{32} \\[4pt]
-\vdash \quad &amp; \lnot P_{32}
+\text{(2)} \quad &amp; P_{53} \\
+\text{(3)} \quad &amp; P_{54} \\
+\text{(4)} \quad &amp; P_{47} \\
+\text{(5)} \quad &amp; (P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55} \\
+\text{(6)} \quad &amp; (P_{55} \land P_{47}) \rightarrow \lnot P_{33} \\[4pt]
+\vdash \quad &amp; \lnot P_{33}
 \end{aligned}
 \]
 </div>
@@ -2548,11 +2563,11 @@ own, and a word contributes the least meaning its context requires: so Paul's
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{46} \\
-\text{(2)} \quad &amp; P_{47} \\
-\text{(3)} \quad &amp; P_{48} \\
-\text{(4)} \quad &amp; (P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49} \\[4pt]
-\vdash \quad &amp; \lnot P_{49}
+\text{(1)} \quad &amp; P_{47} \\
+\text{(2)} \quad &amp; P_{48} \\
+\text{(3)} \quad &amp; P_{49} \\
+\text{(4)} \quad &amp; (P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50} \\[4pt]
+\vdash \quad &amp; \lnot P_{50}
 \end{aligned}
 \]
 </div>
@@ -3378,18 +3393,18 @@ can grant every one of those (`trent_grants_the_gospel_texts`,
 
 **Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works'*.**
 
-- **The crux:** \\((P_{55} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
+- **The crux:** \\((P_{56} \land P_{47} \land P_{46}) \rightarrow \lnot P_{33}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{55}\\), \\(P_{45}\\), \\(P_{46}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{55} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\) and \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{55}\\), \\(P_{45}\\), \\(P_{46}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\(P_{45}\\), \\((P_{42} \land P_{43} \land P_{44} \land P_{45}) \rightarrow P_{56}\\), \\(P_{46}\\), \\(P_{47}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\) cannot be held together with \\((P_{56} \land P_{47} \land P_{46}) \rightarrow \lnot P_{33}\\) and \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\(P_{45}\\), \\((P_{42} \land P_{43} \land P_{44} \land P_{45}) \rightarrow P_{56}\\), \\(P_{46}\\), \\(P_{47}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{41}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
-  - \\(P_{42}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
-  - \\(P_{43}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
-  - \\(P_{44}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
-  - \\(P_{55}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
-  - \\(P_{45}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{42}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
+  - \\(P_{43}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
+  - \\(P_{44}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
+  - \\(P_{45}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
+  - \\(P_{56}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+  - \\(P_{46}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+  - \\(P_{47}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
   - the step itself — *disputed*: [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
 
 ## Arguments.SolaFide.Definition — what Trent's definition claims
@@ -3588,18 +3603,18 @@ Trent, with its definition read as a claim about Paul's word.
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{23} \\
-\text{(6)} \quad &amp; P_{32} \\
-\text{(7)} \quad &amp; P_{34} \\
-\text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
-\text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
-\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
-\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\
-\text{(13)} \quad &amp; P_{51} \\
-\text{(14)} \quad &amp; P_{51} \rightarrow P_{49} \\
-\text{(15)} \quad &amp; P_{32} \rightarrow P_{49} \\[4pt]
-\vdash \quad &amp; \lnot P_{27}
+\text{(5)} \quad &amp; P_{24} \\
+\text{(6)} \quad &amp; P_{33} \\
+\text{(7)} \quad &amp; P_{35} \\
+\text{(8)} \quad &amp; (P_{33} \land P_{35}) \rightarrow P_{32} \\
+\text{(9)} \quad &amp; P_{33} \rightarrow \lnot P_{30} \\
+\text{(10)} \quad &amp; P_{33} \rightarrow \lnot P_{34} \\
+\text{(11)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\
+\text{(12)} \quad &amp; P_{32} \rightarrow \lnot P_{28} \\
+\text{(13)} \quad &amp; P_{52} \\
+\text{(14)} \quad &amp; P_{52} \rightarrow P_{50} \\
+\text{(15)} \quad &amp; P_{33} \rightarrow P_{50} \\[4pt]
+\vdash \quad &amp; \lnot P_{28}
 \end{aligned}
 \]
 </div>
@@ -3618,16 +3633,16 @@ Trent, with its definition read as a claim about what God does.
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{23} \\
-\text{(6)} \quad &amp; P_{32} \\
-\text{(7)} \quad &amp; P_{34} \\
-\text{(8)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
-\text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
-\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
-\text{(12)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\
-\text{(13)} \quad &amp; P_{32} \rightarrow P_{50} \\[4pt]
-\vdash \quad &amp; \lnot P_{27}
+\text{(5)} \quad &amp; P_{24} \\
+\text{(6)} \quad &amp; P_{33} \\
+\text{(7)} \quad &amp; P_{35} \\
+\text{(8)} \quad &amp; (P_{33} \land P_{35}) \rightarrow P_{32} \\
+\text{(9)} \quad &amp; P_{33} \rightarrow \lnot P_{30} \\
+\text{(10)} \quad &amp; P_{33} \rightarrow \lnot P_{34} \\
+\text{(11)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\
+\text{(12)} \quad &amp; P_{32} \rightarrow \lnot P_{28} \\
+\text{(13)} \quad &amp; P_{33} \rightarrow P_{51} \\[4pt]
+\vdash \quad &amp; \lnot P_{28}
 \end{aligned}
 \]
 </div>
@@ -3735,14 +3750,14 @@ every link of the break is rated above `disputed`.
 
 **Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **The crux:** \\((P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow P_{49}\\) cannot be held together with \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\) and \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{47}\\), \\(P_{48}\\), \\(P_{49}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow P_{50}\\) cannot be held together with \\((P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50}\\) and \\(P_{47}\\), \\(P_{48}\\), \\(P_{49}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{47}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
-  - \\(P_{48}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - \\(P_{47}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{48}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(P_{49}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - the step itself — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
 
 <a id="whereTheLatinReadingFalls"></a>
@@ -3758,14 +3773,14 @@ say it does not.
 
 **Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **The crux:** \\((P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{51}\\), \\(P_{51} \rightarrow P_{49}\\) cannot be held together with \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\) and \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{47}\\), \\(P_{48}\\), \\(P_{49}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{52}\\), \\(P_{52} \rightarrow P_{50}\\) cannot be held together with \\((P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50}\\) and \\(P_{47}\\), \\(P_{48}\\), \\(P_{49}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{47}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
-  - \\(P_{48}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - \\(P_{47}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{48}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(P_{49}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - the step itself — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
 
 <a id="whereTrentsGraceReadingFalls"></a>
@@ -3779,18 +3794,18 @@ and it is rated `disputed`.
 
 **Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
 
-- **The crux:** \\((P_{55} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
+- **The crux:** \\((P_{56} \land P_{47} \land P_{46}) \rightarrow \lnot P_{33}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{55}\\), \\(P_{45}\\), \\(P_{46}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{55} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\) and \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{55}\\), \\(P_{45}\\), \\(P_{46}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\(P_{45}\\), \\((P_{42} \land P_{43} \land P_{44} \land P_{45}) \rightarrow P_{56}\\), \\(P_{46}\\), \\(P_{47}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\) cannot be held together with \\((P_{56} \land P_{47} \land P_{46}) \rightarrow \lnot P_{33}\\) and \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\(P_{45}\\), \\((P_{42} \land P_{43} \land P_{44} \land P_{45}) \rightarrow P_{56}\\), \\(P_{46}\\), \\(P_{47}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{41}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
-  - \\(P_{42}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
-  - \\(P_{43}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
-  - \\(P_{44}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
-  - \\(P_{55}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
-  - \\(P_{45}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{42}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
+  - \\(P_{43}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
+  - \\(P_{44}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
+  - \\(P_{45}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
+  - \\(P_{56}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+  - \\(P_{46}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+  - \\(P_{47}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
   - the step itself — *disputed*: [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
 
 #### Romans 4
@@ -3879,16 +3894,16 @@ lexical case arrives lexically.
 
 **Why *Romans 4:3–8, on Paul's word (by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{54} \land P_{48}) \rightarrow \lnot P_{49}\\), a premise of *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.
+- **The crux:** \\((P_{55} \land P_{49}) \rightarrow \lnot P_{50}\\), a premise of *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{4}\\), \\(P_{52}\\), \\(P_{53}\\), \\(P_{48}\\), \\((P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow P_{49}\\) cannot be held together with \\((P_{54} \land P_{48}) \rightarrow \lnot P_{49}\\) and \\(P_{4}\\), \\(P_{52}\\), \\(P_{53}\\), \\(P_{48}\\), \\((P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{4}\\), \\(P_{53}\\), \\(P_{54}\\), \\(P_{49}\\), \\((P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow P_{50}\\) cannot be held together with \\((P_{55} \land P_{49}) \rightarrow \lnot P_{50}\\) and \\(P_{4}\\), \\(P_{53}\\), \\(P_{54}\\), \\(P_{49}\\), \\((P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(P_{4}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.18
-  - \\(P_{52}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
-  - \\(P_{53}\\) λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
-  - \\(P_{48}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
-  - \\(P_{54}\\) In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+  - \\(P_{53}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
+  - \\(P_{54}\\) λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
+  - \\(P_{49}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - \\(P_{55}\\) In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
   - the step itself — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
 
 <a id="whereRomansFourMeetsWhatGodDoes"></a>
@@ -3905,16 +3920,16 @@ share one ground, the forensic sense of the verb.
 
 **Why *Romans 4:3–8, against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
 
-- **The crux:** \\((P_{54} \land P_{46}) \rightarrow \lnot P_{32}\\), a premise of *Romans 4:3–8, against justification as renewal*.
+- **The crux:** \\((P_{55} \land P_{47}) \rightarrow \lnot P_{33}\\), a premise of *Romans 4:3–8, against justification as renewal*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{4}\\), \\(P_{52}\\), \\(P_{53}\\), \\(P_{46}\\), \\((P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{54} \land P_{46}) \rightarrow \lnot P_{32}\\) and \\(P_{4}\\), \\(P_{52}\\), \\(P_{53}\\), \\(P_{46}\\), \\((P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{4}\\), \\(P_{53}\\), \\(P_{54}\\), \\(P_{47}\\), \\((P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\) cannot be held together with \\((P_{55} \land P_{47}) \rightarrow \lnot P_{33}\\) and \\(P_{4}\\), \\(P_{53}\\), \\(P_{54}\\), \\(P_{47}\\), \\((P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(P_{4}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.18
-  - \\(P_{52}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
-  - \\(P_{53}\\) λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{54}\\) In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+  - \\(P_{53}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
+  - \\(P_{54}\\) λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
+  - \\(P_{47}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{55}\\) In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
   - the step itself — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *disputed*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:5; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
 
 #### The dilemma
@@ -3942,55 +3957,55 @@ Declaration* do, need not.
 
 Each reading is fair: Trent read either way still has a model.
 
-**Every reading of \\(P_{32}\\), answered.** *Trent, against 'not by works'* holds \\(P_{32}\\). It is read 2 ways here, and each reading is checked; none can be left out.
+**Every reading of \\(P_{33}\\), answered.** *Trent, against 'not by works'* holds \\(P_{33}\\). It is read 2 ways here, and each reading is checked; none can be left out.
 
-**1. Read as what Paul's word means.** The claim commits *Trent, against 'not by works'* to \\(P_{49}\\) — so read by [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`npnf1-05-1887`](../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [`mcgrath-iustitia-dei-2005`](../bibliography.md#mcgrath-iustitia-dei-2005) (*disputed*). It rests the reading on \\(P_{51}\\), \\(P_{51} \rightarrow P_{49}\\).
+**1. Read as what Paul's word means.** The claim commits *Trent, against 'not by works'* to \\(P_{50}\\) — so read by [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`npnf1-05-1887`](../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [`mcgrath-iustitia-dei-2005`](../bibliography.md#mcgrath-iustitia-dei-2005) (*disputed*). It rests the reading on \\(P_{52}\\), \\(P_{52} \rightarrow P_{50}\\).
 
 Against *Paul's word (δικαιόω, by the rule of least meaning)*, it cannot be held. Where it breaks:
 
 **Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **The crux:** \\((P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow P_{49}\\) cannot be held together with \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\) and \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{47}\\), \\(P_{48}\\), \\(P_{49}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow P_{50}\\) cannot be held together with \\((P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50}\\) and \\(P_{47}\\), \\(P_{48}\\), \\(P_{49}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{47}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
-  - \\(P_{48}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - \\(P_{47}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{48}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(P_{49}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - the step itself — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
 
 Against *Paul's word (δικαιόω, by the rule of least meaning)*, it cannot be held. Where it breaks:
 
 **Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **The crux:** \\((P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{51}\\), \\(P_{51} \rightarrow P_{49}\\) cannot be held together with \\((P_{46} \land P_{47} \land P_{48}) \rightarrow \lnot P_{49}\\) and \\(P_{46}\\), \\(P_{47}\\), \\(P_{48}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{47}\\), \\(P_{48}\\), \\(P_{49}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{52}\\), \\(P_{52} \rightarrow P_{50}\\) cannot be held together with \\((P_{47} \land P_{48} \land P_{49}) \rightarrow \lnot P_{50}\\) and \\(P_{47}\\), \\(P_{48}\\), \\(P_{49}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{47}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
-  - \\(P_{48}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - \\(P_{47}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{48}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(P_{49}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - the step itself — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
 
 Against *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, it cannot be held. Where it breaks:
 
 **Why *Romans 4:3–8, on Paul's word (by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{54} \land P_{48}) \rightarrow \lnot P_{49}\\), a premise of *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.
+- **The crux:** \\((P_{55} \land P_{49}) \rightarrow \lnot P_{50}\\), a premise of *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{4}\\), \\(P_{52}\\), \\(P_{53}\\), \\(P_{48}\\), \\((P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow P_{49}\\) cannot be held together with \\((P_{54} \land P_{48}) \rightarrow \lnot P_{49}\\) and \\(P_{4}\\), \\(P_{52}\\), \\(P_{53}\\), \\(P_{48}\\), \\((P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{4}\\), \\(P_{53}\\), \\(P_{54}\\), \\(P_{49}\\), \\((P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow P_{50}\\) cannot be held together with \\((P_{55} \land P_{49}) \rightarrow \lnot P_{50}\\) and \\(P_{4}\\), \\(P_{53}\\), \\(P_{54}\\), \\(P_{49}\\), \\((P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(P_{4}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.18
-  - \\(P_{52}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
-  - \\(P_{53}\\) λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
-  - \\(P_{48}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
-  - \\(P_{54}\\) In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+  - \\(P_{53}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
+  - \\(P_{54}\\) λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
+  - \\(P_{49}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - \\(P_{55}\\) In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
   - the step itself — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *well supported*: [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
 
-**2. Read as what God does in justifying.** The claim commits *Trent, against 'not by works'* to \\(P_{50}\\) — so read by [`lwf-catholic-joint-declaration-2000`](../bibliography.md#lwf-catholic-joint-declaration-2000), §§22; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 (*disputed*).
+**2. Read as what God does in justifying.** The claim commits *Trent, against 'not by works'* to \\(P_{51}\\) — so read by [`lwf-catholic-joint-declaration-2000`](../bibliography.md#lwf-catholic-joint-declaration-2000), §§22; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 (*disputed*).
 
 Against *Paul's word (δικαιόω, by the rule of least meaning)*, it is not reached: *Paul's word (δικαιόω, by the rule of least meaning)* holds, and can be held together with it.
 
@@ -4000,34 +4015,34 @@ Against *Paul's gospel (Galatians 1), against justification as renewal*, it cann
 
 **Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
 
-- **The crux:** \\((P_{55} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
+- **The crux:** \\((P_{56} \land P_{47} \land P_{46}) \rightarrow \lnot P_{33}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{55}\\), \\(P_{45}\\), \\(P_{46}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{55} \land P_{46} \land P_{45}) \rightarrow \lnot P_{32}\\) and \\(P_{41}\\), \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\((P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{55}\\), \\(P_{45}\\), \\(P_{46}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\(P_{45}\\), \\((P_{42} \land P_{43} \land P_{44} \land P_{45}) \rightarrow P_{56}\\), \\(P_{46}\\), \\(P_{47}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\) cannot be held together with \\((P_{56} \land P_{47} \land P_{46}) \rightarrow \lnot P_{33}\\) and \\(P_{42}\\), \\(P_{43}\\), \\(P_{44}\\), \\(P_{45}\\), \\((P_{42} \land P_{43} \land P_{44} \land P_{45}) \rightarrow P_{56}\\), \\(P_{46}\\), \\(P_{47}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{41}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
-  - \\(P_{42}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
-  - \\(P_{43}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
-  - \\(P_{44}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
-  - \\(P_{55}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
-  - \\(P_{45}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{42}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
+  - \\(P_{43}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
+  - \\(P_{44}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
+  - \\(P_{45}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
+  - \\(P_{56}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+  - \\(P_{46}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+  - \\(P_{47}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
   - the step itself — *disputed*: [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
 
 Against *Romans 4:3–8, against justification as renewal*, it cannot be held. Where it breaks:
 
 **Why *Romans 4:3–8, against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
 
-- **The crux:** \\((P_{54} \land P_{46}) \rightarrow \lnot P_{32}\\), a premise of *Romans 4:3–8, against justification as renewal*.
+- **The crux:** \\((P_{55} \land P_{47}) \rightarrow \lnot P_{33}\\), a premise of *Romans 4:3–8, against justification as renewal*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{4}\\), \\(P_{52}\\), \\(P_{53}\\), \\(P_{46}\\), \\((P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\) cannot be held together with \\((P_{54} \land P_{46}) \rightarrow \lnot P_{32}\\) and \\(P_{4}\\), \\(P_{52}\\), \\(P_{53}\\), \\(P_{46}\\), \\((P_{4} \land P_{52} \land P_{53}) \rightarrow P_{54}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{4}\\), \\(P_{53}\\), \\(P_{54}\\), \\(P_{47}\\), \\((P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\) cannot be held together with \\((P_{55} \land P_{47}) \rightarrow \lnot P_{33}\\) and \\(P_{4}\\), \\(P_{53}\\), \\(P_{54}\\), \\(P_{47}\\), \\((P_{4} \land P_{53} \land P_{54}) \rightarrow P_{55}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(P_{4}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.18
-  - \\(P_{52}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
-  - \\(P_{53}\\) λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
-  - \\(P_{46}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{54}\\) In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+  - \\(P_{53}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
+  - \\(P_{54}\\) λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
+  - \\(P_{47}\\) In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — *well supported*: [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(P_{55}\\) In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
   - the step itself — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *disputed*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:5; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
 
 ## Arguments.SolaFide.Dispute — who prevails over sola fide
@@ -4212,7 +4227,7 @@ Finnish reading among them, would then hold it on their authors' behalf.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{33}
+\text{(1)} \quad &amp; P_{34}
 \end{aligned}
 \]
 </div>
@@ -4234,7 +4249,7 @@ Greek. The critics' inference is rated with the rest, as Gathercole's.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
 \text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; \lnot P_{30} \\
+\text{(3)} \quad &amp; \lnot P_{31} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{1} \\
 \text{(6)} \quad &amp; P_{2} \\
@@ -4245,16 +4260,16 @@ Greek. The critics' inference is rated with the rest, as Gathercole's.
 \text{(11)} \quad &amp; P_{9} \\
 \text{(12)} \quad &amp; P_{20} \\
 \text{(13)} \quad &amp; P_{21} \\
-\text{(14)} \quad &amp; P_{23} \\
-\text{(15)} \quad &amp; P_{33} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{24} \\
-\text{(17)} \quad &amp; (\lnot P_{30} \land P_{8}) \rightarrow P_{6} \\
+\text{(14)} \quad &amp; P_{24} \\
+\text{(15)} \quad &amp; P_{34} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(17)} \quad &amp; (\lnot P_{31} \land P_{8}) \rightarrow P_{6} \\
 \text{(18)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(21)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(22)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(21)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -4279,8 +4294,8 @@ what denies Luke's own claim.
 \text{(1)} \quad &amp; P_{17} \\
 \text{(2)} \quad &amp; P_{18} \\
 \text{(3)} \quad &amp; P_{19} \\
-\text{(4)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
+\text{(4)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{26}
 \end{aligned}
 \]
 </div>
@@ -4305,15 +4320,15 @@ The apostolic strand, argued alone: sola fide from Peter at Jerusalem.
 \text{(8)} \quad &amp; P_{9} \\
 \text{(9)} \quad &amp; P_{20} \\
 \text{(10)} \quad &amp; P_{21} \\
-\text{(11)} \quad &amp; P_{23} \\
-\text{(12)} \quad &amp; P_{33} \\
-\text{(13)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{25} \\
+\text{(11)} \quad &amp; P_{24} \\
+\text{(12)} \quad &amp; P_{34} \\
+\text{(13)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
 \text{(14)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(17)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(15)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(17)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(18)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -4334,10 +4349,10 @@ step.
 \text{(2)} \quad &amp; P_{16} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{24} \\
-\text{(6)} \quad &amp; P_{16} \rightarrow P_{26} \land P_{27} \\
-\text{(7)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; \lnot P_{24}
+\text{(5)} \quad &amp; (\lnot P_{7} \land P_{16}) \rightarrow \lnot P_{25} \\
+\text{(6)} \quad &amp; P_{16} \rightarrow P_{27} \land P_{28} \\
+\text{(7)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; \lnot P_{25}
 \end{aligned}
 \]
 </div>
@@ -4353,8 +4368,8 @@ markers.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{30} \rightarrow \lnot P_{6} \\[4pt]
+\text{(1)} \quad &amp; P_{31} \\
+\text{(2)} \quad &amp; P_{31} \rightarrow \lnot P_{6} \\[4pt]
 \vdash \quad &amp; \lnot P_{6}
 \end{aligned}
 \]
@@ -4371,9 +4386,9 @@ works in general.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; \lnot P_{30} \\
+\text{(1)} \quad &amp; \lnot P_{31} \\
 \text{(2)} \quad &amp; P_{8} \\
-\text{(3)} \quad &amp; (\lnot P_{30} \land P_{8}) \rightarrow P_{6} \\[4pt]
+\text{(3)} \quad &amp; (\lnot P_{31} \land P_{8}) \rightarrow P_{6} \\[4pt]
 \vdash \quad &amp; P_{6}
 \end{aligned}
 \]
@@ -4504,15 +4519,15 @@ grows through good works, and justification and sanctification distinct.
 \text{(2)} \quad &amp; P_{2} \\
 \text{(3)} \quad &amp; P_{3} \\
 \text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{23} \\
-\text{(6)} \quad &amp; P_{34} \\
-\text{(7)} \quad &amp; (P_{32} \land P_{34}) \rightarrow P_{31} \\
-\text{(8)} \quad &amp; P_{32} \rightarrow \lnot P_{29} \\
-\text{(9)} \quad &amp; P_{32} \rightarrow \lnot P_{33} \\
-\text{(10)} \quad &amp; P_{32} \rightarrow \lnot P_{25} \\
-\text{(11)} \quad &amp; P_{31} \rightarrow \lnot P_{27} \\
-\text{(12)} \quad &amp; P_{33} \\[4pt]
-\vdash \quad &amp; \lnot P_{27}
+\text{(5)} \quad &amp; P_{24} \\
+\text{(6)} \quad &amp; P_{35} \\
+\text{(7)} \quad &amp; (P_{33} \land P_{35}) \rightarrow P_{32} \\
+\text{(8)} \quad &amp; P_{33} \rightarrow \lnot P_{30} \\
+\text{(9)} \quad &amp; P_{33} \rightarrow \lnot P_{34} \\
+\text{(10)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\
+\text{(11)} \quad &amp; P_{32} \rightarrow \lnot P_{28} \\
+\text{(12)} \quad &amp; P_{34} \\[4pt]
+\vdash \quad &amp; \lnot P_{28}
 \end{aligned}
 \]
 </div>
@@ -5745,6 +5760,7 @@ gospel answers Trent as Trent answers it.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -5756,6 +5772,7 @@ gospel answers Trent as Trent answers it.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent, against 'not by works'*, weakest at *disputed*:
@@ -5828,6 +5845,7 @@ too; one unanswered defeater is enough.)
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -5835,6 +5853,7 @@ too; one unanswered defeater is enough.)
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent, against 'not by works'*, weakest at *disputed*:
@@ -5911,6 +5930,7 @@ the apocalyptic reading, whose derived "not by works" it denies.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -5918,6 +5938,7 @@ the apocalyptic reading, whose derived "not by works" it denies.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -5990,6 +6011,7 @@ Trent.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -5999,6 +6021,7 @@ Trent.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -6068,6 +6091,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -6079,6 +6103,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6154,6 +6179,7 @@ and Paul defeats it.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6164,6 +6190,7 @@ and Paul defeats it.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -6234,6 +6261,7 @@ as a claim about Paul's word — itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -6245,6 +6273,7 @@ as a claim about Paul's word — itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6322,11 +6351,13 @@ defeats it.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -6411,6 +6442,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6418,6 +6450,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -6495,6 +6528,7 @@ defeats it.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -6502,6 +6536,7 @@ defeats it.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -6571,10 +6606,10 @@ faith sufficed; grant that it did, and Trent's definition cannot stand.
 
 **Why *Luke 7:50: "your faith has saved you"* stands against *Trent, against 'not by works'*.**
 
-- **The crux:** \\((P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25}\\), a premise of *Luke 7:50: "your faith has saved you"*.
+- **The crux:** \\((P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26}\\), a premise of *Luke 7:50: "your faith has saved you"*.
 - **What it does:** its conclusion does not follow without it.
 - **Granted:** \\(P_{17}\\), \\(P_{18}\\), \\(P_{19}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow \lnot P_{25}\\) cannot be held together with \\((P_{17} \land P_{18} \land P_{19}) \rightarrow P_{25}\\) and \\(P_{17}\\), \\(P_{18}\\), \\(P_{19}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow \lnot P_{26}\\) cannot be held together with \\((P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26}\\) and \\(P_{17}\\), \\(P_{18}\\), \\(P_{19}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(P_{17}\\) Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven — *consensus*: Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50
   - \\(P_{18}\\) σῴζω in Luke 7:50 denotes salvation, not physical healing — *well supported*: [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–55; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50
@@ -6716,7 +6751,7 @@ alone — by way of the reading of that believing as trust.
 
 <div class="testimony-math">
 \[
-(P_{35} \land P_{36} \land P_{37}) \rightarrow P_{24}
+(P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25}
 \]
 </div>
 
@@ -6729,11 +6764,11 @@ because the strand is not yet part of `reformed`.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{35} \\
-\text{(2)} \quad &amp; P_{36} \\
-\text{(3)} \quad &amp; P_{37} \\
-\text{(4)} \quad &amp; (P_{35} \land P_{36} \land P_{37}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
+\text{(1)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{37} \\
+\text{(3)} \quad &amp; P_{38} \\
+\text{(4)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{25}
 \end{aligned}
 \]
 </div>
@@ -6748,9 +6783,9 @@ it follows from Aquinas's own reading of the verse.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{38} \\
-\text{(2)} \quad &amp; P_{38} \rightarrow \lnot P_{37} \\[4pt]
-\vdash \quad &amp; \lnot P_{37}
+\text{(1)} \quad &amp; P_{39} \\
+\text{(2)} \quad &amp; P_{39} \rightarrow \lnot P_{38} \\[4pt]
+\vdash \quad &amp; \lnot P_{38}
 \end{aligned}
 \]
 </div>
@@ -6766,9 +6801,9 @@ steps every Reformed strand shares.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{35} \\
-\text{(2)} \quad &amp; P_{36} \\
-\text{(3)} \quad &amp; P_{37} \\
+\text{(1)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{37} \\
+\text{(3)} \quad &amp; P_{38} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{3} \\
@@ -6778,14 +6813,14 @@ steps every Reformed strand shares.
 \text{(10)} \quad &amp; P_{9} \\
 \text{(11)} \quad &amp; P_{20} \\
 \text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{23} \\
-\text{(14)} \quad &amp; (P_{35} \land P_{36} \land P_{37}) \rightarrow P_{24} \\
+\text{(13)} \quad &amp; P_{24} \\
+\text{(14)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
 \text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(18)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(19)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(18)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -6802,9 +6837,9 @@ is written against.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{35} \\
-\text{(2)} \quad &amp; P_{36} \\
-\text{(3)} \quad &amp; P_{38} \\
+\text{(1)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{37} \\
+\text{(3)} \quad &amp; P_{39} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{3} \\
@@ -6814,15 +6849,15 @@ is written against.
 \text{(10)} \quad &amp; P_{9} \\
 \text{(11)} \quad &amp; P_{20} \\
 \text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{23} \\
-\text{(14)} \quad &amp; (P_{35} \land P_{36} \land P_{37}) \rightarrow P_{24} \\
-\text{(15)} \quad &amp; P_{38} \rightarrow \lnot P_{37} \\
+\text{(13)} \quad &amp; P_{24} \\
+\text{(14)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; P_{39} \rightarrow \lnot P_{38} \\
 \text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{26} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{23}) \rightarrow P_{27} \\
-\text{(19)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(20)} \quad &amp; (P_{25} \land P_{1}) \rightarrow P_{28} \\[4pt]
-\vdash \quad &amp; P_{26} \land P_{27} \land P_{28}
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(19)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
@@ -6924,10 +6959,10 @@ faith.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{39} \\
-\text{(2)} \quad &amp; P_{40} \\
-\text{(3)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{38} \\[4pt]
-\vdash \quad &amp; \lnot P_{38}
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{41} \\
+\text{(3)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{39} \\[4pt]
+\vdash \quad &amp; \lnot P_{39}
 \end{aligned}
 \]
 </div>
@@ -6941,10 +6976,10 @@ Luther's step, against the reading of 6:29 as faith formed by charity.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{39} \\
-\text{(2)} \quad &amp; P_{40} \\
-\text{(3)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{38} \\[4pt]
-\vdash \quad &amp; \lnot P_{38}
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{41} \\
+\text{(3)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{39} \\[4pt]
+\vdash \quad &amp; \lnot P_{39}
 \end{aligned}
 \]
 </div>
@@ -6960,9 +6995,9 @@ commands love.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{39} \\
-\text{(2)} \quad &amp; P_{40} \\[4pt]
-\vdash \quad &amp; \lnot P_{38}
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{41} \\[4pt]
+\vdash \quad &amp; \lnot P_{39}
 \end{aligned}
 \]
 </div>
@@ -7040,13 +7075,13 @@ Luther's, and the texts are granted by both sides.
 
 **Why *Luther on Galatians 3:11–12 (against faith formed by charity)* stands against *Aquinas on John 6:29 (faith formed by charity)*.**
 
-- **The crux:** \\((P_{39} \land P_{40}) \rightarrow \lnot P_{38}\\), a premise of *Luther on Galatians 3:11–12 (against faith formed by charity)*.
+- **The crux:** \\((P_{40} \land P_{41}) \rightarrow \lnot P_{39}\\), a premise of *Luther on Galatians 3:11–12 (against faith formed by charity)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{39}\\), \\(P_{40}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{38}\\) cannot be held together with \\((P_{39} \land P_{40}) \rightarrow \lnot P_{38}\\) and \\(P_{39}\\), \\(P_{40}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{40}\\), \\(P_{41}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{39}\\) cannot be held together with \\((P_{40} \land P_{41}) \rightarrow \lnot P_{39}\\) and \\(P_{40}\\), \\(P_{41}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{39}\\) Galatians 3:11–12 — none is justified by the law; the law is not of faith — *consensus*: Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
-  - \\(P_{40}\\) Love of God and neighbour is what the law commands — *consensus*: Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12
+  - \\(P_{40}\\) Galatians 3:11–12 — none is justified by the law; the law is not of faith — *consensus*: Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
+  - \\(P_{41}\\) Love of God and neighbour is what the law commands — *consensus*: Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12
   - the step itself — *disputed*: [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 ## Arguments.SolaFide.Hearings — the same dispute, asked two narrower questions
@@ -7159,6 +7194,7 @@ about Paul's word by Paul's word itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -7170,6 +7206,7 @@ about Paul's word by Paul's word itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent, against 'not by works'*, weakest at *disputed*:
@@ -7239,6 +7276,7 @@ word, and answers every party that attacks it itself.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -7246,6 +7284,7 @@ word, and answers every party that attacks it itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
@@ -7296,6 +7335,7 @@ position holds Trent, and Trent defeats Paul.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -7313,6 +7353,7 @@ position holds Trent, and Trent defeats Paul.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
@@ -7403,6 +7444,7 @@ reading by Paul, and Jervell by Peter.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -7410,6 +7452,7 @@ reading by Paul, and Jervell by Peter.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -7475,11 +7518,13 @@ position holds the apocalyptic reading, and it defeats Paul over πίστις Χ
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -7541,6 +7586,7 @@ position holds Jervell, and he defeats it over the yoke.
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
@@ -7558,6 +7604,7 @@ position holds Jervell, and he defeats it over the yoke.
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
   - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
@@ -7733,7 +7780,7 @@ that the plea sufficed alone (Session VI, ch. 6 and canon 9).
 
 <div class="testimony-math">
 \[
-(P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25}
+(P_{57} \land P_{58} \land P_{59}) \rightarrow P_{26}
 \]
 </div>
 
@@ -7746,11 +7793,11 @@ to faith's sufficiency.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{56} \\
-\text{(2)} \quad &amp; P_{57} \\
-\text{(3)} \quad &amp; P_{58} \\
-\text{(4)} \quad &amp; (P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
+\text{(1)} \quad &amp; P_{57} \\
+\text{(2)} \quad &amp; P_{58} \\
+\text{(3)} \quad &amp; P_{59} \\
+\text{(4)} \quad &amp; (P_{57} \land P_{58} \land P_{59}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{26}
 \end{aligned}
 \]
 </div>
@@ -7765,11 +7812,11 @@ the same claim, from a second saying.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{56} \\
-\text{(2)} \quad &amp; P_{57} \\
-\text{(3)} \quad &amp; P_{58} \\
-\text{(4)} \quad &amp; (P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
+\text{(1)} \quad &amp; P_{57} \\
+\text{(2)} \quad &amp; P_{58} \\
+\text{(3)} \quad &amp; P_{59} \\
+\text{(4)} \quad &amp; (P_{57} \land P_{58} \land P_{59}) \rightarrow P_{26} \\[4pt]
+\vdash \quad &amp; P_{26}
 \end{aligned}
 \]
 </div>
@@ -7788,7 +7835,7 @@ more than the fruit of faith.
 
 <div class="testimony-math">
 \[
-(P_{59} \land P_{60}) \rightarrow \lnot P_{27}
+(P_{60} \land P_{61}) \rightarrow \lnot P_{28}
 \]
 </div>
 
@@ -7802,7 +7849,7 @@ and reads it the other way.
 
 <div class="testimony-math">
 \[
-(P_{59} \land P_{61}) \rightarrow \lnot P_{60}
+(P_{60} \land P_{62}) \rightarrow \lnot P_{61}
 \]
 </div>
 
@@ -7815,10 +7862,10 @@ condition of entry in its own right, so salvation is not apart from works.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{59} \\
-\text{(2)} \quad &amp; P_{60} \\
-\text{(3)} \quad &amp; (P_{59} \land P_{60}) \rightarrow \lnot P_{27} \\[4pt]
-\vdash \quad &amp; \lnot P_{27}
+\text{(1)} \quad &amp; P_{60} \\
+\text{(2)} \quad &amp; P_{61} \\
+\text{(3)} \quad &amp; (P_{60} \land P_{61}) \rightarrow \lnot P_{28} \\[4pt]
+\vdash \quad &amp; \lnot P_{28}
 \end{aligned}
 \]
 </div>
@@ -7832,10 +7879,10 @@ so obedience is not a condition of entry in its own right.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{59} \\
-\text{(2)} \quad &amp; P_{61} \\
-\text{(3)} \quad &amp; (P_{59} \land P_{61}) \rightarrow \lnot P_{60} \\[4pt]
-\vdash \quad &amp; \lnot P_{60}
+\text{(1)} \quad &amp; P_{60} \\
+\text{(2)} \quad &amp; P_{62} \\
+\text{(3)} \quad &amp; (P_{60} \land P_{62}) \rightarrow \lnot P_{61} \\[4pt]
+\vdash \quad &amp; \lnot P_{61}
 \end{aligned}
 \]
 </div>
@@ -7848,10 +7895,10 @@ Matthew 7:21–23, read as Rome reads it, as a party.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{59} \\
-\text{(2)} \quad &amp; P_{60} \\
-\text{(3)} \quad &amp; (P_{59} \land P_{60}) \rightarrow \lnot P_{27} \\[4pt]
-\vdash \quad &amp; \lnot P_{27}
+\text{(1)} \quad &amp; P_{60} \\
+\text{(2)} \quad &amp; P_{61} \\
+\text{(3)} \quad &amp; (P_{60} \land P_{61}) \rightarrow \lnot P_{28} \\[4pt]
+\vdash \quad &amp; \lnot P_{28}
 \end{aligned}
 \]
 </div>
@@ -7866,10 +7913,10 @@ Matthew 7:21–23, read as Calvin reads it, as a party.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{59} \\
-\text{(2)} \quad &amp; P_{61} \\
-\text{(3)} \quad &amp; (P_{59} \land P_{61}) \rightarrow \lnot P_{60} \\[4pt]
-\vdash \quad &amp; \lnot P_{60}
+\text{(1)} \quad &amp; P_{60} \\
+\text{(2)} \quad &amp; P_{62} \\
+\text{(3)} \quad &amp; (P_{60} \land P_{62}) \rightarrow \lnot P_{61} \\[4pt]
+\vdash \quad &amp; \lnot P_{61}
 \end{aligned}
 \]
 </div>
@@ -7887,7 +7934,7 @@ text and denies that it is the way for any sinner.
 
 <div class="testimony-math">
 \[
-(P_{62} \land P_{63}) \rightarrow \lnot P_{27}
+(P_{63} \land P_{64}) \rightarrow \lnot P_{28}
 \]
 </div>
 
@@ -7901,7 +7948,7 @@ text and reads it as the way.
 
 <div class="testimony-math">
 \[
-(P_{62} \land P_{64}) \rightarrow \lnot P_{63}
+(P_{63} \land P_{65}) \rightarrow \lnot P_{64}
 \]
 </div>
 
@@ -7914,10 +7961,10 @@ life, so salvation is not apart from works.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{62} \\
-\text{(2)} \quad &amp; P_{63} \\
-\text{(3)} \quad &amp; (P_{62} \land P_{63}) \rightarrow \lnot P_{27} \\[4pt]
-\vdash \quad &amp; \lnot P_{27}
+\text{(1)} \quad &amp; P_{63} \\
+\text{(2)} \quad &amp; P_{64} \\
+\text{(3)} \quad &amp; (P_{63} \land P_{64}) \rightarrow \lnot P_{28} \\[4pt]
+\vdash \quad &amp; \lnot P_{28}
 \end{aligned}
 \]
 </div>
@@ -7931,10 +7978,10 @@ young man has not kept.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{62} \\
-\text{(2)} \quad &amp; P_{64} \\
-\text{(3)} \quad &amp; (P_{62} \land P_{64}) \rightarrow \lnot P_{63} \\[4pt]
-\vdash \quad &amp; \lnot P_{63}
+\text{(1)} \quad &amp; P_{63} \\
+\text{(2)} \quad &amp; P_{65} \\
+\text{(3)} \quad &amp; (P_{63} \land P_{65}) \rightarrow \lnot P_{64} \\[4pt]
+\vdash \quad &amp; \lnot P_{64}
 \end{aligned}
 \]
 </div>
@@ -7947,10 +7994,10 @@ Matthew 19:17, read as Rome reads it, as a party.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{62} \\
-\text{(2)} \quad &amp; P_{63} \\
-\text{(3)} \quad &amp; (P_{62} \land P_{63}) \rightarrow \lnot P_{27} \\[4pt]
-\vdash \quad &amp; \lnot P_{27}
+\text{(1)} \quad &amp; P_{63} \\
+\text{(2)} \quad &amp; P_{64} \\
+\text{(3)} \quad &amp; (P_{63} \land P_{64}) \rightarrow \lnot P_{28} \\[4pt]
+\vdash \quad &amp; \lnot P_{28}
 \end{aligned}
 \]
 </div>
@@ -7965,10 +8012,10 @@ Matthew 19:17, read as Calvin reads it, as a party.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{62} \\
-\text{(2)} \quad &amp; P_{64} \\
-\text{(3)} \quad &amp; (P_{62} \land P_{64}) \rightarrow \lnot P_{63} \\[4pt]
-\vdash \quad &amp; \lnot P_{63}
+\text{(1)} \quad &amp; P_{63} \\
+\text{(2)} \quad &amp; P_{65} \\
+\text{(3)} \quad &amp; (P_{63} \land P_{65}) \rightarrow \lnot P_{64} \\[4pt]
+\vdash \quad &amp; \lnot P_{64}
 \end{aligned}
 \]
 </div>
@@ -8193,14 +8240,14 @@ definition from the meaning of the word, and what cannot, is checked in
 
 **Why *Luke 18:14: "this man went down to his house justified"* stands against *Trent, against 'not by works'*.**
 
-- **The crux:** \\((P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25}\\), a premise of *Luke 18:14: "this man went down to his house justified"*.
+- **The crux:** \\((P_{57} \land P_{58} \land P_{59}) \rightarrow P_{26}\\), a premise of *Luke 18:14: "this man went down to his house justified"*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{56}\\), \\(P_{57}\\), \\(P_{58}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{32}\\), \\(P_{32} \rightarrow \lnot P_{25}\\) cannot be held together with \\((P_{56} \land P_{57} \land P_{58}) \rightarrow P_{25}\\) and \\(P_{56}\\), \\(P_{57}\\), \\(P_{58}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{57}\\), \\(P_{58}\\), \\(P_{59}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow \lnot P_{26}\\) cannot be held together with \\((P_{57} \land P_{58} \land P_{59}) \rightarrow P_{26}\\) and \\(P_{57}\\), \\(P_{58}\\), \\(P_{59}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{56}\\) Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works — *consensus*: Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 201–207
-  - \\(P_{57}\\) δεδικαιωμένος at Luke 18:14 is God's verdict: accepted as righteous before God — *well supported*: [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; Luke 18:14
-  - \\(P_{58}\\) The tax collector brings no works that merit, only a humble and contrite plea for mercy — *consensus*: Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 36
+  - \\(P_{57}\\) Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works — *consensus*: Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 201–207
+  - \\(P_{58}\\) δεδικαιωμένος at Luke 18:14 is God's verdict: accepted as righteous before God — *well supported*: [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; Luke 18:14
+  - \\(P_{59}\\) The tax collector brings no works that merit, only a humble and contrite plea for mercy — *consensus*: Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 36
   - the step itself — *disputed*: [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 33–34
 
 #### Strength: every weakest link is `disputed`
@@ -9085,8 +9132,8 @@ instrumental cause of justification.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{65} \\[4pt]
-\vdash \quad &amp; P_{65}
+\text{(1)} \quad &amp; P_{66} \\[4pt]
+\vdash \quad &amp; P_{66}
 \end{aligned}
 \]
 </div>
@@ -9152,9 +9199,9 @@ Trent's instrumental cause, read so that the washing itself is necessary.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{65} \\
-\text{(2)} \quad &amp; P_{65} \rightarrow P_{66} \\[4pt]
-\vdash \quad &amp; P_{65}
+\text{(1)} \quad &amp; P_{66} \\
+\text{(2)} \quad &amp; P_{66} \rightarrow P_{67} \\[4pt]
+\vdash \quad &amp; P_{66}
 \end{aligned}
 \]
 </div>
@@ -9169,9 +9216,9 @@ Trent's instrumental cause, read as baptism or its desire.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{65} \\
-\text{(2)} \quad &amp; P_{65} \rightarrow P_{67} \\[4pt]
-\vdash \quad &amp; P_{65}
+\text{(1)} \quad &amp; P_{66} \\
+\text{(2)} \quad &amp; P_{66} \rightarrow P_{68} \\[4pt]
+\vdash \quad &amp; P_{66}
 \end{aligned}
 \]
 </div>
@@ -9188,7 +9235,7 @@ unbaptised, and his case bearing on salvation under the Gospel.
 
 <div class="testimony-math">
 \[
-(P_{69} \land P_{70}) \rightarrow \lnot P_{66}
+(P_{70} \land P_{71}) \rightarrow \lnot P_{67}
 \]
 </div>
 
@@ -9201,10 +9248,10 @@ is not necessary for salvation.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{69} \\
-\text{(2)} \quad &amp; P_{70} \\
-\text{(3)} \quad &amp; (P_{69} \land P_{70}) \rightarrow \lnot P_{66} \\[4pt]
-\vdash \quad &amp; \lnot P_{66}
+\text{(1)} \quad &amp; P_{70} \\
+\text{(2)} \quad &amp; P_{71} \\
+\text{(3)} \quad &amp; (P_{70} \land P_{71}) \rightarrow \lnot P_{67} \\[4pt]
+\vdash \quad &amp; \lnot P_{67}
 \end{aligned}
 \]
 </div>
@@ -9218,7 +9265,7 @@ From the desire's fruits to the washing not being necessary.
 
 <div class="testimony-math">
 \[
-P_{68} \rightarrow \lnot P_{66}
+P_{69} \rightarrow \lnot P_{67}
 \]
 </div>
 
@@ -9231,9 +9278,9 @@ so the washing itself is not necessary for salvation.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{68} \\
-\text{(2)} \quad &amp; P_{68} \rightarrow \lnot P_{66} \\[4pt]
-\vdash \quad &amp; \lnot P_{66}
+\text{(1)} \quad &amp; P_{69} \\
+\text{(2)} \quad &amp; P_{69} \rightarrow \lnot P_{67} \\[4pt]
+\vdash \quad &amp; \lnot P_{67}
 \end{aligned}
 \]
 </div>
@@ -9251,7 +9298,7 @@ and denies it.
 
 <div class="testimony-math">
 \[
-(P_{67} \land P_{68}) \rightarrow \lnot P_{65}
+(P_{68} \land P_{69}) \rightarrow \lnot P_{66}
 \]
 </div>
 
@@ -9265,10 +9312,10 @@ answer to Trent read in its own words.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{67} \\
-\text{(2)} \quad &amp; P_{68} \\
-\text{(3)} \quad &amp; (P_{67} \land P_{68}) \rightarrow \lnot P_{65} \\[4pt]
-\vdash \quad &amp; \lnot P_{65}
+\text{(1)} \quad &amp; P_{68} \\
+\text{(2)} \quad &amp; P_{69} \\
+\text{(3)} \quad &amp; (P_{68} \land P_{69}) \rightarrow \lnot P_{66} \\[4pt]
+\vdash \quad &amp; \lnot P_{66}
 \end{aligned}
 \]
 </div>
@@ -9471,13 +9518,13 @@ with Feeney's reading of it, and nothing else.
 
 **Why *The thief on the cross (Luke 23:43), read with Augustine* stands against *Trent: baptism the instrumental cause of justification, read so that the washing itself is necessary for salvation*.**
 
-- **The crux:** \\((P_{69} \land P_{70}) \rightarrow \lnot P_{66}\\), a premise of *The thief on the cross (Luke 23:43), read with Augustine*.
+- **The crux:** \\((P_{70} \land P_{71}) \rightarrow \lnot P_{67}\\), a premise of *The thief on the cross (Luke 23:43), read with Augustine*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{69}\\), \\(P_{70}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{65}\\), \\(P_{65} \rightarrow P_{66}\\) cannot be held together with \\((P_{69} \land P_{70}) \rightarrow \lnot P_{66}\\) and \\(P_{69}\\), \\(P_{70}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{70}\\), \\(P_{71}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{66}\\), \\(P_{66} \rightarrow P_{67}\\) cannot be held together with \\((P_{70} \land P_{71}) \rightarrow \lnot P_{67}\\) and \\(P_{70}\\), \\(P_{71}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{69}\\) Luke 23:43 — the thief, unbaptised, is promised paradise — *consensus*: Luke 23:43; [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31
-  - \\(P_{70}\\) The thief's case bears on salvation under the Gospel — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
+  - \\(P_{70}\\) Luke 23:43 — the thief, unbaptised, is promised paradise — *consensus*: Luke 23:43; [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31
+  - \\(P_{71}\\) The thief's case bears on salvation under the Gospel — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
   - the step itself — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
 
 <a id="whereTheDesireMeetsFeeney"></a>
@@ -9490,12 +9537,12 @@ ground; whoever grants it, as the Catechism does, cannot hold his reading.
 
 **Why *The desire for baptism (Catechism 1258–1259)* stands against *Trent: baptism the instrumental cause of justification, read so that the washing itself is necessary for salvation*.**
 
-- **The crux:** \\(P_{68} \rightarrow \lnot P_{66}\\), a premise of *The desire for baptism (Catechism 1258–1259)*.
+- **The crux:** \\(P_{69} \rightarrow \lnot P_{67}\\), a premise of *The desire for baptism (Catechism 1258–1259)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{68}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{65}\\), \\(P_{65} \rightarrow P_{66}\\) cannot be held together with \\(P_{68} \rightarrow \lnot P_{66}\\) and \\(P_{68}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{69}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{66}\\), \\(P_{66} \rightarrow P_{67}\\) cannot be held together with \\(P_{69} \rightarrow \lnot P_{67}\\) and \\(P_{69}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{68}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - \\(P_{69}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
   - the step itself — *well supported*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1259
 
 <a id="whereTheDesireMeetsTrent"></a>
@@ -9510,13 +9557,13 @@ the sacrament, which then gives a fuller grace.
 
 **Why *What justifies where only the desire is present* stands against *Trent: baptism the instrumental cause of justification, read as baptism or the desire of it*.**
 
-- **The crux:** \\((P_{67} \land P_{68}) \rightarrow \lnot P_{65}\\), a premise of *What justifies where only the desire is present*.
+- **The crux:** \\((P_{68} \land P_{69}) \rightarrow \lnot P_{66}\\), a premise of *What justifies where only the desire is present*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{67}\\), \\(P_{68}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{65}\\) cannot be held together with \\((P_{67} \land P_{68}) \rightarrow \lnot P_{65}\\) and \\(P_{67}\\), \\(P_{68}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{68}\\), \\(P_{69}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{66}\\) cannot be held together with \\((P_{68} \land P_{69}) \rightarrow \lnot P_{66}\\) and \\(P_{68}\\), \\(P_{69}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{67}\\) Justification cannot be effected without the laver of regeneration, or the desire thereof — *consensus*: [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.68 a.2
-  - \\(P_{68}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - \\(P_{68}\\) Justification cannot be effected without the laver of regeneration, or the desire thereof — *consensus*: [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.68 a.2
+  - \\(P_{69}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
   - the step itself — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.5; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; *disputed*: [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
 
 <a id="whatTrentsInstrumentalCauseClaims"></a>
@@ -9537,36 +9584,36 @@ Each reading is fair: taken by itself it contradicts nothing, so it is not a
 straw man. It fails only when joined to what the positions set against it
 hold.
 
-**Every reading of \\(P_{65}\\), answered.** *Trent: baptism the instrumental cause of justification* holds \\(P_{65}\\). It is read 2 ways here, and each reading is checked; none can be left out.
+**Every reading of \\(P_{66}\\), answered.** *Trent: baptism the instrumental cause of justification* holds \\(P_{66}\\). It is read 2 ways here, and each reading is checked; none can be left out.
 
-**1. Read so that the washing itself is necessary for salvation.** The claim commits *Trent: baptism the instrumental cause of justification* to \\(P_{66}\\) — so read by [`feeney-bread-of-life-1952`](../bibliography.md#feeney-bread-of-life-1952) (*disputed*).
+**1. Read so that the washing itself is necessary for salvation.** The claim commits *Trent: baptism the instrumental cause of justification* to \\(P_{67}\\) — so read by [`feeney-bread-of-life-1952`](../bibliography.md#feeney-bread-of-life-1952) (*disputed*).
 
 Against *The thief on the cross (Luke 23:43), read with Augustine*, it cannot be held. Where it breaks:
 
 **Why *The thief on the cross (Luke 23:43), read with Augustine* stands against *Trent: baptism the instrumental cause of justification, read so that the washing itself is necessary for salvation*.**
 
-- **The crux:** \\((P_{69} \land P_{70}) \rightarrow \lnot P_{66}\\), a premise of *The thief on the cross (Luke 23:43), read with Augustine*.
+- **The crux:** \\((P_{70} \land P_{71}) \rightarrow \lnot P_{67}\\), a premise of *The thief on the cross (Luke 23:43), read with Augustine*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{69}\\), \\(P_{70}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{65}\\), \\(P_{65} \rightarrow P_{66}\\) cannot be held together with \\((P_{69} \land P_{70}) \rightarrow \lnot P_{66}\\) and \\(P_{69}\\), \\(P_{70}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{70}\\), \\(P_{71}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{66}\\), \\(P_{66} \rightarrow P_{67}\\) cannot be held together with \\((P_{70} \land P_{71}) \rightarrow \lnot P_{67}\\) and \\(P_{70}\\), \\(P_{71}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{69}\\) Luke 23:43 — the thief, unbaptised, is promised paradise — *consensus*: Luke 23:43; [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31
-  - \\(P_{70}\\) The thief's case bears on salvation under the Gospel — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
+  - \\(P_{70}\\) Luke 23:43 — the thief, unbaptised, is promised paradise — *consensus*: Luke 23:43; [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31
+  - \\(P_{71}\\) The thief's case bears on salvation under the Gospel — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
   - the step itself — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
 
 Against *The desire for baptism (Catechism 1258–1259)*, it cannot be held. Where it breaks:
 
 **Why *The desire for baptism (Catechism 1258–1259)* stands against *Trent: baptism the instrumental cause of justification, read so that the washing itself is necessary for salvation*.**
 
-- **The crux:** \\(P_{68} \rightarrow \lnot P_{66}\\), a premise of *The desire for baptism (Catechism 1258–1259)*.
+- **The crux:** \\(P_{69} \rightarrow \lnot P_{67}\\), a premise of *The desire for baptism (Catechism 1258–1259)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{68}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{65}\\), \\(P_{65} \rightarrow P_{66}\\) cannot be held together with \\(P_{68} \rightarrow \lnot P_{66}\\) and \\(P_{68}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{69}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{66}\\), \\(P_{66} \rightarrow P_{67}\\) cannot be held together with \\(P_{69} \rightarrow \lnot P_{67}\\) and \\(P_{69}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{68}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - \\(P_{69}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
   - the step itself — *well supported*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1259
 
-**2. Read as baptism or the desire of it.** The claim commits *Trent: baptism the instrumental cause of justification* to \\(P_{67}\\) — so read by [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32 (*consensus*).
+**2. Read as baptism or the desire of it.** The claim commits *Trent: baptism the instrumental cause of justification* to \\(P_{68}\\) — so read by [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32 (*consensus*).
 
 Against *The thief on the cross (Luke 23:43), read with Augustine*, it is not reached: *The thief on the cross (Luke 23:43), read with Augustine* holds, and can be held together with it.
 
@@ -9574,13 +9621,13 @@ Against *What justifies where only the desire is present*, it cannot be held. Wh
 
 **Why *What justifies where only the desire is present* stands against *Trent: baptism the instrumental cause of justification, read as baptism or the desire of it*.**
 
-- **The crux:** \\((P_{67} \land P_{68}) \rightarrow \lnot P_{65}\\), a premise of *What justifies where only the desire is present*.
+- **The crux:** \\((P_{68} \land P_{69}) \rightarrow \lnot P_{66}\\), a premise of *What justifies where only the desire is present*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{67}\\), \\(P_{68}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{65}\\) cannot be held together with \\((P_{67} \land P_{68}) \rightarrow \lnot P_{65}\\) and \\(P_{67}\\), \\(P_{68}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{68}\\), \\(P_{69}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{66}\\) cannot be held together with \\((P_{68} \land P_{69}) \rightarrow \lnot P_{66}\\) and \\(P_{68}\\), \\(P_{69}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{67}\\) Justification cannot be effected without the laver of regeneration, or the desire thereof — *consensus*: [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.68 a.2
-  - \\(P_{68}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - \\(P_{68}\\) Justification cannot be effected without the laver of regeneration, or the desire thereof — *consensus*: [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.68 a.2
+  - \\(P_{69}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
   - the step itself — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.5; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; *disputed*: [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
 
 #### John 3:5
@@ -9593,7 +9640,7 @@ Trent's step from John 3:5: the verse requires water baptism. Rated
 
 <div class="testimony-math">
 \[
-P_{74} \rightarrow P_{75}
+P_{75} \rightarrow P_{76}
 \]
 </div>
 
@@ -9606,9 +9653,9 @@ water baptism for entry into the kingdom.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\[4pt]
-\vdash \quad &amp; P_{75}
+\text{(1)} \quad &amp; P_{75} \\
+\text{(2)} \quad &amp; P_{75} \rightarrow P_{76} \\[4pt]
+\vdash \quad &amp; P_{76}
 \end{aligned}
 \]
 </div>
@@ -9731,7 +9778,7 @@ If the water is natural birth, the verse does not require water baptism.
 
 <div class="testimony-math">
 \[
-P_{77} \rightarrow \lnot P_{75}
+P_{78} \rightarrow \lnot P_{76}
 \]
 </div>
 
@@ -9743,7 +9790,7 @@ require water baptism.
 
 <div class="testimony-math">
 \[
-P_{78} \rightarrow \lnot P_{75}
+P_{79} \rightarrow \lnot P_{76}
 \]
 </div>
 
@@ -9755,7 +9802,7 @@ baptism.
 
 <div class="testimony-math">
 \[
-P_{79} \rightarrow \lnot P_{75}
+P_{80} \rightarrow \lnot P_{76}
 \]
 </div>
 
@@ -9766,7 +9813,7 @@ And if the water is the Spirit's own cleansing, it is not baptismal water.
 
 <div class="testimony-math">
 \[
-(P_{74} \land P_{79}) \rightarrow \lnot P_{76}
+(P_{75} \land P_{80}) \rightarrow \lnot P_{77}
 \]
 </div>
 
@@ -9779,9 +9826,9 @@ the verse does not require water baptism.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{77} \\
-\text{(2)} \quad &amp; P_{77} \rightarrow \lnot P_{75} \\[4pt]
-\vdash \quad &amp; \lnot P_{75}
+\text{(1)} \quad &amp; P_{78} \\
+\text{(2)} \quad &amp; P_{78} \rightarrow \lnot P_{76} \\[4pt]
+\vdash \quad &amp; \lnot P_{76}
 \end{aligned}
 \]
 </div>
@@ -9796,9 +9843,9 @@ No premise here rests on scripture alone.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{78} \\
-\text{(2)} \quad &amp; P_{78} \rightarrow \lnot P_{75} \\[4pt]
-\vdash \quad &amp; \lnot P_{75}
+\text{(1)} \quad &amp; P_{79} \\
+\text{(2)} \quad &amp; P_{79} \rightarrow \lnot P_{76} \\[4pt]
+\vdash \quad &amp; \lnot P_{76}
 \end{aligned}
 \]
 </div>
@@ -9814,11 +9861,11 @@ is not baptismal water, and the verse does not require water baptism.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{79} \\
-\text{(3)} \quad &amp; P_{79} \rightarrow \lnot P_{75} \\
-\text{(4)} \quad &amp; (P_{74} \land P_{79}) \rightarrow \lnot P_{76} \\[4pt]
-\vdash \quad &amp; \lnot P_{75}
+\text{(1)} \quad &amp; P_{75} \\
+\text{(2)} \quad &amp; P_{80} \\
+\text{(3)} \quad &amp; P_{80} \rightarrow \lnot P_{76} \\
+\text{(4)} \quad &amp; (P_{75} \land P_{80}) \rightarrow \lnot P_{77} \\[4pt]
+\vdash \quad &amp; \lnot P_{76}
 \end{aligned}
 \]
 </div>
@@ -9936,10 +9983,10 @@ Trent on John 3:5, with the water read as baptism.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
-\text{(3)} \quad &amp; P_{74} \rightarrow P_{76} \\[4pt]
-\vdash \quad &amp; P_{75}
+\text{(1)} \quad &amp; P_{75} \\
+\text{(2)} \quad &amp; P_{75} \rightarrow P_{76} \\
+\text{(3)} \quad &amp; P_{75} \rightarrow P_{77} \\[4pt]
+\vdash \quad &amp; P_{76}
 \end{aligned}
 \]
 </div>
@@ -9954,10 +10001,10 @@ Trent on John 3:5, with the water read as natural birth.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
-\text{(3)} \quad &amp; P_{74} \rightarrow P_{77} \\[4pt]
-\vdash \quad &amp; P_{75}
+\text{(1)} \quad &amp; P_{75} \\
+\text{(2)} \quad &amp; P_{75} \rightarrow P_{76} \\
+\text{(3)} \quad &amp; P_{75} \rightarrow P_{78} \\[4pt]
+\vdash \quad &amp; P_{76}
 \end{aligned}
 \]
 </div>
@@ -9972,10 +10019,10 @@ Trent on John 3:5, with the water read as Ezekiel's cleansing.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
-\text{(3)} \quad &amp; P_{74} \rightarrow P_{78} \\[4pt]
-\vdash \quad &amp; P_{75}
+\text{(1)} \quad &amp; P_{75} \\
+\text{(2)} \quad &amp; P_{75} \rightarrow P_{76} \\
+\text{(3)} \quad &amp; P_{75} \rightarrow P_{79} \\[4pt]
+\vdash \quad &amp; P_{76}
 \end{aligned}
 \]
 </div>
@@ -9990,10 +10037,10 @@ Trent on John 3:5, with the water read as the Spirit's own cleansing.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
-\text{(3)} \quad &amp; P_{74} \rightarrow P_{79} \\[4pt]
-\vdash \quad &amp; P_{75}
+\text{(1)} \quad &amp; P_{75} \\
+\text{(2)} \quad &amp; P_{75} \rightarrow P_{76} \\
+\text{(3)} \quad &amp; P_{75} \rightarrow P_{80} \\[4pt]
+\vdash \quad &amp; P_{76}
 \end{aligned}
 \]
 </div>
@@ -10117,13 +10164,13 @@ anathematises it (Session VII, On Baptism, canon 2).
 
 **Why *John 3:5, the water as the Spirit's own cleansing (Calvin)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as baptismal water*.**
 
-- **The crux:** \\((P_{74} \land P_{79}) \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
+- **The crux:** \\((P_{75} \land P_{80}) \rightarrow \lnot P_{77}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
 - **What it does:** its conclusion follows without it — the crux is its answer to *Trent on John 3:5: born of water, so water baptism required, read with its water as baptismal water*.
-- **Granted:** \\(P_{74}\\), \\(P_{79}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{74} \rightarrow P_{76}\\) cannot be held together with \\((P_{74} \land P_{79}) \rightarrow \lnot P_{76}\\) and \\(P_{74}\\), \\(P_{79}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{75}\\), \\(P_{80}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{75} \rightarrow P_{77}\\) cannot be held together with \\((P_{75} \land P_{80}) \rightarrow \lnot P_{77}\\) and \\(P_{75}\\), \\(P_{80}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{74}\\) John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom — *consensus*: John 3:5; [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022)
-  - \\(P_{79}\\) The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one — *disputed*: [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+  - \\(P_{75}\\) John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom — *consensus*: John 3:5; [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022)
+  - \\(P_{80}\\) The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one — *disputed*: [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
   - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
 
 <a id="whereBirthMeetsTrentsStep"></a>
@@ -10135,9 +10182,9 @@ the verse, read that way, breaks — at a step rated `wellSupported`.
 
 **Why *John 3:5, the water as natural birth (Oliver)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as natural birth*.**
 
-- **The crux:** \\(P_{77} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as natural birth (Oliver)*.
+- **The crux:** \\(P_{78} \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as natural birth (Oliver)*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{77}\\) cannot be held together with \\(P_{77} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(P_{75}\\), \\(P_{75} \rightarrow P_{76}\\), \\(P_{75} \rightarrow P_{78}\\) cannot be held together with \\(P_{78} \rightarrow \lnot P_{76}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
 
   - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
@@ -10150,9 +10197,9 @@ Ezekiel's cleansing and not baptism, the verse does not require water baptism.
 
 **Why *John 3:5, the water as Ezekiel's cleansing (Carson)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as Ezekiel's cleansing*.**
 
-- **The crux:** \\(P_{78} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as Ezekiel's cleansing (Carson)*.
+- **The crux:** \\(P_{79} \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as Ezekiel's cleansing (Carson)*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{78}\\) cannot be held together with \\(P_{78} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(P_{75}\\), \\(P_{75} \rightarrow P_{76}\\), \\(P_{75} \rightarrow P_{79}\\) cannot be held together with \\(P_{79} \rightarrow \lnot P_{76}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
 
   - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
@@ -10165,9 +10212,9 @@ Spirit's own cleansing, the verse does not require water baptism.
 
 **Why *John 3:5, the water as the Spirit's own cleansing (Calvin)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as the Spirit's own cleansing*.**
 
-- **The crux:** \\(P_{79} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
+- **The crux:** \\(P_{80} \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{79}\\) cannot be held together with \\(P_{79} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(P_{75}\\), \\(P_{75} \rightarrow P_{76}\\), \\(P_{75} \rightarrow P_{80}\\) cannot be held together with \\(P_{80} \rightarrow \lnot P_{76}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
 
   - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
@@ -10194,58 +10241,58 @@ right, the dilemma does not decide; each is cited, and each is disputed. Each
 reading is fair: taken by itself it contradicts nothing, and fails only when
 joined to the step its own holders draw from it.
 
-**Every reading of \\(P_{74}\\), answered.** *Trent on John 3:5: born of water, so water baptism required* holds \\(P_{74}\\). It is read 4 ways here, and each reading is checked; none can be left out.
+**Every reading of \\(P_{75}\\), answered.** *Trent on John 3:5: born of water, so water baptism required* holds \\(P_{75}\\). It is read 4 ways here, and each reading is checked; none can be left out.
 
-**1. Read with its water as baptismal water.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{76}\\) — so read by [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 56; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), p. 110 (*disputed*).
+**1. Read with its water as baptismal water.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{77}\\) — so read by [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 56; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), p. 110 (*disputed*).
 
 Against *John 3:5, the water as the Spirit's own cleansing (Calvin)*, it cannot be held. Where it breaks:
 
 **Why *John 3:5, the water as the Spirit's own cleansing (Calvin)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as baptismal water*.**
 
-- **The crux:** \\((P_{74} \land P_{79}) \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
+- **The crux:** \\((P_{75} \land P_{80}) \rightarrow \lnot P_{77}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
 - **What it does:** its conclusion follows without it — the crux is its answer to *Trent on John 3:5: born of water, so water baptism required, read with its water as baptismal water*.
-- **Granted:** \\(P_{74}\\), \\(P_{79}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{74} \rightarrow P_{76}\\) cannot be held together with \\((P_{74} \land P_{79}) \rightarrow \lnot P_{76}\\) and \\(P_{74}\\), \\(P_{79}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(P_{75}\\), \\(P_{80}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{75} \rightarrow P_{77}\\) cannot be held together with \\((P_{75} \land P_{80}) \rightarrow \lnot P_{77}\\) and \\(P_{75}\\), \\(P_{80}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{74}\\) John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom — *consensus*: John 3:5; [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022)
-  - \\(P_{79}\\) The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one — *disputed*: [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+  - \\(P_{75}\\) John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom — *consensus*: John 3:5; [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022)
+  - \\(P_{80}\\) The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one — *disputed*: [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
   - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
 
-**2. Read with its water as natural birth.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{77}\\) — so read by [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) (*disputed*).
+**2. Read with its water as natural birth.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{78}\\) — so read by [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) (*disputed*).
 
 Against *John 3:5, the water as natural birth (Oliver)*, it cannot be held. Where it breaks:
 
 **Why *John 3:5, the water as natural birth (Oliver)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as natural birth*.**
 
-- **The crux:** \\(P_{77} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as natural birth (Oliver)*.
+- **The crux:** \\(P_{78} \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as natural birth (Oliver)*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{77}\\) cannot be held together with \\(P_{77} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(P_{75}\\), \\(P_{75} \rightarrow P_{76}\\), \\(P_{75} \rightarrow P_{78}\\) cannot be held together with \\(P_{78} \rightarrow \lnot P_{76}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
 
   - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
 
-**3. Read with its water as Ezekiel's cleansing.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{78}\\) — so read by [`carson-born-of-water-2019`](../bibliography.md#carson-born-of-water-2019); [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) (*disputed*).
+**3. Read with its water as Ezekiel's cleansing.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{79}\\) — so read by [`carson-born-of-water-2019`](../bibliography.md#carson-born-of-water-2019); [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) (*disputed*).
 
 Against *John 3:5, the water as Ezekiel's cleansing (Carson)*, it cannot be held. Where it breaks:
 
 **Why *John 3:5, the water as Ezekiel's cleansing (Carson)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as Ezekiel's cleansing*.**
 
-- **The crux:** \\(P_{78} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as Ezekiel's cleansing (Carson)*.
+- **The crux:** \\(P_{79} \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as Ezekiel's cleansing (Carson)*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{78}\\) cannot be held together with \\(P_{78} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(P_{75}\\), \\(P_{75} \rightarrow P_{76}\\), \\(P_{75} \rightarrow P_{79}\\) cannot be held together with \\(P_{79} \rightarrow \lnot P_{76}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
 
   - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
 
-**4. Read with its water as the Spirit's own cleansing.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{79}\\) — so read by [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111 (*disputed*).
+**4. Read with its water as the Spirit's own cleansing.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{80}\\) — so read by [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111 (*disputed*).
 
 Against *John 3:5, the water as the Spirit's own cleansing (Calvin)*, it cannot be held. Where it breaks:
 
 **Why *John 3:5, the water as the Spirit's own cleansing (Calvin)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as the Spirit's own cleansing*.**
 
-- **The crux:** \\(P_{79} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
+- **The crux:** \\(P_{80} \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{79}\\) cannot be held together with \\(P_{79} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(P_{75}\\), \\(P_{75} \rightarrow P_{76}\\), \\(P_{75} \rightarrow P_{80}\\) cannot be held together with \\(P_{80} \rightarrow \lnot P_{76}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
 
   - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
@@ -10261,7 +10308,7 @@ grant that much, though Calvin's own sentence goes further.
 
 <div class="testimony-math">
 \[
-(P_{71} \land P_{72}) \rightarrow P_{73}
+(P_{72} \land P_{73}) \rightarrow P_{74}
 \]
 </div>
 
@@ -10274,10 +10321,10 @@ it at Caesarea, so God is not bound to water baptism.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{71} \\
-\text{(2)} \quad &amp; P_{72} \\
-\text{(3)} \quad &amp; (P_{71} \land P_{72}) \rightarrow P_{73} \\[4pt]
-\vdash \quad &amp; P_{73}
+\text{(1)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{73} \\
+\text{(3)} \quad &amp; (P_{72} \land P_{73}) \rightarrow P_{74} \\[4pt]
+\vdash \quad &amp; P_{74}
 \end{aligned}
 \]
 </div>
@@ -10390,4 +10437,1487 @@ descent of the Holy Ghost was in fiery tongues".
 theorem the_baptist_leaves_pentecost_open : Independent [p
     Claim.matthew3_11SpiritAndFire] (p Claim.fireIsPentecost)
 -- axioms: propext, Quot.sound
+```
+
+## Arguments.SolaFide.James — James 2:24, and the increase of justification
+
+"You see that a person is justified by works and not by faith alone" (James
+2:24). Trent reads it as the increase of justification: the justified "increase
+in that justice which they have received ... and are still further justified, as
+it is written; He that is just, let him be justified still; and again, Be not
+afraid to be justified even to death; and also, Do you see that by works a man
+is justified, and not by faith only" (Session VI, ch. 10). Canon 24 condemns
+anyone who says good works "are merely the fruits and signs of Justification
+obtained, but not a cause of the increase thereof". This module weighs that
+reading, its three texts, and the Reformed reply.
+
+### What Trent's reading can mean
+
+Trent's claim about James 2:24 can be read two ways, and the two meet different
+evidence.
+
+- **As a claim about James's word**: δικαιόω in James *denotes* the increase of
+  the justice received — being made more just. Then it meets the lexical case for
+  James: δικαιόω declares, acquits or vindicates wherever it is used outside Paul
+  ("wisdom is justified by her works", Matthew 11:19); James uses it of Abraham at
+  Genesis 22, after Genesis 15:6 had been spoken, and of Rahab; and a word
+  contributes the least meaning its context requires.
+- **As a claim about what works do**: James's "justified" is a verdict, and the
+  works it is "by" are a cause of the verdict's increase, not merely its fruit
+  (canon 24). Nothing about the word reaches this. It meets the Reformed reading,
+  on which the works are evidence of a living faith, and the two rest at that
+  point on their own confessions.
+
+### The texts Trent cites with James
+
+Two of Trent's three texts say "justified" only in Latin. "He that is just, let
+him be justified still" is the Vulgate's *iustificetur adhuc* at Revelation
+22:11; the Greek, as the critical text prints it, says "let the righteous still
+do righteousness", and the Catholic Church's own translation renders it "The
+righteous must still do right". "Be not afraid to be justified even to death" is
+the Vulgate's Sirach 18:22; the Greek, as the same translation renders it, is
+about vows: "do not wait until death to fulfill them". That the original text
+decides what a verse says is Rome's own teaching about its own Vulgate: Trent's
+"authentic" was affirmed "not ... for critical reasons, but rather because of its
+legitimate use", and the original text "has more authority and greater weight
+than any even the very best translation" (Pius XII, *Divino Afflante Spiritu*
+§§21, 16).
+
+### The phrase "faith alone"
+
+James 2:24 is the one place the phrase occurs, and it is often cited as
+denying *sola fide* in so many words. The faith James denies justifies is the
+faith he calls dead (2:17, 2:26), and Trent reads it so: faith "unless hope and
+charity be added thereto ... For which reason it is most truly said, that Faith
+without works is dead" (Session VI, ch. 7). The Reformers' confession says the
+faith that alone justifies "is no dead faith, but worketh by love" (Westminster
+XI.2). So the phrase James denies is not the formula the Reformers affirm
+(`jamesFaithLine`). This answers an argument from the phrase; it does not answer
+James's "by works", which is the question above.
+
+### How to read the verdicts
+
+As in the sola fide dispute (`Testimony.Arguments.SolaFide.Dispute`): a party
+**defeats** another when it contradicts something the other rests on, concludes
+or derives, and is not the weaker; a party is **forced** when the dispute holds
+it however every standoff is resolved; it **can be defended** when some
+consistent position holds it and answers every attack; it **cannot be defended**
+when none can.
+
+### What the dispute decides
+
+- **Forced** (`james_words_prevail`): James's δικαιόω does not denote the increase
+  of justice; the faith James 2:24 denies is not the Reformers' faith; Revelation
+  22:11 does not say "be justified still"; Sirach 18:22 does not speak of growth
+  in justice.
+- **Cannot be defended**: Trent's reading of James's word
+  (`trent_on_james_word_indefensible`), and Trent's readings of Revelation 22:11
+  (`trent_on_revelation_indefensible`) and Sirach 18:22
+  (`trent_on_sirach_indefensible`) as texts for the increase of justification.
+- **Can be defended, and not forced**: Trent's reading of what works do
+  (`trent_on_works_defensible`, `trent_on_works_not_forced`), and, against it,
+  the Reformed harmony. Whether works are only the fruit of justification is
+  contested, and the weighing confirms it (`worksContested`).
+
+So Trent's scriptural case for the increase of justification, weighed text by
+text, survives at one point only: James 2:24, read as a claim about what works
+do before God. Every reading of it that rests on what a word or a verse *says*
+cannot be defended. What remains is a claim about God's verdict, and there the
+library cannot choose.
+
+### A rating moved, against the Reformed side
+
+`worksAreFruitNotGround` was rated `wellSupported` while no party denied it. In
+this dispute Trent's reading of what works do denies it, and the rating decides
+who prevails, so it was audited: canon 24 anathematises exactly that claim. It is
+`disputed` now. Kept at `wellSupported`, it would have made Trent's reading of
+what works do indefensible — a verdict the rating, not the evidence, would have
+delivered.
+
+### What each position rests on
+
+`james_warrants` lists, for each party, the claims it asserts on someone's word
+alone (`Testimony.Logic.Warrant`). Each of Trent's four readings rests at the
+reading itself on Trent's word. The Reformed harmony rests at "works are fruit,
+not ground" on Westminster's. The two readings of the Greek rest at "the
+original text decides" on Pius XII's — Rome's own word, which is what makes it
+decisive against Trent's Latin, and is still a word. James's word and James's
+faith rest on nothing but Scripture and evidence. The warrant is reported
+beside the verdicts and does not weigh in them.
+
+### What is not yet audited
+
+The steps of James's word and James's faith are rated `wellSupported` on the
+sources cited and on a search for a reader who grants their grounds and denies
+their conclusions; the search found the Latin tradition after Augustine denying
+the lexical premise itself, which is weighed in that premise's rating, and no
+one denying the step. A fuller audit, across the Catholic commentaries on James,
+is still to do, and a reader who grants the grounds and denies a conclusion would
+move that step to `disputed` and these verdicts with it.
+
+#### Inference ratings
+
+<a id="jamesLexicalSource"></a>
+**`jamesLexicalSource`**
+
+The step from δικαιόω's use outside Paul, James's own use of it, and the
+rule of least meaning, to "James's δικαιόω does not denote the increase of
+justice". Rating pending audit.
+
+```lean
+def jamesLexicalSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.mooJames
+        (Bib.Locus.adLoc { book := Book.james, chapter := 2, verse := 21 }),
+    supporting :=
+      [Reference.work Bib.silvaBiblicalWords, Reference.work Bib.barrSemantics],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="jamesFaithSource"></a>
+**`jamesFaithSource`**
+
+The step from James 2:14–26, the dead faith it names, and what the
+Reformers' formula means, to "the faith James 2:24 denies is not the Reformers'
+faith". Rating pending audit.
+
+```lean
+def jamesFaithSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.mooJames
+        (Bib.Locus.adLoc { book := Book.james, chapter := 2, verse := 24 }),
+    supporting :=
+      [Reference.work Bib.westminsterConfession (Bib.Locus.sectionRef "XI.2")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="trentIncreaseSource"></a>
+**`trentIncreaseSource`**
+
+Trent's reading of its three texts as the increase of justification
+(Session VI, ch. 10). Rated `disputed`: the Reformed grant the texts and deny
+that they teach an increase of justification.
+
+```lean
+def trentIncreaseSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef "Trent, Session VI (1547), ch. 10"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="trentWorksSource"></a>
+**`trentWorksSource`**
+
+Trent's reading of what works do (Session VI, canon 24), applied to James
+2:24's "by works". Rated `disputed`: the Reformed grant James's words and read
+the works as evidence, not cause.
+
+```lean
+def trentWorksSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef "Trent, Session VI (1547), canon 24"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="textualSource"></a>
+**`textualSource`**
+
+The step from what the original text says, and the principle that it
+decides, to "the verse does not say what the Latin says". Rated
+`wellSupported`: Rome itself makes the original text the measure of a
+translation (*Divino Afflante Spiritu* §§16, 21), and no reader was found who
+grants both grounds and holds that the verse says what only the Latin says.
+
+```lean
+def textualSource : Source :=
+  {
+    primary :=
+      Reference.work Bib.divinoAfflanteSpiritu
+        (Bib.Locus.sectionRef "§§16, 21"),
+    supporting := [Reference.work Bib.sblgnt, Reference.work Bib.nabre],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="jamesHarmonySource"></a>
+**`jamesHarmonySource`**
+
+The Reformed harmony's step: from James's target, a barren faith, and works
+as the fruit of saving faith, to "James 2:24 is compatible with Paul". Rated
+`disputed`: Trent grants James's words and reads the works as a cause of the
+increase of justification (Session VI, ch. 10, canon 24).
+
+```lean
+def jamesHarmonySource : Source :=
+  {
+    primary :=
+      Reference.work Bib.mooJames
+        (Bib.Locus.adLoc { book := Book.james, chapter := 2, verse := 24 }),
+    supporting :=
+      [Reference.work Bib.calvinInstitutes
+          (Bib.Locus.sectionRef "III.xvii.11")],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+#### The lines
+
+<a id="jamesLexicalLine"></a>
+**`jamesLexicalLine`** — James's word (δικαιόω, by the rule of least meaning)
+
+**James's word**, read by the rule of least meaning: δικαιόω declares,
+acquits or vindicates wherever it occurs outside Paul; James uses it of Abraham
+at Genesis 22, after Genesis 15:6 had been spoken, and of Rahab; and a word
+contributes the least meaning its context requires. So James's δικαιόω does not
+denote the increase of justice.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{83} \\
+\text{(2)} \quad &amp; P_{82} \\
+\text{(3)} \quad &amp; P_{49} \\
+\text{(4)} \quad &amp; (P_{83} \land P_{82} \land P_{49}) \rightarrow \lnot P_{84} \\[4pt]
+\vdash \quad &amp; \lnot P_{84}
+\end{aligned}
+\]
+</div>
+
+<a id="jamesFaithLine"></a>
+**`jamesFaithLine`** — James's faith (the faith James calls dead)
+
+**James's faith**: the faith James 2:24 denies justifies is the faith apart
+from works that he calls dead; the faith the Reformers say alone justifies is no
+dead faith. So the phrase James denies is not the formula they affirm.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{81} \\
+\text{(2)} \quad &amp; P_{85} \\
+\text{(3)} \quad &amp; P_{86} \\
+\text{(4)} \quad &amp; (P_{81} \land P_{85} \land P_{86}) \rightarrow P_{87} \\[4pt]
+\vdash \quad &amp; P_{87}
+\end{aligned}
+\]
+</div>
+
+<a id="catholicJamesWordLine"></a>
+**`catholicJamesWordLine`** — James 2:24, read for the increase of justification
+
+**Trent's reading of James's word**: "justified by works" is the increase of
+the justice received, so James 2:24 teaches the increase of justification.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{23} \\
+\text{(2)} \quad &amp; P_{82} \\
+\text{(3)} \quad &amp; P_{84} \\
+\text{(4)} \quad &amp; (P_{23} \land P_{82} \land P_{84}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
+\end{aligned}
+\]
+</div>
+
+<a id="catholicJamesWorksLine"></a>
+**`catholicJamesWorksLine`** — James 2:24, read by canon 24
+
+**Trent's reading of what works do**, applied to James 2:24: the works by
+which a person is justified are a cause of the increase, so they are not merely
+fruit and evidence.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{23} \\
+\text{(2)} \quad &amp; P_{82} \\
+\text{(3)} \quad &amp; P_{89} \\
+\text{(4)} \quad &amp; (P_{23} \land P_{82} \land P_{89}) \rightarrow \lnot P_{21} \\[4pt]
+\vdash \quad &amp; \lnot P_{21}
+\end{aligned}
+\]
+</div>
+
+<a id="trentRevelationLine"></a>
+**`trentRevelationLine`** — Revelation 22:11, as Trent quotes it
+
+**Trent's Revelation 22:11**: "He that is just, let him be justified still".
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{90} \\
+\text{(2)} \quad &amp; P_{90} \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
+\end{aligned}
+\]
+</div>
+
+<a id="trentSirachLine"></a>
+**`trentSirachLine`** — Sirach 18:22, as Trent quotes it
+
+**Trent's Sirach 18:22**: "Be not afraid to be justified even to death".
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{92} \\
+\text{(2)} \quad &amp; P_{92} \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
+\end{aligned}
+\]
+</div>
+
+<a id="revelationTextLine"></a>
+**`revelationTextLine`** — Revelation 22:11, in the Greek
+
+**Revelation 22:11 in Greek**: the verse says "let the righteous still do
+righteousness"; the original text decides what it says; so it does not say "be
+justified still".
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{91} \\
+\text{(2)} \quad &amp; P_{94} \\
+\text{(3)} \quad &amp; (P_{91} \land P_{94}) \rightarrow \lnot P_{90} \\[4pt]
+\vdash \quad &amp; \lnot P_{90}
+\end{aligned}
+\]
+</div>
+
+<a id="sirachTextLine"></a>
+**`sirachTextLine`** — Sirach 18:22, in the Greek
+
+**Sirach 18:22 in Greek**: the verse is about paying a vow promptly; the
+original text decides what it says; so it does not speak of being justified more
+and more until death.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{93} \\
+\text{(2)} \quad &amp; P_{94} \\
+\text{(3)} \quad &amp; (P_{93} \land P_{94}) \rightarrow \lnot P_{92} \\[4pt]
+\vdash \quad &amp; \lnot P_{92}
+\end{aligned}
+\]
+</div>
+
+#### The positions
+
+<a id="jamesLexicalCase"></a>
+**`jamesLexicalCase`** — James's word (δικαιόω, by the rule of least meaning)
+
+James's word: δικαιόω in James does not denote the increase of justice.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{83} \\
+\text{(2)} \quad &amp; P_{82} \\
+\text{(3)} \quad &amp; P_{49} \\
+\text{(4)} \quad &amp; (P_{83} \land P_{82} \land P_{49}) \rightarrow \lnot P_{84} \\[4pt]
+\vdash \quad &amp; \lnot P_{84}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: James 2:21–25: Abraham justified by works at Genesis 22, fulfilling Genesis 15:6; Rahab justified by works.
+
+<a id="jamesFaithCase"></a>
+**`jamesFaithCase`** — James's faith (the faith James calls dead)
+
+James's faith: the phrase James denies is not the Reformers' formula.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{81} \\
+\text{(2)} \quad &amp; P_{85} \\
+\text{(3)} \quad &amp; P_{86} \\
+\text{(4)} \quad &amp; (P_{81} \land P_{85} \land P_{86}) \rightarrow P_{87} \\[4pt]
+\vdash \quad &amp; P_{87}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="jamesHarmonyCase"></a>
+**`jamesHarmonyCase`** — Harmonisation of James 2:24
+
+The Reformed harmony of James with Paul: James's target is a barren faith,
+and works are the fruit of saving faith, not its ground.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{20} \\
+\text{(2)} \quad &amp; P_{21} \\
+\text{(3)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\[4pt]
+\vdash \quad &amp; P_{22}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="catholicJamesOnTheWord"></a>
+**`catholicJamesOnTheWord`** — James 2:24, read for the increase of justification
+
+Trent on James's word: James 2:24 teaches the increase of justification,
+because James's δικαιόω denotes it.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{23} \\
+\text{(2)} \quad &amp; P_{82} \\
+\text{(3)} \quad &amp; P_{84} \\
+\text{(4)} \quad &amp; (P_{23} \land P_{82} \land P_{84}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: James 2:21–25: Abraham justified by works at Genesis 22, fulfilling Genesis 15:6; Rahab justified by works.
+
+<a id="catholicJamesOnWorks"></a>
+**`catholicJamesOnWorks`** — James 2:24, read by canon 24
+
+Trent on what works do: James 2:24's works are a cause of the increase of
+justification, not merely its fruit.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{23} \\
+\text{(2)} \quad &amp; P_{82} \\
+\text{(3)} \quad &amp; P_{89} \\
+\text{(4)} \quad &amp; (P_{23} \land P_{82} \land P_{89}) \rightarrow \lnot P_{21} \\[4pt]
+\vdash \quad &amp; \lnot P_{21}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: James 2:21–25: Abraham justified by works at Genesis 22, fulfilling Genesis 15:6; Rahab justified by works.
+
+<a id="trentOnRevelation"></a>
+**`trentOnRevelation`** — Revelation 22:11, as Trent quotes it
+
+Trent on Revelation 22:11.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{90} \\
+\text{(2)} \quad &amp; P_{90} \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="trentOnSirach"></a>
+**`trentOnSirach`** — Sirach 18:22, as Trent quotes it
+
+Trent on Sirach 18:22.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{92} \\
+\text{(2)} \quad &amp; P_{92} \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="revelationTextCase"></a>
+**`revelationTextCase`** — Revelation 22:11, in the Greek
+
+What Revelation 22:11 says, in the Greek.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{91} \\
+\text{(2)} \quad &amp; P_{94} \\
+\text{(3)} \quad &amp; (P_{91} \land P_{94}) \rightarrow \lnot P_{90} \\[4pt]
+\vdash \quad &amp; \lnot P_{90}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="sirachTextCase"></a>
+**`sirachTextCase`** — Sirach 18:22, in the Greek
+
+What Sirach 18:22 says, in the Greek.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{93} \\
+\text{(2)} \quad &amp; P_{94} \\
+\text{(3)} \quad &amp; (P_{93} \land P_{94}) \rightarrow \lnot P_{92} \\[4pt]
+\vdash \quad &amp; \lnot P_{92}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+#### Each position holds, and has a model
+
+<a id="reformedJamesReading"></a>
+**`reformedJamesReading`**
+
+**The Reformed world of James**: every text as it reads, James's δικαιόω a
+declaration and not an increase, the faith James denies not the Reformers', and
+Trent's Latin readings of Revelation 22:11 and Sirach 18:22 not what the verses
+say.
+
+```lean
+def reformedJamesReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.jamesJustifyDenotesIncrease => False
+    | Claim.worksCauseIncreaseOfJustification => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.scriptureTeachesIncreaseOfJustification => False
+    | x => True
+```
+
+<a id="tridentineJamesReading"></a>
+**`tridentineJamesReading`**
+
+**Trent's world of James**: every text as Trent reads it — James's
+"justified" the increase of justice, its works a cause of that increase and not
+merely fruit, Revelation 22:11 and Sirach 18:22 as the Latin has them.
+
+```lean
+def tridentineJamesReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.worksAreFruitNotGround => False
+    | x => True
+```
+
+<a id="jamesLexicalCase_establishes"></a>
+**`jamesLexicalCase_establishes`**
+
+`jamesLexicalCase` delivers its conclusion.
+
+```lean
+theorem jamesLexicalCase_establishes : Establishes jamesLexicalCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="jamesLexicalCase_is_satisfiable"></a>
+**`jamesLexicalCase_is_satisfiable`**
+
+`jamesLexicalCase`'s premises can all be true.
+
+```lean
+theorem jamesLexicalCase_is_satisfiable : Satisfiable
+    jamesLexicalCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="jamesFaithCase_establishes"></a>
+**`jamesFaithCase_establishes`**
+
+`jamesFaithCase` delivers its conclusion.
+
+```lean
+theorem jamesFaithCase_establishes : Establishes jamesFaithCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="jamesFaithCase_is_satisfiable"></a>
+**`jamesFaithCase_is_satisfiable`**
+
+`jamesFaithCase`'s premises can all be true.
+
+```lean
+theorem jamesFaithCase_is_satisfiable : Satisfiable jamesFaithCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="jamesHarmonyCase_establishes"></a>
+**`jamesHarmonyCase_establishes`**
+
+`jamesHarmonyCase` delivers its conclusion.
+
+```lean
+theorem jamesHarmonyCase_establishes : Establishes jamesHarmonyCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="jamesHarmonyCase_is_satisfiable"></a>
+**`jamesHarmonyCase_is_satisfiable`**
+
+`jamesHarmonyCase`'s premises can all be true.
+
+```lean
+theorem jamesHarmonyCase_is_satisfiable : Satisfiable
+    jamesHarmonyCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="catholicJamesOnTheWord_establishes"></a>
+**`catholicJamesOnTheWord_establishes`**
+
+`catholicJamesOnTheWord` delivers its conclusion.
+
+```lean
+theorem catholicJamesOnTheWord_establishes : Establishes
+    catholicJamesOnTheWord
+-- axioms: propext, Quot.sound
+```
+
+<a id="catholicJamesOnTheWord_is_satisfiable"></a>
+**`catholicJamesOnTheWord_is_satisfiable`**
+
+`catholicJamesOnTheWord`'s premises can all be true.
+
+```lean
+theorem catholicJamesOnTheWord_is_satisfiable : Satisfiable
+    catholicJamesOnTheWord.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="catholicJamesOnWorks_establishes"></a>
+**`catholicJamesOnWorks_establishes`**
+
+`catholicJamesOnWorks` delivers its conclusion.
+
+```lean
+theorem catholicJamesOnWorks_establishes : Establishes catholicJamesOnWorks
+-- axioms: propext, Quot.sound
+```
+
+<a id="catholicJamesOnWorks_is_satisfiable"></a>
+**`catholicJamesOnWorks_is_satisfiable`**
+
+`catholicJamesOnWorks`'s premises can all be true.
+
+```lean
+theorem catholicJamesOnWorks_is_satisfiable : Satisfiable
+    catholicJamesOnWorks.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnRevelation_establishes"></a>
+**`trentOnRevelation_establishes`**
+
+`trentOnRevelation` delivers its conclusion.
+
+```lean
+theorem trentOnRevelation_establishes : Establishes trentOnRevelation
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnRevelation_is_satisfiable"></a>
+**`trentOnRevelation_is_satisfiable`**
+
+`trentOnRevelation`'s premises can all be true.
+
+```lean
+theorem trentOnRevelation_is_satisfiable : Satisfiable
+    trentOnRevelation.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnSirach_establishes"></a>
+**`trentOnSirach_establishes`**
+
+`trentOnSirach` delivers its conclusion.
+
+```lean
+theorem trentOnSirach_establishes : Establishes trentOnSirach
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnSirach_is_satisfiable"></a>
+**`trentOnSirach_is_satisfiable`**
+
+`trentOnSirach`'s premises can all be true.
+
+```lean
+theorem trentOnSirach_is_satisfiable : Satisfiable trentOnSirach.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="revelationTextCase_establishes"></a>
+**`revelationTextCase_establishes`**
+
+`revelationTextCase` delivers its conclusion.
+
+```lean
+theorem revelationTextCase_establishes : Establishes revelationTextCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="revelationTextCase_is_satisfiable"></a>
+**`revelationTextCase_is_satisfiable`**
+
+`revelationTextCase`'s premises can all be true.
+
+```lean
+theorem revelationTextCase_is_satisfiable : Satisfiable
+    revelationTextCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="sirachTextCase_establishes"></a>
+**`sirachTextCase_establishes`**
+
+`sirachTextCase` delivers its conclusion.
+
+```lean
+theorem sirachTextCase_establishes : Establishes sirachTextCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="sirachTextCase_is_satisfiable"></a>
+**`sirachTextCase_is_satisfiable`**
+
+`sirachTextCase`'s premises can all be true.
+
+```lean
+theorem sirachTextCase_is_satisfiable : Satisfiable sirachTextCase.premises
+-- axioms: propext, Quot.sound
+```
+
+#### Strength
+
+<a id="jamesLexicalCase_strength"></a>
+**`jamesLexicalCase_strength`**
+
+James's word rests on nothing rated below `wellSupported`.
+
+```lean
+theorem jamesLexicalCase_strength : jamesLexicalCase.strength = 2
+-- axioms: propext
+```
+
+<a id="jamesFaithCase_strength"></a>
+**`jamesFaithCase_strength`**
+
+James's faith rests on nothing rated below `wellSupported`.
+
+```lean
+theorem jamesFaithCase_strength : jamesFaithCase.strength = 2
+-- axioms: propext
+```
+
+<a id="jamesHarmonyCase_strength"></a>
+**`jamesHarmonyCase_strength`**
+
+The Reformed harmony rests on its reading of James's target, and on works as
+fruit and not ground, both `disputed`.
+
+```lean
+theorem jamesHarmonyCase_strength : jamesHarmonyCase.strength = 0
+-- axioms: propext
+```
+
+<a id="catholicJamesOnTheWord_strength"></a>
+**`catholicJamesOnTheWord_strength`**
+
+Trent on James's word rests on its reading of the word, `disputed`.
+
+```lean
+theorem catholicJamesOnTheWord_strength : catholicJamesOnTheWord.strength = 0
+-- axioms: propext
+```
+
+<a id="catholicJamesOnWorks_strength"></a>
+**`catholicJamesOnWorks_strength`**
+
+Trent on what works do rests on canon 24, `disputed`.
+
+```lean
+theorem catholicJamesOnWorks_strength : catholicJamesOnWorks.strength = 0
+-- axioms: propext
+```
+
+<a id="trentOnRevelation_strength"></a>
+**`trentOnRevelation_strength`**
+
+Trent on Revelation 22:11 rests on the Latin reading, `disputed`.
+
+```lean
+theorem trentOnRevelation_strength : trentOnRevelation.strength = 0
+-- axioms: propext
+```
+
+<a id="trentOnSirach_strength"></a>
+**`trentOnSirach_strength`**
+
+Trent on Sirach 18:22 rests on the Latin reading, `disputed`.
+
+```lean
+theorem trentOnSirach_strength : trentOnSirach.strength = 0
+-- axioms: propext
+```
+
+<a id="revelationTextCase_strength"></a>
+**`revelationTextCase_strength`**
+
+Revelation 22:11 in Greek rests on nothing below `wellSupported`.
+
+```lean
+theorem revelationTextCase_strength : revelationTextCase.strength = 2
+-- axioms: propext
+```
+
+<a id="sirachTextCase_strength"></a>
+**`sirachTextCase_strength`**
+
+Sirach 18:22 in Greek rests on nothing below `wellSupported`.
+
+```lean
+theorem sirachTextCase_strength : sirachTextCase.strength = 2
+-- axioms: propext
+```
+
+#### The dispute
+
+<a id="jamesPartyNode"></a>
+**`jamesPartyNode`**
+
+The package each party argues from.
+
+```lean
+def jamesPartyNode : JamesParty → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | JamesParty.lexical =>
+      jamesLexicalCase
+    | JamesParty.faith => jamesFaithCase
+    | JamesParty.harmony =>
+      jamesHarmonyCase
+    | JamesParty.trentOnTheWord =>
+      catholicJamesOnTheWord
+    | JamesParty.trentOnWorks =>
+      catholicJamesOnWorks
+    | JamesParty.trentOnRevelation =>
+      trentOnRevelation
+    | JamesParty.trentOnSirach =>
+      trentOnSirach
+    | JamesParty.revelationText =>
+      revelationTextCase
+    | JamesParty.sirachText =>
+      sirachTextCase
+```
+
+<a id="jamesDispute"></a>
+**`jamesDispute`**
+
+The dispute over James 2:24 and the increase of justification: every party's
+premises have a model, every party establishes its conclusion, and every party's
+inferences are rated.
+
+```lean
+def jamesDispute : Dispute Claim JamesParty :=
+  { node := jamesPartyNode,
+    consistent := jamesDispute._proof_1,
+    sound := jamesDispute._proof_2,
+    rated := jamesDispute._proof_3 }
+```
+
+<a id="jamesPartyDefeats"></a>
+**`jamesPartyDefeats`**
+
+The defeats of the dispute, as a table.
+
+```lean
+def jamesPartyDefeats : JamesParty → JamesParty → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | JamesParty.lexical,
+      JamesParty.trentOnTheWord => True
+    | JamesParty.harmony,
+      JamesParty.trentOnWorks => True
+    | JamesParty.trentOnWorks,
+      JamesParty.harmony => True
+    | JamesParty.revelationText,
+      JamesParty.trentOnRevelation => True
+    | JamesParty.sirachText,
+      JamesParty.trentOnSirach => True
+    | x, x_2 => False
+```
+
+<a id="instDecidableRelJamesPartyJamesPartyDefeats"></a>
+**`instDecidableRelJamesPartyJamesPartyDefeats`**
+
+The table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelJamesPartyJamesPartyDefeats : DecidableRel
+    jamesPartyDefeats
+```
+
+<a id="jamesPartyStrength"></a>
+**`jamesPartyStrength`**
+
+Each party's weakest link: `wellSupported` for the readings of the words and
+the texts, the bottom for the rest.
+
+```lean
+def jamesPartyStrength : JamesParty → ℕ :=
+  fun x =>
+    match x with
+    | JamesParty.lexical => 2
+    | JamesParty.faith => 2
+    | JamesParty.revelationText => 2
+    | JamesParty.sirachText => 2
+    | x => 0
+```
+
+<a id="jamesPartyNode_strength"></a>
+**`jamesPartyNode_strength`**
+
+Each party's weakest link, as its package computes it.
+
+```lean
+theorem jamesPartyNode_strength : ∀ (i : JamesParty), (jamesPartyNode
+    i).strength = jamesPartyStrength i
+-- axioms: propext
+```
+
+<a id="jamesDispute_defeats"></a>
+**`jamesDispute_defeats`**
+
+**Who defeats whom**, all 81 pairs. James's word defeats Trent's reading of
+it, and the reading's reply fails. The Greek of Revelation 22:11 and of Sirach
+18:22 defeat Trent's Latin readings of them, and the replies fail. The Reformed
+harmony and Trent's reading of what works do defeat each other. Nothing else:
+in particular, nothing in the dispute contradicts James's faith, and James's
+word does not touch Trent's reading of what works do, which grants the word
+and makes a claim about God's verdict instead.
+
+Every cell is computed from the parties' premises by `Horn.defeats?` and checked
+by the kernel.
+
+```lean
+theorem jamesDispute_defeats : ∀ (i j : JamesParty), jamesDispute.defeats i j
+    ↔ jamesPartyDefeats i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="jamesFinite"></a>
+**`jamesFinite`**
+
+The dispute in the form the verdict solver computes with.
+
+```lean
+def jamesFinite : Solver.Finite jamesDispute.defeats :=
+  {
+    parties :=
+      [JamesParty.lexical,
+        JamesParty.faith,
+        JamesParty.harmony,
+        JamesParty.trentOnTheWord,
+        JamesParty.trentOnWorks,
+        JamesParty.trentOnRevelation,
+        JamesParty.trentOnSirach,
+        JamesParty.revelationText,
+        JamesParty.sirachText],
+    complete := jamesFinite._proof_1,
+    defeats := fun i j => decide (jamesPartyDefeats i j),
+    spec := jamesFinite._proof_2 }
+```
+
+#### What the dispute decides
+
+<a id="jamesWordsUnanswered"></a>
+**`jamesWordsUnanswered`**
+
+How the dispute is settled as far as it can be, in one stage: nothing defeats
+James's word, James's faith, or the Greek of the two verses, so they come first;
+and nothing joins them. Trent's readings of James's word, of Revelation 22:11 and
+of Sirach 18:22 each have an attacker these leave standing — the one that
+defeats it. The Reformed harmony and Trent's reading of what works do have each
+other.
+
+**What the dispute forces is exactly *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek*.**
+
+- Stage 1: *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek*.
+  - *James's word (δικαιόω, by the rule of least meaning)* is defeated by nothing.
+  - *James's faith (the faith James calls dead)* is defeated by nothing.
+  - *Revelation 22:11, in the Greek* is defeated by nothing.
+  - *Sirach 18:22, in the Greek* is defeated by nothing.
+- Nothing else is forced:
+  - *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*, and nothing forced defeats *James 2:24, read by canon 24*.
+  - *James's word (δικαιόω, by the rule of least meaning)* defeats *James 2:24, read for the increase of justification*, and nothing forced defeats *James's word (δικαιόω, by the rule of least meaning)*.
+  - *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*, and nothing forced defeats *Harmonisation of James 2:24*.
+  - *Revelation 22:11, in the Greek* defeats *Revelation 22:11, as Trent quotes it*, and nothing forced defeats *Revelation 22:11, in the Greek*.
+  - *Sirach 18:22, in the Greek* defeats *Sirach 18:22, as Trent quotes it*, and nothing forced defeats *Sirach 18:22, in the Greek*.
+
+**What this rests on.** The reasons state 5 defeats and 44 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *James 2:24, read for the increase of justification*, weakest at *disputed*:
+  - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+
+<a id="james_words_prevail"></a>
+**`james_words_prevail`**
+
+**What James's words say, and what the Greek of Trent's other two texts says,
+prevails outright.** The grounded extension is exactly four parties: James's
+δικαιόω does not denote the increase of justice; the faith James 2:24 denies is
+not the faith of the Reformers' formula; Revelation 22:11 does not say "be
+justified still"; and Sirach 18:22 does not speak of growth in justice. Nothing
+in the dispute answers any of them.
+
+What this does not claim: that James 2:24 is compatible with Paul, or that works
+are not a cause of the increase of justification. Neither is forced.
+
+```lean
+theorem james_words_prevail : Framework.grounded jamesDispute.defeats =
+    {JamesParty.lexical, JamesParty.faith, JamesParty.revelationText,
+    JamesParty.sirachText}
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentOnTheWordAnswered"></a>
+**`trentOnTheWordAnswered`**
+
+Why Trent's reading of James's word cannot be defended: James's word defeats
+it, and nothing defeats James's word.
+
+***James 2:24, read for the increase of justification* cannot be defended: no admissible position holds it.**
+
+- *James's word (δικαιόω, by the rule of least meaning)* defeats *James 2:24, read for the increase of justification*, and nothing defeats *James's word (δικαιόω, by the rule of least meaning)*.
+
+**What this rests on.** The reasons state 1 defeat and 9 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James 2:24, read for the increase of justification*, weakest at *disputed*:
+  - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+
+<a id="trent_on_james_word_indefensible"></a>
+**`trent_on_james_word_indefensible`**
+
+**Trent's reading of James's word cannot be defended.** If "justified by
+works" in James 2:24 is read as the increase of the justice received — being
+made more just — it cannot be held: δικαιόω declares, acquits or vindicates
+wherever it is used outside Paul, James uses it of Abraham at Genesis 22, after
+Genesis 15:6 had been spoken, and of Rahab, and nothing in James's context
+requires a second, inward sense. The step is rated `wellSupported`; the reading
+rests on Trent's word alone.
+
+What this does not claim: that works are no cause of the increase of
+justification. That is a claim about God's verdict, not about James's word, and
+it is weighed separately (`trent_on_works_defensible`).
+
+```lean
+theorem trent_on_james_word_indefensible : ∀ (S : Set JamesParty),
+    Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnTheWord ∉
+    S
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentOnRevelationAnswered"></a>
+**`trentOnRevelationAnswered`**
+
+Why Trent's Revelation 22:11 cannot be defended: the Greek defeats it, and
+nothing defeats the Greek.
+
+***Revelation 22:11, as Trent quotes it* cannot be defended: no admissible position holds it.**
+
+- *Revelation 22:11, in the Greek* defeats *Revelation 22:11, as Trent quotes it*, and nothing defeats *Revelation 22:11, in the Greek*.
+
+**What this rests on.** The reasons state 1 defeat and 9 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *James 2:24, read for the increase of justification*, weakest at *disputed*:
+  - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+
+<a id="trent_on_revelation_indefensible"></a>
+**`trent_on_revelation_indefensible`**
+
+**Trent's Revelation 22:11 cannot be defended as a text for the increase of
+justification.** "He that is just, let him be justified still" is the Vulgate's
+*iustificetur adhuc*; the Greek, as the critical text prints it and the Catholic
+Church's own translation renders it, says "the righteous must still do right".
+That the original text decides what a verse says is Rome's own teaching on its
+own Vulgate (*Divino Afflante Spiritu* §§16, 21).
+
+```lean
+theorem trent_on_revelation_indefensible : ∀ (S : Set JamesParty),
+    Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnRevelation
+    ∉ S
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentOnSirachAnswered"></a>
+**`trentOnSirachAnswered`**
+
+Why Trent's Sirach 18:22 cannot be defended: the Greek defeats it, and
+nothing defeats the Greek.
+
+***Sirach 18:22, as Trent quotes it* cannot be defended: no admissible position holds it.**
+
+- *Sirach 18:22, in the Greek* defeats *Sirach 18:22, as Trent quotes it*, and nothing defeats *Sirach 18:22, in the Greek*.
+
+**What this rests on.** The reasons state 1 defeat and 9 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *James 2:24, read for the increase of justification*, weakest at *disputed*:
+  - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+
+<a id="trent_on_sirach_indefensible"></a>
+**`trent_on_sirach_indefensible`**
+
+**Trent's Sirach 18:22 cannot be defended as a text for the increase of
+justification.** "Be not afraid to be justified even to death" is the Vulgate's
+verse; the Greek, as the Catholic Church's own translation renders it, is about
+paying a vow: "do not wait until death to fulfill them". Whether Sirach is
+Scripture is not in question here: the verdict holds on Trent's own canon.
+
+```lean
+theorem trent_on_sirach_indefensible : ∀ (S : Set JamesParty),
+    Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnSirach ∉ S
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentOnWorksStands"></a>
+**`trentOnWorksStands`**
+
+Why Trent's reading of what works do can be defended: it answers the one
+party that attacks it, the Reformed harmony, itself.
+
+***James 2:24, read by canon 24* is accepted on some resolution.**
+
+- A position holding *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *James 2:24, read by canon 24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* can be held.
+- None of *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *James 2:24, read by canon 24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* defeats another, and each attack on them is answered from among them:
+  - *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*, and *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*.
+
+**What this rests on.** The reasons state 2 defeats and 44 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *James 2:24, read for the increase of justification*, weakest at *disputed*:
+  - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+
+<a id="trent_on_works_defensible"></a>
+**`trent_on_works_defensible`**
+
+**Trent's reading of what works do can be defended** — with James's word,
+James's faith, and the Greek of both verses. It grants that James's "justified"
+is a verdict and not an increase of the word's sense, and holds that the works
+by which James says a person is justified are a cause of that verdict's
+increase, not merely its fruit. The Reformed harmony denies it, and the dispute
+cannot choose: each side rests on its own confession at that point, rated
+`disputed`.
+
+```lean
+theorem trent_on_works_defensible : Framework.CredulouslyAccepted
+    jamesDispute.defeats JamesParty.trentOnWorks
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentOnWorksAnswered"></a>
+**`trentOnWorksAnswered`**
+
+Why it is not forced: a defensible position holds the Reformed harmony,
+which defeats it.
+
+***James 2:24, read by canon 24* is not accepted on every resolution.**
+
+- A position holding *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Harmonisation of James 2:24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* can be held, and it holds *Harmonisation of James 2:24*; *Harmonisation of James 2:24* conflicts with *James 2:24, read by canon 24*: *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*, and *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*.
+- None of *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Harmonisation of James 2:24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* defeats another, and each attack on them is answered from among them:
+  - *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*, and *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*.
+
+**What this rests on.** The reasons state 2 defeats and 44 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *James 2:24, read for the increase of justification*, weakest at *disputed*:
+  - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+
+<a id="trent_on_works_not_forced"></a>
+**`trent_on_works_not_forced`**
+
+**Nor is it forced.** A maximal defensible position holds the Reformed
+harmony, with James's word and faith, and cannot hold Trent's reading of what
+works do with it.
+
+```lean
+theorem trent_on_works_not_forced : ¬Framework.SkepticallyAccepted
+    jamesDispute.defeats JamesParty.trentOnWorks
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="harmonyStands"></a>
+**`harmonyStands`**
+
+Why the Reformed harmony can be defended: it answers Trent's reading of what
+works do itself.
+
+***Harmonisation of James 2:24* is accepted on some resolution.**
+
+- A position holding *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Harmonisation of James 2:24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* can be held.
+- None of *James's word (δικαιόω, by the rule of least meaning)*, *James's faith (the faith James calls dead)*, *Harmonisation of James 2:24*, *Revelation 22:11, in the Greek*, *Sirach 18:22, in the Greek* defeats another, and each attack on them is answered from among them:
+  - *James 2:24, read by canon 24* defeats *Harmonisation of James 2:24*, and *Harmonisation of James 2:24* defeats *James 2:24, read by canon 24*.
+
+**What this rests on.** The reasons state 2 defeats and 44 absences of defeat, each a cell of the defeat table, [`jamesDispute_defeats`](#jamesDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote making righteous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *James's faith (the faith James calls dead)*, weakest at *well supported*:
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2
+- *Harmonisation of James 2:24*, weakest at *disputed*:
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1
+  - an inference step — [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- *Revelation 22:11, in the Greek*, weakest at *well supported*:
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *Sirach 18:22, in the Greek*, weakest at *well supported*:
+  - The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice — [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [`pius-divino-afflante-spiritu-1943`](../bibliography.md#pius-divino-afflante-spiritu-1943), §§§16, 21; [`holmes-sblgnt-2010`](../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../bibliography.md#usccb-nabre-2011)
+- *James 2:24, read for the increase of justification*, weakest at *disputed*:
+  - James's δικαιόω denotes the increase of the justice received — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *James 2:24, read by canon 24*, weakest at *disputed*:
+  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+- *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
+  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+- *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
+  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+
+<a id="harmony_holds_fruit"></a>
+**`harmony_holds_fruit`**
+
+The Reformed harmony derives that works are the fruit of faith and not its
+ground; it holds it as a premise.
+
+```lean
+theorem harmony_holds_fruit : Entails (jamesDispute.node
+    JamesParty.harmony).premises (p Claim.worksAreFruitNotGround)
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnWorks_denies_fruit"></a>
+**`trentOnWorks_denies_fruit`**
+
+Trent's reading of what works do denies it.
+
+```lean
+theorem trentOnWorks_denies_fruit : Entails (jamesDispute.node
+    JamesParty.trentOnWorks).premises (∼p Claim.worksAreFruitNotGround)
+-- axioms: propext, Quot.sound
+```
+
+<a id="worksContested"></a>
+**`worksContested`**
+
+**Whether works are only the fruit of justification is contested, and the
+weighing confirms it.** Heard as positions, the Reformed harmony, which holds
+it, and Trent's reading of James 2:24 by canon 24, which denies it, can each be
+defended, and neither is forced. The rating `disputed` on
+`worksAreFruitNotGround` is what the weighing finds.
+
+```lean
+def worksContested : Contested jamesDispute (p Claim.worksAreFruitNotGround) :=
+  { holder := JamesParty.harmony,
+    denier := JamesParty.trentOnWorks,
+    holds := harmony_holds_fruit,
+    denies := trentOnWorks_denies_fruit,
+    holderDefensible := ⋯,
+    denierDefensible := trent_on_works_defensible }
+```
+
+#### What each position rests on
+
+<a id="james_warrants"></a>
+**`james_warrants`**
+
+**Where each position rests on someone's word alone** (`Testimony.Logic.Warrant`):
+each of Trent's four readings, at the reading itself — Trent's word; the Reformed
+harmony, at works as fruit and not ground — Westminster's word; and the two
+readings of the Greek, at the principle that the original text decides — Pius
+XII's word, which is Rome's own. James's word and James's faith rest on nothing
+but Scripture and evidence.
+
+```lean
+theorem james_warrants : jamesLexicalCase.restingOnAuthority = [] ∧
+    jamesFaithCase.restingOnAuthority = [] ∧
+    jamesHarmonyCase.restingOnAuthority = [Claim.worksAreFruitNotGround] ∧
+    catholicJamesOnTheWord.restingOnAuthority =
+    [Claim.jamesJustifyDenotesIncrease] ∧
+    catholicJamesOnWorks.restingOnAuthority =
+    [Claim.worksCauseIncreaseOfJustification] ∧
+    trentOnRevelation.restingOnAuthority = [Claim.rev22_11BeJustifiedStill] ∧
+    trentOnSirach.restingOnAuthority = [Claim.sir18_22BeJustifiedToDeath] ∧
+    revelationTextCase.restingOnAuthority = [Claim.originalTextDecides] ∧
+    sirachTextCase.restingOnAuthority = [Claim.originalTextDecides]
+-- axioms: propext
 ```

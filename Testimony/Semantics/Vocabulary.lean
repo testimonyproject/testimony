@@ -252,6 +252,10 @@ inductive Rel
   | boundTo
   /-- The first is consistent with the second. -/
   | consistentWith
+  /-- The second is said to be "by" the first, as the text has it (ἐκ, "from",
+  "by"), leaving open whether the first is its ground, its means or its
+  evidence. Textual statements use it where a reading would choose. -/
+  | saidBy
 deriving DecidableEq, Repr
 
 /-- A principle of reading, held for its own sake. -/
