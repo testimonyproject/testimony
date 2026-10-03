@@ -446,6 +446,10 @@ inductive Claim
   the justification of Romans and Galatians, and not a second, declarative use
   of the word. -/
   | jamesUsesDikaioAsPaul
+  /-- The reward God renders to the good works of the justified is rendered to
+  them as merits: by those works they "have truly merited eternal life" (Trent,
+  Session VI, ch. 16; canon 32). -/
+  | rewardRenderedToMerits
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

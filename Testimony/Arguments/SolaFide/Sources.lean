@@ -676,6 +676,27 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work westminsterConfession (.sectionRef "XVI.5")]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .rewardRenderedToMerits =>
+    { label := "The reward God renders to the works of the justified is rendered to them " ++
+        "as merits"
+    , kind := .theological
+      -- Trent states it in its own voice: eternal life is "a reward ... to be
+      -- faithfully rendered to their good works and merits", and "we must
+      -- believe" that the justified "have truly merited eternal life" (ch.
+      -- 16); canon 32 anathematises its denial. The reward texts Trent quotes
+      -- say "reward", not "merit". Dulles, defending Trent's teaching, grants
+      -- that "the fact that a reward is promised does not make it merited",
+      -- and grounds merit instead in what "justification makes us capable
+      -- of". No reader was found who argues it from the texts, so it rests on
+      -- the council's word. `disputed`: Westminster holds the reward to be of
+      -- grace, given to works accepted in Christ (XVI.5, XVI.6), and the Joint
+      -- Declaration reads "merit" as a reward promised (§38).
+    , source :=
+        { primary := .work tannerDecrees
+            (.sectionRef "Trent, Session VI (1547), ch. 16; canon 32")
+        , supporting := [.work dullesTwoLanguages .whole]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
   | .jamesUsesDikaioAsPaul =>
     { label := "James's δικαιόω has the sense Paul's has: the justification of Romans and " ++
         "Galatians"

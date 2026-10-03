@@ -88,6 +88,17 @@ dissent has a concrete thing to add: a position, with grounds, that the engine w
 states a step's rating under each standard, and an article can argue from whichever standard
 it prefers. It cannot hide the preference: the other standard's rating is on the same line.
 
+## Stating the bridge
+
+The standards check what a dissent *asserts*, not its step, because every step on every side
+is someone's reading. So a claim smuggled into a step escapes the check. When a dissent's own
+source states a claim the texts do not, in its own voice, that claim is a ground, not part of
+the reading, and it is encoded as one: cited to whoever states it, and checked like any other.
+Trent's chapter 16 is the first case: "we must believe" that the reward is rendered to merits.
+
+The rule cuts both ways. A Reformed step that needs a claim its texts do not make must state
+that claim too, and it will be checked the same way ([#138][reformed]).
+
 ## Hearings under a standard
 
 Which dissents count decides two things in a dispute: who is heard, and how each step is
@@ -107,7 +118,7 @@ a verdict and a rating cannot disagree about which standard they assume.
 | Step | Dissent | Evidence | Tradition | Why |
 |---|---|---|---|---|
 | Works are fruit, not ground (`fruitLine`) | Trent, canon 24 | not credible | credible | "works cause the increase" rests on Trent alone |
-| Works are fruit, not ground (`fruitLine`) | Trent, ch. 16, from the reward texts | credible | credible | grounds are Scripture; the denial is Trent's step |
+| Works are fruit, not ground (`fruitLine`) | Trent, ch. 16, from the reward texts | not credible | credible | "the reward is rendered to merits" rests on Trent alone |
 | James's δικαιόω is not the increase (`jamesLexicalLine`) | Trent, on the word | not credible | not credible | asserts the increase as a premise |
 | James's δικαιόω is not the increase (`jamesLexicalLine`) | The renewal reading | not credible | credible | "James's word is Paul's" rests on Trent alone |
 | James's faith is not the Reformers' (`jamesFaithLine`) | Howell (2003) | not credible | not credible | asserts the denial as a premise |
@@ -131,16 +142,26 @@ claims a standard does not admit named. Disagreements are marked as disagreement
   evidence standard the hearing forces James's word. Under the tradition standard it weighs
   the step at `disputed`, and the question is contested.
 
-**Works as fruit, not ground.**
-- **The rating.** The step is disputed under both standards (`fruit_step_ratings`). This is a
-  result against the Reformed side, and it is reported as one.
-- **Canon 24 alone would make it turn on authority.** Chapter 16's reading of 1 Corinthians
-  15:58, Hebrews 6:10, Hebrews 10:35 and 2 Timothy 4:8 is a critique on Scripture's own
-  ground.
-- **The hearings.** Under both standards, the Reformed harmony and chapter 16's reading each
-  survive (`fruitContestedUnder`).
-- **Westminster's answer** (XVI.6) is a different reading of the same texts. Assessing it by
-  the same checks is [#138][reformed].
+**Works as fruit, not ground: a bridge stated.**
+- **The support.** Westminster's step is `wellSupported`. The Lutheran World Federation and the
+  Catholic Church confess together that good works "follow justification and are its fruits",
+  and that what follows faith "is neither the basis of justification nor merits it" (*Joint
+  Declaration* §§37, 25).
+- **Chapter 16's bridge.** The reward texts (1 Corinthians 15:58, Hebrews 6:10, 10:35, 2 Timothy
+  4:8) say God *rewards* works. Chapter 16 adds that the reward is "rendered to their good works
+  and merits", and that "we must believe" the justified "have truly merited eternal life". From
+  reward to merit is the council's own step. Dulles, defending Trent, grants that "the fact
+  that a reward is promised does not make it merited". Stated as a premise, as Trent states it,
+  the bridge rests on the council's word (`rewardRenderedToMerits`).
+- **The rating** (`fruit_step_ratings`). The support stands at `wellSupported` under the
+  evidence standard, where neither of Trent's dissents is credible, and the step is `disputed`
+  under the tradition standard, where both are.
+- **The hearings agree** (`fruit_turns_on_the_standard`). Under the evidence standard the
+  hearing forces the Reformed harmony. Under the tradition standard it is contested.
+- **What this does not show.** It shows that Trent's denial does not stand on Scripture and
+  evidence alone. It does not show that the reward texts teach the Reformed reading: they
+  teach neither side's account of merit without a further claim. Westminster's own answer
+  (XVI.6) gets the same checks in [#138][reformed].
 
 **Disagreements, not critiques.** Trent's reading of James's word and Howell's move each hold
 the denial they need as a premise (`trent_on_the_word_is_asserted`,
