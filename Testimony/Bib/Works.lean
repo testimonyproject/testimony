@@ -1016,6 +1016,104 @@ of life: "God's commandments show man the path of life and they lead to it"
   , publisher := "United States Catholic Conference"
   , place := some "Washington, DC" }
 
+/-! ### Baptism: water, the Spirit, and fire -/
+
+/-- Oliver's survey of the readings of "water" in John 3:5 — baptism, the Ezekiel
+36 cleansing, a single birth from above — and his own case for the waters of
+natural birth. Open access; cited by article number. -/
+@[bib_entry] def oliverWaterJohn : BibEntry := .article
+  { core :=
+      { key := "oliver-water-john-2022"
+      , contributors := { authors := [.person "Willem H." "Oliver"] }
+      , title := "The water in John 3:5"
+      , year := some { value := 2022 }
+      , identifiers := [.doi "10.4102/ve.v43i1.2570"]
+      , note := some "Article a2570." }
+  , journal := "Verbum et Ecclesia"
+  , volume := some "43"
+  , issue := some "1" }
+
+/-- Carson on John 3:5: "water and the Spirit" is one birth, and the passage that
+brings water and Spirit together in a promise of new beginning is Ezekiel
+36:25–27, "spectacular cleansing symbolized by water that washes away all
+impurities". The Ezekiel reading, from someone who holds it. -/
+@[bib_entry] def carsonBornOfWater : BibEntry := .webPage
+  { core :=
+      { key := "carson-born-of-water-2019"
+      , contributors := { authors := [.person "D. A." "Carson"] }
+      , title := "What Does \"Born of Water and the Spirit\" Mean in John 3:5?"
+      , year := some { value := 2019 }
+      , identifiers :=
+          [ .url "https://www.thegospelcoalition.org/article/born-water-spirit-mean/"
+                 (some "2026-09-27") ] }
+  , site := some "The Gospel Coalition" }
+
+/-- Calvin on Acts, in Beveridge's edition of Fetherstone's translation. Cited
+for Acts 10:47: the Spirit given before the water "showeth that the Spirit is
+not included in baptism" (454). Published without an ISBN. -/
+@[bib_entry] def calvinActs1 : BibEntry := .book
+  { core :=
+      { key := "calvin-commentary-acts-1844"
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , editors := [.person "Henry" "Beveridge"]
+          , translators := [.person "Christopher" "Fetherstone"] }
+      , title := "Commentary upon the Acts of the Apostles"
+      , year := some { value := 1844 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryuponth01calvuoft"
+                 (some "2026-09-27") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "1" }
+
+/-- Aquinas's *Summa*, in the English Dominicans' second edition, the text New
+Advent reproduces. Cited by question and article: on the thief and the baptisms
+of blood and desire (III q.66 a.11), on when the obligation of baptism began
+(III q.66 a.2), and on Cornelius receiving grace before baptism "through their
+faith in Christ and their desire for Baptism" (III q.69 a.4 ad 2). -/
+@[bib_entry] def aquinasSumma : BibEntry := .book
+  { core :=
+      { key := "aquinas-summa-1920"
+      , contributors :=
+          { authors := [.person "Thomas" "Aquinas"]
+          , translators := [.corporate "Fathers of the English Dominican Province"] }
+      , title := "The Summa Theologica"
+      , year := some { value := 1920 }
+      , identifiers := [.url "https://www.newadvent.org/summa/" (some "2026-09-27")]
+      , note := some "Second and revised edition; no ISBN attaches to it." }
+  , publisher := "Burns Oates & Washbourne"
+  , place := some "London" }
+
+/-- Cyril of Jerusalem and Gregory Nazianzen, cited for two readings of the
+"fire" of Matthew 3:11: Cyril's Pentecost ("because the descent of the Holy
+Ghost was in fiery tongues", *Catechetical Lecture* 17.8) and Gregory's
+consuming of the chaff (*Oration* 39.15). -/
+@[bib_entry] def npnfCyrilGregory : BibEntry := .book
+  { core :=
+      { key := "npnf2-07-1894"
+      , contributors := { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"] }
+      , title := "A Select Library of Nicene and Post-Nicene Fathers of the Christian Church"
+      , subtitle := some "Second Series, Volume 7: S. Cyril of Jerusalem, S. Gregory Nazianzen"
+      , year := some { value := 1894 }
+      , identifiers := [.url "https://www.ccel.org/ccel/schaff/npnf207.html" (some "2026-09-27")]
+      , note := some "Public domain; CCEL dates its printing 1893." }
+  , publisher := "Christian Literature Company"
+  , place := some "New York" }
+
+/-- Feeney's *Bread of Life*, the reading of Trent on which water baptism is
+necessary for salvation though desire may justify: "It is now: Baptism of Water,
+or damnation!" Catalogued without an ISBN; cited whole. -/
+@[bib_entry] def feeneyBreadOfLife : BibEntry := .book
+  { core :=
+      { key := "feeney-bread-of-life-1952"
+      , contributors := { authors := [.person "Leonard" "Feeney"] }
+      , title := "Bread of Life"
+      , year := some { value := 1952 }
+      , note := some "Catalogued without an ISBN." }
+  , publisher := "St. Benedict Center"
+  , place := some "Cambridge, MA" }
+
 /-- Whitaker's *Disputation*, the Elizabethan Reformed answer to Bellarmine. Its
 sixth question of the first controversy argues, against unwritten tradition,
 that "the papists have no such unwritten tradition which can be certainly shewn

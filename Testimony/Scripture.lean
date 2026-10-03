@@ -291,6 +291,35 @@ commandments"; told to sell what he has and follow, he goes away sorrowful. -/
 /-- Matthew 19:17 — "If you would enter life, keep the commandments." -/
 @[nolint defsWithUnderscore] def matthew19_17 : Passage := ⟨.matthew, 19, 17⟩
 
+/-! ### Baptism -/
+
+/-- John 3:5 — "unless one is born of water and the Spirit, he cannot enter the
+kingdom of God". -/
+@[nolint defsWithUnderscore] def john3_5 : Passage := ⟨.john, 3, 5⟩
+
+/-- Luke 23:43 — "today you will be with me in paradise", to the thief. -/
+@[nolint defsWithUnderscore] def luke23_43 : Passage := ⟨.luke, 23, 43⟩
+
+/-- Acts 8:14–17 — the Samaritans, baptized, receive the Spirit when the
+apostles lay hands on them. -/
+@[nolint defsWithUnderscore] def acts8_14to17 : Pericope := ⟨.acts, 8, 14, 8, 17⟩
+
+/-- Acts 10:44–48 — the Spirit falls on Cornelius's household, who are then
+baptized. -/
+@[nolint defsWithUnderscore] def acts10_44to48 : Pericope := ⟨.acts, 10, 44, 10, 48⟩
+
+/-- Matthew 3:11 — "he will baptize you with the Holy Spirit and fire". -/
+@[nolint defsWithUnderscore] def matthew3_11 : Passage := ⟨.matthew, 3, 11⟩
+
+/-- Matthew 28:19 — "baptizing them in the name of the Father and of the Son and
+of the Holy Spirit". -/
+@[nolint defsWithUnderscore] def matthew28_19 : Passage := ⟨.matthew, 28, 19⟩
+
+/-- Acts 2:38 — "Repent and be baptized every one of you in the name of Jesus
+Christ for the forgiveness of your sins, and you will receive the gift of the
+Holy Spirit." -/
+@[nolint defsWithUnderscore] def acts2_38 : Passage := ⟨.acts, 2, 38⟩
+
 /-! ### Source helpers
 
 A `Source` written out is four fields, and some combinations recur often enough

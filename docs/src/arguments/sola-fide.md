@@ -237,6 +237,20 @@ alone saves) and Matthew is not.
 This is a dispute of its own, kept apart from the one above for the reason the
 Johannine strand is.
 
+**Baptism** (`Baptism.lean`). Trent makes water baptism the instrumental cause
+of justification, and qualifies it in its own words: "or the desire thereof".
+Water, the Spirit and "fire" are kept as separate atoms, so no argument passes
+from one sense of "baptism" to another. Read so that the washing itself is
+necessary for salvation — Feeney's reading — Trent's claim cannot be held with
+the thief read as Augustine reads him, nor with Rome's own teaching on the
+desire. Read in Trent's own words, the thief does not reach it; what it meets is
+the Reformed argument from the desire — where only the desire is present, what
+justifies is not the washing — at a step Aquinas contests. John 3:5 is a dilemma
+of its own: of the four readings of its "water" on record, only the baptismal
+one leaves Trent's step from the verse standing, and even then the step is
+disputed. And that Acts gives the Spirit both before the water and after it is
+common ground: Rome says God "is not bound by his sacraments".
+
 ### Where things are
 
 | File | Contents |
@@ -252,6 +266,7 @@ Johannine strand is.
 | `Definition.lean` | Paul's word, and the dilemma over what Trent's definition claims |
 | `Hearings.lean` | the dispute heard narrower: the Reformation alone, and without Trent |
 | `JesusWords.lean` | Luke 18, and both readings of Matthew 7 and 19: what Jesus' words decide |
+| `Baptism.lean` | water, Spirit and fire apart; the instrumental cause; John 3:5 |
 
 ## Arguments.SolaFide.Atoms — the atomic claims
 
@@ -354,6 +369,21 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{62}\\) | Matthew 19:17 — "If you would enter life, keep the commandments" | textual | Christian, historical-grammatical, consensus | Matt 19:16-22; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 35 |
 | \\(P_{63}\\) | In Matthew 19:17, keeping the commandments is the way to life, made possible by grace | interpretive | Roman Catholic, disputed | [`john-paul-ii-veritatis-splendor-1993`](../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 35 |
 | \\(P_{64}\\) | In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith | interpretive | Reformed Protestant, disputed | [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394 |
+| \\(P_{65}\\) | Water baptism is the instrumental cause of justification | theological | Roman Catholic, disputed | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 34–35; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2 |
+| \\(P_{66}\\) | The washing itself is necessary for salvation, though desire may justify | theological | Roman Catholic, disputed | [`feeney-bread-of-life-1952`](../bibliography.md#feeney-bread-of-life-1952) |
+| \\(P_{67}\\) | Justification cannot be effected without the laver of regeneration, or the desire thereof | textual | Roman Catholic, consensus | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.68 a.2 |
+| \\(P_{68}\\) | The desire for baptism brings about its fruits without being a sacrament | theological | Roman Catholic, consensus | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2 |
+| \\(P_{69}\\) | Luke 23:43 — the thief, unbaptised, is promised paradise | textual | Christian, historical-grammatical, consensus | Luke 23:43; [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31 |
+| \\(P_{70}\\) | The thief's case bears on salvation under the Gospel | interpretive | Christian, historical-grammatical, well supported | [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11 |
+| \\(P_{71}\\) | Acts 8:14–17 — the Samaritans, baptized, receive the Spirit afterwards | textual | Christian, historical-grammatical, consensus | Acts 8:14-17; [`calvin-commentary-acts-1844`](../bibliography.md#calvin-commentary-acts-1844), pp. 338–339 |
+| \\(P_{72}\\) | Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism | textual | Christian, historical-grammatical, consensus | Acts 10:44-48; [`calvin-commentary-acts-1844`](../bibliography.md#calvin-commentary-acts-1844), pp. 453–454 |
+| \\(P_{73}\\) | God is not bound to water baptism: he gives the Spirit before it and after it | theological | Christian, historical-grammatical, consensus | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1257; [`calvin-commentary-acts-1844`](../bibliography.md#calvin-commentary-acts-1844), p. 454; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2 |
+| \\(P_{74}\\) | John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom | textual | Christian, historical-grammatical, consensus | John 3:5; [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) |
+| \\(P_{75}\\) | John 3:5 requires water baptism for entry into the kingdom | interpretive | Roman Catholic, disputed | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 56; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1257 |
+| \\(P_{76}\\) | The water of John 3:5 is baptismal water | interpretive | Roman Catholic, disputed | [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 56; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), p. 110 |
+| \\(P_{77}\\) | The water of John 3:5 is natural birth | interpretive | critical scholarship, disputed | [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) |
+| \\(P_{78}\\) | The water of John 3:5 is the cleansing promised in Ezekiel 36:25–27, not baptism | interpretive | Christian, historical-grammatical, disputed | [`carson-born-of-water-2019`](../bibliography.md#carson-born-of-water-2019); [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) |
+| \\(P_{79}\\) | The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one | interpretive | Reformed Protestant, disputed | [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25 |
 
 </div>
 
@@ -472,6 +502,138 @@ way and condition of salvation" (*Veritatis Splendor* 12).
 def veritatisSplendorAgainstTheLegalReply : Source :=
   { primary := Reference.work Bib.veritatisSplendor (Bib.Locus.sectionRef "12"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="calvinAgainstBaptismInJohnThreeFive"></a>
+**`calvinAgainstBaptismInJohnThreeFive`**
+
+**Trent's step from John 3:5 is contested, by Calvin.** He grants the verse
+and denies that it requires water baptism: "I cannot bring myself to believe
+that Christ speaks of baptism" (on John 3:5, 110).
+
+```lean
+def calvinAgainstBaptismInJohnThreeFive : Source :=
+  { primary := Reference.work Bib.calvinJohn (Bib.Locus.page 110),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="readingsWithoutTheWater"></a>
+**`readingsWithoutTheWater`**
+
+**The steps from each non-baptismal reading of John 3:5 are well supported.**
+If the water is natural birth, or Ezekiel's cleansing and not baptism, or the
+Spirit's own cleansing, the verse does not require water baptism: no reader was
+found who holds one of these readings and still requires baptism from the verse.
+Those who require it deny the reading instead (Trent, Session VII, On Baptism,
+canon 2).
+
+```lean
+def readingsWithoutTheWater : Source :=
+  { primary := Reference.work Bib.oliverWaterJohn,
+    supporting :=
+      [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.xvi.25")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="augustineOnTheThief"></a>
+**`augustineOnTheThief`**
+
+**The step from the thief is well supported.** Grant that he was promised
+paradise unbaptised, and that his case bears on salvation under the Gospel, and
+the washing itself is not necessary for salvation: "as in the thief, to whom the
+material administration of the sacrament was necessarily wanting, the salvation
+was complete" (Augustine, *On Baptism* IV.23.31), a passage Aquinas quotes with
+approval (III q.66 a.11). Feeney denies the conclusion; how he answers the thief
+could not be verified here.
+
+```lean
+def augustineOnTheThief : Source :=
+  {
+    primary :=
+      Reference.work Bib.npnfAugustineManichaeans
+        (Bib.Locus.sectionRef "On Baptism IV.23.31"),
+    supporting :=
+      [Reference.work Bib.aquinasSumma (Bib.Locus.sectionRef "III q.66 a.11")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="catechismOnDesire"></a>
+**`catechismOnDesire`**
+
+**The step from the desire to the salvation it assures is well supported.**
+If the desire for baptism brings about its fruits, the washing itself is not
+necessary for salvation: the Catechism says it "assures them the salvation that
+they were not able to receive through the sacrament" (1259). Feeney grants that
+the desire justifies; he denies that it saves. It is this saving fruit, as the
+Catechism states it, that he denies — the ground, not the step.
+
+```lean
+def catechismOnDesire : Source :=
+  {
+    primary :=
+      Reference.work Bib.catechismCatholicChurch (Bib.Locus.sectionRef "1259"),
+    tradition := Tradition.romanCatholic,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="westminsterOnTheDesire"></a>
+**`westminsterOnTheDesire`**
+
+**The Reformed step from the desire, as Westminster holds it**: grace and
+salvation "are not so inseparably annexed unto it, as that no person can be
+regenerated, or saved, without it" (XXVIII.5), and faith is "the alone
+instrument of justification" (XI.2).
+
+```lean
+def westminsterOnTheDesire : Source :=
+  {
+    primary :=
+      Reference.work Bib.westminsterConfession
+        (Bib.Locus.sectionRef "XXVIII.5"),
+    supporting :=
+      [Reference.work Bib.westminsterConfession (Bib.Locus.sectionRef "XI.2")],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="aquinasOnTheDesire"></a>
+**`aquinasOnTheDesire`**
+
+**The Reformed step from the desire is contested, by Aquinas.** He grants that
+Cornelius and others "receive grace and virtues through their faith in Christ
+and their desire for Baptism", and denies that the sacrament is therefore not
+the instrument: the desire is for the sacrament, and "when baptized, they
+receive a yet greater fulness of grace and virtues" (III q.69 a.4 ad 2).
+
+```lean
+def aquinasOnTheDesire : Source :=
+  {
+    primary :=
+      Reference.work Bib.aquinasSumma
+        (Bib.Locus.sectionRef "III q.69 a.4 ad 2"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="calvinOnActsTen"></a>
+**`calvinOnActsTen`**
+
+**Where the Spirit comes before the water, and after it: common ground.**
+Both grant that God is not bound to the water: the Catechism, that God "himself
+is not bound by his sacraments" (1257). Calvin's own sentence on Acts 10:47 goes
+further — "the Spirit is not included in baptism" — and that further claim is
+not what is granted here.
+
+```lean
+def calvinOnActsTen : Source :=
+  { primary := Reference.work Bib.calvinActs1 (Bib.Locus.page 454),
+    supporting :=
+      [Reference.work Bib.catechismCatholicChurch
+          (Bib.Locus.sectionRef "1257")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.consensus }
 ```
 
 <a id="melanchthonOnLuke7"></a>
@@ -8820,4 +8982,1412 @@ theorem without_trent_luke_is_forced : Framework.grounded
     jesusWordsWithoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x
     ≠ WordsParty.trent) [WordsParty.luke7, WordsParty.luke18])
 -- axioms: propext, Classical.choice, Quot.sound
+```
+
+## Arguments.SolaFide.Baptism — the baptisms kept apart, and what Trent's instrumental cause claims
+
+Trent makes baptism "the instrumental cause" of justification: "the sacrament
+of baptism, which is the sacrament of faith, without which (faith) no man was
+ever justified" (Session VI, ch. 7) — the "without which" is faith, not
+baptism, as Waterworth's bracket says. The Reformed hold baptism as Christ's own
+ordinance, a sign and seal of the covenant of grace (Westminster XXVIII.1), and
+faith as "the alone instrument of justification" (XI.2). A reader asks: *does
+the New Testament make water baptism the instrument that justifies?*
+
+A step here is *disputed* when a cited reader grants its grounds and denies its
+conclusion; *well supported* when no such reader was found; *consensus* when
+every side grants it.
+
+### The baptisms, kept apart
+
+"Baptism" names three things in the New Testament, and each is its own atom
+here, so that no argument passes from one to another unnoticed.
+
+- **Water**: John's baptism, and the one Christ commands (Matthew 28:19; Acts
+  2:38). Trent's instrumental cause is *this* one. It is not a "commandment of
+  men" — Jesus commands it — so the argument from Mark 7 against human
+  tradition (in the sola scriptura argument) does not reach it as such. The dispute is
+  over the role Trent gives it.
+- **The Spirit**: "he will baptize you with the Holy Spirit". In Acts it comes
+  after the water (Samaria, 8:14–17) and before it (Cornelius, 10:44–48).
+- **"And fire"** (Matthew 3:11; Luke 3:16): judgment — the chaff burned, as
+  Gregory Nazianzen reads it; purification, as Calvin does; or Pentecost's
+  tongues "as of fire", as Cyril of Jerusalem does. The readings are encoded, and
+  no winner: the text alone settles none of them (`the_baptist_leaves_the_fire_open`
+  and its companions).
+
+### What Trent's instrumental cause claims
+
+Trent qualifies its own claim. Justification "cannot be effected, without the
+laver of regeneration, **or the desire thereof**" (ch. 4). So the claim can be
+read two ways, and `whatTrentsInstrumentalCauseClaims` answers both.
+
+- **Read so that the washing itself is necessary for salvation** — Feeney's
+  reading: desire may justify, but "It is now: Baptism of Water, or damnation!"
+  No reader was found who holds the water itself necessary for *justification*:
+  Feeney too grants that desire justifies. Read Feeney's way, the claim cannot
+  be held with the thief promised paradise unbaptised (Luke 23:43), read as
+  Augustine reads him, nor with Rome's own teaching that the desire "assures
+  them the salvation" (Catechism 1259). Both steps are well supported.
+- **Read as baptism or its desire** — Trent's own words — the thief does not
+  reach it. What it meets is the question the desire raises: where only the
+  desire is present, what justifies is not the washing, since the desire
+  "brings about the fruits of Baptism without being a sacrament" (Catechism
+  1258). Then what is the instrument, and how does it differ from faith? The
+  Reformed answer is that it is faith, and the sacrament is not the instrument.
+  Aquinas grants the premises and denies that: the desire is *for* the
+  sacrament, and when the sacrament follows, it gives "a yet greater fulness of
+  grace". The step is disputed.
+
+So neither reading is forced out by what is argued here. The first is answered
+by texts and teaching Rome itself holds; the second stands at a disputed step,
+where the question is whether the desire is faith by another name.
+
+### John 3:5
+
+"Unless one is born of water and the Spirit" is the text Trent cites in chapter
+4, and Session VII anathematises whoever "wrests, to some sort of metaphor" its
+water. `whatJohnThreeFiveMeans` takes the four readings of "water" that are on
+record: baptismal water (Trent; most patristic readers, as Calvin reports);
+natural birth (Oliver); the cleansing promised in Ezekiel 36:25–27 (Carson); and
+the Spirit's own cleansing, "water and Spirit" naming one thing (Calvin). What is
+ambiguous is the verse Trent cites, not Trent: Trent argues from the verse to
+water baptism, and each reading is a reading of the verse's "water". Only the
+baptismal reading leaves Trent's step standing; the other three each break it,
+at a well-supported step. The baptismal reading cannot be held together with
+Calvin's: the step from his reading is well supported, but his reading itself is
+disputed, and Trent anathematises it. Even on the baptismal reading Trent's step
+stays disputed — Calvin grants the verse and denies that it requires water
+baptism. Which reading is right, the dilemma does not decide.
+
+### Acts gives both orders
+
+In Samaria the water comes first and the Spirit after; at Caesarea the Spirit
+comes first and the water after. The Reformed argue from this that the Spirit is
+not bound to the water: Calvin on Acts 10:47, "the Spirit is not included in
+baptism". Rome grants it in its own words: "God has bound salvation to the
+sacrament of Baptism, but he himself is not bound by his sacraments" (Catechism
+1257). So that God is not bound to the water is common ground
+(`trent_grants_god_is_not_bound`), and not a Reformed win; Calvin's further
+claim, that the Spirit is not included in the sign, is not what Rome grants.
+What remains in dispute is the first half of the Catechism's sentence — that
+God has bound salvation to the sacrament — and Trent's further claim that the
+sacrament is the instrument of justification, the question above.
+
+#### Trent's instrumental cause, and its readings
+
+<a id="trentOnBaptism"></a>
+**`trentOnBaptism`** — Trent: baptism the instrumental cause of justification
+
+**Trent's instrumental cause**, as Trent states it: water baptism is the
+instrumental cause of justification.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{65} \\[4pt]
+\vdash \quad &amp; P_{65}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="feeneyReadsTrent"></a>
+**`feeneyReadsTrent`**
+
+Reading the instrumental cause so that the washing itself is necessary for
+salvation — Feeney's reading. Rated `disputed`: Rome's own teaching denies it
+(Catechism 1258–1260).
+
+```lean
+def feeneyReadsTrent : Source :=
+  { primary := Reference.work Bib.feeneyBreadOfLife,
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="trentReadsItsOwnClaim"></a>
+**`trentReadsItsOwnClaim`**
+
+Reading the instrumental cause as Trent's chapter 4 qualifies it: the laver of
+regeneration, or the desire thereof. Rated `consensus`, as what Trent says.
+
+```lean
+def trentReadsItsOwnClaim : Source :=
+  { primary := Reference.work Bib.waterworthTrent (Bib.Locus.page 32),
+    tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
+```
+
+<a id="asTheWaterItself"></a>
+**`asTheWaterItself`**
+
+The instrumental cause, **read so that the washing itself is necessary for
+salvation**.
+
+```lean
+def asTheWaterItself : Reading Claim :=
+  { name := "so that the washing itself is necessary for salvation",
+    commits :=
+      p Claim.waterItselfNecessaryForSalvation,
+    source := feeneyReadsTrent }
+```
+
+<a id="asBaptismOrItsDesire"></a>
+**`asBaptismOrItsDesire`**
+
+The instrumental cause, **read as baptism or its desire**.
+
+```lean
+def asBaptismOrItsDesire : Reading Claim :=
+  { name := "as baptism or the desire of it",
+    commits := p Claim.baptismOrItsDesire,
+    source := trentReadsItsOwnClaim }
+```
+
+<a id="trentOnTheWaterItself"></a>
+**`trentOnTheWaterItself`** — Trent: baptism the instrumental cause of justification, read so that the washing itself is necessary for salvation
+
+Trent's instrumental cause, read so that the washing itself is necessary.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{65} \\
+\text{(2)} \quad &amp; P_{65} \rightarrow P_{66} \\[4pt]
+\vdash \quad &amp; P_{65}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="trentOnBaptismOrDesire"></a>
+**`trentOnBaptismOrDesire`** — Trent: baptism the instrumental cause of justification, read as baptism or the desire of it
+
+Trent's instrumental cause, read as baptism or its desire.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{65} \\
+\text{(2)} \quad &amp; P_{65} \rightarrow P_{67} \\[4pt]
+\vdash \quad &amp; P_{65}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+#### What each reading meets
+
+<a id="thiefToNotNecessary"></a>
+**`thiefToNotNecessary`**
+
+From the thief to the washing not being necessary: promised paradise
+unbaptised, and his case bearing on salvation under the Gospel.
+
+<div class="testimony-math">
+\[
+(P_{69} \land P_{70}) \rightarrow \lnot P_{66}
+\]
+</div>
+
+<a id="thiefCase"></a>
+**`thiefCase`** — The thief on the cross (Luke 23:43), read with Augustine
+
+**The thief on the cross**, read as Augustine reads him: the washing itself
+is not necessary for salvation.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{69} \\
+\text{(2)} \quad &amp; P_{70} \\
+\text{(3)} \quad &amp; (P_{69} \land P_{70}) \rightarrow \lnot P_{66} \\[4pt]
+\vdash \quad &amp; \lnot P_{66}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="desireToNotNecessary"></a>
+**`desireToNotNecessary`**
+
+From the desire's fruits to the washing not being necessary.
+
+<div class="testimony-math">
+\[
+P_{68} \rightarrow \lnot P_{66}
+\]
+</div>
+
+<a id="desireCase"></a>
+**`desireCase`** — The desire for baptism (Catechism 1258–1259)
+
+**Rome's own teaching on the desire**: it brings about the fruits of baptism,
+so the washing itself is not necessary for salvation.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{68} \\
+\text{(2)} \quad &amp; P_{68} \rightarrow \lnot P_{66} \\[4pt]
+\vdash \quad &amp; \lnot P_{66}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="desireToNotTheInstrument"></a>
+**`desireToNotTheInstrument`**
+
+The Reformed step from the desire: if justification needs only the laver or
+the desire, and the desire alone brings the fruits of baptism without the
+sacrament, then the sacrament is not the instrument of justification. Held by
+Westminster (XXVIII.5; XI.2); rated disputed, because Aquinas grants the grounds
+and denies it.
+
+<div class="testimony-math">
+\[
+(P_{67} \land P_{68}) \rightarrow \lnot P_{65}
+\]
+</div>
+
+<a id="reformedOnTheDesire"></a>
+**`reformedOnTheDesire`** — What justifies where only the desire is present
+
+**The question the desire raises**: where only the desire is present, what
+justifies is not the washing, so the washing is not the instrument. The Reformed
+answer to Trent read in its own words.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{67} \\
+\text{(2)} \quad &amp; P_{68} \\
+\text{(3)} \quad &amp; (P_{67} \land P_{68}) \rightarrow \lnot P_{65} \\[4pt]
+\vdash \quad &amp; \lnot P_{65}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+#### Readings, written down
+
+<a id="romeOnBaptismReading"></a>
+**`romeOnBaptismReading`**
+
+Rome's world: baptism the instrumental cause, the desire for it bringing its
+fruits, the thief saved, God not bound to his sacraments, the water of John 3:5
+baptismal; and the washing itself not necessary for salvation.
+
+```lean
+def romeOnBaptismReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.waterItselfNecessaryForSalvation => False
+    | Claim.john3_5WaterIsNaturalBirth => False
+    | Claim.john3_5WaterIsEzekielsCleansing => False
+    | Claim.john3_5WaterIsTheSpiritsCleansing => False
+    | x => True
+```
+
+<a id="feeneyReading"></a>
+**`feeneyReading`**
+
+One world in which Feeney's reading holds: baptism the instrumental cause,
+and the washing itself necessary for salvation. It must deny that the thief's
+case bears on the Gospel, and that the desire brings the fruits that save. The
+first denial is what his reading requires, not a sentence quoted from him.
+
+```lean
+def feeneyReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.thiefBearsOnTheGospel => False
+    | Claim.desireBringsFruitsWithoutTheSacrament => False
+    | Claim.john3_5WaterIsNaturalBirth => False
+    | Claim.john3_5WaterIsEzekielsCleansing => False
+    | Claim.john3_5WaterIsTheSpiritsCleansing => False
+    | x => True
+```
+
+<a id="reformedOnBaptismReading"></a>
+**`reformedOnBaptismReading`**
+
+The Reformed world: faith the instrument, and baptism not; the desire brings
+the fruits, the thief is saved, and God is not bound to water. The water of
+John 3:5 is the Spirit's own cleansing, and the verse does not require water
+baptism.
+
+```lean
+def reformedOnBaptismReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.waterItselfNecessaryForSalvation => False
+    | Claim.john3_5RequiresWaterBaptism => False
+    | Claim.john3_5WaterIsBaptism => False
+    | x => True
+```
+
+#### Each position holds
+
+<a id="trentOnBaptism_establishes"></a>
+**`trentOnBaptism_establishes`**
+
+Trent's claim follows from its premises — trivially, since its one premise is
+the claim itself. This records the position; it does not argue for it.
+
+```lean
+theorem trentOnBaptism_establishes : Establishes trentOnBaptism
+-- axioms: propext
+```
+
+<a id="trentOnBaptism_is_satisfiable"></a>
+**`trentOnBaptism_is_satisfiable`**
+
+Trent's instrumental cause, as stated, can be held without contradiction.
+
+```lean
+theorem trentOnBaptism_is_satisfiable : Satisfiable trentOnBaptism.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnTheWaterItself_is_satisfiable"></a>
+**`trentOnTheWaterItself_is_satisfiable`**
+
+**The first reading is fair**: taken by itself, Trent read Feeney's way
+contradicts nothing, so it is not a straw man.
+
+```lean
+theorem trentOnTheWaterItself_is_satisfiable : Satisfiable
+    trentOnTheWaterItself.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnBaptismOrDesire_is_satisfiable"></a>
+**`trentOnBaptismOrDesire_is_satisfiable`**
+
+**The second reading is fair**: Trent read in its own words can be held
+without contradiction.
+
+```lean
+theorem trentOnBaptismOrDesire_is_satisfiable : Satisfiable
+    trentOnBaptismOrDesire.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="thiefCase_establishes"></a>
+**`thiefCase_establishes`**
+
+**Grant the thief promised paradise unbaptised, and his case bearing on the
+Gospel, and it follows that the washing itself is not necessary for
+salvation.**
+
+```lean
+theorem thiefCase_establishes : Establishes thiefCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="thiefCase_is_satisfiable"></a>
+**`thiefCase_is_satisfiable`**
+
+The thief's case can be held without contradiction.
+
+```lean
+theorem thiefCase_is_satisfiable : Satisfiable thiefCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="desireCase_establishes"></a>
+**`desireCase_establishes`**
+
+**Grant Rome's own teaching that the desire brings the fruits of baptism,
+and the same follows.**
+
+```lean
+theorem desireCase_establishes : Establishes desireCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="desireCase_is_satisfiable"></a>
+**`desireCase_is_satisfiable`**
+
+The desire's case can be held without contradiction.
+
+```lean
+theorem desireCase_is_satisfiable : Satisfiable desireCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="reformedOnTheDesire_establishes"></a>
+**`reformedOnTheDesire_establishes`**
+
+**The Reformed answer delivers its conclusion**, given its step: the sacrament
+is not the instrument of justification.
+
+```lean
+theorem reformedOnTheDesire_establishes : Establishes reformedOnTheDesire
+-- axioms: propext, Quot.sound
+```
+
+<a id="reformedOnTheDesire_is_satisfiable"></a>
+**`reformedOnTheDesire_is_satisfiable`**
+
+The Reformed answer can be held without contradiction.
+
+```lean
+theorem reformedOnTheDesire_is_satisfiable : Satisfiable
+    reformedOnTheDesire.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="the_thief_does_not_reach_the_desire"></a>
+**`the_thief_does_not_reach_the_desire`**
+
+**The thief does not reach Trent read in its own words.** Trent's instrumental
+cause, as baptism or its desire, can be held with everything the thief's case
+says: the thief had the desire, and the desire saves.
+
+```lean
+theorem the_thief_does_not_reach_the_desire : Satisfiable (thiefCase.premises
+    ++ trentOnBaptismOrDesire.premises)
+-- axioms: propext, Quot.sound
+```
+
+#### Where each reading breaks
+
+<a id="whereTheThiefMeetsFeeney"></a>
+**`whereTheThiefMeetsFeeney`**
+
+**Why the thief stands against Feeney's reading.** The crux is the step from
+the thief: promised paradise unbaptised, his case bearing on the Gospel, so the
+washing itself is not necessary for salvation. What it breaks is Trent's claim
+with Feeney's reading of it, and nothing else.
+
+**Why *The thief on the cross (Luke 23:43), read with Augustine* stands against *Trent: baptism the instrumental cause of justification, read so that the washing itself is necessary for salvation*.**
+
+- **The crux:** \\((P_{69} \land P_{70}) \rightarrow \lnot P_{66}\\), a premise of *The thief on the cross (Luke 23:43), read with Augustine*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{69}\\), \\(P_{70}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{65}\\), \\(P_{65} \rightarrow P_{66}\\) cannot be held together with \\((P_{69} \land P_{70}) \rightarrow \lnot P_{66}\\) and \\(P_{69}\\), \\(P_{70}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{69}\\) Luke 23:43 — the thief, unbaptised, is promised paradise — *consensus*: Luke 23:43; [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31
+  - \\(P_{70}\\) The thief's case bears on salvation under the Gospel — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
+  - the step itself — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
+
+<a id="whereTheDesireMeetsFeeney"></a>
+**`whereTheDesireMeetsFeeney`**
+
+**Why Rome's own teaching stands against Feeney's reading.** The crux is the
+step from the desire's fruits: if the desire brings about the fruits of
+baptism, the washing itself is not necessary for salvation. Feeney denies the
+ground; whoever grants it, as the Catechism does, cannot hold his reading.
+
+**Why *The desire for baptism (Catechism 1258–1259)* stands against *Trent: baptism the instrumental cause of justification, read so that the washing itself is necessary for salvation*.**
+
+- **The crux:** \\(P_{68} \rightarrow \lnot P_{66}\\), a premise of *The desire for baptism (Catechism 1258–1259)*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{68}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{65}\\), \\(P_{65} \rightarrow P_{66}\\) cannot be held together with \\(P_{68} \rightarrow \lnot P_{66}\\) and \\(P_{68}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{68}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - the step itself — *well supported*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1259
+
+<a id="whereTheDesireMeetsTrent"></a>
+**`whereTheDesireMeetsTrent`**
+
+**Why the Reformed answer stands against Trent read in its own words.** The
+crux is the step from the desire: where the desire alone brings the fruits,
+what justifies is not the washing, so the washing is not the instrument. What
+it breaks is the instrumental cause itself. It is rated `disputed`: Aquinas
+grants that the desire brings grace, and holds that it does so as a desire for
+the sacrament, which then gives a fuller grace.
+
+**Why *What justifies where only the desire is present* stands against *Trent: baptism the instrumental cause of justification, read as baptism or the desire of it*.**
+
+- **The crux:** \\((P_{67} \land P_{68}) \rightarrow \lnot P_{65}\\), a premise of *What justifies where only the desire is present*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{67}\\), \\(P_{68}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{65}\\) cannot be held together with \\((P_{67} \land P_{68}) \rightarrow \lnot P_{65}\\) and \\(P_{67}\\), \\(P_{68}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{67}\\) Justification cannot be effected without the laver of regeneration, or the desire thereof — *consensus*: [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.68 a.2
+  - \\(P_{68}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - the step itself — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.5; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; *disputed*: [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+
+<a id="whatTrentsInstrumentalCauseClaims"></a>
+**`whatTrentsInstrumentalCauseClaims`**
+
+**What Trent's instrumental cause claims, read both ways.**
+
+Read so that the washing itself is necessary for salvation — Feeney's reading —
+it cannot be held with the thief read as Augustine reads him, nor with Rome's
+own teaching that the desire brings the fruits of baptism: each at a step rated
+`wellSupported`. Both answers are Catholic ones.
+
+Read as Trent's own words, baptism or its desire, the thief does not reach it.
+It cannot be held with the Reformed answer — where only the desire is present,
+what justifies is not the washing — but that step is `disputed`, by Aquinas.
+
+Each reading is fair: taken by itself it contradicts nothing, so it is not a
+straw man. It fails only when joined to what the positions set against it
+hold.
+
+**Every reading of \\(P_{65}\\), answered.** *Trent: baptism the instrumental cause of justification* holds \\(P_{65}\\). It is read 2 ways here, and each reading is checked; none can be left out.
+
+**1. Read so that the washing itself is necessary for salvation.** The claim commits *Trent: baptism the instrumental cause of justification* to \\(P_{66}\\) — so read by [`feeney-bread-of-life-1952`](../bibliography.md#feeney-bread-of-life-1952) (*disputed*).
+
+Against *The thief on the cross (Luke 23:43), read with Augustine*, it cannot be held. Where it breaks:
+
+**Why *The thief on the cross (Luke 23:43), read with Augustine* stands against *Trent: baptism the instrumental cause of justification, read so that the washing itself is necessary for salvation*.**
+
+- **The crux:** \\((P_{69} \land P_{70}) \rightarrow \lnot P_{66}\\), a premise of *The thief on the cross (Luke 23:43), read with Augustine*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{69}\\), \\(P_{70}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{65}\\), \\(P_{65} \rightarrow P_{66}\\) cannot be held together with \\((P_{69} \land P_{70}) \rightarrow \lnot P_{66}\\) and \\(P_{69}\\), \\(P_{70}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{69}\\) Luke 23:43 — the thief, unbaptised, is promised paradise — *consensus*: Luke 23:43; [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31
+  - \\(P_{70}\\) The thief's case bears on salvation under the Gospel — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
+  - the step itself — *well supported*: [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.66 a.11
+
+Against *The desire for baptism (Catechism 1258–1259)*, it cannot be held. Where it breaks:
+
+**Why *The desire for baptism (Catechism 1258–1259)* stands against *Trent: baptism the instrumental cause of justification, read so that the washing itself is necessary for salvation*.**
+
+- **The crux:** \\(P_{68} \rightarrow \lnot P_{66}\\), a premise of *The desire for baptism (Catechism 1258–1259)*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{68}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{65}\\), \\(P_{65} \rightarrow P_{66}\\) cannot be held together with \\(P_{68} \rightarrow \lnot P_{66}\\) and \\(P_{68}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{68}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - the step itself — *well supported*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1259
+
+**2. Read as baptism or the desire of it.** The claim commits *Trent: baptism the instrumental cause of justification* to \\(P_{67}\\) — so read by [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32 (*consensus*).
+
+Against *The thief on the cross (Luke 23:43), read with Augustine*, it is not reached: *The thief on the cross (Luke 23:43), read with Augustine* holds, and can be held together with it.
+
+Against *What justifies where only the desire is present*, it cannot be held. Where it breaks:
+
+**Why *What justifies where only the desire is present* stands against *Trent: baptism the instrumental cause of justification, read as baptism or the desire of it*.**
+
+- **The crux:** \\((P_{67} \land P_{68}) \rightarrow \lnot P_{65}\\), a premise of *What justifies where only the desire is present*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{67}\\), \\(P_{68}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{65}\\) cannot be held together with \\((P_{67} \land P_{68}) \rightarrow \lnot P_{65}\\) and \\(P_{67}\\), \\(P_{68}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{67}\\) Justification cannot be effected without the laver of regeneration, or the desire thereof — *consensus*: [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 32; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.68 a.2
+  - \\(P_{68}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1258; [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - the step itself — *disputed*: [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.5; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; *disputed*: [`aquinas-summa-1920`](../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+
+#### John 3:5
+
+<a id="johnThreeFiveToWater"></a>
+**`johnThreeFiveToWater`**
+
+Trent's step from John 3:5: the verse requires water baptism. Rated
+`disputed`: Calvin grants the verse and denies it.
+
+<div class="testimony-math">
+\[
+P_{74} \rightarrow P_{75}
+\]
+</div>
+
+<a id="trentOnJohnThreeFive"></a>
+**`trentOnJohnThreeFive`** — Trent on John 3:5: born of water, so water baptism required
+
+**Trent on John 3:5**: born of water and the Spirit, so the verse requires
+water baptism for entry into the kingdom.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{74} \\
+\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\[4pt]
+\vdash \quad &amp; P_{75}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="waterReadAsBaptism"></a>
+**`waterReadAsBaptism`**
+
+Who reads the water of John 3:5 as baptismal water: Trent (Session VII, On
+Baptism, canon 2), and "Chrysostom, with whom the greater part of expounders
+agree", as Calvin reports.
+
+```lean
+def waterReadAsBaptism : Source :=
+  { primary := Reference.work Bib.waterworthTrent (Bib.Locus.page 56),
+    supporting := [Reference.work Bib.calvinJohn (Bib.Locus.page 110)],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="waterReadAsBirth"></a>
+**`waterReadAsBirth`**
+
+Who reads it as natural birth: Oliver, who argues for it as his own reading —
+the water "could be a reference to the amniotic fluid that surrounds the baby in
+the womb".
+
+```lean
+def waterReadAsBirth : Source :=
+  { primary := Reference.work Bib.oliverWaterJohn,
+    tradition := Tradition.criticalScholarship,
+    confidence := Confidence.disputed }
+```
+
+<a id="waterReadAsEzekiel"></a>
+**`waterReadAsEzekiel`**
+
+Who reads it as the cleansing of Ezekiel 36: Carson, who finds there "a
+transformative new beginning, characterized by spectacular cleansing symbolized
+by water".
+
+```lean
+def waterReadAsEzekiel : Source :=
+  { primary := Reference.work Bib.carsonBornOfWater,
+    supporting := [Reference.work Bib.oliverWaterJohn],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.disputed }
+```
+
+<a id="waterReadAsTheSpirit"></a>
+**`waterReadAsTheSpirit`**
+
+Who reads it as the Spirit's own cleansing: Calvin, "By 'water and the
+Spirit,' therefore, I simply understand the Spirit, which is water"
+(*Institutes* IV.xvi.25).
+
+```lean
+def waterReadAsTheSpirit : Source :=
+  {
+    primary :=
+      Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.xvi.25"),
+    supporting := [Reference.work Bib.calvinJohn (Bib.Locus.pages 110 111)],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="waterAsBaptism"></a>
+**`waterAsBaptism`**
+
+The water of John 3:5, **read as baptismal water**.
+
+```lean
+def waterAsBaptism : Reading Claim :=
+  { name := "with its water as baptismal water",
+    commits := p Claim.john3_5WaterIsBaptism,
+    source := waterReadAsBaptism }
+```
+
+<a id="waterAsBirth"></a>
+**`waterAsBirth`**
+
+The water of John 3:5, **read as natural birth**.
+
+```lean
+def waterAsBirth : Reading Claim :=
+  { name := "with its water as natural birth",
+    commits := p Claim.john3_5WaterIsNaturalBirth,
+    source := waterReadAsBirth }
+```
+
+<a id="waterAsEzekiel"></a>
+**`waterAsEzekiel`**
+
+The water of John 3:5, **read as the cleansing of Ezekiel 36**.
+
+```lean
+def waterAsEzekiel : Reading Claim :=
+  { name := "with its water as Ezekiel's cleansing",
+    commits := p Claim.john3_5WaterIsEzekielsCleansing,
+    source := waterReadAsEzekiel }
+```
+
+<a id="waterAsTheSpirit"></a>
+**`waterAsTheSpirit`**
+
+The water of John 3:5, **read as the Spirit's own cleansing**.
+
+```lean
+def waterAsTheSpirit : Reading Claim :=
+  { name := "with its water as the Spirit's own cleansing",
+    commits :=
+      p Claim.john3_5WaterIsTheSpiritsCleansing,
+    source := waterReadAsTheSpirit }
+```
+
+<a id="birthToNoWater"></a>
+**`birthToNoWater`**
+
+If the water is natural birth, the verse does not require water baptism.
+
+<div class="testimony-math">
+\[
+P_{77} \rightarrow \lnot P_{75}
+\]
+</div>
+
+<a id="ezekielToNoWater"></a>
+**`ezekielToNoWater`**
+
+If the water is Ezekiel's cleansing and not baptism, the verse does not
+require water baptism.
+
+<div class="testimony-math">
+\[
+P_{78} \rightarrow \lnot P_{75}
+\]
+</div>
+
+<a id="spiritToNoWater"></a>
+**`spiritToNoWater`**
+
+If the water is the Spirit's own cleansing, the verse does not require water
+baptism.
+
+<div class="testimony-math">
+\[
+P_{79} \rightarrow \lnot P_{75}
+\]
+</div>
+
+<a id="spiritToNotBaptism"></a>
+**`spiritToNotBaptism`**
+
+And if the water is the Spirit's own cleansing, it is not baptismal water.
+
+<div class="testimony-math">
+\[
+(P_{74} \land P_{79}) \rightarrow \lnot P_{76}
+\]
+</div>
+
+<a id="birthOnJohnThreeFive"></a>
+**`birthOnJohnThreeFive`** — John 3:5, the water as natural birth (Oliver)
+
+**The natural-birth reading, as a position**: the water is natural birth, so
+the verse does not require water baptism.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{77} \\
+\text{(2)} \quad &amp; P_{77} \rightarrow \lnot P_{75} \\[4pt]
+\vdash \quad &amp; \lnot P_{75}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="ezekielOnJohnThreeFive"></a>
+**`ezekielOnJohnThreeFive`** — John 3:5, the water as Ezekiel's cleansing (Carson)
+
+**The Ezekiel reading, as a position.**
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{78} \\
+\text{(2)} \quad &amp; P_{78} \rightarrow \lnot P_{75} \\[4pt]
+\vdash \quad &amp; \lnot P_{75}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="calvinOnJohnThreeFive"></a>
+**`calvinOnJohnThreeFive`** — John 3:5, the water as the Spirit's own cleansing (Calvin)
+
+**Calvin's reading, as a position**: water and Spirit are one, so the water
+is not baptismal water, and the verse does not require water baptism.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{74} \\
+\text{(2)} \quad &amp; P_{79} \\
+\text{(3)} \quad &amp; P_{79} \rightarrow \lnot P_{75} \\
+\text{(4)} \quad &amp; (P_{74} \land P_{79}) \rightarrow \lnot P_{76} \\[4pt]
+\vdash \quad &amp; \lnot P_{75}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="noWaterInJohnThreeFiveReading"></a>
+**`noWaterInJohnThreeFiveReading`**
+
+The world of each non-baptismal reading at once: the water is natural birth,
+Ezekiel's cleansing and the Spirit's own cleansing, and not baptism; the verse
+does not require water baptism. Not a position anyone holds — the three readings
+are rivals — but a model on which each package's premises hold.
+
+```lean
+def noWaterInJohnThreeFiveReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.john3_5RequiresWaterBaptism => False
+    | Claim.john3_5WaterIsBaptism => False
+    | x => True
+```
+
+<a id="trentOnJohnThreeFive_establishes"></a>
+**`trentOnJohnThreeFive_establishes`**
+
+Grant the verse and Trent's step from it, and the requirement of water
+baptism follows. The step is disputed.
+
+```lean
+theorem trentOnJohnThreeFive_establishes : Establishes trentOnJohnThreeFive
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentOnJohnThreeFive_is_satisfiable"></a>
+**`trentOnJohnThreeFive_is_satisfiable`**
+
+Trent on John 3:5 can be held without contradiction: Rome's world.
+
+```lean
+theorem trentOnJohnThreeFive_is_satisfiable : Satisfiable
+    trentOnJohnThreeFive.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="birthOnJohnThreeFive_establishes"></a>
+**`birthOnJohnThreeFive_establishes`**
+
+The natural-birth reading delivers its conclusion.
+
+```lean
+theorem birthOnJohnThreeFive_establishes : Establishes birthOnJohnThreeFive
+-- axioms: propext, Quot.sound
+```
+
+<a id="birthOnJohnThreeFive_is_satisfiable"></a>
+**`birthOnJohnThreeFive_is_satisfiable`**
+
+The natural-birth reading can be held without contradiction.
+
+```lean
+theorem birthOnJohnThreeFive_is_satisfiable : Satisfiable
+    birthOnJohnThreeFive.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="ezekielOnJohnThreeFive_establishes"></a>
+**`ezekielOnJohnThreeFive_establishes`**
+
+The Ezekiel reading delivers its conclusion.
+
+```lean
+theorem ezekielOnJohnThreeFive_establishes : Establishes
+    ezekielOnJohnThreeFive
+-- axioms: propext, Quot.sound
+```
+
+<a id="ezekielOnJohnThreeFive_is_satisfiable"></a>
+**`ezekielOnJohnThreeFive_is_satisfiable`**
+
+The Ezekiel reading can be held without contradiction.
+
+```lean
+theorem ezekielOnJohnThreeFive_is_satisfiable : Satisfiable
+    ezekielOnJohnThreeFive.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="calvinOnJohnThreeFive_establishes"></a>
+**`calvinOnJohnThreeFive_establishes`**
+
+Calvin's reading delivers its conclusion.
+
+```lean
+theorem calvinOnJohnThreeFive_establishes : Establishes calvinOnJohnThreeFive
+-- axioms: propext, Quot.sound
+```
+
+<a id="calvinOnJohnThreeFive_is_satisfiable"></a>
+**`calvinOnJohnThreeFive_is_satisfiable`**
+
+Calvin's reading can be held without contradiction.
+
+```lean
+theorem calvinOnJohnThreeFive_is_satisfiable : Satisfiable
+    calvinOnJohnThreeFive.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentWithBaptismalWater"></a>
+**`trentWithBaptismalWater`** — Trent on John 3:5: born of water, so water baptism required, read with its water as baptismal water
+
+Trent on John 3:5, with the water read as baptism.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{74} \\
+\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
+\text{(3)} \quad &amp; P_{74} \rightarrow P_{76} \\[4pt]
+\vdash \quad &amp; P_{75}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="trentWithNaturalBirth"></a>
+**`trentWithNaturalBirth`** — Trent on John 3:5: born of water, so water baptism required, read with its water as natural birth
+
+Trent on John 3:5, with the water read as natural birth.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{74} \\
+\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
+\text{(3)} \quad &amp; P_{74} \rightarrow P_{77} \\[4pt]
+\vdash \quad &amp; P_{75}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="trentWithEzekielsCleansing"></a>
+**`trentWithEzekielsCleansing`** — Trent on John 3:5: born of water, so water baptism required, read with its water as Ezekiel's cleansing
+
+Trent on John 3:5, with the water read as Ezekiel's cleansing.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{74} \\
+\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
+\text{(3)} \quad &amp; P_{74} \rightarrow P_{78} \\[4pt]
+\vdash \quad &amp; P_{75}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="trentWithTheSpiritsCleansing"></a>
+**`trentWithTheSpiritsCleansing`** — Trent on John 3:5: born of water, so water baptism required, read with its water as the Spirit's own cleansing
+
+Trent on John 3:5, with the water read as the Spirit's own cleansing.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{74} \\
+\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
+\text{(3)} \quad &amp; P_{74} \rightarrow P_{79} \\[4pt]
+\vdash \quad &amp; P_{75}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="trentReadingOfJohnThreeFive"></a>
+**`trentReadingOfJohnThreeFive`**
+
+The verse read Trent's way and no other: its water is baptismal water, and not
+natural birth, Ezekiel's cleansing or the Spirit's own cleansing.
+
+```lean
+def trentReadingOfJohnThreeFive : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.john3_5WaterIsNaturalBirth => False
+    | Claim.john3_5WaterIsEzekielsCleansing => False
+    | Claim.john3_5WaterIsTheSpiritsCleansing => False
+    | x => True
+```
+
+<a id="trentWithBirthReading"></a>
+**`trentWithBirthReading`**
+
+The verse read with its water as natural birth, and Trent's step kept: this
+contradicts nothing by itself. It breaks only when that reading's own step —
+then the verse does not require water baptism — is added.
+
+```lean
+def trentWithBirthReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.john3_5WaterIsEzekielsCleansing => False
+    | Claim.john3_5WaterIsTheSpiritsCleansing => False
+    | x => True
+```
+
+<a id="trentWithEzekielReading"></a>
+**`trentWithEzekielReading`**
+
+Trent's step, with the water read as Ezekiel's cleansing.
+
+```lean
+def trentWithEzekielReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.john3_5WaterIsNaturalBirth => False
+    | Claim.john3_5WaterIsTheSpiritsCleansing => False
+    | x => True
+```
+
+<a id="trentWithSpiritReading"></a>
+**`trentWithSpiritReading`**
+
+Trent's step, with the water read as the Spirit's own cleansing.
+
+```lean
+def trentWithSpiritReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.john3_5WaterIsNaturalBirth => False
+    | Claim.john3_5WaterIsEzekielsCleansing => False
+    | x => True
+```
+
+<a id="trentWithBaptismalWater_is_satisfiable"></a>
+**`trentWithBaptismalWater_is_satisfiable`**
+
+The baptismal reading of Trent's step can be held without contradiction.
+
+```lean
+theorem trentWithBaptismalWater_is_satisfiable : Satisfiable
+    trentWithBaptismalWater.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentWithNaturalBirth_is_satisfiable"></a>
+**`trentWithNaturalBirth_is_satisfiable`**
+
+The natural-birth reading of Trent's step can be held without
+contradiction.
+
+```lean
+theorem trentWithNaturalBirth_is_satisfiable : Satisfiable
+    trentWithNaturalBirth.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentWithEzekielsCleansing_is_satisfiable"></a>
+**`trentWithEzekielsCleansing_is_satisfiable`**
+
+The Ezekiel reading of Trent's step can be held without contradiction.
+
+```lean
+theorem trentWithEzekielsCleansing_is_satisfiable : Satisfiable
+    trentWithEzekielsCleansing.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trentWithTheSpiritsCleansing_is_satisfiable"></a>
+**`trentWithTheSpiritsCleansing_is_satisfiable`**
+
+The Spirit's-cleansing reading of Trent's step can be held without
+contradiction.
+
+```lean
+theorem trentWithTheSpiritsCleansing_is_satisfiable : Satisfiable
+    trentWithTheSpiritsCleansing.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="whereCalvinMeetsTheBaptismalReading"></a>
+**`whereCalvinMeetsTheBaptismalReading`**
+
+**Why Calvin's reading stands against Trent, reading the water as baptism.**
+The crux is Calvin's step: if water and Spirit are one, the water is not
+baptismal water. What it breaks is the reading itself. The step is well
+supported; but Calvin's reading, the ground it rests on, is disputed, and Trent
+anathematises it (Session VII, On Baptism, canon 2).
+
+**Why *John 3:5, the water as the Spirit's own cleansing (Calvin)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as baptismal water*.**
+
+- **The crux:** \\((P_{74} \land P_{79}) \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
+- **What it does:** its conclusion follows without it — the crux is its answer to *Trent on John 3:5: born of water, so water baptism required, read with its water as baptismal water*.
+- **Granted:** \\(P_{74}\\), \\(P_{79}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{74} \rightarrow P_{76}\\) cannot be held together with \\((P_{74} \land P_{79}) \rightarrow \lnot P_{76}\\) and \\(P_{74}\\), \\(P_{79}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{74}\\) John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom — *consensus*: John 3:5; [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022)
+  - \\(P_{79}\\) The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one — *disputed*: [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+  - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+
+<a id="whereBirthMeetsTrentsStep"></a>
+**`whereBirthMeetsTrentsStep`**
+
+**Why the natural-birth reading cannot keep Trent's step.** If the water is
+natural birth, the verse does not require water baptism; so Trent's step from
+the verse, read that way, breaks — at a step rated `wellSupported`.
+
+**Why *John 3:5, the water as natural birth (Oliver)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as natural birth*.**
+
+- **The crux:** \\(P_{77} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as natural birth (Oliver)*.
+- **What it does:** its conclusion does not follow without it.
+- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{77}\\) cannot be held together with \\(P_{77} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+
+  - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+
+<a id="whereEzekielMeetsTrentsStep"></a>
+**`whereEzekielMeetsTrentsStep`**
+
+**Why the Ezekiel reading cannot keep Trent's step.** If the water is
+Ezekiel's cleansing and not baptism, the verse does not require water baptism.
+
+**Why *John 3:5, the water as Ezekiel's cleansing (Carson)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as Ezekiel's cleansing*.**
+
+- **The crux:** \\(P_{78} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as Ezekiel's cleansing (Carson)*.
+- **What it does:** its conclusion does not follow without it.
+- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{78}\\) cannot be held together with \\(P_{78} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+
+  - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+
+<a id="whereTheSpiritMeetsTrentsStep"></a>
+**`whereTheSpiritMeetsTrentsStep`**
+
+**Why Calvin's reading cannot keep Trent's step.** If the water is the
+Spirit's own cleansing, the verse does not require water baptism.
+
+**Why *John 3:5, the water as the Spirit's own cleansing (Calvin)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as the Spirit's own cleansing*.**
+
+- **The crux:** \\(P_{79} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
+- **What it does:** its conclusion does not follow without it.
+- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{79}\\) cannot be held together with \\(P_{79} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+
+  - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+
+<a id="whatJohnThreeFiveMeans"></a>
+**`whatJohnThreeFiveMeans`**
+
+**What John 3:5 means, read four ways.** What is ambiguous is the verse Trent
+cites, not Trent. Trent argues: unless one is born of water and the Spirit, he
+cannot enter the kingdom of God; therefore water baptism is required. Each of
+the four readings below is a reading of the verse's "water", held by the reader
+named; for each, the question is whether Trent's step from the verse still
+stands once the verse is read that way.
+
+Read with its water as baptismal water, Trent's step stands, and the reading
+cannot be held with Calvin's — at a well-supported step from Calvin's reading,
+which is itself disputed. Even so, Trent's step stays disputed.
+
+Read with its water as natural birth, as Ezekiel's cleansing, or as the Spirit's
+own cleansing, Trent's step cannot be kept: each time at a well-supported step.
+
+So only the baptismal reading leaves Trent's step standing. Which reading is
+right, the dilemma does not decide; each is cited, and each is disputed. Each
+reading is fair: taken by itself it contradicts nothing, and fails only when
+joined to the step its own holders draw from it.
+
+**Every reading of \\(P_{74}\\), answered.** *Trent on John 3:5: born of water, so water baptism required* holds \\(P_{74}\\). It is read 4 ways here, and each reading is checked; none can be left out.
+
+**1. Read with its water as baptismal water.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{76}\\) — so read by [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 56; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), p. 110 (*disputed*).
+
+Against *John 3:5, the water as the Spirit's own cleansing (Calvin)*, it cannot be held. Where it breaks:
+
+**Why *John 3:5, the water as the Spirit's own cleansing (Calvin)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as baptismal water*.**
+
+- **The crux:** \\((P_{74} \land P_{79}) \rightarrow \lnot P_{76}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
+- **What it does:** its conclusion follows without it — the crux is its answer to *Trent on John 3:5: born of water, so water baptism required, read with its water as baptismal water*.
+- **Granted:** \\(P_{74}\\), \\(P_{79}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{74} \rightarrow P_{76}\\) cannot be held together with \\((P_{74} \land P_{79}) \rightarrow \lnot P_{76}\\) and \\(P_{74}\\), \\(P_{79}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{74}\\) John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom — *consensus*: John 3:5; [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022)
+  - \\(P_{79}\\) The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one — *disputed*: [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+  - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+
+**2. Read with its water as natural birth.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{77}\\) — so read by [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) (*disputed*).
+
+Against *John 3:5, the water as natural birth (Oliver)*, it cannot be held. Where it breaks:
+
+**Why *John 3:5, the water as natural birth (Oliver)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as natural birth*.**
+
+- **The crux:** \\(P_{77} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as natural birth (Oliver)*.
+- **What it does:** its conclusion does not follow without it.
+- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{77}\\) cannot be held together with \\(P_{77} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+
+  - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+
+**3. Read with its water as Ezekiel's cleansing.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{78}\\) — so read by [`carson-born-of-water-2019`](../bibliography.md#carson-born-of-water-2019); [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022) (*disputed*).
+
+Against *John 3:5, the water as Ezekiel's cleansing (Carson)*, it cannot be held. Where it breaks:
+
+**Why *John 3:5, the water as Ezekiel's cleansing (Carson)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as Ezekiel's cleansing*.**
+
+- **The crux:** \\(P_{78} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as Ezekiel's cleansing (Carson)*.
+- **What it does:** its conclusion does not follow without it.
+- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{78}\\) cannot be held together with \\(P_{78} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+
+  - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+
+**4. Read with its water as the Spirit's own cleansing.** The claim commits *Trent on John 3:5: born of water, so water baptism required* to \\(P_{79}\\) — so read by [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25; [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), pp. 110–111 (*disputed*).
+
+Against *John 3:5, the water as the Spirit's own cleansing (Calvin)*, it cannot be held. Where it breaks:
+
+**Why *John 3:5, the water as the Spirit's own cleansing (Calvin)* stands against *Trent on John 3:5: born of water, so water baptism required, read with its water as the Spirit's own cleansing*.**
+
+- **The crux:** \\(P_{79} \rightarrow \lnot P_{75}\\), a premise of *John 3:5, the water as the Spirit's own cleansing (Calvin)*.
+- **What it does:** its conclusion does not follow without it.
+- **Where the rival breaks:** \\(P_{74}\\), \\(P_{74} \rightarrow P_{75}\\), \\(P_{74} \rightarrow P_{79}\\) cannot be held together with \\(P_{79} \rightarrow \lnot P_{75}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+
+  - the step itself — *well supported*: [`oliver-water-john-2022`](../bibliography.md#oliver-water-john-2022); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+
+#### Acts, both orders
+
+<a id="actsToUnbound"></a>
+**`actsToUnbound`**
+
+From Samaria and Caesarea: the Spirit after the water and before it, so God
+is not bound to water baptism. Rated consensus: Calvin and the Catechism both
+grant that much, though Calvin's own sentence goes further.
+
+<div class="testimony-math">
+\[
+(P_{71} \land P_{72}) \rightarrow P_{73}
+\]
+</div>
+
+<a id="actsCase"></a>
+**`actsCase`** — Acts 8 and 10: the Spirit after the water, and before it
+
+**Acts, both orders**: the Spirit given after the water in Samaria and before
+it at Caesarea, so God is not bound to water baptism.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{71} \\
+\text{(2)} \quad &amp; P_{72} \\
+\text{(3)} \quad &amp; (P_{71} \land P_{72}) \rightarrow P_{73} \\[4pt]
+\vdash \quad &amp; P_{73}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="actsCase_establishes"></a>
+**`actsCase_establishes`**
+
+**Grant the two orders of Acts, and it follows that God is not bound to
+water.**
+
+```lean
+theorem actsCase_establishes : Establishes actsCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="actsCase_is_satisfiable"></a>
+**`actsCase_is_satisfiable`**
+
+Acts' case can be held without contradiction.
+
+```lean
+theorem actsCase_is_satisfiable : Satisfiable actsCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="trent_grants_god_is_not_bound"></a>
+**`trent_grants_god_is_not_bound`**
+
+**Trent's instrumental cause is consistent with God not being bound to it.**
+Rome's world holds both: "God has bound salvation to the sacrament of Baptism,
+but he himself is not bound by his sacraments" (Catechism 1257). So what Acts
+shows is common ground, not a Reformed win. What remains in dispute is the first
+half of that sentence, that God has bound salvation to the sacrament, and Trent's
+further claim that the sacrament is the instrument of justification.
+
+```lean
+theorem trent_grants_god_is_not_bound : Grants trentOnBaptism (p
+    Claim.godNotBoundToWater)
+-- axioms: propext, Quot.sound
+```
+
+#### "And fire": the readings, and no winner
+
+<a id="fireAsJudgmentReading"></a>
+**`fireAsJudgmentReading`**
+
+A world in which the fire is judgment, and neither of the other readings
+holds: enough to show the verse does not force them. Many readers take the fire
+as both judging and purifying; nothing here says the readings exclude each
+other.
+
+```lean
+def fireAsJudgmentReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.fireIsPurification => False
+    | Claim.fireIsPentecost => False
+    | x => True
+```
+
+<a id="fireAsPurificationReading"></a>
+**`fireAsPurificationReading`**
+
+A world in which the fire is purification, and neither of the other readings
+holds: enough to show the verse does not force them.
+
+```lean
+def fireAsPurificationReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.fireIsJudgment => False
+    | Claim.fireIsPentecost => False
+    | x => True
+```
+
+<a id="the_baptist_leaves_the_fire_open"></a>
+**`the_baptist_leaves_the_fire_open`**
+
+**The Baptist's words leave open whether the fire is judgment.** "He will
+baptize you with the Holy Spirit and fire" is held alike by Gregory Nazianzen,
+who reads the fire as the consuming of the chaff, and by Calvin, who reads it
+as the Spirit's purifying. The text alone settles it neither way.
+
+```lean
+theorem the_baptist_leaves_the_fire_open : Independent [p
+    Claim.matthew3_11SpiritAndFire] (p Claim.fireIsJudgment)
+-- axioms: propext, Quot.sound
+```
+
+<a id="the_baptist_leaves_purification_open"></a>
+**`the_baptist_leaves_purification_open`**
+
+**Nor whether it is purification.**
+
+```lean
+theorem the_baptist_leaves_purification_open : Independent [p
+    Claim.matthew3_11SpiritAndFire] (p Claim.fireIsPurification)
+-- axioms: propext, Quot.sound
+```
+
+<a id="the_baptist_leaves_pentecost_open"></a>
+**`the_baptist_leaves_pentecost_open`**
+
+**Nor whether it is Pentecost**, as Cyril of Jerusalem reads it: "because the
+descent of the Holy Ghost was in fiery tongues".
+
+```lean
+theorem the_baptist_leaves_pentecost_open : Independent [p
+    Claim.matthew3_11SpiritAndFire] (p Claim.fireIsPentecost)
+-- axioms: propext, Quot.sound
 ```

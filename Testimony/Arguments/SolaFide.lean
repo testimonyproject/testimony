@@ -9,6 +9,7 @@ import Testimony.Arguments.SolaFide.Gospel
 import Testimony.Arguments.SolaFide.Definition
 import Testimony.Arguments.SolaFide.Hearings
 import Testimony.Arguments.SolaFide.JesusWords
+import Testimony.Arguments.SolaFide.Baptism
 
 /-!
 # Arguments.SolaFide — justification by grace through faith, not works
@@ -241,6 +242,20 @@ alone saves) and Matthew is not.
 This is a dispute of its own, kept apart from the one above for the reason the
 Johannine strand is.
 
+**Baptism** (`Baptism.lean`). Trent makes water baptism the instrumental cause
+of justification, and qualifies it in its own words: "or the desire thereof".
+Water, the Spirit and "fire" are kept as separate atoms, so no argument passes
+from one sense of "baptism" to another. Read so that the washing itself is
+necessary for salvation — Feeney's reading — Trent's claim cannot be held with
+the thief read as Augustine reads him, nor with Rome's own teaching on the
+desire. Read in Trent's own words, the thief does not reach it; what it meets is
+the Reformed argument from the desire — where only the desire is present, what
+justifies is not the washing — at a step Aquinas contests. John 3:5 is a dilemma
+of its own: of the four readings of its "water" on record, only the baptismal
+one leaves Trent's step from the verse standing, and even then the step is
+disputed. And that Acts gives the Spirit both before the water and after it is
+common ground: Rome says God "is not bound by his sacraments".
+
 ## Where things are
 
 | File | Contents |
@@ -256,4 +271,5 @@ Johannine strand is.
 | `Definition.lean` | Paul's word, and the dilemma over what Trent's definition claims |
 | `Hearings.lean` | the dispute heard narrower: the Reformation alone, and without Trent |
 | `JesusWords.lean` | Luke 18, and both readings of Matthew 7 and 19: what Jesus' words decide |
+| `Baptism.lean` | water, Spirit and fire apart; the instrumental cause; John 3:5 |
 -/

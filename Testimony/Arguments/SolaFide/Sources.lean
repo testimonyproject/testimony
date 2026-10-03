@@ -101,6 +101,81 @@ def veritatisSplendorAgainstTheLegalReply : Source :=
   , tradition := .romanCatholic
   , confidence := .disputed }
 
+/-- **Trent's step from John 3:5 is contested, by Calvin.** He grants the verse
+and denies that it requires water baptism: "I cannot bring myself to believe
+that Christ speaks of baptism" (on John 3:5, 110). -/
+def calvinAgainstBaptismInJohnThreeFive : Source :=
+  { primary := .work calvinJohn (.page 110)
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **The steps from each non-baptismal reading of John 3:5 are well supported.**
+If the water is natural birth, or Ezekiel's cleansing and not baptism, or the
+Spirit's own cleansing, the verse does not require water baptism: no reader was
+found who holds one of these readings and still requires baptism from the verse.
+Those who require it deny the reading instead (Trent, Session VII, On Baptism,
+canon 2). -/
+def readingsWithoutTheWater : Source :=
+  { primary := .work oliverWaterJohn .whole
+  , supporting := [.work calvinInstitutes (.sectionRef "IV.xvi.25")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- **The step from the thief is well supported.** Grant that he was promised
+paradise unbaptised, and that his case bears on salvation under the Gospel, and
+the washing itself is not necessary for salvation: "as in the thief, to whom the
+material administration of the sacrament was necessarily wanting, the salvation
+was complete" (Augustine, *On Baptism* IV.23.31), a passage Aquinas quotes with
+approval (III q.66 a.11). Feeney denies the conclusion; how he answers the thief
+could not be verified here. -/
+def augustineOnTheThief : Source :=
+  { primary := .work npnfAugustineManichaeans (.sectionRef "On Baptism IV.23.31")
+  , supporting := [.work aquinasSumma (.sectionRef "III q.66 a.11")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- **The step from the desire to the salvation it assures is well supported.**
+If the desire for baptism brings about its fruits, the washing itself is not
+necessary for salvation: the Catechism says it "assures them the salvation that
+they were not able to receive through the sacrament" (1259). Feeney grants that
+the desire justifies; he denies that it saves. It is this saving fruit, as the
+Catechism states it, that he denies — the ground, not the step. -/
+def catechismOnDesire : Source :=
+  { primary := .work catechismCatholicChurch (.sectionRef "1259")
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
+
+/-- **The Reformed step from the desire, as Westminster holds it**: grace and
+salvation "are not so inseparably annexed unto it, as that no person can be
+regenerated, or saved, without it" (XXVIII.5), and faith is "the alone
+instrument of justification" (XI.2). -/
+def westminsterOnTheDesire : Source :=
+  { primary := .work westminsterConfession (.sectionRef "XXVIII.5")
+  , supporting := [.work westminsterConfession (.sectionRef "XI.2")]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **The Reformed step from the desire is contested, by Aquinas.** He grants that
+Cornelius and others "receive grace and virtues through their faith in Christ
+and their desire for Baptism", and denies that the sacrament is therefore not
+the instrument: the desire is for the sacrament, and "when baptized, they
+receive a yet greater fulness of grace and virtues" (III q.69 a.4 ad 2). -/
+def aquinasOnTheDesire : Source :=
+  { primary := .work aquinasSumma (.sectionRef "III q.69 a.4 ad 2")
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- **Where the Spirit comes before the water, and after it: common ground.**
+Both grant that God is not bound to the water: the Catechism, that God "himself
+is not bound by his sacraments" (1257). Calvin's own sentence on Acts 10:47 goes
+further — "the Spirit is not included in baptism" — and that further claim is
+not what is granted here. -/
+def calvinOnActsTen : Source :=
+  { primary := .work calvinActs1 (.page 454)
+  , supporting := [.work catechismCatholicChurch (.sectionRef "1257")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .consensus }
+
 /-- Where Melanchthon reads Luke 7:47 by 7:50, in the *Apology of the Augsburg
 Confession* (1531): the part of Article IV on love and the fulfilling of the
 law. The *Concordia Triglotta* numbers it Article III, 31–34; the reference is
@@ -755,6 +830,178 @@ def baseCite : Claim → AtomMeta
     , source :=
         { primary := .work calvinHarmony2 (.pages 393 394)
         , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .baptismCommandedByChrist =>
+    { label := "Christ commands baptism with water (Matthew 28:19; Acts 2:38)"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse matthew28_19 }, { ref := .verse acts2_38 }]
+        , supporting := [.work westminsterConfession (.sectionRef "XXVIII.1")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .baptismIsInstrumentalCause =>
+    { label := "Water baptism is the instrumental cause of justification"
+    , kind := .theological
+      -- As a report of Trent, `consensus`; as a claim about what justifies,
+      -- `disputed`: Westminster calls faith "the alone instrument" (XI.2).
+    , source :=
+        { primary := .work waterworthTrent (.pages 34 35)
+        , supporting := [.work westminsterConfession (.sectionRef "XI.2")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .waterItselfNecessaryForSalvation =>
+    { label := "The washing itself is necessary for salvation, though desire may justify"
+    , kind := .theological
+    , source :=
+        { primary := .work feeneyBreadOfLife .whole
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .baptismOrItsDesire =>
+    { label :=
+        "Justification cannot be effected without the laver of regeneration, or the " ++
+        "desire thereof"
+    , kind := .textual
+      -- `consensus` as what Trent says; Aquinas (III q.68 a.2), the Catechism
+      -- (1258–1259) and Feeney himself grant that desire justifies.
+    , source :=
+        { primary := .work waterworthTrent (.page 32)
+        , supporting := [.work aquinasSumma (.sectionRef "III q.68 a.2")]
+        , tradition := .romanCatholic
+        , confidence := .consensus } }
+  | .desireBringsFruitsWithoutTheSacrament =>
+    { label := "The desire for baptism brings about its fruits without being a sacrament"
+    , kind := .theological
+    , source :=
+        { primary := .work catechismCatholicChurch (.sectionRef "1258")
+        , supporting := [.work aquinasSumma (.sectionRef "III q.69 a.4 ad 2")]
+        , tradition := .romanCatholic
+        , confidence := .consensus } }
+  | .luke23_43ThiefPromisedParadise =>
+    { label := "Luke 23:43 — the thief, unbaptised, is promised paradise"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse luke23_43 }]
+        , supporting := [.work npnfAugustineManichaeans (.sectionRef "On Baptism IV.23.31")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .thiefBearsOnTheGospel =>
+    { label := "The thief's case bears on salvation under the Gospel"
+    , kind := .interpretive
+      -- `wellSupported`: every reader on record who addresses the thief holds
+      -- it — Cyprian as Augustine reports him, Augustine, and Aquinas quoting
+      -- Augustine with approval. Aquinas (III q.66 a.2) and Trent ("since the
+      -- promulgation of the Gospel") date the obligation of baptism without
+      -- mentioning the thief; reading them as denying this is an inference.
+    , source :=
+        { primary := .work npnfAugustineManichaeans (.sectionRef "On Baptism IV.22.30–23.31")
+        , supporting := [.work aquinasSumma (.sectionRef "III q.66 a.11")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .acts8WaterThenSpirit =>
+    { label := "Acts 8:14–17 — the Samaritans, baptized, receive the Spirit afterwards"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range acts8_14to17 }]
+        , supporting := [.work calvinActs1 (.pages 338 339)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .acts10SpiritThenWater =>
+    { label := "Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range acts10_44to48 }]
+        , supporting := [.work calvinActs1 (.pages 453 454)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .godNotBoundToWater =>
+    { label := "God is not bound to water baptism: he gives the Spirit before it and after it"
+    , kind := .theological
+      -- Common ground: the Catechism (1257) and Calvin on Acts 10:47 alike.
+    , source :=
+        { primary := .work catechismCatholicChurch (.sectionRef "1257")
+        , supporting :=
+            [ .work calvinActs1 (.page 454)
+            , .work aquinasSumma (.sectionRef "III q.69 a.4 ad 2") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .john3_5WaterAndSpirit =>
+    { label := "John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse john3_5 }]
+        , supporting := [.work oliverWaterJohn .whole]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .john3_5RequiresWaterBaptism =>
+    { label := "John 3:5 requires water baptism for entry into the kingdom"
+    , kind := .interpretive
+    , source :=
+        { primary := .work waterworthTrent (.page 56)
+        , supporting := [.work catechismCatholicChurch (.sectionRef "1257")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .john3_5WaterIsBaptism =>
+    { label := "The water of John 3:5 is baptismal water"
+    , kind := .interpretive
+      -- Trent, Session VII, On Baptism, canon 2; "Chrysostom, with whom the
+      -- greater part of expounders agree", as Calvin reports (on John 3:5).
+    , source :=
+        { primary := .work waterworthTrent (.page 56)
+        , supporting := [.work calvinJohn (.page 110)]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .john3_5WaterIsNaturalBirth =>
+    { label := "The water of John 3:5 is natural birth"
+    , kind := .interpretive
+    , source :=
+        { primary := .work oliverWaterJohn .whole
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | .john3_5WaterIsEzekielsCleansing =>
+    { label := "The water of John 3:5 is the cleansing promised in Ezekiel 36:25–27, not baptism"
+    , kind := .interpretive
+    , source :=
+        { primary := .work carsonBornOfWater .whole
+        , supporting := [.work oliverWaterJohn .whole]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .john3_5WaterIsTheSpiritsCleansing =>
+    { label := "The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one"
+    , kind := .interpretive
+    , source :=
+        { primary := .work calvinJohn (.pages 110 111)
+        , supporting := [.work calvinInstitutes (.sectionRef "IV.xvi.25")]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .matthew3_11SpiritAndFire =>
+    { label := "Matthew 3:11 — he will baptize you with the Holy Spirit and fire"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse matthew3_11 }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .fireIsJudgment =>
+    { label := "The fire of Matthew 3:11 is judgment: the chaff burned (3:12)"
+    , kind := .interpretive
+      -- Gregory Nazianzen: "the consuming of the chaff, and the heat of the
+      -- Spirit" — judgment and the Spirit together.
+    , source :=
+        { primary := .work npnfCyrilGregory (.sectionRef "Gregory Nazianzen, Oration 39.15")
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .fireIsPurification =>
+    { label := "The fire of Matthew 3:11 is purification: the Spirit purifies as fire purifies gold"
+    , kind := .interpretive
+    , source :=
+        { primary := .work calvinHarmony1 (.page 199)
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .fireIsPentecost =>
+    { label := "The fire of Matthew 3:11 is Pentecost's tongues as of fire (Acts 2:3)"
+    , kind := .interpretive
+    , source :=
+        { primary := .work npnfCyrilGregory (.sectionRef "Cyril, Catechetical Lecture 17.8")
+        , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .paulNamesRenewalOtherwise =>
     { label := "Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them " ++
