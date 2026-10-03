@@ -27,6 +27,7 @@ import Testimony.Logic.Support
 import Testimony.Logic.Map
 import Testimony.Logic.Burden
 import Testimony.Logic.Dilemma
+import Testimony.Logic.Contest
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin
@@ -34,4 +35,11 @@ import Testimony.Arguments.CanonicalWitness
 import Testimony.Arguments.SolaFide
 import Testimony.Arguments.SolaScriptura
 import Testimony.Arguments.SpiritBaptism
+import Testimony.Semantics.Vocabulary
+import Testimony.Semantics.Grammar
+import Testimony.Semantics.Meaning
+import Testimony.Semantics.Discourse
+import Testimony.Meanings
+import Testimony.Articles.Howell2003
+import Testimony.Checks.Meanings
 import Testimony.Checks.Refutations

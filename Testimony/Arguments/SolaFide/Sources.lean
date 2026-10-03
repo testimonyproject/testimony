@@ -454,6 +454,17 @@ def baseCite : Claim → AtomMeta
             , .work calvinInstitutes (.sectionRef "III.xvii.11") ]
         , tradition := .reformedProtestant
         , confidence := .disputed } }
+  | .james2_24NotByFaithAlone =>
+    { label := "James 2:24 says a person is justified by works and not by faith alone"
+    , kind := .textual
+      -- What the verse says is common ground: Moo, who reads it with Paul,
+      -- and Johnson, who reads it otherwise, quote the same words.
+    , source :=
+        { primary := .scripture [{ ref := .verse james2_24 }]
+        , supporting :=
+            [ .work mooJames (.adLoc james2_24), .work johnsonJames (.adLoc james2_24) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .scriptureSelfConsistent =>
     { label := "Scripture does not contradict itself"
     , kind := .theological
