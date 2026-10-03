@@ -301,6 +301,7 @@ def means : Claim → Statement
   | .originalTextDecides =>
     .opaque "What the original text does not say, a translation does not establish"
   | .jamesUsesDikaioAsPaul => .sameSense .dikaioo (.passage james2_24) (.usage .paul)
+  | .rewardRenderedToMerits => .holds (rl .merits (cn .works) (cn .eternalLife))
   | .rewardTextsPromiseReward =>
     .opaque "God rewards the labor of believers (1 Cor 15:58; Heb 6:10; 10:35; 2 Tim 4:8)"
 
@@ -346,7 +347,8 @@ def all : List Claim :=
   , .trentQuotesTheVulgateJuridically, .doctrineToBeConfirmedFromOriginals
   , .latinTextsConfirmedFromOriginals, .ephesians2_10CreatedForGoodWorks
   , .james2_18ShowFaithByWorks, .romans6_22FruitToSanctification, .luke17_10UnworthyServants
-  , .rewardTextsPromiseReward, .jamesUsesDikaioAsPaul ]
+  , .rewardTextsPromiseReward, .jamesUsesDikaioAsPaul
+  , .rewardRenderedToMerits ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -361,7 +363,7 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **Ninety-six of the hundred and nine are analysed.** Of the thirteen that
+/-- **Ninety-seven of the hundred and ten are analysed.** Of the thirteen that
 are not, four are Pius XII's and Trent's claims about the Vulgate and one is the
 textual principle, whose content is a rule about texts and translations the
 vocabulary cannot yet state; the other eight are the narrative texts of the
@@ -369,7 +371,7 @@ thief and the tax collector, Galatians 1:6–9, Christ's command to baptise,
 Trent's "laver, or the desire thereof", Luke's law-observance, and the texts
 that promise a reward. Each needs a word the vocabulary lacks — a command, a
 curse, a disjunction, a story's outcome, a reward. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (96, 109) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 110) := by decide
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

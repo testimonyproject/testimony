@@ -2206,6 +2206,30 @@ page range is given there, and none is recorded. -/
                  (some "2026-10-03") ] }
   , site := some "Catholic Answers Magazine" }
 
+/-- Avery Dulles on the Joint Declaration, adapted from his McGinley Lecture at
+Fordham (October 1999). Cited for what he grants about merit: the Declaration
+reads the "meritorious" character of good works as a reward promised to them
+(§38), and Dulles answers that "the fact that a reward is promised does not make
+it merited, since one can promise to bestow gifts that are completely
+undeserved"; Catholics hold merit, he says, because "justification makes us
+capable of meriting in a true sense". A Catholic theologian's own word, so its
+role is `witness`. Checked against the publisher's page, which places it in the
+December 1999 issue; the issue number and page range appear only in a reprint,
+and none is recorded. -/
+@[bib_entry] def dullesTwoLanguages : BibEntry := .article
+  { core :=
+      { key := "dulles-two-languages-1999"
+      , role := .witness
+      , contributors := { authors := [.person "Avery" "Dulles"] }
+      , title := "Two Languages of Salvation"
+      , subtitle := some "The Lutheran–Catholic Joint Declaration"
+      , year := some { value := 1999 }
+      , identifiers :=
+          [ .url ("https://firstthings.com/" ++
+                  "two-languages-of-salvation-the-lutheran-catholic-joint-declaration/")
+                 (some "2026-10-03") ] }
+  , journal := "First Things" }
+
 derive_bib_registry registry
 
 end Testimony.Bib

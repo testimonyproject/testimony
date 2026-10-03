@@ -95,9 +95,11 @@ when none can.
 - **Can be defended, and not forced**: Trent's reading of what works do
   (`trent_on_works_defensible`, `trent_on_works_not_forced`), and, against it,
   the Reformed harmony. Whether works are only the fruit of justification is
-  contested, and the weighing confirms it (`worksContested`). Trent's reading of
-  the reward texts (chapter 16, `trentRewardLine`) meets the harmony the same
-  way.
+  contested at the cited ratings (`worksContested`). Trent's reading of the
+  reward texts (chapter 16, `trentRewardLine`) meets the harmony the same way.
+  Heard under the evidence standard, neither of Trent's readings of what works do
+  is a credible critique, and the harmony is forced
+  (`Testimony.Arguments.SolaFide.Ratings`).
 - **Cannot be defended, at the cited ratings**: the renewal reading of James's
   word (`renewalWordLine`), which James's word defeats. Under the tradition
   standard it is a credible critique, and there the question is contested
@@ -109,14 +111,23 @@ do before God. Every reading of it that rests on what a word or a verse *says*
 cannot be defended. What remains is a claim about God's verdict, and there the
 library cannot choose.
 
-## A rating moved, against the Reformed side
+## A rating moved, against the Reformed side, and how it is now computed
 
 `worksAreFruitNotGround` was rated `wellSupported` while no party denied it. In
 this dispute Trent's reading of what works do denies it, and the rating decides
 who prevails, so it was audited: canon 24 anathematises exactly that claim. It is
-`disputed` now. Kept at `wellSupported`, it would have made Trent's reading of
-what works do indefensible — a verdict the rating, not the evidence, would have
-delivered.
+`disputed` now as a premise. Kept at `wellSupported`, it would have made Trent's
+reading of what works do indefensible — a verdict the rating, not the evidence,
+would have delivered.
+
+As a step (`fruitLine`), its rating is now computed
+(`Testimony.Arguments.SolaFide.Ratings`). Its support is `wellSupported`: the
+Joint Declaration confesses works to be fruits, and not the basis of
+justification. Each of Trent's two dissents rests at one claim on the council's
+word, so the step stands under the evidence standard and is `disputed` under the
+tradition standard. This dispute weighs the Reformed harmony at its weakest link
+regardless: James's target, a barren faith, is rated `disputed`
+(`jamesHarmonySource`).
 
 ## What each position rests on
 
@@ -135,14 +146,17 @@ The Reformed harmony no longer assumes that works are the fruit of faith and not
 its ground. It derives it (`fruitLine`) from the texts the Westminster Assembly
 gave as proofs for it: good works "are the fruits and evidences of a true and
 lively faith" (XVI.2: James 2:18, 22; Ephesians 2:10; Romans 6:22), and "we
-cannot by our best works merit" (XVI.5: Ephesians 2:8–9; Luke 17:10). The step
-is rated `disputed`, because Trent grants the texts and the word: its chapter 16
-is "On the fruit of Justification, that is, on the merit of good works", and
-canon 24 condemns only those who call works "*merely* the fruits and signs". The
-dispute between them is whether the fruit is also merit. So the warrant moved —
-the harmony rests on Scripture now, not on the Confession's word — and the
-verdict did not: whether works are only fruit is still contested
-(`worksContested`).
+cannot by our best works merit" (XVI.5: Ephesians 2:8–9; Luke 17:10). Trent
+grants the texts and the word: its chapter 16 is "On the fruit of Justification,
+that is, on the merit of good works", and canon 24 condemns only those who call
+works "*merely* the fruits and signs". The
+dispute between them is whether the fruit is also merit, and Trent's own answer,
+that the reward the texts promise is rendered to merits, is a claim it makes on
+its own word ("we must believe", chapter 16). So the warrant moved — the harmony
+rests on Scripture now, not on the Confession's word — and in this dispute,
+weighed at the cited ratings, whether works are only fruit is still contested
+(`worksContested`). Under the evidence standard it is not
+(`Testimony.Arguments.SolaFide.Ratings`).
 
 ## What is audited, and how
 
@@ -226,12 +240,13 @@ def jamesHarmonySource : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
-/-- Trent's step from the reward texts to "works are not merely fruit": eternal
-life is "a reward to be faithfully rendered to their good works and merits"
-(Session VI, ch. 16), and the good works of the justified truly merit it
-(canon 32). Rated `disputed`: Westminster grants that God rewards the good works
-of believers and holds the reward to be of grace, given to works accepted in
-Christ and not earned by them (XVI.5, XVI.6). -/
+/-- Trent's step from the reward texts, and the reward rendered to merits, to
+"works are not merely fruit": eternal life is "a reward to be faithfully
+rendered to their good works and merits" (Session VI, ch. 16), and the good
+works of the justified truly merit it (canon 32). Rated `disputed`: Westminster
+grants that God rewards the good works of believers and holds the reward to be
+of grace, given to works accepted in Christ and not earned by them (XVI.5,
+XVI.6). -/
 def trentRewardSource : Source :=
   { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 16, canon 32")
   , supporting := [.work westminsterConfession (.sectionRef "XVI.5, XVI.6")]
@@ -356,13 +371,18 @@ def sirachTextLine : Line Claim :=
   , inference := some textualSource }
 
 /-- **The reward of works, as Trent reads it**: God rewards the labor of
-believers (1 Corinthians 15:58, Hebrews 6:10, Hebrews 10:35, 2 Timothy 4:8); so
-works are not merely the fruit of justification. -/
+believers (1 Corinthians 15:58, Hebrews 6:10, Hebrews 10:35, 2 Timothy 4:8); the
+reward is rendered to those works as merits (chapter 16, canon 32); so works are
+not merely the fruit of justification. The second ground is stated as Trent
+states it. The texts say "reward"; that the reward is rendered to merits is the
+council's own claim, introduced with "we must believe". -/
 @[solaFideDefs]
 def trentRewardLine : Line Claim :=
   { name := "The reward of works (Trent, Session VI, ch. 16)"
-  , grounds := [p .rewardTextsPromiseReward]
-  , step := p .rewardTextsPromiseReward ➝ notP .worksAreFruitNotGround
+  , grounds := [p .rewardTextsPromiseReward, p .rewardRenderedToMerits]
+  , step :=
+      ⋀ [p .rewardTextsPromiseReward, p .rewardRenderedToMerits]
+      ➝ notP .worksAreFruitNotGround
   , delivers := notP .worksAreFruitNotGround
   , inference := some trentRewardSource }
 
@@ -398,13 +418,24 @@ def jamesFaithCase : ArgumentPackage Claim :=
 
 /-- Westminster's reading of its proof texts: from Ephesians 2:8–10, James
 2:18–22, Romans 6:22 and Luke 17:10 to "works are the fruit and evidence of
-saving faith, not its ground" (XVI.2, XVI.5). Rated `disputed`: Trent grants the
-texts and calls works the fruit of justification, and holds the fruit to be
-merit (Session VI, ch. 16, canon 24). -/
+saving faith, not its ground" (XVI.2, XVI.5).
+
+This rates the step's **support**, and it is `wellSupported`. The Reformed
+confess it, and so do the Lutheran World Federation and the Catholic Church
+together: "good works ... follow justification and are its fruits", and
+"whatever in the justified precedes or follows the free gift of faith is neither
+the basis of justification nor merits it" (*Joint Declaration* §§37, 25).
+
+Whether a dissent brings the step down is computed, not cited
+(`Testimony.Arguments.SolaFide.Ratings`). Trent dissents twice: canon 24, and
+chapter 16's reading of the reward texts. Under the tradition standard both are
+credible, and the step is `disputed`. Under the evidence standard neither is,
+because each rests at one claim on the council's word. -/
 def fruitSource : Source :=
   { primary := .work westminsterConfession (.sectionRef "XVI.2, XVI.5")
+  , supporting := [.work jointDeclarationJustification (.sectionRef "§§25, 37")]
   , tradition := .reformedProtestant
-  , confidence := .disputed }
+  , confidence := .wellSupported }
 
 /-- **Works as fruit, from Westminster's proof texts**: saved not as a result of
 works and created for good works (Ephesians 2:8–10); faith shown by works
@@ -912,8 +943,9 @@ def worksContested : Contested jamesDispute (p .worksAreFruitNotGround) where
 /-! ### What each position rests on -/
 
 /-- **Where each position rests on someone's word alone** (`Testimony.Logic.Warrant`).
-Trent's reading of the reward texts rests on no one's word alone; the renewal
-reading does at one claim, Trent's, that James's δικαιόω is Paul's — for Paul's
+Trent's reading of the reward texts rests on the council's word at one claim,
+that the reward is rendered to merits; the renewal reading does at one claim,
+Trent's, that James's δικαιόω is Paul's — for Paul's
 word as renewal it has VanLandingham's lexical case. Otherwise, each of Trent's
 four readings, at the reading itself — Trent's word; the Reformed
 and the two readings of the Greek, at the principle that the original outweighs
@@ -930,7 +962,7 @@ theorem james_warrants :
     trentOnSirach.restingOnAuthority = [.sir18_22BeJustifiedToDeath] ∧
     revelationTextCase.restingOnAuthority = [.originalTextDecides] ∧
     sirachTextCase.restingOnAuthority = [.originalTextDecides] ∧
-    trentOnReward.restingOnAuthority = [] ∧
+    trentOnReward.restingOnAuthority = [.rewardRenderedToMerits] ∧
     renewalOnTheWord.restingOnAuthority = [.jamesUsesDikaioAsPaul] := by
   decide
 

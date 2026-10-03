@@ -46,18 +46,35 @@ rating, and only where it fails.
 
 ## Works as fruit, not ground
 
-Two dissents from Westminster's step are encoded, and both are argued.
+Westminster's step (`fruitLine`) derives "fruit, not ground" from its proof
+texts. Its support is `wellSupported`: the Lutheran World Federation and the
+Catholic Church confess together that good works "follow justification and are
+its fruits", and that what follows faith "is neither the basis of justification
+nor merits it" (*Joint Declaration* §§37, 25). Two dissents from it are encoded,
+both from Trent, and both argued.
 
 - **Canon 24, applied to James 2:24**: works cause the increase of
-  justification. The claim rests on the council's word alone, so it is a
-  critique under the tradition standard only.
+  justification. That claim rests on the council's word alone.
 - **Chapter 16, from the reward texts** (1 Corinthians 15:58, Hebrews 6:10,
-  Hebrews 10:35, 2 Timothy 4:8): what God rewards is not merely fruit. Its
-  grounds are Scripture, which Westminster grants too (XVI.6); the denial is
-  Trent's reading of them.
+  Hebrews 10:35, 2 Timothy 4:8). The texts are Scripture, and Westminster grants
+  them (XVI.6). But they say God *rewards* the works. Chapter 16 adds that the
+  reward is "rendered to their good works and merits", and that "we must believe"
+  the justified "have truly merited eternal life". That bridge from reward to
+  merit is the council's own claim. Dulles, defending Trent's teaching, grants
+  that "the fact that a reward is promised does not make it merited". The Joint
+  Declaration reads "merit" as no more than a reward promised (§38).
 
-So the step is disputed under both standards (`fruit_step_ratings`). That is a
-result against the Reformed side, and it is reported as one.
+So each of Trent's dissents rests at one claim on the council's word, and the
+step's rating turns on the authority question (`fruit_step_ratings`). Under the
+evidence standard neither dissent is credible, and the support stands at
+`wellSupported`. Under the tradition standard both are, and the step is
+`disputed`.
+
+What this shows is exactly that, and no more. Trent's denial does not stand on
+Scripture and evidence alone. A reader who receives the council's word has a
+credible critique; a reader who does not has none. It does not show that the
+reward texts teach the Reformed reading of them; it shows that they do not
+teach Trent's without Trent.
 
 ## The hearing under each standard
 
@@ -75,12 +92,14 @@ disagree about the standard.
   heard. Under the tradition standard it is heard, the lexical step is weighed at
   `disputed`, and the question is contested — James's word and the renewal
   reading each survive, and neither is forced.
-- **Whether works are fruit and not ground is contested under both standards**
-  (`fruitContestedUnder`). The Reformed harmony and Trent's
-  reading of the reward texts each survive, and neither is forced.
+- **Whether works are fruit and not ground turns on the standard too**
+  (`fruit_turns_on_the_standard`). Under the evidence standard the hearing
+  forces the Reformed harmony: neither of Trent's dissents is heard. Under the
+  tradition standard both are, and the harmony and chapter 16's reading each
+  survive, and neither is forced.
 
-In both, the register's rating and the hearing's verdict agree: a step rated
-`disputed` under a standard is contested in the hearing under it, and the step
+In both, the register's rating and the hearing's verdict agree. A step rated
+`disputed` under a standard is contested in the hearing under it, and a step
 whose support stands is forced.
 
 The full dispute still weighs every step at its *cited* rating. For the lexical
@@ -119,9 +138,12 @@ def canon24Assessment : Assessment Claim where
     , unadmitted := [(.evidence, [.worksCauseIncreaseOfJustification]), (.tradition, [])] }
   checked := by decide +kernel
 
-/-- **Chapter 16, against "fruit, not ground"**: argued from the reward texts,
-which are Scripture and which Westminster grants. It is a critique under both
-standards. -/
+/-- **Chapter 16, against "fruit, not ground"**: argued, and granting
+Westminster's proof texts. Its grounds are the reward texts, which are Scripture
+and which Westminster grants, and the claim that the reward is rendered to the
+works as merits — which the texts do not say, and Trent asserts on its own word
+("we must believe"). So it is a critique under the tradition standard, and not
+under the evidence standard. -/
 def rewardAssessment : Assessment Claim where
   dissenter := "Trent, Session VI, ch. 16"
   against := fruitLine.name
@@ -131,7 +153,7 @@ def rewardAssessment : Assessment Claim where
     , position := trentOnReward }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, [.rewardRenderedToMerits]), (.tradition, [])] }
   checked := by decide +kernel
 
 /-- **Trent's reading of James's word, against the lexical step**: it holds that
@@ -179,21 +201,24 @@ theorem trent_on_the_word_is_asserted :
 
 /-- **"Works are fruit, not ground", rated by its register**: canon 24's
 dissent and chapter 16's. Chapter 16's is the strongest known: it argues from
-Scripture that both sides grant. -/
+texts both sides grant. -/
 def fruitStep : RatedStep Claim where
   step := fruitLine.name
   support := fruitSource
   register := [canon24Assessment, rewardAssessment]
   strongest := some 1
 
-/-- **"Fruit, not ground" is disputed under both standards.** Under the evidence
-standard, by chapter 16's reading of the reward texts; under the tradition
-standard, by that and by canon 24. Whatever the step's support, a credible
-critique on Scripture's own ground keeps it disputed. -/
+/-- **"Fruit, not ground" turns on the authority question.** Under the evidence
+standard its support stands at `wellSupported`: both of Trent's dissents are
+argued, and each rests at one claim on the council's word alone. Canon 24's
+claim is that works cause the increase of justification. Chapter 16's is that the
+reward the texts promise is rendered to the works as merits. Under the
+tradition standard, which admits the council's word, both are credible
+critiques, and the step is `disputed`. -/
 @[headline]
 theorem fruit_step_ratings :
     fruitStep.ratings =
-      [ (.evidence, .disputedBy ["Trent, Session VI, ch. 16"])
+      [ (.evidence, .stands .wellSupported)
       , (.tradition, .disputedBy ["Trent, canon 24", "Trent, Session VI, ch. 16"]) ] := by
   decide +kernel
 
@@ -316,17 +341,17 @@ theorem jamesUnderTradition_defeats :
   fun i j => rerated_defeats .tradition i.1 j.1
 
 /-- How the hearing under the evidence standard is settled: James's word,
-James's faith and the Greek of both verses come first; Trent's Latin readings
-fall to the Greek; the Reformed harmony and chapter 16's reading of the reward
-texts defeat each other. Canon 24, the renewal reading and Trent's reading of the
-word are not heard. -/
+James's faith, the Reformed harmony and the Greek of both verses come first, and
+nothing heard answers them; Trent's Latin readings fall to the Greek. Every
+dissent of Trent's from a rated step — canon 24, chapter 16, the renewal reading,
+and Trent's reading of the word — rests at some claim on the council's word, or
+asserts its denial, and is not heard. -/
 def underEvidenceSettled : Verdict jamesUnderEvidence where
   finite := jamesUnderFinite .evidence
   claim := .groundedExactly
-    [Witness.listSub _ [.lexical, .faith, .revelationText, .sirachText]]
+    [Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText]]
     (Witness.Table.sub _
-      [ (.trentOnRevelation, .revelationText), (.trentOnSirach, .sirachText)
-      , (.harmony, .trentOnReward), (.trentOnReward, .harmony) ])
+      [ (.trentOnRevelation, .revelationText), (.trentOnSirach, .sirachText) ])
   checked := by decide +kernel
 
 /-- How the hearing under the tradition standard is settled: James's faith and
@@ -382,7 +407,8 @@ forced. -/
 @[headline]
 theorem james_word_turns_on_the_standard :
     grounded jamesUnderEvidence.defeats =
-        Solver.toSet (Witness.listSub _ [.lexical, .faith, .revelationText, .sirachText]) ∧
+        Solver.toSet
+          (Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText]) ∧
       Nonempty (Contested jamesUnderTradition (p .jamesJustifyDenotesIncrease)) :=
   ⟨underEvidenceSettled.holds,
     ⟨{ holder := ⟨.renewalOnTheWord, by decide⟩
@@ -407,55 +433,44 @@ theorem trentOnReward_denies_fruit :
     Entails (jamesDispute.node .trentOnReward).premises (∼ p .worksAreFruitNotGround) := by
   establish [solaFideDefs, jamesDispute]
 
-/-- Why the Reformed harmony can be defended in a hearing: it answers chapter
-16's reading itself, and canon 24's where canon 24 is heard. -/
-def harmonyHeard : (s : Standard) → Verdict (jamesRegister.hearing s)
-  | .evidence =>
-    { finite := jamesUnderFinite .evidence
-      claim := .credulous ⟨.harmony, by decide⟩
-        (Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText])
-      checked := by decide +kernel }
-  | .tradition =>
-    { finite := jamesUnderFinite .tradition
-      claim := .credulous ⟨.harmony, by decide⟩
-        (Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText])
-      checked := by decide +kernel }
+/-- Why the Reformed harmony can be defended in the hearing under the tradition
+standard: it answers canon 24 and chapter 16 itself. -/
+def harmonyHeard : Verdict jamesUnderTradition where
+  finite := jamesUnderFinite .tradition
+  claim := .credulous ⟨.harmony, by decide⟩
+    (Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText])
+  checked := by decide +kernel
 
-/-- Why chapter 16's reading of the reward texts can be defended in a hearing:
-it answers the Reformed harmony itself. -/
-def rewardHeard : (s : Standard) → Verdict (jamesRegister.hearing s)
-  | .evidence =>
-    { finite := jamesUnderFinite .evidence
-      claim := .credulous ⟨.trentOnReward, by decide⟩
-        (Witness.listSub _ [.lexical, .faith, .trentOnReward, .revelationText, .sirachText])
-      checked := by decide +kernel }
-  | .tradition =>
-    { finite := jamesUnderFinite .tradition
-      claim := .credulous ⟨.trentOnReward, by decide⟩
-        (Witness.listSub _
-          [.lexical, .faith, .trentOnWorks, .trentOnReward, .revelationText, .sirachText])
-      checked := by decide +kernel }
+/-- Why chapter 16's reading of the reward texts can be defended there: it
+answers the Reformed harmony itself. -/
+def rewardHeard : Verdict jamesUnderTradition where
+  finite := jamesUnderFinite .tradition
+  claim := .credulous ⟨.trentOnReward, by decide⟩
+    (Witness.listSub _
+      [.lexical, .faith, .trentOnWorks, .trentOnReward, .revelationText, .sirachText])
+  checked := by decide +kernel
 
-/-- **Whether works are fruit and not ground is contested under every
-standard.** In the hearing under either standard, the Reformed harmony, which
-holds it, and chapter 16's reading of the reward texts, which denies it, can
-each be defended. The register's rating, `disputed` under both standards
-(`fruit_step_ratings`), and the hearing's verdict agree. -/
-def fruitContestedUnder :
-    (s : Standard) → Contested (jamesRegister.hearing s) (p .worksAreFruitNotGround)
-  | .evidence =>
-    { holder := ⟨.harmony, by decide⟩
-      denier := ⟨.trentOnReward, by decide⟩
-      holds := harmony_holds_fruit
-      denies := trentOnReward_denies_fruit
-      holderDefensible := (harmonyHeard .evidence).holds
-      denierDefensible := (rewardHeard .evidence).holds }
-  | .tradition =>
-    { holder := ⟨.harmony, by decide⟩
-      denier := ⟨.trentOnReward, by decide⟩
-      holds := harmony_holds_fruit
-      denies := trentOnReward_denies_fruit
-      holderDefensible := (harmonyHeard .tradition).holds
-      denierDefensible := (rewardHeard .tradition).holds }
+/-- **Whether works are fruit and not ground turns on the authority question,
+and the hearing and the rating agree.** Under the evidence standard the hearing
+forces the Reformed harmony, which derives "fruit, not ground" from Westminster's
+proof texts. Neither of Trent's dissents is heard: each rests at one claim on the
+council's word. Under the tradition standard both are heard, the step is weighed
+at `disputed`, and the question is contested: the harmony and chapter 16's
+reading of the reward texts can each be defended, and neither is forced. -/
+@[headline]
+theorem fruit_turns_on_the_standard :
+    grounded jamesUnderEvidence.defeats =
+        Solver.toSet
+          (Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText]) ∧
+      Nonempty (Contested jamesUnderTradition (p .worksAreFruitNotGround)) :=
+  ⟨underEvidenceSettled.holds,
+    ⟨{ holder := ⟨.harmony, by decide⟩
+       denier := ⟨.trentOnReward, by decide⟩
+       holds := harmony_holds_fruit
+       denies := trentOnReward_denies_fruit
+       holderDefensible := harmonyHeard.holds
+       denierDefensible := rewardHeard.holds }⟩⟩
+
+#print axioms fruit_turns_on_the_standard
 
 end Testimony.Arguments.SolaFide
