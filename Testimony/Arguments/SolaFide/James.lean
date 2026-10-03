@@ -45,12 +45,21 @@ him be justified still" is the Vulgate's *iustificetur adhuc* at Revelation
 do righteousness", and the Catholic Church's own translation renders it "The
 righteous must still do right". "Be not afraid to be justified even to death" is
 the Vulgate's Sirach 18:22; the Greek, as the same translation renders it, is
-about vows: "do not wait until death to fulfill them". That the original text
-decides what a verse says is Rome's own teaching about its own Vulgate: Trent's
-"authentic" was affirmed "not ... for critical reasons, but rather because of its
-legitimate use", and the original text "has more authority and greater weight
-than any even the very best translation" (Pius XII, *Divino Afflante Spiritu*
-§§21, 16).
+about vows: "do not wait until death to fulfill them". The original text, Pius
+XII teaches, "written by the inspired author himself, has more authority and
+greater weight than any even the very best translation" (*Divino Afflante
+Spiritu* §16), and Westminster says the same (I.8). So read as claims about what
+the inspired authors wrote, the two Latin readings cannot be defended.
+
+Pius XII does not say that a Latin reading the original lacks is an error. He
+says the reverse of the Vulgate as a whole: as the Church understands it, it is
+"free from any error whatsoever in matters of faith and morals", and its
+authenticity is "juridical" rather than critical (§21). Read that way, Trent's
+"as it is written" at these two verses quotes the Church's authentic Latin, not
+the apostle's words, and is consistent with everything Pius XII says
+(`Testimony.Arguments.SolaFide.Vulgate`). What it then rests on is the Church's
+authority, and Pius XII himself asks that a doctrine so taught be confirmed from
+the original texts (§22) — which at these two verses do not confirm it.
 
 ## The phrase "faith alone"
 
@@ -107,12 +116,27 @@ delivered.
 
 `james_warrants` lists, for each party, the claims it asserts on someone's word
 alone (`Testimony.Logic.Warrant`). Each of Trent's four readings rests at the
-reading itself on Trent's word. The Reformed harmony rests at "works are fruit,
-not ground" on Westminster's. The two readings of the Greek rest at "the
-original text decides" on Pius XII's — Rome's own word, which is what makes it
-decisive against Trent's Latin, and is still a word. James's word and James's
-faith rest on nothing but Scripture and evidence. The warrant is reported
-beside the verdicts and does not weigh in them.
+reading itself on Trent's word. The two readings of the Greek rest at "the
+original text outweighs any translation" on Pius XII's and Westminster's — both
+sides' word, which is what makes it decisive here, and is still a word. James's
+word, James's faith and the Reformed harmony rest on nothing but Scripture and
+evidence. The warrant is reported beside the verdicts and does not weigh in
+them.
+
+## Westminster's proof texts for "fruit, not ground"
+
+The Reformed harmony no longer assumes that works are the fruit of faith and not
+its ground. It derives it (`fruitLine`) from the texts the Westminster Assembly
+gave as proofs for it: good works "are the fruits and evidences of a true and
+lively faith" (XVI.2: James 2:18, 22; Ephesians 2:10; Romans 6:22), and "we
+cannot by our best works merit" (XVI.5: Ephesians 2:8–9; Luke 17:10). The step
+is rated `disputed`, because Trent grants the texts and the word: its chapter 16
+is "On the fruit of Justification, that is, on the merit of good works", and
+canon 24 condemns only those who call works "*merely* the fruits and signs". The
+dispute between them is whether the fruit is also merit. So the warrant moved —
+the harmony rests on Scripture now, not on the Confession's word — and the
+verdict did not: whether works are only fruit is still contested
+(`worksContested`).
 
 ## What is not yet audited
 
@@ -166,12 +190,13 @@ def trentWorksSource : Source :=
   , confidence := .disputed }
 
 /-- The step from what the original text says, and the principle that it
-decides, to "the verse does not say what the Latin says". Rated
-`wellSupported`: Rome itself makes the original text the measure of a
-translation (*Divino Afflante Spiritu* §§16, 21), and no reader was found who
-grants both grounds and holds that the verse says what only the Latin says. -/
+outweighs any translation, to "the inspired text does not say what the Latin
+says". Rated `wellSupported`: Pius XII (*Divino Afflante Spiritu* §16) and
+Westminster (I.8) both make the original the measure of a translation, and no
+reader was found who grants both grounds and holds that the inspired author
+wrote what only the Latin has. -/
 def textualSource : Source :=
-  { primary := .work divinoAfflanteSpiritu (.sectionRef "§§16, 21")
+  { primary := .work divinoAfflanteSpiritu (.sectionRef "§16")
   , supporting := [.work sblgnt .whole, .work nabre .whole]
   , tradition := .christianHistoricalGrammatical
   , confidence := .wellSupported }
@@ -268,7 +293,8 @@ def trentSirachLine : Line Claim :=
   , inference := some trentIncreaseSource }
 
 /-- **Revelation 22:11 in Greek**: the verse says "let the righteous still do
-righteousness"; the original text decides what it says; so it does not say "be
+righteousness"; the original outweighs any translation; so its inspired text does
+not say "be
 justified still". -/
 @[solaFideDefs]
 def revelationTextLine : Line Claim :=
@@ -280,7 +306,8 @@ def revelationTextLine : Line Claim :=
   , inference := some textualSource }
 
 /-- **Sirach 18:22 in Greek**: the verse is about paying a vow promptly; the
-original text decides what it says; so it does not speak of being justified more
+original outweighs any translation; so its inspired text does not speak of being
+justified more
 and more until death. -/
 @[solaFideDefs]
 def sirachTextLine : Line Claim :=
@@ -303,12 +330,44 @@ def jamesLexicalCase : ArgumentPackage Claim :=
 def jamesFaithCase : ArgumentPackage Claim :=
   jamesFaithLine.asPackage baseCite "The faith James 2:24 denies is not the Reformers' faith"
 
+/-- Westminster's reading of its proof texts: from Ephesians 2:8–10, James
+2:18–22, Romans 6:22 and Luke 17:10 to "works are the fruit and evidence of
+saving faith, not its ground" (XVI.2, XVI.5). Rated `disputed`: Trent grants the
+texts and calls works the fruit of justification, and holds the fruit to be
+merit (Session VI, ch. 16, canon 24). -/
+def fruitSource : Source :=
+  { primary := .work westminsterConfession (.sectionRef "XVI.2, XVI.5")
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **Works as fruit, from Westminster's proof texts**: saved not as a result of
+works and created for good works (Ephesians 2:8–10); faith shown by works
+(James 2:18, 22); the fruit that leads to sanctification (Romans 6:22); unworthy
+servants who have done only their duty (Luke 17:10). So works are the fruit and
+evidence of saving faith, not its ground. -/
+@[solaFideDefs]
+def fruitLine : Line Claim :=
+  { name := "Works as fruit (Westminster XVI.2, XVI.5, and its proofs)"
+  , grounds :=
+      [ p .ephesians2_8_9, p .ephesians2_10CreatedForGoodWorks, p .james2_18ShowFaithByWorks
+      , p .romans6_22FruitToSanctification, p .luke17_10UnworthyServants ]
+  , step :=
+      ⋀ [ p .ephesians2_8_9, p .ephesians2_10CreatedForGoodWorks, p .james2_18ShowFaithByWorks
+        , p .romans6_22FruitToSanctification, p .luke17_10UnworthyServants ]
+      ➝ p .worksAreFruitNotGround
+  , delivers := p .worksAreFruitNotGround
+  , inference := some fruitSource }
+
 /-- The Reformed harmony of James with Paul: James's target is a barren faith,
-and works are the fruit of saving faith, not its ground. -/
+and works are the fruit of saving faith, not its ground — derived from
+Westminster's proof texts rather than assumed. The James line here is the
+library's `jamesLine` with "fruit, not ground" taken from `fruitLine` instead of
+held as a ground. -/
 @[solaFideDefs]
 def jamesHarmonyCase : ArgumentPackage Claim :=
   { jamesLine.asPackage baseCite "James 2:24 is compatible with Paul" with
-    inferences := [jamesHarmonySource] }
+    premises := caseOf [fruitLine, jamesLine.onGrounds [p .james2TargetsDeadFaith]] [] []
+    inferences := [fruitSource, jamesHarmonySource] }
 
 /-- Trent on James's word: James 2:24 teaches the increase of justification,
 because James's δικαιόω denotes it. -/
@@ -633,9 +692,15 @@ def trentOnRevelationAnswered : Verdict jamesDispute where
 /-- **Trent's Revelation 22:11 cannot be defended as a text for the increase of
 justification.** "He that is just, let him be justified still" is the Vulgate's
 *iustificetur adhuc*; the Greek, as the critical text prints it and the Catholic
-Church's own translation renders it, says "the righteous must still do right".
-That the original text decides what a verse says is Rome's own teaching on its
-own Vulgate (*Divino Afflante Spiritu* §§16, 21). -/
+Church's own translation renders it, says "the righteous must still do right";
+and the original, "written by the inspired author himself", outweighs any
+translation (*Divino Afflante Spiritu* §16).
+
+What this does not claim: that Trent's citation is a doctrinal error. Read as
+Pius XII reads Trent's decree on the Vulgate — a juridically authentic reading,
+free from error in faith — it is consistent with all he says, and rests on the
+Church's authority instead of the inspired text
+(`Testimony.Arguments.SolaFide.Vulgate`). -/
 @[headline]
 theorem trent_on_revelation_indefensible (S : Set JamesParty)
     (hS : Admissible jamesDispute.defeats S) : JamesParty.trentOnRevelation ∉ S :=
@@ -709,7 +774,7 @@ def harmonyStands : Verdict jamesDispute where
   checked := by decide +kernel
 
 /-- The Reformed harmony derives that works are the fruit of faith and not its
-ground; it holds it as a premise. -/
+ground, from Westminster's proof texts. -/
 theorem harmony_holds_fruit :
     Entails (jamesDispute.node .harmony).premises (p .worksAreFruitNotGround) := by
   establish [solaFideDefs, jamesDispute]
@@ -736,14 +801,14 @@ def worksContested : Contested jamesDispute (p .worksAreFruitNotGround) where
 
 /-- **Where each position rests on someone's word alone** (`Testimony.Logic.Warrant`):
 each of Trent's four readings, at the reading itself — Trent's word; the Reformed
-harmony, at works as fruit and not ground — Westminster's word; and the two
-readings of the Greek, at the principle that the original text decides — Pius
-XII's word, which is Rome's own. James's word and James's faith rest on nothing
-but Scripture and evidence. -/
+and the two readings of the Greek, at the principle that the original outweighs
+any translation — the word of Pius XII and of Westminster alike. James's word,
+James's faith and the Reformed harmony, which now derives "fruit, not ground"
+from Westminster's proof texts, rest on nothing but Scripture and evidence. -/
 theorem james_warrants :
     jamesLexicalCase.restingOnAuthority = [] ∧
     jamesFaithCase.restingOnAuthority = [] ∧
-    jamesHarmonyCase.restingOnAuthority = [.worksAreFruitNotGround] ∧
+    jamesHarmonyCase.restingOnAuthority = [] ∧
     catholicJamesOnTheWord.restingOnAuthority = [.jamesJustifyDenotesIncrease] ∧
     catholicJamesOnWorks.restingOnAuthority = [.worksCauseIncreaseOfJustification] ∧
     trentOnRevelation.restingOnAuthority = [.rev22_11BeJustifiedStill] ∧

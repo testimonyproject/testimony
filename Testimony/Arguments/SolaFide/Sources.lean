@@ -442,9 +442,14 @@ def baseCite : Claim → AtomMeta
       -- so it was audited. Trent anathematises exactly this — that good works
       -- "are merely the fruits and signs of Justification obtained, but not a
       -- cause of the increase thereof" (Session VI, canon 24). It was
-      -- `wellSupported` while no party denied it.
-        { primary := .work westminsterConfession (.sectionRef "XI.2")
-        , supporting := [.work calvinInstitutes (.sectionRef "III.xvi.1")]
+      -- `wellSupported` while no party denied it. The Assembly's own proof texts
+      -- are cited with it (XVI.2, XVI.5); `fruitLine` reads them as a step.
+        { primary := .work westminsterConfession (.sectionRef "XI.2; XVI.2; XVI.5")
+        , supporting :=
+            [ .work calvinInstitutes (.sectionRef "III.xvi.1")
+            , .scripture
+                [ { ref := .range ⟨.james, 2, 18, 2, 22⟩ }, { ref := .verse ⟨.ephesians, 2, 10⟩ }
+                , { ref := .verse ⟨.romans, 6, 22⟩ }, { ref := .verse ⟨.luke, 17, 10⟩ } ] ]
         , tradition := .reformedProtestant
         , confidence := .disputed } }
   | .james2_24Compatible =>
@@ -584,15 +589,92 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .originalTextDecides =>
-    { label := "What the original text does not say, a translation does not establish"
+    { label := "The original text, written by the inspired author, outweighs any translation: " ++
+        "a reading it lacks is not his word"
     , kind := .linguistic
+      -- `consensus`: both sides say it. Pius XII: the original text, "written by
+      -- the inspired author himself, has more authority and greater weight than
+      -- any even the very best translation" (§16). Westminster: the originals are
+      -- "authentical", and "in all controversies of religion, the church is
+      -- finally to appeal unto them" (I.8). What it does not say: that a
+      -- translation's reading is doctrinal error. Pius XII denies that of the
+      -- Vulgate (§21; see `vulgateFreeFromDoctrinalError`).
     , source :=
-      -- `consensus`: Rome says it of its own Vulgate. Trent's "authentic" was
-      -- affirmed "not ... for critical reasons, but rather because of its
-      -- legitimate use", and the original text "has more authority and greater
-      -- weight than any even the very best translation" (§§21, 16).
-        { primary := .work divinoAfflanteSpiritu (.sectionRef "§§16, 21")
+        { primary := .work divinoAfflanteSpiritu (.sectionRef "§16")
+        , supporting := [.work westminsterConfession (.sectionRef "I.8")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .vulgateFreeFromDoctrinalError =>
+    { label := "The Vulgate, as the Church understands it, is free from error in faith and " ++
+        "morals: its authenticity is juridical"
+    , kind := .theological
+      -- `disputed`: Rome's teaching on its own Vulgate (Pius XII, §21, on Trent's
+      -- Session IV), which the Reformed confessions do not hold.
+    , source :=
+        { primary := .work divinoAfflanteSpiritu (.sectionRef "§21")
+        , supporting := [.work tannerDecrees (.sectionRef "Trent, Session IV (1546)")]
         , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .trentQuotesTheVulgateJuridically =>
+    { label := "Trent quotes the Vulgate's Revelation 22:11 and Sirach 18:22 as juridically " ++
+        "authentic, not as the inspired authors' words"
+    , kind := .interpretive
+      -- `disputed`: Pius XII's reading of Trent's decree on the Vulgate (§§20–21),
+      -- applied to the two texts. Trent says "as it is written", and does not
+      -- say which.
+    , source :=
+        { primary := .work divinoAfflanteSpiritu (.sectionRef "§§20–21")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .doctrineToBeConfirmedFromOriginals =>
+    { label := "A doctrine taught from the Vulgate is to be confirmed from the original texts"
+    , kind := .theological
+    , source :=
+        { primary := .work divinoAfflanteSpiritu (.sectionRef "§22")
+        , supporting := [.work westminsterConfession (.sectionRef "I.8")]
+        , tradition := .romanCatholic
+        , confidence := .wellSupported } }
+  | .latinTextsConfirmedFromOriginals =>
+    { label := "Revelation 22:11 and Sirach 18:22 confirm the increase of justification from " ++
+        "the original texts"
+    , kind := .textual
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .ephesians2_10CreatedForGoodWorks =>
+    { label := "Ephesians 2:10: created in Christ Jesus for good works, after 'not a result " ++
+        "of works'"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.ephesians, 2, 8, 2, 10⟩ }]
+        , supporting := [.work westminsterConfession (.sectionRef "XVI.2")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .james2_18ShowFaithByWorks =>
+    { label := "James 2:18, 22: I will show you my faith by my works; faith completed by works"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.james, 2, 18, 2, 22⟩ }]
+        , supporting := [.work westminsterConfession (.sectionRef "XVI.2")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans6_22FruitToSanctification =>
+    { label := "Romans 6:22: the fruit you get leads to sanctification, and its end is " ++
+        "eternal life"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 6, 22⟩ }]
+        , supporting := [.work westminsterConfession (.sectionRef "XVI.2")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .luke17_10UnworthyServants =>
+    { label := "Luke 17:10: having done all that was commanded, we are unworthy servants"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.luke, 17, 10⟩ }]
+        , supporting := [.work westminsterConfession (.sectionRef "XVI.5")]
+        , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .james2_24NotByFaithAlone =>
     { label := "James 2:24 says a person is justified by works and not by faith alone"

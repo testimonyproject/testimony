@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **173 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **176 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -140,6 +140,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `trent_on_sirach_indefensible` | `∀ (S : Set JamesParty), Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnSirach ∉ S` | **Trent's Sirach 18:22 cannot be defended as a text for the increase of justification.** "Be not afraid to be justified even to death" is the Vulgate's verse; the Greek, as the … |
 | `trent_on_works_defensible` | `Framework.CredulouslyAccepted jamesDispute.defeats JamesParty.trentOnWorks` | **Trent's reading of what works do can be defended** — with James's word, James's faith, and the Greek of both verses. |
 | `trent_on_works_not_forced` | `¬Framework.SkepticallyAccepted jamesDispute.defeats JamesParty.trentOnWorks` | **Nor is it forced.** A maximal defensible position holds the Reformed harmony, with James's word and faith, and cannot hold Trent's reading of what works do with it. |
+| `trent_as_the_inspired_text_contradicts_pius` | `¬Satisfiable romeOnTheInspiredText` | **Trent's Revelation 22:11, read as what its inspired author wrote, cannot be held with Pius XII.** The original "has more authority and greater weight than any even the very best … |
+| `pius_reading_is_consistent` | `Satisfiable piusOnTrentsVulgate.premises` | **Read as Pius XII reads Trent's decree on the Vulgate, Rome is consistent.** Trent quoting the Vulgate as juridically authentic, the Vulgate free from error in faith and morals, … |
+| `pius_finds_no_confirmation` | `Establishes piusOnTrentsVulgate` | **On Pius XII's own terms, the two Latin texts do not confirm the increase of justification from the originals.** He asks that a doctrine taught from the Vulgate be confirmed from … |
 
 ### [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 

@@ -70,9 +70,10 @@ Three distinctions in it do most of the work.
   share, and most arguments never say so.
 
 The atoms are not replaced. An argument keeps its own claim type and its proofs are untouched;
-its instance says what each atom means, as `cite` says who holds it. Seventy-eight of the
-eighty-five sola fide atoms are analysed; seven — the stories of the thief and the tax
-collector, a curse, a command, a disjunction — are marked unanalysed and counted, not forced.
+its instance says what each atom means, as `cite` says who holds it. Ninety-five of the hundred
+and seven sola fide atoms are analysed; twelve — the stories of the thief and the tax collector, a
+curse, a command, a disjunction, and the claims about texts and their translations — are marked
+unanalysed and counted, not forced.
 
 What the meanings already make computable, from the meanings alone, for any argument:
 
@@ -185,8 +186,20 @@ The warrant is reported beside the verdicts and never weighed in them. A rule th
 authority inside the solver — "Scripture first, by default" — would decide the sola scriptura
 dispute by fiat, since whether a council's or a confession's word binds is what that dispute is
 about. And it applies to every side: in the James dispute (`james_warrants`) Trent's readings rest
-on Trent's word, the Reformed harmony on Westminster's at "works are fruit, not ground", and the
-readings of the Greek on Pius XII's at "the original text decides".
+on Trent's word, and the readings of the Greek on Pius XII's and Westminster's at "the original
+outweighs any translation". The Reformed harmony rested on Westminster's word at "works are fruit,
+not ground" until it was given the Assembly's own proof texts as a step (`fruitLine`); it rests on
+Scripture now, and the step is still `disputed`, because Trent grants the texts and calls the
+fruit merit.
+
+The same check answers whether Rome contradicts itself over Trent's Latin texts
+(`Testimony.Arguments.SolaFide.Vulgate`). Read as what the inspired authors wrote, Trent's "as it
+is written" at Revelation 22:11 cannot be held with Pius XII's teaching that the original
+outweighs any translation (`trent_as_the_inspired_text_contradicts_pius`). Read as Pius XII reads
+Trent's decree — the Vulgate juridically authentic and free from error in faith — Rome is
+consistent (`pius_reading_is_consistent`), and the two texts then rest on the Church's word
+(`pius_reading_rests_on_authority`), which Pius XII asks to be confirmed from the originals; at
+these verses the originals do not confirm it (`pius_finds_no_confirmation`).
 
 ## Toward computed ratings
 
