@@ -436,6 +436,12 @@ inductive Claim
   /-- Luke 17:10 — "when you have done all that you were commanded, say, 'We are
   unworthy servants; we have only done what was our duty.'" -/
   | luke17_10UnworthyServants
+  -- The texts Trent cites for the reward of good works (Session VI, ch. 16).
+  /-- 1 Corinthians 15:58, Hebrews 6:10, Hebrews 10:35 and 2 Timothy 4:8 — "in
+  the Lord your labor is not in vain"; "God is not unjust so as to overlook your
+  work"; "your confidence, which has a great reward"; "the crown of
+  righteousness, which the Lord, the righteous judge, will award to me". -/
+  | rewardTextsPromiseReward
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

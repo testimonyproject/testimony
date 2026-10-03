@@ -300,6 +300,8 @@ def means : Claim → Statement
     .opaque "Revelation 22:11 and Sirach 18:22 confirm the increase from the originals"
   | .originalTextDecides =>
     .opaque "What the original text does not say, a translation does not establish"
+  | .rewardTextsPromiseReward =>
+    .opaque "God rewards the labor of believers (1 Cor 15:58; Heb 6:10; 10:35; 2 Tim 4:8)"
 
 /-- Every sola fide atom, in declaration order. -/
 def all : List Claim :=
@@ -342,7 +344,8 @@ def all : List Claim :=
   , .sir18_22GreekIsAVow, .originalTextDecides, .vulgateFreeFromDoctrinalError
   , .trentQuotesTheVulgateJuridically, .doctrineToBeConfirmedFromOriginals
   , .latinTextsConfirmedFromOriginals, .ephesians2_10CreatedForGoodWorks
-  , .james2_18ShowFaithByWorks, .romans6_22FruitToSanctification, .luke17_10UnworthyServants ]
+  , .james2_18ShowFaithByWorks, .romans6_22FruitToSanctification, .luke17_10UnworthyServants
+  , .rewardTextsPromiseReward ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -357,15 +360,15 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **Ninety-five of the hundred and seven are analysed.** Of the twelve that are
-not, four are Pius XII's and Trent's claims about the Vulgate and one is the
+/-- **Ninety-five of the hundred and eight are analysed.** Of the thirteen that
+are not, four are Pius XII's and Trent's claims about the Vulgate and one is the
 textual principle, whose content is a rule about texts and translations the
-vocabulary cannot yet state; the other seven are the narrative texts of the
+vocabulary cannot yet state; the other eight are the narrative texts of the
 thief and the tax collector, Galatians 1:6–9, Christ's command to baptise,
-Trent's "laver, or the desire thereof", and Luke's law-observance. Each needs a
-word the vocabulary lacks — a command, a curse, a disjunction, a story's
-outcome. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (95, 107) := by decide
+Trent's "laver, or the desire thereof", Luke's law-observance, and the texts
+that promise a reward. Each needs a word the vocabulary lacks — a command, a
+curse, a disjunction, a story's outcome, a reward. -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (95, 108) := by decide
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

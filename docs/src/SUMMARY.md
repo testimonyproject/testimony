@@ -15,6 +15,7 @@
 - [Citations](./citations.md)
 - [Style guide](./style-guide.md)
 - [Meanings and articles (draft)](./semantics.md)
+- [Computed ratings (design)](./computed-ratings.md)
 
 # Arguments
 

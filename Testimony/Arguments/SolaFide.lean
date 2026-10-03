@@ -12,6 +12,7 @@ import Testimony.Arguments.SolaFide.JesusWords
 import Testimony.Arguments.SolaFide.Baptism
 import Testimony.Arguments.SolaFide.James
 import Testimony.Arguments.SolaFide.Vulgate
+import Testimony.Arguments.SolaFide.Ratings
 
 /-!
 # Arguments.SolaFide — justification by grace through faith, not works
