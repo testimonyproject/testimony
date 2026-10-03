@@ -157,21 +157,59 @@ Reformers' formula uses of Paul. The move does not say so (`faithAlone_unstated`
 exactly the two senses one claim in the library denies, `james2_24Compatible`
 (`faithAlone_meets_the_library`).
 
-**Heard in the dispute, it can be defended.** Stated as a position, with the senses it needs made
-explicit, and heard with every party to the sola fide dispute, the move is neither indefensible
-nor forced (`howell_defensible`, `howell_not_forced`). Paul's case and Peter's defeat it, and it
-defeats both back; every link on both sides is rated `disputed`, so the weighing cannot choose.
-The library does not show that the move's claim cannot be held. It shows its price: the move
-stands only where James's words are Paul's.
-
-**And the dispute it turns on is live.** Heard as positions, the holder of `james2_24Compatible`
-and its denier can each be defended (`jamesContested`). The rating `disputed` survives the
-weighing.
+**Heard in the dispute, it cannot be defended.** Stated as a position, with the senses it needs
+made explicit, and heard with every party to the sola fide dispute and with James's own words
+about faith, the move falls (`howell_indefensible`). James calls the faith he denies justifies
+dead (2:17, 2:26); Trent reads it so (Session VI, ch. 7); the Reformers' confession calls the
+faith that alone justifies "no dead faith" (Westminster XI.2). The denial the move needs does not
+survive the weighing (`faithDenialAnswered`). The article's other case from James — that works
+"actually justify" — is the Catholic reading of James's "by works", weighed in
+`Testimony.Arguments.SolaFide.James`: as a claim about James's word it cannot be defended
+(`trent_on_james_word_indefensible`); as a claim about what works do before God it can, and is
+not forced (`trent_on_works_defensible`).
 
 **The same check, on the other side.** The objector's reply — James 2:14 "is dealing with the
 problem of those who claim faith but who don't show it by their works" — takes "faith" in 2:14
 for "faith" in 2:24 without saying so (`deadFaith_unstated`). That is the Reformed reading's own
 condition, and the claim that carries it, `james2TargetsDeadFaith`, is rated `disputed` too.
+
+## What each position rests on
+
+`Testimony.Logic.Warrant` answers a reader's question about any position: *where does this rest
+on someone's word alone?* Each cited work has a role — a text or lexicon, argued scholarship, a
+binding decree or confession, or a theologian's own teaching — and a premise's warrant is the best
+of its references: Scripture, evidence, authority alone, or the library's own assertion. A claim
+*about* what someone holds is proved by their own text, so it rests on evidence.
+
+The warrant is reported beside the verdicts and never weighed in them. A rule that discounted
+authority inside the solver — "Scripture first, by default" — would decide the sola scriptura
+dispute by fiat, since whether a council's or a confession's word binds is what that dispute is
+about. And it applies to every side: in the James dispute (`james_warrants`) Trent's readings rest
+on Trent's word, the Reformed harmony on Westminster's at "works are fruit, not ground", and the
+readings of the Greek on Pius XII's at "the original text decides".
+
+## Toward computed ratings
+
+A rating today is asserted, with a citation: `disputed` when a cited source grants a step's grounds
+and denies its conclusion. That records that someone dissents. It does not record whether the
+dissent is *credible* — whether it is an argument, or only "I disagree". The pieces for computing
+that now exist, and a dissent can be classified by what the library can check:
+
+1. **Is it consistent?** The dissenting position, stated as a party, has a model.
+2. **Is it argued?** It derives the denial from grounds by a step, rather than holding the denial
+   as a bare premise. A bare denial is an assertion of disagreement.
+3. **What does it rest on?** Its grounds' warrants: Scripture and evidence, or someone's word.
+4. **Does it survive the weighing?** It can be defended in the dispute (`Contested`), or every
+   dissenting position is indefensible (`DenialAnswered`).
+
+A computed rating would then be: `disputed` when some dissent passes all four; the citation's own
+rating when every dissent fails one, with the failure named. The difficulty is circularity — ratings
+decide defeats, and defeats would decide ratings — and the literature's answer is to let arguments
+attack *preferences* as well as arguments, in extended argumentation frameworks (Modgil, *Artificial
+Intelligence* 173, 2009), so that "this rating is unwarranted" is itself a party in the dispute.
+Until that is built, `Contested` and `DenialAnswered` are the computed checks, stated beside the
+asserted rating: the Howell hearing shows one asserted dispute that does not survive
+(`faithDenialAnswered`), and the James dispute one that does (`worksContested`).
 
 ## What it would take to decide James
 
@@ -181,11 +219,10 @@ premises that are cited and rated. Paul's word is forced in that sense
 (`only_pauls_word_prevails`), because the lexical case rests on links rated above `disputed`
 and nothing that attacks it is as strong. For James, four things are missing.
 
-1. **James is not yet a dispute.** The library has one line about James — the Reformed
-   harmonisation, from `james2TargetsDeadFaith` and `worksAreFruitNotGround` — and no rival
-   reading of the letter as a position of its own. The Catholic reading needs to be one: James
-   2:24 as the increase of justification by works done in faith, which Trent draws from the verse
-   (Session VI, ch. 10, to be verified in Tanner). The rule that a rival is written first applies.
+1. **The dispute now exists** (`Testimony.Arguments.SolaFide.James`), with the Catholic reading as
+   two parties: James's word as the increase of justice, which cannot be defended; and what works
+   do before God (canon 24), which can, against the Reformed harmony. What is left to decide is
+   the second.
 2. **The question splits by word and by verse.** What δικαιόω denotes at 2:21, 2:24 and 2:25;
    what πίστις denotes at 2:14, 2:17, 2:19 and 2:24; and whether each keeps its sense through
    the paragraph. The grammar can now state each as its own claim, and `sameSense` the claim that

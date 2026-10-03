@@ -338,6 +338,66 @@ inductive Claim
   /-- The fire of Matthew 3:11 is Pentecost: "divided tongues as of fire" (Acts
   2:3). -/
   | fireIsPentecost
+  -- James, and the increase of justification. See `SolaFide.James`.
+  /-- James 2:14–26 — faith that has no works cannot save (2:14); "faith by
+  itself, if it does not have works, is dead" (2:17); "faith apart from works is
+  dead" (2:26). What the text says. -/
+  | james2FaithWithoutWorksIsDead
+  /-- James 2:21–25 — Abraham "justified by works when he offered up his son
+  Isaac" (Genesis 22), by which the Scripture (Genesis 15:6), spoken years before,
+  "was fulfilled" (2:23); Rahab "justified by works" when she received the
+  messengers (2:25). What the text says. -/
+  | james2JustifiedByWorks
+  /-- Outside Paul, δικαιόω declares, acquits or vindicates: the judges "justify
+  the righteous and condemn the wicked" (Deuteronomy 25:1); "wisdom is justified
+  by her works" (Matthew 11:19), shown to be in the right by what she does. It
+  does not denote making a person inwardly righteous. **The lexical premise for
+  James.** -/
+  | dikaioIsDeclarativeOutsidePaul
+  /-- James's δικαιόω — "justified by works" (2:21, 24, 25) — denotes the increase
+  of the justice received: being made more just. **The Catholic reading of
+  James's word**, Trent's (Session VI, ch. 10), on which James 2:24 teaches the
+  increase of justification. -/
+  | jamesJustifyDenotesIncrease
+  /-- The "faith alone" that James 2:24 denies justifies is the faith of 2:14–26:
+  faith apart from works, which James calls dead (2:17, 2:26). -/
+  | jamesFaithAloneIsDeadFaith
+  /-- The faith the Reformers say alone justifies is "no dead faith, but worketh
+  by love": "the alone instrument of justification: yet is it not alone in the
+  person justified" (Westminster XI.2). What the formula *sola fide* means, in
+  its framers' words. -/
+  | reformedFaithIsNoDeadFaith
+  /-- "Faith" in James 2:24's "not by faith alone" is not the faith of the
+  Reformers' *sola fide*: the phrase James denies is not the formula they
+  affirm. -/
+  | jamesFaithIsNotReformedFaith
+  /-- Scripture teaches that the justice received increases by good works — an
+  **increase of justification** (Trent, Session VI, ch. 10; canon 24). -/
+  | scriptureTeachesIncreaseOfJustification
+  /-- Good works done in grace are a cause of the increase of justification, and
+  not merely its fruits and signs (Trent, Session VI, canon 24). **The Catholic
+  reading of what works do**, as a claim about God's verdict rather than about a
+  word. -/
+  | worksCauseIncreaseOfJustification
+  /-- Revelation 22:11, as Trent quotes it: "He that is just, let him be justified
+  still" (Vulgate, *iustificetur adhuc*). -/
+  | rev22_11BeJustifiedStill
+  /-- The Greek text of Revelation 22:11, as the critical editions print it, says
+  "let the righteous still do righteousness" (δικαιοσύνην ποιησάτω ἔτι): it has
+  no "be justified". -/
+  | rev22_11GreekDoRighteousness
+  /-- Sirach 18:22, as Trent quotes it: "Be not afraid to be justified even to
+  death" (Vulgate). -/
+  | sir18_22BeJustifiedToDeath
+  /-- Sirach 18:22, in the Greek from which the Catholic Church's own translation
+  is made, is about paying a vow promptly: "do not wait until death to fulfill
+  them". It says nothing of growth in justice. -/
+  | sir18_22GreekIsAVow
+  /-- A reading the original text does not support does not establish what the
+  text says: the Vulgate's authority is that of its use in the Church, not a
+  judgement on the text (Pius XII, *Divino Afflante Spiritu*). **The textual
+  principle.** -/
+  | originalTextDecides
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide

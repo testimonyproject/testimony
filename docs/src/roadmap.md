@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **167 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **173 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -134,6 +134,12 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `the_baptist_leaves_the_fire_open` | `Independent [p Claim.matthew3_11SpiritAndFire] (p Claim.fireIsJudgment)` | **The Baptist's words leave open whether the fire is judgment.** "He will baptize you with the Holy Spirit and fire" is held alike by Gregory Nazianzen, who reads the fire as the … |
 | `the_baptist_leaves_purification_open` | `Independent [p Claim.matthew3_11SpiritAndFire] (p Claim.fireIsPurification)` | **Nor whether it is purification.** |
 | `the_baptist_leaves_pentecost_open` | `Independent [p Claim.matthew3_11SpiritAndFire] (p Claim.fireIsPentecost)` | **Nor whether it is Pentecost**, as Cyril of Jerusalem reads it: "because the descent of the Holy Ghost was in fiery tongues". |
+| `james_words_prevail` | `Framework.grounded jamesDispute.defeats = {JamesParty.lexical, JamesParty.faith, JamesParty.revelationText, JamesParty.sirachText}` | **What James's words say, and what the Greek of Trent's other two texts says, prevails outright.** The grounded extension is exactly four parties: James's δικαιόω does not denote … |
+| `trent_on_james_word_indefensible` | `∀ (S : Set JamesParty), Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnTheWord ∉ S` | **Trent's reading of James's word cannot be defended.** If "justified by works" in James 2:24 is read as the increase of the justice received — being made more just — it cannot be … |
+| `trent_on_revelation_indefensible` | `∀ (S : Set JamesParty), Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnRevelation ∉ S` | **Trent's Revelation 22:11 cannot be defended as a text for the increase of justification.** "He that is just, let him be justified still" is the Vulgate's *iustificetur adhuc*; … |
+| `trent_on_sirach_indefensible` | `∀ (S : Set JamesParty), Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnSirach ∉ S` | **Trent's Sirach 18:22 cannot be defended as a text for the increase of justification.** "Be not afraid to be justified even to death" is the Vulgate's verse; the Greek, as the … |
+| `trent_on_works_defensible` | `Framework.CredulouslyAccepted jamesDispute.defeats JamesParty.trentOnWorks` | **Trent's reading of what works do can be defended** — with James's word, James's faith, and the Greek of both verses. |
+| `trent_on_works_not_forced` | `¬Framework.SkepticallyAccepted jamesDispute.defeats JamesParty.trentOnWorks` | **Nor is it forced.** A maximal defensible position holds the Reformed harmony, with James's word and faith, and cannot hold Trent's reading of what works do with it. |
 
 ### [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 

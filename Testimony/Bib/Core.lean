@@ -96,6 +96,27 @@ def Identifier.uri : Identifier → Option String
   | .url s _ => some s
   | .archived s => some s
 
+/-- What a cited work is, as a warrant for what it is cited for.
+
+A citation can mean four different things, and a reader weighing an argument
+needs to know which. A critical text or a lexicon is **evidence** anyone can
+check; a commentary or a monograph is **scholarship**, an argued reading with its
+evidence in view; a council's decree or a church's confession is **authority**:
+it binds those who receive it, and to others it is what that body teaches; and
+a father's, a schoolman's or a reformer's own treatise is a **witness** to what he
+held. The last two are a person's or a body's word, and an argument that rests on
+nothing else rests on that word. -/
+inductive Role
+  /-- A critical text, a translation of one, a lexicon or a dataset. -/
+  | text
+  /-- An argued reading: a commentary, a monograph, an article. -/
+  | scholarship
+  /-- A binding decree, confession or catechism. -/
+  | authority
+  /-- A historical theologian's own teaching. -/
+  | witness
+deriving Repr, DecidableEq
+
 /-- Fields every entry type carries. -/
 structure WorkCore where
   /-- The stable handle for this entry. -/
@@ -112,6 +133,8 @@ structure WorkCore where
   identifiers : List Identifier := []
   /-- Anything a reader needs in order to follow the citation. -/
   note : Option String := none
+  /-- What the work is, as a warrant. Most cited works are scholarship. -/
+  role : Role := .scholarship
 deriving Repr, DecidableEq
 
 /-- A monograph or commentary. -/
