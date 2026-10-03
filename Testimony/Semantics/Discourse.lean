@@ -1,4 +1,4 @@
-import Testimony.Semantics.Grammar
+import Testimony.Semantics.Meaning
 
 /-!
 # Testimony.Semantics.Discourse — what an article does, move by move
@@ -92,6 +92,24 @@ def unstated (m : Move) : List (Lexeme × Scope × Scope) :=
 /-- The words the move needs to mean the same at two places, unstated: one
 entry per word, however many pairs of places. -/
 def unstatedWords (m : Move) : List Lexeme := (m.unstated.map (·.1)).eraseDups
+
+/-- The words a move needs to mean the same at two places, unstated, less the
+one its conclusion is about: a move that concludes a word differs, or is the
+same, at two places assumes nothing about that word. -/
+def unstatedBesidesConclusion (m : Move) : List Lexeme :=
+  match m.act with
+  | .argues _ (.denied (.sameSense w _ _)) | .argues _ (.sameSense w _ _) =>
+    m.unstatedWords.filter (· ≠ w)
+  | _ => m.unstatedWords
+
+/-- **Where a move meets an argument.** For each sense the move needs and does
+not state, the argument's atoms that deny it. An empty list for a word is not
+a verdict either way: the argument has nothing to say about that sense. -/
+def meets {α : Type} [HasMeanings α] (m : Move) : List (Lexeme × List α) :=
+  m.unstated.filterMap fun (w, a, b) =>
+    match HasMeanings.denyingSameSense (α := α) w a b with
+    | [] => none
+    | cs => some (w, cs)
 
 end Move
 

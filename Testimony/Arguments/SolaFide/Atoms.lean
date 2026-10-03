@@ -91,6 +91,10 @@ inductive Claim
   /-- James 2:24 is compatible with Paul, using "justify" and "faith" in
   different senses. -/
   | james2_24Compatible
+  /-- James 2:24 — "You see that a person is justified by works and not by faith
+  alone." What the verse says, in its own words: what its "justified" and
+  "faith" mean is the question `james2_24Compatible` answers. -/
+  | james2_24NotByFaithAlone
   /-- Scripture does not contradict itself. -/
   | scriptureSelfConsistent
   /-- Justification is by faith alone. -/

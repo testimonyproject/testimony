@@ -1,13 +1,13 @@
-import Testimony.Semantics.Grammar
-import Testimony.Arguments.SolaFide.Atoms
+import Testimony.Semantics.Meaning
+import Testimony.Arguments.SolaFide.Sources
 
 /-!
-# Testimony.Semantics.SolaFide — what each sola fide claim says
+# Testimony.Meanings.SolaFide — what each sola fide claim says
 
 **A draft**, and the first argument given meanings. `means` is total over the
-argument's eighty-four atoms, as `cite` is: a new atom cannot be left without
+argument's eighty-five atoms, as `cite` is: a new atom cannot be left without
 one. Each meaning says what the atom's docstring says, in the vocabulary of
-`Testimony.Semantics.Grammar`, and no more. Where the vocabulary cannot yet say
+`Testimony.Semantics.Vocabulary`, and no more. Where the vocabulary cannot yet say
 it, the meaning is `opaque`, and `unanalysed` counts those.
 
 Three things the labelling made visible, which the atom names alone did not:
@@ -25,27 +25,19 @@ Three things the labelling made visible, which the atom names alone did not:
   uses "justify" and "faith" in Paul's senses. An argument that sets James 2:24
   against Paul assumes the opposite, whether it says so or not; that is what
   `Testimony.Semantics.Discourse` checks.
+
+Every query below is the generic one, `HasMeanings`, asked of this argument.
 -/
 
-namespace Testimony.Semantics.SolaFide
+namespace Testimony.Meanings.SolaFide
 
-open Testimony Testimony.Semantics
+open Testimony Testimony.Semantics Testimony.Semantics.Notation
 open Testimony.Arguments.SolaFide (Claim)
 
-/-- One verse. -/
-abbrev vs (b : Book) (c n : Nat) : PassageRange := .verse ⟨b, c, n⟩
 
-/-- A range of verses. -/
-abbrev rg (b : Book) (c₁ n₁ c₂ n₂ : Nat) : PassageRange := .range ⟨b, c₁, n₁, c₂, n₂⟩
 
-/-- A word as it stands in a passage. -/
-abbrev wd (w : Lexeme) (p : PassageRange) : Term := .word w (.passage p)
 
-/-- A concept. -/
-abbrev cn (c : Concept) : Term := .concept c
 
-/-- A relation between two terms. -/
-abbrev rl (r : Rel) (a b : Term) : Content := .rel r a b
 
 /-- Ephesians 2:8–9. -/
 @[nolint defsWithUnderscore] abbrev eph2_8_9 : PassageRange := rg .ephesians 2 8 2 9
@@ -141,6 +133,9 @@ def means : Claim → Statement
   | .james2_24Compatible =>
     .also (.denied (.sameSense .dikaioo (.passage james2_24) (.usage .paul)))
       (.denied (.sameSense .pistis (.passage james2_24) (.usage .paul)))
+  | .james2_24NotByFaithAlone =>
+    .says james2_24 <| .both (rl .groundOf (wd .erga james2_24) (wd .dikaioo james2_24))
+      (.not (rl .soleInstrumentOf (wd .pistis james2_24) (wd .dikaioo james2_24)))
   | .scriptureSelfConsistent => .principle .scriptureSelfConsistent
   | .justificationByFaithAlone => .holds faithAlone
   | .faithIsSufficient => .holds (rl .sufficientFor (cn .faith) (cn .salvation))
@@ -267,7 +262,8 @@ def all : List Claim :=
   , .lukeKeepsTheLaw, .ephesiansIsPauline, .titusIsPauline, .firstPeterIsPetrine
   , .secondPeterIsPetrine, .righteousnessOfGodIsDeliverance, .luke7_50FaithHasSavedYou
   , .sozoIsSoteriological, .luke7_47LoveIsEvidence, .james2TargetsDeadFaith
-  , .worksAreFruitNotGround, .james2_24Compatible, .scriptureSelfConsistent
+  , .worksAreFruitNotGround, .james2_24Compatible, .james2_24NotByFaithAlone
+  , .scriptureSelfConsistent
   , .justificationByFaithAlone, .faithIsSufficient, .salvationByGrace
   , .salvationNotByWorks, .salvationThroughFaith, .justificationIsForensicOnly
   , .secondTempleCovenantalNomism, .worksMeritIncreaseOfJustification
@@ -293,39 +289,37 @@ def all : List Claim :=
   , .john3_5WaterIsTheSpiritsCleansing, .matthew3_11SpiritAndFire, .fireIsJudgment
   , .fireIsPurification, .fireIsPentecost ]
 
-/-- `all` lists every atom: the count matches the constructors, and the list has
-no repeats. -/
-theorem all_length : all.length = 84 := by decide
+/-- `all` has every atom. -/
+theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 
-/-- `all` has no repeats, so with `all_length` it lists each atom once. -/
+/-- `all` has no repeats. -/
 theorem all_nodup : all.Nodup := by decide
 
-/-- The atoms whose meaning is not yet analysed. -/
-def unanalysed : List Claim := all.filter fun c => (means c).isOpaque
+/-- What each sola fide atom says. -/
+instance meanings : HasMeanings Claim where
+  argument := "Sola fide"
+  all := all
+  means := means
+  complete := all_complete
 
-/-- **Seven of the eighty-four are not yet analysed**: the narrative texts of
-the thief and the tax collector, Galatians 1:6–9, Christ's command to baptise,
-Trent's "laver, or the desire thereof", and Luke's law-observance. Each needs a
-word the vocabulary lacks — a command, a curse, a disjunction, a story's
-outcome. -/
-theorem unanalysed_length : unanalysed.length = 7 := by decide
-
-/-- Every word the argument gives two senses at one place. -/
-def contested : List (Lexeme × Scope × Sense × Sense) := readTwoWays (all.map means)
+/-- **Seventy-eight of the eighty-five are analysed.** The seven that are not
+are the narrative texts of the thief and the tax collector, Galatians 1:6–9,
+Christ's command to baptise, Trent's "laver, or the desire thereof", and
+Luke's law-observance. Each needs a word the vocabulary lacks — a command, a
+curse, a disjunction, a story's outcome. -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (78, 85) := by decide
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
 commandments in Matthew 19; the water of John 3:5, four ways; the fire of
 Matthew 3:11, three ways. Fifteen readings at six places; each pair is counted
 in both orders, so twenty-six ordered pairs. -/
-theorem contested_length : contested.length = 26 := by decide
+theorem contested_length : (HasMeanings.contested (α := Claim)).length = 26 := by decide
 
-/-- The claims that turn on a word. -/
-def about (w : Lexeme) : List Claim := all.filter fun c => (means c).mentions w
-
-/-- **Twelve claims turn on δικαιόω**: the six Pauline texts that use it, the
+/-- **Thirteen claims turn on δικαιόω**: the six Pauline texts that use it, the
 lexical case and Trent's reading of the word, Augustine's gloss, the verdict and
-the tax collector of Luke 18, and the claim that James uses it otherwise. -/
-theorem about_dikaioo : (about .dikaioo).length = 12 := by decide
+the tax collector of Luke 18, James 2:24, and the claim that James uses it
+otherwise. -/
+theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 13 := by decide
 
-end Testimony.Semantics.SolaFide
+end Testimony.Meanings.SolaFide

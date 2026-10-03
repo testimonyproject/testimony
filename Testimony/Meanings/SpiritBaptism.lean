@@ -1,0 +1,36 @@
+import Testimony.Semantics.Meaning
+import Testimony.Arguments.SpiritBaptism.Sources
+
+/-!
+# Testimony.Meanings.SpiritBaptism — what each spirit baptism claim says
+
+**Not yet analysed.** Every atom is registered, with its citation's label and
+marked unanalysed, so the argument is counted from the start
+(`coverage`). Analysing one is replacing its case of `means` with a
+`Statement`; `Testimony.Meanings.SolaFide` is the worked example.
+-/
+
+namespace Testimony.Meanings.SpiritBaptism
+
+open Testimony.Semantics
+open Testimony.Arguments.SpiritBaptism (Claim cite)
+
+/-- Every atom of the argument, in declaration order. -/
+def all : List Claim :=
+  [ .cor12_13AllBaptizedInOneSpirit, .actsSpiritAfterBelieving, .acts10SpiritAsTheyHear
+  , .acts2_38SpiritPromised, .cor12_13IsChristBaptizingInTheSpirit, .cor12_13IsBaptismByTheSpirit
+  , .lukanSpiritBaptismIsEmpowerment, .actsNarrativesAreNormative, .actsEpisodesAreTransitions
+  , .entireSanctificationIsSecondWork, .spiritGivenInWaterBaptism, .confirmationGivesPentecost
+  , .spiritBaptismAtConversion, .secondSpiritBaptismToBeSought, .spiritGivenInTheSacraments ]
+
+/-- `all` has every atom. -/
+theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
+
+/-- What each atom of the argument says: not yet analysed. -/
+instance meanings : HasMeanings Claim :=
+  HasMeanings.ofLabels "Spirit baptism" all cite all_complete
+
+/-- **None of the 15 atoms is analysed yet.** -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (0, 15) := by decide
+
+end Testimony.Meanings.SpiritBaptism

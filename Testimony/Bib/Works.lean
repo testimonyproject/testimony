@@ -2090,6 +2090,27 @@ Press, 2005, third edition). -/
   , place := some "Cambridge"
   , edition := some "3rd edition" }
 
+/-! ### Articles examined
+
+Published articles the library examines as commentary
+(`Testimony.Articles`), cited for the moves it quotes from them. -/
+
+/-- Howell's dialogue on justification, for *Catholic Answers*: the argument that
+"faith alone" occurs once in the New Testament, at James 2:24, where it is
+denied, and that Paul and James must mean different things by *works*. Read on
+the publisher's page; the print edition is dated 1 March 2003. No ISSN, DOI or
+page range is given there, and none is recorded. -/
+@[bib_entry] def howellSavedByFaithAlone : BibEntry := .webPage
+  { core :=
+      { key := "howell-saved-by-faith-alone-2003"
+      , contributors := { authors := [.person "Kenneth" "Howell"] }
+      , title := "Aren't We Saved by Faith Alone?"
+      , year := some { value := 2003 }
+      , identifiers :=
+          [ .url "https://catholic.com/magazine/print-edition/arent-we-saved-by-faith-alone"
+                 (some "2026-10-03") ] }
+  , site := some "Catholic Answers Magazine" }
+
 derive_bib_registry registry
 
 end Testimony.Bib
