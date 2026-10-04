@@ -76,6 +76,32 @@ credible critique; a reader who does not has none. It does not show that the
 reward texts teach the Reformed reading of them; it shows that they do not
 teach Trent's without Trent.
 
+## The same checks, run the other way
+
+A check applied in one direction only is a weapon, not a measure. So the
+Reformed dissents from Rome's claims are assessed by the same checks, under the
+same two standards.
+
+- **Westminster against chapter 16's merit premise** (XVI.5, XVI.6). God does
+  not forget the work of believers. That is Hebrews 6:10, which Westminster
+  gives as a proof and which is one of Trent's own four texts. Having done all,
+  believers are unworthy servants who have done only their duty (Luke 17:10).
+  Wages are reckoned as due to one who works, but as a gift to one who believes
+  (Romans 4:4–5). Their sacrifices are acceptable to God through Jesus Christ
+  (1 Peter 2:5). So the reward is of grace, not rendered to merits. Every claim
+  Westminster asserts outright is a text it cites. What is its own is the step,
+  a reading rated `disputed` (`westminster_answers_from_the_texts`).
+- **The Reformed harmony against canon 24's step, and against chapter 16's.** It
+  grants each step's grounds, and argues from Westminster's proof texts that
+  works are the fruit of faith, not its ground.
+
+Each is a critique under **both** standards, so each of Trent's claims is
+`disputed` under both (`rome_steps_ratings`). Set beside `fruit_step_ratings`,
+that is the asymmetry the checks find. The Reformed dissents from Trent are
+critiques under either standard. Trent's dissents from the Reformed step are
+critiques only under the standard that admits the council's word. Neither side's
+step is proved right by this. What differs is what each side's dissent rests on.
+
 ## The hearing under each standard
 
 Which dissents are critiques decides who is heard, and how each step is weighed.
@@ -94,9 +120,10 @@ disagree about the standard.
   reading each survive, and neither is forced.
 - **Whether works are fruit and not ground turns on the standard too**
   (`fruit_turns_on_the_standard`). Under the evidence standard the hearing
-  forces the Reformed harmony: neither of Trent's dissents is heard. Under the
-  tradition standard both are, and the harmony and chapter 16's reading each
-  survive, and neither is forced.
+  forces the Reformed harmony and Westminster's answer on the reward. Neither of
+  Trent's dissents is heard. Under the tradition standard both are heard. The
+  harmony and chapter 16's reading each survive, and so do Westminster's answer
+  and chapter 16, which defeat each other; none of them is forced.
 
 In both, the register's rating and the hearing's verdict agree. A step rated
 `disputed` under a standard is contested in the hearing under it, and a step
@@ -258,6 +285,117 @@ theorem lexical_step_before_the_steelman :
       [(.evidence, .withheld), (.tradition, .withheld)] := by
   decide +kernel
 
+/-! ### Rome's steps, rated by the same checks -/
+
+/-- **Westminster, against Trent's premise that the reward is rendered to
+merits** (XVI.5, XVI.6): argued from texts Westminster gives as proofs — Hebrews
+6:10, one of Trent's own four; Luke 17:10; Romans 4:4–5; 1 Peter 2:5 — by a step
+of its own, its reading of them. Every claim it asserts outright is a text. So
+it is a critique under both standards. -/
+def westminsterAssessment : Assessment Claim where
+  dissenter := "Westminster XVI.5, XVI.6"
+  against := "Trent: the reward is rendered to merits (ch. 16, canon 32)"
+  dissent :=
+    { claim := p .rewardRenderedToMerits
+    , position := westminsterOnReward }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **The Reformed harmony, against canon 24's step**: it grants James 2:24, the
+works by which Abraham and Rahab were justified, and canon 24's own claim that
+works cause the increase, and argues from Westminster's proof texts that works
+are the fruit of faith and not its ground. What it asserts outright rests on
+Scripture and on readings argued from it; so it is a critique under both
+standards. -/
+def harmonyOnCanon24Assessment : Assessment Claim where
+  dissenter := "The Reformed harmony (Westminster XVI.2, XVI.5)"
+  against := catholicJamesWorksLine.name
+  dissent :=
+    { claim := notP .worksAreFruitNotGround
+    , grounds := catholicJamesWorksLine.grounds
+    , position := jamesHarmonyCase }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **The Reformed harmony, against chapter 16's step**: it grants the reward
+texts, and grants for the step's sake even that the reward is rendered to
+merits, and argues that works are the fruit of faith, not its ground. A critique
+under both standards. Westminster's own answer goes further, and denies the
+second ground (`westminsterAssessment`). -/
+def harmonyOnRewardAssessment : Assessment Claim where
+  dissenter := "The Reformed harmony (Westminster XVI.2, XVI.5)"
+  against := trentRewardLine.name
+  dissent :=
+    { claim := notP .worksAreFruitNotGround
+    , grounds := trentRewardLine.grounds
+    , position := jamesHarmonyCase }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **Trent's premise that the reward is rendered to merits, rated by its
+register**: Westminster's dissent, the strongest known. -/
+def meritPremise : RatedStep Claim where
+  step := "Trent: the reward is rendered to merits (ch. 16, canon 32)"
+  support := (baseCite .rewardRenderedToMerits).source
+  register := [westminsterAssessment]
+  strongest := some 0
+
+/-- **Canon 24's step, rated by its register**: the Reformed harmony's dissent. -/
+def canon24Step : RatedStep Claim where
+  step := catholicJamesWorksLine.name
+  support := trentWorksSource
+  register := [harmonyOnCanon24Assessment]
+  strongest := some 0
+
+/-- **Chapter 16's step, rated by its register**: the Reformed harmony's
+dissent. -/
+def rewardStep : RatedStep Claim where
+  step := trentRewardLine.name
+  support := trentRewardSource
+  register := [harmonyOnRewardAssessment]
+  strongest := some 0
+
+/-- **The same checks, run the other way: Rome's steps are disputed under both
+standards.** Westminster's answer to Trent's merit premise, and the Reformed
+harmony's answers to canon 24's and chapter 16's steps, each argue from texts
+and rest on no one's word alone. So each is a credible critique under the
+evidence standard as under the tradition standard, and each of Trent's claims
+is `disputed` under both.
+
+Set beside `fruit_step_ratings`, this is the asymmetry the checks find. The
+Reformed dissents from Trent's claims are critiques under either standard.
+Trent's dissents from the Reformed step are critiques only under the standard
+that admits the council's word. -/
+@[headline]
+theorem rome_steps_ratings :
+    meritPremise.ratings =
+        [ (.evidence, .disputedBy ["Westminster XVI.5, XVI.6"])
+        , (.tradition, .disputedBy ["Westminster XVI.5, XVI.6"]) ] ∧
+      canon24Step.ratings =
+        [ (.evidence, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
+        , (.tradition, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"]) ] ∧
+      rewardStep.ratings =
+        [ (.evidence, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
+        , (.tradition, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"]) ] := by
+  decide +kernel
+
+#print axioms rome_steps_ratings
+
+/-- **Westminster's answer rests on no one's word alone; Trent's claim does.**
+Every claim Westminster's reading of the reward asserts outright is a text it
+gives as a proof. The one claim chapter 16 adds to its texts, that the reward is
+rendered to merits, is the council's own. -/
+theorem westminster_answers_from_the_texts :
+    westminsterOnReward.restingOnAuthority = [] ∧
+      trentOnReward.restingOnAuthority = [.rewardRenderedToMerits] := by
+  decide
+
 /-! ### The hearing under each standard -/
 
 /-- **The James dispute's register**: each party entered as a dissent from a step
@@ -270,10 +408,11 @@ def jamesRegister : Register jamesDispute where
     | .trentOnWorks => some canon24Assessment
     | .trentOnReward => some rewardAssessment
     | .renewalOnTheWord => some renewalAssessment
+    | .westminsterOnReward => some westminsterAssessment
     | _ => none
   ownPosition i a h := by
     cases i <;> simp only [Option.some.injEq, reduceCtorEq] at h <;> subst h <;> rfl
-  steps := [fruitStep, lexicalStep]
+  steps := [fruitStep, lexicalStep, canon24Step, rewardStep]
 
 /-- Each party's weakest link, weighed at a standard's ratings: as cited, except
 that under the tradition standard James's word is weighed as `disputed`, its
@@ -301,14 +440,31 @@ def ratedDefeats : Standard → JamesParty → JamesParty → Prop
 instance (s : Standard) : DecidableRel (ratedDefeats s) := fun i j => by
   cases s <;> cases i <;> cases j <;> unfold ratedDefeats <;> infer_instance
 
-/-- **Who defeats whom at each standard's ratings**, all 121 pairs under each
-standard, computed from the parties' premises and the re-rated inferences and
-checked by the kernel. -/
+/-- **Who defeats whom at the evidence standard's ratings**, all 144 pairs,
+computed from the parties' premises and the re-rated inferences and checked by
+the kernel. -/
+theorem rerated_defeats_evidence :
+    ∀ i j, (jamesRegister.rerated .evidence).defeats i j ↔ ratedDefeats .evidence i j := by
+  intro i j
+  refine Horn.defeats_iff_of_defeats?
+    (rerated_strength .evidence i) (rerated_strength .evidence j) ?_
+  cases i <;> cases j <;> decide +kernel
+
+/-- **Who defeats whom at the tradition standard's ratings**, all 144 pairs,
+computed and checked the same way. -/
+theorem rerated_defeats_tradition :
+    ∀ i j, (jamesRegister.rerated .tradition).defeats i j ↔ ratedDefeats .tradition i j := by
+  intro i j
+  refine Horn.defeats_iff_of_defeats?
+    (rerated_strength .tradition i) (rerated_strength .tradition j) ?_
+  cases i <;> cases j <;> decide +kernel
+
+/-- **Who defeats whom at each standard's ratings.** -/
 theorem rerated_defeats (s : Standard) :
     ∀ i j, (jamesRegister.rerated s).defeats i j ↔ ratedDefeats s i j := by
-  intro i j
-  refine Horn.defeats_iff_of_defeats? (rerated_strength s i) (rerated_strength s j) ?_
-  cases s <;> cases i <;> cases j <;> decide +kernel
+  cases s
+  · exact rerated_defeats_evidence
+  · exact rerated_defeats_tradition
 
 /-- The dispute at a standard's ratings, in the form the verdict solver computes
 with. -/
@@ -349,7 +505,8 @@ asserts its denial, and is not heard. -/
 def underEvidenceSettled : Verdict jamesUnderEvidence where
   finite := jamesUnderFinite .evidence
   claim := .groundedExactly
-    [Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText]]
+    [Witness.listSub _
+      [.lexical, .faith, .harmony, .revelationText, .sirachText, .westminsterOnReward]]
     (Witness.Table.sub _
       [ (.trentOnRevelation, .revelationText), (.trentOnSirach, .sirachText) ])
   checked := by decide +kernel
@@ -366,7 +523,7 @@ def underTraditionSettled : Verdict jamesUnderTradition where
       [ (.lexical, .renewalOnTheWord), (.renewalOnTheWord, .lexical)
       , (.trentOnRevelation, .revelationText), (.trentOnSirach, .sirachText)
       , (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
-      , (.trentOnReward, .harmony) ])
+      , (.trentOnReward, .harmony), (.westminsterOnReward, .trentOnReward) ])
   checked := by decide +kernel
 
 /-- The renewal reading holds that James's δικαιόω denotes the increase of
@@ -408,7 +565,8 @@ forced. -/
 theorem james_word_turns_on_the_standard :
     grounded jamesUnderEvidence.defeats =
         Solver.toSet
-          (Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText]) ∧
+          (Witness.listSub _
+            [.lexical, .faith, .harmony, .revelationText, .sirachText, .westminsterOnReward]) ∧
       Nonempty (Contested jamesUnderTradition (p .jamesJustifyDenotesIncrease)) :=
   ⟨underEvidenceSettled.holds,
     ⟨{ holder := ⟨.renewalOnTheWord, by decide⟩
@@ -461,7 +619,8 @@ reading of the reward texts can each be defended, and neither is forced. -/
 theorem fruit_turns_on_the_standard :
     grounded jamesUnderEvidence.defeats =
         Solver.toSet
-          (Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText]) ∧
+          (Witness.listSub _
+            [.lexical, .faith, .harmony, .revelationText, .sirachText, .westminsterOnReward]) ∧
       Nonempty (Contested jamesUnderTradition (p .worksAreFruitNotGround)) :=
   ⟨underEvidenceSettled.holds,
     ⟨{ holder := ⟨.harmony, by decide⟩

@@ -450,6 +450,9 @@ inductive Claim
   them as merits: by those works they "have truly merited eternal life" (Trent,
   Session VI, ch. 16; canon 32). -/
   | rewardRenderedToMerits
+  /-- 1 Peter 2:5 — "a holy priesthood, to offer spiritual sacrifices acceptable to
+  God through Jesus Christ". -/
+  | firstPeter2_5AcceptableThroughChrist
 deriving DecidableEq, Repr
 
 end Testimony.Arguments.SolaFide
