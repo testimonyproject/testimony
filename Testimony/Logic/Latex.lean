@@ -41,9 +41,11 @@ open Testimony Testimony.Bib Testimony.Logic.Page
 
 variable {α : Type}
 
-/-- Escape the characters TeX treats specially. Greek and Hebrew pass through:
-the preamble selects a Unicode engine. -/
-def escape (s : String) : String :=
+/-- Escape the characters TeX treats specially, one by one and nothing else.
+Greek and Hebrew pass through: the preamble selects a Unicode engine. Code is
+escaped with this alone, because a quotation mark in code is the character
+itself. -/
+def escapeChars (s : String) : String :=
   s.foldl (init := "") fun acc c =>
     acc ++ match c with
       | '&' => "\\&" | '%' => "\\%" | '$' => "\\$" | '#' => "\\#"
@@ -51,6 +53,41 @@ def escape (s : String) : String :=
       | '~' => "\\textasciitilde{}" | '^' => "\\textasciicircum{}"
       | '\\' => "\\textbackslash{}"
       | c => c.toString
+
+/-- Whether a quotation mark between these two characters opens a quotation: at
+the start of the text, after a space, or after an opening bracket, a dash or
+another opening mark. After Markdown emphasis (`*`, `_`) the mark may open or
+close a quotation, so the next character decides: a word after it, and it
+opens. -/
+def opensQuote (prev next : Option Char) : Bool :=
+  match prev with
+  | none => true
+  | some c =>
+    c.isWhitespace || "([{—–-/“‘".contains c ||
+      ("*_".contains c && next.any fun n => n.isAlphanum || "([“‘".contains n)
+
+/-- **Typographic quotation marks for straight ones.** A docstring types `"` and
+`'`; TeX sets a straight double quote as a closing mark wherever it stands, so
+every quotation opened with the wrong one. Each mark becomes an opening or a
+closing curly mark by what surrounds it, and an apostrophe stays an apostrophe
+(`’`). Text between backticks is code, and is left alone. -/
+def smartQuotes (s : String) : String :=
+  let rec go (prev : Option Char) (inCode : Bool) : List Char → List Char
+    | [] => []
+    | '`' :: rest => '`' :: go (some '`') (!inCode) rest
+    | c :: rest =>
+      if inCode then c :: go (some c) inCode rest
+      else
+        let c' := match c with
+          | '"' => if opensQuote prev rest.head? then '“' else '”'
+          | '\'' => if opensQuote prev rest.head? then '‘' else '’'
+          | c => c
+        c' :: go (some c') inCode rest
+  String.ofList (go none false s.toList)
+
+/-- Escape prose for TeX: typographic quotation marks, then the special
+characters. -/
+def escape (s : String) : String := escapeChars (smartQuotes s)
 
 /-- A propositional variable, subscripted by its position in the legend. -/
 def varName (i : Nat) : String := "P_{" ++ toString (i + 1) ++ "}"
@@ -199,8 +236,8 @@ def codeEscape (s : String) : String :=
       | '-' => "-\\allowbreak{}"
       | c =>
         if c.isUpper && prev.any (fun q => q.isLower || q.isDigit) then
-          "\\allowbreak{}" ++ escape c.toString
-        else escape c.toString
+          "\\allowbreak{}" ++ escapeChars c.toString
+        else escapeChars c.toString
     (acc ++ piece, some c)
   (s.foldl step ("", none)).1
 
@@ -223,15 +260,15 @@ partial def inlineProse (s : String) : String :=
       match upTo ['`'] rest with
       | some (body, after) =>
         "\\texttt{" ++ codeEscape (String.ofList body) ++ "}" ++ go after
-      | none => escape "`" ++ go rest
+      | none => escapeChars "`" ++ go rest
     | '*' :: '*' :: rest =>
       match upTo ['*', '*'] rest with
       | some (body, after) => "\\textbf{" ++ go body ++ "}" ++ go after
-      | none => escape "*" ++ go ('*' :: rest)
+      | none => escapeChars "*" ++ go ('*' :: rest)
     | '*' :: rest =>
       match upTo ['*'] rest with
       | some (body, after) => "\\emph{" ++ go body ++ "}" ++ go after
-      | none => escape "*" ++ go rest
+      | none => escapeChars "*" ++ go rest
     | '[' :: rest =>
       match upTo [']'] rest with
       | some (text, '(' :: afterOpen) =>
@@ -240,10 +277,10 @@ partial def inlineProse (s : String) : String :=
           let u := String.ofList url
           let shown := go text
           (if isAbsoluteUrl u then "\\href{" ++ u ++ "}{" ++ shown ++ "}" else shown) ++ go after
-        | none => escape "[" ++ go rest
-      | _ => escape "[" ++ go rest
-    | c :: rest => escape c.toString ++ go rest
-  go s.toList
+        | none => escapeChars "[" ++ go rest
+      | _ => escapeChars "[" ++ go rest
+    | c :: rest => escapeChars c.toString ++ go rest
+  go (smartQuotes s).toList
 
 /-- A block of Lean or shell, set verbatim. Nothing in it is escaped, which is
 the point.
@@ -697,6 +734,11 @@ def preamble (title : String) : String :=
   -- Long unbreakable words — a cite key, a declaration name in \\texttt — would
   -- otherwise spill into the margin rather than loosening the line.
   "\\setlength{\\emergencystretch}{3em}\n" ++
+  -- One width of space between words, wherever they fall. TeX's default widens
+  -- the space after every full stop and colon, taking each for the end of a
+  -- sentence; in text full of "ch. 16", "ad loc. Rom" and "p. 80" that reads
+  -- as stray double spaces, and justification stretches them further.
+  "\\frenchspacing\n" ++
   "\\IfFontExistsTF{Times New Roman}\n" ++
   "  {\\setmainfont{Times New Roman}[Ligatures=TeX]}\n" ++
   "  {\\IfFontExistsTF{FreeSerif}{\\setmainfont{FreeSerif}[Ligatures=TeX]}{}}\n" ++
