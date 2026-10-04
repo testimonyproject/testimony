@@ -22,9 +22,9 @@ every other verdict here.
 |---|---|---|
 | Generic | `Testimony.Semantics.Vocabulary` | one shared vocabulary of words, senses, relations |
 | | `Testimony.Semantics.Grammar` | how they combine into a statement, and queries over statements |
-| | `Testimony.Semantics.Meaning` | `HasMeanings`: any argument's claims, given meanings |
+| | `Testimony.Semantics.Meaning` | `HasMeanings`: any argument's claims, given meanings; `HasJoins`: the pairs whose meanings exclude or entail each other |
 | | `Testimony.Semantics.Discourse` | an article as moves, and what each move assumes |
-| Per argument | `Testimony.Meanings` | one `HasMeanings` instance for each argument |
+| Per argument | `Testimony.Meanings` | one `HasMeanings` and one `HasJoins` instance for each argument |
 | Commentary | `Testimony.Articles` | one module per published article examined |
 | Weighing | `Testimony.Logic.Contest` | whether a dispute over a claim survives weighing |
 
@@ -32,7 +32,9 @@ Nothing in the generic layer names an argument. Every argument has an instance: 
 analysed, and the other five are registered with their citations' labels and marked unanalysed,
 so that they are counted from the start (each module's `coverage_now`). `Testimony.Checks.Meanings`
 fails the build for an argument with no instance, so a new argument is registered when it is
-added.
+added. It also fails the build for an argument whose joins are not listed and pinned, or
+whose meaning postulates come from anywhere but those lists
+([computed ratings](computed-ratings.md#meaning-postulates)).
 
 ## What a claim means
 

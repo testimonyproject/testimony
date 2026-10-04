@@ -12751,10 +12751,11 @@ dissent on the word is Romans 4's, which reaches its verdict from the text.
 Some claims the atom type keeps apart are joined by their meanings: "δικαιόω is
 forensic — a verdict, and not making righteous" denies "Paul's δικαιόω denotes
 making righteous" in so many words. Every check here holds those joins as
-background (`Meanings.SolaFide.postulates`), the same for a dissent on either
-side, and they are exactly the exclusions the meanings contain
-(`Meanings.SolaFide.exclusions_from_meanings`). Without them, Trent's reading of
-the word would pass as granting a ground it denies.
+background (`Meanings.SolaFide.joins`), the same for a dissent on either
+side, and they are exactly the exclusions the meanings contain: the list is
+proved so. No check here names them; each takes them from the argument's claims.
+Without them, Trent's reading of the word would pass as granting a ground it
+denies.
 
 ### The hearing under each standard
 
@@ -13234,7 +13235,7 @@ reading.
 **The lexical case, against Trent's definition read as the word**: it holds
 as a premise that Paul's δικαιόω is forensic — a verdict, and *not* making
 righteous — and that premise, by its meaning, already denies Trent's reading
-(`Meanings.SolaFide.postulates`). So against this reading it is a rival
+(`Meanings.SolaFide.joins`). So against this reading it is a rival
 reading held as a premise, not an argument: by the checks, a disagreement. What
 it rests on is the lexicon, and its standing is that premise's own rating,
 where the library weighs the word; Trent's reading stands in the same place
@@ -13331,7 +13332,7 @@ theorem trent_definition_ratings : definitionPremise.ratings =
 Paul's verb. It argues its conclusion from Augustine's gloss — but what it
 concludes, that Paul's δικαιόω denotes making righteous, is what the step's
 first ground denies: "forensic", in that ground, means a verdict *and not*
-making righteous (`Meanings.SolaFide.postulates`). So it is a dissent from that
+making righteous (`Meanings.SolaFide.joins`). So it is a dissent from that
 ground, not from the step, and belongs to the ground's rating, under either
 standard.
 

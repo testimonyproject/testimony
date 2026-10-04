@@ -94,17 +94,30 @@ Some claims the atom type keeps apart are joined by their meanings. "In Paul, δ
 forensic: a verdict, and *not* making righteous" denies, in so many words, "Paul's δικαιόω
 denotes making righteous". A propositional check cannot see that: the two are separate atoms.
 So each check holds the argument's **meaning postulates** as background. For every pair where
-one claim's meaning denies another's, the postulate is `a → ¬b`
-(`HasMeanings.postulates`).
+one claim's meaning denies another's, or part of it, the postulate is `a → ¬b`; where one
+claim's meaning asserts all another's does, it is `a → b`.
 
-Sola fide has four such pairs, pinned to the meanings layer by a theorem
-(`exclusions_from_meanings`):
+Each argument lists its pairs in a `HasJoins` instance, beside its meanings, with proofs that
+the lists are exactly what the meanings contain. Its atoms take their postulates
+(`Testimony.Logic.HasPostulates`) from those lists and from nowhere else, and a check takes
+them from the atoms: no call site names them, so no dissent can be checked without them.
+`Testimony.Checks.Meanings` fails the build for an argument with no pinned lists, or whose
+postulates come from anywhere else. `Testimony.Checks.Postulates` fails it for any package
+the postulates make unsatisfiable: a package with no model entails everything.
+
+Two claims that read one word in different senses are **not** held to exclude each other.
+Whether the senses exclude each other is itself contested: Trent holds that justification both
+declares and makes righteous. A postulate saying they do would hand one side's lexicon to both.
+A claim whose meaning says *and not that sense* does exclude the other, and is listed.
+
+Sola fide has four exclusions and no entailments (`Testimony.Meanings.SolaFide.joins`):
 - Paul's word as renewal, against the forensic sense;
 - Trent's Latin of Revelation 22:11, against the Greek;
 - Trent's Latin of Sirach 18:22, against the Greek;
 - "James's δικαιόω is Paul's", against "James 2:24 is compatible with Paul".
 
-Every dissent gets the same background, whichever side it is on. Without the postulates,
+Every dissent gets the same background, whichever side it is on. The other arguments have
+none yet: no meaning of theirs is analysed, so none denies another. Without the postulates,
 Trent's reading of Paul's word would pass as granting the lexical step's forensic ground,
 which it denies.
 

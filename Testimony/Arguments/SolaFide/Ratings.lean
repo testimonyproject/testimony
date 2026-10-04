@@ -146,10 +146,11 @@ dissent on the word is Romans 4's, which reaches its verdict from the text.
 Some claims the atom type keeps apart are joined by their meanings: "δικαιόω is
 forensic — a verdict, and not making righteous" denies "Paul's δικαιόω denotes
 making righteous" in so many words. Every check here holds those joins as
-background (`Meanings.SolaFide.postulates`), the same for a dissent on either
-side, and they are exactly the exclusions the meanings contain
-(`Meanings.SolaFide.exclusions_from_meanings`). Without them, Trent's reading of
-the word would pass as granting a ground it denies.
+background (`Meanings.SolaFide.joins`), the same for a dissent on either
+side, and they are exactly the exclusions the meanings contain: the list is
+proved so. No check here names them; each takes them from the argument's claims.
+Without them, Trent's reading of the word would pass as granting a ground it
+denies.
 
 ## The hearing under each standard
 
@@ -208,8 +209,7 @@ def canon24Assessment : Assessment Claim where
   dissent :=
     { claim := p .worksAreFruitNotGround
     , grounds := fruitLine.grounds
-    , position := catholicJamesOnWorks
-    , background := Meanings.SolaFide.postulates }
+    , position := catholicJamesOnWorks }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, [.worksCauseIncreaseOfJustification]), (.tradition, [])] }
@@ -227,8 +227,7 @@ def rewardAssessment : Assessment Claim where
   dissent :=
     { claim := p .worksAreFruitNotGround
     , grounds := fruitLine.grounds
-    , position := trentOnReward
-    , background := Meanings.SolaFide.postulates }
+    , position := trentOnReward }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, [.rewardRenderedToMerits]), (.tradition, [])] }
@@ -244,8 +243,7 @@ def trentWordAssessment : Assessment Claim where
   dissent :=
     { claim := notP .jamesJustifyDenotesIncrease
     , grounds := jamesLexicalLine.grounds
-    , position := catholicJamesOnTheWord
-    , background := Meanings.SolaFide.postulates }
+    , position := catholicJamesOnTheWord }
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
     , unadmitted := [(.evidence, [.jamesJustifyDenotesIncrease]), (.tradition, [])] }
@@ -261,8 +259,7 @@ def renewalAssessment : Assessment Claim where
   dissent :=
     { claim := notP .jamesJustifyDenotesIncrease
     , grounds := jamesLexicalLine.grounds
-    , position := renewalOnTheWord
-    , background := Meanings.SolaFide.postulates }
+    , position := renewalOnTheWord }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, [.jamesUsesDikaioAsPaul]), (.tradition, [])] }
@@ -350,8 +347,7 @@ def westminsterAssessment : Assessment Claim where
   against := "Trent: the reward is rendered to merits (ch. 16, canon 32)"
   dissent :=
     { claim := p .rewardRenderedToMerits
-    , position := westminsterOnReward
-    , background := Meanings.SolaFide.postulates }
+    , position := westminsterOnReward }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -369,8 +365,7 @@ def harmonyOnCanon24Assessment : Assessment Claim where
   dissent :=
     { claim := notP .worksAreFruitNotGround
     , grounds := catholicJamesWorksLine.grounds
-    , position := jamesHarmonyCase
-    , background := Meanings.SolaFide.postulates }
+    , position := jamesHarmonyCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -387,8 +382,7 @@ def harmonyOnRewardAssessment : Assessment Claim where
   dissent :=
     { claim := notP .worksAreFruitNotGround
     , grounds := trentRewardLine.grounds
-    , position := jamesHarmonyCase
-    , background := Meanings.SolaFide.postulates }
+    , position := jamesHarmonyCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -509,8 +503,7 @@ def gospelOnDefinitionAssessment : Assessment Claim where
   against := "Trent: justification is the renewal of the inward man (ch. 7)"
   dissent :=
     { claim := p .justificationIncludesSanctification
-    , position := galatianGospel
-    , background := Meanings.SolaFide.postulates }
+    , position := galatianGospel }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -524,8 +517,7 @@ def romansFourOnDefinitionAssessment : Assessment Claim where
   against := "Trent: justification is the renewal of the inward man (ch. 7)"
   dissent :=
     { claim := p .justificationIncludesSanctification
-    , position := romansFourCase
-    , background := Meanings.SolaFide.postulates }
+    , position := romansFourCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -542,8 +534,7 @@ def romansFourOnWordAssessment : Assessment Claim where
   against := "Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)"
   dissent :=
     { claim := p .paulsJustifyDenotesRenewal
-    , position := romansFourOnTheWord
-    , background := Meanings.SolaFide.postulates }
+    , position := romansFourOnTheWord }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -552,7 +543,7 @@ def romansFourOnWordAssessment : Assessment Claim where
 /-- **The lexical case, against Trent's definition read as the word**: it holds
 as a premise that Paul's δικαιόω is forensic — a verdict, and *not* making
 righteous — and that premise, by its meaning, already denies Trent's reading
-(`Meanings.SolaFide.postulates`). So against this reading it is a rival
+(`Meanings.SolaFide.joins`). So against this reading it is a rival
 reading held as a premise, not an argument: by the checks, a disagreement. What
 it rests on is the lexicon, and its standing is that premise's own rating,
 where the library weighs the word; Trent's reading stands in the same place
@@ -562,8 +553,7 @@ def lexicalOnWordAssessment : Assessment Claim where
   against := "Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)"
   dissent :=
     { claim := p .paulsJustifyDenotesRenewal
-    , position := lexicalCase
-    , background := Meanings.SolaFide.postulates }
+    , position := lexicalCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -579,8 +569,7 @@ def luke18OnSufficiencyAssessment : Assessment Claim where
   dissent :=
     { claim := notP .faithIsSufficient
     , grounds := trentSufficiencyLine.grounds
-    , position := luke18Case
-    , background := Meanings.SolaFide.postulates }
+    , position := luke18Case }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -635,7 +624,7 @@ theorem trent_definition_ratings :
 Paul's verb. It argues its conclusion from Augustine's gloss — but what it
 concludes, that Paul's δικαιόω denotes making righteous, is what the step's
 first ground denies: "forensic", in that ground, means a verdict *and not*
-making righteous (`Meanings.SolaFide.postulates`). So it is a dissent from that
+making righteous (`Meanings.SolaFide.joins`). So it is a dissent from that
 ground, not from the step, and belongs to the ground's rating, under either
 standard. -/
 def trentWordOnLexicalAssessment : Assessment Claim where
@@ -644,8 +633,7 @@ def trentWordOnLexicalAssessment : Assessment Claim where
   dissent :=
     { claim := notP .paulsJustifyDenotesRenewal
     , grounds := lexicalLine.grounds
-    , position := trentOnTheWordOfPaul
-    , background := Meanings.SolaFide.postulates }
+    , position := trentOnTheWordOfPaul }
   findings :=
     { consistent := true, denies := true, grants := false, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -660,8 +648,7 @@ def trentGraceOnGospelAssessment : Assessment Claim where
   dissent :=
     { claim := notP .justificationIncludesSanctification
     , grounds := [p .christsWorkIsTheWholeGround, p .dikaioIsForensic, p .romans8_33_34]
-    , position := tridentineOnWhatGodDoes
-    , background := Meanings.SolaFide.postulates }
+    , position := tridentineOnWhatGodDoes }
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
     , unadmitted :=
@@ -679,8 +666,7 @@ def trentSufficiencyOnLuke18Assessment : Assessment Claim where
   dissent :=
     { claim := p .faithIsSufficient
     , grounds := luke18Line.grounds
-    , position := trentOnSufficiency
-    , background := Meanings.SolaFide.postulates }
+    , position := trentOnSufficiency }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, [.justificationIncludesSanctification]), (.tradition, [])] }
