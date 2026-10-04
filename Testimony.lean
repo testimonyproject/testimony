@@ -29,6 +29,7 @@ import Testimony.Logic.Burden
 import Testimony.Logic.Dilemma
 import Testimony.Logic.Contest
 import Testimony.Logic.Warrant
+import Testimony.Logic.Postulates
 import Testimony.Logic.Credibility
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
@@ -44,4 +45,5 @@ import Testimony.Semantics.Discourse
 import Testimony.Meanings
 import Testimony.Articles.Howell2003
 import Testimony.Checks.Meanings
+import Testimony.Checks.Postulates
 import Testimony.Checks.Refutations

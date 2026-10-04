@@ -2,6 +2,7 @@ import Testimony.Logic.Warrant
 import Testimony.Logic.Horn
 import Testimony.Logic.Page
 import Testimony.Logic.Dispute
+import Testimony.Logic.Postulates
 
 /-!
 # Testimony.Logic.Credibility — whether a dissent is a credible critique
@@ -48,11 +49,12 @@ on the authority question, and the page says so.
 ## Meaning postulates
 
 Two claims the atom type keeps apart can be joined by their meanings: one may
-assert, in so many words, the denial of the other. A dissent's `background`
-holds those joins — the argument's meaning postulates
-(`Testimony.Semantics.HasMeanings.postulates`) — and every check holds them, so
-a dissent cannot pass as granting a ground its conclusion denies by meaning. An
-argument gives every dissent the same background, whichever side it is on.
+assert, in so many words, the denial of the other. Every check holds those
+joins as background — the argument's meaning postulates (`HasPostulates`) — so
+a dissent cannot pass as granting a ground its conclusion denies by meaning.
+The background is taken from the atom type, not given by the dissent, so every
+dissent in an argument has the same one, whichever side it is on, and none can
+be checked without it.
 
 ## One assessment, every standard
 
@@ -146,13 +148,15 @@ structure Dissent (α : Type) where
   grounds : List (Formula α) := []
   /-- The dissenting position. -/
   position : ArgumentPackage α
-  /-- What every check holds besides: the argument's meaning postulates, which
-  let the logic see that two claims the meanings join cannot both hold
-  (`Testimony.Semantics.HasMeanings.postulates`). The same for every dissent in
-  an argument, whichever side it is on. -/
-  background : List (Formula α) := []
 
 namespace Dissent
+
+/-- **What every check holds besides**: the argument's meaning postulates
+(`HasPostulates`), which let the logic see that two claims the meanings join
+cannot both hold. Taken from the atom type, not from the dissent, so it is the
+same for every dissent in an argument, whichever side it is on. -/
+def background [HasPostulates α] (_ : Dissent α) : List (Formula α) :=
+  HasPostulates.postulates
 
 /-- The position's premises that are claims asserted outright: atoms and denied
 atoms, not steps. -/
@@ -181,7 +185,7 @@ def meets (std : Standard) (d : Dissent α) : Bool :=
 /-- **The dissent is credible under a standard**: consistent; it denies the
 claim; it grants the grounds; it argues the denial by a step of its own; and its
 grounds meet the standard. -/
-structure Credible (std : Standard) (d : Dissent α) : Prop where
+structure Credible [HasPostulates α] (std : Standard) (d : Dissent α) : Prop where
   /-- Its premises have a model. -/
   consistent : Satisfiable (d.position.premises ++ d.background)
   /-- It denies the claim. -/
@@ -252,7 +256,7 @@ namespace Dissent
 
 section Decide
 
-variable [DecidableEq α]
+variable [DecidableEq α] [HasPostulates α]
 
 /-- **The checks, run** by the engine under every standard; `none` when a check
 is undecided. -/
@@ -265,7 +269,7 @@ def findings? (d : Dissent α) : Option (Findings α) := do
        , bareDenial := d.assertsDenial
        , unadmitted := Standard.all.map fun s => (s, d.unadmitted s) }
 
-omit [DecidableEq α] in
+omit [DecidableEq α] [HasPostulates α] in
 private theorem unadmittedUnder_eq (d : Dissent α) (c n g a : Bool) (s : Standard) :
     Findings.unadmittedUnder
       { consistent := c, denies := !n, grants := g, argued := a, bareDenial := d.assertsDenial
@@ -323,7 +327,7 @@ end Dissent
 /-- **A dissent, assessed** under every standard at once: who dissents, from
 what, and what the checks find, with the kernel's check that they find it. One
 declaration answers, for every standard, whether the dissent is a critique. -/
-structure Assessment (α : Type) [DecidableEq α] where
+structure Assessment (α : Type) [DecidableEq α] [HasPostulates α] where
   /-- Who dissents, as a page names them. -/
   dissenter : String
   /-- What they dissent from, as a page names it. -/
@@ -337,7 +341,7 @@ structure Assessment (α : Type) [DecidableEq α] where
 
 namespace Assessment
 
-variable [DecidableEq α]
+variable [DecidableEq α] [HasPostulates α]
 
 /-- Whether the dissent is credible under a standard. -/
 def credible (a : Assessment α) (s : Standard) : Bool := a.findings.credible s
@@ -413,7 +417,7 @@ def Computed.confidence : Computed → Confidence
 /-- **A step, rated by its register**: the step, the citation that rates its
 support, every dissent encoded against it, and which of them is the strongest
 known — the steelman, without which no rating above `disputed` is licensed. -/
-structure RatedStep (α : Type) [DecidableEq α] where
+structure RatedStep (α : Type) [DecidableEq α] [HasPostulates α] where
   /-- The step, as a page names it. -/
   step : String
   /-- The citation for the step, whose confidence rates its support. -/
@@ -426,7 +430,7 @@ structure RatedStep (α : Type) [DecidableEq α] where
 
 namespace RatedStep
 
-variable [DecidableEq α]
+variable [DecidableEq α] [HasPostulates α]
 
 /-- **The rating under one standard**: disputed by every dissent credible under
 it; otherwise the support stands if the steelman is encoded, and is withheld if
@@ -475,7 +479,7 @@ end ArgumentPackage
 
 namespace RatedStep
 
-variable [DecidableEq α]
+variable [DecidableEq α] [HasPostulates α]
 
 /-- **A citation, re-rated under a standard**: a rated step's support carries the
 step's computed rating under the standard; any other citation is unchanged. -/
@@ -504,7 +508,7 @@ end Dispute
 dissent from one of the dispute's steps, each assessing the party's own
 position; and the steps those dissents are rated against. Parties with no
 assessment are not dissents from a rated step. -/
-structure Register [DecidableEq α] (D : Dispute α ι) where
+structure Register [DecidableEq α] [HasPostulates α] (D : Dispute α ι) where
   /-- The assessment of each dissenting party. -/
   assessmentOf : ι → Option (Assessment α)
   /-- Each assesses the party's own position. -/
@@ -514,7 +518,7 @@ structure Register [DecidableEq α] (D : Dispute α ι) where
 
 namespace Register
 
-variable [DecidableEq α] {D : Dispute α ι}
+variable [DecidableEq α] [HasPostulates α] {D : Dispute α ι}
 
 /-- Whether a party is heard under a standard: it dissents credibly, or it is
 not a dissent at all. -/

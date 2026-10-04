@@ -392,12 +392,9 @@ Paul's; and Revelation 22:11 and Sirach 18:22, each in the Latin and in the
 Greek. -/
 theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 21 := by decide
 
-section Postulates
-
-open Testimony.Logic
-
-/-- **The sola fide meaning postulates**: each pair of claims whose meanings
-exclude each other, as `a → ¬b`.
+/-- **The sola fide joins**: each pair of claims whose meanings exclude each
+other. Every credibility check holds `a → ¬b` for each, as background
+(`Testimony.Logic.Dissent`), for a dissent on either side.
 
 - That Paul's δικαιόω denotes renewal excludes that it is forensic, which says
   it means a verdict and *not* making righteous.
@@ -406,25 +403,17 @@ exclude each other, as `a → ¬b`.
 - That James's δικαιόω has Paul's sense excludes the Reformed harmony's
   "James 2:24 is compatible with Paul", which says it has not.
 
-The atom type keeps these claims apart; their meanings join them. Every
-credibility check holds them as background (`Testimony.Logic.Dissent`), for a
-dissent on either side. -/
-def exclusions : List (Claim × Claim) :=
-  [ (.paulsJustifyDenotesRenewal, .dikaioIsForensic)
-  , (.rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness)
-  , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow)
-  , (.jamesUsesDikaioAsPaul, .james2_24Compatible) ]
-
-/-- **These are exactly the exclusions the meanings contain**: no more, no
-fewer. A new meaning that excludes another fails this until the pair is
-listed. -/
-theorem exclusions_from_meanings : exclusions = HasMeanings.exclusions (α := Claim) := by
-  decide +kernel
-
-/-- The postulates, as formulas: for each exclusion `(a, b)`, `a → ¬b`. -/
-def postulates : List (Formula Claim) :=
-  exclusions.map fun (a, b) => p a ➝ notP b
-
-end Postulates
+No claim's meaning entails another's: none asserts all another does. The atom
+type keeps these claims apart; their meanings join them. The lists are proved to
+be exactly what the meanings contain. -/
+instance joins : HasJoins Claim where
+  exclusions :=
+    [ (.paulsJustifyDenotesRenewal, .dikaioIsForensic)
+    , (.rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness)
+    , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow)
+    , (.jamesUsesDikaioAsPaul, .james2_24Compatible) ]
+  exclusions_pinned := by decide +kernel
+  entailments := []
+  entailments_pinned := by decide +kernel
 
 end Testimony.Meanings.SolaFide

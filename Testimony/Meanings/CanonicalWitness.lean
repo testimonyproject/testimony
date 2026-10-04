@@ -35,4 +35,13 @@ instance meanings : HasMeanings Claim :=
 /-- **None of the 29 atoms is analysed yet.** -/
 theorem coverage_now : HasMeanings.coverage (α := Claim) = (0, 29) := by decide
 
+/-- **No joins yet**: with no meaning analysed, no claim's meaning excludes or
+entails another's, so the argument's checks hold no postulates. Analysing a
+meaning that does fails this until the pair is listed. -/
+instance joins : HasJoins Claim where
+  exclusions := []
+  exclusions_pinned := by decide +kernel
+  entailments := []
+  entailments_pinned := by decide +kernel
+
 end Testimony.Meanings.CanonicalWitness
