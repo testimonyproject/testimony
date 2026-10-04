@@ -12710,6 +12710,52 @@ critiques under either standard. Trent's dissents from the Reformed step are
 critiques only under the standard that admits the council's word. Neither side's
 step is proved right by this. What differs is what each side's dissent rests on.
 
+### Trent's definition, and faith's sufficiency
+
+Trent's definition — justification is not remission of sins only, but the
+renewal of the inward man (ch. 7) — can be read two ways
+(`whatTrentsDefinitionClaims`), and Trent draws from it that faith does not
+suffice (ch. 7, canon 9). The checks run on each, in both directions.
+
+From the Reformed side, each is a critique under **both** standards
+(`trent_definition_ratings`):
+
+- Paul's gospel and Romans 4 against the definition, read as what God does;
+- Romans 4, glossing Paul's verb by Paul's own text, against the definition read
+  as Paul's word;
+- Luke 18 against the step to "faith does not suffice".
+
+So each of Trent's three claims is `disputed` under both standards.
+
+From Trent's side (`trent_dissents_from_the_definition_steps`):
+
+- **Its reading of Paul's word** dissents from the lexical step's ground, not
+  from the step. "Forensic", in that ground, means a verdict *and not* making
+  righteous, so what Trent concludes is what the ground denies. The lexical
+  step's support stands at `wellSupported` under both standards.
+- **Its definition, read as what God does**, is asserted, not argued, against
+  Paul's gospel: Trent holds it as a premise.
+- **Its denial of sufficiency** is a critique of Luke 18's step under the
+  tradition standard only. Its one ground is the definition, which rests on the
+  council's word.
+
+The word question is settled where both sides' readings stand: at their
+premises. The lexical case holds the forensic sense as a premise cited to the
+lexicon; Trent holds the renewal sense, cited to itself and VanLandingham. By
+their meanings each denies the other, so against each other each is a rival
+reading, not an argument (`lexicalOnWordAssessment`). That is why the argued
+dissent on the word is Romans 4's, which reaches its verdict from the text.
+
+### Meaning postulates
+
+Some claims the atom type keeps apart are joined by their meanings: "δικαιόω is
+forensic — a verdict, and not making righteous" denies "Paul's δικαιόω denotes
+making righteous" in so many words. Every check here holds those joins as
+background (`Meanings.SolaFide.postulates`), the same for a dissent on either
+side, and they are exactly the exclusions the meanings contain
+(`Meanings.SolaFide.exclusions_from_meanings`). Without them, Trent's reading of
+the word would pass as granting a ground it denies.
+
 ### The hearing under each standard
 
 Which dissents are critiques decides who is heard, and how each step is weighed.
@@ -13041,6 +13087,327 @@ rendered to merits, is the council's own.
 theorem westminster_answers_from_the_texts :
     westminsterOnReward.restingOnAuthority = [] ∧
     trentOnReward.restingOnAuthority = [Claim.rewardRenderedToMerits]
+-- axioms: propext
+```
+
+#### Trent's definition, and faith's sufficiency
+
+<a id="trentSufficiencySource"></a>
+**`trentSufficiencySource`**
+
+Trent's step from its definition to the denial that faith suffices: if
+justification is the renewal of the inward man by infused charity, then faith,
+"unless hope and charity be added thereto, neither unites man perfectly with
+Christ" (Session VI, ch. 7), and whoever says that "nothing else is required to
+co-operate" is anathema (canon 9). Rated `disputed`: Luke 18 and Luke 7:50 are
+read by the Reformed as a plea that sufficed (`luke18Line`).
+
+```lean
+def trentSufficiencySource : Source :=
+  {
+    primary :=
+      Reference.work Bib.tannerDecrees
+        (Bib.Locus.sectionRef
+          "Trent, Session VI (1547), Decree on Justification, ch. 7; canon 9"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="trentSufficiencyLine"></a>
+**`trentSufficiencyLine`** — Faith does not suffice (Trent, ch. 7, canon 9)
+
+**Faith does not suffice, from Trent's definition** (ch. 7, canon 9): the
+definition, and the step from it. Trent's denial of sufficiency, stated as the
+library states it — a consequence of what Trent says justification is
+(`trentDefinitionSteps`).
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{33} \\
+\text{(2)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\[4pt]
+\vdash \quad &amp; \lnot P_{26}
+\end{aligned}
+\]
+</div>
+
+<a id="trentOnSufficiency"></a>
+**`trentOnSufficiency`** — Faith does not suffice (Trent, ch. 7, canon 9)
+
+Trent on faith's sufficiency, as a position of its own.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{33} \\
+\text{(2)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\[4pt]
+\vdash \quad &amp; \lnot P_{26}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="trentWordLine"></a>
+**`trentWordLine`** — Paul's word, as the Latin West read it (Augustine; Trent, ch. 8)
+
+**Paul's word, as the Latin West read it**: Augustine glossed "being
+justified" as "being made righteous", and Trent reads the Apostle so (ch. 8); so
+Paul's δικαιόω denotes the renewal of the inward man. The reading of Trent's
+definition as a claim about the word (`trentOnPaulsWord`), as a line.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{52} \\
+\text{(2)} \quad &amp; P_{52} \rightarrow P_{50} \\[4pt]
+\vdash \quad &amp; P_{50}
+\end{aligned}
+\]
+</div>
+
+<a id="trentOnTheWordOfPaul"></a>
+**`trentOnTheWordOfPaul`** — Paul's word, as the Latin West read it (Augustine; Trent, ch. 8)
+
+Trent's reading of Paul's word, as a position of its own.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{52} \\
+\text{(2)} \quad &amp; P_{52} \rightarrow P_{50} \\[4pt]
+\vdash \quad &amp; P_{50}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="gospelOnDefinitionAssessment"></a>
+**`gospelOnDefinitionAssessment`**
+
+**Paul's gospel, against Trent's definition read as what God does**: from
+Galatians 1:6–9, 2:21 and 5:2–4, 1 Corinthians 15:3, Romans 8:33–34 and the
+forensic sense of the verb. Every claim it asserts outright is a text or a
+reading argued from the lexicon; a critique under both standards.
+
+**Dissent:** *Paul's gospel (Galatians 1; Westminster XI.1)*, against *Trent: justification is the renewal of the inward man (ch. 7)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
+
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✔ yes | — |
+| tradition | ✔ yes | — |
+
+<a id="romansFourOnDefinitionAssessment"></a>
+**`romansFourOnDefinitionAssessment`**
+
+**Romans 4, against Trent's definition**: the righteousness God counts to the
+ungodly is sin not counted (4:5–8), and the verb is forensic. A critique under
+both standards.
+
+**Dissent:** *Romans 4:3–8*, against *Trent: justification is the renewal of the inward man (ch. 7)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
+
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✔ yes | — |
+| tradition | ✔ yes | — |
+
+<a id="romansFourOnWordAssessment"></a>
+**`romansFourOnWordAssessment`**
+
+**Romans 4, on Paul's word, against Trent's definition read as the word**:
+Paul glosses the righteousness God counts to the ungodly as sin not counted
+(4:5–8), and by the rule of least meaning his verb denotes no more than that
+verdict. It argues from Paul's own text, without assuming the forensic sense, so
+it is a critique under both standards — the strongest known against this
+reading.
+
+**Dissent:** *Romans 4:3–8, on Paul's word*, against *Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
+
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✔ yes | — |
+| tradition | ✔ yes | — |
+
+<a id="lexicalOnWordAssessment"></a>
+**`lexicalOnWordAssessment`**
+
+**The lexical case, against Trent's definition read as the word**: it holds
+as a premise that Paul's δικαιόω is forensic — a verdict, and *not* making
+righteous — and that premise, by its meaning, already denies Trent's reading
+(`Meanings.SolaFide.postulates`). So against this reading it is a rival
+reading held as a premise, not an argument: by the checks, a disagreement. What
+it rests on is the lexicon, and its standing is that premise's own rating,
+where the library weighs the word; Trent's reading stands in the same place
+against it (`trentWordOnLexicalAssessment`).
+
+**Dissent:** *Paul's word (by the rule of least meaning)*, against *Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)*. ✘ A disagreement, not a critique: what it asserts outright already contradicts the step's conclusion, so no step of its own argues it.
+
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✘ no | — |
+| tradition | ✘ no | — |
+
+<a id="luke18OnSufficiencyAssessment"></a>
+**`luke18OnSufficiencyAssessment`**
+
+**Luke 18, against Trent's step to "faith does not suffice"**: the tax
+collector's plea, without works, and God's verdict. It can be held with Trent's
+definition, the step's ground, and argues that the plea sufficed. A critique
+under both standards.
+
+**Dissent:** *Luke 18:9–14 (the tax collector justified)*, against *Faith does not suffice (Trent, ch. 7, canon 9)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
+
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✔ yes | — |
+| tradition | ✔ yes | — |
+
+<a id="definitionPremise"></a>
+**`definitionPremise`**
+
+**Trent's definition, rated by its register**: Paul's gospel and Romans 4.
+
+**The rating, computed.** *Trent: justification is the renewal of the inward man (ch. 7)* is cited at *disputed* ([`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11). Dissents encoded: *Paul's gospel (Galatians 1; Westminster XI.1)*, *Romans 4:3–8*. The strongest known: *Paul's gospel (Galatians 1; Westminster XI.1)*.
+
+| Standard | Rating | Why |
+|---|---|---|
+| evidence | **disputed** | a credible critique: Paul's gospel (Galatians 1; Westminster XI.1); Romans 4:3–8 |
+| tradition | **disputed** | a credible critique: Paul's gospel (Galatians 1; Westminster XI.1); Romans 4:3–8 |
+
+<a id="wordPremise"></a>
+**`wordPremise`**
+
+**Trent's reading of Paul's word, rated by its register**: Romans 4 on the
+word, the strongest known, and the lexical case.
+
+**The rating, computed.** *Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)* is cited at *disputed* ([`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../bibliography.md#vanlandingham-judgment-justification-2006)). Dissents encoded: *Romans 4:3–8, on Paul's word*, *Paul's word (by the rule of least meaning)*. The strongest known: *Romans 4:3–8, on Paul's word*.
+
+| Standard | Rating | Why |
+|---|---|---|
+| evidence | **disputed** | a credible critique: Romans 4:3–8, on Paul's word |
+| tradition | **disputed** | a credible critique: Romans 4:3–8, on Paul's word |
+
+<a id="sufficiencyStep"></a>
+**`sufficiencyStep`**
+
+**Trent's step to "faith does not suffice", rated by its register**: Luke
+18.
+
+**The rating, computed.** *Faith does not suffice (Trent, ch. 7, canon 9)* is cited at *disputed* ([`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; canon 9). Dissents encoded: *Luke 18:9–14 (the tax collector justified)*. The strongest known: *Luke 18:9–14 (the tax collector justified)*.
+
+| Standard | Rating | Why |
+|---|---|---|
+| evidence | **disputed** | a credible critique: Luke 18:9–14 (the tax collector justified) |
+| tradition | **disputed** | a credible critique: Luke 18:9–14 (the tax collector justified) |
+
+<a id="trent_definition_ratings"></a>
+**`trent_definition_ratings`**
+
+**Trent's definition, and what follows from it, are disputed under both
+standards.** Read as what God does, the definition meets Paul's gospel and
+Romans 4. Read as Paul's word, it meets Romans 4's gloss of the verb. Its step
+to "faith does not suffice" meets Luke 18. Each is argued from texts and from
+evidence anyone can check, so each is a critique under either standard.
+
+```lean
+theorem trent_definition_ratings : definitionPremise.ratings =
+    [(Standard.evidence, Computed.disputedBy ["Paul's gospel (Galatians 1;
+    Westminster XI.1)", "Romans 4:3–8"]), (Standard.tradition,
+    Computed.disputedBy ["Paul's gospel (Galatians 1; Westminster XI.1)",
+    "Romans 4:3–8"])] ∧ wordPremise.ratings = [(Standard.evidence,
+    Computed.disputedBy ["Romans 4:3–8, on Paul's word"]),
+    (Standard.tradition, Computed.disputedBy ["Romans 4:3–8, on Paul's
+    word"])] ∧ sufficiencyStep.ratings = [(Standard.evidence,
+    Computed.disputedBy ["Luke 18:9–14 (the tax collector justified)"]),
+    (Standard.tradition, Computed.disputedBy ["Luke 18:9–14 (the tax collector
+    justified)"])]
+-- axioms: propext
+```
+
+<a id="trentWordOnLexicalAssessment"></a>
+**`trentWordOnLexicalAssessment`**
+
+**Trent's word, against the lexical step**: the Latin West's reading of
+Paul's verb. It argues its conclusion from Augustine's gloss — but what it
+concludes, that Paul's δικαιόω denotes making righteous, is what the step's
+first ground denies: "forensic", in that ground, means a verdict *and not*
+making righteous (`Meanings.SolaFide.postulates`). So it is a dissent from that
+ground, not from the step, and belongs to the ground's rating, under either
+standard.
+
+**Dissent:** *Trent, with Augustine (ch. 8)*, against *Paul's word (δικαιόω, by the rule of least meaning)*. ✘ A dissent from the step's grounds, not from the step: it denies one of them.
+
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✘ no | — |
+| tradition | ✘ no | — |
+
+<a id="trentGraceOnGospelAssessment"></a>
+**`trentGraceOnGospelAssessment`**
+
+**Trent's definition read as what God does, against Paul's gospel step**: it
+holds the definition as a premise, and that premise alone contradicts the step's
+conclusion. A disagreement, not a critique, under either standard.
+
+**Dissent:** *Trent, read as what God does (ch. 7; Joint Declaration §22)*, against *Paul's gospel: a verdict on a finished work is no renewal*. ✘ A disagreement, not a critique: what it asserts outright already contradicts the step's conclusion, so no step of its own argues it.
+
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✘ no | Justification is not remission of sins only, but renewal of the inward man; The inward renewal of the justified grows as they do good works in grace |
+| tradition | ✘ no | — |
+
+<a id="trentSufficiencyOnLuke18Assessment"></a>
+**`trentSufficiencyOnLuke18Assessment`**
+
+**Trent's denial of sufficiency, against Luke 18's step**: argued, from its
+definition, and granting the parable. Its one ground is the definition, which
+rests on the council's word; so it is a critique under the tradition standard
+only.
+
+**Dissent:** *Trent, ch. 7 and canon 9*, against *Luke 18:9–14 (the tax collector justified)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
+
+| Standard | A credible critique? | Rests on what the standard does not accept |
+|---|---|---|
+| evidence | ✘ no | Justification is not remission of sins only, but renewal of the inward man |
+| tradition | ✔ yes | — |
+
+<a id="lexicalWordStep"></a>
+**`lexicalWordStep`**
+
+**Paul's word, rated by its register**: Trent's reading of the word, the
+strongest known dissent.
+
+**The rating, computed.** *Paul's word (δικαιόω, by the rule of least meaning)* is cited at *well supported* ([`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)). Dissents encoded: *Trent, with Augustine (ch. 8)*. The strongest known: *Trent, with Augustine (ch. 8)*.
+
+| Standard | Rating | Why |
+|---|---|---|
+| evidence | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
+| tradition | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
+
+<a id="trent_dissents_from_the_definition_steps"></a>
+**`trent_dissents_from_the_definition_steps`**
+
+**The same checks, from Trent's side.** Of Trent's three dissents from the
+Reformed steps over its definition:
+
+- its reading of Paul's word dissents from the lexical step's ground, not from
+  the step;
+- its definition read as what God does is asserted, not argued, against Paul's
+  gospel;
+- its denial of sufficiency is a critique of Luke 18's step under the tradition
+  standard only, because its one ground is the definition.
+
+So the lexical step's support stands at `wellSupported` under both standards:
+its strongest known dissent is encoded, and fails.
+
+```lean
+theorem trent_dissents_from_the_definition_steps :
+    trentWordOnLexicalAssessment.findings.kind = Findings.Kind.deniesGrounds ∧
+    trentGraceOnGospelAssessment.findings.kind = Findings.Kind.asserted ∧
+    trentSufficiencyOnLuke18Assessment.profile = [(Standard.evidence, false),
+    (Standard.tradition, true)] ∧ lexicalWordStep.ratings =
+    [(Standard.evidence, Computed.stands Confidence.wellSupported),
+    (Standard.tradition, Computed.stands Confidence.wellSupported)]
 -- axioms: propext
 ```
 

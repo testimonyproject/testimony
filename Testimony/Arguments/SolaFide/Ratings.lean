@@ -1,6 +1,9 @@
 import Testimony.Arguments.SolaFide.Vulgate
 import Testimony.Logic.Credibility
 import Testimony.Logic.Contest
+import Testimony.Meanings.SolaFide
+import Testimony.Arguments.SolaFide.Definition
+import Testimony.Arguments.SolaFide.JesusWords
 
 /-!
 # Arguments.SolaFide.Ratings — which dissents from the James steps are critiques
@@ -102,6 +105,52 @@ critiques under either standard. Trent's dissents from the Reformed step are
 critiques only under the standard that admits the council's word. Neither side's
 step is proved right by this. What differs is what each side's dissent rests on.
 
+## Trent's definition, and faith's sufficiency
+
+Trent's definition — justification is not remission of sins only, but the
+renewal of the inward man (ch. 7) — can be read two ways
+(`whatTrentsDefinitionClaims`), and Trent draws from it that faith does not
+suffice (ch. 7, canon 9). The checks run on each, in both directions.
+
+From the Reformed side, each is a critique under **both** standards
+(`trent_definition_ratings`):
+
+- Paul's gospel and Romans 4 against the definition, read as what God does;
+- Romans 4, glossing Paul's verb by Paul's own text, against the definition read
+  as Paul's word;
+- Luke 18 against the step to "faith does not suffice".
+
+So each of Trent's three claims is `disputed` under both standards.
+
+From Trent's side (`trent_dissents_from_the_definition_steps`):
+
+- **Its reading of Paul's word** dissents from the lexical step's ground, not
+  from the step. "Forensic", in that ground, means a verdict *and not* making
+  righteous, so what Trent concludes is what the ground denies. The lexical
+  step's support stands at `wellSupported` under both standards.
+- **Its definition, read as what God does**, is asserted, not argued, against
+  Paul's gospel: Trent holds it as a premise.
+- **Its denial of sufficiency** is a critique of Luke 18's step under the
+  tradition standard only. Its one ground is the definition, which rests on the
+  council's word.
+
+The word question is settled where both sides' readings stand: at their
+premises. The lexical case holds the forensic sense as a premise cited to the
+lexicon; Trent holds the renewal sense, cited to itself and VanLandingham. By
+their meanings each denies the other, so against each other each is a rival
+reading, not an argument (`lexicalOnWordAssessment`). That is why the argued
+dissent on the word is Romans 4's, which reaches its verdict from the text.
+
+## Meaning postulates
+
+Some claims the atom type keeps apart are joined by their meanings: "δικαιόω is
+forensic — a verdict, and not making righteous" denies "Paul's δικαιόω denotes
+making righteous" in so many words. Every check here holds those joins as
+background (`Meanings.SolaFide.postulates`), the same for a dissent on either
+side, and they are exactly the exclusions the meanings contain
+(`Meanings.SolaFide.exclusions_from_meanings`). Without them, Trent's reading of
+the word would pass as granting a ground it denies.
+
 ## The hearing under each standard
 
 Which dissents are critiques decides who is heard, and how each step is weighed.
@@ -159,7 +208,8 @@ def canon24Assessment : Assessment Claim where
   dissent :=
     { claim := p .worksAreFruitNotGround
     , grounds := fruitLine.grounds
-    , position := catholicJamesOnWorks }
+    , position := catholicJamesOnWorks
+    , background := Meanings.SolaFide.postulates }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, [.worksCauseIncreaseOfJustification]), (.tradition, [])] }
@@ -177,7 +227,8 @@ def rewardAssessment : Assessment Claim where
   dissent :=
     { claim := p .worksAreFruitNotGround
     , grounds := fruitLine.grounds
-    , position := trentOnReward }
+    , position := trentOnReward
+    , background := Meanings.SolaFide.postulates }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, [.rewardRenderedToMerits]), (.tradition, [])] }
@@ -193,7 +244,8 @@ def trentWordAssessment : Assessment Claim where
   dissent :=
     { claim := notP .jamesJustifyDenotesIncrease
     , grounds := jamesLexicalLine.grounds
-    , position := catholicJamesOnTheWord }
+    , position := catholicJamesOnTheWord
+    , background := Meanings.SolaFide.postulates }
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
     , unadmitted := [(.evidence, [.jamesJustifyDenotesIncrease]), (.tradition, [])] }
@@ -209,7 +261,8 @@ def renewalAssessment : Assessment Claim where
   dissent :=
     { claim := notP .jamesJustifyDenotesIncrease
     , grounds := jamesLexicalLine.grounds
-    , position := renewalOnTheWord }
+    , position := renewalOnTheWord
+    , background := Meanings.SolaFide.postulates }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, [.jamesUsesDikaioAsPaul]), (.tradition, [])] }
@@ -297,7 +350,8 @@ def westminsterAssessment : Assessment Claim where
   against := "Trent: the reward is rendered to merits (ch. 16, canon 32)"
   dissent :=
     { claim := p .rewardRenderedToMerits
-    , position := westminsterOnReward }
+    , position := westminsterOnReward
+    , background := Meanings.SolaFide.postulates }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -315,7 +369,8 @@ def harmonyOnCanon24Assessment : Assessment Claim where
   dissent :=
     { claim := notP .worksAreFruitNotGround
     , grounds := catholicJamesWorksLine.grounds
-    , position := jamesHarmonyCase }
+    , position := jamesHarmonyCase
+    , background := Meanings.SolaFide.postulates }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -332,7 +387,8 @@ def harmonyOnRewardAssessment : Assessment Claim where
   dissent :=
     { claim := notP .worksAreFruitNotGround
     , grounds := trentRewardLine.grounds
-    , position := jamesHarmonyCase }
+    , position := jamesHarmonyCase
+    , background := Meanings.SolaFide.postulates }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, [])] }
@@ -395,6 +451,271 @@ theorem westminster_answers_from_the_texts :
     westminsterOnReward.restingOnAuthority = [] ∧
       trentOnReward.restingOnAuthority = [.rewardRenderedToMerits] := by
   decide
+
+/-! ### Trent's definition, and faith's sufficiency -/
+
+/-- Trent's step from its definition to the denial that faith suffices: if
+justification is the renewal of the inward man by infused charity, then faith,
+"unless hope and charity be added thereto, neither unites man perfectly with
+Christ" (Session VI, ch. 7), and whoever says that "nothing else is required to
+co-operate" is anathema (canon 9). Rated `disputed`: Luke 18 and Luke 7:50 are
+read by the Reformed as a plea that sufficed (`luke18Line`). -/
+def trentSufficiencySource : Source :=
+  { primary := .work tannerDecrees
+      (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7; canon 9")
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- **Faith does not suffice, from Trent's definition** (ch. 7, canon 9): the
+definition, and the step from it. Trent's denial of sufficiency, stated as the
+library states it — a consequence of what Trent says justification is
+(`trentDefinitionSteps`). -/
+@[solaFideDefs]
+def trentSufficiencyLine : Line Claim :=
+  { name := "Faith does not suffice (Trent, ch. 7, canon 9)"
+  , grounds := [p .justificationIncludesSanctification]
+  , step := p .justificationIncludesSanctification ➝ notP .faithIsSufficient
+  , delivers := notP .faithIsSufficient
+  , inference := some trentSufficiencySource }
+
+/-- Trent on faith's sufficiency, as a position of its own. -/
+@[solaFideDefs]
+def trentOnSufficiency : ArgumentPackage Claim :=
+  trentSufficiencyLine.asPackage baseCite "Faith does not suffice"
+
+/-- **Paul's word, as the Latin West read it**: Augustine glossed "being
+justified" as "being made righteous", and Trent reads the Apostle so (ch. 8); so
+Paul's δικαιόω denotes the renewal of the inward man. The reading of Trent's
+definition as a claim about the word (`trentOnPaulsWord`), as a line. -/
+@[solaFideDefs]
+def trentWordLine : Line Claim :=
+  { name := "Paul's word, as the Latin West read it (Augustine; Trent, ch. 8)"
+  , grounds := [p .augustineReadsJustifyAsMakeRighteous]
+  , step := p .augustineReadsJustifyAsMakeRighteous ➝ p .paulsJustifyDenotesRenewal
+  , delivers := p .paulsJustifyDenotesRenewal
+  , inference := some trentReadsPaulsWord }
+
+/-- Trent's reading of Paul's word, as a position of its own. -/
+@[solaFideDefs]
+def trentOnTheWordOfPaul : ArgumentPackage Claim :=
+  trentWordLine.asPackage baseCite "Paul's δικαιόω denotes renewal"
+
+/-- **Paul's gospel, against Trent's definition read as what God does**: from
+Galatians 1:6–9, 2:21 and 5:2–4, 1 Corinthians 15:3, Romans 8:33–34 and the
+forensic sense of the verb. Every claim it asserts outright is a text or a
+reading argued from the lexicon; a critique under both standards. -/
+def gospelOnDefinitionAssessment : Assessment Claim where
+  dissenter := "Paul's gospel (Galatians 1; Westminster XI.1)"
+  against := "Trent: justification is the renewal of the inward man (ch. 7)"
+  dissent :=
+    { claim := p .justificationIncludesSanctification
+    , position := galatianGospel
+    , background := Meanings.SolaFide.postulates }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **Romans 4, against Trent's definition**: the righteousness God counts to the
+ungodly is sin not counted (4:5–8), and the verb is forensic. A critique under
+both standards. -/
+def romansFourOnDefinitionAssessment : Assessment Claim where
+  dissenter := "Romans 4:3–8"
+  against := "Trent: justification is the renewal of the inward man (ch. 7)"
+  dissent :=
+    { claim := p .justificationIncludesSanctification
+    , position := romansFourCase
+    , background := Meanings.SolaFide.postulates }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **Romans 4, on Paul's word, against Trent's definition read as the word**:
+Paul glosses the righteousness God counts to the ungodly as sin not counted
+(4:5–8), and by the rule of least meaning his verb denotes no more than that
+verdict. It argues from Paul's own text, without assuming the forensic sense, so
+it is a critique under both standards — the strongest known against this
+reading. -/
+def romansFourOnWordAssessment : Assessment Claim where
+  dissenter := "Romans 4:3–8, on Paul's word"
+  against := "Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)"
+  dissent :=
+    { claim := p .paulsJustifyDenotesRenewal
+    , position := romansFourOnTheWord
+    , background := Meanings.SolaFide.postulates }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **The lexical case, against Trent's definition read as the word**: it holds
+as a premise that Paul's δικαιόω is forensic — a verdict, and *not* making
+righteous — and that premise, by its meaning, already denies Trent's reading
+(`Meanings.SolaFide.postulates`). So against this reading it is a rival
+reading held as a premise, not an argument: by the checks, a disagreement. What
+it rests on is the lexicon, and its standing is that premise's own rating,
+where the library weighs the word; Trent's reading stands in the same place
+against it (`trentWordOnLexicalAssessment`). -/
+def lexicalOnWordAssessment : Assessment Claim where
+  dissenter := "Paul's word (by the rule of least meaning)"
+  against := "Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)"
+  dissent :=
+    { claim := p .paulsJustifyDenotesRenewal
+    , position := lexicalCase
+    , background := Meanings.SolaFide.postulates }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **Luke 18, against Trent's step to "faith does not suffice"**: the tax
+collector's plea, without works, and God's verdict. It can be held with Trent's
+definition, the step's ground, and argues that the plea sufficed. A critique
+under both standards. -/
+def luke18OnSufficiencyAssessment : Assessment Claim where
+  dissenter := "Luke 18:9–14 (the tax collector justified)"
+  against := trentSufficiencyLine.name
+  dissent :=
+    { claim := notP .faithIsSufficient
+    , grounds := trentSufficiencyLine.grounds
+    , position := luke18Case
+    , background := Meanings.SolaFide.postulates }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **Trent's definition, rated by its register**: Paul's gospel and Romans 4. -/
+def definitionPremise : RatedStep Claim where
+  step := "Trent: justification is the renewal of the inward man (ch. 7)"
+  support := (baseCite .justificationIncludesSanctification).source
+  register := [gospelOnDefinitionAssessment, romansFourOnDefinitionAssessment]
+  strongest := some 0
+
+/-- **Trent's reading of Paul's word, rated by its register**: Romans 4 on the
+word, the strongest known, and the lexical case. -/
+def wordPremise : RatedStep Claim where
+  step := "Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)"
+  support := (baseCite .paulsJustifyDenotesRenewal).source
+  register := [romansFourOnWordAssessment, lexicalOnWordAssessment]
+  strongest := some 0
+
+/-- **Trent's step to "faith does not suffice", rated by its register**: Luke
+18. -/
+def sufficiencyStep : RatedStep Claim where
+  step := trentSufficiencyLine.name
+  support := trentSufficiencySource
+  register := [luke18OnSufficiencyAssessment]
+  strongest := some 0
+
+/-- **Trent's definition, and what follows from it, are disputed under both
+standards.** Read as what God does, the definition meets Paul's gospel and
+Romans 4. Read as Paul's word, it meets Romans 4's gloss of the verb. Its step
+to "faith does not suffice" meets Luke 18. Each is argued from texts and from
+evidence anyone can check, so each is a critique under either standard. -/
+@[headline]
+theorem trent_definition_ratings :
+    definitionPremise.ratings =
+        [ (.evidence, .disputedBy
+            ["Paul's gospel (Galatians 1; Westminster XI.1)", "Romans 4:3–8"])
+        , (.tradition, .disputedBy
+            ["Paul's gospel (Galatians 1; Westminster XI.1)", "Romans 4:3–8"]) ] ∧
+      wordPremise.ratings =
+        [ (.evidence, .disputedBy ["Romans 4:3–8, on Paul's word"])
+        , (.tradition, .disputedBy ["Romans 4:3–8, on Paul's word"]) ] ∧
+      sufficiencyStep.ratings =
+        [ (.evidence, .disputedBy ["Luke 18:9–14 (the tax collector justified)"])
+        , (.tradition, .disputedBy ["Luke 18:9–14 (the tax collector justified)"]) ] := by
+  decide +kernel
+
+#print axioms trent_definition_ratings
+
+/-- **Trent's word, against the lexical step**: the Latin West's reading of
+Paul's verb. It argues its conclusion from Augustine's gloss — but what it
+concludes, that Paul's δικαιόω denotes making righteous, is what the step's
+first ground denies: "forensic", in that ground, means a verdict *and not*
+making righteous (`Meanings.SolaFide.postulates`). So it is a dissent from that
+ground, not from the step, and belongs to the ground's rating, under either
+standard. -/
+def trentWordOnLexicalAssessment : Assessment Claim where
+  dissenter := "Trent, with Augustine (ch. 8)"
+  against := lexicalLine.name
+  dissent :=
+    { claim := notP .paulsJustifyDenotesRenewal
+    , grounds := lexicalLine.grounds
+    , position := trentOnTheWordOfPaul
+    , background := Meanings.SolaFide.postulates }
+  findings :=
+    { consistent := true, denies := true, grants := false, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **Trent's definition read as what God does, against Paul's gospel step**: it
+holds the definition as a premise, and that premise alone contradicts the step's
+conclusion. A disagreement, not a critique, under either standard. -/
+def trentGraceOnGospelAssessment : Assessment Claim where
+  dissenter := "Trent, read as what God does (ch. 7; Joint Declaration §22)"
+  against := "Paul's gospel: a verdict on a finished work is no renewal"
+  dissent :=
+    { claim := notP .justificationIncludesSanctification
+    , grounds := [p .christsWorkIsTheWholeGround, p .dikaioIsForensic, p .romans8_33_34]
+    , position := tridentineOnWhatGodDoes
+    , background := Meanings.SolaFide.postulates }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
+    , unadmitted :=
+        [ (.evidence, [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks])
+        , (.tradition, []) ] }
+  checked := by decide +kernel
+
+/-- **Trent's denial of sufficiency, against Luke 18's step**: argued, from its
+definition, and granting the parable. Its one ground is the definition, which
+rests on the council's word; so it is a critique under the tradition standard
+only. -/
+def trentSufficiencyOnLuke18Assessment : Assessment Claim where
+  dissenter := "Trent, ch. 7 and canon 9"
+  against := luke18Line.name
+  dissent :=
+    { claim := p .faithIsSufficient
+    , grounds := luke18Line.grounds
+    , position := trentOnSufficiency
+    , background := Meanings.SolaFide.postulates }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, [.justificationIncludesSanctification]), (.tradition, [])] }
+  checked := by decide +kernel
+
+/-- **Paul's word, rated by its register**: Trent's reading of the word, the
+strongest known dissent. -/
+def lexicalWordStep : RatedStep Claim where
+  step := lexicalLine.name
+  support := leastMeaningSource
+  register := [trentWordOnLexicalAssessment]
+  strongest := some 0
+
+/-- **The same checks, from Trent's side.** Of Trent's three dissents from the
+Reformed steps over its definition:
+
+- its reading of Paul's word dissents from the lexical step's ground, not from
+  the step;
+- its definition read as what God does is asserted, not argued, against Paul's
+  gospel;
+- its denial of sufficiency is a critique of Luke 18's step under the tradition
+  standard only, because its one ground is the definition.
+
+So the lexical step's support stands at `wellSupported` under both standards:
+its strongest known dissent is encoded, and fails. -/
+@[headline]
+theorem trent_dissents_from_the_definition_steps :
+    trentWordOnLexicalAssessment.findings.kind = .deniesGrounds ∧
+      trentGraceOnGospelAssessment.findings.kind = .asserted ∧
+      trentSufficiencyOnLuke18Assessment.profile = [(.evidence, false), (.tradition, true)] ∧
+      lexicalWordStep.ratings =
+        [(.evidence, .stands .wellSupported), (.tradition, .stands .wellSupported)] := by
+  decide +kernel
+
+#print axioms trent_dissents_from_the_definition_steps
 
 /-! ### The hearing under each standard -/
 

@@ -438,7 +438,8 @@ def howellAssessment : Assessment Claim where
   dissent :=
     { claim := p .jamesFaithIsNotReformedFaith
     , grounds := Arguments.SolaFide.jamesFaithLine.grounds
-    , position := howellCase }
+    , position := howellCase
+    , background := Meanings.SolaFide.postulates }
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := true
     , unadmitted := [(.evidence, []), (.tradition, [])] }
