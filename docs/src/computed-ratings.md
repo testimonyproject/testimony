@@ -88,6 +88,26 @@ dissent has a concrete thing to add: a position, with grounds, that the engine w
 states a step's rating under each standard, and an article can argue from whichever standard
 it prefers. It cannot hide the preference: the other standard's rating is on the same line.
 
+## Meaning postulates
+
+Some claims the atom type keeps apart are joined by their meanings. "In Paul, δικαιόω is
+forensic: a verdict, and *not* making righteous" denies, in so many words, "Paul's δικαιόω
+denotes making righteous". A propositional check cannot see that: the two are separate atoms.
+So each check holds the argument's **meaning postulates** as background. For every pair where
+one claim's meaning denies another's, the postulate is `a → ¬b`
+(`HasMeanings.postulates`).
+
+Sola fide has four such pairs, pinned to the meanings layer by a theorem
+(`exclusions_from_meanings`):
+- Paul's word as renewal, against the forensic sense;
+- Trent's Latin of Revelation 22:11, against the Greek;
+- Trent's Latin of Sirach 18:22, against the Greek;
+- "James's δικαιόω is Paul's", against "James 2:24 is compatible with Paul".
+
+Every dissent gets the same background, whichever side it is on. Without the postulates,
+Trent's reading of Paul's word would pass as granting the lexical step's forensic ground,
+which it denies.
+
 ## Stating the bridge
 
 The standards check what a dissent *asserts*, not its step, because every step on every side
@@ -127,6 +147,13 @@ a verdict and a rating cannot disagree about which standard they assume.
 | The reward is rendered to merits (Trent, ch. 16) | Westminster XVI.5, XVI.6 | credible | credible | every asserted claim is a text it cites |
 | Works cause the increase, not merely fruit (canon 24) | The Reformed harmony | credible | credible | argued from Westminster's proof texts |
 | Works are not merely fruit (Trent, ch. 16) | The Reformed harmony | credible | credible | argued from Westminster's proof texts |
+| Justification is renewal (Trent, ch. 7) | Paul's gospel; Romans 4 | credible | credible | argued from the texts |
+| Paul's δικαιόω denotes renewal (Trent, ch. 8) | Romans 4, on Paul's word | credible | credible | glosses the verb by Paul's text |
+| Paul's δικαιόω denotes renewal (Trent, ch. 8) | The lexical case | not credible | not credible | holds the forensic sense as a premise: a rival reading |
+| Faith does not suffice (Trent, ch. 7, canon 9) | Luke 18:9–14 | credible | credible | argued from the parable |
+| Paul's δικαιόω is not renewal (`lexicalLine`) | Trent, with Augustine | not credible | not credible | denies the step's forensic ground |
+| A verdict on a finished work is no renewal | Trent, read as what God does | not credible | not credible | holds the definition as a premise |
+| Faith suffices (`luke18Line`) | Trent, ch. 7, canon 9 | not credible | credible | its one ground, the definition, rests on Trent |
 
 Each row is rendered on the generated page with ✔ or ✘ under each standard, and with the
 claims a standard does not admit named. Disagreements are marked as disagreements.
@@ -186,6 +213,21 @@ claims a standard does not admit named. Disagreements are marked as disagreement
 **Disagreements, not critiques.** Trent's reading of James's word and Howell's move each hold
 the denial they need as a premise (`trent_on_the_word_is_asserted`,
 `howell_asserts_his_denial`).
+
+**Trent's definition, and faith's sufficiency.**
+- **The Reformed dissents.** Paul's gospel and Romans 4 against the definition, Romans 4 against
+  its reading as Paul's word, and Luke 18 against the step to "faith does not suffice" are each
+  a credible critique under both standards. So each of those claims of Trent's is `disputed`
+  under both (`trent_definition_ratings`).
+- **Trent's dissents** (`trent_dissents_from_the_definition_steps`). Its reading of Paul's word
+  dissents from the lexical step's ground, not the step, so that step's support stands at
+  `wellSupported` under both standards. Its definition read as what God does is asserted, not
+  argued. Its denial of sufficiency is a critique of Luke 18 under the tradition standard only.
+- **On the word itself, both sides hold their reading as a premise.** The lexical case holds
+  the forensic sense, cited to the lexicon; Trent holds the renewal sense, cited to itself and
+  VanLandingham. Against each other, each is a rival reading, so the question is weighed at
+  those premises' ratings. The argued dissent is Romans 4's, which glosses the verb by Paul's
+  own text.
 
 ## Phase two: every dispute weighs computed ratings
 

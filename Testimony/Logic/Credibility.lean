@@ -45,6 +45,15 @@ It names the choice as a **standard** and computes under each:
 A page reports both. A rating that differs between them is a rating that turns
 on the authority question, and the page says so.
 
+## Meaning postulates
+
+Two claims the atom type keeps apart can be joined by their meanings: one may
+assert, in so many words, the denial of the other. A dissent's `background`
+holds those joins — the argument's meaning postulates
+(`Testimony.Semantics.HasMeanings.postulates`) — and every check holds them, so
+a dissent cannot pass as granting a ground its conclusion denies by meaning. An
+argument gives every dissent the same background, whichever side it is on.
+
 ## One assessment, every standard
 
 An `Assessment` runs the checks once and records what they find under every
@@ -137,6 +146,11 @@ structure Dissent (α : Type) where
   grounds : List (Formula α) := []
   /-- The dissenting position. -/
   position : ArgumentPackage α
+  /-- What every check holds besides: the argument's meaning postulates, which
+  let the logic see that two claims the meanings join cannot both hold
+  (`Testimony.Semantics.HasMeanings.postulates`). The same for every dissent in
+  an argument, whichever side it is on. -/
+  background : List (Formula α) := []
 
 namespace Dissent
 
@@ -169,13 +183,13 @@ claim; it grants the grounds; it argues the denial by a step of its own; and its
 grounds meet the standard. -/
 structure Credible (std : Standard) (d : Dissent α) : Prop where
   /-- Its premises have a model. -/
-  consistent : Satisfiable d.position.premises
+  consistent : Satisfiable (d.position.premises ++ d.background)
   /-- It denies the claim. -/
-  denies : ¬ Satisfiable (d.position.premises ++ [d.claim])
+  denies : ¬ Satisfiable (d.position.premises ++ d.background ++ [d.claim])
   /-- It can be held with the step's grounds. -/
-  grants : Satisfiable (d.position.premises ++ d.grounds)
+  grants : Satisfiable (d.position.premises ++ d.background ++ d.grounds)
   /-- What it asserts outright does not already deny the claim. -/
-  argued : Satisfiable (d.asserted ++ [d.claim])
+  argued : Satisfiable (d.asserted ++ d.background ++ [d.claim])
   /-- Its grounds meet the standard. -/
   meetsStandard : d.meets std = true
 
@@ -243,10 +257,10 @@ variable [DecidableEq α]
 /-- **The checks, run** by the engine under every standard; `none` when a check
 is undecided. -/
 def findings? (d : Dissent α) : Option (Findings α) := do
-  let c ← satisfiable? d.position.premises
-  let n ← satisfiable? (d.position.premises ++ [d.claim])
-  let g ← satisfiable? (d.position.premises ++ d.grounds)
-  let a ← satisfiable? (d.asserted ++ [d.claim])
+  let c ← satisfiable? (d.position.premises ++ d.background)
+  let n ← satisfiable? (d.position.premises ++ d.background ++ [d.claim])
+  let g ← satisfiable? (d.position.premises ++ d.background ++ d.grounds)
+  let a ← satisfiable? (d.asserted ++ d.background ++ [d.claim])
   pure { consistent := c, denies := !n, grants := g, argued := a
        , bareDenial := d.assertsDenial
        , unadmitted := Standard.all.map fun s => (s, d.unadmitted s) }
