@@ -97,7 +97,9 @@ the reading, and it is encoded as one: cited to whoever states it, and checked l
 Trent's chapter 16 is the first case: "we must believe" that the reward is rendered to merits.
 
 The rule cuts both ways. A Reformed step that needs a claim its texts do not make must state
-that claim too, and it will be checked the same way ([#138][reformed]).
+that claim too, and it is checked the same way. Westminster's answer to chapter 16 was checked
+so: every claim it asserts outright is a text it gives as a proof, and only its step, a reading,
+is its own (`westminster_answers_from_the_texts`).
 
 ## Hearings under a standard
 
@@ -122,6 +124,9 @@ a verdict and a rating cannot disagree about which standard they assume.
 | James's δικαιόω is not the increase (`jamesLexicalLine`) | Trent, on the word | not credible | not credible | asserts the increase as a premise |
 | James's δικαιόω is not the increase (`jamesLexicalLine`) | The renewal reading | not credible | credible | "James's word is Paul's" rests on Trent alone |
 | James's faith is not the Reformers' (`jamesFaithLine`) | Howell (2003) | not credible | not credible | asserts the denial as a premise |
+| The reward is rendered to merits (Trent, ch. 16) | Westminster XVI.5, XVI.6 | credible | credible | every asserted claim is a text it cites |
+| Works cause the increase, not merely fruit (canon 24) | The Reformed harmony | credible | credible | argued from Westminster's proof texts |
+| Works are not merely fruit (Trent, ch. 16) | The Reformed harmony | credible | credible | argued from Westminster's proof texts |
 
 Each row is rendered on the generated page with ✔ or ✘ under each standard, and with the
 claims a standard does not admit named. Disagreements are marked as disagreements.
@@ -160,8 +165,23 @@ claims a standard does not admit named. Disagreements are marked as disagreement
   hearing forces the Reformed harmony. Under the tradition standard it is contested.
 - **What this does not show.** It shows that Trent's denial does not stand on Scripture and
   evidence alone. It does not show that the reward texts teach the Reformed reading: they
-  teach neither side's account of merit without a further claim. Westminster's own answer
-  (XVI.6) gets the same checks in [#138][reformed].
+  teach neither side's account of merit without a further claim.
+
+**The same checks, run the other way.**
+- **Westminster's answer to chapter 16's merit premise.** It argues from Hebrews 6:10 (a proof
+  of XVI.6, and one of Trent's own four texts), Luke 17:10, Romans 4:4–5 and 1 Peter 2:5. It
+  concludes that the reward is of grace, not rendered to merits. It is a credible critique under
+  both standards.
+- **The Reformed harmony against canon 24's step and chapter 16's.** It is a credible critique
+  under both standards.
+- **So each of Trent's claims is `disputed` under both** (`rome_steps_ratings`). Set beside
+  `fruit_step_ratings`, that is the asymmetry the checks find. The Reformed dissents from
+  Trent are critiques under either standard, while Trent's dissents from the Reformed step are
+  critiques only where the council's word is admitted. Neither side's step is proved right by
+  this. What differs is what each dissent rests on.
+- **The hearings.** Under the evidence standard, the hearing forces Westminster's answer
+  along with the harmony. Under the tradition standard, Westminster's answer and chapter 16
+  defeat each other, and neither is forced.
 
 **Disagreements, not critiques.** Trent's reading of James's word and Howell's move each hold
 the denial they need as a premise (`trent_on_the_word_is_asserted`,
@@ -219,7 +239,6 @@ costs if that argument falls. This is [#140][phase-three].
 [tracking]: https://github.com/testimonyproject/testimony/issues/135
 [phase-two]: https://github.com/testimonyproject/testimony/issues/136
 [split]: https://github.com/testimonyproject/testimony/issues/137
-[reformed]: https://github.com/testimonyproject/testimony/issues/138
 [registers]: https://github.com/testimonyproject/testimony/issues/139
 [phase-three]: https://github.com/testimonyproject/testimony/issues/140
 [articles]: https://github.com/testimonyproject/testimony/issues/141

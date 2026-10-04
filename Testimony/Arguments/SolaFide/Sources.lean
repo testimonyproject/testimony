@@ -676,6 +676,14 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work westminsterConfession (.sectionRef "XVI.5")]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .firstPeter2_5AcceptableThroughChrist =>
+    { label := "1 Peter 2:5: spiritual sacrifices acceptable to God through Jesus Christ"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.firstPeter, 2, 5⟩ }]
+        , supporting := [.work westminsterConfession (.sectionRef "XVI.6")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .rewardRenderedToMerits =>
     { label := "The reward God renders to the works of the justified is rendered to them " ++
         "as merits"
