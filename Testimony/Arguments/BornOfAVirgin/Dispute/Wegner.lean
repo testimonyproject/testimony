@@ -1,3 +1,4 @@
+import Testimony.Meanings.BornOfAVirgin
 import Testimony.Arguments.BornOfAVirgin.Results.Wegner
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
@@ -164,9 +165,9 @@ rated. -/
 def wegnerDispute : Dispute Claim WegnerParty where
   node := wegnerPartyNode
   consistent
-    | .wegner => wegnerLexical_is_satisfiable
-    | .sign => signArgument_is_satisfiable
-    | .reply => ordinarySignReply_is_satisfiable
+    | .wegner => Meanings.BornOfAVirgin.satisfiable_held wegnerLexical_is_satisfiable
+    | .sign => Meanings.BornOfAVirgin.satisfiable_held signArgument_is_satisfiable
+    | .reply => Meanings.BornOfAVirgin.satisfiable_held ordinarySignReply_is_satisfiable
   sound
     | .wegner => wegner_establishes
     | .sign => signArgument_establishes

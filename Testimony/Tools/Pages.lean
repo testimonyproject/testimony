@@ -195,13 +195,16 @@ elab "derive_argument_bodies " tableName:ident : command => do
           let isIff := body.isAppOfArity ``Iff 2
           unless isIff || body.isAppOfArity ``Not 1 do return none
           let lhs := body.getArg! 0
-          let rel (c : Name) := lhs.isAppOfArity c 5
+          -- `D.defeats i j`: the dispute is the third argument from the end,
+          -- whatever implicit and instance arguments come before it.
+          let rel (c : Name) := lhs.isAppOf c && lhs.getAppNumArgs ≥ 3
           let kind? : Option Nat :=
             if isIff && rel ``Logic.Dispute.defeats then some 0
             else if rel ``Logic.Dispute.supports then some 1
             else if isIff && rel ``Logic.Dispute.partOf then some 2
             else none
-          pure <| kind?.bind fun k => (lhs.getArg! 2).constName?.map (·, k)
+          pure <| kind?.bind fun k =>
+            (lhs.getArg! (lhs.getAppNumArgs - 3)).constName?.map (·, k)
         match d? with
         | some (d, 0) => tableOf := tableOf.insert d n
         | some (d, 1) => supportTableOf := supportTableOf.insert d n
@@ -211,9 +214,11 @@ elab "derive_argument_bodies " tableName:ident : command => do
     -- The dispute a verdict is about, followed through hearings and the
     -- abbreviations that name them, to the one whose table is proved.
     let tableIn (tables : Std.HashMap Name Name) (ty : Expr) : String := Id.run do
-      let mut e := ty.getArg! 3
+      -- The dispute is a verdict's last argument, and a hearing's second from
+      -- the end, whatever implicit and instance arguments come before.
+      let mut e := ty.getAppArgs.back!
       for _ in [0:8] do
-        if e.isAppOf ``Logic.Dispute.restrict then e := e.getArg! 2
+        if e.isAppOf ``Logic.Dispute.restrict then e := e.getArg! (e.getAppNumArgs - 2)
         else match e.constName? with
           | some c =>
             if let some t := tables[c]? then return t.getString!

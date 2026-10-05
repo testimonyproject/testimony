@@ -105,7 +105,11 @@ when none can.
 - **Cannot be defended, at the cited ratings**: the renewal reading of James's
   word (`renewalWordLine`), which James's word defeats. Under the tradition
   standard it is a credible critique, and there the question is contested
-  (`Testimony.Arguments.SolaFide.Ratings`).
+  (`Testimony.Arguments.SolaFide.Ratings`). It also meets the Reformed harmony,
+  and the two defeat each other: the harmony says James's word has not Paul's
+  sense, the renewal reading that it has. Neither claim's atom says so; their
+  meanings do, and a dispute decides every attack over what each party holds
+  with the meanings (`Testimony.Logic.ArgumentPackage.held`).
 
 So Trent's scriptural case for the increase of justification, weighed text by
 text, survives at one point only: James 2:24, read as a claim about what works
@@ -734,19 +738,7 @@ inferences are rated. -/
 @[solaFideDefs]
 def jamesDispute : Dispute Claim JamesParty where
   node := jamesPartyNode
-  consistent
-    | .lexical => jamesLexicalCase_is_satisfiable
-    | .faith => jamesFaithCase_is_satisfiable
-    | .harmony => jamesHarmonyCase_is_satisfiable
-    | .trentOnTheWord => catholicJamesOnTheWord_is_satisfiable
-    | .trentOnWorks => catholicJamesOnWorks_is_satisfiable
-    | .trentOnRevelation => trentOnRevelation_is_satisfiable
-    | .trentOnSirach => trentOnSirach_is_satisfiable
-    | .revelationText => revelationTextCase_is_satisfiable
-    | .sirachText => sirachTextCase_is_satisfiable
-    | .trentOnReward => trentOnReward_is_satisfiable
-    | .renewalOnTheWord => renewalOnTheWord_is_satisfiable
-    | .westminsterOnReward => westminsterOnReward_is_satisfiable
+  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
   sound
     | .lexical => jamesLexicalCase_establishes
     | .faith => jamesFaithCase_establishes
@@ -775,6 +767,8 @@ def jamesPartyDefeats : JamesParty → JamesParty → Prop
   | .lexical, .renewalOnTheWord => True
   | .westminsterOnReward, .trentOnReward => True
   | .trentOnReward, .westminsterOnReward => True
+  | .harmony, .renewalOnTheWord => True
+  | .renewalOnTheWord, .harmony => True
   | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
@@ -811,7 +805,11 @@ The Reformed harmony defeats, and is defeated by, both of Trent's readings of
 what works do: canon 24's, and chapter 16's from the reward texts. Westminster's
 reading of the reward texts and chapter 16's defeat each other: each denies what
 the other holds about merit, and both rest on a reading rated `disputed`.
-Nothing else:
+The Reformed harmony and the renewal reading defeat each other through what
+their claims mean: the harmony holds that James 2:24 is compatible with Paul,
+which says James's word has not Paul's sense, and the renewal reading holds
+that it has (`Testimony.Meanings.SolaFide.joins`); both rest on a reading rated
+`disputed`. Nothing else:
 in particular, nothing in the dispute contradicts James's faith, and James's
 word does not touch Trent's reading of what works do, which grants the word
 and makes a claim about God's verdict instead.

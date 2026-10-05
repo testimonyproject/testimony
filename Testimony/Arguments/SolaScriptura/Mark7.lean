@@ -1,3 +1,4 @@
+import Testimony.Meanings.SolaScriptura
 import Testimony.Arguments.SolaScriptura.Packages
 import Testimony.Intertext
 import Testimony.Logic.Dilemma

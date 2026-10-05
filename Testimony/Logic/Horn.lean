@@ -285,19 +285,49 @@ def violated (s : Settled α) (c : Clause α) : Bool :=
 def satisfiedBy (v : α → Bool) (c : Clause α) : Bool :=
   !c.body.all v || c.heads.any v
 
-/-- **Satisfiability, with its evidence.** `some true` when one of two candidate
-models is checked to satisfy every clause — the atoms forced true and no others,
-or every atom not forced false — `some false` when a clause is violated by what
-every model must have, and `none` otherwise.
+/-- One pass of choosing: each clause whose body holds and none of whose heads
+does gets its first head not forced false. -/
+def choose (cs : List (Clause α)) (s : Settled α) (yes : List α) : List α :=
+  cs.foldl (fun yes c =>
+    if c.body.all (yes.elem ·) && !c.heads.any (yes.elem ·) then
+      match c.heads.find? (!s.no.elem ·) with
+      | some h => h :: yes
+      | none => yes
+    else yes) yes
 
-Two candidates because a clause with two heads, such as the critics' step
-`¬nomism ∧ galatians → worksGenerally`, can be left unsettled by propagation:
-the first candidate makes both heads false, and the second makes both true.
-Either is a model only once it has been checked to be one. -/
+/-- Passes of choosing from what propagation settled, at most `n` of them. -/
+def chooseChain (cs : List (Clause α)) (s : Settled α) : ℕ → List α → List α
+  | 0, yes => yes
+  | n + 1, yes =>
+    let yes' := choose cs s yes
+    if yes'.length == yes.length then yes' else chooseChain cs s n yes'
+
+/-- The atoms the third candidate makes true: those forced true, and, for each
+clause with more than one head left open, the first head propagation did not
+rule out — chosen, never forced, and so a model only once it is checked. -/
+def chosen (cs : List (Clause α)) : List α :=
+  chooseChain cs (settle cs) (cs.length + 1) (settle cs).yes
+
+/-- **Satisfiability, with its evidence.** `some true` when one of three
+candidate models is checked to satisfy every clause — the atoms forced true and
+no others; every atom not forced false; or the atoms forced true with a head
+chosen for each clause left open — `some false` when a clause is violated by
+what every model must have, and `none` otherwise. The third candidate is tried
+last, after the refutation, because it costs the most and an unsatisfiable set
+never needs it.
+
+More than one candidate because a clause with two heads, such as the critics'
+step `¬nomism ∧ galatians → worksGenerally`, can be left unsettled by
+propagation: the first candidate makes both heads false, and the second makes
+both true. The second fails as soon as a meaning postulate `a → ¬b` forbids two
+atoms it makes true together, and the third, which makes true only what a
+clause asks for, is the model then. Each is a model only once it has been
+checked to be one. -/
 def clausesSatisfiable? (cs : List (Clause α)) : Option Bool :=
   if cs.all (satisfiedBy ((settle cs).yes.elem ·)) then some true
   else if cs.all (satisfiedBy (!(settle cs).no.elem ·)) then some true
   else if cs.any (violated (settle cs)) then some false
+  else if cs.all (satisfiedBy ((chosen cs).elem ·)) then some true
   else none
 
 theorem propagate_sound {c : Clause α} {w : Valuation α} (hc : c.Holds w)
@@ -389,7 +419,12 @@ theorem satisfiable_of_clausesSatisfiable? {cs : List (Clause α)}
   · split at h
     · rename_i hall
       exact ⟨_, fun c hc => holds_of_satisfiedBy (List.all_eq_true.mp hall c hc)⟩
-    · split at h <;> simp at h
+    · split at h
+      · simp at h
+      · split at h
+        · rename_i hall
+          exact ⟨_, fun c hc => holds_of_satisfiedBy (List.all_eq_true.mp hall c hc)⟩
+        · simp at h
 
 /-- `some false` is a refutation: a clause is violated by what every model must
 have, so there is none. -/
@@ -401,15 +436,15 @@ theorem not_satisfiable_of_clausesSatisfiable? {cs : List (Clause α)}
   · simp at h
   split at h
   · simp at h
-  · split at h
-    · rename_i hany
-      obtain ⟨c, hc, hv⟩ := List.any_eq_true.mp hany
-      simp only [violated, Bool.and_eq_true, List.all_eq_true, List.elem_eq_mem,
-        decide_eq_true_eq] at hv
-      obtain ⟨hy, hn⟩ := settle_sound hw
-      obtain ⟨h, hh, hwh⟩ := hw c hc fun a ha => hy a (hv.1 a ha)
-      exact hn h (hv.2 h hh) hwh
-    · simp at h
+  split at h
+  · rename_i hany
+    obtain ⟨c, hc, hv⟩ := List.any_eq_true.mp hany
+    simp only [violated, Bool.and_eq_true, List.all_eq_true, List.elem_eq_mem,
+      decide_eq_true_eq] at hv
+    obtain ⟨hy, hn⟩ := settle_sound hw
+    obtain ⟨h, hh, hwh⟩ := hw c hc fun a ha => hy a (hv.1 a ha)
+    exact hn h (hv.2 h hh) hwh
+  · split at h <;> simp at h
 
 /-! ### Formulas -/
 
@@ -439,20 +474,27 @@ The strengths of the two packages are arguments rather than computed inside:
 a package's strength is a lookup of every atom's citation, which is by far the
 most expensive part of a decision, and a dispute has each party's strength
 proved once already. The theorems take those proofs, so a wrong strength cannot
-be passed in. -/
+be passed in.
+
+Every check is over what a package holds (`ArgumentPackage.held`): its premises
+and its argument's meaning postulates. -/
+
+section Attacks
+
+variable [HasPostulates α]
 
 /-- Whether `a`, of strength `s`, defeats `b` by undermining its premise `φ`:
 `some true` if `a`'s premises cannot hold with `φ` and `φ` does not outrank `a`,
 `some false` if either fails, `none` if a formula it needed has no clauses. -/
 def undermines? (a b : ArgumentPackage α) (s : ℕ) (φ : Formula α) : Option Bool :=
   if Outranks b φ s then some false
-  else (satisfiable? (a.premises ++ [φ])).map (!·)
+  else (satisfiable? (a.held ++ [φ])).map (!·)
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, by rebutting its
 conclusion, decided the same way. -/
 def rebuts? (a b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
   if s < t then some false
-  else (satisfiable? (a.premises ++ [b.conclusion])).map (!·)
+  else (satisfiable? (a.held ++ [b.conclusion])).map (!·)
 
 /-- A premise as a step a rebuttal can land on: `p ➝ ψ` whose head is not `⊥`,
 as the pair `(p, ψ)`. A premise with head `⊥` denies something; it derives
@@ -465,7 +507,7 @@ def stepOf? : Formula α → Option (Formula α × Formula α)
 /-- The steps of a premise list a rebuttal can land on. -/
 def stepsOf (Γ : List (Formula α)) : List (Formula α × Formula α) := Γ.filterMap stepOf?
 
-omit [DecidableEq α] in
+omit [DecidableEq α] [HasPostulates α] in
 theorem stepOf?_eq_some {φ p ψ : Formula α} :
     stepOf? φ = some (p, ψ) ↔ φ = .imp p ψ ∧ ψ ≠ .falsum := by
   cases φ with
@@ -473,7 +515,7 @@ theorem stepOf?_eq_some {φ p ψ : Formula α} :
     cases r <;> simp [stepOf?] <;> rintro rfl rfl <;> simp
   | _ => simp [stepOf?]
 
-omit [DecidableEq α] in
+omit [DecidableEq α] [HasPostulates α] in
 theorem mem_stepsOf {Γ : List (Formula α)} {p ψ : Formula α} :
     (p, ψ) ∈ stepsOf Γ ↔ (p ➝ ψ) ∈ Γ ∧ ψ ≠ ⊥ := by
   simp only [stepsOf, List.mem_filterMap, stepOf?_eq_some]
@@ -487,10 +529,10 @@ what `b`'s step `p ➝ ψ` delivers: `some true` if `b`'s premises entail `ψ`,
 either entailment is shown to fail or `b` is stronger; `none` otherwise. -/
 def stepRebuts? (a b : ArgumentPackage α) (s t : ℕ) (ψ : Formula α) : Option Bool :=
   if s < t then some false
-  else if satisfiable? (b.premises ++ [∼ψ]) = some false ∧
-      satisfiable? (a.premises ++ [ψ]) = some false then some true
-  else if satisfiable? (b.premises ++ [∼ψ]) = some true ∨
-      satisfiable? (a.premises ++ [ψ]) = some true then some false
+  else if satisfiable? (b.held ++ [∼ψ]) = some false ∧
+      satisfiable? (a.held ++ [ψ]) = some false then some true
+  else if satisfiable? (b.held ++ [∼ψ]) = some true ∨
+      satisfiable? (a.held ++ [ψ]) = some true then some false
   else none
 
 /-- Every way `a` could defeat `b`: the rebuttal, each premise of `b`, and each
@@ -507,7 +549,7 @@ def defeats? (a b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
   else if (defeatChecks a b s t).all (· == some false) then some false
   else none
 
-omit [DecidableEq α] in
+omit [DecidableEq α] [HasPostulates α] in
 theorem map_not_eq_some {o : Option Bool} {v : Bool} :
     o.map (!·) = some v ↔ o = some (!v) := by
   cases o with
@@ -516,7 +558,7 @@ theorem map_not_eq_some {o : Option Bool} {v : Bool} :
 
 theorem undermines?_true {a b : ArgumentPackage α} {φ : Formula α}
     (h : undermines? a b a.strength φ = some true) :
-    Entails a.premises (∼φ) ∧ ¬ Outranks b φ a.strength := by
+    Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength := by
   unfold undermines? at h
   split at h
   · simp at h
@@ -525,7 +567,7 @@ theorem undermines?_true {a b : ArgumentPackage α} {φ : Formula α}
 
 theorem undermines?_false {a b : ArgumentPackage α} {φ : Formula α}
     (h : undermines? a b a.strength φ = some false) :
-    ¬ (Entails a.premises (∼φ) ∧ ¬ Outranks b φ a.strength) := by
+    ¬ (Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength) := by
   unfold undermines? at h
   rintro ⟨hent, hno⟩
   split at h
@@ -534,7 +576,7 @@ theorem undermines?_false {a b : ArgumentPackage α} {φ : Formula α}
 
 theorem stepRebuts?_true {a b : ArgumentPackage α} {ψ : Formula α}
     (h : stepRebuts? a b a.strength b.strength ψ = some true) :
-    Entails b.premises ψ ∧ Entails a.premises (∼ψ) ∧ ¬ a.strength < b.strength := by
+    Entails b.held ψ ∧ Entails a.held (∼ψ) ∧ ¬ a.strength < b.strength := by
   unfold stepRebuts? at h
   split at h
   · simp at h
@@ -547,7 +589,7 @@ theorem stepRebuts?_true {a b : ArgumentPackage α} {ψ : Formula α}
 
 theorem stepRebuts?_false {a b : ArgumentPackage α} {ψ : Formula α}
     (h : stepRebuts? a b a.strength b.strength ψ = some false) :
-    ¬ (Entails b.premises ψ ∧ Entails a.premises (∼ψ) ∧ ¬ a.strength < b.strength) := by
+    ¬ (Entails b.held ψ ∧ Entails a.held (∼ψ) ∧ ¬ a.strength < b.strength) := by
   unfold stepRebuts? at h
   rintro ⟨hb, ha, hno⟩
   split at h
@@ -633,5 +675,7 @@ theorem defeats_iff_of_defeats? {a b : ArgumentPackage α} {s t : ℕ} {P : Prop
     exact iff_of_true (defeats_of_defeats? hs ht h) hP
   · simp only [hP, decide_false] at h
     exact iff_of_false (not_defeats_of_defeats? hs ht h) hP
+
+end Attacks
 
 end Testimony.Logic.Horn

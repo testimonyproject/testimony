@@ -282,6 +282,10 @@ apart from works; faith, without the dispositions and the charity Trent
 requires, does not suffice. -/
 def romeOnJesusWordsReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .salvationNotByWorks => False
   | .justificationIsForensicOnly => False
   | .justificationDistinctFromSanctification => False
@@ -477,14 +481,7 @@ inferences are rated. -/
 @[solaFideDefs]
 def jesusWordsDispute : Dispute Claim WordsParty where
   node := wordsPartyNode
-  consistent
-    | .luke7 => dominicalCase_is_satisfiable
-    | .luke18 => luke18Case_is_satisfiable
-    | .trent => tridentineCase_is_satisfiable
-    | .matthew7Obedience => matthew7ObedienceCase_is_satisfiable
-    | .matthew7Faith => matthew7FaithCase_is_satisfiable
-    | .matthew19Way => matthew19WayCase_is_satisfiable
-    | .matthew19Legal => matthew19LegalCase_is_satisfiable
+  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
   sound
     | .luke7 => dominicalCase_establishes
     | .luke18 => luke18Case_establishes
@@ -503,6 +500,10 @@ Luke 7:50 and Luke 18 — faith sufficed — and Rome's readings of Matthew 7 an
 first: whoever holds both is not contradicted by these texts. -/
 def lukeWithRomeOnMatthewReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .salvationNotByWorks => False
   | .matthew7DoingIncludesBelieving => False
   | .matthew19LawExposesInability => False

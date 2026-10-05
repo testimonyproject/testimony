@@ -49,7 +49,7 @@ namespace Testimony.Logic
 
 open Solver
 
-variable {α ι : Type} [DecidableEq ι]
+variable {α ι : Type} [HasPostulates α] [DecidableEq ι]
 
 /-- **A dispute's graph**: its defeat, support and part-of tables, each checked
 against the relation. -/

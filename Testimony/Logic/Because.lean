@@ -134,9 +134,10 @@ theorem not_together (b : Because P R) : ¬ Satisfiable (P.premises ++ R.premise
 /-- **A single broken premise is undermined.** When the core is one premise and
 nothing is granted, `P` entails its negation: `P` undermines `R` there, in the
 dispute's own sense. -/
-theorem undermines (b : Because P R) {φ : Formula α} (hcore : b.core = [φ])
+theorem undermines [HasPostulates α] (b : Because P R) {φ : Formula α} (hcore : b.core = [φ])
     (hgranted : b.granted = []) : UnderminesOn P R φ := by
-  refine ⟨b.core_mem φ (by simp [hcore]), entails_neg_iff.mpr fun h => ?_⟩
+  refine ⟨b.core_mem φ (by simp [hcore]), ArgumentPackage.entails_held
+    (entails_neg_iff.mpr fun h => ?_)⟩
   obtain ⟨w, hw⟩ := satisfiable_iff.mp h
   exact b.breaks (satisfiable_iff.mpr ⟨w, fun ψ hψ => by
     simp only [hcore, hgranted, List.append_nil, List.mem_append, List.mem_singleton] at hψ

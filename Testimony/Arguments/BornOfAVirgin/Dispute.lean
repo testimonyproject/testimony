@@ -1,3 +1,4 @@
+import Testimony.Meanings.BornOfAVirgin
 import Testimony.Arguments.BornOfAVirgin.Results
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
@@ -409,12 +410,12 @@ party establishes its conclusion, and every party's inferences are rated. -/
 def isaiahDispute : Dispute Claim Party where
   node := partyNode
   consistent
-    | .scriptural => christian_is_satisfiable
-    | .critical => criticalDenial_is_satisfiable
-    | .berry => berryObjection_is_satisfiable
-    | .postell => postellParity_is_satisfiable
-    | .motyer => motyerReply_is_satisfiable
-    | .micah => micahParity_is_satisfiable
+    | .scriptural => Meanings.BornOfAVirgin.satisfiable_held christian_is_satisfiable
+    | .critical => Meanings.BornOfAVirgin.satisfiable_held criticalDenial_is_satisfiable
+    | .berry => Meanings.BornOfAVirgin.satisfiable_held berryObjection_is_satisfiable
+    | .postell => Meanings.BornOfAVirgin.satisfiable_held postellParity_is_satisfiable
+    | .motyer => Meanings.BornOfAVirgin.satisfiable_held motyerReply_is_satisfiable
+    | .micah => Meanings.BornOfAVirgin.satisfiable_held micahParity_is_satisfiable
   sound
     | .scriptural => christian_establishes
     | .critical => criticalDenial_establishes

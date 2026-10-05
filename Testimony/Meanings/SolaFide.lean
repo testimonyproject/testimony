@@ -405,7 +405,12 @@ other. Every credibility check holds `a → ¬b` for each, as background
 
 No claim's meaning entails another's: none asserts all another does. The atom
 type keeps these claims apart; their meanings join them. The lists are proved to
-be exactly what the meanings contain. -/
+be exactly what the meanings contain.
+
+Disputes hold them too, so every named reading a dispute is checked against
+respects them: where a reading is otherwise silent on a pair, it denies the
+first claim — Paul's verb as renewal, the Latin of the two verses, James's word
+as Paul's — and holds the second. -/
 instance joins : HasJoins Claim where
   exclusions :=
     [ (.paulsJustifyDenotesRenewal, .dikaioIsForensic)
@@ -415,5 +420,19 @@ instance joins : HasJoins Claim where
   exclusions_pinned := by decide +kernel
   entailments := []
   entailments_pinned := by decide +kernel
+
+
+open Testimony.Logic in
+/-- **The postulates, written out**: `a → ¬b` for each exclusion. Proofs over the
+argument's packages unfold to this list, so a named reading must satisfy it. -/
+@[solaFideDefs] theorem postulates_eq :
+    (HasPostulates.postulates : List (Formula Claim)) =
+      [ p .paulsJustifyDenotesRenewal ➝ notP .dikaioIsForensic
+      , p .rev22_11BeJustifiedStill ➝ notP .rev22_11GreekDoRighteousness
+      , p .sir18_22BeJustifiedToDeath ➝ notP .sir18_22GreekIsAVow
+      , p .jamesUsesDikaioAsPaul ➝ notP .james2_24Compatible ] :=
+  rfl
+
+attribute [solaFideDefs] Testimony.Logic.ArgumentPackage.held
 
 end Testimony.Meanings.SolaFide

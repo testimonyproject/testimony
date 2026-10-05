@@ -132,11 +132,13 @@ establishes its conclusion, and every party's inferences are rated. -/
 def mark7Dispute : Dispute Claim Mark7Party where
   node := mark7PartyNode
   consistent
-    | .principle => mark7Principle_is_satisfiable
-    | .mark7 => mark7Case_is_satisfiable
-    | .trent => tridentineCase_is_satisfiable
-    | .trentAsMensCommandments => tridentineAsMensCommandments_is_satisfiable
-    | .trentAsApostolicWord => tridentineAsApostolicWord_is_satisfiable
+    | .principle => Meanings.SolaScriptura.satisfiable_held mark7Principle_is_satisfiable
+    | .mark7 => Meanings.SolaScriptura.satisfiable_held mark7Case_is_satisfiable
+    | .trent => Meanings.SolaScriptura.satisfiable_held tridentineCase_is_satisfiable
+    | .trentAsMensCommandments => Meanings.SolaScriptura.satisfiable_held
+        tridentineAsMensCommandments_is_satisfiable
+    | .trentAsApostolicWord => Meanings.SolaScriptura.satisfiable_held
+        tridentineAsApostolicWord_is_satisfiable
   sound
     | .principle => mark7Principle_establishes
     | .mark7 => mark7Case_establishes

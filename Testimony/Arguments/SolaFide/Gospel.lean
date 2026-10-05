@@ -1,3 +1,4 @@
+import Testimony.Meanings.SolaFide
 import Testimony.Arguments.SolaFide.Results
 import Testimony.Logic.Dispute
 import Testimony.Logic.Because
@@ -68,9 +69,17 @@ theorem galatianGospel_is_satisfiable : Satisfiable galatianGospel.premises := b
 /-- Trent's world, with the *Joint Declaration*'s confession added: God no longer
 imputes sin — the verb is forensic — and every text of the gospel line holds.
 Justification still includes renewal, faith without charity does not suffice,
-and justification is not by faith alone. -/
+and justification is not by faith alone. Having granted that the verb is
+forensic, it does not also hold that Paul's verb denotes renewal: the meanings
+exclude the two (`Testimony.Meanings.SolaFide.joins`). Of the other pairs the
+meanings exclude, it holds the Greek of Revelation 22:11 and Sirach 18:22, and
+that James's δικαιόω is Paul's. -/
 def jointDeclarationReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .james2_24Compatible => False
   | .salvationNotByWorks => False
   | .justificationIsForensicOnly => False
   | .justificationDistinctFromSanctification => False

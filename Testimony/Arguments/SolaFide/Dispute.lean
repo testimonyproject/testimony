@@ -511,6 +511,10 @@ only. All of them, like every cell of the table, are decided by
 Israel's law for gentiles. The Pauline and dominical cases hold in it. -/
 def criticsJervellReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .secondTempleCovenantalNomism => False
   | .acts15YokeIsLawAsCondition => False
   | _ => True
@@ -518,6 +522,10 @@ def criticsJervellReading : Valuation Claim := fun a =>
 /-- Trent's world with Sanders' and Jervell's. -/
 def trentSandersJervellReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .salvationNotByWorks => False
   | .justificationIsForensicOnly => False
   | .worksOfLawMeansWorksGenerally => False
@@ -529,6 +537,10 @@ def trentSandersJervellReading : Valuation Claim := fun a =>
 /-- Trent's world with the critics' and Jervell's. -/
 def trentCriticsJervellReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .salvationNotByWorks => False
   | .justificationIsForensicOnly => False
   | .secondTempleCovenantalNomism => False
@@ -540,6 +552,10 @@ def trentCriticsJervellReading : Valuation Claim := fun a =>
 /-- The apocalyptic world with Sanders' and Jervell's. -/
 def apocalypticSandersJervellReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .pistisChristouObjective => False
   | .justificationByFaithAlone => False
   | .worksOfLawMeansWorksGenerally => False
@@ -549,6 +565,10 @@ def apocalypticSandersJervellReading : Valuation Claim := fun a =>
 /-- The apocalyptic world with the critics' and Jervell's. -/
 def apocalypticCriticsJervellReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .pistisChristouObjective => False
   | .justificationByFaithAlone => False
   | .secondTempleCovenantalNomism => False
@@ -619,6 +639,10 @@ reading holds everything the first position holds as well. -/
 faith is not the condition, but it is the means. Grace and "not by works" hold. -/
 def apocalypticWithFaithReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .pistisChristouObjective => False
   | .justificationByFaithAlone => False
   | _ => True
@@ -649,6 +673,10 @@ sufficient, and justification not by faith alone — because nothing Luke says
 excludes another condition. -/
 def lukeWithoutAloneReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .justificationByFaithAlone => False
   | _ => True
 
@@ -669,6 +697,10 @@ theorem peter_grants_the_apocalyptic_conclusion :
 δικαιοσύνη θεοῦ both denied. -/
 def trentWithoutDeliveranceReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .salvationNotByWorks => False
   | .justificationIsForensicOnly => False
   | .pistisChristouObjective => False
@@ -688,6 +720,10 @@ theorem trent_grants_the_subjective_genitive :
 apocalyptic reading's conclusion, which Trent shares. -/
 def trentWithoutFaithAloneReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .salvationNotByWorks => False
   | .justificationIsForensicOnly => False
   | .justificationByFaithAlone => False
@@ -755,19 +791,7 @@ establishes its conclusion, and every party's inferences are rated. -/
 @[solaFideDefs]
 def solaFideDispute : Dispute Claim Party where
   node := partyNode
-  consistent
-    | .pauline => paulineCase_is_satisfiable
-    | .dominical => dominicalCase_is_satisfiable
-    | .apostolic => apostolicCase_is_satisfiable
-    | .trent => tridentineCase_is_satisfiable
-    | .apocalyptic => apocalypticCase_is_satisfiable
-    | .sanders => sandersCase_is_satisfiable
-    | .critics => criticsCase_is_satisfiable
-    | .jervell => jervellCase_is_satisfiable
-    | .gospel => galatianGospel_is_satisfiable
-    | .lexical => lexicalCase_is_satisfiable
-    | .trentOnPaulsWord => tridentineOnPaulsWord_is_satisfiable
-    | .romansOnTheWord => romansFourOnTheWord_is_satisfiable
+  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
   sound
     | .pauline => paulineCase_establishes
     | .dominical => dominicalCase_establishes

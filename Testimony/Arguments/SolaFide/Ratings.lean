@@ -747,31 +747,61 @@ def ratedDefeats : Standard → JamesParty → JamesParty → Prop
 instance (s : Standard) : DecidableRel (ratedDefeats s) := fun i j => by
   cases s <;> cases i <;> cases j <;> unfold ratedDefeats <;> infer_instance
 
-/-- **Who defeats whom at the evidence standard's ratings**, all 144 pairs,
+/-- The first six rows of the table at the evidence standard's ratings,
 computed from the parties' premises and the re-rated inferences and checked by
-the kernel. -/
-theorem rerated_defeats_evidence :
-    ∀ i j, (jamesRegister.rerated .evidence).defeats i j ↔ ratedDefeats .evidence i j := by
-  intro i j
+the kernel. The table is split in four, by standard and by row, only so that
+each declaration stays within the heartbeat budget. -/
+private theorem rerated_evidence_first (i : JamesParty)
+    (hi : i ∈ [.lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation])
+    (j : JamesParty) :
+    (jamesRegister.rerated .evidence).defeats i j ↔ ratedDefeats .evidence i j := by
   refine Horn.defeats_iff_of_defeats?
     (rerated_strength .evidence i) (rerated_strength .evidence j) ?_
-  cases i <;> cases j <;> decide +kernel
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
 
-/-- **Who defeats whom at the tradition standard's ratings**, all 144 pairs,
-computed and checked the same way. -/
-theorem rerated_defeats_tradition :
-    ∀ i j, (jamesRegister.rerated .tradition).defeats i j ↔ ratedDefeats .tradition i j := by
-  intro i j
+/-- The other six rows at the evidence standard. -/
+private theorem rerated_evidence_second (i : JamesParty)
+    (hi : i ∈ [.trentOnSirach, .revelationText, .sirachText, .trentOnReward,
+      .renewalOnTheWord, .westminsterOnReward])
+    (j : JamesParty) :
+    (jamesRegister.rerated .evidence).defeats i j ↔ ratedDefeats .evidence i j := by
+  refine Horn.defeats_iff_of_defeats?
+    (rerated_strength .evidence i) (rerated_strength .evidence j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+
+/-- The first six rows at the tradition standard. -/
+private theorem rerated_tradition_first (i : JamesParty)
+    (hi : i ∈ [.lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation])
+    (j : JamesParty) :
+    (jamesRegister.rerated .tradition).defeats i j ↔ ratedDefeats .tradition i j := by
   refine Horn.defeats_iff_of_defeats?
     (rerated_strength .tradition i) (rerated_strength .tradition j) ?_
-  cases i <;> cases j <;> decide +kernel
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+
+/-- The other six rows at the tradition standard. -/
+private theorem rerated_tradition_second (i : JamesParty)
+    (hi : i ∈ [.trentOnSirach, .revelationText, .sirachText, .trentOnReward,
+      .renewalOnTheWord, .westminsterOnReward])
+    (j : JamesParty) :
+    (jamesRegister.rerated .tradition).defeats i j ↔ ratedDefeats .tradition i j := by
+  refine Horn.defeats_iff_of_defeats?
+    (rerated_strength .tradition i) (rerated_strength .tradition j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
 
 /-- **Who defeats whom at each standard's ratings.** -/
 theorem rerated_defeats (s : Standard) :
     ∀ i j, (jamesRegister.rerated s).defeats i j ↔ ratedDefeats s i j := by
-  cases s
-  · exact rerated_defeats_evidence
-  · exact rerated_defeats_tradition
+  intro i j
+  cases s <;> cases i
+  all_goals first
+    | (refine rerated_evidence_first _ ?_ j; decide)
+    | (refine rerated_evidence_second _ ?_ j; decide)
+    | (refine rerated_tradition_first _ ?_ j; decide)
+    | (refine rerated_tradition_second _ ?_ j; decide)
 
 /-- The dispute at a standard's ratings, in the form the verdict solver computes
 with. -/

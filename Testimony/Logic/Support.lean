@@ -205,7 +205,7 @@ end DecidePart
 
 namespace Dispute
 
-variable {ι : Type} (d : Dispute α ι)
+variable [HasPostulates α] {ι : Type} (d : Dispute α ι)
 
 /-- In a dispute, node `i` supports node `j`. -/
 def supports (i j : ι) : Prop := Supports (d.node i) (d.node j)

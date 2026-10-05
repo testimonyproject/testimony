@@ -5345,6 +5345,10 @@ The New Perspective’s own world: Paul’s ἔργα νόμου denotes the cov
 def newPerspectiveOwnReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.worksOfLawMeansWorksGenerally => False
     | x => True
 \end{verbatim}}
@@ -5476,6 +5480,10 @@ Gathercole’s world: Second Temple Judaism was not uniformly covenantal nomism,
 def criticsReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.secondTempleCovenantalNomism => False
     | x => True
 \end{verbatim}}
@@ -5537,12 +5545,16 @@ theorem galatianGospel_is_satisfiable : Satisfiable galatianGospel.premises
 \paragraph*{What Trent grants}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{joint\allowbreak{}Declaration\allowbreak{}Reading}}\par\nobreak\noindent
-Trent’s world, with the \emph{Joint Declaration}‘s confession added: God no longer imputes sin — the verb is forensic — and every text of the gospel line holds. Justification still includes renewal, faith without charity does not suffice, and justification is not by faith alone.
+Trent’s world, with the \emph{Joint Declaration}‘s confession added: God no longer imputes sin — the verb is forensic — and every text of the gospel line holds. Justification still includes renewal, faith without charity does not suffice, and justification is not by faith alone. Having granted that the verb is forensic, it does not also hold that Paul’s verb denotes renewal: the meanings exclude the two (\texttt{Testimony.Meanings.Sola\allowbreak{}Fide.joins}). Of the other pairs the meanings exclude, it holds the Greek of Revelation 22:11 and Sirach 18:22, and that James’s δικαιόω is Paul’s.
 
 {\small\begin{verbatim}
 def jointDeclarationReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.james2_24Compatible => False
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
     | Claim.justificationDistinctFromSanctification => False
@@ -6632,6 +6644,10 @@ The critics’ world with Jervell’s: covenantal nomism fails, and the yoke is 
 def criticsJervellReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.secondTempleCovenantalNomism => False
     | Claim.acts15YokeIsLawAsCondition => False
     | x => True
@@ -6643,6 +6659,10 @@ Trent’s world with Sanders’ and Jervell’s.
 def trentSandersJervellReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
     | Claim.worksOfLawMeansWorksGenerally => False
@@ -6658,6 +6678,10 @@ Trent’s world with the critics’ and Jervell’s.
 def trentCriticsJervellReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
     | Claim.secondTempleCovenantalNomism => False
@@ -6673,6 +6697,10 @@ The apocalyptic world with Sanders’ and Jervell’s.
 def apocalypticSandersJervellReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.pistisChristouObjective => False
     | Claim.justificationByFaithAlone => False
     | Claim.worksOfLawMeansWorksGenerally => False
@@ -6686,6 +6714,10 @@ The apocalyptic world with the critics’ and Jervell’s.
 def apocalypticCriticsJervellReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.pistisChristouObjective => False
     | Claim.justificationByFaithAlone => False
     | Claim.secondTempleCovenantalNomism => False
@@ -6756,6 +6788,10 @@ The apocalyptic world in which salvation is still received through faith — fai
 def apocalypticWithFaithReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.pistisChristouObjective => False
     | Claim.justificationByFaithAlone => False
     | x => True
@@ -6791,6 +6827,10 @@ Luke’s world without \emph{alone}: every premise of the dominical case, faith 
 def lukeWithoutAloneReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.justificationByFaithAlone => False
     | x => True
 \end{verbatim}}
@@ -6817,6 +6857,10 @@ Trent’s world, with the objective genitive and the apocalyptic reading of δι
 def trentWithoutDeliveranceReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
     | Claim.pistisChristouObjective => False
@@ -6840,6 +6884,10 @@ Trent’s world, in which justification is not by faith alone — the apocalypti
 def trentWithoutFaithAloneReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
     | Claim.justificationByFaithAlone => False
@@ -6887,7 +6935,7 @@ def solaFideDispute : Dispute Claim Party :=
   { node := partyNode,
     consistent := solaFideDispute._proof_1,
     sound := solaFideDispute._proof_2,
-    rated := solaFideDispute._proof_3 }
+    rated := solaFideDispute._proof_15 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{reformed\_\allowbreak{}strands\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}critics}}\par\nobreak\noindent
 The Reformed strands and the critics stand together, where covenantal nomism fails and everything else holds.
@@ -6896,7 +6944,7 @@ The Reformed strands and the critics stand together, where covenantal nomism fai
 theorem reformed_strands_stand_with_the_critics :
     solaFideDispute.StandTogether [Party.pauline, Party.dominical,
     Party.apostolic, Party.critics]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{paul\_\allowbreak{}and\_\allowbreak{}luke\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}jervell}}\par\nobreak\noindent
 Paul and Luke stand with the critics and with Jervell.
@@ -6904,7 +6952,7 @@ Paul and Luke stand with the critics and with Jervell.
 {\small\begin{verbatim}
 theorem paul_and_luke_stand_with_jervell : solaFideDispute.StandTogether
     [Party.pauline, Party.dominical, Party.jervell, Party.critics]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{luke\_\allowbreak{}and\_\allowbreak{}acts\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}sanders}}\par\nobreak\noindent
 Luke and Acts stand with Sanders: neither rests on ἔργα νόμου.
@@ -6912,7 +6960,7 @@ Luke and Acts stand with Sanders: neither rests on ἔργα νόμου.
 {\small\begin{verbatim}
 theorem luke_and_acts_stand_with_sanders : solaFideDispute.StandTogether
     [Party.dominical, Party.apostolic, Party.sanders]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}sanders\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
 Trent stands with Sanders and Jervell.
@@ -6920,7 +6968,7 @@ Trent stands with Sanders and Jervell.
 {\small\begin{verbatim}
 theorem trent_stands_with_sanders_and_jervell : solaFideDispute.StandTogether
     [Party.trent, Party.sanders, Party.jervell]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}critics\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
 Trent stands with the critics and Jervell.
@@ -6928,7 +6976,7 @@ Trent stands with the critics and Jervell.
 {\small\begin{verbatim}
 theorem trent_stands_with_the_critics_and_jervell :
     solaFideDispute.StandTogether [Party.trent, Party.critics, Party.jervell]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}sanders\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
 The apocalyptic reading stands with Sanders and Jervell.
@@ -6937,7 +6985,7 @@ The apocalyptic reading stands with Sanders and Jervell.
 theorem apocalyptic_stands_with_sanders_and_jervell :
     solaFideDispute.StandTogether [Party.apocalyptic, Party.sanders,
     Party.jervell]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}critics\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
 The apocalyptic reading stands with the critics and Jervell.
@@ -6946,7 +6994,7 @@ The apocalyptic reading stands with the critics and Jervell.
 theorem apocalyptic_stands_with_the_critics_and_jervell :
     solaFideDispute.StandTogether [Party.apocalyptic, Party.critics,
     Party.jervell]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{party\allowbreak{}Defeats}}\par\nobreak\noindent
 The defeats of the dispute, as a table.
@@ -9171,6 +9219,10 @@ Rome’s reading of Jesus’ words: in Matthew 7 obedience is a condition of ent
 def romeOnJesusWordsReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.salvationNotByWorks => False
     | Claim.justificationIsForensicOnly => False
     | Claim.justificationDistinctFromSanctification => False
@@ -9384,7 +9436,7 @@ def jesusWordsDispute : Dispute Claim WordsParty :=
   { node := wordsPartyNode,
     consistent := jesusWordsDispute._proof_1,
     sound := jesusWordsDispute._proof_2,
-    rated := jesusWordsDispute._proof_3 }
+    rated := jesusWordsDispute._proof_10 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{luke\allowbreak{}With\allowbreak{}Rome\allowbreak{}On\allowbreak{}Matthew\allowbreak{}Reading}}\par\nobreak\noindent
 \textbf{Rome’s readings of Matthew stand with Luke’s sayings.} One world holds Luke 7:50 and Luke 18 — faith sufficed — and Rome’s readings of Matthew 7 and 19 — salvation is not apart from works. As encoded, faith’s sufficiency and “not apart from works” are different claims, and Luke’s sayings make only the first: whoever holds both is not contradicted by these texts.
@@ -9393,6 +9445,10 @@ def jesusWordsDispute : Dispute Claim WordsParty :=
 def lukeWithRomeOnMatthewReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.salvationNotByWorks => False
     | Claim.matthew7DoingIncludesBelieving => False
     | Claim.matthew19LawExposesInability => False
@@ -9405,7 +9461,7 @@ Luke’s two sayings stand with Rome’s readings of Matthew.
 theorem luke_stands_with_rome_on_matthew : jesusWordsDispute.StandTogether
     [WordsParty.luke7, WordsParty.luke18, WordsParty.matthew7Obedience,
     WordsParty.matthew19Way]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{words\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
 The defeats of the dispute, as a table.
@@ -10194,6 +10250,10 @@ Rome’s world: baptism the instrumental cause, the desire for it bringing its f
 def romeOnBaptismReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
     | Claim.waterItselfNecessaryForSalvation => False
     | Claim.john3_5WaterIsNaturalBirth => False
     | Claim.john3_5WaterIsEzekielsCleansing => False
@@ -10996,7 +11056,7 @@ As in the sola fide dispute (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.D
 \begin{itemize}
   \item \textbf{Cannot be defended, at the cited ratings}: the renewal reading of James’s
 \end{itemize}
-  word (\texttt{renewal\allowbreak{}Word\allowbreak{}Line}), which James’s word defeats. Under the tradition   standard it is a credible critique, and there the question is contested   (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Ratings}).
+  word (\texttt{renewal\allowbreak{}Word\allowbreak{}Line}), which James’s word defeats. Under the tradition   standard it is a credible critique, and there the question is contested   (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Ratings}). It also meets the Reformed harmony,   and the two defeat each other: the harmony says James’s word has not Paul’s   sense, the renewal reading that it has. Neither claim’s atom says so; their   meanings do, and a dispute decides every attack over what each party holds   with the meanings (\texttt{Testimony.Logic.Argument\allowbreak{}Package.held}).
 
 So Trent’s scriptural case for the increase of justification, weighed text by text, survives at one point only: James 2:24, read as a claim about what works do before God. Every reading of it that rests on what a word or a verse \emph{says} cannot be defended. What remains is a claim about God’s verdict, and there the library cannot choose.
 
@@ -11710,7 +11770,7 @@ def jamesDispute : Dispute Claim JamesParty :=
   { node := jamesPartyNode,
     consistent := jamesDispute._proof_1,
     sound := jamesDispute._proof_2,
-    rated := jamesDispute._proof_3 }
+    rated := jamesDispute._proof_15 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
 The defeats of the dispute, as a table.
@@ -11747,7 +11807,7 @@ theorem jamesPartyNode_strength : ∀ (i : JamesParty), (jamesPartyNode
 -- axioms: propext
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
-\textbf{Who defeats whom}, all 144 pairs. James’s word defeats Trent’s reading of it, and the reading’s reply fails; it defeats the renewal reading too, whose reply fails for the same reason — it rests on Paul’s word as renewal, rated \texttt{disputed}, against a case rated \texttt{well\allowbreak{}Supported}. The Greek of Revelation 22:11 and of Sirach 18:22 defeat Trent’s Latin readings of them, and the replies fail. The Reformed harmony defeats, and is defeated by, both of Trent’s readings of what works do: canon 24’s, and chapter 16’s from the reward texts. Westminster’s reading of the reward texts and chapter 16’s defeat each other: each denies what the other holds about merit, and both rest on a reading rated \texttt{disputed}. Nothing else: in particular, nothing in the dispute contradicts James’s faith, and James’s word does not touch Trent’s reading of what works do, which grants the word and makes a claim about God’s verdict instead.
+\textbf{Who defeats whom}, all 144 pairs. James’s word defeats Trent’s reading of it, and the reading’s reply fails; it defeats the renewal reading too, whose reply fails for the same reason — it rests on Paul’s word as renewal, rated \texttt{disputed}, against a case rated \texttt{well\allowbreak{}Supported}. The Greek of Revelation 22:11 and of Sirach 18:22 defeat Trent’s Latin readings of them, and the replies fail. The Reformed harmony defeats, and is defeated by, both of Trent’s readings of what works do: canon 24’s, and chapter 16’s from the reward texts. Westminster’s reading of the reward texts and chapter 16’s defeat each other: each denies what the other holds about merit, and both rest on a reading rated \texttt{disputed}. The Reformed harmony and the renewal reading defeat each other through what their claims mean: the harmony holds that James 2:24 is compatible with Paul, which says James’s word has not Paul’s sense, and the renewal reading holds that it has (\texttt{Testimony.Meanings.Sola\allowbreak{}Fide.joins}); both rest on a reading rated \texttt{disputed}. Nothing else: in particular, nothing in the dispute contradicts James’s faith, and James’s word does not touch Trent’s reading of what works do, which grants the word and makes a claim about God’s verdict instead.
 
 Every cell is computed from the parties’ premises by \texttt{Horn.defeats?} and checked by the kernel.
 
@@ -12206,9 +12266,10 @@ Why it is not forced: a defensible position holds the Reformed harmony, which de
 \begin{itemize}
 \item \emph{James 2:24, read by canon 24} defeats \emph{Harmonisation of James 2:24}, and \emph{Harmonisation of James 2:24} defeats \emph{James 2:24, read by canon 24}.
 \item \emph{The reward of works (Trent, Session VI, ch. 16)} defeats \emph{Harmonisation of James 2:24}, and \emph{Harmonisation of James 2:24} defeats \emph{The reward of works (Trent, Session VI, ch. 16)}.
+\item \emph{James’s word, read through Paul’s (the renewal reading)} defeats \emph{Harmonisation of James 2:24}, and \emph{James’s word (δικαιόω, by the rule of least meaning)} defeats \emph{James’s word, read through Paul’s (the renewal reading)}.
 \end{itemize}
 \end{itemize}
-\par\noindent\textbf{What this rests on.} The reasons state 4 defeats and 58 absences of defeat, each a cell of the defeat table, \texttt{james\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\par\noindent\textbf{What this rests on.} The reasons state 6 defeats and 57 absences of defeat, each a cell of the defeat table, \texttt{james\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 \begin{itemize}
 \item \emph{Harmonisation of James 2:24}, weakest at \emph{disputed}:
 \begin{itemize}
@@ -12288,9 +12349,10 @@ Why the Reformed harmony can be defended: it answers Trent’s reading of what w
 \begin{itemize}
 \item \emph{James 2:24, read by canon 24} defeats \emph{Harmonisation of James 2:24}, and \emph{Harmonisation of James 2:24} defeats \emph{James 2:24, read by canon 24}.
 \item \emph{The reward of works (Trent, Session VI, ch. 16)} defeats \emph{Harmonisation of James 2:24}, and \emph{Harmonisation of James 2:24} defeats \emph{The reward of works (Trent, Session VI, ch. 16)}.
+\item \emph{James’s word, read through Paul’s (the renewal reading)} defeats \emph{Harmonisation of James 2:24}, and \emph{James’s word (δικαιόω, by the rule of least meaning)} defeats \emph{James’s word, read through Paul’s (the renewal reading)}.
 \end{itemize}
 \end{itemize}
-\par\noindent\textbf{What this rests on.} The reasons state 4 defeats and 58 absences of defeat, each a cell of the defeat table, \texttt{james\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\par\noindent\textbf{What this rests on.} The reasons state 6 defeats and 57 absences of defeat, each a cell of the defeat table, \texttt{james\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 \begin{itemize}
 \item \emph{James’s word (δικαιόω, by the rule of least meaning)}, weakest at \emph{well supported}:
 \begin{itemize}
@@ -12358,7 +12420,7 @@ The Reformed harmony derives that works are the fruit of faith and not its groun
 {\small\begin{verbatim}
 theorem harmony_holds_fruit : Entails (jamesDispute.node
     JamesParty.harmony).premises (p Claim.worksAreFruitNotGround)
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}On\allowbreak{}Works\_\allowbreak{}denies\_\allowbreak{}fruit}}\par\nobreak\noindent
 Trent’s reading of what works do denies it.
@@ -12366,7 +12428,7 @@ Trent’s reading of what works do denies it.
 {\small\begin{verbatim}
 theorem trentOnWorks_denies_fruit : Entails (jamesDispute.node
     JamesParty.trentOnWorks).premises (∼p Claim.worksAreFruitNotGround)
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{works\allowbreak{}Contested}}\par\nobreak\noindent
 \textbf{Whether works are only the fruit of justification is contested, and the weighing confirms it.} Heard as positions, the Reformed harmony, which holds it, and Trent’s reading of James 2:24 by canon 24, which denies it, can each be defended, and neither is forced. The rating \texttt{disputed} on \texttt{works\allowbreak{}Are\allowbreak{}Fruit\allowbreak{}Not\allowbreak{}Ground} is what the weighing finds.
@@ -12377,7 +12439,7 @@ def worksContested : Contested jamesDispute (p Claim.worksAreFruitNotGround) :=
     denier := JamesParty.trentOnWorks,
     holds := harmony_holds_fruit,
     denies := trentOnWorks_denies_fruit,
-    holderDefensible := ⋯,
+    holderDefensible := worksContested._proof_1,
     denierDefensible := trent_on_works_defensible }
 \end{verbatim}}
 \paragraph*{What each position rests on}
@@ -13025,7 +13087,7 @@ Each party’s weakest link, as the re-rated package computes it.
 {\small\begin{verbatim}
 theorem rerated_strength : ∀ (s : Standard) (i : JamesParty),
     ((jamesRegister.rerated s).node i).strength = ratedStrength s i
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{rated\allowbreak{}Defeats}}\par\nobreak\noindent
 Who defeats whom at a standard’s ratings: under the evidence standard, as in the full dispute; under the tradition standard, also Trent’s reading of the word and the renewal reading each defeat James’s word, now that it is weighed as \texttt{disputed}.
@@ -13046,24 +13108,6 @@ The table is finite, so membership in it is decidable.
 {\small\begin{verbatim}
 def instDecidableRelJamesPartyRatedDefeats : (s : Standard) → DecidableRel
     (ratedDefeats s)
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{rerated\_\allowbreak{}defeats\_\allowbreak{}evidence}}\par\nobreak\noindent
-\textbf{Who defeats whom at the evidence standard’s ratings}, all 144 pairs, computed from the parties’ premises and the re-rated inferences and checked by the kernel.
-
-{\small\begin{verbatim}
-theorem rerated_defeats_evidence : ∀ (i j : JamesParty),
-    (jamesRegister.rerated Standard.evidence).defeats i j ↔ ratedDefeats
-    Standard.evidence i j
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{rerated\_\allowbreak{}defeats\_\allowbreak{}tradition}}\par\nobreak\noindent
-\textbf{Who defeats whom at the tradition standard’s ratings}, all 144 pairs, computed and checked the same way.
-
-{\small\begin{verbatim}
-theorem rerated_defeats_tradition : ∀ (i j : JamesParty),
-    (jamesRegister.rerated Standard.tradition).defeats i j ↔ ratedDefeats
-    Standard.tradition i j
--- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{rerated\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom at each standard’s ratings.}
@@ -13276,7 +13320,7 @@ The renewal reading holds that James’s δικαιόω denotes the increase of 
 theorem renewal_holds_increase : Entails (jamesDispute.node
     JamesParty.renewalOnTheWord).premises (p
     Claim.jamesJustifyDenotesIncrease)
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{lexical\_\allowbreak{}denies\_\allowbreak{}increase}}\par\nobreak\noindent
 James’s word denies it.
@@ -13284,7 +13328,7 @@ James’s word denies it.
 {\small\begin{verbatim}
 theorem lexical_denies_increase : Entails (jamesDispute.node
     JamesParty.lexical).premises (∼p Claim.jamesJustifyDenotesIncrease)
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{renewal\allowbreak{}Heard}}\par\nobreak\noindent
 Why the renewal reading can be defended in the hearing under the tradition standard: it answers James’s word itself, now that the two are rated alike.
@@ -13295,9 +13339,10 @@ Why the renewal reading can be defended in the hearing under the tradition stand
 \item None of \emph{James’s faith (the faith James calls dead)}, \emph{James’s word, read through Paul’s (the renewal reading)}, \emph{Revelation 22:11, in the Greek}, \emph{Sirach 18:22, in the Greek} defeats another, and each attack on them is answered from among them:
 \begin{itemize}
 \item \emph{James’s word (δικαιόω, by the rule of least meaning)} defeats \emph{James’s word, read through Paul’s (the renewal reading)}, and \emph{James’s word, read through Paul’s (the renewal reading)} defeats \emph{James’s word (δικαιόω, by the rule of least meaning)}.
+\item \emph{Harmonisation of James 2:24} defeats \emph{James’s word, read through Paul’s (the renewal reading)}, and \emph{James’s word, read through Paul’s (the renewal reading)} defeats \emph{Harmonisation of James 2:24}.
 \end{itemize}
 \end{itemize}
-\par\noindent\textbf{What this rests on.} The reasons state 2 defeats and 43 absences of defeat, each a cell of the defeat table, \texttt{james\allowbreak{}Under\allowbreak{}Tradition\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\par\noindent\textbf{What this rests on.} The reasons state 4 defeats and 42 absences of defeat, each a cell of the defeat table, \texttt{james\allowbreak{}Under\allowbreak{}Tradition\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 \begin{itemize}
 \item \emph{James’s faith (the faith James calls dead)}, weakest at \emph{well supported}:
 \begin{itemize}
@@ -13448,7 +13493,7 @@ Trent’s reading of the reward texts denies that works are fruit and not ground
 {\small\begin{verbatim}
 theorem trentOnReward_denies_fruit : Entails (jamesDispute.node
     JamesParty.trentOnReward).premises (∼p Claim.worksAreFruitNotGround)
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{harmony\allowbreak{}Heard}}\par\nobreak\noindent
 Why the Reformed harmony can be defended in the hearing under the tradition standard: it answers canon 24 and chapter 16 itself.
@@ -13461,9 +13506,10 @@ Why the Reformed harmony can be defended in the hearing under the tradition stan
 \item \emph{James’s word, read through Paul’s (the renewal reading)} defeats \emph{James’s word (δικαιόω, by the rule of least meaning)}, and \emph{James’s word (δικαιόω, by the rule of least meaning)} defeats \emph{James’s word, read through Paul’s (the renewal reading)}.
 \item \emph{James 2:24, read by canon 24} defeats \emph{Harmonisation of James 2:24}, and \emph{Harmonisation of James 2:24} defeats \emph{James 2:24, read by canon 24}.
 \item \emph{The reward of works (Trent, Session VI, ch. 16)} defeats \emph{Harmonisation of James 2:24}, and \emph{Harmonisation of James 2:24} defeats \emph{The reward of works (Trent, Session VI, ch. 16)}.
+\item \emph{James’s word, read through Paul’s (the renewal reading)} defeats \emph{Harmonisation of James 2:24}, and \emph{James’s word (δικαιόω, by the rule of least meaning)} defeats \emph{James’s word, read through Paul’s (the renewal reading)}.
 \end{itemize}
 \end{itemize}
-\par\noindent\textbf{What this rests on.} The reasons state 6 defeats and 52 absences of defeat, each a cell of the defeat table, \texttt{james\allowbreak{}Under\allowbreak{}Tradition\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\par\noindent\textbf{What this rests on.} The reasons state 7 defeats and 51 absences of defeat, each a cell of the defeat table, \texttt{james\allowbreak{}Under\allowbreak{}Tradition\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 \begin{itemize}
 \item \emph{James’s word (δικαιόω, by the rule of least meaning)}, weakest at \emph{disputed}:
 \begin{itemize}

@@ -216,6 +216,10 @@ fruits, the thief saved, God not bound to his sacraments, the water of John 3:5
 baptismal; and the washing itself not necessary for salvation. -/
 def romeOnBaptismReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .waterItselfNecessaryForSalvation => False
   | .john3_5WaterIsNaturalBirth => False
   | .john3_5WaterIsEzekielsCleansing => False
