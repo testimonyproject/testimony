@@ -350,6 +350,10 @@ regardless. The all-holds reading cannot serve here — this package *denies* a
 premise, which is the whole point of it. -/
 def newPerspectiveOwnReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .worksOfLawMeansWorksGenerally => False
   | _ => True
 
@@ -440,6 +444,10 @@ theorem finnish_is_satisfiable : Satisfiable finnish.premises := by
 nomism, and everything else holds. -/
 def criticsReading : Valuation Claim := fun a =>
   match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
   | .secondTempleCovenantalNomism => False
   | _ => True
 

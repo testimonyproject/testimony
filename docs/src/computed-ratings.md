@@ -121,6 +121,13 @@ none yet: no meaning of theirs is analysed, so none denies another. Without the 
 Trent's reading of Paul's word would pass as granting the lexical step's forensic ground,
 which it denies.
 
+Disputes hold them too: every attack is decided over what a party holds, its premises with
+the postulates ([disputes](logic.md#disputes)). In the James dispute this adds one pair of
+defeats, both ways: the Reformed harmony and the renewal reading, whose claims about James's
+word exclude each other by meaning. No verdict the library states moves. `establish` holds
+premises alone; the postulates could only add entailments, and no refutation is undone by
+them.
+
 ## Stating the bridge
 
 The standards check what a dissent *asserts*, not its step, because every step on every side

@@ -279,8 +279,8 @@ def node : Party → ArgumentPackage Claim
 def hearing : Dispute Claim Party where
   node := node
   consistent
-    | .howell => howellCase_is_satisfiable
-    | .faith => Arguments.SolaFide.jamesFaithCase_is_satisfiable
+    | .howell => Horn.satisfiable_of_satisfiable? (by decide +kernel)
+    | .faith => Horn.satisfiable_of_satisfiable? (by decide +kernel)
     | .sola q => solaFideDispute.consistent q
   sound
     | .howell => howellCase_establishes

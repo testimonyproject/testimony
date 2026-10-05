@@ -1,3 +1,4 @@
+import Testimony.Meanings.SpiritBaptism
 import Testimony.Arguments.SpiritBaptism.Positions
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
@@ -97,10 +98,10 @@ contradiction, delivers its conclusion, and has its steps rated. -/
 def spiritBaptismDispute : Dispute Claim View where
   node := viewNode
   consistent
-    | .conversion => conversionCase_is_satisfiable
-    | .pentecostal => pentecostalCase_is_satisfiable
-    | .holiness => holinessCase_is_satisfiable
-    | .sacramental => sacramentalCase_is_satisfiable
+    | .conversion => Meanings.SpiritBaptism.satisfiable_held conversionCase_is_satisfiable
+    | .pentecostal => Meanings.SpiritBaptism.satisfiable_held pentecostalCase_is_satisfiable
+    | .holiness => Meanings.SpiritBaptism.satisfiable_held holinessCase_is_satisfiable
+    | .sacramental => Meanings.SpiritBaptism.satisfiable_held sacramentalCase_is_satisfiable
   sound
     | .conversion => conversionCase_establishes
     | .pentecostal => pentecostalCase_establishes

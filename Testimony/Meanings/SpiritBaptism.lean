@@ -42,4 +42,21 @@ instance joins : HasJoins Claim where
   entailments := []
   entailments_pinned := by decide +kernel
 
+
+/-- **No postulates**: with no joins, the argument's checks hold nothing besides
+its premises. -/
+@[spiritBaptismDefs] theorem postulates_eq :
+    (Testimony.Logic.HasPostulates.postulates : List (Testimony.Logic.Formula Claim)) =
+      [] :=
+  rfl
+
+attribute [spiritBaptismDefs] Testimony.Logic.ArgumentPackage.held
+
+
+/-- With no postulates, a package's premises having a model is all a dispute
+asks of it. -/
+theorem satisfiable_held {a : Testimony.Logic.ArgumentPackage Claim}
+    (h : Testimony.Logic.Satisfiable a.premises) : Testimony.Logic.Satisfiable a.held :=
+  Testimony.Logic.ArgumentPackage.satisfiable_held_of_nil postulates_eq h
+
 end Testimony.Meanings.SpiritBaptism

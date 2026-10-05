@@ -1,4 +1,4 @@
-import Testimony.Logic.Basic
+import Testimony.Logic.Package
 
 /-!
 # Testimony.Logic.Postulates — what an argument's checks hold besides
@@ -16,7 +16,9 @@ instance. `Testimony.Checks.Meanings` fails the build for an argument whose
 instance comes from anywhere else.
 
 A credibility check (`Testimony.Logic.Dissent`) holds them for every dissent,
-whichever side it is on. No call site names them, so none can forget them.
+whichever side it is on, and a dispute decides every attack over what each party
+holds (`ArgumentPackage.held`): its premises and the postulates. No call site
+names them, so none can forget them.
 -/
 
 namespace Testimony.Logic
@@ -27,5 +29,22 @@ argument's meanings. -/
 class HasPostulates (α : Type) where
   /-- The postulates, as formulas over the atoms. -/
   postulates : List (Formula α)
+
+/-- **What the package holds, in a dispute**: its premises, and its argument's
+meaning postulates (`HasPostulates`). Two claims the atom type keeps apart but
+whose meanings exclude each other cannot both be held, by either party, so an
+attack is decided over what each party holds and not over its premises alone.
+The postulates are not premises: they are not ranked, and a package's strength
+does not depend on them. -/
+def ArgumentPackage.held {α : Type} [HasPostulates α] (pkg : ArgumentPackage α) :
+    List (Formula α) :=
+  pkg.premises ++ HasPostulates.postulates
+
+/-- Where an argument has no postulates, what its premises can hold together,
+it can hold. -/
+theorem ArgumentPackage.satisfiable_held_of_nil {α : Type} [HasPostulates α]
+    (h : (HasPostulates.postulates : List (Formula α)) = []) {a : ArgumentPackage α}
+    (hs : Satisfiable a.premises) : Satisfiable a.held := by
+  simpa [ArgumentPackage.held, h] using hs
 
 end Testimony.Logic

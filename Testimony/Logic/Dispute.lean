@@ -1,5 +1,5 @@
 import Testimony.Logic.Framework
-import Testimony.Logic.Package
+import Testimony.Logic.Postulates
 
 /-!
 # Testimony.Logic.Dispute — argument packages as the nodes of a dispute
@@ -26,6 +26,22 @@ arguments built from premises and inference steps:
 All are `Entails` facts, so all are proved by `establish`, and the absence of
 each is proved by a countermodel. An attack is a theorem, and so is its
 absence.
+
+## What a party holds: its premises, and what its claims mean
+
+An attack is decided over what a party **holds** (`ArgumentPackage.held`): its
+premises, and its argument's meaning postulates (`Testimony.Logic.HasPostulates`).
+The atom type keeps "James 2:24 is compatible with Paul" apart from "James's
+δικαιόω is Paul's", but the first says, in so many words, that James's word has
+not Paul's sense, and a party holding either must deny the other. The
+postulates say so, the same for every party, so the meanings cannot favour a
+side; and they are not premises, so they are not ranked and no party's strength
+depends on them. A dispute's nodes must hold together with them (`Dispute`),
+and a reading that shows two parties stand together must respect them.
+
+`establish` holds premises alone. Entailment only grows with what is held, so
+the postulates could establish more and never less; what they could undo is a
+refutation, and `Testimony.Checks.Postulates` shows that none is undone.
 
 ## Derived attacks, gated by entailment
 
@@ -140,17 +156,30 @@ package with no ranked premise is as strong as a package can be. -/
 def strength (pkg : ArgumentPackage α) : ℕ :=
   (pkg.premises.filterMap pkg.rankOf).foldr min 3
 
+
 end ArgumentPackage
 
-/-- `a` **undermines** `b` on `φ`: `φ` is one of `b`'s premises, and `a`'s
-premises entail its negation. -/
-def UnderminesOn (a b : ArgumentPackage α) (φ : Formula α) : Prop :=
-  φ ∈ b.premises ∧ Entails a.premises (∼φ)
+section Attack
 
-/-- `a` **rebuts** `b`: `a`'s premises entail the negation of `b`'s
+variable [HasPostulates α]
+
+omit [HasPostulates α] in
+/-- What a package's premises entail, what it holds entails: the postulates only
+add. -/
+theorem ArgumentPackage.entails_held [HasPostulates α] {a : ArgumentPackage α}
+    {φ : Formula α} (h : Entails a.premises φ) : Entails a.held φ :=
+  entails_iff.mpr fun w hw =>
+    entails_iff.mp h w fun ψ hψ => hw ψ (List.mem_append_left _ hψ)
+
+/-- `a` **undermines** `b` on `φ`: `φ` is one of `b`'s premises, and what `a`
+holds entails its negation. -/
+def UnderminesOn (a b : ArgumentPackage α) (φ : Formula α) : Prop :=
+  φ ∈ b.premises ∧ Entails a.held (∼φ)
+
+/-- `a` **rebuts** `b`: what `a` holds entails the negation of `b`'s
 conclusion. -/
 def Rebuts (a b : ArgumentPackage α) : Prop :=
-  Entails a.premises (∼b.conclusion)
+  Entails a.held (∼b.conclusion)
 
 /-- `a` **rebuts `b` on a step**: `p ➝ ψ` is one of `b`'s premises, `b`'s
 premises entail `ψ`, and `a`'s entail its negation. `ψ` is a claim `b` derives
@@ -164,13 +193,14 @@ ways and the semantics would collapse into a consistency check (Cayrol, 1995);
 without the second, a step `b` holds but never uses would make `b` answerable
 for a claim it does not make. -/
 def RebutsStep (a b : ArgumentPackage α) (p ψ : Formula α) : Prop :=
-  (p ➝ ψ) ∈ b.premises ∧ ψ ≠ ⊥ ∧ Entails b.premises ψ ∧ Entails a.premises (∼ψ)
+  (p ➝ ψ) ∈ b.premises ∧ ψ ≠ ⊥ ∧ Entails b.held ψ ∧ Entails a.held (∼ψ)
 
 /-- `a` **attacks** `b`: it undermines one of `b`'s premises, rebuts one of the
 claims `b` derives, or rebuts its conclusion. -/
 def Attacks (a b : ArgumentPackage α) : Prop :=
   (∃ φ, UnderminesOn a b φ) ∨ Rebuts a b ∨ ∃ p ψ, RebutsStep a b p ψ
 
+omit [HasPostulates α] in
 /-- Premise `φ` of `b` is strictly stronger than an attacker of strength `s`. An
 unranked premise — an uncited inference step — never is. -/
 def Outranks (b : ArgumentPackage α) (φ : Formula α) (s : ℕ) : Prop :=
@@ -178,6 +208,7 @@ def Outranks (b : ArgumentPackage α) (φ : Formula α) (s : ℕ) : Prop :=
   | some r => s < r
   | none => False
 
+omit [HasPostulates α] in
 instance (b : ArgumentPackage α) (φ : Formula α) (s : ℕ) :
     Decidable (Outranks b φ s) := by
   unfold Outranks; split <;> infer_instance
@@ -212,33 +243,39 @@ This is how the absence of an attack is proved, and it is proved by naming the
 reading on which both positions stand — the world in which neither has to give
 way. -/
 theorem not_attacks_of_joint_model {a b : ArgumentPackage α}
-    (h : Satisfiable (a.premises ++ b.premises ++ [b.conclusion])) : ¬ Attacks a b := by
+    (h : Satisfiable (a.held ++ b.premises ++ [b.conclusion])) : ¬ Attacks a b := by
   obtain ⟨w, hw⟩ := satisfiable_iff.mp h
-  have ha : ∀ φ ∈ a.premises, w ⊧ φ := fun φ hφ => hw φ (by simp [hφ])
-  have hb : ∀ φ ∈ b.premises, w ⊧ φ := fun φ hφ => hw φ (by simp [hφ])
+  have ha : ∀ φ ∈ a.held, w ⊧ φ := fun φ hφ => hw φ (by simp [hφ])
+  have hb : ∀ φ ∈ b.held, w ⊧ φ := fun φ hφ => by
+    rcases List.mem_append.mp hφ with hφ | hφ
+    · exact hw φ (by simp [hφ])
+    · exact ha φ (List.mem_append_right _ hφ)
   have hc : w ⊧ b.conclusion := hw _ (by simp)
   rintro (⟨φ, hφ, hent⟩ | hent | ⟨p, ψ, -, -, hb', hent⟩)
-  · exact (entails_iff.mp hent w ha) (hb φ hφ)
+  · exact (entails_iff.mp hent w ha) (hb φ (List.mem_append_left _ hφ))
   · exact (entails_iff.mp hent w ha) hc
   · exact (entails_iff.mp hent w ha) (entails_iff.mp hb' w hb)
 
 /-- No attack, no defeat. -/
 theorem not_defeats_of_joint_model {a b : ArgumentPackage α}
-    (h : Satisfiable (a.premises ++ b.premises ++ [b.conclusion])) : ¬ Defeats a b :=
+    (h : Satisfiable (a.held ++ b.premises ++ [b.conclusion])) : ¬ Defeats a b :=
   fun hd => not_attacks_of_joint_model h hd.attacks
 
 /-- **An argument never defeats itself** — if its premises can hold together and
 deliver its conclusion. Undermining itself would make its premises inconsistent;
 rebutting itself would make them entail both its conclusion and the conclusion's
 negation. -/
-theorem not_defeats_self {a : ArgumentPackage α} (hsat : Satisfiable a.premises)
+theorem not_defeats_self {a : ArgumentPackage α} (hsat : Satisfiable a.held)
     (hest : Establishes a) : ¬ Defeats a a := by
   obtain ⟨w, hw⟩ := satisfiable_iff.mp hsat
+  have hp : ∀ φ ∈ a.premises, w ⊧ φ := fun φ hφ => hw φ (List.mem_append_left _ hφ)
   intro hd
   rcases hd.attacks with ⟨φ, hφ, hent⟩ | hent | ⟨p, ψ, -, -, hb, hent⟩
-  · exact (entails_iff.mp hent w hw) (hw φ hφ)
-  · exact (entails_iff.mp hent w hw) (entails_iff.mp hest w hw)
+  · exact (entails_iff.mp hent w hw) (hp φ hφ)
+  · exact (entails_iff.mp hent w hw) (entails_iff.mp hest w hp)
   · exact (entails_iff.mp hent w hw) (entails_iff.mp hb w hw)
+
+end Attack
 
 /-- **A dispute**: argument packages indexed by `ι`, each of them an argument in
 the full sense — premises that can hold together, a conclusion they deliver,
@@ -249,11 +286,11 @@ whose premises had no model would attack everything; a node that did not
 establish its conclusion would be arguing for nothing; and a node with unrated
 steps would be weighed by its premises alone, however contested its
 inferences. -/
-structure Dispute (α : Type) (ι : Type) where
+structure Dispute (α : Type) [HasPostulates α] (ι : Type) where
   /-- The package at each node. -/
   node : ι → ArgumentPackage α
-  /-- Every node's premises can hold together. -/
-  consistent : ∀ i, Satisfiable (node i).premises
+  /-- Every node's premises can hold together, with the meaning postulates. -/
+  consistent : ∀ i, Satisfiable (node i).held
   /-- Every node establishes its conclusion. -/
   sound : ∀ i, Establishes (node i)
   /-- Every node's inference steps are rated. -/
@@ -261,7 +298,7 @@ structure Dispute (α : Type) (ι : Type) where
 
 namespace Dispute
 
-variable {ι : Type} (d : Dispute α ι)
+variable [HasPostulates α] {ι : Type} (d : Dispute α ι)
 
 /-- Who defeats whom in the dispute: derived, never stipulated. -/
 def defeats (i j : ι) : Prop := Defeats (d.node i) (d.node j)
@@ -284,7 +321,8 @@ theorem restrict_defeats (P : ι → Prop) (i j : {i // P i}) :
 every conclusion of each of them. It is proved by naming that valuation — the
 world in which none of them has to give way. -/
 def StandTogether (l : List ι) : Prop :=
-  Satisfiable (l.flatMap fun i => (d.node i).premises ++ [(d.node i).conclusion])
+  Satisfiable (l.flatMap (fun i => (d.node i).premises ++ [(d.node i).conclusion]) ++
+    HasPostulates.postulates)
 
 /-- **Parties that stand together do not defeat one another.** One named world
 settles every ordered pair in the group at once. -/
@@ -292,12 +330,14 @@ theorem StandTogether.not_defeats {d : Dispute α ι} {l : List ι} (h : d.Stand
     {i j : ι} (hi : i ∈ l) (hj : j ∈ l) : ¬ d.defeats i j := by
   obtain ⟨w, hw⟩ := satisfiable_iff.mp h
   have holds : ∀ k ∈ l, (∀ φ ∈ (d.node k).premises, w ⊧ φ) ∧ w ⊧ (d.node k).conclusion :=
-    fun k hk => ⟨fun φ hφ => hw φ (List.mem_flatMap.mpr ⟨k, hk, by simp [hφ]⟩),
-      hw _ (List.mem_flatMap.mpr ⟨k, hk, by simp⟩)⟩
+    fun k hk => ⟨fun φ hφ => hw φ (List.mem_append_left _
+        (List.mem_flatMap.mpr ⟨k, hk, by simp [hφ]⟩)),
+      hw _ (List.mem_append_left _ (List.mem_flatMap.mpr ⟨k, hk, by simp⟩))⟩
   refine not_defeats_of_joint_model (satisfiable_iff.mpr ⟨w, fun φ hφ => ?_⟩)
-  simp only [List.mem_append, List.mem_singleton] at hφ
-  rcases hφ with (hφ | hφ) | rfl
+  simp only [ArgumentPackage.held, List.mem_append, List.mem_singleton] at hφ
+  rcases hφ with ((hφ | hφ) | hφ) | rfl
   · exact (holds i hi).1 φ hφ
+  · exact hw φ (List.mem_append_right _ hφ)
   · exact (holds j hj).1 φ hφ
   · exact (holds j hj).2
 
@@ -333,9 +373,10 @@ theorem entails_iff_not_satisfiable {Γ : List (Formula α)} {φ : Formula α} :
 `b`, so its rebuttal fails; each of `b`'s premises can hold alongside all of
 `a`'s, so it undermines nothing; and so can each claim `b`'s steps deliver, so
 it rebuts none of them. -/
-theorem not_defeats_of_outweighed {a b : ArgumentPackage α} (hweak : a.strength < b.strength)
-    (hmodels : ∀ φ ∈ b.premises, Satisfiable (a.premises ++ [φ]))
-    (hsteps : ∀ p ψ, (p ➝ ψ) ∈ b.premises → Satisfiable (a.premises ++ [ψ])) :
+theorem not_defeats_of_outweighed [HasPostulates α] {a b : ArgumentPackage α}
+    (hweak : a.strength < b.strength)
+    (hmodels : ∀ φ ∈ b.premises, Satisfiable (a.held ++ [φ]))
+    (hsteps : ∀ p ψ, (p ➝ ψ) ∈ b.premises → Satisfiable (a.held ++ [ψ])) :
     ¬ Defeats a b := by
   rintro (⟨φ, ⟨hmem, hent⟩, _⟩ | ⟨_, hw⟩ | ⟨p, ψ, ⟨hmem, -, -, hent⟩, _⟩)
   · obtain ⟨w, hw⟩ := satisfiable_iff.mp (hmodels φ hmem)
@@ -351,10 +392,10 @@ can too, so `a` does not rebut it.
 This is how the absence of a defeat is proved between positions that cannot
 both be held — where `not_defeats_of_joint_model` does not apply, because no one
 world holds both, but the conflict runs only one way. -/
-theorem not_defeats_of_models {a b : ArgumentPackage α}
-    (hunder : ∀ φ ∈ b.premises, Satisfiable (a.premises ++ [φ]))
-    (hsteps : ∀ p ψ, (p ➝ ψ) ∈ b.premises → Satisfiable (a.premises ++ [ψ]))
-    (hreb : Satisfiable (a.premises ++ [b.conclusion])) : ¬ Defeats a b := by
+theorem not_defeats_of_models [HasPostulates α] {a b : ArgumentPackage α}
+    (hunder : ∀ φ ∈ b.premises, Satisfiable (a.held ++ [φ]))
+    (hsteps : ∀ p ψ, (p ➝ ψ) ∈ b.premises → Satisfiable (a.held ++ [ψ]))
+    (hreb : Satisfiable (a.held ++ [b.conclusion])) : ¬ Defeats a b := by
   rintro (⟨φ, ⟨hmem, hent⟩, _⟩ | ⟨hr, _⟩ | ⟨p, ψ, ⟨hmem, -, -, hent⟩, _⟩)
   · obtain ⟨w, hw⟩ := satisfiable_iff.mp (hunder φ hmem)
     exact (entails_iff.mp hent w fun ψ hψ => hw ψ (by simp [hψ])) (hw φ (by simp))
@@ -376,16 +417,17 @@ can also hold `φ` — and the reading's docstring says what that way is. When
 Nothing depends on these results: the table stands without them. They are kept
 for what they teach, one premise at a time, and each is checked on its own, so
 adding a premise elsewhere cannot break one. -/
-def Grants (a : ArgumentPackage α) (φ : Formula α) : Prop :=
-  Satisfiable (a.premises ++ [φ])
+def Grants [HasPostulates α] (a : ArgumentPackage α) (φ : Formula α) : Prop :=
+  Satisfiable (a.held ++ [φ])
 
 /-- What a position grants, it does not undermine. -/
-theorem Grants.not_undermines {a b : ArgumentPackage α} {φ : Formula α} (h : Grants a φ) :
+theorem Grants.not_undermines [HasPostulates α] {a b : ArgumentPackage α} {φ : Formula α}
+    (h : Grants a φ) :
     ¬ UnderminesOn a b φ :=
   fun ⟨_, hent⟩ => entails_neg_iff.mp hent h
 
 /-- A position that grants another's conclusion does not rebut it. -/
-theorem Grants.not_rebuts {a b : ArgumentPackage α} (h : Grants a b.conclusion) :
+theorem Grants.not_rebuts [HasPostulates α] {a b : ArgumentPackage α} (h : Grants a b.conclusion) :
     ¬ Rebuts a b :=
   fun hent => entails_neg_iff.mp hent h
 

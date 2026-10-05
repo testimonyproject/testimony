@@ -494,11 +494,13 @@ variable {ι : Type}
 
 namespace Dispute
 
+variable [HasPostulates α]
+
 /-- The dispute with every node's inferences re-rated by `f`: the same parties,
 the same premises, weighed at different ratings. -/
 def rerate (D : Dispute α ι) (f : Source → Source) : Dispute α ι where
   node i := (D.node i).rerate f
-  consistent i := D.consistent i
+  consistent i := by simpa [ArgumentPackage.rerate, ArgumentPackage.held] using D.consistent i
   sound i := D.sound i
   rated i := by simpa [ArgumentPackage.rerate] using D.rated i
 

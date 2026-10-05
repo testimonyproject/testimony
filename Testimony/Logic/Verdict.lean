@@ -318,7 +318,7 @@ end Claim
 
 /-- **A verdict of a dispute**, with its witness, checked. Its page shows the
 reasons generated from the witness; `Verdict.holds` states it. -/
-structure Verdict {α : Type} (D : Dispute α ι) where
+structure Verdict {α : Type} [Testimony.Logic.HasPostulates α] (D : Dispute α ι) where
   /-- The dispute as the checkers compute with it. -/
   finite : Finite D.defeats
   /-- What the verdict says, and its witness. -/
@@ -328,7 +328,7 @@ structure Verdict {α : Type} (D : Dispute α ι) where
 
 namespace Verdict
 
-variable {α : Type} {D : Dispute α ι}
+variable {α : Type} [Testimony.Logic.HasPostulates α] {D : Dispute α ι}
 
 /-- **The verdict holds** of the dispute. -/
 theorem holds (v : Verdict D) : v.claim.Holds D.defeats := Claim.holds_of_check v.checked

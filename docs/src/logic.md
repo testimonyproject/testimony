@@ -511,6 +511,17 @@ one: rate a step `disputed` when a cited source grants its grounds and denies
 its conclusion. Leaving steps unrated would let the placement of a contested
 move — atom or step — decide who prevails.
 
+**What a party holds includes what its claims mean.** Every attack is decided over a
+package's premises *and* its argument's meaning postulates (`ArgumentPackage.held`;
+[computed ratings](computed-ratings.md#meaning-postulates)). Two claims the atom type keeps
+apart, but whose meanings exclude each other, cannot be held together by either party. In
+the James dispute, the Reformed harmony ("James 2:24 is compatible with Paul") and the
+renewal reading ("James's δικαιόω is Paul's") defeat each other for that reason alone. The
+postulates are the same for every party and are not ranked, so they cannot favour a side or
+change a strength. A node must hold together with them. `establish` does not use them:
+they could only add entailments, and `Testimony.Checks.Postulates` shows that no refutation
+is undone by them.
+
 Why confidence at all: without it, premise attacks between classical arguments
 are always mutual, and Dung's semantics reduce to a consistency check (Cayrol,
 1995). The consequence is that **ratings become premises** of every dispute that

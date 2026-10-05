@@ -42,7 +42,7 @@ namespace Testimony.Logic
 
 open Framework
 
-variable {α ι : Type}
+variable {α ι : Type} [HasPostulates α]
 
 /-- **The claim `φ` is contested in the dispute**: `holder` holds it, `denier`
 denies it, and both can be defended. -/
