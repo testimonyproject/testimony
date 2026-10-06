@@ -33,8 +33,8 @@ analysed; sola scriptura, the virgin birth and Spirit baptism in part, the claim
 bear on a join; and the other two are registered with their citations' labels and marked
 unanalysed, so that they are counted from the start (each module's `coverage_now`).
 `Testimony.Checks.Meanings` fails the build for an argument with no instance, so a new argument
-is registered when it is added. It also fails the build for an argument whose joins are not listed and pinned, or
-whose meaning postulates come from anywhere but those lists
+is registered when it is added. It also fails the build for an argument whose joins are not
+listed and pinned, or whose meaning postulates come from anywhere but those lists
 ([computed ratings](computed-ratings.md#meaning-postulates)).
 
 ## What a claim means
