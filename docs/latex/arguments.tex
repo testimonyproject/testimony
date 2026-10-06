@@ -18007,7 +18007,7 @@ def spiritBaptismDispute : Dispute Claim View :=
   { node := viewNode,
     consistent := spiritBaptismDispute._proof_1,
     sound := spiritBaptismDispute._proof_2,
-    rated := spiritBaptismDispute._proof_3 }
+    rated := spiritBaptismDispute._proof_7 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{conversion\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}sacraments}}\par\nobreak\noindent
 \textbf{The conversion and sacramental views can be held together}: one reading satisfies both — every believer baptized in the Spirit at conversion, the Spirit given in the sacraments, and no second baptism to seek.
@@ -18017,7 +18017,7 @@ What this does not claim: that the two agree. They differ over what the rite doe
 {\small\begin{verbatim}
 theorem conversion_stands_with_the_sacraments :
     spiritBaptismDispute.StandTogether [View.conversion, View.sacramental]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{the\_\allowbreak{}subsequence\_\allowbreak{}views\_\allowbreak{}stand\_\allowbreak{}together}}\par\nobreak\noindent
 \textbf{The two subsequence views can be held together}: a second baptism to seek, whether read as empowerment or as the second work of grace. Whether it is the same second experience, the encoding does not say.
@@ -18025,7 +18025,7 @@ theorem conversion_stands_with_the_sacraments :
 {\small\begin{verbatim}
 theorem the_subsequence_views_stand_together :
     spiritBaptismDispute.StandTogether [View.pentecostal, View.holiness]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{view\allowbreak{}Defeats}}\par\nobreak\noindent
 The defeats of the dispute, as a table.

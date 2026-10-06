@@ -243,6 +243,10 @@ inductive Concept
   | birthWithoutHumanFather
   /-- Virginity: having not known a man. -/
   | virginity
+  /-- Christ baptizing believers in the Spirit, as John promised. -/
+  | christBaptizingInTheSpirit
+  /-- The Spirit baptizing believers into the body of Christ. -/
+  | spiritBaptizingIntoTheBody
 deriving DecidableEq, Repr
 
 /-- The relations doctrinal claims are built from. A fixed set, so that two

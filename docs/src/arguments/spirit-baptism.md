@@ -1124,7 +1124,7 @@ def spiritBaptismDispute : Dispute Claim View :=
   { node := viewNode,
     consistent := spiritBaptismDispute._proof_1,
     sound := spiritBaptismDispute._proof_2,
-    rated := spiritBaptismDispute._proof_3 }
+    rated := spiritBaptismDispute._proof_7 }
 ```
 
 <a id="conversion_stands_with_the_sacraments"></a>
@@ -1141,7 +1141,7 @@ encoded here makes them contradict each other.
 ```lean
 theorem conversion_stands_with_the_sacraments :
     spiritBaptismDispute.StandTogether [View.conversion, View.sacramental]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="the_subsequence_views_stand_together"></a>
@@ -1154,7 +1154,7 @@ the same second experience, the encoding does not say.
 ```lean
 theorem the_subsequence_views_stand_together :
     spiritBaptismDispute.StandTogether [View.pentecostal, View.holiness]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="viewDefeats"></a>
