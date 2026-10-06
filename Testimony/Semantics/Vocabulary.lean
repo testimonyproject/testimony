@@ -100,12 +100,16 @@ inductive Lexeme
   | allein
   /-- πίστεως μόνον, "faith alone" — the phrase, as James 2:24 has it. -/
   | faithAlonePhrase
+  /-- Hebrew עַלְמָה (Isaiah 7:14). -/
+  | almah
 deriving DecidableEq, Repr
 
 /-- What a word can mean: a fixed inventory of senses, each named for what it
 denotes. A sense belongs to no word in particular; `Statement.means` pairs them.
 -/
 inductive Sense
+  /-- A woman who has not known a man. -/
+  | virgin
   /-- A verdict: to declare righteous, the opposite of to condemn. -/
   | verdict
   /-- To make righteous: inward renewal. -/
@@ -229,6 +233,16 @@ inductive Concept
   | clearSenseOfScripture
   /-- Reading Scripture: the act, not what it yields. -/
   | readingScripture
+  /-- The teaching office of the Church of Rome. -/
+  | magisterium
+  /-- Controversies of religion: the questions a rule of faith decides. -/
+  | controversiesOfReligion
+  /-- The Messiah's birth. -/
+  | messiahsBirth
+  /-- A birth with no human father. -/
+  | birthWithoutHumanFather
+  /-- Virginity: having not known a man. -/
+  | virginity
 deriving DecidableEq, Repr
 
 /-- The relations doctrinal claims are built from. A fixed set, so that two
@@ -281,6 +295,8 @@ inductive Rel
   /-- The first judges the second: is its measure, and voids what contradicts
   it. -/
   | judges
+  /-- The first settles the second, finally: no appeal lies beyond it. -/
+  | settles
 deriving DecidableEq, Repr
 
 /-- A principle of reading, held for its own sake. -/

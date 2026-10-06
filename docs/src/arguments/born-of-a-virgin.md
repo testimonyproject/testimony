@@ -3442,6 +3442,9 @@ virgin.
 def nearTermSignReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceImpliesNoHumanFather => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.signMustBeExtraordinary => False
     | Claim.almahMeansVirgin => False
     | x => True
@@ -3631,6 +3634,9 @@ too.
 def repliesStandReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.nearTermExcludesMessianicSense => False
     | x => True
 ```
@@ -3782,6 +3788,9 @@ Everything else holds — the scriptural reading and all four replies with it.
 def motyerReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.isaiahIsNearTermSignToAhaz => False
     | Claim.nearTermExcludesMessianicSense => False
     | x => True
@@ -3905,13 +3914,30 @@ theorem christian_rebuts_critical : Rebuts christian criticalDenial
 -- axioms: propext, Quot.sound
 ```
 
+<a id="scripturalWorldReading"></a>
+**`scripturalWorldReading`**
+
+The scriptural reader's world, with everything else holding that can: Micah's
+silence indicates a fatherless birth, so it is not nothing; and Scripture, not
+the magisterium, is the judge that settles.
+
+```lean
+def scripturalWorldReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
+    | x => True
+```
+
 <a id="christian_does_not_undermine_critical"></a>
 **`christian_does_not_undermine_critical`**
 
 But it undermines none of the critical denial's premises. For each of them
 there is a world in which the scriptural reading holds and that premise does
-too: the near-term setting and the exclusion hold where everything does, and the
-exclusion step holds where Berry and Postell are right.
+too: the near-term setting and the exclusion hold in the scriptural reader's
+world, and the exclusion step holds where Berry and Postell are right.
 
 ```lean
 theorem christian_does_not_undermine_critical : ∀ (φ : Formula Claim),
@@ -4047,6 +4073,9 @@ later. Postell's step holds in it, because one of its grounds fails.
 def laterOraclesReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceImpliesNoHumanFather => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.isaiahPredictsVirginBirth => False
     | Claim.isaiah9And11ShareTheAssyrianTimeline =>
       False
@@ -4076,6 +4105,9 @@ messianically. The Micah step holds in it, because one of its grounds fails.
 def royalMicahReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceImpliesNoHumanFather => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.isaiahPredictsVirginBirth => False
     | Claim.micahRulerReadMessianically => False
     | x => True
@@ -4128,7 +4160,7 @@ def isaiahDispute : Dispute Claim Party :=
   { node := partyNode,
     consistent := isaiahDispute._proof_1,
     sound := isaiahDispute._proof_2,
-    rated := isaiahDispute._proof_3 }
+    rated := isaiahDispute._proof_9 }
 ```
 
 <a id="replies_stand_with_the_scriptural_reading"></a>
@@ -4142,7 +4174,7 @@ twenty ordered pairs.
 theorem replies_stand_with_the_scriptural_reading :
     isaiahDispute.StandTogether [Party.scriptural, Party.berry, Party.postell,
     Party.motyer, Party.micah]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="partyDefeats"></a>
@@ -4955,7 +4987,7 @@ def wegnerDispute : Dispute Claim WegnerParty :=
   { node := wegnerPartyNode,
     consistent := wegnerDispute._proof_1,
     sound := wegnerDispute._proof_2,
-    rated := wegnerDispute._proof_3 }
+    rated := wegnerDispute._proof_6 }
 ```
 
 <a id="wegner_stands_with_the_reply"></a>
@@ -4967,7 +4999,7 @@ the word does not denote a virgin, and the sign need not be a miracle.
 ```lean
 theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether
     [WegnerParty.wegner, WegnerParty.reply]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="wegnerPartyDefeats"></a>
