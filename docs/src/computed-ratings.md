@@ -119,10 +119,13 @@ Sola fide has four exclusions and no entailments (`Testimony.Meanings.SolaFide.j
 Every dissent gets the same background, whichever side it is on. Sola scriptura has one
 exclusion and two entailments (`Testimony.Meanings.SolaScriptura.joins`): Mark 7's principle
 against binding a commandment of men as God's word, and "Scripture is the sole infallible
-rule" asserting that it is infallible and that no other rule is. The other arguments have none
-yet. Without the postulates,
-Trent's reading of Paul's word would pass as granting the lexical step's forensic ground,
-which it denies.
+rule" asserting that it is infallible and that no other rule is. The virgin birth has two
+exclusions and one entailment (`Testimony.Meanings.BornOfAVirgin.joins`): Brown's "Micah's
+silence proves nothing" against Miravalle's "it indicates a fatherless birth", Westminster's
+supreme judge against "magisterial teaching settles the question", and "עַלְמָה denotes a virgin"
+asserting that its range admits the sense. The other arguments have none yet. Without the
+postulates, Trent's reading of Paul's word would pass as granting the lexical step's forensic
+ground, which it denies.
 
 Disputes hold them too: every attack is decided over what a party holds, its premises with
 the postulates ([disputes](logic.md#disputes)). In the James dispute this adds one pair of

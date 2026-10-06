@@ -198,6 +198,8 @@ miracle, the pregnancy is an ordinary one, and עַלְמָה does not denote a
 virgin. -/
 def nearTermSignReading : Valuation Claim := fun a =>
   match a with
+  | .maternalSilenceImpliesNoHumanFather => False
+  | .magisteriumIsDoctrinallyAuthoritative => False
   | .signMustBeExtraordinary => False
   | .almahMeansVirgin => False
   | _ => True

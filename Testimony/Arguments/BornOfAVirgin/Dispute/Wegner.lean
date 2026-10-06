@@ -164,10 +164,7 @@ rated. -/
 @[bornOfAVirginDefs]
 def wegnerDispute : Dispute Claim WegnerParty where
   node := wegnerPartyNode
-  consistent
-    | .wegner => Meanings.BornOfAVirgin.satisfiable_held wegnerLexical_is_satisfiable
-    | .sign => Meanings.BornOfAVirgin.satisfiable_held signArgument_is_satisfiable
-    | .reply => Meanings.BornOfAVirgin.satisfiable_held ordinarySignReply_is_satisfiable
+  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
   sound
     | .wegner => wegner_establishes
     | .sign => signArgument_establishes

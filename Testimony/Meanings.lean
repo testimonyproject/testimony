@@ -9,9 +9,9 @@ import Testimony.Meanings.SpiritBaptism
 # Testimony.Meanings — what every argument's claims say
 
 One module per argument, each a `HasMeanings` instance for the argument's
-`Claim` type. Sola fide is analysed, and sola scriptura where a join turns on
-it; the others are registered with their citations' labels, marked unanalysed,
-and counted. `Testimony.Checks.Meanings`
-fails the build for an argument with no instance, so a new argument is
-registered when it is added.
+`Claim` type. Sola fide is analysed, and sola scriptura and the virgin birth
+where a join turns on them; the others are registered with their citations'
+labels, marked unanalysed, and counted. `Testimony.Checks.Meanings` fails the
+build for an argument with no instance, so a new argument is registered when it
+is added.
 -/

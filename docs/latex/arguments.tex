@@ -2155,6 +2155,9 @@ The near-term reading of the sign, in Wegner’s world: a sign need not be a mir
 def nearTermSignReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceImpliesNoHumanFather => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.signMustBeExtraordinary => False
     | Claim.almahMeansVirgin => False
     | x => True
@@ -2263,6 +2266,9 @@ The world Berry and Postell describe: everything holds except that a near-term s
 def repliesStandReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.nearTermExcludesMessianicSense => False
     | x => True
 \end{verbatim}}
@@ -2359,6 +2365,9 @@ The world Motyer describes, with Berry and Postell: the sign is not a near-term 
 def motyerReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.isaiahIsNearTermSignToAhaz => False
     | Claim.nearTermExcludesMessianicSense => False
     | x => True
@@ -2441,8 +2450,20 @@ The scriptural reading does attack the critical denial: it concludes the opposit
 theorem christian_rebuts_critical : Rebuts christian criticalDenial
 -- axioms: propext, Quot.sound
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{scriptural\allowbreak{}World\allowbreak{}Reading}}\par\nobreak\noindent
+The scriptural reader’s world, with everything else holding that can: Micah’s silence indicates a fatherless birth, so it is not nothing; and Scripture, not the magisterium, is the judge that settles.
+
+{\small\begin{verbatim}
+def scripturalWorldReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
+    | x => True
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{christian\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}undermine\_\allowbreak{}critical}}\par\nobreak\noindent
-But it undermines none of the critical denial’s premises. For each of them there is a world in which the scriptural reading holds and that premise does too: the near-term setting and the exclusion hold where everything does, and the exclusion step holds where Berry and Postell are right.
+But it undermines none of the critical denial’s premises. For each of them there is a world in which the scriptural reading holds and that premise does too: the near-term setting and the exclusion hold in the scriptural reader’s world, and the exclusion step holds where Berry and Postell are right.
 
 {\small\begin{verbatim}
 theorem christian_does_not_undermine_critical : ∀ (φ : Formula Claim),
@@ -2526,6 +2547,9 @@ The critic’s world, with Isaiah 9 and 11 taken off the Assyrian timeline of 7:
 def laterOraclesReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceImpliesNoHumanFather => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.isaiahPredictsVirginBirth => False
     | Claim.isaiah9And11ShareTheAssyrianTimeline =>
       False
@@ -2546,6 +2570,9 @@ The critic’s world, with Micah 5:2 read of a near-term Davidic king and not me
 def royalMicahReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.maternalSilenceImpliesNoHumanFather => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative =>
+      False
     | Claim.isaiahPredictsVirginBirth => False
     | Claim.micahRulerReadMessianically => False
     | x => True
@@ -2587,7 +2614,7 @@ def isaiahDispute : Dispute Claim Party :=
   { node := partyNode,
     consistent := isaiahDispute._proof_1,
     sound := isaiahDispute._proof_2,
-    rated := isaiahDispute._proof_3 }
+    rated := isaiahDispute._proof_9 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{replies\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}scriptural\_\allowbreak{}reading}}\par\nobreak\noindent
 \textbf{The scriptural reading and all four replies stand together}, in the world Motyer describes: none of the five defeats another. One fact, settling twenty ordered pairs.
@@ -2596,7 +2623,7 @@ def isaiahDispute : Dispute Claim Party :=
 theorem replies_stand_with_the_scriptural_reading :
     isaiahDispute.StandTogether [Party.scriptural, Party.berry, Party.postell,
     Party.motyer, Party.micah]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{party\allowbreak{}Defeats}}\par\nobreak\noindent
 The defeats of the dispute, as a table.
@@ -3274,7 +3301,7 @@ def wegnerDispute : Dispute Claim WegnerParty :=
   { node := wegnerPartyNode,
     consistent := wegnerDispute._proof_1,
     sound := wegnerDispute._proof_2,
-    rated := wegnerDispute._proof_3 }
+    rated := wegnerDispute._proof_6 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}reply}}\par\nobreak\noindent
 \textbf{Wegner and the near-term reply stand together}, in Wegner’s own world: the word does not denote a virgin, and the sign need not be a miracle.
@@ -3282,7 +3309,7 @@ def wegnerDispute : Dispute Claim WegnerParty :=
 {\small\begin{verbatim}
 theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether
     [WegnerParty.wegner, WegnerParty.reply]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
 The defeats of the dispute, as a table.

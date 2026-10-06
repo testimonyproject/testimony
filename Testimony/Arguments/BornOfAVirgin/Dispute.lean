@@ -125,6 +125,8 @@ near-term sign excludes a messianic sense. The scriptural reading holds in it
 too. -/
 def repliesStandReading : Valuation Claim := fun a =>
   match a with
+  | .maternalSilenceProvesNothing => False
+  | .magisteriumIsDoctrinallyAuthoritative => False
   | .nearTermExcludesMessianicSense => False
   | _ => True
 
@@ -210,6 +212,8 @@ near-term one, and a near-term sign would not exclude a messianic sense anyway.
 Everything else holds — the scriptural reading and all four replies with it. -/
 def motyerReading : Valuation Claim := fun a =>
   match a with
+  | .maternalSilenceProvesNothing => False
+  | .magisteriumIsDoctrinallyAuthoritative => False
   | .isaiahIsNearTermSignToAhaz => False
   | .nearTermExcludesMessianicSense => False
   | _ => True
@@ -266,10 +270,19 @@ opposite. -/
 theorem christian_rebuts_critical : Rebuts christian criticalDenial := by
   establish [Rebuts, bornOfAVirginDefs]
 
+/-- The scriptural reader's world, with everything else holding that can: Micah's
+silence indicates a fatherless birth, so it is not nothing; and Scripture, not
+the magisterium, is the judge that settles. -/
+def scripturalWorldReading : Valuation Claim := fun a =>
+  match a with
+  | .maternalSilenceProvesNothing => False
+  | .magisteriumIsDoctrinallyAuthoritative => False
+  | _ => True
+
 /-- But it undermines none of the critical denial's premises. For each of them
 there is a world in which the scriptural reading holds and that premise does
-too: the near-term setting and the exclusion hold where everything does, and the
-exclusion step holds where Berry and Postell are right. -/
+too: the near-term setting and the exclusion hold in the scriptural reader's
+world, and the exclusion step holds where Berry and Postell are right. -/
 theorem christian_does_not_undermine_critical (φ : Formula Claim) :
     ¬ UnderminesOn christian criticalDenial φ := by
   rintro ⟨hmem, hent⟩
@@ -277,8 +290,8 @@ theorem christian_does_not_undermine_critical (φ : Formula Claim) :
     List.cons_append, List.nil_append, List.mem_cons, List.not_mem_nil,
     or_false] at hmem
   rcases hmem with rfl | rfl | rfl <;> revert hent
-  · refute_with everythingHoldsReading [bornOfAVirginDefs]
-  · refute_with everythingHoldsReading [bornOfAVirginDefs]
+  · refute_with scripturalWorldReading [bornOfAVirginDefs]
+  · refute_with scripturalWorldReading [bornOfAVirginDefs]
   · refute_with repliesStandReading [bornOfAVirginDefs]
 
 /-- **The scriptural reading answers the critic.** Its rebuttal is a defeat:
@@ -351,6 +364,8 @@ The two absences above are computed; the readings below say why. -/
 later. Postell's step holds in it, because one of its grounds fails. -/
 def laterOraclesReading : Valuation Claim := fun a =>
   match a with
+  | .maternalSilenceImpliesNoHumanFather => False
+  | .magisteriumIsDoctrinallyAuthoritative => False
   | .isaiahPredictsVirginBirth => False
   | .isaiah9And11ShareTheAssyrianTimeline => False
   | _ => True
@@ -366,6 +381,8 @@ theorem critic_grants_postells_step_by_dating_the_oracles_later :
 messianically. The Micah step holds in it, because one of its grounds fails. -/
 def royalMicahReading : Valuation Claim := fun a =>
   match a with
+  | .maternalSilenceImpliesNoHumanFather => False
+  | .magisteriumIsDoctrinallyAuthoritative => False
   | .isaiahPredictsVirginBirth => False
   | .micahRulerReadMessianically => False
   | _ => True
@@ -409,13 +426,7 @@ party establishes its conclusion, and every party's inferences are rated. -/
 @[bornOfAVirginDefs]
 def isaiahDispute : Dispute Claim Party where
   node := partyNode
-  consistent
-    | .scriptural => Meanings.BornOfAVirgin.satisfiable_held christian_is_satisfiable
-    | .critical => Meanings.BornOfAVirgin.satisfiable_held criticalDenial_is_satisfiable
-    | .berry => Meanings.BornOfAVirgin.satisfiable_held berryObjection_is_satisfiable
-    | .postell => Meanings.BornOfAVirgin.satisfiable_held postellParity_is_satisfiable
-    | .motyer => Meanings.BornOfAVirgin.satisfiable_held motyerReply_is_satisfiable
-    | .micah => Meanings.BornOfAVirgin.satisfiable_held micahParity_is_satisfiable
+  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
   sound
     | .scriptural => christian_establishes
     | .critical => criticalDenial_establishes
