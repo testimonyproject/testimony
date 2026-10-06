@@ -21,9 +21,9 @@ definition whose type is `ArgumentPackage α` — the check decides that its
 premises, with its argument's postulates, have a model. (A package the engine
 cannot decide — not Horn, or no candidate model fits — is counted and left to
 its own proofs.) It finds the packages itself, so one added tomorrow is checked
-tomorrow. A package that fails is a finding about the encoding, to be reported: either the package
-holds two claims whose meanings exclude each other, or a meaning says more than
-its reader does.
+tomorrow. A package that fails is a finding about the encoding, to be reported:
+either the package holds two claims whose meanings exclude each other, or a
+meaning says more than its reader does.
 -/
 
 namespace Testimony.Checks
@@ -86,10 +86,9 @@ So for every such result in `Testimony.Arguments` and `Testimony.Articles`, the
 check decides that the premises, with their argument's postulates, can still
 hold while the claim fails. (One the engine cannot decide, because the claim is
 not Horn, is counted and left to its own proof.) Every one decided can; so
-holding the postulates in
-`establish` would change no result, and the library does not. A meaning that
-undoes one fails the build here, and the result it undoes names the judgment
-the meaning would overturn. -/
+holding the postulates in `establish` would change no result, and the library
+does not. A meaning that undoes one fails the build here, and the result it
+undoes names the judgment the meaning would overturn. -/
 
 /-- Whether `φ` can fail while `Γ` and the postulates hold, as the Horn engine
 decides it: `none` if it cannot. -/
