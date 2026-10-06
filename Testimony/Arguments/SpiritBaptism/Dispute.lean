@@ -97,11 +97,7 @@ contradiction, delivers its conclusion, and has its steps rated. -/
 @[spiritBaptismDefs]
 def spiritBaptismDispute : Dispute Claim View where
   node := viewNode
-  consistent
-    | .conversion => Meanings.SpiritBaptism.satisfiable_held conversionCase_is_satisfiable
-    | .pentecostal => Meanings.SpiritBaptism.satisfiable_held pentecostalCase_is_satisfiable
-    | .holiness => Meanings.SpiritBaptism.satisfiable_held holinessCase_is_satisfiable
-    | .sacramental => Meanings.SpiritBaptism.satisfiable_held sacramentalCase_is_satisfiable
+  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
   sound
     | .conversion => conversionCase_establishes
     | .pentecostal => pentecostalCase_establishes

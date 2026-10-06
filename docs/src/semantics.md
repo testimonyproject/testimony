@@ -29,11 +29,11 @@ every other verdict here.
 | Weighing | `Testimony.Logic.Contest` | whether a dispute over a claim survives weighing |
 
 Nothing in the generic layer names an argument. Every argument has an instance: sola fide is
-analysed; sola scriptura and the virgin birth in part, the claims whose meanings bear on a join;
-and the other three are registered with their citations' labels and marked unanalysed, so that
-they are counted from the start (each module's `coverage_now`). `Testimony.Checks.Meanings`
-fails the build for an argument with no instance, so a new argument is registered when it is
-added. It also fails the build for an argument whose joins are not listed and pinned, or
+analysed; sola scriptura, the virgin birth and Spirit baptism in part, the claims whose meanings
+bear on a join; and the other two are registered with their citations' labels and marked
+unanalysed, so that they are counted from the start (each module's `coverage_now`).
+`Testimony.Checks.Meanings` fails the build for an argument with no instance, so a new argument
+is registered when it is added. It also fails the build for an argument whose joins are not listed and pinned, or
 whose meaning postulates come from anywhere but those lists
 ([computed ratings](computed-ratings.md#meaning-postulates)).
 
@@ -301,8 +301,8 @@ The library's own rules carry over, and four more follow from them.
 
 ## What comes next
 
-1. **Meanings for every argument.** Sola scriptura and the virgin birth are analysed where a
-   join turns on them; the other three are registered and unanalysed.
+1. **Meanings for every argument.** Sola scriptura, the virgin birth and Spirit baptism are
+   analysed where a join turns on them; the other two are registered and unanalysed.
 2. **A James dispute**, with the Catholic reading as a party, so that the question the Howell
    hearing leaves contested is asked directly.
 3. **The remaining checks**, in the order of the table, each as a checked certificate that
