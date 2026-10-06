@@ -8,6 +8,13 @@ import Testimony.Arguments.BornInBethlehem
 marked unanalysed, so the argument is counted from the start
 (`coverage`). Analysing one is replacing its case of `means` with a
 `Statement`; `Testimony.Meanings.SolaFide` is the worked example.
+
+**Looked at for joins, and none found.** The one pair of rivals is Keil and
+Delitzsch's "Micah 5:2 is a forward-looking messianic prediction" and Brown's
+"a near-term oracle about a contemporary Judaean ruler". They are left apart: a
+reader who takes the oracle as fulfilled twice, in a ruler of Micah's day and in
+the Messiah, holds both, as the virgin birth's near-term reply does for Isaiah
+7:14 (`Testimony.Meanings.BornOfAVirgin`).
 -/
 
 namespace Testimony.Meanings.BornInBethlehem
