@@ -211,6 +211,24 @@ inductive Concept
   | covenant
   /-- The cleansing of the heart. -/
   | cleansing
+  /-- What cannot err. -/
+  | infallible
+  /-- A rule of faith: what faith is measured by. -/
+  | ruleOfFaith
+  /-- Any candidate rule of faith other than Scripture. -/
+  | otherRuleOfFaith
+  /-- The word of God, as each party uses the phrase. -/
+  | wordOfGod
+  /-- Human tradition: what the Church hands on. -/
+  | tradition
+  /-- Commandments of men (Isaiah 29:13, as Mark 7:7 quotes it). -/
+  | commandmentsOfMen
+  /-- The consensus of the Church's creeds. -/
+  | creedalConsensus
+  /-- Scripture's clear sense: what it plainly teaches. -/
+  | clearSenseOfScripture
+  /-- Reading Scripture: the act, not what it yields. -/
+  | readingScripture
 deriving DecidableEq, Repr
 
 /-- The relations doctrinal claims are built from. A fixed set, so that two
@@ -256,6 +274,13 @@ inductive Rel
   "by"), leaving open whether the first is its ground, its means or its
   evidence. Textual statements use it where a reading would choose. -/
   | saidBy
+  /-- The first is one of the second: a kind, or a property it has. -/
+  | isA
+  /-- The first may rightly be bound on the Church as the second. -/
+  | bindsAs
+  /-- The first judges the second: is its measure, and voids what contradicts
+  it. -/
+  | judges
 deriving DecidableEq, Repr
 
 /-- A principle of reading, held for its own sake. -/

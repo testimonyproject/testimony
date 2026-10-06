@@ -519,7 +519,8 @@ the James dispute, the Reformed harmony ("James 2:24 is compatible with Paul") a
 renewal reading ("James's δικαιόω is Paul's") defeat each other for that reason alone. The
 postulates are the same for every party and are not ranked, so they cannot favour a side or
 change a strength. A node must hold together with them. `establish` does not use them:
-they could only add entailments, and `Testimony.Checks.Postulates` shows that no refutation
+they could only add entailments, and `Testimony.Checks.Postulates` shows that no
+non-entailment the library states — no `¬ Establishes`, `¬ Entails` or `Independent` result —
 is undone by them.
 
 Why confidence at all: without it, premise attacks between classical arguments

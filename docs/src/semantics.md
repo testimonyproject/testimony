@@ -29,8 +29,9 @@ every other verdict here.
 | Weighing | `Testimony.Logic.Contest` | whether a dispute over a claim survives weighing |
 
 Nothing in the generic layer names an argument. Every argument has an instance: sola fide is
-analysed, and the other five are registered with their citations' labels and marked unanalysed,
-so that they are counted from the start (each module's `coverage_now`). `Testimony.Checks.Meanings`
+analysed, sola scriptura in part (the seven claims whose meanings bear on a join), and the other
+four are registered with their citations' labels and marked unanalysed, so that they are counted
+from the start (each module's `coverage_now`). `Testimony.Checks.Meanings`
 fails the build for an argument with no instance, so a new argument is registered when it is
 added. It also fails the build for an argument whose joins are not listed and pinned, or
 whose meaning postulates come from anywhere but those lists
@@ -300,8 +301,8 @@ The library's own rules carry over, and four more follow from them.
 
 ## What comes next
 
-1. **Meanings for every argument.** The other five are registered and unanalysed; the virgin
-   birth and sola scriptura next.
+1. **Meanings for every argument.** Sola scriptura is analysed where a join turns on it; the
+   other four are registered and unanalysed, the virgin birth next.
 2. **A James dispute**, with the Catholic reading as a party, so that the question the Howell
    hearing leaves contested is asked directly.
 3. **The remaining checks**, in the order of the table, each as a checked certificate that

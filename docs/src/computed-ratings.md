@@ -116,8 +116,11 @@ Sola fide has four exclusions and no entailments (`Testimony.Meanings.SolaFide.j
 - Trent's Latin of Sirach 18:22, against the Greek;
 - "James's δικαιόω is Paul's", against "James 2:24 is compatible with Paul".
 
-Every dissent gets the same background, whichever side it is on. The other arguments have
-none yet: no meaning of theirs is analysed, so none denies another. Without the postulates,
+Every dissent gets the same background, whichever side it is on. Sola scriptura has one
+exclusion and two entailments (`Testimony.Meanings.SolaScriptura.joins`): Mark 7's principle
+against binding a commandment of men as God's word, and "Scripture is the sole infallible
+rule" asserting that it is infallible and that no other rule is. The other arguments have none
+yet. Without the postulates,
 Trent's reading of Paul's word would pass as granting the lexical step's forensic ground,
 which it denies.
 
@@ -125,8 +128,9 @@ Disputes hold them too: every attack is decided over what a party holds, its pre
 the postulates ([disputes](logic.md#disputes)). In the James dispute this adds one pair of
 defeats, both ways: the Reformed harmony and the renewal reading, whose claims about James's
 word exclude each other by meaning. No verdict the library states moves. `establish` holds
-premises alone; the postulates could only add entailments, and no refutation is undone by
-them.
+premises alone; the postulates could only add entailments, and no non-entailment the library
+states is undone by them: `Testimony.Checks.Postulates` checks every `¬ Establishes`,
+`¬ Entails` and `Independent` result, and fails the build when a meaning would overturn one.
 
 ## Stating the bridge
 

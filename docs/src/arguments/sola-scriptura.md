@@ -2573,12 +2573,18 @@ def marksPrincipleReading : Valuation Claim :=
 
 Rome's world, granting Mark 7: God's word judges human tradition and no
 commandment of men may be bound as God's word; but apostolic teaching survives
-outside Scripture, so Scripture is not the sole infallible rule.
+outside Scripture, so Scripture is not the sole infallible rule. Nor is the
+Church's consensus a mere product of reading Scripture: for Rome, Scripture and
+Tradition flow from one source (*Dei Verbum* 9). A world must choose here,
+because the meanings exclude the consensus being that product and its being
+needed for Scripture's clear sense (`Testimony.Meanings.SolaScriptura.joins`).
 
 ```lean
 def romeGrantsMarksPrincipleReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.creedalConsensusIsDerivedFromScripture =>
+      False
     | Claim.mensCommandmentBindsAsGodsWord => False
     | Claim.noApostolicWordOutsideScripture => False
     | Claim.scriptureIsSoleInfallibleRule => False
@@ -3012,7 +3018,7 @@ def mark7Dispute : Dispute Claim Mark7Party :=
   { node := mark7PartyNode,
     consistent := mark7Dispute._proof_1,
     sound := mark7Dispute._proof_2,
-    rated := mark7Dispute._proof_3 }
+    rated := mark7Dispute._proof_8 }
 ```
 
 <a id="marks_principle_stands_with_trent"></a>
@@ -3025,7 +3031,7 @@ teaching survives outside Scripture.
 ```lean
 theorem marks_principle_stands_with_trent : mark7Dispute.StandTogether
     [Mark7Party.principle, Mark7Party.trent, Mark7Party.trentAsApostolicWord]
--- axioms: propext, Quot.sound
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 <a id="mark7PartyDefeats"></a>
