@@ -202,9 +202,14 @@ def marksPrincipleReading : Valuation Claim := fun a =>
 
 /-- Rome's world, granting Mark 7: God's word judges human tradition and no
 commandment of men may be bound as God's word; but apostolic teaching survives
-outside Scripture, so Scripture is not the sole infallible rule. -/
+outside Scripture, so Scripture is not the sole infallible rule. Nor is the
+Church's consensus a mere product of reading Scripture: for Rome, Scripture and
+Tradition flow from one source (*Dei Verbum* 9). A world must choose here,
+because the meanings exclude the consensus being that product and its being
+needed for Scripture's clear sense (`Testimony.Meanings.SolaScriptura.joins`). -/
 def romeGrantsMarksPrincipleReading : Valuation Claim := fun a =>
   match a with
+  | .creedalConsensusIsDerivedFromScripture => False
   | .mensCommandmentBindsAsGodsWord => False
   | .noApostolicWordOutsideScripture => False
   | .scriptureIsSoleInfallibleRule => False
