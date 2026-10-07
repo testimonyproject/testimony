@@ -76,13 +76,16 @@ What is not encoded yet:
 
 ### Where it turns
 
-On the Acts narratives, and `whatTheActsNarrativesAre` is the dilemma. Read as a
-pattern for believers today, they meet the variety of Acts itself — the Spirit
-falls on Cornelius's household as they hear (10:44), and is promised with
-baptism at Pentecost (2:38) — at a step the Assemblies of God contest. Read as
-unrepeatable transitions, as Stott reads them, they cannot also carry the
-Pentecostal view's step to a second baptism. So the Pentecostal view must read
-Acts as a pattern and answer its variety. What that costs the conversion view is
+On the Acts narratives. The Pentecostal view holds that they are a pattern for
+believers today, and Stott reads them as unrepeatable transitions, "not a
+pattern"; read for what they mean, the two exclude each other, so the
+Pentecostal view cannot read Acts as transitions at all
+(`pentecostal_cannot_read_acts_as_transitions`), and Stott's reading denies one
+of its premises (`stott_undermines_the_pattern`). Read as a pattern, the
+narratives meet the variety of Acts itself — the Spirit falls on Cornelius's
+household as they hear (10:44), and is promised with baptism at Pentecost
+(2:38) — at a step the Assemblies of God contest. So the Pentecostal view must
+read Acts as a pattern and answer its variety. What that costs the conversion view is
 not checked here: Stott owes an account of why Luke's narratives set no order
 for later believers; Dunn avoids the question by denying that the Samaritans
 were yet believers before they received the Spirit; and Rome reads Acts 8:17
@@ -99,8 +102,8 @@ camps, and neither camp is forced.
 |---|---|
 | `Atoms.lean` | the texts, the readings, the three conclusions |
 | `Sources.lean` | `cite`, and the ratings of each step |
-| `Positions.lean` | the four views, and the dilemma over Acts |
-| `Dispute.lean` | the views weighed, and the verdicts |
+| `Positions.lean` | the four views, and Acts read as a pattern |
+| `Dispute.lean` | the views weighed, the verdicts, and what Acts can be read as |
 
 ## Arguments.SpiritBaptism.Atoms — the atomic claims
 
@@ -333,8 +336,11 @@ def cite : Claim → AtomMeta
 Four views, each from a source that holds it — at conversion, Pentecostal,
 holiness, sacramental — and two arguments about the Acts narratives: that Acts
 gives the Spirit in more than one order, and that its episodes are transitions,
-as Stott reads them. Each is a line of reason: its own grounds, one step, what
-it delivers — and, where it answers a rival, the step it answers with.
+as Stott reads them. Read for what its claims mean, the Pentecostal view must
+take the narratives as a pattern: "pattern" and Stott's "not a pattern" exclude
+each other (`pentecostal_cannot_read_acts_as_transitions`). Each is a line of
+reason: its own grounds, one step, what it delivers — and, where it answers a
+rival, the step it answers with.
 
 #### The conversion view
 
@@ -609,18 +615,6 @@ def narrativesReadAsPattern : Source :=
     confidence := Confidence.disputed }
 ```
 
-<a id="narrativesReadAsTransitions"></a>
-**`narrativesReadAsTransitions`**
-
-Reading the narratives as transitions: Stott.
-
-```lean
-def narrativesReadAsTransitions : Source :=
-  { primary := Reference.work Bib.stottBaptismAndFullness,
-    tradition := Tradition.christianHistoricalGrammatical,
-    confidence := Confidence.disputed }
-```
-
 <a id="asAPattern"></a>
 **`asAPattern`**
 
@@ -631,18 +625,6 @@ def asAPattern : Reading Claim :=
   { name := "as a pattern for believers today",
     commits := p Claim.actsNarrativesAreNormative,
     source := narrativesReadAsPattern }
-```
-
-<a id="asTransitions"></a>
-**`asTransitions`**
-
-The Acts narratives, **read as unrepeatable transitions**.
-
-```lean
-def asTransitions : Reading Claim :=
-  { name := "as unrepeatable transitions",
-    commits := p Claim.actsEpisodesAreTransitions,
-    source := narrativesReadAsTransitions }
 ```
 
 <a id="pentecostalOnAPattern"></a>
@@ -661,31 +643,6 @@ The Pentecostal view, with the Acts narratives read as a pattern.
 \text{(6)} \quad &amp; (P_{1} \land P_{6}) \rightarrow \lnot P_{5} \\
 \text{(7)} \quad &amp; (P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14} \\
 \text{(8)} \quad &amp; P_{2} \rightarrow P_{8} \\[4pt]
-\vdash \quad &amp; P_{14}
-\end{aligned}
-\]
-</div>
-
-Grounded in scripture alone: 1 Corinthians 12:13 — in one Spirit we were all baptized into one body.
-
-<a id="pentecostalOnTransitions"></a>
-**`pentecostalOnTransitions`** — After conversion (Assemblies of God; Menzies, Stronstad), read as unrepeatable transitions
-
-The Pentecostal view, with the Acts narratives read as transitions. The
-reading is added to the view, not swapped in: the view keeps its premise that
-the narratives are a pattern.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; P_{2} \\
-\text{(4)} \quad &amp; P_{7} \\
-\text{(5)} \quad &amp; P_{8} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{6}) \rightarrow \lnot P_{5} \\
-\text{(7)} \quad &amp; (P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14} \\
-\text{(8)} \quad &amp; P_{2} \rightarrow P_{9} \\[4pt]
 \vdash \quad &amp; P_{14}
 \end{aligned}
 \]
@@ -861,24 +818,6 @@ theorem transitionCase_is_satisfiable : Satisfiable transitionCase.premises
 
 #### What Acts can carry
 
-<a id="pentecostalWithTransitionsReading"></a>
-**`pentecostalWithTransitionsReading`**
-
-The world in which the Pentecostal view reads the narratives as transitions
-and keeps everything else: coherent by itself, since nothing in its own premises
-says what follows from their being transitions.
-
-```lean
-def pentecostalWithTransitionsReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.cor12_13IsChristBaptizingInTheSpirit =>
-      False
-    | Claim.spiritBaptismAtConversion => False
-    | Claim.spiritGivenInTheSacraments => False
-    | x => True
-```
-
 <a id="pentecostalOnAPattern_is_satisfiable"></a>
 **`pentecostalOnAPattern_is_satisfiable`**
 
@@ -888,20 +827,6 @@ pattern contradicts nothing by itself.
 ```lean
 theorem pentecostalOnAPattern_is_satisfiable : Satisfiable
     pentecostalOnAPattern.premises
--- axioms: propext, Quot.sound
-```
-
-<a id="pentecostalOnTransitions_is_satisfiable"></a>
-**`pentecostalOnTransitions_is_satisfiable`**
-
-**The second reading is coherent**: the Pentecostal view with the narratives as
-transitions contradicts nothing by itself. Coherent only because the encoding
-does not make "pattern" and "transitions" exclude each other; the break comes
-from Stott's step, not from that clash.
-
-```lean
-theorem pentecostalOnTransitions_is_satisfiable : Satisfiable
-    pentecostalOnTransitions.premises
 -- axioms: propext, Quot.sound
 ```
 
@@ -925,83 +850,6 @@ as evidence for subsequence.
   - \\(P_{3}\\) Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism — *consensus*: Acts 10:44-48
   - \\(P_{4}\\) Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit — *consensus*: Acts 2:38
   - the step itself — *disputed*: [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-
-<a id="whereTransitionsMeetTheStep"></a>
-**`whereTransitionsMeetTheStep`**
-
-**Why Acts read as transitions cannot carry the Pentecostal view's step.** The
-crux is Stott's step: if the episodes are unrepeatable, they set no norm, and no
-second Spirit baptism is to be sought on their strength. What it breaks is the
-Pentecostal view's own step from Acts, together with the grounds that step
-needs and the transitions reading. Read so, the narratives cannot be both the
-Pentecostal view's evidence and no norm.
-
-**Why *Acts 8 and 19 as transitions (Stott)* stands against *After conversion (Assemblies of God; Menzies, Stronstad), read as unrepeatable transitions*.**
-
-- **The crux:** \\((P_{2} \land P_{9}) \rightarrow \lnot P_{14}\\), a premise of *Acts 8 and 19 as transitions (Stott)*.
-- **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{2}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{7}\\), \\(P_{8}\\), \\((P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14}\\), \\(P_{2} \rightarrow P_{9}\\) cannot be held together with \\((P_{2} \land P_{9}) \rightarrow \lnot P_{14}\\) and \\(P_{2}\\); each is needed for the break, and without the crux they stand.
-- **What this rests on:**
-  - \\(P_{2}\\) Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — *disputed*: [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
-  - the step itself — *disputed*: [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
-
-<a id="whatTheActsNarrativesAre"></a>
-**`whatTheActsNarrativesAre`**
-
-**What the Acts narratives are, read both ways.** The claim is the Pentecostal
-view's: in Samaria and at Ephesus, believers already baptized received the
-Spirit afterwards.
-
-Read as a pattern for believers today, it cannot be held with the variety of
-Acts itself — the Spirit given as Cornelius's household hears, and promised
-with baptism at Pentecost — at a step the Assemblies of God contest.
-
-Read as unrepeatable transitions, as Stott reads it, the narratives cannot also
-carry the Pentecostal view's step from them: at Stott's step, rated disputed.
-
-So the Pentecostal view must read Acts as a pattern, and then meets the variety
-of Acts. Which reading is right, the dilemma does not decide. Each reading is
-coherent: taken by itself it contradicts nothing — which says nothing about
-whether it is the right reading of Luke.
-
-What the dilemma does not check is the other side's cost. Stott, reading the
-episodes as transitions, owes an account of why Luke's narratives set no order
-for later believers; that is stated here, not checked. Dunn avoids the dilemma
-by another road: he denies that the Samaritans were yet believers before they
-received the Spirit, a ground of the claim itself. And Rome reads Acts 8:17 and
-19:6 as confirmation (Catechism 1288), which is neither horn.
-
-**Every reading of \\(P_{2}\\), answered.** *After conversion (Assemblies of God; Menzies, Stronstad)* holds \\(P_{2}\\). It is read 2 ways here, and each reading is checked; none can be left out.
-
-**1. Read as a pattern for believers today.** The claim commits *After conversion (Assemblies of God; Menzies, Stronstad)* to \\(P_{8}\\) — so read by [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010) (*disputed*).
-
-Against *Acts gives the Spirit in more than one order*, it cannot be held. Where it breaks:
-
-**Why *Acts gives the Spirit in more than one order* stands against *After conversion (Assemblies of God; Menzies, Stronstad), read as a pattern for believers today*.**
-
-- **The crux:** \\((P_{3} \land P_{4}) \rightarrow \lnot P_{8}\\), a premise of *Acts gives the Spirit in more than one order*.
-- **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{3}\\), \\(P_{4}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{8}\\) cannot be held together with \\((P_{3} \land P_{4}) \rightarrow \lnot P_{8}\\) and \\(P_{3}\\), \\(P_{4}\\); each is needed for the break, and without the crux they stand.
-- **What this rests on:**
-  - \\(P_{3}\\) Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism — *consensus*: Acts 10:44-48
-  - \\(P_{4}\\) Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit — *consensus*: Acts 2:38
-  - the step itself — *disputed*: [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-
-**2. Read as unrepeatable transitions.** The claim commits *After conversion (Assemblies of God; Menzies, Stronstad)* to \\(P_{9}\\) — so read by [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975) (*disputed*).
-
-Against *Acts 8 and 19 as transitions (Stott)*, it cannot be held. Where it breaks:
-
-**Why *Acts 8 and 19 as transitions (Stott)* stands against *After conversion (Assemblies of God; Menzies, Stronstad), read as unrepeatable transitions*.**
-
-- **The crux:** \\((P_{2} \land P_{9}) \rightarrow \lnot P_{14}\\), a premise of *Acts 8 and 19 as transitions (Stott)*.
-- **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{2}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{7}\\), \\(P_{8}\\), \\((P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14}\\), \\(P_{2} \rightarrow P_{9}\\) cannot be held together with \\((P_{2} \land P_{9}) \rightarrow \lnot P_{14}\\) and \\(P_{2}\\); each is needed for the break, and without the crux they stand.
-- **What this rests on:**
-  - \\(P_{2}\\) Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — *disputed*: [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
-  - the step itself — *disputed*: [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
 
 ## Arguments.SpiritBaptism.Dispute — the four views weighed
 
@@ -1041,7 +889,8 @@ That is where the question stands in the literature, and the page says so rather
 than choosing. The conversion and sacramental views agree that there is no
 second baptism in the Spirit to seek, and differ over the rite, which this
 dispute does not weigh. What would decide between the two camps is argued, not
-weighed: what Luke's narratives are (`whatTheActsNarrativesAre`), and whether
+weighed: what Luke's narratives are (`pentecostal_cannot_read_acts_as_transitions`
+says the Pentecostal view must read them as a pattern), and whether
 Paul's word at 1 Corinthians 12:13 and Luke's are the same baptism — a question
 not yet encoded.
 
@@ -1564,7 +1413,7 @@ conversion view, and it defeats the Pentecostal view.
 **Nor is it forced.** A maximal defensible position holds the conversion and
 sacramental views, and cannot hold the Pentecostal view with them. What would
 decide is argued, not weighed: what the Acts narratives are
-(`whatTheActsNarrativesAre`).
+(`pentecostal_cannot_read_acts_as_transitions`).
 
 ```lean
 theorem pentecostal_not_forced : ¬Framework.SkepticallyAccepted
@@ -1666,4 +1515,49 @@ forced, for the same reason the conversion view is not.
 theorem sacramental_defensible : Framework.CredulouslyAccepted
     spiritBaptismDispute.defeats View.sacramental
 -- axioms: propext, Classical.choice, Quot.sound
+```
+
+#### What the Pentecostal view can read Acts as
+
+<a id="pentecostal_cannot_read_acts_as_transitions"></a>
+**`pentecostal_cannot_read_acts_as_transitions`**
+
+**The Pentecostal view cannot read Acts as transitions.** Its own premise is
+that Luke's narratives are a pattern for believers today, and Stott's reading
+says, in its own words, that they are "not a pattern"
+(`Testimony.Meanings.SpiritBaptism.joins`). So what the view holds, read for
+what its claims mean, denies the transitions reading outright.
+
+What this claims: the Pentecostal view must read the Acts narratives as a
+pattern; the other reading is not open to it. What it does not claim: that the
+pattern reading is right. Read as a pattern, the narratives still meet the
+variety of Acts (`whereTheVarietyMeetsThePattern`), at a step the Assemblies of
+God contest.
+
+Before the two readings were joined by meaning, this was a dilemma with two
+horns, and the transitions horn broke only at Stott's step from transitions to
+no norm. Joined, the horn is not there to break: no reader can hold the
+Pentecostal view and read Acts as transitions.
+
+```lean
+theorem pentecostal_cannot_read_acts_as_transitions : Entails
+    pentecostalCase.held (notP Claim.actsEpisodesAreTransitions)
+-- axioms: propext, Quot.sound
+```
+
+<a id="stott_undermines_the_pattern"></a>
+**`stott_undermines_the_pattern`**
+
+**Stott's reading meets the Pentecostal view at its premise.** Read for what
+its claims mean, Acts as transitions denies that the narratives are a pattern,
+and that is one of the Pentecostal view's premises. Before the join it met the
+view only at Stott's step, as a reason not to seek a second baptism; now it
+contradicts what the view rests on. Whether that attack is a defeat is a
+question of ratings, and this argument's dispute does not seat Stott's reading
+as a party.
+
+```lean
+theorem stott_undermines_the_pattern : UnderminesOn transitionCase
+    pentecostalCase (p Claim.actsNarrativesAreNormative)
+-- axioms: propext, Quot.sound
 ```

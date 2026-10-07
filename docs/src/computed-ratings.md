@@ -123,9 +123,12 @@ rule" asserting that it is infallible and that no other rule is. The virgin birt
 exclusions and one entailment (`Testimony.Meanings.BornOfAVirgin.joins`): Brown's "Micah's
 silence proves nothing" against Miravalle's "it indicates a fatherless birth", Westminster's
 supreme judge against "magisterial teaching settles the question", and "עַלְמָה denotes a virgin"
-asserting that its range admits the sense. Spirit baptism has one exclusion
+asserting that its range admits the sense. Spirit baptism has two exclusions
 (`Testimony.Meanings.SpiritBaptism.joins`): the Assemblies of God's reading of 1 Corinthians
-12:13, "not Christ baptizing in the Spirit", against Dunn's and Stott's. The canonical witness
+12:13, "not Christ baptizing in the Spirit", against Dunn's and Stott's; and Luke's narratives
+as a pattern for believers today against Stott's "not a pattern". The second removed a horn: the
+Pentecostal view read with Acts as transitions has no model once the words are read, so it no
+longer stands as a reading to answer. The canonical witness
 has seven entailments (`Testimony.Meanings.CanonicalWitness.joins`): *faith alone* asserts its
 three parts, and Westminster's "by a faith that is never alone" asserts *faith alone*. Born in
 Bethlehem was looked at and has none: its one pair of rivals can be held together by a reader
