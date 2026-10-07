@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **183 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **184 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -228,6 +228,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `pentecostal_not_forced` | `¬Framework.SkepticallyAccepted spiritBaptismDispute.defeats View.pentecostal` | **Nor is it forced.** A maximal defensible position holds the conversion and sacramental views, and cannot hold the Pentecostal view with them. |
 | `holiness_defensible` | `Framework.CredulouslyAccepted spiritBaptismDispute.defeats View.holiness` | **The holiness view can be defended**, with the Pentecostal view. |
 | `sacramental_defensible` | `Framework.CredulouslyAccepted spiritBaptismDispute.defeats View.sacramental` | **The sacramental view can be defended**, with the conversion view. |
+| `pentecostal_cannot_read_acts_as_transitions` | `Entails pentecostalCase.held (notP Claim.actsEpisodesAreTransitions)` | **The Pentecostal view cannot read Acts as transitions.** Its own premise is that Luke's narratives are a pattern for believers today, and Stott's reading says, in its own words, … |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -562,10 +563,11 @@ the first half): weighed as a dispute, nothing is forced
 held together against a second baptism to seek, the two subsequence views can be
 held together for one, and each camp can be defended and is not forced
 (`conversion_defensible`, `conversion_not_forced`, `pentecostal_defensible`,
-`pentecostal_not_forced`). It turns on the Acts narratives
-(`whatTheActsNarrativesAre`): read as a pattern, they meet the variety of Acts
-itself; the Pentecostal view cannot read them as transitions and keep its step
-to a second baptism. The holiness reading meets Wesley, who held the second work
+`pentecostal_not_forced`). It turns on the Acts narratives: read for what its
+claims mean, the Pentecostal view must take them as a pattern, since Stott's
+"not a pattern" excludes its premise
+(`pentecostal_cannot_read_acts_as_transitions`), and read as a pattern they
+meet the variety of Acts itself. The holiness reading meets Wesley, who held the second work
 and declined to call it receiving the Holy Ghost, and the Nazarene seminary
 faculty, who keep entire sanctification and no longer hold the reading tenable.
 Tongues as initial evidence, and whether Paul and Luke mean the same by

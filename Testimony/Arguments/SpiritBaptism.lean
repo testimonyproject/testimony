@@ -73,13 +73,16 @@ What is not encoded yet:
 
 ## Where it turns
 
-On the Acts narratives, and `whatTheActsNarrativesAre` is the dilemma. Read as a
-pattern for believers today, they meet the variety of Acts itself — the Spirit
-falls on Cornelius's household as they hear (10:44), and is promised with
-baptism at Pentecost (2:38) — at a step the Assemblies of God contest. Read as
-unrepeatable transitions, as Stott reads them, they cannot also carry the
-Pentecostal view's step to a second baptism. So the Pentecostal view must read
-Acts as a pattern and answer its variety. What that costs the conversion view is
+On the Acts narratives. The Pentecostal view holds that they are a pattern for
+believers today, and Stott reads them as unrepeatable transitions, "not a
+pattern"; read for what they mean, the two exclude each other, so the
+Pentecostal view cannot read Acts as transitions at all
+(`pentecostal_cannot_read_acts_as_transitions`), and Stott's reading denies one
+of its premises (`stott_undermines_the_pattern`). Read as a pattern, the
+narratives meet the variety of Acts itself — the Spirit falls on Cornelius's
+household as they hear (10:44), and is promised with baptism at Pentecost
+(2:38) — at a step the Assemblies of God contest. So the Pentecostal view must
+read Acts as a pattern and answer its variety. What that costs the conversion view is
 not checked here: Stott owes an account of why Luke's narratives set no order
 for later believers; Dunn avoids the question by denying that the Samaritans
 were yet believers before they received the Spirit; and Rome reads Acts 8:17
@@ -96,6 +99,6 @@ camps, and neither camp is forced.
 |---|---|
 | `Atoms.lean` | the texts, the readings, the three conclusions |
 | `Sources.lean` | `cite`, and the ratings of each step |
-| `Positions.lean` | the four views, and the dilemma over Acts |
-| `Dispute.lean` | the views weighed, and the verdicts |
+| `Positions.lean` | the four views, and Acts read as a pattern |
+| `Dispute.lean` | the views weighed, the verdicts, and what Acts can be read as |
 -/

@@ -45,7 +45,8 @@ That is where the question stands in the literature, and the page says so rather
 than choosing. The conversion and sacramental views agree that there is no
 second baptism in the Spirit to seek, and differ over the rite, which this
 dispute does not weigh. What would decide between the two camps is argued, not
-weighed: what Luke's narratives are (`whatTheActsNarrativesAre`), and whether
+weighed: what Luke's narratives are (`pentecostal_cannot_read_acts_as_transitions`
+says the Pentecostal view must read them as a pattern), and whether
 Paul's word at 1 Corinthians 12:13 and Luke's are the same baptism — a question
 not yet encoded.
 -/
@@ -271,7 +272,7 @@ def pentecostalAnsweredByConversion : Verdict spiritBaptismDispute where
 /-- **Nor is it forced.** A maximal defensible position holds the conversion and
 sacramental views, and cannot hold the Pentecostal view with them. What would
 decide is argued, not weighed: what the Acts narratives are
-(`whatTheActsNarrativesAre`). -/
+(`pentecostal_cannot_read_acts_as_transitions`). -/
 @[headline]
 theorem pentecostal_not_forced :
     ¬ SkepticallyAccepted spiritBaptismDispute.defeats .pentecostal :=
@@ -309,5 +310,42 @@ theorem sacramental_defensible :
   sacramentalStandsWithConversion.holds
 
 #print axioms sacramental_defensible
+
+/-! ### What the Pentecostal view can read Acts as -/
+
+/-- **The Pentecostal view cannot read Acts as transitions.** Its own premise is
+that Luke's narratives are a pattern for believers today, and Stott's reading
+says, in its own words, that they are "not a pattern"
+(`Testimony.Meanings.SpiritBaptism.joins`). So what the view holds, read for
+what its claims mean, denies the transitions reading outright.
+
+What this claims: the Pentecostal view must read the Acts narratives as a
+pattern; the other reading is not open to it. What it does not claim: that the
+pattern reading is right. Read as a pattern, the narratives still meet the
+variety of Acts (`whereTheVarietyMeetsThePattern`), at a step the Assemblies of
+God contest.
+
+Before the two readings were joined by meaning, this was a dilemma with two
+horns, and the transitions horn broke only at Stott's step from transitions to
+no norm. Joined, the horn is not there to break: no reader can hold the
+Pentecostal view and read Acts as transitions. -/
+@[headline]
+theorem pentecostal_cannot_read_acts_as_transitions :
+    Entails pentecostalCase.held (notP .actsEpisodesAreTransitions) := by
+  establish [spiritBaptismDefs]
+
+#print axioms pentecostal_cannot_read_acts_as_transitions
+
+/-- **Stott's reading meets the Pentecostal view at its premise.** Read for what
+its claims mean, Acts as transitions denies that the narratives are a pattern,
+and that is one of the Pentecostal view's premises. Before the join it met the
+view only at Stott's step, as a reason not to seek a second baptism; now it
+contradicts what the view rests on. Whether that attack is a defeat is a
+question of ratings, and this argument's dispute does not seat Stott's reading
+as a party. -/
+theorem stott_undermines_the_pattern :
+    UnderminesOn transitionCase pentecostalCase (p .actsNarrativesAreNormative) := by
+  refine ⟨by simp [pentecostalCase, spiritBaptismDefs], ?_⟩
+  establish [spiritBaptismDefs]
 
 end Testimony.Arguments.SpiritBaptism

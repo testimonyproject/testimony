@@ -247,6 +247,13 @@ inductive Concept
   | christBaptizingInTheSpirit
   /-- The Spirit baptizing believers into the body of Christ. -/
   | spiritBaptizingIntoTheBody
+  /-- The episodes of Acts in which believers receive the Spirit: Samaria,
+  Cornelius's household, Ephesus. -/
+  | actsSpiritEpisodes
+  /-- A pattern for believers today. -/
+  | patternForBelievers
+  /-- An unrepeatable step in the gospel's spread. -/
+  | unrepeatableTransition
 deriving DecidableEq, Repr
 
 /-- The relations doctrinal claims are built from. A fixed set, so that two

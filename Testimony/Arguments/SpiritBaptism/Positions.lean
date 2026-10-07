@@ -8,8 +8,11 @@ import Testimony.Logic.Tactic
 Four views, each from a source that holds it — at conversion, Pentecostal,
 holiness, sacramental — and two arguments about the Acts narratives: that Acts
 gives the Spirit in more than one order, and that its episodes are transitions,
-as Stott reads them. Each is a line of reason: its own grounds, one step, what
-it delivers — and, where it answers a rival, the step it answers with.
+as Stott reads them. Read for what its claims mean, the Pentecostal view must
+take the narratives as a pattern: "pattern" and Stott's "not a pattern" exclude
+each other (`pentecostal_cannot_read_acts_as_transitions`). Each is a line of
+reason: its own grounds, one step, what it delivers — and, where it answers a
+rival, the step it answers with.
 -/
 
 namespace Testimony.Arguments.SpiritBaptism
@@ -193,12 +196,6 @@ def narrativesReadAsPattern : Source :=
   , tradition := .christianHistoricalGrammatical
   , confidence := .disputed }
 
-/-- Reading the narratives as transitions: Stott. -/
-def narrativesReadAsTransitions : Source :=
-  { primary := .work stottBaptismAndFullness .whole
-  , tradition := .christianHistoricalGrammatical
-  , confidence := .disputed }
-
 /-- The Acts narratives, **read as a pattern for believers today**. -/
 @[spiritBaptismDefs]
 def asAPattern : Reading Claim :=
@@ -206,24 +203,10 @@ def asAPattern : Reading Claim :=
   , commits := p .actsNarrativesAreNormative
   , source := narrativesReadAsPattern }
 
-/-- The Acts narratives, **read as unrepeatable transitions**. -/
-@[spiritBaptismDefs]
-def asTransitions : Reading Claim :=
-  { name := "as unrepeatable transitions"
-  , commits := p .actsEpisodesAreTransitions
-  , source := narrativesReadAsTransitions }
-
 /-- The Pentecostal view, with the Acts narratives read as a pattern. -/
 @[spiritBaptismDefs]
 def pentecostalOnAPattern : ArgumentPackage Claim :=
   pentecostalCase.readAs (p .actsSpiritAfterBelieving) asAPattern
-
-/-- The Pentecostal view, with the Acts narratives read as transitions. The
-reading is added to the view, not swapped in: the view keeps its premise that
-the narratives are a pattern. -/
-@[spiritBaptismDefs]
-def pentecostalOnTransitions : ArgumentPackage Claim :=
-  pentecostalCase.readAs (p .actsSpiritAfterBelieving) asTransitions
 
 /-! ### Readings, written down -/
 
@@ -318,29 +301,11 @@ theorem transitionCase_is_satisfiable : Satisfiable transitionCase.premises := b
 
 /-! ### What Acts can carry -/
 
-/-- The world in which the Pentecostal view reads the narratives as transitions
-and keeps everything else: coherent by itself, since nothing in its own premises
-says what follows from their being transitions. -/
-def pentecostalWithTransitionsReading : Valuation Claim := fun a =>
-  match a with
-  | .cor12_13IsChristBaptizingInTheSpirit => False
-  | .spiritBaptismAtConversion => False
-  | .spiritGivenInTheSacraments => False
-  | _ => True
-
 /-- **The first reading is coherent**: the Pentecostal view with the narratives as a
 pattern contradicts nothing by itself. -/
 theorem pentecostalOnAPattern_is_satisfiable :
     Satisfiable pentecostalOnAPattern.premises := by
   satisfied_by pentecostalReading [spiritBaptismDefs]
-
-/-- **The second reading is coherent**: the Pentecostal view with the narratives as
-transitions contradicts nothing by itself. Coherent only because the encoding
-does not make "pattern" and "transitions" exclude each other; the break comes
-from Stott's step, not from that clash. -/
-theorem pentecostalOnTransitions_is_satisfiable :
-    Satisfiable pentecostalOnTransitions.premises := by
-  satisfied_by pentecostalWithTransitionsReading [spiritBaptismDefs]
 
 /-- **Why the variety of Acts stands against reading it as a pattern.** The crux is
 the step from Acts 10 and 2:38: the Spirit comes as they hear, is promised with
@@ -358,59 +323,5 @@ def whereTheVarietyMeetsThePattern : Because varietyCase pentecostalOnAPattern :
     (by simp [varietyCase])
     (by simp [spiritBaptismDefs])
     (by decide +kernel)
-
-/-- **Why Acts read as transitions cannot carry the Pentecostal view's step.** The
-crux is Stott's step: if the episodes are unrepeatable, they set no norm, and no
-second Spirit baptism is to be sought on their strength. What it breaks is the
-Pentecostal view's own step from Acts, together with the grounds that step
-needs and the transitions reading. Read so, the narratives cannot be both the
-Pentecostal view's evidence and no norm. -/
-def whereTransitionsMeetTheStep : Because transitionCase pentecostalOnTransitions :=
-  Because.ofChecks transitionsSetNoNorm
-    [p .actsSpiritAfterBelieving, p .actsEpisodesAreTransitions] []
-    [p .actsSpiritAfterBelieving]
-    [ p .lukanSpiritBaptismIsEmpowerment, p .actsNarrativesAreNormative, actsToSecond
-    , p .actsSpiritAfterBelieving ➝ p .actsEpisodesAreTransitions ]
-    .derives transitionCase_establishes transitionCase_is_satisfiable
-    (by simp [transitionCase])
-    (by simp [transitionCase])
-    (by simp [spiritBaptismDefs])
-    (by decide +kernel)
-
-/-- **What the Acts narratives are, read both ways.** The claim is the Pentecostal
-view's: in Samaria and at Ephesus, believers already baptized received the
-Spirit afterwards.
-
-Read as a pattern for believers today, it cannot be held with the variety of
-Acts itself — the Spirit given as Cornelius's household hears, and promised
-with baptism at Pentecost — at a step the Assemblies of God contest.
-
-Read as unrepeatable transitions, as Stott reads it, the narratives cannot also
-carry the Pentecostal view's step from them: at Stott's step, rated disputed.
-
-So the Pentecostal view must read Acts as a pattern, and then meets the variety
-of Acts. Which reading is right, the dilemma does not decide. Each reading is
-coherent: taken by itself it contradicts nothing — which says nothing about
-whether it is the right reading of Luke.
-
-What the dilemma does not check is the other side's cost. Stott, reading the
-episodes as transitions, owes an account of why Luke's narratives set no order
-for later believers; that is stated here, not checked. Dunn avoids the dilemma
-by another road: he denies that the Samaritans were yet believers before they
-received the Spirit, a ground of the claim itself. And Rome reads Acts 8:17 and
-19:6 as confirmation (Catechism 1288), which is neither horn. -/
-def whatTheActsNarrativesAre : Dilemma pentecostalCase where
-  claim := p .actsSpiritAfterBelieving
-  horns :=
-    [ { reading := asAPattern
-      , fair := pentecostalOnAPattern_is_satisfiable
-      , fates := [.falls varietyCase whereTheVarietyMeetsThePattern]
-      , answered := by simp }
-    , { reading := asTransitions
-      , fair := pentecostalOnTransitions_is_satisfiable
-      , fates := [.falls transitionCase whereTransitionsMeetTheStep]
-      , answered := by simp } ]
-  claim_mem := by simp [pentecostalCase]
-  two := by simp
 
 end Testimony.Arguments.SpiritBaptism

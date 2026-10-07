@@ -68,7 +68,7 @@ elab "#check_postulates" : command => do
     throwError "#check_postulates found no package to check"
   logInfo m!"every package has a model with its postulates: {checked}, and {undecided} undecided"
 
-/-- info: every package has a model with its postulates: 151, and 0 undecided -/
+/-- info: every package has a model with its postulates: 150, and 0 undecided -/
 #guard_msgs in
 #check_postulates
 
