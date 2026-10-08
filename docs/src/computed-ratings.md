@@ -93,9 +93,12 @@ it prefers. It cannot hide the preference: the other standard's rating is on the
 Some claims the atom type keeps apart are joined by their meanings. "In Paul, δικαιόω is
 forensic: a verdict, and *not* making righteous" denies, in so many words, "Paul's δικαιόω
 denotes making righteous". A propositional check cannot see that: the two are separate atoms.
-So each check holds the argument's **meaning postulates** as background. For every pair where
-one claim's meaning denies another's, or part of it, the postulate is `a → ¬b`; where one
-claim's meaning asserts all another's does, it is `a → b`.
+So each check holds the argument's **meaning postulates** as background. For every pair of
+claims whose meanings cannot both be held, the postulate is `a → ¬b`; where one claim's meaning
+asserts all another's does, it is `a → b`. Both are read for what the words mean: each meaning
+is taken apart into what it affirms and denies, and closed under the definitions the
+[ontology articles](semantics.md#the-ontology-derived-in-articles) write out, so that "faith is
+the only means of justification" is seen to exclude "baptism is a means of it".
 
 Each argument lists its pairs in a `HasJoins` instance, beside its meanings, with proofs that
 the lists are exactly what the meanings contain. Its atoms take their postulates
@@ -110,11 +113,14 @@ Whether the senses exclude each other is itself contested: Trent holds that just
 declares and makes righteous. A postulate saying they do would hand one side's lexicon to both.
 A claim whose meaning says *and not that sense* does exclude the other, and is listed.
 
-Sola fide has four exclusions and no entailments (`Testimony.Meanings.SolaFide.joins`):
+Sola fide has six exclusions and no entailments (`Testimony.Meanings.SolaFide.joins`):
 - Paul's word as renewal, against the forensic sense;
 - Trent's Latin of Revelation 22:11, against the Greek;
 - Trent's Latin of Sirach 18:22, against the Greek;
-- "James's δικαιόω is Paul's", against "James 2:24 is compatible with Paul".
+- "James's δικαιόω is Paul's", against "James 2:24 is compatible with Paul";
+- *faith alone*, against Trent's baptism as the instrumental cause of justification, by what
+  "the only means" means;
+- justification as forensic only, against Trent's "justification includes sanctification".
 
 Every dissent gets the same background, whichever side it is on. Sola scriptura has one
 exclusion and two entailments (`Testimony.Meanings.SolaScriptura.joins`): Mark 7's principle

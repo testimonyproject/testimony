@@ -1,4 +1,5 @@
 import Testimony.Semantics.Grammar
+import Testimony.Ontology.Shared
 import Testimony.Logic.Package
 import Testimony.Logic.Postulates
 
@@ -8,10 +9,14 @@ import Testimony.Logic.Postulates
 **A draft.** Every argument names its atomic claims in a type of its own, and a
 `HasMeanings` instance says what each one asserts, as a `Statement`. The atoms
 are not replaced, and the instance sits beside the argument as its `cite` does.
-One thing is read from it: where one claim's meaning denies another's, the
+One thing is read from it: where two claims' meanings cannot both hold, the
 pair is an **exclusion**, and its formula `a → ¬b` a **meaning postulate**.
 Where one claim's meaning asserts all of another's, the pair is an
-**entailment**, and its postulate `a → b`. Each argument lists its exclusions
+**entailment**, and its postulate `a → b`. Both are read for what the words
+mean, not for the shape of the terms: each meaning is taken apart into what it
+affirms and denies, and closed under the definitions the articles of
+`Testimony.Ontology` write out (`Testimony.Semantics.Ontology`). Each argument
+lists its exclusions
 and entailments, and proves the lists are exactly what its meanings contain
 (`HasJoins`); from those lists, and only from them, the argument's atoms get
 their postulates (`Testimony.Logic.HasPostulates`). A
@@ -55,22 +60,24 @@ def parts : Statement → List Statement
 Two unanalysed atoms may share a label; that says nothing about what they mean. -/
 def analysed (s : Statement) : Bool := s.parts.all (!·.isOpaque)
 
-/-- **One meaning excludes another** when it asserts, among its parts, the
-denial of the other, or of part of it: "the word means a verdict, and not making
-righteous" excludes "the word means making righteous", and excludes as well "the
-word means making righteous, and a verdict too". (Sola fide's lexical claim and
-Trent's reading of Paul's word are such a pair; `Testimony.Meanings.SolaFide`.)
--/
+/-- **Two meanings exclude each other** when, read for what their words mean
+(`Testimony.Ontology.shared`), each can be held alone and not both together:
+"the word means a verdict, and not making righteous" excludes "the word means
+making righteous" (sola fide's lexical claim and Trent's reading of Paul's
+word); "justification includes the remission of sins, and not sanctification"
+excludes "justification includes both"; and "faith is the only means by which
+justification is received" excludes "baptism is a means by which it is". -/
 def excludes (s t : Statement) : Bool :=
-  t.analysed && s.parts.any fun
-    | .denied u => u.analysed && u.parts.all (t.parts.contains ·)
-    | _ => false
+  Ontology.excludes Testimony.Ontology.shared (Ontology.closed Testimony.Ontology.shared s)
+    (Ontology.closed Testimony.Ontology.shared t)
 
-/-- **One meaning entails another** when it asserts every part of the other:
-"the word means a verdict, and not making righteous" entails "the word means a
-verdict". A reader who holds the one holds the other. -/
+/-- **One meaning entails another** when, read for what its words mean, it
+asserts all the other does: "the word means a verdict, and not making righteous"
+entails "the word means a verdict". A reader who holds the one holds the
+other. -/
 def entails (s t : Statement) : Bool :=
-  s.analysed && t.analysed && t.parts.all (s.parts.contains ·)
+  Ontology.entails Testimony.Ontology.shared (Ontology.closed Testimony.Ontology.shared s)
+    (Ontology.closed Testimony.Ontology.shared t)
 
 end Statement
 
@@ -96,20 +103,44 @@ def coverage : Nat × Nat :=
 def contested : List (Lexeme × Scope × Sense × Sense) :=
   readTwoWays ((all : List α).map means)
 
-/-- **Every pair of claims whose meanings exclude each other**: `(a, b)` when the
-meaning of `b` asserts the denial of the meaning of `a`. Two claims the atom type
-keeps apart, the meanings join: a reader who holds `a` must deny `b`. -/
-def exclusions [DecidableEq α] : List (α × α) :=
-  (all : List α).flatMap fun a => (all : List α).filterMap fun b =>
-    if a ≠ b && (means b).excludes (means a) then some (a, b) else none
+/-- Every pair from a list, each once, in the list's order. -/
+def pairsOf {β : Type} : List β → List (β × β)
+  | [] => []
+  | x :: xs => xs.map (x, ·) ++ pairsOf xs
 
+/-- **Every pair of claims whose meanings exclude each other**, under a given
+ontology: `(a, b)`, with `a` listed before `b`, when the two meanings, read for
+what their words mean, cannot both be held. -/
+def exclusionsUnder [DecidableEq α] (O : Ontology) : List (α × α) :=
+  let shaped := (all : List α).map fun a => (a, Ontology.closed O (means a))
+  (pairsOf shaped).filterMap fun ((a, s), (b, t)) =>
+    if a ≠ b && Ontology.excludes O s t then some (a, b) else none
+
+/-- **Every pair of claims whose meanings entail one another**, under a given
+ontology: `(a, b)` when the meaning of `a`, read for what its words mean,
+asserts everything the meaning of `b` does. -/
+def entailmentsUnder [DecidableEq α] (O : Ontology) : List (α × α) :=
+  let shaped := (all : List α).map fun a => (a, Ontology.closed O (means a))
+  shaped.flatMap fun (a, s) => shaped.filterMap fun (b, t) =>
+    if a ≠ b && Ontology.entails O s t then some (a, b) else none
+
+/-- **Every pair of claims whose meanings exclude each other**: `(a, b)`, with `a`
+listed before `b`, when the two meanings cannot both be held, read under the
+shared ontology (`Testimony.Ontology.shared`). Two claims the atom type keeps
+apart, the meanings join: a reader who holds either must deny the other. -/
+def exclusions [DecidableEq α] : List (α × α) := exclusionsUnder Testimony.Ontology.shared
 
 /-- **Every pair of claims whose meanings entail one another**: `(a, b)` when
-the meaning of `a` asserts everything the meaning of `b` does. A reader who
-holds `a` holds `b`. -/
-def entailments [DecidableEq α] : List (α × α) :=
-  (all : List α).flatMap fun a => (all : List α).filterMap fun b =>
-    if a ≠ b && (means a).entails (means b) then some (a, b) else none
+the meaning of `a` asserts everything the meaning of `b` does, read under the
+shared ontology. A reader who holds `a` holds `b`. -/
+def entailments [DecidableEq α] : List (α × α) := entailmentsUnder Testimony.Ontology.shared
+
+/-- **The atoms whose meaning contradicts itself** under the shared ontology. A
+meaning that cannot be held is a mistake in the meaning, and joins nothing. -/
+def incoherent : List α :=
+  (all : List α).filter fun a =>
+    let s := Ontology.closed Testimony.Ontology.shared (means a)
+    s.read && !Ontology.coherent Testimony.Ontology.shared s
 
 /-- The atoms that turn on a word. -/
 def about (w : Lexeme) : List α := (all : List α).filter fun a => (means a).mentions w
@@ -138,8 +169,8 @@ both declares and makes righteous — so a postulate saying they do would hand
 one side's lexicon to both. A claim whose meaning says *and not that sense*
 excludes the other; that is a join, and it is listed. -/
 class HasJoins (α : Type) [HasMeanings α] [DecidableEq α] where
-  /-- Each pair `(a, b)`: the meaning of `b` denies the meaning of `a`, or part
-  of it. -/
+  /-- Each pair `(a, b)`, `a` listed first: the two meanings cannot both be
+  held. -/
   exclusions : List (α × α)
   /-- No more, no fewer than the meanings contain. -/
   exclusions_pinned : exclusions = HasMeanings.exclusions (α := α)

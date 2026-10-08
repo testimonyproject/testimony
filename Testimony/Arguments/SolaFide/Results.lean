@@ -347,7 +347,9 @@ theorem reformed_is_satisfiable : Satisfiable reformed.premises := by
 /-- The New Perspective's own world: Paul's ἔργα νόμου denotes the covenant
 boundary markers rather than works in general, and justification is by faith
 regardless. The all-holds reading cannot serve here — this package *denies* a
-premise, which is the whole point of it. -/
+premise, which is the whole point of it. Faith the only means and justification
+forensic only, it denies Trent's baptism as the instrument and justification as
+including sanctification. -/
 def newPerspectiveOwnReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -355,6 +357,8 @@ def newPerspectiveOwnReading : Valuation Claim := fun a =>
   | .sir18_22BeJustifiedToDeath => False
   | .jamesUsesDikaioAsPaul => False
   | .worksOfLawMeansWorksGenerally => False
+  | .baptismIsInstrumentalCause => False
+  | .justificationIncludesSanctification => False
   | _ => True
 
 /-- The New Perspective package has a model. -/
@@ -441,7 +445,9 @@ theorem finnish_is_satisfiable : Satisfiable finnish.premises := by
   satisfied_by finnishReading [solaFideDefs]
 
 /-- Gathercole's world: Second Temple Judaism was not uniformly covenantal
-nomism, and everything else holds. -/
+nomism, and everything else holds. Faith the only means and justification
+forensic only, it denies Trent's baptism as the instrument and justification as
+including sanctification. -/
 def criticsReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -449,6 +455,8 @@ def criticsReading : Valuation Claim := fun a =>
   | .sir18_22BeJustifiedToDeath => False
   | .jamesUsesDikaioAsPaul => False
   | .secondTempleCovenantalNomism => False
+  | .baptismIsInstrumentalCause => False
+  | .justificationIncludesSanctification => False
   | _ => True
 
 /-- The critics' Pauline package has a model, so

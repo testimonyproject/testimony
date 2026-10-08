@@ -393,15 +393,22 @@ Greek. -/
 theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 21 := by decide
 
 /-- **The sola fide joins**: each pair of claims whose meanings exclude each
-other. Every credibility check holds `a → ¬b` for each, as background
+other, read for what their words mean (`Testimony.Ontology.shared`). Every
+credibility check holds `a → ¬b` for each, as background
 (`Testimony.Logic.Dissent`), for a dissent on either side.
 
-- That Paul's δικαιόω denotes renewal excludes that it is forensic, which says
-  it means a verdict and *not* making righteous.
+- That James 2:24 is compatible with Paul, which says James's δικαιόω has not
+  Paul's sense, excludes that it has.
+- That faith is the only means by which justification is received excludes
+  Trent's baptism as its instrumental cause: the only means of a thing is a
+  means of it, and nothing else is (`Testimony.Ontology.Relations.onlyMeans`).
+- That justification includes the remission of sins and *not* sanctification
+  excludes that it includes both. The denial was always in the meaning; the
+  meanings were read, before, only for denials of a whole claim.
+- That Paul's δικαιόω is forensic, which says it means a verdict and *not*
+  making righteous, excludes that it denotes renewal.
 - Trent's Latin Revelation 22:11 and Sirach 18:22 exclude the Greek of each,
   which says the word is not there.
-- That James's δικαιόω has Paul's sense excludes the Reformed harmony's
-  "James 2:24 is compatible with Paul", which says it has not.
 
 No claim's meaning entails another's: none asserts all another does. The atom
 type keeps these claims apart; their meanings join them. The lists are proved to
@@ -409,28 +416,32 @@ be exactly what the meanings contain.
 
 Disputes hold them too, so every named reading a dispute is checked against
 respects them: where a reading is otherwise silent on a pair, it denies the
-first claim — Paul's verb as renewal, the Latin of the two verses, James's word
-as Paul's — and holds the second. -/
+claim its world does not hold — Paul's verb as renewal, the Latin of the two
+verses, James's word as Paul's, baptism as the instrument, justification as
+renewal — and holds the other. -/
 instance joins : HasJoins Claim where
   exclusions :=
-    [ (.paulsJustifyDenotesRenewal, .dikaioIsForensic)
+    [ (.james2_24Compatible, .jamesUsesDikaioAsPaul)
+    , (.justificationByFaithAlone, .baptismIsInstrumentalCause)
+    , (.justificationIsForensicOnly, .justificationIncludesSanctification)
+    , (.dikaioIsForensic, .paulsJustifyDenotesRenewal)
     , (.rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness)
-    , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow)
-    , (.jamesUsesDikaioAsPaul, .james2_24Compatible) ]
+    , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow) ]
   exclusions_pinned := by decide +kernel
   entailments := []
   entailments_pinned := by decide +kernel
-
 
 open Testimony.Logic in
 /-- **The postulates, written out**: `a → ¬b` for each exclusion. Proofs over the
 argument's packages unfold to this list, so a named reading must satisfy it. -/
 @[solaFideDefs] theorem postulates_eq :
     (HasPostulates.postulates : List (Formula Claim)) =
-      [ p .paulsJustifyDenotesRenewal ➝ notP .dikaioIsForensic
+      [ p .james2_24Compatible ➝ notP .jamesUsesDikaioAsPaul
+      , p .justificationByFaithAlone ➝ notP .baptismIsInstrumentalCause
+      , p .justificationIsForensicOnly ➝ notP .justificationIncludesSanctification
+      , p .dikaioIsForensic ➝ notP .paulsJustifyDenotesRenewal
       , p .rev22_11BeJustifiedStill ➝ notP .rev22_11GreekDoRighteousness
-      , p .sir18_22BeJustifiedToDeath ➝ notP .sir18_22GreekIsAVow
-      , p .jamesUsesDikaioAsPaul ➝ notP .james2_24Compatible ] :=
+      , p .sir18_22BeJustifiedToDeath ➝ notP .sir18_22GreekIsAVow ] :=
   rfl
 
 attribute [solaFideDefs] Testimony.Logic.ArgumentPackage.held

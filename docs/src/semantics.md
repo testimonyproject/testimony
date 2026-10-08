@@ -22,7 +22,9 @@ every other verdict here.
 |---|---|---|
 | Generic | `Testimony.Semantics.Vocabulary` | one shared vocabulary of words, senses, relations |
 | | `Testimony.Semantics.Grammar` | how they combine into a statement, and queries over statements |
+| | `Testimony.Semantics.Ontology` | a meaning taken apart into what it affirms and denies, and read under definitions |
 | | `Testimony.Semantics.Meaning` | `HasMeanings`: any argument's claims, given meanings; `HasJoins`: the pairs whose meanings exclude or entail each other |
+| Articles | `Testimony.Ontology` | what the vocabulary's words commit a reader to: searched, defined, and what follows |
 | | `Testimony.Semantics.Discourse` | an article as moves, and what each move assumes |
 | Per argument | `Testimony.Meanings` | one `HasMeanings` and one `HasJoins` instance for each argument |
 | Commentary | `Testimony.Articles` | one module per published article examined |
@@ -90,7 +92,70 @@ What the meanings already make computable, from the meanings alone, for any argu
   library's atom for the verse means (`jamesSays_is_the_library's`), so the two are one claim.
   Once a second argument is analysed, the same holds between arguments.
 
-## What an article does
+## The ontology, derived in articles
+
+Two claims join — one excludes or entails the other — when a reader who holds the one is bound
+to deny, or to hold, the other. That depends on what their words commit a reader to, and the
+words are the vocabulary's. "Faith is the only means of justification" and "baptism is a means
+of justification" contradict each other only because of what *only* means.
+
+So a meaning is read for what its words mean (`Testimony.Semantics.Ontology`). It is taken
+apart into the facts it affirms and denies, and closed under **definitions**: what the
+vocabulary's own words mean, each with a source, as a premise has one. Doctrine — what is held
+to be so — is taken apart; what a passage says, what it teaches, what it is written against and
+what a voice held are kept whole, because a text may say a thing without saying all that
+follows from it.
+
+The definitions are not a list kept beside the vocabulary. Each is derived in an **article**
+(`Testimony.Ontology`), which does three things, every one of them checked:
+
+1. **Search.** Every claim, in every argument, whose meaning uses the article's words — held as
+   doctrine, or used inside a frame — is found and pinned (`Testimony.Ontology.Search`).
+2. **Define.** What the words mean, with a source. A definition is what a word means, which no
+   reader disputes; what one tradition holds of a word and another denies is a premise of a
+   position, and the article leaves it apart and says why.
+3. **Report what follows.** Each argument's joins are computed with each definition and
+   without it, so that what a definition contributes is a checked fact.
+
+The first article, `Testimony.Ontology.Relations`, writes out three definitions the vocabulary
+already gave in words: "not a ground" is the denial of "a ground"; the only means of a thing is
+a means of it, and nothing else is; the whole ground of a thing is a ground of it, and nothing
+else is. One join follows from them — *faith alone* against Trent's baptism as the instrumental
+cause of justification (`only_means_derives_one_join`) — and one more was found by reading the
+meanings more carefully: "forensic only" against Trent's "justification includes
+sanctification", whose denial was always in the Reformed claim's own meaning
+(`sola_fide_joins_without_definitions`). No dispute's table and no verdict moves; the named
+readings of sola fide take a side on both pairs.
+
+### What the search found, not yet fixed
+
+The search was run over every argument's meanings before any article was written. Besides the
+two joins, it found five things a stricter vocabulary has to answer, each the subject of an
+article to come.
+
+- **Paul's texts are stated in doctrinal words, James's "by works" is not.** What Romans 3:28
+  *says* is encoded with "the means of" and "not a ground of"; what James 2:24 says, with
+  `saidBy`, the word kept for a "by" that leaves open whether it is a ground, a means or the
+  evidence. A text's own connective should be stated in a textual word for both, and what it
+  denotes argued as a reading for both.
+- **One concept does two jobs.** The vocabulary's `baptism` is water baptism. Spirit baptism's
+  readings of 1 Corinthians 12:13 say what "the baptism" of that verse is, using the same
+  concept, so that read literally they say what water baptism is. Whether Paul's word and
+  Luke's name one baptism is the question the argument says is not yet encoded.
+- **`isA` does three jobs**: a kind ("Scripture is a rule of faith"), a property ("Scripture is
+  infallible"), and the identity of an event ("the baptism of 1 Corinthians 12:13 is Christ's
+  baptizing in the Spirit"). Disjointness and subsumption cannot be stated over it until they
+  are told apart.
+- ***Faith alone* is analysed two ways.** Sola fide states it as "faith is the only means of
+  justification"; the canonical witness, as faith necessary, faith sufficient and works not the
+  ground. And the canonical witness's labels for the first two parts say *saved*, while its
+  module, and its meanings, say *justified*.
+- **Senses and concepts overlap, and voices repeat the traditions.** `salvation` and
+  `worksOfFaith` are both a sense and a concept; the kinds of faith a word can mean — trust,
+  faith formed by charity, bare assent — are senses of πίστις but not kinds of faith. And the
+  vocabulary's voices name again what `Tradition` already names: the Reformed, Rome, Second
+  Temple Judaism.
+
 
 `Testimony.Semantics.Discourse` models an article as a list of moves. Each move records who
 makes it, the article's own words, verbatim, and the act they perform: an assertion, a
@@ -308,8 +373,12 @@ The library's own rules carry over, and four more follow from them.
    hearing leaves contested is asked directly.
 3. **The remaining checks**, in the order of the table, each as a checked certificate that
    reuses `Because`, `Dilemma` and the solver.
-4. **Articles as pages.** An audit is published prose like an argument page, generated from its
-   docstrings.
+4. **Articles as pages.** An audit, or an ontology article, is published prose like an
+   argument page, generated from its docstrings. Today an ontology article's prose is its
+   module's docstrings, and the generators render arguments only.
+5. **The next ontology articles**, one for each finding above: textual words for textual
+   claims; baptism kept apart from the baptisms; kinds and properties told apart; *faith alone*
+   stated once; and voices taken from the traditions the library already cites.
 
 [howell]: https://catholic.com/magazine/print-edition/arent-we-saved-by-faith-alone
 [macula]: https://github.com/Clear-Bible/macula-greek
