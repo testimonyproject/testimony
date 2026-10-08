@@ -508,7 +508,9 @@ only. All of them, like every cell of the table, are decided by
 `Horn.defeats?` from the premises. -/
 
 /-- The critics' world with Jervell's: covenantal nomism fails, and the yoke is
-Israel's law for gentiles. The Pauline and dominical cases hold in it. -/
+Israel's law for gentiles. The Pauline and dominical cases hold in it. Faith the
+only means and justification forensic only, it denies Trent's baptism as the
+instrument and justification as including sanctification. -/
 def criticsJervellReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -517,9 +519,12 @@ def criticsJervellReading : Valuation Claim := fun a =>
   | .jamesUsesDikaioAsPaul => False
   | .secondTempleCovenantalNomism => False
   | .acts15YokeIsLawAsCondition => False
+  | .baptismIsInstrumentalCause => False
+  | .justificationIncludesSanctification => False
   | _ => True
 
-/-- Trent's world with Sanders' and Jervell's. -/
+/-- Trent's world with Sanders' and Jervell's. With Trent, it denies that faith
+is the only means of justification. -/
 def trentSandersJervellReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -532,9 +537,11 @@ def trentSandersJervellReading : Valuation Claim := fun a =>
   | .acts15YokeIsLawAsCondition => False
   | .justificationDistinctFromSanctification => False
   | .faithIsSufficient => False
+  | .justificationByFaithAlone => False
   | _ => True
 
-/-- Trent's world with the critics' and Jervell's. -/
+/-- Trent's world with the critics' and Jervell's. With Trent, it denies that
+faith is the only means of justification. -/
 def trentCriticsJervellReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -547,9 +554,12 @@ def trentCriticsJervellReading : Valuation Claim := fun a =>
   | .acts15YokeIsLawAsCondition => False
   | .justificationDistinctFromSanctification => False
   | .faithIsSufficient => False
+  | .justificationByFaithAlone => False
   | _ => True
 
-/-- The apocalyptic world with Sanders' and Jervell's. -/
+/-- The apocalyptic world with Sanders' and Jervell's. Justification is forensic
+only here, as in every world but Trent's, so it does not include sanctification.
+-/
 def apocalypticSandersJervellReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -560,9 +570,12 @@ def apocalypticSandersJervellReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .worksOfLawMeansWorksGenerally => False
   | .acts15YokeIsLawAsCondition => False
+  | .justificationIncludesSanctification => False
   | _ => True
 
-/-- The apocalyptic world with the critics' and Jervell's. -/
+/-- The apocalyptic world with the critics' and Jervell's. Justification is
+forensic only here, as in every world but Trent's, so it does not include
+sanctification. -/
 def apocalypticCriticsJervellReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -573,6 +586,7 @@ def apocalypticCriticsJervellReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .secondTempleCovenantalNomism => False
   | .acts15YokeIsLawAsCondition => False
+  | .justificationIncludesSanctification => False
   | _ => True
 
 /-- **The apocalyptic reading does not defeat the dominical case.** It
@@ -636,7 +650,9 @@ premise or conclusion of another standing, and each result checks that the
 reading holds everything the first position holds as well. -/
 
 /-- The apocalyptic world in which salvation is still received through faith —
-faith is not the condition, but it is the means. Grace and "not by works" hold. -/
+faith is not the condition, but it is the means. Grace and "not by works" hold.
+Justification is forensic only here, as in every world but Trent's, so it does
+not include sanctification. -/
 def apocalypticWithFaithReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -645,6 +661,7 @@ def apocalypticWithFaithReading : Valuation Claim := fun a =>
   | .jamesUsesDikaioAsPaul => False
   | .pistisChristouObjective => False
   | .justificationByFaithAlone => False
+  | .justificationIncludesSanctification => False
   | _ => True
 
 /-- **The apocalyptic reading grants what the Reformed strands conclude.** Grace,
@@ -670,7 +687,8 @@ theorem apocalyptic_grants_the_apostolic_step :
 
 /-- Luke's world without *alone*: every premise of the dominical case, faith
 sufficient, and justification not by faith alone — because nothing Luke says
-excludes another condition. -/
+excludes another condition. Justification is forensic only here, as in every
+world but Trent's, so it does not include sanctification. -/
 def lukeWithoutAloneReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -678,6 +696,7 @@ def lukeWithoutAloneReading : Valuation Claim := fun a =>
   | .sir18_22BeJustifiedToDeath => False
   | .jamesUsesDikaioAsPaul => False
   | .justificationByFaithAlone => False
+  | .justificationIncludesSanctification => False
   | _ => True
 
 /-- **Luke's case grants the apocalyptic conclusion.** Everything the dominical
@@ -694,7 +713,8 @@ theorem peter_grants_the_apocalyptic_conclusion :
   satisfied_by lukeWithoutAloneReading [Grants, solaFideDefs]
 
 /-- Trent's world, with the objective genitive and the apocalyptic reading of
-δικαιοσύνη θεοῦ both denied. -/
+δικαιοσύνη θεοῦ both denied. With Trent, it denies that faith is the only means
+of justification. -/
 def trentWithoutDeliveranceReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -707,6 +727,7 @@ def trentWithoutDeliveranceReading : Valuation Claim := fun a =>
   | .righteousnessOfGodIsDeliverance => False
   | .justificationDistinctFromSanctification => False
   | .faithIsSufficient => False
+  | .justificationByFaithAlone => False
   | _ => True
 
 /-- **Trent can grant the subjective genitive.** Nothing Trent holds settles how
@@ -903,6 +924,24 @@ theorem partyNode_strength : ∀ i, (partyNode i).strength = partyStrength i
   | .trentOnPaulsWord => tridentineOnPaulsWord_strength
   | .romansOnTheWord => romansFourOnTheWord_strength
 
+/-- The first six rows of the table, computed from the parties' premises and
+checked by the kernel. The table is split in two only so that each declaration
+stays within the heartbeat budget. -/
+private theorem solaFideDispute_defeats_first (i : Party)
+    (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
+    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
+  refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+
+/-- The other six rows. -/
+private theorem solaFideDispute_defeats_second (i : Party)
+    (hi : i ∈ [.critics, .jervell, .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord])
+    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
+  refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+
 /-- **Who defeats whom**, all 144 pairs. Trent and each Reformed strand defeat
 each other. The apocalyptic reading and Paul defeat each other; it and Luke's
 and Acts' cases do not conflict; it and Trent defeat each other. Sanders defeats
@@ -919,8 +958,10 @@ assumed. -/
 theorem solaFideDispute_defeats :
     ∀ i j, solaFideDispute.defeats i j ↔ partyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  cases i
+  all_goals first
+    | (refine solaFideDispute_defeats_first _ ?_ j; decide)
+    | (refine solaFideDispute_defeats_second _ ?_ j; decide)
 
 /-- The dispute in the form the verdict solver computes with: every party, and
 the table. -/

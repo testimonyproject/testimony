@@ -5366,7 +5366,7 @@ theorem reformed_is_satisfiable : Satisfiable reformed.premises
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{new\allowbreak{}Perspective\allowbreak{}Own\allowbreak{}Reading}}\par\nobreak\noindent
-The New Perspective’s own world: Paul’s ἔργα νόμου denotes the covenant boundary markers rather than works in general, and justification is by faith regardless. The all-holds reading cannot serve here — this package \emph{denies} a premise, which is the whole point of it.
+The New Perspective’s own world: Paul’s ἔργα νόμου denotes the covenant boundary markers rather than works in general, and justification is by faith regardless. The all-holds reading cannot serve here — this package \emph{denies} a premise, which is the whole point of it. Faith the only means and justification forensic only, it denies Trent’s baptism as the instrument and justification as including sanctification.
 
 {\small\begin{verbatim}
 def newPerspectiveOwnReading : Valuation Claim :=
@@ -5377,6 +5377,8 @@ def newPerspectiveOwnReading : Valuation Claim :=
     | Claim.sir18_22BeJustifiedToDeath => False
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.worksOfLawMeansWorksGenerally => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{new\allowbreak{}Perspective\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
@@ -5501,7 +5503,7 @@ theorem finnish_is_satisfiable : Satisfiable finnish.premises
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{critics\allowbreak{}Reading}}\par\nobreak\noindent
-Gathercole’s world: Second Temple Judaism was not uniformly covenantal nomism, and everything else holds.
+Gathercole’s world: Second Temple Judaism was not uniformly covenantal nomism, and everything else holds. Faith the only means and justification forensic only, it denies Trent’s baptism as the instrument and justification as including sanctification.
 
 {\small\begin{verbatim}
 def criticsReading : Valuation Claim :=
@@ -5512,6 +5514,8 @@ def criticsReading : Valuation Claim :=
     | Claim.sir18_22BeJustifiedToDeath => False
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.secondTempleCovenantalNomism => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{pauline\allowbreak{}Strand\allowbreak{}On\allowbreak{}The\allowbreak{}Critics\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
@@ -6665,7 +6669,7 @@ theorem apostolic_defeats_jervell : Defeats apostolicCase jervellCase
 Most pairs of parties are compatible: some world holds both, and seven such worlds are named below (\texttt{Dispute.Stand\allowbreak{}Together}) — the readings on which whole groups of positions can be held at once. Three pairs conflict in one direction only. All of them, like every cell of the table, are decided by \texttt{Horn.defeats?} from the premises.
 
 \par\medskip\noindent\textbf{\texttt{critics\allowbreak{}Jervell\allowbreak{}Reading}}\par\nobreak\noindent
-The critics’ world with Jervell’s: covenantal nomism fails, and the yoke is Israel’s law for gentiles. The Pauline and dominical cases hold in it.
+The critics’ world with Jervell’s: covenantal nomism fails, and the yoke is Israel’s law for gentiles. The Pauline and dominical cases hold in it. Faith the only means and justification forensic only, it denies Trent’s baptism as the instrument and justification as including sanctification.
 
 {\small\begin{verbatim}
 def criticsJervellReading : Valuation Claim :=
@@ -6677,10 +6681,12 @@ def criticsJervellReading : Valuation Claim :=
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.secondTempleCovenantalNomism => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Sanders\allowbreak{}Jervell\allowbreak{}Reading}}\par\nobreak\noindent
-Trent’s world with Sanders’ and Jervell’s.
+Trent’s world with Sanders’ and Jervell’s. With Trent, it denies that faith is the only means of justification.
 
 {\small\begin{verbatim}
 def trentSandersJervellReading : Valuation Claim :=
@@ -6696,10 +6702,11 @@ def trentSandersJervellReading : Valuation Claim :=
     | Claim.acts15YokeIsLawAsCondition => False
     | Claim.justificationDistinctFromSanctification => False
     | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Critics\allowbreak{}Jervell\allowbreak{}Reading}}\par\nobreak\noindent
-Trent’s world with the critics’ and Jervell’s.
+Trent’s world with the critics’ and Jervell’s. With Trent, it denies that faith is the only means of justification.
 
 {\small\begin{verbatim}
 def trentCriticsJervellReading : Valuation Claim :=
@@ -6715,10 +6722,11 @@ def trentCriticsJervellReading : Valuation Claim :=
     | Claim.acts15YokeIsLawAsCondition => False
     | Claim.justificationDistinctFromSanctification => False
     | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\allowbreak{}Sanders\allowbreak{}Jervell\allowbreak{}Reading}}\par\nobreak\noindent
-The apocalyptic world with Sanders’ and Jervell’s.
+The apocalyptic world with Sanders’ and Jervell’s. Justification is forensic only here, as in every world but Trent’s, so it does not include sanctification.
 
 {\small\begin{verbatim}
 def apocalypticSandersJervellReading : Valuation Claim :=
@@ -6732,10 +6740,11 @@ def apocalypticSandersJervellReading : Valuation Claim :=
     | Claim.justificationByFaithAlone => False
     | Claim.worksOfLawMeansWorksGenerally => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\allowbreak{}Critics\allowbreak{}Jervell\allowbreak{}Reading}}\par\nobreak\noindent
-The apocalyptic world with the critics’ and Jervell’s.
+The apocalyptic world with the critics’ and Jervell’s. Justification is forensic only here, as in every world but Trent’s, so it does not include sanctification.
 
 {\small\begin{verbatim}
 def apocalypticCriticsJervellReading : Valuation Claim :=
@@ -6749,6 +6758,7 @@ def apocalypticCriticsJervellReading : Valuation Claim :=
     | Claim.justificationByFaithAlone => False
     | Claim.secondTempleCovenantalNomism => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}defeat\_\allowbreak{}dominical}}\par\nobreak\noindent
@@ -6809,7 +6819,7 @@ theorem trent_on_pauls_word_does_not_defeat_lexical : ¬Defeats
 The absences above are computed, and a computation names no reason. The readings below do: each is a way of holding one position that leaves one premise or conclusion of another standing, and each result checks that the reading holds everything the first position holds as well.
 
 \par\medskip\noindent\textbf{\texttt{apocalyptic\allowbreak{}With\allowbreak{}Faith\allowbreak{}Reading}}\par\nobreak\noindent
-The apocalyptic world in which salvation is still received through faith — faith is not the condition, but it is the means. Grace and “not by works” hold.
+The apocalyptic world in which salvation is still received through faith — faith is not the condition, but it is the means. Grace and “not by works” hold. Justification is forensic only here, as in every world but Trent’s, so it does not include sanctification.
 
 {\small\begin{verbatim}
 def apocalypticWithFaithReading : Valuation Claim :=
@@ -6821,6 +6831,7 @@ def apocalypticWithFaithReading : Valuation Claim :=
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.pistisChristouObjective => False
     | Claim.justificationByFaithAlone => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}grants\_\allowbreak{}sola\_\allowbreak{}fide\_\allowbreak{}as\_\allowbreak{}stated}}\par\nobreak\noindent
@@ -6848,7 +6859,7 @@ theorem apocalyptic_grants_the_apostolic_step : Grants apocalypticCase
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{luke\allowbreak{}Without\allowbreak{}Alone\allowbreak{}Reading}}\par\nobreak\noindent
-Luke’s world without \emph{alone}: every premise of the dominical case, faith sufficient, and justification not by faith alone — because nothing Luke says excludes another condition.
+Luke’s world without \emph{alone}: every premise of the dominical case, faith sufficient, and justification not by faith alone — because nothing Luke says excludes another condition. Justification is forensic only here, as in every world but Trent’s, so it does not include sanctification.
 
 {\small\begin{verbatim}
 def lukeWithoutAloneReading : Valuation Claim :=
@@ -6859,6 +6870,7 @@ def lukeWithoutAloneReading : Valuation Claim :=
     | Claim.sir18_22BeJustifiedToDeath => False
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.justificationByFaithAlone => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{luke\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}apocalyptic\_\allowbreak{}conclusion}}\par\nobreak\noindent
@@ -6878,7 +6890,7 @@ theorem peter_grants_the_apocalyptic_conclusion : Grants apostolicCase
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Without\allowbreak{}Deliverance\allowbreak{}Reading}}\par\nobreak\noindent
-Trent’s world, with the objective genitive and the apocalyptic reading of δικαιοσύνη θεοῦ both denied.
+Trent’s world, with the objective genitive and the apocalyptic reading of δικαιοσύνη θεοῦ both denied. With Trent, it denies that faith is the only means of justification.
 
 {\small\begin{verbatim}
 def trentWithoutDeliveranceReading : Valuation Claim :=
@@ -6894,6 +6906,7 @@ def trentWithoutDeliveranceReading : Valuation Claim :=
     | Claim.righteousnessOfGodIsDeliverance => False
     | Claim.justificationDistinctFromSanctification => False
     | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}grants\_\allowbreak{}the\_\allowbreak{}subjective\_\allowbreak{}genitive}}\par\nobreak\noindent
@@ -9466,7 +9479,7 @@ def jesusWordsDispute : Dispute Claim WordsParty :=
     rated := jesusWordsDispute._proof_10 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{luke\allowbreak{}With\allowbreak{}Rome\allowbreak{}On\allowbreak{}Matthew\allowbreak{}Reading}}\par\nobreak\noindent
-\textbf{Rome’s readings of Matthew stand with Luke’s sayings.} One world holds Luke 7:50 and Luke 18 — faith sufficed — and Rome’s readings of Matthew 7 and 19 — salvation is not apart from works. As encoded, faith’s sufficiency and “not apart from works” are different claims, and Luke’s sayings make only the first: whoever holds both is not contradicted by these texts.
+\textbf{Rome’s readings of Matthew stand with Luke’s sayings.} One world holds Luke 7:50 and Luke 18 — faith sufficed — and Rome’s readings of Matthew 7 and 19 — salvation is not apart from works. As encoded, faith’s sufficiency and “not apart from works” are different claims, and Luke’s sayings make only the first: whoever holds both is not contradicted by these texts. It takes neither of Trent’s further claims: baptism as the instrument of justification, and justification as including sanctification.
 
 {\small\begin{verbatim}
 def lukeWithRomeOnMatthewReading : Valuation Claim :=
@@ -9479,6 +9492,8 @@ def lukeWithRomeOnMatthewReading : Valuation Claim :=
     | Claim.salvationNotByWorks => False
     | Claim.matthew7DoingIncludesBelieving => False
     | Claim.matthew19LawExposesInability => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{luke\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}rome\_\allowbreak{}on\_\allowbreak{}matthew}}\par\nobreak\noindent
@@ -10271,7 +10286,7 @@ The Reformed step from the desire: if justification needs only the laver or the 
 \paragraph*{Readings, written down}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{rome\allowbreak{}On\allowbreak{}Baptism\allowbreak{}Reading}}\par\nobreak\noindent
-Rome’s world: baptism the instrumental cause, the desire for it bringing its fruits, the thief saved, God not bound to his sacraments, the water of John 3:5 baptismal; and the washing itself not necessary for salvation.
+Rome’s world: baptism the instrumental cause, the desire for it bringing its fruits, the thief saved, God not bound to his sacraments, the water of John 3:5 baptismal; and the washing itself not necessary for salvation. Baptism a means of justification, faith is not its only means; and justification includes sanctification, so it is not forensic only.
 
 {\small\begin{verbatim}
 def romeOnBaptismReading : Valuation Claim :=
@@ -10285,10 +10300,12 @@ def romeOnBaptismReading : Valuation Claim :=
     | Claim.john3_5WaterIsNaturalBirth => False
     | Claim.john3_5WaterIsEzekielsCleansing => False
     | Claim.john3_5WaterIsTheSpiritsCleansing => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.justificationIsForensicOnly => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{feeney\allowbreak{}Reading}}\par\nobreak\noindent
-One world in which Feeney’s reading holds: baptism the instrumental cause, and the washing itself necessary for salvation. It must deny that the thief’s case bears on the Gospel, and that the desire brings the fruits that save. The first denial is what his reading requires, not a sentence quoted from him.
+One world in which Feeney’s reading holds: baptism the instrumental cause, and the washing itself necessary for salvation. It must deny that the thief’s case bears on the Gospel, and that the desire brings the fruits that save. The first denial is what his reading requires, not a sentence quoted from him. With Trent, it denies that faith is the only means of justification, and that justification is forensic only.
 
 {\small\begin{verbatim}
 def feeneyReading : Valuation Claim :=
@@ -10299,10 +10316,12 @@ def feeneyReading : Valuation Claim :=
     | Claim.john3_5WaterIsNaturalBirth => False
     | Claim.john3_5WaterIsEzekielsCleansing => False
     | Claim.john3_5WaterIsTheSpiritsCleansing => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.justificationIsForensicOnly => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{reformed\allowbreak{}On\allowbreak{}Baptism\allowbreak{}Reading}}\par\nobreak\noindent
-The Reformed world: faith the instrument, and baptism not; the desire brings the fruits, the thief is saved, and God is not bound to water. The water of John 3:5 is the Spirit’s own cleansing, and the verse does not require water baptism.
+The Reformed world: faith the instrument, and baptism not; justification the remission of sins, not sanctification; the desire brings the fruits, the thief is saved, and God is not bound to water. The water of John 3:5 is the Spirit’s own cleansing, and the verse does not require water baptism.
 
 {\small\begin{verbatim}
 def reformedOnBaptismReading : Valuation Claim :=
@@ -10312,6 +10331,7 @@ def reformedOnBaptismReading : Valuation Claim :=
     | Claim.waterItselfNecessaryForSalvation => False
     | Claim.john3_5RequiresWaterBaptism => False
     | Claim.john3_5WaterIsBaptism => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 \end{verbatim}}
 \paragraph*{Each position holds}

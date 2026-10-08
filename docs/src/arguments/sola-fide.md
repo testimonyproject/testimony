@@ -3044,7 +3044,9 @@ theorem reformed_is_satisfiable : Satisfiable reformed.premises
 The New Perspective's own world: Paul's ἔργα νόμου denotes the covenant
 boundary markers rather than works in general, and justification is by faith
 regardless. The all-holds reading cannot serve here — this package *denies* a
-premise, which is the whole point of it.
+premise, which is the whole point of it. Faith the only means and justification
+forensic only, it denies Trent's baptism as the instrument and justification as
+including sanctification.
 
 ```lean
 def newPerspectiveOwnReading : Valuation Claim :=
@@ -3055,6 +3057,8 @@ def newPerspectiveOwnReading : Valuation Claim :=
     | Claim.sir18_22BeJustifiedToDeath => False
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.worksOfLawMeansWorksGenerally => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 ```
 
@@ -3236,7 +3240,9 @@ theorem finnish_is_satisfiable : Satisfiable finnish.premises
 **`criticsReading`**
 
 Gathercole's world: Second Temple Judaism was not uniformly covenantal
-nomism, and everything else holds.
+nomism, and everything else holds. Faith the only means and justification
+forensic only, it denies Trent's baptism as the instrument and justification as
+including sanctification.
 
 ```lean
 def criticsReading : Valuation Claim :=
@@ -3247,6 +3253,8 @@ def criticsReading : Valuation Claim :=
     | Claim.sir18_22BeJustifiedToDeath => False
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.secondTempleCovenantalNomism => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 ```
 
@@ -5013,7 +5021,9 @@ only. All of them, like every cell of the table, are decided by
 **`criticsJervellReading`**
 
 The critics' world with Jervell's: covenantal nomism fails, and the yoke is
-Israel's law for gentiles. The Pauline and dominical cases hold in it.
+Israel's law for gentiles. The Pauline and dominical cases hold in it. Faith the
+only means and justification forensic only, it denies Trent's baptism as the
+instrument and justification as including sanctification.
 
 ```lean
 def criticsJervellReading : Valuation Claim :=
@@ -5025,13 +5035,16 @@ def criticsJervellReading : Valuation Claim :=
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.secondTempleCovenantalNomism => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 ```
 
 <a id="trentSandersJervellReading"></a>
 **`trentSandersJervellReading`**
 
-Trent's world with Sanders' and Jervell's.
+Trent's world with Sanders' and Jervell's. With Trent, it denies that faith
+is the only means of justification.
 
 ```lean
 def trentSandersJervellReading : Valuation Claim :=
@@ -5047,13 +5060,15 @@ def trentSandersJervellReading : Valuation Claim :=
     | Claim.acts15YokeIsLawAsCondition => False
     | Claim.justificationDistinctFromSanctification => False
     | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
     | x => True
 ```
 
 <a id="trentCriticsJervellReading"></a>
 **`trentCriticsJervellReading`**
 
-Trent's world with the critics' and Jervell's.
+Trent's world with the critics' and Jervell's. With Trent, it denies that
+faith is the only means of justification.
 
 ```lean
 def trentCriticsJervellReading : Valuation Claim :=
@@ -5069,13 +5084,15 @@ def trentCriticsJervellReading : Valuation Claim :=
     | Claim.acts15YokeIsLawAsCondition => False
     | Claim.justificationDistinctFromSanctification => False
     | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
     | x => True
 ```
 
 <a id="apocalypticSandersJervellReading"></a>
 **`apocalypticSandersJervellReading`**
 
-The apocalyptic world with Sanders' and Jervell's.
+The apocalyptic world with Sanders' and Jervell's. Justification is forensic
+only here, as in every world but Trent's, so it does not include sanctification.
 
 ```lean
 def apocalypticSandersJervellReading : Valuation Claim :=
@@ -5089,13 +5106,16 @@ def apocalypticSandersJervellReading : Valuation Claim :=
     | Claim.justificationByFaithAlone => False
     | Claim.worksOfLawMeansWorksGenerally => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 ```
 
 <a id="apocalypticCriticsJervellReading"></a>
 **`apocalypticCriticsJervellReading`**
 
-The apocalyptic world with the critics' and Jervell's.
+The apocalyptic world with the critics' and Jervell's. Justification is
+forensic only here, as in every world but Trent's, so it does not include
+sanctification.
 
 ```lean
 def apocalypticCriticsJervellReading : Valuation Claim :=
@@ -5109,6 +5129,7 @@ def apocalypticCriticsJervellReading : Valuation Claim :=
     | Claim.justificationByFaithAlone => False
     | Claim.secondTempleCovenantalNomism => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 ```
 
@@ -5220,6 +5241,8 @@ reading holds everything the first position holds as well.
 
 The apocalyptic world in which salvation is still received through faith —
 faith is not the condition, but it is the means. Grace and "not by works" hold.
+Justification is forensic only here, as in every world but Trent's, so it does
+not include sanctification.
 
 ```lean
 def apocalypticWithFaithReading : Valuation Claim :=
@@ -5231,6 +5254,7 @@ def apocalypticWithFaithReading : Valuation Claim :=
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.pistisChristouObjective => False
     | Claim.justificationByFaithAlone => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 ```
 
@@ -5278,7 +5302,8 @@ theorem apocalyptic_grants_the_apostolic_step : Grants apocalypticCase
 
 Luke's world without *alone*: every premise of the dominical case, faith
 sufficient, and justification not by faith alone — because nothing Luke says
-excludes another condition.
+excludes another condition. Justification is forensic only here, as in every
+world but Trent's, so it does not include sanctification.
 
 ```lean
 def lukeWithoutAloneReading : Valuation Claim :=
@@ -5289,6 +5314,7 @@ def lukeWithoutAloneReading : Valuation Claim :=
     | Claim.sir18_22BeJustifiedToDeath => False
     | Claim.jamesUsesDikaioAsPaul => False
     | Claim.justificationByFaithAlone => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 ```
 
@@ -5321,7 +5347,8 @@ theorem peter_grants_the_apocalyptic_conclusion : Grants apostolicCase
 **`trentWithoutDeliveranceReading`**
 
 Trent's world, with the objective genitive and the apocalyptic reading of
-δικαιοσύνη θεοῦ both denied.
+δικαιοσύνη θεοῦ both denied. With Trent, it denies that faith is the only means
+of justification.
 
 ```lean
 def trentWithoutDeliveranceReading : Valuation Claim :=
@@ -5337,6 +5364,7 @@ def trentWithoutDeliveranceReading : Valuation Claim :=
     | Claim.righteousnessOfGodIsDeliverance => False
     | Claim.justificationDistinctFromSanctification => False
     | Claim.faithIsSufficient => False
+    | Claim.justificationByFaithAlone => False
     | x => True
 ```
 
@@ -8427,7 +8455,9 @@ def jesusWordsDispute : Dispute Claim WordsParty :=
 Luke 7:50 and Luke 18 — faith sufficed — and Rome's readings of Matthew 7 and 19
 — salvation is not apart from works. As encoded, faith's sufficiency and
 "not apart from works" are different claims, and Luke's sayings make only the
-first: whoever holds both is not contradicted by these texts.
+first: whoever holds both is not contradicted by these texts. It takes neither
+of Trent's further claims: baptism as the instrument of justification, and
+justification as including sanctification.
 
 ```lean
 def lukeWithRomeOnMatthewReading : Valuation Claim :=
@@ -8440,6 +8470,8 @@ def lukeWithRomeOnMatthewReading : Valuation Claim :=
     | Claim.salvationNotByWorks => False
     | Claim.matthew7DoingIncludesBelieving => False
     | Claim.matthew19LawExposesInability => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 ```
 
@@ -9401,7 +9433,9 @@ No premise here rests on scripture alone.
 
 Rome's world: baptism the instrumental cause, the desire for it bringing its
 fruits, the thief saved, God not bound to his sacraments, the water of John 3:5
-baptismal; and the washing itself not necessary for salvation.
+baptismal; and the washing itself not necessary for salvation. Baptism a means
+of justification, faith is not its only means; and justification includes
+sanctification, so it is not forensic only.
 
 ```lean
 def romeOnBaptismReading : Valuation Claim :=
@@ -9415,6 +9449,8 @@ def romeOnBaptismReading : Valuation Claim :=
     | Claim.john3_5WaterIsNaturalBirth => False
     | Claim.john3_5WaterIsEzekielsCleansing => False
     | Claim.john3_5WaterIsTheSpiritsCleansing => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.justificationIsForensicOnly => False
     | x => True
 ```
 
@@ -9424,7 +9460,9 @@ def romeOnBaptismReading : Valuation Claim :=
 One world in which Feeney's reading holds: baptism the instrumental cause,
 and the washing itself necessary for salvation. It must deny that the thief's
 case bears on the Gospel, and that the desire brings the fruits that save. The
-first denial is what his reading requires, not a sentence quoted from him.
+first denial is what his reading requires, not a sentence quoted from him. With
+Trent, it denies that faith is the only means of justification, and that
+justification is forensic only.
 
 ```lean
 def feeneyReading : Valuation Claim :=
@@ -9435,13 +9473,16 @@ def feeneyReading : Valuation Claim :=
     | Claim.john3_5WaterIsNaturalBirth => False
     | Claim.john3_5WaterIsEzekielsCleansing => False
     | Claim.john3_5WaterIsTheSpiritsCleansing => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.justificationIsForensicOnly => False
     | x => True
 ```
 
 <a id="reformedOnBaptismReading"></a>
 **`reformedOnBaptismReading`**
 
-The Reformed world: faith the instrument, and baptism not; the desire brings
+The Reformed world: faith the instrument, and baptism not; justification
+the remission of sins, not sanctification; the desire brings
 the fruits, the thief is saved, and God is not bound to water. The water of
 John 3:5 is the Spirit's own cleansing, and the verse does not require water
 baptism.
@@ -9454,6 +9495,7 @@ def reformedOnBaptismReading : Valuation Claim :=
     | Claim.waterItselfNecessaryForSalvation => False
     | Claim.john3_5RequiresWaterBaptism => False
     | Claim.john3_5WaterIsBaptism => False
+    | Claim.justificationIncludesSanctification => False
     | x => True
 ```
 

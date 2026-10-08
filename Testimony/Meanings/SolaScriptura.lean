@@ -136,7 +136,7 @@ each exclusion and `a → b` for each entailment.
   that no other rule is. -/
 instance joins : HasJoins Claim where
   exclusions :=
-    [ (.mensCommandmentBindsAsGodsWord, .godsWordJudgesTradition) ]
+    [ (.godsWordJudgesTradition, .mensCommandmentBindsAsGodsWord) ]
   exclusions_pinned := by decide +kernel
   entailments :=
     [ (.scriptureIsSoleInfallibleRule, .scriptureIsInfallible)
@@ -149,7 +149,7 @@ each entailment. Proofs over the argument's packages unfold to this list, so a
 named reading must satisfy it. -/
 @[solaScripturaDefs] theorem postulates_eq :
     (HasPostulates.postulates : List (Formula Claim)) =
-      [ p .mensCommandmentBindsAsGodsWord ➝ notP .godsWordJudgesTradition
+      [ p .godsWordJudgesTradition ➝ notP .mensCommandmentBindsAsGodsWord
       , p .scriptureIsSoleInfallibleRule ➝ p .scriptureIsInfallible
       , p .scriptureIsSoleInfallibleRule ➝ p .noOtherRuleIsInfallible ] :=
   rfl

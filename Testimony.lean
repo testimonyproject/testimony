@@ -40,9 +40,11 @@ import Testimony.Arguments.SolaScriptura
 import Testimony.Arguments.SpiritBaptism
 import Testimony.Semantics.Vocabulary
 import Testimony.Semantics.Grammar
+import Testimony.Semantics.Ontology
 import Testimony.Semantics.Meaning
 import Testimony.Semantics.Discourse
 import Testimony.Meanings
+import Testimony.Ontology
 import Testimony.Articles.Howell2003
 import Testimony.Checks.Meanings
 import Testimony.Checks.Postulates

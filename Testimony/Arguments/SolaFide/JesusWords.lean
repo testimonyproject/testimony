@@ -497,7 +497,9 @@ def jesusWordsDispute : Dispute Claim WordsParty where
 Luke 7:50 and Luke 18 — faith sufficed — and Rome's readings of Matthew 7 and 19
 — salvation is not apart from works. As encoded, faith's sufficiency and
 "not apart from works" are different claims, and Luke's sayings make only the
-first: whoever holds both is not contradicted by these texts. -/
+first: whoever holds both is not contradicted by these texts. It takes neither
+of Trent's further claims: baptism as the instrument of justification, and
+justification as including sanctification. -/
 def lukeWithRomeOnMatthewReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -507,6 +509,8 @@ def lukeWithRomeOnMatthewReading : Valuation Claim := fun a =>
   | .salvationNotByWorks => False
   | .matthew7DoingIncludesBelieving => False
   | .matthew19LawExposesInability => False
+  | .baptismIsInstrumentalCause => False
+  | .justificationIncludesSanctification => False
   | _ => True
 
 /-- Luke's two sayings stand with Rome's readings of Matthew. -/

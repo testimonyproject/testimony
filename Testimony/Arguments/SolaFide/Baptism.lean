@@ -213,7 +213,9 @@ def reformedOnTheDesire : ArgumentPackage Claim :=
 
 /-- Rome's world: baptism the instrumental cause, the desire for it bringing its
 fruits, the thief saved, God not bound to his sacraments, the water of John 3:5
-baptismal; and the washing itself not necessary for salvation. -/
+baptismal; and the washing itself not necessary for salvation. Baptism a means
+of justification, faith is not its only means; and justification includes
+sanctification, so it is not forensic only. -/
 def romeOnBaptismReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -224,12 +226,16 @@ def romeOnBaptismReading : Valuation Claim := fun a =>
   | .john3_5WaterIsNaturalBirth => False
   | .john3_5WaterIsEzekielsCleansing => False
   | .john3_5WaterIsTheSpiritsCleansing => False
+  | .justificationByFaithAlone => False
+  | .justificationIsForensicOnly => False
   | _ => True
 
 /-- One world in which Feeney's reading holds: baptism the instrumental cause,
 and the washing itself necessary for salvation. It must deny that the thief's
 case bears on the Gospel, and that the desire brings the fruits that save. The
-first denial is what his reading requires, not a sentence quoted from him. -/
+first denial is what his reading requires, not a sentence quoted from him. With
+Trent, it denies that faith is the only means of justification, and that
+justification is forensic only. -/
 def feeneyReading : Valuation Claim := fun a =>
   match a with
   | .thiefBearsOnTheGospel => False
@@ -237,9 +243,12 @@ def feeneyReading : Valuation Claim := fun a =>
   | .john3_5WaterIsNaturalBirth => False
   | .john3_5WaterIsEzekielsCleansing => False
   | .john3_5WaterIsTheSpiritsCleansing => False
+  | .justificationByFaithAlone => False
+  | .justificationIsForensicOnly => False
   | _ => True
 
-/-- The Reformed world: faith the instrument, and baptism not; the desire brings
+/-- The Reformed world: faith the instrument, and baptism not; justification
+the remission of sins, not sanctification; the desire brings
 the fruits, the thief is saved, and God is not bound to water. The water of
 John 3:5 is the Spirit's own cleansing, and the verse does not require water
 baptism. -/
@@ -249,6 +258,7 @@ def reformedOnBaptismReading : Valuation Claim := fun a =>
   | .waterItselfNecessaryForSalvation => False
   | .john3_5RequiresWaterBaptism => False
   | .john3_5WaterIsBaptism => False
+  | .justificationIncludesSanctification => False
   | _ => True
 
 /-! ### Each position holds -/
