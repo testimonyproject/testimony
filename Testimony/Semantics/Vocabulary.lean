@@ -254,6 +254,8 @@ inductive Concept
   | patternForBelievers
   /-- An unrepeatable step in the gospel's spread. -/
   | unrepeatableTransition
+  /-- A length of time, in minutes. -/
+  | minutes (n : Nat)
 deriving DecidableEq, Repr
 
 /-- The relations doctrinal claims are built from. A fixed set, so that two
@@ -308,6 +310,17 @@ inductive Rel
   | judges
   /-- The first settles the second, finally: no appeal lies beyond it. -/
   | settles
+  /-- The first, an occurrence, lasts the second, a length of time. DOLCE's
+  temporal location of a perdurant; BFO's *occupies temporal region*. -/
+  | lasts
+  /-- The first, an occurrence, begins when the second begins: Allen's *starts*,
+  or *equals*. -/
+  | startsWith
+  /-- The first, an occurrence, ends when the second ends: Allen's *finishes*,
+  or *equals*. -/
+  | endsWith
+  /-- The first is part of the second: DOLCE's and BFO's *part of*. -/
+  | partOf
 deriving DecidableEq, Repr
 
 /-- A principle of reading, held for its own sake. -/

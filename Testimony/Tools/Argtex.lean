@@ -47,12 +47,9 @@ def note : String :=
   "\\noindent Nothing here asserts that the premises are true --- only that the " ++
   "conclusion does or does not follow from them.\n\n"
 
-/-- The whole document. -/
-def document : String :=
-  Latex.preamble documentTitle ++ note ++ Latex.contents ++
-  String.join (arguments.filterMap fun a =>
-    (bodyOf a.ns).map fun b => Latex.sectionHeading a.title ++ b.latex) ++
-  Latex.postamble
+/-- The whole document: every catalogued argument, set as `latexDocument` sets
+any package's. -/
+def document : String := latexDocument documentTitle note (sectionsOf arguments bodies)
 
 /-- Read a file, treating absence as empty so `--check` reports it as stale. -/
 def readOrEmpty (p : System.FilePath) : IO String := do

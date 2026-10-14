@@ -13,12 +13,25 @@
 #   - Lake never deletes the build output of a module whose source was removed.
 #
 # So: build every target, delete build output that has no source, then replay.
+#
+# A package built on the library replays its own modules the same way, from its
+# own directory, naming its root and its targets:
+#
+#   cd examples && ../scripts/kernel-replay.sh TestimonyExamples exampletex
+#
+# Its imports from the library are replayed by the library's own run.
 set -eu
 
-lake build Testimony bibgen argtex statusgen argdoc
+root=${1:-Testimony}
+if [ "$#" -gt 0 ]; then shift; fi
+if [ "$root" = Testimony ] && [ "$#" -eq 0 ]; then
+  set -- bibgen argtex statusgen argdoc
+fi
+
+lake build "$root" "$@"
 
 out=.lake/build/lib/lean
-find "$out/Testimony" -name '*.olean' | while read -r olean; do
+find "$out/$root" -name '*.olean' | while read -r olean; do
   module=${olean#"$out"/}
   src=${module%.olean}.lean
   if [ ! -f "$src" ]; then
@@ -27,5 +40,5 @@ find "$out/Testimony" -name '*.olean' | while read -r olean; do
   fi
 done
 
-lake env leanchecker Testimony
-echo "kernel-replay: every Testimony module replayed through the kernel"
+lake env leanchecker "$root"
+echo "kernel-replay: every $root module replayed through the kernel"

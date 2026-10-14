@@ -37,6 +37,13 @@ inductive Tradition
   | romanCatholic
   /-- Eastern Orthodox theology. -/
   | easternOrthodox
+  /-- The adversarial trial: testimony given, and the cross-examination that
+  tests it. For cases outside theology, where the parties are a witness and
+  counsel rather than a tradition of reading. -/
+  | adversarialTrial
+  /-- Formal ontology: what a word means, as the top-level ontologies (DOLCE,
+  BFO) state it, or as the library stipulates its own words. -/
+  | formalOntology
 deriving Repr, DecidableEq
 
 /-- Confidence a source attaches to a claim. Deliberately coarse. -/
@@ -125,6 +132,12 @@ that a reader can weigh them. -/
 def Source.isScriptureOnly (s : Source) : Bool :=
   s.references.all Reference.isScripture
 
+/-- Whether this source cites scripture at all. A document none of whose claims
+does — a case from outside theology — has nothing to say about premises grounded
+in scripture alone, and the renderers say nothing. -/
+def Source.citesScripture (s : Source) : Bool :=
+  s.references.any Reference.isScripture
+
 /-- Every bibliography entry cited by this source. -/
 def Source.entries (s : Source) : List BibEntry :=
   s.references.filterMap Reference.entry
@@ -142,6 +155,10 @@ inductive PremiseKind
   | theological
   /-- How a passage is to be read. -/
   | interpretive
+  /-- What is generally so, as observation or common experience establishes it:
+  how long a thing takes, how a thing behaves. For cases outside theology,
+  where a reckoning turns on how the world goes. -/
+  | empirical
 deriving Repr, DecidableEq
 
 /-- A premise: a named assumption with kind and provenance.

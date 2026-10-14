@@ -31,6 +31,7 @@ import Testimony.Logic.Contest
 import Testimony.Logic.Warrant
 import Testimony.Logic.Postulates
 import Testimony.Logic.Credibility
+import Testimony.Logic.Aif
 import Testimony.Argument
 import Testimony.Arguments.BornInBethlehem
 import Testimony.Arguments.BornOfAVirgin
@@ -38,6 +39,7 @@ import Testimony.Arguments.CanonicalWitness
 import Testimony.Arguments.SolaFide
 import Testimony.Arguments.SolaScriptura
 import Testimony.Arguments.SpiritBaptism
+import Testimony.Semantics.Upper
 import Testimony.Semantics.Vocabulary
 import Testimony.Semantics.Grammar
 import Testimony.Semantics.Ontology
@@ -46,6 +48,7 @@ import Testimony.Semantics.Discourse
 import Testimony.Meanings
 import Testimony.Ontology
 import Testimony.Articles.Howell2003
+import Testimony.Checks.Aif
 import Testimony.Checks.Meanings
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates

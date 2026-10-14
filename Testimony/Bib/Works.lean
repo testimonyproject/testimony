@@ -2230,6 +2230,83 @@ and none is recorded. -/
                  (some "2026-10-03") ] }
   , journal := "First Things" }
 
+/-! ### The standards the library aligns to -/
+
+/-- The Argument Interchange Format's specification, from the Argumentation
+Research Group at Dundee: the core ontology of argument — information nodes,
+and the scheme nodes that apply an inference (RA), a conflict (CA) or a
+preference (PA) — and the conditions an AIF graph must meet (Definition 1.1).
+`Testimony.Logic.Aif` checks the library's disputes against those conditions. -/
+@[bib_entry] def aifSpecification : BibEntry := .webPage
+  { core :=
+      { key := "dundee-aif-specification-2011"
+      , role := .text
+      , contributors :=
+          { authors := [.corporate "Argumentation Research Group, University of Dundee"] }
+      , title := "The Argument Interchange Format (AIF) Specification"
+      , year := some { value := 2011 }
+      , identifiers :=
+          [ .url "https://arg-tech.org/wp-content/uploads/2011/09/aif-spec.pdf"
+                 (some "2026-10-14") ] }
+  , site := some "ARG-tech, University of Dundee" }
+
+/-- The paper that proposed the Argument Interchange Format: a common ontology
+for argument, so that tools built on different formalisms can exchange
+arguments. -/
+@[bib_entry] def chesnevarArgumentInterchange : BibEntry := .article
+  { core :=
+      { key := "chesnevar-argument-interchange-format-2006"
+      , contributors :=
+          { authors :=
+              [ .person "Carlos" "Chesñevar", .person "Jarred" "McGinnis"
+              , .person "Sanjay" "Modgil", .person "Iyad" "Rahwan", .person "Chris" "Reed"
+              , .person "Guillermo" "Simari", .person "Matthew" "South"
+              , .person "Gerard" "Vreeswijk", .person "Steven" "Willmott" ] }
+      , title := "Towards an Argument Interchange Format"
+      , year := some { value := 2006 }
+      , identifiers := [.doi "10.1017/S0269888906001044"] }
+  , journal := "The Knowledge Engineering Review"
+  , volume := some "21"
+  , issue := some "4"
+  , pages := some (293, 316) }
+
+/-- DOLCE, the Descriptive Ontology for Linguistic and Cognitive Engineering,
+as its authors present it: endurants and perdurants, qualities and abstract
+regions, built to follow the distinctions natural language and human cognition
+make. The upper ontology the library's vocabulary is aligned to
+(`Testimony.Semantics.Upper`). -/
+@[bib_entry] def borgoDolce : BibEntry := .article
+  { core :=
+      { key := "borgo-dolce-2022"
+      , contributors :=
+          { authors :=
+              [ .person "Stefano" "Borgo", .person "Roberta" "Ferrario"
+              , .person "Aldo" "Gangemi", .person "Nicola" "Guarino"
+              , .person "Claudio" "Masolo", .person "Daniele" "Porello"
+              , .person "Emilio M." "Sanfilippo", .person "Laure" "Vieu" ] }
+      , title := "DOLCE: A Descriptive Ontology for Linguistic and Cognitive Engineering"
+      , year := some { value := 2022 }
+      , identifiers := [.doi "10.3233/AO-210259"] }
+  , journal := "Applied Ontology"
+  , volume := some "17"
+  , issue := some "1"
+  , pages := some (45, 69) }
+
+/-- Basic Formal Ontology, as its authors teach it: continuants and occurrents,
+dependent and independent entities, processes and the temporal regions they
+occupy. The library's upper categories name their BFO counterparts from it. -/
+@[bib_entry] def arpBasicFormalOntology : BibEntry := .book
+  { core :=
+      { key := "arp-basic-formal-ontology-2015"
+      , contributors :=
+          { authors :=
+              [ .person "Robert" "Arp", .person "Barry" "Smith", .person "Andrew D." "Spear" ] }
+      , title := "Building Ontologies with Basic Formal Ontology"
+      , year := some { value := 2015 }
+      , identifiers := [.isbn "9780262527811"] }
+  , publisher := "MIT Press"
+  , place := some "Cambridge, MA" }
+
 derive_bib_registry registry
 
 end Testimony.Bib

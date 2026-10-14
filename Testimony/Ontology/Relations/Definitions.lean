@@ -25,7 +25,7 @@ def stipulated (word sentence : String) : Source :=
   { primary := .proposal
       ("The vocabulary's own definition of `" ++ word ++ "` " ++
        "(Testimony.Semantics.Vocabulary): \"" ++ sentence ++ "\"")
-  , tradition := .christianHistoricalGrammatical
+  , tradition := .formalOntology
   , confidence := .consensus }
 
 /-- **To be excluded from a thing is not to be its ground.** The vocabulary

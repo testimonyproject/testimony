@@ -46,6 +46,16 @@ class RuleTests(unittest.TestCase):
         found = self.lint(text, path="Testimony/Bib/Works.lean")
         self.assertNotIn("L3", rules(found))
 
+    def test_L3_allows_entries_in_a_packages_works(self):
+        text = 'def x : BibEntry := .book\n  { core := c, publisher := "P" }\n'
+        found = self.lint(text, path="examples/TestimonyExamples/Works.lean")
+        self.assertNotIn("L3", rules(found))
+
+    def test_L4_untagged_entry_in_a_packages_works(self):
+        text = 'def alpha : BibEntry := .book\n  { core := c }\n'
+        found = self.lint(text, path="examples/TestimonyExamples/Works.lean")
+        self.assertIn("L4", rules(found))
+
     def test_L3_ignores_field_accessors_named_like_constructors(self):
         text = "def PassageRange.book : PassageRange -> Book\n  | .verse p => p.book\n"
         self.assertNotIn("L3", rules(self.lint(text, path="Testimony/Text.lean")))
@@ -110,6 +120,15 @@ class RuleTests(unittest.TestCase):
         self.assertEqual("Foo", L.argument_unit("Testimony/Arguments/Foo.lean"))
         self.assertEqual("Foo", L.argument_unit("Testimony/Arguments/Foo/Lines.lean"))
         self.assertIsNone(L.argument_unit("Testimony/Logic/Package.lean"))
+
+    def test_argument_unit_reads_a_package_built_on_the_library(self):
+        self.assertEqual("Grits", L.argument_unit("examples/TestimonyExamples/Grits.lean"))
+        self.assertEqual(
+            "Grits", L.argument_unit("examples/TestimonyExamples/Grits/Positions.lean"))
+
+    def test_L5_holds_a_package_built_on_the_library_to_the_rule(self):
+        found = L.lint_units({"examples/TestimonyExamples/Foo.lean": ONE_PACKAGE})
+        self.assertIn("L5", rules(found))
 
     def test_L6_headline_without_print_axioms(self):
         text = "@[headline]\ntheorem foo : True := trivial\n"

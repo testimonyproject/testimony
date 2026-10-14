@@ -258,6 +258,35 @@ structure WebPageData where
   site : Option String := none
 deriving Repr, DecidableEq
 
+/-- A motion picture. `core.contributors.authors` are its writers; who
+directed it, and who released it, are its own fields, as a film is cited by
+title, director and studio. -/
+structure FilmData where
+  /-- Fields shared with every entry type; the authors are the writers. -/
+  core : WorkCore
+  /-- Who directed it. -/
+  directors : List Agent := []
+  /-- The studio or distributor that released it. -/
+  studio : String
+  /-- Running time, in minutes. -/
+  runtime : Option Nat := none
+deriving Repr, DecidableEq
+
+/-- A court's decision. `core.title` is the case name; it is cited by its court,
+its docket and, once reported, its reporter citation. -/
+structure LegalCaseData where
+  /-- Fields shared with every entry type; the title is the case name. -/
+  core : WorkCore
+  /-- The court that decided it. -/
+  court : String
+  /-- Its docket number. -/
+  docket : Option String := none
+  /-- Where it is reported, e.g. "916 F.3d 1095". -/
+  reporter : Option String := none
+  /-- The date of decision, as an ISO-8601 date. -/
+  decided : Option String := none
+deriving Repr, DecidableEq
+
 /-- A bibliography entry. -/
 inductive BibEntry
   /-- A monograph or commentary. -/
@@ -276,6 +305,10 @@ inductive BibEntry
   | dataset (d : DatasetData)
   /-- A web page. -/
   | webPage (d : WebPageData)
+  /-- A motion picture. -/
+  | film (d : FilmData)
+  /-- A court's decision. -/
+  | legalCase (d : LegalCaseData)
 deriving Repr, DecidableEq
 
 /-- The fields common to every entry type. -/
@@ -288,6 +321,8 @@ def BibEntry.core : BibEntry → WorkCore
   | .ancientWork d => d.core
   | .dataset d => d.core
   | .webPage d => d.core
+  | .film d => d.core
+  | .legalCase d => d.core
 
 /-- The entry's citation key. -/
 def BibEntry.key (e : BibEntry) : CiteKey := e.core.key

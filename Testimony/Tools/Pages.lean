@@ -109,8 +109,9 @@ end Testimony.Doc
 namespace Testimony.Doc
 
 open Testimony in
-/-- Generates `def <name> : List Body` by walking every argument namespace in
-the environment and rendering what it declares.
+/-- Generates `def <name> : List Body` by walking every argument namespace
+under `root` in the environment (every one, when `root` is anonymous) and
+rendering what it declares.
 
 The namespaces are taken from the `@[headline]` tag rather than from
 `arguments`, for the reason `statusgen` gives: a tool that took its scope from
@@ -121,13 +122,13 @@ below compares the two in both directions, so an argument missing from
 Within a namespace the order is the source's own. Module docstrings carry
 positions, so `/-! ### The lines -/` lands between the declaration above it and
 the declaration below it, exactly as it does in the file. -/
-elab "derive_argument_bodies " tableName:ident : command => do
+def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit := do
   let env ← getEnv
 
   -- Pretty-print an expression as the argument's own file spells it.
   let render (width : Nat) (ns : Name) (e : Expr) : CommandElabM String := do
     let fmt ← liftTermElabM (Lean.PrettyPrinter.ppExpr e)
-    pure (stripNamespaces ns (fmt.pretty (width := width)))
+    pure (stripNamespaces ns (fmt.pretty (width := width)) (← getCurrNamespace))
 
   -- A statement, on one line from the printer: the wrapping happens once the
   -- keyword and the declaration's own name are in front of it, which is what
@@ -139,7 +140,8 @@ elab "derive_argument_bodies " tableName:ident : command => do
   let mut nss : Array Name := #[]
   for i in [0 : env.header.moduleNames.size] do
     for d in headlineAttr.ext.getModuleEntries env i do
-      unless nss.contains d.getPrefix do nss := nss.push d.getPrefix
+      unless nss.contains d.getPrefix || !root.isPrefixOf d.getPrefix do
+        nss := nss.push d.getPrefix
 
   -- One pass over the environment, bucketing declarations by their namespace.
   let mut declsOf : Std.HashMap Name (Array Name) := {}
@@ -330,6 +332,18 @@ elab "derive_argument_bodies " tableName:ident : command => do
     `derive_argument_bodies`. -/
     def $tableName : List Body := [$bodies,*]))
 
+/-- `derive_argument_bodies t` generates `def t : List Body`, every argument's
+page body; see `deriveArgumentBodies`. `derive_argument_bodies t under N`
+harvests only the arguments declared under the namespace `N`. That is how a
+package built on the library renders its own arguments, and not the library's,
+which it imports and which carry results too. -/
+syntax (name := deriveArgumentBodiesCmd) "derive_argument_bodies " ident (" under " ident)? :
+  command
+
+elab_rules : command
+  | `(derive_argument_bodies $t $[under $root]?) =>
+    deriveArgumentBodies t ((root.map (·.getId)).getD .anonymous)
+
 derive_argument_bodies bodies
 
 #guard bodies.all fun b => arguments.any fun a => a.ns == b.ns
@@ -337,5 +351,48 @@ derive_argument_bodies bodies
 
 /-- The harvest for one argument. -/
 def bodyOf (ns : Name) : Option Body := bodies.find? (·.ns == ns)
+
+/-! ### Documents, for the library and for packages built on it -/
+
+/-- Each catalogued argument with its harvested body, in the catalogue's order. -/
+def sectionsOf (catalogue : List Argument) (harvest : List Body) : List (Argument × Body) :=
+  catalogue.filterMap fun a => (harvest.find? (·.ns == a.ns)).map (a, ·)
+
+/-- **A printable document**: a title, a standing note under it, and a section
+for each argument — its heading the catalogue's title, its body the harvest's
+LaTeX. `argtex` sets the library's arguments with it, and a package built on the
+library sets its own, so the two documents are set alike. `tool` is the
+generator the document says it was made by. -/
+def latexDocument (title note : String) (sections : List (Argument × Body))
+    (tool : String := "argtex") : String :=
+  Logic.Latex.preamble title tool ++ note ++ Logic.Latex.contents ++
+  String.join (sections.map fun (a, b) => Logic.Latex.sectionHeading a.title ++ b.latex) ++
+  Logic.Latex.postamble
+
+/-- A generated file's committed contents, or nothing if there is none, so that
+a check reports a missing file as stale. -/
+def readGenerated (p : System.FilePath) : IO String := do
+  if ← p.pathExists then IO.FS.readFile p else pure ""
+
+/-- **Write generated files, or check that they are current**, as every
+generator here does: with `check`, report each file whose committed contents
+differ and fail; otherwise write them all. Returns the exit code. -/
+def writeOrCheck (tool : String) (files : List (System.FilePath × String)) (check : Bool) :
+    IO UInt32 := do
+  if check then
+    let mut stale := #[]
+    for (path, want) in files do
+      if (← readGenerated path) != want then stale := stale.push path
+    if stale.isEmpty then
+      IO.println s!"{tool}: generated files are up to date"
+      return 0
+    for path in stale do
+      IO.eprintln s!"{tool}: {path} is stale — run `lake exe {tool}` and commit the result"
+    return 1
+  for (path, contents) in files do
+    if let some dir := path.parent then IO.FS.createDirAll dir
+    IO.FS.writeFile path contents
+    IO.println s!"{tool}: wrote {path}"
+  return 0
 
 end Testimony.Doc
