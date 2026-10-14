@@ -16,6 +16,8 @@
 - [Style guide](./style-guide.md)
 - [Meanings and articles (draft)](./semantics.md)
 - [Computed ratings (design)](./computed-ratings.md)
+- [Standards the library aligns to](./standards.md)
+- [Beyond theology: a case of your own](./beyond-theology.md)
 
 # Arguments
 

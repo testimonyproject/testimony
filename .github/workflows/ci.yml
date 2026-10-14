@@ -71,6 +71,19 @@ jobs:
           lake exe statusgen --check
           lake exe argdoc --check
 
+      # The examples: a package built on the library, held to the library's
+      # gates. It requires the library by path and shares its .lake/packages, so
+      # it reuses everything built above and compiles only its own modules. The
+      # domain linter already read it, with the library.
+      - name: Examples package
+        working-directory: examples
+        run: |
+          lake build
+          lake lint
+          lake exe axiom-audit
+          ../scripts/kernel-replay.sh TestimonyExamples exampletex
+          lake exe exampletex --check
+
   docs:
     needs: image
     runs-on: ubuntu-latest
