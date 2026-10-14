@@ -31,7 +31,7 @@ and the definitions below are claims about what doctrine's words mean.
 
 ## What a definition can say
 
-Each definition is one of three forms, and each comes with a `Source`, as a
+Each definition is one of four forms, and each comes with a `Source`, as a
 premise does:
 
 - **implies** — whatever stands in the one relation stands in the other.
@@ -39,6 +39,8 @@ premise does:
 - **only** — the one relation is the other, and nothing else stands in it to
   the same thing: what is the *only* means of a thing is a means of it, and
   nothing else is.
+- **functional** — a thing stands in the relation to one thing only: an
+  occurrence lasts one length of time.
 
 The definitions themselves are written in the articles of `Testimony.Ontology`,
 each with the search that found where it bears and what follows from it. This
@@ -49,7 +51,8 @@ module only says how they are read.
 A meaning's literals are **closed** under the definitions — every literal a
 definition yields from one already there is added, until none is new — and a
 closed set **clashes** when it affirms and denies one fact, holds two different
-things to be the only one, or contains every part of one of its nogoods. Every
+things to be the only one, relates one thing to two in a relation that allows
+one, or contains every part of one of its nogoods. Every
 rule yields from one literal at a time, so the closure of two meanings together
 is the two closures side by side, and a clash between them is found by looking
 across. Two meanings **exclude** each other when each is coherent alone and the
@@ -189,6 +192,9 @@ inductive Axiom
   /-- The first relation is the second, and nothing else stands in the second
   to the same thing. -/
   | only (r s : Rel)
+  /-- A thing stands in the relation to one thing only: an occurrence lasts one
+  length of time. -/
+  | functional (r : Rel)
 deriving DecidableEq, Repr
 
 /-- **A definition**: what one of the vocabulary's words commits its reader to,
@@ -223,12 +229,15 @@ def yields : Axiom → Lit → List Lit
 /-- The relations a definition is about. -/
 def rels : Axiom → List Rel
   | .implies r s | .denies r s | .only r s => [r, s]
+  | .functional r => [r]
 
 /-- Whether two literals clash under one definition: for **only**, two
 different things each standing in the relation to the same thing, one of them
 as the only one. -/
 def clashes : Axiom → Lit → Lit → Bool
   | .only r s, ⟨true, .rel r' a b⟩, ⟨true, .rel s' c d⟩ => r' == r && s' == s && b == d && a != c
+  | .functional r, ⟨true, .rel r' a b⟩, ⟨true, .rel r'' c d⟩ =>
+    r' == r && r'' == r && a == c && b != d
   | _, _, _ => false
 
 end Axiom
@@ -248,7 +257,8 @@ def close (O : Ontology) (ls : List Lit) : List Lit :=
   (List.range (O.length + 1)).foldl (fun acc _ => step O acc) ls
 
 /-- **Whether a closed set of literals clashes**: one fact affirmed and denied;
-two things each held to be the only one; or every part of a nogood asserted. -/
+two things each held to be the only one; one thing related to two, in a relation
+that allows one; or every part of a nogood asserted. -/
 def clash (O : Ontology) (ls : List Lit) (nogoods : List (List Lit)) : Bool :=
   ls.any (fun l => ls.contains l.neg) ||
     ls.any (fun l => ls.any fun m => O.any fun d => d.form.clashes l m) ||

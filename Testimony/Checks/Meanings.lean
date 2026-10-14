@@ -25,21 +25,23 @@ namespace Testimony.Checks
 open Lean Elab Command Meta
 
 /-- Whether a name is an argument's claim type: `Testimony.Arguments.X.Claim`,
-or an inductive named `Claim` deeper in an argument's namespace. -/
-def isClaimType (env : Environment) (name : Name) : Bool :=
-  (`Testimony.Arguments).isPrefixOf name && name.getString! == "Claim" &&
+or an inductive named `Claim` deeper in an argument's namespace. A package built
+on the library names its own root instead. -/
+def isClaimType (env : Environment) (name : Name) (root : Name := `Testimony.Arguments) :
+    Bool :=
+  root.isPrefixOf name && name.getString! == "Claim" &&
     (env.find? name).any fun | .inductInfo _ => true | _ => false
 
-/-- Check that every argument's claim type has meanings, and postulates taken
-from its pinned joins; see the module docstring. -/
-elab "#check_meanings" : command => do
+/-- Check that every argument's claim type under `root` has meanings, and
+postulates taken from its pinned joins; see the module docstring. -/
+def checkMeanings (root : Name) : CommandElabM Unit := do
   let env ← getEnv
   let mut found : Nat := 0
   let mut missing : Array Name := #[]
   let mut unpinned : Array Name := #[]
   let mut foreign : Array Name := #[]
   for (name, _) in env.constants.toList do
-    unless isClaimType env name do continue
+    unless isClaimType env name root do continue
     found := found + 1
     let ty := mkApp (mkConst ``Testimony.Semantics.HasMeanings) (mkConst name)
     let inst ← liftTermElabM (try? (synthInstance ty))
@@ -53,7 +55,8 @@ elab "#check_meanings" : command => do
         foreign := foreign.push name
   unless missing.isEmpty do
     throwError m!"no meanings registered for:\n{MessageData.joinSep
-      (missing.toList.map toMessageData) "\n"}\nadd a module to Testimony.Meanings"
+      (missing.toList.map toMessageData) "\n"}\nregister its meanings \
+      (in the library, a module of Testimony.Meanings)"
   unless unpinned.isEmpty do
     throwError m!"no joins pinned for:\n{MessageData.joinSep
       (unpinned.toList.map toMessageData) "\n"}\nadd a HasJoins instance beside its meanings"
@@ -63,6 +66,15 @@ elab "#check_meanings" : command => do
   if found == 0 then
     throwError "#check_meanings found no argument to check"
   logInfo m!"every argument has meanings and pinned joins: {found} claim types"
+
+/-- `#check_meanings` checks every argument of the library; `#check_meanings under
+N` every argument whose claim type is declared under the namespace `N`, which is
+how a package built on the library checks its own. -/
+syntax (name := checkMeaningsCmd) "#check_meanings" (" under " ident)? : command
+
+elab_rules : command
+  | `(#check_meanings $[under $root]?) =>
+    checkMeanings ((root.map (·.getId)).getD `Testimony.Arguments)
 
 /-- info: every argument has meanings and pinned joins: 6 claim types -/
 #guard_msgs in

@@ -192,6 +192,8 @@ def tradition : Tradition → String
   | .reformedProtestant => "Reformed Protestant"
   | .romanCatholic => "Roman Catholic"
   | .easternOrthodox => "Eastern Orthodox"
+  | .adversarialTrial => "adversarial trial"
+  | .formalOntology => "formal ontology"
 
 /-- How firmly that tradition holds it. -/
 def confidence : Confidence → String
@@ -204,7 +206,7 @@ def confidence : Confidence → String
 def kind : PremiseKind → String
   | .textual => "textual" | .linguistic => "linguistic"
   | .historical => "historical" | .theological => "theological"
-  | .interpretive => "interpretive"
+  | .interpretive => "interpretive" | .empirical => "empirical"
 
 /-- The legend: one row per atom, giving the claim it stands for, how it is
 classified, who holds it and where they say so. This is the assumption manifest
@@ -223,7 +225,9 @@ def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String 
   "<div class=\"testimony-legend\">\n\n" ++
   "| | claim | kind | held | source |\n|---|---|---|---|---|\n" ++
   String.intercalate "\n" rows ++ "\n\n</div>\n\n" ++
-  "※ grounded in scripture alone: the reading is assumed, not argued for.\n"
+  (if order.any fun a => (cite a).source.citesScripture then
+    "※ grounded in scripture alone: the reading is assumed, not argued for.\n"
+  else "")
 
 /-! ### The page -/
 
@@ -496,7 +500,8 @@ def item [DecidableEq α] (order : List α) : Item α → String
   | .package d doc pkg =>
       declLabel d (" — " ++ escape pkg.name) ++ "\n" ++ doc ++ "\n\n" ++
       derivation order pkg.premises pkg.conclusion ++
-      (if pkg.scriptureOnlyAtoms.isEmpty then
+      (if !(order.any fun a => (pkg.cite a).source.citesScripture) then ""
+       else if pkg.scriptureOnlyAtoms.isEmpty then
          "\nNo premise here rests on scripture alone.\n"
        else
          "\nGrounded in scripture alone: " ++

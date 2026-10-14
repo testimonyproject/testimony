@@ -67,17 +67,28 @@ declaration, so a new argument needs no entry. -/
 def sharedPrefixes : List String :=
   [ "Testimony.Logic.", "Testimony.People.", "Testimony.", "Logic.", "People." ]
 
+/-- The longest namespace two names share, component by component. -/
+def commonPrefix (a b : Name) : Name :=
+  let rec go : List String → List String → Name → Name
+    | x :: xs, y :: ys, acc => if x == y then go xs ys (acc.str x) else acc
+    | _, _, acc => acc
+  go (a.components.map (·.toString)) (b.components.map (·.toString)) .anonymous
+
 /-- Strip the namespaces from a pretty-printed statement, so that it reads as
 it does in the source file rather than as the pretty-printer spells it from
 outside the argument's namespace.
 
+`within` is the namespace the statement was printed in: the pretty-printer
+shortens a name by the namespaces it shares with it, so a package built on the
+library, harvesting from its own namespace, passes that.
+
 The argument's own namespace comes first and in both forms — fully qualified,
-and as the pretty-printer shortens it inside `Testimony` — because
+and as the pretty-printer shortens it inside `within` — because
 `sharedPrefixes` would otherwise eat the `Testimony.` in front of it and leave
 `Arguments.BornOfAVirgin.christian` standing. -/
-def stripNamespaces (ns : Name) (s : String) : String :=
+def stripNamespaces (ns : Name) (s : String) (within : Name := `Testimony.Doc) : String :=
   let qualified := ns.toString ++ "."
-  let shortened := (qualified.splitOn "Testimony.").getLast!
+  let shortened := (ns.replacePrefix (commonPrefix ns within) .anonymous).toString ++ "."
   (qualified :: shortened :: sharedPrefixes).foldl (fun acc p => acc.replace p "") s
 
 end Testimony.Doc

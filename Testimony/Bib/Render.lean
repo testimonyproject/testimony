@@ -92,6 +92,8 @@ def entryType : BibEntry → String
   | .ancientWork _ => "misc"
   | .dataset _ => "misc"
   | .webPage _ => "online"
+  | .film _ => "movie"
+  | .legalCase _ => "jurisdiction"
 
 /-- Render one `name = {value}` line, or nothing when the value is absent. -/
 def field (name : String) : Option String → List String
@@ -116,12 +118,22 @@ def noteField (e : BibEntry) : Option String :=
   | some c, none => some (texEscape c)
   | none, v => v
 
+/-- Whether an entry's title is a proper name throughout — a film's, a case's —
+whose capitals a bibliography style must not lower: `plain` sets "Novato
+Healthcare Center v. National Labor Relations Board" in sentence case
+otherwise. -/
+def BibEntry.titleIsName : BibEntry → Bool
+  | .film _ | .legalCase _ => true
+  | _ => false
+
 /-- Fields common to every entry, derived from `WorkCore` — except `note`,
-which `noteField` assembles from the core and the variant together. -/
-def coreFields (c : WorkCore) : List String :=
+which `noteField` assembles from the core and the variant together. A title
+that is a name is braced, so that its case is kept. -/
+def coreFields (c : WorkCore) (titleIsName : Bool := false) : List String :=
   let title := texEscape (match c.subtitle with
     | some s => c.title ++ ": " ++ s
     | none => c.title)
+  let title := if titleIsName then "{" ++ title ++ "}" else title
   field "author" (if c.contributors.authors.isEmpty then none
                   else some (agentsBibtex c.contributors.authors))
   ++ field "editor" (if c.contributors.editors.isEmpty then none
@@ -169,10 +181,21 @@ def variantFields : BibEntry → List String
     field "version" d.version
     ++ field "howpublished" (d.maintainer.map texEscape)
   | .webPage d => field "organization" (d.site.map texEscape)
+  | .film d =>
+    field "director" (if d.directors.isEmpty then none else some (agentsBibtex d.directors))
+    ++ field "organization" (some (texEscape d.studio))
+    ++ field "howpublished" (some ("Film" ++
+        (if d.directors.isEmpty then "" else ", dir. " ++ texEscape (agentsDisplay d.directors)) ++
+        ", " ++ texEscape d.studio))
+  | .legalCase d =>
+    field "institution" (some (texEscape d.court))
+    ++ field "number" d.docket
+    ++ field "howpublished" (d.reporter.map texEscape)
+    ++ field "date" d.decided
 
 /-- One entry in BibTeX form. -/
 def toBibtex (e : BibEntry) : String :=
-  let fields := coreFields e.core ++ field "note" (noteField e) ++ variantFields e
+  let fields := coreFields e.core e.titleIsName ++ field "note" (noteField e) ++ variantFields e
   "@" ++ entryType e ++ "{" ++ e.key ++ ",\n"
     ++ String.intercalate ",\n" fields ++ "\n}"
 
@@ -250,6 +273,15 @@ def variantMarkdown : BibEntry → String
     ++ mdClause (d.commit.map fun c => "Commit `" ++ c ++ "`")
     ++ mdClause d.license
   | .webPage d => mdClause d.site
+  | .film d =>
+    " Film" ++ (if d.directors.isEmpty then "" else ", directed by " ++ agentsDisplay d.directors)
+    ++ ". " ++ d.studio ++ "."
+    ++ mdClause (d.runtime.map fun m => toString m ++ " minutes")
+  | .legalCase d =>
+    " " ++ d.court ++ "."
+    ++ mdClause (d.docket.map fun n => "No. " ++ n)
+    ++ mdClause d.reporter
+    ++ mdClause (d.decided.map fun t => "Decided " ++ t)
 
 /-- One entry as a Markdown bibliography line. Entries with no stable public
 identifier are marked, so an unverifiable reference is visibly so.
@@ -330,7 +362,7 @@ build rather than silently rewriting `references.bib`. -/
 
 /-- The field names an entry renders, in order. -/
 def bibtexFieldNames (e : BibEntry) : List String :=
-  (coreFields e.core ++ field "note" (noteField e) ++ variantFields e).map fun l =>
+  (coreFields e.core e.titleIsName ++ field "note" (noteField e) ++ variantFields e).map fun l =>
     ((l.splitOn " = ").headD "").replace " " ""
 
 -- BibTeX keeps one value per field and drops or warns about a repeat, so a

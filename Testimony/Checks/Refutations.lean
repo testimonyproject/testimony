@@ -74,16 +74,17 @@ def establishFailsAsNotHorn (set : Name) (goal : Expr) : TermElabM (Option Strin
   s.restore
   return outcome
 
-/-- Check every refutation in the arguments; see the module docstring. -/
-elab "#check_refutations" : command => do
+/-- Check every refutation under `root`, each with the unfold set `sets` gives its
+namespace; see the module docstring. -/
+def checkRefutations (root : Name) (sets : List (Name × Name)) : CommandElabM Unit := do
   let env ← getEnv
   let mut checked : Nat := 0
   let mut problems : Array MessageData := #[]
   for (name, info) in env.constants.toList do
-    unless (`Testimony.Arguments).isPrefixOf name do continue
+    unless root.isPrefixOf name do continue
     let .thmInfo thm := info | continue
     let some goal := refutedEntailment? thm.type | continue
-    let some (_, set) := unfoldSets.find? (·.1.isPrefixOf name) | do
+    let some (_, set) := sets.find? (·.1.isPrefixOf name) | do
       problems := problems.push m!"{name}: no unfold set for its namespace"
       continue
     match ← liftTermElabM (establishFailsAsNotHorn set goal) with
@@ -94,6 +95,22 @@ elab "#check_refutations" : command => do
   if checked == 0 then
     throwError "#check_refutations found no refutation to check"
   logInfo m!"establish fails, as not Horn, on all {checked} refuted packages"
+
+/-- `#check_refutations` checks every refutation in the library's arguments, with
+`unfoldSets`. `#check_refutations under N using S` checks every refutation
+declared under the namespace `N`, with the unfold sets `S` lists — a
+`List (Name × Name)`, as `unfoldSets` is — which is how a package built on the
+library checks its own. -/
+syntax (name := checkRefutationsCmd)
+  "#check_refutations" (" under " ident " using " ident)? : command
+
+elab_rules : command
+  | `(#check_refutations) => checkRefutations `Testimony.Arguments unfoldSets
+  | `(#check_refutations under $root using $sets) => do
+    let sets ← liftTermElabM do
+      let n ← realizeGlobalConstNoOverloadWithInfo sets
+      unsafe evalExpr (List (Name × Name)) (toTypeExpr (List (Name × Name))) (mkConst n)
+    checkRefutations root.getId sets
 
 /-- info: establish fails, as not Horn, on all 33 refuted packages -/
 #guard_msgs in

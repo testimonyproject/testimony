@@ -40,15 +40,19 @@ def consistentWithPostulates {α : Type} [DecidableEq α] [Logic.HasPostulates �
 def packageAtoms? (type : Expr) : Option Expr :=
   if type.isAppOfArity ``Testimony.Logic.ArgumentPackage 1 then some type.appArg! else none
 
-/-- Check every package against its postulates; see the module docstring. -/
-elab "#check_postulates" : command => do
+/-- The namespaces the library's own checks read: its arguments and its
+articles. -/
+def libraryRoots : List Name := [`Testimony.Arguments, `Testimony.Articles]
+
+/-- Check every package under `roots` against its postulates; see the module
+docstring. -/
+def checkPostulates (roots : List Name) : CommandElabM Unit := do
   let env ← getEnv
   let mut checked : Nat := 0
   let mut undecided : Nat := 0
   let mut problems : Array MessageData := #[]
   for (name, info) in env.constants.toList do
-    unless (`Testimony.Arguments).isPrefixOf name || (`Testimony.Articles).isPrefixOf name do
-      continue
+    unless roots.any (·.isPrefixOf name) do continue
     let .defnInfo d := info | continue
     let some atoms := packageAtoms? d.type | continue
     let ok? ← liftTermElabM do
@@ -67,6 +71,15 @@ elab "#check_postulates" : command => do
   if checked == 0 then
     throwError "#check_postulates found no package to check"
   logInfo m!"every package has a model with its postulates: {checked}, and {undecided} undecided"
+
+/-- `#check_postulates` checks every package of the library; `#check_postulates
+under N` every package declared under the namespace `N`, which is how a package
+built on the library checks its own. -/
+syntax (name := checkPostulatesCmd) "#check_postulates" (" under " ident)? : command
+
+elab_rules : command
+  | `(#check_postulates $[under $root]?) =>
+    checkPostulates ((root.map ([·.getId])).getD libraryRoots)
 
 /-- info: every package has a model with its postulates: 150, and 0 undecided -/
 #guard_msgs in
@@ -122,16 +135,15 @@ def nonEntailments (type : Expr) : MetaM (List (Name × Expr × Expr)) := do
       return [(``survivesPostulates, Γ, φ), (``survivesPostulatesNeg, Γ, φ)]
     return []
 
-/-- Check every non-entailment against its postulates; see the section
-docstring. -/
-elab "#check_refutations_postulates" : command => do
+/-- Check every non-entailment under `roots` against its postulates; see the
+section docstring. -/
+def checkRefutationsPostulates (roots : List Name) : CommandElabM Unit := do
   let env ← getEnv
   let mut checked : Nat := 0
   let mut undecided : Nat := 0
   let mut problems : Array MessageData := #[]
   for (name, info) in env.constants.toList do
-    unless (`Testimony.Arguments).isPrefixOf name || (`Testimony.Articles).isPrefixOf name do
-      continue
+    unless roots.any (·.isPrefixOf name) do continue
     let .thmInfo thm := info | continue
     if thm.type.hasLooseBVars || thm.type.isForall && !thm.type.isArrow then continue
     let cases ← liftTermElabM (try nonEntailments thm.type catch _ => pure [])
@@ -158,6 +170,16 @@ elab "#check_refutations_postulates" : command => do
     throwError m!"non-entailments undone by their meanings:\n{
       MessageData.joinSep problems.toList "\n"}"
   logInfo m!"every non-entailment survives its postulates: {checked}, and {undecided} undecided"
+
+/-- `#check_refutations_postulates` checks every non-entailment of the library;
+`#check_refutations_postulates under N` every one declared under the namespace
+`N`, which is how a package built on the library checks its own. -/
+syntax (name := checkRefutationsPostulatesCmd)
+  "#check_refutations_postulates" (" under " ident)? : command
+
+elab_rules : command
+  | `(#check_refutations_postulates $[under $root]?) =>
+    checkRefutationsPostulates ((root.map ([·.getId])).getD libraryRoots)
 
 /-- info: every non-entailment survives its postulates: 67, and 4 undecided -/
 #guard_msgs in

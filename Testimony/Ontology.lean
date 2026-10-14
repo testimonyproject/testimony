@@ -1,6 +1,8 @@
 import Testimony.Ontology.Shared
 import Testimony.Ontology.Search
 import Testimony.Ontology.Relations
+import Testimony.Ontology.Time
+import Testimony.Ontology.Kinds
 
 /-!
 # Testimony.Ontology — articles that derive what the vocabulary's words mean
@@ -30,4 +32,7 @@ are read under it.
 
 - `Testimony.Ontology.Relations` — what three relation words commit a reader
   to: "not a ground", "the only means", "the whole ground".
+- `Testimony.Ontology.Time` — an occurrence lasts one length of time.
+- `Testimony.Ontology.Kinds` — what kind of thing each concept is, by DOLCE's
+  categories, and the concepts whose kind is the dispute.
 -/

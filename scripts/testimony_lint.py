@@ -17,7 +17,7 @@ declaration. L12 is about the prose too, but about its shape rather than its
 claims: hand-written markdown is held to the same 100 columns as Lean.
 
 Usage:
-    python3 scripts/testimony_lint.py            # Testimony/ and the prose docs
+    python3 scripts/testimony_lint.py            # Testimony/, examples/, the prose docs
     python3 scripts/testimony_lint.py [paths...] # those files only; no L9
 """
 from __future__ import annotations
@@ -31,8 +31,16 @@ from pathlib import Path
 
 MAX_LINE = 100
 MIN_PACKAGES = 2
-WORKS_FILE = "Testimony/Bib/Works.lean"
-ARGUMENTS_DIR = "Testimony/Arguments/"
+# Each package's bibliography: the library's, and that of each package built on
+# it that lives in this repository. A package keeps its works in one file, as
+# the library does, so that `derive_bib_registry` sees them all.
+WORKS_FILES = ("Testimony/Bib/Works.lean", "examples/TestimonyExamples/Works.lean")
+# Where arguments live: the library's, and each package's cases. A package
+# built on the library is held to the same rules as the library's own.
+ARGUMENTS_DIRS = ("Testimony/Arguments/", "examples/TestimonyExamples/")
+# The Lean sources the linter reads when it is run with no arguments: the
+# library, and the packages built on it in this repository.
+LEAN_ROOTS = ("Testimony", "examples/TestimonyExamples")
 CITE_KEY_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 ARGUMENT_PACKAGE_RE = re.compile(r"\bdef\s+(\w+)\s*:\s*ArgumentPackage\b")
 
@@ -102,7 +110,7 @@ INLINE_ENTRY_RE = re.compile(r":=\s*\.(" + "|".join(ENTRY_CTORS) + r")\s*(\{|$)"
 RULE_TEXT = {
     "L1": "no `sorry` or `admit`",
     "L2": "no `native_decide` — it adds Lean.ofReduceBool to the trust base",
-    "L3": "BibEntry values must be defined in Testimony/Bib/Works.lean",
+    "L3": "BibEntry values must be defined in a package's Works.lean",
     "L4": "every BibEntry definition must carry @[bib_entry]",
     # L5 previously capped atoms at 12, because entailment was decided by an
     # exhaustive 2^n truth table. That checker is gone, so the cap is gone with
@@ -234,7 +242,7 @@ def lint_text(path: str, text: str) -> list[Finding]:
             add("L1", n)
         if "native_decide" in line:
             add("L2", n)
-        if path != WORKS_FILE and INLINE_ENTRY_RE.search(line):
+        if path not in WORKS_FILES and INLINE_ENTRY_RE.search(line):
             add("L3", n)
         for m in re.finditer(r'key\s*:=\s*"([^"]*)"', line):
             if not CITE_KEY_RE.match(m.group(1)):
@@ -247,7 +255,7 @@ def lint_text(path: str, text: str) -> list[Finding]:
             add("L8", n, f"{len(line)} columns")
 
     # L4: BibEntry definitions in Works.lean must be tagged.
-    if path == WORKS_FILE:
+    if path in WORKS_FILES:
         for n, line in enumerate(code, 1):
             if re.search(r"\bdef\s+\w+\s*:\s*BibEntry\b", line):
                 if "@[bib_entry]" not in line and not (
@@ -311,11 +319,11 @@ def argument_unit(path: str) -> str | None:
     `Arguments/BornOfAVirgin.lean` and `Arguments/BornOfAVirgin/Lines.lean` both
     belong to `BornOfAVirgin`.
     """
-    if not path.startswith(ARGUMENTS_DIR):
-        return None
-    rest = path[len(ARGUMENTS_DIR):]
-    head = rest.split("/", 1)[0]
-    return head[: -len(".lean")] if head.endswith(".lean") else head
+    for root in ARGUMENTS_DIRS:
+        if path.startswith(root):
+            head = path[len(root):].split("/", 1)[0]
+            return head[: -len(".lean")] if head.endswith(".lean") else head
+    return None
 
 
 def lint_units(files: dict[str, str]) -> list[Finding]:
@@ -809,7 +817,9 @@ def lint_path(p: Path) -> list[Finding]:
 
 def main(argv: list[str]) -> int:
     whole_library = not argv[1:]
-    targets = [Path(a) for a in argv[1:]] or [Path("Testimony")]
+    targets = [Path(a) for a in argv[1:]] or [
+        Path(r) for r in LEAN_ROOTS if Path(r).is_dir()
+    ]
     files: list[Path] = []
     # Named markdown is linted where it is named, so the file-write hook can
     # hand this a page as readily as a module. A named `.lean` file, or a

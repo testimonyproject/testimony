@@ -50,14 +50,14 @@ def ontologyReport (α : Type) [HasMeanings α] [DecidableEq α] [Repr α] : Str
         derived
   (String.intercalate "\n" (head ++ lines), (HasMeanings.incoherent (α := α)).length)
 
-/-- Report what the shared ontology does in every argument; see the module
-docstring. -/
-elab "#check_ontology" : command => do
+/-- Report what the shared ontology does in every argument under `root`; see the
+module docstring. -/
+def checkOntology (root : Name) : CommandElabM Unit := do
   let env ← getEnv
   let mut reports : Array String := #[]
   let mut incoherent : Array Name := #[]
   for (name, _) in env.constants.toList do
-    unless isClaimType env name do continue
+    unless isClaimType env name root do continue
     let r? ← liftTermElabM do
       try
         let e ← mkAppOptM ``ontologyReport #[some (mkConst name), none, none, none]
@@ -75,6 +75,15 @@ elab "#check_ontology" : command => do
     throwError "#check_ontology found no argument to report on"
   let sorted := reports.qsort (· < ·)
   logInfo m!"the shared ontology, in every argument:\n{String.intercalate "\n" sorted.toList}"
+
+/-- `#check_ontology` reports on every argument of the library; `#check_ontology
+under N` on every argument whose claim type is declared under the namespace `N`,
+which is how a package built on the library reports on its own. -/
+syntax (name := checkOntologyCmd) "#check_ontology" (" under " ident)? : command
+
+elab_rules : command
+  | `(#check_ontology $[under $root]?) =>
+    checkOntology ((root.map (·.getId)).getD `Testimony.Arguments)
 
 /--
 info: the shared ontology, in every argument:

@@ -1,4 +1,5 @@
 import Testimony.Semantics.Vocabulary
+import Testimony.Semantics.Upper
 
 /-!
 # Testimony.Semantics.Grammar — what a claim says, as a term
@@ -55,13 +56,19 @@ inductive Scope
   | usage (v : Voice)
 deriving DecidableEq, Repr
 
-/-- What a slot in a doctrinal relation holds: a concept, or a word as it is
-used somewhere, whose sense is left to a separate `Statement.means`. -/
+/-- What a slot in a relation holds: a concept, a word as it is used somewhere
+(whose sense is left to a separate `Statement.means`), or a particular — one
+thing or occurrence, named and of a stated kind. -/
 inductive Term
   /-- A concept, named directly. -/
   | concept (c : Concept)
   /-- A word as it stands in its text. -/
   | word (w : Lexeme) (at_ : Scope)
+  /-- A particular: one thing, or one occurrence, that a claim is about — the
+  time between a man's entering a store and a shot, a witness's breakfast —
+  named, and of the kind its category says (`Testimony.Semantics.Upper`). The
+  vocabulary's concepts are kinds; a case's evidence is about particulars. -/
+  | particular (name : String) (kind : Category)
 deriving DecidableEq, Repr
 
 /-- A doctrinal content: a relation between two terms, or a combination of
@@ -122,8 +129,8 @@ namespace Content
 /-- The words a content uses, with where each is used. -/
 def words : Content → List (Lexeme × Scope)
   | .rel _ a b =>
-    (match a with | .word w sc => [(w, sc)] | .concept _ => []) ++
-    (match b with | .word w sc => [(w, sc)] | .concept _ => [])
+    (match a with | .word w sc => [(w, sc)] | _ => []) ++
+    (match b with | .word w sc => [(w, sc)] | _ => [])
   | .not c => c.words
   | .both c d => c.words ++ d.words
 
@@ -206,6 +213,9 @@ abbrev wu (w : Lexeme) (v : Voice) : Term := .word w (.usage v)
 
 /-- A concept. -/
 abbrev cn (c : Concept) : Term := .concept c
+
+/-- A particular, of a stated kind. -/
+abbrev pt (name : String) (kind : Category) : Term := .particular name kind
 
 /-- A relation between two terms. -/
 abbrev rl (r : Rel) (a b : Term) : Content := .rel r a b

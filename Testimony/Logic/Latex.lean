@@ -150,7 +150,7 @@ def source (s : Source) : String :=
 def kind : PremiseKind → String
   | .textual => "textual" | .linguistic => "linguistic"
   | .historical => "historical" | .theological => "theological"
-  | .interpretive => "interpretive"
+  | .interpretive => "interpretive" | .empirical => "empirical"
 
 /-- Which interpretive tradition advances a claim. -/
 def tradition : Tradition → String
@@ -162,6 +162,8 @@ def tradition : Tradition → String
   | .reformedProtestant => "Reformed Protestant"
   | .romanCatholic => "Roman Catholic"
   | .easternOrthodox => "Eastern Orthodox"
+  | .adversarialTrial => "adversarial trial"
+  | .formalOntology => "formal ontology"
 
 /-- How firmly that tradition holds it. -/
 def confidence : Confidence → String
@@ -199,9 +201,11 @@ def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String 
     pcol "0.21" ++ "@{}}\n" ++
   "\\toprule\n & claim & kind & held & source \\\\\n\\midrule\n\\endhead\n" ++
   String.intercalate "\n" rows ++ "\n\\bottomrule\n\\end{longtable}\n\n" ++
-  "\\noindent\\footnotesize " ++ scriptureOnlyMark ++
-  " grounded in scripture alone: the reading is assumed, not argued for.\n" ++
-  "\\normalsize\n"
+  (if order.any fun a => (cite a).source.citesScripture then
+    "\\noindent\\footnotesize " ++ scriptureOnlyMark ++
+    " grounded in scripture alone: the reading is assumed, not argued for.\n" ++
+    "\\normalsize\n"
+  else "")
 
 /-! ### Docstring prose
 
@@ -349,6 +353,12 @@ private def bulletBody (line : String) : Option String :=
     some (t.drop 2).toString
   else none
 
+/-- Whether a line continues the list item above it: indented, and not a new
+item or a fence. -/
+private def continuesItem (line : String) : Bool :=
+  line.startsWith " " && !line.trimAscii.toString.isEmpty && (bulletBody line).isNone &&
+    !isFence line
+
 /-- Whether a line starts a paragraph rather than some other block. -/
 private def isPlain (line : String) : Bool :=
   let t := line.trimAscii.toString
@@ -377,10 +387,15 @@ partial def prose (md : String) : String :=
         let cells := (block.map rowCells).filter (!isSeparatorRow ·)
         table cells ++ go (rest.drop (block.length - 1))
       else if (bulletBody line).isSome then
-        let block := (line :: rest).takeWhile fun l => (bulletBody l).isSome
-        let items := block.filterMap bulletBody
+        -- An item's wrapped lines are part of it: Markdown reads an indented
+        -- line under an item as its continuation, and so does this.
+        let block := (line :: rest).takeWhile fun l => (bulletBody l).isSome || continuesItem l
+        let items := block.foldl (init := #[]) fun acc l =>
+          match bulletBody l with
+          | some b => acc.push b
+          | none => acc.modify (acc.size - 1) (· ++ " " ++ l.trimAscii.toString)
         "\\begin{itemize}\n" ++
-        String.join (items.map fun i => "  \\item " ++ inlineProse i ++ "\n") ++
+        String.join (items.toList.map fun i => "  \\item " ++ inlineProse i ++ "\n") ++
         "\\end{itemize}\n" ++ go (rest.drop (block.length - 1))
       else
         let block := (line :: rest).takeWhile isPlain
@@ -416,9 +431,11 @@ def derivation [DecidableEq α] (order : List α) (prems : List (Formula α))
   "  \\vdash \\quad & " ++ formula order concl ++ "\n\\end{align*}\n"
 
 /-- Which of a package's premises are grounded in scripture alone, as a note
-under its derivation. -/
-def scriptureNote [DecidableEq α] (pkg : ArgumentPackage α) : String :=
-  if pkg.scriptureOnlyAtoms.isEmpty then
+under its derivation; nothing, in a document none of whose claims cites
+scripture. -/
+def scriptureNote [DecidableEq α] (order : List α) (pkg : ArgumentPackage α) : String :=
+  if !(order.any fun a => (pkg.cite a).source.citesScripture) then ""
+  else if pkg.scriptureOnlyAtoms.isEmpty then
     "\\emph{No premise here rests on scripture alone.}\n"
   else
     "\\emph{Grounded in scripture alone:} " ++
@@ -671,7 +688,7 @@ def item [DecidableEq α] (order : List α) : Page.Item α → String
   | .prose md => prose md
   | .package d doc pkg =>
       declLabel d (" --- " ++ escape pkg.name) ++ prose doc ++
-      derivation order pkg.premises pkg.conclusion ++ scriptureNote pkg
+      derivation order pkg.premises pkg.conclusion ++ scriptureNote order pkg
   | .line d doc l =>
       declLabel d (" --- " ++ escape l.name) ++ prose doc ++
       derivation order l.premises l.delivers
@@ -724,8 +741,11 @@ are not someone's laptop — `tectonic arguments.tex` failed at line 4 with a
 fontspec error, so the PDF half of the toolchain only ever worked for whoever
 had already made it work. Each family now falls back, and the monospace one
 matters as much as the body one: the default `\ttfamily` has no glyph for the
-logical symbols the rendered statements are full of. -/
-def preamble (title : String) : String :=
+logical symbols the rendered statements are full of.
+
+`tool` is the generator the date line names: the library's `argtex`, or a
+package's own. -/
+def preamble (title : String) (tool : String := "argtex") : String :=
   "\\documentclass[11pt]{article}\n" ++
   "\\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
@@ -746,7 +766,7 @@ def preamble (title : String) : String :=
   "  {\\setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase]}\n" ++
   "  {\\IfFontExistsTF{FreeMono}{\\setmonofont{FreeMono}[Scale=MatchLowercase]}{}}\n" ++
   "\\title{" ++ escape title ++ "}\n" ++
-  "\\date{Generated by \\texttt{lake exe argtex}}\n" ++
+  "\\date{Generated by \\texttt{lake exe " ++ tool ++ "}}\n" ++
   "\\begin{document}\n\\maketitle\n"
 
 /-- The table of contents, which the starred sections opt into by hand. -/
