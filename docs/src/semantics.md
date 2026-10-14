@@ -107,24 +107,29 @@ what a voice held are kept whole, because a text may say a thing without saying 
 follows from it.
 
 The definitions are not a list kept beside the vocabulary. Each is derived in an **article**
-(`Testimony.Ontology`), which does three things, every one of them checked:
+(`Testimony.Ontology`), which names no argument and does two things, both checked:
 
-1. **Search.** Every claim, in every argument, whose meaning uses the article's words — held as
-   doctrine, or used inside a frame — is found and pinned (`Testimony.Ontology.Search`).
-2. **Define.** What the words mean, with a source. A definition is what a word means, which no
+1. **Define.** What the words mean, with a source. A definition is what a word means, which no
    reader disputes; what one tradition holds of a word and another denies is a premise of a
    position, and the article leaves it apart and says why.
-3. **Report what follows.** Each argument's joins are computed with each definition and
-   without it, so that what a definition contributes is a checked fact.
+2. **Show each definition at work** on two statements of its own, built from the vocabulary
+   alone: they exclude each other with the definition, and not without it.
+
+What the definitions do in the arguments is computed, for every argument the library has, by
+`Testimony.Checks.Ontology`, from the generic queries of `Testimony.Ontology.Search`. It finds
+the arguments itself and pins, for each, how many of its joins are found with no definition at
+all, how many claims use each defined word as doctrine or of a text or voice, and the joins
+each definition contributes: those found with it and not with it taken out. It fails the
+build if any meaning contradicts itself.
 
 The first article, `Testimony.Ontology.Relations`, writes out three definitions the vocabulary
 already gave in words: "not a ground" is the denial of "a ground"; the only means of a thing is
 a means of it, and nothing else is; the whole ground of a thing is a ground of it, and nothing
-else is. One join follows from them — *faith alone* against Trent's baptism as the instrumental
-cause of justification (`only_means_derives_one_join`) — and one more was found by reading the
-meanings more carefully: "forensic only" against Trent's "justification includes
+else is. One join follows from them, in sola fide — *faith alone* against Trent's baptism as
+the instrumental cause of justification (`the_only_means_at_work`) — and one more was found by
+reading the meanings more carefully: "forensic only" against Trent's "justification includes
 sanctification", whose denial was always in the Reformed claim's own meaning
-(`sola_fide_joins_without_definitions`). No dispute's table and no verdict moves; the named
+(`a_denial_inside_needs_no_definition`). No dispute's table and no verdict moves; the named
 readings of sola fide take a side on both pairs.
 
 ### What the search found, not yet fixed

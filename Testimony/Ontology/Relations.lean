@@ -1,5 +1,5 @@
 import Testimony.Ontology.Relations.Definitions
-import Testimony.Ontology.Relations.Reach
+import Testimony.Ontology.Relations.Examples
 
 /-!
 # What three relation words commit a reader to
@@ -33,21 +33,29 @@ A definition says what a word means, and no reader disputes that. Where one
 tradition holds of a word what another denies, it is a premise of that
 tradition's position, not a definition, and it is left apart (below).
 
+Each definition is shown at work on two statements of its own, built from the
+vocabulary and from no argument: they exclude each other with the definition,
+and not without it (`Relations.Examples`). So the article names no argument;
+what it does in each is computed for every argument the library has, by
+`Testimony.Checks.Ontology`.
+
 ## What the search found
 
 Three arguments use the five words: sola fide, the canonical witness and sola
-scriptura (`Relations.Reach`). Most uses in sola fide are inside a frame — what
-Romans 3:28 or Galatians 2:16 *says*, what James 2 is *written against* — and
-the definitions do not reach inside a frame: a text may say a thing without
-saying all that follows from it.
+scriptura (`Testimony.Checks.Ontology`). Most uses in sola fide are inside a
+frame — what Romans 3:28 or Galatians 2:16 *says*, what James 2 is *written
+against* — and the definitions do not reach inside a frame
+(`the_definitions_stop_at_a_frame`): a text may say a thing without saying all
+that follows from it.
 
 ## What follows
 
 **One join is derived from a definition.** That faith is the only means of
 justification excludes Trent's claim that baptism is its instrumental cause
-(`only_means_derives_one_join`). Westminster calls faith "the alone instrument
-of justification" (XI.2); Trent's sixth session makes baptism "the instrumental
-cause" (ch. 7); the atom for Trent's claim cites both. The two were always
+(`the_only_means_at_work`; in sola fide, `Testimony.Checks.Ontology`).
+Westminster calls faith "the alone instrument of justification" (XI.2); Trent's
+sixth session makes baptism "the instrumental cause" (ch. 7); the atom for
+Trent's claim cites both. The two were always
 opposed; the library now knows it from what the words mean, and not from an
 atom written to say so.
 
@@ -56,7 +64,7 @@ includes the remission of sins, and not sanctification" — the Reformed claim
 that justification is forensic only — excludes Trent's "justification includes
 both". The denial was always in the Reformed claim's meaning; the reader used
 before looked only for denials of a whole claim, and missed one inside it
-(`sola_fide_joins_without_definitions`).
+(`a_denial_inside_needs_no_definition`).
 
 **What it changes.** Every named reading in sola fide now takes a side on both
 pairs: Trent's worlds deny *faith alone*; every other world denies Trent's
@@ -64,9 +72,9 @@ claim. Several readings that had held both halves of a pair — the claims a
 reading does not mention are true in it, and these two had not been mentioned —
 no longer do. No dispute's table moves, no verdict moves, and every
 non-entailment the library states still holds (`Testimony.Checks.Postulates`):
-both pairs were already opposed in every dispute that seats them. Nothing else
-moves anywhere (`definitions_derive_nothing_elsewhere`), and no meaning
-contradicts itself (`no_meaning_contradicts_itself`).
+both pairs were already opposed in every dispute that seats them. No
+definition derives a join in any other argument, and no meaning contradicts
+itself (`Testimony.Checks.Ontology`, which fails the build if one does).
 
 ## What the search found that the definitions cannot fix
 

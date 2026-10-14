@@ -47,5 +47,6 @@ import Testimony.Meanings
 import Testimony.Ontology
 import Testimony.Articles.Howell2003
 import Testimony.Checks.Meanings
+import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Refutations
