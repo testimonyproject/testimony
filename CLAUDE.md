@@ -103,6 +103,7 @@ lake exe argtex                      # render arguments to LaTeX
 cd docs/latex && tectonic arguments.tex   # ... and to PDF (needs a Unicode engine)
 python3 scripts/test_testimony_lint.py   # after touching the linter
 mdbook build docs                    # docs site
+cd examples && lake build && lake exe exampletex --check   # the examples package, after the library
 ```
 
 `lake build` also runs `#check_refutations`: `establish` must fail, as not
@@ -121,17 +122,18 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Bib/` | `Core` types, `Attr` registry attribute, `Works` entries, `Render`, `Registry` guards |
 | `Testimony/Provenance.lean` | `Reference`, `Source`, `Tradition`, `Confidence` |
 | `Testimony/Intertext.lean` | Typed relations between passages |
-| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels + `Independent`, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`, Horn-only, and `establish_by_search`/`refute_with`/`satisfied_by`/`leaves_open`/`granted`), `Framework` Dung semantics (grounded, preferred), `Dispute` packages as its nodes, defeat derived from entailment and cited confidence, `Horn` the decision procedure that computes a dispute's defeat table, `Solver` the verified solver that computes its verdicts, `Witness` the checked reasons they are stated with, `Verdict` a verdict and its witness as one declaration, rendered from the witness, `Support` one position lending another a premise, `Map` a dispute drawn with its defeats, supports and the attacks support implies, `Because` why one package stands against another, at a checked crux, `Burden` the minimal sets of readings an opponent must reject, complete, `Dilemma` every reading of a rival's ambiguous claim, each answered |
+| `Testimony/Logic/` | `Basic` formula, `Notation` (`p`/`notP`), `Entail` + countermodels + `Independent`, `Package` arguments + manifests, `Line` lines of reason, `Tactic` (`establish`, Horn-only, and `establish_by_search`/`refute_with`/`satisfied_by`/`leaves_open`/`granted`), `Framework` Dung semantics (grounded, preferred), `Dispute` packages as its nodes, defeat derived from entailment and cited confidence, `Horn` the decision procedure that computes a dispute's defeat table, `Solver` the verified solver that computes its verdicts, `Witness` the checked reasons they are stated with, `Verdict` a verdict and its witness as one declaration, rendered from the witness, `Support` one position lending another a premise, `Map` a dispute drawn with its defeats, supports and the attacks support implies, `Because` why one package stands against another, at a checked crux, `Burden` the minimal sets of readings an opponent must reject, complete, `Dilemma` every reading of a rival's ambiguous claim, each answered, `Aif` every dispute as an AIF graph, checked against AIF's Definition 1.1 |
 | `Testimony/Argument.lean` | Criteria, definitions, `Satisfies`, `People` |
 | `Testimony/Arguments/` | The worked arguments. Over ~500 lines an argument becomes a directory: `Atoms`, `Sources`, `Lines`, `Packages`, `Results`, with the root module reduced to imports and the module docstring |
-| `Testimony/Semantics/` | `Vocabulary`, `Grammar` (a claim's meaning as a term), `Ontology` (a meaning taken apart and read under definitions), `Meaning` (`HasMeanings`, `HasJoins`), `Discourse` |
+| `Testimony/Semantics/` | `Upper` (DOLCE's categories, each with its BFO counterpart), `Vocabulary`, `Grammar` (a claim's meaning as a term, over concepts, words and particulars), `Ontology` (a meaning taken apart and read under definitions), `Meaning` (`HasMeanings`, `HasJoins`), `Discourse` |
 | `Testimony/Meanings/` | One module per argument: what each claim means, and its pinned joins |
-| `Testimony/Ontology/` | Articles that derive what the vocabulary's words mean — definitions with sources, each shown at work — naming no argument; `Search`, the generic queries; `Shared`, the definitions every join is read under |
+| `Testimony/Ontology/` | Articles that derive what the vocabulary's words mean — definitions with sources, each shown at work — naming no argument (`Relations`; `Time`, an occurrence lasts one length of time; `Kinds`, each concept's category, or why it has none); `Search`, the generic queries; `Shared`, the definitions every join is read under |
 | `Testimony/Logic/Page` | `Item` — what a generated page is made of, before either rendering |
 | `Testimony/Logic/Latex`, `Testimony/Logic/Markdown` | The two renderings of it: for print, and for the browser |
-| `Testimony/Tools/` | `Docs` (the shared catalogue), `Pages` (the harvest both document generators read), and the generators `Bibgen`, `Argtex`, `Statusgen`, `Argdoc`, each with `--check` |
-| `Testimony/Checks/` | Build-time checks over the whole library: `Refutations` (`establish` fails on every refuted package), `Ontology` (what each definition does in every argument, pinned) |
-| `scripts/` | Domain linter and its tests |
+| `Testimony/Tools/` | `Docs` (the shared catalogue), `Pages` (the harvest both document generators read, `derive_argument_bodies … under N` for one namespace, `latexDocument`, `writeOrCheck`), and the generators `Bibgen`, `Argtex`, `Statusgen`, `Argdoc`, each with `--check` |
+| `Testimony/Checks/` | Build-time checks over the whole library: `Refutations` (`establish` fails on every refuted package), `Ontology` (what each definition does in every argument, pinned), `Meanings`, `Postulates`, `Aif`. Each takes `under N`, so a package built on the library checks its own |
+| `scripts/` | Domain linter and its tests; `kernel-replay.sh [root targets…]` |
+| `examples/` | `TestimonyExamples`: a separate Lake package that requires the library by path, the first user of it outside its tree. Its cases (`Grits`), works, checks and LaTeX documents (`lake exe exampletex`) are its own, and nothing of it is in the library's index. Build it after the library, from `examples/` |
 
 ## Skills
 

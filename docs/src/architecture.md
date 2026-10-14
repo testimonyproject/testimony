@@ -34,7 +34,29 @@ boundary visible at all times.
 | `Testimony.Logic.Page` | `Item` — what a generated page is made of, before either rendering |
 | `Testimony.Logic.Latex`, `Testimony.Logic.Markdown` | The two renderings of it: traditional notation for print, and the same notation for the browser |
 | `Testimony.Tools.*` | The generators — `Bibgen`, `Argtex`, `Statusgen`, `Argdoc` — over `Docs`, the catalogue they share, and `Pages`, the harvest the two document generators read |
-| `Testimony.Checks.*` | Checks that run in `lake build` over every argument: `Refutations`, that `establish` fails, as not Horn, on every package the library refutes |
+| `Testimony.Logic.Aif` | Every dispute as an Argument Interchange Format graph, and AIF's Definition 1.1 as a check (see [Standards](./standards.md)) |
+| `Testimony.Semantics.Upper` | The upper categories a term can name — DOLCE's, each with its BFO counterpart |
+| `Testimony.Checks.*` | Checks that run in `lake build` over every argument: `Refutations`, that `establish` fails, as not Horn, on every package the library refutes; `Meanings`, `Ontology`, `Postulates`, and `Aif`. Each takes a namespace, so a package built on the library runs it over its own |
+
+## The library, and the packages built on it
+
+The library is the machinery for representing and checking arguments: the
+logic, the provenance types, the vocabulary and its ontology, the solver, the
+checks and the generators. Everything an argument needs from it is public, and
+a package built on it uses that and nothing else: it requires the library as a
+Lake dependency, imports it, and keeps its own works, unfold sets, checks and
+documents.
+
+The first such package is `TestimonyExamples`, in `examples/`, with a case from
+outside theology (see [Beyond theology](./beyond-theology.md)). It is built and
+checked in CI after the library, through the library's own gates, and the
+library knows nothing of it: it is not imported, catalogued or indexed here.
+
+The library's own arguments are still in its tree, under `Testimony.Arguments`,
+and they are documented by the same generators a package uses. Moving them into
+a package of their own is the next step of the split, and the generators and
+checks are written for it: each takes a namespace or a catalogue rather than
+assuming the library's.
 
 ## Two structural enforcements
 

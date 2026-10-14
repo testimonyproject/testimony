@@ -1,0 +1,22 @@
+name = "TestimonyExamples"
+version = "0.1.0"
+defaultTargets = ["TestimonyExamples"]
+lintDriver = "batteries/runLinter"
+# The library's own dependencies, shared: the examples resolve Foundation and
+# Mathlib from the library's checkout rather than fetching a second copy.
+packagesDir = "../.lake/packages"
+
+[leanOptions]
+linter.missingDocs = true
+
+[[require]]
+name = "testimony"
+path = ".."
+
+[[lean_lib]]
+name = "TestimonyExamples"
+
+[[lean_exe]]
+name = "exampletex"
+root = "TestimonyExamples.Tools.Exampletex"
+supportInterpreter = true
