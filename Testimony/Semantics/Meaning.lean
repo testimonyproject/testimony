@@ -68,8 +68,7 @@ word); "justification includes the remission of sins, and not sanctification"
 excludes "justification includes both"; and "faith is the only means by which
 justification is received" excludes "baptism is a means by which it is". -/
 def excludes (s t : Statement) : Bool :=
-  Ontology.excludes Testimony.Ontology.shared (Ontology.closed Testimony.Ontology.shared s)
-    (Ontology.closed Testimony.Ontology.shared t)
+  Ontology.excludeEachOther Testimony.Ontology.shared s t
 
 /-- **One meaning entails another** when, read for what its words mean, it
 asserts all the other does: "the word means a verdict, and not making righteous"

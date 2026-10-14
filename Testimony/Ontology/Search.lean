@@ -1,17 +1,18 @@
-import Testimony.Meanings
+import Testimony.Semantics.Meaning
 
 /-!
-# Testimony.Ontology.Search — where a word of the vocabulary is used
+# Testimony.Ontology.Search — where a word of the vocabulary is used, and what a definition derives
 
 An article of `Testimony.Ontology` begins with a search: every claim, in every
 argument, whose meaning uses the words it is about. A definition is worth
 writing out only where it bears on a claim, and it bears differently on a claim
 held as doctrine and on a claim about what a text says or a voice held. So the
-search reports both, separately, and the articles pin what it finds, so that a
-meaning added tomorrow that uses the word changes the article's numbers.
+search reports both, separately. It ends with what follows: the joins a
+definition contributes, which are the joins found with it and not without it.
 
 Every query here is generic: it is asked of any argument, by its `HasMeanings`
-instance.
+instance, and names none. `Testimony.Checks.Ontology` asks them of every
+argument the library has, and pins the answers.
 -/
 
 namespace Testimony.Semantics
@@ -50,14 +51,23 @@ namespace HasMeanings
 
 variable {α : Type} [HasMeanings α]
 
-/-- The atoms whose meaning holds, as doctrine, a claim in this relation. -/
-def holding (r : Rel) : List α :=
-  (all : List α).filter fun a => (means a).heldRels.contains r
+/-- The atoms whose meaning holds, as doctrine, a claim in one of these
+relations. -/
+def holding (rs : List Rel) : List α :=
+  (all : List α).filter fun a => rs.any (means a).heldRels.contains
 
-/-- The atoms whose meaning uses this relation inside a frame: of a text, or of
-a voice. -/
-def framing (r : Rel) : List α :=
-  (all : List α).filter fun a => (means a).framedRels.contains r
+/-- The atoms whose meaning uses one of these relations inside a frame: of a
+text, or of a voice. -/
+def framing (rs : List Rel) : List α :=
+  (all : List α).filter fun a => rs.any (means a).framedRels.contains
+
+/-- **What one definition of an ontology contributes**: the exclusions, and the
+entailments, found under the ontology and not under it with that definition
+taken out. -/
+def contributed [DecidableEq α] (O : Ontology) (i : Nat) : List (α × α) × List (α × α) :=
+  let without := O.eraseIdx i
+  ((exclusionsUnder O).filter fun e => !(exclusionsUnder without).contains e,
+   (entailmentsUnder O).filter fun e => !(entailmentsUnder without).contains e)
 
 end HasMeanings
 

@@ -194,6 +194,8 @@ deriving DecidableEq, Repr
 /-- **A definition**: what one of the vocabulary's words commits its reader to,
 in a form the reasoner reads, with who says so. -/
 structure Definition where
+  /-- A short name, for reports: "the only means". -/
+  name : String
   /-- What the definition says, in words. -/
   says : String
   /-- The definition, as the reasoner reads it. -/
@@ -217,6 +219,10 @@ def yields : Axiom → Lit → List Lit
     (if r' = r then [⟨!pos, .rel s a b⟩] else []) ++
       (if r' = s then [⟨!pos, .rel r a b⟩] else [])
   | _, _ => []
+
+/-- The relations a definition is about. -/
+def rels : Axiom → List Rel
+  | .implies r s | .denies r s | .only r s => [r, s]
 
 /-- Whether two literals clash under one definition: for **only**, two
 different things each standing in the relation to the same thing, one of them
@@ -260,6 +266,11 @@ def coherent (O : Ontology) (s : Shape) : Bool := s.read && !clash O s.lits s.no
 both can be held. -/
 def excludes (O : Ontology) (s t : Shape) : Bool :=
   coherent O s && coherent O t && clash O (s.lits ++ t.lits) (s.nogoods ++ t.nogoods)
+
+/-- **Whether two meanings exclude each other** under an ontology: each closed
+under its definitions, each coherent alone, and the two clashing together. -/
+def excludeEachOther (O : Ontology) (s t : Statement) : Bool :=
+  excludes O (closed O s) (closed O t)
 
 /-- **One meaning entails another** when it is coherent, and asserts, read
 for what its words mean, every literal of the other and every nogood. -/

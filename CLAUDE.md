@@ -126,11 +126,11 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Arguments/` | The worked arguments. Over ~500 lines an argument becomes a directory: `Atoms`, `Sources`, `Lines`, `Packages`, `Results`, with the root module reduced to imports and the module docstring |
 | `Testimony/Semantics/` | `Vocabulary`, `Grammar` (a claim's meaning as a term), `Ontology` (a meaning taken apart and read under definitions), `Meaning` (`HasMeanings`, `HasJoins`), `Discourse` |
 | `Testimony/Meanings/` | One module per argument: what each claim means, and its pinned joins |
-| `Testimony/Ontology/` | Articles that derive what the vocabulary's words mean — search, definitions with sources, what follows — and `Shared`, the definitions every join is read under |
+| `Testimony/Ontology/` | Articles that derive what the vocabulary's words mean — definitions with sources, each shown at work — naming no argument; `Search`, the generic queries; `Shared`, the definitions every join is read under |
 | `Testimony/Logic/Page` | `Item` — what a generated page is made of, before either rendering |
 | `Testimony/Logic/Latex`, `Testimony/Logic/Markdown` | The two renderings of it: for print, and for the browser |
 | `Testimony/Tools/` | `Docs` (the shared catalogue), `Pages` (the harvest both document generators read), and the generators `Bibgen`, `Argtex`, `Statusgen`, `Argdoc`, each with `--check` |
-| `Testimony/Checks/` | Build-time checks over the whole library: `Refutations` (`establish` fails on every refuted package) |
+| `Testimony/Checks/` | Build-time checks over the whole library: `Refutations` (`establish` fails on every refuted package), `Ontology` (what each definition does in every argument, pinned) |
 | `scripts/` | Domain linter and its tests |
 
 ## Skills

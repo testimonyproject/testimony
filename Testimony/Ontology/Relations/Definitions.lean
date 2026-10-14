@@ -33,7 +33,8 @@ defines `excludedFrom` as "the first is not a ground of the second". So to hold
 that works are excluded from justification is to deny that they are its ground,
 and to deny that they are excluded is to hold that they are. -/
 def notAGround : Definition :=
-  { says := "To be excluded from a thing is not to be a ground of it."
+  { name := "not a ground"
+  , says := "To be excluded from a thing is not to be a ground of it."
   , form := .denies .excludedFrom .groundOf
   , source := stipulated "excludedFrom" "The first is not a ground of the second." }
 
@@ -43,7 +44,8 @@ def notAGround : Definition :=
 which justification is received holds faith a means of it, and holds that
 nothing else is: not baptism, not works, not anything. -/
 def onlyMeans : Definition :=
-  { says := "The only means of a thing is a means of it, and nothing else is."
+  { name := "the only means"
+  , says := "The only means of a thing is a means of it, and nothing else is."
   , form := .only .soleInstrumentOf .instrumentOf
   , source := stipulated "soleInstrumentOf"
       "The first is the only means by which the second is received." }
@@ -53,7 +55,8 @@ def onlyMeans : Definition :=
 A ground that needed another beside it would not be the whole; another ground
 beside it would be something added. -/
 def wholeGround : Definition :=
-  { says := "The whole ground of a thing is a ground of it, and nothing else is."
+  { name := "the whole ground"
+  , says := "The whole ground of a thing is a ground of it, and nothing else is."
   , form := .only .soleGroundOf .groundOf
   , source := stipulated "soleGroundOf"
       "The first is the whole ground of the second: nothing added completes it." }
