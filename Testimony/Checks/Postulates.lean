@@ -1,11 +1,4 @@
-import Testimony.Meanings
-import Testimony.Arguments.BornInBethlehem
-import Testimony.Arguments.BornOfAVirgin
-import Testimony.Arguments.CanonicalWitness
-import Testimony.Arguments.SolaFide
-import Testimony.Arguments.SolaScriptura
-import Testimony.Arguments.SpiritBaptism
-import Testimony.Articles.Howell2003
+import Testimony.Checks.Fixture
 import Testimony.Logic.Horn
 import Testimony.Checks.Refutations
 
@@ -16,8 +9,8 @@ A meaning postulate is held beside a package's premises (`Testimony.Logic.Dissen
 and a premise set with no model entails *everything*. A postulate that
 contradicts a package would make every check on it vacuous and still pass.
 
-So for every package in `Testimony.Arguments` and `Testimony.Articles` — every
-definition whose type is `ArgumentPackage α` — the check decides that its
+So for every package under a namespace the check is given — every definition
+whose type is `ArgumentPackage α` — the check decides that its
 premises, with its argument's postulates, have a model. (A package the engine
 cannot decide — not Horn, or no candidate model fits — is counted and left to
 its own proofs.) It finds the packages itself, so one added tomorrow is checked
@@ -39,10 +32,6 @@ def consistentWithPostulates {α : Type} [DecidableEq α] [Logic.HasPostulates �
 /-- The atom type of a package, if a declaration's type is `ArgumentPackage α`. -/
 def packageAtoms? (type : Expr) : Option Expr :=
   if type.isAppOfArity ``Testimony.Logic.ArgumentPackage 1 then some type.appArg! else none
-
-/-- The namespaces the library's own checks read: its arguments and its
-articles. -/
-def libraryRoots : List Name := [`Testimony.Arguments, `Testimony.Articles]
 
 /-- Check every package under `roots` against its postulates; see the module
 docstring. -/
@@ -72,18 +61,16 @@ def checkPostulates (roots : List Name) : CommandElabM Unit := do
     throwError "#check_postulates found no package to check"
   logInfo m!"every package has a model with its postulates: {checked}, and {undecided} undecided"
 
-/-- `#check_postulates` checks every package of the library; `#check_postulates
-under N` every package declared under the namespace `N`, which is how a package
-built on the library checks its own. -/
-syntax (name := checkPostulatesCmd) "#check_postulates" (" under " ident)? : command
+/-- `#check_postulates under N` checks every package declared under the
+namespace `N`. -/
+syntax (name := checkPostulatesCmd) "#check_postulates" " under " ident : command
 
 elab_rules : command
-  | `(#check_postulates $[under $root]?) =>
-    checkPostulates ((root.map ([·.getId])).getD libraryRoots)
+  | `(#check_postulates under $root) => checkPostulates [root.getId]
 
-/-- info: every package has a model with its postulates: 150, and 0 undecided -/
+/-- info: every package has a model with its postulates: 2, and 0 undecided -/
 #guard_msgs in
-#check_postulates
+#check_postulates under Testimony.Checks.Fixture
 
 /-! ## No refutation is undone by its meanings
 
@@ -95,9 +82,9 @@ result, each proved by a countermodel. If every countermodel broke a postulate,
 the premises would entail the claim once they are read for what they mean, and
 the library would be asserting the opposite of what its meanings say.
 
-So for every such result in `Testimony.Arguments` and `Testimony.Articles`, the
-check decides that the premises, with their argument's postulates, can still
-hold while the claim fails. (One the engine cannot decide, because the claim is
+So for every such result under the namespace it is given, the check decides
+that the premises, with their argument's postulates, can still hold while the
+claim fails. (One the engine cannot decide, because the claim is
 not Horn, is counted and left to its own proof.) Every one decided can; so
 holding the postulates in `establish` would change no result, and the library
 does not. A meaning that undoes one fails the build here, and the result it
@@ -171,18 +158,16 @@ def checkRefutationsPostulates (roots : List Name) : CommandElabM Unit := do
       MessageData.joinSep problems.toList "\n"}"
   logInfo m!"every non-entailment survives its postulates: {checked}, and {undecided} undecided"
 
-/-- `#check_refutations_postulates` checks every non-entailment of the library;
-`#check_refutations_postulates under N` every one declared under the namespace
-`N`, which is how a package built on the library checks its own. -/
+/-- `#check_refutations_postulates under N` checks every non-entailment declared
+under the namespace `N`. -/
 syntax (name := checkRefutationsPostulatesCmd)
-  "#check_refutations_postulates" (" under " ident)? : command
+  "#check_refutations_postulates" " under " ident : command
 
 elab_rules : command
-  | `(#check_refutations_postulates $[under $root]?) =>
-    checkRefutationsPostulates ((root.map ([·.getId])).getD libraryRoots)
+  | `(#check_refutations_postulates under $root) => checkRefutationsPostulates [root.getId]
 
-/-- info: every non-entailment survives its postulates: 67, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 3, and 0 undecided -/
 #guard_msgs in
-#check_refutations_postulates
+#check_refutations_postulates under Testimony.Checks.Fixture
 
 end Testimony.Checks

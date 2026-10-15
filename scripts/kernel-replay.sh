@@ -3,21 +3,19 @@
 # elaborator and of every tactic.
 #
 # `leanchecker Testimony` replays every .olean whose module name starts with
-# `Testimony` — whatever it finds on disk, not what the source tree says. Two
-# kinds of stale file would therefore be replayed as if they were current, and
-# CI restores .lake/ from a cache, so both occur there:
-#
-#   - the tools' modules (Testimony.Tools.*) are roots of `lean_exe` targets,
-#     which `lake build` does not build, so a cached .olean from an older commit
-#     survives until something builds them;
-#   - Lake never deletes the build output of a module whose source was removed.
+# `Testimony` — whatever it finds on disk, not what the source tree says. Lake
+# never deletes the build output of a module whose source was removed, and CI
+# restores .lake/ from a cache, so a stale file would be replayed as if it were
+# current.
 #
 # So: build every target, delete build output that has no source, then replay.
+# The library's tools are a library target of their own, which its root does not
+# import, and are built here with it. A package built on the library replays its
+# own modules the same way, from its own directory, naming its root and its
+# executables, whose root modules its library does not build:
 #
-# A package built on the library replays its own modules the same way, from its
-# own directory, naming its root and its targets:
-#
-#   cd examples && ../scripts/kernel-replay.sh TestimonyExamples exampletex
+#   cd arguments && ../scripts/kernel-replay.sh TestimonyArguments bibgen argtex statusgen argdoc
+#   cd examples  && ../scripts/kernel-replay.sh TestimonyExamples exampletex
 #
 # Its imports from the library are replayed by the library's own run.
 set -eu
@@ -25,7 +23,7 @@ set -eu
 root=${1:-Testimony}
 if [ "$#" -gt 0 ]; then shift; fi
 if [ "$root" = Testimony ] && [ "$#" -eq 0 ]; then
-  set -- bibgen argtex statusgen argdoc
+  set -- TestimonyTools
 fi
 
 lake build "$root" "$@"

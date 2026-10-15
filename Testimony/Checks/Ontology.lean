@@ -76,38 +76,21 @@ def checkOntology (root : Name) : CommandElabM Unit := do
   let sorted := reports.qsort (· < ·)
   logInfo m!"the shared ontology, in every argument:\n{String.intercalate "\n" sorted.toList}"
 
-/-- `#check_ontology` reports on every argument of the library; `#check_ontology
-under N` on every argument whose claim type is declared under the namespace `N`,
-which is how a package built on the library reports on its own. -/
-syntax (name := checkOntologyCmd) "#check_ontology" (" under " ident)? : command
+/-- `#check_ontology under N` reports on every argument whose claim type is
+declared under the namespace `N`. -/
+syntax (name := checkOntologyCmd) "#check_ontology" " under " ident : command
 
 elab_rules : command
-  | `(#check_ontology $[under $root]?) =>
-    checkOntology ((root.map (·.getId)).getD `Testimony.Arguments)
+  | `(#check_ontology under $root) => checkOntology root.getId
 
 /--
 info: the shared ontology, in every argument:
-Born in Bethlehem — Micah 5:2
-  joins: 0, with no definition: 0
-Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
-  joins: 3, with no definition: 3
-Sola fide
-  joins: 6, with no definition: 5
-  not a ground: held by 4, used of a text or voice by 13; derives nothing
-  the only means: held by 3, used of a text or voice by 9; derives:
-    justificationByFaithAlone excludes baptismIsInstrumentalCause
-  the whole ground: held by 3, used of a text or voice by 6; derives nothing
-Sola scriptura
-  joins: 3, with no definition: 3
-  not a ground: held by 1, used of a text or voice by 0; derives nothing
-  the whole ground: held by 1, used of a text or voice by 0; derives nothing
-Spirit baptism
-  joins: 2, with no definition: 2
-The canonical witness
-  joins: 7, with no definition: 7
-  not a ground: held by 3, used of a text or voice by 0; derives nothing
+The fixture
+  joins: 1, with no definition: 0
+  one length of time: held by 2, used of a text or voice by 0; derives:
+    lastedAnHour excludes lastedTwoHours
 -/
 #guard_msgs in
-#check_ontology
+#check_ontology under Testimony.Checks.Fixture
 
 end Testimony.Checks

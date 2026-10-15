@@ -61,7 +61,8 @@ the Lean source, not restated by hand.
 
 ```sh
 lake exe cache get   # fetch prebuilt Mathlib first — otherwise it builds from source
-lake build
+lake build           # the library: the machinery for stating and checking arguments
+cd arguments && lake build   # the worked arguments, a package built on it
 ```
 
 Requires [elan](https://github.com/leanprover/elan). Lean v4.33.1, pinned by

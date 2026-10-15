@@ -1,5 +1,6 @@
 -- Testimony: a Lean 4 library for machine-checkable models of biblical
--- arguments. See the documentation site, or docs/src/ in this repository.
+-- arguments. This is the machinery; the worked arguments are a package built on
+-- it, in arguments/. See the documentation site, or docs/src/ in this repository.
 import Testimony.Text
 import Testimony.Attr
 import Testimony.Bib.Core
@@ -33,21 +34,14 @@ import Testimony.Logic.Postulates
 import Testimony.Logic.Credibility
 import Testimony.Logic.Aif
 import Testimony.Argument
-import Testimony.Arguments.BornInBethlehem
-import Testimony.Arguments.BornOfAVirgin
-import Testimony.Arguments.CanonicalWitness
-import Testimony.Arguments.SolaFide
-import Testimony.Arguments.SolaScriptura
-import Testimony.Arguments.SpiritBaptism
 import Testimony.Semantics.Upper
 import Testimony.Semantics.Vocabulary
 import Testimony.Semantics.Grammar
 import Testimony.Semantics.Ontology
 import Testimony.Semantics.Meaning
 import Testimony.Semantics.Discourse
-import Testimony.Meanings
 import Testimony.Ontology
-import Testimony.Articles.Howell2003
+import Testimony.Checks.Fixture
 import Testimony.Checks.Aif
 import Testimony.Checks.Meanings
 import Testimony.Checks.Ontology

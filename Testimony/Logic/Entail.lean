@@ -210,9 +210,9 @@ theorem entails_of_subset {prems prems' : List (Formula α)} {concl : Formula α
 /-- A premise is entailed by the set it belongs to. Foundation's `of_mem`.
 
 Trivial as a fact and not as a result: it is what a reply *conceding* the
-charge it answers amounts to, and `circle_parity_concedes_the_charge` is
-exactly this shape — Barrett's parity grounds entail the circularity because
-the circularity is one of them. -/
+charge it answers amounts to. A parity reply to a charge of circularity has
+exactly this shape when its grounds entail the circularity because the
+circularity is one of them. -/
 theorem entails_of_mem {prems : List (Formula α)} {concl : Formula α}
     (h : concl ∈ prems) : Entails prems concl :=
   Semantics.of_mem (by simpa using h)

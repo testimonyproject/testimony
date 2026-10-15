@@ -49,3 +49,5 @@ echo
 echo "new-worktree: ready"
 echo "  cd $dest"
 echo "  lake build && lake lint && lake exe axiom-audit && python3 scripts/testimony_lint.py"
+echo "  then, for the arguments: cd arguments && lake build"
+echo "  (the packages in arguments/ and examples/ share this worktree's .lake/packages)"

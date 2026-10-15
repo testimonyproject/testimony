@@ -63,10 +63,10 @@ def premises (l : Line α) : List (Formula α) := l.grounds ++ [l.step]
 
 /-- The line on its own, as an argument package.
 
-What a single strand is worth in isolation is a question the library asks
-constantly — `almah_is_load_bearing_alone` and `criticalDenial_establishes`
-both ask it — and this is how it gets asked without restating the strand as a
-package by hand. -/
+What a single strand is worth in isolation is a question an argument asks
+constantly — whether one reading of one word carries the conclusion alone, say
+— and this is how it gets asked without restating the strand as a package by
+hand. -/
 def asPackage (l : Line α) (cite : α → AtomMeta) (conclusionLabel : String) :
     ArgumentPackage α :=
   { name := l.name

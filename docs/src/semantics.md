@@ -26,8 +26,8 @@ every other verdict here.
 | | `Testimony.Semantics.Meaning` | `HasMeanings`: any argument's claims, given meanings; `HasJoins`: the pairs whose meanings exclude or entail each other |
 | Articles | `Testimony.Ontology` | what the vocabulary's words commit a reader to: searched, defined, and what follows |
 | | `Testimony.Semantics.Discourse` | an article as moves, and what each move assumes |
-| Per argument | `Testimony.Meanings` | one `HasMeanings` and one `HasJoins` instance for each argument |
-| Commentary | `Testimony.Articles` | one module per published article examined |
+| Per argument | `TestimonyArguments.Meanings` | one `HasMeanings` and one `HasJoins` instance for each argument |
+| Commentary | `TestimonyArguments.Articles` | one module per published article examined |
 | Weighing | `Testimony.Logic.Contest` | whether a dispute over a claim survives weighing |
 
 Nothing in the generic layer names an argument. Every argument has an instance: sola fide is
@@ -213,7 +213,7 @@ and deny a claim are heard together. A rating still moves only with a new, cited
 ## A worked example
 
 Kenneth Howell, ["Aren't We Saved by Faith Alone?"][howell], *Catholic Answers Magazine*, 2003,
-is a dialogue between a Protestant objector and a Catholic. `Testimony.Articles.Howell2003`
+is a dialogue between a Protestant objector and a Catholic. `TestimonyArguments.Articles.Howell2003`
 models four of its moves, quoted from the publisher's page, and hears one of them.
 
 **The argument about works.** *"If Paul and James mean the same thing by works, then they
@@ -239,7 +239,7 @@ dead (2:17, 2:26); Trent reads it so (Session VI, ch. 7); the Reformers' confess
 faith that alone justifies "no dead faith" (Westminster XI.2). The denial the move needs does not
 survive the weighing (`faithDenialAnswered`). The article's other case from James — that works
 "actually justify" — is the Catholic reading of James's "by works", weighed in
-`Testimony.Arguments.SolaFide.James`: as a claim about James's word it cannot be defended
+`TestimonyArguments.SolaFide.James`: as a claim about James's word it cannot be defended
 (`trent_on_james_word_indefensible`); as a claim about what works do before God it can, and is
 not forced (`trent_on_works_defensible`).
 
@@ -267,7 +267,7 @@ Scripture now, and the step is still `disputed`, because Trent grants the texts 
 fruit merit.
 
 The same check answers whether Rome contradicts itself over Trent's Latin texts
-(`Testimony.Arguments.SolaFide.Vulgate`). Read as what the inspired authors wrote, Trent's "as it
+(`TestimonyArguments.SolaFide.Vulgate`). Read as what the inspired authors wrote, Trent's "as it
 is written" at Revelation 22:11 cannot be held with Pius XII's teaching that the original
 outweighs any translation (`trent_as_the_inspired_text_contradicts_pius`). Read as Pius XII reads
 Trent's decree — the Vulgate juridically authentic and free from error in faith — Rome is
@@ -298,7 +298,7 @@ premises that are cited and rated. Paul's word is forced in that sense
 (`only_pauls_word_prevails`), because the lexical case rests on links rated above `disputed`
 and nothing that attacks it is as strong. For James, four things are missing.
 
-1. **The dispute now exists** (`Testimony.Arguments.SolaFide.James`), with the Catholic reading as
+1. **The dispute now exists** (`TestimonyArguments.SolaFide.James`), with the Catholic reading as
    two parties: James's word as the increase of justice, which cannot be defended; and what works
    do before God (canon 24), which can, against the Reformed harmony. What is left to decide is
    the second.

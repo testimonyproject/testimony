@@ -152,12 +152,12 @@ theorem reformed_establishes : Establishes reformed := by
 #print axioms reformed_establishes
 ```
 
-A new argument declares its set in `Testimony/Attr.lean` (Lean will not let a
-module use a simp set it declares itself) and adds it to
-`Testimony/Checks/Refutations.lean`. If `establish` fails with a definition
-still folded up in the hypothesis, that definition is missing its tag — add
-it. The failure is loud, which is the point: nothing here can succeed
-vacuously.
+A new argument declares its set in `arguments/TestimonyArguments/Attr.lean` (Lean will not let a
+module use a simp set it declares itself), adds it to `unfoldSets` in
+`arguments/TestimonyArguments/Checks.lean`, and adds its title to the catalogue in
+`arguments/TestimonyArguments/Tools/Catalogue.lean`. If `establish` fails with a definition still
+folded up in the hypothesis, that definition is missing its tag — add it. The failure is loud, which
+is the point: nothing here can succeed vacuously.
 
 ### Keep steps Horn
 

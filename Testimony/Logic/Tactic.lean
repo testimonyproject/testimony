@@ -31,16 +31,16 @@ written down. Same idea, applied to a proof.
 ## Usage
 
 ```lean
-theorem christian_establishes : Establishes christian := by
-  establish [bornOfAVirginDefs]
+theorem minutes_establishes : Establishes minutes := by
+  establish [fixtureDefs]
 
-theorem critical_not_establishes : ¬ Establishes critical := by
-  refute_with criticalReading [bornOfAVirginDefs]
+theorem the_hour_rests_on_the_minutes :
+    ¬ Establishes ((fromTheMinutes.onGrounds []).asPackage cite "…") := by
+  refute_with clockReading [fixtureDefs]
 
-theorem parity_leaves_the_canon_open :
-    Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
-  leaves_open parityEstablishesNothingReading krugerParityReading
-    [solaScripturaDefs]
+theorem the_minutes_leave_the_witness_open :
+    Independent minutes.premises (p .clockSaysTwoHours) := by
+  leaves_open minutesReading bothReadings [fixtureDefs]
 ```
 
 The brackets name the definitions to unfold, and in an argument that is its
@@ -77,8 +77,8 @@ satisfiability of propositional Horn formulae", *J. Logic Programming* 1(3),
 procedure. `tauto` is neither: it is a general classical search that case-splits
 on every implication in the context, so its cost is exponential in the number
 of inference steps, however simple each one is. Adding a single closing step to
-`SolaFide` once took `reformed_establishes` from within the default heartbeat
-budget to twenty times over it.
+the sola fide argument once took its main result from within the default
+heartbeat budget to twenty times over it.
 
 **How.** `and_imp` curries every step (`A ∧ B → C` becomes `A → B → C`),
 `imp_and` splits a conjunctive head (`A → B ∧ C` becomes `(A → B) ∧ (A → C)`),

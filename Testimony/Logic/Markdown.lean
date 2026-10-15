@@ -93,7 +93,7 @@ private def isFence (line : String) : Bool :=
 `######`, which is as deep as Markdown goes.
 
 Module docstrings are written as though each were the top of its own page: they
-open with `# Arguments.SolaScriptura.Lines — …` and use `##` and `###` beneath
+open with `# TestimonyArguments.SolaScriptura.Lines — …` and use `##` and `###` beneath
 it. A generated page carries several of them under a title of its own, so each
 one is demoted to sit under that title rather than beside it.
 

@@ -1,13 +1,15 @@
-import Testimony.Meanings
+import Testimony.Checks.Fixture
 
 /-!
 # Testimony.Checks.Meanings — every argument's claims have meanings
 
-For every argument — every inductive type named `Claim` directly inside a
-namespace under `Testimony.Arguments` — a `HasMeanings` instance must exist.
-The check runs as part of `lake build`, and finds the arguments itself: one added
-tomorrow fails the build until it is registered in `Testimony.Meanings`, if only
-with its citations' labels (`HasMeanings.ofLabels`).
+For every argument under a namespace the check is given — every inductive type
+named `Claim` inside it — a `HasMeanings` instance must exist. The check runs as
+part of a package's build, and finds the arguments itself: one added tomorrow
+fails the build until its meanings are registered, if only with its citations'
+labels (`HasMeanings.ofLabels`). The library runs it over its own fixture
+(`Testimony.Checks.Fixture`); a package built on the library, over its
+arguments.
 
 It also checks that every argument's joins — the claims whose meanings exclude
 or entail one another — are listed and pinned (`HasJoins`), and that its atoms
@@ -24,11 +26,9 @@ namespace Testimony.Checks
 
 open Lean Elab Command Meta
 
-/-- Whether a name is an argument's claim type: `Testimony.Arguments.X.Claim`,
-or an inductive named `Claim` deeper in an argument's namespace. A package built
-on the library names its own root instead. -/
-def isClaimType (env : Environment) (name : Name) (root : Name := `Testimony.Arguments) :
-    Bool :=
+/-- Whether a name is an argument's claim type: an inductive named `Claim` under
+the namespace `root`. -/
+def isClaimType (env : Environment) (name : Name) (root : Name) : Bool :=
   root.isPrefixOf name && name.getString! == "Claim" &&
     (env.find? name).any fun | .inductInfo _ => true | _ => false
 
@@ -56,7 +56,7 @@ def checkMeanings (root : Name) : CommandElabM Unit := do
   unless missing.isEmpty do
     throwError m!"no meanings registered for:\n{MessageData.joinSep
       (missing.toList.map toMessageData) "\n"}\nregister its meanings \
-      (in the library, a module of Testimony.Meanings)"
+      beside its claims"
   unless unpinned.isEmpty do
     throwError m!"no joins pinned for:\n{MessageData.joinSep
       (unpinned.toList.map toMessageData) "\n"}\nadd a HasJoins instance beside its meanings"
@@ -67,17 +67,15 @@ def checkMeanings (root : Name) : CommandElabM Unit := do
     throwError "#check_meanings found no argument to check"
   logInfo m!"every argument has meanings and pinned joins: {found} claim types"
 
-/-- `#check_meanings` checks every argument of the library; `#check_meanings under
-N` every argument whose claim type is declared under the namespace `N`, which is
-how a package built on the library checks its own. -/
-syntax (name := checkMeaningsCmd) "#check_meanings" (" under " ident)? : command
+/-- `#check_meanings under N` checks every argument whose claim type is declared
+under the namespace `N`. -/
+syntax (name := checkMeaningsCmd) "#check_meanings" " under " ident : command
 
 elab_rules : command
-  | `(#check_meanings $[under $root]?) =>
-    checkMeanings ((root.map (·.getId)).getD `Testimony.Arguments)
+  | `(#check_meanings under $root) => checkMeanings root.getId
 
-/-- info: every argument has meanings and pinned joins: 6 claim types -/
+/-- info: every argument has meanings and pinned joins: 1 claim types -/
 #guard_msgs in
-#check_meanings
+#check_meanings under Testimony.Checks.Fixture
 
 end Testimony.Checks
