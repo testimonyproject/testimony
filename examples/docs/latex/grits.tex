@@ -1,7 +1,23 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec}
+\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec,xcolor}
 \usepackage{tikz}\usetikzlibrary{arrows.meta}
 \usepackage[hidelinks]{hyperref}
+\definecolor{claimlink}{RGB}{25,70,150}
+\newcommand{\pvar}[2]{\hyperlink{#1-P#2}{\textcolor{claimlink}{P_{#2}}}}
+\newcommand{\pvartarget}[2]{\raisebox{\ht\strutbox}{\hypertarget{#1-P#2}{}}}
+\makeatletter
+\newenvironment{derivation}
+  {\begin{list}{}{\setlength{\leftmargin}{2.6em}\setlength{\labelwidth}{2.2em}%
+    \setlength{\labelsep}{0.4em}\setlength{\itemsep}{2pt}\setlength{\parsep}{0pt}%
+    \setlength{\topsep}{6pt}\@beginparpenalty\@M\@itempenalty\@M%
+    \interlinepenalty\@M\raggedright}}
+  {\end{list}}
+\newcommand{\breakrow}[1]{\@itempenalty\z@\item[#1]\@itempenalty\@M}
+\newcommand{\keepwithnext}{\@endparpenalty\@M}
+\makeatother
+\clubpenalty=10000
+\widowpenalty=10000
+\newcommand{\gloss}[1]{\enspace---\enspace{\small\itshape #1}}
 \geometry{margin=1in}
 \setlength{\emergencystretch}{3em}
 \frenchspacing
@@ -67,15 +83,15 @@ What Sam Tipton testified, what he answered on cross-examination, what counsel p
  & claim & kind & held & source \\
 \midrule
 \endhead
-$P_{1}$ & Tipton saw the boys go into the store as he began making breakfast & historical & adversarial trial, consensus & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
-$P_{2}$ & The shot rang out just as Tipton’s breakfast was ready to eat & historical & adversarial trial, consensus & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
-$P_{3}$ & Making his breakfast took Tipton five minutes & historical & adversarial trial, disputed & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
-$P_{4}$ & Tipton’s breakfast was eggs and grits & historical & adversarial trial, consensus & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
-$P_{5}$ & Tipton’s grits were regular grits, not instant & historical & adversarial trial, consensus & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
-$P_{6}$ & Regular grits take twenty minutes to cook & empirical & adversarial trial, well supported & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
-$P_{7}$ & Making his breakfast took Tipton twenty minutes & historical & adversarial trial, well supported & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
-$P_{8}$ & Five minutes passed between the boys’ going into the store and the shot & historical & adversarial trial, disputed & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
-$P_{9}$ & Twenty minutes passed between the boys’ going into the store and the shot & historical & adversarial trial, plausible & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
+\pvartarget{TestimonyExamples.Grits}{1}$P_{1}$ & Tipton saw the boys go into the store as he began making breakfast & historical & adversarial trial, consensus & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
+\pvartarget{TestimonyExamples.Grits}{2}$P_{2}$ & The shot rang out just as Tipton’s breakfast was ready to eat & historical & adversarial trial, consensus & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
+\pvartarget{TestimonyExamples.Grits}{3}$P_{3}$ & Making his breakfast took Tipton five minutes & historical & adversarial trial, disputed & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
+\pvartarget{TestimonyExamples.Grits}{4}$P_{4}$ & Tipton’s breakfast was eggs and grits & historical & adversarial trial, consensus & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
+\pvartarget{TestimonyExamples.Grits}{5}$P_{5}$ & Tipton’s grits were regular grits, not instant & historical & adversarial trial, consensus & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
+\pvartarget{TestimonyExamples.Grits}{6}$P_{6}$ & Regular grits take twenty minutes to cook & empirical & adversarial trial, well supported & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
+\pvartarget{TestimonyExamples.Grits}{7}$P_{7}$ & Making his breakfast took Tipton twenty minutes & historical & adversarial trial, well supported & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
+\pvartarget{TestimonyExamples.Grits}{8}$P_{8}$ & Five minutes passed between the boys’ going into the store and the shot & historical & adversarial trial, disputed & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
+\pvartarget{TestimonyExamples.Grits}{9}$P_{9}$ & Twenty minutes passed between the boys’ going into the store and the shot & historical & adversarial trial, plausible & \cite[11--12]{garland-novato-healthcare-2019}; \cite{launer-my-cousin-vinny-1992} \\
 \bottomrule
 \end{longtable}
 
@@ -91,7 +107,7 @@ def theRecord : Confidence → Source :=
       tradition := Tradition.adversarialTrial, confidence := confidence }
 \end{verbatim}}
 \paragraph*{Ratings for inference steps}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{on\allowbreak{}The\allowbreak{}Reckoning}}\par\nobreak\noindent
 \textbf{The reckoning is rated \texttt{consensus}.} If the boys went in as breakfast began, and the shot came as it was ready, then the time between them is the time breakfast took. It is Tipton’s reckoning — on direct he was sure only five minutes had passed “because he saw Bill go into the store as he (Tipton) started making breakfast, and the shot rang out just as his breakfast was ready to eat” — and counsel grants it outright: “So obviously it takes you five minutes to make breakfast.” No one in the record grants its grounds and denies what it delivers. The cross-examination contests what the breakfast took, never the step.
 
@@ -114,7 +130,7 @@ def atTheFastCook : Source :=
   theRecord Confidence.disputed
 \end{verbatim}}
 \paragraph*{Citations}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{cite}}\par\nobreak\noindent
 Citation and classification for every atom. Total, so nothing is uncited.
 
@@ -127,67 +143,71 @@ Two positions, each from the record. Tipton’s, on direct examination: the boys
 The cross-examination’s case is built on Tipton’s own reckoning. It contests one premise, what the breakfast took, and keeps the step.
 
 \paragraph*{Tipton, on direct examination}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{tiptons\allowbreak{}Reckoning}} --- Tipton, on direct examination\par\nobreak\noindent
 \textbf{Tipton’s reckoning}: the boys went in as breakfast began, the shot came as it was ready, and breakfast took five minutes; so five minutes passed between them. The step is rated \texttt{consensus}: counsel grants it, and contests the breakfast.
 
-\begin{align*}
-  \text{(1)} \quad & P_{1} \\
-  \text{(2)} \quad & P_{2} \\
-  \text{(3)} \quad & P_{3} \\
-  \text{(4)} \quad & (P_{1} \land P_{2} \land P_{3}) \rightarrow P_{8} \\
-  \vdash \quad & P_{8}
-\end{align*}
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyExamples.Grits}{1}\)\gloss{Tipton saw the boys go into the store as he began making breakfast}
+  \item[(2)] \(\pvar{TestimonyExamples.Grits}{2}\)\gloss{The shot rang out just as Tipton’s breakfast was ready to eat}
+  \item[(3)] \(\pvar{TestimonyExamples.Grits}{3}\)\gloss{Making his breakfast took Tipton five minutes}
+  \item[(4)] \((\pvar{TestimonyExamples.Grits}{1} \land \pvar{TestimonyExamples.Grits}{2} \land \pvar{TestimonyExamples.Grits}{3}) \rightarrow \pvar{TestimonyExamples.Grits}{8}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyExamples.Grits}{8}\)\gloss{\emph{at issue:} Five minutes passed between the boys’ going into the store and the shot}
+\end{derivation}
 \par\medskip\noindent\textbf{\texttt{direct}} --- Tipton, on direct examination\par\nobreak\noindent
 \textbf{Tipton’s testimony}, as a position: his reckoning, and nothing else. He did not look at his watch — “Are you sure, did you look at your watch?” “No.” — so nothing but the breakfast carries the five minutes.
 
-\begin{align*}
-  \text{(1)} \quad & P_{1} \\
-  \text{(2)} \quad & P_{2} \\
-  \text{(3)} \quad & P_{3} \\
-  \text{(4)} \quad & (P_{1} \land P_{2} \land P_{3}) \rightarrow P_{8} \\
-  \vdash \quad & P_{8}
-\end{align*}
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyExamples.Grits}{1}\)\gloss{Tipton saw the boys go into the store as he began making breakfast}
+  \item[(2)] \(\pvar{TestimonyExamples.Grits}{2}\)\gloss{The shot rang out just as Tipton’s breakfast was ready to eat}
+  \item[(3)] \(\pvar{TestimonyExamples.Grits}{3}\)\gloss{Making his breakfast took Tipton five minutes}
+  \item[(4)] \((\pvar{TestimonyExamples.Grits}{1} \land \pvar{TestimonyExamples.Grits}{2} \land \pvar{TestimonyExamples.Grits}{3}) \rightarrow \pvar{TestimonyExamples.Grits}{8}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyExamples.Grits}{8}\)\gloss{\emph{at issue:} Five minutes passed between the boys’ going into the store and the shot}
+\end{derivation}
 \paragraph*{Counsel, on cross-examination}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{the\allowbreak{}Grits}}\par\nobreak\noindent
 From eggs and grits, regular grits, and twenty minutes for regular grits, to a breakfast that took twenty minutes. Rated \texttt{well\allowbreak{}Supported}: Tipton denied it for a moment (“I’m a fast cook I guess”) and withdrew.
 
-\[(P_{4} \land P_{5} \land P_{6}) \rightarrow P_{7}\]
+\begin{derivation}
+  \item[] \((\pvar{TestimonyExamples.Grits}{4} \land \pvar{TestimonyExamples.Grits}{5} \land \pvar{TestimonyExamples.Grits}{6}) \rightarrow \pvar{TestimonyExamples.Grits}{7}\)\gloss{\emph{would give:} Making his breakfast took Tipton twenty minutes}
+\end{derivation}
 \par\medskip\noindent\textbf{\texttt{the\allowbreak{}Reckoning\allowbreak{}Turned}}\par\nobreak\noindent
 Tipton’s own reckoning, with the grits’ twenty minutes in place of his five. Rated \texttt{consensus}, as his is.
 
-\[(P_{1} \land P_{2} \land P_{7}) \rightarrow P_{9}\]
+\begin{derivation}
+  \item[] \((\pvar{TestimonyExamples.Grits}{1} \land \pvar{TestimonyExamples.Grits}{2} \land \pvar{TestimonyExamples.Grits}{7}) \rightarrow \pvar{TestimonyExamples.Grits}{9}\)\gloss{\emph{would give:} Twenty minutes passed between the boys’ going into the store and the shot}
+\end{derivation}
 \par\medskip\noindent\textbf{\texttt{cross}} --- Counsel, on cross-examination\par\nobreak\noindent
 \textbf{The cross-examination}, as a position: what Tipton granted — when the boys went in, when the shot came, what he cooked, that his grits were regular — with counsel’s claim that regular grits take twenty minutes, carried through his own reckoning to twenty minutes.
 
 Its conclusion says more than the court found. The court found that five minutes could not be right; how long it was, it did not say, and the conclusion is rated \texttt{plausible} accordingly. What the cross-examination needed was the contradiction, and that is in what Tipton held (\texttt{tiptons\_\allowbreak{}five\_\allowbreak{}minutes\_\allowbreak{}cannot\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}grits}).
 
-\begin{align*}
-  \text{(1)} \quad & P_{1} \\
-  \text{(2)} \quad & P_{2} \\
-  \text{(3)} \quad & P_{4} \\
-  \text{(4)} \quad & P_{5} \\
-  \text{(5)} \quad & P_{6} \\
-  \text{(6)} \quad & (P_{4} \land P_{5} \land P_{6}) \rightarrow P_{7} \\
-  \text{(7)} \quad & (P_{1} \land P_{2} \land P_{7}) \rightarrow P_{9} \\
-  \vdash \quad & P_{9}
-\end{align*}
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyExamples.Grits}{1}\)\gloss{Tipton saw the boys go into the store as he began making breakfast}
+  \item[(2)] \(\pvar{TestimonyExamples.Grits}{2}\)\gloss{The shot rang out just as Tipton’s breakfast was ready to eat}
+  \item[(3)] \(\pvar{TestimonyExamples.Grits}{4}\)\gloss{Tipton’s breakfast was eggs and grits}
+  \breakrow{(4)} \(\pvar{TestimonyExamples.Grits}{5}\)\gloss{Tipton’s grits were regular grits, not instant}
+  \breakrow{(5)} \(\pvar{TestimonyExamples.Grits}{6}\)\gloss{Regular grits take twenty minutes to cook}
+  \breakrow{(6)} \((\pvar{TestimonyExamples.Grits}{4} \land \pvar{TestimonyExamples.Grits}{5} \land \pvar{TestimonyExamples.Grits}{6}) \rightarrow \pvar{TestimonyExamples.Grits}{7}\)\gloss{\emph{would give:} Making his breakfast took Tipton twenty minutes}
+  \item[(7)] \((\pvar{TestimonyExamples.Grits}{1} \land \pvar{TestimonyExamples.Grits}{2} \land \pvar{TestimonyExamples.Grits}{7}) \rightarrow \pvar{TestimonyExamples.Grits}{9}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyExamples.Grits}{9}\)\gloss{\emph{at issue:} Twenty minutes passed between the boys’ going into the store and the shot}
+\end{derivation}
 \par\medskip\noindent\textbf{\texttt{cross\allowbreak{}At\allowbreak{}The\allowbreak{}Fast\allowbreak{}Cook}} --- Counsel, when Tipton said he was a fast cook\par\nobreak\noindent
 \textbf{The cross-examination as it stood when Tipton said he was a fast cook}: the same premises, with the step from the grits rated as it was then, \texttt{disputed}. A named difference of one rating, not a second position.
 
-\begin{align*}
-  \text{(1)} \quad & P_{1} \\
-  \text{(2)} \quad & P_{2} \\
-  \text{(3)} \quad & P_{4} \\
-  \text{(4)} \quad & P_{5} \\
-  \text{(5)} \quad & P_{6} \\
-  \text{(6)} \quad & (P_{4} \land P_{5} \land P_{6}) \rightarrow P_{7} \\
-  \text{(7)} \quad & (P_{1} \land P_{2} \land P_{7}) \rightarrow P_{9} \\
-  \vdash \quad & P_{9}
-\end{align*}
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyExamples.Grits}{1}\)\gloss{Tipton saw the boys go into the store as he began making breakfast}
+  \item[(2)] \(\pvar{TestimonyExamples.Grits}{2}\)\gloss{The shot rang out just as Tipton’s breakfast was ready to eat}
+  \item[(3)] \(\pvar{TestimonyExamples.Grits}{4}\)\gloss{Tipton’s breakfast was eggs and grits}
+  \breakrow{(4)} \(\pvar{TestimonyExamples.Grits}{5}\)\gloss{Tipton’s grits were regular grits, not instant}
+  \breakrow{(5)} \(\pvar{TestimonyExamples.Grits}{6}\)\gloss{Regular grits take twenty minutes to cook}
+  \breakrow{(6)} \((\pvar{TestimonyExamples.Grits}{4} \land \pvar{TestimonyExamples.Grits}{5} \land \pvar{TestimonyExamples.Grits}{6}) \rightarrow \pvar{TestimonyExamples.Grits}{7}\)\gloss{\emph{would give:} Making his breakfast took Tipton twenty minutes}
+  \item[(7)] \((\pvar{TestimonyExamples.Grits}{1} \land \pvar{TestimonyExamples.Grits}{2} \land \pvar{TestimonyExamples.Grits}{7}) \rightarrow \pvar{TestimonyExamples.Grits}{9}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyExamples.Grits}{9}\)\gloss{\emph{at issue:} Twenty minutes passed between the boys’ going into the store and the shot}
+\end{derivation}
 \paragraph*{Readings, written down}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{tiptons\allowbreak{}World}}\par\nobreak\noindent
 Tipton’s world: the boys went in as he began breakfast, the shot came as it was ready, his breakfast of eggs and regular grits took five minutes, and five minutes passed. Regular grits do not take twenty minutes — or not his: he is a fast cook.
 
@@ -219,7 +239,7 @@ def bothAtOnce : Valuation Claim :=
   fun x => True
 \end{verbatim}}
 \paragraph*{Each position holds}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{direct\_\allowbreak{}establishes}}\par\nobreak\noindent
 \textbf{Grant Tipton’s reckoning, and five minutes passed.}
 
@@ -264,7 +284,7 @@ theorem crossAtTheFastCook_is_satisfiable : Satisfiable
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \paragraph*{Where the five minutes rests}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{the\_\allowbreak{}five\_\allowbreak{}minutes\_\allowbreak{}rests\_\allowbreak{}on\_\allowbreak{}the\_\allowbreak{}breakfast}}\par\nobreak\noindent
 \textbf{The five minutes rests on the breakfast.} Take away what the breakfast took, and Tipton’s reckoning delivers nothing: when the boys went in and when the shot came, with the step, do not give five minutes. He did not look at his watch, so nothing else carries it. That is why the cross-examination goes to the breakfast, and why it is enough to go there.
 
@@ -313,7 +333,7 @@ What the verdicts turn on, then: that the five-minute breakfast is contested, wh
 What none of this claims: that Bill is innocent, that the boys did not shoot the clerk, or that twenty minutes passed. The court found that five minutes could not be right, and so does the solver; how long it was, and what follows for the trial, is not encoded.
 
 \paragraph*{What Tipton held cannot stand with the grits}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{tiptons\_\allowbreak{}five\_\allowbreak{}minutes\_\allowbreak{}cannot\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}grits}}\par\nobreak\noindent
 \textbf{Tipton’s five minutes cannot stand with the grits.} What he testified — the boys went in as he began breakfast, the shot came as it was ready, breakfast took five minutes, so five minutes passed — cannot be held with what he granted on cross-examination (eggs and grits; regular grits) and what counsel put to him (regular grits take twenty minutes; and so the breakfast, and the time in the store, took twenty), once the claims are read for what they mean.
 
@@ -341,7 +361,7 @@ theorem the_grits_undermine_the_breakfast : UnderminesOn cross direct (p
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \paragraph*{Strength}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{direct\_\allowbreak{}strength}}\par\nobreak\noindent
 Tipton’s testimony’s weakest link is \texttt{disputed}: the five-minute breakfast.
 
@@ -364,7 +384,7 @@ theorem crossAtTheFastCook_strength : crossAtTheFastCook.strength = 0
 -- axioms: propext
 \end{verbatim}}
 \paragraph*{The dispute}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{side\allowbreak{}Node}}\par\nobreak\noindent
 The package each side argues from.
 
@@ -488,7 +508,7 @@ The dispute over the five minutes drawn: who defeats whom.
 \end{longtable}
 \noindent The defeats are the cells of \texttt{grits\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{grits\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{grits\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 \paragraph*{What the dispute decides}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{the\allowbreak{}Cross\allowbreak{}Examination\allowbreak{}Grounded}}\par\nobreak\noindent
 Why the cross-examination prevails: nothing defeats it, so it is grounded from the first step, and it defeats the testimony, which nothing defends.
 
@@ -553,7 +573,7 @@ theorem tiptons_testimony_cannot_be_defended : ∀ (S : Set Side),
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \paragraph*{The dispute when Tipton said he was a fast cook}
-\leavevmode\par
+\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{at\allowbreak{}The\allowbreak{}Fast\allowbreak{}Cook\allowbreak{}Node}}\par\nobreak\noindent
 The parties as they stood when Tipton said he was a fast cook: the same packages, with the step from the grits rated as it was then.
 

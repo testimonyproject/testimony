@@ -62,7 +62,7 @@ def render [DecidableEq α] (ns : Name) (allAtoms : List α)
     (intro items : List (Logic.Page.Item α)) : Body :=
   { ns := ns
   , markdown := Logic.Markdown.body allAtoms intro items
-  , latex := Logic.Latex.body allAtoms intro items }
+  , latex := Logic.Latex.body ns.toString allAtoms intro items }
 
 variable {α : Type}
 

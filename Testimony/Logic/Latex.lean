@@ -19,6 +19,34 @@ content.
 Citations render as `\cite{key}` against the generated `references.bib`, so a
 rendered argument is bibliographically live.
 
+## Every variable a link, every claim in words
+
+A numbered variable asks the reader to turn back to the legend, and the cost
+falls hardest where a claim first comes in and where a step gives one. So every
+variable in a formula is a link to its row in the legend, and a derivation puts
+its claims in words on three kinds of row: a premise that is a claim, which the
+position holds; a step, by what it *would give*, whether or not the position
+holds what the step needs; and the turnstile row, by the conclusion *at issue*,
+whether or not the premises reach it. A claim met only inside a step is left to
+its link. The words are the legend's label, run on after the formula and
+wrapping beneath it.
+
+The marks are there because the words are read as sentences. Unmarked, a step's
+words in a rival's package read as the rival conceding them, and the turnstile's
+words under a refuted package as the conclusion reached. Nor is the conclusion
+always the position's aim: the positions an argument sets side by side are often
+asked about one thesis, which a rival may deny, so Trent's package in the sola
+scriptura argument ends at sola scriptura.
+
+They are the label whole, not a shorter name for it. What to call a disputed
+claim in four words is a judgement — "πίστις Χριστοῦ is faith in Christ" drops
+the "not Christ's faithfulness" the dispute is about — and the label is the
+wording its sources were checked against.
+
+The site's renderer borrows `formula` and gets plain variables: a link here is
+a TeX command, which MathJax does not know. So do headings, whose text is
+written out to the table of contents, where a link does not survive.
+
 ## The prose comes too
 
 `argtex` used to render packages and nothing else, with a hand-written
@@ -92,6 +120,29 @@ def escape (s : String) : String := escapeChars (smartQuotes s)
 /-- A propositional variable, subscripted by its position in the legend. -/
 def varName (i : Nat) : String := "P_{" ++ toString (i + 1) ++ "}"
 
+/-- The name an argument's links are made from: its namespace, with every
+character but a letter, a digit or a dot written as its code point between
+hyphens. Nothing in it then means anything to TeX or to a PDF viewer, and no
+character is dropped, so no two namespaces — and no two arguments — share a
+name. -/
+def anchorName (ns : String) : String :=
+  ns.foldl (init := "") fun acc c =>
+    acc ++ if c.isAlphanum || c == '.' then c.toString else "-" ++ toString c.toNat ++ "-"
+
+/-- A propositional variable as a link to its row in the legend, through the
+preamble's `\pvar`. Variables are numbered once per argument and a document
+sets several, so the link names the argument as well as the number. With no
+argument to name, the variable is set plain. -/
+def varLink (anchor : String) (i : Nat) : String :=
+  if anchor.isEmpty then varName i
+  else "\\pvar{" ++ anchor ++ "}{" ++ toString (i + 1) ++ "}"
+
+/-- The mark a legend row carries for its variable's links to land on, through
+the preamble's `\pvartarget`; nothing, where nothing links. -/
+def varTarget (anchor : String) (i : Nat) : String :=
+  if anchor.isEmpty then ""
+  else "\\pvartarget{" ++ anchor ++ "}{" ++ toString (i + 1) ++ "}"
+
 /-- Parenthesise only where the surrounding precedence requires it. -/
 def wrap (ctx prec : Nat) (s : String) : String :=
   if ctx > prec then "(" ++ s ++ ")" else s
@@ -104,22 +155,45 @@ Conjunction and disjunction are associative and render flat. The antecedent of
 an implication is parenthesised even though precedence does not require it,
 because that is how a reader expects to see it.
 
-`φ → ⊥` renders as `¬φ` rather than as an implication. -/
-partial def formulaPrec [DecidableEq α] (order : List α) (ctx : Nat) :
+`φ → ⊥` renders as `¬φ` rather than as an implication. `var` sets a variable
+from its position: `varName` plainly, `varLink` as a link. -/
+partial def formulaPrec [DecidableEq α] (var : Nat → String) (order : List α) (ctx : Nat) :
     Formula α → String
-  | .atom a => varName (order.idxOf a)
+  | .atom a => var (order.idxOf a)
   | .falsum => "\\bot"
-  | .imp p .falsum => wrap ctx 40 ("\\lnot " ++ formulaPrec order 41 p)
+  | .imp p .falsum => wrap ctx 40 ("\\lnot " ++ formulaPrec var order 41 p)
   | .and p q =>
-      wrap ctx 30 (formulaPrec order 30 p ++ " \\land " ++ formulaPrec order 30 q)
+      wrap ctx 30 (formulaPrec var order 30 p ++ " \\land " ++ formulaPrec var order 30 q)
   | .or p q =>
-      wrap ctx 20 (formulaPrec order 20 p ++ " \\lor " ++ formulaPrec order 20 q)
+      wrap ctx 20 (formulaPrec var order 20 p ++ " \\lor " ++ formulaPrec var order 20 q)
   | .imp p q =>
-      wrap ctx 10 (formulaPrec order 31 p ++ " \\rightarrow " ++ formulaPrec order 10 q)
+      wrap ctx 10 (formulaPrec var order 31 p ++ " \\rightarrow " ++ formulaPrec var order 10 q)
 
-/-- Render a formula at the top level, where nothing needs wrapping. -/
+/-- Render a formula at the top level, where nothing needs wrapping, with plain
+variables. The Markdown renderer sets its formulas with this. -/
 def formula [DecidableEq α] (order : List α) (φ : Formula α) : String :=
-  formulaPrec order 0 φ
+  formulaPrec varName order 0 φ
+
+/-- What the document needs to refer to an argument's claims: their numbering,
+the argument the numbers belong to, and what each claim says. `cite` is the
+legend's, so a gloss is always the legend's own words. -/
+structure Numbering (α : Type) where
+  /-- The atoms, in legend order: an atom's variable is its position here. -/
+  order : List α
+  /-- The argument, as its variables' links name it (`anchorName`); empty, and
+  the variables are set plain, where there is no legend to link to. -/
+  anchor : String := ""
+  /-- Each claim's citation, as the legend gives it; `none` where there is no
+  legend, and nothing is glossed. -/
+  cite : Option (α → AtomMeta) := none
+
+/-- A formula with each variable a link to its row in the legend. -/
+def linked [DecidableEq α] (n : Numbering α) (φ : Formula α) : String :=
+  formulaPrec (varLink n.anchor) n.order 0 φ
+
+/-- One atom's variable, linked, as inline mathematics. -/
+def linkedVar [DecidableEq α] (n : Numbering α) (a : α) : String :=
+  "\\(" ++ varLink n.anchor (n.order.idxOf a) ++ "\\)"
 
 /-- A pinpoint, as the optional argument to `\cite`. -/
 def locus : Locus → String
@@ -189,12 +263,15 @@ it and where they say so. This is the assumption manifest, typeset.
 Numbered once for the whole argument rather than once per package, as the
 generated Markdown pages are: a document that sets four positions and three
 objections against each other is read by comparing them, and that needs
-$P_{9}$ to mean one thing throughout. -/
-def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String :=
+$P_{9}$ to mean one thing throughout. Each row is the target its variable's
+links land on. -/
+def legend [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) : String :=
+  let order := n.order
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
     let mark := if m.source.isScriptureOnly then scriptureOnlyMark else ""
-    "$" ++ varName i ++ "$ & " ++ escape m.label ++ mark ++ " & " ++ kind m.kind ++
+    varTarget n.anchor i ++ "$" ++ varName i ++ "$ & " ++ escape m.label ++ mark ++ " & " ++
+      kind m.kind ++
       " & " ++ tradition m.source.tradition ++ ", " ++ confidence m.source.confidence ++
       " & " ++ source m.source ++ " \\\\"
   "\\begin{longtable}{@{}r " ++ pcol "0.30" ++ " l " ++ pcol "0.19" ++ " " ++
@@ -381,7 +458,7 @@ partial def prose (md : String) : String :=
       else if line.startsWith "#" then
         let (level, text) := headingParts line
         headingCommand level ++ "{" ++ inlineProse text ++ "}\n" ++
-        (if level >= 3 then "\\leavevmode\\par\n" else "") ++ go rest
+        (if level >= 3 then "\\leavevmode\\par\\nobreak\n" else "") ++ go rest
       else if line.trimAscii.toString.startsWith "|" then
         let block := (line :: rest).takeWhile fun l => l.trimAscii.toString.startsWith "|"
         let cells := (block.map rowCells).filter (!isSeparatorRow ·)
@@ -421,14 +498,111 @@ def declLabel (d suffix : String) : String :=
   "\\par\\medskip\\noindent\\textbf{\\texttt{" ++ codeEscape d ++ "}}" ++ suffix ++
     "\\par\\nobreak\\noindent\n"
 
-/-- Numbered premises above a turnstile. -/
-def derivation [DecidableEq α] (order : List α) (prems : List (Formula α))
-    (concl : Formula α) : String :=
-  let rows := prems.zipIdx.map fun (φ, i) =>
-    "  \\text{(" ++ toString (i + 1) ++ ")} \\quad & " ++ formula order φ ++ " \\\\"
-  "\\begin{align*}\n" ++
-  (if rows.isEmpty then "" else String.intercalate "\n" rows ++ "\n") ++
-  "  \\vdash \\quad & " ++ formula order concl ++ "\n\\end{align*}\n"
+/-- The claims a formula is made of, when it is nothing but claims and denied
+claims joined by `∧`: each atom, with whether it is denied. `none` for any other
+shape — a step, a disjunction, a denied conjunction — which is not a list of
+claims. -/
+def literals : Formula α → Option (List (α × Bool))
+  | .atom a => some [(a, false)]
+  | .imp (.atom a) .falsum => some [(a, true)]
+  | .and p q => do pure ((← literals p) ++ (← literals q))
+  | _ => none
+
+/-- What a row's words are, as the marks before them say: for a claim, and for a
+claim denied. -/
+structure Lead where
+  /-- The mark before a claim; empty for none. -/
+  claim : String
+  /-- The mark before a denied claim. -/
+  denial : String
+
+/-- A premise's words: what the position holds, so a claim is unmarked. -/
+def Lead.held : Lead := ⟨"", "denied"⟩
+
+/-- A step's words: what it would give, if what it needs were held. -/
+def Lead.step : Lead := ⟨"would give", "would deny"⟩
+
+/-- The turnstile row's words: the conclusion the premises are asked about. -/
+def Lead.atIssue : Lead := ⟨"at issue", "at issue, the denial of"⟩
+
+/-- What a formula says, in its claims' own words, when it is a list of claims
+(`literals`): one claim is its label, and a denied one is marked so; of several,
+each is named by its variable, since the reader is matching words to the formula
+beside them. `lead` says what the words are. -/
+def inWords [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) (lead : Lead)
+    (φ : Formula α) : Option String :=
+  (literals φ).map fun claims =>
+    let label (a : α) := escape (cite a).label
+    let mark (s : String) := if s.isEmpty then "" else "\\emph{" ++ s ++ ":} "
+    match claims with
+    | [(a, true)] => mark lead.denial ++ label a
+    | [(a, false)] => mark lead.claim ++ label a
+    | _ => mark lead.claim ++ String.intercalate "; " (claims.map fun (a, denied) =>
+        linkedVar n a ++ " " ++ (if denied then mark Lead.held.denial else "") ++ label a)
+
+/-- The words a row of a derivation carries, if any.
+
+A premise that is a claim, or a list of them, says it: it is what the position
+holds. A step says what it *would give*: a step is a conditional, and holding it
+is not holding what it needs — in a rival's package it often does not. A step
+that gives the conclusion leaves it to the turnstile row. A
+step's antecedent is not glossed: a claim there is in words on the row where it
+is a premise, if it is one, and is otherwise left to its link. Nothing is
+glossed without a legend to take the words from. -/
+def gloss [DecidableEq α] (n : Numbering α) (concl : Option (Formula α)) (φ : Formula α) :
+    Option String :=
+  n.cite.bind fun cite => match φ with
+    | .imp _ .falsum => inWords n cite .held φ
+    | .imp _ q => if concl == some q then none else inWords n cite .step q
+    | _ => inWords n cite .held φ
+
+/-- The words of a lone formula, which is no position's premise: what a step would
+give. A claim, or a list of them, is left to its links, since nothing here holds
+it. -/
+def loneGloss [DecidableEq α] (n : Numbering α) (φ : Formula α) : Option String :=
+  match φ with
+  | .imp _ .falsum => none
+  | .imp _ _ => gloss n none φ
+  | _ => none
+
+/-- One row of a derivation: how it starts (an `\item` with its label, or the
+preamble's `\breakrow` where a page may break before it), its formula, and the
+formula's words after a dash, through the preamble's `\gloss`. -/
+def row [DecidableEq α] (n : Numbering α) (start : String) (φ : Formula α)
+    (words : Option String) : String :=
+  "  " ++ start ++ " \\(" ++ linked n φ ++ "\\)" ++
+    (match words with | some w => "\\gloss{" ++ w ++ "}" | none => "") ++ "\n"
+
+/-- Whether a page may break before row `i` of a derivation of `count` rows: only
+where it leaves three rows or more on each side. So a derivation of five rows or
+fewer never breaks, and a long one never leaves its first rows, or its
+conclusion, alone on a page. -/
+def breakable (i count : Nat) : Bool := 3 ≤ i && 3 ≤ count - i
+
+/-- The start of numbered row `i` of a derivation of `count` rows. -/
+def numbered (i count : Nat) : String :=
+  let label := "(" ++ toString (i + 1) ++ ")"
+  if breakable i count then "\\breakrow{" ++ label ++ "}" else "\\item[" ++ label ++ "]"
+
+/-- Rows of a derivation, as the preamble's `derivation` list.
+
+A list rather than an `align*`, so the words can wrap: they run on after their
+formula and continue beneath it, and a long derivation can break across pages,
+which an `align*` cannot — where `breakable` lets it. A `note` set under the
+rows is kept with them, through the preamble's `\keepwithnext`. -/
+def rows (body : String) (note : String := "") : String :=
+  "\\begin{derivation}\n" ++ body ++ (if note.isEmpty then "" else "  \\keepwithnext\n") ++
+    "\\end{derivation}\n" ++ note
+
+/-- Numbered premises above a turnstile, each with its words where `gloss` gives
+them, and on the turnstile row the conclusion at issue; then `note`, if any, kept
+with them. -/
+def derivation [DecidableEq α] (n : Numbering α) (prems : List (Formula α))
+    (concl : Formula α) (note : String := "") : String :=
+  rows (note := note) <|
+    String.join (prems.zipIdx.map fun (φ, i) =>
+      row n (numbered i (prems.length + 1)) φ (gloss n (some concl) φ)) ++
+    row n "\\item[\\(\\vdash\\)]" concl (n.cite.bind fun cite => inWords n cite .atIssue concl)
 
 /-- Which of a package's premises are grounded in scripture alone, as a note
 under its derivation; nothing, in a document none of whose claims cites
@@ -442,30 +616,30 @@ def scriptureNote [DecidableEq α] (order : List α) (pkg : ArgumentPackage α) 
     String.intercalate ", " (pkg.scriptureOnlyAtoms.map fun m => escape m.label) ++ ".\n"
 
 /-- The formulas of a list, inline and joined. -/
-def inlineFormulas [DecidableEq α] (order : List α) (φs : List (Formula α)) : String :=
-  String.intercalate ", " (φs.map fun φ => "\\(" ++ formula order φ ++ "\\)")
+def inlineFormulas [DecidableEq α] (n : Numbering α) (φs : List (Formula α)) : String :=
+  String.intercalate ", " (φs.map fun φ => "\\(" ++ linked n φ ++ "\\)")
 
 /-- Why one position stands against another, as an itemised list. -/
-def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : String :=
-  let given := if e.granted.isEmpty then "" else " and " ++ inlineFormulas order e.granted
+def explanation [DecidableEq α] (n : Numbering α) (e : Page.Explanation α) : String :=
+  let given := if e.granted.isEmpty then "" else " and " ++ inlineFormulas n e.granted
   let claim (a : α) : String :=
     let m := e.cite a
-    "\\item \\(" ++ varName (order.idxOf a) ++ "\\) " ++ escape m.label ++ " --- \\emph{" ++
+    "\\item " ++ linkedVar n a ++ " " ++ escape m.label ++ " --- \\emph{" ++
       confidence m.source.confidence ++ "}: " ++ source m.source ++ "\n"
   "\\paragraph{Why \\emph{" ++ escape e.holder ++ "} stands against \\emph{" ++
     escape e.rival ++ "}.}\n" ++
   "\\begin{itemize}\n" ++
-  "\\item \\textbf{The crux:} \\(" ++ formula order e.crux ++ "\\), a premise of \\emph{" ++
+  "\\item \\textbf{The crux:} \\(" ++ linked n e.crux ++ "\\), a premise of \\emph{" ++
     escape e.holder ++ "}.\n" ++
   "\\item \\textbf{What it does:} " ++
     (if e.derives then "its conclusion does not follow without it."
      else "its conclusion follows without it --- the crux is its answer to \\emph{" ++
        escape e.rival ++ "}.") ++ "\n" ++
   (if e.granted.isEmpty then "" else
-    "\\item \\textbf{Granted:} " ++ inlineFormulas order e.granted ++
+    "\\item \\textbf{Granted:} " ++ inlineFormulas n e.granted ++
     ", which the break also needs.\n") ++
-  "\\item \\textbf{Where the rival breaks:} " ++ inlineFormulas order e.core ++
-    " cannot be held together with \\(" ++ formula order e.crux ++ "\\)" ++ given ++
+  "\\item \\textbf{Where the rival breaks:} " ++ inlineFormulas n e.core ++
+    " cannot be held together with \\(" ++ linked n e.crux ++ "\\)" ++ given ++
     "; each is needed for the break, and without the crux they stand.\n" ++
   "\\item \\textbf{What this rests on:}\n\\begin{itemize}\n" ++
     String.join (e.restsOn.map claim) ++
@@ -479,27 +653,31 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
 /-- Every reading of a rival's claim, answered: each horn with what the claim
 commits the rival to, who reads it that way, and what happens to it against
 each position. -/
-def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
-  let claim := "\\(" ++ formula order d.claim ++ "\\)"
+def dilemma [DecidableEq α] (n : Numbering α) (d : Page.Dilemma α) : String :=
+  let claim := "\\(" ++ linked n d.claim ++ "\\)"
+  -- A heading's text is written out — to the table of contents, among other
+  -- places — and a link does not survive that, so the heading's variables are
+  -- plain.
+  let heading := "\\(" ++ formula n.order d.claim ++ "\\)"
   let fate (f : Page.Fate α) : String := match f.falls with
     | some e =>
       "Against \\emph{" ++ escape f.against ++ "}, it cannot be held. Where it breaks:\n" ++
-        explanation order e
+        explanation n e
     | none =>
       "Against \\emph{" ++ escape f.against ++ "}, it is not reached: \\emph{" ++
         escape f.against ++ "} holds, and can be held together with it.\n\n"
   let ways := d.horns.length
-  "\\paragraph{Every reading of " ++ claim ++ ", answered.} \\emph{" ++ escape d.rival ++
+  "\\paragraph{Every reading of " ++ heading ++ ", answered.} \\emph{" ++ escape d.rival ++
     "} holds " ++ claim ++ ". It is read " ++ toString ways ++
     (if ways == 1 then " way" else " ways") ++
     " here, and each reading is checked; none can be left out.\n\n" ++
   String.join (d.horns.zipIdx.map fun (h, k) =>
     "\\paragraph{" ++ toString (k + 1) ++ ". Read " ++ escape h.reading ++
       ".} The claim commits \\emph{" ++ escape d.rival ++ "} to \\(" ++
-      formula order h.commits ++ "\\) --- so read by " ++ source h.source ++ " (\\emph{" ++
+      linked n h.commits ++ "\\) --- so read by " ++ source h.source ++ " (\\emph{" ++
       confidence h.source.confidence ++ "})." ++
       (if h.grounds.isEmpty then "" else
-        " It rests the reading on " ++ inlineFormulas order h.grounds ++ ".") ++ "\n\n" ++
+        " It rests the reading on " ++ inlineFormulas n h.grounds ++ ".") ++ "\n\n" ++
     String.join (h.fates.map fate))
 
 /-- What an opponent must reject: every minimal set of readings whose
@@ -683,29 +861,29 @@ def graph (g : Page.Graph) (defeatTable supportTable partTable : String) : Strin
     | _ => " A party that both supports and defeats another is marked in the table.") ++
   "\n"
 
-/-- Render one item against the document's atom ordering. -/
-def item [DecidableEq α] (order : List α) : Page.Item α → String
+/-- Render one item against the document's numbering. A lone formula, or a
+list of them, is set as rows of a derivation, so a step says what it delivers
+there too. -/
+def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
   | .prose md => prose md
   | .package d doc pkg =>
       declLabel d (" --- " ++ escape pkg.name) ++ prose doc ++
-      derivation order pkg.premises pkg.conclusion ++ scriptureNote order pkg
+      derivation n pkg.premises pkg.conclusion (scriptureNote n.order pkg)
   | .line d doc l =>
       declLabel d (" --- " ++ escape l.name) ++ prose doc ++
-      derivation order l.premises l.delivers
+      derivation n l.premises l.delivers
   | .formula d doc φ =>
-      declLabel d "" ++ prose doc ++ "\\[" ++ formula order φ ++ "\\]\n"
+      declLabel d "" ++ prose doc ++ rows (row n "\\item[]" φ (loneGloss n φ))
   | .formulas d doc φs =>
       declLabel d "" ++ prose doc ++
-      "\\begin{align*}\n" ++ String.intercalate "\n"
-        (φs.zipIdx.map fun (φ, i) =>
-          "  \\text{(" ++ toString (i + 1) ++ ")} \\quad & " ++ formula order φ ++ " \\\\") ++
-      "\n\\end{align*}\n"
+      rows (String.join (φs.zipIdx.map fun (φ, i) =>
+        row n (numbered i φs.length) φ (gloss n none φ)))
   | .other d doc src => declLabel d "" ++ prose doc ++ verbatim src
   | .result d doc stmt proposed =>
       declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
       prose doc ++ verbatim stmt
-  | .because d doc e => declLabel d "" ++ prose doc ++ explanation order e
-  | .dilemma d doc dl => declLabel d "" ++ prose doc ++ dilemma order dl
+  | .because d doc e => declLabel d "" ++ prose doc ++ explanation n e
+  | .dilemma d doc dl => declLabel d "" ++ prose doc ++ dilemma n dl
   | .burden d doc stmt b => declLabel d "" ++ prose doc ++ verbatim stmt ++ burden b
   | .verdict d doc v links table => declLabel d "" ++ prose doc ++ verdict v links table
   | .graph d doc g defeats supports parts =>
@@ -715,16 +893,23 @@ def item [DecidableEq α] (order : List α) : Page.Item α → String
 
 /-- One argument's body: its introductory prose, its legend, then every item in
 source order. The heading above it is the caller's, as the page title is in the
-Markdown rendering. -/
-def body [DecidableEq α] (allAtoms : List α) (intro : List (Page.Item α))
+Markdown rendering.
+
+`ns` is the argument's namespace, which its variables' links are named by. An
+argument with no legend has nothing to link to or gloss from, and its variables
+are set plain. -/
+def body [DecidableEq α] (ns : String) (allAtoms : List α) (intro : List (Page.Item α))
     (items : List (Page.Item α)) : String :=
   let all := intro ++ items
-  let order := atomOrder allAtoms all
-  let legendPart := match citeOf all with
-    | some cite => "\\subsection*{The claims, numbered}\n" ++ legend cite order ++ "\n"
+  let cite := citeOf all
+  let n : Numbering α :=
+    { order := atomOrder allAtoms all, cite := cite,
+      anchor := if cite.isSome then anchorName ns else "" }
+  let legendPart := match cite with
+    | some c => "\\subsection*{The claims, numbered}\n" ++ legend n c ++ "\n"
     | none => ""
-  String.join (intro.map (item order)) ++ legendPart ++
-  String.join (items.map (item order))
+  String.join (intro.map (item n)) ++ legendPart ++
+  String.join (items.map (item n))
 
 /-- A starred section heading for one argument, put into the table of contents
 by hand because a starred section does not do it for itself. -/
@@ -747,9 +932,41 @@ logical symbols the rendered statements are full of.
 package's own. -/
 def preamble (title : String) (tool : String := "argtex") : String :=
   "\\documentclass[11pt]{article}\n" ++
-  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec}\n" ++
+  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec,xcolor}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
   "\\usepackage[hidelinks]{hyperref}\n" ++
+  -- A variable links to its row in the legend, and is coloured so a reader can
+  -- see that it does: `hidelinks` sets every other link as plain text. The blue
+  -- is dark enough to print as near-black.
+  "\\definecolor{claimlink}{RGB}{25,70,150}\n" ++
+  "\\newcommand{\\pvar}[2]{\\hyperlink{#1-P#2}{\\textcolor{claimlink}{P_{#2}}}}\n" ++
+  -- The target sits at the top of its row, so following a link shows the whole
+  -- row rather than starting below its first line.
+  "\\newcommand{\\pvartarget}[2]{\\raisebox{\\ht\\strutbox}{\\hypertarget{#1-P#2}{}}}\n" ++
+  -- A derivation's rows: the label hangs in the margin, and the words after a
+  -- formula run on and wrap beneath it, ragged so a narrow line is not
+  -- stretched to fill the measure. The display it replaces could not break at
+  -- all, and a list invites a break before it, between its rows and after it.
+  -- So a page never breaks between a derivation and the paragraph before it, or
+  -- the note a `\keepwithnext` keeps after it; a row is never split; and a page
+  -- breaks between rows only where the generator starts a row with `\breakrow`
+  -- (`breakable`).
+  "\\makeatletter\n" ++
+  "\\newenvironment{derivation}\n" ++
+  "  {\\begin{list}{}{\\setlength{\\leftmargin}{2.6em}\\setlength{\\labelwidth}{2.2em}%\n" ++
+  "    \\setlength{\\labelsep}{0.4em}\\setlength{\\itemsep}{2pt}\\setlength{\\parsep}{0pt}%\n" ++
+  "    \\setlength{\\topsep}{6pt}\\@beginparpenalty\\@M\\@itempenalty\\@M%\n" ++
+  "    \\interlinepenalty\\@M\\raggedright}}\n" ++
+  "  {\\end{list}}\n" ++
+  "\\newcommand{\\breakrow}[1]{\\@itempenalty\\z@\\item[#1]\\@itempenalty\\@M}\n" ++
+  "\\newcommand{\\keepwithnext}{\\@endparpenalty\\@M}\n" ++
+  "\\makeatother\n" ++
+  -- No paragraph leaves a single line alone at the foot or the head of a page.
+  -- A derivation cannot be parted from the paragraph before it, so without
+  -- this TeX carries that paragraph's last line over with it, and the page
+  -- opens on a fragment of a sentence.
+  "\\clubpenalty=10000\n\\widowpenalty=10000\n" ++
+  "\\newcommand{\\gloss}[1]{\\enspace---\\enspace{\\small\\itshape #1}}\n" ++
   "\\geometry{margin=1in}\n" ++
   -- Long unbreakable words — a cite key, a declaration name in \\texttt — would
   -- otherwise spill into the margin rather than loosening the line.
@@ -811,8 +1028,9 @@ build rather than silently rewriting `docs/latex/arguments.tex`. -/
 #guard prose "# Title\n\nA paragraph\nover two lines.\n" ==
   "\\subsection*{Title}\nA paragraph over two lines.\n\n"
 
--- `\paragraph*` is run-in, so a heading at that depth has to be made to break.
-#guard prose "### Deep\n\ntext" == "\\paragraph*{Deep}\n\\leavevmode\\par\ntext\n\n"
+-- `\paragraph*` is run-in, so a heading at that depth has to be made to break,
+-- and kept with what follows it, as a run-in heading does not keep itself.
+#guard prose "### Deep\n\ntext" == "\\paragraph*{Deep}\n\\leavevmode\\par\\nobreak\ntext\n\n"
 
 -- The separator row is dropped and the header row set bold; the columns share
 -- the measure between them.
@@ -827,5 +1045,76 @@ build rather than silently rewriting `docs/latex/arguments.tex`. -/
 -- Nothing inside a fence is escaped, and the prose after it resumes.
 #guard prose "```sh\nlake build\n```\n\nafter" ==
   "{\\small\\begin{verbatim}\nlake build\n\\end{verbatim}}\nafter\n\n"
+
+/-! The derivation's links and words, pinned on three claims of a test argument
+`A`: claim `k` says "claim k". -/
+
+/-- The test argument's claims. -/
+private def testCite (k : Nat) : AtomMeta :=
+  { label := "claim " ++ toString k, kind := .historical,
+    source := { primary := .proposal "a test", tradition := .adversarialTrial,
+                confidence := .disputed } }
+
+/-- The test argument's numbering: three claims, linked, and glossed. -/
+private def testNumbering : Numbering Nat :=
+  { order := [0, 1, 2], anchor := "A", cite := some testCite }
+
+-- A claim the position holds says itself where it comes in, and a denied one is
+-- marked; a step that gives the conclusion leaves it to the turnstile row, which
+-- names the conclusion at issue; every variable links to the legend.
+#guard derivation testNumbering
+    [.atom 0, .imp (.atom 1) .falsum, .imp (.and (.atom 0) (.imp (.atom 1) .falsum)) (.atom 2)]
+    (.atom 2) ==
+  "\\begin{derivation}\n" ++
+  "  \\item[(1)] \\(\\pvar{A}{1}\\)\\gloss{claim 0}\n" ++
+  "  \\item[(2)] \\(\\lnot \\pvar{A}{2}\\)\\gloss{\\emph{denied:} claim 1}\n" ++
+  "  \\item[(3)] \\((\\pvar{A}{1} \\land \\lnot \\pvar{A}{2}) \\rightarrow \\pvar{A}{3}\\)\n" ++
+  "  \\item[\\(\\vdash\\)] \\(\\pvar{A}{3}\\)\\gloss{\\emph{at issue:} claim 2}\n" ++
+  "\\end{derivation}\n"
+
+-- A step that gives anything else says what it would give, a denial as a denial.
+#guard gloss testNumbering (some (.atom 2)) (.imp (.atom 0) (.imp (.atom 1) .falsum)) ==
+  some "\\emph{would deny:} claim 1"
+
+-- Of several claims, each is named by its variable.
+#guard gloss testNumbering none (.imp (.atom 0) (.and (.atom 1) (.imp (.atom 2) .falsum))) ==
+  some ("\\emph{would give:} \\(\\pvar{A}{2}\\) claim 1; " ++
+    "\\(\\pvar{A}{3}\\) \\emph{denied:} claim 2")
+
+-- A conclusion that is a denial is at issue as one; a note under a derivation is
+-- kept with it.
+#guard derivation testNumbering [] (.imp (.atom 1) .falsum) "A note.\n" ==
+  "\\begin{derivation}\n" ++
+  "  \\item[\\(\\vdash\\)] \\(\\lnot \\pvar{A}{2}\\)" ++
+  "\\gloss{\\emph{at issue, the denial of:} claim 1}\n" ++
+  "  \\keepwithnext\n\\end{derivation}\nA note.\n"
+
+-- A lone formula is no position's premise: a step says what it would give, and a
+-- claim is left to its links.
+#guard loneGloss testNumbering (.imp (.atom 0) (.atom 1)) == some "\\emph{would give:} claim 1"
+#guard loneGloss testNumbering (.and (.atom 0) (.atom 1)) == none
+#guard loneGloss testNumbering (.imp (.atom 0) .falsum) == none
+
+-- What is not a list of claims has no words: a disjunction, a denied conjunction.
+#guard gloss testNumbering none (.or (.atom 0) (.atom 1)) == none
+#guard gloss testNumbering none (.imp (.and (.atom 0) (.atom 1)) .falsum) == none
+
+-- Without a legend, nothing links and nothing is glossed.
+#guard derivation ({ order := [0] } : Numbering Nat) [] (.atom 0) ==
+  "\\begin{derivation}\n  \\item[\\(\\vdash\\)] \\(P_{1}\\)\n\\end{derivation}\n"
+
+-- A page breaks inside a derivation only where three rows or more stand on
+-- each side: never in one of five rows, and in one of eight before row 4, 5 or
+-- 6 (counting from 1), the conclusion among the last three.
+#guard (List.range 5).filter (breakable · 5) == []
+#guard (List.range 8).filter (breakable · 8) == [3, 4, 5]
+#guard numbered 3 8 == "\\breakrow{(4)}"
+#guard numbered 2 8 == "\\item[(3)]"
+
+-- A link's name keeps nothing TeX or a PDF viewer would read as markup, and
+-- drops nothing, so two namespaces never share one.
+#guard anchorName "Testimony.Arguments.SolaFide" == "Testimony.Arguments.SolaFide"
+#guard anchorName "A_b-c «d»" == "A-95-b-45-c-32--171-d-187-"
+#guard anchorName "A_b" != anchorName "Ab"
 
 end Testimony.Logic.Latex

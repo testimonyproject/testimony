@@ -187,29 +187,52 @@ A Unicode engine is required: the claims contain Greek and Hebrew. Citations
 render as live `\cite` commands against the generated `references.bib`.
 
 Atoms are numbered rather than named, which is the usual convention and the
-point of rendering at all. It separates an argument's *shape* from its content:
+point of rendering at all. It separates an argument's *shape* from its content.
+So that the reader need not turn back to the legend at every row, each variable
+links to its row there, and a derivation puts its claims into the legend's
+words: a premise that is a claim, which the position holds; a step, by what it
+*would give* — unless that is the conclusion — whether or not the position holds
+what the step needs; and the turnstile row, by the conclusion *at issue*,
+whether or not the premises reach it. A claim met only inside a step is left to
+its link.
 
 ```
-(17)  (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₂₄
-(18)  (P₁₇ ∧ P₁₈ ∧ P₁₉) → P₂₄
-(19)  (P₉ ∧ P₁₀) → P₂₄
-(20)  (P₂₀ ∧ P₂₁) → P₂₂
-(21)  (P₁ ∧ P₄ ∧ P₅) → P₂₅
-(22)  (P₁ ∧ P₄ ∧ P₅ ∧ P₂₂ ∧ P₂₃) → P₂₆
-(23)  (P₂₄ ∧ P₁) → P₂₇
-  ⊢   P₂₅ ∧ P₂₆ ∧ P₂₇
+(17)  (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₂₅  — would give: Justification is by faith alone
+(18)  (P₁₇ ∧ P₁₈ ∧ P₁₉) → P₂₆  — would give: Faith is sufficient: whoever believes
+      is saved
+(19)  (P₉ ∧ P₁₀) → P₂₆  — would give: Faith is sufficient: whoever believes is saved
+(20)  (P₂₀ ∧ P₂₁) → P₂₂  — would give: James 2:24 is compatible with Paul, using
+      ‘justify’ in a different sense
+(21)  (P₁ ∧ P₄ ∧ P₅) → P₂₇  — would give: Salvation is by grace, a gift and not
+      wages owed
+(22)  (P₁ ∧ P₄ ∧ P₅ ∧ P₂₂ ∧ P₂₄) → P₂₈  — would give: Salvation is not by works:
+      no work is its ground
+(23)  P₂₅ → P₂₆  — would give: Faith is sufficient: whoever believes is saved
+(24)  (P₂₆ ∧ P₁) → P₂₉  — would give: Salvation is received through faith
+  ⊢   P₂₇ ∧ P₂₈ ∧ P₂₉  — at issue: P₂₇ Salvation is by grace, a gift and not wages
+      owed; P₂₈ Salvation is not by works: no work is its ground; P₂₉ Salvation
+      is received through faith
 ```
 
-That is sola fide. Premises (17), (18) and (19) all conclude `P₂₄`: one by way
-of `P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστοῦ read as faith in
-Christ), one by way of `P₁₈` and `P₁₉` (Jesus' σῴζω at Luke 7:50, and 7:47 read
-as love evidencing forgiveness), and one by way of `P₁₀` (Peter's yoke at Acts
-15:10). The argument's redundancy — the reason no disputed premise is
-load-bearing on its own — is visible on the page before you read a word of the
-legend. So is the split in the conclusion, one step per part: (21) reaches grace
-(`P₂₅`) from the texts alone; (22) reaches "not by works" (`P₂₆`) from the same
-texts and the answer to James (`P₂₂`); only (23), "through faith" (`P₂₇`), needs
-a strand (`P₂₄`).
+The marks are there because the words are read as sentences. Unmarked, a step's
+words in a rival's package would read as the rival conceding them, and the
+turnstile's words under a refuted package as the conclusion reached. Nor is the
+conclusion always a position's aim: the positions an argument sets side by side
+are often asked about one thesis, which a rival may deny. Whether a package
+reaches its conclusion is what its results say.
+
+That is sola fide. Three strands reach the sufficiency of faith (`P₂₆`): Paul,
+by way of `P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστοῦ read as faith in
+Christ) to justification by faith alone (17), and from there to `P₂₆` (23);
+Jesus' words at Luke 7:50, by way of `P₁₈` and `P₁₉` (σῴζω there, and 7:47 read
+as love evidencing forgiveness) (18); and Peter at Acts 15, by way of `P₁₀` (the
+yoke of 15:10) (19). That redundancy — the reason no strand's disputed premise
+carries the argument on its own (`lexical_premises_jointly_load_bearing`) — is
+visible on the page before you read a word of the legend. So is the split in
+the conclusion, one step per part: (21) reaches grace (`P₂₇`) from the texts
+alone; (22) reaches "not by works" (`P₂₈`) from the same texts, the answer to
+James (`P₂₂`) and scripture's consistency (`P₂₄`); only (24), "through faith"
+(`P₂₉`), needs a strand (`P₂₆`).
 
 ## Publishing what the library claims
 
@@ -256,7 +279,10 @@ so \\(P_{9}\\) means the same claim in the Protestant position and in the
 Tridentine one and a reader can compare them. Only the setting differs between
 the two: Markdown tables and MathJax on the site, `longtable` and live `\cite`
 commands in the PDF. The formulas themselves are rendered once, by
-`Testimony.Logic.Latex`, because what TeX wants is what MathJax reads.
+`Testimony.Logic.Latex`, because what TeX wants is what MathJax reads. The PDF
+adds what a reader of a printed page cannot do without: each variable in a
+formula links to its row in the legend, and a derivation puts its claims into
+the legend's words (above). The site sets the variables plain, for now.
 
 The practical consequence is for how you write docstrings. They are not
 commentary for the next contributor; they are the page. A module docstring that
