@@ -17,7 +17,8 @@ Run them in this order. Each catches what the previous one cannot.
 
 Plus `lake exe bibgen --check`, `lake exe argtex --check`,
 `lake exe statusgen --check` and `lake exe argdoc --check` for generated-file
-drift.
+drift. The library and each package built on it are held to the tiers in their
+own directories: the arguments in `arguments/`, where those four tools are.
 
 **`lake build` passing is not "it builds".** Three further gates exist, and
 tier 3 in particular catches things nothing else will — a `decide` proof that
@@ -166,7 +167,8 @@ that it was *granted* — and where a reply concedes the charge it answers, whic
 it is matters more than that the goal closes.
 
 The bracketed set names what to unfold: the argument's unfold set, declared in
-`Testimony/Attr.lean`, which holds its packages, lines and inference steps. A
+`arguments/TestimonyArguments/Attr.lean`, which holds its packages, lines and
+inference steps. A
 definition joins it where it is written, `@[bornOfAVirginDefs] def christian
 ...`, rather than being added to the proofs that pass through it. Everything
 generic — `caseOf`, `Line.onGrounds`, `p`, `notP`, the list-membership lemmas,
@@ -296,7 +298,7 @@ linter.
 |---|---|
 | L1 | No `sorry` or `admit` |
 | L2 | No `native_decide` |
-| L3 | `BibEntry` values are defined only in `Testimony/Bib/Works.lean` |
+| L3 | `BibEntry` values are defined only in a package's `Works.lean`: the library's, the arguments', the examples' |
 | L4 | Every `BibEntry` definition carries `@[bib_entry]` |
 | L5 | An argument encodes at least one rival package — counted across its directory, not per file |
 | L6 | Every `@[headline]` theorem is followed by `#print axioms` |
@@ -348,7 +350,7 @@ sample is code rather than a table row, and a page that fences a sample of a
 
 ## Documentation moves with the argument
 
-A change under `Testimony/Arguments/` is not finished when it compiles. The
+A change under `arguments/TestimonyArguments/` is not finished when it compiles. The
 pages that carry results — `README.md`, [Introduction](./introduction.md),
 [Encoding arguments](./logic.md), [Rationale](./rationale.md), [Scope and
 limits](./scope-and-limits.md), [Roadmap](./roadmap.md) — and the module

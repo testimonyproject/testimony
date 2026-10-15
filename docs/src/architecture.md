@@ -30,13 +30,12 @@ boundary visible at all times.
 | `Testimony.Intertext` | `RelationType`, `IntertextEdge`, `Interpretation` |
 | `Testimony.Logic` | Formula type, entailment, independence and countermodels, `ArgumentPackage`, manifests, `Line` lines of reason, the `establish`/`refute_with`/`satisfied_by`/`leaves_open`/`granted` tactics, `Horn`, which decides who defeats whom, `Solver`, which decides what survives, and `Witness`, which states why, `Verdict`, which renders the why from the witness, `Support` and `Map`, which draw who stands with whom, `Because`, which says why one position stands against another, and `Burden`, which says what an opponent must reject to overturn a case |
 | `Testimony.Argument` | `FulfillmentCriterion`, `MessiahDefinition`, `Satisfies`, `MeetsDefinition` |
-| `Testimony.Arguments.*` | The worked arguments. A large one is a directory — `Atoms`, `Sources`, `Lines`, `Packages`, `Results` |
 | `Testimony.Logic.Page` | `Item` — what a generated page is made of, before either rendering |
 | `Testimony.Logic.Latex`, `Testimony.Logic.Markdown` | The two renderings of it: traditional notation for print, and the same notation for the browser |
-| `Testimony.Tools.*` | The generators — `Bibgen`, `Argtex`, `Statusgen`, `Argdoc` — over `Docs`, the catalogue they share, and `Pages`, the harvest the two document generators read |
+| `Testimony.Tools.*` | What a package's generators are made of: `Pages`, the harvest its site and its PDF share, `Site` and `Status`, which set the pages and the status table, `Bibliography`, and `Docs`, a catalogue's entries |
 | `Testimony.Logic.Aif` | Every dispute as an Argument Interchange Format graph, and AIF's Definition 1.1 as a check (see [Standards](./standards.md)) |
 | `Testimony.Semantics.Upper` | The upper categories a term can name — DOLCE's, each with its BFO counterpart |
-| `Testimony.Checks.*` | Checks that run in `lake build` over every argument: `Refutations`, that `establish` fails, as not Horn, on every package the library refutes; `Meanings`, `Ontology`, `Postulates`, and `Aif`. Each takes a namespace, so a package built on the library runs it over its own |
+| `Testimony.Checks.*` | Checks a package runs over its arguments, in its build: `Refutations`, that `establish` fails, as not Horn, on every package it refutes; `Meanings`, `Ontology`, `Postulates`, and `Aif`. Each takes a namespace. The library runs them over `Fixture`, a small case of its own |
 
 ## The library, and the packages built on it
 
@@ -47,16 +46,26 @@ a package built on it uses that and nothing else: it requires the library as a
 Lake dependency, imports it, and keeps its own works, unfold sets, checks and
 documents.
 
-The first such package is `TestimonyExamples`, in `examples/`, with a case from
-outside theology (see [Beyond theology](./beyond-theology.md)). It is built and
-checked in CI after the library, through the library's own gates, and the
-library knows nothing of it: it is not imported, catalogued or indexed here.
+There are two. **`TestimonyArguments`**, in `arguments/`, holds the worked
+arguments this documentation presents: their claims, sources, packages,
+disputes and verdicts, what each claim means, the articles examined against
+them, the works they cite beyond the library's, their unfold sets, and the
+library's checks run over them. Its generators write the generated files below
+into the repository's `docs/`. **`TestimonyExamples`**, in `examples/`, holds a
+case from outside theology (see [Beyond theology](./beyond-theology.md)), with a
+document of its own that is not in this book's index.
 
-The library's own arguments are still in its tree, under `Testimony.Arguments`,
-and they are documented by the same generators a package uses. Moving them into
-a package of their own is the next step of the split, and the generators and
-checks are written for it: each takes a namespace or a catalogue rather than
-assuming the library's.
+| Package | Directory | Module root | Holds |
+|---|---|---|---|
+| `Testimony` | the root | `Testimony` | the machinery, and a fixture its checks run over |
+| `TestimonyArguments` | `arguments/` | `TestimonyArguments` | the worked arguments, and the generators of this book's argument pages, status table, bibliography and PDF |
+| `TestimonyExamples` | `examples/` | `TestimonyExamples` | the grits case, and its PDF |
+
+Each package requires the library by path, shares its downloaded dependencies,
+and is built and checked in CI after it, through the same gates. The library
+knows nothing of either: it imports neither, and names no argument. An argument
+module's own path is `arguments/TestimonyArguments/<Argument>`, and its
+namespace is `TestimonyArguments.<Argument>`.
 
 ## Two structural enforcements
 
@@ -76,13 +85,16 @@ at the use site. They are consequences of the types.
 
 ## The documentation is generated from the library
 
-Four executables write files that live in the repository, and each has a
-`--check` mode CI runs, so a committed copy that has fallen behind the source
-fails the build rather than misleading a reader.
+Four executables of the arguments package write files that live in the
+repository, and each has a `--check` mode CI runs, so a committed copy that has
+fallen behind the source fails the build rather than misleading a reader. They
+run in `arguments/`, and each is a few lines over a library module that any
+package could call (`Testimony.Tools.Site`, `Status`, `Bibliography`, and
+`latexDocument` in `Pages`).
 
 | Tool | Writes | From |
 |---|---|---|
-| `bibgen` | `references.bib`, `docs/src/bibliography.md` | the `@[bib_entry]` registry |
+| `bibgen` | `references.bib`, `docs/src/bibliography.md` | the library's `@[bib_entry]` registry and the arguments' |
 | `argtex` | `docs/latex/arguments.tex` | the same harvest as `argdoc` |
 | `statusgen` | the marked block in `docs/src/roadmap.md` | every `@[headline]` result |
 | `argdoc` | `docs/src/arguments/*.md`, the marked block in `docs/src/SUMMARY.md` | every documented declaration in an argument's namespace |

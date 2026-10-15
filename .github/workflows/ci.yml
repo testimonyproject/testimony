@@ -22,20 +22,31 @@ jobs:
       - uses: actions/checkout@v4
 
       # Mathlib arrives transitively via Foundation; without the cache this
-      # step would compile it from source.
+      # step would compile it from source. The packages built on the library
+      # keep their own build output beside them, and are cached with it.
       - name: Cache .lake
         uses: actions/cache@v4
         with:
-          path: .lake
-          key: lake-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}
-          restore-keys: lake-${{ runner.os }}-
+          path: |
+            .lake
+            arguments/.lake
+            examples/.lake
+          # Keyed apart from the cache of the library alone, which held only
+          # .lake: an exact hit restores and never saves, so the old key would
+          # never store the packages' output.
+          key: lake-packages-${{ runner.os }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}
+          restore-keys: |
+            lake-packages-${{ runner.os }}-
+            lake-${{ runner.os }}-
 
       - name: Fetch Mathlib oleans
         run: lake exe cache get
 
-      # Tier 1: type checking, plus linter.missingDocs.
+      # Tier 1: type checking, plus linter.missingDocs. The library alone: its
+      # machinery and its checks over its own fixture, then the tools a
+      # package's generators are built from.
       - name: Build
-        run: lake build
+        run: lake build && lake build TestimonyTools
 
       # Tier 4 first among the checks: sub-second, so it fails fast.
       - name: Domain linter tests
@@ -59,12 +70,25 @@ jobs:
       # module, independently of the elaborator and of every tactic. A tactic
       # cannot make the kernel accept a false theorem; this checks that nothing
       # reached the environment without the kernel's say-so. The script first
-      # builds the tools and removes build output of deleted modules: .lake/ is
-      # restored from a cache, and leanchecker replays whatever .olean it finds.
+      # removes build output of deleted modules: .lake/ is restored from a
+      # cache, and leanchecker replays whatever .olean it finds.
       - name: Kernel replay
         run: scripts/kernel-replay.sh
 
+      # The arguments: a package built on the library, held to the same gates.
+      # It requires the library by path and shares its .lake/packages, so it
+      # reuses everything built above and compiles only its own modules. Its
+      # generators write the documentation's generated files, at the root.
+      - name: Arguments package
+        working-directory: arguments
+        run: |
+          lake build
+          lake lint
+          lake exe axiom-audit
+          ../scripts/kernel-replay.sh TestimonyArguments bibgen argtex statusgen argdoc
+
       - name: Generated files are current
+        working-directory: arguments
         run: |
           lake exe bibgen --check
           lake exe argtex --check

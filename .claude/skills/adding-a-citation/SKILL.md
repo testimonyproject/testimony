@@ -46,10 +46,13 @@ The two confusable cases: if you would cite it as "NA28 at Matt 1:23" it is a
 18.63, in the Loeb edition", the ancient work is the entry and the Loeb is
 `editionUsed`.
 
-## Step 3 — add it to `Testimony/Bib/Works.lean`
+## Step 3 — add it to the `Works.lean` of the package that cites it
 
-It must go in that file: `derive_bib_registry` at the bottom reads the
-attribute's *local module state*.
+A work an argument cites goes in `arguments/TestimonyArguments/Works.lean`; one
+the library itself cites — in its own modules, the golden tests of its renderer,
+or `Testimony.Scripture`'s helpers — in `Testimony/Bib/Works.lean`. It must go in
+one of those files: `derive_bib_registry` at the bottom of each reads the
+attribute's *local module state*. A key may be used once across both.
 
 ```lean
 /-- Why this work is cited in this library. -/
@@ -98,11 +101,13 @@ That is intended; do not work around it by attaching an irrelevant commentary.
 ## Step 5 — regenerate and verify
 
 ```sh
+cd arguments
 lake exe bibgen
 lake build
+cd ..
 python3 scripts/testimony_lint.py
-git add references.bib docs/src/bibliography.md Testimony/Bib/Works.lean
+git add references.bib docs/src/bibliography.md arguments/TestimonyArguments/Works.lean
 ```
 
 Never hand-edit `references.bib` or `docs/src/bibliography.md`. CI runs
-`lake exe bibgen --check`.
+`lake exe bibgen --check` in `arguments/`.

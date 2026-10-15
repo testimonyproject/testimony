@@ -1,0 +1,41 @@
+name = "TestimonyArguments"
+version = "0.1.0"
+defaultTargets = ["TestimonyArguments"]
+# Batteries ships the environment-linter driver; `lake lint` runs it.
+lintDriver = "batteries/runLinter"
+# The library's own dependencies, shared: the arguments resolve Foundation and
+# Mathlib from the library's checkout rather than fetching a second copy.
+packagesDir = "../.lake/packages"
+
+# Tier 1 of four (see docs/src/style-guide.md): a docstring here states what a
+# premise asserts and who holds it, so an undocumented declaration is very
+# nearly an uncited one.
+[leanOptions]
+linter.missingDocs = true
+
+[[require]]
+name = "testimony"
+path = ".."
+
+[[lean_lib]]
+name = "TestimonyArguments"
+
+[[lean_exe]]
+name = "bibgen"
+root = "TestimonyArguments.Tools.Bibgen"
+supportInterpreter = true
+
+[[lean_exe]]
+name = "argtex"
+root = "TestimonyArguments.Tools.Argtex"
+supportInterpreter = true
+
+[[lean_exe]]
+name = "statusgen"
+root = "TestimonyArguments.Tools.Statusgen"
+supportInterpreter = true
+
+[[lean_exe]]
+name = "argdoc"
+root = "TestimonyArguments.Tools.Argdoc"
+supportInterpreter = true

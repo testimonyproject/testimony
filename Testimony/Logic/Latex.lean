@@ -35,12 +35,12 @@ The marks are there because the words are read as sentences. Unmarked, a step's
 words in a rival's package read as the rival conceding them, and the turnstile's
 words under a refuted package as the conclusion reached. Nor is the conclusion
 always the position's aim: the positions an argument sets side by side are often
-asked about one thesis, which a rival may deny, so Trent's package in the sola
-scriptura argument ends at sola scriptura.
+asked about one thesis, so a rival's package can end at the very thesis it
+denies.
 
 They are the label whole, not a shorter name for it. What to call a disputed
-claim in four words is a judgement — "πίστις Χριστοῦ is faith in Christ" drops
-the "not Christ's faithfulness" the dispute is about — and the label is the
+claim in four words is a judgement — a short name for "the phrase means A, not
+B" keeps the A and drops the "not B" the dispute is about — and the label is the
 wording its sources were checked against.
 
 The site's renderer borrows `formula` and gets plain variables: a link here is

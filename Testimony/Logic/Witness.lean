@@ -36,9 +36,9 @@ cannot prove a wrong verdict.
 
 Checking a witness is polynomial — linear in its size, times the parties —
 where enumeration is exponential in the parties. And a witness *is* the
-explanation. `critical_denial_indefensible` is witnessed by one line: Postell
-attacks the critical denial, and nothing answers Postell. That is the sentence a
-reader wants, and now it is checked.
+explanation. That a position cannot be defended can be witnessed by one line:
+a counterexample attacks it, and nothing answers the counterexample. That is the
+sentence a reader wants, and now it is checked.
 
 ## The limit
 

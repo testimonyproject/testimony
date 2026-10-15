@@ -17,22 +17,16 @@ rev = "master"
 
 [[lean_lib]]
 name = "Testimony"
-[[lean_exe]]
-name = "bibgen"
-root = "Testimony.Tools.Bibgen"
-supportInterpreter = true
 
-[[lean_exe]]
-name = "argtex"
-root = "Testimony.Tools.Argtex"
-supportInterpreter = true
-
-[[lean_exe]]
-name = "statusgen"
-root = "Testimony.Tools.Statusgen"
-supportInterpreter = true
-
-[[lean_exe]]
-name = "argdoc"
-root = "Testimony.Tools.Argdoc"
-supportInterpreter = true
+# The modules a package's generators are built from: the harvest, the site's
+# pages, the status table, the bibliography. The root does not import them, so
+# they are a library of their own, built and replayed with the library
+# (`lake build TestimonyTools`, and `scripts/kernel-replay.sh`). Not a default
+# target: the environment linters read the default targets' modules, and have
+# always read the root's alone.
+[[lean_lib]]
+name = "TestimonyTools"
+roots = [
+  "Testimony.Tools.Docs", "Testimony.Tools.Pages", "Testimony.Tools.Site",
+  "Testimony.Tools.Status", "Testimony.Tools.Bibliography",
+]

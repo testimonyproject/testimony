@@ -27,9 +27,9 @@ packages built on it are its users. Keeping them apart keeps two promises.
   publishes are its own. A package's document is the package's: it is set the
   same way, by the same generator, but it is not in the library's index.
 
-Today the library's own arguments still live in its tree, as in-tree users of
-it. Moving them into a package of their own, so that the core is only machinery,
-is the next step; the tools a package uses below are the ones they will use.
+The arguments this documentation presents are such a package too:
+`TestimonyArguments`, in `arguments/`. Everything below is what they do, and
+the grits case does the same at a smaller scale.
 
 ## The steps
 
