@@ -47,8 +47,10 @@ reference resolves.
 ## Adding an entry
 
 1. **Verify** against a public catalogue. Leave unverifiable fields `none`.
-2. **Add a tagged definition** to `Testimony/Bib/Works.lean`. The tag is what
-   puts it in the registry; an untagged entry is invisible to `bibgen` and
+2. **Add a tagged definition** to the `Works.lean` of the package that cites
+   it: `arguments/TestimonyArguments/Works.lean` for a work an argument cites,
+   `Testimony/Bib/Works.lean` only for one the library itself cites. The tag is
+   what puts it in the registry; an untagged entry is invisible to `bibgen` and
    linter rule L4 rejects it.
 
    ```lean
@@ -84,11 +86,12 @@ reference resolves.
 4. **Regenerate and commit** both generated files:
 
    ```sh
-   lake exe bibgen
-   git add references.bib docs/src/bibliography.md
+   cd arguments && lake exe bibgen
+   git add ../references.bib ../docs/src/bibliography.md
    ```
 
-   CI runs `lake exe bibgen --check` and fails if they are stale.
+   CI runs `lake exe bibgen --check`, in `arguments/`, and fails if they are
+   stale. The two files list the library's works and the arguments' together.
 
 ## Pinpoints
 

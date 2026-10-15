@@ -1,4 +1,13 @@
-import Testimony
+import Testimony.Attr
+import Testimony.Logic.Line
+import Testimony.Logic.Dispute
+import Testimony.Logic.Because
+import Testimony.Logic.Dilemma
+import Testimony.Logic.Verdict
+import Testimony.Logic.Map
+import Testimony.Logic.Burden
+import Testimony.Logic.Credibility
+import Testimony.Logic.Latex
 import Testimony.Logic.Markdown
 import Testimony.Tools.Docs
 
@@ -113,11 +122,11 @@ open Testimony in
 under `root` in the environment (every one, when `root` is anonymous) and
 rendering what it declares.
 
-The namespaces are taken from the `@[headline]` tag rather than from
-`arguments`, for the reason `statusgen` gives: a tool that took its scope from
-a hand-written list could not check that the list is complete. The `#guard`
-below compares the two in both directions, so an argument missing from
-`arguments` fails the build rather than the page.
+The namespaces are taken from the `@[headline]` tag rather than from a
+package's catalogue, for the reason the status table gives: a tool that took its
+scope from a hand-written list could not check that the list is complete. A
+package `#guard`s the two against each other in both directions, so an argument
+missing from its catalogue fails the build rather than the page.
 
 Within a namespace the order is the source's own. Module docstrings carry
 positions, so `/-! ### The lines -/` lands between the declaration above it and
@@ -334,23 +343,14 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
 
 /-- `derive_argument_bodies t` generates `def t : List Body`, every argument's
 page body; see `deriveArgumentBodies`. `derive_argument_bodies t under N`
-harvests only the arguments declared under the namespace `N`. That is how a
-package built on the library renders its own arguments, and not the library's,
-which it imports and which carry results too. -/
+harvests only the arguments declared under the namespace `N`, which is how a
+package harvests its own arguments and not those of another it imports. -/
 syntax (name := deriveArgumentBodiesCmd) "derive_argument_bodies " ident (" under " ident)? :
   command
 
 elab_rules : command
   | `(derive_argument_bodies $t $[under $root]?) =>
     deriveArgumentBodies t ((root.map (·.getId)).getD .anonymous)
-
-derive_argument_bodies bodies
-
-#guard bodies.all fun b => arguments.any fun a => a.ns == b.ns
-#guard arguments.all fun a => bodies.any fun b => b.ns == a.ns
-
-/-- The harvest for one argument. -/
-def bodyOf (ns : Name) : Option Body := bodies.find? (·.ns == ns)
 
 /-! ### Documents, for the library and for packages built on it -/
 
@@ -360,9 +360,8 @@ def sectionsOf (catalogue : List Argument) (harvest : List Body) : List (Argumen
 
 /-- **A printable document**: a title, a standing note under it, and a section
 for each argument — its heading the catalogue's title, its body the harvest's
-LaTeX. `argtex` sets the library's arguments with it, and a package built on the
-library sets its own, so the two documents are set alike. `tool` is the
-generator the document says it was made by. -/
+LaTeX. Every package built on the library sets its documents with it, so they
+are set alike. `tool` is the generator the document says it was made by. -/
 def latexDocument (title note : String) (sections : List (Argument × Body))
     (tool : String := "argtex") : String :=
   Logic.Latex.preamble title tool ++ note ++ Logic.Latex.contents ++

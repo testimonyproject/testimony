@@ -17,7 +17,7 @@ declaration. L12 is about the prose too, but about its shape rather than its
 claims: hand-written markdown is held to the same 100 columns as Lean.
 
 Usage:
-    python3 scripts/testimony_lint.py            # Testimony/, examples/, the prose docs
+    python3 scripts/testimony_lint.py            # every package, and the prose docs
     python3 scripts/testimony_lint.py [paths...] # those files only; no L9
 """
 from __future__ import annotations
@@ -34,13 +34,22 @@ MIN_PACKAGES = 2
 # Each package's bibliography: the library's, and that of each package built on
 # it that lives in this repository. A package keeps its works in one file, as
 # the library does, so that `derive_bib_registry` sees them all.
-WORKS_FILES = ("Testimony/Bib/Works.lean", "examples/TestimonyExamples/Works.lean")
+WORKS_FILES = (
+    "Testimony/Bib/Works.lean",
+    "arguments/TestimonyArguments/Works.lean",
+    "examples/TestimonyExamples/Works.lean",
+)
 # Where arguments live: the library's, and each package's cases. A package
 # built on the library is held to the same rules as the library's own.
-ARGUMENTS_DIRS = ("Testimony/Arguments/", "examples/TestimonyExamples/")
+ARGUMENTS_DIRS = ("arguments/TestimonyArguments/", "examples/TestimonyExamples/")
+# A package's modules that are not arguments: its bibliography and unfold sets,
+# the meanings of its arguments' claims, the articles it examines (each heard
+# against an argument's rivals, where the rival rule is checked), its checks and
+# its tools.
+NOT_ARGUMENTS = frozenset({"Works", "Attr", "Meanings", "Articles", "Checks", "Tools"})
 # The Lean sources the linter reads when it is run with no arguments: the
 # library, and the packages built on it in this repository.
-LEAN_ROOTS = ("Testimony", "examples/TestimonyExamples")
+LEAN_ROOTS = ("Testimony", "arguments/TestimonyArguments", "examples/TestimonyExamples")
 CITE_KEY_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 ARGUMENT_PACKAGE_RE = re.compile(r"\bdef\s+(\w+)\s*:\s*ArgumentPackage\b")
 
@@ -322,7 +331,8 @@ def argument_unit(path: str) -> str | None:
     for root in ARGUMENTS_DIRS:
         if path.startswith(root):
             head = path[len(root):].split("/", 1)[0]
-            return head[: -len(".lean")] if head.endswith(".lean") else head
+            unit = head[: -len(".lean")] if head.endswith(".lean") else head
+            return None if unit in NOT_ARGUMENTS else unit
     return None
 
 
@@ -500,7 +510,7 @@ def _keep_only_docstrings(lines: list[str]) -> list[str]:
     The inverse of `_strip_comments`, and needed for the same reason read the
     other way round. A docstring under `Testimony/` is *published prose*:
     `argdoc` and `argtex` render every module and declaration docstring in
-    `Testimony/Arguments/` into the site and the PDF verbatim, and doc-gen4
+    `arguments/TestimonyArguments/` into the site and the PDF verbatim, and doc-gen4
     publishes the rest. A paragraph there naming a result the library no longer
     has is exactly the drift L9 exists to catch, and until this function
     existed the rule could not see it — `declared_names` strips comments before

@@ -21,18 +21,25 @@ lake build                           # 1
 lake lint                            # 2
 lake exe axiom-audit                 # 3
 scripts/kernel-replay.sh             # 3, continued: kernel replay
-python3 scripts/testimony_lint.py    # 4
+python3 scripts/testimony_lint.py    # 4, over every package
+
+cd arguments                         # the arguments, built on the library: 1-3 again
+lake build && lake lint && lake exe axiom-audit
+../scripts/kernel-replay.sh TestimonyArguments bibgen argtex statusgen argdoc
 lake exe bibgen --check              # generated files
 lake exe argtex --check
 lake exe statusgen --check
 lake exe argdoc --check
 ```
 
+The library and each package built on it (`arguments/`, `examples/`) are
+separate Lake packages, and each is held to the gates in its own directory.
+
 ### Tier 1 — `lake build`
 
 Catches type errors, and missing docstrings via `linter.missingDocs`. It also
-runs `#check_refutations` (`Testimony/Checks/Refutations.lean`): `establish` must
-fail, as not Horn, on every package the library refutes. It reports how many it
+runs `#check_refutations` (in `arguments/`, `TestimonyArguments/Checks.lean`):
+`establish` must fail, as not Horn, on every package an argument refutes. It reports how many it
 checked, and the count is pinned with `#guard_msgs`, so adding a refutation
 means updating the number — the error shows the new one.
 
@@ -98,13 +105,15 @@ python3 scripts/test_testimony_lint.py
 ### Generated files
 
 ```sh
+cd arguments
 lake exe bibgen --check
 lake exe argtex --check
 lake exe statusgen --check
 lake exe argdoc --check
 ```
 
-Four tools own files that live in the repository. Each `--check` fails if what
+Four tools own files that live in the repository. They are the arguments
+package's, and run in `arguments/`. Each `--check` fails if what
 is committed is not what the Lean source now says; the fix is always to run the
 tool without `--check` and commit what it writes.
 

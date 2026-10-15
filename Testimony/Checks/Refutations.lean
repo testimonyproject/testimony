@@ -1,15 +1,10 @@
-import Testimony.Arguments.BornInBethlehem
-import Testimony.Arguments.BornOfAVirgin
-import Testimony.Arguments.CanonicalWitness
-import Testimony.Arguments.SolaFide
-import Testimony.Arguments.SolaScriptura
-import Testimony.Arguments.SpiritBaptism
+import Testimony.Checks.Fixture
 
 /-!
 # Testimony.Checks.Refutations — `establish` proves nothing the library refutes
 
-For every theorem of the form `¬ Establishes pkg` in `Testimony.Arguments`,
-`establish` is run on `pkg` with its argument's unfold set, and must fail with
+For every theorem of the form `¬ Establishes pkg` under a namespace the check is
+given, `establish` is run on `pkg` with its argument's unfold set, and must fail with
 `horn_close`'s "not Horn" message. The check runs as part of `lake build`, so CI
 runs it on every change, and it finds the refutations itself: one added
 tomorrow is checked tomorrow, with no list to keep up to date.
@@ -35,16 +30,10 @@ namespace Testimony.Checks
 
 open Lean Elab Command Meta
 
-/-- Each argument's namespace, and the unfold set its proofs name. A refutation
-outside every namespace listed here fails the check, so a new argument cannot
-be left out of it. -/
-def unfoldSets : List (Name × Name) :=
-  [ (`Testimony.Arguments.BornInBethlehem, `bornInBethlehemDefs)
-  , (`Testimony.Arguments.BornOfAVirgin, `bornOfAVirginDefs)
-  , (`Testimony.Arguments.CanonicalWitness, `canonicalWitnessDefs)
-  , (`Testimony.Arguments.SolaFide, `solaFideDefs)
-  , (`Testimony.Arguments.SolaScriptura, `solaScripturaDefs)
-  , (`Testimony.Arguments.SpiritBaptism, `spiritBaptismDefs) ]
+/-- The fixture's namespace, and the unfold set its proofs name. A package built
+on the library lists its arguments' the same way; a refutation outside every
+namespace listed fails the check, so a new argument cannot be left out of it. -/
+def fixtureSets : List (Name × Name) := [(`Testimony.Checks.Fixture, `fixtureDefs)]
 
 /-- The message `horn_close` fails with; the check requires it verbatim. -/
 def notHorn : String := "establish: the premises are not Horn"
@@ -96,24 +85,21 @@ def checkRefutations (root : Name) (sets : List (Name × Name)) : CommandElabM U
     throwError "#check_refutations found no refutation to check"
   logInfo m!"establish fails, as not Horn, on all {checked} refuted packages"
 
-/-- `#check_refutations` checks every refutation in the library's arguments, with
-`unfoldSets`. `#check_refutations under N using S` checks every refutation
-declared under the namespace `N`, with the unfold sets `S` lists — a
-`List (Name × Name)`, as `unfoldSets` is — which is how a package built on the
-library checks its own. -/
+/-- `#check_refutations under N using S` checks every refutation declared under the
+namespace `N`, with the unfold sets `S` lists: a `List (Name × Name)` from each
+argument's namespace to its set, as `fixtureSets` is. -/
 syntax (name := checkRefutationsCmd)
-  "#check_refutations" (" under " ident " using " ident)? : command
+  "#check_refutations" " under " ident " using " ident : command
 
 elab_rules : command
-  | `(#check_refutations) => checkRefutations `Testimony.Arguments unfoldSets
   | `(#check_refutations under $root using $sets) => do
     let sets ← liftTermElabM do
       let n ← realizeGlobalConstNoOverloadWithInfo sets
       unsafe evalExpr (List (Name × Name)) (toTypeExpr (List (Name × Name))) (mkConst n)
     checkRefutations root.getId sets
 
-/-- info: establish fails, as not Horn, on all 33 refuted packages -/
+/-- info: establish fails, as not Horn, on all 1 refuted packages -/
 #guard_msgs in
-#check_refutations
+#check_refutations under Testimony.Checks.Fixture using fixtureSets
 
 end Testimony.Checks

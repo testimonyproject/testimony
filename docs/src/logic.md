@@ -161,8 +161,9 @@ and must fail with `horn_close`'s message. The set is the one the refutation's
 own proof unfolds — `refute_with` evaluates the countermodel on every premise,
 which it cannot do through a folded definition — so a failure is the entailment
 failing and not a definition left folded. This was a manual check; it is now
-`#check_refutations` in `Testimony/Checks/Refutations.lean`, which finds the
-refutations itself and runs in `lake build`, so CI runs it on every change.
+`#check_refutations` (`Testimony.Checks.Refutations`), which finds the
+refutations itself; the arguments package runs it over every argument in its
+`lake build`, so CI runs it on every change.
 `Tactic.lean` pins the same check on affirming the consequent, the canonical
 invalid inference.
 
@@ -173,14 +174,15 @@ is what countermodels are for.
 
 ## Rendering an argument as logic
 
-`lake exe argtex` writes `docs/latex/arguments.tex`: every package set the way
+`lake exe argtex`, run in `arguments/` as every generator below is, writes
+`docs/latex/arguments.tex`: every package set the way
 a logic paper would set it — a legend of numbered propositional variables with
 each one's claim, classification and source, then the premises and conclusion
 in ordinary notation.
 
 ```sh
-lake exe argtex
-cd docs/latex && tectonic arguments.tex    # or xelatex / lualatex
+cd arguments && lake exe argtex
+cd ../docs/latex && tectonic arguments.tex    # or xelatex / lualatex
 ```
 
 A Unicode engine is required: the claims contain Greek and Hebrew. Citations
@@ -247,8 +249,8 @@ lake exe argdoc --check    # CI: fail if a committed page is stale
 `lake exe argtex` writes the same document for print, from the same harvest:
 
 ```sh
-lake exe argtex                          # rewrite docs/latex/arguments.tex
-cd docs/latex && tectonic arguments.tex  # ... and render it
+lake exe argtex                             # rewrite docs/latex/arguments.tex
+cd ../docs/latex && tectonic arguments.tex  # ... and render it
 ```
 
 The atoms are numbered **once for the whole argument** rather than per package,
@@ -447,7 +449,8 @@ pair of `¬ Establishes` results over the same premises: one result cannot be
 about two different propositions, and a pair can.
 
 The bracketed set is only what to unfold. Each argument has one, declared in
-`Testimony/Attr.lean`, and a definition joins it where it is written —
+`arguments/TestimonyArguments/Attr.lean`, and a definition joins it where it is
+written —
 `@[solaFideDefs] def reformed ...` — so a new definition is tagged once rather
 than added to every proof that passes through it. An untagged one stays
 folded, and `establish` reports the premises as not Horn. The generic half of

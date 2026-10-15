@@ -25,10 +25,11 @@ Every dispute in the library is drawn as an AIF graph (`Testimony.Logic.Aif`):
 | A defeat on a step itself (undermining `p ➝ ψ`) | CA-node, to the step's RA-node: an undercutter |
 | An attack the weighing refuses, because the attacked outranks the attacker | PA-node, the attacked preferred |
 
-`Testimony.Checks.Aif` draws every dispute in the library and checks it against
-the specification's Definition 1.1, condition by condition, and its report of
-each graph's nodes is pinned. A package built on the library runs the same
-check over its own (`#check_aif under TestimonyExamples`).
+`Testimony.Checks.Aif` draws every dispute under a namespace it is given and
+checks it against the specification's Definition 1.1, condition by condition,
+and its report of each graph's nodes is pinned. The arguments run it over every
+dispute they have (`#check_aif under TestimonyArguments`), and the examples over
+theirs.
 
 One simplification, stated in the module: AIF wants a single conflicting
 element, and an attack in the library comes from everything a party holds, so

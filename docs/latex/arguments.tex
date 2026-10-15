@@ -24,7 +24,7 @@
 \section*{Born in Bethlehem — Micah 5:2}
 \addcontentsline{toc}{section}{Born in Bethlehem — Micah 5:2}
 
-\subsection*{Arguments.BornInBethlehem — Phase 1 vertical slice}
+\subsection*{TestimonyArguments.BornInBethlehem — Phase 1 vertical slice}
 Matthew 2:5–6 quotes Micah 5:2 as grounds that the Messiah is born in Bethlehem. Both the Christian predictive reading and a critical reading are encoded, and the argument is carried through to a \texttt{Satisfaction\allowbreak{}Witness} — the first end-to-end connection from cited premises to a claim that a person meets a messianic criterion.
 
 \texttt{jesus\allowbreak{}Born\allowbreak{}In\allowbreak{}Bethlehem} is cited to scripture alone. That is visible in the generated manifest via \texttt{scripture\allowbreak{}Only\allowbreak{}Atoms}, and it should be: the historicity of the Bethlehem birth is disputed in critical scholarship, and an argument that assumes it on the authority of the texts whose reading is in question is assuming part of what it sets out to show.
@@ -80,8 +80,7 @@ The criterion this argument establishes a candidate must meet.
 
 {\small\begin{verbatim}
 def bornInBethlehem : FulfillmentCriterion :=
-  { name := "born in Bethlehem",
-    basis := predictiveReading }
+  { name := "born in Bethlehem", basis := predictiveReading }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{cite}}\par\nobreak\noindent
 Citation and classification for every atom. Total, so nothing is uncited.
@@ -207,7 +206,7 @@ theorem christian_is_satisfiable : Satisfiable christian.premises
 \section*{Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3}
 \addcontentsline{toc}{section}{Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3}
 
-\subsection*{Arguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3}
+\subsection*{TestimonyArguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3}
 Matthew 1:22–23 quotes Isaiah 7:14 as grounds that the Messiah is born of a virgin. Unlike Micah 5:2 (see \texttt{Born\allowbreak{}In\allowbreak{}Bethlehem}), the predictive reading here is heavily disputed, and the dispute is lexical: the Hebrew עַלְמָה (\emph{almah}) means “young woman” and does not by itself mean “virgin”, while the Septuagint’s παρθένος does. Isaiah’s immediate context — a sign to Ahaz, apparently fulfilled within the prophet’s own generation (cf. Isa 8:3–4) — is read by most critical and much Jewish scholarship as having nothing to do with a future Messiah.
 
 The argument now runs on \textbf{four scriptural strands}, and that changes its shape. Each is encoded as a \texttt{Line} — its own grounds, its own inference step, what it delivers — and the packages are assembled from those rather than from flat premise lists. \texttt{Lines.lean} is where the shape of the argument is legible in one screen.
@@ -280,10 +279,10 @@ This argument is a directory, because at fourteen hundred lines it was one file 
 \end{longtable}
 Shared material lives further out: passages and citation bundles in \texttt{Testimony.Scripture}, the \texttt{Line} and \texttt{case\allowbreak{}Of} vocabulary in \texttt{Testimony.Logic.Line}, and the \texttt{establish} and \texttt{refute\_\allowbreak{}with} tactics in \texttt{Testimony.Logic.Tactic}.
 
-\subsection*{Arguments.BornOfAVirgin.Atoms — the atomic claims, and what cites them}
+\subsection*{TestimonyArguments.BornOfAVirgin.Atoms — the atomic claims, and what cites them}
 The atoms this argument is built from, the \texttt{Source} shapes that recur across them, the typed intertextual edges between the passages, and the criterion the argument is about. Everything here is \emph{what the argument is about}; nothing here asserts anything.
 
-See \texttt{Testimony.Arguments.Born\allowbreak{}Of\allowbreak{}AVirgin} for the dispute this encodes.
+See \texttt{Testimony\allowbreak{}Arguments.Born\allowbreak{}Of\allowbreak{}AVirgin} for the dispute this encodes.
 
 \paragraph*{Recurring sources}
 \leavevmode\par
@@ -374,7 +373,7 @@ Eight atoms and three intertextual edges cite exactly this, which is a fact abou
 
 {\small\begin{verbatim}
 def miravalleOnMary : Source :=
-  { primary := Reference.work Bib.miravalleMeetMary (Bib.Locus.pages 9 10),
+  { primary := Reference.work miravalleMeetMary (Bib.Locus.pages 9 10),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{brown\allowbreak{}On\allowbreak{}Birth}}\par\nobreak\noindent
@@ -385,7 +384,7 @@ Brown’s \emph{Birth of the Messiah}, taken whole: the critical case.
 {\small\begin{verbatim}
 def brownOnBirth : optParam Confidence Confidence.wellSupported → Source :=
   fun confidence =>
-    { primary := Reference.work Bib.brownBirthMessiah,
+    { primary := Reference.work brownBirthMessiah,
       tradition := Tradition.criticalScholarship, confidence := confidence }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{postell\allowbreak{}On\allowbreak{}Isaiah}}\par\nobreak\noindent
@@ -394,7 +393,7 @@ Postell on the compositional reading, at a given pinpoint. The pinpoint matters 
 {\small\begin{verbatim}
 def postellOnIsaiah : Bib.Locus → Confidence → Source :=
   fun l confidence =>
-    { primary := Reference.work Bib.postellIsaiahMessianic l,
+    { primary := Reference.work postellIsaiahMessianic l,
       tradition := Tradition.christianHistoricalGrammatical,
       confidence := confidence }
 \end{verbatim}}
@@ -406,7 +405,7 @@ Like \texttt{postell\allowbreak{}On\allowbreak{}Isaiah}, the pinpoint carries we
 {\small\begin{verbatim}
 def wegnerOnAlmah : Bib.Locus → Confidence → Source :=
   fun l confidence =>
-    { primary := Reference.work Bib.wegnerVirginBirths l,
+    { primary := Reference.work wegnerVirginBirths l,
       tradition := Tradition.christianHistoricalGrammatical,
       confidence := confidence }
 \end{verbatim}}
@@ -440,8 +439,7 @@ Genesis 3:15 read as promise rather than quotation. Typed as \texttt{.promise}, 
 {\small\begin{verbatim}
 def protoevangeliumEdge : IntertextEdge :=
   { fromPassage := Scripture.matthew1_23, toPassage := Scripture.genesis3_15,
-    relation := RelationType.promise,
-    source := miravalleOnMary }
+    relation := RelationType.promise, source := miravalleOnMary }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{micah\allowbreak{}Maternal\allowbreak{}Edge}}\par\nobreak\noindent
 Micah 5:3’s maternal reference, read as a messianic theme rather than a verbal link — there is no quotation of Micah 5:3 in the birth narratives.
@@ -460,9 +458,7 @@ def lukeAllusionEdge : IntertextEdge :=
   { fromPassage := Scripture.luke1_31, toPassage := Scripture.isaiah7_14,
     relation := RelationType.allusion,
     source :=
-      {
-        primary :=
-          Reference.work Bib.rhodeaDidMatthewConceive (Bib.Locus.page 71),
+      { primary := Reference.work rhodeaDidMatthewConceive (Bib.Locus.page 71),
         supporting :=
           [Reference.scripture
               [Scripture.verseIn TextualTradition.nestleAland28
@@ -480,13 +476,10 @@ def annunciationFormEdge : IntertextEdge :=
   { fromPassage := Scripture.luke1_31, toPassage := Scripture.genesis16_11,
     relation := RelationType.thematic,
     source :=
-      {
-        primary :=
-          Reference.work Bib.johnsonSamsonTypeScene (Bib.Locus.page 270),
+      { primary := Reference.work johnsonSamsonTypeScene (Bib.Locus.page 270),
         supporting :=
-          [Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 113 114),
-            Reference.work Bib.brownProblemVirginalConception
-              (Bib.Locus.page 31)],
+          [Reference.work youngImmanuelProphecy (Bib.Locus.pages 113 114),
+            Reference.work brownProblemVirginalConception (Bib.Locus.page 31)],
         tradition := Tradition.criticalScholarship,
         confidence := Confidence.wellSupported } }
 \end{verbatim}}
@@ -531,10 +524,9 @@ The criterion this argument establishes a candidate must meet.
 
 {\small\begin{verbatim}
 def bornOfAVirgin : FulfillmentCriterion :=
-  { name := "born of a virgin",
-    basis := predictiveReading }
+  { name := "born of a virgin", basis := predictiveReading }
 \end{verbatim}}
-\subsection*{Arguments.BornOfAVirgin.Sources.NearTerm — the citations of the near-term dispute}
+\subsection*{TestimonyArguments.BornOfAVirgin.Sources.NearTerm — the citations of the near-term dispute}
 The atoms of the dispute over the critical denial, cited here and dispatched from \texttt{cite} by name: the critic’s two premises, that 7:14 was a near-term sign to Ahaz and that such a sign excludes a messianic sense, and the grounds of the replies to them — Berry’s, Postell’s Micah counterexample, and Motyer’s with Compton’s. (Postell’s Isaiah counterexample rests on atoms the compositional strand also uses, and is cited with them in \texttt{Sources.lean}.)
 
 They sit apart for the reason \texttt{Sources.Wegner} does: \texttt{cite} stays one total function, and each value below is reached from exactly one of its cases.
@@ -575,7 +567,7 @@ def nearTermFulfilmentIsUnclearCited : AtomMeta :=
         primary :=
           Reference.work Bib.berryVirginBirth (Bib.Locus.pages 1653 1654),
         supporting :=
-          [Reference.work Bib.comptonImmanuelProphecy (Bib.Locus.pages 5 9)],
+          [Reference.work comptonImmanuelProphecy (Bib.Locus.pages 5 9)],
         tradition := Tradition.christianHistoricalGrammatical,
         confidence := Confidence.wellSupported } }
 \end{verbatim}}
@@ -591,9 +583,9 @@ def signGivenToHouseOfDavidCited : AtomMeta :=
     source :=
       { primary := Reference.scripture Scripture.immanuelAddressees,
         supporting :=
-          [Reference.work Bib.comptonImmanuelProphecy (Bib.Locus.page 12),
-            Reference.work Bib.youngImmanuelProphecy (Bib.Locus.page 112),
-            Reference.work Bib.motyerContextContent (Bib.Locus.page 122)],
+          [Reference.work comptonImmanuelProphecy (Bib.Locus.page 12),
+            Reference.work youngImmanuelProphecy (Bib.Locus.page 112),
+            Reference.work motyerContextContent (Bib.Locus.page 122)],
         tradition := Tradition.criticalScholarship,
         confidence := Confidence.consensus } }
 \end{verbatim}}
@@ -607,9 +599,9 @@ def maherShalalHashBazRepeatsTheTimetableCited : AtomMeta :=
       "Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14",
     kind := PremiseKind.textual,
     source :=
-      { primary := Reference.work Bib.motyerContextContent (Bib.Locus.page 124),
+      { primary := Reference.work motyerContextContent (Bib.Locus.page 124),
         supporting :=
-          [Reference.work Bib.comptonImmanuelProphecy (Bib.Locus.page 13),
+          [Reference.work comptonImmanuelProphecy (Bib.Locus.page 13),
             Reference.scripture Scripture.sharedTimetable],
         tradition := Tradition.christianHistoricalGrammatical,
         confidence := Confidence.wellSupported } }
@@ -626,7 +618,7 @@ def micahRulerFacesAssyriaCited : AtomMeta :=
     source :=
       { primary := Reference.scripture Scripture.micahAssyrianSetting,
         supporting :=
-          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 481)],
+          [Reference.work postellIsaiahMessianic (Bib.Locus.page 481)],
         tradition := Tradition.criticalScholarship,
         confidence := Confidence.consensus } }
 \end{verbatim}}
@@ -638,17 +630,14 @@ def micahRulerReadMessianicallyCited : AtomMeta :=
   { label := "Micah 5:2 was read messianically in first-century Judaism",
     kind := PremiseKind.historical,
     source :=
-      {
-        primary :=
-          Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 481),
+      { primary := Reference.work postellIsaiahMessianic (Bib.Locus.page 481),
         supporting :=
-          [Reference.work Bib.brownProblemVirginalConception
-              (Bib.Locus.page 26),
+          [Reference.work brownProblemVirginalConception (Bib.Locus.page 26),
             Reference.scripture Scripture.bethlehemExpectation],
         tradition := Tradition.christianHistoricalGrammatical,
         confidence := Confidence.wellSupported } }
 \end{verbatim}}
-\subsection*{Arguments.BornOfAVirgin.Sources.Wegner — the citations of the sign dispute}
+\subsection*{TestimonyArguments.BornOfAVirgin.Sources.Wegner — the citations of the sign dispute}
 The atoms of the dispute over Wegner’s objection, cited here and dispatched from \texttt{cite} by name. They are the parse of הָרָה, the pregnancy it reports, what that pregnancy is taken to show, and the fathers’ sign argument against it with the near-term reply to that.
 
 They sit apart because \texttt{cite} is one total function over every atom. It keeps that guarantee: each value below is reached from exactly one of its cases, so an atom still cannot go uncited. What moves is only where the citation is written, which keeps \texttt{Sources.lean} short enough to read.
@@ -668,8 +657,8 @@ def harahIsPredicateAdjectiveCited : AtomMeta :=
           Confidence.wellSupported;
       { primary := __src.primary,
         supporting :=
-          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 474),
-            Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 115 116)],
+          [Reference.work postellIsaiahMessianic (Bib.Locus.page 474),
+            Reference.work youngImmanuelProphecy (Bib.Locus.pages 115 116)],
         tradition := __src.tradition, confidence := __src.confidence } }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{isaianic\allowbreak{}Almah\allowbreak{}Is\allowbreak{}Already\allowbreak{}Pregnant\allowbreak{}Cited}}\par\nobreak\noindent
@@ -687,8 +676,8 @@ def isaianicAlmahIsAlreadyPregnantCited : AtomMeta :=
           Confidence.wellSupported;
       { primary := __src.primary,
         supporting :=
-          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 468),
-            Reference.work Bib.youngImmanuelProphecy (Bib.Locus.pages 116 117)],
+          [Reference.work postellIsaiahMessianic (Bib.Locus.page 468),
+            Reference.work youngImmanuelProphecy (Bib.Locus.pages 116 117)],
         tradition := __src.tradition, confidence := __src.confidence } }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{pregnancy\allowbreak{}At\allowbreak{}The\allowbreak{}Sign\allowbreak{}Is\allowbreak{}Ordinary\allowbreak{}Cited}}\par\nobreak\noindent
@@ -704,7 +693,7 @@ def pregnancyAtTheSignIsOrdinaryCited : AtomMeta :=
           Confidence.disputed;
       { primary := __src.primary,
         supporting :=
-          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 474)],
+          [Reference.work postellIsaiahMessianic (Bib.Locus.page 474)],
         tradition := __src.tradition, confidence := __src.confidence } }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{isaianic\allowbreak{}Almah\allowbreak{}Is\allowbreak{}Not\allowbreak{}AVirgin\allowbreak{}Cited}}\par\nobreak\noindent
@@ -720,7 +709,7 @@ def isaianicAlmahIsNotAVirginCited : AtomMeta :=
           Confidence.disputed;
       { primary := __src.primary,
         supporting :=
-          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 468)],
+          [Reference.work postellIsaiahMessianic (Bib.Locus.page 468)],
         tradition := __src.tradition, confidence := __src.confidence } }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{one\allowbreak{}Referent\allowbreak{}Settles\allowbreak{}Denotation\allowbreak{}Cited}}\par\nobreak\noindent
@@ -738,8 +727,8 @@ def oneReferentSettlesDenotationCited : AtomMeta :=
           Confidence.disputed;
       { primary := __src.primary,
         supporting :=
-          [Reference.work Bib.postellIsaiahMessianic (Bib.Locus.page 468),
-            Reference.work Bib.ricoGentryInfantKing (Bib.Locus.page 152)],
+          [Reference.work postellIsaiahMessianic (Bib.Locus.page 468),
+            Reference.work ricoGentryInfantKing (Bib.Locus.page 152)],
         tradition := __src.tradition, confidence := __src.confidence } }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{other\allowbreak{}Clear\allowbreak{}Almah\allowbreak{}Cases\allowbreak{}Are\allowbreak{}Virgins\allowbreak{}Cited}}\par\nobreak\noindent
@@ -766,11 +755,11 @@ def ordinaryConceptionIsNoMarvelCited : AtomMeta :=
     source :=
       {
         primary :=
-          Reference.work Bib.irenaeusAgainstHeresies
+          Reference.work irenaeusAgainstHeresies
             (Bib.Locus.sectionRef "III.21.6"),
         supporting :=
-          [Reference.work Bib.justinDialogue (Bib.Locus.sectionRef "84"),
-            Reference.work Bib.rhodeaDidMatthewConceive (Bib.Locus.page 64)],
+          [Reference.work justinDialogue (Bib.Locus.sectionRef "84"),
+            Reference.work rhodeaDidMatthewConceive (Bib.Locus.page 64)],
         tradition := Tradition.christianTypological,
         confidence := Confidence.consensus } }
 \end{verbatim}}
@@ -786,8 +775,8 @@ def isaianicSignsAreOrdinaryEventsCited : AtomMeta :=
     source :=
       { primary := Reference.scripture Scripture.ordinaryIsaianicSigns,
         supporting :=
-          [Reference.work Bib.rhodeaDidMatthewConceive (Bib.Locus.page 64),
-            Reference.work Bib.wegnerVirginBirths (Bib.Locus.page 470)],
+          [Reference.work rhodeaDidMatthewConceive (Bib.Locus.page 64),
+            Reference.work wegnerVirginBirths (Bib.Locus.page 470)],
         tradition := Tradition.criticalScholarship,
         confidence := Confidence.consensus } }
 \end{verbatim}}
@@ -805,12 +794,12 @@ def signDatedByAChildsInfancyCited : AtomMeta :=
             [Scripture.verseIn TextualTradition.masoretic
                 { book := Book.isaiah, chapter := 7, verse := 16 }],
         supporting :=
-          [Reference.work Bib.wegnerVirginBirths (Bib.Locus.page 477),
-            Reference.work Bib.comptonImmanuelProphecy (Bib.Locus.page 14)],
+          [Reference.work wegnerVirginBirths (Bib.Locus.page 477),
+            Reference.work comptonImmanuelProphecy (Bib.Locus.page 14)],
         tradition := Tradition.criticalScholarship,
         confidence := Confidence.consensus } }
 \end{verbatim}}
-\subsection*{Arguments.BornOfAVirgin.Sources — a citation for every atom}
+\subsection*{TestimonyArguments.BornOfAVirgin.Sources — a citation for every atom}
 \texttt{cite} is total, so an atom without a citation does not compile. This is the file that makes that obligation concrete: every atom, each with a prose statement of what it asserts, a classification, and who says so at what pinpoint with what confidence.
 
 It was once the largest file in the argument, and the atoms of its two disputes are now cited in modules of their own: \texttt{Sources.Near\allowbreak{}Term} for the dispute over the critical denial, \texttt{Sources.Wegner} for the dispute over Wegner’s objection. \texttt{cite} reaches each of those citations by name from one of its cases, so it is still one total function, and a new atom still cannot be left out of it.
@@ -825,7 +814,7 @@ Citation and classification for every atom. Total, so nothing is uncited.
 {\small\begin{verbatim}
 def cite : Claim → AtomMeta
 \end{verbatim}}
-\subsection*{Arguments.BornOfAVirgin.Lines — the steps, and the lines of reason}
+\subsection*{TestimonyArguments.BornOfAVirgin.Lines — the steps, and the lines of reason}
 Every inference this argument makes, and the four strands they compose into.
 
 Inference steps carry no \texttt{confidence} field of their own — a step is a claim that \emph{these premises license that conclusion}, which is a different kind of claim from an atom, and the library does not pretend to grade it. Where a step is contestable even though the atoms it joins are well supported, the docstring says so; \texttt{berry\allowbreak{}Blocks\allowbreak{}Exclusion} is the clearest case.
@@ -1149,12 +1138,10 @@ The four scriptural strands, in the order the module doc introduces them. \textt
 
 {\small\begin{verbatim}
 def scripturalLines : List (Line Claim) :=
-  [isaianicLine,
-    protoevangeliumLine,
-    micheanLine,
-    compositionalLine]
+  [isaianicLine, protoevangeliumLine,
+    micheanLine, compositionalLine]
 \end{verbatim}}
-\subsection*{Arguments.BornOfAVirgin.Packages — the positions, and the variants}
+\subsection*{TestimonyArguments.BornOfAVirgin.Packages — the positions, and the variants}
 A handful of these packages are positions someone holds; the rest exist to be \emph{refuted}, because “this premise is load-bearing” is proved by removing it and exhibiting a countermodel, and the package with it removed has to be written down to be refuted. So the file grows with every result, and counting it here would only be one more thing to keep current.
 
 Each variant is a named difference from \texttt{christian}: one line on different grounds, or one fewer line. Before \texttt{Line} existed each restated the whole twenty-one element premise list, where a reader could not see which premise had gone and a slip in the other twenty was invisible.
@@ -1671,7 +1658,7 @@ Written flat: it is the objector’s grounds and the replies to them side by sid
   \vdash \quad & \lnot P_{53}
 \end{align*}
 \emph{Grounded in scripture alone:} The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, ‘virgin’.
-\subsection*{Arguments.BornOfAVirgin.Results — what does and does not follow}
+\subsection*{TestimonyArguments.BornOfAVirgin.Results — what does and does not follow}
 Every result about the strands, each tagged \texttt{@[headline]} and each followed by \texttt{\#print axioms} so its trust base is visible in the source. The results about Wegner’s objection — its validity, its circle, and the replies to it, the fathers’ sign argument among them — are in \texttt{Results.Wegner}.
 
 Entailments are established with \texttt{establish}; refutations name a countermodel and use \texttt{refute\_\allowbreak{}with}. A countermodel here is the rival’s reading written down as a valuation, which is why each one is a named definition with a docstring saying what position it encodes rather than an anonymous function.
@@ -1776,8 +1763,7 @@ The Reformed objection, written down: papal teaching says what it says, and sayi
 def reformedReading : Valuation Claim :=
   fun a =>
     match a with
-    | Claim.magisteriumIsDoctrinallyAuthoritative =>
-      False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | Claim.messiahBornOfVirgin => False
     | Claim.jesusSatisfiesCriterion => False
     | x => True
@@ -1854,8 +1840,7 @@ The referential reading, written down: the versions differ about which term to u
 def compatibilityReading : Valuation Claim :=
   fun a =>
     match a with
-    | Claim.versionalDivergenceRefutesVirginSense =>
-      False
+    | Claim.versionalDivergenceRefutesVirginSense => False
     | Claim.lexicalSenseRequiredForFulfilment => False
     | x => True
 \end{verbatim}}
@@ -2018,7 +2003,7 @@ The lexical objection has a model.
 theorem lexicalCritical_is_satisfiable : Satisfiable lexicalCritical.premises
 -- axioms: propext, Quot.sound
 \end{verbatim}}
-\subsection*{Arguments.BornOfAVirgin.Results.Wegner — Wegner’s objection, and the sign}
+\subsection*{TestimonyArguments.BornOfAVirgin.Results.Wegner — Wegner’s objection, and the sign}
 What follows from Wegner’s grammatical objection and from the replies to it: that it is valid, where its weight rests, the circle in it, Postell’s usage parity, and the fathers’ sign argument together with the near-term reply to that. \texttt{Dispute.Wegner} then asks who prevails when these meet.
 
 Every result is tagged \texttt{@[headline]} and followed by \texttt{\#print axioms}, as in \texttt{Results.lean}, and every countermodel is a named reading.
@@ -2156,8 +2141,7 @@ def nearTermSignReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.maternalSilenceImpliesNoHumanFather => False
-    | Claim.magisteriumIsDoctrinallyAuthoritative =>
-      False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | Claim.signMustBeExtraordinary => False
     | Claim.almahMeansVirgin => False
     | x => True
@@ -2204,7 +2188,7 @@ Wegner’s objection has a model.
 theorem wegnerLexical_is_satisfiable : Satisfiable wegnerLexical.premises
 -- axioms: propext, Quot.sound
 \end{verbatim}}
-\subsection*{Arguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14}
+\subsection*{TestimonyArguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14}
 The results in \texttt{Results.lean} ask what each package entails. This module asks what happens when the packages meet: the scriptural reading, the critical denial of the predictive reading, and four replies to that denial — Berry’s objection, Postell’s two counterexamples (Isaiah 9 and 11, and Micah 5), and Motyer’s reply, with Compton’s — taken together as one dispute.
 
 Who defeats whom is not stipulated. Each defeat below is a theorem about the packages’ premises, and so is each absence of one (see \texttt{Testimony.Logic.Dispute} for how an attack is derived from entailment and filtered by cited confidence). The defeats are these:
@@ -2249,8 +2233,7 @@ def repliesStandReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.maternalSilenceProvesNothing => False
-    | Claim.magisteriumIsDoctrinallyAuthoritative =>
-      False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | Claim.nearTermExcludesMessianicSense => False
     | x => True
 \end{verbatim}}
@@ -2348,8 +2331,7 @@ def motyerReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.maternalSilenceProvesNothing => False
-    | Claim.magisteriumIsDoctrinallyAuthoritative =>
-      False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | Claim.isaiahIsNearTermSignToAhaz => False
     | Claim.nearTermExcludesMessianicSense => False
     | x => True
@@ -2440,8 +2422,7 @@ def scripturalWorldReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.maternalSilenceProvesNothing => False
-    | Claim.magisteriumIsDoctrinallyAuthoritative =>
-      False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{christian\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}undermine\_\allowbreak{}critical}}\par\nobreak\noindent
@@ -2530,11 +2511,9 @@ def laterOraclesReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.maternalSilenceImpliesNoHumanFather => False
-    | Claim.magisteriumIsDoctrinallyAuthoritative =>
-      False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | Claim.isaiahPredictsVirginBirth => False
-    | Claim.isaiah9And11ShareTheAssyrianTimeline =>
-      False
+    | Claim.isaiah9And11ShareTheAssyrianTimeline => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{critic\_\allowbreak{}grants\_\allowbreak{}postells\_\allowbreak{}step\_\allowbreak{}by\_\allowbreak{}dating\_\allowbreak{}the\_\allowbreak{}oracles\_\allowbreak{}later}}\par\nobreak\noindent
@@ -2553,8 +2532,7 @@ def royalMicahReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.maternalSilenceImpliesNoHumanFather => False
-    | Claim.magisteriumIsDoctrinallyAuthoritative =>
-      False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | Claim.isaiahPredictsVirginBirth => False
     | Claim.micahRulerReadMessianically => False
     | x => True
@@ -2576,16 +2554,11 @@ The package each party argues from.
 def partyNode : Party → ArgumentPackage Claim :=
   fun x =>
     match x with
-    | Party.scriptural =>
-      christian
-    | Party.critical =>
-      criticalDenial
-    | Party.berry =>
-      berryObjection
-    | Party.postell =>
-      postellParity
-    | Party.motyer =>
-      motyerReply
+    | Party.scriptural => christian
+    | Party.critical => criticalDenial
+    | Party.berry => berryObjection
+    | Party.postell => postellParity
+    | Party.motyer => motyerReply
     | Party.micah => micahParity
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute}}\par\nobreak\noindent
@@ -2614,22 +2587,14 @@ The defeats of the dispute, as a table.
 def partyDefeats : Party → Party → Prop :=
   fun x x_1 =>
     match x, x_1 with
-    | Party.critical,
-      Party.scriptural => True
-    | Party.scriptural,
-      Party.critical => True
-    | Party.berry,
-      Party.critical => True
-    | Party.postell,
-      Party.critical => True
-    | Party.motyer,
-      Party.critical => True
-    | Party.micah,
-      Party.critical => True
-    | Party.critical,
-      Party.berry => True
-    | Party.critical,
-      Party.motyer => True
+    | Party.critical, Party.scriptural => True
+    | Party.scriptural, Party.critical => True
+    | Party.berry, Party.critical => True
+    | Party.postell, Party.critical => True
+    | Party.motyer, Party.critical => True
+    | Party.micah, Party.critical => True
+    | Party.critical, Party.berry => True
+    | Party.critical, Party.motyer => True
     | x, x_2 => False
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
@@ -2674,12 +2639,9 @@ The dispute in the form the verdict solver computes with.
 def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
   {
     parties :=
-      [Party.scriptural,
-        Party.critical,
-        Party.berry,
-        Party.postell,
-        Party.motyer,
-        Party.micah],
+      [Party.scriptural, Party.critical,
+        Party.berry, Party.postell,
+        Party.motyer, Party.micah],
     complete := isaiahFinite._proof_1,
     defeats := fun i j => decide (partyDefeats i j),
     spec := isaiahFinite._proof_2 }
@@ -2896,9 +2858,7 @@ The scriptural reading and the critic alone.
 {\small\begin{verbatim}
 def unanswered : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical] } :=
   isaiahDispute.restrict fun x =>
-    x ∈
-      [Party.scriptural,
-        Party.critical]
+    x ∈ [Party.scriptural, Party.critical]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{each\allowbreak{}Defeats\allowbreak{}The\allowbreak{}Other}}\par\nobreak\noindent
 Why nothing prevails unanswered: the two defeat each other.
@@ -2948,8 +2908,7 @@ def motyerAlone : Dispute Claim { i // i ∈ [Party.scriptural, Party.critical,
     Party.motyer] } :=
   isaiahDispute.restrict fun x =>
     x ∈
-      [Party.scriptural,
-        Party.critical,
+      [Party.scriptural, Party.critical,
         Party.motyer]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{motyer\allowbreak{}Ties\allowbreak{}With\allowbreak{}The\allowbreak{}Critic}}\par\nobreak\noindent
@@ -3002,8 +2961,7 @@ Every party but Postell’s Isaiah counterexample.
 
 {\small\begin{verbatim}
 def withoutPostell : Dispute Claim { i // i ≠ Party.postell } :=
-  isaiahDispute.restrict fun x =>
-    x ≠ Party.postell
+  isaiahDispute.restrict fun x => x ≠ Party.postell
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{micah\allowbreak{}Carries\allowbreak{}The\allowbreak{}Verdict}}\par\nobreak\noindent
 How the scriptural reading prevails without Postell’s Isaiah argument, in stages: the Micah counterexample first, then the three it defends.
@@ -3071,9 +3029,7 @@ Every party but the two counterexamples.
 {\small\begin{verbatim}
 def withoutParity : Dispute Claim { i // i ∉ [Party.postell, Party.micah] } :=
   isaiahDispute.restrict fun x =>
-    x ∉
-      [Party.postell,
-        Party.micah]
+    x ∉ [Party.postell, Party.micah]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{every\allowbreak{}Reply\allowbreak{}Ties\allowbreak{}With\allowbreak{}The\allowbreak{}Critic}}\par\nobreak\noindent
 Why nothing prevails without the counterexamples: the critic defeats every reply it faces, and the replies defeat it.
@@ -3125,7 +3081,7 @@ theorem nothing_prevails_without_the_counterexamples : Framework.grounded
     withoutParity.defeats = ∅
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\subsection*{Arguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner’s objection}
+\subsection*{TestimonyArguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner’s objection}
 The sign argument attacks Wegner’s objection, not the critical denial of the predictive reading, so it belongs to a dispute of its own rather than to \texttt{isaiah\allowbreak{}Dispute}. Three positions meet here: Wegner’s objection at full strength, the fathers’ sign argument against its ordinary pregnancy, and the near-term reply that a sign need not be a miracle.
 
 As in \texttt{Dispute.lean}, who defeats whom is proved, not stipulated:
@@ -3250,12 +3206,9 @@ The package each party argues from.
 def wegnerPartyNode : WegnerParty → ArgumentPackage Claim :=
   fun x =>
     match x with
-    | WegnerParty.wegner =>
-      wegnerLexical
-    | WegnerParty.sign =>
-      signArgument
-    | WegnerParty.reply =>
-      ordinarySignReply
+    | WegnerParty.wegner => wegnerLexical
+    | WegnerParty.sign => signArgument
+    | WegnerParty.reply => ordinarySignReply
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute}}\par\nobreak\noindent
 The dispute over Wegner’s objection: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated.
@@ -3282,14 +3235,10 @@ The defeats of the dispute, as a table.
 def wegnerPartyDefeats : WegnerParty → WegnerParty → Prop :=
   fun x x_1 =>
     match x, x_1 with
-    | WegnerParty.sign,
-      WegnerParty.wegner => True
-    | WegnerParty.wegner,
-      WegnerParty.sign => True
-    | WegnerParty.reply,
-      WegnerParty.sign => True
-    | WegnerParty.sign,
-      WegnerParty.reply => True
+    | WegnerParty.sign, WegnerParty.wegner => True
+    | WegnerParty.wegner, WegnerParty.sign => True
+    | WegnerParty.reply, WegnerParty.sign => True
+    | WegnerParty.sign, WegnerParty.reply => True
     | x, x_2 => False
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
@@ -3322,12 +3271,10 @@ The dispute in the form the verdict solver computes with.
 def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
   {
     parties :=
-      [WegnerParty.wegner,
-        WegnerParty.sign,
+      [WegnerParty.wegner, WegnerParty.sign,
         WegnerParty.reply],
     complete := wegnerFinite._proof_1,
-    defeats := fun i j =>
-      decide (wegnerPartyDefeats i j),
+    defeats := fun i j => decide (wegnerPartyDefeats i j),
     spec := wegnerFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
@@ -3518,9 +3465,7 @@ Wegner and the fathers alone.
 def signAgainstWegner : Dispute Claim { i // i ∈ [WegnerParty.wegner,
     WegnerParty.sign] } :=
   wegnerDispute.restrict fun x =>
-    x ∈
-      [WegnerParty.wegner,
-        WegnerParty.sign]
+    x ∈ [WegnerParty.wegner, WegnerParty.sign]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}And\allowbreak{}The\allowbreak{}Fathers\allowbreak{}Tie}}\par\nobreak\noindent
 Why nothing prevails without the reply: Wegner and the fathers defeat each other.
@@ -3555,7 +3500,7 @@ theorem nothing_prevails_without_the_reply : Framework.grounded
 \section*{Sola fide}
 \addcontentsline{toc}{section}{Sola fide}
 
-\subsection*{Arguments.SolaFide — justification by grace through faith, not works}
+\subsection*{TestimonyArguments.SolaFide — justification by grace through faith, not works}
 The Reformation’s material principle, encoded so that its premises are visible and its disputed step is identified mechanically.
 
 The argument runs on \textbf{three independent strands}, and that is the point.
@@ -3620,10 +3565,10 @@ Encoding three strands yields a result no single strand could: no disputed premi
 \texttt{Baptism.lean} & water, Spirit and fire apart; the instrumental cause; John 3:5 \\
 \bottomrule
 \end{longtable}
-\subsection*{Arguments.SolaFide.Atoms — the atomic claims}
-The prooftexts of the three strands, their four disputed premises, the reading of Galatians as a polemic, the authorship of the disputed letters, the rivals’ premises — covenantal nomism, forensic justification, the apocalyptic reading — the James premises, and the three parts of the conclusion. See \texttt{Testimony.Arguments.Sola\allowbreak{}Fide} for the dispute this encodes.
+\subsection*{TestimonyArguments.SolaFide.Atoms — the atomic claims}
+The prooftexts of the three strands, their four disputed premises, the reading of Galatians as a polemic, the authorship of the disputed letters, the rivals’ premises — covenantal nomism, forensic justification, the apocalyptic reading — the James premises, and the three parts of the conclusion. See \texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide} for the dispute this encodes.
 
-\subsection*{Arguments.SolaFide.Sources — a citation for every atom}
+\subsection*{TestimonyArguments.SolaFide.Sources — a citation for every atom}
 Several \texttt{cite} functions, not one. The atoms are shared across the positions; the \emph{citation} of a disputed premise is not, because each side of a dispute is cited to its own scholarship. The Reformed tradition and the New Perspective part over what Paul’s ἔργα νόμου denotes; Dunn and Hays part over the genitive in πίστις Χριστοῦ; the apocalyptic reading parts from both.
 
 \texttt{base\allowbreak{}Cite} carries the default citation of every atom; \texttt{reformed\allowbreak{}Cite}, \texttt{new\allowbreak{}Perspective\allowbreak{}Cite}, \texttt{subjective\allowbreak{}Genitive\allowbreak{}Cite}, \texttt{apocalyptic\allowbreak{}Cite} and \texttt{law\allowbreak{}Observant\allowbreak{}Luke\allowbreak{}Cite} each override the one atom where their position parts from it, and \texttt{critical\allowbreak{}Authorship\allowbreak{}Cite} the four atoms on who wrote the disputed letters. That is the disagreement made mechanical: it shows up as a difference in the generated manifest rather than as a remark in a docstring.
@@ -3757,7 +3702,7 @@ $P_{106}$ & 1 Peter 2:5: spiritual sacrifices acceptable to God through Jesus Ch
 def trentAgainstFaithAlone : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef "Trent, Session VI (1547), canon 9"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
@@ -3768,7 +3713,7 @@ Trent’s own step, from merit to the denial of “not by works”. Rated \textt
 def trentOnMerit : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef
           "Trent, Session VI (1547), Decree on Justification, ch. 16"),
     tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
@@ -3778,8 +3723,8 @@ def trentOnMerit : Source :=
 
 {\small\begin{verbatim}
 def trentAgainstThePleaAlone : Source :=
-  { primary := Reference.work Bib.waterworthTrent (Bib.Locus.page 45),
-    supporting := [Reference.work Bib.waterworthTrent (Bib.Locus.pages 33 34)],
+  { primary := Reference.work waterworthTrent (Bib.Locus.page 45),
+    supporting := [Reference.work waterworthTrent (Bib.Locus.pages 33 34)],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{calvin\allowbreak{}Against\allowbreak{}Obedience\allowbreak{}As\allowbreak{}Ground}}\par\nobreak\noindent
@@ -3787,7 +3732,7 @@ def trentAgainstThePleaAlone : Source :=
 
 {\small\begin{verbatim}
 def calvinAgainstObedienceAsGround : Source :=
-  { primary := Reference.work Bib.calvinHarmony1 (Bib.Locus.pages 367 368),
+  { primary := Reference.work calvinHarmony1 (Bib.Locus.pages 367 368),
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -3798,7 +3743,7 @@ def calvinAgainstObedienceAsGround : Source :=
 def catechismAgainstDoingAsBelieving : Source :=
   {
     primary :=
-      Reference.work Bib.catechismCatholicChurch (Bib.Locus.sectionRef "2826"),
+      Reference.work catechismCatholicChurch (Bib.Locus.sectionRef "2826"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{calvin\allowbreak{}Against\allowbreak{}The\allowbreak{}Commandments\allowbreak{}As\allowbreak{}The\allowbreak{}Way}}\par\nobreak\noindent
@@ -3806,7 +3751,7 @@ def catechismAgainstDoingAsBelieving : Source :=
 
 {\small\begin{verbatim}
 def calvinAgainstTheCommandmentsAsTheWay : Source :=
-  { primary := Reference.work Bib.calvinHarmony2 (Bib.Locus.page 394),
+  { primary := Reference.work calvinHarmony2 (Bib.Locus.page 394),
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -3815,7 +3760,7 @@ def calvinAgainstTheCommandmentsAsTheWay : Source :=
 
 {\small\begin{verbatim}
 def veritatisSplendorAgainstTheLegalReply : Source :=
-  { primary := Reference.work Bib.veritatisSplendor (Bib.Locus.sectionRef "12"),
+  { primary := Reference.work veritatisSplendor (Bib.Locus.sectionRef "12"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{calvin\allowbreak{}Against\allowbreak{}Baptism\allowbreak{}In\allowbreak{}John\allowbreak{}Three\allowbreak{}Five}}\par\nobreak\noindent
@@ -3823,7 +3768,7 @@ def veritatisSplendorAgainstTheLegalReply : Source :=
 
 {\small\begin{verbatim}
 def calvinAgainstBaptismInJohnThreeFive : Source :=
-  { primary := Reference.work Bib.calvinJohn (Bib.Locus.page 110),
+  { primary := Reference.work calvinJohn (Bib.Locus.page 110),
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -3832,7 +3777,7 @@ def calvinAgainstBaptismInJohnThreeFive : Source :=
 
 {\small\begin{verbatim}
 def readingsWithoutTheWater : Source :=
-  { primary := Reference.work Bib.oliverWaterJohn,
+  { primary := Reference.work oliverWaterJohn,
     supporting :=
       [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.xvi.25")],
     tradition := Tradition.christianHistoricalGrammatical,
@@ -3845,10 +3790,10 @@ def readingsWithoutTheWater : Source :=
 def augustineOnTheThief : Source :=
   {
     primary :=
-      Reference.work Bib.npnfAugustineManichaeans
+      Reference.work npnfAugustineManichaeans
         (Bib.Locus.sectionRef "On Baptism IV.23.31"),
     supporting :=
-      [Reference.work Bib.aquinasSumma (Bib.Locus.sectionRef "III q.66 a.11")],
+      [Reference.work aquinasSumma (Bib.Locus.sectionRef "III q.66 a.11")],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 \end{verbatim}}
@@ -3859,7 +3804,7 @@ def augustineOnTheThief : Source :=
 def catechismOnDesire : Source :=
   {
     primary :=
-      Reference.work Bib.catechismCatholicChurch (Bib.Locus.sectionRef "1259"),
+      Reference.work catechismCatholicChurch (Bib.Locus.sectionRef "1259"),
     tradition := Tradition.romanCatholic,
     confidence := Confidence.wellSupported }
 \end{verbatim}}
@@ -3870,10 +3815,9 @@ def catechismOnDesire : Source :=
 def westminsterOnTheDesire : Source :=
   {
     primary :=
-      Reference.work Bib.westminsterConfession
-        (Bib.Locus.sectionRef "XXVIII.5"),
+      Reference.work westminsterConfession (Bib.Locus.sectionRef "XXVIII.5"),
     supporting :=
-      [Reference.work Bib.westminsterConfession (Bib.Locus.sectionRef "XI.2")],
+      [Reference.work westminsterConfession (Bib.Locus.sectionRef "XI.2")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -3884,8 +3828,7 @@ def westminsterOnTheDesire : Source :=
 def aquinasOnTheDesire : Source :=
   {
     primary :=
-      Reference.work Bib.aquinasSumma
-        (Bib.Locus.sectionRef "III q.69 a.4 ad 2"),
+      Reference.work aquinasSumma (Bib.Locus.sectionRef "III q.69 a.4 ad 2"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{calvin\allowbreak{}On\allowbreak{}Acts\allowbreak{}Ten}}\par\nobreak\noindent
@@ -3893,10 +3836,9 @@ def aquinasOnTheDesire : Source :=
 
 {\small\begin{verbatim}
 def calvinOnActsTen : Source :=
-  { primary := Reference.work Bib.calvinActs1 (Bib.Locus.page 454),
+  { primary := Reference.work calvinActs1 (Bib.Locus.page 454),
     supporting :=
-      [Reference.work Bib.catechismCatholicChurch
-          (Bib.Locus.sectionRef "1257")],
+      [Reference.work catechismCatholicChurch (Bib.Locus.sectionRef "1257")],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.consensus }
 \end{verbatim}}
@@ -3913,8 +3855,8 @@ The apocalyptic reading’s step, from Christ’s faithfulness and God’s deliv
 
 {\small\begin{verbatim}
 def campbellOnDeliverance : Source :=
-  { primary := Reference.work Bib.campbellDeliveranceOfGod,
-    supporting := [Reference.work Bib.martynGalatians],
+  { primary := Reference.work campbellDeliveranceOfGod,
+    supporting := [Reference.work martynGalatians],
     tradition := Tradition.criticalScholarship,
     confidence := Confidence.plausible }
 \end{verbatim}}
@@ -3949,7 +3891,23 @@ def reformedCite : Claim → AtomMeta :=
 The New Perspective’s reading of the disputed premise: ἔργα νόμου denotes the covenant boundary markers, so Paul is not addressing human effort in general.
 
 {\small\begin{verbatim}
-def newPerspectiveCite : Claim → AtomMeta
+def newPerspectiveCite : Claim → AtomMeta :=
+  fun x =>
+    match x with
+    | Claim.worksOfLawMeansWorksGenerally =>
+      {
+        label :=
+          "Paul's ἔργα νόμου denotes Jewish covenant boundary markers, not works in general",
+        kind := PremiseKind.linguistic,
+        source :=
+          { primary := Reference.work dunnNewPerspective,
+            supporting :=
+              [Reference.work sandersPaulPalestinianJudaism,
+                Reference.work wrightWhatPaulSaid,
+                Reference.work wrightJustification],
+            tradition := Tradition.criticalScholarship,
+            confidence := Confidence.disputed } }
+    | c => baseCite c
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{subjective\allowbreak{}Genitive\allowbreak{}Cite}}\par\nobreak\noindent
 Hays’s reading of the genitive: πίστις Χριστοῦ is Christ’s own faithfulness. Everything else as \texttt{base\allowbreak{}Cite}.
@@ -3982,8 +3940,8 @@ def criticsCite : Claim → AtomMeta :=
           "Second Temple Judaism also held final vindication according to works",
         kind := PremiseKind.historical,
         source :=
-          { primary := Reference.work Bib.gathercoleWhereIsBoasting,
-            supporting := [Reference.work Bib.carsonVariegatedNomism1],
+          { primary := Reference.work gathercoleWhereIsBoasting,
+            supporting := [Reference.work carsonVariegatedNomism1],
             tradition := Tradition.reformedProtestant,
             confidence := Confidence.disputed } }
     | c => reformedCite c
@@ -4001,7 +3959,7 @@ def tridentineCite : Claim → AtomMeta :=
         source :=
           {
             primary :=
-              Reference.work Bib.tannerDecrees
+              Reference.work tannerDecrees
                 (Bib.Locus.sectionRef
                   "Trent, Session VI (1547), Decree on Justification, ch. 7"),
             tradition := Tradition.romanCatholic,
@@ -4021,7 +3979,7 @@ def finnishCite : Claim → AtomMeta :=
           "Justification is not forensic only: Christ is present in faith",
         kind := PremiseKind.theological,
         source :=
-          { primary := Reference.work Bib.mannermaaChristPresentInFaith,
+          { primary := Reference.work mannermaaChristPresentInFaith,
             tradition := Tradition.criticalScholarship,
             confidence := Confidence.disputed } }
     | c => reformedCite c
@@ -4032,7 +3990,7 @@ The apocalyptic reading: the genitive is subjective, and it is Campbell’s reas
 {\small\begin{verbatim}
 def apocalypticCite : Claim → AtomMeta
 \end{verbatim}}
-\subsection*{Arguments.SolaFide.Lines — the strands, and what they share}
+\subsection*{TestimonyArguments.SolaFide.Lines — the strands, and what they share}
 Three strands deliver the conclusion, by different words from different speakers: Paul, Jesus, and Peter at Jerusalem. Each delivers only what its own texts say. Paul’s says justification is by faith \emph{alone}; Jesus’ words at Luke 7:50 and Peter’s at Jerusalem say that faith \emph{suffices}, which is weaker, and is all the conclusion’s “through faith” needs. A fourth line answers James, and a fifth — the apocalyptic reading — denies what Paul delivers. What every package holds in common is collected here too, so that a variant package is a named difference rather than a retyped list.
 
 \paragraph*{Lines of reason}
@@ -4172,10 +4130,10 @@ Trent’s step from its definition to merit: if justification \emph{is} the rene
 def trentOnIncrease : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef "Trent, Session VI (1547), canon 24"),
     supporting :=
-      [Reference.work Bib.tannerDecrees
+      [Reference.work tannerDecrees
           (Bib.Locus.sectionRef
             "Trent, Session VI (1547), Decree on Justification, ch. 10")],
     tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
@@ -4269,10 +4227,10 @@ Paul’s reading of the gospel in Galatians: Christ’s death is the whole groun
 def galatianGospelReadingSource : Source :=
   {
     primary :=
-      Reference.work Bib.mooGalatians
+      Reference.work mooGalatians
         (Bib.Locus.adLoc { book := Book.galatians, chapter := 1, verse := 6 }),
     supporting :=
-      [Reference.work Bib.westminsterConfession (Bib.Locus.sectionRef "XI.1")],
+      [Reference.work westminsterConfession (Bib.Locus.sectionRef "XI.1")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -4283,10 +4241,10 @@ The step from a verdict on a finished work to “renewal is no part of justifica
 def verdictNotRenewalSource : Source :=
   {
     primary :=
-      Reference.work Bib.westminsterConfession (Bib.Locus.sectionRef "XI.1"),
+      Reference.work westminsterConfession (Bib.Locus.sectionRef "XI.1"),
     supporting :=
       [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.2"),
-        Reference.work Bib.morrisApostolicPreaching],
+        Reference.work morrisApostolicPreaching],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -4309,17 +4267,17 @@ def verdictNotRenewalSource : Source :=
 \leavevmode\par
 Trent’s definition can be read as a claim about Paul’s word — that δικαιόω, in Paul, denotes the renewal of the inward man — and this line answers it on lexical ground alone. δικαιόω is forensic: its opposite is \emph{condemn}. Paul has other words for renewal, and sets them beside it. And a word contributes the least meaning its context requires: nothing in a verdict’s context requires a second, inward sense, and to supply one from the doctrine is what Barr called illegitimate totality transfer. So Paul’s δικαιόω does not denote renewal.
 
-The line says nothing about what God does when he justifies. That is the other reading of Trent’s definition, and this line does not reach it (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Definition}).
+The line says nothing about what God does when he justifies. That is the other reading of Trent’s definition, and this line does not reach it (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Definition}).
 
 \par\medskip\noindent\textbf{\texttt{least\allowbreak{}Meaning\allowbreak{}Source}}\par\nobreak\noindent
 The step from the forensic sense, Paul’s own vocabulary for renewal, and the rule of least meaning to “δικαιόω does not denote renewal”. Silva’s method, applied as Moo applies it to Romans. Rated \texttt{well\allowbreak{}Supported}: no source cited here grants the three grounds and denies the conclusion. Those who hold that δικαιόω means “make righteous” — VanLandingham, and the Latin tradition from Augustine — deny the forensic sense itself, and are weighed in that premise’s rating; those who hold that God’s verdict renews — Gorman, the \emph{Joint Declaration} — make a claim about what God does, not about the word.
 
 {\small\begin{verbatim}
 def leastMeaningSource : Source :=
-  { primary := Reference.work Bib.silvaBiblicalWords,
+  { primary := Reference.work silvaBiblicalWords,
     supporting :=
-      [Reference.work Bib.mooRomans (Bib.Locus.sectionRef "p. 80"),
-        Reference.work Bib.barrSemantics],
+      [Reference.work mooRomans (Bib.Locus.sectionRef "p. 80"),
+        Reference.work barrSemantics],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 \end{verbatim}}
@@ -4350,10 +4308,9 @@ The exegesis of Romans 4:3–8: reckoning language, set against wages, and the p
 def romansFourExegesisSource : Source :=
   {
     primary :=
-      Reference.work Bib.mooRomans
+      Reference.work mooRomans
         (Bib.Locus.adLoc { book := Book.romans, chapter := 4, verse := 6 }),
-    supporting :=
-      [Reference.work Bib.bdag (Bib.Locus.sectionRef "s.v. λογίζομαι")],
+    supporting := [Reference.work bdag (Bib.Locus.sectionRef "s.v. λογίζομαι")],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 \end{verbatim}}
@@ -4364,10 +4321,10 @@ The step from Paul’s gloss, with the forensic sense of the verb, to “renewal
 def romansFourReadingSource : Source :=
   {
     primary :=
-      Reference.work Bib.mooRomans
+      Reference.work mooRomans
         (Bib.Locus.adLoc { book := Book.romans, chapter := 4, verse := 5 }),
     supporting :=
-      [Reference.work Bib.westminsterConfession (Bib.Locus.sectionRef "XI.1")],
+      [Reference.work westminsterConfession (Bib.Locus.sectionRef "XI.1")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -4389,7 +4346,7 @@ From Paul’s gloss, by the rule of least meaning: the verb he glosses so does n
 From Paul’s gloss, with the forensic sense of the verb: renewal is no part of justification. The step Augustine denies.
 
 \[(P_{55} \land P_{47}) \rightarrow \lnot P_{33}\]
-\subsection*{Arguments.SolaFide.Packages — the positions, and the variants}
+\subsection*{TestimonyArguments.SolaFide.Packages — the positions, and the variants}
 The positions — Reformed, New Perspective, subjective genitive, law-observant Luke, Finnish, critical authorship, apocalyptic, Tridentine — and reduced Reformed packages, each missing a named premise. Whether a premise is load-bearing is shown by removing it and then either establishing the conclusion anyway or naming a countermodel.
 
 \paragraph*{Packages}
@@ -4657,8 +4614,7 @@ Not built from the Reformed lines, and that is the point: it shares four proofte
 {\small\begin{verbatim}
 def tridentinePremises : Line Claim → List (Formula Claim) :=
   fun line =>
-    [p Claim.ephesians2_8_9,
-            p Claim.romans3_28,
+    [p Claim.ephesians2_8_9, p Claim.romans3_28,
             p Claim.galatians2_16,
             p Claim.titus3_5,
             p Claim.scriptureSelfConsistent] ++
@@ -5048,7 +5004,7 @@ Trent, as the argument it makes in a dispute: justification is the renewal of th
   \vdash \quad & \lnot P_{50}
 \end{align*}
 \emph{Grounded in scripture alone:} Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside δικαιόω.
-\subsection*{Arguments.SolaFide.Results — what does and does not follow}
+\subsection*{TestimonyArguments.SolaFide.Results — what does and does not follow}
 Entailments are established with \texttt{establish}; refutations name a countermodel — the rival’s own reading, written down as a valuation — and use \texttt{refute\_\allowbreak{}with}.
 
 \texttt{lexical\_\allowbreak{}premises\_\allowbreak{}jointly\_\allowbreak{}load\_\allowbreak{}bearing} is the result the encoding exists to make possible: no strand’s disputed premise carries the argument, and only removing one from every strand defeats it. \texttt{apostolic\_\allowbreak{}strand\_\allowbreak{}survives\_\allowbreak{}paul\_\allowbreak{}and\_\allowbreak{}luke} records what the third strand changed: the two disputes that used to be jointly decisive are no longer enough.
@@ -5492,7 +5448,7 @@ theorem graceWithoutJamesHarmonisation_is_satisfiable : Satisfiable
     graceWithoutJamesHarmonisation.premises
 -- axioms: propext, Quot.sound
 \end{verbatim}}
-\subsection*{Arguments.SolaFide.Gospel — where Trent parts from Paul}
+\subsection*{TestimonyArguments.SolaFide.Gospel — where Trent parts from Paul}
 Paul’s direct answer to anything added to the gospel is Galatians: another gospel, whoever preaches it accursed (1:6–9); if righteousness came by the law, Christ died for nothing (2:21); whoever would be justified by the law is severed from Christ (5:2–4). The gospel itself is that Christ died for our sins (1 Corinthians 15:3).
 
 Set against Trent’s definition of justification — “not remission of sins merely, but also the sanctification and renewal of the inward man” (Session VI, ch. 7) — the question is exactly where the two part. This module answers it in three steps, each checked.
@@ -5534,7 +5490,7 @@ theorem galatianGospel_is_satisfiable : Satisfiable galatianGospel.premises
 \paragraph*{What Trent grants}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{joint\allowbreak{}Declaration\allowbreak{}Reading}}\par\nobreak\noindent
-Trent’s world, with the \emph{Joint Declaration}‘s confession added: God no longer imputes sin — the verb is forensic — and every text of the gospel line holds. Justification still includes renewal, faith without charity does not suffice, and justification is not by faith alone. Having granted that the verb is forensic, it does not also hold that Paul’s verb denotes renewal: the meanings exclude the two (\texttt{Testimony.Meanings.Sola\allowbreak{}Fide.joins}). Of the other pairs the meanings exclude, it holds the Greek of Revelation 22:11 and Sirach 18:22, and that James’s δικαιόω is Paul’s.
+Trent’s world, with the \emph{Joint Declaration}‘s confession added: God no longer imputes sin — the verb is forensic — and every text of the gospel line holds. Justification still includes renewal, faith without charity does not suffice, and justification is not by faith alone. Having granted that the verb is forensic, it does not also hold that Paul’s verb denotes renewal: the meanings exclude the two (\texttt{Testimony\allowbreak{}Arguments.Meanings.Sola\allowbreak{}Fide.joins}). Of the other pairs the meanings exclude, it holds the Greek of Revelation 22:11 and Sirach 18:22, and that James’s δικαιόω is Paul’s.
 
 {\small\begin{verbatim}
 def jointDeclarationReading : Valuation Claim :=
@@ -5593,7 +5549,7 @@ The break needs the gospel line’s grounds as well, and says so: the four texts
 \item the step itself --- \emph{disputed}: \cite[ad loc. Gal 1:6]{moo-galatians-2013}; \cite[XI.1]{westminster-confession-1647}; \emph{disputed}: \cite[XI.1]{westminster-confession-1647}; \cite[III.xi.2]{calvin-institutes-1960}; \cite{morris-apostolic-preaching-1965}
 \end{itemize}
 \end{itemize}
-\subsection*{Arguments.SolaFide.Definition — what Trent’s definition claims}
+\subsection*{TestimonyArguments.SolaFide.Definition — what Trent’s definition claims}
 Trent defines justification as “not remission of sins merely, but also the sanctification and renewal of the inward man” (Session VI, ch. 7). The Reformed deny it, and \texttt{where\allowbreak{}Trent\allowbreak{}Parts\allowbreak{}From\allowbreak{}Paul} locates the denial at one step. But the definition can be read two ways, and the two readings meet different objections.
 
 \textbf{Read as a claim about Paul’s word}, it says that δικαιόω, in Paul, denotes the renewal of the inward man. Trent invites the reading: chapter 8 sets out how “the Apostle’s” words — justified “by faith and freely” — are to be understood, and chapter 7 says that the justified “are not only reputed, but are truly called, and are, just”. Read so, the definition is a lexical claim, and it meets a lexical answer: δικαιόω is forensic, Paul names renewal with words of its own and sets them beside it (Titus 3:5–7; 1 Corinthians 6:11), and a word contributes the least meaning its context requires (Joos; Silva). To read renewal into the verdict from the doctrine is what Barr called illegitimate totality transfer. Every link of that answer is rated above \texttt{disputed}.
@@ -5643,16 +5599,16 @@ Reading Trent’s definition as a claim about Paul’s word, and reading Paul’
 def trentReadsPaulsWord : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef
           "Trent, Session VI (1547), Decree on Justification, ch. 8"),
     supporting :=
-      [Reference.work Bib.tannerDecrees
+      [Reference.work tannerDecrees
           (Bib.Locus.sectionRef
             "Trent, Session VI (1547), Decree on Justification, ch. 7"),
-        Reference.work Bib.npnfAugustineAntiPelagian
+        Reference.work npnfAugustineAntiPelagian
           (Bib.Locus.sectionRef "On the Spirit and the Letter, ch. 45 (26.45)"),
-        Reference.work Bib.mcgrathIustitiaDei],
+        Reference.work mcgrathIustitiaDei],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Reads\allowbreak{}Grace}}\par\nobreak\noindent
@@ -5662,10 +5618,9 @@ Reading Trent’s definition as a claim about what God does in justifying: in th
 def trentReadsGrace : Source :=
   {
     primary :=
-      Reference.work Bib.jointDeclarationJustification
-        (Bib.Locus.sectionRef "§22"),
+      Reference.work jointDeclarationJustification (Bib.Locus.sectionRef "§22"),
     supporting :=
-      [Reference.work Bib.tannerDecrees
+      [Reference.work tannerDecrees
           (Bib.Locus.sectionRef
             "Trent, Session VI (1547), Decree on Justification, ch. 7")],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
@@ -6041,7 +5996,7 @@ Against \emph{Romans 4:3–8, against justification as renewal}, it cannot be he
 \item the step itself --- \emph{well supported}: \cite[ad loc. Rom 4:6]{moo-romans-1996}; \cite[s.v. λογίζομαι]{bauer-danker-lexicon-2000}; \emph{disputed}: \cite[ad loc. Rom 4:5]{moo-romans-1996}; \cite[XI.1]{westminster-confession-1647}
 \end{itemize}
 \end{itemize}
-\subsection*{Arguments.SolaFide.Dispute — who prevails over sola fide}
+\subsection*{TestimonyArguments.SolaFide.Dispute — who prevails over sola fide}
 The results in \texttt{Results.lean} ask what each package entails. This module asks what happens when the positions meet: the three Reformed strands, each argued alone; Trent; the apocalyptic reading of Martyn and Campbell; Sanders and Dunn on covenantal nomism, and the critics who answer them; Jervell on the yoke of Acts 15; Paul’s gospel in Galatians, against Trent’s definition; Paul’s word, read by the rule of least meaning, lexically and from Romans 4; and Trent with its definition read as a claim about that word. Who defeats whom is not stipulated — each defeat, and each absence of one, is a theorem about the positions’ premises (see \texttt{Testimony.Logic.Dispute}).
 
 \subsubsection*{The ratings decide one thing here}
@@ -6876,18 +6831,15 @@ def partyNode : Party → ArgumentPackage Claim :=
     | Party.jervell => jervellCase
     | Party.gospel => galatianGospel
     | Party.lexical => lexicalCase
-    | Party.trentOnPaulsWord =>
-      tridentineOnPaulsWord
-    | Party.romansOnTheWord =>
-      romansFourOnTheWord
+    | Party.trentOnPaulsWord => tridentineOnPaulsWord
+    | Party.romansOnTheWord => romansFourOnTheWord
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute}}\par\nobreak\noindent
 The dispute over sola fide: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated.
 
 {\small\begin{verbatim}
 def solaFideDispute : Dispute Claim Party :=
-  { node := partyNode,
-    consistent := solaFideDispute._proof_1,
+  { node := partyNode, consistent := solaFideDispute._proof_1,
     sound := solaFideDispute._proof_2,
     rated := solaFideDispute._proof_15 }
 \end{verbatim}}
@@ -7001,9 +6953,8 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
       [Party.pauline, Party.dominical,
         Party.apostolic, Party.trent,
         Party.apocalyptic, Party.sanders,
-        Party.critics, Party.jervell,
-        Party.gospel, Party.lexical,
-        Party.trentOnPaulsWord,
+        Party.critics, Party.jervell, Party.gospel,
+        Party.lexical, Party.trentOnPaulsWord,
         Party.romansOnTheWord],
     complete := solaFideFinite._proof_1,
     defeats := fun i j => decide (partyDefeats i j),
@@ -7027,8 +6978,7 @@ def partyPartOf : Party → Party → Prop :=
   fun x x_1 =>
     match x, x_1 with
     | Party.critics, Party.pauline => True
-    | Party.trent,
-      Party.trentOnPaulsWord => True
+    | Party.trent, Party.trentOnPaulsWord => True
     | i, j => i = j
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
@@ -8163,7 +8113,7 @@ So the disagreement is not about what Luke says. It is about what justification 
 \item the step itself --- \emph{disputed}: \cite[Trent, Session VI (1547), canon 9]{tanner-decrees-1990}
 \end{itemize}
 \end{itemize}
-\subsection*{Arguments.SolaFide.Johannine — “this is the work of God, that you believe”}
+\subsection*{TestimonyArguments.SolaFide.Johannine — “this is the work of God, that you believe”}
 A fourth strand for sola fide, from John’s Gospel, encoded on its own. Asked what they must do “to be doing the works of God”, the crowd is told: “This is the work of God, that you believe in him whom he has sent” (John 6:28–29). The question of works is put to Jesus in terms, and he answers with believing. The Gospel says the same throughout: eternal life, and passing out of judgement, through believing in the Son (3:16–18, 3:36, 5:24), and it states its own purpose in those terms (20:31).
 
 \subsubsection*{The hinge: what believing is}
@@ -8199,9 +8149,7 @@ Calvin’s step from John to justification. John has no δικαιόω, so the b
 
 {\small\begin{verbatim}
 def calvinOnJohnSix : Source :=
-  {
-    primary :=
-      Reference.work Bib.calvinJohn (Bib.Locus.adLoc Scripture.john6_29),
+  { primary := Reference.work calvinJohn (Bib.Locus.adLoc Scripture.john6_29),
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.plausible }
 \end{verbatim}}
@@ -8212,7 +8160,7 @@ Aquinas’s step: faith living through charity is not bare trust. Rated \texttt{
 def aquinasOnFormedFaith : Source :=
   {
     primary :=
-      Reference.work Bib.aquinasJohn
+      Reference.work aquinasJohn
         (Bib.Locus.sectionRef "cap. 6, lect. 3, n. 901"),
     tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
 \end{verbatim}}
@@ -8339,10 +8287,10 @@ Luther’s step, on Galatians 3:11–12: the law commands charity, and the law i
 def lutherOnGalatiansThree : Source :=
   {
     primary :=
-      Reference.work Bib.lutherGalatians
+      Reference.work lutherGalatians
         (Bib.Locus.adLoc { book := Book.galatians, chapter := 3, verse := 12 }),
     supporting :=
-      [Reference.work Bib.lutherGalatians
+      [Reference.work lutherGalatians
           (Bib.Locus.adLoc
             { book := Book.galatians, chapter := 3, verse := 11 })],
     tradition := Tradition.reformedProtestant,
@@ -8426,7 +8374,7 @@ Unlike the Reformed distinction against Trent, this crux is part of Luther’s c
 \item the step itself --- \emph{disputed}: \cite[ad loc. Gal 3:12]{luther-commentary-galatians-1998}; \cite[ad loc. Gal 3:11]{luther-commentary-galatians-1998}
 \end{itemize}
 \end{itemize}
-\subsection*{Arguments.SolaFide.Hearings — the same dispute, asked two narrower questions}
+\subsection*{TestimonyArguments.SolaFide.Hearings — the same dispute, asked two narrower questions}
 A dispute answers the question it is asked, and the full sola fide dispute asks a crowded one: the Reformers, Trent, and three modern schools of Pauline scholarship at once. A reader usually wants something narrower. Two questions come up again and again, and each is answered here by hearing the same dispute with some of its parties set aside. Nothing is re-argued: a hearing keeps every defeat the full dispute proved, and only leaves some parties unheard.
 
 \textbf{What did the Reformation itself decide?} The sixteenth-century dispute was Rome and the Reformers, before anyone had proposed a New Perspective on Paul or an apocalyptic reading of him. Heard that way (\texttt{reformation\allowbreak{}Alone}) — the sixteenth-century positions, argued with the modern evidence cited for each, so Joos, Silva and Barr among them — one thing is forced: Paul’s word — δικαιόω does not denote the renewal of the inward man — by both routes, lexical and exegetical. So Trent cannot claim that its definition is what Paul’s word means; that reading cannot be defended. What breaks is not Augustine’s gloss — that he glossed the word so is not in question — but the step from a Latin gloss to what the Greek word denotes. But Trent’s definition read as a claim about what God does is not touched by anything about the word, and there Trent and the Reformers tie: each defeats the other, and the ratings, all \texttt{disputed}, cannot choose between them. The Reformation dispute, heard on its own, comes down to what justification \emph{is} — the question \texttt{what\allowbreak{}Trents\allowbreak{}Definition\allowbreak{}Claims} locates.
@@ -8707,9 +8655,7 @@ Every party but Trent’s two: Trent as Trent states it, and Trent read as a cla
 def withoutTrent : Dispute Claim { i // i ∉ [Party.trent,
     Party.trentOnPaulsWord] } :=
   solaFideDispute.restrict fun x =>
-    x ∉
-      [Party.trent,
-        Party.trentOnPaulsWord]
+    x ∉ [Party.trent, Party.trentOnPaulsWord]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{without\allowbreak{}Trent\allowbreak{}Finite}}\par\nobreak\noindent
 The dispute without Trent, in the form the verdict solver computes with.
@@ -8718,9 +8664,7 @@ The dispute without Trent, in the form the verdict solver computes with.
 def withoutTrentFinite : Solver.Finite fun i j => solaFideDispute.defeats ↑i
     ↑j :=
   solaFideFinite.restrict fun x =>
-    x ∉
-      [Party.trent,
-        Party.trentOnPaulsWord]
+    x ∉ [Party.trent, Party.trentOnPaulsWord]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{without\allowbreak{}Trent\allowbreak{}Settles}}\par\nobreak\noindent
 What is settled without Trent: nothing now defeats Luke’s case, Paul’s gospel, or either route to Paul’s word, so all four come first; and nothing joins them. Paul’s case is defeated by the apocalyptic reading, Peter’s by Jervell, Sanders by the critics and the critics by Sanders, the apocalyptic reading by Paul, and Jervell by Peter.
@@ -8980,7 +8924,7 @@ theorem sola_fide_from_peter_not_forced_without_trent :
     ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, ⋯⟩
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\subsection*{Arguments.SolaFide.JesusWords — what Jesus’ own words say about faith and works}
+\subsection*{TestimonyArguments.SolaFide.JesusWords — what Jesus’ own words say about faith and works}
 The sola fide dispute weighs Paul, Peter and one saying of Jesus, Luke 7:50. A reader asks a narrower question with a sharper edge: \emph{what does Jesus himself say?} Three more passages are the ones each side cites.
 
 \textbf{Luke 18:9–14.} The Pharisee lists his fasting and his tithes; the tax collector stands far off, beats his breast, and prays “God, be merciful to me, a sinner”; and Jesus says that he went home justified — δεδικαιωμένος, the word Paul uses — “rather than the other”. It is Jesus’ own teaching on justification and works, and it uses the word itself.
@@ -9351,14 +9295,10 @@ def wordsPartyNode : WordsParty → ArgumentPackage Claim :=
     | WordsParty.luke7 => dominicalCase
     | WordsParty.luke18 => luke18Case
     | WordsParty.trent => tridentineCase
-    | WordsParty.matthew7Obedience =>
-      matthew7ObedienceCase
-    | WordsParty.matthew7Faith =>
-      matthew7FaithCase
-    | WordsParty.matthew19Way =>
-      matthew19WayCase
-    | WordsParty.matthew19Legal =>
-      matthew19LegalCase
+    | WordsParty.matthew7Obedience => matthew7ObedienceCase
+    | WordsParty.matthew7Faith => matthew7FaithCase
+    | WordsParty.matthew19Way => matthew19WayCase
+    | WordsParty.matthew19Legal => matthew19LegalCase
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Dispute}}\par\nobreak\noindent
 The dispute over Jesus’ words: every party’s premises can be held without contradiction, every party establishes its conclusion, and every party’s inferences are rated.
@@ -9404,22 +9344,18 @@ The defeats of the dispute, as a table.
 def wordsPartyDefeats : WordsParty → WordsParty → Prop :=
   fun x x_1 =>
     match x, x_1 with
-    | WordsParty.luke7,
-      WordsParty.trent => True
-    | WordsParty.trent,
-      WordsParty.luke7 => True
-    | WordsParty.luke18,
-      WordsParty.trent => True
-    | WordsParty.trent,
-      WordsParty.luke18 => True
+    | WordsParty.luke7, WordsParty.trent => True
+    | WordsParty.trent, WordsParty.luke7 => True
+    | WordsParty.luke18, WordsParty.trent => True
+    | WordsParty.trent, WordsParty.luke18 => True
     | WordsParty.matthew7Obedience,
       WordsParty.matthew7Faith => True
     | WordsParty.matthew7Faith,
       WordsParty.matthew7Obedience => True
-    | WordsParty.matthew19Way,
-      WordsParty.matthew19Legal => True
-    | WordsParty.matthew19Legal,
-      WordsParty.matthew19Way => True
+    | WordsParty.matthew19Way, WordsParty.matthew19Legal =>
+      True
+    | WordsParty.matthew19Legal, WordsParty.matthew19Way =>
+      True
     | x, x_2 => False
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Words\allowbreak{}Party\allowbreak{}Words\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
@@ -9459,12 +9395,9 @@ The dispute in the form the verdict solver computes with.
 def jesusWordsFinite : Solver.Finite jesusWordsDispute.defeats :=
   {
     parties :=
-      [WordsParty.luke7,
-        WordsParty.luke18,
-        WordsParty.trent,
-        WordsParty.matthew7Obedience,
-        WordsParty.matthew7Faith,
-        WordsParty.matthew19Way,
+      [WordsParty.luke7, WordsParty.luke18,
+        WordsParty.trent, WordsParty.matthew7Obedience,
+        WordsParty.matthew7Faith, WordsParty.matthew19Way,
         WordsParty.matthew19Legal],
     complete := jesusWordsFinite._proof_1,
     defeats := fun i j => decide (wordsPartyDefeats i j),
@@ -9953,8 +9886,7 @@ Every party but Trent: Luke’s two sayings, and both readings of each Matthean 
 
 {\small\begin{verbatim}
 def jesusWordsWithoutTrent : Dispute Claim { i // i ≠ WordsParty.trent } :=
-  jesusWordsDispute.restrict fun x =>
-    x ≠ WordsParty.trent
+  jesusWordsDispute.restrict fun x => x ≠ WordsParty.trent
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Without\allowbreak{}Trent\allowbreak{}Finite}}\par\nobreak\noindent
 The hearing, in the form the verdict solver computes with.
@@ -9962,8 +9894,7 @@ The hearing, in the form the verdict solver computes with.
 {\small\begin{verbatim}
 def jesusWordsWithoutTrentFinite : Solver.Finite fun i j =>
     jesusWordsDispute.defeats ↑i ↑j :=
-  jesusWordsFinite.restrict fun x =>
-    x ≠ WordsParty.trent
+  jesusWordsFinite.restrict fun x => x ≠ WordsParty.trent
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{without\allowbreak{}Trent\allowbreak{}Luke\allowbreak{}Settles}}\par\nobreak\noindent
 How the hearing is settled: with Trent unheard, nothing attacks Luke 7:50 or Luke 18, so both come first; and nothing joins them, because each reading of Matthew still has its rival.
@@ -10025,7 +9956,7 @@ theorem without_trent_luke_is_forced : Framework.grounded
     ≠ WordsParty.trent) [WordsParty.luke7, WordsParty.luke18])
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\subsection*{Arguments.SolaFide.Baptism — the baptisms kept apart, and what Trent’s instrumental cause claims}
+\subsection*{TestimonyArguments.SolaFide.Baptism — the baptisms kept apart, and Trent’s instrumental cause}
 Trent makes baptism “the instrumental cause” of justification: “the sacrament of baptism, which is the sacrament of faith, without which (faith) no man was ever justified” (Session VI, ch. 7) — the “without which” is faith, not baptism, as Waterworth’s bracket says. The Reformed hold baptism as Christ’s own ordinance, a sign and seal of the covenant of grace (Westminster XXVIII.1), and faith as “the alone instrument of justification” (XI.2). A reader asks: \emph{does the New Testament make water baptism the instrument that justifies?}
 
 A step here is \emph{disputed} when a cited reader grants its grounds and denies its conclusion; \emph{well supported} when no such reader was found; \emph{consensus} when every side grants it.
@@ -10068,7 +9999,7 @@ Reading the instrumental cause so that the washing itself is necessary for salva
 
 {\small\begin{verbatim}
 def feeneyReadsTrent : Source :=
-  { primary := Reference.work Bib.feeneyBreadOfLife,
+  { primary := Reference.work feeneyBreadOfLife,
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Reads\allowbreak{}Its\allowbreak{}Own\allowbreak{}Claim}}\par\nobreak\noindent
@@ -10076,7 +10007,7 @@ Reading the instrumental cause as Trent’s chapter 4 qualifies it: the laver of
 
 {\small\begin{verbatim}
 def trentReadsItsOwnClaim : Source :=
-  { primary := Reference.work Bib.waterworthTrent (Bib.Locus.page 32),
+  { primary := Reference.work waterworthTrent (Bib.Locus.page 32),
     tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{as\allowbreak{}The\allowbreak{}Water\allowbreak{}Itself}}\par\nobreak\noindent
@@ -10085,8 +10016,7 @@ The instrumental cause, \textbf{read so that the washing itself is necessary for
 {\small\begin{verbatim}
 def asTheWaterItself : Reading Claim :=
   { name := "so that the washing itself is necessary for salvation",
-    commits :=
-      p Claim.waterItselfNecessaryForSalvation,
+    commits := p Claim.waterItselfNecessaryForSalvation,
     source := feeneyReadsTrent }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{as\allowbreak{}Baptism\allowbreak{}Or\allowbreak{}Its\allowbreak{}Desire}}\par\nobreak\noindent
@@ -10420,8 +10350,8 @@ Who reads the water of John 3:5 as baptismal water: Trent (Session VII, On Bapti
 
 {\small\begin{verbatim}
 def waterReadAsBaptism : Source :=
-  { primary := Reference.work Bib.waterworthTrent (Bib.Locus.page 56),
-    supporting := [Reference.work Bib.calvinJohn (Bib.Locus.page 110)],
+  { primary := Reference.work waterworthTrent (Bib.Locus.page 56),
+    supporting := [Reference.work calvinJohn (Bib.Locus.page 110)],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{water\allowbreak{}Read\allowbreak{}As\allowbreak{}Birth}}\par\nobreak\noindent
@@ -10429,7 +10359,7 @@ Who reads it as natural birth: Oliver, who argues for it as his own reading — 
 
 {\small\begin{verbatim}
 def waterReadAsBirth : Source :=
-  { primary := Reference.work Bib.oliverWaterJohn,
+  { primary := Reference.work oliverWaterJohn,
     tradition := Tradition.criticalScholarship,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -10438,8 +10368,8 @@ Who reads it as the cleansing of Ezekiel 36: Carson, who finds there “a transf
 
 {\small\begin{verbatim}
 def waterReadAsEzekiel : Source :=
-  { primary := Reference.work Bib.carsonBornOfWater,
-    supporting := [Reference.work Bib.oliverWaterJohn],
+  { primary := Reference.work carsonBornOfWater,
+    supporting := [Reference.work oliverWaterJohn],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -10451,7 +10381,7 @@ def waterReadAsTheSpirit : Source :=
   {
     primary :=
       Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.xvi.25"),
-    supporting := [Reference.work Bib.calvinJohn (Bib.Locus.pages 110 111)],
+    supporting := [Reference.work calvinJohn (Bib.Locus.pages 110 111)],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -10488,8 +10418,7 @@ The water of John 3:5, \textbf{read as the Spirit’s own cleansing}.
 {\small\begin{verbatim}
 def waterAsTheSpirit : Reading Claim :=
   { name := "with its water as the Spirit's own cleansing",
-    commits :=
-      p Claim.john3_5WaterIsTheSpiritsCleansing,
+    commits := p Claim.john3_5WaterIsTheSpiritsCleansing,
     source := waterReadAsTheSpirit }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{birth\allowbreak{}To\allowbreak{}No\allowbreak{}Water}}\par\nobreak\noindent
@@ -10933,7 +10862,7 @@ theorem the_baptist_leaves_pentecost_open : Independent [p
     Claim.matthew3_11SpiritAndFire] (p Claim.fireIsPentecost)
 -- axioms: propext, Quot.sound
 \end{verbatim}}
-\subsection*{Arguments.SolaFide.James — James 2:24, and the increase of justification}
+\subsection*{TestimonyArguments.SolaFide.James — James 2:24, and the increase of justification}
 “You see that a person is justified by works and not by faith alone” (James 2:24). Trent reads it as the increase of justification: the justified “increase in that justice which they have received ... and are still further justified, as it is written; He that is just, let him be justified still; and again, Be not afraid to be justified even to death; and also, Do you see that by works a man is justified, and not by faith only” (Session VI, ch. 10). Canon 24 condemns anyone who says good works “are merely the fruits and signs of Justification obtained, but not a cause of the increase thereof”. This module weighs that reading, its three texts, and the Reformed reply.
 
 \subsubsection*{What Trent’s reading can mean}
@@ -10946,38 +10875,38 @@ Trent’s claim about James 2:24 can be read two ways, and the two meet differen
 \subsubsection*{The texts Trent cites with James}
 Two of Trent’s three texts say “justified” only in Latin. “He that is just, let him be justified still” is the Vulgate’s \emph{iustificetur adhuc} at Revelation 22:11; the Greek, as the critical text prints it, says “let the righteous still do righteousness”, and the Catholic Church’s own translation renders it “The righteous must still do right”. “Be not afraid to be justified even to death” is the Vulgate’s Sirach 18:22; the Greek, as the same translation renders it, is about vows: “do not wait until death to fulfill them”. The original text, Pius XII teaches, “written by the inspired author himself, has more authority and greater weight than any even the very best translation” (\emph{Divino Afflante Spiritu} §16), and Westminster says the same (I.8). So read as claims about what the inspired authors wrote, the two Latin readings cannot be defended.
 
-Pius XII does not say that a Latin reading the original lacks is an error. He says the reverse of the Vulgate as a whole: as the Church understands it, it is “free from any error whatsoever in matters of faith and morals”, and its authenticity is “juridical” rather than critical (§21). Read that way, Trent’s “as it is written” at these two verses quotes the Church’s authentic Latin, not the apostle’s words, and is consistent with everything Pius XII says (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Vulgate}). What it then rests on is the Church’s authority, and Pius XII himself asks that a doctrine so taught be confirmed from the original texts (§22) — which at these two verses do not confirm it.
+Pius XII does not say that a Latin reading the original lacks is an error. He says the reverse of the Vulgate as a whole: as the Church understands it, it is “free from any error whatsoever in matters of faith and morals”, and its authenticity is “juridical” rather than critical (§21). Read that way, Trent’s “as it is written” at these two verses quotes the Church’s authentic Latin, not the apostle’s words, and is consistent with everything Pius XII says (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Vulgate}). What it then rests on is the Church’s authority, and Pius XII himself asks that a doctrine so taught be confirmed from the original texts (§22) — which at these two verses do not confirm it.
 
 \subsubsection*{The phrase “faith alone”}
 James 2:24 is the one place the phrase occurs, and it is often cited as denying \emph{sola fide} in so many words. The faith James denies justifies is the faith he calls dead (2:17, 2:26), and Trent reads it so: faith “unless hope and charity be added thereto ... For which reason it is most truly said, that Faith without works is dead” (Session VI, ch. 7). The Reformers’ confession says the faith that alone justifies “is no dead faith, but worketh by love” (Westminster XI.2). So the phrase James denies is not the formula the Reformers affirm (\texttt{james\allowbreak{}Faith\allowbreak{}Line}). This answers an argument from the phrase; it does not answer James’s “by works”, which is the question above.
 
 \subsubsection*{How to read the verdicts}
-As in the sola fide dispute (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Dispute}): a party \textbf{defeats} another when it contradicts something the other rests on, concludes or derives, and is not the weaker; a party is \textbf{forced} when the dispute holds it however every standoff is resolved; it \textbf{can be defended} when some consistent position holds it and answers every attack; it \textbf{cannot be defended} when none can.
+As in the sola fide dispute (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Dispute}): a party \textbf{defeats} another when it contradicts something the other rests on, concludes or derives, and is not the weaker; a party is \textbf{forced} when the dispute holds it however every standoff is resolved; it \textbf{can be defended} when some consistent position holds it and answers every attack; it \textbf{cannot be defended} when none can.
 
 \subsubsection*{What the dispute decides}
 \begin{itemize}
   \item \textbf{Forced} (\texttt{james\_\allowbreak{}words\_\allowbreak{}prevail}): James’s δικαιόω does not denote the increase of justice; the faith James 2:24 denies is not the Reformers’ faith; Revelation 22:11 does not say “be justified still”; Sirach 18:22 does not speak of growth in justice.
   \item \textbf{Cannot be defended}: Trent’s reading of James’s word (\texttt{trent\_\allowbreak{}on\_\allowbreak{}james\_\allowbreak{}word\_\allowbreak{}indefensible}), and Trent’s readings of Revelation 22:11 (\texttt{trent\_\allowbreak{}on\_\allowbreak{}revelation\_\allowbreak{}indefensible}) and Sirach 18:22 (\texttt{trent\_\allowbreak{}on\_\allowbreak{}sirach\_\allowbreak{}indefensible}) as texts for the increase of justification.
-  \item \textbf{Can be defended, and not forced}: Trent’s reading of what works do (\texttt{trent\_\allowbreak{}on\_\allowbreak{}works\_\allowbreak{}defensible}, \texttt{trent\_\allowbreak{}on\_\allowbreak{}works\_\allowbreak{}not\_\allowbreak{}forced}), and, against it, the Reformed harmony. Whether works are only the fruit of justification is contested at the cited ratings (\texttt{works\allowbreak{}Contested}). Trent’s reading of the reward texts (chapter 16, \texttt{trent\allowbreak{}Reward\allowbreak{}Line}) meets the harmony the same way, and meets Westminster’s reading of the same texts (\texttt{westminster\allowbreak{}Reward\allowbreak{}Line}), which denies that the reward is rendered to merits. Heard under the evidence standard, neither of Trent’s readings of what works do is a credible critique, and the harmony is forced (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Ratings}).
-  \item \textbf{Cannot be defended, at the cited ratings}: the renewal reading of James’s word (\texttt{renewal\allowbreak{}Word\allowbreak{}Line}), which James’s word defeats. Under the tradition standard it is a credible critique, and there the question is contested (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Ratings}). It also meets the Reformed harmony, and the two defeat each other: the harmony says James’s word has not Paul’s sense, the renewal reading that it has. Neither claim’s atom says so; their meanings do, and a dispute decides every attack over what each party holds with the meanings (\texttt{Testimony.Logic.Argument\allowbreak{}Package.held}).
+  \item \textbf{Can be defended, and not forced}: Trent’s reading of what works do (\texttt{trent\_\allowbreak{}on\_\allowbreak{}works\_\allowbreak{}defensible}, \texttt{trent\_\allowbreak{}on\_\allowbreak{}works\_\allowbreak{}not\_\allowbreak{}forced}), and, against it, the Reformed harmony. Whether works are only the fruit of justification is contested at the cited ratings (\texttt{works\allowbreak{}Contested}). Trent’s reading of the reward texts (chapter 16, \texttt{trent\allowbreak{}Reward\allowbreak{}Line}) meets the harmony the same way, and meets Westminster’s reading of the same texts (\texttt{westminster\allowbreak{}Reward\allowbreak{}Line}), which denies that the reward is rendered to merits. Heard under the evidence standard, neither of Trent’s readings of what works do is a credible critique, and the harmony is forced (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Ratings}).
+  \item \textbf{Cannot be defended, at the cited ratings}: the renewal reading of James’s word (\texttt{renewal\allowbreak{}Word\allowbreak{}Line}), which James’s word defeats. Under the tradition standard it is a credible critique, and there the question is contested (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Ratings}). It also meets the Reformed harmony, and the two defeat each other: the harmony says James’s word has not Paul’s sense, the renewal reading that it has. Neither claim’s atom says so; their meanings do, and a dispute decides every attack over what each party holds with the meanings (\texttt{Testimony.Logic.Argument\allowbreak{}Package.held}).
 \end{itemize}
 So Trent’s scriptural case for the increase of justification, weighed text by text, survives at one point only: James 2:24, read as a claim about what works do before God. Every reading of it that rests on what a word or a verse \emph{says} cannot be defended. What remains is a claim about God’s verdict, and there the library cannot choose.
 
 \subsubsection*{A rating moved, against the Reformed side, and how it is now computed}
 \texttt{works\allowbreak{}Are\allowbreak{}Fruit\allowbreak{}Not\allowbreak{}Ground} was rated \texttt{well\allowbreak{}Supported} while no party denied it. In this dispute Trent’s reading of what works do denies it, and the rating decides who prevails, so it was audited: canon 24 anathematises exactly that claim. It is \texttt{disputed} now as a premise. Kept at \texttt{well\allowbreak{}Supported}, it would have made Trent’s reading of what works do indefensible — a verdict the rating, not the evidence, would have delivered.
 
-As a step (\texttt{fruit\allowbreak{}Line}), its rating is now computed (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Ratings}). Its support is \texttt{well\allowbreak{}Supported}: the Joint Declaration confesses works to be fruits, and not the basis of justification. Each of Trent’s two dissents rests at one claim on the council’s word, so the step stands under the evidence standard and is \texttt{disputed} under the tradition standard. This dispute weighs the Reformed harmony at its weakest link regardless: James’s target, a barren faith, is rated \texttt{disputed} (\texttt{james\allowbreak{}Harmony\allowbreak{}Source}).
+As a step (\texttt{fruit\allowbreak{}Line}), its rating is now computed (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Ratings}). Its support is \texttt{well\allowbreak{}Supported}: the Joint Declaration confesses works to be fruits, and not the basis of justification. Each of Trent’s two dissents rests at one claim on the council’s word, so the step stands under the evidence standard and is \texttt{disputed} under the tradition standard. This dispute weighs the Reformed harmony at its weakest link regardless: James’s target, a barren faith, is rated \texttt{disputed} (\texttt{james\allowbreak{}Harmony\allowbreak{}Source}).
 
 \subsubsection*{What each position rests on}
 \texttt{james\_\allowbreak{}warrants} lists, for each party, the claims it asserts on someone’s word alone (\texttt{Testimony.Logic.Warrant}). Each of Trent’s four readings rests at the reading itself on Trent’s word. The two readings of the Greek rest at “the original text outweighs any translation” on Pius XII’s and Westminster’s — both sides’ word, which is what makes it decisive here, and is still a word. James’s word, James’s faith and the Reformed harmony rest on nothing but Scripture and evidence. The warrant is reported beside the verdicts and does not weigh in them.
 
 \subsubsection*{Westminster’s proof texts for “fruit, not ground”}
-The Reformed harmony no longer assumes that works are the fruit of faith and not its ground. It derives it (\texttt{fruit\allowbreak{}Line}) from the texts the Westminster Assembly gave as proofs for it: good works “are the fruits and evidences of a true and lively faith” (XVI.2: James 2:18, 22; Ephesians 2:10; Romans 6:22), and “we cannot by our best works merit” (XVI.5: Ephesians 2:8–9; Luke 17:10). Trent grants the texts and the word: its chapter 16 is “On the fruit of Justification, that is, on the merit of good works”, and canon 24 condemns only those who call works “\emph{merely} the fruits and signs”. The dispute between them is whether the fruit is also merit, and Trent’s own answer, that the reward the texts promise is rendered to merits, is a claim it makes on its own word (“we must believe”, chapter 16). So the warrant moved — the harmony rests on Scripture now, not on the Confession’s word — and in this dispute, weighed at the cited ratings, whether works are only fruit is still contested (\texttt{works\allowbreak{}Contested}). Under the evidence standard it is not (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Ratings}).
+The Reformed harmony no longer assumes that works are the fruit of faith and not its ground. It derives it (\texttt{fruit\allowbreak{}Line}) from the texts the Westminster Assembly gave as proofs for it: good works “are the fruits and evidences of a true and lively faith” (XVI.2: James 2:18, 22; Ephesians 2:10; Romans 6:22), and “we cannot by our best works merit” (XVI.5: Ephesians 2:8–9; Luke 17:10). Trent grants the texts and the word: its chapter 16 is “On the fruit of Justification, that is, on the merit of good works”, and canon 24 condemns only those who call works “\emph{merely} the fruits and signs”. The dispute between them is whether the fruit is also merit, and Trent’s own answer, that the reward the texts promise is rendered to merits, is a claim it makes on its own word (“we must believe”, chapter 16). So the warrant moved — the harmony rests on Scripture now, not on the Confession’s word — and in this dispute, weighed at the cited ratings, whether works are only fruit is still contested (\texttt{works\allowbreak{}Contested}). Under the evidence standard it is not (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Ratings}).
 
 \subsubsection*{What is audited, and how}
-The steps of James’s word and James’s faith are cited at \texttt{well\allowbreak{}Supported}. The lexical step’s rating is now computed as well (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Ratings}). Its strongest known dissent, the renewal reading (\texttt{renewal\allowbreak{}Word\allowbreak{}Line}), reads James’s word as Paul’s and Paul’s as renewal. It grants the step’s grounds and argues its denial, but one of its grounds — that James’s word is Paul’s — rests on Trent’s word alone. So the step stands at \texttt{well\allowbreak{}Supported} under the evidence standard and is \texttt{disputed} under the tradition standard. This dispute weighs it at its cited rating, the first of these; the hearing under the tradition standard weighs it at the second, and there what James’s word denotes is contested. A verified exegete holding that James’s word is Paul’s would make the renewal reading credible under both standards, and the step \texttt{disputed} under both.
+The steps of James’s word and James’s faith are cited at \texttt{well\allowbreak{}Supported}. The lexical step’s rating is now computed as well (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Ratings}). Its strongest known dissent, the renewal reading (\texttt{renewal\allowbreak{}Word\allowbreak{}Line}), reads James’s word as Paul’s and Paul’s as renewal. It grants the step’s grounds and argues its denial, but one of its grounds — that James’s word is Paul’s — rests on Trent’s word alone. So the step stands at \texttt{well\allowbreak{}Supported} under the evidence standard and is \texttt{disputed} under the tradition standard. This dispute weighs it at its cited rating, the first of these; the hearing under the tradition standard weighs it at the second, and there what James’s word denotes is contested. A verified exegete holding that James’s word is Paul’s would make the renewal reading credible under both standards, and the step \texttt{disputed} under both.
 
-The faith step has no encoded dissent beyond Howell’s, which asserts its denial (\texttt{Testimony.Articles.Howell2003}). A fuller audit, across the Catholic commentaries on James, is still to do.
+The faith step has no encoded dissent beyond Howell’s, which asserts its denial (\texttt{Testimony\allowbreak{}Arguments.Articles.Howell2003}). A fuller audit, across the Catholic commentaries on James, is still to do.
 
 \paragraph*{Inference ratings}
 \leavevmode\par
@@ -10988,10 +10917,10 @@ The step from δικαιόω’s use outside Paul, James’s own use of it, and 
 def jamesLexicalSource : Source :=
   {
     primary :=
-      Reference.work Bib.mooJames
+      Reference.work mooJames
         (Bib.Locus.adLoc { book := Book.james, chapter := 2, verse := 21 }),
     supporting :=
-      [Reference.work Bib.silvaBiblicalWords, Reference.work Bib.barrSemantics],
+      [Reference.work silvaBiblicalWords, Reference.work barrSemantics],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 \end{verbatim}}
@@ -11002,10 +10931,10 @@ The step from James 2:14–26, the dead faith it names, and what the Reformers�
 def jamesFaithSource : Source :=
   {
     primary :=
-      Reference.work Bib.mooJames
+      Reference.work mooJames
         (Bib.Locus.adLoc { book := Book.james, chapter := 2, verse := 24 }),
     supporting :=
-      [Reference.work Bib.westminsterConfession (Bib.Locus.sectionRef "XI.2")],
+      [Reference.work westminsterConfession (Bib.Locus.sectionRef "XI.2")],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 \end{verbatim}}
@@ -11016,7 +10945,7 @@ Trent’s reading of its three texts as the increase of justification (Session V
 def trentIncreaseSource : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef "Trent, Session VI (1547), ch. 10"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
@@ -11027,7 +10956,7 @@ Trent’s reading of what works do (Session VI, canon 24), applied to James 2:24
 def trentWorksSource : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef "Trent, Session VI (1547), canon 24"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
@@ -11038,8 +10967,8 @@ The step from what the original text says, and the principle that it outweighs a
 def textualSource : Source :=
   {
     primary :=
-      Reference.work Bib.divinoAfflanteSpiritu (Bib.Locus.sectionRef "§16"),
-    supporting := [Reference.work Bib.sblgnt, Reference.work Bib.nabre],
+      Reference.work divinoAfflanteSpiritu (Bib.Locus.sectionRef "§16"),
+    supporting := [Reference.work sblgnt, Reference.work nabre],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 \end{verbatim}}
@@ -11050,7 +10979,7 @@ The Reformed harmony’s step: from James’s target, a barren faith, and works 
 def jamesHarmonySource : Source :=
   {
     primary :=
-      Reference.work Bib.mooJames
+      Reference.work mooJames
         (Bib.Locus.adLoc { book := Book.james, chapter := 2, verse := 24 }),
     supporting :=
       [Reference.work Bib.calvinInstitutes
@@ -11065,10 +10994,10 @@ Trent’s step from the reward texts, and the reward rendered to merits, to “w
 def trentRewardSource : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef "Trent, Session VI (1547), ch. 16, canon 32"),
     supporting :=
-      [Reference.work Bib.westminsterConfession
+      [Reference.work westminsterConfession
           (Bib.Locus.sectionRef "XVI.5, XVI.6")],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
@@ -11079,9 +11008,9 @@ The renewal reading’s step: from Paul’s δικαιόω as renewal, James’s
 def renewalWordSource : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef "Trent, Session VI (1547), ch. 10"),
-    supporting := [Reference.work Bib.vanLandinghamJudgment],
+    supporting := [Reference.work vanLandinghamJudgment],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{westminster\allowbreak{}Reward\allowbreak{}Source}}\par\nobreak\noindent
@@ -11091,7 +11020,7 @@ Westminster’s step from the texts it gives as proofs to “the reward is not r
 def westminsterRewardSource : Source :=
   {
     primary :=
-      Reference.work Bib.westminsterConfession
+      Reference.work westminsterConfession
         (Bib.Locus.sectionRef "XVI.5, XVI.6"),
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
@@ -11233,16 +11162,16 @@ Westminster’s reading of its proof texts: from Ephesians 2:8–10, James 2:18�
 
 This rates the step’s \textbf{support}, and it is \texttt{well\allowbreak{}Supported}. The Reformed confess it, and so do the Lutheran World Federation and the Catholic Church together: “good works ... follow justification and are its fruits”, and “whatever in the justified precedes or follows the free gift of faith is neither the basis of justification nor merits it” (\emph{Joint Declaration} §§37, 25).
 
-Whether a dissent brings the step down is computed, not cited (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Ratings}). Trent dissents twice: canon 24, and chapter 16’s reading of the reward texts. Under the tradition standard both are credible, and the step is \texttt{disputed}. Under the evidence standard neither is, because each rests at one claim on the council’s word.
+Whether a dissent brings the step down is computed, not cited (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Ratings}). Trent dissents twice: canon 24, and chapter 16’s reading of the reward texts. Under the tradition standard both are credible, and the step is \texttt{disputed}. Under the evidence standard neither is, because each rests at one claim on the council’s word.
 
 {\small\begin{verbatim}
 def fruitSource : Source :=
   {
     primary :=
-      Reference.work Bib.westminsterConfession
+      Reference.work westminsterConfession
         (Bib.Locus.sectionRef "XVI.2, XVI.5"),
     supporting :=
-      [Reference.work Bib.jointDeclarationJustification
+      [Reference.work jointDeclarationJustification
           (Bib.Locus.sectionRef "§§25, 37")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.wellSupported }
@@ -11710,7 +11639,7 @@ theorem jamesPartyNode_strength : ∀ (i : JamesParty), (jamesPartyNode
 -- axioms: propext
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
-\textbf{Who defeats whom}, all 144 pairs. James’s word defeats Trent’s reading of it, and the reading’s reply fails; it defeats the renewal reading too, whose reply fails for the same reason — it rests on Paul’s word as renewal, rated \texttt{disputed}, against a case rated \texttt{well\allowbreak{}Supported}. The Greek of Revelation 22:11 and of Sirach 18:22 defeat Trent’s Latin readings of them, and the replies fail. The Reformed harmony defeats, and is defeated by, both of Trent’s readings of what works do: canon 24’s, and chapter 16’s from the reward texts. Westminster’s reading of the reward texts and chapter 16’s defeat each other: each denies what the other holds about merit, and both rest on a reading rated \texttt{disputed}. The Reformed harmony and the renewal reading defeat each other through what their claims mean: the harmony holds that James 2:24 is compatible with Paul, which says James’s word has not Paul’s sense, and the renewal reading holds that it has (\texttt{Testimony.Meanings.Sola\allowbreak{}Fide.joins}); both rest on a reading rated \texttt{disputed}. Nothing else: in particular, nothing in the dispute contradicts James’s faith, and James’s word does not touch Trent’s reading of what works do, which grants the word and makes a claim about God’s verdict instead.
+\textbf{Who defeats whom}, all 144 pairs. James’s word defeats Trent’s reading of it, and the reading’s reply fails; it defeats the renewal reading too, whose reply fails for the same reason — it rests on Paul’s word as renewal, rated \texttt{disputed}, against a case rated \texttt{well\allowbreak{}Supported}. The Greek of Revelation 22:11 and of Sirach 18:22 defeat Trent’s Latin readings of them, and the replies fail. The Reformed harmony defeats, and is defeated by, both of Trent’s readings of what works do: canon 24’s, and chapter 16’s from the reward texts. Westminster’s reading of the reward texts and chapter 16’s defeat each other: each denies what the other holds about merit, and both rest on a reading rated \texttt{disputed}. The Reformed harmony and the renewal reading defeat each other through what their claims mean: the harmony holds that James 2:24 is compatible with Paul, which says James’s word has not Paul’s sense, and the renewal reading holds that it has (\texttt{Testimony\allowbreak{}Arguments.Meanings.Sola\allowbreak{}Fide.joins}); both rest on a reading rated \texttt{disputed}. Nothing else: in particular, nothing in the dispute contradicts James’s faith, and James’s word does not touch Trent’s reading of what works do, which grants the word and makes a claim about God’s verdict instead.
 
 Every cell is computed from the parties’ premises by \texttt{Horn.defeats?} and checked by the kernel.
 
@@ -11726,16 +11655,11 @@ The dispute in the form the verdict solver computes with.
 def jamesFinite : Solver.Finite jamesDispute.defeats :=
   {
     parties :=
-      [JamesParty.lexical,
-        JamesParty.faith,
-        JamesParty.harmony,
-        JamesParty.trentOnTheWord,
-        JamesParty.trentOnWorks,
-        JamesParty.trentOnRevelation,
-        JamesParty.trentOnSirach,
-        JamesParty.revelationText,
-        JamesParty.sirachText,
-        JamesParty.trentOnReward,
+      [JamesParty.lexical, JamesParty.faith,
+        JamesParty.harmony, JamesParty.trentOnTheWord,
+        JamesParty.trentOnWorks, JamesParty.trentOnRevelation,
+        JamesParty.trentOnSirach, JamesParty.revelationText,
+        JamesParty.sirachText, JamesParty.trentOnReward,
         JamesParty.renewalOnTheWord,
         JamesParty.westminsterOnReward],
     complete := jamesFinite._proof_1,
@@ -11993,7 +11917,7 @@ Why Trent’s Revelation 22:11 cannot be defended: the Greek defeats it, and not
 \par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}on\_\allowbreak{}revelation\_\allowbreak{}indefensible}}\par\nobreak\noindent
 \textbf{Trent’s Revelation 22:11 cannot be defended as a text for the increase of justification.} “He that is just, let him be justified still” is the Vulgate’s \emph{iustificetur adhuc}; the Greek, as the critical text prints it and the Catholic Church’s own translation renders it, says “the righteous must still do right”; and the original, “written by the inspired author himself”, outweighs any translation (\emph{Divino Afflante Spiritu} §16).
 
-What this does not claim: that Trent’s citation is a doctrinal error. Read as Pius XII reads Trent’s decree on the Vulgate — a juridically authentic reading, free from error in faith — it is consistent with all he says, and rests on the Church’s authority instead of the inspired text (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.Vulgate}).
+What this does not claim: that Trent’s citation is a doctrinal error. Read as Pius XII reads Trent’s decree on the Vulgate — a juridically authentic reading, free from error in faith — it is consistent with all he says, and rests on the Church’s authority instead of the inspired text (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.Vulgate}).
 
 {\small\begin{verbatim}
 theorem trent_on_revelation_indefensible : ∀ (S : Set JamesParty),
@@ -12367,8 +12291,8 @@ theorem james_warrants : jamesLexicalCase.restingOnAuthority = [] ∧
     westminsterOnReward.restingOnAuthority = []
 -- axioms: propext
 \end{verbatim}}
-\subsection*{Arguments.SolaFide.Vulgate — Trent’s Latin texts, on Rome’s own terms}
-Two of the three texts Trent cites for the increase of justification say “justified” only in Latin (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide.James}). “He that is just, let him be justified still” is the Vulgate’s Revelation 22:11, whose Greek says “let the righteous still do righteousness”; “Be not afraid to be justified even to death” is the Vulgate’s Sirach 18:22, whose Greek is about paying vows. Trent introduces both with “as it is written” (Session VI, ch. 10), having declared the Vulgate “authentic” for “public lectures, disputations, sermons and expositions” (Session IV).
+\subsection*{TestimonyArguments.SolaFide.Vulgate — Trent’s Latin texts, on Rome’s own terms}
+Two of the three texts Trent cites for the increase of justification say “justified” only in Latin (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.James}). “He that is just, let him be justified still” is the Vulgate’s Revelation 22:11, whose Greek says “let the righteous still do righteousness”; “Be not afraid to be justified even to death” is the Vulgate’s Sirach 18:22, whose Greek is about paying vows. Trent introduces both with “as it is written” (Session VI, ch. 10), having declared the Vulgate “authentic” for “public lectures, disputations, sermons and expositions” (Session IV).
 
 The reader’s question is whether Rome contradicts itself here — whether what Pius XII taught about the original texts in \emph{Divino Afflante Spiritu} (1943) cannot be held together with Trent’s use of these two readings. This module answers it from Rome’s own words only: Trent’s, Pius XII’s, and the Catholic Church’s own translation of the Greek.
 
@@ -12377,7 +12301,7 @@ The reader’s question is whether Rome contradicts itself here — whether what
 
 \textbf{Read as Pius XII reads Trent’s decree on the Vulgate}, there is no contradiction. Pius XII denies that recourse to the originals “in any way derogates” from Trent (§20): the Vulgate’s authenticity is “juridical” rather than critical, and the Vulgate, “in the sense in which the Church has understood and understands it”, is “free from any error whatsoever in matters of faith and morals” and “may be quoted safely ... in disputations” (§21). On that reading Trent quotes the Church’s authentic Latin, not the inspired authors’ words, and everything Rome says can be held together (\texttt{pius\_\allowbreak{}reading\_\allowbreak{}is\_\allowbreak{}consistent}).
 
-\textbf{What the consistent reading costs.} It moves the two texts’ warrant from the inspired authors to the Church: the claims that carry it rest on Rome’s word alone (\texttt{pius\_\allowbreak{}reading\_\allowbreak{}rests\_\allowbreak{}on\_\allowbreak{}authority}). And Pius XII asks that a doctrine taught from the Vulgate be confirmed from the original texts (§22), which at these two verses do not confirm it (\texttt{pius\_\allowbreak{}finds\_\allowbreak{}no\_\allowbreak{}confirmation}). So on Rome’s own terms the doctrine of the increase of justification is confirmed from the originals, if at all, by James 2:24 alone — where it is weighed in \texttt{Testimony.Arguments.Sola\allowbreak{}Fide.James}.
+\textbf{What the consistent reading costs.} It moves the two texts’ warrant from the inspired authors to the Church: the claims that carry it rest on Rome’s word alone (\texttt{pius\_\allowbreak{}reading\_\allowbreak{}rests\_\allowbreak{}on\_\allowbreak{}authority}). And Pius XII asks that a doctrine taught from the Vulgate be confirmed from the original texts (§22), which at these two verses do not confirm it (\texttt{pius\_\allowbreak{}finds\_\allowbreak{}no\_\allowbreak{}confirmation}). So on Rome’s own terms the doctrine of the increase of justification is confirmed from the originals, if at all, by James 2:24 alone — where it is weighed in \texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide.James}.
 
 \subsubsection*{What this does not show}
 It does not show that Rome contradicts itself. Trent does not say which reading of its “as it is written” it means, and Pius XII supplies the reading on which there is no contradiction. What the module shows is the price of each reading: the first contradicts Pius XII; the second makes the two texts an appeal to the Church’s authority, which Pius XII himself asks to be confirmed from the originals, and the originals do not confirm it.
@@ -12414,9 +12338,8 @@ Pius XII’s step: a doctrine taught from the Vulgate is to be confirmed from th
 def piusConfirmationSource : Source :=
   {
     primary :=
-      Reference.work Bib.divinoAfflanteSpiritu (Bib.Locus.sectionRef "§22"),
-    supporting := [Reference.work Bib.nabre],
-    tradition := Tradition.romanCatholic,
+      Reference.work divinoAfflanteSpiritu (Bib.Locus.sectionRef "§22"),
+    supporting := [Reference.work nabre], tradition := Tradition.romanCatholic,
     confidence := Confidence.wellSupported }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{pius\allowbreak{}On\allowbreak{}Trents\allowbreak{}Vulgate}} --- Pius XII, on Trent’s Vulgate\par\nobreak\noindent
@@ -12473,7 +12396,7 @@ theorem pius_reading_rests_on_authority :
     Claim.doctrineToBeConfirmedFromOriginals]
 -- axioms: propext
 \end{verbatim}}
-\subsection*{Arguments.SolaFide.Ratings — which dissents from the James steps are critiques}
+\subsection*{TestimonyArguments.SolaFide.Ratings — which dissents from the James steps are critiques}
 A step is rated \texttt{disputed} when someone dissents from it. The reader’s question is the next one: \textbf{is the dissent an argument, or only a disagreement?} This module asks it of every dissent the library encodes from two steps of the Reformed reading of James, using the checks of \texttt{Testimony.Logic.Credibility}. A credible dissent:
 
 \begin{itemize}
@@ -12728,7 +12651,7 @@ Trent’s step from its definition to the denial that faith suffices: if justifi
 def trentSufficiencySource : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef
           "Trent, Session VI (1547), Decree on Justification, ch. 7; canon 9"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
@@ -12910,21 +12833,17 @@ def jamesRegister : Register jamesDispute :=
   {
     assessmentOf := fun x =>
       match x with
-      | JamesParty.trentOnTheWord =>
-        some trentWordAssessment
-      | JamesParty.trentOnWorks =>
-        some canon24Assessment
-      | JamesParty.trentOnReward =>
-        some rewardAssessment
-      | JamesParty.renewalOnTheWord =>
-        some renewalAssessment
+      | JamesParty.trentOnTheWord => some trentWordAssessment
+      | JamesParty.trentOnWorks => some canon24Assessment
+      | JamesParty.trentOnReward => some rewardAssessment
+      | JamesParty.renewalOnTheWord => some renewalAssessment
       | JamesParty.westminsterOnReward =>
         some westminsterAssessment
       | x => none,
     ownPosition := jamesRegister._proof_1,
     steps :=
-      [fruitStep, lexicalStep,
-        canon24Step, rewardStep] }
+      [fruitStep, lexicalStep, canon24Step,
+        rewardStep] }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{rated\allowbreak{}Strength}}\par\nobreak\noindent
 Each party’s weakest link, weighed at a standard’s ratings: as cited, except that under the tradition standard James’s word is weighed as \texttt{disputed}, its computed rating there.
@@ -12981,8 +12900,7 @@ def ratedFinite : (s : Standard) → Solver.Finite (jamesRegister.rerated
   fun s =>
     { parties := jamesFinite.parties,
       complete := ratedFinite._proof_1,
-      defeats := fun i j => decide (ratedDefeats s i j),
-      spec := ⋯ }
+      defeats := fun i j => decide (ratedDefeats s i j), spec := ⋯ }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Under\allowbreak{}Evidence}}\par\nobreak\noindent
 The hearing under the evidence standard.
@@ -13006,9 +12924,7 @@ The hearing under a standard, in the form the verdict solver computes with.
 {\small\begin{verbatim}
 def jamesUnderFinite : (s : Standard) → Solver.Finite fun i j =>
     (jamesRegister.rerated s).defeats ↑i ↑j :=
-  fun s =>
-    (ratedFinite s).restrict
-      (jamesRegister.admits s)
+  fun s => (ratedFinite s).restrict (jamesRegister.admits s)
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Under\allowbreak{}Evidence\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom in the hearing under the evidence standard}: as in the full dispute, among the parties heard.
@@ -13506,8 +13422,8 @@ theorem fruit_turns_on_the_standard : Framework.grounded
 \section*{The canonical witness — faith alone, from the texts all parties accept}
 \addcontentsline{toc}{section}{The canonical witness — faith alone, from the texts all parties accept}
 
-\subsection*{Arguments.CanonicalWitness — faith alone, from the texts every party accepts}
-\texttt{Testimony.Arguments.Sola\allowbreak{}Fide} argues faith alone through the disputes that surround it: what ἔργα νόμου denotes, whether πίστις Χριστοῦ is objective, what σῴζω means at Luke 7:50. This argument asks a narrower question, and the disputes do not bury it: \textbf{granting only the texts that Rome and the Reformers both hold as scripture, what does each corpus say about how a person is justified, and does faith alone follow?}
+\subsection*{TestimonyArguments.CanonicalWitness — faith alone, from the texts every party accepts}
+\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide} argues faith alone through the disputes that surround it: what ἔργα νόμου denotes, whether πίστις Χριστοῦ is objective, what σῴζω means at Luke 7:50. This argument asks a narrower question, and the disputes do not bury it: \textbf{granting only the texts that Rome and the Reformers both hold as scripture, what does each corpus say about how a person is justified, and does faith alone follow?}
 
 \textbf{Every text is a premise cited to scripture alone.} Romans, Galatians, Ephesians and Titus are read together as Paul, whoever wrote the last two: every party receives them as canon, and the question is what the canon says. Hebrews is read as its own corpus, because it is anonymous. Trent grants all of them; its Decree on Justification quotes most. So the texts are \texttt{consensus}, and nothing turns on them.
 
@@ -13534,13 +13450,13 @@ What they show is that faith’s sufficiency, and the exclusion of works as grou
 
 What this argument does \emph{not} show is that the Reformed readings are right. It shows where the disagreement is. Every text is common ground; every reading is cited to the people who hold it; and the burden results name, corpus by corpus, what a reader must reject to deny the conclusion.
 
-\subsection*{Arguments.CanonicalWitness.Atoms — the atomic claims}
-What the texts say, corpus by corpus; the three parts of \emph{faith alone} — that faith is necessary, that it is sufficient, and that works are not the ground; what James adds, that works are the fruit of saving faith; and the readings on which James and Trent part. See \texttt{Testimony.Arguments.Canonical\allowbreak{}Witness} for the argument this encodes.
+\subsection*{TestimonyArguments.CanonicalWitness.Atoms — the atomic claims}
+What the texts say, corpus by corpus; the three parts of \emph{faith alone} — that faith is necessary, that it is sufficient, and that works are not the ground; what James adds, that works are the fruit of saving faith; and the readings on which James and Trent part. See \texttt{Testimony\allowbreak{}Arguments.Canonical\allowbreak{}Witness} for the argument this encodes.
 
-\subsection*{Arguments.CanonicalWitness.Sources — a citation for every atom}
+\subsection*{TestimonyArguments.CanonicalWitness.Sources — a citation for every atom}
 Every text is cited to scripture alone. That is the argument’s point, and the generated manifest shows it: every text atom is marked as grounded in scripture alone. The rival grants every one of them — Trent quotes most of them itself — so what the texts say is common ground, and nothing in the argument turns on a citation that only one side accepts.
 
-The readings are where the argument is made, and they are cited as readings: each corpus’s step carries its own rated source (\texttt{Testimony.Arguments.Canonical\allowbreak{}Witness.Lines}). \texttt{cite} holds the argument’s own citations; \texttt{tridentine\allowbreak{}Cite} overrides the one atom on which Trent parts from it, the sense of “justified” in James 2:24.
+The readings are where the argument is made, and they are cited as readings: each corpus’s step carries its own rated source (\texttt{Testimony\allowbreak{}Arguments.Canonical\allowbreak{}Witness.Lines}). \texttt{cite} holds the argument’s own citations; \texttt{tridentine\allowbreak{}Cite} overrides the one atom on which Trent parts from it, the sense of “justified” in James 2:24.
 
 \subsection*{The claims, numbered}
 \begin{longtable}{@{}r >{\raggedright\arraybackslash}p{0.30\textwidth} l >{\raggedright\arraybackslash}p{0.19\textwidth} >{\raggedright\arraybackslash}p{0.21\textwidth}@{}}
@@ -13625,7 +13541,7 @@ Trent’s citations: the argument’s, except the one atom Trent denies — the 
 {\small\begin{verbatim}
 def tridentineCite : Claim → AtomMeta
 \end{verbatim}}
-\subsection*{Arguments.CanonicalWitness.Lines — one reading per corpus}
+\subsection*{TestimonyArguments.CanonicalWitness.Lines — one reading per corpus}
 Each corpus is a line of reason: its texts as grounds, and one step — the reading — carrying them to what it delivers. The texts are granted by every party; the step is where each corpus is read, and it is cited and rated as a reading.
 
 A corpus delivers only what its texts say. Hebrews says faith is necessary, and nothing about works; the Johannine texts say faith is sufficient and necessary; Peter and Jesus say that works are not the ground and that faith is sufficient. Paul says all three, and he is read twice, because he says them in different places: on works (Romans 3:28, Ephesians 2:8–9, Titus 3:5), that works are not the ground; on faith (Romans 4:4–5, Galatians 2:16, 3:11), that faith is necessary and sufficient. \emph{Faith alone} is the three together (\texttt{to\allowbreak{}Faith\allowbreak{}Alone}), so no reading has to carry more than its own texts.
@@ -13639,11 +13555,11 @@ Paul’s reading on works, cited to the Reformed exegesis, and to the first Chri
 
 {\small\begin{verbatim}
 def paulineReadingSource : Source :=
-  { primary := Reference.work Bib.schreinerFaithAlone,
+  { primary := Reference.work schreinerFaithAlone,
     supporting :=
       [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.19"),
-        Reference.work Bib.anf1 (Bib.Locus.sectionRef "1 Clement 32.4"),
-        Reference.work Bib.anf1
+        Reference.work anf1 (Bib.Locus.sectionRef "1 Clement 32.4"),
+        Reference.work anf1
           (Bib.Locus.sectionRef "Polycarp, Epistle to the Philippians 1")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
@@ -13655,15 +13571,15 @@ Two fathers Rome names Doctors of the Church say the second half in terms. Basil
 
 {\small\begin{verbatim}
 def paulineFaithReadingSource : Source :=
-  { primary := Reference.work Bib.schreinerFaithAlone,
+  { primary := Reference.work schreinerFaithAlone,
     supporting :=
-      [Reference.work Bib.tannerDecrees
+      [Reference.work tannerDecrees
           (Bib.Locus.sectionRef
             "Trent, Session VI (1547), Decree on Justification, ch. 8"),
         Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "III.xi.19"),
-        Reference.work Bib.basilAsceticalWorks
+        Reference.work basilAsceticalWorks
           (Bib.Locus.sectionRef "Homily 20, Of Humility"),
-        Reference.work Bib.hilaryMatthew (Bib.Locus.sectionRef "8.6")],
+        Reference.work hilaryMatthew (Bib.Locus.sectionRef "8.6")],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -13674,23 +13590,23 @@ Hebrews’ reading: that faith is necessary. Conceded by Trent.
 def hebrewsReadingSource : Source :=
   {
     primary :=
-      Reference.work Bib.bruceHebrews
+      Reference.work bruceHebrews
         (Bib.Locus.adLoc { book := Book.hebrews, chapter := 11, verse := 6 }),
     supporting :=
-      [Reference.work Bib.tannerDecrees
+      [Reference.work tannerDecrees
           (Bib.Locus.sectionRef
             "Trent, Session VI (1547), Decree on Justification, ch. 8")],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.consensus }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{johannine\allowbreak{}Reading\allowbreak{}Source}}\par\nobreak\noindent
-The Johannine reading, cited to Calvin’s commentary on John. Aquinas reads the same texts of a faith formed by charity (\texttt{Testimony.Arguments.Sola\allowbreak{}Fide}).
+The Johannine reading, cited to Calvin’s commentary on John. Aquinas reads the same texts of a faith formed by charity (\texttt{Testimony\allowbreak{}Arguments.Sola\allowbreak{}Fide}).
 
 {\small\begin{verbatim}
 def johannineReadingSource : Source :=
   {
     primary :=
-      Reference.work Bib.calvinJohn
+      Reference.work calvinJohn
         (Bib.Locus.adLoc { book := Book.john, chapter := 3, verse := 16 }),
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
@@ -13702,7 +13618,7 @@ The Petrine reading, cited to Bruce on Peter’s speech at the Jerusalem council
 def petrineReadingSource : Source :=
   {
     primary :=
-      Reference.work Bib.bruceActs
+      Reference.work bruceActs
         (Bib.Locus.adLoc { book := Book.acts, chapter := 15, verse := 11 }),
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
@@ -13714,7 +13630,7 @@ The dominical reading, cited to Marshall on the Pharisee and the tax collector.
 def dominicalReadingSource : Source :=
   {
     primary :=
-      Reference.work Bib.marshallLuke
+      Reference.work marshallLuke
         (Bib.Locus.adLoc { book := Book.luke, chapter := 18, verse := 14 }),
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
@@ -13724,11 +13640,9 @@ James’s reading: works as the fruit of a faith that has justified.
 
 {\small\begin{verbatim}
 def jamesReadingSource : Source :=
-  {
-    primary :=
-      Reference.work Bib.mooJames (Bib.Locus.adLoc Scripture.james2_14),
+  { primary := Reference.work mooJames (Bib.Locus.adLoc Scripture.james2_14),
     supporting :=
-      [Reference.work Bib.johnsonJames (Bib.Locus.adLoc Scripture.james2_24),
+      [Reference.work johnsonJames (Bib.Locus.adLoc Scripture.james2_24),
         Reference.work Bib.calvinInstitutes
           (Bib.Locus.sectionRef "III.xvii.11")],
     tradition := Tradition.reformedProtestant,
@@ -13741,7 +13655,7 @@ Trent’s use of James 2:24 against faith alone: the verse it quotes in chapter 
 def trentAgainstSufficiencySource : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef
           "Trent, Session VI (1547), Decree on Justification, ch. 10 and canon 9"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
@@ -13753,7 +13667,7 @@ Trent’s reading of James 2:24: justification increased by works.
 def trentOnJamesSource : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef
           "Trent, Session VI (1547), Decree on Justification, ch. 10"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
@@ -13856,12 +13770,9 @@ The corpora, one reading each, Paul’s two readings first.
 
 {\small\begin{verbatim}
 def corpora : List (Line Claim) :=
-  [paulineLine,
-    paulineFaithLine,
-    hebrewsLine,
-    johannineLine,
-    petrineLine,
-    dominicalLine]
+  [paulineLine, paulineFaithLine,
+    hebrewsLine, johannineLine,
+    petrineLine, dominicalLine]
 \end{verbatim}}
 \paragraph*{The readings, by name}
 \leavevmode\par
@@ -13880,10 +13791,10 @@ theorem readings_named : (corpora ++ [jamesLine])[Reading.paul]? = some
     [jamesLine])[Reading.james]? = some jamesLine
 -- axioms: propext
 \end{verbatim}}
-\subsection*{Arguments.CanonicalWitness.Packages — the positions}
+\subsection*{TestimonyArguments.CanonicalWitness.Packages — the positions}
 Trent first, because the rival is written before anything is proved. Then the canonical case, the case with James, and the specific burdens a reader can check one at a time: the case with one corpus’s reading rejected, with the readings behind one part of faith alone rejected together, and with all but two rejected. Every text stays granted in each; what goes is the step that reads them.
 
-Each is built with \texttt{Argument\allowbreak{}Package.rejecting}, the operation the opponent’s burden quantifies over (\texttt{Testimony.Logic.Burden}), and its result is proved from that burden in \texttt{Testimony.Arguments.Canonical\allowbreak{}Witness.Results}. So the named burdens are instances of the computed one, and cannot drift from it.
+Each is built with \texttt{Argument\allowbreak{}Package.rejecting}, the operation the opponent’s burden quantifies over (\texttt{Testimony.Logic.Burden}), and its result is proved from that burden in \texttt{Testimony\allowbreak{}Arguments.Canonical\allowbreak{}Witness.Results}. So the named burdens are instances of the computed one, and cannot drift from it.
 
 \par\medskip\noindent\textbf{\texttt{all\allowbreak{}Texts}}\par\nobreak\noindent
 Every text the argument cites, from every corpus and from James. The rival holds all of them.
@@ -14333,7 +14244,7 @@ Paul’s message about faith, apart from what he says about works: faith is nece
   \vdash \quad & \lnot P_{22}
 \end{align*}
 \emph{Grounded in scripture alone:} James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham’s faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone.
-\subsection*{Arguments.CanonicalWitness.Results — what the canonical witness establishes}
+\subsection*{TestimonyArguments.CanonicalWitness.Results — what the canonical witness establishes}
 Every result is conditional on its premises, as everywhere in the library; what this argument adds is that every premise but the readings is a text all parties accept as scripture. So each result says: \emph{grant these texts, read each corpus this way, and this follows} — and the burden says exactly which readings an opponent has to reject.
 
 \paragraph*{The rival}
@@ -14713,7 +14624,7 @@ Both positions hold every text. They part at one reading: the sense of “justif
 \section*{Sola scriptura}
 \addcontentsline{toc}{section}{Sola scriptura}
 
-\subsection*{Arguments.SolaScriptura — scripture as the sole infallible rule of faith}
+\subsection*{TestimonyArguments.SolaScriptura — scripture as the sole infallible rule of faith}
 The formal principle of the Reformation. Sola fide is a claim \emph{within} scripture’s teaching; sola scriptura is a claim \emph{about} scripture’s authority, and so must answer objections the material principle never faces.
 
 \subsubsection*{What the dispute is not about}
@@ -14793,12 +14704,12 @@ The final-arbiter reading turns on a distinction between \textbf{doctrine}, whic
 \texttt{Hearings.lean} & the same dispute heard against each reading of Trent \\
 \bottomrule
 \end{longtable}
-\subsection*{Arguments.SolaScriptura.Atoms — the atomic claims}
+\subsection*{TestimonyArguments.SolaScriptura.Atoms — the atomic claims}
 Four positions, three objections and two parity replies, so the atom list is longer than most. It is grouped by what each atom belongs to rather than by kind, because the groups are what the lines are built from.
 
 Two atoms are worth flagging. \texttt{scripture\allowbreak{}Is\allowbreak{}Infallible} is granted by every party to the dispute and was absent from the seed encoding, which concluded that scripture is the sole \emph{infallible} rule without ever saying that scripture is infallible; the eliminative line needs it stated. And \texttt{thessalonians2\_\allowbreak{}15\allowbreak{}Tradition\allowbreak{}Binding} is a datum both sides must accommodate rather than a Roman premise — the seed filed it as the Catholic counter-text, which left the Protestant package with no answer to it.
 
-\subsection*{Arguments.SolaScriptura.Sources — citation and classification for every atom}
+\subsection*{TestimonyArguments.SolaScriptura.Sources — citation and classification for every atom}
 \texttt{cite} is total, so an uncited atom does not compile.
 
 Where the positions disagree about an atom they are given the source that actually holds the claim: the Orthodox premise cites Florovsky and Ware rather than a Protestant account of Orthodoxy, and Tradition 0 cites Geisler rather than Mathison’s description of it — Geisler’s principal complaint being that the description is a caricature.
@@ -14865,7 +14776,7 @@ The rating of Mark 7’s step, from the rebuke to the principle. No reader was f
 def mark7PrincipleInference : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef "Vatican II (1965), Dei Verbum 10"),
     supporting :=
       [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.x.23")],
@@ -14877,11 +14788,11 @@ The rating of the step from Mark 7’s principle to the sole rule: \texttt{dispu
 
 {\small\begin{verbatim}
 def principleToSoleRuleInference : Source :=
-  { primary := Reference.work Bib.geiselmannMeaningOfTradition,
+  { primary := Reference.work geiselmannMeaningOfTradition,
     supporting :=
-      [Reference.work Bib.tannerDecrees
+      [Reference.work tannerDecrees
           (Bib.Locus.sectionRef "Vatican I (1870), Pastor Aeternus, ch. 4"),
-        Reference.work Bib.florovskyBibleChurchTradition],
+        Reference.work florovskyBibleChurchTradition],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Inference}}\par\nobreak\noindent
@@ -14891,7 +14802,7 @@ The rating of Trent’s step, from 2 Thessalonians 2:15 and tradition as a sourc
 def tridentineInference : Source :=
   {
     primary :=
-      Reference.work Bib.tannerDecrees
+      Reference.work tannerDecrees
         (Bib.Locus.sectionRef
           "Trent, Session IV (1546), Decree on Sacred Books and Traditions"),
     tradition := Tradition.romanCatholic,
@@ -14903,7 +14814,7 @@ Citation and classification for every atom. Total, so nothing is uncited.
 {\small\begin{verbatim}
 def cite : Claim → AtomMeta
 \end{verbatim}}
-\subsection*{Arguments.SolaScriptura.Lines — the inference steps and the lines of reason}
+\subsection*{TestimonyArguments.SolaScriptura.Lines — the inference steps and the lines of reason}
 Three routes reach the conclusion — the classical line, the eliminative line, and Mark 7’s, which takes two lines — three positions deny it, and three objections attack it from different directions. The objections do not reduce to one another: self-refutation says the doctrine fails its own standard, the canon objection says an authority outside scripture is needed to identify scripture, and the interpretive-authority regress says the authority claimed is the claimant in disguise.
 
 \textbf{Redundancy does not defend the hinge here.} In \texttt{Sola\allowbreak{}Fide}, adding a second strand defeated an attack on a premise. These objections are not premise attacks: each independently delivers the negation of the conclusion, so a further route to the conclusion does nothing against them. What answers an objection is denying one of \emph{its} grounds, which is why every reply below is written with \texttt{Line.on\allowbreak{}Grounds} — the objection’s own line, with the ground the reply refuses put back as what the reply offers instead.
@@ -15189,7 +15100,7 @@ What the Protestant packages rest on beyond any single line: the prooftext that 
   \text{(5)} \quad & P_{24} \\
   \text{(6)} \quad & P_{23} \\
 \end{align*}
-\subsection*{Arguments.SolaScriptura.Packages — the positions, and the variants results refute}
+\subsection*{TestimonyArguments.SolaScriptura.Packages — the positions, and the variants results refute}
 Four positions on tradition, three objections, two parity replies, and the variants each result needs. The rivals were written before anything was proved about the position argued for.
 
 Several packages are built to be \emph{refuted}. A reply is shown to block an objection by writing the objection’s line on the reply’s grounds and exhibiting a countermodel.
@@ -15427,7 +15338,7 @@ Both legs of the circle Geisler alleges in Tradition I, asked for the consensus.
   \vdash \quad & P_{27}
 \end{align*}
 \emph{No premise here rests on scripture alone.}
-\subsection*{Arguments.SolaScriptura.Results — what does and does not follow}
+\subsection*{TestimonyArguments.SolaScriptura.Results — what does and does not follow}
 The results this module exists for are the two on the hinge. The seed asserted in prose that the dispute reduces to \texttt{sola\allowbreak{}Scriptura\allowbreak{}Is\allowbreak{}Taught\allowbreak{}By\allowbreak{}Scripture}; here that claim is split into the two roles the premise actually plays, because they come apart.
 
 \paragraph*{The positions}
@@ -15615,9 +15526,7 @@ Kruger’s reading: the canon’s reception is conceded, and the demand for an i
 def krugerParityReading : Valuation Claim :=
   fun a =>
     match a with
-    |
-    Claim.identifyingCanonRequiresInfallibleAuthority =>
-      False
+    | Claim.identifyingCanonRequiresInfallibleAuthority => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{parity\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}canon\_\allowbreak{}open}}\par\nobreak\noindent
@@ -15637,9 +15546,7 @@ The reading on which the parity point is granted and the distinction still does 
 def distinctionUnestablishedReading : Valuation Claim :=
   fun a =>
     match a with
-    |
-    Claim.traditionIDiffersInPrincipleFromTradition0 =>
-      False
+    | Claim.traditionIDiffersInPrincipleFromTradition0 => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{mathison\allowbreak{}Parity\allowbreak{}Reading}}\par\nobreak\noindent
@@ -15649,8 +15556,7 @@ Mathison’s reading: ministerial authority is retained, and the claim that the 
 def mathisonParityReading : Valuation Claim :=
   fun a =>
     match a with
-    |
-    Claim.individualRetainsUltimateInterpretiveAuthority =>
+    | Claim.individualRetainsUltimateInterpretiveAuthority =>
       False
     | x => True
 \end{verbatim}}
@@ -15674,9 +15580,7 @@ The reading on which neither the consensus nor the clarity it is said to rest on
 def neitherEndReading : Valuation Claim :=
   fun a =>
     match a with
-    |
-    Claim.creedalConsensusIsHermeneuticallyNecessary =>
-      False
+    | Claim.creedalConsensusIsHermeneuticallyNecessary => False
     | Claim.scriptureIsPerspicuous => False
     | x => True
 \end{verbatim}}
@@ -15965,9 +15869,7 @@ The world the regress describes: sola scriptura does not differ in principle fro
 def interpretiveRegressOwnReading : Valuation Claim :=
   fun a =>
     match a with
-    |
-    Claim.traditionIDiffersInPrincipleFromTradition0 =>
-      False
+    | Claim.traditionIDiffersInPrincipleFromTradition0 => False
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{interpretive\allowbreak{}Regress\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
@@ -15978,7 +15880,7 @@ theorem interpretiveRegress_is_satisfiable : Satisfiable
     interpretiveRegress.premises
 -- axioms: propext, Quot.sound
 \end{verbatim}}
-\subsection*{Arguments.SolaScriptura.Mark7 — what Jesus’ rebuke of tradition settles}
+\subsection*{TestimonyArguments.SolaScriptura.Mark7 — what Jesus’ rebuke of tradition settles}
 The Pharisees and scribes ask why Jesus’ disciples eat with unwashed hands, against “the tradition of the elders”. Jesus answers with Isaiah 29:13 — “in vain do they worship me, teaching as doctrines the commandments of men” — and with Corban: a gift vowed to God releases a son from supporting his father and mother, “thus making void the word of God by your tradition” (Mark 7:1–13; Matthew 15:1–9). The Protestant case has always cited it. Until now it only sat among the shared grounds, and no step read it.
 
 \subsubsection*{What Mark 7 settles}
@@ -16076,14 +15978,14 @@ Reading Trent’s traditions as the apostolic word handed on unwritten: what Tre
 
 {\small\begin{verbatim}
 def trentReadAsApostolicWord : Source :=
-  { primary := Reference.work Bib.waterworthTrent (Bib.Locus.page 18),
+  { primary := Reference.work waterworthTrent (Bib.Locus.page 18),
     supporting :=
-      [Reference.work Bib.tannerDecrees
+      [Reference.work tannerDecrees
           (Bib.Locus.sectionRef
             "Trent, Session IV (1546), Decree on Sacred Books and Traditions"),
-        Reference.work Bib.tannerDecrees
+        Reference.work tannerDecrees
           (Bib.Locus.sectionRef "Vatican II (1965), Dei Verbum 9"),
-        Reference.work Bib.catechismCatholicChurch (Bib.Locus.sectionRef "83")],
+        Reference.work catechismCatholicChurch (Bib.Locus.sectionRef "83")],
     tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{as\allowbreak{}Mens\allowbreak{}Commandments}}\par\nobreak\noindent
@@ -16092,8 +15994,7 @@ Trent’s tradition, \textbf{read as commandments of men}: what it receives alon
 {\small\begin{verbatim}
 def asMensCommandments : Reading Claim :=
   { name := "as commandments of men",
-    commits :=
-      p Claim.mensCommandmentBindsAsGodsWord,
+    commits := p Claim.mensCommandmentBindsAsGodsWord,
     source := trentReadAsMensCommandments }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{as\allowbreak{}Apostolic\allowbreak{}Word}}\par\nobreak\noindent
@@ -16102,8 +16003,7 @@ Trent’s tradition, \textbf{read as the apostolic word handed on unwritten}: so
 {\small\begin{verbatim}
 def asApostolicWord : Reading Claim :=
   { name := "as the apostolic word handed on unwritten",
-    commits :=
-      notP Claim.noApostolicWordOutsideScripture,
+    commits := notP Claim.noApostolicWordOutsideScripture,
     source := trentReadAsApostolicWord }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}As\allowbreak{}Mens\allowbreak{}Commandments}} --- Trent (Tradition II), read as commandments of men\par\nobreak\noindent
@@ -16141,14 +16041,13 @@ def marksPrincipleReading : Valuation Claim :=
     | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{rome\allowbreak{}Grants\allowbreak{}Marks\allowbreak{}Principle\allowbreak{}Reading}}\par\nobreak\noindent
-Rome’s world, granting Mark 7: God’s word judges human tradition and no commandment of men may be bound as God’s word; but apostolic teaching survives outside Scripture, so Scripture is not the sole infallible rule. Nor is the Church’s consensus a mere product of reading Scripture: for Rome, Scripture and Tradition flow from one source (\emph{Dei Verbum} 9). A world must choose here, because the meanings exclude the consensus being that product and its being needed for Scripture’s clear sense (\texttt{Testimony.Meanings.Sola\allowbreak{}Scriptura.joins}).
+Rome’s world, granting Mark 7: God’s word judges human tradition and no commandment of men may be bound as God’s word; but apostolic teaching survives outside Scripture, so Scripture is not the sole infallible rule. Nor is the Church’s consensus a mere product of reading Scripture: for Rome, Scripture and Tradition flow from one source (\emph{Dei Verbum} 9). A world must choose here, because the meanings exclude the consensus being that product and its being needed for Scripture’s clear sense (\texttt{Testimony\allowbreak{}Arguments.Meanings.Sola\allowbreak{}Scriptura.joins}).
 
 {\small\begin{verbatim}
 def romeGrantsMarksPrincipleReading : Valuation Claim :=
   fun a =>
     match a with
-    | Claim.creedalConsensusIsDerivedFromScripture =>
-      False
+    | Claim.creedalConsensusIsDerivedFromScripture => False
     | Claim.mensCommandmentBindsAsGodsWord => False
     | Claim.noApostolicWordOutsideScripture => False
     | Claim.scriptureIsSoleInfallibleRule => False
@@ -16340,7 +16239,7 @@ Against \emph{Sola scriptura from Mark 7}, it cannot be held. Where it breaks:
 \item \(P_{39}\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God --- \emph{disputed}: \cite[506]{whitaker-disputation-1849}; \cite[I.6]{westminster-confession-1647}
 \end{itemize}
 \end{itemize}
-\subsection*{Arguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers}
+\subsection*{TestimonyArguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers}
 \texttt{Mark7.lean} asks what each position entails. This module asks what happens when they meet. Five parties: Mark 7’s principle; Mark 7’s case for sola scriptura; Trent, as it states its position; and Trent with its tradition read each of the two ways the dilemma \texttt{what\allowbreak{}Trents\allowbreak{}Tradition\allowbreak{}Is} names. Who defeats whom is not stipulated — each defeat, and each absence of one, is computed from the parties’ premises and checked by the kernel (see \texttt{Testimony.Logic.Dispute}).
 
 \subsubsection*{How to read the verdicts}
@@ -16415,12 +16314,9 @@ The package each party argues from.
 def mark7PartyNode : Mark7Party → ArgumentPackage Claim :=
   fun x =>
     match x with
-    | Mark7Party.principle =>
-      mark7Principle
-    | Mark7Party.mark7 =>
-      mark7Case
-    | Mark7Party.trent =>
-      tridentineCase
+    | Mark7Party.principle => mark7Principle
+    | Mark7Party.mark7 => mark7Case
+    | Mark7Party.trent => tridentineCase
     | Mark7Party.trentAsMensCommandments =>
       tridentineAsMensCommandments
     | Mark7Party.trentAsApostolicWord =>
@@ -16453,14 +16349,12 @@ def mark7PartyDefeats : Mark7Party → Mark7Party → Prop :=
     match x, x_1 with
     | Mark7Party.principle,
       Mark7Party.trentAsMensCommandments => True
-    | Mark7Party.mark7,
-      Mark7Party.trent => True
+    | Mark7Party.mark7, Mark7Party.trent => True
     | Mark7Party.mark7,
       Mark7Party.trentAsMensCommandments => True
     | Mark7Party.mark7,
       Mark7Party.trentAsApostolicWord => True
-    | Mark7Party.trent,
-      Mark7Party.mark7 => True
+    | Mark7Party.trent, Mark7Party.mark7 => True
     | Mark7Party.trentAsMensCommandments,
       Mark7Party.mark7 => True
     | Mark7Party.trentAsApostolicWord,
@@ -16509,14 +16403,12 @@ The dispute in the form the verdict solver computes with.
 def mark7Finite : Solver.Finite mark7Dispute.defeats :=
   {
     parties :=
-      [Mark7Party.principle,
-        Mark7Party.mark7,
+      [Mark7Party.principle, Mark7Party.mark7,
         Mark7Party.trent,
         Mark7Party.trentAsMensCommandments,
         Mark7Party.trentAsApostolicWord],
     complete := mark7Finite._proof_1,
-    defeats := fun i j =>
-      decide (mark7PartyDefeats i j),
+    defeats := fun i j => decide (mark7PartyDefeats i j),
     spec := mark7Finite._proof_2 }
 \end{verbatim}}
 \paragraph*{The dispute as a graph}
@@ -16892,7 +16784,7 @@ theorem trent_not_forced_against_mark7 : ¬Framework.SkepticallyAccepted
     mark7Dispute.defeats Mark7Party.trent
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\subsection*{Arguments.SolaScriptura.Hearings — Mark 7, heard against each reading of Trent}
+\subsection*{TestimonyArguments.SolaScriptura.Hearings — Mark 7, heard against each reading of Trent}
 The dispute over Mark 7 hears Trent three ways at once: as Trent states its position, and with its tradition read each of the two ways the dilemma \texttt{what\allowbreak{}Trents\allowbreak{}Tradition\allowbreak{}Is} names. A reader usually has one reading in mind, and asks what Mark 7 settles \emph{if that is what Trent means}. Each question is answered by hearing the same dispute with the other readings set aside. Nothing is re-argued: a hearing keeps every defeat the full dispute proved.
 
 \textbf{If Rome’s tradition were the commandments of men, would Mark 7 settle sola scriptura?} Heard against that reading alone (\texttt{mens\allowbreak{}Commandments\allowbreak{}Hearing}), Mark 7’s case is forced — but only because nothing left in the hearing contests it. The reading is the only party that attacks it, and the principle defeats the reading. Mark 7’s case still rests on two things rated \texttt{disputed}: that no apostolic word survives outside Scripture, and the step from the principle to the \emph{sole} rule. The reading of Trent as commandments of men contests neither, and the parties that would are set aside. This is the Protestant polemic at full strength — and it holds only on a reading of Trent that Trent itself denies.
@@ -16911,8 +16803,7 @@ def mensCommandmentsHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
     Mark7Party.mark7, Mark7Party.trentAsMensCommandments] } :=
   mark7Dispute.restrict fun x =>
     x ∈
-      [Mark7Party.principle,
-        Mark7Party.mark7,
+      [Mark7Party.principle, Mark7Party.mark7,
         Mark7Party.trentAsMensCommandments]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{mens\allowbreak{}Commandments\allowbreak{}Hearing\allowbreak{}Finite}}\par\nobreak\noindent
@@ -16923,8 +16814,7 @@ def mensCommandmentsHearingFinite : Solver.Finite fun i j =>
     mark7Dispute.defeats ↑i ↑j :=
   mark7Finite.restrict fun x =>
     x ∈
-      [Mark7Party.principle,
-        Mark7Party.mark7,
+      [Mark7Party.principle, Mark7Party.mark7,
         Mark7Party.trentAsMensCommandments]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{mens\allowbreak{}Commandments\allowbreak{}Hearing\allowbreak{}Settles}}\par\nobreak\noindent
@@ -16986,8 +16876,7 @@ def apostolicWordHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
     Mark7Party.mark7, Mark7Party.trentAsApostolicWord] } :=
   mark7Dispute.restrict fun x =>
     x ∈
-      [Mark7Party.principle,
-        Mark7Party.mark7,
+      [Mark7Party.principle, Mark7Party.mark7,
         Mark7Party.trentAsApostolicWord]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apostolic\allowbreak{}Word\allowbreak{}Hearing\allowbreak{}Finite}}\par\nobreak\noindent
@@ -16998,8 +16887,7 @@ def apostolicWordHearingFinite : Solver.Finite fun i j => mark7Dispute.defeats
     ↑i ↑j :=
   mark7Finite.restrict fun x =>
     x ∈
-      [Mark7Party.principle,
-        Mark7Party.mark7,
+      [Mark7Party.principle, Mark7Party.mark7,
         Mark7Party.trentAsApostolicWord]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{apostolic\allowbreak{}Word\allowbreak{}Hearing\allowbreak{}Settles}}\par\nobreak\noindent
@@ -17085,7 +16973,7 @@ theorem mark7_not_forced_against_the_apostolic_word :
 \section*{Spirit baptism — at conversion, after it, or in the sacraments}
 \addcontentsline{toc}{section}{Spirit baptism — at conversion, after it, or in the sacraments}
 
-\subsection*{Arguments.SpiritBaptism — baptism in the Spirit: at conversion, after it, or in the sacraments}
+\subsection*{TestimonyArguments.SpiritBaptism — Spirit baptism: at conversion, after it, or in the sacraments}
 John promised that the one coming after him would “baptize you with the Holy Spirit” (Mark 1:8). A reader asks: \emph{is that something every Christian receives in becoming a Christian, or a second experience to seek after it?} The question is mostly asked \emph{among} Protestants, and it is about what follows conversion, not about justification itself. So it is an argument of its own, not a party to the sola fide dispute.
 
 The views do not line up with the sides of that dispute. Lutherans and Rome have confessed together “that sinners are justified by faith in the saving action of God in Christ” (the \emph{Joint Declaration}, §25), and that the Lutheran teaching it states “does not fall under the condemnations from the Council of Trent” (§41); Baptists, Pentecostals and the holiness churches did not sign it. Lutherans, the Reformed, Baptists, Pentecostals and the holiness churches all hold that faith \emph{alone} justifies; Rome, which holds the sacramental view, does not hold that faith alone justifies, in the sense Trent condemned. On Spirit baptism, Lutherans stand partly with Rome (the Spirit is given in water baptism), and Baptists with the Reformed.
@@ -17121,10 +17009,10 @@ Weighed as a dispute, nothing is forced (\texttt{spirit\_\allowbreak{}baptism\_\
 \texttt{Dispute.lean} & the views weighed, the verdicts, and what Acts can be read as \\
 \bottomrule
 \end{longtable}
-\subsection*{Arguments.SpiritBaptism.Atoms — the atomic claims}
+\subsection*{TestimonyArguments.SpiritBaptism.Atoms — the atomic claims}
 The texts each side reads, the readings each side gives them, and the three positions’ conclusions. The texts are kept apart from the readings, so that a reader can see which claims are what Luke and Paul say and which are what a tradition says they mean.
 
-\subsection*{Arguments.SpiritBaptism.Sources — citation and classification for every atom}
+\subsection*{TestimonyArguments.SpiritBaptism.Sources — citation and classification for every atom}
 \texttt{cite} is total, so an uncited atom does not compile. Each reading is cited to a source that holds it; each step’s rating is cited to whoever grants its grounds and denies its conclusion.
 
 \paragraph*{Ratings for inference steps}
@@ -17161,10 +17049,10 @@ $P_{15}$ & The Spirit is given in baptism and confirmation, not in a second bapt
 
 {\small\begin{verbatim}
 def onTheConversionStep : Source :=
-  { primary := Reference.work Bib.dunnBaptismInTheHolySpirit,
+  { primary := Reference.work dunnBaptismInTheHolySpirit,
     supporting :=
-      [Reference.work Bib.stottBaptismAndFullness,
-        Reference.work Bib.agBaptismPositionPaper],
+      [Reference.work stottBaptismAndFullness,
+        Reference.work agBaptismPositionPaper],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -17173,8 +17061,8 @@ def onTheConversionStep : Source :=
 
 {\small\begin{verbatim}
 def menziesAgainstNoSecond : Source :=
-  { primary := Reference.work Bib.menziesLukesUnderstanding,
-    supporting := [Reference.work Bib.menziesEmpoweredForWitness],
+  { primary := Reference.work menziesLukesUnderstanding,
+    supporting := [Reference.work menziesEmpoweredForWitness],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -17183,10 +17071,10 @@ def menziesAgainstNoSecond : Source :=
 
 {\small\begin{verbatim}
 def onTheInstrumentalStep : Source :=
-  { primary := Reference.work Bib.agBaptismPositionPaper,
+  { primary := Reference.work agBaptismPositionPaper,
     supporting :=
-      [Reference.work Bib.dunnBaptismInTheHolySpirit,
-        Reference.work Bib.stottBaptismAndFullness],
+      [Reference.work dunnBaptismInTheHolySpirit,
+        Reference.work stottBaptismAndFullness],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -17195,8 +17083,8 @@ def onTheInstrumentalStep : Source :=
 
 {\small\begin{verbatim}
 def actsToSubsequence : Source :=
-  { primary := Reference.work Bib.agBaptismPositionPaper,
-    supporting := [Reference.work Bib.stronstadCharismaticTheology],
+  { primary := Reference.work agBaptismPositionPaper,
+    supporting := [Reference.work stronstadCharismaticTheology],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 \end{verbatim}}
@@ -17207,9 +17095,9 @@ def actsToSubsequence : Source :=
 def wesleyAgainstTheHolinessName : Source :=
   {
     primary :=
-      Reference.work Bib.wesleyLetters
+      Reference.work wesleyLetters
         (Bib.Locus.sectionRef "to Joseph Benson, 28 December 1770"),
-    supporting := [Reference.work Bib.nazareneWhitePaper],
+    supporting := [Reference.work nazareneWhitePaper],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -17220,10 +17108,9 @@ def wesleyAgainstTheHolinessName : Source :=
 def onTheRite : Source :=
   {
     primary :=
-      Reference.work Bib.catechismCatholicChurch (Bib.Locus.sectionRef "1302"),
+      Reference.work catechismCatholicChurch (Bib.Locus.sectionRef "1302"),
     supporting :=
-      [Reference.work Bib.westminsterConfession
-          (Bib.Locus.sectionRef "XXVIII.6")],
+      [Reference.work westminsterConfession (Bib.Locus.sectionRef "XXVIII.6")],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{on\allowbreak{}The\allowbreak{}Sacramental\allowbreak{}Exclusion}}\par\nobreak\noindent
@@ -17233,7 +17120,7 @@ def onTheRite : Source :=
 def onTheSacramentalExclusion : Source :=
   {
     primary :=
-      Reference.work Bib.catechismCatholicChurch (Bib.Locus.sectionRef "1302"),
+      Reference.work catechismCatholicChurch (Bib.Locus.sectionRef "1302"),
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{ag\allowbreak{}Against\allowbreak{}The\allowbreak{}Variety}}\par\nobreak\noindent
@@ -17241,7 +17128,7 @@ def onTheSacramentalExclusion : Source :=
 
 {\small\begin{verbatim}
 def agAgainstTheVariety : Source :=
-  { primary := Reference.work Bib.agBaptismPositionPaper,
+  { primary := Reference.work agBaptismPositionPaper,
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -17250,7 +17137,7 @@ def agAgainstTheVariety : Source :=
 
 {\small\begin{verbatim}
 def stottOnTheTransitions : Source :=
-  { primary := Reference.work Bib.stottBaptismAndFullness,
+  { primary := Reference.work stottBaptismAndFullness,
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -17262,7 +17149,7 @@ Citation and classification for every atom. Total, so nothing is uncited.
 {\small\begin{verbatim}
 def cite : Claim → AtomMeta
 \end{verbatim}}
-\subsection*{Arguments.SpiritBaptism.Positions — the four views, and what Acts can carry}
+\subsection*{TestimonyArguments.SpiritBaptism.Positions — the four views, and what Acts can carry}
 Four views, each from a source that holds it — at conversion, Pentecostal, holiness, sacramental — and two arguments about the Acts narratives: that Acts gives the Spirit in more than one order, and that its episodes are transitions, as Stott reads them. Read for what its claims mean, the Pentecostal view must take the narratives as a pattern: “pattern” and Stott’s “not a pattern” exclude each other (\texttt{pentecostal\_\allowbreak{}cannot\_\allowbreak{}read\_\allowbreak{}acts\_\allowbreak{}as\_\allowbreak{}transitions}). Each is a line of reason: its own grounds, one step, what it delivers — and, where it answers a rival, the step it answers with.
 
 \paragraph*{The conversion view}
@@ -17380,8 +17267,8 @@ Reading the narratives as a pattern: the Assemblies of God and Stronstad.
 
 {\small\begin{verbatim}
 def narrativesReadAsPattern : Source :=
-  { primary := Reference.work Bib.stronstadCharismaticTheology,
-    supporting := [Reference.work Bib.agBaptismPositionPaper],
+  { primary := Reference.work stronstadCharismaticTheology,
+    supporting := [Reference.work agBaptismPositionPaper],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
 \end{verbatim}}
@@ -17431,8 +17318,7 @@ The Pentecostal view’s world: 1 Corinthians 12:13 as baptism by the Spirit int
 def pentecostalReading : Valuation Claim :=
   fun a =>
     match a with
-    | Claim.cor12_13IsChristBaptizingInTheSpirit =>
-      False
+    | Claim.cor12_13IsChristBaptizingInTheSpirit => False
     | Claim.spiritBaptismAtConversion => False
     | Claim.actsEpisodesAreTransitions => False
     | Claim.spiritGivenInTheSacraments => False
@@ -17550,7 +17436,7 @@ theorem pentecostalOnAPattern_is_satisfiable : Satisfiable
 \item the step itself --- \emph{disputed}: \cite{assemblies-of-god-baptism-holy-spirit-2010}
 \end{itemize}
 \end{itemize}
-\subsection*{Arguments.SpiritBaptism.Dispute — the four views weighed}
+\subsection*{TestimonyArguments.SpiritBaptism.Dispute — the four views weighed}
 The four views as parties to one dispute: at conversion; after it, as the Pentecostals hold; after it, as the holiness tradition holds; and in baptism and confirmation, as Rome holds. The Pentecostal and holiness views are \emph{the subsequence views}: both hold a second baptism in the Spirit, after conversion, to be sought. Who defeats whom is computed from their premises and checked by the kernel.
 
 \subsubsection*{How to read the verdicts}
@@ -17605,14 +17491,10 @@ The package each view argues from.
 def viewNode : View → ArgumentPackage Claim :=
   fun x =>
     match x with
-    | View.conversion =>
-      conversionCase
-    | View.pentecostal =>
-      pentecostalCase
-    | View.holiness =>
-      holinessCase
-    | View.sacramental =>
-      sacramentalCase
+    | View.conversion => conversionCase
+    | View.pentecostal => pentecostalCase
+    | View.holiness => holinessCase
+    | View.sacramental => sacramentalCase
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute}}\par\nobreak\noindent
 The dispute over Spirit baptism: every view can be held without contradiction, delivers its conclusion, and has its steps rated.
@@ -17649,22 +17531,14 @@ The defeats of the dispute, as a table.
 def viewDefeats : View → View → Prop :=
   fun x x_1 =>
     match x, x_1 with
-    | View.conversion,
-      View.pentecostal => True
-    | View.conversion,
-      View.holiness => True
-    | View.pentecostal,
-      View.conversion => True
-    | View.pentecostal,
-      View.sacramental => True
-    | View.holiness,
-      View.conversion => True
-    | View.holiness,
-      View.sacramental => True
-    | View.sacramental,
-      View.pentecostal => True
-    | View.sacramental,
-      View.holiness => True
+    | View.conversion, View.pentecostal => True
+    | View.conversion, View.holiness => True
+    | View.pentecostal, View.conversion => True
+    | View.pentecostal, View.sacramental => True
+    | View.holiness, View.conversion => True
+    | View.holiness, View.sacramental => True
+    | View.sacramental, View.pentecostal => True
+    | View.sacramental, View.holiness => True
     | x, x_2 => False
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}View\allowbreak{}View\allowbreak{}Defeats}}\par\nobreak\noindent
@@ -17703,10 +17577,8 @@ The dispute in the form the verdict solver computes with.
 def spiritBaptismFinite : Solver.Finite spiritBaptismDispute.defeats :=
   {
     parties :=
-      [View.conversion,
-        View.pentecostal,
-        View.holiness,
-        View.sacramental],
+      [View.conversion, View.pentecostal,
+        View.holiness, View.sacramental],
     complete := spiritBaptismFinite._proof_1,
     defeats := fun i j => decide (viewDefeats i j),
     spec := spiritBaptismFinite._proof_2 }
@@ -18129,7 +18001,7 @@ theorem sacramental_defensible : Framework.CredulouslyAccepted
 \paragraph*{What the Pentecostal view can read Acts as}
 \leavevmode\par
 \par\medskip\noindent\textbf{\texttt{pentecostal\_\allowbreak{}cannot\_\allowbreak{}read\_\allowbreak{}acts\_\allowbreak{}as\_\allowbreak{}transitions}}\par\nobreak\noindent
-\textbf{The Pentecostal view cannot read Acts as transitions.} Its own premise is that Luke’s narratives are a pattern for believers today, and Stott’s reading says, in its own words, that they are “not a pattern” (\texttt{Testimony.Meanings.Spirit\allowbreak{}Baptism.joins}). So what the view holds, read for what its claims mean, denies the transitions reading outright.
+\textbf{The Pentecostal view cannot read Acts as transitions.} Its own premise is that Luke’s narratives are a pattern for believers today, and Stott’s reading says, in its own words, that they are “not a pattern” (\texttt{Testimony\allowbreak{}Arguments.Meanings.Spirit\allowbreak{}Baptism.joins}). So what the view holds, read for what its claims mean, denies the transitions reading outright.
 
 What this claims: the Pentecostal view must read the Acts narratives as a pattern; the other reading is not open to it. What it does not claim: that the pattern reading is right. Read as a pattern, the narratives still meet the variety of Acts (\texttt{where\allowbreak{}The\allowbreak{}Variety\allowbreak{}Meets\allowbreak{}The\allowbreak{}Pattern}), at a step the Assemblies of God contest.
 

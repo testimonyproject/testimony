@@ -69,11 +69,11 @@ class RuleTests(unittest.TestCase):
         self.assertNotIn("L4", rules(self.lint(text, path="Testimony/Bib/Works.lean")))
 
     def test_L5_argument_module_without_a_rival(self):
-        found = L.lint_units({"Testimony/Arguments/Foo.lean": ONE_PACKAGE})
+        found = L.lint_units({"arguments/TestimonyArguments/Foo.lean": ONE_PACKAGE})
         self.assertIn("L5", rules(found))
 
     def test_L5_argument_module_with_a_rival(self):
-        found = L.lint_units({"Testimony/Arguments/Foo.lean": TWO_PACKAGES})
+        found = L.lint_units({"arguments/TestimonyArguments/Foo.lean": TWO_PACKAGES})
         self.assertNotIn("L5", rules(found))
 
     def test_L5_ignores_modules_outside_arguments(self):
@@ -84,16 +84,16 @@ class RuleTests(unittest.TestCase):
         """A split argument keeps its rival even when the two are in one file of
         it and the other files hold none."""
         found = L.lint_units({
-            "Testimony/Arguments/Foo/Atoms.lean": "inductive Claim | a\n",
-            "Testimony/Arguments/Foo/Packages.lean": TWO_PACKAGES,
-            "Testimony/Arguments/Foo/Results.lean": "theorem t : True := trivial\n",
+            "arguments/TestimonyArguments/Foo/Atoms.lean": "inductive Claim | a\n",
+            "arguments/TestimonyArguments/Foo/Packages.lean": TWO_PACKAGES,
+            "arguments/TestimonyArguments/Foo/Results.lean": "theorem t : True := trivial\n",
         })
         self.assertNotIn("L5", rules(found))
 
     def test_L5_directory_argument_without_a_rival(self):
         found = L.lint_units({
-            "Testimony/Arguments/Foo/Atoms.lean": "inductive Claim | a\n",
-            "Testimony/Arguments/Foo/Packages.lean": ONE_PACKAGE,
+            "arguments/TestimonyArguments/Foo/Atoms.lean": "inductive Claim | a\n",
+            "arguments/TestimonyArguments/Foo/Packages.lean": ONE_PACKAGE,
         })
         self.assertIn("L5", rules(found))
         self.assertIn("Foo", str(found[0]))
@@ -102,24 +102,30 @@ class RuleTests(unittest.TestCase):
         """The rule is about the argument, not the file: two files with one
         package each is a rival, and a per-file count would have missed it."""
         found = L.lint_units({
-            "Testimony/Arguments/Foo/Christian.lean": ONE_PACKAGE,
-            "Testimony/Arguments/Foo/Critical.lean": "def critical : ArgumentPackage Claim := y\n",
+            "arguments/TestimonyArguments/Foo/Christian.lean": ONE_PACKAGE,
+            "arguments/TestimonyArguments/Foo/Critical.lean": "def critical : ArgumentPackage Claim := y\n",
         })
         self.assertNotIn("L5", rules(found))
 
     def test_L5_ignores_an_argument_with_no_packages_at_all(self):
         """Scaffolding on its way to an argument is not yet an argument."""
-        found = L.lint_units({"Testimony/Arguments/Foo/Atoms.lean": "inductive Claim | a\n"})
+        found = L.lint_units({"arguments/TestimonyArguments/Foo/Atoms.lean": "inductive Claim | a\n"})
         self.assertNotIn("L5", rules(found))
 
     def test_L5_is_not_a_per_file_rule(self):
         """L5 does not fire from `lint_text`; only `lint_units` decides it."""
-        self.assertNotIn("L5", rules(self.lint(ONE_PACKAGE, path="Testimony/Arguments/Foo.lean")))
+        self.assertNotIn("L5", rules(self.lint(ONE_PACKAGE, path="arguments/TestimonyArguments/Foo.lean")))
 
     def test_argument_unit_maps_both_layouts(self):
-        self.assertEqual("Foo", L.argument_unit("Testimony/Arguments/Foo.lean"))
-        self.assertEqual("Foo", L.argument_unit("Testimony/Arguments/Foo/Lines.lean"))
+        self.assertEqual("Foo", L.argument_unit("arguments/TestimonyArguments/Foo.lean"))
+        self.assertEqual("Foo", L.argument_unit("arguments/TestimonyArguments/Foo/Lines.lean"))
         self.assertIsNone(L.argument_unit("Testimony/Logic/Package.lean"))
+
+    def test_a_packages_other_modules_are_not_arguments(self):
+        self.assertIsNone(L.argument_unit("arguments/TestimonyArguments/Works.lean"))
+        self.assertIsNone(
+            L.argument_unit("arguments/TestimonyArguments/Articles/Howell2003.lean"))
+        self.assertIsNone(L.argument_unit("arguments/TestimonyArguments/Meanings/SolaFide.lean"))
 
     def test_argument_unit_reads_a_package_built_on_the_library(self):
         self.assertEqual("Grits", L.argument_unit("examples/TestimonyExamples/Grits.lean"))
@@ -185,7 +191,7 @@ class RuleTests(unittest.TestCase):
 
     def test_L11_establishes_without_a_model(self):
         found = L.lint_units({
-            "Testimony/Arguments/Foo/Results.lean":
+            "arguments/TestimonyArguments/Foo/Results.lean":
                 "theorem a : Establishes christian := by\n  establish [christian]\n",
         })
         self.assertIn("L11", rules(found))
@@ -193,7 +199,7 @@ class RuleTests(unittest.TestCase):
 
     def test_L11_establishes_with_a_model(self):
         found = L.lint_units({
-            "Testimony/Arguments/Foo/Results.lean":
+            "arguments/TestimonyArguments/Foo/Results.lean":
                 "theorem a : Establishes christian := by\n  establish [christian]\n"
                 "theorem b : Satisfiable christian.premises := by\n"
                 "  satisfied_by allHolds [christian]\n",
@@ -204,7 +210,7 @@ class RuleTests(unittest.TestCase):
         """A refuted package is satisfiable already: its countermodel is a
         valuation on which every premise holds."""
         found = L.lint_units({
-            "Testimony/Arguments/Foo/Results.lean":
+            "arguments/TestimonyArguments/Foo/Results.lean":
                 "theorem a : \u00ac Establishes critical := by\n"
                 "  refute_with criticalReading [critical]\n",
         })
@@ -212,9 +218,9 @@ class RuleTests(unittest.TestCase):
 
     def test_L11_model_may_live_in_another_file_of_the_argument(self):
         found = L.lint_units({
-            "Testimony/Arguments/Foo/Results.lean":
+            "arguments/TestimonyArguments/Foo/Results.lean":
                 "theorem a : Establishes christian := by\n  establish [christian]\n",
-            "Testimony/Arguments/Foo/Models.lean":
+            "arguments/TestimonyArguments/Foo/Models.lean":
                 "theorem b : Satisfiable christian.premises := by\n"
                 "  satisfied_by allHolds [christian]\n",
         })
@@ -229,7 +235,7 @@ class RuleTests(unittest.TestCase):
 
     def test_L11_does_not_read_establishes_from_a_comment(self):
         found = L.lint_units({
-            "Testimony/Arguments/Foo/Results.lean":
+            "arguments/TestimonyArguments/Foo/Results.lean":
                 "-- theorem a : Establishes christian := by\n",
         })
         self.assertNotIn("L11", rules(found))
@@ -291,13 +297,13 @@ class RuleTests(unittest.TestCase):
             "-/\n"
             "def live := 1\n"
         )
-        found = L.lint_lean_prose("Testimony/Arguments/X.lean", text,
+        found = L.lint_lean_prose("arguments/TestimonyArguments/X.lean", text,
                                   {"parity_leaves_the_canon_open"})
         self.assertIn("L9", rules(found))
 
     def test_L9_docstring_naming_a_result_that_exists(self):
         text = "/-- `parity_leaves_the_canon_open` states it once. -/\ndef live := 1\n"
-        found = L.lint_lean_prose("Testimony/Arguments/X.lean", text,
+        found = L.lint_lean_prose("arguments/TestimonyArguments/X.lean", text,
                                   {"parity_leaves_the_canon_open"})
         self.assertNotIn("L9", rules(found))
 
@@ -375,7 +381,7 @@ class RuleTests(unittest.TestCase):
     def test_declared_names_sees_more_than_theorems(self):
         """Prose cites atom constructors, tactics and qualified names too."""
         names = L.declared_names({
-            "Testimony/Arguments/Foo.lean": "inductive Claim\n  | romans3_28\n",
+            "arguments/TestimonyArguments/Foo.lean": "inductive Claim\n  | romans3_28\n",
             "Testimony/Logic/Tactic.lean": 'syntax "refute_with" ppSpace ident : tactic\n',
             "Testimony/Logic/Package.lean": "def ArgumentPackage.manifest : List AtomMeta := x\n",
         })

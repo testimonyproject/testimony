@@ -24,6 +24,6 @@ Read the section you are given and report:
    dissenting reader mentioned without his reason.
 
 For each finding, give the page section, the Lean declaration whose docstring
-produces it (search `Testimony/Arguments/` for the name), what the reader would
+produces it (search `arguments/TestimonyArguments/` for the name), what the reader would
 misunderstand, and a suggested rewording. Keep the library's voice: plain,
 exact, no hedging. Never edit files.

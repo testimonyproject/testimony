@@ -19,11 +19,12 @@ def readCommitted (p : System.FilePath) : IO String := do
 
 /-- **Write `references.bib` and the bibliography chapter from a registry, or
 check them**: with `--check`, report each stale file and fail; otherwise write
-both. Returns the exit code. -/
-def generate (registry : List BibEntry) (bibPath mdPath : System.FilePath)
+both. `source` names the files the entries are written in. Returns the exit
+code. -/
+def generate (registry : List BibEntry) (source : String) (bibPath mdPath : System.FilePath)
     (args : List String) : IO UInt32 := do
-  let bib := bibtexFile registry
-  let md := bibliographyMarkdown registry
+  let bib := bibtexFile registry source
+  let md := bibliographyMarkdown registry source
   if args.contains "--check" then
     let mut stale := #[]
     for (path, want) in [(bibPath, bib), (mdPath, md)] do

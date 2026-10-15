@@ -1,9 +1,9 @@
 # Computed ratings (design)
 
-**Status: phase one is built.** `Testimony.Logic.Credibility` implements the checks, the
-ratings and the hearings below. `Testimony.Arguments.SolaFide.Ratings` applies them to two
-steps of the Reformed reading of James, and `Testimony.Articles.Howell2003` to Howell's move.
-The remaining steps are tracked in [#135][tracking].
+**Status: phase one is built.** `Testimony.Logic.Credibility` implements the checks, the ratings and
+the hearings below. `TestimonyArguments.SolaFide.Ratings` applies them to two steps of the Reformed
+reading of James, and `TestimonyArguments.Articles.Howell2003` to Howell's move. The remaining steps
+are tracked in [#135][tracking].
 
 ## The question
 
@@ -113,7 +113,7 @@ Whether the senses exclude each other is itself contested: Trent holds that just
 declares and makes righteous. A postulate saying they do would hand one side's lexicon to both.
 A claim whose meaning says *and not that sense* does exclude the other, and is listed.
 
-Sola fide has six exclusions and no entailments (`Testimony.Meanings.SolaFide.joins`):
+Sola fide has six exclusions and no entailments (`TestimonyArguments.Meanings.SolaFide.joins`):
 - Paul's word as renewal, against the forensic sense;
 - Trent's Latin of Revelation 22:11, against the Greek;
 - Trent's Latin of Sirach 18:22, against the Greek;
@@ -122,24 +122,24 @@ Sola fide has six exclusions and no entailments (`Testimony.Meanings.SolaFide.jo
   "the only means" means;
 - justification as forensic only, against Trent's "justification includes sanctification".
 
-Every dissent gets the same background, whichever side it is on. Sola scriptura has one
-exclusion and two entailments (`Testimony.Meanings.SolaScriptura.joins`): Mark 7's principle
-against binding a commandment of men as God's word, and "Scripture is the sole infallible
-rule" asserting that it is infallible and that no other rule is. The virgin birth has two
-exclusions and one entailment (`Testimony.Meanings.BornOfAVirgin.joins`): Brown's "Micah's
-silence proves nothing" against Miravalle's "it indicates a fatherless birth", Westminster's
-supreme judge against "magisterial teaching settles the question", and "עַלְמָה denotes a virgin"
-asserting that its range admits the sense. Spirit baptism has two exclusions
-(`Testimony.Meanings.SpiritBaptism.joins`): the Assemblies of God's reading of 1 Corinthians
-12:13, "not Christ baptizing in the Spirit", against Dunn's and Stott's; and Luke's narratives
-as a pattern for believers today against Stott's "not a pattern". The second removed a horn: the
-Pentecostal view read with Acts as transitions has no model once the words are read, so it no
-longer stands as a reading to answer. The canonical witness
-has seven entailments (`Testimony.Meanings.CanonicalWitness.joins`): *faith alone* asserts its
-three parts, and Westminster's "by a faith that is never alone" asserts *faith alone*. Born in
-Bethlehem was looked at and has none: its one pair of rivals can be held together by a reader
-who takes the oracle as fulfilled twice. Without the postulates, Trent's reading of Paul's word
-would pass as granting the lexical step's forensic ground, which it denies.
+Every dissent gets the same background, whichever side it is on. Sola scriptura has one exclusion
+and two entailments (`TestimonyArguments.Meanings.SolaScriptura.joins`): Mark 7's principle against
+binding a commandment of men as God's word, and "Scripture is the sole infallible rule" asserting
+that it is infallible and that no other rule is. The virgin birth has two exclusions and one
+entailment (`TestimonyArguments.Meanings.BornOfAVirgin.joins`): Brown's "Micah's silence proves
+nothing" against Miravalle's "it indicates a fatherless birth", Westminster's supreme judge against
+"magisterial teaching settles the question", and "עַלְמָה denotes a virgin" asserting that its range
+admits the sense. Spirit baptism has two exclusions
+(`TestimonyArguments.Meanings.SpiritBaptism.joins`): the Assemblies of God's reading of 1
+Corinthians 12:13, "not Christ baptizing in the Spirit", against Dunn's and Stott's; and Luke's
+narratives as a pattern for believers today against Stott's "not a pattern". The second removed a
+horn: the Pentecostal view read with Acts as transitions has no model once the words are read, so it
+no longer stands as a reading to answer. The canonical witness has seven entailments
+(`TestimonyArguments.Meanings.CanonicalWitness.joins`): *faith alone* asserts its three parts, and
+Westminster's "by a faith that is never alone" asserts *faith alone*. Born in Bethlehem was looked
+at and has none: its one pair of rivals can be held together by a reader who takes the oracle as
+fulfilled twice. Without the postulates, Trent's reading of Paul's word would pass as granting the
+lexical step's forensic ground, which it denies.
 
 Disputes hold them too: every attack is decided over what a party holds, its premises with
 the postulates ([disputes](logic.md#disputes)). In the James dispute this adds one pair of

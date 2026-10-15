@@ -32,24 +32,22 @@ category would have answered it for them.
   the favour of God" (Session VI, canon 11). As favour it is
   a relation, or a disposition of God; as an inhering gift, a quality of the
   soul. The category is the dispute.
-- **Faith.** Trust that receives, or a virtue formed by charity? The library
-  reads John 6:29's believing both ways, as trust and as faith formed by charity
-  (`Testimony.Meanings.SolaFide`). As an act it is an event; as a habit, a
-  quality.
+- **Faith.** Trust that receives, or a virtue formed by charity? The sola fide
+  argument reads John 6:29's believing both ways, as trust and as faith formed
+  by charity. As an act it is an event; as a habit, a quality.
 - **Justification.** An act, or a process that grows? The Reformed hold that
   justification is forensic only — the remission of sins and not sanctification
   — and Trent that it includes sanctification and increases by works done in
-  grace. The sola fide argument turns on exactly this, and those claims now
-  exclude each other by their meaning (`Testimony.Meanings.SolaFide.joins`). To
-  call justification an event would decide for the one; a process, for the
-  other.
+  grace. The sola fide argument turns on exactly this, and those claims
+  exclude each other there by their meaning. To call justification an event
+  would decide for the one; a process, for the other.
 - **Salvation** and **eternal life.** Each is used, in the claims, of the entry
   into life and of the life entered — an event and a state — and the claims do
   not choose.
 - **The word of God** names a different thing as each party uses the phrase:
   Scripture, or Scripture and Tradition, or Christ. Its category waits on which.
-- **Tradition** is read both as what is handed on and as the handing on
-  (`Testimony.Arguments.SolaScriptura.whatTrentsTraditionIs`): a content, or an
+- **Tradition** is read both as what is handed on and as the handing on — the
+  sola scriptura argument reads Trent's word both ways: a content, or an
   occurrence.
 -/
 

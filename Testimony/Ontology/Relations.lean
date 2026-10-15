@@ -93,8 +93,8 @@ texts say.
 
 - **That the fruit of a thing is not its ground.** Westminster holds good works
   the fruit of faith and no ground of justification; Trent holds them fruit and
-  merit. Which it is turns on a dispute the library weighs
-  (`fruit_turns_on_the_standard`); a definition would decide it.
+  merit. Which it is turns on a dispute the arguments weigh, under the
+  standards of each tradition; a definition would decide it.
 - **That to merit a thing is to be a ground of it.** The library keeps "works
   merit an increase of justification" and "works cause an increase of
   justification" as two claims of Trent's; a definition would make one the

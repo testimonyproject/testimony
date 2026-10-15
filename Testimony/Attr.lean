@@ -4,8 +4,8 @@ import Mathlib.Tactic.Linter.Style
 /-!
 # Testimony.Attr — the library's attributes
 
-`@[headline]` and `@[proposed]` mark results; the unfold sets, one per argument,
-mark the definitions its proofs unfold.
+`@[headline]` and `@[proposed]` mark results; an unfold set, one per argument,
+marks the definitions its proofs unfold.
 
 ## `@[headline]`
 
@@ -49,8 +49,8 @@ initialize proposedAttr : TagAttribute ←
 One simp set per argument, holding every definition its proofs must unfold to
 reach a premise list: the packages, the lines of reason, the inference steps,
 the shared premise lists. A definition joins its argument's set where it is
-written, as `@[solaFideDefs] def reformed ...`, and every proof then names the
-set — `establish [solaFideDefs]` — rather than a list of the definitions it
+written, as `@[fixtureDefs] def minutes ...`, and every proof then names the
+set — `establish [fixtureDefs]` — rather than a list of the definitions it
 happens to pass through.
 
 **Why a set rather than a list.** A list written at the proof has to name every
@@ -61,9 +61,12 @@ definition it could not see through is still standing where a formula should
 be. Tagging the definition once, where it is written, removes that class of
 failure rather than the symptoms of it.
 
-**Why they are declared here.** Lean will not let a module use a simp set it
-declares itself, so each set lives in a module every argument imports, and this
-is the one. Adding an argument means adding its set below.
+**Where they are declared.** Lean will not let a module use a simp set it
+declares itself, so each set lives in a module its argument imports. The
+library's own is here, for the fixture its checks run over
+(`Testimony.Checks.Fixture`); a package built on the library declares its
+arguments' sets in a module of its own, as the arguments package does in
+`TestimonyArguments.Attr`.
 
 **What a set does not do.** It names what to unfold and nothing more; it proves
 nothing. Every tactic still unfolds the semantics through the qualified names
@@ -71,29 +74,11 @@ written inside `Testimony.Logic.Tactic`, so a set cannot reintroduce the
 unqualified `Formula.Boolean.val` that once let a proof fall back to `sorryAx`
 with a successful build. -/
 
-/-- The definitions the sola fide proofs unfold. -/
-register_simp_attr solaFideDefs
-
-/-- The definitions the sola scriptura proofs unfold. -/
-register_simp_attr solaScripturaDefs
-
-/-- The definitions the born-of-a-virgin proofs unfold. -/
-register_simp_attr bornOfAVirginDefs
-
-/-- The definitions the born-in-Bethlehem proofs unfold. -/
-register_simp_attr bornInBethlehemDefs
-
-/-- The definitions the canonical-witness proofs unfold. -/
-register_simp_attr canonicalWitnessDefs
-
-/-- The definitions the Spirit-baptism proofs unfold. -/
-register_simp_attr spiritBaptismDefs
+/-- The definitions the proofs over the checks' fixture unfold. -/
+register_simp_attr fixtureDefs
 
 -- `register_simp_attr` also declares a simproc set, named with a `_proc` suffix
 -- the naming linter cannot see is generated.
-attribute [nolint defsWithUnderscore] Parser.Attr.solaFideDefs_proc
-  Parser.Attr.solaScripturaDefs_proc Parser.Attr.bornOfAVirginDefs_proc
-  Parser.Attr.bornInBethlehemDefs_proc Parser.Attr.canonicalWitnessDefs_proc
-  Parser.Attr.spiritBaptismDefs_proc
+attribute [nolint defsWithUnderscore] Parser.Attr.fixtureDefs_proc
 
 end Testimony
