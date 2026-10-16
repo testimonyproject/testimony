@@ -110,7 +110,10 @@ against one legend for the whole argument.
 
 The two tools share that harvest rather than each doing their own, so the page
 and the PDF are two settings of one text. Only the setting differs: Markdown
-tables and MathJax on the site, `longtable` and `\cite` in print.
+tables and MathJax on the site, `longtable` and `\cite` in print. Print also
+links each variable in a formula to its row in the legend, and puts a
+derivation's premises, what each step would give and the conclusion at issue
+into the legend's words; the site sets the variables plain, for now.
 
 That is why there is no hand-written page describing an argument. There is
 nothing to keep in step, because there is no second copy — the docstring is the
