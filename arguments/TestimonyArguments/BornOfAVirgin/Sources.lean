@@ -1,4 +1,5 @@
 import TestimonyArguments.BornOfAVirgin.Sources.NearTerm
+import TestimonyArguments.BornOfAVirgin.Sources.Septuagint
 import TestimonyArguments.BornOfAVirgin.Sources.Wegner
 
 /-!
@@ -9,9 +10,10 @@ file that makes that obligation concrete: every atom, each with a prose
 statement of what it asserts, a classification, and who says so at what
 pinpoint with what confidence.
 
-It was once the largest file in the argument, and the atoms of its two disputes
-are now cited in modules of their own: `Sources.NearTerm` for the dispute over
-the critical denial, `Sources.Wegner` for the dispute over Wegner's objection.
+It was once the largest file in the argument, and the atoms of its three
+disputes are now cited in modules of their own: `Sources.NearTerm` for the
+dispute over the critical denial, `Sources.Wegner` for the dispute over Wegner's
+objection, `Sources.Septuagint` for the dispute over the Septuagint's word.
 `cite` reaches each of those citations by name from one of its cases, so it is
 still one total function, and a new atom still cannot be left out of it.
 
@@ -53,7 +55,10 @@ def cite : Claim → AtomMeta
     { label := "עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman"
     , kind := .linguistic
       -- The Isaianic crux. The Hebrew term does not by itself carry the sense;
-      -- the Septuagint's παρθένος does. Jerome argues it does (Jov. I.32):
+      -- the Septuagint's παρθένος does, on Rico and Gentry's reading of its
+      -- Greek (`parthenosMeansVirgin`, disputed), and the step from the Greek
+      -- to the Hebrew is rated apart (`translatorsReadingFixesTheWord`).
+      -- Jerome argues the Hebrew carries it (Jov. I.32):
       -- עַלְמָה is a "hidden" virgin, as Rebekah is at Genesis 24:43. Origen
       -- is not cited: his appeal to Deuteronomy 22 (Cels. I.34) is to a law
       -- whose Hebrew reads נַעֲרָה בְתוּלָה, not עַלְמָה.
@@ -172,6 +177,16 @@ def cite : Claim → AtomMeta
     , kind := .interpretive
     , source :=
         { brownOnBirth with supporting := [.work chiltonIsaiahTargum .whole] } }
+  | .lxxIsPreChristian => lxxIsPreChristianCited
+  | .parthenosMeansVirgin => parthenosMeansVirginCited
+  | .parthenosMeantYoungWoman => parthenosMeantYoungWomanCited
+  | .earlyGreekParthenosIsYoungWoman => earlyGreekParthenosIsYoungWomanCited
+  | .dinahIsAParthenosAfterShechem => dinahIsAParthenosAfterShechemCited
+  | .isaiahUsesParthenosForBetulah => isaiahUsesParthenosForBetulahCited
+  | .tryphoRejectsParthenos => tryphoRejectsParthenosCited
+  | .lxxReadsAVirgin => lxxReadsAVirginCited
+  | .lxxPutsTheConceptionInTheFuture => lxxPutsTheConceptionInTheFutureCited
+  | .lxxEnvisagesAVirginalConception => lxxEnvisagesAVirginalConceptionCited
   | .harahIsPredicateAdjective => harahIsPredicateAdjectiveCited
   | .isaianicAlmahIsAlreadyPregnant => isaianicAlmahIsAlreadyPregnantCited
   | .pregnancyAtTheSignIsOrdinary => pregnancyAtTheSignIsOrdinaryCited

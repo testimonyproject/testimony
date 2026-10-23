@@ -59,6 +59,38 @@ inductive Claim
   /-- The split among the ancient versions shows עַלְמָה does not denote
   virginity. The critical inference from the versions. -/
   | versionalDivergenceRefutesVirginSense
+  /-- The Greek Isaiah was translated by Jews, before the coming of Christ. -/
+  | lxxIsPreChristian
+  /-- In the Greek of the Septuagint, παρθένος means a virgin. **The Septuagint's
+  hinge**, and what Rico and Gentry hold of the word wherever it appears in the
+  Greek of the Jewish Scriptures. -/
+  | parthenosMeansVirgin
+  /-- In the Greek of the Septuagint's day, παρθένος meant a young woman of
+  marriageable age, and not yet a virgin as such: that sense came later.
+  **Wegner's thesis**, and the rival to the hinge above. -/
+  | parthenosMeantYoungWoman
+  /-- In early Greek literature παρθένος meant a young woman of marriageable age,
+  with or without virginity. -/
+  | earlyGreekParthenosIsYoungWoman
+  /-- The Septuagint calls Dinah a παρθένος after Shechem has lain with her
+  (Genesis 34:2–3). -/
+  | dinahIsAParthenosAfterShechem
+  /-- Wherever else the Greek Isaiah has παρθένος — 23:4, 37:22, 47:1 and 62:5 —
+  it renders בְּתוּלָה. -/
+  | isaiahUsesParthenosForBetulah
+  /-- Trypho rejects the Septuagint's "the virgin" at Isaiah 7:14 and reads "the
+  young woman" (Justin, *Dialogue* 67 and 71). -/
+  | tryphoRejectsParthenos
+  /-- Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a
+  virgin. **What the Septuagint shows**, if its word means what Rico and Gentry
+  say it means. -/
+  | lxxReadsAVirgin
+  /-- The Septuagint puts the conception in the future: ἐν γαστρὶ ἕξει, "she shall
+  be with child". -/
+  | lxxPutsTheConceptionInTheFuture
+  /-- The translator of Isaiah meant that the woman conceives while still a
+  virgin: a conception without a man. -/
+  | lxxEnvisagesAVirginalConception
   /-- הָרָה at Isaiah 7:14 is a predicate adjective, so the clause reads "the
   עַלְמָה *is* pregnant". **Wegner's grammatical premise**, and not the contested
   step: Rydelnik parses it the same way. -/

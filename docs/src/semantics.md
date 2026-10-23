@@ -32,9 +32,10 @@ every other verdict here.
 
 Nothing in the generic layer names an argument. Every argument has an instance: sola fide is
 analysed; sola scriptura, the virgin birth, Spirit baptism and the canonical witness in part, the
-claims whose meanings bear on a join; and born in Bethlehem, looked at and found to have no
-joins, is registered with its citations' labels and marked unanalysed. Each is counted from the
-start (each module's `coverage_now`).
+claims whose meanings bear on a join — and, in the virgin birth, the claims about the words of
+Isaiah 7:14 and its versions, the woman it describes and the birth it is read to promise; and born
+in Bethlehem, looked at and found to have no joins, is registered with its citations' labels and
+marked unanalysed. Each is counted from the start (each module's `coverage_now`).
 `Testimony.Checks.Meanings` fails the build for an argument with no instance, so a new argument
 is registered when it is added. It also fails the build for an argument whose joins are not
 listed and pinned, or whose meaning postulates come from anywhere but those lists
@@ -52,9 +53,9 @@ in the library needed them:
 
 | Part | What it is | Examples |
 |---|---|---|
-| `Voice` | who speaks, writes, holds or reads | Paul, James, Trent, Augustine, Calvin |
-| `Lexeme` | a word or fixed phrase, in its own language | δικαιόω, ἔργα νόμου, πίστις, ὕδωρ |
-| `Sense` | what a word can mean, named for what it denotes | a verdict; to make righteous |
+| `Voice` | who speaks, writes, holds or reads | Paul, James, Trent, Augustine, the Septuagint |
+| `Lexeme` | a word or fixed phrase, in its own language | δικαιόω, ἔργα νόμου, πίστις, παρθένος |
+| `Sense` | what a word can mean, named for what it denotes | a verdict; a virgin; a young woman |
 | `Concept` | what doctrinal claims are about | justification, faith, works, baptism |
 | `Rel` | how one term stands to another | ground of; only means of; includes |
 | `Statement` | what one atomic claim asserts | says, teaches, means, holds, wrote |

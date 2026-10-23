@@ -126,6 +126,21 @@ def clearAlmahPassages : List ScriptureCitation :=
   [ verseIn .masoretic ⟨.genesis, 24, 43⟩
   , verseIn .masoretic ⟨.songOfSongs, 6, 8⟩ ]
 
+/-- Isaiah 23:4, 37:22, 47:1 and 62:5 — every other verse in which the Greek
+Isaiah has παρθένος. The Hebrew has בְּתוּלָה in each. Cited in both text-forms,
+since the claim is about the one rendering the other. -/
+def isaianicParthenoi : List ScriptureCitation :=
+  [ verseIn .septuagint ⟨.isaiah, 23, 4⟩, verseIn .masoretic ⟨.isaiah, 23, 4⟩
+  , verseIn .septuagint ⟨.isaiah, 37, 22⟩, verseIn .masoretic ⟨.isaiah, 37, 22⟩
+  , verseIn .septuagint ⟨.isaiah, 47, 1⟩, verseIn .masoretic ⟨.isaiah, 47, 1⟩
+  , verseIn .septuagint ⟨.isaiah, 62, 5⟩, verseIn .masoretic ⟨.isaiah, 62, 5⟩ ]
+
+/-- Genesis 34:2–3 — Shechem lies with Dinah, and the Greek then calls her
+παρθένος, twice, where the Hebrew has נַעֲרָה, "girl". -/
+def dinahAfterShechem : List ScriptureCitation :=
+  [ rangeIn .septuagint ⟨.genesis, 34, 2, 34, 3⟩
+  , verseIn .masoretic ⟨.genesis, 34, 3⟩ ]
+
 /-! ### The Bethlehem oracle -/
 
 /-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/

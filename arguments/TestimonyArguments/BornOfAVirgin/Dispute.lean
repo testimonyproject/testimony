@@ -124,11 +124,14 @@ deliver its conclusion before it can take part in a dispute. -/
 
 /-- The world Berry and Postell describe: everything holds except that a
 near-term sign excludes a messianic sense. The scriptural reading holds in it
-too. -/
+too. A reading cannot hold both claims about the Septuagint's παρθένος, and this
+one takes Rico and Gentry's; the scriptural reading needs neither, and
+`Dispute.Septuagint` weighs the two. -/
 def repliesStandReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
+  | .parthenosMeantYoungWoman => False
   | .nearTermExcludesMessianicSense => False
   | _ => True
 
@@ -211,11 +214,14 @@ theorem motyer_rests_on_his_inference :
 
 /-- The world Motyer describes, with Berry and Postell: the sign is not a
 near-term one, and a near-term sign would not exclude a messianic sense anyway.
-Everything else holds — the scriptural reading and all four replies with it. -/
+Everything else holds — the scriptural reading and all four replies with it —
+and, as in `repliesStandReading`, Rico and Gentry's side is taken on
+παρθένος. -/
 def motyerReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
+  | .parthenosMeantYoungWoman => False
   | .isaiahIsNearTermSignToAhaz => False
   | .nearTermExcludesMessianicSense => False
   | _ => True
@@ -273,12 +279,15 @@ theorem christian_rebuts_critical : Rebuts christian criticalDenial := by
   establish [Rebuts, bornOfAVirginDefs]
 
 /-- The scriptural reader's world, with everything else holding that can: Micah's
-silence indicates a fatherless birth, so it is not nothing; and Scripture, not
-the magisterium, is the judge that settles. -/
+silence indicates a fatherless birth, so it is not nothing; Scripture, not the
+magisterium, is the judge that settles; and, as in `repliesStandReading`, Rico
+and Gentry's side is taken on παρθένος, which the scriptural reading does not
+need. -/
 def scripturalWorldReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
+  | .parthenosMeantYoungWoman => False
   | _ => True
 
 /-- But it undermines none of the critical denial's premises. For each of them
@@ -363,11 +372,14 @@ The two absences above are computed; the readings below say why. -/
 
 /-- The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of
 7:14 — the way out of the parity argument open to a reader who dates them
-later. Postell's step holds in it, because one of its grounds fails. -/
+later. Postell's step holds in it, because one of its grounds fails. On the
+Septuagint's παρθένος the critic sides with Wegner, as Walton cites Brown for
+the word's broader sense (Walton 293 n. 15). -/
 def laterOraclesReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceImpliesNoHumanFather => False
   | .magisteriumIsDoctrinallyAuthoritative => False
+  | .parthenosMeansVirgin => False
   | .isaiahPredictsVirginBirth => False
   | .isaiah9And11ShareTheAssyrianTimeline => False
   | _ => True
@@ -380,11 +392,13 @@ theorem critic_grants_postells_step_by_dating_the_oracles_later :
   satisfied_by laterOraclesReading [Grants, bornOfAVirginDefs]
 
 /-- The critic's world, with Micah 5:2 read of a near-term Davidic king and not
-messianically. The Micah step holds in it, because one of its grounds fails. -/
+messianically. The Micah step holds in it, because one of its grounds fails.
+As in `laterOraclesReading`, the critic sides with Wegner on παρθένος. -/
 def royalMicahReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceImpliesNoHumanFather => False
   | .magisteriumIsDoctrinallyAuthoritative => False
+  | .parthenosMeansVirgin => False
   | .isaiahPredictsVirginBirth => False
   | .micahRulerReadMessianically => False
   | _ => True

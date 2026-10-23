@@ -4,8 +4,10 @@ import TestimonyArguments.BornOfAVirgin.Lines
 import TestimonyArguments.BornOfAVirgin.Packages
 import TestimonyArguments.BornOfAVirgin.Results
 import TestimonyArguments.BornOfAVirgin.Results.Wegner
+import TestimonyArguments.BornOfAVirgin.Results.Septuagint
 import TestimonyArguments.BornOfAVirgin.Dispute
 import TestimonyArguments.BornOfAVirgin.Dispute.Wegner
+import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
 
 /-!
 # TestimonyArguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
@@ -14,9 +16,11 @@ Matthew 1:22–23 quotes Isaiah 7:14 as grounds that the Messiah is born of a
 virgin. Unlike Micah 5:2 (see `BornInBethlehem`), the predictive reading here is
 heavily disputed, and the dispute is lexical: the Hebrew עַלְמָה (*almah*) means
 "young woman" and does not by itself mean "virgin", while the Septuagint's
-παρθένος does. Isaiah's immediate context — a sign to Ahaz, apparently fulfilled
-within the prophet's own generation (cf. Isa 8:3–4) — is read by most critical
-and much Jewish scholarship as having nothing to do with a future Messiah.
+παρθένος is read as "virgin" — though whether it meant that in the translator's
+own day is disputed too (`Dispute.Septuagint`). Isaiah's immediate context — a
+sign to Ahaz, apparently fulfilled within the prophet's own generation (cf. Isa
+8:3–4) — is read by most critical and much Jewish scholarship as having nothing
+to do with a future Messiah.
 
 The argument now runs on **four scriptural strands**, and that changes its
 shape. Each is encoded as a `Line` — its own grounds, its own inference step,
@@ -59,18 +63,67 @@ costs the fulfilment claim.
 against the reading.** Targum Jonathan renders עוּלֵימְתָא, "young woman", and does
 not read 7:14 messianically though it reads 9:5–6 and 11:1 so; Aquila,
 Symmachus and Theodotion render νεᾶνις. Against them, the pre-Christian
-Septuagint renders παρθένος and the Syriac Peshitta ܒܬܘܠܬܐ, both "virgin" — so
-the Aramaic evidence is itself split, Jewish against Christian. 1QIsaᵃ confirms
-עַלְמָה in the Hebrew, so no textual variant rescues either side; the dispute is
-purely semantic. The usual Christian reply, that the Three revised against
-Christian use, is recorded but not leaned on: Theodotion's version is arguably
-pre-Christian, and the module says so rather than passing over it.
+Septuagint renders παρθένος — "virgin", on Rico and Gentry's reading of its
+Greek, though not on Wegner's (below) — and the Syriac Peshitta ܒܬܘܠܬܐ,
+"virgin" — so the Aramaic evidence is itself split, Jewish against Christian.
+1QIsaᵃ confirms עַלְמָה in the Hebrew, so no textual variant rescues either side;
+the dispute is purely semantic. The usual Christian reply, that the Three revised
+against Christian use, is now one party's ground: Rico and Gentry's case from
+usage leans on it, and Davidson and Meade read the revision the other way
+(`Dispute.Septuagint`). Whether Theodotion's version is itself pre-Christian,
+which would give the revision a reason with no polemic in it, the library has
+not yet found a source to cite, and it is left out of the reckoning.
 
 `compatibility_defeats_lexical_objection` is where the tension pays off.
 Granting every versional datum and adding the referential premises, the
 objection no longer reaches its conclusion — because once virginity is
 compatible with the word, four translators making four different choices about
 how much of the referent to make explicit is not evidence about the sense.
+
+**The Septuagint's own witness is weighed in full, and it does less than it is
+usually asked to.** The argument is Irenaeus's: Jews translated Isaiah into
+Greek "much before the period of our Lord's advent", so their παρθένος cannot be
+a Christian reading put on the text (*Against Heresies* III.21.1).
+`septuagintWitness_establishes` grants it everything it needs and checks that it
+goes through. Three results then say what it rests on and what it reaches.
+
+- **It rests on one word** (`parthenos_is_load_bearing`). Without the claim that
+  παρθένος, in the translator's Greek, means a virgin, the Septuagint shows
+  nothing about the woman. Rico and Gentry hold that it does, "whenever it
+  appears in Semitic Koine Greek", and Bratcher agrees. Wegner, Rhodea and Meade
+  deny it, and point to Genesis 34:3, where the Greek calls Dinah a παρθένος
+  after Shechem has lain with her; Walton doubts it, from classical usage.
+  `Dispute.Septuagint` weighs the two, and **nothing prevails**
+  (`nothing_prevails_over_parthenos`). Every party rests somewhere on a claim
+  rated `disputed`, the lowest rating, so none outranks another: each side's
+  objection to the other stands, and neither side is shown right, which is not
+  the same as shown wrong. The Septuagint with Rico and Gentry can be defended,
+  and so can Wegner. So the claim that the Greek word is undeniably "virgin" is
+  one side of a live dispute, not common ground. The two claims about the word
+  exclude each other by what they mean — Wegner's says the word meant a young
+  woman and not yet a virgin — and the dispute is computed with that. Three
+  ratings would break the tie, one in Wegner's favour and two in the witness's,
+  and `Dispute.Septuagint` names them.
+- **It shows how one early reader read Isaiah, not what Isaiah's word means**
+  (`septuagint_word_rests_on_its_inference`). Granted its sense, the Septuagint
+  shows that a Jewish translator before Christ read the woman of 7:14 as a
+  virgin — so that reading is no Christian invention. The step from his Greek to
+  Isaiah's Hebrew is a further one, and rated `disputed`: Irenaeus takes it,
+  holding the Greek inspired; Bratcher, Brown and Walton deny it. On Bratcher's
+  and Brown's reading a rendering can follow the woman described rather than the
+  word: the translator of Genesis wrote παρθένος for the עַלְמָה Rebekah (24:43),
+  whom the story has already called a virgin, and elsewhere the Septuagint's
+  translators render עַלְמָה with νεᾶνις four times. That is also the referential
+  strand's reading of the versions.
+- **It leaves the conception open** (`septuagint_leaves_the_conception_open`).
+  The Greek says the virgin *shall* be with child. A woman who is a virgin when
+  the sign is given and later conceives in the ordinary way fits it; so does a
+  virgin who conceives as a virgin, as Justin reads it. The first is not only a
+  rival's reading: Bratcher, who holds that παρθένος "definitely means 'virgin'
+  in the LXX", calls it "the most reasonable explanation" of the Greek of 7:14.
+  So even granted the word, the Septuagint does not decide, and the virginal
+  conception comes, if it comes, from the promise of a sign (`signLine`) or from
+  Matthew and Luke.
 
 **Wegner's objection is encoded in its sharpest form, and the module shows the
 circle in it rather than alleging one.** Wegner does not merely say that
@@ -226,22 +279,25 @@ itself debated, and is marked `plausible` rather than `wellSupported`.
 
 This argument is a directory, because at fourteen hundred lines it was one file
 that no one could hold in view. The dependencies run one way. Where a file
-outgrew three hundred lines of code, the material for the dispute over Wegner's
-objection, and the citations for the dispute over the critical denial, went
-into modules of their own beside it.
+outgrew three hundred lines of code, the material for the disputes over Wegner's
+objection and over the Septuagint's word, and the citations for the dispute
+over the critical denial, went into modules of their own beside it.
 
 | File | Contents |
 |---|---|
 | `Atoms.lean` | the `Claim` atoms, the recurring sources, the intertextual edges, the criterion |
 | `Sources.lean` | `cite`: a citation and a classification for every atom |
 | `Sources/NearTerm.lean` | the citations of the dispute over the critical denial |
+| `Sources/Septuagint.lean` | the citations of the dispute over the Septuagint's word |
 | `Sources/Wegner.lean` | the citations of the dispute over Wegner's objection |
 | `Lines.lean` | the inference steps, and the lines of reason they compose into |
 | `Packages.lean` | the positions, and the variant packages the results refute |
 | `Results.lean` | the `@[headline]` results about the strands, with their trust base |
 | `Results/Wegner.lean` | the results about Wegner's objection, its circle, and the sign |
+| `Results/Septuagint.lean` | what the Septuagint rests on, what it shows, and what it leaves open |
 | `Dispute.lean` | the critical denial, the scriptural reading and four replies as one dispute |
 | `Dispute/Wegner.lean` | Wegner, the fathers' sign argument and the near-term reply as another |
+| `Dispute/Septuagint.lean` | the Septuagint, Wegner on παρθένος, and Rico and Gentry, as a third |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in

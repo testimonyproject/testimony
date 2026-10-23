@@ -259,9 +259,11 @@ year and place are not. -/
 
 /-- Rico and Gentry's linguistic monograph on Isaiah 7:14 — the hardest
 sustained case that עַלְמָה denotes a young virgin and that παρθένος means
-virgin throughout Semitic Koine. Open Library records three 2020 Wipf & Stock
-printings under ISBNs 9781498230162, 9781498230179 and 9781498230186 and does
-not distinguish them, so no single identifier is recorded here. -/
+virgin throughout Semitic Koine. Open Library records the three 2020 Wipf &
+Stock ISBNs without their bindings; the book's copyright page and the
+publisher's page tie 9781498230162 to the paperback, 9781498230179 to the
+hardcover and 9781498230186 to the ebook. Pages are cited from the paperback,
+read in its Google Books preview, so that is the identifier recorded. -/
 @[bib_entry] def ricoGentryInfantKing : BibEntry := .book
   { core :=
       { key := "rico-gentry-infant-king-2020"
@@ -271,11 +273,96 @@ not distinguish them, so no single identifier is recorded here. -/
       , subtitle := some
           "'almâ and parthenos in the World of the Bible — A Linguistic Perspective"
       , year := some { value := 2020 }
+      , identifiers := [.isbn "9781498230162"]
       , note := some
-          ("Three 2020 printings catalogued (ISBNs 9781498230162, " ++
-           "9781498230179, 9781498230186); none could be tied to a printing.") }
+          ("Paperback; pages cited from it. Hardcover ISBN 9781498230179, " ++
+           "ebook 9781498230186.") }
   , publisher := "Wipf & Stock"
   , place := some "Eugene, OR" }
+
+/-- Walton's study of the name and sign of Isaiah 7:14. Cited for the rival
+reading of the Septuagint: παρθένος had a broader sense before the New
+Testament, "Therefore the LXX is not necessarily betraying an interpretation as
+virgin by choosing this term" (293). Read from the society's scan of the
+printed pages; JETS registers no DOIs, so the identifier is that scan. -/
+@[bib_entry] def waltonWhatsInAName : BibEntry := .article
+  { core :=
+      { key := "walton-whats-in-a-name-1987"
+      , contributors := { authors := [.person "John H." "Walton"] }
+      , title := "Isa 7:14: What's in a Name?"
+      , year := some { value := 1987 }
+      , identifiers :=
+          [ .url ("https://etsjets.org/wp-content/uploads/2010/08/" ++
+                  "files_JETS-PDFs_30_30-3_30-3-pp289-306_JETS.pdf")
+                 (some "2026-10-17") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "30"
+  , issue := some "3"
+  , pages := some (289, 306) }
+
+/-- Bratcher's study of Isaiah 7:14 for translators. Cited on both sides of the
+Septuagint dispute, as he stands: παρθένος "definitely means 'virgin' in the
+LXX", Genesis 34:3 being an inexplicable exception (113); the translator meant a
+young woman "at that time virgin" who would conceive "in the normal way" (115);
+and עַלְמָה is "neutral, so far as virginity is concerned" (105), so the Greek
+does not fix the Hebrew. Read in full from the United Bible Societies' copy;
+verified at Crossref, DOI 10.1177/000608445800900301. -/
+@[bib_entry] def bratcherStudyOfIsaiah : BibEntry := .article
+  { core :=
+      { key := "bratcher-study-of-isaiah-1958"
+      , contributors := { authors := [.person "Robert G." "Bratcher"] }
+      , title := "A Study of Isaiah 7:14"
+      , subtitle := some
+          ("Its Meaning and Use in the Masoretic Text, the Septuagint and the " ++
+           "Gospel of Matthew")
+      , year := some { value := 1958 }
+      , identifiers := [.doi "10.1177/000608445800900301"] }
+  , journal := "The Bible Translator"
+  , volume := some "9"
+  , issue := some "3"
+  , pages := some (97, 126) }
+
+/-- Meade's comment on his own post on the ancient versions of Isaiah 7:14: one of
+two readers found who grant Rico and Gentry's evidence — Trypho's objection and
+the revisers' νεᾶνις — and deny their conclusion about the Septuagint's
+παρθένος; Davidson is the other. An informal comment, which revises his own
+earlier view in the same thread; cited for what it says, and the citations of it
+say what it is. Read on the blog itself, where the comment is signed John Meade
+and dated 9 January 2013, 8:39 pm. -/
+@[bib_entry] def meadeAncientVersionsComment : BibEntry := .webPage
+  { core :=
+      { key := "meade-ancient-versions-comment-2013"
+      , contributors := { authors := [.person "John" "Meade"] }
+      , title := "Comment of 9 January 2013 on \"The Ancient Versions on Isaiah 7.14\""
+      , year := some { value := 2013 }
+      , identifiers :=
+          [ .url ("https://septuagintstudies.wordpress.com/2009/05/16/" ++
+                  "the-ancient-versions-on-isaiah-7-14/#comment-764")
+                 (some "2026-10-21") ] }
+  , site := some "LXX Studies" }
+
+/-- Davidson's article "Immanuel" in Hastings's dictionary. Cited for the older
+answer to Rico and Gentry's evidence: the revisers wrote νεᾶνις "possibly to
+evade the technical sense put on the word by the Christians", παρθένος having
+been "used generally for 'girl' or 'young woman'" (456). Bratcher quotes the
+second clause (114). Read from the University of California's copy at the
+Internet Archive: its copy of the volume is the third impression, of 1902, and
+its title page gives the copyright as 1899. Published jointly with T. & T.
+Clark, Edinburgh. -/
+@[bib_entry] def davidsonImmanuel : BibEntry := .inCollection
+  { core :=
+      { key := "davidson-immanuel-1899"
+      , contributors := { authors := [.person "A. B." "Davidson"] }
+      , title := "Immanuel"
+      , year := some { value := 1899 }
+      , identifiers :=
+          [ .url "https://archive.org/details/dictionaryofbibl02hast" (some "2026-10-21") ]
+      , note := some "Volume II, Feign–Kinsman." }
+  , containerTitle := "A Dictionary of the Bible"
+  , containerEditors := [.person "James" "Hastings"]
+  , publisher := "Charles Scribner's Sons"
+  , place := some "New York"
+  , pages := some (454, 456) }
 
 /-- Wegner's article, the clearest evangelical statement of the case *against*
 reading Isaiah 7:14 as a direct prediction of a virgin birth. Cited for the

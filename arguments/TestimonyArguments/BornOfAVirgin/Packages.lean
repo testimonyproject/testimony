@@ -378,6 +378,76 @@ def signArgumentUnderReply : ArgumentPackage Claim :=
     name := "The fathers' sign argument, with the near-term reply in play"
     premises := caseOf [signUnderReply] [] [ordinarySignsAnswerTheDemand] }
 
+/-! ### The Septuagint, and what its word meant -/
+
+/-- The Septuagint as a witness, as a position of its own: its conclusion is
+what its translator read, and nothing yet about Isaiah's word. -/
+@[bornOfAVirginDefs]
+def septuagintWitness : ArgumentPackage Claim :=
+  septuagintLine.asPackage cite
+    "Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin"
+
+/-- Wegner on παρθένος, as a position of its own: in the Septuagint's day the
+word meant "young woman", and not yet "virgin". -/
+@[bornOfAVirginDefs]
+def driftObjection : ArgumentPackage Claim :=
+  driftLine.asPackage cite "In the Septuagint's day, παρθένος meant 'young woman', not 'virgin'"
+
+/-- Rico and Gentry's case from usage as a position of its own: παρθένος means a
+virgin. -/
+@[bornOfAVirginDefs]
+def usageCase : ArgumentPackage Claim :=
+  usageLine.asPackage cite "In the Greek of the Scriptures, παρθένος means a virgin"
+
+/-- The Septuagint as a witness, with the claim about its word taken away: the
+rendering and its date stay, and nothing is granted about what παρθένος meant.
+Its conclusion no longer follows (`parthenos_is_load_bearing`). -/
+@[bornOfAVirginDefs]
+def septuagintWithoutTheSense : ArgumentPackage Claim :=
+  { septuagintWitness with
+    name := "The Septuagint as a witness, with nothing granted about παρθένος"
+    premises :=
+      (septuagintLine.onGrounds [p .lxxRendersParthenos, p .lxxIsPreChristian]).premises }
+
+/-- How the step from the translator's reading to Isaiah's word is rated:
+Irenaeus takes it, against Theodotion and Aquila (*Against Heresies* III.21.1),
+because he holds the Greek "interpreted by the inspiration of God" (III.21.2).
+`disputed`: Bratcher grants that the translator read a virgin (115) and denies
+that עַלְמָה says so (105–106); Brown grants the translator's "deliberate
+preference" (*Birth of the Messiah* 148) and denies that the Hebrew stresses
+virginity (147); and Walton holds that the Greek shows at best "an
+interpretational preference rather than a linguistic necessity" (293). See
+`translatorsReadingFixesTheWord`. -/
+def septuagintToTheWordSource : Source :=
+  { primary := .work irenaeusAgainstHeresies (.sectionRef "III.21.1")
+  , supporting :=
+      [ .work irenaeusAgainstHeresies (.sectionRef "III.21.2")
+      , .work bratcherStudyOfIsaiah (.pages 105 106)
+      , .work bratcherStudyOfIsaiah (.page 115)
+      , .work brownBirthMessiah (.pages 147 148)
+      , .work waltonWhatsInAName (.page 293) ]
+  , tradition := .christianTypological
+  , confidence := .disputed }
+
+/-- **The Septuagint asked for Isaiah's word**: its witness, with the step from
+the translator's reading to what עַלְמָה denotes added. That step is rated
+`disputed`, and the case is only as good as it is. -/
+@[bornOfAVirginDefs]
+def septuagintOnTheWord : ArgumentPackage Claim :=
+  { septuagintWitness with
+    name := "The Septuagint as a witness to what עַלְמָה means"
+    premises := caseOf [septuagintLine] [] [translatorsReadingFixesTheWord]
+    conclusion := p .almahMeansVirgin
+    conclusionLabel := "עַלְמָה at Isaiah 7:14 denotes a virgin"
+    inferences := septuagintWitness.inferences ++ [septuagintToTheWordSource] }
+
+/-- The Septuagint's line with the tense of its verb among the grounds: the
+virgin *shall* be with child. -/
+@[bornOfAVirginDefs]
+def septuagintWithTheFuture : Line Claim :=
+  septuagintLine.onGrounds
+    (septuagintLine.grounds ++ [p .lxxPutsTheConceptionInTheFuture])
+
 /-- The lexical objection with its versional support, stated as its holder
 would state it. -/
 @[bornOfAVirginDefs]
