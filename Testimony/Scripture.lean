@@ -141,6 +141,13 @@ def dinahAfterShechem : List ScriptureCitation :=
   [ rangeIn .septuagint ⟨.genesis, 34, 2, 34, 3⟩
   , verseIn .masoretic ⟨.genesis, 34, 3⟩ ]
 
+/-- Genesis 16:10 and 24:60 — a woman's seed in ordinary births. The angel
+promises Hagar that her seed, זַרְעֵךְ, will be multiplied, and Rebekah's family
+blesses her seed, זַרְעֵךְ, to possess the gate of its enemies. Each seed has a
+father named. -/
+def womensSeedInGenesis : List ScriptureCitation :=
+  [ verseIn .masoretic ⟨.genesis, 16, 10⟩, verseIn .masoretic ⟨.genesis, 24, 60⟩ ]
+
 /-! ### The Bethlehem oracle -/
 
 /-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/

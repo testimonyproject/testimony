@@ -41,7 +41,8 @@ def christian : ArgumentPackage Claim :=
     -- Each strand's inference is contested as its interpretive atoms are: by
     -- the critical readings recorded against every one of them.
   , inferences :=
-      [ motyerOnIsaiah, miravalleOnMary, postellOnIsaiah (.pages 490 493) .disputed
+      [ motyerOnIsaiah, miravalleOnGenesis, miravalleOnMicah
+      , postellOnIsaiah (.pages 490 493) .disputed
       , franceOnMatthew .disputed ] }
 
 /-- The Roman Catholic package: the four scriptural strands *and* the
@@ -447,6 +448,45 @@ virgin *shall* be with child. -/
 def septuagintWithTheFuture : Line Claim :=
   septuagintLine.onGrounds
     (septuagintLine.grounds ++ [p .lxxPutsTheConceptionInTheFuture])
+
+/-! ### Genesis 3:15, and what "her seed" says of a father -/
+
+/-- The protoevangelium strand as a position of its own: Genesis 3:15 read as
+promise, the seed named as the woman's, and the hinge that this marks a birth
+with no human father, delivering the criterion. The rival whose hinge
+`Results.Genesis` reads two ways. -/
+@[bornOfAVirginDefs]
+def protoevangeliumCase : ArgumentPackage Claim :=
+  protoevangeliumLine.asPackage cite "The Messiah must be born of a virgin"
+
+/-- Luther's case from the wording, as a position of its own. -/
+@[bornOfAVirginDefs]
+def herSeedCase : ArgumentPackage Claim :=
+  herSeedLine.asPackage cite "The wording 'her seed' itself signifies a birth with no human father"
+
+/-- Leupold's case from the woman's posterity, as a position of its own. -/
+@[bornOfAVirginDefs]
+def posterityCase : ArgumentPackage Claim :=
+  posterityLine.asPackage cite
+    "The wording 'her seed' does not itself signify a birth with no human father"
+
+/-- Lewis's case from the idiom, as a position of its own. -/
+@[bornOfAVirginDefs]
+def idiomCase : ArgumentPackage Claim :=
+  idiomLine.asPackage cite
+    "The wording 'her seed' does not by itself signify a birth with no human father"
+
+/-- The Greek's "he", as a position of its own. -/
+@[bornOfAVirginDefs]
+def greekHeCase : ArgumentPackage Claim :=
+  greekHeLine.asPackage cite "The Greek translator read the woman's seed as one person"
+
+/-- The Greek's line with the promise's grounds beside it: the seed named as the
+woman's, Genesis 3:15 as the first promise of a redeemer, and a man's seed
+reckoned through him. Luther's step is not among them. -/
+@[bornOfAVirginDefs]
+def greekHeWithThePromise : Line Claim :=
+  greekHeLine.onGrounds (greekHeLine.grounds ++ herSeedLine.grounds)
 
 /-- The lexical objection with its versional support, stated as its holder
 would state it. -/

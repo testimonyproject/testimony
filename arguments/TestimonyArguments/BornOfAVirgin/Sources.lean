@@ -1,3 +1,4 @@
+import TestimonyArguments.BornOfAVirgin.Sources.Genesis
 import TestimonyArguments.BornOfAVirgin.Sources.NearTerm
 import TestimonyArguments.BornOfAVirgin.Sources.Septuagint
 import TestimonyArguments.BornOfAVirgin.Sources.Wegner
@@ -10,10 +11,11 @@ file that makes that obligation concrete: every atom, each with a prose
 statement of what it asserts, a classification, and who says so at what
 pinpoint with what confidence.
 
-It was once the largest file in the argument, and the atoms of its three
+It was once the largest file in the argument, and the atoms of its four
 disputes are now cited in modules of their own: `Sources.NearTerm` for the
 dispute over the critical denial, `Sources.Wegner` for the dispute over Wegner's
-objection, `Sources.Septuagint` for the dispute over the Septuagint's word.
+objection, `Sources.Septuagint` for the dispute over the Septuagint's word, and
+`Sources.Genesis` for the dispute over the woman's seed.
 `cite` reaches each of those citations by name from one of its cases, so it is
 still one total function, and a new atom still cannot be left out of it.
 
@@ -187,6 +189,13 @@ def cite : Claim → AtomMeta
   | .lxxReadsAVirgin => lxxReadsAVirginCited
   | .lxxPutsTheConceptionInTheFuture => lxxPutsTheConceptionInTheFutureCited
   | .lxxEnvisagesAVirginalConception => lxxEnvisagesAVirginalConceptionCited
+  | .wordingSignifiesAFatherlessBirth => wordingSignifiesAFatherlessBirthCited
+  | .wordingFitsAFatherlessBirth => wordingFitsAFatherlessBirthCited
+  | .seedIsHerPosterityFirst => seedIsHerPosterityFirstCited
+  | .womanNamedForTheDeception => womanNamedForTheDeceptionCited
+  | .womansSeedSaidOfOrdinaryBirths => womansSeedSaidOfOrdinaryBirthsCited
+  | .lxxCallsTheSeedHe => lxxCallsTheSeedHeCited
+  | .lxxReadsOneDescendant => lxxReadsOneDescendantCited
   | .harahIsPredicateAdjective => harahIsPredicateAdjectiveCited
   | .isaianicAlmahIsAlreadyPregnant => isaianicAlmahIsAlreadyPregnantCited
   | .pregnancyAtTheSignIsOrdinary => pregnancyAtTheSignIsOrdinaryCited
@@ -241,7 +250,7 @@ def cite : Claim → AtomMeta
     , kind := .interpretive
     , source := postellOnIsaiah (.pages 490 493) .disputed }
   | .genesis3_15SeedOfTheWoman =>
-    { label := "Genesis 3:15 promises victory over the serpent through 'her seed'"
+    { label := "Genesis 3:15 says that 'her seed' will strike the serpent's head"
     , kind := .textual
       -- What the text says, as against what it is taken to imply. The wording
       -- is not in dispute; everything built on it is.
@@ -253,19 +262,52 @@ def cite : Claim → AtomMeta
   | .genesis3_15IsProtoevangelium =>
     { label := "Genesis 3:15 is the protoevangelium, the first promise of a redeemer"
     , kind := .interpretive
-    , source := miravalleOnMary }
+      -- Held across traditions: Leupold, "Both the ultimate victory and its
+      -- achievement by the seed of the woman are taught with unequivocal
+      -- plainness by this word" (167); Keil (102); Miravalle. `disputed`
+      -- because critical readers deny it: Westermann, as Lewis quotes him, "it
+      -- is not possible that such a form has either promise or prophecy as its
+      -- primary or even its secondary meaning" (Lewis 318). The rival atom,
+      -- `genesis3_15IsEtiology`, cites Brown whole; no page of Brown giving that
+      -- reading has yet been found.
+    , source :=
+        { primary := .work leupoldGenesis (.page 167)
+        , supporting :=
+            [ .work keilDelitzschPentateuch (.page 102)
+            , .work miravalleMeetYourMother .whole
+            , .work lewisWomansSeed (.page 318) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
   | .seedReckonedThroughFather =>
     { label := "Hebrew זֶרַע is ordinarily reckoned through the father"
     , kind := .linguistic
-      -- Marked disputed rather than wellSupported on purpose: Genesis speaks of
-      -- a woman's seed in wholly ordinary contexts (16:10 to Hagar, 24:60 to
-      -- Rebekah), so the idiom is weaker than the argument needs.
+      -- Granted by the reader who denies most of what is built on it: Lewis,
+      -- "it is normal in Hebrew to describe descendants by the noun zeraʿ" and
+      -- "unusual (though not unique)" to give it a feminine possessive (299).
+      -- Calvin grants descent reckoned through the male "in regard to civil
+      -- order" (Institutes II.13.3). `wellSupported`: no reader found denies it.
+      -- That Genesis also speaks of a woman's seed (16:10, 24:60) does not
+      -- deny it; it is the ground of a different claim,
+      -- `womansSeedSaidOfOrdinaryBirths`, weighed against the step built on it.
     , source :=
-        { miravalleOnMary with supporting := [.work bhs (.apparatus genesis3_15)] } }
+        { primary := .work lewisWomansSeed (.page 299)
+        , supporting :=
+            [ .work calvinInstitutes (.sectionRef "II.13.3")
+            , .work bhs (.apparatus genesis3_15) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
   | .seedOfTheWomanImpliesNoHumanFather =>
     { label := "The matrilineal wording of Genesis 3:15 marks a birth with no human father"
     , kind := .interpretive
-    , source := miravalleOnMary }
+      -- Ambiguous on purpose, as its holders leave it: Miravalle's word is
+      -- "hint". `Results.Genesis` takes "marks" both ways.
+    , source :=
+        { primary := .work lutherOnTheCreation (.pages 298 299)
+        , supporting :=
+            [ .work miravalleMeetYourMother .whole
+            , .work henryCommentary (.adLoc genesis3_15) ]
+        , tradition := .christianTypological
+        , confidence := .disputed } }
   | .micah5_3NamesMotherOnly =>
     { label := "Micah 5:3 names only the woman in labour as bearing the coming ruler"
     , kind := .textual
@@ -279,7 +321,7 @@ def cite : Claim → AtomMeta
     , kind := .interpretive
       -- An argument from silence, and the rival says so. See
       -- `maternalSilenceProvesNothing`.
-    , source := miravalleOnMary }
+    , source := miravalleOnMicah }
   | .maryConceivedAsVirgin =>
     { label := "Mary conceived Jesus while a virgin"
     , kind := .historical
@@ -355,7 +397,8 @@ def cite : Claim → AtomMeta
         { motyerOnIsaiah with
           supporting :=
             [ .work franceMatthew (.adLoc matthew1_23)
-            , .work miravalleMeetMary (.pages 9 10) ] } }
+            , .work miravalleMeetYourMother .whole
+            , .work miravalleIntroductionToMary .whole ] } }
   | .jesusSatisfiesCriterion =>
     { label := "Jesus of Nazareth satisfies the virgin-birth criterion"
     , kind := .interpretive

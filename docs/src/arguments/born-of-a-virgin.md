@@ -31,10 +31,15 @@ in one screen.
 seed and "her seed", זֶרַע הָאִשָּׁה — as the first promise of a redeemer, and
 takes the matrilineal wording to mark a birth with no human father, since
 Hebrew ordinarily reckons זֶרַע through the man. That last step is genuinely
-contestable and is marked `disputed`: Genesis itself speaks of a woman's seed
-in wholly ordinary contexts (Gen 16:10 to Hagar, 24:60 to Rebekah), so the
-wording at 3:15 is not the anomaly the argument needs it to be unless the
-reader already grants the messianic reading.
+contestable and is marked `disputed`. Some readers who grant the messianic
+reading deny it, the Lutheran commentators Leupold and Keil among them. Leupold
+allows that the wording refers to the virgin birth "Not primarily, but at least
+incidentally", and holds that "the expression used does not specifically
+prophesy the virgin birth, but it coincides and agrees with it under divine
+providence". Others affirm it:
+Luther and Henry. And Genesis itself speaks of a woman's seed in ordinary
+births, of Hagar's (16:10) and of Rebekah's (24:60). `Results.Genesis` and
+`Dispute.Genesis` weigh it (below).
 
 **The Michean strand** reads Micah 5:2–3 — "until the time when she who is in
 labour has given birth" — as naming a mother and no father for the coming
@@ -121,6 +126,40 @@ goes through. Three results then say what it rests on and what it reaches.
   So even granted the word, the Septuagint does not decide, and the virginal
   conception comes, if it comes, from the promise of a sign (`signLine`) or from
   Matthew and Luke.
+
+**"Her seed" is weighed as the Septuagint's word is, and it too does less than
+it is often asked to.** Genesis 3:15 names the seed as the woman's, and the
+strand's hinge reads that as marking a birth with no human father.
+`Results.Genesis` reads "marks" both ways (`whatHerSeedMarks`).
+
+- **As what the wording itself signifies**, it is Luther's argument: the seed of
+  other women "might rather be said to have been the seed of the man", but
+  Mary's was "the true Seed of Mary". He finds the sense in the words of
+  Genesis, and holds that Isaiah later "threw some additional light" on it. It
+  rests on his step (`her_seed_rests_on_its_inference`). The Lutheran
+  commentators Leupold and Keil, who hold the virgin birth, grant every ground
+  and deny it; so does Jack P. Lewis (*Journal of the Evangelical Theological
+  Society*, 1991), who doubts the promise reading itself but argues without
+  needing that doubt. Weighed
+  against Leupold and Lewis, **nothing prevails**
+  (`nothing_prevails_over_her_seed`): Luther's reading can be defended, and so
+  can theirs. But the tie is nearer to breaking against Luther than for him. One
+  rating would break it against him: Lewis's step, `disputed` only on the
+  Catholic apologist Jimmy Akin, who grants Lewis's point about the idiom and
+  still calls the wording "odd", agreeing with the "many" who have "rightly
+  seen" it as "a hint of the Virgin Birth". Two would be needed to break it for
+  him: his own step, and the claim that Genesis 3:15 is the protoevangelium at
+  all, which critical readers deny.
+- **As what the wording fits, once fulfilled**, it is granted by Leupold and
+  Keil. Leupold: "it coincides and agrees with it under divine providence".
+  But they reach the fit from the conception, so read this way the verse
+  confirms the virgin birth to one who already believes it, and gives no reason
+  to believe it to one who does not.
+- **The Septuagint's "he"**, αὐτός for the neuter σπέρμα, shows that a Jewish
+  translator before Christ read the promise of one person
+  (`greekHeCase_establishes`), so that reading is no Christian invention. It
+  leaves the father open (`the_greek_he_leaves_the_father_open`): the same Greek
+  calls the seed Hannah asks for "him", and that son has a father.
 
 **Wegner's objection is encoded in its sharpest form, and the module shows the
 circle in it rather than alleging one.** Wegner does not merely say that
@@ -254,7 +293,9 @@ reading.
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands
 still deliver the criterion, which `almah_not_load_bearing` records. Strip all
-four and the argument collapses. `almah_is_load_bearing_alone` keeps the
+four and the argument collapses. Genesis's strand delivers it only on Luther's
+reading of its hinge, which nothing here forces
+(`nothing_prevails_over_her_seed`). `almah_is_load_bearing_alone` keeps the
 pre-Miravalle finding on the books: within the Isaianic strand taken by itself,
 the lexical premise still carries everything.
 
@@ -277,13 +318,15 @@ itself debated, and is marked `plausible` rather than `wellSupported`.
 This argument is a directory, because at fourteen hundred lines it was one file
 that no one could hold in view. The dependencies run one way. Where a file
 outgrew three hundred lines of code, the material for the disputes over Wegner's
-objection and over the Septuagint's word, and the citations for the dispute
-over the critical denial, went into modules of their own beside it.
+objection, over the Septuagint's word and over the woman's seed, and the
+citations for the dispute over the critical denial, went into modules of their
+own beside it.
 
 | File | Contents |
 |---|---|
 | `Atoms.lean` | the `Claim` atoms, the recurring sources, the intertextual edges, the criterion |
 | `Sources.lean` | `cite`: a citation and a classification for every atom |
+| `Sources/Genesis.lean` | the citations of the dispute over the woman's seed |
 | `Sources/NearTerm.lean` | the citations of the dispute over the critical denial |
 | `Sources/Septuagint.lean` | the citations of the dispute over the Septuagint's word |
 | `Sources/Wegner.lean` | the citations of the dispute over Wegner's objection |
@@ -292,9 +335,11 @@ over the critical denial, went into modules of their own beside it.
 | `Results.lean` | the `@[headline]` results about the strands, with their trust base |
 | `Results/Wegner.lean` | the results about Wegner's objection, its circle, and the sign |
 | `Results/Septuagint.lean` | what the Septuagint rests on, what it shows, and what it leaves open |
+| `Results/Genesis.lean` | what "her seed" says of a father, read two ways, and the Greek's "he" |
 | `Dispute.lean` | the critical denial, the scriptural reading and four replies as one dispute |
 | `Dispute/Wegner.lean` | Wegner, the fathers' sign argument and the near-term reply as another |
 | `Dispute/Septuagint.lean` | the Septuagint, Wegner on παρθένος, and Rico and Gentry, as a third |
+| `Dispute/Genesis.lean` | Luther, Leupold and Lewis on "her seed", as a fourth |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in
@@ -367,28 +412,35 @@ reader sees.
 | \\(P_{38}\\) | Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation | interpretive | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; [`chilton-isaiah-targum-1987`](../bibliography.md#chilton-isaiah-targum-1987) |
 | \\(P_{39}\\) | Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14 | textual | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; Isa 8:7-8; Isa 9:8-11; Isa 10:5 |
 | \\(P_{40}\\) | Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth | interpretive | Christian, historical-grammatical, disputed | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493 |
-| \\(P_{41}\\) | Genesis 3:15 promises victory over the serpent through 'her seed' | textual | critical scholarship, consensus | Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
-| \\(P_{42}\\) | Genesis 3:15 is the protoevangelium, the first promise of a redeemer | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{43}\\) | Hebrew זֶרַע is ordinarily reckoned through the father | linguistic | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
-| \\(P_{44}\\) | The matrilineal wording of Genesis 3:15 marks a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{45}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
-| \\(P_{46}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{47}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
-| \\(P_{48}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
-| \\(P_{49}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{50}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{51}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
-| \\(P_{52}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
-| \\(P_{53}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
-| \\(P_{54}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
-| \\(P_{55}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
-| \\(P_{56}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{57}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{58}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{59}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{60}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
-| \\(P_{61}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10 |
-| \\(P_{62}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| \\(P_{41}\\) | Genesis 3:15 says that 'her seed' will strike the serpent's head | textual | critical scholarship, consensus | Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
+| \\(P_{42}\\) | Genesis 3:15 is the protoevangelium, the first promise of a redeemer | interpretive | Christian, historical-grammatical, disputed | [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318 |
+| \\(P_{43}\\) | Hebrew זֶרַע is ordinarily reckoned through the father | linguistic | Christian, historical-grammatical, well supported | [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 299; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §II.13.3; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
+| \\(P_{44}\\) | The matrilineal wording of Genesis 3:15 marks a birth with no human father | interpretive | Christian, typological, disputed | [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15 |
+| \\(P_{45}\\) | The wording 'her seed' itself signifies a birth with no human father | interpretive | Christian, typological, disputed | [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999) |
+| \\(P_{46}\\) | The wording 'her seed' fits a birth with no human father, as fulfilled in Christ | interpretive | Christian, historical-grammatical, disputed | [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 |
+| \\(P_{47}\\) | 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person | interpretive | Christian, historical-grammatical, disputed | [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146 |
+| \\(P_{48}\\) | The seed is called the woman's because the serpent deceived the woman | interpretive | Christian, historical-grammatical, well supported | [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 165; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 |
+| \\(P_{49}\\) | Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's | textual | critical scholarship, consensus | Gen 16:10; Gen 24:60; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300 |
+| \\(P_{50}\\) | The Greek of Genesis 3:15 calls the woman's seed 'he', though σπέρμα is neuter | textual | critical scholarship, consensus | Gen 3:15; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 141 |
+| \\(P_{51}\\) | The Greek translator of Genesis read the woman's seed at 3:15 as one person | interpretive | Christian, historical-grammatical, well supported | [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300 |
+| \\(P_{52}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
+| \\(P_{53}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
+| \\(P_{54}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
+| \\(P_{55}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
+| \\(P_{56}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{57}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{58}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
+| \\(P_{59}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
+| \\(P_{60}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
+| \\(P_{61}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
+| \\(P_{62}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
+| \\(P_{63}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{64}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{65}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{66}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{67}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
+| \\(P_{68}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
+| \\(P_{69}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
 
 </div>
 
@@ -409,19 +461,37 @@ def motyerOnIsaiah : Source :=
     confidence := Confidence.disputed }
 ```
 
-<a id="miravalleOnMary"></a>
-**`miravalleOnMary`**
+<a id="miravalleOnGenesis"></a>
+**`miravalleOnGenesis`**
 
-Miravalle's *Meet Your Mother* at pages 9–10.
+Miravalle on Genesis 3:15, in *Meet Your Mother*: the verse is the
+"Protoevangelium", "the first reference to Jesus as the future Redeemer of the
+world", and to speak of "the 'seed' of a woman rather than the seed of a man" is
+"already a hint of Mary's virginal conception of Jesus". His word is "hint": a
+remark in passing, not an argument from the Hebrew.
 
-Eight atoms and three intertextual edges cite exactly this, which is a fact
-about the argument worth being able to see: **both** the protoevangelium and
-Michean strands rest on one source, in one tradition, at one pinpoint. Every one
-of them is `disputed`.
+The protoevangelium strand rests on him and on Luther, the reader who argues
+from the wording (`herSeedLine`); the Michean strand rests on Miravalle alone
+(`miravalleOnMicah`). Every atom citing this is `disputed`.
 
 ```lean
-def miravalleOnMary : Source :=
-  { primary := Reference.work miravalleMeetMary (Bib.Locus.pages 9 10),
+def miravalleOnGenesis : Source :=
+  { primary := Reference.work miravalleMeetYourMother,
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="miravalleOnMicah"></a>
+**`miravalleOnMicah`**
+
+Miravalle on Micah 5:2–3, in *Introduction to Mary*: the mother "so
+specifically designated without a husband" conveys "the same virginal sense as
+we see in Isaiah 7:14". The passage is on page 18 of the 1993 printing; the
+library's entry is the 2020 printing, whose page could not be checked, so the
+book is cited whole.
+
+```lean
+def miravalleOnMicah : Source :=
+  { primary := Reference.work miravalleIntroductionToMary,
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 ```
 
@@ -519,7 +589,8 @@ the question the Michean and Isaianic strands are also asking.
 ```lean
 def protoevangeliumEdge : IntertextEdge :=
   { fromPassage := Scripture.matthew1_23, toPassage := Scripture.genesis3_15,
-    relation := RelationType.promise, source := miravalleOnMary }
+    relation := RelationType.promise,
+    source := miravalleOnGenesis }
 ```
 
 <a id="micahMaternalEdge"></a>
@@ -532,7 +603,7 @@ verbal link — there is no quotation of Micah 5:3 in the birth narratives.
 def micahMaternalEdge : IntertextEdge :=
   { fromPassage := Scripture.matthew1_23, toPassage := Scripture.micah5_3,
     relation := RelationType.messianicTheme,
-    source := miravalleOnMary }
+    source := miravalleOnMicah }
 ```
 
 <a id="lukeAllusionEdge"></a>
@@ -606,16 +677,17 @@ def predictiveReading : Interpretation :=
 **`protoevangeliumReading`**
 
 Miravalle's reading of Genesis 3:15: the seed is named as the woman's, and
-no man is involved in the conception it promises.
+that is "already a hint" that no man is involved in the conception it
+promises.
 
 ```lean
 def protoevangeliumReading : Interpretation :=
   { passage := Scripture.genesis3_15,
     reading :=
-      "Genesis 3:15 promises a redeemer born of the woman's seed, with no " ++
-        "human father implied by the wording",
+      "Genesis 3:15 promises a redeemer born of the woman's seed, the wording " ++
+        "hinting at a conception with no human father",
     asRelation := some RelationType.promise,
-    source := miravalleOnMary }
+    source := miravalleOnGenesis }
 ```
 
 <a id="maternalReading"></a>
@@ -631,7 +703,7 @@ def maternalReading : Interpretation :=
       "Micah 5:2–3 names only the woman in labour as bearing the coming " ++
         "ruler, mentioning no father",
     asRelation := some RelationType.messianicTheme,
-    source := miravalleOnMary }
+    source := miravalleOnMicah }
 ```
 
 <a id="bornOfAVirgin"></a>
@@ -642,6 +714,239 @@ The criterion this argument establishes a candidate must meet.
 ```lean
 def bornOfAVirgin : FulfillmentCriterion :=
   { name := "born of a virgin", basis := predictiveReading }
+```
+
+## TestimonyArguments.BornOfAVirgin.Sources.Genesis — the citations of the dispute over "her seed"
+
+The atoms of the dispute over what the wording of Genesis 3:15 says about a
+father: whether "her seed" signifies a birth without one, or fits such a birth
+once it has happened, what else might explain the wording, and what the Greek's
+"he" adds. Cited here and dispatched from `cite` by name, for the reason
+`Sources.Wegner` gives.
+
+Luther, Leupold, Keil and Calvin are cited from their commentaries, Lewis and
+Collins from their articles, Henry by passage, and Akin from the publisher's
+site. Martin is cited whole: the library has not read his article, and quotes
+him only as Collins does.
+
+<a id="wordingSignifiesAFatherlessBirthCited"></a>
+**`wordingSignifiesAFatherlessBirthCited`**
+
+`wordingSignifiesAFatherlessBirth`. Luther makes the argument from the
+wording: "Thus women continued to bring forth until the Flood; and afterwards
+also, until the time of Mary. But the seed of none of those women could truly be
+said to be the Seed of the woman, but might rather be said to have been the seed
+of the man. But that which was born from Mary was conceived of the Holy Ghost
+and was the true Seed of Mary" (*Luther on the Creation* 298–99). Henry: "He was
+likewise to be the seed of a woman only, of a virgin" (on 3:15). Akin finds in
+the wording "a hint of the Virgin Birth".
+
+Luther finds the sense in the words of Genesis, and holds that Isaiah later
+"threw some additional light upon this glorious promise ... For it was then made
+certain that this Seed would not be born from the union of a man and a woman"
+(298). Irenaeus reads the verse of the Virgin's son, "He who should be born of a
+woman, [namely] from the Virgin" (*Against Heresies* V.21.1), though he does not
+argue from the wording.
+
+`disputed`: Leupold and Keil, who read the verse as the promise of Christ, deny
+that the wording says this (`posterityLine`); Calvin gives both of their grounds
+(170) without discussing the point; and Lewis denies it from what Genesis says
+of Hagar and Rebekah (`idiomLine`).
+
+```lean
+def wordingSignifiesAFatherlessBirthCited : AtomMeta :=
+  {
+    label :=
+      "The wording 'her seed' itself signifies a birth with no human father",
+    kind := PremiseKind.interpretive,
+    source :=
+      { primary := Reference.work lutherOnTheCreation (Bib.Locus.pages 298 299),
+        supporting :=
+          [Reference.work henryCommentary
+              (Bib.Locus.adLoc Scripture.genesis3_15),
+            Reference.work akinWomanSeedSerpent],
+        tradition := Tradition.christianTypological,
+        confidence := Confidence.disputed } }
+```
+
+<a id="wordingFitsAFatherlessBirthCited"></a>
+**`wordingFitsAFatherlessBirthCited`**
+
+`wordingFitsAFatherlessBirth`. Leupold, asked whether the expression is "so
+phrased in reference to Mary and the virgin birth": "Not primarily, but at least
+incidentally"; "an expression is chosen that meets with literal fulfilment in
+Him who is virgin born and not of the seed of man.
+Yet we prefer to state the case thus: the expression used does not specifically
+prophesy the virgin birth, but it coincides and agrees with it under divine
+providence" (169). Keil: "in the fact that the destroyer of the serpent was born
+of a woman (without a human father) they were fulfilled in a way which showed
+that the promise must have proceeded from that Being, who secured its
+fulfilment not only in its essential force, but even in its apparently casual
+form" (102).
+
+`disputed`, because it presupposes the virginal conception, which this argument
+rates `disputed` (`maryConceivedAsVirgin`). Among readers who grant that
+conception, none found denies the fit: Leupold and Keil, who deny that the
+wording signifies it, grant this.
+
+```lean
+def wordingFitsAFatherlessBirthCited : AtomMeta :=
+  {
+    label :=
+      "The wording 'her seed' fits a birth with no human father, as fulfilled in Christ",
+    kind := PremiseKind.interpretive,
+    source :=
+      { primary := Reference.work leupoldGenesis (Bib.Locus.page 169),
+        supporting :=
+          [Reference.work keilDelitzschPentateuch (Bib.Locus.page 102)],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.disputed } }
+```
+
+<a id="seedIsHerPosterityFirstCited"></a>
+**`seedIsHerPosterityFirstCited`**
+
+`seedIsHerPosterityFirst`. Leupold: "the expression 'her seed' in its first
+meaning is a collective noun and includes all who are enrolled in the struggle
+against Satan, without being themselves virgin born" (169) — not every
+descendant, for "within the circle of the broadest possible meaning of zéra' must
+be drawn a circle quite a bit smaller" (167). Calvin: "for who will concede that
+a collective noun is to be understood of one man only? ... I explain, therefore,
+the seed to mean the posterity of the woman generally" (170). Keil: "It does not
+follow from this, however, apart from other considerations, that by the seed of
+the woman we are to understand one solitary person, one individual only" (101).
+
+`disputed`. Collins argues that the Hebrew's syntax is "quite consistent with the
+pattern where a single individual is in view" (145), and that on a "bottom-up"
+reading of the final form "it would be fair to read this as God's threat to the
+snake, of an individual who will engage the snake in combat and win" (146).
+
+```lean
+def seedIsHerPosterityFirstCited : AtomMeta :=
+  {
+    label :=
+      "'Her seed' at Genesis 3:15 is first collective: her posterity, not one person",
+    kind := PremiseKind.interpretive,
+    source :=
+      { primary := Reference.work leupoldGenesis (Bib.Locus.pages 167 169),
+        supporting :=
+          [Reference.work calvinGenesis (Bib.Locus.page 170),
+            Reference.work keilDelitzschPentateuch (Bib.Locus.page 101),
+            Reference.work collinsSyntacticalNote (Bib.Locus.pages 145 146)],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.disputed } }
+```
+
+<a id="womanNamedForTheDeceptionCited"></a>
+**`womanNamedForTheDeceptionCited`**
+
+`womanNamedForTheDeception`. Leupold: "The woman, as one factor in the
+enmity, is stressed to the exclusion of man because the woman was beguiled"
+(165); "the one tempted and brought to fall is chosen by God to produce the one
+that is to bring Satan to fall" (169). Calvin: "He mentions the woman on this
+account, because, as she had yielded to the subtlety of the devil, and being
+first deceived, had drawn her husband into the participation of her ruin, so she
+had peculiar need of consolation" (170). Henry: "God does the woman the honour to
+call him rather her seed, because she it was whom the devil had beguiled". Keil
+allows it — "even if the words had reference first of all to the fact that the
+woman had been led astray by the serpent" — and gives his own reason in the same
+key: "as it was through the woman that the craft of the devil brought sin and
+death into the world, so it is also through the woman that the grace of God will
+give to the fallen human race the conqueror" (102).
+
+`wellSupported`: Lutheran, Reformed and Puritan readers give it, Henry among
+them, who also holds that the wording signifies a birth from a virgin. No reader
+found denies it.
+
+```lean
+def womanNamedForTheDeceptionCited : AtomMeta
+```
+
+<a id="womansSeedSaidOfOrdinaryBirthsCited"></a>
+**`womansSeedSaidOfOrdinaryBirthsCited`**
+
+`womansSeedSaidOfOrdinaryBirths`. What the Hebrew reads: the angel promises
+Hagar that her seed, זַרְעֵךְ, will be multiplied (Genesis 16:10), and Rebekah's
+family blesses her seed, זַרְעֵךְ, to possess the gate of its enemies (24:60).
+Each seed has a father named, Abraham and Isaac. Lewis: "While it is normal in
+Hebrew to describe descendants by the noun zeraʿ, it is unusual (though not
+unique) to use the term with a feminine possessive pronoun" (299). Scripture
+alone, and legitimately so: the claim is about what the text reads.
+
+```lean
+def womansSeedSaidOfOrdinaryBirthsCited : AtomMeta :=
+  {
+    label :=
+      "Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's",
+    kind := PremiseKind.textual,
+    source :=
+      { primary := Reference.scripture Scripture.womensSeedInGenesis,
+        supporting :=
+          [Reference.work lewisWomansSeed (Bib.Locus.pages 299 300)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+```
+
+<a id="lxxCallsTheSeedHeCited"></a>
+**`lxxCallsTheSeedHeCited`**
+
+`lxxCallsTheSeedHe`. What the Greek reads, from Rahlfs's text: καὶ ἀνὰ μέσον
+τοῦ σπέρματος αὐτῆς· αὐτός σου τηρήσει κεφαλήν, "and between her seed: he will
+watch for your head". The pronoun αὐτός is masculine, and σπέρμα is neuter.
+Collins: "The mismatch in gender between pronoun and antecedent is held to be
+evidence that the LXX translator saw this as a prophecy of a specific
+individual" (141). `consensus`: no one denies the reading.
+
+```lean
+def lxxCallsTheSeedHeCited : AtomMeta :=
+  {
+    label :=
+      "The Greek of Genesis 3:15 calls the woman's seed 'he', though σπέρμα is neuter",
+    kind := PremiseKind.textual,
+    source :=
+      {
+        primary :=
+          Reference.scripture
+            [Scripture.verseIn TextualTradition.septuagint
+                Scripture.genesis3_15],
+        supporting :=
+          [Reference.work collinsSyntacticalNote (Bib.Locus.page 141)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+```
+
+<a id="lxxReadsOneDescendantCited"></a>
+**`lxxReadsOneDescendantCited`**
+
+`lxxReadsOneDescendant`. Collins: "The evidence of the Greek translators
+makes it beyond question that the translator of Genesis 3:15 meant to convey
+that an individual was promised" (145). The reading "is generally acknowledged"
+(141), and Martin's article is its usual citation: as Collins quotes him, Martin
+calls the Greek "the earliest evidence of an individual messianic
+interpretation" (Collins 141 n. 4). Elsewhere the Greek translators use a
+masculine pronoun after the neuter σπέρμα when one person is meant: αὐτόν at 1
+Samuel 1:11, and ὅς, αὐτός and αὐτόν at 2 Samuel 7:12–14 (Collins 144).
+
+`wellSupported`. The doubt Collins reports is about the Hebrew, not the Greek:
+"many feel that the LXX is an interpretation that the Hebrew itself does not
+support" (141). Lewis grants the reading — "Sperma is a neuter noun in Greek and
+would have taken a neuter pronoun had the translators not thought of an
+individual" — and allows that the masculine "could be an oversight" (300).
+
+```lean
+def lxxReadsOneDescendantCited : AtomMeta :=
+  {
+    label :=
+      "The Greek translator of Genesis read the woman's seed at 3:15 as one person",
+    kind := PremiseKind.interpretive,
+    source :=
+      { primary := Reference.work collinsSyntacticalNote (Bib.Locus.page 145),
+        supporting :=
+          [Reference.work collinsSyntacticalNote (Bib.Locus.page 144),
+            Reference.work martinEarliestMessianic,
+            Reference.work lewisWomansSeed (Bib.Locus.page 300)],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.wellSupported } }
 ```
 
 ## TestimonyArguments.BornOfAVirgin.Sources.NearTerm — the citations of the near-term dispute
@@ -1370,10 +1675,11 @@ file that makes that obligation concrete: every atom, each with a prose
 statement of what it asserts, a classification, and who says so at what
 pinpoint with what confidence.
 
-It was once the largest file in the argument, and the atoms of its three
+It was once the largest file in the argument, and the atoms of its four
 disputes are now cited in modules of their own: `Sources.NearTerm` for the
 dispute over the critical denial, `Sources.Wegner` for the dispute over Wegner's
-objection, `Sources.Septuagint` for the dispute over the Septuagint's word.
+objection, `Sources.Septuagint` for the dispute over the Septuagint's word, and
+`Sources.Genesis` for the dispute over the woman's seed.
 `cite` reaches each of those citations by name from one of its cases, so it is
 still one total function, and a new atom still cannot be left out of it.
 
@@ -1420,19 +1726,21 @@ Matthew's intent, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61}
+(P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68}
 \]
 </div>
 
 <a id="genesisToCriterion"></a>
 **`genesisToCriterion`**
 
-Protoevangelium strand: from Genesis 3:15 read as promise, the patrilineal
-idiom, and the inference drawn from its departure, the criterion follows.
+Protoevangelium strand: Genesis 3:15 promises a redeemer as "her seed"; a
+man's line is ordinarily counted through the father; and naming the seed as the
+woman's marks a birth with no human father. So the Messiah must be born of a
+virgin.
 
 <div class="testimony-math">
 \[
-(P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{61}
+(P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68}
 \]
 </div>
 
@@ -1449,7 +1757,7 @@ grants the composition and stops short of Matthew is entitled to.
 
 <div class="testimony-math">
 \[
-(P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{61}
+(P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{68}
 \]
 </div>
 
@@ -1469,7 +1777,7 @@ right kind of reason.
 
 <div class="testimony-math">
 \[
-(P_{38} \land P_{39}) \rightarrow \lnot P_{50}
+(P_{38} \land P_{39}) \rightarrow \lnot P_{57}
 \]
 </div>
 
@@ -1481,7 +1789,7 @@ it, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{45} \land P_{46}) \rightarrow P_{61}
+(P_{52} \land P_{53}) \rightarrow P_{68}
 \]
 </div>
 
@@ -1493,7 +1801,7 @@ criterion follows. Encoded, but deliberately kept out of `christian`.
 
 <div class="testimony-math">
 \[
-(P_{58} \land P_{59}) \rightarrow P_{61}
+(P_{65} \land P_{66}) \rightarrow P_{68}
 \]
 </div>
 
@@ -1510,7 +1818,7 @@ left nothing for an objection to engage.
 
 <div class="testimony-math">
 \[
-(P_{49} \land P_{50}) \rightarrow \lnot P_{1}
+(P_{56} \land P_{57}) \rightarrow \lnot P_{1}
 \]
 </div>
 
@@ -1528,7 +1836,7 @@ where it is cited `disputed`.
 
 <div class="testimony-math">
 \[
-P_{51} \rightarrow \lnot P_{50}
+P_{58} \rightarrow \lnot P_{57}
 \]
 </div>
 
@@ -1542,7 +1850,7 @@ oracle in a different book (Postell 481 n. 72).
 
 <div class="testimony-math">
 \[
-(P_{54} \land P_{55}) \rightarrow \lnot P_{50}
+(P_{61} \land P_{62}) \rightarrow \lnot P_{57}
 \]
 </div>
 
@@ -1562,7 +1870,7 @@ denies, and `motyerLine` rates it `disputed` for that reason.
 
 <div class="testimony-math">
 \[
-(P_{52} \land P_{53}) \rightarrow \lnot P_{49}
+(P_{59} \land P_{60}) \rightarrow \lnot P_{56}
 \]
 </div>
 
@@ -1581,7 +1889,7 @@ word having to carry the sense.
 
 <div class="testimony-math">
 \[
-(P_{4} \land P_{5} \land P_{6} \land P_{47}) \rightarrow P_{7}
+(P_{4} \land P_{5} \land P_{6} \land P_{54}) \rightarrow P_{7}
 \]
 </div>
 
@@ -1606,7 +1914,7 @@ objector would state it, so that the reply has something real to answer.
 
 <div class="testimony-math">
 \[
-(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{62}
+(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{69}
 \]
 </div>
 
@@ -1646,7 +1954,7 @@ From the criterion and the historical claim, the fulfilment follows.
 
 <div class="testimony-math">
 \[
-(P_{61} \land P_{47}) \rightarrow P_{62}
+(P_{68} \land P_{54}) \rightarrow P_{69}
 \]
 </div>
 
@@ -1711,7 +2019,7 @@ Isaiah 7:14" (468 n. 22).
 
 <div class="testimony-math">
 \[
-(P_{49} \land \lnot P_{1}) \rightarrow P_{26}
+(P_{56} \land \lnot P_{1}) \rightarrow P_{26}
 \]
 </div>
 
@@ -1882,6 +2190,65 @@ P_{22} \rightarrow P_{2}
 \]
 </div>
 
+##### Genesis 3:15, and what "her seed" says of a father
+
+The protoevangelium strand holds that the seed being named as the woman's marks
+a birth with no human father. The steps below take apart what "marks" can mean:
+that the wording itself signifies such a birth, which Luther argues and
+Leupold, Keil and Lewis deny, or that it fits one once fulfilled, which Leupold
+and Keil grant.
+
+<a id="herSeedSignifiesNoFather"></a>
+**`herSeedSignifiesNoFather`**
+
+**Luther's step.** Genesis 3:15 names the seed as the woman's, it is the
+first promise of a redeemer, and a man's seed is ordinarily reckoned through
+him; so the wording itself signifies a birth with no human father.
+
+<div class="testimony-math">
+\[
+(P_{41} \land P_{42} \land P_{43}) \rightarrow P_{45}
+\]
+</div>
+
+<a id="posterityExplainsTheWording"></a>
+**`posterityExplainsTheWording`**
+
+**Leupold's step.** "Her seed" is first collective, the woman's posterity,
+and the seed is named hers because the serpent deceived her; so the wording does
+not itself signify a birth with no human father.
+
+<div class="testimony-math">
+\[
+(P_{41} \land P_{47} \land P_{48}) \rightarrow \lnot P_{45}
+\]
+</div>
+
+<a id="ordinaryBirthsAnswerTheWording"></a>
+**`ordinaryBirthsAnswerTheWording`**
+
+**Lewis's step.** Genesis speaks of a woman's seed in ordinary births too;
+so the woman's seed at 3:15 does not by itself signify a birth with no human
+father.
+
+<div class="testimony-math">
+\[
+(P_{41} \land P_{49}) \rightarrow \lnot P_{45}
+\]
+</div>
+
+<a id="heReadsOneDescendant"></a>
+**`heReadsOneDescendant`**
+
+**The Greek's "he".** The Greek refers to the neuter seed with a masculine
+pronoun; so its translator read the seed as one person.
+
+<div class="testimony-math">
+\[
+P_{50} \rightarrow P_{51}
+\]
+</div>
+
 #### The lines of reason
 
 Four strands converge on the criterion, and each is a `Line`: its own grounds,
@@ -1909,8 +2276,8 @@ Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
 \text{(3)} \quad &amp; P_{9} \\
 \text{(4)} \quad &amp; P_{34} \\
 \text{(5)} \quad &amp; P_{35} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61} \\[4pt]
-\vdash \quad &amp; P_{61}
+\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68} \\[4pt]
+\vdash \quad &amp; P_{68}
 \end{aligned}
 \]
 </div>
@@ -1918,10 +2285,11 @@ Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
 <a id="protoevangeliumLine"></a>
 **`protoevangeliumLine`** — Protoevangelium strand (Genesis 3:15)
 
-**The protoevangelium line.** Genesis 3:15 read as promise, the patrilineal
-idiom, and the inference drawn from its departure. Its hinge is
-`seedOfTheWomanImpliesNoHumanFather`, and the module doc says why that hinge is
-weaker than the argument needs.
+**The protoevangelium line.** Genesis 3:15 read as the promise of a
+redeemer, a man's line counted through the father, and the claim that naming the
+seed as the woman's marks a birth with no human father. That claim is its hinge
+(`seedOfTheWomanImpliesNoHumanFather`), and `Results.Genesis` says what it can
+bear, read either way.
 
 <div class="testimony-math">
 \[
@@ -1930,8 +2298,8 @@ weaker than the argument needs.
 \text{(2)} \quad &amp; P_{42} \\
 \text{(3)} \quad &amp; P_{43} \\
 \text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{61} \\[4pt]
-\vdash \quad &amp; P_{61}
+\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68} \\[4pt]
+\vdash \quad &amp; P_{68}
 \end{aligned}
 \]
 </div>
@@ -1946,10 +2314,10 @@ says so.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{45} \\
-\text{(2)} \quad &amp; P_{46} \\
-\text{(3)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{61} \\[4pt]
-\vdash \quad &amp; P_{61}
+\text{(1)} \quad &amp; P_{52} \\
+\text{(2)} \quad &amp; P_{53} \\
+\text{(3)} \quad &amp; (P_{52} \land P_{53}) \rightarrow P_{68} \\[4pt]
+\vdash \quad &amp; P_{68}
 \end{aligned}
 \]
 </div>
@@ -1967,8 +2335,8 @@ that follows. Its hinge is `compositionGovernsMeaning`.
 \text{(1)} \quad &amp; P_{36} \\
 \text{(2)} \quad &amp; P_{37} \\
 \text{(3)} \quad &amp; P_{40} \\
-\text{(4)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{61} \\[4pt]
-\vdash \quad &amp; P_{61}
+\text{(4)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{68} \\[4pt]
+\vdash \quad &amp; P_{68}
 \end{aligned}
 \]
 </div>
@@ -1987,10 +2355,10 @@ own.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{58} \\
-\text{(2)} \quad &amp; P_{59} \\
-\text{(3)} \quad &amp; (P_{58} \land P_{59}) \rightarrow P_{61} \\[4pt]
-\vdash \quad &amp; P_{61}
+\text{(1)} \quad &amp; P_{65} \\
+\text{(2)} \quad &amp; P_{66} \\
+\text{(3)} \quad &amp; (P_{65} \land P_{66}) \rightarrow P_{68} \\[4pt]
+\vdash \quad &amp; P_{68}
 \end{aligned}
 \]
 </div>
@@ -2012,9 +2380,9 @@ be purely semantic, and the line would not be the cheap move it is.
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{47} \\
+\text{(4)} \quad &amp; P_{54} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{47}) \rightarrow P_{7} \\[4pt]
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{54}) \rightarrow P_{7} \\[4pt]
 \vdash \quad &amp; P_{7}
 \end{aligned}
 \]
@@ -2063,7 +2431,7 @@ conclusion rather than running on to the fulfilment claim.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{26} \\
 \text{(4)} \quad &amp; P_{28} \\
 \text{(5)} \quad &amp; P_{24} \rightarrow P_{25} \\[4pt]
@@ -2247,6 +2615,137 @@ Septuagint in the witness's favour (`Dispute.Septuagint` says why).
 \]
 </div>
 
+<a id="herSeedLine"></a>
+**`herSeedLine`** — Luther on 'her seed': the wording itself signifies no human father
+
+**Luther on "her seed"**: the wording itself signifies a birth with no human
+father. Held by Luther and Henry, and, as "a hint", by Akin and Miravalle;
+disputed by Leupold, Keil and Lewis. Irenaeus reads the verse of the Virgin's
+son, though he does not argue from the wording.
+
+Luther: the seed of other women "might rather be said to have been the seed of
+the man. But that which was born from Mary was conceived of the Holy Ghost and
+was the true Seed of Mary" (*Luther on the Creation* 298–99). He finds the sense
+in the words of Genesis, and holds that Isaiah later "threw some additional
+light" on it: "For it was then made certain that this Seed would not be born
+from the union of a man and a woman" (298).
+
+The step is rated `disputed`, because readers who grant all three grounds deny
+the conclusion. Leupold reads the verse as the promise of the victor — "Both the
+ultimate victory and its achievement by the seed of the woman are taught with
+unequivocal plainness by this word" (167). Asked whether the expression is "so
+phrased in reference to Mary and the virgin birth", he answers "Not primarily,
+but at least incidentally", and holds that "the expression used does not
+specifically prophesy the virgin birth" (169). Keil grants that the promise
+"culminates in Christ", and finds the virgin birth in its fulfilment, "even if
+the words had reference first of all to the fact that the woman had been led
+astray by the serpent", "even in its apparently casual form" (102). Lewis grants
+that "it is normal in Hebrew to describe descendants by the noun zeraʿ" (299);
+he doubts the promise reading itself, suggesting it came from "Making the woman
+to be the addressee", but argues on grounds that do not need that doubt: "To say
+that the passage is messianic does not necessarily imply that it is
+virgin-birth messianic" (319).
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{42} \\
+\text{(3)} \quad &amp; P_{43} \\
+\text{(4)} \quad &amp; (P_{41} \land P_{42} \land P_{43}) \rightarrow P_{45} \\[4pt]
+\vdash \quad &amp; P_{45}
+\end{aligned}
+\]
+</div>
+
+<a id="posterityLine"></a>
+**`posterityLine`** — Leupold on 'her seed': her posterity, named for the deception
+
+**Leupold on "her seed"**: the wording names the woman's posterity, and names
+the woman because she was deceived; it does not itself signify a birth with no
+human father. Held by Leupold and Keil, whose two grounds Calvin gives too;
+disputed by Irenaeus and Henry.
+
+Leupold: "the expression used does not specifically prophesy the virgin birth,
+but it coincides and agrees with it under divine providence. For it is not to be
+forgotten that the expression 'her seed' in its first meaning is a collective
+noun and includes all who are enrolled in the struggle against Satan, without
+being themselves virgin born" (169).
+
+The step is rated `disputed`. Irenaeus grants both grounds. The enmity is kept
+up between the serpent and the woman's seed "until the seed did come appointed
+to tread down his head" (*Against Heresies* III.23.7), and "it was by means of a
+woman that he got the advantage over man at first" (V.21.1); yet he reads the
+verse as preaching "He who should be born of a woman, [namely] from the Virgin"
+(V.21.1), though without arguing from its wording.
+Henry gives the woman's name the same reason — "because she it was whom the
+devil had beguiled" — and still reads the seed as "of a woman only, of a
+virgin".
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{47} \\
+\text{(3)} \quad &amp; P_{48} \\
+\text{(4)} \quad &amp; (P_{41} \land P_{47} \land P_{48}) \rightarrow \lnot P_{45} \\[4pt]
+\vdash \quad &amp; \lnot P_{45}
+\end{aligned}
+\]
+</div>
+
+<a id="idiomLine"></a>
+**`idiomLine`** — Lewis on 'her seed': Genesis says it of Hagar and Rebekah too
+
+**Lewis on "her seed"**: Genesis speaks of a woman's seed in ordinary births
+too, so the wording at 3:15 does not by itself signify a birth with no human
+father. Held by Lewis; disputed by Akin.
+
+Lewis: "Had it been observed across history that Hagar's descendants whose
+ancestral father is Abraham are also projected with a feminine possessive suffix
+attached to zeraʿ (Gen 16:10), as also are Rebekah's descendants whose ancestral
+father is Isaac (24:60), the treatment of Gen 3:15 would likely have been
+different" (299–300). "A look at texts about Hagar and Rebekah in Genesis could
+have safeguarded interpreters from the whole misguided exegetical effort" (319).
+
+The step is rated `disputed`, on one reader. Jimmy Akin, a Catholic
+apologist, does not discuss Hagar or Rebekah, but grants the point Lewis draws
+from them, that a woman's seed "is not outside the bounds of Hebrew expression",
+and still calls the wording "odd", and agrees with the "many" who have "rightly
+seen" it as "a hint of the Virgin Birth". A hint is less than a sign, and whether
+it denies Lewis's conclusion is arguable; it is the only dissent found.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{49} \\
+\text{(3)} \quad &amp; (P_{41} \land P_{49}) \rightarrow \lnot P_{45} \\[4pt]
+\vdash \quad &amp; \lnot P_{45}
+\end{aligned}
+\]
+</div>
+
+<a id="greekHeLine"></a>
+**`greekHeLine`** — The Greek's 'he': the woman's seed read as one person
+
+**The Greek's "he"**: the translator of Genesis read the woman's seed as one
+person. Held by Collins, and by Martin as Collins quotes him. Rated
+`wellSupported`: Collins calls the reading "generally acknowledged" (141), and
+no reader found denies it of the Greek. Lewis grants it, and allows that the
+masculine "could be an oversight" (300). What it does not reach is whether that
+person has a human father (`Results.Genesis`).
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{50} \\
+\text{(2)} \quad &amp; P_{50} \rightarrow P_{51} \\[4pt]
+\vdash \quad &amp; P_{51}
+\end{aligned}
+\]
+</div>
+
 <a id="criticalExclusionLine"></a>
 **`criticalExclusionLine`** — Critical denial of the predictive reading of Isaiah 7:14
 
@@ -2260,9 +2759,9 @@ with Isaiah 9 and 11 plus `parityDefeatsNearTermExclusion`.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{49} \\
-\text{(2)} \quad &amp; P_{50} \\
-\text{(3)} \quad &amp; (P_{49} \land P_{50}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{56} \\
+\text{(2)} \quad &amp; P_{57} \\
+\text{(3)} \quad &amp; (P_{56} \land P_{57}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -2285,9 +2784,9 @@ so the near-term reading does not exclude the messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{51} \\
-\text{(2)} \quad &amp; P_{51} \rightarrow \lnot P_{50} \\[4pt]
-\vdash \quad &amp; \lnot P_{50}
+\text{(1)} \quad &amp; P_{58} \\
+\text{(2)} \quad &amp; P_{58} \rightarrow \lnot P_{57} \\[4pt]
+\vdash \quad &amp; \lnot P_{57}
 \end{aligned}
 \]
 </div>
@@ -2304,8 +2803,8 @@ messianic sense.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{38} \\
 \text{(2)} \quad &amp; P_{39} \\
-\text{(3)} \quad &amp; (P_{38} \land P_{39}) \rightarrow \lnot P_{50} \\[4pt]
-\vdash \quad &amp; \lnot P_{50}
+\text{(3)} \quad &amp; (P_{38} \land P_{39}) \rightarrow \lnot P_{57} \\[4pt]
+\vdash \quad &amp; \lnot P_{57}
 \end{aligned}
 \]
 </div>
@@ -2321,10 +2820,10 @@ near-term premise rather than its exclusion premise.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{52} \\
-\text{(2)} \quad &amp; P_{53} \\
-\text{(3)} \quad &amp; (P_{52} \land P_{53}) \rightarrow \lnot P_{49} \\[4pt]
-\vdash \quad &amp; \lnot P_{49}
+\text{(1)} \quad &amp; P_{59} \\
+\text{(2)} \quad &amp; P_{60} \\
+\text{(3)} \quad &amp; (P_{59} \land P_{60}) \rightarrow \lnot P_{56} \\[4pt]
+\vdash \quad &amp; \lnot P_{56}
 \end{aligned}
 \]
 </div>
@@ -2339,10 +2838,10 @@ setting does not exclude a messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{54} \\
-\text{(2)} \quad &amp; P_{55} \\
-\text{(3)} \quad &amp; (P_{54} \land P_{55}) \rightarrow \lnot P_{50} \\[4pt]
-\vdash \quad &amp; \lnot P_{50}
+\text{(1)} \quad &amp; P_{61} \\
+\text{(2)} \quad &amp; P_{62} \\
+\text{(3)} \quad &amp; (P_{61} \land P_{62}) \rightarrow \lnot P_{57} \\[4pt]
+\vdash \quad &amp; \lnot P_{57}
 \end{aligned}
 \]
 </div>
@@ -2359,8 +2858,8 @@ none of the four strands delivers them.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{47} \\
-\text{(2)} \quad &amp; P_{48}
+\text{(1)} \quad &amp; P_{54} \\
+\text{(2)} \quad &amp; P_{55}
 \end{aligned}
 \]
 </div>
@@ -2414,19 +2913,19 @@ authority.
 \text{(7)} \quad &amp; P_{42} \\
 \text{(8)} \quad &amp; P_{43} \\
 \text{(9)} \quad &amp; P_{44} \\
-\text{(10)} \quad &amp; P_{45} \\
-\text{(11)} \quad &amp; P_{46} \\
+\text{(10)} \quad &amp; P_{52} \\
+\text{(11)} \quad &amp; P_{53} \\
 \text{(12)} \quad &amp; P_{36} \\
 \text{(13)} \quad &amp; P_{37} \\
 \text{(14)} \quad &amp; P_{40} \\
-\text{(15)} \quad &amp; P_{47} \\
-\text{(16)} \quad &amp; P_{48} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61} \\
-\text{(18)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{61} \\
-\text{(19)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{61} \\
-\text{(20)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{61} \\
-\text{(21)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(15)} \quad &amp; P_{54} \\
+\text{(16)} \quad &amp; P_{55} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68} \\
+\text{(18)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68} \\
+\text{(19)} \quad &amp; (P_{52} \land P_{53}) \rightarrow P_{68} \\
+\text{(20)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{68} \\
+\text{(21)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2444,9 +2943,9 @@ one this library's author does not grant.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{58} \\
-\text{(2)} \quad &amp; P_{59} \\
-\text{(3)} \quad &amp; (P_{58} \land P_{59}) \rightarrow P_{61} \\
+\text{(1)} \quad &amp; P_{65} \\
+\text{(2)} \quad &amp; P_{66} \\
+\text{(3)} \quad &amp; (P_{65} \land P_{66}) \rightarrow P_{68} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{9} \\
@@ -2456,19 +2955,19 @@ one this library's author does not grant.
 \text{(10)} \quad &amp; P_{42} \\
 \text{(11)} \quad &amp; P_{43} \\
 \text{(12)} \quad &amp; P_{44} \\
-\text{(13)} \quad &amp; P_{45} \\
-\text{(14)} \quad &amp; P_{46} \\
+\text{(13)} \quad &amp; P_{52} \\
+\text{(14)} \quad &amp; P_{53} \\
 \text{(15)} \quad &amp; P_{36} \\
 \text{(16)} \quad &amp; P_{37} \\
 \text{(17)} \quad &amp; P_{40} \\
-\text{(18)} \quad &amp; P_{47} \\
-\text{(19)} \quad &amp; P_{48} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61} \\
-\text{(21)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{61} \\
-\text{(22)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{61} \\
-\text{(23)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{61} \\
-\text{(24)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(18)} \quad &amp; P_{54} \\
+\text{(19)} \quad &amp; P_{55} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68} \\
+\text{(21)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68} \\
+\text{(22)} \quad &amp; (P_{52} \land P_{53}) \rightarrow P_{68} \\
+\text{(23)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{68} \\
+\text{(24)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2483,12 +2982,12 @@ The magisterial route on its own, with no exegetical premise at all.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{58} \\
-\text{(2)} \quad &amp; P_{59} \\
-\text{(3)} \quad &amp; P_{47} \\
-\text{(4)} \quad &amp; (P_{58} \land P_{59}) \rightarrow P_{61} \\
-\text{(5)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(1)} \quad &amp; P_{65} \\
+\text{(2)} \quad &amp; P_{66} \\
+\text{(3)} \quad &amp; P_{54} \\
+\text{(4)} \quad &amp; (P_{65} \land P_{66}) \rightarrow P_{68} \\
+\text{(5)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2505,13 +3004,13 @@ Scripture is the supreme judge.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{58} \\
-\text{(2)} \quad &amp; \lnot P_{59} \\
-\text{(3)} \quad &amp; P_{60} \\
-\text{(4)} \quad &amp; P_{47} \\
-\text{(5)} \quad &amp; (P_{58} \land P_{59}) \rightarrow P_{61} \\
-\text{(6)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(1)} \quad &amp; P_{65} \\
+\text{(2)} \quad &amp; \lnot P_{66} \\
+\text{(3)} \quad &amp; P_{67} \\
+\text{(4)} \quad &amp; P_{54} \\
+\text{(5)} \quad &amp; (P_{65} \land P_{66}) \rightarrow P_{68} \\
+\text{(6)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2532,8 +3031,8 @@ on.
 \text{(2)} \quad &amp; P_{9} \\
 \text{(3)} \quad &amp; P_{34} \\
 \text{(4)} \quad &amp; P_{35} \\
-\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61} \\[4pt]
-\vdash \quad &amp; P_{61}
+\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68} \\[4pt]
+\vdash \quad &amp; P_{68}
 \end{aligned}
 \]
 </div>
@@ -2555,19 +3054,19 @@ retained.
 \text{(6)} \quad &amp; P_{42} \\
 \text{(7)} \quad &amp; P_{43} \\
 \text{(8)} \quad &amp; P_{44} \\
-\text{(9)} \quad &amp; P_{45} \\
-\text{(10)} \quad &amp; P_{46} \\
+\text{(9)} \quad &amp; P_{52} \\
+\text{(10)} \quad &amp; P_{53} \\
 \text{(11)} \quad &amp; P_{36} \\
 \text{(12)} \quad &amp; P_{37} \\
 \text{(13)} \quad &amp; P_{40} \\
-\text{(14)} \quad &amp; P_{47} \\
-\text{(15)} \quad &amp; P_{48} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61} \\
-\text{(17)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{61} \\
-\text{(18)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{61} \\
-\text{(19)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{61} \\
-\text{(20)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(14)} \quad &amp; P_{54} \\
+\text{(15)} \quad &amp; P_{55} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68} \\
+\text{(17)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68} \\
+\text{(18)} \quad &amp; (P_{52} \land P_{53}) \rightarrow P_{68} \\
+\text{(19)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{68} \\
+\text{(20)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2588,11 +3087,11 @@ added. Kept so that the earlier finding stays checkable.
 \text{(2)} \quad &amp; P_{9} \\
 \text{(3)} \quad &amp; P_{34} \\
 \text{(4)} \quad &amp; P_{35} \\
-\text{(5)} \quad &amp; P_{47} \\
-\text{(6)} \quad &amp; P_{48} \\
-\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61} \\
-\text{(8)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(5)} \quad &amp; P_{54} \\
+\text{(6)} \quad &amp; P_{55} \\
+\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68} \\
+\text{(8)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2615,17 +3114,17 @@ textual and historical premise retained.
 \text{(5)} \quad &amp; P_{41} \\
 \text{(6)} \quad &amp; P_{42} \\
 \text{(7)} \quad &amp; P_{43} \\
-\text{(8)} \quad &amp; P_{45} \\
+\text{(8)} \quad &amp; P_{52} \\
 \text{(9)} \quad &amp; P_{36} \\
 \text{(10)} \quad &amp; P_{40} \\
-\text{(11)} \quad &amp; P_{47} \\
-\text{(12)} \quad &amp; P_{48} \\
-\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61} \\
-\text{(14)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{61} \\
-\text{(15)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{61} \\
-\text{(16)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{61} \\
-\text{(17)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(11)} \quad &amp; P_{54} \\
+\text{(12)} \quad &amp; P_{55} \\
+\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68} \\
+\text{(14)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68} \\
+\text{(15)} \quad &amp; (P_{52} \land P_{53}) \rightarrow P_{68} \\
+\text{(16)} \quad &amp; (P_{36} \land P_{37} \land P_{40} \land P_{35}) \rightarrow P_{68} \\
+\text{(17)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2646,11 +3145,11 @@ assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* 
 \text{(3)} \quad &amp; P_{9} \\
 \text{(4)} \quad &amp; P_{34} \\
 \text{(5)} \quad &amp; P_{35} \\
-\text{(6)} \quad &amp; P_{47} \\
-\text{(7)} \quad &amp; P_{48} \\
-\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61} \\
-\text{(9)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(6)} \quad &amp; P_{54} \\
+\text{(7)} \quad &amp; P_{55} \\
+\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68} \\
+\text{(9)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2674,21 +3173,21 @@ four strands on shared ground; it is the refusal of four strands.
 \text{(1)} \quad &amp; P_{9} \\
 \text{(2)} \quad &amp; P_{34} \\
 \text{(3)} \quad &amp; P_{41} \\
-\text{(4)} \quad &amp; P_{45} \\
-\text{(5)} \quad &amp; P_{49} \\
-\text{(6)} \quad &amp; P_{50} \\
-\text{(7)} \quad &amp; P_{56} \\
-\text{(8)} \quad &amp; P_{57} \\
+\text{(4)} \quad &amp; P_{52} \\
+\text{(5)} \quad &amp; P_{56} \\
+\text{(6)} \quad &amp; P_{57} \\
+\text{(7)} \quad &amp; P_{63} \\
+\text{(8)} \quad &amp; P_{64} \\
 \text{(9)} \quad &amp; \lnot P_{2} \\
 \text{(10)} \quad &amp; \lnot P_{42} \\
 \text{(11)} \quad &amp; \lnot P_{44} \\
-\text{(12)} \quad &amp; \lnot P_{46} \\
-\text{(13)} \quad &amp; (P_{49} \land P_{50}) \rightarrow \lnot P_{1} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{61} \\
-\text{(15)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{61} \\
-\text{(16)} \quad &amp; (P_{45} \land P_{46}) \rightarrow P_{61} \\
-\text{(17)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(12)} \quad &amp; \lnot P_{53} \\
+\text{(13)} \quad &amp; (P_{56} \land P_{57}) \rightarrow \lnot P_{1} \\
+\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{35}) \rightarrow P_{68} \\
+\text{(15)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68} \\
+\text{(16)} \quad &amp; (P_{52} \land P_{53}) \rightarrow P_{68} \\
+\text{(17)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2705,9 +3204,9 @@ denial, not anything about Jesus.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{49} \\
-\text{(2)} \quad &amp; P_{50} \\
-\text{(3)} \quad &amp; (P_{49} \land P_{50}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{56} \\
+\text{(2)} \quad &amp; P_{57} \\
+\text{(3)} \quad &amp; (P_{56} \land P_{57}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -2724,10 +3223,10 @@ no longer simply granted.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{49} \\
-\text{(2)} \quad &amp; P_{51} \\
-\text{(3)} \quad &amp; P_{51} \rightarrow \lnot P_{50} \\
-\text{(4)} \quad &amp; (P_{49} \land P_{50}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{56} \\
+\text{(2)} \quad &amp; P_{58} \\
+\text{(3)} \quad &amp; P_{58} \rightarrow \lnot P_{57} \\
+\text{(4)} \quad &amp; (P_{56} \land P_{57}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -2744,9 +3243,9 @@ near-term reading does not exclude the messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{51} \\
-\text{(2)} \quad &amp; P_{51} \rightarrow \lnot P_{50} \\[4pt]
-\vdash \quad &amp; \lnot P_{50}
+\text{(1)} \quad &amp; P_{58} \\
+\text{(2)} \quad &amp; P_{58} \rightarrow \lnot P_{57} \\[4pt]
+\vdash \quad &amp; \lnot P_{57}
 \end{aligned}
 \]
 </div>
@@ -2764,8 +3263,8 @@ as Berry's reached from different grounds.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{38} \\
 \text{(2)} \quad &amp; P_{39} \\
-\text{(3)} \quad &amp; (P_{38} \land P_{39}) \rightarrow \lnot P_{50} \\[4pt]
-\vdash \quad &amp; \lnot P_{50}
+\text{(3)} \quad &amp; (P_{38} \land P_{39}) \rightarrow \lnot P_{57} \\[4pt]
+\vdash \quad &amp; \lnot P_{57}
 \end{aligned}
 \]
 </div>
@@ -2781,10 +3280,10 @@ conclusion as Berry's and Postell's Isaiah argument.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{54} \\
-\text{(2)} \quad &amp; P_{55} \\
-\text{(3)} \quad &amp; (P_{54} \land P_{55}) \rightarrow \lnot P_{50} \\[4pt]
-\vdash \quad &amp; \lnot P_{50}
+\text{(1)} \quad &amp; P_{61} \\
+\text{(2)} \quad &amp; P_{62} \\
+\text{(3)} \quad &amp; (P_{61} \land P_{62}) \rightarrow \lnot P_{57} \\[4pt]
+\vdash \quad &amp; \lnot P_{57}
 \end{aligned}
 \]
 </div>
@@ -2800,10 +3299,10 @@ sign to Ahaz.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{52} \\
-\text{(2)} \quad &amp; P_{53} \\
-\text{(3)} \quad &amp; (P_{52} \land P_{53}) \rightarrow \lnot P_{49} \\[4pt]
-\vdash \quad &amp; \lnot P_{49}
+\text{(1)} \quad &amp; P_{59} \\
+\text{(2)} \quad &amp; P_{60} \\
+\text{(3)} \quad &amp; (P_{59} \land P_{60}) \rightarrow \lnot P_{56} \\[4pt]
+\vdash \quad &amp; \lnot P_{56}
 \end{aligned}
 \]
 </div>
@@ -2819,11 +3318,11 @@ exclusion premise no longer simply granted.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{49} \\
+\text{(1)} \quad &amp; P_{56} \\
 \text{(2)} \quad &amp; P_{38} \\
 \text{(3)} \quad &amp; P_{39} \\
-\text{(4)} \quad &amp; (P_{38} \land P_{39}) \rightarrow \lnot P_{50} \\
-\text{(5)} \quad &amp; (P_{49} \land P_{50}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(4)} \quad &amp; (P_{38} \land P_{39}) \rightarrow \lnot P_{57} \\
+\text{(5)} \quad &amp; (P_{56} \land P_{57}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -2845,9 +3344,9 @@ of the objection's premise*, not the criterion — see
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{47} \\
+\text{(4)} \quad &amp; P_{54} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{47}) \rightarrow P_{7} \\
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{54}) \rightarrow P_{7} \\
 \text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\[4pt]
 \vdash \quad &amp; \lnot P_{8}
 \end{aligned}
@@ -2867,12 +3366,12 @@ The same premises, asked to deliver the criterion instead. They do not.
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{47} \\
+\text{(4)} \quad &amp; P_{54} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{47}) \rightarrow P_{7} \\
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{54}) \rightarrow P_{7} \\
 \text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
-\text{(8)} \quad &amp; (P_{61} \land P_{47}) \rightarrow P_{62} \\[4pt]
-\vdash \quad &amp; P_{62}
+\text{(8)} \quad &amp; (P_{68} \land P_{54}) \rightarrow P_{69} \\[4pt]
+\vdash \quad &amp; P_{69}
 \end{aligned}
 \]
 </div>
@@ -2900,7 +3399,7 @@ weight rests and are worth nothing against a weakened rival.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{26} \\
 \text{(4)} \quad &amp; P_{28} \\
 \text{(5)} \quad &amp; P_{24} \rightarrow P_{25} \\
@@ -2924,7 +3423,7 @@ all stay.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{28} \\
 \text{(4)} \quad &amp; P_{24} \rightarrow P_{25} \\[4pt]
 \vdash \quad &amp; P_{25}
@@ -2943,10 +3442,10 @@ granted either.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{28} \\
 \text{(4)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(5)} \quad &amp; (P_{49} \land \lnot P_{1}) \rightarrow P_{26} \\
+\text{(5)} \quad &amp; (P_{56} \land \lnot P_{1}) \rightarrow P_{26} \\
 \text{(6)} \quad &amp; (P_{25} \land P_{26}) \rightarrow P_{27} \\
 \text{(7)} \quad &amp; (P_{27} \land P_{28}) \rightarrow \lnot P_{2} \\[4pt]
 \vdash \quad &amp; \lnot P_{2}
@@ -2967,7 +3466,7 @@ return leg needs — put in.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{28} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{24} \rightarrow P_{25} \\[4pt]
@@ -2987,11 +3486,11 @@ the parse, the near-term setting, the referent principle, and the demand that
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{28} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{24} \rightarrow P_{25} \\
-\text{(6)} \quad &amp; (P_{49} \land \lnot P_{1}) \rightarrow P_{26} \\
+\text{(6)} \quad &amp; (P_{56} \land \lnot P_{1}) \rightarrow P_{26} \\
 \text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{1} \\
 \text{(8)} \quad &amp; (P_{25} \land P_{26}) \rightarrow P_{27} \\
 \text{(9)} \quad &amp; (P_{27} \land P_{28}) \rightarrow \lnot P_{2} \\[4pt]
@@ -3013,7 +3512,7 @@ the referent and contests only what may be inferred from it.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{26} \\
 \text{(4)} \quad &amp; P_{29} \\
 \text{(5)} \quad &amp; P_{24} \rightarrow P_{25} \\[4pt]
@@ -3031,7 +3530,7 @@ Wegner's objection with Postell's usage parity in play.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{26} \\
 \text{(4)} \quad &amp; P_{29} \\
 \text{(5)} \quad &amp; P_{24} \rightarrow P_{25} \\
@@ -3097,7 +3596,7 @@ near-term setting and the referent principle all stay.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{30} \\
 \text{(4)} \quad &amp; P_{31} \\
 \text{(5)} \quad &amp; P_{28} \\
@@ -3116,7 +3615,7 @@ Wegner's objection with the fathers' sign argument in play.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{49} \\
+\text{(2)} \quad &amp; P_{56} \\
 \text{(3)} \quad &amp; P_{30} \\
 \text{(4)} \quad &amp; P_{31} \\
 \text{(5)} \quad &amp; P_{28} \\
@@ -3319,6 +3818,124 @@ virgin *shall* be with child.
 \]
 </div>
 
+#### Genesis 3:15, and what "her seed" says of a father
+
+<a id="protoevangeliumCase"></a>
+**`protoevangeliumCase`** — Protoevangelium strand (Genesis 3:15)
+
+The protoevangelium strand as a position of its own: Genesis 3:15 read as
+promise, the seed named as the woman's, and the hinge that this marks a birth
+with no human father, delivering the criterion. The rival whose hinge
+`Results.Genesis` reads two ways.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{42} \\
+\text{(3)} \quad &amp; P_{43} \\
+\text{(4)} \quad &amp; P_{44} \\
+\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68} \\[4pt]
+\vdash \quad &amp; P_{68}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="herSeedCase"></a>
+**`herSeedCase`** — Luther on 'her seed': the wording itself signifies no human father
+
+Luther's case from the wording, as a position of its own.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{42} \\
+\text{(3)} \quad &amp; P_{43} \\
+\text{(4)} \quad &amp; (P_{41} \land P_{42} \land P_{43}) \rightarrow P_{45} \\[4pt]
+\vdash \quad &amp; P_{45}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="posterityCase"></a>
+**`posterityCase`** — Leupold on 'her seed': her posterity, named for the deception
+
+Leupold's case from the woman's posterity, as a position of its own.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{47} \\
+\text{(3)} \quad &amp; P_{48} \\
+\text{(4)} \quad &amp; (P_{41} \land P_{47} \land P_{48}) \rightarrow \lnot P_{45} \\[4pt]
+\vdash \quad &amp; \lnot P_{45}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="idiomCase"></a>
+**`idiomCase`** — Lewis on 'her seed': Genesis says it of Hagar and Rebekah too
+
+Lewis's case from the idiom, as a position of its own.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{49} \\
+\text{(3)} \quad &amp; (P_{41} \land P_{49}) \rightarrow \lnot P_{45} \\[4pt]
+\vdash \quad &amp; \lnot P_{45}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="greekHeCase"></a>
+**`greekHeCase`** — The Greek's 'he': the woman's seed read as one person
+
+The Greek's "he", as a position of its own.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{50} \\
+\text{(2)} \quad &amp; P_{50} \rightarrow P_{51} \\[4pt]
+\vdash \quad &amp; P_{51}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="greekHeWithThePromise"></a>
+**`greekHeWithThePromise`** — The Greek's 'he': the woman's seed read as one person
+
+The Greek's line with the promise's grounds beside it: the seed named as the
+woman's, Genesis 3:15 as the first promise of a redeemer, and a man's seed
+reckoned through him. Luther's step is not among them.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{50} \\
+\text{(2)} \quad &amp; P_{41} \\
+\text{(3)} \quad &amp; P_{42} \\
+\text{(4)} \quad &amp; P_{43} \\
+\text{(5)} \quad &amp; P_{50} \rightarrow P_{51} \\[4pt]
+\vdash \quad &amp; P_{51}
+\end{aligned}
+\]
+</div>
+
 <a id="lexicalCritical"></a>
 **`lexicalCritical`** — Lexical objection from the ancient versions
 
@@ -3334,8 +3951,8 @@ would state it.
 \text{(4)} \quad &amp; P_{14} \\
 \text{(5)} \quad &amp; P_{8} \\
 \text{(6)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{62} \\[4pt]
-\vdash \quad &amp; \lnot P_{62}
+\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{69} \\[4pt]
+\vdash \quad &amp; \lnot P_{69}
 \end{aligned}
 \]
 </div>
@@ -3362,13 +3979,13 @@ side, which is neither one line nor several converging ones.
 \text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{5} \\
 \text{(8)} \quad &amp; P_{6} \\
-\text{(9)} \quad &amp; P_{47} \\
-\text{(10)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{47}) \rightarrow P_{7} \\
+\text{(9)} \quad &amp; P_{54} \\
+\text{(10)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{54}) \rightarrow P_{7} \\
 \text{(11)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
 \text{(12)} \quad &amp; (P_{5} \land P_{9} \land P_{12}) \rightarrow \lnot P_{14} \\
 \text{(13)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{62} \\[4pt]
-\vdash \quad &amp; \lnot P_{62}
+\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{69} \\[4pt]
+\vdash \quad &amp; \lnot P_{69}
 \end{aligned}
 \]
 </div>
@@ -4529,6 +5146,517 @@ theorem septuagint_leaves_the_conception_open : Independent
 -- axioms: propext, Quot.sound
 ```
 
+## TestimonyArguments.BornOfAVirgin.Results.Genesis — what "her seed" says of a father
+
+A reader's question, in a reader's words: *Genesis 3:15 promises that "her seed"
+will strike the serpent's head — the woman's seed, not the man's. Doesn't that
+already point to a virgin conception? And doesn't the Greek, which calls the
+seed "he", make it plainer?*
+
+The short answer: it may, but the text does not settle it. Whether naming the
+seed as the woman's *says* there will be no human father is a live dispute among
+readers most of whom hold the virgin birth, and the library finds it a tie
+(`nothing_prevails_over_her_seed`, in `Dispute.Genesis`). That the wording
+*fits* the virgin birth, once it has happened, Luther's side and Leupold and
+Keil all grant. The Greek shows
+that its translator expected one person, not how that person would be born.
+
+The protoevangelium strand of this argument holds, as a premise, that the seed
+being named as the woman's marks a birth with no human father
+(`seedOfTheWomanImpliesNoHumanFather`). "Marks" is vague on purpose, as its
+holders leave it: Miravalle's own word is "hint". This module asks what it can
+mean, and what each meaning can bear.
+
+**Read as what the wording itself signifies**, it is Luther's argument: the seed
+of other women "might rather be said to have been the seed of the man", but
+Mary's was "the true Seed of Mary" (*Luther on the Creation* 298–99). He finds
+the sense in the words of Genesis, and holds that Isaiah later "threw some
+additional light" on it, so that "it was then made certain" (298).
+`herSeedCase_establishes` grants him every ground and checks that the argument
+goes through. It rests on his step (`her_seed_rests_on_its_inference`). The
+Lutheran commentators Leupold and Keil, who hold the virgin birth, grant every
+ground and deny the step. Leupold, asked whether the expression is "so phrased
+in reference to Mary and the virgin birth", answers "Not primarily, but at least
+incidentally": it "does not specifically prophesy the virgin birth" (169). Keil
+finds the virgin birth in the promise's fulfilment, "even if the words had
+reference first of all to the fact that the woman had been led astray" (102).
+Jack P. Lewis denies the step too, pointing to Hagar and Rebekah, whose seed
+Genesis also calls theirs (299–300); he doubts the promise reading itself, but
+his argument does not need that doubt.
+
+**Read as what the wording fits, once fulfilled**, it is granted by Leupold and
+Keil, who deny the first reading. Leupold: "it coincides and agrees with it under
+divine providence" (169). Keil: the promise was fulfilled "even in its apparently
+casual form" (102). But they reach the fit from the conception: the wording is
+seen to fit once the birth is known. Read this way, the verse confirms the
+virgin birth to one who already believes it, and gives no reason to believe it
+to one who does not. That is what the reading's own grounds say; it is not a
+separate theorem. `whatHerSeedMarks` sets out both readings and what answers
+each.
+
+**The Greek's "he".** The Septuagint calls the woman's seed "he", αὐτός, though
+σπέρμα is neuter, and Collins finds it "beyond question that the translator of
+Genesis 3:15 meant to convey that an individual was promised" (145)
+(`greekHeCase_establishes`). That shows how one Jewish translator before Christ
+read the promise, so that reading it of one person is no Christian invention.
+Whether the Hebrew says so is a further question: Collins argues that its syntax
+is "quite consistent with the pattern where a single individual is in view"
+(145), and reports that many think it does not (141); Lewis, who grants the
+Greek's reading, allows that the masculine "could be an oversight" (300). Either
+way,
+the Greek says nothing of a father (`the_greek_he_leaves_the_father_open`): the
+same Greek calls the seed Hannah asks for "him" (1 Samuel 1:11), and the seed
+promised to David "he" (2 Samuel 7:12–14), and each has a father. Irenaeus,
+quoting the verse as the Greek gives it, "He shall be on the watch for thy
+head", reads it of "He who should be born of a woman, [namely] from the Virgin"
+(*Against Heresies* V.21.1); but he does not argue from the pronoun to the
+conception, and no reader found does.
+
+`Dispute.Genesis` weighs Luther's case against Leupold's and Lewis's.
+
+#### Two readings of the woman's seed
+
+Each reading below is a model: one way every claim of the argument could be true
+at once, named for what it says of the wording of Genesis 3:15. Some pairs of
+claims in this argument cannot both be true, so each model has to take a side on
+them; on questions this module does not touch it takes the scriptural reading's
+side: that the Septuagint's παρθένος means a virgin, that Micah's mention of a
+mother and no father does mean something, and that Scripture, not the
+magisterium, is the judge. Every other claim it leaves true, and none of them
+bears on the results it is used for.
+
+<a id="lutherReading"></a>
+**`lutherReading`**
+
+Luther's reading: the seed named as the woman's, and not a man's, signifies
+a birth with no human father, and the promise is fulfilled in one so born.
+
+```lean
+def lutherReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.parthenosMeantYoungWoman => False
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
+    | x => True
+```
+
+<a id="leupoldReading"></a>
+**`leupoldReading`**
+
+Leupold's reading: the promise is of the victor, "her seed" is first
+collective, the woman's posterity, the woman is named because she was deceived,
+and the wording does not itself signify a birth without a human father — though
+it fits one, as fulfilled. Lewis's claims hold in it too: Genesis speaks of a
+woman's seed in ordinary births.
+
+```lean
+def leupoldReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.wordingSignifiesAFatherlessBirth => False
+    | Claim.parthenosMeantYoungWoman => False
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
+    | x => True
+```
+
+#### The wording read as signifying
+
+<a id="herSeedCase_establishes"></a>
+**`herSeedCase_establishes`**
+
+**Luther's case from the wording goes through.** Grant that Genesis 3:15
+names the seed as the woman's, that it is the first promise of a redeemer, that
+a man's seed is ordinarily reckoned through him, and Luther's step from these to
+the wording's sense: the wording signifies a birth with no human father.
+
+It does not show that the step is sound — Leupold, Keil and Lewis deny it
+(`her_seed_rests_on_its_inference`) — nor that the promise was fulfilled.
+
+```lean
+theorem herSeedCase_establishes : Establishes herSeedCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="herSeedCase_is_satisfiable"></a>
+**`herSeedCase_is_satisfiable`**
+
+Luther's case has a model: his own reading.
+
+```lean
+theorem herSeedCase_is_satisfiable : Satisfiable herSeedCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="her_seed_rests_on_its_inference"></a>
+**`her_seed_rests_on_its_inference`**
+
+**The wording's sense rests on Luther's step.** Grant every ground — the
+seed named as the woman's, Genesis 3:15 as the first promise of a redeemer, a
+man's seed reckoned through him — and it still does not follow that the wording
+signifies a birth with no human father. Leupold and Keil grant those grounds and
+deny it, and Lewis, granting the messianic reading for argument's sake, denies
+it too. On Leupold's reading the seed is named the woman's because she was
+deceived, and "her seed" is first collective, her posterity.
+
+So the claim does not follow from the grounds alone: it needs Luther's step,
+rated `disputed`. That does not show the step is wrong, only that the wording,
+which both sides read, does not decide between them.
+
+```lean
+theorem her_seed_rests_on_its_inference : ¬Entails herSeedLine.grounds (p
+    Claim.wordingSignifiesAFatherlessBirth)
+-- axioms: propext, Quot.sound
+```
+
+<a id="posterityCase_establishes"></a>
+**`posterityCase_establishes`**
+
+Leupold's case goes through on its own grounds.
+
+```lean
+theorem posterityCase_establishes : Establishes posterityCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="posterityCase_is_satisfiable"></a>
+**`posterityCase_is_satisfiable`**
+
+Leupold's case has a model: his own reading.
+
+```lean
+theorem posterityCase_is_satisfiable : Satisfiable posterityCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="idiomCase_establishes"></a>
+**`idiomCase_establishes`**
+
+Lewis's case goes through on its own grounds.
+
+```lean
+theorem idiomCase_establishes : Establishes idiomCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="idiomCase_is_satisfiable"></a>
+**`idiomCase_is_satisfiable`**
+
+Lewis's case has a model: Leupold's reading, in which Lewis's claims hold
+too.
+
+```lean
+theorem idiomCase_is_satisfiable : Satisfiable idiomCase.premises
+-- axioms: propext, Quot.sound
+```
+
+#### The Greek's "he"
+
+<a id="greekHeCase_establishes"></a>
+**`greekHeCase_establishes`**
+
+**The Greek reads one person.** Grant that the Septuagint refers to the
+woman's seed with the masculine αὐτός, though σπέρμα is neuter, and the step
+Collins and Martin take from it, and its translator read the seed as one person.
+
+That is all it delivers: who that person is, and how he is born, it does not
+say.
+
+```lean
+theorem greekHeCase_establishes : Establishes greekHeCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="greekHeCase_is_satisfiable"></a>
+**`greekHeCase_is_satisfiable`**
+
+The Greek's line has a model.
+
+```lean
+theorem greekHeCase_is_satisfiable : Satisfiable greekHeCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="the_greek_he_leaves_the_father_open"></a>
+**`the_greek_he_leaves_the_father_open`**
+
+**The Greek's "he" leaves the father open.** Keep the Greek's masculine "he"
+and the reading of one person drawn from it, and every ground of Luther's case
+— the seed named as the woman's, the first promise of a redeemer, a man's seed
+reckoned through him — and whether the wording signifies a birth with no human
+father is independent of all of it. On Luther's reading it does; on Leupold's,
+granted the Greek, it does not.
+
+The result has two halves: the Greek does not show that the one person promised
+has no human father, and does not show that he has one. The plain reason is in
+the Greek itself: it calls the seed Hannah asks for "him" (1 Samuel 1:11), and
+the seed promised to David "he" (2 Samuel 7:12–14), as Collins shows (144), and
+each has a father. One person, called "he", can have a father. What the Greek
+shows is how its translator read the promise: of one person. Collins argues
+that the Hebrew's syntax is "quite consistent with the pattern where a single
+individual is in view" (145); Leupold reaches one person at the promise's end,
+and Keil reaches Christ "not as an individual, but as the head" of the woman's
+posterity (102). No reader found argues that the Greek's "he" answers Lewis's
+point from Hagar and Rebekah.
+
+```lean
+theorem the_greek_he_leaves_the_father_open : Independent
+    greekHeWithThePromise.premises (p Claim.wordingSignifiesAFatherlessBirth)
+-- axioms: propext, Quot.sound
+```
+
+#### What "marks" means: the dilemma
+
+<a id="asWhatTheWordingSignifies"></a>
+**`asWhatTheWordingSignifies`**
+
+The hinge **read as what the wording itself signifies**: Luther's reading,
+and the one Miravalle and Henry give.
+
+```lean
+def asWhatTheWordingSignifies : Reading Claim :=
+  { name := "as what the wording itself signifies",
+    commits := p Claim.wordingSignifiesAFatherlessBirth,
+    source :=
+      { primary := Reference.work lutherOnTheCreation (Bib.Locus.pages 298 299),
+        supporting :=
+          [Reference.work miravalleMeetYourMother,
+            Reference.work henryCommentary
+              (Bib.Locus.adLoc Scripture.genesis3_15)],
+        tradition := Tradition.christianTypological,
+        confidence := Confidence.disputed } }
+```
+
+<a id="asWhatTheWordingFits"></a>
+**`asWhatTheWordingFits`**
+
+The hinge **read as what the wording fits, once fulfilled**: Leupold's and
+Keil's reading, which rests the fit on the virginal conception itself.
+
+```lean
+def asWhatTheWordingFits : Reading Claim :=
+  { name := "as what the wording fits, once fulfilled",
+    commits := p Claim.wordingFitsAFatherlessBirth,
+    grounds :=
+      [p Claim.maryConceivedAsVirgin,
+        p Claim.maryConceivedAsVirgin 🡒
+          p Claim.wordingFitsAFatherlessBirth],
+    source :=
+      { primary := Reference.work leupoldGenesis (Bib.Locus.page 169),
+        supporting :=
+          [Reference.work keilDelitzschPentateuch (Bib.Locus.page 102)],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.disputed } }
+```
+
+<a id="protoevangeliumAsSignifying"></a>
+**`protoevangeliumAsSignifying`** — Protoevangelium strand (Genesis 3:15), read as what the wording itself signifies
+
+The protoevangelium strand with its hinge read as Luther reads it.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{42} \\
+\text{(3)} \quad &amp; P_{43} \\
+\text{(4)} \quad &amp; P_{44} \\
+\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68} \\
+\text{(6)} \quad &amp; P_{44} \rightarrow P_{45} \\[4pt]
+\vdash \quad &amp; P_{68}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="protoevangeliumAsFitting"></a>
+**`protoevangeliumAsFitting`** — Protoevangelium strand (Genesis 3:15), read as what the wording fits, once fulfilled
+
+The protoevangelium strand with its hinge read as Leupold reads it.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{41} \\
+\text{(2)} \quad &amp; P_{42} \\
+\text{(3)} \quad &amp; P_{43} \\
+\text{(4)} \quad &amp; P_{44} \\
+\text{(5)} \quad &amp; (P_{41} \land P_{42} \land P_{43} \land P_{44}) \rightarrow P_{68} \\
+\text{(6)} \quad &amp; P_{54} \\
+\text{(7)} \quad &amp; P_{54} \rightarrow P_{46} \\
+\text{(8)} \quad &amp; P_{44} \rightarrow P_{46} \\[4pt]
+\vdash \quad &amp; P_{68}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="protoevangeliumAsSignifying_is_satisfiable"></a>
+**`protoevangeliumAsSignifying_is_satisfiable`**
+
+**The strand, read as Luther reads its hinge, is consistent**: its premises
+can all be true together, so any answer to it must come from outside it.
+
+```lean
+theorem protoevangeliumAsSignifying_is_satisfiable : Satisfiable
+    protoevangeliumAsSignifying.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="protoevangeliumAsFitting_is_satisfiable"></a>
+**`protoevangeliumAsFitting_is_satisfiable`**
+
+**The strand, read as Leupold reads its hinge, is consistent** too.
+
+```lean
+theorem protoevangeliumAsFitting_is_satisfiable : Satisfiable
+    protoevangeliumAsFitting.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="posterity_does_not_reach_the_fit"></a>
+**`posterity_does_not_reach_the_fit`**
+
+**Leupold has no quarrel with the second reading; he holds it.** Read as
+what the wording fits once fulfilled, the strand's hinge can be held with every
+premise of Leupold's case.
+
+```lean
+theorem posterity_does_not_reach_the_fit : Satisfiable (posterityCase.premises
+    ++ protoevangeliumAsFitting.premises)
+-- axioms: propext, Quot.sound
+```
+
+<a id="idiom_does_not_reach_the_fit"></a>
+**`idiom_does_not_reach_the_fit`**
+
+**Nor does Lewis.** The idiom of Hagar and Rebekah bears on what the wording
+signifies, not on what it fits once fulfilled.
+
+```lean
+theorem idiom_does_not_reach_the_fit : Satisfiable (idiomCase.premises ++
+    protoevangeliumAsFitting.premises)
+-- axioms: propext, Quot.sound
+```
+
+<a id="whereTheSignifyingReadingMeetsLeupold"></a>
+**`whereTheSignifyingReadingMeetsLeupold`**
+
+**Why Leupold stands against the hinge, read as Luther reads it.** The crux
+is Leupold's step: "her seed" is first collective, the woman's posterity, and
+the woman is named because she was deceived, so the wording does not itself signify
+a birth without a human father. No one can hold both Leupold's case and the
+hinge read Luther's way; which gives way is the dispute's question, and
+`Dispute.Genesis` finds a tie. What cannot be held with Leupold is the hinge
+together with the reading, nothing else in the strand, and the step is rated
+`disputed`: Irenaeus grants both its grounds, and Henry the second, and both
+read the verse of the Virgin's son.
+
+**Why *Leupold on 'her seed': her posterity, named for the deception* stands against *Protoevangelium strand (Genesis 3:15), read as what the wording itself signifies*.**
+
+- **The crux:** \\((P_{41} \land P_{47} \land P_{48}) \rightarrow \lnot P_{45}\\), a premise of *Leupold on 'her seed': her posterity, named for the deception*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{41}\\), \\(P_{47}\\), \\(P_{48}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{44}\\), \\(P_{44} \rightarrow P_{45}\\) cannot be held together with \\((P_{41} \land P_{47} \land P_{48}) \rightarrow \lnot P_{45}\\) and \\(P_{41}\\), \\(P_{47}\\), \\(P_{48}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{41}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - \\(P_{47}\\) 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — *disputed*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - \\(P_{48}\\) The seed is called the woman's because the serpent deceived the woman — *well supported*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 165; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
+  - the step itself — *disputed*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+
+<a id="whereTheSignifyingReadingMeetsLewis"></a>
+**`whereTheSignifyingReadingMeetsLewis`**
+
+**Why Lewis stands against the hinge, read as Luther reads it.** The crux is
+Lewis's step: Genesis speaks of Hagar's and Rebekah's seed too, so the woman's
+seed at 3:15 does not by itself signify a birth without a human father. Rated
+`disputed`, on Jimmy Akin, who grants that a woman's seed "is not outside the
+bounds of Hebrew expression" and agrees with the "many" who have "rightly seen"
+the wording as "a hint of the Virgin Birth".
+
+**Why *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* stands against *Protoevangelium strand (Genesis 3:15), read as what the wording itself signifies*.**
+
+- **The crux:** \\((P_{41} \land P_{49}) \rightarrow \lnot P_{45}\\), a premise of *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{41}\\), \\(P_{49}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{44}\\), \\(P_{44} \rightarrow P_{45}\\) cannot be held together with \\((P_{41} \land P_{49}) \rightarrow \lnot P_{45}\\) and \\(P_{41}\\), \\(P_{49}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{41}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - \\(P_{49}\\) Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's — *consensus*: Gen 16:10; Gen 24:60; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300
+  - the step itself — *disputed*: [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+
+<a id="whatHerSeedMarks"></a>
+**`whatHerSeedMarks`**
+
+**What the woman's seed marks, read both ways.** The claim is the
+protoevangelium strand's hinge: the seed being named as the woman's marks a
+birth with no human father. These are the two readings found in the sources;
+a reader with a third would add a third horn.
+
+Read as what the wording itself signifies (Luther's reading), it cannot be held
+together with Leupold's case or with Lewis's. Each breaks it at a step rated
+`disputed`, not at a ground. Leupold's grounds, that the seed is named the
+woman's because she was deceived and that "her seed" is first collective, her
+posterity, are rated `wellSupported` and `disputed`; Lewis's, that Genesis says "her
+seed" of Hagar and of Rebekah, each with a father, is common ground. What is
+contested is the step from them to "so the wording does not signify a birth
+without a father". A reader who takes those steps rejects Luther's reading. One
+who grants the grounds and refuses the steps need not, as Irenaeus does with
+Leupold's and Akin with Lewis's. "Cannot be held together" says that no one
+can hold both, not which gives way: `Dispute.Genesis` weighs that, and finds a
+tie.
+
+Read as what the wording fits, once fulfilled (Leupold's and Keil's reading),
+neither case touches it: Leupold and Keil hold it. But the reading rests on the
+virginal conception itself (`maryConceivedAsVirgin`). That is rated `disputed`
+because Brown, the historian this argument cites, leaves the question
+unresolved; the rating records that it is contested, not that the library
+doubts it. On this reading the strand can show that the promise suits a birth
+already believed, not that the promise foretold it.
+
+Neither reading is a straw man: read either way, the strand's premises can all
+be true together.
+
+**Every reading of \\(P_{44}\\), answered.** *Protoevangelium strand (Genesis 3:15)* holds \\(P_{44}\\). It is read 2 ways here, and each reading is checked; none can be left out.
+
+**1. Read as what the wording itself signifies.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(P_{45}\\) — so read by [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15 (*disputed*).
+
+Against *Leupold on 'her seed': her posterity, named for the deception*, it cannot be held. Where it breaks:
+
+**Why *Leupold on 'her seed': her posterity, named for the deception* stands against *Protoevangelium strand (Genesis 3:15), read as what the wording itself signifies*.**
+
+- **The crux:** \\((P_{41} \land P_{47} \land P_{48}) \rightarrow \lnot P_{45}\\), a premise of *Leupold on 'her seed': her posterity, named for the deception*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{41}\\), \\(P_{47}\\), \\(P_{48}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{44}\\), \\(P_{44} \rightarrow P_{45}\\) cannot be held together with \\((P_{41} \land P_{47} \land P_{48}) \rightarrow \lnot P_{45}\\) and \\(P_{41}\\), \\(P_{47}\\), \\(P_{48}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{41}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - \\(P_{47}\\) 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — *disputed*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - \\(P_{48}\\) The seed is called the woman's because the serpent deceived the woman — *well supported*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 165; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
+  - the step itself — *disputed*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+
+Against *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, it cannot be held. Where it breaks:
+
+**Why *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* stands against *Protoevangelium strand (Genesis 3:15), read as what the wording itself signifies*.**
+
+- **The crux:** \\((P_{41} \land P_{49}) \rightarrow \lnot P_{45}\\), a premise of *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{41}\\), \\(P_{49}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{44}\\), \\(P_{44} \rightarrow P_{45}\\) cannot be held together with \\((P_{41} \land P_{49}) \rightarrow \lnot P_{45}\\) and \\(P_{41}\\), \\(P_{49}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{41}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
+  - \\(P_{49}\\) Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's — *consensus*: Gen 16:10; Gen 24:60; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300
+  - the step itself — *disputed*: [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+
+**2. Read as what the wording fits, once fulfilled.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(P_{46}\\) — so read by [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 (*disputed*). It rests the reading on \\(P_{54}\\), \\(P_{54} \rightarrow P_{46}\\).
+
+Against *Leupold on 'her seed': her posterity, named for the deception*, it is not reached: *Leupold on 'her seed': her posterity, named for the deception* holds, and can be held together with it.
+
+Against *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, it is not reached: *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* holds, and can be held together with it.
+
 ## TestimonyArguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14
 
 The results in `Results.lean` ask what each package entails. This module asks
@@ -5396,15 +6524,15 @@ among the five answers the scriptural reading.
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
   - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
   - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Postell's parity argument against the near-term exclusion*, weakest at *plausible*:
@@ -5455,15 +6583,15 @@ answers Postell.
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
   - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
   - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Berry's objection to the near-term exclusion*, weakest at *disputed*:
@@ -5542,15 +6670,15 @@ Why nothing prevails unanswered: the two defeat each other.
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
   - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
   - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 
@@ -5600,15 +6728,15 @@ Why Motyer alone does not settle it: a defeater for each of the three.
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
   - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
   - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Motyer's reply to the near-term reading*, weakest at *disputed*:
@@ -5658,15 +6786,15 @@ stages: the Micah counterexample first, then the three it defends.
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
   - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
   - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
@@ -5725,15 +6853,15 @@ reply it faces, and the replies defeat it.
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
   - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
   - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Hebrew זֶרַע is ordinarily reckoned through the father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-mary-2007`](../bibliography.md#miravalle-meet-mary-2007), pp. 9–10
+  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
   - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Berry's objection to the near-term exclusion*, weakest at *disputed*:
@@ -6914,5 +8042,520 @@ Nor does it force Wegner on παρθένος.
 ```lean
 theorem drift_not_skeptically_accepted : ¬Framework.SkepticallyAccepted
     septuagintDispute.defeats SeptuagintParty.drift
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+## TestimonyArguments.BornOfAVirgin.Dispute.Genesis — what "her seed" says of a father
+
+`Results.Genesis` shows that the claim that Genesis 3:15's wording itself
+signifies a birth with no human father rests on one step, Luther's. This module
+weighs that step against the two readings that deny it. Three positions meet:
+
+- **Luther on "her seed"** (with Henry): the seed of other women "might rather
+  be said to have been the seed of the man", but Mary's was "the true Seed of
+  Mary"; so the wording itself signifies a birth with no human father.
+  Irenaeus reads the verse of the Virgin's son too, though he does not argue
+  from the wording.
+- **Leupold on "her seed"** (with Keil; Calvin gives the same two grounds):
+  "her seed" is first collective, the woman's posterity, and the woman is named
+  because she was deceived; so the wording "does not specifically prophesy the
+  virgin birth, but it coincides and agrees with it under divine providence".
+  Leupold and Keil are Lutheran commentators, and both hold the virgin birth.
+- **Jack P. Lewis on "her seed"**: Genesis speaks of Hagar's seed and of
+  Rebekah's too, each with a father named; so the wording at 3:15 does not by
+  itself signify a birth without one.
+
+Luther, Leupold and Keil hold that Genesis 3:15 promises a redeemer; Lewis
+doubts it, but his argument does not need that doubt. Whether it does is not
+argued here: critical readers deny it, Westermann among them, as Lewis quotes
+him: "it is not possible that such a form has either promise or prophecy as its
+primary or even its secondary meaning" (318). But it is weighed. The claim is
+rated `disputed` because they deny it, and Luther's step uses it while Leupold's
+and Lewis's do not, so it holds back Luther's case alone, though Leupold and
+Keil hold it too. The virgin birth
+itself is not in question here: Leupold and Keil affirm it, and find it in the
+promise's fulfilment.
+
+### How to read the verdicts
+
+- **Defeats.** One position contradicts another — denies one of its premises,
+  its conclusion, or a claim it derives on the way — and is not the weaker of
+  the two. A defeat that runs both ways is a *standoff*.
+- **Weakest link.** A position is only as strong as its least-supported premise
+  or step. Every party here rests on something rated `disputed`, the lowest
+  rating, so as the ratings stand none outranks another.
+- **Prevails.** Accepted however every standoff is resolved.
+- **A resolution.** A largest consistent set of positions that answers every
+  attack on its members, itself or through an ally. A position in some
+  resolution can be defended; one left out of some resolution is not forced —
+  which is not the same as false.
+
+### What the solver computed
+
+Two standoffs, and nothing else (`genesisDispute_defeats`, all nine pairs):
+
+- **Luther and Leupold.** Luther concludes that the wording signifies a birth
+  without a human father; Leupold concludes that it does not.
+- **Luther and Lewis.** The same, with Lewis in Leupold's place.
+
+Leupold and Lewis do not attack each other: they stand together
+(`posterity_stands_with_the_idiom`).
+
+**Nothing prevails** (`nothing_prevails_over_her_seed`): every party is defeated
+by someone. The dispute has two resolutions, each proved: Luther alone
+(`wording_is_one_resolution`), and Leupold with Lewis
+(`posterity_and_idiom_are_the_other_resolution`). Either can be defended;
+neither is forced.
+
+So a reader who says that "her seed" already implies a virgin conception is
+taking a side in a live dispute, with Luther, Henry and Irenaeus on it, and not
+stating what the text alone shows. Neither is the reader who says it does not,
+with Leupold and Keil, who hold the virgin birth, and Lewis. Neither side is
+shown wrong.
+
+### What the ratings decide
+
+Each claim and step carries a rating from its sources: `consensus`,
+`wellSupported`, `plausible` or `disputed`. A step is `disputed` when one cited
+reader grants its grounds and denies its conclusion; where he wrote does not
+enter. A rating moves only with a new, cited argument. As they stand, every
+party's weakest link is `disputed`, so the dispute is a tie. What follows is
+read off the rule for defeat, and was computed before it was written; it is not
+separately proved.
+
+The tie is nearer to breaking against Luther than for him: one rating would
+break it against him, and two are needed to break it for him.
+
+**Lewis's step** is `disputed` on one reader, Jimmy Akin, a Catholic apologist
+writing in *Catholic Answers Magazine*. He does not discuss Hagar or Rebekah, but
+grants the point Lewis draws from them, that a woman's seed "is not outside the
+bounds of Hebrew expression", and still calls the wording "odd", and agrees with
+the "many" who have "rightly seen" it as "a hint of the Virgin Birth". A hint is
+less than a sign; it is the only dissent found. Lewis's grounds are what Genesis
+reads,
+rated `consensus`, so the step is his only weak point. Rated higher, Lewis would
+outrank Luther: his attack would stand and Luther's would not, and Leupold and
+Lewis would prevail together. What would raise it is a cited argument that
+Akin's objection fails.
+
+**Luther's step**, rated higher, is not enough. His case also uses the claim that
+Genesis 3:15 is the first promise of a redeemer, `disputed` because critical
+readers deny it. Luther prevails only if both are rated higher, which takes a
+cited argument answering Leupold, Keil and Lewis on the step, and one answering
+the critics on the promise.
+
+**Leupold's step** is placed as Luther's is. It is `disputed` on Irenaeus, who
+grants both its grounds, and on Henry, who grants the second; both still read
+the verse of the Virgin's son. His ground that "her seed" is first collective is
+`disputed` on Collins, who argues that the Hebrew's syntax is "quite consistent
+with the pattern where a single individual is in view" (145). Leupold prevails,
+with Lewis, only if both are rated higher.
+
+#### Strength
+
+<a id="herSeedCase_strength"></a>
+**`herSeedCase_strength`**
+
+Luther's case is no stronger than its step, rated `disputed`, and its claim
+that Genesis 3:15 is the first promise of a redeemer, cited `disputed`.
+
+```lean
+theorem herSeedCase_strength : herSeedCase.strength = 0
+-- axioms: propext
+```
+
+<a id="posterityCase_strength"></a>
+**`posterityCase_strength`**
+
+Leupold's case is no stronger than its step and its reading of "her seed"
+as first collective, both `disputed`.
+
+```lean
+theorem posterityCase_strength : posterityCase.strength = 0
+-- axioms: propext
+```
+
+<a id="idiomCase_strength"></a>
+**`idiomCase_strength`**
+
+Lewis's case is no stronger than its step, rated `disputed`; his grounds
+are `consensus`.
+
+```lean
+theorem idiomCase_strength : idiomCase.strength = 0
+-- axioms: propext
+```
+
+#### The defeats
+
+<a id="posterity_defeats_wording"></a>
+**`posterity_defeats_wording`**
+
+**Leupold defeats Luther.** His conclusion denies Luther's.
+
+```lean
+theorem posterity_defeats_wording : Defeats posterityCase herSeedCase
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wording_defeats_posterity"></a>
+**`wording_defeats_posterity`**
+
+**Luther defeats Leupold back**, so the two stand off.
+
+```lean
+theorem wording_defeats_posterity : Defeats herSeedCase posterityCase
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="idiom_defeats_wording"></a>
+**`idiom_defeats_wording`**
+
+**Lewis defeats Luther.** His conclusion denies Luther's.
+
+```lean
+theorem idiom_defeats_wording : Defeats idiomCase herSeedCase
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wording_defeats_idiom"></a>
+**`wording_defeats_idiom`**
+
+**Luther defeats Lewis back**, so the two stand off.
+
+```lean
+theorem wording_defeats_idiom : Defeats herSeedCase idiomCase
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+#### The dispute
+
+<a id="genesisPartyNode"></a>
+**`genesisPartyNode`**
+
+The package each party argues from.
+
+```lean
+def genesisPartyNode : GenesisParty → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | GenesisParty.wording => herSeedCase
+    | GenesisParty.posterity => posterityCase
+    | GenesisParty.idiom => idiomCase
+```
+
+<a id="genesisDispute"></a>
+**`genesisDispute`**
+
+The dispute over the woman's seed: every party's premises can all be true
+together, every party establishes its conclusion, and every party's inferences
+are rated.
+
+```lean
+def genesisDispute : Dispute Claim GenesisParty :=
+  { node := genesisPartyNode,
+    consistent := genesisDispute._proof_1,
+    sound := genesisDispute._proof_2,
+    rated := genesisDispute._proof_6 }
+```
+
+<a id="posterity_stands_with_the_idiom"></a>
+**`posterity_stands_with_the_idiom`**
+
+**Leupold and Lewis stand together**, on Leupold's reading, in which
+Lewis's claims hold too.
+
+```lean
+theorem posterity_stands_with_the_idiom : genesisDispute.StandTogether
+    [GenesisParty.posterity, GenesisParty.idiom]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="genesisPartyDefeats"></a>
+**`genesisPartyDefeats`**
+
+The defeats of the dispute, as a table.
+
+```lean
+def genesisPartyDefeats : GenesisParty → GenesisParty → Prop :=
+  fun x x_1 =>
+    match x, x_1 with
+    | GenesisParty.wording,
+      GenesisParty.posterity => True
+    | GenesisParty.posterity,
+      GenesisParty.wording => True
+    | GenesisParty.wording, GenesisParty.idiom =>
+      True
+    | GenesisParty.idiom, GenesisParty.wording =>
+      True
+    | x, x_2 => False
+```
+
+<a id="instDecidableRelGenesisPartyGenesisPartyDefeats"></a>
+**`instDecidableRelGenesisPartyGenesisPartyDefeats`**
+
+The table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelGenesisPartyGenesisPartyDefeats : DecidableRel
+    genesisPartyDefeats
+```
+
+<a id="genesisPartyNode_strength"></a>
+**`genesisPartyNode_strength`**
+
+Every party's weakest link ranks at the bottom.
+
+```lean
+theorem genesisPartyNode_strength : ∀ (i : GenesisParty), (genesisPartyNode
+    i).strength = 0
+-- axioms: propext
+```
+
+<a id="genesisDispute_defeats"></a>
+**`genesisDispute_defeats`**
+
+**Who defeats whom**, all nine pairs: Luther and Leupold defeat each other,
+Luther and Lewis defeat each other, and nothing else. Every cell is computed
+from what the parties hold by `Horn.defeats?` and checked by the kernel.
+
+```lean
+theorem genesisDispute_defeats : ∀ (i j : GenesisParty),
+    genesisDispute.defeats i j ↔ genesisPartyDefeats i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="genesisFinite"></a>
+**`genesisFinite`**
+
+The dispute in the form the verdict solver computes with.
+
+```lean
+def genesisFinite : Solver.Finite genesisDispute.defeats :=
+  {
+    parties :=
+      [GenesisParty.wording, GenesisParty.posterity,
+        GenesisParty.idiom],
+    complete := genesisFinite._proof_1,
+    defeats := fun i j => decide (genesisPartyDefeats i j),
+    spec := genesisFinite._proof_2 }
+```
+
+<a id="genesisPartySupports"></a>
+**`genesisPartySupports`**
+
+Who supports whom, as a table: no one.
+
+```lean
+def genesisPartySupports : GenesisParty → GenesisParty → Prop :=
+  fun x x_1 => False
+```
+
+<a id="instDecidableRelGenesisPartyGenesisPartySupports"></a>
+**`instDecidableRelGenesisPartyGenesisPartySupports`**
+
+The support table is finite, so membership in it is decidable.
+
+```lean
+def instDecidableRelGenesisPartyGenesisPartySupports : DecidableRel
+    genesisPartySupports :=
+  fun i j => id inferInstance
+```
+
+<a id="genesisDispute_supports"></a>
+**`genesisDispute_supports`**
+
+**No support**, in all nine pairs: no party's conclusion is another's
+premise. Every cell is computed by `supports?` and checked by the kernel.
+
+```lean
+theorem genesisDispute_supports : ∀ (i j : GenesisParty),
+    genesisDispute.supports i j ↔ genesisPartySupports i j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="genesisDispute_partOf"></a>
+**`genesisDispute_partOf`**
+
+**No case is part of another's** here, in all nine pairs, except each
+party's own. Every cell is computed by `partOf?` and checked by the kernel.
+
+```lean
+theorem genesisDispute_partOf : ∀ (i j : GenesisParty), genesisDispute.partOf
+    i j ↔ i = j
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="genesisMap"></a>
+**`genesisMap`**
+
+The dispute drawn: who defeats whom, with no support between the parties.
+
+<div class="argument-map">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="The dispute as a graph: parties numbered as in the table below, defeats solid, supports dashed, parts dotted">
+<defs>
+<marker id="tm-defeat" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#b3261e"/></marker>
+<marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
+<marker id="tm-part" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#1f5fa8"/></marker>
+</defs>
+<path d="M208,63 Q249,170 321,259" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M193,63 Q120,152 79,259" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M322,262 Q281,155 209,66" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M78,262 Q150,173 191,66" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<circle cx="200" cy="50" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="200" y="55" text-anchor="middle" style="fill:var(--fg);font-size:14px">1</text>
+<circle cx="330" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="330" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
+<circle cx="70" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="70" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
+</svg>
+</div>
+
+Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is part of another's.
+
+| # | Party |
+|---|---|
+| 1 | Luther on 'her seed': the wording itself signifies no human father |
+| 2 | Leupold on 'her seed': her posterity, named for the deception |
+| 3 | Lewis on 'her seed': Genesis says it of Hagar and Rebekah too |
+
+| From | To | Edge |
+|---|---|---|
+| 1 *Luther on 'her seed': the wording itself signifies no human father* | 2 *Leupold on 'her seed': her posterity, named for the deception* | defeats |
+| 1 *Luther on 'her seed': the wording itself signifies no human father* | 3 *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* | defeats |
+| 2 *Leupold on 'her seed': her posterity, named for the deception* | 1 *Luther on 'her seed': the wording itself signifies no human father* | defeats |
+| 3 *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* | 1 *Luther on 'her seed': the wording itself signifies no human father* | defeats |
+
+The defeats are the cells of [`genesisDispute_defeats`](#genesisDispute_defeats), the supports the cells of [`genesisDispute_supports`](#genesisDispute_supports) and the parts the cells of [`genesisDispute_partOf`](#genesisDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+<a id="everyGenesisPartyDefeated"></a>
+**`everyGenesisPartyDefeated`**
+
+Why nothing prevails: a defeater for each party.
+
+**Nothing prevails outright: every party is defeated by another.**
+
+- *Leupold on 'her seed': her posterity, named for the deception* defeats *Luther on 'her seed': the wording itself signifies no human father*.
+- *Luther on 'her seed': the wording itself signifies no human father* defeats *Leupold on 'her seed': her posterity, named for the deception*.
+- *Luther on 'her seed': the wording itself signifies no human father* defeats *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.
+
+**What this rests on.** The reasons state 3 defeats and 0 absences of defeat, each a cell of the defeat table, [`genesisDispute_defeats`](#genesisDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Leupold on 'her seed': her posterity, named for the deception*, weakest at *disputed*:
+  - 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - an inference step — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+- *Luther on 'her seed': the wording itself signifies no human father*, weakest at *disputed*:
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - an inference step — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319
+- *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, weakest at *disputed*:
+  - an inference step — [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+
+<a id="nothing_prevails_over_her_seed"></a>
+**`nothing_prevails_over_her_seed`**
+
+**Nothing prevails.** Every party is defeated by someone — Luther by
+Leupold and by Lewis, each of them by Luther — so no position is accepted
+however the standoffs are resolved.
+
+```lean
+theorem nothing_prevails_over_her_seed : Framework.grounded
+    genesisDispute.defeats = ∅
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wordingAlone"></a>
+**`wordingAlone`**
+
+Why Luther alone is one resolution.
+
+**A maximal defensible position: *Luther on 'her seed': the wording itself signifies no human father*.**
+
+- *Luther on 'her seed': the wording itself signifies no human father* does not defeat itself, and answers each attack on it:
+  - *Leupold on 'her seed': her posterity, named for the deception* defeats *Luther on 'her seed': the wording itself signifies no human father*, and *Luther on 'her seed': the wording itself signifies no human father* defeats *Leupold on 'her seed': her posterity, named for the deception*.
+  - *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* defeats *Luther on 'her seed': the wording itself signifies no human father*, and *Luther on 'her seed': the wording itself signifies no human father* defeats *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.
+- Nothing can be added to it:
+  - *Leupold on 'her seed': her posterity, named for the deception* conflicts with *Luther on 'her seed': the wording itself signifies no human father*: *Leupold on 'her seed': her posterity, named for the deception* defeats *Luther on 'her seed': the wording itself signifies no human father*, and *Luther on 'her seed': the wording itself signifies no human father* defeats *Leupold on 'her seed': her posterity, named for the deception*.
+  - *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* conflicts with *Luther on 'her seed': the wording itself signifies no human father*: *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* defeats *Luther on 'her seed': the wording itself signifies no human father*, and *Luther on 'her seed': the wording itself signifies no human father* defeats *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.
+
+**What this rests on.** The reasons state 4 defeats and 1 absence of defeat, each a cell of the defeat table, [`genesisDispute_defeats`](#genesisDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Luther on 'her seed': the wording itself signifies no human father*, weakest at *disputed*:
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - an inference step — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319
+- *Leupold on 'her seed': her posterity, named for the deception*, weakest at *disputed*:
+  - 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - an inference step — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+- *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, weakest at *disputed*:
+  - an inference step — [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+
+<a id="wording_is_one_resolution"></a>
+**`wording_is_one_resolution`**
+
+**One resolution: Luther.** His case can be defended on its own, because it
+defeats both parties that defeat it; and it is in conflict with both, so no
+larger set can be defended.
+
+```lean
+theorem wording_is_one_resolution : Framework.Preferred genesisDispute.defeats
+    {GenesisParty.wording}
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="posterityWithTheIdiom"></a>
+**`posterityWithTheIdiom`**
+
+Why Leupold with Lewis is the other resolution.
+
+**A maximal defensible position: *Leupold on 'her seed': her posterity, named for the deception*, *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.**
+
+- None of *Leupold on 'her seed': her posterity, named for the deception*, *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* defeats another, and each attack on them is answered from among them:
+  - *Luther on 'her seed': the wording itself signifies no human father* defeats *Leupold on 'her seed': her posterity, named for the deception*, and *Leupold on 'her seed': her posterity, named for the deception* defeats *Luther on 'her seed': the wording itself signifies no human father*.
+  - *Luther on 'her seed': the wording itself signifies no human father* defeats *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, and *Leupold on 'her seed': her posterity, named for the deception* defeats *Luther on 'her seed': the wording itself signifies no human father*.
+- Nothing can be added to it:
+  - *Luther on 'her seed': the wording itself signifies no human father* conflicts with *Leupold on 'her seed': her posterity, named for the deception*: *Luther on 'her seed': the wording itself signifies no human father* defeats *Leupold on 'her seed': her posterity, named for the deception*, and *Leupold on 'her seed': her posterity, named for the deception* defeats *Luther on 'her seed': the wording itself signifies no human father*.
+
+**What this rests on.** The reasons state 3 defeats and 4 absences of defeat, each a cell of the defeat table, [`genesisDispute_defeats`](#genesisDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Leupold on 'her seed': her posterity, named for the deception*, weakest at *disputed*:
+  - 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - an inference step — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+- *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, weakest at *disputed*:
+  - an inference step — [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+- *Luther on 'her seed': the wording itself signifies no human father*, weakest at *disputed*:
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - an inference step — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319
+
+<a id="posterity_and_idiom_are_the_other_resolution"></a>
+**`posterity_and_idiom_are_the_other_resolution`**
+
+**The other resolution: Leupold, with Lewis.** Neither defeats the other,
+and each answers Luther, the only party to defeat either. Luther is in conflict
+with both, so no larger set can be defended.
+
+```lean
+theorem posterity_and_idiom_are_the_other_resolution : Framework.Preferred
+    genesisDispute.defeats {GenesisParty.posterity, GenesisParty.idiom}
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wording_not_skeptically_accepted"></a>
+**`wording_not_skeptically_accepted`**
+
+So the dispute does not force Luther's reading.
+
+```lean
+theorem wording_not_skeptically_accepted : ¬Framework.SkepticallyAccepted
+    genesisDispute.defeats GenesisParty.wording
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="posterity_not_skeptically_accepted"></a>
+**`posterity_not_skeptically_accepted`**
+
+Nor does it force Leupold's.
+
+```lean
+theorem posterity_not_skeptically_accepted : ¬Framework.SkepticallyAccepted
+    genesisDispute.defeats GenesisParty.posterity
 -- axioms: propext, Classical.choice, Quot.sound
 ```

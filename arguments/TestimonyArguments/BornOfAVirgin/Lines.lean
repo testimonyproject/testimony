@@ -33,8 +33,10 @@ def toCriterion : Formula Claim :=
   ⋀ [ p .isaiahPredictsVirginBirth, p .almahMeansVirgin
     , p .matthewIntendsFulfilment ] ➝ p .messiahBornOfVirgin
 
-/-- Protoevangelium strand: from Genesis 3:15 read as promise, the patrilineal
-idiom, and the inference drawn from its departure, the criterion follows. -/
+/-- Protoevangelium strand: Genesis 3:15 promises a redeemer as "her seed"; a
+man's line is ordinarily counted through the father; and naming the seed as the
+woman's marks a birth with no human father. So the Messiah must be born of a
+virgin. -/
 @[bornOfAVirginDefs]
 def genesisToCriterion : Formula Claim :=
   ⋀ [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
@@ -349,6 +351,46 @@ versions
 def translatorsReadingFixesTheWord : Formula Claim :=
   p .lxxReadsAVirgin ➝ p .almahMeansVirgin
 
+/-! #### Genesis 3:15, and what "her seed" says of a father
+
+The protoevangelium strand holds that the seed being named as the woman's marks
+a birth with no human father. The steps below take apart what "marks" can mean:
+that the wording itself signifies such a birth, which Luther argues and
+Leupold, Keil and Lewis deny, or that it fits one once fulfilled, which Leupold
+and Keil grant. -/
+
+/-- **Luther's step.** Genesis 3:15 names the seed as the woman's, it is the
+first promise of a redeemer, and a man's seed is ordinarily reckoned through
+him; so the wording itself signifies a birth with no human father. -/
+@[bornOfAVirginDefs]
+def herSeedSignifiesNoFather : Formula Claim :=
+  ⋀ [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
+    , p .seedReckonedThroughFather ]
+  ➝ p .wordingSignifiesAFatherlessBirth
+
+/-- **Leupold's step.** "Her seed" is first collective, the woman's posterity,
+and the seed is named hers because the serpent deceived her; so the wording does
+not itself signify a birth with no human father. -/
+@[bornOfAVirginDefs]
+def posterityExplainsTheWording : Formula Claim :=
+  ⋀ [ p .genesis3_15SeedOfTheWoman, p .seedIsHerPosterityFirst
+    , p .womanNamedForTheDeception ]
+  ➝ notP .wordingSignifiesAFatherlessBirth
+
+/-- **Lewis's step.** Genesis speaks of a woman's seed in ordinary births too;
+so the woman's seed at 3:15 does not by itself signify a birth with no human
+father. -/
+@[bornOfAVirginDefs]
+def ordinaryBirthsAnswerTheWording : Formula Claim :=
+  ⋀ [ p .genesis3_15SeedOfTheWoman, p .womansSeedSaidOfOrdinaryBirths ]
+  ➝ notP .wordingSignifiesAFatherlessBirth
+
+/-- **The Greek's "he".** The Greek refers to the neuter seed with a masculine
+pronoun; so its translator read the seed as one person. -/
+@[bornOfAVirginDefs]
+def heReadsOneDescendant : Formula Claim :=
+  p .lxxCallsTheSeedHe ➝ p .lxxReadsOneDescendant
+
 /-! ### The lines of reason
 
 Four strands converge on the criterion, and each is a `Line`: its own grounds,
@@ -373,10 +415,11 @@ def isaianicLine : Line Claim :=
   , step := toCriterion
   , delivers := p .messiahBornOfVirgin }
 
-/-- **The protoevangelium line.** Genesis 3:15 read as promise, the patrilineal
-idiom, and the inference drawn from its departure. Its hinge is
-`seedOfTheWomanImpliesNoHumanFather`, and the module doc says why that hinge is
-weaker than the argument needs. -/
+/-- **The protoevangelium line.** Genesis 3:15 read as the promise of a
+redeemer, a man's line counted through the father, and the claim that naming the
+seed as the woman's marks a birth with no human father. That claim is its hinge
+(`seedOfTheWomanImpliesNoHumanFather`), and `Results.Genesis` says what it can
+bear, read either way. -/
 @[bornOfAVirginDefs]
 def protoevangeliumLine : Line Claim :=
   { name := "Protoevangelium strand (Genesis 3:15)"
@@ -646,6 +689,138 @@ def usageLine : Line Claim :=
           , .work meadeAncientVersionsComment .whole ]
       , tradition := .christianHistoricalGrammatical
       , confidence := .disputed } }
+
+/-- **Luther on "her seed"**: the wording itself signifies a birth with no human
+father. Held by Luther and Henry, and, as "a hint", by Akin and Miravalle;
+disputed by Leupold, Keil and Lewis. Irenaeus reads the verse of the Virgin's
+son, though he does not argue from the wording.
+
+Luther: the seed of other women "might rather be said to have been the seed of
+the man. But that which was born from Mary was conceived of the Holy Ghost and
+was the true Seed of Mary" (*Luther on the Creation* 298–99). He finds the sense
+in the words of Genesis, and holds that Isaiah later "threw some additional
+light" on it: "For it was then made certain that this Seed would not be born
+from the union of a man and a woman" (298).
+
+The step is rated `disputed`, because readers who grant all three grounds deny
+the conclusion. Leupold reads the verse as the promise of the victor — "Both the
+ultimate victory and its achievement by the seed of the woman are taught with
+unequivocal plainness by this word" (167). Asked whether the expression is "so
+phrased in reference to Mary and the virgin birth", he answers "Not primarily,
+but at least incidentally", and holds that "the expression used does not
+specifically prophesy the virgin birth" (169). Keil grants that the promise
+"culminates in Christ", and finds the virgin birth in its fulfilment, "even if
+the words had reference first of all to the fact that the woman had been led
+astray by the serpent", "even in its apparently casual form" (102). Lewis grants
+that "it is normal in Hebrew to describe descendants by the noun zeraʿ" (299);
+he doubts the promise reading itself, suggesting it came from "Making the woman
+to be the addressee", but argues on grounds that do not need that doubt: "To say
+that the passage is messianic does not necessarily imply that it is
+virgin-birth messianic" (319). -/
+@[bornOfAVirginDefs]
+def herSeedLine : Line Claim :=
+  { name := "Luther on 'her seed': the wording itself signifies no human father"
+  , grounds :=
+      [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
+      , p .seedReckonedThroughFather ]
+  , step := herSeedSignifiesNoFather
+  , delivers := p .wordingSignifiesAFatherlessBirth
+  , inference := some
+      { primary := .work lutherOnTheCreation (.pages 298 299)
+      , supporting :=
+          [ .work henryCommentary (.adLoc Scripture.genesis3_15)
+          , .work leupoldGenesis (.pages 167 169)
+          , .work keilDelitzschPentateuch (.page 102)
+          , .work lewisWomansSeed (.page 319) ]
+      , tradition := .christianTypological
+      , confidence := .disputed } }
+
+/-- **Leupold on "her seed"**: the wording names the woman's posterity, and names
+the woman because she was deceived; it does not itself signify a birth with no
+human father. Held by Leupold and Keil, whose two grounds Calvin gives too;
+disputed by Irenaeus and Henry.
+
+Leupold: "the expression used does not specifically prophesy the virgin birth,
+but it coincides and agrees with it under divine providence. For it is not to be
+forgotten that the expression 'her seed' in its first meaning is a collective
+noun and includes all who are enrolled in the struggle against Satan, without
+being themselves virgin born" (169).
+
+The step is rated `disputed`. Irenaeus grants both grounds. The enmity is kept
+up between the serpent and the woman's seed "until the seed did come appointed
+to tread down his head" (*Against Heresies* III.23.7), and "it was by means of a
+woman that he got the advantage over man at first" (V.21.1); yet he reads the
+verse as preaching "He who should be born of a woman, [namely] from the Virgin"
+(V.21.1), though without arguing from its wording.
+Henry gives the woman's name the same reason — "because she it was whom the
+devil had beguiled" — and still reads the seed as "of a woman only, of a
+virgin". -/
+@[bornOfAVirginDefs]
+def posterityLine : Line Claim :=
+  { name := "Leupold on 'her seed': her posterity, named for the deception"
+  , grounds :=
+      [ p .genesis3_15SeedOfTheWoman, p .seedIsHerPosterityFirst
+      , p .womanNamedForTheDeception ]
+  , step := posterityExplainsTheWording
+  , delivers := notP .wordingSignifiesAFatherlessBirth
+  , inference := some
+      { primary := .work leupoldGenesis (.page 169)
+      , supporting :=
+          [ .work keilDelitzschPentateuch (.pages 101 102)
+          , .work calvinGenesis (.page 170)
+          , .work irenaeusAgainstHeresies (.sectionRef "III.23.7")
+          , .work irenaeusAgainstHeresies (.sectionRef "V.21.1")
+          , .work henryCommentary (.adLoc Scripture.genesis3_15) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **Lewis on "her seed"**: Genesis speaks of a woman's seed in ordinary births
+too, so the wording at 3:15 does not by itself signify a birth with no human
+father. Held by Lewis; disputed by Akin.
+
+Lewis: "Had it been observed across history that Hagar's descendants whose
+ancestral father is Abraham are also projected with a feminine possessive suffix
+attached to zeraʿ (Gen 16:10), as also are Rebekah's descendants whose ancestral
+father is Isaac (24:60), the treatment of Gen 3:15 would likely have been
+different" (299–300). "A look at texts about Hagar and Rebekah in Genesis could
+have safeguarded interpreters from the whole misguided exegetical effort" (319).
+
+The step is rated `disputed`, on one reader. Jimmy Akin, a Catholic
+apologist, does not discuss Hagar or Rebekah, but grants the point Lewis draws
+from them, that a woman's seed "is not outside the bounds of Hebrew expression",
+and still calls the wording "odd", and agrees with the "many" who have "rightly
+seen" it as "a hint of the Virgin Birth". A hint is less than a sign, and whether
+it denies Lewis's conclusion is arguable; it is the only dissent found. -/
+@[bornOfAVirginDefs]
+def idiomLine : Line Claim :=
+  { name := "Lewis on 'her seed': Genesis says it of Hagar and Rebekah too"
+  , grounds := [ p .genesis3_15SeedOfTheWoman, p .womansSeedSaidOfOrdinaryBirths ]
+  , step := ordinaryBirthsAnswerTheWording
+  , delivers := notP .wordingSignifiesAFatherlessBirth
+  , inference := some
+      { primary := .work lewisWomansSeed (.pages 299 300)
+      , supporting := [.work lewisWomansSeed (.page 319), .work akinWomanSeedSerpent .whole]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **The Greek's "he"**: the translator of Genesis read the woman's seed as one
+person. Held by Collins, and by Martin as Collins quotes him. Rated
+`wellSupported`: Collins calls the reading "generally acknowledged" (141), and
+no reader found denies it of the Greek. Lewis grants it, and allows that the
+masculine "could be an oversight" (300). What it does not reach is whether that
+person has a human father (`Results.Genesis`). -/
+@[bornOfAVirginDefs]
+def greekHeLine : Line Claim :=
+  { name := "The Greek's 'he': the woman's seed read as one person"
+  , grounds := [ p .lxxCallsTheSeedHe ]
+  , step := heReadsOneDescendant
+  , delivers := p .lxxReadsOneDescendant
+  , inference := some
+      { primary := .work collinsSyntacticalNote (.page 145)
+      , supporting :=
+          [ .work collinsSyntacticalNote (.page 144), .work martinEarliestMessianic .whole ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .wellSupported } }
 
 /-- **The critical line**: the sign was given to Ahaz, and such a sign is not
 also a prediction of a virgin conception, so the predictive reading is denied.

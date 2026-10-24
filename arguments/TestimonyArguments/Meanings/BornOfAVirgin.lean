@@ -98,6 +98,9 @@ def all : List Claim :=
   , .compositionGovernsMeaning, .isaiah9And11AreMessianic, .isaiah9And11ShareTheAssyrianTimeline
   , .compositionalReadingYieldsFutureBirth, .genesis3_15SeedOfTheWoman
   , .genesis3_15IsProtoevangelium, .seedReckonedThroughFather, .seedOfTheWomanImpliesNoHumanFather
+  , .wordingSignifiesAFatherlessBirth, .wordingFitsAFatherlessBirth, .seedIsHerPosterityFirst
+  , .womanNamedForTheDeception, .womansSeedSaidOfOrdinaryBirths, .lxxCallsTheSeedHe
+  , .lxxReadsOneDescendant
   , .micah5_3NamesMotherOnly, .maternalSilenceImpliesNoHumanFather, .maryConceivedAsVirgin
   , .independentAttestation, .isaiahIsNearTermSignToAhaz, .nearTermExcludesMessianicSense
   , .nearTermFulfilmentIsUnclear, .signGivenToHouseOfDavid, .maherShalalHashBazRepeatsTheTimetable
@@ -180,7 +183,7 @@ instance meanings : HasMeanings Claim :=
 
 /-- **Twenty of the 63 atoms are analysed**: the ones whose meanings join them to
 another claim, and the ones about the words, the woman and the birth. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (20, 63) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (20, 70) := by decide
 
 /-- **The words read two ways**: עַלְמָה at Isaiah 7:14, as "virgin" and as "young
 woman of marriageable age", and παρθένος in the Septuagint's Greek, the same two

@@ -5,9 +5,11 @@ import TestimonyArguments.BornOfAVirgin.Packages
 import TestimonyArguments.BornOfAVirgin.Results
 import TestimonyArguments.BornOfAVirgin.Results.Wegner
 import TestimonyArguments.BornOfAVirgin.Results.Septuagint
+import TestimonyArguments.BornOfAVirgin.Results.Genesis
 import TestimonyArguments.BornOfAVirgin.Dispute
 import TestimonyArguments.BornOfAVirgin.Dispute.Wegner
 import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
+import TestimonyArguments.BornOfAVirgin.Dispute.Genesis
 
 /-!
 # TestimonyArguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
@@ -34,10 +36,15 @@ in one screen.
 seed and "her seed", זֶרַע הָאִשָּׁה — as the first promise of a redeemer, and
 takes the matrilineal wording to mark a birth with no human father, since
 Hebrew ordinarily reckons זֶרַע through the man. That last step is genuinely
-contestable and is marked `disputed`: Genesis itself speaks of a woman's seed
-in wholly ordinary contexts (Gen 16:10 to Hagar, 24:60 to Rebekah), so the
-wording at 3:15 is not the anomaly the argument needs it to be unless the
-reader already grants the messianic reading.
+contestable and is marked `disputed`. Some readers who grant the messianic
+reading deny it, the Lutheran commentators Leupold and Keil among them. Leupold
+allows that the wording refers to the virgin birth "Not primarily, but at least
+incidentally", and holds that "the expression used does not specifically
+prophesy the virgin birth, but it coincides and agrees with it under divine
+providence". Others affirm it:
+Luther and Henry. And Genesis itself speaks of a woman's seed in ordinary
+births, of Hagar's (16:10) and of Rebekah's (24:60). `Results.Genesis` and
+`Dispute.Genesis` weigh it (below).
 
 **The Michean strand** reads Micah 5:2–3 — "until the time when she who is in
 labour has given birth" — as naming a mother and no father for the coming
@@ -124,6 +131,40 @@ goes through. Three results then say what it rests on and what it reaches.
   So even granted the word, the Septuagint does not decide, and the virginal
   conception comes, if it comes, from the promise of a sign (`signLine`) or from
   Matthew and Luke.
+
+**"Her seed" is weighed as the Septuagint's word is, and it too does less than
+it is often asked to.** Genesis 3:15 names the seed as the woman's, and the
+strand's hinge reads that as marking a birth with no human father.
+`Results.Genesis` reads "marks" both ways (`whatHerSeedMarks`).
+
+- **As what the wording itself signifies**, it is Luther's argument: the seed of
+  other women "might rather be said to have been the seed of the man", but
+  Mary's was "the true Seed of Mary". He finds the sense in the words of
+  Genesis, and holds that Isaiah later "threw some additional light" on it. It
+  rests on his step (`her_seed_rests_on_its_inference`). The Lutheran
+  commentators Leupold and Keil, who hold the virgin birth, grant every ground
+  and deny it; so does Jack P. Lewis (*Journal of the Evangelical Theological
+  Society*, 1991), who doubts the promise reading itself but argues without
+  needing that doubt. Weighed
+  against Leupold and Lewis, **nothing prevails**
+  (`nothing_prevails_over_her_seed`): Luther's reading can be defended, and so
+  can theirs. But the tie is nearer to breaking against Luther than for him. One
+  rating would break it against him: Lewis's step, `disputed` only on the
+  Catholic apologist Jimmy Akin, who grants Lewis's point about the idiom and
+  still calls the wording "odd", agreeing with the "many" who have "rightly
+  seen" it as "a hint of the Virgin Birth". Two would be needed to break it for
+  him: his own step, and the claim that Genesis 3:15 is the protoevangelium at
+  all, which critical readers deny.
+- **As what the wording fits, once fulfilled**, it is granted by Leupold and
+  Keil. Leupold: "it coincides and agrees with it under divine providence".
+  But they reach the fit from the conception, so read this way the verse
+  confirms the virgin birth to one who already believes it, and gives no reason
+  to believe it to one who does not.
+- **The Septuagint's "he"**, αὐτός for the neuter σπέρμα, shows that a Jewish
+  translator before Christ read the promise of one person
+  (`greekHeCase_establishes`), so that reading is no Christian invention. It
+  leaves the father open (`the_greek_he_leaves_the_father_open`): the same Greek
+  calls the seed Hannah asks for "him", and that son has a father.
 
 **Wegner's objection is encoded in its sharpest form, and the module shows the
 circle in it rather than alleging one.** Wegner does not merely say that
@@ -257,7 +298,9 @@ reading.
 `hinges_jointly_load_bearing` is the result worth having. No single interpretive
 hinge carries the argument any more — strip *almah* and the other three strands
 still deliver the criterion, which `almah_not_load_bearing` records. Strip all
-four and the argument collapses. `almah_is_load_bearing_alone` keeps the
+four and the argument collapses. Genesis's strand delivers it only on Luther's
+reading of its hinge, which nothing here forces
+(`nothing_prevails_over_her_seed`). `almah_is_load_bearing_alone` keeps the
 pre-Miravalle finding on the books: within the Isaianic strand taken by itself,
 the lexical premise still carries everything.
 
@@ -280,13 +323,15 @@ itself debated, and is marked `plausible` rather than `wellSupported`.
 This argument is a directory, because at fourteen hundred lines it was one file
 that no one could hold in view. The dependencies run one way. Where a file
 outgrew three hundred lines of code, the material for the disputes over Wegner's
-objection and over the Septuagint's word, and the citations for the dispute
-over the critical denial, went into modules of their own beside it.
+objection, over the Septuagint's word and over the woman's seed, and the
+citations for the dispute over the critical denial, went into modules of their
+own beside it.
 
 | File | Contents |
 |---|---|
 | `Atoms.lean` | the `Claim` atoms, the recurring sources, the intertextual edges, the criterion |
 | `Sources.lean` | `cite`: a citation and a classification for every atom |
+| `Sources/Genesis.lean` | the citations of the dispute over the woman's seed |
 | `Sources/NearTerm.lean` | the citations of the dispute over the critical denial |
 | `Sources/Septuagint.lean` | the citations of the dispute over the Septuagint's word |
 | `Sources/Wegner.lean` | the citations of the dispute over Wegner's objection |
@@ -295,9 +340,11 @@ over the critical denial, went into modules of their own beside it.
 | `Results.lean` | the `@[headline]` results about the strands, with their trust base |
 | `Results/Wegner.lean` | the results about Wegner's objection, its circle, and the sign |
 | `Results/Septuagint.lean` | what the Septuagint rests on, what it shows, and what it leaves open |
+| `Results/Genesis.lean` | what "her seed" says of a father, read two ways, and the Greek's "he" |
 | `Dispute.lean` | the critical denial, the scriptural reading and four replies as one dispute |
 | `Dispute/Wegner.lean` | Wegner, the fathers' sign argument and the near-term reply as another |
 | `Dispute/Septuagint.lean` | the Septuagint, Wegner on παρθένος, and Rico and Gentry, as a third |
+| `Dispute/Genesis.lean` | Luther, Leupold and Lewis on "her seed", as a fourth |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in
