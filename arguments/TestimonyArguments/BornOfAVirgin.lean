@@ -107,18 +107,19 @@ goes through. Three results then say what it rests on and what it reaches.
   after Shechem has lain with her; Walton doubts it, from classical usage.
   The Greek Pentateuch, the corpus that verse comes from, uses the word in its
   laws where virginity is the point (Leviticus 21:13–14, Deuteronomy
-  22:13–21). `Dispute.Septuagint` weighs the four, and **nothing prevails**
-  (`nothing_prevails_over_parthenos`). Every party rests somewhere on a claim
-  rated `disputed`, the lowest rating, so none outranks another: each side's
-  objection to the other stands, and neither side is shown right, which is not
-  the same as shown wrong. The Septuagint with Rico and Gentry and the laws can
-  be defended, and so can Wegner. So the claim that the Greek word is undeniably
-  "virgin" is one side of a live dispute, not common ground. The claims about
-  the word exclude each other by what they mean — Wegner's says the word meant a
-  young woman and not yet a virgin — and the dispute is computed with that.
-  Four ratings would break the tie, one in Wegner's favour and three in the
-  witness's, and `Dispute.Septuagint` names them, with where the evidence on
-  each side lies.
+  22:13–21), and its law of the seduced παρθένος reads Wegner's verse otherwise:
+  the woman a man has lain with is still the law's παρθένος, owed "the
+  bride-price of virgins" (Exodus 22:15–16), and Genesis 34 tells Shechem's act
+  in that law's words. `Dispute.Septuagint` weighs the five, and **the
+  Septuagint's side prevails** (`septuagint_prevails_over_wegner`): the status
+  reading of Genesis 34:3 defeats Wegner, and he, resting on a step rated
+  `disputed`, is too weak to answer it. The claims about the word exclude each
+  other by what they mean — Wegner's says the word meant a young woman and not
+  yet a virgin — and the dispute is computed with that. The verdict turns on one
+  rating, the status reading's step, `plausible` because no reader found grants
+  its grounds and denies it, and no higher because no reader found makes it.
+  Were it `disputed`, nothing would prevail; `Dispute.Septuagint` says so, with
+  where the evidence on each side lies.
 - **It shows how one early reader read Isaiah, not what Isaiah's word means**
   (`septuagint_word_rests_on_its_inference`). Granted its sense, the Septuagint
   shows that a Jewish translator before Christ read the woman of 7:14 as a

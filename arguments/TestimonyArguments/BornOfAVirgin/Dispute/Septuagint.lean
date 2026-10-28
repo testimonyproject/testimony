@@ -11,7 +11,7 @@ import Testimony.Logic.Map
 
 `Results.Septuagint` shows that the Septuagint's witness rests on one claim: that
 παρθένος, in its translator's Greek, means a virgin. This module weighs that
-claim against its rival. Four positions meet:
+claim against its rival. Five positions meet:
 
 - **The Septuagint as a witness** (Irenaeus): Jews translated Isaiah before
   Christ and wrote a word that means a virgin, so they read the woman as one.
@@ -29,6 +29,11 @@ claim against its rival. Four positions meet:
   Hebrew — and not a widow, a woman put away, a defiled woman or a harlot
   (Leviticus 21:13–14). A bride without τὰ παρθένια, the tokens of virginity,
   dies for playing the harlot (Deuteronomy 22:13–21).
+- **The status reading of Genesis 34:3**: Wegner's counterexample read under
+  the law of the seduced παρθένος. The Greek Exodus still calls the woman a man
+  has lain with a παρθένος, and has him pay "the bride-price of virgins"
+  (22:15–16); Genesis 34 tells Shechem's act in that law's words. So at 34:3 the
+  word names Dinah by the standing he took from her, in the sense "virgin".
 
 ## What this dispute does not decide
 
@@ -83,9 +88,9 @@ shifted.
   derived on the way, succeeds unless the attacked position is the stronger of
   the two. A defeat that runs both ways is a *standoff*.
 - **Weakest link.** A position is only as strong as its least-supported premise
-  or step. Every party here rests on something rated `disputed`, the lowest
-  rating, so, as the ratings stand, no party outranks another and every
-  standoff holds.
+  or step. Four parties here rest on something rated `disputed`, the lowest
+  rating. The status reading rests on a step rated `plausible`, one above, and
+  so it outranks Wegner.
 - **Prevails.** Accepted however every standoff is resolved.
 - **A resolution.** A largest set of positions, none of which defeats another,
   that answers every attack on its members, itself or through an ally. A
@@ -94,8 +99,8 @@ shifted.
 
 ## What the solver computed
 
-Three standoffs, all with Wegner, and nothing else (`septuagintDispute_defeats`,
-all sixteen pairs):
+Three standoffs, all with Wegner, one defeat of Wegner that he cannot return,
+and nothing else (`septuagintDispute_defeats`, all twenty-five pairs):
 
 - **Wegner and the witness.** What Wegner holds denies the witness's ground that
   "virgin" is a sense of the word; what the witness holds denies his
@@ -104,18 +109,23 @@ all sixteen pairs):
   rules out.
 - **Wegner and the laws.** The laws' sense excludes his "not yet 'virgin'", and
   his conclusion excludes theirs.
+- **The status reading defeats Wegner.** Its sense "virgin" at Genesis 34:3
+  excludes his "not yet 'virgin'". He attacks it back, by the same exclusion,
+  and the attack fails: he is weaker than it
+  (`drift_does_not_defeat_dinah`).
 
-The witness, Rico and Gentry and the laws do not attack one another. They stand
-together (`septuagint_stands_with_the_usage`). Rico and Gentry lend the witness
+The witness, Rico and Gentry, the laws and the status reading do not attack one
+another. They stand together (`septuagint_stands_with_the_usage`). Rico and Gentry lend the witness
 its contested ground: their conclusion is that ground, word for word. The laws
 reach the same ground through the definition, so the library draws no support
 from them, though they lead to the same place.
 
-**Nothing prevails** (`nothing_prevails_over_parthenos`): every party is defeated
-by someone. The dispute has two resolutions, each proved: the Septuagint's
-witness with Rico and Gentry and the laws (`septuagint_is_one_resolution`), and
-Wegner alone (`drift_is_the_other_resolution`). Either can be defended; neither
-is forced.
+**The Septuagint's side prevails** (`septuagint_prevails_over_wegner`). Nothing
+defeats the status reading, so it is accepted first. It defeats Wegner, the only
+party that defeats the witness, Rico and Gentry or the laws, so all three are
+accepted with it. Wegner belongs to no position that can be defended
+(`drift_indefensible`). That is a verdict on these premises and these ratings,
+and it turns on one of them, the status reading's step: see below.
 
 ## Where the evidence lies
 
@@ -150,7 +160,8 @@ For "young woman, and not yet 'virgin'":
   BDAG gives the general use "of a young woman of marriageable age, w. or
   without focus on virginity" from Homer on (777), and the sense "virgin" in the
   New Testament and the early Christian writings. Every side grants it.
-- **Genesis 34:3**, one verse with the word twice, which every side grants.
+- **Genesis 34:3**, one verse with the word twice, which every side grants:
+  what the Greek reads. How it is read is the status reading's question.
 - **Muraoka's lexicon**, which glosses παρθένος "young woman", lists Genesis 34:3,
   "so called just after having been raped", and marks "virginity stressed (?)"
   in the laws of Deuteronomy 22 (535).
@@ -168,61 +179,58 @@ rule, with that passage the exception.
 
 ## What the ratings decide
 
-Every party's weakest link is `disputed`, so every attack succeeds. Four ratings
-would break the tie: one in Wegner's favour, three in the witness's. Each was
-found by running the solver on the changed rating; no theorem on this page
-states those runs.
+**The verdict turns on the status reading's step**, from the law of the seduced
+παρθένος and the law's words in Genesis 34 to the sense of the word at 34:3. It
+is rated `plausible` (`dinahLine` gives the reasons in full). No cited reader
+grants its grounds and denies its conclusion. Wegner, Rhodea, Meade, Rico and
+Gentry and Bratcher read 34:3 as said of a woman no longer a virgin, but none
+takes up Exodus 22:15–16 or the law's words in Genesis 34. Frymer-Kensky reads
+the law and the story together, as the step does, from the Hebrew (80, 91). No
+reader has been found who makes the status reading of the Greek. It is built
+here from the texts, and that is why it is rated no higher.
+
+Rated `disputed`, as it was first encoded, the status reading would stand off
+with Wegner like the other three, nothing would prevail, and the dispute would
+have two resolutions: the Septuagint's side, and Wegner alone. That was
+computed, before the step's rating was audited. A reader of the Greek Genesis
+who has the law before him and still reads 34:3 of a woman no longer a virgin
+would bring it back. Wevers's *Notes on the Greek Text of Genesis* and Harl's
+*La Genèse* have not been read.
 
 **Wegner's step**, from the older usage and Genesis 34:3 to the Septuagint's
 sense, is rated `disputed`, the lowest rating. Rico and Gentry, and Bratcher,
 grant both its grounds and deny its conclusion: to Rico and Gentry, Genesis 34:3
 is "the exception that proves the rule", an archaism of the Greek Pentateuch
-(18, 21); to Bratcher, an exception made "inexplicably" (113). The higher
-ratings belong to the grounds, not the step: that early Greek used παρθένος of a
-young woman (well supported), and that the Greek of Genesis 34:3 calls Dinah one
-(`consensus`). Both sides grant them, and neither says what the word meant at
-Isaiah 7:14. Only if the step itself were rated higher would Wegner defeat all
-three rivals unanswered, and prevail alone.
+(18, 21); to Bratcher, it is "surprising" (113). The higher ratings belong to
+the grounds, not the step: that early Greek used παρθένος of a young woman (well
+supported), and that the Greek of Genesis 34:3 calls Dinah one (`consensus`).
+Both sides grant them, and neither says what the word meant at Isaiah 7:14.
 
-**Rico and Gentry's step**, from the Jewish objection (and the Greek Isaiah's
-usage, which the library adds) to the sense. It is `disputed` because Davidson
-(1899) and Meade (2013) grant the objection and read it the other way: the
-revisers wrote νεᾶνις against a sense Christians had put on the word, not one
-its translator gave it. Rated higher, Rico and Gentry would defeat Wegner and he
-could not answer them; the witness would then prevail with them and the laws.
+**The other three steps**, Rico and Gentry's from the Jewish objection, the
+laws' from what the two laws read, and the witness's own ground, are each
+`disputed`, and the verdict does not need any of them raised.
 
-**The laws' step**, from what the two laws read to the sense of the word in them
-(`laws_rest_on_their_inference`). It is `disputed` on one reader. Miller grants
-that the laws require virgins, and holds that the virginity "has to be inferred
-from the context": "parthenos in the Septuagint did not by itself connote what
-we mean by virginity". Of what he says of the Greek, Genesis 34:3 holds; the
-young widow he finds at Joel 1:8 is not there in the Greek, which calls her a
-bride; and the translators did not "consistently" use the word for עַלְמָה. His
-remaining point, that the Greek adds "who has not known a man" where virginity
-matters (Genesis 24:16), translates a clause the Hebrew already has; what it
-shows about the word, the page does not settle. The case from the laws gives
-his dissent in his words. The rating rests on him, and showing his evidence
-partly wrong does not move it: the rule counts a reader who grants the grounds
-and denies the conclusion. Rated higher, the laws would defeat Wegner and he
-could not answer them; the witness would prevail with Rico and Gentry and the
-laws.
+- **Rico and Gentry's step.** It is `disputed` because Davidson (1899) and Meade
+  (2013) grant the objection and read it the other way: the revisers wrote
+  νεᾶνις against a sense Christians had put on the word, not one its translator
+  gave it.
+- **The laws' step** (`laws_rest_on_their_inference`). It is `disputed` on one
+  reader. Miller grants that the laws require virgins, and holds that the
+  virginity "has to be inferred from the context": "parthenos in the Septuagint
+  did not by itself connote what we mean by virginity". Of what he says of the
+  Greek, the young widow he finds at Joel 1:8 is not there in the Greek, which
+  calls her a bride; the translators did not "consistently" use the word for
+  עַלְמָה; and Genesis 34:3 is what the status reading reads otherwise. His point
+  that the Greek adds "who has not known a man" where virginity matters
+  (Genesis 24:16) translates a clause the Hebrew already has. The rating rests
+  on him all the same: the rule counts a reader who grants the grounds and
+  denies the conclusion, and does not weigh his evidence.
+- **The witness's own ground**, that "virgin" is a sense of the word, cited
+  `disputed` because Wegner, Walton, Rhodea and Meade contest it.
 
-**The witness's own ground**, that "virgin" is a sense of the word, cited
-`disputed` because Wegner, Walton, Rhodea and Meade contest it. An attack on a
-premise is weighed against that premise's own rating. Rated higher, the ground
-would outrank Wegner's attack on it, and the witness would prevail with Rico and
-Gentry and the laws. This is the rating closest to the reader who holds that the
-word is undeniably "virgin". The laws are a cited argument against Wegner's case
-for the opposite; they do not raise the ground's rating, because the readers who
-contest the ground still contest it.
-
-The dissents on the rival steps are brief on both sides. Davidson hedges his
-account of the Three with a "possibly", though not his account of the word;
-Meade's is a blog comment revising his own earlier view. Against Wegner, Rico
-and Gentry give a reason, the archaism of the Greek Pentateuch, while Bratcher
-calls Genesis 34:3 inexplicable without explaining it. The ratings weigh none of
-this. Each step has a cited reader who grants its grounds and denies its
-conclusion, and so each is `disputed`.
+The dissents on these steps are brief on both sides. Davidson hedges his account
+of the Three with a "possibly", though not his account of the word; Meade's is a
+blog comment revising his own earlier view. The ratings weigh none of this.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
@@ -299,10 +307,33 @@ theorem laws_rest_on_their_inference :
 
 #print axioms laws_rest_on_their_inference
 
+/-- The status reading delivers its conclusion. -/
+theorem dinahCase_establishes : Establishes dinahCase := by
+  establish [bornOfAVirginDefs]
+
+/-- The status reading has a model: the reading Justin gives the elders' Greek,
+extended to Genesis 34. "Virgin" is a sense of the word, and Dinah is called by
+it. -/
+theorem dinahCase_is_satisfiable : Satisfiable dinahCase.premises := by
+  satisfied_by virginConceivesReading [bornOfAVirginDefs]
+
+/-- **The status reading rests on its inference.** Grant what Exodus 22:15–16
+reads, and that Genesis 34 tells Shechem's act in the words of the laws: on
+Wegner's reading, which Rico and Gentry share for this verse, the Greek still
+calls Dinah a παρθένος in the older sense, "young woman", and not as the law's
+virgin. The texts do not decide which; the step does, and that is why it is
+rated `disputed`. -/
+@[headline]
+theorem dinah_rests_on_its_inference :
+    ¬ Entails dinahLine.grounds (p .dinahIsTheLawsParthenos) := by
+  refute_with wegnerDriftReading [bornOfAVirginDefs]
+
+#print axioms dinah_rests_on_its_inference
+
 /-! ### Strength -/
 
 /-- The witness is no stronger than its claim about the word, cited
-`disputed`, nor than its step, rated `disputed` on Walton's report of Archer. -/
+`disputed`. Its step is rated `plausible`, and does not lower it further. -/
 theorem septuagintWitness_strength : septuagintWitness.strength = 0 := by decide
 
 /-- Wegner's grounds are well supported and `consensus`, but his inference is
@@ -316,6 +347,11 @@ theorem usageCase_strength : usageCase.strength = 0 := by decide
 /-- The laws' grounds are `consensus`, what the Greek reads, but their inference
 is `disputed`, on Miller. -/
 theorem lawsCase_strength : lawsCase.strength = 0 := by decide
+
+/-- The status reading's grounds are `consensus`, what the texts read, and its
+inference is `plausible`: no cited reader grants the law's words in Genesis 34
+and denies it, and none has been found who argues it. -/
+theorem dinahCase_strength : dinahCase.strength = 1 := by decide
 
 /-! ### The defeats -/
 
@@ -353,6 +389,20 @@ theorem drift_defeats_laws : Defeats driftObjection lawsCase :=
 theorem laws_defeats_drift : Defeats lawsCase driftObjection :=
   Horn.defeats_of_defeats? lawsCase_strength driftObjection_strength (by decide +kernel)
 
+/-- **Wegner does not defeat the status reading.** That the word had not yet
+come to mean "virgin" excludes that Genesis 34:3 uses it in that sense, by the
+same definition, so he attacks it. But a rebuttal succeeds only if the attacker
+is no weaker than the attacked, and Wegner, whose step is `disputed`, is weaker
+than the status reading, whose step is `plausible`. -/
+theorem drift_does_not_defeat_dinah : ¬ Defeats driftObjection dinahCase :=
+  (Horn.defeats_iff_of_defeats? (P := False) driftObjection_strength dinahCase_strength
+    (by decide +kernel)).mp
+
+/-- **The status reading defeats Wegner.** Its sense "virgin" at Genesis 34:3
+excludes his "not yet 'virgin'", and he is no stronger than it. -/
+theorem dinah_defeats_drift : Defeats dinahCase driftObjection :=
+  Horn.defeats_of_defeats? dinahCase_strength driftObjection_strength (by decide +kernel)
+
 /-! ### The dispute -/
 
 /-- The parties to the dispute over the Septuagint's word. -/
@@ -367,6 +417,9 @@ inductive SeptuagintParty
   /-- The case from the laws: in the Greek Pentateuch's laws, παρθένος is used in
   the sense "virgin". -/
   | laws
+  /-- The status reading: at Genesis 34:3 the Greek names Dinah a παρθένος as
+  the law names the seduced virgin. -/
+  | dinah
 deriving DecidableEq
 
 /-- The package each party argues from. -/
@@ -376,6 +429,7 @@ def septuagintPartyNode : SeptuagintParty → ArgumentPackage Claim
   | .drift => driftObjection
   | .usage => usageCase
   | .laws => lawsCase
+  | .dinah => dinahCase
 
 /-- The dispute over the Septuagint's word: every party's premises have a model,
 every party establishes its conclusion, and every party's inferences are
@@ -389,15 +443,16 @@ def septuagintDispute : Dispute Claim SeptuagintParty where
     | .drift => driftObjection_establishes
     | .usage => usageCase_establishes
     | .laws => lawsCase_establishes
+    | .dinah => dinahCase_establishes
   rated i := by
     cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
 
-/-- **The witness, Rico and Gentry and the laws stand together**, on the reading
-Justin gives the elders' Greek, extended to the laws: "virgin" is a sense of the
-word, the laws use it so, and the translator read the woman of 7:14 as a
-virgin. -/
+/-- **The witness, Rico and Gentry, the laws and the status reading stand
+together**, on the reading Justin gives the elders' Greek, extended to the
+Pentateuch: "virgin" is a sense of the word, the laws use it so, Genesis 34:3
+names Dinah by it, and the translator read the woman of 7:14 as a virgin. -/
 theorem septuagint_stands_with_the_usage :
-    septuagintDispute.StandTogether [.witness, .usage, .laws] := by
+    septuagintDispute.StandTogether [.witness, .usage, .laws, .dinah] := by
   satisfied_by virginConceivesReading [Dispute.StandTogether, bornOfAVirginDefs]
 
 /-- The defeats of the dispute, as a table. -/
@@ -408,21 +463,31 @@ def septuagintPartyDefeats : SeptuagintParty → SeptuagintParty → Prop
   | .usage, .drift => True
   | .drift, .laws => True
   | .laws, .drift => True
+  | .dinah, .drift => True
   | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
 instance : DecidableRel septuagintPartyDefeats := fun i j => by
   cases i <;> cases j <;> unfold septuagintPartyDefeats <;> infer_instance
 
-/-- Every party's weakest link ranks at the bottom. -/
-theorem septuagintPartyNode_strength : ∀ i, (septuagintPartyNode i).strength = 0
+/-- Each party's strength, its weakest link: the bottom for every party but the
+status reading, one step up. -/
+def septuagintPartyStrength : SeptuagintParty → ℕ
+  | .dinah => 1
+  | _ => 0
+
+/-- Each party's weakest link, as computed. -/
+theorem septuagintPartyNode_strength :
+    ∀ i, (septuagintPartyNode i).strength = septuagintPartyStrength i
   | .witness => septuagintWitness_strength
   | .drift => driftObjection_strength
   | .usage => usageCase_strength
   | .laws => lawsCase_strength
+  | .dinah => dinahCase_strength
 
-/-- **Who defeats whom**, all sixteen pairs: Wegner defeats each of the other
-three, and each defeats him back; and nothing else. Every
+/-- **Who defeats whom**, all twenty-five pairs: Wegner defeats the witness,
+Rico and Gentry and the laws, and each defeats him back; the status reading
+defeats Wegner, and he does not defeat it; and nothing else. Every
 cell is computed from what the parties hold by `Horn.defeats?` and checked by
 the kernel. -/
 theorem septuagintDispute_defeats :
@@ -434,7 +499,7 @@ theorem septuagintDispute_defeats :
 
 /-- The dispute in the form the verdict solver computes with. -/
 def septuagintFinite : Solver.Finite septuagintDispute.defeats where
-  parties := [.witness, .drift, .usage, .laws]
+  parties := [.witness, .drift, .usage, .laws, .dinah]
   complete i := by cases i <;> decide
   defeats i j := decide (septuagintPartyDefeats i j)
   spec i j := by rw [septuagintDispute_defeats]; simp
@@ -448,11 +513,12 @@ def septuagintPartySupports : SeptuagintParty → SeptuagintParty → Prop
 instance : DecidableRel septuagintPartySupports := fun i j => by
   cases i <;> cases j <;> unfold septuagintPartySupports <;> infer_instance
 
-/-- **One support**, in all sixteen pairs: Rico and Gentry's conclusion is the
+/-- **One support**, in all twenty-five pairs: Rico and Gentry's conclusion is the
 witness's contested ground, that "virgin" is a sense of παρθένος. The library
 draws a support only where one party's conclusion is, word for word, another's
-premise. The laws reach the witness's ground through a definition, so no support
-is drawn from them, though they lead to the same ground. Every cell is computed
+premise. The laws and the status reading reach the witness's ground through a
+definition, so no support is drawn from them, though they lead to the same
+ground. Every cell is computed
 by `supports?` and checked by the kernel. -/
 theorem septuagintDispute_supports :
     ∀ i j, septuagintDispute.supports i j ↔ septuagintPartySupports i j := by
@@ -460,7 +526,7 @@ theorem septuagintDispute_supports :
   refine supports_iff_of_supports? ?_
   cases i <;> cases j <;> decide +kernel
 
-/-- **No case is part of another's** here, in all sixteen pairs, except each
+/-- **No case is part of another's** here, in all twenty-five pairs, except each
 party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
 theorem septuagintDispute_partOf : ∀ i j, septuagintDispute.partOf i j ↔ i = j := by
   intro i j
@@ -475,64 +541,51 @@ def septuagintMap : ArgumentMap septuagintDispute where
   partOf i j := decide (i = j)
   partOf_spec i j := by rw [septuagintDispute_partOf]; simp
 
-/-- Why nothing prevails: a defeater for each party. -/
-def everySeptuagintPartyDefeated : Verdict septuagintDispute where
+/-- Why the Septuagint's side prevails, in stages: the status reading first,
+which nothing defeats; then the witness, Rico and Gentry and the laws, whom it
+defends by defeating Wegner; and Wegner out, defeated by the status reading. -/
+def septuagintHeardInStages : Verdict septuagintDispute where
   finite := septuagintFinite
-  claim := .nothingGrounded
-    [(.witness, .drift), (.drift, .witness), (.usage, .drift), (.laws, .drift)]
+  claim := .groundedExactly [[.dinah], [.witness, .usage, .laws]] [(.drift, .dinah)]
   checked := by decide +kernel
 
-/-- **Nothing prevails.** Every party is defeated by someone — the witness, Rico
-and Gentry and the laws by Wegner, Wegner by all three — so no position is
-accepted however the standoffs are resolved. -/
+/-- **The Septuagint's side prevails, and Wegner does not.** Nothing defeats the
+status reading of Genesis 34:3, because Wegner is weaker than it, so it is
+accepted first. It defeats Wegner, the only party that defeats the witness, Rico
+and Gentry or the laws, so all three are accepted with it; and nothing defends
+Wegner. The verdict turns on one rating, the status reading's step
+(`dinahLine`). -/
 @[headline]
-theorem nothing_prevails_over_parthenos : grounded septuagintDispute.defeats = ∅ :=
-  everySeptuagintPartyDefeated.holds
+theorem septuagint_prevails_over_wegner :
+    grounded septuagintDispute.defeats = {.witness, .usage, .laws, .dinah} :=
+  Eq.trans septuagintHeardInStages.holds (by ext x; cases x <;> simp [Solver.toSet])
 
-#print axioms nothing_prevails_over_parthenos
+#print axioms septuagint_prevails_over_wegner
 
-/-- Why the witness with Rico and Gentry and the laws is one resolution. -/
-def septuagintWithTheUsage : Verdict septuagintDispute where
+/-- Why Wegner on παρθένος cannot be defended: the status reading defeats him,
+and nothing answers it. -/
+def driftAnsweredByDinah : Verdict septuagintDispute where
   finite := septuagintFinite
-  claim := .preferred [.witness, .usage, .laws]
+  claim := .indefensible .drift [(.drift, .dinah)]
   checked := by decide +kernel
 
-/-- **One resolution: the Septuagint's witness, with Rico and Gentry and the
-laws.** None of the three defeats another, and between them they answer Wegner,
-the only party to defeat any of them. Wegner is in conflict with all three, so no
-larger set can be defended. -/
+/-- **Wegner on παρθένος cannot be defended.** No admissible set contains it:
+the status reading defeats it, and nothing defeats the status reading. -/
 @[headline]
-theorem septuagint_is_one_resolution :
-    Preferred septuagintDispute.defeats {.witness, .usage, .laws} :=
-  (show Solver.toSet [SeptuagintParty.witness, .usage, .laws] =
-      {.witness, .usage, .laws} by ext; simp) ▸
-    septuagintWithTheUsage.holds
+theorem drift_indefensible (S : Set SeptuagintParty)
+    (hS : Admissible septuagintDispute.defeats S) : SeptuagintParty.drift ∉ S :=
+  driftAnsweredByDinah.holds S hS
 
-#print axioms septuagint_is_one_resolution
+#print axioms drift_indefensible
 
-/-- Why Wegner alone is the other resolution. -/
-def driftAlone : Verdict septuagintDispute where
-  finite := septuagintFinite
-  claim := .preferred [.drift]
-  checked := by decide +kernel
+/-- So every resolution of the dispute accepts the Septuagint's witness. -/
+theorem septuagint_skeptically_accepted :
+    SkepticallyAccepted septuagintDispute.defeats .witness :=
+  .of_grounded (by rw [septuagint_prevails_over_wegner]; simp)
 
-/-- **The other resolution: Wegner.** His case can be defended on its own,
-because it defeats every party that defeats it; and it is in conflict with all
-three, so no larger set can be defended. -/
-@[headline]
-theorem drift_is_the_other_resolution : Preferred septuagintDispute.defeats {.drift} :=
-  (show Solver.toSet [SeptuagintParty.drift] = {.drift} by ext; simp) ▸ driftAlone.holds
-
-#print axioms drift_is_the_other_resolution
-
-/-- So the dispute does not force the Septuagint's witness. -/
-theorem septuagint_not_skeptically_accepted :
-    ¬ SkepticallyAccepted septuagintDispute.defeats .witness :=
-  fun h => by simpa using h _ drift_is_the_other_resolution
-
-/-- Nor does it force Wegner on παρθένος. -/
-theorem drift_not_skeptically_accepted :
-    ¬ SkepticallyAccepted septuagintDispute.defeats .drift :=
-  fun h => by simpa using h _ septuagint_is_one_resolution
+/-- And none accepts Wegner on παρθένος. -/
+theorem drift_not_credulously_accepted :
+    ¬ CredulouslyAccepted septuagintDispute.defeats .drift :=
+  fun ⟨S, hS, hc⟩ => drift_indefensible S hS.1 hc
 
 end TestimonyArguments.BornOfAVirgin

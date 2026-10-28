@@ -140,10 +140,10 @@ about any single passage, and it does not count a word used *of* a virgin as evi
 word *means* "virgin". What a word means at a passage stays a premise, cited and rated, and the
 context it is read from is the premise's evidence. What it can show false is a claim that a
 usage *lacked* a sense, wherever a passage of it is held to have that sense. In the virgin birth
-argument it joins the laws of the Greek Pentateuch to the Septuagint's Greek: their sense
-"virgin" makes "virgin" one of the word's senses in the Septuagint, which is the claim encoded
-for Rico and Gentry, and excludes Wegner's "not yet 'virgin'". It says nothing of which sense
-the word has at Isaiah 7:14.
+argument it joins the laws of the Greek Pentateuch, and the status reading of Genesis 34:3, to
+the Septuagint's Greek: their sense "virgin" makes "virgin" one of the word's senses in the
+Septuagint, which is the claim encoded for Rico and Gentry, and excludes Wegner's "not yet
+'virgin'". It says nothing of which sense the word has at Isaiah 7:14.
 
 ### What the search found, not yet fixed
 

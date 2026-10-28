@@ -236,6 +236,64 @@ def lawsUseParthenosAsVirginCited : AtomMeta :=
       , tradition := .christianHistoricalGrammatical
       , confidence := .disputed } }
 
+/-- `seductionLawPricesAParthenos`. What the Greek reads, from Rahlfs's text:
+"if anyone deceives a παρθένος not betrothed and lies with her, he shall endow
+her with a bride-price as his wife" (22:15), and if her father will not give her,
+"he shall pay the father silver, as much as is the bride-price of virgins", ἡ
+φερνὴ τῶν παρθένων (22:16), where the Hebrew has בְּתוּלָה and מֹהַר הַבְּתוּלֹת. The
+law calls her a παρθένος, and names what the man owes "the bride-price of
+virgins", after he has lain with her. What that price says of her is the step's
+to read (`dinahLine`). `consensus`: it is what the text reads. -/
+def seductionLawPricesAParthenosCited : AtomMeta :=
+  { label := "In the Greek Exodus, the seduced παρθένος is owed 'the bride-price of virgins'"
+  , kind := .textual
+  , source :=
+      { primary := .scripture seductionLaw
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `shechemActsUnderTheLaw`. What the texts read, from Rahlfs's text and the
+Masoretic. Three words of Genesis 34 are words of the laws of the violated
+virgin:
+
+- Shechem "humbled her", ἐταπείνωσεν αὐτήν, וַיְעַנֶּהָ (34:2), the verb of the
+  man who seizes a virgin not betrothed: he shall marry her "because he humbled
+  her" (Deuteronomy 22:29, in both texts).
+- Jacob's sons say he "did folly in Israel", נְבָלָה עָשָׂה בְיִשְׂרָאֵל (34:7), the
+  words of the bride found without the tokens of virginity, who "did folly in
+  Israel" (Deuteronomy 22:21). The link is the Hebrew's: the Greek has
+  ἄσχημον at 34:7 and ἀφροσύνην at Deuteronomy 22:21.
+- Shechem offers the bride-price, φερνή, מֹהַר (34:12), the payment Exodus
+  22:15–16 requires of the man who has lain with a παρθένος.
+
+`consensus`: the words are the texts', whatever is made of them. -/
+def shechemActsUnderTheLawCited : AtomMeta :=
+  { label := "Genesis 34 tells Shechem's act in the words of the laws of the violated virgin"
+  , kind := .textual
+  , source :=
+      { primary := .scripture shechemUnderTheLaw
+      , supporting := [.scripture seductionLaw]
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `dinahIsTheLawsParthenos`. The status reading of Genesis 34:3: the Greek
+calls Dinah "the παρθένος" as the law of Exodus 22:15–16 calls the woman a man
+has lain with, naming her by the standing he took from her, and the word keeps
+its sense "virgin". `dinahLine` gives the argument and its rating. `plausible`,
+as its step is. -/
+def dinahIsTheLawsParthenosCited : AtomMeta :=
+  { label := "At Genesis 34:3 the Greek names Dinah a παρθένος as the law names the seduced virgin"
+  , kind := .linguistic
+  , source :=
+      { primary := .scripture seductionLaw
+      , supporting :=
+          [ .scripture shechemUnderTheLaw
+          , .work frymerKenskyVirginity (.pageList [80, 91])
+          , .work ricoGentryInfantKing (.pages 18 21)
+          , .work bratcherStudyOfIsaiah (.page 113) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .plausible } }
+
 /-- `tryphoRejectsParthenos`. Trypho: "The Scripture has not, 'Behold, the virgin
 shall conceive, and bear a son,' but, 'Behold, the young woman shall conceive'"
 (*Dialogue* 67). Justin answers that Trypho's teachers "refuse to admit that the

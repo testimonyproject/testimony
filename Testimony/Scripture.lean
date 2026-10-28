@@ -163,6 +163,27 @@ def tokensOfVirginity : List ScriptureCitation :=
   [ rangeIn .septuagint ⟨.deuteronomy, 22, 13, 22, 21⟩
   , rangeIn .masoretic ⟨.deuteronomy, 22, 13, 22, 21⟩ ]
 
+/-- Exodus 22:15–16 (22:16–17 in English Bibles) — the seduced woman. The Greek
+calls her a παρθένος not betrothed; the man who lies with her takes her as his
+wife with a bride-price (φερνή), or, if her father refuses, pays "the bride-price
+of virgins" (ἡ φερνὴ τῶν παρθένων; the Hebrew's מֹהַר הַבְּתוּלֹת). -/
+def seductionLaw : List ScriptureCitation :=
+  [ rangeIn .septuagint ⟨.exodus, 22, 15, 22, 16⟩
+  , rangeIn .masoretic ⟨.exodus, 22, 15, 22, 16⟩ ]
+
+/-- Genesis 34:2, 7 and 12, with the laws whose words they share. Shechem
+"humbled" Dinah (34:2; ἐταπείνωσεν, וַיְעַנֶּהָ), as the man who seizes a virgin
+has "humbled" her (Deuteronomy 22:29); the deed was "folly in Israel" (34:7,
+נְבָלָה ... בְיִשְׂרָאֵל), as the bride's harlotry is (Deuteronomy 22:21), in the
+Hebrew, where the Greek has two different words; and he offers the bride-price
+(34:12; φερνή, מֹהַר), as Exodus 22:15–16 requires. -/
+def shechemUnderTheLaw : List ScriptureCitation :=
+  [ verseIn .septuagint ⟨.genesis, 34, 2⟩, verseIn .masoretic ⟨.genesis, 34, 2⟩
+  , verseIn .masoretic ⟨.genesis, 34, 7⟩
+  , verseIn .septuagint ⟨.genesis, 34, 12⟩, verseIn .masoretic ⟨.genesis, 34, 12⟩
+  , verseIn .septuagint ⟨.deuteronomy, 22, 29⟩, verseIn .masoretic ⟨.deuteronomy, 22, 29⟩
+  , verseIn .masoretic ⟨.deuteronomy, 22, 21⟩ ]
+
 /-- Genesis 24:43, Exodus 2:8, Psalm 68:26 and Song 1:3 and 6:8 — every other
 עַלְמָה the Peshitta renders, each with the cognate ܥܠܝܡܬܐ. Proverbs 30:19, "the
 way of a man with an עַלְמָה", it renders "in his youth". -/

@@ -90,6 +90,18 @@ inductive Claim
   /-- In the Greek Pentateuch's laws, παρθένος is used in the sense "virgin".
   **The laws' sense**, and a claim about two passages, not about Isaiah 7:14. -/
   | lawsUseParthenosAsVirgin
+  /-- In the Greek Exodus, a man who seduces a παρθένος not betrothed and lies
+  with her shall take her as his wife with a bride-price, or pay "the bride-price
+  of virgins" (22:15–16). -/
+  | seductionLawPricesAParthenos
+  /-- Genesis 34 tells Shechem's act in the words of the laws of the violated
+  virgin: he "humbled" her (34:2), it was "folly in Israel" (34:7), and he offers
+  the bride-price (34:12). -/
+  | shechemActsUnderTheLaw
+  /-- At Genesis 34:3 the Greek calls Dinah a παρθένος in the sense "virgin",
+  naming her by the standing the law gives the woman Shechem took. **The status
+  reading** of Wegner's counterexample. -/
+  | dinahIsTheLawsParthenos
   /-- Trypho rejects the Septuagint's "the virgin" at Isaiah 7:14 and reads "the
   young woman" (Justin, *Dialogue* 67 and 71). -/
   | tryphoRejectsParthenos

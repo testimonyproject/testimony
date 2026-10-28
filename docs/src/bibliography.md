@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-168 entries, of which 28 carry no stable public identifier.
+169 entries, of which 28 carry no stable public identifier.
 
 - <a id="achtemeier-1-peter-1996"></a>**`achtemeier-1-peter-1996`** — Paul J. Achtemeier. *1 Peter: A Commentary on First Peter*. Minneapolis: Fortress Press. Hermeneia. 1996. ISBN 9780800660307.
 - <a id="akin-woman-seed-serpent-1999"></a>**`akin-woman-seed-serpent-1999`** — Jimmy Akin. *The Woman, the Seed, the Serpent*. Catholic Answers. 1999. [https://www.catholic.com/magazine/print-edition/the-woman-the-seed-the-serpent](https://www.catholic.com/magazine/print-edition/the-woman-the-seed-the-serpent).
@@ -68,6 +68,7 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - <a id="fitzmyer-virginal-conception-nt-1973"></a>**`fitzmyer-virginal-conception-nt-1973`** — Joseph A. Fitzmyer. *The Virginal Conception of Jesus in the New Testament*. *Theological Studies* 34.4: 541–575. 1973. [DOI 10.1177/004056397303400401](https://doi.org/10.1177/004056397303400401).
 - <a id="florovsky-bible-church-tradition-1972"></a>**`florovsky-bible-church-tradition-1972`** — Georges Florovsky. *Bible, Church, Tradition: An Eastern Orthodox View*. Belmont, MA: Nordland Publishing Company. The Collected Works of Georges Florovsky 1. 1972. ISBN 9780913124024. Volume 1 of the Collected Works. A later reprint (ISBN 9780473635909) paginates differently.
 - <a id="france-matthew-2007"></a>**`france-matthew-2007`** — R. T. France. *The Gospel of Matthew*. Grand Rapids: Wm. B. Eerdmans. New International Commentary on the New Testament. 2007. ISBN 9780802825018.
+- <a id="frymer-kensky-virginity-1998"></a>**`frymer-kensky-virginity-1998`** — Tikva Frymer-Kensky. *Virginity in the Bible*. In *Gender and Law in the Hebrew Bible and the Ancient Near East*, ed. Victor H. Matthews, Bernard M. Levinson, Tikva Frymer-Kensky, 79–96. Sheffield: Sheffield Academic Press. 1998. ISBN 1850758867. Journal for the Study of the Old Testament Supplement Series 262.
 - <a id="gathercole-where-boasting-2002"></a>**`gathercole-where-boasting-2002`** — Simon J. Gathercole. *Where Is Boasting?: Early Jewish Soteriology and Paul's Response in Romans 1–5*. Grand Rapids: Wm. B. Eerdmans. 2002. ISBN 9780802839916.
 - <a id="geiselmann-meaning-of-tradition-1966"></a>**`geiselmann-meaning-of-tradition-1966`** — Josef Rupert Geiselmann. *The Meaning of Tradition*. Translated by W. J. O'Hara. New York: Herder and Herder. Quaestiones Disputatae 15. 1966. *(no public identifier)* Catalogued without an ISBN.
 - <a id="geisler-review-mathison-2005"></a>**`geisler-review-mathison-2005`** — Norman L. Geisler. *A Critical Review of The Shape of Sola Scriptura by Keith Mathison*. *Christian Apologetics Journal* 4.1: 117–128. 2005. [https://www.galaxie.com/article/caj04-1-04](https://www.galaxie.com/article/caj04-1-04). Spring 2005 issue; a subscription is required for the full text.
