@@ -26,10 +26,13 @@ necessarily betraying an interpretation as virgin". Wegner and Walton grant that
 by the New Testament the word meant "virgin"; Meade and Davidson put that sense
 down to Christian use. The dispute is over the translator's day, two or three
 centuries before Matthew. The Greek Pentateuch's laws use the word where
-virginity is the point, and `Dispute.Septuagint` weighs that case too. Weighed
-against each other, nothing prevails: the Septuagint's witness, with Rico and
-Gentry and the case from the laws, can be defended, and so can Wegner
-(`nothing_prevails_over_parthenos`).
+virginity is the point, and its law of the seduced παρθένος reads Genesis 34:3
+itself otherwise: the woman a man has lain with is still the law's παρθένος, and
+owed "the bride-price of virgins" (Exodus 22:15–16). `Dispute.Septuagint` weighs
+all five, and the Septuagint's witness prevails, with Rico and Gentry, the laws
+and that reading of Genesis 34:3; Wegner cannot be defended
+(`septuagint_prevails_over_wegner`). The verdict turns on one rating, the
+status reading's step, `plausible` on the readers found.
 
 **What it would show, if the word means "virgin".** How one early reader read
 Isaiah: a Jewish translator, before Christ, read the woman of 7:14 as a virgin, so
@@ -119,11 +122,14 @@ she conceived, and עַלְמָה does not denote a virgin either. The woman of 
 already pregnant when the sign is given, and the sign need not be a miracle.
 Wegner does not take up the laws of the Greek Pentateuch. This reading extends
 his view to them as Miller reads them: the laws say what they say, and the word
-in them still means "young woman". -/
+in them still means "young woman". Nor does he take up Exodus 22:15–16; in this
+reading Genesis 34 is told in that law's words, and Dinah is still called a
+παρθένος in the older sense. -/
 def wegnerDriftReading : Valuation Claim := fun a =>
   match a with
   | .parthenosMeansVirgin => False
   | .lawsUseParthenosAsVirgin => False
+  | .dinahIsTheLawsParthenos => False
   | .lxxReadsAVirgin => False
   | .lxxEnvisagesAVirginalConception => False
   | .almahMeansVirgin => False

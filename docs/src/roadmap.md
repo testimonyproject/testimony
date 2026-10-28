@@ -72,9 +72,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `drift_rests_on_its_inference` | `¬Entails driftLine.grounds (p Claim.parthenosMeantYoungWoman)` | **Wegner on παρθένος rests on its inference.** On Rico and Gentry's reading the older Greek usage is granted, Dinah is called παρθένος after Shechem has lain with her, and the … |
 | `usage_rests_on_its_inference` | `¬Entails usageLine.grounds (p Claim.parthenosMeansVirgin)` | **Rico and Gentry's case rests on its inference.** On the reading Davidson (1899, 456) and Meade (2013) give, Trypho objects to παρθένος and the Three write νεᾶνις because by then … |
 | `laws_rest_on_their_inference` | `¬Entails lawsLine.grounds (p Claim.lawsUseParthenosAsVirgin)` | **The case from the laws rests on its inference.** The high priest's παρθένος is set against the widow and the harlot, and the bride without τὰ παρθένια dies as a harlot; and … |
-| `nothing_prevails_over_parthenos` | `Framework.grounded septuagintDispute.defeats = ∅` | **Nothing prevails.** Every party is defeated by someone — the witness, Rico and Gentry and the laws by Wegner, Wegner by all three — so no position is accepted however the … |
-| `septuagint_is_one_resolution` | `Framework.Preferred septuagintDispute.defeats {SeptuagintParty.witness, SeptuagintParty.usage, SeptuagintParty.laws}` | **One resolution: the Septuagint's witness, with Rico and Gentry and the laws.** None of the three defeats another, and between them they answer Wegner, the only party to defeat … |
-| `drift_is_the_other_resolution` | `Framework.Preferred septuagintDispute.defeats {SeptuagintParty.drift}` | **The other resolution: Wegner.** His case can be defended on its own, because it defeats every party that defeats it; and it is in conflict with all three, so no larger set can … |
+| `dinah_rests_on_its_inference` | `¬Entails dinahLine.grounds (p Claim.dinahIsTheLawsParthenos)` | **The status reading rests on its inference.** Grant what Exodus 22:15–16 reads, and that Genesis 34 tells Shechem's act in the words of the laws: on Wegner's reading, which Rico … |
+| `septuagint_prevails_over_wegner` | `Framework.grounded septuagintDispute.defeats = {SeptuagintParty.witness, SeptuagintParty.usage, SeptuagintParty.laws, SeptuagintParty.dinah}` | **The Septuagint's side prevails, and Wegner does not.** Nothing defeats the status reading of Genesis 34:3, because Wegner is weaker than it, so it is accepted first. |
+| `drift_indefensible` | `∀ (S : Set SeptuagintParty), Framework.Admissible septuagintDispute.defeats S → SeptuagintParty.drift ∉ S` | **Wegner on παρθένος cannot be defended.** No admissible set contains it: the status reading defeats it, and nothing defeats the status reading. |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -445,15 +445,16 @@ corpus that verse comes from, uses the word in its laws where virginity is the
 point (Leviticus 21:13–14, Deuteronomy 22:13–21), and a new article of the
 ontology carries a sense found in a passage to the usage it belongs to
 (`a_sense_in_a_usage_at_work`), so the laws' sense excludes Wegner's "not yet
-'virgin'" by what the words mean. Weighed as a dispute, **nothing prevails**
-(`nothing_prevails_over_parthenos`): the Septuagint with Rico and Gentry and the
-laws is one defensible resolution, Wegner the other, and the tie is a fact about
-four ratings: Wegner's step from Genesis 34:3, Rico and Gentry's from the Jewish
-objection to παρθένος, the laws' step, and the claim about παρθένος itself. The
-laws' step is `disputed` on one reader, Miller, and two of the three things he
-says of the Greek do not hold of it; rated higher, it would hand the dispute to
-the witness. The page says where the evidence lies, which the ratings do not
-weigh.
+'virgin'" by what the words mean. Genesis 34:3 itself is read under the law
+of the seduced παρθένος (Exodus 22:15–16), which still calls the woman a man has
+lain with a παρθένος and owed "the bride-price of virgins"; Genesis 34 tells
+Shechem's act in that law's words. Weighed as a dispute, **the Septuagint's side
+prevails** (`septuagint_prevails_over_wegner`): that reading of Genesis 34:3
+defeats Wegner, and he, on a step rated `disputed`, cannot answer it. The
+verdict turns on one rating, that reading's step, `plausible` because no reader
+found grants its grounds and denies it, and no higher because none found makes
+it; rated `disputed`, it would leave nothing prevailing, as before. The page
+says where the evidence lies, which the ratings do not weigh.
 Granted the word, the Septuagint shows
 that a pre-Christian Jewish reader took the woman of 7:14 to be a virgin, not
 what Isaiah's word means (`septuagint_word_rests_on_its_inference`), and its

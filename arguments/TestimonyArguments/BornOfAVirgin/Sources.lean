@@ -172,6 +172,9 @@ def cite : Claim → AtomMeta
   | .priestMarriesAParthenos => priestMarriesAParthenosCited
   | .partheniaProveTheBride => partheniaProveTheBrideCited
   | .lawsUseParthenosAsVirgin => lawsUseParthenosAsVirginCited
+  | .seductionLawPricesAParthenos => seductionLawPricesAParthenosCited
+  | .shechemActsUnderTheLaw => shechemActsUnderTheLawCited
+  | .dinahIsTheLawsParthenos => dinahIsTheLawsParthenosCited
   | .tryphoRejectsParthenos => tryphoRejectsParthenosCited
   | .lxxReadsAVirgin => lxxReadsAVirginCited
   | .lxxPutsTheConceptionInTheFuture => lxxPutsTheConceptionInTheFutureCited

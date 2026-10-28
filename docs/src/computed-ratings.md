@@ -125,26 +125,28 @@ Sola fide has six exclusions and no entailments (`TestimonyArguments.Meanings.So
 Every dissent gets the same background, whichever side it is on. Sola scriptura has one exclusion
 and two entailments (`TestimonyArguments.Meanings.SolaScriptura.joins`): Mark 7's principle against
 binding a commandment of men as God's word, and "Scripture is the sole infallible rule" asserting
-that it is infallible and that no other rule is. The virgin birth has four exclusions and two
+that it is infallible and that no other rule is. The virgin birth has five exclusions and three
 entailments (`TestimonyArguments.Meanings.BornOfAVirgin.joins`): Wegner's claim that in the
 Septuagint's day παρθένος meant "young woman" and did not yet mean "virgin", against Rico and
-Gentry's that it meant "virgin", and against the laws of the Greek Pentateuch, which use it in
-that sense; Brown's "Micah's silence proves nothing" against Miravalle's "it indicates a
-fatherless birth"; Westminster's supreme judge against "magisterial teaching settles the
-question"; "עַלְמָה denotes a virgin" asserting that its range admits the sense; and the laws'
-sense asserting Rico and Gentry's claim. The joins of the laws are derived by what a usage is
+Gentry's that it meant "virgin", against the laws of the Greek Pentateuch, which use it in that
+sense, and against the status reading of Genesis 34:3, which reads it so there; Brown's "Micah's
+silence proves nothing" against Miravalle's "it indicates a fatherless birth"; Westminster's supreme
+judge against "magisterial teaching settles the question"; "עַלְמָה denotes a virgin" asserting that
+its range admits the sense; and the laws' sense, and the status reading's, each asserting Rico and
+Gentry's claim. The joins of the laws and of Genesis 34:3 are derived by what a usage is
 (`Testimony.Ontology.Usage`). The first exclusions are the ones the Septuagint dispute turns on:
-Wegner's case attacks the Septuagint's witness and the laws through them, and is attacked back.
-Spirit baptism has two exclusions (`TestimonyArguments.Meanings.SpiritBaptism.joins`): the
-Assemblies of God's reading of 1 Corinthians 12:13, "not Christ baptizing in the Spirit", against
-Dunn's and Stott's; and Luke's narratives as a pattern for believers today against Stott's "not a
-pattern". The second removed a horn: the Pentecostal view read with Acts as transitions has no model
-once the words are read, so it no longer stands as a reading to answer. The canonical witness has
-seven entailments (`TestimonyArguments.Meanings.CanonicalWitness.joins`): *faith alone* asserts its
-three parts, and Westminster's "by a faith that is never alone" asserts *faith alone*. Born in
-Bethlehem was looked at and has none: its one pair of rivals can be held together by a reader who
-takes the oracle as fulfilled twice. Without the postulates, Trent's reading of Paul's word would
-pass as granting the lexical step's forensic ground, which it denies.
+Wegner's case attacks the Septuagint's witness, the laws and the status reading through them, and
+each attacks back. Spirit baptism has two exclusions
+(`TestimonyArguments.Meanings.SpiritBaptism.joins`): the Assemblies of God's reading of 1
+Corinthians 12:13, "not Christ baptizing in the Spirit", against Dunn's and Stott's; and Luke's
+narratives as a pattern for believers today against Stott's "not a pattern". The second removed a
+horn: the Pentecostal view read with Acts as transitions has no model once the words are read, so it
+no longer stands as a reading to answer. The canonical witness has seven entailments
+(`TestimonyArguments.Meanings.CanonicalWitness.joins`): *faith alone* asserts its three parts, and
+Westminster's "by a faith that is never alone" asserts *faith alone*. Born in Bethlehem was looked
+at and has none: its one pair of rivals can be held together by a reader who takes the oracle as
+fulfilled twice. Without the postulates, Trent's reading of Paul's word would pass as granting the
+lexical step's forensic ground, which it denies.
 
 Disputes hold them too: every attack is decided over what a party holds, its premises with
 the postulates ([disputes](logic.md#disputes)). In the James dispute this adds one pair of

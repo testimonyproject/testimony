@@ -510,6 +510,33 @@ Clark, Edinburgh. -/
   , place := some "New York"
   , pages := some (454, 456) }
 
+/-- Frymer-Kensky's essay on virginity in the Hebrew Bible, cited for the law of
+the seduced girl and the story of Dinah read together. The lover of Exodus
+22:15–16 "pays the mohar habbetulot even if the father refuses to allow him to
+marry her", a price a seduced girl "would no longer command" (80); the Dinah
+story is followed at once by the section "Intercourse with an Unmarried Girl
+(Exodus 22.15-16 and Deuteronomy 22.28-29)", where the father "can take the
+'virgin's brideprice' from the lover" (91). She hedges the first in a note:
+"given the ambiguity of the term betulot, this brideprice might simply mean the
+appropriate brideprice for young girls" (80 n. 3). Read from a scan of the
+chapter. The volume verified at Open Library (OL467770M): Sheffield Academic
+Press, 1998, JSOTSup 262, ISBN 1850758867. -/
+@[bib_entry] def frymerKenskyVirginity : BibEntry := .inCollection
+  { core :=
+      { key := "frymer-kensky-virginity-1998"
+      , contributors := { authors := [.person "Tikva" "Frymer-Kensky"] }
+      , title := "Virginity in the Bible"
+      , year := some { value := 1998 }
+      , identifiers := [.isbn "1850758867"]
+      , note := some "Journal for the Study of the Old Testament Supplement Series 262." }
+  , containerTitle := "Gender and Law in the Hebrew Bible and the Ancient Near East"
+  , containerEditors :=
+      [ .person "Victor H." "Matthews", .person "Bernard M." "Levinson"
+      , .person "Tikva" "Frymer-Kensky" ]
+  , publisher := "Sheffield Academic Press"
+  , place := some "Sheffield"
+  , pages := some (79, 96) }
+
 /-- Wegner's article, the clearest evangelical statement of the case *against*
 reading Isaiah 7:14 as a direct prediction of a virgin birth. Cited for the
 rival lexical premise, so that the objection is stated by someone who holds it.

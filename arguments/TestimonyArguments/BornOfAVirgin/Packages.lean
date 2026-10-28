@@ -405,6 +405,12 @@ laws, παρθένος is used in the sense "virgin". -/
 def lawsCase : ArgumentPackage Claim :=
   lawsLine.asPackage cite "In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'"
 
+/-- The status reading of Genesis 34:3 as a position of its own: the Greek names
+Dinah a παρθένος as the law names the seduced virgin, in the sense "virgin". -/
+@[bornOfAVirginDefs]
+def dinahCase : ArgumentPackage Claim :=
+  dinahLine.asPackage cite "At Genesis 34:3, παρθένος names Dinah in the sense 'virgin'"
+
 /-- The Septuagint as a witness, with the claim about its word taken away: the
 rendering and its date stay, and nothing is granted about what παρθένος meant.
 Its conclusion no longer follows (`parthenos_is_load_bearing`). -/
