@@ -25,9 +25,11 @@ it still meant a young woman, as it does of Dinah after Shechem has lain with he
 necessarily betraying an interpretation as virgin". Wegner and Walton grant that
 by the New Testament the word meant "virgin"; Meade and Davidson put that sense
 down to Christian use. The dispute is over the translator's day, two or three
-centuries before Matthew. Weighed against each other, nothing prevails: the
-Septuagint's witness, with Rico and Gentry, can be defended, and so can Wegner
-(`nothing_prevails_over_parthenos`, in `Dispute.Septuagint`).
+centuries before Matthew. The Greek Pentateuch's laws use the word where
+virginity is the point, and `Dispute.Septuagint` weighs that case too. Weighed
+against each other, nothing prevails: the Septuagint's witness, with Rico and
+Gentry and the case from the laws, can be defended, and so can Wegner
+(`nothing_prevails_over_parthenos`).
 
 **What it would show, if the word means "virgin".** How one early reader read
 Isaiah: a Jewish translator, before Christ, read the woman of 7:14 as a virgin, so
@@ -75,7 +77,8 @@ and none of them bears on the results it is used for. -/
 word: παρθένος means a virgin, the translator read the woman of 7:14 as one, and
 she conceives as one — "a sign which is not common to all the first-born sons"
 (*Dialogue* 84). So she is not already pregnant when the sign is given, and her
-pregnancy is no ordinary one. The word did not mean "young woman" as such. -/
+pregnancy is no ordinary one. Wegner's claim is false in it: the word already
+had the sense "virgin". -/
 def virginConceivesReading : Valuation Claim := fun a =>
   match a with
   | .parthenosMeantYoungWoman => False
@@ -113,10 +116,14 @@ theorem septuagintWitness_is_satisfiable : Satisfiable septuagintWitness.premise
 or without virginity, and did not yet mean "virgin"; so the Greek does not show
 that its translator read the woman of 7:14 as a virgin, nor anything about how
 she conceived, and עַלְמָה does not denote a virgin either. The woman of 7:14 is
-already pregnant when the sign is given, and the sign need not be a miracle. -/
+already pregnant when the sign is given, and the sign need not be a miracle.
+Wegner does not take up the laws of the Greek Pentateuch. This reading extends
+his view to them as Miller reads them: the laws say what they say, and the word
+in them still means "young woman". -/
 def wegnerDriftReading : Valuation Claim := fun a =>
   match a with
   | .parthenosMeansVirgin => False
+  | .lawsUseParthenosAsVirgin => False
   | .lxxReadsAVirgin => False
   | .lxxEnvisagesAVirginalConception => False
   | .almahMeansVirgin => False

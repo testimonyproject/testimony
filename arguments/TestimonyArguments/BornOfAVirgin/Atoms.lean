@@ -54,7 +54,9 @@ inductive Claim
   | theThreeRenderNeanis
   /-- The Syriac Peshitta renders ܒܬܘܠܬܐ, "virgin". -/
   | peshittaRendersBtulta
-  /-- 1QIsaᵃ reads עַלְמָה, so no textual variant bears on the sense. -/
+  /-- 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14 as the Masoretic
+  Text does: the verse has variants, but none at the word, so the dispute over
+  it is about its sense and not its text. -/
   | qumranConfirmsAlmah
   /-- The split among the ancient versions shows עַלְמָה does not denote
   virginity. The critical inference from the versions. -/
@@ -78,6 +80,16 @@ inductive Claim
   /-- Wherever else the Greek Isaiah has παρθένος — 23:4, 37:22, 47:1 and 62:5 —
   it renders בְּתוּלָה. -/
   | isaiahUsesParthenosForBetulah
+  /-- The Greek Leviticus has the high priest marry a παρθένος, "a woman in her
+  virginity" in the Hebrew, and not a widow, a divorced woman, a defiled woman or
+  a harlot (21:13–14). -/
+  | priestMarriesAParthenos
+  /-- In the Greek Deuteronomy, a bride in whom τὰ παρθένια are not found dies for
+  playing the harlot (22:13–21). -/
+  | partheniaProveTheBride
+  /-- In the Greek Pentateuch's laws, παρθένος is used in the sense "virgin".
+  **The laws' sense**, and a claim about two passages, not about Isaiah 7:14. -/
+  | lawsUseParthenosAsVirgin
   /-- Trypho rejects the Septuagint's "the virgin" at Isaiah 7:14 and reads "the
   young woman" (Justin, *Dialogue* 67 and 71). -/
   | tryphoRejectsParthenos

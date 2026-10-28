@@ -148,6 +148,29 @@ father named. -/
 def womensSeedInGenesis : List ScriptureCitation :=
   [ verseIn .masoretic ⟨.genesis, 16, 10⟩, verseIn .masoretic ⟨.genesis, 24, 60⟩ ]
 
+/-- Leviticus 21:13–14 — the high priest's wife. The Greek has γυναῖκα παρθένον
+where the Hebrew has אִשָּׁה בִבְתוּלֶיהָ, "a woman in her virginity", and sets the
+παρθένος against the widow, the divorced woman, the defiled woman and the
+harlot. -/
+def priestsBride : List ScriptureCitation :=
+  [ rangeIn .septuagint ⟨.leviticus, 21, 13, 21, 14⟩
+  , rangeIn .masoretic ⟨.leviticus, 21, 13, 21, 14⟩ ]
+
+/-- Deuteronomy 22:13–21 — the bride accused of not being a virgin. The Greek
+calls the tokens τὰ παρθένια, for the Hebrew's בְּתוּלִים, and a bride in whom they
+are not found dies for playing the harlot in her father's house. -/
+def tokensOfVirginity : List ScriptureCitation :=
+  [ rangeIn .septuagint ⟨.deuteronomy, 22, 13, 22, 21⟩
+  , rangeIn .masoretic ⟨.deuteronomy, 22, 13, 22, 21⟩ ]
+
+/-- Genesis 24:43, Exodus 2:8, Psalm 68:26 and Song 1:3 and 6:8 — every other
+עַלְמָה the Peshitta renders, each with the cognate ܥܠܝܡܬܐ. Proverbs 30:19, "the
+way of a man with an עַלְמָה", it renders "in his youth". -/
+def peshittaAlmahElsewhere : List ScriptureCitation :=
+  [ verseIn .peshitta ⟨.genesis, 24, 43⟩, verseIn .peshitta ⟨.exodus, 2, 8⟩
+  , verseIn .peshitta ⟨.psalms, 68, 26⟩, verseIn .peshitta ⟨.songOfSongs, 1, 3⟩
+  , verseIn .peshitta ⟨.songOfSongs, 6, 8⟩ ]
+
 /-! ### The Bethlehem oracle -/
 
 /-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/

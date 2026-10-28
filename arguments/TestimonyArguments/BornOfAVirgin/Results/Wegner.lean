@@ -205,6 +205,7 @@ def nearTermSignReading : Valuation Claim := fun a =>
   | .signMustBeExtraordinary => False
   | .almahMeansVirgin => False
   | .parthenosMeansVirgin => False
+  | .lawsUseParthenosAsVirgin => False
   | _ => True
 
 /-- A sign that need not be a marvel, and is one all the same: the reader who

@@ -9,7 +9,7 @@ or entails the other — when a reader who holds the one is thereby bound to den
 or to hold, the other. That is a question about what the words commit their
 reader to, and the words are the vocabulary's. So the joins are not looked for
 in the shape of the terms alone; they are derived, from each meaning's parts
-and from **definitions**: what the vocabulary's own relation words mean.
+and from **definitions**: what the vocabulary's own words mean.
 
 ## A meaning, taken apart
 
@@ -31,7 +31,7 @@ and the definitions below are claims about what doctrine's words mean.
 
 ## What a definition can say
 
-Each definition is one of four forms, and each comes with a `Source`, as a
+Each definition is one of five forms, and each comes with a `Source`, as a
 premise does:
 
 - **implies** — whatever stands in the one relation stands in the other.
@@ -41,6 +41,9 @@ premise does:
   nothing else is.
 - **functional** — a thing stands in the relation to one thing only: an
   occurrence lasts one length of time.
+- **in a usage** — a sense a word has in one passage of a voice's text is a
+  sense it has in that voice's usage. The first four are about relation words;
+  this one is about what "a usage as a whole" means.
 
 The definitions themselves are written in the articles of `Testimony.Ontology`,
 each with the search that found where it bears and what follows from it. This
@@ -195,6 +198,10 @@ inductive Axiom
   /-- A thing stands in the relation to one thing only: an occurrence lasts one
   length of time. -/
   | functional (r : Rel)
+  /-- A sense a word has in one passage of a voice's text is a sense it has in
+  that voice's usage. Not the converse: a word with two senses in a usage need
+  not have both in every passage. -/
+  | inUsage
 deriving DecidableEq, Repr
 
 /-- **A definition**: what one of the vocabulary's words commits its reader to,
@@ -215,7 +222,8 @@ abbrev Ontology := List Definition
 namespace Axiom
 
 /-- The literals one definition yields from one literal: the relation it
-implies, or denies, and the contrapositive of each. -/
+implies, or denies, and the contrapositive of each; and, for a usage, the sense
+a passage of its text gives the word. -/
 def yields : Axiom → Lit → List Lit
   | .implies r s, ⟨true, .rel r' a b⟩ | .only r s, ⟨true, .rel r' a b⟩ =>
     if r' = r then [⟨true, .rel s a b⟩] else []
@@ -224,12 +232,14 @@ def yields : Axiom → Lit → List Lit
   | .denies r s, ⟨pos, .rel r' a b⟩ =>
     (if r' = r then [⟨!pos, .rel s a b⟩] else []) ++
       (if r' = s then [⟨!pos, .rel r a b⟩] else [])
+  | .inUsage, ⟨true, .means w (.passageOf v _) s⟩ => [⟨true, .means w (.usage v) s⟩]
   | _, _ => []
 
-/-- The relations a definition is about. -/
+/-- The relations a definition is about: none, for one about a usage. -/
 def rels : Axiom → List Rel
   | .implies r s | .denies r s | .only r s => [r, s]
   | .functional r => [r]
+  | .inUsage => []
 
 /-- Whether two literals clash under one definition: for **only**, two
 different things each standing in the relation to the same thing, one of them

@@ -11,7 +11,7 @@ import Testimony.Logic.Map
 
 `Results.Septuagint` shows that the Septuagint's witness rests on one claim: that
 παρθένος, in its translator's Greek, means a virgin. This module weighs that
-claim against its rival. Three positions meet:
+claim against its rival. Four positions meet:
 
 - **The Septuagint as a witness** (Irenaeus): Jews translated Isaiah before
   Christ and wrote a word that means a virgin, so they read the woman as one.
@@ -23,89 +23,198 @@ claim against its rival. Three positions meet:
   the Three's νεᾶνις — would have had no point. The library adds a ground of its
   own, encoded with theirs: the Greek Isaiah uses the word elsewhere only for
   בְּתוּלָה.
+- **The case from the laws** (Bratcher's): the Greek Pentateuch, the corpus
+  Genesis 34:3 comes from, uses the word in two laws where virginity is the
+  point. The high priest marries a παρθένος — "a woman in her virginity", in the
+  Hebrew — and not a widow, a woman put away, a defiled woman or a harlot
+  (Leviticus 21:13–14). A bride without τὰ παρθένια, the tokens of virginity,
+  dies for playing the harlot (Deuteronomy 22:13–21).
 
-This is a dispute about a Greek word, not about the virgin birth. Wegner and
-Rhodea write as evangelicals. Wegner holds that Isaiah 7:14 is used in Matthew
-"to refer to Mary, who was indeed a virgin", the "only virgin birth in the
-Bible" (483). Rhodea turns the weak sense of the word into an argument that
-Matthew did not invent the virginal conception to fit Isaiah: neither the Hebrew
-nor the Greek demands it, so Isaiah gave him no reason to (76).
+## What this dispute does not decide
 
-Wegner and Rico and Gentry contradict each other, though no premise says so in
-as many words. Wegner says that in the translator's Greek the word meant a young
-woman and did not yet mean a virgin; Rico and Gentry say it meant a virgin. The
-library's account of what each claim means finds that the two cannot both be
-true (`TestimonyArguments.Meanings.BornOfAVirgin.joins`). Every party holds that
-much, and each attack below is computed with it.
+It is about a Greek word. It is not about the virgin birth, and not about
+whether Isaiah 7:14 is fulfilled in Christ. That is weighed in `Dispute`, where
+the scriptural reading prevails once the replies are heard
+(`scriptural_reading_prevails_once_replies_are_heard`) and the critical denial
+of the prediction belongs to no position that can be defended
+(`critical_denial_indefensible`). That shows that the case against the
+prediction does not survive the replies, on those premises and ratings; it does
+not prove the prediction. And it needs neither side's claim about παρθένος.
+
+Nor is it a dispute between believers and unbelievers. Wegner and Rhodea write
+as evangelicals. Wegner holds that Isaiah 7:14 is used in Matthew "to refer to
+Mary, who was indeed a virgin", the "only virgin birth in the Bible" (483).
+Rhodea turns the weak sense of the word into an argument that Matthew did not
+invent the virginal conception to fit Isaiah: neither the Hebrew nor the Greek
+demands it, so Isaiah gave him no reason to (76).
+
+## What the claims say, and how they are joined
+
+The claims about the word are claims about its senses. Rico and Gentry's,
+encoded, is that "virgin" is a sense of παρθένος in the Septuagint's Greek;
+they say more, "whenever it appears". Wegner's is that the word meant "young
+woman" there, and did not yet have the sense "virgin". Two senses of one word do
+not exclude each other, so the two claims contradict each other only through
+Wegner's "not yet": the library's account of what each claim means finds that
+they cannot both be true (`TestimonyArguments.Meanings.BornOfAVirgin.joins`).
+
+The laws are joined the same way. The case from the laws concludes that the
+word has the sense "virgin" in two passages of the Septuagint. A sense a word
+has in one passage of a text is a sense it has in that text's usage as a whole
+(`Testimony.Ontology.Usage`): a definition of terms, not a reading of any text.
+So the laws' sense, if it holds, makes "virgin" one of the word's senses in the
+Septuagint's Greek. That is the claim encoded for Rico and Gentry, and the
+witness's ground, and it excludes Wegner's "not yet 'virgin'". It does not say
+which sense the translator of Isaiah used at 7:14; that move is the witness's
+own step. Nor does the definition count a word used *of* a virgin as meaning
+"virgin": a thousand uses of "fiancée" of virgins, Walton observes, would not
+make it mean "virgin" (292). The laws count only because their contexts turn on
+the sense.
+
+Every party holds these joins, and each attack below is computed with them. In
+the names of the results, *drift* is Wegner's case that the word's sense
+shifted.
 
 ## How to read the verdicts
 
-- **Defeats.** One position contradicts another — denies one of its premises,
-  its conclusion, or a claim it derives on the way — and is not the weaker of
+- **Defeats.** One position contradicts another, and the attack survives the
+  ratings. An attack on a premise succeeds unless that premise is rated higher
+  than the attacker's weakest link. An attack on a conclusion, or on a claim
+  derived on the way, succeeds unless the attacked position is the stronger of
   the two. A defeat that runs both ways is a *standoff*.
 - **Weakest link.** A position is only as strong as its least-supported premise
   or step. Every party here rests on something rated `disputed`, the lowest
-  rating, so no rating breaks a standoff.
+  rating, so, as the ratings stand, no party outranks another and every
+  standoff holds.
 - **Prevails.** Accepted however every standoff is resolved.
-- **A resolution.** A largest consistent set of positions that answers every
-  attack on its members, itself or through an ally. A position in some
-  resolution can be defended; one left out of some resolution is not forced —
-  which is not the same as false.
+- **A resolution.** A largest set of positions, none of which defeats another,
+  that answers every attack on its members, itself or through an ally. A
+  position in some resolution can be defended; one left out of some resolution
+  is not forced — which is not the same as false.
 
 ## What the solver computed
 
-Two standoffs, and nothing else (`septuagintDispute_defeats`, all nine pairs):
+Three standoffs, all with Wegner, and nothing else (`septuagintDispute_defeats`,
+all sixteen pairs):
 
 - **Wegner and the witness.** What Wegner holds denies the witness's ground that
-  παρθένος means a virgin; what the witness holds denies his conclusion.
+  "virgin" is a sense of the word; what the witness holds denies his
+  conclusion.
 - **Wegner and Rico and Gentry.** Each concludes what the other's conclusion
   rules out.
+- **Wegner and the laws.** The laws' sense excludes his "not yet 'virgin'", and
+  his conclusion excludes theirs.
 
-The witness and Rico and Gentry do not attack each other. They stand together
-(`septuagint_stands_with_the_usage`), and Rico and Gentry lend the witness its
-contested ground: their conclusion is that ground.
+The witness, Rico and Gentry and the laws do not attack one another. They stand
+together (`septuagint_stands_with_the_usage`). Rico and Gentry lend the witness
+its contested ground: their conclusion is that ground, word for word. The laws
+reach the same ground through the definition, so the library draws no support
+from them, though they lead to the same place.
 
 **Nothing prevails** (`nothing_prevails_over_parthenos`): every party is defeated
 by someone. The dispute has two resolutions, each proved: the Septuagint's
-witness with Rico and Gentry (`septuagint_is_one_resolution`), and Wegner alone
-(`drift_is_the_other_resolution`). Either can be defended; neither is forced.
+witness with Rico and Gentry and the laws (`septuagint_is_one_resolution`), and
+Wegner alone (`drift_is_the_other_resolution`). Either can be defended; neither
+is forced.
 
-So a reader who says that the Septuagint's word is undeniably "virgin" is taking
-a side in a live dispute, with good company on it — Irenaeus and Justin, Rico and
-Gentry, Bratcher, and on the translator's reading even Brown, who holds that his
-choice "represented a deliberate preference for understanding the young woman of
-Isa 7:14 as a virgin" (*Birth of the Messiah* 148) — and not stating a fact both
-sides grant.
+## Where the evidence lies
+
+The tie is a tie of ratings, and the ratings count dissenters, not evidence.
+What each side brings is not alike, and a reader should see it.
+
+For "virgin" as a sense of the word in the Septuagint's Greek:
+
+- **The Greek Pentateuch's own usage.** Every בְּתוּלָה and בְּתוּלִים in the Hebrew
+  Pentateuch — fifteen words in fourteen verses — has a παρθεν- word in the
+  Greek, and its laws use the word where virginity is the point (read from
+  Rahlfs's text and the Masoretic). Across the whole Septuagint, Bratcher counts
+  παρθένος for בְּתוּלָה forty-five times out of fifty-two (113).
+- **The lexica on the laws.** LSJ glosses τὰ παρθένια "signs of virginity", from
+  Deuteronomy 22 (1339); Muraoka, "tokens of virginity" (535); LEH, "signs
+  pertaining to virginity, virginity". LEH glosses παρθένος itself "virgin"
+  first.
+- **Readers who hold the sense, whatever they make of the prophecy.** Rico and
+  Gentry; Bratcher, for whom the word "definitely means 'virgin' in the LXX"
+  (113), though he reads 7:14 of a woman then a virgin who conceives "in the
+  normal way" (115); and Delling, for whom the Septuagint's usage at 7:14
+  demands "no more than the sense of a 'woman untouched by a man up to the
+  moment of the conception'" (as Rhodea quotes him, 67 n. 42): a virgin until
+  then, whatever followed. Rhodea, who follows Wegner, still writes that
+  παρθένος "more properly means 'virgin'" (67), and holds that in the Septuagint
+  it "need not refer to a virgo intacta".
+
+For "young woman, and not yet 'virgin'":
+
+- **Early Greek usage.** Early Greek had both senses. LSJ gives "maiden, girl",
+  "virgin, opp. γυνή", and "of unmarried women who are not virgins" (1339);
+  BDAG gives the general use "of a young woman of marriageable age, w. or
+  without focus on virginity" from Homer on (777), and the sense "virgin" in the
+  New Testament and the early Christian writings. Every side grants it.
+- **Genesis 34:3**, one verse with the word twice, which every side grants.
+- **Muraoka's lexicon**, which glosses παρθένος "young woman", lists Genesis 34:3,
+  "so called just after having been raped", and marks "virginity stressed (?)"
+  in the laws of Deuteronomy 22 (535).
+- **Readers.** Wegner, Rhodea, Meade, Davidson and Miller; Walton doubts the
+  virgin sense, citing Brown for the word's broader sense (293 n. 15). Brown
+  himself holds that the translator chose "a deliberate preference for
+  understanding the young woman of Isa 7:14 as a virgin" (*Birth of the Messiah*
+  148): a claim about how the translator read the woman, not about the word.
+
+None of this moves a rating. The solver weighs who contests a claim, not how
+much evidence each side brings. But it does show what the tie is: between the
+broader sense of early Greek, with one passage of the Septuagint, read by one
+side as the rule; and the Septuagint's usage at large, read by the other as the
+rule, with that passage the exception.
 
 ## What the ratings decide
 
-Every party's weakest link is `disputed`, so every attack succeeds. Three ratings
-would break the tie: one in Wegner's favour, two in the witness's.
+Every party's weakest link is `disputed`, so every attack succeeds. Four ratings
+would break the tie: one in Wegner's favour, three in the witness's. Each was
+found by running the solver on the changed rating; no theorem on this page
+states those runs.
 
 **Wegner's step**, from the older usage and Genesis 34:3 to the Septuagint's
-sense. It is `disputed` because Rico and Gentry, and Bratcher, grant both its
-grounds and deny its conclusion: to Rico and Gentry, Genesis 34:3 is "the
-exception that proves the rule", an archaism of the Greek Pentateuch (18, 21);
-to Bratcher, an exception made "inexplicably" (113). Rated higher, Wegner would
-defeat both rivals and neither could answer him, since his grounds are rated
-`consensus` and `wellSupported`: he alone would prevail.
+sense, is rated `disputed`, the lowest rating. Rico and Gentry, and Bratcher,
+grant both its grounds and deny its conclusion: to Rico and Gentry, Genesis 34:3
+is "the exception that proves the rule", an archaism of the Greek Pentateuch
+(18, 21); to Bratcher, an exception made "inexplicably" (113). The higher
+ratings belong to the grounds, not the step: that early Greek used παρθένος of a
+young woman (well supported), and that the Greek of Genesis 34:3 calls Dinah one
+(`consensus`). Both sides grant them, and neither says what the word meant at
+Isaiah 7:14. Only if the step itself were rated higher would Wegner defeat all
+three rivals unanswered, and prevail alone.
 
 **Rico and Gentry's step**, from the Jewish objection (and the Greek Isaiah's
 usage, which the library adds) to the sense. It is `disputed` because Davidson
 (1899) and Meade (2013) grant the objection and read it the other way: the
 revisers wrote νεᾶνις against a sense Christians had put on the word, not one
 its translator gave it. Rated higher, Rico and Gentry would defeat Wegner and he
-could not answer them; the witness would then prevail with them. Wegner's attack
-on the witness would still succeed, but Wegner himself would be out, defeated by
-a party nothing defeats.
+could not answer them; the witness would then prevail with them and the laws.
 
-**The witness's own ground**, `parthenosMeansVirgin`, cited `disputed` because
-Wegner, Walton, Rhodea and Meade contest it. An attack on a premise is weighed
-against that premise's own rating. Rated higher, the ground would outrank
-Wegner's attack on it, and the witness would prevail with Rico and Gentry, as
-before. This is the rating closest to the reader who holds that the word is
-undeniably "virgin". What would raise it is a cited argument that answers
-Wegner, Walton, Rhodea and Meade.
+**The laws' step**, from what the two laws read to the sense of the word in them
+(`laws_rest_on_their_inference`). It is `disputed` on one reader. Miller grants
+that the laws require virgins, and holds that the virginity "has to be inferred
+from the context": "parthenos in the Septuagint did not by itself connote what
+we mean by virginity". Of what he says of the Greek, Genesis 34:3 holds; the
+young widow he finds at Joel 1:8 is not there in the Greek, which calls her a
+bride; and the translators did not "consistently" use the word for עַלְמָה. His
+remaining point, that the Greek adds "who has not known a man" where virginity
+matters (Genesis 24:16), translates a clause the Hebrew already has; what it
+shows about the word, the page does not settle. The case from the laws gives
+his dissent in his words. The rating rests on him, and showing his evidence
+partly wrong does not move it: the rule counts a reader who grants the grounds
+and denies the conclusion. Rated higher, the laws would defeat Wegner and he
+could not answer them; the witness would prevail with Rico and Gentry and the
+laws.
+
+**The witness's own ground**, that "virgin" is a sense of the word, cited
+`disputed` because Wegner, Walton, Rhodea and Meade contest it. An attack on a
+premise is weighed against that premise's own rating. Rated higher, the ground
+would outrank Wegner's attack on it, and the witness would prevail with Rico and
+Gentry and the laws. This is the rating closest to the reader who holds that the
+word is undeniably "virgin". The laws are a cited argument against Wegner's case
+for the opposite; they do not raise the ground's rating, because the readers who
+contest the ground still contest it.
 
 The dissents on the rival steps are brief on both sides. Davidson hedges his
 account of the Three with a "possibly", though not his account of the word;
@@ -167,19 +276,46 @@ theorem usage_rests_on_its_inference :
 
 #print axioms usage_rests_on_its_inference
 
+/-- The case from the laws delivers its conclusion. -/
+theorem lawsCase_establishes : Establishes lawsCase := by
+  establish [bornOfAVirginDefs]
+
+/-- The case from the laws has a model: the reading Justin gives the elders'
+Greek, extended to the laws. "Virgin" is a sense of the word, and the laws use
+it so. -/
+theorem lawsCase_is_satisfiable : Satisfiable lawsCase.premises := by
+  satisfied_by virginConceivesReading [bornOfAVirginDefs]
+
+/-- **The case from the laws rests on its inference.** The high priest's
+παρθένος is set against the widow and the harlot, and the bride without τὰ
+παρθένια dies as a harlot; and still, on Miller's reading, which Wegner's thesis
+requires, the word itself means a young woman there, as at Genesis 34:3. What the
+laws read does not decide the word's sense; the step does, and its rating is one
+of the four that would decide the dispute. -/
+@[headline]
+theorem laws_rest_on_their_inference :
+    ¬ Entails lawsLine.grounds (p .lawsUseParthenosAsVirgin) := by
+  refute_with wegnerDriftReading [bornOfAVirginDefs]
+
+#print axioms laws_rest_on_their_inference
+
 /-! ### Strength -/
 
 /-- The witness is no stronger than its claim about the word, cited
 `disputed`, nor than its step, rated `disputed` on Walton's report of Archer. -/
 theorem septuagintWitness_strength : septuagintWitness.strength = 0 := by decide
 
-/-- Wegner's grounds are `wellSupported` and `consensus`, but his inference is
-`disputed`. -/
+/-- Wegner's grounds are well supported and `consensus`, but his inference is
+`disputed`, on Rico and Gentry and on Bratcher. -/
 theorem driftObjection_strength : driftObjection.strength = 0 := by decide
 
 /-- Rico and Gentry's grounds are `consensus`, but their inference is
-`disputed`. -/
+`disputed`, on Davidson and Meade. -/
 theorem usageCase_strength : usageCase.strength = 0 := by decide
+
+/-- The laws' grounds are `consensus`, what the Greek reads, but their inference
+is `disputed`, on Miller. -/
+theorem lawsCase_strength : lawsCase.strength = 0 := by decide
 
 /-! ### The defeats -/
 
@@ -205,6 +341,18 @@ theorem drift_defeats_usage : Defeats driftObjection usageCase :=
 theorem usage_defeats_drift : Defeats usageCase driftObjection :=
   Horn.defeats_of_defeats? usageCase_strength driftObjection_strength (by decide +kernel)
 
+/-- **Wegner defeats the case from the laws.** That the word had not yet come to
+mean "virgin" excludes that the laws used it in that sense, because a sense the
+word has in one passage of the Septuagint is a sense of the Septuagint's Greek.
+The laws, at `disputed`, are no stronger than he. -/
+theorem drift_defeats_laws : Defeats driftObjection lawsCase :=
+  Horn.defeats_of_defeats? driftObjection_strength lawsCase_strength (by decide +kernel)
+
+/-- **The case from the laws defeats Wegner.** Their sense "virgin" excludes his
+"not yet 'virgin'", and he is no stronger than they. -/
+theorem laws_defeats_drift : Defeats lawsCase driftObjection :=
+  Horn.defeats_of_defeats? lawsCase_strength driftObjection_strength (by decide +kernel)
+
 /-! ### The dispute -/
 
 /-- The parties to the dispute over the Septuagint's word. -/
@@ -216,6 +364,9 @@ inductive SeptuagintParty
   | drift
   /-- Rico and Gentry's case from usage: παρθένος means a virgin. -/
   | usage
+  /-- The case from the laws: in the Greek Pentateuch's laws, παρθένος is used in
+  the sense "virgin". -/
+  | laws
 deriving DecidableEq
 
 /-- The package each party argues from. -/
@@ -224,6 +375,7 @@ def septuagintPartyNode : SeptuagintParty → ArgumentPackage Claim
   | .witness => septuagintWitness
   | .drift => driftObjection
   | .usage => usageCase
+  | .laws => lawsCase
 
 /-- The dispute over the Septuagint's word: every party's premises have a model,
 every party establishes its conclusion, and every party's inferences are
@@ -236,13 +388,16 @@ def septuagintDispute : Dispute Claim SeptuagintParty where
     | .witness => septuagintWitness_establishes
     | .drift => driftObjection_establishes
     | .usage => usageCase_establishes
+    | .laws => lawsCase_establishes
   rated i := by
     cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
 
-/-- **The witness and Rico and Gentry stand together**, on Justin's reading: the
-word means a virgin, and the translator read the woman as one. -/
+/-- **The witness, Rico and Gentry and the laws stand together**, on the reading
+Justin gives the elders' Greek, extended to the laws: "virgin" is a sense of the
+word, the laws use it so, and the translator read the woman of 7:14 as a
+virgin. -/
 theorem septuagint_stands_with_the_usage :
-    septuagintDispute.StandTogether [.witness, .usage] := by
+    septuagintDispute.StandTogether [.witness, .usage, .laws] := by
   satisfied_by virginConceivesReading [Dispute.StandTogether, bornOfAVirginDefs]
 
 /-- The defeats of the dispute, as a table. -/
@@ -251,6 +406,8 @@ def septuagintPartyDefeats : SeptuagintParty → SeptuagintParty → Prop
   | .witness, .drift => True
   | .drift, .usage => True
   | .usage, .drift => True
+  | .drift, .laws => True
+  | .laws, .drift => True
   | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
@@ -262,9 +419,10 @@ theorem septuagintPartyNode_strength : ∀ i, (septuagintPartyNode i).strength =
   | .witness => septuagintWitness_strength
   | .drift => driftObjection_strength
   | .usage => usageCase_strength
+  | .laws => lawsCase_strength
 
-/-- **Who defeats whom**, all nine pairs: Wegner and the witness defeat each
-other, Wegner and Rico and Gentry defeat each other, and nothing else. Every
+/-- **Who defeats whom**, all sixteen pairs: Wegner defeats each of the other
+three, and each defeats him back; and nothing else. Every
 cell is computed from what the parties hold by `Horn.defeats?` and checked by
 the kernel. -/
 theorem septuagintDispute_defeats :
@@ -276,7 +434,7 @@ theorem septuagintDispute_defeats :
 
 /-- The dispute in the form the verdict solver computes with. -/
 def septuagintFinite : Solver.Finite septuagintDispute.defeats where
-  parties := [.witness, .drift, .usage]
+  parties := [.witness, .drift, .usage, .laws]
   complete i := by cases i <;> decide
   defeats i j := decide (septuagintPartyDefeats i j)
   spec i j := by rw [septuagintDispute_defeats]; simp
@@ -290,16 +448,19 @@ def septuagintPartySupports : SeptuagintParty → SeptuagintParty → Prop
 instance : DecidableRel septuagintPartySupports := fun i j => by
   cases i <;> cases j <;> unfold septuagintPartySupports <;> infer_instance
 
-/-- **One support**, in all nine pairs: Rico and Gentry's conclusion is the
-witness's contested ground, that παρθένος means a virgin. Nothing else supports
-anything. Every cell is computed by `supports?` and checked by the kernel. -/
+/-- **One support**, in all sixteen pairs: Rico and Gentry's conclusion is the
+witness's contested ground, that "virgin" is a sense of παρθένος. The library
+draws a support only where one party's conclusion is, word for word, another's
+premise. The laws reach the witness's ground through a definition, so no support
+is drawn from them, though they lead to the same ground. Every cell is computed
+by `supports?` and checked by the kernel. -/
 theorem septuagintDispute_supports :
     ∀ i j, septuagintDispute.supports i j ↔ septuagintPartySupports i j := by
   intro i j
   refine supports_iff_of_supports? ?_
   cases i <;> cases j <;> decide +kernel
 
-/-- **No case is part of another's** here, in all nine pairs, except each
+/-- **No case is part of another's** here, in all sixteen pairs, except each
 party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
 theorem septuagintDispute_partOf : ∀ i j, septuagintDispute.partOf i j ↔ i = j := by
   intro i j
@@ -317,31 +478,34 @@ def septuagintMap : ArgumentMap septuagintDispute where
 /-- Why nothing prevails: a defeater for each party. -/
 def everySeptuagintPartyDefeated : Verdict septuagintDispute where
   finite := septuagintFinite
-  claim := .nothingGrounded [(.witness, .drift), (.drift, .witness), (.usage, .drift)]
+  claim := .nothingGrounded
+    [(.witness, .drift), (.drift, .witness), (.usage, .drift), (.laws, .drift)]
   checked := by decide +kernel
 
-/-- **Nothing prevails.** Every party is defeated by someone — the witness and
-Rico and Gentry by Wegner, Wegner by both — so no position is accepted however
-the standoffs are resolved. -/
+/-- **Nothing prevails.** Every party is defeated by someone — the witness, Rico
+and Gentry and the laws by Wegner, Wegner by all three — so no position is
+accepted however the standoffs are resolved. -/
 @[headline]
 theorem nothing_prevails_over_parthenos : grounded septuagintDispute.defeats = ∅ :=
   everySeptuagintPartyDefeated.holds
 
 #print axioms nothing_prevails_over_parthenos
 
-/-- Why the witness with Rico and Gentry is one resolution. -/
+/-- Why the witness with Rico and Gentry and the laws is one resolution. -/
 def septuagintWithTheUsage : Verdict septuagintDispute where
   finite := septuagintFinite
-  claim := .preferred [.witness, .usage]
+  claim := .preferred [.witness, .usage, .laws]
   checked := by decide +kernel
 
-/-- **One resolution: the Septuagint's witness, with Rico and Gentry.** Neither
-defeats the other, and between them they answer Wegner, the only party to defeat
-either. Wegner is in conflict with both, so no larger set can be defended. -/
+/-- **One resolution: the Septuagint's witness, with Rico and Gentry and the
+laws.** None of the three defeats another, and between them they answer Wegner,
+the only party to defeat any of them. Wegner is in conflict with all three, so no
+larger set can be defended. -/
 @[headline]
 theorem septuagint_is_one_resolution :
-    Preferred septuagintDispute.defeats {.witness, .usage} :=
-  (show Solver.toSet [SeptuagintParty.witness, .usage] = {.witness, .usage} by ext; simp) ▸
+    Preferred septuagintDispute.defeats {.witness, .usage, .laws} :=
+  (show Solver.toSet [SeptuagintParty.witness, .usage, .laws] =
+      {.witness, .usage, .laws} by ext; simp) ▸
     septuagintWithTheUsage.holds
 
 #print axioms septuagint_is_one_resolution
@@ -353,8 +517,8 @@ def driftAlone : Verdict septuagintDispute where
   checked := by decide +kernel
 
 /-- **The other resolution: Wegner.** His case can be defended on its own,
-because it defeats both parties that defeat it; and it is in conflict with both,
-so no larger set can be defended. -/
+because it defeats every party that defeats it; and it is in conflict with all
+three, so no larger set can be defended. -/
 @[headline]
 theorem drift_is_the_other_resolution : Preferred septuagintDispute.defeats {.drift} :=
   (show Solver.toSet [SeptuagintParty.drift] = {.drift} by ext; simp) ▸ driftAlone.holds

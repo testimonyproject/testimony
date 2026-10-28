@@ -61,6 +61,19 @@ text, or of a voice. -/
 def framing (rs : List Rel) : List α :=
   (all : List α).filter fun a => rs.any (means a).framedRels.contains
 
+/-- The atoms whose meaning states what a word means in one passage of a
+voice's text: where a definition about a usage bears. -/
+def statingPassageSenses : List α :=
+  (all : List α).filter fun a => (means a).senses.any fun (_, sc, _) => sc.isPassageOf
+
+/-- **Where a definition bears**: the atoms that hold its relation words as
+doctrine, and those that use them of a text or a voice; for the definition
+about a usage, the atoms that state a word's sense at a passage of a voice's
+text, and none in a frame. -/
+def bearing : Axiom → List α × List α
+  | .inUsage => (statingPassageSenses, [])
+  | ax => (holding ax.rels, framing ax.rels)
+
 /-- **What one definition of an ontology contributes**: the exclusions, and the
 entailments, found under the ontology and not under it with that definition
 taken out. -/

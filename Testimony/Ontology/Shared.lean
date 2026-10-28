@@ -1,5 +1,6 @@
 import Testimony.Ontology.Relations.Definitions
 import Testimony.Ontology.Time.Definitions
+import Testimony.Ontology.Usage.Definitions
 
 /-!
 # Testimony.Ontology.Shared — the definitions every check holds
@@ -18,6 +19,7 @@ finds one says so and leaves it out.
 namespace Testimony.Ontology
 
 /-- **The shared ontology**: every article's definitions. -/
-def shared : Semantics.Ontology := Relations.definitions ++ Time.definitions
+def shared : Semantics.Ontology :=
+  Relations.definitions ++ Time.definitions ++ Usage.definitions
 
 end Testimony.Ontology

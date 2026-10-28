@@ -4,11 +4,12 @@ import TestimonyArguments.BornOfAVirgin.Sources
 /-!
 # TestimonyArguments.Meanings.BornOfAVirgin — what each born of a virgin claim says
 
-**Partly analysed.** Twenty claims have meanings: the ones whose meanings join
-them to another claim (`joins`), and the ones about the words of Isaiah 7:14 and
-of its versions, about the woman it describes, and about the birth it is read to
-promise. The rest are registered with their citations' labels and marked
-unanalysed, so the argument is counted from the start (`coverage_now`);
+**Partly analysed.** Twenty-one claims have meanings: the ones whose meanings
+join them to another claim (`joins`), and the ones about the words of Isaiah
+7:14, of its versions and of the Greek Pentateuch's laws, about the woman it
+describes, and about the birth it is read to promise. The rest are registered
+with their citations' labels and marked unanalysed, so the argument is counted
+from the start (`coverage_now`);
 `TestimonyArguments.Meanings.SolaFide` is the fuller worked example.
 
 ## The words, and the woman
@@ -31,7 +32,9 @@ three apart.
 
 ## What is joined, and what is not
 
-A pair is joined only where the claims' own wording joins them.
+A pair is joined only where the claims' own wording joins them, read under the
+definitions of `Testimony.Ontology`: one of them, that a sense found in a passage
+of a text is a sense of its usage (`Testimony.Ontology.Usage`), joins the laws.
 
 - **Wegner's claim that παρθένος meant "young woman" and did not yet mean
   "virgin" excludes Rico and Gentry's claim that it meant "virgin".** Both are
@@ -40,6 +43,12 @@ A pair is joined only where the claims' own wording joins them.
   technical meaning of 'virgin'" (482). That is the join the Septuagint dispute
   turns on
   (`TestimonyArguments.BornOfAVirgin.Dispute.Septuagint`).
+- **The laws' sense "virgin" excludes Wegner's claim, and entails Rico and
+  Gentry's.** The laws' claim is about two passages of the Septuagint's text,
+  Leviticus 21:13–14 and Deuteronomy 22:13–21; a sense a word has in a passage
+  of a text is a sense it has in that text's usage (`Testimony.Ontology.Usage`).
+  So "virgin" is a sense of the word in the Septuagint's Greek, which Wegner's
+  "not yet" denies and Rico and Gentry's claim asserts.
 - **Brown's "Micah's silence about a father proves nothing" excludes
   Miravalle's "it indicates a birth with no human father".** The one says
   Micah 5:3, read rightly, does not teach a fatherless birth; the other says it
@@ -88,7 +97,8 @@ def all : List Claim :=
   , .targumRendersUlemta, .theThreeRenderNeanis, .peshittaRendersBtulta, .qumranConfirmsAlmah
   , .versionalDivergenceRefutesVirginSense, .lxxIsPreChristian, .parthenosMeansVirgin
   , .parthenosMeantYoungWoman, .earlyGreekParthenosIsYoungWoman, .dinahIsAParthenosAfterShechem
-  , .isaiahUsesParthenosForBetulah, .tryphoRejectsParthenos, .lxxReadsAVirgin
+  , .isaiahUsesParthenosForBetulah, .priestMarriesAParthenos, .partheniaProveTheBride
+  , .lawsUseParthenosAsVirgin, .tryphoRejectsParthenos, .lxxReadsAVirgin
   , .lxxPutsTheConceptionInTheFuture, .lxxEnvisagesAVirginalConception
   , .harahIsPredicateAdjective
   , .isaianicAlmahIsAlreadyPregnant, .pregnancyAtTheSignIsOrdinary, .isaianicAlmahIsNotAVirgin
@@ -121,6 +131,9 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 /-- Genesis 3:15. -/
 @[nolint defsWithUnderscore] abbrev gen3_15 : Testimony.PassageRange := vs .genesis 3 15
 
+/-- The Septuagint, as its translators' text reads. -/
+abbrev lxx : Voice := .version .septuagint
+
 /-- The Septuagint's Greek: its translators' usage, as a whole. -/
 abbrev septuagintGreek : Scope := .usage (.version .septuagint)
 
@@ -144,7 +157,7 @@ abbrev magisteriumSettles : Statement :=
 abbrev almahAdmitsVirgin : Statement :=
   .holds (rl .consistentWith (wd .almah isa7_14) (cn .virginity))
 
-/-- **What each born of a virgin atom asserts.** Twenty are analysed; the rest
+/-- **What each born of a virgin atom asserts.** Twenty-one are analysed; the rest
 keep their citations' labels, marked unanalysed. -/
 def means : Claim → Statement
   | .isaiahPredictsVirginBirth => .teaches isa7_14 fatherlessBirth
@@ -159,6 +172,9 @@ def means : Claim → Statement
   | .parthenosMeantYoungWoman =>
     .also (.means .parthenos septuagintGreek .youngWoman)
       (.denied (.means .parthenos septuagintGreek .virgin))
+  | .lawsUseParthenosAsVirgin =>
+    .also (.means .parthenos (.passageOf lxx (rg .leviticus 21 13 21 14)) .virgin)
+      (.means .parthenos (.passageOf lxx (rg .deuteronomy 22 13 22 21)) .virgin)
   | .lxxReadsAVirgin =>
     .heldBy (.version .septuagint) (rl .isA womanOfTheSign (cn .virginity))
   | .lxxEnvisagesAVirginalConception =>
@@ -181,9 +197,10 @@ instance meanings : HasMeanings Claim :=
   { argument := "Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3", all
   , complete := all_complete, means }
 
-/-- **Twenty of the 63 atoms are analysed**: the ones whose meanings join them to
-another claim, and the ones about the words, the woman and the birth. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (20, 70) := by decide
+/-- **Twenty-one of the 73 atoms are analysed**: the ones whose meanings join
+them to another claim, and the ones about the words, the woman and the
+birth. -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (21, 73) := by decide
 
 /-- **The words read two ways**: עַלְמָה at Isaiah 7:14, as "virgin" and as "young
 woman of marriageable age", and παρθένος in the Septuagint's Greek, the same two
@@ -203,6 +220,9 @@ entail one another, listed, and proved to be exactly what the meanings contain.
 
 - That παρθένος means "virgin" in the Septuagint's Greek is excluded by Wegner's
   claim that it meant "young woman" and did not yet mean "virgin".
+- That the Greek Pentateuch's laws use the word in the sense "virgin" is excluded
+  by the same claim of Wegner's, and entails that the word means "virgin" in the
+  Septuagint's Greek.
 - That Micah's silence indicates a fatherless birth is excluded by Brown's "it
   proves nothing".
 - That magisterial teaching settles the question is excluded by Westminster's
@@ -215,14 +235,18 @@ a fatherless birth, a critic's or Wegner's that it proves nothing; and, none of
 these worlds being Rome's, each denies that magisterial teaching settles the
 question. Each also settles παρθένος, since it cannot hold both claims about
 the word: the scriptural readers' worlds take Rico and Gentry's, Wegner's and
-the critic's take Wegner's. The scriptural reading itself rests on neither. -/
+the critic's take Wegner's, and deny the laws' sense with it. The scriptural
+reading itself rests on neither. -/
 instance joins : HasJoins Claim where
   exclusions :=
     [ (.parthenosMeansVirgin, .parthenosMeantYoungWoman)
+    , (.parthenosMeantYoungWoman, .lawsUseParthenosAsVirgin)
     , (.maternalSilenceImpliesNoHumanFather, .maternalSilenceProvesNothing)
     , (.magisteriumIsDoctrinallyAuthoritative, .scriptureIsSupremeJudge) ]
   exclusions_pinned := by decide +kernel
-  entailments := [(.almahMeansVirgin, .almahAdmitsVirginSense)]
+  entailments :=
+    [ (.almahMeansVirgin, .almahAdmitsVirginSense)
+    , (.lawsUseParthenosAsVirgin, .parthenosMeansVirgin) ]
   entailments_pinned := by decide +kernel
 
 open Testimony.Logic in
@@ -232,9 +256,11 @@ named reading must satisfy it. -/
 @[bornOfAVirginDefs] theorem postulates_eq :
     (HasPostulates.postulates : List (Formula Claim)) =
       [ p .parthenosMeansVirgin ➝ notP .parthenosMeantYoungWoman
+      , p .parthenosMeantYoungWoman ➝ notP .lawsUseParthenosAsVirgin
       , p .maternalSilenceImpliesNoHumanFather ➝ notP .maternalSilenceProvesNothing
       , p .magisteriumIsDoctrinallyAuthoritative ➝ notP .scriptureIsSupremeJudge
-      , p .almahMeansVirgin ➝ p .almahAdmitsVirginSense ] :=
+      , p .almahMeansVirgin ➝ p .almahAdmitsVirginSense
+      , p .lawsUseParthenosAsVirgin ➝ p .parthenosMeansVirgin ] :=
   rfl
 
 attribute [bornOfAVirginDefs] Testimony.Logic.ArgumentPackage.held

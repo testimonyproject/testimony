@@ -16,10 +16,11 @@ import TestimonyArguments.BornOfAVirgin.Dispute.Genesis
 
 Matthew 1:22–23 quotes Isaiah 7:14 as grounds that the Messiah is born of a
 virgin. Unlike Micah 5:2 (see `BornInBethlehem`), the predictive reading here is
-heavily disputed, and the dispute is lexical: the Hebrew עַלְמָה (*almah*) means
-"young woman" and does not by itself mean "virgin", while the Septuagint's
-παρθένος is read as "virgin" — though whether it meant that in the translator's
-own day is disputed too (`Dispute.Septuagint`). Isaiah's immediate context — a
+heavily disputed, and the dispute is lexical: both sides grant that the Hebrew
+עַלְמָה (*almah*) denotes a young woman of marriageable age, and they dispute
+whether it denotes a virgin; the Septuagint's παρθένος is read as "virgin" —
+though whether it meant that in the translator's own day is disputed too
+(`Dispute.Septuagint`). Isaiah's immediate context — a
 sign to Ahaz, apparently fulfilled within the prophet's own generation (cf. Isa
 8:3–4) — is read by most critical and much Jewish scholarship as having nothing
 to do with a future Messiah.
@@ -72,9 +73,13 @@ not read 7:14 messianically though it reads 9:5–6 and 11:1 so; Aquila,
 Symmachus and Theodotion render νεᾶνις. Against them, the pre-Christian
 Septuagint renders παρθένος — "virgin", on Rico and Gentry's reading of its
 Greek, though not on Wegner's (below) — and the Syriac Peshitta ܒܬܘܠܬܐ,
-"virgin" — so the Aramaic evidence is itself split, Jewish against Christian.
-1QIsaᵃ confirms עַלְמָה in the Hebrew, so no textual variant rescues either side;
-the dispute is purely semantic. The usual Christian reply, that the Three revised
+"virgin", its only ܒܬܘܠܬܐ for עַלְמָה. So the Aramaic evidence is itself split:
+the Targum against the Peshitta, whose translator may have been a Jewish
+Christian who knew the Greek (van der Kooij), and whose 7:14 may follow the
+Septuagint (Chen). 1QIsaᵃ, copied before Christ, reads עַלְמָה as the Masoretic
+Text does. The verse has other variants, but none at the word, so no textual
+variant rescues either side: the dispute is about the word's sense, not its
+text. The usual Christian reply, that the Three revised
 against Christian use, is now one party's ground: Rico and Gentry's case from
 usage leans on it, and Davidson and Meade read the revision the other way
 (`Dispute.Septuagint`). Whether Theodotion's version is itself pre-Christian,
@@ -100,17 +105,20 @@ goes through. Three results then say what it rests on and what it reaches.
   appears in Semitic Koine Greek", and Bratcher agrees. Wegner, Rhodea and Meade
   deny it, and point to Genesis 34:3, where the Greek calls Dinah a παρθένος
   after Shechem has lain with her; Walton doubts it, from classical usage.
-  `Dispute.Septuagint` weighs the two, and **nothing prevails**
+  The Greek Pentateuch, the corpus that verse comes from, uses the word in its
+  laws where virginity is the point (Leviticus 21:13–14, Deuteronomy
+  22:13–21). `Dispute.Septuagint` weighs the four, and **nothing prevails**
   (`nothing_prevails_over_parthenos`). Every party rests somewhere on a claim
   rated `disputed`, the lowest rating, so none outranks another: each side's
   objection to the other stands, and neither side is shown right, which is not
-  the same as shown wrong. The Septuagint with Rico and Gentry can be defended,
-  and so can Wegner. So the claim that the Greek word is undeniably "virgin" is
-  one side of a live dispute, not common ground. The two claims about the word
-  exclude each other by what they mean — Wegner's says the word meant a young
-  woman and not yet a virgin — and the dispute is computed with that. Three
-  ratings would break the tie, one in Wegner's favour and two in the witness's,
-  and `Dispute.Septuagint` names them.
+  the same as shown wrong. The Septuagint with Rico and Gentry and the laws can
+  be defended, and so can Wegner. So the claim that the Greek word is undeniably
+  "virgin" is one side of a live dispute, not common ground. The claims about
+  the word exclude each other by what they mean — Wegner's says the word meant a
+  young woman and not yet a virgin — and the dispute is computed with that.
+  Four ratings would break the tie, one in Wegner's favour and three in the
+  witness's, and `Dispute.Septuagint` names them, with where the evidence on
+  each side lies.
 - **It shows how one early reader read Isaiah, not what Isaiah's word means**
   (`septuagint_word_rests_on_its_inference`). Granted its sense, the Septuagint
   shows that a Jewish translator before Christ read the woman of 7:14 as a
@@ -334,6 +342,7 @@ own beside it.
 | `Sources/Genesis.lean` | the citations of the dispute over the woman's seed |
 | `Sources/NearTerm.lean` | the citations of the dispute over the critical denial |
 | `Sources/Septuagint.lean` | the citations of the dispute over the Septuagint's word |
+| `Sources/Versions.lean` | the Hebrew text of Qumran, the Syriac, and the referential reply |
 | `Sources/Wegner.lean` | the citations of the dispute over Wegner's objection |
 | `Lines.lean` | the inference steps, and the lines of reason they compose into |
 | `Packages.lean` | the positions, and the variant packages the results refute |
@@ -343,7 +352,7 @@ own beside it.
 | `Results/Genesis.lean` | what "her seed" says of a father, read two ways, and the Greek's "he" |
 | `Dispute.lean` | the critical denial, the scriptural reading and four replies as one dispute |
 | `Dispute/Wegner.lean` | Wegner, the fathers' sign argument and the near-term reply as another |
-| `Dispute/Septuagint.lean` | the Septuagint, Wegner on παρθένος, and Rico and Gentry, as a third |
+| `Dispute/Septuagint.lean` | the Septuagint, Wegner, Rico and Gentry, and the laws, as a third |
 | `Dispute/Genesis.lean` | Luther, Leupold and Lewis on "her seed", as a fourth |
 
 Shared material lives further out: passages and citation bundles in

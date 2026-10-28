@@ -394,11 +394,17 @@ word meant "young woman", and not yet "virgin". -/
 def driftObjection : ArgumentPackage Claim :=
   driftLine.asPackage cite "In the Septuagint's day, παρθένος meant 'young woman', not 'virgin'"
 
-/-- Rico and Gentry's case from usage as a position of its own: παρθένος means a
-virgin. -/
+/-- Rico and Gentry's case from usage as a position of its own: "virgin" is a
+sense of παρθένος in the Septuagint's Greek. -/
 @[bornOfAVirginDefs]
 def usageCase : ArgumentPackage Claim :=
   usageLine.asPackage cite "In the Greek of the Scriptures, παρθένος means a virgin"
+
+/-- The case from the laws as a position of its own: in the Greek Pentateuch's
+laws, παρθένος is used in the sense "virgin". -/
+@[bornOfAVirginDefs]
+def lawsCase : ArgumentPackage Claim :=
+  lawsLine.asPackage cite "In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'"
 
 /-- The Septuagint as a witness, with the claim about its word taken away: the
 rendering and its date stay, and nothing is granted about what παρθένος meant.

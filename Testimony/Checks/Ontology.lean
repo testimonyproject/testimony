@@ -14,7 +14,9 @@ ontology, and how many of them are found with no definition at all, by reading
 the meanings alone. Then, for each definition whose words the argument uses: how
 many of its claims hold them as doctrine, how many use them of a text or a
 voice, where the definitions do not reach, and the joins the definition
-contributes — those found with it, and not with it taken out. The report is
+contributes — those found with it, and not with it taken out. For the definition
+about a usage, the claims counted are those that state what a word means at one
+passage of a voice's text (`HasMeanings.bearing`). The report is
 pinned, so a definition that starts or stops deriving a join, or a claim that
 starts using a defined word, changes it.
 
@@ -38,16 +40,18 @@ def ontologyReport (α : Type) [HasMeanings α] [DecidableEq α] [Repr α] : Str
     (HasMeanings.entailmentsUnder (α := α) []).length
   let head := [HasMeanings.argument α, s!"  joins: {joins}, with no definition: {bare}"]
   let lines := O.zipIdx.flatMap fun (d, i) =>
-    let rs := d.form.rels
-    let held := (HasMeanings.holding (α := α) rs).length
-    let framed := (HasMeanings.framing (α := α) rs).length
+    let (h, f) := HasMeanings.bearing (α := α) d.form
+    let held := h.length
+    let framed := f.length
     if held + framed == 0 then [] else
       let (ex, en) := HasMeanings.contributed (α := α) O i
       let derived := ex.map (fun (a, b) => "    " ++ atomName a ++ " excludes " ++ atomName b) ++
         en.map (fun (a, b) => "    " ++ atomName a ++ " entails " ++ atomName b)
-      ("  " ++ d.name ++ ": held by " ++ toString held ++ ", used of a text or voice by " ++
-        toString framed ++ (if derived.isEmpty then "; derives nothing" else "; derives:")) ::
-        derived
+      let uses := match d.form with
+        | .inUsage => "stated at a passage of a voice's text by " ++ toString held
+        | _ => "held by " ++ toString held ++ ", used of a text or voice by " ++ toString framed
+      ("  " ++ d.name ++ ": " ++ uses ++
+        (if derived.isEmpty then "; derives nothing" else "; derives:")) :: derived
   (String.intercalate "\n" (head ++ lines), (HasMeanings.incoherent (α := α)).length)
 
 /-- Report what the shared ontology does in every argument under `root`; see the

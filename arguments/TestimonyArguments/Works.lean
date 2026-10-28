@@ -354,6 +354,152 @@ and dated 9 January 2013, 8:39 pm. -/
                  (some "2026-10-21") ] }
   , site := some "LXX Studies" }
 
+/-- The standard lexicon of ancient Greek (LSJ), ninth edition. Cited for what
+the Septuagint's law calls τὰ παρθένια: "signs of virginity, LxxDe.22.15"; and
+for παρθένος "of unmarried women who are not virgins" in classical Greek (1339).
+Read in the 1940 printing; the 1968 Supplement (116) withdraws *Iliad* 2.514 from
+that sense. Verified at Open Library, ISBN 0198642148: the 1968 reprint with the
+Supplement, whose lexicon pages are the 1940 ones. -/
+@[bib_entry] def liddellScottJones : BibEntry := .book
+  { core :=
+      { key := "liddell-scott-jones-lexicon-1940"
+      , role := .text
+      , contributors :=
+          { authors := [.person "Henry George" "Liddell", .person "Robert" "Scott"]
+          , editors := [.person "Henry Stuart" "Jones", .person "Roderick" "McKenzie"] }
+      , title := "A Greek-English Lexicon"
+      , year := some { value := 1940 }
+      , identifiers := [.isbn "0198642148"]
+      , note := some "Ninth edition; the ISBN is the 1968 reprint with Supplement." }
+  , publisher := "Clarendon Press"
+  , place := some "Oxford"
+  , edition := some "9th" }
+
+/-- Muraoka's lexicon of the Septuagint. Cited for τὰ παρθένια, "tokens of
+virginity: De 22.14, 15, 17, 20", and for παρθένος, glossed "young woman", with
+the Septuagint's uses sorted under it: "not yet touched by a man" (Genesis
+24:16), "so called just after having been raped" (Genesis 34:3), "virginity
+stressed (?)" (Deuteronomy 22:23, 28) (535). Verified at Open Library, ISBN
+9789042922488 (Peeters, 2009). -/
+@[bib_entry] def muraokaLexiconSeptuagint : BibEntry := .book
+  { core :=
+      { key := "muraoka-lexicon-septuagint-2009"
+      , role := .text
+      , contributors := { authors := [.person "T." "Muraoka"] }
+      , title := "A Greek-English Lexicon of the Septuagint"
+      , year := some { value := 2009 }
+      , identifiers := [.isbn "9789042922488"] }
+  , publisher := "Peeters"
+  , place := some "Louvain" }
+
+/-- The Septuagint lexicon of Lust, Eynikel and Hauspie (LEH), revised edition.
+Cited for παρθένος, glossed "virgin" first, then "young woman" and "a girl of
+marriage-able age", and for παρθένια, "signs pertaining to virginity,
+virginity", s.vv. Read in an electronic transcription whose title page gives the
+Deutsche Bibelgesellschaft, 2003, and ISBN 3-438-05124-9; its print pages were
+not seen. Open Library resolves the ISBN, but names the American Bible Society,
+2004. -/
+@[bib_entry] def lustLexiconSeptuagint : BibEntry := .book
+  { core :=
+      { key := "lust-lexicon-septuagint-2003"
+      , role := .text
+      , contributors :=
+          { authors := [.person "J." "Lust", .person "E." "Eynikel", .person "K." "Hauspie"] }
+      , title := "Greek-English Lexicon of the Septuagint"
+      , year := some { value := 2003 }
+      , identifiers := [.isbn "9783438051240"] }
+  , publisher := "Deutsche Bibelgesellschaft"
+  , place := some "Stuttgart"
+  , edition := some "Revised" }
+
+/-- The radiocarbon dating of the Great Isaiah Scroll, 1QIsaᵃ: calibrated to
+335–122 BC at one standard deviation, against a palaeographic date of 150–125
+BC (14, Table 2; 19, quoting Cross). Read in full; verified at Crossref, DOI
+10.1017/S0033822200014740. -/
+@[bib_entry] def jullRadiocarbonScrolls : BibEntry := .article
+  { core :=
+      { key := "jull-radiocarbon-dating-scrolls-1995"
+      , contributors :=
+          { authors := [ .person "A. J. Timothy" "Jull", .person "Douglas J." "Donahue"
+                       , .person "Magen" "Broshi", .person "Emanuel" "Tov" ] }
+      , title := "Radiocarbon Dating of Scrolls and Linen Fragments from the Judean Desert"
+      , year := some { value := 1995 }
+      , identifiers := [.doi "10.1017/S0033822200014740"] }
+  , journal := "Radiocarbon"
+  , volume := some "37"
+  , issue := some "1"
+  , pages := some (11, 19) }
+
+/-- Bloch on who made the Peshitta. He counts its "virgin" at Isaiah 7:14 among
+the passages "most decisive in favor of a purely Christian authorship", and
+answers that none of them can be shown to be "part of the original version, and
+not due to subsequent modifications" (218–19); the Old Testament Peshitta is "a
+work of Jewish hands outside of Palestine" (218 n.). Read in JSTOR's Early
+Journal Content; verified at Crossref, DOI 10.1086/369885. -/
+@[bib_entry] def blochAuthorshipPeshitta : BibEntry := .article
+  { core :=
+      { key := "bloch-authorship-peshitta-1919"
+      , contributors := { authors := [.person "Joshua" "Bloch"] }
+      , title := "The Authorship of the Peshitta"
+      , year := some { value := 1919 }
+      , identifiers := [.doi "10.1086/369885"] }
+  , journal := "The American Journal of Semitic Languages and Literatures"
+  , volume := some "35"
+  , issue := some "4"
+  , pages := some (215, 222) }
+
+/-- Van der Kooij on the ancient witnesses to Isaiah: the translator of the
+Peshitta's Isaiah was probably a Jewish Christian (276–77), who knew the Greek
+Isaiah (287), though 7:14 is not among the passages he gives for it. Read in the
+open-access copy at Leiden; verified at Open Library, ISBN 3727802375. -/
+@[bib_entry] def vanDerKooijTextzeugen : BibEntry := .book
+  { core :=
+      { key := "van-der-kooij-textzeugen-jesajabuches-1981"
+      , contributors := { authors := [.person "Arie" "van der Kooij"] }
+      , title := "Die alten Textzeugen des Jesajabuches"
+      , subtitle := some "Ein Beitrag zur Textgeschichte des Alten Testaments"
+      , year := some { value := 1981 }
+      , identifiers := [.isbn "3727802375"] }
+  , publisher := "Universitätsverlag; Vandenhoeck & Ruprecht"
+  , place := some "Freiburg, Switzerland; Göttingen"
+  , series := some "Orbis Biblicus et Orientalis"
+  , seriesNumber := some "35" }
+
+/-- Miller's study of the birth stories, the one reader found who takes up the
+laws of Leviticus 21 and Deuteronomy 22 and denies that the word in them means
+"virgin": their virginity "has to be inferred from the context". Read through
+the Internet Archive's full-text search of its lending copy, without the page
+images, so it is cited whole. Verified at Open Library, ISBN 9780944344958
+(Polebridge Press, 2003). -/
+@[bib_entry] def millerBornDivine : BibEntry := .book
+  { core :=
+      { key := "miller-born-divine-2003"
+      , contributors := { authors := [.person "Robert J." "Miller"] }
+      , title := "Born Divine"
+      , subtitle := some "The Births of Jesus and Other Sons of God"
+      , year := some { value := 2003 }
+      , identifiers := [.isbn "9780944344958"] }
+  , publisher := "Polebridge Press"
+  , place := some "Santa Rosa, CA" }
+
+/-- Chen's dissertation on the Peshitta of Isaiah, the most recent study of its
+7:14. Its agreement with the Septuagint there "prevents us from drawing any
+certain conclusion", and "any individual other than the translators/correctors
+can be tempted to tamper with this verse" (104–5); yet "a loyal translator would
+have no difficulty finding the cognate of עלמה" (78). Read in Harvard's
+repository, whose record gives the degree, the date and the persistent
+address. -/
+@[bib_entry] def chenPeshittaIsaiah : BibEntry := .thesis
+  { core :=
+      { key := "chen-peshitta-isaiah-2020"
+      , contributors := { authors := [.person "Zhan" "Chen"] }
+      , title := "An Investigation into the Peshitta of Isaiah"
+      , year := some { value := 2020 }
+      , identifiers :=
+          [ .url "https://nrs.harvard.edu/URN-3:HUL.INSTREPOS:37368980" (some "2026-10-28") ] }
+  , kind := "PhD diss."
+  , institution := "Harvard University" }
+
 /-- Davidson's article "Immanuel" in Hastings's dictionary. Cited for the older
 answer to Rico and Gentry's evidence: the revisers wrote νεᾶνις "possibly to
 evade the technical sense put on the word by the Christians", παρθένος having
@@ -2152,6 +2298,222 @@ where it is used of a married woman. -/
   , originalTitle := some "Adversus Jovinianum"
   , composed := some { value := 393 }
   , editionUsed := some "schaff-nicene-post-nicene-fathers-2-6-1893" }
+
+/-! ### More fathers on Isaiah 7:14
+
+The fathers below were read for the argument from the sign, for the reading of
+the woman as a virgin whatever the word, and for what they say of the Seventy.
+None asks whether παρθένος could itself mean a girl who is not a virgin. The
+English series are cited in the text CCEL publishes; the Latin and Greek
+commentaries, from the page images of Migne's volumes at the Internet Archive. -/
+
+/-- *The Ante-Nicene Fathers*, volume 3: the edition through which Tertullian's
+*An Answer to the Jews* (tr. S. Thelwall) is cited. CCEL gives the series as
+"originally printed in 1885". -/
+@[bib_entry] def anf3 : BibEntry := .book
+  { core :=
+      { key := "roberts-ante-nicene-fathers-3-1885"
+      , role := .witness
+      , contributors :=
+          { editors := [.person "Alexander" "Roberts", .person "James" "Donaldson"
+                       , .person "A. Cleveland" "Coxe"] }
+      , title := "The Ante-Nicene Fathers"
+      , year := some { value := 1885 }
+      , note := some "Consulted in the text published by CCEL." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "3" }
+
+/-- *Nicene and Post-Nicene Fathers*, first series, volume 10: the edition
+through which Chrysostom's *Homilies on Matthew* (tr. George Prevost, revised by
+M. B. Riddle) are cited. CCEL's record gives New York, 1886, but Riddle's
+preface in the same text is dated 24 September 1888, so the year is left
+unstated. -/
+@[bib_entry] def npnf1v10 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-1-10"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title := "Nicene and Post-Nicene Fathers, First Series"
+      , subtitle := some "St. Chrysostom: Homilies on the Gospel of Saint Matthew"
+      , note := some "Consulted in the text published by CCEL." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "New York"
+  , volume := some "10" }
+
+/-- *Nicene and Post-Nicene Fathers*, second series, volume 7: the edition through
+which Cyril of Jerusalem's *Catechetical Lectures* (tr. Edwin Hamilton Gifford)
+are cited. CCEL's record gives New York, 1893, and Gifford's preface is dated
+26 May 1893. -/
+@[bib_entry] def npnf2v7 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-2-7-1893"
+      , role := .witness
+      , contributors :=
+          { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"] }
+      , title := "Nicene and Post-Nicene Fathers, Second Series"
+      , subtitle := some "Cyril of Jerusalem, Gregory Nazianzen"
+      , year := some { value := 1893 }
+      , note := some "Consulted in the text published by CCEL." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "New York"
+  , volume := some "7" }
+
+/-- Ferrar's translation of Eusebius's *Demonstratio Evangelica*, the edition
+through which Book VII is cited. Verified at Open Library, OL6638704M (SPCK and
+Macmillan, 1920, two volumes); it carries no ISBN. Read in Roger Pearse's
+transcription. -/
+@[bib_entry] def ferrarProofOfTheGospel : BibEntry := .book
+  { core :=
+      { key := "ferrar-proof-of-the-gospel-1920"
+      , role := .witness
+      , contributors :=
+          { authors := [.single "Eusebius of Caesarea"]
+          , translators := [.person "W. J." "Ferrar"] }
+      , title := "The Proof of the Gospel"
+      , subtitle := some "Being the Demonstratio Evangelica of Eusebius of Cæsarea"
+      , year := some { value := 1920 }
+      , identifiers := [.url "https://openlibrary.org/books/OL6638704M" (some "2026-10-28")] }
+  , publisher := "Society for Promoting Christian Knowledge"
+  , place := some "London"
+  , series := some "Translations of Christian Literature, Series I: Greek Texts"
+  , totalVolumes := some 2 }
+
+/-- Migne's *Patrologia Latina*, volume 24: Jerome's commentary on Isaiah, read
+in the 1845 printing at the Internet Archive. Column numbers differ between
+printings; those cited are this one's. -/
+@[bib_entry] def patrologiaLatina24 : BibEntry := .book
+  { core :=
+      { key := "migne-patrologia-latina-24-1845"
+      , role := .witness
+      , contributors := { editors := [.person "J.-P." "Migne"] }
+      , title := "Patrologiae Cursus Completus, Series Latina"
+      , year := some { value := 1845 }
+      , identifiers :=
+          [ .url ("https://archive.org/details/" ++
+                  "bim_early-english-books-1641-1700_patrologiae-cursus-completus-_1845_24")
+                 (some "2026-10-28") ] }
+  , publisher := "J.-P. Migne"
+  , place := some "Paris"
+  , volume := some "24" }
+
+/-- Migne's *Patrologia Graeca*, volume 70: Cyril of Alexandria's commentary on
+Isaiah, read in the page images at the Internet Archive, dated 1859 there. -/
+@[bib_entry] def patrologiaGraeca70 : BibEntry := .book
+  { core :=
+      { key := "migne-patrologia-graeca-70-1859"
+      , role := .witness
+      , contributors := { editors := [.person "J.-P." "Migne"] }
+      , title := "Patrologiae Cursus Completus, Series Graeca"
+      , year := some { value := 1859 }
+      , identifiers :=
+          [ .url "https://archive.org/details/patrologiae_cursus_completus_gr_vol_070"
+                 (some "2026-10-28") ] }
+  , publisher := "J.-P. Migne"
+  , place := some "Paris"
+  , volume := some "70" }
+
+/-- Migne's *Patrologia Graeca*, volume 81: Theodoret's commentary on Isaiah,
+read in the page images at the Internet Archive, dated 1864 there. -/
+@[bib_entry] def patrologiaGraeca81 : BibEntry := .book
+  { core :=
+      { key := "migne-patrologia-graeca-81-1864"
+      , role := .witness
+      , contributors := { editors := [.person "J.-P." "Migne"] }
+      , title := "Patrologiae Cursus Completus, Series Graeca"
+      , year := some { value := 1864 }
+      , identifiers :=
+          [ .url "https://archive.org/details/patrologiae_cursus_completus_gr_vol_081"
+                 (some "2026-10-28") ] }
+  , publisher := "J.-P. Migne"
+  , place := some "Paris"
+  , volume := some "81" }
+
+/-- Tertullian, *An Answer to the Jews* 9: the young woman's pregnancy, "a daily
+occurrence", "cannot possibly seem anything of a sign". -/
+@[bib_entry] def tertullianAnswerToTheJews : BibEntry := .ancientWork
+  { core :=
+      { key := "tertullian-answer-to-the-jews-200"
+      , role := .witness
+      , contributors := { authors := [.single "Tertullian"] }
+      , title := "An Answer to the Jews" }
+  , originalTitle := some "Adversus Iudaeos"
+  , composed := some { value := 200, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-3-1885" }
+
+/-- Eusebius, *Demonstratio Evangelica* VII.1: the argument from the sign, the
+Seventy as "experts in the accuracy of their knowledge of their national
+language", the renderings of Aquila and Symmachus, and Moses's "young woman"
+used "of one who is undoubtedly a virgin" (Deuteronomy 22). -/
+@[bib_entry] def eusebiusDemonstratio : BibEntry := .ancientWork
+  { core :=
+      { key := "eusebius-demonstratio-evangelica-315"
+      , role := .witness
+      , contributors := { authors := [.single "Eusebius of Caesarea"] }
+      , title := "Demonstratio Evangelica" }
+  , originalTitle := some "Εὐαγγελικὴ ἀπόδειξις"
+  , composed := some { value := 315, approximate := true }
+  , editionUsed := some "ferrar-proof-of-the-gospel-1920" }
+
+/-- Cyril of Jerusalem, *Catechetical Lectures* 12.21–22: granting the Jews'
+"damsel", "even so I find the truth", from Deuteronomy 22:27; and the sign
+"must be something astonishing". -/
+@[bib_entry] def cyrilCatecheticalLectures : BibEntry := .ancientWork
+  { core :=
+      { key := "cyril-jerusalem-catechetical-lectures-350"
+      , role := .witness
+      , contributors := { authors := [.single "Cyril of Jerusalem"] }
+      , title := "Catechetical Lectures" }
+  , originalTitle := some "Κατηχήσεις"
+  , composed := some { value := 350, approximate := true }
+  , editionUsed := some "schaff-nicene-post-nicene-fathers-2-7-1893" }
+
+/-- Chrysostom, *Homilies on Matthew* 5: the Seventy, translating "an hundred
+years or more before the coming of Christ", "stand clear from all such
+suspicion"; Scripture puts "youth" for "virginity" (Deuteronomy 22:27); and an
+ordinary birth would be no sign. -/
+@[bib_entry] def chrysostomHomiliesMatthew : BibEntry := .ancientWork
+  { core :=
+      { key := "chrysostom-homilies-matthew-390"
+      , role := .witness
+      , contributors := { authors := [.single "John Chrysostom"] }
+      , title := "Homilies on the Gospel of Matthew" }
+  , composed := some { value := 390, approximate := true }
+  , editionUsed := some "schaff-nicene-post-nicene-fathers-1-10" }
+
+/-- Jerome, *Commentary on Isaiah*, Book III, on 7:14: the sign "novum debet
+esse atque mirabile"; עַלְמָה "verbum ambiguum", rendered "adolescentula" by every
+version but the Septuagint; and Deuteronomy 22's "puella" understood of a
+virgin. -/
+@[bib_entry] def jeromeCommentaryIsaiah : BibEntry := .ancientWork
+  { core :=
+      { key := "jerome-commentary-isaiah-410"
+      , role := .witness
+      , contributors := { authors := [.single "Jerome"] }
+      , title := "Commentary on Isaiah" }
+  , composed := some { value := 410, approximate := true }
+  , editionUsed := some "migne-patrologia-latina-24-1845" }
+
+/-- Cyril of Alexandria, *Commentary on Isaiah*, on 7:14: "even if the virgin
+were called a young woman, she will not cease to be a virgin"; and the sign
+"truly extraordinary". -/
+@[bib_entry] def cyrilAlexandriaIsaiah : BibEntry := .ancientWork
+  { core :=
+      { key := "cyril-alexandria-commentary-isaiah"
+      , role := .witness
+      , contributors := { authors := [.single "Cyril of Alexandria"] }
+      , title := "Commentary on Isaiah" }
+  , editionUsed := some "migne-patrologia-graeca-70-1859" }
+
+/-- Theodoret, *Commentary on Isaiah*, on 7:14: no one calls a sign what happens
+every day; "if the birth is not virginal but marital", how is it a sign? -/
+@[bib_entry] def theodoretIsaiah : BibEntry := .ancientWork
+  { core :=
+      { key := "theodoret-commentary-isaiah"
+      , role := .witness
+      , contributors := { authors := [.single "Theodoret of Cyrrhus"] }
+      , title := "Commentary on Isaiah" }
+  , editionUsed := some "migne-patrologia-graeca-81-1864" }
 
 /-- Joos's "Semantic Axiom Number One": of the meanings a word could have in a
 passage, the best is the one that contributes least to the total message — the

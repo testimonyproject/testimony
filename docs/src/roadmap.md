@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **200 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **201 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -75,9 +75,10 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `nothing_prevails_without_the_reply` | `Framework.grounded signAgainstWegner.defeats = ∅` | **Without the reply, nothing prevails either.** Wegner and the fathers defeat each other, so the reply is not what keeps the fathers from prevailing: Wegner's rebuttal does, … |
 | `drift_rests_on_its_inference` | `¬Entails driftLine.grounds (p Claim.parthenosMeantYoungWoman)` | **Wegner on παρθένος rests on its inference.** On Rico and Gentry's reading the older Greek usage is granted, Dinah is called παρθένος after Shechem has lain with her, and the … |
 | `usage_rests_on_its_inference` | `¬Entails usageLine.grounds (p Claim.parthenosMeansVirgin)` | **Rico and Gentry's case rests on its inference.** On the reading Davidson (1899, 456) and Meade (2013) give, Trypho objects to παρθένος and the Three write νεᾶνις because by then … |
-| `nothing_prevails_over_parthenos` | `Framework.grounded septuagintDispute.defeats = ∅` | **Nothing prevails.** Every party is defeated by someone — the witness and Rico and Gentry by Wegner, Wegner by both — so no position is accepted however the standoffs are … |
-| `septuagint_is_one_resolution` | `Framework.Preferred septuagintDispute.defeats {SeptuagintParty.witness, SeptuagintParty.usage}` | **One resolution: the Septuagint's witness, with Rico and Gentry.** Neither defeats the other, and between them they answer Wegner, the only party to defeat either. |
-| `drift_is_the_other_resolution` | `Framework.Preferred septuagintDispute.defeats {SeptuagintParty.drift}` | **The other resolution: Wegner.** His case can be defended on its own, because it defeats both parties that defeat it; and it is in conflict with both, so no larger set can be … |
+| `laws_rest_on_their_inference` | `¬Entails lawsLine.grounds (p Claim.lawsUseParthenosAsVirgin)` | **The case from the laws rests on its inference.** The high priest's παρθένος is set against the widow and the harlot, and the bride without τὰ παρθένια dies as a harlot; and … |
+| `nothing_prevails_over_parthenos` | `Framework.grounded septuagintDispute.defeats = ∅` | **Nothing prevails.** Every party is defeated by someone — the witness, Rico and Gentry and the laws by Wegner, Wegner by all three — so no position is accepted however the … |
+| `septuagint_is_one_resolution` | `Framework.Preferred septuagintDispute.defeats {SeptuagintParty.witness, SeptuagintParty.usage, SeptuagintParty.laws}` | **One resolution: the Septuagint's witness, with Rico and Gentry and the laws.** None of the three defeats another, and between them they answer Wegner, the only party to defeat … |
+| `drift_is_the_other_resolution` | `Framework.Preferred septuagintDispute.defeats {SeptuagintParty.drift}` | **The other resolution: Wegner.** His case can be defended on its own, because it defeats every party that defeats it; and it is in conflict with all three, so no larger set can … |
 | `nothing_prevails_over_her_seed` | `Framework.grounded genesisDispute.defeats = ∅` | **Nothing prevails.** Every party is defeated by someone — Luther by Leupold and by Lewis, each of them by Luther — so no position is accepted however the standoffs are resolved. |
 | `wording_is_one_resolution` | `Framework.Preferred genesisDispute.defeats {GenesisParty.wording}` | **One resolution: Luther.** His case can be defended on its own, because it defeats both parties that defeat it; and it is in conflict with both, so no larger set can be defended. |
 | `posterity_and_idiom_are_the_other_resolution` | `Framework.Preferred genesisDispute.defeats {GenesisParty.posterity, GenesisParty.idiom}` | **The other resolution: Leupold, with Lewis.** Neither defeats the other, and each answers Luther, the only party to defeat either. |
@@ -446,11 +447,20 @@ argument — Jews translated Isaiah into Greek long before Christ and wrote
 It rests on one claim, that παρθένος in the translator's Greek means a virgin
 (`parthenos_is_load_bearing`). Rico and Gentry hold that claim, and Bratcher with
 them; Wegner, Rhodea and Meade deny it, pointing to Genesis 34:3, where the Greek
-calls Dinah a παρθένος after Shechem has lain with her. Weighed as a dispute,
-**nothing prevails** (`nothing_prevails_over_parthenos`): the Septuagint with
-Rico and Gentry is one defensible resolution, Wegner the other, and the tie is a
-fact about three ratings: Wegner's step from Genesis 34:3, Rico and Gentry's from
-the Jewish objection to παρθένος, and that of the claim about παρθένος itself.
+calls Dinah a παρθένος after Shechem has lain with her. The Greek Pentateuch, the
+corpus that verse comes from, uses the word in its laws where virginity is the
+point (Leviticus 21:13–14, Deuteronomy 22:13–21), and a new article of the
+ontology carries a sense found in a passage to the usage it belongs to
+(`a_sense_in_a_usage_at_work`), so the laws' sense excludes Wegner's "not yet
+'virgin'" by what the words mean. Weighed as a dispute, **nothing prevails**
+(`nothing_prevails_over_parthenos`): the Septuagint with Rico and Gentry and the
+laws is one defensible resolution, Wegner the other, and the tie is a fact about
+four ratings: Wegner's step from Genesis 34:3, Rico and Gentry's from the Jewish
+objection to παρθένος, the laws' step, and the claim about παρθένος itself. The
+laws' step is `disputed` on one reader, Miller, and two of the three things he
+says of the Greek do not hold of it; rated higher, it would hand the dispute to
+the witness. The page says where the evidence lies, which the ratings do not
+weigh.
 Granted the word, the Septuagint shows
 that a pre-Christian Jewish reader took the woman of 7:14 to be a virgin, not
 what Isaiah's word means (`septuagint_word_rests_on_its_inference`), and its
