@@ -94,21 +94,29 @@ Micah 5 or Isaiah 9 is a *sign* to Ahaz — would be the source to find.
 ## What the church fathers add, and what they cannot
 
 The predictive reading is not a modern apologetic. Justin, Irenaeus, Origen and
-Jerome all argue it, and `Sources.lean` cites them for it: for the
-prediction itself and for עַלְמָה as a virgin. That strengthens the attestation
-of the scriptural premises, and none of it changes a rating. The argument they
-share — that an ordinary conception would have been no sign at all — is
-encoded as an argument in its own right, `signLine`. It answers Wegner's
-objection rather than the critical denial, so it is weighed in `Dispute.Wegner`
-and not here.
+Jerome all argue it, and `Sources.lean` cites them for it: for the prediction
+itself, and for עַלְמָה as a virgin. Every father the library has read on
+the verse — Tertullian, Eusebius, Cyril of Jerusalem, Chrysostom, Cyril of
+Alexandria and Theodoret besides — argues that an ordinary conception would have
+been no sign at all. Several grant the Jewish "young woman" and answer as the
+referential reading does: a young woman can be a virgin, as the betrothed νεᾶνις
+of Deuteronomy 22:23–27 is, whom 22:23 calls a παῖς παρθένος. None asks whether
+παρθένος could itself mean a girl who is not a virgin; the question Wegner raises
+was not theirs. That strengthens the attestation of the scriptural premises, and
+none of it changes a rating.
 
-It cannot, because of what `disputed` means here: *actively contested by
-competent scholars*. The fathers are the earliest witnesses to the contest as
-well as to the reading. Justin records Trypho's answer — "young woman", and
-fulfilled in Hezekiah — and Irenaeus names Theodotion and Aquila. An older
-witness does not make a contested claim uncontested. What moved the result was
-the same definition applied to the other side: both of the critic's premises
-are contested too, and the library records who contests them.
+The fathers' witness cannot change a rating, because of what `disputed` means
+here: *actively contested by competent scholars*. The fathers are the earliest
+witnesses to the contest as well as to the reading. Justin records Trypho's
+answer — "young woman", and fulfilled in Hezekiah — and Irenaeus names Theodotion
+and Aquila. An older witness does not make a contested claim uncontested. What
+decides the result here is the same definition applied to the other side: both
+of the critic's premises are contested too, and the library records who contests
+them.
+
+The sign argument is encoded as an argument in its own right, `signLine`. It
+answers Wegner's objection rather than the critical denial, so it is weighed in
+`Dispute.Wegner`, where it ties with Wegner (`nothing_prevails_over_wegner`).
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
@@ -382,6 +390,7 @@ def laterOraclesReading : Valuation Claim := fun a =>
   | .parthenosMeansVirgin => False
   | .isaiahPredictsVirginBirth => False
   | .isaiah9And11ShareTheAssyrianTimeline => False
+  | .lawsUseParthenosAsVirgin => False
   | _ => True
 
 /-- **The critic can grant Postell's step**, by dating Isaiah 9 and 11 later than
@@ -401,6 +410,7 @@ def royalMicahReading : Valuation Claim := fun a =>
   | .parthenosMeansVirgin => False
   | .isaiahPredictsVirginBirth => False
   | .micahRulerReadMessianically => False
+  | .lawsUseParthenosAsVirgin => False
   | _ => True
 
 /-- **The critic can grant the Micah step**, by reading Micah 5:2 of a near-term

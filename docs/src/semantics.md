@@ -133,6 +133,18 @@ sanctification", whose denial was always in the Reformed claim's own meaning
 (`a_denial_inside_needs_no_definition`). No dispute's table and no verdict moves; the named
 readings of sola fide take a side on both pairs.
 
+`Testimony.Ontology.Usage` is about senses rather than relation words. A word's usage as a whole
+is the senses its passages give it, so a sense a word has in one passage of a text is a sense it
+has in that text's usage (`a_sense_in_a_usage_at_work`). That is all it does. It says nothing
+about any single passage, and it does not count a word used *of* a virgin as evidence that the
+word *means* "virgin". What a word means at a passage stays a premise, cited and rated, and the
+context it is read from is the premise's evidence. What it can show false is a claim that a
+usage *lacked* a sense, wherever a passage of it is held to have that sense. In the virgin birth
+argument it joins the laws of the Greek Pentateuch to the Septuagint's Greek: their sense
+"virgin" makes "virgin" one of the word's senses in the Septuagint, which is the claim encoded
+for Rico and Gentry, and excludes Wegner's "not yet 'virgin'". It says nothing of which sense
+the word has at Isaiah 7:14.
+
 ### What the search found, not yet fixed
 
 The search was run over every argument's meanings before any article was written. Besides the

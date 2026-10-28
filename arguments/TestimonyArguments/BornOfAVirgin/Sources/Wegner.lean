@@ -102,12 +102,30 @@ def otherClearAlmahCasesAreVirginsCited : AtomMeta :=
 /-- `signMustBeExtraordinary`. Origen's form of it: "What kind of sign, then,
 would that have been — a young woman who was not a virgin giving birth to a
 child?", tied to the sign offered "in the depth or in the height" (Cels. I.35).
-Justin (Dial. 84) and Irenaeus (Haer. III.21.6) argue the same. Rydelnik makes
-the move today, as Postell reports (474). `disputed`: Wegner grants that the
-sign offered at 7:11 would have been miraculous, but holds that a sign may be an
-everyday occurrence and reads the one given at 7:14, after Ahaz refused the
-first, as one (469–470, 477–478); Rhodea holds that a sign does not require a
-miracle, and that 7:11 does not make this one (64 and n. 10). -/
+Justin (Dial. 84) and Irenaeus (Haer. III.21.6) argue the same, and so does every
+other father the library has read on the verse:
+
+- Tertullian: a young woman's pregnancy, "a daily occurrence", "cannot possibly
+  seem anything of a sign" (*Answer to the Jews* 9);
+- Eusebius (*Dem. Ev.* VII.1);
+- Cyril of Jerusalem: "the sign certainly must be something astonishing" (*Cat.*
+  12.22);
+- Chrysostom: "that which is a sign must of course be beyond the course of
+  common events" (*Hom. Matt.* 5);
+- Jerome: the sign "novum debet esse atque mirabile", must be new and wonderful
+  (on 7:14, PL 24, 107D);
+- Cyril of Alexandria (PG 70, 204C);
+- Theodoret: "Οὐδεὶς δὲ σημεῖον καλεῖ τὸ καθ' ἑκάστην γινόμενον ἡμέραν", no
+  one calls a sign what happens every day (PG 81, 276D).
+
+Rydelnik makes the move today, as Postell reports (474).
+
+`disputed`, though the fathers are unanimous: a rating says whether competent
+readers contest a claim now, and two do. Wegner grants that the sign offered at
+7:11 would have been miraculous, but holds that a sign may be an everyday
+occurrence and reads the one given at 7:14, after Ahaz refused the first, as one
+(469–470, 477–478); Rhodea holds that a sign does not require a miracle, and
+that 7:11 does not make this one (64 and n. 10). -/
 def signMustBeExtraordinaryCited : AtomMeta :=
   { label := "The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11"
   , kind := .interpretive
@@ -116,6 +134,13 @@ def signMustBeExtraordinaryCited : AtomMeta :=
       , supporting :=
           [ .work justinDialogue (.sectionRef "84")
           , .work irenaeusAgainstHeresies (.sectionRef "III.21.6")
+          , .work tertullianAnswerToTheJews (.sectionRef "9")
+          , .work eusebiusDemonstratio (.sectionRef "VII.1")
+          , .work cyrilCatecheticalLectures (.sectionRef "12.22")
+          , .work chrysostomHomiliesMatthew (.sectionRef "5")
+          , .work jeromeCommentaryIsaiah (.adLoc isaiah7_14)
+          , .work cyrilAlexandriaIsaiah (.adLoc isaiah7_14)
+          , .work theodoretIsaiah (.adLoc isaiah7_14)
           , .work postellIsaiahMessianic (.page 474)
           , .scripture depthOrHeightOffer ]
       , tradition := .christianTypological

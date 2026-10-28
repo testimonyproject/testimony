@@ -48,13 +48,23 @@ namespace Testimony.Semantics
 
 open Testimony
 
-/-- Where a word is used: one passage, or an author's usage as a whole. -/
+/-- Where a word is used: one passage, one passage of a voice's own text, or an
+author's usage as a whole. -/
 inductive Scope
   /-- One passage. -/
   | passage (p : PassageRange)
   /-- An author's or tradition's usage as a whole. -/
   | usage (v : Voice)
+  /-- One passage of a voice's own text: the Septuagint's Leviticus 21:13, as
+  against the Hebrew's. What a word means here, it means somewhere in the
+  voice's usage (`Testimony.Ontology.Usage`). -/
+  | passageOf (v : Voice) (p : PassageRange)
 deriving DecidableEq, Repr
+
+/-- Whether the scope is one passage of a voice's own text. -/
+def Scope.isPassageOf : Scope → Bool
+  | .passageOf .. => true
+  | _ => false
 
 /-- What a slot in a relation holds: a concept, a word as it is used somewhere
 (whose sense is left to a separate `Statement.means`), or a particular — one

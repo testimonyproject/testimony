@@ -165,11 +165,16 @@ def versionalObjection : Formula Claim :=
 
 /-- **The tension, dissolved.** If virginity is compatible with עַלְמָה, the
 versions are not contradicting one another about the referent at all: the
-Peshitta, and the Septuagint if its παρθένος already meant "virgin"
-(`Dispute.Septuagint`), render with the narrower term because they read the
-referent as a virgin, the Targum and the Three render with the broader one, and
-both are faithful renderings of a word whose denotation admits both. The
-divergence stops being evidence about the sense. -/
+Septuagint, if its παρθένος already meant "virgin" (`Dispute.Septuagint`), and
+the Peshitta render with the narrower term, the Targum and the Three with the
+broader one, and both are faithful renderings of a word whose denotation admits
+both. The divergence stops being evidence about the sense.
+
+Why the Peshitta has the narrower term is not settled. It is its only ܒܬܘܠܬܐ for
+עַלְמָה, and whether that is its translator's reading of the woman, the
+Septuagint's influence, or a later Christian hand, Chen finds impossible to
+decide (104–5). The step needs only that the rendering is a faithful one, not
+why it was chosen. -/
 @[bornOfAVirginDefs]
 def compatibilityDissolvesDivergence : Formula Claim :=
   ⋀ [ p .virginityCompatibleWithAlmah, p .lxxRendersParthenos
@@ -426,12 +431,16 @@ def magisterialLine : Line Claim :=
   , delivers := p .messiahBornOfVirgin }
 
 /-- **The referential line.** The shared lexical ground, the Rebekah datum,
-and the two facts about Mary, delivering that she answers Isaiah's description
-without the word having to carry the sense.
+and two claims about Mary — that she was a young woman of marriageable age, and
+that she conceived as a virgin, which is cited `disputed` — delivering that she
+answers Isaiah's description without the word having to carry the sense. The
+fathers answer the Jewish "young woman" the same way: Cyril of Alexandria, "even
+if the virgin were called a young woman, she will not cease to be a virgin".
 
-`qumranConfirmsAlmah` is a ground here because the reply has to be about the
-sense rather than the text: if the Hebrew were in doubt the dispute would not
-be purely semantic, and the line would not be the cheap move it is. -/
+The scroll's reading is a ground because the reply is about what the word
+means, not which word Isaiah wrote: 1QIsaᵃ, copied before Christ, has the
+Masoretic Text's עַלְמָה. If the Hebrew were in doubt the dispute would not be
+about the sense alone, and the reply would have more to answer. -/
 @[bornOfAVirginDefs]
 def referentialLine : Line Claim :=
   { name := "Referential reading: a virgin is an עַלְמָה"
@@ -486,20 +495,22 @@ retyping them. -/
 def wegnerClosingSteps : List (Formula Claim) :=
   [ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
 
-/-- **The fathers' sign argument.** Justin, Irenaeus and Origen, and Rydelnik
-today: the sign of 7:14 must be extraordinary, an ordinary conception is not, so
-the pregnancy is no ordinary one. It denies the ground of Wegner's line that the
-parse does not supply, and nothing else. -/
+/-- **The fathers' sign argument.** Justin, Irenaeus and Origen, and every other
+father the library has read on the verse, and Rydelnik today: the sign of 7:14
+must be extraordinary, an ordinary conception is not, so the pregnancy is no
+ordinary one. It denies the ground of Wegner's line that the parse does not
+supply, and nothing else.
+
+Its step is rated `plausible`: no source cited here grants both grounds and
+holds the pregnancy ordinary. The rival denies the first ground instead, and the
+grounds are rated separately. It is not rated higher, because the step reads the
+conception as the whole of the sign. -/
 @[bornOfAVirginDefs]
 def signLine : Line Claim :=
   { name := "The fathers' sign argument (Isaiah 7:11, 14)"
   , grounds := [ p .signMustBeExtraordinary, p .ordinaryConceptionIsNoMarvel ]
   , step := extraordinarySignExcludesOrdinaryPregnancy
   , delivers := notP .pregnancyAtTheSignIsOrdinary
-    -- `plausible`: no source cited here grants both grounds and holds the
-    -- pregnancy ordinary. The rival denies the first ground instead, and the
-    -- grounds are rated separately. Not `wellSupported`: the step reads the
-    -- conception as the whole of the sign.
   , inference := some
       { primary := .work irenaeusAgainstHeresies (.sectionRef "III.21.6")
       , supporting := [.work origenAgainstCelsus (.sectionRef "I.35")]
@@ -573,7 +584,15 @@ woman'" (112), and Dinah "was no longer, therefore, a 'virgin'" — and still
 finds that "parthenos definitely means 'virgin' in the LXX; only very
 exceptionally (and, inexplicably, in Gen. 34:3) is it used otherwise" (113). The
 Greek Isaiah, a later book by another translator, uses the word elsewhere only
-for בְּתוּלָה (`isaiahUsesParthenosForBetulah`). -/
+for בְּתוּלָה (`isaiahUsesParthenosForBetulah`).
+
+Delling, in the standard theological dictionary, reads the Septuagint's usage at
+Isaiah 7:14 as demanding "no more than the sense of a 'woman untouched by a man
+up to the moment of the conception'" (*TDNT* 5.833, as Rhodea quotes him, 67
+n. 42): a virgin until then, whatever followed. And the Greek Pentateuch, the
+corpus Genesis 34:3 comes from, uses the word in its laws where virginity is the
+point (`lawsLine`). One passage in the broader sense does not show that the
+narrower sense was missing. -/
 @[bornOfAVirginDefs]
 def driftLine : Line Claim :=
   { name := "Wegner on παρθένος: the word had not yet come to mean 'virgin'"
@@ -612,7 +631,8 @@ the word, not the sense its translator gave it. A. B. Davidson: the Three wrote
 νεᾶνις "possibly to evade the technical sense put on the word by the
 Christians", παρθένος having been "used generally for 'girl' or 'young woman'"
 (*A Dictionary of the Bible* II, 1899, 456). John Meade, a Septuagint scholar
-whose doctoral supervisor was Gentry, finds the revisers' change sensible "only in a
+whose doctoral supervisor was Gentry, so that the dissent comes from within
+Gentry's own school, finds the revisers' change sensible "only in a
 context where παρθενος has been hijacked or used to mean 'chaste woman' only
 (which by the time of Justin Martyr, it clearly had been, since Trypho never
 disputes this point but only relies on his different version which had
@@ -644,6 +664,78 @@ def usageLine : Line Claim :=
           [ .work postellIsaiahMessianic (.page 472)
           , .work davidsonImmanuel (.page 456)
           , .work meadeAncientVersionsComment .whole ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **The laws' sense.** The high priest's παρθένος is set against the widow, the
+woman put away, the defiled woman and the harlot, and the bride without τὰ
+παρθένια dies for playing the harlot; so in these laws παρθένος is used in the
+sense "virgin". -/
+@[bornOfAVirginDefs]
+def lawsFixTheSense : Formula Claim :=
+  ⋀ [ p .priestMarriesAParthenos, p .partheniaProveTheBride ] ➝ p .lawsUseParthenosAsVirgin
+
+/-- **The case from the laws.** Bratcher's, from the Greek of Leviticus 21 and
+Deuteronomy 22 (102, 113): two laws of the Greek Pentateuch, the corpus Wegner
+takes Genesis 34:3 from, in which virginity is what the law turns on. The laws
+are in the translators' own Greek, and they are not uses of the word *of* a
+virgin, which would show nothing of its sense; the passages it rests on are
+where the sense is the point (`lawsUseParthenosAsVirgin`).
+
+It concludes nothing about Isaiah 7:14. What it shows is that "virgin" was
+already a sense of παρθένος in the Septuagint's Greek, which is what Wegner
+denies. The step from the two passages to the Septuagint's usage is not a step
+of the argument: it is what a usage "as a whole" means
+(`Testimony.Ontology.Usage`), and the meanings join the laws' sense to Rico and
+Gentry's claim and against Wegner's (`Meanings.BornOfAVirgin.joins`).
+
+The step is rated `disputed`, on one reader. Robert J. Miller grants what the
+laws require: virginity matters "in the law that priests can marry only women
+who are virgins (Lev 21:13-14)", and the bride of Deuteronomy 22:13–21 is
+charged "with not being a virgin at the time of their marriage". But "that has
+to be inferred from the context": "Neither word means virgin", and "As in other
+Greek literature, parthenos in the Septuagint did not by itself connote what we
+mean by virginity", for where virginity matters the Greek adds "a parthenos who
+has not known a man" (Genesis 24:16) (*Born Divine*).
+
+Miller is kept, as every cited reader is, and the page shows where his reading
+breaks. He says four things of the Greek. Two hold, or are not answered here;
+two do not hold of it.
+
+- **Genesis 34:3**, where Dinah is called a παρθένος after Shechem. That holds,
+  and Rico and Gentry explain it as an archaism of the Greek Pentateuch.
+- **Genesis 24:16**: where virginity matters, the Greek adds "a parthenos who
+  has not known a man". The clause is the Hebrew's own, וְאִישׁ לֹא יְדָעָהּ, and the
+  Greek renders it. What it shows about either word, the page does not settle.
+- **A young widow**: "Lament like a parthenos dressed in sackcloth for the
+  husband of her youth (Joel 1:8)". The Greek of Joel 1:8 calls the woman
+  νύμφην, a bride; its παρθεν- word, τὸν παρθενικόν, is of the husband (read
+  from Rahlfs's text).
+- **The translators "consistently used it to translate the Hebrew almah"**. They
+  used it for עַלְמָה twice, at Genesis 24:43 and Isaiah 7:14, and elsewhere wrote
+  νεᾶνις, as Rhodea, who holds Wegner's view, notes (67 and n. 34); the word
+  they used consistently for was בְּתוּלָה (Bratcher 112–13).
+
+And he does not take up τὰ παρθένια, the abstract noun by which Walton's own
+test would fix the sense. None of this changes the rating: the rule counts a
+cited reader who grants the grounds and denies the conclusion, and does not
+weigh his evidence. Rated higher, the step would decide the dispute over the
+Septuagint in the witness's favour (`Dispute.Septuagint` says why). -/
+@[bornOfAVirginDefs]
+def lawsLine : Line Claim :=
+  { name := "The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'"
+  , grounds := [ p .priestMarriesAParthenos, p .partheniaProveTheBride ]
+  , step := lawsFixTheSense
+  , delivers := p .lawsUseParthenosAsVirgin
+  , inference := some
+      { primary := .work bratcherStudyOfIsaiah (.page 113)
+      , supporting :=
+          [ .work bratcherStudyOfIsaiah (.page 102)
+          , .work liddellScottJones (.page 1339)
+          , .work muraokaLexiconSeptuagint (.page 535)
+          , .work lustLexiconSeptuagint (.sv "παρθένια")
+          , .work millerBornDivine .whole
+          , .work rhodeaDidMatthewConceive (.page 67) ]
       , tradition := .christianHistoricalGrammatical
       , confidence := .disputed } }
 
