@@ -544,15 +544,26 @@ the text. Its hinge is `parthenosMeansVirgin`, and the dispute over the
 Septuagint is about that one ground.
 
 The step draws out its grounds: a translator who chose for the woman a word that
-means a virgin described her as one. It is rated `disputed`, on one reader.
-Walton, reporting Archer, holds that the translator of Isaiah "consistently
-showed a tendency to be imprecise in his choice of Greek terms": "often a vaguely
-suitable term was chosen when a much more acceptable and precise term was
-available. This could well be the explanation of the use of parthenos here"
-(293). On that account a translator can write a word that means a virgin without
-meaning that the woman was one. The main contest is over the third ground, which
-is rated `disputed` in its own right; the step's rating changes no verdict,
-because the witness is already no stronger than that ground. -/
+means a virgin described her as one. It is rated `plausible`: no reader cited
+here grants that the word means a virgin and denies that the translator called
+her one. Bratcher and Brown, who deny the next step, grant this one: the
+translator meant "a young woman, at that time virgin" (Bratcher 115), "a
+deliberate preference for understanding the young woman of Isa 7:14 as a virgin"
+(Brown 148).
+
+Walton doubts the word itself, and that dissent is counted where it belongs, in
+the rating of the third ground. Against the step he offers one thing more,
+Archer's suggestion that the translator of Isaiah "consistently showed a tendency
+to be imprecise in his choice of Greek terms", which "could well be the
+explanation of the use of parthenos here" (293). That is a guess at why the
+translator wrote the word, not a reading of what he wrote, and it is not counted
+as a dissent. The translator's own text tells against it: everywhere else in his
+Isaiah, παρθένος stands for בְּתוּלָה (23:4, 37:22, 47:1, 62:5;
+`isaiahUsesParthenosForBetulah`). The step is not rated higher, because none of
+its readers argues for it beyond the word's sense.
+
+The main contest is over the third ground, rated `disputed`; the witness is no
+stronger than that ground, so the step's rating changes no verdict. -/
 @[bornOfAVirginDefs]
 def septuagintLine : Line Claim :=
   { name := "The Septuagint as a witness (Isaiah 7:14 in Greek)"
@@ -562,9 +573,11 @@ def septuagintLine : Line Claim :=
   , delivers := p .lxxReadsAVirgin
   , inference := some
       { primary := .work irenaeusAgainstHeresies (.sectionRef "III.21.1")
-      , supporting := [.work waltonWhatsInAName (.page 293)]
+      , supporting :=
+          [ .work bratcherStudyOfIsaiah (.page 115)
+          , .work brownBirthMessiah (.page 148) ]
       , tradition := .christianTypological
-      , confidence := .disputed } }
+      , confidence := .plausible } }
 
 /-- **Wegner on παρθένος**: in the Septuagint's day the word meant "young
 woman", and came to mean "virgin" only by the time of the New Testament

@@ -302,7 +302,7 @@ theorem laws_rest_on_their_inference :
 /-! ### Strength -/
 
 /-- The witness is no stronger than its claim about the word, cited
-`disputed`, nor than its step, rated `disputed` on Walton's report of Archer. -/
+`disputed`. Its step is rated `plausible`, and does not lower it further. -/
 theorem septuagintWitness_strength : septuagintWitness.strength = 0 := by decide
 
 /-- Wegner's grounds are well supported and `consensus`, but his inference is
