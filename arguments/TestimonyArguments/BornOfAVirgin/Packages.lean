@@ -419,6 +419,58 @@ def matthewCase : ArgumentPackage Claim :=
   matthewLine.asPackage cite
     "In the Greek of Isaiah 7:14, παρθένος means 'virgin', as Matthew reads it"
 
+/-- **The fulfilment, confirming the promise**, as a position: every term of
+Genesis 3:15 met in Jesus as the New Testament names it, and so the verse a
+promise of him. Two steps, each rated: the fulfilment (`fulfilmentLine`) and the
+confirmation (`confirmationLine`). The confirmation's ground is the fulfilment's
+conclusion, so it enters as a step, not as a premise. -/
+@[bornOfAVirginDefs]
+def fulfilmentCase : ArgumentPackage Claim :=
+  { name := "The fulfilment of Genesis 3:15 confirms the promise"
+  , cite := cite
+  , premises := caseOf [fulfilmentLine] [] [fulfilmentConfirmsThePromise]
+  , conclusion := p .genesis3_15IsProtoevangelium
+  , conclusionLabel := "Genesis 3:15 is the protoevangelium, fulfilled in Jesus"
+  , inferences := fulfilmentLine.inference.toList ++ confirmationLine.inference.toList }
+
+/-- **Westermann's denial**, as a position: the verse is no promise, and so no
+one fulfils it. He holds the confirmation's step with the fulfilment's side —
+what is fulfilled was promised — and runs it the other way: suggestions of a
+messianic reading "are found in late Judaism, but not in the New Testament"
+(261). So his denial that the verse is a promise is a denial that it is
+fulfilled in Jesus, and the package says so. -/
+@[bornOfAVirginDefs]
+def westermannCase : ArgumentPackage Claim :=
+  { name := westermannLine.name
+  , cite := cite
+  , premises := caseOf [westermannLine] [] [fulfilmentConfirmsThePromise]
+  , conclusion := notP .genesis3_15IsProtoevangelium
+  , conclusionLabel := "Genesis 3:15 is not the protoevangelium"
+  , inferences := westermannLine.inference.toList }
+
+/-- **The syntax of the striker**, as a position: "her seed" at 3:15 is not only
+a line of descendants. -/
+@[bornOfAVirginDefs]
+def syntaxCase : ArgumentPackage Claim :=
+  syntaxLine.asPackage cite "At Genesis 3:15 'her seed' is not only a line of descendants"
+
+/-- **The scene read whole**, as a position: the verse is the protoevangelium,
+from the section's own words. -/
+@[bornOfAVirginDefs]
+def sceneCase : ArgumentPackage Claim :=
+  sceneLine.asPackage cite "Genesis 3:15 is the protoevangelium, read from the scene"
+
+/-- **The seed of the woman alone**, as a position: the fulfilment, with the
+virginal conception. -/
+@[bornOfAVirginDefs]
+def aloneCase : ArgumentPackage Claim :=
+  { name := "The seed of the woman alone"
+  , cite := cite
+  , premises := caseOf [fulfilmentLine] [p .maryConceivedAsVirgin] [fulfilledInOneVirginBorn]
+  , conclusion := p .seedWasOfTheWomanAlone
+  , conclusionLabel := "The seed in whom Genesis 3:15 is fulfilled was of the woman alone"
+  , inferences := fulfilmentLine.inference.toList ++ aloneLine.inference.toList }
+
 /-- The Septuagint as a witness, with the claim about its word taken away: the
 rendering and its date stay, and nothing is granted about what παρθένος meant.
 Its conclusion no longer follows (`parthenos_is_load_bearing`). -/

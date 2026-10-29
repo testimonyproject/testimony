@@ -207,6 +207,42 @@ inductive Claim
   /-- The Greek translator of Genesis read the woman's seed at 3:15 as one
   person. -/
   | lxxReadsOneDescendant
+  /-- Revelation calls the devil "that old serpent" (12:9, 20:2). -/
+  | serpentNamedTheDevil
+  /-- Hebrews and 1 John say the Son came to destroy the devil and his works,
+  through death (Hebrews 2:14; 1 John 3:8). -/
+  | devilDestroyedThroughDeath
+  /-- Paul says Christ died, was buried, and rose the third day (1 Corinthians
+  15:3–4). -/
+  | christDiedAndRose
+  /-- Paul says God sent his Son "made of a woman" (Galatians 4:4). -/
+  | sonMadeOfAWoman
+  /-- In Jesus the promise of Genesis 3:15 is fulfilled: the woman's seed,
+  struck at the heel, crushes the serpent's head. **The fulfilment.** -/
+  | jesusFulfilsThePromise
+  /-- The seed in whom Genesis 3:15 is fulfilled was in fact of the woman alone,
+  with no human father. -/
+  | seedWasOfTheWomanAlone
+  /-- Genesis 3:14–15 is spoken to the serpent as a curse, in the form of a
+  punishment oracle. -/
+  | verseIsACurseOnTheSerpent
+  /-- At Genesis 3:15 "her seed" is a line of descendants, and not an individual.
+  **Westermann's reading of the word.** -/
+  | seedIsLineNotIndividual
+  /-- Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant
+  (Genesis 21:13; 38:9; 1 Samuel 1:11; 2 Samuel 7:12–15). -/
+  | seedUsedOfOneDescendant
+  /-- At Genesis 3:15b the one who strikes is "he", הוּא, masculine singular, with a
+  singular verb, and strikes the serpent's own head, "your head". -/
+  | strikerIsSingular
+  /-- In Genesis 3 the serpent speaks, and knows God's command of 2:17 and twists
+  it (3:1–5). -/
+  | serpentTwistsTheCommand
+  /-- God sets the enmity himself: "I will put enmity" (3:15). -/
+  | godSetsTheEnmity
+  /-- The serpent of Genesis 3 is the instrument of an evil power, and the
+  sentence of 3:15 falls on that power. -/
+  | serpentIsTheInstrumentOfAPower
   /-- Micah 5:3 names only "she who is in labour" as bearing the coming ruler,
   with no father mentioned. -/
   | micah5_3NamesMotherOnly

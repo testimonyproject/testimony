@@ -87,6 +87,16 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `nothing_prevails_over_her_seed` | `Framework.grounded genesisDispute.defeats = ∅` | **Nothing prevails.** Every party is defeated by someone — Luther by Leupold and by Lewis, each of them by Luther — so no position is accepted however the standoffs are resolved. |
 | `wording_is_one_resolution` | `Framework.Preferred genesisDispute.defeats {GenesisParty.wording}` | **One resolution: Luther.** His case can be defended on its own, because it defeats both parties that defeat it; and it is in conflict with both, so no larger set can be defended. |
 | `posterity_and_idiom_are_the_other_resolution` | `Framework.Preferred genesisDispute.defeats {GenesisParty.posterity, GenesisParty.idiom}` | **The other resolution: Leupold, with Lewis.** Neither defeats the other, and each answers Luther, the only party to defeat either. |
+| `the_fulfilment_rests_on_its_step` | `¬Entails fulfilmentLine.grounds (p Claim.jesusFulfilsThePromise)` | **The fulfilment rests on its step.** Grant everything the five texts say: on Westermann's reading the verse still promises no one, and so no one fulfils it. |
+| `the_confirmation_does_not_need_the_virgin_birth` | `Entails (fulfilmentCase.premises ++ [notP Claim.maryConceivedAsVirgin]) (p Claim.genesis3_15IsProtoevangelium)` | **The confirmation does not need the virgin birth.** The promise follows from the fulfilment even for a reader who denies the virginal conception: none of the fulfilment's grounds … |
+| `seed_of_the_woman_alone` | `Establishes aloneCase` | **The seed of the woman alone.** Grant the fulfilment and the virginal conception: the seed in whom Genesis 3:15 is fulfilled had no human father. |
+| `the_fulfilment_does_not_reach_the_wording` | `¬Entails (fulfilmentCase.premises ++ aloneCase.premises) (p Claim.wordingSignifiesAFatherlessBirth)` | **The fulfilment does not reach the wording.** Grant the fulfilment, the confirmation, the virginal conception and the seed of the woman alone: the wording of Genesis 3:15 may … |
+| `westermann_rests_on_his_step` | `¬Entails westermannLine.grounds (notP Claim.genesis3_15IsProtoevangelium)` | **Westermann's denial rests on its step.** Grant that "her seed" is a line of descendants and not one man, and that the verse is a curse on the serpent: on Calvin's reading the … |
+| `syntax_rests_on_its_step` | `¬Entails syntaxLine.grounds (notP Claim.seedIsLineNotIndividual)` | **The syntax rests on its step.** Grant that זֶרַע names one descendant elsewhere with singular forms, that the striker at 3:15b is singular "he", and that the Greek translator … |
+| `scene_rests_on_its_step` | `¬Entails sceneLine.grounds (p Claim.genesis3_15IsProtoevangelium)` | **The scene rests on its step.** Grant that the serpent twists the command, that an evil power stands behind it, that the blow falls on the serpent itself, and that God sets the … |
+| `nothing_prevails_over_the_promise` | `Framework.grounded promiseDispute.defeats = ∅` | **As the evidence weighs it, nothing prevails**: Westermann defeats the fulfilment, the syntax and the scene, each defeats him back, and none outranks another. |
+| `fulfilment_is_one_resolution` | `Framework.Preferred promiseDispute.defeats {PromiseParty.fulfilment, PromiseParty.syntax, PromiseParty.scene}` | **The fulfilment can be defended, with the syntax and the scene**: none of the three attacks another, and each answers Westermann, the only party that attacks any of them. |
+| `westermann_is_the_other_resolution` | `Framework.Preferred promiseDispute.defeats {PromiseParty.westermann}` | **So can Westermann**, as the evidence weighs it. |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -479,21 +489,28 @@ future tense leaves open whether she conceives as one
 exclude each other by their meanings — Wegner's says the word meant a young
 woman and not yet a virgin — and the dispute's attacks are computed with that.
 
-**"Her seed", read two ways.** The protoevangelium strand holds that Genesis
-3:15, by naming the seed as the woman's, marks a birth with no human father.
-Read as what the wording itself signifies, that is Luther's argument, and it
-rests on his step (`her_seed_rests_on_its_inference`): Leupold and Keil grant
-every ground and deny it, and so does Lewis, on grounds that do not need the
-promise reading he doubts. Weighed against Leupold and Lewis, **nothing
-prevails** (`nothing_prevails_over_her_seed`), but the tie is nearer to breaking
-against Luther than for him: one rating, Lewis's step from Hagar and Rebekah,
-would break it against him, and two would be needed to break it for him. Read as what the
-wording fits once fulfilled, Leupold and Keil grant it, and it rests on the
-virginal conception rather than evidencing it (`whatHerSeedMarks`). The
-Septuagint's "he" for the neuter σπέρμα shows that its translator read one
-person, and leaves the father open (`the_greek_he_leaves_the_father_open`).
-On the way, the strand's Miravalle citations were corrected: *Meet Mary*, which
-could not be checked, gave way to the books where the passages are.
+**"Her seed", read two ways.** The protoevangelium strand holds that Genesis 3:15, by naming the
+seed as the woman's, marks a birth with no human father. Read as what the wording itself signifies,
+that is Luther's argument, and it rests on his step (`her_seed_rests_on_its_inference`): Leupold and
+Keil grant every ground and deny it, and so does Lewis, on grounds that do not need the promise
+reading he doubts. Weighed against Leupold and Lewis, **nothing prevails**
+(`nothing_prevails_over_her_seed`), but the tie is nearer to breaking against Luther than for him:
+one rating, Lewis's step from Hagar and Rebekah, would break it against him, and two would be needed
+to break it for him. Read as what the wording fits once fulfilled, Leupold and Keil grant it, and it
+rests on the virginal conception rather than evidencing it (`whatHerSeedMarks`). The Septuagint's
+"he" for the neuter σπέρμα may show that its translator read one person (`disputed`: Philo, its
+earliest known reader, took it of the mind), and leaves the father open
+(`the_greek_he_leaves_the_father_open`). The promise is also weighed as a promise: every term of the
+verse is met as the New Testament names it (Galatians 4:4, Revelation 12:9, Hebrews 2:14, 1
+Corinthians 15:3–4), and the fulfilment confirms that the verse was a promise, without needing the
+virgin birth (`the_confirmation_does_not_need_the_virgin_birth`); with it, the seed was of the woman
+alone (`seed_of_the_woman_alone`). Weighed against Westermann's denial that the verse is any
+promise, **nothing prevails** (`nothing_prevails_over_the_promise`): his "a line of descendants and
+not an individual" is answered from the Hebrew syntax of 3:15b, and that answer is `disputed` too.
+So is the reading of the scene as a whole, in which the speaking serpent is the instrument of a
+power the sentence falls on (its step `plausible`, its ground on the power `disputed`). On the way,
+the strand's Miravalle citations were corrected: *Meet Mary*, which could not be checked, gave way
+to the books where the passages are.
 
 A corollary worth noting: because the New Perspective rejects the traditional
 reading of Paul's phrase while still affirming justification by faith, it

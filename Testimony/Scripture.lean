@@ -184,6 +184,36 @@ def shechemUnderTheLaw : List ScriptureCitation :=
   , verseIn .septuagint ⟨.deuteronomy, 22, 29⟩, verseIn .masoretic ⟨.deuteronomy, 22, 29⟩
   , verseIn .masoretic ⟨.deuteronomy, 22, 21⟩ ]
 
+/-- Genesis 2:17 and 3:1–5 — the command, and the serpent who speaks it back,
+twisted: "Yea, hath God said, Ye shall not eat of every tree of the garden?"
+(3:1), and "Ye shall not surely die" (3:4). -/
+def serpentTwistsTheCommand : List ScriptureCitation :=
+  [ verseIn .masoretic ⟨.genesis, 2, 17⟩
+  , rangeIn .masoretic ⟨.genesis, 3, 1, 3, 5⟩ ]
+
+/-- Revelation 12:9 and 20:2 — "that old serpent, called the Devil, and Satan"
+(ὁ ὄφις ὁ ἀρχαῖος). Scripture's own name for the serpent of the garden. -/
+def serpentNamedTheDevil : List ScriptureCitation :=
+  [ verseIn .nestleAland28 ⟨.revelation, 12, 9⟩
+  , verseIn .nestleAland28 ⟨.revelation, 20, 2⟩ ]
+
+/-- Hebrews 2:14 and 1 John 3:8 — the Son shares flesh and blood "that through
+death he might destroy him that had the power of death, that is, the devil",
+and "was manifested, that he might destroy the works of the devil". -/
+def devilDestroyedThroughDeath : List ScriptureCitation :=
+  [ verseIn .nestleAland28 ⟨.hebrews, 2, 14⟩
+  , verseIn .nestleAland28 ⟨.firstJohn, 3, 8⟩ ]
+
+/-- 1 Corinthians 15:3–4 — Christ "died for our sins", "was buried", and "rose
+again the third day": a wound, and not the end of him. -/
+def christDiedAndRose : List ScriptureCitation :=
+  [ rangeIn .nestleAland28 ⟨.firstCorinthians, 15, 3, 15, 4⟩ ]
+
+/-- Galatians 4:4 — God sent forth his Son, "made of a woman" (γενόμενον ἐκ
+γυναικός). -/
+def sonMadeOfAWoman : List ScriptureCitation :=
+  [ verseIn .nestleAland28 ⟨.galatians, 4, 4⟩ ]
+
 /-- Genesis 24:43, Exodus 2:8, Psalm 68:26 and Song 1:3 and 6:8 — every other
 עַלְמָה the Peshitta renders, each with the cognate ܥܠܝܡܬܐ. Proverbs 30:19, "the
 way of a man with an עַלְמָה", it renders "in his youth". -/

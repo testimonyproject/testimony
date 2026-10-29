@@ -15,8 +15,9 @@ seed as the woman's *says* there will be no human father is a live dispute among
 readers most of whom hold the virgin birth, and the library finds it a tie
 (`nothing_prevails_over_her_seed`, in `Dispute.Genesis`). That the wording
 *fits* the virgin birth, once it has happened, Luther's side and Leupold and
-Keil all grant. The Greek shows
-that its translator expected one person, not how that person would be born.
+Keil all grant. The Greek may show
+that its translator expected one person; it does not show how that person would
+be born.
 
 The protoevangelium strand of this argument holds, as a premise, that the seed
 being named as the woman's marks a birth with no human father
@@ -51,11 +52,30 @@ to one who does not. That is what the reading's own grounds say; it is not a
 separate theorem. `whatHerSeedMarks` sets out both readings and what answers
 each.
 
+**The promise, and its fulfilment.** Whether the wording foretold a virgin birth
+is one question. Whether the promise is fulfilled in Jesus is another, and it
+does not need the first. Every term of the verse is met as the New Testament
+names it: the woman's seed, the Son "made of a woman" (Galatians 4:4); the
+serpent, "that old serpent, called the Devil" (Revelation 12:9); its head
+crushed, when the Son destroys the devil "through death" (Hebrews 2:14); his heel
+struck, in his death and rising. That fulfilment confirms that the verse was a
+promise, and it does so for a reader who denies the virginal conception too.
+With the virginal conception, it says one thing more: the seed in whom the
+promise is fulfilled was of the woman alone. `Dispute.Protoevangelium` weighs
+the fulfilment against Westermann's denial that the verse is a promise at
+all.
+
 **The Greek's "he".** The Septuagint calls the woman's seed "he", αὐτός, though
 σπέρμα is neuter, and Collins finds it "beyond question that the translator of
 Genesis 3:15 meant to convey that an individual was promised" (145)
-(`greekHeCase_establishes`). That shows how one Jewish translator before Christ
-read the promise, so that reading it of one person is no Christian invention.
+(`greekHeCase_establishes`). If so, it shows how one Jewish translator before
+Christ read the promise, and reading it of one person is no Christian invention.
+But the earliest known reader of that Greek did not read it so: Philo calls the
+masculine "as to its language, a barbarism, but, as to the meaning … a correct
+expression", and takes "he" of the mind (*Allegorical Interpretation* III.188).
+The claim is `disputed` on him. No other text before Christ reads the verse of
+one victor; the Targums, later, read it of "the sons of the woman", with a
+remedy "in the days of the King Messiah" (Lewis 301).
 Whether the Hebrew says so is a further question: Collins argues that its syntax
 is "quite consistent with the pattern where a single individual is in view"
 (145), and reports that many think it does not (141); Lewis, who grants the
@@ -102,10 +122,13 @@ def lutherReading : Valuation Claim := fun a =>
 collective, the woman's posterity, the woman is named because she was deceived,
 and the wording does not itself signify a birth without a human father — though
 it fits one, as fulfilled. Lewis's claims hold in it too: Genesis speaks of a
-woman's seed in ordinary births. -/
+woman's seed in ordinary births. And "her seed", though collective first, is not
+only a line of descendants: "the word is also used in reference to an individual"
+(168). -/
 def leupoldReading : Valuation Claim := fun a =>
   match a with
   | .wordingSignifiesAFatherlessBirth => False
+  | .seedIsLineNotIndividual => False
   | .parthenosMeantYoungWoman => False
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False

@@ -81,11 +81,11 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 165, and 0 undecided -/
+/-- info: every package has a model with its postulates: 170, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 79, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 84, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
@@ -99,6 +99,7 @@ Articles.Howell2003.hearingFinite: 63 I, 27 RA, 29 CA, 3 PA, 150 edges
 BornOfAVirgin.genesisFinite: 8 I, 3 RA, 2 CA, 0 PA, 15 edges
 BornOfAVirgin.isaiahFinite: 30 I, 10 RA, 6 CA, 1 PA, 48 edges
 BornOfAVirgin.matthewFinite: 6 I, 2 RA, 2 CA, 0 PA, 10 edges
+BornOfAVirgin.promiseFinite: 17 I, 5 RA, 5 CA, 0 PA, 30 edges
 BornOfAVirgin.septuagintFinite: 16 I, 5 RA, 6 CA, 1 PA, 31 edges
 BornOfAVirgin.wegnerFinite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
 SolaFide.jamesFinite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges

@@ -671,6 +671,96 @@ are its. -/
   , place := some "Columbus, OH"
   , volume := some "1" }
 
+/-- Alexander's reply to Collins on "seed". Cited for the individual reading of
+Genesis 3:15 — "On this basis the 'seed of the woman' in Genesis 3:15 must be
+understood as referring to a single individual and not numerous descendants"
+(363) — and for its caveat: at Genesis 22:17–18a and 24:60 the same singular
+syntax is usually read collectively, so "Either Collins' approach is seriously
+flawed … or his study requires that scholars re-evaluate" those verses (364).
+Crossref gives no pages; the PDF's running heads give 363–67. -/
+@[bib_entry] def alexanderFurtherObservations : BibEntry := .article
+  { core :=
+      { key := "alexander-further-observations-1997"
+      , contributors := { authors := [.person "T. Desmond" "Alexander"] }
+      , title := "Further Observations on the Term 'Seed' in Genesis"
+      , year := some { value := 1997 }
+      , identifiers := [.doi "10.53751/001c.30377"] }
+  , journal := "Tyndale Bulletin"
+  , volume := some "48"
+  , issue := some "2"
+  , pages := some (363, 367) }
+
+/-- Woudstra on the newer translations of Genesis 3:15. Cited for the reading of
+the whole scene: "as one reads Genesis 3 one does indeed become conscious of such
+a force. There is a diabolical subtlety in the serpent's suggestions which points
+to a sinister background to his words. Later Scripture abundantly confirms this
+opinion" (197); "it is the head of the serpent, not that of his zeraʿ, which is
+in view here" (199); and, though "this passage does not explicitly predict
+ultimate victory of the woman's seed", God's setting of the enmity is "a
+tremendous initiative for good", and "the term 'protevangelium' may be rightly
+used to describe it" (203). Read from the PDF the seminary permits, whose header
+gives the journal, volume and pages. -/
+@[bib_entry] def woudstraRecentTranslations : BibEntry := .article
+  { core :=
+      { key := "woudstra-recent-translations-1971"
+      , contributors := { authors := [.person "Marten H." "Woudstra"] }
+      , title := "Recent Translations of Genesis 3:15"
+      , year := some { value := 1971 }
+      , identifiers :=
+          [ .url
+              "https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_Gen3_15_CTJ.pdf"
+              (some "2026-10-29") ] }
+  , journal := "Calvin Theological Journal"
+  , volume := some "6"
+  , pages := some (194, 203) }
+
+/-- Westermann's commentary on Genesis 1–11, in Scullion's translation. Cited for
+the critical denial that Genesis 3:15 is a promise: "The parallelism makes it
+clear that 'seed' refers to a line of descendants and not to an individual"
+(259); the passage is a punishment oracle, and "It is not possible that such a
+form has either promise or prophecy as its primary or even as its secondary
+meaning" (260); "suggestions of a messianic interpretation are found in late
+Judaism, but not in the New Testament" (261). Read from the full text at the
+Internet Archive. Verified at Open Library (OL3512284M): Augsburg, Minneapolis,
+1984, ISBN 0806619627. -/
+@[bib_entry] def westermannGenesis : BibEntry := .book
+  { core :=
+      { key := "westermann-genesis-1-11-1984"
+      , contributors :=
+          { authors := [.person "Claus" "Westermann"]
+          , translators := [.person "John J." "Scullion"] }
+      , title := "Genesis 1–11"
+      , subtitle := some "A Commentary"
+      , year := some { value := 1984 }
+      , identifiers := [.isbn "0806619627"] }
+  , publisher := "Augsburg Publishing House"
+  , place := some "Minneapolis" }
+
+/-- Hamilton on Genesis 3:15 and the texts that take it up. Cited for the
+fulfilment read from Scripture itself: "God's first act of judgment in the Bible
+is accompanied by his first promise of salvation" (31); "We can be confident of
+several allusions to Gen 3:15 in the NT", and "The scene in Rev 12 is also
+surely influenced by Gen 3:15" (42); and the one "born of woman (i.e., her seed,
+Gal 4:4) who 'nullified the one who has the power of death, that is, the devil'
+(Heb 2:14)—one might say he crushed the serpent's head" (53 n. 89). The journal
+registers no DOI; the identifier is the author's own PDF, whose page footers
+give 30–54. -/
+@[bib_entry] def hamiltonSkullCrushingSeed : BibEntry := .article
+  { core :=
+      { key := "hamilton-skull-crushing-seed-2006"
+      , contributors := { authors := [.person "James" "Hamilton"] }
+      , title := "The Skull Crushing Seed of the Woman"
+      , subtitle := some "Inner-Biblical Interpretation of Genesis 3:15"
+      , year := some { value := 2006 }
+      , identifiers :=
+          [ .url
+              "https://jimhamilton.wordpress.com/wp-content/uploads/2008/04/hamilton_sbjt_10-2.pdf"
+              (some "2026-10-29") ] }
+  , journal := "Southern Baptist Journal of Theology"
+  , volume := some "10"
+  , issue := some "2"
+  , pages := some (30, 54) }
+
 /-- Keil and Delitzsch on the Pentateuch, in James Martin's translation. Cited
 for Keil on Genesis 3:15: "even if the words had reference first of all to the
 fact that the woman had been led astray by the serpent", the promise was
@@ -2287,6 +2377,37 @@ in Hezekiah (67). Cited for both halves. -/
   , originalTitle := some "Πρὸς Τρύφωνα Ἰουδαῖον Διάλογος"
   , composed := some { value := 160, approximate := true }
   , editionUsed := some "roberts-ante-nicene-fathers-1-1885" }
+
+/-- Yonge's translation of Philo, volume 1, with the *Allegorical
+Interpretation*. Read from the University of Toronto's scan at the Internet
+Archive (Bohn, London, 1854). -/
+@[bib_entry] def yongePhilo1 : BibEntry := .book
+  { core :=
+      { key := "yonge-works-of-philo-1-1854"
+      , contributors := { translators := [.person "C. D." "Yonge"] }
+      , title := "The Works of Philo Judaeus, the Contemporary of Josephus"
+      , year := some { value := 1854 }
+      , identifiers :=
+          [ .url "https://archive.org/details/worksphilojudaeu01philuoft"
+              (some "2026-10-29") ] }
+  , publisher := "Henry G. Bohn"
+  , place := some "London"
+  , volume := some "1" }
+
+/-- Philo, *Allegorical Interpretation* III: the earliest known reader of the
+Greek of Genesis 3:15. The masculine "he" is "as to its language, a barbarism,
+but, as to the meaning which is conveyed by it, a correct expression": "the woman
+is not he, but she", and "the mind is masculine" (III.188, Yonge's ch. LXVII).
+He reads the verse of the mind and pleasure, not of a person. -/
+@[bib_entry] def philoAllegoricalInterpretation : BibEntry := .ancientWork
+  { core :=
+      { key := "philo-allegorical-interpretation-40"
+      , role := .witness
+      , contributors := { authors := [.single "Philo of Alexandria"] }
+      , title := "Allegorical Interpretation" }
+  , originalTitle := some "Legum allegoriae"
+  , composed := some { value := 40, approximate := true }
+  , editionUsed := some "yonge-works-of-philo-1-1854" }
 
 /-- Irenaeus, *Against Heresies* III.21: the defence of the Septuagint's
 παρθένος against the renderings of Theodotion and Aquila, and the argument that
