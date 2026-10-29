@@ -4,9 +4,9 @@ import TestimonyArguments.BornOfAVirgin.Sources
 /-!
 # TestimonyArguments.Meanings.BornOfAVirgin — what each born of a virgin claim says
 
-**Partly analysed.** Twenty-one claims have meanings: the ones whose meanings
+**Partly analysed.** Twenty-two claims have meanings: the ones whose meanings
 join them to another claim (`joins`), and the ones about the words of Isaiah
-7:14, of its versions and of the Greek Pentateuch's laws, about the woman it
+7:14, of its versions and of the Greek Pentateuch, about the woman it
 describes, and about the birth it is read to promise. The rest are registered
 with their citations' labels and marked unanalysed, so the argument is counted
 from the start (`coverage_now`);
@@ -34,7 +34,8 @@ three apart.
 
 A pair is joined only where the claims' own wording joins them, read under the
 definitions of `Testimony.Ontology`: one of them, that a sense found in a passage
-of a text is a sense of its usage (`Testimony.Ontology.Usage`), joins the laws.
+of a text is a sense of its usage (`Testimony.Ontology.Usage`), joins the laws,
+and Genesis 34:3 as the status reading reads it.
 
 - **Wegner's claim that παρθένος meant "young woman" and did not yet mean
   "virgin" excludes Rico and Gentry's claim that it meant "virgin".** Both are
@@ -49,6 +50,10 @@ of a text is a sense of its usage (`Testimony.Ontology.Usage`), joins the laws.
   of a text is a sense it has in that text's usage (`Testimony.Ontology.Usage`).
   So "virgin" is a sense of the word in the Septuagint's Greek, which Wegner's
   "not yet" denies and Rico and Gentry's claim asserts.
+- **The status reading of Genesis 34:3 does the same.** It holds that the Greek
+  calls Dinah a παρθένος in the sense "virgin", at one passage of the
+  Septuagint's text, and the same definition carries that sense to the
+  Septuagint's usage.
 - **Brown's "Micah's silence about a father proves nothing" excludes
   Miravalle's "it indicates a birth with no human father".** The one says
   Micah 5:3, read rightly, does not teach a fatherless birth; the other says it
