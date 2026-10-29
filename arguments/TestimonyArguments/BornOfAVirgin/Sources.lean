@@ -188,6 +188,16 @@ def cite : Claim → AtomMeta
   | .womansSeedSaidOfOrdinaryBirths => womansSeedSaidOfOrdinaryBirthsCited
   | .lxxCallsTheSeedHe => lxxCallsTheSeedHeCited
   | .lxxReadsOneDescendant => lxxReadsOneDescendantCited
+  | .serpentNamedTheDevil => serpentNamedTheDevilCited
+  | .devilDestroyedThroughDeath => devilDestroyedThroughDeathCited
+  | .christDiedAndRose => christDiedAndRoseCited
+  | .sonMadeOfAWoman => sonMadeOfAWomanCited
+  | .jesusFulfilsThePromise => jesusFulfilsThePromiseCited
+  | .seedWasOfTheWomanAlone => seedWasOfTheWomanAloneCited
+  | .verseIsACurseOnTheSerpent => verseIsACurseOnTheSerpentCited
+  | .seedIsLineNotIndividual => seedIsLineNotIndividualCited
+  | .seedUsedOfOneDescendant => seedUsedOfOneDescendantCited
+  | .strikerIsSingular => strikerIsSingularCited
   | .harahIsPredicateAdjective => harahIsPredicateAdjectiveCited
   | .isaianicAlmahIsAlreadyPregnant => isaianicAlmahIsAlreadyPregnantCited
   | .pregnancyAtTheSignIsOrdinary => pregnancyAtTheSignIsOrdinaryCited

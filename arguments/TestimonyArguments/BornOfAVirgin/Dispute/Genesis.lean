@@ -36,7 +36,8 @@ rated `disputed` because they deny it, and Luther's step uses it while Leupold's
 and Lewis's do not, so it holds back Luther's case alone, though Leupold and
 Keil hold it too. The virgin birth
 itself is not in question here: Leupold and Keil affirm it, and find it in the
-promise's fulfilment.
+promise's fulfilment. Whether the promise is fulfilled in Jesus, and whether
+that confirms it as a promise, is weighed in `Dispute.Protoevangelium`.
 
 ## How to read the verdicts
 

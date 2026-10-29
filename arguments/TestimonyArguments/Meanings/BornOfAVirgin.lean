@@ -116,7 +116,10 @@ def all : List Claim :=
   , .genesis3_15IsProtoevangelium, .seedReckonedThroughFather, .seedOfTheWomanImpliesNoHumanFather
   , .wordingSignifiesAFatherlessBirth, .wordingFitsAFatherlessBirth, .seedIsHerPosterityFirst
   , .womanNamedForTheDeception, .womansSeedSaidOfOrdinaryBirths, .lxxCallsTheSeedHe
-  , .lxxReadsOneDescendant
+  , .lxxReadsOneDescendant, .serpentNamedTheDevil, .devilDestroyedThroughDeath
+  , .christDiedAndRose, .sonMadeOfAWoman, .jesusFulfilsThePromise, .seedWasOfTheWomanAlone
+  , .verseIsACurseOnTheSerpent, .seedIsLineNotIndividual, .seedUsedOfOneDescendant
+  , .strikerIsSingular
   , .micah5_3NamesMotherOnly, .maternalSilenceImpliesNoHumanFather, .maryConceivedAsVirgin
   , .independentAttestation, .isaiahIsNearTermSignToAhaz, .nearTermExcludesMessianicSense
   , .nearTermFulfilmentIsUnclear, .signGivenToHouseOfDavid, .maherShalalHashBazRepeatsTheTimetable
@@ -204,10 +207,10 @@ instance meanings : HasMeanings Claim :=
   { argument := "Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3", all
   , complete := all_complete, means }
 
-/-- **Twenty-two of the 76 atoms are analysed**: the ones whose meanings join
+/-- **Twenty-two of the 86 atoms are analysed**: the ones whose meanings join
 them to another claim, and the ones about the words, the woman and the
 birth. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (22, 76) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (22, 86) := by decide
 
 /-- **The words read two ways**: עַלְמָה at Isaiah 7:14, as "virgin" and as "young
 woman of marriageable age", and παρθένος in the Septuagint's Greek, the same two

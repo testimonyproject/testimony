@@ -10,6 +10,7 @@ import TestimonyArguments.BornOfAVirgin.Dispute
 import TestimonyArguments.BornOfAVirgin.Dispute.Wegner
 import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
 import TestimonyArguments.BornOfAVirgin.Dispute.Genesis
+import TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium
 
 /-!
 # TestimonyArguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
@@ -169,10 +170,35 @@ strand's hinge reads that as marking a birth with no human father.
   But they reach the fit from the conception, so read this way the verse
   confirms the virgin birth to one who already believes it, and gives no reason
   to believe it to one who does not.
-- **The Septuagint's "he"**, αὐτός for the neuter σπέρμα, shows that a Jewish
-  translator before Christ read the promise of one person
-  (`greekHeCase_establishes`), so that reading is no Christian invention. It
-  leaves the father open (`the_greek_he_leaves_the_father_open`): the same Greek
+- **The promise is fulfilled in Jesus, and the fulfilment confirms it**
+  (`Dispute.Protoevangelium`). Every term of the verse is met as the New
+  Testament names it: the woman's seed in the Son "made of a woman" (Galatians
+  4:4); the serpent in "that old serpent, called the Devil" (Revelation 12:9);
+  its head crushed when the Son destroys the devil "through death" (Hebrews
+  2:14; 1 John 3:8); his heel struck in his death, and the wound not the end of
+  him (1 Corinthians 15:3–4). Irenaeus, Calvin, Keil, Leupold and Hamilton read
+  it so. The fulfilment confirms that the verse was a promise, by a rated step
+  and not by deduction, and it does so without the virgin birth
+  (`the_confirmation_does_not_need_the_virgin_birth`). With the virginal
+  conception it says one thing more: the seed in whom the promise is fulfilled
+  was of the woman alone (`seed_of_the_woman_alone`). That does not show the
+  wording foretold it (`the_fulfilment_does_not_reach_the_wording`). Weighed
+  against Westermann, who denies that the verse is any promise, from the
+  collective "seed" and the form of a punishment oracle, **nothing prevails**
+  (`nothing_prevails_over_the_promise`): the fulfilment's step is `disputed` on
+  him, and his on Calvin and Keil. His "a line of descendants and not an
+  individual" is answered from the Hebrew itself: elsewhere זֶרַע with singular
+  forms names one descendant, at 3:15b it is "he" who strikes the serpent's own
+  head, and the Greek translator read one person (Collins, Alexander, Leupold).
+  That answer is `disputed` too, on Keil, and Collins claims for it only that
+  the syntax is "quite consistent with" one person. The fulfilment, with the
+  syntax, can be defended, and so can Westermann.
+- **The Septuagint's "he"**, αὐτός for the neuter σπέρμα, may show that a
+  Jewish translator before Christ read the promise of one person
+  (`greekHeCase_establishes`), so that reading would be no Christian invention.
+  Collins holds it; Philo, the earliest known reader of the Greek, took the
+  masculine as a "barbarism" meaning the mind, and Lewis leaves it open, so it
+  is `disputed`. It leaves the father open (`the_greek_he_leaves_the_father_open`): the same Greek
   calls the seed Hannah asks for "him", and that son has a father.
 
 **Wegner's objection is encoded in its sharpest form, and the module shows the
@@ -355,6 +381,7 @@ own beside it.
 | `Dispute/Wegner.lean` | Wegner, the fathers' sign argument and the near-term reply as another |
 | `Dispute/Septuagint.lean` | the Septuagint, Wegner, Rico and Gentry, and the laws, as a third |
 | `Dispute/Genesis.lean` | Luther, Leupold and Lewis on "her seed", as a fourth |
+| `Dispute/Protoevangelium.lean` | the promise fulfilled, and Westermann's denial, as a fifth |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in

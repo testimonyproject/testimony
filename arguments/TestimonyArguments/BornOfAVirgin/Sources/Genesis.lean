@@ -173,11 +173,17 @@ interpretation" (Collins 141 n. 4). Elsewhere the Greek translators use a
 masculine pronoun after the neuter σπέρμα when one person is meant: αὐτόν at 1
 Samuel 1:11, and ὅς, αὐτός and αὐτόν at 2 Samuel 7:12–14 (Collins 144).
 
-`wellSupported`. The doubt Collins reports is about the Hebrew, not the Greek:
-"many feel that the LXX is an interpretation that the Hebrew itself does not
-support" (141). Lewis grants the reading — "Sperma is a neuter noun in Greek and
-would have taken a neuter pronoun had the translators not thought of an
-individual" — and allows that the masculine "could be an oversight" (300). -/
+`disputed`, on Philo, the earliest known reader of this Greek. He grants that
+it says "he", and reads it as a "barbarism" that is correct in meaning, of the
+mind and not of a person: "the woman is not he, but she", and "the mind is
+masculine" (*Allegorical Interpretation* III.188). Lewis leaves the question
+open: "Sperma is a neuter noun in Greek and would have taken a neuter pronoun had
+the translators not thought of an individual", but the masculine "could be an
+oversight … it is possible that the translator reveals a messianic
+understanding—which, if true, would then be the earliest known" (300). John Day
+is reported to call it "simply an over-literal translation of the Hebrew"; his
+words could not be read, and he is not counted. The doubt Collins reports is
+about the Hebrew, not the Greek (141). -/
 def lxxReadsOneDescendantCited : AtomMeta :=
   { label := "The Greek translator of Genesis read the woman's seed at 3:15 as one person"
   , kind := .interpretive
@@ -186,8 +192,171 @@ def lxxReadsOneDescendantCited : AtomMeta :=
       , supporting :=
           [ .work collinsSyntacticalNote (.page 144)
           , .work martinEarliestMessianic .whole
-          , .work lewisWomansSeed (.page 300) ]
+          , .work lewisWomansSeed (.page 300)
+          , .work philoAllegoricalInterpretation (.sectionRef "III.188") ]
       , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-! ### The fulfilment, and the critical reading
+
+What the New Testament says, cited to its text: each is a claim about what a
+passage reads, and none about what it means for Genesis. -/
+
+/-- `serpentNamedTheDevil`. "That old serpent, called the Devil, and Satan"
+(Revelation 12:9; again at 20:2): ὁ ὄφις ὁ ἀρχαῖος, the serpent of old. Collins
+gives these, with John 8:44, as the New Testament's identification of the
+serpent (147 n. 21). `consensus`: it is what the text reads. -/
+def serpentNamedTheDevilCited : AtomMeta :=
+  { label := "Revelation calls the devil 'that old serpent' (12:9, 20:2)"
+  , kind := .textual
+  , source :=
+      { primary := .scripture Testimony.Scripture.serpentNamedTheDevil
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `devilDestroyedThroughDeath`. The Son shared flesh and blood "that through
+death he might destroy him that had the power of death, that is, the devil"
+(Hebrews 2:14), and "was manifested, that he might destroy the works of the
+devil" (1 John 3:8). `consensus`: it is what the texts read. -/
+def devilDestroyedThroughDeathCited : AtomMeta :=
+  { label := "The Son came to destroy the devil and his works, through death"
+  , kind := .textual
+  , source :=
+      { primary := .scripture Testimony.Scripture.devilDestroyedThroughDeath
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `christDiedAndRose`. Christ "died for our sins", "was buried", and "rose
+again the third day" (1 Corinthians 15:3–4). `consensus`: it is what the text
+reads; whether it happened is not the claim. -/
+def christDiedAndRoseCited : AtomMeta :=
+  { label := "Paul says Christ died, was buried, and rose the third day"
+  , kind := .textual
+  , source :=
+      { primary := .scripture Testimony.Scripture.christDiedAndRose
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `sonMadeOfAWoman`. God sent forth his Son, "made of a woman", γενόμενον ἐκ
+γυναικός (Galatians 4:4). Whether Paul alludes to Genesis 3:15 here is
+disputed: Hamilton reads Jesus as "born of (i.e., the seed of) the woman", after
+Wifall (43, 53 n. 89); Lewis holds that it says only "that the Christ became
+human" (303). The atom claims only what Paul says. `consensus`. -/
+def sonMadeOfAWomanCited : AtomMeta :=
+  { label := "Paul says God sent his Son 'made of a woman' (Galatians 4:4)"
+  , kind := .textual
+  , source :=
+      { primary := .scripture Testimony.Scripture.sonMadeOfAWoman
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `jesusFulfilsThePromise`. The fulfilment, as `fulfilmentLine` argues it.
+Worded so that it says what Calvin, Keil and Leupold all hold: none of them
+takes "her seed" for Christ alone, and each holds that in Christ, as the head of
+the woman's seed, the serpent is crushed. `disputed`, as its step is, on
+Westermann. -/
+def jesusFulfilsThePromiseCited : AtomMeta :=
+  { label := "In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent's head"
+  , kind := .interpretive
+  , source :=
+      { primary := .work irenaeusAgainstHeresies (.sectionRef "III.23.7")
+      , supporting :=
+          [ .work hamiltonSkullCrushingSeed (.pageList [42, 53])
+          , .work keilDelitzschPentateuch (.page 102)
+          , .work westermannGenesis (.pages 259 261) ]
+      , tradition := .christianTypological
+      , confidence := .disputed } }
+
+/-- `seedWasOfTheWomanAlone`. The seed in whom the promise is fulfilled had no
+human father: Irenaeus reads the verse of "He who should be born of a woman,
+[namely] from the Virgin" (V.21.1). `disputed`, as the virginal conception it
+rests on is (`maryConceivedAsVirgin`). -/
+def seedWasOfTheWomanAloneCited : AtomMeta :=
+  { label := "The seed in whom Genesis 3:15 is fulfilled was of the woman alone"
+  , kind := .interpretive
+  , source :=
+      { primary := .work irenaeusAgainstHeresies (.sectionRef "V.21.1")
+      , supporting := [.work keilDelitzschPentateuch (.page 102)]
+      , tradition := .christianTypological
+      , confidence := .disputed } }
+
+/-- `verseIsACurseOnTheSerpent`. "Because thou hast done this, thou art
+cursed" (3:14): the words of 3:15 are spoken to the serpent, as part of its
+sentence. Westermann classes them as a punishment oracle (260), the form-critical
+ground of his denial (`westermannLine`). `wellSupported`: the address and the
+curse are the text's; the classification is his, and is not contested by the
+readers cited here, who read a promise within the curse. -/
+def verseIsACurseOnTheSerpentCited : AtomMeta :=
+  { label := "Genesis 3:14–15 is a curse on the serpent, in the form of a punishment oracle"
+  , kind := .interpretive
+  , source :=
+      { primary := .work westermannGenesis (.page 260)
+      , supporting := [.scripture [verseIn .masoretic ⟨.genesis, 3, 14⟩]]
+      , tradition := .criticalScholarship
       , confidence := .wellSupported } }
+
+/-- `seedIsLineNotIndividual`. Westermann: "The parallelism makes it clear that
+'seed' refers to a line of descendants and not to an individual" (259); "it is
+beyond doubt that [zeraʿ] is to be understood collectively" (260). Martin holds
+the same of the Hebrew, as Collins quotes him: "he" is "indefensible as a
+translation", and the right English is "it" or "they", "the descendants of Eve"
+(Collins 140 n. 2). The Targums read the verse collectively, of "the sons of the
+woman".
+
+Stronger than `seedIsHerPosterityFirst`, which Calvin, Keil and Leupold hold:
+they read "her seed" as her posterity first, and Keil and Leupold deny that no
+individual is in view. `disputed`: Collins answers Westermann that the woman's
+seed "is not unquestionably collective" (147 n. 22); Leupold, that the word "is
+also used in reference to an individual and not only in the collective sense"
+(168); Alexander, that the seed "must be understood as referring to a single
+individual" (363); Hamilton, that "the text switches from a collective referent
+to a singular one" (32). `syntaxLine` gives their argument. -/
+def seedIsLineNotIndividualCited : AtomMeta :=
+  { label := "At Genesis 3:15 'her seed' is a line of descendants, and not an individual"
+  , kind := .linguistic
+  , source :=
+      { primary := .work westermannGenesis (.pages 259 260)
+      , supporting :=
+          [ .work collinsSyntacticalNote (.pageList [140, 147])
+          , .work leupoldGenesis (.page 168)
+          , .work alexanderFurtherObservations (.page 363)
+          , .work hamiltonSkullCrushingSeed (.page 32) ]
+      , tradition := .criticalScholarship
+      , confidence := .disputed } }
+
+/-- `seedUsedOfOneDescendant`. What the texts read, as Collins sets them out:
+"when zeraʿ denotes a specific descendant, it appears with singular verb
+inflections, adjectives, and pronouns" (144) — 2 Samuel 7:12–15, the clearest
+parallel (145), Genesis 21:13, 38:9 and 1 Samuel 1:11. Keil grants it: "the
+posterity of a man may consist of a whole tribe or of one son only" (101); so
+does Leupold (168). `consensus`: no reader found denies the readings. -/
+def seedUsedOfOneDescendantCited : AtomMeta :=
+  { label := "Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant"
+  , kind := .textual
+  , source :=
+      { primary := .work collinsSyntacticalNote (.pages 144 145)
+      , supporting :=
+          [ .work keilDelitzschPentateuch (.page 101)
+          , .work leupoldGenesis (.page 168) ]
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `strikerIsSingular`. What the Hebrew reads at 3:15b: הוּא, "he", masculine
+singular, with a singular verb, and the object is the serpent's own head, "your
+head", not its seed's. Collins: "it is 'he' … who will bruise 'you' (singular,
+i.e., the snake)" (146 n. 21). Keil grants it: "it is not over the seed of the
+serpent but over the serpent itself that the victory is said to be gained" (101).
+`consensus` for the form. Whether הוּא means "he" or "it" is the question the
+readings answer, not the form. -/
+def strikerIsSingularCited : AtomMeta :=
+  { label := "At Genesis 3:15b the striker is singular 'he', against the serpent's own head"
+  , kind := .textual
+  , source :=
+      { primary := .scripture [verseIn .masoretic genesis3_15]
+      , supporting :=
+          [ .work collinsSyntacticalNote (.page 146)
+          , .work keilDelitzschPentateuch (.page 101) ]
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
 
 end TestimonyArguments.BornOfAVirgin
