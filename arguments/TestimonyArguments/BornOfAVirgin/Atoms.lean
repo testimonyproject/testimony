@@ -165,16 +165,76 @@ inductive Claim
   /-- Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth
   rather than one in Ahaz's generation. -/
   | compositionalReadingYieldsFutureBirth
-  /-- Genesis 3:15 promises victory over the serpent through "her seed". -/
+  /-- Genesis 3:15 says that "her seed" will strike the serpent's head, and the
+  serpent its heel. -/
   | genesis3_15SeedOfTheWoman
   /-- Genesis 3:15 is the protoevangelium: the first promise of a redeemer. -/
   | genesis3_15IsProtoevangelium
-  /-- Hebrew זֶרַע is ordinarily reckoned through the father, so a seed named as
-  the woman's is a departure from the idiom. -/
+  /-- Hebrew זֶרַע is ordinarily reckoned through the father: a man's seed is his
+  descendants. -/
   | seedReckonedThroughFather
-  /-- That departure marks a birth with no human father. **The protoevangelium
-  hinge.** -/
+  /-- The seed being named as the woman's marks a birth with no human father.
+  **The protoevangelium hinge**, and an ambiguous one: "marks" can mean what the
+  wording signified, or what it fits once fulfilled (`Results.Genesis`). -/
   | seedOfTheWomanImpliesNoHumanFather
+  /-- The wording "her seed" itself signifies a birth with no human father: read
+  in Genesis, it names the seed as the woman's and not a man's. **Luther's
+  reading of the hinge.** -/
+  | wordingSignifiesAFatherlessBirth
+  /-- The wording "her seed" fits a birth with no human father, as the promise
+  was fulfilled in Christ. **Leupold's and Keil's reading of the hinge**, which
+  they grant. -/
+  | wordingFitsAFatherlessBirth
+  /-- "Her seed" at Genesis 3:15 is, in the first place, collective: the
+  woman's posterity, not one person. -/
+  | seedIsHerPosterityFirst
+  /-- The seed is called the woman's because the serpent deceived the woman. -/
+  | womanNamedForTheDeception
+  /-- Genesis speaks of a woman's seed in ordinary births: Hagar's (16:10) and
+  Rebekah's (24:60). -/
+  | womansSeedSaidOfOrdinaryBirths
+  /-- The Greek of Genesis 3:15 calls the woman's seed "he" (αὐτός), though its
+  word for seed, σπέρμα, is neuter. -/
+  | lxxCallsTheSeedHe
+  /-- The Greek translator of Genesis read the woman's seed at 3:15 as one
+  person. -/
+  | lxxReadsOneDescendant
+  /-- Revelation calls the devil "that old serpent" (12:9, 20:2). -/
+  | serpentNamedTheDevil
+  /-- Hebrews and 1 John say the Son came to destroy the devil and his works,
+  through death (Hebrews 2:14; 1 John 3:8). -/
+  | devilDestroyedThroughDeath
+  /-- Paul says Christ died, was buried, and rose the third day (1 Corinthians
+  15:3–4). -/
+  | christDiedAndRose
+  /-- Paul says God sent his Son "made of a woman" (Galatians 4:4). -/
+  | sonMadeOfAWoman
+  /-- In Jesus the promise of Genesis 3:15 is fulfilled: the woman's seed,
+  struck at the heel, crushes the serpent's head. **The fulfilment.** -/
+  | jesusFulfilsThePromise
+  /-- The seed in whom Genesis 3:15 is fulfilled was in fact of the woman alone,
+  with no human father. -/
+  | seedWasOfTheWomanAlone
+  /-- Genesis 3:14–15 is spoken to the serpent as a curse, in the form of a
+  punishment oracle. -/
+  | verseIsACurseOnTheSerpent
+  /-- At Genesis 3:15 "her seed" is a line of descendants, and not an individual.
+  **Westermann's reading of the word.** -/
+  | seedIsLineNotIndividual
+  /-- Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant
+  (Genesis 21:13; 38:9; 1 Samuel 1:11; 2 Samuel 7:12–15). -/
+  | seedUsedOfOneDescendant
+  /-- At Genesis 3:15b the one who strikes is "he", הוּא, masculine singular, with a
+  singular verb, and strikes the serpent's own head, "your head". -/
+  | strikerIsSingular
+  /-- In Genesis 3 the serpent speaks, and knows God's command of 2:17 and twists
+  it (3:1–5). -/
+  | serpentTwistsTheCommand
+  /-- God sets the enmity himself: "I will put enmity" (3:15). -/
+  | godSetsTheEnmity
+  /-- The serpent of Genesis 3 is the instrument of an evil power, and the
+  sentence of 3:15 falls on that power. -/
+  | serpentIsTheInstrumentOfAPower
   /-- Micah 5:3 names only "she who is in labour" as bearing the coming ruler,
   with no father mentioned. -/
   | micah5_3NamesMotherOnly
@@ -246,14 +306,27 @@ def motyerOnIsaiah : Source :=
   , tradition := .christianTypological
   , confidence := .disputed }
 
-/-- Miravalle's *Meet Your Mother* at pages 9–10.
+/-- Miravalle on Genesis 3:15, in *Meet Your Mother*: the verse is the
+"Protoevangelium", "the first reference to Jesus as the future Redeemer of the
+world", and to speak of "the 'seed' of a woman rather than the seed of a man" is
+"already a hint of Mary's virginal conception of Jesus". His word is "hint": a
+remark in passing, not an argument from the Hebrew.
 
-Eight atoms and three intertextual edges cite exactly this, which is a fact
-about the argument worth being able to see: **both** the protoevangelium and
-Michean strands rest on one source, in one tradition, at one pinpoint. Every one
-of them is `disputed`. -/
-def miravalleOnMary : Source :=
-  { primary := .work miravalleMeetMary (.pages 9 10)
+The protoevangelium strand rests on him and on Luther, the reader who argues
+from the wording (`herSeedLine`); the Michean strand rests on Miravalle alone
+(`miravalleOnMicah`). Every atom citing this is `disputed`. -/
+def miravalleOnGenesis : Source :=
+  { primary := .work miravalleMeetYourMother .whole
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- Miravalle on Micah 5:2–3, in *Introduction to Mary*: the mother "so
+specifically designated without a husband" conveys "the same virginal sense as
+we see in Isaiah 7:14". The passage is on page 18 of the 1993 printing; the
+library's entry is the 2020 printing, whose page could not be checked, so the
+book is cited whole. -/
+def miravalleOnMicah : Source :=
+  { primary := .work miravalleIntroductionToMary .whole
   , tradition := .romanCatholic
   , confidence := .disputed }
 
@@ -313,7 +386,7 @@ def protoevangeliumEdge : IntertextEdge :=
   { fromPassage := matthew1_23
   , toPassage := genesis3_15
   , relation := .promise
-  , source := miravalleOnMary }
+  , source := miravalleOnGenesis }
 
 /-- Micah 5:3's maternal reference, read as a messianic theme rather than a
 verbal link — there is no quotation of Micah 5:3 in the birth narratives. -/
@@ -321,7 +394,7 @@ def micahMaternalEdge : IntertextEdge :=
   { fromPassage := matthew1_23
   , toPassage := micah5_3
   , relation := .messianicTheme
-  , source := miravalleOnMary }
+  , source := miravalleOnMicah }
 
 /-- **Luke's annunciation, read as an allusion to Isaiah 7:14.** Luke never
 quotes the verse, but Luke 1:31 is close to its Septuagint wording, and Luke
@@ -373,14 +446,15 @@ def predictiveReading : Interpretation :=
   , source := motyerOnIsaiah }
 
 /-- Miravalle's reading of Genesis 3:15: the seed is named as the woman's, and
-no man is involved in the conception it promises. -/
+that is "already a hint" that no man is involved in the conception it
+promises. -/
 def protoevangeliumReading : Interpretation :=
   { passage := genesis3_15
   , reading :=
-      "Genesis 3:15 promises a redeemer born of the woman's seed, with no " ++
-      "human father implied by the wording"
+      "Genesis 3:15 promises a redeemer born of the woman's seed, the wording " ++
+      "hinting at a conception with no human father"
   , asRelation := some .promise
-  , source := miravalleOnMary }
+  , source := miravalleOnGenesis }
 
 /-- Miravalle's reading of Micah 5:2–3: the oracle names a mother and no
 father for the ruler who comes forth from Bethlehem. -/
@@ -390,7 +464,7 @@ def maternalReading : Interpretation :=
       "Micah 5:2–3 names only the woman in labour as bearing the coming " ++
       "ruler, mentioning no father"
   , asRelation := some .messianicTheme
-  , source := miravalleOnMary }
+  , source := miravalleOnMicah }
 
 /-- The criterion this argument establishes a candidate must meet. -/
 def bornOfAVirgin : FulfillmentCriterion :=

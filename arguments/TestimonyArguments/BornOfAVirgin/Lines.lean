@@ -33,8 +33,10 @@ def toCriterion : Formula Claim :=
   ⋀ [ p .isaiahPredictsVirginBirth, p .almahMeansVirgin
     , p .matthewIntendsFulfilment ] ➝ p .messiahBornOfVirgin
 
-/-- Protoevangelium strand: from Genesis 3:15 read as promise, the patrilineal
-idiom, and the inference drawn from its departure, the criterion follows. -/
+/-- Protoevangelium strand: Genesis 3:15 promises a redeemer as "her seed"; a
+man's line is ordinarily counted through the father; and naming the seed as the
+woman's marks a birth with no human father. So the Messiah must be born of a
+virgin. -/
 @[bornOfAVirginDefs]
 def genesisToCriterion : Formula Claim :=
   ⋀ [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
@@ -354,6 +356,46 @@ versions
 def translatorsReadingFixesTheWord : Formula Claim :=
   p .lxxReadsAVirgin ➝ p .almahMeansVirgin
 
+/-! #### Genesis 3:15, and what "her seed" says of a father
+
+The protoevangelium strand holds that the seed being named as the woman's marks
+a birth with no human father. The steps below take apart what "marks" can mean:
+that the wording itself signifies such a birth, which Luther argues and
+Leupold, Keil and Lewis deny, or that it fits one once fulfilled, which Leupold
+and Keil grant. -/
+
+/-- **Luther's step.** Genesis 3:15 names the seed as the woman's, it is the
+first promise of a redeemer, and a man's seed is ordinarily reckoned through
+him; so the wording itself signifies a birth with no human father. -/
+@[bornOfAVirginDefs]
+def herSeedSignifiesNoFather : Formula Claim :=
+  ⋀ [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
+    , p .seedReckonedThroughFather ]
+  ➝ p .wordingSignifiesAFatherlessBirth
+
+/-- **Leupold's step.** "Her seed" is first collective, the woman's posterity,
+and the seed is named hers because the serpent deceived her; so the wording does
+not itself signify a birth with no human father. -/
+@[bornOfAVirginDefs]
+def posterityExplainsTheWording : Formula Claim :=
+  ⋀ [ p .genesis3_15SeedOfTheWoman, p .seedIsHerPosterityFirst
+    , p .womanNamedForTheDeception ]
+  ➝ notP .wordingSignifiesAFatherlessBirth
+
+/-- **Lewis's step.** Genesis speaks of a woman's seed in ordinary births too;
+so the woman's seed at 3:15 does not by itself signify a birth with no human
+father. -/
+@[bornOfAVirginDefs]
+def ordinaryBirthsAnswerTheWording : Formula Claim :=
+  ⋀ [ p .genesis3_15SeedOfTheWoman, p .womansSeedSaidOfOrdinaryBirths ]
+  ➝ notP .wordingSignifiesAFatherlessBirth
+
+/-- **The Greek's "he".** The Greek refers to the neuter seed with a masculine
+pronoun; so its translator read the seed as one person. -/
+@[bornOfAVirginDefs]
+def heReadsOneDescendant : Formula Claim :=
+  p .lxxCallsTheSeedHe ➝ p .lxxReadsOneDescendant
+
 /-! ### The lines of reason
 
 Four strands converge on the criterion, and each is a `Line`: its own grounds,
@@ -378,10 +420,11 @@ def isaianicLine : Line Claim :=
   , step := toCriterion
   , delivers := p .messiahBornOfVirgin }
 
-/-- **The protoevangelium line.** Genesis 3:15 read as promise, the patrilineal
-idiom, and the inference drawn from its departure. Its hinge is
-`seedOfTheWomanImpliesNoHumanFather`, and the module doc says why that hinge is
-weaker than the argument needs. -/
+/-- **The protoevangelium line.** Genesis 3:15 read as the promise of a
+redeemer, a man's line counted through the father, and the claim that naming the
+seed as the woman's marks a birth with no human father. That claim is its hinge
+(`seedOfTheWomanImpliesNoHumanFather`), and `Results.Genesis` says what it can
+bear, read either way. -/
 @[bornOfAVirginDefs]
 def protoevangeliumLine : Line Claim :=
   { name := "Protoevangelium strand (Genesis 3:15)"
@@ -677,6 +720,470 @@ def usageLine : Line Claim :=
           [ .work postellIsaiahMessianic (.page 472)
           , .work davidsonImmanuel (.page 456)
           , .work meadeAncientVersionsComment .whole ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **Luther on "her seed"**: the wording itself signifies a birth with no human
+father. Held by Luther and Henry, and, as "a hint", by Akin and Miravalle;
+disputed by Leupold, Keil and Lewis. Irenaeus reads the verse of the Virgin's
+son, though he does not argue from the wording.
+
+Luther: the seed of other women "might rather be said to have been the seed of
+the man. But that which was born from Mary was conceived of the Holy Ghost and
+was the true Seed of Mary" (*Luther on the Creation* 298–99). He finds the sense
+in the words of Genesis, and holds that Isaiah later "threw some additional
+light" on it: "For it was then made certain that this Seed would not be born
+from the union of a man and a woman" (298).
+
+The step is rated `disputed`, because readers who grant all three grounds deny
+the conclusion. Leupold reads the verse as the promise of the victor — "Both the
+ultimate victory and its achievement by the seed of the woman are taught with
+unequivocal plainness by this word" (167). Asked whether the expression is "so
+phrased in reference to Mary and the virgin birth", he answers "Not primarily,
+but at least incidentally", and holds that "the expression used does not
+specifically prophesy the virgin birth" (169). Keil grants that the promise
+"culminates in Christ", and finds the virgin birth in its fulfilment, "even if
+the words had reference first of all to the fact that the woman had been led
+astray by the serpent", "even in its apparently casual form" (102). Lewis grants
+that "it is normal in Hebrew to describe descendants by the noun zeraʿ" (299);
+he doubts the promise reading itself, suggesting it came from "Making the woman
+to be the addressee", but argues on grounds that do not need that doubt: "To say
+that the passage is messianic does not necessarily imply that it is
+virgin-birth messianic" (319). -/
+@[bornOfAVirginDefs]
+def herSeedLine : Line Claim :=
+  { name := "Luther on 'her seed': the wording itself signifies no human father"
+  , grounds :=
+      [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
+      , p .seedReckonedThroughFather ]
+  , step := herSeedSignifiesNoFather
+  , delivers := p .wordingSignifiesAFatherlessBirth
+  , inference := some
+      { primary := .work lutherOnTheCreation (.pages 298 299)
+      , supporting :=
+          [ .work henryCommentary (.adLoc Scripture.genesis3_15)
+          , .work leupoldGenesis (.pages 167 169)
+          , .work keilDelitzschPentateuch (.page 102)
+          , .work lewisWomansSeed (.page 319) ]
+      , tradition := .christianTypological
+      , confidence := .disputed } }
+
+/-- **Leupold on "her seed"**: the wording names the woman's posterity, and names
+the woman because she was deceived; it does not itself signify a birth with no
+human father. Held by Leupold and Keil, whose two grounds Calvin gives too;
+disputed by Irenaeus and Henry.
+
+Leupold: "the expression used does not specifically prophesy the virgin birth,
+but it coincides and agrees with it under divine providence. For it is not to be
+forgotten that the expression 'her seed' in its first meaning is a collective
+noun and includes all who are enrolled in the struggle against Satan, without
+being themselves virgin born" (169).
+
+The step is rated `disputed`. Irenaeus grants both grounds. The enmity is kept
+up between the serpent and the woman's seed "until the seed did come appointed
+to tread down his head" (*Against Heresies* III.23.7), and "it was by means of a
+woman that he got the advantage over man at first" (V.21.1); yet he reads the
+verse as preaching "He who should be born of a woman, [namely] from the Virgin"
+(V.21.1), though without arguing from its wording.
+Henry gives the woman's name the same reason — "because she it was whom the
+devil had beguiled" — and still reads the seed as "of a woman only, of a
+virgin". -/
+@[bornOfAVirginDefs]
+def posterityLine : Line Claim :=
+  { name := "Leupold on 'her seed': her posterity, named for the deception"
+  , grounds :=
+      [ p .genesis3_15SeedOfTheWoman, p .seedIsHerPosterityFirst
+      , p .womanNamedForTheDeception ]
+  , step := posterityExplainsTheWording
+  , delivers := notP .wordingSignifiesAFatherlessBirth
+  , inference := some
+      { primary := .work leupoldGenesis (.page 169)
+      , supporting :=
+          [ .work keilDelitzschPentateuch (.pages 101 102)
+          , .work calvinGenesis (.page 170)
+          , .work irenaeusAgainstHeresies (.sectionRef "III.23.7")
+          , .work irenaeusAgainstHeresies (.sectionRef "V.21.1")
+          , .work henryCommentary (.adLoc Scripture.genesis3_15) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **Lewis on "her seed"**: Genesis speaks of a woman's seed in ordinary births
+too, so the wording at 3:15 does not by itself signify a birth with no human
+father. Held by Lewis; disputed by Akin.
+
+Lewis: "Had it been observed across history that Hagar's descendants whose
+ancestral father is Abraham are also projected with a feminine possessive suffix
+attached to zeraʿ (Gen 16:10), as also are Rebekah's descendants whose ancestral
+father is Isaac (24:60), the treatment of Gen 3:15 would likely have been
+different" (299–300). "A look at texts about Hagar and Rebekah in Genesis could
+have safeguarded interpreters from the whole misguided exegetical effort" (319).
+
+The step is rated `disputed`, on one reader. Jimmy Akin, a Catholic
+apologist, does not discuss Hagar or Rebekah, but grants the point Lewis draws
+from them, that a woman's seed "is not outside the bounds of Hebrew expression",
+and still calls the wording "odd", and agrees with the "many" who have "rightly
+seen" it as "a hint of the Virgin Birth". A hint is less than a sign, and whether
+it denies Lewis's conclusion is arguable; it is the only dissent found. -/
+@[bornOfAVirginDefs]
+def idiomLine : Line Claim :=
+  { name := "Lewis on 'her seed': Genesis says it of Hagar and Rebekah too"
+  , grounds := [ p .genesis3_15SeedOfTheWoman, p .womansSeedSaidOfOrdinaryBirths ]
+  , step := ordinaryBirthsAnswerTheWording
+  , delivers := notP .wordingSignifiesAFatherlessBirth
+  , inference := some
+      { primary := .work lewisWomansSeed (.pages 299 300)
+      , supporting := [.work lewisWomansSeed (.page 319), .work akinWomanSeedSerpent .whole]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **The Greek's "he"**: the translator of Genesis read the woman's seed as one
+person. Held by Collins, and by Martin as Collins quotes him; Collins calls the
+reading "generally acknowledged" (141). Rated `disputed`, on Philo, the earliest
+known reader of this Greek, who grants that it says "he" and reads it of the
+mind, a "barbarism" correct in meaning (*Allegorical Interpretation* III.188).
+Lewis leaves it open: the masculine "could be an oversight", and "it is possible
+that the translator reveals a messianic understanding" (300). What it does not
+reach in any case is whether that person has a human father
+(`Results.Genesis`). -/
+@[bornOfAVirginDefs]
+def greekHeLine : Line Claim :=
+  { name := "The Greek's 'he': the woman's seed read as one person"
+  , grounds := [ p .lxxCallsTheSeedHe ]
+  , step := heReadsOneDescendant
+  , delivers := p .lxxReadsOneDescendant
+  , inference := some
+      { primary := .work collinsSyntacticalNote (.page 145)
+      , supporting :=
+          [ .work collinsSyntacticalNote (.page 144), .work martinEarliestMessianic .whole
+          , .work philoAllegoricalInterpretation (.sectionRef "III.188") ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-! #### The fulfilment of Genesis 3:15, and the critical reading
+
+The strands above ask what the wording of Genesis 3:15 says. The reader's next
+question runs the other way: the Gospel tells of one who was born of a woman,
+was struck, and destroyed the devil. Does that fulfil the promise, and does the
+fulfilment confirm that it was a promise? -/
+
+/-- **The fulfilment.** Each term of Genesis 3:15 met, as the New Testament names
+it: the woman's seed in the Son "made of a woman"; the serpent in "that old
+serpent, called the Devil"; its head crushed when the Son destroys the devil
+"through death"; his heel struck in his death, and the wound not the end of him
+in his rising. So in Jesus the promise is fulfilled. -/
+@[bornOfAVirginDefs]
+def termsMetInJesus : Formula Claim :=
+  ⋀ [ p .genesis3_15SeedOfTheWoman, p .sonMadeOfAWoman, p .serpentNamedTheDevil
+    , p .devilDestroyedThroughDeath, p .christDiedAndRose ]
+  ➝ p .jesusFulfilsThePromise
+
+/-- **The fulfilment confirms the promise.** If in Jesus each term of Genesis
+3:15 is met, the verse is a promise of him: the protoevangelium. -/
+@[bornOfAVirginDefs]
+def fulfilmentConfirmsThePromise : Formula Claim :=
+  p .jesusFulfilsThePromise ➝ p .genesis3_15IsProtoevangelium
+
+/-- **Of the woman alone.** If the promise is fulfilled in Jesus, and Jesus was
+conceived of a virgin, the seed in whom it is fulfilled had no human father. -/
+@[bornOfAVirginDefs]
+def fulfilledInOneVirginBorn : Formula Claim :=
+  ⋀ [ p .jesusFulfilsThePromise, p .maryConceivedAsVirgin ] ➝ p .seedWasOfTheWomanAlone
+
+/-- **Westermann's denial.** "Her seed" is a line of descendants, and the verse is
+a punishment oracle on the serpent; such a form has no promise or prophecy, "even
+as its secondary meaning", so the verse is not the protoevangelium. -/
+@[bornOfAVirginDefs]
+def formExcludesAPromise : Formula Claim :=
+  ⋀ [ p .seedIsLineNotIndividual, p .verseIsACurseOnTheSerpent ]
+  ➝ notP .genesis3_15IsProtoevangelium
+
+/-- **The scene read whole.** The serpent speaks and twists God's command, as no
+animal does of itself; it is the instrument of an evil power; the blow falls on
+the serpent itself, "your head"; and God himself sets the enmity. So the
+sentence on the serpent is God's promise of victory over that power: the
+protoevangelium. -/
+@[bornOfAVirginDefs]
+def sceneMakesItAPromise : Formula Claim :=
+  ⋀ [ p .serpentTwistsTheCommand, p .serpentIsTheInstrumentOfAPower
+    , p .strikerIsSingular, p .godSetsTheEnmity ]
+  ➝ p .genesis3_15IsProtoevangelium
+
+/-- **The syntax of the striker.** זֶרַע with singular verbs and pronouns denotes
+one descendant elsewhere; at 3:15b the striker is singular "he", against the
+serpent's own head; and the Greek translator read one person. So "her seed" at
+3:15 is not only a line of descendants: the one who strikes is one of them. -/
+@[bornOfAVirginDefs]
+def singularSyntaxNamesOne : Formula Claim :=
+  ⋀ [ p .seedUsedOfOneDescendant, p .strikerIsSingular, p .lxxReadsOneDescendant ]
+  ➝ notP .seedIsLineNotIndividual
+
+/-- **The fulfilment of Genesis 3:15**, read from Scripture: every term of the
+promise is met in Jesus, as the New Testament itself names it.
+
+- **The woman's seed**: God sent his Son, "made of a woman" (Galatians 4:4).
+- **The serpent**: "that old serpent, called the Devil, and Satan" (Revelation
+  12:9; 20:2).
+- **Its head crushed**: the Son shared flesh and blood "that through death he
+  might destroy him that had the power of death, that is, the devil" (Hebrews
+  2:14); he "was manifested, that he might destroy the works of the devil" (1
+  John 3:8).
+- **His heel struck**: he died, and rose the third day (1 Corinthians 15:3–4),
+  a wound and not the end of him.
+
+Irenaeus reads it so: the seed "appointed to tread down his head — which was born
+of Mary", against "that old serpent" (*Against Heresies* III.23.7), and the Lord
+"summed up in Himself this enmity, when He was made man from a woman, and trod
+upon his head" (IV.40.3). Hamilton: the one "born of woman (i.e., her seed, Gal
+4:4) who 'nullified the one who has the power of death, that is, the devil'
+(Heb 2:14)—one might say he crushed the serpent's head" (53 n. 89). Keil: "In
+this sense Christ is the seed of the woman, who tramples Satan under His feet,
+not as an individual, but as the head" (102), with Romans 16:20 and 1 John 3:8.
+Leupold, of Christ's temptation and the cross: "the first crushing defeat that
+the seed of the woman administered … On the cross this victory was sealed"
+(170).
+
+**What the conclusion says, and what it does not.** That in Jesus the promise is
+fulfilled: struck at the heel, he crushes the serpent's head. Calvin, Keil and
+Leupold each deny that "her seed" means Christ alone — Calvin finds the word
+"too violently distorted" by those who take it so, "for who will concede that a
+collective noun is to be understood of one man only?" — and each holds the
+conclusion as worded: "we must necessarily come to one head" (Calvin 170–71).
+
+**The texts it rests on, and how they are linked.** Revelation's "that old
+serpent" names the serpent of the garden. Romans 16:20, "the God of peace shall
+bruise Satan under your feet shortly", is not counted: it is an allusion, and a
+disputed one, with Calvin (171), Keil (102) and Hamilton (42) for it, and Lewis
+("one possible allusion", 303) and Collins (147 n. 24, "if Paul was alluding to
+this text at all") doubting it. Galatians 4:4 is cited for what it says, that
+the Son was made of a woman; whether Paul alludes to Genesis there is disputed
+too (`sonMadeOfAWoman`).
+
+**Its rating.** `disputed`, on Westermann. He grants what every ground reads —
+none of them says the New Testament *quotes* Genesis 3:15 — and denies that the
+verse promises anyone, "even as its secondary meaning" (260), adding that
+"suggestions of a messianic interpretation are found in late Judaism, but not in
+the New Testament" (261). His reasons are the collective "seed" and the form of
+the verse (259–60): philology and form criticism, not a reading of Hebrews,
+1 John or Revelation. Lewis, who holds that "The NT never speaks of Christ as
+the one who tramples the serpent" (303), denies that Scripture makes the link
+but not the conclusion, and is not counted. -/
+@[bornOfAVirginDefs]
+def fulfilmentLine : Line Claim :=
+  { name := "The fulfilment of Genesis 3:15: struck at the heel, he crushes the serpent's head"
+  , grounds :=
+      [ p .genesis3_15SeedOfTheWoman, p .sonMadeOfAWoman, p .serpentNamedTheDevil
+      , p .devilDestroyedThroughDeath, p .christDiedAndRose ]
+  , step := termsMetInJesus
+  , delivers := p .jesusFulfilsThePromise
+  , inference := some
+      { primary := .work irenaeusAgainstHeresies (.sectionRef "III.23.7")
+      , supporting :=
+          [ .work irenaeusAgainstHeresies (.sectionRef "IV.40.3")
+          , .work hamiltonSkullCrushingSeed (.pageList [42, 53])
+          , .work keilDelitzschPentateuch (.page 102)
+          , .work leupoldGenesis (.page 170)
+          , .work calvinGenesis (.pages 170 171)
+          , .work westermannGenesis (.pages 259 261) ]
+      , tradition := .christianTypological
+      , confidence := .disputed } }
+
+/-- The citation for the step from the fulfilment to the promise, at a
+confidence: the readers who grant that Genesis 3:15 is fulfilled in Christ and
+call it, for that, the first promise of the gospel. -/
+@[bornOfAVirginDefs]
+def confirmationSource (c : Confidence) : Source :=
+  { primary := .work leupoldGenesis (.page 167)
+  , supporting :=
+      [ .work keilDelitzschPentateuch (.page 102)
+      , .work calvinGenesis (.pages 170 171)
+      , .work collinsSyntacticalNote (.page 146)
+      , .work hamiltonSkullCrushingSeed (.page 31)
+      , .work irenaeusAgainstHeresies (.sectionRef "IV.40.3") ]
+  , tradition := .christianTypological
+  , confidence := c }
+
+/-- **The fulfilment confirms the promise.** If in Jesus each term of the verse
+is met, the verse was a promise of him: the protoevangelium. This is not a
+deduction from Genesis alone. Reasoning "if the verse promised the Messiah, he
+would crush the serpent and be struck; Jesus did; so it promised him" would
+affirm the consequent. It is a step of its own: a promise whose every term is
+met in one person, as Scripture names them, is a promise of that person.
+
+Rated `plausible`. No reader found grants that Jesus fulfils the verse and
+denies that it is a promise: everyone found who denies the promise, Westermann
+among them, denies the fulfilment too, and that dissent belongs to the fulfilment's
+step and to the claim that the verse is the protoevangelium. Everyone who grants
+the fulfilment calls the verse a promise: Leupold, who finds "the ultimate
+victory and its achievement by the seed of the woman … taught with unequivocal
+plainness" (167); Keil (102); Calvin (170–71); Collins, for whom the verse,
+read from the end, is God's threat "of an individual who will engage the snake
+in combat and win" (146); Hamilton, for whom "God's first act of judgment in the
+Bible is accompanied by his first promise of salvation" (31). Rated no higher,
+because the step adds little to what its ground already says: to fulfil a
+promise there must have been one. -/
+@[bornOfAVirginDefs]
+def confirmationLine : Line Claim :=
+  { name := "The fulfilment confirms the promise: Genesis 3:15 is the protoevangelium"
+  , grounds := [ p .jesusFulfilsThePromise ]
+  , step := fulfilmentConfirmsThePromise
+  , delivers := p .genesis3_15IsProtoevangelium
+  , inference := some (confirmationSource .plausible) }
+
+/-- **Of the woman alone.** Granted that the promise is fulfilled in Jesus, and
+that Mary conceived him as a virgin, the seed in whom it is fulfilled had no
+human father. Irenaeus joins the two: "He who should be born of a woman,
+[namely] from the Virgin … was preached as keeping watch for the head of the
+serpent" (V.21.1).
+
+The step only joins its grounds, and anyone who grants both grants it, so it is
+rated `consensus`. What it rests on is its grounds, and both are contested: the
+fulfilment on Westermann, the virginal conception on the historian this
+argument cites. It reads the fact of the birth back into the promise; it does
+not find the birth in the wording, which is Luther's claim and is weighed
+apart (`Results.Genesis`). -/
+@[bornOfAVirginDefs]
+def aloneLine : Line Claim :=
+  { name := "The seed of the woman alone: the promise fulfilled in one born of a virgin"
+  , grounds := [ p .jesusFulfilsThePromise, p .maryConceivedAsVirgin ]
+  , step := fulfilledInOneVirginBorn
+  , delivers := p .seedWasOfTheWomanAlone
+  , inference := some
+      { primary := .work irenaeusAgainstHeresies (.sectionRef "V.21.1")
+      , tradition := .christianTypological
+      , confidence := .consensus } }
+
+/-- **Westermann's denial**: Genesis 3:15 is no promise. "The parallelism makes
+it clear that 'seed' refers to a line of descendants and not to an individual"
+(259), and the verse is a punishment oracle on the serpent: "It is not possible
+that such a form has either promise or prophecy as its primary or even as its
+secondary meaning" (260). Encoded first, as the rival to the fulfilment.
+
+Its grounds are philology and form criticism, and so is its step: none is a
+reading of another text of Scripture. Its first ground is contested in its own
+right (`seedIsLineNotIndividual`, and `syntaxLine` against it).
+
+Rated `disputed`. Calvin grants both grounds — the seed is "the posterity of the
+woman generally", for "who will concede that a collective noun is to be
+understood of one man only?" (170), and the verse is the serpent's sentence —
+and denies the conclusion: the promise is in the curse, and "we must necessarily
+come to one head" (171). Keil, who reads the seed as "the human race" and Christ
+"not as an individual, but as the head" (101–2), denies it too. -/
+@[bornOfAVirginDefs]
+def westermannLine : Line Claim :=
+  { name := "Westermann: a punishment oracle on a line of descendants, and no promise"
+  , grounds := [ p .seedIsLineNotIndividual, p .verseIsACurseOnTheSerpent ]
+  , step := formExcludesAPromise
+  , delivers := notP .genesis3_15IsProtoevangelium
+  , inference := some
+      { primary := .work westermannGenesis (.pages 259 261)
+      , supporting :=
+          [ .work calvinGenesis (.pages 170 171)
+          , .work keilDelitzschPentateuch (.page 102) ]
+      , tradition := .criticalScholarship
+      , confidence := .disputed } }
+
+/-- **The scene read whole**, from the section and not the word alone: what
+Genesis 3 says of the serpent, of whom the blow falls on, and of who sets the
+enmity.
+
+- **The serpent speaks, and knows the command.** It gives back God's word of
+  2:17 twisted, "Ye shall not surely die" (3:4). Collins: "the snake's wording of
+  v. 4 reflects knowledge of 2:17", and "animals do not have faculty of speech in
+  Bible, hence there is some intervention here" (146 n. 21).
+- **It is the instrument of an evil power.** Delitzsch, as Collins quotes him:
+  "an animal not speaking of its own accord, but as made the instrument of itself
+  by the evil principle". Woudstra: "There is a diabolical subtlety in the
+  serpent's suggestions which points to a sinister background to his words"
+  (197). This ground is `disputed` (`serpentIsTheInstrumentOfAPower`).
+- **The blow falls on the serpent itself**: "it is the head of the serpent, not
+  that of his zeraʿ, which is in view here" (Woudstra 199).
+- **God sets the enmity**: "a tremendous initiative for good, unexpected and
+  unmerited" (Woudstra 203).
+
+So the sentence on the serpent is a promise of victory over the power behind it.
+Collins: "the referent of the second person pronoun would actually be the dark
+power behind the snake" (146–47 n. 21), and "the 'promise' for the humans is an
+implicature of the punishment on the snake" (147 n. 22). Keil: "This foe is
+Satan, who incessantly opposes the seed of the woman and bruises its heel, but
+is eventually to be trodden under its feet" (101–2).
+
+**Its rating.** `plausible`. Woudstra grants every ground and does not deny the
+conclusion: though "this passage does not explicitly predict ultimate victory of
+the woman's seed", "the One who set the enmity might also be regarded as
+implicitly guaranteeing the ultimate success of those who are on his side", and
+"the term 'protevangelium' may be rightly used to describe it" (203). Westermann,
+who denies the conclusion, denies that the serpent is more than an animal (261),
+and that dissent belongs to the ground. Von Rad, as Woudstra quotes him, denies
+a protevangelium from "the sense of the passage" and the collective "seed"
+(194); he is not shown to grant the grounds. Rated no higher, because the step
+reads a promise out of a curse, which Collins calls "an implicature" and
+Woudstra "implicit".
+
+None of this is the reading of the readers before Christ: Jubilees, Philo and
+Josephus read the serpent as an animal or an emblem, and none of them reads the
+verse as a promise. It is an exegesis of the section, from its own words. -/
+@[bornOfAVirginDefs]
+def sceneLine : Line Claim :=
+  { name := "The scene read whole: God's sentence on the serpent's power"
+  , grounds :=
+      [ p .serpentTwistsTheCommand, p .serpentIsTheInstrumentOfAPower
+      , p .strikerIsSingular, p .godSetsTheEnmity ]
+  , step := sceneMakesItAPromise
+  , delivers := p .genesis3_15IsProtoevangelium
+  , inference := some
+      { primary := .work collinsSyntacticalNote (.pages 146 147)
+      , supporting :=
+          [ .work woudstraRecentTranslations (.pageList [197, 199, 203])
+          , .work keilDelitzschPentateuch (.pages 101 102)
+          , .work westermannGenesis (.page 261) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .plausible } }
+
+/-- **The syntax of the striker**, against Westermann's "a line of descendants
+and not an individual". Collins: when זֶרַע "denotes a specific descendant, it
+appears with singular verb inflections, adjectives, and pronouns" (144), and "the
+singular pronoun hûʾ in Genesis 3:15 is quite consistent with the pattern where a
+single individual is in view"; "we might wonder if the singular hûʾ in Genesis
+3:15 is used precisely in order to make it plain that an individual is being
+promised" (145). It is "he" who strikes "you", the serpent itself, not its seed
+(146 n. 21). The Greek translator read one person (`lxxReadsOneDescendant`).
+Alexander: the seed "must be understood as referring to a single individual and
+not numerous descendants" (363); Leupold (166–68) and Hamilton (32) agree.
+
+What it concludes is worded as they hold it: "her seed" at 3:15 is not only a
+line of descendants, for the one who strikes is one of them, whether or not 15a
+also names her posterity. Collins allows the collective too, the Messiah "as the
+(primary) seed, and his followers as 'seed' by virtue of their relation to him"
+(148 n. 24).
+
+Paul reads the singular "seed" of the promise to Abraham as one person: "He
+saith not, And to seeds, as of many; but as of one, And to thy seed, which is
+Christ" (Galatians 3:16). That is a precedent for reading the word of one, not
+a reading of Genesis 3:15, and no reader found takes it as one; Calvin uses it so
+("So Paul, from the seed of Abraham, leads us to Christ", 171). It is not counted
+as a ground.
+
+Rated `disputed`. Keil grants the first two grounds — "the posterity of a man may
+consist of a whole tribe or of one son only", and the victory is "over the
+serpent itself" — and denies that "by the seed of the woman we are to understand
+one solitary person, one individual only" (101). Collins himself claims no more
+than consistency, from "a fairly low level of integration" (145–46), and
+Alexander notes that the same singular syntax is usually read collectively at
+Genesis 22:17–18a and 24:60 (364). -/
+@[bornOfAVirginDefs]
+def syntaxLine : Line Claim :=
+  { name := "The syntax of the striker: 'he' who strikes is one descendant"
+  , grounds := [ p .seedUsedOfOneDescendant, p .strikerIsSingular, p .lxxReadsOneDescendant ]
+  , step := singularSyntaxNamesOne
+  , delivers := notP .seedIsLineNotIndividual
+  , inference := some
+      { primary := .work collinsSyntacticalNote (.pages 144 146)
+      , supporting :=
+          [ .work alexanderFurtherObservations (.pageList [363, 364])
+          , .work leupoldGenesis (.pages 166 168)
+          , .work hamiltonSkullCrushingSeed (.page 32)
+          , .work keilDelitzschPentateuch (.page 101)
+          , .work calvinGenesis (.page 171) ]
       , tradition := .christianHistoricalGrammatical
       , confidence := .disputed } }
 

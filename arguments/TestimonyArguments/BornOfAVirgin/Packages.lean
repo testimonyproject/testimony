@@ -41,7 +41,8 @@ def christian : ArgumentPackage Claim :=
     -- Each strand's inference is contested as its interpretive atoms are: by
     -- the critical readings recorded against every one of them.
   , inferences :=
-      [ motyerOnIsaiah, miravalleOnMary, postellOnIsaiah (.pages 490 493) .disputed
+      [ motyerOnIsaiah, miravalleOnGenesis, miravalleOnMicah
+      , postellOnIsaiah (.pages 490 493) .disputed
       , franceOnMatthew .disputed ] }
 
 /-- The Roman Catholic package: the four scriptural strands *and* the
@@ -411,6 +412,58 @@ Dinah a παρθένος as the law names the seduced virgin, in the sense "virg
 def dinahCase : ArgumentPackage Claim :=
   dinahLine.asPackage cite "At Genesis 34:3, παρθένος names Dinah in the sense 'virgin'"
 
+/-- **The fulfilment, confirming the promise**, as a position: every term of
+Genesis 3:15 met in Jesus as the New Testament names it, and so the verse a
+promise of him. Two steps, each rated: the fulfilment (`fulfilmentLine`) and the
+confirmation (`confirmationLine`). The confirmation's ground is the fulfilment's
+conclusion, so it enters as a step, not as a premise. -/
+@[bornOfAVirginDefs]
+def fulfilmentCase : ArgumentPackage Claim :=
+  { name := "The fulfilment of Genesis 3:15 confirms the promise"
+  , cite := cite
+  , premises := caseOf [fulfilmentLine] [] [fulfilmentConfirmsThePromise]
+  , conclusion := p .genesis3_15IsProtoevangelium
+  , conclusionLabel := "Genesis 3:15 is the protoevangelium, fulfilled in Jesus"
+  , inferences := fulfilmentLine.inference.toList ++ confirmationLine.inference.toList }
+
+/-- **Westermann's denial**, as a position: the verse is no promise, and so no
+one fulfils it. He holds the confirmation's step with the fulfilment's side —
+what is fulfilled was promised — and runs it the other way: suggestions of a
+messianic reading "are found in late Judaism, but not in the New Testament"
+(261). So his denial that the verse is a promise is a denial that it is
+fulfilled in Jesus, and the package says so. -/
+@[bornOfAVirginDefs]
+def westermannCase : ArgumentPackage Claim :=
+  { name := westermannLine.name
+  , cite := cite
+  , premises := caseOf [westermannLine] [] [fulfilmentConfirmsThePromise]
+  , conclusion := notP .genesis3_15IsProtoevangelium
+  , conclusionLabel := "Genesis 3:15 is not the protoevangelium"
+  , inferences := westermannLine.inference.toList }
+
+/-- **The syntax of the striker**, as a position: "her seed" at 3:15 is not only
+a line of descendants. -/
+@[bornOfAVirginDefs]
+def syntaxCase : ArgumentPackage Claim :=
+  syntaxLine.asPackage cite "At Genesis 3:15 'her seed' is not only a line of descendants"
+
+/-- **The scene read whole**, as a position: the verse is the protoevangelium,
+from the section's own words. -/
+@[bornOfAVirginDefs]
+def sceneCase : ArgumentPackage Claim :=
+  sceneLine.asPackage cite "Genesis 3:15 is the protoevangelium, read from the scene"
+
+/-- **The seed of the woman alone**, as a position: the fulfilment, with the
+virginal conception. -/
+@[bornOfAVirginDefs]
+def aloneCase : ArgumentPackage Claim :=
+  { name := "The seed of the woman alone"
+  , cite := cite
+  , premises := caseOf [fulfilmentLine] [p .maryConceivedAsVirgin] [fulfilledInOneVirginBorn]
+  , conclusion := p .seedWasOfTheWomanAlone
+  , conclusionLabel := "The seed in whom Genesis 3:15 is fulfilled was of the woman alone"
+  , inferences := fulfilmentLine.inference.toList ++ aloneLine.inference.toList }
+
 /-- The Septuagint as a witness, with the claim about its word taken away: the
 rendering and its date stay, and nothing is granted about what παρθένος meant.
 Its conclusion no longer follows (`parthenos_is_load_bearing`). -/
@@ -459,6 +512,45 @@ virgin *shall* be with child. -/
 def septuagintWithTheFuture : Line Claim :=
   septuagintLine.onGrounds
     (septuagintLine.grounds ++ [p .lxxPutsTheConceptionInTheFuture])
+
+/-! ### Genesis 3:15, and what "her seed" says of a father -/
+
+/-- The protoevangelium strand as a position of its own: Genesis 3:15 read as
+promise, the seed named as the woman's, and the hinge that this marks a birth
+with no human father, delivering the criterion. The rival whose hinge
+`Results.Genesis` reads two ways. -/
+@[bornOfAVirginDefs]
+def protoevangeliumCase : ArgumentPackage Claim :=
+  protoevangeliumLine.asPackage cite "The Messiah must be born of a virgin"
+
+/-- Luther's case from the wording, as a position of its own. -/
+@[bornOfAVirginDefs]
+def herSeedCase : ArgumentPackage Claim :=
+  herSeedLine.asPackage cite "The wording 'her seed' itself signifies a birth with no human father"
+
+/-- Leupold's case from the woman's posterity, as a position of its own. -/
+@[bornOfAVirginDefs]
+def posterityCase : ArgumentPackage Claim :=
+  posterityLine.asPackage cite
+    "The wording 'her seed' does not itself signify a birth with no human father"
+
+/-- Lewis's case from the idiom, as a position of its own. -/
+@[bornOfAVirginDefs]
+def idiomCase : ArgumentPackage Claim :=
+  idiomLine.asPackage cite
+    "The wording 'her seed' does not by itself signify a birth with no human father"
+
+/-- The Greek's "he", as a position of its own. -/
+@[bornOfAVirginDefs]
+def greekHeCase : ArgumentPackage Claim :=
+  greekHeLine.asPackage cite "The Greek translator read the woman's seed as one person"
+
+/-- The Greek's line with the promise's grounds beside it: the seed named as the
+woman's, Genesis 3:15 as the first promise of a redeemer, and a man's seed
+reckoned through him. Luther's step is not among them. -/
+@[bornOfAVirginDefs]
+def greekHeWithThePromise : Line Claim :=
+  greekHeLine.onGrounds (greekHeLine.grounds ++ herSeedLine.grounds)
 
 /-- The lexical objection with its versional support, stated as its holder
 would state it. -/

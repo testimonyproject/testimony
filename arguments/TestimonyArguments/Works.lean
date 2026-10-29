@@ -224,19 +224,32 @@ carries none. -/
       , note := some "Cited by chapter and section; no critical edition catalogued." }
   , publisher := "Westminster Assembly" }
 
-/-- Miravalle's short Mariology. The source for the two scriptural strands added
-to `BornOfAVirgin`: Genesis 3:15 read as protoevangelium, and Micah 5:2--3 read
-as naming a mother and no father. -/
-@[bib_entry] def miravalleMeetMary : BibEntry := .book
+/-- Miravalle's short Mariology, the source for reading Genesis 3:15 as the
+protoevangelium, "the first reference to Jesus as the future Redeemer of the
+world", and for the remark that it is "strange ... to talk about the 'seed' of a
+woman rather than the seed of a man — already a hint of Mary's virginal
+conception of Jesus!", in the chapter on the Immaculate Conception. The revised
+edition of 2014, with a foreword by Michael Gaitley; Open Library gives Marian
+Press as its publisher, the Library of Congress record Lighthouse Catholic Media,
+Sycamore, Illinois. Read in the Internet Archive's scan through its full-text
+search, without seeing the page images, so it is cited whole; ISBN verified at
+Open Library.
+
+The library once cited *Meet Mary* (Sophia, 2007) at pages 9–10 for this and
+for the Micah strand. No text of that book could be reached to check either
+claim, and the passages were found here and in *Introduction to Mary*, so it is
+no longer cited. -/
+@[bib_entry] def miravalleMeetYourMother : BibEntry := .book
   { core :=
-      { key := "miravalle-meet-mary-2007"
+      { key := "miravalle-meet-your-mother-2014"
       , contributors := { authors := [.person "Mark I." "Miravalle"] }
-      , title := "Meet Mary"
-      , subtitle := some "Getting to Know the Mother of God"
-      , year := some { value := 2007 }
-      , identifiers := [.isbn "9781933184326"] }
-  , publisher := "Sophia Institute Press"
-  , place := some "Manchester, NH" }
+      , title := "Meet Your Mother"
+      , subtitle := some "A Brief Introduction to Mary"
+      , year := some { value := 2014 }
+      , identifiers := [.isbn "9781596143067"] }
+  , publisher := "Lighthouse Catholic Media"
+  , place := some "Sycamore, IL"
+  , edition := some "Revised edition" }
 
 /-- Miravalle's survey of Marian doctrine, which collates the papal teaching the
 `catholic` package in `BornOfAVirgin` appeals to. Open Library catalogues the
@@ -556,6 +569,276 @@ JETS registers no DOIs; the identifier is the publisher's own open PDF. -/
   , volume := some "54"
   , issue := some "3"
   , pages := some (467, 484) }
+
+/-- Collins's note on the syntax of Genesis 3:15. Cited for the Greek's "he":
+"The evidence of the Greek translators makes it beyond question that the
+translator of Genesis 3:15 meant to convey that an individual was promised"
+(145), with the parallels in the Greek of 1 Samuel 1:11 and 2 Samuel 7:12–14,
+where a masculine pronoun follows the neuter σπέρμα when one person is meant
+(144). Whether that individual is the Messiah he leaves "outside the scope of a
+mere syntactical note" (147). Printed under the name Jack Collins. Read in full
+from the publisher's PDF; DOI verified at Crossref. -/
+@[bib_entry] def collinsSyntacticalNote : BibEntry := .article
+  { core :=
+      { key := "collins-syntactical-note-1997"
+      , contributors := { authors := [.person "Jack" "Collins"] }
+      , title := "A Syntactical Note (Genesis 3:15)"
+      , subtitle := some "Is the Woman's Seed Singular or Plural?"
+      , year := some { value := 1997 }
+      , identifiers := [.doi "10.53751/001c.30353"] }
+  , journal := "Tyndale Bulletin"
+  , volume := some "48"
+  , issue := some "1"
+  , pages := some (139, 148) }
+
+/-- Martin's note on the Greek of Genesis 3:15, the usual citation for reading
+its "he" as the earliest messianic interpretation of the verse. Cited whole: the
+library has not read the article, and quotes Martin only as Collins quotes him.
+DOI verified at Crossref, which gives the first page; the last is from the
+volume's index, where the next article begins at 428. -/
+@[bib_entry] def martinEarliestMessianic : BibEntry := .article
+  { core :=
+      { key := "martin-earliest-messianic-1965"
+      , contributors := { authors := [.person "R. A." "Martin"] }
+      , title := "The Earliest Messianic Interpretation of Genesis 3:15"
+      , year := some { value := 1965 }
+      , identifiers := [.doi "10.2307/3264870"] }
+  , journal := "Journal of Biblical Literature"
+  , volume := some "84"
+  , issue := some "4"
+  , pages := some (425, 427) }
+
+/-- Calvin's commentary on Genesis, for 3:15: he reads "the seed to mean the
+posterity of the woman generally" (170), and holds that the woman is named
+because "she had yielded to the subtlety of the devil". The Reformed reading
+that grants the promise and gives the posterity and deception readings; he does
+not discuss the virgin birth there. The 1847 Calvin Translation Society
+edition, as scanned by the Internet Archive. -/
+@[bib_entry] def calvinGenesis : BibEntry := .book
+  { core :=
+      { key := "calvin-commentary-genesis-1847"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "John" "King"] }
+      , title := "Commentaries on the First Book of Moses Called Genesis"
+      , year := some { value := 1847 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentariesonfi01calvuoft"
+                 (some "2026-10-24") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "1" }
+
+/-- Lewis's history of the reading of "the woman's seed". Cited for the idiom:
+"it is unusual (though not unique)" to give זֶרַע a feminine possessive, and
+Genesis does so of Hagar's descendants (16:10) and Rebekah's (24:60), each with
+a father named (299–300); and for the conclusion: "To say that the passage is messianic
+does not necessarily imply that it is virgin-birth messianic" (319). Read from
+the society's scan, which has no text layer; JETS registers no DOIs. -/
+@[bib_entry] def lewisWomansSeed : BibEntry := .article
+  { core :=
+      { key := "lewis-womans-seed-1991"
+      , contributors := { authors := [.person "Jack P." "Lewis"] }
+      , title := "The Woman's Seed (Gen 3:15)"
+      , year := some { value := 1991 }
+      , identifiers :=
+          [ .url ("https://etsjets.org/wp-content/uploads/2010/07/" ++
+                  "files_JETS-PDFs_34_34-3_34-3-pp299-319_JETS.pdf")
+                 (some "2026-10-24") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "34"
+  , issue := some "3"
+  , pages := some (299, 319) }
+
+/-- Leupold on Genesis, a Lutheran exposition that reads 3:15 as the promise of
+the victor. Asked whether the expression is "so phrased in reference to Mary and
+the virgin birth", he answers "Not primarily, but at least incidentally", and
+holds that "the expression used does not specifically prophesy the virgin birth,
+but it coincides and agrees with it under divine providence" (169). Open Library records
+the 1942 Wartburg edition; the identifier is the Christian Classics Ethereal
+Library's text, which transcribes the 1950 Baker printing, and the pages cited
+are its. -/
+@[bib_entry] def leupoldGenesis : BibEntry := .book
+  { core :=
+      { key := "leupold-exposition-genesis-1942"
+      , contributors := { authors := [.person "H. C." "Leupold"] }
+      , title := "Exposition of Genesis"
+      , year := some { value := 1942 }
+      , identifiers :=
+          [ .url "https://ccel.org/ccel/leupold/genesis/genesis.v.html" (some "2026-10-24") ] }
+  , publisher := "The Wartburg Press"
+  , place := some "Columbus, OH"
+  , volume := some "1" }
+
+/-- Alexander's reply to Collins on "seed". Cited for the individual reading of
+Genesis 3:15 — "On this basis the 'seed of the woman' in Genesis 3:15 must be
+understood as referring to a single individual and not numerous descendants"
+(363) — and for its caveat: at Genesis 22:17–18a and 24:60 the same singular
+syntax is usually read collectively, so "Either Collins' approach is seriously
+flawed … or his study requires that scholars re-evaluate" those verses (364).
+Crossref gives no pages; the PDF's running heads give 363–67. -/
+@[bib_entry] def alexanderFurtherObservations : BibEntry := .article
+  { core :=
+      { key := "alexander-further-observations-1997"
+      , contributors := { authors := [.person "T. Desmond" "Alexander"] }
+      , title := "Further Observations on the Term 'Seed' in Genesis"
+      , year := some { value := 1997 }
+      , identifiers := [.doi "10.53751/001c.30377"] }
+  , journal := "Tyndale Bulletin"
+  , volume := some "48"
+  , issue := some "2"
+  , pages := some (363, 367) }
+
+/-- Woudstra on the newer translations of Genesis 3:15. Cited for the reading of
+the whole scene: "as one reads Genesis 3 one does indeed become conscious of such
+a force. There is a diabolical subtlety in the serpent's suggestions which points
+to a sinister background to his words. Later Scripture abundantly confirms this
+opinion" (197); "it is the head of the serpent, not that of his zeraʿ, which is
+in view here" (199); and, though "this passage does not explicitly predict
+ultimate victory of the woman's seed", God's setting of the enmity is "a
+tremendous initiative for good", and "the term 'protevangelium' may be rightly
+used to describe it" (203). Read from the PDF the seminary permits, whose header
+gives the journal, volume and pages. -/
+@[bib_entry] def woudstraRecentTranslations : BibEntry := .article
+  { core :=
+      { key := "woudstra-recent-translations-1971"
+      , contributors := { authors := [.person "Marten H." "Woudstra"] }
+      , title := "Recent Translations of Genesis 3:15"
+      , year := some { value := 1971 }
+      , identifiers :=
+          [ .url
+              "https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_Gen3_15_CTJ.pdf"
+              (some "2026-10-29") ] }
+  , journal := "Calvin Theological Journal"
+  , volume := some "6"
+  , pages := some (194, 203) }
+
+/-- Westermann's commentary on Genesis 1–11, in Scullion's translation. Cited for
+the critical denial that Genesis 3:15 is a promise: "The parallelism makes it
+clear that 'seed' refers to a line of descendants and not to an individual"
+(259); the passage is a punishment oracle, and "It is not possible that such a
+form has either promise or prophecy as its primary or even as its secondary
+meaning" (260); "suggestions of a messianic interpretation are found in late
+Judaism, but not in the New Testament" (261). Read from the full text at the
+Internet Archive. Verified at Open Library (OL3512284M): Augsburg, Minneapolis,
+1984, ISBN 0806619627. -/
+@[bib_entry] def westermannGenesis : BibEntry := .book
+  { core :=
+      { key := "westermann-genesis-1-11-1984"
+      , contributors :=
+          { authors := [.person "Claus" "Westermann"]
+          , translators := [.person "John J." "Scullion"] }
+      , title := "Genesis 1–11"
+      , subtitle := some "A Commentary"
+      , year := some { value := 1984 }
+      , identifiers := [.isbn "0806619627"] }
+  , publisher := "Augsburg Publishing House"
+  , place := some "Minneapolis" }
+
+/-- Hamilton on Genesis 3:15 and the texts that take it up. Cited for the
+fulfilment read from Scripture itself: "God's first act of judgment in the Bible
+is accompanied by his first promise of salvation" (31); "We can be confident of
+several allusions to Gen 3:15 in the NT", and "The scene in Rev 12 is also
+surely influenced by Gen 3:15" (42); and the one "born of woman (i.e., her seed,
+Gal 4:4) who 'nullified the one who has the power of death, that is, the devil'
+(Heb 2:14)—one might say he crushed the serpent's head" (53 n. 89). The journal
+registers no DOI; the identifier is the author's own PDF, whose page footers
+give 30–54. -/
+@[bib_entry] def hamiltonSkullCrushingSeed : BibEntry := .article
+  { core :=
+      { key := "hamilton-skull-crushing-seed-2006"
+      , contributors := { authors := [.person "James" "Hamilton"] }
+      , title := "The Skull Crushing Seed of the Woman"
+      , subtitle := some "Inner-Biblical Interpretation of Genesis 3:15"
+      , year := some { value := 2006 }
+      , identifiers :=
+          [ .url
+              "https://jimhamilton.wordpress.com/wp-content/uploads/2008/04/hamilton_sbjt_10-2.pdf"
+              (some "2026-10-29") ] }
+  , journal := "Southern Baptist Journal of Theology"
+  , volume := some "10"
+  , issue := some "2"
+  , pages := some (30, 54) }
+
+/-- Keil and Delitzsch on the Pentateuch, in James Martin's translation. Cited
+for Keil on Genesis 3:15: "even if the words had reference first of all to the
+fact that the woman had been led astray by the serpent", the promise was
+fulfilled, in Christ "born of a woman (without a human father)", "even in its
+apparently casual form" (102).
+Read from the Princeton Theological Seminary copy at the Internet Archive, whose
+title page gives 1866. -/
+@[bib_entry] def keilDelitzschPentateuch : BibEntry := .book
+  { core :=
+      { key := "keil-delitzsch-pentateuch-1866"
+      , contributors :=
+          { authors := [.person "Carl Friedrich" "Keil", .person "Franz" "Delitzsch"]
+          , translators := [.person "James" "Martin"] }
+      , title := "Biblical Commentary on the Old Testament"
+      , subtitle := some "The Pentateuch"
+      , year := some { value := 1866 }
+      , identifiers :=
+          [ .url "https://archive.org/details/pentateuch01keil" (some "2026-10-24") ] }
+  , publisher := "T. & T. Clark"
+  , place := some "Edinburgh"
+  , volume := some "1" }
+
+/-- Luther's lectures on Genesis, in Lenker's revision of Cole's translation. The
+explicit argument from the wording of Genesis 3:15: the seed of other women
+"might rather be said to have been the seed of the man", but "that which was
+born from Mary ... was the true Seed of Mary" (298–99). Read from the scan at the
+Internet Archive, whose title page gives Minneapolis, 1904. -/
+@[bib_entry] def lutherOnTheCreation : BibEntry := .book
+  { core :=
+      { key := "luther-on-the-creation-1904"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Martin" "Luther"]
+          , editors := [.person "John Nicholas" "Lenker"] }
+      , title := "Luther on the Creation"
+      , subtitle := some "A Critical and Devotional Commentary on Genesis"
+      , year := some { value := 1904 }
+      , identifiers :=
+          [ .url ("https://archive.org/details/" ++
+                  "LutherOnTheCreationACriticalAndDevotionalCommentaryOnGenesis1-3")
+                 (some "2026-10-24") ] }
+  , publisher := "Lutherans in All Lands Co."
+  , place := some "Minneapolis"
+  , volume := some "1" }
+
+/-- Matthew Henry on Genesis 3:15: the seed is called the woman's "because she it
+was whom the devil had beguiled", and "He was likewise to be the seed of a woman
+only, of a virgin". Cited by passage: the Christian Classics Ethereal Library's
+text, the identifier, says only that it "may be from the Revell edition". -/
+@[bib_entry] def henryCommentary : BibEntry := .book
+  { core :=
+      { key := "henry-commentary-whole-bible"
+      , role := .witness
+      , contributors := { authors := [.person "Matthew" "Henry"] }
+      , title := "Commentary on the Whole Bible"
+      , year := some { value := 1706 }
+      , identifiers :=
+          [ .url "https://www.ccel.org/ccel/henry/mhc1.Gen.iv.html" (some "2026-10-24") ]
+      , note := some "First published 1706–1721." }
+  , publisher := "Christian Classics Ethereal Library"
+  , volume := some "1" }
+
+/-- Akin's article on Genesis 3:15 for Catholic Answers. Cited for a reader who
+grants the idiom and still finds the hint: "While it is odd to describe a woman
+as having seed (something many have rightly seen as a hint of the Virgin
+Birth), it is not outside the bounds of Hebrew expression." Read on the
+publisher's site, which dates it 1 October 1999. -/
+@[bib_entry] def akinWomanSeedSerpent : BibEntry := .webPage
+  { core :=
+      { key := "akin-woman-seed-serpent-1999"
+      , contributors := { authors := [.person "Jimmy" "Akin"] }
+      , title := "The Woman, the Seed, the Serpent"
+      , year := some { value := 1999 }
+      , identifiers :=
+          [ .url ("https://www.catholic.com/magazine/print-edition/" ++
+                  "the-woman-the-seed-the-serpent")
+                 (some "2026-10-24") ] }
+  , site := some "Catholic Answers" }
 
 /-- Postell's compositional case for reading Isaiah 7:14 messianically. The
 source for the fourth strand in `BornOfAVirgin`, and for the parity argument
@@ -2094,6 +2377,37 @@ in Hezekiah (67). Cited for both halves. -/
   , originalTitle := some "Πρὸς Τρύφωνα Ἰουδαῖον Διάλογος"
   , composed := some { value := 160, approximate := true }
   , editionUsed := some "roberts-ante-nicene-fathers-1-1885" }
+
+/-- Yonge's translation of Philo, volume 1, with the *Allegorical
+Interpretation*. Read from the University of Toronto's scan at the Internet
+Archive (Bohn, London, 1854). -/
+@[bib_entry] def yongePhilo1 : BibEntry := .book
+  { core :=
+      { key := "yonge-works-of-philo-1-1854"
+      , contributors := { translators := [.person "C. D." "Yonge"] }
+      , title := "The Works of Philo Judaeus, the Contemporary of Josephus"
+      , year := some { value := 1854 }
+      , identifiers :=
+          [ .url "https://archive.org/details/worksphilojudaeu01philuoft"
+              (some "2026-10-29") ] }
+  , publisher := "Henry G. Bohn"
+  , place := some "London"
+  , volume := some "1" }
+
+/-- Philo, *Allegorical Interpretation* III: the earliest known reader of the
+Greek of Genesis 3:15. The masculine "he" is "as to its language, a barbarism,
+but, as to the meaning which is conveyed by it, a correct expression": "the woman
+is not he, but she", and "the mind is masculine" (III.188, Yonge's ch. LXVII).
+He reads the verse of the mind and pleasure, not of a person. -/
+@[bib_entry] def philoAllegoricalInterpretation : BibEntry := .ancientWork
+  { core :=
+      { key := "philo-allegorical-interpretation-40"
+      , role := .witness
+      , contributors := { authors := [.single "Philo of Alexandria"] }
+      , title := "Allegorical Interpretation" }
+  , originalTitle := some "Legum allegoriae"
+  , composed := some { value := 40, approximate := true }
+  , editionUsed := some "yonge-works-of-philo-1-1854" }
 
 /-- Irenaeus, *Against Heresies* III.21: the defence of the Septuagint's
 παρθένος against the renderings of Theodotion and Aquila, and the argument that
