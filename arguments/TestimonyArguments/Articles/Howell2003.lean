@@ -443,7 +443,7 @@ def howellAssessment : Assessment Claim where
     , position := howellCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := true
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **Howell's dissent is a disagreement, not a critique, under every

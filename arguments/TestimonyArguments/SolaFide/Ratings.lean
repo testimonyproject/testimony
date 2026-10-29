@@ -20,9 +20,12 @@ credible dissent:
 - argues its denial by a step of its own, rather than asserting it;
 - rests its grounds on what a stated standard admits.
 
-There are two standards, and every result is computed under both. The
+There are three standards, and every result is computed under each. The
 **evidence** standard admits Scripture and evidence anyone can check; the
-**tradition** standard also admits a council's or a confession's word.
+**tradition** standard also admits a council's or a confession's word; the
+**Scripture** standard is the evidence standard, except that a dissent from a
+step resting on Scripture alone must rest on Scripture alone too. Here the
+third gives what the first gives, every time, as computed.
 
 ## James's word: how a rating moves
 
@@ -43,7 +46,7 @@ So the step's rating turns on the authority question, and the page says so
 `wellSupported`, because every encoded dissent fails, the strongest among them.
 Under the tradition standard it is `disputed` by the renewal reading. Before the
 renewal reading was encoded, the same computation withheld any rating above
-`disputed` under both standards, because the strongest dissent was missing
+`disputed` under all three standards, because the strongest dissent was missing
 (`lexical_step_before_the_steelman`). Encoding it is what licenses the higher
 rating, and only where it fails.
 
@@ -83,7 +86,7 @@ teach Trent's without Trent.
 
 A check applied in one direction only is a weapon, not a measure. So the
 Reformed dissents from Rome's claims are assessed by the same checks, under the
-same two standards.
+same three standards.
 
 - **Westminster against chapter 16's merit premise** (XVI.5, XVI.6). God does
   not forget the work of believers. That is Hebrews 6:10, which Westminster
@@ -101,7 +104,7 @@ same two standards.
 Each is a critique under **both** standards, so each of Trent's claims is
 `disputed` under both (`rome_steps_ratings`). Set beside `fruit_step_ratings`,
 that is the asymmetry the checks find. The Reformed dissents from Trent are
-critiques under either standard. Trent's dissents from the Reformed step are
+critiques under each of the three standards. Trent's dissents from the Reformed step are
 critiques only under the standard that admits the council's word. Neither side's
 step is proved right by this. What differs is what each side's dissent rests on.
 
@@ -120,14 +123,14 @@ From the Reformed side, each is a critique under **both** standards
   as Paul's word;
 - Luke 18 against the step to "faith does not suffice".
 
-So each of Trent's three claims is `disputed` under both standards.
+So each of Trent's three claims is `disputed` under all three standards.
 
 From Trent's side (`trent_dissents_from_the_definition_steps`):
 
 - **Its reading of Paul's word** dissents from the lexical step's ground, not
   from the step. "Forensic", in that ground, means a verdict *and not* making
   righteous, so what Trent concludes is what the ground denies. The lexical
-  step's support stands at `wellSupported` under both standards.
+  step's support stands at `wellSupported` under all three standards.
 - **Its definition, read as what God does**, is asserted, not argued, against
   Paul's gospel: Trent holds it as a premise.
 - **Its denial of sufficiency** is a critique of Luke 18's step under the
@@ -214,7 +217,10 @@ def canon24Assessment : Assessment Claim where
     , position := catholicJamesOnWorks }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, [.worksCauseIncreaseOfJustification]), (.tradition, [])] }
+    , unadmitted :=
+        [ (.evidence, [.worksCauseIncreaseOfJustification])
+        , (.tradition, [])
+        , (.scriptural, [.worksCauseIncreaseOfJustification]) ] }
   checked := by decide +kernel
 
 /-- **Chapter 16, against "fruit, not ground"**: argued, and granting
@@ -232,7 +238,10 @@ def rewardAssessment : Assessment Claim where
     , position := trentOnReward }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, [.rewardRenderedToMerits]), (.tradition, [])] }
+    , unadmitted :=
+        [ (.evidence, [.rewardRenderedToMerits])
+        , (.tradition, [])
+        , (.scriptural, [.rewardRenderedToMerits]) ] }
   checked := by decide +kernel
 
 /-- **Trent's reading of James's word, against the lexical step**: it holds that
@@ -248,7 +257,10 @@ def trentWordAssessment : Assessment Claim where
     , position := catholicJamesOnTheWord }
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
-    , unadmitted := [(.evidence, [.jamesJustifyDenotesIncrease]), (.tradition, [])] }
+    , unadmitted :=
+        [ (.evidence, [.jamesJustifyDenotesIncrease])
+        , (.tradition, [])
+        , (.scriptural, [.jamesJustifyDenotesIncrease]) ] }
   checked := by decide +kernel
 
 /-- **The renewal reading, against the lexical step**: argued from Paul's word
@@ -264,7 +276,10 @@ def renewalAssessment : Assessment Claim where
     , position := renewalOnTheWord }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, [.jamesUsesDikaioAsPaul]), (.tradition, [])] }
+    , unadmitted :=
+        [ (.evidence, [.jamesUsesDikaioAsPaul])
+        , (.tradition, [])
+        , (.scriptural, [.jamesUsesDikaioAsPaul]) ] }
   checked := by decide +kernel
 
 /-- **Trent's reading of James's word is a disagreement, not a critique.** What
@@ -298,7 +313,8 @@ critiques, and the step is `disputed`. -/
 theorem fruit_step_ratings :
     fruitStep.ratings =
       [ (.evidence, .stands .wellSupported)
-      , (.tradition, .disputedBy ["Trent, canon 24", "Trent, Session VI, ch. 16"]) ] := by
+      , (.tradition, .disputedBy ["Trent, canon 24", "Trent, Session VI, ch. 16"])
+      , (.scriptural, .stands .wellSupported) ] := by
   decide +kernel
 
 #print axioms fruit_step_ratings
@@ -322,7 +338,8 @@ and the step is `disputed`. -/
 theorem lexical_step_ratings :
     lexicalStep.ratings =
       [ (.evidence, .stands .wellSupported)
-      , (.tradition, .disputedBy ["The renewal reading"]) ] := by
+      , (.tradition, .disputedBy ["The renewal reading"])
+      , (.scriptural, .stands .wellSupported) ] := by
   decide +kernel
 
 #print axioms lexical_step_ratings
@@ -334,7 +351,7 @@ standards. Encoding the renewal reading is what moves it: to `wellSupported`
 under the evidence standard, and to `disputed` under the tradition standard. -/
 theorem lexical_step_before_the_steelman :
     ({ lexicalStep with register := [trentWordAssessment], strongest := none }).ratings =
-      [(.evidence, .withheld), (.tradition, .withheld)] := by
+      [(.evidence, .withheld), (.tradition, .withheld), (.scriptural, .withheld)] := by
   decide +kernel
 
 /-! ### Rome's steps, rated by the same checks -/
@@ -343,7 +360,7 @@ theorem lexical_step_before_the_steelman :
 merits** (XVI.5, XVI.6): argued from texts Westminster gives as proofs — Hebrews
 6:10, one of Trent's own four; Luke 17:10; Romans 4:4–5; 1 Peter 2:5 — by a step
 of its own, its reading of them. Every claim it asserts outright is a text. So
-it is a critique under both standards. -/
+it is a critique under all three standards. -/
 def westminsterAssessment : Assessment Claim where
   dissenter := "Westminster XVI.5, XVI.6"
   against := "Trent: the reward is rendered to merits (ch. 16, canon 32)"
@@ -352,7 +369,7 @@ def westminsterAssessment : Assessment Claim where
     , position := westminsterOnReward }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **The Reformed harmony, against canon 24's step**: it grants James 2:24, the
@@ -370,13 +387,13 @@ def harmonyOnCanon24Assessment : Assessment Claim where
     , position := jamesHarmonyCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **The Reformed harmony, against chapter 16's step**: it grants the reward
 texts, and grants for the step's sake even that the reward is rendered to
 merits, and argues that works are the fruit of faith, not its ground. A critique
-under both standards. Westminster's own answer goes further, and denies the
+under all three standards. Westminster's own answer goes further, and denies the
 second ground (`westminsterAssessment`). -/
 def harmonyOnRewardAssessment : Assessment Claim where
   dissenter := "The Reformed harmony (Westminster XVI.2, XVI.5)"
@@ -387,7 +404,7 @@ def harmonyOnRewardAssessment : Assessment Claim where
     , position := jamesHarmonyCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **Trent's premise that the reward is rendered to merits, rated by its
@@ -421,20 +438,23 @@ evidence standard as under the tradition standard, and each of Trent's claims
 is `disputed` under both.
 
 Set beside `fruit_step_ratings`, this is the asymmetry the checks find. The
-Reformed dissents from Trent's claims are critiques under either standard.
+Reformed dissents from Trent's claims are critiques under each of the three standards.
 Trent's dissents from the Reformed step are critiques only under the standard
 that admits the council's word. -/
 @[headline]
 theorem rome_steps_ratings :
     meritPremise.ratings =
         [ (.evidence, .disputedBy ["Westminster XVI.5, XVI.6"])
-        , (.tradition, .disputedBy ["Westminster XVI.5, XVI.6"]) ] ∧
+        , (.tradition, .disputedBy ["Westminster XVI.5, XVI.6"])
+        , (.scriptural, .disputedBy ["Westminster XVI.5, XVI.6"]) ] ∧
       canon24Step.ratings =
         [ (.evidence, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
-        , (.tradition, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"]) ] ∧
+        , (.tradition, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
+        , (.scriptural, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"]) ] ∧
       rewardStep.ratings =
         [ (.evidence, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
-        , (.tradition, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"]) ] := by
+        , (.tradition, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
+        , (.scriptural, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"]) ] := by
   decide +kernel
 
 #print axioms rome_steps_ratings
@@ -499,7 +519,7 @@ def trentOnTheWordOfPaul : ArgumentPackage Claim :=
 /-- **Paul's gospel, against Trent's definition read as what God does**: from
 Galatians 1:6–9, 2:21 and 5:2–4, 1 Corinthians 15:3, Romans 8:33–34 and the
 forensic sense of the verb. Every claim it asserts outright is a text or a
-reading argued from the lexicon; a critique under both standards. -/
+reading argued from the lexicon; a critique under all three standards. -/
 def gospelOnDefinitionAssessment : Assessment Claim where
   dissenter := "Paul's gospel (Galatians 1; Westminster XI.1)"
   against := "Trent: justification is the renewal of the inward man (ch. 7)"
@@ -508,7 +528,7 @@ def gospelOnDefinitionAssessment : Assessment Claim where
     , position := galatianGospel }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **Romans 4, against Trent's definition**: the righteousness God counts to the
@@ -522,14 +542,14 @@ def romansFourOnDefinitionAssessment : Assessment Claim where
     , position := romansFourCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **Romans 4, on Paul's word, against Trent's definition read as the word**:
 Paul glosses the righteousness God counts to the ungodly as sin not counted
 (4:5–8), and by the rule of least meaning his verb denotes no more than that
 verdict. It argues from Paul's own text, without assuming the forensic sense, so
-it is a critique under both standards — the strongest known against this
+it is a critique under all three standards — the strongest known against this
 reading. -/
 def romansFourOnWordAssessment : Assessment Claim where
   dissenter := "Romans 4:3–8, on Paul's word"
@@ -539,7 +559,7 @@ def romansFourOnWordAssessment : Assessment Claim where
     , position := romansFourOnTheWord }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **The lexical case, against Trent's definition read as the word**: it holds
@@ -558,13 +578,13 @@ def lexicalOnWordAssessment : Assessment Claim where
     , position := lexicalCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **Luke 18, against Trent's step to "faith does not suffice"**: the tax
 collector's plea, without works, and God's verdict. It can be held with Trent's
 definition, the step's ground, and argues that the plea sufficed. A critique
-under both standards. -/
+under all three standards. -/
 def luke18OnSufficiencyAssessment : Assessment Claim where
   dissenter := "Luke 18:9–14 (the tax collector justified)"
   against := trentSufficiencyLine.name
@@ -574,7 +594,7 @@ def luke18OnSufficiencyAssessment : Assessment Claim where
     , position := luke18Case }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **Trent's definition, rated by its register**: Paul's gospel and Romans 4. -/
@@ -604,20 +624,24 @@ def sufficiencyStep : RatedStep Claim where
 standards.** Read as what God does, the definition meets Paul's gospel and
 Romans 4. Read as Paul's word, it meets Romans 4's gloss of the verb. Its step
 to "faith does not suffice" meets Luke 18. Each is argued from texts and from
-evidence anyone can check, so each is a critique under either standard. -/
+evidence anyone can check, so each is a critique under each of the three standards. -/
 @[headline]
 theorem trent_definition_ratings :
     definitionPremise.ratings =
         [ (.evidence, .disputedBy
             ["Paul's gospel (Galatians 1; Westminster XI.1)", "Romans 4:3–8"])
         , (.tradition, .disputedBy
+            ["Paul's gospel (Galatians 1; Westminster XI.1)", "Romans 4:3–8"])
+            , (.scriptural, .disputedBy
             ["Paul's gospel (Galatians 1; Westminster XI.1)", "Romans 4:3–8"]) ] ∧
       wordPremise.ratings =
         [ (.evidence, .disputedBy ["Romans 4:3–8, on Paul's word"])
-        , (.tradition, .disputedBy ["Romans 4:3–8, on Paul's word"]) ] ∧
+        , (.tradition, .disputedBy ["Romans 4:3–8, on Paul's word"])
+        , (.scriptural, .disputedBy ["Romans 4:3–8, on Paul's word"]) ] ∧
       sufficiencyStep.ratings =
         [ (.evidence, .disputedBy ["Luke 18:9–14 (the tax collector justified)"])
-        , (.tradition, .disputedBy ["Luke 18:9–14 (the tax collector justified)"]) ] := by
+        , (.tradition, .disputedBy ["Luke 18:9–14 (the tax collector justified)"])
+        , (.scriptural, .disputedBy ["Luke 18:9–14 (the tax collector justified)"]) ] := by
   decide +kernel
 
 #print axioms trent_definition_ratings
@@ -638,12 +662,12 @@ def trentWordOnLexicalAssessment : Assessment Claim where
     , position := trentOnTheWordOfPaul }
   findings :=
     { consistent := true, denies := true, grants := false, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, [])] }
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by decide +kernel
 
 /-- **Trent's definition read as what God does, against Paul's gospel step**: it
 holds the definition as a premise, and that premise alone contradicts the step's
-conclusion. A disagreement, not a critique, under either standard. -/
+conclusion. A disagreement, not a critique, under each of the three standards. -/
 def trentGraceOnGospelAssessment : Assessment Claim where
   dissenter := "Trent, read as what God does (ch. 7; Joint Declaration §22)"
   against := "Paul's gospel: a verdict on a finished work is no renewal"
@@ -655,7 +679,8 @@ def trentGraceOnGospelAssessment : Assessment Claim where
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
     , unadmitted :=
         [ (.evidence, [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks])
-        , (.tradition, []) ] }
+        , (.tradition, [])
+        , (.scriptural, [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks]) ] }
   checked := by decide +kernel
 
 /-- **Trent's denial of sufficiency, against Luke 18's step**: argued, from its
@@ -671,7 +696,10 @@ def trentSufficiencyOnLuke18Assessment : Assessment Claim where
     , position := trentOnSufficiency }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, [.justificationIncludesSanctification]), (.tradition, [])] }
+    , unadmitted :=
+        [ (.evidence, [.justificationIncludesSanctification])
+        , (.tradition, [])
+        , (.scriptural, [.justificationIncludesSanctification]) ] }
   checked := by decide +kernel
 
 /-- **Paul's word, rated by its register**: Trent's reading of the word, the
@@ -692,15 +720,17 @@ Reformed steps over its definition:
 - its denial of sufficiency is a critique of Luke 18's step under the tradition
   standard only, because its one ground is the definition.
 
-So the lexical step's support stands at `wellSupported` under both standards:
+So the lexical step's support stands at `wellSupported` under all three standards:
 its strongest known dissent is encoded, and fails. -/
 @[headline]
 theorem trent_dissents_from_the_definition_steps :
     trentWordOnLexicalAssessment.findings.kind = .deniesGrounds ∧
       trentGraceOnGospelAssessment.findings.kind = .asserted ∧
-      trentSufficiencyOnLuke18Assessment.profile = [(.evidence, false), (.tradition, true)] ∧
+      trentSufficiencyOnLuke18Assessment.profile = [(.evidence, false), (.tradition, true)
+      , (.scriptural, false)] ∧
       lexicalWordStep.ratings =
-        [(.evidence, .stands .wellSupported), (.tradition, .stands .wellSupported)] := by
+        [(.evidence, .stands .wellSupported), (.tradition, .stands .wellSupported)
+        , (.scriptural, .stands .wellSupported)] := by
   decide +kernel
 
 #print axioms trent_dissents_from_the_definition_steps
@@ -762,6 +792,16 @@ private theorem rerated_evidence_first (i : JamesParty)
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
 
+/-- The same rows at the scriptural standard. -/
+private theorem rerated_scriptural_first (i : JamesParty)
+    (hi : i ∈ [.lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation])
+    (j : JamesParty) :
+    (jamesRegister.rerated .scriptural).defeats i j ↔ ratedDefeats .scriptural i j := by
+  refine Horn.defeats_iff_of_defeats?
+    (rerated_strength .scriptural i) (rerated_strength .scriptural j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+
 /-- The other six rows at the evidence standard. -/
 private theorem rerated_evidence_second (i : JamesParty)
     (hi : i ∈ [.trentOnSirach, .revelationText, .sirachText, .trentOnReward,
@@ -770,6 +810,17 @@ private theorem rerated_evidence_second (i : JamesParty)
     (jamesRegister.rerated .evidence).defeats i j ↔ ratedDefeats .evidence i j := by
   refine Horn.defeats_iff_of_defeats?
     (rerated_strength .evidence i) (rerated_strength .evidence j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+
+/-- The same rows at the scriptural standard. -/
+private theorem rerated_scriptural_second (i : JamesParty)
+    (hi : i ∈ [.trentOnSirach, .revelationText, .sirachText, .trentOnReward,
+      .renewalOnTheWord, .westminsterOnReward])
+    (j : JamesParty) :
+    (jamesRegister.rerated .scriptural).defeats i j ↔ ratedDefeats .scriptural i j := by
+  refine Horn.defeats_iff_of_defeats?
+    (rerated_strength .scriptural i) (rerated_strength .scriptural j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
 
@@ -804,6 +855,8 @@ theorem rerated_defeats (s : Standard) :
     | (refine rerated_evidence_second _ ?_ j; decide)
     | (refine rerated_tradition_first _ ?_ j; decide)
     | (refine rerated_tradition_second _ ?_ j; decide)
+    | (refine rerated_scriptural_first _ ?_ j; decide)
+    | (refine rerated_scriptural_second _ ?_ j; decide)
 
 /-- The dispute at a standard's ratings, in the form the verdict solver computes
 with. -/

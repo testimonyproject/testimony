@@ -392,6 +392,7 @@ def laterOraclesReading : Valuation Claim := fun a =>
   | .isaiah9And11ShareTheAssyrianTimeline => False
   | .lawsUseParthenosAsVirgin => False
   | .dinahIsTheLawsParthenos => False
+  | .lxxIsaiahUsesParthenosAsVirgin => False
   | _ => True
 
 /-- **The critic can grant Postell's step**, by dating Isaiah 9 and 11 later than
@@ -413,6 +414,7 @@ def royalMicahReading : Valuation Claim := fun a =>
   | .micahRulerReadMessianically => False
   | .lawsUseParthenosAsVirgin => False
   | .dinahIsTheLawsParthenos => False
+  | .lxxIsaiahUsesParthenosAsVirgin => False
   | _ => True
 
 /-- **The critic can grant the Micah step**, by reading Micah 5:2 of a near-term

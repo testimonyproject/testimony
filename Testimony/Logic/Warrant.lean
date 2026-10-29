@@ -37,6 +37,12 @@ by fiat, since whether a council's or a confession's word binds is exactly what
 that dispute is about. The warrant is reported beside the verdicts, never mixed
 into them. And it is applied to every side alike: the Reformed confessions are
 authorities under it as Trent is.
+
+Where a warrant does enter a verdict, it enters by a standard that is named, and
+every standard is reported beside the others (`Testimony.Logic.Credibility`).
+The Scripture standard there asks a dissent from a step resting on Scripture
+alone to rest on Scripture alone; it is one standard among three, never the
+default.
 -/
 
 namespace Testimony.Logic

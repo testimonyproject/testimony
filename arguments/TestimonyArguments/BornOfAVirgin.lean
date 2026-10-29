@@ -9,6 +9,7 @@ import TestimonyArguments.BornOfAVirgin.Results.Genesis
 import TestimonyArguments.BornOfAVirgin.Dispute
 import TestimonyArguments.BornOfAVirgin.Dispute.Wegner
 import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
+import TestimonyArguments.BornOfAVirgin.Dispute.Matthew
 import TestimonyArguments.BornOfAVirgin.Dispute.Genesis
 
 /-!
@@ -120,6 +121,16 @@ goes through. Three results then say what it rests on and what it reaches.
   its grounds and denies it, and no higher because no reader found makes it.
   Were it `disputed`, nothing would prevail; `Dispute.Septuagint` says so, with
   where the evidence on each side lies.
+- **Scripture's own reading of the word turns on the standard**
+  (`matthew_step_turns_on_the_standard`). Matthew quotes the Septuagint's ἡ
+  παρθένος of Mary, who conceived before she and Joseph came together, so in
+  the text he quotes the word means "virgin". Wegner grants what Matthew says
+  and holds that the word had changed in meaning since the translator wrote it.
+  Under the evidence standard that is a credible critique, and Matthew and
+  Wegner stand off. Under the Scripture standard — Scripture interprets
+  Scripture, so a dissent from a step grounded in Scripture alone must rest on
+  Scripture too — Wegner's argument from early Greek usage is not heard, and
+  Matthew's reading prevails. `Dispute.Matthew` reports both.
 - **It shows how one early reader read Isaiah, not what Isaiah's word means**
   (`septuagint_word_rests_on_its_inference`). Granted its sense, the Septuagint
   shows that a Jewish translator before Christ read the woman of 7:14 as a

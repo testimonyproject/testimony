@@ -177,6 +177,9 @@ def cite : Claim → AtomMeta
   | .seductionLawPricesAParthenos => seductionLawPricesAParthenosCited
   | .shechemActsUnderTheLaw => shechemActsUnderTheLawCited
   | .dinahIsTheLawsParthenos => dinahIsTheLawsParthenosCited
+  | .matthewQuotesTheGreekVirgin => matthewQuotesTheGreekVirginCited
+  | .matthewSaysMaryKnewNoMan => matthewSaysMaryKnewNoManCited
+  | .lxxIsaiahUsesParthenosAsVirgin => lxxIsaiahUsesParthenosAsVirginCited
   | .tryphoRejectsParthenos => tryphoRejectsParthenosCited
   | .lxxReadsAVirgin => lxxReadsAVirginCited
   | .lxxPutsTheConceptionInTheFuture => lxxPutsTheConceptionInTheFutureCited

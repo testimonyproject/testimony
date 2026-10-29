@@ -412,6 +412,13 @@ Dinah a παρθένος as the law names the seduced virgin, in the sense "virg
 def dinahCase : ArgumentPackage Claim :=
   dinahLine.asPackage cite "At Genesis 34:3, παρθένος names Dinah in the sense 'virgin'"
 
+/-- Matthew's quotation as a position of its own: in the Greek of Isaiah 7:14,
+which Matthew quotes, παρθένος has the sense "virgin". -/
+@[bornOfAVirginDefs]
+def matthewCase : ArgumentPackage Claim :=
+  matthewLine.asPackage cite
+    "In the Greek of Isaiah 7:14, παρθένος means 'virgin', as Matthew reads it"
+
 /-- The Septuagint as a witness, with the claim about its word taken away: the
 rendering and its date stay, and nothing is granted about what παρθένος meant.
 Its conclusion no longer follows (`parthenos_is_load_bearing`). -/

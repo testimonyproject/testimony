@@ -32,19 +32,26 @@ hold:
 5. **Its grounds meet the standard.** Every claim it asserts outright rests on
    what the standard admits, and it asserts no bare denial.
 
-## Two standards, stated, never hidden
+## Three standards, stated, never hidden
 
 Whether a council's or a confession's word can ground a critique is exactly
 what the sola scriptura dispute is about, so the library does not decide it.
-It names the choice as a **standard** and computes under each:
+Nor does it decide whether Scripture is its own best interpreter. It names each
+choice as a **standard** and computes under each:
 
 - **evidence**: the dissent's grounds rest on Scripture or on evidence anyone
   can check (`Warrant.scripture`, `Warrant.evidence`);
 - **tradition**: they may also rest on a council's, a confession's or a
-  theologian's own word (`Warrant.authority`).
+  theologian's own word (`Warrant.authority`);
+- **Scripture**: as the evidence standard, except against a step that rests on
+  Scripture alone. There a dissent must rest on Scripture alone too: "the
+  infallible rule of interpretation of Scripture is the Scripture itself"
+  (Westminster Confession I.ix). A scholar's reading of other evidence does not
+  bring such a step down, however competent; another text of Scripture can.
 
-A page reports both. A rating that differs between them is a rating that turns
-on the authority question, and the page says so.
+A page reports all three. A rating that differs between the first two turns on
+the authority question; one that differs between the first and the third turns
+on whether Scripture interprets Scripture, and the page says which.
 
 ## Meaning postulates
 
@@ -116,12 +123,16 @@ inductive Standard
   | evidence
   /-- Also a council's, a confession's or a theologian's own word. -/
   | tradition
+  /-- Scripture interprets Scripture: a dissent from a step whose grounds are all
+  Scripture must itself rest on Scripture alone. Elsewhere, as the evidence
+  standard. -/
+  | scriptural
 deriving DecidableEq, Repr
 
 namespace Standard
 
 /-- Every standard, in the order a page reports them. -/
-def all : List Standard := [.evidence, .tradition]
+def all : List Standard := [.evidence, .tradition, .scriptural]
 
 /-- No standard is left out. -/
 theorem mem_all (s : Standard) : s ∈ all := by cases s <;> decide
@@ -129,13 +140,14 @@ theorem mem_all (s : Standard) : s ∈ all := by cases s <;> decide
 /-- Whether a standard admits a warrant. Neither admits the library's own bare
 assertion. -/
 def admits : Standard → Warrant → Bool
-  | .evidence, w => w == .scripture || w == .evidence
+  | .evidence, w | .scriptural, w => w == .scripture || w == .evidence
   | .tradition, w => w != .assertion
 
 /-- The standard's name, as a page shows it. -/
 def name : Standard → String
   | .evidence => "evidence"
   | .tradition => "tradition"
+  | .scriptural => "Scripture"
 
 end Standard
 
@@ -171,11 +183,21 @@ def assertsDenial (d : Dissent α) : Bool :=
     | .imp (.atom _) .falsum => true
     | _ => false
 
+/-- Whether the step dissented from rests on Scripture alone: it has grounds,
+and every one is a claim whose citation is Scripture. -/
+def scriptureGrounded (d : Dissent α) : Bool :=
+  !d.grounds.isEmpty && d.grounds.all fun
+    | .atom a => (d.position.cite a).warrant == .scripture
+    | _ => false
+
 /-- The claims the position asserts whose warrant the standard does not admit:
 the grounds it rests on someone's word alone, under a standard that asks for
-more. -/
+more. Under the scriptural standard, against a step that rests on Scripture
+alone, every claim not resting on Scripture. -/
 def unadmitted (std : Standard) (d : Dissent α) : List α :=
-  d.position.assertedAtoms.filter fun a => !std.admits (d.position.cite a).warrant
+  d.position.assertedAtoms.filter fun a =>
+    let w := (d.position.cite a).warrant
+    if std == .scriptural && d.scriptureGrounded then w != .scripture else !std.admits w
 
 /-- Whether every claim the position asserts rests on what the standard admits,
 and it asserts no bare denial. -/
@@ -420,7 +442,10 @@ known — the steelman, without which no rating above `disputed` is licensed. -/
 structure RatedStep (α : Type) [DecidableEq α] [HasPostulates α] where
   /-- The step, as a page names it. -/
   step : String
-  /-- The citation for the step, whose confidence rates its support. -/
+  /-- The citation for the step, whose confidence rates its support: the rating
+  the step has when no credible dissent disputes it. A dispute may cite the step
+  lower, at `disputed`, while some standard counts a dissent the step's support
+  does not answer; the citation is the same, whatever its confidence. -/
   support : Source
   /-- Every dissent encoded against it. -/
   register : List (Assessment α)
@@ -481,10 +506,11 @@ namespace RatedStep
 
 variable [DecidableEq α] [HasPostulates α]
 
-/-- **A citation, re-rated under a standard**: a rated step's support carries the
-step's computed rating under the standard; any other citation is unchanged. -/
+/-- **A citation, re-rated under a standard**: a citation of a rated step, at
+whatever confidence it is cited, carries the step's computed rating under the
+standard; any other citation is unchanged. -/
 def rerate (steps : List (RatedStep α)) (s : Standard) (src : Source) : Source :=
-  match steps.find? (·.support == src) with
+  match steps.find? (fun r => r.support == { src with confidence := r.support.confidence }) with
   | some r => { src with confidence := (r.rating s).confidence }
   | none => src
 

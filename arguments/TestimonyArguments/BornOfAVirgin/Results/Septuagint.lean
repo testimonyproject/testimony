@@ -130,6 +130,7 @@ def wegnerDriftReading : Valuation Claim := fun a =>
   | .parthenosMeansVirgin => False
   | .lawsUseParthenosAsVirgin => False
   | .dinahIsTheLawsParthenos => False
+  | .lxxIsaiahUsesParthenosAsVirgin => False
   | .lxxReadsAVirgin => False
   | .lxxEnvisagesAVirginalConception => False
   | .almahMeansVirgin => False

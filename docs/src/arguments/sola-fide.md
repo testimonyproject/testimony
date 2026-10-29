@@ -12719,9 +12719,12 @@ credible dissent:
 - argues its denial by a step of its own, rather than asserting it;
 - rests its grounds on what a stated standard admits.
 
-There are two standards, and every result is computed under both. The
+There are three standards, and every result is computed under each. The
 **evidence** standard admits Scripture and evidence anyone can check; the
-**tradition** standard also admits a council's or a confession's word.
+**tradition** standard also admits a council's or a confession's word; the
+**Scripture** standard is the evidence standard, except that a dissent from a
+step resting on Scripture alone must rest on Scripture alone too. Here the
+third gives what the first gives, every time, as computed.
 
 ### James's word: how a rating moves
 
@@ -12742,7 +12745,7 @@ So the step's rating turns on the authority question, and the page says so
 `wellSupported`, because every encoded dissent fails, the strongest among them.
 Under the tradition standard it is `disputed` by the renewal reading. Before the
 renewal reading was encoded, the same computation withheld any rating above
-`disputed` under both standards, because the strongest dissent was missing
+`disputed` under all three standards, because the strongest dissent was missing
 (`lexical_step_before_the_steelman`). Encoding it is what licenses the higher
 rating, and only where it fails.
 
@@ -12782,7 +12785,7 @@ teach Trent's without Trent.
 
 A check applied in one direction only is a weapon, not a measure. So the
 Reformed dissents from Rome's claims are assessed by the same checks, under the
-same two standards.
+same three standards.
 
 - **Westminster against chapter 16's merit premise** (XVI.5, XVI.6). God does
   not forget the work of believers. That is Hebrews 6:10, which Westminster
@@ -12800,7 +12803,7 @@ same two standards.
 Each is a critique under **both** standards, so each of Trent's claims is
 `disputed` under both (`rome_steps_ratings`). Set beside `fruit_step_ratings`,
 that is the asymmetry the checks find. The Reformed dissents from Trent are
-critiques under either standard. Trent's dissents from the Reformed step are
+critiques under each of the three standards. Trent's dissents from the Reformed step are
 critiques only under the standard that admits the council's word. Neither side's
 step is proved right by this. What differs is what each side's dissent rests on.
 
@@ -12819,14 +12822,14 @@ From the Reformed side, each is a critique under **both** standards
   as Paul's word;
 - Luke 18 against the step to "faith does not suffice".
 
-So each of Trent's three claims is `disputed` under both standards.
+So each of Trent's three claims is `disputed` under all three standards.
 
 From Trent's side (`trent_dissents_from_the_definition_steps`):
 
 - **Its reading of Paul's word** dissents from the lexical step's ground, not
   from the step. "Forensic", in that ground, means a verdict *and not* making
   righteous, so what Trent concludes is what the ground denies. The lexical
-  step's support stands at `wellSupported` under both standards.
+  step's support stands at `wellSupported` under all three standards.
 - **Its definition, read as what God does**, is asserted, not argued, against
   Paul's gospel: Trent holds it as a premise.
 - **Its denial of sufficiency** is a critique of Luke 18's step under the
@@ -12907,6 +12910,7 @@ under the tradition standard and not under the evidence standard.
 |---|---|---|
 | evidence | ✘ no | Good works are a cause of the increase of justification, not merely its fruits |
 | tradition | ✔ yes | — |
+| Scripture | ✘ no | Good works are a cause of the increase of justification, not merely its fruits |
 
 <a id="rewardAssessment"></a>
 **`rewardAssessment`**
@@ -12924,6 +12928,7 @@ under the evidence standard.
 |---|---|---|
 | evidence | ✘ no | The reward God renders to the works of the justified is rendered to them as merits |
 | tradition | ✔ yes | — |
+| Scripture | ✘ no | The reward God renders to the works of the justified is rendered to them as merits |
 
 <a id="trentWordAssessment"></a>
 **`trentWordAssessment`**
@@ -12939,6 +12944,7 @@ any standard.
 |---|---|---|
 | evidence | ✘ no | James's δικαιόω denotes the increase of the justice received |
 | tradition | ✘ no | — |
+| Scripture | ✘ no | James's δικαιόω denotes the increase of the justice received |
 
 <a id="renewalAssessment"></a>
 **`renewalAssessment`**
@@ -12954,6 +12960,7 @@ its grounds, that James's word is Paul's, rests on Trent's word alone.
 |---|---|---|
 | evidence | ✘ no | James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians |
 | tradition | ✔ yes | — |
+| Scripture | ✘ no | James's δικαιόω has the sense Paul's has: the justification of Romans and Galatians |
 
 <a id="trent_on_the_word_is_asserted"></a>
 **`trent_on_the_word_is_asserted`**
@@ -12984,6 +12991,7 @@ texts both sides grant.
 |---|---|---|
 | evidence | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
 | tradition | **disputed** | a credible critique: Trent, canon 24; Trent, Session VI, ch. 16 |
+| Scripture | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
 
 <a id="fruit_step_ratings"></a>
 **`fruit_step_ratings`**
@@ -12999,7 +13007,8 @@ critiques, and the step is `disputed`.
 ```lean
 theorem fruit_step_ratings : fruitStep.ratings = [(Standard.evidence,
     Computed.stands Confidence.wellSupported), (Standard.tradition,
-    Computed.disputedBy ["Trent, canon 24", "Trent, Session VI, ch. 16"])]
+    Computed.disputedBy ["Trent, canon 24", "Trent, Session VI, ch. 16"]),
+    (Standard.scriptural, Computed.stands Confidence.wellSupported)]
 -- axioms: propext
 ```
 
@@ -13016,6 +13025,7 @@ from Paul's word instead of asserting it.
 |---|---|---|
 | evidence | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
 | tradition | **disputed** | a credible critique: The renewal reading |
+| Scripture | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
 
 <a id="lexical_step_ratings"></a>
 **`lexical_step_ratings`**
@@ -13030,7 +13040,8 @@ and the step is `disputed`.
 ```lean
 theorem lexical_step_ratings : lexicalStep.ratings = [(Standard.evidence,
     Computed.stands Confidence.wellSupported), (Standard.tradition,
-    Computed.disputedBy ["The renewal reading"])]
+    Computed.disputedBy ["The renewal reading"]), (Standard.scriptural,
+    Computed.stands Confidence.wellSupported)]
 -- axioms: propext
 ```
 
@@ -13049,7 +13060,8 @@ theorem lexical_step_before_the_steelman : (have __src := lexicalStep;
     := __src.step, support := __src.support, register := [trentWordAssessment]
     }).ratings =
  [(Standard.evidence, Computed.withheld),
-    (Standard.tradition, Computed.withheld)]
+    (Standard.tradition, Computed.withheld), (Standard.scriptural,
+    Computed.withheld)]
 -- axioms: propext
 ```
 
@@ -13062,7 +13074,7 @@ theorem lexical_step_before_the_steelman : (have __src := lexicalStep;
 merits** (XVI.5, XVI.6): argued from texts Westminster gives as proofs — Hebrews
 6:10, one of Trent's own four; Luke 17:10; Romans 4:4–5; 1 Peter 2:5 — by a step
 of its own, its reading of them. Every claim it asserts outright is a text. So
-it is a critique under both standards.
+it is a critique under all three standards.
 
 **Dissent:** *Westminster XVI.5, XVI.6*, against *Trent: the reward is rendered to merits (ch. 16, canon 32)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
 
@@ -13070,6 +13082,7 @@ it is a critique under both standards.
 |---|---|---|
 | evidence | ✔ yes | — |
 | tradition | ✔ yes | — |
+| Scripture | ✔ yes | — |
 
 <a id="harmonyOnCanon24Assessment"></a>
 **`harmonyOnCanon24Assessment`**
@@ -13087,6 +13100,7 @@ standards.
 |---|---|---|
 | evidence | ✔ yes | — |
 | tradition | ✔ yes | — |
+| Scripture | ✔ yes | — |
 
 <a id="harmonyOnRewardAssessment"></a>
 **`harmonyOnRewardAssessment`**
@@ -13094,7 +13108,7 @@ standards.
 **The Reformed harmony, against chapter 16's step**: it grants the reward
 texts, and grants for the step's sake even that the reward is rendered to
 merits, and argues that works are the fruit of faith, not its ground. A critique
-under both standards. Westminster's own answer goes further, and denies the
+under all three standards. Westminster's own answer goes further, and denies the
 second ground (`westminsterAssessment`).
 
 **Dissent:** *The Reformed harmony (Westminster XVI.2, XVI.5)*, against *The reward of works (Trent, Session VI, ch. 16)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
@@ -13103,6 +13117,7 @@ second ground (`westminsterAssessment`).
 |---|---|---|
 | evidence | ✔ yes | — |
 | tradition | ✔ yes | — |
+| Scripture | ✔ yes | — |
 
 <a id="meritPremise"></a>
 **`meritPremise`**
@@ -13116,6 +13131,7 @@ register**: Westminster's dissent, the strongest known.
 |---|---|---|
 | evidence | **disputed** | a credible critique: Westminster XVI.5, XVI.6 |
 | tradition | **disputed** | a credible critique: Westminster XVI.5, XVI.6 |
+| Scripture | **disputed** | a credible critique: Westminster XVI.5, XVI.6 |
 
 <a id="canon24Step"></a>
 **`canon24Step`**
@@ -13128,6 +13144,7 @@ register**: Westminster's dissent, the strongest known.
 |---|---|---|
 | evidence | **disputed** | a credible critique: The Reformed harmony (Westminster XVI.2, XVI.5) |
 | tradition | **disputed** | a credible critique: The Reformed harmony (Westminster XVI.2, XVI.5) |
+| Scripture | **disputed** | a credible critique: The Reformed harmony (Westminster XVI.2, XVI.5) |
 
 <a id="rewardStep"></a>
 **`rewardStep`**
@@ -13141,6 +13158,7 @@ dissent.
 |---|---|---|
 | evidence | **disputed** | a credible critique: The Reformed harmony (Westminster XVI.2, XVI.5) |
 | tradition | **disputed** | a credible critique: The Reformed harmony (Westminster XVI.2, XVI.5) |
+| Scripture | **disputed** | a credible critique: The Reformed harmony (Westminster XVI.2, XVI.5) |
 
 <a id="rome_steps_ratings"></a>
 **`rome_steps_ratings`**
@@ -13153,19 +13171,23 @@ evidence standard as under the tradition standard, and each of Trent's claims
 is `disputed` under both.
 
 Set beside `fruit_step_ratings`, this is the asymmetry the checks find. The
-Reformed dissents from Trent's claims are critiques under either standard.
+Reformed dissents from Trent's claims are critiques under each of the three standards.
 Trent's dissents from the Reformed step are critiques only under the standard
 that admits the council's word.
 
 ```lean
 theorem rome_steps_ratings : meritPremise.ratings = [(Standard.evidence,
     Computed.disputedBy ["Westminster XVI.5, XVI.6"]), (Standard.tradition,
+    Computed.disputedBy ["Westminster XVI.5, XVI.6"]), (Standard.scriptural,
     Computed.disputedBy ["Westminster XVI.5, XVI.6"])] ∧ canon24Step.ratings =
     [(Standard.evidence, Computed.disputedBy ["The Reformed harmony
     (Westminster XVI.2, XVI.5)"]), (Standard.tradition, Computed.disputedBy
-    ["The Reformed harmony (Westminster XVI.2, XVI.5)"])] ∧ rewardStep.ratings
-    = [(Standard.evidence, Computed.disputedBy ["The Reformed harmony
-    (Westminster XVI.2, XVI.5)"]), (Standard.tradition, Computed.disputedBy
+    ["The Reformed harmony (Westminster XVI.2, XVI.5)"]),
+    (Standard.scriptural, Computed.disputedBy ["The Reformed harmony
+    (Westminster XVI.2, XVI.5)"])] ∧ rewardStep.ratings = [(Standard.evidence,
+    Computed.disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"]),
+    (Standard.tradition, Computed.disputedBy ["The Reformed harmony
+    (Westminster XVI.2, XVI.5)"]), (Standard.scriptural, Computed.disputedBy
     ["The Reformed harmony (Westminster XVI.2, XVI.5)"])]
 -- axioms: propext
 ```
@@ -13283,7 +13305,7 @@ No premise here rests on scripture alone.
 **Paul's gospel, against Trent's definition read as what God does**: from
 Galatians 1:6–9, 2:21 and 5:2–4, 1 Corinthians 15:3, Romans 8:33–34 and the
 forensic sense of the verb. Every claim it asserts outright is a text or a
-reading argued from the lexicon; a critique under both standards.
+reading argued from the lexicon; a critique under all three standards.
 
 **Dissent:** *Paul's gospel (Galatians 1; Westminster XI.1)*, against *Trent: justification is the renewal of the inward man (ch. 7)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
 
@@ -13291,6 +13313,7 @@ reading argued from the lexicon; a critique under both standards.
 |---|---|---|
 | evidence | ✔ yes | — |
 | tradition | ✔ yes | — |
+| Scripture | ✔ yes | — |
 
 <a id="romansFourOnDefinitionAssessment"></a>
 **`romansFourOnDefinitionAssessment`**
@@ -13305,6 +13328,7 @@ both standards.
 |---|---|---|
 | evidence | ✔ yes | — |
 | tradition | ✔ yes | — |
+| Scripture | ✔ yes | — |
 
 <a id="romansFourOnWordAssessment"></a>
 **`romansFourOnWordAssessment`**
@@ -13313,7 +13337,7 @@ both standards.
 Paul glosses the righteousness God counts to the ungodly as sin not counted
 (4:5–8), and by the rule of least meaning his verb denotes no more than that
 verdict. It argues from Paul's own text, without assuming the forensic sense, so
-it is a critique under both standards — the strongest known against this
+it is a critique under all three standards — the strongest known against this
 reading.
 
 **Dissent:** *Romans 4:3–8, on Paul's word*, against *Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
@@ -13322,6 +13346,7 @@ reading.
 |---|---|---|
 | evidence | ✔ yes | — |
 | tradition | ✔ yes | — |
+| Scripture | ✔ yes | — |
 
 <a id="lexicalOnWordAssessment"></a>
 **`lexicalOnWordAssessment`**
@@ -13341,6 +13366,7 @@ against it (`trentWordOnLexicalAssessment`).
 |---|---|---|
 | evidence | ✘ no | — |
 | tradition | ✘ no | — |
+| Scripture | ✘ no | — |
 
 <a id="luke18OnSufficiencyAssessment"></a>
 **`luke18OnSufficiencyAssessment`**
@@ -13348,7 +13374,7 @@ against it (`trentWordOnLexicalAssessment`).
 **Luke 18, against Trent's step to "faith does not suffice"**: the tax
 collector's plea, without works, and God's verdict. It can be held with Trent's
 definition, the step's ground, and argues that the plea sufficed. A critique
-under both standards.
+under all three standards.
 
 **Dissent:** *Luke 18:9–14 (the tax collector justified)*, against *Faith does not suffice (Trent, ch. 7, canon 9)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
 
@@ -13356,6 +13382,7 @@ under both standards.
 |---|---|---|
 | evidence | ✔ yes | — |
 | tradition | ✔ yes | — |
+| Scripture | ✔ yes | — |
 
 <a id="definitionPremise"></a>
 **`definitionPremise`**
@@ -13368,6 +13395,7 @@ under both standards.
 |---|---|---|
 | evidence | **disputed** | a credible critique: Paul's gospel (Galatians 1; Westminster XI.1); Romans 4:3–8 |
 | tradition | **disputed** | a credible critique: Paul's gospel (Galatians 1; Westminster XI.1); Romans 4:3–8 |
+| Scripture | **disputed** | a credible critique: Paul's gospel (Galatians 1; Westminster XI.1); Romans 4:3–8 |
 
 <a id="wordPremise"></a>
 **`wordPremise`**
@@ -13381,6 +13409,7 @@ word, the strongest known, and the lexical case.
 |---|---|---|
 | evidence | **disputed** | a credible critique: Romans 4:3–8, on Paul's word |
 | tradition | **disputed** | a credible critique: Romans 4:3–8, on Paul's word |
+| Scripture | **disputed** | a credible critique: Romans 4:3–8, on Paul's word |
 
 <a id="sufficiencyStep"></a>
 **`sufficiencyStep`**
@@ -13394,6 +13423,7 @@ word, the strongest known, and the lexical case.
 |---|---|---|
 | evidence | **disputed** | a credible critique: Luke 18:9–14 (the tax collector justified) |
 | tradition | **disputed** | a credible critique: Luke 18:9–14 (the tax collector justified) |
+| Scripture | **disputed** | a credible critique: Luke 18:9–14 (the tax collector justified) |
 
 <a id="trent_definition_ratings"></a>
 **`trent_definition_ratings`**
@@ -13402,20 +13432,24 @@ word, the strongest known, and the lexical case.
 standards.** Read as what God does, the definition meets Paul's gospel and
 Romans 4. Read as Paul's word, it meets Romans 4's gloss of the verb. Its step
 to "faith does not suffice" meets Luke 18. Each is argued from texts and from
-evidence anyone can check, so each is a critique under either standard.
+evidence anyone can check, so each is a critique under each of the three standards.
 
 ```lean
 theorem trent_definition_ratings : definitionPremise.ratings =
     [(Standard.evidence, Computed.disputedBy ["Paul's gospel (Galatians 1;
     Westminster XI.1)", "Romans 4:3–8"]), (Standard.tradition,
     Computed.disputedBy ["Paul's gospel (Galatians 1; Westminster XI.1)",
-    "Romans 4:3–8"])] ∧ wordPremise.ratings = [(Standard.evidence,
-    Computed.disputedBy ["Romans 4:3–8, on Paul's word"]),
-    (Standard.tradition, Computed.disputedBy ["Romans 4:3–8, on Paul's
-    word"])] ∧ sufficiencyStep.ratings = [(Standard.evidence,
+    "Romans 4:3–8"]), (Standard.scriptural, Computed.disputedBy ["Paul's
+    gospel (Galatians 1; Westminster XI.1)", "Romans 4:3–8"])] ∧
+    wordPremise.ratings = [(Standard.evidence, Computed.disputedBy ["Romans
+    4:3–8, on Paul's word"]), (Standard.tradition, Computed.disputedBy
+    ["Romans 4:3–8, on Paul's word"]), (Standard.scriptural,
+    Computed.disputedBy ["Romans 4:3–8, on Paul's word"])] ∧
+    sufficiencyStep.ratings = [(Standard.evidence, Computed.disputedBy ["Luke
+    18:9–14 (the tax collector justified)"]), (Standard.tradition,
     Computed.disputedBy ["Luke 18:9–14 (the tax collector justified)"]),
-    (Standard.tradition, Computed.disputedBy ["Luke 18:9–14 (the tax collector
-    justified)"])]
+    (Standard.scriptural, Computed.disputedBy ["Luke 18:9–14 (the tax
+    collector justified)"])]
 -- axioms: propext
 ```
 
@@ -13436,13 +13470,14 @@ standard.
 |---|---|---|
 | evidence | ✘ no | — |
 | tradition | ✘ no | — |
+| Scripture | ✘ no | — |
 
 <a id="trentGraceOnGospelAssessment"></a>
 **`trentGraceOnGospelAssessment`**
 
 **Trent's definition read as what God does, against Paul's gospel step**: it
 holds the definition as a premise, and that premise alone contradicts the step's
-conclusion. A disagreement, not a critique, under either standard.
+conclusion. A disagreement, not a critique, under each of the three standards.
 
 **Dissent:** *Trent, read as what God does (ch. 7; Joint Declaration §22)*, against *Paul's gospel: a verdict on a finished work is no renewal*. ✘ A disagreement, not a critique: what it asserts outright already contradicts the step's conclusion, so no step of its own argues it.
 
@@ -13450,6 +13485,7 @@ conclusion. A disagreement, not a critique, under either standard.
 |---|---|---|
 | evidence | ✘ no | Justification is not remission of sins only, but renewal of the inward man; The inward renewal of the justified grows as they do good works in grace |
 | tradition | ✘ no | — |
+| Scripture | ✘ no | Justification is not remission of sins only, but renewal of the inward man; The inward renewal of the justified grows as they do good works in grace |
 
 <a id="trentSufficiencyOnLuke18Assessment"></a>
 **`trentSufficiencyOnLuke18Assessment`**
@@ -13465,6 +13501,7 @@ only.
 |---|---|---|
 | evidence | ✘ no | Justification is not remission of sins only, but renewal of the inward man |
 | tradition | ✔ yes | — |
+| Scripture | ✘ no | Justification is not remission of sins only, but renewal of the inward man |
 
 <a id="lexicalWordStep"></a>
 **`lexicalWordStep`**
@@ -13478,6 +13515,7 @@ strongest known dissent.
 |---|---|---|
 | evidence | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
 | tradition | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
+| Scripture | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
 
 <a id="trent_dissents_from_the_definition_steps"></a>
 **`trent_dissents_from_the_definition_steps`**
@@ -13492,7 +13530,7 @@ Reformed steps over its definition:
 - its denial of sufficiency is a critique of Luke 18's step under the tradition
   standard only, because its one ground is the definition.
 
-So the lexical step's support stands at `wellSupported` under both standards:
+So the lexical step's support stands at `wellSupported` under all three standards:
 its strongest known dissent is encoded, and fails.
 
 ```lean
@@ -13500,9 +13538,11 @@ theorem trent_dissents_from_the_definition_steps :
     trentWordOnLexicalAssessment.findings.kind = Findings.Kind.deniesGrounds ∧
     trentGraceOnGospelAssessment.findings.kind = Findings.Kind.asserted ∧
     trentSufficiencyOnLuke18Assessment.profile = [(Standard.evidence, false),
-    (Standard.tradition, true)] ∧ lexicalWordStep.ratings =
-    [(Standard.evidence, Computed.stands Confidence.wellSupported),
-    (Standard.tradition, Computed.stands Confidence.wellSupported)]
+    (Standard.tradition, true), (Standard.scriptural, false)] ∧
+    lexicalWordStep.ratings = [(Standard.evidence, Computed.stands
+    Confidence.wellSupported), (Standard.tradition, Computed.stands
+    Confidence.wellSupported), (Standard.scriptural, Computed.stands
+    Confidence.wellSupported)]
 -- axioms: propext
 ```
 

@@ -102,6 +102,14 @@ inductive Claim
   naming her by the standing the law gives the woman Shechem took. **The status
   reading** of Wegner's counterexample. -/
   | dinahIsTheLawsParthenos
+  /-- Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος. -/
+  | matthewQuotesTheGreekVirgin
+  /-- Matthew says that Mary was found with child before she and Joseph came
+  together, and that he knew her not until she had borne a son (1:18, 25). -/
+  | matthewSaysMaryKnewNoMan
+  /-- In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος has the sense
+  "virgin". **Scripture's own reading of the word**, by Matthew's use of it. -/
+  | lxxIsaiahUsesParthenosAsVirgin
   /-- Trypho rejects the Septuagint's "the virgin" at Isaiah 7:14 and reads "the
   young woman" (Justin, *Dialogue* 67 and 71). -/
   | tryphoRejectsParthenos
