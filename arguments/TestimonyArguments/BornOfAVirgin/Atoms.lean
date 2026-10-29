@@ -54,11 +54,67 @@ inductive Claim
   | theThreeRenderNeanis
   /-- The Syriac Peshitta renders ܒܬܘܠܬܐ, "virgin". -/
   | peshittaRendersBtulta
-  /-- 1QIsaᵃ reads עַלְמָה, so no textual variant bears on the sense. -/
+  /-- 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14 as the Masoretic
+  Text does: the verse has variants, but none at the word, so the dispute over
+  it is about its sense and not its text. -/
   | qumranConfirmsAlmah
   /-- The split among the ancient versions shows עַלְמָה does not denote
   virginity. The critical inference from the versions. -/
   | versionalDivergenceRefutesVirginSense
+  /-- The Greek Isaiah was translated by Jews, before the coming of Christ. -/
+  | lxxIsPreChristian
+  /-- In the Greek of the Septuagint, παρθένος means a virgin. **The Septuagint's
+  hinge**, and what Rico and Gentry hold of the word wherever it appears in the
+  Greek of the Jewish Scriptures. -/
+  | parthenosMeansVirgin
+  /-- In the Greek of the Septuagint's day, παρθένος meant a young woman of
+  marriageable age, and not yet a virgin as such: that sense came later.
+  **Wegner's thesis**, and the rival to the hinge above. -/
+  | parthenosMeantYoungWoman
+  /-- In early Greek literature παρθένος meant a young woman of marriageable age,
+  with or without virginity. -/
+  | earlyGreekParthenosIsYoungWoman
+  /-- The Septuagint calls Dinah a παρθένος after Shechem has lain with her
+  (Genesis 34:2–3). -/
+  | dinahIsAParthenosAfterShechem
+  /-- Wherever else the Greek Isaiah has παρθένος — 23:4, 37:22, 47:1 and 62:5 —
+  it renders בְּתוּלָה. -/
+  | isaiahUsesParthenosForBetulah
+  /-- The Greek Leviticus has the high priest marry a παρθένος, "a woman in her
+  virginity" in the Hebrew, and not a widow, a divorced woman, a defiled woman or
+  a harlot (21:13–14). -/
+  | priestMarriesAParthenos
+  /-- In the Greek Deuteronomy, a bride in whom τὰ παρθένια are not found dies for
+  playing the harlot (22:13–21). -/
+  | partheniaProveTheBride
+  /-- In the Greek Pentateuch's laws, παρθένος is used in the sense "virgin".
+  **The laws' sense**, and a claim about two passages, not about Isaiah 7:14. -/
+  | lawsUseParthenosAsVirgin
+  /-- In the Greek Exodus, a man who seduces a παρθένος not betrothed and lies
+  with her shall take her as his wife with a bride-price, or pay "the bride-price
+  of virgins" (22:15–16). -/
+  | seductionLawPricesAParthenos
+  /-- Genesis 34 tells Shechem's act in the words of the laws of the violated
+  virgin: he "humbled" her (34:2), it was "folly in Israel" (34:7), and he offers
+  the bride-price (34:12). -/
+  | shechemActsUnderTheLaw
+  /-- At Genesis 34:3 the Greek calls Dinah a παρθένος in the sense "virgin",
+  naming her by the standing the law gives the woman Shechem took. **The status
+  reading** of Wegner's counterexample. -/
+  | dinahIsTheLawsParthenos
+  /-- Trypho rejects the Septuagint's "the virgin" at Isaiah 7:14 and reads "the
+  young woman" (Justin, *Dialogue* 67 and 71). -/
+  | tryphoRejectsParthenos
+  /-- Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a
+  virgin. **What the Septuagint shows**, if its word means what Rico and Gentry
+  say it means. -/
+  | lxxReadsAVirgin
+  /-- The Septuagint puts the conception in the future: ἐν γαστρὶ ἕξει, "she shall
+  be with child". -/
+  | lxxPutsTheConceptionInTheFuture
+  /-- The translator of Isaiah meant that the woman conceives while still a
+  virgin: a conception without a man. -/
+  | lxxEnvisagesAVirginalConception
   /-- הָרָה at Isaiah 7:14 is a predicate adjective, so the clause reads "the
   עַלְמָה *is* pregnant". **Wegner's grammatical premise**, and not the contested
   step: Rydelnik parses it the same way. -/

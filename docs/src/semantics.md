@@ -32,9 +32,10 @@ every other verdict here.
 
 Nothing in the generic layer names an argument. Every argument has an instance: sola fide is
 analysed; sola scriptura, the virgin birth, Spirit baptism and the canonical witness in part, the
-claims whose meanings bear on a join; and born in Bethlehem, looked at and found to have no
-joins, is registered with its citations' labels and marked unanalysed. Each is counted from the
-start (each module's `coverage_now`).
+claims whose meanings bear on a join — and, in the virgin birth, the claims about the words of
+Isaiah 7:14 and its versions, the woman it describes and the birth it is read to promise; and born
+in Bethlehem, looked at and found to have no joins, is registered with its citations' labels and
+marked unanalysed. Each is counted from the start (each module's `coverage_now`).
 `Testimony.Checks.Meanings` fails the build for an argument with no instance, so a new argument
 is registered when it is added. It also fails the build for an argument whose joins are not
 listed and pinned, or whose meaning postulates come from anywhere but those lists
@@ -52,9 +53,9 @@ in the library needed them:
 
 | Part | What it is | Examples |
 |---|---|---|
-| `Voice` | who speaks, writes, holds or reads | Paul, James, Trent, Augustine, Calvin |
-| `Lexeme` | a word or fixed phrase, in its own language | δικαιόω, ἔργα νόμου, πίστις, ὕδωρ |
-| `Sense` | what a word can mean, named for what it denotes | a verdict; to make righteous |
+| `Voice` | who speaks, writes, holds or reads | Paul, James, Trent, Augustine, the Septuagint |
+| `Lexeme` | a word or fixed phrase, in its own language | δικαιόω, ἔργα νόμου, πίστις, παρθένος |
+| `Sense` | what a word can mean, named for what it denotes | a verdict; a virgin; a young woman |
 | `Concept` | what doctrinal claims are about | justification, faith, works, baptism |
 | `Rel` | how one term stands to another | ground of; only means of; includes |
 | `Statement` | what one atomic claim asserts | says, teaches, means, holds, wrote |
@@ -131,6 +132,18 @@ reading the meanings more carefully: "forensic only" against Trent's "justificat
 sanctification", whose denial was always in the Reformed claim's own meaning
 (`a_denial_inside_needs_no_definition`). No dispute's table and no verdict moves; the named
 readings of sola fide take a side on both pairs.
+
+`Testimony.Ontology.Usage` is about senses rather than relation words. A word's usage as a whole
+is the senses its passages give it, so a sense a word has in one passage of a text is a sense it
+has in that text's usage (`a_sense_in_a_usage_at_work`). That is all it does. It says nothing
+about any single passage, and it does not count a word used *of* a virgin as evidence that the
+word *means* "virgin". What a word means at a passage stays a premise, cited and rated, and the
+context it is read from is the premise's evidence. What it can show false is a claim that a
+usage *lacked* a sense, wherever a passage of it is held to have that sense. In the virgin birth
+argument it joins the laws of the Greek Pentateuch, and the status reading of Genesis 34:3, to
+the Septuagint's Greek: their sense "virgin" makes "virgin" one of the word's senses in the
+Septuagint, which is the claim encoded for Rico and Gentry, and excludes Wegner's "not yet
+'virgin'". It says nothing of which sense the word has at Isaiah 7:14.
 
 ### What the search found, not yet fixed
 

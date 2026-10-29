@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **184 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **194 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -52,6 +52,10 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `usage_parity_blocks_wegner` | `¬Establishes wegnerUnderUsageParity` | **Postell's second reply, and it is independent of the first.** Concede the parse, concede the ordinary pregnancy, concede that the woman of Isaiah 7:14 is no virgin — and the … |
 | `sign_leaves_the_lexical_conclusion_open` | `Independent wegnerUnderTheSign.premises (notP Claim.almahMeansVirgin)` | **The sign argument blocks Wegner's objection, and settles nothing about the word.** Keep the parse, the near-term setting and the referent principle, put the fathers' two grounds … |
 | `reply_leaves_the_pregnancy_open` | `Independent signArgumentUnderReply.premises (notP Claim.pregnancyAtTheSignIsOrdinary)` | **The near-term reply blocks the sign argument back, and settles nothing about the pregnancy.** Put the reply's grounds and step where the fathers' first ground was, keep the … |
+| `septuagintWitness_establishes` | `Establishes septuagintWitness` | **The Septuagint, read with Rico and Gentry, is a witness from before Christ.** Grant that the Greek Isaiah renders עַלְמָה with παρθένος, that it was made by Jews before Christ, … |
+| `parthenos_is_load_bearing` | `¬Establishes septuagintWithoutTheSense` | **The word carries the whole witness.** Keep the rendering and its date — the Greek has παρθένος, and Jews made it before Christ — and grant nothing about what παρθένος meant to … |
+| `septuagint_word_rests_on_its_inference` | `¬Entails septuagintLine.premises (p Claim.almahMeansVirgin)` | **The Septuagint shows how its translator read the woman, not what Isaiah's word means.** Grant everything the witness rests on, παρθένος as "virgin" included, and grant that the … |
+| `septuagint_leaves_the_conception_open` | `Independent septuagintWithTheFuture.premises (p Claim.lxxEnvisagesAVirginalConception)` | **Granted every word, the Septuagint leaves the conception open.** Keep the rendering, its date, παρθένος as "virgin", the reading it delivers, and the tense of the verb — the … |
 | `motyer_rests_on_his_inference` | `¬Entails motyerLine.grounds (notP Claim.isaiahIsNearTermSignToAhaz)` | **Motyer's reply rests on his inference, not on his observations.** On the reading that identifies the two children, the sign is given to the house of David, 8:4 repeats the … |
 | `christian_defeats_critical` | `Defeats christian criticalDenial` | **The scriptural reading answers the critic.** Its rebuttal is a defeat: the weakest link on each side is `disputed`, so neither outranks the other, and each defeats the other. |
 | `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell, Party.motyer, Party.micah}` | **Heard out, the scriptural reading prevails.** Nothing defeats either of Postell's counterexamples, so both are in the grounded extension from the first step. |
@@ -65,6 +69,12 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `sign_is_one_resolution` | `Framework.Preferred wegnerDispute.defeats {WegnerParty.sign}` | **One resolution: the fathers.** The sign argument alone is admissible — it defeats both of its defeaters — and it is in conflict with both of the other parties, so no larger set … |
 | `wegner_is_the_other_resolution` | `Framework.Preferred wegnerDispute.defeats {WegnerParty.wegner, WegnerParty.reply}` | **The other resolution: Wegner, with the near-term reply.** Neither defeats the other, and between them they answer the fathers, who are the only party to defeat either. |
 | `nothing_prevails_without_the_reply` | `Framework.grounded signAgainstWegner.defeats = ∅` | **Without the reply, nothing prevails either.** Wegner and the fathers defeat each other, so the reply is not what keeps the fathers from prevailing: Wegner's rebuttal does, … |
+| `drift_rests_on_its_inference` | `¬Entails driftLine.grounds (p Claim.parthenosMeantYoungWoman)` | **Wegner on παρθένος rests on its inference.** On Rico and Gentry's reading the older Greek usage is granted, Dinah is called παρθένος after Shechem has lain with her, and the … |
+| `usage_rests_on_its_inference` | `¬Entails usageLine.grounds (p Claim.parthenosMeansVirgin)` | **Rico and Gentry's case rests on its inference.** On the reading Davidson (1899, 456) and Meade (2013) give, Trypho objects to παρθένος and the Three write νεᾶνις because by then … |
+| `laws_rest_on_their_inference` | `¬Entails lawsLine.grounds (p Claim.lawsUseParthenosAsVirgin)` | **The case from the laws rests on its inference.** The high priest's παρθένος is set against the widow and the harlot, and the bride without τὰ παρθένια dies as a harlot; and … |
+| `dinah_rests_on_its_inference` | `¬Entails dinahLine.grounds (p Claim.dinahIsTheLawsParthenos)` | **The status reading rests on its inference.** Grant what Exodus 22:15–16 reads, and that Genesis 34 tells Shechem's act in the words of the laws: on Wegner's reading, which Rico … |
+| `septuagint_prevails_over_wegner` | `Framework.grounded septuagintDispute.defeats = {SeptuagintParty.witness, SeptuagintParty.usage, SeptuagintParty.laws, SeptuagintParty.dinah}` | **The Septuagint's side prevails, and Wegner does not.** Nothing defeats the status reading of Genesis 34:3, because Wegner is weaker than it, so it is accepted first. |
+| `drift_indefensible` | `∀ (S : Set SeptuagintParty), Framework.Admissible septuagintDispute.defeats S → SeptuagintParty.drift ∉ S` | **Wegner on παρθένος cannot be defended.** No admissible set contains it: the status reading defeats it, and nothing defeats the status reading. |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -423,6 +433,35 @@ settles nothing about the word. As a dispute, the three positions tie
 (`nothing_prevails_over_wegner`), and the tie is a fact about two ratings. It
 turns on whether the sign of 7:14 must be the kind offered at 7:11, and on
 whether the reply's inference survives Rydelnik, who grants its grounds.
+
+**The Septuagint's "virgin", weighed rather than assumed.** Irenaeus's
+argument — Jews translated Isaiah into Greek long before Christ and wrote
+παρθένος — is encoded at full strength, and three results say what it does.
+It rests on one claim, that παρθένος in the translator's Greek means a virgin
+(`parthenos_is_load_bearing`). Rico and Gentry hold that claim, and Bratcher with
+them; Wegner, Rhodea and Meade deny it, pointing to Genesis 34:3, where the Greek
+calls Dinah a παρθένος after Shechem has lain with her. The Greek Pentateuch, the
+corpus that verse comes from, uses the word in its laws where virginity is the
+point (Leviticus 21:13–14, Deuteronomy 22:13–21), and a new article of the
+ontology carries a sense found in a passage to the usage it belongs to
+(`a_sense_in_a_usage_at_work`), so the laws' sense excludes Wegner's "not yet
+'virgin'" by what the words mean. Genesis 34:3 itself is read under the law
+of the seduced παρθένος (Exodus 22:15–16), which still calls the woman a man has
+lain with a παρθένος and owed "the bride-price of virgins"; Genesis 34 tells
+Shechem's act in that law's words. Weighed as a dispute, **the Septuagint's side
+prevails** (`septuagint_prevails_over_wegner`): that reading of Genesis 34:3
+defeats Wegner, and he, on a step rated `disputed`, cannot answer it. The
+verdict turns on one rating, that reading's step, `plausible` because no reader
+found grants its grounds and denies it, and no higher because none found makes
+it; rated `disputed`, it would leave nothing prevailing, as before. The page
+says where the evidence lies, which the ratings do not weigh.
+Granted the word, the Septuagint shows
+that a pre-Christian Jewish reader took the woman of 7:14 to be a virgin, not
+what Isaiah's word means (`septuagint_word_rests_on_its_inference`), and its
+future tense leaves open whether she conceives as one
+(`septuagint_leaves_the_conception_open`). The two rival claims about παρθένος
+exclude each other by their meanings — Wegner's says the word meant a young
+woman and not yet a virgin — and the dispute's attacks are computed with that.
 
 A corollary worth noting: because the New Perspective rejects the traditional
 reading of Paul's phrase while still affirming justification by faith, it

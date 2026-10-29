@@ -126,6 +126,65 @@ def clearAlmahPassages : List ScriptureCitation :=
   [ verseIn .masoretic ⟨.genesis, 24, 43⟩
   , verseIn .masoretic ⟨.songOfSongs, 6, 8⟩ ]
 
+/-- Isaiah 23:4, 37:22, 47:1 and 62:5 — every other verse in which the Greek
+Isaiah has παρθένος. The Hebrew has בְּתוּלָה in each. Cited in both text-forms,
+since the claim is about the one rendering the other. -/
+def isaianicParthenoi : List ScriptureCitation :=
+  [ verseIn .septuagint ⟨.isaiah, 23, 4⟩, verseIn .masoretic ⟨.isaiah, 23, 4⟩
+  , verseIn .septuagint ⟨.isaiah, 37, 22⟩, verseIn .masoretic ⟨.isaiah, 37, 22⟩
+  , verseIn .septuagint ⟨.isaiah, 47, 1⟩, verseIn .masoretic ⟨.isaiah, 47, 1⟩
+  , verseIn .septuagint ⟨.isaiah, 62, 5⟩, verseIn .masoretic ⟨.isaiah, 62, 5⟩ ]
+
+/-- Genesis 34:2–3 — Shechem lies with Dinah, and the Greek then calls her
+παρθένος, twice, where the Hebrew has נַעֲרָה, "girl". -/
+def dinahAfterShechem : List ScriptureCitation :=
+  [ rangeIn .septuagint ⟨.genesis, 34, 2, 34, 3⟩
+  , verseIn .masoretic ⟨.genesis, 34, 3⟩ ]
+
+/-- Leviticus 21:13–14 — the high priest's wife. The Greek has γυναῖκα παρθένον
+where the Hebrew has אִשָּׁה בִבְתוּלֶיהָ, "a woman in her virginity", and sets the
+παρθένος against the widow, the divorced woman, the defiled woman and the
+harlot. -/
+def priestsBride : List ScriptureCitation :=
+  [ rangeIn .septuagint ⟨.leviticus, 21, 13, 21, 14⟩
+  , rangeIn .masoretic ⟨.leviticus, 21, 13, 21, 14⟩ ]
+
+/-- Deuteronomy 22:13–21 — the bride accused of not being a virgin. The Greek
+calls the tokens τὰ παρθένια, for the Hebrew's בְּתוּלִים, and a bride in whom they
+are not found dies for playing the harlot in her father's house. -/
+def tokensOfVirginity : List ScriptureCitation :=
+  [ rangeIn .septuagint ⟨.deuteronomy, 22, 13, 22, 21⟩
+  , rangeIn .masoretic ⟨.deuteronomy, 22, 13, 22, 21⟩ ]
+
+/-- Exodus 22:15–16 (22:16–17 in English Bibles) — the seduced woman. The Greek
+calls her a παρθένος not betrothed; the man who lies with her takes her as his
+wife with a bride-price (φερνή), or, if her father refuses, pays "the bride-price
+of virgins" (ἡ φερνὴ τῶν παρθένων; the Hebrew's מֹהַר הַבְּתוּלֹת). -/
+def seductionLaw : List ScriptureCitation :=
+  [ rangeIn .septuagint ⟨.exodus, 22, 15, 22, 16⟩
+  , rangeIn .masoretic ⟨.exodus, 22, 15, 22, 16⟩ ]
+
+/-- Genesis 34:2, 7 and 12, with the laws whose words they share. Shechem
+"humbled" Dinah (34:2; ἐταπείνωσεν, וַיְעַנֶּהָ), as the man who seizes a virgin
+has "humbled" her (Deuteronomy 22:29); the deed was "folly in Israel" (34:7,
+נְבָלָה ... בְיִשְׂרָאֵל), as the bride's harlotry is (Deuteronomy 22:21), in the
+Hebrew, where the Greek has two different words; and he offers the bride-price
+(34:12; φερνή, מֹהַר), as Exodus 22:15–16 requires. -/
+def shechemUnderTheLaw : List ScriptureCitation :=
+  [ verseIn .septuagint ⟨.genesis, 34, 2⟩, verseIn .masoretic ⟨.genesis, 34, 2⟩
+  , verseIn .masoretic ⟨.genesis, 34, 7⟩
+  , verseIn .septuagint ⟨.genesis, 34, 12⟩, verseIn .masoretic ⟨.genesis, 34, 12⟩
+  , verseIn .septuagint ⟨.deuteronomy, 22, 29⟩, verseIn .masoretic ⟨.deuteronomy, 22, 29⟩
+  , verseIn .masoretic ⟨.deuteronomy, 22, 21⟩ ]
+
+/-- Genesis 24:43, Exodus 2:8, Psalm 68:26 and Song 1:3 and 6:8 — every other
+עַלְמָה the Peshitta renders, each with the cognate ܥܠܝܡܬܐ. Proverbs 30:19, "the
+way of a man with an עַלְמָה", it renders "in his youth". -/
+def peshittaAlmahElsewhere : List ScriptureCitation :=
+  [ verseIn .peshitta ⟨.genesis, 24, 43⟩, verseIn .peshitta ⟨.exodus, 2, 8⟩
+  , verseIn .peshitta ⟨.psalms, 68, 26⟩, verseIn .peshitta ⟨.songOfSongs, 1, 3⟩
+  , verseIn .peshitta ⟨.songOfSongs, 6, 8⟩ ]
+
 /-! ### The Bethlehem oracle -/
 
 /-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/

@@ -120,7 +120,9 @@ namespace Testimony.Doc
 open Testimony in
 /-- Generates `def <name> : List Body` by walking every argument namespace
 under `root` in the environment (every one, when `root` is anonymous) and
-rendering what it declares.
+rendering what it declares. Each argument's body is a definition of its own,
+`<name><Argument>` after the namespace's last component, and the list names
+them.
 
 The namespaces are taken from the `@[headline]` tag rather than from a
 package's catalogue, for the reason the status table gives: a tool that took its
@@ -159,7 +161,7 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
     if nss.contains ns then
       declsOf := declsOf.insert ns ((declsOf.getD ns #[]).push n)
 
-  let mut bodies : Array (TSyntax `term) := #[]
+  let mut bodies : Array (Name × TSyntax `term) := #[]
   for ns in nss do
     -- The argument's modules: its own first, then the files it is built from.
     let mut mods : Array (Nat × Name) := #[]
@@ -334,15 +336,27 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
       | some (.inductInfo val) => val.ctors.toArray.map fun c => mkIdent c
       | _ => #[]
     bodies := bodies.push
-      (← `(term| render $(quote ns) [$(ctors),*] [$(intro),*] [$(rest),*]))
+      (ns, ← `(term| render $(quote ns) [$(ctors),*] [$(intro),*] [$(rest),*]))
 
+  -- One definition per argument, then the list of them. Written as one list
+  -- literal, every argument's body was a single term, and the code generator's
+  -- recursion depth ran across all of it: an argument that grew could push the
+  -- whole past the limit. Split, each argument's body compiles on its own.
+  let mut parts : Array Ident := #[]
+  for (ns, body) in bodies do
+    let part := mkIdent (tableName.getId.appendAfter ns.getString!)
+    elabCommand (← `(command|
+      /-- One argument's page body, generated from the Lean source by
+      `derive_argument_bodies`. -/
+      def $part : Body := $body))
+    parts := parts.push part
   elabCommand (← `(command|
     /-- Every argument's page body, generated from the Lean source by
     `derive_argument_bodies`. -/
-    def $tableName : List Body := [$bodies,*]))
+    def $tableName : List Body := [$parts,*]))
 
 /-- `derive_argument_bodies t` generates `def t : List Body`, every argument's
-page body; see `deriveArgumentBodies`. `derive_argument_bodies t under N`
+page body, each defined on its own; see `deriveArgumentBodies`. `derive_argument_bodies t under N`
 harvests only the arguments declared under the namespace `N`, which is how a
 package harvests its own arguments and not those of another it imports. -/
 syntax (name := deriveArgumentBodiesCmd) "derive_argument_bodies " ident (" under " ident)? :

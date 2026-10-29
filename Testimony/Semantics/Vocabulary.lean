@@ -55,6 +55,14 @@ inductive Voice
   | secondTempleJudaism
   /-- The writer or speaker of a modern article under examination. -/
   | author
+  /-- The translators of an ancient version, as their translation reads: the
+  Septuagint's, the Targum's, the Peshitta's. The version is named by its
+  textual tradition (`Testimony.TextualTradition`), so the vocabulary does not
+  name it a second time. -/
+  | version (t : TextualTradition)
+  /-- Aquila, Symmachus and Theodotion: the Jewish versions of the Greek
+  Scriptures that the fathers name together, against the Septuagint. -/
+  | theThree
 deriving DecidableEq, Repr
 
 /-- A word or fixed phrase, in the language its text is written in. A lexeme is
@@ -102,6 +110,15 @@ inductive Lexeme
   | faithAlonePhrase
   /-- Hebrew עַלְמָה (Isaiah 7:14). -/
   | almah
+  /-- Greek παρθένος, the Septuagint's word at Isaiah 7:14. -/
+  | parthenos
+  /-- Greek νεᾶνις, a young woman: Aquila's, Symmachus's and Theodotion's word
+  at Isaiah 7:14. -/
+  | neanis
+  /-- Aramaic עוּלֵימְתָא, a young woman: the Targum's word at Isaiah 7:14. -/
+  | ulemta
+  /-- Syriac ܒܬܘܠܬܐ, a virgin: the Peshitta's word at Isaiah 7:14. -/
+  | btulta
 deriving DecidableEq, Repr
 
 /-- What a word can mean: a fixed inventory of senses, each named for what it
@@ -110,6 +127,8 @@ denotes. A sense belongs to no word in particular; `Statement.means` pairs them.
 inductive Sense
   /-- A woman who has not known a man. -/
   | virgin
+  /-- A young woman of marriageable age, whether or not she is a virgin. -/
+  | youngWoman
   /-- A verdict: to declare righteous, the opposite of to condemn. -/
   | verdict
   /-- To make righteous: inward renewal. -/

@@ -165,10 +165,16 @@ def versionalObjection : Formula Claim :=
 
 /-- **The tension, dissolved.** If virginity is compatible with עַלְמָה, the
 versions are not contradicting one another about the referent at all: the
-Septuagint and the Peshitta render with the narrower term because they read the
-referent as a virgin, the Targum and the Three render with the broader one, and
-both are faithful renderings of a word whose denotation admits both. The
-divergence stops being evidence about the sense. -/
+Septuagint, if its παρθένος already meant "virgin" (`Dispute.Septuagint`), and
+the Peshitta render with the narrower term, the Targum and the Three with the
+broader one, and both are faithful renderings of a word whose denotation admits
+both. The divergence stops being evidence about the sense.
+
+Why the Peshitta has the narrower term is not settled. It is its only ܒܬܘܠܬܐ for
+עַלְמָה, and whether that is its translator's reading of the woman, the
+Septuagint's influence, or a later Christian hand, Chen finds impossible to
+decide (104–5). The step needs only that the rendering is a faithful one, not
+why it was chosen. -/
 @[bornOfAVirginDefs]
 def compatibilityDissolvesDivergence : Formula Claim :=
   ⋀ [ p .virginityCompatibleWithAlmah, p .lxxRendersParthenos
@@ -275,6 +281,79 @@ def ordinarySignsAnswerTheDemand : Formula Claim :=
   ⋀ [ p .isaianicSignsAreOrdinaryEvents, p .signDatedByAChildsInfancy ]
   ➝ notP .signMustBeExtraordinary
 
+/-! #### The Septuagint, and what its word meant
+
+Jews translated Isaiah into Greek before Christ and wrote παρθένος. What that
+shows depends on what παρθένος meant to them, and the steps below keep the two
+questions apart: what the translator wrote, and what the word he wrote meant. -/
+
+/-- **The Septuagint as a witness.** A Jewish translator, before Christ, chose
+for the woman of 7:14 a word that means a virgin; so he read her as one. -/
+@[bornOfAVirginDefs]
+def septuagintReadsAVirgin : Formula Claim :=
+  ⋀ [ p .lxxRendersParthenos, p .lxxIsPreChristian, p .parthenosMeansVirgin ]
+  ➝ p .lxxReadsAVirgin
+
+/-- **Wegner's case that the word's sense shifted.** In early Greek παρθένος
+meant a young woman, with or without virginity, and the Septuagint still calls
+Dinah one after Shechem has lain with her; so in the Septuagint's day the word
+meant "young woman", and the sense "virgin" came later. -/
+@[bornOfAVirginDefs]
+def dinahShowsTheOlderSense : Formula Claim :=
+  ⋀ [ p .earlyGreekParthenosIsYoungWoman, p .dinahIsAParthenosAfterShechem ]
+  ➝ p .parthenosMeantYoungWoman
+
+/-- **The case from usage.** Rico and Gentry's: the Jews who rejected the
+Christian reading of 7:14 rejected the word itself, Trypho reading "the young
+woman" and the Three writing νεᾶνις. With it the library's own addition: the
+Greek Isaiah's παρθένος renders בְּתוּלָה wherever else it occurs. So the word
+meant a virgin. -/
+@[bornOfAVirginDefs]
+def usageShowsTheVirginSense : Formula Claim :=
+  ⋀ [ p .isaiahUsesParthenosForBetulah, p .theThreeRenderNeanis
+    , p .tryphoRejectsParthenos ]
+  ➝ p .parthenosMeansVirgin
+
+/-- **From the translator's reading to Isaiah's word.** If the first translator
+read the woman of 7:14 as a virgin, the word Isaiah used of her denotes one.
+
+The step the Septuagint is usually asked to take, and the one its grounds do not
+supply: it has to be granted separately, and it is rated `disputed`.
+
+Irenaeus takes it because he holds the Greek inspired: the seventy elders,
+translating apart, agreed "in the very same words", so that "the Scriptures had
+been interpreted by the inspiration of God" (*Against Heresies* III.21.2).
+
+Bratcher and Brown grant the ground and deny the step. Bratcher holds that the
+translator meant "a young woman, at that time virgin" (115), and that עַלְמָה "is
+neutral, so far as virginity is concerned" (105): "even if in all occurrences of
+the word in the Old Testament it were proven that the 'almah in each case was,
+in fact, a virgin, that would not prove that 'almah in Isaiah 7:14 means
+'virgin'" (106). Brown holds that the translator's choice "represented a
+deliberate preference for understanding the young woman of Isa 7:14 as a
+virgin" (*Birth of the Messiah* 148), and that עַלְמָה puts "no stress on her
+virginity" (147). Walton, who doubts the ground itself, denies the step even if it
+is granted: "it is illegitimate to use the LXX translation to override clear
+lexical material in the Hebrew text", and "at best the LXX would indicate an
+interpretational preference rather than a linguistic necessity" (293).
+
+Bratcher's and Brown's reason is that a rendering can follow the woman described
+rather than the word. The translator of Genesis wrote παρθένος for the עַלְמָה
+Rebekah (24:43), whom the story has already called a virgin (24:16):
+"historically correct — since Rebekah was a virgin", Bratcher says, but it "does
+not precisely translate the Hebrew" (113). Jerome reads Rebekah the other way, as
+showing that עַלְמָה denotes a virgin (*Against Jovinianus* I.32). Elsewhere the
+Septuagint's translators render עַלְמָה with νεᾶνις four times (Exodus 2:8;
+Psalm 67:26, 68:25 in English Bibles; Song 1:3; 6:8) and with νεότης, "youth",
+once (Proverbs 30:19), as Rahlfs's text shows; Rhodea counts the νεᾶνις cases
+(67 n. 34). These are other translators than Isaiah's, as the translator of
+Genesis 34:3 is. That is also how this argument's referential strand reads the
+versions
+(`compatibilityDissolvesDivergence`). -/
+@[bornOfAVirginDefs]
+def translatorsReadingFixesTheWord : Formula Claim :=
+  p .lxxReadsAVirgin ➝ p .almahMeansVirgin
+
 /-! ### The lines of reason
 
 Four strands converge on the criterion, and each is a `Line`: its own grounds,
@@ -352,12 +431,16 @@ def magisterialLine : Line Claim :=
   , delivers := p .messiahBornOfVirgin }
 
 /-- **The referential line.** The shared lexical ground, the Rebekah datum,
-and the two facts about Mary, delivering that she answers Isaiah's description
-without the word having to carry the sense.
+and two claims about Mary — that she was a young woman of marriageable age, and
+that she conceived as a virgin, which is cited `disputed` — delivering that she
+answers Isaiah's description without the word having to carry the sense. The
+fathers answer the Jewish "young woman" the same way: Cyril of Alexandria, "even
+if the virgin were called a young woman, she will not cease to be a virgin".
 
-`qumranConfirmsAlmah` is a ground here because the reply has to be about the
-sense rather than the text: if the Hebrew were in doubt the dispute would not
-be purely semantic, and the line would not be the cheap move it is. -/
+The scroll's reading is a ground because the reply is about what the word
+means, not which word Isaiah wrote: 1QIsaᵃ, copied before Christ, has the
+Masoretic Text's עַלְמָה. If the Hebrew were in doubt the dispute would not be
+about the sense alone, and the reply would have more to answer. -/
 @[bornOfAVirginDefs]
 def referentialLine : Line Claim :=
   { name := "Referential reading: a virgin is an עַלְמָה"
@@ -412,20 +495,22 @@ retyping them. -/
 def wegnerClosingSteps : List (Formula Claim) :=
   [ordinaryPregnancyExcludesVirginity, referentYieldsLexicalConclusion]
 
-/-- **The fathers' sign argument.** Justin, Irenaeus and Origen, and Rydelnik
-today: the sign of 7:14 must be extraordinary, an ordinary conception is not, so
-the pregnancy is no ordinary one. It denies the ground of Wegner's line that the
-parse does not supply, and nothing else. -/
+/-- **The fathers' sign argument.** Justin, Irenaeus and Origen, and every other
+father the library has read on the verse, and Rydelnik today: the sign of 7:14
+must be extraordinary, an ordinary conception is not, so the pregnancy is no
+ordinary one. It denies the ground of Wegner's line that the parse does not
+supply, and nothing else.
+
+Its step is rated `plausible`: no source cited here grants both grounds and
+holds the pregnancy ordinary. The rival denies the first ground instead, and the
+grounds are rated separately. It is not rated higher, because the step reads the
+conception as the whole of the sign. -/
 @[bornOfAVirginDefs]
 def signLine : Line Claim :=
   { name := "The fathers' sign argument (Isaiah 7:11, 14)"
   , grounds := [ p .signMustBeExtraordinary, p .ordinaryConceptionIsNoMarvel ]
   , step := extraordinarySignExcludesOrdinaryPregnancy
   , delivers := notP .pregnancyAtTheSignIsOrdinary
-    -- `plausible`: no source cited here grants both grounds and holds the
-    -- pregnancy ordinary. The rival denies the first ground instead, and the
-    -- grounds are rated separately. Not `wellSupported`: the step reads the
-    -- conception as the whole of the sign.
   , inference := some
       { primary := .work irenaeusAgainstHeresies (.sectionRef "III.21.6")
       , supporting := [.work origenAgainstCelsus (.sectionRef "I.35")]
@@ -452,6 +537,305 @@ def ordinarySignLine : Line Claim :=
           , .work postellIsaiahMessianic (.page 474) ]
       , tradition := .christianHistoricalGrammatical
       , confidence := .disputed } }
+
+/-- **The Septuagint as a witness.** Irenaeus's argument: the Greek was made by
+Jews long before Christ, so its "virgin" cannot be a Christian reading put on
+the text. Its hinge is `parthenosMeansVirgin`, and the dispute over the
+Septuagint is about that one ground.
+
+The step draws out its grounds: a translator who chose for the woman a word that
+means a virgin described her as one. It is rated `plausible`: no reader cited
+here grants that the word means a virgin and denies that the translator called
+her one. Bratcher and Brown, who deny the next step, grant this one: the
+translator meant "a young woman, at that time virgin" (Bratcher 115), "a
+deliberate preference for understanding the young woman of Isa 7:14 as a virgin"
+(Brown 148).
+
+Walton doubts the word itself, and that dissent is counted where it belongs, in
+the rating of the third ground. Against the step he offers one thing more,
+Archer's suggestion that the translator of Isaiah "consistently showed a tendency
+to be imprecise in his choice of Greek terms", which "could well be the
+explanation of the use of parthenos here" (293). That is a guess at why the
+translator wrote the word, not a reading of what he wrote, and it is not counted
+as a dissent. The translator's own text tells against it: everywhere else in his
+Isaiah, παρθένος stands for בְּתוּלָה (23:4, 37:22, 47:1, 62:5;
+`isaiahUsesParthenosForBetulah`). The step is not rated higher, because none of
+its readers argues for it beyond the word's sense.
+
+The main contest is over the third ground, rated `disputed`; the witness is no
+stronger than that ground, so the step's rating changes no verdict. -/
+@[bornOfAVirginDefs]
+def septuagintLine : Line Claim :=
+  { name := "The Septuagint as a witness (Isaiah 7:14 in Greek)"
+  , grounds :=
+      [ p .lxxRendersParthenos, p .lxxIsPreChristian, p .parthenosMeansVirgin ]
+  , step := septuagintReadsAVirgin
+  , delivers := p .lxxReadsAVirgin
+  , inference := some
+      { primary := .work irenaeusAgainstHeresies (.sectionRef "III.21.1")
+      , supporting :=
+          [ .work bratcherStudyOfIsaiah (.page 115)
+          , .work brownBirthMessiah (.page 148) ]
+      , tradition := .christianTypological
+      , confidence := .plausible } }
+
+/-- **Wegner on παρθένος**: in the Septuagint's day the word meant "young
+woman", and came to mean "virgin" only by the time of the New Testament
+(482–83). Held by Wegner, Rhodea and Meade; disputed by Rico and Gentry, and by
+Bratcher. Rhodea follows Wegner, with an "apparently", and draws from Genesis
+34:3 that the word "need not refer to a virgo intacta" (67). Meade holds the
+same, "cf. Dina in Gen 34:3", and that by Justin's day the word had been
+"hijacked or used to mean 'chaste woman' only" (comment of 9 January 2013).
+
+The step is rated `disputed`, because two readers grant both its grounds and
+deny its conclusion. Rico and Gentry grant the older usage, and that the Greek
+calls Dinah a παρθένος; but Genesis 34:1–3 is "the exception that proves the
+rule" (21), an archaism of the Greek Pentateuch, whose language is "more
+elevated and classical than the language of the later texts" (18). Bratcher
+grants both — "at first the word was used in a general sense of 'girl', 'young
+woman'" (112), and Dinah "was no longer, therefore, a 'virgin'" — and still
+finds that "parthenos definitely means 'virgin' in the LXX; only very
+exceptionally (and, inexplicably, in Gen. 34:3) is it used otherwise" (113). The
+Greek Isaiah, a later book by another translator, uses the word elsewhere only
+for בְּתוּלָה (`isaiahUsesParthenosForBetulah`).
+
+Delling, in the standard theological dictionary, reads the Septuagint's usage at
+Isaiah 7:14 as demanding "no more than the sense of a 'woman untouched by a man
+up to the moment of the conception'" (*TDNT* 5.833, as Rhodea quotes him, 67
+n. 42): a virgin until then, whatever followed. And the Greek Pentateuch, the
+corpus Genesis 34:3 comes from, uses the word in its laws where virginity is the
+point (`lawsLine`). One passage in the broader sense does not show that the
+narrower sense was missing. -/
+@[bornOfAVirginDefs]
+def driftLine : Line Claim :=
+  { name := "Wegner on παρθένος: the word had not yet come to mean 'virgin'"
+  , grounds := [ p .earlyGreekParthenosIsYoungWoman, p .dinahIsAParthenosAfterShechem ]
+  , step := dinahShowsTheOlderSense
+  , delivers := p .parthenosMeantYoungWoman
+  , inference := some
+      { primary := .work wegnerVirginBirths (.pages 482 483)
+      , supporting :=
+          [ .work rhodeaDidMatthewConceive (.page 67)
+          , .work meadeAncientVersionsComment .whole
+          , .work ricoGentryInfantKing (.pages 18 21)
+          , .work bratcherStudyOfIsaiah (.pages 112 113) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **The case from usage.** Held by Rico and Gentry; disputed by Davidson and
+Meade. Rico and Gentry argue from the Jewish objection itself: "Otherwise the
+discussion of Justin and Trypho and the change from parthenos to neanis by
+AQUILA, SYMMACHUS, and THEODOTION in Is 7:14 would have no raison d'être" (21).
+
+The first ground, the Greek Isaiah's other uses of the word, is the library's
+own addition, read from the two texts: it is the usage of the translator whose
+word is in question, as Genesis 34:3 is not. What the texts read is not in
+dispute; what it shows can be. It shows the sense "virgin" only if בְּתוּלָה
+means a virgin where he renders it, and two of the four are figures for a city,
+the "virgin daughter" of Zion (37:22) and of Babylon (47:1). Bratcher, who
+argues from the same correspondence across the whole Septuagint — 45 of the 52
+times בְּתוּלָה occurs — warns that where it means only a young girl, or is used
+figuratively, "in such cases parthenos in the LXX will have the same meaning"
+(113).
+
+The step is rated `disputed`, on two readers who grant the Jewish objection and
+read it the other way: the revisers were answering a sense Christians had put on
+the word, not the sense its translator gave it. A. B. Davidson: the Three wrote
+νεᾶνις "possibly to evade the technical sense put on the word by the
+Christians", παρθένος having been "used generally for 'girl' or 'young woman'"
+(*A Dictionary of the Bible* II, 1899, 456). John Meade, a Septuagint scholar
+whose doctoral supervisor was Gentry, so that the dissent comes from within
+Gentry's own school, finds the revisers' change sensible "only in a
+context where παρθενος has been hijacked or used to mean 'chaste woman' only
+(which by the time of Justin Martyr, it clearly had been, since Trypho never
+disputes this point but only relies on his different version which had
+νεανις)"; for "παρθενος simply means young woman in this verse and in other
+places in the LXX" (comment of 9 January 2013).
+
+The dissents on both rival steps are brief. Davidson hedges his account of the
+Three with a "possibly", though not his account of the word; Meade's is a blog
+comment, revising his own earlier view toward "young woman". Against Wegner's
+step, Rico and Gentry give a reason, the archaism of the Greek Pentateuch, and
+Bratcher calls Genesis 34:3 inexplicable without explaining it. The ratings weigh
+none of this: each step has a cited reader who grants its grounds and denies its
+conclusion, and so each is `disputed`. Wegner's reading can be held with all
+three grounds here too — it is the countermodel in
+`usage_rests_on_its_inference` — though he does not discuss the Three or Trypho.
+The rating matters: rated higher, this step would decide the dispute over the
+Septuagint in the witness's favour (`Dispute.Septuagint` says why). -/
+@[bornOfAVirginDefs]
+def usageLine : Line Claim :=
+  { name := "Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures"
+  , grounds :=
+      [ p .isaiahUsesParthenosForBetulah, p .theThreeRenderNeanis
+      , p .tryphoRejectsParthenos ]
+  , step := usageShowsTheVirginSense
+  , delivers := p .parthenosMeansVirgin
+  , inference := some
+      { primary := .work ricoGentryInfantKing (.page 21)
+      , supporting :=
+          [ .work postellIsaiahMessianic (.page 472)
+          , .work davidsonImmanuel (.page 456)
+          , .work meadeAncientVersionsComment .whole ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **The laws' sense.** The high priest's παρθένος is set against the widow, the
+woman put away, the defiled woman and the harlot, and the bride without τὰ
+παρθένια dies for playing the harlot; so in these laws παρθένος is used in the
+sense "virgin". -/
+@[bornOfAVirginDefs]
+def lawsFixTheSense : Formula Claim :=
+  ⋀ [ p .priestMarriesAParthenos, p .partheniaProveTheBride ] ➝ p .lawsUseParthenosAsVirgin
+
+/-- **The case from the laws.** Bratcher's, from the Greek of Leviticus 21 and
+Deuteronomy 22 (102, 113): two laws of the Greek Pentateuch, the corpus Wegner
+takes Genesis 34:3 from, in which virginity is what the law turns on. The laws
+are in the translators' own Greek, and they are not uses of the word *of* a
+virgin, which would show nothing of its sense; the passages it rests on are
+where the sense is the point (`lawsUseParthenosAsVirgin`).
+
+It concludes nothing about Isaiah 7:14. What it shows is that "virgin" was
+already a sense of παρθένος in the Septuagint's Greek, which is what Wegner
+denies. The step from the two passages to the Septuagint's usage is not a step
+of the argument: it is what a usage "as a whole" means
+(`Testimony.Ontology.Usage`), and the meanings join the laws' sense to Rico and
+Gentry's claim and against Wegner's (`Meanings.BornOfAVirgin.joins`).
+
+The step is rated `disputed`, on one reader. Robert J. Miller grants what the
+laws require: virginity matters "in the law that priests can marry only women
+who are virgins (Lev 21:13-14)", and the bride of Deuteronomy 22:13–21 is
+charged "with not being a virgin at the time of their marriage". But "that has
+to be inferred from the context": "Neither word means virgin", and "As in other
+Greek literature, parthenos in the Septuagint did not by itself connote what we
+mean by virginity", for where virginity matters the Greek adds "a parthenos who
+has not known a man" (Genesis 24:16) (*Born Divine*).
+
+Miller is kept, as every cited reader is, and the page shows where his reading
+breaks. He says four things of the Greek. One is answered by a reading he does
+not take up, one is not answered here, and two do not hold of it.
+
+- **Genesis 34:3**, where Dinah is called a παρθένος after Shechem. The Greek
+  reads so. Rico and Gentry explain it as an archaism of the Greek Pentateuch;
+  the status reading reads it under the law of the seduced παρθένος, as the
+  name of the standing Shechem took (`dinahLine`).
+- **Genesis 24:16**: where virginity matters, the Greek adds "a parthenos who
+  has not known a man". The clause is the Hebrew's own, וְאִישׁ לֹא יְדָעָהּ, and the
+  Greek renders it. What it shows about either word, the page does not settle.
+- **A young widow**: "Lament like a parthenos dressed in sackcloth for the
+  husband of her youth (Joel 1:8)". The Greek of Joel 1:8 calls the woman
+  νύμφην, a bride; its παρθεν- word, τὸν παρθενικόν, is of the husband (read
+  from Rahlfs's text).
+- **The translators "consistently used it to translate the Hebrew almah"**. They
+  used it for עַלְמָה twice, at Genesis 24:43 and Isaiah 7:14, and elsewhere wrote
+  νεᾶνις, as Rhodea, who holds Wegner's view, notes (67 and n. 34); the word
+  they used consistently for was בְּתוּלָה (Bratcher 112–13).
+
+And he does not take up τὰ παρθένια, the abstract noun by which Walton's own
+test would fix the sense. None of this changes the rating: the rule counts a
+cited reader who grants the grounds and denies the conclusion, and does not
+weigh his evidence. The dispute over the Septuagint does not need it raised:
+the status reading decides it (`Dispute.Septuagint` says why). -/
+@[bornOfAVirginDefs]
+def lawsLine : Line Claim :=
+  { name := "The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'"
+  , grounds := [ p .priestMarriesAParthenos, p .partheniaProveTheBride ]
+  , step := lawsFixTheSense
+  , delivers := p .lawsUseParthenosAsVirgin
+  , inference := some
+      { primary := .work bratcherStudyOfIsaiah (.page 113)
+      , supporting :=
+          [ .work bratcherStudyOfIsaiah (.page 102)
+          , .work liddellScottJones (.page 1339)
+          , .work muraokaLexiconSeptuagint (.page 535)
+          , .work lustLexiconSeptuagint (.sv "παρθένια")
+          , .work millerBornDivine .whole
+          , .work rhodeaDidMatthewConceive (.page 67) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/-- **The law's name for Dinah.** The law of the seduced woman calls her a
+παρθένος after the man has lain with her, and sets what he owes by "the
+bride-price of virgins"; Genesis 34 tells Shechem's act in the words of that law
+and its neighbours. So when the Greek calls Dinah "the παρθένος" at 34:3, it
+names her by the standing he took, in the sense "virgin". -/
+@[bornOfAVirginDefs]
+def seductionLawNamesDinah : Formula Claim :=
+  ⋀ [ p .seductionLawPricesAParthenos, p .shechemActsUnderTheLaw ]
+  ➝ p .dinahIsTheLawsParthenos
+
+/-- **The status reading of Genesis 34:3.** Wegner's case rests on one verse:
+after Shechem "lay with her and humbled her" (34:2), the Greek says he "loved the
+παρθένος, and spoke to her according to the mind of the παρθένος" (34:3). He
+reads the word as said of her as she then was, a woman no longer a virgin, so
+that it cannot mean "virgin". This line reads it the other way: as the name of
+the standing Shechem took from her. A noun that names a woman says who she is in
+the story, not what she is at the moment of the clause.
+
+The law does exactly this. In the Greek Exodus a man who "deceives a παρθένος
+not betrothed and lies with her" shall endow her as his wife, or, if her father
+refuses, pay "the bride-price of virgins" (22:15–16). The woman he has lain with
+is still the law's παρθένος, and what he owes is a virgin's price. Genesis 34
+tells Shechem's act in that law's words and its neighbours': he "humbled" her
+(34:2), as the man who seizes a virgin has "humbled" her (Deuteronomy 22:29);
+his deed was "folly in Israel" (34:7, in the Hebrew), as the harlotry of a bride
+without the tokens of virginity is (Deuteronomy 22:21); and he offers the
+bride-price (34:12) that Exodus requires. So the narrative treats Dinah as the
+law's violated virgin. That is the use of the word the verse shows, and on that
+reading it is no evidence that παρθένος could mean a woman who is not a virgin.
+
+Frymer-Kensky reads the law and the story the same way, from the Hebrew. The
+lover "pays the mohar habbetulot even if the father refuses to allow him to
+marry her", a price a seduced girl "would no longer command" (80); and she
+follows the Dinah story with the law of "Intercourse with an Unmarried Girl
+(Exodus 22.15-16 and Deuteronomy 22.28-29)", under which the father "can take the
+'virgin's brideprice' from the lover" (91). She hedges the price in a note: it
+"might simply mean the appropriate brideprice for young girls" (80 n. 3). She
+does not discuss the Greek of 34:3.
+
+**What it does not settle.** The Hebrew of 34:3 has נַעֲרָה, "girl", and the
+translator of Genesis renders that word with παρθένος elsewhere, of Rebekah
+(24:14, 16, 55), and with παῖς (24:28, 57). At 34:4 and 34:12, where marriage
+and the bride-price are in view, he writes παῖς for Dinah, not παρθένος. Rico
+and Gentry read 34:3 as the older, broader usage, an archaism of the Greek
+Pentateuch, while the Septuagint's Greek at large means "virgin" by the word
+(18, 21). Bratcher finds 34:3 "surprising", since Dinah "was no longer,
+therefore, a 'virgin' in the technical sense of the word" (113). The Greek
+Deuteronomy does not tell either way: its translator writes νεᾶνις for נַעֲרָה
+through chapter 22, of the virgin wrongly accused (22:19) as of the woman seized
+(22:29), so his change of word follows the Hebrew, not the woman's state.
+
+**Its rating.** `plausible`. A step is `disputed` when a cited reader grants its
+grounds and denies its conclusion, and none has been found who does. Wegner,
+Rhodea, Meade, Rico and Gentry and Bratcher read 34:3 as said of a woman who is
+not a virgin, but none of them takes up Exodus 22:15–16 or the law's words in
+Genesis 34, the second ground. Frymer-Kensky grants that ground, and does not
+deny the conclusion; her note doubts what the first ground's law prices, and so
+bears on how firmly that law is read, not on this step. No reader has been found
+who makes the status reading of the Greek: it is built here from the texts, with
+Frymer-Kensky's reading of the Hebrew, and is rated no higher than `plausible`
+for that reason. The commentaries on the Greek Genesis that might settle it,
+Wevers's *Notes* and Harl's *La Genèse*, have not been read. A reader of them who
+has the law before him and still reads 34:3 of a woman no longer a virgin would
+make the step `disputed`; and the verdict of `Dispute.Septuagint` turns on this
+rating. -/
+@[bornOfAVirginDefs]
+def dinahLine : Line Claim :=
+  { name := "The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16"
+  , grounds := [ p .seductionLawPricesAParthenos, p .shechemActsUnderTheLaw ]
+  , step := seductionLawNamesDinah
+  , delivers := p .dinahIsTheLawsParthenos
+  , inference := some
+      { primary := .scripture Testimony.Scripture.seductionLaw
+      , supporting :=
+          [ .scripture Testimony.Scripture.shechemUnderTheLaw
+          , .work frymerKenskyVirginity (.pageList [80, 91])
+          , .work ricoGentryInfantKing (.pages 18 21)
+          , .work bratcherStudyOfIsaiah (.page 113)
+          , .work wegnerVirginBirths (.page 483)
+          , .work rhodeaDidMatthewConceive (.page 67) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .plausible } }
 
 /-- **The critical line**: the sign was given to Ahaz, and such a sign is not
 also a prediction of a virgin conception, so the predictive reading is denied.

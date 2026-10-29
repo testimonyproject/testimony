@@ -1,4 +1,6 @@
 import TestimonyArguments.BornOfAVirgin.Sources.NearTerm
+import TestimonyArguments.BornOfAVirgin.Sources.Septuagint
+import TestimonyArguments.BornOfAVirgin.Sources.Versions
 import TestimonyArguments.BornOfAVirgin.Sources.Wegner
 
 /-!
@@ -9,9 +11,11 @@ file that makes that obligation concrete: every atom, each with a prose
 statement of what it asserts, a classification, and who says so at what
 pinpoint with what confidence.
 
-It was once the largest file in the argument, and the atoms of its two disputes
-are now cited in modules of their own: `Sources.NearTerm` for the dispute over
-the critical denial, `Sources.Wegner` for the dispute over Wegner's objection.
+It was once the largest file in the argument, and the atoms of its three
+disputes are now cited in modules of their own: `Sources.NearTerm` for the
+dispute over the critical denial, `Sources.Wegner` for the dispute over Wegner's
+objection, `Sources.Septuagint` for the dispute over the Septuagint's word,
+`Sources.Versions` for the Hebrew text, the Syriac, and the referential reply.
 `cite` reaches each of those citations by name from one of its cases, so it is
 still one total function, and a new atom still cannot be left out of it.
 
@@ -53,7 +57,10 @@ def cite : Claim → AtomMeta
     { label := "עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman"
     , kind := .linguistic
       -- The Isaianic crux. The Hebrew term does not by itself carry the sense;
-      -- the Septuagint's παρθένος does. Jerome argues it does (Jov. I.32):
+      -- the Septuagint's παρθένος does, on Rico and Gentry's reading of its
+      -- Greek (`parthenosMeansVirgin`, disputed), and the step from the Greek
+      -- to the Hebrew is rated apart (`translatorsReadingFixesTheWord`).
+      -- Jerome argues the Hebrew carries it (Jov. I.32):
       -- עַלְמָה is a "hidden" virgin, as Rebekah is at Genesis 24:43. Origen
       -- is not cited: his appeal to Deuteronomy 22 (Cels. I.34) is to a law
       -- whose Hebrew reads נַעֲרָה בְתוּלָה, not עַלְמָה.
@@ -108,11 +115,7 @@ def cite : Claim → AtomMeta
         , supporting := [.work franceMatthew (.adLoc matthew1_23)]
         , tradition := .criticalScholarship
         , confidence := .consensus } }
-  | .maryFitsIsaianicDescription =>
-    { label := "Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes"
-    , kind := .interpretive
-    , source :=
-        { franceOnMatthew with supporting := [.work ricoGentryInfantKing .whole] } }
+  | .maryFitsIsaianicDescription => maryFitsIsaianicDescriptionCited
   | .lexicalSenseRequiredForFulfilment =>
     { label := "Matthew's fulfilment claim requires that עַלְמָה itself denote virginity"
     , kind := .interpretive
@@ -141,37 +144,41 @@ def cite : Claim → AtomMeta
   | .theThreeRenderNeanis =>
     { label := "Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις"
     , kind := .textual
-      -- Often explained as anti-Christian revision, and Justin already
-      -- complains of it (Dial. 43, 67, 71, 84). The explanation is not clean:
-      -- Theodotion's version is arguably pre-Christian.
+      -- Often explained as anti-Christian revision. Justin records the Jewish
+      -- reading "young woman" (Dial. 43, 71, 84; Trypho gives it at 67) but
+      -- names no translator. Irenaeus names Theodotion and Aquila (III.21.1);
+      -- Eusebius gives Aquila's and Symmachus's renderings (Dem. Ev. VII.1). The
+      -- explanation is not clean: Theodotion's version is arguably pre-Christian.
     , source :=
         { primary := .work ricoGentryInfantKing .whole
-        , supporting := [.work irenaeusAgainstHeresies (.sectionRef "III.21.1")]
+        , supporting :=
+            [ .work irenaeusAgainstHeresies (.sectionRef "III.21.1")
+            , .work eusebiusDemonstratio (.sectionRef "VII.1") ]
         , tradition := .criticalScholarship
         , confidence := .consensus } }
-  | .peshittaRendersBtulta =>
-    { label := "The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, 'virgin'"
-    , kind := .textual
-      -- Scripture alone, and legitimately so: the claim is about what a
-      -- version reads, and the version is the evidence for that. Surfaced by
-      -- `scriptureOnlyAtoms` all the same.
-    , source :=
-        { primary := .scripture [verseIn .peshitta isaiah7_14]
-        , tradition := .criticalScholarship
-        , confidence := .consensus } }
-  | .qumranConfirmsAlmah =>
-    { label := "1QIsaᵃ reads עַלְמָה, so no textual variant bears on the sense"
-    , kind := .textual
-    , source :=
-        { primary := .work bhs (.apparatus isaiah7_14)
-        , supporting := [.scripture [verseIn .deadSeaScrolls isaiah7_14]]
-        , tradition := .criticalScholarship
-        , confidence := .consensus } }
+  | .peshittaRendersBtulta => peshittaRendersBtultaCited
+  | .qumranConfirmsAlmah => qumranConfirmsAlmahCited
   | .versionalDivergenceRefutesVirginSense =>
     { label := "The split among the ancient versions shows עַלְמָה does not denote virginity"
     , kind := .interpretive
     , source :=
         { brownOnBirth with supporting := [.work chiltonIsaiahTargum .whole] } }
+  | .lxxIsPreChristian => lxxIsPreChristianCited
+  | .parthenosMeansVirgin => parthenosMeansVirginCited
+  | .parthenosMeantYoungWoman => parthenosMeantYoungWomanCited
+  | .earlyGreekParthenosIsYoungWoman => earlyGreekParthenosIsYoungWomanCited
+  | .dinahIsAParthenosAfterShechem => dinahIsAParthenosAfterShechemCited
+  | .isaiahUsesParthenosForBetulah => isaiahUsesParthenosForBetulahCited
+  | .priestMarriesAParthenos => priestMarriesAParthenosCited
+  | .partheniaProveTheBride => partheniaProveTheBrideCited
+  | .lawsUseParthenosAsVirgin => lawsUseParthenosAsVirginCited
+  | .seductionLawPricesAParthenos => seductionLawPricesAParthenosCited
+  | .shechemActsUnderTheLaw => shechemActsUnderTheLawCited
+  | .dinahIsTheLawsParthenos => dinahIsTheLawsParthenosCited
+  | .tryphoRejectsParthenos => tryphoRejectsParthenosCited
+  | .lxxReadsAVirgin => lxxReadsAVirginCited
+  | .lxxPutsTheConceptionInTheFuture => lxxPutsTheConceptionInTheFutureCited
+  | .lxxEnvisagesAVirginalConception => lxxEnvisagesAVirginalConceptionCited
   | .harahIsPredicateAdjective => harahIsPredicateAdjectiveCited
   | .isaianicAlmahIsAlreadyPregnant => isaianicAlmahIsAlreadyPregnantCited
   | .pregnancyAtTheSignIsOrdinary => pregnancyAtTheSignIsOrdinaryCited

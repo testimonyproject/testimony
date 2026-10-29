@@ -54,7 +54,12 @@ info: the shared ontology, in every argument:
 Born in Bethlehem — Micah 5:2
   joins: 0, with no definition: 0
 Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
-  joins: 3, with no definition: 3
+  joins: 8, with no definition: 4
+  a sense in a usage: stated at a passage of a voice's text by 2; derives:
+    parthenosMeantYoungWoman excludes lawsUseParthenosAsVirgin
+    parthenosMeantYoungWoman excludes dinahIsTheLawsParthenos
+    lawsUseParthenosAsVirgin entails parthenosMeansVirgin
+    dinahIsTheLawsParthenos entails parthenosMeansVirgin
 Sola fide
   joins: 6, with no definition: 5
   not a ground: held by 4, used of a text or voice by 13; derives nothing
@@ -74,15 +79,15 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 150, and 0 undecided -/
+/-- info: every package has a model with its postulates: 157, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 67, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 75, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
-/-- info: establish fails, as not Horn, on all 33 refuted packages -/
+/-- info: establish fails, as not Horn, on all 34 refuted packages -/
 #guard_msgs in
 #check_refutations under TestimonyArguments using unfoldSets
 
@@ -90,6 +95,7 @@ The canonical witness
 info: every dispute, as an AIF graph meeting Definition 1.1:
 Articles.Howell2003.hearingFinite: 63 I, 27 RA, 29 CA, 3 PA, 150 edges
 BornOfAVirgin.isaiahFinite: 30 I, 10 RA, 6 CA, 1 PA, 48 edges
+BornOfAVirgin.septuagintFinite: 16 I, 5 RA, 6 CA, 1 PA, 31 edges
 BornOfAVirgin.wegnerFinite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
 SolaFide.jamesFinite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 SolaFide.jesusWordsFinite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges

@@ -196,14 +196,17 @@ theorem sign_leaves_the_lexical_conclusion_open :
 #print axioms sign_leaves_the_lexical_conclusion_open
 
 /-- The near-term reading of the sign, in Wegner's world: a sign need not be a
-miracle, the pregnancy is an ordinary one, and עַלְמָה does not denote a
-virgin. -/
+miracle, the pregnancy is an ordinary one, עַלְמָה does not denote a virgin, and
+nor, in the Septuagint's day, did παρθένος. -/
 def nearTermSignReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceImpliesNoHumanFather => False
   | .magisteriumIsDoctrinallyAuthoritative => False
   | .signMustBeExtraordinary => False
   | .almahMeansVirgin => False
+  | .parthenosMeansVirgin => False
+  | .lawsUseParthenosAsVirgin => False
+  | .dinahIsTheLawsParthenos => False
   | _ => True
 
 /-- A sign that need not be a marvel, and is one all the same: the reader who
