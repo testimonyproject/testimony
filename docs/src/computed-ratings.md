@@ -83,8 +83,12 @@ holds that the word had changed in meaning since the translator wrote it, from e
 Under the evidence and tradition standards that is a credible critique, and the step is
 `disputed` (`matthew_step_ratings`); in the hearing under the evidence standard nothing
 prevails. Under the third it is not heard, and Matthew's reading prevails
-(`matthew_step_turns_on_the_standard`). In sola fide the third standard gives what the first
-gives, every time.
+(`matthew_step_turns_on_the_standard`). Its second is the fulfilment of Genesis 3:15
+(`TestimonyArguments.BornOfAVirgin.Dispute.PromiseHearing`): every term of the verse met as the
+New Testament names it. Westermann grants the texts and denies the step from his philology of
+"seed"; under the evidence standard he is heard and nothing prevails, and under the third he is
+not, and the fulfilment prevails (`promise_turns_on_the_standard`). In sola fide the third
+standard gives what the first gives, every time.
 
 ## Computing a rating
 

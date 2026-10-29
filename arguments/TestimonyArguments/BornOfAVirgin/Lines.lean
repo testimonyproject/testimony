@@ -965,6 +965,21 @@ def singularSyntaxNamesOne : Formula Claim :=
   ⋀ [ p .seedUsedOfOneDescendant, p .strikerIsSingular, p .lxxReadsOneDescendant ]
   ➝ notP .seedIsLineNotIndividual
 
+/-- The citation for the fulfilment's step, at a confidence: the readers who
+argue it, and Westermann, who denies it. -/
+@[bornOfAVirginDefs]
+def fulfilmentSource (c : Confidence) : Source :=
+  { primary := .work irenaeusAgainstHeresies (.sectionRef "III.23.7")
+  , supporting :=
+      [ .work irenaeusAgainstHeresies (.sectionRef "IV.40.3")
+      , .work hamiltonSkullCrushingSeed (.pageList [42, 53])
+      , .work keilDelitzschPentateuch (.page 102)
+      , .work leupoldGenesis (.page 170)
+      , .work calvinGenesis (.pages 170 171)
+      , .work westermannGenesis (.pages 259 261) ]
+  , tradition := .christianTypological
+  , confidence := c }
+
 /-- **The fulfilment of Genesis 3:15**, read from Scripture: every term of the
 promise is met in Jesus, as the New Testament itself names it.
 
@@ -1023,17 +1038,7 @@ def fulfilmentLine : Line Claim :=
       , p .devilDestroyedThroughDeath, p .christDiedAndRose ]
   , step := termsMetInJesus
   , delivers := p .jesusFulfilsThePromise
-  , inference := some
-      { primary := .work irenaeusAgainstHeresies (.sectionRef "III.23.7")
-      , supporting :=
-          [ .work irenaeusAgainstHeresies (.sectionRef "IV.40.3")
-          , .work hamiltonSkullCrushingSeed (.pageList [42, 53])
-          , .work keilDelitzschPentateuch (.page 102)
-          , .work leupoldGenesis (.page 170)
-          , .work calvinGenesis (.pages 170 171)
-          , .work westermannGenesis (.pages 259 261) ]
-      , tradition := .christianTypological
-      , confidence := .disputed } }
+  , inference := some (fulfilmentSource .disputed) }
 
 /-- The citation for the step from the fulfilment to the promise, at a
 confidence: the readers who grant that Genesis 3:15 is fulfilled in Christ and

@@ -12,6 +12,7 @@ import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
 import TestimonyArguments.BornOfAVirgin.Dispute.Matthew
 import TestimonyArguments.BornOfAVirgin.Dispute.Genesis
 import TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium
+import TestimonyArguments.BornOfAVirgin.Dispute.PromiseHearing
 
 /-!
 # TestimonyArguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
@@ -211,6 +212,11 @@ strand's hinge reads that as marking a birth with no human father.
   Westermann. The readers before Christ do not read the verse so: Jubilees,
   Philo and Josephus read the serpent as an animal or an emblem. The fulfilment,
   with the syntax and the scene, can be defended, and so can Westermann.
+  **Under the Scripture standard the fulfilment prevails**
+  (`promise_turns_on_the_standard`): its grounds are all Scripture, and
+  Westermann's dissent rests on his philology of "seed", so it is not heard.
+  Under the evidence standard it is, and nothing prevails.
+  `Dispute.PromiseHearing` reports both.
 - **The Septuagint's "he"**, αὐτός for the neuter σπέρμα, may show that a
   Jewish translator before Christ read the promise of one person
   (`greekHeCase_establishes`), so that reading would be no Christian invention.
@@ -400,6 +406,7 @@ own beside it.
 | `Dispute/Septuagint.lean` | the Septuagint, Wegner, Rico and Gentry, and the laws, as a third |
 | `Dispute/Genesis.lean` | Luther, Leupold and Lewis on "her seed", as a fourth |
 | `Dispute/Protoevangelium.lean` | the promise fulfilled, and Westermann's denial, as a fifth |
+| `Dispute/PromiseHearing.lean` | that dispute heard under each standard |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in

@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **206 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **218 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -97,6 +97,8 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `nothing_prevails_over_the_promise` | `Framework.grounded promiseDispute.defeats = ∅` | **As the evidence weighs it, nothing prevails**: Westermann defeats the fulfilment, the syntax and the scene, each defeats him back, and none outranks another. |
 | `fulfilment_is_one_resolution` | `Framework.Preferred promiseDispute.defeats {PromiseParty.fulfilment, PromiseParty.syntax, PromiseParty.scene}` | **The fulfilment can be defended, with the syntax and the scene**: none of the three attacks another, and each answers Westermann, the only party that attacks any of them. |
 | `westermann_is_the_other_resolution` | `Framework.Preferred promiseDispute.defeats {PromiseParty.westermann}` | **So can Westermann**, as the evidence weighs it. |
+| `fulfilment_step_ratings` | `fulfilmentStep.ratings = [(Standard.evidence, Computed.disputedBy ["Westermann, Genesis 1–11 (259–61)"]), (Standard.tradition, Computed.disputedBy ["Westermann, Genesis 1–11 (259–61)"]), (Standard.scriptural, Computed.stands Confidence.plausible)]` | **The fulfilment's step turns on the standard.** Under the evidence and tradition standards Westermann's dissent is a credible critique, and the step is `disputed`. |
+| `promise_turns_on_the_standard` | `Framework.grounded (promiseRegister.hearing Standard.evidence).defeats = ∅ ∧ Framework.grounded (promiseRegister.hearing Standard.scriptural).defeats = Solver.toSet (Witness.listSub (promiseRegister.admits Standard.scriptural) [PromiseParty.fulfilment, PromiseParty.syntax, PromiseParty.scene])` | **The promise turns on the standard, and the hearing and the rating agree.** Under the evidence standard Westermann is heard, and nothing prevails. |
 
 ### [Sola fide](./arguments/sola-fide.md)
 
@@ -508,9 +510,11 @@ alone (`seed_of_the_woman_alone`). Weighed against Westermann's denial that the 
 promise, **nothing prevails** (`nothing_prevails_over_the_promise`): his "a line of descendants and
 not an individual" is answered from the Hebrew syntax of 3:15b, and that answer is `disputed` too.
 So is the reading of the scene as a whole, in which the speaking serpent is the instrument of a
-power the sentence falls on (its step `plausible`, its ground on the power `disputed`). On the way,
-the strand's Miravalle citations were corrected: *Meet Mary*, which could not be checked, gave way
-to the books where the passages are.
+power the sentence falls on (its step `plausible`, its ground on the power `disputed`). Under the
+Scripture standard, which hears no dissent from a step grounded in Scripture alone unless it rests
+on Scripture too, Westermann is not heard and the fulfilment prevails
+(`promise_turns_on_the_standard`). On the way, the strand's Miravalle citations were corrected:
+*Meet Mary*, which could not be checked, gave way to the books where the passages are.
 
 A corollary worth noting: because the New Perspective rejects the traditional
 reading of Paul's phrase while still affirming justification by faith, it
