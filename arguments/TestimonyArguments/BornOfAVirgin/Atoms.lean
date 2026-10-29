@@ -227,6 +227,14 @@ inductive Claim
   /-- At Genesis 3:15b the one who strikes is "he", הוּא, masculine singular, with a
   singular verb, and strikes the serpent's own head, "your head". -/
   | strikerIsSingular
+  /-- In Genesis 3 the serpent speaks, and knows God's command of 2:17 and twists
+  it (3:1–5). -/
+  | serpentTwistsTheCommand
+  /-- God sets the enmity himself: "I will put enmity" (3:15). -/
+  | godSetsTheEnmity
+  /-- The serpent of Genesis 3 is the instrument of an evil power, and the
+  sentence of 3:15 falls on that power. -/
+  | serpentIsTheInstrumentOfAPower
   /-- Micah 5:3 names only "she who is in labour" as bearing the coming ruler,
   with no father mentioned. -/
   | micah5_3NamesMotherOnly

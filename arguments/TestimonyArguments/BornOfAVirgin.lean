@@ -191,8 +191,15 @@ strand's hinge reads that as marking a birth with no human father.
   forms names one descendant, at 3:15b it is "he" who strikes the serpent's own
   head, and the Greek translator read one person (Collins, Alexander, Leupold).
   That answer is `disputed` too, on Keil, and Collins claims for it only that
-  the syntax is "quite consistent with" one person. The fulfilment, with the
-  syntax, can be defended, and so can Westermann.
+  the syntax is "quite consistent with" one person. The scene read whole
+  answers him too: the serpent speaks and twists God's command, as no animal
+  does of itself; the blow falls on the serpent itself; and God sets the
+  enmity; so the sentence is a promise of victory over the power behind the
+  serpent (Collins, Woudstra, Keil). Its step is `plausible`, and the ground it
+  turns on, that an evil power stands behind the serpent, is `disputed` on
+  Westermann. The readers before Christ do not read the verse so: Jubilees,
+  Philo and Josephus read the serpent as an animal or an emblem. The fulfilment,
+  with the syntax and the scene, can be defended, and so can Westermann.
 - **The Septuagint's "he"**, αὐτός for the neuter σπέρμα, may show that a
   Jewish translator before Christ read the promise of one person
   (`greekHeCase_establishes`), so that reading would be no Christian invention.

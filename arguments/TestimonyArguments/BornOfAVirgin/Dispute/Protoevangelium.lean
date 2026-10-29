@@ -27,7 +27,7 @@ Romans 16:20, "the God of peace shall bruise Satan under your feet shortly", is
 left out: it is an allusion, and a disputed one (`fulfilmentLine` gives both
 sides).
 
-## Three positions
+## Four positions
 
 - **The fulfilment, confirming the promise** (`fulfilmentCase`). From the terms
   met (`fulfilmentLine`): in Jesus the promise is fulfilled. From the fulfilment
@@ -42,6 +42,11 @@ sides).
   at 3:15b it is "he" who strikes the serpent's own head, and the Greek
   translator read one person; so "her seed" is not only a line of descendants
   (Collins, Alexander, Leupold, Hamilton).
+- **The scene read whole** (`sceneCase`): the serpent speaks and twists God's
+  command, as no animal does of itself; it is the instrument of an evil power;
+  the blow falls on the serpent itself; and God sets the enmity. So the sentence
+  on the serpent is a promise of victory over that power (Collins, Woudstra,
+  Keil).
 
 ## What the confirmation shows, and what it does not
 
@@ -71,18 +76,22 @@ not show that the wording foretold it, which is Luther's claim and is weighed in
   promise in the curse; and Keil with him.
 - **Westermann's first ground**, "a line of descendants and not an individual",
   is `disputed` too, on Collins, Leupold, Alexander and Hamilton.
+- **The scene's step** is `plausible`: Woudstra grants every ground and holds
+  that "the term 'protevangelium' may be rightly used". Its ground that the
+  serpent is the instrument of an evil power is `disputed`, on Westermann.
 - **The syntax's step** is `disputed`, on Keil, who grants that the word can
   name one son and that the victory is over the serpent itself, and denies "one
   individual only". Collins himself claims no more than that the syntax is
   "quite consistent with" one person.
 
 Each position is only as strong as its weakest link, and each rests on a step
-rated `disputed`. Westermann and the fulfilment defeat each other; Westermann
-and the syntax defeat each other, the syntax by denying his ground; the
-fulfilment and the syntax stand together. So **nothing prevails**
-(`nothing_prevails_over_the_promise`). The fulfilment with the syntax can be
-defended (`fulfilment_is_one_resolution`), and so can Westermann
-(`westermann_is_the_other_resolution`); neither is forced.
+rated `disputed`. Westermann and the fulfilment defeat each other, and so do
+Westermann and the scene; Westermann and the syntax defeat each other, the syntax
+by denying his ground; the fulfilment, the syntax and the scene stand together.
+So **nothing prevails** (`nothing_prevails_over_the_promise`). The fulfilment
+with the syntax and the scene can be defended (`fulfilment_is_one_resolution`),
+and so can Westermann (`westermann_is_the_other_resolution`); neither is
+forced.
 
 That is the verdict as the evidence weighs it. Whether Westermann's dissent
 should be heard against a step whose grounds are all Scripture is a question of
@@ -103,6 +112,23 @@ serpent's sentence and no promise, and so no one fulfils it. On the joined
 pairs elsewhere in the argument it takes the scriptural reading's side, as the
 readings of `Results.Genesis` do; none bears on what it is used for. -/
 def westermannReading : Valuation Claim := fun a =>
+  match a with
+  | .genesis3_15IsProtoevangelium => False
+  | .jesusFulfilsThePromise => False
+  | .seedWasOfTheWomanAlone => False
+  | .wordingSignifiesAFatherlessBirth => False
+  | .serpentIsTheInstrumentOfAPower => False
+  | .parthenosMeantYoungWoman => False
+  | .maternalSilenceProvesNothing => False
+  | .magisteriumIsDoctrinallyAuthoritative => False
+  | _ => True
+
+/-- A reading no cited reader holds, written down to show what the scene's step
+adds: the serpent twists the command, an evil power stands behind it, the blow
+falls on the serpent itself and God sets the enmity — and still the verse is no
+promise, and no one fulfils it. It is a model of the scene's grounds without its
+step. -/
+def curseWithoutPromiseReading : Valuation Claim := fun a =>
   match a with
   | .genesis3_15IsProtoevangelium => False
   | .jesusFulfilsThePromise => False
@@ -226,6 +252,28 @@ theorem syntax_rests_on_its_step :
 
 #print axioms syntax_rests_on_its_step
 
+/-! ### The scene read whole -/
+
+/-- The scene's case delivers its conclusion. -/
+theorem sceneCase_establishes : Establishes sceneCase := by
+  establish [bornOfAVirginDefs]
+
+/-- The scene's premises can all be true together, on Luther's reading. -/
+theorem sceneCase_is_satisfiable : Satisfiable sceneCase.premises := by
+  satisfied_by lutherReading [bornOfAVirginDefs]
+
+/-- **The scene rests on its step.** Grant that the serpent twists the command,
+that an evil power stands behind it, that the blow falls on the serpent itself,
+and that God sets the enmity: the verse may still be a sentence and no promise.
+The section's words do not force it; reading a promise out of the curse does,
+and that is the step rated `plausible`. -/
+@[headline]
+theorem scene_rests_on_its_step :
+    ¬ Entails sceneLine.grounds (p .genesis3_15IsProtoevangelium) := by
+  refute_with curseWithoutPromiseReading [bornOfAVirginDefs]
+
+#print axioms scene_rests_on_its_step
+
 /-! ### Strength -/
 
 /-- The fulfilment's grounds are `consensus`, what the texts read; its
@@ -239,6 +287,10 @@ theorem westermannCase_strength : westermannCase.strength = 0 := by decide
 /-- The syntax's grounds are `consensus` and `wellSupported`, but its step is
 `disputed`, on Keil. -/
 theorem syntaxCase_strength : syntaxCase.strength = 0 := by decide
+
+/-- The scene's step is `plausible`, but its ground that the serpent is the
+instrument of an evil power is `disputed`, on Westermann. -/
+theorem sceneCase_strength : sceneCase.strength = 0 := by decide
 
 /-! ### The defeats -/
 
@@ -263,6 +315,8 @@ inductive PromiseParty
   /-- The syntax of the striker: "her seed" is not only a line of
   descendants. -/
   | syntax
+  /-- The scene read whole: God's sentence on the serpent's power. -/
+  | scene
 deriving DecidableEq
 
 /-- The package each party argues from. -/
@@ -271,6 +325,7 @@ def promisePartyNode : PromiseParty → ArgumentPackage Claim
   | .fulfilment => fulfilmentCase
   | .westermann => westermannCase
   | .syntax => syntaxCase
+  | .scene => sceneCase
 
 /-- The dispute over whether Genesis 3:15 is a promise: every party's premises
 have a model, every party establishes its conclusion, and every party's
@@ -283,6 +338,7 @@ def promiseDispute : Dispute Claim PromiseParty where
     | .fulfilment => fulfilmentCase_establishes
     | .westermann => westermannCase_establishes
     | .syntax => syntaxCase_establishes
+    | .scene => sceneCase_establishes
   rated i := by
     cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
 
@@ -293,6 +349,8 @@ def promisePartyDefeats : PromiseParty → PromiseParty → Prop
   | .westermann, .fulfilment => True
   | .syntax, .westermann => True
   | .westermann, .syntax => True
+  | .scene, .westermann => True
+  | .westermann, .scene => True
   | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
@@ -304,9 +362,10 @@ theorem promisePartyNode_strength : ∀ i, (promisePartyNode i).strength = 0
   | .fulfilment => fulfilmentCase_strength
   | .westermann => westermannCase_strength
   | .syntax => syntaxCase_strength
+  | .scene => sceneCase_strength
 
-/-- **Who defeats whom**, all nine pairs: Westermann defeats the fulfilment and
-the syntax, and each defeats him back; and nothing else. Every cell is computed
+/-- **Who defeats whom**, all sixteen pairs: Westermann defeats the fulfilment,
+the syntax and the scene, and each defeats him back; and nothing else. Every cell is computed
 from what the parties hold by `Horn.defeats?` and checked by the kernel. -/
 theorem promiseDispute_defeats :
     ∀ i j, promiseDispute.defeats i j ↔ promisePartyDefeats i j := by
@@ -317,7 +376,7 @@ theorem promiseDispute_defeats :
 
 /-- The dispute in the form the verdict solver computes with. -/
 def promiseFinite : Solver.Finite promiseDispute.defeats where
-  parties := [.fulfilment, .westermann, .syntax]
+  parties := [.fulfilment, .westermann, .syntax, .scene]
   complete i := by cases i <;> decide
   defeats i j := decide (promisePartyDefeats i j)
   spec i j := by rw [promiseDispute_defeats]; simp
@@ -326,30 +385,33 @@ def promiseFinite : Solver.Finite promiseDispute.defeats where
 def promiseStandoff : Verdict promiseDispute where
   finite := promiseFinite
   claim := .nothingGrounded
-    [(.fulfilment, .westermann), (.westermann, .fulfilment), (.syntax, .westermann)]
+    [ (.fulfilment, .westermann), (.westermann, .fulfilment), (.syntax, .westermann)
+    , (.scene, .westermann) ]
   checked := by decide +kernel
 
 /-- **As the evidence weighs it, nothing prevails**: Westermann defeats the
-fulfilment and the syntax, each defeats him back, and none outranks another. -/
+fulfilment, the syntax and the scene, each defeats him back, and none outranks
+another. -/
 @[headline]
 theorem nothing_prevails_over_the_promise : grounded promiseDispute.defeats = ∅ :=
   promiseStandoff.holds
 
 #print axioms nothing_prevails_over_the_promise
 
-/-- Why the fulfilment with the syntax is one resolution. -/
+/-- Why the fulfilment with the syntax and the scene is one resolution. -/
 def fulfilmentAlone : Verdict promiseDispute where
   finite := promiseFinite
-  claim := .preferred [.fulfilment, .syntax]
+  claim := .preferred [.fulfilment, .syntax, .scene]
   checked := by decide +kernel
 
-/-- **The fulfilment can be defended, with the syntax**: neither attacks the
-other, and each answers Westermann, the only party that attacks either. -/
+/-- **The fulfilment can be defended, with the syntax and the scene**: none of
+the three attacks another, and each answers Westermann, the only party that
+attacks any of them. -/
 @[headline]
 theorem fulfilment_is_one_resolution :
-    Preferred promiseDispute.defeats {.fulfilment, .syntax} :=
-  (show Solver.toSet [PromiseParty.fulfilment, .syntax] = {.fulfilment, .syntax} by
-      ext; simp) ▸
+    Preferred promiseDispute.defeats {.fulfilment, .syntax, .scene} :=
+  (show Solver.toSet [PromiseParty.fulfilment, .syntax, .scene] =
+      {.fulfilment, .syntax, .scene} by ext; simp) ▸
     fulfilmentAlone.holds
 
 #print axioms fulfilment_is_one_resolution

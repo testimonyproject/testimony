@@ -185,8 +185,15 @@ strand's hinge reads that as marking a birth with no human father.
   forms names one descendant, at 3:15b it is "he" who strikes the serpent's own
   head, and the Greek translator read one person (Collins, Alexander, Leupold).
   That answer is `disputed` too, on Keil, and Collins claims for it only that
-  the syntax is "quite consistent with" one person. The fulfilment, with the
-  syntax, can be defended, and so can Westermann.
+  the syntax is "quite consistent with" one person. The scene read whole
+  answers him too: the serpent speaks and twists God's command, as no animal
+  does of itself; the blow falls on the serpent itself; and God sets the
+  enmity; so the sentence is a promise of victory over the power behind the
+  serpent (Collins, Woudstra, Keil). Its step is `plausible`, and the ground it
+  turns on, that an evil power stands behind the serpent, is `disputed` on
+  Westermann. The readers before Christ do not read the verse so: Jubilees,
+  Philo and Josephus read the serpent as an animal or an emblem. The fulfilment,
+  with the syntax and the scene, can be defended, and so can Westermann.
 - **The Septuagint's "he"**, αὐτός for the neuter σπέρμα, may show that a
   Jewish translator before Christ read the promise of one person
   (`greekHeCase_establishes`), so that reading would be no Christian invention.
@@ -475,24 +482,27 @@ reader sees.
 | \\(P_{65}\\) | At Genesis 3:15 'her seed' is a line of descendants, and not an individual | linguistic | critical scholarship, disputed | [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), p. 363; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32 |
 | \\(P_{66}\\) | Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant | textual | critical scholarship, consensus | [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–145; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168 |
 | \\(P_{67}\\) | At Genesis 3:15b the striker is singular 'he', against the serpent's own head | textual | critical scholarship, consensus | Gen 3:15; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 146; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101 |
-| \\(P_{68}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
-| \\(P_{69}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
-| \\(P_{70}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
-| \\(P_{71}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
-| \\(P_{72}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{73}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{74}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
-| \\(P_{75}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
-| \\(P_{76}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
-| \\(P_{77}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
-| \\(P_{78}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
-| \\(P_{79}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{80}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{81}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{82}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{83}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
-| \\(P_{84}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
-| \\(P_{85}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| \\(P_{68}\\) | In Genesis 3 the serpent speaks, and knows and twists God's command | textual | critical scholarship, consensus | Gen 2:17; Gen 3:1-5; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 146 |
+| \\(P_{69}\\) | God sets the enmity himself: 'I will put enmity' (3:15) | textual | critical scholarship, consensus | Gen 3:15; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 203 |
+| \\(P_{70}\\) | The serpent of Genesis 3 is the instrument of an evil power | interpretive | Christian, historical-grammatical, disputed | [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261 |
+| \\(P_{71}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
+| \\(P_{72}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
+| \\(P_{73}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
+| \\(P_{74}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
+| \\(P_{75}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{76}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{77}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
+| \\(P_{78}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
+| \\(P_{79}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
+| \\(P_{80}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
+| \\(P_{81}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
+| \\(P_{82}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{83}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{84}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{85}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{86}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
+| \\(P_{87}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
+| \\(P_{88}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
 
 </div>
 
@@ -1215,6 +1225,88 @@ def strikerIsSingularCited : AtomMeta :=
             Reference.work keilDelitzschPentateuch (Bib.Locus.page 101)],
         tradition := Tradition.criticalScholarship,
         confidence := Confidence.consensus } }
+```
+
+<a id="serpentTwistsTheCommandCited"></a>
+**`serpentTwistsTheCommandCited`**
+
+`serpentTwistsTheCommand`. What the text reads: the serpent speaks, and
+gives back God's command of 2:17 twisted — "Yea, hath God said, Ye shall not eat
+of every tree of the garden?" (3:1), "Ye shall not surely die" (3:4). Collins:
+"the snake's wording of v. 4 reflects knowledge of 2:17", and "animals do not
+have faculty of speech in Bible, hence there is some intervention here (cf Nu.
+22:28)" (146 n. 21). `consensus`: it is what the text reads.
+
+```lean
+def serpentTwistsTheCommandCited : AtomMeta :=
+  {
+    label :=
+      "In Genesis 3 the serpent speaks, and knows and twists God's command",
+    kind := PremiseKind.textual,
+    source :=
+      { primary := Reference.scripture Scripture.serpentTwistsTheCommand,
+        supporting :=
+          [Reference.work collinsSyntacticalNote (Bib.Locus.page 146)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+```
+
+<a id="godSetsTheEnmityCited"></a>
+**`godSetsTheEnmityCited`**
+
+`godSetsTheEnmity`. What the text reads: "I will put enmity" (3:15), with God
+as the subject. Woudstra: "The mere fact of God's 'setting' of the enmity is a
+tremendous initiative for good, unexpected and unmerited" (203). `consensus` for
+the wording.
+
+```lean
+def godSetsTheEnmityCited : AtomMeta :=
+  { label := "God sets the enmity himself: 'I will put enmity' (3:15)",
+    kind := PremiseKind.textual,
+    source :=
+      {
+        primary :=
+          Reference.scripture
+            [Scripture.verseIn TextualTradition.masoretic
+                Scripture.genesis3_15],
+        supporting :=
+          [Reference.work woudstraRecentTranslations (Bib.Locus.page 203)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+```
+
+<a id="serpentIsTheInstrumentOfAPowerCited"></a>
+**`serpentIsTheInstrumentOfAPowerCited`**
+
+`serpentIsTheInstrumentOfAPower`. Delitzsch, as Collins quotes him: "an
+animal is intended, but an animal not speaking of its own accord, but as made the
+instrument of itself by the evil principle"; and Collins: "in view of the place
+of the story in the structure of Genesis it is hard to believe that only a snake
+is intended here … the referent of the second person pronoun would actually be
+the dark power behind the snake" (146–47). Woudstra: "as one reads Genesis 3 one
+does indeed become conscious of such a force. There is a diabolical subtlety in
+the serpent's suggestions … Later Scripture abundantly confirms this opinion"
+(197). Keil: "This foe is Satan" (101–2).
+
+`disputed`: Westermann sides with Holzinger, "the animal is being punished and
+not some demonic power behind it" (261). Of the readers before Christ, none found
+puts the devil behind the serpent beyond doubt: Wisdom 2:24's "envy of the
+devil" does not name it, and is read by some of Cain.
+
+```lean
+def serpentIsTheInstrumentOfAPowerCited : AtomMeta :=
+  { label := "The serpent of Genesis 3 is the instrument of an evil power",
+    kind := PremiseKind.interpretive,
+    source :=
+      {
+        primary :=
+          Reference.work collinsSyntacticalNote (Bib.Locus.pages 146 147),
+        supporting :=
+          [Reference.work woudstraRecentTranslations (Bib.Locus.page 197),
+            Reference.work keilDelitzschPentateuch (Bib.Locus.pages 101 102),
+            Reference.work westermannGenesis (Bib.Locus.page 261)],
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.disputed } }
 ```
 
 ## TestimonyArguments.BornOfAVirgin.Sources.NearTerm — the citations of the near-term dispute
@@ -2227,7 +2319,7 @@ Matthew's intent, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84}
+(P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87}
 \]
 </div>
 
@@ -2241,7 +2333,7 @@ virgin.
 
 <div class="testimony-math">
 \[
-(P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84}
+(P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87}
 \]
 </div>
 
@@ -2258,7 +2350,7 @@ grants the composition and stops short of Matthew is entitled to.
 
 <div class="testimony-math">
 \[
-(P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{84}
+(P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{87}
 \]
 </div>
 
@@ -2278,7 +2370,7 @@ right kind of reason.
 
 <div class="testimony-math">
 \[
-(P_{44} \land P_{45}) \rightarrow \lnot P_{73}
+(P_{44} \land P_{45}) \rightarrow \lnot P_{76}
 \]
 </div>
 
@@ -2290,7 +2382,7 @@ it, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{68} \land P_{69}) \rightarrow P_{84}
+(P_{71} \land P_{72}) \rightarrow P_{87}
 \]
 </div>
 
@@ -2302,7 +2394,7 @@ criterion follows. Encoded, but deliberately kept out of `christian`.
 
 <div class="testimony-math">
 \[
-(P_{81} \land P_{82}) \rightarrow P_{84}
+(P_{84} \land P_{85}) \rightarrow P_{87}
 \]
 </div>
 
@@ -2319,7 +2411,7 @@ left nothing for an objection to engage.
 
 <div class="testimony-math">
 \[
-(P_{72} \land P_{73}) \rightarrow \lnot P_{1}
+(P_{75} \land P_{76}) \rightarrow \lnot P_{1}
 \]
 </div>
 
@@ -2337,7 +2429,7 @@ where it is cited `disputed`.
 
 <div class="testimony-math">
 \[
-P_{74} \rightarrow \lnot P_{73}
+P_{77} \rightarrow \lnot P_{76}
 \]
 </div>
 
@@ -2351,7 +2443,7 @@ oracle in a different book (Postell 481 n. 72).
 
 <div class="testimony-math">
 \[
-(P_{77} \land P_{78}) \rightarrow \lnot P_{73}
+(P_{80} \land P_{81}) \rightarrow \lnot P_{76}
 \]
 </div>
 
@@ -2371,7 +2463,7 @@ denies, and `motyerLine` rates it `disputed` for that reason.
 
 <div class="testimony-math">
 \[
-(P_{75} \land P_{76}) \rightarrow \lnot P_{72}
+(P_{78} \land P_{79}) \rightarrow \lnot P_{75}
 \]
 </div>
 
@@ -2390,7 +2482,7 @@ word having to carry the sense.
 
 <div class="testimony-math">
 \[
-(P_{4} \land P_{5} \land P_{6} \land P_{70}) \rightarrow P_{7}
+(P_{4} \land P_{5} \land P_{6} \land P_{73}) \rightarrow P_{7}
 \]
 </div>
 
@@ -2415,7 +2507,7 @@ objector would state it, so that the reply has something real to answer.
 
 <div class="testimony-math">
 \[
-(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{85}
+(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{88}
 \]
 </div>
 
@@ -2460,7 +2552,7 @@ From the criterion and the historical claim, the fulfilment follows.
 
 <div class="testimony-math">
 \[
-(P_{84} \land P_{70}) \rightarrow P_{85}
+(P_{87} \land P_{73}) \rightarrow P_{88}
 \]
 </div>
 
@@ -2525,7 +2617,7 @@ Isaiah 7:14" (468 n. 22).
 
 <div class="testimony-math">
 \[
-(P_{72} \land \lnot P_{1}) \rightarrow P_{32}
+(P_{75} \land \lnot P_{1}) \rightarrow P_{32}
 \]
 </div>
 
@@ -2782,8 +2874,8 @@ Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
 \text{(3)} \quad &amp; P_{9} \\
 \text{(4)} \quad &amp; P_{40} \\
 \text{(5)} \quad &amp; P_{41} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84} \\[4pt]
-\vdash \quad &amp; P_{84}
+\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87} \\[4pt]
+\vdash \quad &amp; P_{87}
 \end{aligned}
 \]
 </div>
@@ -2804,8 +2896,8 @@ bear, read either way.
 \text{(2)} \quad &amp; P_{48} \\
 \text{(3)} \quad &amp; P_{49} \\
 \text{(4)} \quad &amp; P_{50} \\
-\text{(5)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84} \\[4pt]
-\vdash \quad &amp; P_{84}
+\text{(5)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87} \\[4pt]
+\vdash \quad &amp; P_{87}
 \end{aligned}
 \]
 </div>
@@ -2820,10 +2912,10 @@ says so.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{68} \\
-\text{(2)} \quad &amp; P_{69} \\
-\text{(3)} \quad &amp; (P_{68} \land P_{69}) \rightarrow P_{84} \\[4pt]
-\vdash \quad &amp; P_{84}
+\text{(1)} \quad &amp; P_{71} \\
+\text{(2)} \quad &amp; P_{72} \\
+\text{(3)} \quad &amp; (P_{71} \land P_{72}) \rightarrow P_{87} \\[4pt]
+\vdash \quad &amp; P_{87}
 \end{aligned}
 \]
 </div>
@@ -2841,8 +2933,8 @@ that follows. Its hinge is `compositionGovernsMeaning`.
 \text{(1)} \quad &amp; P_{42} \\
 \text{(2)} \quad &amp; P_{43} \\
 \text{(3)} \quad &amp; P_{46} \\
-\text{(4)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{84} \\[4pt]
-\vdash \quad &amp; P_{84}
+\text{(4)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{87} \\[4pt]
+\vdash \quad &amp; P_{87}
 \end{aligned}
 \]
 </div>
@@ -2861,10 +2953,10 @@ own.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{81} \\
-\text{(2)} \quad &amp; P_{82} \\
-\text{(3)} \quad &amp; (P_{81} \land P_{82}) \rightarrow P_{84} \\[4pt]
-\vdash \quad &amp; P_{84}
+\text{(1)} \quad &amp; P_{84} \\
+\text{(2)} \quad &amp; P_{85} \\
+\text{(3)} \quad &amp; (P_{84} \land P_{85}) \rightarrow P_{87} \\[4pt]
+\vdash \quad &amp; P_{87}
 \end{aligned}
 \]
 </div>
@@ -2890,9 +2982,9 @@ about the sense alone, and the reply would have more to answer.
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{70} \\
+\text{(4)} \quad &amp; P_{73} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{70}) \rightarrow P_{7} \\[4pt]
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{73}) \rightarrow P_{7} \\[4pt]
 \vdash \quad &amp; P_{7}
 \end{aligned}
 \]
@@ -2941,7 +3033,7 @@ conclusion rather than running on to the fulfilment claim.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{32} \\
 \text{(4)} \quad &amp; P_{34} \\
 \text{(5)} \quad &amp; P_{30} \rightarrow P_{31} \\[4pt]
@@ -3327,7 +3419,7 @@ conceived of a virgin, the seed in whom it is fulfilled had no human father.
 
 <div class="testimony-math">
 \[
-(P_{62} \land P_{70}) \rightarrow P_{63}
+(P_{62} \land P_{73}) \rightarrow P_{63}
 \]
 </div>
 
@@ -3341,6 +3433,21 @@ as its secondary meaning", so the verse is not the protoevangelium.
 <div class="testimony-math">
 \[
 (P_{65} \land P_{64}) \rightarrow \lnot P_{48}
+\]
+</div>
+
+<a id="sceneMakesItAPromise"></a>
+**`sceneMakesItAPromise`**
+
+**The scene read whole.** The serpent speaks and twists God's command, as no
+animal does of itself; it is the instrument of an evil power; the blow falls on
+the serpent itself, "your head"; and God himself sets the enmity. So the
+sentence on the serpent is God's promise of victory over that power: the
+protoevangelium.
+
+<div class="testimony-math">
+\[
+(P_{68} \land P_{70} \land P_{67} \land P_{69}) \rightarrow P_{48}
 \]
 </div>
 
@@ -3500,8 +3607,8 @@ apart (`Results.Genesis`).
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{62} \\
-\text{(2)} \quad &amp; P_{70} \\
-\text{(3)} \quad &amp; (P_{62} \land P_{70}) \rightarrow P_{63} \\[4pt]
+\text{(2)} \quad &amp; P_{73} \\
+\text{(3)} \quad &amp; (P_{62} \land P_{73}) \rightarrow P_{63} \\[4pt]
 \vdash \quad &amp; P_{63}
 \end{aligned}
 \]
@@ -3534,6 +3641,63 @@ come to one head" (171). Keil, who reads the seed as "the human race" and Christ
 \text{(2)} \quad &amp; P_{64} \\
 \text{(3)} \quad &amp; (P_{65} \land P_{64}) \rightarrow \lnot P_{48} \\[4pt]
 \vdash \quad &amp; \lnot P_{48}
+\end{aligned}
+\]
+</div>
+
+<a id="sceneLine"></a>
+**`sceneLine`** — The scene read whole: God's sentence on the serpent's power
+
+**The scene read whole**, from the section and not the word alone: what
+Genesis 3 says of the serpent, of whom the blow falls on, and of who sets the
+enmity.
+
+- **The serpent speaks, and knows the command.** It gives back God's word of
+  2:17 twisted, "Ye shall not surely die" (3:4). Collins: "the snake's wording of
+  v. 4 reflects knowledge of 2:17", and "animals do not have faculty of speech in
+  Bible, hence there is some intervention here" (146 n. 21).
+- **It is the instrument of an evil power.** Delitzsch, as Collins quotes him:
+  "an animal not speaking of its own accord, but as made the instrument of itself
+  by the evil principle". Woudstra: "There is a diabolical subtlety in the
+  serpent's suggestions which points to a sinister background to his words"
+  (197). This ground is `disputed` (`serpentIsTheInstrumentOfAPower`).
+- **The blow falls on the serpent itself**: "it is the head of the serpent, not
+  that of his zeraʿ, which is in view here" (Woudstra 199).
+- **God sets the enmity**: "a tremendous initiative for good, unexpected and
+  unmerited" (Woudstra 203).
+
+So the sentence on the serpent is a promise of victory over the power behind it.
+Collins: "the referent of the second person pronoun would actually be the dark
+power behind the snake" (146–47 n. 21), and "the 'promise' for the humans is an
+implicature of the punishment on the snake" (147 n. 22). Keil: "This foe is
+Satan, who incessantly opposes the seed of the woman and bruises its heel, but
+is eventually to be trodden under its feet" (101–2).
+
+**Its rating.** `plausible`. Woudstra grants every ground and does not deny the
+conclusion: though "this passage does not explicitly predict ultimate victory of
+the woman's seed", "the One who set the enmity might also be regarded as
+implicitly guaranteeing the ultimate success of those who are on his side", and
+"the term 'protevangelium' may be rightly used to describe it" (203). Westermann,
+who denies the conclusion, denies that the serpent is more than an animal (261),
+and that dissent belongs to the ground. Von Rad, as Woudstra quotes him, denies
+a protevangelium from "the sense of the passage" and the collective "seed"
+(194); he is not shown to grant the grounds. Rated no higher, because the step
+reads a promise out of a curse, which Collins calls "an implicature" and
+Woudstra "implicit".
+
+None of this is the reading of the readers before Christ: Jubilees, Philo and
+Josephus read the serpent as an animal or an emblem, and none of them reads the
+verse as a promise. It is an exegesis of the section, from its own words.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{68} \\
+\text{(2)} \quad &amp; P_{70} \\
+\text{(3)} \quad &amp; P_{67} \\
+\text{(4)} \quad &amp; P_{69} \\
+\text{(5)} \quad &amp; (P_{68} \land P_{70} \land P_{67} \land P_{69}) \rightarrow P_{48} \\[4pt]
+\vdash \quad &amp; P_{48}
 \end{aligned}
 \]
 </div>
@@ -3760,9 +3924,9 @@ with Isaiah 9 and 11 plus `parityDefeatsNearTermExclusion`.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{72} \\
-\text{(2)} \quad &amp; P_{73} \\
-\text{(3)} \quad &amp; (P_{72} \land P_{73}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{75} \\
+\text{(2)} \quad &amp; P_{76} \\
+\text{(3)} \quad &amp; (P_{75} \land P_{76}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -3785,9 +3949,9 @@ so the near-term reading does not exclude the messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow \lnot P_{73} \\[4pt]
-\vdash \quad &amp; \lnot P_{73}
+\text{(1)} \quad &amp; P_{77} \\
+\text{(2)} \quad &amp; P_{77} \rightarrow \lnot P_{76} \\[4pt]
+\vdash \quad &amp; \lnot P_{76}
 \end{aligned}
 \]
 </div>
@@ -3804,8 +3968,8 @@ messianic sense.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{44} \\
 \text{(2)} \quad &amp; P_{45} \\
-\text{(3)} \quad &amp; (P_{44} \land P_{45}) \rightarrow \lnot P_{73} \\[4pt]
-\vdash \quad &amp; \lnot P_{73}
+\text{(3)} \quad &amp; (P_{44} \land P_{45}) \rightarrow \lnot P_{76} \\[4pt]
+\vdash \quad &amp; \lnot P_{76}
 \end{aligned}
 \]
 </div>
@@ -3821,10 +3985,10 @@ near-term premise rather than its exclusion premise.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{75} \\
-\text{(2)} \quad &amp; P_{76} \\
-\text{(3)} \quad &amp; (P_{75} \land P_{76}) \rightarrow \lnot P_{72} \\[4pt]
-\vdash \quad &amp; \lnot P_{72}
+\text{(1)} \quad &amp; P_{78} \\
+\text{(2)} \quad &amp; P_{79} \\
+\text{(3)} \quad &amp; (P_{78} \land P_{79}) \rightarrow \lnot P_{75} \\[4pt]
+\vdash \quad &amp; \lnot P_{75}
 \end{aligned}
 \]
 </div>
@@ -3839,10 +4003,10 @@ setting does not exclude a messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{77} \\
-\text{(2)} \quad &amp; P_{78} \\
-\text{(3)} \quad &amp; (P_{77} \land P_{78}) \rightarrow \lnot P_{73} \\[4pt]
-\vdash \quad &amp; \lnot P_{73}
+\text{(1)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
+\text{(3)} \quad &amp; (P_{80} \land P_{81}) \rightarrow \lnot P_{76} \\[4pt]
+\vdash \quad &amp; \lnot P_{76}
 \end{aligned}
 \]
 </div>
@@ -3859,8 +4023,8 @@ none of the four strands delivers them.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{70} \\
-\text{(2)} \quad &amp; P_{71}
+\text{(1)} \quad &amp; P_{73} \\
+\text{(2)} \quad &amp; P_{74}
 \end{aligned}
 \]
 </div>
@@ -3914,19 +4078,19 @@ authority.
 \text{(7)} \quad &amp; P_{48} \\
 \text{(8)} \quad &amp; P_{49} \\
 \text{(9)} \quad &amp; P_{50} \\
-\text{(10)} \quad &amp; P_{68} \\
-\text{(11)} \quad &amp; P_{69} \\
+\text{(10)} \quad &amp; P_{71} \\
+\text{(11)} \quad &amp; P_{72} \\
 \text{(12)} \quad &amp; P_{42} \\
 \text{(13)} \quad &amp; P_{43} \\
 \text{(14)} \quad &amp; P_{46} \\
-\text{(15)} \quad &amp; P_{70} \\
-\text{(16)} \quad &amp; P_{71} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84} \\
-\text{(18)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84} \\
-\text{(19)} \quad &amp; (P_{68} \land P_{69}) \rightarrow P_{84} \\
-\text{(20)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{84} \\
-\text{(21)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(15)} \quad &amp; P_{73} \\
+\text{(16)} \quad &amp; P_{74} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87} \\
+\text{(18)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87} \\
+\text{(19)} \quad &amp; (P_{71} \land P_{72}) \rightarrow P_{87} \\
+\text{(20)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{87} \\
+\text{(21)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -3944,9 +4108,9 @@ one this library's author does not grant.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{81} \\
-\text{(2)} \quad &amp; P_{82} \\
-\text{(3)} \quad &amp; (P_{81} \land P_{82}) \rightarrow P_{84} \\
+\text{(1)} \quad &amp; P_{84} \\
+\text{(2)} \quad &amp; P_{85} \\
+\text{(3)} \quad &amp; (P_{84} \land P_{85}) \rightarrow P_{87} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{9} \\
@@ -3956,19 +4120,19 @@ one this library's author does not grant.
 \text{(10)} \quad &amp; P_{48} \\
 \text{(11)} \quad &amp; P_{49} \\
 \text{(12)} \quad &amp; P_{50} \\
-\text{(13)} \quad &amp; P_{68} \\
-\text{(14)} \quad &amp; P_{69} \\
+\text{(13)} \quad &amp; P_{71} \\
+\text{(14)} \quad &amp; P_{72} \\
 \text{(15)} \quad &amp; P_{42} \\
 \text{(16)} \quad &amp; P_{43} \\
 \text{(17)} \quad &amp; P_{46} \\
-\text{(18)} \quad &amp; P_{70} \\
-\text{(19)} \quad &amp; P_{71} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84} \\
-\text{(21)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84} \\
-\text{(22)} \quad &amp; (P_{68} \land P_{69}) \rightarrow P_{84} \\
-\text{(23)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{84} \\
-\text{(24)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(18)} \quad &amp; P_{73} \\
+\text{(19)} \quad &amp; P_{74} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87} \\
+\text{(21)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87} \\
+\text{(22)} \quad &amp; (P_{71} \land P_{72}) \rightarrow P_{87} \\
+\text{(23)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{87} \\
+\text{(24)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -3983,12 +4147,12 @@ The magisterial route on its own, with no exegetical premise at all.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{81} \\
-\text{(2)} \quad &amp; P_{82} \\
-\text{(3)} \quad &amp; P_{70} \\
-\text{(4)} \quad &amp; (P_{81} \land P_{82}) \rightarrow P_{84} \\
-\text{(5)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(1)} \quad &amp; P_{84} \\
+\text{(2)} \quad &amp; P_{85} \\
+\text{(3)} \quad &amp; P_{73} \\
+\text{(4)} \quad &amp; (P_{84} \land P_{85}) \rightarrow P_{87} \\
+\text{(5)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -4005,13 +4169,13 @@ Scripture is the supreme judge.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{81} \\
-\text{(2)} \quad &amp; \lnot P_{82} \\
-\text{(3)} \quad &amp; P_{83} \\
-\text{(4)} \quad &amp; P_{70} \\
-\text{(5)} \quad &amp; (P_{81} \land P_{82}) \rightarrow P_{84} \\
-\text{(6)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(1)} \quad &amp; P_{84} \\
+\text{(2)} \quad &amp; \lnot P_{85} \\
+\text{(3)} \quad &amp; P_{86} \\
+\text{(4)} \quad &amp; P_{73} \\
+\text{(5)} \quad &amp; (P_{84} \land P_{85}) \rightarrow P_{87} \\
+\text{(6)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -4032,8 +4196,8 @@ on.
 \text{(2)} \quad &amp; P_{9} \\
 \text{(3)} \quad &amp; P_{40} \\
 \text{(4)} \quad &amp; P_{41} \\
-\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84} \\[4pt]
-\vdash \quad &amp; P_{84}
+\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87} \\[4pt]
+\vdash \quad &amp; P_{87}
 \end{aligned}
 \]
 </div>
@@ -4055,19 +4219,19 @@ retained.
 \text{(6)} \quad &amp; P_{48} \\
 \text{(7)} \quad &amp; P_{49} \\
 \text{(8)} \quad &amp; P_{50} \\
-\text{(9)} \quad &amp; P_{68} \\
-\text{(10)} \quad &amp; P_{69} \\
+\text{(9)} \quad &amp; P_{71} \\
+\text{(10)} \quad &amp; P_{72} \\
 \text{(11)} \quad &amp; P_{42} \\
 \text{(12)} \quad &amp; P_{43} \\
 \text{(13)} \quad &amp; P_{46} \\
-\text{(14)} \quad &amp; P_{70} \\
-\text{(15)} \quad &amp; P_{71} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84} \\
-\text{(17)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84} \\
-\text{(18)} \quad &amp; (P_{68} \land P_{69}) \rightarrow P_{84} \\
-\text{(19)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{84} \\
-\text{(20)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(14)} \quad &amp; P_{73} \\
+\text{(15)} \quad &amp; P_{74} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87} \\
+\text{(17)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87} \\
+\text{(18)} \quad &amp; (P_{71} \land P_{72}) \rightarrow P_{87} \\
+\text{(19)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{87} \\
+\text{(20)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -4088,11 +4252,11 @@ added. Kept so that the earlier finding stays checkable.
 \text{(2)} \quad &amp; P_{9} \\
 \text{(3)} \quad &amp; P_{40} \\
 \text{(4)} \quad &amp; P_{41} \\
-\text{(5)} \quad &amp; P_{70} \\
-\text{(6)} \quad &amp; P_{71} \\
-\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84} \\
-\text{(8)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(5)} \quad &amp; P_{73} \\
+\text{(6)} \quad &amp; P_{74} \\
+\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87} \\
+\text{(8)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -4115,17 +4279,17 @@ textual and historical premise retained.
 \text{(5)} \quad &amp; P_{47} \\
 \text{(6)} \quad &amp; P_{48} \\
 \text{(7)} \quad &amp; P_{49} \\
-\text{(8)} \quad &amp; P_{68} \\
+\text{(8)} \quad &amp; P_{71} \\
 \text{(9)} \quad &amp; P_{42} \\
 \text{(10)} \quad &amp; P_{46} \\
-\text{(11)} \quad &amp; P_{70} \\
-\text{(12)} \quad &amp; P_{71} \\
-\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84} \\
-\text{(14)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84} \\
-\text{(15)} \quad &amp; (P_{68} \land P_{69}) \rightarrow P_{84} \\
-\text{(16)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{84} \\
-\text{(17)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(11)} \quad &amp; P_{73} \\
+\text{(12)} \quad &amp; P_{74} \\
+\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87} \\
+\text{(14)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87} \\
+\text{(15)} \quad &amp; (P_{71} \land P_{72}) \rightarrow P_{87} \\
+\text{(16)} \quad &amp; (P_{42} \land P_{43} \land P_{46} \land P_{41}) \rightarrow P_{87} \\
+\text{(17)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -4146,11 +4310,11 @@ assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* 
 \text{(3)} \quad &amp; P_{9} \\
 \text{(4)} \quad &amp; P_{40} \\
 \text{(5)} \quad &amp; P_{41} \\
-\text{(6)} \quad &amp; P_{70} \\
-\text{(7)} \quad &amp; P_{71} \\
-\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84} \\
-\text{(9)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(6)} \quad &amp; P_{73} \\
+\text{(7)} \quad &amp; P_{74} \\
+\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87} \\
+\text{(9)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -4174,21 +4338,21 @@ four strands on shared ground; it is the refusal of four strands.
 \text{(1)} \quad &amp; P_{9} \\
 \text{(2)} \quad &amp; P_{40} \\
 \text{(3)} \quad &amp; P_{47} \\
-\text{(4)} \quad &amp; P_{68} \\
-\text{(5)} \quad &amp; P_{72} \\
-\text{(6)} \quad &amp; P_{73} \\
-\text{(7)} \quad &amp; P_{79} \\
-\text{(8)} \quad &amp; P_{80} \\
+\text{(4)} \quad &amp; P_{71} \\
+\text{(5)} \quad &amp; P_{75} \\
+\text{(6)} \quad &amp; P_{76} \\
+\text{(7)} \quad &amp; P_{82} \\
+\text{(8)} \quad &amp; P_{83} \\
 \text{(9)} \quad &amp; \lnot P_{2} \\
 \text{(10)} \quad &amp; \lnot P_{48} \\
 \text{(11)} \quad &amp; \lnot P_{50} \\
-\text{(12)} \quad &amp; \lnot P_{69} \\
-\text{(13)} \quad &amp; (P_{72} \land P_{73}) \rightarrow \lnot P_{1} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{84} \\
-\text{(15)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84} \\
-\text{(16)} \quad &amp; (P_{68} \land P_{69}) \rightarrow P_{84} \\
-\text{(17)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(12)} \quad &amp; \lnot P_{72} \\
+\text{(13)} \quad &amp; (P_{75} \land P_{76}) \rightarrow \lnot P_{1} \\
+\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{41}) \rightarrow P_{87} \\
+\text{(15)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87} \\
+\text{(16)} \quad &amp; (P_{71} \land P_{72}) \rightarrow P_{87} \\
+\text{(17)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -4205,9 +4369,9 @@ denial, not anything about Jesus.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{72} \\
-\text{(2)} \quad &amp; P_{73} \\
-\text{(3)} \quad &amp; (P_{72} \land P_{73}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{75} \\
+\text{(2)} \quad &amp; P_{76} \\
+\text{(3)} \quad &amp; (P_{75} \land P_{76}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -4224,10 +4388,10 @@ no longer simply granted.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{72} \\
-\text{(2)} \quad &amp; P_{74} \\
-\text{(3)} \quad &amp; P_{74} \rightarrow \lnot P_{73} \\
-\text{(4)} \quad &amp; (P_{72} \land P_{73}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{75} \\
+\text{(2)} \quad &amp; P_{77} \\
+\text{(3)} \quad &amp; P_{77} \rightarrow \lnot P_{76} \\
+\text{(4)} \quad &amp; (P_{75} \land P_{76}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -4244,9 +4408,9 @@ near-term reading does not exclude the messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow \lnot P_{73} \\[4pt]
-\vdash \quad &amp; \lnot P_{73}
+\text{(1)} \quad &amp; P_{77} \\
+\text{(2)} \quad &amp; P_{77} \rightarrow \lnot P_{76} \\[4pt]
+\vdash \quad &amp; \lnot P_{76}
 \end{aligned}
 \]
 </div>
@@ -4264,8 +4428,8 @@ as Berry's reached from different grounds.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{44} \\
 \text{(2)} \quad &amp; P_{45} \\
-\text{(3)} \quad &amp; (P_{44} \land P_{45}) \rightarrow \lnot P_{73} \\[4pt]
-\vdash \quad &amp; \lnot P_{73}
+\text{(3)} \quad &amp; (P_{44} \land P_{45}) \rightarrow \lnot P_{76} \\[4pt]
+\vdash \quad &amp; \lnot P_{76}
 \end{aligned}
 \]
 </div>
@@ -4281,10 +4445,10 @@ conclusion as Berry's and Postell's Isaiah argument.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{77} \\
-\text{(2)} \quad &amp; P_{78} \\
-\text{(3)} \quad &amp; (P_{77} \land P_{78}) \rightarrow \lnot P_{73} \\[4pt]
-\vdash \quad &amp; \lnot P_{73}
+\text{(1)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
+\text{(3)} \quad &amp; (P_{80} \land P_{81}) \rightarrow \lnot P_{76} \\[4pt]
+\vdash \quad &amp; \lnot P_{76}
 \end{aligned}
 \]
 </div>
@@ -4300,10 +4464,10 @@ sign to Ahaz.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{75} \\
-\text{(2)} \quad &amp; P_{76} \\
-\text{(3)} \quad &amp; (P_{75} \land P_{76}) \rightarrow \lnot P_{72} \\[4pt]
-\vdash \quad &amp; \lnot P_{72}
+\text{(1)} \quad &amp; P_{78} \\
+\text{(2)} \quad &amp; P_{79} \\
+\text{(3)} \quad &amp; (P_{78} \land P_{79}) \rightarrow \lnot P_{75} \\[4pt]
+\vdash \quad &amp; \lnot P_{75}
 \end{aligned}
 \]
 </div>
@@ -4319,11 +4483,11 @@ exclusion premise no longer simply granted.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{72} \\
+\text{(1)} \quad &amp; P_{75} \\
 \text{(2)} \quad &amp; P_{44} \\
 \text{(3)} \quad &amp; P_{45} \\
-\text{(4)} \quad &amp; (P_{44} \land P_{45}) \rightarrow \lnot P_{73} \\
-\text{(5)} \quad &amp; (P_{72} \land P_{73}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(4)} \quad &amp; (P_{44} \land P_{45}) \rightarrow \lnot P_{76} \\
+\text{(5)} \quad &amp; (P_{75} \land P_{76}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -4345,9 +4509,9 @@ of the objection's premise*, not the criterion — see
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{70} \\
+\text{(4)} \quad &amp; P_{73} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{70}) \rightarrow P_{7} \\
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{73}) \rightarrow P_{7} \\
 \text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\[4pt]
 \vdash \quad &amp; \lnot P_{8}
 \end{aligned}
@@ -4367,12 +4531,12 @@ The same premises, asked to deliver the criterion instead. They do not.
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{70} \\
+\text{(4)} \quad &amp; P_{73} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{70}) \rightarrow P_{7} \\
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{73}) \rightarrow P_{7} \\
 \text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
-\text{(8)} \quad &amp; (P_{84} \land P_{70}) \rightarrow P_{85} \\[4pt]
-\vdash \quad &amp; P_{85}
+\text{(8)} \quad &amp; (P_{87} \land P_{73}) \rightarrow P_{88} \\[4pt]
+\vdash \quad &amp; P_{88}
 \end{aligned}
 \]
 </div>
@@ -4400,7 +4564,7 @@ weight rests and are worth nothing against a weakened rival.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{32} \\
 \text{(4)} \quad &amp; P_{34} \\
 \text{(5)} \quad &amp; P_{30} \rightarrow P_{31} \\
@@ -4424,7 +4588,7 @@ all stay.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{34} \\
 \text{(4)} \quad &amp; P_{30} \rightarrow P_{31} \\[4pt]
 \vdash \quad &amp; P_{31}
@@ -4443,10 +4607,10 @@ granted either.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{34} \\
 \text{(4)} \quad &amp; P_{30} \rightarrow P_{31} \\
-\text{(5)} \quad &amp; (P_{72} \land \lnot P_{1}) \rightarrow P_{32} \\
+\text{(5)} \quad &amp; (P_{75} \land \lnot P_{1}) \rightarrow P_{32} \\
 \text{(6)} \quad &amp; (P_{31} \land P_{32}) \rightarrow P_{33} \\
 \text{(7)} \quad &amp; (P_{33} \land P_{34}) \rightarrow \lnot P_{2} \\[4pt]
 \vdash \quad &amp; \lnot P_{2}
@@ -4467,7 +4631,7 @@ return leg needs — put in.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{34} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{30} \rightarrow P_{31} \\[4pt]
@@ -4487,11 +4651,11 @@ the parse, the near-term setting, the referent principle, and the demand that
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{34} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{30} \rightarrow P_{31} \\
-\text{(6)} \quad &amp; (P_{72} \land \lnot P_{1}) \rightarrow P_{32} \\
+\text{(6)} \quad &amp; (P_{75} \land \lnot P_{1}) \rightarrow P_{32} \\
 \text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{1} \\
 \text{(8)} \quad &amp; (P_{31} \land P_{32}) \rightarrow P_{33} \\
 \text{(9)} \quad &amp; (P_{33} \land P_{34}) \rightarrow \lnot P_{2} \\[4pt]
@@ -4513,7 +4677,7 @@ the referent and contests only what may be inferred from it.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{32} \\
 \text{(4)} \quad &amp; P_{35} \\
 \text{(5)} \quad &amp; P_{30} \rightarrow P_{31} \\[4pt]
@@ -4531,7 +4695,7 @@ Wegner's objection with Postell's usage parity in play.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{32} \\
 \text{(4)} \quad &amp; P_{35} \\
 \text{(5)} \quad &amp; P_{30} \rightarrow P_{31} \\
@@ -4597,7 +4761,7 @@ near-term setting and the referent principle all stay.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{36} \\
 \text{(4)} \quad &amp; P_{37} \\
 \text{(5)} \quad &amp; P_{34} \\
@@ -4616,7 +4780,7 @@ Wegner's objection with the fathers' sign argument in play.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{72} \\
+\text{(2)} \quad &amp; P_{75} \\
 \text{(3)} \quad &amp; P_{36} \\
 \text{(4)} \quad &amp; P_{37} \\
 \text{(5)} \quad &amp; P_{34} \\
@@ -4838,6 +5002,27 @@ a line of descendants.
 
 No premise here rests on scripture alone.
 
+<a id="sceneCase"></a>
+**`sceneCase`** — The scene read whole: God's sentence on the serpent's power
+
+**The scene read whole**, as a position: the verse is the protoevangelium,
+from the section's own words.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{68} \\
+\text{(2)} \quad &amp; P_{70} \\
+\text{(3)} \quad &amp; P_{67} \\
+\text{(4)} \quad &amp; P_{69} \\
+\text{(5)} \quad &amp; (P_{68} \land P_{70} \land P_{67} \land P_{69}) \rightarrow P_{48} \\[4pt]
+\vdash \quad &amp; P_{48}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
 <a id="aloneCase"></a>
 **`aloneCase`** — The seed of the woman alone
 
@@ -4852,9 +5037,9 @@ virginal conception.
 \text{(3)} \quad &amp; P_{58} \\
 \text{(4)} \quad &amp; P_{59} \\
 \text{(5)} \quad &amp; P_{60} \\
-\text{(6)} \quad &amp; P_{70} \\
+\text{(6)} \quad &amp; P_{73} \\
 \text{(7)} \quad &amp; (P_{47} \land P_{61} \land P_{58} \land P_{59} \land P_{60}) \rightarrow P_{62} \\
-\text{(8)} \quad &amp; (P_{62} \land P_{70}) \rightarrow P_{63} \\[4pt]
+\text{(8)} \quad &amp; (P_{62} \land P_{73}) \rightarrow P_{63} \\[4pt]
 \vdash \quad &amp; P_{63}
 \end{aligned}
 \]
@@ -4968,8 +5153,8 @@ with no human father, delivering the criterion. The rival whose hinge
 \text{(2)} \quad &amp; P_{48} \\
 \text{(3)} \quad &amp; P_{49} \\
 \text{(4)} \quad &amp; P_{50} \\
-\text{(5)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84} \\[4pt]
-\vdash \quad &amp; P_{84}
+\text{(5)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87} \\[4pt]
+\vdash \quad &amp; P_{87}
 \end{aligned}
 \]
 </div>
@@ -5084,8 +5269,8 @@ would state it.
 \text{(4)} \quad &amp; P_{14} \\
 \text{(5)} \quad &amp; P_{8} \\
 \text{(6)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{85} \\[4pt]
-\vdash \quad &amp; \lnot P_{85}
+\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{88} \\[4pt]
+\vdash \quad &amp; \lnot P_{88}
 \end{aligned}
 \]
 </div>
@@ -5112,13 +5297,13 @@ side, which is neither one line nor several converging ones.
 \text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{5} \\
 \text{(8)} \quad &amp; P_{6} \\
-\text{(9)} \quad &amp; P_{70} \\
-\text{(10)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{70}) \rightarrow P_{7} \\
+\text{(9)} \quad &amp; P_{73} \\
+\text{(10)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{73}) \rightarrow P_{7} \\
 \text{(11)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
 \text{(12)} \quad &amp; (P_{5} \land P_{9} \land P_{12}) \rightarrow \lnot P_{14} \\
 \text{(13)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{85} \\[4pt]
-\vdash \quad &amp; \lnot P_{85}
+\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{88} \\[4pt]
+\vdash \quad &amp; \lnot P_{88}
 \end{aligned}
 \]
 </div>
@@ -6633,9 +6818,9 @@ The protoevangelium strand with its hinge read as Luther reads it.
 \text{(2)} \quad &amp; P_{48} \\
 \text{(3)} \quad &amp; P_{49} \\
 \text{(4)} \quad &amp; P_{50} \\
-\text{(5)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84} \\
+\text{(5)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87} \\
 \text{(6)} \quad &amp; P_{50} \rightarrow P_{51} \\[4pt]
-\vdash \quad &amp; P_{84}
+\vdash \quad &amp; P_{87}
 \end{aligned}
 \]
 </div>
@@ -6654,11 +6839,11 @@ The protoevangelium strand with its hinge read as Leupold reads it.
 \text{(2)} \quad &amp; P_{48} \\
 \text{(3)} \quad &amp; P_{49} \\
 \text{(4)} \quad &amp; P_{50} \\
-\text{(5)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{84} \\
-\text{(6)} \quad &amp; P_{70} \\
-\text{(7)} \quad &amp; P_{70} \rightarrow P_{52} \\
+\text{(5)} \quad &amp; (P_{47} \land P_{48} \land P_{49} \land P_{50}) \rightarrow P_{87} \\
+\text{(6)} \quad &amp; P_{73} \\
+\text{(7)} \quad &amp; P_{73} \rightarrow P_{52} \\
 \text{(8)} \quad &amp; P_{50} \rightarrow P_{52} \\[4pt]
-\vdash \quad &amp; P_{84}
+\vdash \quad &amp; P_{87}
 \end{aligned}
 \]
 </div>
@@ -6822,7 +7007,7 @@ Against *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, it cann
   - \\(P_{55}\\) Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's — *consensus*: Gen 16:10; Gen 24:60; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300
   - the step itself — *disputed*: [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
 
-**2. Read as what the wording fits, once fulfilled.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(P_{52}\\) — so read by [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 (*disputed*). It rests the reading on \\(P_{70}\\), \\(P_{70} \rightarrow P_{52}\\).
+**2. Read as what the wording fits, once fulfilled.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(P_{52}\\) — so read by [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 (*disputed*). It rests the reading on \\(P_{73}\\), \\(P_{73} \rightarrow P_{52}\\).
 
 Against *Leupold on 'her seed': her posterity, named for the deception*, it is not reached: *Leupold on 'her seed': her posterity, named for the deception* holds, and can be held together with it.
 
@@ -10050,7 +10235,7 @@ Romans 16:20, "the God of peace shall bruise Satan under your feet shortly", is
 left out: it is an allusion, and a disputed one (`fulfilmentLine` gives both
 sides).
 
-### Three positions
+### Four positions
 
 - **The fulfilment, confirming the promise** (`fulfilmentCase`). From the terms
   met (`fulfilmentLine`): in Jesus the promise is fulfilled. From the fulfilment
@@ -10065,6 +10250,11 @@ sides).
   at 3:15b it is "he" who strikes the serpent's own head, and the Greek
   translator read one person; so "her seed" is not only a line of descendants
   (Collins, Alexander, Leupold, Hamilton).
+- **The scene read whole** (`sceneCase`): the serpent speaks and twists God's
+  command, as no animal does of itself; it is the instrument of an evil power;
+  the blow falls on the serpent itself; and God sets the enmity. So the sentence
+  on the serpent is a promise of victory over that power (Collins, Woudstra,
+  Keil).
 
 ### What the confirmation shows, and what it does not
 
@@ -10094,18 +10284,22 @@ not show that the wording foretold it, which is Luther's claim and is weighed in
   promise in the curse; and Keil with him.
 - **Westermann's first ground**, "a line of descendants and not an individual",
   is `disputed` too, on Collins, Leupold, Alexander and Hamilton.
+- **The scene's step** is `plausible`: Woudstra grants every ground and holds
+  that "the term 'protevangelium' may be rightly used". Its ground that the
+  serpent is the instrument of an evil power is `disputed`, on Westermann.
 - **The syntax's step** is `disputed`, on Keil, who grants that the word can
   name one son and that the victory is over the serpent itself, and denies "one
   individual only". Collins himself claims no more than that the syntax is
   "quite consistent with" one person.
 
 Each position is only as strong as its weakest link, and each rests on a step
-rated `disputed`. Westermann and the fulfilment defeat each other; Westermann
-and the syntax defeat each other, the syntax by denying his ground; the
-fulfilment and the syntax stand together. So **nothing prevails**
-(`nothing_prevails_over_the_promise`). The fulfilment with the syntax can be
-defended (`fulfilment_is_one_resolution`), and so can Westermann
-(`westermann_is_the_other_resolution`); neither is forced.
+rated `disputed`. Westermann and the fulfilment defeat each other, and so do
+Westermann and the scene; Westermann and the syntax defeat each other, the syntax
+by denying his ground; the fulfilment, the syntax and the scene stand together.
+So **nothing prevails** (`nothing_prevails_over_the_promise`). The fulfilment
+with the syntax and the scene can be defended (`fulfilment_is_one_resolution`),
+and so can Westermann (`westermann_is_the_other_resolution`); neither is
+forced.
 
 That is the verdict as the evidence weighs it. Whether Westermann's dissent
 should be heard against a step whose grounds are all Scripture is a question of
@@ -10124,6 +10318,30 @@ readings of `Results.Genesis` do; none bears on what it is used for.
 
 ```lean
 def westermannReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.genesis3_15IsProtoevangelium => False
+    | Claim.jesusFulfilsThePromise => False
+    | Claim.seedWasOfTheWomanAlone => False
+    | Claim.wordingSignifiesAFatherlessBirth => False
+    | Claim.serpentIsTheInstrumentOfAPower => False
+    | Claim.parthenosMeantYoungWoman => False
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
+    | x => True
+```
+
+<a id="curseWithoutPromiseReading"></a>
+**`curseWithoutPromiseReading`**
+
+A reading no cited reader holds, written down to show what the scene's step
+adds: the serpent twists the command, an evil power stands behind it, the blow
+falls on the serpent itself and God sets the enmity — and still the verse is no
+promise, and no one fulfils it. It is a model of the scene's grounds without its
+step.
+
+```lean
+def curseWithoutPromiseReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.genesis3_15IsProtoevangelium => False
@@ -10316,6 +10534,43 @@ theorem syntax_rests_on_its_step : ¬Entails syntaxLine.grounds (notP
 -- axioms: propext, Quot.sound
 ```
 
+#### The scene read whole
+
+<a id="sceneCase_establishes"></a>
+**`sceneCase_establishes`**
+
+The scene's case delivers its conclusion.
+
+```lean
+theorem sceneCase_establishes : Establishes sceneCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="sceneCase_is_satisfiable"></a>
+**`sceneCase_is_satisfiable`**
+
+The scene's premises can all be true together, on Luther's reading.
+
+```lean
+theorem sceneCase_is_satisfiable : Satisfiable sceneCase.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="scene_rests_on_its_step"></a>
+**`scene_rests_on_its_step`**
+
+**The scene rests on its step.** Grant that the serpent twists the command,
+that an evil power stands behind it, that the blow falls on the serpent itself,
+and that God sets the enmity: the verse may still be a sentence and no promise.
+The section's words do not force it; reading a promise out of the curse does,
+and that is the step rated `plausible`.
+
+```lean
+theorem scene_rests_on_its_step : ¬Entails sceneLine.grounds (p
+    Claim.genesis3_15IsProtoevangelium)
+-- axioms: propext, Quot.sound
+```
+
 #### Strength
 
 <a id="fulfilmentCase_strength"></a>
@@ -10348,6 +10603,17 @@ The syntax's grounds are `consensus` and `wellSupported`, but its step is
 
 ```lean
 theorem syntaxCase_strength : syntaxCase.strength = 0
+-- axioms: propext
+```
+
+<a id="sceneCase_strength"></a>
+**`sceneCase_strength`**
+
+The scene's step is `plausible`, but its ground that the serpent is the
+instrument of an evil power is `disputed`, on Westermann.
+
+```lean
+theorem sceneCase_strength : sceneCase.strength = 0
 -- axioms: propext
 ```
 
@@ -10389,6 +10655,7 @@ def promisePartyNode : PromiseParty → ArgumentPackage Claim :=
     | PromiseParty.fulfilment => fulfilmentCase
     | PromiseParty.westermann => westermannCase
     | PromiseParty.syntax => syntaxCase
+    | PromiseParty.scene => sceneCase
 ```
 
 <a id="promiseDispute"></a>
@@ -10403,7 +10670,7 @@ def promiseDispute : Dispute Claim PromiseParty :=
   { node := promisePartyNode,
     consistent := promiseDispute._proof_1,
     sound := promiseDispute._proof_2,
-    rated := promiseDispute._proof_6 }
+    rated := promiseDispute._proof_7 }
 ```
 
 <a id="promisePartyDefeats"></a>
@@ -10424,6 +10691,10 @@ def promisePartyDefeats : PromiseParty → PromiseParty → Prop :=
       PromiseParty.westermann => True
     | PromiseParty.westermann,
       PromiseParty.syntax => True
+    | PromiseParty.scene, PromiseParty.westermann =>
+      True
+    | PromiseParty.westermann, PromiseParty.scene =>
+      True
     | x, x_2 => False
 ```
 
@@ -10451,8 +10722,8 @@ theorem promisePartyNode_strength : ∀ (i : PromiseParty), (promisePartyNode
 <a id="promiseDispute_defeats"></a>
 **`promiseDispute_defeats`**
 
-**Who defeats whom**, all nine pairs: Westermann defeats the fulfilment and
-the syntax, and each defeats him back; and nothing else. Every cell is computed
+**Who defeats whom**, all sixteen pairs: Westermann defeats the fulfilment,
+the syntax and the scene, and each defeats him back; and nothing else. Every cell is computed
 from what the parties hold by `Horn.defeats?` and checked by the kernel.
 
 ```lean
@@ -10472,7 +10743,7 @@ def promiseFinite : Solver.Finite promiseDispute.defeats :=
     parties :=
       [PromiseParty.fulfilment,
         PromiseParty.westermann,
-        PromiseParty.syntax],
+        PromiseParty.syntax, PromiseParty.scene],
     complete := promiseFinite._proof_1,
     defeats := fun i j => decide (promisePartyDefeats i j),
     spec := promiseFinite._proof_2 }
@@ -10488,8 +10759,9 @@ Why nothing prevails: every party has a defeater.
 - *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The fulfilment of Genesis 3:15 confirms the promise*.
 - *The fulfilment of Genesis 3:15 confirms the promise* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*.
 - *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The syntax of the striker: 'he' who strikes is one descendant*.
+- *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The scene read whole: God's sentence on the serpent's power*.
 
-**What this rests on.** The reasons state 3 defeats and 0 absences of defeat, each a cell of the defeat table, [`promiseDispute_defeats`](#promiseDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 4 defeats and 0 absences of defeat, each a cell of the defeat table, [`promiseDispute_defeats`](#promiseDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Westermann: a punishment oracle on a line of descendants, and no promise*, weakest at *disputed*:
   - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), p. 363; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
@@ -10499,12 +10771,15 @@ Why nothing prevails: every party has a defeater.
 - *The syntax of the striker: 'he' who strikes is one descendant*, weakest at *disputed*:
   - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300; [`philo-allegorical-interpretation-40`](../bibliography.md#philo-allegorical-interpretation-40), §III.188
   - an inference step — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 171
+- *The scene read whole: God's sentence on the serpent's power*, weakest at *disputed*:
+  - The serpent of Genesis 3 is the instrument of an evil power — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261
 
 <a id="nothing_prevails_over_the_promise"></a>
 **`nothing_prevails_over_the_promise`**
 
 **As the evidence weighs it, nothing prevails**: Westermann defeats the
-fulfilment and the syntax, each defeats him back, and none outranks another.
+fulfilment, the syntax and the scene, each defeats him back, and none outranks
+another.
 
 ```lean
 theorem nothing_prevails_over_the_promise : Framework.grounded
@@ -10515,23 +10790,26 @@ theorem nothing_prevails_over_the_promise : Framework.grounded
 <a id="fulfilmentAlone"></a>
 **`fulfilmentAlone`**
 
-Why the fulfilment with the syntax is one resolution.
+Why the fulfilment with the syntax and the scene is one resolution.
 
-**A maximal defensible position: *The fulfilment of Genesis 3:15 confirms the promise*, *The syntax of the striker: 'he' who strikes is one descendant*.**
+**A maximal defensible position: *The fulfilment of Genesis 3:15 confirms the promise*, *The syntax of the striker: 'he' who strikes is one descendant*, *The scene read whole: God's sentence on the serpent's power*.**
 
-- None of *The fulfilment of Genesis 3:15 confirms the promise*, *The syntax of the striker: 'he' who strikes is one descendant* defeats another, and each attack on them is answered from among them:
+- None of *The fulfilment of Genesis 3:15 confirms the promise*, *The syntax of the striker: 'he' who strikes is one descendant*, *The scene read whole: God's sentence on the serpent's power* defeats another, and each attack on them is answered from among them:
   - *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The fulfilment of Genesis 3:15 confirms the promise*, and *The fulfilment of Genesis 3:15 confirms the promise* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*.
   - *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The syntax of the striker: 'he' who strikes is one descendant*, and *The fulfilment of Genesis 3:15 confirms the promise* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*.
+  - *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The scene read whole: God's sentence on the serpent's power*, and *The fulfilment of Genesis 3:15 confirms the promise* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*.
 - Nothing can be added to it:
   - *Westermann: a punishment oracle on a line of descendants, and no promise* conflicts with *The fulfilment of Genesis 3:15 confirms the promise*: *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The fulfilment of Genesis 3:15 confirms the promise*, and *The fulfilment of Genesis 3:15 confirms the promise* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*.
 
-**What this rests on.** The reasons state 3 defeats and 4 absences of defeat, each a cell of the defeat table, [`promiseDispute_defeats`](#promiseDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 4 defeats and 9 absences of defeat, each a cell of the defeat table, [`promiseDispute_defeats`](#promiseDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The fulfilment of Genesis 3:15 confirms the promise*, weakest at *disputed*:
   - an inference step — [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
 - *The syntax of the striker: 'he' who strikes is one descendant*, weakest at *disputed*:
   - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300; [`philo-allegorical-interpretation-40`](../bibliography.md#philo-allegorical-interpretation-40), §III.188
   - an inference step — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 171
+- *The scene read whole: God's sentence on the serpent's power*, weakest at *disputed*:
+  - The serpent of Genesis 3 is the instrument of an evil power — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261
 - *Westermann: a punishment oracle on a line of descendants, and no promise*, weakest at *disputed*:
   - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), p. 363; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
   - an inference step — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
@@ -10539,12 +10817,14 @@ Why the fulfilment with the syntax is one resolution.
 <a id="fulfilment_is_one_resolution"></a>
 **`fulfilment_is_one_resolution`**
 
-**The fulfilment can be defended, with the syntax**: neither attacks the
-other, and each answers Westermann, the only party that attacks either.
+**The fulfilment can be defended, with the syntax and the scene**: none of
+the three attacks another, and each answers Westermann, the only party that
+attacks any of them.
 
 ```lean
 theorem fulfilment_is_one_resolution : Framework.Preferred
-    promiseDispute.defeats {PromiseParty.fulfilment, PromiseParty.syntax}
+    promiseDispute.defeats {PromiseParty.fulfilment, PromiseParty.syntax,
+    PromiseParty.scene}
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -10558,11 +10838,13 @@ Why Westermann is the other resolution.
 - *Westermann: a punishment oracle on a line of descendants, and no promise* does not defeat itself, and answers each attack on it:
   - *The fulfilment of Genesis 3:15 confirms the promise* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*, and *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The fulfilment of Genesis 3:15 confirms the promise*.
   - *The syntax of the striker: 'he' who strikes is one descendant* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*, and *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The syntax of the striker: 'he' who strikes is one descendant*.
+  - *The scene read whole: God's sentence on the serpent's power* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*, and *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The scene read whole: God's sentence on the serpent's power*.
 - Nothing can be added to it:
   - *The fulfilment of Genesis 3:15 confirms the promise* conflicts with *Westermann: a punishment oracle on a line of descendants, and no promise*: *The fulfilment of Genesis 3:15 confirms the promise* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*, and *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The fulfilment of Genesis 3:15 confirms the promise*.
   - *The syntax of the striker: 'he' who strikes is one descendant* conflicts with *Westermann: a punishment oracle on a line of descendants, and no promise*: *The syntax of the striker: 'he' who strikes is one descendant* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*, and *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The syntax of the striker: 'he' who strikes is one descendant*.
+  - *The scene read whole: God's sentence on the serpent's power* conflicts with *Westermann: a punishment oracle on a line of descendants, and no promise*: *The scene read whole: God's sentence on the serpent's power* defeats *Westermann: a punishment oracle on a line of descendants, and no promise*, and *Westermann: a punishment oracle on a line of descendants, and no promise* defeats *The scene read whole: God's sentence on the serpent's power*.
 
-**What this rests on.** The reasons state 4 defeats and 1 absence of defeat, each a cell of the defeat table, [`promiseDispute_defeats`](#promiseDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 6 defeats and 1 absence of defeat, each a cell of the defeat table, [`promiseDispute_defeats`](#promiseDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Westermann: a punishment oracle on a line of descendants, and no promise*, weakest at *disputed*:
   - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), p. 363; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
@@ -10572,6 +10854,8 @@ Why Westermann is the other resolution.
 - *The syntax of the striker: 'he' who strikes is one descendant*, weakest at *disputed*:
   - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300; [`philo-allegorical-interpretation-40`](../bibliography.md#philo-allegorical-interpretation-40), §III.188
   - an inference step — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 171
+- *The scene read whole: God's sentence on the serpent's power*, weakest at *disputed*:
+  - The serpent of Genesis 3 is the instrument of an evil power — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261
 
 <a id="westermann_is_the_other_resolution"></a>
 **`westermann_is_the_other_resolution`**

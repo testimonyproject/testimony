@@ -198,6 +198,9 @@ def cite : Claim → AtomMeta
   | .seedIsLineNotIndividual => seedIsLineNotIndividualCited
   | .seedUsedOfOneDescendant => seedUsedOfOneDescendantCited
   | .strikerIsSingular => strikerIsSingularCited
+  | .serpentTwistsTheCommand => serpentTwistsTheCommandCited
+  | .godSetsTheEnmity => godSetsTheEnmityCited
+  | .serpentIsTheInstrumentOfAPower => serpentIsTheInstrumentOfAPowerCited
   | .harahIsPredicateAdjective => harahIsPredicateAdjectiveCited
   | .isaianicAlmahIsAlreadyPregnant => isaianicAlmahIsAlreadyPregnantCited
   | .pregnancyAtTheSignIsOrdinary => pregnancyAtTheSignIsOrdinaryCited

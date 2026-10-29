@@ -690,6 +690,30 @@ Crossref gives no pages; the PDF's running heads give 363–67. -/
   , issue := some "2"
   , pages := some (363, 367) }
 
+/-- Woudstra on the newer translations of Genesis 3:15. Cited for the reading of
+the whole scene: "as one reads Genesis 3 one does indeed become conscious of such
+a force. There is a diabolical subtlety in the serpent's suggestions which points
+to a sinister background to his words. Later Scripture abundantly confirms this
+opinion" (197); "it is the head of the serpent, not that of his zeraʿ, which is
+in view here" (199); and, though "this passage does not explicitly predict
+ultimate victory of the woman's seed", God's setting of the enmity is "a
+tremendous initiative for good", and "the term 'protevangelium' may be rightly
+used to describe it" (203). Read from the PDF the seminary permits, whose header
+gives the journal, volume and pages. -/
+@[bib_entry] def woudstraRecentTranslations : BibEntry := .article
+  { core :=
+      { key := "woudstra-recent-translations-1971"
+      , contributors := { authors := [.person "Marten H." "Woudstra"] }
+      , title := "Recent Translations of Genesis 3:15"
+      , year := some { value := 1971 }
+      , identifiers :=
+          [ .url
+              "https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_Gen3_15_CTJ.pdf"
+              (some "2026-10-29") ] }
+  , journal := "Calvin Theological Journal"
+  , volume := some "6"
+  , pages := some (194, 203) }
+
 /-- Westermann's commentary on Genesis 1–11, in Scullion's translation. Cited for
 the critical denial that Genesis 3:15 is a promise: "The parallelism makes it
 clear that 'seed' refers to a line of descendants and not to an individual"

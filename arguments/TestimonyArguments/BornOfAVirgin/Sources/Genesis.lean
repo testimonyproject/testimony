@@ -359,4 +359,58 @@ def strikerIsSingularCited : AtomMeta :=
       , tradition := .criticalScholarship
       , confidence := .consensus } }
 
+/-- `serpentTwistsTheCommand`. What the text reads: the serpent speaks, and
+gives back God's command of 2:17 twisted — "Yea, hath God said, Ye shall not eat
+of every tree of the garden?" (3:1), "Ye shall not surely die" (3:4). Collins:
+"the snake's wording of v. 4 reflects knowledge of 2:17", and "animals do not
+have faculty of speech in Bible, hence there is some intervention here (cf Nu.
+22:28)" (146 n. 21). `consensus`: it is what the text reads. -/
+def serpentTwistsTheCommandCited : AtomMeta :=
+  { label := "In Genesis 3 the serpent speaks, and knows and twists God's command"
+  , kind := .textual
+  , source :=
+      { primary := .scripture Testimony.Scripture.serpentTwistsTheCommand
+      , supporting := [.work collinsSyntacticalNote (.page 146)]
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `godSetsTheEnmity`. What the text reads: "I will put enmity" (3:15), with God
+as the subject. Woudstra: "The mere fact of God's 'setting' of the enmity is a
+tremendous initiative for good, unexpected and unmerited" (203). `consensus` for
+the wording. -/
+def godSetsTheEnmityCited : AtomMeta :=
+  { label := "God sets the enmity himself: 'I will put enmity' (3:15)"
+  , kind := .textual
+  , source :=
+      { primary := .scripture [verseIn .masoretic genesis3_15]
+      , supporting := [.work woudstraRecentTranslations (.page 203)]
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `serpentIsTheInstrumentOfAPower`. Delitzsch, as Collins quotes him: "an
+animal is intended, but an animal not speaking of its own accord, but as made the
+instrument of itself by the evil principle"; and Collins: "in view of the place
+of the story in the structure of Genesis it is hard to believe that only a snake
+is intended here … the referent of the second person pronoun would actually be
+the dark power behind the snake" (146–47). Woudstra: "as one reads Genesis 3 one
+does indeed become conscious of such a force. There is a diabolical subtlety in
+the serpent's suggestions … Later Scripture abundantly confirms this opinion"
+(197). Keil: "This foe is Satan" (101–2).
+
+`disputed`: Westermann sides with Holzinger, "the animal is being punished and
+not some demonic power behind it" (261). Of the readers before Christ, none found
+puts the devil behind the serpent beyond doubt: Wisdom 2:24's "envy of the
+devil" does not name it, and is read by some of Cain. -/
+def serpentIsTheInstrumentOfAPowerCited : AtomMeta :=
+  { label := "The serpent of Genesis 3 is the instrument of an evil power"
+  , kind := .interpretive
+  , source :=
+      { primary := .work collinsSyntacticalNote (.pages 146 147)
+      , supporting :=
+          [ .work woudstraRecentTranslations (.page 197)
+          , .work keilDelitzschPentateuch (.pages 101 102)
+          , .work westermannGenesis (.page 261) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
 end TestimonyArguments.BornOfAVirgin

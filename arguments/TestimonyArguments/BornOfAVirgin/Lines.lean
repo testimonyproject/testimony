@@ -897,6 +897,17 @@ def formExcludesAPromise : Formula Claim :=
   ⋀ [ p .seedIsLineNotIndividual, p .verseIsACurseOnTheSerpent ]
   ➝ notP .genesis3_15IsProtoevangelium
 
+/-- **The scene read whole.** The serpent speaks and twists God's command, as no
+animal does of itself; it is the instrument of an evil power; the blow falls on
+the serpent itself, "your head"; and God himself sets the enmity. So the
+sentence on the serpent is God's promise of victory over that power: the
+protoevangelium. -/
+@[bornOfAVirginDefs]
+def sceneMakesItAPromise : Formula Claim :=
+  ⋀ [ p .serpentTwistsTheCommand, p .serpentIsTheInstrumentOfAPower
+    , p .strikerIsSingular, p .godSetsTheEnmity ]
+  ➝ p .genesis3_15IsProtoevangelium
+
 /-- **The syntax of the striker.** זֶרַע with singular verbs and pronouns denotes
 one descendant elsewhere; at 3:15b the striker is singular "he", against the
 serpent's own head; and the Greek translator read one person. So "her seed" at
@@ -1070,6 +1081,63 @@ def westermannLine : Line Claim :=
           , .work keilDelitzschPentateuch (.page 102) ]
       , tradition := .criticalScholarship
       , confidence := .disputed } }
+
+/-- **The scene read whole**, from the section and not the word alone: what
+Genesis 3 says of the serpent, of whom the blow falls on, and of who sets the
+enmity.
+
+- **The serpent speaks, and knows the command.** It gives back God's word of
+  2:17 twisted, "Ye shall not surely die" (3:4). Collins: "the snake's wording of
+  v. 4 reflects knowledge of 2:17", and "animals do not have faculty of speech in
+  Bible, hence there is some intervention here" (146 n. 21).
+- **It is the instrument of an evil power.** Delitzsch, as Collins quotes him:
+  "an animal not speaking of its own accord, but as made the instrument of itself
+  by the evil principle". Woudstra: "There is a diabolical subtlety in the
+  serpent's suggestions which points to a sinister background to his words"
+  (197). This ground is `disputed` (`serpentIsTheInstrumentOfAPower`).
+- **The blow falls on the serpent itself**: "it is the head of the serpent, not
+  that of his zeraʿ, which is in view here" (Woudstra 199).
+- **God sets the enmity**: "a tremendous initiative for good, unexpected and
+  unmerited" (Woudstra 203).
+
+So the sentence on the serpent is a promise of victory over the power behind it.
+Collins: "the referent of the second person pronoun would actually be the dark
+power behind the snake" (146–47 n. 21), and "the 'promise' for the humans is an
+implicature of the punishment on the snake" (147 n. 22). Keil: "This foe is
+Satan, who incessantly opposes the seed of the woman and bruises its heel, but
+is eventually to be trodden under its feet" (101–2).
+
+**Its rating.** `plausible`. Woudstra grants every ground and does not deny the
+conclusion: though "this passage does not explicitly predict ultimate victory of
+the woman's seed", "the One who set the enmity might also be regarded as
+implicitly guaranteeing the ultimate success of those who are on his side", and
+"the term 'protevangelium' may be rightly used to describe it" (203). Westermann,
+who denies the conclusion, denies that the serpent is more than an animal (261),
+and that dissent belongs to the ground. Von Rad, as Woudstra quotes him, denies
+a protevangelium from "the sense of the passage" and the collective "seed"
+(194); he is not shown to grant the grounds. Rated no higher, because the step
+reads a promise out of a curse, which Collins calls "an implicature" and
+Woudstra "implicit".
+
+None of this is the reading of the readers before Christ: Jubilees, Philo and
+Josephus read the serpent as an animal or an emblem, and none of them reads the
+verse as a promise. It is an exegesis of the section, from its own words. -/
+@[bornOfAVirginDefs]
+def sceneLine : Line Claim :=
+  { name := "The scene read whole: God's sentence on the serpent's power"
+  , grounds :=
+      [ p .serpentTwistsTheCommand, p .serpentIsTheInstrumentOfAPower
+      , p .strikerIsSingular, p .godSetsTheEnmity ]
+  , step := sceneMakesItAPromise
+  , delivers := p .genesis3_15IsProtoevangelium
+  , inference := some
+      { primary := .work collinsSyntacticalNote (.pages 146 147)
+      , supporting :=
+          [ .work woudstraRecentTranslations (.pageList [197, 199, 203])
+          , .work keilDelitzschPentateuch (.pages 101 102)
+          , .work westermannGenesis (.page 261) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .plausible } }
 
 /-- **The syntax of the striker**, against Westermann's "a line of descendants
 and not an individual". Collins: when זֶרַע "denotes a specific descendant, it

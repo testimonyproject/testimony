@@ -447,6 +447,12 @@ a line of descendants. -/
 def syntaxCase : ArgumentPackage Claim :=
   syntaxLine.asPackage cite "At Genesis 3:15 'her seed' is not only a line of descendants"
 
+/-- **The scene read whole**, as a position: the verse is the protoevangelium,
+from the section's own words. -/
+@[bornOfAVirginDefs]
+def sceneCase : ArgumentPackage Claim :=
+  sceneLine.asPackage cite "Genesis 3:15 is the protoevangelium, read from the scene"
+
 /-- **The seed of the woman alone**, as a position: the fulfilment, with the
 virginal conception. -/
 @[bornOfAVirginDefs]

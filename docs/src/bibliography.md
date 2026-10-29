@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-174 entries, of which 29 carry no stable public identifier.
+175 entries, of which 29 carry no stable public identifier.
 
 - <a id="achtemeier-1-peter-1996"></a>**`achtemeier-1-peter-1996`** — Paul J. Achtemeier. *1 Peter: A Commentary on First Peter*. Minneapolis: Fortress Press. Hermeneia. 1996. ISBN 9780800660307.
 - <a id="akin-woman-seed-serpent-1999"></a>**`akin-woman-seed-serpent-1999`** — Jimmy Akin. *The Woman, the Seed, the Serpent*. Catholic Answers. 1999. [https://www.catholic.com/magazine/print-edition/the-woman-the-seed-the-serpent](https://www.catholic.com/magazine/print-edition/the-woman-the-seed-the-serpent).
@@ -176,6 +176,7 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - <a id="westermann-genesis-1-11-1984"></a>**`westermann-genesis-1-11-1984`** — Claus Westermann. *Genesis 1–11: A Commentary*. Translated by John J. Scullion. Minneapolis: Augsburg Publishing House. 1984. ISBN 0806619627.
 - <a id="westminster-confession-1647"></a>**`westminster-confession-1647`** — Westminster Assembly. *The Westminster Confession of Faith*. Westminster Assembly. 1647. *(no public identifier)* Cited by chapter and section; no critical edition catalogued.
 - <a id="whitaker-disputation-1849"></a>**`whitaker-disputation-1849`** — William Whitaker. *A Disputation on Holy Scripture: Against the Papists, Especially Bellarmine and Stapleton*. Translated by William Fitzgerald. Cambridge: Printed at the University Press. Parker Society 45. 1849. *(no public identifier)* Latin original 1588. The Soli Deo Gloria reprint (2000) carries ISBN 9781573580908, the Wipf & Stock reprint (2004) ISBN 9781592445530; neither is the pagination cited here.
+- <a id="woudstra-recent-translations-1971"></a>**`woudstra-recent-translations-1971`** — Marten H. Woudstra. *Recent Translations of Genesis 3:15*. *Calvin Theological Journal* 6: 194–203. 1971. [https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_Gen3_15_CTJ.pdf](https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_Gen3_15_CTJ.pdf).
 - <a id="wright-justification-2009"></a>**`wright-justification-2009`** — N. T. Wright. *Justification: God's Plan and Paul's Vision*. Downers Grove, IL: IVP Academic. 2009. ISBN 9780830838639.
 - <a id="wright-what-paul-said-1997"></a>**`wright-what-paul-said-1997`** — N. T. Wright. *What Saint Paul Really Said: Was Paul of Tarsus the Real Founder of Christianity?*. Grand Rapids: Wm. B. Eerdmans. 1997. ISBN 9780802844453.
 - <a id="young-immanuel-prophecy-1953"></a>**`young-immanuel-prophecy-1953`** — Edward J. Young. *The Immanuel Prophecy: Isaiah 7:14–16*. *Westminster Theological Journal* 15.2: 97–124. 1953. [https://www.galaxie.com/article/wtj15-2-01](https://www.galaxie.com/article/wtj15-2-01). First of two parts; the second appeared in a later issue.
