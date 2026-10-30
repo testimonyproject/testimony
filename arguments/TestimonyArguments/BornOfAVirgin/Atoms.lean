@@ -74,9 +74,10 @@ inductive Claim
   /-- In early Greek literature παρθένος meant a young woman of marriageable age,
   with or without virginity. -/
   | earlyGreekParthenosIsYoungWoman
-  /-- The Septuagint calls Dinah a παρθένος after Shechem has lain with her
-  (Genesis 34:2–3). -/
-  | dinahIsAParthenosAfterShechem
+  /-- The Septuagint calls Dinah a παρθένος at Genesis 34:3, the verse after
+  Shechem lies with her (34:2). What the text reads, and nothing about when the
+  noun's description held of her. -/
+  | greekCallsDinahParthenos
   /-- Wherever else the Greek Isaiah has παρθένος — 23:4, 37:22, 47:1 and 62:5 —
   it renders בְּתוּלָה. -/
   | isaiahUsesParthenosForBetulah
@@ -248,6 +249,9 @@ inductive Claim
   /-- In the Septuagint, παρθένος did not by itself connote virginity.
   **Miller's thesis.** -/
   | parthenosDoesNotItselfConnoteVirginity
+  /-- At Genesis 34:3 the Greek's παρθένος describes Dinah as she was after the
+  attack, no longer a virgin. **Miller's premise.** -/
+  | parthenosDescribesDinahAsSheThenWas
   /-- Micah 5:3 names only "she who is in labour" as bearing the coming ruler,
   with no father mentioned. -/
   | micah5_3NamesMotherOnly

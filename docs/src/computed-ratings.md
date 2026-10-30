@@ -151,18 +151,21 @@ Sola fide has six exclusions and no entailments (`TestimonyArguments.Meanings.So
 Every dissent gets the same background, whichever side it is on. Sola scriptura has one exclusion
 and two entailments (`TestimonyArguments.Meanings.SolaScriptura.joins`): Mark 7's principle against
 binding a commandment of men as God's word, and "Scripture is the sole infallible rule" asserting
-that it is infallible and that no other rule is. The virgin birth has five exclusions and three
+that it is infallible and that no other rule is. The virgin birth has eleven exclusions and five
 entailments (`TestimonyArguments.Meanings.BornOfAVirgin.joins`): Wegner's claim that in the
 Septuagint's day παρθένος meant "young woman" and did not yet mean "virgin", against Rico and
 Gentry's that it meant "virgin", against the laws of the Greek Pentateuch, which use it in that
-sense, and against the status reading of Genesis 34:3, which reads it so there; Brown's "Micah's
+sense, against the status reading of Genesis 34:3, which reads it so there, and against Matthew's
+reading of the Greek of Isaiah 7:14; Miller's thesis that the word did not by itself connote
+virginity, against each of those senses, and Wegner's claim asserting it; Miller's premise that the
+noun of Genesis 34:3 describes Dinah as she then was, against the status reading; Brown's "Micah's
 silence proves nothing" against Miravalle's "it indicates a fatherless birth"; Westminster's supreme
 judge against "magisterial teaching settles the question"; "עַלְמָה denotes a virgin" asserting that
-its range admits the sense; and the laws' sense, and the status reading's, each asserting Rico and
-Gentry's claim. The joins of the laws and of Genesis 34:3 are derived by what a usage is
-(`Testimony.Ontology.Usage`). The first exclusions are the ones the Septuagint dispute turns on:
-Wegner's case attacks the Septuagint's witness, the laws and the status reading through them, and
-each attacks back. Spirit baptism has two exclusions
+its range admits the sense; and the laws' sense, the status reading's and Matthew's, each asserting
+Rico and Gentry's claim. The joins of the laws, of Genesis 34:3 and of Isaiah 7:14 are derived by
+what a usage is (`Testimony.Ontology.Usage`). The exclusions on παρθένος are the ones the
+Septuagint dispute turns on: Wegner's case and Miller's attack the Septuagint's witness, the laws
+and the status reading through them, and each attacks back. Spirit baptism has two exclusions
 (`TestimonyArguments.Meanings.SpiritBaptism.joins`): the Assemblies of God's reading of 1
 Corinthians 12:13, "not Christ baptizing in the Spirit", against Dunn's and Stott's; and Luke's
 narratives as a pattern for believers today against Stott's "not a pattern". The second removed a
@@ -309,19 +312,44 @@ A dissent may rest on a claim about what a text reads, and the text may read oth
 claim is recorded as a `Refutation`: the claim, what the text reads, and the citation of the
 text. It counts only if the citation is Scripture rated `consensus`, so that what is struck is
 struck by the text and not by a reader's say-so. The refuted claim is taken out of the
-dissent's premises, and every check runs on what is left. A dissent that needed the claim to
-deny the step no longer denies it, and is not credible under any standard; one whose denial
-stands on other evidence stays credible, and the page shows what was struck.
+dissent's premises, with every step drawn from it, and every check runs on what is left. A
+dissent that needed the claim to deny the step no longer denies it, and is not credible under
+any standard; one whose denial stands on other evidence stays credible, and the page shows what
+was struck.
 
 The first case is Miller's dissent from the laws of the Greek Pentateuch
 (`TestimonyArguments.BornOfAVirgin.Dispute.Miller`). He gives two uses of παρθένος of women
 who are not virgins. One is his "young widow" at Joel 1:8, where the Greek calls the woman
-νύμφην, a bride; that claim is struck. The other is Genesis 34:3, where the Greek does call
-Dinah a παρθένος after Shechem; that stands, and carries his denial
-(`miller_survives_on_genesis`). Had Joel 1:8 been all his evidence, the dissent would not count
-(`miller_on_joel_alone_does_not_count`). What the rule does not do is weigh the evidence that
-stands: Genesis 34:3 is answered by an argument, the status reading, and an argument strikes
-nothing.
+νύμφην, a bride; that claim is struck. The other is Genesis 34:3, where the Greek calls Dinah a
+παρθένος in the verse after Shechem lies with her. That reading stands. His denial needs more
+than it: his premise that the noun describes Dinah as she then was, which is his reading of
+the verse, not the text (`miller_rests_on_the_noun`). Had Joel 1:8 been all his evidence, the
+dissent would not count (`miller_on_joel_alone_does_not_count`). What the rule does not do is
+weigh the evidence that stands: Genesis 34:3 is answered by an argument, the status reading,
+and an argument strikes nothing. It is weighed, in a dispute, and the next section says what
+follows.
+
+## Dissents overruled in a dispute
+
+A credible dissent can still lose when it is weighed. It is **overruled** (`Overruled`) when
+its position, with what the texts refute struck, is a party of a dispute and belongs to no
+admissible set of it: however the dispute's standoffs are resolved, nothing defends it. An
+overruled dissent stops counting against the step, and the step's rating names it.
+
+Phase three below explains why folding survival into ratings is circular in general: ratings
+decide defeats, and defeats would decide ratings. An overruling avoids the circle with one
+condition. The dispute must weigh the step the dissent is against at its floor, with every
+citation of the step's support rated `disputed`. The dissent is then overruled with the step
+at its weakest, so the overruling owes nothing to the rating it lets stand.
+
+Miller's case from Genesis 34:3 is a party in the dispute over the Septuagint's word. The
+status reading of the verse defeats it, and nothing defeats the status reading, so nothing
+defends Miller (`miller_indefensible`). That dispute cites the laws' step `disputed`. So the
+laws' step stands at its cited `wellSupported` under every standard (`laws_step_ratings`).
+Under the evidence and tradition standards that is because Miller is overruled; under the
+Scripture standard, because his premise about the noun is not Scripture and he is not heard.
+The overruling turns on the status reading's step, rated `plausible`: rated `disputed`, it
+would not outrank Miller, and his dissent would count again.
 
 ## Phase two: every dispute weighs computed ratings
 
@@ -337,9 +365,9 @@ ratings, so the computed ratings are fixed before the solver runs.
 
 ## Phase three: survival, and preferences as arguments
 
-A credible dissent can still lose the weighing. Phase one does not let that survival feed
-back into the rating. `Contested` and `DenialAnswered` (`Testimony.Logic.Contest`) report it
-after the fact.
+A credible dissent can still lose the weighing. Apart from an overruling, with the step at
+its floor (above), survival does not feed back into the rating. `Contested` and
+`DenialAnswered` (`Testimony.Logic.Contest`) report it after the fact.
 
 Folding survival into the rating is circular: ratings decide defeats, and defeats would
 decide ratings. Iterating to a fixpoint is not safe either. Lowering one step's rating can

@@ -302,7 +302,7 @@ Dinah one after Shechem has lain with her; so in the Septuagint's day the word
 meant "young woman", and the sense "virgin" came later. -/
 @[bornOfAVirginDefs]
 def dinahShowsTheOlderSense : Formula Claim :=
-  ⋀ [ p .earlyGreekParthenosIsYoungWoman, p .dinahIsAParthenosAfterShechem ]
+  ⋀ [ p .earlyGreekParthenosIsYoungWoman, p .greekCallsDinahParthenos ]
   ➝ p .parthenosMeantYoungWoman
 
 /-- **The case from usage.** Rico and Gentry's: the Jews who rejected the
@@ -652,7 +652,7 @@ narrower sense was missing. -/
 @[bornOfAVirginDefs]
 def driftLine : Line Claim :=
   { name := "Wegner on παρθένος: the word had not yet come to mean 'virgin'"
-  , grounds := [ p .earlyGreekParthenosIsYoungWoman, p .dinahIsAParthenosAfterShechem ]
+  , grounds := [ p .earlyGreekParthenosIsYoungWoman, p .greekCallsDinahParthenos ]
   , step := dinahShowsTheOlderSense
   , delivers := p .parthenosMeantYoungWoman
   , inference := some
@@ -1290,10 +1290,12 @@ Miller is kept, as every cited reader is, and the page shows where his reading
 breaks. He says four things of the Greek. One is answered by a reading he does
 not take up, one is not answered here, and two do not hold of it.
 
-- **Genesis 34:3**, where Dinah is called a παρθένος after Shechem. The Greek
-  reads so. Rico and Gentry explain it as an archaism of the Greek Pentateuch;
-  the status reading reads it under the law of the seduced παρθένος, as the
-  name of the standing Shechem took (`dinahLine`).
+- **Genesis 34:3**: "this term refers to a rape victim after she has been
+  attacked". The Greek calls Dinah a παρθένος in the verse after Shechem lies
+  with her; that the noun describes her as she then was is Miller's premise,
+  not the text's. Rico and Gentry explain the verse as an archaism of the Greek
+  Pentateuch; the status reading reads it under the law of the seduced
+  παρθένος, as the name of the standing Shechem took (`dinahLine`).
 - **Genesis 24:16**: where virginity matters, the Greek adds "a parthenos who
   has not known a man". The clause is the Hebrew's own, וְאִישׁ לֹא יְדָעָהּ, and the
   Greek renders it. What it shows about either word, the page does not settle.
@@ -1307,12 +1309,15 @@ not take up, one is not answered here, and two do not hold of it.
   they used consistently for was בְּתוּלָה (Bratcher 112–13).
 
 And he does not take up τὰ παρθένια, the abstract noun by which Walton's own
-test would fix the sense. The rating still rests on him. Evidence a text refutes
+test would fix the sense. The step is cited `disputed` here, on him: it is the
+step's floor, and the dispute over the Septuagint weighs it there. What its
+register computes is another matter (`Dispute.Miller`). Evidence a text refutes
 is struck before his dissent is checked, and the Greek of Joel 1:8 refutes his
-young widow; but struck of it, his dissent still denies the step through Genesis
-34:3, which the Greek reads as he says (`Dispute.Miller`). The dispute over the
-Septuagint does not need the step raised: the status reading decides it
-(`Dispute.Septuagint` says why). -/
+young widow; struck of it, his dissent still denies the step through Genesis
+34:3, and is a credible critique under the evidence and tradition standards.
+But his case from Genesis 34:3 cannot be defended in the dispute over the
+Septuagint: the status reading defeats it. So his dissent is overruled, and the
+step stands at the `wellSupported` its support is cited at. -/
 @[bornOfAVirginDefs]
 def lawsLine : Line Claim :=
   { name := "The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'"
@@ -1337,7 +1342,12 @@ after Shechem "lay with her and humbled her" (34:2), the Greek says he "loved th
 reads the word as said of her as she then was, a woman no longer a virgin, so
 that it cannot mean "virgin". This line reads it the other way: as the name of
 the standing Shechem took from her. A noun that names a woman says who she is in
-the story, not what she is at the moment of the clause.
+the story, not what she is at the moment of the clause: a noun phrase is read at
+a time of its own, which the context gives, not at its verb's (Enç 1986), as
+Scripture names Rahab "the harlot" long after Jericho (Hebrews 11:31, James
+2:25) and Matthew "the tax collector" after his call (Matthew 10:3). The order
+of 34:2 and 34:3 puts Shechem's love after his act; it does not put the noun's
+description there.
 
 The law does exactly this. In the Greek Exodus a man who "deceives a παρθένος
 not betrothed and lies with her" shall endow her as his wife, or, if her father
@@ -1397,12 +1407,71 @@ def dinahLine : Line Claim :=
       , supporting :=
           [ .scripture Testimony.Scripture.shechemUnderTheLaw
           , .work frymerKenskyVirginity (.pageList [80, 91])
+          , .work encTemporalExpressions (.pages 405 426)
           , .work ricoGentryInfantKing (.pages 18 21)
           , .work bratcherStudyOfIsaiah (.page 113)
           , .work wegnerVirginBirths (.page 483)
           , .work rhodeaDidMatthewConceive (.page 67) ]
       , tradition := .christianHistoricalGrammatical
       , confidence := .plausible } }
+
+/-! ### Miller on the laws -/
+
+/-- The citation for Miller's steps, from a use of the word to its sense in the
+Septuagint's Greek. `disputed`: Rico and Gentry (18, 21) and Bratcher (113)
+grant that Genesis 34:3 calls a woman no longer a virgin a παρθένος, and still
+hold that the word means "virgin" in the Septuagint. -/
+@[bornOfAVirginDefs]
+def millerSource : Source :=
+  { primary := .work millerBornDivine .whole
+  , supporting :=
+      [ .work ricoGentryInfantKing (.pages 18 21)
+      , .work bratcherStudyOfIsaiah (.page 113) ]
+  , tradition := .criticalScholarship
+  , confidence := .disputed }
+
+/-- Joel 1:8 shows that the word does not connote virginity, Miller's way: the
+young widow is called a παρθένος. -/
+@[bornOfAVirginDefs]
+def joelShowsNoConnotation : Formula Claim :=
+  p .joelGreekCallsTheWidowParthenos ➝ p .parthenosDoesNotItselfConnoteVirginity
+
+/-- Genesis 34:3 shows the same: the Greek calls Dinah a παρθένος, and the word
+describes her as she then was, no longer a virgin. -/
+@[bornOfAVirginDefs]
+def dinahShowsNoConnotation : Formula Claim :=
+  ⋀ [ p .greekCallsDinahParthenos, p .parthenosDescribesDinahAsSheThenWas ]
+  ➝ p .parthenosDoesNotItselfConnoteVirginity
+
+/-- So in the laws the virginity "has to be inferred from the context", and the
+word is not used in the sense "virgin". -/
+@[bornOfAVirginDefs]
+def contextNotWordInTheLaws : Formula Claim :=
+  p .parthenosDoesNotItselfConnoteVirginity ➝ notP .lawsUseParthenosAsVirgin
+
+/-- **Miller from Joel 1:8**: "Lament like a parthenos dressed in sackcloth for
+the husband of her youth", a young widow (*Born Divine*). The Greek does not
+read so (`Dispute.Miller`). -/
+@[bornOfAVirginDefs]
+def millerJoelLine : Line Claim :=
+  { name := "Miller: Joel 1:8 calls a young widow a παρθένος"
+  , grounds := [ p .joelGreekCallsTheWidowParthenos ]
+  , step := joelShowsNoConnotation
+  , delivers := p .parthenosDoesNotItselfConnoteVirginity
+  , inference := some millerSource }
+
+/-- **Miller from Genesis 34:3**: "In one passage, this term refers to a rape
+victim after she has been attacked (Gen 34:3)" (*Born Divine*). Two grounds: what
+the Greek reads, and Miller's premise that its noun describes Dinah as she then
+was. The second is his, not the text's: the order of the verses puts Shechem's
+love after his act, not the noun's description (`dinahLine`). -/
+@[bornOfAVirginDefs]
+def millerDinahLine : Line Claim :=
+  { name := "Miller: Genesis 34:3 calls a woman no longer a virgin a παρθένος"
+  , grounds := [ p .greekCallsDinahParthenos, p .parthenosDescribesDinahAsSheThenWas ]
+  , step := dinahShowsNoConnotation
+  , delivers := p .parthenosDoesNotItselfConnoteVirginity
+  , inference := some millerSource }
 
 /-- **The critical line**: the sign was given to Ahaz, and such a sign is not
 also a prediction of a virgin conception, so the predictive reading is denied.

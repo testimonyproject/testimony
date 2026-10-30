@@ -114,6 +114,8 @@ a birth with no human father, and the promise is fulfilled in one so born. -/
 def lutherReading : Valuation Claim := fun a =>
   match a with
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
   | _ => True
@@ -130,6 +132,8 @@ def leupoldReading : Valuation Claim := fun a =>
   | .wordingSignifiesAFatherlessBirth => False
   | .seedIsLineNotIndividual => False
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
   | _ => True

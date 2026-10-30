@@ -457,7 +457,7 @@ reader sees.
 | \\(P_{16}\\) | In the Greek of the Septuagint, παρθένος means a virgin | linguistic | Christian, historical-grammatical, disputed | [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472 |
 | \\(P_{17}\\) | In the Septuagint's day, παρθένος meant 'young woman'; not yet 'virgin' | linguistic | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013) |
 | \\(P_{18}\\) | In early Greek, παρθένος meant a young woman, with or without virginity | linguistic | Christian, historical-grammatical, well supported | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 482; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), p. 777; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`walton-whats-in-a-name-1987`](../bibliography.md#walton-whats-in-a-name-1987), p. 293; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 112 |
-| \\(P_{19}\\) | The Septuagint calls Dinah a παρθένος after Shechem has lain with her | textual | critical scholarship, consensus | Gen 34:2-3; Gen 34:3; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113 |
+| \\(P_{19}\\) | The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2) | textual | critical scholarship, consensus | Gen 34:2-3; Gen 34:3; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113 |
 | \\(P_{20}\\) | Elsewhere in the Greek Isaiah, παρθένος renders בְּתוּלָה ※ | textual | critical scholarship, consensus | Isa 23:4; Isa 23:4; Isa 37:22; Isa 37:22; Isa 47:1; Isa 47:1; Isa 62:5; Isa 62:5 |
 | \\(P_{21}\\) | The high priest of the Greek Leviticus marries a παρθένος, not a widow or a harlot ※ | textual | critical scholarship, consensus | Lev 21:13-14; Lev 21:13-14 |
 | \\(P_{22}\\) | In the Greek Deuteronomy, a bride without τὰ παρθένια dies for playing the harlot | textual | critical scholarship, consensus | Deut 22:13-21; Deut 22:13-21; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια |
@@ -514,24 +514,25 @@ reader sees.
 | \\(P_{73}\\) | The serpent of Genesis 3 is the instrument of an evil power | interpretive | Christian, historical-grammatical, disputed | [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261 |
 | \\(P_{74}\\) | The Greek of Joel 1:8 calls a young widow a παρθένος (Miller) | textual | critical scholarship, disputed | [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003) |
 | \\(P_{75}\\) | In the Septuagint, παρθένος did not by itself connote virginity (Miller) | linguistic | critical scholarship, disputed | [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113 |
-| \\(P_{76}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
-| \\(P_{77}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
-| \\(P_{78}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
-| \\(P_{79}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
-| \\(P_{80}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{81}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{82}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
-| \\(P_{83}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
-| \\(P_{84}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
-| \\(P_{85}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
-| \\(P_{86}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
-| \\(P_{87}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{88}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{89}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{90}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{91}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
-| \\(P_{92}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
-| \\(P_{93}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| \\(P_{76}\\) | At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller) | linguistic | critical scholarship, well supported | [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535 |
+| \\(P_{77}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
+| \\(P_{78}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
+| \\(P_{79}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
+| \\(P_{80}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
+| \\(P_{81}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{82}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{83}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
+| \\(P_{84}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
+| \\(P_{85}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
+| \\(P_{86}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
+| \\(P_{87}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
+| \\(P_{88}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{89}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
+| \\(P_{90}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{91}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| \\(P_{92}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
+| \\(P_{93}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
+| \\(P_{94}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
 
 </div>
 
@@ -1637,33 +1638,24 @@ Septuagint's at large.
 def earlyGreekParthenosIsYoungWomanCited : AtomMeta
 ```
 
-<a id="dinahIsAParthenosAfterShechemCited"></a>
-**`dinahIsAParthenosAfterShechemCited`**
+<a id="greekCallsDinahParthenosCited"></a>
+**`greekCallsDinahParthenosCited`**
 
-`dinahIsAParthenosAfterShechem`. What the Greek reads: Shechem "lay with her
+`greekCallsDinahParthenos`. What the Greek reads: Shechem "lay with her
 and humbled her" (34:2), and "he loved the παρθένος, and spoke to her according
 to the mind of the παρθένος" (34:3), where the Hebrew has נַעֲרָה, "girl", both
-times. Read from Rahlfs's text and the Masoretic. Wegner calls it "a good example of the meaning
-of παρθένος in the LXX" (483), and Rhodea draws from it that "παρθένος need not
-refer to a virgo intacta" (67). No one denies the reading. Rico and Gentry call
-it "the exception that proves the rule" (21); Bratcher, an exception made
-"inexplicably" (113).
+times. Read from Rahlfs's text and the Masoretic. Wegner calls it "a good
+example of the meaning of παρθένος in the LXX" (483), and Rhodea draws from it
+that "παρθένος need not refer to a virgo intacta" (67). No one denies the
+reading. Rico and Gentry call it "the exception that proves the rule" (21);
+Bratcher, an exception made "inexplicably" (113).
+
+The claim is what the text reads: the word, and the verse it stands in, after
+34:2. Whether the noun describes Dinah as she was after 34:2 is a further claim,
+and a reader's (`parthenosDescribesDinahAsSheThenWas`).
 
 ```lean
-def dinahIsAParthenosAfterShechemCited : AtomMeta :=
-  {
-    label :=
-      "The Septuagint calls Dinah a παρθένος after Shechem has lain with her",
-    kind := PremiseKind.textual,
-    source :=
-      { primary := Reference.scripture Scripture.dinahAfterShechem,
-        supporting :=
-          [Reference.work wegnerVirginBirths (Bib.Locus.page 483),
-            Reference.work rhodeaDidMatthewConceive (Bib.Locus.page 67),
-            Reference.work ricoGentryInfantKing (Bib.Locus.pages 18 21),
-            Reference.work bratcherStudyOfIsaiah (Bib.Locus.page 113)],
-        tradition := Tradition.criticalScholarship,
-        confidence := Confidence.consensus } }
+def greekCallsDinahParthenosCited : AtomMeta
 ```
 
 <a id="isaiahUsesParthenosForBetulahCited"></a>
@@ -1962,6 +1954,46 @@ def parthenosDoesNotItselfConnoteVirginityCited : AtomMeta :=
           [Reference.work bratcherStudyOfIsaiah (Bib.Locus.page 113)],
         tradition := Tradition.criticalScholarship,
         confidence := Confidence.disputed } }
+```
+
+<a id="parthenosDescribesDinahAsSheThenWasCited"></a>
+**`parthenosDescribesDinahAsSheThenWasCited`**
+
+`parthenosDescribesDinahAsSheThenWas`. Miller's premise: "In one passage,
+this term refers to a rape victim after she has been attacked (Gen 34:3)" (*Born
+Divine*). Wegner says the same, that Dinah "is called a παρθένος even after she
+was raped by Shechem" (483), and Muraoka's lexicon glosses the verse "so called
+just after having been raped" (535). It is more than the reading of the text
+(`greekCallsDinahParthenos`): that the noun says what Dinah was at the time of
+the verse, and so, since she was then no longer a virgin, that the word is not
+used there in the sense "virgin".
+
+A noun need not say what the one it names is at the time of its verb. Enç
+argues that a noun phrase is read at a time of its own, which the context gives
+(1986); Scripture names Rahab "the harlot" long after Jericho (Hebrews 11:31,
+James 2:25), and Matthew "the tax collector" after his call (Matthew 10:3). So
+the noun at 34:3 can name Dinah by what she had been, or, as the status reading
+holds, by the law's name for the woman a man has lain with
+(`dinahIsTheLawsParthenos`).
+
+`wellSupported`, not higher: every reader on record who takes up the verse holds
+it, and Rico and Gentry and Bratcher, who read the word as "virgin", grant it.
+The status reading and the argument from the noun contest it, but both are the
+library's own, and no reader has been found who makes either.
+
+```lean
+def parthenosDescribesDinahAsSheThenWasCited : AtomMeta :=
+  {
+    label :=
+      "At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller)",
+    kind := PremiseKind.linguistic,
+    source :=
+      { primary := Reference.work millerBornDivine,
+        supporting :=
+          [Reference.work wegnerVirginBirths (Bib.Locus.page 483),
+            Reference.work muraokaLexiconSeptuagint (Bib.Locus.page 535)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.wellSupported } }
 ```
 
 <a id="tryphoRejectsParthenosCited"></a>
@@ -2464,7 +2496,7 @@ Matthew's intent, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92}
+(P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93}
 \]
 </div>
 
@@ -2478,7 +2510,7 @@ virgin.
 
 <div class="testimony-math">
 \[
-(P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92}
+(P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93}
 \]
 </div>
 
@@ -2495,7 +2527,7 @@ grants the composition and stops short of Matthew is entitled to.
 
 <div class="testimony-math">
 \[
-(P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{92}
+(P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93}
 \]
 </div>
 
@@ -2515,7 +2547,7 @@ right kind of reason.
 
 <div class="testimony-math">
 \[
-(P_{47} \land P_{48}) \rightarrow \lnot P_{81}
+(P_{47} \land P_{48}) \rightarrow \lnot P_{82}
 \]
 </div>
 
@@ -2527,7 +2559,7 @@ it, the criterion follows.
 
 <div class="testimony-math">
 \[
-(P_{76} \land P_{77}) \rightarrow P_{92}
+(P_{77} \land P_{78}) \rightarrow P_{93}
 \]
 </div>
 
@@ -2539,7 +2571,7 @@ criterion follows. Encoded, but deliberately kept out of `christian`.
 
 <div class="testimony-math">
 \[
-(P_{89} \land P_{90}) \rightarrow P_{92}
+(P_{90} \land P_{91}) \rightarrow P_{93}
 \]
 </div>
 
@@ -2556,7 +2588,7 @@ left nothing for an objection to engage.
 
 <div class="testimony-math">
 \[
-(P_{80} \land P_{81}) \rightarrow \lnot P_{1}
+(P_{81} \land P_{82}) \rightarrow \lnot P_{1}
 \]
 </div>
 
@@ -2574,7 +2606,7 @@ where it is cited `disputed`.
 
 <div class="testimony-math">
 \[
-P_{82} \rightarrow \lnot P_{81}
+P_{83} \rightarrow \lnot P_{82}
 \]
 </div>
 
@@ -2588,7 +2620,7 @@ oracle in a different book (Postell 481 n. 72).
 
 <div class="testimony-math">
 \[
-(P_{85} \land P_{86}) \rightarrow \lnot P_{81}
+(P_{86} \land P_{87}) \rightarrow \lnot P_{82}
 \]
 </div>
 
@@ -2608,7 +2640,7 @@ denies, and `motyerLine` rates it `disputed` for that reason.
 
 <div class="testimony-math">
 \[
-(P_{83} \land P_{84}) \rightarrow \lnot P_{80}
+(P_{84} \land P_{85}) \rightarrow \lnot P_{81}
 \]
 </div>
 
@@ -2627,7 +2659,7 @@ word having to carry the sense.
 
 <div class="testimony-math">
 \[
-(P_{4} \land P_{5} \land P_{6} \land P_{78}) \rightarrow P_{7}
+(P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7}
 \]
 </div>
 
@@ -2652,7 +2684,7 @@ objector would state it, so that the reply has something real to answer.
 
 <div class="testimony-math">
 \[
-(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{93}
+(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{94}
 \]
 </div>
 
@@ -2697,7 +2729,7 @@ From the criterion and the historical claim, the fulfilment follows.
 
 <div class="testimony-math">
 \[
-(P_{92} \land P_{78}) \rightarrow P_{93}
+(P_{93} \land P_{79}) \rightarrow P_{94}
 \]
 </div>
 
@@ -2762,7 +2794,7 @@ Isaiah 7:14" (468 n. 22).
 
 <div class="testimony-math">
 \[
-(P_{80} \land \lnot P_{1}) \rightarrow P_{35}
+(P_{81} \land \lnot P_{1}) \rightarrow P_{35}
 \]
 </div>
 
@@ -3019,8 +3051,8 @@ Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
 \text{(3)} \quad &amp; P_{9} \\
 \text{(4)} \quad &amp; P_{43} \\
 \text{(5)} \quad &amp; P_{44} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92} \\[4pt]
-\vdash \quad &amp; P_{92}
+\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\[4pt]
+\vdash \quad &amp; P_{93}
 \end{aligned}
 \]
 </div>
@@ -3041,8 +3073,8 @@ bear, read either way.
 \text{(2)} \quad &amp; P_{51} \\
 \text{(3)} \quad &amp; P_{52} \\
 \text{(4)} \quad &amp; P_{53} \\
-\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92} \\[4pt]
-\vdash \quad &amp; P_{92}
+\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\[4pt]
+\vdash \quad &amp; P_{93}
 \end{aligned}
 \]
 </div>
@@ -3057,10 +3089,10 @@ says so.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{76} \\
-\text{(2)} \quad &amp; P_{77} \\
-\text{(3)} \quad &amp; (P_{76} \land P_{77}) \rightarrow P_{92} \\[4pt]
-\vdash \quad &amp; P_{92}
+\text{(1)} \quad &amp; P_{77} \\
+\text{(2)} \quad &amp; P_{78} \\
+\text{(3)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\[4pt]
+\vdash \quad &amp; P_{93}
 \end{aligned}
 \]
 </div>
@@ -3078,8 +3110,8 @@ that follows. Its hinge is `compositionGovernsMeaning`.
 \text{(1)} \quad &amp; P_{45} \\
 \text{(2)} \quad &amp; P_{46} \\
 \text{(3)} \quad &amp; P_{49} \\
-\text{(4)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{92} \\[4pt]
-\vdash \quad &amp; P_{92}
+\text{(4)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\[4pt]
+\vdash \quad &amp; P_{93}
 \end{aligned}
 \]
 </div>
@@ -3098,10 +3130,10 @@ own.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{89} \\
-\text{(2)} \quad &amp; P_{90} \\
-\text{(3)} \quad &amp; (P_{89} \land P_{90}) \rightarrow P_{92} \\[4pt]
-\vdash \quad &amp; P_{92}
+\text{(1)} \quad &amp; P_{90} \\
+\text{(2)} \quad &amp; P_{91} \\
+\text{(3)} \quad &amp; (P_{90} \land P_{91}) \rightarrow P_{93} \\[4pt]
+\vdash \quad &amp; P_{93}
 \end{aligned}
 \]
 </div>
@@ -3127,9 +3159,9 @@ about the sense alone, and the reply would have more to answer.
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{78} \\
+\text{(4)} \quad &amp; P_{79} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{78}) \rightarrow P_{7} \\[4pt]
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7} \\[4pt]
 \vdash \quad &amp; P_{7}
 \end{aligned}
 \]
@@ -3178,7 +3210,7 @@ conclusion rather than running on to the fulfilment claim.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{35} \\
 \text{(4)} \quad &amp; P_{37} \\
 \text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\[4pt]
@@ -3632,7 +3664,7 @@ conceived of a virgin, the seed in whom it is fulfilled had no human father.
 
 <div class="testimony-math">
 \[
-(P_{65} \land P_{78}) \rightarrow P_{66}
+(P_{65} \land P_{79}) \rightarrow P_{66}
 \]
 </div>
 
@@ -3830,8 +3862,8 @@ apart (`Results.Genesis`).
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{65} \\
-\text{(2)} \quad &amp; P_{78} \\
-\text{(3)} \quad &amp; (P_{65} \land P_{78}) \rightarrow P_{66} \\[4pt]
+\text{(2)} \quad &amp; P_{79} \\
+\text{(3)} \quad &amp; (P_{65} \land P_{79}) \rightarrow P_{66} \\[4pt]
 \vdash \quad &amp; P_{66}
 \end{aligned}
 \]
@@ -4036,10 +4068,12 @@ Miller is kept, as every cited reader is, and the page shows where his reading
 breaks. He says four things of the Greek. One is answered by a reading he does
 not take up, one is not answered here, and two do not hold of it.
 
-- **Genesis 34:3**, where Dinah is called a παρθένος after Shechem. The Greek
-  reads so. Rico and Gentry explain it as an archaism of the Greek Pentateuch;
-  the status reading reads it under the law of the seduced παρθένος, as the
-  name of the standing Shechem took (`dinahLine`).
+- **Genesis 34:3**: "this term refers to a rape victim after she has been
+  attacked". The Greek calls Dinah a παρθένος in the verse after Shechem lies
+  with her; that the noun describes her as she then was is Miller's premise,
+  not the text's. Rico and Gentry explain the verse as an archaism of the Greek
+  Pentateuch; the status reading reads it under the law of the seduced
+  παρθένος, as the name of the standing Shechem took (`dinahLine`).
 - **Genesis 24:16**: where virginity matters, the Greek adds "a parthenos who
   has not known a man". The clause is the Hebrew's own, וְאִישׁ לֹא יְדָעָהּ, and the
   Greek renders it. What it shows about either word, the page does not settle.
@@ -4053,12 +4087,15 @@ not take up, one is not answered here, and two do not hold of it.
   they used consistently for was בְּתוּלָה (Bratcher 112–13).
 
 And he does not take up τὰ παρθένια, the abstract noun by which Walton's own
-test would fix the sense. The rating still rests on him. Evidence a text refutes
+test would fix the sense. The step is cited `disputed` here, on him: it is the
+step's floor, and the dispute over the Septuagint weighs it there. What its
+register computes is another matter (`Dispute.Miller`). Evidence a text refutes
 is struck before his dissent is checked, and the Greek of Joel 1:8 refutes his
-young widow; but struck of it, his dissent still denies the step through Genesis
-34:3, which the Greek reads as he says (`Dispute.Miller`). The dispute over the
-Septuagint does not need the step raised: the status reading decides it
-(`Dispute.Septuagint` says why).
+young widow; struck of it, his dissent still denies the step through Genesis
+34:3, and is a credible critique under the evidence and tradition standards.
+But his case from Genesis 34:3 cannot be defended in the dispute over the
+Septuagint: the status reading defeats it. So his dissent is overruled, and the
+step stands at the `wellSupported` its support is cited at.
 
 <div class="testimony-math">
 \[
@@ -4095,7 +4132,12 @@ after Shechem "lay with her and humbled her" (34:2), the Greek says he "loved th
 reads the word as said of her as she then was, a woman no longer a virgin, so
 that it cannot mean "virgin". This line reads it the other way: as the name of
 the standing Shechem took from her. A noun that names a woman says who she is in
-the story, not what she is at the moment of the clause.
+the story, not what she is at the moment of the clause: a noun phrase is read at
+a time of its own, which the context gives, not at its verb's (Enç 1986), as
+Scripture names Rahab "the harlot" long after Jericho (Hebrews 11:31, James
+2:25) and Matthew "the tax collector" after his call (Matthew 10:3). The order
+of 34:2 and 34:3 puts Shechem's love after his act; it does not put the noun's
+description there.
 
 The law does exactly this. In the Greek Exodus a man who "deceives a παρθένος
 not betrothed and lies with her" shall endow her as his wife, or, if her father
@@ -4156,6 +4198,99 @@ rating.
 \]
 </div>
 
+#### Miller on the laws
+
+<a id="millerSource"></a>
+**`millerSource`**
+
+The citation for Miller's steps, from a use of the word to its sense in the
+Septuagint's Greek. `disputed`: Rico and Gentry (18, 21) and Bratcher (113)
+grant that Genesis 34:3 calls a woman no longer a virgin a παρθένος, and still
+hold that the word means "virgin" in the Septuagint.
+
+```lean
+def millerSource : Source :=
+  { primary := Reference.work millerBornDivine,
+    supporting :=
+      [Reference.work ricoGentryInfantKing (Bib.Locus.pages 18 21),
+        Reference.work bratcherStudyOfIsaiah (Bib.Locus.page 113)],
+    tradition := Tradition.criticalScholarship,
+    confidence := Confidence.disputed }
+```
+
+<a id="joelShowsNoConnotation"></a>
+**`joelShowsNoConnotation`**
+
+Joel 1:8 shows that the word does not connote virginity, Miller's way: the
+young widow is called a παρθένος.
+
+<div class="testimony-math">
+\[
+P_{74} \rightarrow P_{75}
+\]
+</div>
+
+<a id="dinahShowsNoConnotation"></a>
+**`dinahShowsNoConnotation`**
+
+Genesis 34:3 shows the same: the Greek calls Dinah a παρθένος, and the word
+describes her as she then was, no longer a virgin.
+
+<div class="testimony-math">
+\[
+(P_{19} \land P_{76}) \rightarrow P_{75}
+\]
+</div>
+
+<a id="contextNotWordInTheLaws"></a>
+**`contextNotWordInTheLaws`**
+
+So in the laws the virginity "has to be inferred from the context", and the
+word is not used in the sense "virgin".
+
+<div class="testimony-math">
+\[
+P_{75} \rightarrow \lnot P_{23}
+\]
+</div>
+
+<a id="millerJoelLine"></a>
+**`millerJoelLine`** — Miller: Joel 1:8 calls a young widow a παρθένος
+
+**Miller from Joel 1:8**: "Lament like a parthenos dressed in sackcloth for
+the husband of her youth", a young widow (*Born Divine*). The Greek does not
+read so (`Dispute.Miller`).
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{74} \\
+\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\[4pt]
+\vdash \quad &amp; P_{75}
+\end{aligned}
+\]
+</div>
+
+<a id="millerDinahLine"></a>
+**`millerDinahLine`** — Miller: Genesis 34:3 calls a woman no longer a virgin a παρθένος
+
+**Miller from Genesis 34:3**: "In one passage, this term refers to a rape
+victim after she has been attacked (Gen 34:3)" (*Born Divine*). Two grounds: what
+the Greek reads, and Miller's premise that its noun describes Dinah as she then
+was. The second is his, not the text's: the order of the verses puts Shechem's
+love after his act, not the noun's description (`dinahLine`).
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{19} \\
+\text{(2)} \quad &amp; P_{76} \\
+\text{(3)} \quad &amp; (P_{19} \land P_{76}) \rightarrow P_{75} \\[4pt]
+\vdash \quad &amp; P_{75}
+\end{aligned}
+\]
+</div>
+
 <a id="criticalExclusionLine"></a>
 **`criticalExclusionLine`** — Critical denial of the predictive reading of Isaiah 7:14
 
@@ -4169,9 +4304,9 @@ with Isaiah 9 and 11 plus `parityDefeatsNearTermExclusion`.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{80} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; (P_{80} \land P_{81}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{81} \\
+\text{(2)} \quad &amp; P_{82} \\
+\text{(3)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -4194,9 +4329,9 @@ so the near-term reading does not exclude the messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{82} \\
-\text{(2)} \quad &amp; P_{82} \rightarrow \lnot P_{81} \\[4pt]
-\vdash \quad &amp; \lnot P_{81}
+\text{(1)} \quad &amp; P_{83} \\
+\text{(2)} \quad &amp; P_{83} \rightarrow \lnot P_{82} \\[4pt]
+\vdash \quad &amp; \lnot P_{82}
 \end{aligned}
 \]
 </div>
@@ -4213,8 +4348,8 @@ messianic sense.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{47} \\
 \text{(2)} \quad &amp; P_{48} \\
-\text{(3)} \quad &amp; (P_{47} \land P_{48}) \rightarrow \lnot P_{81} \\[4pt]
-\vdash \quad &amp; \lnot P_{81}
+\text{(3)} \quad &amp; (P_{47} \land P_{48}) \rightarrow \lnot P_{82} \\[4pt]
+\vdash \quad &amp; \lnot P_{82}
 \end{aligned}
 \]
 </div>
@@ -4230,10 +4365,10 @@ near-term premise rather than its exclusion premise.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{83} \\
-\text{(2)} \quad &amp; P_{84} \\
-\text{(3)} \quad &amp; (P_{83} \land P_{84}) \rightarrow \lnot P_{80} \\[4pt]
-\vdash \quad &amp; \lnot P_{80}
+\text{(1)} \quad &amp; P_{84} \\
+\text{(2)} \quad &amp; P_{85} \\
+\text{(3)} \quad &amp; (P_{84} \land P_{85}) \rightarrow \lnot P_{81} \\[4pt]
+\vdash \quad &amp; \lnot P_{81}
 \end{aligned}
 \]
 </div>
@@ -4248,10 +4383,10 @@ setting does not exclude a messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{85} \\
-\text{(2)} \quad &amp; P_{86} \\
-\text{(3)} \quad &amp; (P_{85} \land P_{86}) \rightarrow \lnot P_{81} \\[4pt]
-\vdash \quad &amp; \lnot P_{81}
+\text{(1)} \quad &amp; P_{86} \\
+\text{(2)} \quad &amp; P_{87} \\
+\text{(3)} \quad &amp; (P_{86} \land P_{87}) \rightarrow \lnot P_{82} \\[4pt]
+\vdash \quad &amp; \lnot P_{82}
 \end{aligned}
 \]
 </div>
@@ -4268,8 +4403,8 @@ none of the four strands delivers them.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{78} \\
-\text{(2)} \quad &amp; P_{79}
+\text{(1)} \quad &amp; P_{79} \\
+\text{(2)} \quad &amp; P_{80}
 \end{aligned}
 \]
 </div>
@@ -4323,19 +4458,19 @@ authority.
 \text{(7)} \quad &amp; P_{51} \\
 \text{(8)} \quad &amp; P_{52} \\
 \text{(9)} \quad &amp; P_{53} \\
-\text{(10)} \quad &amp; P_{76} \\
-\text{(11)} \quad &amp; P_{77} \\
+\text{(10)} \quad &amp; P_{77} \\
+\text{(11)} \quad &amp; P_{78} \\
 \text{(12)} \quad &amp; P_{45} \\
 \text{(13)} \quad &amp; P_{46} \\
 \text{(14)} \quad &amp; P_{49} \\
-\text{(15)} \quad &amp; P_{78} \\
-\text{(16)} \quad &amp; P_{79} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92} \\
-\text{(18)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92} \\
-\text{(19)} \quad &amp; (P_{76} \land P_{77}) \rightarrow P_{92} \\
-\text{(20)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{92} \\
-\text{(21)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(15)} \quad &amp; P_{79} \\
+\text{(16)} \quad &amp; P_{80} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
+\text{(18)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
+\text{(19)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
+\text{(20)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\
+\text{(21)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4353,9 +4488,9 @@ one this library's author does not grant.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{89} \\
-\text{(2)} \quad &amp; P_{90} \\
-\text{(3)} \quad &amp; (P_{89} \land P_{90}) \rightarrow P_{92} \\
+\text{(1)} \quad &amp; P_{90} \\
+\text{(2)} \quad &amp; P_{91} \\
+\text{(3)} \quad &amp; (P_{90} \land P_{91}) \rightarrow P_{93} \\
 \text{(4)} \quad &amp; P_{1} \\
 \text{(5)} \quad &amp; P_{2} \\
 \text{(6)} \quad &amp; P_{9} \\
@@ -4365,19 +4500,19 @@ one this library's author does not grant.
 \text{(10)} \quad &amp; P_{51} \\
 \text{(11)} \quad &amp; P_{52} \\
 \text{(12)} \quad &amp; P_{53} \\
-\text{(13)} \quad &amp; P_{76} \\
-\text{(14)} \quad &amp; P_{77} \\
+\text{(13)} \quad &amp; P_{77} \\
+\text{(14)} \quad &amp; P_{78} \\
 \text{(15)} \quad &amp; P_{45} \\
 \text{(16)} \quad &amp; P_{46} \\
 \text{(17)} \quad &amp; P_{49} \\
-\text{(18)} \quad &amp; P_{78} \\
-\text{(19)} \quad &amp; P_{79} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92} \\
-\text{(21)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92} \\
-\text{(22)} \quad &amp; (P_{76} \land P_{77}) \rightarrow P_{92} \\
-\text{(23)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{92} \\
-\text{(24)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(18)} \quad &amp; P_{79} \\
+\text{(19)} \quad &amp; P_{80} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
+\text{(21)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
+\text{(22)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
+\text{(23)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\
+\text{(24)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4392,12 +4527,12 @@ The magisterial route on its own, with no exegetical premise at all.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{89} \\
-\text{(2)} \quad &amp; P_{90} \\
-\text{(3)} \quad &amp; P_{78} \\
-\text{(4)} \quad &amp; (P_{89} \land P_{90}) \rightarrow P_{92} \\
-\text{(5)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(1)} \quad &amp; P_{90} \\
+\text{(2)} \quad &amp; P_{91} \\
+\text{(3)} \quad &amp; P_{79} \\
+\text{(4)} \quad &amp; (P_{90} \land P_{91}) \rightarrow P_{93} \\
+\text{(5)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4414,13 +4549,13 @@ Scripture is the supreme judge.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{89} \\
-\text{(2)} \quad &amp; \lnot P_{90} \\
-\text{(3)} \quad &amp; P_{91} \\
-\text{(4)} \quad &amp; P_{78} \\
-\text{(5)} \quad &amp; (P_{89} \land P_{90}) \rightarrow P_{92} \\
-\text{(6)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(1)} \quad &amp; P_{90} \\
+\text{(2)} \quad &amp; \lnot P_{91} \\
+\text{(3)} \quad &amp; P_{92} \\
+\text{(4)} \quad &amp; P_{79} \\
+\text{(5)} \quad &amp; (P_{90} \land P_{91}) \rightarrow P_{93} \\
+\text{(6)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4441,8 +4576,8 @@ on.
 \text{(2)} \quad &amp; P_{9} \\
 \text{(3)} \quad &amp; P_{43} \\
 \text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92} \\[4pt]
-\vdash \quad &amp; P_{92}
+\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\[4pt]
+\vdash \quad &amp; P_{93}
 \end{aligned}
 \]
 </div>
@@ -4464,19 +4599,19 @@ retained.
 \text{(6)} \quad &amp; P_{51} \\
 \text{(7)} \quad &amp; P_{52} \\
 \text{(8)} \quad &amp; P_{53} \\
-\text{(9)} \quad &amp; P_{76} \\
-\text{(10)} \quad &amp; P_{77} \\
+\text{(9)} \quad &amp; P_{77} \\
+\text{(10)} \quad &amp; P_{78} \\
 \text{(11)} \quad &amp; P_{45} \\
 \text{(12)} \quad &amp; P_{46} \\
 \text{(13)} \quad &amp; P_{49} \\
-\text{(14)} \quad &amp; P_{78} \\
-\text{(15)} \quad &amp; P_{79} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92} \\
-\text{(17)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92} \\
-\text{(18)} \quad &amp; (P_{76} \land P_{77}) \rightarrow P_{92} \\
-\text{(19)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{92} \\
-\text{(20)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(14)} \quad &amp; P_{79} \\
+\text{(15)} \quad &amp; P_{80} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
+\text{(17)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
+\text{(18)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
+\text{(19)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\
+\text{(20)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4497,11 +4632,11 @@ added. Kept so that the earlier finding stays checkable.
 \text{(2)} \quad &amp; P_{9} \\
 \text{(3)} \quad &amp; P_{43} \\
 \text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; P_{78} \\
-\text{(6)} \quad &amp; P_{79} \\
-\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92} \\
-\text{(8)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(5)} \quad &amp; P_{79} \\
+\text{(6)} \quad &amp; P_{80} \\
+\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
+\text{(8)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4524,17 +4659,17 @@ textual and historical premise retained.
 \text{(5)} \quad &amp; P_{50} \\
 \text{(6)} \quad &amp; P_{51} \\
 \text{(7)} \quad &amp; P_{52} \\
-\text{(8)} \quad &amp; P_{76} \\
+\text{(8)} \quad &amp; P_{77} \\
 \text{(9)} \quad &amp; P_{45} \\
 \text{(10)} \quad &amp; P_{49} \\
-\text{(11)} \quad &amp; P_{78} \\
-\text{(12)} \quad &amp; P_{79} \\
-\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92} \\
-\text{(14)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92} \\
-\text{(15)} \quad &amp; (P_{76} \land P_{77}) \rightarrow P_{92} \\
-\text{(16)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{92} \\
-\text{(17)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(11)} \quad &amp; P_{79} \\
+\text{(12)} \quad &amp; P_{80} \\
+\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
+\text{(14)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
+\text{(15)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
+\text{(16)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\
+\text{(17)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4555,11 +4690,11 @@ assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* 
 \text{(3)} \quad &amp; P_{9} \\
 \text{(4)} \quad &amp; P_{43} \\
 \text{(5)} \quad &amp; P_{44} \\
-\text{(6)} \quad &amp; P_{78} \\
-\text{(7)} \quad &amp; P_{79} \\
-\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92} \\
-\text{(9)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(6)} \quad &amp; P_{79} \\
+\text{(7)} \quad &amp; P_{80} \\
+\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
+\text{(9)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4583,21 +4718,21 @@ four strands on shared ground; it is the refusal of four strands.
 \text{(1)} \quad &amp; P_{9} \\
 \text{(2)} \quad &amp; P_{43} \\
 \text{(3)} \quad &amp; P_{50} \\
-\text{(4)} \quad &amp; P_{76} \\
-\text{(5)} \quad &amp; P_{80} \\
-\text{(6)} \quad &amp; P_{81} \\
-\text{(7)} \quad &amp; P_{87} \\
-\text{(8)} \quad &amp; P_{88} \\
+\text{(4)} \quad &amp; P_{77} \\
+\text{(5)} \quad &amp; P_{81} \\
+\text{(6)} \quad &amp; P_{82} \\
+\text{(7)} \quad &amp; P_{88} \\
+\text{(8)} \quad &amp; P_{89} \\
 \text{(9)} \quad &amp; \lnot P_{2} \\
 \text{(10)} \quad &amp; \lnot P_{51} \\
 \text{(11)} \quad &amp; \lnot P_{53} \\
-\text{(12)} \quad &amp; \lnot P_{77} \\
-\text{(13)} \quad &amp; (P_{80} \land P_{81}) \rightarrow \lnot P_{1} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{92} \\
-\text{(15)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92} \\
-\text{(16)} \quad &amp; (P_{76} \land P_{77}) \rightarrow P_{92} \\
-\text{(17)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(12)} \quad &amp; \lnot P_{78} \\
+\text{(13)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\
+\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
+\text{(15)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
+\text{(16)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
+\text{(17)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4614,9 +4749,9 @@ denial, not anything about Jesus.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{80} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; (P_{80} \land P_{81}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{81} \\
+\text{(2)} \quad &amp; P_{82} \\
+\text{(3)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -4633,10 +4768,10 @@ no longer simply granted.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{80} \\
-\text{(2)} \quad &amp; P_{82} \\
-\text{(3)} \quad &amp; P_{82} \rightarrow \lnot P_{81} \\
-\text{(4)} \quad &amp; (P_{80} \land P_{81}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(1)} \quad &amp; P_{81} \\
+\text{(2)} \quad &amp; P_{83} \\
+\text{(3)} \quad &amp; P_{83} \rightarrow \lnot P_{82} \\
+\text{(4)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -4653,9 +4788,9 @@ near-term reading does not exclude the messianic sense.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{82} \\
-\text{(2)} \quad &amp; P_{82} \rightarrow \lnot P_{81} \\[4pt]
-\vdash \quad &amp; \lnot P_{81}
+\text{(1)} \quad &amp; P_{83} \\
+\text{(2)} \quad &amp; P_{83} \rightarrow \lnot P_{82} \\[4pt]
+\vdash \quad &amp; \lnot P_{82}
 \end{aligned}
 \]
 </div>
@@ -4673,8 +4808,8 @@ as Berry's reached from different grounds.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{47} \\
 \text{(2)} \quad &amp; P_{48} \\
-\text{(3)} \quad &amp; (P_{47} \land P_{48}) \rightarrow \lnot P_{81} \\[4pt]
-\vdash \quad &amp; \lnot P_{81}
+\text{(3)} \quad &amp; (P_{47} \land P_{48}) \rightarrow \lnot P_{82} \\[4pt]
+\vdash \quad &amp; \lnot P_{82}
 \end{aligned}
 \]
 </div>
@@ -4690,10 +4825,10 @@ conclusion as Berry's and Postell's Isaiah argument.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{85} \\
-\text{(2)} \quad &amp; P_{86} \\
-\text{(3)} \quad &amp; (P_{85} \land P_{86}) \rightarrow \lnot P_{81} \\[4pt]
-\vdash \quad &amp; \lnot P_{81}
+\text{(1)} \quad &amp; P_{86} \\
+\text{(2)} \quad &amp; P_{87} \\
+\text{(3)} \quad &amp; (P_{86} \land P_{87}) \rightarrow \lnot P_{82} \\[4pt]
+\vdash \quad &amp; \lnot P_{82}
 \end{aligned}
 \]
 </div>
@@ -4709,10 +4844,10 @@ sign to Ahaz.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{83} \\
-\text{(2)} \quad &amp; P_{84} \\
-\text{(3)} \quad &amp; (P_{83} \land P_{84}) \rightarrow \lnot P_{80} \\[4pt]
-\vdash \quad &amp; \lnot P_{80}
+\text{(1)} \quad &amp; P_{84} \\
+\text{(2)} \quad &amp; P_{85} \\
+\text{(3)} \quad &amp; (P_{84} \land P_{85}) \rightarrow \lnot P_{81} \\[4pt]
+\vdash \quad &amp; \lnot P_{81}
 \end{aligned}
 \]
 </div>
@@ -4728,11 +4863,11 @@ exclusion premise no longer simply granted.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{80} \\
+\text{(1)} \quad &amp; P_{81} \\
 \text{(2)} \quad &amp; P_{47} \\
 \text{(3)} \quad &amp; P_{48} \\
-\text{(4)} \quad &amp; (P_{47} \land P_{48}) \rightarrow \lnot P_{81} \\
-\text{(5)} \quad &amp; (P_{80} \land P_{81}) \rightarrow \lnot P_{1} \\[4pt]
+\text{(4)} \quad &amp; (P_{47} \land P_{48}) \rightarrow \lnot P_{82} \\
+\text{(5)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\[4pt]
 \vdash \quad &amp; \lnot P_{1}
 \end{aligned}
 \]
@@ -4754,9 +4889,9 @@ of the objection's premise*, not the criterion — see
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{78} \\
+\text{(4)} \quad &amp; P_{79} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{78}) \rightarrow P_{7} \\
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7} \\
 \text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\[4pt]
 \vdash \quad &amp; \lnot P_{8}
 \end{aligned}
@@ -4776,12 +4911,12 @@ The same premises, asked to deliver the criterion instead. They do not.
 \text{(1)} \quad &amp; P_{4} \\
 \text{(2)} \quad &amp; P_{5} \\
 \text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{78} \\
+\text{(4)} \quad &amp; P_{79} \\
 \text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{78}) \rightarrow P_{7} \\
+\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7} \\
 \text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
-\text{(8)} \quad &amp; (P_{92} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
+\text{(8)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
+\vdash \quad &amp; P_{94}
 \end{aligned}
 \]
 </div>
@@ -4809,7 +4944,7 @@ weight rests and are worth nothing against a weakened rival.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{35} \\
 \text{(4)} \quad &amp; P_{37} \\
 \text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\
@@ -4833,7 +4968,7 @@ all stay.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{37} \\
 \text{(4)} \quad &amp; P_{33} \rightarrow P_{34} \\[4pt]
 \vdash \quad &amp; P_{34}
@@ -4852,10 +4987,10 @@ granted either.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{37} \\
 \text{(4)} \quad &amp; P_{33} \rightarrow P_{34} \\
-\text{(5)} \quad &amp; (P_{80} \land \lnot P_{1}) \rightarrow P_{35} \\
+\text{(5)} \quad &amp; (P_{81} \land \lnot P_{1}) \rightarrow P_{35} \\
 \text{(6)} \quad &amp; (P_{34} \land P_{35}) \rightarrow P_{36} \\
 \text{(7)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{2} \\[4pt]
 \vdash \quad &amp; \lnot P_{2}
@@ -4876,7 +5011,7 @@ return leg needs — put in.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{37} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\[4pt]
@@ -4896,11 +5031,11 @@ the parse, the near-term setting, the referent principle, and the demand that
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{37} \\
 \text{(4)} \quad &amp; P_{8} \\
 \text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\
-\text{(6)} \quad &amp; (P_{80} \land \lnot P_{1}) \rightarrow P_{35} \\
+\text{(6)} \quad &amp; (P_{81} \land \lnot P_{1}) \rightarrow P_{35} \\
 \text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{1} \\
 \text{(8)} \quad &amp; (P_{34} \land P_{35}) \rightarrow P_{36} \\
 \text{(9)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{2} \\[4pt]
@@ -4922,7 +5057,7 @@ the referent and contests only what may be inferred from it.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{35} \\
 \text{(4)} \quad &amp; P_{38} \\
 \text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\[4pt]
@@ -4940,7 +5075,7 @@ Wegner's objection with Postell's usage parity in play.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{35} \\
 \text{(4)} \quad &amp; P_{38} \\
 \text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\
@@ -5006,7 +5141,7 @@ near-term setting and the referent principle all stay.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{39} \\
 \text{(4)} \quad &amp; P_{40} \\
 \text{(5)} \quad &amp; P_{37} \\
@@ -5025,7 +5160,7 @@ Wegner's objection with the fathers' sign argument in play.
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{80} \\
+\text{(2)} \quad &amp; P_{81} \\
 \text{(3)} \quad &amp; P_{39} \\
 \text{(4)} \quad &amp; P_{40} \\
 \text{(5)} \quad &amp; P_{37} \\
@@ -5177,6 +5312,69 @@ Dinah a παρθένος as the law names the seduced virgin, in the sense "virg
 
 Grounded in scripture alone: In the Greek Exodus, the seduced παρθένος is owed 'the bride-price of virgins', Genesis 34 tells Shechem's act in the words of the laws of the violated virgin.
 
+<a id="millerOnTheLaws"></a>
+**`millerOnTheLaws`** — Miller: in the laws, the virginity is the context's, not the word's
+
+**Miller on the laws**, as he argues it: two uses of the word of women who
+are not virgins, so the word does not by itself connote virginity, so the laws'
+virginity is the context's.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{74} \\
+\text{(2)} \quad &amp; P_{19} \\
+\text{(3)} \quad &amp; P_{76} \\
+\text{(4)} \quad &amp; P_{74} \rightarrow P_{75} \\
+\text{(5)} \quad &amp; (P_{19} \land P_{76}) \rightarrow P_{75} \\
+\text{(6)} \quad &amp; P_{75} \rightarrow \lnot P_{23} \\[4pt]
+\vdash \quad &amp; \lnot P_{23}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="millerCase"></a>
+**`millerCase`** — Miller, from Genesis 34:3
+
+**Miller from Genesis 34:3**, his case on the evidence the texts leave
+standing: Joel 1:8, which the Greek refutes, taken out (`Dispute.Miller`). The
+position he holds in the dispute over the Septuagint's word.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{19} \\
+\text{(2)} \quad &amp; P_{76} \\
+\text{(3)} \quad &amp; (P_{19} \land P_{76}) \rightarrow P_{75} \\
+\text{(4)} \quad &amp; P_{75} \rightarrow \lnot P_{23} \\[4pt]
+\vdash \quad &amp; \lnot P_{23}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="millerOnJoelAlone"></a>
+**`millerOnJoelAlone`** — Miller, from Joel 1:8 alone
+
+**Miller's dissent, had Joel 1:8 been all his evidence.** Not his argument as
+he makes it, written down to show what striking a refuted claim does.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{74} \\
+\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
+\text{(3)} \quad &amp; P_{75} \rightarrow \lnot P_{23} \\[4pt]
+\vdash \quad &amp; \lnot P_{23}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
 <a id="matthewCase"></a>
 **`matthewCase`** — Scripture interprets Scripture: Matthew quotes ἡ παρθένος of Mary
 
@@ -5301,9 +5499,9 @@ virginal conception.
 \text{(3)} \quad &amp; P_{61} \\
 \text{(4)} \quad &amp; P_{62} \\
 \text{(5)} \quad &amp; P_{63} \\
-\text{(6)} \quad &amp; P_{78} \\
+\text{(6)} \quad &amp; P_{79} \\
 \text{(7)} \quad &amp; (P_{50} \land P_{64} \land P_{61} \land P_{62} \land P_{63}) \rightarrow P_{65} \\
-\text{(8)} \quad &amp; (P_{65} \land P_{78}) \rightarrow P_{66} \\[4pt]
+\text{(8)} \quad &amp; (P_{65} \land P_{79}) \rightarrow P_{66} \\[4pt]
 \vdash \quad &amp; P_{66}
 \end{aligned}
 \]
@@ -5417,8 +5615,8 @@ with no human father, delivering the criterion. The rival whose hinge
 \text{(2)} \quad &amp; P_{51} \\
 \text{(3)} \quad &amp; P_{52} \\
 \text{(4)} \quad &amp; P_{53} \\
-\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92} \\[4pt]
-\vdash \quad &amp; P_{92}
+\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\[4pt]
+\vdash \quad &amp; P_{93}
 \end{aligned}
 \]
 </div>
@@ -5533,8 +5731,8 @@ would state it.
 \text{(4)} \quad &amp; P_{14} \\
 \text{(5)} \quad &amp; P_{8} \\
 \text{(6)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{93} \\[4pt]
-\vdash \quad &amp; \lnot P_{93}
+\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{94} \\[4pt]
+\vdash \quad &amp; \lnot P_{94}
 \end{aligned}
 \]
 </div>
@@ -5561,13 +5759,13 @@ side, which is neither one line nor several converging ones.
 \text{(6)} \quad &amp; P_{4} \\
 \text{(7)} \quad &amp; P_{5} \\
 \text{(8)} \quad &amp; P_{6} \\
-\text{(9)} \quad &amp; P_{78} \\
-\text{(10)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{78}) \rightarrow P_{7} \\
+\text{(9)} \quad &amp; P_{79} \\
+\text{(10)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7} \\
 \text{(11)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
 \text{(12)} \quad &amp; (P_{5} \land P_{9} \land P_{12}) \rightarrow \lnot P_{14} \\
 \text{(13)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{93} \\[4pt]
-\vdash \quad &amp; \lnot P_{93}
+\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{94} \\[4pt]
+\vdash \quad &amp; \lnot P_{94}
 \end{aligned}
 \]
 </div>
@@ -6519,13 +6717,16 @@ word: παρθένος means a virgin, the translator read the woman of 7:14 as 
 she conceives as one — "a sign which is not common to all the first-born sons"
 (*Dialogue* 84). So she is not already pregnant when the sign is given, and her
 pregnancy is no ordinary one. Wegner's claim is false in it: the word already
-had the sense "virgin".
+had the sense "virgin". So are Miller's thesis and his premise that the noun of
+Genesis 34:3 describes Dinah as she then was: the noun names her.
 
 ```lean
 def virginConceivesReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.harahIsPredicateAdjective => False
     | Claim.isaianicAlmahIsAlreadyPregnant => False
     | Claim.pregnancyAtTheSignIsOrdinary => False
@@ -6653,6 +6854,8 @@ def translatorDescribesTheWomanReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.almahMeansVirgin => False
     | Claim.harahIsPredicateAdjective => False
     | Claim.isaianicAlmahIsAlreadyPregnant => False
@@ -6708,6 +6911,8 @@ def nowAVirginReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.lxxEnvisagesAVirginalConception => False
     | Claim.harahIsPredicateAdjective => False
     | Claim.isaianicAlmahIsAlreadyPregnant => False
@@ -6855,6 +7060,8 @@ def lutherReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.maternalSilenceProvesNothing => False
     | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | x => True
@@ -6878,6 +7085,8 @@ def leupoldReading : Valuation Claim :=
     | Claim.wordingSignifiesAFatherlessBirth => False
     | Claim.seedIsLineNotIndividual => False
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.maternalSilenceProvesNothing => False
     | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | x => True
@@ -7084,9 +7293,9 @@ The protoevangelium strand with its hinge read as Luther reads it.
 \text{(2)} \quad &amp; P_{51} \\
 \text{(3)} \quad &amp; P_{52} \\
 \text{(4)} \quad &amp; P_{53} \\
-\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92} \\
+\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
 \text{(6)} \quad &amp; P_{53} \rightarrow P_{54} \\[4pt]
-\vdash \quad &amp; P_{92}
+\vdash \quad &amp; P_{93}
 \end{aligned}
 \]
 </div>
@@ -7105,11 +7314,11 @@ The protoevangelium strand with its hinge read as Leupold reads it.
 \text{(2)} \quad &amp; P_{51} \\
 \text{(3)} \quad &amp; P_{52} \\
 \text{(4)} \quad &amp; P_{53} \\
-\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{92} \\
-\text{(6)} \quad &amp; P_{78} \\
-\text{(7)} \quad &amp; P_{78} \rightarrow P_{55} \\
+\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
+\text{(6)} \quad &amp; P_{79} \\
+\text{(7)} \quad &amp; P_{79} \rightarrow P_{55} \\
 \text{(8)} \quad &amp; P_{53} \rightarrow P_{55} \\[4pt]
-\vdash \quad &amp; P_{92}
+\vdash \quad &amp; P_{93}
 \end{aligned}
 \]
 </div>
@@ -7273,7 +7482,7 @@ Against *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, it cann
   - \\(P_{58}\\) Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's — *consensus*: Gen 16:10; Gen 24:60; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300
   - the step itself — *disputed*: [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
 
-**2. Read as what the wording fits, once fulfilled.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(P_{55}\\) — so read by [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 (*disputed*). It rests the reading on \\(P_{78}\\), \\(P_{78} \rightarrow P_{55}\\).
+**2. Read as what the wording fits, once fulfilled.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(P_{55}\\) — so read by [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 (*disputed*). It rests the reading on \\(P_{79}\\), \\(P_{79} \rightarrow P_{55}\\).
 
 Against *Leupold on 'her seed': her posterity, named for the deception*, it is not reached: *Leupold on 'her seed': her posterity, named for the deception* holds, and can be held together with it.
 
@@ -7411,6 +7620,8 @@ def repliesStandReading : Valuation Claim :=
     | Claim.maternalSilenceProvesNothing => False
     | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.nearTermExcludesMessianicSense => False
     | x => True
 ```
@@ -7567,6 +7778,8 @@ def motyerReading : Valuation Claim :=
     | Claim.maternalSilenceProvesNothing => False
     | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.isaiahIsNearTermSignToAhaz => False
     | Claim.nearTermExcludesMessianicSense => False
     | x => True
@@ -7706,6 +7919,8 @@ def scripturalWorldReading : Valuation Claim :=
     | Claim.maternalSilenceProvesNothing => False
     | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | x => True
 ```
 
@@ -9082,7 +9297,7 @@ theorem nothing_prevails_without_the_reply : Framework.grounded
 
 `Results.Septuagint` shows that the Septuagint's witness rests on one claim: that
 παρθένος, in its translator's Greek, means a virgin. This module weighs that
-claim against its rival. Five positions meet:
+claim against its rival. Six positions meet:
 
 - **The Septuagint as a witness** (Irenaeus): Jews translated Isaiah before
   Christ and wrote a word that means a virgin, so they read the woman as one.
@@ -9105,6 +9320,12 @@ claim against its rival. Five positions meet:
   has lain with a παρθένος, and has him pay "the bride-price of virgins"
   (22:15–16); Genesis 34 tells Shechem's act in that law's words. So at 34:3 the
   word names Dinah by the standing he took from her, in the sense "virgin".
+- **Miller from Genesis 34:3**: "In one passage, this term refers to a rape
+  victim after she has been attacked" (*Born Divine*). The word is said there of
+  a woman no longer a virgin, so it did not by itself connote virginity, and the
+  laws' virginity is the context's. His case as the texts leave it: his other
+  example, Joel 1:8, is struck, because the Greek reads otherwise
+  (`Dispute.Miller`).
 
 ### What this dispute does not decide
 
@@ -9173,8 +9394,9 @@ shifted.
 
 ### What the solver computed
 
-Three standoffs, all with Wegner, one defeat of Wegner that he cannot return,
-and nothing else (`septuagintDispute_defeats`, all twenty-five pairs):
+Six standoffs, three with Wegner and three with Miller; one defeat of each by
+the status reading, which neither can return; and nothing else
+(`septuagintDispute_defeats`, all thirty-six pairs):
 
 - **Wegner and the witness.** What Wegner holds denies the witness's ground that
   "virgin" is a sense of the word; what the witness holds denies his
@@ -9187,6 +9409,14 @@ and nothing else (`septuagintDispute_defeats`, all twenty-five pairs):
   excludes his "not yet 'virgin'". He attacks it back, by the same exclusion,
   and the attack fails: he is weaker than it
   (`drift_does_not_defeat_dinah`).
+- **Miller and the witness, Rico and Gentry, and the laws.** His thesis, that the
+  word did not by itself connote virginity, denies each of their senses, and
+  each of them denies it; his conclusion and the laws' contradict each other
+  outright.
+- **The status reading defeats Miller.** Its sense "virgin" at 34:3 excludes his
+  premise that the noun describes Dinah as she then was, and his thesis. He
+  attacks it back and fails, for the same reason as Wegner. Miller and Wegner
+  do not attack each other: Wegner's claim entails Miller's thesis.
 
 The witness, Rico and Gentry, the laws and the status reading do not attack one
 another. They stand together (`septuagint_stands_with_the_usage`). Rico and Gentry lend the witness
@@ -9195,10 +9425,14 @@ reach the same ground through the definition, so the library draws no support
 from them, though they lead to the same place.
 
 **The Septuagint's side prevails** (`septuagint_prevails_over_wegner`). Nothing
-defeats the status reading, so it is accepted first. It defeats Wegner, the only
-party that defeats the witness, Rico and Gentry or the laws, so all three are
-accepted with it. Wegner belongs to no position that can be defended
-(`drift_indefensible`). That is a verdict on these premises and these ratings,
+defeats the status reading, so it is accepted first. It defeats Wegner and
+Miller, the only parties that defeat the witness, Rico and Gentry or the laws,
+so all three are accepted with it. Neither Wegner nor Miller belongs to any
+position that can be defended (`drift_indefensible`, `miller_indefensible`).
+Miller's defeat overrules his dissent from the laws' step, so that the step
+stands at its cited `wellSupported` (`Dispute.Miller`); this dispute weighs the
+step at `disputed`, its floor, so the overruling does not lean on the rating it
+lets stand. That is a verdict on these premises and these ratings,
 and it turns on one of them, the status reading's step: see below.
 
 ### Where the evidence lies
@@ -9458,6 +9692,28 @@ theorem dinah_rests_on_its_inference : ¬Entails dinahLine.grounds (p
 -- axioms: propext, Quot.sound
 ```
 
+<a id="millerCase_establishes"></a>
+**`millerCase_establishes`**
+
+Miller from Genesis 34:3 delivers his conclusion.
+
+```lean
+theorem millerCase_establishes : Establishes millerCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="millerCase_is_satisfiable"></a>
+**`millerCase_is_satisfiable`**
+
+Miller from Genesis 34:3 has a model: Wegner's reading, which takes the
+laws as Miller reads them, and the noun at 34:3 as said of Dinah as she then
+was.
+
+```lean
+theorem millerCase_is_satisfiable : Satisfiable millerCase.premises
+-- axioms: propext, Quot.sound
+```
+
 #### Strength
 
 <a id="septuagintWitness_strength"></a>
@@ -9490,6 +9746,18 @@ Rico and Gentry's grounds are `consensus`, but their inference is
 
 ```lean
 theorem usageCase_strength : usageCase.strength = 0
+-- axioms: propext
+```
+
+<a id="millerCase_strength"></a>
+**`millerCase_strength`**
+
+Miller's grounds are `consensus`, what the Greek reads, and `wellSupported`,
+his premise about the noun; but his inference is `disputed`, on Rico and Gentry
+and on Bratcher, who grant both and hold the word means "virgin".
+
+```lean
+theorem millerCase_strength : millerCase.strength = 0
 -- axioms: propext
 ```
 
@@ -9627,6 +9895,7 @@ def septuagintPartyNode : SeptuagintParty → ArgumentPackage Claim :=
     | SeptuagintParty.usage => usageCase
     | SeptuagintParty.laws => lawsCase
     | SeptuagintParty.dinah => dinahCase
+    | SeptuagintParty.miller => millerCase
 ```
 
 <a id="septuagintDispute"></a>
@@ -9641,7 +9910,7 @@ def septuagintDispute : Dispute Claim SeptuagintParty :=
   { node := septuagintPartyNode,
     consistent := septuagintDispute._proof_1,
     sound := septuagintDispute._proof_2,
-    rated := septuagintDispute._proof_8 }
+    rated := septuagintDispute._proof_9 }
 ```
 
 <a id="septuagint_stands_with_the_usage"></a>
@@ -9665,24 +9934,7 @@ theorem septuagint_stands_with_the_usage : septuagintDispute.StandTogether
 The defeats of the dispute, as a table.
 
 ```lean
-def septuagintPartyDefeats : SeptuagintParty → SeptuagintParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | SeptuagintParty.drift,
-      SeptuagintParty.witness => True
-    | SeptuagintParty.witness,
-      SeptuagintParty.drift => True
-    | SeptuagintParty.drift,
-      SeptuagintParty.usage => True
-    | SeptuagintParty.usage,
-      SeptuagintParty.drift => True
-    | SeptuagintParty.drift, SeptuagintParty.laws =>
-      True
-    | SeptuagintParty.laws, SeptuagintParty.drift =>
-      True
-    | SeptuagintParty.dinah,
-      SeptuagintParty.drift => True
-    | x, x_2 => False
+def septuagintPartyDefeats : SeptuagintParty → SeptuagintParty → Prop
 ```
 
 <a id="instDecidableRelSeptuagintPartySeptuagintPartyDefeats"></a>
@@ -9723,11 +9975,11 @@ theorem septuagintPartyNode_strength : ∀ (i : SeptuagintParty),
 <a id="septuagintDispute_defeats"></a>
 **`septuagintDispute_defeats`**
 
-**Who defeats whom**, all twenty-five pairs: Wegner defeats the witness,
-Rico and Gentry and the laws, and each defeats him back; the status reading
-defeats Wegner, and he does not defeat it; and nothing else. Every
-cell is computed from what the parties hold by `Horn.defeats?` and checked by
-the kernel.
+**Who defeats whom**, all thirty-six pairs: Wegner defeats the witness,
+Rico and Gentry and the laws, and each defeats him back; so does Miller, and
+each defeats him back; the status reading defeats Wegner and Miller, and
+neither defeats it; and nothing else. Every cell is computed from what the
+parties hold by `Horn.defeats?` and checked by the kernel.
 
 ```lean
 theorem septuagintDispute_defeats : ∀ (i j : SeptuagintParty),
@@ -9747,7 +9999,8 @@ def septuagintFinite : Solver.Finite septuagintDispute.defeats :=
       [SeptuagintParty.witness,
         SeptuagintParty.drift,
         SeptuagintParty.usage, SeptuagintParty.laws,
-        SeptuagintParty.dinah],
+        SeptuagintParty.dinah,
+        SeptuagintParty.miller],
     complete := septuagintFinite._proof_1,
     defeats := fun i j => decide (septuagintPartyDefeats i j),
     spec := septuagintFinite._proof_2 }
@@ -9780,7 +10033,7 @@ def instDecidableRelSeptuagintPartySeptuagintPartySupports : DecidableRel
 <a id="septuagintDispute_supports"></a>
 **`septuagintDispute_supports`**
 
-**One support**, in all twenty-five pairs: Rico and Gentry's conclusion is the
+**One support**, in all thirty-six pairs: Rico and Gentry's conclusion is the
 witness's contested ground, that "virgin" is a sense of παρθένος. The library
 draws a support only where one party's conclusion is, word for word, another's
 premise. The laws and the status reading reach the witness's ground through a
@@ -9797,7 +10050,7 @@ theorem septuagintDispute_supports : ∀ (i j : SeptuagintParty),
 <a id="septuagintDispute_partOf"></a>
 **`septuagintDispute_partOf`**
 
-**No case is part of another's** here, in all twenty-five pairs, except each
+**No case is part of another's** here, in all thirty-six pairs, except each
 party's own. Every cell is computed by `partOf?` and checked by the kernel.
 
 ```lean
@@ -9818,24 +10071,33 @@ The dispute drawn: who defeats whom, and the one support.
 <marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
 <marker id="tm-part" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#1f5fa8"/></marker>
 </defs>
-<path d="M212,59 Q260,116 328,143" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M331,145 Q283,88 215,61" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M338,168 Q299,231 294,304" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M331,162 Q218,222 126,311" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M293,307 Q332,244 337,171" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M124,313 Q237,253 328,164" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M72,154 Q198,172 325,154" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M284,307 Q262,182 206,67" style="stroke:#2e7d32;fill:none;stroke-width:1.6;stroke-dasharray:5 3" marker-end="url(#tm-support)"/>
+<path d="M213,58 Q255,102 314,116" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M187,58 Q127,71 86,116" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M317,118 Q275,73 216,59" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M330,140 Q312,199 330,257" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M322,138 Q250,227 209,334" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M330,260 Q348,202 330,143" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M317,268 Q210,185 86,134" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M208,337 Q280,248 321,141" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M193,337 Q151,230 79,141" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M83,268 Q208,216 314,134" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M70,260 Q88,202 70,143" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M83,117 Q143,104 184,59" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M83,133 Q190,215 314,266" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M78,138 Q119,245 191,334" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M322,262 Q281,155 209,66" style="stroke:#2e7d32;fill:none;stroke-width:1.6;stroke-dasharray:5 3" marker-end="url(#tm-support)"/>
 <circle cx="200" cy="50" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
 <text x="200" y="55" text-anchor="middle" style="fill:var(--fg);font-size:14px">1</text>
-<circle cx="343" cy="154" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="343" y="159" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
-<circle cx="288" cy="321" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="288" y="326" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
-<circle cx="112" cy="321" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="112" y="326" text-anchor="middle" style="fill:var(--fg);font-size:14px">4</text>
-<circle cx="57" cy="154" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="57" y="159" text-anchor="middle" style="fill:var(--fg);font-size:14px">5</text>
+<circle cx="330" cy="125" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="330" y="130" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
+<circle cx="330" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="330" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
+<circle cx="200" cy="350" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="200" y="355" text-anchor="middle" style="fill:var(--fg);font-size:14px">4</text>
+<circle cx="70" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="70" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">5</text>
+<circle cx="70" cy="125" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="70" y="130" text-anchor="middle" style="fill:var(--fg);font-size:14px">6</text>
 </svg>
 </div>
 
@@ -9848,19 +10110,29 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 3 | Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures |
 | 4 | The laws of the Greek Pentateuch: παρθένος in the sense 'virgin' |
 | 5 | The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16 |
+| 6 | Miller, from Genesis 34:3 |
 
 | From | To | Edge |
 |---|---|---|
 | 1 *The Septuagint as a witness (Isaiah 7:14 in Greek)* | 2 *Wegner on παρθένος: the word had not yet come to mean 'virgin'* | defeats |
+| 1 *The Septuagint as a witness (Isaiah 7:14 in Greek)* | 6 *Miller, from Genesis 34:3* | defeats |
 | 2 *Wegner on παρθένος: the word had not yet come to mean 'virgin'* | 1 *The Septuagint as a witness (Isaiah 7:14 in Greek)* | defeats |
 | 2 *Wegner on παρθένος: the word had not yet come to mean 'virgin'* | 3 *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures* | defeats |
 | 2 *Wegner on παρθένος: the word had not yet come to mean 'virgin'* | 4 *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'* | defeats |
 | 3 *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures* | 2 *Wegner on παρθένος: the word had not yet come to mean 'virgin'* | defeats |
+| 3 *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures* | 6 *Miller, from Genesis 34:3* | defeats |
 | 4 *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'* | 2 *Wegner on παρθένος: the word had not yet come to mean 'virgin'* | defeats |
+| 4 *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'* | 6 *Miller, from Genesis 34:3* | defeats |
 | 5 *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* | 2 *Wegner on παρθένος: the word had not yet come to mean 'virgin'* | defeats |
+| 5 *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* | 6 *Miller, from Genesis 34:3* | defeats |
+| 6 *Miller, from Genesis 34:3* | 1 *The Septuagint as a witness (Isaiah 7:14 in Greek)* | defeats |
+| 6 *Miller, from Genesis 34:3* | 3 *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures* | defeats |
+| 6 *Miller, from Genesis 34:3* | 4 *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'* | defeats |
 | 3 *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures* | 1 *The Septuagint as a witness (Isaiah 7:14 in Greek)* | supports |
 | 3 *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures* | 2 *Wegner on παρθένος: the word had not yet come to mean 'virgin'* | supported attack — already a defeat |
+| 3 *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures* | 6 *Miller, from Genesis 34:3* | supported attack — already a defeat |
 | 2 *Wegner on παρθένος: the word had not yet come to mean 'virgin'* | 1 *The Septuagint as a witness (Isaiah 7:14 in Greek)* | secondary attack — already a defeat |
+| 6 *Miller, from Genesis 34:3* | 1 *The Septuagint as a witness (Isaiah 7:14 in Greek)* | secondary attack — already a defeat |
 
 The defeats are the cells of [`septuagintDispute_defeats`](#septuagintDispute_defeats), the supports the cells of [`septuagintDispute_supports`](#septuagintDispute_supports) and the parts the cells of [`septuagintDispute_partOf`](#septuagintDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 
@@ -9869,7 +10141,8 @@ The defeats are the cells of [`septuagintDispute_defeats`](#septuagintDispute_de
 
 Why the Septuagint's side prevails, in stages: the status reading first,
 which nothing defeats; then the witness, Rico and Gentry and the laws, whom it
-defends by defeating Wegner; and Wegner out, defeated by the status reading.
+defends by defeating Wegner and Miller; and Wegner and Miller out, each defeated
+by the status reading.
 
 **What the dispute forces is exactly *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*, *The Septuagint as a witness (Isaiah 7:14 in Greek)*, *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures*, *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*.**
 
@@ -9877,17 +10150,65 @@ defends by defeating Wegner; and Wegner out, defeated by the status reading.
   - *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* is defeated by nothing.
 - Stage 2: *The Septuagint as a witness (Isaiah 7:14 in Greek)*, *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures*, *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*.
   - *Wegner on παρθένος: the word had not yet come to mean 'virgin'* defeats *The Septuagint as a witness (Isaiah 7:14 in Greek)*, and *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Wegner on παρθένος: the word had not yet come to mean 'virgin'*.
+  - *Miller, from Genesis 34:3* defeats *The Septuagint as a witness (Isaiah 7:14 in Greek)*, and *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Miller, from Genesis 34:3*.
   - *Wegner on παρθένος: the word had not yet come to mean 'virgin'* defeats *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures*, and *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Wegner on παρθένος: the word had not yet come to mean 'virgin'*.
+  - *Miller, from Genesis 34:3* defeats *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures*, and *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Miller, from Genesis 34:3*.
   - *Wegner on παρθένος: the word had not yet come to mean 'virgin'* defeats *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*, and *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Wegner on παρθένος: the word had not yet come to mean 'virgin'*.
+  - *Miller, from Genesis 34:3* defeats *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*, and *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Miller, from Genesis 34:3*.
 - Nothing else is forced:
   - *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, and nothing forced defeats *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*.
+  - *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Miller, from Genesis 34:3*, and nothing forced defeats *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*.
 
-**What this rests on.** The reasons state 4 defeats and 17 absences of defeat, each a cell of the defeat table, [`septuagintDispute_defeats`](#septuagintDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 8 defeats and 18 absences of defeat, each a cell of the defeat table, [`septuagintDispute_defeats`](#septuagintDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The Septuagint as a witness (Isaiah 7:14 in Greek)*, weakest at *disputed*:
   - In the Greek of the Septuagint, παρθένος means a virgin — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472
 - *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*, weakest at *plausible*:
-  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [`frymer-kensky-virginity-1998`](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [`frymer-kensky-virginity-1998`](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [`enc-referential-analysis-1986`](../bibliography.md#enc-referential-analysis-1986), pp. 405–426; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+- *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, weakest at *disputed*:
+  - an inference step — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
+- *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures*, weakest at *disputed*:
+  - an inference step — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472; [`davidson-immanuel-1899`](../bibliography.md#davidson-immanuel-1899), p. 456; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013)
+- *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*, weakest at *disputed*:
+  - an inference step — [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+- *Miller, from Genesis 34:3*, weakest at *disputed*:
+  - an inference step — [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113
+
+<a id="septuagint_prevails_over_wegner"></a>
+**`septuagint_prevails_over_wegner`**
+
+**The Septuagint's side prevails, and neither Wegner nor Miller does.**
+Nothing defeats the status reading of Genesis 34:3, because Wegner and Miller
+are each weaker than it, so it is accepted first. It defeats them both, the only
+parties that defeat the witness, Rico and Gentry or the laws, so all three are
+accepted with it; and nothing defends either. The verdict turns on one rating,
+the status reading's step (`dinahLine`).
+
+```lean
+theorem septuagint_prevails_over_wegner : Framework.grounded
+    septuagintDispute.defeats = {SeptuagintParty.witness,
+    SeptuagintParty.usage, SeptuagintParty.laws, SeptuagintParty.dinah}
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="millerAnsweredByDinah"></a>
+**`millerAnsweredByDinah`**
+
+Why Miller from Genesis 34:3 cannot be defended: the status reading defeats
+him, and nothing answers it.
+
+***Miller, from Genesis 34:3* cannot be defended: no admissible position holds it.**
+
+- *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Miller, from Genesis 34:3*, and nothing defeats *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*.
+
+**What this rests on.** The reasons state 1 defeat and 6 absences of defeat, each a cell of the defeat table, [`septuagintDispute_defeats`](#septuagintDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*, weakest at *plausible*:
+  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [`frymer-kensky-virginity-1998`](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [`enc-referential-analysis-1986`](../bibliography.md#enc-referential-analysis-1986), pp. 405–426; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+- *Miller, from Genesis 34:3*, weakest at *disputed*:
+  - an inference step — [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113
+- *The Septuagint as a witness (Isaiah 7:14 in Greek)*, weakest at *disputed*:
+  - In the Greek of the Septuagint, παρθένος means a virgin — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472
 - *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, weakest at *disputed*:
   - an inference step — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
 - *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures*, weakest at *disputed*:
@@ -9895,20 +10216,18 @@ defends by defeating Wegner; and Wegner out, defeated by the status reading.
 - *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*, weakest at *disputed*:
   - an inference step — [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
 
-<a id="septuagint_prevails_over_wegner"></a>
-**`septuagint_prevails_over_wegner`**
+<a id="miller_indefensible"></a>
+**`miller_indefensible`**
 
-**The Septuagint's side prevails, and Wegner does not.** Nothing defeats the
-status reading of Genesis 34:3, because Wegner is weaker than it, so it is
-accepted first. It defeats Wegner, the only party that defeats the witness, Rico
-and Gentry or the laws, so all three are accepted with it; and nothing defends
-Wegner. The verdict turns on one rating, the status reading's step
-(`dinahLine`).
+**Miller from Genesis 34:3 cannot be defended.** No admissible set contains
+him: the status reading defeats him, and nothing defeats the status reading. His
+case denies what it concludes, that the word names Dinah in the sense "virgin";
+he attacks it back, and fails, being the weaker.
 
 ```lean
-theorem septuagint_prevails_over_wegner : Framework.grounded
-    septuagintDispute.defeats = {SeptuagintParty.witness,
-    SeptuagintParty.usage, SeptuagintParty.laws, SeptuagintParty.dinah}
+theorem miller_indefensible : ∀ (S : Set SeptuagintParty),
+    Framework.Admissible septuagintDispute.defeats S → SeptuagintParty.miller
+    ∉ S
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -9922,10 +10241,10 @@ and nothing answers it.
 
 - *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16* defeats *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, and nothing defeats *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*.
 
-**What this rests on.** The reasons state 1 defeat and 5 absences of defeat, each a cell of the defeat table, [`septuagintDispute_defeats`](#septuagintDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 1 defeat and 6 absences of defeat, each a cell of the defeat table, [`septuagintDispute_defeats`](#septuagintDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*, weakest at *plausible*:
-  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [`frymer-kensky-virginity-1998`](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [`frymer-kensky-virginity-1998`](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [`enc-referential-analysis-1986`](../bibliography.md#enc-referential-analysis-1986), pp. 405–426; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
 - *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, weakest at *disputed*:
   - an inference step — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
 - *The Septuagint as a witness (Isaiah 7:14 in Greek)*, weakest at *disputed*:
@@ -9934,6 +10253,8 @@ and nothing answers it.
   - an inference step — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472; [`davidson-immanuel-1899`](../bibliography.md#davidson-immanuel-1899), p. 456; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013)
 - *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*, weakest at *disputed*:
   - an inference step — [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+- *Miller, from Genesis 34:3*, weakest at *disputed*:
+  - an inference step — [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113
 
 <a id="drift_indefensible"></a>
 **`drift_indefensible`**
@@ -9987,120 +10308,68 @@ Miller gives two uses of the word of a woman who is not a virgin.
   her youth", a young widow. The Greek does not read so: it calls the woman
   νύμφην, a bride, and its παρθεν- word, τὸν παρθενικόν, is of the husband
   (Rahlfs). The text refutes the claim.
-- **Genesis 34:3**, where the Greek calls Dinah a παρθένος after Shechem has lain
-  with her. The Greek reads so. What it shows is contested — the status reading
-  takes the word as the law's name for the standing Shechem took
-  (`Dispute.Septuagint`) — but that is an argument, not a reading of the text,
-  and it strikes nothing.
+- **Genesis 34:3**: "In one passage, this term refers to a rape victim after she
+  has been attacked." The Greek calls Dinah a παρθένος in the verse after
+  Shechem lies with her, and that much the text reads. But Miller's claim is
+  more: that the noun describes her as she then was, no longer a virgin, so that
+  it is not used there in the sense "virgin". That is his premise, not the
+  text's. The order of the verses puts Shechem's love after his act; it does not
+  put the noun's description there. A noun is read at a time of its own, which
+  the context gives (Enç 1986): Scripture names Rahab "the harlot" long after
+  Jericho (Hebrews 11:31). The status reading takes the noun as the law's name
+  for the woman a man has lain with (`dinahLine`).
 
 ### What the checks find
 
 The library strikes a claim only when a reading of a text refutes it — Scripture,
 rated `consensus` — and then runs every check on what is left
-(`Testimony.Logic.Credibility`). Struck of Joel 1:8, Miller's dissent still
-denies the laws' step, through Genesis 34:3, and it is still argued, granting
-the laws' grounds; so it is still a credible critique under every standard
-(`miller_survives_on_genesis`). The laws' step stays `disputed`
-(`laws_step_ratings`).
+(`Testimony.Logic.Credibility`). Struck of Joel 1:8, Miller's dissent is his
+case from Genesis 34:3 (`miller_struck_is_his_case_from_genesis`), and it still
+denies the laws' step, granting the laws' grounds. His premise about the noun is
+not struck: no text reads otherwise, and an argument strikes nothing. It is
+weighed instead.
+
+- **Under the evidence and tradition standards** his dissent is a credible
+  critique. His premise rests on argued scholarship, which both standards
+  admit.
+- **Under the Scripture standard** it is not
+  (`miller_survives_on_genesis`). The laws' grounds are all Scripture, and a
+  dissent from such a step must rest on Scripture alone. What the Greek of
+  34:3 reads is Scripture; that its noun describes Dinah as she then was is
+  Miller's reading of it.
+- **His denial needs that premise** (`miller_rests_on_the_noun`). Grant what the
+  Greek reads and every step of his, and the laws' sense can still stand.
 
 Had Joel 1:8 been all his evidence, the dissent would not count under any
 standard: struck of it, nothing in it would deny the step
 (`miller_on_joel_alone_does_not_count`). That is the rule at work: evidence the
 texts refute stops counting, and a dissent that needed it stops counting with it.
 
-What the rule does not do is weigh the evidence that stands. Genesis 34:3 is one
-verse, and the status reading answers it; the rule records only that it is read
-as Miller says.
+### Weighed in the dispute, and overruled
+
+A credible dissent can still lose when it is weighed. In `Dispute.Septuagint`
+Miller's case from Genesis 34:3 is a party, beside Wegner's, and the solver
+computes that nothing can defend it (`miller_indefensible`). The status reading
+concludes that the word names Dinah in the sense "virgin", which Miller's
+premise and his thesis deny; he attacks it back, and fails, because his step,
+rated `disputed`, is weaker than the status reading's, rated `plausible`. Nothing
+answers the status reading, so nothing defends Miller.
+
+A dissent overruled so stops counting against the step
+(`Testimony.Logic.Credibility`, `Overruled`), on one condition, which keeps the
+rule from arguing in a circle: the dispute must weigh the step at its floor. It
+does. The case from the laws cites its step `disputed` there, so Miller is
+overruled with the laws at their weakest, and the overruling owes nothing to the
+rating it lets stand.
+
+So the laws' step stands at its cited `wellSupported` under every standard
+(`laws_step_ratings`): under the evidence and tradition standards because the
+one credible dissent is overruled, and under the Scripture standard because it
+is not heard. The verdict turns, as the dispute's does, on the status reading's
+step, rated `plausible`. Rated `disputed`, it would not outrank Miller, he would
+stand off with it, and his dissent would count again.
 
 #### Miller's dissent
-
-<a id="joelShowsNoConnotation"></a>
-**`joelShowsNoConnotation`**
-
-Joel 1:8 shows that the word does not connote virginity, Miller's way: the
-young widow is called a παρθένος.
-
-<div class="testimony-math">
-\[
-P_{74} \rightarrow P_{75}
-\]
-</div>
-
-<a id="dinahShowsNoConnotation"></a>
-**`dinahShowsNoConnotation`**
-
-Genesis 34:3 shows the same: Dinah is called a παρθένος after Shechem.
-
-<div class="testimony-math">
-\[
-P_{19} \rightarrow P_{75}
-\]
-</div>
-
-<a id="contextNotWordInTheLaws"></a>
-**`contextNotWordInTheLaws`**
-
-So in the laws the virginity "has to be inferred from the context", and the
-word is not used in the sense "virgin".
-
-<div class="testimony-math">
-\[
-P_{75} \rightarrow \lnot P_{23}
-\]
-</div>
-
-<a id="millerSource"></a>
-**`millerSource`**
-
-The citation for Miller's steps.
-
-```lean
-def millerSource : Source :=
-  { primary := Reference.work millerBornDivine,
-    tradition := Tradition.criticalScholarship,
-    confidence := Confidence.disputed }
-```
-
-<a id="millerOnTheLaws"></a>
-**`millerOnTheLaws`** — Miller: in the laws, the virginity is the context's, not the word's
-
-**Miller on the laws**, as he argues it: two uses of the word of women who
-are not virgins, so the word does not by itself connote virginity, so the laws'
-virginity is the context's.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; P_{74} \rightarrow P_{75} \\
-\text{(4)} \quad &amp; P_{19} \rightarrow P_{75} \\
-\text{(5)} \quad &amp; P_{75} \rightarrow \lnot P_{23} \\[4pt]
-\vdash \quad &amp; \lnot P_{23}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="millerOnJoelAlone"></a>
-**`millerOnJoelAlone`** — Miller, from Joel 1:8 alone
-
-**Miller's dissent, had Joel 1:8 been all his evidence.** Not his argument as
-he makes it, written down to show what striking a refuted claim does.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
-\text{(3)} \quad &amp; P_{75} \rightarrow \lnot P_{23} \\[4pt]
-\vdash \quad &amp; \lnot P_{23}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
 
 <a id="joelReadsABride"></a>
 **`joelReadsABride`**
@@ -10131,9 +10400,12 @@ def joelReadsABride : Refutation Claim :=
 
 **Miller against the laws' step**, with Joel 1:8 struck. Consistent,
 granting the laws' grounds, and argued: struck of Joel 1:8, his dissent still
-denies the step through Genesis 34:3, which the Greek reads as he says. A
-credible critique under every standard; under the Scripture standard too,
-because what he still asserts outright is the reading of Genesis 34:3.
+denies the step through Genesis 34:3. What it still asserts outright is the
+Greek's reading of the verse, and his premise that its noun describes Dinah as
+she then was. The first is Scripture; the second is his reading of it, argued
+scholarship. So the dissent is a credible critique under the evidence and
+tradition standards. Under the Scripture standard it is not: the laws' grounds
+are all Scripture, and his premise is not.
 
 **Dissent:** *Miller, Born Divine*, against *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
 
@@ -10143,20 +10415,57 @@ because what he still asserts outright is the reading of Genesis 34:3.
 |---|---|---|
 | evidence | ✔ yes | — |
 | tradition | ✔ yes | — |
-| Scripture | ✔ yes | — |
+| Scripture | ✘ no | At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller) |
+
+<a id="miller_struck_is_his_case_from_genesis"></a>
+**`miller_struck_is_his_case_from_genesis`**
+
+**Struck of Joel 1:8, Miller's dissent is his case from Genesis 34:3**: with
+the claim the Greek refutes taken out, and his step from it, the premises the
+checks weigh are, formula for formula, the premises of the position
+he holds in the dispute over the Septuagint's word (`millerCase`).
+
+```lean
+theorem miller_struck_is_his_case_from_genesis :
+    millerOnLawsAssessment.dissent.premises = millerCase.premises
+-- axioms: propext
+```
 
 <a id="miller_survives_on_genesis"></a>
 **`miller_survives_on_genesis`**
 
-**Miller survives on Genesis 34:3.** Struck of Joel 1:8, which the Greek
-refutes, his dissent from the laws' step is still a credible critique under
-every standard: Genesis 34:3 carries his denial.
+**Miller survives on Genesis 34:3, and turns on the standard.** Struck of
+Joel 1:8, which the Greek refutes, his dissent from the laws' step is still a
+credible critique under the evidence and tradition standards: Genesis 34:3
+carries his denial. Under the Scripture standard it is not, because it carries
+it only with his premise that the noun describes Dinah as she then was, and that
+is not Scripture.
 
 ```lean
 theorem miller_survives_on_genesis : millerOnLawsAssessment.findings.struck =
-    [Claim.joelGreekCallsTheWidowParthenos] ∧ ∀ (s : Standard),
-    Dissent.Credible s millerOnLawsAssessment.dissent
+    [Claim.joelGreekCallsTheWidowParthenos] ∧ Dissent.Credible
+    Standard.evidence millerOnLawsAssessment.dissent ∧ Dissent.Credible
+    Standard.tradition millerOnLawsAssessment.dissent ∧ ¬Dissent.Credible
+    Standard.scriptural millerOnLawsAssessment.dissent
 -- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="miller_rests_on_the_noun"></a>
+**`miller_rests_on_the_noun`**
+
+**Miller's denial rests on his premise about the noun.** Grant what the Greek
+of Genesis 34:3 reads, and every step of his, and the laws' sense still stands:
+on the reading Justin gives the elders' Greek, the noun names Dinah, and the
+word is used of her in the sense "virgin". Miller's conclusion needs his further
+premise, that the noun describes her as she then was. A noun need not: it is
+read at a time of its own (Enç 1986), as Scripture names Rahab "the harlot" long
+after Jericho (Hebrews 11:31).
+
+```lean
+theorem miller_rests_on_the_noun : ¬Entails (caseOf [millerDinahLine.onGrounds
+    [p Claim.greekCallsDinahParthenos]] [] [contextNotWordInTheLaws]) (notP
+    Claim.lawsUseParthenosAsVirgin)
+-- axioms: propext, Quot.sound
 ```
 
 <a id="millerOnJoelAloneAssessment"></a>
@@ -10198,27 +10507,37 @@ theorem miller_on_joel_alone_does_not_count : ∀ (s : Standard),
 known, with what the texts refute struck. Its support is cited `wellSupported`:
 Bratcher, and the lexica on τὰ παρθένια.
 
+Miller's dissent is overruled in the dispute over the Septuagint's word, where
+his case from Genesis 34:3 is a party and nothing defends it
+(`miller_indefensible`). That dispute weighs the laws' step at its floor: the
+case from the laws cites it `disputed` there. So the overruling owes nothing to
+the rating it lets stand.
+
 **The rating, computed.** *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'* is cited at *well supported* ([`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67). Dissents encoded: *Miller, Born Divine*. The strongest known: *Miller, Born Divine*.
 
 | Standard | Rating | Why |
 |---|---|---|
-| evidence | **disputed** | a credible critique: Miller, Born Divine |
-| tradition | **disputed** | a credible critique: Miller, Born Divine |
-| Scripture | **disputed** | a credible critique: Miller, Born Divine |
+| evidence | **well supported** | a credible critique, overruled: Miller, Born Divine, in the dispute over the Septuagint's word, where nothing defends it, with the step weighed at its floor |
+| tradition | **well supported** | a credible critique, overruled: Miller, Born Divine, in the dispute over the Septuagint's word, where nothing defends it, with the step weighed at its floor |
+| Scripture | **well supported** | every encoded dissent fails a check, the strongest known among them, so the step's support stands |
 
 <a id="laws_step_ratings"></a>
 **`laws_step_ratings`**
 
-**The laws' step stays `disputed`**, under every standard, on Miller's
-dissent from Genesis 34:3: striking the Joel 1:8 example the Greek refutes does
-not take away his denial.
+**The laws' step stands at `wellSupported` under every standard, and for two
+reasons.** Under the evidence and tradition standards Miller's dissent is a
+credible critique, and it is overruled: his case from Genesis 34:3 cannot be
+defended in the dispute over the Septuagint's word, which weighs the step at its
+floor. Under the Scripture standard his dissent is not heard at all, because his
+premise about the noun is not Scripture.
 
 ```lean
 theorem laws_step_ratings : lawsStep.ratings = [(Standard.evidence,
-    Computed.disputedBy ["Miller, Born Divine"]), (Standard.tradition,
-    Computed.disputedBy ["Miller, Born Divine"]), (Standard.scriptural,
-    Computed.disputedBy ["Miller, Born Divine"])]
--- axioms: propext
+    Computed.overruled ["Miller, Born Divine"] Confidence.wellSupported),
+    (Standard.tradition, Computed.overruled ["Miller, Born Divine"]
+    Confidence.wellSupported), (Standard.scriptural, Computed.stands
+    Confidence.wellSupported)]
+-- axioms: propext, Classical.choice, Quot.sound
 ```
 
 ## TestimonyArguments.BornOfAVirgin.Dispute.Matthew — Scripture's own reading of the Greek word
@@ -11339,6 +11658,8 @@ def westermannReading : Valuation Claim :=
     | Claim.wordingSignifiesAFatherlessBirth => False
     | Claim.serpentIsTheInstrumentOfAPower => False
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.maternalSilenceProvesNothing => False
     | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | x => True
@@ -11362,6 +11683,8 @@ def curseWithoutPromiseReading : Valuation Claim :=
     | Claim.seedWasOfTheWomanAlone => False
     | Claim.wordingSignifiesAFatherlessBirth => False
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.maternalSilenceProvesNothing => False
     | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | x => True
@@ -11381,6 +11704,8 @@ def calvinReading : Valuation Claim :=
     match a with
     | Claim.wordingSignifiesAFatherlessBirth => False
     | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.parthenosDescribesDinahAsSheThenWas => False
     | Claim.maternalSilenceProvesNothing => False
     | Claim.magisteriumIsDoctrinallyAuthoritative => False
     | x => True

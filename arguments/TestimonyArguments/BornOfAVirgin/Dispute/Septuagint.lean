@@ -11,7 +11,7 @@ import Testimony.Logic.Map
 
 `Results.Septuagint` shows that the Septuagint's witness rests on one claim: that
 παρθένος, in its translator's Greek, means a virgin. This module weighs that
-claim against its rival. Five positions meet:
+claim against its rival. Six positions meet:
 
 - **The Septuagint as a witness** (Irenaeus): Jews translated Isaiah before
   Christ and wrote a word that means a virgin, so they read the woman as one.
@@ -34,6 +34,12 @@ claim against its rival. Five positions meet:
   has lain with a παρθένος, and has him pay "the bride-price of virgins"
   (22:15–16); Genesis 34 tells Shechem's act in that law's words. So at 34:3 the
   word names Dinah by the standing he took from her, in the sense "virgin".
+- **Miller from Genesis 34:3**: "In one passage, this term refers to a rape
+  victim after she has been attacked" (*Born Divine*). The word is said there of
+  a woman no longer a virgin, so it did not by itself connote virginity, and the
+  laws' virginity is the context's. His case as the texts leave it: his other
+  example, Joel 1:8, is struck, because the Greek reads otherwise
+  (`Dispute.Miller`).
 
 ## What this dispute does not decide
 
@@ -102,8 +108,9 @@ shifted.
 
 ## What the solver computed
 
-Three standoffs, all with Wegner, one defeat of Wegner that he cannot return,
-and nothing else (`septuagintDispute_defeats`, all twenty-five pairs):
+Six standoffs, three with Wegner and three with Miller; one defeat of each by
+the status reading, which neither can return; and nothing else
+(`septuagintDispute_defeats`, all thirty-six pairs):
 
 - **Wegner and the witness.** What Wegner holds denies the witness's ground that
   "virgin" is a sense of the word; what the witness holds denies his
@@ -116,6 +123,14 @@ and nothing else (`septuagintDispute_defeats`, all twenty-five pairs):
   excludes his "not yet 'virgin'". He attacks it back, by the same exclusion,
   and the attack fails: he is weaker than it
   (`drift_does_not_defeat_dinah`).
+- **Miller and the witness, Rico and Gentry, and the laws.** His thesis, that the
+  word did not by itself connote virginity, denies each of their senses, and
+  each of them denies it; his conclusion and the laws' contradict each other
+  outright.
+- **The status reading defeats Miller.** Its sense "virgin" at 34:3 excludes his
+  premise that the noun describes Dinah as she then was, and his thesis. He
+  attacks it back and fails, for the same reason as Wegner. Miller and Wegner
+  do not attack each other: Wegner's claim entails Miller's thesis.
 
 The witness, Rico and Gentry, the laws and the status reading do not attack one
 another. They stand together (`septuagint_stands_with_the_usage`). Rico and Gentry lend the witness
@@ -124,10 +139,14 @@ reach the same ground through the definition, so the library draws no support
 from them, though they lead to the same place.
 
 **The Septuagint's side prevails** (`septuagint_prevails_over_wegner`). Nothing
-defeats the status reading, so it is accepted first. It defeats Wegner, the only
-party that defeats the witness, Rico and Gentry or the laws, so all three are
-accepted with it. Wegner belongs to no position that can be defended
-(`drift_indefensible`). That is a verdict on these premises and these ratings,
+defeats the status reading, so it is accepted first. It defeats Wegner and
+Miller, the only parties that defeat the witness, Rico and Gentry or the laws,
+so all three are accepted with it. Neither Wegner nor Miller belongs to any
+position that can be defended (`drift_indefensible`, `miller_indefensible`).
+Miller's defeat overrules his dissent from the laws' step, so that the step
+stands at its cited `wellSupported` (`Dispute.Miller`); this dispute weighs the
+step at `disputed`, its floor, so the overruling does not lean on the rating it
+lets stand. That is a verdict on these premises and these ratings,
 and it turns on one of them, the status reading's step: see below.
 
 ## Where the evidence lies
@@ -334,6 +353,16 @@ theorem dinah_rests_on_its_inference :
 
 #print axioms dinah_rests_on_its_inference
 
+/-- Miller from Genesis 34:3 delivers his conclusion. -/
+theorem millerCase_establishes : Establishes millerCase := by
+  establish [bornOfAVirginDefs, caseOf]
+
+/-- Miller from Genesis 34:3 has a model: Wegner's reading, which takes the
+laws as Miller reads them, and the noun at 34:3 as said of Dinah as she then
+was. -/
+theorem millerCase_is_satisfiable : Satisfiable millerCase.premises := by
+  satisfied_by wegnerDriftReading [bornOfAVirginDefs, caseOf]
+
 /-! ### Strength -/
 
 /-- The witness is no stronger than its claim about the word, cited
@@ -347,6 +376,11 @@ theorem driftObjection_strength : driftObjection.strength = 0 := by decide
 /-- Rico and Gentry's grounds are `consensus`, but their inference is
 `disputed`, on Davidson and Meade. -/
 theorem usageCase_strength : usageCase.strength = 0 := by decide
+
+/-- Miller's grounds are `consensus`, what the Greek reads, and `wellSupported`,
+his premise about the noun; but his inference is `disputed`, on Rico and Gentry
+and on Bratcher, who grant both and hold the word means "virgin". -/
+theorem millerCase_strength : millerCase.strength = 0 := by decide
 
 /-- The laws' grounds are `consensus`, what the Greek reads, but their inference
 is `disputed`, on Miller. -/
@@ -424,6 +458,10 @@ inductive SeptuagintParty
   /-- The status reading: at Genesis 34:3 the Greek names Dinah a παρθένος as
   the law names the seduced virgin. -/
   | dinah
+  /-- Miller from Genesis 34:3: the word is said there of a woman no longer a
+  virgin, so it does not by itself connote virginity, and the laws' virginity is
+  the context's. -/
+  | miller
 deriving DecidableEq
 
 /-- The package each party argues from. -/
@@ -434,6 +472,7 @@ def septuagintPartyNode : SeptuagintParty → ArgumentPackage Claim
   | .usage => usageCase
   | .laws => lawsCase
   | .dinah => dinahCase
+  | .miller => millerCase
 
 /-- The dispute over the Septuagint's word: every party's premises have a model,
 every party establishes its conclusion, and every party's inferences are
@@ -448,6 +487,7 @@ def septuagintDispute : Dispute Claim SeptuagintParty where
     | .usage => usageCase_establishes
     | .laws => lawsCase_establishes
     | .dinah => dinahCase_establishes
+    | .miller => millerCase_establishes
   rated i := by
     cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
 
@@ -468,6 +508,13 @@ def septuagintPartyDefeats : SeptuagintParty → SeptuagintParty → Prop
   | .drift, .laws => True
   | .laws, .drift => True
   | .dinah, .drift => True
+  | .miller, .witness => True
+  | .witness, .miller => True
+  | .miller, .usage => True
+  | .usage, .miller => True
+  | .miller, .laws => True
+  | .laws, .miller => True
+  | .dinah, .miller => True
   | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
@@ -488,12 +535,13 @@ theorem septuagintPartyNode_strength :
   | .usage => usageCase_strength
   | .laws => lawsCase_strength
   | .dinah => dinahCase_strength
+  | .miller => millerCase_strength
 
-/-- **Who defeats whom**, all twenty-five pairs: Wegner defeats the witness,
-Rico and Gentry and the laws, and each defeats him back; the status reading
-defeats Wegner, and he does not defeat it; and nothing else. Every
-cell is computed from what the parties hold by `Horn.defeats?` and checked by
-the kernel. -/
+/-- **Who defeats whom**, all thirty-six pairs: Wegner defeats the witness,
+Rico and Gentry and the laws, and each defeats him back; so does Miller, and
+each defeats him back; the status reading defeats Wegner and Miller, and
+neither defeats it; and nothing else. Every cell is computed from what the
+parties hold by `Horn.defeats?` and checked by the kernel. -/
 theorem septuagintDispute_defeats :
     ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
   intro i j
@@ -503,7 +551,7 @@ theorem septuagintDispute_defeats :
 
 /-- The dispute in the form the verdict solver computes with. -/
 def septuagintFinite : Solver.Finite septuagintDispute.defeats where
-  parties := [.witness, .drift, .usage, .laws, .dinah]
+  parties := [.witness, .drift, .usage, .laws, .dinah, .miller]
   complete i := by cases i <;> decide
   defeats i j := decide (septuagintPartyDefeats i j)
   spec i j := by rw [septuagintDispute_defeats]; simp
@@ -517,7 +565,7 @@ def septuagintPartySupports : SeptuagintParty → SeptuagintParty → Prop
 instance : DecidableRel septuagintPartySupports := fun i j => by
   cases i <;> cases j <;> unfold septuagintPartySupports <;> infer_instance
 
-/-- **One support**, in all twenty-five pairs: Rico and Gentry's conclusion is the
+/-- **One support**, in all thirty-six pairs: Rico and Gentry's conclusion is the
 witness's contested ground, that "virgin" is a sense of παρθένος. The library
 draws a support only where one party's conclusion is, word for word, another's
 premise. The laws and the status reading reach the witness's ground through a
@@ -530,7 +578,7 @@ theorem septuagintDispute_supports :
   refine supports_iff_of_supports? ?_
   cases i <;> cases j <;> decide +kernel
 
-/-- **No case is part of another's** here, in all twenty-five pairs, except each
+/-- **No case is part of another's** here, in all thirty-six pairs, except each
 party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
 theorem septuagintDispute_partOf : ∀ i j, septuagintDispute.partOf i j ↔ i = j := by
   intro i j
@@ -547,24 +595,44 @@ def septuagintMap : ArgumentMap septuagintDispute where
 
 /-- Why the Septuagint's side prevails, in stages: the status reading first,
 which nothing defeats; then the witness, Rico and Gentry and the laws, whom it
-defends by defeating Wegner; and Wegner out, defeated by the status reading. -/
+defends by defeating Wegner and Miller; and Wegner and Miller out, each defeated
+by the status reading. -/
 def septuagintHeardInStages : Verdict septuagintDispute where
   finite := septuagintFinite
-  claim := .groundedExactly [[.dinah], [.witness, .usage, .laws]] [(.drift, .dinah)]
+  claim := .groundedExactly [[.dinah], [.witness, .usage, .laws]]
+    [(.drift, .dinah), (.miller, .dinah)]
   checked := by decide +kernel
 
-/-- **The Septuagint's side prevails, and Wegner does not.** Nothing defeats the
-status reading of Genesis 34:3, because Wegner is weaker than it, so it is
-accepted first. It defeats Wegner, the only party that defeats the witness, Rico
-and Gentry or the laws, so all three are accepted with it; and nothing defends
-Wegner. The verdict turns on one rating, the status reading's step
-(`dinahLine`). -/
+/-- **The Septuagint's side prevails, and neither Wegner nor Miller does.**
+Nothing defeats the status reading of Genesis 34:3, because Wegner and Miller
+are each weaker than it, so it is accepted first. It defeats them both, the only
+parties that defeat the witness, Rico and Gentry or the laws, so all three are
+accepted with it; and nothing defends either. The verdict turns on one rating,
+the status reading's step (`dinahLine`). -/
 @[headline]
 theorem septuagint_prevails_over_wegner :
     grounded septuagintDispute.defeats = {.witness, .usage, .laws, .dinah} :=
   Eq.trans septuagintHeardInStages.holds (by ext x; cases x <;> simp [Solver.toSet])
 
 #print axioms septuagint_prevails_over_wegner
+
+/-- Why Miller from Genesis 34:3 cannot be defended: the status reading defeats
+him, and nothing answers it. -/
+def millerAnsweredByDinah : Verdict septuagintDispute where
+  finite := septuagintFinite
+  claim := .indefensible .miller [(.miller, .dinah)]
+  checked := by decide +kernel
+
+/-- **Miller from Genesis 34:3 cannot be defended.** No admissible set contains
+him: the status reading defeats him, and nothing defeats the status reading. His
+case denies what it concludes, that the word names Dinah in the sense "virgin";
+he attacks it back, and fails, being the weaker. -/
+@[headline]
+theorem miller_indefensible (S : Set SeptuagintParty)
+    (hS : Admissible septuagintDispute.defeats S) : SeptuagintParty.miller ∉ S :=
+  millerAnsweredByDinah.holds S hS
+
+#print axioms miller_indefensible
 
 /-- Why Wegner on παρθένος cannot be defended: the status reading defeats him,
 and nothing answers it. -/

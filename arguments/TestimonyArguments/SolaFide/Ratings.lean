@@ -350,7 +350,8 @@ but the strongest known one is missing, so the rating is withheld under both
 standards. Encoding the renewal reading is what moves it: to `wellSupported`
 under the evidence standard, and to `disputed` under the tradition standard. -/
 theorem lexical_step_before_the_steelman :
-    ({ lexicalStep with register := [trentWordAssessment], strongest := none }).ratings =
+    ({ lexicalStep with
+        register := [trentWordAssessment], strongest := none, overruled := [] }).ratings =
       [(.evidence, .withheld), (.tradition, .withheld), (.scriptural, .withheld)] := by
   decide +kernel
 

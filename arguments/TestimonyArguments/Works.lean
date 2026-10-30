@@ -690,6 +690,23 @@ Crossref gives no pages; the PDF's running heads give 363–67. -/
   , issue := some "2"
   , pages := some (363, 367) }
 
+/-- Enç on the time of noun phrases. Cited for its thesis: a noun phrase is not
+interpreted at the time of its clause's verb, but at a time of its own, given by
+the context, so that what a noun says of the one it names need not hold of them
+when the verb's event happens. The library applies it to Genesis 34:3; Enç says
+nothing of the verse. Verified at Crossref. -/
+@[bib_entry] def encTemporalExpressions : BibEntry := .article
+  { core :=
+      { key := "enc-referential-analysis-1986"
+      , contributors := { authors := [.person "Mürvet" "Enç"] }
+      , title := "Towards a Referential Analysis of Temporal Expressions"
+      , year := some { value := 1986 }
+      , identifiers := [.doi "10.1007/BF00603217"] }
+  , journal := "Linguistics and Philosophy"
+  , volume := some "9"
+  , issue := some "4"
+  , pages := some (405, 426) }
+
 /-- Woudstra on the newer translations of Genesis 3:15. Cited for the reading of
 the whole scene: "as one reads Genesis 3 one does indeed become conscious of such
 a force. There is a diabolical subtlety in the serpent's suggestions which points

@@ -140,6 +140,8 @@ def repliesStandReading : Valuation Claim := fun a =>
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .nearTermExcludesMessianicSense => False
   | _ => True
 
@@ -230,6 +232,8 @@ def motyerReading : Valuation Claim := fun a =>
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .isaiahIsNearTermSignToAhaz => False
   | .nearTermExcludesMessianicSense => False
   | _ => True
@@ -296,6 +300,8 @@ def scripturalWorldReading : Valuation Claim := fun a =>
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | _ => True
 
 /-- But it undermines none of the critical denial's premises. For each of them

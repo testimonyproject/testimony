@@ -169,7 +169,7 @@ def cite : Claim → AtomMeta
   | .parthenosMeansVirgin => parthenosMeansVirginCited
   | .parthenosMeantYoungWoman => parthenosMeantYoungWomanCited
   | .earlyGreekParthenosIsYoungWoman => earlyGreekParthenosIsYoungWomanCited
-  | .dinahIsAParthenosAfterShechem => dinahIsAParthenosAfterShechemCited
+  | .greekCallsDinahParthenos => greekCallsDinahParthenosCited
   | .isaiahUsesParthenosForBetulah => isaiahUsesParthenosForBetulahCited
   | .priestMarriesAParthenos => priestMarriesAParthenosCited
   | .partheniaProveTheBride => partheniaProveTheBrideCited
@@ -206,6 +206,7 @@ def cite : Claim → AtomMeta
   | .serpentIsTheInstrumentOfAPower => serpentIsTheInstrumentOfAPowerCited
   | .joelGreekCallsTheWidowParthenos => joelGreekCallsTheWidowParthenosCited
   | .parthenosDoesNotItselfConnoteVirginity => parthenosDoesNotItselfConnoteVirginityCited
+  | .parthenosDescribesDinahAsSheThenWas => parthenosDescribesDinahAsSheThenWasCited
   | .harahIsPredicateAdjective => harahIsPredicateAdjectiveCited
   | .isaianicAlmahIsAlreadyPregnant => isaianicAlmahIsAlreadyPregnantCited
   | .pregnancyAtTheSignIsOrdinary => pregnancyAtTheSignIsOrdinaryCited
