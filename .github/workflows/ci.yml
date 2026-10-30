@@ -95,6 +95,41 @@ jobs:
           lake exe statusgen --check
           lake exe argdoc --check
 
+      # Engine benchmarks: does this change make the engine slower? Every
+      # benchmark runs five times, enough for p < 0.05 when every sample moves; each run is compared with the baseline
+      # recorded in arguments/bench/baseline.json by the Mann-Whitney U test.
+      # The step fails on a slowdown that is significant (p < 0.05) and larger
+      # than the variance bound (--threshold), below which runner noise could
+      # account for it, and on a rise in a benchmark's peak memory. Times are
+      # normalized by the calibration benchmark, so a slower runner is not taken
+      # for a slower engine. A regression a change accepts on purpose, with its
+      # reason, is listed in arguments/bench/accepted.toml. Every run's samples
+      # are uploaded, and a run on main is what a new baseline is taken from
+      # (.claude/skills/optimising-the-engine).
+      - name: Engine benchmarks
+        run: |
+          if ! command -v uv >/dev/null 2>&1; then
+            # Until the devcontainer image with uv is published from main.
+            curl -fsSL https://github.com/astral-sh/uv/releases/download/0.11.32/uv-x86_64-unknown-linux-gnu.tar.gz \
+              | tar -xz --strip-components=1 -C /usr/local/bin
+          fi
+          scripts/bench.sh --runs 5 --out bench-results.json
+          if [ -f arguments/bench/baseline.json ]; then
+            scripts/bench-compare.py arguments/bench/baseline.json bench-results.json \
+              --normalize "calibration: kernel list reduction" --threshold 0.10 \
+              --accept arguments/bench/accepted.toml --gate
+          else
+            echo "::warning::no arguments/bench/baseline.json; record one from this run's bench-results artifact"
+          fi
+
+      - name: Upload benchmark samples
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bench-results
+          path: bench-results.json
+          if-no-files-found: ignore
+
       # The examples: a package built on the library, held to the library's
       # gates. It requires the library by path and shares its .lake/packages, so
       # it reuses everything built above and compiles only its own modules. The

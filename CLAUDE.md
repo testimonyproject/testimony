@@ -118,6 +118,11 @@ lake exe argtex                      # render arguments to LaTeX
 
 # In examples/: the examples package, after the library.
 lake build && lake exe exampletex --check
+
+# Engine benchmarks, after the arguments build (optimising-the-engine skill).
+scripts/bench.sh --runs 10 --out new.json
+scripts/bench-compare.py arguments/bench/baseline.json new.json \
+  --normalize "calibration: kernel list reduction" --accept arguments/bench/accepted.toml
 ```
 
 `lake build` in `arguments/` also runs `#check_refutations`: `establish` must
@@ -157,6 +162,9 @@ back to `sorryAx` — that produces a *successful build*.
 - `.claude/skills/supplementing-an-argument` — strengthening an existing
   argument for a reader: finding the crux, researching a better-than-disputed
   premise, auditing its rating, and reporting what the solver then computes
+- `.claude/skills/optimising-the-engine` — making the engine faster or lighter:
+  the benchmark suite, statistical A/B comparison, the fixed-point loop, the CI
+  regression gate, and recording a new baseline
 
 ## Agents
 

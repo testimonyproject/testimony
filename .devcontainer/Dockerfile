@@ -57,4 +57,21 @@ RUN case "$(uname -m)" in \
     && curl -sSL "https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-${MDBOOK_ARCH}.tar.gz" \
         | tar -xz -C /root/.local/bin
 
+# uv, pinned, for the Python scripts that declare their own requirements
+# (PEP 723), such as scripts/bench-compare.py. Static musl build on arm64.
+RUN case "$(uname -m)" in \
+        x86_64) UV_ARCH=x86_64-unknown-linux-gnu ;; \
+        aarch64) UV_ARCH=aarch64-unknown-linux-musl ;; \
+        *) echo "unsupported architecture for uv: $(uname -m)" >&2; exit 1 ;; \
+    esac \
+    && curl -fsSL "https://github.com/astral-sh/uv/releases/download/0.11.32/uv-${UV_ARCH}.tar.gz" \
+        | tar -xz --strip-components=1 -C /usr/local/bin
+
+# Warm uv's cache with what those scripts declare, so that a CI run does not
+# download SciPy each time. The cache lives at a fixed path, not under HOME,
+# which GitHub's container jobs change.
+ENV UV_CACHE_DIR=/opt/uv-cache
+COPY scripts/bench-compare.py /tmp/bench-compare.py
+RUN uv run --script /tmp/bench-compare.py --help >/dev/null && rm /tmp/bench-compare.py
+
 WORKDIR /workspaces/testimony

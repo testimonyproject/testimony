@@ -37,9 +37,16 @@ fi
 # made this way protects the primary checkout too.
 git -C "$repo_root" config core.hooksPath .githooks
 
-git -C "$repo_root" fetch --quiet origin "$base" 2>/dev/null || true
+# Branch from what was just fetched, not from the local branch of that name,
+# which can be any number of merges behind. A base that is not a branch on
+# origin (a tag, a commit, a local branch) is used as given.
+start="$base"
+if git -C "$repo_root" fetch --quiet origin "$base" 2>/dev/null \
+    && git -C "$repo_root" rev-parse --verify --quiet "origin/$base" >/dev/null; then
+  start="origin/$base"
+fi
 mkdir -p "$(dirname "$dest")"
-git -C "$repo_root" worktree add -b "$branch" "$dest" "$base"
+git -C "$repo_root" worktree add --no-track -b "$branch" "$dest" "$start"
 
 cd "$dest"
 echo "new-worktree: fetching Mathlib oleans — the slow step, but only once"
