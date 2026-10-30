@@ -221,12 +221,15 @@ would bring it back. Wevers's *Notes on the Greek Text of Genesis* and Harl's
 
 **Wegner's step**, from the older usage and Genesis 34:3 to the Septuagint's
 sense, is rated `disputed`, the lowest rating. Rico and Gentry, and Bratcher,
-grant both its grounds and deny its conclusion: to Rico and Gentry, Genesis 34:3
+grant all its grounds and deny its conclusion: to Rico and Gentry, Genesis 34:3
 is "the exception that proves the rule", an archaism of the Greek Pentateuch
 (18, 21); to Bratcher, it is "surprising" (113). The higher ratings belong to
 the grounds, not the step: that early Greek used παρθένος of a young woman (well
-supported), and that the Greek of Genesis 34:3 calls Dinah one (`consensus`).
-Both sides grant them, and neither says what the word meant at Isaiah 7:14.
+supported), that the Greek of Genesis 34:3 calls Dinah one (`consensus`), and
+that the noun there describes her as she then was (well supported). That last
+ground is Wegner's reading of the verse, not the text; every reader on record
+who takes up the verse holds it, and only the status reading denies it. Neither
+side's grounds say what the word meant at Isaiah 7:14.
 
 **The other three steps**, Rico and Gentry's from the Jewish objection, the
 laws' from what the two laws read, and the witness's own ground, are each
@@ -274,14 +277,15 @@ theorem driftObjection_is_satisfiable : Satisfiable driftObjection.premises := b
   satisfied_by wegnerDriftReading [bornOfAVirginDefs]
 
 /-- **Wegner on παρθένος rests on its inference.** On Rico and Gentry's reading
-the older Greek usage is granted, Dinah is called παρθένος after Shechem has lain
-with her, and the word still means a virgin in the Septuagint at large: Genesis
-34:3 is an archaism of the Greek Pentateuch. The two grounds do not decide the
-question; the step does, and that is why it is rated `disputed`. -/
+all three grounds are granted: the older Greek usage, the Greek's παρθένος at
+Genesis 34:3, and that the noun there describes Dinah as she then was, no longer
+a virgin. And the word still means a virgin in the Septuagint at large: the verse
+is an archaism of the Greek Pentateuch. The grounds do not decide the question;
+the step does, and that is why it is rated `disputed`. -/
 @[headline]
 theorem drift_rests_on_its_inference :
     ¬ Entails driftLine.grounds (p .parthenosMeantYoungWoman) := by
-  refute_with virginConceivesReading [bornOfAVirginDefs]
+  refute_with archaismReading [bornOfAVirginDefs]
 
 #print axioms drift_rests_on_its_inference
 

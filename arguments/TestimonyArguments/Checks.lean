@@ -101,9 +101,9 @@ info: every dispute, as an AIF graph meeting Definition 1.1:
 Articles.Howell2003.hearingFinite: 63 I, 27 RA, 29 CA, 3 PA, 150 edges
 BornOfAVirgin.genesisFinite: 8 I, 3 RA, 2 CA, 0 PA, 15 edges
 BornOfAVirgin.isaiahFinite: 30 I, 10 RA, 6 CA, 1 PA, 48 edges
-BornOfAVirgin.matthewFinite: 6 I, 2 RA, 2 CA, 0 PA, 10 edges
+BornOfAVirgin.matthewFinite: 7 I, 2 RA, 2 CA, 0 PA, 11 edges
 BornOfAVirgin.promiseFinite: 17 I, 5 RA, 5 CA, 0 PA, 30 edges
-BornOfAVirgin.septuagintFinite: 19 I, 7 RA, 13 CA, 3 PA, 54 edges
+BornOfAVirgin.septuagintFinite: 19 I, 7 RA, 13 CA, 3 PA, 55 edges
 BornOfAVirgin.wegnerFinite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
 SolaFide.jamesFinite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 SolaFide.jesusWordsFinite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges

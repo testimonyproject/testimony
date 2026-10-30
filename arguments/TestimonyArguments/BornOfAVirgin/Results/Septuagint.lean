@@ -96,6 +96,25 @@ def virginConceivesReading : Valuation Claim := fun a =>
   | .magisteriumIsDoctrinallyAuthoritative => False
   | _ => True
 
+/-- Rico and Gentry's reading of Genesis 34:3: the word there is said of Dinah
+as she then was, no longer a virgin, an archaism of the Greek Pentateuch, "the
+exception that proves the rule" (21); and in the Septuagint at large it means a
+virgin. So the verse uses the word otherwise, and the status reading is false
+in it; Wegner's claim is false too. Otherwise as Justin reads the elders' Greek
+(`virginConceivesReading`). -/
+def archaismReading : Valuation Claim := fun a =>
+  match a with
+  | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .dinahIsTheLawsParthenos => False
+  | .harahIsPredicateAdjective => False
+  | .isaianicAlmahIsAlreadyPregnant => False
+  | .pregnancyAtTheSignIsOrdinary => False
+  | .isaianicAlmahIsNotAVirgin => False
+  | .maternalSilenceProvesNothing => False
+  | .magisteriumIsDoctrinallyAuthoritative => False
+  | _ => True
+
 /-- **The Septuagint, read with Rico and Gentry, is a witness from before
 Christ.** Grant that the Greek Isaiah renders עַלְמָה with παρθένος, that it was
 made by Jews before Christ, and that παρθένος in its Greek means a virgin, and

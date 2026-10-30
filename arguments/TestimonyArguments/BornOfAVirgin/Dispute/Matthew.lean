@@ -50,7 +50,8 @@ standard, and the library computes under each (`Testimony.Logic.Credibility`).
   hearing is the standoff above (`matthew_step_turns_on_the_standard`).
 - **Under the Scripture standard** a dissent from a step whose grounds are all
   Scripture must rest on Scripture alone, and Wegner's rests also on early Greek
-  usage, from the lexica. So his dissent is not heard; Matthew's step stands at
+  usage, from the lexica, and on his reading of the noun at Genesis 34:3. So his
+  dissent is not heard; Matthew's step stands at
   the confidence its support is cited at, `plausible`; and **Matthew's reading
   prevails** (`matthew_prevails_under_scripture`).
 
@@ -195,7 +196,9 @@ theorem nothing_prevails_between_matthew_and_wegner :
 grounds, and argued, from early Greek usage and Genesis 34:3, by a step of his
 own. Under the evidence and tradition standards it is a credible critique. Under
 the Scripture standard it is not: Matthew's step rests on Scripture alone, and
-Wegner's early Greek usage rests on the lexica, not on Scripture. -/
+two of Wegner's grounds do not. His early Greek usage rests on the lexica; his
+premise that the noun of Genesis 34:3 describes Dinah as she then was is his
+reading of the verse, not the text. -/
 def wegnerOnMatthewAssessment : Assessment Claim where
   dissenter := "Wegner on παρθένος (JETS 54, 482–83)"
   against := matthewLine.name
@@ -208,7 +211,8 @@ def wegnerOnMatthewAssessment : Assessment Claim where
     , unadmitted :=
         [ (.evidence, [])
         , (.tradition, [])
-        , (.scriptural, [.earlyGreekParthenosIsYoungWoman]) ] }
+        , (.scriptural,
+            [.earlyGreekParthenosIsYoungWoman, .parthenosDescribesDinahAsSheThenWas]) ] }
   checked := by decide +kernel
 
 /-- **Matthew's step, rated by its register**: Wegner's dissent, the strongest
