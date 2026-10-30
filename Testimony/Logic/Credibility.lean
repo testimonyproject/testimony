@@ -32,6 +32,18 @@ hold:
 5. **Its grounds meet the standard.** Every claim it asserts outright rests on
    what the standard admits, and it asserts no bare denial.
 
+Every check is made on the dissent's evidence **with what the texts refute struck
+out**. A dissent may assert a claim about what a text reads, and the text may
+read otherwise: a "young widow" called παρθένος in a verse whose Greek calls her
+νύμφη. Such a claim is recorded as a `Refutation`, with the citation of the text,
+and it counts only if it is a reading — Scripture, rated `consensus` — so that
+what is struck is struck by the text and not by a reader's say-so. The struck
+claim is taken out of the dissent's premises, with every step drawn from it,
+and the five checks run on what is left. A dissent that needed the claim to deny
+the step no longer denies it, and is not credible under any standard; one whose
+denial stands on other evidence stays credible, and the page shows what was
+struck.
+
 ## Three standards, stated, never hidden
 
 Whether a council's or a confession's word can ground a critique is exactly
@@ -78,11 +90,28 @@ which of its claims the standard does not admit.
 A `RatedStep` is a step with its register: every dissent encoded against it,
 and which is the strongest known. Its rating under a standard (`Computed`) is:
 
-- **disputed**, by every dissent credible under the standard;
+- **disputed**, by every dissent credible under the standard and not
+  overruled;
 - otherwise **the support stands**, at the confidence its citation gives it — but
-  only if the strongest known dissent is encoded (the steelman rule);
+  only if the strongest known dissent is encoded (the steelman rule) — and the
+  rating names any credible dissent that was overruled;
 - otherwise **withheld**, and weighed as `disputed`, because nothing licenses a
   higher rating.
+
+## Dissents overruled in a dispute
+
+A credible critique can still lose when it is weighed. A dissent is
+**overruled** (`Overruled`) when its position, with what the texts refute
+struck, is a party of a dispute and belongs to no admissible set of it: however
+its standoffs are resolved, nothing defends it. An overruled dissent stops
+counting against the step.
+
+Folding the outcome of a dispute into a rating can argue in a circle, since
+ratings decide who defeats whom. The rule avoids that with one condition: the
+dispute must weigh the step the dissent is against **at its floor**, every
+citation of the step's support in it rated `disputed`. So the dissent is
+overruled with the step at its weakest, and the overruling owes nothing to the
+rating it lets stand. Every other citation is weighed as cited.
 
 `RatedStep.ratings` computes it under every standard at once, so one theorem
 states a step's rating under each, and a reader who prefers one standard can
@@ -105,10 +134,10 @@ and a rating cannot disagree about which standard they assume.
   as good as the dissents encoded, and which is the strongest known is a cited
   judgement.
 
-Phase one does not ask whether a credible dissent survives the full dispute: a
-dispute outside a hearing still weighs cited ratings. The design note describes
-phase two, which weighs computed ratings everywhere, and phase three, which makes
-survival part of the rating without a circle.
+Survival enters a rating only through an overruling, with the step at its
+floor. A dispute outside a hearing still weighs cited ratings. The design note
+describes phase two, which weighs computed ratings everywhere, and phase three,
+which makes the ratings themselves arguments that can be attacked.
 -/
 
 namespace Testimony.Logic
@@ -151,8 +180,26 @@ def name : Standard → String
 
 end Standard
 
+/-- **A claim refuted by what a text reads**: one claim a dissent asserts, and the
+citation of the text that reads otherwise. A refutation counts only if it is a
+reading — its citation is Scripture, and rated `consensus`, so that what is
+struck is struck by the text and not by a reader's say-so (`isReading`). -/
+structure Refutation (α : Type) where
+  /-- The claim the dissent asserts, which the text refutes. -/
+  claim : α
+  /-- What the text reads, in a phrase: "the Greek of Joel 1:8 calls her νύμφη". -/
+  reads : String
+  /-- The citation of the text. -/
+  reading : Source
+
+/-- Whether a refutation is a reading of a text: its citation is Scripture,
+rated `consensus`. -/
+def Refutation.isReading (r : Refutation α) : Bool :=
+  r.reading.primary.warrant == .scripture && r.reading.confidence == .consensus
+
 /-- **A dissent**: a position set against a claim. For a step, `grounds` are the
-step's grounds, which the dissent must grant; for a premise, they are empty. -/
+step's grounds, which the dissent must grant; for a premise, they are empty.
+`refuted` lists the claims of the position that the texts refute. -/
 structure Dissent (α : Type) where
   /-- The claim dissented from. -/
   claim : Formula α
@@ -160,6 +207,8 @@ structure Dissent (α : Type) where
   grounds : List (Formula α) := []
   /-- The dissenting position. -/
   position : ArgumentPackage α
+  /-- Claims the position asserts that a text refutes. -/
+  refuted : List (Refutation α) := []
 
 namespace Dissent
 
@@ -170,10 +219,39 @@ same for every dissent in an argument, whichever side it is on. -/
 def background [HasPostulates α] (_ : Dissent α) : List (Formula α) :=
   HasPostulates.postulates
 
-/-- The position's premises that are claims asserted outright: atoms and denied
-atoms, not steps. -/
+variable [DecidableEq α] in
+/-- **The claims struck**: those the position asserts that a reading of a text
+refutes. A refutation that is not a reading, or names a claim the position does
+not assert, strikes nothing. -/
+def struck (d : Dissent α) : List α :=
+  (d.refuted.filter fun r => r.isReading && d.position.assertedAtoms.contains r.claim).map
+    (·.claim)
+
+variable [DecidableEq α] in
+/-- **The premises the checks weigh**: the position's, with every struck claim
+taken out, and every step drawn from one. A dissent counts only on evidence the
+texts leave standing. A denial of a struck claim is not drawn from it, and
+stays. -/
+def premises (d : Dissent α) : List (Formula α) :=
+  d.position.premises.filter fun
+    | .atom a => !d.struck.contains a
+    | .imp (.atom _) .falsum => true
+    | .imp b _ => !(atomsOf b).any d.struck.contains
+    | _ => true
+
+variable [DecidableEq α] in
+/-- The claims the position still asserts outright, once the struck are taken
+out. -/
+def assertedAtoms (d : Dissent α) : List α :=
+  d.premises.filterMap fun
+    | .atom a => some a
+    | _ => none
+
+variable [DecidableEq α] in
+/-- The premises the checks weigh that are claims asserted outright: atoms and
+denied atoms, not steps. -/
 def asserted (d : Dissent α) : List (Formula α) :=
-  d.position.premises.filter Page.Explanation.isLiteral
+  d.premises.filter Page.Explanation.isLiteral
 
 /-- Whether the position asserts a bare denial: a premise that only denies an
 atom. A denial is cited nowhere — a citation rates the claim, not its denial —
@@ -194,26 +272,27 @@ def scriptureGrounded (d : Dissent α) : Bool :=
 the grounds it rests on someone's word alone, under a standard that asks for
 more. Under the scriptural standard, against a step that rests on Scripture
 alone, every claim not resting on Scripture. -/
-def unadmitted (std : Standard) (d : Dissent α) : List α :=
-  d.position.assertedAtoms.filter fun a =>
+def unadmitted [DecidableEq α] (std : Standard) (d : Dissent α) : List α :=
+  d.assertedAtoms.filter fun a =>
     let w := (d.position.cite a).warrant
     if std == .scriptural && d.scriptureGrounded then w != .scripture else !std.admits w
 
 /-- Whether every claim the position asserts rests on what the standard admits,
 and it asserts no bare denial. -/
-def meets (std : Standard) (d : Dissent α) : Bool :=
+def meets [DecidableEq α] (std : Standard) (d : Dissent α) : Bool :=
   !d.assertsDenial && (d.unadmitted std).isEmpty
 
 /-- **The dissent is credible under a standard**: consistent; it denies the
 claim; it grants the grounds; it argues the denial by a step of its own; and its
-grounds meet the standard. -/
-structure Credible [HasPostulates α] (std : Standard) (d : Dissent α) : Prop where
+grounds meet the standard — every check made on its premises with the claims the
+texts refute struck out (`premises`). -/
+structure Credible [DecidableEq α] [HasPostulates α] (std : Standard) (d : Dissent α) : Prop where
   /-- Its premises have a model. -/
-  consistent : Satisfiable (d.position.premises ++ d.background)
+  consistent : Satisfiable (d.premises ++ d.background)
   /-- It denies the claim. -/
-  denies : ¬ Satisfiable (d.position.premises ++ d.background ++ [d.claim])
+  denies : ¬ Satisfiable (d.premises ++ d.background ++ [d.claim])
   /-- It can be held with the step's grounds. -/
-  grants : Satisfiable (d.position.premises ++ d.background ++ d.grounds)
+  grants : Satisfiable (d.premises ++ d.background ++ d.grounds)
   /-- What it asserts outright does not already deny the claim. -/
   argued : Satisfiable (d.asserted ++ d.background ++ [d.claim])
   /-- Its grounds meet the standard. -/
@@ -237,6 +316,8 @@ structure Findings (α : Type) where
   bareDenial : Bool
   /-- Under each standard, the asserted claims it does not admit. -/
   unadmitted : List (Standard × List α)
+  /-- The claims struck, because a text refutes them. -/
+  struck : List α := []
 deriving DecidableEq, Repr
 
 /-- What kind of dissent the checks find, before any standard is applied. -/
@@ -283,19 +364,21 @@ variable [DecidableEq α] [HasPostulates α]
 /-- **The checks, run** by the engine under every standard; `none` when a check
 is undecided. -/
 def findings? (d : Dissent α) : Option (Findings α) := do
-  let c ← satisfiable? (d.position.premises ++ d.background)
-  let n ← satisfiable? (d.position.premises ++ d.background ++ [d.claim])
-  let g ← satisfiable? (d.position.premises ++ d.background ++ d.grounds)
+  let c ← satisfiable? (d.premises ++ d.background)
+  let n ← satisfiable? (d.premises ++ d.background ++ [d.claim])
+  let g ← satisfiable? (d.premises ++ d.background ++ d.grounds)
   let a ← satisfiable? (d.asserted ++ d.background ++ [d.claim])
   pure { consistent := c, denies := !n, grants := g, argued := a
        , bareDenial := d.assertsDenial
-       , unadmitted := Standard.all.map fun s => (s, d.unadmitted s) }
+       , unadmitted := Standard.all.map fun s => (s, d.unadmitted s)
+       , struck := d.struck }
 
-omit [DecidableEq α] [HasPostulates α] in
+omit [HasPostulates α] in
 private theorem unadmittedUnder_eq (d : Dissent α) (c n g a : Bool) (s : Standard) :
     Findings.unadmittedUnder
       { consistent := c, denies := !n, grants := g, argued := a, bareDenial := d.assertsDenial
-      , unadmitted := Standard.all.map fun s => (s, d.unadmitted s) } s = d.unadmitted s := by
+      , unadmitted := Standard.all.map fun s => (s, d.unadmitted s)
+      , struck := d.struck } s = d.unadmitted s := by
   cases s <;> rfl
 
 /-- **What the engine finds credible is credible.** -/
@@ -399,7 +482,12 @@ def view (a : Assessment α) : Page.Assessed where
   critique := a.findings.kind == .argued
   kind := match a.findings.kind with
     | .inconsistent => "Not a critique: its premises contradict one another."
-    | .offTarget => "Not a critique of this step: it does not deny what the step concludes."
+    | .offTarget =>
+      if a.findings.struck.isEmpty then
+        "Not a critique of this step: it does not deny what the step concludes."
+      else
+        "Not a critique of this step: with the claims the texts refute struck, what " ++
+          "remains does not deny what the step concludes."
     | .deniesGrounds =>
       "A dissent from the step's grounds, not from the step: it denies one of them."
     | .asserted =>
@@ -415,6 +503,8 @@ def view (a : Assessment α) : Page.Assessed where
   standards := Standard.all.map fun s =>
     (s.name, a.credible s,
       (a.findings.unadmittedUnder s).map fun x => (a.dissent.position.cite x).label)
+  struck := (a.dissent.refuted.filter fun r => a.findings.struck.contains r.claim).map
+    fun r => ((a.dissent.position.cite r.claim).label, r.reads)
 
 end Assessment
 
@@ -428,13 +518,49 @@ inductive Computed
   /-- The step's support stands: every encoded dissent fails, the strongest known
   among them. -/
   | stands (c : Confidence)
+  /-- The step's support stands although these dissenters' critiques are
+  credible under the standard: each is overruled, its case belonging to no
+  position that can be defended in a dispute that weighs the step at its floor. -/
+  | overruled (dissenters : List String) (c : Confidence)
 deriving DecidableEq, Repr
 
 /-- The confidence a computed rating gives the step: a withheld rating is
 `disputed`, the floor, until the steelman is encoded. -/
 def Computed.confidence : Computed → Confidence
-  | .stands c => c
+  | .stands c | .overruled _ c => c
   | _ => .disputed
+
+/-- **A dissent, overruled in a dispute.** A credible critique can still lose
+when it is weighed. This records that it did: its position, with what the texts
+refute struck, is a party of a dispute, and no admissible set of that dispute
+contains it — whatever way its standoffs are resolved, nothing defends it.
+
+It is not circular, because the dispute must weigh the step the dissent is
+against at its floor: every citation of the step's support in the dispute is
+rated `disputed`. So the overruling owes nothing to the rating it would let
+stand. The dispute weighs every other citation as it is cited. -/
+structure Overruled [DecidableEq α] [HasPostulates α] (register : List (Assessment α))
+    (support : Source) : Type 1 where
+  /-- The dissent overruled, by its index in the register. -/
+  dissent : Nat
+  /-- The dispute it is overruled in, as a page names it. -/
+  disputeName : String
+  /-- The dispute's parties. -/
+  Party : Type
+  /-- The dispute. -/
+  dispute : Dispute α Party
+  /-- The party that is the dissent. -/
+  party : Party
+  /-- The party argues from the dissent's premises, with what the texts refute
+  struck. -/
+  isTheDissent :
+    ∃ a, register[dissent]? = some a ∧ (dispute.node party).premises = a.dissent.premises
+  /-- The dispute weighs the step at its floor: every citation of the step's
+  support in it is rated `disputed`. -/
+  atTheFloor : ∀ j, ∀ src ∈ (dispute.node j).inferences,
+    support == { src with confidence := support.confidence } → src.confidence = .disputed
+  /-- No admissible set of the dispute contains the party. -/
+  indefensible : ∀ S, Framework.Admissible dispute.defeats S → party ∉ S
 
 /-- **A step, rated by its register**: the step, the citation that rates its
 support, every dissent encoded against it, and which of them is the strongest
@@ -452,18 +578,27 @@ structure RatedStep (α : Type) [DecidableEq α] [HasPostulates α] where
   /-- The strongest known dissent, by its index in `register`; `none` when it is
   not encoded. -/
   strongest : Option Nat := none
+  /-- The dissents overruled in a dispute, each with the dispute and the proof. -/
+  overruled : List (Overruled register support) := []
 
 namespace RatedStep
 
 variable [DecidableEq α] [HasPostulates α]
 
+/-- Whether the dissent at an index of the register is overruled. -/
+def isOverruled (r : RatedStep α) (k : Nat) : Bool := r.overruled.any (·.dissent == k)
+
 /-- **The rating under one standard**: disputed by every dissent credible under
-it; otherwise the support stands if the steelman is encoded, and is withheld if
-not. -/
+it and not overruled; otherwise the support stands if the steelman is encoded,
+and is withheld if not. A step whose credible dissents are all overruled stands,
+and says so. -/
 def rating (r : RatedStep α) (s : Standard) : Computed :=
-  match (r.register.filter (·.credible s)).map (·.dissenter) with
-  | [] => if r.strongest.isSome then .stands r.support.confidence else .withheld
-  | ds => .disputedBy ds
+  let credible := r.register.zipIdx.filter fun (a, _) => a.credible s
+  let live := credible.filter fun (_, k) => !r.isOverruled k
+  match live.map (·.1.dissenter), credible.map (·.1.dissenter) with
+  | [], [] => if r.strongest.isSome then .stands r.support.confidence else .withheld
+  | [], ds => if r.strongest.isSome then .overruled ds r.support.confidence else .withheld
+  | ds, _ => .disputedBy ds
 
 /-- **The ratings under every standard**, in the order a page reports them. -/
 def ratings (r : RatedStep α) : List (Standard × Computed) :=
@@ -487,7 +622,11 @@ def view (r : RatedStep α) : Page.Rated where
           "so nothing licenses a higher rating"
       | .stands _ =>
         "every encoded dissent fails a check, the strongest known among them, " ++
-          "so the step's support stands")
+          "so the step's support stands"
+      | .overruled ds _ =>
+        "a credible critique, overruled: " ++ String.intercalate "; " ds ++
+          ", in " ++ String.intercalate "; " (r.overruled.map (·.disputeName)) ++
+          ", where nothing defends it, with the step weighed at its floor")
 
 end RatedStep
 

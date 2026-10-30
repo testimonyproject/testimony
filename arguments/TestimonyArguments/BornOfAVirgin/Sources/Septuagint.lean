@@ -132,16 +132,20 @@ def earlyGreekParthenosIsYoungWomanCited : AtomMeta :=
           , .work waltonWhatsInAName (.page 293)
           , .work bratcherStudyOfIsaiah (.page 112) ] } }
 
-/-- `dinahIsAParthenosAfterShechem`. What the Greek reads: Shechem "lay with her
+/-- `greekCallsDinahParthenos`. What the Greek reads: Shechem "lay with her
 and humbled her" (34:2), and "he loved the παρθένος, and spoke to her according
 to the mind of the παρθένος" (34:3), where the Hebrew has נַעֲרָה, "girl", both
-times. Read from Rahlfs's text and the Masoretic. Wegner calls it "a good example of the meaning
-of παρθένος in the LXX" (483), and Rhodea draws from it that "παρθένος need not
-refer to a virgo intacta" (67). No one denies the reading. Rico and Gentry call
-it "the exception that proves the rule" (21); Bratcher, an exception made
-"inexplicably" (113). -/
-def dinahIsAParthenosAfterShechemCited : AtomMeta :=
-  { label := "The Septuagint calls Dinah a παρθένος after Shechem has lain with her"
+times. Read from Rahlfs's text and the Masoretic. Wegner calls it "a good
+example of the meaning of παρθένος in the LXX" (483), and Rhodea draws from it
+that "παρθένος need not refer to a virgo intacta" (67). No one denies the
+reading. Rico and Gentry call it "the exception that proves the rule" (21);
+Bratcher, an exception made "inexplicably" (113).
+
+The claim is what the text reads: the word, and the verse it stands in, after
+34:2. Whether the noun describes Dinah as she was after 34:2 is a further claim,
+and a reader's (`parthenosDescribesDinahAsSheThenWas`). -/
+def greekCallsDinahParthenosCited : AtomMeta :=
+  { label := "The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2)"
   , kind := .textual
   , source :=
       { primary := .scripture dinahAfterShechem
@@ -341,6 +345,66 @@ def lxxIsaiahUsesParthenosAsVirginCited : AtomMeta :=
           , .work wegnerVirginBirths (.page 483) ]
       , tradition := .reformedProtestant
       , confidence := .disputed } }
+
+/-- `joelGreekCallsTheWidowParthenos`. Miller's claim about the Greek: "Lament
+like a parthenos dressed in sackcloth for the husband of her youth (Joel 1:8)",
+given as a use of the word of a woman who is not a virgin (*Born Divine*). The
+Greek of Joel 1:8 does not read so: it calls the woman νύμφην, a bride, and its
+παρθεν- word, τὸν παρθενικόν, is of the husband (Rahlfs). Cited for what Miller
+holds; the text refutes it (`Dispute.Miller`). -/
+def joelGreekCallsTheWidowParthenosCited : AtomMeta :=
+  { label := "The Greek of Joel 1:8 calls a young widow a παρθένος (Miller)"
+  , kind := .textual
+  , source :=
+      { primary := .work millerBornDivine .whole
+      , tradition := .criticalScholarship
+      , confidence := .disputed } }
+
+/-- `parthenosDoesNotItselfConnoteVirginity`. Miller's thesis: "As in other Greek
+literature, parthenos in the Septuagint did not by itself connote what we mean by
+virginity", so that where virginity matters it "has to be inferred from the
+context" (*Born Divine*). `disputed`: Bratcher (113), and Rico and Gentry, hold
+the opposite. -/
+def parthenosDoesNotItselfConnoteVirginityCited : AtomMeta :=
+  { label := "In the Septuagint, παρθένος did not by itself connote virginity (Miller)"
+  , kind := .linguistic
+  , source :=
+      { primary := .work millerBornDivine .whole
+      , supporting := [.work bratcherStudyOfIsaiah (.page 113)]
+      , tradition := .criticalScholarship
+      , confidence := .disputed } }
+
+/-- `parthenosDescribesDinahAsSheThenWas`. Miller's premise: "In one passage,
+this term refers to a rape victim after she has been attacked (Gen 34:3)" (*Born
+Divine*). Wegner says the same, that Dinah "is called a παρθένος even after she
+was raped by Shechem" (483), and Muraoka's lexicon glosses the verse "so called
+just after having been raped" (535). It is more than the reading of the text
+(`greekCallsDinahParthenos`): that the noun says what Dinah was at the time of
+the verse, and so, since she was then no longer a virgin, that the word is not
+used there in the sense "virgin".
+
+A noun need not say what the one it names is at the time of its verb. Enç
+argues that a noun phrase is read at a time of its own, which the context gives
+(1986); Scripture names Rahab "the harlot" long after Jericho (Hebrews 11:31,
+James 2:25), and Matthew "the tax collector" after his call (Matthew 10:3). So
+the noun at 34:3 can name Dinah by what she had been, or, as the status reading
+holds, by the law's name for the woman a man has lain with
+(`dinahIsTheLawsParthenos`).
+
+`wellSupported`, not higher: every reader on record who takes up the verse holds
+it, and Rico and Gentry and Bratcher, who read the word as "virgin", grant it.
+The status reading and the argument from the noun contest it, but both are the
+library's own, and no reader has been found who makes either. -/
+def parthenosDescribesDinahAsSheThenWasCited : AtomMeta :=
+  { label := "At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller)"
+  , kind := .linguistic
+  , source :=
+      { primary := .work millerBornDivine .whole
+      , supporting :=
+          [ .work wegnerVirginBirths (.page 483)
+          , .work muraokaLexiconSeptuagint (.page 535) ]
+      , tradition := .criticalScholarship
+      , confidence := .wellSupported } }
 
 /-- `tryphoRejectsParthenos`. Trypho: "The Scripture has not, 'Behold, the virgin
 shall conceive, and bear a son,' but, 'Behold, the young woman shall conceive'"

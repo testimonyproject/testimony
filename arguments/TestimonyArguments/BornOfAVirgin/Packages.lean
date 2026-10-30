@@ -412,6 +412,36 @@ Dinah a παρθένος as the law names the seduced virgin, in the sense "virg
 def dinahCase : ArgumentPackage Claim :=
   dinahLine.asPackage cite "At Genesis 34:3, παρθένος names Dinah in the sense 'virgin'"
 
+/-- **Miller on the laws**, as he argues it: two uses of the word of women who
+are not virgins, so the word does not by itself connote virginity, so the laws'
+virginity is the context's. -/
+@[bornOfAVirginDefs]
+def millerOnTheLaws : ArgumentPackage Claim :=
+  { name := "Miller: in the laws, the virginity is the context's, not the word's"
+  , cite := cite
+  , premises := caseOf [millerJoelLine, millerDinahLine] [] [contextNotWordInTheLaws]
+  , conclusion := notP .lawsUseParthenosAsVirgin
+  , conclusionLabel :=
+      "In the Greek Pentateuch's laws, παρθένος is not used in the sense 'virgin'"
+  , inferences := [millerSource] }
+
+/-- **Miller from Genesis 34:3**, his case on the evidence the texts leave
+standing: Joel 1:8, which the Greek refutes, taken out (`Dispute.Miller`). The
+position he holds in the dispute over the Septuagint's word. -/
+@[bornOfAVirginDefs]
+def millerCase : ArgumentPackage Claim :=
+  { millerOnTheLaws with
+    name := "Miller, from Genesis 34:3"
+    premises := caseOf [millerDinahLine] [] [contextNotWordInTheLaws] }
+
+/-- **Miller's dissent, had Joel 1:8 been all his evidence.** Not his argument as
+he makes it, written down to show what striking a refuted claim does. -/
+@[bornOfAVirginDefs]
+def millerOnJoelAlone : ArgumentPackage Claim :=
+  { millerOnTheLaws with
+    name := "Miller, from Joel 1:8 alone"
+    premises := caseOf [millerJoelLine] [] [contextNotWordInTheLaws] }
+
 /-- Matthew's quotation as a position of its own: in the Greek of Isaiah 7:14,
 which Matthew quotes, παρθένος has the sense "virgin". -/
 @[bornOfAVirginDefs]

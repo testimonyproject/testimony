@@ -81,10 +81,13 @@ word: παρθένος means a virgin, the translator read the woman of 7:14 as 
 she conceives as one — "a sign which is not common to all the first-born sons"
 (*Dialogue* 84). So she is not already pregnant when the sign is given, and her
 pregnancy is no ordinary one. Wegner's claim is false in it: the word already
-had the sense "virgin". -/
+had the sense "virgin". So are Miller's thesis and his premise that the noun of
+Genesis 34:3 describes Dinah as she then was: the noun names her. -/
 def virginConceivesReading : Valuation Claim := fun a =>
   match a with
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .harahIsPredicateAdjective => False
   | .isaianicAlmahIsAlreadyPregnant => False
   | .pregnancyAtTheSignIsOrdinary => False
@@ -172,6 +175,8 @@ woman is a virgin. -/
 def translatorDescribesTheWomanReading : Valuation Claim := fun a =>
   match a with
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .almahMeansVirgin => False
   | .harahIsPredicateAdjective => False
   | .isaianicAlmahIsAlreadyPregnant => False
@@ -217,6 +222,8 @@ sign is given; she conceives later, by a man. -/
 def nowAVirginReading : Valuation Claim := fun a =>
   match a with
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .lxxEnvisagesAVirginalConception => False
   | .harahIsPredicateAdjective => False
   | .isaianicAlmahIsAlreadyPregnant => False

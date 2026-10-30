@@ -119,6 +119,8 @@ def westermannReading : Valuation Claim := fun a =>
   | .wordingSignifiesAFatherlessBirth => False
   | .serpentIsTheInstrumentOfAPower => False
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
   | _ => True
@@ -135,6 +137,8 @@ def curseWithoutPromiseReading : Valuation Claim := fun a =>
   | .seedWasOfTheWomanAlone => False
   | .wordingSignifiesAFatherlessBirth => False
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
   | _ => True
@@ -147,6 +151,8 @@ def calvinReading : Valuation Claim := fun a =>
   match a with
   | .wordingSignifiesAFatherlessBirth => False
   | .parthenosMeantYoungWoman => False
+  | .parthenosDoesNotItselfConnoteVirginity => False
+  | .parthenosDescribesDinahAsSheThenWas => False
   | .maternalSilenceProvesNothing => False
   | .magisteriumIsDoctrinallyAuthoritative => False
   | _ => True

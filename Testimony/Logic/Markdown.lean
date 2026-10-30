@@ -475,6 +475,10 @@ not admit. -/
 def assessed (a : Page.Assessed) : String :=
   "**Dissent:** *" ++ escape a.dissenter ++ "*, against *" ++ escape a.against ++ "*. " ++
     (if a.critique then "✔ " else "✘ ") ++ escape a.kind ++ "\n\n" ++
+  String.join (a.struck.map fun (c, r) =>
+    "- **Struck, because the text reads otherwise:** " ++ escape c ++ ". " ++ escape r ++
+      ".\n") ++
+  (if a.struck.isEmpty then "" else "\n") ++
   "| Standard | A credible critique? | Rests on what the standard does not accept |\n" ++
   "|---|---|---|\n" ++
   String.join (a.standards.map fun (s, ok, un) =>

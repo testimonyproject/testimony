@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-175 entries, of which 29 carry no stable public identifier.
+176 entries, of which 29 carry no stable public identifier.
 
 - <a id="achtemeier-1-peter-1996"></a>**`achtemeier-1-peter-1996`** — Paul J. Achtemeier. *1 Peter: A Commentary on First Peter*. Minneapolis: Fortress Press. Hermeneia. 1996. ISBN 9780800660307.
 - <a id="akin-woman-seed-serpent-1999"></a>**`akin-woman-seed-serpent-1999`** — Jimmy Akin. *The Woman, the Seed, the Serpent*. Catholic Answers. 1999. [https://www.catholic.com/magazine/print-edition/the-woman-the-seed-the-serpent](https://www.catholic.com/magazine/print-edition/the-woman-the-seed-the-serpent).
@@ -62,6 +62,7 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - <a id="etcbc-bhsa"></a>**`etcbc-bhsa`** — Eep Talstra Centre for Bible and Computer. *Biblia Hebraica Stuttgartensia (Amstelodamensis)*. ETCBC, Vrije Universiteit Amsterdam. [https://github.com/ETCBC/bhsa](https://github.com/ETCBC/bhsa).
 - <a id="ehrman-forgery-counterforgery-2014"></a>**`ehrman-forgery-counterforgery-2014`** — Bart D. Ehrman. *Forgery and Counter-Forgery: The Use of Literary Deceit in Early Christian Polemics*. New York: Oxford University Press. 2014. ISBN 9780199928033.
 - <a id="bhs-1997"></a>**`bhs-1997`** — Karl Elliger, Wilhelm Rudolph (ed.). *Biblia Hebraica Stuttgartensia*. Stuttgart: Deutsche Bibelgesellschaft. 5th edition. Siglum BHS. 1997. *(no public identifier)*
+- <a id="enc-referential-analysis-1986"></a>**`enc-referential-analysis-1986`** — Mürvet Enç. *Towards a Referential Analysis of Temporal Expressions*. *Linguistics and Philosophy* 9.4: 405–426. 1986. [DOI 10.1007/BF00603217](https://doi.org/10.1007/BF00603217).
 - <a id="eusebius-demonstratio-evangelica-315"></a>**`eusebius-demonstratio-evangelica-315`** — Eusebius of Caesarea. *Demonstratio Evangelica*. Εὐαγγελικὴ ἀπόδειξις. Composed c. 315. Cited through `ferrar-proof-of-the-gospel-1920`. *(no public identifier)*
 - <a id="ferrar-proof-of-the-gospel-1920"></a>**`ferrar-proof-of-the-gospel-1920`** — Eusebius of Caesarea. *The Proof of the Gospel: Being the Demonstratio Evangelica of Eusebius of Cæsarea*. Translated by W. J. Ferrar. London: Society for Promoting Christian Knowledge. Translations of Christian Literature, Series I: Greek Texts. 2 vols. 1920. [https://openlibrary.org/books/OL6638704M](https://openlibrary.org/books/OL6638704M).
 - <a id="feeney-bread-of-life-1952"></a>**`feeney-bread-of-life-1952`** — Leonard Feeney. *Bread of Life*. Cambridge, MA: St. Benedict Center. 1952. *(no public identifier)* Catalogued without an ISBN.

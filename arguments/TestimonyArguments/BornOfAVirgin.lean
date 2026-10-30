@@ -9,6 +9,7 @@ import TestimonyArguments.BornOfAVirgin.Results.Genesis
 import TestimonyArguments.BornOfAVirgin.Dispute
 import TestimonyArguments.BornOfAVirgin.Dispute.Wegner
 import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
+import TestimonyArguments.BornOfAVirgin.Dispute.Miller
 import TestimonyArguments.BornOfAVirgin.Dispute.Matthew
 import TestimonyArguments.BornOfAVirgin.Dispute.Genesis
 import TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium
@@ -123,6 +124,13 @@ goes through. Three results then say what it rests on and what it reaches.
   its grounds and denies it, and no higher because no reader found makes it.
   Were it `disputed`, nothing would prevail; `Dispute.Septuagint` says so, with
   where the evidence on each side lies.
+- **A dissent counts only on evidence the texts leave standing**
+  (`Dispute.Miller`). The laws' step is `disputed` on Robert J. Miller, who
+  gives two uses of παρθένος of women who are not virgins. His "young widow"
+  at Joel 1:8 is a bride, νύμφην, in the Greek, so that claim is struck; his
+  Genesis 34:3 stands as the Greek reads it, and carries his dissent
+  (`miller_survives_on_genesis`). Resting on Joel 1:8 alone, the dissent would
+  not count under any standard (`miller_on_joel_alone_does_not_count`).
 - **Scripture's own reading of the word turns on the standard**
   (`matthew_step_turns_on_the_standard`). Matthew quotes the Septuagint's ἡ
   παρθένος of Mary, who conceived before she and Joseph came together, so in
@@ -404,6 +412,7 @@ own beside it.
 | `Dispute.lean` | the critical denial, the scriptural reading and four replies as one dispute |
 | `Dispute/Wegner.lean` | Wegner, the fathers' sign argument and the near-term reply as another |
 | `Dispute/Septuagint.lean` | the Septuagint, Wegner, Rico and Gentry, and the laws, as a third |
+| `Dispute/Miller.lean` | Miller's dissent from the laws, with what the texts refute struck |
 | `Dispute/Genesis.lean` | Luther, Leupold and Lewis on "her seed", as a fourth |
 | `Dispute/Protoevangelium.lean` | the promise fulfilled, and Westermann's denial, as a fifth |
 | `Dispute/PromiseHearing.lean` | that dispute heard under each standard |
