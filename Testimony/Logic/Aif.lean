@@ -215,27 +215,34 @@ variable [HasPostulates α]
 
 /-- **What one party does to another, in AIF**: a conflict for each defeat, on
 the conclusion, premise or delivered claim it lands on; a preference for each
-attack the weighing refuses. -/
+attack the weighing refuses.
+
+An attack lands where `a`'s position cannot hold with what it attacks; it is a
+defeat unless the weighing refuses it, and a preference if it does — as
+`Horn.rebuts?`, `Horn.undermines?` and `Horn.stepRebuts?` decide it. Each
+question of satisfiability is asked once here and serves both the conflict and
+the preference, rather than asked by those functions and again for the
+preference. -/
 def attacks (a b : ArgumentPackage α) : StateM (Builder α) Unit := do
   let s := a.strength
   let t := b.strength
   let src ← claim a.cite a.conclusion
   let blocked (φ : Formula α) := Horn.satisfiable? (a.held ++ [φ]) == some false
-  match Horn.rebuts? a b s t with
-  | some true => conflict src (← claim b.cite b.conclusion)
-  | _ =>
-    if s < t && blocked b.conclusion then preference (← claim b.cite b.conclusion) src
+  -- The rebuttal: refused when `b` is the stronger.
+  if blocked b.conclusion then
+    let n ← claim b.cite b.conclusion
+    if s < t then preference n src else conflict src n
+  -- Each premise: refused when the premise outranks `a`.
   for φ in b.premises do
-    match Horn.undermines? a b s φ with
-    | some true => conflict src (← premise b.cite φ)
-    | _ =>
-      if decide (Outranks b φ s) && blocked φ then preference (← premise b.cite φ) src
+    if blocked φ then
+      let n ← premise b.cite φ
+      if decide (Outranks b φ s) then preference n src else conflict src n
+  -- Each claim a step delivers, which `b` must entail: refused when `b` is the
+  -- stronger.
   for (_, ψ) in Horn.stepsOf b.premises do
-    match Horn.stepRebuts? a b s t ψ with
-    | some true => conflict src (← claim b.cite ψ)
-    | _ =>
-      if s < t && blocked ψ && Horn.satisfiable? (b.held ++ [∼ψ]) == some false then
-        preference (← claim b.cite ψ) src
+    if blocked ψ && Horn.satisfiable? (b.held ++ [∼ψ]) == some false then
+      let n ← claim b.cite ψ
+      if s < t then preference n src else conflict src n
 
 /-- **A dispute as an AIF graph**: every party's package, and what every party
 does to every other. -/

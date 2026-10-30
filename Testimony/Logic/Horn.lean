@@ -302,11 +302,12 @@ def chooseChain (cs : List (Clause α)) (s : Settled α) : ℕ → List α → L
     let yes' := choose cs s yes
     if yes'.length == yes.length then yes' else chooseChain cs s n yes'
 
-/-- The atoms the third candidate makes true: those forced true, and, for each
-clause with more than one head left open, the first head propagation did not
-rule out — chosen, never forced, and so a model only once it is checked. -/
-def chosen (cs : List (Clause α)) : List α :=
-  chooseChain cs (settle cs) (cs.length + 1) (settle cs).yes
+/-- The atoms the third candidate makes true, from what propagation settled:
+those forced true, and, for each clause with more than one head left open, the
+first head propagation did not rule out — chosen, never forced, and so a model
+only once it is checked. -/
+def chosen (cs : List (Clause α)) (s : Settled α) : List α :=
+  chooseChain cs s (cs.length + 1) s.yes
 
 /-- **Satisfiability, with its evidence.** `some true` when one of three
 candidate models is checked to satisfy every clause — the atoms forced true and
@@ -322,12 +323,16 @@ propagation: the first candidate makes both heads false, and the second makes
 both true. The second fails as soon as a meaning postulate `a → ¬b` forbids two
 atoms it makes true together, and the third, which makes true only what a
 clause asks for, is the model then. Each is a model only once it has been
-checked to be one. -/
+checked to be one.
+
+Propagation runs once, and every candidate and the refutation read what it
+settled. -/
 def clausesSatisfiable? (cs : List (Clause α)) : Option Bool :=
-  if cs.all (satisfiedBy ((settle cs).yes.elem ·)) then some true
-  else if cs.all (satisfiedBy (!(settle cs).no.elem ·)) then some true
-  else if cs.any (violated (settle cs)) then some false
-  else if cs.all (satisfiedBy ((chosen cs).elem ·)) then some true
+  let s := settle cs
+  if cs.all (satisfiedBy (s.yes.elem ·)) then some true
+  else if cs.all (satisfiedBy (!s.no.elem ·)) then some true
+  else if cs.any (violated s) then some false
+  else if cs.all (satisfiedBy ((chosen cs s).elem ·)) then some true
   else none
 
 theorem propagate_sound {c : Clause α} {w : Valuation α} (hc : c.Holds w)
@@ -412,7 +417,7 @@ theorem holds_of_satisfiedBy {v : α → Bool} {c : Clause α} (h : satisfiedBy 
 /-- `some true` is a model: whichever candidate was checked. -/
 theorem satisfiable_of_clausesSatisfiable? {cs : List (Clause α)}
     (h : clausesSatisfiable? cs = some true) : ∃ w : Valuation α, ∀ c ∈ cs, c.Holds w := by
-  unfold clausesSatisfiable? at h
+  dsimp only [clausesSatisfiable?] at h
   split at h
   · rename_i hall
     exact ⟨_, fun c hc => holds_of_satisfiedBy (List.all_eq_true.mp hall c hc)⟩
@@ -431,7 +436,7 @@ have, so there is none. -/
 theorem not_satisfiable_of_clausesSatisfiable? {cs : List (Clause α)}
     (h : clausesSatisfiable? cs = some false) : ¬ ∃ w : Valuation α, ∀ c ∈ cs, c.Holds w := by
   rintro ⟨w, hw⟩
-  unfold clausesSatisfiable? at h
+  dsimp only [clausesSatisfiable?] at h
   split at h
   · simp at h
   split at h
@@ -526,14 +531,16 @@ theorem mem_stepsOf {Γ : List (Formula α)} {p ψ : Formula α} :
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, by rebutting
 what `b`'s step `p ➝ ψ` delivers: `some true` if `b`'s premises entail `ψ`,
 `a`'s entail its negation, and `b` is not stronger than `a`; `some false` if
-either entailment is shown to fail or `b` is stronger; `none` otherwise. -/
+either entailment is shown to fail or `b` is stronger; `none` otherwise. Each
+entailment is decided once. -/
 def stepRebuts? (a b : ArgumentPackage α) (s t : ℕ) (ψ : Formula α) : Option Bool :=
   if s < t then some false
-  else if satisfiable? (b.held ++ [∼ψ]) = some false ∧
-      satisfiable? (a.held ++ [ψ]) = some false then some true
-  else if satisfiable? (b.held ++ [∼ψ]) = some true ∨
-      satisfiable? (a.held ++ [ψ]) = some true then some false
-  else none
+  else
+    let delivers := satisfiable? (b.held ++ [∼ψ])
+    let denies := satisfiable? (a.held ++ [ψ])
+    if delivers = some false ∧ denies = some false then some true
+    else if delivers = some true ∨ denies = some true then some false
+    else none
 
 /-- Every way `a` could defeat `b`: the rebuttal, each premise of `b`, and each
 claim `b`'s steps deliver. -/
@@ -543,10 +550,12 @@ def defeatChecks (a b : ArgumentPackage α) (s t : ℕ) : List (Option Bool) :=
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`: `some true` if
 any way succeeds, `some false` if every way is shown to fail, `none` if some
-check was on a formula without clauses and none succeeded. -/
+check was on a formula without clauses and none succeeded. The checks are made
+once. -/
 def defeats? (a b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
-  if (defeatChecks a b s t).any (· == some true) then some true
-  else if (defeatChecks a b s t).all (· == some false) then some false
+  let checks := defeatChecks a b s t
+  if checks.any (· == some true) then some true
+  else if checks.all (· == some false) then some false
   else none
 
 omit [DecidableEq α] [HasPostulates α] in
@@ -577,7 +586,7 @@ theorem undermines?_false {a b : ArgumentPackage α} {φ : Formula α}
 theorem stepRebuts?_true {a b : ArgumentPackage α} {ψ : Formula α}
     (h : stepRebuts? a b a.strength b.strength ψ = some true) :
     Entails b.held ψ ∧ Entails a.held (∼ψ) ∧ ¬ a.strength < b.strength := by
-  unfold stepRebuts? at h
+  dsimp only [stepRebuts?] at h
   split at h
   · simp at h
   · rename_i hno
@@ -590,7 +599,7 @@ theorem stepRebuts?_true {a b : ArgumentPackage α} {ψ : Formula α}
 theorem stepRebuts?_false {a b : ArgumentPackage α} {ψ : Formula α}
     (h : stepRebuts? a b a.strength b.strength ψ = some false) :
     ¬ (Entails b.held ψ ∧ Entails a.held (∼ψ) ∧ ¬ a.strength < b.strength) := by
-  unfold stepRebuts? at h
+  dsimp only [stepRebuts?] at h
   rintro ⟨hb, ha, hno⟩
   split at h
   · exact hno (by assumption)
@@ -626,7 +635,7 @@ theorem defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
     (hs : a.strength = s) (ht : b.strength = t) (h : defeats? a b s t = some true) :
     Defeats a b := by
   subst hs ht
-  unfold defeats? at h
+  dsimp only [defeats?] at h
   split at h
   · rename_i hany
     obtain ⟨x, hx, hxt⟩ := List.any_eq_true.mp hany
@@ -649,7 +658,7 @@ theorem not_defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
     (hs : a.strength = s) (ht : b.strength = t) (h : defeats? a b s t = some false) :
     ¬ Defeats a b := by
   subst hs ht
-  unfold defeats? at h
+  dsimp only [defeats?] at h
   split at h
   · simp at h
   · split at h
