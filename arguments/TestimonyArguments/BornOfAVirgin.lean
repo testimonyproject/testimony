@@ -9,8 +9,10 @@ import TestimonyArguments.BornOfAVirgin.Results.Genesis
 import TestimonyArguments.BornOfAVirgin.Dispute
 import TestimonyArguments.BornOfAVirgin.Dispute.Wegner
 import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
+import TestimonyArguments.BornOfAVirgin.Dispute.Matthew
 import TestimonyArguments.BornOfAVirgin.Dispute.Genesis
 import TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium
+import TestimonyArguments.BornOfAVirgin.Dispute.PromiseHearing
 
 /-!
 # TestimonyArguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
@@ -121,6 +123,16 @@ goes through. Three results then say what it rests on and what it reaches.
   its grounds and denies it, and no higher because no reader found makes it.
   Were it `disputed`, nothing would prevail; `Dispute.Septuagint` says so, with
   where the evidence on each side lies.
+- **Scripture's own reading of the word turns on the standard**
+  (`matthew_step_turns_on_the_standard`). Matthew quotes the Septuagint's ἡ
+  παρθένος of Mary, who conceived before she and Joseph came together, so in
+  the text he quotes the word means "virgin". Wegner grants what Matthew says
+  and holds that the word had changed in meaning since the translator wrote it.
+  Under the evidence standard that is a credible critique, and Matthew and
+  Wegner stand off. Under the Scripture standard — Scripture interprets
+  Scripture, so a dissent from a step grounded in Scripture alone must rest on
+  Scripture too — Wegner's argument from early Greek usage is not heard, and
+  Matthew's reading prevails. `Dispute.Matthew` reports both.
 - **It shows how one early reader read Isaiah, not what Isaiah's word means**
   (`septuagint_word_rests_on_its_inference`). Granted its sense, the Septuagint
   shows that a Jewish translator before Christ read the woman of 7:14 as a
@@ -200,6 +212,11 @@ strand's hinge reads that as marking a birth with no human father.
   Westermann. The readers before Christ do not read the verse so: Jubilees,
   Philo and Josephus read the serpent as an animal or an emblem. The fulfilment,
   with the syntax and the scene, can be defended, and so can Westermann.
+  **Under the Scripture standard the fulfilment prevails**
+  (`promise_turns_on_the_standard`): its grounds are all Scripture, and
+  Westermann's dissent rests on his philology of "seed", so it is not heard.
+  Under the evidence standard it is, and nothing prevails.
+  `Dispute.PromiseHearing` reports both.
 - **The Septuagint's "he"**, αὐτός for the neuter σπέρμα, may show that a
   Jewish translator before Christ read the promise of one person
   (`greekHeCase_establishes`), so that reading would be no Christian invention.
@@ -389,6 +406,7 @@ own beside it.
 | `Dispute/Septuagint.lean` | the Septuagint, Wegner, Rico and Gentry, and the laws, as a third |
 | `Dispute/Genesis.lean` | Luther, Leupold and Lewis on "her seed", as a fourth |
 | `Dispute/Protoevangelium.lean` | the promise fulfilled, and Westermann's denial, as a fifth |
+| `Dispute/PromiseHearing.lean` | that dispute heard under each standard |
 
 Shared material lives further out: passages and citation bundles in
 `Testimony.Scripture`, the `Line` and `caseOf` vocabulary in

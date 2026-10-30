@@ -723,6 +723,54 @@ def usageLine : Line Claim :=
       , tradition := .christianHistoricalGrammatical
       , confidence := .disputed } }
 
+/-- **Scripture's reading of the Greek word.** Matthew quotes the Septuagint's ἡ
+παρθένος of a woman who conceived before she and Joseph came together; so in the
+text he quotes, the word has the sense "virgin". -/
+@[bornOfAVirginDefs]
+def matthewReadsTheGreek : Formula Claim :=
+  ⋀ [ p .matthewQuotesTheGreekVirgin, p .matthewSaysMaryKnewNoMan ]
+  ➝ p .lxxIsaiahUsesParthenosAsVirgin
+
+/-- The citation for Scripture's reading of the Greek word, at a confidence:
+Westminster's rule that Scripture interprets Scripture (I.ix), Irenaeus on the
+apostles' agreement with the Seventy (III.21.3), and Wegner, who grants Matthew's
+use and denies the step (483). -/
+@[bornOfAVirginDefs]
+def matthewReadingSource (c : Confidence) : Source :=
+  { primary := .work westminsterConfession (.sectionRef "I.ix")
+  , supporting :=
+      [ .work irenaeusAgainstHeresies (.sectionRef "III.21.3")
+      , .work wegnerVirginBirths (.page 483) ]
+  , tradition := .reformedProtestant
+  , confidence := c }
+
+/-- **Scripture interprets Scripture: Matthew's quotation.** The Gospel quotes
+the Greek of Isaiah 7:14, ἡ παρθένος, of Mary, who conceived "before they came
+together" (1:18) and whom Joseph "knew not until she had borne a son" (1:25). If
+Scripture is its own interpreter — "The infallible rule of interpretation of
+Scripture is the Scripture itself" (Westminster I.ix) — the word in the text
+Matthew quotes has the sense he gives it. Its grounds are Scripture alone.
+
+Like the case from the laws, it concludes that a passage of the Septuagint uses
+the word in the sense "virgin", and so, by what a usage is, that the sense was
+the Septuagint's, which Wegner denies. It says nothing of the Hebrew עַלְמָה.
+
+Cited, the step is `disputed`. Wegner grants both grounds — the word was "a
+suitable term to describe Mary in the first century AD" — and denies the
+conclusion: it "changed in meaning from 'young woman' to 'virgin'" between the
+translator and Matthew (483). Whether that dissent counts is the question the
+standards answer differently: under the evidence and tradition standards it is a
+critique; under the scriptural standard, a dissent from a step whose grounds are
+all Scripture counts only if it rests on Scripture alone, and Wegner's rests on
+early Greek usage. `Dispute.Matthew` computes the hearing under each. -/
+@[bornOfAVirginDefs]
+def matthewLine : Line Claim :=
+  { name := "Scripture interprets Scripture: Matthew quotes ἡ παρθένος of Mary"
+  , grounds := [ p .matthewQuotesTheGreekVirgin, p .matthewSaysMaryKnewNoMan ]
+  , step := matthewReadsTheGreek
+  , delivers := p .lxxIsaiahUsesParthenosAsVirgin
+  , inference := some (matthewReadingSource .disputed) }
+
 /-- **Luther on "her seed"**: the wording itself signifies a birth with no human
 father. Held by Luther and Henry, and, as "a hint", by Akin and Miravalle;
 disputed by Leupold, Keil and Lewis. Irenaeus reads the verse of the Virgin's
@@ -917,6 +965,21 @@ def singularSyntaxNamesOne : Formula Claim :=
   ⋀ [ p .seedUsedOfOneDescendant, p .strikerIsSingular, p .lxxReadsOneDescendant ]
   ➝ notP .seedIsLineNotIndividual
 
+/-- The citation for the fulfilment's step, at a confidence: the readers who
+argue it, and Westermann, who denies it. -/
+@[bornOfAVirginDefs]
+def fulfilmentSource (c : Confidence) : Source :=
+  { primary := .work irenaeusAgainstHeresies (.sectionRef "III.23.7")
+  , supporting :=
+      [ .work irenaeusAgainstHeresies (.sectionRef "IV.40.3")
+      , .work hamiltonSkullCrushingSeed (.pageList [42, 53])
+      , .work keilDelitzschPentateuch (.page 102)
+      , .work leupoldGenesis (.page 170)
+      , .work calvinGenesis (.pages 170 171)
+      , .work westermannGenesis (.pages 259 261) ]
+  , tradition := .christianTypological
+  , confidence := c }
+
 /-- **The fulfilment of Genesis 3:15**, read from Scripture: every term of the
 promise is met in Jesus, as the New Testament itself names it.
 
@@ -975,17 +1038,7 @@ def fulfilmentLine : Line Claim :=
       , p .devilDestroyedThroughDeath, p .christDiedAndRose ]
   , step := termsMetInJesus
   , delivers := p .jesusFulfilsThePromise
-  , inference := some
-      { primary := .work irenaeusAgainstHeresies (.sectionRef "III.23.7")
-      , supporting :=
-          [ .work irenaeusAgainstHeresies (.sectionRef "IV.40.3")
-          , .work hamiltonSkullCrushingSeed (.pageList [42, 53])
-          , .work keilDelitzschPentateuch (.page 102)
-          , .work leupoldGenesis (.page 170)
-          , .work calvinGenesis (.pages 170 171)
-          , .work westermannGenesis (.pages 259 261) ]
-      , tradition := .christianTypological
-      , confidence := .disputed } }
+  , inference := some (fulfilmentSource .disputed) }
 
 /-- The citation for the step from the fulfilment to the promise, at a
 confidence: the readers who grant that Genesis 3:15 is fulfilled in Christ and

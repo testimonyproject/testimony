@@ -294,6 +294,54 @@ def dinahIsTheLawsParthenosCited : AtomMeta :=
       , tradition := .christianHistoricalGrammatical
       , confidence := .plausible } }
 
+/-- `matthewQuotesTheGreekVirgin`. What Matthew reads: "ἰδοὺ ἡ παρθένος ἐν γαστρὶ
+ἕξει καὶ τέξεται υἱόν" (1:23), the Septuagint's words for Isaiah 7:14. Scripture
+alone, and legitimately so: the claim is about what the texts read.
+`consensus`. -/
+def matthewQuotesTheGreekVirginCited : AtomMeta :=
+  { label := "Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος"
+  , kind := .textual
+  , source :=
+      { primary := .scripture matthewQuotesTheSeptuagint
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `matthewSaysMaryKnewNoMan`. What Matthew says: Mary was found with child
+"before they came together" (1:18), and Joseph "knew her not until she had borne
+a son" (1:25). This is what Matthew says, not whether it happened, which the
+argument rates apart (`maryConceivedAsVirgin`). `consensus`. -/
+def matthewSaysMaryKnewNoManCited : AtomMeta :=
+  { label := "Matthew says Mary conceived before she and Joseph came together"
+  , kind := .textual
+  , source :=
+      { primary := .scripture matthewMaryKnewNoMan
+      , tradition := .criticalScholarship
+      , confidence := .consensus } }
+
+/-- `lxxIsaiahUsesParthenosAsVirgin`. Scripture's own reading of the Greek word:
+Matthew quotes the Septuagint's ἡ παρθένος of a woman who conceived before she
+and Joseph came together, so in the text he quotes, the word has the sense
+"virgin". The principle is Westminster's: "The infallible rule of interpretation
+of Scripture is the Scripture itself" (I.ix). Irenaeus: the apostles "agree with
+this aforesaid translation", and Matthew among them set forth the prophecies
+"just as the interpretation of the elders contains them" (*Against Heresies*
+III.21.3).
+
+`disputed`, as its step is: Wegner grants that Matthew uses the word of Mary, a
+virgin, and holds that it had changed in meaning since the translator wrote it,
+"from 'young woman' to 'virgin,' thus also making it a suitable term to describe
+Mary in the first century AD" (483). -/
+def lxxIsaiahUsesParthenosAsVirginCited : AtomMeta :=
+  { label := "In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος means 'virgin'"
+  , kind := .linguistic
+  , source :=
+      { primary := .work westminsterConfession (.sectionRef "I.ix")
+      , supporting :=
+          [ .work irenaeusAgainstHeresies (.sectionRef "III.21.3")
+          , .work wegnerVirginBirths (.page 483) ]
+      , tradition := .reformedProtestant
+      , confidence := .disputed } }
+
 /-- `tryphoRejectsParthenos`. Trypho: "The Scripture has not, 'Behold, the virgin
 shall conceive, and bear a son,' but, 'Behold, the young woman shall conceive'"
 (*Dialogue* 67). Justin answers that Trypho's teachers "refuse to admit that the

@@ -46,6 +46,9 @@ of the prediction belongs to no position that can be defended
 prediction does not survive the replies, on those premises and ratings; it does
 not prove the prediction. And it needs neither side's claim about παρθένος.
 
+Nor does it weigh Matthew's own reading of the word, from his quotation of it of
+Mary. That is weighed in `Dispute.Matthew`, under each standard.
+
 Nor is it a dispute between believers and unbelievers. Wegner and Rhodea write
 as evangelicals. Wegner holds that Isaiah 7:14 is used in Matthew "to refer to
 Mary, who was indeed a virgin", the "only virgin birth in the Bible" (483).

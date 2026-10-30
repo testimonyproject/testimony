@@ -95,8 +95,8 @@ forced.
 
 That is the verdict as the evidence weighs it. Whether Westermann's dissent
 should be heard against a step whose grounds are all Scripture is a question of
-standard, not of evidence; the library leaves it to a hearing under each
-standard, and reports both.
+standard, not of evidence; `Dispute.PromiseHearing` hears the dispute under each
+standard, and reports each.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin

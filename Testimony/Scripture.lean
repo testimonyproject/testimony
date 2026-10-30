@@ -222,6 +222,18 @@ def peshittaAlmahElsewhere : List ScriptureCitation :=
   , verseIn .peshitta ⟨.psalms, 68, 26⟩, verseIn .peshitta ⟨.songOfSongs, 1, 3⟩
   , verseIn .peshitta ⟨.songOfSongs, 6, 8⟩ ]
 
+/-- Matthew 1:23 and the Greek of Isaiah 7:14 — Matthew's quotation, in the
+Septuagint's words: ἰδοὺ ἡ παρθένος ἐν γαστρὶ ἕξει καὶ τέξεται υἱόν. Cited in both,
+since the claim is about the one quoting the other. -/
+def matthewQuotesTheSeptuagint : List ScriptureCitation :=
+  [ verseIn .nestleAland28 ⟨.matthew, 1, 23⟩, verseIn .septuagint ⟨.isaiah, 7, 14⟩ ]
+
+/-- Matthew 1:18 and 1:25 — Mary was found with child "before they came
+together" (πρὶν ἢ συνελθεῖν αὐτούς), and Joseph "knew her not until she had
+borne a son" (οὐκ ἐγίνωσκεν αὐτὴν ἕως οὗ ἔτεκεν υἱόν). -/
+def matthewMaryKnewNoMan : List ScriptureCitation :=
+  [ verseIn .nestleAland28 ⟨.matthew, 1, 18⟩, verseIn .nestleAland28 ⟨.matthew, 1, 25⟩ ]
+
 /-! ### The Bethlehem oracle -/
 
 /-- Micah 5:2 — the prophecy of a ruler from Bethlehem Ephrathah. -/

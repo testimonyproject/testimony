@@ -4,7 +4,7 @@ import TestimonyArguments.BornOfAVirgin.Sources
 /-!
 # TestimonyArguments.Meanings.BornOfAVirgin — what each born of a virgin claim says
 
-**Partly analysed.** Twenty-two claims have meanings: the ones whose meanings
+**Partly analysed.** Twenty-three claims have meanings: the ones whose meanings
 join them to another claim (`joins`), and the ones about the words of Isaiah
 7:14, of its versions and of the Greek Pentateuch, about the woman it
 describes, and about the birth it is read to promise. The rest are registered
@@ -54,6 +54,10 @@ and Genesis 34:3 as the status reading reads it.
   calls Dinah a παρθένος in the sense "virgin", at one passage of the
   Septuagint's text, and the same definition carries that sense to the
   Septuagint's usage.
+- **So does Scripture's own reading of the word.** Matthew quotes the Greek of
+  Isaiah 7:14 of Mary; the claim that the word there has the sense "virgin" is a
+  claim about a passage of the Septuagint's text, and the definition carries it
+  to the Septuagint's usage too.
 - **Brown's "Micah's silence about a father proves nothing" excludes
   Miravalle's "it indicates a birth with no human father".** The one says
   Micah 5:3, read rightly, does not teach a fatherless birth; the other says it
@@ -104,7 +108,8 @@ def all : List Claim :=
   , .parthenosMeantYoungWoman, .earlyGreekParthenosIsYoungWoman, .dinahIsAParthenosAfterShechem
   , .isaiahUsesParthenosForBetulah, .priestMarriesAParthenos, .partheniaProveTheBride
   , .lawsUseParthenosAsVirgin, .seductionLawPricesAParthenos, .shechemActsUnderTheLaw
-  , .dinahIsTheLawsParthenos, .tryphoRejectsParthenos, .lxxReadsAVirgin
+  , .dinahIsTheLawsParthenos, .matthewQuotesTheGreekVirgin, .matthewSaysMaryKnewNoMan
+  , .lxxIsaiahUsesParthenosAsVirgin, .tryphoRejectsParthenos, .lxxReadsAVirgin
   , .lxxPutsTheConceptionInTheFuture, .lxxEnvisagesAVirginalConception
   , .harahIsPredicateAdjective
   , .isaianicAlmahIsAlreadyPregnant, .pregnancyAtTheSignIsOrdinary, .isaianicAlmahIsNotAVirgin
@@ -167,7 +172,7 @@ abbrev magisteriumSettles : Statement :=
 abbrev almahAdmitsVirgin : Statement :=
   .holds (rl .consistentWith (wd .almah isa7_14) (cn .virginity))
 
-/-- **What each born of a virgin atom asserts.** Twenty-two are analysed; the rest
+/-- **What each born of a virgin atom asserts.** Twenty-three are analysed; the rest
 keep their citations' labels, marked unanalysed. -/
 def means : Claim → Statement
   | .isaiahPredictsVirginBirth => .teaches isa7_14 fatherlessBirth
@@ -182,6 +187,7 @@ def means : Claim → Statement
   | .parthenosMeantYoungWoman =>
     .also (.means .parthenos septuagintGreek .youngWoman)
       (.denied (.means .parthenos septuagintGreek .virgin))
+  | .lxxIsaiahUsesParthenosAsVirgin => .means .parthenos (.passageOf lxx isa7_14) .virgin
   | .lawsUseParthenosAsVirgin =>
     .also (.means .parthenos (.passageOf lxx (rg .leviticus 21 13 21 14)) .virgin)
       (.means .parthenos (.passageOf lxx (rg .deuteronomy 22 13 22 21)) .virgin)
@@ -208,10 +214,10 @@ instance meanings : HasMeanings Claim :=
   { argument := "Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3", all
   , complete := all_complete, means }
 
-/-- **Twenty-two of the 89 atoms are analysed**: the ones whose meanings join
+/-- **Twenty-three of the 92 atoms are analysed**: the ones whose meanings join
 them to another claim, and the ones about the words, the woman and the
 birth. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (22, 89) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (23, 92) := by decide
 
 /-- **The words read two ways**: עַלְמָה at Isaiah 7:14, as "virgin" and as "young
 woman of marriageable age", and παρθένος in the Septuagint's Greek, the same two
@@ -254,13 +260,15 @@ instance joins : HasJoins Claim where
     [ (.parthenosMeansVirgin, .parthenosMeantYoungWoman)
     , (.parthenosMeantYoungWoman, .lawsUseParthenosAsVirgin)
     , (.parthenosMeantYoungWoman, .dinahIsTheLawsParthenos)
+    , (.parthenosMeantYoungWoman, .lxxIsaiahUsesParthenosAsVirgin)
     , (.maternalSilenceImpliesNoHumanFather, .maternalSilenceProvesNothing)
     , (.magisteriumIsDoctrinallyAuthoritative, .scriptureIsSupremeJudge) ]
   exclusions_pinned := by decide +kernel
   entailments :=
     [ (.almahMeansVirgin, .almahAdmitsVirginSense)
     , (.lawsUseParthenosAsVirgin, .parthenosMeansVirgin)
-    , (.dinahIsTheLawsParthenos, .parthenosMeansVirgin) ]
+    , (.dinahIsTheLawsParthenos, .parthenosMeansVirgin)
+    , (.lxxIsaiahUsesParthenosAsVirgin, .parthenosMeansVirgin) ]
   entailments_pinned := by decide +kernel
 
 open Testimony.Logic in
@@ -272,11 +280,13 @@ named reading must satisfy it. -/
       [ p .parthenosMeansVirgin ➝ notP .parthenosMeantYoungWoman
       , p .parthenosMeantYoungWoman ➝ notP .lawsUseParthenosAsVirgin
       , p .parthenosMeantYoungWoman ➝ notP .dinahIsTheLawsParthenos
+      , p .parthenosMeantYoungWoman ➝ notP .lxxIsaiahUsesParthenosAsVirgin
       , p .maternalSilenceImpliesNoHumanFather ➝ notP .maternalSilenceProvesNothing
       , p .magisteriumIsDoctrinallyAuthoritative ➝ notP .scriptureIsSupremeJudge
       , p .almahMeansVirgin ➝ p .almahAdmitsVirginSense
       , p .lawsUseParthenosAsVirgin ➝ p .parthenosMeansVirgin
-      , p .dinahIsTheLawsParthenos ➝ p .parthenosMeansVirgin ] :=
+      , p .dinahIsTheLawsParthenos ➝ p .parthenosMeansVirgin
+      , p .lxxIsaiahUsesParthenosAsVirgin ➝ p .parthenosMeansVirgin ] :=
   rfl
 
 attribute [bornOfAVirginDefs] Testimony.Logic.ArgumentPackage.held

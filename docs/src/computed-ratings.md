@@ -46,23 +46,49 @@ with the kernel's check that the engine finds it. One declaration answers the re
 question for every standard at once. `Assessment.credible_iff` says the answer is exact:
 credible as assessed if and only if `Credible`.
 
-## Two standards, both reported
+## Three standards, all reported
 
 Check 5 needs a standard. Choosing one would decide a dispute that the library exists to
 show, not to settle: whether a council's or a confession's word can ground a critique is the
-sola scriptura question. So the standard is named, and every result is computed under both:
+sola scriptura question, and whether Scripture is its own interpreter is the question behind
+it. So the standard is named, and every result is computed under each:
 
 | Standard | Admits |
 |---|---|
 | `evidence` | Scripture; evidence anyone can check (texts, lexica, argued scholarship) |
 | `tradition` | also a council's, a confession's or a theologian's own word |
+| `scriptural` | as `evidence`; but against a step whose grounds are all Scripture, Scripture alone |
 
 - **Neither admits the library's own bare assertion.**
 - **The standards check a dissent's grounds, never its inference.** Every step on every side is
   someone's reading, cited to a commentator, a council or a confession. A rule that discounted
   those readings would discount all of them alike.
-- **A rating that differs between the standards turns on the authority question.** The page
+- **A rating that differs between the first two turns on the authority question.** The page
   says so in those words. That is a finding, not a failure.
+- **The third is "Scripture interprets Scripture", made a rule a dissent must meet.**
+  Westminster states it: "The infallible rule of interpretation of Scripture is the Scripture
+  itself" (I.ix). It binds only where it applies. A dissent from a step whose grounds are all
+  Scripture counts only if every claim it asserts is Scripture too. A scholar's argument from
+  other evidence does not bring such a step down, however competent. Another text, read the
+  other way, does. Elsewhere the third standard is the first. A rating that differs between
+  them turns on whether Scripture is its own interpreter, and the page says so.
+- **No standard is the default.** Each is reported beside the others, so a reader who does not
+  hold Westminster's rule reads the evidence standard's verdict, and nothing is decided for
+  that reader by fiat.
+
+The third standard's first use is Matthew's reading of the Septuagint's παρθένος
+(`TestimonyArguments.BornOfAVirgin.Dispute.Matthew`). Matthew quotes the Greek of Isaiah 7:14
+of Mary, so in the text he quotes the word means "virgin". Wegner grants Matthew's grounds and
+holds that the word had changed in meaning since the translator wrote it, from early Greek usage.
+Under the evidence and tradition standards that is a credible critique, and the step is
+`disputed` (`matthew_step_ratings`); in the hearing under the evidence standard nothing
+prevails. Under the third it is not heard, and Matthew's reading prevails
+(`matthew_step_turns_on_the_standard`). Its second is the fulfilment of Genesis 3:15
+(`TestimonyArguments.BornOfAVirgin.Dispute.PromiseHearing`): every term of the verse met as the
+New Testament names it. Westermann grants the texts and denies the step from his philology of
+"seed"; under the evidence standard he is heard and nothing prevails, and under the third he is
+not, and the fulfilment prevails (`promise_turns_on_the_standard`). In sola fide the third
+standard gives what the first gives, every time.
 
 ## Computing a rating
 
