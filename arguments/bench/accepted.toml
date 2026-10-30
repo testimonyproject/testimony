@@ -1,0 +1,19 @@
+# Regressions accepted on purpose.
+#
+# On every pull request, CI measures the engine with the change and without it
+# (scripts/bench-ab.sh) and fails if the change makes a benchmark significantly
+# slower, or needs more memory. Some changes are worth that: a robustness fix,
+# a check the engine did not make before. Such a change says so here, in the
+# same pull request, where a reviewer sees it:
+#
+#   [[accept]]
+#   benchmark = "table: Septuagint, 36 cells"   # the name, as bench.sh prints it
+#   metric = "time"                              # "time" or "memory"
+#   up_to = 0.30                                 # the largest accepted change: +30%
+#   reason = "What the change buys, and why it is worth this cost"
+#
+# A regression within its bound is reported as accepted, with the reason, and
+# does not fail the gate; a larger one still does. Only the entries a change
+# adds count: once it is merged, its entries are in the base, and accept
+# nothing for the changes after it. Remove them whenever convenient.
+# See .claude/skills/optimising-the-engine.

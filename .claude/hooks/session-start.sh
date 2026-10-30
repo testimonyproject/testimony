@@ -11,6 +11,8 @@
 # 2. Installs tectonic 0.17.0, pinned and fetched as .devcontainer/Dockerfile
 #    fetches it — the same build CI uses.
 # 3. Installs mdbook 0.4.40, likewise.
+# 4. Installs uv 0.11.32, likewise, for the Python scripts that declare their
+#    own requirements (scripts/bench-compare.py).
 #
 # Local sessions are left alone: use the devcontainer there.
 
@@ -22,6 +24,7 @@ fi
 
 TECTONIC_VERSION=0.17.0
 MDBOOK_VERSION=0.4.40
+UV_VERSION=0.11.32
 BIN=/usr/local/bin
 
 log() { echo "session-start: $*" >&2; }
@@ -42,7 +45,7 @@ fi
 case "$(uname -m)" in
   x86_64)  ARCH=x86_64-unknown-linux-gnu ;;
   aarch64) ARCH=aarch64-unknown-linux-musl ;;
-  *) log "unsupported architecture $(uname -m); skipping tectonic and mdbook"; exit 0 ;;
+  *) log "unsupported architecture $(uname -m); skipping tectonic, mdbook and uv"; exit 0 ;;
 esac
 
 # 2. tectonic, for docs/latex/arguments.tex.
@@ -61,4 +64,12 @@ if ! command -v mdbook >/dev/null 2>&1 || \
     | tar xz -C "$BIN"
 fi
 
-log "$(tectonic --version), $(mdbook --version), $(lake --version 2>/dev/null || echo 'lake missing')"
+# 4. uv, for the scripts that declare their own Python requirements.
+if ! command -v uv >/dev/null 2>&1 || \
+   [[ "$(uv --version 2>/dev/null)" != *"$UV_VERSION"* ]]; then
+  log "installing uv $UV_VERSION"
+  curl -fsSL "https://github.com/astral-sh/uv/releases/download/${UV_VERSION}/uv-${ARCH}.tar.gz" \
+    | tar xz --strip-components=1 -C "$BIN"
+fi
+
+log "$(tectonic --version), $(mdbook --version), $(uv --version), $(lake --version 2>/dev/null || echo 'lake missing')"

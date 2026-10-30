@@ -118,6 +118,10 @@ lake exe argtex                      # render arguments to LaTeX
 
 # In examples/: the examples package, after the library.
 lake build && lake exe exampletex --check
+
+# Engine benchmarks, after the arguments build (optimising-the-engine skill).
+scripts/bench.sh                     # every benchmark: time and peak memory
+scripts/bench-ab.sh origin/main      # A/B: this checkout against main, as CI does
 ```
 
 `lake build` in `arguments/` also runs `#check_refutations`: `establish` must
@@ -157,6 +161,9 @@ back to `sorryAx` — that produces a *successful build*.
 - `.claude/skills/supplementing-an-argument` — strengthening an existing
   argument for a reader: finding the crux, researching a better-than-disputed
   premise, auditing its rating, and reporting what the solver then computes
+- `.claude/skills/optimising-the-engine` — making the engine faster or lighter:
+  the benchmark suite, the ablation A/B and its statistics, the fixed-point
+  loop, the CI regression gate, and accepting a regression on purpose
 
 ## Agents
 
