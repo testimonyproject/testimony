@@ -1,6 +1,6 @@
 ---
 name: optimising-the-engine
-description: Use when making the Testimony library's engine faster or lighter — build time, memory, kernel replay, the decide +kernel checks behind defeat tables, verdicts, assessments and ratings — or when a change may have slowed it or made it heavier. Covers the benchmark suite, statistical A/B comparison, the fixed-point loop, the CI regression gate and recording a new baseline.
+description: Use when making the Testimony library's engine faster or lighter — build time, memory, kernel replay, the decide +kernel checks behind defeat tables, verdicts, assessments and ratings — or when a change may have slowed it or made it heavier. Covers the benchmark suite, the ablation A/B and its statistics, the fixed-point loop, the CI regression gate and accepting a regression on purpose.
 ---
 
 # Optimising the engine
@@ -26,15 +26,20 @@ slower one did, and every gate in `checking-the-build` still passes.
 ## The tools
 
 ```sh
-scripts/bench.sh                              # every benchmark: time and peak memory
-scripts/bench.sh --runs 10 --out a.json       # ten samples each, for a comparison
-scripts/bench.sh --filter table               # only benchmarks whose name has "table"
+scripts/bench-ab.sh origin/main               # this checkout against main: the A/B
+scripts/bench-ab.sh HEAD~1 --filter table     # against the last commit, tables only
+scripts/bench.sh                              # every benchmark once: time and peak memory
 scripts/bench-compare.py a.json b.json        # Mann-Whitney U, alpha 0.05
 ```
 
+- **`scripts/bench-ab.sh BASE`** is the measurement the loop and CI use: an
+  ablation. It checks the base out beside this checkout, builds it
+  incrementally from this checkout's build, runs this checkout's benchmarks on
+  both, interleaved round by round so that drift on the machine falls on both
+  sides alike, and compares them. Both sides run on one machine, so no recorded
+  baseline is needed, and none is kept.
 - **`arguments/bench/Engine.lean`** holds the benchmarks. It is in no build
-  target; `bench.sh` runs it with `lake env lean` after `lake build` in
-  `arguments/`. Each benchmark is a copy of a real proof or check inside
+  target; `bench.sh` runs it after `lake build` in `arguments/`. Each benchmark is a copy of a real proof or check inside
   `#bench`, which times elaboration with the kernel check included
   (asynchronous elaboration is off) and records the peak resident memory above
   what the process held before. `bench.sh` runs each benchmark in a process of
@@ -49,10 +54,11 @@ scripts/bench-compare.py a.json b.json        # Mann-Whitney U, alpha 0.05
   so it is compared by threshold, not test: more than `--mem-threshold`
   (default 10%) and `--mem-floor` (default 32 MiB) is a change. `uv` provides
   the script's SciPy from its own header.
-- **`--normalize "calibration: kernel list reduction"`** divides every sample by
-  the calibration benchmark's median in the same run, so runs on different
-  machines compare. Never change the calibration benchmark: it would silently
-  rescale every comparison against an older baseline.
+- **The calibration benchmark** does kernel work that touches nothing of the
+  library's, so no change can move it. In an A/B, `--drift` compares it like
+  any other, and a difference in it means the machine drifted during the run:
+  the verdicts are then suspect, and the run should be repeated. Comparing runs
+  from two machines, `--normalize` divides by it instead. Never change it.
 - **Profiling**, to find what to change: `set_option profiler true` (or
   `lean --profile`) for time per declaration, by phase; `set_option
   trace.profiler true` with `trace.profiler.output "x.json"` for a flame graph
@@ -62,10 +68,10 @@ scripts/bench-compare.py a.json b.json        # Mann-Whitney U, alpha 0.05
 
 ## The loop
 
-1. **Record the baseline**, on the machine you will measure the change on:
-   `scripts/bench.sh --runs 10 --out base.json`. Also note the arguments
-   package's `lake build` wall time and the kernel replay's wall time and peak
-   memory (`ps` on `leanchecker`, or `/proc/<pid>/status`).
+1. **Know where you start**: `scripts/bench.sh` for every benchmark's time and
+   memory, the arguments package's `lake build` wall time, and the kernel
+   replay's wall time and peak memory (`ps` on `leanchecker`, or
+   `/proc/<pid>/status`).
 2. **Find the hotspot.** The slowest or heaviest benchmark, the slowest module
    in `lake build`'s output, or the replay's peak, profiled. Name it, and whether
    it is time or memory, before changing anything.
@@ -73,10 +79,11 @@ scripts/bench-compare.py a.json b.json        # Mann-Whitney U, alpha 0.05
    measurement says which idea it was.
 4. **Prove it sound**: every tier in `checking-the-build`, axiom audit and
    kernel replay included. A change that fails a gate is discarded, not tuned.
-5. **Measure it**: `scripts/bench.sh --runs 10 --out new.json`, then
-   `scripts/bench-compare.py base.json new.json`.
-   - **IMPROVED** (exit 0), faster or lighter and nothing worse: keep it,
-     commit it, and it is the new baseline.
+5. **Measure it** against the commit before it:
+   `scripts/bench-ab.sh HEAD~1 --runs 10` once it is committed (or against
+   `origin/main` for everything on the branch). Ten rounds give the test more
+   power than CI's five; `--filter` keeps a round short while you iterate.
+   - **IMPROVED** (exit 0), faster or lighter and nothing worse: keep it.
    - **NO CHANGE** (exit 1): revert it. It costs code and buys nothing.
    - **REGRESSED** (exit 2), slower or heavier somewhere: revert it, unless
      the regression is in a benchmark the change was not aimed at and you can
@@ -121,31 +128,28 @@ order of cost (re-measure; do not trust this list over a fresh profile):
 
 ## The CI gate
 
-The `build` job runs `scripts/bench.sh --runs 5` (the fewest repetitions with
-which the U test can still reach p < 0.05, since the heaviest benchmark takes
-over a minute a run) and compares it with
-`arguments/bench/baseline.json`, normalized by the calibration benchmark, with
-a 10% variance bound on time and the default bound on memory. It fails on a
-significant slowdown or a rise in peak memory, and uploads every run's samples
-as the `bench-results` artifact.
+On every pull request the `build` job runs `scripts/bench-ab.sh HEAD^1 --runs 5
+--gate`: the merge commit against the base it merges into, five interleaved
+rounds (the fewest with which the U test can still reach p < 0.05, since the
+heaviest benchmark takes over a minute a run). It fails on a significant
+slowdown beyond the variance bound, or a rise in peak memory, and uploads both
+sides' samples and the base's build log as the `bench-results` artifact.
 
 - **A regression the gate flags** is real until shown otherwise. Find it with
   the loop above and remove it.
+- **If the calibration benchmark differs**, the runner drifted, and the gate's
+  verdicts are suspect; re-run the job once before acting on them.
 - **Accepting a regression on purpose.** A robustness fix, or a check the
   engine did not make before, may be worth being slower or heavier. Say so in
   `arguments/bench/accepted.toml`, in the same PR: the benchmark, the metric
   (`time` or `memory`), `up_to` (the largest accepted change, as a fraction, a
-  little above what the gate measured), `baseline` (the commit of the baseline
-  it is accepted against, from `baseline.json`'s context) and the `reason`, in
-  words a reviewer can weigh. The gate then reports it as accepted and passes;
-  a larger regression still fails. Never widen `--threshold` or edit the
-  baseline to make a regression pass: those hide it, where an entry shows it.
-- **After the accepted change lands**, record a new baseline from `main`; the
-  gate then reports the entry as stale, and it is removed in that PR.
-- **Recording a new baseline**: after an improvement lands on `main`, take
-  `bench-results.json` from that run's artifact and commit it as
-  `arguments/bench/baseline.json`. The baseline must come from a CI runner, not
-  a local machine: normalization corrects for speed, not for every difference
-  between machines.
-- **A benchmark added or renamed** is reported as "only in" one side and does
-  not fail the gate; record a new baseline to start comparing it.
+  little above what the gate measured) and the `reason`, in words a reviewer
+  can weigh. The gate then reports it as accepted and passes; a larger
+  regression still fails. Only entries the PR adds count: once it merges, they
+  are in the base and accept nothing more, and can be removed. Never widen the
+  thresholds to make a regression pass: that hides it, where an entry shows it.
+- **If the PR changes what the benchmarks use**, so that they do not build
+  against the base, there is nothing to compare: the step says so and passes.
+  Say in the PR what the change costs, measured by hand.
+- **A benchmark added or renamed** is reported as only in one side and does not
+  fail the gate.

@@ -1,8 +1,8 @@
 # Regressions accepted on purpose.
 #
-# The CI gate (scripts/bench-compare.py --accept) fails a change that makes a
-# benchmark significantly slower, or needs more memory, than the baseline in
-# arguments/bench/baseline.json. Some changes are worth that: a robustness fix,
+# On every pull request, CI measures the engine with the change and without it
+# (scripts/bench-ab.sh) and fails if the change makes a benchmark significantly
+# slower, or needs more memory. Some changes are worth that: a robustness fix,
 # a check the engine did not make before. Such a change says so here, in the
 # same pull request, where a reviewer sees it:
 #
@@ -10,11 +10,10 @@
 #   benchmark = "table: Septuagint, 36 cells"   # the name, as bench.sh prints it
 #   metric = "time"                              # "time" or "memory"
 #   up_to = 0.30                                 # the largest accepted change: +30%
-#   baseline = "0123abcd"                        # the baseline commit it is accepted against
 #   reason = "What the change buys, and why it is worth this cost"
 #
 # A regression within its bound is reported as accepted, with the reason, and
-# does not fail the gate; a larger one still does. An entry applies only
-# against the baseline it names: once a new baseline is recorded, the cost is in
-# the baseline, and the gate reports the entry as stale, to be removed.
+# does not fail the gate; a larger one still does. Only the entries a change
+# adds count: once it is merged, its entries are in the base, and accept
+# nothing for the changes after it. Remove them whenever convenient.
 # See .claude/skills/optimising-the-engine.

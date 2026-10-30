@@ -29,7 +29,11 @@ counts neither way.
 
 --normalize NAME divides every sample by the median of benchmark NAME in the
 same file, so that runs on different machines can be compared: the engine's
-benchmarks become multiples of the calibration benchmark's time.
+benchmarks become multiples of the calibration benchmark's time. An A/B run on
+one machine (scripts/bench-ab.sh) needs no normalizing; it passes --drift NAME
+instead, which compares that benchmark like any other but, since no change to
+the library can move it, reports a difference in it as the machine drifting,
+not as a verdict.
 
 The verdict, for the fixed-point loop (.claude/skills/optimising-the-engine):
 
@@ -42,10 +46,11 @@ With --gate, as CI uses it: 2 for REGRESSED, 0 otherwise.
 
 --accept FILE reads regressions accepted on purpose, from a TOML file of
 [[accept]] entries, each with benchmark, metric ("time" or "memory"), up_to
-(the largest accepted change, as a fraction), baseline (the baseline commit it
-is accepted against) and reason. A regression within its entry's bound is
-reported as accepted and does not count; an entry naming another baseline is
-reported as stale, to be removed once a new baseline is recorded.
+(the largest accepted change, as a fraction) and reason. A regression within its
+entry's bound is reported as accepted and does not count; a larger one still
+does. With --accept-base FILE, the same file as the base had it, only the
+entries the change adds count: one already in the base accepted a regression
+that is now in the base, and accepts nothing more.
 """
 
 import argparse
@@ -85,33 +90,30 @@ def normalized(runs, name, path):
     return {k: [t / unit for t in v] for k, v in runs.items() if k != name}
 
 
-def acceptances(path, baseline_commit):
-    """The regressions accepted against this baseline, from an accepted.toml,
-    keyed by (benchmark, metric); and the entries that name another baseline,
-    which are stale."""
+def entries(path):
+    """The [[accept]] entries of an accepted.toml, checked; none if no file."""
     if not path:
-        return {}, []
+        return []
     try:
         with open(path, "rb") as f:
-            entries = tomllib.load(f).get("accept", [])
+            found = tomllib.load(f).get("accept", [])
     except FileNotFoundError:
-        return {}, []
-    live, stale = {}, []
-    for e in entries:
-        missing = [k for k in ("benchmark", "metric", "up_to", "baseline", "reason")
+        return []
+    for e in found:
+        missing = [k for k in ("benchmark", "metric", "up_to", "reason")
                    if not str(e.get(k, "")).strip()]
         if missing:
             sys.exit(f"bench-compare: an entry of {path} has no {', '.join(missing)}: {e}")
         if e["metric"] not in ("time", "memory"):
             sys.exit(f"bench-compare: metric must be time or memory: {e}")
-        accepted_against = str(e["baseline"]).strip()
-        # An abbreviated commit names the baseline if it is a prefix of it.
-        known = baseline_commit not in ("", "?", "unknown")
-        if known and baseline_commit.startswith(accepted_against):
-            live[(e["benchmark"], e["metric"])] = e
-        else:
-            stale.append(e)
-    return live, stale
+    return found
+
+
+def acceptances(path, base_path):
+    """The regressions this change accepts, keyed by (benchmark, metric): the
+    entries of `path` that are not already in `base_path`."""
+    old = entries(base_path)
+    return {(e["benchmark"], e["metric"]): e for e in entries(path) if e not in old}
 
 
 def cv(xs):
@@ -131,7 +133,11 @@ def main(argv):
     parser.add_argument("--mem-threshold", type=float, default=0.10)
     parser.add_argument("--mem-floor", type=float, default=32.0)
     parser.add_argument("--accept", metavar="TOML",
-                        help="regressions accepted against this baseline, with reasons")
+                        help="regressions accepted on purpose, with reasons")
+    parser.add_argument("--accept-base", metavar="TOML",
+                        help="the same file as the base had it; only entries added count")
+    parser.add_argument("--drift", metavar="NAME",
+                        help="a benchmark no change can move; a difference in it is drift")
     parser.add_argument("--gate", action="store_true",
                         help="exit 2 on a regression and 0 otherwise, for CI")
     args = parser.parse_args(argv[1:])
@@ -206,9 +212,19 @@ def main(argv):
     if noisy:
         print(f"\n{len(noisy)} too noisy to compare: {', '.join(noisy)}")
 
-    # Regressions accepted on purpose, each against this baseline and up to a
-    # stated bound, with its reason.
-    live, stale = acceptances(args.accept, str(base_ctx.get("commit", "")))
+    # The drift benchmark: a difference in it is the machine, not the change.
+    drifted = [r for r in regressed if r[0] == args.drift]
+    drifted += [args.drift] if args.drift in improved else []
+    if args.drift:
+        regressed = [r for r in regressed if r[0] != args.drift]
+        improved = [i for i in improved if i != args.drift]
+    if drifted:
+        print(f"\nWARNING: {args.drift!r}, which no change can move, differs between the "
+              "sides: the machine drifted during the run, and every verdict here is suspect")
+
+    # Regressions the change accepts on purpose, up to a stated bound, with its
+    # reason: the entries it adds to accepted.toml.
+    live = acceptances(args.accept, args.accept_base)
     unaccepted = []
     for name, metric, change in regressed:
         entry = live.pop((name, metric), None)
@@ -222,9 +238,6 @@ def main(argv):
             unaccepted.append(f"{name} ({metric})")
     for e in live.values():
         print(f"\nnote: accepted regression not seen: {e['benchmark']} ({e['metric']})")
-    for e in stale:
-        print(f"\nstale: {e['benchmark']} ({e['metric']}) was accepted against baseline "
-              f"{e['baseline']}, not this one; remove it from {args.accept}")
 
     if unaccepted:
         print(f"\nREGRESSED: {', '.join(unaccepted)}")

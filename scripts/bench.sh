@@ -3,6 +3,7 @@
 # benchmark's wall time and peak memory.
 #
 # Usage: scripts/bench.sh [--runs N] [--filter TEXT] [--out FILE.json]
+#                         [--tree DIR] [--bench FILE.lean]
 #
 # Run from anywhere in the repository after `lake build` in arguments/.
 #   --runs N        repetitions of every benchmark (default: each one's own)
@@ -10,28 +11,36 @@
 #   --out FILE      also write every sample as JSON in Google Benchmark's
 #                   format, one entry per repetition, for
 #                   scripts/bench-compare.py (or Google Benchmark's compare.py)
+#   --tree DIR      measure the checkout at DIR, built, instead of this one
+#   --bench FILE    the benchmarks to run (default: the tree's own
+#                   arguments/bench/Engine.lean); scripts/bench-ab.sh runs the
+#                   same file against both sides
 #
 # Each benchmark runs in a Lean process of its own, so that its peak memory is
 # its own: Lean's allocator keeps freed memory for reuse, and a benchmark run
 # after a hungrier one would seem to need none. It costs one import of the
 # arguments' environment per benchmark.
 #
-# For an A/B comparison, record both sides with the same --runs (10 or more)
-# and compare them: see .claude/skills/optimising-the-engine.
+# For an A/B comparison of a change, use scripts/bench-ab.sh, which runs this
+# on both sides: see .claude/skills/optimising-the-engine.
 
 set -euo pipefail
 
-runs="" filter="" out=""
+runs="" filter="" out="" tree="" bench=""
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --runs) runs="$2"; shift 2 ;;
     --filter) filter="$2"; shift 2 ;;
     --out) out="$2"; shift 2 ;;
+    --tree) tree="$2"; shift 2 ;;
+    --bench) bench="$(cd "$(dirname "$2")" && pwd)/$(basename "$2")"; shift 2 ;;
     *) echo "bench: unknown argument $1" >&2; exit 2 ;;
   esac
 done
 
-root="$(cd "$(dirname "$0")/.." && pwd)"
+root="${tree:-$(dirname "$0")/..}"
+root="$(cd "$root" && pwd)"
+bench="${bench:-$root/arguments/bench/Engine.lean}"
 cd "$root/arguments"
 commit="$(git rev-parse HEAD 2>/dev/null || echo unknown)"
 # The search path, asked of lake once: each benchmark's process is then plain
@@ -40,11 +49,10 @@ LEAN_PATH="$(lake env printenv LEAN_PATH)"
 lean="$(lake env printenv LEAN_SYSROOT)/bin/lean"
 export LEAN_PATH
 
-BENCH_RUNS="$runs" BENCH_FILTER="$filter" python3 - "$out" "$commit" "$lean" <<'EOF'
+BENCH_RUNS="$runs" BENCH_FILTER="$filter" python3 - "$out" "$commit" "$lean" "$bench" <<'EOF'
 import json, os, re, subprocess, sys, time
 
-out, commit, lean = sys.argv[1], sys.argv[2], sys.argv[3]
-FILE = "bench/Engine.lean"
+out, commit, lean, FILE = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
 
 def lean_run(extra_env):

@@ -14,14 +14,16 @@ page is its ledger: what was measured, what was tried, and what came of it.
   copies of real proofs and checks, each timed with the kernel's work included,
   with its peak memory above what its process held before. Each benchmark runs
   in a Lean process of its own.
-- **Comparison** (`scripts/bench-compare.py`): the two-sided Mann-Whitney U test
-  per benchmark, as Google Benchmark's `compare.py` does it. A change counts
-  when p < 0.05 and it is larger than the variance bound. Peak memory is
-  compared by threshold. Times are normalized by a calibration benchmark when
-  two machines are compared.
-- **CI** runs the benchmarks on every pull request against
-  `arguments/bench/baseline.json`, and fails on a regression that
-  `arguments/bench/accepted.toml` does not accept, with its reason.
+- **Comparison** (`scripts/bench-ab.sh`, `scripts/bench-compare.py`): an
+  ablation. The code with a change and without it are built side by side on one
+  machine and run interleaved, and each benchmark is compared by the two-sided
+  Mann-Whitney U test, as Google Benchmark's `compare.py` does it. A change
+  counts when p < 0.05 and it is larger than the variance bound. Peak memory is
+  compared by threshold. A calibration benchmark, which no change can move,
+  shows whether the machine drifted during the run.
+- **CI** runs the A/B on every pull request, against the base it merges into,
+  and fails on a regression that the pull request does not accept, with its
+  reason, in `arguments/bench/accepted.toml`.
 - **Build and kernel replay** are measured by hand, as below, until they have a
   gate of their own.
 
