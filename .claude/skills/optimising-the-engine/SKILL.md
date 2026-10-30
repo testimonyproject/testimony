@@ -107,12 +107,12 @@ and the loop starts again.
 From the first profile and the baseline in `docs/src/performance.md`, in rough
 order of cost (re-measure; do not trust this list over a fresh profile):
 
-- **The AIF check** (`#check_aif`, in `TestimonyArguments.Checks`) took 74 s
-  at the baseline, more than every defeat table together, and is most of
-  `Checks`' build time.
-- **The arguments' largest modules** are sola fide's ratings, the checks over
-  every argument, and the defeat tables of the largest disputes; half of sola
-  fide's table takes 17 s and 204 MiB.
+- **The checks over every argument run the engine in the interpreter**
+  (`evalExpr`), which evaluates every repeated term; the kernel shares them.
+  So repeated work costs the checks and not the proofs: removing it (#177) took
+  the AIF check from 67 s to 3.8 s and left the defeat tables where they were.
+- **The defeat tables of the largest disputes** are now the largest benchmarks:
+  half of sola fide's takes 16 s and 203 MiB, decided in the kernel.
 - **`Horn.satisfiable?`** is called several times per defeat cell, each time
   converting the attacker's whole position, meaning postulates included, to
   clauses and propagating from nothing. Work shared between cells is redone.

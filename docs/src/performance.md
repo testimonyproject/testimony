@@ -71,6 +71,19 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | # | Hypothesis | Aimed at | Before | After | p | Verdict |
 |---|---|---|---:|---:|---:|---|
 | 1 | Bound the kernel replay's concurrent environments to 2, and run `leanchecker` without `lake env` | replay memory | killed at ≥ 13 GiB | 8.9 GiB, 293 s | — | kept |
+| 2 | Ask each question of satisfiability once (#177) | the AIF check | 67.4 s | 3.75 s | 0.008 | kept |
+
+Round 2, `scripts/bench-ab.sh` against the commit before, five interleaved
+rounds. `Horn.clausesSatisfiable?` propagated up to five times per question,
+`Horn.stepRebuts?` and `Horn.defeats?` made their checks twice, and
+`Aif.attacks` re-asked, for its preferences, what the attack checks had just
+asked. Run by the interpreter, as the checks over every argument are, each copy
+was evaluated: the AIF check fell from 67.4 s to 3.75 s (−94%, p = 0.008), the
+postulates check by 20% (p = 0.008) and the refutations check by 24%
+(p = 0.016). The kernel-decided benchmarks did not move (every p ≥ 0.17): the
+kernel was already sharing the repeated terms. Peak memory did not move, and
+the calibration benchmark showed no drift. One side of a benchmark run fell
+from 146 s to 76 s.
 
 Round 1 was measured by hand, before the benchmarks existed. `leanchecker`
 replays each module as a task of its own, each importing that module's whole
@@ -79,5 +92,7 @@ of memory. Two run in 293 s; one in 500 s with about 5.2 GiB.
 
 ## Fixed points
 
-None yet. The next hotspot is the AIF check, at 74 s the largest benchmark by
-far.
+None yet. After round 2 the largest benchmark is half of sola fide's defeat
+table, 16 s and 203 MiB, decided in the kernel; the repeated work the kernel
+was already sharing is not what costs it. Its next hypothesis is that every
+satisfiability check propagates from nothing (#179).
