@@ -39,8 +39,9 @@ scripts/bench-compare.py a.json b.json        # Mann-Whitney U, alpha 0.05
   sides alike, and compares them. Both sides run on one machine, so no recorded
   baseline is needed, and none is kept.
 - **`arguments/bench/Engine.lean`** holds the benchmarks. It is in no build
-  target; `bench.sh` runs it after `lake build` in `arguments/`. Each benchmark is a copy of a real proof or check inside
-  `#bench`, which times elaboration with the kernel check included
+  target; `bench.sh` runs it after `lake build` in `arguments/`. Each
+  benchmark is a copy of a real proof or check inside `#bench`, which times
+  elaboration with the kernel check included
   (asynchronous elaboration is off) and records the peak resident memory above
   what the process held before. `bench.sh` runs each benchmark in a process of
   its own, so that the memory figure is that benchmark's alone and its samples
