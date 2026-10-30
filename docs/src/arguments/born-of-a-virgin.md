@@ -2894,13 +2894,14 @@ for the woman of 7:14 a word that means a virgin; so he read her as one.
 **`dinahShowsTheOlderSense`**
 
 **Wegner's case that the word's sense shifted.** In early Greek παρθένος
-meant a young woman, with or without virginity, and the Septuagint still calls
-Dinah one after Shechem has lain with her; so in the Septuagint's day the word
-meant "young woman", and the sense "virgin" came later.
+meant a young woman, with or without virginity; the Septuagint calls Dinah one
+at 34:3, and the noun there describes her as she then was, no longer a virgin;
+so in the Septuagint's day the word meant "young woman", and the sense "virgin"
+came later.
 
 <div class="testimony-math">
 \[
-(P_{18} \land P_{19}) \rightarrow P_{17}
+(P_{18} \land P_{19} \land P_{76}) \rightarrow P_{17}
 \]
 </div>
 
@@ -3332,13 +3333,21 @@ Bratcher. Rhodea follows Wegner, with an "apparently", and draws from Genesis
 same, "cf. Dina in Gen 34:3", and that by Justin's day the word had been
 "hijacked or used to mean 'chaste woman' only" (comment of 9 January 2013).
 
-The step is rated `disputed`, because two readers grant both its grounds and
-deny its conclusion. Rico and Gentry grant the older usage, and that the Greek
-calls Dinah a παρθένος; but Genesis 34:1–3 is "the exception that proves the
-rule" (21), an archaism of the Greek Pentateuch, whose language is "more
-elevated and classical than the language of the later texts" (18). Bratcher
-grants both — "at first the word was used in a general sense of 'girl', 'young
-woman'" (112), and Dinah "was no longer, therefore, a 'virgin'" — and still
+Three grounds: the older usage; what the Greek of 34:3 reads; and that the noun
+there describes Dinah as she then was. The third is Wegner's own — Dinah "is
+called a παρθένος even after she was raped by Shechem" (483) — and Miller's, and
+it is not the text's: the order of the verses puts Shechem's love after his act,
+not the noun's description (`parthenosDescribesDinahAsSheThenWas`). It is
+written out, not left inside the step, so that a reader sees it.
+
+The step is rated `disputed`, because two readers grant all its grounds and
+deny its conclusion. Rico and Gentry grant the older usage, that the Greek
+calls Dinah a παρθένος, and that she was then no longer a virgin; but Genesis
+34:1–3 is "the exception that proves the rule" (21), an archaism of the Greek
+Pentateuch, whose language is "more elevated and classical than the language of
+the later texts" (18). Bratcher
+grants all three — "at first the word was used in a general sense of 'girl',
+'young woman'" (112), and Dinah "was no longer, therefore, a 'virgin'" — and still
 finds that "parthenos definitely means 'virgin' in the LXX; only very
 exceptionally (and, inexplicably, in Gen. 34:3) is it used otherwise" (113). The
 Greek Isaiah, a later book by another translator, uses the word elsewhere only
@@ -3357,7 +3366,8 @@ narrower sense was missing.
 \begin{aligned}
 \text{(1)} \quad &amp; P_{18} \\
 \text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{17} \\[4pt]
+\text{(3)} \quad &amp; P_{76} \\
+\text{(4)} \quad &amp; (P_{18} \land P_{19} \land P_{76}) \rightarrow P_{17} \\[4pt]
 \vdash \quad &amp; P_{17}
 \end{aligned}
 \]
@@ -5246,7 +5256,8 @@ word meant "young woman", and not yet "virgin".
 \begin{aligned}
 \text{(1)} \quad &amp; P_{18} \\
 \text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; (P_{18} \land P_{19}) \rightarrow P_{17} \\[4pt]
+\text{(3)} \quad &amp; P_{76} \\
+\text{(4)} \quad &amp; (P_{18} \land P_{19} \land P_{76}) \rightarrow P_{17} \\[4pt]
 \vdash \quad &amp; P_{17}
 \end{aligned}
 \]
@@ -6727,6 +6738,32 @@ def virginConceivesReading : Valuation Claim :=
     | Claim.parthenosMeantYoungWoman => False
     | Claim.parthenosDoesNotItselfConnoteVirginity => False
     | Claim.parthenosDescribesDinahAsSheThenWas => False
+    | Claim.harahIsPredicateAdjective => False
+    | Claim.isaianicAlmahIsAlreadyPregnant => False
+    | Claim.pregnancyAtTheSignIsOrdinary => False
+    | Claim.isaianicAlmahIsNotAVirgin => False
+    | Claim.maternalSilenceProvesNothing => False
+    | Claim.magisteriumIsDoctrinallyAuthoritative => False
+    | x => True
+```
+
+<a id="archaismReading"></a>
+**`archaismReading`**
+
+Rico and Gentry's reading of Genesis 34:3: the word there is said of Dinah
+as she then was, no longer a virgin, an archaism of the Greek Pentateuch, "the
+exception that proves the rule" (21); and in the Septuagint at large it means a
+virgin. So the verse uses the word otherwise, and the status reading is false
+in it; Wegner's claim is false too. Otherwise as Justin reads the elders' Greek
+(`virginConceivesReading`).
+
+```lean
+def archaismReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.parthenosMeantYoungWoman => False
+    | Claim.parthenosDoesNotItselfConnoteVirginity => False
+    | Claim.dinahIsTheLawsParthenos => False
     | Claim.harahIsPredicateAdjective => False
     | Claim.isaianicAlmahIsAlreadyPregnant => False
     | Claim.pregnancyAtTheSignIsOrdinary => False
@@ -9507,12 +9544,15 @@ would bring it back. Wevers's *Notes on the Greek Text of Genesis* and Harl's
 
 **Wegner's step**, from the older usage and Genesis 34:3 to the Septuagint's
 sense, is rated `disputed`, the lowest rating. Rico and Gentry, and Bratcher,
-grant both its grounds and deny its conclusion: to Rico and Gentry, Genesis 34:3
+grant all its grounds and deny its conclusion: to Rico and Gentry, Genesis 34:3
 is "the exception that proves the rule", an archaism of the Greek Pentateuch
 (18, 21); to Bratcher, it is "surprising" (113). The higher ratings belong to
 the grounds, not the step: that early Greek used παρθένος of a young woman (well
-supported), and that the Greek of Genesis 34:3 calls Dinah one (`consensus`).
-Both sides grant them, and neither says what the word meant at Isaiah 7:14.
+supported), that the Greek of Genesis 34:3 calls Dinah one (`consensus`), and
+that the noun there describes her as she then was (well supported). That last
+ground is Wegner's reading of the verse, not the text; every reader on record
+who takes up the verse holds it, and only the status reading denies it. Neither
+side's grounds say what the word meant at Isaiah 7:14.
 
 **The other three steps**, Rico and Gentry's from the Jewish objection, the
 laws' from what the two laws read, and the witness's own ground, are each
@@ -9568,10 +9608,11 @@ theorem driftObjection_is_satisfiable : Satisfiable driftObjection.premises
 **`drift_rests_on_its_inference`**
 
 **Wegner on παρθένος rests on its inference.** On Rico and Gentry's reading
-the older Greek usage is granted, Dinah is called παρθένος after Shechem has lain
-with her, and the word still means a virgin in the Septuagint at large: Genesis
-34:3 is an archaism of the Greek Pentateuch. The two grounds do not decide the
-question; the step does, and that is why it is rated `disputed`.
+all three grounds are granted: the older Greek usage, the Greek's παρθένος at
+Genesis 34:3, and that the noun there describes Dinah as she then was, no longer
+a virgin. And the word still means a virgin in the Septuagint at large: the verse
+is an archaism of the Greek Pentateuch. The grounds do not decide the question;
+the step does, and that is why it is rated `disputed`.
 
 ```lean
 theorem drift_rests_on_its_inference : ¬Entails driftLine.grounds (p
@@ -10588,7 +10629,8 @@ standard, and the library computes under each (`Testimony.Logic.Credibility`).
   hearing is the standoff above (`matthew_step_turns_on_the_standard`).
 - **Under the Scripture standard** a dissent from a step whose grounds are all
   Scripture must rest on Scripture alone, and Wegner's rests also on early Greek
-  usage, from the lexica. So his dissent is not heard; Matthew's step stands at
+  usage, from the lexica, and on his reading of the noun at Genesis 34:3. So his
+  dissent is not heard; Matthew's step stands at
   the confidence its support is cited at, `plausible`; and **Matthew's reading
   prevails** (`matthew_prevails_under_scripture`).
 
@@ -10810,7 +10852,9 @@ theorem nothing_prevails_between_matthew_and_wegner : Framework.grounded
 grounds, and argued, from early Greek usage and Genesis 34:3, by a step of his
 own. Under the evidence and tradition standards it is a credible critique. Under
 the Scripture standard it is not: Matthew's step rests on Scripture alone, and
-Wegner's early Greek usage rests on the lexica, not on Scripture.
+two of Wegner's grounds do not. His early Greek usage rests on the lexica; his
+premise that the noun of Genesis 34:3 describes Dinah as she then was is his
+reading of the verse, not the text.
 
 **Dissent:** *Wegner on παρθένος (JETS 54, 482–83)*, against *Scripture interprets Scripture: Matthew quotes ἡ παρθένος of Mary*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
 
@@ -10818,7 +10862,7 @@ Wegner's early Greek usage rests on the lexica, not on Scripture.
 |---|---|---|
 | evidence | ✔ yes | — |
 | tradition | ✔ yes | — |
-| Scripture | ✘ no | In early Greek, παρθένος meant a young woman, with or without virginity |
+| Scripture | ✘ no | In early Greek, παρθένος meant a young woman, with or without virginity; At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller) |
 
 <a id="matthewStep"></a>
 **`matthewStep`**

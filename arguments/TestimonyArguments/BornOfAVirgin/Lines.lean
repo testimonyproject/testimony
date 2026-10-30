@@ -297,12 +297,14 @@ def septuagintReadsAVirgin : Formula Claim :=
   ➝ p .lxxReadsAVirgin
 
 /-- **Wegner's case that the word's sense shifted.** In early Greek παρθένος
-meant a young woman, with or without virginity, and the Septuagint still calls
-Dinah one after Shechem has lain with her; so in the Septuagint's day the word
-meant "young woman", and the sense "virgin" came later. -/
+meant a young woman, with or without virginity; the Septuagint calls Dinah one
+at 34:3, and the noun there describes her as she then was, no longer a virgin;
+so in the Septuagint's day the word meant "young woman", and the sense "virgin"
+came later. -/
 @[bornOfAVirginDefs]
 def dinahShowsTheOlderSense : Formula Claim :=
-  ⋀ [ p .earlyGreekParthenosIsYoungWoman, p .greekCallsDinahParthenos ]
+  ⋀ [ p .earlyGreekParthenosIsYoungWoman, p .greekCallsDinahParthenos
+    , p .parthenosDescribesDinahAsSheThenWas ]
   ➝ p .parthenosMeantYoungWoman
 
 /-- **The case from usage.** Rico and Gentry's: the Jews who rejected the
@@ -630,13 +632,21 @@ Bratcher. Rhodea follows Wegner, with an "apparently", and draws from Genesis
 same, "cf. Dina in Gen 34:3", and that by Justin's day the word had been
 "hijacked or used to mean 'chaste woman' only" (comment of 9 January 2013).
 
-The step is rated `disputed`, because two readers grant both its grounds and
-deny its conclusion. Rico and Gentry grant the older usage, and that the Greek
-calls Dinah a παρθένος; but Genesis 34:1–3 is "the exception that proves the
-rule" (21), an archaism of the Greek Pentateuch, whose language is "more
-elevated and classical than the language of the later texts" (18). Bratcher
-grants both — "at first the word was used in a general sense of 'girl', 'young
-woman'" (112), and Dinah "was no longer, therefore, a 'virgin'" — and still
+Three grounds: the older usage; what the Greek of 34:3 reads; and that the noun
+there describes Dinah as she then was. The third is Wegner's own — Dinah "is
+called a παρθένος even after she was raped by Shechem" (483) — and Miller's, and
+it is not the text's: the order of the verses puts Shechem's love after his act,
+not the noun's description (`parthenosDescribesDinahAsSheThenWas`). It is
+written out, not left inside the step, so that a reader sees it.
+
+The step is rated `disputed`, because two readers grant all its grounds and
+deny its conclusion. Rico and Gentry grant the older usage, that the Greek
+calls Dinah a παρθένος, and that she was then no longer a virgin; but Genesis
+34:1–3 is "the exception that proves the rule" (21), an archaism of the Greek
+Pentateuch, whose language is "more elevated and classical than the language of
+the later texts" (18). Bratcher
+grants all three — "at first the word was used in a general sense of 'girl',
+'young woman'" (112), and Dinah "was no longer, therefore, a 'virgin'" — and still
 finds that "parthenos definitely means 'virgin' in the LXX; only very
 exceptionally (and, inexplicably, in Gen. 34:3) is it used otherwise" (113). The
 Greek Isaiah, a later book by another translator, uses the word elsewhere only
@@ -652,7 +662,9 @@ narrower sense was missing. -/
 @[bornOfAVirginDefs]
 def driftLine : Line Claim :=
   { name := "Wegner on παρθένος: the word had not yet come to mean 'virgin'"
-  , grounds := [ p .earlyGreekParthenosIsYoungWoman, p .greekCallsDinahParthenos ]
+  , grounds :=
+      [ p .earlyGreekParthenosIsYoungWoman, p .greekCallsDinahParthenos
+      , p .parthenosDescribesDinahAsSheThenWas ]
   , step := dinahShowsTheOlderSense
   , delivers := p .parthenosMeantYoungWoman
   , inference := some
