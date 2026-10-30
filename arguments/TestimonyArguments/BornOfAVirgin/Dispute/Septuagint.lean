@@ -226,8 +226,9 @@ laws' from what the two laws read, and the witness's own ground, are each
   עַלְמָה; and Genesis 34:3 is what the status reading reads otherwise. His point
   that the Greek adds "who has not known a man" where virginity matters
   (Genesis 24:16) translates a clause the Hebrew already has. The rating rests
-  on him all the same: the rule counts a reader who grants the grounds and
-  denies the conclusion, and does not weigh his evidence.
+  on him all the same. The Joel 1:8 example is struck, because the text refutes
+  it, and his dissent still stands on Genesis 34:3, which the Greek reads as he
+  says (`Dispute.Miller`).
 - **The witness's own ground**, that "virgin" is a sense of the word, cited
   `disputed` because Wegner, Walton, Rhodea and Meade contest it.
 

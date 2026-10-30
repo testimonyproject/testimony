@@ -243,6 +243,11 @@ inductive Claim
   /-- The serpent of Genesis 3 is the instrument of an evil power, and the
   sentence of 3:15 falls on that power. -/
   | serpentIsTheInstrumentOfAPower
+  /-- The Greek of Joel 1:8 calls a young widow a παρθένος. **Miller's claim.** -/
+  | joelGreekCallsTheWidowParthenos
+  /-- In the Septuagint, παρθένος did not by itself connote virginity.
+  **Miller's thesis.** -/
+  | parthenosDoesNotItselfConnoteVirginity
   /-- Micah 5:3 names only "she who is in labour" as bearing the coming ruler,
   with no father mentioned. -/
   | micah5_3NamesMotherOnly

@@ -303,6 +303,26 @@ the denial they need as a premise (`trent_on_the_word_is_asserted`,
   those premises' ratings. The argued dissent is Romans 4's, which glosses the verb by Paul's
   own text.
 
+## Evidence the texts refute
+
+A dissent may rest on a claim about what a text reads, and the text may read otherwise. Such a
+claim is recorded as a `Refutation`: the claim, what the text reads, and the citation of the
+text. It counts only if the citation is Scripture rated `consensus`, so that what is struck is
+struck by the text and not by a reader's say-so. The refuted claim is taken out of the
+dissent's premises, and every check runs on what is left. A dissent that needed the claim to
+deny the step no longer denies it, and is not credible under any standard; one whose denial
+stands on other evidence stays credible, and the page shows what was struck.
+
+The first case is Miller's dissent from the laws of the Greek Pentateuch
+(`TestimonyArguments.BornOfAVirgin.Dispute.Miller`). He gives two uses of παρθένος of women
+who are not virgins. One is his "young widow" at Joel 1:8, where the Greek calls the woman
+νύμφην, a bride; that claim is struck. The other is Genesis 34:3, where the Greek does call
+Dinah a παρθένος after Shechem; that stands, and carries his denial
+(`miller_survives_on_genesis`). Had Joel 1:8 been all his evidence, the dissent would not count
+(`miller_on_joel_alone_does_not_count`). What the rule does not do is weigh the evidence that
+stands: Genesis 34:3 is answered by an argument, the status reading, and an argument strikes
+nothing.
+
 ## Phase two: every dispute weighs computed ratings
 
 A hearing weighs computed ratings, but a full dispute still weighs cited ones. For the James

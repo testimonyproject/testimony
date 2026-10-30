@@ -1248,6 +1248,21 @@ sense "virgin". -/
 def lawsFixTheSense : Formula Claim :=
   ⋀ [ p .priestMarriesAParthenos, p .partheniaProveTheBride ] ➝ p .lawsUseParthenosAsVirgin
 
+/-- The citation for the laws' step, at a confidence: Bratcher, the lexica on
+τὰ παρθένια, and Miller, who denies the step. -/
+@[bornOfAVirginDefs]
+def lawsSource (c : Confidence) : Source :=
+  { primary := .work bratcherStudyOfIsaiah (.page 113)
+  , supporting :=
+      [ .work bratcherStudyOfIsaiah (.page 102)
+      , .work liddellScottJones (.page 1339)
+      , .work muraokaLexiconSeptuagint (.page 535)
+      , .work lustLexiconSeptuagint (.sv "παρθένια")
+      , .work millerBornDivine .whole
+      , .work rhodeaDidMatthewConceive (.page 67) ]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := c }
+
 /-- **The case from the laws.** Bratcher's, from the Greek of Leviticus 21 and
 Deuteronomy 22 (102, 113): two laws of the Greek Pentateuch, the corpus Wegner
 takes Genesis 34:3 from, in which virginity is what the law turns on. The laws
@@ -1292,27 +1307,19 @@ not take up, one is not answered here, and two do not hold of it.
   they used consistently for was בְּתוּלָה (Bratcher 112–13).
 
 And he does not take up τὰ παρθένια, the abstract noun by which Walton's own
-test would fix the sense. None of this changes the rating: the rule counts a
-cited reader who grants the grounds and denies the conclusion, and does not
-weigh his evidence. The dispute over the Septuagint does not need it raised:
-the status reading decides it (`Dispute.Septuagint` says why). -/
+test would fix the sense. The rating still rests on him. Evidence a text refutes
+is struck before his dissent is checked, and the Greek of Joel 1:8 refutes his
+young widow; but struck of it, his dissent still denies the step through Genesis
+34:3, which the Greek reads as he says (`Dispute.Miller`). The dispute over the
+Septuagint does not need the step raised: the status reading decides it
+(`Dispute.Septuagint` says why). -/
 @[bornOfAVirginDefs]
 def lawsLine : Line Claim :=
   { name := "The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'"
   , grounds := [ p .priestMarriesAParthenos, p .partheniaProveTheBride ]
   , step := lawsFixTheSense
   , delivers := p .lawsUseParthenosAsVirgin
-  , inference := some
-      { primary := .work bratcherStudyOfIsaiah (.page 113)
-      , supporting :=
-          [ .work bratcherStudyOfIsaiah (.page 102)
-          , .work liddellScottJones (.page 1339)
-          , .work muraokaLexiconSeptuagint (.page 535)
-          , .work lustLexiconSeptuagint (.sv "παρθένια")
-          , .work millerBornDivine .whole
-          , .work rhodeaDidMatthewConceive (.page 67) ]
-      , tradition := .christianHistoricalGrammatical
-      , confidence := .disputed } }
+  , inference := some (lawsSource .disputed) }
 
 /-- **The law's name for Dinah.** The law of the seduced woman calls her a
 παρθένος after the man has lain with her, and sets what he owes by "the

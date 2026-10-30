@@ -81,7 +81,7 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 170, and 0 undecided -/
+/-- info: every package has a model with its postulates: 172, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 

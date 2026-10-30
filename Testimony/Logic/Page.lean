@@ -129,6 +129,9 @@ structure Assessed where
   /-- Under each standard: its name, whether the dissent is credible under it,
   and the claims it asserts that the standard does not admit, by their labels. -/
   standards : List (String × Bool × List String)
+  /-- The claims struck because a text refutes them: each claim's label, and what
+  the text reads. -/
+  struck : List (String × String) := []
 
 /-- A step's rating, computed from its register, as a page shows it: the data
 of a `RatedStep` (`Testimony.Logic.Credibility`), in words. -/

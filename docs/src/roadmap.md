@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **218 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **221 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -79,6 +79,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `dinah_rests_on_its_inference` | `¬Entails dinahLine.grounds (p Claim.dinahIsTheLawsParthenos)` | **The status reading rests on its inference.** Grant what Exodus 22:15–16 reads, and that Genesis 34 tells Shechem's act in the words of the laws: on Wegner's reading, which Rico … |
 | `septuagint_prevails_over_wegner` | `Framework.grounded septuagintDispute.defeats = {SeptuagintParty.witness, SeptuagintParty.usage, SeptuagintParty.laws, SeptuagintParty.dinah}` | **The Septuagint's side prevails, and Wegner does not.** Nothing defeats the status reading of Genesis 34:3, because Wegner is weaker than it, so it is accepted first. |
 | `drift_indefensible` | `∀ (S : Set SeptuagintParty), Framework.Admissible septuagintDispute.defeats S → SeptuagintParty.drift ∉ S` | **Wegner on παρθένος cannot be defended.** No admissible set contains it: the status reading defeats it, and nothing defeats the status reading. |
+| `miller_survives_on_genesis` | `millerOnLawsAssessment.findings.struck = [Claim.joelGreekCallsTheWidowParthenos] ∧ ∀ (s : Standard), Dissent.Credible s millerOnLawsAssessment.dissent` | **Miller survives on Genesis 34:3.** Struck of Joel 1:8, which the Greek refutes, his dissent from the laws' step is still a credible critique under every standard: Genesis 34:3 … |
+| `miller_on_joel_alone_does_not_count` | `∀ (s : Standard), ¬Dissent.Credible s millerOnJoelAloneAssessment.dissent` | **Evidence the texts refute stops counting.** Had Miller rested his dissent on Joel 1:8 alone, then, with the claim the Greek refutes struck, nothing in it would deny the laws' … |
+| `laws_step_ratings` | `lawsStep.ratings = [(Standard.evidence, Computed.disputedBy ["Miller, Born Divine"]), (Standard.tradition, Computed.disputedBy ["Miller, Born Divine"]), (Standard.scriptural, Computed.disputedBy ["Miller, Born Divine"])]` | **The laws' step stays `disputed`**, under every standard, on Miller's dissent from Genesis 34:3: striking the Joel 1:8 example the Greek refutes does not take away his denial. |
 | `matthew_rests_on_its_inference` | `¬Entails matthewLine.grounds (p Claim.lxxIsaiahUsesParthenosAsVirgin)` | **Matthew's reading rests on its inference.** Grant that Matthew quotes ἡ παρθένος, and that he says Mary conceived before she and Joseph came together: on Wegner's reading the … |
 | `nothing_prevails_between_matthew_and_wegner` | `Framework.grounded matthewDispute.defeats = ∅` | **As the evidence weighs it, nothing prevails** between Matthew's reading and Wegner: each defeats the other, and neither outranks the other. |
 | `matthew_step_ratings` | `matthewStep.ratings = [(Standard.evidence, Computed.disputedBy ["Wegner on παρθένος (JETS 54, 482–83)"]), (Standard.tradition, Computed.disputedBy ["Wegner on παρθένος (JETS 54, 482–83)"]), (Standard.scriptural, Computed.stands Confidence.plausible)]` | **Matthew's step turns on the standard.** Under the evidence and tradition standards Wegner's dissent is a credible critique, and the step is `disputed`. |
@@ -513,8 +516,11 @@ So is the reading of the scene as a whole, in which the speaking serpent is the 
 power the sentence falls on (its step `plausible`, its ground on the power `disputed`). Under the
 Scripture standard, which hears no dissent from a step grounded in Scripture alone unless it rests
 on Scripture too, Westermann is not heard and the fulfilment prevails
-(`promise_turns_on_the_standard`). On the way, the strand's Miravalle citations were corrected:
-*Meet Mary*, which could not be checked, gave way to the books where the passages are.
+(`promise_turns_on_the_standard`). A dissent now counts only on evidence the texts leave standing:
+Miller's "young widow" at Joel 1:8, a bride in the Greek, is struck from his dissent from the laws,
+which still stands on Genesis 34:3 (`miller_survives_on_genesis`). On the way, the strand's
+Miravalle citations were corrected: *Meet Mary*, which could not be checked, gave way to the books
+where the passages are.
 
 A corollary worth noting: because the New Perspective rejects the traditional
 reading of Paul's phrase while still affirming justification by faith, it

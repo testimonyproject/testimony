@@ -710,6 +710,9 @@ def assessed (a : Page.Assessed) : String :=
     escape a.against ++ "}. " ++ (if a.critique then "\\textbf{A critique.} " else
       "\\textbf{Not a critique.} ") ++ escape a.kind ++ "\n" ++
   "\\begin{itemize}\n" ++
+  String.join (a.struck.map fun (c, r) =>
+    "\\item Struck, because the text reads otherwise: " ++ escape c ++ ". " ++ escape r ++
+      ".\n") ++
   String.join (a.standards.map fun (s, ok, un) =>
     "\\item Under the " ++ s ++ " standard: " ++
       (if ok then "credible." else "not credible") ++

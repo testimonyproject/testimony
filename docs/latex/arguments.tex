@@ -251,6 +251,7 @@ That reply has a price, and \texttt{compatibility\_\allowbreak{}does\_\allowbrea
 
 \begin{itemize}
   \item \textbf{It rests on one word} (\texttt{parthenos\_\allowbreak{}is\_\allowbreak{}load\_\allowbreak{}bearing}). Without the claim that παρθένος, in the translator’s Greek, means a virgin, the Septuagint shows nothing about the woman. Rico and Gentry hold that it does, “whenever it appears in Semitic Koine Greek”, and Bratcher agrees. Wegner, Rhodea and Meade deny it, and point to Genesis 34:3, where the Greek calls Dinah a παρθένος after Shechem has lain with her; Walton doubts it, from classical usage. The Greek Pentateuch, the corpus that verse comes from, uses the word in its laws where virginity is the point (Leviticus 21:13–14, Deuteronomy 22:13–21), and its law of the seduced παρθένος reads Wegner’s verse otherwise: the woman a man has lain with is still the law’s παρθένος, owed “the bride-price of virgins” (Exodus 22:15–16), and Genesis 34 tells Shechem’s act in that law’s words. \texttt{Dispute.Septuagint} weighs the five, and \textbf{the Septuagint’s side prevails} (\texttt{septuagint\_\allowbreak{}prevails\_\allowbreak{}over\_\allowbreak{}wegner}): the status reading of Genesis 34:3 defeats Wegner, and he, resting on a step rated \texttt{disputed}, is too weak to answer it. The claims about the word exclude each other by what they mean — Wegner’s says the word meant a young woman and not yet a virgin — and the dispute is computed with that. The verdict turns on one rating, the status reading’s step, \texttt{plausible} because no reader found grants its grounds and denies it, and no higher because no reader found makes it. Were it \texttt{disputed}, nothing would prevail; \texttt{Dispute.Septuagint} says so, with where the evidence on each side lies.
+  \item \textbf{A dissent counts only on evidence the texts leave standing} (\texttt{Dispute.Miller}). The laws’ step is \texttt{disputed} on Robert J. Miller, who gives two uses of παρθένος of women who are not virgins. His “young widow” at Joel 1:8 is a bride, νύμφην, in the Greek, so that claim is struck; his Genesis 34:3 stands as the Greek reads it, and carries his dissent (\texttt{miller\_\allowbreak{}survives\_\allowbreak{}on\_\allowbreak{}genesis}). Resting on Joel 1:8 alone, the dissent would not count under any standard (\texttt{miller\_\allowbreak{}on\_\allowbreak{}joel\_\allowbreak{}alone\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}count}).
   \item \textbf{Scripture’s own reading of the word turns on the standard} (\texttt{matthew\_\allowbreak{}step\_\allowbreak{}turns\_\allowbreak{}on\_\allowbreak{}the\_\allowbreak{}standard}). Matthew quotes the Septuagint’s ἡ παρθένος of Mary, who conceived before she and Joseph came together, so in the text he quotes the word means “virgin”. Wegner grants what Matthew says and holds that the word had changed in meaning since the translator wrote it. Under the evidence standard that is a credible critique, and Matthew and Wegner stand off. Under the Scripture standard — Scripture interprets Scripture, so a dissent from a step grounded in Scripture alone must rest on Scripture too — Wegner’s argument from early Greek usage is not heard, and Matthew’s reading prevails. \texttt{Dispute.Matthew} reports both.
   \item \textbf{It shows how one early reader read Isaiah, not what Isaiah’s word means} (\texttt{septuagint\_\allowbreak{}word\_\allowbreak{}rests\_\allowbreak{}on\_\allowbreak{}its\_\allowbreak{}inference}). Granted its sense, the Septuagint shows that a Jewish translator before Christ read the woman of 7:14 as a virgin — so that reading is no Christian invention. The step from his Greek to Isaiah’s Hebrew is a further one, and rated \texttt{disputed}: Irenaeus takes it, holding the Greek inspired; Bratcher, Brown and Walton deny it. On Bratcher’s and Brown’s reading a rendering can follow the woman described rather than the word: the translator of Genesis wrote παρθένος for the עַלְמָה Rebekah (24:43), whom the story has already called a virgin, and elsewhere the Septuagint’s translators render עַלְמָה with νεᾶνις four times. That is also the referential strand’s reading of the versions.
   \item \textbf{It leaves the conception open} (\texttt{septuagint\_\allowbreak{}leaves\_\allowbreak{}the\_\allowbreak{}conception\_\allowbreak{}open}). The Greek says the virgin \emph{shall} be with child. A woman who is a virgin when the sign is given and later conceives in the ordinary way fits it; so does a virgin who conceives as a virgin, as Justin reads it. The first is not only a rival’s reading: Bratcher, who holds that παρθένος “definitely means ‘virgin’ in the LXX”, calls it “the most reasonable explanation” of the Greek of 7:14. So even granted the word, the Septuagint does not decide, and the virginal conception comes, if it comes, from the promise of a sign (\texttt{sign\allowbreak{}Line}) or from Matthew and Luke.
@@ -319,6 +320,7 @@ This argument is a directory, because at fourteen hundred lines it was one file 
 \texttt{Dispute.lean} & the critical denial, the scriptural reading and four replies as one dispute \\
 \texttt{Dispute/Wegner.lean} & Wegner, the fathers’ sign argument and the near-term reply as another \\
 \texttt{Dispute/Septuagint.lean} & the Septuagint, Wegner, Rico and Gentry, and the laws, as a third \\
+\texttt{Dispute/Miller.lean} & Miller’s dissent from the laws, with what the texts refute struck \\
 \texttt{Dispute/Genesis.lean} & Luther, Leupold and Lewis on “her seed”, as a fourth \\
 \texttt{Dispute/Protoevangelium.lean} & the promise fulfilled, and Westermann’s denial, as a fifth \\
 \texttt{Dispute/Promise\allowbreak{}Hearing.lean} & that dispute heard under each standard \\
@@ -416,24 +418,26 @@ These are values, so an atom that cites one of them \emph{with something further
 \pvartarget{TestimonyArguments.BornOfAVirgin}{71}$P_{71}$ & In Genesis 3 the serpent speaks, and knows and twists God’s command & textual & critical scholarship, consensus & Gen 2:17; Gen 3:1-5; \cite[146]{collins-syntactical-note-1997} \\
 \pvartarget{TestimonyArguments.BornOfAVirgin}{72}$P_{72}$ & God sets the enmity himself: ‘I will put enmity’ (3:15) & textual & critical scholarship, consensus & Gen 3:15; \cite[203]{woudstra-recent-translations-1971} \\
 \pvartarget{TestimonyArguments.BornOfAVirgin}{73}$P_{73}$ & The serpent of Genesis 3 is the instrument of an evil power & interpretive & Christian, hist.-gramm., disputed & \cite[146--147]{collins-syntactical-note-1997}; \cite[197]{woudstra-recent-translations-1971}; \cite[101--102]{keil-delitzsch-pentateuch-1866}; \cite[261]{westermann-genesis-1-11-1984} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{74}$P_{74}$ & Micah 5:3 names only the woman in labour as bearing the coming ruler & textual & Christian, typological, well supported & Mic 5:2-3; \cite[ad loc. Mic 5:3]{keil-delitzsch-minor-prophets-1949} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{75}$P_{75}$ & Micah’s mention of a mother and no father indicates a birth with no human father & interpretive & Roman Catholic, disputed & \cite{miravalle-introduction-mary-2020} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{76}$P_{76}$ & Mary conceived Jesus while a virgin & historical & Christian, hist.-gramm., disputed & Matt 1:18-25; Luke 1:26-38; \cite[30--33]{brown-problem-virginal-conception-1972} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{77}$P_{77}$ & Matthew and Luke are independent traditions agreeing on the virgin conception & historical & Christian, hist.-gramm., plausible & \cite[26--38]{brown-birth-messiah-1993}; \cite[24]{brown-problem-virginal-conception-1972}; \cite[71]{rhodea-did-matthew-conceive-2013} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{78}$P_{78}$ & Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation & interpretive & critical scholarship, disputed & \cite{brown-birth-messiah-1993} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{79}$P_{79}$ & A sign given for Ahaz’s generation is not also a prediction of a virgin birth & interpretive & critical scholarship, disputed & \cite{brown-birth-messiah-1993} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{80}$P_{80}$ & How Isaiah 7:14 was fulfilled in Ahaz’s own day is itself an open question & interpretive & Christian, hist.-gramm., well supported & \cite[1653--1654]{berry-virgin-birth-2003}; \cite[5--9]{compton-immanuel-prophecy-2007} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{81}$P_{81}$ & Isaiah 7:13–14 gives the sign to David’s house, in the plural; 7:16’s ‘you’ is Ahaz & textual & critical scholarship, consensus & Isa 7:13-14; Isa 7:16; \cite[12]{compton-immanuel-prophecy-2007}; \cite[112]{young-immanuel-prophecy-1953}; \cite[122]{motyer-context-content-1970} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{82}$P_{82}$ & Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 & textual & Christian, hist.-gramm., well supported & \cite[124]{motyer-context-content-1970}; \cite[13]{compton-immanuel-prophecy-2007}; Isa 7:16; Isa 8:4 \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{83}$P_{83}$ & Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion & textual & critical scholarship, consensus & Mic 5:5-6; \cite[481]{postell-isaiah-messianic-2025} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{84}$P_{84}$ & Micah 5:2 was read messianically in first-century Judaism & historical & Christian, hist.-gramm., well supported & \cite[481]{postell-isaiah-messianic-2025}; \cite[26]{brown-problem-virginal-conception-1972}; Matt 2:4-6; John 7:42 \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{85}$P_{85}$ & Genesis 3:15 is an etiology of snake-human enmity, ‘her seed’ her descendants & interpretive & critical scholarship, well supported & \cite{brown-birth-messiah-1993} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{86}$P_{86}$ & Micah’s silence about a father is an argument from silence and proves nothing & interpretive & critical scholarship, well supported & \cite{brown-birth-messiah-1993} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{87}$P_{87}$ & Papal teaching affirms that Mary conceived while remaining a virgin & theological & Roman Catholic, consensus & \cite[23]{miravalle-introduction-mary-2020} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{88}$P_{88}$ & Magisterial teaching settles the question & theological & Roman Catholic, disputed & \cite[23]{miravalle-introduction-mary-2020} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{89}$P_{89}$ & Scripture is the supreme judge of controversies of religion & theological & Reformed Protestant, disputed & \cite[I.x]{westminster-confession-1647} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{90}$P_{90}$ & The Messiah must be born of a virgin & interpretive & Christian, typological, disputed & \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[ad loc. Matt 1:23]{france-matthew-2007}; \cite{miravalle-meet-your-mother-2014}; \cite{miravalle-introduction-mary-2020} \\
-\pvartarget{TestimonyArguments.BornOfAVirgin}{91}$P_{91}$ & Jesus of Nazareth satisfies the virgin-birth criterion & interpretive & Christian, hist.-gramm., disputed & \cite[ad loc. Matt 1:23]{france-matthew-2007} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{74}$P_{74}$ & The Greek of Joel 1:8 calls a young widow a παρθένος (Miller) & textual & critical scholarship, disputed & \cite{miller-born-divine-2003} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{75}$P_{75}$ & In the Septuagint, παρθένος did not by itself connote virginity (Miller) & linguistic & critical scholarship, disputed & \cite{miller-born-divine-2003}; \cite[113]{bratcher-study-of-isaiah-1958} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{76}$P_{76}$ & Micah 5:3 names only the woman in labour as bearing the coming ruler & textual & Christian, typological, well supported & Mic 5:2-3; \cite[ad loc. Mic 5:3]{keil-delitzsch-minor-prophets-1949} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{77}$P_{77}$ & Micah’s mention of a mother and no father indicates a birth with no human father & interpretive & Roman Catholic, disputed & \cite{miravalle-introduction-mary-2020} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{78}$P_{78}$ & Mary conceived Jesus while a virgin & historical & Christian, hist.-gramm., disputed & Matt 1:18-25; Luke 1:26-38; \cite[30--33]{brown-problem-virginal-conception-1972} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{79}$P_{79}$ & Matthew and Luke are independent traditions agreeing on the virgin conception & historical & Christian, hist.-gramm., plausible & \cite[26--38]{brown-birth-messiah-1993}; \cite[24]{brown-problem-virginal-conception-1972}; \cite[71]{rhodea-did-matthew-conceive-2013} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{80}$P_{80}$ & Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation & interpretive & critical scholarship, disputed & \cite{brown-birth-messiah-1993} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{81}$P_{81}$ & A sign given for Ahaz’s generation is not also a prediction of a virgin birth & interpretive & critical scholarship, disputed & \cite{brown-birth-messiah-1993} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{82}$P_{82}$ & How Isaiah 7:14 was fulfilled in Ahaz’s own day is itself an open question & interpretive & Christian, hist.-gramm., well supported & \cite[1653--1654]{berry-virgin-birth-2003}; \cite[5--9]{compton-immanuel-prophecy-2007} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{83}$P_{83}$ & Isaiah 7:13–14 gives the sign to David’s house, in the plural; 7:16’s ‘you’ is Ahaz & textual & critical scholarship, consensus & Isa 7:13-14; Isa 7:16; \cite[12]{compton-immanuel-prophecy-2007}; \cite[112]{young-immanuel-prophecy-1953}; \cite[122]{motyer-context-content-1970} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{84}$P_{84}$ & Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 & textual & Christian, hist.-gramm., well supported & \cite[124]{motyer-context-content-1970}; \cite[13]{compton-immanuel-prophecy-2007}; Isa 7:16; Isa 8:4 \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{85}$P_{85}$ & Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion & textual & critical scholarship, consensus & Mic 5:5-6; \cite[481]{postell-isaiah-messianic-2025} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{86}$P_{86}$ & Micah 5:2 was read messianically in first-century Judaism & historical & Christian, hist.-gramm., well supported & \cite[481]{postell-isaiah-messianic-2025}; \cite[26]{brown-problem-virginal-conception-1972}; Matt 2:4-6; John 7:42 \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{87}$P_{87}$ & Genesis 3:15 is an etiology of snake-human enmity, ‘her seed’ her descendants & interpretive & critical scholarship, well supported & \cite{brown-birth-messiah-1993} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{88}$P_{88}$ & Micah’s silence about a father is an argument from silence and proves nothing & interpretive & critical scholarship, well supported & \cite{brown-birth-messiah-1993} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{89}$P_{89}$ & Papal teaching affirms that Mary conceived while remaining a virgin & theological & Roman Catholic, consensus & \cite[23]{miravalle-introduction-mary-2020} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{90}$P_{90}$ & Magisterial teaching settles the question & theological & Roman Catholic, disputed & \cite[23]{miravalle-introduction-mary-2020} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{91}$P_{91}$ & Scripture is the supreme judge of controversies of religion & theological & Reformed Protestant, disputed & \cite[I.x]{westminster-confession-1647} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{92}$P_{92}$ & The Messiah must be born of a virgin & interpretive & Christian, typological, disputed & \cite[ad loc. Isa 7:14]{motyer-isaiah-1993}; \cite[ad loc. Matt 1:23]{france-matthew-2007}; \cite{miravalle-meet-your-mother-2014}; \cite{miravalle-introduction-mary-2020} \\
+\pvartarget{TestimonyArguments.BornOfAVirgin}{93}$P_{93}$ & Jesus of Nazareth satisfies the virgin-birth criterion & interpretive & Christian, hist.-gramm., disputed & \cite[ad loc. Matt 1:23]{france-matthew-2007} \\
 \bottomrule
 \end{longtable}
 
@@ -1279,6 +1283,34 @@ def lxxIsaiahUsesParthenosAsVirginCited : AtomMeta :=
         tradition := Tradition.reformedProtestant,
         confidence := Confidence.disputed } }
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{joel\allowbreak{}Greek\allowbreak{}Calls\allowbreak{}The\allowbreak{}Widow\allowbreak{}Parthenos\allowbreak{}Cited}}\par\nobreak\noindent
+\texttt{joel\allowbreak{}Greek\allowbreak{}Calls\allowbreak{}The\allowbreak{}Widow\allowbreak{}Parthenos}. Miller’s claim about the Greek: “Lament like a parthenos dressed in sackcloth for the husband of her youth (Joel 1:8)”, given as a use of the word of a woman who is not a virgin (\emph{Born Divine}). The Greek of Joel 1:8 does not read so: it calls the woman νύμφην, a bride, and its παρθεν- word, τὸν παρθενικόν, is of the husband (Rahlfs). Cited for what Miller holds; the text refutes it (\texttt{Dispute.Miller}).
+
+{\small\begin{verbatim}
+def joelGreekCallsTheWidowParthenosCited : AtomMeta :=
+  { label := "The Greek of Joel 1:8 calls a young widow a παρθένος (Miller)",
+    kind := PremiseKind.textual,
+    source :=
+      { primary := Reference.work millerBornDivine,
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.disputed } }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{parthenos\allowbreak{}Does\allowbreak{}Not\allowbreak{}Itself\allowbreak{}Connote\allowbreak{}Virginity\allowbreak{}Cited}}\par\nobreak\noindent
+\texttt{parthenos\allowbreak{}Does\allowbreak{}Not\allowbreak{}Itself\allowbreak{}Connote\allowbreak{}Virginity}. Miller’s thesis: “As in other Greek literature, parthenos in the Septuagint did not by itself connote what we mean by virginity”, so that where virginity matters it “has to be inferred from the context” (\emph{Born Divine}). \texttt{disputed}: Bratcher (113), and Rico and Gentry, hold the opposite.
+
+{\small\begin{verbatim}
+def parthenosDoesNotItselfConnoteVirginityCited : AtomMeta :=
+  {
+    label :=
+      "In the Septuagint, παρθένος did not by itself connote virginity (Miller)",
+    kind := PremiseKind.linguistic,
+    source :=
+      { primary := Reference.work millerBornDivine,
+        supporting :=
+          [Reference.work bratcherStudyOfIsaiah (Bib.Locus.page 113)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.disputed } }
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{trypho\allowbreak{}Rejects\allowbreak{}Parthenos\allowbreak{}Cited}}\par\nobreak\noindent
 \texttt{trypho\allowbreak{}Rejects\allowbreak{}Parthenos}. Trypho: “The Scripture has not, ‘Behold, the virgin shall conceive, and bear a son,’ but, ‘Behold, the young woman shall conceive’” (\emph{Dialogue} 67). Justin answers that Trypho’s teachers “refuse to admit that the interpretation made by the seventy elders who were with Ptolemy ... is a correct one” (71). \texttt{consensus}: the record is Justin’s, and no one doubts that the objection was made.
 
@@ -1583,13 +1615,13 @@ One per strand, each delivering the same criterion, plus the steps that close th
 Isaianic strand: from the predictive reading, the lexical premise and Matthew’s intent, the criterion follows.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}To\allowbreak{}Criterion}}\par\nobreak\noindent
 Protoevangelium strand: Genesis 3:15 promises a redeemer as “her seed”; a man’s line is ordinarily counted through the father; and naming the seed as the woman’s marks a birth with no human father. So the Messiah must be born of a virgin.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{compositional\allowbreak{}To\allowbreak{}Criterion}}\par\nobreak\noindent
 Compositional strand: from Isaiah 7’s placement in an eschatologically framed unit, the principle that placement governs meaning, and the future birth that follows, the criterion follows.
@@ -1597,7 +1629,7 @@ Compositional strand: from Isaiah 7’s placement in an eschatologically framed 
 The weak joint is the last step. Postell’s argument delivers a \emph{miraculous} birth; it is \texttt{matthew\allowbreak{}Intends\allowbreak{}Fulfilment} that says which miracle. A reader who grants the composition and stops short of Matthew is entitled to.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{parity\allowbreak{}Defeats\allowbreak{}Near\allowbreak{}Term\allowbreak{}Exclusion}}\par\nobreak\noindent
 \textbf{Postell’s parity argument.} Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation, and they stand on the same near-term Assyrian timeline as 7:14 — the Assyrian invasion of 8:7–8, the oppressor’s rod of 10:5. So a near-term geopolitical setting cannot be what rules out messianic reference, because if it were it would rule out 9 and 11 as well.
@@ -1605,19 +1637,19 @@ The weak joint is the last step. Postell’s argument delivers a \emph{miraculou
 This is a second, independent defeater of the same critical step that Berry’s objection attacks, and it is the stronger of the two: Berry says the near-term fulfilment is unclear, while parity says the near-term setting was never the right kind of reason.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{47} \land \pvar{TestimonyArguments.BornOfAVirgin}{48}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{47} \land \pvar{TestimonyArguments.BornOfAVirgin}{48}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{micah\allowbreak{}To\allowbreak{}Criterion}}\par\nobreak\noindent
 Michean strand: from the maternal-only wording and the inference drawn from it, the criterion follows.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{74} \land \pvar{TestimonyArguments.BornOfAVirgin}{75}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{76} \land \pvar{TestimonyArguments.BornOfAVirgin}{77}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{magisterial\allowbreak{}To\allowbreak{}Criterion}}\par\nobreak\noindent
 Magisterial strand: from papal teaching and the authority granted it, the criterion follows. Encoded, but deliberately kept out of \texttt{christian}.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{87} \land \pvar{TestimonyArguments.BornOfAVirgin}{88}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{89} \land \pvar{TestimonyArguments.BornOfAVirgin}{90}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{critical\allowbreak{}Exclusion}}\par\nobreak\noindent
 The critical inference, made explicit: granted that Isaiah 7:14 was a sign to Ahaz, and that such a sign is not also a prediction of a virgin conception, the predictive reading is denied.
@@ -1625,7 +1657,7 @@ The critical inference, made explicit: granted that Isaiah 7:14 was a sign to Ah
 The earlier encoding of this module simply asserted the denial as a premise of \texttt{critical}. That was a weaker rival than the critical case actually is, and it left nothing for an objection to engage.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{78} \land \pvar{TestimonyArguments.BornOfAVirgin}{79}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{\emph{would deny:} Isaiah 7:14 is a Messianic prediction of a virgin birth}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{80} \land \pvar{TestimonyArguments.BornOfAVirgin}{81}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{\emph{would deny:} Isaiah 7:14 is a Messianic prediction of a virgin birth}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{berry\allowbreak{}Blocks\allowbreak{}Exclusion}}\par\nobreak\noindent
 Berry’s objection: if how the sign was fulfilled in Ahaz’s own day is itself unsettled, the near-term reading is not secure enough to exclude a further referent.
@@ -1633,13 +1665,13 @@ Berry’s objection: if how the sign was fulfilled in Ahaz’s own day is itself
 The step is contestable even though both atoms it joins are \texttt{well\allowbreak{}Supported} — an unclear fulfilment is still a fulfilment, and Brown would answer that Isaiah 8:3–4 settles the referent well enough. The step is rated in \texttt{berry\allowbreak{}Line}, where it is cited \texttt{disputed}.
 
 \begin{derivation}
-  \item[] \(\pvar{TestimonyArguments.BornOfAVirgin}{80} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[] \(\pvar{TestimonyArguments.BornOfAVirgin}{82} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{micah\allowbreak{}Parity\allowbreak{}Defeats\allowbreak{}Near\allowbreak{}Term\allowbreak{}Exclusion}}\par\nobreak\noindent
 Postell’s second counterexample: an oracle set against the Assyrian invasion, read messianically, so a near-term Assyrian setting does not exclude a messianic sense. The same inference as \texttt{parity\allowbreak{}Defeats\allowbreak{}Near\allowbreak{}Term\allowbreak{}Exclusion}, from a different oracle in a different book (Postell 481 n. 72).
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{83} \land \pvar{TestimonyArguments.BornOfAVirgin}{84}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{85} \land \pvar{TestimonyArguments.BornOfAVirgin}{86}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{timetable\allowbreak{}Passes\allowbreak{}To\allowbreak{}Maher\allowbreak{}Shalal\allowbreak{}Hash\allowbreak{}Baz}}\par\nobreak\noindent
 Motyer’s inference: the sign of 7:14 is given to the dynasty, and the timetable that answers Ahaz’s crisis passes to Maher-shalal-hash-baz, so the child of 7:14 is not a near-term sign to Ahaz. “Either we must identify Maher-shalal-hash-baz with Immanuel, or we must project Immanuel into the undated future” (Motyer 1970, 124).
@@ -1647,7 +1679,7 @@ Motyer’s inference: the sign of 7:14 is given to the dynasty, and the timetabl
 This is the contested part of his reply, and it is a step rather than an atom on purpose, as Berry’s and Postell’s are: the two atoms it joins are what the text says, and the inference is what a reader who identifies the two children denies, and \texttt{motyer\allowbreak{}Line} rates it \texttt{disputed} for that reason.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{81} \land \pvar{TestimonyArguments.BornOfAVirgin}{82}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{\emph{would deny:} Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{83} \land \pvar{TestimonyArguments.BornOfAVirgin}{84}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{\emph{would deny:} Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
 \end{derivation}
 \paragraph*{The referential strand}
 \leavevmode\par\nobreak
@@ -1657,7 +1689,7 @@ Sense against reference. The steps below never claim that עַלְמָה \emph{m
 If virginity is compatible with the denotation of עַלְמָה, and Mary was both an עַלְמָה and a virgin, then Mary answers Isaiah’s description — without the word having to carry the sense.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)\gloss{\emph{would give:} Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)\gloss{\emph{would give:} Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{description\allowbreak{}Fit\allowbreak{}Defeats\allowbreak{}Lexical\allowbreak{}Demand}}\par\nobreak\noindent
 ... and if she answers it, the fulfilment claim never needed the lexical sense in the first place.
@@ -1669,7 +1701,7 @@ If virginity is compatible with the denotation of עַלְמָה, and Mary was b
 The lexical objection in full: עַלְמָה does not denote virginity, Matthew’s claim requires that it does, so the fulfilment claim fails. Stated as the objector would state it, so that the reply has something real to answer.
 
 \begin{derivation}
-  \item[] \((\lnot \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{8}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{would deny:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \item[] \((\lnot \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{8}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{would deny:} Jesus of Nazareth satisfies the virgin-birth criterion}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{versional\allowbreak{}Objection}}\par\nobreak\noindent
 The versional route to the lexical premise: the Targum and the Three read the broad term, so the narrow sense is not the word’s.
@@ -1689,7 +1721,7 @@ Why the Peshitta has the narrower term is not settled. It is its only ܒܬܘܠܬ
 From the criterion and the historical claim, the fulfilment follows.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{would give:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{would give:} Jesus of Nazareth satisfies the virgin-birth criterion}
 \end{derivation}
 \paragraph*{Wegner’s grammatical objection, and the circle Postell finds in it}
 \leavevmode\par\nobreak
@@ -1721,7 +1753,7 @@ The second conjunct does all the work, and it is not a grammatical claim. Rydeln
 This is Postell’s charge, written as a formula rather than repeated as a complaint: “because Wegner rejects the messianic interpretation on grammatical-historical grounds, he assumes that עַלְמָה cannot mean ‘virgin’ in Isaiah 7:14” (468 n. 22).
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{78} \land \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{\emph{would give:} The pregnancy Isaiah 7:14 announces is an ordinary conception}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{80} \land \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{\emph{would give:} The pregnancy Isaiah 7:14 announces is an ordinary conception}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{lexical\allowbreak{}Conclusion\allowbreak{}Tells\allowbreak{}Against\allowbreak{}Prediction}}\par\nobreak\noindent
 \textbf{The return leg.} The lexical conclusion is then turned against the predictive reading, which is what the critical case does with it and what \texttt{critical} already assumes.
@@ -1834,8 +1866,8 @@ Four strands converge on the criterion, and each is a \texttt{Line}: its own gro
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{9}\)\gloss{The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{43}\)\gloss{Matthew 1:23 quotes Isaiah 7:14}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{44}\)\gloss{Matthew’s quotation intends the virgin conception as fulfilment}
-  \item[(6)] \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
+  \item[(6)] \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{protoevangelium\allowbreak{}Line}} --- Protoevangelium strand (Genesis 3:15)\par\nobreak\noindent
 \textbf{The protoevangelium line.} Genesis 3:15 read as the promise of a redeemer, a man’s line counted through the father, and the claim that naming the seed as the woman’s marks a birth with no human father. That claim is its hinge (\texttt{seed\allowbreak{}Of\allowbreak{}The\allowbreak{}Woman\allowbreak{}Implies\allowbreak{}No\allowbreak{}Human\allowbreak{}Father}), and \texttt{Results.Genesis} says what it can bear, read either way.
@@ -1845,17 +1877,17 @@ Four strands converge on the criterion, and each is a \texttt{Line}: its own gro
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{51}\)\gloss{Genesis 3:15 is the protoevangelium, the first promise of a redeemer}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{52}\)\gloss{Hebrew זֶרַע is ordinarily reckoned through the father}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{53}\)\gloss{The matrilineal wording of Genesis 3:15 marks a birth with no human father}
-  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
+  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{michean\allowbreak{}Line}} --- Michean strand (Micah 5:2–3)\par\nobreak\noindent
 \textbf{The Michean line.} The maternal-only wording of Micah 5:3 and the inference drawn from it. Its hinge is an argument from silence, and the rival says so.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{74}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{Micah’s mention of a mother and no father indicates a birth with no human father}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{74} \land \pvar{TestimonyArguments.BornOfAVirgin}{75}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Micah’s mention of a mother and no father indicates a birth with no human father}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{76} \land \pvar{TestimonyArguments.BornOfAVirgin}{77}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{compositional\allowbreak{}Line}} --- Compositional strand (Isaiah 2–12)\par\nobreak\noindent
 \textbf{The compositional line.} Isaiah 7’s placement in an eschatologically framed unit, the principle that placement governs meaning, and the future birth that follows. Its hinge is \texttt{composition\allowbreak{}Governs\allowbreak{}Meaning}.
@@ -1864,8 +1896,8 @@ Four strands converge on the criterion, and each is a \texttt{Line}: its own gro
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{45}\)\gloss{Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology}
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{46}\)\gloss{An oracle’s meaning in the finished book is set by its literary placement}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{49}\)\gloss{Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth}
-  \item[(4)] \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
+  \item[(4)] \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{magisterial\allowbreak{}Line}} --- Magisterial strand (papal teaching)\par\nobreak\noindent
 \textbf{The magisterial line.} Papal teaching and the authority granted it.
@@ -1873,10 +1905,10 @@ Four strands converge on the criterion, and each is a \texttt{Line}: its own gro
 Encoded as a line like the others and deliberately kept out of \texttt{christian}: its second ground is one this library’s author does not grant. Keeping it a line rather than folding it into a package is what lets \texttt{magisterial\_\allowbreak{}authority\_\allowbreak{}is\_\allowbreak{}load\_\allowbreak{}bearing} ask what the route is worth on its own.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{87}\)\gloss{Papal teaching affirms that Mary conceived while remaining a virgin}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{88}\)\gloss{Magisterial teaching settles the question}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{87} \land \pvar{TestimonyArguments.BornOfAVirgin}{88}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{89}\)\gloss{Papal teaching affirms that Mary conceived while remaining a virgin}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{Magisterial teaching settles the question}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{89} \land \pvar{TestimonyArguments.BornOfAVirgin}{90}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{referential\allowbreak{}Line}} --- Referential reading: a virgin is an עַלְמָה\par\nobreak\noindent
 \textbf{The referential line.} The shared lexical ground, the Rebekah datum, and two claims about Mary — that she was a young woman of marriageable age, and that she conceived as a virgin, which is cited \texttt{disputed} — delivering that she answers Isaiah’s description without the word having to carry the sense. The fathers answer the Jewish “young woman” the same way: Cyril of Alexandria, “even if the virgin were called a young woman, she will not cease to be a virgin”.
@@ -1887,9 +1919,9 @@ The scroll’s reading is a ground because the reply is about what the word mean
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{4}\)\gloss{עַלְמָה denotes a young woman of marriageable age}
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{5}\)\gloss{Being a virgin does not exclude a woman from the denotation of עַלְמָה}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{6}\)\gloss{Mary at the conception was a betrothed young woman of marriageable age}
-  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{13}\)\gloss{1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text}
-  \item[(6)] \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)
+  \item[(6)] \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)
   \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{7}\)\gloss{\emph{at issue:} Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{versional\allowbreak{}Line}} --- Lexical objection from the ancient versions\par\nobreak\noindent
@@ -1913,7 +1945,7 @@ The line stops at the pregnancy and the two further moves are closing steps, bec
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{The pregnancy Isaiah 7:14 announces is an ordinary conception}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{37}\)\gloss{What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes}
   \item[(5)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{34}\)
@@ -2094,7 +2126,7 @@ The strands above ask what the wording of Genesis 3:15 says. The reader’s next
 \textbf{Of the woman alone.} If the promise is fulfilled in Jesus, and Jesus was conceived of a virgin, the seed in whom it is fulfilled had no human father.
 
 \begin{derivation}
-  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{65} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{66}\)\gloss{\emph{would give:} The seed in whom Genesis 3:15 is fulfilled was of the woman alone}
+  \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{65} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{66}\)\gloss{\emph{would give:} The seed in whom Genesis 3:15 is fulfilled was of the woman alone}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{form\allowbreak{}Excludes\allowbreak{}APromise}}\par\nobreak\noindent
 \textbf{Westermann’s denial.} “Her seed” is a line of descendants, and the verse is a punishment oracle on the serpent; such a form has no promise or prophecy, “even as its secondary meaning”, so the verse is not the protoevangelium.
@@ -2179,8 +2211,8 @@ The step only joins its grounds, and anyone who grants both grants it, so it is 
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{65}\)\gloss{In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent’s head}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{65} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{66}\)
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{65} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{66}\)
   \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{66}\)\gloss{\emph{at issue:} The seed in whom Genesis 3:15 is fulfilled was of the woman alone}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{westermann\allowbreak{}Line}} --- Westermann: a punishment oracle on a line of descendants, and no promise\par\nobreak\noindent
@@ -2241,6 +2273,22 @@ Rated \texttt{disputed}. Keil grants the first two grounds — “the posterity 
 \begin{derivation}
   \item[] \((\pvar{TestimonyArguments.BornOfAVirgin}{21} \land \pvar{TestimonyArguments.BornOfAVirgin}{22}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{23}\)\gloss{\emph{would give:} In the Greek Pentateuch’s laws, παρθένος is used in the sense ‘virgin’}
 \end{derivation}
+\par\medskip\noindent\textbf{\texttt{laws\allowbreak{}Source}}\par\nobreak\noindent
+The citation for the laws’ step, at a confidence: Bratcher, the lexica on τὰ παρθένια, and Miller, who denies the step.
+
+{\small\begin{verbatim}
+def lawsSource : Confidence → Source :=
+  fun c =>
+    { primary := Reference.work bratcherStudyOfIsaiah (Bib.Locus.page 113),
+      supporting :=
+        [Reference.work bratcherStudyOfIsaiah (Bib.Locus.page 102),
+          Reference.work liddellScottJones (Bib.Locus.page 1339),
+          Reference.work muraokaLexiconSeptuagint (Bib.Locus.page 535),
+          Reference.work lustLexiconSeptuagint (Bib.Locus.sv "παρθένια"),
+          Reference.work millerBornDivine,
+          Reference.work rhodeaDidMatthewConceive (Bib.Locus.page 67)],
+      tradition := Tradition.christianHistoricalGrammatical, confidence := c }
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{laws\allowbreak{}Line}} --- The laws of the Greek Pentateuch: παρθένος in the sense ‘virgin’\par\nobreak\noindent
 \textbf{The case from the laws.} Bratcher’s, from the Greek of Leviticus 21 and Deuteronomy 22 (102, 113): two laws of the Greek Pentateuch, the corpus Wegner takes Genesis 34:3 from, in which virginity is what the law turns on. The laws are in the translators’ own Greek, and they are not uses of the word \emph{of} a virgin, which would show nothing of its sense; the passages it rests on are where the sense is the point (\texttt{laws\allowbreak{}Use\allowbreak{}Parthenos\allowbreak{}As\allowbreak{}Virgin}).
 
@@ -2256,7 +2304,7 @@ Miller is kept, as every cited reader is, and the page shows where his reading b
   \item \textbf{A young widow}: “Lament like a parthenos dressed in sackcloth for the husband of her youth (Joel 1:8)”. The Greek of Joel 1:8 calls the woman νύμφην, a bride; its παρθεν- word, τὸν παρθενικόν, is of the husband (read from Rahlfs’s text).
   \item \textbf{The translators “consistently used it to translate the Hebrew almah”}. They used it for עַלְמָה twice, at Genesis 24:43 and Isaiah 7:14, and elsewhere wrote νεᾶνις, as Rhodea, who holds Wegner’s view, notes (67 and n. 34); the word they used consistently for was בְּתוּלָה (Bratcher 112–13).
 \end{itemize}
-And he does not take up τὰ παρθένια, the abstract noun by which Walton’s own test would fix the sense. None of this changes the rating: the rule counts a cited reader who grants the grounds and denies the conclusion, and does not weigh his evidence. The dispute over the Septuagint does not need it raised: the status reading decides it (\texttt{Dispute.Septuagint} says why).
+And he does not take up τὰ παρθένια, the abstract noun by which Walton’s own test would fix the sense. The rating still rests on him. Evidence a text refutes is struck before his dissent is checked, and the Greek of Joel 1:8 refutes his young widow; but struck of it, his dissent still denies the step through Genesis 34:3, which the Greek reads as he says (\texttt{Dispute.Miller}). The dispute over the Septuagint does not need the step raised: the status reading decides it (\texttt{Dispute.Septuagint} says why).
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{21}\)\gloss{The high priest of the Greek Leviticus marries a παρθένος, not a widow or a harlot}
@@ -2293,9 +2341,9 @@ Frymer-Kensky reads the law and the story the same way, from the Hebrew. The lov
 Its grounds are what the two defeaters attack. Berry replaces the second with \texttt{near\allowbreak{}Term\allowbreak{}Fulfilment\allowbreak{}Is\allowbreak{}Unclear} plus \texttt{berry\allowbreak{}Blocks\allowbreak{}Exclusion}; parity replaces it with Isaiah 9 and 11 plus \texttt{parity\allowbreak{}Defeats\allowbreak{}Near\allowbreak{}Term\allowbreak{}Exclusion}.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{78} \land \pvar{TestimonyArguments.BornOfAVirgin}{79}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{80} \land \pvar{TestimonyArguments.BornOfAVirgin}{81}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)
   \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{\emph{at issue, the denial of:} Isaiah 7:14 is a Messianic prediction of a virgin birth}
 \end{derivation}
 \paragraph*{The two defeaters, as arguments in their own right}
@@ -2306,9 +2354,9 @@ Its grounds are what the two defeaters attack. Berry replaces the second with \t
 \textbf{Berry’s objection}, as an argument: the near-term fulfilment is unclear, so the near-term reading does not exclude the messianic sense.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{How Isaiah 7:14 was fulfilled in Ahaz’s own day is itself an open question}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{82}\)\gloss{How Isaiah 7:14 was fulfilled in Ahaz’s own day is itself an open question}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{82} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{postell\allowbreak{}Line}} --- Postell’s parity argument against the near-term exclusion\par\nobreak\noindent
 \textbf{Postell’s parity argument}, as an argument: Isaiah 9 and 11 are messianic on the same near-term timeline, so a near-term setting does not exclude the messianic sense.
@@ -2316,26 +2364,26 @@ Its grounds are what the two defeaters attack. Berry replaces the second with \t
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{47}\)\gloss{Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation}
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{48}\)\gloss{Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{47} \land \pvar{TestimonyArguments.BornOfAVirgin}{48}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{47} \land \pvar{TestimonyArguments.BornOfAVirgin}{48}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{motyer\allowbreak{}Line}} --- Motyer’s reply to the near-term reading\par\nobreak\noindent
 \textbf{Motyer’s reply}, as an argument, with Compton: the sign is given to the house of David and the near-term timetable passes to Isaiah’s son, so Isaiah 7:14 is not a near-term sign to Ahaz. The first reply to deny the critic’s near-term premise rather than its exclusion premise.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{Isaiah 7:13–14 gives the sign to David’s house, in the plural; 7:16’s ‘you’ is Ahaz}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{82}\)\gloss{Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{81} \land \pvar{TestimonyArguments.BornOfAVirgin}{82}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{78}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{\emph{at issue, the denial of:} Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{83}\)\gloss{Isaiah 7:13–14 gives the sign to David’s house, in the plural; 7:16’s ‘you’ is Ahaz}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{84}\)\gloss{Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{83} \land \pvar{TestimonyArguments.BornOfAVirgin}{84}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{80}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{\emph{at issue, the denial of:} Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{micah\allowbreak{}Line}} --- Postell’s Micah counterexample to the near-term exclusion\par\nobreak\noindent
 \textbf{Postell’s Micah counterexample}, as an argument: the ruler of Micah 5 is set against the Assyrian invasion and was read messianically, so a near-term setting does not exclude a messianic sense.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{83}\)\gloss{Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{84}\)\gloss{Micah 5:2 was read messianically in first-century Judaism}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{83} \land \pvar{TestimonyArguments.BornOfAVirgin}{84}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{85}\)\gloss{Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{86}\)\gloss{Micah 5:2 was read messianically in first-century Judaism}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{85} \land \pvar{TestimonyArguments.BornOfAVirgin}{86}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
 \end{derivation}
 \paragraph*{What the strands share}
 \leavevmode\par\nobreak
@@ -2343,8 +2391,8 @@ Its grounds are what the two defeaters attack. Berry replaces the second with \t
 The premises no single strand owns: Mary’s conception, and the agreement of the two birth narratives about it. Every scriptural package needs them and none of the four strands delivers them.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{scriptural\allowbreak{}Lines}}\par\nobreak\noindent
 The four scriptural strands, in the order the module doc introduces them. \texttt{christian} is exactly these four on shared ground.
@@ -2374,19 +2422,19 @@ The scriptural argument: four strands, no appeal to magisterial authority.
   \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{51}\)\gloss{Genesis 3:15 is the protoevangelium, the first promise of a redeemer}
   \breakrow{(8)} \(\pvar{TestimonyArguments.BornOfAVirgin}{52}\)\gloss{Hebrew זֶרַע is ordinarily reckoned through the father}
   \breakrow{(9)} \(\pvar{TestimonyArguments.BornOfAVirgin}{53}\)\gloss{The matrilineal wording of Genesis 3:15 marks a birth with no human father}
-  \breakrow{(10)} \(\pvar{TestimonyArguments.BornOfAVirgin}{74}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
-  \breakrow{(11)} \(\pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{Micah’s mention of a mother and no father indicates a birth with no human father}
+  \breakrow{(10)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
+  \breakrow{(11)} \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Micah’s mention of a mother and no father indicates a birth with no human father}
   \breakrow{(12)} \(\pvar{TestimonyArguments.BornOfAVirgin}{45}\)\gloss{Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology}
   \breakrow{(13)} \(\pvar{TestimonyArguments.BornOfAVirgin}{46}\)\gloss{An oracle’s meaning in the finished book is set by its literary placement}
   \breakrow{(14)} \(\pvar{TestimonyArguments.BornOfAVirgin}{49}\)\gloss{Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth}
-  \breakrow{(15)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(16)} \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
-  \breakrow{(17)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(18)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(19)} \((\pvar{TestimonyArguments.BornOfAVirgin}{74} \land \pvar{TestimonyArguments.BornOfAVirgin}{75}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(20)} \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \item[(21)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \breakrow{(15)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(16)} \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
+  \breakrow{(17)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(18)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(19)} \((\pvar{TestimonyArguments.BornOfAVirgin}{76} \land \pvar{TestimonyArguments.BornOfAVirgin}{77}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(20)} \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(21)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2394,9 +2442,9 @@ The scriptural argument: four strands, no appeal to magisterial authority.
 The Roman Catholic package: the four scriptural strands \emph{and} the magisterial one. This is the position as actually held — Scripture and Tradition together — and it is kept distinct from \texttt{christian} because its extra premise is one this library’s author does not grant.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{87}\)\gloss{Papal teaching affirms that Mary conceived while remaining a virgin}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{88}\)\gloss{Magisterial teaching settles the question}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{87} \land \pvar{TestimonyArguments.BornOfAVirgin}{88}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{89}\)\gloss{Papal teaching affirms that Mary conceived while remaining a virgin}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{Magisterial teaching settles the question}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{89} \land \pvar{TestimonyArguments.BornOfAVirgin}{90}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{Isaiah 7:14 is a Messianic prediction of a virgin birth}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{2}\)\gloss{עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman}
   \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{9}\)\gloss{The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος}
@@ -2406,19 +2454,19 @@ The Roman Catholic package: the four scriptural strands \emph{and} the magisteri
   \breakrow{(10)} \(\pvar{TestimonyArguments.BornOfAVirgin}{51}\)\gloss{Genesis 3:15 is the protoevangelium, the first promise of a redeemer}
   \breakrow{(11)} \(\pvar{TestimonyArguments.BornOfAVirgin}{52}\)\gloss{Hebrew זֶרַע is ordinarily reckoned through the father}
   \breakrow{(12)} \(\pvar{TestimonyArguments.BornOfAVirgin}{53}\)\gloss{The matrilineal wording of Genesis 3:15 marks a birth with no human father}
-  \breakrow{(13)} \(\pvar{TestimonyArguments.BornOfAVirgin}{74}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
-  \breakrow{(14)} \(\pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{Micah’s mention of a mother and no father indicates a birth with no human father}
+  \breakrow{(13)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
+  \breakrow{(14)} \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Micah’s mention of a mother and no father indicates a birth with no human father}
   \breakrow{(15)} \(\pvar{TestimonyArguments.BornOfAVirgin}{45}\)\gloss{Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology}
   \breakrow{(16)} \(\pvar{TestimonyArguments.BornOfAVirgin}{46}\)\gloss{An oracle’s meaning in the finished book is set by its literary placement}
   \breakrow{(17)} \(\pvar{TestimonyArguments.BornOfAVirgin}{49}\)\gloss{Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth}
-  \breakrow{(18)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(19)} \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
-  \breakrow{(20)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(21)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(22)} \((\pvar{TestimonyArguments.BornOfAVirgin}{74} \land \pvar{TestimonyArguments.BornOfAVirgin}{75}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(23)} \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \item[(24)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \breakrow{(18)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(19)} \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
+  \breakrow{(20)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(21)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(22)} \((\pvar{TestimonyArguments.BornOfAVirgin}{76} \land \pvar{TestimonyArguments.BornOfAVirgin}{77}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(23)} \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(24)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2426,12 +2474,12 @@ The Roman Catholic package: the four scriptural strands \emph{and} the magisteri
 The magisterial route on its own, with no exegetical premise at all.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{87}\)\gloss{Papal teaching affirms that Mary conceived while remaining a virgin}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{88}\)\gloss{Magisterial teaching settles the question}
-  \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(4)} \((\pvar{TestimonyArguments.BornOfAVirgin}{87} \land \pvar{TestimonyArguments.BornOfAVirgin}{88}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{89}\)\gloss{Papal teaching affirms that Mary conceived while remaining a virgin}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{Magisterial teaching settles the question}
+  \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(4)} \((\pvar{TestimonyArguments.BornOfAVirgin}{89} \land \pvar{TestimonyArguments.BornOfAVirgin}{90}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2439,13 +2487,13 @@ The magisterial route on its own, with no exegetical premise at all.
 The magisterial route as it stands for a reader who denies that magisterial teaching settles doctrinal questions, holding with Westminster I.x that Scripture is the supreme judge.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{87}\)\gloss{Papal teaching affirms that Mary conceived while remaining a virgin}
-  \item[(2)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{88}\)\gloss{\emph{denied:} Magisterial teaching settles the question}
-  \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{89}\)\gloss{Scripture is the supreme judge of controversies of religion}
-  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(5)} \((\pvar{TestimonyArguments.BornOfAVirgin}{87} \land \pvar{TestimonyArguments.BornOfAVirgin}{88}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \item[(6)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{89}\)\gloss{Papal teaching affirms that Mary conceived while remaining a virgin}
+  \item[(2)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{denied:} Magisterial teaching settles the question}
+  \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{Scripture is the supreme judge of controversies of religion}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(5)} \((\pvar{TestimonyArguments.BornOfAVirgin}{89} \land \pvar{TestimonyArguments.BornOfAVirgin}{90}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(6)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2457,8 +2505,8 @@ The Isaianic line with the lexical premise removed, everything else it rests on 
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{9}\)\gloss{The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{43}\)\gloss{Matthew 1:23 quotes Isaiah 7:14}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{44}\)\gloss{Matthew’s quotation intends the virgin conception as fulfilment}
-  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
+  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{christian\allowbreak{}Without\allowbreak{}Almah}} --- Scriptural reading, minus the lexical premise\par\nobreak\noindent
 The scriptural package with the lexical premise removed, everything else retained.
@@ -2472,19 +2520,19 @@ The scriptural package with the lexical premise removed, everything else retaine
   \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{51}\)\gloss{Genesis 3:15 is the protoevangelium, the first promise of a redeemer}
   \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{52}\)\gloss{Hebrew זֶרַע is ordinarily reckoned through the father}
   \breakrow{(8)} \(\pvar{TestimonyArguments.BornOfAVirgin}{53}\)\gloss{The matrilineal wording of Genesis 3:15 marks a birth with no human father}
-  \breakrow{(9)} \(\pvar{TestimonyArguments.BornOfAVirgin}{74}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
-  \breakrow{(10)} \(\pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{Micah’s mention of a mother and no father indicates a birth with no human father}
+  \breakrow{(9)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
+  \breakrow{(10)} \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Micah’s mention of a mother and no father indicates a birth with no human father}
   \breakrow{(11)} \(\pvar{TestimonyArguments.BornOfAVirgin}{45}\)\gloss{Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology}
   \breakrow{(12)} \(\pvar{TestimonyArguments.BornOfAVirgin}{46}\)\gloss{An oracle’s meaning in the finished book is set by its literary placement}
   \breakrow{(13)} \(\pvar{TestimonyArguments.BornOfAVirgin}{49}\)\gloss{Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth}
-  \breakrow{(14)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(15)} \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
-  \breakrow{(16)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(17)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(18)} \((\pvar{TestimonyArguments.BornOfAVirgin}{74} \land \pvar{TestimonyArguments.BornOfAVirgin}{75}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(19)} \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \item[(20)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \breakrow{(14)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(15)} \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
+  \breakrow{(16)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(17)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(18)} \((\pvar{TestimonyArguments.BornOfAVirgin}{76} \land \pvar{TestimonyArguments.BornOfAVirgin}{77}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(19)} \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(20)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2496,11 +2544,11 @@ The Isaianic strand by itself, with the lexical premise removed: the argument ex
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{9}\)\gloss{The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{43}\)\gloss{Matthew 1:23 quotes Isaiah 7:14}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{44}\)\gloss{Matthew’s quotation intends the virgin conception as fulfilment}
-  \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
-  \breakrow{(7)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \item[(8)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
+  \breakrow{(7)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(8)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2515,17 +2563,17 @@ The scriptural package with all four interpretive hinges removed, every textual 
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{50}\)\gloss{Genesis 3:15 says that ‘her seed’ will strike the serpent’s head}
   \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{51}\)\gloss{Genesis 3:15 is the protoevangelium, the first promise of a redeemer}
   \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{52}\)\gloss{Hebrew זֶרַע is ordinarily reckoned through the father}
-  \breakrow{(8)} \(\pvar{TestimonyArguments.BornOfAVirgin}{74}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
+  \breakrow{(8)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
   \breakrow{(9)} \(\pvar{TestimonyArguments.BornOfAVirgin}{45}\)\gloss{Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology}
   \breakrow{(10)} \(\pvar{TestimonyArguments.BornOfAVirgin}{49}\)\gloss{Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth}
-  \breakrow{(11)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(12)} \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
-  \breakrow{(13)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(14)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(15)} \((\pvar{TestimonyArguments.BornOfAVirgin}{74} \land \pvar{TestimonyArguments.BornOfAVirgin}{75}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(16)} \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \item[(17)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \breakrow{(11)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(12)} \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
+  \breakrow{(13)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(14)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(15)} \((\pvar{TestimonyArguments.BornOfAVirgin}{76} \land \pvar{TestimonyArguments.BornOfAVirgin}{77}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(16)} \((\pvar{TestimonyArguments.BornOfAVirgin}{45} \land \pvar{TestimonyArguments.BornOfAVirgin}{46} \land \pvar{TestimonyArguments.BornOfAVirgin}{49} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(17)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2538,11 +2586,11 @@ The Isaianic strand with Berry’s defensive lexical premise in place of the ass
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{9}\)\gloss{The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{43}\)\gloss{Matthew 1:23 quotes Isaiah 7:14}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{44}\)\gloss{Matthew’s quotation intends the virgin conception as fulfilment}
-  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
-  \breakrow{(8)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \item[(9)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{Matthew and Luke are independent traditions agreeing on the virgin conception}
+  \breakrow{(8)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(9)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2555,21 +2603,21 @@ Written flat rather than from the lines above, because that is its shape: the te
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{9}\)\gloss{The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος}
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{43}\)\gloss{Matthew 1:23 quotes Isaiah 7:14}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{50}\)\gloss{Genesis 3:15 says that ‘her seed’ will strike the serpent’s head}
-  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{74}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
-  \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
-  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
-  \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{85}\)\gloss{Genesis 3:15 is an etiology of snake-human enmity, ‘her seed’ her descendants}
-  \breakrow{(8)} \(\pvar{TestimonyArguments.BornOfAVirgin}{86}\)\gloss{Micah’s silence about a father is an argument from silence and proves nothing}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Micah 5:3 names only the woman in labour as bearing the coming ruler}
+  \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{87}\)\gloss{Genesis 3:15 is an etiology of snake-human enmity, ‘her seed’ her descendants}
+  \breakrow{(8)} \(\pvar{TestimonyArguments.BornOfAVirgin}{88}\)\gloss{Micah’s silence about a father is an argument from silence and proves nothing}
   \breakrow{(9)} \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{2}\)\gloss{\emph{denied:} עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman}
   \breakrow{(10)} \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{51}\)\gloss{\emph{denied:} Genesis 3:15 is the protoevangelium, the first promise of a redeemer}
   \breakrow{(11)} \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{53}\)\gloss{\emph{denied:} The matrilineal wording of Genesis 3:15 marks a birth with no human father}
-  \breakrow{(12)} \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{\emph{denied:} Micah’s mention of a mother and no father indicates a birth with no human father}
-  \breakrow{(13)} \((\pvar{TestimonyArguments.BornOfAVirgin}{78} \land \pvar{TestimonyArguments.BornOfAVirgin}{79}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{\emph{would deny:} Isaiah 7:14 is a Messianic prediction of a virgin birth}
-  \breakrow{(14)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(15)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \breakrow{(16)} \((\pvar{TestimonyArguments.BornOfAVirgin}{74} \land \pvar{TestimonyArguments.BornOfAVirgin}{75}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
-  \item[(17)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \breakrow{(12)} \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{77}\)\gloss{\emph{denied:} Micah’s mention of a mother and no father indicates a birth with no human father}
+  \breakrow{(13)} \((\pvar{TestimonyArguments.BornOfAVirgin}{80} \land \pvar{TestimonyArguments.BornOfAVirgin}{81}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{\emph{would deny:} Isaiah 7:14 is a Messianic prediction of a virgin birth}
+  \breakrow{(14)} \((\pvar{TestimonyArguments.BornOfAVirgin}{1} \land \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{44}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(15)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \breakrow{(16)} \((\pvar{TestimonyArguments.BornOfAVirgin}{76} \land \pvar{TestimonyArguments.BornOfAVirgin}{77}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{would give:} The Messiah must be born of a virgin}
+  \item[(17)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2577,9 +2625,9 @@ Written flat rather than from the lines above, because that is its shape: the te
 The critical case for denying the predictive reading, stated as an argument in its own right rather than assumed inside \texttt{critical}. Its conclusion is the denial, not anything about Jesus.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{78} \land \pvar{TestimonyArguments.BornOfAVirgin}{79}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{80} \land \pvar{TestimonyArguments.BornOfAVirgin}{81}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)
   \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{\emph{at issue, the denial of:} Isaiah 7:14 is a Messianic prediction of a virgin birth}
   \keepwithnext
 \end{derivation}
@@ -2588,10 +2636,10 @@ The critical case for denying the predictive reading, stated as an argument in i
 The same case with Berry’s observation in play, and the exclusion premise no longer simply granted.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{How Isaiah 7:14 was fulfilled in Ahaz’s own day is itself an open question}
-  \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
-  \item[(4)] \((\pvar{TestimonyArguments.BornOfAVirgin}{78} \land \pvar{TestimonyArguments.BornOfAVirgin}{79}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{82}\)\gloss{How Isaiah 7:14 was fulfilled in Ahaz’s own day is itself an open question}
+  \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{82} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(4)] \((\pvar{TestimonyArguments.BornOfAVirgin}{80} \land \pvar{TestimonyArguments.BornOfAVirgin}{81}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)
   \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{\emph{at issue, the denial of:} Isaiah 7:14 is a Messianic prediction of a virgin birth}
   \keepwithnext
 \end{derivation}
@@ -2600,9 +2648,9 @@ The same case with Berry’s observation in play, and the exclusion premise no l
 Berry’s objection as a position of its own: its conclusion is that the near-term reading does not exclude the messianic sense.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{How Isaiah 7:14 was fulfilled in Ahaz’s own day is itself an open question}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{82}\)\gloss{How Isaiah 7:14 was fulfilled in Ahaz’s own day is itself an open question}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{82} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2612,8 +2660,8 @@ Postell’s parity argument as a position of its own, with the same conclusion a
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{47}\)\gloss{Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation}
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{48}\)\gloss{Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{47} \land \pvar{TestimonyArguments.BornOfAVirgin}{48}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{47} \land \pvar{TestimonyArguments.BornOfAVirgin}{48}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2621,10 +2669,10 @@ Postell’s parity argument as a position of its own, with the same conclusion a
 Postell’s Micah counterexample as a position of its own, with the same conclusion as Berry’s and Postell’s Isaiah argument.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{83}\)\gloss{Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{84}\)\gloss{Micah 5:2 was read messianically in first-century Judaism}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{83} \land \pvar{TestimonyArguments.BornOfAVirgin}{84}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{85}\)\gloss{Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{86}\)\gloss{Micah 5:2 was read messianically in first-century Judaism}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{85} \land \pvar{TestimonyArguments.BornOfAVirgin}{86}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{at issue, the denial of:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2632,10 +2680,10 @@ Postell’s Micah counterexample as a position of its own, with the same conclus
 Motyer’s reply as a position of its own: Isaiah 7:14 is not a near-term sign to Ahaz.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{Isaiah 7:13–14 gives the sign to David’s house, in the plural; 7:16’s ‘you’ is Ahaz}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{82}\)\gloss{Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14}
-  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{81} \land \pvar{TestimonyArguments.BornOfAVirgin}{82}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{78}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{\emph{at issue, the denial of:} Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{83}\)\gloss{Isaiah 7:13–14 gives the sign to David’s house, in the plural; 7:16’s ‘you’ is Ahaz}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{84}\)\gloss{Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14}
+  \item[(3)] \((\pvar{TestimonyArguments.BornOfAVirgin}{83} \land \pvar{TestimonyArguments.BornOfAVirgin}{84}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{80}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{\emph{at issue, the denial of:} Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2643,11 +2691,11 @@ Motyer’s reply as a position of its own: Isaiah 7:14 is not a near-term sign t
 The critical denial with Postell’s parity argument in play, and the exclusion premise no longer simply granted.
 
 \begin{derivation}
-  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{47}\)\gloss{Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{48}\)\gloss{Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14}
-  \breakrow{(4)} \((\pvar{TestimonyArguments.BornOfAVirgin}{47} \land \pvar{TestimonyArguments.BornOfAVirgin}{48}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{79}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
-  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{78} \land \pvar{TestimonyArguments.BornOfAVirgin}{79}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)
+  \breakrow{(4)} \((\pvar{TestimonyArguments.BornOfAVirgin}{47} \land \pvar{TestimonyArguments.BornOfAVirgin}{48}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{81}\)\gloss{\emph{would deny:} A sign given for Ahaz’s generation is not also a prediction of a virgin birth}
+  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{80} \land \pvar{TestimonyArguments.BornOfAVirgin}{81}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)
   \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{\emph{at issue, the denial of:} Isaiah 7:14 is a Messianic prediction of a virgin birth}
   \keepwithnext
 \end{derivation}
@@ -2659,9 +2707,9 @@ The referential argument: Mary answers Isaiah’s description, so Matthew’s cl
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{4}\)\gloss{עַלְמָה denotes a young woman of marriageable age}
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{5}\)\gloss{Being a virgin does not exclude a woman from the denotation of עַלְמָה}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{6}\)\gloss{Mary at the conception was a betrothed young woman of marriageable age}
-  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{13}\)\gloss{1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text}
-  \breakrow{(6)} \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)\gloss{\emph{would give:} Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes}
+  \breakrow{(6)} \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)\gloss{\emph{would give:} Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes}
   \item[(7)] \(\pvar{TestimonyArguments.BornOfAVirgin}{7} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{8}\)
   \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{8}\)\gloss{\emph{at issue, the denial of:} Matthew’s fulfilment claim requires that עַלְמָה itself denote virginity}
   \keepwithnext
@@ -2674,12 +2722,12 @@ The same premises, asked to deliver the criterion instead. They do not.
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{4}\)\gloss{עַלְמָה denotes a young woman of marriageable age}
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{5}\)\gloss{Being a virgin does not exclude a woman from the denotation of עַלְמָה}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{6}\)\gloss{Mary at the conception was a betrothed young woman of marriageable age}
-  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{13}\)\gloss{1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text}
-  \breakrow{(6)} \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)\gloss{\emph{would give:} Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes}
+  \breakrow{(6)} \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)\gloss{\emph{would give:} Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes}
   \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{7} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{8}\)\gloss{\emph{would deny:} Matthew’s fulfilment claim requires that עַלְמָה itself denote virginity}
-  \item[(8)] \((\pvar{TestimonyArguments.BornOfAVirgin}{90} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \item[(8)] \((\pvar{TestimonyArguments.BornOfAVirgin}{92} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -2694,7 +2742,7 @@ Stated first and in full, because the results that follow are about where its we
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{The pregnancy Isaiah 7:14 announces is an ordinary conception}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{37}\)\gloss{What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{33} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{34}\)\gloss{\emph{would give:} The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given}
@@ -2709,7 +2757,7 @@ Wegner’s line with the ordinary pregnancy no longer granted. It is the one gro
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{37}\)\gloss{What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes}
   \item[(4)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{34}\)
   \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{34}\)\gloss{\emph{at issue:} The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given}
@@ -2719,10 +2767,10 @@ The same objection with the ordinary pregnancy derived instead of assumed — de
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{37}\)\gloss{What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{33} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{34}\)\gloss{\emph{would give:} The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given}
-  \breakrow{(5)} \((\pvar{TestimonyArguments.BornOfAVirgin}{78} \land \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{\emph{would give:} The pregnancy Isaiah 7:14 announces is an ordinary conception}
+  \breakrow{(5)} \((\pvar{TestimonyArguments.BornOfAVirgin}{80} \land \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{\emph{would give:} The pregnancy Isaiah 7:14 announces is an ordinary conception}
   \breakrow{(6)} \((\pvar{TestimonyArguments.BornOfAVirgin}{34} \land \pvar{TestimonyArguments.BornOfAVirgin}{35}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{36}\)\gloss{\emph{would give:} The עַלְמָה of Isaiah 7:14 is not a virgin}
   \item[(7)] \((\pvar{TestimonyArguments.BornOfAVirgin}{36} \land \pvar{TestimonyArguments.BornOfAVirgin}{37}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{2}\)
   \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{2}\)\gloss{\emph{at issue, the denial of:} עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman}
@@ -2734,7 +2782,7 @@ Wegner’s line as it stands inside the circle: the ordinary pregnancy gone from
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{37}\)\gloss{What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{8}\)\gloss{Matthew’s fulfilment claim requires that עַלְמָה itself denote virginity}
   \item[(5)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{34}\)
@@ -2745,11 +2793,11 @@ Wegner’s line as it stands inside the circle: the ordinary pregnancy gone from
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{37}\)\gloss{What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{8}\)\gloss{Matthew’s fulfilment claim requires that עַלְמָה itself denote virginity}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{33} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{34}\)\gloss{\emph{would give:} The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given}
-  \breakrow{(6)} \((\pvar{TestimonyArguments.BornOfAVirgin}{78} \land \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{\emph{would give:} The pregnancy Isaiah 7:14 announces is an ordinary conception}
+  \breakrow{(6)} \((\pvar{TestimonyArguments.BornOfAVirgin}{80} \land \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{\emph{would give:} The pregnancy Isaiah 7:14 announces is an ordinary conception}
   \breakrow{(7)} \((\lnot \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{8}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{1}\)\gloss{\emph{would deny:} Isaiah 7:14 is a Messianic prediction of a virgin birth}
   \breakrow{(8)} \((\pvar{TestimonyArguments.BornOfAVirgin}{34} \land \pvar{TestimonyArguments.BornOfAVirgin}{35}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{36}\)\gloss{\emph{would give:} The עַלְמָה of Isaiah 7:14 is not a virgin}
   \item[(9)] \((\pvar{TestimonyArguments.BornOfAVirgin}{36} \land \pvar{TestimonyArguments.BornOfAVirgin}{37}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{2}\)
@@ -2762,7 +2810,7 @@ Wegner’s line with Postell’s usage datum in place of the referent principle.
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{The pregnancy Isaiah 7:14 announces is an ordinary conception}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{38}\)\gloss{In the other clear עַלְמָה passages Wegner lists, the women are virgins}
   \item[(5)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{34}\)
@@ -2773,7 +2821,7 @@ Wegner’s objection with Postell’s usage parity in play.
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{35}\)\gloss{The pregnancy Isaiah 7:14 announces is an ordinary conception}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{38}\)\gloss{In the other clear עַלְמָה passages Wegner lists, the women are virgins}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{33} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{34}\)\gloss{\emph{would give:} The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given}
@@ -2813,7 +2861,7 @@ Wegner’s line with the sign argument in play: the ordinary pregnancy no longer
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{39}\)\gloss{The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{40}\)\gloss{An ordinary conception is nothing extraordinary: it happens to all women}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{37}\)\gloss{What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes}
@@ -2825,7 +2873,7 @@ Wegner’s objection with the fathers’ sign argument in play.
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{33}\)\gloss{הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant}
-  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{80}\)\gloss{Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah’s generation}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{39}\)\gloss{The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{40}\)\gloss{An ordinary conception is nothing extraordinary: it happens to all women}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{37}\)\gloss{What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes}
@@ -2991,9 +3039,9 @@ Matthew’s quotation as a position of its own: in the Greek of Isaiah 7:14, whi
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{61}\)\gloss{Revelation calls the devil ‘that old serpent’ (12:9, 20:2)}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{62}\)\gloss{The Son came to destroy the devil and his works, through death}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{63}\)\gloss{Paul says Christ died, was buried, and rose the third day}
-  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
   \breakrow{(7)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{64} \land \pvar{TestimonyArguments.BornOfAVirgin}{61} \land \pvar{TestimonyArguments.BornOfAVirgin}{62} \land \pvar{TestimonyArguments.BornOfAVirgin}{63}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{65}\)\gloss{\emph{would give:} In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent’s head}
-  \item[(8)] \((\pvar{TestimonyArguments.BornOfAVirgin}{65} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{66}\)
+  \item[(8)] \((\pvar{TestimonyArguments.BornOfAVirgin}{65} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{66}\)
   \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{66}\)\gloss{\emph{at issue:} The seed in whom Genesis 3:15 is fulfilled was of the woman alone}
   \keepwithnext
 \end{derivation}
@@ -3060,8 +3108,8 @@ The protoevangelium strand as a position of its own: Genesis 3:15 read as promis
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{51}\)\gloss{Genesis 3:15 is the protoevangelium, the first promise of a redeemer}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{52}\)\gloss{Hebrew זֶרַע is ordinarily reckoned through the father}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{53}\)\gloss{The matrilineal wording of Genesis 3:15 marks a birth with no human father}
-  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
+  \item[(5)] \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -3131,8 +3179,8 @@ The lexical objection with its versional support, stated as its holder would sta
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{14}\)\gloss{The split among the ancient versions shows עַלְמָה does not denote virginity}
   \breakrow{(5)} \(\pvar{TestimonyArguments.BornOfAVirgin}{8}\)\gloss{Matthew’s fulfilment claim requires that עַלְמָה itself denote virginity}
   \breakrow{(6)} \((\pvar{TestimonyArguments.BornOfAVirgin}{10} \land \pvar{TestimonyArguments.BornOfAVirgin}{11} \land \pvar{TestimonyArguments.BornOfAVirgin}{14}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{2}\)\gloss{\emph{would deny:} עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman}
-  \item[(7)] \((\lnot \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{8}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue, the denial of:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \item[(7)] \((\lnot \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{8}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue, the denial of:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -3150,13 +3198,13 @@ Written flat: it is the objector’s grounds and the replies to them side by sid
   \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{4}\)\gloss{עַלְמָה denotes a young woman of marriageable age}
   \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{5}\)\gloss{Being a virgin does not exclude a woman from the denotation of עַלְמָה}
   \breakrow{(8)} \(\pvar{TestimonyArguments.BornOfAVirgin}{6}\)\gloss{Mary at the conception was a betrothed young woman of marriageable age}
-  \breakrow{(9)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(10)} \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{76}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)\gloss{\emph{would give:} Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes}
+  \breakrow{(9)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(10)} \((\pvar{TestimonyArguments.BornOfAVirgin}{4} \land \pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{6} \land \pvar{TestimonyArguments.BornOfAVirgin}{78}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{7}\)\gloss{\emph{would give:} Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes}
   \breakrow{(11)} \(\pvar{TestimonyArguments.BornOfAVirgin}{7} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{8}\)\gloss{\emph{would deny:} Matthew’s fulfilment claim requires that עַלְמָה itself denote virginity}
   \breakrow{(12)} \((\pvar{TestimonyArguments.BornOfAVirgin}{5} \land \pvar{TestimonyArguments.BornOfAVirgin}{9} \land \pvar{TestimonyArguments.BornOfAVirgin}{12}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{14}\)\gloss{\emph{would deny:} The split among the ancient versions shows עַלְמָה does not denote virginity}
   \breakrow{(13)} \((\pvar{TestimonyArguments.BornOfAVirgin}{10} \land \pvar{TestimonyArguments.BornOfAVirgin}{11} \land \pvar{TestimonyArguments.BornOfAVirgin}{14}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{2}\)\gloss{\emph{would deny:} עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman}
-  \item[(14)] \((\lnot \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{8}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{91}\)
-  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{91}\)\gloss{\emph{at issue, the denial of:} Jesus of Nazareth satisfies the virgin-birth criterion}
+  \item[(14)] \((\lnot \pvar{TestimonyArguments.BornOfAVirgin}{2} \land \pvar{TestimonyArguments.BornOfAVirgin}{8}) \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{93}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{93}\)\gloss{\emph{at issue, the denial of:} Jesus of Nazareth satisfies the virgin-birth criterion}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -4018,9 +4066,9 @@ The protoevangelium strand with its hinge read as Luther reads it.
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{51}\)\gloss{Genesis 3:15 is the protoevangelium, the first promise of a redeemer}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{52}\)\gloss{Hebrew זֶרַע is ordinarily reckoned through the father}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{53}\)\gloss{The matrilineal wording of Genesis 3:15 marks a birth with no human father}
-  \breakrow{(5)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)
+  \breakrow{(5)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)
   \item[(6)] \(\pvar{TestimonyArguments.BornOfAVirgin}{53} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{54}\)\gloss{\emph{would give:} The wording ‘her seed’ itself signifies a birth with no human father}
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -4032,11 +4080,11 @@ The protoevangelium strand with its hinge read as Leupold reads it.
   \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{51}\)\gloss{Genesis 3:15 is the protoevangelium, the first promise of a redeemer}
   \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{52}\)\gloss{Hebrew זֶרַע is ordinarily reckoned through the father}
   \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{53}\)\gloss{The matrilineal wording of Genesis 3:15 marks a birth with no human father}
-  \breakrow{(5)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{90}\)
-  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\)\gloss{Mary conceived Jesus while a virgin}
-  \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{76} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{55}\)\gloss{\emph{would give:} The wording ‘her seed’ fits a birth with no human father, as fulfilled in Christ}
+  \breakrow{(5)} \((\pvar{TestimonyArguments.BornOfAVirgin}{50} \land \pvar{TestimonyArguments.BornOfAVirgin}{51} \land \pvar{TestimonyArguments.BornOfAVirgin}{52} \land \pvar{TestimonyArguments.BornOfAVirgin}{53}) \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{92}\)
+  \breakrow{(6)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\)\gloss{Mary conceived Jesus while a virgin}
+  \breakrow{(7)} \(\pvar{TestimonyArguments.BornOfAVirgin}{78} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{55}\)\gloss{\emph{would give:} The wording ‘her seed’ fits a birth with no human father, as fulfilled in Christ}
   \item[(8)] \(\pvar{TestimonyArguments.BornOfAVirgin}{53} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{55}\)\gloss{\emph{would give:} The wording ‘her seed’ fits a birth with no human father, as fulfilled in Christ}
-  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{90}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.BornOfAVirgin}{92}\)\gloss{\emph{at issue:} The Messiah must be born of a virgin}
   \keepwithnext
 \end{derivation}
 \emph{No premise here rests on scripture alone.}
@@ -4147,7 +4195,7 @@ Against \emph{Lewis on ‘her seed’: Genesis says it of Hagar and Rebekah too}
 \item the step itself --- \emph{disputed}: \cite[299--300]{lewis-womans-seed-1991}; \cite[319]{lewis-womans-seed-1991}; \cite{akin-woman-seed-serpent-1999}
 \end{itemize}
 \end{itemize}
-\paragraph{2. Read as what the wording fits, once fulfilled.} The claim commits \emph{Protoevangelium strand (Genesis 3:15)} to \(\pvar{TestimonyArguments.BornOfAVirgin}{55}\) --- so read by \cite[169]{leupold-exposition-genesis-1942}; \cite[102]{keil-delitzsch-pentateuch-1866} (\emph{disputed}). It rests the reading on \(\pvar{TestimonyArguments.BornOfAVirgin}{76}\), \(\pvar{TestimonyArguments.BornOfAVirgin}{76} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{55}\).
+\paragraph{2. Read as what the wording fits, once fulfilled.} The claim commits \emph{Protoevangelium strand (Genesis 3:15)} to \(\pvar{TestimonyArguments.BornOfAVirgin}{55}\) --- so read by \cite[169]{leupold-exposition-genesis-1942}; \cite[102]{keil-delitzsch-pentateuch-1866} (\emph{disputed}). It rests the reading on \(\pvar{TestimonyArguments.BornOfAVirgin}{78}\), \(\pvar{TestimonyArguments.BornOfAVirgin}{78} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{55}\).
 
 Against \emph{Leupold on ‘her seed’: her posterity, named for the deception}, it is not reached: \emph{Leupold on ‘her seed’: her posterity, named for the deception} holds, and can be held together with it.
 
@@ -5549,7 +5597,7 @@ Rated \texttt{disputed}, as it was first encoded, the status reading would stand
 
 \begin{itemize}
   \item \textbf{Rico and Gentry’s step.} It is \texttt{disputed} because Davidson (1899) and Meade (2013) grant the objection and read it the other way: the revisers wrote νεᾶνις against a sense Christians had put on the word, not one its translator gave it.
-  \item \textbf{The laws’ step} (\texttt{laws\_\allowbreak{}rest\_\allowbreak{}on\_\allowbreak{}their\_\allowbreak{}inference}). It is \texttt{disputed} on one reader. Miller grants that the laws require virgins, and holds that the virginity “has to be inferred from the context”: “parthenos in the Septuagint did not by itself connote what we mean by virginity”. Of what he says of the Greek, the young widow he finds at Joel 1:8 is not there in the Greek, which calls her a bride; the translators did not “consistently” use the word for עַלְמָה; and Genesis 34:3 is what the status reading reads otherwise. His point that the Greek adds “who has not known a man” where virginity matters (Genesis 24:16) translates a clause the Hebrew already has. The rating rests on him all the same: the rule counts a reader who grants the grounds and denies the conclusion, and does not weigh his evidence.
+  \item \textbf{The laws’ step} (\texttt{laws\_\allowbreak{}rest\_\allowbreak{}on\_\allowbreak{}their\_\allowbreak{}inference}). It is \texttt{disputed} on one reader. Miller grants that the laws require virgins, and holds that the virginity “has to be inferred from the context”: “parthenos in the Septuagint did not by itself connote what we mean by virginity”. Of what he says of the Greek, the young widow he finds at Joel 1:8 is not there in the Greek, which calls her a bride; the translators did not “consistently” use the word for עַלְמָה; and Genesis 34:3 is what the status reading reads otherwise. His point that the Greek adds “who has not known a man” where virginity matters (Genesis 24:16) translates a clause the Hebrew already has. The rating rests on him all the same. The Joel 1:8 example is struck, because the text refutes it, and his dissent still stands on Genesis 34:3, which the Greek reads as he says (\texttt{Dispute.Miller}).
   \item \textbf{The witness’s own ground}, that “virgin” is a sense of the word, cited \texttt{disputed} because Wegner, Walton, Rhodea and Meade contest it.
 \end{itemize}
 The dissents on these steps are brief on both sides. Davidson hedges his account of the Three with a “possibly”, though not his account of the word; Meade’s is a blog comment revising his own earlier view. The ratings weigh none of this.
@@ -6029,6 +6077,154 @@ And none accepts Wegner on παρθένος.
 theorem drift_not_credulously_accepted : ¬Framework.CredulouslyAccepted
     septuagintDispute.defeats SeptuagintParty.drift
 -- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\subsection*{TestimonyArguments.BornOfAVirgin.Dispute.Miller — a dissent, with what the texts refute struck}
+The laws’ step (\texttt{laws\allowbreak{}Line}) is rated \texttt{disputed} on one reader, Robert J. Miller. He grants what the laws of Leviticus 21 and Deuteronomy 22 require, and denies that the word in them means “virgin”: “As in other Greek literature, parthenos in the Septuagint did not by itself connote what we mean by virginity”, so that the virginity “has to be inferred from the context” (\emph{Born Divine}). This module asks the question a reader asks of any such dissent: \textbf{does it still stand once the texts it cites are read?}
+
+\subsubsection*{His evidence, read}
+Miller gives two uses of the word of a woman who is not a virgin.
+
+\begin{itemize}
+  \item \textbf{Joel 1:8}, “Lament like a parthenos dressed in sackcloth for the husband of her youth”, a young widow. The Greek does not read so: it calls the woman νύμφην, a bride, and its παρθεν- word, τὸν παρθενικόν, is of the husband (Rahlfs). The text refutes the claim.
+  \item \textbf{Genesis 34:3}, where the Greek calls Dinah a παρθένος after Shechem has lain with her. The Greek reads so. What it shows is contested — the status reading takes the word as the law’s name for the standing Shechem took (\texttt{Dispute.Septuagint}) — but that is an argument, not a reading of the text, and it strikes nothing.
+\end{itemize}
+\subsubsection*{What the checks find}
+The library strikes a claim only when a reading of a text refutes it — Scripture, rated \texttt{consensus} — and then runs every check on what is left (\texttt{Testimony.Logic.Credibility}). Struck of Joel 1:8, Miller’s dissent still denies the laws’ step, through Genesis 34:3, and it is still argued, granting the laws’ grounds; so it is still a credible critique under every standard (\texttt{miller\_\allowbreak{}survives\_\allowbreak{}on\_\allowbreak{}genesis}). The laws’ step stays \texttt{disputed} (\texttt{laws\_\allowbreak{}step\_\allowbreak{}ratings}).
+
+Had Joel 1:8 been all his evidence, the dissent would not count under any standard: struck of it, nothing in it would deny the step (\texttt{miller\_\allowbreak{}on\_\allowbreak{}joel\_\allowbreak{}alone\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}count}). That is the rule at work: evidence the texts refute stops counting, and a dissent that needed it stops counting with it.
+
+What the rule does not do is weigh the evidence that stands. Genesis 34:3 is one verse, and the status reading answers it; the rule records only that it is read as Miller says.
+
+\paragraph*{Miller’s dissent}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{joel\allowbreak{}Shows\allowbreak{}No\allowbreak{}Connotation}}\par\nobreak\noindent
+Joel 1:8 shows that the word does not connote virginity, Miller’s way: the young widow is called a παρθένος.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.BornOfAVirgin}{74} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{\emph{would give:} In the Septuagint, παρθένος did not by itself connote virginity (Miller)}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{dinah\allowbreak{}Shows\allowbreak{}No\allowbreak{}Connotation}}\par\nobreak\noindent
+Genesis 34:3 shows the same: Dinah is called a παρθένος after Shechem.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.BornOfAVirgin}{19} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{\emph{would give:} In the Septuagint, παρθένος did not by itself connote virginity (Miller)}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{context\allowbreak{}Not\allowbreak{}Word\allowbreak{}In\allowbreak{}The\allowbreak{}Laws}}\par\nobreak\noindent
+So in the laws the virginity “has to be inferred from the context”, and the word is not used in the sense “virgin”.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.BornOfAVirgin}{75} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{23}\)\gloss{\emph{would deny:} In the Greek Pentateuch’s laws, παρθένος is used in the sense ‘virgin’}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{miller\allowbreak{}Source}}\par\nobreak\noindent
+The citation for Miller’s steps.
+
+{\small\begin{verbatim}
+def millerSource : Source :=
+  { primary := Reference.work millerBornDivine,
+    tradition := Tradition.criticalScholarship,
+    confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{miller\allowbreak{}On\allowbreak{}The\allowbreak{}Laws}} --- Miller: in the laws, the virginity is the context’s, not the word’s\par\nobreak\noindent
+\textbf{Miller on the laws}, as he argues it: two uses of the word of women who are not virgins, so the word does not by itself connote virginity, so the laws’ virginity is the context’s.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{74}\)\gloss{The Greek of Joel 1:8 calls a young widow a παρθένος (Miller)}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{19}\)\gloss{The Septuagint calls Dinah a παρθένος after Shechem has lain with her}
+  \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{74} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{\emph{would give:} In the Septuagint, παρθένος did not by itself connote virginity (Miller)}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.BornOfAVirgin}{19} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{\emph{would give:} In the Septuagint, παρθένος did not by itself connote virginity (Miller)}
+  \item[(5)] \(\pvar{TestimonyArguments.BornOfAVirgin}{75} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{23}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{23}\)\gloss{\emph{at issue, the denial of:} In the Greek Pentateuch’s laws, παρθένος is used in the sense ‘virgin’}
+  \keepwithnext
+\end{derivation}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{miller\allowbreak{}On\allowbreak{}Joel\allowbreak{}Alone}} --- Miller, from Joel 1:8 alone\par\nobreak\noindent
+\textbf{Miller’s dissent, had Joel 1:8 been all his evidence.} Not his argument as he makes it, written down to show what striking a refuted claim does.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.BornOfAVirgin}{74}\)\gloss{The Greek of Joel 1:8 calls a young widow a παρθένος (Miller)}
+  \item[(2)] \(\pvar{TestimonyArguments.BornOfAVirgin}{74} \rightarrow \pvar{TestimonyArguments.BornOfAVirgin}{75}\)\gloss{\emph{would give:} In the Septuagint, παρθένος did not by itself connote virginity (Miller)}
+  \item[(3)] \(\pvar{TestimonyArguments.BornOfAVirgin}{75} \rightarrow \lnot \pvar{TestimonyArguments.BornOfAVirgin}{23}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.BornOfAVirgin}{23}\)\gloss{\emph{at issue, the denial of:} In the Greek Pentateuch’s laws, παρθένος is used in the sense ‘virgin’}
+  \keepwithnext
+\end{derivation}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{joel\allowbreak{}Reads\allowbreak{}ABride}}\par\nobreak\noindent
+\textbf{What the Greek of Joel 1:8 reads}: the woman is νύμφην, a bride, and τὸν παρθενικόν is said of her husband. A reading of the text, from Rahlfs.
+
+{\small\begin{verbatim}
+def joelReadsABride : Refutation Claim :=
+  { claim := Claim.joelGreekCallsTheWidowParthenos,
+    reads :=
+      "the Greek of Joel 1:8 calls the woman νύμφην, a bride; its παρθεν- word, " ++
+        "τὸν παρθενικόν, is of the husband",
+    reading :=
+      {
+        primary :=
+          Reference.scripture
+            [Scripture.verseIn TextualTradition.septuagint
+                { book := Book.joel, chapter := 1, verse := 8 }],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+\end{verbatim}}
+\paragraph*{Assessed, with what the texts refute struck}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{miller\allowbreak{}On\allowbreak{}Laws\allowbreak{}Assessment}}\par\nobreak\noindent
+\textbf{Miller against the laws’ step}, with Joel 1:8 struck. Consistent, granting the laws’ grounds, and argued: struck of Joel 1:8, his dissent still denies the step through Genesis 34:3, which the Greek reads as he says. A credible critique under every standard; under the Scripture standard too, because what he still asserts outright is the reading of Genesis 34:3.
+
+\paragraph{Dissent.} \emph{Miller, Born Divine}, against \emph{The laws of the Greek Pentateuch: παρθένος in the sense ‘virgin’}. \textbf{A critique.} A critique: it can be held with the step’s grounds, and it argues its denial by a step of its own.
+\begin{itemize}
+\item Struck, because the text reads otherwise: The Greek of Joel 1:8 calls a young widow a παρθένος (Miller). the Greek of Joel 1:8 calls the woman νύμφην, a bride; its παρθεν- word, τὸν παρθενικόν, is of the husband.
+\item Under the evidence standard: credible.
+\item Under the tradition standard: credible.
+\item Under the Scripture standard: credible.
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{miller\_\allowbreak{}survives\_\allowbreak{}on\_\allowbreak{}genesis}}\par\nobreak\noindent
+\textbf{Miller survives on Genesis 34:3.} Struck of Joel 1:8, which the Greek refutes, his dissent from the laws’ step is still a credible critique under every standard: Genesis 34:3 carries his denial.
+
+{\small\begin{verbatim}
+theorem miller_survives_on_genesis : millerOnLawsAssessment.findings.struck =
+    [Claim.joelGreekCallsTheWidowParthenos] ∧ ∀ (s : Standard),
+    Dissent.Credible s millerOnLawsAssessment.dissent
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{miller\allowbreak{}On\allowbreak{}Joel\allowbreak{}Alone\allowbreak{}Assessment}}\par\nobreak\noindent
+\textbf{Miller from Joel 1:8 alone}, with Joel 1:8 struck: nothing left denies the step.
+
+\paragraph{Dissent.} \emph{Miller, from Joel 1:8 alone}, against \emph{The laws of the Greek Pentateuch: παρθένος in the sense ‘virgin’}. \textbf{Not a critique.} Not a critique of this step: with the claims the texts refute struck, what remains does not deny what the step concludes.
+\begin{itemize}
+\item Struck, because the text reads otherwise: The Greek of Joel 1:8 calls a young widow a παρθένος (Miller). the Greek of Joel 1:8 calls the woman νύμφην, a bride; its παρθεν- word, τὸν παρθενικόν, is of the husband.
+\item Under the evidence standard: not credible.
+\item Under the tradition standard: not credible.
+\item Under the Scripture standard: not credible.
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{miller\_\allowbreak{}on\_\allowbreak{}joel\_\allowbreak{}alone\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}count}}\par\nobreak\noindent
+\textbf{Evidence the texts refute stops counting.} Had Miller rested his dissent on Joel 1:8 alone, then, with the claim the Greek refutes struck, nothing in it would deny the laws’ step, and it would not be a credible critique under any standard.
+
+{\small\begin{verbatim}
+theorem miller_on_joel_alone_does_not_count : ∀ (s : Standard),
+    ¬Dissent.Credible s millerOnJoelAloneAssessment.dissent
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\paragraph*{The laws’ step, rated}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{laws\allowbreak{}Step}}\par\nobreak\noindent
+\textbf{The laws’ step, rated by its register}: Miller’s dissent, the strongest known, with what the texts refute struck. Its support is cited \texttt{well\allowbreak{}Supported}: Bratcher, and the lexica on τὰ παρθένια.
+
+\paragraph{The rating, computed.} \emph{The laws of the Greek Pentateuch: παρθένος in the sense ‘virgin’} is cited at \emph{well supported} (\cite[113]{bratcher-study-of-isaiah-1958}; \cite[102]{bratcher-study-of-isaiah-1958}; \cite[1339]{liddell-scott-jones-lexicon-1940}; \cite[535]{muraoka-lexicon-septuagint-2009}; \cite[s.v. παρθένια]{lust-lexicon-septuagint-2003}; \cite{miller-born-divine-2003}; \cite[67]{rhodea-did-matthew-conceive-2013}). Dissents encoded: \emph{Miller, Born Divine}. The strongest known: \emph{Miller, Born Divine}.
+\begin{itemize}
+\item Under the evidence standard: \textbf{disputed} --- a credible critique: Miller, Born Divine.
+\item Under the tradition standard: \textbf{disputed} --- a credible critique: Miller, Born Divine.
+\item Under the Scripture standard: \textbf{disputed} --- a credible critique: Miller, Born Divine.
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{laws\_\allowbreak{}step\_\allowbreak{}ratings}}\par\nobreak\noindent
+\textbf{The laws’ step stays \texttt{disputed}}, under every standard, on Miller’s dissent from Genesis 34:3: striking the Joel 1:8 example the Greek refutes does not take away his denial.
+
+{\small\begin{verbatim}
+theorem laws_step_ratings : lawsStep.ratings = [(Standard.evidence,
+    Computed.disputedBy ["Miller, Born Divine"]), (Standard.tradition,
+    Computed.disputedBy ["Miller, Born Divine"]), (Standard.scriptural,
+    Computed.disputedBy ["Miller, Born Divine"])]
+-- axioms: propext
 \end{verbatim}}
 \subsection*{TestimonyArguments.BornOfAVirgin.Dispute.Matthew — Scripture’s own reading of the Greek word}
 \texttt{Dispute.Septuagint} weighs what the Septuagint’s παρθένος meant by what scholars say of the Greek. This module asks the question a reader of the Bible asks first: \textbf{what does Scripture itself make of the word?} Matthew quotes the Septuagint’s Isaiah 7:14 word for word, ἡ παρθένος, of Mary, who conceived “before they came together” (1:18) and whom Joseph “knew not until she had borne a son” (1:25). If Scripture is its own interpreter, the word in the text Matthew quotes has the sense he gives it: “virgin”.

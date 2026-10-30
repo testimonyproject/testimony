@@ -204,6 +204,8 @@ def cite : Claim → AtomMeta
   | .serpentTwistsTheCommand => serpentTwistsTheCommandCited
   | .godSetsTheEnmity => godSetsTheEnmityCited
   | .serpentIsTheInstrumentOfAPower => serpentIsTheInstrumentOfAPowerCited
+  | .joelGreekCallsTheWidowParthenos => joelGreekCallsTheWidowParthenosCited
+  | .parthenosDoesNotItselfConnoteVirginity => parthenosDoesNotItselfConnoteVirginityCited
   | .harahIsPredicateAdjective => harahIsPredicateAdjectiveCited
   | .isaianicAlmahIsAlreadyPregnant => isaianicAlmahIsAlreadyPregnantCited
   | .pregnancyAtTheSignIsOrdinary => pregnancyAtTheSignIsOrdinaryCited

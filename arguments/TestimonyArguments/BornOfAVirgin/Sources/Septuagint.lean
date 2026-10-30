@@ -342,6 +342,34 @@ def lxxIsaiahUsesParthenosAsVirginCited : AtomMeta :=
       , tradition := .reformedProtestant
       , confidence := .disputed } }
 
+/-- `joelGreekCallsTheWidowParthenos`. Miller's claim about the Greek: "Lament
+like a parthenos dressed in sackcloth for the husband of her youth (Joel 1:8)",
+given as a use of the word of a woman who is not a virgin (*Born Divine*). The
+Greek of Joel 1:8 does not read so: it calls the woman νύμφην, a bride, and its
+παρθεν- word, τὸν παρθενικόν, is of the husband (Rahlfs). Cited for what Miller
+holds; the text refutes it (`Dispute.Miller`). -/
+def joelGreekCallsTheWidowParthenosCited : AtomMeta :=
+  { label := "The Greek of Joel 1:8 calls a young widow a παρθένος (Miller)"
+  , kind := .textual
+  , source :=
+      { primary := .work millerBornDivine .whole
+      , tradition := .criticalScholarship
+      , confidence := .disputed } }
+
+/-- `parthenosDoesNotItselfConnoteVirginity`. Miller's thesis: "As in other Greek
+literature, parthenos in the Septuagint did not by itself connote what we mean by
+virginity", so that where virginity matters it "has to be inferred from the
+context" (*Born Divine*). `disputed`: Bratcher (113), and Rico and Gentry, hold
+the opposite. -/
+def parthenosDoesNotItselfConnoteVirginityCited : AtomMeta :=
+  { label := "In the Septuagint, παρθένος did not by itself connote virginity (Miller)"
+  , kind := .linguistic
+  , source :=
+      { primary := .work millerBornDivine .whole
+      , supporting := [.work bratcherStudyOfIsaiah (.page 113)]
+      , tradition := .criticalScholarship
+      , confidence := .disputed } }
+
 /-- `tryphoRejectsParthenos`. Trypho: "The Scripture has not, 'Behold, the virgin
 shall conceive, and bear a son,' but, 'Behold, the young woman shall conceive'"
 (*Dialogue* 67). Justin answers that Trypho's teachers "refuse to admit that the
