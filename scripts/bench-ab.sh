@@ -52,6 +52,8 @@ head="$(cd "$(dirname "$0")/.." && pwd)"
 base_commit="$(git -C "$head" rev-parse --verify "$base_ref^{commit}")"
 out="${out:-$(mktemp -d)}"
 mkdir -p "$out"
+# Absolute, since the base is built from inside its own tree.
+out="$(cd "$out" && pwd)"
 base="$out/base-tree"
 log() { echo "bench-ab: $*" >&2; }
 
