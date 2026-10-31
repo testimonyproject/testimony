@@ -111,14 +111,17 @@ order of cost (re-measure; do not trust this list over a fresh profile):
   (`evalExpr`), which evaluates every repeated term; the kernel shares them.
   So repeated work costs the checks and not the proofs: removing it (#177) took
   the AIF check from 67 s to 3.8 s and left the defeat tables where they were.
-- **The defeat tables of the largest disputes** are now the largest benchmarks:
-  half of sola fide's takes 16 s and 203 MiB, decided in the kernel.
-- **`Horn.satisfiable?`** is called several times per defeat cell, each time
-  converting the attacker's whole position, meaning postulates included, to
-  clauses and propagating from nothing. Work shared between cells is redone.
-- **Membership is list search.** `Settled` holds lists, and every propagation
-  step tests atoms with `List.elem`, evaluated by the kernel one comparison at
-  a time.
+- **The kernel checks certificates, not searches** (#183). A defeat cell
+  proved with `horn_certify` has its search run at elaboration and only a model
+  or a propagation trace per question checked by the kernel; that halved the
+  defeat tables. What a cell costs now: converting both positions to clauses,
+  in the kernel, and the search, in the interpreter, about equally. Verdicts,
+  assessments, ratings and the postulate checks still search in the kernel.
+- **A function `evalExpr` calls is compiled at the call** unless it is
+  `@[nospecialize]`: specialized at each cell, the certificate search cost
+  50 ms a cell in compilation alone. Read `profiler`'s `compilation` lines.
+- **Membership is list search.** `Settled` holds lists, and a replay tests
+  atoms with `List.elem`; a model is already a bitmask (#180).
 - **Kernel replay** runs every module's replay as a task, each importing its
   own environment, so peak memory is about as many environments as run at
   once. `scripts/kernel-replay.sh` bounds them with `KERNEL_REPLAY_THREADS`
