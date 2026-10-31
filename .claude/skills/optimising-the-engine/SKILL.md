@@ -149,8 +149,11 @@ sides' samples and the base's build log as the `bench-results` artifact.
   regression still fails. Only entries the PR adds count: once it merges, they
   are in the base and accept nothing more, and can be removed. Never widen the
   thresholds to make a regression pass: that hides it, where an entry shows it.
-- **If the PR changes what the benchmarks use**, so that they do not build
-  against the base, there is nothing to compare: the step says so and passes.
-  Say in the PR what the change costs, measured by hand.
+- **A benchmark that does not elaborate against the base**, because it uses
+  what the PR adds, is run on this side only and reported as such; keep the
+  benchmark it replaces, unchanged, beside it, so that the A/B still measures
+  the old form against the base. Only if the file's imports are missing from
+  the base does nothing compare: the step then says so and passes, and the PR
+  says what the change costs, measured by hand.
 - **A benchmark added or renamed** is reported as only in one side and does not
   fail the gate.

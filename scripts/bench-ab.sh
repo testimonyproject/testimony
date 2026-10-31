@@ -20,9 +20,11 @@
 # and Mathlib's packages are shared, not copied.
 #
 # Both sides run this checkout's benchmarks (arguments/bench/Engine.lean), so
-# that they measure the same work. If those benchmarks do not build against the
-# base, because the change altered what they use, there is nothing to compare,
-# and the script says so and exits 0.
+# that they measure the same work. A benchmark that does not elaborate against
+# the base, because it uses what the change adds, has no base side and is
+# reported as only in this checkout; the others are compared. If none does,
+# not even the calibration benchmark, because the file's imports are not in the
+# base, there is nothing to compare, and the script says so and exits 0.
 #
 # The rounds alternate, so that drift on the machine falls on both sides alike;
 # the calibration benchmark, which nothing in the library can change, shows
@@ -74,8 +76,8 @@ cp -a "$head/arguments/.lake/build" "$base/arguments/.lake/build"
   exit 1
 }
 
-# This checkout's benchmarks, against the base: if they do not elaborate there,
-# there is nothing to compare.
+# This checkout's benchmarks, against the base: if not even the calibration
+# benchmark elaborates there, there is nothing to compare.
 bench="$head/arguments/bench/Engine.lean"
 if ! "$head/scripts/bench.sh" --tree "$base" --bench "$bench" --runs 1 \
     --filter "calibration" >"$out/probe.log" 2>&1; then
