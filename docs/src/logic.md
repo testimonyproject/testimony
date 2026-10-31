@@ -574,8 +574,8 @@ premises and checked by the kernel — the defeats and the absences alike:
 ```lean
 theorem isaiahDispute_defeats : ∀ i j, isaiahDispute.defeats i j ↔ partyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
+  cases i <;> cases j <;> horn_certify
 ```
 
 `Horn.defeats?` (`Testimony.Logic.Horn`) decides each pair by asking whether
@@ -600,12 +600,23 @@ wrongly, and its correctness theorems do not depend on it being complete.
 `decide +kernel` runs it inside the kernel and adds no axiom, unlike the banned
 `native_decide`.
 
+The kernel need not run the search itself, and in a table it does not.
+`horn_certify` (`Testimony.Logic.Certificate`) runs the same propagation at
+elaboration time and hands the kernel what it found, a *certificate* for each
+question: a model, which the kernel checks against every clause once, or the
+clauses that fired, in order, which it replays once and checks that they end in
+a violated clause. Checking is far cheaper than searching, pass after pass, to
+a fixed point. The certificate is not trusted: the kernel checks it, a wrong one
+can only make the proof fail, and `Horn.defeats_iff_of_certified` states exactly
+what `Horn.defeats_iff_of_defeats?` does. `decide +kernel` on `Horn.defeats?`
+still proves any cell, searching.
+
 A single defeat worth naming is one line, from the same computation:
 
 ```lean
 theorem berry_defeats_critical : Defeats berryObjection criticalDenial :=
-  Horn.defeats_of_defeats? berryObjection_strength criticalDenial_strength
-    (by decide +kernel)
+  Horn.defeats_of_certified berryObjection_strength criticalDenial_strength
+    (by horn_certify)
 ```
 
 Strengths are computed by `decide`, and are worth stating as results of their

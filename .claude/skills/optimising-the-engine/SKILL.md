@@ -111,14 +111,17 @@ order of cost (re-measure; do not trust this list over a fresh profile):
   (`evalExpr`), which evaluates every repeated term; the kernel shares them.
   So repeated work costs the checks and not the proofs: removing it (#177) took
   the AIF check from 67 s to 3.8 s and left the defeat tables where they were.
-- **The defeat tables of the largest disputes** are now the largest benchmarks:
-  half of sola fide's takes 16 s and 203 MiB, decided in the kernel.
-- **`Horn.satisfiable?`** is called several times per defeat cell, each time
-  converting the attacker's whole position, meaning postulates included, to
-  clauses and propagating from nothing. Work shared between cells is redone.
-- **Membership is list search.** `Settled` holds lists, and every propagation
-  step tests atoms with `List.elem`, evaluated by the kernel one comparison at
-  a time.
+- **The kernel checks certificates, not searches** (#183). A defeat cell
+  proved with `horn_certify` has its search run at elaboration and only a model
+  or a propagation trace per question checked by the kernel; that halved the
+  defeat tables. What a cell costs now: converting both positions to clauses,
+  in the kernel, and the search, in the interpreter, about equally. Verdicts,
+  assessments, ratings and the postulate checks still search in the kernel.
+- **A function `evalExpr` calls is compiled at the call** unless it is
+  `@[nospecialize]`: specialized at each cell, the certificate search cost
+  50 ms a cell in compilation alone. Read `profiler`'s `compilation` lines.
+- **Membership is list search.** `Settled` holds lists, and a replay tests
+  atoms with `List.elem`; a model is already a bitmask (#180).
 - **Kernel replay** runs every module's replay as a task, each importing its
   own environment, so peak memory is about as many environments as run at
   once. `scripts/kernel-replay.sh` bounds them with `KERNEL_REPLAY_THREADS`
@@ -149,8 +152,11 @@ sides' samples and the base's build log as the `bench-results` artifact.
   regression still fails. Only entries the PR adds count: once it merges, they
   are in the base and accept nothing more, and can be removed. Never widen the
   thresholds to make a regression pass: that hides it, where an entry shows it.
-- **If the PR changes what the benchmarks use**, so that they do not build
-  against the base, there is nothing to compare: the step says so and passes.
-  Say in the PR what the change costs, measured by hand.
+- **A benchmark that does not elaborate against the base**, because it uses
+  what the PR adds, is run on this side only and reported as such; keep the
+  benchmark it replaces, unchanged, beside it, so that the A/B still measures
+  the old form against the base. Only if the file's imports are missing from
+  the base does nothing compare: the step then says so and passes, and the PR
+  says what the change costs, measured by hand.
 - **A benchmark added or renamed** is reported as only in one side and does not
   fail the gate.

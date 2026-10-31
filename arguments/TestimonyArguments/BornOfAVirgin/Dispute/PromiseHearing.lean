@@ -1,5 +1,6 @@
 import TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium
 import Testimony.Logic.Credibility
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.PromiseHearing — the promise, heard under each standard
@@ -146,9 +147,9 @@ premises and the re-rated inferences and checked by the kernel. -/
 theorem promise_rerated_defeats (s : Standard) :
     ∀ i j, (promiseRegister.rerated s).defeats i j ↔ promiseRatedDefeats s i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats?
+  refine Horn.defeats_iff_of_certified
     (promise_rerated_strength s i) (promise_rerated_strength s j) ?_
-  cases s <;> cases i <;> cases j <;> decide +kernel
+  cases s <;> cases i <;> cases j <;> horn_certify
 
 /-- The dispute at a standard's ratings, in the form the verdict solver computes
 with. -/

@@ -5,6 +5,7 @@ import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
 import Testimony.Logic.Map
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Septuagint — what the Septuagint's word meant
@@ -401,35 +402,35 @@ theorem dinahCase_strength : dinahCase.strength = 1 := by decide
 with what it means — denies the witness's ground that παρθένος means a virgin,
 which, cited `disputed`, does not outrank him. -/
 theorem drift_defeats_septuagint : Defeats driftObjection septuagintWitness :=
-  Horn.defeats_of_defeats? driftObjection_strength septuagintWitness_strength
-    (by decide +kernel)
+  Horn.defeats_of_certified driftObjection_strength septuagintWitness_strength
+    (by horn_certify)
 
 /-- **The witness defeats Wegner back**, so the two stand off. It holds that the
 word means a virgin, which denies what Wegner concludes, and he is no stronger
 than it. -/
 theorem septuagint_defeats_drift : Defeats septuagintWitness driftObjection :=
-  Horn.defeats_of_defeats? septuagintWitness_strength driftObjection_strength
-    (by decide +kernel)
+  Horn.defeats_of_certified septuagintWitness_strength driftObjection_strength
+    (by horn_certify)
 
 /-- **Wegner defeats Rico and Gentry.** His conclusion denies theirs. -/
 theorem drift_defeats_usage : Defeats driftObjection usageCase :=
-  Horn.defeats_of_defeats? driftObjection_strength usageCase_strength (by decide +kernel)
+  Horn.defeats_of_certified driftObjection_strength usageCase_strength (by horn_certify)
 
 /-- **Rico and Gentry defeat Wegner.** Their conclusion denies his. -/
 theorem usage_defeats_drift : Defeats usageCase driftObjection :=
-  Horn.defeats_of_defeats? usageCase_strength driftObjection_strength (by decide +kernel)
+  Horn.defeats_of_certified usageCase_strength driftObjection_strength (by horn_certify)
 
 /-- **Wegner defeats the case from the laws.** That the word had not yet come to
 mean "virgin" excludes that the laws used it in that sense, because a sense the
 word has in one passage of the Septuagint is a sense of the Septuagint's Greek.
 The laws, at `disputed`, are no stronger than he. -/
 theorem drift_defeats_laws : Defeats driftObjection lawsCase :=
-  Horn.defeats_of_defeats? driftObjection_strength lawsCase_strength (by decide +kernel)
+  Horn.defeats_of_certified driftObjection_strength lawsCase_strength (by horn_certify)
 
 /-- **The case from the laws defeats Wegner.** Their sense "virgin" excludes his
 "not yet 'virgin'", and he is no stronger than they. -/
 theorem laws_defeats_drift : Defeats lawsCase driftObjection :=
-  Horn.defeats_of_defeats? lawsCase_strength driftObjection_strength (by decide +kernel)
+  Horn.defeats_of_certified lawsCase_strength driftObjection_strength (by horn_certify)
 
 /-- **Wegner does not defeat the status reading.** That the word had not yet
 come to mean "virgin" excludes that Genesis 34:3 uses it in that sense, by the
@@ -437,13 +438,13 @@ same definition, so he attacks it. But a rebuttal succeeds only if the attacker
 is no weaker than the attacked, and Wegner, whose step is `disputed`, is weaker
 than the status reading, whose step is `plausible`. -/
 theorem drift_does_not_defeat_dinah : ¬ Defeats driftObjection dinahCase :=
-  (Horn.defeats_iff_of_defeats? (P := False) driftObjection_strength dinahCase_strength
-    (by decide +kernel)).mp
+  (Horn.defeats_iff_of_certified (P := False) driftObjection_strength dinahCase_strength
+    (by horn_certify)).mp
 
 /-- **The status reading defeats Wegner.** Its sense "virgin" at Genesis 34:3
 excludes his "not yet 'virgin'", and he is no stronger than it. -/
 theorem dinah_defeats_drift : Defeats dinahCase driftObjection :=
-  Horn.defeats_of_defeats? dinahCase_strength driftObjection_strength (by decide +kernel)
+  Horn.defeats_of_certified dinahCase_strength driftObjection_strength (by horn_certify)
 
 /-! ### The dispute -/
 
@@ -549,9 +550,9 @@ parties hold by `Horn.defeats?` and checked by the kernel. -/
 theorem septuagintDispute_defeats :
     ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (septuagintPartyNode_strength i)
+  refine Horn.defeats_iff_of_certified (septuagintPartyNode_strength i)
     (septuagintPartyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def septuagintFinite : Solver.Finite septuagintDispute.defeats where

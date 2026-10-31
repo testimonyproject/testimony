@@ -72,6 +72,27 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 |---|---|---|---:|---:|---:|---|
 | 1 | Bound the kernel replay's concurrent environments to 2, and run `leanchecker` without `lake env` | replay memory | killed at ≥ 13 GiB | 8.9 GiB, 293 s | — | kept |
 | 2 | Ask each question of satisfiability once (#177) | the AIF check | 67.4 s | 3.75 s | 0.008 | kept |
+| 3 | The kernel checks certificates instead of searching (#183) | the defeat tables | 14.2 s, 185 MiB | 7.1 s, 92 MiB | 0.008 | kept |
+
+Round 3, measured on one side of a `scripts/bench-ab.sh` run against `main`,
+five interleaved rounds: each table is benchmarked twice, searched in the
+kernel as before and certified, and the two are compared. A profile of one sola
+fide cell found that converting a party's position to clauses took 17 ms a
+question, and propagating to a fixed point, in the kernel, about 85 ms; atom
+comparisons cost nothing that mattered. So the search now runs at elaboration,
+and the kernel checks what it found: a model, against every clause once, or
+the clauses that fired, replayed once (`Horn.clausesSatisfiableBy?`,
+`Testimony.Logic.Certificate`). Each position is converted once per cell, and
+the search is not specialized at each call, which had cost 50 ms a cell in
+compilation. Half of sola fide's table fell from 14.2 s to 7.1 s (−50%,
+p = 0.008) and its peak memory from 185 to 92 MiB; the Septuagint's from
+3.25 s to 1.53 s (−53%, p = 0.008), 32 to 16 MiB; one cell from 101 to 61 ms
+(p = 0.016). Every searched benchmark matched `main` (every p ≥ 0.06), and the
+calibration benchmark showed no drift. Measured by hand on the same machine,
+clean: the arguments' `lake build` fell from 363.5 s to 308.7 s (−15%),
+`SolaFide.Dispute` from 70 s to 48 s; the build's peak, about 13.8 GiB summed
+over its parallel jobs, did not move, and the kernel replay took 261 s at
+8.5 GiB against `main`'s 329 s at 8.1 GiB, one run each.
 
 Round 2, `scripts/bench-ab.sh` against the commit before, five interleaved
 rounds. `Horn.clausesSatisfiable?` propagated up to five times per question,
@@ -92,7 +113,9 @@ of memory. Two run in 293 s; one in 500 s with about 5.2 GiB.
 
 ## Fixed points
 
-None yet. After round 2 the largest benchmark is half of sola fide's defeat
-table, 16 s and 203 MiB, decided in the kernel; the repeated work the kernel
-was already sharing is not what costs it. Its next hypothesis is that every
-satisfiability check propagates from nothing (#179).
+None yet. After round 3 the largest benchmarks are still the defeat tables,
+now about 100 ms a sola fide cell: half of it the kernel's check, of which the
+conversion of both positions to clauses is most, and half the search at
+elaboration, in the interpreter. The next hypotheses are bitmask sets for the
+replay as well as the model (#180), and the certified forms for the verdicts,
+assessments and ratings, which still search in the kernel.

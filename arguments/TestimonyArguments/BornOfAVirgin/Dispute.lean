@@ -5,6 +5,7 @@ import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
 import Testimony.Logic.Map
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14
@@ -283,7 +284,7 @@ premises by `Horn.defeats?` and checked by the kernel. -/
 negation of the premise that Isaiah 7:14 predicts a virgin birth, and that
 premise, cited `disputed`, does not outrank it. -/
 theorem critical_defeats_christian : Defeats criticalDenial christian :=
-  Horn.defeats_of_defeats? criticalDenial_strength christian_strength (by decide +kernel)
+  Horn.defeats_of_certified criticalDenial_strength christian_strength (by horn_certify)
 
 /-- The scriptural reading does attack the critical denial: it concludes the
 opposite. -/
@@ -324,7 +325,7 @@ the weakest link on each side is `disputed`, so neither outranks the other, and
 each defeats the other. -/
 @[headline]
 theorem christian_defeats_critical : Defeats christian criticalDenial :=
-  Horn.defeats_of_defeats? christian_strength criticalDenial_strength (by decide +kernel)
+  Horn.defeats_of_certified christian_strength criticalDenial_strength (by horn_certify)
 
 #print axioms christian_defeats_critical
 
@@ -332,34 +333,34 @@ theorem christian_defeats_critical : Defeats christian criticalDenial :=
 premise that a near-term sign excludes a messianic sense, and that premise,
 cited `disputed`, does not outrank him. -/
 theorem berry_defeats_critical : Defeats berryObjection criticalDenial :=
-  Horn.defeats_of_defeats? berryObjection_strength criticalDenial_strength (by decide +kernel)
+  Horn.defeats_of_certified berryObjection_strength criticalDenial_strength (by horn_certify)
 
 /-- **Postell defeats the critical denial**, on the same premise from different
 grounds. -/
 theorem postell_defeats_critical : Defeats postellParity criticalDenial :=
-  Horn.defeats_of_defeats? postellParity_strength criticalDenial_strength (by decide +kernel)
+  Horn.defeats_of_certified postellParity_strength criticalDenial_strength (by horn_certify)
 
 /-- **The Micah counterexample defeats the critical denial**, on the same
 premise as Berry and Postell. -/
 theorem micah_defeats_critical : Defeats micahParity criticalDenial :=
-  Horn.defeats_of_defeats? micahParity_strength criticalDenial_strength (by decide +kernel)
+  Horn.defeats_of_certified micahParity_strength criticalDenial_strength (by horn_certify)
 
 /-- **Motyer defeats the critical denial**, by entailing the negation of its
 other premise: that 7:14 is a near-term sign to Ahaz, cited `disputed`. -/
 theorem motyer_defeats_critical : Defeats motyerReply criticalDenial :=
-  Horn.defeats_of_defeats? motyerReply_strength criticalDenial_strength (by decide +kernel)
+  Horn.defeats_of_certified motyerReply_strength criticalDenial_strength (by horn_certify)
 
 /-- **The critical denial defeats Berry back.** It holds the premise Berry
 denies, so it rebuts him, and Berry is no stronger than it: his inference is
 contested as the critic's premises are. -/
 theorem critical_defeats_berry : Defeats criticalDenial berryObjection :=
-  Horn.defeats_of_defeats? criticalDenial_strength berryObjection_strength (by decide +kernel)
+  Horn.defeats_of_certified criticalDenial_strength berryObjection_strength (by horn_certify)
 
 /-- **The critical denial defeats Motyer back**, for the same reason: it holds
 the near-term premise he denies, and his inference is contested by the readers
 who identify the two children. -/
 theorem critical_defeats_motyer : Defeats criticalDenial motyerReply :=
-  Horn.defeats_of_defeats? criticalDenial_strength motyerReply_strength (by decide +kernel)
+  Horn.defeats_of_certified criticalDenial_strength motyerReply_strength (by horn_certify)
 
 /-! ### What does not defeat -/
 
@@ -370,7 +371,7 @@ his observations, and can grant his step too, by dating Isaiah 9 and 11 later
 than 7:14 — off its Assyrian timeline — so that one of the step's grounds
 fails (`critic_grants_postells_step_by_dating_the_oracles_later`). -/
 theorem critical_does_not_defeat_postell : ¬ Defeats criticalDenial postellParity :=
-  Horn.not_defeats_of_defeats? criticalDenial_strength postellParity_strength (by decide +kernel)
+  Horn.not_defeats_of_certified criticalDenial_strength postellParity_strength (by horn_certify)
 
 /-- **The critical denial does not defeat the Micah counterexample**, for the
 reason it does not defeat Postell: it is weaker, and it contradicts none of the
@@ -378,7 +379,7 @@ counterexample's premises. The critic can grant its step by reading Micah 5:2
 of a near-term Davidic king rather than messianically
 (`critic_grants_the_micah_step_by_a_royal_reading`). -/
 theorem critical_does_not_defeat_micah : ¬ Defeats criticalDenial micahParity :=
-  Horn.not_defeats_of_defeats? criticalDenial_strength micahParity_strength (by decide +kernel)
+  Horn.not_defeats_of_certified criticalDenial_strength micahParity_strength (by horn_certify)
 
 /-! ### Why these are not counters
 
@@ -522,8 +523,8 @@ checked by the kernel; the table is what the computation is checked
 against. -/
 theorem isaiahDispute_defeats : ∀ i j, isaiahDispute.defeats i j ↔ partyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def isaiahFinite : Solver.Finite isaiahDispute.defeats where

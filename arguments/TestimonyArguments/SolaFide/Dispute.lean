@@ -5,6 +5,7 @@ import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
 import Testimony.Logic.Map
 import Testimony.Logic.Because
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaFide.Dispute — who prevails over sola fide
@@ -424,43 +425,43 @@ by the kernel: the attack, and the comparison of strengths. -/
 /-- **Trent defeats the Pauline case.** It entails the denial of "not by works",
 so it rebuts sola fide. -/
 theorem trent_defeats_pauline : Defeats tridentineCase paulineCase :=
-  Horn.defeats_of_defeats? tridentineCase_strength paulineCase_strength (by decide +kernel)
+  Horn.defeats_of_certified tridentineCase_strength paulineCase_strength (by horn_certify)
 
 /-- **Trent defeats the dominical case**, on the same rebuttal. -/
 theorem trent_defeats_dominical : Defeats tridentineCase dominicalCase :=
-  Horn.defeats_of_defeats? tridentineCase_strength dominicalCase_strength (by decide +kernel)
+  Horn.defeats_of_certified tridentineCase_strength dominicalCase_strength (by horn_certify)
 
 /-- **Trent defeats the apostolic case**, on the same rebuttal. -/
 theorem trent_defeats_apostolic : Defeats tridentineCase apostolicCase :=
-  Horn.defeats_of_defeats? tridentineCase_strength apostolicCase_strength (by decide +kernel)
+  Horn.defeats_of_certified tridentineCase_strength apostolicCase_strength (by horn_certify)
 
 /-- **The Pauline case defeats Trent back.** It entails "not by works", which Trent denies. -/
 theorem pauline_defeats_trent : Defeats paulineCase tridentineCase :=
-  Horn.defeats_of_defeats? paulineCase_strength tridentineCase_strength (by decide +kernel)
+  Horn.defeats_of_certified paulineCase_strength tridentineCase_strength (by horn_certify)
 
 /-- **The dominical case defeats Trent back.** -/
 theorem dominical_defeats_trent : Defeats dominicalCase tridentineCase :=
-  Horn.defeats_of_defeats? dominicalCase_strength tridentineCase_strength (by decide +kernel)
+  Horn.defeats_of_certified dominicalCase_strength tridentineCase_strength (by horn_certify)
 
 /-- **The apostolic case defeats Trent back.** -/
 theorem apostolic_defeats_trent : Defeats apostolicCase tridentineCase :=
-  Horn.defeats_of_defeats? apostolicCase_strength tridentineCase_strength (by decide +kernel)
+  Horn.defeats_of_certified apostolicCase_strength tridentineCase_strength (by horn_certify)
 
 /-- **The apocalyptic reading defeats Trent.** It holds "not by works" by its
 own step — God's deliverance is conditioned on nothing a person does — and Trent
 denies it. -/
 theorem apocalyptic_defeats_trent : Defeats apocalypticCase tridentineCase :=
-  Horn.defeats_of_defeats? apocalypticCase_strength tridentineCase_strength (by decide +kernel)
+  Horn.defeats_of_certified apocalypticCase_strength tridentineCase_strength (by horn_certify)
 
 /-- **The apocalyptic reading defeats the Pauline case.** It denies the
 objective genitive, a premise of Paul's strand cited `disputed`. -/
 theorem apocalyptic_defeats_pauline : Defeats apocalypticCase paulineCase :=
-  Horn.defeats_of_defeats? apocalypticCase_strength paulineCase_strength (by decide +kernel)
+  Horn.defeats_of_certified apocalypticCase_strength paulineCase_strength (by horn_certify)
 
 /-- **The Pauline case defeats the apocalyptic reading back.** It entails
 justification by faith alone. -/
 theorem pauline_defeats_apocalyptic : Defeats paulineCase apocalypticCase :=
-  Horn.defeats_of_defeats? paulineCase_strength apocalypticCase_strength (by decide +kernel)
+  Horn.defeats_of_certified paulineCase_strength apocalypticCase_strength (by horn_certify)
 
 /-- **The dominical case does not defeat the apocalyptic reading.** Luke 7:50
 says that faith saved her, not that faith alone does; the apocalyptic reading
@@ -468,38 +469,38 @@ grants that faith saves, and denies only that faith is the condition. So Luke's
 case entails nothing the apocalyptic reading denies
 (`luke_grants_the_apocalyptic_conclusion`). -/
 theorem dominical_does_not_defeat_apocalyptic : ¬ Defeats dominicalCase apocalypticCase :=
-  Horn.not_defeats_of_defeats? dominicalCase_strength apocalypticCase_strength (by decide +kernel)
+  Horn.not_defeats_of_certified dominicalCase_strength apocalypticCase_strength (by horn_certify)
 
 /-- **Nor does the apostolic case**, for the same reason: Peter at Jerusalem
 says faith suffices, not that it alone does
 (`peter_grants_the_apocalyptic_conclusion`). -/
 theorem apostolic_does_not_defeat_apocalyptic : ¬ Defeats apostolicCase apocalypticCase :=
-  Horn.not_defeats_of_defeats? apostolicCase_strength apocalypticCase_strength (by decide +kernel)
+  Horn.not_defeats_of_certified apostolicCase_strength apocalypticCase_strength (by horn_certify)
 
 /-- **Sanders defeats the Pauline case.** Covenantal nomism, with Dunn's
 inference, denies the ἔργα νόμου premise. -/
 theorem sanders_defeats_pauline : Defeats sandersCase paulineCase :=
-  Horn.defeats_of_defeats? sandersCase_strength paulineCase_strength (by decide +kernel)
+  Horn.defeats_of_certified sandersCase_strength paulineCase_strength (by horn_certify)
 
 /-- **The Pauline case defeats Sanders back.** It holds the premise Sanders' conclusion denies. -/
 theorem pauline_defeats_sanders : Defeats paulineCase sandersCase :=
-  Horn.defeats_of_defeats? paulineCase_strength sandersCase_strength (by decide +kernel)
+  Horn.defeats_of_certified paulineCase_strength sandersCase_strength (by horn_certify)
 
 /-- **Sanders defeats the critics.** Their conclusions contradict. -/
 theorem sanders_defeats_critics : Defeats sandersCase criticsCase :=
-  Horn.defeats_of_defeats? sandersCase_strength criticsCase_strength (by decide +kernel)
+  Horn.defeats_of_certified sandersCase_strength criticsCase_strength (by horn_certify)
 
 /-- **The critics defeat Sanders.** They deny covenantal nomism, his ground. -/
 theorem critics_defeat_sanders : Defeats criticsCase sandersCase :=
-  Horn.defeats_of_defeats? criticsCase_strength sandersCase_strength (by decide +kernel)
+  Horn.defeats_of_certified criticsCase_strength sandersCase_strength (by horn_certify)
 
 /-- **Jervell defeats the apostolic case.** He denies the yoke premise. -/
 theorem jervell_defeats_apostolic : Defeats jervellCase apostolicCase :=
-  Horn.defeats_of_defeats? jervellCase_strength apostolicCase_strength (by decide +kernel)
+  Horn.defeats_of_certified jervellCase_strength apostolicCase_strength (by horn_certify)
 
 /-- **The apostolic case defeats Jervell back.** It holds the premise his conclusion denies. -/
 theorem apostolic_defeats_jervell : Defeats apostolicCase jervellCase :=
-  Horn.defeats_of_defeats? apostolicCase_strength jervellCase_strength (by decide +kernel)
+  Horn.defeats_of_certified apostolicCase_strength jervellCase_strength (by horn_certify)
 
 /-! ### What does not defeat
 
@@ -599,12 +600,12 @@ denying that faith is its condition. Why, premise by premise:
 `apocalyptic_grants_sola_fide_as_stated` and
 `apocalyptic_grants_the_dominical_step`. -/
 theorem apocalyptic_does_not_defeat_dominical : ¬ Defeats apocalypticCase dominicalCase :=
-  Horn.not_defeats_of_defeats? apocalypticCase_strength dominicalCase_strength (by decide +kernel)
+  Horn.not_defeats_of_certified apocalypticCase_strength dominicalCase_strength (by horn_certify)
 
 /-- **Nor the apostolic case**, for the same reasons
 (`apocalyptic_grants_the_apostolic_step`). -/
 theorem apocalyptic_does_not_defeat_apostolic : ¬ Defeats apocalypticCase apostolicCase :=
-  Horn.not_defeats_of_defeats? apocalypticCase_strength apostolicCase_strength (by decide +kernel)
+  Horn.not_defeats_of_certified apocalypticCase_strength apostolicCase_strength (by horn_certify)
 
 /-- **Trent defeats the apocalyptic reading.** They agree on its conclusion —
 justification is not by faith alone — but the apocalyptic reading *derives*
@@ -613,27 +614,27 @@ nothing a person does), and Trent denies it: works done in grace merit an
 increase of justification. So Trent rebuts the apocalyptic reading on a claim
 it derives (`RebutsStep`). -/
 theorem trent_defeats_apocalyptic : Defeats tridentineCase apocalypticCase :=
-  Horn.defeats_of_defeats? tridentineCase_strength apocalypticCase_strength (by decide +kernel)
+  Horn.defeats_of_certified tridentineCase_strength apocalypticCase_strength (by horn_certify)
 
 /-- **Paul's gospel defeats Trent.** It entails the denial of Trent's
 definition — justification is not the renewal of the inward man — and so
 undermines Trent at that premise (`whereTrentPartsFromPaul` says where). -/
 theorem gospel_defeats_trent : Defeats galatianGospel tridentineCase :=
-  Horn.defeats_of_defeats? galatianGospel_strength tridentineCase_strength (by decide +kernel)
+  Horn.defeats_of_certified galatianGospel_strength tridentineCase_strength (by horn_certify)
 
 /-- **Trent defeats Paul's gospel back**, by the same contradiction from the
 other side: its definition rebuts the gospel line's conclusion, and both rest on
 something rated `disputed`. -/
 theorem trent_defeats_gospel : Defeats tridentineCase galatianGospel :=
-  Horn.defeats_of_defeats? tridentineCase_strength galatianGospel_strength (by decide +kernel)
+  Horn.defeats_of_certified tridentineCase_strength galatianGospel_strength (by horn_certify)
 
 /-- **Paul's word defeats Trent read as a claim about it.** Trent, so read,
 derives that δικαιόω denotes renewal; Paul's word entails that it does not, and
 so rebuts the step by which Trent derives it (`RebutsStep`). The attack succeeds
 because Trent's weakest link is not above the lexical case's. -/
 theorem lexical_defeats_trent_on_pauls_word : Defeats lexicalCase tridentineOnPaulsWord :=
-  Horn.defeats_of_defeats? lexicalCase_strength tridentineOnPaulsWord_strength
-    (by decide +kernel)
+  Horn.defeats_of_certified lexicalCase_strength tridentineOnPaulsWord_strength
+    (by horn_certify)
 
 /-- **And the reply fails.** Trent, read as a claim about Paul's word, attacks
 the lexical case's step in turn — but its weakest link is Trent's definition,
@@ -641,8 +642,8 @@ rated `disputed`, and the lexical case's is `wellSupported`. A weaker argument's
 rebuttal does not defeat a stronger one. -/
 theorem trent_on_pauls_word_does_not_defeat_lexical :
     ¬ Defeats tridentineOnPaulsWord lexicalCase :=
-  Horn.not_defeats_of_defeats? tridentineOnPaulsWord_strength lexicalCase_strength
-    (by decide +kernel)
+  Horn.not_defeats_of_certified tridentineOnPaulsWord_strength lexicalCase_strength
+    (by horn_certify)
 
 /-! ### Why these are not counters
 
@@ -932,17 +933,17 @@ stays within the heartbeat budget. -/
 private theorem solaFideDispute_defeats_first (i : Party)
     (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
+  refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 /-- The other six rows. -/
 private theorem solaFideDispute_defeats_second (i : Party)
     (hi : i ∈ [.critics, .jervell, .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
+  refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 /-- **Who defeats whom**, all 144 pairs. Trent and each Reformed strand defeat
 each other. The apocalyptic reading and Paul defeat each other; it and Luke's

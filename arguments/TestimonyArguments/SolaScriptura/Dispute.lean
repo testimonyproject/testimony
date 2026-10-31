@@ -4,6 +4,7 @@ import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
 import Testimony.Logic.Map
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers
@@ -188,8 +189,8 @@ by the kernel — the defeats, and the absences of defeat, alike. -/
 theorem mark7Dispute_defeats :
     ∀ i j, mark7Dispute.defeats i j ↔ mark7PartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (mark7PartyNode_strength i) (mark7PartyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  refine Horn.defeats_iff_of_certified (mark7PartyNode_strength i) (mark7PartyNode_strength j) ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def mark7Finite : Solver.Finite mark7Dispute.defeats where

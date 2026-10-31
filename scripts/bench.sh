@@ -56,12 +56,12 @@ out, commit, lean, FILE = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
 
 def lean_run(extra_env):
+    """The file's output. An error elsewhere in the file does not stop it: a
+    benchmark that does not elaborate on this tree, because it uses what the
+    tree does not have, gives no result, and the others still do."""
     proc = subprocess.run([lean, FILE], capture_output=True, text=True,
                           env={**os.environ, **extra_env})
-    if proc.returncode != 0:
-        sys.stdout.write(proc.stdout + proc.stderr)
-        sys.exit(proc.returncode)
-    return proc.stdout
+    return proc.stdout + proc.stderr
 
 
 filter_ = os.environ.get("BENCH_FILTER", "")
@@ -78,14 +78,18 @@ for name in names:
         r"bench (.+?): first ([0-9.]+) ms, min ([0-9.]+) ms, median ([0-9.]+) ms, "
         r"peak memory ([0-9.]+) MiB, samples \[([0-9., ]*)\]", text)
     if not m:
-        sys.stdout.write(text)
-        sys.exit(f"bench: no result for {name!r}")
+        errors = [l for l in text.splitlines() if ": error" in l]
+        print(f"  {name}: no result, left out" + (f" ({errors[0]})" if errors else ""),
+              file=sys.stderr)
+        continue
     rows.append((name, float(m[2]), float(m[3]), float(m[4]), float(m[5]),
                  [float(x) for x in m[6].split(",")]))
     print(f"  {name}: median {float(m[4]):.1f} ms, peak +{float(m[5]):.0f} MiB",
           file=sys.stderr)
 wall = time.time() - t0
 
+if not rows:
+    sys.exit("bench: no benchmark gave a result")
 width = max(len(r[0]) for r in rows)
 print(f"{'benchmark':<{width}}  {'first ms':>10}  {'min ms':>10}  {'median ms':>10}  "
       f"{'peak MiB':>9}  runs")

@@ -6,6 +6,7 @@ import Testimony.Logic.Verdict
 import Testimony.Logic.Dilemma
 import Testimony.Logic.Contest
 import Testimony.Logic.Warrant
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaFide.James — James 2:24, and the increase of justification
@@ -821,8 +822,8 @@ by the kernel. -/
 theorem jamesDispute_defeats :
     ∀ i j, jamesDispute.defeats i j ↔ jamesPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (jamesPartyNode_strength i) (jamesPartyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  refine Horn.defeats_iff_of_certified (jamesPartyNode_strength i) (jamesPartyNode_strength j) ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def jamesFinite : Solver.Finite jamesDispute.defeats where

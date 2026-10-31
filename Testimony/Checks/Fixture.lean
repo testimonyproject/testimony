@@ -5,6 +5,7 @@ import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Semantics.Meaning
+import Testimony.Logic.Certificate
 
 /-!
 # Testimony.Checks.Fixture — the library's own case, for its checks
@@ -218,8 +219,8 @@ theorem node_strength : ∀ i, (node i).strength = strength i
 /-- Who defeats whom, computed and checked by the kernel. -/
 theorem dispute_defeats : ∀ i j, dispute.defeats i j ↔ defeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (node_strength i) (node_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  refine Horn.defeats_iff_of_certified (node_strength i) (node_strength j) ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute, in the form the solver and the AIF check read. -/
 def finite : Solver.Finite dispute.defeats where

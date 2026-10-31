@@ -451,6 +451,122 @@ theorem not_satisfiable_of_clausesSatisfiable? {cs : List (Clause α)}
     exact hn h (hv.2 h hh) hwh
   · split at h <;> simp at h
 
+/-! ### Certificates
+
+`clausesSatisfiable?` is what the kernel runs when a decision is proved by
+`decide +kernel` alone: unit propagation to a fixed point, pass after pass, by
+term rewriting. That search is most of what a defeat table costs to check, and
+the kernel need not do it. Given the answer, found elsewhere, it only has to
+check it:
+
+- **a model** is checked by evaluating every clause once under it;
+- **a refutation** is checked by replaying the propagation that found it, only
+  the clauses that fired, in the order they fired, and confirming that the
+  clause it ends on is violated.
+
+A `Hint` is that answer, and `clausesSatisfiableBy?` checks it. A hint that
+does not check gives `none`, never a wrong answer: where a hint comes from does
+not matter to soundness. `Testimony.Logic.Certificate` finds them at
+elaboration time, and the kernel checks them. Nothing found outside the kernel
+is trusted, unlike the banned `native_decide`, which trusts compiled code's
+answer. -/
+
+/-- What the kernel is given for one question of satisfiability. -/
+inductive Hint where
+  /-- No certificate: run the search. -/
+  | search
+  /-- A model, as the atoms it makes true: atom `a` holds when bit `index a` of
+  `yes` is set, for the `index` the check is made with. -/
+  | model (yes : ℕ)
+  /-- A refutation: the positions of the clauses whose propagation settles
+  what every model must have, in the order they fire, and the position of the
+  clause that is then violated. -/
+  | refute (trace : List ℕ) (last : ℕ)
+  deriving Repr, Inhabited
+
+/-- What propagation settles from nothing, firing the clauses at the positions
+in `trace`, in order. A position past the end fires nothing. -/
+def replay (cs : List (Clause α)) (trace : List ℕ) : Settled α :=
+  trace.foldl (fun s i => match cs[i]? with | some c => propagate s c | none => s) ⟨[], []⟩
+
+/-- **Satisfiability, checked from a hint.** A model is checked against every
+clause: `some true` if it satisfies them all. A refutation is replayed: `some
+false` if the clause it ends on is violated by what the replay settled. Either
+gives `none` if the check fails, and `search` runs `clausesSatisfiable?`.
+
+A model is read through `index`, any map from atoms to bit positions. Atoms
+sharing a position share a value, which can only make a model fail to check,
+never make a non-model check: whatever `index` is, the model checked is a
+valuation. -/
+def clausesSatisfiableBy? (index : α → ℕ) (cs : List (Clause α)) : Hint → Option Bool
+  | .search => clausesSatisfiable? cs
+  | .model yes => if cs.all (satisfiedBy fun a => yes.testBit (index a)) then some true else none
+  | .refute trace last =>
+    match cs[last]? with
+    | some c => if violated (replay cs trace) c then some false else none
+    | none => none
+
+/-- A replay settles only what every model of the clauses has. -/
+theorem replay_sound {cs : List (Clause α)} {w : Valuation α} (hw : ∀ c ∈ cs, c.Holds w)
+    (trace : List ℕ) : (replay cs trace).Sound w := by
+  unfold replay
+  suffices ∀ (tr : List ℕ) (s : Settled α), s.Sound w →
+      (tr.foldl (fun s i => match cs[i]? with | some c => propagate s c | none => s) s).Sound w
+    from this trace _ ⟨by simp, by simp⟩
+  intro tr
+  induction tr with
+  | nil => exact fun _ hs => hs
+  | cons i rest ih =>
+    intro s hs
+    simp only [List.foldl_cons]
+    apply ih
+    split
+    · rename_i c hc
+      exact propagate_sound (hw c (List.mem_of_getElem? hc)) hs
+    · exact hs
+
+/-- `some true` from a hint is a model. -/
+theorem satisfiable_of_clausesSatisfiableBy? {index : α → ℕ} {cs : List (Clause α)} {h : Hint}
+    (e : clausesSatisfiableBy? index cs h = some true) :
+    ∃ w : Valuation α, ∀ c ∈ cs, c.Holds w := by
+  cases h with
+  | search => exact satisfiable_of_clausesSatisfiable? e
+  | model yes =>
+    simp only [clausesSatisfiableBy?] at e
+    split at e
+    · rename_i hall
+      exact ⟨_, fun c hc => holds_of_satisfiedBy (List.all_eq_true.mp hall c hc)⟩
+    · simp at e
+  | refute trace last =>
+    simp only [clausesSatisfiableBy?] at e
+    split at e
+    · split at e <;> simp at e
+    · simp at e
+
+/-- `some false` from a hint is a refutation. -/
+theorem not_satisfiable_of_clausesSatisfiableBy? {index : α → ℕ} {cs : List (Clause α)}
+    {h : Hint} (e : clausesSatisfiableBy? index cs h = some false) :
+    ¬ ∃ w : Valuation α, ∀ c ∈ cs, c.Holds w := by
+  rintro ⟨w, hw⟩
+  cases h with
+  | search => exact not_satisfiable_of_clausesSatisfiable? e ⟨w, hw⟩
+  | model yes =>
+    simp only [clausesSatisfiableBy?] at e
+    split at e <;> simp at e
+  | refute trace last =>
+    simp only [clausesSatisfiableBy?] at e
+    split at e
+    · rename_i c hc
+      split at e
+      · rename_i hv
+        simp only [violated, Bool.and_eq_true, List.all_eq_true, List.elem_eq_mem,
+          decide_eq_true_eq] at hv
+        obtain ⟨hy, hn⟩ := replay_sound hw trace
+        obtain ⟨h, hh, hwh⟩ := hw c (List.mem_of_getElem? hc) fun a ha => hy a (hv.1 a ha)
+        exact hn h (hv.2 h hh) hwh
+      · simp at e
+    · simp at e
+
 /-! ### Formulas -/
 
 /-- Whether a list of formulas can all hold together, decided through its
@@ -473,6 +589,39 @@ theorem not_satisfiable_of_satisfiable? {Γ : List (Formula α)}
   obtain ⟨w, hw⟩ := satisfiable_iff.mp hs
   exact not_satisfiable_of_clausesSatisfiable? h ⟨w, (clausesOf_sound hcs).mp hw⟩
 
+/-- Whether a list of formulas and one more can all hold together, from a hint:
+`base` is the list's clauses, converted once and shared by every question asked
+of that list. -/
+def satisfiableWith? (index : α → ℕ) (h : Hint) (base : Option (List (Clause α)))
+    (φ : Formula α) : Option Bool :=
+  base.bind fun cs => (toClauses φ).bind fun d => clausesSatisfiableBy? index (cs ++ d) h
+
+theorem satisfiable_of_satisfiableWith? {index : α → ℕ} {h : Hint} {Γ : List (Formula α)}
+    {φ : Formula α} (e : satisfiableWith? index h (clausesOf Γ) φ = some true) :
+    Satisfiable (Γ ++ [φ]) := by
+  simp only [satisfiableWith?, Option.bind_eq_some_iff] at e
+  obtain ⟨cs, hcs, d, hd, e⟩ := e
+  obtain ⟨w, hw⟩ := satisfiable_of_clausesSatisfiableBy? e
+  have hΓ := (clausesOf_sound hcs).mpr fun c hc => hw c (List.mem_append_left _ hc)
+  have hφ := (toClauses_sound hd).mpr fun c hc => hw c (List.mem_append_right _ hc)
+  refine satisfiable_iff.mpr ⟨w, ?_⟩
+  simp only [List.mem_append, List.mem_singleton]
+  rintro ψ (hψ | rfl)
+  · exact hΓ ψ hψ
+  · exact hφ
+
+theorem not_satisfiable_of_satisfiableWith? {index : α → ℕ} {h : Hint} {Γ : List (Formula α)}
+    {φ : Formula α} (e : satisfiableWith? index h (clausesOf Γ) φ = some false) :
+    ¬ Satisfiable (Γ ++ [φ]) := by
+  simp only [satisfiableWith?, Option.bind_eq_some_iff] at e
+  obtain ⟨cs, hcs, d, hd, e⟩ := e
+  intro hs
+  obtain ⟨w, hw⟩ := satisfiable_iff.mp hs
+  refine not_satisfiable_of_clausesSatisfiableBy? e ⟨w, fun c hc => ?_⟩
+  rcases List.mem_append.mp hc with hc | hc
+  · exact (clausesOf_sound hcs).mp (fun ψ hψ => hw ψ (List.mem_append_left _ hψ)) c hc
+  · exact (toClauses_sound hd).mp (hw φ (by simp)) c hc
+
 /-! ### Attacks and defeats
 
 The strengths of the two packages are arguments rather than computed inside:
@@ -482,24 +631,40 @@ proved once already. The theorems take those proofs, so a wrong strength cannot
 be passed in.
 
 Every check is over what a package holds (`ArgumentPackage.held`): its premises
-and its argument's meaning postulates. -/
+and its argument's meaning postulates. What each package holds is converted to
+clauses once, and every question asked of it shares them.
+
+Each check takes the hint for its question (`hintAt`), by position: the
+rebuttal first, then one per premise of the target, then two per step of the
+target's, what it delivers and what the attacker denies. With no hints every
+question is searched, and that is `defeats?`; with hints from
+`Testimony.Logic.Certificate` they are checked instead, and that is
+`defeatsBy?`. Both are sound for every hint, so the theorems are stated once,
+over `defeatsBy?`. -/
 
 section Attacks
 
 variable [HasPostulates α]
 
-/-- Whether `a`, of strength `s`, defeats `b` by undermining its premise `φ`:
-`some true` if `a`'s premises cannot hold with `φ` and `φ` does not outrank `a`,
-`some false` if either fails, `none` if a formula it needed has no clauses. -/
-def undermines? (a b : ArgumentPackage α) (s : ℕ) (φ : Formula α) : Option Bool :=
+/-- The hint for the question at position `i` of a cell: `search` if there is
+none. -/
+def hintAt (hints : List Hint) (i : ℕ) : Hint := hints.getD i .search
+
+/-- Whether `a`, of strength `s`, defeats `b` by undermining its premise `φ`,
+given `ca`, the clauses of what `a` holds: `some true` if `a`'s premises cannot
+hold with `φ` and `φ` does not outrank `a`, `some false` if either fails, `none`
+if a formula it needed has no clauses or the hint does not check. -/
+def undermines? (index : α → ℕ) (h : Hint) (b : ArgumentPackage α)
+    (ca : Option (List (Clause α))) (s : ℕ) (φ : Formula α) : Option Bool :=
   if Outranks b φ s then some false
-  else (satisfiable? (a.held ++ [φ])).map (!·)
+  else (satisfiableWith? index h ca φ).map (!·)
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, by rebutting its
 conclusion, decided the same way. -/
-def rebuts? (a b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
+def rebuts? (index : α → ℕ) (h : Hint) (b : ArgumentPackage α)
+    (ca : Option (List (Clause α))) (s t : ℕ) : Option Bool :=
   if s < t then some false
-  else (satisfiable? (a.held ++ [b.conclusion])).map (!·)
+  else (satisfiableWith? index h ca b.conclusion).map (!·)
 
 /-- A premise as a step a rebuttal can land on: `p ➝ ψ` whose head is not `⊥`,
 as the pair `(p, ψ)`. A premise with head `⊥` denies something; it derives
@@ -529,34 +694,49 @@ theorem mem_stepsOf {Γ : List (Formula α)} {p ψ : Formula α} :
   · rintro ⟨hφ, hne⟩; exact ⟨_, hφ, rfl, hne⟩
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, by rebutting
-what `b`'s step `p ➝ ψ` delivers: `some true` if `b`'s premises entail `ψ`,
-`a`'s entail its negation, and `b` is not stronger than `a`; `some false` if
-either entailment is shown to fail or `b` is stronger; `none` otherwise. Each
-entailment is decided once. -/
-def stepRebuts? (a b : ArgumentPackage α) (s t : ℕ) (ψ : Formula α) : Option Bool :=
+what `b`'s step `p ➝ ψ` delivers, given the clauses of what each holds: `some
+true` if `b`'s premises entail `ψ`, `a`'s entail its negation, and `b` is not
+stronger than `a`; `some false` if either entailment is shown to fail or `b` is
+stronger; `none` otherwise. Each entailment is decided once, `hb` the hint for
+the first and `ha` for the second. -/
+def stepRebuts? (index : α → ℕ) (hb ha : Hint) (ca cb : Option (List (Clause α)))
+    (s t : ℕ) (ψ : Formula α) : Option Bool :=
   if s < t then some false
   else
-    let delivers := satisfiable? (b.held ++ [∼ψ])
-    let denies := satisfiable? (a.held ++ [ψ])
+    let delivers := satisfiableWith? index hb cb (∼ψ)
+    let denies := satisfiableWith? index ha ca ψ
     if delivers = some false ∧ denies = some false then some true
     else if delivers = some true ∨ denies = some true then some false
     else none
 
 /-- Every way `a` could defeat `b`: the rebuttal, each premise of `b`, and each
-claim `b`'s steps deliver. -/
-def defeatChecks (a b : ArgumentPackage α) (s t : ℕ) : List (Option Bool) :=
-  (rebuts? a b s t :: b.premises.map (undermines? a b s)) ++
-    (stepsOf b.premises).map fun q => stepRebuts? a b s t q.2
+claim `b`'s steps deliver, each with its hint. -/
+def defeatChecks (index : α → ℕ) (hints : List Hint) (a b : ArgumentPackage α) (s t : ℕ) :
+    List (Option Bool) :=
+  let ca := clausesOf a.held
+  let cb := clausesOf b.held
+  let n := b.premises.length
+  (rebuts? index (hintAt hints 0) b ca s t ::
+    b.premises.zipIdx.map fun (φ, i) => undermines? index (hintAt hints (i + 1)) b ca s φ) ++
+    (stepsOf b.premises).zipIdx.map fun (q, i) =>
+      stepRebuts? index (hintAt hints (n + 1 + 2 * i)) (hintAt hints (n + 2 + 2 * i)) ca cb s t
+        q.2
 
-/-- Whether `a`, of strength `s`, defeats `b`, of strength `t`: `some true` if
-any way succeeds, `some false` if every way is shown to fail, `none` if some
-check was on a formula without clauses and none succeeded. The checks are made
-once. -/
-def defeats? (a b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
-  let checks := defeatChecks a b s t
+/-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, from hints:
+`some true` if any way succeeds, `some false` if every way is shown to fail,
+`none` if some check was on a formula without clauses, or its hint did not
+check, and none succeeded. The checks are made once. -/
+def defeatsBy? (index : α → ℕ) (hints : List Hint) (a b : ArgumentPackage α) (s t : ℕ) :
+    Option Bool :=
+  let checks := defeatChecks index hints a b s t
   if checks.any (· == some true) then some true
   else if checks.all (· == some false) then some false
   else none
+
+/-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, every question
+searched: `defeatsBy?` with no hints. -/
+def defeats? (a b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
+  defeatsBy? (fun _ => 0) [] a b s t
 
 omit [DecidableEq α] [HasPostulates α] in
 theorem map_not_eq_some {o : Option Bool} {v : Bool} :
@@ -565,114 +745,148 @@ theorem map_not_eq_some {o : Option Bool} {v : Bool} :
   | none => simp
   | some x => cases x <;> cases v <;> simp
 
-theorem undermines?_true {a b : ArgumentPackage α} {φ : Formula α}
-    (h : undermines? a b a.strength φ = some true) :
+theorem undermines?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α} {φ : Formula α}
+    (e : undermines? index h b (clausesOf a.held) a.strength φ = some true) :
     Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength := by
-  unfold undermines? at h
-  split at h
-  · simp at h
+  unfold undermines? at e
+  split at e
+  · simp at e
   · rename_i hno
-    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiable? (map_not_eq_some.mp h)), hno⟩
+    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? (map_not_eq_some.mp e)), hno⟩
 
-theorem undermines?_false {a b : ArgumentPackage α} {φ : Formula α}
-    (h : undermines? a b a.strength φ = some false) :
+theorem undermines?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α} {φ : Formula α}
+    (e : undermines? index h b (clausesOf a.held) a.strength φ = some false) :
     ¬ (Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength) := by
-  unfold undermines? at h
+  unfold undermines? at e
   rintro ⟨hent, hno⟩
-  split at h
+  split at e
   · exact hno (by assumption)
-  · exact entails_neg_iff.mp hent (satisfiable_of_satisfiable? (map_not_eq_some.mp h))
+  · exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
 
-theorem stepRebuts?_true {a b : ArgumentPackage α} {ψ : Formula α}
-    (h : stepRebuts? a b a.strength b.strength ψ = some true) :
+theorem stepRebuts?_true {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPackage α}
+    {ψ : Formula α}
+    (e : stepRebuts? index hb ha (clausesOf a.held) (clausesOf b.held) a.strength b.strength ψ =
+      some true) :
     Entails b.held ψ ∧ Entails a.held (∼ψ) ∧ ¬ a.strength < b.strength := by
-  dsimp only [stepRebuts?] at h
-  split at h
-  · simp at h
+  dsimp only [stepRebuts?] at e
+  split at e
+  · simp at e
   · rename_i hno
-    split at h
+    split at e
     · rename_i hc
-      exact ⟨entails_iff_not_satisfiable.mpr (not_satisfiable_of_satisfiable? hc.1),
-        entails_neg_iff.mpr (not_satisfiable_of_satisfiable? hc.2), hno⟩
-    · split at h <;> simp at h
+      exact ⟨entails_iff_not_satisfiable.mpr (not_satisfiable_of_satisfiableWith? hc.1),
+        entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hc.2), hno⟩
+    · split at e <;> simp at e
 
-theorem stepRebuts?_false {a b : ArgumentPackage α} {ψ : Formula α}
-    (h : stepRebuts? a b a.strength b.strength ψ = some false) :
+theorem stepRebuts?_false {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPackage α}
+    {ψ : Formula α}
+    (e : stepRebuts? index hb ha (clausesOf a.held) (clausesOf b.held) a.strength b.strength ψ =
+      some false) :
     ¬ (Entails b.held ψ ∧ Entails a.held (∼ψ) ∧ ¬ a.strength < b.strength) := by
-  dsimp only [stepRebuts?] at h
-  rintro ⟨hb, ha, hno⟩
-  split at h
+  dsimp only [stepRebuts?] at e
+  rintro ⟨hb', ha', hno⟩
+  split at e
   · exact hno (by assumption)
-  · split at h
-    · simp at h
-    · split at h
+  · split at e
+    · simp at e
+    · split at e
       · rename_i hc
         rcases hc with hc | hc
-        · exact entails_iff_not_satisfiable.mp hb (satisfiable_of_satisfiable? hc)
-        · exact entails_neg_iff.mp ha (satisfiable_of_satisfiable? hc)
-      · simp at h
+        · exact entails_iff_not_satisfiable.mp hb' (satisfiable_of_satisfiableWith? hc)
+        · exact entails_neg_iff.mp ha' (satisfiable_of_satisfiableWith? hc)
+      · simp at e
 
-theorem rebuts?_true {a b : ArgumentPackage α}
-    (h : rebuts? a b a.strength b.strength = some true) :
+theorem rebuts?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α}
+    (e : rebuts? index h b (clausesOf a.held) a.strength b.strength = some true) :
     Rebuts a b ∧ ¬ a.strength < b.strength := by
-  unfold rebuts? at h
-  split at h
-  · simp at h
+  unfold rebuts? at e
+  split at e
+  · simp at e
   · rename_i hno
-    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiable? (map_not_eq_some.mp h)), hno⟩
+    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? (map_not_eq_some.mp e)), hno⟩
 
-theorem rebuts?_false {a b : ArgumentPackage α}
-    (h : rebuts? a b a.strength b.strength = some false) :
+theorem rebuts?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α}
+    (e : rebuts? index h b (clausesOf a.held) a.strength b.strength = some false) :
     ¬ (Rebuts a b ∧ ¬ a.strength < b.strength) := by
-  unfold rebuts? at h
+  unfold rebuts? at e
   rintro ⟨hr, hno⟩
-  split at h
+  split at e
   · exact hno (by assumption)
-  · exact entails_neg_iff.mp hr (satisfiable_of_satisfiable? (map_not_eq_some.mp h))
+  · exact entails_neg_iff.mp hr (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
 
-/-- A defeat, decided. -/
-theorem defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
-    (hs : a.strength = s) (ht : b.strength = t) (h : defeats? a b s t = some true) :
-    Defeats a b := by
+omit [DecidableEq α] [HasPostulates α] in
+theorem mem_of_mem_zipIdx {β : Type} {l : List β} {x : β} {i : ℕ} (h : (x, i) ∈ l.zipIdx) :
+    x ∈ l :=
+  List.mem_of_getElem? (List.mem_zipIdx_iff_getElem?.mp h)
+
+omit [DecidableEq α] [HasPostulates α] in
+theorem exists_mem_zipIdx {β : Type} {l : List β} {x : β} (h : x ∈ l) :
+    ∃ i, (x, i) ∈ l.zipIdx := by
+  obtain ⟨i, hi⟩ := List.mem_iff_getElem?.mp h
+  exact ⟨i, List.mem_zipIdx_iff_getElem?.mpr hi⟩
+
+/-- A defeat, decided from hints. -/
+theorem defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint} {a b : ArgumentPackage α}
+    {s t : ℕ} (hs : a.strength = s) (ht : b.strength = t)
+    (h : defeatsBy? index hints a b s t = some true) : Defeats a b := by
   subst hs ht
-  dsimp only [defeats?] at h
+  dsimp only [defeatsBy?] at h
+  generalize hc : defeatChecks index hints a b a.strength b.strength = checks at h
   split at h
   · rename_i hany
     obtain ⟨x, hx, hxt⟩ := List.any_eq_true.mp hany
     have hxt : x = some true := by simpa using hxt
     subst hxt
+    rw [← hc] at hx
+    dsimp only [defeatChecks] at hx
     rcases List.mem_append.mp hx with hx | hx
     · rcases List.mem_cons.mp hx with hr | hu
       · exact .inr (.inl (rebuts?_true hr.symm))
-      · obtain ⟨φ, hφ, he⟩ := List.mem_map.mp hu
+      · obtain ⟨⟨φ, i⟩, hφ, he⟩ := List.mem_map.mp hu
         obtain ⟨hent, hno⟩ := undermines?_true he
-        exact .inl ⟨φ, ⟨hφ, hent⟩, hno⟩
-    · obtain ⟨⟨p, ψ⟩, hq, he⟩ := List.mem_map.mp hx
+        exact .inl ⟨φ, ⟨mem_of_mem_zipIdx hφ, hent⟩, hno⟩
+    · obtain ⟨⟨⟨p, ψ⟩, i⟩, hq, he⟩ := List.mem_map.mp hx
       obtain ⟨hb, ha, hno⟩ := stepRebuts?_true he
-      obtain ⟨hmem, hne⟩ := mem_stepsOf.mp hq
+      obtain ⟨hmem, hne⟩ := mem_stepsOf.mp (mem_of_mem_zipIdx hq)
       exact .inr (.inr ⟨p, ψ, ⟨hmem, hne, hb, ha⟩, hno⟩)
   · split at h <;> simp at h
 
-/-- A non-defeat, decided. -/
-theorem not_defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
-    (hs : a.strength = s) (ht : b.strength = t) (h : defeats? a b s t = some false) :
-    ¬ Defeats a b := by
+/-- A non-defeat, decided from hints. -/
+theorem not_defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint}
+    {a b : ArgumentPackage α} {s t : ℕ} (hs : a.strength = s) (ht : b.strength = t)
+    (h : defeatsBy? index hints a b s t = some false) : ¬ Defeats a b := by
   subst hs ht
-  dsimp only [defeats?] at h
+  dsimp only [defeatsBy?] at h
+  generalize hc : defeatChecks index hints a b a.strength b.strength = checks at h
   split at h
   · simp at h
   · split at h
     · rename_i hall
+      rw [← hc] at hall
+      dsimp only [defeatChecks] at hall
       have hall := List.all_eq_true.mp hall
       rintro (⟨φ, ⟨hφ, hent⟩, hno⟩ | hr | ⟨p, ψ, ⟨hmem, hne, hb, ha⟩, hno⟩)
-      · have := hall _ (List.mem_append_left _ (List.mem_cons_of_mem _ (List.mem_map_of_mem hφ)))
+      · obtain ⟨i, hi⟩ := exists_mem_zipIdx hφ
+        have := hall _ (List.mem_append_left _ (List.mem_cons_of_mem _ (List.mem_map_of_mem hi)))
         exact undermines?_false (by simpa using this) ⟨hent, hno⟩
       · have := hall _ (List.mem_append_left _ List.mem_cons_self)
         exact rebuts?_false (by simpa using this) hr
-      · have := hall _ (List.mem_append_right _
-          (List.mem_map.mpr ⟨(p, ψ), mem_stepsOf.mpr ⟨hmem, hne⟩, rfl⟩))
+      · obtain ⟨i, hi⟩ := exists_mem_zipIdx (mem_stepsOf.mpr ⟨hmem, hne⟩)
+        have := hall _ (List.mem_append_right _ (List.mem_map_of_mem hi))
         exact stepRebuts?_false (by simpa using this) ⟨hb, ha, hno⟩
     · simp at h
+
+/-- A defeat, decided. -/
+theorem defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
+    (hs : a.strength = s) (ht : b.strength = t) (h : defeats? a b s t = some true) :
+    Defeats a b :=
+  defeats_of_defeatsBy? hs ht h
+
+/-- A non-defeat, decided. -/
+theorem not_defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
+    (hs : a.strength = s) (ht : b.strength = t) (h : defeats? a b s t = some false) :
+    ¬ Defeats a b :=
+  not_defeats_of_defeatsBy? hs ht h
 
 /-- **A cell of a defeat table, from one computation.** If the decision agrees
 with `P`, then `a` defeats `b` exactly when `P`. -/
@@ -684,6 +898,42 @@ theorem defeats_iff_of_defeats? {a b : ArgumentPackage α} {s t : ℕ} {P : Prop
     exact iff_of_true (defeats_of_defeats? hs ht h) hP
   · simp only [hP, decide_false] at h
     exact iff_of_false (not_defeats_of_defeats? hs ht h) hP
+
+/-! ### Certified defeats
+
+The same three theorems, from hints the kernel checks rather than a search it
+runs. Each hypothesis says only that *some* index and hints decide the cell:
+whichever they are, a checked answer is sound. `horn_certify`
+(`Testimony.Logic.Certificate`) finds them and proves the hypothesis. -/
+
+/-- A defeat, from hints the kernel checks. -/
+theorem defeats_of_certified {a b : ArgumentPackage α} {s t : ℕ}
+    (hs : a.strength = s) (ht : b.strength = t)
+    (h : ∃ (index : α → ℕ) (hints : List Hint), defeatsBy? index hints a b s t = some true) :
+    Defeats a b := by
+  obtain ⟨_, _, h⟩ := h
+  exact defeats_of_defeatsBy? hs ht h
+
+/-- A non-defeat, from hints the kernel checks. -/
+theorem not_defeats_of_certified {a b : ArgumentPackage α} {s t : ℕ}
+    (hs : a.strength = s) (ht : b.strength = t)
+    (h : ∃ (index : α → ℕ) (hints : List Hint), defeatsBy? index hints a b s t = some false) :
+    ¬ Defeats a b := by
+  obtain ⟨_, _, h⟩ := h
+  exact not_defeats_of_defeatsBy? hs ht h
+
+/-- **A cell of a defeat table, from hints the kernel checks.** -/
+theorem defeats_iff_of_certified {a b : ArgumentPackage α} {s t : ℕ} {P : Prop} [Decidable P]
+    (hs : a.strength = s) (ht : b.strength = t)
+    (h : ∃ (index : α → ℕ) (hints : List Hint),
+      defeatsBy? index hints a b s t = some (decide P)) :
+    Defeats a b ↔ P := by
+  obtain ⟨_, _, h⟩ := h
+  by_cases hP : P
+  · simp only [hP, decide_true] at h
+    exact iff_of_true (defeats_of_defeatsBy? hs ht h) hP
+  · simp only [hP, decide_false] at h
+    exact iff_of_false (not_defeats_of_defeatsBy? hs ht h) hP
 
 end Attacks
 
