@@ -5,6 +5,7 @@ import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
 import Testimony.Logic.Map
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyExamples.Grits.Dispute — the testimony and the cross-examination weighed
@@ -169,8 +170,8 @@ fail: its weakest link is weaker than the cross-examination's. Every cell is
 computed by `Horn.defeats?` and checked by the kernel. -/
 theorem gritsDispute_defeats : ∀ i j, gritsDispute.defeats i j ↔ sideDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (sideNode_strength i) (sideNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  refine Horn.defeats_iff_of_certified (sideNode_strength i) (sideNode_strength j) ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def gritsFinite : Solver.Finite gritsDispute.defeats where
@@ -282,9 +283,9 @@ cell is computed by `Horn.defeats?` and checked by the kernel. -/
 theorem atTheFastCookDispute_defeats :
     ∀ i j, atTheFastCookDispute.defeats i j ↔ fastCookDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (atTheFastCookNode_strength i)
+  refine Horn.defeats_iff_of_certified (atTheFastCookNode_strength i)
     (atTheFastCookNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute at the fast cook, in the form the verdict solver computes with. -/
 def atTheFastCookFinite : Solver.Finite atTheFastCookDispute.defeats where

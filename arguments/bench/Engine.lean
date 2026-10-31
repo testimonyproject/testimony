@@ -27,7 +27,10 @@ The benchmarks, from the smallest unit up:
 
 - **one defeat cell**: whether the status reading defeats Wegner;
 - **a defeat table**: the dispute over the Septuagint's word, 36 cells, and half
-  of the sola fide dispute, 72 cells;
+  of the sola fide dispute, 72 cells, each two ways: searched in the kernel
+  (`decide +kernel` on `Horn.defeats?`), and certified, the search run at
+  elaboration and only its hints checked in the kernel (`horn_certify`), as the
+  arguments' own tables are proved;
 - **a verdict**: the solver's checked witness for each of the two disputes;
 - **an assessment** and **a rating**: Miller's dissent, and the laws' step;
 - **`establish`** on a package, the tactic every package's soundness uses;
@@ -137,6 +140,18 @@ example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j 
     (septuagintPartyNode_strength j) ?_
   cases i <;> cases j <;> decide +kernel
 
+#bench "cell, certified: status reading defeats Wegner" in
+example : ∃ (index : Claim → ℕ) (hints : List Horn.Hint),
+    Horn.defeatsBy? index hints dinahCase driftObjection 1 0 = some true := by
+  horn_certify
+
+#bench "table, certified: Septuagint, 36 cells" in
+example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
+  intro i j
+  refine Horn.defeats_iff_of_certified (septuagintPartyNode_strength i)
+    (septuagintPartyNode_strength j) ?_
+  cases i <;> cases j <;> horn_certify
+
 #bench "verdict: Septuagint, grounded in stages" in
 example : Verdict septuagintDispute where
   finite := septuagintFinite
@@ -188,6 +203,14 @@ example (i : Party)
   refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+
+#bench (runs := 1) "table, certified: sola fide, first half, 72 cells" in
+example (i : Party)
+    (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
+    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
+  refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 #bench "verdict: sola fide, only Paul's word unanswered" in
 example : Verdict solaFideDispute where

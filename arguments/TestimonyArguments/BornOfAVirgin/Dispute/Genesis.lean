@@ -5,6 +5,7 @@ import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
 import Testimony.Logic.Map
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Genesis — what "her seed" says of a father
@@ -139,19 +140,19 @@ theorem idiomCase_strength : idiomCase.strength = 0 := by decide
 
 /-- **Leupold defeats Luther.** His conclusion denies Luther's. -/
 theorem posterity_defeats_wording : Defeats posterityCase herSeedCase :=
-  Horn.defeats_of_defeats? posterityCase_strength herSeedCase_strength (by decide +kernel)
+  Horn.defeats_of_certified posterityCase_strength herSeedCase_strength (by horn_certify)
 
 /-- **Luther defeats Leupold back**, so the two stand off. -/
 theorem wording_defeats_posterity : Defeats herSeedCase posterityCase :=
-  Horn.defeats_of_defeats? herSeedCase_strength posterityCase_strength (by decide +kernel)
+  Horn.defeats_of_certified herSeedCase_strength posterityCase_strength (by horn_certify)
 
 /-- **Lewis defeats Luther.** His conclusion denies Luther's. -/
 theorem idiom_defeats_wording : Defeats idiomCase herSeedCase :=
-  Horn.defeats_of_defeats? idiomCase_strength herSeedCase_strength (by decide +kernel)
+  Horn.defeats_of_certified idiomCase_strength herSeedCase_strength (by horn_certify)
 
 /-- **Luther defeats Lewis back**, so the two stand off. -/
 theorem wording_defeats_idiom : Defeats herSeedCase idiomCase :=
-  Horn.defeats_of_defeats? herSeedCase_strength idiomCase_strength (by decide +kernel)
+  Horn.defeats_of_certified herSeedCase_strength idiomCase_strength (by horn_certify)
 
 /-! ### The dispute -/
 
@@ -217,9 +218,9 @@ from what the parties hold by `Horn.defeats?` and checked by the kernel. -/
 theorem genesisDispute_defeats :
     ∀ i j, genesisDispute.defeats i j ↔ genesisPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (genesisPartyNode_strength i)
+  refine Horn.defeats_iff_of_certified (genesisPartyNode_strength i)
     (genesisPartyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def genesisFinite : Solver.Finite genesisDispute.defeats where

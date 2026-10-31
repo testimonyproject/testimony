@@ -4,6 +4,7 @@ import TestimonyArguments.SolaFide
 import TestimonyArguments.SolaFide.James
 import Testimony.Logic.Contest
 import Testimony.Logic.Credibility
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.Articles.Howell2003 — an article, checked against the library
@@ -334,33 +335,33 @@ theorem hearing_defeats : ∀ i j, hearing.defeats i j ↔ defeatsTable i j := b
   | howell =>
     cases j with
     | howell =>
-      exact Horn.defeats_iff_of_defeats? (node_strength .howell) (node_strength .howell)
-        (by decide +kernel)
+      exact Horn.defeats_iff_of_certified (node_strength .howell) (node_strength .howell)
+        (by horn_certify)
     | faith =>
-      exact Horn.defeats_iff_of_defeats? (node_strength .howell) (node_strength .faith)
-        (by decide +kernel)
+      exact Horn.defeats_iff_of_certified (node_strength .howell) (node_strength .faith)
+        (by horn_certify)
     | sola r =>
-      refine Horn.defeats_iff_of_defeats? (node_strength .howell) (node_strength (.sola r)) ?_
-      cases r <;> decide +kernel
+      refine Horn.defeats_iff_of_certified (node_strength .howell) (node_strength (.sola r)) ?_
+      cases r <;> horn_certify
   | faith =>
     cases j with
     | howell =>
-      exact Horn.defeats_iff_of_defeats? (node_strength .faith) (node_strength .howell)
-        (by decide +kernel)
+      exact Horn.defeats_iff_of_certified (node_strength .faith) (node_strength .howell)
+        (by horn_certify)
     | faith =>
-      exact Horn.defeats_iff_of_defeats? (node_strength .faith) (node_strength .faith)
-        (by decide +kernel)
+      exact Horn.defeats_iff_of_certified (node_strength .faith) (node_strength .faith)
+        (by horn_certify)
     | sola r =>
-      refine Horn.defeats_iff_of_defeats? (node_strength .faith) (node_strength (.sola r)) ?_
-      cases r <;> decide +kernel
+      refine Horn.defeats_iff_of_certified (node_strength .faith) (node_strength (.sola r)) ?_
+      cases r <;> horn_certify
   | sola q =>
     cases j with
     | howell =>
-      refine Horn.defeats_iff_of_defeats? (node_strength (.sola q)) (node_strength .howell) ?_
-      cases q <;> decide +kernel
+      refine Horn.defeats_iff_of_certified (node_strength (.sola q)) (node_strength .howell) ?_
+      cases q <;> horn_certify
     | faith =>
-      refine Horn.defeats_iff_of_defeats? (node_strength (.sola q)) (node_strength .faith) ?_
-      cases q <;> decide +kernel
+      refine Horn.defeats_iff_of_certified (node_strength (.sola q)) (node_strength .faith) ?_
+      cases q <;> horn_certify
     | sola r => exact solaFideDispute_defeats q r
 
 /-- The hearing in the form the verdict solver computes with. -/

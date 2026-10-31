@@ -3,6 +3,7 @@ import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium — the promise, and its fulfilment
@@ -303,12 +304,12 @@ theorem sceneCase_strength : sceneCase.strength = 0 := by decide
 /-- **Westermann defeats the fulfilment.** His conclusion denies the
 fulfilment's, and the fulfilment is no stronger than he. -/
 theorem westermann_defeats_fulfilment : Defeats westermannCase fulfilmentCase :=
-  Horn.defeats_of_defeats? westermannCase_strength fulfilmentCase_strength (by decide +kernel)
+  Horn.defeats_of_certified westermannCase_strength fulfilmentCase_strength (by horn_certify)
 
 /-- **The fulfilment defeats Westermann.** Its conclusion denies his, and he is
 no stronger than it. -/
 theorem fulfilment_defeats_westermann : Defeats fulfilmentCase westermannCase :=
-  Horn.defeats_of_defeats? fulfilmentCase_strength westermannCase_strength (by decide +kernel)
+  Horn.defeats_of_certified fulfilmentCase_strength westermannCase_strength (by horn_certify)
 
 /-! ### The dispute -/
 
@@ -376,9 +377,9 @@ from what the parties hold by `Horn.defeats?` and checked by the kernel. -/
 theorem promiseDispute_defeats :
     ∀ i j, promiseDispute.defeats i j ↔ promisePartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (promisePartyNode_strength i)
+  refine Horn.defeats_iff_of_certified (promisePartyNode_strength i)
     (promisePartyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def promiseFinite : Solver.Finite promiseDispute.defeats where

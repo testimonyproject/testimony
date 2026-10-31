@@ -1,4 +1,5 @@
 import TestimonyArguments.SolaFide.Hearings
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaFide.JesusWords — what Jesus' own words say about faith and works
@@ -557,8 +558,8 @@ defeated back. Every cell is computed from the parties' premises by
 theorem jesusWordsDispute_defeats :
     ∀ i j, jesusWordsDispute.defeats i j ↔ wordsPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (wordsPartyNode_strength i) (wordsPartyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  refine Horn.defeats_iff_of_certified (wordsPartyNode_strength i) (wordsPartyNode_strength j) ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def jesusWordsFinite : Solver.Finite jesusWordsDispute.defeats where

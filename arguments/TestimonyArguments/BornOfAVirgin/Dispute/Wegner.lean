@@ -5,6 +5,7 @@ import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
 import Testimony.Logic.Map
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner's objection
@@ -124,22 +125,22 @@ theorem ordinarySignReply_strength : ordinarySignReply.strength = 0 := by decide
 that the pregnancy is an ordinary one, which, cited `disputed`, does not
 outrank it. -/
 theorem sign_defeats_wegner : Defeats signArgument wegnerLexical :=
-  Horn.defeats_of_defeats? signArgument_strength wegnerLexical_strength (by decide +kernel)
+  Horn.defeats_of_certified signArgument_strength wegnerLexical_strength (by horn_certify)
 
 /-- **Wegner defeats the sign argument back.** He holds the premise it denies,
 so he rebuts it, and it is no stronger than he is. -/
 theorem wegner_defeats_sign : Defeats wegnerLexical signArgument :=
-  Horn.defeats_of_defeats? wegnerLexical_strength signArgument_strength (by decide +kernel)
+  Horn.defeats_of_certified wegnerLexical_strength signArgument_strength (by horn_certify)
 
 /-- **The reply defeats the sign argument.** It entails the negation of the
 fathers' premise that the sign must be extraordinary, cited `disputed`. -/
 theorem reply_defeats_sign : Defeats ordinarySignReply signArgument :=
-  Horn.defeats_of_defeats? ordinarySignReply_strength signArgument_strength (by decide +kernel)
+  Horn.defeats_of_certified ordinarySignReply_strength signArgument_strength (by horn_certify)
 
 /-- **The sign argument defeats the reply back.** It holds the premise the reply
 denies, and the reply's inference is contested as that premise is. -/
 theorem sign_defeats_reply : Defeats signArgument ordinarySignReply :=
-  Horn.defeats_of_defeats? signArgument_strength ordinarySignReply_strength (by decide +kernel)
+  Horn.defeats_of_certified signArgument_strength ordinarySignReply_strength (by horn_certify)
 
 /-! ### The dispute -/
 
@@ -204,9 +205,9 @@ the kernel. -/
 theorem wegnerDispute_defeats :
     ∀ i j, wegnerDispute.defeats i j ↔ wegnerPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (wegnerPartyNode_strength i)
+  refine Horn.defeats_iff_of_certified (wegnerPartyNode_strength i)
     (wegnerPartyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def wegnerFinite : Solver.Finite wegnerDispute.defeats where

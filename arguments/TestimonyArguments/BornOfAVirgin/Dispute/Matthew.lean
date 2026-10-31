@@ -1,5 +1,6 @@
 import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
 import Testimony.Logic.Credibility
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Matthew — Scripture's own reading of the Greek word
@@ -106,12 +107,12 @@ theorem matthewCase_strength : matthewCase.strength = 0 := by decide
 "virgin" excludes that the text Matthew quotes uses it in that sense, and
 Matthew's reading, cited `disputed`, is no stronger than he. -/
 theorem drift_defeats_matthew : Defeats driftObjection matthewCase :=
-  Horn.defeats_of_defeats? driftObjection_strength matthewCase_strength (by decide +kernel)
+  Horn.defeats_of_certified driftObjection_strength matthewCase_strength (by horn_certify)
 
 /-- **Matthew's reading defeats Wegner.** Its sense "virgin" excludes his "not
 yet 'virgin'", and he is no stronger than it. -/
 theorem matthew_defeats_drift : Defeats matthewCase driftObjection :=
-  Horn.defeats_of_defeats? matthewCase_strength driftObjection_strength (by decide +kernel)
+  Horn.defeats_of_certified matthewCase_strength driftObjection_strength (by horn_certify)
 
 /-! ### The dispute -/
 
@@ -164,9 +165,9 @@ by `Horn.defeats?` and checked by the kernel. -/
 theorem matthewDispute_defeats :
     ∀ i j, matthewDispute.defeats i j ↔ matthewPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (matthewPartyNode_strength i)
+  refine Horn.defeats_iff_of_certified (matthewPartyNode_strength i)
     (matthewPartyNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def matthewFinite : Solver.Finite matthewDispute.defeats where
@@ -282,9 +283,9 @@ premises and the re-rated inferences and checked by the kernel. -/
 theorem matthew_rerated_defeats (s : Standard) :
     ∀ i j, (matthewRegister.rerated s).defeats i j ↔ matthewRatedDefeats s i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats?
+  refine Horn.defeats_iff_of_certified
     (matthew_rerated_strength s i) (matthew_rerated_strength s j) ?_
-  cases s <;> cases i <;> cases j <;> decide +kernel
+  cases s <;> cases i <;> cases j <;> horn_certify
 
 /-- The dispute at a standard's ratings, in the form the verdict solver computes
 with. -/

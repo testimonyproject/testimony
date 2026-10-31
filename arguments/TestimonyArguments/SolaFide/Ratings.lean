@@ -4,6 +4,7 @@ import Testimony.Logic.Contest
 import TestimonyArguments.Meanings.SolaFide
 import TestimonyArguments.SolaFide.Definition
 import TestimonyArguments.SolaFide.JesusWords
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaFide.Ratings — which dissents from the James steps are critiques
@@ -788,20 +789,20 @@ private theorem rerated_evidence_first (i : JamesParty)
     (hi : i ∈ [.lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation])
     (j : JamesParty) :
     (jamesRegister.rerated .evidence).defeats i j ↔ ratedDefeats .evidence i j := by
-  refine Horn.defeats_iff_of_defeats?
+  refine Horn.defeats_iff_of_certified
     (rerated_strength .evidence i) (rerated_strength .evidence j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 /-- The same rows at the scriptural standard. -/
 private theorem rerated_scriptural_first (i : JamesParty)
     (hi : i ∈ [.lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation])
     (j : JamesParty) :
     (jamesRegister.rerated .scriptural).defeats i j ↔ ratedDefeats .scriptural i j := by
-  refine Horn.defeats_iff_of_defeats?
+  refine Horn.defeats_iff_of_certified
     (rerated_strength .scriptural i) (rerated_strength .scriptural j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 /-- The other six rows at the evidence standard. -/
 private theorem rerated_evidence_second (i : JamesParty)
@@ -809,10 +810,10 @@ private theorem rerated_evidence_second (i : JamesParty)
       .renewalOnTheWord, .westminsterOnReward])
     (j : JamesParty) :
     (jamesRegister.rerated .evidence).defeats i j ↔ ratedDefeats .evidence i j := by
-  refine Horn.defeats_iff_of_defeats?
+  refine Horn.defeats_iff_of_certified
     (rerated_strength .evidence i) (rerated_strength .evidence j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 /-- The same rows at the scriptural standard. -/
 private theorem rerated_scriptural_second (i : JamesParty)
@@ -820,20 +821,20 @@ private theorem rerated_scriptural_second (i : JamesParty)
       .renewalOnTheWord, .westminsterOnReward])
     (j : JamesParty) :
     (jamesRegister.rerated .scriptural).defeats i j ↔ ratedDefeats .scriptural i j := by
-  refine Horn.defeats_iff_of_defeats?
+  refine Horn.defeats_iff_of_certified
     (rerated_strength .scriptural i) (rerated_strength .scriptural j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 /-- The first six rows at the tradition standard. -/
 private theorem rerated_tradition_first (i : JamesParty)
     (hi : i ∈ [.lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation])
     (j : JamesParty) :
     (jamesRegister.rerated .tradition).defeats i j ↔ ratedDefeats .tradition i j := by
-  refine Horn.defeats_iff_of_defeats?
+  refine Horn.defeats_iff_of_certified
     (rerated_strength .tradition i) (rerated_strength .tradition j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 /-- The other six rows at the tradition standard. -/
 private theorem rerated_tradition_second (i : JamesParty)
@@ -841,10 +842,10 @@ private theorem rerated_tradition_second (i : JamesParty)
       .renewalOnTheWord, .westminsterOnReward])
     (j : JamesParty) :
     (jamesRegister.rerated .tradition).defeats i j ↔ ratedDefeats .tradition i j := by
-  refine Horn.defeats_iff_of_defeats?
+  refine Horn.defeats_iff_of_certified
     (rerated_strength .tradition i) (rerated_strength .tradition j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 /-- **Who defeats whom at each standard's ratings.** -/
 theorem rerated_defeats (s : Standard) :

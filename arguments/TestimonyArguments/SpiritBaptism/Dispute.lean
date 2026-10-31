@@ -5,6 +5,7 @@ import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Logic.Verdict
 import Testimony.Logic.Map
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SpiritBaptism.Dispute — the four views weighed
@@ -162,8 +163,8 @@ subsequence view defeat each other on the same point. Every cell is computed by
 theorem spiritBaptismDispute_defeats :
     ∀ i j, spiritBaptismDispute.defeats i j ↔ viewDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (viewNode_strength i) (viewNode_strength j) ?_
-  cases i <;> cases j <;> decide +kernel
+  refine Horn.defeats_iff_of_certified (viewNode_strength i) (viewNode_strength j) ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
 def spiritBaptismFinite : Solver.Finite spiritBaptismDispute.defeats where
