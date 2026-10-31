@@ -30,7 +30,8 @@ The benchmarks, from the smallest unit up:
   of the sola fide dispute, 72 cells, each two ways: searched in the kernel
   (`decide +kernel` on `Horn.defeats?`), and certified, the search run at
   elaboration and only its hints checked in the kernel (`horn_certify`), as the
-  arguments' own tables are proved;
+  arguments' own tables are proved; and a row of a hearing, where every party's
+  inferences are re-rated under a standard;
 - **a verdict**: the solver's checked witness for each of the two disputes;
 - **an assessment** and **a rating**: Miller's dissent, searched and
   certified, and the laws' step;
@@ -240,6 +241,14 @@ example (i : Party)
   refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
+
+#bench "row, certified: James hearing under evidence, Trent's word, 12 cells" in
+example (j : JamesParty) :
+    (jamesRegister.rerated .evidence).defeats .trentOnTheWord j ↔
+      ratedDefeats .evidence .trentOnTheWord j := by
+  refine Horn.defeats_iff_of_certified
+    (rerated_strength .evidence .trentOnTheWord) (rerated_strength .evidence j) ?_
+  cases j <;> horn_certify
 
 #bench "verdict: sola fide, only Paul's word unanswered" in
 example : Verdict solaFideDispute where

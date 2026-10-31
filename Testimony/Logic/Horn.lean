@@ -698,19 +698,28 @@ def citedRank : Formula α → Bool
   | .imp (.atom _) .falsum => true
   | _ => false
 
+/-- Whether an undermining weighs the premise's rank before asking whether the
+attack lands: unless the rank is a step's and the question has a certificate,
+which is the one case where the rank costs more than the question. -/
+def rankFirst (φ : Formula α) : Hint → Bool
+  | .search => true
+  | _ => citedRank φ
+
 /-- Whether `a`, of strength `s`, defeats `b` by undermining its premise `φ`,
 given `ca`, the clauses of what `a` holds: `some true` if `a`'s premises cannot
 hold with `φ` and `φ` does not outrank `a`, `some false` if either fails, `none`
 if a formula it needed has no clauses or the hint does not check.
 
-Which is asked first depends on what each costs. A cited premise's rank is a
-lookup, and when it outranks `a` the question of satisfiability is never asked.
-A step's rank is its package's inference rank, which in a hearing is computed
-from the step's ratings, by far the dearest part of a cell; so for a step the
-attack is asked first, and the rank only if the attack may land. -/
+Which is asked first depends on what each costs (`rankFirst`). A cited
+premise's rank is a lookup, and a searched question is a search; either way the
+rank comes first, and when it outranks `a` the question is never asked. But a
+step's rank is its package's inference rank, which in a hearing is computed from
+the step's ratings, by far the dearest part of a cell, and a certified question
+is a check; so for a step with a certificate the attack is asked first, and the
+rank only if the attack may land. The answer is the same either way. -/
 def undermines? (index : α → ℕ) (h : Hint) (b : ArgumentPackage α)
     (ca : Option (List (Clause α))) (s : ℕ) (φ : Formula α) : Option Bool :=
-  if citedRank φ then
+  if rankFirst φ h then
     if Outranks b φ s then some false
     else (satisfiableWith? index h ca φ).map (!·)
   else
@@ -808,7 +817,7 @@ theorem undermines?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage 
     (e : undermines? index h b (clausesOf a.held) a.strength φ = some true) :
     Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength := by
   unfold undermines? at e
-  cases hc : citedRank φ <;> simp only [hc, Bool.false_eq_true, if_true, if_false] at e
+  cases hc : rankFirst φ h <;> simp only [hc, Bool.false_eq_true, if_true, if_false] at e
   · split at e
     · simp at e
     · split at e
@@ -827,7 +836,7 @@ theorem undermines?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage
     ¬ (Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength) := by
   unfold undermines? at e
   rintro ⟨hent, hno⟩
-  cases hc : citedRank φ <;> simp only [hc, Bool.false_eq_true, if_true, if_false] at e
+  cases hc : rankFirst φ h <;> simp only [hc, Bool.false_eq_true, if_true, if_false] at e
   · split at e
     · rename_i hr
       exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp hr))
