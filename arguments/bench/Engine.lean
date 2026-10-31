@@ -30,9 +30,11 @@ The benchmarks, from the smallest unit up:
   of the sola fide dispute, 72 cells, each two ways: searched in the kernel
   (`decide +kernel` on `Horn.defeats?`), and certified, the search run at
   elaboration and only its hints checked in the kernel (`horn_certify`), as the
-  arguments' own tables are proved;
+  arguments' own tables are proved; and a row of a hearing, where every party's
+  inferences are re-rated under a standard;
 - **a verdict**: the solver's checked witness for each of the two disputes;
-- **an assessment** and **a rating**: Miller's dissent, and the laws' step;
+- **an assessment** and **a rating**: Miller's dissent, searched and
+  certified, and the laws' step;
 - **`establish`** on a package, the tactic every package's soundness uses;
 - **the checks** `TestimonyArguments.Checks` runs over every argument.
 -/
@@ -41,16 +43,19 @@ open Lean Elab Command
 
 set_option Elab.async false
 
-/-- Wall time of one run of a command, in milliseconds. Unless `keep`, the
-messages it logs are dropped, so that a check's own output is not reported once
-per run; the last run keeps them, so that its errors are reported. -/
-private def timeOnce (cmd : Syntax) (keep : Bool) : CommandElabM Float := do
+/-- Wall time of one run of a command, in milliseconds, and whether it logged
+an error. Unless `keep`, the messages it logs are dropped, so that a check's own
+output is not reported once per run; the last run keeps them, so that its errors
+are reported. -/
+private def timeOnce (cmd : Syntax) (keep : Bool) : CommandElabM (Float × Bool) := do
   let saved := (← get).messages
+  modify fun s => { s with messages := {} }
   let t0 ← IO.monoNanosNow
   elabCommand cmd
   let t1 ← IO.monoNanosNow
-  unless keep do modify fun s => { s with messages := saved }
-  return (t1 - t0).toFloat / 1e6
+  let logged := (← get).messages
+  modify fun s => { s with messages := if keep then saved ++ logged else saved }
+  return ((t1 - t0).toFloat / 1e6, logged.hasErrors)
 
 /-- A field of `/proc/self/status`, in KiB: `VmRSS` (resident now) or `VmHWM`
 (the peak). Zero where there is no such file, off Linux. -/
@@ -83,7 +88,10 @@ Environment variables, as Google Benchmark's flags are:
   comparison;
 - `BENCH_FILTER` runs only the benchmarks whose name contains it, and
   `BENCH_ONLY` only the one whose name is exactly it;
-- `BENCH_LIST`, when set, runs nothing and reports each benchmark's name. -/
+- `BENCH_LIST`, when set, runs nothing and reports each benchmark's name.
+
+A benchmark whose command logs an error reports `bench-error` and no time: it
+did not do the work it names, so a time for it would compare nothing. -/
 syntax (name := bench) "#bench " ("(" &"runs" " := " num ") ")? str " in " command : command
 
 @[command_elab bench] def elabBench : CommandElab
@@ -102,8 +110,15 @@ syntax (name := bench) "#bench " ("(" &"runs" " := " num ") ")? str " in " comma
     resetPeak
     let before ← statusKiB "VmRSS"
     let mut times : Array Float := #[]
+    let mut failed := false
     for i in [0:runs] do
-      times := times.push (← timeOnce cmd (keep := i + 1 == runs))
+      let (t, err) ← timeOnce cmd (keep := i + 1 == runs)
+      times := times.push t
+      failed := failed || err
+    if failed then
+      -- A benchmark that does not elaborate measured nothing: no result.
+      logInfo m!"bench-error {name}"
+      return
     let peak ← statusKiB "VmHWM"
     let sorted := times.qsort (· < ·)
     let median := sorted[sorted.size / 2]!
@@ -160,6 +175,21 @@ example : Verdict septuagintDispute where
   checked := by decide +kernel
 
 #bench "assessment: Miller against the laws" in
+example :
+    Dissent.findings?
+      { claim := p .lawsUseParthenosAsVirgin
+      , grounds := lawsLine.grounds
+      , position := millerOnTheLaws
+      , refuted := [joelReadsABride] } =
+    some
+      { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+      , unadmitted :=
+          [ (.evidence, []), (.tradition, [])
+          , (.scriptural, [.parthenosDescribesDinahAsSheThenWas]) ]
+      , struck := [.joelGreekCallsTheWidowParthenos] } := by
+  decide +kernel
+
+#bench "assessment, certified: Miller against the laws" in
 example : Assessment Claim where
   dissenter := "Miller, Born Divine"
   against := lawsLine.name
@@ -174,7 +204,7 @@ example : Assessment Claim where
         [ (.evidence, []), (.tradition, [])
         , (.scriptural, [.parthenosDescribesDinahAsSheThenWas]) ]
     , struck := [.joelGreekCallsTheWidowParthenos] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 #bench "rating: the laws' step, three standards" in
 example :
@@ -211,6 +241,14 @@ example (i : Party)
   refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
+
+#bench "row, certified: James hearing under evidence, Trent's word, 12 cells" in
+example (j : JamesParty) :
+    (jamesRegister.rerated .evidence).defeats .trentOnTheWord j ↔
+      ratedDefeats .evidence .trentOnTheWord j := by
+  refine Horn.defeats_iff_of_certified
+    (rerated_strength .evidence .trentOnTheWord) (rerated_strength .evidence j) ?_
+  cases j <;> horn_certify
 
 #bench "verdict: sola fide, only Paul's word unanswered" in
 example : Verdict solaFideDispute where

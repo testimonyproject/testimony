@@ -463,7 +463,7 @@ party establishes its conclusion, and every party's inferences are rated. -/
 @[bornOfAVirginDefs]
 def isaiahDispute : Dispute Claim Party where
   node := partyNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .scriptural => christian_establishes
     | .critical => criticalDenial_establishes

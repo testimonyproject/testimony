@@ -1,5 +1,6 @@
 import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
 import Testimony.Logic.Credibility
+import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Miller — a dissent, with what the texts refute struck
@@ -125,7 +126,7 @@ def millerOnLawsAssessment : Assessment Claim where
         [ (.evidence, []), (.tradition, [])
         , (.scriptural, [.parthenosDescribesDinahAsSheThenWas]) ]
     , struck := [.joelGreekCallsTheWidowParthenos] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Struck of Joel 1:8, Miller's dissent is his case from Genesis 34:3**: with
 the claim the Greek refutes taken out, and his step from it, the premises the
@@ -183,7 +184,7 @@ def millerOnJoelAloneAssessment : Assessment Claim where
     { consistent := true, denies := false, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])]
     , struck := [.joelGreekCallsTheWidowParthenos] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Evidence the texts refute stops counting.** Had Miller rested his dissent on
 Joel 1:8 alone, then, with the claim the Greek refutes struck, nothing in it
