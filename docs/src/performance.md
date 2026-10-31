@@ -73,6 +73,29 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 1 | Bound the kernel replay's concurrent environments to 2, and run `leanchecker` without `lake env` | replay memory | killed at ≥ 13 GiB | 8.9 GiB, 293 s | — | kept |
 | 2 | Ask each question of satisfiability once (#177) | the AIF check | 67.4 s | 3.75 s | 0.008 | kept |
 | 3 | The kernel checks certificates instead of searching (#183) | the defeat tables | 14.2 s, 185 MiB | 7.1 s, 92 MiB | 0.008 | kept |
+| 4 | Certify assessments and consistency; in a hearing, weigh a step's rank only once it is attacked (#183) | the hearings and assessments | 3.08 s, 97 MiB | 0.48 s, 16 MiB | 0.008 | kept |
+
+Round 4, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
+profile of `SolaFide.Ratings`, the slowest module at 110 s, found its rerated
+hearing cells at 460 ms each against 53 ms for the same cells unrated: to weigh
+whether a premise outranks its attacker, a cell read the target's inference
+rank, and in a hearing that re-rates each cited inference, comparing whole
+`Source`s, bibliography entries and all, in the kernel. One such comparison
+took 350 ms; the ratings themselves, 7 ms. So for a step whose question has a
+certificate the attack is now asked first, and the rank only if it lands
+(`Horn.rankFirst`); a cited premise's rank, a lookup, and any searched question
+keep the old order, which a first attempt that reordered everything showed is
+the cheaper there (+12% on the searched sola fide table, p = 0.008, reverted).
+A certified row of the James hearing fell from 3.08 s to 0.48 s (−85%,
+p = 0.008) and from 97 to 16 MiB; every other benchmark matched `main`. The
+assessments are certified too (`Dissent.findingsBy?`): Miller's, 288 ms
+searched against 120 ms certified (p = 0.008). Verdicts needed nothing: they
+already had the kernel check a witness the solver found. Ratings search
+nothing: they read the assessments' findings. Measured by hand, clean, on the
+same machine: `SolaFide.Ratings` fell from 110 s to 39 s, and the arguments'
+`lake build` from 309 s after round 3 to 248 s. The kernel replay took 247 s
+with a peak of 9.5 GiB, against 8.1 to 8.5 GiB in earlier runs: one run each,
+and not yet explained.
 
 Round 3, measured on one side of a `scripts/bench-ab.sh` run against `main`,
 five interleaved rounds: each table is benchmarked twice, searched in the
@@ -113,9 +136,10 @@ of memory. Two run in 293 s; one in 500 s with about 5.2 GiB.
 
 ## Fixed points
 
-None yet. After round 3 the largest benchmarks are still the defeat tables,
-now about 100 ms a sola fide cell: half of it the kernel's check, of which the
-conversion of both positions to clauses is most, and half the search at
-elaboration, in the interpreter. The next hypotheses are bitmask sets for the
-replay as well as the model (#180), and the certified forms for the verdicts,
-assessments and ratings, which still search in the kernel.
+None yet. After round 4 what a hearing still pays for re-rating is its strength
+theorems (`rerated_strength`), each comparing whole `Source`s in the kernel,
+350 ms a party: a cheaper identity for a citation would change what
+`RatedStep.rerate` matches, and is a decision, not an optimisation. The defeat
+tables cost about 100 ms a sola fide cell, half the kernel's check and half the
+search at elaboration. The next hypothesis is bitmask sets for the replay as
+well as the model (#180).
