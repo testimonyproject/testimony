@@ -101,7 +101,7 @@ contradiction, delivers its conclusion, and has its steps rated. -/
 @[spiritBaptismDefs]
 def spiritBaptismDispute : Dispute Claim View where
   node := viewNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .conversion => conversionCase_establishes
     | .pentecostal => pentecostalCase_establishes

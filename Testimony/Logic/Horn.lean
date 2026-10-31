@@ -622,6 +622,51 @@ theorem not_satisfiable_of_satisfiableWith? {index : α → ℕ} {h : Hint} {Γ 
   · exact (clausesOf_sound hcs).mp (fun ψ hψ => hw ψ (List.mem_append_left _ hψ)) c hc
   · exact (toClauses_sound hd).mp (hw φ (by simp)) c hc
 
+/-- Whether a list of formulas and a list more can all hold together, from a
+hint: `base` is the first list's clauses, converted once and shared. -/
+def satisfiableAppend? (index : α → ℕ) (h : Hint) (base : Option (List (Clause α)))
+    (Δ : List (Formula α)) : Option Bool :=
+  base.bind fun cs => (clausesOf Δ).bind fun d => clausesSatisfiableBy? index (cs ++ d) h
+
+theorem satisfiable_of_satisfiableAppend? {index : α → ℕ} {h : Hint}
+    {Γ Δ : List (Formula α)} (e : satisfiableAppend? index h (clausesOf Γ) Δ = some true) :
+    Satisfiable (Γ ++ Δ) := by
+  simp only [satisfiableAppend?, Option.bind_eq_some_iff] at e
+  obtain ⟨cs, hcs, d, hd, e⟩ := e
+  obtain ⟨w, hw⟩ := satisfiable_of_clausesSatisfiableBy? e
+  have hΓ := (clausesOf_sound hcs).mpr fun c hc => hw c (List.mem_append_left _ hc)
+  have hΔ := (clausesOf_sound hd).mpr fun c hc => hw c (List.mem_append_right _ hc)
+  refine satisfiable_iff.mpr ⟨w, fun ψ hψ => ?_⟩
+  rcases List.mem_append.mp hψ with hψ | hψ
+  · exact hΓ ψ hψ
+  · exact hΔ ψ hψ
+
+theorem not_satisfiable_of_satisfiableAppend? {index : α → ℕ} {h : Hint}
+    {Γ Δ : List (Formula α)} (e : satisfiableAppend? index h (clausesOf Γ) Δ = some false) :
+    ¬ Satisfiable (Γ ++ Δ) := by
+  simp only [satisfiableAppend?, Option.bind_eq_some_iff] at e
+  obtain ⟨cs, hcs, d, hd, e⟩ := e
+  intro hs
+  obtain ⟨w, hw⟩ := satisfiable_iff.mp hs
+  refine not_satisfiable_of_clausesSatisfiableBy? e ⟨w, fun c hc => ?_⟩
+  rcases List.mem_append.mp hc with hc | hc
+  · exact (clausesOf_sound hcs).mp (fun ψ hψ => hw ψ (List.mem_append_left _ hψ)) c hc
+  · exact (clausesOf_sound hd).mp (fun ψ hψ => hw ψ (List.mem_append_right _ hψ)) c hc
+
+/-- The hint for the question at position `i` of a decision: `search` if there
+is none. -/
+def hintAt (hints : List Hint) (i : ℕ) : Hint := hints.getD i .search
+
+/-- **Satisfiable, from a hint the kernel checks.** Whichever index and hints
+make the check succeed, the formulas have a model. `horn_certify`
+(`Testimony.Logic.Certificate`) finds them and proves the hypothesis. -/
+theorem satisfiable_of_certified {Γ : List (Formula α)}
+    (h : ∃ (index : α → ℕ) (hints : List Hint),
+      satisfiableAppend? index (hintAt hints 0) (clausesOf Γ) [] = some true) :
+    Satisfiable Γ := by
+  obtain ⟨_, _, h⟩ := h
+  simpa using satisfiable_of_satisfiableAppend? h
+
 /-! ### Attacks and defeats
 
 The strengths of the two packages are arguments rather than computed inside:
@@ -646,18 +691,20 @@ section Attacks
 
 variable [HasPostulates α]
 
-/-- The hint for the question at position `i` of a cell: `search` if there is
-none. -/
-def hintAt (hints : List Hint) (i : ℕ) : Hint := hints.getD i .search
-
 /-- Whether `a`, of strength `s`, defeats `b` by undermining its premise `φ`,
 given `ca`, the clauses of what `a` holds: `some true` if `a`'s premises cannot
 hold with `φ` and `φ` does not outrank `a`, `some false` if either fails, `none`
-if a formula it needed has no clauses or the hint does not check. -/
+if a formula it needed has no clauses or the hint does not check.
+
+The attack is asked first, and `φ`'s rank only if it may land. A step's rank is
+its package's inference rank, which in a hearing is computed from the step's
+ratings, by far the dearest part of a cell; most premises are not attacked at
+all, and their ranks are never needed. -/
 def undermines? (index : α → ℕ) (h : Hint) (b : ArgumentPackage α)
     (ca : Option (List (Clause α))) (s : ℕ) (φ : Formula α) : Option Bool :=
-  if Outranks b φ s then some false
-  else (satisfiableWith? index h ca φ).map (!·)
+  match (satisfiableWith? index h ca φ).map (!·) with
+  | some false => some false
+  | r => if Outranks b φ s then some false else r
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, by rebutting its
 conclusion, decided the same way. -/
@@ -751,8 +798,11 @@ theorem undermines?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage 
   unfold undermines? at e
   split at e
   · simp at e
-  · rename_i hno
-    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? (map_not_eq_some.mp e)), hno⟩
+  · split at e
+    · simp at e
+    · rename_i hno
+      exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? (map_not_eq_some.mp e)),
+        hno⟩
 
 theorem undermines?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α} {φ : Formula α}
     (e : undermines? index h b (clausesOf a.held) a.strength φ = some false) :
@@ -760,8 +810,11 @@ theorem undermines?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage
   unfold undermines? at e
   rintro ⟨hent, hno⟩
   split at e
-  · exact hno (by assumption)
-  · exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
+  · rename_i hr
+    exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp hr))
+  · split at e
+    · exact hno (by assumption)
+    · exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
 
 theorem stepRebuts?_true {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPackage α}
     {ψ : Formula α}

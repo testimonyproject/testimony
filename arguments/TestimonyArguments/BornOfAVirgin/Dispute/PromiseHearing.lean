@@ -77,7 +77,7 @@ def westermannOnFulfilmentAssessment : Assessment Claim where
         [ (.evidence, [])
         , (.tradition, [])
         , (.scriptural, [.seedIsLineNotIndividual]) ] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **The fulfilment's step, rated by its register**: Westermann's dissent, the
 strongest known. Its support is cited `plausible`: Irenaeus, Keil, Leupold,

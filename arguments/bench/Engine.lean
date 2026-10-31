@@ -32,7 +32,8 @@ The benchmarks, from the smallest unit up:
   elaboration and only its hints checked in the kernel (`horn_certify`), as the
   arguments' own tables are proved;
 - **a verdict**: the solver's checked witness for each of the two disputes;
-- **an assessment** and **a rating**: Miller's dissent, and the laws' step;
+- **an assessment** and **a rating**: Miller's dissent, searched and
+  certified, and the laws' step;
 - **`establish`** on a package, the tactic every package's soundness uses;
 - **the checks** `TestimonyArguments.Checks` runs over every argument.
 -/
@@ -160,6 +161,21 @@ example : Verdict septuagintDispute where
   checked := by decide +kernel
 
 #bench "assessment: Miller against the laws" in
+example :
+    Dissent.findings?
+      { claim := p .lawsUseParthenosAsVirgin
+      , grounds := lawsLine.grounds
+      , position := millerOnTheLaws
+      , refuted := [joelReadsABride] } =
+    some
+      { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+      , unadmitted :=
+          [ (.evidence, []), (.tradition, [])
+          , (.scriptural, [.parthenosDescribesDinahAsSheThenWas]) ]
+      , struck := [.joelGreekCallsTheWidowParthenos] } := by
+  decide +kernel
+
+#bench "assessment, certified: Miller against the laws" in
 example : Assessment Claim where
   dissenter := "Miller, Born Divine"
   against := lawsLine.name
@@ -174,7 +190,7 @@ example : Assessment Claim where
         [ (.evidence, []), (.tradition, [])
         , (.scriptural, [.parthenosDescribesDinahAsSheThenWas]) ]
     , struck := [.joelGreekCallsTheWidowParthenos] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 #bench "rating: the laws' step, three standards" in
 example :

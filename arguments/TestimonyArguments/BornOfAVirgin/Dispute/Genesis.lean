@@ -180,7 +180,7 @@ are rated. -/
 @[bornOfAVirginDefs]
 def genesisDispute : Dispute Claim GenesisParty where
   node := genesisPartyNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .wording => herSeedCase_establishes
     | .posterity => posterityCase_establishes

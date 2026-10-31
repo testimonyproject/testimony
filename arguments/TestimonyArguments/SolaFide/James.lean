@@ -741,7 +741,7 @@ inferences are rated. -/
 @[solaFideDefs]
 def jamesDispute : Dispute Claim JamesParty where
   node := jamesPartyNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .lexical => jamesLexicalCase_establishes
     | .faith => jamesFaithCase_establishes

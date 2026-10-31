@@ -137,7 +137,7 @@ its steps rated. -/
 @[gritsDefs]
 def gritsDispute : Dispute Claim Side where
   node := sideNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .direct => direct_establishes
     | .cross => cross_establishes
@@ -253,7 +253,7 @@ def atTheFastCookNode : Side → ArgumentPackage Claim
 @[gritsDefs]
 def atTheFastCookDispute : Dispute Claim Side where
   node := atTheFastCookNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .direct => direct_establishes
     | .cross => crossAtTheFastCook_establishes

@@ -137,7 +137,7 @@ inferences are rated. -/
 @[bornOfAVirginDefs]
 def matthewDispute : Dispute Claim MatthewParty where
   node := matthewPartyNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .matthew => matthewCase_establishes
     | .drift => driftObjection_establishes
@@ -214,7 +214,7 @@ def wegnerOnMatthewAssessment : Assessment Claim where
         , (.tradition, [])
         , (.scriptural,
             [.earlyGreekParthenosIsYoungWoman, .parthenosDescribesDinahAsSheThenWas]) ] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Matthew's step, rated by its register**: Wegner's dissent, the strongest
 known. Its support is cited `plausible`: Westminster's rule, and Irenaeus on the
