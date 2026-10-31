@@ -42,16 +42,19 @@ open Lean Elab Command
 
 set_option Elab.async false
 
-/-- Wall time of one run of a command, in milliseconds. Unless `keep`, the
-messages it logs are dropped, so that a check's own output is not reported once
-per run; the last run keeps them, so that its errors are reported. -/
-private def timeOnce (cmd : Syntax) (keep : Bool) : CommandElabM Float := do
+/-- Wall time of one run of a command, in milliseconds, and whether it logged
+an error. Unless `keep`, the messages it logs are dropped, so that a check's own
+output is not reported once per run; the last run keeps them, so that its errors
+are reported. -/
+private def timeOnce (cmd : Syntax) (keep : Bool) : CommandElabM (Float × Bool) := do
   let saved := (← get).messages
+  modify fun s => { s with messages := {} }
   let t0 ← IO.monoNanosNow
   elabCommand cmd
   let t1 ← IO.monoNanosNow
-  unless keep do modify fun s => { s with messages := saved }
-  return (t1 - t0).toFloat / 1e6
+  let logged := (← get).messages
+  modify fun s => { s with messages := if keep then saved ++ logged else saved }
+  return ((t1 - t0).toFloat / 1e6, logged.hasErrors)
 
 /-- A field of `/proc/self/status`, in KiB: `VmRSS` (resident now) or `VmHWM`
 (the peak). Zero where there is no such file, off Linux. -/
@@ -84,7 +87,10 @@ Environment variables, as Google Benchmark's flags are:
   comparison;
 - `BENCH_FILTER` runs only the benchmarks whose name contains it, and
   `BENCH_ONLY` only the one whose name is exactly it;
-- `BENCH_LIST`, when set, runs nothing and reports each benchmark's name. -/
+- `BENCH_LIST`, when set, runs nothing and reports each benchmark's name.
+
+A benchmark whose command logs an error reports `bench-error` and no time: it
+did not do the work it names, so a time for it would compare nothing. -/
 syntax (name := bench) "#bench " ("(" &"runs" " := " num ") ")? str " in " command : command
 
 @[command_elab bench] def elabBench : CommandElab
@@ -103,8 +109,15 @@ syntax (name := bench) "#bench " ("(" &"runs" " := " num ") ")? str " in " comma
     resetPeak
     let before ← statusKiB "VmRSS"
     let mut times : Array Float := #[]
+    let mut failed := false
     for i in [0:runs] do
-      times := times.push (← timeOnce cmd (keep := i + 1 == runs))
+      let (t, err) ← timeOnce cmd (keep := i + 1 == runs)
+      times := times.push t
+      failed := failed || err
+    if failed then
+      -- A benchmark that does not elaborate measured nothing: no result.
+      logInfo m!"bench-error {name}"
+      return
     let peak ← statusKiB "VmHWM"
     let sorted := times.qsort (· < ·)
     let median := sorted[sorted.size / 2]!

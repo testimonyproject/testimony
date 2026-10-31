@@ -691,20 +691,32 @@ section Attacks
 
 variable [HasPostulates α]
 
+/-- Whether a premise's rank is a citation's: an atom's, or a denial's, at the
+bottom. The rank of anything else is its package's inference rank. -/
+def citedRank : Formula α → Bool
+  | .atom _ => true
+  | .imp (.atom _) .falsum => true
+  | _ => false
+
 /-- Whether `a`, of strength `s`, defeats `b` by undermining its premise `φ`,
 given `ca`, the clauses of what `a` holds: `some true` if `a`'s premises cannot
 hold with `φ` and `φ` does not outrank `a`, `some false` if either fails, `none`
 if a formula it needed has no clauses or the hint does not check.
 
-The attack is asked first, and `φ`'s rank only if it may land. A step's rank is
-its package's inference rank, which in a hearing is computed from the step's
-ratings, by far the dearest part of a cell; most premises are not attacked at
-all, and their ranks are never needed. -/
+Which is asked first depends on what each costs. A cited premise's rank is a
+lookup, and when it outranks `a` the question of satisfiability is never asked.
+A step's rank is its package's inference rank, which in a hearing is computed
+from the step's ratings, by far the dearest part of a cell; so for a step the
+attack is asked first, and the rank only if the attack may land. -/
 def undermines? (index : α → ℕ) (h : Hint) (b : ArgumentPackage α)
     (ca : Option (List (Clause α))) (s : ℕ) (φ : Formula α) : Option Bool :=
-  match (satisfiableWith? index h ca φ).map (!·) with
-  | some false => some false
-  | r => if Outranks b φ s then some false else r
+  if citedRank φ then
+    if Outranks b φ s then some false
+    else (satisfiableWith? index h ca φ).map (!·)
+  else
+    match (satisfiableWith? index h ca φ).map (!·) with
+    | some false => some false
+    | r => if Outranks b φ s then some false else r
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, by rebutting its
 conclusion, decided the same way. -/
@@ -796,8 +808,14 @@ theorem undermines?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage 
     (e : undermines? index h b (clausesOf a.held) a.strength φ = some true) :
     Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength := by
   unfold undermines? at e
-  split at e
-  · simp at e
+  cases hc : citedRank φ <;> simp only [hc, Bool.false_eq_true, if_true, if_false] at e
+  · split at e
+    · simp at e
+    · split at e
+      · simp at e
+      · rename_i hno
+        exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? (map_not_eq_some.mp e)),
+          hno⟩
   · split at e
     · simp at e
     · rename_i hno
@@ -809,9 +827,13 @@ theorem undermines?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage
     ¬ (Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength) := by
   unfold undermines? at e
   rintro ⟨hent, hno⟩
-  split at e
-  · rename_i hr
-    exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp hr))
+  cases hc : citedRank φ <;> simp only [hc, Bool.false_eq_true, if_true, if_false] at e
+  · split at e
+    · rename_i hr
+      exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp hr))
+    · split at e
+      · exact hno (by assumption)
+      · exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
   · split at e
     · exact hno (by assumption)
     · exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
