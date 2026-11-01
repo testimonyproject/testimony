@@ -75,6 +75,20 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 3 | The kernel checks certificates instead of searching (#183) | the defeat tables | 14.2 s, 185 MiB | 7.1 s, 92 MiB | 0.008 | kept |
 | 4 | Certify assessments and consistency; in a hearing, weigh a step's rank only once it is attacked (#183) | the hearings and assessments | 3.08 s, 97 MiB | 0.48 s, 16 MiB | 0.008 | kept |
 | 5 | Compare a citation by its key and locus, a key checked to name one entry | a hearing's rerated strengths | 2.54 s, 83 MiB | 0.86 s, 25 MiB | 0.008 | kept |
+| 6 | Replay a refutation on bitmasks (#180) | the certified defeat tables | 7.21 s, 94 MiB | 5.99 s, 70 MiB | 0.008 | kept |
+
+Round 6, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
+certified refutation was replayed over lists of settled atoms, each membership
+a scan of comparisons: of the 75 ms one of Paul's refutations of Trent took,
+53 ms were the replay. Replayed on two bitmasks over the atoms' constructor
+index, which the kernel tests and sets in a step each, it took 33 ms in a
+prototype. The replay is sound only through an index that tells atoms apart
+(`Horn.replay_sound`), so the certified theorems ask for one and
+`horn_certify` proves it from the enumeration's own inverse; the searched
+decisions need none. Half of sola fide's certified table fell from 7.21 s to
+5.99 s (−17%, p = 0.008) and from 94 to 70 MiB. The sola fide verdict also
+read faster (−30%, p = 0.032), though it replays nothing: likely the noise of
+a benchmark under 60 ms. Nothing was worse.
 
 Round 5, `scripts/bench-ab.sh` against `main`, five interleaved rounds. What a
 hearing still paid for re-rating after round 4 was its strengths: re-rating
@@ -151,8 +165,7 @@ of memory. Two run in 293 s; one in 500 s with about 5.2 GiB.
 
 ## Fixed points
 
-None yet. After round 5 the largest benchmarks are the defeat tables, about
-100 ms a sola fide cell, half the kernel's check and half the search at
-elaboration, and the slowest modules of the build are the meanings of sola fide
-and its dispute. The next hypothesis is bitmask sets for the replay as well as
-the model (#180).
+None yet. After round 6 the largest benchmarks are still the defeat tables,
+about 80 ms a sola fide cell, of which converting each position to clauses and
+the search at elaboration are now most; and the slowest modules of the build
+are the meanings of sola fide and its dispute.

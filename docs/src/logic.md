@@ -605,8 +605,10 @@ The kernel need not run the search itself, and in a table it does not.
 elaboration time and hands the kernel what it found, a *certificate* for each
 question: a model, which the kernel checks against every clause once, or the
 clauses that fired, in order, which it replays once and checks that they end in
-a violated clause. Checking is far cheaper than searching, pass after pass, to
-a fixed point. The certificate is not trusted: the kernel checks it, a wrong one
+a violated clause. Both are read as bits: an atom is a bit of a number, at its
+constructor's index, and the replay is sound because that index tells atoms
+apart, which the tactic proves. Checking is far cheaper than searching, pass
+after pass, to a fixed point. The certificate is not trusted: the kernel checks it, a wrong one
 can only make the proof fail, and `Horn.defeats_iff_of_certified` states exactly
 what `Horn.defeats_iff_of_defeats?` does. `decide +kernel` on `Horn.defeats?`
 still proves any cell, searching.
