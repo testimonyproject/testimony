@@ -518,6 +518,7 @@ def propagateBits (index : α → ℕ) (s : Bits) (c : Clause α) : Bits :=
     | _ => s
   else s
 
+omit [DecidableEq α] in
 /-- **Propagation on bits is sound**, for an index that tells atoms apart: a bit
 set for a forced atom then claims no other atom. -/
 theorem propagateBits_sound {index : α → ℕ} (hinj : Function.Injective index)
@@ -598,6 +599,7 @@ def clausesSatisfiableBy? (index : α → ℕ) (cs : List (Clause α)) : Hint �
     | some c => if violatedBits index (replay index cs trace) c then some false else none
     | none => none
 
+omit [DecidableEq α] in
 /-- A replay settles only what every model of the clauses has, for an index that
 tells atoms apart. -/
 theorem replay_sound {index : α → ℕ} (hinj : Function.Injective index) {cs : List (Clause α)}
@@ -756,6 +758,7 @@ theorem not_satisfiable_of_satisfiableAppend? {index : α → ℕ} {h : Hint}
 is none. -/
 def hintAt (hints : List Hint) (i : ℕ) : Hint := hints.getD i .search
 
+omit [DecidableEq α] in
 /-- An index that tells atoms apart serves every hint, and no hints at all serve
 any index: every question is then searched. -/
 theorem hintAt_search {index : α → ℕ} {hints : List Hint}
