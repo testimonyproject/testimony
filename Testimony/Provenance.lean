@@ -122,6 +122,76 @@ deriving Repr, DecidableEq
 /-- Every reference this source cites. -/
 def Source.references (s : Source) : List Reference := s.primary :: s.supporting
 
+/-- **The same reference, compared shallowly**: two works are the same reference
+when they have the same key and the same locus, and any other two when they are
+equal. A key stands for its entry because no two entries share one
+(`Testimony.Checks.Citations`; `Reference.sameAs_iff`), and comparing keys spares
+the kernel a comparison of two whole entries, one character of each at a time. -/
+def Reference.sameAs : Reference → Reference → Bool
+  | .work e l, .work e' l' => e.key == e'.key && l == l'
+  | r, r' => r == r'
+
+/-- Two lists of references, compared shallowly, in order. -/
+def Reference.sameAll : List Reference → List Reference → Bool
+  | [], [] => true
+  | r :: rs, r' :: rs' => r.sameAs r' && sameAll rs rs'
+  | _, _ => false
+
+/-- Every entry the reference cites is one of `L`. -/
+def Reference.CitesFrom (L : List BibEntry) (r : Reference) : Prop :=
+  ∀ e, r.entry = some e → e ∈ L
+
+/-- **Shallow comparison is equality** for references whose entries are drawn
+from a list with distinct keys. -/
+theorem Reference.sameAs_iff {L : List BibEntry} (hL : (L.map BibEntry.key).Nodup)
+    {r r' : Reference} (hr : r.CitesFrom L) (hr' : r'.CitesFrom L) :
+    r.sameAs r' = true ↔ r = r' := by
+  cases r <;> cases r' <;> simp only [sameAs, beq_iff_eq, Bool.and_eq_true, reduceCtorEq,
+    Reference.work.injEq, Reference.scripture.injEq, Reference.proposal.injEq, iff_self]
+  case work.work e l e' l' =>
+    constructor
+    · rintro ⟨hk, rfl⟩
+      exact ⟨BibEntry.eq_of_key_eq hL (hr e rfl) (hr' e' rfl) hk, rfl⟩
+    · rintro ⟨rfl, rfl⟩
+      exact ⟨rfl, rfl⟩
+
+/-- Every entry a source cites is one of `L`. -/
+def Source.CitesFrom (L : List BibEntry) (s : Source) : Prop :=
+  ∀ r ∈ s.references, r.CitesFrom L
+
+/-- **The same citation, whatever its confidence**: the same references, compared
+shallowly, and the same tradition. A step's citation is matched this way when
+it is re-rated (`Testimony.Logic.RatedStep.rerate`), where it is cited at some
+confidence and rated at another. -/
+def Source.sameCitation (a b : Source) : Bool :=
+  a.primary.sameAs b.primary && Reference.sameAll a.supporting b.supporting &&
+    a.tradition == b.tradition
+
+theorem Reference.sameAll_iff {L : List BibEntry} (hL : (L.map BibEntry.key).Nodup) :
+    ∀ {rs rs' : List Reference}, (∀ r ∈ rs, r.CitesFrom L) → (∀ r ∈ rs', r.CitesFrom L) →
+      (sameAll rs rs' = true ↔ rs = rs')
+  | [], [], _, _ => by simp [sameAll]
+  | [], _ :: _, _, _ => by simp [sameAll]
+  | _ :: _, [], _, _ => by simp [sameAll]
+  | r :: rs, r' :: rs', h, h' => by
+    simp only [sameAll, Bool.and_eq_true, List.cons.injEq]
+    rw [sameAs_iff hL (h r (by simp)) (h' r' (by simp)),
+      sameAll_iff hL (fun x hx => h x (by simp [hx])) (fun x hx => h' x (by simp [hx]))]
+
+/-- **Shallow comparison is equality, but for the confidence**, for sources whose
+entries are drawn from a list with distinct keys: two sources are the same
+citation exactly when one is the other cited at its confidence. -/
+theorem Source.sameCitation_iff {L : List BibEntry} (hL : (L.map BibEntry.key).Nodup)
+    {a b : Source} (ha : a.CitesFrom L) (hb : b.CitesFrom L) :
+    a.sameCitation b = true ↔ a = { b with confidence := a.confidence } := by
+  obtain ⟨p, sup, t, c⟩ := a
+  obtain ⟨p', sup', t', c'⟩ := b
+  simp only [sameCitation, Bool.and_eq_true, beq_iff_eq, Source.mk.injEq, and_true]
+  rw [Reference.sameAs_iff hL (ha p (by simp [references])) (hb p' (by simp [references])),
+    Reference.sameAll_iff hL (fun r hr => ha r (by simp [references, hr]))
+      (fun r hr => hb r (by simp [references, hr]))]
+  exact and_assoc
+
 /-- Whether this source appeals to scripture alone, with no scholarly support.
 
 This is the circularity detector. A premise that reads scripture in a particular

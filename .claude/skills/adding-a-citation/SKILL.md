@@ -70,6 +70,11 @@ attribute's *local module state*. A key may be used once across both.
 
 - `@[bib_entry]` is required. Without it the entry is invisible to `bibgen`;
   linter rule L4 rejects it.
+- Cite the tagged definition by name. Never build an entry anywhere else, not
+  inline in a `Source` and not in a helper: `#check_citations` fails on any
+  definition that does, and on two tagged entries sharing a key. A citation is
+  compared by its key and locus (`Source.sameCitation`), which is sound only
+  because a key names exactly one entry.
 - Keys are `family-shorttitle-year`, lowercase and hyphenated. Rule L7 and a
   compile-time `#guard` both check this.
 - The docstring is required (`linter.missingDocs`) and should say why the work
