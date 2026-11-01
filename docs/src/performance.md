@@ -74,6 +74,21 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 2 | Ask each question of satisfiability once (#177) | the AIF check | 67.4 s | 3.75 s | 0.008 | kept |
 | 3 | The kernel checks certificates instead of searching (#183) | the defeat tables | 14.2 s, 185 MiB | 7.1 s, 92 MiB | 0.008 | kept |
 | 4 | Certify assessments and consistency; in a hearing, weigh a step's rank only once it is attacked (#183) | the hearings and assessments | 3.08 s, 97 MiB | 0.48 s, 16 MiB | 0.008 | kept |
+| 5 | Compare a citation by its key and locus, a key checked to name one entry | a hearing's rerated strengths | 2.54 s, 83 MiB | 0.86 s, 25 MiB | 0.008 | kept |
+
+Round 5, `scripts/bench-ab.sh` against `main`, five interleaved rounds. What a
+hearing still paid for re-rating after round 4 was its strengths: re-rating
+matched a step's citation by comparing two whole `Source`s, entries and all,
+350 ms a citation. A key can stand for its entry only if no two entries share a
+key, and that was true but unchecked, so it is now a check
+(`#check_citations`): every entry is a `@[bib_entry]` definition, and no two
+share a key, in the library, the arguments and the examples alike. With it,
+`Source.sameCitation` compares a work's key and locus, and
+`Source.sameCitation_iff` proves it agrees with equality wherever the entries
+are drawn from such a list. The James hearing's twelve rerated strengths fell
+from 2.54 s to 0.86 s (−66%, p = 0.008) and from 83 to 25 MiB; the certified
+Septuagint table moved too (−15%, p = 0.032); nothing was worse. Measured by
+hand, clean: `SolaFide.Ratings` 31 s, and the arguments' `lake build` 230 s.
 
 Round 4, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
 profile of `SolaFide.Ratings`, the slowest module at 110 s, found its rerated
@@ -136,10 +151,8 @@ of memory. Two run in 293 s; one in 500 s with about 5.2 GiB.
 
 ## Fixed points
 
-None yet. After round 4 what a hearing still pays for re-rating is its strength
-theorems (`rerated_strength`), each comparing whole `Source`s in the kernel,
-350 ms a party: a cheaper identity for a citation would change what
-`RatedStep.rerate` matches, and is a decision, not an optimisation. The defeat
-tables cost about 100 ms a sola fide cell, half the kernel's check and half the
-search at elaboration. The next hypothesis is bitmask sets for the replay as
-well as the model (#180).
+None yet. After round 5 the largest benchmarks are the defeat tables, about
+100 ms a sola fide cell, half the kernel's check and half the search at
+elaboration, and the slowest modules of the build are the meanings of sola fide
+and its dispute. The next hypothesis is bitmask sets for the replay as well as
+the model (#180).
