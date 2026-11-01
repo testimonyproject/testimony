@@ -497,7 +497,8 @@ structure Bits where
 /-- The bitmask `m` with bit `k` set. -/
 def Bits.set (m k : ℕ) : ℕ := m ||| (1 <<< k)
 
-theorem Bits.testBit_set {m k j : ℕ} : (Bits.set m k).testBit j = (m.testBit j || decide (k = j)) := by
+theorem Bits.testBit_set {m k j : ℕ} :
+    (Bits.set m k).testBit j = (m.testBit j || decide (k = j)) := by
   simp [Bits.set, Nat.testBit_or, Nat.shiftLeft_eq, Nat.testBit_two_pow]
 
 /-- Settled bits are *sound* for a valuation, through an index, when it agrees
@@ -929,7 +930,8 @@ theorem undermines?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage 
     · split at e
       · simp at e
       · rename_i hno
-        exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)),
+        exact ⟨entails_neg_iff.mpr
+          (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)),
           hno⟩
   · split at e
     · simp at e
@@ -995,7 +997,8 @@ theorem rebuts?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α}
   split at e
   · simp at e
   · rename_i hno
-    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)), hno⟩
+    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)),
+      hno⟩
 
 theorem rebuts?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α}
     (e : rebuts? index h b (clausesOf a.held) a.strength b.strength = some false) :

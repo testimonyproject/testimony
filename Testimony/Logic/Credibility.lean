@@ -468,8 +468,9 @@ structure Assessment (α : Type) [DecidableEq α] [HasPostulates α] where
   /-- What the checks find. -/
   findings : Findings α
   /-- The engine finds it, from hints the kernel checks, read through an index
-  that tells atoms apart: whichever they are, a checked finding is sound. `horn_certify` (`Testimony.Logic.Certificate`)
-  finds them; `findings?`, every question searched, is the case of no hints. -/
+  that tells atoms apart: whichever they are, a checked finding is sound.
+  `horn_certify` (`Testimony.Logic.Certificate`) finds them; `findings?`, every
+  question searched, is the case of no hints. -/
   checked : ∃ (index : α → ℕ), Function.Injective index ∧
     ∃ hints : List Hint, dissent.findingsBy? index hints = some findings
 

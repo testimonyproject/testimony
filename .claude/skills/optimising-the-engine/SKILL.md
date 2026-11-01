@@ -131,7 +131,8 @@ order of cost (re-measure; do not trust this list over a fresh profile):
   refutation are both bits over the atom type's constructor index (#180), which
   the kernel tests and sets in one step each; the search at elaboration still
   holds lists. A replay is sound only through an index that tells atoms apart,
-  which `horn_certify` proves from the enumeration's `ofNat_ctorIdx`.
+  which `horn_certify` proves from the lemma `deriving DecidableEq` writes for
+  an enumeration: that its `ofNat` undoes its constructor index.
 - **Kernel replay** runs every module's replay as a task, each importing its
   own environment, so peak memory is about as many environments as run at
   once. `scripts/kernel-replay.sh` bounds them with `KERNEL_REPLAY_THREADS`

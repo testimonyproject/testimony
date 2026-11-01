@@ -161,9 +161,10 @@ def indexFor (α : Expr) : MetaM Expr := do
   return .lam `_ α (mkNatLit 0) .default
 
 /-- A proof that `index` tells atoms apart, where it is an enumeration's
-constructor index: the enumeration's own `ofNat_ctorIdx`, which `deriving
-DecidableEq` writes, inverts it. A refutation is replayed on bits through the
-index, and is sound only for one that tells atoms apart. -/
+constructor index, from the lemma `deriving DecidableEq` writes for an
+enumeration: that its `ofNat` undoes its constructor index. A refutation is
+replayed on bits through the index, and is sound only for one that tells atoms
+apart. -/
 def injectiveFor (index : Expr) : MetaM Expr := do
   if let .const idx us := index then
     let inv := idx.getPrefix ++ `ofNat_ctorIdx
