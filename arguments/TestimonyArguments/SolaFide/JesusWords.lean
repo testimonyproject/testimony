@@ -484,7 +484,7 @@ inferences are rated. -/
 @[solaFideDefs]
 def jesusWordsDispute : Dispute Claim WordsParty where
   node := wordsPartyNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .luke7 => dominicalCase_establishes
     | .luke18 => luke18Case_establishes

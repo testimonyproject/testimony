@@ -340,7 +340,7 @@ inferences are rated. -/
 @[bornOfAVirginDefs]
 def promiseDispute : Dispute Claim PromiseParty where
   node := promisePartyNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .fulfilment => fulfilmentCase_establishes
     | .westermann => westermannCase_establishes

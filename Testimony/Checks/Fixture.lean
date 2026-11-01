@@ -190,7 +190,7 @@ weakest link being the weaker. -/
 @[fixtureDefs]
 def dispute : Dispute Claim Party where
   node := node
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .minutes => minutes_establishes
     | .clock => clock_establishes

@@ -1,4 +1,5 @@
 import Testimony.Logic.Horn
+import Testimony.Logic.Credibility
 
 /-!
 # Testimony.Logic.Certificate — finding what the kernel checks
@@ -101,7 +102,29 @@ def hintOn (index : α → ℕ) (b : Option (Base α)) (φ : Formula α) : Hint 
   | some b, some d => hintFrom index (b.clauses ++ d) b.settled b.trace
   | _, _ => .search
 
+/-- The hint for the question whether the base's formulas and `Δ` can all hold
+together. -/
+def hintOnAll (index : α → ℕ) (b : Option (Base α)) (Δ : List (Formula α)) : Hint :=
+  match b, clausesOf Δ with
+  | some b, some d => hintFrom index (b.clauses ++ d) b.settled b.trace
+  | _, _ => .search
+
+/-- **The hint for whether `Γ` and `Δ` can all hold together**, as the one
+question `Horn.satisfiable_of_certified` asks. -/
+@[nospecialize]
+def hintsAppend (index : α → ℕ) (Γ Δ : List (Formula α)) : List Hint :=
+  [hintOnAll index (base Γ) Δ]
+
 variable [HasPostulates α]
+
+/-- **The hints for a dissent's findings**, in the order `Dissent.findingsBy?`
+asks its questions: whether its premises hold together, with the claim, with
+the step's grounds, and what it asserts with the claim. -/
+@[nospecialize]
+def findingsHints (index : α → ℕ) (d : Dissent α) : List Hint :=
+  let b := base (d.premises ++ d.background)
+  [ hintOnAll index b [], hintOnAll index b [d.claim], hintOnAll index b d.grounds
+  , hintOnAll index (base (d.asserted ++ d.background)) [d.claim] ]
 
 /-- **The hints for a cell**, in the order `Horn.defeatChecks` asks its
 questions: the rebuttal, each premise of `b`, and for each of `b`'s steps what
@@ -137,13 +160,33 @@ def indexFor (α : Expr) : MetaM Expr := do
     if (← getEnv).contains idx then return .const idx us
   return .lam `_ α (mkNatLit 0) .default
 
-/-- Prove `∃ index hints, Horn.defeatsBy? index hints a b s t = some v` by
-finding the hints and having the kernel check them. -/
+/-- The search that finds a decision's hints, from the decision the goal
+states: a defeat cell (`Horn.defeatsBy?`), a dissent's findings
+(`Dissent.findingsBy?`), or one question of satisfiability
+(`Horn.satisfiableAppend?`). -/
+def searchFor (index lhs : Expr) : MetaM Expr := do
+  let args := lhs.getAppArgs
+  if lhs.isAppOfArity ``Horn.defeatsBy? 9 then
+    mkAppOptM ``Horn.hintsFor #[args[0]!, args[1]!, args[2]!, index, args[5]!, args[6]!]
+  else if lhs.isAppOfArity ``Dissent.findingsBy? 6 then
+    mkAppOptM ``Horn.findingsHints #[args[0]!, args[1]!, args[2]!, index, args[5]!]
+  else if lhs.isAppOfArity ``Horn.satisfiableAppend? 6 then
+    let base := args[4]!
+    unless base.isAppOfArity ``Horn.clausesOf 2 do
+      throwError "horn_certify: expected the clauses of a list, got{indentExpr base}"
+    mkAppOptM ``Horn.hintsAppend #[args[0]!, args[1]!, index, base.appArg!, args[5]!]
+  else
+    throwError "horn_certify: expected `Horn.defeatsBy? …`, `Dissent.findingsBy? …` or \
+      `Horn.satisfiableAppend? …`, got{indentExpr lhs}"
+
+/-- Prove `∃ index hints, decision index hints … = v`, for a defeat cell, a
+dissent's findings or a question of satisfiability, by finding the hints and
+having the kernel check them. -/
 elab (name := hornCertify) "horn_certify" : tactic => do
   let goal ← getMainGoal
   let ty ← whnfR (← instantiateMVars (← goal.getType))
   let some (indexTy, p) := ty.app2? ``Exists
-    | throwError "horn_certify: expected `∃ index hints, Horn.defeatsBy? …`, got{indentExpr ty}"
+    | throwError "horn_certify: expected `∃ index hints, …`, got{indentExpr ty}"
   let .const _ us := ty.getAppFn | throwError "horn_certify: unexpected goal"
   let index ← indexFor indexTy.bindingDomain!
   let inner ← whnfR (p.beta #[index])
@@ -153,10 +196,7 @@ elab (name := hornCertify) "horn_certify" : tactic => do
   let probe := q.beta #[mkApp (mkConst ``List.nil [0]) (mkConst ``Hint)]
   let some (_, lhs, _) := probe.eq?
     | throwError "horn_certify: expected an equation, got{indentExpr probe}"
-  unless lhs.isAppOfArity ``Horn.defeatsBy? 9 do
-    throwError "horn_certify: expected `Horn.defeatsBy? …`, got{indentExpr lhs}"
-  let args := lhs.getAppArgs
-  let search ← mkAppOptM ``Horn.hintsFor #[args[0]!, args[1]!, args[2]!, index, args[5]!, args[6]!]
+  let search ← searchFor index (← instantiateMVars lhs)
   let hints ← unsafe evalExpr (List Hint) (← inferType search) search
   let hintsE := toExpr hints
   let checked ← mkFreshExprMVar (q.beta #[hintsE])

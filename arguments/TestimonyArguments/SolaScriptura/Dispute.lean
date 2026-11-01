@@ -134,7 +134,7 @@ establishes its conclusion, and every party's inferences are rated. -/
 @[solaScripturaDefs]
 def mark7Dispute : Dispute Claim Mark7Party where
   node := mark7PartyNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .principle => mark7Principle_establishes
     | .mark7 => mark7Case_establishes

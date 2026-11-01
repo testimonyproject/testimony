@@ -115,8 +115,15 @@ order of cost (re-measure; do not trust this list over a fresh profile):
   proved with `horn_certify` has its search run at elaboration and only a model
   or a propagation trace per question checked by the kernel; that halved the
   defeat tables. What a cell costs now: converting both positions to clauses,
-  in the kernel, and the search, in the interpreter, about equally. Verdicts,
-  assessments, ratings and the postulate checks still search in the kernel.
+  in the kernel, and the search, in the interpreter, about equally. Assessments
+  and every dispute's consistency are certified too; verdicts already check a
+  witness, and ratings search nothing. The postulate checks run in the
+  interpreter.
+- **Comparing structures in the kernel is dear.** Two equal `Source`s compare
+  every string of their bibliography entries, character by character: 350 ms
+  for one citation in a hearing's re-rating. Order a decision so that what
+  needs such a comparison is computed only when the answer depends on it
+  (`Horn.rankFirst`), and look for `==` on records in `decide +kernel` paths.
 - **A function `evalExpr` calls is compiled at the call** unless it is
   `@[nospecialize]`: specialized at each cell, the certificate search cost
   50 ms a cell in compilation alone. Read `profiler`'s `compilation` lines.

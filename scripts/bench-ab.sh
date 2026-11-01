@@ -16,8 +16,8 @@
 #
 # Run from this checkout after `lake build` in arguments/. The base is checked
 # out in a worktree beside it and built incrementally: this checkout's build
-# output is copied in first, so lake rebuilds only what the change touched,
-# and Mathlib's packages are shared, not copied.
+# output is copied in first, its executables aside, so lake rebuilds only what
+# the change touched, and Mathlib's packages are shared, not copied.
 #
 # Both sides run this checkout's benchmarks (arguments/bench/Engine.lean), so
 # that they measure the same work. A benchmark that does not elaborate against
@@ -66,12 +66,16 @@ cleanup
 git -C "$head" worktree add --detach --quiet "$base" "$base_commit"
 
 # Build it incrementally from this checkout's build output; share the packages.
+# The benchmarks need the arguments' modules, not their executables, which are
+# most of the build output's size: CI's runner ran out of disk copying them.
 log "building the base, $base_commit, from this checkout's build"
-mkdir -p "$base/.lake" "$base/arguments/.lake"
+mkdir -p "$base/.lake" "$base/arguments/.lake/build"
 ln -s "$head/.lake/packages" "$base/.lake/packages"
 cp -a "$head/.lake/build" "$base/.lake/build"
-cp -a "$head/arguments/.lake/build" "$base/arguments/.lake/build"
-(cd "$base/arguments" && lake build >"$out/base-build.log" 2>&1) || {
+for part in "$head/arguments/.lake/build"/*; do
+  [[ "$(basename "$part")" == bin ]] || cp -a "$part" "$base/arguments/.lake/build/"
+done
+(cd "$base/arguments" && lake build TestimonyArguments >"$out/base-build.log" 2>&1) || {
   log "the base does not build; see $out/base-build.log"
   exit 1
 }

@@ -485,7 +485,7 @@ rated. -/
 @[bornOfAVirginDefs]
 def septuagintDispute : Dispute Claim SeptuagintParty where
   node := septuagintPartyNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .witness => septuagintWitness_establishes
     | .drift => driftObjection_establishes

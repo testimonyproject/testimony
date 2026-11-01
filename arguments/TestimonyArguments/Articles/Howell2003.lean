@@ -282,8 +282,8 @@ def node : Party → ArgumentPackage Claim
 def hearing : Dispute Claim Party where
   node := node
   consistent
-    | .howell => Horn.satisfiable_of_satisfiable? (by decide +kernel)
-    | .faith => Horn.satisfiable_of_satisfiable? (by decide +kernel)
+    | .howell => Horn.satisfiable_of_certified (by horn_certify)
+    | .faith => Horn.satisfiable_of_certified (by horn_certify)
     | .sola q => solaFideDispute.consistent q
   sound
     | .howell => howellCase_establishes
@@ -445,7 +445,7 @@ def howellAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := true
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Howell's dissent is a disagreement, not a critique, under every
 standard.** He gives no reason the step's grounds fail to yield its conclusion;

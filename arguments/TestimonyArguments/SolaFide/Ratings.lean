@@ -222,7 +222,7 @@ def canon24Assessment : Assessment Claim where
         [ (.evidence, [.worksCauseIncreaseOfJustification])
         , (.tradition, [])
         , (.scriptural, [.worksCauseIncreaseOfJustification]) ] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Chapter 16, against "fruit, not ground"**: argued, and granting
 Westminster's proof texts. Its grounds are the reward texts, which are Scripture
@@ -243,7 +243,7 @@ def rewardAssessment : Assessment Claim where
         [ (.evidence, [.rewardRenderedToMerits])
         , (.tradition, [])
         , (.scriptural, [.rewardRenderedToMerits]) ] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Trent's reading of James's word, against the lexical step**: it holds that
 James's δικαιόω denotes the increase of justice as a premise, and that premise
@@ -262,7 +262,7 @@ def trentWordAssessment : Assessment Claim where
         [ (.evidence, [.jamesJustifyDenotesIncrease])
         , (.tradition, [])
         , (.scriptural, [.jamesJustifyDenotesIncrease]) ] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **The renewal reading, against the lexical step**: argued from Paul's word
 as renewal and James's word as Paul's, granting the lexical case's grounds. It
@@ -281,7 +281,7 @@ def renewalAssessment : Assessment Claim where
         [ (.evidence, [.jamesUsesDikaioAsPaul])
         , (.tradition, [])
         , (.scriptural, [.jamesUsesDikaioAsPaul]) ] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Trent's reading of James's word is a disagreement, not a critique.** What
 it asserts outright includes the increase of justice, which alone contradicts the
@@ -372,7 +372,7 @@ def westminsterAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **The Reformed harmony, against canon 24's step**: it grants James 2:24, the
 works by which Abraham and Rahab were justified, and canon 24's own claim that
@@ -390,7 +390,7 @@ def harmonyOnCanon24Assessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **The Reformed harmony, against chapter 16's step**: it grants the reward
 texts, and grants for the step's sake even that the reward is rendered to
@@ -407,7 +407,7 @@ def harmonyOnRewardAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Trent's premise that the reward is rendered to merits, rated by its
 register**: Westminster's dissent, the strongest known. -/
@@ -531,7 +531,7 @@ def gospelOnDefinitionAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Romans 4, against Trent's definition**: the righteousness God counts to the
 ungodly is sin not counted (4:5–8), and the verb is forensic. A critique under
@@ -545,7 +545,7 @@ def romansFourOnDefinitionAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Romans 4, on Paul's word, against Trent's definition read as the word**:
 Paul glosses the righteousness God counts to the ungodly as sin not counted
@@ -562,7 +562,7 @@ def romansFourOnWordAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **The lexical case, against Trent's definition read as the word**: it holds
 as a premise that Paul's δικαιόω is forensic — a verdict, and *not* making
@@ -581,7 +581,7 @@ def lexicalOnWordAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Luke 18, against Trent's step to "faith does not suffice"**: the tax
 collector's plea, without works, and God's verdict. It can be held with Trent's
@@ -597,7 +597,7 @@ def luke18OnSufficiencyAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Trent's definition, rated by its register**: Paul's gospel and Romans 4. -/
 def definitionPremise : RatedStep Claim where
@@ -665,7 +665,7 @@ def trentWordOnLexicalAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := false, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Trent's definition read as what God does, against Paul's gospel step**: it
 holds the definition as a premise, and that premise alone contradicts the step's
@@ -683,7 +683,7 @@ def trentGraceOnGospelAssessment : Assessment Claim where
         [ (.evidence, [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks])
         , (.tradition, [])
         , (.scriptural, [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks]) ] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Trent's denial of sufficiency, against Luke 18's step**: argued, from its
 definition, and granting the parable. Its one ground is the definition, which
@@ -702,7 +702,7 @@ def trentSufficiencyOnLuke18Assessment : Assessment Claim where
         [ (.evidence, [.justificationIncludesSanctification])
         , (.tradition, [])
         , (.scriptural, [.justificationIncludesSanctification]) ] }
-  checked := by decide +kernel
+  checked := by horn_certify
 
 /-- **Paul's word, rated by its register**: Trent's reading of the word, the
 strongest known dissent. -/

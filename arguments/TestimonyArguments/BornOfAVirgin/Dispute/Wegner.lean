@@ -167,7 +167,7 @@ rated. -/
 @[bornOfAVirginDefs]
 def wegnerDispute : Dispute Claim WegnerParty where
   node := wegnerPartyNode
-  consistent i := Horn.satisfiable_of_satisfiable? (by cases i <;> decide +kernel)
+  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
   sound
     | .wegner => wegner_establishes
     | .sign => signArgument_establishes

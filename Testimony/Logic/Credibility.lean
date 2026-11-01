@@ -361,17 +361,26 @@ section Decide
 
 variable [DecidableEq α] [HasPostulates α]
 
-/-- **The checks, run** by the engine under every standard; `none` when a check
-is undecided. -/
-def findings? (d : Dissent α) : Option (Findings α) := do
-  let c ← satisfiable? (d.premises ++ d.background)
-  let n ← satisfiable? (d.premises ++ d.background ++ [d.claim])
-  let g ← satisfiable? (d.premises ++ d.background ++ d.grounds)
-  let a ← satisfiable? (d.asserted ++ d.background ++ [d.claim])
+/-- **The checks, run** by the engine under every standard, from hints: the
+four questions of satisfiability are asked in order, each with its hint
+(`Horn.hintAt`), and the dissent's premises are converted to clauses once for
+the first three. `none` when a check is undecided or its hint does not check. -/
+def findingsBy? (index : α → ℕ) (hints : List Hint) (d : Dissent α) :
+    Option (Findings α) := do
+  let base := clausesOf (d.premises ++ d.background)
+  let c ← satisfiableAppend? index (hintAt hints 0) base []
+  let n ← satisfiableAppend? index (hintAt hints 1) base [d.claim]
+  let g ← satisfiableAppend? index (hintAt hints 2) base d.grounds
+  let a ← satisfiableAppend? index (hintAt hints 3) (clausesOf (d.asserted ++ d.background))
+    [d.claim]
   pure { consistent := c, denies := !n, grants := g, argued := a
        , bareDenial := d.assertsDenial
        , unadmitted := Standard.all.map fun s => (s, d.unadmitted s)
        , struck := d.struck }
+
+/-- **The checks, run** by the engine under every standard, every question
+searched: `findingsBy?` with no hints. -/
+def findings? (d : Dissent α) : Option (Findings α) := findingsBy? (fun _ => 0) [] d
 
 omit [HasPostulates α] in
 private theorem unadmittedUnder_eq (d : Dissent α) (c n g a : Bool) (s : Standard) :
@@ -381,42 +390,54 @@ private theorem unadmittedUnder_eq (d : Dissent α) (c n g a : Bool) (s : Standa
       , struck := d.struck } s = d.unadmitted s := by
   cases s <;> rfl
 
-/-- **What the engine finds credible is credible.** -/
-theorem credible_of_findings {d : Dissent α} {f : Findings α} {s : Standard}
-    (hf : d.findings? = some f) (h : f.credible s = true) : Credible s d := by
-  simp only [findings?, Option.bind_eq_bind, Option.bind_eq_some_iff, Option.pure_def,
+/-- **What the engine finds credible is credible**, whatever the hints. -/
+theorem credible_of_findingsBy? {index : α → ℕ} {hints : List Hint} {d : Dissent α}
+    {f : Findings α} {s : Standard}
+    (hf : d.findingsBy? index hints = some f) (h : f.credible s = true) : Credible s d := by
+  simp only [findingsBy?, Option.bind_eq_bind, Option.bind_eq_some_iff, Option.pure_def,
     Option.some.injEq] at hf
   obtain ⟨c, hc, n, hn, g, hg, a, ha, rfl⟩ := hf
   simp only [Findings.credible] at h
   rw [unadmittedUnder_eq] at h
   simp only [Bool.and_eq_true, Bool.not_eq_eq_eq_not, Bool.not_true] at h
   obtain ⟨⟨⟨⟨⟨rfl, rfl⟩, rfl⟩, rfl⟩, hb⟩, hu⟩ := h
-  exact ⟨satisfiable_of_satisfiable? hc, not_satisfiable_of_satisfiable? hn,
-    satisfiable_of_satisfiable? hg, satisfiable_of_satisfiable? ha,
+  have hc := satisfiable_of_satisfiableAppend? hc
+  rw [List.append_nil] at hc
+  exact ⟨hc, not_satisfiable_of_satisfiableAppend? hn,
+    satisfiable_of_satisfiableAppend? hg, satisfiable_of_satisfiableAppend? ha,
     by simp [meets, hb, hu]⟩
 
-/-- **What the engine finds not credible is not credible.** -/
-theorem not_credible_of_findings {d : Dissent α} {f : Findings α} {s : Standard}
-    (hf : d.findings? = some f) (h : f.credible s = false) : ¬ Credible s d := by
+/-- **What the engine finds credible is credible.** -/
+theorem credible_of_findings {d : Dissent α} {f : Findings α} {s : Standard}
+    (hf : d.findings? = some f) (h : f.credible s = true) : Credible s d :=
+  credible_of_findingsBy? hf h
+
+/-- **What the engine finds not credible is not credible**, whatever the
+hints. -/
+theorem not_credible_of_findingsBy? {index : α → ℕ} {hints : List Hint} {d : Dissent α}
+    {f : Findings α} {s : Standard}
+    (hf : d.findingsBy? index hints = some f) (h : f.credible s = false) : ¬ Credible s d := by
   intro hC
-  simp only [findings?, Option.bind_eq_bind, Option.bind_eq_some_iff, Option.pure_def,
+  simp only [findingsBy?, Option.bind_eq_bind, Option.bind_eq_some_iff, Option.pure_def,
     Option.some.injEq] at hf
   obtain ⟨c, hc, n, hn, g, hg, a, ha, rfl⟩ := hf
   have hc' : c = true := by
     cases c
-    · exact absurd hC.consistent (not_satisfiable_of_satisfiable? hc)
+    · have := not_satisfiable_of_satisfiableAppend? hc
+      rw [List.append_nil] at this
+      exact absurd hC.consistent this
     · rfl
   have hn' : n = false := by
     cases n
     · rfl
-    · exact absurd (satisfiable_of_satisfiable? hn) hC.denies
+    · exact absurd (satisfiable_of_satisfiableAppend? hn) hC.denies
   have hg' : g = true := by
     cases g
-    · exact absurd hC.grants (not_satisfiable_of_satisfiable? hg)
+    · exact absurd hC.grants (not_satisfiable_of_satisfiableAppend? hg)
     · rfl
   have ha' : a = true := by
     cases a
-    · exact absurd hC.argued (not_satisfiable_of_satisfiable? ha)
+    · exact absurd hC.argued (not_satisfiable_of_satisfiableAppend? ha)
     · rfl
   have hm := hC.meetsStandard
   simp only [meets, Bool.and_eq_true, Bool.not_eq_true'] at hm
@@ -424,6 +445,11 @@ theorem not_credible_of_findings {d : Dissent α} {f : Findings α} {s : Standar
   simp only [Findings.credible] at h
   rw [unadmittedUnder_eq] at h
   simp [hm.1, hm.2] at h
+
+/-- **What the engine finds not credible is not credible.** -/
+theorem not_credible_of_findings {d : Dissent α} {f : Findings α} {s : Standard}
+    (hf : d.findings? = some f) (h : f.credible s = false) : ¬ Credible s d :=
+  not_credible_of_findingsBy? hf h
 
 end Decide
 
@@ -441,8 +467,10 @@ structure Assessment (α : Type) [DecidableEq α] [HasPostulates α] where
   dissent : Dissent α
   /-- What the checks find. -/
   findings : Findings α
-  /-- The engine finds it. -/
-  checked : dissent.findings? = some findings
+  /-- The engine finds it, from hints the kernel checks: whichever they are, a
+  checked finding is sound. `horn_certify` (`Testimony.Logic.Certificate`)
+  finds them; `findings?`, every question searched, is the case of no hints. -/
+  checked : ∃ (index : α → ℕ) (hints : List Hint), dissent.findingsBy? index hints = some findings
 
 namespace Assessment
 
@@ -458,12 +486,14 @@ def profile (a : Assessment α) : List (Standard × Bool) :=
 /-- **Credible as assessed means credible.** -/
 theorem sound (a : Assessment α) {s : Standard} (h : a.credible s = true) :
     Dissent.Credible s a.dissent :=
-  Dissent.credible_of_findings a.checked h
+  let ⟨_, _, hf⟩ := a.checked
+  Dissent.credible_of_findingsBy? hf h
 
 /-- **Not credible as assessed means not credible.** -/
 theorem complete (a : Assessment α) {s : Standard} (h : a.credible s = false) :
     ¬ Dissent.Credible s a.dissent :=
-  Dissent.not_credible_of_findings a.checked h
+  let ⟨_, _, hf⟩ := a.checked
+  Dissent.not_credible_of_findingsBy? hf h
 
 /-- **Credible as assessed, exactly.** -/
 theorem credible_iff (a : Assessment α) (s : Standard) :
