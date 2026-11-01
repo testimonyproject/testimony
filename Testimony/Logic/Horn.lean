@@ -484,10 +484,99 @@ inductive Hint where
   | refute (trace : List ℕ) (last : ℕ)
   deriving Repr, Inhabited
 
-/-- What propagation settles from nothing, firing the clauses at the positions
-in `trace`, in order. A position past the end fires nothing. -/
-def replay (cs : List (Clause α)) (trace : List ℕ) : Settled α :=
-  trace.foldl (fun s i => match cs[i]? with | some c => propagate s c | none => s) ⟨[], []⟩
+/-- What propagation has settled, as two bitmasks over an index of the atoms:
+an atom is settled true when bit `index a` of `yes` is set, false when bit
+`index a` of `no` is. The kernel tests and sets a bit in one step, where a list
+of atoms is searched one comparison at a time. -/
+structure Bits where
+  /-- The atoms forced true. -/
+  yes : ℕ
+  /-- The atoms forced false. -/
+  no : ℕ
+
+/-- The bitmask `m` with bit `k` set. -/
+def Bits.set (m k : ℕ) : ℕ := m ||| (1 <<< k)
+
+theorem Bits.testBit_set {m k j : ℕ} : (Bits.set m k).testBit j = (m.testBit j || decide (k = j)) := by
+  simp [Bits.set, Nat.testBit_or, Nat.shiftLeft_eq, Nat.testBit_two_pow]
+
+/-- Settled bits are *sound* for a valuation, through an index, when it agrees
+with them. -/
+def Bits.Sound (index : α → ℕ) (s : Bits) (w : Valuation α) : Prop :=
+  (∀ a, s.yes.testBit (index a) = true → w a) ∧ ∀ a, s.no.testBit (index a) = true → ¬ w a
+
+/-- What one clause forces, on bits: `propagate`, with every membership a bit. -/
+def propagateBits (index : α → ℕ) (s : Bits) (c : Clause α) : Bits :=
+  if c.body.all (fun a => s.yes.testBit (index a)) then
+    match c.heads.filter (fun a => !s.no.testBit (index a)) with
+    | [h] => ⟨Bits.set s.yes (index h), s.no⟩
+    | _ => s
+  else if c.heads.all (fun a => s.no.testBit (index a)) then
+    match c.body.filter (fun a => !s.yes.testBit (index a)) with
+    | [b] => ⟨s.yes, Bits.set s.no (index b)⟩
+    | _ => s
+  else s
+
+/-- **Propagation on bits is sound**, for an index that tells atoms apart: a bit
+set for a forced atom then claims no other atom. -/
+theorem propagateBits_sound {index : α → ℕ} (hinj : Function.Injective index)
+    {c : Clause α} {w : Valuation α} (hc : c.Holds w) {s : Bits} (hs : s.Sound index w) :
+    (propagateBits index s c).Sound index w := by
+  obtain ⟨hy, hn⟩ := hs
+  unfold propagateBits
+  split
+  · rename_i hbody
+    have hbody : ∀ a ∈ c.body, w a := fun a ha => hy a (List.all_eq_true.mp hbody a ha)
+    obtain ⟨h, hh, hw⟩ := hc hbody
+    split
+    · rename_i x hx
+      refine ⟨fun a ha => ?_, hn⟩
+      rw [Bits.testBit_set, Bool.or_eq_true, decide_eq_true_eq] at ha
+      rcases ha with ha | ha
+      · exact hy a ha
+      · obtain rfl := hinj ha
+        by_cases hno : s.no.testBit (index h) = true
+        · exact absurd hw (hn h hno)
+        · have : h ∈ c.heads.filter (fun a => !s.no.testBit (index a)) :=
+            List.mem_filter.mpr ⟨hh, by simpa using hno⟩
+          rw [hx] at this
+          simp only [List.mem_singleton] at this
+          exact this ▸ hw
+    · exact ⟨hy, hn⟩
+  · split
+    · rename_i _ hheads
+      split
+      · rename_i x hx
+        refine ⟨hy, fun a ha => ?_⟩
+        rw [Bits.testBit_set, Bool.or_eq_true, decide_eq_true_eq] at ha
+        rcases ha with ha | ha
+        · exact hn a ha
+        · obtain rfl := hinj ha
+          intro hwa
+          have hbody : ∀ b ∈ c.body, w b := by
+            intro b hb
+            by_cases hyes : s.yes.testBit (index b) = true
+            · exact hy b hyes
+            · have : b ∈ c.body.filter (fun a => !s.yes.testBit (index a)) :=
+                List.mem_filter.mpr ⟨hb, by simpa using hyes⟩
+              rw [hx] at this
+              simp only [List.mem_singleton] at this
+              exact this ▸ hwa
+          obtain ⟨h, hh, hw⟩ := hc hbody
+          exact hn h (List.all_eq_true.mp hheads h hh) hw
+      · exact ⟨hy, hn⟩
+    · exact ⟨hy, hn⟩
+
+/-- What propagation settles from nothing, on bits, firing the clauses at the
+positions in `trace`, in order. A position past the end fires nothing. -/
+def replay (index : α → ℕ) (cs : List (Clause α)) (trace : List ℕ) : Bits :=
+  trace.foldl (fun s i => match cs[i]? with | some c => propagateBits index s c | none => s)
+    ⟨0, 0⟩
+
+/-- Whether a clause is violated by settled bits: its body holds and every head
+fails. -/
+def violatedBits (index : α → ℕ) (s : Bits) (c : Clause α) : Bool :=
+  c.body.all (fun a => s.yes.testBit (index a)) && c.heads.all (fun a => s.no.testBit (index a))
 
 /-- **Satisfiability, checked from a hint.** A model is checked against every
 clause: `some true` if it satisfies them all. A refutation is replayed: `some
@@ -497,21 +586,26 @@ gives `none` if the check fails, and `search` runs `clausesSatisfiable?`.
 A model is read through `index`, any map from atoms to bit positions. Atoms
 sharing a position share a value, which can only make a model fail to check,
 never make a non-model check: whatever `index` is, the model checked is a
-valuation. -/
+valuation. A refutation is replayed on bits through the same index, and there
+the index must tell atoms apart (`replay_sound`): a bit set for one forced atom
+must not claim another. -/
 def clausesSatisfiableBy? (index : α → ℕ) (cs : List (Clause α)) : Hint → Option Bool
   | .search => clausesSatisfiable? cs
   | .model yes => if cs.all (satisfiedBy fun a => yes.testBit (index a)) then some true else none
   | .refute trace last =>
     match cs[last]? with
-    | some c => if violated (replay cs trace) c then some false else none
+    | some c => if violatedBits index (replay index cs trace) c then some false else none
     | none => none
 
-/-- A replay settles only what every model of the clauses has. -/
-theorem replay_sound {cs : List (Clause α)} {w : Valuation α} (hw : ∀ c ∈ cs, c.Holds w)
-    (trace : List ℕ) : (replay cs trace).Sound w := by
+/-- A replay settles only what every model of the clauses has, for an index that
+tells atoms apart. -/
+theorem replay_sound {index : α → ℕ} (hinj : Function.Injective index) {cs : List (Clause α)}
+    {w : Valuation α} (hw : ∀ c ∈ cs, c.Holds w) (trace : List ℕ) :
+    (replay index cs trace).Sound index w := by
   unfold replay
-  suffices ∀ (tr : List ℕ) (s : Settled α), s.Sound w →
-      (tr.foldl (fun s i => match cs[i]? with | some c => propagate s c | none => s) s).Sound w
+  suffices ∀ (tr : List ℕ) (s : Bits), s.Sound index w →
+      (tr.foldl (fun s i => match cs[i]? with | some c => propagateBits index s c | none => s)
+        s).Sound index w
     from this trace _ ⟨by simp, by simp⟩
   intro tr
   induction tr with
@@ -522,7 +616,7 @@ theorem replay_sound {cs : List (Clause α)} {w : Valuation α} (hw : ∀ c ∈ 
     apply ih
     split
     · rename_i c hc
-      exact propagate_sound (hw c (List.mem_of_getElem? hc)) hs
+      exact propagateBits_sound hinj (hw c (List.mem_of_getElem? hc)) hs
     · exact hs
 
 /-- `some true` from a hint is a model. -/
@@ -543,9 +637,11 @@ theorem satisfiable_of_clausesSatisfiableBy? {index : α → ℕ} {cs : List (Cl
     · split at e <;> simp at e
     · simp at e
 
-/-- `some false` from a hint is a refutation. -/
+/-- `some false` from a hint is a refutation, for an index that tells atoms apart
+or a question searched. -/
 theorem not_satisfiable_of_clausesSatisfiableBy? {index : α → ℕ} {cs : List (Clause α)}
-    {h : Hint} (e : clausesSatisfiableBy? index cs h = some false) :
+    {h : Hint} (hidx : Function.Injective index ∨ h = .search)
+    (e : clausesSatisfiableBy? index cs h = some false) :
     ¬ ∃ w : Valuation α, ∀ c ∈ cs, c.Holds w := by
   rintro ⟨w, hw⟩
   cases h with
@@ -554,14 +650,14 @@ theorem not_satisfiable_of_clausesSatisfiableBy? {index : α → ℕ} {cs : List
     simp only [clausesSatisfiableBy?] at e
     split at e <;> simp at e
   | refute trace last =>
+    have hinj : Function.Injective index := hidx.resolve_right (by simp)
     simp only [clausesSatisfiableBy?] at e
     split at e
     · rename_i c hc
       split at e
       · rename_i hv
-        simp only [violated, Bool.and_eq_true, List.all_eq_true, List.elem_eq_mem,
-          decide_eq_true_eq] at hv
-        obtain ⟨hy, hn⟩ := replay_sound hw trace
+        simp only [violatedBits, Bool.and_eq_true, List.all_eq_true] at hv
+        obtain ⟨hy, hn⟩ := replay_sound hinj hw trace
         obtain ⟨h, hh, hwh⟩ := hw c (List.mem_of_getElem? hc) fun a ha => hy a (hv.1 a ha)
         exact hn h (hv.2 h hh) hwh
       · simp at e
@@ -611,13 +707,14 @@ theorem satisfiable_of_satisfiableWith? {index : α → ℕ} {h : Hint} {Γ : Li
   · exact hφ
 
 theorem not_satisfiable_of_satisfiableWith? {index : α → ℕ} {h : Hint} {Γ : List (Formula α)}
-    {φ : Formula α} (e : satisfiableWith? index h (clausesOf Γ) φ = some false) :
+    {φ : Formula α} (hidx : Function.Injective index ∨ h = .search)
+    (e : satisfiableWith? index h (clausesOf Γ) φ = some false) :
     ¬ Satisfiable (Γ ++ [φ]) := by
   simp only [satisfiableWith?, Option.bind_eq_some_iff] at e
   obtain ⟨cs, hcs, d, hd, e⟩ := e
   intro hs
   obtain ⟨w, hw⟩ := satisfiable_iff.mp hs
-  refine not_satisfiable_of_clausesSatisfiableBy? e ⟨w, fun c hc => ?_⟩
+  refine not_satisfiable_of_clausesSatisfiableBy? hidx e ⟨w, fun c hc => ?_⟩
   rcases List.mem_append.mp hc with hc | hc
   · exact (clausesOf_sound hcs).mp (fun ψ hψ => hw ψ (List.mem_append_left _ hψ)) c hc
   · exact (toClauses_sound hd).mp (hw φ (by simp)) c hc
@@ -642,13 +739,14 @@ theorem satisfiable_of_satisfiableAppend? {index : α → ℕ} {h : Hint}
   · exact hΔ ψ hψ
 
 theorem not_satisfiable_of_satisfiableAppend? {index : α → ℕ} {h : Hint}
-    {Γ Δ : List (Formula α)} (e : satisfiableAppend? index h (clausesOf Γ) Δ = some false) :
+    {Γ Δ : List (Formula α)} (hidx : Function.Injective index ∨ h = .search)
+    (e : satisfiableAppend? index h (clausesOf Γ) Δ = some false) :
     ¬ Satisfiable (Γ ++ Δ) := by
   simp only [satisfiableAppend?, Option.bind_eq_some_iff] at e
   obtain ⟨cs, hcs, d, hd, e⟩ := e
   intro hs
   obtain ⟨w, hw⟩ := satisfiable_iff.mp hs
-  refine not_satisfiable_of_clausesSatisfiableBy? e ⟨w, fun c hc => ?_⟩
+  refine not_satisfiable_of_clausesSatisfiableBy? hidx e ⟨w, fun c hc => ?_⟩
   rcases List.mem_append.mp hc with hc | hc
   · exact (clausesOf_sound hcs).mp (fun ψ hψ => hw ψ (List.mem_append_left _ hψ)) c hc
   · exact (clausesOf_sound hd).mp (fun ψ hψ => hw ψ (List.mem_append_right _ hψ)) c hc
@@ -656,6 +754,13 @@ theorem not_satisfiable_of_satisfiableAppend? {index : α → ℕ} {h : Hint}
 /-- The hint for the question at position `i` of a decision: `search` if there
 is none. -/
 def hintAt (hints : List Hint) (i : ℕ) : Hint := hints.getD i .search
+
+/-- An index that tells atoms apart serves every hint, and no hints at all serve
+any index: every question is then searched. -/
+theorem hintAt_search {index : α → ℕ} {hints : List Hint}
+    (hidx : Function.Injective index ∨ hints = []) (i : ℕ) :
+    Function.Injective index ∨ hintAt hints i = .search :=
+  hidx.imp id fun h => by subst h; rfl
 
 /-- **Satisfiable, from a hint the kernel checks.** Whichever index and hints
 make the check succeed, the formulas have a model. `horn_certify`
@@ -814,6 +919,7 @@ theorem map_not_eq_some {o : Option Bool} {v : Bool} :
   | some x => cases x <;> cases v <;> simp
 
 theorem undermines?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α} {φ : Formula α}
+    (hidx : Function.Injective index ∨ h = .search)
     (e : undermines? index h b (clausesOf a.held) a.strength φ = some true) :
     Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength := by
   unfold undermines? at e
@@ -823,12 +929,12 @@ theorem undermines?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage 
     · split at e
       · simp at e
       · rename_i hno
-        exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? (map_not_eq_some.mp e)),
+        exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)),
           hno⟩
   · split at e
     · simp at e
     · rename_i hno
-      exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? (map_not_eq_some.mp e)),
+      exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)),
         hno⟩
 
 theorem undermines?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α} {φ : Formula α}
@@ -848,7 +954,8 @@ theorem undermines?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage
     · exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
 
 theorem stepRebuts?_true {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPackage α}
-    {ψ : Formula α}
+    {ψ : Formula α} (hidb : Function.Injective index ∨ hb = .search)
+    (hida : Function.Injective index ∨ ha = .search)
     (e : stepRebuts? index hb ha (clausesOf a.held) (clausesOf b.held) a.strength b.strength ψ =
       some true) :
     Entails b.held ψ ∧ Entails a.held (∼ψ) ∧ ¬ a.strength < b.strength := by
@@ -858,8 +965,8 @@ theorem stepRebuts?_true {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPack
   · rename_i hno
     split at e
     · rename_i hc
-      exact ⟨entails_iff_not_satisfiable.mpr (not_satisfiable_of_satisfiableWith? hc.1),
-        entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hc.2), hno⟩
+      exact ⟨entails_iff_not_satisfiable.mpr (not_satisfiable_of_satisfiableWith? hidb hc.1),
+        entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hida hc.2), hno⟩
     · split at e <;> simp at e
 
 theorem stepRebuts?_false {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPackage α}
@@ -881,13 +988,14 @@ theorem stepRebuts?_false {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPac
       · simp at e
 
 theorem rebuts?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α}
+    (hidx : Function.Injective index ∨ h = .search)
     (e : rebuts? index h b (clausesOf a.held) a.strength b.strength = some true) :
     Rebuts a b ∧ ¬ a.strength < b.strength := by
   unfold rebuts? at e
   split at e
   · simp at e
   · rename_i hno
-    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? (map_not_eq_some.mp e)), hno⟩
+    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)), hno⟩
 
 theorem rebuts?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α}
     (e : rebuts? index h b (clausesOf a.held) a.strength b.strength = some false) :
@@ -911,8 +1019,8 @@ theorem exists_mem_zipIdx {β : Type} {l : List β} {x : β} (h : x ∈ l) :
 
 /-- A defeat, decided from hints. -/
 theorem defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint} {a b : ArgumentPackage α}
-    {s t : ℕ} (hs : a.strength = s) (ht : b.strength = t)
-    (h : defeatsBy? index hints a b s t = some true) : Defeats a b := by
+    {s t : ℕ} (hidx : Function.Injective index ∨ hints = []) (hs : a.strength = s)
+    (ht : b.strength = t) (h : defeatsBy? index hints a b s t = some true) : Defeats a b := by
   subst hs ht
   dsimp only [defeatsBy?] at h
   generalize hc : defeatChecks index hints a b a.strength b.strength = checks at h
@@ -925,12 +1033,13 @@ theorem defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint} {a b : Ar
     dsimp only [defeatChecks] at hx
     rcases List.mem_append.mp hx with hx | hx
     · rcases List.mem_cons.mp hx with hr | hu
-      · exact .inr (.inl (rebuts?_true hr.symm))
+      · exact .inr (.inl (rebuts?_true (hintAt_search hidx _) hr.symm))
       · obtain ⟨⟨φ, i⟩, hφ, he⟩ := List.mem_map.mp hu
-        obtain ⟨hent, hno⟩ := undermines?_true he
+        obtain ⟨hent, hno⟩ := undermines?_true (hintAt_search hidx _) he
         exact .inl ⟨φ, ⟨mem_of_mem_zipIdx hφ, hent⟩, hno⟩
     · obtain ⟨⟨⟨p, ψ⟩, i⟩, hq, he⟩ := List.mem_map.mp hx
-      obtain ⟨hb, ha, hno⟩ := stepRebuts?_true he
+      obtain ⟨hb, ha, hno⟩ :=
+        stepRebuts?_true (hintAt_search hidx _) (hintAt_search hidx _) he
       obtain ⟨hmem, hne⟩ := mem_stepsOf.mp (mem_of_mem_zipIdx hq)
       exact .inr (.inr ⟨p, ψ, ⟨hmem, hne, hb, ha⟩, hno⟩)
   · split at h <;> simp at h
@@ -964,7 +1073,7 @@ theorem not_defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint}
 theorem defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
     (hs : a.strength = s) (ht : b.strength = t) (h : defeats? a b s t = some true) :
     Defeats a b :=
-  defeats_of_defeatsBy? hs ht h
+  defeats_of_defeatsBy? (.inr rfl) hs ht h
 
 /-- A non-defeat, decided. -/
 theorem not_defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
@@ -986,36 +1095,40 @@ theorem defeats_iff_of_defeats? {a b : ArgumentPackage α} {s t : ℕ} {P : Prop
 /-! ### Certified defeats
 
 The same three theorems, from hints the kernel checks rather than a search it
-runs. Each hypothesis says only that *some* index and hints decide the cell:
-whichever they are, a checked answer is sound. `horn_certify`
+runs. Each hypothesis says only that *some* index that tells atoms apart, and
+some hints, decide the cell: whichever they are, a checked answer is sound. The
+index must tell atoms apart because a refutation is replayed on bits through
+it (`replay_sound`). `horn_certify`
 (`Testimony.Logic.Certificate`) finds them and proves the hypothesis. -/
 
 /-- A defeat, from hints the kernel checks. -/
 theorem defeats_of_certified {a b : ArgumentPackage α} {s t : ℕ}
     (hs : a.strength = s) (ht : b.strength = t)
-    (h : ∃ (index : α → ℕ) (hints : List Hint), defeatsBy? index hints a b s t = some true) :
+    (h : ∃ (index : α → ℕ), Function.Injective index ∧
+      ∃ hints : List Hint, defeatsBy? index hints a b s t = some true) :
     Defeats a b := by
-  obtain ⟨_, _, h⟩ := h
-  exact defeats_of_defeatsBy? hs ht h
+  obtain ⟨_, hinj, _, h⟩ := h
+  exact defeats_of_defeatsBy? (.inl hinj) hs ht h
 
 /-- A non-defeat, from hints the kernel checks. -/
 theorem not_defeats_of_certified {a b : ArgumentPackage α} {s t : ℕ}
     (hs : a.strength = s) (ht : b.strength = t)
-    (h : ∃ (index : α → ℕ) (hints : List Hint), defeatsBy? index hints a b s t = some false) :
+    (h : ∃ (index : α → ℕ), Function.Injective index ∧
+      ∃ hints : List Hint, defeatsBy? index hints a b s t = some false) :
     ¬ Defeats a b := by
-  obtain ⟨_, _, h⟩ := h
+  obtain ⟨_, _, _, h⟩ := h
   exact not_defeats_of_defeatsBy? hs ht h
 
 /-- **A cell of a defeat table, from hints the kernel checks.** -/
 theorem defeats_iff_of_certified {a b : ArgumentPackage α} {s t : ℕ} {P : Prop} [Decidable P]
     (hs : a.strength = s) (ht : b.strength = t)
-    (h : ∃ (index : α → ℕ) (hints : List Hint),
-      defeatsBy? index hints a b s t = some (decide P)) :
+    (h : ∃ (index : α → ℕ), Function.Injective index ∧
+      ∃ hints : List Hint, defeatsBy? index hints a b s t = some (decide P)) :
     Defeats a b ↔ P := by
-  obtain ⟨_, _, h⟩ := h
+  obtain ⟨_, hinj, _, h⟩ := h
   by_cases hP : P
   · simp only [hP, decide_true] at h
-    exact iff_of_true (defeats_of_defeatsBy? hs ht h) hP
+    exact iff_of_true (defeats_of_defeatsBy? (.inl hinj) hs ht h) hP
   · simp only [hP, decide_false] at h
     exact iff_of_false (not_defeats_of_defeatsBy? hs ht h) hP
 

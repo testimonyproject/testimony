@@ -156,9 +156,8 @@ example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j 
   cases i <;> cases j <;> decide +kernel
 
 #bench "cell, certified: status reading defeats Wegner" in
-example : ∃ (index : Claim → ℕ) (hints : List Horn.Hint),
-    Horn.defeatsBy? index hints dinahCase driftObjection 1 0 = some true := by
-  horn_certify
+example : Defeats dinahCase driftObjection :=
+  Horn.defeats_of_certified dinahCase_strength driftObjection_strength (by horn_certify)
 
 #bench "table, certified: Septuagint, 36 cells" in
 example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by

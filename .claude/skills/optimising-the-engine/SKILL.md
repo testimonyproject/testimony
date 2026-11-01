@@ -127,8 +127,11 @@ order of cost (re-measure; do not trust this list over a fresh profile):
 - **A function `evalExpr` calls is compiled at the call** unless it is
   `@[nospecialize]`: specialized at each cell, the certificate search cost
   50 ms a cell in compilation alone. Read `profiler`'s `compilation` lines.
-- **Membership is list search.** `Settled` holds lists, and a replay tests
-  atoms with `List.elem`; a model is already a bitmask (#180).
+- **Sets are bitmasks where the kernel checks.** A model and a replayed
+  refutation are both bits over the atom type's constructor index (#180), which
+  the kernel tests and sets in one step each; the search at elaboration still
+  holds lists. A replay is sound only through an index that tells atoms apart,
+  which `horn_certify` proves from the enumeration's `ofNat_ctorIdx`.
 - **Kernel replay** runs every module's replay as a task, each importing its
   own environment, so peak memory is about as many environments as run at
   once. `scripts/kernel-replay.sh` bounds them with `KERNEL_REPLAY_THREADS`

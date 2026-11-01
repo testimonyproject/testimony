@@ -160,6 +160,19 @@ def indexFor (α : Expr) : MetaM Expr := do
     if (← getEnv).contains idx then return .const idx us
   return .lam `_ α (mkNatLit 0) .default
 
+/-- A proof that `index` tells atoms apart, where it is an enumeration's
+constructor index: the enumeration's own `ofNat_ctorIdx`, which `deriving
+DecidableEq` writes, inverts it. A refutation is replayed on bits through the
+index, and is sound only for one that tells atoms apart. -/
+def injectiveFor (index : Expr) : MetaM Expr := do
+  if let .const idx us := index then
+    let inv := idx.getPrefix ++ `ofNat_ctorIdx
+    if (← getEnv).contains inv then
+      return ← mkAppM ``Function.LeftInverse.injective #[.const inv us]
+  throwError "horn_certify: the atom type has no index that tells its atoms apart, \
+    which an enumeration deriving `DecidableEq` has; prove the decision with \
+    `decide +kernel` instead, searching"
+
 /-- The search that finds a decision's hints, from the decision the goal
 states: a defeat cell (`Horn.defeatsBy?`), a dissent's findings
 (`Dissent.findingsBy?`), or one question of satisfiability
@@ -179,9 +192,10 @@ def searchFor (index lhs : Expr) : MetaM Expr := do
     throwError "horn_certify: expected `Horn.defeatsBy? …`, `Dissent.findingsBy? …` or \
       `Horn.satisfiableAppend? …`, got{indentExpr lhs}"
 
-/-- Prove `∃ index hints, decision index hints … = v`, for a defeat cell, a
-dissent's findings or a question of satisfiability, by finding the hints and
-having the kernel check them. -/
+/-- Prove `∃ index, Function.Injective index ∧ ∃ hints, decision index hints … = v`,
+for a defeat cell or a dissent's findings, or `∃ index hints, … = v` for a
+question of satisfiability, by finding the hints and having the kernel check
+them. -/
 elab (name := hornCertify) "horn_certify" : tactic => do
   let goal ← getMainGoal
   let ty ← whnfR (← instantiateMVars (← goal.getType))
@@ -189,7 +203,11 @@ elab (name := hornCertify) "horn_certify" : tactic => do
     | throwError "horn_certify: expected `∃ index hints, …`, got{indentExpr ty}"
   let .const _ us := ty.getAppFn | throwError "horn_certify: unexpected goal"
   let index ← indexFor indexTy.bindingDomain!
-  let inner ← whnfR (p.beta #[index])
+  let afterIndex ← whnfR (p.beta #[index])
+  -- With an injectivity conjunct, prove it and go on to the hints.
+  let (inj?, inner) ← match afterIndex.app2? ``And with
+    | some (_, rest) => pure (some (← injectiveFor index), ← whnfR rest)
+    | none => pure (none, afterIndex)
   let some (hintsTy, q) := inner.app2? ``Exists
     | throwError "horn_certify: expected `∃ hints, …`, got{indentExpr inner}"
   let .const _ vs := inner.getAppFn | throwError "horn_certify: unexpected goal"
@@ -202,8 +220,11 @@ elab (name := hornCertify) "horn_certify" : tactic => do
   let checked ← mkFreshExprMVar (q.beta #[hintsE])
   let rest ← Tactic.run checked.mvarId! (evalTactic (← `(tactic| decide +kernel)))
   unless rest.isEmpty do throwError "horn_certify: the kernel did not check the hints"
-  goal.assign <| mkApp4 (.const ``Exists.intro us) indexTy p index <|
-    mkApp4 (.const ``Exists.intro vs) hintsTy q hintsE checked
+  let withHints := mkApp4 (.const ``Exists.intro vs) hintsTy q hintsE checked
+  let body ← match inj?, afterIndex.app2? ``And with
+    | some inj, some (injTy, rest) => pure (mkApp4 (mkConst ``And.intro) injTy rest inj withHints)
+    | _, _ => pure withHints
+  goal.assign <| mkApp4 (.const ``Exists.intro us) indexTy p index body
   replaceMainGoal []
 
 end Testimony.Logic.Certificate
