@@ -1,5 +1,6 @@
 import TestimonyExamples.Grits
 import Testimony.Checks.Aif
+import Testimony.Checks.Citations
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Refutations
@@ -12,8 +13,9 @@ The library checks its own arguments as part of its build
 the library holds its own cases to the same standard, and here the examples
 do: every case's claims have meanings and pinned joins, no package is emptied
 by its meanings, no refutation is undone by them, `establish` fails on every
-refuted package as not Horn, and every dispute is a graph meeting the Argument
-Interchange Format's Definition 1.1. The reports are pinned, so a change in any
+refuted package as not Horn, every bibliography entry is a `@[bib_entry]`
+definition whose key no other entry shares, and every dispute is a graph meeting
+the Argument Interchange Format's Definition 1.1. The reports are pinned, so a change in any
 of them is a change a reviewer sees.
 -/
 
@@ -49,6 +51,10 @@ The grits
 /-- info: establish fails, as not Horn, on all 1 refuted packages -/
 #guard_msgs in
 #check_refutations under TestimonyExamples using unfoldSets
+
+/-- info: every entry is a tagged definition, and every key names one: 76 definitions, 17 entries -/
+#guard_msgs in
+#check_citations under TestimonyExamples
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:

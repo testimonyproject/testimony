@@ -7,6 +7,7 @@ import TestimonyArguments.SpiritBaptism
 import TestimonyArguments.Meanings
 import TestimonyArguments.Articles.Howell2003
 import Testimony.Checks.Aif
+import Testimony.Checks.Citations
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Refutations
@@ -27,6 +28,9 @@ them is a change a reviewer sees:
   undone by them;
 - **refutations**: `establish` fails, as not Horn, on every package an argument
   refutes, with that argument's unfold set;
+- **citations**: every bibliography entry, the library's and the arguments', is a
+  `@[bib_entry]` definition, and no two share a key, so a citation's key names
+  its entry;
 - **AIF**: every dispute is a graph meeting the Argument Interchange Format's
   Definition 1.1.
 -/
@@ -95,6 +99,18 @@ The canonical witness
 /-- info: establish fails, as not Horn, on all 34 refuted packages -/
 #guard_msgs in
 #check_refutations under TestimonyArguments using unfoldSets
+
+/--
+info: every entry is a tagged definition, and every key names one: 2285 definitions, 176 entries
+-/
+#guard_msgs in
+#check_citations under Testimony
+
+/--
+info: every entry is a tagged definition, and every key names one: 1622 definitions, 176 entries
+-/
+#guard_msgs in
+#check_citations under TestimonyArguments
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:

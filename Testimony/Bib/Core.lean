@@ -327,6 +327,23 @@ def BibEntry.core : BibEntry → WorkCore
 /-- The entry's citation key. -/
 def BibEntry.key (e : BibEntry) : CiteKey := e.core.key
 
+/-- **In a list whose keys are distinct, a key names one entry.** Two entries of
+the list with the same key are the same entry. `Testimony.Checks.Citations`
+makes every entry the code can cite one of a set of definitions with distinct
+keys, which is what lets a citation be compared by its key. -/
+theorem BibEntry.eq_of_key_eq {L : List BibEntry} (h : (L.map BibEntry.key).Nodup)
+    {e e' : BibEntry} (he : e ∈ L) (he' : e' ∈ L) (hk : e.key = e'.key) : e = e' := by
+  induction L with
+  | nil => simp at he
+  | cons x xs ih =>
+    simp only [List.map_cons, List.nodup_cons, List.mem_map] at h
+    obtain ⟨hx, hxs⟩ := h
+    rcases List.mem_cons.mp he with rfl | h₁ <;> rcases List.mem_cons.mp he' with rfl | h₂
+    · rfl
+    · exact absurd ⟨e', h₂, hk.symm⟩ hx
+    · exact absurd ⟨e, h₁, hk⟩ hx
+    · exact ih hxs h₁ h₂
+
 /-- Whether the entry carries any stable public identifier. An entry for which
 this is `false` is rendered as unverified: legal, but visibly so. -/
 def BibEntry.isVerifiable (e : BibEntry) : Bool := !e.core.identifiers.isEmpty

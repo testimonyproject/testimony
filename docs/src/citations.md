@@ -69,7 +69,16 @@ reference resolves.
    ```
 
    Citation keys are `family-shorttitle-year`, lowercase, hyphen-separated.
-   Rule L7 and a compile-time `#guard` both check the format. The key is also
+   Rule L7 and a compile-time `#guard` both check the format.
+
+   **A key names one entry.** Cite the tagged definition by name, and build an
+   entry nowhere else. `#check_citations` (`Testimony.Checks.Citations`) fails
+   on any definition other than a tagged one that builds an entry, and on two
+   tagged entries, anywhere, that share a key. So a citation can be compared by
+   its key and locus rather than by the whole entry
+   (`Testimony.Source.sameCitation`; `Testimony.Source.sameCitation_iff` proves
+   the two agree), which is how a hearing matches a step's citation when it
+   re-rates it. The key is also
    the entry's anchor in the generated bibliography, so it is what every
    citation on an [argument page](./arguments/sola-scriptura.md) links to —
    `bibliography.md#moo-romans-2018` lands a reader on the entry.

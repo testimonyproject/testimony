@@ -31,7 +31,7 @@ The benchmarks, from the smallest unit up:
   (`decide +kernel` on `Horn.defeats?`), and certified, the search run at
   elaboration and only its hints checked in the kernel (`horn_certify`), as the
   arguments' own tables are proved; and a row of a hearing, where every party's
-  inferences are re-rated under a standard;
+  inferences are re-rated under a standard, with the parties' re-rated strengths;
 - **a verdict**: the solver's checked witness for each of the two disputes;
 - **an assessment** and **a rating**: Miller's dissent, searched and
   certified, and the laws' step;
@@ -241,6 +241,12 @@ example (i : Party)
   refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
+
+#bench "strengths: James hearing under evidence, 12 parties" in
+example :
+    ∀ i, ((jamesRegister.rerated .evidence).node i).strength = ratedStrength .evidence i := by
+  intro i
+  cases i <;> decide +kernel
 
 #bench "row, certified: James hearing under evidence, Trent's word, 12 cells" in
 example (j : JamesParty) :

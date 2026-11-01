@@ -586,9 +586,10 @@ structure Overruled [DecidableEq α] [HasPostulates α] (register : List (Assess
   isTheDissent :
     ∃ a, register[dissent]? = some a ∧ (dispute.node party).premises = a.dissent.premises
   /-- The dispute weighs the step at its floor: every citation of the step's
-  support in it is rated `disputed`. -/
+  support in it, at whatever confidence (`Source.sameCitation`), is rated
+  `disputed`. -/
   atTheFloor : ∀ j, ∀ src ∈ (dispute.node j).inferences,
-    support == { src with confidence := support.confidence } → src.confidence = .disputed
+    support.sameCitation src → src.confidence = .disputed
   /-- No admissible set of the dispute contains the party. -/
   indefensible : ∀ S, Framework.Admissible dispute.defeats S → party ∉ S
 
@@ -676,10 +677,14 @@ namespace RatedStep
 variable [DecidableEq α] [HasPostulates α]
 
 /-- **A citation, re-rated under a standard**: a citation of a rated step, at
-whatever confidence it is cited, carries the step's computed rating under the
-standard; any other citation is unchanged. -/
+whatever confidence it is cited (`Source.sameCitation`), carries the step's
+computed rating under the standard; any other citation is unchanged. A citation
+is matched by its references' keys and loci, not by its entries' contents, which
+the kernel would compare a character at a time; where every entry is drawn from
+the bibliography, as `Testimony.Checks.Citations` makes it, the two agree
+(`Source.sameCitation_iff`). -/
 def rerate (steps : List (RatedStep α)) (s : Standard) (src : Source) : Source :=
-  match steps.find? (fun r => r.support == { src with confidence := r.support.confidence }) with
+  match steps.find? (fun r => r.support.sameCitation src) with
   | some r => { src with confidence := (r.rating s).confidence }
   | none => src
 

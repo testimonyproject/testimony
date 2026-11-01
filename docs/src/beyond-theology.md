@@ -117,6 +117,7 @@ Every check the library runs over its own arguments takes a namespace:
 #check_postulates under TestimonyExamples
 #check_refutations_postulates under TestimonyExamples
 #check_refutations under TestimonyExamples using unfoldSets
+#check_citations under TestimonyExamples
 #check_aif under TestimonyExamples
 ```
 
