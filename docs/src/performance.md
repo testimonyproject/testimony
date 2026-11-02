@@ -76,6 +76,31 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 4 | Certify assessments and consistency; in a hearing, weigh a step's rank only once it is attacked (#183) | the hearings and assessments | 3.08 s, 97 MiB | 0.48 s, 16 MiB | 0.008 | kept |
 | 5 | Compare a citation by its key and locus, a key checked to name one entry | a hearing's rerated strengths | 2.54 s, 83 MiB | 0.86 s, 25 MiB | 0.008 | kept |
 | 6 | Replay a refutation on bitmasks (#180) | the certified defeat tables | 7.21 s, 94 MiB | 5.99 s, 70 MiB | 0.008 | kept |
+| 7 | Find exclusions through shared keys, not every pair | the sola fide joins | 45.0 s, 3.43 GiB | 13.0 s, 1.03 GiB | 0.008 | kept |
+
+Round 7, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
+profile of `Meanings.SolaFide` put 51 of its 64 seconds in one proof: that the
+pinned exclusions are what the meanings contain, which the kernel checked by
+testing every one of the 6105 pairs of the argument's 111 claims for a clash.
+Two first guesses were wrong, and are recorded so that nobody tries them again:
+that the kernel closed each meaning again for every pair (a table of closed
+meanings, and one of their coherence, each checked once, changed nothing,
+44 s), and that the closing was the cost (it is 0.4 s for every claim). The
+cost was the clash check itself, comparing whole facts and terms a field at a
+time, some 400,000 comparisons. Two coherent meanings can clash only where they
+share a key, a fact or a thing their relations are about
+(`Ontology.shares_of_clash`), so the claims are now taken from the last to the
+first against an index of the later claims' keys, and each is checked only
+against those it shares a key with; `HasMeanings.exclusionsUnder_eq` proves the
+list the same, pair for pair and in order. The exclusions fell from 45.0 s to
+13.0 s (−71%, p = 0.008) and from 3.43 to 1.03 GiB. The entailments were tried
+the same way, indexed by each claim's first literal, and gained only 9.7 s to
+8.3 s: their check already stops at the first missing literal, so the pairs
+themselves are the cost, and the index does not remove them. They are left as
+they are. Measured by hand, clean, on the same machine: the arguments'
+`lake build` fell from 225 s to 204 s and its peak from 13.8 to 10.9 GiB, and
+the kernel replay's peak from 9.3 to 6.9 GiB, at 226 s: the exclusions proof
+was the largest single holder of memory in either.
 
 Round 6, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
 certified refutation was replayed over lists of settled atoms, each membership
@@ -165,7 +190,7 @@ of memory. Two run in 293 s; one in 500 s with about 5.2 GiB.
 
 ## Fixed points
 
-None yet. After round 6 the largest benchmarks are still the defeat tables,
-about 80 ms a sola fide cell, of which converting each position to clauses and
-the search at elaboration are now most; and the slowest modules of the build
-are the meanings of sola fide and its dispute.
+None yet. After round 7 the sola fide joins take 25 s of their module, of which
+the entailments are 9 s; the next candidates are the support and part-of tables,
+which still search in the kernel, and the models `satisfied_by` checks with
+`simp`.
