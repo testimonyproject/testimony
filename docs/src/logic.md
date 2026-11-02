@@ -759,14 +759,15 @@ tables of how parties stand together (`Testimony.Logic.Support`).
   of assuming it. So the critics' case is part of Paul's, and Sanders meets Paul
   on the history of Second Temple Judaism, where the literature has the dispute.
 
-Both tables are proved like the defeat table, cell by cell, by `supports?` or
-`partOf?` and `decide +kernel`:
+Both tables are proved like the defeat table, cell by cell, from hints the
+kernel checks: `horn_certify` finds a model or a refutation for each question
+`supportsBy?` or `partOfBy?` asks, and `decide +kernel` checks them.
 
 ```lean
 theorem solaFideDispute_partOf : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 ```
 
 The page draws the graph, lists the parties by number, and tabulates every

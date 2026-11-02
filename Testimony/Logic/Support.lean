@@ -14,8 +14,10 @@ another; that one is part of another.
 
 `Supports a b` is that relation: `a`'s conclusion entails a **claim** `b` rests
 on — an atom or a denied atom among `b`'s premises. It is decided by the Horn
-engine and checked by the kernel, as defeats are (`supports?`,
-`supports_iff_of_supports?`).
+engine and checked by the kernel, as defeats are: from hints, a model or a
+refutation for each question, which `horn_certify` finds and the kernel checks
+(`supportsBy?`, `supports_iff_of_certified`), or by a search the kernel runs
+itself (`supports?`).
 
 ## Why claims and not steps
 
@@ -56,47 +58,107 @@ section Decide
 
 variable [DecidableEq α]
 
-/-- For each claim among `b`'s premises, whether `a`'s conclusion can hold with
-its negation: `some false` is an entailment. -/
-def supportChecks (a b : ArgumentPackage α) : List (Formula α × Option Bool) :=
-  (b.premises.filter (Page.Explanation.isLiteral ·)).map fun φ =>
-    (φ, satisfiable? [a.conclusion, ∼φ])
+/-! #### Checks, each with a hint
 
-/-- **Whether `a` supports `b`**, decided by the engine: `none` when some
-claim's check is undecided and none succeeded. -/
-def supports? (a b : ArgumentPackage α) : Option Bool :=
-  if (supportChecks a b).any (·.2 == some false) then some true
-  else if (supportChecks a b).all (·.2 == some true) then some false
+Both relations ask one question of satisfiability per premise of `b`, and each
+question can be given a hint, a model or a refutation, which the kernel checks
+in place of a search (`Horn.clausesSatisfiableBy?`). `checksBy` hands the
+questions their hints in order, and any question without one is searched. -/
+
+/-- One check per formula, each asked with the hint at its position, or with
+`search` past the end of the hints. -/
+def checksBy (f : Hint → Formula α → Option Bool) :
+    List Hint → List (Formula α) → List (Option Bool)
+  | _, [] => []
+  | hs, φ :: φs => f (hs.headD .search) φ :: checksBy f hs.tail φs
+
+omit [DecidableEq α] in
+/-- Every check was asked of one of the formulas, with a hint that is `search`
+unless the index tells atoms apart. -/
+theorem mem_checksBy {P : Prop} {f : Hint → Formula α → Option Bool} {hs : List Hint}
+    {φs : List (Formula α)} {x : Option Bool} (hidx : P ∨ hs = []) (hx : x ∈ checksBy f hs φs) :
+    ∃ φ ∈ φs, ∃ h, (P ∨ h = .search) ∧ f h φ = x := by
+  induction φs generalizing hs with
+  | nil => simp [checksBy] at hx
+  | cons φ φs ih =>
+    rcases List.mem_cons.mp hx with rfl | hx
+    · refine ⟨φ, List.mem_cons_self, _, hidx.imp id fun h => ?_, rfl⟩
+      subst h; rfl
+    · obtain ⟨ψ, hψ, h, hh, e⟩ := ih (hs := hs.tail) (hidx.imp id fun h => by subst h; rfl) hx
+      exact ⟨ψ, List.mem_cons_of_mem _ hψ, h, hh, e⟩
+
+omit [DecidableEq α] in
+/-- Every formula was asked about, with a hint that is `search` unless the index
+tells atoms apart. -/
+theorem checksBy_mem {P : Prop} {f : Hint → Formula α → Option Bool} {hs : List Hint}
+    {φs : List (Formula α)} {φ : Formula α} (hidx : P ∨ hs = []) (hφ : φ ∈ φs) :
+    ∃ h, (P ∨ h = .search) ∧ f h φ ∈ checksBy f hs φs := by
+  induction φs generalizing hs with
+  | nil => simp at hφ
+  | cons ψ φs ih =>
+    rcases List.mem_cons.mp hφ with rfl | hφ
+    · refine ⟨_, hidx.imp id fun h => ?_, List.mem_cons_self⟩
+      subst h; rfl
+    · obtain ⟨h, hh, hm⟩ := ih (hs := hs.tail) (hidx.imp id fun h => by subst h; rfl) hφ
+      exact ⟨h, hh, List.mem_cons_of_mem _ hm⟩
+
+/-- For each claim among `b`'s premises, in order, whether `a`'s conclusion can
+hold with its negation, from a hint: `some false` is an entailment. `a`'s
+conclusion is converted to clauses once. -/
+def supportChecksBy (index : α → ℕ) (hints : List Hint) (a b : ArgumentPackage α) :
+    List (Option Bool) :=
+  let ca := clausesOf [a.conclusion]
+  checksBy (fun h φ => satisfiableAppend? index h ca [∼φ]) hints
+    (b.premises.filter (Page.Explanation.isLiteral ·))
+
+/-- **Whether `a` supports `b`**, decided from hints: `none` when some claim's
+check is undecided, or its hint did not check, and none succeeded. -/
+def supportsBy? (index : α → ℕ) (hints : List Hint) (a b : ArgumentPackage α) : Option Bool :=
+  let checks := supportChecksBy index hints a b
+  if checks.any (· == some false) then some true
+  else if checks.all (· == some true) then some false
   else none
 
-theorem supports_of_supports? {a b : ArgumentPackage α} (h : supports? a b = some true) :
-    Supports a b := by
-  unfold supports? at h
-  split at h
-  · rename_i hany
-    obtain ⟨⟨φ, r⟩, hmem, hr⟩ := List.any_eq_true.mp hany
-    simp only [supportChecks, List.mem_map, List.mem_filter, Prod.mk.injEq] at hmem
-    obtain ⟨ψ, ⟨hψ, hlit⟩, rfl, rfl⟩ := hmem
-    have hsat : ¬ Satisfiable ([a.conclusion] ++ [∼ψ]) :=
-      not_satisfiable_of_satisfiable? (by simpa using hr)
-    exact ⟨ψ, hψ, hlit, entails_iff_not_satisfiable.mpr hsat⟩
-  · split at h <;> simp at h
+/-- **Whether `a` supports `b`**, every question searched: `supportsBy?` with
+no hints. -/
+def supports? (a b : ArgumentPackage α) : Option Bool := supportsBy? (fun _ => 0) [] a b
 
-theorem not_supports_of_supports? {a b : ArgumentPackage α} (h : supports? a b = some false) :
+theorem supports_of_supportsBy? {index : α → ℕ} {hints : List Hint} {a b : ArgumentPackage α}
+    (hidx : Function.Injective index ∨ hints = []) (e : supportsBy? index hints a b = some true) :
+    Supports a b := by
+  dsimp only [supportsBy?] at e
+  split at e
+  · rename_i hany
+    obtain ⟨r, hmem, hr⟩ := List.any_eq_true.mp hany
+    obtain ⟨φ, hφ, h, hh, rfl⟩ := mem_checksBy hidx hmem
+    obtain ⟨hφ, hlit⟩ := List.mem_filter.mp hφ
+    exact ⟨φ, hφ, hlit, entails_iff_not_satisfiable.mpr
+      (not_satisfiable_of_satisfiableAppend? hh (by simpa using hr))⟩
+  · split at e <;> simp at e
+
+theorem not_supports_of_supportsBy? {index : α → ℕ} {hints : List Hint}
+    {a b : ArgumentPackage α} (e : supportsBy? index hints a b = some false) :
     ¬ Supports a b := by
-  unfold supports? at h
-  split at h
-  · simp at h
-  · split at h
+  dsimp only [supportsBy?] at e
+  split at e
+  · simp at e
+  · split at e
     · rename_i hall
       rintro ⟨φ, hφ, hlit, hent⟩
-      have hmem : (φ, satisfiable? [a.conclusion, ∼φ]) ∈ supportChecks a b := by
-        simp only [supportChecks, List.mem_map, List.mem_filter]
-        exact ⟨φ, ⟨hφ, hlit⟩, rfl⟩
-      have hsat : satisfiable? ([a.conclusion] ++ [∼φ]) = some true := by
-        simpa using List.all_eq_true.mp hall _ hmem
-      exact entails_iff_not_satisfiable.mp hent (satisfiable_of_satisfiable? hsat)
-    · simp at h
+      obtain ⟨h, -, hmem⟩ := checksBy_mem (f := fun h φ =>
+        satisfiableAppend? index h (clausesOf [a.conclusion]) [∼φ]) (P := True) (.inl trivial)
+        (List.mem_filter.mpr ⟨hφ, hlit⟩)
+      exact entails_iff_not_satisfiable.mp hent
+        (satisfiable_of_satisfiableAppend? (by simpa using List.all_eq_true.mp hall _ hmem))
+    · simp at e
+
+theorem supports_of_supports? {a b : ArgumentPackage α} (h : supports? a b = some true) :
+    Supports a b :=
+  supports_of_supportsBy? (.inr rfl) h
+
+theorem not_supports_of_supports? {a b : ArgumentPackage α} (h : supports? a b = some false) :
+    ¬ Supports a b :=
+  not_supports_of_supportsBy? h
 
 /-- **A support table cell, from the engine**: whenever it decides, the relation
 is exactly what it says. -/
@@ -107,6 +169,20 @@ theorem supports_iff_of_supports? {a b : ArgumentPackage α} {P : Prop} [Decidab
     exact ⟨fun _ => hP, fun _ => supports_of_supports? h⟩
   · simp only [hP, decide_false] at h
     exact ⟨fun hs => absurd hs (not_supports_of_supports? h), fun h' => absurd h' hP⟩
+
+/-- **A support table cell, from hints the kernel checks.** Whichever index
+that tells atoms apart, and whichever hints, decide the cell, the answer is
+sound. `horn_certify` (`Testimony.Logic.Certificate`) finds them. -/
+theorem supports_iff_of_certified {a b : ArgumentPackage α} {P : Prop} [Decidable P]
+    (h : ∃ (index : α → ℕ), Function.Injective index ∧
+      ∃ hints : List Hint, supportsBy? index hints a b = some (decide P)) :
+    Supports a b ↔ P := by
+  obtain ⟨_, hinj, _, h⟩ := h
+  by_cases hP : P
+  · simp only [hP, decide_true] at h
+    exact iff_of_true (supports_of_supportsBy? (.inl hinj) h) hP
+  · simp only [hP, decide_false] at h
+    exact iff_of_false (not_supports_of_supportsBy? h) hP
 
 end Decide
 
@@ -160,37 +236,84 @@ theorem not_entails_of_entailsCheck {Γ : List (Formula α)} {φ : Formula α}
   | imp p q => exact fun he => entails_imp_iff.mp he (satisfiable_of_satisfiable? h)
   | _ => exact fun he => entails_iff_not_satisfiable.mp he (satisfiable_of_satisfiable? h)
 
-/-- For each premise of `b`, whether `a`'s premises entail it. -/
-def partChecks (b a : ArgumentPackage α) : List (Option Bool) :=
-  b.premises.map (entailsCheck a.premises)
+/-- What is asked of a list of formulas to learn whether it entails `φ`: for a
+step `p → q`, `p` and `q`'s negation, and otherwise `φ`'s negation. The list
+entails `φ` when it cannot hold with them. -/
+def entailsQuestion : Formula α → List (Formula α)
+  | .imp p q => [p, ∼q]
+  | φ => [∼φ]
 
-/-- **Whether `b` is part of `a`**, decided by the engine. -/
-def partOf? (b a : ArgumentPackage α) : Option Bool :=
-  if (partChecks b a).all (· == some false) then some true
-  else if (partChecks b a).any (· == some true) then some false
+/-- Whether the formulas whose clauses are `base` entail `φ`, from a hint:
+`some false` is an entailment. -/
+def entailsCheckBy (index : α → ℕ) (h : Hint) (base : Option (List (Clause α)))
+    (φ : Formula α) : Option Bool :=
+  satisfiableAppend? index h base (entailsQuestion φ)
+
+theorem entails_of_entailsCheckBy {index : α → ℕ} {h : Hint} {Γ : List (Formula α)}
+    {φ : Formula α} (hidx : Function.Injective index ∨ h = .search)
+    (e : entailsCheckBy index h (clausesOf Γ) φ = some false) : Entails Γ φ := by
+  have hn := not_satisfiable_of_satisfiableAppend? hidx e
+  cases φ with
+  | imp p q => exact entails_imp_iff.mpr hn
+  | _ => exact entails_iff_not_satisfiable.mpr hn
+
+theorem not_entails_of_entailsCheckBy {index : α → ℕ} {h : Hint} {Γ : List (Formula α)}
+    {φ : Formula α} (e : entailsCheckBy index h (clausesOf Γ) φ = some true) :
+    ¬ Entails Γ φ := by
+  have hs := satisfiable_of_satisfiableAppend? e
+  cases φ with
+  | imp p q => exact fun he => entails_imp_iff.mp he hs
+  | _ => exact fun he => entails_iff_not_satisfiable.mp he hs
+
+/-- For each premise of `b`, in order, whether `a`'s premises entail it, from a
+hint. `a`'s premises are converted to clauses once. -/
+def partChecksBy (index : α → ℕ) (hints : List Hint) (b a : ArgumentPackage α) :
+    List (Option Bool) :=
+  let ca := clausesOf a.premises
+  checksBy (fun h φ => entailsCheckBy index h ca φ) hints b.premises
+
+/-- **Whether `b` is part of `a`**, decided from hints. -/
+def partOfBy? (index : α → ℕ) (hints : List Hint) (b a : ArgumentPackage α) : Option Bool :=
+  let checks := partChecksBy index hints b a
+  if checks.all (· == some false) then some true
+  else if checks.any (· == some true) then some false
   else none
 
-theorem partOf_of_partOf? {b a : ArgumentPackage α} (h : partOf? b a = some true) :
+/-- **Whether `b` is part of `a`**, every question searched: `partOfBy?` with
+no hints. -/
+def partOf? (b a : ArgumentPackage α) : Option Bool := partOfBy? (fun _ => 0) [] b a
+
+theorem partOf_of_partOfBy? {index : α → ℕ} {hints : List Hint} {b a : ArgumentPackage α}
+    (hidx : Function.Injective index ∨ hints = []) (e : partOfBy? index hints b a = some true) :
     PartOf b a := by
-  unfold partOf? at h
-  split at h
+  dsimp only [partOfBy?] at e
+  split at e
   · rename_i hall
     intro φ hφ
-    have hmem := List.mem_map_of_mem (f := entailsCheck a.premises) hφ
-    exact entails_of_entailsCheck (by simpa using List.all_eq_true.mp hall _ hmem)
-  · split at h <;> simp at h
+    obtain ⟨h, hh, hmem⟩ := checksBy_mem (f := fun h φ =>
+      entailsCheckBy index h (clausesOf a.premises) φ) hidx hφ
+    exact entails_of_entailsCheckBy hh (by simpa using List.all_eq_true.mp hall _ hmem)
+  · split at e <;> simp at e
 
-theorem not_partOf_of_partOf? {b a : ArgumentPackage α} (h : partOf? b a = some false) :
-    ¬ PartOf b a := by
-  unfold partOf? at h
-  split at h
-  · simp at h
-  · split at h
+theorem not_partOf_of_partOfBy? {index : α → ℕ} {hints : List Hint} {b a : ArgumentPackage α}
+    (e : partOfBy? index hints b a = some false) : ¬ PartOf b a := by
+  dsimp only [partOfBy?] at e
+  split at e
+  · simp at e
+  · split at e
     · rename_i _ hany
       obtain ⟨r, hr, hr'⟩ := List.any_eq_true.mp hany
-      obtain ⟨φ, hφ, rfl⟩ := List.mem_map.mp (by simpa [partChecks] using hr)
-      exact fun hp => not_entails_of_entailsCheck (by simpa using hr') (hp φ hφ)
-    · simp at h
+      obtain ⟨φ, hφ, h, -, rfl⟩ := mem_checksBy (P := True) (.inl trivial) hr
+      exact fun hp => not_entails_of_entailsCheckBy (by simpa using hr') (hp φ hφ)
+    · simp at e
+
+theorem partOf_of_partOf? {b a : ArgumentPackage α} (h : partOf? b a = some true) :
+    PartOf b a :=
+  partOf_of_partOfBy? (.inr rfl) h
+
+theorem not_partOf_of_partOf? {b a : ArgumentPackage α} (h : partOf? b a = some false) :
+    ¬ PartOf b a :=
+  not_partOf_of_partOfBy? h
 
 /-- **A part-of table cell, from the engine.** -/
 theorem partOf_iff_of_partOf? {b a : ArgumentPackage α} {P : Prop} [Decidable P]
@@ -200,6 +323,18 @@ theorem partOf_iff_of_partOf? {b a : ArgumentPackage α} {P : Prop} [Decidable P
     exact ⟨fun _ => hP, fun _ => partOf_of_partOf? h⟩
   · simp only [hP, decide_false] at h
     exact ⟨fun hs => absurd hs (not_partOf_of_partOf? h), fun h' => absurd h' hP⟩
+
+/-- **A part-of table cell, from hints the kernel checks.** -/
+theorem partOf_iff_of_certified {b a : ArgumentPackage α} {P : Prop} [Decidable P]
+    (h : ∃ (index : α → ℕ), Function.Injective index ∧
+      ∃ hints : List Hint, partOfBy? index hints b a = some (decide P)) :
+    PartOf b a ↔ P := by
+  obtain ⟨_, hinj, _, h⟩ := h
+  by_cases hP : P
+  · simp only [hP, decide_true] at h
+    exact iff_of_true (partOf_of_partOfBy? (.inl hinj) h) hP
+  · simp only [hP, decide_false] at h
+    exact iff_of_false (not_partOf_of_partOfBy? h) hP
 
 end DecidePart
 

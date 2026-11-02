@@ -208,8 +208,8 @@ is not support. Every cell is computed by `supports?` and checked by the
 kernel. -/
 theorem mark7Dispute_supports : ∀ i j, ¬ mark7Dispute.supports i j := by
   intro i j
-  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> decide +kernel
+  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> horn_certify
 
 /-- Whose case is part of whose, as a table: besides each party's own, Trent's
 is part of each reading of it. -/
@@ -227,8 +227,8 @@ reading of it, which only adds to it; and every case is part of itself. Every
 cell is computed by `partOf?` and checked by the kernel. -/
 theorem mark7Dispute_partOf : ∀ i j, mark7Dispute.partOf i j ↔ mark7PartyPartOf i j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute over Mark 7 drawn: who defeats whom, and whose case is part of
 whose. -/
