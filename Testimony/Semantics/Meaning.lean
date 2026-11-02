@@ -179,32 +179,36 @@ theorem KeyIndex.mem_find_foldl_add (ks : List Ontology.Key) (a b : α) (k : Ont
         · exact absurd hk.symm h
         · exact .inr ⟨hk, rfl⟩
 
-/-- The exclusions among a list of claims, and the index of the coherent ones
-by key: the claims from the last to the first, each checked against the later
-claims it shares a key with. -/
-def exclusionsGo [DecidableEq α] (O : Ontology) : List α → List (α × α) × KeyIndex α
+/-- The exclusions among a list of claims, each with its meaning read under the
+ontology, and the index of the coherent ones by key: the claims from the last
+to the first, each checked against the later claims it shares a key with. Each
+meaning is read once, before the walk, and not once for every pair. -/
+def exclusionsGo [DecidableEq α] (O : Ontology) :
+    List (α × Shape) → List (α × α) × KeyIndex α
   | [] => ([], [])
-  | a :: xs =>
-    match exclusionsGo O xs with
+  | (a, s) :: ys =>
+    match exclusionsGo O ys with
     | (acc, ix) =>
-      let s := Ontology.closed O (means a)
       let c := Ontology.coherent O s
       let ks := Ontology.keysOf s
       let near := if c then ks.flatMap (KeyIndex.find ix) else []
-      let found := xs.filterMap fun b =>
-        let t := Ontology.closed O (means b)
+      let found := ys.filterMap fun (b, t) =>
         if near.contains b && a ≠ b && Ontology.clash O (s.lits ++ t.lits) (s.nogoods ++ t.nogoods)
         then some (a, b) else none
       (found ++ acc, if c then ks.foldl (fun ix k => KeyIndex.add ix k a) ix else ix)
 
+/-- Each claim with its meaning read under the ontology. -/
+def shapedUnder (O : Ontology) (xs : List α) : List (α × Shape) :=
+  xs.map fun a => (a, Ontology.closed O (means a))
+
 theorem mem_find_exclusionsGo [DecidableEq α] (O : Ontology) (k : Ontology.Key) (b : α) :
-    ∀ xs : List α, b ∈ KeyIndex.find (exclusionsGo O xs).2 k ↔
+    ∀ xs : List α, b ∈ KeyIndex.find (exclusionsGo O (shapedUnder O xs)).2 k ↔
       b ∈ xs ∧ Ontology.coherent O (Ontology.closed O (means b)) = true ∧
         k ∈ Ontology.keysOf (Ontology.closed O (means b))
-  | [] => by simp [exclusionsGo, KeyIndex.find]
+  | [] => by simp [shapedUnder, exclusionsGo, KeyIndex.find]
   | a :: xs => by
     have ih := mem_find_exclusionsGo O k b xs
-    simp only [exclusionsGo]
+    simp only [shapedUnder, List.map_cons, exclusionsGo] at ih ⊢
     split
     · rename_i hc
       rw [KeyIndex.mem_find_foldl_add, ih]
@@ -227,18 +231,21 @@ theorem mem_find_exclusionsGo [DecidableEq α] (O : Ontology) (k : Ontology.Key)
         · exact ⟨hb, hcb, hkb⟩
 
 theorem exclusionsGo_fst [DecidableEq α] (O : Ontology) : ∀ xs : List α,
-    (exclusionsGo O xs).1 =
-      (pairsOf (xs.map fun a => (a, Ontology.closed O (means a)))).filterMap
+    (exclusionsGo O (shapedUnder O xs)).1 =
+      (pairsOf (shapedUnder O xs)).filterMap
         fun ((a, s), (b, t)) => if a ≠ b && Ontology.excludes O s t then some (a, b) else none
   | [] => rfl
   | a :: xs => by
     have ih := exclusionsGo_fst O xs
     have hmem := fun k b => mem_find_exclusionsGo O k b xs
-    rcases h : exclusionsGo O xs with ⟨acc, ix⟩
+    rcases h : exclusionsGo O (shapedUnder O xs) with ⟨acc, ix⟩
     rw [h] at ih hmem
     simp only at ih hmem
-    simp only [exclusionsGo, h, List.map_cons, pairsOf, List.filterMap_append,
-      List.filterMap_map, ← ih]
+    have hcons : shapedUnder O (a :: xs) = (a, Ontology.closed O (means a)) :: shapedUnder O xs :=
+      rfl
+    rw [hcons]
+    simp only [exclusionsGo, h, pairsOf, List.filterMap_append, List.filterMap_map, ← ih]
+    simp only [shapedUnder, List.filterMap_map]
     congr 1
     apply List.filterMap_congr
     intro b hb
@@ -290,7 +297,7 @@ ontology: `(a, b)`, with `a` listed before `b`, when the two meanings, read for
 what their words mean, cannot both be held. Computed through shared keys, and
 the same list as the definition, `exclusionsByPairs` (`exclusionsUnder_eq`). -/
 def exclusionsUnder [DecidableEq α] (O : Ontology) : List (α × α) :=
-  (exclusionsGo O (all : List α)).1
+  (exclusionsGo O (shapedUnder O (all : List α))).1
 
 /-- **The exclusions through shared keys are the exclusions**, pair for pair and
 in the same order. -/

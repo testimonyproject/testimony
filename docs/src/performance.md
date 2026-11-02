@@ -76,7 +76,7 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 4 | Certify assessments and consistency; in a hearing, weigh a step's rank only once it is attacked (#183) | the hearings and assessments | 3.08 s, 97 MiB | 0.48 s, 16 MiB | 0.008 | kept |
 | 5 | Compare a citation by its key and locus, a key checked to name one entry | a hearing's rerated strengths | 2.54 s, 83 MiB | 0.86 s, 25 MiB | 0.008 | kept |
 | 6 | Replay a refutation on bitmasks (#180) | the certified defeat tables | 7.21 s, 94 MiB | 5.99 s, 70 MiB | 0.008 | kept |
-| 7 | Find exclusions through shared keys, not every pair | the sola fide joins | 45.0 s, 3.43 GiB | 13.0 s, 1.03 GiB | 0.008 | kept |
+| 7 | Find exclusions through shared keys, not every pair | the sola fide joins | 45.4 s, 3.43 GiB | 10.6 s, 1.06 GiB | 0.008 | kept |
 
 Round 7, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
 profile of `Meanings.SolaFide` put 51 of its 64 seconds in one proof: that the
@@ -92,12 +92,19 @@ share a key, a fact or a thing their relations are about
 (`Ontology.shares_of_clash`), so the claims are now taken from the last to the
 first against an index of the later claims' keys, and each is checked only
 against those it shares a key with; `HasMeanings.exclusionsUnder_eq` proves the
-list the same, pair for pair and in order. The exclusions fell from 45.0 s to
-13.0 s (−71%, p = 0.008) and from 3.43 to 1.03 GiB. The entailments were tried
+list the same, pair for pair and in order. The first version walked the claims
+themselves and closed each later claim's meaning again for every claim before
+it. The kernel shares those repeated terms, so its build was not slowed, but
+the ontology check runs the same function compiled, once for every
+definition, and there each closing was paid again: CI's gate found that check
+5% slower (p = 0.008). So each meaning is now closed once, before the walk
+(`HasMeanings.shapedUnder`). The exclusions fell from 45.4 s to 10.6 s (−77%,
+p = 0.008) and from 3.43 to 1.06 GiB, and the ontology check from 3.16 s to
+1.69 s (−47%, p = 0.008). The entailments were tried
 the same way, indexed by each claim's first literal, and gained only 9.7 s to
 8.3 s: their check already stops at the first missing literal, so the pairs
 themselves are the cost, and the index does not remove them. They are left as
-they are. Measured by hand, clean, on the same machine: the arguments'
+they are. Measured by hand on the first version, clean, on the same machine: the arguments'
 `lake build` fell from 225 s to 204 s and its peak from 13.8 to 10.9 GiB, and
 the kernel replay's peak from 9.3 to 6.9 GiB, at 226 s: the exclusions proof
 was the largest single holder of memory in either.
