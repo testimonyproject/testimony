@@ -79,6 +79,26 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 7 | Find exclusions through shared keys, not every pair | the sola fide joins | 45.4 s, 3.43 GiB | 10.6 s, 1.06 GiB | 0.008 | kept |
 | 8 | Certify the support and part-of tables | sola fide's part-of table | 8.01 s, 131 MiB | 5.00 s, 102 MiB | 0.008 | kept |
 | 10 | Convert each party's position to clauses once per table, not once per cell | the certified defeat tables | 1.61 s, 13 MiB | 0.99 s, 11 MiB | 0.008 | kept |
+| 11 | Ask each question of the components of a position it touches | sola fide's defeat table | 5.95 s, 60 MiB | 5.38 s, 36 MiB | 0.008 | kept, for sola fide |
+
+Round 11, measured on one side of a `scripts/bench-ab.sh` run against the
+head of round 10, five interleaved rounds: each table benchmarked prepared and
+pruned. A position falls into components that share no claim, found by
+union-find over the claims each clause mentions; `prepare_parts` writes them out
+and the kernel checks once for each party that they partition its clauses. Each
+question is then asked of the components it touches, after one check that it
+misses the rest; a question that touches them all is asked of the whole
+position, since pruning would drop nothing and only add its checks. The proof
+that the answers are the whole position's (`Horn.askPruned_sound`) needs the
+position to hold on its own, which every node of a dispute already proves, so a
+cell's theorems are now stated over any oracle that answers truly
+(`Horn.AskSound`); the prepared tables, asked through the old one, matched round
+10's head (+0.3%, +4.6%, neither significant). Half of sola fide's table fell
+from 5.95 s to 5.38 s (−9.5%, p = 0.008) and from 60 to 36 MiB; the Septuagint's
+rose from 1.05 s to 1.26 s (+21%, p = 0.15, not significant) and fell from 12 to
+4 MiB. So sola fide's table is asked by components, and the smaller tables,
+whose questions touch most of each position, stay prepared. The machinery is
+there for disputes that join arguments, where whole positions share nothing.
 
 Round 10, measured on one side of a `scripts/bench-ab.sh` run against `main`,
 five interleaved rounds, as rounds 3 and 8 were: each defeat table is

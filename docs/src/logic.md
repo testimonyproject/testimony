@@ -623,6 +623,18 @@ what the conversion gives (`isaiahDisputeClauses.spec`); every cell then reads
 them, and `Horn.defeats_iff_of_prepared` takes the proofs, so the kernel converts
 each position once per table rather than once per cell.
 
+A position falls into parts that share no claim, and a question can only turn on
+the parts whose claims it touches. `prepare_parts` writes out each party's clauses
+with these *components*, found by union-find over the claims each clause
+mentions, and has the kernel check once for each party that they partition the
+clauses (`Horn.Parts.valid`). `Horn.defeats_iff_of_pruned` then asks each question
+of the components it touches only, after one check that it shares no claim with
+the rest. A component it leaves aside cannot make the answer wrong: the position
+can hold on its own, which every node of a dispute proves (`Dispute.consistent`),
+and models of parts that share no claim combine (`Horn.askPruned_sound`). It pays
+where positions are large: sola fide's table uses it, and smaller tables, whose
+questions touch most of each position, are left prepared.
+
 A single defeat worth naming is one line, from the same computation:
 
 ```lean

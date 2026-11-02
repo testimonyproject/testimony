@@ -927,7 +927,7 @@ theorem partyNode_strength : ∀ i, (partyNode i).strength = partyStrength i
   | .trentOnPaulsWord => tridentineOnPaulsWord_strength
   | .romansOnTheWord => romansFourOnTheWord_strength
 
-prepare_clauses solaFideDisputeClauses for solaFideDispute
+prepare_parts solaFideDisputeParts for solaFideDispute
 
 /-- The first six rows of the table, computed from the parties' premises and
 checked by the kernel. The table is split in two only so that each declaration
@@ -935,8 +935,10 @@ stays within the heartbeat budget. -/
 private theorem solaFideDispute_defeats_first (i : Party)
     (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_prepared (partyNode_strength i) (partyNode_strength j)
-    (solaFideDisputeClauses.spec i) (solaFideDisputeClauses.spec j) ?_
+  refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
+    (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
+    (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
+    (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
@@ -944,8 +946,10 @@ private theorem solaFideDispute_defeats_first (i : Party)
 private theorem solaFideDispute_defeats_second (i : Party)
     (hi : i ∈ [.critics, .jervell, .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_prepared (partyNode_strength i) (partyNode_strength j)
-    (solaFideDisputeClauses.spec i) (solaFideDisputeClauses.spec j) ?_
+  refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
+    (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
+    (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
+    (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 

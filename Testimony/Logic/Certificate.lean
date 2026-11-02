@@ -148,6 +148,29 @@ def partHints (index : α → ℕ) (b a : ArgumentPackage α) : List Hint :=
   let ba := base a.premises
   b.premises.map fun φ => hintOnAll index ba (entailsQuestion φ)
 
+/-- The hint for a question asked of a position by its components: the
+components the question's claims touch, and the hint for them with the
+question. When it touches every component, pruning drops nothing and only adds
+its checks, so the question is asked of the whole position. -/
+def pruneHint (index : α → ℕ) (cs : List (Clause α)) (p : Parts) (φ : Formula α) : Hint :=
+  match toClauses φ with
+  | some d =>
+    let dm := clausesMask index d
+    let sel := p.masks.zipIdx.foldl (fun s (x, k) => if x &&& dm != 0 then s ||| (1 <<< k) else s) 0
+    if p.masks.zipIdx.all (fun (_, k) => sel.testBit k) then
+      hintFrom index (cs ++ d) ⟨[], []⟩ []
+    else .prune sel (hintFrom index (keptBy sel cs p.comp ++ d) ⟨[], []⟩ [])
+  | none => .search
+
+/-- **The hints for a cell asked by components** (`Horn.defeatsPruned?`), in the
+order `Horn.defeatChecks` asks its questions. -/
+@[nospecialize]
+def hintsPruned (index : α → ℕ) (ca cb : List (Clause α)) (pa pb : Parts)
+    (b : ArgumentPackage α) : List Hint :=
+  (pruneHint index ca pa b.conclusion :: b.premises.map (pruneHint index ca pa)) ++
+    (stepsOf b.premises).flatMap fun q =>
+      [pruneHint index cb pb (∼q.2), pruneHint index ca pa q.2]
+
 variable [HasPostulates α]
 
 /-- **The hints for a dissent's findings**, in the order `Dissent.findingsBy?`
@@ -176,12 +199,16 @@ namespace Testimony.Logic.Certificate
 
 open Lean Meta Elab Tactic Testimony.Logic.Horn
 
+/-- A hint as a term. -/
+def hintExpr : Hint → Expr
+  | .search => mkConst ``Hint.search
+  | .model yes => mkApp (mkConst ``Hint.model) (toExpr yes)
+  | .refute trace last => mkApp2 (mkConst ``Hint.refute) (toExpr trace) (toExpr last)
+  | .prune sel inner => mkApp2 (mkConst ``Hint.prune) (toExpr sel) (hintExpr inner)
+
 instance : ToExpr Hint where
   toTypeExpr := mkConst ``Hint
-  toExpr
-    | .search => mkConst ``Hint.search
-    | .model yes => mkApp (mkConst ``Hint.model) (toExpr yes)
-    | .refute trace last => mkApp2 (mkConst ``Hint.refute) (toExpr trace) (toExpr last)
+  toExpr := hintExpr
 
 /-- The index a cell's models are read through: the atom type's constructor
 index, where it has one, which tells every atom of an enumeration apart; and
@@ -217,6 +244,11 @@ def searchFor (index lhs : Expr) : MetaM Expr := do
     mkAppOptM ``Horn.hintsFor #[args[0]!, args[1]!, args[2]!, index, args[5]!, args[6]!]
   else if lhs.isAppOfArity ``Horn.defeatsWith? 9 then
     mkAppOptM ``Horn.hintsWith #[args[0]!, args[1]!, index, args[4]!, args[5]!, args[6]!]
+  else if lhs.isAppOf ``Horn.defeatsPruned? then
+    -- From the end: … index hints ca cb pa pb b s t.
+    let n := args.size
+    mkAppOptM ``Horn.hintsPruned #[args[0]!, args[1]!, args[n - 9]!, args[n - 7]!,
+      args[n - 6]!, args[n - 5]!, args[n - 4]!, args[n - 3]!]
   else if lhs.isAppOfArity ``Dissent.findingsBy? 6 then
     mkAppOptM ``Horn.findingsHints #[args[0]!, args[1]!, args[2]!, index, args[5]!]
   else if lhs.isAppOfArity ``supportsBy? 6 then
@@ -230,7 +262,7 @@ def searchFor (index lhs : Expr) : MetaM Expr := do
     mkAppOptM ``Horn.hintsAppend #[args[0]!, args[1]!, index, base.appArg!, args[5]!]
   else
     throwError "horn_certify: expected `Horn.defeatsBy? …`, `Horn.defeatsWith? …`, \
-      `Dissent.findingsBy? …`, `supportsBy? …`, `partOfBy? …` or \
+      `Horn.defeatsPruned? …`, `Dissent.findingsBy? …`, `supportsBy? …`, `partOfBy? …` or \
       `Horn.satisfiableAppend? …`, got{indentExpr lhs}"
 
 /-- Prove `∃ index, Function.Injective index ∧ ∃ hints, decision index hints … = v`,
@@ -242,6 +274,25 @@ elab (name := hornCertify) "horn_certify" : tactic => do
   let ty ← whnfR (← instantiateMVars (← goal.getType))
   let some (indexTy, p) := ty.app2? ``Exists
     | throwError "horn_certify: expected `∃ index hints, …`, got{indentExpr ty}"
+  -- A cell asked by components names its index; only its hints are to find.
+  if indexTy.isAppOf ``List then
+    let .const _ vs := ty.getAppFn | throwError "horn_certify: unexpected goal"
+    let probe := p.beta #[mkApp (mkConst ``List.nil [0]) (mkConst ``Hint)]
+    let some (_, lhs, _) := probe.eq?
+      | throwError "horn_certify: expected an equation, got{indentExpr probe}"
+    let lhs ← instantiateMVars lhs
+    unless lhs.isAppOf ``Horn.defeatsPruned? do
+      throwError "horn_certify: expected `∃ index hints, …`, got{indentExpr ty}"
+    let args := lhs.getAppArgs
+    let search ← searchFor args[args.size - 9]! lhs
+    let hints ← unsafe evalExpr (List Hint) (← inferType search) search
+    let hintsE := toExpr hints
+    let checked ← mkFreshExprMVar (p.beta #[hintsE])
+    let rest ← Tactic.run checked.mvarId! (evalTactic (← `(tactic| decide +kernel)))
+    unless rest.isEmpty do throwError "horn_certify: the kernel did not check the hints"
+    goal.assign <| mkApp4 (.const ``Exists.intro vs) indexTy p hintsE checked
+    replaceMainGoal []
+    return
   let .const _ us := ty.getAppFn | throwError "horn_certify: unexpected goal"
   let index ← indexFor indexTy.bindingDomain!
   let afterIndex ← whnfR (p.beta #[index])
@@ -358,5 +409,105 @@ elab "prepare_clauses " name:ident " for " d:term : command => Command.liftTermE
     name := defName ++ `spec, levelParams := [], type := specTy, value := specVal }
   addDocStringCore (defName ++ `spec) s!"Each party's clauses in `{defName}` are what \
     converting its position gives, checked by the kernel once for each party."
+
+/-! ### Each party's components, once
+
+`prepare_parts` writes out, for each party, its position as clauses and their
+components, found by union-find over the claims each clause mentions, and
+proves once for each party that the clauses are what converting the position
+gives and that the components partition them (`Horn.Parts.valid`). A defeat
+table then asks each question of the components it touches
+(`Horn.defeats_iff_of_pruned`). -/
+
+/-- The components of a list of clauses, given as constructor indices: each
+clause's component, and each component's claims as a bitmask. Clauses that
+share a claim are merged, mask by mask. -/
+def componentsOf (cs : List (List ℕ × List ℕ)) : List ℕ × List ℕ := Id.run do
+  let cm := cs.map fun (b, h) => (b ++ h).foldl (fun m k => m ||| (1 <<< k)) 0
+  let mut masks : List ℕ := []
+  for m in cm do
+    let (meet, rest) := masks.partition (fun x => x &&& m != 0)
+    masks := rest ++ [meet.foldl (· ||| ·) m]
+  let comp := cm.map fun m => (masks.findIdx? (fun x => x &&& m != 0)).getD 0
+  return (comp, masks)
+
+/-- `prepare_parts name for d`: define `name.clauses` and `name.parts`, each
+party's position as clauses and its components, written out, and prove
+`name.spec`, `name.valid` and `name.injective`, which a pruned defeat table
+takes. -/
+elab "prepare_parts " name:ident " for " d:term : command => Command.liftTermElabM do
+  let d ← Term.elabTerm d none
+  Term.synthesizeSyntheticMVarsNoPostponing
+  let d ← instantiateMVars d
+  let dTy ← whnfR (← inferType d)
+  let #[α, inst, ι] := dTy.getAppArgs | throwError "prepare_parts: not a dispute"
+  let enumCtors (ty : Expr) : MetaM (Name × Array Name) := do
+    let .const n [] := ty | throwError "prepare_parts: {ty} is not an enumeration"
+    let some (.inductInfo i) := (← getEnv).find? n | throwError "prepare_parts: {n}?"
+    return (n, i.ctors.toArray)
+  let (ιName, parties) ← enumCtors ι
+  let (_, atoms) ← enumCtors α
+  let αName := α.constName!
+  let idx := mkConst (αName ++ `ctorIdx)
+  let clauseTy := mkApp (mkConst ``Horn.Clause) α
+  let listTy := mkApp (mkConst ``List [Level.zero]) clauseTy
+  let partsTy := mkConst ``Horn.Parts
+  let heldOf (i : Expr) : Expr := mkApp3 (mkConst ``ArgumentPackage.held) α inst
+    (mkApp (mkApp4 (mkConst ``Dispute.node) α inst ι d) i)
+  let mut clauseLits : Array Expr := #[]
+  let mut partLits : Array Expr := #[]
+  for c in parties do
+    let cl := mkApp2 (mkConst ``Horn.clausesOf) α (heldOf (mkConst c))
+    let toIdx ← withLocalDeclD `c clauseTy fun c => do
+      let body ← mkAppM ``List.map #[idx, ← mkAppM ``Horn.Clause.body #[c]]
+      let heads ← mkAppM ``List.map #[idx, ← mkAppM ``Horn.Clause.heads #[c]]
+      mkLambdaFVars #[c] (← mkAppM ``Prod.mk #[body, heads])
+    let asIdx ← mkAppM ``Option.map #[← mkAppM ``List.map #[toIdx], cl]
+    let some cs ← unsafe evalExpr (Option (List (List ℕ × List ℕ))) (← inferType asIdx) asIdx
+      | throwError "prepare_parts: {c}'s position has a formula without clauses"
+    clauseLits := clauseLits.push (← clausesExpr α atoms cs)
+    let (comp, masks) := componentsOf cs
+    partLits := partLits.push (mkApp2 (mkConst ``Horn.Parts.mk) (toExpr comp) (toExpr masks))
+  let base := (← getCurrNamespace) ++ name.getId
+  let casesOn (motive : Expr) (minors : Array Expr) (i : Expr) (lvl : Level) : Expr :=
+    mkAppN (mkConst (ιName ++ `casesOn) [lvl]) (#[motive, i] ++ minors)
+  let defOf (n : Name) (ty : Expr) (lits : Array Expr) : CoreM Unit := do
+    let fty := Expr.forallE `i ι ty .default
+    let v := Expr.lam `i ι (casesOn (.lam `_ ι ty .default) lits (.bvar 0) Level.one) .default
+    addAndCompile (.defnDecl (mkDefinitionValEx n [] fty v .abbrev .safe [n]))
+  defOf (base ++ `clauses) listTy clauseLits
+  defOf (base ++ `parts) partsTy partLits
+  addDocStringCore (base ++ `clauses) s!"Each party's position in `{d}`, as clauses, \
+    written out once. Generated by `prepare_parts`."
+  addDocStringCore (base ++ `parts) s!"Each party's clauses in `{d}`, in components that \
+    share no claim. Generated by `prepare_parts`."
+  -- For each party, `Eq.refl`, checked by the kernel.
+  let thmOf (n : Name) (stmt : Expr → MetaM Expr) (pf : Nat → MetaM Expr) (doc : String) :
+      MetaM Unit := do
+    let ty ← withLocalDeclD `i ι fun i => do mkForallFVars #[i] (← stmt i)
+    let motive ← withLocalDeclD `i ι fun i => do mkLambdaFVars #[i] (← stmt i)
+    let proofs ← (List.range parties.size).toArray.mapM pf
+    let v := Expr.lam `i ι (casesOn motive proofs (.bvar 0) Level.zero) .default
+    addDecl (.thmDecl (mkTheoremValEx n [] ty v [n]))
+    addDocStringCore n doc
+  let clausesAt (i : Expr) := mkApp (mkConst (base ++ `clauses)) i
+  thmOf (base ++ `spec)
+    (fun i => mkEq (mkApp2 (mkConst ``Horn.clausesOf) α (heldOf i))
+      (mkApp2 (mkConst ``Option.some [Level.zero]) listTy (clausesAt i)))
+    (fun k => mkEqRefl (mkApp2 (mkConst ``Option.some [Level.zero]) listTy clauseLits[k]!))
+    s!"Each party's clauses in `{base ++ `clauses}` are what converting its position \
+      gives, checked by the kernel once for each party."
+  let validAt (i : Expr) : MetaM Expr := do
+    mkEq (mkApp4 (mkConst ``Horn.Parts.valid) α idx (clausesAt i)
+      (mkApp (mkConst (base ++ `parts)) i)) (mkConst ``Bool.true)
+  thmOf (base ++ `valid) validAt (fun _ => mkEqRefl (mkConst ``Bool.true))
+    s!"Each party's components in `{base ++ `parts}` partition its clauses, checked by \
+      the kernel once for each party."
+  let some inv := (← getEnv).find? (αName ++ `ofNat_ctorIdx) |>.map (·.name)
+    | throwError "prepare_parts: {αName} has no `ofNat_ctorIdx`"
+  let injTy ← mkAppM ``Function.Injective #[idx]
+  let injVal ← mkAppM ``Function.LeftInverse.injective #[mkConst inv]
+  addDecl (.thmDecl (mkTheoremValEx (base ++ `injective) [] injTy injVal [base ++ `injective]))
+  addDocStringCore (base ++ `injective) "The claims' constructor index tells claims apart."
 
 end Testimony.Logic.Certificate
