@@ -33,6 +33,8 @@ The benchmarks, from the smallest unit up:
   arguments' own tables are proved; and a row of a hearing, where every party's
   inferences are re-rated under a standard, with the parties' re-rated strengths;
 - **a verdict**: the solver's checked witness for each of the two disputes;
+- **the joins**: the exclusions among sola fide's 111 claims, read for what
+  their words mean;
 - **an assessment** and **a rating**: Miller's dissent, searched and
   certified, and the laws' step;
 - **`establish`** on a package, the tactic every package's soundness uses;
@@ -271,6 +273,10 @@ example (j : JamesParty) :
   refine Horn.defeats_iff_of_certified
     (rerated_strength .evidence .trentOnTheWord) (rerated_strength .evidence j) ?_
   cases j <;> horn_certify
+
+#bench (runs := 1) "joins: sola fide exclusions, 111 claims" in
+example : (Testimony.Semantics.HasMeanings.exclusions (α := Claim)).length = 6 := by
+  decide +kernel
 
 #bench "verdict: sola fide, only Paul's word unanswered" in
 example : Verdict solaFideDispute where

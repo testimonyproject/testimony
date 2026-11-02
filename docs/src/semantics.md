@@ -123,6 +123,17 @@ all, how many claims use each defined word as doctrine or of a text or voice, an
 each definition contributes: those found with it and not with it taken out. It fails the
 build if any meaning contradicts itself.
 
+**How the exclusions are found.** Two meanings can clash only where they touch: a literal
+meets its negation in one fact, a definition's rule relates two facts about one thing, a
+nogood is completed by the other meaning's literal. So each meaning's **keys** are its facts
+and the things its relations are about, and two coherent meanings that share no key cannot
+exclude each other (`Testimony.Semantics.Ontology.shares_of_clash`). The claims are taken one
+by one against an index of the keys of the claims after them, and each is checked only against
+those it shares a key with, not against every claim. The list found is the definition's, pair
+for pair and in order (`Testimony.Semantics.HasMeanings.exclusionsUnder_eq`), and it is
+checked by the kernel in a fraction of the time: every pair compared, the sola fide joins took
+the kernel 51 seconds.
+
 The first article, `Testimony.Ontology.Relations`, writes out three definitions the vocabulary
 already gave in words: "not a ground" is the denial of "a ground"; the only means of a thing is
 a means of it, and nothing else is; the whole ground of a thing is a ground of it, and nothing
