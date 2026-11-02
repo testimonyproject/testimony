@@ -103,8 +103,19 @@ reads them: a model check of Paul's 33 clauses took 7.6 ms, of which the
 library's list functions, compiled through `brecOn`, and each claim's
 constructor index, computed by a case split over the claim type's hundred-odd
 constructors, are most. Written on `List.rec` and over indices, the same check
-took about 3 ms. That is the next round; pruning, which makes the cost follow
-the part of a position a question touches rather than the whole, follows it.
+took about 3 ms, cold.
+
+That did not carry over to the tables, and is recorded so that nobody tries it
+again. The checker's model check, clause checks and replay were rewritten on
+`List.rec`, each function proved equal to its core counterpart. A lookup written
+that way, `List.rec` over `Nat.rec`, made each refutation's replay exponential
+in the kernel, from 0.13 s to over 150 s as a synthetic position grew from 24 to
+32 formulas; without it, against this round's head, five interleaved rounds,
+neither table moved (the prepared ones −5%, p = 0.15, and +2%, p = 0.84) and
+one certified cell was 21% slower (p = 0.032). Within a cell the kernel shares
+the work the cold measurement repeated, so the list functions are not where a
+table's time goes. The rewrite was dropped, and clauses over indices with it,
+which the same measurement had suggested.
 
 Round 7, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
 profile of `Meanings.SolaFide` put 51 of its 64 seconds in one proof: that the
