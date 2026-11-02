@@ -241,15 +241,15 @@ premise. Every cell is computed by `supports?` and checked by the kernel. -/
 theorem genesisDispute_supports :
     ∀ i j, genesisDispute.supports i j ↔ genesisPartySupports i j := by
   intro i j
-  refine supports_iff_of_supports? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine supports_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- **No case is part of another's** here, in all nine pairs, except each
 party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
 theorem genesisDispute_partOf : ∀ i j, genesisDispute.partOf i j ↔ i = j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute drawn: who defeats whom, with no support between the parties. -/
 def genesisMap : ArgumentMap genesisDispute where

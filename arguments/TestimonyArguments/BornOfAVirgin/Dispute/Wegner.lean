@@ -221,15 +221,15 @@ all nine pairs. Every cell is computed by `supports?` and checked by the
 kernel. -/
 theorem wegnerDispute_supports : ∀ i j, ¬ wegnerDispute.supports i j := by
   intro i j
-  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> decide +kernel
+  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> horn_certify
 
 /-- **No case is part of another's** here, in all nine pairs, except each
 party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
 theorem wegnerDispute_partOf : ∀ i j, wegnerDispute.partOf i j ↔ i = j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute drawn: who defeats whom. -/
 def wegnerMap : ArgumentMap wegnerDispute where

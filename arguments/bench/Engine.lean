@@ -243,6 +243,30 @@ example (i : Party)
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
+#bench (runs := 1) "supports: sola fide, 144 cells" in
+example : ∀ i j, ¬ solaFideDispute.supports i j := by
+  intro i j
+  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> decide +kernel
+
+#bench (runs := 1) "supports, certified: sola fide, 144 cells" in
+example : ∀ i j, ¬ solaFideDispute.supports i j := by
+  intro i j
+  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> horn_certify
+
+#bench (runs := 1) "part of: sola fide, 144 cells" in
+example : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
+  intro i j
+  refine partOf_iff_of_partOf? ?_
+  cases i <;> cases j <;> decide +kernel
+
+#bench (runs := 1) "part of, certified: sola fide, 144 cells" in
+example : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
+  intro i j
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
+
 #bench "satisfied_by: the Pauline case" in
 example : Satisfiable paulineCase.premises := by
   satisfied_by criticsReading [solaFideDefs]

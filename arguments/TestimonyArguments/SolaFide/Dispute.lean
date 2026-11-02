@@ -987,8 +987,8 @@ support (see `Testimony.Logic.Support`). Every cell is computed by `supports?`
 and checked by the kernel. -/
 theorem solaFideDispute_supports : ∀ i j, ¬ solaFideDispute.supports i j := by
   intro i j
-  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> decide +kernel
+  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> horn_certify
 
 /-- Whose case is part of whose, as a table: besides each party's own, two
 pairs. -/
@@ -1008,8 +1008,8 @@ only adds to it; and every case is part of itself. Nothing else. Every cell is
 computed by `partOf?` and checked by the kernel. -/
 theorem solaFideDispute_partOf : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute drawn: who defeats whom, and whose case is part of whose. -/
 def solaFideMap : ArgumentMap solaFideDispute where

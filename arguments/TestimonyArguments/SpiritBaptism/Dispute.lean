@@ -177,15 +177,15 @@ def spiritBaptismFinite : Solver.Finite spiritBaptismDispute.defeats where
 `supports?` and checked by the kernel. -/
 theorem spiritBaptismDispute_supports : ∀ i j, ¬ spiritBaptismDispute.supports i j := by
   intro i j
-  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> decide +kernel
+  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> horn_certify
 
 /-- Each view's case is part of its own and of no other's. Every cell is computed
 by `partOf?` and checked by the kernel. -/
 theorem spiritBaptismDispute_partOf : ∀ i j, spiritBaptismDispute.partOf i j ↔ i = j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute over Spirit baptism drawn: who defeats whom. -/
 def spiritBaptismMap : ArgumentMap spiritBaptismDispute where
