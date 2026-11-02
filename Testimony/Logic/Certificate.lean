@@ -1,5 +1,6 @@
 import Testimony.Logic.Horn
 import Testimony.Logic.Credibility
+import Testimony.Logic.Support
 
 /-!
 # Testimony.Logic.Certificate — finding what the kernel checks
@@ -132,6 +133,21 @@ def hintsWith (index : α → ℕ) (ca cb : Option (List (Clause α))) (b : Argu
   (hintOn index ba b.conclusion :: b.premises.map (hintOn index ba)) ++
     (stepsOf b.premises).flatMap fun q => [hintOn index bb (∼q.2), hintOn index ba q.2]
 
+/-- **The hints for a support cell**, in the order `supportsBy?` asks its
+questions: for each claim among `b`'s premises, whether `a`'s conclusion can
+hold with its negation. -/
+@[nospecialize]
+def supportHints (index : α → ℕ) (a b : ArgumentPackage α) : List Hint :=
+  let ba := base [a.conclusion]
+  (b.premises.filter (Page.Explanation.isLiteral ·)).map fun φ => hintOnAll index ba [∼φ]
+
+/-- **The hints for a part-of cell**, in the order `partOfBy?` asks its
+questions: for each premise of `b`, whether `a`'s premises entail it. -/
+@[nospecialize]
+def partHints (index : α → ℕ) (b a : ArgumentPackage α) : List Hint :=
+  let ba := base a.premises
+  b.premises.map fun φ => hintOnAll index ba (entailsQuestion φ)
+
 variable [HasPostulates α]
 
 /-- **The hints for a dissent's findings**, in the order `Dissent.findingsBy?`
@@ -193,8 +209,8 @@ def injectiveFor (index : Expr) : MetaM Expr := do
 
 /-- The search that finds a decision's hints, from the decision the goal
 states: a defeat cell (`Horn.defeatsBy?`), a dissent's findings
-(`Dissent.findingsBy?`), or one question of satisfiability
-(`Horn.satisfiableAppend?`). -/
+(`Dissent.findingsBy?`), a support or part-of cell (`supportsBy?`,
+`partOfBy?`), or one question of satisfiability (`Horn.satisfiableAppend?`). -/
 def searchFor (index lhs : Expr) : MetaM Expr := do
   let args := lhs.getAppArgs
   if lhs.isAppOfArity ``Horn.defeatsBy? 9 then
@@ -203,6 +219,10 @@ def searchFor (index lhs : Expr) : MetaM Expr := do
     mkAppOptM ``Horn.hintsWith #[args[0]!, args[1]!, index, args[4]!, args[5]!, args[6]!]
   else if lhs.isAppOfArity ``Dissent.findingsBy? 6 then
     mkAppOptM ``Horn.findingsHints #[args[0]!, args[1]!, args[2]!, index, args[5]!]
+  else if lhs.isAppOfArity ``supportsBy? 6 then
+    mkAppOptM ``Horn.supportHints #[args[0]!, args[1]!, index, args[4]!, args[5]!]
+  else if lhs.isAppOfArity ``partOfBy? 6 then
+    mkAppOptM ``Horn.partHints #[args[0]!, args[1]!, index, args[4]!, args[5]!]
   else if lhs.isAppOfArity ``Horn.satisfiableAppend? 6 then
     let base := args[4]!
     unless base.isAppOfArity ``Horn.clausesOf 2 do
@@ -210,10 +230,11 @@ def searchFor (index lhs : Expr) : MetaM Expr := do
     mkAppOptM ``Horn.hintsAppend #[args[0]!, args[1]!, index, base.appArg!, args[5]!]
   else
     throwError "horn_certify: expected `Horn.defeatsBy? …`, `Horn.defeatsWith? …`, \
-      `Dissent.findingsBy? …` or `Horn.satisfiableAppend? …`, got{indentExpr lhs}"
+      `Dissent.findingsBy? …`, `supportsBy? …`, `partOfBy? …` or \
+      `Horn.satisfiableAppend? …`, got{indentExpr lhs}"
 
 /-- Prove `∃ index, Function.Injective index ∧ ∃ hints, decision index hints … = v`,
-for a defeat cell or a dissent's findings, or `∃ index hints, … = v` for a
+for a defeat, support or part-of cell or a dissent's findings, or `∃ index hints, … = v` for a
 question of satisfiability, by finding the hints and having the kernel check
 them. -/
 elab (name := hornCertify) "horn_certify" : tactic => do

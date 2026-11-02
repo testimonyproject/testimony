@@ -187,15 +187,15 @@ def gritsFinite : Solver.Finite gritsDispute.defeats where
 `supports?` and checked by the kernel. -/
 theorem gritsDispute_supports : ∀ i j, ¬ gritsDispute.supports i j := by
   intro i j
-  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> decide +kernel
+  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> horn_certify
 
 /-- Each side's case is part of its own and of no other's. Every cell is computed
 by `partOf?` and checked by the kernel. -/
 theorem gritsDispute_partOf : ∀ i j, gritsDispute.partOf i j ↔ i = j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute over the five minutes drawn: who defeats whom. -/
 def gritsMap : ArgumentMap gritsDispute where

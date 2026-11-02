@@ -545,15 +545,15 @@ entailment lends a premise (see `Testimony.Logic.Support`). Every cell is
 computed by `supports?` and checked by the kernel. -/
 theorem isaiahDispute_supports : ∀ i j, ¬ isaiahDispute.supports i j := by
   intro i j
-  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> decide +kernel
+  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> horn_certify
 
 /-- **No case is part of another's** here, in all thirty-six pairs, except each
 party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
 theorem isaiahDispute_partOf : ∀ i j, isaiahDispute.partOf i j ↔ i = j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute drawn: who defeats whom. -/
 def isaiahMap : ArgumentMap isaiahDispute where

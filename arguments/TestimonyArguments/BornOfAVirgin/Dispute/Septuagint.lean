@@ -583,15 +583,15 @@ by `supports?` and checked by the kernel. -/
 theorem septuagintDispute_supports :
     ∀ i j, septuagintDispute.supports i j ↔ septuagintPartySupports i j := by
   intro i j
-  refine supports_iff_of_supports? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine supports_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- **No case is part of another's** here, in all thirty-six pairs, except each
 party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
 theorem septuagintDispute_partOf : ∀ i j, septuagintDispute.partOf i j ↔ i = j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute drawn: who defeats whom, and the one support. -/
 def septuagintMap : ArgumentMap septuagintDispute where

@@ -77,6 +77,7 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 5 | Compare a citation by its key and locus, a key checked to name one entry | a hearing's rerated strengths | 2.54 s, 83 MiB | 0.86 s, 25 MiB | 0.008 | kept |
 | 6 | Replay a refutation on bitmasks (#180) | the certified defeat tables | 7.21 s, 94 MiB | 5.99 s, 70 MiB | 0.008 | kept |
 | 7 | Find exclusions through shared keys, not every pair | the sola fide joins | 45.4 s, 3.43 GiB | 10.6 s, 1.06 GiB | 0.008 | kept |
+| 8 | Certify the support and part-of tables | sola fide's part-of table | 8.01 s, 131 MiB | 5.00 s, 102 MiB | 0.008 | kept |
 | 10 | Convert each party's position to clauses once per table, not once per cell | the certified defeat tables | 1.61 s, 13 MiB | 0.99 s, 11 MiB | 0.008 | kept |
 
 Round 10, measured on one side of a `scripts/bench-ab.sh` run against `main`,
@@ -116,6 +117,20 @@ one certified cell was 21% slower (p = 0.032). Within a cell the kernel shares
 the work the cold measurement repeated, so the list functions are not where a
 table's time goes. The rewrite was dropped, and clauses over indices with it,
 which the same measurement had suggested.
+
+Round 8, measured on one side of a `scripts/bench-ab.sh` run against `main`,
+five interleaved rounds, as round 3 was: each of sola fide's two tables of how
+parties stand together is benchmarked searched, as before, and certified. Both
+were still decided by a search the kernel ran, `supports?` and `partOf?`, and
+the part-of table converted a party's premises to clauses afresh for every
+premise it asked about. Now each question takes a hint, as a defeat cell's
+does (`supportsBy?`, `partOfBy?`), `horn_certify` finds them, and each party's
+premises are converted once a cell. The part-of table fell from 8.01 s to
+5.00 s (−38%, p = 0.008) and from 131 to 102 MiB; the support table from
+3.37 s to 1.99 s (−41%, p = 0.008), 17 to 13 MiB. The searched forms, now the
+same decisions with no hints, matched `main` (p ≥ 0.55). Measured by hand,
+two runs each: `SolaFide.Dispute` elaborates in 41.5 s against 47.6 s with its
+two tables searched.
 
 Round 7, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
 profile of `Meanings.SolaFide` put 51 of its 64 seconds in one proof: that the

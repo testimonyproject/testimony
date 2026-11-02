@@ -578,15 +578,15 @@ all 49 pairs. Every cell is computed by `supports?` and checked by the
 kernel. -/
 theorem jesusWordsDispute_supports : ∀ i j, ¬ jesusWordsDispute.supports i j := by
   intro i j
-  refine (supports_iff_of_supports? (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> decide +kernel
+  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
+  cases i <;> cases j <;> horn_certify
 
 /-- Each party's case is part of its own and of no other's. Every cell is
 computed by `partOf?` and checked by the kernel. -/
 theorem jesusWordsDispute_partOf : ∀ i j, jesusWordsDispute.partOf i j ↔ i = j := by
   intro i j
-  refine partOf_iff_of_partOf? ?_
-  cases i <;> cases j <;> decide +kernel
+  refine partOf_iff_of_certified ?_
+  cases i <;> cases j <;> horn_certify
 
 /-- The dispute over Jesus' words drawn: who defeats whom. -/
 def jesusWordsMap : ArgumentMap jesusWordsDispute where
