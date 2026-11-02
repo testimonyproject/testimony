@@ -297,6 +297,106 @@ for what its words mean, every literal of the other and every nogood. -/
 def entails (O : Ontology) (s t : Shape) : Bool :=
   coherent O s && t.read && t.lits.all s.lits.contains && t.nogoods.all s.nogoods.contains
 
+/-! ### Where two meanings can meet
+
+Two meanings can clash only where they touch. A literal meets its negation in
+the same fact; a definition's rule (**only**, **functional**) relates two facts
+about the same thing; a nogood is completed by the other meaning's literal.
+So a meaning's **keys** are the facts of its literals and nogoods, and the
+things its relations are about, and two coherent meanings that share no key
+cannot clash (`shares_of_clash`). A claim is then checked only against the
+claims it shares a key with, found through an index of keys, rather than
+against every claim (`Testimony.Semantics.HasMeanings.exclusionsUnder`). -/
+
+/-- Where a meaning can meet another: a fact, or a thing a relation is about. -/
+inductive Key
+  /-- A fact a literal affirms or denies. -/
+  | fact (f : Fact)
+  /-- A thing a relation is about. -/
+  | term (t : Term)
+deriving DecidableEq
+
+/-- The keys of one fact: itself, and the things it relates, if a relation. -/
+def factKeys : Fact → List Key
+  | f@(.rel _ a b) => [.fact f, .term a, .term b]
+  | f => [.fact f]
+
+/-- **The keys of a meaning**: those of every fact it affirms or denies, and of
+every fact in its nogoods. -/
+def keysOf (s : Shape) : List Key :=
+  s.lits.flatMap (fun l => factKeys l.fact) ++ s.nogoods.flatMap (·.map fun l => Key.fact l.fact)
+
+theorem fact_mem_factKeys (f : Fact) : Key.fact f ∈ factKeys f := by
+  cases f <;> simp [factKeys]
+
+theorem mem_keysOf_of_lit {s : Shape} {l : Lit} {k : Key} (hl : l ∈ s.lits)
+    (hk : k ∈ factKeys l.fact) : k ∈ keysOf s := by
+  simp only [keysOf, List.mem_append, List.mem_flatMap]
+  exact .inl ⟨l, hl, hk⟩
+
+theorem mem_keysOf_of_nogood {s : Shape} {n : List Lit} {x : Lit} (hn : n ∈ s.nogoods)
+    (hx : x ∈ n) : Key.fact x.fact ∈ keysOf s := by
+  simp only [keysOf, List.mem_append, List.mem_flatMap, List.mem_map]
+  exact .inr ⟨n, hn, x, hx, rfl⟩
+
+/-- A definition's rule makes two literals clash only when their relations are
+about one same thing. -/
+theorem shares_of_clashes {a : Axiom} {l m : Lit} (h : a.clashes l m = true) :
+    ∃ t, Key.term t ∈ factKeys l.fact ∧ Key.term t ∈ factKeys m.fact := by
+  unfold Axiom.clashes at h
+  split at h
+  · rename_i _ _ _ _ b _ _ d
+    simp only [Bool.and_eq_true, beq_iff_eq, bne_iff_ne, ne_eq] at h
+    obtain ⟨⟨⟨-, -⟩, hbd⟩, -⟩ := h
+    exact ⟨b, by simp [factKeys], by simp [factKeys, hbd]⟩
+  · rename_i _ _ a _ _ c _
+    simp only [Bool.and_eq_true, beq_iff_eq, bne_iff_ne, ne_eq] at h
+    obtain ⟨⟨⟨-, -⟩, hac⟩, -⟩ := h
+    exact ⟨a, by simp [factKeys], by simp [factKeys, hac]⟩
+  · simp at h
+
+/-- **Two coherent meanings that clash share a key.** A clash between them is
+a literal and its negation, two literals a rule sets against each other, or a
+nogood of one completed by the other; none of these is inside one meaning alone,
+since each is coherent, so each joins the two, at a fact or at a thing their
+relations are about. -/
+theorem shares_of_clash {O : Ontology} {s t : Shape} (hs : clash O s.lits s.nogoods = false)
+    (ht : clash O t.lits t.nogoods = false)
+    (h : clash O (s.lits ++ t.lits) (s.nogoods ++ t.nogoods) = true) :
+    ∃ k ∈ keysOf s, k ∈ keysOf t := by
+  simp only [clash, Bool.or_eq_false_iff, Bool.or_eq_true, List.any_eq_false, List.any_eq_true,
+    List.all_eq_true, List.contains_iff_mem, List.mem_append, Bool.not_eq_true] at hs ht h
+  obtain ⟨⟨hs₁, hs₂⟩, hs₃⟩ := hs
+  obtain ⟨⟨ht₁, ht₂⟩, ht₃⟩ := ht
+  rcases h with (⟨l, hl, hn⟩ | ⟨l, hl, m, hm, d, hd, hc⟩) | ⟨n, hn, hall⟩
+  · -- a literal and its negation
+    rcases hl with hl | hl <;> rcases hn with hn | hn
+    · exact absurd (by simpa using hn) (hs₁ l hl)
+    · exact ⟨_, mem_keysOf_of_lit hl (fact_mem_factKeys _),
+        mem_keysOf_of_lit hn (fact_mem_factKeys _)⟩
+    · exact ⟨_, mem_keysOf_of_lit hn (fact_mem_factKeys _),
+        mem_keysOf_of_lit hl (fact_mem_factKeys _)⟩
+    · exact absurd (by simpa using hn) (ht₁ l hl)
+  · -- a rule setting two literals against each other
+    obtain ⟨u, hu₁, hu₂⟩ := shares_of_clashes hc
+    rcases hl with hl | hl <;> rcases hm with hm | hm
+    · exact absurd ⟨m, hm, d, hd, hc⟩ (hs₂ l hl)
+    · exact ⟨_, mem_keysOf_of_lit hl hu₁, mem_keysOf_of_lit hm hu₂⟩
+    · exact ⟨_, mem_keysOf_of_lit hm hu₂, mem_keysOf_of_lit hl hu₁⟩
+    · exact absurd ⟨m, hm, d, hd, hc⟩ (ht₂ l hl)
+  · -- a nogood completed across the two
+    rcases hn with hn | hn
+    · obtain ⟨x, hx, hxs⟩ : ∃ x ∈ n, x ∉ s.lits :=
+        Classical.byContradiction fun hno =>
+          hs₃ n hn fun x hx => Classical.byContradiction fun hxs => hno ⟨x, hx, hxs⟩
+      have hxt : x ∈ t.lits := (hall x hx).resolve_left hxs
+      exact ⟨_, mem_keysOf_of_nogood hn hx, mem_keysOf_of_lit hxt (fact_mem_factKeys _)⟩
+    · obtain ⟨x, hx, hxt⟩ : ∃ x ∈ n, x ∉ t.lits :=
+        Classical.byContradiction fun hno =>
+          ht₃ n hn fun x hx => Classical.byContradiction fun hxt => hno ⟨x, hx, hxt⟩
+      have hxs : x ∈ s.lits := (hall x hx).resolve_right hxt
+      exact ⟨_, mem_keysOf_of_lit hxs (fact_mem_factKeys _), mem_keysOf_of_nogood hn hx⟩
+
 end Ontology
 
 end Testimony.Semantics

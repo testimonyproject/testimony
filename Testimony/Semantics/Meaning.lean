@@ -108,12 +108,195 @@ def pairsOf {β : Type} : List β → List (β × β)
   | x :: xs => xs.map (x, ·) ++ pairsOf xs
 
 /-- **Every pair of claims whose meanings exclude each other**, under a given
-ontology: `(a, b)`, with `a` listed before `b`, when the two meanings, read for
-what their words mean, cannot both be held. -/
-def exclusionsUnder [DecidableEq α] (O : Ontology) : List (α × α) :=
+ontology, by definition: `(a, b)`, with `a` listed before `b`, when the two
+meanings, read for what their words mean, cannot both be held. Every pair is
+checked; `exclusionsUnder` computes the same list through shared keys. -/
+def exclusionsByPairs [DecidableEq α] (O : Ontology) : List (α × α) :=
   let shaped := (all : List α).map fun a => (a, Ontology.closed O (means a))
   (pairsOf shaped).filterMap fun ((a, s), (b, t)) =>
     if a ≠ b && Ontology.excludes O s t then some (a, b) else none
+
+/-! #### Exclusions through shared keys
+
+Two coherent meanings clash only where they share a key
+(`Testimony.Semantics.Ontology.shares_of_clash`): a fact, or a thing a relation
+is about. So the claims are taken from the last to the first, each against an
+index from every key to the later claims that hold it, and each claim is
+checked only against the claims it shares a key with. A pair sharing nothing is
+never compared, which is almost every pair: checking all of them was what made
+an argument's joins dear, quadratic in its claims and each check a comparison
+of whole facts. The list found is the definition's, pair for pair and in the
+same order (`exclusionsUnder_eq`). -/
+
+/-- An index from keys to the claims holding them. -/
+abbrev KeyIndex (α : Type) := List (Ontology.Key × List α)
+
+/-- The claims the index holds under a key. -/
+def KeyIndex.find : KeyIndex α → Ontology.Key → List α
+  | [], _ => []
+  | (k', as) :: rest, k => if k' = k then as else KeyIndex.find rest k
+
+/-- The index with one more claim under a key. -/
+def KeyIndex.add : KeyIndex α → Ontology.Key → α → KeyIndex α
+  | [], k, a => [(k, [a])]
+  | (k', as) :: rest, k, a =>
+    if k' = k then (k', a :: as) :: rest else (k', as) :: KeyIndex.add rest k a
+
+omit [HasMeanings α] in
+theorem KeyIndex.find_add (ix : KeyIndex α) (k k' : Ontology.Key) (a : α) :
+    KeyIndex.find (KeyIndex.add ix k a) k' =
+      if k = k' then a :: KeyIndex.find ix k' else KeyIndex.find ix k' := by
+  induction ix with
+  | nil => by_cases h : k = k' <;> simp [KeyIndex.add, KeyIndex.find, h]
+  | cons e rest ih =>
+    obtain ⟨k'', as⟩ := e
+    by_cases h₁ : k'' = k
+    · subst h₁
+      by_cases h₂ : k'' = k' <;> simp [KeyIndex.add, KeyIndex.find, h₂]
+    · by_cases h₂ : k'' = k'
+      · subst h₂
+        simp [KeyIndex.add, KeyIndex.find, h₁, Ne.symm h₁]
+      · simp [KeyIndex.add, KeyIndex.find, h₁, h₂, ih]
+
+omit [HasMeanings α] in
+theorem KeyIndex.mem_find_foldl_add (ks : List Ontology.Key) (a b : α) (k : Ontology.Key) :
+    ∀ ix : KeyIndex α, b ∈ KeyIndex.find (ks.foldl (fun ix k => KeyIndex.add ix k a) ix) k ↔
+      b ∈ KeyIndex.find ix k ∨ (k ∈ ks ∧ b = a) := by
+  induction ks with
+  | nil => simp
+  | cons k₀ ks ih =>
+    intro ix
+    rw [List.foldl_cons, ih, KeyIndex.find_add]
+    by_cases h : k₀ = k
+    · subst h; simp only [if_true, List.mem_cons, true_or, true_and]; tauto
+    · simp only [h, if_false, List.mem_cons]
+      constructor
+      · rintro (h' | ⟨hk, rfl⟩)
+        · exact .inl h'
+        · exact .inr ⟨.inr hk, rfl⟩
+      · rintro (h' | ⟨hk | hk, rfl⟩)
+        · exact .inl h'
+        · exact absurd hk.symm h
+        · exact .inr ⟨hk, rfl⟩
+
+/-- The exclusions among a list of claims, and the index of the coherent ones
+by key: the claims from the last to the first, each checked against the later
+claims it shares a key with. -/
+def exclusionsGo [DecidableEq α] (O : Ontology) : List α → List (α × α) × KeyIndex α
+  | [] => ([], [])
+  | a :: xs =>
+    match exclusionsGo O xs with
+    | (acc, ix) =>
+      let s := Ontology.closed O (means a)
+      let c := Ontology.coherent O s
+      let ks := Ontology.keysOf s
+      let near := if c then ks.flatMap (KeyIndex.find ix) else []
+      let found := xs.filterMap fun b =>
+        let t := Ontology.closed O (means b)
+        if near.contains b && a ≠ b && Ontology.clash O (s.lits ++ t.lits) (s.nogoods ++ t.nogoods)
+        then some (a, b) else none
+      (found ++ acc, if c then ks.foldl (fun ix k => KeyIndex.add ix k a) ix else ix)
+
+theorem mem_find_exclusionsGo [DecidableEq α] (O : Ontology) (k : Ontology.Key) (b : α) :
+    ∀ xs : List α, b ∈ KeyIndex.find (exclusionsGo O xs).2 k ↔
+      b ∈ xs ∧ Ontology.coherent O (Ontology.closed O (means b)) = true ∧
+        k ∈ Ontology.keysOf (Ontology.closed O (means b))
+  | [] => by simp [exclusionsGo, KeyIndex.find]
+  | a :: xs => by
+    have ih := mem_find_exclusionsGo O k b xs
+    simp only [exclusionsGo]
+    split
+    · rename_i hc
+      rw [KeyIndex.mem_find_foldl_add, ih]
+      constructor
+      · rintro (⟨hb, hcb, hkb⟩ | ⟨hk, rfl⟩)
+        · exact ⟨List.mem_cons_of_mem _ hb, hcb, hkb⟩
+        · exact ⟨List.mem_cons_self, hc, hk⟩
+      · rintro ⟨hb, hcb, hkb⟩
+        rcases List.mem_cons.mp hb with rfl | hb
+        · exact .inr ⟨hkb, rfl⟩
+        · exact .inl ⟨hb, hcb, hkb⟩
+    · rename_i hc
+      rw [ih]
+      constructor
+      · rintro ⟨hb, hcb, hkb⟩
+        exact ⟨List.mem_cons_of_mem _ hb, hcb, hkb⟩
+      · rintro ⟨hb, hcb, hkb⟩
+        rcases List.mem_cons.mp hb with rfl | hb
+        · exact absurd hcb (by simpa using hc)
+        · exact ⟨hb, hcb, hkb⟩
+
+theorem exclusionsGo_fst [DecidableEq α] (O : Ontology) : ∀ xs : List α,
+    (exclusionsGo O xs).1 =
+      (pairsOf (xs.map fun a => (a, Ontology.closed O (means a)))).filterMap
+        fun ((a, s), (b, t)) => if a ≠ b && Ontology.excludes O s t then some (a, b) else none
+  | [] => rfl
+  | a :: xs => by
+    have ih := exclusionsGo_fst O xs
+    have hmem := fun k b => mem_find_exclusionsGo O k b xs
+    rcases h : exclusionsGo O xs with ⟨acc, ix⟩
+    rw [h] at ih hmem
+    simp only at ih hmem
+    simp only [exclusionsGo, h, List.map_cons, pairsOf, List.filterMap_append,
+      List.filterMap_map, ← ih]
+    congr 1
+    apply List.filterMap_congr
+    intro b hb
+    simp only [Function.comp_apply, Ontology.excludes]
+    by_cases hca : Ontology.coherent O (Ontology.closed O (means a)) = true
+    · by_cases hcb : Ontology.coherent O (Ontology.closed O (means b)) = true
+      · have hnear : ((Ontology.keysOf (Ontology.closed O (means a))).flatMap
+            (KeyIndex.find ix)).contains b =
+            (Ontology.keysOf (Ontology.closed O (means a))).any
+              (· ∈ Ontology.keysOf (Ontology.closed O (means b))) := by
+          apply Bool.eq_iff_iff.mpr
+          simp only [List.contains_iff_mem, List.mem_flatMap, List.any_eq_true, decide_eq_true_eq,
+            hmem]
+          constructor
+          · rintro ⟨k, hk, -, -, hkb⟩; exact ⟨k, hk, hkb⟩
+          · rintro ⟨k, hk, hkb⟩; exact ⟨k, hk, hb, hcb, hkb⟩
+        simp only [hca, hcb, if_true, hnear, Bool.true_and]
+        by_cases hcl : Ontology.clash O ((Ontology.closed O (means a)).lits ++
+            (Ontology.closed O (means b)).lits) ((Ontology.closed O (means a)).nogoods ++
+            (Ontology.closed O (means b)).nogoods) = true
+        · have hsa : Ontology.clash O (Ontology.closed O (means a)).lits
+              (Ontology.closed O (means a)).nogoods = false := by
+            simp only [Ontology.coherent, Bool.and_eq_true, Bool.not_eq_true'] at hca; exact hca.2
+          have hsb : Ontology.clash O (Ontology.closed O (means b)).lits
+              (Ontology.closed O (means b)).nogoods = false := by
+            simp only [Ontology.coherent, Bool.and_eq_true, Bool.not_eq_true'] at hcb; exact hcb.2
+          obtain ⟨k, hk, hkb⟩ := Ontology.shares_of_clash hsa hsb hcl
+          have : (Ontology.keysOf (Ontology.closed O (means a))).any
+              (· ∈ Ontology.keysOf (Ontology.closed O (means b))) = true :=
+            List.any_eq_true.mpr ⟨k, hk, by simpa using hkb⟩
+          simp only [this, hcl, Bool.true_and, Bool.and_true]
+        · simp only [Bool.not_eq_true] at hcl
+          simp [hcl]
+      · simp only [Bool.not_eq_true] at hcb
+        have hnear : ((Ontology.keysOf (Ontology.closed O (means a))).flatMap
+            (KeyIndex.find ix)).contains b = false := by
+          apply Bool.eq_false_iff.mpr
+          intro hc
+          obtain ⟨k, -, hk⟩ := List.mem_flatMap.mp (List.contains_iff_mem.mp hc)
+          obtain ⟨-, hcb', -⟩ := (hmem k b).mp hk
+          simp [hcb] at hcb'
+        simp only [hca, if_true, hnear, hcb, Bool.false_and, Bool.and_false, Bool.false_eq_true,
+          if_false]
+    · simp only [Bool.not_eq_true] at hca
+      simp [hca]
+
+/-- **Every pair of claims whose meanings exclude each other**, under a given
+ontology: `(a, b)`, with `a` listed before `b`, when the two meanings, read for
+what their words mean, cannot both be held. Computed through shared keys, and
+the same list as the definition, `exclusionsByPairs` (`exclusionsUnder_eq`). -/
+def exclusionsUnder [DecidableEq α] (O : Ontology) : List (α × α) :=
+  (exclusionsGo O (all : List α)).1
+
+/-- **The exclusions through shared keys are the exclusions**, pair for pair and
+in the same order. -/
+theorem exclusionsUnder_eq [DecidableEq α] (O : Ontology) :
+    exclusionsUnder (α := α) O = exclusionsByPairs O :=
+  exclusionsGo_fst O _
 
 /-- **Every pair of claims whose meanings entail one another**, under a given
 ontology: `(a, b)` when the meaning of `a`, read for what its words mean,
