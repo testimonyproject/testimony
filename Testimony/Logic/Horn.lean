@@ -890,7 +890,7 @@ def stepRebuts? (index : α → ℕ) (hb ha : Hint) (ca cb : Option (List (Claus
 claim `b`'s steps deliver, each with its hint, given the clauses of what each
 holds, `ca` and `cb`. -/
 def defeatChecks (index : α → ℕ) (hints : List Hint) (ca cb : Option (List (Clause α)))
-    (a b : ArgumentPackage α) (s t : ℕ) : List (Option Bool) :=
+    (b : ArgumentPackage α) (s t : ℕ) : List (Option Bool) :=
   let n := b.premises.length
   (rebuts? index (hintAt hints 0) b ca s t ::
     b.premises.zipIdx.map fun (φ, i) => undermines? index (hintAt hints (i + 1)) b ca s φ) ++
@@ -905,8 +905,8 @@ clauses, or its hint did not check, and none succeeded. The checks are made
 once. A table converts each party's position once, not once for every cell it
 appears in (`defeats_iff_of_prepared`). -/
 def defeatsWith? (index : α → ℕ) (hints : List Hint) (ca cb : Option (List (Clause α)))
-    (a b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
-  let checks := defeatChecks index hints ca cb a b s t
+    (b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
+  let checks := defeatChecks index hints ca cb b s t
   if checks.any (· == some true) then some true
   else if checks.all (· == some false) then some false
   else none
@@ -915,7 +915,7 @@ def defeatsWith? (index : α → ℕ) (hints : List Hint) (ca cb : Option (List 
 position converted to clauses here. -/
 def defeatsBy? (index : α → ℕ) (hints : List Hint) (a b : ArgumentPackage α) (s t : ℕ) :
     Option Bool :=
-  defeatsWith? index hints (clausesOf a.held) (clausesOf b.held) a b s t
+  defeatsWith? index hints (clausesOf a.held) (clausesOf b.held) b s t
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, every question
 searched: `defeatsBy?` with no hints. -/
@@ -1036,7 +1036,7 @@ theorem defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint} {a b : Ar
     (ht : b.strength = t) (h : defeatsBy? index hints a b s t = some true) : Defeats a b := by
   subst hs ht
   dsimp only [defeatsBy?, defeatsWith?] at h
-  generalize hc : defeatChecks index hints (clausesOf a.held) (clausesOf b.held) a b a.strength
+  generalize hc : defeatChecks index hints (clausesOf a.held) (clausesOf b.held) b a.strength
     b.strength = checks at h
   split at h
   · rename_i hany
@@ -1064,7 +1064,7 @@ theorem not_defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint}
     (h : defeatsBy? index hints a b s t = some false) : ¬ Defeats a b := by
   subst hs ht
   dsimp only [defeatsBy?, defeatsWith?] at h
-  generalize hc : defeatChecks index hints (clausesOf a.held) (clausesOf b.held) a b a.strength
+  generalize hc : defeatChecks index hints (clausesOf a.held) (clausesOf b.held) b a.strength
     b.strength = checks at h
   split at h
   · simp at h
@@ -1155,7 +1155,7 @@ theorem defeats_iff_of_prepared {a b : ArgumentPackage α} {s t : ℕ} {P : Prop
     {ca cb : Option (List (Clause α))} (hs : a.strength = s) (ht : b.strength = t)
     (hca : clausesOf a.held = ca) (hcb : clausesOf b.held = cb)
     (h : ∃ (index : α → ℕ), Function.Injective index ∧
-      ∃ hints : List Hint, defeatsWith? index hints ca cb a b s t = some (decide P)) :
+      ∃ hints : List Hint, defeatsWith? index hints ca cb b s t = some (decide P)) :
     Defeats a b ↔ P := by
   subst hca hcb
   exact defeats_iff_of_certified hs ht h

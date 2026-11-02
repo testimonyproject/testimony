@@ -115,6 +115,23 @@ question `Horn.satisfiable_of_certified` asks. -/
 def hintsAppend (index : α → ℕ) (Γ Δ : List (Formula α)) : List Hint :=
   [hintOnAll index (base Γ) Δ]
 
+/-- The base of a list of clauses, already converted: what propagation settled
+from them, and the clauses that fired. -/
+def baseOfClauses (cs : List (Clause α)) : Base α :=
+  let (s, trace) := chainTrace cs (cs.length + 1) ⟨[], []⟩ []
+  ⟨cs, s, trace⟩
+
+/-- **The hints for a cell whose positions are given as clauses**
+(`Horn.defeatsWith?`), in the order `Horn.defeatChecks` asks its questions, as
+`hintsFor` finds them from the packages. -/
+@[nospecialize]
+def hintsWith (index : α → ℕ) (ca cb : Option (List (Clause α))) (b : ArgumentPackage α) :
+    List Hint :=
+  let ba := ca.map baseOfClauses
+  let bb := cb.map baseOfClauses
+  (hintOn index ba b.conclusion :: b.premises.map (hintOn index ba)) ++
+    (stepsOf b.premises).flatMap fun q => [hintOn index bb (∼q.2), hintOn index ba q.2]
+
 variable [HasPostulates α]
 
 /-- **The hints for a dissent's findings**, in the order `Dissent.findingsBy?`
@@ -182,8 +199,8 @@ def searchFor (index lhs : Expr) : MetaM Expr := do
   let args := lhs.getAppArgs
   if lhs.isAppOfArity ``Horn.defeatsBy? 9 then
     mkAppOptM ``Horn.hintsFor #[args[0]!, args[1]!, args[2]!, index, args[5]!, args[6]!]
-  else if lhs.isAppOfArity ``Horn.defeatsWith? 10 then
-    mkAppOptM ``Horn.hintsFor #[args[0]!, args[1]!, none, index, args[6]!, args[7]!]
+  else if lhs.isAppOfArity ``Horn.defeatsWith? 9 then
+    mkAppOptM ``Horn.hintsWith #[args[0]!, args[1]!, index, args[4]!, args[5]!, args[6]!]
   else if lhs.isAppOfArity ``Dissent.findingsBy? 6 then
     mkAppOptM ``Horn.findingsHints #[args[0]!, args[1]!, args[2]!, index, args[5]!]
   else if lhs.isAppOfArity ``Horn.satisfiableAppend? 6 then
