@@ -163,6 +163,8 @@ theorem sideNode_strength : ∀ i, (sideNode i).strength = sideStrength i
   | .direct => direct_strength
   | .cross => cross_strength
 
+prepare_clauses gritsDisputeClauses for gritsDispute
+
 /-- **Who defeats whom**, all four pairs. The cross-examination defeats the
 testimony: it denies the five-minute breakfast and the five minutes, and it is
 the stronger. The testimony's denials of the twenty minutes are attacks, and
@@ -170,7 +172,8 @@ fail: its weakest link is weaker than the cross-examination's. Every cell is
 computed by `Horn.defeats?` and checked by the kernel. -/
 theorem gritsDispute_defeats : ∀ i j, gritsDispute.defeats i j ↔ sideDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (sideNode_strength i) (sideNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (sideNode_strength i) (sideNode_strength j)
+    (gritsDisputeClauses.spec i) (gritsDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
@@ -277,14 +280,16 @@ theorem atTheFastCookNode_strength : ∀ i, (atTheFastCookNode i).strength = fas
   | .direct => direct_strength
   | .cross => crossAtTheFastCook_strength
 
+prepare_clauses atTheFastCookDisputeClauses for atTheFastCookDispute
+
 /-- **Who defeated whom at the fast cook**, all four pairs: a standoff. With both
 weakest links `disputed`, each side's attacks on the other are defeats. Every
 cell is computed by `Horn.defeats?` and checked by the kernel. -/
 theorem atTheFastCookDispute_defeats :
     ∀ i j, atTheFastCookDispute.defeats i j ↔ fastCookDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (atTheFastCookNode_strength i)
-    (atTheFastCookNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (atTheFastCookNode_strength i) (atTheFastCookNode_strength j)
+    (atTheFastCookDisputeClauses.spec i) (atTheFastCookDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute at the fast cook, in the form the verdict solver computes with. -/

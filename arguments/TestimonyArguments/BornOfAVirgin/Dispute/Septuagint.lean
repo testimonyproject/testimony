@@ -542,6 +542,8 @@ theorem septuagintPartyNode_strength :
   | .dinah => dinahCase_strength
   | .miller => millerCase_strength
 
+prepare_clauses septuagintDisputeClauses for septuagintDispute
+
 /-- **Who defeats whom**, all thirty-six pairs: Wegner defeats the witness,
 Rico and Gentry and the laws, and each defeats him back; so does Miller, and
 each defeats him back; the status reading defeats Wegner and Miller, and
@@ -550,8 +552,9 @@ parties hold by `Horn.defeats?` and checked by the kernel. -/
 theorem septuagintDispute_defeats :
     ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (septuagintPartyNode_strength i)
-    (septuagintPartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (septuagintPartyNode_strength i)
+    (septuagintPartyNode_strength j)
+    (septuagintDisputeClauses.spec i) (septuagintDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/

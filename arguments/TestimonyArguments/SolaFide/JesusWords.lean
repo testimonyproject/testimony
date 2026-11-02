@@ -550,6 +550,8 @@ theorem wordsPartyNode_strength : ∀ i, (wordsPartyNode i).strength = wordsPart
   | .matthew19Way => matthew19WayCase_strength
   | .matthew19Legal => matthew19LegalCase_strength
 
+prepare_clauses jesusWordsDisputeClauses for jesusWordsDispute
+
 /-- **Who defeats whom**, all 49 pairs: four standoffs, and nothing else. Luke
 7:50 and Trent defeat each other, and so do Luke 18 and Trent, over Trent's
 definition of justification; each Matthean reading defeats its rival, and is
@@ -558,7 +560,8 @@ defeated back. Every cell is computed from the parties' premises by
 theorem jesusWordsDispute_defeats :
     ∀ i j, jesusWordsDispute.defeats i j ↔ wordsPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (wordsPartyNode_strength i) (wordsPartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (wordsPartyNode_strength i) (wordsPartyNode_strength j)
+    (jesusWordsDisputeClauses.spec i) (jesusWordsDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/

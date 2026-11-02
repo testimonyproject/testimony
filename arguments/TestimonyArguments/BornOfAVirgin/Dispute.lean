@@ -513,6 +513,8 @@ theorem partyNode_strength : ∀ i, (partyNode i).strength = partyStrength i
   | .motyer => motyerReply_strength
   | .micah => micahParity_strength
 
+prepare_clauses isaiahDisputeClauses for isaiahDispute
+
 /-- **Who defeats whom**, all thirty-six pairs: the critic and the scriptural
 reading defeat each other; each reply defeats the critic; the critic defeats
 Berry and Motyer back, but neither of Postell's counterexamples; nothing
@@ -523,7 +525,8 @@ checked by the kernel; the table is what the computation is checked
 against. -/
 theorem isaiahDispute_defeats : ∀ i j, isaiahDispute.defeats i j ↔ partyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (partyNode_strength i) (partyNode_strength j)
+    (isaiahDisputeClauses.spec i) (isaiahDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/

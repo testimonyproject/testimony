@@ -198,6 +198,8 @@ theorem wegnerPartyNode_strength : ∀ i, (wegnerPartyNode i).strength = 0
   | .sign => signArgument_strength
   | .reply => ordinarySignReply_strength
 
+prepare_clauses wegnerDisputeClauses for wegnerDispute
+
 /-- **Who defeats whom**, all nine pairs: the fathers and Wegner defeat each
 other, the fathers and the reply defeat each other, and nothing else. Every
 cell is computed from the parties' premises by `Horn.defeats?` and checked by
@@ -205,8 +207,8 @@ the kernel. -/
 theorem wegnerDispute_defeats :
     ∀ i j, wegnerDispute.defeats i j ↔ wegnerPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (wegnerPartyNode_strength i)
-    (wegnerPartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (wegnerPartyNode_strength i) (wegnerPartyNode_strength j)
+    (wegnerDisputeClauses.spec i) (wegnerDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/

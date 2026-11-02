@@ -799,6 +799,8 @@ theorem jamesPartyNode_strength : ∀ i, (jamesPartyNode i).strength = jamesPart
   | .renewalOnTheWord => renewalOnTheWord_strength
   | .westminsterOnReward => westminsterOnReward_strength
 
+prepare_clauses jamesDisputeClauses for jamesDispute
+
 /-- **Who defeats whom**, all 144 pairs. James's word defeats Trent's reading of
 it, and the reading's reply fails; it defeats the renewal reading too, whose
 reply fails for the same reason — it rests on Paul's word as renewal, rated
@@ -822,7 +824,8 @@ by the kernel. -/
 theorem jamesDispute_defeats :
     ∀ i j, jamesDispute.defeats i j ↔ jamesPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (jamesPartyNode_strength i) (jamesPartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (jamesPartyNode_strength i) (jamesPartyNode_strength j)
+    (jamesDisputeClauses.spec i) (jamesDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/

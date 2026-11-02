@@ -182,6 +182,8 @@ def searchFor (index lhs : Expr) : MetaM Expr := do
   let args := lhs.getAppArgs
   if lhs.isAppOfArity ``Horn.defeatsBy? 9 then
     mkAppOptM ``Horn.hintsFor #[args[0]!, args[1]!, args[2]!, index, args[5]!, args[6]!]
+  else if lhs.isAppOfArity ``Horn.defeatsWith? 10 then
+    mkAppOptM ``Horn.hintsFor #[args[0]!, args[1]!, none, index, args[6]!, args[7]!]
   else if lhs.isAppOfArity ``Dissent.findingsBy? 6 then
     mkAppOptM ``Horn.findingsHints #[args[0]!, args[1]!, args[2]!, index, args[5]!]
   else if lhs.isAppOfArity ``Horn.satisfiableAppend? 6 then
@@ -190,8 +192,8 @@ def searchFor (index lhs : Expr) : MetaM Expr := do
       throwError "horn_certify: expected the clauses of a list, got{indentExpr base}"
     mkAppOptM ``Horn.hintsAppend #[args[0]!, args[1]!, index, base.appArg!, args[5]!]
   else
-    throwError "horn_certify: expected `Horn.defeatsBy? …`, `Dissent.findingsBy? …` or \
-      `Horn.satisfiableAppend? …`, got{indentExpr lhs}"
+    throwError "horn_certify: expected `Horn.defeatsBy? …`, `Horn.defeatsWith? …`, \
+      `Dissent.findingsBy? …` or `Horn.satisfiableAppend? …`, got{indentExpr lhs}"
 
 /-- Prove `∃ index, Function.Injective index ∧ ∃ hints, decision index hints … = v`,
 for a defeat cell or a dissent's findings, or `∃ index hints, … = v` for a
@@ -227,5 +229,96 @@ elab (name := hornCertify) "horn_certify" : tactic => do
     | _, _ => pure withHints
   goal.assign <| mkApp4 (.const ``Exists.intro us) indexTy p index body
   replaceMainGoal []
+
+/-! ### Each party's clauses, once
+
+A defeat table asks every cell about two parties' positions as clauses, and
+converting a position is most of what a cell costs the kernel. `prepare_clauses`
+converts each party's position once, at elaboration time, writes the result as a
+literal, and proves for each party that the literal is what the conversion
+gives: the kernel evaluates the conversion once per party, and every cell reads
+the literal. -/
+
+/-- A list of clauses as a term, each atom the constructor at its index. -/
+def clausesExpr (α : Expr) (ctors : Array Name) (cs : List (List ℕ × List ℕ)) :
+    MetaM Expr := do
+  let atom (k : ℕ) : MetaM Expr := do
+    let some c := ctors[k]? | throwError "prepare_clauses: no constructor {k}"
+    return mkConst c
+  let clauseTy := mkApp (mkConst ``Horn.Clause) α
+  let mut out : Array Expr := #[]
+  for (body, heads) in cs do
+    let b ← body.mapM atom
+    let h ← heads.mapM atom
+    out := out.push (mkApp3 (mkConst ``Horn.Clause.mk) α (← mkListLit α b) (← mkListLit α h))
+  mkListLit clauseTy out.toList
+
+/-- `prepare_clauses name for d`: define `name : ι → Option (List (Clause α))`,
+each party's position as clauses, written out, and prove `name_spec : ∀ i,
+clausesOf (d.node i).held = name i`, which the kernel checks once per party. -/
+elab "prepare_clauses " name:ident " for " d:term : command => Command.liftTermElabM do
+  let d ← Term.elabTerm d none
+  Term.synthesizeSyntheticMVarsNoPostponing
+  let d ← instantiateMVars d
+  let dTy ← whnfR (← inferType d)
+  let #[α, inst, ι] := dTy.getAppArgs | throwError "prepare_clauses: not a dispute"
+  let enumCtors (ty : Expr) : MetaM (Name × Array Name) := do
+    let .const n [] := ty | throwError "prepare_clauses: {ty} is not an enumeration"
+    let some (.inductInfo i) := (← getEnv).find? n | throwError "prepare_clauses: {n}?"
+    return (n, i.ctors.toArray)
+  let (ιName, parties) ← enumCtors ι
+  let (_, atoms) ← enumCtors α
+  let αName := α.constName!
+  let optTy := mkApp (mkConst ``Option [Level.zero]) (mkApp (mkConst ``List [Level.zero])
+    (mkApp (mkConst ``Horn.Clause) α))
+  let mut lits : Array Expr := #[]
+  for c in parties do
+    let held := mkApp3 (mkConst ``ArgumentPackage.held) α inst
+      (mkApp (mkApp4 (mkConst ``Dispute.node) α inst ι d) (mkConst c))
+    let cl := mkApp2 (mkConst ``Horn.clausesOf) α held
+    -- Evaluated as constructor indices, a type the evaluator knows.
+    let idx := mkConst (αName ++ `ctorIdx)
+    let toIdx ← withLocalDeclD `c (mkApp (mkConst ``Horn.Clause) α) fun c => do
+      let body ← mkAppM ``List.map #[idx, ← mkAppM ``Horn.Clause.body #[c]]
+      let heads ← mkAppM ``List.map #[idx, ← mkAppM ``Horn.Clause.heads #[c]]
+      mkLambdaFVars #[c] (← mkAppM ``Prod.mk #[body, heads])
+    let mapClauses ← mkAppM ``List.map #[toIdx]
+    let asIdx ← mkAppM ``Option.map #[mapClauses, cl]
+    let v ← unsafe evalExpr (Option (List (List ℕ × List ℕ)))
+      (← inferType asIdx) asIdx
+    let lit ← match v with
+      | some cs => pure (mkApp2 (mkConst ``Option.some [Level.zero])
+          (mkApp (mkConst ``List [Level.zero]) (mkApp (mkConst ``Horn.Clause) α))
+          (← clausesExpr α atoms cs))
+      | none => pure (mkApp (mkConst ``Option.none [Level.zero])
+          (mkApp (mkConst ``List [Level.zero]) (mkApp (mkConst ``Horn.Clause) α)))
+    lits := lits.push lit
+  let defName := (← getCurrNamespace) ++ name.getId
+  let casesOn (motive : Expr) (minors : Array Expr) (i : Expr) (lvl : Level) : Expr :=
+    mkAppN (mkConst (ιName ++ `casesOn) [lvl]) (#[motive, i] ++ minors)
+  let body := Expr.lam `i ι (casesOn (.lam `_ ι optTy .default) lits (.bvar 0) Level.one) .default
+  addAndCompile <| .defnDecl {
+    name := defName, levelParams := [], type := .forallE `i ι optTy .default, value := body,
+    hints := .abbrev, safety := .safe }
+  addDocStringCore defName s!"Each party's position in `{d}`, as clauses, written out once \
+    so that every cell of its defeat table reads them rather than converting the position \
+    again. Generated by `prepare_clauses`; `{defName ++ `spec}` proves it."
+  -- For each party, the conversion reduces to its literal: `Eq.refl`, checked by the kernel.
+  let specTy ← withLocalDeclD `i ι fun i => do
+    let held := mkApp3 (mkConst ``ArgumentPackage.held) α inst
+      (mkApp (mkApp4 (mkConst ``Dispute.node) α inst ι d) i)
+    mkForallFVars #[i] (← mkEq (mkApp2 (mkConst ``Horn.clausesOf) α held)
+      (mkApp (mkConst defName) i))
+  let motive ← withLocalDeclD `i ι fun i => do
+    let held := mkApp3 (mkConst ``ArgumentPackage.held) α inst
+      (mkApp (mkApp4 (mkConst ``Dispute.node) α inst ι d) i)
+    mkLambdaFVars #[i] (← mkEq (mkApp2 (mkConst ``Horn.clausesOf) α held)
+      (mkApp (mkConst defName) i))
+  let proofs ← lits.mapM fun lit => mkEqRefl lit
+  let specVal := Expr.lam `i ι (casesOn motive proofs (.bvar 0) Level.zero) .default
+  addDecl <| .thmDecl {
+    name := defName ++ `spec, levelParams := [], type := specTy, value := specVal }
+  addDocStringCore (defName ++ `spec) s!"Each party's clauses in `{defName}` are what \
+    converting its position gives, checked by the kernel once for each party."
 
 end Testimony.Logic.Certificate

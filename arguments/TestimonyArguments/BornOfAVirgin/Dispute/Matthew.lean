@@ -159,14 +159,16 @@ theorem matthewPartyNode_strength : ∀ i, (matthewPartyNode i).strength = 0
   | .matthew => matthewCase_strength
   | .drift => driftObjection_strength
 
+prepare_clauses matthewDisputeClauses for matthewDispute
+
 /-- **Who defeats whom**, all four pairs: Matthew's reading and Wegner defeat
 each other, and nothing else. Every cell is computed from what the parties hold
 by `Horn.defeats?` and checked by the kernel. -/
 theorem matthewDispute_defeats :
     ∀ i j, matthewDispute.defeats i j ↔ matthewPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (matthewPartyNode_strength i)
-    (matthewPartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (matthewPartyNode_strength i) (matthewPartyNode_strength j)
+    (matthewDisputeClauses.spec i) (matthewDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/

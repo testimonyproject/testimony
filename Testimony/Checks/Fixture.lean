@@ -216,10 +216,13 @@ theorem node_strength : ∀ i, (node i).strength = strength i
   | .minutes => by decide
   | .clock => by decide
 
+prepare_clauses disputeClauses for dispute
+
 /-- Who defeats whom, computed and checked by the kernel. -/
 theorem dispute_defeats : ∀ i j, dispute.defeats i j ↔ defeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (node_strength i) (node_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (node_strength i) (node_strength j)
+    (disputeClauses.spec i) (disputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute, in the form the solver and the AIF check read. -/

@@ -76,6 +76,33 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 4 | Certify assessments and consistency; in a hearing, weigh a step's rank only once it is attacked (#183) | the hearings and assessments | 3.08 s, 97 MiB | 0.48 s, 16 MiB | 0.008 | kept |
 | 5 | Compare a citation by its key and locus, a key checked to name one entry | a hearing's rerated strengths | 2.54 s, 83 MiB | 0.86 s, 25 MiB | 0.008 | kept |
 | 6 | Replay a refutation on bitmasks (#180) | the certified defeat tables | 7.21 s, 94 MiB | 5.99 s, 70 MiB | 0.008 | kept |
+| 10 | Convert each party's position to clauses once per table, not once per cell | the certified defeat tables | 1.52 s, 14 MiB | 0.93 s, 12 MiB | 0.008 | kept |
+
+Round 10, measured on one side of a `scripts/bench-ab.sh` run against `main`,
+five interleaved rounds, as rounds 3 and 8 were: each defeat table is
+benchmarked certified, as before, and prepared. A certified cell converted both
+parties' positions to clauses, so a party appearing in a row and a column of
+cells was converted once for every cell. `prepare_clauses` converts each
+party's position once, at elaboration time, writes the clauses out, and has the
+kernel check, once for each party, that they are what the conversion gives;
+every cell then reads them (`Horn.defeatsWith?`,
+`Horn.defeats_iff_of_prepared`). The Septuagint's table fell from 1.52 s to
+0.93 s (−39%, p = 0.008), and half of sola fide's from 6.31 s to 5.53 s (−12%,
+p = 0.016); preparing sola fide's twelve parties costs 0.35 s, once. Every
+benchmark shared with `main` matched it, but for the searched Septuagint table,
+which this change does not touch, 8% faster (p = 0.032): noise, most likely.
+
+Before this, the round's real target was measured and set aside. Pruning each
+question to the components of a position it touches, found by union-find over
+the claims each clause mentions, asked the kernel about a third of the clauses
+(6,671 of 19,800 in half of sola fide's table) but saved only 15% of the time.
+Most of a question's cost is not in the clauses it reads but in how the kernel
+reads them: a model check of Paul's 33 clauses took 7.6 ms, of which the
+library's list functions, compiled through `brecOn`, and each claim's
+constructor index, computed by a case split over the claim type's hundred-odd
+constructors, are most. Written on `List.rec` and over indices, the same check
+took about 3 ms. That is the next round; pruning, which makes the cost follow
+the part of a position a question touches rather than the whole, follows it.
 
 Round 6, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
 certified refutation was replayed over lists of settled atoms, each membership
