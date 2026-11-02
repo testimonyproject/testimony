@@ -76,6 +76,31 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 4 | Certify assessments and consistency; in a hearing, weigh a step's rank only once it is attacked (#183) | the hearings and assessments | 3.08 s, 97 MiB | 0.48 s, 16 MiB | 0.008 | kept |
 | 5 | Compare a citation by its key and locus, a key checked to name one entry | a hearing's rerated strengths | 2.54 s, 83 MiB | 0.86 s, 25 MiB | 0.008 | kept |
 | 6 | Replay a refutation on bitmasks (#180) | the certified defeat tables | 7.21 s, 94 MiB | 5.99 s, 70 MiB | 0.008 | kept |
+| 9 | Check a named reading in the kernel, as a table, not by `simp` | `satisfied_by` and `leaves_open` | 1.11 s, 8 MiB | 45 ms, 4 MiB | 0.008 | kept |
+
+Round 9, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
+profile of the slowest modules after round 6 put most of their elaboration in
+`simp`, and most of that in `satisfied_by`: 46 s of `SolaFide.Dispute`'s,
+serially, and 24 s of `SolaFide.Results`'. Its recipe unfolded the premise list
+and rewrote the semantics of every formula in it, a second for one sola fide
+case. But a reading is a table: each claim `True` or `False`. So the tactic now
+reads the table off the definition, as a function to `Bool` with the proof, by
+cases, that it agrees with the reading, and the kernel evaluates every premise
+under it (`Testimony.Logic.ModelCheck`; `models_iff_holdsB` proves the
+evaluation the semantics). A reading that is not a table falls back to the old
+recipe; none in the arguments or the examples does. A first proof of
+`models_iff_holdsB` used `tauto`, which put `Classical.choice` under every model
+it checked, and the generated pages, which print each theorem's axioms, caught
+it; the proof is now by cases, and the theorems rest on what they did,
+`propext` and `Quot.sound`. The Pauline case's model
+fell from 1.11 s to 45 ms (−96%, p = 0.008), a granted denial of Trent's from
+1.05 s to 46 ms (−96%), and the parity reply's independence from 204 ms to
+15 ms (−93%). Measured by hand, two runs each, the tactic otherwise unchanged:
+`SolaFide.Dispute` elaborates in 35.8 s against 48.4 s, and `SolaFide.Results`
+in 12.6 s against 18.6 s. `refute_with` is left as it is: the refutation check
+counts on its recipe unfolding every definition through the argument's unfold
+set, which is what tells a "not Horn" failure from a definition left folded,
+and a kernel check would unfold them all whether tagged or not.
 
 Round 6, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
 certified refutation was replayed over lists of settled atoms, each membership

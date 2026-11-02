@@ -241,6 +241,14 @@ example (i : Party)
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
+#bench "satisfied_by: the Pauline case" in
+example : Satisfiable paulineCase.premises := by
+  satisfied_by criticsReading [solaFideDefs]
+
+#bench "satisfied_by: Trent grants the subjective genitive" in
+example : Grants tridentineCase (notP .pistisChristouObjective) := by
+  satisfied_by trentWithoutDeliveranceReading [Grants, solaFideDefs]
+
 #bench "strengths: James hearing under evidence, 12 parties" in
 example :
     ∀ i, ((jamesRegister.rerated .evidence).node i).strength = ratedStrength .evidence i := by
@@ -273,6 +281,15 @@ example :
   decide +kernel
 
 end TestimonyArguments.SolaFide
+
+namespace TestimonyArguments.SolaScriptura
+open Testimony Testimony.Logic
+
+#bench "leaves_open: parity leaves the canon open" in
+example : Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
+  leaves_open parityEstablishesNothingReading krugerParityReading [solaScripturaDefs]
+
+end TestimonyArguments.SolaScriptura
 
 /-! ### The checks over every argument -/
 

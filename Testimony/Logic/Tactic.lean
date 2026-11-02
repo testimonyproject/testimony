@@ -1,4 +1,5 @@
 import Testimony.Logic.Line
+import Testimony.Logic.ModelCheck
 import Mathlib.Tactic.Tauto
 
 /-!
@@ -209,19 +210,24 @@ macro_rules
 
 /-- Prove `Satisfiable prems` by naming a valuation that models every premise.
 
-The mirror of `refute_with`: same unfolding recipe, opposite purpose. Where a
-countermodel is the rival's reading written down, a model is the position's
-own — the way things are if it is right. Both are named definitions for the
-same reason, that an inline valuation satisfies the checker and tells a reader
-nothing. -/
+The mirror of `refute_with`, opposite purpose. Where a countermodel is the
+rival's reading written down, a model is the position's own — the way things
+are if it is right. Both are named definitions for the same reason, that an
+inline valuation satisfies the checker and tells a reader nothing.
+
+A reading written as a table — `True` or `False` at each claim — is read off as
+one, and the kernel evaluates every premise under it
+(`Testimony.Logic.ModelCheck`); any other reading is proved by `refute_with`'s
+unfolding recipe, which the bracketed definitions serve. -/
 syntax "satisfied_by" ppSpace ident (ppSpace "[" simpLemma,+ "]")? : tactic
 
 macro_rules
   | `(tactic| satisfied_by $v:ident) =>
     `(tactic| satisfied_by $v [Testimony.Logic.caseOf])
   | `(tactic| satisfied_by $v:ident [$ls,*]) =>
-    `(tactic|
-        (refine Testimony.Logic.satisfiable_of_model $v ?_ <;>
+    `(tactic| first
+      | satisfied_by_table $v
+      | (refine Testimony.Logic.satisfiable_of_model $v ?_ <;>
            simp [$ls,*, $v:ident, Testimony.Logic.caseOf, Testimony.Logic.Line.asPackage,
              Testimony.Logic.Line.premises, Testimony.Logic.Line.onGrounds,
              Testimony.Logic.p, Testimony.Logic.notP,
@@ -245,15 +251,19 @@ one, so they settle nothing either way.*
 
 Two identifiers rather than one, for the same reason `refute_with` takes an
 identifier at all. An independence result is two rival readings of one premise
-set, and both of them are positions someone holds. -/
+set, and both of them are positions someone holds.
+
+Two readings written as tables are checked by the kernel, as `satisfied_by`'s
+are; otherwise the unfolding recipe proves the four halves. -/
 syntax "leaves_open" ppSpace ident ppSpace ident (ppSpace "[" simpLemma,+ "]")? : tactic
 
 macro_rules
   | `(tactic| leaves_open $vf:ident $vt:ident) =>
     `(tactic| leaves_open $vf $vt [Testimony.Logic.caseOf])
   | `(tactic| leaves_open $vf:ident $vt:ident [$ls,*]) =>
-    `(tactic|
-        (refine Testimony.Logic.independent_of_countermodels $vf $vt ?_ ?_ ?_ ?_ <;>
+    `(tactic| first
+      | leaves_open_table $vf $vt
+      | (refine Testimony.Logic.independent_of_countermodels $vf $vt ?_ ?_ ?_ ?_ <;>
            simp [$ls,*, $vf:ident, $vt:ident, Testimony.Logic.caseOf,
              Testimony.Logic.Line.asPackage,
              Testimony.Logic.Line.premises, Testimony.Logic.Line.onGrounds,
