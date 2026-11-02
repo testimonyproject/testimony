@@ -77,7 +77,7 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 5 | Compare a citation by its key and locus, a key checked to name one entry | a hearing's rerated strengths | 2.54 s, 83 MiB | 0.86 s, 25 MiB | 0.008 | kept |
 | 6 | Replay a refutation on bitmasks (#180) | the certified defeat tables | 7.21 s, 94 MiB | 5.99 s, 70 MiB | 0.008 | kept |
 | 7 | Find exclusions through shared keys, not every pair | the sola fide joins | 45.4 s, 3.43 GiB | 10.6 s, 1.06 GiB | 0.008 | kept |
-| 10 | Convert each party's position to clauses once per table, not once per cell | the certified defeat tables | 1.52 s, 14 MiB | 0.93 s, 12 MiB | 0.008 | kept |
+| 10 | Convert each party's position to clauses once per table, not once per cell | the certified defeat tables | 1.61 s, 13 MiB | 0.99 s, 11 MiB | 0.008 | kept |
 
 Round 10, measured on one side of a `scripts/bench-ab.sh` run against `main`,
 five interleaved rounds, as rounds 3 and 8 were: each defeat table is
@@ -87,11 +87,12 @@ cells was converted once for every cell. `prepare_clauses` converts each
 party's position once, at elaboration time, writes the clauses out, and has the
 kernel check, once for each party, that they are what the conversion gives;
 every cell then reads them (`Horn.defeatsWith?`,
-`Horn.defeats_iff_of_prepared`). The Septuagint's table fell from 1.52 s to
-0.93 s (−39%, p = 0.008), and half of sola fide's from 6.31 s to 5.53 s (−12%,
-p = 0.016); preparing sola fide's twelve parties costs 0.35 s, once. Every
-benchmark shared with `main` matched it, but for the searched Septuagint table,
-which this change does not touch, 8% faster (p = 0.032): noise, most likely.
+`Horn.defeats_iff_of_prepared`). The Septuagint's table fell from 1.61 s to
+0.99 s (−39%, p = 0.008), and half of sola fide's from 7.14 s to 5.44 s (−24%,
+p = 0.008); preparing sola fide's twelve parties costs 0.35 s, once. Every
+benchmark shared with `main` matched it. An earlier run, before the hints were
+searched from the clauses rather than the packages, measured −39% and −12%
+(p = 0.016).
 
 Before this, the round's real target was measured and set aside. Pruning each
 question to the components of a position it touches, found by union-find over
