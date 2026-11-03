@@ -287,6 +287,14 @@ example : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
   refine partOf_iff_of_certified ?_
   cases i <;> cases j <;> horn_certify
 
+#bench "satisfied_by: the Pauline case" in
+example : Satisfiable paulineCase.premises := by
+  satisfied_by criticsReading [solaFideDefs]
+
+#bench "satisfied_by: Trent grants the subjective genitive" in
+example : Grants tridentineCase (notP .pistisChristouObjective) := by
+  satisfied_by trentWithoutDeliveranceReading [Grants, solaFideDefs]
+
 prepare_clauses solaFideBenchClauses for solaFideDispute
 
 #bench (runs := 1) "table, prepared: sola fide, first half, 72 cells" in
@@ -345,6 +353,15 @@ example :
   decide +kernel
 
 end TestimonyArguments.SolaFide
+
+namespace TestimonyArguments.SolaScriptura
+open Testimony Testimony.Logic
+
+#bench "leaves_open: parity leaves the canon open" in
+example : Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRule) := by
+  leaves_open parityEstablishesNothingReading krugerParityReading [solaScripturaDefs]
+
+end TestimonyArguments.SolaScriptura
 
 /-! ### The checks over every argument -/
 
