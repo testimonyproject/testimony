@@ -16,6 +16,7 @@ import Testimony.Logic.Notation
 import Testimony.Logic.Entail
 import Testimony.Logic.Package
 import Testimony.Logic.Line
+import Testimony.Logic.ModelCheck
 import Testimony.Logic.Tactic
 import Testimony.Logic.Framework
 import Testimony.Logic.Dispute

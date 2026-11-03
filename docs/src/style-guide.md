@@ -194,6 +194,14 @@ while telling a reader nothing. `leaves_open` takes two, in the order of
 `Independent`'s two halves: first the reading on which the proposition fails,
 then the reading on which it holds.
 
+**Write a reading as a table.** A reading that says of each claim, by a `match`,
+whether it holds — `True` or `False`, with a wildcard for the rest — or that
+holds everywhere (`fun _ => True`), is read off as a table, and `satisfied_by`
+and `leaves_open` have the kernel evaluate every premise under it
+(`Testimony.Logic.ModelCheck`): some 45 ms for a sola fide case, where unfolding
+it with `simp` took a second. A reading written any other way, through another
+reading or as an equation, still proves what it did, by the slower recipe.
+
 **Prefer `Independent` to a pair of refutations.** When a reply is recorded as
 "it blocks the objection" and "it establishes nothing" over the *same* premise
 set, those are the two halves of one independence claim and should be stated as
