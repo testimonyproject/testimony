@@ -99,7 +99,14 @@ from 5.95 s to 5.38 s (−9.5%, p = 0.008) and from 60 to 36 MiB; the Septuagint
 rose from 1.05 s to 1.26 s (+21%, p = 0.15, not significant) and fell from 12 to
 4 MiB. So sola fide's table is asked by components, and the smaller tables,
 whose questions touch most of each position, stay prepared. The machinery is
-there for disputes that join arguments, where whole positions share nothing.
+there for disputes that join arguments, where whole positions share nothing. A
+first version had the check of a whole position recurse through a pruned
+hint's inner one; that made the check structural recursion over hints, which the
+kernel unfolds through `brecOn` on every question, and CI's gate found the
+prepared Septuagint table 10% slower (p = 0.032). Asked of a whole position, a
+pruned hint now answers nothing, and the check is a plain case split again: the
+prepared and certified tables then matched round 10 (+1.0%, p = 0.90; −3.5%,
+p = 0.26).
 
 Round 10, measured on one side of a `scripts/bench-ab.sh` run against `main`,
 five interleaved rounds, as rounds 3 and 8 were: each defeat table is

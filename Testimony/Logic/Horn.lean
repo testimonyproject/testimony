@@ -484,7 +484,8 @@ inductive Hint where
   | refute (trace : List ℕ) (last : ℕ)
   /-- A question asked of part of a position: of the components `sel` selects
   (`askPruned`), with `inner` the hint for that part. Asked of a whole
-  position, it is `inner`. -/
+  position, it answers nothing, so that the check of a whole position stays a
+  plain case split and never recurses through a hint. -/
   | prune (sel : ℕ) (inner : Hint)
   deriving Repr, Inhabited
 
@@ -602,7 +603,7 @@ def clausesSatisfiableBy? (index : α → ℕ) (cs : List (Clause α)) : Hint �
     match cs[last]? with
     | some c => if violatedBits index (replay index cs trace) c then some false else none
     | none => none
-  | .prune _ inner => clausesSatisfiableBy? index cs inner
+  | .prune _ _ => none
 
 omit [DecidableEq α] in
 /-- A replay settles only what every model of the clauses has, for an index that
@@ -644,9 +645,7 @@ theorem satisfiable_of_clausesSatisfiableBy? {index : α → ℕ} {cs : List (Cl
     split at e
     · split at e <;> simp at e
     · simp at e
-  | prune _ inner =>
-    simp only [clausesSatisfiableBy?] at e
-    exact satisfiable_of_clausesSatisfiableBy? e
+  | prune _ _ => simp [clausesSatisfiableBy?] at e
 
 /-- `some false` from a hint is a refutation, for an index that tells atoms apart
 or a question searched. -/
@@ -673,9 +672,7 @@ theorem not_satisfiable_of_clausesSatisfiableBy? {index : α → ℕ} {cs : List
         exact hn h (hv.2 h hh) hwh
       · simp at e
     · simp at e
-  | prune _ inner =>
-    simp only [clausesSatisfiableBy?] at e
-    exact not_satisfiable_of_clausesSatisfiableBy? (hidx.imp id (by simp)) e ⟨w, hw⟩
+  | prune _ _ => simp [clausesSatisfiableBy?] at e
 
 /-! ### Formulas -/
 
