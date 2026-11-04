@@ -176,6 +176,18 @@ example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j 
     (septuagintDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
+prepare_parts septuagintBenchParts for septuagintDispute
+
+#bench "table, pruned: Septuagint, 36 cells" in
+example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
+  intro i j
+  refine Horn.defeats_iff_of_pruned septuagintBenchParts.injective
+    (septuagintPartyNode_strength i) (septuagintPartyNode_strength j)
+    (septuagintBenchParts.spec i) (septuagintBenchParts.spec j) (septuagintBenchParts.valid i)
+    (septuagintBenchParts.valid j) (septuagintDispute.consistent i)
+    (septuagintDispute.consistent j) ?_
+  cases i <;> cases j <;> horn_certify
+
 #bench "verdict: Septuagint, grounded in stages" in
 example : Verdict septuagintDispute where
   finite := septuagintFinite
@@ -283,12 +295,25 @@ example : Satisfiable paulineCase.premises := by
 example : Grants tridentineCase (notP .pistisChristouObjective) := by
   satisfied_by trentWithoutDeliveranceReading [Grants, solaFideDefs]
 
+prepare_clauses solaFideBenchClauses for solaFideDispute
+
 #bench (runs := 1) "table, prepared: sola fide, first half, 72 cells" in
 example (i : Party)
     (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
   refine Horn.defeats_iff_of_prepared (partyNode_strength i) (partyNode_strength j)
-    (solaFideDisputeClauses.spec i) (solaFideDisputeClauses.spec j) ?_
+    (solaFideBenchClauses.spec i) (solaFideBenchClauses.spec j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
+
+#bench (runs := 1) "table, pruned: sola fide, first half, 72 cells" in
+example (i : Party)
+    (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
+    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
+  refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
+    (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
+    (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j) (solaFideDispute.consistent i)
+    (solaFideDispute.consistent j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 

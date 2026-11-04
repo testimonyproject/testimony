@@ -482,6 +482,11 @@ inductive Hint where
   what every model must have, in the order they fire, and the position of the
   clause that is then violated. -/
   | refute (trace : List ℕ) (last : ℕ)
+  /-- A question asked of part of a position: of the components `sel` selects
+  (`askPruned`), with `inner` the hint for that part. Asked of a whole
+  position, it answers nothing, so that the check of a whole position stays a
+  plain case split and never recurses through a hint. -/
+  | prune (sel : ℕ) (inner : Hint)
   deriving Repr, Inhabited
 
 /-- What propagation has settled, as two bitmasks over an index of the atoms:
@@ -598,6 +603,7 @@ def clausesSatisfiableBy? (index : α → ℕ) (cs : List (Clause α)) : Hint �
     match cs[last]? with
     | some c => if violatedBits index (replay index cs trace) c then some false else none
     | none => none
+  | .prune _ _ => none
 
 omit [DecidableEq α] in
 /-- A replay settles only what every model of the clauses has, for an index that
@@ -639,6 +645,7 @@ theorem satisfiable_of_clausesSatisfiableBy? {index : α → ℕ} {cs : List (Cl
     split at e
     · split at e <;> simp at e
     · simp at e
+  | prune _ _ => simp [clausesSatisfiableBy?] at e
 
 /-- `some false` from a hint is a refutation, for an index that tells atoms apart
 or a question searched. -/
@@ -665,6 +672,7 @@ theorem not_satisfiable_of_clausesSatisfiableBy? {index : α → ℕ} {cs : List
         exact hn h (hv.2 h hh) hwh
       · simp at e
     · simp at e
+  | prune _ _ => simp [clausesSatisfiableBy?] at e
 
 /-! ### Formulas -/
 
@@ -826,22 +834,22 @@ step's rank is its package's inference rank, which in a hearing is computed from
 the step's ratings, by far the dearest part of a cell, and a certified question
 is a check; so for a step with a certificate the attack is asked first, and the
 rank only if the attack may land. The answer is the same either way. -/
-def undermines? (index : α → ℕ) (h : Hint) (b : ArgumentPackage α)
-    (ca : Option (List (Clause α))) (s : ℕ) (φ : Formula α) : Option Bool :=
+def undermines? (q : Hint → Formula α → Option Bool) (h : Hint) (b : ArgumentPackage α)
+    (s : ℕ) (φ : Formula α) : Option Bool :=
   if rankFirst φ h then
     if Outranks b φ s then some false
-    else (satisfiableWith? index h ca φ).map (!·)
+    else (q h φ).map (!·)
   else
-    match (satisfiableWith? index h ca φ).map (!·) with
+    match (q h φ).map (!·) with
     | some false => some false
     | r => if Outranks b φ s then some false else r
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, by rebutting its
 conclusion, decided the same way. -/
-def rebuts? (index : α → ℕ) (h : Hint) (b : ArgumentPackage α)
-    (ca : Option (List (Clause α))) (s t : ℕ) : Option Bool :=
+def rebuts? (q : Hint → Formula α → Option Bool) (h : Hint) (b : ArgumentPackage α)
+    (s t : ℕ) : Option Bool :=
   if s < t then some false
-  else (satisfiableWith? index h ca b.conclusion).map (!·)
+  else (q h b.conclusion).map (!·)
 
 /-- A premise as a step a rebuttal can land on: `p ➝ ψ` whose head is not `⊥`,
 as the pair `(p, ψ)`. A premise with head `⊥` denies something; it derives
@@ -876,27 +884,42 @@ true` if `b`'s premises entail `ψ`, `a`'s entail its negation, and `b` is not
 stronger than `a`; `some false` if either entailment is shown to fail or `b` is
 stronger; `none` otherwise. Each entailment is decided once, `hb` the hint for
 the first and `ha` for the second. -/
-def stepRebuts? (index : α → ℕ) (hb ha : Hint) (ca cb : Option (List (Clause α)))
+def stepRebuts? (qa qb : Hint → Formula α → Option Bool) (hb ha : Hint)
     (s t : ℕ) (ψ : Formula α) : Option Bool :=
   if s < t then some false
   else
-    let delivers := satisfiableWith? index hb cb (∼ψ)
-    let denies := satisfiableWith? index ha ca ψ
+    let delivers := qb hb (∼ψ)
+    let denies := qa ha ψ
     if delivers = some false ∧ denies = some false then some true
     else if delivers = some true ∨ denies = some true then some false
     else none
 
 /-- Every way `a` could defeat `b`: the rebuttal, each premise of `b`, and each
-claim `b`'s steps deliver, each with its hint, given the clauses of what each
-holds, `ca` and `cb`. -/
-def defeatChecks (index : α → ℕ) (hints : List Hint) (ca cb : Option (List (Clause α)))
+claim `b`'s steps deliver, each with its hint, asked of what each holds through
+`qa` and `qb`. -/
+def defeatChecks (hints : List Hint) (qa qb : Hint → Formula α → Option Bool)
     (b : ArgumentPackage α) (s t : ℕ) : List (Option Bool) :=
   let n := b.premises.length
-  (rebuts? index (hintAt hints 0) b ca s t ::
-    b.premises.zipIdx.map fun (φ, i) => undermines? index (hintAt hints (i + 1)) b ca s φ) ++
+  (rebuts? qa (hintAt hints 0) b s t ::
+    b.premises.zipIdx.map fun (φ, i) => undermines? qa (hintAt hints (i + 1)) b s φ) ++
     (stepsOf b.premises).zipIdx.map fun (q, i) =>
-      stepRebuts? index (hintAt hints (n + 1 + 2 * i)) (hintAt hints (n + 2 + 2 * i)) ca cb s t
-        q.2
+      stepRebuts? qa qb (hintAt hints (n + 1 + 2 * i)) (hintAt hints (n + 2 + 2 * i)) s t q.2
+
+/-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, from hints, every
+question asked of what each holds through `qa` and `qb`: `some true` if any way
+succeeds, `some false` if every way is shown to fail, `none` if some question
+went unanswered and none succeeded. -/
+def defeatsAsk? (hints : List Hint) (qa qb : Hint → Formula α → Option Bool)
+    (b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
+  let checks := defeatChecks hints qa qb b s t
+  if checks.any (· == some true) then some true
+  else if checks.all (· == some false) then some false
+  else none
+
+/-- The questions asked of a position given as clauses, `ca`: whether it can
+hold with a formula, from a hint. -/
+def askWith (index : α → ℕ) (ca : Option (List (Clause α))) : Hint → Formula α → Option Bool :=
+  fun h φ => satisfiableWith? index h ca φ
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, from hints, given
 the clauses of what each holds: `some true` if any way succeeds, `some false` if
@@ -906,10 +929,7 @@ once. A table converts each party's position once, not once for every cell it
 appears in (`defeats_iff_of_prepared`). -/
 def defeatsWith? (index : α → ℕ) (hints : List Hint) (ca cb : Option (List (Clause α)))
     (b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
-  let checks := defeatChecks index hints ca cb b s t
-  if checks.any (· == some true) then some true
-  else if checks.all (· == some false) then some false
-  else none
+  defeatsAsk? hints (askWith index ca) (askWith index cb) b s t
 
 /-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, from hints, each
 position converted to clauses here. -/
@@ -929,9 +949,29 @@ theorem map_not_eq_some {o : Option Bool} {v : Bool} :
   | none => simp
   | some x => cases x <;> cases v <;> simp
 
-theorem undermines?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α} {φ : Formula α}
+omit [HasPostulates α] in
+/-- **The questions `q` answer truly for `Γ`**: a `some true` is a model of `Γ`
+with the formula asked about, and a `some false`, from a hint that is a search
+or read through an `index` that tells atoms apart, is a proof that there is
+none. -/
+def AskSound (index : α → ℕ) (q : Hint → Formula α → Option Bool) (Γ : List (Formula α)) :
+    Prop :=
+  (∀ h φ, q h φ = some true → Satisfiable (Γ ++ [φ])) ∧
+    ∀ h φ, (Function.Injective index ∨ h = .search) → q h φ = some false →
+      ¬ Satisfiable (Γ ++ [φ])
+
+omit [HasPostulates α] in
+/-- The questions asked of a position's clauses answer truly. -/
+theorem askWith_sound (index : α → ℕ) (Γ : List (Formula α)) :
+    AskSound index (askWith index (clausesOf Γ)) Γ :=
+  ⟨fun _ _ e => satisfiable_of_satisfiableWith? e,
+   fun _ _ hidx e => not_satisfiable_of_satisfiableWith? hidx e⟩
+
+omit [DecidableEq α] in
+theorem undermines?_true {index : α → ℕ} {q : Hint → Formula α → Option Bool} {h : Hint}
+    {a b : ArgumentPackage α} {φ : Formula α} (hq : AskSound index q a.held)
     (hidx : Function.Injective index ∨ h = .search)
-    (e : undermines? index h b (clausesOf a.held) a.strength φ = some true) :
+    (e : undermines? q h b a.strength φ = some true) :
     Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength := by
   unfold undermines? at e
   cases hc : rankFirst φ h <;> simp only [hc, Bool.false_eq_true, if_true, if_false] at e
@@ -941,35 +981,37 @@ theorem undermines?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage 
       · simp at e
       · rename_i hno
         exact ⟨entails_neg_iff.mpr
-          (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)),
+          (hq.2 _ _ hidx (map_not_eq_some.mp e)),
           hno⟩
   · split at e
     · simp at e
     · rename_i hno
-      exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)),
-        hno⟩
+      exact ⟨entails_neg_iff.mpr (hq.2 _ _ hidx (map_not_eq_some.mp e)), hno⟩
 
-theorem undermines?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α} {φ : Formula α}
-    (e : undermines? index h b (clausesOf a.held) a.strength φ = some false) :
+omit [DecidableEq α] in
+theorem undermines?_false {index : α → ℕ} {q : Hint → Formula α → Option Bool} {h : Hint}
+    {a b : ArgumentPackage α} {φ : Formula α} (hq : AskSound index q a.held)
+    (e : undermines? q h b a.strength φ = some false) :
     ¬ (Entails a.held (∼φ) ∧ ¬ Outranks b φ a.strength) := by
   unfold undermines? at e
   rintro ⟨hent, hno⟩
   cases hc : rankFirst φ h <;> simp only [hc, Bool.false_eq_true, if_true, if_false] at e
   · split at e
     · rename_i hr
-      exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp hr))
+      exact entails_neg_iff.mp hent (hq.1 _ _ (map_not_eq_some.mp hr))
     · split at e
       · exact hno (by assumption)
-      · exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
+      · exact entails_neg_iff.mp hent (hq.1 _ _ (map_not_eq_some.mp e))
   · split at e
     · exact hno (by assumption)
-    · exact entails_neg_iff.mp hent (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
+    · exact entails_neg_iff.mp hent (hq.1 _ _ (map_not_eq_some.mp e))
 
-theorem stepRebuts?_true {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPackage α}
-    {ψ : Formula α} (hidb : Function.Injective index ∨ hb = .search)
+omit [DecidableEq α] in
+theorem stepRebuts?_true {index : α → ℕ} {qa qb : Hint → Formula α → Option Bool}
+    {hb ha : Hint} {a b : ArgumentPackage α} {ψ : Formula α} (hqa : AskSound index qa a.held)
+    (hqb : AskSound index qb b.held) (hidb : Function.Injective index ∨ hb = .search)
     (hida : Function.Injective index ∨ ha = .search)
-    (e : stepRebuts? index hb ha (clausesOf a.held) (clausesOf b.held) a.strength b.strength ψ =
-      some true) :
+    (e : stepRebuts? qa qb hb ha a.strength b.strength ψ = some true) :
     Entails b.held ψ ∧ Entails a.held (∼ψ) ∧ ¬ a.strength < b.strength := by
   dsimp only [stepRebuts?] at e
   split at e
@@ -977,14 +1019,15 @@ theorem stepRebuts?_true {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPack
   · rename_i hno
     split at e
     · rename_i hc
-      exact ⟨entails_iff_not_satisfiable.mpr (not_satisfiable_of_satisfiableWith? hidb hc.1),
-        entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hida hc.2), hno⟩
+      exact ⟨entails_iff_not_satisfiable.mpr (hqb.2 _ _ hidb hc.1),
+        entails_neg_iff.mpr (hqa.2 _ _ hida hc.2), hno⟩
     · split at e <;> simp at e
 
-theorem stepRebuts?_false {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPackage α}
-    {ψ : Formula α}
-    (e : stepRebuts? index hb ha (clausesOf a.held) (clausesOf b.held) a.strength b.strength ψ =
-      some false) :
+omit [DecidableEq α] in
+theorem stepRebuts?_false {index : α → ℕ} {qa qb : Hint → Formula α → Option Bool}
+    {hb ha : Hint} {a b : ArgumentPackage α} {ψ : Formula α} (hqa : AskSound index qa a.held)
+    (hqb : AskSound index qb b.held)
+    (e : stepRebuts? qa qb hb ha a.strength b.strength ψ = some false) :
     ¬ (Entails b.held ψ ∧ Entails a.held (∼ψ) ∧ ¬ a.strength < b.strength) := by
   dsimp only [stepRebuts?] at e
   rintro ⟨hb', ha', hno⟩
@@ -995,29 +1038,32 @@ theorem stepRebuts?_false {index : α → ℕ} {hb ha : Hint} {a b : ArgumentPac
     · split at e
       · rename_i hc
         rcases hc with hc | hc
-        · exact entails_iff_not_satisfiable.mp hb' (satisfiable_of_satisfiableWith? hc)
-        · exact entails_neg_iff.mp ha' (satisfiable_of_satisfiableWith? hc)
+        · exact entails_iff_not_satisfiable.mp hb' (hqb.1 _ _ hc)
+        · exact entails_neg_iff.mp ha' (hqa.1 _ _ hc)
       · simp at e
 
-theorem rebuts?_true {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α}
+omit [DecidableEq α] in
+theorem rebuts?_true {index : α → ℕ} {q : Hint → Formula α → Option Bool} {h : Hint}
+    {a b : ArgumentPackage α} (hq : AskSound index q a.held)
     (hidx : Function.Injective index ∨ h = .search)
-    (e : rebuts? index h b (clausesOf a.held) a.strength b.strength = some true) :
+    (e : rebuts? q h b a.strength b.strength = some true) :
     Rebuts a b ∧ ¬ a.strength < b.strength := by
   unfold rebuts? at e
   split at e
   · simp at e
   · rename_i hno
-    exact ⟨entails_neg_iff.mpr (not_satisfiable_of_satisfiableWith? hidx (map_not_eq_some.mp e)),
-      hno⟩
+    exact ⟨entails_neg_iff.mpr (hq.2 _ _ hidx (map_not_eq_some.mp e)), hno⟩
 
-theorem rebuts?_false {index : α → ℕ} {h : Hint} {a b : ArgumentPackage α}
-    (e : rebuts? index h b (clausesOf a.held) a.strength b.strength = some false) :
+omit [DecidableEq α] in
+theorem rebuts?_false {index : α → ℕ} {q : Hint → Formula α → Option Bool} {h : Hint}
+    {a b : ArgumentPackage α} (hq : AskSound index q a.held)
+    (e : rebuts? q h b a.strength b.strength = some false) :
     ¬ (Rebuts a b ∧ ¬ a.strength < b.strength) := by
   unfold rebuts? at e
   rintro ⟨hr, hno⟩
   split at e
   · exact hno (by assumption)
-  · exact entails_neg_iff.mp hr (satisfiable_of_satisfiableWith? (map_not_eq_some.mp e))
+  · exact entails_neg_iff.mp hr (hq.1 _ _ (map_not_eq_some.mp e))
 
 omit [DecidableEq α] [HasPostulates α] in
 theorem mem_of_mem_zipIdx {β : Type} {l : List β} {x : β} {i : ℕ} (h : (x, i) ∈ l.zipIdx) :
@@ -1030,14 +1076,17 @@ theorem exists_mem_zipIdx {β : Type} {l : List β} {x : β} (h : x ∈ l) :
   obtain ⟨i, hi⟩ := List.mem_iff_getElem?.mp h
   exact ⟨i, List.mem_zipIdx_iff_getElem?.mpr hi⟩
 
-/-- A defeat, decided from hints. -/
-theorem defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint} {a b : ArgumentPackage α}
-    {s t : ℕ} (hidx : Function.Injective index ∨ hints = []) (hs : a.strength = s)
-    (ht : b.strength = t) (h : defeatsBy? index hints a b s t = some true) : Defeats a b := by
+omit [DecidableEq α] in
+/-- A defeat, decided from hints, every question asked through oracles that
+answer truly. -/
+theorem defeats_of_defeatsAsk? {index : α → ℕ} {hints : List Hint}
+    {qa qb : Hint → Formula α → Option Bool} {a b : ArgumentPackage α} {s t : ℕ}
+    (hqa : AskSound index qa a.held) (hqb : AskSound index qb b.held)
+    (hidx : Function.Injective index ∨ hints = []) (hs : a.strength = s)
+    (ht : b.strength = t) (h : defeatsAsk? hints qa qb b s t = some true) : Defeats a b := by
   subst hs ht
-  dsimp only [defeatsBy?, defeatsWith?] at h
-  generalize hc : defeatChecks index hints (clausesOf a.held) (clausesOf b.held) b a.strength
-    b.strength = checks at h
+  dsimp only [defeatsAsk?] at h
+  generalize hc : defeatChecks hints qa qb b a.strength b.strength = checks at h
   split at h
   · rename_i hany
     obtain ⟨x, hx, hxt⟩ := List.any_eq_true.mp hany
@@ -1047,25 +1096,28 @@ theorem defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint} {a b : Ar
     dsimp only [defeatChecks] at hx
     rcases List.mem_append.mp hx with hx | hx
     · rcases List.mem_cons.mp hx with hr | hu
-      · exact .inr (.inl (rebuts?_true (hintAt_search hidx _) hr.symm))
+      · exact .inr (.inl (rebuts?_true hqa (hintAt_search hidx _) hr.symm))
       · obtain ⟨⟨φ, i⟩, hφ, he⟩ := List.mem_map.mp hu
-        obtain ⟨hent, hno⟩ := undermines?_true (hintAt_search hidx _) he
+        obtain ⟨hent, hno⟩ := undermines?_true hqa (hintAt_search hidx _) he
         exact .inl ⟨φ, ⟨mem_of_mem_zipIdx hφ, hent⟩, hno⟩
     · obtain ⟨⟨⟨p, ψ⟩, i⟩, hq, he⟩ := List.mem_map.mp hx
       obtain ⟨hb, ha, hno⟩ :=
-        stepRebuts?_true (hintAt_search hidx _) (hintAt_search hidx _) he
+        stepRebuts?_true hqa hqb (hintAt_search hidx _) (hintAt_search hidx _) he
       obtain ⟨hmem, hne⟩ := mem_stepsOf.mp (mem_of_mem_zipIdx hq)
       exact .inr (.inr ⟨p, ψ, ⟨hmem, hne, hb, ha⟩, hno⟩)
   · split at h <;> simp at h
 
-/-- A non-defeat, decided from hints. -/
-theorem not_defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint}
-    {a b : ArgumentPackage α} {s t : ℕ} (hs : a.strength = s) (ht : b.strength = t)
-    (h : defeatsBy? index hints a b s t = some false) : ¬ Defeats a b := by
+omit [DecidableEq α] in
+/-- A non-defeat, decided from hints, every question asked through oracles that
+answer truly. -/
+theorem not_defeats_of_defeatsAsk? {index : α → ℕ} {hints : List Hint}
+    {qa qb : Hint → Formula α → Option Bool} {a b : ArgumentPackage α} {s t : ℕ}
+    (hqa : AskSound index qa a.held) (hqb : AskSound index qb b.held)
+    (hs : a.strength = s) (ht : b.strength = t)
+    (h : defeatsAsk? hints qa qb b s t = some false) : ¬ Defeats a b := by
   subst hs ht
-  dsimp only [defeatsBy?, defeatsWith?] at h
-  generalize hc : defeatChecks index hints (clausesOf a.held) (clausesOf b.held) b a.strength
-    b.strength = checks at h
+  dsimp only [defeatsAsk?] at h
+  generalize hc : defeatChecks hints qa qb b a.strength b.strength = checks at h
   split at h
   · simp at h
   · split at h
@@ -1076,13 +1128,26 @@ theorem not_defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint}
       rintro (⟨φ, ⟨hφ, hent⟩, hno⟩ | hr | ⟨p, ψ, ⟨hmem, hne, hb, ha⟩, hno⟩)
       · obtain ⟨i, hi⟩ := exists_mem_zipIdx hφ
         have := hall _ (List.mem_append_left _ (List.mem_cons_of_mem _ (List.mem_map_of_mem hi)))
-        exact undermines?_false (by simpa using this) ⟨hent, hno⟩
+        exact undermines?_false hqa (by simpa using this) ⟨hent, hno⟩
       · have := hall _ (List.mem_append_left _ List.mem_cons_self)
-        exact rebuts?_false (by simpa using this) hr
+        exact rebuts?_false hqa (by simpa using this) hr
       · obtain ⟨i, hi⟩ := exists_mem_zipIdx (mem_stepsOf.mpr ⟨hmem, hne⟩)
         have := hall _ (List.mem_append_right _ (List.mem_map_of_mem hi))
-        exact stepRebuts?_false (by simpa using this) ⟨hb, ha, hno⟩
+        exact stepRebuts?_false hqa hqb (by simpa using this) ⟨hb, ha, hno⟩
     · simp at h
+
+/-- A defeat, decided from hints. -/
+theorem defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint} {a b : ArgumentPackage α}
+    {s t : ℕ} (hidx : Function.Injective index ∨ hints = []) (hs : a.strength = s)
+    (ht : b.strength = t) (h : defeatsBy? index hints a b s t = some true) : Defeats a b :=
+  defeats_of_defeatsAsk? (askWith_sound index _) (askWith_sound index _) hidx hs ht h
+
+/-- A non-defeat, decided from hints. -/
+theorem not_defeats_of_defeatsBy? {index : α → ℕ} {hints : List Hint}
+    {a b : ArgumentPackage α} {s t : ℕ} (hs : a.strength = s) (ht : b.strength = t)
+    (h : defeatsBy? index hints a b s t = some false) : ¬ Defeats a b :=
+  not_defeats_of_defeatsAsk? (index := index) (askWith_sound index _) (askWith_sound index _)
+    hs ht h
 
 /-- A defeat, decided. -/
 theorem defeats_of_defeats? {a b : ArgumentPackage α} {s t : ℕ}
@@ -1106,6 +1171,293 @@ theorem defeats_iff_of_defeats? {a b : ArgumentPackage α} {s t : ℕ} {P : Prop
     exact iff_of_true (defeats_of_defeats? hs ht h) hP
   · simp only [hP, decide_false] at h
     exact iff_of_false (not_defeats_of_defeats? hs ht h) hP
+
+/-! ### Asking part of a position
+
+A position falls into parts that share no claim, its *components*: union-find
+over the claims each clause mentions finds them. A question shares claims with
+some of them, and whether the position can hold with the question turns only on
+those (`askPruned`). The components are found at elaboration time and checked
+once for each party (`Parts.valid`): that each clause's claims lie in its
+component's mask, and that no two masks meet. A question then needs only one
+check of its own, that its claims miss every component it leaves aside. When the
+part asked of can hold with the question, the whole position can: it can hold on
+its own (each node of a dispute is consistent), and models of parts that share
+no claim combine (`askPruned_sound`). -/
+
+/-- The claims a clause mentions, as a bitmask over `index`. -/
+def clauseMask (index : α → ℕ) (c : Clause α) : ℕ :=
+  (c.body ++ c.heads).foldl (fun m a => m ||| (1 <<< index a)) 0
+
+/-- The claims a list of clauses mentions, as a bitmask over `index`. -/
+def clausesMask (index : α → ℕ) (cs : List (Clause α)) : ℕ :=
+  cs.foldl (fun m c => m ||| clauseMask index c) 0
+
+/-- A position's components: the component of each clause, in order, and each
+component's claims as a bitmask. -/
+structure Parts where
+  /-- The component of each clause. -/
+  comp : List ℕ
+  /-- The claims of each component. -/
+  masks : List ℕ
+  deriving Repr, Inhabited
+
+/-- The clauses of the components `sel` selects. -/
+def keptBy (sel : ℕ) (cs : List (Clause α)) (comp : List ℕ) : List (Clause α) :=
+  (cs.zip comp).filterMap fun (c, k) => if sel.testBit k then some c else none
+
+/-- The claims of the components `sel` leaves aside. -/
+def restMask (sel : ℕ) (masks : List ℕ) : ℕ :=
+  masks.zipIdx.foldl (fun m (x, k) => if sel.testBit k then m else m ||| x) 0
+
+/-- **Whether `p` is a partition of the clauses `cs` into components**: every
+clause has one, its claims lie in that component's mask, and no two masks meet.
+The kernel checks it once for each party. -/
+def Parts.valid (index : α → ℕ) (cs : List (Clause α)) (p : Parts) : Bool :=
+  p.comp.length == cs.length &&
+    (cs.zip p.comp).all (fun (c, k) =>
+      clauseMask index c ||| p.masks.getD k 0 == p.masks.getD k 0) &&
+    p.masks.zipIdx.all fun (x, k) => p.masks.zipIdx.all fun (y, j) => k == j || x &&& y == 0
+
+/-- **The questions asked of a position by its components**: a `prune` hint asks
+only the components it selects, once the question is checked to share no claim
+with the rest; any other hint asks the whole position. -/
+def askPruned (index : α → ℕ) (cs : List (Clause α)) (p : Parts) :
+    Hint → Formula α → Option Bool
+  | .prune sel inner, φ => (toClauses φ).bind fun d =>
+    if clausesMask index d &&& restMask sel p.masks == 0 then
+      clausesSatisfiableBy? index (keptBy sel cs p.comp ++ d) inner
+    else none
+  | h, φ => satisfiableWith? index h (some cs) φ
+
+omit [DecidableEq α] in
+theorem testBit_foldl_or {β : Type} (f : β → ℕ) (l : List β) (m₀ i : ℕ) :
+    (l.foldl (fun m x => m ||| f x) m₀).testBit i = true ↔
+      m₀.testBit i = true ∨ ∃ x ∈ l, (f x).testBit i = true := by
+  induction l generalizing m₀ with
+  | nil => simp
+  | cons x l ih =>
+    simp only [List.foldl_cons, ih, Nat.testBit_or, Bool.or_eq_true, List.mem_cons,
+      exists_eq_or_imp]
+    tauto
+
+omit [DecidableEq α] [HasPostulates α] in
+theorem testBit_clauseMask {index : α → ℕ} {c : Clause α} {a : α}
+    (h : a ∈ c.body ∨ a ∈ c.heads) : (clauseMask index c).testBit (index a) = true := by
+  unfold clauseMask
+  rw [testBit_foldl_or (fun a => 1 <<< index a)]
+  exact .inr ⟨a, List.mem_append.mpr h, by simp [Nat.testBit_shiftLeft]⟩
+
+omit [DecidableEq α] [HasPostulates α] in
+theorem testBit_clausesMask {index : α → ℕ} {cs : List (Clause α)} {c : Clause α} {i : ℕ}
+    (hc : c ∈ cs) (h : (clauseMask index c).testBit i = true) :
+    (clausesMask index cs).testBit i = true := by
+  unfold clausesMask
+  rw [testBit_foldl_or (clauseMask index)]
+  exact .inr ⟨c, hc, h⟩
+
+theorem testBit_restMask {sel : ℕ} {masks : List ℕ} {i : ℕ} :
+    (restMask sel masks).testBit i = true ↔
+      ∃ x k, (x, k) ∈ masks.zipIdx ∧ sel.testBit k = false ∧ x.testBit i = true := by
+  unfold restMask
+  have key : ∀ (l : List (ℕ × ℕ)) (m₀ : ℕ),
+      (l.foldl (fun m (p : ℕ × ℕ) => if sel.testBit p.2 then m else m ||| p.1) m₀).testBit i =
+        true ↔ m₀.testBit i = true ∨
+          ∃ x k, (x, k) ∈ l ∧ sel.testBit k = false ∧ x.testBit i = true := by
+    intro l
+    induction l with
+    | nil => simp
+    | cons p l ih =>
+      intro m₀
+      obtain ⟨x, k⟩ := p
+      simp only [List.foldl_cons]
+      rw [ih]
+      by_cases hk : sel.testBit k = true
+      · simp only [hk, if_true, List.mem_cons, Prod.mk.injEq]
+        constructor
+        · rintro (h | ⟨y, j, hy, hj, hb⟩)
+          · exact .inl h
+          · exact .inr ⟨y, j, .inr hy, hj, hb⟩
+        · rintro (h | ⟨y, j, (⟨rfl, rfl⟩ | hy), hj, hb⟩)
+          · exact .inl h
+          · simp [hk] at hj
+          · exact .inr ⟨y, j, hy, hj, hb⟩
+      · simp only [Bool.not_eq_true] at hk
+        simp only [hk, Bool.false_eq_true, if_false, Nat.testBit_or, Bool.or_eq_true,
+          List.mem_cons, Prod.mk.injEq]
+        constructor
+        · rintro ((h | h) | ⟨y, j, hy, hj, hb⟩)
+          · exact .inl h
+          · exact .inr ⟨x, k, .inl ⟨rfl, rfl⟩, hk, h⟩
+          · exact .inr ⟨y, j, .inr hy, hj, hb⟩
+        · rintro (h | ⟨y, j, (⟨rfl, rfl⟩ | hy), hj, hb⟩)
+          · exact .inl (.inl h)
+          · exact .inl (.inr hb)
+          · exact .inr ⟨y, j, hy, hj, hb⟩
+  rw [key]
+  simp
+
+omit [DecidableEq α] [HasPostulates α] in
+theorem mem_keptBy {sel : ℕ} {cs : List (Clause α)} {comp : List ℕ} {c : Clause α} :
+    c ∈ keptBy sel cs comp ↔ ∃ k, (c, k) ∈ cs.zip comp ∧ sel.testBit k = true := by
+  simp only [keptBy, List.mem_filterMap]
+  constructor
+  · rintro ⟨⟨c', k⟩, hz, he⟩
+    split at he
+    · cases he; exact ⟨k, hz, by assumption⟩
+    · simp at he
+  · rintro ⟨k, hz, hk⟩
+    exact ⟨(c, k), hz, by simp [hk]⟩
+
+omit [DecidableEq α] in
+theorem exists_mem_zip {β γ : Type} {l : List β} {m : List γ} {x : β} (hlen : m.length = l.length)
+    (hx : x ∈ l) : ∃ y, (x, y) ∈ l.zip m := by
+  induction l generalizing m with
+  | nil => simp at hx
+  | cons a l ih =>
+    cases m with
+    | nil => simp at hlen
+    | cons b m =>
+      simp only [List.length_cons, Nat.add_right_cancel_iff] at hlen
+      rcases List.mem_cons.mp hx with rfl | hx
+      · exact ⟨b, by simp⟩
+      · obtain ⟨y, hy⟩ := ih hlen hx
+        exact ⟨y, by simp [hy]⟩
+
+theorem getD_testBit_mem {l : List ℕ} {k i : ℕ} (h : (l.getD k 0).testBit i = true) :
+    (l.getD k 0, k) ∈ l.zipIdx := by
+  by_cases hk : k < l.length
+  · exact List.mem_zipIdx_iff_getElem?.mpr (by simp [List.getD_eq_getElem?_getD, hk])
+  · rw [List.getD_eq_getElem?_getD, List.getElem?_eq_none (by omega)] at h
+    simp at h
+
+omit [DecidableEq α] [HasPostulates α] in
+theorem Clause.holds_congr {c : Clause α} {u w : Valuation α}
+    (h : ∀ a, a ∈ c.body ∨ a ∈ c.heads → (u a ↔ w a)) : c.Holds u ↔ c.Holds w := by
+  unfold Clause.Holds
+  constructor
+  · intro hu hb
+    obtain ⟨x, hx, hux⟩ := hu fun a ha => (h a (.inl ha)).mpr (hb a ha)
+    exact ⟨x, hx, (h x (.inr hx)).mp hux⟩
+  · intro hw hb
+    obtain ⟨x, hx, hwx⟩ := hw fun a ha => (h a (.inl ha)).mp (hb a ha)
+    exact ⟨x, hx, (h x (.inr hx)).mpr hwx⟩
+
+omit [HasPostulates α] in
+/-- **Asking part of a position answers truly**, for a partition the kernel has
+checked and a position that can hold on its own. -/
+theorem askPruned_sound {index : α → ℕ} {Γ : List (Formula α)} {cs : List (Clause α)}
+    {p : Parts} (hcs : clausesOf Γ = some cs) (hv : p.valid index cs = true)
+    (hΓ : Satisfiable Γ) : AskSound index (askPruned index cs p) Γ := by
+  simp only [Parts.valid, Bool.and_eq_true, beq_iff_eq, List.all_eq_true, Bool.or_eq_true] at hv
+  obtain ⟨⟨hlen, hsub⟩, hdisj⟩ := hv
+  refine ⟨fun h φ e => ?_, fun h φ hidx e => ?_⟩
+  · cases h with
+    | prune sel inner =>
+      simp only [askPruned, Option.bind_eq_some_iff] at e
+      obtain ⟨d, hd, e⟩ := e
+      split at e
+      · rename_i hmiss
+        obtain ⟨w, hw⟩ := satisfiable_of_clausesSatisfiableBy? e
+        obtain ⟨v, hvΓ⟩ := satisfiable_iff.mp hΓ
+        have hvcs := (clausesOf_sound hcs).mp hvΓ
+        let R := restMask sel p.masks
+        let u : Valuation α := fun a => if R.testBit (index a) = true then v a else w a
+        -- the claims of a component a question keeps are not in the rest
+        have kept_off : ∀ k i, sel.testBit k = true → (p.masks.getD k 0).testBit i = true →
+            R.testBit i = false := by
+          intro k i hk hb
+          by_contra hR
+          obtain ⟨y, j, hy, hj, hyb⟩ := testBit_restMask.mp (by simpa using hR)
+          have hx : (p.masks.getD k 0, k) ∈ p.masks.zipIdx := getD_testBit_mem hb
+          have hne : k ≠ j := by rintro rfl; simp [hk] at hj
+          rcases hdisj _ hx _ hy with h | h
+          · exact hne h
+          · have := congrArg (·.testBit i) h
+            simp only [Nat.testBit_and, hb, hyb, Nat.zero_testBit, Bool.and_self,
+              Bool.true_eq_false] at this
+        have aside_on : ∀ k i, sel.testBit k = false → (p.masks.getD k 0).testBit i = true →
+            R.testBit i = true := by
+          intro k i hk hb
+          exact testBit_restMask.mpr ⟨_, k, getD_testBit_mem hb, hk, hb⟩
+        have in_mask : ∀ c k a, (c, k) ∈ cs.zip p.comp → (a ∈ c.body ∨ a ∈ c.heads) →
+            (p.masks.getD k 0).testBit (index a) = true := by
+          intro c k a hz ha
+          have h := congrArg (·.testBit (index a)) (hsub _ hz)
+          simp only [Nat.testBit_or, testBit_clauseMask ha, Bool.true_or] at h
+          exact h.symm
+        have hucs : ∀ c ∈ cs, c.Holds u := by
+          intro c hc
+          obtain ⟨k, hz⟩ := exists_mem_zip hlen hc
+          by_cases hk : sel.testBit k = true
+          · have hwc := hw c (List.mem_append_left _ (mem_keptBy.mpr ⟨k, hz, hk⟩))
+            refine (Clause.holds_congr fun a ha => ?_).mpr hwc
+            simp [u, kept_off k _ hk (in_mask c k a hz ha)]
+          · simp only [Bool.not_eq_true] at hk
+            refine (Clause.holds_congr fun a ha => ?_).mpr (hvcs c hc)
+            simp [u, aside_on k _ hk (in_mask c k a hz ha)]
+        have hud : ∀ c ∈ d, c.Holds u := by
+          intro c hc
+          refine (Clause.holds_congr fun a ha => ?_).mpr (hw c (List.mem_append_right _ hc))
+          have hd' := testBit_clausesMask hc (testBit_clauseMask (index := index) ha)
+          have hoff : R.testBit (index a) = false := by
+            have := congrArg (·.testBit (index a)) (beq_iff_eq.mp hmiss)
+            simp only [Nat.testBit_and, hd', Bool.true_and, Nat.zero_testBit] at this
+            exact this
+          simp [u, hoff]
+        refine satisfiable_iff.mpr ⟨u, fun ψ hψ => ?_⟩
+        rcases List.mem_append.mp hψ with hψ | hψ
+        · exact (clausesOf_sound hcs).mpr hucs ψ hψ
+        · rw [List.mem_singleton.mp hψ]
+          exact (toClauses_sound hd).mpr hud
+      · simp at e
+    | search | model _ | refute _ _ =>
+      simp only [askPruned] at e; rw [← hcs] at e; exact satisfiable_of_satisfiableWith? e
+  · cases h with
+    | prune sel inner =>
+      have hinj : Function.Injective index := hidx.resolve_right (by simp)
+      simp only [askPruned, Option.bind_eq_some_iff] at e
+      obtain ⟨d, hd, e⟩ := e
+      split at e
+      · intro hs
+        obtain ⟨w, hw⟩ := satisfiable_iff.mp hs
+        refine not_satisfiable_of_clausesSatisfiableBy? (.inl hinj) e ⟨w, fun c hc => ?_⟩
+        rcases List.mem_append.mp hc with hc | hc
+        · obtain ⟨k, hz, -⟩ := mem_keptBy.mp hc
+          exact (clausesOf_sound hcs).mp (fun ψ hψ => hw ψ (List.mem_append_left _ hψ)) c
+            (List.of_mem_zip hz).1
+        · exact (toClauses_sound hd).mp (hw φ (by simp)) c hc
+      · simp at e
+    | search | model _ | refute _ _ =>
+      simp only [askPruned] at e; rw [← hcs] at e
+      exact not_satisfiable_of_satisfiableWith? hidx e
+
+/-- Whether `a`, of strength `s`, defeats `b`, of strength `t`, from hints, each
+question asked of the components of a position it touches. -/
+def defeatsPruned? (index : α → ℕ) (hints : List Hint) (ca cb : List (Clause α))
+    (pa pb : Parts) (b : ArgumentPackage α) (s t : ℕ) : Option Bool :=
+  defeatsAsk? hints (askPruned index ca pa) (askPruned index cb pb) b s t
+
+/-- **A cell of a defeat table, each question asked of the components it
+touches.** Each party's clauses, their partition into components, and the
+position's consistency are proved once for each party (`prepare_parts`, and the
+dispute's `consistent`). -/
+theorem defeats_iff_of_pruned {index : α → ℕ} {a b : ArgumentPackage α} {s t : ℕ} {P : Prop}
+    [Decidable P] {ca cb : List (Clause α)} {pa pb : Parts} (hinj : Function.Injective index)
+    (hs : a.strength = s) (ht : b.strength = t)
+    (hca : clausesOf a.held = some ca) (hcb : clausesOf b.held = some cb)
+    (hva : pa.valid index ca = true) (hvb : pb.valid index cb = true)
+    (hsa : Satisfiable a.held) (hsb : Satisfiable b.held)
+    (h : ∃ hints : List Hint, defeatsPruned? index hints ca cb pa pb b s t = some (decide P)) :
+    Defeats a b ↔ P := by
+  obtain ⟨hints, h⟩ := h
+  have hqa := askPruned_sound hca hva hsa
+  have hqb := askPruned_sound hcb hvb hsb
+  by_cases hP : P
+  · simp only [hP, decide_true] at h
+    exact iff_of_true (defeats_of_defeatsAsk? hqa hqb (.inl hinj) hs ht h) hP
+  · simp only [hP, decide_false] at h
+    exact iff_of_false (not_defeats_of_defeatsAsk? hqa hqb hs ht h) hP
 
 /-! ### Certified defeats
 
