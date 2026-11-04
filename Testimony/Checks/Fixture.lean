@@ -6,6 +6,7 @@ import Testimony.Logic.Horn
 import Testimony.Logic.Solver
 import Testimony.Semantics.Meaning
 import Testimony.Logic.Certificate
+import Testimony.Logic.Compose
 
 /-!
 # Testimony.Checks.Fixture — the library's own case, for its checks
@@ -233,3 +234,39 @@ def finite : Solver.Finite dispute.defeats where
   spec i j := by rw [dispute_defeats]; simp
 
 end Testimony.Checks.Fixture
+
+/-! ### Two meetings, heard as one
+
+The fixture's dispute beside itself: two meetings, each with its minutes and
+its clock, their claims kept apart. It exercises `Dispute.sum` and outside the
+fixture's namespace, so the checks that read the fixture do not find it. -/
+
+namespace Testimony.Checks.TwoMeetings
+
+open Testimony.Logic Testimony.Checks.Fixture
+
+/-- Two meetings' disputes, heard as one. -/
+def dispute : Dispute (Claim ⊕ Claim) (Party ⊕ Party) :=
+  Fixture.dispute.sum Fixture.dispute (node .minutes).cite (node .minutes).cite
+    (Fixture.dispute.postulates_satisfiable .minutes)
+    (Fixture.dispute.postulates_satisfiable .minutes)
+
+/-- Its table, from the fixture's own twice: no cell is decided again. -/
+def finite : Solver.Finite dispute.defeats := Dispute.sumFinite Fixture.finite Fixture.finite
+
+/-- Each meeting's minutes defeat that meeting's clock, and nothing defeats
+across the two meetings. -/
+theorem dispute_defeats (x y : Party ⊕ Party) :
+    dispute.defeats x y ↔ Sum.LiftRel defeats defeats x y := by
+  rw [dispute, Dispute.sum_defeats]
+  exact ⟨Sum.LiftRel.mono (fun i j => (Fixture.dispute_defeats i j).mp)
+      (fun i j => (Fixture.dispute_defeats i j).mp),
+    Sum.LiftRel.mono (fun i j => (Fixture.dispute_defeats i j).mpr)
+      (fun i j => (Fixture.dispute_defeats i j).mpr)⟩
+
+/-- What the two meetings force: both minutes, and neither clock. -/
+theorem grounded_eq :
+    Framework.grounded dispute.defeats = Solver.toSet [.inl .minutes, .inr .minutes] :=
+  Solver.grounded_eq (F := finite) _ (by decide +kernel)
+
+end Testimony.Checks.TwoMeetings

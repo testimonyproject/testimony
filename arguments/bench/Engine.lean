@@ -33,6 +33,9 @@ The benchmarks, from the smallest unit up:
   arguments' own tables are proved; and a row of a hearing, where every party's
   inferences are re-rated under a standard, with the parties' re-rated strengths;
 - **a verdict**: the solver's checked witness for each of the two disputes;
+- **two disputes heard as one**: sola fide and Mark 7, 289 cells, and 60 of
+  them searched one by one, and the same table composed from the two arguments' own, with its
+  verdict;
 - **the joins**: the exclusions among sola fide's 111 claims, read for what
   their words mean;
 - **an assessment** and **a rating**: Miller's dissent, searched and
@@ -362,6 +365,77 @@ example : Independent canonUnderParity.premises (p .scriptureIsSoleInfallibleRul
   leaves_open parityEstablishesNothingReading krugerParityReading [solaScripturaDefs]
 
 end TestimonyArguments.SolaScriptura
+
+/-! ### Two disputes heard as one
+
+Sola fide's twelve parties and Mark 7's five, over both arguments' claims: 289
+cells, proved once from the two arguments' own tables (`Dispute.sum_defeats`).
+The 60 cells in which a party of sola fide meets one of Mark 7 are also decided
+one by one, in the kernel, by search, for comparison. A certificate is not an
+option here: it reads each claim as a bit at its constructor's index, and a sum
+of two claim types has only two. -/
+
+namespace TestimonyArguments.BothSolas
+open Testimony Testimony.Logic
+
+abbrev Party := SolaFide.Party ⊕ SolaScriptura.Mark7Party
+
+abbrev bothDispute : Dispute (SolaFide.Claim ⊕ SolaScriptura.Claim) Party :=
+  SolaFide.solaFideDispute.sum SolaScriptura.mark7Dispute
+    (SolaFide.solaFideDispute.node .pauline).cite
+    (SolaScriptura.mark7Dispute.node .principle).cite
+    (SolaFide.solaFideDispute.postulates_satisfiable .pauline)
+    (SolaScriptura.mark7Dispute.postulates_satisfiable .principle)
+
+def bothDefeats : Party → Party → Prop
+  | .inl i, .inl j => SolaFide.partyDefeats i j
+  | .inr i, .inr j => SolaScriptura.mark7PartyDefeats i j
+  | _, _ => False
+
+instance : DecidableRel bothDefeats := fun x y => by
+  cases x <;> cases y <;> unfold bothDefeats <;> infer_instance
+
+def bothStrength : Party → ℕ := Sum.elim SolaFide.partyStrength SolaScriptura.mark7PartyStrength
+
+theorem both_strength : ∀ x, (bothDispute.node x).strength = bothStrength x
+  | .inl i => (ArgumentPackage.strength_inl _ _).trans (SolaFide.partyNode_strength i)
+  | .inr j => (ArgumentPackage.strength_inr _ _).trans (SolaScriptura.mark7PartyNode_strength j)
+
+#bench (runs := 1) "cross cells, searched: sola fide against Mark 7, 60 cells" in
+example : ∀ i j, ¬ bothDispute.defeats (.inl i) (.inr j) := by
+  intro i j
+  refine Horn.not_defeats_of_defeats? (both_strength (.inl i)) (both_strength (.inr j)) ?_
+  cases i <;> cases j <;> decide +kernel
+
+#bench "cross cells, composed: sola fide against Mark 7, 60 cells" in
+example : ∀ i j, ¬ bothDispute.defeats (.inl i) (.inr j) := fun i j h =>
+  Sum.not_liftRel_inl_inr ((Dispute.sum_defeats _ _ _ _ _ _ _ _).mp h)
+
+#bench "table, composed: sola fide and Mark 7 as one, 289 cells" in
+example : ∀ x y, bothDispute.defeats x y ↔ bothDefeats x y := by
+  intro x y
+  refine (Dispute.sum_defeats _ _ _ _ _ _ x y).trans ?_
+  rcases x with i | i <;> rcases y with j | j
+  · exact Sum.liftRel_inl_inl.trans (SolaFide.solaFideDispute_defeats i j)
+  · exact iff_of_false Sum.not_liftRel_inl_inr id
+  · exact iff_of_false Sum.not_liftRel_inr_inl id
+  · exact Sum.liftRel_inr_inr.trans (SolaScriptura.mark7Dispute_defeats i j)
+
+#bench "verdict, composed: sola fide and Mark 7 as one" in
+example : Verdict bothDispute where
+  finite := Dispute.sumFinite SolaFide.solaFideFinite SolaScriptura.mark7Finite
+  claim := .groundedExactly [[.inl .lexical, .inl .romansOnTheWord, .inr .principle]]
+    [ (.inl .pauline, .inl .trent), (.inl .dominical, .inl .trent)
+    , (.inl .apostolic, .inl .trent), (.inl .trent, .inl .pauline)
+    , (.inl .apocalyptic, .inl .pauline), (.inl .sanders, .inl .critics)
+    , (.inl .critics, .inl .sanders), (.inl .jervell, .inl .apostolic)
+    , (.inl .gospel, .inl .trent), (.inl .trentOnPaulsWord, .inl .lexical)
+    , (.inr .mark7, .inr .trent), (.inr .trent, .inr .mark7)
+    , (.inr .trentAsMensCommandments, .inr .principle)
+    , (.inr .trentAsApostolicWord, .inr .mark7) ]
+  checked := by decide +kernel
+
+end TestimonyArguments.BothSolas
 
 /-! ### The checks over every argument -/
 
