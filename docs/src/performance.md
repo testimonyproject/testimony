@@ -81,6 +81,29 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 9 | Check a named reading in the kernel, as a table, not by `simp` | `satisfied_by` and `leaves_open` | 1.11 s, 8 MiB | 45 ms, 4 MiB | 0.008 | kept |
 | 10 | Convert each party's position to clauses once per table, not once per cell | the certified defeat tables | 1.61 s, 13 MiB | 0.99 s, 11 MiB | 0.008 | kept |
 | 11 | Ask each question of the components of a position it touches | sola fide's defeat table | 5.95 s, 60 MiB | 5.38 s, 36 MiB | 0.008 | kept, for sola fide |
+| 12 | Hear two disputes that share no claim as one, their table proved from the two tables | a dispute joining two arguments | 10.6 s, 86 MiB | 6.4 ms, 0 MiB | 0.008 | kept |
+
+Round 12 adds a construction, so it has no base to ablate against: its
+benchmarks measure the new route against the old one in the same checkout,
+five rounds each, in a process of their own. Sola fide's twelve parties and
+Mark 7's five, heard as one dispute over both arguments' claims, make 289
+cells. Hand-computed in a prototype that gave the two arguments one flat claim
+type, so that certificates could index its claims, those cells took 18.9 s of
+kernel time prepared and 16 s pruned; 120 of them cross from one argument to
+the other, and none of those 120 was a defeat. `Dispute.sum` keeps the two claim
+types apart (`α ⊕ β`), and `Dispute.sum_defeats` proves the whole table once, for
+every pair, from the two tables already proved: within an argument a defeat is
+what it was, and across them there is none (`Testimony.Logic.Compose`). A
+certificate cannot decide a cell of the sum, since it reads a claim as a bit at
+its constructor's index and a sum has two, so the cells were searched for the
+comparison: the 60 in which a party of sola fide meets one of Mark 7 took
+10.6 s and 86 MiB in the kernel, and 6.4 ms composed (p = 0.008). The whole
+table, composed, takes 12.9 ms, and the solver's checked verdict over it 79 ms:
+the grounded extension is Paul's word by its two routes and the principle of
+Mark 7, each argument's own. A dispute between arguments that share a claim, or
+whose meanings a postulate joins, is not covered, and its cells are still
+decided one by one. Against `main`, five interleaved rounds, every benchmark
+already there matched it (every p ≥ 0.06, peak memory within threshold).
 
 Round 11, measured on one side of a `scripts/bench-ab.sh` run against the
 head of round 10, five interleaved rounds: each table benchmarked prepared and
