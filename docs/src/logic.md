@@ -635,6 +635,23 @@ and models of parts that share no claim combine (`Horn.askPruned_sound`). It pay
 where positions are large: sola fide's table uses it, and smaller tables, whose
 questions touch most of each position, are left prepared.
 
+Two arguments that share no claim can be heard as one dispute, and its table is
+proved, not computed (`Testimony.Logic.Compose`). `Dispute.sum` takes both
+arguments' parties, over both arguments' claims kept apart (`α ⊕ β`), with both
+arguments' meaning postulates. `Dispute.sum_defeats` says who defeats whom in
+it, for every pair at once. Within one argument it is who defeated whom before:
+renaming a claim changes nothing a valuation can see, and the other argument's
+postulates speak only of claims these parties never mention. Across the two
+arguments, no one defeats anyone. All a party holds about the other argument's
+claims is that argument's postulates. Every party of that argument holds them
+too, together with each claim it rests on, derives or concludes, so they cannot
+entail the negation of any of those claims. `Dispute.sumFinite` builds the
+combined table from the two tables already proved, and the verdict solver reads
+it as it reads any other: sola fide's 144 cells and Mark 7's 25 are not decided
+again, and the 120 cells across them are not decided at all. Arguments that
+share a claim, or whose meanings a postulate joins, are not covered: they are
+one argument, and their dispute is computed as one.
+
 A single defeat worth naming is one line, from the same computation:
 
 ```lean
