@@ -179,6 +179,8 @@ theorem mark7PartyNode_strength : ∀ i, (mark7PartyNode i).strength = mark7Part
   | .trentAsMensCommandments => tridentineAsMensCommandments_strength
   | .trentAsApostolicWord => tridentineAsApostolicWord_strength
 
+prepare_clauses mark7DisputeClauses for mark7Dispute
+
 /-- **Who defeats whom**, all 25 pairs. Mark 7's principle defeats Trent read as
 commandments of men, and that reading's reply fails against it. Mark 7's case
 and Trent defeat each other, as Trent states it and read either way. Nothing
@@ -189,7 +191,8 @@ by the kernel — the defeats, and the absences of defeat, alike. -/
 theorem mark7Dispute_defeats :
     ∀ i j, mark7Dispute.defeats i j ↔ mark7PartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (mark7PartyNode_strength i) (mark7PartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (mark7PartyNode_strength i) (mark7PartyNode_strength j)
+    (mark7DisputeClauses.spec i) (mark7DisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/

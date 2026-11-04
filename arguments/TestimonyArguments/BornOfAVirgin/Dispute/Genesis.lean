@@ -212,14 +212,16 @@ theorem genesisPartyNode_strength : ∀ i, (genesisPartyNode i).strength = 0
   | .posterity => posterityCase_strength
   | .idiom => idiomCase_strength
 
+prepare_clauses genesisDisputeClauses for genesisDispute
+
 /-- **Who defeats whom**, all nine pairs: Luther and Leupold defeat each other,
 Luther and Lewis defeat each other, and nothing else. Every cell is computed
 from what the parties hold by `Horn.defeats?` and checked by the kernel. -/
 theorem genesisDispute_defeats :
     ∀ i j, genesisDispute.defeats i j ↔ genesisPartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (genesisPartyNode_strength i)
-    (genesisPartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (genesisPartyNode_strength i) (genesisPartyNode_strength j)
+    (genesisDisputeClauses.spec i) (genesisDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/

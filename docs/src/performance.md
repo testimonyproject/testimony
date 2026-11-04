@@ -79,6 +79,45 @@ The slowest modules of the arguments' build: `SolaFide.Ratings` (150 s),
 | 7 | Find exclusions through shared keys, not every pair | the sola fide joins | 45.4 s, 3.43 GiB | 10.6 s, 1.06 GiB | 0.008 | kept |
 | 8 | Certify the support and part-of tables | sola fide's part-of table | 8.01 s, 131 MiB | 5.00 s, 102 MiB | 0.008 | kept |
 | 9 | Check a named reading in the kernel, as a table, not by `simp` | `satisfied_by` and `leaves_open` | 1.11 s, 8 MiB | 45 ms, 4 MiB | 0.008 | kept |
+| 10 | Convert each party's position to clauses once per table, not once per cell | the certified defeat tables | 1.61 s, 13 MiB | 0.99 s, 11 MiB | 0.008 | kept |
+
+Round 10, measured on one side of a `scripts/bench-ab.sh` run against `main`,
+five interleaved rounds, as rounds 3 and 8 were: each defeat table is
+benchmarked certified, as before, and prepared. A certified cell converted both
+parties' positions to clauses, so a party appearing in a row and a column of
+cells was converted once for every cell. `prepare_clauses` converts each
+party's position once, at elaboration time, writes the clauses out, and has the
+kernel check, once for each party, that they are what the conversion gives;
+every cell then reads them (`Horn.defeatsWith?`,
+`Horn.defeats_iff_of_prepared`). The Septuagint's table fell from 1.61 s to
+0.99 s (−39%, p = 0.008), and half of sola fide's from 7.14 s to 5.44 s (−24%,
+p = 0.008); preparing sola fide's twelve parties costs 0.35 s, once. Every
+benchmark shared with `main` matched it. An earlier run, before the hints were
+searched from the clauses rather than the packages, measured −39% and −12%
+(p = 0.016).
+
+Before this, the round's real target was measured and set aside. Pruning each
+question to the components of a position it touches, found by union-find over
+the claims each clause mentions, asked the kernel about a third of the clauses
+(6,671 of 19,800 in half of sola fide's table) but saved only 15% of the time.
+Most of a question's cost is not in the clauses it reads but in how the kernel
+reads them: a model check of Paul's 33 clauses took 7.6 ms, of which the
+library's list functions, compiled through `brecOn`, and each claim's
+constructor index, computed by a case split over the claim type's hundred-odd
+constructors, are most. Written on `List.rec` and over indices, the same check
+took about 3 ms, cold.
+
+That did not carry over to the tables, and is recorded so that nobody tries it
+again. The checker's model check, clause checks and replay were rewritten on
+`List.rec`, each function proved equal to its core counterpart. A lookup written
+that way, `List.rec` over `Nat.rec`, made each refutation's replay exponential
+in the kernel, from 0.13 s to over 150 s as a synthetic position grew from 24 to
+32 formulas; without it, against this round's head, five interleaved rounds,
+neither table moved (the prepared ones −5%, p = 0.15, and +2%, p = 0.84) and
+one certified cell was 21% slower (p = 0.032). Within a cell the kernel shares
+the work the cold measurement repeated, so the list functions are not where a
+table's time goes. The rewrite was dropped, and clauses over indices with it,
+which the same measurement had suggested.
 
 Round 9, `scripts/bench-ab.sh` against `main`, five interleaved rounds. A
 profile of the slowest modules after round 6 put most of their elaboration in

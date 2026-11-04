@@ -168,6 +168,14 @@ example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j 
     (septuagintPartyNode_strength j) ?_
   cases i <;> cases j <;> horn_certify
 
+#bench "table, prepared: Septuagint, 36 cells" in
+example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
+  intro i j
+  refine Horn.defeats_iff_of_prepared (septuagintPartyNode_strength i)
+    (septuagintPartyNode_strength j) (septuagintDisputeClauses.spec i)
+    (septuagintDisputeClauses.spec j) ?_
+  cases i <;> cases j <;> horn_certify
+
 #bench "verdict: Septuagint, grounded in stages" in
 example : Verdict septuagintDispute where
   finite := septuagintFinite
@@ -274,6 +282,15 @@ example : Satisfiable paulineCase.premises := by
 #bench "satisfied_by: Trent grants the subjective genitive" in
 example : Grants tridentineCase (notP .pistisChristouObjective) := by
   satisfied_by trentWithoutDeliveranceReading [Grants, solaFideDefs]
+
+#bench (runs := 1) "table, prepared: sola fide, first half, 72 cells" in
+example (i : Party)
+    (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
+    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
+  refine Horn.defeats_iff_of_prepared (partyNode_strength i) (partyNode_strength j)
+    (solaFideDisputeClauses.spec i) (solaFideDisputeClauses.spec j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 #bench "strengths: James hearing under evidence, 12 parties" in
 example :

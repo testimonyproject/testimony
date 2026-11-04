@@ -371,14 +371,16 @@ theorem promisePartyNode_strength : ∀ i, (promisePartyNode i).strength = 0
   | .syntax => syntaxCase_strength
   | .scene => sceneCase_strength
 
+prepare_clauses promiseDisputeClauses for promiseDispute
+
 /-- **Who defeats whom**, all sixteen pairs: Westermann defeats the fulfilment,
 the syntax and the scene, and each defeats him back; and nothing else. Every cell is computed
 from what the parties hold by `Horn.defeats?` and checked by the kernel. -/
 theorem promiseDispute_defeats :
     ∀ i j, promiseDispute.defeats i j ↔ promisePartyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (promisePartyNode_strength i)
-    (promisePartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (promisePartyNode_strength i) (promisePartyNode_strength j)
+    (promiseDisputeClauses.spec i) (promiseDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/

@@ -52,7 +52,7 @@ The grits
 #guard_msgs in
 #check_refutations under TestimonyExamples using unfoldSets
 
-/-- info: every entry is a tagged definition, and every key names one: 76 definitions, 17 entries -/
+/-- info: every entry is a tagged definition, and every key names one: 78 definitions, 17 entries -/
 #guard_msgs in
 #check_citations under TestimonyExamples
 

@@ -572,9 +572,12 @@ dispute's relation equal to the table. Every cell is computed from the
 premises and checked by the kernel — the defeats and the absences alike:
 
 ```lean
+prepare_clauses isaiahDisputeClauses for isaiahDispute
+
 theorem isaiahDispute_defeats : ∀ i j, isaiahDispute.defeats i j ↔ partyDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (partyNode_strength i) (partyNode_strength j)
+    (isaiahDisputeClauses.spec i) (isaiahDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 ```
 
@@ -612,6 +615,13 @@ after pass, to a fixed point. The certificate is not trusted: the kernel checks 
 can only make the proof fail, and `Horn.defeats_iff_of_certified` states exactly
 what `Horn.defeats_iff_of_defeats?` does. `decide +kernel` on `Horn.defeats?`
 still proves any cell, searching.
+
+Every cell asks its questions of two parties' positions as clauses, and a party
+appears in a row and a column of cells. `prepare_clauses` converts each party's
+position once, writes the clauses out, and proves for each party that they are
+what the conversion gives (`isaiahDisputeClauses.spec`); every cell then reads
+them, and `Horn.defeats_iff_of_prepared` takes the proofs, so the kernel converts
+each position once per table rather than once per cell.
 
 A single defeat worth naming is one line, from the same computation:
 

@@ -154,6 +154,8 @@ theorem viewNode_strength : ∀ i, (viewNode i).strength = viewStrength i
   | .holiness => holinessCase_strength
   | .sacramental => sacramentalCase_strength
 
+prepare_clauses spiritBaptismDisputeClauses for spiritBaptismDispute
+
 /-- **Who defeats whom**, all 16 pairs: four standoffs, and nothing else. The
 conversion view and each subsequence view defeat each other — "no second to
 seek" against "a second to seek" — and the Pentecostal view also denies the
@@ -163,7 +165,8 @@ subsequence view defeat each other on the same point. Every cell is computed by
 theorem spiritBaptismDispute_defeats :
     ∀ i j, spiritBaptismDispute.defeats i j ↔ viewDefeats i j := by
   intro i j
-  refine Horn.defeats_iff_of_certified (viewNode_strength i) (viewNode_strength j) ?_
+  refine Horn.defeats_iff_of_prepared (viewNode_strength i) (viewNode_strength j)
+    (spiritBaptismDisputeClauses.spec i) (spiritBaptismDisputeClauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 /-- The dispute in the form the verdict solver computes with. -/
