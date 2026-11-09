@@ -4,6 +4,16 @@ on:
   push:
     branches: [main]
   pull_request:
+  # On demand, against any ref: the four gates without opening a pull request,
+  # which is what asking whether a stale branch still stands requires. Nothing
+  # is published and nothing is measured: the image is pushed only on a push to
+  # main, and the benchmarks are an A/B against the base a pull request merges
+  # into, which a bare ref does not have. The run is the checks alone.
+  #
+  # The trigger must be on the default branch to be dispatchable at all, and the
+  # run uses the workflow file of the ref it is dispatched against — so a branch
+  # cut before this landed cannot be dispatched until it takes main.
+  workflow_dispatch:
 
 jobs:
   image:
