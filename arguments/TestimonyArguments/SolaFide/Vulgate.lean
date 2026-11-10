@@ -4,14 +4,15 @@ import Testimony.Logic.Because
 /-!
 # TestimonyArguments.SolaFide.Vulgate — Trent's two Latin texts, judged by Rome's own teaching
 
-Two of the three texts Trent cites for the increase of justification say
-"justified" only in Latin (`TestimonyArguments.SolaFide.James`). "He that is
-just, let him be justified still" is Revelation 22:11 in the Latin Vulgate; the
-Greek says "let the righteous still do righteousness". "Be not afraid to be
-justified even to death" is Sirach 18:22 in the Vulgate; the Greek is about
-paying vows. Trent introduces both with "as it is written" (Session VI, ch. 10),
-having declared the Vulgate "authentic" for "public lectures, disputations,
-sermons and expositions" (Session IV).
+Two of the three texts Trent cites for the increase of justification speak of
+being justified further only as the Latin has them
+(`TestimonyArguments.SolaFide.James`). "He that is just, let him be justified
+still" is Revelation 22:11 in the Latin Vulgate; the Greek says "let the
+righteous still do righteousness". "Be not afraid to be justified even to death"
+is Sirach 18:22 in the Vulgate; the Greek is about paying vows. Trent introduces
+both with "as it is written" (Session VI, ch. 10), having declared the Vulgate
+"authentic" for "public lectures, disputations, sermons and expositions"
+(Session IV).
 
 A reader asks whether Rome contradicts itself here. Pius XII taught, in *Divino
 Afflante Spiritu* (1943), that the original texts outweigh any translation. Can
@@ -25,9 +26,9 @@ Church's own translation of the Greek.
 together with Pius XII. He teaches that the original text, "written by the
 inspired author himself, has more authority and greater weight than any even the
 very best translation" (§16). The original of these two verses, as the Church's
-own translation gives it, does not say "justified". Those commitments cannot all
-be true together (`trent_as_the_inspired_text_contradicts_pius`). Every one of
-them is Rome's.
+own translation gives it, does not say what the Latin says. Those commitments
+cannot all be true together (`trent_as_the_inspired_text_contradicts_pius`).
+Every one of them is Rome's.
 
 **Taken as Pius XII takes Trent's decree on the Vulgate**, there is no
 contradiction. Pius XII denies that going back to the originals "in any way
@@ -44,18 +45,17 @@ texts from the inspired authors to the Church: the claims that carry it rest on
 Rome's word alone (`pius_reading_rests_on_authority`). And Pius XII asks that a
 doctrine taught from the Vulgate be confirmed from the original texts (§22),
 which at these two verses do not confirm it (`pius_finds_no_confirmation`). So
-by Rome's own teaching, the doctrine of the increase of justification is
-confirmed from the originals, if at all, by James 2:24 alone, which is weighed
-in `TestimonyArguments.SolaFide.James`.
+of the three texts chapter 10 cites, only James 2:24 is left to confirm the
+doctrine from the originals. It is weighed in
+`TestimonyArguments.SolaFide.James`.
 
 ## What this does not show
 
 It does not show that Rome contradicts itself. Trent does not say which way its
 "as it is written" is meant, and Pius XII supplies the way on which there is no
-contradiction. What this section shows is what each costs. The first contradicts
-Pius XII. The second makes the two texts an appeal to the Church's authority,
-which Pius XII himself asks to be confirmed from the originals, and the
-originals do not confirm it.
+contradiction. The first contradicts Pius XII. The second makes the two texts an
+appeal to the Church's authority, which Pius XII himself asks to be confirmed
+from the originals, and the originals do not confirm it.
 
 Nor does it show that the doctrine is false. Pius XII holds the Vulgate free
 from error in faith because Rome holds the doctrine true on other grounds. This
@@ -114,9 +114,9 @@ def piusConfirmationSource : Source :=
 /-- **Rome's own position on the two Latin texts, taken as Pius XII takes Trent.**
 Trent quotes the Vulgate as the Church's approved text. The Vulgate is free from
 error in faith and morals. The original outweighs any translation, and the
-originals of the two verses do not say "justified". A doctrine taught from the
-Vulgate is to be confirmed from the originals. The conclusion: the two texts do
-not confirm the increase of justification from the originals. -/
+originals of the two verses do not say what the Latin says. A doctrine taught
+from the Vulgate is to be confirmed from the originals. The conclusion: the two
+texts do not confirm the increase of justification from the originals. -/
 @[solaFideDefs]
 def piusOnTrentsVulgate : ArgumentPackage Claim :=
   { name := "Pius XII, on Trent's Vulgate"
@@ -134,9 +134,9 @@ def piusOnTrentsVulgate : ArgumentPackage Claim :=
 
 /-- **Rome's position, as Pius XII takes Trent.** The Vulgate is the Church's
 approved text and free from error in faith. Trent quotes it as such. The
-originals of the two verses lack "justified", and outweigh any translation. So
-the two texts do not confirm the doctrine from the originals. Everything else is
-as Trent holds it. -/
+originals of the two verses do not say what the Latin says, and outweigh any
+translation. So the two texts do not confirm the doctrine from the originals.
+Everything else is as Trent holds it. -/
 def piusReading : Valuation Claim := fun a =>
   match a with
   | .rev22_11BeJustifiedStill => False
@@ -160,8 +160,9 @@ theorem pius_reading_is_consistent : Satisfiable piusOnTrentsVulgate.premises :=
 /-- **By Pius XII's own teaching, the two Latin texts do not confirm the increase of
 justification from the originals.** He asks that a doctrine taught from the
 Vulgate be confirmed from the original texts (§22). The originals of Revelation
-22:11 and Sirach 18:22 do not say "justified". So Trent's doctrine is confirmed
-from the originals, if at all, by James 2:24 alone. -/
+22:11 and Sirach 18:22 do not say what the Latin says. So of the three texts
+chapter 10 cites, only James 2:24 is left to confirm the doctrine from the
+originals. -/
 @[headline]
 theorem pius_finds_no_confirmation : Establishes piusOnTrentsVulgate := by
   establish [solaFideDefs]

@@ -30,8 +30,8 @@ reader will naturally ask this. Heard without Trent (`withoutTrent`), three
 things are forced: the meaning of Paul's word; Paul's gospel, that justification
 is not the renewal of the inward person; and Luke's "your faith has saved you",
 that faith suffices. But *faith alone* is still not forced, from Paul, from
-Peter or from John. What stands in the way is not Rome. It is three
-disagreements in modern New Testament scholarship, and one older one.
+Peter or from John. Four disagreements remain with Rome left out: three in
+modern New Testament scholarship, and one older.
 
 - Campbell's apocalyptic reading takes "faith of Christ" (πίστις Χριστοῦ) as
   Christ's own faithfulness, and meets Paul's case there.

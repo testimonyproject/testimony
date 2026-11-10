@@ -51,7 +51,7 @@ So the step's rating depends on whether a council's word counts
 them. Under the tradition standard it is `disputed`, by the reading through
 Paul.
 
-Before the reading through Paul was written down, the same working refused any
+Before the reading through Paul was written down, the same checks refused any
 rating above `disputed` under all three standards, because the strongest known
 objection was missing (`lexical_step_before_the_steelman`). Writing down the
 strongest objection is what permits the higher rating, and only where that
@@ -87,8 +87,9 @@ Under the evidence standard neither objection stands, and the support remains
 This shows exactly that, and no more. Trent's denial does not stand on Scripture
 and checkable evidence alone. A reader who accepts the council's word has an
 argued objection. A reader who does not has none. It does not show that the
-reward texts teach the Reformed reading of them. It shows that they do not teach
-Trent's reading without Trent.
+reward texts teach the Reformed reading of them. It shows that Trent's
+objection, as written down here, needs one claim that is cited to the council
+alone.
 
 ## The same checks, applied the other way
 
@@ -118,11 +119,18 @@ objections to the Reformed step are arguments only under the standard that
 allows the council's word. Neither side's step is shown to be right by this.
 What differs is what each side's objection rests on.
 
+One caution. The checks test an objection's starting points, not its step.
+Trent's move from reward to merit is written as a starting point, because
+chapter 16 states it as something to be believed. Westminster's move from the
+same texts to "not given to merits" is written as its step, and is rated
+`disputed`. A reader who thinks the two moves are alike should weigh this result
+accordingly.
+
 ## Trent's definition, and whether faith suffices
 
-Trent's definition, that justification is not remission of sins only but the
-renewal of the inward person (ch. 7), can be taken two ways
-(`whatTrentsDefinitionClaims`), and Trent draws from it that faith does not
+Trent's definition, that justification is "not remission of sins merely, but
+also the sanctification and renewal of the inward man" (ch. 7), can be taken two
+ways (`whatTrentsDefinitionClaims`), and Trent draws from it that faith does not
 suffice (ch. 7, canon 9). The checks are applied to each, in both directions.
 
 From the Reformed side, each of these is an argument under every standard
@@ -326,7 +334,8 @@ the works as merits. Under the tradition standard, which allows the council's
 word, both count as arguments, and the step is `disputed`.
 
 What this does not claim: that the reward texts teach the Reformed reading. It
-shows that Trent's objection needs Trent's own word. -/
+shows that Trent's objection, as written down here, needs one claim cited to the
+council alone. -/
 @[headline]
 theorem fruit_step_ratings :
     fruitStep.ratings =

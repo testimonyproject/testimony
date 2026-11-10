@@ -53,7 +53,7 @@ passage plainly says (`matthew7_leaves_the_ground_open`).
 Trent quotes (Session VI, ch. 7). Rome reads them as the way to life, possible
 by grace (*Veritatis Splendor* 12). Calvin reads them as Christ answering on the
 law's own terms, so that the young man may see he has not kept it and turn to
-faith. The same shape, and the same rating.
+faith. Here too each reading is cited, and each is rated `disputed`.
 
 ## What the debate decides
 

@@ -3879,15 +3879,15 @@ from Galatians and from Romans 4, and each has to be answered
 both start from the courtroom sense of the verb, so a reader who denies that
 sense denies both.
 
-`whatTrentsDefinitionClaims` puts the two together, and checks them. Each way of
-taking the definition is fair, since Trent taken that way can still be held
-without contradiction. Each is answered. The first cannot be held with what
-Paul's word means: it fails three times, each at a step rated `wellSupported`.
-The second is untouched by anything about the word, and conflicts with Paul's
-gospel and with Romans 4, each time at a step rated `disputed`. So a reader who
-grants that step rejects the definition taken that way, and a reader who denies
-it need not. Which way Trent means it is not something this section decides. It
-shows what each costs.
+The two are put together and checked in one result
+(`whatTrentsDefinitionClaims`). Each way of taking the definition is fair, since
+Trent taken that way can still be held without contradiction. Each is answered.
+The first cannot be held with what Paul's word means: it fails three times, each
+at a step rated `wellSupported`. The second is untouched by anything about the
+word, and conflicts with Paul's gospel and with Romans 4, each time at a step
+rated `disputed`. So a reader who grants that step rejects the definition taken
+that way, and a reader who denies it need not. Which way Trent means it is not
+something this section decides.
 
 One premise, that Paul has his own words for renewal
 (`paulNamesRenewalOtherwise`), is cited to Scripture alone: it says what the
@@ -5047,17 +5047,19 @@ believe rightly on the Father, the Son, and the Holy Ghost, yet if he lead not a
 right life, his faith will avail nothing towards his salvation" (*Homilies on
 John* 31).
 
-Chrysostom's argument is encoded as a line (`chrysostomLine`). Its starting
-points are two texts every reader here accepts. The step from them to "faith
-does not suffice" is his. Three things are checked.
+Chrysostom's argument is written out as starting points, a step and a conclusion
+(`chrysostomLine`). Its starting points are two texts every reader here accepts.
+The step from them to "faith does not suffice" is his. Three things are checked.
 
 - Granted his step, his conclusion follows
   (`chrysostom_reads_john3_36_against_faith_alone`).
 - The wording of the two texts does not settle it. One consistent reading holds
   both texts and that faith suffices; another holds both and that it does not
   (`john3_36_leaves_faiths_sufficiency_open`).
-- His conclusion and John's strand cannot both be held
-  (`chrysostom_cannot_be_held_with_johns_case`).
+- His conclusion, written out as "faith does not suffice", and John's strand
+  cannot both be held (`chrysostom_cannot_be_held_with_johns_case`). Whether the
+  faith he means is the faith the Reformers mean is a further question, noted at
+  that result.
 
 The step is rated `disputed`. Calvin accepts both texts and denies the
 conclusion: he reads the doing of Matthew 7:21 as including faith, and good
@@ -5210,14 +5212,19 @@ each.
 <a id="chrysostom_cannot_be_held_with_johns_case"></a>
 **`chrysostom_cannot_be_held_with_johns_case`**
 
-**Chrysostom's conclusion and John's strand cannot both be held.** John's
-strand concludes that justification is by faith alone, and so that faith
-suffices. Chrysostom concludes that it does not. No consistent reading holds
-every premise of both.
+**Chrysostom's conclusion and John's strand cannot both be held.** John's strand
+concludes that justification is by faith alone, and so that faith suffices.
+Chrysostom concludes that it does not. No consistent reading holds every premise
+of both.
 
 What this claims: a reader has to choose between Calvin's reading of John and
-Chrysostom's. What it does not claim: which to choose. Each rests on a step
-rated `disputed`.
+Chrysostom's conclusion as written out here. What it does not claim: which to
+choose. Each rests on a step rated `disputed`.
+
+Nor does it claim that the faith Chrysostom speaks of, right belief without a
+right life, is the faith the Reformers say justifies. His conclusion is written
+out here as "faith does not suffice". A reader who takes him to deny only what
+James calls dead faith (see the section on James) need not choose.
 
 ```lean
 theorem chrysostom_cannot_be_held_with_johns_case : ¬Satisfiable
@@ -5258,10 +5265,12 @@ is worked out from the two positions' premises and checked by machine.
   `wellSupported`, to `consensus`. Denying a claim counts as `disputed`.
 - **Tie.** Two positions defeat each other. A reader may hold either.
 - **Forced** (also: *prevails outright*). The position must be accepted however
-  every tie is settled. Nothing attacks it that it cannot answer. The technical
-  name for the set of forced positions is the *grounded extension*.
+  every tie is settled. Either nothing defeats it, or every position that
+  defeats it is itself defeated by a forced position. The technical name for the
+  set of forced positions is the *grounded extension*.
 - **Can be defended.** Some consistent set of positions includes it and answers
-  every attack on its members.
+  every attack on its members. A set is consistent when no member defeats
+  another.
 - **Not forced.** Some consistent set of positions leaves it out. Not forced
   does not mean false. It means the debate, as argued here, cannot make a reader
   accept it.
@@ -5272,7 +5281,8 @@ is worked out from the two positions' premises and checked by machine.
 
 Almost every position here has a weakest link rated `disputed`.
 
-- Each Reformed strand uses a step to faith alone that Trent's canon 9 denies.
+- Each Reformed strand uses a step that Trent's canon 9 denies: to faith alone
+  in Paul's case and John's, and to "faith suffices" in Luke's and Peter's.
 - Paul's, Peter's and John's cases hold the Reformed distinction between
   justification and sanctification, which Trent condemns.
 - Trent rests on its definition of justification, which the Westminster
@@ -5295,13 +5305,15 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
 
 - **Trent and each Reformed strand defeat each other.** Paul's, Peter's and
   John's cases conclude "not by works", which Trent denies. Trent's definition
-  of justification, the renewal of the inward person, contradicts the
+  of justification, "not remission of sins merely, but also the sanctification
+  and renewal of the inward man" (Session VI, ch. 7), contradicts the
   distinction between justification and sanctification that they hold. That is
   where Trent's objection comes from: put the distinction in place of the
   definition, and Trent's case no longer denies "not by works"
   (`trent_objection_rests_on_its_definition`). Luke's case holds only Luke's
   words and meets Trent on one point. Trent's definition, with canon 9, denies
-  that faith without charity suffices. "Your faith has saved you" says hers did.
+  that faith without charity suffices. Luke's case reads "Your faith has saved
+  you" (Luke 7:50) as saying that her faith sufficed.
 - **The apocalyptic reading and Paul's case defeat each other.** It denies that
   Galatians 2:16 speaks of faith *in* Christ, and Paul's case concludes faith
   alone. **It does not conflict with Luke's case or Peter's.** They say that
@@ -5311,8 +5323,9 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
   justification is not by faith alone. But the apocalyptic reading derives "not
   by works", since God's rescue depends on nothing a person does, and Trent
   denies that.
-- **Sanders defeats Paul's case**, by denying the reading of "works of the law".
-  Paul's case and the critics each defeat Sanders in return.
+- **Sanders defeats Paul's case**, by denying the reading of "works of the law",
+  and Paul's case defeats him in return. **Sanders and the critics defeat each
+  other.**
 - **Jervell and Peter's case defeat each other**, over the yoke.
 - **John's case meets four positions, each in both directions.** Trent, however
   its definition is taken, over whether faith suffices and over "not by works",
@@ -5322,7 +5335,7 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
   case holds that it is.
 - **Aquinas and Luther defeat each other.** Luther concludes that the faith
   which justifies is not faith formed by charity, which is Aquinas's premise.
-  Neither meets anyone else.
+  Luther meets no one else. Aquinas meets only John's case besides.
 - **Paul's gospel and Trent defeat each other**, over Trent's definition. The
   gospel line concludes that justification is not the renewal of the inward
   person. Both rest on something rated `disputed`.
@@ -5334,14 +5347,17 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
   argument rated `wellSupported`. Romans 4, read for the word, does the same
   from one passage. Neither argument conflicts with anything else. In particular
   neither conflicts with Trent's case as Trent states it, whose definition,
-  taken as it stands, says nothing about the word.
+  taken as it stands, says nothing about the word. Trent taken as a claim about
+  Paul's word also meets every position Trent meets, in both directions: the
+  four strands, the apocalyptic reading and Paul's gospel.
 
 ### What follows
 
 **Only the meaning of Paul's word prevails outright**
 (`only_pauls_word_prevails`). The forced positions are exactly the two arguments
 about it. Every other position is attacked by one the debate cannot rule out.
-Some lose. Others tie with a rival the debate cannot choose between.
+One loses: Trent taken as a claim about Paul's word. Every other is in a tie
+with a rival the debate cannot choose between.
 
 **Trent, taken as a claim about Paul's word, cannot be defended**
 (`trent_on_pauls_word_indefensible`). Both arguments about the word defeat it,
@@ -5363,29 +5379,30 @@ claim that faith saves and not that faith alone does.
 ### What the verdict rests on
 
 **What Trent's definition claims.** The definition can be taken two ways, and
-`whatTrentsDefinitionClaims` (`Definition.lean`) answers both. Taken as a claim
-about Paul's word, it cannot be held with the evidence for what the word means,
-and in this debate it cannot be defended. Taken as a claim about what God does
-in justifying, the argument from the word does not reach it. What then divides
-it from Paul is one step: that a verdict on Christ's finished work excludes the
-renewal worked in us (`whereTrentPartsFromPaul`). That step is rated `disputed`.
-Trent's case as Trent states it stands here for that second way of taking it. So
-the debate does not settle between Trent and the Reformed. It shows that Trent
-can keep its definition only as a claim about what God does, not about Paul's
-word, and it names the one step on which that claim depends.
+the section on Trent's definition answers both (`whatTrentsDefinitionClaims`).
+Taken as a claim about Paul's word, it cannot be held with the evidence for what
+the word means, and in this debate it cannot be defended. Taken as a claim about
+what God does in justifying, the argument from the word does not reach it. What
+then divides it from Paul is one step: that a verdict on Christ's finished work
+excludes the renewal worked in us (`whereTrentPartsFromPaul`). That step is
+rated `disputed`. Trent's case as Trent states it stands here for that second
+way of taking it. So the debate does not settle between Trent and the Reformed.
+It shows that Trent can keep its definition only as a claim about what God does,
+not about Paul's word, and it names the one step on which that claim depends.
 
-**An absence.** Luke's case is attacked by no one but Trent, because no source
-cited here argues that "saved" (σῴζω) at Luke 7:50 means healed. That absence is
-also the premise's rating. It is `wellSupported`, not `disputed`: a search for a
-scholar arguing the healing sense *at 7:50* found none, and at 7:50 no one is
-ill. The saying follows "your sins are forgiven". Marshall's commentary on the
-Greek text says the same: the saying refers mainly to healing elsewhere in Luke,
-and is used here "in a case where physical healing is not involved". The rating
-is not `consensus`, because the same words mean "made you well" at Luke 8:48,
-17:19 and 18:42. One older lexicon, Thayer's, lists 7:50 with the healing uses
-without arguing it. It is not yet cited, and whether an unargued listing should
-lower the rating is an open question. A cited argument for the healing reading
-would attack Luke's case and lower the rating.
+**An absence.** Luke's case is attacked by no one but Trent, however Trent's
+definition is taken, because no source cited here argues that "saved" (σῴζω) at
+Luke 7:50 means healed. That absence is also the premise's rating. It is
+`wellSupported`, not `disputed`: a search for a scholar arguing the healing
+sense *at 7:50* found none, and at 7:50 no one is ill. The saying follows "your
+sins are forgiven". Marshall's commentary on the Greek text says the same: the
+saying refers mainly to healing elsewhere in Luke, and is used here "in a case
+where physical healing is not involved". The rating is not `consensus`, because
+the same words mean "made you well" at Luke 8:48, 17:19 and 18:42. One older
+lexicon, Thayer's, lists 7:50 with the healing uses without arguing it. It is
+not yet cited, and whether an unargued listing should lower the rating is an
+open question. A cited argument for the healing reading would attack Luke's case
+and lower the rating.
 
 **An objection answered in advance.** "Her sins, which are many, are
 forgiven—for she loved much" (7:47) is the verse a rival would use to make love,
@@ -7286,8 +7303,8 @@ better.
 
 What this does not claim: that sola fide prevails, or that Trent's teaching is
 refuted. Nothing else is forced. Every other position is attacked by one the
-debate cannot rule out, whether it loses or ties with a rival the debate cannot
-choose between.
+debate cannot rule out. One loses, Trent taken as a claim about Paul's word, and
+every other is in a tie with a rival the debate cannot choose between.
 
 ```lean
 theorem only_pauls_word_prevails : Framework.grounded solaFideDispute.defeats
@@ -7371,13 +7388,15 @@ Why *Paul's word (δικαιόω, by the rule of least meaning)* defeats *Trent,
 set of positions that answers its attackers can include it. The two arguments
 about the word defeat it, and nothing answers either.
 
-This is the first branch of `whatTrentsDefinitionClaims`, weighed: if Trent's
-definition says what Paul's "justify" means, it cannot be held, for a stated and
-cited reason, at a step rated `wellSupported`.
+Trent's definition can be taken two ways. This is the first, weighed in the
+debate (`whatTrentsDefinitionClaims`): if the definition says what Paul's
+"justify" means, it cannot be defended here, for a stated and cited reason, at a
+step rated `wellSupported`.
 
 What this does not claim: that Trent's definition is false as a statement of
 what God does. That is the other way of taking it, and it can be defended
-(`trent_defensible`).
+(`trent_defensible`). Nor that the position contradicts itself: taken alone it
+can be held without contradiction.
 
 ```lean
 theorem trent_on_pauls_word_indefensible : ∀ (S : Set Party),
@@ -7478,6 +7497,9 @@ tie.
 
 The arguments about Paul's word do not attack it. Trent's definition, taken as
 it stands, says nothing about what "justify" means.
+
+What this does not claim: that Trent prevails. It is not forced
+(`trent_not_forced`). It is in a tie with each of those six positions.
 
 ```lean
 theorem trent_defensible : Framework.CredulouslyAccepted
@@ -7945,19 +7967,19 @@ Why *Paul's gospel (Galatians 1), against justification as renewal* defeats *Tre
 <a id="dominical_case_not_forced"></a>
 **`dominical_case_not_forced`**
 
-**Nor is it forced.** A consistent set of positions that answers every attack
-holds Trent, and cannot hold Luke's case with it.
+**Luke's case is not forced.** A consistent set of positions that answers every
+attack holds Trent, and cannot hold Luke's case with it.
 
-This is the debate's verdict in one sentence: between Trent and each Reformed
-position, it chooses neither. Their weakest links are all `disputed`, so no
-rating breaks a tie, and every attack between them runs in both directions.
+Between Trent and each Reformed strand, the debate chooses neither. Their
+weakest links are all `disputed`, so no rating breaks a tie, and every attack
+between them runs in both directions.
 
-What would decide between them is what justification *is*, and that has to be
-argued, not weighed. `whyTheDominicalCaseStandsAgainstTrent` places Luke's
-disagreement with Trent at Trent's definition. `whereTrentPartsFromPaul`
-(`Gospel.lean`) places Paul's at one step: that a verdict on Christ's finished
-work excludes the renewal worked in us. The one thing the ratings do decide is
-that Trent cannot claim its definition as the meaning of Paul's word
+What would decide between them is what justification *is*. No rating here
+settles that. `whyTheDominicalCaseStandsAgainstTrent` places Luke's disagreement
+with Trent at Trent's definition. `whereTrentPartsFromPaul` (`Gospel.lean`)
+places Paul's at one step: that a verdict on Christ's finished work excludes the
+renewal worked in us. The one thing the ratings do decide is that Trent cannot
+claim its definition as the meaning of Paul's word
 (`trent_on_pauls_word_indefensible`).
 
 ```lean
@@ -8225,8 +8247,8 @@ reader will naturally ask this. Heard without Trent (`withoutTrent`), three
 things are forced: the meaning of Paul's word; Paul's gospel, that justification
 is not the renewal of the inward person; and Luke's "your faith has saved you",
 that faith suffices. But *faith alone* is still not forced, from Paul, from
-Peter or from John. What stands in the way is not Rome. It is three
-disagreements in modern New Testament scholarship, and one older one.
+Peter or from John. Four disagreements remain with Rome left out: three in
+modern New Testament scholarship, and one older.
 
 - Campbell's apocalyptic reading takes "faith of Christ" (πίστις Χριστοῦ) as
   Christ's own faithfulness, and meets Paul's case there.
@@ -8964,7 +8986,7 @@ passage plainly says (`matthew7_leaves_the_ground_open`).
 Trent quotes (Session VI, ch. 7). Rome reads them as the way to life, possible
 by grace (*Veritatis Splendor* 12). Calvin reads them as Christ answering on the
 law's own terms, so that the young man may see he has not kept it and turn to
-faith. The same shape, and the same rating.
+faith. Here too each reading is cited, and each is rated `disputed`.
 
 ### What the debate decides
 
@@ -11784,7 +11806,8 @@ evidence.
 
 ### The other two texts Trent cites
 
-Two of Trent's three texts say "justified" only in Latin.
+Two of Trent's three texts speak of being justified further only as the Latin
+has them.
 
 "He that is just, let him be justified still" is the Latin Vulgate's wording
 (*iustificetur adhuc*) at Revelation 22:11. The Greek, as modern editions print
@@ -11792,8 +11815,10 @@ it, says "let the righteous still do righteousness", and the Catholic Church's
 own English translation gives "The righteous must still do right".
 
 "Be not afraid to be justified even to death" is the Vulgate's Sirach 18:22. The
-Greek, in the same translation, is about vows: "do not wait until death to
-fulfill them".
+Greek, as the same translation gives it, is about vows: "do not wait until death
+to fulfill them". Whether the Greek verb there is the word for "justify" has not
+been checked for this page; the claim made is about what the verse says, not
+about one word.
 
 Pius XII teaches that the original text, "written by the inspired author
 himself, has more authority and greater weight than any even the very best
@@ -11802,7 +11827,7 @@ So taken as claims about what the inspired authors wrote, the two Latin readings
 cannot be defended.
 
 Pius XII does not say that a Latin reading absent from the original is an error.
-He says the opposite of the Vulgate as a whole. As the Church understands it, it
+Of the Vulgate as a whole he says the opposite. As the Church understands it, it
 is "free from any error whatsoever in matters of faith and morals", and its
 authority is "juridical", that is, a matter of the Church's approval, and not a
 claim about the original wording (§21). Taken that way, Trent's "as it is
@@ -11820,10 +11845,11 @@ is often cited as denying *sola fide* in so many words. The faith James says
 does not justify is the faith he calls dead (2:17, 2:26). Trent reads it so:
 faith "unless hope and charity be added thereto ... For which reason it is most
 truly said, that Faith without works is dead" (Session VI, ch. 7). The
-Reformers' confession says the faith that alone justifies "is no dead faith, but
-worketh by love" (Westminster XI.2). So the phrase James denies is not the
-formula the Reformers affirm (`jamesFaithLine`). This answers an argument from
-the phrase. It does not answer James's "by works", which is the question above.
+Westminster Confession, a Reformed confession of 1647, says the faith that alone
+justifies "is no dead faith, but worketh by love" (Westminster XI.2). So the
+phrase James denies is not the formula the Reformers affirm (`jamesFaithLine`).
+This answers an argument from the phrase. It does not answer James's "by works",
+which is the question above.
 
 ### The words used here
 
@@ -11847,27 +11873,28 @@ defended** when none does.
 - **Can be defended, and not forced.** Trent's reading of what works do
   (`trent_on_works_defensible`, `trent_on_works_not_forced`), and, against it,
   the Reformed reconciliation of James with Paul. Whether works are only the
-  fruit of justification is contested at the ratings as cited
-  (`worksContested`). Trent's reading of the texts that promise a reward
-  (chapter 16, `trentRewardLine`) meets the Reformed reconciliation in the same
-  way. It also meets Westminster's reading of the same texts
-  (`westminsterRewardLine`), which denies that the reward is given to merits.
-  When only evidence anyone can check is counted, neither of Trent's readings of
-  what works do stands as an objection, and the Reformed reconciliation is
-  forced (`TestimonyArguments.SolaFide.Ratings`).
-- **Cannot be defended, at the ratings as cited.** The reading on which James's
-  word means renewal because Paul's does (`renewalWordLine`). The argument from
-  James's word defeats it. When a tradition's own teaching is allowed to count
-  as an objection, it does stand as one, and then the question is contested
-  (`TestimonyArguments.SolaFide.Ratings`). It also meets the Reformed
-  reconciliation, and the two defeat each other: the reconciliation says James's
-  word does not have Paul's sense, and this reading says it does.
+  fruit of justification is contested at the ratings the sources were given,
+  before they are recomputed under the three standards (`worksContested`).
+  Trent's reading of the texts that promise a reward (chapter 16,
+  `trentRewardLine`) meets the Reformed reconciliation in the same way. It also
+  meets Westminster's reading of the same texts (`westminsterRewardLine`), which
+  denies that the reward is given to merits. When only evidence anyone can check
+  is counted, neither of Trent's readings of what works do stands as an
+  objection, and the Reformed reconciliation is forced
+  (`TestimonyArguments.SolaFide.Ratings`).
+- **Cannot be defended, at the ratings the sources were given.** The reading on
+  which James's word means renewal because Paul's does (`renewalWordLine`). The
+  argument from James's word defeats it. When a tradition's own teaching is
+  allowed to count as an objection, it does stand as one, and then the question
+  is contested (`TestimonyArguments.SolaFide.Ratings`). It also meets the
+  Reformed reconciliation, and the two defeat each other: the reconciliation
+  says James's word does not have Paul's sense, and this reading says it does.
 
-So Trent's case from Scripture for the increase of justification, weighed text
-by text, survives at one point only: James 2:24, taken as a claim about what
-works do before God. Every form of it that rests on what a word or a verse
-*says* cannot be defended. What remains is a claim about God's verdict, and
-there these pages cannot choose.
+So of the three texts chapter 10 cites, one is left: James 2:24, taken as a
+claim about what works do before God. Each reading of the three that rests on
+what a word or a verse *says* cannot be defended. Trent's reading of the reward
+texts (chapter 16) can also be defended. No other text was weighed here. What
+remains is a claim about God's verdict, and there these pages cannot choose.
 
 ### A rating that was lowered, against the Reformed side
 
@@ -11891,13 +11918,16 @@ a barren faith is rated `disputed` (`jamesHarmonySource`).
 ### What each position rests on
 
 `james_warrants` lists, for each position, the claims it makes on someone's word
-alone. Each of Trent's four readings rests, at the reading itself, on Trent's
-word. The two readings of the Greek rest, at "the original text outweighs any
-translation", on the word of Pius XII and of Westminster. That is both sides'
-word, which is what makes it decisive here, and it is still a word. The argument
-from James's word, the argument about James's faith, and the Reformed
-reconciliation rest on nothing but Scripture and evidence. This is reported
-beside the verdicts and does not affect them.
+alone. Each of Trent's five readings rests on Trent's word: four at the reading
+itself, and the reading of the reward texts at the claim that the reward is
+given to merits. The reading through Paul rests on Trent's word at one claim,
+that James uses the word as Paul does. The two readings of the Greek rest, at
+"the original text outweighs any translation", on the word of Pius XII and of
+Westminster. Both sides accept it, so it decides the matter between them. It is
+still a claim taken on authority. The argument from James's word, the argument
+about James's faith, and the Reformed reconciliation rest on nothing but
+Scripture and evidence. This is reported beside the verdicts and does not affect
+them.
 
 ### Westminster's texts for "fruit, not ground"
 
@@ -11915,9 +11945,9 @@ reward the texts promise is given to merits, is a claim it makes on its own word
 ("we must believe", chapter 16).
 
 So the Reformed reconciliation now rests on Scripture and not on the
-Confession's word. In this debate, at the ratings as cited, whether works are
-only fruit is still contested (`worksContested`). When only checkable evidence
-counts, it is not (`TestimonyArguments.SolaFide.Ratings`).
+Confession's word. In this debate, at the ratings the sources were given,
+whether works are only fruit is still contested (`worksContested`). When only
+checkable evidence counts, it is not (`TestimonyArguments.SolaFide.Ratings`).
 
 ### What has been re-examined, and what has not
 
@@ -13305,10 +13335,11 @@ James's word defeats it, and nothing defeats that argument.
 
 **Trent's reading of James's word cannot be defended.** If "justified by works"
 in James 2:24 is taken to mean the increase of the justice received, being made
-more just, it cannot be held. Outside Paul the word declares, acquits or
-vindicates. James uses it of Abraham at Genesis 22, after Genesis 15:6 had been
-spoken, and of Rahab. And nothing in James's setting requires a second, inward
-sense. The step is rated `wellSupported`. The reading rests on Trent's word
+more just, it cannot be defended in this debate. Outside Paul the word declares,
+acquits or vindicates. James uses it of Abraham at Genesis 22, after Genesis
+15:6 had been spoken, and of Rahab. And nothing in James's setting requires a
+second, inward sense. The step from that evidence to "the word does not mean the
+increase of justice" is rated `wellSupported`. The reading rests on Trent's word
 alone.
 
 What this does not claim: that works are no cause of the increase of
@@ -13518,6 +13549,9 @@ increase and not merely its fruit. The Reformed reconciliation denies this, and
 the debate cannot choose: at that point each side rests on its own confession,
 rated `disputed`.
 
+What this does not claim: that works are a cause of the increase. The reading is
+not forced (`trent_on_works_not_forced`).
+
 ```lean
 theorem trent_on_works_defensible : Framework.CredulouslyAccepted
     jamesDispute.defeats JamesParty.trentOnWorks
@@ -13696,9 +13730,8 @@ word at one claim: that James's "justified" is Paul's. For Paul's word as
 renewal it has VanLandingham's argument from the lexicon.
 
 Each of Trent's other four readings rests on Trent's word at the reading itself.
-The Reformed position and the two readings of the Greek rest on the word of Pius
-XII and of Westminster alike, at the principle that the original outweighs any
-translation.
+The two readings of the Greek rest on the word of Pius XII and of Westminster
+alike, at the principle that the original outweighs any translation.
 
 The argument from James's word, the argument about James's faith, and the
 Reformed reconciliation, which now derives "fruit, not ground" from
@@ -13724,14 +13757,15 @@ theorem james_warrants : jamesLexicalCase.restingOnAuthority = [] ∧
 
 ## TestimonyArguments.SolaFide.Vulgate — Trent's two Latin texts, judged by Rome's own teaching
 
-Two of the three texts Trent cites for the increase of justification say
-"justified" only in Latin (`TestimonyArguments.SolaFide.James`). "He that is
-just, let him be justified still" is Revelation 22:11 in the Latin Vulgate; the
-Greek says "let the righteous still do righteousness". "Be not afraid to be
-justified even to death" is Sirach 18:22 in the Vulgate; the Greek is about
-paying vows. Trent introduces both with "as it is written" (Session VI, ch. 10),
-having declared the Vulgate "authentic" for "public lectures, disputations,
-sermons and expositions" (Session IV).
+Two of the three texts Trent cites for the increase of justification speak of
+being justified further only as the Latin has them
+(`TestimonyArguments.SolaFide.James`). "He that is just, let him be justified
+still" is Revelation 22:11 in the Latin Vulgate; the Greek says "let the
+righteous still do righteousness". "Be not afraid to be justified even to death"
+is Sirach 18:22 in the Vulgate; the Greek is about paying vows. Trent introduces
+both with "as it is written" (Session VI, ch. 10), having declared the Vulgate
+"authentic" for "public lectures, disputations, sermons and expositions"
+(Session IV).
 
 A reader asks whether Rome contradicts itself here. Pius XII taught, in *Divino
 Afflante Spiritu* (1943), that the original texts outweigh any translation. Can
@@ -13745,9 +13779,9 @@ Church's own translation of the Greek.
 together with Pius XII. He teaches that the original text, "written by the
 inspired author himself, has more authority and greater weight than any even the
 very best translation" (§16). The original of these two verses, as the Church's
-own translation gives it, does not say "justified". Those commitments cannot all
-be true together (`trent_as_the_inspired_text_contradicts_pius`). Every one of
-them is Rome's.
+own translation gives it, does not say what the Latin says. Those commitments
+cannot all be true together (`trent_as_the_inspired_text_contradicts_pius`).
+Every one of them is Rome's.
 
 **Taken as Pius XII takes Trent's decree on the Vulgate**, there is no
 contradiction. Pius XII denies that going back to the originals "in any way
@@ -13764,18 +13798,17 @@ texts from the inspired authors to the Church: the claims that carry it rest on
 Rome's word alone (`pius_reading_rests_on_authority`). And Pius XII asks that a
 doctrine taught from the Vulgate be confirmed from the original texts (§22),
 which at these two verses do not confirm it (`pius_finds_no_confirmation`). So
-by Rome's own teaching, the doctrine of the increase of justification is
-confirmed from the originals, if at all, by James 2:24 alone, which is weighed
-in `TestimonyArguments.SolaFide.James`.
+of the three texts chapter 10 cites, only James 2:24 is left to confirm the
+doctrine from the originals. It is weighed in
+`TestimonyArguments.SolaFide.James`.
 
 ### What this does not show
 
 It does not show that Rome contradicts itself. Trent does not say which way its
 "as it is written" is meant, and Pius XII supplies the way on which there is no
-contradiction. What this section shows is what each costs. The first contradicts
-Pius XII. The second makes the two texts an appeal to the Church's authority,
-which Pius XII himself asks to be confirmed from the originals, and the
-originals do not confirm it.
+contradiction. The first contradicts Pius XII. The second makes the two texts an
+appeal to the Church's authority, which Pius XII himself asks to be confirmed
+from the originals, and the originals do not confirm it.
 
 Nor does it show that the doctrine is false. Pius XII holds the Vulgate free
 from error in faith because Rome holds the doctrine true on other grounds. This
@@ -13850,9 +13883,9 @@ def piusConfirmationSource : Source :=
 **Rome's own position on the two Latin texts, taken as Pius XII takes Trent.**
 Trent quotes the Vulgate as the Church's approved text. The Vulgate is free from
 error in faith and morals. The original outweighs any translation, and the
-originals of the two verses do not say "justified". A doctrine taught from the
-Vulgate is to be confirmed from the originals. The conclusion: the two texts do
-not confirm the increase of justification from the originals.
+originals of the two verses do not say what the Latin says. A doctrine taught
+from the Vulgate is to be confirmed from the originals. The conclusion: the two
+texts do not confirm the increase of justification from the originals.
 
 <div class="testimony-math">
 \[
@@ -13878,9 +13911,9 @@ No premise here rests on scripture alone.
 
 **Rome's position, as Pius XII takes Trent.** The Vulgate is the Church's
 approved text and free from error in faith. Trent quotes it as such. The
-originals of the two verses lack "justified", and outweigh any translation. So
-the two texts do not confirm the doctrine from the originals. Everything else is
-as Trent holds it.
+originals of the two verses do not say what the Latin says, and outweigh any
+translation. So the two texts do not confirm the doctrine from the originals.
+Everything else is as Trent holds it.
 
 ```lean
 def piusReading : Valuation Claim :=
@@ -13914,8 +13947,9 @@ theorem pius_reading_is_consistent : Satisfiable piusOnTrentsVulgate.premises
 **By Pius XII's own teaching, the two Latin texts do not confirm the increase of
 justification from the originals.** He asks that a doctrine taught from the
 Vulgate be confirmed from the original texts (§22). The originals of Revelation
-22:11 and Sirach 18:22 do not say "justified". So Trent's doctrine is confirmed
-from the originals, if at all, by James 2:24 alone.
+22:11 and Sirach 18:22 do not say what the Latin says. So of the three texts
+chapter 10 cites, only James 2:24 is left to confirm the doctrine from the
+originals.
 
 ```lean
 theorem pius_finds_no_confirmation : Establishes piusOnTrentsVulgate
@@ -13985,7 +14019,7 @@ So the step's rating depends on whether a council's word counts
 them. Under the tradition standard it is `disputed`, by the reading through
 Paul.
 
-Before the reading through Paul was written down, the same working refused any
+Before the reading through Paul was written down, the same checks refused any
 rating above `disputed` under all three standards, because the strongest known
 objection was missing (`lexical_step_before_the_steelman`). Writing down the
 strongest objection is what permits the higher rating, and only where that
@@ -14021,8 +14055,9 @@ Under the evidence standard neither objection stands, and the support remains
 This shows exactly that, and no more. Trent's denial does not stand on Scripture
 and checkable evidence alone. A reader who accepts the council's word has an
 argued objection. A reader who does not has none. It does not show that the
-reward texts teach the Reformed reading of them. It shows that they do not teach
-Trent's reading without Trent.
+reward texts teach the Reformed reading of them. It shows that Trent's
+objection, as written down here, needs one claim that is cited to the council
+alone.
 
 ### The same checks, applied the other way
 
@@ -14052,11 +14087,18 @@ objections to the Reformed step are arguments only under the standard that
 allows the council's word. Neither side's step is shown to be right by this.
 What differs is what each side's objection rests on.
 
+One caution. The checks test an objection's starting points, not its step.
+Trent's move from reward to merit is written as a starting point, because
+chapter 16 states it as something to be believed. Westminster's move from the
+same texts to "not given to merits" is written as its step, and is rated
+`disputed`. A reader who thinks the two moves are alike should weigh this result
+accordingly.
+
 ### Trent's definition, and whether faith suffices
 
-Trent's definition, that justification is not remission of sins only but the
-renewal of the inward person (ch. 7), can be taken two ways
-(`whatTrentsDefinitionClaims`), and Trent draws from it that faith does not
+Trent's definition, that justification is "not remission of sins merely, but
+also the sanctification and renewal of the inward man" (ch. 7), can be taken two
+ways (`whatTrentsDefinitionClaims`), and Trent draws from it that faith does not
 suffice (ch. 7, canon 9). The checks are applied to each, in both directions.
 
 From the Reformed side, each of these is an argument under every standard
@@ -14255,7 +14297,8 @@ the works as merits. Under the tradition standard, which allows the council's
 word, both count as arguments, and the step is `disputed`.
 
 What this does not claim: that the reward texts teach the Reformed reading. It
-shows that Trent's objection needs Trent's own word.
+shows that Trent's objection, as written down here, needs one claim cited to the
+council alone.
 
 ```lean
 theorem fruit_step_ratings : fruitStep.ratings = [(Standard.evidence,
