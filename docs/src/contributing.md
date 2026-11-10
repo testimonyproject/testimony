@@ -184,24 +184,25 @@ owner installs on the organisation and grants this repository.
   requests opened this way "show the Claude GitHub App as the author". It is a
   Team and Enterprise feature that an owner sets up. This is the route the
   documentation vouches for.
-- *The GitHub Action, [`anthropics/claude-code-action`][action].* Mention
-  `@claude` in an issue or a pull-request comment, and Claude commits to a
-  branch as the App. By default it does not open the pull request: it posts a
-  link, and whoever clicks the link becomes the author. The documentation does
-  not describe a supported way to have the action open the pull request
-  itself, so no workflow for it is committed here. If one is added, test who
-  GitHub records as the author before relying on it.
+- *The GitHub Action, [`anthropics/claude-code-action`][action].* It is
+  installed here as `.github/workflows/claude.yml`. Mention `@claude` in an
+  issue or a pull-request comment, and Claude commits to a branch as the App.
+  By default it does not open the pull request: it posts a link, and whoever
+  clicks the link becomes the author. So have a maintainer other than the one
+  who will review click it. The documentation does not describe a supported
+  way to have the action open the pull request itself.
 
 **A route that needs no setup.** Have a second maintainer, or the maintainer
 who did not start the session, review and approve. Branch protection on `main`
 with one required approval makes that the rule, and it works whoever the author
 is, as long as the author is not the only maintainer.
 
-**Review by Claude.** `REVIEW.md` at the repository root says what a review
-here must check. Claude Code's managed Code Review reads it when an owner has
-enabled it for the organisation (a Team and Enterprise feature). Its reviews
-are comments: they never approve or block a pull request, so they do not
-replace a maintainer's approval. The local `/code-review` command reads
-`CLAUDE.md` and not `REVIEW.md`.
+**Review by Claude.** `.github/workflows/claude-code-review.yml` runs a review
+on each pull request through the same action. `REVIEW.md` at the repository
+root says what a review here must check, and `CLAUDE.md` holds the project's
+rules; the action's review reads `CLAUDE.md`, and Claude Code's managed Code
+Review, where an owner has enabled it, reads both. Either way the reviews are
+comments. They never approve a pull request, so they do not replace a
+maintainer's approval.
 
 [action]: https://github.com/anthropics/claude-code-action
