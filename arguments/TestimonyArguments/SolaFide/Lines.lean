@@ -426,11 +426,11 @@ def galatianGospelReadingSource : Source :=
 justification". Westminster XI.1: God justifies "not by infusing righteousness
 into them, but by pardoning their sins, and by accounting and accepting their
 persons as righteous; not for anything wrought in them". Rated `disputed`, and
-the source that makes it so is Rome's own. The *Joint Declaration* (§22) accepts
-the starting point, that God "no longer imputes to them their sin", and denies
-the step: forgiveness and the love the Spirit brings about "are not to be
-separated". Among New Testament scholars, Gorman takes the same side: the
-verdict is a word that does what it says, and changes the person. -/
+the source that makes it so is Rome's own. The *Joint Declaration* accepts the
+starting point, that God "no longer imputes to them their sin" (§22). Its Annex
+denies the step, defining justification as "forgiveness of sins and being made
+righteous" (Annex 2 A). Among New Testament scholars, Gorman takes the same
+side: the verdict is a word that does what it says, and changes the person. -/
 def verdictNotRenewalSource : Source :=
   { primary := .work westminsterConfession (.sectionRef "XI.1")
   , supporting :=

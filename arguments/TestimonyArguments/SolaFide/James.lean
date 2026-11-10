@@ -29,10 +29,11 @@ evidence.
 - **As a claim about James's word.** "Justified" (δικαιόω) in James *means* the
   increase of the justice already received: being made more just. Then it meets
   the evidence about the word. Outside Paul, the word declares, acquits or
-  vindicates ("wisdom is justified by her works", Matthew 11:19). James uses it
-  of Abraham offering Isaac (Genesis 22), long after "Abraham believed God, and
-  it was counted to him as righteousness" (James 2:23, quoting Genesis 15:6), and of Rahab. And a
-  word contributes the least meaning its context requires.
+  vindicates: "wisdom is justified by her deeds" (Matthew 11:19, ESV), where
+  "deeds" translates ἔργα, the word James uses for "works". James uses it of
+  Abraham offering Isaac (Genesis 22), long after "Abraham believed God, and it
+  was counted to him as righteousness" (James 2:23, quoting Genesis 15:6), and
+  of Rahab. And a word contributes the least meaning its context requires.
 - **As a claim about what works do.** James's "justified" is a verdict, and the
   works it is "by" are a cause of that verdict's increase, not only its fruit
   (canon 24). Nothing about the word bears on this. It meets the Reformed
@@ -41,19 +42,25 @@ evidence.
 
 ## The other two texts Trent cites
 
-Two of Trent's three texts speak of being justified further only as the Latin
-has them.
+Two of Trent's three texts read differently in the Latin Trent quotes and in the
+Greek.
 
 "He that is just, let him be justified still" is the Latin Vulgate's wording
-(*iustificetur adhuc*) at Revelation 22:11. The Greek, as modern editions print
-it, says "let the righteous still do righteousness", and the Catholic Church's
-own English translation gives "The righteous must still do right".
+(*iustificetur adhuc*) at Revelation 22:11. The Greek, as modern critical
+editions print it, says "let the righteous still do righteousness", and the
+Catholic Church's own English translation gives "The righteous must still do
+right". The printed Textus Receptus of the sixteenth century reads "let him be
+justified still" (δικαιωθήτω), as the Latin does; the critical editions and the
+Byzantine Majority Text do not.
 
 "Be not afraid to be justified even to death" is the Vulgate's Sirach 18:22. The
-Greek, as the same translation gives it, is about vows: "do not wait until death
-to fulfill them". Whether the Greek verb there is the word for "justify" has not
-been checked for this page; the claim made is about what the verse says, not
-about one word.
+Greek does have the verb "to be justified" (δικαιωθῆναι), but in a sentence
+about vows: "let nothing hinder you from paying a vow in due time, and do not
+wait until death to be justified". The Catholic Church's own translation renders
+the clause "do not wait until death to fulfill them". So the Latin and the Greek
+share "until death ... to be justified". They differ in the rest: the Latin has
+"pray always" and "be not afraid", where the Greek has "pay a vow" and "do not
+wait".
 
 Pius XII teaches that the original text, "written by the inspired author
 himself, has more authority and greater weight than any even the very best
@@ -99,8 +106,9 @@ defended** when none does.
 
 - **Forced** (`james_words_prevail`). James's "justified" does not mean the
   increase of justice. The faith James 2:24 denies is not the Reformers' faith.
-  Revelation 22:11 does not say "be justified still". Sirach 18:22 does not
-  speak of growth in justice.
+  Revelation 22:11, in the critical Greek text, does not say "be justified
+  still". Sirach 18:22 in Greek does not say "be not afraid to be justified even
+  to death".
 - **Cannot be defended.** Trent's reading of James's word
   (`trent_on_james_word_indefensible`), and its use of Revelation 22:11
   (`trent_on_revelation_indefensible`) and Sirach 18:22
@@ -143,8 +151,10 @@ have come from the rating and not from the evidence.
 
 As a step (`fruitLine`), its rating is now worked out and not simply assigned
 (`TestimonyArguments.SolaFide.Ratings`). Its support is `wellSupported`: the
-*Joint Declaration* confesses works to be fruits and not the basis of
-justification. Each of Trent's two objections to it rests, at one claim, on the
+*Joint Declaration* confesses works to be fruits (§37) and not the basis of
+justification (§25). On whether works contribute anything further, it records
+the sides apart: Catholics hold that good works "contribute to growth in grace"
+(§38). Each of Trent's two objections to it rests, at one claim, on the
 council's own word. So the step stands when only checkable evidence counts, and
 is `disputed` when a tradition's teaching counts. This debate weighs the
 Reformed reconciliation at its weakest link in any case: that James is attacking
@@ -401,9 +411,10 @@ def revelationTextLine : Line Claim :=
   , delivers := notP .rev22_11BeJustifiedStill
   , inference := some textualSource }
 
-/-- **Sirach 18:22 in Greek.** The verse is about paying a vow promptly. The
-original outweighs any translation. So its inspired text does not speak of being
-justified more and more until death. -/
+/-- **Sirach 18:22 in Greek.** The verse is about paying a vow promptly, and says
+"do not wait until death to be justified". The original outweighs any
+translation. So its inspired text does not say what the Latin says, "be not
+afraid to be justified even to death". -/
 @[solaFideDefs]
 def sirachTextLine : Line Claim :=
   { name := "Sirach 18:22, in the Greek"
@@ -487,10 +498,17 @@ Romans 6:22 and Luke 17:10 to "works are the fruit and evidence of saving faith,
 not its ground" (XVI.2, XVI.5).
 
 This rates how well the step is **supported**, and it is `wellSupported`. The
-Reformed confess it. So do the Lutheran World Federation and the Catholic Church
-together: "good works ... follow justification and are its fruits", and
-"whatever in the justified precedes or follows the free gift of faith is neither
-the basis of justification nor merits it" (*Joint Declaration* §§37, 25).
+Reformed confess it. The Lutheran World Federation and the Catholic Church
+confess two parts of it together: good works "follow justification and are its
+fruits" (§37), and "whatever in the justified precedes or follows the free gift
+of faith is neither the basis of justification nor merits it" (§25, *Joint
+Declaration*).
+
+They do not confess that works are *only* fruit. The Declaration records the
+Catholic understanding that good works "contribute to growth in grace, so that
+the righteousness that comes from God is preserved and communion with Christ is
+deepened" (§38). That is the point canon 24 makes, and it is weighed as Trent's
+objection, not as part of this step's support.
 
 Whether an objection brings the step down is worked out separately
 (`TestimonyArguments.SolaFide.Ratings`). Trent objects twice: in canon 24, and
@@ -499,7 +517,7 @@ both stand, and the step is `disputed`. When only checkable evidence counts,
 neither does, because each rests at one claim on the council's word. -/
 def fruitSource : Source :=
   { primary := .work westminsterConfession (.sectionRef "XVI.2, XVI.5")
-  , supporting := [.work jointDeclarationJustification (.sectionRef "§§25, 37")]
+  , supporting := [.work jointDeclarationJustification (.sectionRef "§§25, 37; see §38")]
   , tradition := .reformedProtestant
   , confidence := .wellSupported }
 
@@ -561,7 +579,8 @@ def revelationTextCase : ArgumentPackage Claim :=
 /-- What Sirach 18:22 says, in the Greek. -/
 @[solaFideDefs]
 def sirachTextCase : ArgumentPackage Claim :=
-  sirachTextLine.asPackage baseCite "Sirach 18:22 does not speak of growth in justification"
+  sirachTextLine.asPackage baseCite
+    "Sirach 18:22 does not say: be not afraid to be justified even to death"
 
 /-- Trent on the reward of works: what God rewards is not merely fruit. -/
 @[solaFideDefs]
@@ -883,12 +902,15 @@ def jamesWordsUnanswered : Verdict jamesDispute where
 /-- **What James's words say, and what the Greek of Trent's other two texts says,
 prevails outright.** Exactly four positions are forced. James's "justified"
 (δικαιόω) does not mean the increase of justice. The faith James 2:24 denies is
-not the faith of the Reformers' formula. Revelation 22:11 does not say "be
-justified still". And Sirach 18:22 does not speak of growth in justice. Nothing
-in the debate answers any of them.
+not the faith of the Reformers' formula. Revelation 22:11, in the critical Greek
+text, does not say "be justified still". And Sirach 18:22, in Greek, does not
+say "be not afraid to be justified even to death". Nothing in the debate answers
+any of them.
 
 What this does not claim: that James 2:24 agrees with Paul, or that works are
-not a cause of the increase of justification. Neither is forced. -/
+not a cause of the increase of justification. Neither is forced. Nor that the
+Greek of Sirach 18:22 lacks the word "justified": it has it, in a sentence about
+vows. -/
 @[headline]
 theorem james_words_prevail :
     grounded jamesDispute.defeats =
@@ -956,12 +978,16 @@ def trentOnSirachAnswered : Verdict jamesDispute where
   claim := .indefensible .trentOnSirach [(.trentOnSirach, .sirachText)]
   checked := by decide +kernel
 
-/-- **Trent's Sirach 18:22 cannot be defended as a text for the increase of
-justification.** "Be not afraid to be justified even to death" is the Vulgate's
-verse. The Greek, as the Catholic Church's own translation gives it, is about
-paying a vow: "do not wait until death to fulfill them". Whether Sirach is
-Scripture is not in question here: the verdict holds on Trent's own list of the
-biblical books. -/
+/-- **Trent's Sirach 18:22 cannot be defended as what the verse says.** "Be not
+afraid to be justified even to death" is the Vulgate's verse. The Greek, in a
+sentence about paying vows, says "do not wait until death to be justified", and
+the Catholic Church's own translation renders that "do not wait until death to
+fulfill them". Whether Sirach is Scripture is not in question here: the verdict
+holds on Trent's own list of the biblical books.
+
+What this does not claim: that the Greek has no "be justified". It has the verb.
+What it lacks is the Latin's "be not afraid ... even to death", the words in
+which Trent reads continued growth in justice. -/
 @[headline]
 theorem trent_on_sirach_indefensible (S : Set JamesParty)
     (hS : Admissible jamesDispute.defeats S) : JamesParty.trentOnSirach ∉ S :=

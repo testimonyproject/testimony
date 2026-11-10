@@ -78,7 +78,7 @@ Three distinctions in it do most of the work.
 
 The atoms are not replaced. An argument keeps its own claim type and its proofs are untouched;
 its instance says what each atom means, as `cite` says who holds it. Ninety-seven of the hundred
-and twelve sola fide atoms are analysed; fifteen — the stories of the thief and the tax
+and thirteen sola fide atoms are analysed; sixteen — the stories of the thief and the tax
 collector, a curse, a command, a disjunction, an opposite, and the claims about texts and
 their translations — are marked unanalysed and counted, not forced.
 

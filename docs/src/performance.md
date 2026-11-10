@@ -10,9 +10,10 @@ page is its ledger: what was measured, what was tried, and what came of it.
 
 > **A note on the figures.** The measurements below were taken when the sola
 > fide dispute had twelve parties (144 cells; 289 with Mark 7's five). It now
-> has fifteen: John's case, Aquinas's reading of John 6:29 and Luther's answer
-> were added. The benchmarks that run over it are named for the new sizes (225
-> cells; 400 with Mark 7), so they are new benchmarks and are not compared with
+> has seventeen: John's case, Aquinas's reading of John 6:29 and Luther's
+> answer were added, and then Chrysostom on John 3:36 and the Reformed answer
+> to him. The benchmarks that run over it are named for the new sizes (289
+> cells; 484 with Mark 7), so they are new benchmarks and are not compared with
 > the old ones. The rounds below stand as the record of what each change bought
 > at the size it was measured at.
 

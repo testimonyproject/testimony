@@ -34,6 +34,9 @@ another by a phrase is a question for the reader and for the scholars cited.
 What the checking adds is narrower: if you grant these premises, this conclusion
 follows; if you deny that one, here is what you lose and what you keep.
 
+Scripture is quoted from the English Standard Version (ESV). Where a Greek or
+Hebrew word matters, it is given in brackets after the English.
+
 Three words recur. A **premise** is something a position takes as given, such as
 a verse or a claim about what a word in it means. A **reading** is a premise
 about what a text means where readers disagree. A **rating** says how well
@@ -256,11 +259,11 @@ are set against one another, which survive?
 Three words are used there. One position *defeats* another when it contradicts
 it and rests on premises rated at least as well. A position is *forced* when it
 must be accepted however the open disagreements are settled. Two positions that
-defeat each other are a *tie*: a reader may hold either, and neither is
-forced. Fifteen positions are heard: the four strands, each argued alone;
-Trent; the apocalyptic reading; Sanders and his critics; Jervell; Aquinas on
-John, and Luther's answer; Paul's gospel in Galatians; and three positions on
-what Paul's word "justify" means.
+defeat each other are a *tie*: a reader may hold either, and neither is forced.
+Seventeen positions are heard: the four strands, each argued alone; Trent; the
+apocalyptic reading; Sanders and his critics; Jervell; Aquinas on John, and
+Luther's answer; Chrysostom on John 3:36, and the Reformed answer; Paul's gospel
+in Galatians; and three positions on what Paul's word "justify" means.
 
 One thing prevails outright: Paul's verb "justify" (δικαιόω) does not mean the
 renewal of the inward man (`only_pauls_word_prevails`). It is argued two ways,
@@ -280,9 +283,8 @@ their rivals.
 The remaining sections each take one question a reader asks.
 
 - **Where exactly do Trent and Paul part?** At one step (`Gospel.lean`): that a
-  verdict on Christ's finished work excludes the renewal worked in us. Trent
-  grants every text, and, with the *Joint Declaration* (§22), the verdict sense
-  of the verb.
+  verdict on Christ's finished work excludes the renewal worked in us. Trent can
+  grant every text, and the verdict sense of the verb.
 - **Is Trent's definition about Paul's word, or about what God does?** Read as
   a claim about the word, it cannot be held with the evidence for the word's
   meaning. Read as a claim about what God does, nothing about the word reaches
@@ -290,10 +292,11 @@ The remaining sections each take one question a reader asks.
   and reads it as God making the ungodly godly (`Definition.lean`).
 - **What did the Reformation itself decide? And without Trent, would Scripture
   establish sola fide?** Heard as Rome and the Reformers alone, only the meaning
-  of Paul's word is forced. Heard without Trent, three things are forced: Luke's
-  "faith suffices", Paul's gospel, and the meaning of Paul's word. *Faith alone*
-  still is not. Campbell, Sanders and Dunn, Jervell, and Aquinas each still
-  stand against one strand (`Hearings.lean`).
+  of Paul's word is forced. Heard without Trent, two things are forced: Paul's
+  gospel, and the meaning of Paul's word. *Faith alone* still is not, and
+  neither is Luke's "faith suffices". Campbell, Sanders and Dunn, Jervell, and
+  Aquinas each still stand against one strand, and Chrysostom against all four
+  (`Hearings.lean`).
 - **What does Jesus himself say?** The tax collector "went
   down to his house justified" (Luke 18:14). Trent's case is consistent with
   every word of the parable, and meets it where it meets Luke 7:50. Matthew

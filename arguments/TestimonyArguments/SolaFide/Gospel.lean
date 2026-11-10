@@ -17,19 +17,21 @@ sanctification and renewal of the inward man" (Session VI, ch. 7). This section
 asks where exactly Trent and Paul part, and answers in three steps, each
 checked.
 
-**What Trent accepts.** Every text above. And that Paul's verb "justify"
-(δικαιόω) is a courtroom word, a verdict. The *Joint Declaration on the Doctrine
-of Justification* (1999), signed by the Catholic Church, confesses that God "no
-longer imputes to them their sin" (§22). Scholars across the traditions read the
-verb as a verdict: the standard lexicon, Morris, Moo, Irons, Wright, and the
-Catholic scholar Fitzmyer (`dikaioIsForensic`, rated `wellSupported`).
+**What Trent can accept.** Every text above. And that Paul's verb "justify"
+(δικαιόω) is a courtroom word, a verdict: scholars across the traditions read it
+so, the standard lexicon, Morris, Moo, Irons, Wright, and the Catholic scholar
+Fitzmyer among them (`dikaioIsForensic`, rated `wellSupported`). The *Joint
+Declaration on the Doctrine of Justification* (1999), signed by the Catholic
+Church, confesses that God "no longer imputes to them their sin" (§22). It does
+not speak to the sense of the verb.
 
 **What Trent denies.** One step: that a verdict given on the ground of Christ's
 finished work leaves no room for the renewal worked in us to be part of
 justification. The same paragraph of the *Joint Declaration* holds that
-forgiveness and the love the Spirit brings about are "not to be separated".
-Gorman reads the verdict as a word that does what it says and changes the
-person.
+forgiveness and the love the Spirit brings about are "not to be separated", and
+its Annex defines justification as "forgiveness of sins and being made
+righteous" (Annex 2 A). Gorman reads the verdict as a word that does what it
+says and changes the person.
 
 **Where they part.** `whereTrentPartsFromPaul` identifies it by checking: the
 disagreement is that one step, and what the step contradicts in Trent is its
@@ -73,12 +75,13 @@ theorem galatianGospel_establishes : Establishes galatianGospel := by
 theorem galatianGospel_is_satisfiable : Satisfiable galatianGospel.premises := by
   satisfied_by galatianGospelReading [solaFideDefs]
 
-/-! ### What Trent accepts -/
+/-! ### What Trent can accept -/
 
-/-- Trent's position, with what the *Joint Declaration* confesses added: God no
-longer counts sin against the justified, so the verb is a courtroom word, and
-every text of the gospel line holds. Justification still includes renewal, faith
-without charity does not suffice, and justification is not by faith alone.
+/-- Trent's position with two things added: what the *Joint Declaration* confesses,
+that God no longer counts sin against the justified (§22); and that Paul's verb
+is a courtroom word, as the scholars cited on it read it. Every text of the
+gospel line holds. Justification still includes renewal, faith without charity
+does not suffice, and justification is not by faith alone.
 
 Having granted that the verb is a courtroom word, this reading does not also
 hold that Paul's verb means renewal: the two exclude each other
@@ -107,9 +110,14 @@ theorem trent_grants_the_gospel_texts :
          , p .galatians5_2_4, p .romans8_33_34 ]) := by
   satisfied_by jointDeclarationReading [Grants, solaFideDefs]
 
-/-- **Trent can accept that Paul's verb is a courtroom word**, as the *Joint
-Declaration* does: God no longer counts sin. The meaning of the word is not
-where they part. -/
+/-- **Trent's case can be held together with the verdict sense of Paul's verb.**
+Nothing in Trent's case denies that "justify" is a courtroom word. The meaning
+of the word is not where they part.
+
+What this does not claim: that Trent or the *Joint Declaration* teaches the
+verdict sense. The Declaration confesses that God no longer counts sin (§22),
+and does not speak to the sense of the verb. This result says only that the two
+can be held together. -/
 theorem trent_grants_the_forensic_sense : Grants tridentineCase (p .dikaioIsForensic) := by
   satisfied_by jointDeclarationReading [Grants, solaFideDefs]
 

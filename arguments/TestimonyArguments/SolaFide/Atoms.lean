@@ -150,10 +150,17 @@ inductive Claim
   /-- John 3:16–18, 3:36, 5:24 and 20:31 — eternal life, and passing out of
   judgement, through believing in the Son. -/
   | johnLifeThroughBelieving
-  /-- John 3:36 — "Whoever believes in the Son has eternal life; whoever does not
-  obey the Son shall not see life." The opposite of believing is put, in Greek,
-  as not obeying (ὁ ἀπειθῶν). Every reader here grants the wording. -/
+  /-- John 3:36 — "Whoever believes in the Son has eternal life; whoever does not obey
+  the Son shall not see life, but the wrath of God remains on him." The opposite
+  of believing is put, in Greek, as not obeying (ὁ ἀπειθῶν). Every reader here
+  grants the wording. -/
   | john3_36WhoeverDoesNotObey
+  /-- The obedience John 3:36 sets beside believing, and the doing of the
+  Father's will in Matthew 7:21, are sanctification: the inward and outward life
+  of good works that follows faith as its fruit and evidence. They are
+  necessary, and they are not the ground or basis of justification. **The
+  Reformed answer to Chrysostom.** -/
+  | obedienceIsSanctification
   /-- The believing of John 6:29 is trust in Christ, which brings nothing to God and
   receives righteousness from him. Calvin calls it a "passive work". **The
   disputed reading in John's strand.** -/
@@ -362,9 +369,10 @@ inductive Claim
   | james2JustifiedByWorks
   /-- Outside Paul, "justify" (δικαιόω) declares, acquits or vindicates. The judges
   "justify the righteous and condemn the wicked" (Deuteronomy 25:1). "Wisdom is
-  justified by her works" (Matthew 11:19): shown to be in the right by what she
-  does. It does not mean making a person inwardly righteous. **The premise about
-  the word, for James.** -/
+  justified by her deeds" (Matthew 11:19, ESV; "deeds" translates ἔργα, the word
+  James uses for "works"): shown to be in the right by what she does. It does
+  not mean making a person inwardly righteous. **The premise about the word, for
+  James.** -/
   | dikaioIsDeclarativeOutsidePaul
   /-- James's "justified by works" (δικαιόω; 2:21, 24, 25) means the increase of the
   justice already received: being made more just. **The Catholic reading of
@@ -404,9 +412,12 @@ inductive Claim
   afraid to be justified even to death" (the Vulgate's verse). Trent's "as it is
   written", read as a claim about the inspired text. -/
   | sir18_22BeJustifiedToDeath
-  /-- Sirach 18:22, in the Greek from which the Catholic Church's own translation
-  is made, is about paying a vow promptly: "do not wait until death to fulfill
-  them". It says nothing of growth in justice. -/
+  /-- Sirach 18:22, in the Greek, is about paying a vow promptly. It says "let
+  nothing hinder you from paying a vow in due time, and do not wait until death
+  to be justified" (μὴ μείνῃς ἕως θανάτου δικαιωθῆναι), which the Catholic
+  Church's own translation renders "do not wait until death to fulfill them". It
+  has the verb "to be justified". It does not say "be not afraid", and it does
+  not say "pray always", as the Vulgate does. -/
   | sir18_22GreekIsAVow
   /-- The original text, "written by the inspired author himself, has more authority
   and greater weight than any even the very best translation" (Pius XII, *Divino

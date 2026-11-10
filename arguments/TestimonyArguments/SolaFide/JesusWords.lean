@@ -40,12 +40,12 @@ argument. What a word means in Luke is evidence for what it means in Paul, not a
 premise of it, and that argument stands on its own sources.
 
 **Matthew 7:21–23.** "Not everyone who says to me, 'Lord, Lord,' will enter the
-kingdom of heaven, but the one who does the will of my Father." And to those who
-prophesied in his name: "I never knew you." The passage does not mention faith,
-and gives doing the Father's will as the test. Rome reads it as condemning
-profession without obedience, with obedience a condition of entry in its own
-right. Calvin reads the doing as including faith, and "I never knew you" as
-meaning they were never united to Christ. Both are written down here as
+kingdom of heaven, but the one who does the will of my Father who is in heaven."
+And to those who prophesied in his name: "I never knew you." The passage does
+not mention faith, and gives doing the Father's will as the test. Rome reads it
+as condemning profession without obedience, with obedience a condition of entry
+in its own right. Calvin reads the doing as including faith, and "I never knew
+you" as meaning they were never united to Christ. Both are written down here as
 readings, each cited and each rated `disputed`. Neither is given as what the
 passage plainly says (`matthew7_leaves_the_ground_open`).
 
@@ -130,9 +130,8 @@ leaves it: a tie at the `disputed` step that `whereTrentPartsFromPaul` names
 (`gospel_not_forced`).
 
 This debate is kept apart from the main one. Adding its positions there would
-change what that section says about its own fifteen, and that change should be
-made and reported by itself.
--/
+change what that section says about its own seventeen, and that change should be
+made and reported by itself. -/
 
 namespace TestimonyArguments.SolaFide
 

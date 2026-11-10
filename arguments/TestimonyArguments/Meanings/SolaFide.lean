@@ -171,6 +171,8 @@ def means : Claim → Statement
   | .johnLifeThroughBelieving =>
     .says (rg .john 3 16 3 18) (rl .instrumentOf (wd .pisteuo (rg .john 3 16 3 18))
       (cn .eternalLife))
+  | .obedienceIsSanctification =>
+    .opaque "the obedience of John 3:36 and Matthew 7:21 is sanctification, the fruit of faith"
   | .john3_36WhoeverDoesNotObey =>
     .opaque "John 3:36: whoever believes has life; whoever does not obey shall not see life"
   | .johannineBelievingIsTrust => .means .pisteuo (.passage john6_29) .trust
@@ -326,7 +328,7 @@ def all : List Claim :=
   , .secondTempleCovenantalNomism, .worksMeritIncreaseOfJustification
   , .justificationIncludesSanctification, .justificationDistinctFromSanctification
   , .renewalGrowsThroughGoodWorks, .john6_29WorkIsBelieving, .johnLifeThroughBelieving
-  , .john3_36WhoeverDoesNotObey
+  , .john3_36WhoeverDoesNotObey, .obedienceIsSanctification
   , .johannineBelievingIsTrust, .johannineBelievingIsFormedByCharity
   , .gal3_11_12LawIsNotOfFaith, .lawCommandsCharity, .galatians1_6_9
   , .firstCorinthians15_3, .galatians2_21, .galatians5_2_4, .romans8_33_34
@@ -370,17 +372,18 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **Ninety-seven of the hundred and twelve are analysed.** Of the fifteen
+/-- **Ninety-seven of the hundred and thirteen are analysed.** Of the sixteen
 that are not, four are Pius XII's and Trent's claims about the Vulgate and one is the
 textual principle, whose content is a rule about texts and translations the
-vocabulary cannot yet state; the other ten are the narrative texts of the
-thief and the tax collector, John 3:36's "whoever does not obey",
+vocabulary cannot yet state; the other eleven are the narrative texts of the
+thief and the tax collector, John 3:36's "whoever does not obey" and the
+Reformed reading of the obedience it requires,
 Galatians 1:6–9, Christ's command to baptise,
 Trent's "laver, or the desire thereof", Luke's law-observance, the texts that
 promise a reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each
 needs a word the vocabulary lacks — a command, a curse, a disjunction, a story's
 outcome, a reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 112) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 113) := by decide
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
