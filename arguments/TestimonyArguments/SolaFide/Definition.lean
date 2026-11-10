@@ -55,15 +55,15 @@ from Galatians and from Romans 4, and each has to be answered
 both start from the courtroom sense of the verb, so a reader who denies that
 sense denies both.
 
-`whatTrentsDefinitionClaims` puts the two together, and checks them. Each way of
-taking the definition is fair, since Trent taken that way can still be held
-without contradiction. Each is answered. The first cannot be held with what
-Paul's word means: it fails three times, each at a step rated `wellSupported`.
-The second is untouched by anything about the word, and conflicts with Paul's
-gospel and with Romans 4, each time at a step rated `disputed`. So a reader who
-grants that step rejects the definition taken that way, and a reader who denies
-it need not. Which way Trent means it is not something this section decides. It
-shows what each costs.
+The two are put together and checked in one result
+(`whatTrentsDefinitionClaims`). Each way of taking the definition is fair, since
+Trent taken that way can still be held without contradiction. Each is answered.
+The first cannot be held with what Paul's word means: it fails three times, each
+at a step rated `wellSupported`. The second is untouched by anything about the
+word, and conflicts with Paul's gospel and with Romans 4, each time at a step
+rated `disputed`. So a reader who grants that step rejects the definition taken
+that way, and a reader who denies it need not. Which way Trent means it is not
+something this section decides.
 
 One premise, that Paul has his own words for renewal
 (`paulNamesRenewalOtherwise`), is cited to Scripture alone: it says what the

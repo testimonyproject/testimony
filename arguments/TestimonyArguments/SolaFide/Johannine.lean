@@ -369,17 +369,19 @@ believe rightly on the Father, the Son, and the Holy Ghost, yet if he lead not a
 right life, his faith will avail nothing towards his salvation" (*Homilies on
 John* 31).
 
-Chrysostom's argument is encoded as a line (`chrysostomLine`). Its starting
-points are two texts every reader here accepts. The step from them to "faith
-does not suffice" is his. Three things are checked.
+Chrysostom's argument is written out as starting points, a step and a conclusion
+(`chrysostomLine`). Its starting points are two texts every reader here accepts.
+The step from them to "faith does not suffice" is his. Three things are checked.
 
 - Granted his step, his conclusion follows
   (`chrysostom_reads_john3_36_against_faith_alone`).
 - The wording of the two texts does not settle it. One consistent reading holds
   both texts and that faith suffices; another holds both and that it does not
   (`john3_36_leaves_faiths_sufficiency_open`).
-- His conclusion and John's strand cannot both be held
-  (`chrysostom_cannot_be_held_with_johns_case`).
+- His conclusion, written out as "faith does not suffice", and John's strand
+  cannot both be held (`chrysostom_cannot_be_held_with_johns_case`). Whether the
+  faith he means is the faith the Reformers mean is a further question, noted at
+  that result.
 
 The step is rated `disputed`. Calvin accepts both texts and denies the
 conclusion: he reads the doing of Matthew 7:21 as including faith, and good
@@ -460,14 +462,19 @@ each. -/
 def johnWithChrysostom : List (Formula Claim) :=
   johannineCase.premises ++ chrysostomOnJohn.premises
 
-/-- **Chrysostom's conclusion and John's strand cannot both be held.** John's
-strand concludes that justification is by faith alone, and so that faith
-suffices. Chrysostom concludes that it does not. No consistent reading holds
-every premise of both.
+/-- **Chrysostom's conclusion and John's strand cannot both be held.** John's strand
+concludes that justification is by faith alone, and so that faith suffices.
+Chrysostom concludes that it does not. No consistent reading holds every premise
+of both.
 
 What this claims: a reader has to choose between Calvin's reading of John and
-Chrysostom's. What it does not claim: which to choose. Each rests on a step
-rated `disputed`. -/
+Chrysostom's conclusion as written out here. What it does not claim: which to
+choose. Each rests on a step rated `disputed`.
+
+Nor does it claim that the faith Chrysostom speaks of, right belief without a
+right life, is the faith the Reformers say justifies. His conclusion is written
+out here as "faith does not suffice". A reader who takes him to deny only what
+James calls dead faith (see the section on James) need not choose. -/
 @[headline]
 theorem chrysostom_cannot_be_held_with_johns_case : ¬ Satisfiable johnWithChrysostom :=
   not_satisfiable_of_check (by decide +kernel)

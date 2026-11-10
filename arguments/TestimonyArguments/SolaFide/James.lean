@@ -41,7 +41,8 @@ evidence.
 
 ## The other two texts Trent cites
 
-Two of Trent's three texts say "justified" only in Latin.
+Two of Trent's three texts speak of being justified further only as the Latin
+has them.
 
 "He that is just, let him be justified still" is the Latin Vulgate's wording
 (*iustificetur adhuc*) at Revelation 22:11. The Greek, as modern editions print
@@ -49,8 +50,10 @@ it, says "let the righteous still do righteousness", and the Catholic Church's
 own English translation gives "The righteous must still do right".
 
 "Be not afraid to be justified even to death" is the Vulgate's Sirach 18:22. The
-Greek, in the same translation, is about vows: "do not wait until death to
-fulfill them".
+Greek, as the same translation gives it, is about vows: "do not wait until death
+to fulfill them". Whether the Greek verb there is the word for "justify" has not
+been checked for this page; the claim made is about what the verse says, not
+about one word.
 
 Pius XII teaches that the original text, "written by the inspired author
 himself, has more authority and greater weight than any even the very best
@@ -59,7 +62,7 @@ So taken as claims about what the inspired authors wrote, the two Latin readings
 cannot be defended.
 
 Pius XII does not say that a Latin reading absent from the original is an error.
-He says the opposite of the Vulgate as a whole. As the Church understands it, it
+Of the Vulgate as a whole he says the opposite. As the Church understands it, it
 is "free from any error whatsoever in matters of faith and morals", and its
 authority is "juridical", that is, a matter of the Church's approval, and not a
 claim about the original wording (§21). Taken that way, Trent's "as it is
@@ -77,10 +80,11 @@ is often cited as denying *sola fide* in so many words. The faith James says
 does not justify is the faith he calls dead (2:17, 2:26). Trent reads it so:
 faith "unless hope and charity be added thereto ... For which reason it is most
 truly said, that Faith without works is dead" (Session VI, ch. 7). The
-Reformers' confession says the faith that alone justifies "is no dead faith, but
-worketh by love" (Westminster XI.2). So the phrase James denies is not the
-formula the Reformers affirm (`jamesFaithLine`). This answers an argument from
-the phrase. It does not answer James's "by works", which is the question above.
+Westminster Confession, a Reformed confession of 1647, says the faith that alone
+justifies "is no dead faith, but worketh by love" (Westminster XI.2). So the
+phrase James denies is not the formula the Reformers affirm (`jamesFaithLine`).
+This answers an argument from the phrase. It does not answer James's "by works",
+which is the question above.
 
 ## The words used here
 
@@ -104,27 +108,28 @@ defended** when none does.
 - **Can be defended, and not forced.** Trent's reading of what works do
   (`trent_on_works_defensible`, `trent_on_works_not_forced`), and, against it,
   the Reformed reconciliation of James with Paul. Whether works are only the
-  fruit of justification is contested at the ratings as cited
-  (`worksContested`). Trent's reading of the texts that promise a reward
-  (chapter 16, `trentRewardLine`) meets the Reformed reconciliation in the same
-  way. It also meets Westminster's reading of the same texts
-  (`westminsterRewardLine`), which denies that the reward is given to merits.
-  When only evidence anyone can check is counted, neither of Trent's readings of
-  what works do stands as an objection, and the Reformed reconciliation is
-  forced (`TestimonyArguments.SolaFide.Ratings`).
-- **Cannot be defended, at the ratings as cited.** The reading on which James's
-  word means renewal because Paul's does (`renewalWordLine`). The argument from
-  James's word defeats it. When a tradition's own teaching is allowed to count
-  as an objection, it does stand as one, and then the question is contested
-  (`TestimonyArguments.SolaFide.Ratings`). It also meets the Reformed
-  reconciliation, and the two defeat each other: the reconciliation says James's
-  word does not have Paul's sense, and this reading says it does.
+  fruit of justification is contested at the ratings the sources were given,
+  before they are recomputed under the three standards (`worksContested`).
+  Trent's reading of the texts that promise a reward (chapter 16,
+  `trentRewardLine`) meets the Reformed reconciliation in the same way. It also
+  meets Westminster's reading of the same texts (`westminsterRewardLine`), which
+  denies that the reward is given to merits. When only evidence anyone can check
+  is counted, neither of Trent's readings of what works do stands as an
+  objection, and the Reformed reconciliation is forced
+  (`TestimonyArguments.SolaFide.Ratings`).
+- **Cannot be defended, at the ratings the sources were given.** The reading on
+  which James's word means renewal because Paul's does (`renewalWordLine`). The
+  argument from James's word defeats it. When a tradition's own teaching is
+  allowed to count as an objection, it does stand as one, and then the question
+  is contested (`TestimonyArguments.SolaFide.Ratings`). It also meets the
+  Reformed reconciliation, and the two defeat each other: the reconciliation
+  says James's word does not have Paul's sense, and this reading says it does.
 
-So Trent's case from Scripture for the increase of justification, weighed text
-by text, survives at one point only: James 2:24, taken as a claim about what
-works do before God. Every form of it that rests on what a word or a verse
-*says* cannot be defended. What remains is a claim about God's verdict, and
-there these pages cannot choose.
+So of the three texts chapter 10 cites, one is left: James 2:24, taken as a
+claim about what works do before God. Each reading of the three that rests on
+what a word or a verse *says* cannot be defended. Trent's reading of the reward
+texts (chapter 16) can also be defended. No other text was weighed here. What
+remains is a claim about God's verdict, and there these pages cannot choose.
 
 ## A rating that was lowered, against the Reformed side
 
@@ -148,13 +153,16 @@ a barren faith is rated `disputed` (`jamesHarmonySource`).
 ## What each position rests on
 
 `james_warrants` lists, for each position, the claims it makes on someone's word
-alone. Each of Trent's four readings rests, at the reading itself, on Trent's
-word. The two readings of the Greek rest, at "the original text outweighs any
-translation", on the word of Pius XII and of Westminster. That is both sides'
-word, which is what makes it decisive here, and it is still a word. The argument
-from James's word, the argument about James's faith, and the Reformed
-reconciliation rest on nothing but Scripture and evidence. This is reported
-beside the verdicts and does not affect them.
+alone. Each of Trent's five readings rests on Trent's word: four at the reading
+itself, and the reading of the reward texts at the claim that the reward is
+given to merits. The reading through Paul rests on Trent's word at one claim,
+that James uses the word as Paul does. The two readings of the Greek rest, at
+"the original text outweighs any translation", on the word of Pius XII and of
+Westminster. Both sides accept it, so it decides the matter between them. It is
+still a claim taken on authority. The argument from James's word, the argument
+about James's faith, and the Reformed reconciliation rest on nothing but
+Scripture and evidence. This is reported beside the verdicts and does not affect
+them.
 
 ## Westminster's texts for "fruit, not ground"
 
@@ -172,9 +180,9 @@ reward the texts promise is given to merits, is a claim it makes on its own word
 ("we must believe", chapter 16).
 
 So the Reformed reconciliation now rests on Scripture and not on the
-Confession's word. In this debate, at the ratings as cited, whether works are
-only fruit is still contested (`worksContested`). When only checkable evidence
-counts, it is not (`TestimonyArguments.SolaFide.Ratings`).
+Confession's word. In this debate, at the ratings the sources were given,
+whether works are only fruit is still contested (`worksContested`). When only
+checkable evidence counts, it is not (`TestimonyArguments.SolaFide.Ratings`).
 
 ## What has been re-examined, and what has not
 
@@ -898,10 +906,11 @@ def trentOnTheWordAnswered : Verdict jamesDispute where
 
 /-- **Trent's reading of James's word cannot be defended.** If "justified by works"
 in James 2:24 is taken to mean the increase of the justice received, being made
-more just, it cannot be held. Outside Paul the word declares, acquits or
-vindicates. James uses it of Abraham at Genesis 22, after Genesis 15:6 had been
-spoken, and of Rahab. And nothing in James's setting requires a second, inward
-sense. The step is rated `wellSupported`. The reading rests on Trent's word
+more just, it cannot be defended in this debate. Outside Paul the word declares,
+acquits or vindicates. James uses it of Abraham at Genesis 22, after Genesis
+15:6 had been spoken, and of Rahab. And nothing in James's setting requires a
+second, inward sense. The step from that evidence to "the word does not mean the
+increase of justice" is rated `wellSupported`. The reading rests on Trent's word
 alone.
 
 What this does not claim: that works are no cause of the increase of
@@ -973,7 +982,10 @@ verses. It accepts that James's "justified" is a verdict, and holds that the
 works by which James says a person is justified are a cause of that verdict's
 increase and not merely its fruit. The Reformed reconciliation denies this, and
 the debate cannot choose: at that point each side rests on its own confession,
-rated `disputed`. -/
+rated `disputed`.
+
+What this does not claim: that works are a cause of the increase. The reading is
+not forced (`trent_on_works_not_forced`). -/
 @[headline]
 theorem trent_on_works_defensible :
     CredulouslyAccepted jamesDispute.defeats .trentOnWorks :=
@@ -1040,9 +1052,8 @@ word at one claim: that James's "justified" is Paul's. For Paul's word as
 renewal it has VanLandingham's argument from the lexicon.
 
 Each of Trent's other four readings rests on Trent's word at the reading itself.
-The Reformed position and the two readings of the Greek rest on the word of Pius
-XII and of Westminster alike, at the principle that the original outweighs any
-translation.
+The two readings of the Greek rest on the word of Pius XII and of Westminster
+alike, at the principle that the original outweighs any translation.
 
 The argument from James's word, the argument about James's faith, and the
 Reformed reconciliation, which now derives "fruit, not ground" from
