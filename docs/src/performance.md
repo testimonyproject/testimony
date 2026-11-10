@@ -8,6 +8,14 @@ further change makes no significant difference. How to run the loop is in the
 `optimising-the-engine` skill (`.claude/skills/optimising-the-engine`); this
 page is its ledger: what was measured, what was tried, and what came of it.
 
+> **A note on the figures.** The measurements below were taken when the sola
+> fide dispute had twelve parties (144 cells; 289 with Mark 7's five). It now
+> has fifteen: John's case, Aquinas's reading of John 6:29 and Luther's answer
+> were added. The benchmarks that run over it are named for the new sizes (225
+> cells; 400 with Mark 7), so they are new benchmarks and are not compared with
+> the old ones. The rounds below stand as the record of what each change bought
+> at the size it was measured at.
+
 ## How it is measured
 
 - **Benchmarks** (`arguments/bench/Engine.lean`, run by `scripts/bench.sh`):

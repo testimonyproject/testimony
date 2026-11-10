@@ -1,4 +1,5 @@
 import TestimonyArguments.SolaFide.Definition
+import TestimonyArguments.SolaFide.Johannine
 import Testimony.Logic.Dispute
 import Testimony.Logic.Horn
 import Testimony.Logic.Solver
@@ -11,8 +12,9 @@ import Testimony.Logic.Certificate
 # TestimonyArguments.SolaFide.Dispute — who prevails over sola fide
 
 The results in `Results.lean` ask what each package entails. This module asks
-what happens when the positions meet: the three Reformed strands, each argued
-alone; Trent; the apocalyptic reading of Martyn and Campbell; Sanders and Dunn on
+what happens when the positions meet: the four Reformed strands, each argued
+alone; Aquinas on John 6:29, and Luther's answer to him; Trent; the apocalyptic
+reading of Martyn and Campbell; Sanders and Dunn on
 covenantal nomism, and the critics who answer them; Jervell on the yoke of Acts
 15; Paul's gospel in Galatians, against Trent's definition; Paul's word, read by
 the rule of least meaning, lexically and from Romans 4; and Trent with its
@@ -81,6 +83,14 @@ A few words recur, and each has a plain meaning.
 - **Sanders defeats Paul**, by denying the ἔργα νόμου premise; Paul and the
   critics each defeat Sanders back.
 - **Jervell and Acts defeat each other**, over the yoke.
+- **John's case meets four parties, each both ways.** Trent, read or unread,
+  over faith's sufficiency and "not by works", as with Paul and Peter. The
+  apocalyptic reading, because John's case concludes faith alone, as Paul's
+  does and Luke's does not. And Aquinas, over what the believing of John 6:29
+  is: Aquinas concludes it is not bare trust, and John's case holds that it is.
+- **Aquinas and Luther defeat each other.** Luther concludes that justifying
+  faith is not faith formed by charity, which is Aquinas's premise. Neither
+  meets anyone else.
 - **Paul's gospel and Trent defeat each other**, over Trent's definition: the
   gospel line concludes that justification is not the renewal of the inward
   man, and both rest on something rated `disputed`.
@@ -136,26 +146,43 @@ dispute does not settle between Trent and the Reformed; it shows that Trent can
 keep its definition only as a claim about the reality and not about Paul's word,
 and it names the one step on which that claim turns.
 
-**An absence.** The dominical case is attacked by no one but Trent, because no
-source cited here argues that σῴζω at Luke 7:50 means healing. That absence is
-now also its rating: the premise is `wellSupported`, not `disputed`, because a
-search for a scholar arguing the healing sense *at 7:50* found none, and at 7:50
-there is no illness — the saying follows "your sins are forgiven". It is not
-`consensus`, because the same formula means "made you well" at Luke 8:48, 17:19
-and 18:42. A cited argument for the healing reading would attack the dominical
-case and lower the rating.
+**An absence.** Luke's case is attacked by no one but Trent, because no source
+cited here argues that "saved" (σῴζω) at Luke 7:50 means healed. That absence is
+also the premise's rating. It is `wellSupported`, not `disputed`: a search for a
+scholar arguing the healing sense *at 7:50* found none, and at 7:50 no one is
+ill — the saying follows "your sins are forgiven". Marshall's commentary on the
+Greek text, read for this page, says the same: the formula refers mainly to
+healing elsewhere in Luke, and is used here "in a case where physical healing is
+not involved". The rating is not `consensus`, because the same words mean "made
+you well" at Luke 8:48, 17:19 and 18:42. One older lexicon, Thayer's, lists 7:50
+with the healing uses without arguing it; it is not yet cited, and whether an
+unargued listing should lower the rating is an open question for the rating
+audit. A cited argument for the healing reading would attack Luke's case and
+lower the rating.
 
-**An objection answered in advance.** "Her sins are forgiven, for she loved
-much" (7:47) is the text a rival would use to make love, not faith, the ground
-of her forgiveness. The dominical case does not leave that open: it carries
-`luke7_47LoveIsEvidence` — her love is the evidence of forgiveness, not its
-ground, as 7:47b and the parable of 7:41–43 read it — as a premise of its own.
-It is Padilla's reading — she "loves much because she has been forgiven much" —
-and Melanchthon's in the *Apology of the Augsburg Confession*: "Christ
-interprets Himself when He adds: Thy faith hath saved thee", so the woman did
-not merit forgiveness "by that work of love". It is rated `plausible`, because
-Trent counts beginning to love God among the dispositions to justification
-(Session VI, ch. 6); but no party here argues that reading of 7:47.
+**An objection answered in advance.** "Her sins, which are many, are forgiven,
+for she loved much" (7:47) is the verse a rival would use to make love, not
+faith, the reason she was forgiven. Luke's case does not leave that open. It
+carries, as a premise of its own, that her love is the evidence of her
+forgiveness and not its cause (`luke7_47LoveIsEvidence`), as the second half of
+the verse and the parable of 7:41–43 suggest. Marshall argues this from the
+Greek: "for" (ὅτι) here means "as is evidenced by the fact that". Padilla reads
+it so — she "loves much because she has been forgiven much" — and so does
+Melanchthon in the *Apology of the Augsburg Confession*: "Christ interprets
+Himself when He adds: Thy faith hath saved thee", so the woman did not merit
+forgiveness "by that work of love". The premise is rated `disputed`. Marshall
+names those who read the love as the cause — Wellhausen, Creed, and most Roman
+Catholic commentators, Lagrange and Schürmann among them — and Trent counts
+beginning to love God among the dispositions to justification (Session VI, ch.
+6). None of them is a party here: no one in this dispute argues that reading of
+7:47, and none of those commentators is yet cited from his own work.
+
+**John changes no verdict.** John's case, Aquinas's reading of John 6:29 and
+Luther's answer to it entered this dispute after the verdicts below were first
+stated. Each of the three is in a standoff with a party rated no higher than
+itself, so nothing new is forced and nothing that was forced is lost. Without
+Trent, John's case is still not forced, because Aquinas's reading can be
+defended (`sola_fide_from_john_not_forced_without_trent`).
 
 **The parties chosen.** A dispute is over the arguments put into it. Hays's
 subjective genitive is represented through the apocalyptic reading, which holds
@@ -178,8 +205,8 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 
 Each party is an argument in its own right: premises that can hold together, a
 conclusion they deliver, and an inference someone has rated. The Reformed case
-enters as three parties, one per strand, because a dispute weighs arguments
-whole: one package holding all three strands would be defeated by a
+enters as four parties, one per strand, because a dispute weighs arguments
+whole: one package holding all four strands would be defeated by a
 contradiction of any one of them, and the redundancy the results prove would
 count for nothing. -/
 
@@ -235,6 +262,25 @@ def apostolicCase : ArgumentPackage Claim :=
     name := "Sola fide from Peter (Acts 15:9–11)"
     premises := caseOf [apostolicLine] (sharedGrounds ++ reformedOntology) closingSteps
     inferences := [trentAgainstFaithAlone] }
+
+/-- **John's case**: sola fide from Jesus' answer in John 6:28–29, argued alone.
+It holds the Reformed distinction between justification and sanctification, as
+Paul's and Peter's cases do, so Trent meets it on the same ground. Two
+inferences are rated: Calvin's step from John's "eternal life through
+believing" to justification, and the step to faith alone that Trent's canon 9
+denies. -/
+@[solaFideDefs]
+def johannineParty : ArgumentPackage Claim :=
+  { reformed with
+    name := "Sola fide from John (6:28–29)"
+    premises := caseOf [johannineLine] (sharedGrounds ++ reformedOntology) closingSteps
+    inferences := [trentAgainstFaithAlone, calvinOnJohnSix] }
+
+/-- **Aquinas on John 6:29**, as the argument he makes: the believing Jesus
+names is faith living through charity, so it is not bare trust. -/
+@[solaFideDefs]
+def aquinasCase : ArgumentPackage Claim :=
+  thomistLine.asPackage baseCite "the believing of John 6:29 is not bare trust"
 
 /-- The apocalyptic reading, as the argument it makes: faith is not the
 condition of justification. It keeps grace and "not by works", by its own
@@ -374,6 +420,24 @@ theorem jervellCase_establishes : Establishes jervellCase := by
 theorem jervellCase_is_satisfiable : Satisfiable jervellCase.premises := by
   satisfied_by lawObservantLukeReading [solaFideDefs]
 
+/-- John's case delivers sola fide. -/
+theorem johannineParty_establishes : Establishes johannineParty := by
+  establish [solaFideDefs]
+
+/-- Aquinas's case delivers its conclusion: the believing is not bare trust. -/
+theorem aquinasCase_establishes : Establishes aquinasCase := by
+  establish [solaFideDefs]
+
+/-- John's case can be held without contradiction: the Reformed world, in which
+every claim of the case holds. -/
+theorem johannineParty_is_satisfiable : Satisfiable johannineParty.premises := by
+  satisfied_by everythingHoldsReading [solaFideDefs]
+
+/-- Aquinas's case can be held without contradiction: his own world, in which
+the believing of John 6:29 is faith formed by charity and not bare trust. -/
+theorem aquinasCase_is_satisfiable : Satisfiable aquinasCase.premises := by
+  satisfied_by thomistReading [solaFideDefs]
+
 /-! ### Strength: every weakest link is `disputed`, but two
 
 Every party but two rests on something cited `disputed`, or denies an atom,
@@ -387,8 +451,10 @@ does not defeat it, and its attack on such a party does. -/
 on the Reformed distinction. -/
 theorem paulineCase_strength : paulineCase.strength = 0 := by decide
 /-- The dominical case rests on the Reformed distinction, cited `disputed`, and
-on an inference Trent's canon 9 denies. Its own two premises rank higher: σῴζω
-`wellSupported`, and the reading of 7:47 `plausible`. -/
+on an inference Trent's canon 9 denies. Of its own two premises, the sense of
+"saved" (σῴζω) is rated `wellSupported`; the reading of 7:47 is `disputed`,
+because Marshall names the commentators who read her love as the cause of her
+forgiveness. -/
 theorem dominicalCase_strength : dominicalCase.strength = 0 := by decide
 /-- The apostolic case rests on the yoke premise, cited `disputed`. -/
 theorem apostolicCase_strength : apostolicCase.strength = 0 := by decide
@@ -405,6 +471,15 @@ theorem jervellCase_strength : jervellCase.strength = 0 := by decide
 /-- Paul's gospel rests on its reading of Galatians and on the step from a
 verdict to "renewal is no part of justification", both cited `disputed`. -/
 theorem galatianGospel_strength : galatianGospel.strength = 0 := by decide
+/-- John's case rests on the Reformed distinction and on an inference Trent's
+canon 9 denies, both `disputed`. Its own reading, believing as trust, is
+`disputed` too: Aquinas denies it. -/
+theorem johannineParty_strength : johannineParty.strength = 0 := by decide
+/-- Aquinas's case rests on his reading of John 6:29, cited `disputed`: Calvin
+denies it. -/
+theorem aquinasCase_strength : aquinasCase.strength = 0 := by decide
+/-- Luther's answer rests on his step, which Aquinas denies. -/
+theorem lutherOnGalatians_strength : lutherOnGalatians.strength = 0 := by decide
 /-- **Paul's word does not rest on anything disputed.** The forensic sense and
 the rule of least meaning are `wellSupported`, Paul's own words for renewal are
 `consensus`, and so is no step: the step from them is `wellSupported`. Its
@@ -792,6 +867,12 @@ inductive Party
   /-- Romans 4:3–8, read for what Paul's word means: an exegetical route to the
   lexical case's conclusion. -/
   | romansOnTheWord
+  /-- Sola fide from Jesus' answer in John 6:28–29. -/
+  | johannine
+  /-- Aquinas, against reading the believing of John 6:29 as bare trust. -/
+  | aquinas
+  /-- Luther on Galatians 3:11–12, against faith formed by charity. -/
+  | luther
 deriving DecidableEq
 
 /-- The package each party argues from. -/
@@ -809,6 +890,9 @@ def partyNode : Party → ArgumentPackage Claim
   | .lexical => lexicalCase
   | .trentOnPaulsWord => tridentineOnPaulsWord
   | .romansOnTheWord => romansFourOnTheWord
+  | .johannine => johannineParty
+  | .aquinas => aquinasCase
+  | .luther => lutherOnGalatians
 
 /-- The dispute over sola fide: every party's premises have a model, every party
 establishes its conclusion, and every party's inferences are rated. -/
@@ -829,6 +913,9 @@ def solaFideDispute : Dispute Claim Party where
     | .lexical => lexicalCase_establishes
     | .trentOnPaulsWord => tridentineOnPaulsWord_establishes
     | .romansOnTheWord => romansFourOnTheWord_establishes
+    | .johannine => johannineParty_establishes
+    | .aquinas => aquinasCase_establishes
+    | .luther => luther_answers_aquinas_from_galatians
   rated i := by
     cases i <;> simp [solaFideDefs, Line.asPackage]
 
@@ -900,6 +987,16 @@ def partyDefeats : Party → Party → Prop
   | .trentOnPaulsWord, .dominical => True
   | .trentOnPaulsWord, .apostolic => True
   | .trentOnPaulsWord, .apocalyptic => True
+  | .trent, .johannine => True
+  | .johannine, .trent => True
+  | .trentOnPaulsWord, .johannine => True
+  | .johannine, .trentOnPaulsWord => True
+  | .apocalyptic, .johannine => True
+  | .johannine, .apocalyptic => True
+  | .aquinas, .johannine => True
+  | .johannine, .aquinas => True
+  | .luther, .aquinas => True
+  | .aquinas, .luther => True
   | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
@@ -926,38 +1023,54 @@ theorem partyNode_strength : ∀ i, (partyNode i).strength = partyStrength i
   | .lexical => lexicalCase_strength
   | .trentOnPaulsWord => tridentineOnPaulsWord_strength
   | .romansOnTheWord => romansFourOnTheWord_strength
+  | .johannine => johannineParty_strength
+  | .aquinas => aquinasCase_strength
+  | .luther => lutherOnGalatians_strength
 
 prepare_parts solaFideDisputeParts for solaFideDispute
 
-/-- The first six rows of the table, computed from the parties' premises and
-checked by the kernel. The table is split in two only so that each declaration
+/-- The first five rows of the table, computed from the parties' premises and
+checked by the kernel. The table is split in three only so that each declaration
 stays within the heartbeat budget. -/
 private theorem solaFideDispute_defeats_first (i : Party)
-    (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
+    (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
   refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
     (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
     (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
     (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
+  rcases hi with rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
-/-- The other six rows. -/
+/-- The next five rows. -/
 private theorem solaFideDispute_defeats_second (i : Party)
-    (hi : i ∈ [.critics, .jervell, .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord])
+    (hi : i ∈ [.sanders, .critics, .jervell, .gospel, .lexical])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
   refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
     (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
     (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
     (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
+  rcases hi with rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
-/-- **Who defeats whom**, all 144 pairs. Trent and each Reformed strand defeat
+/-- The last five rows. -/
+private theorem solaFideDispute_defeats_third (i : Party)
+    (hi : i ∈ [.trentOnPaulsWord, .romansOnTheWord, .johannine, .aquinas, .luther])
+    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
+  refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
+    (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
+    (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
+    (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
+  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
+  rcases hi with rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
+
+/-- **Who defeats whom**, all 225 pairs. Trent and each Reformed strand defeat
 each other. The apocalyptic reading and Paul defeat each other; it and Luke's
 and Acts' cases do not conflict; it and Trent defeat each other. Sanders defeats
 Paul and the critics, and both defeat him back. Jervell and Acts defeat each
 other. Paul's gospel and Trent defeat each other, over Trent's definition.
+John's case meets Trent, the apocalyptic reading and Aquinas, each both ways,
+and Aquinas and Luther defeat each other.
 Trent read as a claim about Paul's word meets everyone Trent meets, both ways,
 and two parties more: Paul's word defeats it, lexically and from Romans 4, and it
 defeats neither back — its replies are weighed and fail. Nothing else.
@@ -973,20 +1086,22 @@ theorem solaFideDispute_defeats :
   all_goals first
     | (refine solaFideDispute_defeats_first _ ?_ j; decide)
     | (refine solaFideDispute_defeats_second _ ?_ j; decide)
+    | (refine solaFideDispute_defeats_third _ ?_ j; decide)
 
 /-- The dispute in the form the verdict solver computes with: every party, and
 the table. -/
 def solaFideFinite : Solver.Finite solaFideDispute.defeats where
   parties :=
     [ .pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders, .critics, .jervell
-    , .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord ]
+    , .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord, .johannine, .aquinas
+    , .luther ]
   complete i := by cases i <;> decide
   defeats i j := decide (partyDefeats i j)
   spec i j := by rw [solaFideDispute_defeats]; simp
 
 /-! ### The dispute as a graph -/
 
-/-- **Nothing supports anything** in the sola fide dispute, in all 144 pairs: no
+/-- **Nothing supports anything** in the sola fide dispute, in all 225 pairs: no
 party's conclusion entails a claim another rests on. The critics' conclusion
 used to be one of Paul's premises; now the Pauline case rests on the critics'
 whole line instead (`paulineCase`), and the relation is the stronger one
@@ -1009,7 +1124,7 @@ def partyPartOf : Party → Party → Prop
 instance : DecidableRel partyPartOf := fun i j => by
   cases i <;> cases j <;> unfold partyPartOf <;> infer_instance
 
-/-- **Whose case is part of whose**, all 144 pairs: the critics' case is part of
+/-- **Whose case is part of whose**, all 225 pairs: the critics' case is part of
 Paul's, since the Pauline case derives its ἔργα νόμου premise from the critics'
 line; Trent's case is part of Trent's read as a claim about Paul's word, which
 only adds to it; and every case is part of itself. Nothing else. Every cell is
@@ -1034,15 +1149,17 @@ defeats either route to Paul's word, so both come first; and nothing joins them,
 because every other party has an attacker that Paul's word does not rule out —
 each Reformed strand has Trent, Trent has Paul's case, the apocalyptic reading
 has Paul's case, Sanders has the critics and the critics Sanders, Jervell has
-Peter's case, Paul's gospel has Trent, and Trent read as a claim about Paul's
-word has Paul's word itself. Some of these are standoffs, not losses: Paul's
+Peter's case, Paul's gospel has Trent, Aquinas has Luther and Luther Aquinas,
+and Trent read as a claim about Paul's word has Paul's word itself. Some of
+these are standoffs, not losses: Paul's
 gospel answers Trent as Trent answers it. -/
 def onlyPaulsWordUnanswered : Verdict solaFideDispute where
   finite := solaFideFinite
   claim := .groundedExactly [[.lexical, .romansOnTheWord]]
     [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
     , (.apocalyptic, .pauline), (.sanders, .critics), (.critics, .sanders)
-    , (.jervell, .apostolic), (.gospel, .trent), (.trentOnPaulsWord, .lexical) ]
+    , (.jervell, .apostolic), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
+    , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas) ]
   checked := by decide +kernel
 
 /-- **Only Paul's word prevails outright.** The grounded extension — what the
@@ -1170,7 +1287,7 @@ def lukeStandsWithPeter : Verdict solaFideDispute where
   checked := by decide +kernel
 
 /-- **Luke's case can be defended.** "Your faith has saved you", read as Luke
-says it, stands in six of the dispute's eight maximal defensible positions. Its
+says it, stands with every party but Trent, however Trent is read. Its
 only defeater is Trent, read or unread, over what justification is: Trent's
 definition denies that faith without charity suffices, and Luke's words say her
 faith saved her. It defeats Trent back, and conflicts with no other party. -/

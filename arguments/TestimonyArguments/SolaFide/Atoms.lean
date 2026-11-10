@@ -5,7 +5,7 @@ import Testimony.Scripture
 /-!
 # TestimonyArguments.SolaFide.Atoms — the atomic claims
 
-The prooftexts of the three strands, their four disputed premises, the reading
+The prooftexts of the four strands, their five disputed premises, the reading
 of Galatians as a polemic, the authorship of the disputed letters, the rivals'
 premises — covenantal nomism, forensic justification, the apocalyptic reading —
 the James premises, and the three parts of the conclusion. See

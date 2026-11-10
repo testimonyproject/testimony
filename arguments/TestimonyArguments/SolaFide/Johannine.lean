@@ -4,93 +4,117 @@ import Testimony.Logic.Because
 /-!
 # TestimonyArguments.SolaFide.Johannine — "this is the work of God, that you believe"
 
-A fourth strand for sola fide, from John's Gospel, encoded on its own. Asked
-what they must do "to be doing the works of God", the crowd is told: "This is
-the work of God, that you believe in him whom he has sent" (John 6:28–29). The
-question of works is put to Jesus in terms, and he answers with believing. The
-Gospel says the same throughout: eternal life, and passing out of judgement,
-through believing in the Son (3:16–18, 3:36, 5:24), and it states its own
-purpose in those terms (20:31).
+The fourth strand of sola fide comes from John's Gospel. A crowd asks Jesus,
+"What must we do, to be doing the works of God?" He answers: "This is the work
+of God, that you believe in him whom he has sent" (John 6:28–29). The question
+is about works, and the answer is believing.
 
-## The hinge: what believing is
+John says the same elsewhere. Whoever believes in the Son has eternal life and
+does not come into judgement (3:16–18, 3:36, 5:24), and the Gospel gives this as
+its own purpose: "that by believing you may have life in his name" (20:31).
 
-Both sides grant the verse. What divides them is what its believing is.
+## What both sides grant, and where they part
 
-- **Calvin** reads it as trust. Christ calls faith a work only improperly:
-  faith "brings nothing to God, but, on the contrary, places man before God as
-  empty and poor, that he may be filled with Christ", and "bestows on man no
-  other righteousness than that which he receives from Christ". It is "a
-  passive work, to which no reward can be paid".
-- **Aquinas** reads it as faith formed by charity. Paul distinguishes faith
-  "only from external works"; to believe *in* him (*in illum*), as one's end,
-  "is proper to faith living through the love of charity", and faith so living
-  "is the principle of all our good works" (*Super Ioannem* 6, lect. 3, n. 901).
-  That is Trent's account of justifying faith (Session VI, ch. 7): faith
-  without hope and charity "neither unites man perfectly with Christ, nor makes
-  him a living member of His body".
+Nobody in this dispute denies the verse. They differ on what its believing is.
 
-So the strand has the same shape as the others: shared texts, and a reading on
-which everything turns. Grant Aquinas his reading and the texts no longer
-deliver faith alone (`johannine_strand_rests_on_believing_as_trust`).
+- **Calvin** reads it as trust. Christ calls faith a work only loosely: faith
+  "brings nothing to God, but, on the contrary, places man before God as empty
+  and poor, that he may be filled with Christ". It is "a passive work, to which
+  no reward can be paid".
+- **Aquinas** reads it as faith formed by charity, that is, faith made alive by
+  love. He takes Paul to distinguish faith "only from external works", so that
+  believing is itself an inward work. To believe *in* him, as the goal one
+  moves toward, "is proper to faith
+  living through the love of charity", and such faith "is the principle of all
+  our good works" (*Super Ioannem* 6, lect. 3, n. 901). The Council of Trent
+  describes justifying faith the same way: without hope and charity, faith
+  "neither unites man perfectly with Christ, nor makes him a living member of
+  His body" (Session VI, ch. 7).
 
-## John has no word for justification
+So this strand has the shape of the other three: texts everyone accepts, and
+one reading on which the conclusion turns. On Calvin's reading John supplies
+faith alone without the readings the other strands depend on
+(`johannine_strand_establishes`).
+On Aquinas's it does not (`johannine_strand_rests_on_believing_as_trust`).
 
-δικαιόω does not occur in John. The strand's step therefore runs from eternal
-life through believing to justification by faith alone, and that is an
-inference, not a reading of a word. It is cited to Calvin, whose comment on 6:29
-speaks of the righteousness faith receives from Christ, and rated `plausible`:
-no cited source grants the strand's grounds and denies that step, but none argues
-the bridge from John's vocabulary to Paul's at length either.
+## John has no word for "justify"
 
-## Luther's answer, from Galatians 3
+Paul's verb for "justify" (δικαιόω) does not occur in John's Gospel. So the
+strand has to step from "eternal life through believing" to "justified by faith
+alone", and that step is an inference, not the meaning of a word. It is cited to
+Calvin, whose comment on 6:29 speaks of the righteousness faith receives from
+Christ. It is rated `plausible`. No cited source accepts the strand's premises
+and rejects the step, but no cited source argues the step at length either.
 
-Aquinas's reading is not left standing unanswered. Luther meets it head-on in
-his lectures on Galatians. At 3:11: "The scholastics misconstrue this passage by
-saying: 'The just shall live by faith, if it is a working faith, or a faith
-formed and performed by charitable works.' … To speak of formed or unformed
-faith, a sort of double faith, is contrary to the Scriptures." At 3:12: "Does
-not the Law command charity? … If the law requires charity, charity is part of
-the Law and not of faith." So a faith that justifies because charity forms it
-justifies by the law after all — and "the law is not of faith" (Galatians 3:12).
+## Luther's answer to Aquinas
 
-The argument is encoded as a line of its own (`lutherLine`). Its grounds are
-both things Aquinas grants: the text of Galatians 3:11–12, and that love of God
-and neighbour is what the law commands (Deuteronomy 6:5). Its step is Luther's:
-from those, the believing that justifies is not faith formed by charity.
-Granted the step, Aquinas's reading of John 6:29 falls
-(`luther_answers_aquinas_from_galatians`). But the step is the whole of the
-answer: the texts alone do not exclude his reading
-(`luther_answer_rests_on_his_step`), and the step is rated `disputed`, because
-Aquinas grants both of its grounds and denies its conclusion. Nor does removing
-Aquinas's reading establish Calvin's: that the believing of 6:29 is not formed
-by charity is weaker than that it is trust.
+Luther, in his own lectures on Galatians, answers the reading Aquinas gives of
+John 6:29. He names "the scholastics", not Aquinas; the faith formed by charity
+that he attacks is the reading Aquinas gives. On 3:11:
+"The scholastics misconstrue this passage by saying: 'The just shall live by
+faith, if it is a working faith, or a faith formed and performed by charitable
+works.' … To speak of formed or unformed faith, a sort of double faith, is
+contrary to the Scriptures." On 3:12: "Does not the Law command charity? … If
+the law requires charity, charity is part of the Law and not of faith."
 
-Calvin makes the neighbouring argument in the *Institutes* (III.xi.19), which
-the library already cites for `worksOfLawMeansWorksGenerally`: against those
-who "pretend that the works excluded are ceremonial, not moral works", he cites
-Galatians 3:10 and 3:12 — the curse on everyone who does not continue in *all*
-that the law commands — and concludes that "the whole Law is spoken of when the
-power of justifying is denied to it". Aquinas's distinction is between
-external and inward works rather than ceremonial and moral ones, so it is
-Luther's argument on 3:11–12, not Calvin's, that meets him directly.
+His argument runs: love is what the law commands, and "the law is not of faith"
+(Galatians 3:12), so a faith that justifies because love forms it would justify
+by the law after all.
 
-The Catholic reply rests on Galatians 5:6, "faith working through love", which
-Trent cites (Session VI, ch. 7). How Luther and Calvin read that verse is not
-yet encoded.
+The argument is encoded as a line of its own (`lutherLine`). Its two starting
+points are ones Aquinas accepts: the text of Galatians 3:11–12, and that love of
+God and neighbour is what the law commands (Deuteronomy 6:5). The step from them
+is Luther's. Grant the step, and Aquinas's reading of John 6:29 falls
+(`luther_answers_aquinas_from_galatians`). Without the step the texts do not
+exclude his reading (`luther_answer_rests_on_his_step`). The step is rated
+`disputed`, because Aquinas accepts both starting points and rejects the
+conclusion. His reason for rejecting it is not yet cited here.
 
-## What is not yet done
+Two limits. Removing Aquinas's reading does not establish Calvin's: "not formed
+by charity" is a weaker claim than "trust". And the Catholic reply rests on
+Galatians 5:6, "faith working through love", which Trent cites (Session VI,
+ch. 7). How Luther and Calvin read that verse is not yet encoded.
 
-The strand is encoded alone, as a package of its own. It is **not** yet part of
-`reformed` or of the sola fide dispute, and that is deliberate. Adding a fourth
-strand to `reformed` changes the joint results — no premise removed from the
-other three strands defeats sola fide while John's strand stands — and a
-Johannine party in `Dispute.lean` changes the defeat table. Both are the next
-step, tracked in issue #86, and every statement elsewhere that sola fide "runs
-on three strands" remains true of `reformed` until then.
+Calvin makes a neighbouring argument in the *Institutes* (III.xi.19), against
+those who "pretend that the works excluded are ceremonial, not moral works". He
+cites Galatians 3:10 and 3:12 and concludes that "the whole Law is spoken of
+when the power of justifying is denied to it". That answers those who say Paul
+excludes only ceremonial works. Aquinas does not say that. He says believing is
+an inward work, formed by love. So Luther's argument, and not Calvin's, is the
+one that addresses him.
 
-Nor does it encode the obedience reading of 3:36, where the opposite of the one
-who believes is the one who "does not obey" (ἀπειθῶν): no source arguing that
-Johannine faith therefore includes obedience has been verified yet.
+## Where the strand stands in the whole dispute
+
+The strand is one of the four strands of the Reformed case, and John's case,
+Aquinas's and Luther's are parties to the sola fide dispute. Three things are
+checked.
+
+- **John supplies "through faith" without the other three strands.** Leave out
+  the disputed readings in Paul, Luke and Acts. Keep what every strand shares:
+  the verses on grace and works, and the answer to James. Sola fide still
+  follows, with John 6:28–29 as the only route to faith
+  (`johannine_strand_survives_the_other_three`).
+- **John's disputed reading is not one the whole case depends on.** Grant
+  Aquinas his reading of 6:29, keep the other three strands, and sola fide still
+  follows (`believing_as_trust_not_load_bearing`).
+- **John's case is not forced, and neither is any rival.** John's case and
+  Aquinas's each defeat the other, that is, each contradicts the other and
+  neither is better supported. So do Aquinas's and Luther's, John's and Trent's,
+  and John's and the apocalyptic reading's. Each pair is a tie, because each
+  side rests on a premise rated `disputed`.
+
+## What is not encoded
+
+At John 3:36 the opposite of "whoever believes" is, in Greek, "whoever does not
+obey" (ὁ ἀπειθῶν). A reader could argue from that word that believing in John
+includes obeying. No source that argues this from the word has been read and
+verified. What has been found points the other way on the word and the same way
+on the doctrine. Westcott's commentary and the older lexica take the word as
+unbelief shown in action. Chrysostom, preaching on this verse, denies that
+believing is enough without a right life, but he argues from Matthew 7:21 and
+not from the verb. Neither is cited here yet, and the modern commentaries
+(Brown, Schnackenburg, Barrett, Carson) have not been read. Until they are, this
+reading is absent, and its absence is not evidence that nobody holds it.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -101,16 +125,6 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
 /-! ### The lines -/
 
-/-- Calvin's step from John to justification. John has no δικαιόω, so the
-bridge from eternal life through believing to justification by faith alone is
-an inference of its own. Rated `plausible`: no cited source grants the strand's
-grounds and denies the step, but the bridge rests on Calvin's comment rather
-than on an argument from John's vocabulary. -/
-def calvinOnJohnSix : Source :=
-  { primary := .work calvinJohn (.adLoc john6_29)
-  , tradition := .reformedProtestant
-  , confidence := .plausible }
-
 /-- Aquinas's step: faith living through charity is not bare trust. Rated
 `consensus`: Calvin concedes it — his trust is precisely a faith that brings
 nothing — and the two divide over the premise, not the inference. -/
@@ -118,25 +132,6 @@ def aquinasOnFormedFaith : Source :=
   { primary := .work aquinasJohn (.sectionRef "cap. 6, lect. 3, n. 901")
   , tradition := .romanCatholic
   , confidence := .consensus }
-
-/-- **The Johannine strand.** From the work God requires (6:28–29), and eternal
-life through believing (3:16–18, 3:36, 5:24, 20:31), to justification by faith
-alone — by way of the reading of that believing as trust. -/
-@[solaFideDefs]
-def johannineToFaithAlone : Formula Claim :=
-  ⋀ [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust]
-    ➝ p .justificationByFaithAlone
-
-/-- The Johannine line. Its texts are its own grounds, not shared prooftexts,
-because the strand is not yet part of `reformed`. -/
-@[solaFideDefs]
-def johannineLine : Line Claim :=
-  { name := "Johannine strand (John 6:29)"
-  , grounds :=
-      [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust]
-  , step := johannineToFaithAlone
-  , delivers := p .justificationByFaithAlone
-  , inference := some calvinOnJohnSix }
 
 /-- **Aquinas's line.** The believing of 6:29 is faith living through charity,
 and so not the bare trust the strand needs. The denial is derived, not assumed:
@@ -174,9 +169,14 @@ def thomistOnJohn : ArgumentPackage Claim :=
 
 /-! ### Results -/
 
-/-- **John alone delivers sola fide.** Grant that the believing of 6:29 is
-trust, and the work God requires is no work at all: sola fide follows from John
-without Paul, Luke or Acts. -/
+/-- **John's strand, argued alone, delivers sola fide.** Grant that the
+believing of 6:29 is trust, and the work God requires is believing, which earns
+nothing. Sola fide then follows without the readings Paul's, Luke's and Peter's
+strands depend on.
+
+What this does not claim: that John 6:29 is the only text used. Grace and "not
+by works" come from the verses every strand shares and from the answer to
+James. -/
 @[headline]
 theorem johannine_strand_establishes : Establishes johannineCase := by
   establish [solaFideDefs]
@@ -205,6 +205,45 @@ theorem johannine_strand_rests_on_believing_as_trust : ¬ Establishes thomistOnJ
   refute_with thomistReading [solaFideDefs]
 
 #print axioms johannine_strand_rests_on_believing_as_trust
+
+/-- The Reformed case with Aquinas granted his reading of John 6:29: the
+believing is faith formed by charity, and so not bare trust. The other three
+strands are kept whole. -/
+@[solaFideDefs]
+def reformedGrantingAquinasOnJohn : ArgumentPackage Claim :=
+  { reformed with
+    name := "Reformed, granting Aquinas on John 6:29"
+    premises :=
+      caseOf [paulineLine, dominicalLine, apostolicLine, johannineWithoutTrust, thomistLine]
+        sharedGrounds closingSteps }
+
+/-- **The reading of believing as trust is not one the whole case depends on.**
+Grant Aquinas that the believing of John 6:29 is faith formed by charity, keep
+Paul, Luke and Acts as the Reformed read them, and sola fide still follows.
+
+What this claims: losing the argument over John 6:29 costs the Reformed case one
+strand and not its conclusion. What it does not claim: that Aquinas would accept
+the rest. He would not, and the package is not his position; it is the Reformed
+case with one concession made. -/
+@[headline]
+theorem believing_as_trust_not_load_bearing : Establishes reformedGrantingAquinasOnJohn := by
+  establish [solaFideDefs]
+
+#print axioms believing_as_trust_not_load_bearing
+
+/-- The Reformed world with one concession: the believing of John 6:29 is not
+bare trust, and everything else holds. -/
+def concedingJohnReading : Valuation Claim := fun a =>
+  match a with
+  | .johannineBelievingIsTrust => False
+  | _ => True
+
+/-- That package can be held without contradiction, so
+`believing_as_trust_not_load_bearing` is not true merely because its premises
+could never all hold. -/
+theorem reformedGrantingAquinasOnJohn_is_satisfiable :
+    Satisfiable reformedGrantingAquinasOnJohn.premises := by
+  satisfied_by concedingJohnReading [solaFideDefs]
 
 /-- The Johannine case has a model, so `johannine_strand_establishes` is not
 vacuous. -/

@@ -31,15 +31,18 @@ natural question for a Protestant reader, and the answer is more interesting
 than yes. Heard without Trent (`withoutTrent`), four things are forced: Paul's
 word, by both routes; Paul's gospel — justification is not the renewal of the
 inward man; and Luke's "your faith has saved you" — faith suffices. But sola fide
-itself, *faith alone*, is still not forced, from Paul or from Peter. What stops
-it is not Rome. It is three disputes inside modern Pauline scholarship:
+itself, *faith alone*, is still not forced, from Paul, from Peter or from John.
+What stops it is not Rome. It is three disputes inside modern New Testament
+scholarship, and one older one:
 
 - Campbell's apocalyptic reading takes πίστις Χριστοῦ as Christ's own
   faithfulness, and meets Paul over the genitive;
 - Sanders and Dunn read ἔργα νόμου as Israel's boundary markers, and the
   critics who answer them are answered back;
 - Jervell reads the yoke of Acts 15 as something other than the law as a
-  condition of salvation, and meets Peter's case.
+  condition of salvation, and meets Peter's case;
+- Aquinas reads the believing of John 6:29 as faith formed by charity, and
+  meets John's case. Luther answers him from Galatians 3, and is answered back.
 
 Each of those is a question about what a text says, and each is where the
 literature has it. Setting Rome aside does not make them go away.
@@ -61,9 +64,10 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 
 /-! ### The Reformation dispute, on its own -/
 
-/-- The parties of the sixteenth-century dispute: the three Reformed strands,
-Paul's gospel, Paul's word by both routes, and Trent, read and unread. Not
-heard: the apocalyptic reading, Sanders and his critics, and Jervell. -/
+/-- The parties of the sixteenth-century dispute: the four Reformed strands,
+Paul's gospel, Paul's word by both routes, Trent, read and unread, and the
+exchange over John 6:29 between Aquinas and Luther. Not heard: the apocalyptic
+reading, Sanders and his critics, and Jervell. -/
 abbrev reformationAlone :=
   solaFideDispute.restrict (· ∉ [Party.apocalyptic, .sanders, .critics, .jervell])
 
@@ -81,7 +85,8 @@ def reformationSettlesTheWord : Verdict reformationAlone where
   claim := .groundedExactly [Witness.listSub _ [.lexical, .romansOnTheWord]]
     (Witness.Table.sub _
       [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent)
-      , (.trent, .pauline), (.gospel, .trent), (.trentOnPaulsWord, .lexical) ])
+      , (.trent, .pauline), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
+      , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas) ])
   checked := by decide +kernel
 
 /-- **What the Reformation dispute forces: Paul's word, and nothing else.** Heard
@@ -152,15 +157,17 @@ abbrev withoutTrentFinite := solaFideFinite.restrict (· ∉ [Party.trent, .tren
 /-- What is settled without Trent: nothing now defeats Luke's case, Paul's
 gospel, or either route to Paul's word, so all four come first; and nothing
 joins them. Paul's case is defeated by the apocalyptic reading, Peter's by
-Jervell, Sanders by the critics and the critics by Sanders, the apocalyptic
-reading by Paul, and Jervell by Peter. -/
+Jervell, John's by Aquinas, Sanders by the critics and the critics by Sanders,
+the apocalyptic reading by Paul, Jervell by Peter, Aquinas by Luther and Luther
+by Aquinas. -/
 def withoutTrentSettles : Verdict withoutTrent where
   finite := withoutTrentFinite
   claim := .groundedExactly
     [Witness.listSub _ [.dominical, .gospel, .lexical, .romansOnTheWord]]
     (Witness.Table.sub _
       [ (.pauline, .apocalyptic), (.apostolic, .jervell), (.apocalyptic, .pauline)
-      , (.sanders, .critics), (.critics, .sanders), (.jervell, .apostolic) ])
+      , (.sanders, .critics), (.critics, .sanders), (.jervell, .apostolic)
+      , (.johannine, .aquinas), (.aquinas, .luther), (.luther, .aquinas) ])
   checked := by decide +kernel
 
 /-- **Without Trent, four things are forced.** Luke 7:50 — faith suffices; Paul's
@@ -209,13 +216,40 @@ def peterAnsweredByJervell : Verdict withoutTrent where
 Acts 15 — the yoke is not the law as a condition of salvation — and cannot hold
 Peter's case with it. So without Trent, faith is forced to suffice (Luke), and
 justification forced not to be renewal (Paul's gospel), but *faith alone* still
-turns on three questions of exegesis: the genitive, the works of the law, and
-the yoke. -/
+turns on questions of exegesis: the genitive, the works of the law, the yoke,
+and, for John, what believing is
+(`sola_fide_from_john_not_forced_without_trent`). -/
 @[headline]
 theorem sola_fide_from_peter_not_forced_without_trent :
     ¬ SkepticallyAccepted withoutTrent.defeats ⟨.apostolic, by decide⟩ :=
   peterAnsweredByJervell.holds
 
 #print axioms sola_fide_from_peter_not_forced_without_trent
+
+/-- Why John's case for sola fide is not forced without Trent: a defensible
+position holds Aquinas, and he defeats it over what believing is. -/
+def johnAnsweredByAquinas : Verdict withoutTrent where
+  finite := withoutTrentFinite
+  claim := .notSkeptical ⟨.johannine, by decide⟩ ⟨.aquinas, by decide⟩
+    (Witness.listSub _ [.aquinas, .dominical, .gospel, .lexical, .romansOnTheWord])
+  checked := by decide +kernel
+
+/-- **Nor from John.** Remove both of Trent's parties from the hearing: its
+case, and its definition read as a claim about Paul's word. Aquinas remains, and
+Trent describes justifying faith as he does: the believing Jesus names in John
+6:29 is faith formed by charity, not bare trust. A reader can hold Aquinas's
+reading consistently and answer every objection raised here. John's case cannot
+be held with it.
+
+What this claims: without the Council, John 6:29 still does not compel faith
+alone, because what believing is remains contested. What it does not claim: that
+Aquinas's reading wins. John's case can be held just as consistently. Luther's
+argument and Aquinas's each defeat the other, and neither is removed. -/
+@[headline]
+theorem sola_fide_from_john_not_forced_without_trent :
+    ¬ SkepticallyAccepted withoutTrent.defeats ⟨.johannine, by decide⟩ :=
+  johnAnsweredByAquinas.holds
+
+#print axioms sola_fide_from_john_not_forced_without_trent
 
 end TestimonyArguments.SolaFide

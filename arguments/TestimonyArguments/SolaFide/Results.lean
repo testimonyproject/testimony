@@ -7,11 +7,13 @@ import Testimony.Logic.Tactic
 Entailments are established with `establish`; refutations name a countermodel —
 the rival's own reading, written down as a valuation — and use `refute_with`.
 
-`lexical_premises_jointly_load_bearing` is the result the encoding exists to
-make possible: no strand's disputed premise carries the argument, and only
-removing one from every strand defeats it.
-`apostolic_strand_survives_paul_and_luke` records what the third strand changed:
-the two disputes that used to be jointly decisive are no longer enough.
+The central result is `lexical_premises_jointly_load_bearing`. The argument
+needs at least one strand's disputed reading, and does not need any particular
+one.
+
+`apostolic_strand_survives_paul_and_luke` and
+`johannine_strand_survives_the_other_three` show that Acts and John each reach
+the conclusion with the other strands' disputed readings left out.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -80,19 +82,47 @@ theorem sozo_not_load_bearing : Establishes reformedWithoutSozo := by
 
 #print axioms sozo_not_load_bearing
 
-/-- **The two disputes that used to decide the argument no longer do.** Deny
-both the ἔργα νόμου premise and the dominical premise — the pair whose joint
-removal defeated sola fide before Acts 15 was encoded — and the conclusion
-still follows, by Peter's speech at Jerusalem.
+/-- **Acts supplies "through faith" with the other strands' disputed readings
+left out.** Leave out the reading of "works of the law" in Paul, of "saved" in
+Luke 7:50, and of believing in John 6:29; that is, assume none of them either
+way. Keep what every strand shares: the verses on grace and works, and the
+answer to James. Sola fide still follows, with Peter's speech at Jerusalem
+(Acts 15:7–11) as the only route to faith.
 
-This is the change the third strand makes, stated as a result rather than
-left to be inferred from the absence of an old one. -/
+What this claims: Peter's strand does not lean on any of the other three
+disputes. What it does not claim: that Peter's strand is beyond dispute, or
+that Acts 15 is the only text used. The strand rests on its own disputed
+reading, of the yoke at 15:10. The result's name is older than the strand from
+John; John's reading is left out as well. -/
 @[headline]
 theorem apostolic_strand_survives_paul_and_luke :
-    Establishes reformedWithoutWorksOfLawOrSozo := by
+    Establishes reformedRestingOnActs := by
   establish [solaFideDefs]
 
 #print axioms apostolic_strand_survives_paul_and_luke
+
+/-- **John supplies "through faith" with the other strands' disputed readings
+left out.** Leave out the reading of "works of the law" in Paul, of "saved" in
+Luke 7:50, and of the yoke in Acts 15:10; that is, assume none of them either
+way. Keep what every strand shares: the verses on grace and works, and the
+answer to James. Sola fide still follows, with Jesus' answer in John 6:29 as
+the only route to faith: "This is the work of God, that you believe in him whom
+he has sent."
+
+What this claims: a reader who wins the disputes over Paul, Luke and Acts has
+not yet answered John. What it does not claim: that John's strand is beyond
+dispute, or that John 6:29 is the only text used. Grace and "not by works" still
+come from the shared verses and the answer to James. The strand rests on
+reading that believing as trust, which Aquinas denies
+(`johannine_strand_rests_on_believing_as_trust`), and on a step from "eternal
+life through believing" to "justified by faith alone" that is rated
+`plausible`. -/
+@[headline]
+theorem johannine_strand_survives_the_other_three :
+    Establishes reformedRestingOnJohn := by
+  establish [solaFideDefs]
+
+#print axioms johannine_strand_survives_the_other_three
 
 /-- The objective genitive is not load-bearing for sola fide as a whole. Grant
 Hays that πίστις Χριστοῦ is Christ's own faithfulness, keep everything else,
@@ -117,29 +147,39 @@ theorem acts15Yoke_not_load_bearing : Establishes lawObservantLuke := by
 
 #print axioms acts15Yoke_not_load_bearing
 
-/-- A reading on which no strand's disputed premise holds: Paul's phrase is
-about boundary markers, Jesus' σέσωκέν σε is about healing, and Peter's yoke is
-Israel's law for gentiles. -/
+/-- A reading on which no strand's disputed premise holds. Paul's "works of the
+law" are the boundary markers. Jesus' "your faith has saved you" at Luke 7:50 is
+about healing. Peter's yoke is Israel's law laid on gentiles. And the believing
+of John 6:29 is not bare trust. Every text stands; faith is not said to be
+enough. -/
 def neitherLexicalReading : Valuation Claim := fun a =>
   match a with
   | .worksOfLawMeansWorksGenerally => False
   | .sozoIsSoteriological => False
   | .acts15YokeIsLawAsCondition => False
+  | .johannineBelievingIsTrust => False
   | .justificationByFaithAlone => False
   | .faithIsSufficient => False
   | .salvationThroughFaith => False
   | _ => True
 
-/-- **The result worth having.** No strand's disputed premise carries the
-argument alone, but together they do: remove the ἔργα νόμου premise from Paul,
-σῴζω from Luke and the yoke from Acts, and sola fide no longer follows, with
-everything else retained.
+/-- **Sola fide fails to follow only when every strand loses its disputed
+reading.** Remove one disputed reading from each strand — "works of the law" as works in
+general from Paul, "saved" as salvation from Luke 7:50, the yoke as the law as a
+condition of salvation from Acts 15, believing as trust from John 6:29 — and
+keep everything else. Sola fide no longer follows. Remove fewer, and a strand
+that still has its reading reaches the conclusion.
 
-So the Reformation's material principle, as encoded here, does not hang on the
-sense of Paul's ἔργα νόμου. It hangs on that, *or* on the sense of Jesus'
-σέσωκέν σε, *or* on Peter's yoke — and an opponent must defeat all three. The
-same holds with the πίστις Χριστοῦ premise in place of ἔργα νόμου; see
-`pistisChristou_jointly_load_bearing`. -/
+So the argument, as encoded here, does not hang on the meaning of Paul's "works
+of the law". It hangs on that, *or* on Luke's "saved", *or* on Peter's yoke,
+*or* on John's "believe". Someone who denies sola fide has to answer all four.
+The same holds with "faith of Christ" (πίστις Χριστοῦ) in place of "works of the
+law"; see `pistisChristou_jointly_load_bearing`.
+
+What this does not claim: that the four are independent in practice. A reader
+who takes "works of the law" as boundary markers will usually read Peter's yoke
+the same way. The result shows that four separate premises would each have to
+be denied. It does not show that four separate groups of scholars deny them. -/
 @[headline]
 theorem lexical_premises_jointly_load_bearing :
     ¬ Establishes reformedWithoutEveryStrandsPremise := by
@@ -147,21 +187,23 @@ theorem lexical_premises_jointly_load_bearing :
 
 #print axioms lexical_premises_jointly_load_bearing
 
-/-- A reading on which Galatians 2:16 names Christ's faithfulness rather than
-faith in Christ, Jesus' σέσωκέν σε is about healing, and Peter's yoke is
-Israel's law for gentiles. -/
+/-- A reading on which Galatians 2:16 names Christ's own faithfulness and not
+faith in Christ, Jesus' "your faith has saved you" is about healing, Peter's
+yoke is Israel's law laid on gentiles, and the believing of John 6:29 is not
+bare trust. -/
 def neitherPistisNorSozoReading : Valuation Claim := fun a =>
   match a with
   | .pistisChristouObjective => False
   | .sozoIsSoteriological => False
   | .acts15YokeIsLawAsCondition => False
+  | .johannineBelievingIsTrust => False
   | .justificationByFaithAlone => False
   | .faithIsSufficient => False
   | .salvationThroughFaith => False
   | _ => True
 
 /-- **Within the Pauline strand, faith in Christ is load-bearing.** Deny the
-objective genitive, and the disputed premise of each other strand, keep the
+objective genitive, and the disputed reading of each of the other three strands, keep the
 ἔργα νόμου premise and the reading of Galatians as a polemic against
 circumcision, and sola fide no longer follows.
 
@@ -418,10 +460,17 @@ theorem reformedWithoutSozo_is_satisfiable :
     Satisfiable reformedWithoutSozo.premises := by
   satisfied_by everythingHoldsReading [solaFideDefs]
 
-/-- And the same minus both, so `apostolic_strand_survives_paul_and_luke` is not
-vacuous. -/
-theorem reformedWithoutWorksOfLawOrSozo_is_satisfiable :
-    Satisfiable reformedWithoutWorksOfLawOrSozo.premises := by
+/-- The package resting on Acts can be held without contradiction, so
+`apostolic_strand_survives_paul_and_luke` is not true merely because its
+premises could never all hold. -/
+theorem reformedRestingOnActs_is_satisfiable :
+    Satisfiable reformedRestingOnActs.premises := by
+  satisfied_by everythingHoldsReading [solaFideDefs]
+
+/-- And so can the package resting on John, so
+`johannine_strand_survives_the_other_three` is not empty either. -/
+theorem reformedRestingOnJohn_is_satisfiable :
+    Satisfiable reformedRestingOnJohn.premises := by
   satisfied_by everythingHoldsReading [solaFideDefs]
 
 /-- The apocalyptic package, asked about grace and works, has a model. -/

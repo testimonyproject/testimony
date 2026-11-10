@@ -216,7 +216,9 @@ its link.
       is received through faith
 ```
 
-That is sola fide. Three strands reach the sufficiency of faith (`P₂₆`): Paul,
+That is sola fide as it stood with three strands; John's has since been added
+(see the [sola fide page](./arguments/sola-fide.md) for the current listing).
+Three strands reach the sufficiency of faith (`P₂₆`): Paul,
 by way of `P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστοῦ read as faith in
 Christ) to justification by faith alone (17), and from there to `P₂₆` (23);
 Jesus' words at Luke 7:50, by way of `P₁₈` and `P₁₉` (σῴζω there, and 7:47 read
