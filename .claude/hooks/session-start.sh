@@ -3,11 +3,12 @@
 # every gate in CLAUDE.md, including the two that render what a reader sees —
 # the PDF (`tectonic`) and the docs site with its argument maps (`mdbook`).
 #
-# It does three things, each only when needed, so it is safe to run on every
+# It does four things, each only when needed, so it is safe to run on every
 # start and cheap once the container is cached:
 #
-# 1. Puts elan's `lake` on PATH for the session (cloud images install elan but
-#    do not export ~/.elan/bin, and scripts/new-worktree.sh needs `lake`).
+# 1. Installs elan if the image lacks it, and puts its `lake` on PATH for the
+#    session. It does not fetch the Mathlib cache: run `lake exe cache get`
+#    before the first build.
 # 2. Installs tectonic 0.17.0, pinned and fetched as .devcontainer/Dockerfile
 #    fetches it — the same build CI uses.
 # 3. Installs mdbook 0.4.40, likewise.
@@ -29,7 +30,15 @@ BIN=/usr/local/bin
 
 log() { echo "session-start: $*" >&2; }
 
-# 1. lake on PATH, for this hook and for the session.
+# 1. lake on PATH, for this hook and for the session. A cloud image may or may
+# not ship elan; install it when it is missing. The toolchain itself is fetched
+# on the first `lake` call, from the version `lean-toolchain` pins.
+if [[ ! -x "$HOME/.elan/bin/lake" ]]; then
+  log "installing elan"
+  curl -fsSL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+    | sh -s -- -y --default-toolchain none >/dev/null 2>&1 \
+    || log "could not install elan; see https://github.com/leanprover/elan"
+fi
 if [[ -x "$HOME/.elan/bin/lake" ]]; then
   export PATH="$HOME/.elan/bin:$PATH"
   line='export PATH="$HOME/.elan/bin:$PATH"'

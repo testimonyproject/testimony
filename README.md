@@ -1,56 +1,70 @@
 # Testimony
 
-**A Lean 4 library for machine-checkable models of biblical arguments.**
+**Christian arguments from Scripture, written out premise by premise and
+checked by machine.**
 
-Testimony formalises Christian arguments from Scripture — that Jesus of
-Nazareth is the promised Messiah, that salvation is by grace through faith —
-with every textual, linguistic, historical, hermeneutical and theological
-premise made explicit, sourced, and contestable.
+Testimony is two things.
 
-Lean verifies that **conclusions follow from encoded premises**. It cannot
-establish that an interpretation of an ancient Hebrew text is correct, that a
-historical event occurred, or that a theological premise is true. So this is
-not a "computer proves Christianity" system. It is a *machine-checked
-testimony*: the argument's structure laid bare, its assumptions enumerated, its
-verdict left to the reader.
+1. **A guide for people reading an English Bible**, written in language precise
+   enough that a theologian can work with it. Each argument page starts from
+   the passages, says in plain words what each side takes them to mean, and
+   names who holds each view and where they wrote it.
+2. **A code library for encoding arguments and checking them for consistency.**
+   Each position is a list of premises, every one with a source. Lean 4, a
+   proof assistant, checks what follows from each list, what does not, and
+   which positions can be held together.
 
-## What it produces
+Lean checks that **a conclusion follows from the premises written down**. It
+cannot tell you that a reading of an ancient text is right, that an event
+happened, or that a doctrine is true. So this is not a computer proving
+Christianity. It is an argument with nothing hidden: every assumption listed,
+every rival reading given the same care, and the judgement left to the reader.
+
+## What you can learn from it
+
+Take justification by faith alone (*sola fide*). The
+[sola fide page](docs/src/arguments/sola-fide.md) reaches "saved through faith"
+by four routes, each from its own passage:
+
+- Paul: "not justified by works of the law but through faith in Jesus Christ"
+  (Galatians 2:16);
+- Jesus: "Your faith has saved you" (Luke 7:50);
+- Peter, refusing to lay the law's "yoke" on gentile believers (Acts 15:10–11);
+- Jesus: "This is the work of God, that you believe in him whom he has sent"
+  (John 6:29).
+
+Each route depends on one reading that some scholar cited on the page denies.
+The checked results say what that means for the argument as a whole:
 
 ```lean
-theorem reformed_establishes       : Establishes reformed
+theorem reformed_establishes        : Establishes reformed
 theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw
-theorem sozo_not_load_bearing       : Establishes reformedWithoutSozo
 theorem lexical_premises_jointly_load_bearing :
     ¬ Establishes reformedWithoutEveryStrandsPremise
 ```
 
-Read together, those say something prose arguments rarely establish. Sola fide
-runs on **three independent strands** — Paul's ἔργα νόμου, Jesus' "your faith
-has saved you" at Luke 7:50, and Peter's refusal of the law's yoke at Acts
-15:10 — and *no* disputed premise carries the argument by itself. Only a
-disjunction does — Paul's two readings of Galatians 2:16, or Jesus' σῴζω, or
-Peter's yoke — so an opponent must defeat a reading in each strand, not one
-reading.
+In words: grant the Reformed premises and the conclusion follows. Take away the
+disputed reading of "works of the law" and it still follows, by the other three
+routes. Take away one disputed reading from every route and it no longer does.
+So someone who denies sola fide has to answer all four passages, and someone
+who defends it can see exactly which four readings they are relying on.
 
-A corollary: the New Perspective on Paul, which rejects the traditional reading
-of ἔργα νόμου while still affirming justification by faith, **establishes the
-conclusion too**.
+The same page reports results that do not favour the argument's author. When
+the positions are weighed against each other, Rome's and the Reformers' tie.
+The page says so, and says which single step the tie turns on.
 
-The virgin-birth argument used to make the contrast, and no longer does. It
-began single-stranded, so defeating עַלְמָה in Isaiah 7:14 defeated it outright.
-Three further strands — the protoevangelium of Genesis 3:15, Micah 5:2–3, and
-Isaiah's own composition — changed its shape rather than its evidence:
-`almah_not_load_bearing` now holds, while `hinges_jointly_load_bearing` records
-that the four hinges still carry it jointly. The library states the structure
-plainly whichever way it comes out, and the
-[roadmap](docs/src/roadmap.md) lists every result it claims — generated from
-the Lean source, not restated by hand.
+The [roadmap](docs/src/roadmap.md) lists every result the library claims. It
+is generated from the Lean source, not written by hand.
 
 ## Documentation
 
 📖 **[Read the documentation](https://testimonyproject.github.io/testimony/)**
 
 - [Rationale](docs/src/rationale.md) — why machine-check testimony
+- [Reading the logic](docs/src/reading-the-logic.md) — the notation, for readers who
+  have not met it
+- [Writing for the reader](docs/src/writing-for-readers.md) — who the pages are for, and
+  the standard their prose is held to
 - [Scope and limits](docs/src/scope-and-limits.md) — what Lean does *not* settle
 - [Encoding arguments](docs/src/logic.md) — how arguments become data
 - [Citations](docs/src/citations.md) — bibliography conventions

@@ -5,49 +5,61 @@
 
 # Testimony
 
-**A Lean 4 library for machine-checkable models of biblical arguments.**
+**Christian arguments from Scripture, written out premise by premise and
+checked by machine.**
 
   </div>
 </div>
 
-Testimony formalises Christian arguments from Scripture — that Jesus of
-Nazareth is the promised Messiah, that salvation is by grace through faith —
-with every textual, linguistic, historical, hermeneutical and theological
-premise made explicit, sourced, and contestable.
+Testimony is two things.
 
-## What this project is — and is not
+1. **A guide for people reading an English Bible**, written in language precise
+   enough that a theologian can work with it. Each argument page starts from
+   the passages, says in plain words what each side takes them to mean, and
+   names who holds each view and where they wrote it.
+2. **A code library for encoding arguments and checking them for consistency.**
+   Each position is a list of premises, every one with a source.
+   [Lean 4](https://lean-lang.org), a proof assistant, checks what follows from
+   each list, what does not, and which positions can be held together.
 
-Lean verifies that **conclusions follow from encoded premises**. It cannot, by
-itself, establish that an interpretation of an ancient Hebrew text is correct,
-that a historical event occurred, or that a theological premise is true.
+If you came to read, start with an argument: [Sola fide](./arguments/sola-fide.md)
+is the fullest. If you came to write code, start with
+[Encoding arguments](./logic.md). [Reading the logic](./reading-the-logic.md)
+explains the notation for anyone who has not met it.
 
-So Testimony is **not** a "computer proves Christianity" system. It is a
-*machine-checked testimony*: the argument's structure laid bare, its
-assumptions enumerated, its verdict left to the reader. A sceptic can see
-exactly which premises are assumed; a believer can see precisely how the
-argument hangs together; a scholar can swap in a rival interpretation and watch
-the derivation diverge.
+## What this project is, and is not
+
+Lean checks that **a conclusion follows from the premises written down**. It
+cannot tell you that a reading of an ancient Hebrew text is right, that an
+event happened, or that a doctrine is true.
+
+So Testimony is not a computer proving Christianity. It is an argument with
+nothing hidden. Every assumption is listed. Every rival reading is written out
+with the same care as the one it opposes. The judgement is left to the reader.
+A sceptic can see exactly what is assumed. A believer can see how the argument
+holds together. A scholar can swap in another reading and see what changes.
 
 ## What it produces
 
-Three kinds of result, all machine-checked:
+Three kinds of result. Each is checked by machine.
 
-**An argument is valid.** Given a named, cited premise package, the conclusion
-follows over every valuation.
+**A conclusion follows.** Grant the premises of a named position, each with its
+source, and its conclusion follows.
 
 ```lean
 theorem reformed_establishes : Establishes reformed
 ```
 
-**A rival package does not establish the conclusion.** Not a failure to find a
-proof — a countermodel is named, and it *is* the rival's reading written down.
+**A conclusion does not follow.** This is not a failure to find a proof. A
+consistent way of reading the texts is written down on which every premise
+holds and the conclusion does not. That reading is the rival position itself.
 
 ```lean
 theorem tridentine_not_establishes : ¬ Establishes tridentine
 ```
 
-**A premise is, or is not, load-bearing.** Remove it, retain everything else,
-and see whether the argument survives.
+**An argument does, or does not, depend on a premise.** Remove the premise, keep
+everything else, and see whether the conclusion still follows.
 
 ```lean
 theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw
@@ -55,23 +67,27 @@ theorem lexical_premises_jointly_load_bearing :
     ¬ Establishes reformedWithoutEveryStrandsPremise
 ```
 
-That last pair is the most useful thing the library does. Sola fide runs on
-three independent strands — Paul's ἔργα νόμου, Jesus' "your faith has saved
-you" at Luke 7:50, and Peter's refusal of the law's yoke at Acts 15:10 — so no
-strand's disputed premise carries it alone. An opponent must defeat all three.
-The virgin-birth argument began with a single strand, where defeating עַלְמָה
-defeated it outright; it now runs on four, and no single interpretive hinge is
-load-bearing — only all four jointly.
+That last pair is the most useful thing the library does. Sola fide reaches
+"saved through faith" by four routes: Paul's "not by works of the law"
+(Galatians 2:16), Jesus' "your faith has saved you" (Luke 7:50), Peter's refusal
+of the law's yoke (Acts 15:10), and Jesus' "this is the work of God, that you
+believe" (John 6:29). Each route depends on one disputed reading. Remove any
+one and the others still reach the conclusion. Remove one from every route and
+it no longer follows. So an opponent has to answer all four.
 
-Which argument has which shape is a fact about the encodings rather than a
-matter of emphasis, and the [roadmap](./roadmap.md) lists every result the
-library claims, generated from the Lean source by `lake exe statusgen`.
+The virgin-birth argument began with a single route, through the Hebrew word
+for "young woman" or "virgin" (עַלְמָה) in Isaiah 7:14, and defeating that one
+reading defeated the argument. It now has four routes, and depends on no single
+one of them.
 
-Each argument also has a page of its own — [Sola scriptura](./arguments/sola-scriptura.md)
-is the longest — generated by `lake exe argdoc` from the Lean files themselves:
-the module docstrings as prose, every position and objection as typeset
-notation over one numbered legend of claims, and every result with the axioms
-it rests on. Nothing on those pages is written twice.
+A fourth kind of result weighs positions against each other and reports which
+survive. Those results often come out as ties, and the pages say so.
+
+The [roadmap](./roadmap.md) lists every result the library claims, generated
+from the Lean source by `lake exe statusgen`. Each argument has a page of its
+own, generated by `lake exe argdoc` from the Lean files: the prose is the
+docstrings, the formulas are rendered from the encoding, and each result is
+shown with the axioms it rests on. Nothing on those pages is written twice.
 
 ## Getting started
 

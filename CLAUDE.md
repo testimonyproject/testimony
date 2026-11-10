@@ -1,24 +1,24 @@
 # Testimony — working notes for Claude Code
 
-A Lean 4 library encoding Christian arguments from Scripture so that every
-premise is explicit, cited, and contestable. Every result is conditional:
-*given premise package P, conclusion C follows*. Lean checks validity; it never
-establishes that a premise is true.
+Christian arguments from Scripture, written out premise by premise and checked
+in Lean 4. Every result is conditional: *given premise package P, conclusion C
+follows*. Lean checks validity; it never establishes that a premise is true.
 
-Three Lake packages. `Testimony`, at the root, is the machinery: logic,
-provenance, vocabulary and ontology, the solver, the checks and the generators.
-The worked arguments are `TestimonyArguments`, in `arguments/`, a package built
-on it; the grits case is `TestimonyExamples`, in `examples/`. Each requires the
-library by path and shares its `.lake/packages`.
+## What matters
 
-Full docs: `docs/src/`. Read `docs/src/style-guide.md` before writing Lean.
+The project is two things. Hold both, in this order.
 
-## Who it is for
+1. **A guide for lay people reading an English Bible, in language precise
+   enough that a theologian can work with it.** The generated pages are the
+   product. A reader with a Bible and no Greek, no Hebrew and no logic should
+   follow every paragraph. A scholar should find every claim exact and sourced.
+2. **A code library for encoding arguments and checking them for consistency.**
+   Positions are lists of cited premises. The machine checks what follows, what
+   does not, and which positions can be held together.
 
-The product is read by theologians and lay Christians, not by logicians. Every
-piece of logical construction — a certificate, a hearing, a named burden, a
-result's name — is justified by a question such a reader asks, and is worth
-building only if the generated page answers it in words they can follow. So:
+So every piece of logical construction (a certificate, a hearing, a named
+burden, a result's name) is justified by a question such a reader asks, and is
+worth building only if the generated page answers it in words they can follow.
 
 - **Start from the reader's question**, not from what the machinery can prove:
   "where exactly do Trent and Paul part?" is a `Because`; "what if the
@@ -32,6 +32,34 @@ building only if the generated page answers it in words they can follow. So:
 - **Never tune the encoding to reach a verdict**, and never drop a cited reader
   because we judge him mistaken. Show where his reading breaks, or that it does
   not; a rating moves only with a new, cited argument.
+
+## Writing prose
+
+`docs/src/writing-for-readers.md` is the standard, and it applies to every
+docstring under `arguments/TestimonyArguments/` as much as to any page. The
+short form:
+
+- Quote the passage in English before arguing about it.
+- English first, original term in brackets: "works of the law" (ἔργα νόμου).
+- Gloss every technical word, theological or logical, where it is used.
+- Name who holds a view. Say what a result claims, then what it does not.
+- Put identifiers in brackets after the sentence that states the point in
+  words. A sentence that needs the identifier to make sense needs rewriting.
+- Short sentences. No clever contrasts, no announcing that a point matters, no
+  shorthand from the code left unexplained.
+
+Read the generated page before opening a pull request, not only the docstring.
+The `reader-review` agent does a first pass.
+
+## Packages
+
+Three Lake packages. `Testimony`, at the root, is the machinery: logic,
+provenance, vocabulary and ontology, the solver, the checks and the generators.
+The worked arguments are `TestimonyArguments`, in `arguments/`, a package built
+on it; the grits case is `TestimonyExamples`, in `examples/`. Each requires the
+library by path and shares its `.lake/packages`.
+
+Full docs: `docs/src/`. Read `docs/src/style-guide.md` before writing Lean.
 
 ## Hard rules
 
@@ -92,6 +120,10 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
   not inherited — and its first `lake build` compiles Mathlib from source.
   `.githooks/pre-commit`, armed by that script, refuses a commit made in the
   primary checkout.
+  The one exception is a Claude Code cloud session: its container holds a
+  fresh clone already on the session's own branch, which is the disposable
+  checkout the rule asks for. Work there, on that branch, and run
+  `lake exe cache get` before the first build.
 
 ## Commands, in order
 
@@ -155,27 +187,52 @@ back to `sorryAx` — that produces a *successful build*.
 
 ## Skills
 
-- `.claude/skills/adding-a-citation` — verifying and adding a bibliography entry
-- `.claude/skills/encoding-an-argument` — going from a commentary to a package
-- `.claude/skills/checking-the-build` — the four tiers and what each catches
-- `.claude/skills/supplementing-an-argument` — strengthening an existing
-  argument for a reader: finding the crux, researching a better-than-disputed
-  premise, auditing its rating, and reporting what the solver then computes
-- `.claude/skills/optimising-the-engine` — making the engine faster or lighter:
-  the benchmark suite, the ablation A/B and its statistics, the fixed-point
-  loop, the CI regression gate, and accepting a regression on purpose
+In `.claude/skills/`. Each loads when its description matches the task, or by
+name as `/<skill>`.
+
+- `writing-for-readers` — writing or revising a docstring or page for the two
+  readers: the rules, the checklist, and how to review a generated page
+- `encoding-an-argument` — going from a commentary to a package
+- `supplementing-an-argument` — strengthening an existing argument for a reader:
+  finding the crux, researching a better-than-disputed premise, auditing its
+  rating, and reporting what the solver then computes
+- `adding-a-citation` — verifying and adding a bibliography entry
+- `checking-the-build` — the four tiers and what each catches
+- `optimising-the-engine` — making the engine faster or lighter: the benchmark
+  suite, the ablation A/B and its statistics, the fixed-point loop, the CI
+  regression gate, and accepting a regression on purpose
 
 ## Agents
 
-For the research the supplementing workflow needs. Each returns findings, never
-edits; what enters the library is decided and encoded by the main session.
+In `.claude/agents/`, for the research the supplementing workflow needs. Each
+returns findings, never edits; what enters the library is decided and encoded
+by the main session.
 
-- `.claude/agents/source-verifier.md` — checks identifiers and quotations
-  against public catalogues and texts
-- `.claude/agents/rating-auditor.md` — looks for a cited reader who grants a
-  step's grounds and denies its conclusion, and says what that makes its rating
-- `.claude/agents/reader-review.md` — reads a generated page as a theologian or
-  lay reader would, and flags what they could not follow
+- `source-verifier` — checks identifiers and quotations against public
+  catalogues and texts
+- `rating-auditor` — looks for a cited reader who grants a step's grounds and
+  denies its conclusion, and says what that makes its rating
+- `reader-review` — reads a generated page as a lay reader and as a theologian
+  would, and flags what either could not follow or would dispute
+
+## Other files an agent reads
+
+- `.claude/rules/lean.md` — the Lean gotchas, loaded when a `.lean` file is in
+  play
+- `REVIEW.md` — what a review of a pull request here must check; read by
+  Claude Code's managed Code Review
+- `.claude/settings.json` — the hooks: the linter after each edit, and
+  `.claude/hooks/session-start.sh` at the start of a cloud session
+
+## Pull requests
+
+One concern per pull request, opened as a draft. The description says what the
+change claims and what it does not, as a result's docstring does, and lists the
+gates that were run. If a result's verdict moved, say so in the first line.
+`.github/pull_request_template.md` has the headings. A pull request opened from
+a Claude Code session is authored by the signed-in person, who therefore cannot
+approve it; `docs/src/contributing.md` ("Pull requests and review") lists the
+ways round that.
 
 ## Toolchain
 
@@ -185,67 +242,6 @@ First build after a clone needs `lake exe cache get` or it will compile Mathlib
 from source.
 
 In a Claude Code cloud session, `.claude/hooks/session-start.sh` runs at start:
-it puts `lake` on `PATH` and installs `tectonic` and `mdbook`, pinned as the
-devcontainer pins them, so the PDF and the docs site can be rendered too.
-
-## Gotchas found the hard way
-
-- `section` and `meta` are reserved; use `sectionRef` and `cite`.
-- Doc comments must sit immediately before the declaration keyword —
-  `set_option ... in` goes *above* the docstring.
-- `derive_bib_registry` reads the attribute's local module state, so it must
-  stay at the bottom of each package's `Works.lean`. A work the library itself
-  cites goes in `Testimony/Bib/Works.lean`; one only the arguments cite, in
-  `arguments/TestimonyArguments/Works.lean`.
-- `List.filter` over a derived `DecidableEq (Formula α)` does not kernel-reduce;
-  state reduced packages explicitly instead.
-- **Never hand-write the entailment proof recipe.** Use `establish [set]`,
-  `refute_with <namedValuation> [set]`, `satisfied_by <namedValuation> [set]`
-  and `leaves_open <falsifies> <verifies> [set]` from `Testimony.Logic.Tactic`,
-  where `set` is the argument's unfold set (`solaFideDefs`, declared in
-  `arguments/TestimonyArguments/Attr.lean`).
-- **Tag a new definition, never extend a list.** A package, line, step or
-  shared premise list joins its argument's set where it is written:
-  `@[solaFideDefs] def ...`. An untagged one stays folded, and `establish`
-  reports "not Horn". A new argument adds its set to
-  `arguments/TestimonyArguments/Attr.lean` and to `unfoldSets` in
-  `arguments/TestimonyArguments/Checks.lean`, and its title to the catalogue in
-  `arguments/TestimonyArguments/Tools/Catalogue.lean`.
-- **The recipe's semantics are qualified inside the tactic.** This used to be a
-  documentation rule: `Formula` is also an abbrev in
-  `Testimony.Logic`, so an unqualified `Formula.Boolean.val` resolves to the
-  wrong namespace, `simp` does nothing, and the proof falls back to `sorryAx`
-  with a *successful build*. The qualified name is now written once, inside the
-  tactic, where a call site cannot mistype it.
-- **"Defeats" has two senses.** Older result names such as
-  `compatibility_defeats_lexical_objection` state an entailment fact. In
-  `Testimony.Logic.Dispute`, `Defeats` is an attack that survives the
-  confidence preference, and it makes every cited `Confidence` load-bearing: a
-  changed rating can change who prevails in a dispute. Inference steps count
-  too: a `Dispute` refuses a node whose package cites no `inference`, and a step
-  is `disputed` when a cited source grants its grounds and denies its conclusion.
-- **`establish` is Horn-only, on purpose.** It proves by backward chaining
-  (`solve_by_elim`) after currying each step, and fails rather than falling back
-  to `tauto`, whose cost is exponential in the number of inference steps. Keep
-  steps as *conjunction of literals → atom or conjunction of atoms*; write
-  alternatives as separate lines, not as a `⋎`. `establish_by_search` exists for
-  a step that genuinely cannot be Horn. Never raise `maxHeartbeats`.
-- `refute_with` takes an identifier, not a term, so a countermodel must be a
-  named definition — the rival's reading, written down.
-- There is no atom budget; the 2^n truth-table checker was removed.
-- Free text reaching LaTeX must be escaped. An unescaped `&` in a bibliography
-  note ("T. & T. Clark") breaks the generated `.bbl` with a misplaced-alignment
-  error far from its cause; `Bib.Render.texEscape` handles it.
-- String interpolation `s!"...{x}..."` collides with Mathlib's `{...}` set
-  notation when braces nest. Use `++` when emitting LaTeX.
-- **A docstring is published prose.** `argdoc` and `argtex` render every module
-  and declaration docstring in `arguments/TestimonyArguments/` into the site and the PDF,
-  Markdown and all. Write them for a reader, and remember that a change to one
-  makes both generated files stale.
-- **Display math in generated Markdown goes inside a `<div>`.** mdBook runs
-  Markdown over the page before MathJax sees it, and `\\` (a row break in
-  `aligned`) is also Markdown's escape character, so a naked display block is
-  silently mangled rather than failing. A raw-HTML block is passed through
-  untouched — but only as far as the first blank line, so a display formula must
-  contain none, and the legend table's wrapping `<div>` must be followed by one
-  so its table is read as Markdown.
+it installs elan if the image lacks it, puts `lake` on `PATH`, and installs
+`tectonic`, `mdbook` and `uv`, pinned as the devcontainer pins them, so the PDF
+and the docs site can be rendered too.

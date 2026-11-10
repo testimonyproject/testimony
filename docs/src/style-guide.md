@@ -60,7 +60,10 @@ declaration alone with the reason recorded inline: a constructor named
 
 ## Pedagogy
 
-**Write for a reader who knows the theology and not the logic.**
+**Write for a reader with an English Bible, in language a theologian can work
+with.** [Writing for the reader](./writing-for-readers.md) is the full standard:
+who reads these pages, the rules their prose is held to, and a worked example.
+What follows here is the part of it that concerns logic.
 
 [Contributing](./contributing.md) says the review this project most needs is the
 one only a theologian or biblical scholar can do, and that it requires no Lean.
