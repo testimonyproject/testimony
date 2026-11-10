@@ -150,8 +150,17 @@ should still be plain.
 
 ## What has been brought up to this standard
 
-The standard is newer than most of the prose. As of this writing the sola fide
-page's opening section, its section on John, and the results on the four
-strands follow it. The rest of that page, and the other argument pages, were
-written before it and are being revised section by section. When you change a
-docstring for another reason, bring it up to the standard in the same change.
+The standard is newer than most of the prose. As of this writing the whole of
+the sola fide page follows it: every section's introduction, and the
+description of every claim, position and result. The other five argument pages
+were written before it and have not been revised. When you change a docstring
+on one of them for another reason, bring it up to the standard in the same
+change, and update this paragraph.
+
+Two things about the sola fide page are worth knowing before copying its
+vocabulary elsewhere. It says "position" for what the code calls a party or a
+package, "tie" for two positions that defeat each other, "starting points" for
+a step's grounds, and "can be held without contradiction" for satisfiable. And
+it keeps a small set of words as terms of its own, each explained where it
+first appears on the page: *strand*, *defeats*, *forced*, *can be defended*,
+and the four ratings.

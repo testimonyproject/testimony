@@ -103,18 +103,13 @@ checked.
   and John's and the apocalyptic reading's. Each pair is a tie, because each
   side rests on a premise rated `disputed`.
 
-## What is not encoded
+## John 3:36
 
-At John 3:36 the opposite of "whoever believes" is, in Greek, "whoever does not
-obey" (ὁ ἀπειθῶν). A reader could argue from that word that believing in John
-includes obeying. No source that argues this from the word has been read and
-verified. What has been found points the other way on the word and the same way
-on the doctrine. Westcott's commentary and the older lexica take the word as
-unbelief shown in action. Chrysostom, preaching on this verse, denies that
-believing is enough without a right life, but he argues from Matthew 7:21 and
-not from the verb. Neither is cited here yet, and the modern commentaries
-(Brown, Schnackenburg, Barrett, Carson) have not been read. Until they are, this
-reading is absent, and its absence is not evidence that nobody holds it.
+"Whoever does not obey the Son shall not see life" (John 3:36) is treated in a
+section of its own at the end of this page. In short: the commentators cited
+read "does not obey" as unbelief seen in what it does; Chrysostom, on the same
+verse, denies that believing is enough without a right life; and the wording
+of the verse does not decide between them.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -125,17 +120,17 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
 /-! ### The lines -/
 
-/-- Aquinas's step: faith living through charity is not bare trust. Rated
-`consensus`: Calvin concedes it — his trust is precisely a faith that brings
-nothing — and the two divide over the premise, not the inference. -/
+/-- Aquinas's step: faith made alive by love is not bare trust. Rated `consensus`:
+Calvin accepts it, since the trust he means is exactly a faith that brings
+nothing. The two divide over the premise, not the step. -/
 def aquinasOnFormedFaith : Source :=
   { primary := .work aquinasJohn (.sectionRef "cap. 6, lect. 3, n. 901")
   , tradition := .romanCatholic
   , confidence := .consensus }
 
-/-- **Aquinas's line.** The believing of 6:29 is faith living through charity,
-and so not the bare trust the strand needs. The denial is derived, not assumed:
-it follows from Aquinas's own reading of the verse. -/
+/-- **Aquinas's line of argument.** The believing of 6:29 is faith made alive by
+love, and so not the bare trust that John's strand needs. The denial is derived
+from Aquinas's own reading of the verse, not assumed. -/
 @[solaFideDefs]
 def thomistLine : Line Claim :=
   { name := "Faith formed by charity (Aquinas on John 6:29)"
@@ -146,17 +141,17 @@ def thomistLine : Line Claim :=
 
 /-! ### The packages -/
 
-/-- Sola fide from John alone: the Johannine line, with the grounds and closing
-steps every Reformed strand shares. -/
+/-- Sola fide from John alone: John's line, with the premises and closing steps
+every Reformed strand shares. -/
 @[solaFideDefs]
 def johannineCase : ArgumentPackage Claim :=
   { reformed with
     name := "Sola fide from John (6:28–29)"
     premises := caseOf [johannineLine] sharedGrounds closingSteps }
 
-/-- Aquinas on John: every text the Johannine strand reads, and every shared
-ground, with its believing read as faith formed by charity. The rival the strand
-is written against. -/
+/-- Aquinas on John: every text John's strand reads, and every shared premise, with
+the believing read as faith formed by charity. This is the rival John's strand
+was written against. -/
 @[solaFideDefs]
 def thomistOnJohn : ArgumentPackage Claim :=
   { reformed with
@@ -183,10 +178,10 @@ theorem johannine_strand_establishes : Establishes johannineCase := by
 
 #print axioms johannine_strand_establishes
 
-/-- Aquinas's world: every text holds, and the believing of 6:29 is faith living
-through charity — so not bare trust, not faith alone, and faith without
-charity does not suffice. Grace and "not by works" still hold: Aquinas excludes
-external works, and grants that faith is God's gift. -/
+/-- Aquinas's reading, written out. Every text holds. The believing of 6:29 is faith
+made alive by love, so it is not bare trust; justification is not by faith
+alone; and faith without charity does not suffice. Grace and "not by works"
+still hold: Aquinas excludes outward works, and grants that faith is God's gift. -/
 def thomistReading : Valuation Claim := fun a =>
   match a with
   | .johannineBelievingIsTrust => False
@@ -195,11 +190,12 @@ def thomistReading : Valuation Claim := fun a =>
   | .salvationThroughFaith => False
   | _ => True
 
-/-- **The Johannine strand rests on believing as trust.** Grant Aquinas every
-text the strand reads, and read their believing as he does — faith living
-through charity — and sola fide no longer follows. So John's Gospel, like
-Paul's Galatians and Luke's σῴζω, carries the conclusion only through a reading:
-here, of what it is to believe *in* him. -/
+/-- **John's strand depends on reading believing as trust.** Grant Aquinas every
+text the strand reads, and read their believing as he does, faith made alive by
+love, and sola fide no longer follows.
+
+So John's Gospel, like Paul's Galatians and Luke 7:50, reaches the conclusion
+only through a reading: here, of what it is to believe *in* him. -/
 @[headline]
 theorem johannine_strand_rests_on_believing_as_trust : ¬ Establishes thomistOnJohn := by
   refute_with thomistReading [solaFideDefs]
@@ -231,8 +227,8 @@ theorem believing_as_trust_not_load_bearing : Establishes reformedGrantingAquina
 
 #print axioms believing_as_trust_not_load_bearing
 
-/-- The Reformed world with one concession: the believing of John 6:29 is not
-bare trust, and everything else holds. -/
+/-- The Reformed reading with one concession: the believing of John 6:29 is not bare
+trust, and everything else holds. -/
 def concedingJohnReading : Valuation Claim := fun a =>
   match a with
   | .johannineBelievingIsTrust => False
@@ -245,17 +241,17 @@ theorem reformedGrantingAquinasOnJohn_is_satisfiable :
     Satisfiable reformedGrantingAquinasOnJohn.premises := by
   satisfied_by concedingJohnReading [solaFideDefs]
 
-/-- The Johannine case has a model, so `johannine_strand_establishes` is not
-vacuous. -/
+/-- John's case can be held without contradiction, so `johannine_strand_establishes`
+is not true merely because its premises could never all hold. -/
 theorem johannineCase_is_satisfiable : Satisfiable johannineCase.premises := by
   satisfied_by everythingHoldsReading [solaFideDefs]
 
 /-! ### Luther's answer -/
 
-/-- Luther's step, on Galatians 3:11–12: the law commands charity, and the law
-is not of faith, so faith formed by charity would justify by the law. Rated
-`disputed`: Aquinas grants both grounds — the text, and that the law commands
-love — and denies the conclusion, holding that justifying faith is formed by
+/-- Luther's step, on Galatians 3:11–12: the law commands love, and the law is not
+of faith, so faith formed by charity would justify by the law. Rated `disputed`:
+Aquinas accepts both starting points, the text and that the law commands love,
+and denies the conclusion, holding that the faith which justifies is formed by
 charity. -/
 def lutherOnGalatiansThree : Source :=
   { primary := .work lutherGalatians (.adLoc ⟨.galatians, 3, 12⟩)
@@ -263,10 +259,10 @@ def lutherOnGalatiansThree : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
-/-- **Luther's line.** From Galatians 3:11–12 and the law's command of love to
-the denial of Aquinas's reading: the believing that justifies is not faith formed
-by charity, since charity is what the law commands and the law is not of
-faith. -/
+/-- **Luther's line of argument.** From Galatians 3:11–12 and the law's command of
+love to the denial of Aquinas's reading: the believing that justifies is not
+faith formed by charity, since love is what the law commands and the law is not
+of faith. -/
 @[solaFideDefs]
 def lutherLine : Line Claim :=
   { name := "Luther on Galatians 3:11–12 (against faith formed by charity)"
@@ -277,65 +273,68 @@ def lutherLine : Line Claim :=
   , delivers := notP .johannineBelievingIsFormedByCharity
   , inference := some lutherOnGalatiansThree }
 
-/-- Luther's answer to Aquinas as an argument: what Aquinas grants, with
-Luther's step, against the reading of 6:29 as faith formed by charity. -/
+/-- Luther's answer to Aquinas as a position: what Aquinas grants, with Luther's
+step, against reading the believing of 6:29 as faith formed by charity. -/
 @[solaFideDefs]
 def lutherOnGalatians : ArgumentPackage Claim :=
   lutherLine.asPackage baseCite "the believing of John 6:29 is not faith formed by charity"
 
-/-- The same grounds without Luther's step: Galatians 3:11–12, and that the law
-commands love. -/
+/-- The same starting points without Luther's step: Galatians 3:11–12, and that the
+law commands love. -/
 @[solaFideDefs]
 def galatiansTextsAlone : ArgumentPackage Claim :=
   { lutherOnGalatians with
     name := "Galatians 3:11–12 and the law's command of love, without Luther's step"
     premises := lutherLine.grounds }
 
-/-- **Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants —
-Galatians 3:11–12, and that the law commands love — and Luther's step, and the
-believing of John 6:29 is not faith formed by charity: a faith that justified
-because charity formed it would justify by the law, and the law is not of faith.
-What this removes is Aquinas's reading; it does not by itself establish
-Calvin's. -/
+/-- **Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants,
+Galatians 3:11–12 and that the law commands love, and grant Luther's step. Then
+the believing of John 6:29 is not faith formed by charity: a faith that
+justified because love formed it would justify by the law, and the law is not of
+faith.
+
+What this does not claim: that Calvin's reading is thereby established. It
+removes Aquinas's reading, and only if the step is granted. -/
 @[headline]
 theorem luther_answers_aquinas_from_galatians : Establishes lutherOnGalatians := by
   establish [solaFideDefs]
 
 #print axioms luther_answers_aquinas_from_galatians
 
-/-- **Luther's answer rests on his step.** The texts alone do not exclude
-Aquinas's reading: in Aquinas's world Galatians 3:11–12 holds, the law commands
-love, and the believing of 6:29 is faith formed by charity. What decides it is
-whether faith formed by charity counts as justification "by the law" — Luther's
-step, which Aquinas denies. -/
+/-- **Luther's answer depends on his step.** The texts alone do not exclude
+Aquinas's reading. On Aquinas's reading Galatians 3:11–12 holds, the law
+commands love, and the believing of 6:29 is faith formed by charity. What
+decides it is whether faith formed by charity counts as justification "by the
+law". That is Luther's step, and Aquinas denies it. -/
 @[headline]
 theorem luther_answer_rests_on_his_step : ¬ Establishes galatiansTextsAlone := by
   refute_with thomistReading [solaFideDefs]
 
 #print axioms luther_answer_rests_on_his_step
 
-/-- The Reformed world, in which the believing of John 6:29 is not faith formed
-by charity, and everything else holds. -/
+/-- The Reformed reading, on which the believing of John 6:29 is not faith formed by
+charity, and everything else holds. -/
 def lutherReading : Valuation Claim := fun a =>
   match a with
   | .johannineBelievingIsFormedByCharity => False
   | _ => True
 
-/-- Luther's package has a model, so `luther_answers_aquinas_from_galatians` is
-not vacuous. -/
+/-- Luther's position can be held without contradiction, so
+`luther_answers_aquinas_from_galatians` is not true merely because its premises
+could never all hold. -/
 theorem lutherOnGalatians_is_satisfiable : Satisfiable lutherOnGalatians.premises := by
   satisfied_by lutherReading [solaFideDefs]
 
-/-- **Why Luther's answer stands against Aquinas.** The crux is Luther's step:
-from Galatians 3:11–12 and the law's command of love, the believing that
-justifies is not faith formed by charity. With the two texts granted, Aquinas's
-reading of John 6:29 cannot keep its one distinctive ground — that the believing
-is formed by charity — and that ground alone breaks.
+/-- **Why Luther's answer stands against Aquinas.** Everything turns on Luther's
+step: from Galatians 3:11–12 and the law's command of love, the believing that
+justifies is not faith formed by charity. With the two texts accepted, Aquinas's
+reading of John 6:29 cannot keep its one distinctive premise, that the believing
+is formed by charity.
 
-Unlike the Reformed distinction against Trent, this crux is part of Luther's
-case: without the step, the texts do not deliver his conclusion. So the answer
-is exactly as strong as the step, which is rated `disputed` — the step is
-Luther's, and the texts are granted by both sides. -/
+Unlike the Reformed distinction against Trent, this step is part of Luther's own
+case: without it, the texts do not deliver his conclusion. So the answer is
+exactly as strong as the step, which is rated `disputed`. The step is Luther's,
+and the texts are accepted by both sides. -/
 def whyLutherAnswersAquinas : Because lutherOnGalatians thomistOnJohn :=
   Because.ofChecks lutherLine.step lutherLine.grounds [] lutherLine.grounds
     [p .johannineBelievingIsFormedByCharity] .derives
@@ -344,5 +343,135 @@ def whyLutherAnswersAquinas : Because lutherOnGalatians thomistOnJohn :=
     (fun φ hφ => by simp [lutherOnGalatians, Line.asPackage, Line.premises, hφ])
     (by simp [solaFideDefs, caseOf, Line.onGrounds])
     (by decide +kernel)
+
+/-! ### John 3:36: "whoever does not obey the Son"
+
+"Whoever believes in the Son has eternal life; whoever does not obey the Son
+shall not see life, but the wrath of God remains on him" (John 3:36). The verse
+sets *not obeying* against *believing*. A reader may fairly ask whether
+believing, in John, therefore includes obeying, and whether faith alone can then
+be what saves.
+
+Two things are on record, and they point in different directions.
+
+**On the word.** The Greek for "does not obey" (ὁ ἀπειθῶν) is read by the
+commentators cited here as unbelief seen in what it does. Westcott: "believeth
+not] disobeyeth. Disbelief is regarded in its activity." Calvin's comment takes
+the clause of "all who do not believe in Christ". No source has been found that
+argues from this word that believing includes obeying.
+
+**On the doctrine.** Chrysostom, preaching on this verse, does deny that
+believing is enough: "'Is it then enough,' saith one, 'to believe on the Son,
+that one may have eternal life?' By no means." He does not argue from the word.
+He argues from Jesus' saying in Matthew 7:21, "Not everyone who says to me,
+'Lord, Lord,' will enter the kingdom of heaven", and concludes: "though a man
+believe rightly on the Father, the Son, and the Holy Ghost, yet if he lead not a
+right life, his faith will avail nothing towards his salvation" (*Homilies on
+John* 31).
+
+Chrysostom's argument is encoded as a line (`chrysostomLine`). Its starting
+points are two texts every reader here accepts. The step from them to "faith
+does not suffice" is his. Three things are checked.
+
+- Granted his step, his conclusion follows
+  (`chrysostom_reads_john3_36_against_faith_alone`).
+- The wording of the two texts does not settle it. One consistent reading holds
+  both texts and that faith suffices; another holds both and that it does not
+  (`john3_36_leaves_faiths_sufficiency_open`).
+- His conclusion and John's strand cannot both be held
+  (`chrysostom_cannot_be_held_with_johns_case`).
+
+The step is rated `disputed`. Calvin accepts both texts and denies the
+conclusion: he reads the doing of Matthew 7:21 as including faith, and good
+works as what follows faith.
+
+**What is not done here.** Chrysostom's case is not a party to the main sola
+fide dispute. His conclusion is general, so there it would stand against Luke's
+case, Paul's and Peter's as well as John's, and that is a change to that
+dispute's results which should be made and reported by itself. The modern
+commentaries on John 3:36 (Brown, Schnackenburg, Barrett, Carson) have not been
+read, and neither has the standard lexicon (BDAG) on the word. -/
+
+/-- Chrysostom's step, in Homily 31 on John: from John 3:36 and Matthew 7:21 to
+"faith alone is not sufficient to salvation". Rated `disputed`: Calvin accepts
+both texts and denies the conclusion. -/
+def chrysostomOnJohnThreeThirtySix : Source :=
+  { primary := .work chrysostomHomiliesJohn (.sectionRef "Homily 31, §1")
+  , tradition := .easternOrthodox
+  , confidence := .disputed }
+
+/-- **Chrysostom's line.** From "whoever does not obey the Son shall not see
+life" (John 3:36) and "not everyone who says to me, 'Lord, Lord'" (Matthew
+7:21) to the conclusion that believing does not suffice without a right life. -/
+@[solaFideDefs]
+def chrysostomLine : Line Claim :=
+  { name := "Chrysostom on John 3:36 (believing is not enough without a right life)"
+  , grounds := [p .john3_36WhoeverDoesNotObey, p .matthew7_21_23DoingTheWill]
+  , step :=
+      ⋀ [p .john3_36WhoeverDoesNotObey, p .matthew7_21_23DoingTheWill]
+        ➝ notP .faithIsSufficient
+  , delivers := notP .faithIsSufficient
+  , inference := some chrysostomOnJohnThreeThirtySix }
+
+/-- Chrysostom's argument as a position: the two texts, with his step. -/
+@[solaFideDefs]
+def chrysostomOnJohn : ArgumentPackage Claim :=
+  chrysostomLine.asPackage baseCite "believing does not suffice without a right life"
+
+/-- **Granted his step, Chrysostom's conclusion follows.** From John 3:36 and
+Matthew 7:21, read as he reads them, believing does not suffice for salvation
+without a right life.
+
+What this claims: his argument is valid, and its premises are two texts nobody
+here disputes. What it does not claim: that the step is sound. Calvin accepts
+both texts and denies it, so the step is rated `disputed`. -/
+@[headline]
+theorem chrysostom_reads_john3_36_against_faith_alone : Establishes chrysostomOnJohn := by
+  establish [solaFideDefs]
+
+#print axioms chrysostom_reads_john3_36_against_faith_alone
+
+/-- Chrysostom's position can be held without contradiction, on Aquinas's reading,
+where every text holds and faith without charity does not suffice. So
+`chrysostom_reads_john3_36_against_faith_alone` is not true merely because its
+premises could never all hold. -/
+theorem chrysostomOnJohn_is_satisfiable : Satisfiable chrysostomOnJohn.premises := by
+  satisfied_by thomistReading [solaFideDefs]
+
+/-- **The wording of John 3:36 and Matthew 7:21 leaves open whether faith
+suffices.** One consistent reading holds both texts and that faith suffices: the
+Reformed one, on which not obeying the Son is refusing to believe him. Another
+holds both texts and that faith does not suffice: Chrysostom's and Aquinas's.
+
+What this claims: neither side can settle the question by pointing at the
+words. What it does not claim: that the two readings are equally good. That is
+a matter for the sources, and the page reports what they say. -/
+@[headline]
+theorem john3_36_leaves_faiths_sufficiency_open :
+    Independent [p Claim.john3_36WhoeverDoesNotObey, p .matthew7_21_23DoingTheWill]
+      (p .faithIsSufficient) := by
+  leaves_open thomistReading everythingHoldsReading [solaFideDefs]
+
+#print axioms john3_36_leaves_faiths_sufficiency_open
+
+/-- John's strand and Chrysostom's argument, held together: every premise of
+each. -/
+@[solaFideDefs]
+def johnWithChrysostom : List (Formula Claim) :=
+  johannineCase.premises ++ chrysostomOnJohn.premises
+
+/-- **Chrysostom's conclusion and John's strand cannot both be held.** John's
+strand concludes that justification is by faith alone, and so that faith
+suffices. Chrysostom concludes that it does not. No consistent reading holds
+every premise of both.
+
+What this claims: a reader has to choose between Calvin's reading of John and
+Chrysostom's. What it does not claim: which to choose. Each rests on a step
+rated `disputed`. -/
+@[headline]
+theorem chrysostom_cannot_be_held_with_johns_case : ¬ Satisfiable johnWithChrysostom :=
+  not_satisfiable_of_check (by decide +kernel)
+
+#print axioms chrysostom_cannot_be_held_with_johns_case
 
 end TestimonyArguments.SolaFide

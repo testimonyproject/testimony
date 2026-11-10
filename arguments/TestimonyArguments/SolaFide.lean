@@ -136,7 +136,8 @@ of its own to God (`johannineBelievingIsTrust`). Calvin reads it so. Aquinas
 reads it as faith formed by charity, that is, faith made alive by love, which
 is how Trent describes the faith that justifies. Luther answers Aquinas from
 Galatians 3:11–12, and the answer rests on a step Aquinas denies. The section
-on John below sets this out.
+on John below sets this out. It also takes up John 3:36, "whoever does not obey
+the Son shall not see life", and Chrysostom's reading of it.
 
 ## What the four strands show together
 
@@ -197,16 +198,17 @@ fide depends on what Judaism in Paul's day taught about works.
 ## What justification is
 
 This is a separate question, and the page keeps it separate. The Reformed
-account is forensic: justification is God's verdict, pardon and the counting of
-righteousness, not a change worked inside the person (Westminster Confession
-XI.1). Trent denies that: justification is "not remission of sins merely, but
+account is that justification is a verdict only (the technical word is
+"forensic"): God pardons and counts righteousness to the believer, and that is
+not a change worked inside the person (Westminster Confession XI.1). Trent
+denies that: justification is "not remission of sins merely, but
 also the sanctification and renewal of the inward man". Mannermaa and the
 Finnish school read Luther differently again. In faith Christ himself is present
 in the believer, and so justification is not a verdict *and nothing more*.
 
 The Finnish position denies that justification is only a verdict and still
 establishes sola fide (`forensic_justification_not_load_bearing`). Trent denies it and does not.
-So denying the forensic account is not what separates Trent from the Reformers.
+So denying the verdict-only account is not what separates Trent from the Reformers.
 What Trent's objection needs is its fuller definition: justification includes
 the inner renewal, that renewal grows through good works, and so works increase
 justification. Both sides grant the growth. The Reformed call it
@@ -312,15 +314,15 @@ The remaining sections each take one question a reader asks.
 
 | File | Contents |
 |---|---|
-| `Atoms.lean` | the `Claim` atoms |
-| `Sources.lean` | `baseCite`, and each position's citation of the premise it disputes |
+| `Atoms.lean` | the list of claims |
+| `Sources.lean` | a source and a rating for every claim |
 | `Lines.lean` | the inference steps, the four strands, the apocalyptic rival, what they share |
 | `Packages.lean` | the positions, and the variants that remove a named premise |
-| `Results.lean` | every `@[headline]` result, with its trust base |
+| `Results.lean` | the main results: what follows from each position, and what does not |
 | `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
-| `Johannine.lean` | John's strand argued alone, Aquinas's rival reading, and Luther's answer |
+| `Johannine.lean` | John's strand, Aquinas's rival reading, Luther's answer, and John 3:36 |
 | `Gospel.lean` | Paul's gospel in Galatians against Trent's definition, and where they part |
-| `Definition.lean` | Paul's word, and the dilemma over what Trent's definition claims |
+| `Definition.lean` | Paul's word, and the two ways of taking Trent's definition |
 | `Hearings.lean` | the dispute heard narrower: the Reformation alone, and without Trent |
 | `JesusWords.lean` | Luke 18, and both readings of Matthew 7 and 19: what Jesus' words decide |
 | `Baptism.lean` | water, Spirit and fire apart; the instrumental cause; John 3:5 |
