@@ -295,13 +295,14 @@ def hearing : Dispute Claim Party where
     | .sola q => solaFideDispute.rated q
 
 /-- Who Howell's move defeats among the sola fide parties, and who defeats it:
-Paul's case and Peter's, both ways. -/
+Paul's case, Peter's and John's, both ways. Each of the three concludes faith
+alone and carries the answer to James, which Howell's move denies. -/
 def howellMeets : TestimonyArguments.SolaFide.Party → Bool
-  | .pauline | .apostolic => true
+  | .pauline | .apostolic | .johannine => true
   | _ => false
 
 /-- The defeats of the hearing, as a table: the sola fide dispute's own; Howell's
-standoffs with Paul's and Peter's cases; and James's faith over Howell. -/
+standoffs with Paul's, Peter's and John's cases; and James's faith over Howell. -/
 def defeatsTable : Party → Party → Prop
   | .faith, .howell => True
   | .howell, .sola q => howellMeets q = true
@@ -325,8 +326,8 @@ theorem node_strength : ∀ i, (node i).strength = strength i
   | .faith => TestimonyArguments.SolaFide.jamesFaithCase_strength
   | .sola q => partyNode_strength q
 
-/-- **Who defeats whom in the hearing**, all 196 pairs: what the sola fide
-dispute already proved; Howell's move and Paul's and Peter's cases, both ways;
+/-- **Who defeats whom in the hearing**, all 289 pairs: what the sola fide
+dispute already proved; Howell's move and Paul's, Peter's and John's cases, both ways;
 and James's faith over Howell's move, which cannot answer it. James's faith
 meets nothing else. Computed by `Horn.defeats?` and checked by the kernel. -/
 theorem hearing_defeats : ∀ i j, hearing.defeats i j ↔ defeatsTable i j := by
@@ -386,8 +387,8 @@ dead faith" (Westminster XI.2). Every link of that answer is rated
 `wellSupported` or better, and the move's reply rests on a denial at the bottom.
 
 What this does not claim: that James 2:24 is compatible with Paul, or that
-justification is by faith alone. Howell's move stands off against Paul's and
-Peter's cases as before; it falls to James's own words about faith, which a
+justification is by faith alone. Howell's move stands off against Paul's,
+Peter's and John's cases; it falls to James's own words about faith, which a
 Catholic reader grants. Nor does it touch the Catholic reading of James's
 "by works" (`trent_on_works_defensible`). -/
 theorem howell_indefensible (S : Set Party) (hS : Admissible hearing.defeats S) :

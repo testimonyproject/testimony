@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **223 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **226 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -114,11 +114,12 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `tridentine_not_establishes` | `¬Establishes tridentine` | The Tridentine premises do not establish the conclusion — they entail the negation of its second part, that salvation is not by works. |
 | `worksOfLaw_not_load_bearing` | `Establishes reformedWithoutWorksOfLaw` | The ἔργα νόμου premise is **not** load-bearing on its own: strip it and the other strands still carry the argument. |
 | `sozo_not_load_bearing` | `Establishes reformedWithoutSozo` | Nor is the dominical lexical premise: strip it and the other strands still carry the argument. |
-| `apostolic_strand_survives_paul_and_luke` | `Establishes reformedWithoutWorksOfLawOrSozo` | **The two disputes that used to decide the argument no longer do.** Deny both the ἔργα νόμου premise and the dominical premise — the pair whose joint removal defeated sola fide … |
+| `apostolic_strand_survives_paul_and_luke` | `Establishes reformedRestingOnActs` | **Acts supplies "through faith" with the other strands' disputed readings left out.** Leave out the reading of "works of the law" in Paul, of "saved" in Luke 7:50, and of … |
+| `johannine_strand_survives_the_other_three` | `Establishes reformedRestingOnJohn` | **John supplies "through faith" with the other strands' disputed readings left out.** Leave out the reading of "works of the law" in Paul, of "saved" in Luke 7:50, and of the yoke … |
 | `pistisChristou_not_load_bearing` | `Establishes subjectiveGenitive` | The objective genitive is not load-bearing for sola fide as a whole. |
 | `acts15Yoke_not_load_bearing` | `Establishes lawObservantLuke` | **Nor is the yoke.** Grant Jervell that the yoke of Acts 15:10 is Israel's law laid on gentiles, not the law as a condition of salvation, keep everything else, and the conclusion … |
-| `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEveryStrandsPremise` | **The result worth having.** No strand's disputed premise carries the argument alone, but together they do: remove the ἔργα νόμου premise from Paul, σῴζω from Luke and the yoke … |
-| `pistisChristou_jointly_load_bearing` | `¬Establishes reformedWithoutPistisChristouSozoOrYoke` | **Within the Pauline strand, faith in Christ is load-bearing.** Deny the objective genitive, and the disputed premise of each other strand, keep the ἔργα νόμου premise and the … |
+| `lexical_premises_jointly_load_bearing` | `¬Establishes reformedWithoutEveryStrandsPremise` | **Sola fide fails to follow only when every strand loses its disputed reading.** Remove one disputed reading from each strand — "works of the law" as works in general from Paul, … |
+| `pistisChristou_jointly_load_bearing` | `¬Establishes reformedWithoutPistisChristouSozoOrYoke` | **Within the Pauline strand, faith in Christ is load-bearing.** Deny the objective genitive, and the disputed reading of each of the other three strands, keep the ἔργα νόμου … |
 | `authorship_not_load_bearing` | `Establishes criticalAuthorship` | **Authorship is not load-bearing.** Grant every critical conclusion — that Ephesians and Titus are not by Paul, and 1 and 2 Peter not by Peter — and the conclusion still follows. |
 | `apocalyptic_not_establishes` | `¬Establishes apocalyptic` | **The apocalyptic reading does not establish sola fide.** It does not reach the conclusion's third part, "through faith": nothing it holds says that faith suffices, and the faith … |
 | `apocalyptic_establishes_grace_not_works` | `Establishes apocalypticOnGraceAndWorks` | **What the apocalyptic reading keeps: grace, and not by works.** If δικαιοσύνη θεοῦ is God's act of deliverance, salvation is sheer gift, conditioned on nothing a person does. |
@@ -132,6 +133,11 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `lexicalCase_establishes` | `Establishes lexicalCase` | **Paul's δικαιόω does not denote the renewal of the inward man**, from the forensic sense, Paul's own words for renewal, and the rule of least meaning. |
 | `romansFourCase_establishes` | `Establishes romansFourCase` | **Romans 4 denies Trent's definition**: Paul glosses the righteousness God counts to the ungodly as sin not counted, and with the forensic sense of the verb, renewal is no part of … |
 | `romansFourOnTheWord_establishes` | `Establishes romansFourOnTheWord` | **Romans 4, read by the rule of least meaning, says what Paul's word means**: the verb Paul glosses as sin not counted does not also denote the renewal of the inward man. |
+| `johannine_strand_establishes` | `Establishes johannineCase` | **John's strand, argued alone, delivers sola fide.** Grant that the believing of 6:29 is trust, and the work God requires is believing, which earns nothing. |
+| `johannine_strand_rests_on_believing_as_trust` | `¬Establishes thomistOnJohn` | **The Johannine strand rests on believing as trust.** Grant Aquinas every text the strand reads, and read their believing as he does — faith living through charity — and sola fide … |
+| `believing_as_trust_not_load_bearing` | `Establishes reformedGrantingAquinasOnJohn` | **The reading of believing as trust is not one the whole case depends on.** Grant Aquinas that the believing of John 6:29 is faith formed by charity, keep Paul, Luke and Acts as … |
+| `luther_answers_aquinas_from_galatians` | `Establishes lutherOnGalatians` | **Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants — Galatians 3:11–12, and that the law commands love — and Luther's step, and the believing of John 6:29 is … |
+| `luther_answer_rests_on_his_step` | `¬Establishes galatiansTextsAlone` | **Luther's answer rests on his step.** The texts alone do not exclude Aquinas's reading: in Aquinas's world Galatians 3:11–12 holds, the law commands love, and the believing of … |
 | `trent_objection_rests_on_its_definition` | `¬Establishes tridentineCaseOnTheReformedDistinction` | **Trent's objection rests on its definition of justification.** Keep all of Trent's case except its definition, grant the Reformed distinction instead, and "not apart from works" … |
 | `only_pauls_word_prevails` | `Framework.grounded solaFideDispute.defeats = {Party.lexical, Party.romansOnTheWord}` | **Only Paul's word prevails outright.** The grounded extension — what the dispute forces before any choice between rivals — is exactly Paul's word, by its two routes: Paul's … |
 | `trent_on_pauls_word_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.trentOnPaulsWord ∉ S` | **Trent, read as a claim about Paul's word, cannot be defended.** No admissible set holds it: Paul's word defeats it, lexically and from Romans 4, and nothing answers either. |
@@ -139,20 +145,17 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `trent_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.trent` | **Nor is Trent forced.** A maximal defensible position holds Paul's case with Luke's and Peter's, and none of them can be held with Trent. |
 | `apocalyptic_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.apocalyptic` | **The apocalyptic reading can be defended.** Some maximal defensible position holds it, and holds Luke's case and Peter's with it: they claim that faith saves, and the apocalyptic … |
 | `apocalyptic_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.apocalyptic` | **Nor is it forced.** A maximal defensible position holds Paul's case — faith alone, from Galatians 2:16 read with the objective genitive — and cannot hold the apocalyptic reading … |
-| `dominical_case_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.dominical` | **Luke's case can be defended.** "Your faith has saved you", read as Luke says it, stands in six of the dispute's eight maximal defensible positions. |
+| `dominical_case_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.dominical` | **Luke's case can be defended.** "Your faith has saved you", read as Luke says it, stands with every party but Trent, however Trent is read. |
 | `dominical_case_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Nor is it forced.** A maximal defensible position holds Trent, and cannot hold Luke's case with it. |
 | `gospel_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.gospel` | **Paul's gospel can be defended**, with every Reformed strand and with Paul's word: some maximal defensible position holds them all. |
 | `gospel_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.gospel` | **Nor is it forced.** Trent, as Trent states it — tied to neither reading of its definition — is still defensible, and Paul's gospel cannot be held with it. |
-| `johannine_strand_establishes` | `Establishes johannineCase` | **John alone delivers sola fide.** Grant that the believing of 6:29 is trust, and the work God requires is no work at all: sola fide follows from John without Paul, Luke or Acts. |
-| `johannine_strand_rests_on_believing_as_trust` | `¬Establishes thomistOnJohn` | **The Johannine strand rests on believing as trust.** Grant Aquinas every text the strand reads, and read their believing as he does — faith living through charity — and sola fide … |
-| `luther_answers_aquinas_from_galatians` | `Establishes lutherOnGalatians` | **Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants — Galatians 3:11–12, and that the law commands love — and Luther's step, and the believing of John 6:29 is … |
-| `luther_answer_rests_on_his_step` | `¬Establishes galatiansTextsAlone` | **Luther's answer rests on his step.** The texts alone do not exclude Aquinas's reading: in Aquinas's world Galatians 3:11–12 holds, the law commands love, and the believing of … |
 | `reformation_dispute_forces_only_pauls_word` | `Framework.grounded reformationAlone.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.apocalyptic, Party.sanders, Party.critics, Party.jervell]) [Party.lexical, Party.romansOnTheWord])` | **What the Reformation dispute forces: Paul's word, and nothing else.** Heard as Rome and the Reformers alone, the grounded extension is exactly the two routes to Paul's word. |
 | `trent_defensible_with_pauls_word` | `Framework.CredulouslyAccepted reformationAlone.defeats ⟨Party.trent, ⋯⟩` | **Trent, as Trent states it, can be defended in the Reformation dispute — and with Paul's word.** Some maximal defensible position holds Trent together with both routes to Paul's … |
 | `sola_fide_not_forced_in_the_reformation_dispute` | `¬Framework.SkepticallyAccepted reformationAlone.defeats ⟨Party.pauline, ⋯⟩` | **Nor is sola fide forced there.** Rome and the Reformers, heard alone, tie: each Reformed strand and Trent defeat each other over Trent's definition, and every rating on both … |
 | `without_trent_luke_and_pauls_gospel_prevail` | `Framework.grounded withoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.trent, Party.trentOnPaulsWord]) [Party.dominical, Party.gospel, Party.lexical, Party.romansOnTheWord])` | **Without Trent, four things are forced.** Luke 7:50 — faith suffices; Paul's gospel — justification is not the renewal of the inward man; and Paul's word, by both routes — … |
 | `sola_fide_from_paul_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.pauline, ⋯⟩` | **Without Trent, sola fide from Paul is still not forced.** A maximal defensible position holds Campbell's apocalyptic reading — πίστις Χριστοῦ as Christ's own faithfulness — and … |
 | `sola_fide_from_peter_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, ⋯⟩` | **Nor from Peter.** A maximal defensible position holds Jervell's reading of Acts 15 — the yoke is not the law as a condition of salvation — and cannot hold Peter's case with it. |
+| `sola_fide_from_john_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.johannine, ⋯⟩` | **Nor from John.** Remove both of Trent's parties from the hearing: its case, and its definition read as a claim about Paul's word. |
 | `luke18Case_establishes` | `Establishes luke18Case` | **Luke 18 delivers faith's sufficiency**, given its step. |
 | `trent_grants_the_parable` | `Grants tridentineCase (⋀[p Claim.luke18_9_14TaxCollectorJustified, p Claim.luke18JustifiedIsVerdict, p Claim.taxCollectorBringsNoWorks])` | **Trent's case is consistent with every word of the parable.** Trent never cites Luke 18, but nothing in its decree denies that the tax collector pleaded for mercy, brought no … |
 | `matthew7_leaves_the_ground_open` | `Independent [p Claim.matthew7_21_23DoingTheWill] (p Claim.matthew7ObedienceIsAGround)` | **Matthew 7:21–23 leaves open whether obedience is a condition of entry in its own right.** Its words — the criterion is doing the Father's will — neither say that the doing is … |
@@ -273,20 +276,26 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 Twelve findings emerged that were not designed for.
 
-**Redundancy defeats a lexical dispute.** Sola fide runs on three independent
-strands — Paul's ἔργα νόμου, Jesus' σέσωκέν σε at Luke 7:50, and Peter's refusal
-of the law's "yoke" at the Jerusalem council (Acts 15:10) — and no strand's
-disputed premise carries the argument alone. Only their disjunction does. An
-opponent must defeat all three readings, not one.
+**No single disputed reading decides sola fide.** The argument reaches "saved
+through faith" by four routes, here called strands: Paul's "not by works of the
+law" (Galatians 2:16), Jesus' "your faith has saved you" (Luke 7:50), Peter's
+refusal of the law's "yoke" at the Jerusalem council (Acts 15:10), and Jesus'
+"this is the work of God, that you believe" (John 6:29). Each strand depends on
+one reading that a cited scholar denies. Remove any one and the others still
+reach the conclusion. Remove one from every strand and it no longer follows
+(`lexical_premises_jointly_load_bearing`). An opponent has to answer all four.
 
-Before Acts 15 was encoded the argument had two strands, and defeating Paul's
-reading and Luke's together defeated it. That is no longer true, and the change
-is recorded as a result rather than left to be inferred from the old one's
-absence: `apostolic_strand_survives_paul_and_luke`. The apostolic premise is
-logically independent of the Pauline one but not dialectically: a reader who
-takes ἔργα νόμου as Israel's boundary markers will read Peter's yoke the same
-way, as Jervell does. The encoding cannot make that reader answer twice; it
-does show that there are two texts to answer.
+The argument first had two strands, and defeating Paul's reading and Luke's
+together defeated it. Acts 15 and then John 6 changed that, and each change is
+recorded as a result of its own: `apostolic_strand_survives_paul_and_luke` and
+`johannine_strand_survives_the_other_three`. Each says that one strand reaches
+the conclusion with the disputed readings of all the others set aside.
+
+The strands are separate premises about separate texts. They are not separate
+in the minds of readers: someone who takes "works of the law" (ἔργα νόμου) as
+the practices that marked Israel off from the nations will read Peter's yoke
+the same way, as Jervell does. The encoding cannot make that reader answer
+twice. It does show that there are two texts to answer.
 
 The πίστις Χριστοῦ dispute was expected to add a strand of its own, and did not.
 Every text where the phrase occurs sets it against νόμος, so a route through the
@@ -299,18 +308,27 @@ the hinge of Paul's route, not of the conclusion, and it does not follow the
 Old/New Perspective line: Dunn holds the objective genitive and the New
 Perspective together.
 
-A fourth strand, from John's Gospel, has the same shape and is encoded
-alongside the other three but not yet inside the Reformed case. "This is the
-work of God, that you believe in him whom he has sent" (John 6:29) delivers sola
-fide if its believing is trust, as Calvin reads it
-(`johannine_strand_establishes`), and not if it is faith living through
-charity, as Aquinas reads it (`johannine_strand_rests_on_believing_as_trust`).
-Luther answers that reading from Galatians 3:11–12 — charity is what the law
-commands, and the law is not of faith (`luther_answers_aquinas_from_galatians`)
-— though the texts alone do not settle it; his step does
-(`luther_answer_rests_on_his_step`).
-Folding it into the Reformed case changes every joint result above, so it is a
-step of its own ([#86]).
+The fourth strand, from John's Gospel, has the same shape as the others.
+"This is the work of God, that you believe in him whom he has sent" (John 6:29)
+delivers sola fide if that believing is trust, as Calvin reads it
+(`johannine_strand_establishes`). It does not if the believing is faith made
+alive by love, as Aquinas reads it
+(`johannine_strand_rests_on_believing_as_trust`). Luther answers Aquinas from
+Galatians 3:11–12: love is what the law commands, and "the law is not of faith"
+(`luther_answers_aquinas_from_galatians`). The texts alone do not settle it;
+Luther's step does, and Aquinas denies the step
+(`luther_answer_rests_on_his_step`). Granting Aquinas his reading costs the
+Reformed case this strand and not its conclusion
+(`believing_as_trust_not_load_bearing`).
+
+Adding John to the dispute changed none of its verdicts. John's case stands off
+against Trent, against the apocalyptic reading and against Aquinas, and each of
+those is a tie between positions rated `disputed`. With Trent set aside, John's
+case is still not forced on the reader, because Aquinas's reading can still be
+defended (`sola_fide_from_john_not_forced_without_trent`). One reading of John
+is not yet encoded: that "whoever does not obey the Son" (John 3:36) shows
+believing to include obeying. No source arguing it from that word has been
+verified ([#86]).
 
 **Sola fide's rivals deny different parts of it.** The conclusion is three
 atoms — by grace, not by works, through faith — because a single atom could not
@@ -374,8 +392,9 @@ disputed. Acts giving the Spirit before the water and after it is common ground
 (`trent_grants_god_is_not_bound`), not a Reformed win.
 
 **As a dispute, only Paul's word prevails; sola fide and Trent each stand, and
-neither is forced.** Weighed as a dispute — the three strands argued
+neither is forced.** Weighed as a dispute — the four strands argued
 separately, Trent, the apocalyptic reading, Sanders, the critics, Jervell,
+Aquinas on John 6:29 and Luther's answer to him,
 Paul's gospel in Galatians, Paul's word, and Trent read as a claim about that
 word — one thing prevails outright: Paul's word, that δικαιόω does not denote
 the renewal of the inward man (`only_pauls_word_prevails`). It prevails by two

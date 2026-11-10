@@ -19,15 +19,19 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
 /-! ### Packages -/
 
-/-- The classical Protestant position: all three strands, and every disputed
-premise they rest on — ἔργα νόμου and πίστις Χριστοῦ in Paul, σῴζω in Luke, the
-yoke in Acts. -/
+/-- The classical Protestant position: all four strands, and every disputed
+reading they rest on. In Paul, that "works of the law" (ἔργα νόμου) means works
+in general, and that "faith of Christ" (πίστις Χριστοῦ) means faith in Christ.
+In Luke, that "saved" (σῴζω) at 7:50 means saved and not healed. In Acts, that
+the yoke is the law as a condition of salvation. In John, that believing is
+trust. -/
 @[solaFideDefs]
 def reformed : ArgumentPackage Claim :=
   { name := "Reformed (sola fide)"
   , cite := reformedCite
   , premises :=
-      caseOf [paulineLine, dominicalLine, apostolicLine] sharedGrounds closingSteps
+      caseOf [paulineLine, dominicalLine, apostolicLine, johannineLine] sharedGrounds
+        closingSteps
   , conclusion := solaFide
   , conclusionLabel := "salvation by grace, not by works, through faith" }
 
@@ -49,6 +53,12 @@ def paulineWithoutPistisChristou : Line Claim :=
   paulineLine.onGrounds
     [p .galatiansOpposesCircumcisionAsRequirement, p .worksOfLawMeansWorksGenerally]
 
+/-- The Johannine line without the reading of believing as trust. Its texts
+stay: they are not what is being tested. -/
+@[solaFideDefs]
+def johannineWithoutTrust : Line Claim :=
+  johannineLine.onGrounds [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving]
+
 /-- The New Perspective on Paul: it denies the traditional reading of ἔργα
 νόμου while accepting justification by faith, which is what Dunn and Wright
 actually hold. It keeps the objective genitive, as Dunn does, so the one
@@ -58,9 +68,10 @@ The denial is not assumed: `sandersLine` derives it from covenantal nomism, so
 the package rests on Sanders' account of Judaism and Dunn's inference from it,
 which is where its critics engage it.
 
-It takes no position on the yoke of Acts 15:10: the apostolic line keeps its
-step and loses its ground, so the package neither grants nor denies the premise
-on the New Perspective's behalf. -/
+It takes no position on the yoke of Acts 15:10, or on what believing is in John
+6:29. Each of those lines keeps its step and loses its disputed ground, so the
+package neither grants nor denies the premise on the New Perspective's
+behalf. -/
 @[solaFideDefs]
 def newPerspective : ArgumentPackage Claim :=
   { reformed with
@@ -69,7 +80,7 @@ def newPerspective : ArgumentPackage Claim :=
     premises :=
       caseOf
         [ paulineWithoutWorksOfLaw, sandersLine, dominicalLine
-        , apostolicLine.onGrounds [] ]
+        , apostolicLine.onGrounds [], johannineWithoutTrust ]
         sharedGrounds closingSteps }
 
 /-- The Finnish reading of Luther (Mannermaa): the Reformed case, with the
@@ -100,7 +111,7 @@ def subjectiveGenitive : ArgumentPackage Claim :=
         [ paulineLine.onGrounds
             [ p .galatiansOpposesCircumcisionAsRequirement
             , p .worksOfLawMeansWorksGenerally, notP .pistisChristouObjective ]
-        , dominicalLine, apostolicLine ]
+        , dominicalLine, apostolicLine, johannineLine ]
         sharedGrounds closingSteps }
 
 /-- Luke as law-observant (Jervell): the yoke Acts 15:10 refuses is Israel's law
@@ -115,7 +126,7 @@ def lawObservantLuke : ArgumentPackage Claim :=
     premises :=
       caseOf
         [ paulineLine, dominicalLine
-        , apostolicLine.onGrounds [notP .acts15YokeIsLawAsCondition] ]
+        , apostolicLine.onGrounds [notP .acts15YokeIsLawAsCondition], johannineLine ]
         sharedGrounds closingSteps }
 
 /-- The Reformed case granted every critical conclusion about authorship:
@@ -144,9 +155,9 @@ are related, but God's deliverance of the world in Christ.
 
 It shares Galatians with the Reformed reading — the text of 2:16 and the
 circumcision polemic — and closes with the same step to salvation. It does not
-share the dominical or apostolic strands, which neither Martyn nor Campbell
-argues from; to grant it Luke 7:50 or Acts 15 would be to encode a position
-nobody holds. -/
+share the dominical, apostolic or Johannine strands, which neither Martyn nor
+Campbell argues from; to grant it Luke 7:50, Acts 15 or John 6:29 would be to
+encode a position nobody holds. -/
 @[solaFideDefs]
 def apocalyptic : ArgumentPackage Claim :=
   { reformed with
@@ -194,7 +205,7 @@ def tridentine : ArgumentPackage Claim :=
 /-! ### Variants
 
 Each removes named premises from `reformed` and keeps the rest. The Pauline
-strand has two lexical premises, so it has two reduced forms. -/
+strand rests on two disputed readings, so it has two reduced forms. -/
 
 /-- The Reformed package without the ἔργα νόμου premise. -/
 @[solaFideDefs]
@@ -202,7 +213,7 @@ def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus the ἔργα νόμου premise"
     premises :=
-      caseOf [paulineWithoutWorksOfLaw, dominicalLine, apostolicLine]
+      caseOf [paulineWithoutWorksOfLaw, dominicalLine, apostolicLine, johannineLine]
         sharedGrounds closingSteps }
 
 /-- The Reformed package without the dominical lexical premise. -/
@@ -211,48 +222,65 @@ def reformedWithoutSozo : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus the dominical lexical premise"
     premises :=
-      caseOf [paulineLine, dominicalWithoutSozo, apostolicLine]
+      caseOf [paulineLine, dominicalWithoutSozo, apostolicLine, johannineLine]
         sharedGrounds closingSteps }
 
-/-- The Reformed package with the ἔργα νόμου premise **and** the dominical
-premise removed: the two disputes the argument was first built to survive. The
-apostolic strand is untouched. -/
+/-- The Reformed package resting on Acts alone. The disputed reading is removed
+from each of the other three strands: ἔργα νόμου from Paul, σῴζω from Luke,
+believing as trust from John. Peter's speech is untouched. -/
 @[solaFideDefs]
-def reformedWithoutWorksOfLawOrSozo : ArgumentPackage Claim :=
+def reformedRestingOnActs : ArgumentPackage Claim :=
   { reformed with
-    name := "Reformed, minus the ἔργα νόμου and σῴζω premises"
+    name := "Reformed, with only the Acts strand left whole"
     premises :=
-      caseOf [paulineWithoutWorksOfLaw, dominicalWithoutSozo, apostolicLine]
+      caseOf
+        [paulineWithoutWorksOfLaw, dominicalWithoutSozo, apostolicLine, johannineWithoutTrust]
         sharedGrounds closingSteps }
 
-/-- The Reformed package with a disputed premise removed from **every** strand:
-ἔργα νόμου from Paul, σῴζω from Luke, the yoke from Acts. The objective
-genitive stays. -/
+/-- The Reformed package resting on John alone. The disputed reading is removed
+from each of the other three strands: ἔργα νόμου from Paul, σῴζω from Luke, the
+yoke from Acts. John's strand is untouched. -/
+@[solaFideDefs]
+def reformedRestingOnJohn : ArgumentPackage Claim :=
+  { reformed with
+    name := "Reformed, with only the Johannine strand left whole"
+    premises :=
+      caseOf
+        [ paulineWithoutWorksOfLaw, dominicalWithoutSozo, apostolicLine.onGrounds []
+        , johannineLine ]
+        sharedGrounds closingSteps }
+
+/-- The Reformed package with a disputed reading removed from **every** strand:
+ἔργα νόμου from Paul, σῴζω from Luke, the yoke from Acts, believing as trust
+from John. The objective genitive stays. -/
 @[solaFideDefs]
 def reformedWithoutEveryStrandsPremise : ArgumentPackage Claim :=
   { reformed with
-    name := "Reformed, minus the ἔργα νόμου, σῴζω and yoke premises"
+    name := "Reformed, minus the ἔργα νόμου, σῴζω, yoke and trust premises"
     premises :=
       caseOf
-        [paulineWithoutWorksOfLaw, dominicalWithoutSozo, apostolicLine.onGrounds []]
+        [ paulineWithoutWorksOfLaw, dominicalWithoutSozo, apostolicLine.onGrounds []
+        , johannineWithoutTrust ]
         sharedGrounds closingSteps }
 
 /-- The same with the objective genitive removed in place of ἔργα νόμου: the
-Pauline strand loses its other lexical premise, and the other two strands
-theirs. -/
+Pauline strand loses its other disputed reading, and the other three strands
+theirs. The name lists Luke's and Peter's; John's reading of believing as trust
+is removed too. -/
 @[solaFideDefs]
 def reformedWithoutPistisChristouSozoOrYoke : ArgumentPackage Claim :=
   { reformed with
-    name := "Reformed, minus the πίστις Χριστοῦ, σῴζω and yoke premises"
+    name := "Reformed, minus the πίστις Χριστοῦ, σῴζω, yoke and trust premises"
     premises :=
       caseOf
         [ paulineWithoutPistisChristou, dominicalWithoutSozo
-        , apostolicLine.onGrounds [] ]
+        , apostolicLine.onGrounds [], johannineWithoutTrust ]
         sharedGrounds closingSteps }
 
-/-- The Reformed package with **every** lexical premise removed — both of
-Paul's, Luke's σῴζω and the yoke of Acts 15 — asked only about grace and works.
-The reading of Galatians as a polemic stays, and so does the answer to James. -/
+/-- The Reformed package with **every** disputed reading removed — both of
+Paul's, Luke's σῴζω, the yoke of Acts 15 and John's believing as trust — asked
+only about grace and works. The reading of Galatians as a polemic stays, and so
+does the answer to James. -/
 @[solaFideDefs]
 def graceAndWorksWithoutAnyLexicalPremise : ArgumentPackage Claim :=
   { reformed with
@@ -260,14 +288,14 @@ def graceAndWorksWithoutAnyLexicalPremise : ArgumentPackage Claim :=
     premises :=
       caseOf
         [ paulineLine.onGrounds [p .galatiansOpposesCircumcisionAsRequirement]
-        , dominicalWithoutSozo, apostolicLine.onGrounds [] ]
+        , dominicalWithoutSozo, apostolicLine.onGrounds [], johannineWithoutTrust ]
         sharedGrounds closingSteps
     conclusion := graceNotWorks
     conclusionLabel := "salvation by grace, not by works" }
 
 /-- The New Perspective's critics (Gathercole, the *Variegated Nomism* volume),
 on the Pauline strand alone: the ἔργα νόμου premise derived from a denial of
-covenantal nomism rather than assumed, and the other two strands left out. Does
+covenantal nomism rather than assumed, and the other three strands left out. Does
 Paul alone carry sola fide on Gathercole's history? -/
 @[solaFideDefs]
 def paulineStrandOnTheCritics : ArgumentPackage Claim :=
@@ -292,8 +320,8 @@ def reformedWithoutJamesHarmonisation : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus the James harmonisation"
     premises :=
-      caseOf [paulineLine, dominicalLine, apostolicLine] sharedGroundsWithoutJames
-        conclusionSteps }
+      caseOf [paulineLine, dominicalLine, apostolicLine, johannineLine]
+        sharedGroundsWithoutJames conclusionSteps }
 
 /-- The same, asked only about the first part of the conclusion: is salvation by
 grace, with James 2:24 left unanswered? -/

@@ -385,15 +385,26 @@ def baseCite : Claim → AtomMeta
       -- remission of sins is properly received by faith, although love,
       -- confession, and other good fruits ought to follow". Padilla reads the
       -- saying the same way — the episode is about "soteriology", and "Jesus's
-      -- love, demonstrated in forgiveness, is received by faith" (pp. 54–55) —
-      -- though neither argues the word against the healing sense; Marshall's
-      -- NIGTC note on 7:50 is still the philological study to check. Rated
-      -- `wellSupported`, not `disputed`: `disputed` means contested by
-      -- competent scholars, and a search for one arguing the healing sense *at
-      -- 7:50* (Crossref and the open web, September 2026) found none. The
-      -- formula means "made you well" at 8:48, 17:19 and 18:42, which is why it
-      -- is not `consensus`. A cited argument for healing here would lower it,
-      -- and would enter `Dispute.lean` as a party.
+      -- love, demonstrated in forgiveness, is received by faith" (pp. 54–55).
+      -- Neither argues the word against the healing sense. Marshall does, in
+      -- his note on 7:50 (issue #88): elsewhere in Luke the formula refers "at
+      -- least primarily" to healing, and it is used here "in a case where
+      -- physical healing is not involved". His note was read in the Eerdmans
+      -- e-book through Google Books' search, not on the printed page, so he is
+      -- cited by verse and not by page, and stays a supporting source.
+      --
+      -- Rated `wellSupported`, not `disputed`: no source has been found that
+      -- *argues* the healing sense at 7:50 (Crossref and the open web, September
+      -- and November 2026). One classification the other way is on record and
+      -- not yet cited: Thayer's lexicon lists Luke 7:50 among the uses meaning
+      -- "to make well, heal", adding that others take it of spiritual healing.
+      -- It gives no argument, and its edition and page have not been verified.
+      -- Whether an unargued listing in a lexicon makes the premise `disputed` is
+      -- a question for the rating audit; if it does, nothing in the dispute
+      -- moves, because Luke's case already rests on a step rated `disputed`.
+      -- The formula means "made you well" at 8:48, 17:19 and 18:42, which is why
+      -- the premise is not `consensus`. A cited argument for healing here would
+      -- lower it, and would enter `Dispute.lean` as a party.
     , source :=
         { primary := .work bookOfConcord melanchthonOnLuke7
         , supporting :=
@@ -405,26 +416,36 @@ def baseCite : Claim → AtomMeta
   | .luke7_47LoveIsEvidence =>
     { label := "Luke 7:47 — her love is the evidence of her forgiveness, not its ground"
     , kind := .interpretive
-      -- ὅτι in 7:47a can be read causally ("forgiven because she loved") or as
-      -- giving the evidence ("forgiven, as her great love shows"). Padilla
-      -- reads it the second way, from the parable of 7:41–43: her actions "stem
-      -- from the fact that she loves much because she has been forgiven much"
-      -- (p. 54). So does Melanchthon: "Christ interprets Himself when He adds:
-      -- Thy faith hath saved thee", so the woman did not merit "the remission of
-      -- sins" by "that work of love". 7:47b runs the same way. Kilgallen,
-      -- "Forgiveness of Sins (Luke 7:36-50)", NovT 40 (1998) 105–116, is a
-      -- further study to check. `plausible`, because the causal reading has a
-      -- history — Trent counts beginning to love God among the dispositions to
-      -- justification (Session VI, ch. 6) — and the grammar alone does not
-      -- exclude it.
+      -- "For" (ὅτι) in 7:47a can give the cause ("forgiven because she loved")
+      -- or the evidence ("forgiven, as her great love shows"). Marshall argues
+      -- the second from the Greek and from the context (issue #88): ὅτι means
+      -- "as is evidenced by the fact that", a sense he documents from Luke 1:22,
+      -- 6:21 and 13:2, and the causal reading "is contrary to the context",
+      -- namely the parable of 7:41–43, 7:47b and 7:50. Padilla reads it the same
+      -- way from the parable: her actions "stem from the fact that she loves
+      -- much because she has been forgiven much" (p. 54). So does Melanchthon:
+      -- "Christ interprets Himself when He adds: Thy faith hath saved thee", so
+      -- the woman did not merit "the remission of sins" by "that work of love".
+      -- Marshall's note was read in the Eerdmans e-book through Google Books'
+      -- search, not on the printed page, so he is cited by verse.
+      --
+      -- Rated `disputed`. It was `plausible` until Marshall was read. He names
+      -- the scholars who hold the causal reading — Wellhausen, Creed, and "most
+      -- RC commentators", Lagrange, Spicq and Schürmann among them — and they
+      -- grant the text and deny this reading of it, which is what `disputed`
+      -- means here. None of them is cited from his own work yet; Kilgallen,
+      -- "Forgiveness of Sins (Luke 7:36-50)", NovT 40 (1998) 105–116, is still
+      -- unread. Lowering the rating moves no verdict: Luke's case already
+      -- rested on a step rated `disputed`.
     , source :=
-        { primary := .work padillaNarrativeCriticism (.pages 54 54)
+        { primary := .work marshallLuke (.adLoc luke7_47)
         , supporting :=
-            [ .work bookOfConcord melanchthonOnLuke7
+            [ .work padillaNarrativeCriticism (.pages 54 54)
+            , .work bookOfConcord melanchthonOnLuke7
             , .scripture [{ ref := .range luke7_41to43 }, { ref := .verse luke7_47 }]
             , .scripture [{ ref := .range luke7_47to50 }] ]
         , tradition := .christianHistoricalGrammatical
-        , confidence := .plausible } }
+        , confidence := .disputed } }
   | .james2TargetsDeadFaith =>
     { label := "James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine"
     , kind := .interpretive

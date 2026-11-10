@@ -7,249 +7,298 @@
 
 Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
-## TestimonyArguments.SolaFide — justification by grace through faith, not works
+## TestimonyArguments.SolaFide — justified by grace, through faith, not by works
 
-The Reformation's material principle, encoded so that its premises are visible
-and its disputed step is identified mechanically.
+"By grace you have been saved through faith. And this is not your own doing; it
+is the gift of God, not a result of works" (Ephesians 2:8–9). The Reformers
+summed that up as *sola fide*, faith alone. Rome answered at the Council of
+Trent that faith is necessary and is not alone. This page sets out that
+argument so that a reader can see every step of it.
 
-The argument runs on **three independent strands**, and that is the point.
+### What this page does, and what it does not
 
-**The Pauline strand** reads Galatians 2:16 as the centre of a polemic. The
-Teachers in Galatia required believers to be circumcised as well as to believe,
-and Paul answers that a person is justified "not by works of the law but through
-faith in Jesus Christ". It rests on two disputed readings of that verse.
+It does two things. It writes down each position as a list of premises, every
+one with a source, so that nothing is assumed silently. And it checks, by
+machine, what follows from each list and what does not.
 
-The first is `worksOfLawMeansWorksGenerally`: whether ἔργα νόμου denotes human
-works in general, or specifically the covenant boundary markers — circumcision,
-food laws, sabbath — that marked Jews off from gentiles, as Dunn and Wright
-argue, building on Sanders' account of Second Temple Judaism. Only on the first
-reading does refusing circumcision mean refusing every work as a requirement.
+It does not tell you which premises are true. Whether Paul meant one thing or
+another by a phrase is a question for the reader and for the scholars cited.
+What the checking adds is narrower: if you grant these premises, this conclusion
+follows; if you deny that one, here is what you lose and what you keep.
 
-The second is `pistisChristouObjective`: whether πίστις Χριστοῦ is faith *in*
-Christ, as Dunn holds, or Christ's own faithfulness, as Hays holds. Only on the
-first does the verse name the believer's faith as the means of justification.
-Excluding works is not yet *faith alone*.
+Three words recur. A **premise** is something a position takes as given, such as
+a verse or a claim about what a word in it means. A **reading** is a premise
+about what a text means where readers disagree. A **rating** says how well
+supported a premise is among the sources cited: `disputed` when a cited source
+grants the evidence and denies the claim, then `plausible`, `wellSupported` and
+`consensus`. Names in `this type` are the names of premises and results in the
+source, given so that a reader can find them.
 
-The genitive dispute is a premise inside the Pauline strand, not a third
-strand. Every πίστις Χριστοῦ text sets it against νόμος, so no route through the
-genitive avoids the question of what ἔργα νόμου denotes. Nor does it follow the
-Old/New Perspective line: the New Perspective package keeps the objective
-genitive, because Dunn does.
+### The conclusion has three parts
 
-**The dominical strand** rests on Jesus' own words rather than Paul's. ἡ πίστις
-σου σέσωκέν σε — "your faith has saved you" — occurs four times in Luke (7:50,
-8:48, 17:19, 18:42). It is not a free win: σῴζω means both *save* and *heal*,
-and in 8:48, 17:19 and 18:42 the context is physical healing, which is why most
-translations render "made you well" there. The argument therefore rests on
-**Luke 7:50**, where the saying follows "your sins are forgiven" rather than a
-healing, and carries `sozoIsSoteriological` as its own premise. It is a second
-bet, on a different word — rated `wellSupported`, because no scholar found
-argues the healing sense at 7:50. It also carries its answer to "she loved
-much" (7:47): `luke7_47LoveIsEvidence`, that her love is the evidence of her
-forgiveness and not its ground, as 7:47b and the parable of the two debtors
-(7:41–43) read it. The reading of 7:47 is cited to Osvaldo Padilla's
-narrative-critical study of the episode: her actions "stem from the fact that
-she loves much because she has been forgiven much". Both premises are also
-Melanchthon's, in the *Apology of the Augsburg Confession*, which answers "she
-loved much" with Jesus' own words: "Christ interprets Himself when He adds: Thy
-faith hath saved thee". Neither argues σῴζω against the healing sense word by
-word; Marshall's commentary at 7:50 is named as the philological study to check.
+Salvation is *by grace*, *not by works*, and *through faith*. The page keeps the
+three apart, because the positions disagree about different parts.
 
-**The apostolic strand** rests on Peter as Luke reports him. At the Jerusalem
-council (Acts 15) the demand Galatians answers is made again — "unless you are
-circumcised according to the custom of Moses, you cannot be saved" (15:1) — and
-Peter answers that God cleansed the gentiles' hearts by faith, that Jew and
-gentile alike are saved through grace, and that the law is "a yoke… that
-neither our fathers nor we have been able to bear" (15:9–11). James concurs
-(15:19). It carries `acts15YokeIsLawAsCondition` as its disputed premise: that
-the yoke is the whole law as a condition of salvation, and not Israel's law
-laid on gentiles as a mark of belonging, as Jervell reads Luke. The two
-premises are about different texts, and logically independent; they are not
-dialectically independent, since a reader who takes ἔργα νόμου as boundary
-markers will read the yoke the same way.
+- Trent denies the second in one respect. It grants that nothing before
+  justification, "whether faith or works", merits it (Session VI, ch. 8). It
+  holds that works done afterwards, in grace, merit an increase of
+  justification (ch. 10; canon 24). So for Trent salvation as a whole is not
+  apart from works.
+- The apocalyptic reading of Paul (Martyn, Campbell), so called because it
+  reads Paul's gospel as God breaking into the world to rescue it, does not
+  reach the third. It takes "the righteousness of God" as God's act of rescue, not as a status
+  given on condition of faith. So it has no ground of its own for "through
+  faith", while it reaches grace and "not by works" by its own route
+  (`apocalyptic_establishes_grace_not_works`).
 
-**Each strand delivers only what its texts say.** Paul argues for *alone*: the
-Galatians already believed, adding circumcision to their faith is what severs
-them from Christ, and 2:16 names faith as the one means (ἐὰν μή, "except
-through faith"). Luke 7:50 and Acts 15 say less: that her faith saved her, and
-that the gentiles are saved without the yoke — that faith *suffices*
-(`faithIsSufficient`), not that nothing else could be a condition. "Through
-faith", the part of the conclusion the strands are needed for, needs only that.
-The difference is not pedantry. A case is attacked on what it claims, and a
-Luke credited with *alone* would be attacked by the apocalyptic reading on a
-claim Luke never made.
+The split also shows what the disputed readings below are needed for. Grace and
+"not by works" follow from the verses that say so in as many words, once James
+is answered, with every disputed reading removed
+(`grace_and_works_rest_on_no_lexical_premise`). The disputed readings decide
+*through faith*.
 
-**A Johannine strand** is encoded alongside, but not yet inside, the Reformed
-case (`Johannine.lean`). Asked what they must do "to be doing the works of God",
-the crowd is told: "This is the work of God, that you believe in him whom he has
-sent" (John 6:28–29). Calvin reads that believing as trust, which "brings
-nothing to God"; Aquinas as faith living through charity, the principle of good
-works. John alone delivers sola fide on Calvin's reading
-(`johannine_strand_establishes`) and not on Aquinas's
-(`johannine_strand_rests_on_believing_as_trust`). Luther answers Aquinas from
-Galatians 3:11–12: the law commands love, and the law is not of faith, so a faith
-formed by charity would justify by the law (`luther_answers_aquinas_from_galatians`)
-— an answer that rests on his step, which Aquinas denies
-(`luther_answer_rests_on_his_step`). The strand is not yet one of the strands of
-`reformed`, so what follows about three strands is still exact.
+### Four strands, from four speakers
 
-Encoding three strands yields a result no single strand could: no disputed
-premise is load-bearing on its own, because any strand carries the conclusion
-without the others. What is load-bearing is a disjunction — both Pauline
-readings, *or* the dominical one, *or* the apostolic one. Defeating Paul's
-reading and Luke's together, which defeated the two-strand version, no longer
-does. A reader who wins the ἔργα νόμου
-argument outright does not thereby defeat sola fide, and the New Perspective,
-which accepts justification by faith while rejecting the traditional reading of
-Paul's phrase, turns out to establish the conclusion too. Nor does winning the
-genitive for Hays: that costs the Reformed case its Pauline route, and not its
-conclusion.
+The Reformed case reaches "through faith" four ways, here called strands. Each
+rests on its own texts and on a reading of them that the conclusion needs.
+Every strand has at least one such reading that a scholar cited here denies.
 
-**The conclusion has three parts** — salvation is *by grace*, *not by works*,
-and *through faith* — and they are separate atoms, because the rivals divide
-over different parts. The Tridentine position denies the second: works done in
-grace merit an increase of justification. The apocalyptic reading of Martyn and
-Campbell does not reach the third: taking the genitive as subjective and
-δικαιοσύνη θεοῦ as God's act of deliverance, it denies that faith is the
-condition of justification, and so has no ground for "through faith" of its own,
-while establishing grace and "not by works" by its own route
-(`apocalyptic_establishes_grace_not_works`). The split also shows which part
-the strands are needed for. Grace and "not by works" follow from the texts that
-say so in terms, given an answer to James, with every lexical premise removed
-(`grace_and_works_rest_on_no_lexical_premise`). The lexical disputes decide
-*through faith*. And each part has its own closing step, which shows what
-the answer to James is for: grace follows without it
-(`grace_needs_no_answer_to_james`), "not by works" does not
-(`james_harmonisation_is_load_bearing`).
+**Paul.** "A person is not justified by works of the law but through faith in
+Jesus Christ" (Galatians 2:16). Teachers in Galatia required believers to be
+circumcised as well as to believe, and this is Paul's answer. The strand rests
+on two readings of the verse.
 
-**The New Perspective's reading of ἔργα νόμου has a reason, and its critics
-answer the reason.** Sanders' covenantal nomism — in by grace, staying in by
-works — is the ground, and Dunn's inference from it to the boundary-marker
-reading is the step, cited as his (`sandersLine`). Gathercole and the
-*Variegated Nomism* volume deny the ground: Second Temple Judaism also held
-final vindication according to works, so the demand Galatians refuses is a
-demand for obedience, and the Reformed reading follows (`criticsLine`). On the
-critics' history Paul alone carries sola fide
-(`critics_carry_the_pauline_strand`); on Sanders' he does not
-(`sanders_costs_the_pauline_strand`). The ἔργα νόμου dispute is a dispute
-about Second Temple Judaism before it is one about Paul's Greek.
+- What "works of the law" (ἔργα νόμου) means: human works in general, or what
+  the law requires of Israel as a people set apart, seen above all in the
+  practices that marked Jews off from gentiles: circumcision, food laws and
+  sabbath. Dunn and Wright hold the second, building on Sanders. Their reading
+  is known as the New Perspective on Paul. Only on the
+  first does refusing circumcision mean refusing every work as a requirement
+  (`worksOfLawMeansWorksGenerally`).
+- What "faith in Jesus Christ" (πίστις Χριστοῦ) means: our faith in Christ, or
+  Christ's own faithfulness. Hays holds the second. Only on the first does the
+  verse name the believer's faith as the means (`pistisChristouObjective`).
 
-**What justification is** is a separate question, and the encoding keeps it
-separate. The Reformed account is forensic: pardon and imputation, not infusion
-(Westminster XI.1). Trent denies it — justification is "not remission of sins
-merely, but also the sanctification and renewal of the inward man" — and so
-does Mannermaa's Finnish reading of Luther, for which Christ himself is present
-in faith. The Finnish package denies the forensic account and establishes sola
-fide (`forensic_justification_not_load_bearing`); Trent denies it and does not.
-So denying the forensic account is not enough to deny sola fide. What Trent's
-objection needs is its fuller definition: justification includes the renewal of
-the inward man, and that renewal grows through good works, so works increase
-justification. Both sides grant the growth; the Reformed call it sanctification,
-distinct from justification and following it (Westminster XIII.1; Calvin,
-*Institutes* III.xi.6). Put the distinction in place of Trent's definition and
-Trent's case no longer denies "not by works"
-(`trent_objection_rests_on_its_definition`). The dispute over merit is a
-dispute over what justification is — but over sanctification, not over
-infusion as such.
+The second question is a premise inside Paul's strand and not a strand of its
+own. Every verse with the phrase sets it against the law, so no route through
+it avoids the first question. Nor does it divide the same people: Dunn rejects
+the traditional reading of "works of the law" and keeps "faith in Christ".
 
-**Authorship.** Ephesians, Titus and 1 and 2 Peter are each disputed, and each
-dispute is catalogued from both sides — Hoehner and Lincoln on Ephesians,
-Mounce, Dibelius–Conzelmann and Marshall on the Pastorals, Jobes and Achtemeier
-on 1 Peter, Schreiner and Bauckham on 2 Peter, and Ehrman across all four.
-Granting every critical conclusion costs the argument nothing, because it
-reads these letters as canonical scripture rather than as an apostle's
-testimony. It does cost them their use as evidence of what *Paul* meant by
-"works", which is why that premise is argued from Romans 4, 9 and 11, where the
-law is not in view and the authorship is not in doubt.
+**Jesus, in Luke.** "Your faith has saved you; go in peace" (Luke 7:50), said to
+the woman who anointed his feet. The saying occurs four times in Luke (7:50,
+8:48, 17:19, 18:42). The Greek verb (σῴζω) means both *save* and *heal*, and in
+the other three places the person has just been healed, which is why most
+English Bibles print "made you well" there. So the strand rests on 7:50 alone,
+where the saying follows "your sins are forgiven" and no one is ill. That the
+word means *saved* there is a reading the strand needs
+(`sozoIsSoteriological`). It is rated `wellSupported`: no scholar found argues
+the healing sense at 7:50. The reading in this strand that is rated `disputed`
+is of 7:47.
 
-**James 2:24** — "a person is justified by works and not by faith alone", the
-only occurrence of *faith alone* in the New Testament — is no longer assumed
-away. Its compatibility with Paul is now *derived* from two cited premises:
-that James's target is a barren faith, mere assent ("even the demons believe",
-Jas 2:19), and that works are the fruit and evidence of saving faith rather
-than a ground of justification. Moo and Johnson for the exegesis; Westminster
-XI.2 for the confessional form — faith "is not alone in the person justified,
-but is ever accompanied with all other saving graces, and is no dead faith, but
-worketh by love". `james_harmonisation_is_load_bearing` shows the argument
-genuinely depends on this: drop it and sola fide does not follow.
+The strand also answers "her sins, which are many, are forgiven—for she loved
+much" (7:47), which could be read as making love the reason she was forgiven. It
+holds that her love shows her forgiveness and does not earn it
+(`luke7_47LoveIsEvidence`), as the rest of the verse ("he who is forgiven
+little, loves little") and the parable of the two debtors (7:41–43) suggest.
+That reading is cited to Osvaldo Padilla: her
+actions "stem from the fact that she loves much because she has been forgiven
+much". It is Melanchthon's too, in the *Apology of the Augsburg Confession*:
+"Christ interprets Himself when He adds: Thy faith hath saved thee". Marshall's
+commentary on the Greek text argues it from the grammar: "for" here means "as
+is evidenced by the fact that". He also names those who read the love as the
+cause, most Roman Catholic commentators among them, so this premise is rated
+`disputed`. On "saved", Marshall notes that the saying is used at 7:50 "in a
+case where physical healing is not involved".
 
-**Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
-Sanders, the critics, Jervell, Paul's gospel, Paul's word (lexically, and from
-Romans 4) and Trent read as a claim about that word as parties, one thing
-prevails outright: Paul's word — δικαιόω does not denote the renewal of the
-inward man. Its two routes are the only parties whose every link is rated above
-`disputed`, and each defeats Trent read as a claim about the word, which cannot
-be defended at all. Everything else ties. Every other
-party's weakest link is `disputed`, and every attack between Trent and a
-Reformed party runs both ways: Luke's case, Paul's gospel and Trent are each
-defensible, and none is accepted on every resolution. Luke's case, holding only
-Luke's words, meets Trent over faith's sufficiency, and the apocalyptic reading
-not at all — Luke says faith saved her, not that faith alone does — so the
-dispute between Campbell and the Reformed reading is between Campbell and Paul,
-over the genitive.
+**Peter, in Acts.** At the Jerusalem council some demanded: "Unless you are
+circumcised according to the custom of Moses, you cannot be saved" (Acts 15:1).
+Peter answered that God cleansed the gentiles' hearts by faith, that the law is
+"a yoke… that neither our fathers nor we have been able to bear", and that "we
+believe that we will be saved through the grace of the Lord Jesus, just as they
+will" (15:9–11). The strand's disputed reading is that the yoke is the whole
+law treated as a condition of salvation (`acts15YokeIsLawAsCondition`). Jervell
+reads it as Israel's law laid on gentiles as a mark of belonging. On that
+reading Peter refuses to make gentiles keep Israel's law, and says nothing
+about the law as a condition of salvation.
 
-**Where Trent parts from Paul** (`Gospel.lean`). Paul's answer to anything added
-to the gospel is Galatians — another gospel, accursed (1:6–9); if righteousness
-came by the law, Christ died for nothing (2:21) — and the gospel is that Christ
-died for our sins (1 Corinthians 15:3). Read with the forensic sense of δικαιόω,
-it denies Trent's definition of justification as renewal. Trent grants every
-text, and — with the *Joint Declaration* (§22) and New Testament scholarship
-across traditions — the forensic sense of the verb. A checked `Because` finds
-where they part: one step, that a verdict on a finished work excludes the
-renewal wrought in us.
+**Jesus, in John.** "What must we do, to be doing the works of God?" "This is
+the work of God, that you believe in him whom he has sent" (John 6:28–29). The
+strand's disputed reading is that this believing is trust, which brings nothing
+of its own to God (`johannineBelievingIsTrust`). Calvin reads it so. Aquinas
+reads it as faith formed by charity, that is, faith made alive by love, which
+is how Trent describes the faith that justifies. Luther answers Aquinas from
+Galatians 3:11–12, and the answer rests on a step Aquinas denies. The section
+on John below sets this out.
 
-**What Trent's definition claims** (`Definition.lean`). The definition can be
-read as a claim about Paul's word or about what God does in justifying, and a
-checked `Dilemma` answers both. Read as a claim about the word, it cannot be held
-with the lexical case — the forensic sense, Paul's own words for renewal, and
-the rule of least meaning (Joos, Silva; Barr's "illegitimate totality
-transfer") — at a step rated `wellSupported`; nor can the step from the Latin
-gloss Trent rests that reading on (Augustine: "being justified" is "being made
-righteous") to what the Greek word denotes. Read as a claim about what God does,
-nothing about the word reaches it, and it conflicts with Paul twice — with his
-gospel in Galatians and with Romans 4:5–8, "God justifies the ungodly" — each
-at a `disputed` step: Augustine grants Romans 4 and reads it the other way.
-Romans 4 thus does two things: read for the word, it is a second route, rated
-`wellSupported`, to the lexical conclusion; read for the reality, it meets Trent
-where Galatians does, and no higher.
+### What the four strands show together
 
-**Heard narrower** (`Hearings.lean`). Two questions a reader asks, answered by
-hearing the same dispute with some parties set aside. *What did the Reformation
-itself decide?* Heard as Rome and the Reformers alone, only Paul's word is
-forced; Trent's definition, as a claim about what God does, and the Reformed
-strands tie. *Without Trent, would Scripture establish sola fide?* Four things
-are then forced — Luke's "faith suffices", Paul's gospel, and Paul's word by
-both routes — but *faith alone* is still not: Campbell on πίστις Χριστοῦ,
-Sanders and Dunn on ἔργα νόμου, and Jervell on the yoke each still stand
-against it. The obstacle then is modern exegesis, not Rome.
+The argument does not depend on any one disputed reading. Remove any one and
+the other strands still reach the conclusion (`worksOfLaw_not_load_bearing`,
+`sozo_not_load_bearing`, `acts15Yoke_not_load_bearing`,
+`believing_as_trust_not_load_bearing`). Acts and John each reach it with all
+the other strands' disputed readings left out
+(`apostolic_strand_survives_paul_and_luke`,
+`johannine_strand_survives_the_other_three`). Only when a disputed reading is
+removed from every strand at once does sola fide fail to follow
+(`lexical_premises_jointly_load_bearing`).
 
-**Jesus' own words** (`JesusWords.lean`). *What does Jesus himself say?* Luke
-18:9–14 — the tax collector "went down to his house justified" — is his own
-teaching on justification and works, in Paul's word for it. Trent's case is
-consistent with every word of the parable, and with the tax collector bringing
-no meriting works. Trent never cites Luke 18; applied to it, its dispositions
-(Session VI, ch. 6) and canon 9 deny the step to "faith suffices". So Luke 18
-meets Trent where Luke 7:50 does, at Trent's definition. Matthew 7:21–23 and
-19:16–22 are read both ways, each reading cited and `disputed`, and neither text
-settles its question alone. Heard together, Jesus' words force nothing; heard
-without Trent, Luke's two sayings are forced (that faith sufficed, not that faith
-alone saves) and Matthew is not.
-This is a dispute of its own, kept apart from the one above for the reason the
-Johannine strand is.
+So a reader who wins the argument over "works of the law" has not thereby
+defeated sola fide. The New Perspective (Dunn's and Wright's reading), which
+rejects the traditional reading of that phrase and still holds justification by
+faith, establishes the conclusion too (`newPerspective_establishes`). Nor does winning "the
+faithfulness of Christ" for Hays defeat it: that costs the Reformed case its
+route through Paul, and not its conclusion (`pistisChristou_not_load_bearing`).
 
-**Baptism** (`Baptism.lean`). Trent makes water baptism the instrumental cause
-of justification, and qualifies it in its own words: "or the desire thereof".
-Water, the Spirit and "fire" are kept as separate atoms, so no argument passes
-from one sense of "baptism" to another. Read so that the washing itself is
-necessary for salvation — Feeney's reading — Trent's claim cannot be held with
-the thief read as Augustine reads him, nor with Rome's own teaching on the
-desire. Read in Trent's own words, the thief does not reach it; what it meets is
-the Reformed argument from the desire — where only the desire is present, what
-justifies is not the washing — at a step Aquinas contests. John 3:5 is a dilemma
-of its own: of the four readings of its "water" on record, only the baptismal
-one leaves Trent's step from the verse standing, and even then the step is
-disputed. And that Acts gives the Spirit both before the water and after it is
-common ground: Rome says God "is not bound by his sacraments".
+What this does not show is that the strands are independent in practice. A
+reader who takes "works of the law" as boundary markers will usually read
+Peter's yoke the same way. They are different premises about different texts,
+and an opponent has to answer each.
+
+### Each strand is credited only with what its texts say
+
+On the Reformed reading, Paul argues for *alone*. The Galatians already
+believed; adding circumcision to their faith is what he says severs them from
+Christ (5:4). John's strand, on Calvin's reading, claims the same: asked about
+works, Jesus names believing and nothing else.
+
+Luke 7:50 and Acts 15 say less. Her faith saved her; the gentiles are saved
+without the yoke. That is, faith *suffices* (`faithIsSufficient`). They do not
+say that nothing else could be a condition. "Through faith" needs only that
+much.
+
+The difference matters when positions are weighed against each other, because
+a case is attacked on what it claims. Credit Luke with *alone*, and the
+apocalyptic reading would attack Luke on a claim Luke never made.
+
+### Why the New Perspective reads Paul as it does, and the reply
+
+Sanders argued that Judaism in Paul's day taught that one enters the covenant
+by grace and stays in by obedience ("covenantal nomism"). If so, Paul's
+opponents were not trying to earn salvation, and Dunn infers that what Paul
+refuses is the boundary markers (`sandersLine`). Gathercole, and the *Variegated
+Nomism* volume edited by Carson, O'Brien and Seifrid, deny the starting point:
+Jewish texts of the period also speak of
+final vindication according to works, so the demand Paul refuses is a demand for
+obedience (`criticsLine`).
+
+On the critics' history, Paul alone carries sola fide
+(`critics_carry_the_pauline_strand`). On Sanders', he does not
+(`sanders_costs_the_pauline_strand`). So whether Paul's strand reaches sola
+fide depends on what Judaism in Paul's day taught about works.
+
+### What justification is
+
+This is a separate question, and the page keeps it separate. The Reformed
+account is forensic: justification is God's verdict, pardon and the counting of
+righteousness, not a change worked inside the person (Westminster Confession
+XI.1). Trent denies that: justification is "not remission of sins merely, but
+also the sanctification and renewal of the inward man". Mannermaa and the
+Finnish school read Luther differently again. In faith Christ himself is present
+in the believer, and so justification is not a verdict *and nothing more*.
+
+The Finnish position denies that justification is only a verdict and still
+establishes sola fide (`forensic_justification_not_load_bearing`). Trent denies it and does not.
+So denying the forensic account is not what separates Trent from the Reformers.
+What Trent's objection needs is its fuller definition: justification includes
+the inner renewal, that renewal grows through good works, and so works increase
+justification. Both sides grant the growth. The Reformed call it
+sanctification, distinct from justification and following it (Westminster
+XIII.1; Calvin, *Institutes* III.xi.6). Put that distinction in place of Trent's
+definition, and Trent's case no longer denies "not by works"
+(`trent_objection_rests_on_its_definition`). Whether works merit anything in
+justification depends on whether justification includes the inner renewal.
+
+### James 2:24
+
+"A person is justified by works and not by faith alone" is the only place in the
+New Testament where the words *faith alone* occur, and they are denied. The page
+does not assume the verse away. It derives the agreement of James with Paul from
+two cited premises: that James is attacking a barren faith, mere assent ("even
+the demons believe", 2:19); and that works are the fruit and evidence of saving
+faith and not a ground of justification. Moo and Johnson are cited for the
+exegesis, and Westminster XI.2 for the confession: faith "is not alone in the
+person justified, but is ever accompanied with all other saving graces, and is
+no dead faith, but worketh by love".
+
+The argument depends on this. Remove the answer to James and sola fide does not
+follow (`james_harmonisation_is_load_bearing`). Grace alone does not need it
+(`grace_needs_no_answer_to_james`): James bears on "not by works", the part he
+appears to contradict.
+
+### Who wrote the letters
+
+Ephesians, Titus and 1 and 2 Peter are each disputed as to author, and each
+dispute is recorded from both sides: Hoehner and Lincoln on Ephesians; Mounce,
+Dibelius–Conzelmann and Marshall on the Pastorals; Jobes and Achtemeier on
+1 Peter; Schreiner and Bauckham on 2 Peter; Ehrman across all four. Granting
+every critical conclusion costs the argument nothing
+(`authorship_not_load_bearing`), because it reads these letters as Scripture and
+not as the testimony of a named apostle. It does cost them their use as evidence
+of what *Paul* meant by "works", which is why that premise is argued from Romans
+4, 9 and 11, where the authorship is not in doubt.
+
+### The positions weighed against each other
+
+The results above ask what follows from each position's premises. The section
+on the dispute (`Dispute.lean`) asks a different question: when the positions
+are set against one another, which survive?
+
+Three words are used there. One position *defeats* another when it contradicts
+it and rests on premises rated at least as well. A position is *forced* when it
+must be accepted however the open disagreements are settled. Two positions that
+defeat each other are a *tie*: a reader may hold either, and neither is
+forced. Fifteen positions are heard: the four strands, each argued alone;
+Trent; the apocalyptic reading; Sanders and his critics; Jervell; Aquinas on
+John, and Luther's answer; Paul's gospel in Galatians; and three positions on
+what Paul's word "justify" means.
+
+One thing prevails outright: Paul's verb "justify" (δικαιόω) does not mean the
+renewal of the inward man (`only_pauls_word_prevails`). It is argued two ways,
+from the word's usage and from Romans 4, and those are the only positions whose
+every step is rated above `disputed`. Trent's definition, if it is taken as a
+claim about what Paul's word means, cannot be defended against them
+(`trent_on_pauls_word_indefensible`).
+
+Everything else ties. Every other position rests on something rated `disputed`,
+and every attack between Trent and a Reformed strand runs in both directions.
+Luke's case, Paul's gospel and Trent can each be defended, and none is forced.
+John's case ties with Trent and with Aquinas, as the other strands tie with
+their rivals.
+
+### Narrower questions
+
+The remaining sections each take one question a reader asks.
+
+- **Where exactly do Trent and Paul part?** At one step (`Gospel.lean`): that a
+  verdict on Christ's finished work excludes the renewal worked in us. Trent
+  grants every text, and, with the *Joint Declaration* (§22), the verdict sense
+  of the verb.
+- **Is Trent's definition about Paul's word, or about what God does?** Read as
+  a claim about the word, it cannot be held with the evidence for the word's
+  meaning. Read as a claim about what God does, nothing about the word reaches
+  it, and it meets Paul at steps rated `disputed`: Augustine accepts Romans 4
+  and reads it as God making the ungodly godly (`Definition.lean`).
+- **What did the Reformation itself decide? And without Trent, would Scripture
+  establish sola fide?** Heard as Rome and the Reformers alone, only the meaning
+  of Paul's word is forced. Heard without Trent, three things are forced: Luke's
+  "faith suffices", Paul's gospel, and the meaning of Paul's word. *Faith alone*
+  still is not. Campbell, Sanders and Dunn, Jervell, and Aquinas each still
+  stand against one strand (`Hearings.lean`).
+- **What does Jesus himself say?** The tax collector "went
+  down to his house justified" (Luke 18:14). Trent's case is consistent with
+  every word of the parable, and meets it where it meets Luke 7:50. Matthew
+  7:21–23 and 19:16–22 are each read both ways, and neither settles its question
+  alone (`JesusWords.lean`).
+- **Is baptism necessary?** Trent makes water baptism the
+  instrument of justification, "or the desire thereof". Water, the Spirit and
+  "fire" are kept apart, so that no argument slides from one sense of "baptism"
+  to another. John 3:5 is examined under each of the four readings of its
+  "water" (`Baptism.lean`).
+- **What does "justified by works" mean in James?** The same kind of hearing,
+  over James 2:24 and the two other texts Trent cites for the increase of
+  justification (`James.lean`, `Vulgate.lean`).
+- **How firm are the ratings?** Each rating that a verdict depends on is
+  recomputed under three standards (`Ratings.lean`).
 
 ### Where things are
 
@@ -257,20 +306,22 @@ common ground: Rome says God "is not bound by his sacraments".
 |---|---|
 | `Atoms.lean` | the `Claim` atoms |
 | `Sources.lean` | `baseCite`, and each position's citation of the premise it disputes |
-| `Lines.lean` | the inference steps, the three strands, the apocalyptic rival, what they share |
+| `Lines.lean` | the inference steps, the four strands, the apocalyptic rival, what they share |
 | `Packages.lean` | the positions, and the variants that remove a named premise |
 | `Results.lean` | every `@[headline]` result, with its trust base |
 | `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
-| `Johannine.lean` | the Johannine strand and Aquinas's rival reading, encoded alone |
+| `Johannine.lean` | John's strand argued alone, Aquinas's rival reading, and Luther's answer |
 | `Gospel.lean` | Paul's gospel in Galatians against Trent's definition, and where they part |
 | `Definition.lean` | Paul's word, and the dilemma over what Trent's definition claims |
 | `Hearings.lean` | the dispute heard narrower: the Reformation alone, and without Trent |
 | `JesusWords.lean` | Luke 18, and both readings of Matthew 7 and 19: what Jesus' words decide |
 | `Baptism.lean` | water, Spirit and fire apart; the instrumental cause; John 3:5 |
+| `James.lean`, `Vulgate.lean` | James 2:24 and Trent's other two texts, heard as a dispute |
+| `Ratings.lean` | the ratings recomputed under three standards |
 
 ## TestimonyArguments.SolaFide.Atoms — the atomic claims
 
-The prooftexts of the three strands, their four disputed premises, the reading
+The prooftexts of the four strands, their five disputed premises, the reading
 of Galatians as a polemic, the authorship of the disputed letters, the rivals'
 premises — covenantal nomism, forensic justification, the apocalyptic reading —
 the James premises, and the three parts of the conclusion. See
@@ -323,7 +374,7 @@ positions in `SolaFide.Dispute` carry.
 | \\(P_{16}\\) | δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains | interpretive | critical scholarship, disputed | [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26 |
 | \\(P_{17}\\) | Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven | textual | Christian, historical-grammatical, consensus | Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
 | \\(P_{18}\\) | σῴζω in Luke 7:50 denotes salvation, not physical healing | linguistic | Christian, historical-grammatical, well supported | [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–55; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50 |
-| \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground | interpretive | Christian, historical-grammatical, plausible | [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
+| \\(P_{19}\\) | Luke 7:47 — her love is the evidence of her forgiveness, not its ground | interpretive | Christian, historical-grammatical, disputed | [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50 |
 | \\(P_{20}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
 | \\(P_{21}\\) | Good works are the fruit and evidence of saving faith, not its ground | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10 |
 | \\(P_{22}\\) | James 2:24 is compatible with Paul, using ‘justify’ in a different sense | interpretive | Reformed Protestant, disputed | Jas 2:24; [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11 |
@@ -875,31 +926,41 @@ def apocalypticCite : Claim → AtomMeta
 
 ## TestimonyArguments.SolaFide.Lines — the strands, and what they share
 
-Three strands deliver the conclusion, by different words from different
-speakers: Paul, Jesus, and Peter at Jerusalem. Each delivers only what its own
-texts say. Paul's says justification is by faith *alone*; Jesus' words at Luke
-7:50 and Peter's at Jerusalem say that faith *suffices*, which is weaker, and is
-all the conclusion's "through faith" needs. A fourth line answers James, and a
-fifth — the apocalyptic reading — denies what Paul delivers. What every package holds in
-common is collected here too, so that a variant package is a named difference
-rather than a retyped list.
+Four strands lead to the conclusion, each from a different speaker: Paul, Jesus
+as Luke reports him, Peter at Jerusalem, and Jesus as John reports him. Each is
+credited only with what its own texts say. Paul and John say that justification
+is by faith *alone*. Luke 7:50 and Acts 15 say that faith *suffices*, which is
+less, and is all that "through faith" in the conclusion needs.
+
+Two further lines are here. One answers James 2:24. The other is the
+apocalyptic reading of Paul, which denies what Paul's strand delivers.
+
+What every package holds in common is collected here too, so that a variant
+package is a named difference from another and not a retyped list.
 
 #### Lines of reason
 
-Three strands deliver the conclusion, and a fourth line answers James. They do
-not all deliver the same thing. Paul argues for *alone*: the polemic refuses
-circumcision added to faith, and Galatians 2:16 names faith as the one means
-(ἐὰν μή, "except through faith"). Luke 7:50 and Acts 15 say that faith saves,
-and that the woman's love and the law's yoke are not what does; they do not say
-that nothing else could. So they deliver `faithIsSufficient`. The difference
-matters in a dispute, where a case is attacked on what it derives as well as on
-what it assumes: credit Luke with *alone*, and a reading that denies faith
-alone — the apocalyptic reading — attacks Luke's case on a claim Luke never
-made. The James
-harmonisation is deliberately *not* a strand: it does not reach
-`justificationByFaithAlone` by an independent route, it supplies a premise the
-closing step needs. So it contributes its grounds and its step to the case
-without being one of the lines `caseOf` treats as converging.
+Four strands lead to the conclusion, and a fifth line answers James. The
+strands do not all deliver the same thing.
+
+Paul argues for *alone*. His letter refuses circumcision added to faith, and
+Galatians 2:16 names faith as the one means ("not justified by works of the law
+but through faith", ἐὰν μή). John's strand delivers the same: asked what works
+God requires, Jesus names believing and nothing else (John 6:28–29).
+
+Luke 7:50 and Acts 15 say that faith saves, and that the woman's love and the
+law's yoke are not what saves. They do not say that nothing else could. So
+those two strands deliver `faithIsSufficient`, the weaker claim.
+
+The difference matters when the positions are weighed against each other. A
+case is attacked on what it derives as well as on what it assumes. Credit Luke
+with *alone*, and the apocalyptic reading, which denies faith alone, would
+attack Luke on a claim Luke never made.
+
+The answer to James is deliberately *not* a strand. It is not another route to
+`justificationByFaithAlone`; it supplies a premise the closing step needs. So
+it adds its grounds and its step to the case without being one of the lines
+that `caseOf` treats as arriving at the same place.
 
 <a id="paulineToFaithAlone"></a>
 **`paulineToFaithAlone`**
@@ -953,6 +1014,25 @@ suffices.
 <div class="testimony-math">
 \[
 (P_{9} \land P_{10}) \rightarrow P_{26}
+\]
+</div>
+
+<a id="johannineToFaithAlone"></a>
+**`johannineToFaithAlone`**
+
+**The Johannine strand.** From John's Gospel to justification by faith
+alone. The crowd asks what they must do "to be doing the works of God", and
+Jesus answers: "This is the work of God, that you believe in him whom he has
+sent" (6:28–29). The Gospel says throughout that eternal life comes through
+believing (3:16–18, 3:36, 5:24, 20:31).
+
+The step needs one more premise, and it is the disputed one: that this
+believing is trust, which brings nothing of its own to God. Independent of
+Paul, of Luke 7:50 and of Acts 15.
+
+<div class="testimony-math">
+\[
+(P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25}
 \]
 </div>
 
@@ -1039,7 +1119,7 @@ P_{25} \rightarrow P_{26}
 **`toThroughFaith`**
 
 *Through faith*, from the sufficiency of faith and Ephesians 2:8 (διὰ
-πίστεως: faith as the means). This is the only part of the conclusion the three
+πίστεως: faith as the means). This is the only part of the conclusion the four
 strands are needed for, and it needs only what each of them says.
 
 <div class="testimony-math">
@@ -1110,6 +1190,42 @@ they are two premises about two texts, and an opponent has to answer both.
 \text{(1)} \quad &amp; P_{10} \\
 \text{(2)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\[4pt]
 \vdash \quad &amp; P_{26}
+\end{aligned}
+\]
+</div>
+
+<a id="calvinOnJohnSix"></a>
+**`calvinOnJohnSix`**
+
+Calvin's step from John to justification. John never uses Paul's verb
+"justify" (δικαιόω), so passing from "eternal life through believing" to
+"justified by faith alone" is an inference and not the reading of a word.
+Rated `plausible`: no cited source grants the strand's grounds and denies the
+step, but the step rests on Calvin's comment on 6:29 and not on a full argument
+from John's vocabulary to Paul's.
+
+```lean
+def calvinOnJohnSix : Source :=
+  { primary := Reference.work calvinJohn (Bib.Locus.adLoc Scripture.john6_29),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.plausible }
+```
+
+<a id="johannineLine"></a>
+**`johannineLine`** — Johannine strand (John 6:29)
+
+The Johannine line, resting on Jesus' words in John's Gospel. Its texts are
+its own grounds: no other strand reads them. Its distinctive ground is the
+reading of believing as trust, which Aquinas denies.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{37} \\
+\text{(3)} \quad &amp; P_{38} \\
+\text{(4)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{25}
 \end{aligned}
 \]
 </div>
@@ -1662,9 +1778,12 @@ establishing the conclusion anyway or naming a countermodel.
 <a id="reformed"></a>
 **`reformed`** — Reformed (sola fide)
 
-The classical Protestant position: all three strands, and every disputed
-premise they rest on — ἔργα νόμου and πίστις Χριστοῦ in Paul, σῴζω in Luke, the
-yoke in Acts.
+The classical Protestant position: all four strands, and every disputed
+reading they rest on. In Paul, that "works of the law" (ἔργα νόμου) means works
+in general, and that "faith of Christ" (πίστις Χριστοῦ) means faith in Christ.
+In Luke, that "saved" (σῴζω) at 7:50 means saved and not healed. In Acts, that
+the yoke is the law as a condition of salvation. In John, that believing is
+trust.
 
 <div class="testimony-math">
 \[
@@ -1675,30 +1794,34 @@ yoke in Acts.
 \text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{19} \\
 \text{(6)} \quad &amp; P_{10} \\
-\text{(7)} \quad &amp; P_{1} \\
-\text{(8)} \quad &amp; P_{2} \\
-\text{(9)} \quad &amp; P_{3} \\
-\text{(10)} \quad &amp; P_{4} \\
-\text{(11)} \quad &amp; P_{5} \\
-\text{(12)} \quad &amp; P_{17} \\
-\text{(13)} \quad &amp; P_{9} \\
-\text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{24} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\text{(7)} \quad &amp; P_{36} \\
+\text{(8)} \quad &amp; P_{37} \\
+\text{(9)} \quad &amp; P_{38} \\
+\text{(10)} \quad &amp; P_{1} \\
+\text{(11)} \quad &amp; P_{2} \\
+\text{(12)} \quad &amp; P_{3} \\
+\text{(13)} \quad &amp; P_{4} \\
+\text{(14)} \quad &amp; P_{5} \\
+\text{(15)} \quad &amp; P_{17} \\
+\text{(16)} \quad &amp; P_{9} \\
+\text{(17)} \quad &amp; P_{20} \\
+\text{(18)} \quad &amp; P_{21} \\
+\text{(19)} \quad &amp; P_{24} \\
+\text{(20)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(24)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(25)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(26)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(27)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(28)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="dominicalWithoutSozo"></a>
 **`dominicalWithoutSozo`** — Dominical strand (σῴζω at Luke 7:50)
@@ -1748,6 +1871,23 @@ The Pauline line without the objective genitive.
 \]
 </div>
 
+<a id="johannineWithoutTrust"></a>
+**`johannineWithoutTrust`** — Johannine strand (John 6:29)
+
+The Johannine line without the reading of believing as trust. Its texts
+stay: they are not what is being tested.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{37} \\
+\text{(3)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\[4pt]
+\vdash \quad &amp; P_{25}
+\end{aligned}
+\]
+</div>
+
 <a id="newPerspective"></a>
 **`newPerspective`** — New Perspective on Paul
 
@@ -1760,9 +1900,10 @@ The denial is not assumed: `sandersLine` derives it from covenantal nomism, so
 the package rests on Sanders' account of Judaism and Dunn's inference from it,
 which is where its critics engage it.
 
-It takes no position on the yoke of Acts 15:10: the apostolic line keeps its
-step and loses its ground, so the package neither grants nor denies the premise
-on the New Perspective's behalf.
+It takes no position on the yoke of Acts 15:10, or on what believing is in John
+6:29. Each of those lines keeps its step and loses its disputed ground, so the
+package neither grants nor denies the premise on the New Perspective's
+behalf.
 
 <div class="testimony-math">
 \[
@@ -1772,31 +1913,34 @@ on the New Perspective's behalf.
 \text{(3)} \quad &amp; P_{31} \\
 \text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{19} \\
-\text{(6)} \quad &amp; P_{1} \\
-\text{(7)} \quad &amp; P_{2} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{17} \\
-\text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{20} \\
-\text{(14)} \quad &amp; P_{21} \\
-\text{(15)} \quad &amp; P_{24} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(17)} \quad &amp; P_{31} \rightarrow \lnot P_{6} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\text{(6)} \quad &amp; P_{36} \\
+\text{(7)} \quad &amp; P_{37} \\
+\text{(8)} \quad &amp; P_{1} \\
+\text{(9)} \quad &amp; P_{2} \\
+\text{(10)} \quad &amp; P_{3} \\
+\text{(11)} \quad &amp; P_{4} \\
+\text{(12)} \quad &amp; P_{5} \\
+\text{(13)} \quad &amp; P_{17} \\
+\text{(14)} \quad &amp; P_{9} \\
+\text{(15)} \quad &amp; P_{20} \\
+\text{(16)} \quad &amp; P_{21} \\
+\text{(17)} \quad &amp; P_{24} \\
+\text{(18)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; P_{31} \rightarrow \lnot P_{6} \\
+\text{(20)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(23)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(24)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(25)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(26)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(27)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="finnish"></a>
 **`finnish`** — Finnish reading of Luther (Mannermaa)
@@ -1819,31 +1963,35 @@ shows that the two questions are independent.
 \text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{19} \\
 \text{(6)} \quad &amp; P_{10} \\
-\text{(7)} \quad &amp; P_{1} \\
-\text{(8)} \quad &amp; P_{2} \\
-\text{(9)} \quad &amp; P_{3} \\
-\text{(10)} \quad &amp; P_{4} \\
-\text{(11)} \quad &amp; P_{5} \\
-\text{(12)} \quad &amp; P_{17} \\
-\text{(13)} \quad &amp; P_{9} \\
-\text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{24} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\
-\text{(25)} \quad &amp; \lnot P_{30} \\[4pt]
+\text{(7)} \quad &amp; P_{36} \\
+\text{(8)} \quad &amp; P_{37} \\
+\text{(9)} \quad &amp; P_{38} \\
+\text{(10)} \quad &amp; P_{1} \\
+\text{(11)} \quad &amp; P_{2} \\
+\text{(12)} \quad &amp; P_{3} \\
+\text{(13)} \quad &amp; P_{4} \\
+\text{(14)} \quad &amp; P_{5} \\
+\text{(15)} \quad &amp; P_{17} \\
+\text{(16)} \quad &amp; P_{9} \\
+\text{(17)} \quad &amp; P_{20} \\
+\text{(18)} \quad &amp; P_{21} \\
+\text{(19)} \quad &amp; P_{24} \\
+\text{(20)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(24)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(25)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(26)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(27)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(28)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\
+\text{(29)} \quad &amp; \lnot P_{30} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="subjectiveGenitive"></a>
 **`subjectiveGenitive`** — Subjective genitive (πίστις Χριστοῦ as Christ's faithfulness)
@@ -1861,30 +2009,34 @@ of justification. Everything else in the Reformed case is granted.
 \text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{19} \\
 \text{(6)} \quad &amp; P_{10} \\
-\text{(7)} \quad &amp; P_{1} \\
-\text{(8)} \quad &amp; P_{2} \\
-\text{(9)} \quad &amp; P_{3} \\
-\text{(10)} \quad &amp; P_{4} \\
-\text{(11)} \quad &amp; P_{5} \\
-\text{(12)} \quad &amp; P_{17} \\
-\text{(13)} \quad &amp; P_{9} \\
-\text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{24} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\text{(7)} \quad &amp; P_{36} \\
+\text{(8)} \quad &amp; P_{37} \\
+\text{(9)} \quad &amp; P_{38} \\
+\text{(10)} \quad &amp; P_{1} \\
+\text{(11)} \quad &amp; P_{2} \\
+\text{(12)} \quad &amp; P_{3} \\
+\text{(13)} \quad &amp; P_{4} \\
+\text{(14)} \quad &amp; P_{5} \\
+\text{(15)} \quad &amp; P_{17} \\
+\text{(16)} \quad &amp; P_{9} \\
+\text{(17)} \quad &amp; P_{20} \\
+\text{(18)} \quad &amp; P_{21} \\
+\text{(19)} \quad &amp; P_{24} \\
+\text{(20)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(24)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(25)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(26)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(27)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(28)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="lawObservantLuke"></a>
 **`lawObservantLuke`** — Law-observant Luke (the yoke as Israel's law for gentiles)
@@ -1903,30 +2055,34 @@ apostolic strand was written against.
 \text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{19} \\
 \text{(6)} \quad &amp; \lnot P_{10} \\
-\text{(7)} \quad &amp; P_{1} \\
-\text{(8)} \quad &amp; P_{2} \\
-\text{(9)} \quad &amp; P_{3} \\
-\text{(10)} \quad &amp; P_{4} \\
-\text{(11)} \quad &amp; P_{5} \\
-\text{(12)} \quad &amp; P_{17} \\
-\text{(13)} \quad &amp; P_{9} \\
-\text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{24} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\text{(7)} \quad &amp; P_{36} \\
+\text{(8)} \quad &amp; P_{37} \\
+\text{(9)} \quad &amp; P_{38} \\
+\text{(10)} \quad &amp; P_{1} \\
+\text{(11)} \quad &amp; P_{2} \\
+\text{(12)} \quad &amp; P_{3} \\
+\text{(13)} \quad &amp; P_{4} \\
+\text{(14)} \quad &amp; P_{5} \\
+\text{(15)} \quad &amp; P_{17} \\
+\text{(16)} \quad &amp; P_{9} \\
+\text{(17)} \quad &amp; P_{20} \\
+\text{(18)} \quad &amp; P_{21} \\
+\text{(19)} \quad &amp; P_{24} \\
+\text{(20)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(24)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(25)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(26)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(27)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(28)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="criticalAuthorship"></a>
 **`criticalAuthorship`** — Reformed, with the critical view of authorship
@@ -1950,34 +2106,38 @@ leans on Romans instead.
 \text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{19} \\
 \text{(6)} \quad &amp; P_{10} \\
-\text{(7)} \quad &amp; P_{1} \\
-\text{(8)} \quad &amp; P_{2} \\
-\text{(9)} \quad &amp; P_{3} \\
-\text{(10)} \quad &amp; P_{4} \\
-\text{(11)} \quad &amp; P_{5} \\
-\text{(12)} \quad &amp; P_{17} \\
-\text{(13)} \quad &amp; P_{9} \\
-\text{(14)} \quad &amp; P_{20} \\
-\text{(15)} \quad &amp; P_{21} \\
-\text{(16)} \quad &amp; P_{24} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\
-\text{(25)} \quad &amp; \lnot P_{12} \\
-\text{(26)} \quad &amp; \lnot P_{13} \\
-\text{(27)} \quad &amp; \lnot P_{14} \\
-\text{(28)} \quad &amp; \lnot P_{15} \\[4pt]
+\text{(7)} \quad &amp; P_{36} \\
+\text{(8)} \quad &amp; P_{37} \\
+\text{(9)} \quad &amp; P_{38} \\
+\text{(10)} \quad &amp; P_{1} \\
+\text{(11)} \quad &amp; P_{2} \\
+\text{(12)} \quad &amp; P_{3} \\
+\text{(13)} \quad &amp; P_{4} \\
+\text{(14)} \quad &amp; P_{5} \\
+\text{(15)} \quad &amp; P_{17} \\
+\text{(16)} \quad &amp; P_{9} \\
+\text{(17)} \quad &amp; P_{20} \\
+\text{(18)} \quad &amp; P_{21} \\
+\text{(19)} \quad &amp; P_{24} \\
+\text{(20)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(24)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(25)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(26)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(27)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(28)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\
+\text{(29)} \quad &amp; \lnot P_{12} \\
+\text{(30)} \quad &amp; \lnot P_{13} \\
+\text{(31)} \quad &amp; \lnot P_{14} \\
+\text{(32)} \quad &amp; \lnot P_{15} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="apocalyptic"></a>
 **`apocalyptic`** — Apocalyptic reading of Paul (Martyn, Campbell)
@@ -1989,9 +2149,9 @@ are related, but God's deliverance of the world in Christ.
 
 It shares Galatians with the Reformed reading — the text of 2:16 and the
 circumcision polemic — and closes with the same step to salvation. It does not
-share the dominical or apostolic strands, which neither Martyn nor Campbell
-argues from; to grant it Luke 7:50 or Acts 15 would be to encode a position
-nobody holds.
+share the dominical, apostolic or Johannine strands, which neither Martyn nor
+Campbell argues from; to grant it Luke 7:50, Acts 15 or John 6:29 would be to
+encode a position nobody holds.
 
 <div class="testimony-math">
 \[
@@ -2091,7 +2251,7 @@ No premise here rests on scripture alone.
 #### Variants
 
 Each removes named premises from `reformed` and keeps the rest. The Pauline
-strand has two lexical premises, so it has two reduced forms.
+strand rests on two disputed readings, so it has two reduced forms.
 
 <a id="reformedWithoutWorksOfLaw"></a>
 **`reformedWithoutWorksOfLaw`** — Reformed, minus the ἔργα νόμου premise
@@ -2106,30 +2266,34 @@ The Reformed package without the ἔργα νόμου premise.
 \text{(3)} \quad &amp; P_{18} \\
 \text{(4)} \quad &amp; P_{19} \\
 \text{(5)} \quad &amp; P_{10} \\
-\text{(6)} \quad &amp; P_{1} \\
-\text{(7)} \quad &amp; P_{2} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{17} \\
-\text{(12)} \quad &amp; P_{9} \\
-\text{(13)} \quad &amp; P_{20} \\
-\text{(14)} \quad &amp; P_{21} \\
-\text{(15)} \quad &amp; P_{24} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(17)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(22)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(23)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\text{(6)} \quad &amp; P_{36} \\
+\text{(7)} \quad &amp; P_{37} \\
+\text{(8)} \quad &amp; P_{38} \\
+\text{(9)} \quad &amp; P_{1} \\
+\text{(10)} \quad &amp; P_{2} \\
+\text{(11)} \quad &amp; P_{3} \\
+\text{(12)} \quad &amp; P_{4} \\
+\text{(13)} \quad &amp; P_{5} \\
+\text{(14)} \quad &amp; P_{17} \\
+\text{(15)} \quad &amp; P_{9} \\
+\text{(16)} \quad &amp; P_{20} \\
+\text{(17)} \quad &amp; P_{21} \\
+\text{(18)} \quad &amp; P_{24} \\
+\text{(19)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(20)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(23)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(24)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(25)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(26)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(27)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="reformedWithoutSozo"></a>
 **`reformedWithoutSozo`** — Reformed, minus the dominical lexical premise
@@ -2144,6 +2308,134 @@ The Reformed package without the dominical lexical premise.
 \text{(3)} \quad &amp; P_{7} \\
 \text{(4)} \quad &amp; P_{19} \\
 \text{(5)} \quad &amp; P_{10} \\
+\text{(6)} \quad &amp; P_{36} \\
+\text{(7)} \quad &amp; P_{37} \\
+\text{(8)} \quad &amp; P_{38} \\
+\text{(9)} \quad &amp; P_{1} \\
+\text{(10)} \quad &amp; P_{2} \\
+\text{(11)} \quad &amp; P_{3} \\
+\text{(12)} \quad &amp; P_{4} \\
+\text{(13)} \quad &amp; P_{5} \\
+\text{(14)} \quad &amp; P_{17} \\
+\text{(15)} \quad &amp; P_{9} \\
+\text{(16)} \quad &amp; P_{20} \\
+\text{(17)} \quad &amp; P_{21} \\
+\text{(18)} \quad &amp; P_{24} \\
+\text{(19)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(20)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(23)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(24)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(25)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(26)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(27)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+<a id="reformedRestingOnActs"></a>
+**`reformedRestingOnActs`** — Reformed, with only the Acts strand left whole
+
+The Reformed package resting on Acts alone. The disputed reading is removed
+from each of the other three strands: ἔργα νόμου from Paul, σῴζω from Luke,
+believing as trust from John. Peter's speech is untouched.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{7} \\
+\text{(3)} \quad &amp; P_{19} \\
+\text{(4)} \quad &amp; P_{10} \\
+\text{(5)} \quad &amp; P_{36} \\
+\text{(6)} \quad &amp; P_{37} \\
+\text{(7)} \quad &amp; P_{1} \\
+\text{(8)} \quad &amp; P_{2} \\
+\text{(9)} \quad &amp; P_{3} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{17} \\
+\text{(13)} \quad &amp; P_{9} \\
+\text{(14)} \quad &amp; P_{20} \\
+\text{(15)} \quad &amp; P_{21} \\
+\text{(16)} \quad &amp; P_{24} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(23)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(24)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(25)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+<a id="reformedRestingOnJohn"></a>
+**`reformedRestingOnJohn`** — Reformed, with only the Johannine strand left whole
+
+The Reformed package resting on John alone. The disputed reading is removed
+from each of the other three strands: ἔργα νόμου from Paul, σῴζω from Luke, the
+yoke from Acts. John's strand is untouched.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{7} \\
+\text{(3)} \quad &amp; P_{19} \\
+\text{(4)} \quad &amp; P_{36} \\
+\text{(5)} \quad &amp; P_{37} \\
+\text{(6)} \quad &amp; P_{38} \\
+\text{(7)} \quad &amp; P_{1} \\
+\text{(8)} \quad &amp; P_{2} \\
+\text{(9)} \quad &amp; P_{3} \\
+\text{(10)} \quad &amp; P_{4} \\
+\text{(11)} \quad &amp; P_{5} \\
+\text{(12)} \quad &amp; P_{17} \\
+\text{(13)} \quad &amp; P_{9} \\
+\text{(14)} \quad &amp; P_{20} \\
+\text{(15)} \quad &amp; P_{21} \\
+\text{(16)} \quad &amp; P_{24} \\
+\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(18)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(23)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(24)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(25)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+<a id="reformedWithoutEveryStrandsPremise"></a>
+**`reformedWithoutEveryStrandsPremise`** — Reformed, minus the ἔργα νόμου, σῴζω, yoke and trust premises
+
+The Reformed package with a disputed reading removed from **every** strand:
+ἔργα νόμου from Paul, σῴζω from Luke, the yoke from Acts, believing as trust
+from John. The objective genitive stays.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{7} \\
+\text{(3)} \quad &amp; P_{19} \\
+\text{(4)} \quad &amp; P_{36} \\
+\text{(5)} \quad &amp; P_{37} \\
 \text{(6)} \quad &amp; P_{1} \\
 \text{(7)} \quad &amp; P_{2} \\
 \text{(8)} \quad &amp; P_{3} \\
@@ -2157,32 +2449,76 @@ The Reformed package without the dominical lexical premise.
 \text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
 \text{(17)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
 \text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(22)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(23)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\text{(19)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
-<a id="reformedWithoutWorksOfLawOrSozo"></a>
-**`reformedWithoutWorksOfLawOrSozo`** — Reformed, minus the ἔργα νόμου and σῴζω premises
+<a id="reformedWithoutPistisChristouSozoOrYoke"></a>
+**`reformedWithoutPistisChristouSozoOrYoke`** — Reformed, minus the πίστις Χριστοῦ, σῴζω, yoke and trust premises
 
-The Reformed package with the ἔργα νόμου premise **and** the dominical
-premise removed: the two disputes the argument was first built to survive. The
-apostolic strand is untouched.
+The same with the objective genitive removed in place of ἔργα νόμου: the
+Pauline strand loses its other disputed reading, and the other three strands
+theirs. The name lists Luke's and Peter's; John's reading of believing as trust
+is removed too.
 
 <div class="testimony-math">
 \[
 \begin{aligned}
 \text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{7} \\
+\text{(2)} \quad &amp; P_{6} \\
 \text{(3)} \quad &amp; P_{19} \\
-\text{(4)} \quad &amp; P_{10} \\
+\text{(4)} \quad &amp; P_{36} \\
+\text{(5)} \quad &amp; P_{37} \\
+\text{(6)} \quad &amp; P_{1} \\
+\text{(7)} \quad &amp; P_{2} \\
+\text{(8)} \quad &amp; P_{3} \\
+\text{(9)} \quad &amp; P_{4} \\
+\text{(10)} \quad &amp; P_{5} \\
+\text{(11)} \quad &amp; P_{17} \\
+\text{(12)} \quad &amp; P_{9} \\
+\text{(13)} \quad &amp; P_{20} \\
+\text{(14)} \quad &amp; P_{21} \\
+\text{(15)} \quad &amp; P_{24} \\
+\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(17)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(18)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(20)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(23)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(24)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+<a id="graceAndWorksWithoutAnyLexicalPremise"></a>
+**`graceAndWorksWithoutAnyLexicalPremise`** — Grace and works, minus every lexical premise
+
+The Reformed package with **every** disputed reading removed — both of
+Paul's, Luke's σῴζω, the yoke of Acts 15 and John's believing as trust — asked
+only about grace and works. The reading of Galatians as a polemic stays, and so
+does the answer to James.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{19} \\
+\text{(3)} \quad &amp; P_{36} \\
+\text{(4)} \quad &amp; P_{37} \\
 \text{(5)} \quad &amp; P_{1} \\
 \text{(6)} \quad &amp; P_{2} \\
 \text{(7)} \quad &amp; P_{3} \\
@@ -2196,137 +2532,25 @@ apostolic strand is untouched.
 \text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
 \text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
 \text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(18)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(21)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(22)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="reformedWithoutEveryStrandsPremise"></a>
-**`reformedWithoutEveryStrandsPremise`** — Reformed, minus the ἔργα νόμου, σῴζω and yoke premises
-
-The Reformed package with a disputed premise removed from **every** strand:
-ἔργα νόμου from Paul, σῴζω from Luke, the yoke from Acts. The objective
-genitive stays.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{7} \\
-\text{(3)} \quad &amp; P_{19} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{3} \\
-\text{(7)} \quad &amp; P_{4} \\
-\text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{17} \\
-\text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{20} \\
-\text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(17)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(20)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(21)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="reformedWithoutPistisChristouSozoOrYoke"></a>
-**`reformedWithoutPistisChristouSozoOrYoke`** — Reformed, minus the πίστις Χριστοῦ, σῴζω and yoke premises
-
-The same with the objective genitive removed in place of ἔργα νόμου: the
-Pauline strand loses its other lexical premise, and the other two strands
-theirs.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; P_{19} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{3} \\
-\text{(7)} \quad &amp; P_{4} \\
-\text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{17} \\
-\text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{20} \\
-\text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(16)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(17)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(20)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(21)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="graceAndWorksWithoutAnyLexicalPremise"></a>
-**`graceAndWorksWithoutAnyLexicalPremise`** — Grace and works, minus every lexical premise
-
-The Reformed package with **every** lexical premise removed — both of
-Paul's, Luke's σῴζω and the yoke of Acts 15 — asked only about grace and works.
-The reading of Galatians as a polemic stays, and so does the answer to James.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; P_{1} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{17} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{20} \\
-\text{(11)} \quad &amp; P_{21} \\
-\text{(12)} \quad &amp; P_{24} \\
-\text{(13)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(14)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(15)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(19)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\text{(18)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(20)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(21)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(22)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="paulineStrandOnTheCritics"></a>
 **`paulineStrandOnTheCritics`** — Pauline strand alone, on variegated nomism
 
 The New Perspective's critics (Gathercole, the *Variegated Nomism* volume),
 on the Pauline strand alone: the ἔργα νόμου premise derived from a denial of
-covenantal nomism rather than assumed, and the other two strands left out. Does
+covenantal nomism rather than assumed, and the other three strands left out. Does
 Paul alone carry sola fide on Gathercole's history?
 
 <div class="testimony-math">
@@ -2409,27 +2633,31 @@ The Reformed package without the premises that harmonise James.
 \text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{19} \\
 \text{(6)} \quad &amp; P_{10} \\
-\text{(7)} \quad &amp; P_{1} \\
-\text{(8)} \quad &amp; P_{2} \\
-\text{(9)} \quad &amp; P_{3} \\
-\text{(10)} \quad &amp; P_{4} \\
-\text{(11)} \quad &amp; P_{5} \\
-\text{(12)} \quad &amp; P_{17} \\
-\text{(13)} \quad &amp; P_{9} \\
-\text{(14)} \quad &amp; P_{24} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(20)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(21)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\text{(7)} \quad &amp; P_{36} \\
+\text{(8)} \quad &amp; P_{37} \\
+\text{(9)} \quad &amp; P_{38} \\
+\text{(10)} \quad &amp; P_{1} \\
+\text{(11)} \quad &amp; P_{2} \\
+\text{(12)} \quad &amp; P_{3} \\
+\text{(13)} \quad &amp; P_{4} \\
+\text{(14)} \quad &amp; P_{5} \\
+\text{(15)} \quad &amp; P_{17} \\
+\text{(16)} \quad &amp; P_{9} \\
+\text{(17)} \quad &amp; P_{24} \\
+\text{(18)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(23)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(24)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(25)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="graceWithoutJamesHarmonisation"></a>
 **`graceWithoutJamesHarmonisation`** — Grace alone, minus the James harmonisation
@@ -2446,27 +2674,31 @@ grace, with James 2:24 left unanswered?
 \text{(4)} \quad &amp; P_{18} \\
 \text{(5)} \quad &amp; P_{19} \\
 \text{(6)} \quad &amp; P_{10} \\
-\text{(7)} \quad &amp; P_{1} \\
-\text{(8)} \quad &amp; P_{2} \\
-\text{(9)} \quad &amp; P_{3} \\
-\text{(10)} \quad &amp; P_{4} \\
-\text{(11)} \quad &amp; P_{5} \\
-\text{(12)} \quad &amp; P_{17} \\
-\text{(13)} \quad &amp; P_{9} \\
-\text{(14)} \quad &amp; P_{24} \\
-\text{(15)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(16)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(19)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(20)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(21)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\text{(7)} \quad &amp; P_{36} \\
+\text{(8)} \quad &amp; P_{37} \\
+\text{(9)} \quad &amp; P_{38} \\
+\text{(10)} \quad &amp; P_{1} \\
+\text{(11)} \quad &amp; P_{2} \\
+\text{(12)} \quad &amp; P_{3} \\
+\text{(13)} \quad &amp; P_{4} \\
+\text{(14)} \quad &amp; P_{5} \\
+\text{(15)} \quad &amp; P_{17} \\
+\text{(16)} \quad &amp; P_{9} \\
+\text{(17)} \quad &amp; P_{24} \\
+\text{(18)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(19)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(21)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(22)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(23)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(24)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(25)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27}
 \end{aligned}
 \]
 </div>
 
-No premise here rests on scripture alone.
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
 
 <a id="tridentineCase"></a>
 **`tridentineCase`** — Trent, against 'not by works'
@@ -2602,11 +2834,13 @@ Grounded in scripture alone: Paul names renewal with other words (ἀνακαί�
 Entailments are established with `establish`; refutations name a countermodel —
 the rival's own reading, written down as a valuation — and use `refute_with`.
 
-`lexical_premises_jointly_load_bearing` is the result the encoding exists to
-make possible: no strand's disputed premise carries the argument, and only
-removing one from every strand defeats it.
-`apostolic_strand_survives_paul_and_luke` records what the third strand changed:
-the two disputes that used to be jointly decisive are no longer enough.
+The central result is `lexical_premises_jointly_load_bearing`. The argument
+needs at least one strand's disputed reading, and does not need any particular
+one.
+
+`apostolic_strand_survives_paul_and_luke` and
+`johannine_strand_survives_the_other_three` show that Acts and John each reach
+the conclusion with the other strands' disputed readings left out.
 
 #### Results
 
@@ -2693,17 +2927,48 @@ theorem sozo_not_load_bearing : Establishes reformedWithoutSozo
 <a id="apostolic_strand_survives_paul_and_luke"></a>
 **`apostolic_strand_survives_paul_and_luke`**
 
-**The two disputes that used to decide the argument no longer do.** Deny
-both the ἔργα νόμου premise and the dominical premise — the pair whose joint
-removal defeated sola fide before Acts 15 was encoded — and the conclusion
-still follows, by Peter's speech at Jerusalem.
+**Acts supplies "through faith" with the other strands' disputed readings
+left out.** Leave out the reading of "works of the law" in Paul, of "saved" in
+Luke 7:50, and of believing in John 6:29; that is, assume none of them either
+way. Keep what every strand shares: the verses on grace and works, and the
+answer to James. Sola fide still follows, with Peter's speech at Jerusalem
+(Acts 15:7–11) as the only route to faith.
 
-This is the change the third strand makes, stated as a result rather than
-left to be inferred from the absence of an old one.
+What this claims: Peter's strand does not lean on any of the other three
+disputes. What it does not claim: that Peter's strand is beyond dispute, or
+that Acts 15 is the only text used. The strand rests on its own disputed
+reading, of the yoke at 15:10. The result's name is older than the strand from
+John; John's reading is left out as well.
 
 ```lean
 theorem apostolic_strand_survives_paul_and_luke : Establishes
-    reformedWithoutWorksOfLawOrSozo
+    reformedRestingOnActs
+-- axioms: propext, Quot.sound
+```
+
+<a id="johannine_strand_survives_the_other_three"></a>
+**`johannine_strand_survives_the_other_three`**
+
+**John supplies "through faith" with the other strands' disputed readings
+left out.** Leave out the reading of "works of the law" in Paul, of "saved" in
+Luke 7:50, and of the yoke in Acts 15:10; that is, assume none of them either
+way. Keep what every strand shares: the verses on grace and works, and the
+answer to James. Sola fide still follows, with Jesus' answer in John 6:29 as
+the only route to faith: "This is the work of God, that you believe in him whom
+he has sent."
+
+What this claims: a reader who wins the disputes over Paul, Luke and Acts has
+not yet answered John. What it does not claim: that John's strand is beyond
+dispute, or that John 6:29 is the only text used. Grace and "not by works" still
+come from the shared verses and the answer to James. The strand rests on
+reading that believing as trust, which Aquinas denies
+(`johannine_strand_rests_on_believing_as_trust`), and on a step from "eternal
+life through believing" to "justified by faith alone" that is rated
+`plausible`.
+
+```lean
+theorem johannine_strand_survives_the_other_three : Establishes
+    reformedRestingOnJohn
 -- axioms: propext, Quot.sound
 ```
 
@@ -2739,9 +3004,11 @@ theorem acts15Yoke_not_load_bearing : Establishes lawObservantLuke
 <a id="neitherLexicalReading"></a>
 **`neitherLexicalReading`**
 
-A reading on which no strand's disputed premise holds: Paul's phrase is
-about boundary markers, Jesus' σέσωκέν σε is about healing, and Peter's yoke is
-Israel's law for gentiles.
+A reading on which no strand's disputed premise holds. Paul's "works of the
+law" are the boundary markers. Jesus' "your faith has saved you" at Luke 7:50 is
+about healing. Peter's yoke is Israel's law laid on gentiles. And the believing
+of John 6:29 is not bare trust. Every text stands; faith is not said to be
+enough.
 
 ```lean
 def neitherLexicalReading : Valuation Claim :=
@@ -2750,6 +3017,7 @@ def neitherLexicalReading : Valuation Claim :=
     | Claim.worksOfLawMeansWorksGenerally => False
     | Claim.sozoIsSoteriological => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.johannineBelievingIsTrust => False
     | Claim.justificationByFaithAlone => False
     | Claim.faithIsSufficient => False
     | Claim.salvationThroughFaith => False
@@ -2759,16 +3027,23 @@ def neitherLexicalReading : Valuation Claim :=
 <a id="lexical_premises_jointly_load_bearing"></a>
 **`lexical_premises_jointly_load_bearing`**
 
-**The result worth having.** No strand's disputed premise carries the
-argument alone, but together they do: remove the ἔργα νόμου premise from Paul,
-σῴζω from Luke and the yoke from Acts, and sola fide no longer follows, with
-everything else retained.
+**Sola fide fails to follow only when every strand loses its disputed
+reading.** Remove one disputed reading from each strand — "works of the law" as works in
+general from Paul, "saved" as salvation from Luke 7:50, the yoke as the law as a
+condition of salvation from Acts 15, believing as trust from John 6:29 — and
+keep everything else. Sola fide no longer follows. Remove fewer, and a strand
+that still has its reading reaches the conclusion.
 
-So the Reformation's material principle, as encoded here, does not hang on the
-sense of Paul's ἔργα νόμου. It hangs on that, *or* on the sense of Jesus'
-σέσωκέν σε, *or* on Peter's yoke — and an opponent must defeat all three. The
-same holds with the πίστις Χριστοῦ premise in place of ἔργα νόμου; see
-`pistisChristou_jointly_load_bearing`.
+So the argument, as encoded here, does not hang on the meaning of Paul's "works
+of the law". It hangs on that, *or* on Luke's "saved", *or* on Peter's yoke,
+*or* on John's "believe". Someone who denies sola fide has to answer all four.
+The same holds with "faith of Christ" (πίστις Χριστοῦ) in place of "works of the
+law"; see `pistisChristou_jointly_load_bearing`.
+
+What this does not claim: that the four are independent in practice. A reader
+who takes "works of the law" as boundary markers will usually read Peter's yoke
+the same way. The result shows that four separate premises would each have to
+be denied. It does not show that four separate groups of scholars deny them.
 
 ```lean
 theorem lexical_premises_jointly_load_bearing : ¬Establishes
@@ -2779,9 +3054,10 @@ theorem lexical_premises_jointly_load_bearing : ¬Establishes
 <a id="neitherPistisNorSozoReading"></a>
 **`neitherPistisNorSozoReading`**
 
-A reading on which Galatians 2:16 names Christ's faithfulness rather than
-faith in Christ, Jesus' σέσωκέν σε is about healing, and Peter's yoke is
-Israel's law for gentiles.
+A reading on which Galatians 2:16 names Christ's own faithfulness and not
+faith in Christ, Jesus' "your faith has saved you" is about healing, Peter's
+yoke is Israel's law laid on gentiles, and the believing of John 6:29 is not
+bare trust.
 
 ```lean
 def neitherPistisNorSozoReading : Valuation Claim :=
@@ -2790,6 +3066,7 @@ def neitherPistisNorSozoReading : Valuation Claim :=
     | Claim.pistisChristouObjective => False
     | Claim.sozoIsSoteriological => False
     | Claim.acts15YokeIsLawAsCondition => False
+    | Claim.johannineBelievingIsTrust => False
     | Claim.justificationByFaithAlone => False
     | Claim.faithIsSufficient => False
     | Claim.salvationThroughFaith => False
@@ -2800,7 +3077,7 @@ def neitherPistisNorSozoReading : Valuation Claim :=
 **`pistisChristou_jointly_load_bearing`**
 
 **Within the Pauline strand, faith in Christ is load-bearing.** Deny the
-objective genitive, and the disputed premise of each other strand, keep the
+objective genitive, and the disputed reading of each of the other three strands, keep the
 ἔργα νόμου premise and the reading of Galatians as a polemic against
 circumcision, and sola fide no longer follows.
 
@@ -3188,15 +3465,28 @@ theorem reformedWithoutSozo_is_satisfiable : Satisfiable
 -- axioms: propext, Quot.sound
 ```
 
-<a id="reformedWithoutWorksOfLawOrSozo_is_satisfiable"></a>
-**`reformedWithoutWorksOfLawOrSozo_is_satisfiable`**
+<a id="reformedRestingOnActs_is_satisfiable"></a>
+**`reformedRestingOnActs_is_satisfiable`**
 
-And the same minus both, so `apostolic_strand_survives_paul_and_luke` is not
-vacuous.
+The package resting on Acts can be held without contradiction, so
+`apostolic_strand_survives_paul_and_luke` is not true merely because its
+premises could never all hold.
 
 ```lean
-theorem reformedWithoutWorksOfLawOrSozo_is_satisfiable : Satisfiable
-    reformedWithoutWorksOfLawOrSozo.premises
+theorem reformedRestingOnActs_is_satisfiable : Satisfiable
+    reformedRestingOnActs.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="reformedRestingOnJohn_is_satisfiable"></a>
+**`reformedRestingOnJohn_is_satisfiable`**
+
+And so can the package resting on John, so
+`johannine_strand_survives_the_other_three` is not empty either.
+
+```lean
+theorem reformedRestingOnJohn_is_satisfiable : Satisfiable
+    reformedRestingOnJohn.premises
 -- axioms: propext, Quot.sound
 ```
 
@@ -4091,11 +4381,551 @@ Against *Romans 4:3–8, against justification as renewal*, it cannot be held. W
   - \\(P_{55}\\) In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
   - the step itself — *well supported*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *disputed*: [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:5; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
 
+## TestimonyArguments.SolaFide.Johannine — "this is the work of God, that you believe"
+
+The fourth strand of sola fide comes from John's Gospel. A crowd asks Jesus,
+"What must we do, to be doing the works of God?" He answers: "This is the work
+of God, that you believe in him whom he has sent" (John 6:28–29). The question
+is about works, and the answer is believing.
+
+John says the same elsewhere. Whoever believes in the Son has eternal life and
+does not come into judgement (3:16–18, 3:36, 5:24), and the Gospel gives this as
+its own purpose: "that by believing you may have life in his name" (20:31).
+
+### What both sides grant, and where they part
+
+Nobody in this dispute denies the verse. They differ on what its believing is.
+
+- **Calvin** reads it as trust. Christ calls faith a work only loosely: faith
+  "brings nothing to God, but, on the contrary, places man before God as empty
+  and poor, that he may be filled with Christ". It is "a passive work, to which
+  no reward can be paid".
+- **Aquinas** reads it as faith formed by charity, that is, faith made alive by
+  love. He takes Paul to distinguish faith "only from external works", so that
+  believing is itself an inward work. To believe *in* him, as the goal one
+  moves toward, "is proper to faith
+  living through the love of charity", and such faith "is the principle of all
+  our good works" (*Super Ioannem* 6, lect. 3, n. 901). The Council of Trent
+  describes justifying faith the same way: without hope and charity, faith
+  "neither unites man perfectly with Christ, nor makes him a living member of
+  His body" (Session VI, ch. 7).
+
+So this strand has the shape of the other three: texts everyone accepts, and
+one reading on which the conclusion turns. On Calvin's reading John supplies
+faith alone without the readings the other strands depend on
+(`johannine_strand_establishes`).
+On Aquinas's it does not (`johannine_strand_rests_on_believing_as_trust`).
+
+### John has no word for "justify"
+
+Paul's verb for "justify" (δικαιόω) does not occur in John's Gospel. So the
+strand has to step from "eternal life through believing" to "justified by faith
+alone", and that step is an inference, not the meaning of a word. It is cited to
+Calvin, whose comment on 6:29 speaks of the righteousness faith receives from
+Christ. It is rated `plausible`. No cited source accepts the strand's premises
+and rejects the step, but no cited source argues the step at length either.
+
+### Luther's answer to Aquinas
+
+Luther, in his own lectures on Galatians, answers the reading Aquinas gives of
+John 6:29. He names "the scholastics", not Aquinas; the faith formed by charity
+that he attacks is the reading Aquinas gives. On 3:11:
+"The scholastics misconstrue this passage by saying: 'The just shall live by
+faith, if it is a working faith, or a faith formed and performed by charitable
+works.' … To speak of formed or unformed faith, a sort of double faith, is
+contrary to the Scriptures." On 3:12: "Does not the Law command charity? … If
+the law requires charity, charity is part of the Law and not of faith."
+
+His argument runs: love is what the law commands, and "the law is not of faith"
+(Galatians 3:12), so a faith that justifies because love forms it would justify
+by the law after all.
+
+The argument is encoded as a line of its own (`lutherLine`). Its two starting
+points are ones Aquinas accepts: the text of Galatians 3:11–12, and that love of
+God and neighbour is what the law commands (Deuteronomy 6:5). The step from them
+is Luther's. Grant the step, and Aquinas's reading of John 6:29 falls
+(`luther_answers_aquinas_from_galatians`). Without the step the texts do not
+exclude his reading (`luther_answer_rests_on_his_step`). The step is rated
+`disputed`, because Aquinas accepts both starting points and rejects the
+conclusion. His reason for rejecting it is not yet cited here.
+
+Two limits. Removing Aquinas's reading does not establish Calvin's: "not formed
+by charity" is a weaker claim than "trust". And the Catholic reply rests on
+Galatians 5:6, "faith working through love", which Trent cites (Session VI,
+ch. 7). How Luther and Calvin read that verse is not yet encoded.
+
+Calvin makes a neighbouring argument in the *Institutes* (III.xi.19), against
+those who "pretend that the works excluded are ceremonial, not moral works". He
+cites Galatians 3:10 and 3:12 and concludes that "the whole Law is spoken of
+when the power of justifying is denied to it". That answers those who say Paul
+excludes only ceremonial works. Aquinas does not say that. He says believing is
+an inward work, formed by love. So Luther's argument, and not Calvin's, is the
+one that addresses him.
+
+### Where the strand stands in the whole dispute
+
+The strand is one of the four strands of the Reformed case, and John's case,
+Aquinas's and Luther's are parties to the sola fide dispute. Three things are
+checked.
+
+- **John supplies "through faith" without the other three strands.** Leave out
+  the disputed readings in Paul, Luke and Acts. Keep what every strand shares:
+  the verses on grace and works, and the answer to James. Sola fide still
+  follows, with John 6:28–29 as the only route to faith
+  (`johannine_strand_survives_the_other_three`).
+- **John's disputed reading is not one the whole case depends on.** Grant
+  Aquinas his reading of 6:29, keep the other three strands, and sola fide still
+  follows (`believing_as_trust_not_load_bearing`).
+- **John's case is not forced, and neither is any rival.** John's case and
+  Aquinas's each defeat the other, that is, each contradicts the other and
+  neither is better supported. So do Aquinas's and Luther's, John's and Trent's,
+  and John's and the apocalyptic reading's. Each pair is a tie, because each
+  side rests on a premise rated `disputed`.
+
+### What is not encoded
+
+At John 3:36 the opposite of "whoever believes" is, in Greek, "whoever does not
+obey" (ὁ ἀπειθῶν). A reader could argue from that word that believing in John
+includes obeying. No source that argues this from the word has been read and
+verified. What has been found points the other way on the word and the same way
+on the doctrine. Westcott's commentary and the older lexica take the word as
+unbelief shown in action. Chrysostom, preaching on this verse, denies that
+believing is enough without a right life, but he argues from Matthew 7:21 and
+not from the verb. Neither is cited here yet, and the modern commentaries
+(Brown, Schnackenburg, Barrett, Carson) have not been read. Until they are, this
+reading is absent, and its absence is not evidence that nobody holds it.
+
+#### The lines
+
+<a id="aquinasOnFormedFaith"></a>
+**`aquinasOnFormedFaith`**
+
+Aquinas's step: faith living through charity is not bare trust. Rated
+`consensus`: Calvin concedes it — his trust is precisely a faith that brings
+nothing — and the two divide over the premise, not the inference.
+
+```lean
+def aquinasOnFormedFaith : Source :=
+  {
+    primary :=
+      Reference.work aquinasJohn
+        (Bib.Locus.sectionRef "cap. 6, lect. 3, n. 901"),
+    tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
+```
+
+<a id="thomistLine"></a>
+**`thomistLine`** — Faith formed by charity (Aquinas on John 6:29)
+
+**Aquinas's line.** The believing of 6:29 is faith living through charity,
+and so not the bare trust the strand needs. The denial is derived, not assumed:
+it follows from Aquinas's own reading of the verse.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{39} \\
+\text{(2)} \quad &amp; P_{39} \rightarrow \lnot P_{38} \\[4pt]
+\vdash \quad &amp; \lnot P_{38}
+\end{aligned}
+\]
+</div>
+
+#### The packages
+
+<a id="johannineCase"></a>
+**`johannineCase`** — Sola fide from John (6:28–29)
+
+Sola fide from John alone: the Johannine line, with the grounds and closing
+steps every Reformed strand shares.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{37} \\
+\text{(3)} \quad &amp; P_{38} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{17} \\
+\text{(10)} \quad &amp; P_{9} \\
+\text{(11)} \quad &amp; P_{20} \\
+\text{(12)} \quad &amp; P_{21} \\
+\text{(13)} \quad &amp; P_{24} \\
+\text{(14)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(18)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(19)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+<a id="thomistOnJohn"></a>
+**`thomistOnJohn`** — Aquinas on John 6:29 (faith formed by charity)
+
+Aquinas on John: every text the Johannine strand reads, and every shared
+ground, with its believing read as faith formed by charity. The rival the strand
+is written against.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{37} \\
+\text{(3)} \quad &amp; P_{39} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{17} \\
+\text{(10)} \quad &amp; P_{9} \\
+\text{(11)} \quad &amp; P_{20} \\
+\text{(12)} \quad &amp; P_{21} \\
+\text{(13)} \quad &amp; P_{24} \\
+\text{(14)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(15)} \quad &amp; P_{39} \rightarrow \lnot P_{38} \\
+\text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(19)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+#### Results
+
+<a id="johannine_strand_establishes"></a>
+**`johannine_strand_establishes`**
+
+**John's strand, argued alone, delivers sola fide.** Grant that the
+believing of 6:29 is trust, and the work God requires is believing, which earns
+nothing. Sola fide then follows without the readings Paul's, Luke's and Peter's
+strands depend on.
+
+What this does not claim: that John 6:29 is the only text used. Grace and "not
+by works" come from the verses every strand shares and from the answer to
+James.
+
+```lean
+theorem johannine_strand_establishes : Establishes johannineCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="thomistReading"></a>
+**`thomistReading`**
+
+Aquinas's world: every text holds, and the believing of 6:29 is faith living
+through charity — so not bare trust, not faith alone, and faith without
+charity does not suffice. Grace and "not by works" still hold: Aquinas excludes
+external works, and grants that faith is God's gift.
+
+```lean
+def thomistReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.johannineBelievingIsTrust => False
+    | Claim.justificationByFaithAlone => False
+    | Claim.faithIsSufficient => False
+    | Claim.salvationThroughFaith => False
+    | x => True
+```
+
+<a id="johannine_strand_rests_on_believing_as_trust"></a>
+**`johannine_strand_rests_on_believing_as_trust`**
+
+**The Johannine strand rests on believing as trust.** Grant Aquinas every
+text the strand reads, and read their believing as he does — faith living
+through charity — and sola fide no longer follows. So John's Gospel, like
+Paul's Galatians and Luke's σῴζω, carries the conclusion only through a reading:
+here, of what it is to believe *in* him.
+
+```lean
+theorem johannine_strand_rests_on_believing_as_trust : ¬Establishes
+    thomistOnJohn
+-- axioms: propext, Quot.sound
+```
+
+<a id="reformedGrantingAquinasOnJohn"></a>
+**`reformedGrantingAquinasOnJohn`** — Reformed, granting Aquinas on John 6:29
+
+The Reformed case with Aquinas granted his reading of John 6:29: the
+believing is faith formed by charity, and so not bare trust. The other three
+strands are kept whole.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{8} \\
+\text{(2)} \quad &amp; P_{6} \\
+\text{(3)} \quad &amp; P_{7} \\
+\text{(4)} \quad &amp; P_{18} \\
+\text{(5)} \quad &amp; P_{19} \\
+\text{(6)} \quad &amp; P_{10} \\
+\text{(7)} \quad &amp; P_{36} \\
+\text{(8)} \quad &amp; P_{37} \\
+\text{(9)} \quad &amp; P_{39} \\
+\text{(10)} \quad &amp; P_{1} \\
+\text{(11)} \quad &amp; P_{2} \\
+\text{(12)} \quad &amp; P_{3} \\
+\text{(13)} \quad &amp; P_{4} \\
+\text{(14)} \quad &amp; P_{5} \\
+\text{(15)} \quad &amp; P_{17} \\
+\text{(16)} \quad &amp; P_{9} \\
+\text{(17)} \quad &amp; P_{20} \\
+\text{(18)} \quad &amp; P_{21} \\
+\text{(19)} \quad &amp; P_{24} \\
+\text{(20)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
+\text{(21)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
+\text{(22)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
+\text{(23)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(24)} \quad &amp; P_{39} \rightarrow \lnot P_{38} \\
+\text{(25)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(26)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(27)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(28)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(29)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+<a id="believing_as_trust_not_load_bearing"></a>
+**`believing_as_trust_not_load_bearing`**
+
+**The reading of believing as trust is not one the whole case depends on.**
+Grant Aquinas that the believing of John 6:29 is faith formed by charity, keep
+Paul, Luke and Acts as the Reformed read them, and sola fide still follows.
+
+What this claims: losing the argument over John 6:29 costs the Reformed case one
+strand and not its conclusion. What it does not claim: that Aquinas would accept
+the rest. He would not, and the package is not his position; it is the Reformed
+case with one concession made.
+
+```lean
+theorem believing_as_trust_not_load_bearing : Establishes
+    reformedGrantingAquinasOnJohn
+-- axioms: propext, Quot.sound
+```
+
+<a id="concedingJohnReading"></a>
+**`concedingJohnReading`**
+
+The Reformed world with one concession: the believing of John 6:29 is not
+bare trust, and everything else holds.
+
+```lean
+def concedingJohnReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.johannineBelievingIsTrust => False
+    | x => True
+```
+
+<a id="reformedGrantingAquinasOnJohn_is_satisfiable"></a>
+**`reformedGrantingAquinasOnJohn_is_satisfiable`**
+
+That package can be held without contradiction, so
+`believing_as_trust_not_load_bearing` is not true merely because its premises
+could never all hold.
+
+```lean
+theorem reformedGrantingAquinasOnJohn_is_satisfiable : Satisfiable
+    reformedGrantingAquinasOnJohn.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="johannineCase_is_satisfiable"></a>
+**`johannineCase_is_satisfiable`**
+
+The Johannine case has a model, so `johannine_strand_establishes` is not
+vacuous.
+
+```lean
+theorem johannineCase_is_satisfiable : Satisfiable johannineCase.premises
+-- axioms: propext, Quot.sound
+```
+
+#### Luther's answer
+
+<a id="lutherOnGalatiansThree"></a>
+**`lutherOnGalatiansThree`**
+
+Luther's step, on Galatians 3:11–12: the law commands charity, and the law
+is not of faith, so faith formed by charity would justify by the law. Rated
+`disputed`: Aquinas grants both grounds — the text, and that the law commands
+love — and denies the conclusion, holding that justifying faith is formed by
+charity.
+
+```lean
+def lutherOnGalatiansThree : Source :=
+  {
+    primary :=
+      Reference.work lutherGalatians
+        (Bib.Locus.adLoc { book := Book.galatians, chapter := 3, verse := 12 }),
+    supporting :=
+      [Reference.work lutherGalatians
+          (Bib.Locus.adLoc
+            { book := Book.galatians, chapter := 3, verse := 11 })],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="lutherLine"></a>
+**`lutherLine`** — Luther on Galatians 3:11–12 (against faith formed by charity)
+
+**Luther's line.** From Galatians 3:11–12 and the law's command of love to
+the denial of Aquinas's reading: the believing that justifies is not faith formed
+by charity, since charity is what the law commands and the law is not of
+faith.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{41} \\
+\text{(3)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{39} \\[4pt]
+\vdash \quad &amp; \lnot P_{39}
+\end{aligned}
+\]
+</div>
+
+<a id="lutherOnGalatians"></a>
+**`lutherOnGalatians`** — Luther on Galatians 3:11–12 (against faith formed by charity)
+
+Luther's answer to Aquinas as an argument: what Aquinas grants, with
+Luther's step, against the reading of 6:29 as faith formed by charity.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{41} \\
+\text{(3)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{39} \\[4pt]
+\vdash \quad &amp; \lnot P_{39}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="galatiansTextsAlone"></a>
+**`galatiansTextsAlone`** — Galatians 3:11–12 and the law's command of love, without Luther's step
+
+The same grounds without Luther's step: Galatians 3:11–12, and that the law
+commands love.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{40} \\
+\text{(2)} \quad &amp; P_{41} \\[4pt]
+\vdash \quad &amp; \lnot P_{39}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="luther_answers_aquinas_from_galatians"></a>
+**`luther_answers_aquinas_from_galatians`**
+
+**Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants —
+Galatians 3:11–12, and that the law commands love — and Luther's step, and the
+believing of John 6:29 is not faith formed by charity: a faith that justified
+because charity formed it would justify by the law, and the law is not of faith.
+What this removes is Aquinas's reading; it does not by itself establish
+Calvin's.
+
+```lean
+theorem luther_answers_aquinas_from_galatians : Establishes lutherOnGalatians
+-- axioms: propext, Quot.sound
+```
+
+<a id="luther_answer_rests_on_his_step"></a>
+**`luther_answer_rests_on_his_step`**
+
+**Luther's answer rests on his step.** The texts alone do not exclude
+Aquinas's reading: in Aquinas's world Galatians 3:11–12 holds, the law commands
+love, and the believing of 6:29 is faith formed by charity. What decides it is
+whether faith formed by charity counts as justification "by the law" — Luther's
+step, which Aquinas denies.
+
+```lean
+theorem luther_answer_rests_on_his_step : ¬Establishes galatiansTextsAlone
+-- axioms: propext, Quot.sound
+```
+
+<a id="lutherReading"></a>
+**`lutherReading`**
+
+The Reformed world, in which the believing of John 6:29 is not faith formed
+by charity, and everything else holds.
+
+```lean
+def lutherReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.johannineBelievingIsFormedByCharity => False
+    | x => True
+```
+
+<a id="lutherOnGalatians_is_satisfiable"></a>
+**`lutherOnGalatians_is_satisfiable`**
+
+Luther's package has a model, so `luther_answers_aquinas_from_galatians` is
+not vacuous.
+
+```lean
+theorem lutherOnGalatians_is_satisfiable : Satisfiable
+    lutherOnGalatians.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="whyLutherAnswersAquinas"></a>
+**`whyLutherAnswersAquinas`**
+
+**Why Luther's answer stands against Aquinas.** The crux is Luther's step:
+from Galatians 3:11–12 and the law's command of love, the believing that
+justifies is not faith formed by charity. With the two texts granted, Aquinas's
+reading of John 6:29 cannot keep its one distinctive ground — that the believing
+is formed by charity — and that ground alone breaks.
+
+Unlike the Reformed distinction against Trent, this crux is part of Luther's
+case: without the step, the texts do not deliver his conclusion. So the answer
+is exactly as strong as the step, which is rated `disputed` — the step is
+Luther's, and the texts are granted by both sides.
+
+**Why *Luther on Galatians 3:11–12 (against faith formed by charity)* stands against *Aquinas on John 6:29 (faith formed by charity)*.**
+
+- **The crux:** \\((P_{40} \land P_{41}) \rightarrow \lnot P_{39}\\), a premise of *Luther on Galatians 3:11–12 (against faith formed by charity)*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(P_{40}\\), \\(P_{41}\\), which the break also needs.
+- **Where the rival breaks:** \\(P_{39}\\) cannot be held together with \\((P_{40} \land P_{41}) \rightarrow \lnot P_{39}\\) and \\(P_{40}\\), \\(P_{41}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(P_{40}\\) Galatians 3:11–12 — none is justified by the law; the law is not of faith — *consensus*: Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
+  - \\(P_{41}\\) Love of God and neighbour is what the law commands — *consensus*: Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12
+  - the step itself — *disputed*: [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
+
 ## TestimonyArguments.SolaFide.Dispute — who prevails over sola fide
 
 The results in `Results.lean` ask what each package entails. This module asks
-what happens when the positions meet: the three Reformed strands, each argued
-alone; Trent; the apocalyptic reading of Martyn and Campbell; Sanders and Dunn on
+what happens when the positions meet: the four Reformed strands, each argued
+alone; Aquinas on John 6:29, and Luther's answer to him; Trent; the apocalyptic
+reading of Martyn and Campbell; Sanders and Dunn on
 covenantal nomism, and the critics who answer them; Jervell on the yoke of Acts
 15; Paul's gospel in Galatians, against Trent's definition; Paul's word, read by
 the rule of least meaning, lexically and from Romans 4; and Trent with its
@@ -4164,6 +4994,14 @@ A few words recur, and each has a plain meaning.
 - **Sanders defeats Paul**, by denying the ἔργα νόμου premise; Paul and the
   critics each defeat Sanders back.
 - **Jervell and Acts defeat each other**, over the yoke.
+- **John's case meets four parties, each both ways.** Trent, read or unread,
+  over faith's sufficiency and "not by works", as with Paul and Peter. The
+  apocalyptic reading, because John's case concludes faith alone, as Paul's
+  does and Luke's does not. And Aquinas, over what the believing of John 6:29
+  is: Aquinas concludes it is not bare trust, and John's case holds that it is.
+- **Aquinas and Luther defeat each other.** Luther concludes that justifying
+  faith is not faith formed by charity, which is Aquinas's premise. Neither
+  meets anyone else.
 - **Paul's gospel and Trent defeat each other**, over Trent's definition: the
   gospel line concludes that justification is not the renewal of the inward
   man, and both rest on something rated `disputed`.
@@ -4219,26 +5057,43 @@ dispute does not settle between Trent and the Reformed; it shows that Trent can
 keep its definition only as a claim about the reality and not about Paul's word,
 and it names the one step on which that claim turns.
 
-**An absence.** The dominical case is attacked by no one but Trent, because no
-source cited here argues that σῴζω at Luke 7:50 means healing. That absence is
-now also its rating: the premise is `wellSupported`, not `disputed`, because a
-search for a scholar arguing the healing sense *at 7:50* found none, and at 7:50
-there is no illness — the saying follows "your sins are forgiven". It is not
-`consensus`, because the same formula means "made you well" at Luke 8:48, 17:19
-and 18:42. A cited argument for the healing reading would attack the dominical
-case and lower the rating.
+**An absence.** Luke's case is attacked by no one but Trent, because no source
+cited here argues that "saved" (σῴζω) at Luke 7:50 means healed. That absence is
+also the premise's rating. It is `wellSupported`, not `disputed`: a search for a
+scholar arguing the healing sense *at 7:50* found none, and at 7:50 no one is
+ill — the saying follows "your sins are forgiven". Marshall's commentary on the
+Greek text, read for this page, says the same: the formula refers mainly to
+healing elsewhere in Luke, and is used here "in a case where physical healing is
+not involved". The rating is not `consensus`, because the same words mean "made
+you well" at Luke 8:48, 17:19 and 18:42. One older lexicon, Thayer's, lists 7:50
+with the healing uses without arguing it; it is not yet cited, and whether an
+unargued listing should lower the rating is an open question for the rating
+audit. A cited argument for the healing reading would attack Luke's case and
+lower the rating.
 
-**An objection answered in advance.** "Her sins are forgiven, for she loved
-much" (7:47) is the text a rival would use to make love, not faith, the ground
-of her forgiveness. The dominical case does not leave that open: it carries
-`luke7_47LoveIsEvidence` — her love is the evidence of forgiveness, not its
-ground, as 7:47b and the parable of 7:41–43 read it — as a premise of its own.
-It is Padilla's reading — she "loves much because she has been forgiven much" —
-and Melanchthon's in the *Apology of the Augsburg Confession*: "Christ
-interprets Himself when He adds: Thy faith hath saved thee", so the woman did
-not merit forgiveness "by that work of love". It is rated `plausible`, because
-Trent counts beginning to love God among the dispositions to justification
-(Session VI, ch. 6); but no party here argues that reading of 7:47.
+**An objection answered in advance.** "Her sins, which are many, are forgiven,
+for she loved much" (7:47) is the verse a rival would use to make love, not
+faith, the reason she was forgiven. Luke's case does not leave that open. It
+carries, as a premise of its own, that her love is the evidence of her
+forgiveness and not its cause (`luke7_47LoveIsEvidence`), as the second half of
+the verse and the parable of 7:41–43 suggest. Marshall argues this from the
+Greek: "for" (ὅτι) here means "as is evidenced by the fact that". Padilla reads
+it so — she "loves much because she has been forgiven much" — and so does
+Melanchthon in the *Apology of the Augsburg Confession*: "Christ interprets
+Himself when He adds: Thy faith hath saved thee", so the woman did not merit
+forgiveness "by that work of love". The premise is rated `disputed`. Marshall
+names those who read the love as the cause — Wellhausen, Creed, and most Roman
+Catholic commentators, Lagrange and Schürmann among them — and Trent counts
+beginning to love God among the dispositions to justification (Session VI, ch.
+6). None of them is a party here: no one in this dispute argues that reading of
+7:47, and none of those commentators is yet cited from his own work.
+
+**John changes no verdict.** John's case, Aquinas's reading of John 6:29 and
+Luther's answer to it entered this dispute after the verdicts below were first
+stated. Each of the three is in a standoff with a party rated no higher than
+itself, so nothing new is forced and nothing that was forced is lost. Without
+Trent, John's case is still not forced, because Aquinas's reading can be
+defended (`sola_fide_from_john_not_forced_without_trent`).
 
 **The parties chosen.** A dispute is over the arguments put into it. Hays's
 subjective genitive is represented through the apocalyptic reading, which holds
@@ -4254,8 +5109,8 @@ would be a second argument to weigh.
 
 Each party is an argument in its own right: premises that can hold together, a
 conclusion they deliver, and an inference someone has rated. The Reformed case
-enters as three parties, one per strand, because a dispute weighs arguments
-whole: one package holding all three strands would be defeated by a
+enters as four parties, one per strand, because a dispute weighs arguments
+whole: one package holding all four strands would be defeated by a
 contradiction of any one of them, and the redundancy the results prove would
 count for nothing.
 
@@ -4375,6 +5230,64 @@ The apostolic strand, argued alone: sola fide from Peter at Jerusalem.
 \text{(17)} \quad &amp; P_{25} \rightarrow P_{26} \\
 \text{(18)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
 \vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
+\end{aligned}
+\]
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="johannineParty"></a>
+**`johannineParty`** — Sola fide from John (6:28–29)
+
+**John's case**: sola fide from Jesus' answer in John 6:28–29, argued alone.
+It holds the Reformed distinction between justification and sanctification, as
+Paul's and Peter's cases do, so Trent meets it on the same ground. Two
+inferences are rated: Calvin's step from John's "eternal life through
+believing" to justification, and the step to faith alone that Trent's canon 9
+denies.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{36} \\
+\text{(2)} \quad &amp; P_{37} \\
+\text{(3)} \quad &amp; P_{38} \\
+\text{(4)} \quad &amp; P_{1} \\
+\text{(5)} \quad &amp; P_{2} \\
+\text{(6)} \quad &amp; P_{3} \\
+\text{(7)} \quad &amp; P_{4} \\
+\text{(8)} \quad &amp; P_{5} \\
+\text{(9)} \quad &amp; P_{17} \\
+\text{(10)} \quad &amp; P_{9} \\
+\text{(11)} \quad &amp; P_{20} \\
+\text{(12)} \quad &amp; P_{21} \\
+\text{(13)} \quad &amp; P_{24} \\
+\text{(14)} \quad &amp; P_{34} \\
+\text{(15)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
+\text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
+\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
+\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
+\text{(19)} \quad &amp; P_{25} \rightarrow P_{26} \\
+\text{(20)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
+\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
+\end{aligned}
+\]
+</div>
+
+Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
+
+<a id="aquinasCase"></a>
+**`aquinasCase`** — Faith formed by charity (Aquinas on John 6:29)
+
+**Aquinas on John 6:29**, as the argument he makes: the believing Jesus
+names is faith living through charity, so it is not bare trust.
+
+<div class="testimony-math">
+\[
+\begin{aligned}
+\text{(1)} \quad &amp; P_{39} \\
+\text{(2)} \quad &amp; P_{39} \rightarrow \lnot P_{38} \\[4pt]
+\vdash \quad &amp; \lnot P_{38}
 \end{aligned}
 \]
 </div>
@@ -4692,6 +5605,48 @@ theorem jervellCase_is_satisfiable : Satisfiable jervellCase.premises
 -- axioms: propext, Quot.sound
 ```
 
+<a id="johannineParty_establishes"></a>
+**`johannineParty_establishes`**
+
+John's case delivers sola fide.
+
+```lean
+theorem johannineParty_establishes : Establishes johannineParty
+-- axioms: propext, Quot.sound
+```
+
+<a id="aquinasCase_establishes"></a>
+**`aquinasCase_establishes`**
+
+Aquinas's case delivers its conclusion: the believing is not bare trust.
+
+```lean
+theorem aquinasCase_establishes : Establishes aquinasCase
+-- axioms: propext, Quot.sound
+```
+
+<a id="johannineParty_is_satisfiable"></a>
+**`johannineParty_is_satisfiable`**
+
+John's case can be held without contradiction: the Reformed world, in which
+every claim of the case holds.
+
+```lean
+theorem johannineParty_is_satisfiable : Satisfiable johannineParty.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="aquinasCase_is_satisfiable"></a>
+**`aquinasCase_is_satisfiable`**
+
+Aquinas's case can be held without contradiction: his own world, in which
+the believing of John 6:29 is faith formed by charity and not bare trust.
+
+```lean
+theorem aquinasCase_is_satisfiable : Satisfiable aquinasCase.premises
+-- axioms: propext, Quot.sound
+```
+
 #### Strength: every weakest link is `disputed`, but two
 
 Every party but two rests on something cited `disputed`, or denies an atom,
@@ -4716,8 +5671,10 @@ theorem paulineCase_strength : paulineCase.strength = 0
 **`dominicalCase_strength`**
 
 The dominical case rests on the Reformed distinction, cited `disputed`, and
-on an inference Trent's canon 9 denies. Its own two premises rank higher: σῴζω
-`wellSupported`, and the reading of 7:47 `plausible`.
+on an inference Trent's canon 9 denies. Of its own two premises, the sense of
+"saved" (σῴζω) is rated `wellSupported`; the reading of 7:47 is `disputed`,
+because Marshall names the commentators who read her love as the cause of her
+forgiveness.
 
 ```lean
 theorem dominicalCase_strength : dominicalCase.strength = 0
@@ -4792,6 +5749,39 @@ verdict to "renewal is no part of justification", both cited `disputed`.
 
 ```lean
 theorem galatianGospel_strength : galatianGospel.strength = 0
+-- axioms: propext
+```
+
+<a id="johannineParty_strength"></a>
+**`johannineParty_strength`**
+
+John's case rests on the Reformed distinction and on an inference Trent's
+canon 9 denies, both `disputed`. Its own reading, believing as trust, is
+`disputed` too: Aquinas denies it.
+
+```lean
+theorem johannineParty_strength : johannineParty.strength = 0
+-- axioms: propext
+```
+
+<a id="aquinasCase_strength"></a>
+**`aquinasCase_strength`**
+
+Aquinas's case rests on his reading of John 6:29, cited `disputed`: Calvin
+denies it.
+
+```lean
+theorem aquinasCase_strength : aquinasCase.strength = 0
+-- axioms: propext
+```
+
+<a id="lutherOnGalatians_strength"></a>
+**`lutherOnGalatians_strength`**
+
+Luther's answer rests on his step, which Aquinas denies.
+
+```lean
+theorem lutherOnGalatians_strength : lutherOnGalatians.strength = 0
 -- axioms: propext
 ```
 
@@ -5449,6 +6439,9 @@ def partyNode : Party → ArgumentPackage Claim :=
     | Party.lexical => lexicalCase
     | Party.trentOnPaulsWord => tridentineOnPaulsWord
     | Party.romansOnTheWord => romansFourOnTheWord
+    | Party.johannine => johannineParty
+    | Party.aquinas => aquinasCase
+    | Party.luther => lutherOnGalatians
 ```
 
 <a id="solaFideDispute"></a>
@@ -5461,7 +6454,7 @@ establishes its conclusion, and every party's inferences are rated.
 def solaFideDispute : Dispute Claim Party :=
   { node := partyNode, consistent := solaFideDispute._proof_1,
     sound := solaFideDispute._proof_2,
-    rated := solaFideDispute._proof_15 }
+    rated := solaFideDispute._proof_18 }
 ```
 
 <a id="reformed_strands_stand_with_the_critics"></a>
@@ -5591,11 +6584,13 @@ theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
 <a id="solaFideDispute_defeats"></a>
 **`solaFideDispute_defeats`**
 
-**Who defeats whom**, all 144 pairs. Trent and each Reformed strand defeat
+**Who defeats whom**, all 225 pairs. Trent and each Reformed strand defeat
 each other. The apocalyptic reading and Paul defeat each other; it and Luke's
 and Acts' cases do not conflict; it and Trent defeat each other. Sanders defeats
 Paul and the critics, and both defeat him back. Jervell and Acts defeat each
 other. Paul's gospel and Trent defeat each other, over Trent's definition.
+John's case meets Trent, the apocalyptic reading and Aquinas, each both ways,
+and Aquinas and Luther defeat each other.
 Trent read as a claim about Paul's word meets everyone Trent meets, both ways,
 and two parties more: Paul's word defeats it, lexically and from Romans 4, and it
 defeats neither back — its replies are weighed and fail. Nothing else.
@@ -5626,7 +6621,8 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
         Party.apocalyptic, Party.sanders,
         Party.critics, Party.jervell, Party.gospel,
         Party.lexical, Party.trentOnPaulsWord,
-        Party.romansOnTheWord],
+        Party.romansOnTheWord, Party.johannine,
+        Party.aquinas, Party.luther],
     complete := solaFideFinite._proof_1,
     defeats := fun i j => decide (partyDefeats i j),
     spec := solaFideFinite._proof_2 }
@@ -5637,7 +6633,7 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
 <a id="solaFideDispute_supports"></a>
 **`solaFideDispute_supports`**
 
-**Nothing supports anything** in the sola fide dispute, in all 144 pairs: no
+**Nothing supports anything** in the sola fide dispute, in all 225 pairs: no
 party's conclusion entails a claim another rests on. The critics' conclusion
 used to be one of Paul's premises; now the Pauline case rests on the critics'
 whole line instead (`paulineCase`), and the relation is the stronger one
@@ -5678,7 +6674,7 @@ def instDecidableRelPartyPartyPartOf : DecidableRel partyPartOf
 <a id="solaFideDispute_partOf"></a>
 **`solaFideDispute_partOf`**
 
-**Whose case is part of whose**, all 144 pairs: the critics' case is part of
+**Whose case is part of whose**, all 225 pairs: the critics' case is part of
 Paul's, since the Pauline case derives its ἔργα νόμου premise from the critics'
 line; Trent's case is part of Trent's read as a claim about Paul's word, which
 only adds to it; and every case is part of itself. Nothing else. Every cell is
@@ -5702,62 +6698,78 @@ The dispute drawn: who defeats whom, and whose case is part of whose.
 <marker id="tm-support" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#2e7d32"/></marker>
 <marker id="tm-part" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:#1f5fa8"/></marker>
 </defs>
-<path d="M211,61 Q261,137 337,187" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M212,59 Q260,116 328,143" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M210,61 Q260,144 337,202" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M208,63 Q249,170 321,259" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M204,64 Q220,193 270,313" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M187,58 Q127,71 86,116" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M283,83 Q296,143 341,184" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M261,74 Q169,80 87,120" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M334,139 Q322,166 345,183" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M319,136 Q216,214 138,317" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M315,125 Q202,107 88,125" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M339,189 Q289,113 213,63" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M343,187 Q329,127 284,86" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M346,186 Q358,159 335,142" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M346,214 Q323,231 335,258" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M336,204 Q207,220 87,270" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M193,63 Q120,152 79,259" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M271,74 Q287,119 331,140" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M251,74 Q153,156 82,262" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M319,113 Q311,134 334,138" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M307,114 Q255,216 237,330" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M299,108 Q181,172 85,264" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M331,145 Q283,88 215,61" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M333,143 Q316,97 273,76" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M335,141 Q343,119 320,115" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M344,169 Q328,185 347,198" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M333,165 Q243,237 181,333" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M328,154 Q201,136 75,154" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M339,205 Q289,122 212,63" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M348,201 Q364,184 345,172" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M335,219 Q207,227 88,271" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M335,213 Q208,167 75,157" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M322,262 Q281,155 209,66" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M334,261 Q357,244 345,217" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M317,268 Q210,185 86,134" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M271,315 Q255,187 205,67" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M261,334 Q234,322 217,345" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M214,346 Q241,358 258,335" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M136,319 Q239,241 317,138" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M85,271 Q213,255 333,205" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M70,260 Q88,202 70,143" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M54,186 Q77,169 65,142" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M83,117 Q143,104 184,59" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M85,121 Q176,115 258,75" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M85,125 Q199,143 312,125" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M83,133 Q190,215 314,266" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M70,140 Q52,199 70,257" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M114,81 Q86,84 83,112" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
-<path d="M336,196 Q216,146 87,130" style="stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3" marker-end="url(#tm-part)"/>
-<path d="M200,335 Q218,202 200,68" style="stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3" marker-end="url(#tm-part)"/>
+<path d="M320,286 Q297,285 300,308" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M298,310 Q321,311 318,288" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M236,332 Q288,230 306,117" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M179,336 Q268,263 331,167" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M157,338 Q131,297 85,286" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M102,310 Q105,287 82,288" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M78,262 Q150,173 191,66" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M80,264 Q178,182 249,76" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M82,266 Q200,203 297,110" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M85,272 Q212,263 332,219" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M82,284 Q108,325 154,336" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M69,260 Q82,214 59,172" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M55,230 Q43,249 65,258" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M72,154 Q198,172 325,154" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M72,157 Q198,202 332,212" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M59,169 Q46,215 68,257" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M65,141 Q88,137 80,115" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M81,113 Q58,116 66,138" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M101,91 Q123,97 124,74" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M127,72 Q104,66 103,89" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M329,160 Q200,197 87,268" style="stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3" marker-end="url(#tm-part)"/>
+<path d="M284,307 Q262,182 206,67" style="stroke:#1f5fa8;fill:none;stroke-width:1.6;stroke-dasharray:1.5 3" marker-end="url(#tm-part)"/>
 <circle cx="200" cy="50" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
 <text x="200" y="55" text-anchor="middle" style="fill:var(--fg);font-size:14px">1</text>
-<circle cx="275" cy="70" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="275" y="75" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
-<circle cx="330" cy="125" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="330" y="130" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
-<circle cx="350" cy="200" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="350" y="205" text-anchor="middle" style="fill:var(--fg);font-size:14px">4</text>
+<circle cx="261" cy="63" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="261" y="68" text-anchor="middle" style="fill:var(--fg);font-size:14px">2</text>
+<circle cx="311" cy="100" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="311" y="105" text-anchor="middle" style="fill:var(--fg);font-size:14px">3</text>
+<circle cx="343" cy="154" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="343" y="159" text-anchor="middle" style="fill:var(--fg);font-size:14px">4</text>
+<circle cx="349" cy="216" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="349" y="221" text-anchor="middle" style="fill:var(--fg);font-size:14px">5</text>
 <circle cx="330" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="330" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">5</text>
-<circle cx="275" cy="330" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="275" y="335" text-anchor="middle" style="fill:var(--fg);font-size:14px">6</text>
-<circle cx="200" cy="350" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="200" y="355" text-anchor="middle" style="fill:var(--fg);font-size:14px">7</text>
-<circle cx="125" cy="330" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="125" y="335" text-anchor="middle" style="fill:var(--fg);font-size:14px">8</text>
+<text x="330" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">6</text>
+<circle cx="288" cy="321" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="288" y="326" text-anchor="middle" style="fill:var(--fg);font-size:14px">7</text>
+<circle cx="231" cy="347" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="231" y="352" text-anchor="middle" style="fill:var(--fg);font-size:14px">8</text>
+<circle cx="169" cy="347" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="169" y="352" text-anchor="middle" style="fill:var(--fg);font-size:14px">9</text>
+<circle cx="112" cy="321" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="112" y="326" text-anchor="middle" style="fill:var(--fg);font-size:14px">10</text>
 <circle cx="70" cy="275" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="70" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">9</text>
-<circle cx="50" cy="200" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="50" y="205" text-anchor="middle" style="fill:var(--fg);font-size:14px">10</text>
-<circle cx="70" cy="125" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="70" y="130" text-anchor="middle" style="fill:var(--fg);font-size:14px">11</text>
-<circle cx="125" cy="70" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
-<text x="125" y="75" text-anchor="middle" style="fill:var(--fg);font-size:14px">12</text>
+<text x="70" y="280" text-anchor="middle" style="fill:var(--fg);font-size:14px">11</text>
+<circle cx="51" cy="216" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="51" y="221" text-anchor="middle" style="fill:var(--fg);font-size:14px">12</text>
+<circle cx="57" cy="154" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="57" y="159" text-anchor="middle" style="fill:var(--fg);font-size:14px">13</text>
+<circle cx="89" cy="100" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="89" y="105" text-anchor="middle" style="fill:var(--fg);font-size:14px">14</text>
+<circle cx="139" cy="63" r="15" style="fill:var(--bg);stroke:var(--fg);stroke-width:1.2"/>
+<text x="139" y="68" text-anchor="middle" style="fill:var(--fg);font-size:14px">15</text>
 </svg>
 </div>
 
@@ -5777,6 +6789,9 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 10 | Paul's word (δικαιόω, by the rule of least meaning) |
 | 11 | Trent, against 'not by works', read as what Paul's word means |
 | 12 | Romans 4:3–8, on Paul's word (by the rule of least meaning) |
+| 13 | Sola fide from John (6:28–29) |
+| 14 | Faith formed by charity (Aquinas on John 6:29) |
+| 15 | Luther on Galatians 3:11–12 (against faith formed by charity) |
 
 | From | To | Edge |
 |---|---|---|
@@ -5794,9 +6809,11 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 4 *Trent, against 'not by works'* | 3 *Sola fide from Peter (Acts 15:9–11)* | defeats |
 | 4 *Trent, against 'not by works'* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
 | 4 *Trent, against 'not by works'* | 9 *Paul's gospel (Galatians 1), against justification as renewal* | defeats |
+| 4 *Trent, against 'not by works'* | 13 *Sola fide from John (6:28–29)* | defeats |
 | 5 *Apocalyptic reading, against faith as the condition* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
 | 5 *Apocalyptic reading, against faith as the condition* | 4 *Trent, against 'not by works'* | defeats |
 | 5 *Apocalyptic reading, against faith as the condition* | 11 *Trent, against 'not by works', read as what Paul's word means* | defeats |
+| 5 *Apocalyptic reading, against faith as the condition* | 13 *Sola fide from John (6:28–29)* | defeats |
 | 6 *Covenantal nomism (Sanders, Dunn)* | 1 *Sola fide from Paul (Galatians 2:16)* | defeats |
 | 6 *Covenantal nomism (Sanders, Dunn)* | 7 *Variegated nomism (Gathercole, Carson et al.)* | defeats |
 | 7 *Variegated nomism (Gathercole, Carson et al.)* | 6 *Covenantal nomism (Sanders, Dunn)* | defeats |
@@ -5809,7 +6826,15 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 11 *Trent, against 'not by works', read as what Paul's word means* | 3 *Sola fide from Peter (Acts 15:9–11)* | defeats |
 | 11 *Trent, against 'not by works', read as what Paul's word means* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
 | 11 *Trent, against 'not by works', read as what Paul's word means* | 9 *Paul's gospel (Galatians 1), against justification as renewal* | defeats |
+| 11 *Trent, against 'not by works', read as what Paul's word means* | 13 *Sola fide from John (6:28–29)* | defeats |
 | 12 *Romans 4:3–8, on Paul's word (by the rule of least meaning)* | 11 *Trent, against 'not by works', read as what Paul's word means* | defeats |
+| 13 *Sola fide from John (6:28–29)* | 4 *Trent, against 'not by works'* | defeats |
+| 13 *Sola fide from John (6:28–29)* | 5 *Apocalyptic reading, against faith as the condition* | defeats |
+| 13 *Sola fide from John (6:28–29)* | 11 *Trent, against 'not by works', read as what Paul's word means* | defeats |
+| 13 *Sola fide from John (6:28–29)* | 14 *Faith formed by charity (Aquinas on John 6:29)* | defeats |
+| 14 *Faith formed by charity (Aquinas on John 6:29)* | 13 *Sola fide from John (6:28–29)* | defeats |
+| 14 *Faith formed by charity (Aquinas on John 6:29)* | 15 *Luther on Galatians 3:11–12 (against faith formed by charity)* | defeats |
+| 15 *Luther on Galatians 3:11–12 (against faith formed by charity)* | 14 *Faith formed by charity (Aquinas on John 6:29)* | defeats |
 | 4 *Trent, against 'not by works'* | 11 *Trent, against 'not by works', read as what Paul's word means* | is part of |
 | 7 *Variegated nomism (Gathercole, Carson et al.)* | 1 *Sola fide from Paul (Galatians 2:16)* | is part of |
 | 1 *Sola fide from Paul (Galatians 2:16)* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
@@ -5818,6 +6843,7 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 5 *Apocalyptic reading, against faith as the condition* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
 | 6 *Covenantal nomism (Sanders, Dunn)* | 1 *Sola fide from Paul (Galatians 2:16)* | attack on a part — already a defeat |
 | 9 *Paul's gospel (Galatians 1), against justification as renewal* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
+| 13 *Sola fide from John (6:28–29)* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
 
 The defeats are the cells of [`solaFideDispute_defeats`](#solaFideDispute_defeats), the supports the cells of [`solaFideDispute_supports`](#solaFideDispute_supports) and the parts the cells of [`solaFideDispute_partOf`](#solaFideDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 
@@ -5831,8 +6857,9 @@ defeats either route to Paul's word, so both come first; and nothing joins them,
 because every other party has an attacker that Paul's word does not rule out —
 each Reformed strand has Trent, Trent has Paul's case, the apocalyptic reading
 has Paul's case, Sanders has the critics and the critics Sanders, Jervell has
-Peter's case, Paul's gospel has Trent, and Trent read as a claim about Paul's
-word has Paul's word itself. Some of these are standoffs, not losses: Paul's
+Peter's case, Paul's gospel has Trent, Aquinas has Luther and Luther Aquinas,
+and Trent read as a claim about Paul's word has Paul's word itself. Some of
+these are standoffs, not losses: Paul's
 gospel answers Trent as Trent answers it.
 
 **What the dispute forces is exactly *Paul's word (δικαιόω, by the rule of least meaning)*, *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.**
@@ -5851,8 +6878,11 @@ gospel answers Trent as Trent answers it.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and nothing forced defeats *Sola fide from Peter (Acts 15:9–11)*.
   - *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*, and nothing forced defeats *Trent, against 'not by works'*.
   - *Paul's word (δικαιόω, by the rule of least meaning)* [defeats](#whereTrentsWordReadingFalls) *Trent, against 'not by works', read as what Paul's word means*, and nothing forced defeats *Paul's word (δικαιόω, by the rule of least meaning)*.
+  - *Trent, against 'not by works'* defeats *Sola fide from John (6:28–29)*, and nothing forced defeats *Trent, against 'not by works'*.
+  - *Luther on Galatians 3:11–12 (against faith formed by charity)* defeats *Faith formed by charity (Aquinas on John 6:29)*, and nothing forced defeats *Luther on Galatians 3:11–12 (against faith formed by charity)*.
+  - *Faith formed by charity (Aquinas on John 6:29)* defeats *Luther on Galatians 3:11–12 (against faith formed by charity)*, and nothing forced defeats *Faith formed by charity (Aquinas on John 6:29)*.
 
-**What this rests on.** The reasons state 10 defeats and 34 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 13 defeats and 44 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
@@ -5866,6 +6896,7 @@ gospel answers Trent as Trent answers it.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -5897,6 +6928,15 @@ gospel answers Trent as Trent answers it.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Paul's word (δικαιόω, by the rule of least meaning)* defeats *Trent, against 'not by works', read as what Paul's word means*, at the level of the claims: [`whereTrentsWordReadingFalls`](#whereTrentsWordReadingFalls).
 
@@ -5930,7 +6970,7 @@ too; one unanswered defeater is enough.)
 
 - *Paul's word (δικαιόω, by the rule of least meaning)* [defeats](#whereTrentsWordReadingFalls) *Trent, against 'not by works', read as what Paul's word means*, and nothing defeats *Paul's word (δικαιόω, by the rule of least meaning)*.
 
-**What this rests on.** The reasons state 1 defeat and 12 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 1 defeat and 15 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
   - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
@@ -5947,6 +6987,7 @@ too; one unanswered defeater is enough.)
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -5975,6 +7016,15 @@ too; one unanswered defeater is enough.)
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Paul's word (δικαιόω, by the rule of least meaning)* defeats *Trent, against 'not by works', read as what Paul's word means*, at the level of the claims: [`whereTrentsWordReadingFalls`](#whereTrentsWordReadingFalls).
 
@@ -6011,11 +7061,12 @@ the apocalyptic reading, whose derived "not by works" it denies.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
   - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*.
   - *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*.
+  - *Sola fide from John (6:28–29)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from John (6:28–29)*.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
 
-**What this rests on.** The reasons state 14 defeats and 28 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 16 defeats and 36 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
@@ -6032,6 +7083,7 @@ the apocalyptic reading, whose derived "not by works" it denies.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -6060,6 +7112,15 @@ the apocalyptic reading, whose derived "not by works" it denies.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -6103,7 +7164,7 @@ Trent.
   - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 15 defeats and 38 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 15 defeats and 50 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
@@ -6115,6 +7176,7 @@ Trent.
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -6148,6 +7210,15 @@ Trent.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 <a id="trent_not_forced"></a>
 **`trent_not_forced`**
@@ -6180,11 +7251,13 @@ Trent, and Trent read as a claim about Paul's word — itself.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
   - *Trent, against 'not by works', read as what Paul's word means* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works', read as what Paul's word means*.
+  - *Sola fide from John (6:28–29)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from John (6:28–29)*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 14 defeats and 39 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 16 defeats and 50 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -6227,6 +7300,15 @@ Trent, and Trent read as a claim about Paul's word — itself.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -6271,7 +7353,7 @@ and Paul defeats it.
   - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 15 defeats and 38 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 15 defeats and 50 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
@@ -6284,6 +7366,7 @@ and Paul defeats it.
   - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
   - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -6316,6 +7399,15 @@ and Paul defeats it.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 <a id="apocalyptic_not_forced"></a>
 **`apocalyptic_not_forced`**
@@ -6350,11 +7442,13 @@ as a claim about Paul's word — itself.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*.
   - *Trent, against 'not by works', read as what Paul's word means* defeats *Apocalyptic reading, against faith as the condition*, and *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works', read as what Paul's word means*.
+  - *Sola fide from John (6:28–29)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from John (6:28–29)*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 14 defeats and 39 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 16 defeats and 50 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -6397,6 +7491,15 @@ as a claim about Paul's word — itself.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -6404,7 +7507,7 @@ Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by work
 **`dominical_case_defensible`**
 
 **Luke's case can be defended.** "Your faith has saved you", read as Luke
-says it, stands in six of the dispute's eight maximal defensible positions. Its
+says it, stands with every party but Trent, however Trent is read. Its
 only defeater is Trent, read or unread, over what justification is: Trent's
 definition denies that faith without charity suffices, and Luke's words say her
 faith saved her. It defeats Trent back, and conflicts with no other party.
@@ -6430,15 +7533,17 @@ defeats it.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
   - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*.
   - *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*.
+  - *Sola fide from John (6:28–29)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from John (6:28–29)*.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
 
-**What this rests on.** The reasons state 14 defeats and 28 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 16 defeats and 36 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
   - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
@@ -6479,6 +7584,15 @@ defeats it.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -6531,7 +7645,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
   - *Trent, against 'not by works', read as what Paul's word means* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works', read as what Paul's word means*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 17 defeats and 60 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 17 defeats and 78 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
   - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
@@ -6544,6 +7658,7 @@ Trent, and Trent read as a claim about Paul's word — itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -6576,6 +7691,15 @@ Trent, and Trent read as a claim about Paul's word — itself.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works'*, at the level of the claims: [`whereTrentPartsFromPaul`](#whereTrentPartsFromPaul).
 
@@ -6606,11 +7730,12 @@ defeats it.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
   - *Apocalyptic reading, against faith as the condition* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Apocalyptic reading, against faith as the condition*.
   - *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*.
+  - *Sola fide from John (6:28–29)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from John (6:28–29)*.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Trent, against 'not by works'* defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
 
-**What this rests on.** The reasons state 14 defeats and 28 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 16 defeats and 36 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
@@ -6630,6 +7755,7 @@ defeats it.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -6655,6 +7781,15 @@ defeats it.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Paul's gospel (Galatians 1), against justification as renewal* defeats *Trent, against 'not by works'*, at the level of the claims: [`whereTrentPartsFromPaul`](#whereTrentPartsFromPaul).
 
@@ -6710,474 +7845,8 @@ faith sufficed; grant that it did, and Trent's definition cannot stand.
 - **What this rests on:**
   - \\(P_{17}\\) Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven — *consensus*: Luke 7:50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50
   - \\(P_{18}\\) σῴζω in Luke 7:50 denotes salvation, not physical healing — *well supported*: [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–55; Luke 7:47-50; [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50
-  - \\(P_{19}\\) Luke 7:47 — her love is the evidence of her forgiveness, not its ground — *plausible*: [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - \\(P_{19}\\) Luke 7:47 — her love is the evidence of her forgiveness, not its ground — *disputed*: [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - the step itself — *disputed*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-
-## TestimonyArguments.SolaFide.Johannine — "this is the work of God, that you believe"
-
-A fourth strand for sola fide, from John's Gospel, encoded on its own. Asked
-what they must do "to be doing the works of God", the crowd is told: "This is
-the work of God, that you believe in him whom he has sent" (John 6:28–29). The
-question of works is put to Jesus in terms, and he answers with believing. The
-Gospel says the same throughout: eternal life, and passing out of judgement,
-through believing in the Son (3:16–18, 3:36, 5:24), and it states its own
-purpose in those terms (20:31).
-
-### The hinge: what believing is
-
-Both sides grant the verse. What divides them is what its believing is.
-
-- **Calvin** reads it as trust. Christ calls faith a work only improperly:
-  faith "brings nothing to God, but, on the contrary, places man before God as
-  empty and poor, that he may be filled with Christ", and "bestows on man no
-  other righteousness than that which he receives from Christ". It is "a
-  passive work, to which no reward can be paid".
-- **Aquinas** reads it as faith formed by charity. Paul distinguishes faith
-  "only from external works"; to believe *in* him (*in illum*), as one's end,
-  "is proper to faith living through the love of charity", and faith so living
-  "is the principle of all our good works" (*Super Ioannem* 6, lect. 3, n. 901).
-  That is Trent's account of justifying faith (Session VI, ch. 7): faith
-  without hope and charity "neither unites man perfectly with Christ, nor makes
-  him a living member of His body".
-
-So the strand has the same shape as the others: shared texts, and a reading on
-which everything turns. Grant Aquinas his reading and the texts no longer
-deliver faith alone (`johannine_strand_rests_on_believing_as_trust`).
-
-### John has no word for justification
-
-δικαιόω does not occur in John. The strand's step therefore runs from eternal
-life through believing to justification by faith alone, and that is an
-inference, not a reading of a word. It is cited to Calvin, whose comment on 6:29
-speaks of the righteousness faith receives from Christ, and rated `plausible`:
-no cited source grants the strand's grounds and denies that step, but none argues
-the bridge from John's vocabulary to Paul's at length either.
-
-### Luther's answer, from Galatians 3
-
-Aquinas's reading is not left standing unanswered. Luther meets it head-on in
-his lectures on Galatians. At 3:11: "The scholastics misconstrue this passage by
-saying: 'The just shall live by faith, if it is a working faith, or a faith
-formed and performed by charitable works.' … To speak of formed or unformed
-faith, a sort of double faith, is contrary to the Scriptures." At 3:12: "Does
-not the Law command charity? … If the law requires charity, charity is part of
-the Law and not of faith." So a faith that justifies because charity forms it
-justifies by the law after all — and "the law is not of faith" (Galatians 3:12).
-
-The argument is encoded as a line of its own (`lutherLine`). Its grounds are
-both things Aquinas grants: the text of Galatians 3:11–12, and that love of God
-and neighbour is what the law commands (Deuteronomy 6:5). Its step is Luther's:
-from those, the believing that justifies is not faith formed by charity.
-Granted the step, Aquinas's reading of John 6:29 falls
-(`luther_answers_aquinas_from_galatians`). But the step is the whole of the
-answer: the texts alone do not exclude his reading
-(`luther_answer_rests_on_his_step`), and the step is rated `disputed`, because
-Aquinas grants both of its grounds and denies its conclusion. Nor does removing
-Aquinas's reading establish Calvin's: that the believing of 6:29 is not formed
-by charity is weaker than that it is trust.
-
-Calvin makes the neighbouring argument in the *Institutes* (III.xi.19), which
-the library already cites for `worksOfLawMeansWorksGenerally`: against those
-who "pretend that the works excluded are ceremonial, not moral works", he cites
-Galatians 3:10 and 3:12 — the curse on everyone who does not continue in *all*
-that the law commands — and concludes that "the whole Law is spoken of when the
-power of justifying is denied to it". Aquinas's distinction is between
-external and inward works rather than ceremonial and moral ones, so it is
-Luther's argument on 3:11–12, not Calvin's, that meets him directly.
-
-The Catholic reply rests on Galatians 5:6, "faith working through love", which
-Trent cites (Session VI, ch. 7). How Luther and Calvin read that verse is not
-yet encoded.
-
-### What is not yet done
-
-The strand is encoded alone, as a package of its own. It is **not** yet part of
-`reformed` or of the sola fide dispute, and that is deliberate. Adding a fourth
-strand to `reformed` changes the joint results — no premise removed from the
-other three strands defeats sola fide while John's strand stands — and a
-Johannine party in `Dispute.lean` changes the defeat table. Both are the next
-step, tracked in issue #86, and every statement elsewhere that sola fide "runs
-on three strands" remains true of `reformed` until then.
-
-Nor does it encode the obedience reading of 3:36, where the opposite of the one
-who believes is the one who "does not obey" (ἀπειθῶν): no source arguing that
-Johannine faith therefore includes obedience has been verified yet.
-
-#### The lines
-
-<a id="calvinOnJohnSix"></a>
-**`calvinOnJohnSix`**
-
-Calvin's step from John to justification. John has no δικαιόω, so the
-bridge from eternal life through believing to justification by faith alone is
-an inference of its own. Rated `plausible`: no cited source grants the strand's
-grounds and denies the step, but the bridge rests on Calvin's comment rather
-than on an argument from John's vocabulary.
-
-```lean
-def calvinOnJohnSix : Source :=
-  { primary := Reference.work calvinJohn (Bib.Locus.adLoc Scripture.john6_29),
-    tradition := Tradition.reformedProtestant,
-    confidence := Confidence.plausible }
-```
-
-<a id="aquinasOnFormedFaith"></a>
-**`aquinasOnFormedFaith`**
-
-Aquinas's step: faith living through charity is not bare trust. Rated
-`consensus`: Calvin concedes it — his trust is precisely a faith that brings
-nothing — and the two divide over the premise, not the inference.
-
-```lean
-def aquinasOnFormedFaith : Source :=
-  {
-    primary :=
-      Reference.work aquinasJohn
-        (Bib.Locus.sectionRef "cap. 6, lect. 3, n. 901"),
-    tradition := Tradition.romanCatholic, confidence := Confidence.consensus }
-```
-
-<a id="johannineToFaithAlone"></a>
-**`johannineToFaithAlone`**
-
-**The Johannine strand.** From the work God requires (6:28–29), and eternal
-life through believing (3:16–18, 3:36, 5:24, 20:31), to justification by faith
-alone — by way of the reading of that believing as trust.
-
-<div class="testimony-math">
-\[
-(P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25}
-\]
-</div>
-
-<a id="johannineLine"></a>
-**`johannineLine`** — Johannine strand (John 6:29)
-
-The Johannine line. Its texts are its own grounds, not shared prooftexts,
-because the strand is not yet part of `reformed`.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{37} \\
-\text{(3)} \quad &amp; P_{38} \\
-\text{(4)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
-\end{aligned}
-\]
-</div>
-
-<a id="thomistLine"></a>
-**`thomistLine`** — Faith formed by charity (Aquinas on John 6:29)
-
-**Aquinas's line.** The believing of 6:29 is faith living through charity,
-and so not the bare trust the strand needs. The denial is derived, not assumed:
-it follows from Aquinas's own reading of the verse.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{39} \\
-\text{(2)} \quad &amp; P_{39} \rightarrow \lnot P_{38} \\[4pt]
-\vdash \quad &amp; \lnot P_{38}
-\end{aligned}
-\]
-</div>
-
-#### The packages
-
-<a id="johannineCase"></a>
-**`johannineCase`** — Sola fide from John (6:28–29)
-
-Sola fide from John alone: the Johannine line, with the grounds and closing
-steps every Reformed strand shares.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{37} \\
-\text{(3)} \quad &amp; P_{38} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{3} \\
-\text{(7)} \quad &amp; P_{4} \\
-\text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{17} \\
-\text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{20} \\
-\text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(18)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
-\end{aligned}
-\]
-</div>
-
-Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
-
-<a id="thomistOnJohn"></a>
-**`thomistOnJohn`** — Aquinas on John 6:29 (faith formed by charity)
-
-Aquinas on John: every text the Johannine strand reads, and every shared
-ground, with its believing read as faith formed by charity. The rival the strand
-is written against.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{37} \\
-\text{(3)} \quad &amp; P_{39} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{3} \\
-\text{(7)} \quad &amp; P_{4} \\
-\text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{17} \\
-\text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{20} \\
-\text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; (P_{36} \land P_{37} \land P_{38}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; P_{39} \rightarrow \lnot P_{38} \\
-\text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(19)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
-\end{aligned}
-\]
-</div>
-
-Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
-
-#### Results
-
-<a id="johannine_strand_establishes"></a>
-**`johannine_strand_establishes`**
-
-**John alone delivers sola fide.** Grant that the believing of 6:29 is
-trust, and the work God requires is no work at all: sola fide follows from John
-without Paul, Luke or Acts.
-
-```lean
-theorem johannine_strand_establishes : Establishes johannineCase
--- axioms: propext, Quot.sound
-```
-
-<a id="thomistReading"></a>
-**`thomistReading`**
-
-Aquinas's world: every text holds, and the believing of 6:29 is faith living
-through charity — so not bare trust, not faith alone, and faith without
-charity does not suffice. Grace and "not by works" still hold: Aquinas excludes
-external works, and grants that faith is God's gift.
-
-```lean
-def thomistReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.johannineBelievingIsTrust => False
-    | Claim.justificationByFaithAlone => False
-    | Claim.faithIsSufficient => False
-    | Claim.salvationThroughFaith => False
-    | x => True
-```
-
-<a id="johannine_strand_rests_on_believing_as_trust"></a>
-**`johannine_strand_rests_on_believing_as_trust`**
-
-**The Johannine strand rests on believing as trust.** Grant Aquinas every
-text the strand reads, and read their believing as he does — faith living
-through charity — and sola fide no longer follows. So John's Gospel, like
-Paul's Galatians and Luke's σῴζω, carries the conclusion only through a reading:
-here, of what it is to believe *in* him.
-
-```lean
-theorem johannine_strand_rests_on_believing_as_trust : ¬Establishes
-    thomistOnJohn
--- axioms: propext, Quot.sound
-```
-
-<a id="johannineCase_is_satisfiable"></a>
-**`johannineCase_is_satisfiable`**
-
-The Johannine case has a model, so `johannine_strand_establishes` is not
-vacuous.
-
-```lean
-theorem johannineCase_is_satisfiable : Satisfiable johannineCase.premises
--- axioms: propext, Quot.sound
-```
-
-#### Luther's answer
-
-<a id="lutherOnGalatiansThree"></a>
-**`lutherOnGalatiansThree`**
-
-Luther's step, on Galatians 3:11–12: the law commands charity, and the law
-is not of faith, so faith formed by charity would justify by the law. Rated
-`disputed`: Aquinas grants both grounds — the text, and that the law commands
-love — and denies the conclusion, holding that justifying faith is formed by
-charity.
-
-```lean
-def lutherOnGalatiansThree : Source :=
-  {
-    primary :=
-      Reference.work lutherGalatians
-        (Bib.Locus.adLoc { book := Book.galatians, chapter := 3, verse := 12 }),
-    supporting :=
-      [Reference.work lutherGalatians
-          (Bib.Locus.adLoc
-            { book := Book.galatians, chapter := 3, verse := 11 })],
-    tradition := Tradition.reformedProtestant,
-    confidence := Confidence.disputed }
-```
-
-<a id="lutherLine"></a>
-**`lutherLine`** — Luther on Galatians 3:11–12 (against faith formed by charity)
-
-**Luther's line.** From Galatians 3:11–12 and the law's command of love to
-the denial of Aquinas's reading: the believing that justifies is not faith formed
-by charity, since charity is what the law commands and the law is not of
-faith.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{40} \\
-\text{(2)} \quad &amp; P_{41} \\
-\text{(3)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{39} \\[4pt]
-\vdash \quad &amp; \lnot P_{39}
-\end{aligned}
-\]
-</div>
-
-<a id="lutherOnGalatians"></a>
-**`lutherOnGalatians`** — Luther on Galatians 3:11–12 (against faith formed by charity)
-
-Luther's answer to Aquinas as an argument: what Aquinas grants, with
-Luther's step, against the reading of 6:29 as faith formed by charity.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{40} \\
-\text{(2)} \quad &amp; P_{41} \\
-\text{(3)} \quad &amp; (P_{40} \land P_{41}) \rightarrow \lnot P_{39} \\[4pt]
-\vdash \quad &amp; \lnot P_{39}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="galatiansTextsAlone"></a>
-**`galatiansTextsAlone`** — Galatians 3:11–12 and the law's command of love, without Luther's step
-
-The same grounds without Luther's step: Galatians 3:11–12, and that the law
-commands love.
-
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{40} \\
-\text{(2)} \quad &amp; P_{41} \\[4pt]
-\vdash \quad &amp; \lnot P_{39}
-\end{aligned}
-\]
-</div>
-
-No premise here rests on scripture alone.
-
-<a id="luther_answers_aquinas_from_galatians"></a>
-**`luther_answers_aquinas_from_galatians`**
-
-**Luther answers Aquinas from Galatians 3.** Grant what Aquinas grants —
-Galatians 3:11–12, and that the law commands love — and Luther's step, and the
-believing of John 6:29 is not faith formed by charity: a faith that justified
-because charity formed it would justify by the law, and the law is not of faith.
-What this removes is Aquinas's reading; it does not by itself establish
-Calvin's.
-
-```lean
-theorem luther_answers_aquinas_from_galatians : Establishes lutherOnGalatians
--- axioms: propext, Quot.sound
-```
-
-<a id="luther_answer_rests_on_his_step"></a>
-**`luther_answer_rests_on_his_step`**
-
-**Luther's answer rests on his step.** The texts alone do not exclude
-Aquinas's reading: in Aquinas's world Galatians 3:11–12 holds, the law commands
-love, and the believing of 6:29 is faith formed by charity. What decides it is
-whether faith formed by charity counts as justification "by the law" — Luther's
-step, which Aquinas denies.
-
-```lean
-theorem luther_answer_rests_on_his_step : ¬Establishes galatiansTextsAlone
--- axioms: propext, Quot.sound
-```
-
-<a id="lutherReading"></a>
-**`lutherReading`**
-
-The Reformed world, in which the believing of John 6:29 is not faith formed
-by charity, and everything else holds.
-
-```lean
-def lutherReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.johannineBelievingIsFormedByCharity => False
-    | x => True
-```
-
-<a id="lutherOnGalatians_is_satisfiable"></a>
-**`lutherOnGalatians_is_satisfiable`**
-
-Luther's package has a model, so `luther_answers_aquinas_from_galatians` is
-not vacuous.
-
-```lean
-theorem lutherOnGalatians_is_satisfiable : Satisfiable
-    lutherOnGalatians.premises
--- axioms: propext, Quot.sound
-```
-
-<a id="whyLutherAnswersAquinas"></a>
-**`whyLutherAnswersAquinas`**
-
-**Why Luther's answer stands against Aquinas.** The crux is Luther's step:
-from Galatians 3:11–12 and the law's command of love, the believing that
-justifies is not faith formed by charity. With the two texts granted, Aquinas's
-reading of John 6:29 cannot keep its one distinctive ground — that the believing
-is formed by charity — and that ground alone breaks.
-
-Unlike the Reformed distinction against Trent, this crux is part of Luther's
-case: without the step, the texts do not deliver his conclusion. So the answer
-is exactly as strong as the step, which is rated `disputed` — the step is
-Luther's, and the texts are granted by both sides.
-
-**Why *Luther on Galatians 3:11–12 (against faith formed by charity)* stands against *Aquinas on John 6:29 (faith formed by charity)*.**
-
-- **The crux:** \\((P_{40} \land P_{41}) \rightarrow \lnot P_{39}\\), a premise of *Luther on Galatians 3:11–12 (against faith formed by charity)*.
-- **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{40}\\), \\(P_{41}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{39}\\) cannot be held together with \\((P_{40} \land P_{41}) \rightarrow \lnot P_{39}\\) and \\(P_{40}\\), \\(P_{41}\\); each is needed for the break, and without the crux they stand.
-- **What this rests on:**
-  - \\(P_{40}\\) Galatians 3:11–12 — none is justified by the law; the law is not of faith — *consensus*: Gal 3:11-12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
-  - \\(P_{41}\\) Love of God and neighbour is what the law commands — *consensus*: Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12
-  - the step itself — *disputed*: [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 ## TestimonyArguments.SolaFide.Hearings — the same dispute, asked two narrower questions
 
@@ -7209,15 +7878,18 @@ natural question for a Protestant reader, and the answer is more interesting
 than yes. Heard without Trent (`withoutTrent`), four things are forced: Paul's
 word, by both routes; Paul's gospel — justification is not the renewal of the
 inward man; and Luke's "your faith has saved you" — faith suffices. But sola fide
-itself, *faith alone*, is still not forced, from Paul or from Peter. What stops
-it is not Rome. It is three disputes inside modern Pauline scholarship:
+itself, *faith alone*, is still not forced, from Paul, from Peter or from John.
+What stops it is not Rome. It is three disputes inside modern New Testament
+scholarship, and one older one:
 
 - Campbell's apocalyptic reading takes πίστις Χριστοῦ as Christ's own
   faithfulness, and meets Paul over the genitive;
 - Sanders and Dunn read ἔργα νόμου as Israel's boundary markers, and the
   critics who answer them are answered back;
 - Jervell reads the yoke of Acts 15 as something other than the law as a
-  condition of salvation, and meets Peter's case.
+  condition of salvation, and meets Peter's case;
+- Aquinas reads the believing of John 6:29 as faith formed by charity, and
+  meets John's case. Luther answers him from Galatians 3, and is answered back.
 
 Each of those is a question about what a text says, and each is where the
 literature has it. Setting Rome aside does not make them go away.
@@ -7235,9 +7907,10 @@ does not.
 <a id="reformationAlone"></a>
 **`reformationAlone`**
 
-The parties of the sixteenth-century dispute: the three Reformed strands,
-Paul's gospel, Paul's word by both routes, and Trent, read and unread. Not
-heard: the apocalyptic reading, Sanders and his critics, and Jervell.
+The parties of the sixteenth-century dispute: the four Reformed strands,
+Paul's gospel, Paul's word by both routes, Trent, read and unread, and the
+exchange over John 6:29 between Aquinas and Luther. Not heard: the apocalyptic
+reading, Sanders and his critics, and Jervell.
 
 ```lean
 def reformationAlone : Dispute Claim { i // i ∉ [Party.apocalyptic,
@@ -7283,8 +7956,11 @@ about Paul's word by Paul's word itself.
   - *Sola fide from Paul (Galatians 2:16)* defeats *Trent, against 'not by works'*, and nothing forced defeats *Sola fide from Paul (Galatians 2:16)*.
   - *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*, and nothing forced defeats *Trent, against 'not by works'*.
   - *Paul's word (δικαιόω, by the rule of least meaning)* [defeats](#whereTrentsWordReadingFalls) *Trent, against 'not by works', read as what Paul's word means*, and nothing forced defeats *Paul's word (δικαιόω, by the rule of least meaning)*.
+  - *Trent, against 'not by works'* defeats *Sola fide from John (6:28–29)*, and nothing forced defeats *Trent, against 'not by works'*.
+  - *Luther on Galatians 3:11–12 (against faith formed by charity)* defeats *Faith formed by charity (Aquinas on John 6:29)*, and nothing forced defeats *Luther on Galatians 3:11–12 (against faith formed by charity)*.
+  - *Faith formed by charity (Aquinas on John 6:29)* defeats *Luther on Galatians 3:11–12 (against faith formed by charity)*, and nothing forced defeats *Faith formed by charity (Aquinas on John 6:29)*.
 
-**What this rests on.** The reasons state 6 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 9 defeats and 30 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
@@ -7298,6 +7974,7 @@ about Paul's word by Paul's word itself.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -7318,6 +7995,15 @@ about Paul's word by Paul's word itself.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Paul's word (δικαιόω, by the rule of least meaning)* defeats *Trent, against 'not by works', read as what Paul's word means*, at the level of the claims: [`whereTrentsWordReadingFalls`](#whereTrentsWordReadingFalls).
 
@@ -7353,8 +8039,9 @@ word, and answers every party that attacks it itself.
   - *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
   - *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*.
+  - *Sola fide from John (6:28–29)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from John (6:28–29)*.
 
-**What this rests on.** The reasons state 8 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 10 defeats and 28 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
@@ -7376,6 +8063,7 @@ word, and answers every party that attacks it itself.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -7388,6 +8076,15 @@ word, and answers every party that attacks it itself.
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`npnf1-05-1887`](../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [`mcgrath-iustitia-dei-2005`](../bibliography.md#mcgrath-iustitia-dei-2005)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -7422,8 +8119,9 @@ position holds Trent, and Trent defeats Paul.
   - *Luke 7:50: "your faith has saved you"* [defeats](#whyTheDominicalCaseStandsAgainstTrent) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Luke 7:50: "your faith has saved you"*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from Peter (Acts 15:9–11)*.
   - *Paul's gospel (Galatians 1), against justification as renewal* [defeats](#whereTrentPartsFromPaul) *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Paul's gospel (Galatians 1), against justification as renewal*.
+  - *Sola fide from John (6:28–29)* defeats *Trent, against 'not by works'*, and *Trent, against 'not by works'* defeats *Sola fide from John (6:28–29)*.
 
-**What this rests on.** The reasons state 8 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 10 defeats and 28 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
@@ -7445,6 +8143,7 @@ position holds Trent, and Trent defeats Paul.
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -7457,6 +8156,15 @@ position holds Trent, and Trent defeats Paul.
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`npnf1-05-1887`](../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [`mcgrath-iustitia-dei-2005`](../bibliography.md#mcgrath-iustitia-dei-2005)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -7512,8 +8220,9 @@ def withoutTrentFinite : Solver.Finite fun i j => solaFideDispute.defeats ↑i
 What is settled without Trent: nothing now defeats Luke's case, Paul's
 gospel, or either route to Paul's word, so all four come first; and nothing
 joins them. Paul's case is defeated by the apocalyptic reading, Peter's by
-Jervell, Sanders by the critics and the critics by Sanders, the apocalyptic
-reading by Paul, and Jervell by Peter.
+Jervell, John's by Aquinas, Sanders by the critics and the critics by Sanders,
+the apocalyptic reading by Paul, Jervell by Peter, Aquinas by Luther and Luther
+by Aquinas.
 
 **What the dispute forces is exactly *Luke 7:50: "your faith has saved you"*, *Paul's gospel (Galatians 1), against justification as renewal*, *Paul's word (δικαιόω, by the rule of least meaning)*, *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.**
 
@@ -7529,8 +8238,11 @@ reading by Paul, and Jervell by Peter.
   - *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*, and nothing forced defeats *Variegated nomism (Gathercole, Carson et al.)*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and nothing forced defeats *Covenantal nomism (Sanders, Dunn)*.
   - *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*, and nothing forced defeats *Sola fide from Peter (Acts 15:9–11)*.
+  - *Faith formed by charity (Aquinas on John 6:29)* defeats *Sola fide from John (6:28–29)*, and nothing forced defeats *Faith formed by charity (Aquinas on John 6:29)*.
+  - *Luther on Galatians 3:11–12 (against faith formed by charity)* defeats *Faith formed by charity (Aquinas on John 6:29)*, and nothing forced defeats *Luther on Galatians 3:11–12 (against faith formed by charity)*.
+  - *Faith formed by charity (Aquinas on John 6:29)* defeats *Luther on Galatians 3:11–12 (against faith formed by charity)*, and nothing forced defeats *Faith formed by charity (Aquinas on John 6:29)*.
 
-**What this rests on.** The reasons state 6 defeats and 64 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 9 defeats and 84 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
@@ -7540,6 +8252,7 @@ reading by Paul, and Jervell by Peter.
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
   - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
@@ -7570,6 +8283,15 @@ reading by Paul, and Jervell by Peter.
   - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
   - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
   - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 <a id="without_trent_luke_and_pauls_gospel_prevail"></a>
 **`without_trent_luke_and_pauls_gospel_prevail`**
@@ -7598,10 +8320,11 @@ position holds the apocalyptic reading, and it defeats Paul over πίστις Χ
 - A position holding *Apocalyptic reading, against faith as the condition*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)*, *Luke 7:50: "your faith has saved you"*, *Paul's gospel (Galatians 1), against justification as renewal*, *Paul's word (δικαιόω, by the rule of least meaning)*, *Romans 4:3–8, on Paul's word (by the rule of least meaning)* can be held, and it holds *Apocalyptic reading, against faith as the condition*; *Apocalyptic reading, against faith as the condition* conflicts with *Sola fide from Paul (Galatians 2:16)*: *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
 - None of *Apocalyptic reading, against faith as the condition*, *Sola fide from Peter (Acts 15:9–11)*, *Variegated nomism (Gathercole, Carson et al.)*, *Luke 7:50: "your faith has saved you"*, *Paul's gospel (Galatians 1), against justification as renewal*, *Paul's word (δικαιόω, by the rule of least meaning)*, *Romans 4:3–8, on Paul's word (by the rule of least meaning)* defeats another, and each attack on them is answered from among them:
   - *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*.
+  - *Sola fide from John (6:28–29)* defeats *Apocalyptic reading, against faith as the condition*, and *Apocalyptic reading, against faith as the condition* defeats *Sola fide from John (6:28–29)*.
   - *Law-observant Luke (Jervell)* defeats *Sola fide from Peter (Acts 15:9–11)*, and *Sola fide from Peter (Acts 15:9–11)* defeats *Law-observant Luke (Jervell)*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Variegated nomism (Gathercole, Carson et al.)*, and *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 6 defeats and 67 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 8 defeats and 87 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
   - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
@@ -7622,6 +8345,7 @@ position holds the apocalyptic reading, and it defeats Paul over πίστις Χ
   - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
   - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
@@ -7641,6 +8365,15 @@ position holds the apocalyptic reading, and it defeats Paul over πίστις Χ
   - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 <a id="sola_fide_from_paul_not_forced_without_trent"></a>
 **`sola_fide_from_paul_not_forced_without_trent`**
@@ -7671,7 +8404,7 @@ position holds Jervell, and he defeats it over the yoke.
   - *Apocalyptic reading, against faith as the condition* defeats *Sola fide from Paul (Galatians 2:16)*, and *Sola fide from Paul (Galatians 2:16)* defeats *Apocalyptic reading, against faith as the condition*.
   - *Covenantal nomism (Sanders, Dunn)* defeats *Sola fide from Paul (Galatians 2:16)*, and *Variegated nomism (Gathercole, Carson et al.)* defeats *Covenantal nomism (Sanders, Dunn)*.
 
-**What this rests on.** The reasons state 7 defeats and 66 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 7 defeats and 87 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
@@ -7684,6 +8417,7 @@ position holds Jervell, and he defeats it over the yoke.
   - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
   - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
   - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
@@ -7711,6 +8445,15 @@ position holds Jervell, and he defeats it over the yoke.
 - *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
   - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
   - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 <a id="sola_fide_from_peter_not_forced_without_trent"></a>
 **`sola_fide_from_peter_not_forced_without_trent`**
@@ -7719,12 +8462,98 @@ position holds Jervell, and he defeats it over the yoke.
 Acts 15 — the yoke is not the law as a condition of salvation — and cannot hold
 Peter's case with it. So without Trent, faith is forced to suffice (Luke), and
 justification forced not to be renewal (Paul's gospel), but *faith alone* still
-turns on three questions of exegesis: the genitive, the works of the law, and
-the yoke.
+turns on questions of exegesis: the genitive, the works of the law, the yoke,
+and, for John, what believing is
+(`sola_fide_from_john_not_forced_without_trent`).
 
 ```lean
 theorem sola_fide_from_peter_not_forced_without_trent :
     ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, ⋯⟩
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="johnAnsweredByAquinas"></a>
+**`johnAnsweredByAquinas`**
+
+Why John's case for sola fide is not forced without Trent: a defensible
+position holds Aquinas, and he defeats it over what believing is.
+
+***Sola fide from John (6:28–29)* is not accepted on every resolution.**
+
+- A position holding *Faith formed by charity (Aquinas on John 6:29)*, *Luke 7:50: "your faith has saved you"*, *Paul's gospel (Galatians 1), against justification as renewal*, *Paul's word (δικαιόω, by the rule of least meaning)*, *Romans 4:3–8, on Paul's word (by the rule of least meaning)* can be held, and it holds *Faith formed by charity (Aquinas on John 6:29)*; *Faith formed by charity (Aquinas on John 6:29)* conflicts with *Sola fide from John (6:28–29)*: *Faith formed by charity (Aquinas on John 6:29)* defeats *Sola fide from John (6:28–29)*, and *Sola fide from John (6:28–29)* defeats *Faith formed by charity (Aquinas on John 6:29)*.
+- None of *Faith formed by charity (Aquinas on John 6:29)*, *Luke 7:50: "your faith has saved you"*, *Paul's gospel (Galatians 1), against justification as renewal*, *Paul's word (δικαιόω, by the rule of least meaning)*, *Romans 4:3–8, on Paul's word (by the rule of least meaning)* defeats another, and each attack on them is answered from among them:
+  - *Sola fide from John (6:28–29)* defeats *Faith formed by charity (Aquinas on John 6:29)*, and *Faith formed by charity (Aquinas on John 6:29)* defeats *Sola fide from John (6:28–29)*.
+  - *Luther on Galatians 3:11–12 (against faith formed by charity)* defeats *Faith formed by charity (Aquinas on John 6:29)*, and *Faith formed by charity (Aquinas on John 6:29)* defeats *Luther on Galatians 3:11–12 (against faith formed by charity)*.
+
+**What this rests on.** The reasons state 4 defeats and 63 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Faith formed by charity (Aquinas on John 6:29)*, weakest at *disputed*:
+  - The believing of John 6:29 is faith living through charity, the source of works — [`aquinas-commentary-john-2012`](../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7
+- *Sola fide from John (6:28–29)*, weakest at *disputed*:
+  - The believing of John 6:29 is trust, which brings nothing and receives Christ — [`calvin-commentary-john-1847`](../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Paul's gospel (Galatians 1), against justification as renewal*, weakest at *disputed*:
+  - an inference step — [`moo-galatians-2013`](../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1
+  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965)
+- *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
+  - In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *well supported*:
+  - Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — Rom 4:4-5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.18
+  - λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account — [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+  - an inference step — [`moo-romans-1996`](../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι
+  - an inference step — [`silva-biblical-words-1994`](../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../bibliography.md#barr-semantics-2004)
+- *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
+  - πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness — [`dunn-once-more-pistis-christou-1991`](../bibliography.md#dunn-once-more-pistis-christou-1991); [`matlock-detheologizing-2000`](../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
+  - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Sola fide from Peter (Acts 15:9–11)*, weakest at *disputed*:
+  - The yoke refused at Acts 15:10 is the whole law as a condition of salvation — [`bruce-acts-1988`](../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [`das-paul-law-covenant-2001`](../bibliography.md#das-paul-law-covenant-2001)
+  - Good works are the fruit and evidence of saving faith, not its ground — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+  - Justification and sanctification are inseparable but distinct — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6
+  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
+  - πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance (encoded as a denial, so it ranks disputed) — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [`hays-faith-jesus-christ-2002`](../bibliography.md#hays-faith-jesus-christ-2002)
+  - δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains — [`campbell-deliverance-god-2009`](../bibliography.md#campbell-deliverance-god-2009); [`martyn-galatians-1997`](../bibliography.md#martyn-galatians-1997); Rom 3:21-26
+- *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
+  - Second Temple Judaism: in by grace, staying in by works — [`sanders-paul-palestinian-judaism-1977`](../bibliography.md#sanders-paul-palestinian-judaism-1977)
+  - an inference step — [`dunn-new-perspective-2005`](../bibliography.md#dunn-new-perspective-2005); [`wright-what-paul-said-1997`](../bibliography.md#wright-what-paul-said-1997)
+- *Variegated nomism (Gathercole, Carson et al.)*, weakest at *disputed*:
+  - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+  - an inference step — [`gathercole-where-boasting-2002`](../bibliography.md#gathercole-where-boasting-2002); [`carson-variegated-nomism-1-2001`](../bibliography.md#carson-variegated-nomism-1-2001)
+- *Law-observant Luke (Jervell)*, weakest at *disputed*:
+  - an inference step — [`jervell-luke-people-god-1972`](../bibliography.md#jervell-luke-people-god-1972)
+- *Luther on Galatians 3:11–12 (against faith formed by charity)*, weakest at *disputed*:
+  - an inference step — [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
+
+<a id="sola_fide_from_john_not_forced_without_trent"></a>
+**`sola_fide_from_john_not_forced_without_trent`**
+
+**Nor from John.** Remove both of Trent's parties from the hearing: its
+case, and its definition read as a claim about Paul's word. Aquinas remains, and
+Trent describes justifying faith as he does: the believing Jesus names in John
+6:29 is faith formed by charity, not bare trust. A reader can hold Aquinas's
+reading consistently and answer every objection raised here. John's case cannot
+be held with it.
+
+What this claims: without the Council, John 6:29 still does not compel faith
+alone, because what believing is remains contested. What it does not claim: that
+Aquinas's reading wins. John's case can be held just as consistently. Luther's
+argument and Aquinas's each defeat the other, and neither is removed.
+
+```lean
+theorem sola_fide_from_john_not_forced_without_trent :
+    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.johannine, ⋯⟩
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -7853,10 +8682,9 @@ the word's meaning leaves open, and there the dispute stands as the main
 dispute leaves it — a tie at the `disputed` step `whereTrentPartsFromPaul` names
 (`gospel_not_forced`).
 
-This dispute is kept apart from the main sola fide dispute, as the Johannine
-strand is. Adding its parties there would change results that module states
-about its own twelve parties, and that is a change of its own to make and to
-report.
+This dispute is kept apart from the main sola fide dispute. Adding its parties
+there would change results that module states about its own fifteen parties,
+and that is a change of its own to make and to report.
 
 #### Luke 18:9–14
 
@@ -8687,6 +9515,7 @@ rival.
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
   - an inference step — [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 33–34
@@ -8742,6 +9571,7 @@ by Luke 7:50, and by Luke 18 itself.
 **What this rests on.** The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
   - an inference step — [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 33–34
@@ -8806,6 +9636,7 @@ defeats it.
   - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 35
   - an inference step — [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Matthew 7:21–23, read as the doing including faith*, weakest at *disputed*:
   - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
@@ -8857,6 +9688,7 @@ Calvin's, and it defeats Rome's.
   - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1821
   - an inference step — [`calvin-harmony-evangelists-1845`](../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
   - an inference step — [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 33–34
@@ -8908,6 +9740,7 @@ Rome's, and it defeats Calvin's.
   - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
   - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2826
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
   - an inference step — [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 33–34
@@ -8960,6 +9793,7 @@ Calvin's, and it defeats Rome's.
   - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 35
   - an inference step — [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
   - an inference step — [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 33–34
@@ -9011,6 +9845,7 @@ Rome's, and it defeats Calvin's.
   - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [`calvin-harmony-evangelists-2-1845`](../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
   - an inference step — [`john-paul-ii-veritatis-splendor-1993`](../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
   - an inference step — [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 33–34
@@ -9084,6 +9919,7 @@ Matthew still has its rival.
 **What this rests on.** The reasons state 4 defeats and 20 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
   - an inference step — [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), pp. 33–34

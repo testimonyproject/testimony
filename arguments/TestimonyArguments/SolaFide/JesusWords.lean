@@ -127,10 +127,9 @@ the word's meaning leaves open, and there the dispute stands as the main
 dispute leaves it — a tie at the `disputed` step `whereTrentPartsFromPaul` names
 (`gospel_not_forced`).
 
-This dispute is kept apart from the main sola fide dispute, as the Johannine
-strand is. Adding its parties there would change results that module states
-about its own twelve parties, and that is a change of its own to make and to
-report.
+This dispute is kept apart from the main sola fide dispute. Adding its parties
+there would change results that module states about its own fifteen parties,
+and that is a change of its own to make and to report.
 -/
 
 namespace TestimonyArguments.SolaFide

@@ -15,249 +15,298 @@ import TestimonyArguments.SolaFide.Vulgate
 import TestimonyArguments.SolaFide.Ratings
 
 /-!
-# TestimonyArguments.SolaFide — justification by grace through faith, not works
+# TestimonyArguments.SolaFide — justified by grace, through faith, not by works
 
-The Reformation's material principle, encoded so that its premises are visible
-and its disputed step is identified mechanically.
+"By grace you have been saved through faith. And this is not your own doing; it
+is the gift of God, not a result of works" (Ephesians 2:8–9). The Reformers
+summed that up as *sola fide*, faith alone. Rome answered at the Council of
+Trent that faith is necessary and is not alone. This page sets out that
+argument so that a reader can see every step of it.
 
-The argument runs on **three independent strands**, and that is the point.
+## What this page does, and what it does not
 
-**The Pauline strand** reads Galatians 2:16 as the centre of a polemic. The
-Teachers in Galatia required believers to be circumcised as well as to believe,
-and Paul answers that a person is justified "not by works of the law but through
-faith in Jesus Christ". It rests on two disputed readings of that verse.
+It does two things. It writes down each position as a list of premises, every
+one with a source, so that nothing is assumed silently. And it checks, by
+machine, what follows from each list and what does not.
 
-The first is `worksOfLawMeansWorksGenerally`: whether ἔργα νόμου denotes human
-works in general, or specifically the covenant boundary markers — circumcision,
-food laws, sabbath — that marked Jews off from gentiles, as Dunn and Wright
-argue, building on Sanders' account of Second Temple Judaism. Only on the first
-reading does refusing circumcision mean refusing every work as a requirement.
+It does not tell you which premises are true. Whether Paul meant one thing or
+another by a phrase is a question for the reader and for the scholars cited.
+What the checking adds is narrower: if you grant these premises, this conclusion
+follows; if you deny that one, here is what you lose and what you keep.
 
-The second is `pistisChristouObjective`: whether πίστις Χριστοῦ is faith *in*
-Christ, as Dunn holds, or Christ's own faithfulness, as Hays holds. Only on the
-first does the verse name the believer's faith as the means of justification.
-Excluding works is not yet *faith alone*.
+Three words recur. A **premise** is something a position takes as given, such as
+a verse or a claim about what a word in it means. A **reading** is a premise
+about what a text means where readers disagree. A **rating** says how well
+supported a premise is among the sources cited: `disputed` when a cited source
+grants the evidence and denies the claim, then `plausible`, `wellSupported` and
+`consensus`. Names in `this type` are the names of premises and results in the
+source, given so that a reader can find them.
 
-The genitive dispute is a premise inside the Pauline strand, not a third
-strand. Every πίστις Χριστοῦ text sets it against νόμος, so no route through the
-genitive avoids the question of what ἔργα νόμου denotes. Nor does it follow the
-Old/New Perspective line: the New Perspective package keeps the objective
-genitive, because Dunn does.
+## The conclusion has three parts
 
-**The dominical strand** rests on Jesus' own words rather than Paul's. ἡ πίστις
-σου σέσωκέν σε — "your faith has saved you" — occurs four times in Luke (7:50,
-8:48, 17:19, 18:42). It is not a free win: σῴζω means both *save* and *heal*,
-and in 8:48, 17:19 and 18:42 the context is physical healing, which is why most
-translations render "made you well" there. The argument therefore rests on
-**Luke 7:50**, where the saying follows "your sins are forgiven" rather than a
-healing, and carries `sozoIsSoteriological` as its own premise. It is a second
-bet, on a different word — rated `wellSupported`, because no scholar found
-argues the healing sense at 7:50. It also carries its answer to "she loved
-much" (7:47): `luke7_47LoveIsEvidence`, that her love is the evidence of her
-forgiveness and not its ground, as 7:47b and the parable of the two debtors
-(7:41–43) read it. The reading of 7:47 is cited to Osvaldo Padilla's
-narrative-critical study of the episode: her actions "stem from the fact that
-she loves much because she has been forgiven much". Both premises are also
-Melanchthon's, in the *Apology of the Augsburg Confession*, which answers "she
-loved much" with Jesus' own words: "Christ interprets Himself when He adds: Thy
-faith hath saved thee". Neither argues σῴζω against the healing sense word by
-word; Marshall's commentary at 7:50 is named as the philological study to check.
+Salvation is *by grace*, *not by works*, and *through faith*. The page keeps the
+three apart, because the positions disagree about different parts.
 
-**The apostolic strand** rests on Peter as Luke reports him. At the Jerusalem
-council (Acts 15) the demand Galatians answers is made again — "unless you are
-circumcised according to the custom of Moses, you cannot be saved" (15:1) — and
-Peter answers that God cleansed the gentiles' hearts by faith, that Jew and
-gentile alike are saved through grace, and that the law is "a yoke… that
-neither our fathers nor we have been able to bear" (15:9–11). James concurs
-(15:19). It carries `acts15YokeIsLawAsCondition` as its disputed premise: that
-the yoke is the whole law as a condition of salvation, and not Israel's law
-laid on gentiles as a mark of belonging, as Jervell reads Luke. The two
-premises are about different texts, and logically independent; they are not
-dialectically independent, since a reader who takes ἔργα νόμου as boundary
-markers will read the yoke the same way.
+- Trent denies the second in one respect. It grants that nothing before
+  justification, "whether faith or works", merits it (Session VI, ch. 8). It
+  holds that works done afterwards, in grace, merit an increase of
+  justification (ch. 10; canon 24). So for Trent salvation as a whole is not
+  apart from works.
+- The apocalyptic reading of Paul (Martyn, Campbell), so called because it
+  reads Paul's gospel as God breaking into the world to rescue it, does not
+  reach the third. It takes "the righteousness of God" as God's act of rescue, not as a status
+  given on condition of faith. So it has no ground of its own for "through
+  faith", while it reaches grace and "not by works" by its own route
+  (`apocalyptic_establishes_grace_not_works`).
 
-**Each strand delivers only what its texts say.** Paul argues for *alone*: the
-Galatians already believed, adding circumcision to their faith is what severs
-them from Christ, and 2:16 names faith as the one means (ἐὰν μή, "except
-through faith"). Luke 7:50 and Acts 15 say less: that her faith saved her, and
-that the gentiles are saved without the yoke — that faith *suffices*
-(`faithIsSufficient`), not that nothing else could be a condition. "Through
-faith", the part of the conclusion the strands are needed for, needs only that.
-The difference is not pedantry. A case is attacked on what it claims, and a
-Luke credited with *alone* would be attacked by the apocalyptic reading on a
-claim Luke never made.
+The split also shows what the disputed readings below are needed for. Grace and
+"not by works" follow from the verses that say so in as many words, once James
+is answered, with every disputed reading removed
+(`grace_and_works_rest_on_no_lexical_premise`). The disputed readings decide
+*through faith*.
 
-**A Johannine strand** is encoded alongside, but not yet inside, the Reformed
-case (`Johannine.lean`). Asked what they must do "to be doing the works of God",
-the crowd is told: "This is the work of God, that you believe in him whom he has
-sent" (John 6:28–29). Calvin reads that believing as trust, which "brings
-nothing to God"; Aquinas as faith living through charity, the principle of good
-works. John alone delivers sola fide on Calvin's reading
-(`johannine_strand_establishes`) and not on Aquinas's
-(`johannine_strand_rests_on_believing_as_trust`). Luther answers Aquinas from
-Galatians 3:11–12: the law commands love, and the law is not of faith, so a faith
-formed by charity would justify by the law (`luther_answers_aquinas_from_galatians`)
-— an answer that rests on his step, which Aquinas denies
-(`luther_answer_rests_on_his_step`). The strand is not yet one of the strands of
-`reformed`, so what follows about three strands is still exact.
+## Four strands, from four speakers
 
-Encoding three strands yields a result no single strand could: no disputed
-premise is load-bearing on its own, because any strand carries the conclusion
-without the others. What is load-bearing is a disjunction — both Pauline
-readings, *or* the dominical one, *or* the apostolic one. Defeating Paul's
-reading and Luke's together, which defeated the two-strand version, no longer
-does. A reader who wins the ἔργα νόμου
-argument outright does not thereby defeat sola fide, and the New Perspective,
-which accepts justification by faith while rejecting the traditional reading of
-Paul's phrase, turns out to establish the conclusion too. Nor does winning the
-genitive for Hays: that costs the Reformed case its Pauline route, and not its
-conclusion.
+The Reformed case reaches "through faith" four ways, here called strands. Each
+rests on its own texts and on a reading of them that the conclusion needs.
+Every strand has at least one such reading that a scholar cited here denies.
 
-**The conclusion has three parts** — salvation is *by grace*, *not by works*,
-and *through faith* — and they are separate atoms, because the rivals divide
-over different parts. The Tridentine position denies the second: works done in
-grace merit an increase of justification. The apocalyptic reading of Martyn and
-Campbell does not reach the third: taking the genitive as subjective and
-δικαιοσύνη θεοῦ as God's act of deliverance, it denies that faith is the
-condition of justification, and so has no ground for "through faith" of its own,
-while establishing grace and "not by works" by its own route
-(`apocalyptic_establishes_grace_not_works`). The split also shows which part
-the strands are needed for. Grace and "not by works" follow from the texts that
-say so in terms, given an answer to James, with every lexical premise removed
-(`grace_and_works_rest_on_no_lexical_premise`). The lexical disputes decide
-*through faith*. And each part has its own closing step, which shows what
-the answer to James is for: grace follows without it
-(`grace_needs_no_answer_to_james`), "not by works" does not
-(`james_harmonisation_is_load_bearing`).
+**Paul.** "A person is not justified by works of the law but through faith in
+Jesus Christ" (Galatians 2:16). Teachers in Galatia required believers to be
+circumcised as well as to believe, and this is Paul's answer. The strand rests
+on two readings of the verse.
 
-**The New Perspective's reading of ἔργα νόμου has a reason, and its critics
-answer the reason.** Sanders' covenantal nomism — in by grace, staying in by
-works — is the ground, and Dunn's inference from it to the boundary-marker
-reading is the step, cited as his (`sandersLine`). Gathercole and the
-*Variegated Nomism* volume deny the ground: Second Temple Judaism also held
-final vindication according to works, so the demand Galatians refuses is a
-demand for obedience, and the Reformed reading follows (`criticsLine`). On the
-critics' history Paul alone carries sola fide
-(`critics_carry_the_pauline_strand`); on Sanders' he does not
-(`sanders_costs_the_pauline_strand`). The ἔργα νόμου dispute is a dispute
-about Second Temple Judaism before it is one about Paul's Greek.
+- What "works of the law" (ἔργα νόμου) means: human works in general, or what
+  the law requires of Israel as a people set apart, seen above all in the
+  practices that marked Jews off from gentiles: circumcision, food laws and
+  sabbath. Dunn and Wright hold the second, building on Sanders. Their reading
+  is known as the New Perspective on Paul. Only on the
+  first does refusing circumcision mean refusing every work as a requirement
+  (`worksOfLawMeansWorksGenerally`).
+- What "faith in Jesus Christ" (πίστις Χριστοῦ) means: our faith in Christ, or
+  Christ's own faithfulness. Hays holds the second. Only on the first does the
+  verse name the believer's faith as the means (`pistisChristouObjective`).
 
-**What justification is** is a separate question, and the encoding keeps it
-separate. The Reformed account is forensic: pardon and imputation, not infusion
-(Westminster XI.1). Trent denies it — justification is "not remission of sins
-merely, but also the sanctification and renewal of the inward man" — and so
-does Mannermaa's Finnish reading of Luther, for which Christ himself is present
-in faith. The Finnish package denies the forensic account and establishes sola
-fide (`forensic_justification_not_load_bearing`); Trent denies it and does not.
-So denying the forensic account is not enough to deny sola fide. What Trent's
-objection needs is its fuller definition: justification includes the renewal of
-the inward man, and that renewal grows through good works, so works increase
-justification. Both sides grant the growth; the Reformed call it sanctification,
-distinct from justification and following it (Westminster XIII.1; Calvin,
-*Institutes* III.xi.6). Put the distinction in place of Trent's definition and
-Trent's case no longer denies "not by works"
-(`trent_objection_rests_on_its_definition`). The dispute over merit is a
-dispute over what justification is — but over sanctification, not over
-infusion as such.
+The second question is a premise inside Paul's strand and not a strand of its
+own. Every verse with the phrase sets it against the law, so no route through
+it avoids the first question. Nor does it divide the same people: Dunn rejects
+the traditional reading of "works of the law" and keeps "faith in Christ".
 
-**Authorship.** Ephesians, Titus and 1 and 2 Peter are each disputed, and each
-dispute is catalogued from both sides — Hoehner and Lincoln on Ephesians,
-Mounce, Dibelius–Conzelmann and Marshall on the Pastorals, Jobes and Achtemeier
-on 1 Peter, Schreiner and Bauckham on 2 Peter, and Ehrman across all four.
-Granting every critical conclusion costs the argument nothing, because it
-reads these letters as canonical scripture rather than as an apostle's
-testimony. It does cost them their use as evidence of what *Paul* meant by
-"works", which is why that premise is argued from Romans 4, 9 and 11, where the
-law is not in view and the authorship is not in doubt.
+**Jesus, in Luke.** "Your faith has saved you; go in peace" (Luke 7:50), said to
+the woman who anointed his feet. The saying occurs four times in Luke (7:50,
+8:48, 17:19, 18:42). The Greek verb (σῴζω) means both *save* and *heal*, and in
+the other three places the person has just been healed, which is why most
+English Bibles print "made you well" there. So the strand rests on 7:50 alone,
+where the saying follows "your sins are forgiven" and no one is ill. That the
+word means *saved* there is a reading the strand needs
+(`sozoIsSoteriological`). It is rated `wellSupported`: no scholar found argues
+the healing sense at 7:50. The reading in this strand that is rated `disputed`
+is of 7:47.
 
-**James 2:24** — "a person is justified by works and not by faith alone", the
-only occurrence of *faith alone* in the New Testament — is no longer assumed
-away. Its compatibility with Paul is now *derived* from two cited premises:
-that James's target is a barren faith, mere assent ("even the demons believe",
-Jas 2:19), and that works are the fruit and evidence of saving faith rather
-than a ground of justification. Moo and Johnson for the exegesis; Westminster
-XI.2 for the confessional form — faith "is not alone in the person justified,
-but is ever accompanied with all other saving graces, and is no dead faith, but
-worketh by love". `james_harmonisation_is_load_bearing` shows the argument
-genuinely depends on this: drop it and sola fide does not follow.
+The strand also answers "her sins, which are many, are forgiven—for she loved
+much" (7:47), which could be read as making love the reason she was forgiven. It
+holds that her love shows her forgiveness and does not earn it
+(`luke7_47LoveIsEvidence`), as the rest of the verse ("he who is forgiven
+little, loves little") and the parable of the two debtors (7:41–43) suggest.
+That reading is cited to Osvaldo Padilla: her
+actions "stem from the fact that she loves much because she has been forgiven
+much". It is Melanchthon's too, in the *Apology of the Augsburg Confession*:
+"Christ interprets Himself when He adds: Thy faith hath saved thee". Marshall's
+commentary on the Greek text argues it from the grammar: "for" here means "as
+is evidenced by the fact that". He also names those who read the love as the
+cause, most Roman Catholic commentators among them, so this premise is rated
+`disputed`. On "saved", Marshall notes that the saying is used at 7:50 "in a
+case where physical healing is not involved".
 
-**Weighed as a dispute**, with each strand, Trent, the apocalyptic reading,
-Sanders, the critics, Jervell, Paul's gospel, Paul's word (lexically, and from
-Romans 4) and Trent read as a claim about that word as parties, one thing
-prevails outright: Paul's word — δικαιόω does not denote the renewal of the
-inward man. Its two routes are the only parties whose every link is rated above
-`disputed`, and each defeats Trent read as a claim about the word, which cannot
-be defended at all. Everything else ties. Every other
-party's weakest link is `disputed`, and every attack between Trent and a
-Reformed party runs both ways: Luke's case, Paul's gospel and Trent are each
-defensible, and none is accepted on every resolution. Luke's case, holding only
-Luke's words, meets Trent over faith's sufficiency, and the apocalyptic reading
-not at all — Luke says faith saved her, not that faith alone does — so the
-dispute between Campbell and the Reformed reading is between Campbell and Paul,
-over the genitive.
+**Peter, in Acts.** At the Jerusalem council some demanded: "Unless you are
+circumcised according to the custom of Moses, you cannot be saved" (Acts 15:1).
+Peter answered that God cleansed the gentiles' hearts by faith, that the law is
+"a yoke… that neither our fathers nor we have been able to bear", and that "we
+believe that we will be saved through the grace of the Lord Jesus, just as they
+will" (15:9–11). The strand's disputed reading is that the yoke is the whole
+law treated as a condition of salvation (`acts15YokeIsLawAsCondition`). Jervell
+reads it as Israel's law laid on gentiles as a mark of belonging. On that
+reading Peter refuses to make gentiles keep Israel's law, and says nothing
+about the law as a condition of salvation.
 
-**Where Trent parts from Paul** (`Gospel.lean`). Paul's answer to anything added
-to the gospel is Galatians — another gospel, accursed (1:6–9); if righteousness
-came by the law, Christ died for nothing (2:21) — and the gospel is that Christ
-died for our sins (1 Corinthians 15:3). Read with the forensic sense of δικαιόω,
-it denies Trent's definition of justification as renewal. Trent grants every
-text, and — with the *Joint Declaration* (§22) and New Testament scholarship
-across traditions — the forensic sense of the verb. A checked `Because` finds
-where they part: one step, that a verdict on a finished work excludes the
-renewal wrought in us.
+**Jesus, in John.** "What must we do, to be doing the works of God?" "This is
+the work of God, that you believe in him whom he has sent" (John 6:28–29). The
+strand's disputed reading is that this believing is trust, which brings nothing
+of its own to God (`johannineBelievingIsTrust`). Calvin reads it so. Aquinas
+reads it as faith formed by charity, that is, faith made alive by love, which
+is how Trent describes the faith that justifies. Luther answers Aquinas from
+Galatians 3:11–12, and the answer rests on a step Aquinas denies. The section
+on John below sets this out.
 
-**What Trent's definition claims** (`Definition.lean`). The definition can be
-read as a claim about Paul's word or about what God does in justifying, and a
-checked `Dilemma` answers both. Read as a claim about the word, it cannot be held
-with the lexical case — the forensic sense, Paul's own words for renewal, and
-the rule of least meaning (Joos, Silva; Barr's "illegitimate totality
-transfer") — at a step rated `wellSupported`; nor can the step from the Latin
-gloss Trent rests that reading on (Augustine: "being justified" is "being made
-righteous") to what the Greek word denotes. Read as a claim about what God does,
-nothing about the word reaches it, and it conflicts with Paul twice — with his
-gospel in Galatians and with Romans 4:5–8, "God justifies the ungodly" — each
-at a `disputed` step: Augustine grants Romans 4 and reads it the other way.
-Romans 4 thus does two things: read for the word, it is a second route, rated
-`wellSupported`, to the lexical conclusion; read for the reality, it meets Trent
-where Galatians does, and no higher.
+## What the four strands show together
 
-**Heard narrower** (`Hearings.lean`). Two questions a reader asks, answered by
-hearing the same dispute with some parties set aside. *What did the Reformation
-itself decide?* Heard as Rome and the Reformers alone, only Paul's word is
-forced; Trent's definition, as a claim about what God does, and the Reformed
-strands tie. *Without Trent, would Scripture establish sola fide?* Four things
-are then forced — Luke's "faith suffices", Paul's gospel, and Paul's word by
-both routes — but *faith alone* is still not: Campbell on πίστις Χριστοῦ,
-Sanders and Dunn on ἔργα νόμου, and Jervell on the yoke each still stand
-against it. The obstacle then is modern exegesis, not Rome.
+The argument does not depend on any one disputed reading. Remove any one and
+the other strands still reach the conclusion (`worksOfLaw_not_load_bearing`,
+`sozo_not_load_bearing`, `acts15Yoke_not_load_bearing`,
+`believing_as_trust_not_load_bearing`). Acts and John each reach it with all
+the other strands' disputed readings left out
+(`apostolic_strand_survives_paul_and_luke`,
+`johannine_strand_survives_the_other_three`). Only when a disputed reading is
+removed from every strand at once does sola fide fail to follow
+(`lexical_premises_jointly_load_bearing`).
 
-**Jesus' own words** (`JesusWords.lean`). *What does Jesus himself say?* Luke
-18:9–14 — the tax collector "went down to his house justified" — is his own
-teaching on justification and works, in Paul's word for it. Trent's case is
-consistent with every word of the parable, and with the tax collector bringing
-no meriting works. Trent never cites Luke 18; applied to it, its dispositions
-(Session VI, ch. 6) and canon 9 deny the step to "faith suffices". So Luke 18
-meets Trent where Luke 7:50 does, at Trent's definition. Matthew 7:21–23 and
-19:16–22 are read both ways, each reading cited and `disputed`, and neither text
-settles its question alone. Heard together, Jesus' words force nothing; heard
-without Trent, Luke's two sayings are forced (that faith sufficed, not that faith
-alone saves) and Matthew is not.
-This is a dispute of its own, kept apart from the one above for the reason the
-Johannine strand is.
+So a reader who wins the argument over "works of the law" has not thereby
+defeated sola fide. The New Perspective (Dunn's and Wright's reading), which
+rejects the traditional reading of that phrase and still holds justification by
+faith, establishes the conclusion too (`newPerspective_establishes`). Nor does winning "the
+faithfulness of Christ" for Hays defeat it: that costs the Reformed case its
+route through Paul, and not its conclusion (`pistisChristou_not_load_bearing`).
 
-**Baptism** (`Baptism.lean`). Trent makes water baptism the instrumental cause
-of justification, and qualifies it in its own words: "or the desire thereof".
-Water, the Spirit and "fire" are kept as separate atoms, so no argument passes
-from one sense of "baptism" to another. Read so that the washing itself is
-necessary for salvation — Feeney's reading — Trent's claim cannot be held with
-the thief read as Augustine reads him, nor with Rome's own teaching on the
-desire. Read in Trent's own words, the thief does not reach it; what it meets is
-the Reformed argument from the desire — where only the desire is present, what
-justifies is not the washing — at a step Aquinas contests. John 3:5 is a dilemma
-of its own: of the four readings of its "water" on record, only the baptismal
-one leaves Trent's step from the verse standing, and even then the step is
-disputed. And that Acts gives the Spirit both before the water and after it is
-common ground: Rome says God "is not bound by his sacraments".
+What this does not show is that the strands are independent in practice. A
+reader who takes "works of the law" as boundary markers will usually read
+Peter's yoke the same way. They are different premises about different texts,
+and an opponent has to answer each.
+
+## Each strand is credited only with what its texts say
+
+On the Reformed reading, Paul argues for *alone*. The Galatians already
+believed; adding circumcision to their faith is what he says severs them from
+Christ (5:4). John's strand, on Calvin's reading, claims the same: asked about
+works, Jesus names believing and nothing else.
+
+Luke 7:50 and Acts 15 say less. Her faith saved her; the gentiles are saved
+without the yoke. That is, faith *suffices* (`faithIsSufficient`). They do not
+say that nothing else could be a condition. "Through faith" needs only that
+much.
+
+The difference matters when positions are weighed against each other, because
+a case is attacked on what it claims. Credit Luke with *alone*, and the
+apocalyptic reading would attack Luke on a claim Luke never made.
+
+## Why the New Perspective reads Paul as it does, and the reply
+
+Sanders argued that Judaism in Paul's day taught that one enters the covenant
+by grace and stays in by obedience ("covenantal nomism"). If so, Paul's
+opponents were not trying to earn salvation, and Dunn infers that what Paul
+refuses is the boundary markers (`sandersLine`). Gathercole, and the *Variegated
+Nomism* volume edited by Carson, O'Brien and Seifrid, deny the starting point:
+Jewish texts of the period also speak of
+final vindication according to works, so the demand Paul refuses is a demand for
+obedience (`criticsLine`).
+
+On the critics' history, Paul alone carries sola fide
+(`critics_carry_the_pauline_strand`). On Sanders', he does not
+(`sanders_costs_the_pauline_strand`). So whether Paul's strand reaches sola
+fide depends on what Judaism in Paul's day taught about works.
+
+## What justification is
+
+This is a separate question, and the page keeps it separate. The Reformed
+account is forensic: justification is God's verdict, pardon and the counting of
+righteousness, not a change worked inside the person (Westminster Confession
+XI.1). Trent denies that: justification is "not remission of sins merely, but
+also the sanctification and renewal of the inward man". Mannermaa and the
+Finnish school read Luther differently again. In faith Christ himself is present
+in the believer, and so justification is not a verdict *and nothing more*.
+
+The Finnish position denies that justification is only a verdict and still
+establishes sola fide (`forensic_justification_not_load_bearing`). Trent denies it and does not.
+So denying the forensic account is not what separates Trent from the Reformers.
+What Trent's objection needs is its fuller definition: justification includes
+the inner renewal, that renewal grows through good works, and so works increase
+justification. Both sides grant the growth. The Reformed call it
+sanctification, distinct from justification and following it (Westminster
+XIII.1; Calvin, *Institutes* III.xi.6). Put that distinction in place of Trent's
+definition, and Trent's case no longer denies "not by works"
+(`trent_objection_rests_on_its_definition`). Whether works merit anything in
+justification depends on whether justification includes the inner renewal.
+
+## James 2:24
+
+"A person is justified by works and not by faith alone" is the only place in the
+New Testament where the words *faith alone* occur, and they are denied. The page
+does not assume the verse away. It derives the agreement of James with Paul from
+two cited premises: that James is attacking a barren faith, mere assent ("even
+the demons believe", 2:19); and that works are the fruit and evidence of saving
+faith and not a ground of justification. Moo and Johnson are cited for the
+exegesis, and Westminster XI.2 for the confession: faith "is not alone in the
+person justified, but is ever accompanied with all other saving graces, and is
+no dead faith, but worketh by love".
+
+The argument depends on this. Remove the answer to James and sola fide does not
+follow (`james_harmonisation_is_load_bearing`). Grace alone does not need it
+(`grace_needs_no_answer_to_james`): James bears on "not by works", the part he
+appears to contradict.
+
+## Who wrote the letters
+
+Ephesians, Titus and 1 and 2 Peter are each disputed as to author, and each
+dispute is recorded from both sides: Hoehner and Lincoln on Ephesians; Mounce,
+Dibelius–Conzelmann and Marshall on the Pastorals; Jobes and Achtemeier on
+1 Peter; Schreiner and Bauckham on 2 Peter; Ehrman across all four. Granting
+every critical conclusion costs the argument nothing
+(`authorship_not_load_bearing`), because it reads these letters as Scripture and
+not as the testimony of a named apostle. It does cost them their use as evidence
+of what *Paul* meant by "works", which is why that premise is argued from Romans
+4, 9 and 11, where the authorship is not in doubt.
+
+## The positions weighed against each other
+
+The results above ask what follows from each position's premises. The section
+on the dispute (`Dispute.lean`) asks a different question: when the positions
+are set against one another, which survive?
+
+Three words are used there. One position *defeats* another when it contradicts
+it and rests on premises rated at least as well. A position is *forced* when it
+must be accepted however the open disagreements are settled. Two positions that
+defeat each other are a *tie*: a reader may hold either, and neither is
+forced. Fifteen positions are heard: the four strands, each argued alone;
+Trent; the apocalyptic reading; Sanders and his critics; Jervell; Aquinas on
+John, and Luther's answer; Paul's gospel in Galatians; and three positions on
+what Paul's word "justify" means.
+
+One thing prevails outright: Paul's verb "justify" (δικαιόω) does not mean the
+renewal of the inward man (`only_pauls_word_prevails`). It is argued two ways,
+from the word's usage and from Romans 4, and those are the only positions whose
+every step is rated above `disputed`. Trent's definition, if it is taken as a
+claim about what Paul's word means, cannot be defended against them
+(`trent_on_pauls_word_indefensible`).
+
+Everything else ties. Every other position rests on something rated `disputed`,
+and every attack between Trent and a Reformed strand runs in both directions.
+Luke's case, Paul's gospel and Trent can each be defended, and none is forced.
+John's case ties with Trent and with Aquinas, as the other strands tie with
+their rivals.
+
+## Narrower questions
+
+The remaining sections each take one question a reader asks.
+
+- **Where exactly do Trent and Paul part?** At one step (`Gospel.lean`): that a
+  verdict on Christ's finished work excludes the renewal worked in us. Trent
+  grants every text, and, with the *Joint Declaration* (§22), the verdict sense
+  of the verb.
+- **Is Trent's definition about Paul's word, or about what God does?** Read as
+  a claim about the word, it cannot be held with the evidence for the word's
+  meaning. Read as a claim about what God does, nothing about the word reaches
+  it, and it meets Paul at steps rated `disputed`: Augustine accepts Romans 4
+  and reads it as God making the ungodly godly (`Definition.lean`).
+- **What did the Reformation itself decide? And without Trent, would Scripture
+  establish sola fide?** Heard as Rome and the Reformers alone, only the meaning
+  of Paul's word is forced. Heard without Trent, three things are forced: Luke's
+  "faith suffices", Paul's gospel, and the meaning of Paul's word. *Faith alone*
+  still is not. Campbell, Sanders and Dunn, Jervell, and Aquinas each still
+  stand against one strand (`Hearings.lean`).
+- **What does Jesus himself say?** The tax collector "went
+  down to his house justified" (Luke 18:14). Trent's case is consistent with
+  every word of the parable, and meets it where it meets Luke 7:50. Matthew
+  7:21–23 and 19:16–22 are each read both ways, and neither settles its question
+  alone (`JesusWords.lean`).
+- **Is baptism necessary?** Trent makes water baptism the
+  instrument of justification, "or the desire thereof". Water, the Spirit and
+  "fire" are kept apart, so that no argument slides from one sense of "baptism"
+  to another. John 3:5 is examined under each of the four readings of its
+  "water" (`Baptism.lean`).
+- **What does "justified by works" mean in James?** The same kind of hearing,
+  over James 2:24 and the two other texts Trent cites for the increase of
+  justification (`James.lean`, `Vulgate.lean`).
+- **How firm are the ratings?** Each rating that a verdict depends on is
+  recomputed under three standards (`Ratings.lean`).
 
 ## Where things are
 
@@ -265,14 +314,16 @@ common ground: Rome says God "is not bound by his sacraments".
 |---|---|
 | `Atoms.lean` | the `Claim` atoms |
 | `Sources.lean` | `baseCite`, and each position's citation of the premise it disputes |
-| `Lines.lean` | the inference steps, the three strands, the apocalyptic rival, what they share |
+| `Lines.lean` | the inference steps, the four strands, the apocalyptic rival, what they share |
 | `Packages.lean` | the positions, and the variants that remove a named premise |
 | `Results.lean` | every `@[headline]` result, with its trust base |
 | `Dispute.lean` | the positions as parties to one dispute, who defeats whom, and what prevails |
-| `Johannine.lean` | the Johannine strand and Aquinas's rival reading, encoded alone |
+| `Johannine.lean` | John's strand argued alone, Aquinas's rival reading, and Luther's answer |
 | `Gospel.lean` | Paul's gospel in Galatians against Trent's definition, and where they part |
 | `Definition.lean` | Paul's word, and the dilemma over what Trent's definition claims |
 | `Hearings.lean` | the dispute heard narrower: the Reformation alone, and without Trent |
 | `JesusWords.lean` | Luke 18, and both readings of Matthew 7 and 19: what Jesus' words decide |
 | `Baptism.lean` | water, Spirit and fire apart; the instrumental cause; John 3:5 |
+| `James.lean`, `Vulgate.lean` | James 2:24 and Trent's other two texts, heard as a dispute |
+| `Ratings.lean` | the ratings recomputed under three standards |
 -/

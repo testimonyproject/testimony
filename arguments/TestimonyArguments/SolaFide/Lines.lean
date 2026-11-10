@@ -5,14 +5,17 @@ import TestimonyArguments.Works
 /-!
 # TestimonyArguments.SolaFide.Lines — the strands, and what they share
 
-Three strands deliver the conclusion, by different words from different
-speakers: Paul, Jesus, and Peter at Jerusalem. Each delivers only what its own
-texts say. Paul's says justification is by faith *alone*; Jesus' words at Luke
-7:50 and Peter's at Jerusalem say that faith *suffices*, which is weaker, and is
-all the conclusion's "through faith" needs. A fourth line answers James, and a
-fifth — the apocalyptic reading — denies what Paul delivers. What every package holds in
-common is collected here too, so that a variant package is a named difference
-rather than a retyped list.
+Four strands lead to the conclusion, each from a different speaker: Paul, Jesus
+as Luke reports him, Peter at Jerusalem, and Jesus as John reports him. Each is
+credited only with what its own texts say. Paul and John say that justification
+is by faith *alone*. Luke 7:50 and Acts 15 say that faith *suffices*, which is
+less, and is all that "through faith" in the conclusion needs.
+
+Two further lines are here. One answers James 2:24. The other is the
+apocalyptic reading of Paul, which denies what Paul's strand delivers.
+
+What every package holds in common is collected here too, so that a variant
+package is a named difference from another and not a retyped list.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -23,20 +26,27 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
 /-! ### Lines of reason
 
-Three strands deliver the conclusion, and a fourth line answers James. They do
-not all deliver the same thing. Paul argues for *alone*: the polemic refuses
-circumcision added to faith, and Galatians 2:16 names faith as the one means
-(ἐὰν μή, "except through faith"). Luke 7:50 and Acts 15 say that faith saves,
-and that the woman's love and the law's yoke are not what does; they do not say
-that nothing else could. So they deliver `faithIsSufficient`. The difference
-matters in a dispute, where a case is attacked on what it derives as well as on
-what it assumes: credit Luke with *alone*, and a reading that denies faith
-alone — the apocalyptic reading — attacks Luke's case on a claim Luke never
-made. The James
-harmonisation is deliberately *not* a strand: it does not reach
-`justificationByFaithAlone` by an independent route, it supplies a premise the
-closing step needs. So it contributes its grounds and its step to the case
-without being one of the lines `caseOf` treats as converging. -/
+Four strands lead to the conclusion, and a fifth line answers James. The
+strands do not all deliver the same thing.
+
+Paul argues for *alone*. His letter refuses circumcision added to faith, and
+Galatians 2:16 names faith as the one means ("not justified by works of the law
+but through faith", ἐὰν μή). John's strand delivers the same: asked what works
+God requires, Jesus names believing and nothing else (John 6:28–29).
+
+Luke 7:50 and Acts 15 say that faith saves, and that the woman's love and the
+law's yoke are not what saves. They do not say that nothing else could. So
+those two strands deliver `faithIsSufficient`, the weaker claim.
+
+The difference matters when the positions are weighed against each other. A
+case is attacked on what it derives as well as on what it assumes. Credit Luke
+with *alone*, and the apocalyptic reading, which denies faith alone, would
+attack Luke on a claim Luke never made.
+
+The answer to James is deliberately *not* a strand. It is not another route to
+`justificationByFaithAlone`; it supplies a premise the closing step needs. So
+it adds its grounds and its step to the case without being one of the lines
+that `caseOf` treats as arriving at the same place. -/
 
 /-- **The Pauline strand.** From Romans and Galatians to justification by faith
 alone, read from Galatians 2:16 as the centre of the letter's polemic.
@@ -77,6 +87,20 @@ suffices. -/
 @[solaFideDefs]
 def apostolicToSufficiency : Formula Claim :=
   ⋀ [p .acts15_9_11, p .acts15YokeIsLawAsCondition] ➝ p .faithIsSufficient
+
+/-- **The Johannine strand.** From John's Gospel to justification by faith
+alone. The crowd asks what they must do "to be doing the works of God", and
+Jesus answers: "This is the work of God, that you believe in him whom he has
+sent" (6:28–29). The Gospel says throughout that eternal life comes through
+believing (3:16–18, 3:36, 5:24, 20:31).
+
+The step needs one more premise, and it is the disputed one: that this
+believing is trust, which brings nothing of its own to God. Independent of
+Paul, of Luke 7:50 and of Acts 15. -/
+@[solaFideDefs]
+def johannineToFaithAlone : Formula Claim :=
+  ⋀ [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust]
+    ➝ p .justificationByFaithAlone
 
 /-- The harmonisation of James: because James's target is barren faith, and
 works are the fruit of saving faith rather than its ground, James 2:24 does not
@@ -124,7 +148,7 @@ def faithAloneSuffices : Formula Claim :=
   p .justificationByFaithAlone ➝ p .faithIsSufficient
 
 /-- *Through faith*, from the sufficiency of faith and Ephesians 2:8 (διὰ
-πίστεως: faith as the means). This is the only part of the conclusion the three
+πίστεως: faith as the means). This is the only part of the conclusion the four
 strands are needed for, and it needs only what each of them says. -/
 @[solaFideDefs]
 def toThroughFaith : Formula Claim :=
@@ -173,6 +197,29 @@ def apostolicLine : Line Claim :=
   , grounds := [p .acts15YokeIsLawAsCondition]
   , step := apostolicToSufficiency
   , delivers := p .faithIsSufficient }
+
+/-- Calvin's step from John to justification. John never uses Paul's verb
+"justify" (δικαιόω), so passing from "eternal life through believing" to
+"justified by faith alone" is an inference and not the reading of a word.
+Rated `plausible`: no cited source grants the strand's grounds and denies the
+step, but the step rests on Calvin's comment on 6:29 and not on a full argument
+from John's vocabulary to Paul's. -/
+def calvinOnJohnSix : Source :=
+  { primary := .work calvinJohn (.adLoc john6_29)
+  , tradition := .reformedProtestant
+  , confidence := .plausible }
+
+/-- The Johannine line, resting on Jesus' words in John's Gospel. Its texts are
+its own grounds: no other strand reads them. Its distinctive ground is the
+reading of believing as trust, which Aquinas denies. -/
+@[solaFideDefs]
+def johannineLine : Line Claim :=
+  { name := "Johannine strand (John 6:29)"
+  , grounds :=
+      [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust]
+  , step := johannineToFaithAlone
+  , delivers := p .justificationByFaithAlone
+  , inference := some calvinOnJohnSix }
 
 /-- The James line: not a route to the conclusion but the answer to the one
 text that stands against it. -/
