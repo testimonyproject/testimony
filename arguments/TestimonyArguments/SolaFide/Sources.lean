@@ -517,13 +517,15 @@ def baseCite : Claim → AtomMeta
     , source :=
       -- `wellSupported`, not `consensus`, as with Paul's word: the lexicon's
       -- senses are declarative, and the texts plain — wisdom is "justified by
-      -- her works" (Matt 11:19), shown to be in the right. The Latin tradition
+      -- her deeds" (Matt 11:19, ESV; the Greek is ἔργα), shown to be in the
+      -- right. The Latin tradition
       -- after Augustine, which reads the verb as "make righteous", denies it.
         { primary := .work bdag (.sectionRef "s.v. δικαιόω")
         , supporting :=
             [ .scripture
                 [ { ref := .verse ⟨.deuteronomy, 25, 1⟩ }, { ref := .verse ⟨.matthew, 11, 19⟩ }
-                , { ref := .verse ⟨.luke, 7, 35⟩ } ] ]
+                , { ref := .verse ⟨.luke, 7, 35⟩ } ]
+            , .work esv (.adLoc ⟨.matthew, 11, 19⟩) ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .jamesJustifyDenotesIncrease =>
@@ -590,9 +592,12 @@ def baseCite : Claim → AtomMeta
     , kind := .textual
     , source :=
       -- `consensus`: SBLGNT prints δικαιοσύνην ποιησάτω and marks no variation
-      -- there among the editions it compares, the Byzantine text included; the
-      -- Catholic Church's own translation renders it "The righteous must still
-      -- do right". "Be justified still" is the Vulgate's *iustificetur adhuc*.
+      -- there among the editions it compares, the Byzantine Majority Text
+      -- included; the Catholic Church's own translation renders it "The
+      -- righteous must still do right". "Be justified still" is the Vulgate's
+      -- *iustificetur adhuc*, and it is also the reading of the printed Textus
+      -- Receptus (Stephanus 1550, Scrivener 1894: δικαιωθήτω), which no modern
+      -- critical edition follows here.
         { primary := .work sblgnt (.apparatus ⟨.revelation, 22, 11⟩)
         , supporting := [.work nabre (.sectionRef "Revelation 22:11")]
         , tradition := .christianHistoricalGrammatical
@@ -605,14 +610,23 @@ def baseCite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .sir18_22GreekIsAVow =>
-    { label := "The Greek of Sirach 18:22 is about paying a vow before death, not growth in justice"
+    { label := "The Greek of Sirach 18:22 is about paying a vow: do not wait until death " ++
+        "to be justified"
     , kind := .textual
     , source :=
-      -- `wellSupported`: the Catholic Church's own translation, from the Greek:
-      -- "Let nothing prevent the prompt payment of your vows; do not wait until
-      -- death to fulfill them." The Vulgate's verse differs ("Non impediaris
-      -- orare semper"), and Trent quotes the Latin.
-        { primary := .work nabre (.sectionRef "Sirach 18:22")
+      -- The Greek, in Swete's edition: "μὴ ἐμποδισθῇς τοῦ ἀποδοῦναι εὐχὴν
+      -- εὐκαίρως, καὶ μὴ μείνῃς ἕως θανάτου δικαιωθῆναι". It has the verb
+      -- δικαιόω, as the Latin does: this page once said it did not, and that
+      -- was wrong. What differs is the rest of the verse. The Greek is about
+      -- paying a vow, and says "do not wait until death"; the Vulgate says
+      -- "Non impediaris orare semper, et ne verearis usque ad mortem
+      -- justificari": "pray always", and "be not afraid ... even to death".
+      -- The Catholic Church's own translation renders the Greek clause "do not
+      -- wait until death to fulfill them", taking "be justified" of the vow.
+      -- `wellSupported`: the wording is the edition's; how δικαιωθῆναι is to
+      -- be understood here is not settled by this premise.
+        { primary := .work sweteSeptuagint (.adLoc ⟨.sirach, 18, 22⟩)
+        , supporting := [.work nabre (.sectionRef "Sirach 18:22")]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .originalTextDecides =>
@@ -724,8 +738,9 @@ def baseCite : Claim → AtomMeta
       -- and grounds merit instead in what "justification makes us capable
       -- of". No reader was found who argues it from the texts, so it rests on
       -- the council's word. `disputed`: Westminster holds the reward to be of
-      -- grace, given to works accepted in Christ (XVI.5, XVI.6), and the Joint
-      -- Declaration reads "merit" as a reward promised (§38).
+      -- grace, given to works accepted in Christ (XVI.5, XVI.6). In the Joint
+      -- Declaration, Catholics say that by "meritorious" they mean that "a
+      -- reward in heaven is promised to these works" (§38).
     , source :=
         { primary := .work tannerDecrees
             (.sectionRef "Trent, Session VI (1547), ch. 16; canon 32")
@@ -945,6 +960,41 @@ def baseCite : Claim → AtomMeta
             , .work calvinJohn (.adLoc john3_36) ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .obedienceIsSanctification =>
+    { label := "The obedience of John 3:36 and Matthew 7:21 is sanctification, the fruit of faith"
+    , kind := .interpretive
+      -- The Reformed reading of what these texts require, in three parts.
+      -- On John 3:36, Ridderbos: "'Disobeys' serves as a description of
+      -- 'unbelief'"; Carson: "failure to trust him is as much disobedience as
+      -- unbelief". On Matthew 7:21, Morris: "This is not salvation by works:
+      -- the contrast is not between merit and grace, but between profession
+      -- and way of life." On the place of works, Schreiner: they "aren't the
+      -- basis for salvation ... They are the necessary evidence for and fruit
+      -- of salvation" (p. 55); Hoekema: good works "must not be thought of as
+      -- meritorious ... Yet they are necessary"; Murray: "It is living faith
+      -- that justifies". Westminster XVI.2: good works "are the fruits and
+      -- evidences of a true and lively faith". Note Schreiner's line exactly:
+      -- works are necessary, and not the basis; he does not say they are no
+      -- condition. The commentaries were read through e-book search, so they
+      -- are cited by verse and not by page.
+      --
+      -- `disputed`. Chrysostom accepts both texts and reads the right life they
+      -- require as a condition of salvation (Homily 31 on John). Among modern
+      -- readers, Stanley holds that "Endurance is a condition for final
+      -- salvation", and reads Matthew 7:21 so.
+    , source :=
+        { primary := .work ridderbosJohn (.adLoc john3_36)
+        , supporting :=
+            [ .work carsonJohn (.adLoc john3_36)
+            , .work morrisMatthew (.adLoc ⟨.matthew, 7, 21⟩)
+            , .work schreinerJustificationByWorks (.pages 55 55)
+            , .work hoekemaSavedByGrace .whole
+            , .work murrayRedemption .whole
+            , .work westminsterConfession (.sectionRef "XVI.2")
+            , .work westminsterConfession (.sectionRef "XIII.1")
+            , .work calvinJohn (.adLoc john3_36) ]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
   | .johannineBelievingIsTrust =>
     { label := "The believing of John 6:29 is trust, which brings nothing and receives Christ"
     , kind := .interpretive

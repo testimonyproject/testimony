@@ -15,7 +15,7 @@ The results so far take one position at a time and ask what follows from it.
 This section asks a different question: when the positions are set against each
 other, which are left standing?
 
-Fifteen positions are heard.
+Seventeen positions are heard.
 
 - The four Reformed strands, each argued alone: Paul's, Luke's, Peter's and
   John's.
@@ -23,7 +23,9 @@ Fifteen positions are heard.
 - The apocalyptic reading of Paul (Martyn, Campbell).
 - Sanders and Dunn on Judaism in Paul's day, and the critics who answer them.
 - Jervell on the yoke of Acts 15.
-- Aquinas on John 6:29, and Luther's answer to him.
+- Aquinas on John 6:29, and Luther's answer to him. - Chrysostom on John 3:36
+  and Matthew 7:21, and the Reformed answer to him: the obedience those texts
+  require is sanctification, the fruit of faith.
 - Paul's gospel in Galatians, set against Trent's definition of justification.
 - The meaning of Paul's word "justify", argued two ways: from how the word is
   used, and from Romans 4.
@@ -110,9 +112,16 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
   faith alone, as Paul's does and Luke's does not. And Aquinas, over what the
   believing of John 6:29 is: Aquinas concludes it is not bare trust, and John's
   case holds that it is.
-- **Aquinas and Luther defeat each other.** Luther concludes that the faith
-  which justifies is not faith formed by charity, which is Aquinas's premise.
-  Luther meets no one else. Aquinas meets only John's case besides.
+- **Chrysostom meets every position that concludes faith suffices, each in both
+  directions**: Paul's case, Luke's, Peter's and John's, and the Reformed answer
+  to him. He contradicts no text they read. He contradicts the step each takes
+  to "faith suffices", and each contradicts his step to "faith does not
+  suffice". Each pair is a tie at `disputed`. The Reformed answer meets Trent
+  too, however Trent's definition is taken, because it holds the distinction
+  between justification and sanctification. - **Aquinas and Luther defeat each
+  other.** Luther concludes that the faith which justifies is not faith formed
+  by charity, which is Aquinas's premise. Luther meets no one else. Aquinas
+  meets only John's case besides.
 - **Paul's gospel and Trent defeat each other**, over Trent's definition. The
   gospel line concludes that justification is not the renewal of the inward
   person. Both rest on something rated `disputed`.
@@ -306,6 +315,20 @@ faith made alive by love, so it is not bare trust. -/
 def aquinasCase : ArgumentPackage Claim :=
   thomistLine.asPackage baseCite "the believing of John 6:29 is not bare trust"
 
+/-- **The Reformed answer to Chrysostom**, as a position: the obedience John 3:36
+and Matthew 7:21 require is sanctification, the fruit of faith, so the texts add
+no condition to faith, and faith suffices. It holds the Reformed distinction
+between justification and sanctification, as the other Reformed positions do,
+so Trent meets it on the same ground. -/
+@[solaFideDefs]
+def sanctificationCase : ArgumentPackage Claim :=
+  { reformed with
+    name := "Obedience as sanctification (John 3:36, Matthew 7:21)"
+    premises := caseOf [sanctificationLine] reformedOntology []
+    conclusion := p .faithIsSufficient
+    conclusionLabel := "faith suffices: the obedience the texts require is its fruit"
+    inferences := [obedienceAsFruitSource] }
+
 /-- The apocalyptic reading, as the argument it makes: faith is not the condition of
 justification. It keeps grace and "not by works", by a step of its own. -/
 @[solaFideDefs]
@@ -464,6 +487,58 @@ believing of John 6:29 is faith formed by charity and not bare trust. -/
 theorem aquinasCase_is_satisfiable : Satisfiable aquinasCase.premises := by
   satisfied_by thomistReading [solaFideDefs]
 
+/-- Chrysostom's case reaches its conclusion, as the John section shows. -/
+theorem chrysostomCase_establishes : Establishes chrysostomOnJohn :=
+  chrysostom_reads_john3_36_against_faith_alone
+
+/-- The Reformed answer to Chrysostom reaches its conclusion: faith suffices. -/
+theorem sanctificationCase_establishes : Establishes sanctificationCase := by
+  establish [solaFideDefs]
+
+/-- The Reformed answer to Chrysostom can be held without contradiction: on the
+Reformed reading, every claim in it holds. -/
+theorem sanctificationCase_is_satisfiable : Satisfiable sanctificationCase.premises := by
+  satisfied_by everythingHoldsReading [solaFideDefs]
+
+/-- Chrysostom's position, with every verse of Paul's that the Reformed strands
+read. Every text holds. Believing does not suffice without a right life, so faith
+is not sufficient and justification is not by faith alone. With Rome, it takes
+justification to include sanctification, and the readings of Matthew 7 and 19
+that make obedience a condition. On the readings the meanings exclude, it takes
+the Greek of Revelation 22:11 and Sirach 18:22, and that James does not use
+"justify" as Paul does. -/
+def chrysostomReading : Valuation Claim := fun a =>
+  match a with
+  | .paulsJustifyDenotesRenewal => False
+  | .rev22_11BeJustifiedStill => False
+  | .sir18_22BeJustifiedToDeath => False
+  | .jamesUsesDikaioAsPaul => False
+  | .salvationNotByWorks => False
+  | .justificationIsForensicOnly => False
+  | .justificationDistinctFromSanctification => False
+  | .faithIsSufficient => False
+  | .justificationByFaithAlone => False
+  | .matthew7DoingIncludesBelieving => False
+  | .matthew19LawExposesInability => False
+  | _ => True
+
+/-- **Chrysostom contradicts no text of Paul's.** His position can be held
+together with every verse the Reformed strands read from Paul: Romans 3:28,
+Galatians 2:16, Romans 4:4–5, Ephesians 2:8–9 and Titus 3:5.
+
+What this claims: where Chrysostom stands against the Reformed case, he stands
+against a reading of those verses, the step from them to faith alone, and not
+against anything they say. What it does not claim: that his reading of John 3:36
+is right. -/
+@[headline]
+theorem chrysostom_grants_the_pauline_texts :
+    Grants chrysostomOnJohn
+      (⋀ [ p .romans3_28, p .galatians2_16, p .romans4_4_5, p .ephesians2_8_9
+         , p .titus3_5 ]) := by
+  satisfied_by chrysostomReading [Grants, solaFideDefs]
+
+#print axioms chrysostom_grants_the_pauline_texts
+
 /-! ### How strong each position is
 
 Every position but two rests on something rated `disputed`, or denies a claim,
@@ -508,6 +583,12 @@ denies it. -/
 theorem aquinasCase_strength : aquinasCase.strength = 0 := by decide
 /-- Luther's answer rests on his step, which Aquinas denies. -/
 theorem lutherOnGalatians_strength : lutherOnGalatians.strength = 0 := by decide
+/-- Chrysostom's case rests on his step, rated `disputed`: Calvin accepts both
+texts and denies it. -/
+theorem chrysostomCase_strength : chrysostomOnJohn.strength = 0 := by decide
+/-- The Reformed answer rests on its reading of the obedience, rated `disputed`:
+Chrysostom denies it. -/
+theorem sanctificationCase_strength : sanctificationCase.strength = 0 := by decide
 /-- **The argument from Paul's word rests on nothing disputed.** That the verb is a
 courtroom word, and the rule of least meaning, are `wellSupported`. That Paul
 has other words for renewal is `consensus`. The step from them is
@@ -903,6 +984,12 @@ inductive Party
   | aquinas
   /-- Luther on Galatians 3:11–12, against faith formed by charity. -/
   | luther
+  /-- Chrysostom on John 3:36 and Matthew 7:21: believing is not enough without a
+  right life. -/
+  | chrysostom
+  /-- The Reformed answer: the obedience those texts require is sanctification,
+  the fruit of faith. -/
+  | sanctification
 deriving DecidableEq
 
 /-- The premises each position argues from. -/
@@ -923,6 +1010,8 @@ def partyNode : Party → ArgumentPackage Claim
   | .johannine => johannineParty
   | .aquinas => aquinasCase
   | .luther => lutherOnGalatians
+  | .chrysostom => chrysostomOnJohn
+  | .sanctification => sanctificationCase
 
 /-- The debate over sola fide. For every position heard: its premises can be held
 without contradiction, its conclusion follows from them, and every step it uses
@@ -947,6 +1036,8 @@ def solaFideDispute : Dispute Claim Party where
     | .johannine => johannineParty_establishes
     | .aquinas => aquinasCase_establishes
     | .luther => luther_answers_aquinas_from_galatians
+    | .chrysostom => chrysostomCase_establishes
+    | .sanctification => sanctificationCase_establishes
   rated i := by
     cases i <;> simp [solaFideDefs, Line.asPackage]
 
@@ -1030,6 +1121,20 @@ def partyDefeats : Party → Party → Prop
   | .johannine, .aquinas => True
   | .luther, .aquinas => True
   | .aquinas, .luther => True
+  | .chrysostom, .pauline => True
+  | .pauline, .chrysostom => True
+  | .chrysostom, .dominical => True
+  | .dominical, .chrysostom => True
+  | .chrysostom, .apostolic => True
+  | .apostolic, .chrysostom => True
+  | .chrysostom, .johannine => True
+  | .johannine, .chrysostom => True
+  | .chrysostom, .sanctification => True
+  | .sanctification, .chrysostom => True
+  | .trent, .sanctification => True
+  | .sanctification, .trent => True
+  | .trentOnPaulsWord, .sanctification => True
+  | .sanctification, .trentOnPaulsWord => True
   | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
@@ -1060,36 +1165,38 @@ theorem partyNode_strength : ∀ i, (partyNode i).strength = partyStrength i
   | .johannine => johannineParty_strength
   | .aquinas => aquinasCase_strength
   | .luther => lutherOnGalatians_strength
+  | .chrysostom => chrysostomCase_strength
+  | .sanctification => sanctificationCase_strength
 
 prepare_parts solaFideDisputeParts for solaFideDispute
 
-/-- The first five rows of the table, worked out from the positions' premises and
+/-- The first six rows of the table, worked out from the positions' premises and
 checked by machine. The table is proved in three parts only to keep each proof
 within the time the checker allows. -/
 private theorem solaFideDispute_defeats_first (i : Party)
-    (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic])
+    (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
   refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
     (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
     (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
     (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
-/-- The next five rows. -/
+/-- The next six rows. -/
 private theorem solaFideDispute_defeats_second (i : Party)
-    (hi : i ∈ [.sanders, .critics, .jervell, .gospel, .lexical])
+    (hi : i ∈ [.critics, .jervell, .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
   refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
     (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
     (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
     (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
+  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 /-- The last five rows. -/
 private theorem solaFideDispute_defeats_third (i : Party)
-    (hi : i ∈ [.trentOnPaulsWord, .romansOnTheWord, .johannine, .aquinas, .luther])
+    (hi : i ∈ [.johannine, .aquinas, .luther, .chrysostom, .sanctification])
     (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
   refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
     (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
@@ -1098,7 +1205,7 @@ private theorem solaFideDispute_defeats_third (i : Party)
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
-/-- **Who defeats whom**, for all 225 pairs of positions.
+/-- **Who defeats whom**, for all 289 pairs of positions.
 
 Trent and each Reformed strand defeat each other. The apocalyptic reading and
 Paul's case defeat each other; it does not conflict with Luke's case or Peter's;
@@ -1128,14 +1235,14 @@ def solaFideFinite : Solver.Finite solaFideDispute.defeats where
   parties :=
     [ .pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders, .critics, .jervell
     , .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord, .johannine, .aquinas
-    , .luther ]
+    , .luther, .chrysostom, .sanctification ]
   complete i := by cases i <;> decide
   defeats i j := decide (partyDefeats i j)
   spec i j := by rw [solaFideDispute_defeats]; simp
 
 /-! ### The dispute as a graph -/
 
-/-- **No position supports another** in this debate, in any of the 225 pairs. One
+/-- **No position supports another** in this debate, in any of the 289 pairs. One
 position supports another when its conclusion gives the other a claim it rests
 on. The critics' conclusion used to be one of Paul's premises. Now Paul's case
 contains the critics' whole line (`paulineCase`), which is the closer relation
@@ -1158,7 +1265,7 @@ def partyPartOf : Party → Party → Prop
 instance : DecidableRel partyPartOf := fun i j => by
   cases i <;> cases j <;> unfold partyPartOf <;> infer_instance
 
-/-- **Whose case is contained in whose**, for all 225 pairs. The critics' case is
+/-- **Whose case is contained in whose**, for all 289 pairs. The critics' case is
 contained in Paul's, since Paul's case derives its reading of "works of the law"
 from the critics' line. Trent's case is contained in Trent taken as a claim
 about Paul's word, which only adds to it. Every case contains itself. Nothing
@@ -1194,7 +1301,8 @@ def onlyPaulsWordUnanswered : Verdict solaFideDispute where
     [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
     , (.apocalyptic, .pauline), (.sanders, .critics), (.critics, .sanders)
     , (.jervell, .apostolic), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
-    , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas) ]
+    , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas)
+    , (.chrysostom, .pauline), (.sanctification, .trent) ]
   checked := by decide +kernel
 
 /-- **Only the meaning of Paul's word prevails outright.** What the debate forces,
@@ -1331,8 +1439,8 @@ theorem apocalyptic_not_forced :
 #print axioms apocalyptic_not_forced
 
 /-- Why Luke's case can be defended: it can be held with Peter's, the apocalyptic
-reading and the critics', and it answers both positions that defeat it. Those
-are Trent, and Trent taken as a claim about Paul's word. -/
+reading and the critics', and it answers every position that defeats it: Trent,
+Trent taken as a claim about Paul's word, and Chrysostom. -/
 def lukeStandsWithPeter : Verdict solaFideDispute where
   finite := solaFideFinite
   claim := .credulous .dominical [.dominical, .apostolic, .apocalyptic, .critics]
@@ -1340,10 +1448,11 @@ def lukeStandsWithPeter : Verdict solaFideDispute where
 
 /-- **Luke's case can be defended.** "Your faith has saved you", read as Luke gives
 it, can be held with every position but Trent, however Trent's definition is
-taken. Trent is its only attacker, and the point at issue is what justification
-is. Trent's definition denies that faith without charity suffices, and Luke's
-words say her faith saved her. Luke's case defeats Trent in return, and
-conflicts with no other position. -/
+taken, and Chrysostom. Those are its only attackers, and Luke's case defeats
+each in return. Against Trent the point at issue is what justification is:
+Trent's definition denies that faith without charity suffices, and Luke's words
+say her faith saved her. Against Chrysostom it is whether the right life Jesus
+requires elsewhere (John 3:36, Matthew 7:21) is a second condition beside faith. -/
 @[headline]
 theorem dominical_case_defensible :
     CredulouslyAccepted solaFideDispute.defeats .dominical :=

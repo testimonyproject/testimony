@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **229 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **231 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -142,20 +142,22 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `john3_36_leaves_faiths_sufficiency_open` | `Independent [p Claim.john3_36WhoeverDoesNotObey, p Claim.matthew7_21_23DoingTheWill] (p Claim.faithIsSufficient)` | **The wording of John 3:36 and Matthew 7:21 leaves open whether faith suffices.** One consistent reading holds both texts and that faith suffices: the Reformed one, on which not … |
 | `chrysostom_cannot_be_held_with_johns_case` | `¬Satisfiable johnWithChrysostom` | **Chrysostom's conclusion and John's strand cannot both be held.** John's strand concludes that justification is by faith alone, and so that faith suffices. |
 | `trent_objection_rests_on_its_definition` | `¬Establishes tridentineCaseOnTheReformedDistinction` | **Trent's objection depends on its definition of justification.** Keep all of Trent's case except the definition, put the Reformed distinction in its place, and "salvation is not … |
+| `chrysostom_grants_the_pauline_texts` | `Grants chrysostomOnJohn (⋀[p Claim.romans3_28, p Claim.galatians2_16, p Claim.romans4_4_5, p Claim.ephesians2_8_9, p Claim.titus3_5])` | **Chrysostom contradicts no text of Paul's.** His position can be held together with every verse the Reformed strands read from Paul: Romans 3:28, Galatians 2:16, Romans 4:4–5, … |
 | `only_pauls_word_prevails` | `Framework.grounded solaFideDispute.defeats = {Party.lexical, Party.romansOnTheWord}` | **Only the meaning of Paul's word prevails outright.** What the debate forces, before any choice between rivals, is exactly this: Paul's "justify" (δικαιόω) does not mean the … |
 | `trent_on_pauls_word_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.trentOnPaulsWord ∉ S` | **Trent, taken as a claim about Paul's word, cannot be defended.** No consistent set of positions that answers its attackers can include it. |
 | `trent_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.trent` | **Trent can be defended.** A consistent set of positions includes it, with Sanders and Jervell, and answers every attack. |
 | `trent_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.trent` | **Nor is Trent forced.** A consistent set of positions that answers every attack holds Paul's case with Luke's and Peter's, and none of them can be held with Trent. |
 | `apocalyptic_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.apocalyptic` | **The apocalyptic reading can be defended.** A consistent set of positions includes it and answers every attack, and that set holds Luke's case and Peter's too. |
 | `apocalyptic_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.apocalyptic` | **Nor is it forced.** A consistent set of positions that answers every attack holds Paul's case, faith alone from Galatians 2:16 read as faith *in* Christ, and cannot hold the … |
-| `dominical_case_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.dominical` | **Luke's case can be defended.** "Your faith has saved you", read as Luke gives it, can be held with every position but Trent, however Trent's definition is taken. |
+| `dominical_case_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.dominical` | **Luke's case can be defended.** "Your faith has saved you", read as Luke gives it, can be held with every position but Trent, however Trent's definition is taken, and Chrysostom. |
 | `dominical_case_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Luke's case is not forced.** A consistent set of positions that answers every attack holds Trent, and cannot hold Luke's case with it. |
 | `gospel_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.gospel` | **Paul's gospel can be defended**, together with Paul's, Luke's and Peter's cases and with the argument from Paul's word. |
 | `gospel_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.gospel` | **Nor is it forced.** Trent as Trent states it can still be defended, and Paul's gospel cannot be held with it. |
 | `reformation_dispute_forces_only_pauls_word` | `Framework.grounded reformationAlone.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.apocalyptic, Party.sanders, Party.critics, Party.jervell]) [Party.lexical, Party.romansOnTheWord])` | **What the Reformation debate forces: the meaning of Paul's word, and nothing else.** Heard as Rome and the Reformers alone, the forced positions are exactly the two arguments … |
 | `trent_defensible_with_pauls_word` | `Framework.CredulouslyAccepted reformationAlone.defeats ⟨Party.trent, ⋯⟩` | **Trent, as Trent states it, can be defended in the Reformation debate, together with the arguments about Paul's word.** A consistent set of positions that answers every attack … |
 | `sola_fide_not_forced_in_the_reformation_dispute` | `¬Framework.SkepticallyAccepted reformationAlone.defeats ⟨Party.pauline, ⋯⟩` | **Nor is sola fide forced there.** Rome and the Reformers, heard alone, tie. |
-| `without_trent_luke_and_pauls_gospel_prevail` | `Framework.grounded withoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.trent, Party.trentOnPaulsWord]) [Party.dominical, Party.gospel, Party.lexical, Party.romansOnTheWord])` | **Without Trent, three things are forced.** That faith suffices, from Luke 7:50. |
+| `without_trent_pauls_gospel_and_word_prevail` | `Framework.grounded withoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.trent, Party.trentOnPaulsWord]) [Party.gospel, Party.lexical, Party.romansOnTheWord])` | **Without Trent, two things are forced.** That justification is not the renewal of the inward person, from Paul's gospel. |
+| `luke_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.dominical, ⋯⟩` | **Without Trent, Luke's case is not forced either.** A consistent set of positions that answers every attack holds Chrysostom, and cannot hold Luke's case with it. |
 | `sola_fide_from_paul_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.pauline, ⋯⟩` | **Without Trent, sola fide from Paul is still not forced.** A consistent set of positions that answers every attack holds Campbell's apocalyptic reading, on which "faith of … |
 | `sola_fide_from_peter_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, ⋯⟩` | **Nor from Peter.** A consistent set of positions that answers every attack holds Jervell's reading of Acts 15, on which the yoke is not the law as a condition of salvation, and … |
 | `sola_fide_from_john_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.johannine, ⋯⟩` | **Nor from John.** Remove both of Trent's parties from the hearing: its case, and its definition read as a claim about Paul's word. |
@@ -182,7 +184,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `james_words_prevail` | `Framework.grounded jamesDispute.defeats = {JamesParty.lexical, JamesParty.faith, JamesParty.revelationText, JamesParty.sirachText}` | **What James's words say, and what the Greek of Trent's other two texts says, prevails outright.** Exactly four positions are forced. |
 | `trent_on_james_word_indefensible` | `∀ (S : Set JamesParty), Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnTheWord ∉ S` | **Trent's reading of James's word cannot be defended.** If "justified by works" in James 2:24 is taken to mean the increase of the justice received, being made more just, it … |
 | `trent_on_revelation_indefensible` | `∀ (S : Set JamesParty), Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnRevelation ∉ S` | **Trent's Revelation 22:11 cannot be defended as a text for the increase of justification.** "He that is just, let him be justified still" is the Latin Vulgate's wording … |
-| `trent_on_sirach_indefensible` | `∀ (S : Set JamesParty), Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnSirach ∉ S` | **Trent's Sirach 18:22 cannot be defended as a text for the increase of justification.** "Be not afraid to be justified even to death" is the Vulgate's verse. |
+| `trent_on_sirach_indefensible` | `∀ (S : Set JamesParty), Framework.Admissible jamesDispute.defeats S → JamesParty.trentOnSirach ∉ S` | **Trent's Sirach 18:22 cannot be defended as what the verse says.** "Be not afraid to be justified even to death" is the Vulgate's verse. |
 | `trent_on_works_defensible` | `Framework.CredulouslyAccepted jamesDispute.defeats JamesParty.trentOnWorks` | **Trent's reading of what works do can be defended**, together with the argument from James's word, the argument about James's faith, and the Greek of both verses. |
 | `trent_on_works_not_forced` | `¬Framework.SkepticallyAccepted jamesDispute.defeats JamesParty.trentOnWorks` | **Nor is it forced.** A consistent set of positions that answers every attack holds the Reformed reconciliation, with the arguments from James's word and James's faith, and cannot … |
 | `trent_as_the_inspired_text_contradicts_pius` | `¬Satisfiable romeOnTheInspiredText` | **Trent's Revelation 22:11, taken as what its inspired author wrote, cannot be held together with Pius XII.** The original "has more authority and greater weight than any even the … |
@@ -337,10 +339,20 @@ believing is enough without a right life, arguing from Matthew 7:21
 (`chrysostom_reads_john3_36_against_faith_alone`). The wording of the two texts
 does not decide between them (`john3_36_leaves_faiths_sufficiency_open`), and
 Chrysostom's conclusion cannot be held together with John's strand
-(`chrysostom_cannot_be_held_with_johns_case`). His case is not yet heard in the
-main sola fide debate, where it would also stand against Luke's, Paul's and
-Peter's cases; and the modern commentaries on the verse are still unread
-([#86]).
+(`chrysostom_cannot_be_held_with_johns_case`).
+
+**A church father ties with the Reformed readings; he does not outrank them.**
+Chrysostom's case is now heard in the main debate, with the Reformed answer to
+it: the obedience John 3:36 and Matthew 7:21 require is sanctification, the
+fruit of faith and not its ground (Ridderbos, Carson and Morris on the texts;
+Schreiner, Hoekema and Murray on sanctification;
+`chrysostom_grants_the_pauline_texts` shows he contradicts no verse of Paul's).
+He meets every case that concludes faith suffices, and each meets him in return:
+ties at `disputed`, so nothing he says is forced. One verdict moved. Without
+Trent, Luke's "faith suffices" used to be forced; now Chrysostom stands against
+it, and it is not (`luke_not_forced_without_trent`). What is forced without
+Trent is Paul's gospel and the meaning of Paul's word
+(`without_trent_pauls_gospel_and_word_prevail`) ([#86]).
 
 **Sola fide's rivals deny different parts of it.** The conclusion is three
 atoms — by grace, not by works, through faith — because a single atom could not

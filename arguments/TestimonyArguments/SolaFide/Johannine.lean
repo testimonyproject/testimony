@@ -107,10 +107,11 @@ checked.
 
 "Whoever does not obey the Son shall not see life" (John 3:36) is treated in a
 section of its own at the end of this page. In short: the commentators cited
-read "does not obey" as unbelief seen in what it does; Chrysostom, on the same
-verse, denies that believing is enough without a right life; and the wording
-of the verse does not decide between them.
--/
+read "does not obey" as unbelief seen in what it does. Chrysostom, on the same
+verse, denies that believing is enough without a right life. The Reformed answer
+is that the obedience the verse requires is sanctification, the fruit of faith
+and not its ground. The wording of the verse does not decide between them, and
+in the main debate Chrysostom and the Reformed answer tie. -/
 
 namespace TestimonyArguments.SolaFide
 
@@ -357,8 +358,11 @@ Two things are on record, and they point in different directions.
 **On the word.** The Greek for "does not obey" (ὁ ἀπειθῶν) is read by the
 commentators cited here as unbelief seen in what it does. Westcott: "believeth
 not] disobeyeth. Disbelief is regarded in its activity." Calvin's comment takes
-the clause of "all who do not believe in Christ". No source has been found that
-argues from this word that believing includes obeying.
+the clause of "all who do not believe in Christ". Among modern commentators,
+Ridderbos: "'Disobeys' serves as a description of 'unbelief'". Carson takes the
+verb as "disobeys", and adds that "failure to trust him is as much disobedience
+as unbelief". No source has been found that argues from this word that believing
+includes obeying.
 
 **On the doctrine.** Chrysostom, preaching on this verse, does deny that
 believing is enough: "'Is it then enough,' saith one, 'to believe on the Son,
@@ -385,20 +389,29 @@ The step from them to "faith does not suffice" is his. Three things are checked.
 
 The step is rated `disputed`. Calvin accepts both texts and denies the
 conclusion: he reads the doing of Matthew 7:21 as including faith, and good
-works as what follows faith.
+works as what follows faith. Among modern readers Chrysostom has company:
+Stanley holds that "Endurance is a condition for final salvation", and reads
+Matthew 7:21 so.
 
-**What is not done here.** Chrysostom's case is not a party to the main sola
-fide dispute. His conclusion is general, so there it would stand against Luke's
-case, Paul's and Peter's as well as John's, and that is a change to that
-dispute's results which should be made and reported by itself. The modern
-commentaries on John 3:36 (Brown, Schnackenburg, Barrett, Carson) have not been
-read, and neither has the standard lexicon (BDAG) on the word. -/
+**In the main debate.** Chrysostom's case is heard in the main sola fide debate,
+and so is the Reformed answer to it (below). His conclusion is general, so there
+he meets every case that concludes that faith suffices: Paul's, Luke's, Peter's
+and John's, and the Reformed answer. Each of those meets him in return, and
+every one of the ties is between positions rated `disputed`. He does not meet
+the arguments about Paul's word or Paul's gospel, and he contradicts no verse of
+Paul's (`chrysostom_grants_the_pauline_texts`).
+
+The standard lexicon (BDAG) on the word has not been read, and neither have the
+commentaries of Brown, Schnackenburg and Barrett. -/
 
 /-- Chrysostom's step, in Homily 31 on John: from John 3:36 and Matthew 7:21 to
-"faith alone is not sufficient to salvation". Rated `disputed`: Calvin accepts
-both texts and denies the conclusion. -/
+"faith alone is not sufficient to salvation". Stanley, a modern reader, holds
+works "a condition to final salvation" in the Synoptic Gospels, Matthew 7:21
+among the texts. Rated `disputed`: Calvin accepts both texts and denies the
+conclusion, and so do the modern Reformed readers cited for the answer. -/
 def chrysostomOnJohnThreeThirtySix : Source :=
   { primary := .work chrysostomHomiliesJohn (.sectionRef "Homily 31, §1")
+  , supporting := [.work stanleyDidJesusTeach .whole]
   , tradition := .easternOrthodox
   , confidence := .disputed }
 
@@ -480,5 +493,73 @@ theorem chrysostom_cannot_be_held_with_johns_case : ¬ Satisfiable johnWithChrys
   not_satisfiable_of_check (by decide +kernel)
 
 #print axioms chrysostom_cannot_be_held_with_johns_case
+
+/-! ### The Reformed answer: obedience is sanctification
+
+The Reformed do not deny what Chrysostom's texts say. Whoever does not obey the
+Son shall not see life (John 3:36), and only the one who does the will of the
+Father enters the kingdom (Matthew 7:21). They deny what he concludes from them.
+
+On their reading the obedience these texts require is sanctification: the life
+of good works, inward and outward, that follows faith as its fruit and its
+evidence. It is necessary, for a faith that bears no such fruit is dead. But it
+is not the ground of justification, and it is not a second thing added to faith
+as its means. Modern Reformed and evangelical scholars put each part of this.
+
+- On John 3:36, Ridderbos: "'Disobeys' serves as a description of 'unbelief'".
+  Carson: "failure to trust him is as much disobedience as unbelief".
+- On Matthew 7:21, Morris: "This is not salvation by works: the contrast is not
+  between merit and grace, but between profession and way of life."
+- On the place of works, Schreiner: "the works necessary for justification
+  aren't the basis for salvation and in that sense don't contribute to
+  salvation. They are the necessary evidence for and fruit of salvation." And:
+  "the necessity of good works doesn't contradict sola fide" (p. 55). Hoekema:
+  good works "must not be thought of as meritorious ... Yet they are necessary".
+  Murray: "It is living faith that justifies".
+
+Westminster says the same: good works "are the fruits and evidences of a true
+and lively faith" (XVI.2), and the sanctification of the justified is distinct
+from their justification (XIII.1, XI.1). So, read whole, John 3:36 says what its
+first half says in terms: "Whoever believes in the Son has eternal life."
+
+The reading is written out as a line of its own (`sanctificationLine`), and heard
+in the main debate as the Reformed answer to Chrysostom. It is rated `disputed`.
+Chrysostom accepts both texts and reads them the other way, and so does a modern
+reader: Stanley holds that "Endurance is a condition for final salvation", and
+reads Matthew 7:21 as making doing the Father's will a condition and not only its
+evidence. The commentaries above were read through their e-book editions, so
+they are cited by verse and not by page. -/
+
+/-- The step of the Reformed answer: from John 3:36 and Matthew 7:21, with the
+obedience they require read as sanctification, to "faith suffices". Schreiner:
+"the necessity of good works doesn't contradict sola fide" (p. 55). Calvin on
+3:36: "He shows that enjoyment consists in faith." Rated `disputed`: Chrysostom
+accepts both texts and denies that believing suffices, and Stanley holds works a
+condition of final salvation. -/
+def obedienceAsFruitSource : Source :=
+  { primary := .work schreinerJustificationByWorks (.pages 55 55)
+  , supporting :=
+      [ .work calvinJohn (.adLoc john3_36)
+      , .work westminsterConfession (.sectionRef "XVI.2")
+      , .work westminsterConfession (.sectionRef "XIII.1") ]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **The Reformed answer to Chrysostom, as a line.** John 3:36 and Matthew 7:21
+are accepted as they stand. The obedience they require is read as
+sanctification, the fruit of faith. So they add no condition to faith, and the
+first half of John 3:36 holds as it is written: whoever believes has eternal
+life. -/
+@[solaFideDefs]
+def sanctificationLine : Line Claim :=
+  { name := "Obedience as sanctification (the Reformed answer on John 3:36)"
+  , grounds :=
+      [p .john3_36WhoeverDoesNotObey, p .matthew7_21_23DoingTheWill, p .obedienceIsSanctification]
+  , step :=
+      ⋀ [p .john3_36WhoeverDoesNotObey, p .matthew7_21_23DoingTheWill, p .obedienceIsSanctification]
+        ➝ p .faithIsSufficient
+  , delivers := p .faithIsSufficient
+  , inference := some obedienceAsFruitSource }
+
 
 end TestimonyArguments.SolaFide

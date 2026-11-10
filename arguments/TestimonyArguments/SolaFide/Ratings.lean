@@ -62,9 +62,16 @@ objection fails.
 Westminster's step (`fruitLine`) derives "fruit, not ground" from its proof
 texts. Its support is `wellSupported`: the Lutheran World Federation and the
 Catholic Church confess together that good works "follow justification and are
-its fruits", and that what follows faith "is neither the basis of justification
-nor merits it" (*Joint Declaration* §§37, 25). Two objections are written down,
-both from Trent, and both argued.
+its fruits" (§37), and that "whatever in the justified precedes or follows the
+free gift of faith is neither the basis of justification nor merits it" (§25,
+*Joint Declaration*). That joint statement is about the *ground* of
+justification. It does not settle whether works do anything further. On that the
+Declaration records the two sides apart. Catholics hold that good works
+"contribute to growth in grace, so that the righteousness that comes from God is
+preserved and communion with Christ is deepened" (§38). Lutherans hold "a
+preservation of grace and a growth in grace and faith", and view good works "as
+the fruits and signs of justification and not as one's own 'merits'" (§39). Two
+objections are written down, both from Trent, and both argued.
 
 - **Canon 24, applied to James 2:24**: works cause the increase of
   justification. That claim rests on the council's word alone.
@@ -75,8 +82,10 @@ both from Trent, and both argued.
   and that "we must believe" the justified "have truly merited eternal life".
   The passage from reward to merit is the council's own claim. Dulles, defending
   Trent's teaching, grants that "the fact that a reward is promised does not
-  make it merited". The *Joint Declaration* reads "merit" as no more than a
-  reward promised (§38).
+  make it merited". In the *Joint Declaration*, Catholics say that in affirming
+  the "meritorious" character of good works "they wish to say that, according to
+  the biblical witness, a reward in heaven is promised to these works", and to
+  emphasise "the responsibility of persons for their actions" (§38).
 
 So each of Trent's objections rests, at one claim, on the council's word, and
 the step's rating depends on whether that word counts (`fruit_step_ratings`).

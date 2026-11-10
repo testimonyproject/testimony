@@ -394,8 +394,9 @@ Romans 4 read for the word. It conflicts with Paul twice, each time at a step
 rated `disputed`: with his gospel in Galatians, at the step
 `whereTrentPartsFromPaul` names, and with Romans 4, at the reading of "justifies
 the ungodly". A reader who grants those steps rejects the definition taken this
-way. A reader who denies them, as Augustine and the *Joint Declaration* do, need
-not.
+way. A reader who denies them need not. Augustine does, and so does the *Joint
+Declaration*'s Annex, which defines justification as "forgiveness of sins and
+being made righteous" (Annex 2 A).
 
 Each way of taking it is fair: Trent's position, taken either way, can still be
 held without contradiction. -/

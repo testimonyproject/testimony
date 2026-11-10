@@ -4,15 +4,16 @@ import Testimony.Logic.Because
 /-!
 # TestimonyArguments.SolaFide.Vulgate — Trent's two Latin texts, judged by Rome's own teaching
 
-Two of the three texts Trent cites for the increase of justification speak of
-being justified further only as the Latin has them
+Two of the three texts Trent cites for the increase of justification read
+differently in the Latin Trent quotes and in the Greek
 (`TestimonyArguments.SolaFide.James`). "He that is just, let him be justified
-still" is Revelation 22:11 in the Latin Vulgate; the Greek says "let the
-righteous still do righteousness". "Be not afraid to be justified even to death"
-is Sirach 18:22 in the Vulgate; the Greek is about paying vows. Trent introduces
-both with "as it is written" (Session VI, ch. 10), having declared the Vulgate
-"authentic" for "public lectures, disputations, sermons and expositions"
-(Session IV).
+still" is Revelation 22:11 in the Latin Vulgate; the Greek, as the critical
+editions print it, says "let the righteous still do righteousness". "Be not
+afraid to be justified even to death" is Sirach 18:22 in the Vulgate; the Greek
+has "to be justified" too, but in a sentence about paying vows: "do not wait
+until death to be justified". Trent introduces both with "as it is written"
+(Session VI, ch. 10), having declared the Vulgate "authentic" for "public
+lectures, disputations, sermons and expositions" (Session IV).
 
 A reader asks whether Rome contradicts itself here. Pius XII taught, in *Divino
 Afflante Spiritu* (1943), that the original texts outweigh any translation. Can
@@ -25,10 +26,11 @@ Church's own translation of the Greek.
 **Taken as a claim about what the inspired authors wrote**, it cannot be held
 together with Pius XII. He teaches that the original text, "written by the
 inspired author himself, has more authority and greater weight than any even the
-very best translation" (§16). The original of these two verses, as the Church's
-own translation gives it, does not say what the Latin says. Those commitments
-cannot all be true together (`trent_as_the_inspired_text_contradicts_pius`).
-Every one of them is Rome's.
+very best translation" (§16). The original of Revelation 22:11, as the Church's
+own translation gives it, says "the righteous must still do right", not "be
+justified still". Those commitments cannot all be true together
+(`trent_as_the_inspired_text_contradicts_pius`, which is checked for Revelation
+22:11). Every one of them is Rome's.
 
 **Taken as Pius XII takes Trent's decree on the Vulgate**, there is no
 contradiction. Pius XII denies that going back to the originals "in any way
@@ -101,10 +103,12 @@ theorem trent_as_the_inspired_text_contradicts_pius :
 /-! ### Taken as Pius XII takes the Vulgate -/
 
 /-- Pius XII's step. A doctrine taught from the Vulgate is to be confirmed from the
-original texts (§22). The originals of Revelation 22:11 and Sirach 18:22 do not
-say what the Latin says. So these two texts do not confirm the doctrine from the
-originals. Rated `wellSupported`: it is Pius XII's own requirement, applied to
-texts whose originals the Church's own translation gives. -/
+original texts (§22). The original of Revelation 22:11 has no "be justified".
+The Greek of Sirach 18:22 has it, but says "do not wait until death to be
+justified" of paying a vow, not "be not afraid to be justified even to death".
+So these two texts do not confirm the doctrine from the originals. Rated
+`wellSupported`: it is Pius XII's own requirement, applied to texts whose
+originals the Church's own translation gives. -/
 def piusConfirmationSource : Source :=
   { primary := .work divinoAfflanteSpiritu (.sectionRef "§22")
   , supporting := [.work nabre .whole]
@@ -159,10 +163,15 @@ theorem pius_reading_is_consistent : Satisfiable piusOnTrentsVulgate.premises :=
 
 /-- **By Pius XII's own teaching, the two Latin texts do not confirm the increase of
 justification from the originals.** He asks that a doctrine taught from the
-Vulgate be confirmed from the original texts (§22). The originals of Revelation
-22:11 and Sirach 18:22 do not say what the Latin says. So of the three texts
-chapter 10 cites, only James 2:24 is left to confirm the doctrine from the
-originals. -/
+Vulgate be confirmed from the original texts (§22). The original of Revelation
+22:11 has no "be justified". The Greek of Sirach 18:22 has the verb, in a
+sentence about paying a vow before death, and not the Latin's "be not afraid ...
+even to death". So of the three texts chapter 10 cites, only James 2:24 is left
+to confirm the doctrine from the originals.
+
+What this does not claim: that the Greek of Sirach 18:22 could not be read in
+Trent's favour. That would be a further argument about what its "be justified"
+means, and none is written down here. -/
 @[headline]
 theorem pius_finds_no_confirmation : Establishes piusOnTrentsVulgate := by
   establish [solaFideDefs]

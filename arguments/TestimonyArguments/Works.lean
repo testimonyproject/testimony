@@ -163,6 +163,135 @@ which Open Library records as OL7171440M. It carries no ISBN. -/
   , publisher := "John Murray"
   , place := some "London" }
 
+/-- Schreiner's article on James and Paul: "the works necessary for justification
+aren't the basis for salvation and in that sense don't contribute to salvation.
+They are the necessary evidence for and fruit of salvation" (p. 55). Read in the
+seminary's own PDF of the issue; Crossref finds no DOI. -/
+@[bib_entry] def schreinerJustificationByWorks : BibEntry := .article
+  { core :=
+      { key := "schreiner-justification-by-works-2015"
+      , contributors := { authors := [.person "Thomas R." "Schreiner"] }
+      , title := "Justification by Works and Sola Fide"
+      , year := some { value := 2015 }
+      , identifiers :=
+          [ .url ("https://equip.sbts.edu/wp-content/uploads/sites/5/2016/05/" ++
+                  "Justification-by-Works-and-Sola-Fide.pdf")
+                 (some "2026-11-10") ] }
+  , journal := "The Southern Baptist Journal of Theology"
+  , volume := some "19"
+  , issue := some "4"
+  , pages := some (39, 58) }
+
+/-- Carson's commentary on John, for 3:36: "whoever disobeys the Son (that is what
+the verb means...)", and "failure to trust him is as much disobedience as
+unbelief". Read through the e-book's search; cited by verse, not page. -/
+@[bib_entry] def carsonJohn : BibEntry := .book
+  { core :=
+      { key := "carson-john-1991"
+      , contributors := { authors := [.person "D. A." "Carson"] }
+      , title := "The Gospel according to John"
+      , year := some { value := 1991 }
+      , identifiers := [.isbn "9780802836830"] }
+  , publisher := "Wm. B. Eerdmans"
+  , series := some "Pillar New Testament Commentary" }
+
+/-- Ridderbos's commentary on John, for 3:36: "'Disobeys' serves as a description
+of 'unbelief'". Read through the e-book's search; cited by verse, not page. The
+translator's name is not given, because the catalogue record does not show it. -/
+@[bib_entry] def ridderbosJohn : BibEntry := .book
+  { core :=
+      { key := "ridderbos-john-1997"
+      , contributors := { authors := [.person "Herman" "Ridderbos"] }
+      , title := "The Gospel of John"
+      , subtitle := some "A Theological Commentary"
+      , year := some { value := 1997 }
+      , identifiers := [.isbn "9780802804532"] }
+  , publisher := "Wm. B. Eerdmans" }
+
+/-- Morris's commentary on Matthew, for 7:21: "This is not salvation by works: the
+contrast is not between merit and grace, but between profession and way of life."
+Read through the e-book's search; cited by verse, not page. -/
+@[bib_entry] def morrisMatthew : BibEntry := .book
+  { core :=
+      { key := "morris-matthew-1992"
+      , contributors := { authors := [.person "Leon" "Morris"] }
+      , title := "The Gospel according to Matthew"
+      , year := some { value := 1992 }
+      , identifiers := [.isbn "9780802836960"] }
+  , publisher := "Wm. B. Eerdmans"
+  , series := some "Pillar New Testament Commentary" }
+
+/-- Hoekema on sanctification: good works "must not be thought of as meritorious
+... Yet they are necessary", the fruit of salvation (Ephesians 2:10); and the
+ground of justification is not "the imperfect obedience of faith". Read through
+the e-book's search; cited as a whole. The year is the catalogued printing. -/
+@[bib_entry] def hoekemaSavedByGrace : BibEntry := .book
+  { core :=
+      { key := "hoekema-saved-by-grace-1994"
+      , contributors := { authors := [.person "Anthony A." "Hoekema"] }
+      , title := "Saved by Grace"
+      , year := some { value := 1994 }
+      , identifiers := [.isbn "9780802808578"] }
+  , publisher := "Wm. B. Eerdmans" }
+
+/-- Murray on justification: "It is living faith that justifies", for "faith
+without works is dead". Read through the e-book's search; cited as a whole. The
+year is the catalogued new edition. -/
+@[bib_entry] def murrayRedemption : BibEntry := .book
+  { core :=
+      { key := "murray-redemption-1984"
+      , contributors := { authors := [.person "John" "Murray"] }
+      , title := "Redemption Accomplished and Applied"
+      , year := some { value := 1984 }
+      , identifiers := [.isbn "9780802811431"] }
+  , publisher := "Wm. B. Eerdmans" }
+
+/-- Stanley on works in the Synoptic Gospels: "Endurance is a condition for final
+salvation", and works "a condition to final salvation". A modern reader who
+takes the obedience of Matthew 7:21 as a condition, not only as evidence. Read
+through the book's search; cited as a whole. -/
+@[bib_entry] def stanleyDidJesusTeach : BibEntry := .book
+  { core :=
+      { key := "stanley-did-jesus-teach-2006"
+      , contributors := { authors := [.person "Alan P." "Stanley"] }
+      , title := "Did Jesus Teach Salvation by Works?"
+      , subtitle := some "The Role of Works in Salvation in the Synoptic Gospels"
+      , year := some { value := 2006 }
+      , identifiers := [.isbn "9781597526807"] }
+  , publisher := "Pickwick Publications"
+  , series := some "Evangelical Theological Society Monograph Series" }
+
+/-- Swete's edition of the Septuagint, volume 2, for the Greek of Sirach 18:22:
+"μὴ ἐμποδισθῇς τοῦ ἀποδοῦναι εὐχὴν εὐκαίρως, καὶ μὴ μείνῃς ἕως θανάτου
+δικαιωθῆναι". Read in the Internet Archive's scan, whose record gives the
+publisher as Cambridge University Press and the set's dates as 1896–1905; no
+year is given for the volume, because the record does not give one. -/
+@[bib_entry] def sweteSeptuagint : BibEntry := .book
+  { core :=
+      { key := "swete-old-testament-in-greek"
+      , contributors := { editors := [.person "Henry Barclay" "Swete"] }
+      , title := "The Old Testament in Greek according to the Septuagint"
+      , identifiers :=
+          [ .url "https://archive.org/details/oldtestamentingr02swetuoft" (some "2026-11-10") ] }
+  , publisher := "Cambridge University Press"
+  , place := some "Cambridge"
+  , volume := some "2" }
+
+/-- The English Standard Version, the English Bible these pages quote. First
+published by Crossway in 2001; quoted from the current text edition, which the
+publisher gives as "ESV Text Edition: 2025". No ISBN is given, because the
+catalogued ISBN is that of a 2001 printing. -/
+@[bib_entry] def esv : BibEntry := .book
+  { core :=
+      { key := "crossway-esv-2001"
+      , contributors := {}
+      , title := "The Holy Bible, English Standard Version"
+      , year := some { value := 2001 }
+      , note := some "Quoted from ESV Text Edition: 2025."
+      , identifiers := [.url "https://www.esv.org/" (some "2026-11-10")] }
+  , publisher := "Crossway"
+  , place := some "Wheaton, Illinois" }
+
 /-- Luther's 1535 lectures on Galatians, for his answer to faith formed by
 charity: at 3:11, "to speak of formed or unformed faith, a sort of double faith,
 is contrary to the Scriptures"; at 3:12, "if the law requires charity, charity
