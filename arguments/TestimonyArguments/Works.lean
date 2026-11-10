@@ -145,6 +145,24 @@ and transcribed by the Christian Classics Ethereal Library. -/
   , place := some "Edinburgh"
   , volume := some "1" }
 
+/-- Westcott's commentary on John, for his note on "believeth not" at 3:36: the
+Greek is "disobeyeth" (ὁ ἀπειθῶν), and "Disbelief is regarded in its activity"
+(p. 62). The edition read is the 1892 printing scanned at the Internet Archive,
+which Open Library records as OL7171440M. It carries no ISBN. -/
+@[bib_entry] def westcottJohn : BibEntry := .book
+  { core :=
+      { key := "westcott-john-1892"
+      , role := .witness
+      , contributors := { authors := [.person "Brooke Foss" "Westcott"] }
+      , title := "The Gospel According to St. John"
+      , subtitle := some "The Authorised Version with Introduction and Notes"
+      , year := some { value := 1892 }
+      , identifiers :=
+          [ .url "https://archive.org/details/gospelaccordingt00westuoft"
+                 (some "2026-11-09") ] }
+  , publisher := "John Murray"
+  , place := some "London" }
+
 /-- Luther's 1535 lectures on Galatians, for his answer to faith formed by
 charity: at 3:11, "to speak of formed or unformed faith, a sort of double faith,
 is contrary to the Scriptures"; at 3:12, "if the law requires charity, charity
@@ -2506,6 +2524,27 @@ unstated. -/
   , place := some "New York"
   , volume := some "10" }
 
+/-- *Nicene and Post-Nicene Fathers*, first series, volume 14: the edition
+through which Chrysostom's *Homilies on the Gospel of St. John* are cited.
+Consulted in the text published by CCEL, whose title page gives a reprint by
+T. & T. Clark, Edinburgh, and Wm. B. Eerdmans, Grand Rapids, with no year. The year
+and the translator are not verified, and are left out. -/
+@[bib_entry] def npnf1v14 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-1-14"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title := "Nicene and Post-Nicene Fathers, First Series"
+      , subtitle :=
+          some "Saint Chrysostom: Homilies on the Gospel of St. John and the Epistle to the Hebrews"
+      , note := some "Consulted in the text published by CCEL."
+      , identifiers :=
+          [ .url "https://www.ccel.org/ccel/schaff/npnf114.iv.xxxiii.html"
+                 (some "2026-11-09") ] }
+  , publisher := "T. & T. Clark"
+  , place := some "Edinburgh"
+  , volume := some "14" }
+
 /-- *Nicene and Post-Nicene Fathers*, second series, volume 7: the edition through
 which Cyril of Jerusalem's *Catechetical Lectures* (tr. Edwin Hamilton Gifford)
 are cited. CCEL's record gives New York, 1893, and Gifford's preface is dated
@@ -2645,6 +2684,17 @@ ordinary birth would be no sign. -/
       , title := "Homilies on the Gospel of Matthew" }
   , composed := some { value := 390, approximate := true }
   , editionUsed := some "schaff-nicene-post-nicene-fathers-1-10" }
+
+/-- Chrysostom's *Homilies on the Gospel of John*, for Homily 31, on John
+3:35–36: "Is it then enough … to believe on the Son, that one may have eternal
+life? By no means." No date of composition is given: none was verified. -/
+@[bib_entry] def chrysostomHomiliesJohn : BibEntry := .ancientWork
+  { core :=
+      { key := "chrysostom-homilies-john"
+      , role := .witness
+      , contributors := { authors := [.single "John Chrysostom"] }
+      , title := "Homilies on the Gospel of John" }
+  , editionUsed := some "schaff-nicene-post-nicene-fathers-1-14" }
 
 /-- Jerome, *Commentary on Isaiah*, Book III, on 7:14: the sign "novum debet
 esse atque mirabile"; עַלְמָה "verbum ambiguum", rendered "adolescentula" by every

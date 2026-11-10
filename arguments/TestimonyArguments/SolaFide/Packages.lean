@@ -2,13 +2,17 @@ import TestimonyArguments.SolaFide.Sources
 import TestimonyArguments.SolaFide.Lines
 
 /-!
-# TestimonyArguments.SolaFide.Packages — the positions, and the variants
+# TestimonyArguments.SolaFide.Packages — the positions, and their variants
 
-The positions — Reformed, New Perspective, subjective genitive,
-law-observant Luke, Finnish, critical authorship, apocalyptic, Tridentine — and
-reduced Reformed packages, each missing a named premise.
-Whether a premise is load-bearing is shown by removing it and then either
-establishing the conclusion anyway or naming a countermodel.
+Each position in the debate is written here as a list of premises: the Reformed
+case, the New Perspective, Hays on "faith of Christ", Jervell on Acts, the
+Finnish reading of Luther, the critical view of authorship, the apocalyptic
+reading, and Trent.
+
+Beside them are variants of the Reformed case, each with one named premise
+removed. They exist to answer one kind of question: does the argument depend on
+this premise? Remove it and see. Either the conclusion still follows, or a
+reading is named on which it does not.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -35,19 +39,19 @@ def reformed : ArgumentPackage Claim :=
   , conclusion := solaFide
   , conclusionLabel := "salvation by grace, not by works, through faith" }
 
-/-- The dominical line without the σῴζω premise. The reading of 7:47 stays: it
-is not the premise being tested. -/
+/-- Luke's line without the reading of "saved". The reading of 7:47 stays: it is not
+what is being tested. -/
 @[solaFideDefs]
 def dominicalWithoutSozo : Line Claim :=
   dominicalLine.onGrounds [p .luke7_47LoveIsEvidence]
 
-/-- The Pauline line without the ἔργα νόμου premise. -/
+/-- Paul's line without the reading of "works of the law". -/
 @[solaFideDefs]
 def paulineWithoutWorksOfLaw : Line Claim :=
   paulineLine.onGrounds
     [p .galatiansOpposesCircumcisionAsRequirement, p .pistisChristouObjective]
 
-/-- The Pauline line without the objective genitive. -/
+/-- Paul's line without the reading of "faith in Christ". -/
 @[solaFideDefs]
 def paulineWithoutPistisChristou : Line Claim :=
   paulineLine.onGrounds
@@ -59,19 +63,17 @@ stay: they are not what is being tested. -/
 def johannineWithoutTrust : Line Claim :=
   johannineLine.onGrounds [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving]
 
-/-- The New Perspective on Paul: it denies the traditional reading of ἔργα
-νόμου while accepting justification by faith, which is what Dunn and Wright
-actually hold. It keeps the objective genitive, as Dunn does, so the one
-Pauline ground it denies is the ἔργα νόμου premise.
+/-- The New Perspective on Paul. It denies the traditional reading of "works of the
+law" (ἔργα νόμου) and accepts justification by faith, which is what Dunn and
+Wright hold. It keeps "faith in Christ" as Dunn does, so the one reading of
+Paul's that it denies is the first.
 
-The denial is not assumed: `sandersLine` derives it from covenantal nomism, so
-the package rests on Sanders' account of Judaism and Dunn's inference from it,
-which is where its critics engage it.
+The denial is not assumed. `sandersLine` derives it from Sanders' account of
+Judaism by Dunn's inference, which is where its critics engage it.
 
 It takes no position on the yoke of Acts 15:10, or on what believing is in John
-6:29. Each of those lines keeps its step and loses its disputed ground, so the
-package neither grants nor denies the premise on the New Perspective's
-behalf. -/
+6:29. Each of those lines keeps its step and loses its disputed reading, so the
+position neither grants nor denies the reading on the New Perspective's behalf. -/
 @[solaFideDefs]
 def newPerspective : ArgumentPackage Claim :=
   { reformed with
@@ -84,13 +86,13 @@ def newPerspective : ArgumentPackage Claim :=
         sharedGrounds closingSteps }
 
 /-- The Finnish reading of Luther (Mannermaa): the Reformed case, with the
-forensic account of justification denied. Christ himself is present in faith
-and is the believer's righteousness, so justification is not a declaration
-only.
+verdict-only account of justification denied. Christ himself is present in faith
+and is the believer's righteousness, so justification is not a declaration and
+nothing more.
 
-On what justification *is*, this sides with Trent against the Reformed
-account; on sola fide it sides with the Reformed. The encoding shows both, and
-shows that the two questions are independent. -/
+On what justification *is*, this stands with Trent against the Reformed account.
+On sola fide it stands with the Reformed. The encoding shows both, and shows
+that the two questions are separate. -/
 @[solaFideDefs]
 def finnish : ArgumentPackage Claim :=
   { reformed with
@@ -98,7 +100,7 @@ def finnish : ArgumentPackage Claim :=
     cite := finnishCite
     premises := reformed.premises ++ [notP .justificationIsForensicOnly] }
 
-/-- The subjective genitive (Hays): πίστις Χριστοῦ in Galatians 2:16 is Christ's
+/-- Hays's reading: "faith of Christ" (πίστις Χριστοῦ) in Galatians 2:16 is Christ's
 own faithfulness, so the verse does not name the believer's faith as the means
 of justification. Everything else in the Reformed case is granted. -/
 @[solaFideDefs]
@@ -114,10 +116,10 @@ def subjectiveGenitive : ArgumentPackage Claim :=
         , dominicalLine, apostolicLine, johannineLine ]
         sharedGrounds closingSteps }
 
-/-- Luke as law-observant (Jervell): the yoke Acts 15:10 refuses is Israel's law
-laid on gentiles as a mark of belonging, not the law as a condition of
-salvation. Everything else in the Reformed case is granted. The rival the
-apostolic strand was written against. -/
+/-- Jervell's reading of Luke: the yoke Peter refuses at Acts 15:10 is Israel's law
+laid on gentiles as a mark of belonging, and not the law as a condition of
+salvation. Everything else in the Reformed case is granted. This is the rival
+Peter's strand was written against. -/
 @[solaFideDefs]
 def lawObservantLuke : ArgumentPackage Claim :=
   { reformed with
@@ -129,15 +131,15 @@ def lawObservantLuke : ArgumentPackage Claim :=
         , apostolicLine.onGrounds [notP .acts15YokeIsLawAsCondition], johannineLine ]
         sharedGrounds closingSteps }
 
-/-- The Reformed case granted every critical conclusion about authorship:
+/-- The Reformed case with every critical conclusion about authorship granted:
 Ephesians and Titus not by Paul, 1 and 2 Peter not by Peter.
 
-Nothing else changes, and that is the point. The case reads these letters as
-canonical scripture, bound together by `scriptureSelfConsistent`, not as the
+Nothing else changes. The case reads these letters as Scripture, held together
+by the premise that Scripture does not contradict itself, and not as the
 testimony of a named apostle. So conceding their authorship costs the argument
-nothing — while it would cost an argument that cited Ephesians 2:9 as evidence
-of what *Paul* meant by "works", which is why `worksOfLawMeansWorksGenerally`
-leans on Romans instead. -/
+nothing. It would cost an argument that cited Ephesians 2:9 as evidence of what
+*Paul* meant by "works", which is why the reading of "works of the law" leans on
+Romans. -/
 @[solaFideDefs]
 def criticalAuthorship : ArgumentPackage Claim :=
   { reformed with
@@ -148,16 +150,16 @@ def criticalAuthorship : ArgumentPackage Claim :=
         [ notP .ephesiansIsPauline, notP .titusIsPauline
         , notP .firstPeterIsPetrine, notP .secondPeterIsPetrine ] }
 
-/-- The apocalyptic reading of Paul (Martyn, Campbell). It rejects the
-traditional reading's framing of justification and also the New Perspective's.
-The question is neither how an individual is accepted nor how Jew and gentile
-are related, but God's deliverance of the world in Christ.
+/-- The apocalyptic reading of Paul (Martyn, Campbell). It rejects the traditional
+framing of justification and the New Perspective's as well. For it the question
+is neither how an individual is accepted nor how Jew and gentile are related. It
+is God's rescue of the world in Christ.
 
-It shares Galatians with the Reformed reading — the text of 2:16 and the
-circumcision polemic — and closes with the same step to salvation. It does not
-share the dominical, apostolic or Johannine strands, which neither Martyn nor
-Campbell argues from; to grant it Luke 7:50, Acts 15 or John 6:29 would be to
-encode a position nobody holds. -/
+It shares Galatians with the Reformed reading: the text of 2:16 and the occasion
+of the letter. It closes with the same step to salvation. It does not share
+Luke's strand, Peter's or John's, which neither Martyn nor Campbell argues from.
+To grant it Luke 7:50, Acts 15 or John 6:29 would be to encode a position nobody
+holds. -/
 @[solaFideDefs]
 def apocalyptic : ArgumentPackage Claim :=
   { reformed with
@@ -168,8 +170,8 @@ def apocalyptic : ArgumentPackage Claim :=
         [p .galatians2_16, p .galatiansOpposesCircumcisionAsRequirement]
         [deliveranceIsGrace, toThroughFaith] }
 
-/-- The apocalyptic reading, asked only about the first two parts of the
-conclusion: by grace, and not by works. -/
+/-- The apocalyptic reading, asked only about the first two parts of the conclusion:
+by grace, and not by works. -/
 @[solaFideDefs]
 def apocalypticOnGraceAndWorks : ArgumentPackage Claim :=
   { apocalyptic with
@@ -177,24 +179,24 @@ def apocalypticOnGraceAndWorks : ArgumentPackage Claim :=
     conclusion := graceNotWorks
     conclusionLabel := "salvation by grace, not by works" }
 
-/-- Trent's premises, given the line that carries its definition to merit: four
-prooftexts it shares with the Reformed, scripture's self-consistency, what its
-definition rules out, and the step from merit to the denial of "not by works"
-(ch. 16).
+/-- Trent's premises, given the line that carries its definition to merit. Four
+verses it shares with the Reformed. That Scripture does not contradict itself.
+What its definition rules out. And the step from merit to the denial of "not by
+works" (ch. 16).
 
-Not built from the Reformed lines, and that is the point: it shares four
-prooftexts with them and nothing else, so `caseOf` would misdescribe it. -/
+It is not built from the Reformed lines. It shares four verses with them and
+nothing else, so building it from them would misdescribe it. -/
 @[solaFideDefs]
 def tridentinePremises (line : Line Claim) : List (Formula Claim) :=
   [ p .ephesians2_8_9, p .romans3_28, p .galatians2_16, p .titus3_5
   , p .scriptureSelfConsistent ] ++ line.premises ++ trentDefinitionSteps ++
   [p .worksMeritIncreaseOfJustification ➝ notP .salvationNotByWorks]
 
-/-- The Tridentine position: justification is the renewal of the inward man,
-that renewal grows through good works, so works performed in grace merit an
-increase of justification — which denies the second part of the conclusion,
-salvation not by works. The same definition denies that justification is
-forensic only. -/
+/-- The position of the Council of Trent (Session VI, 1547). Justification is the
+renewal of the inward person. That renewal grows through good works. So works
+done in grace merit an increase of justification, which denies the second part
+of the conclusion, "not by works". The same definition denies that justification
+is only a verdict. -/
 @[solaFideDefs]
 def tridentine : ArgumentPackage Claim :=
   { reformed with
@@ -204,10 +206,10 @@ def tridentine : ArgumentPackage Claim :=
 
 /-! ### Variants
 
-Each removes named premises from `reformed` and keeps the rest. The Pauline
+Each removes named premises from the Reformed case and keeps the rest. Paul's
 strand rests on two disputed readings, so it has two reduced forms. -/
 
-/-- The Reformed package without the ἔργα νόμου premise. -/
+/-- The Reformed case without the reading of "works of the law". -/
 @[solaFideDefs]
 def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=
   { reformed with
@@ -216,7 +218,7 @@ def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=
       caseOf [paulineWithoutWorksOfLaw, dominicalLine, apostolicLine, johannineLine]
         sharedGrounds closingSteps }
 
-/-- The Reformed package without the dominical lexical premise. -/
+/-- The Reformed case without the reading of "saved" at Luke 7:50. -/
 @[solaFideDefs]
 def reformedWithoutSozo : ArgumentPackage Claim :=
   { reformed with
@@ -277,10 +279,10 @@ def reformedWithoutPistisChristouSozoOrYoke : ArgumentPackage Claim :=
         , apostolicLine.onGrounds [], johannineWithoutTrust ]
         sharedGrounds closingSteps }
 
-/-- The Reformed package with **every** disputed reading removed — both of
-Paul's, Luke's σῴζω, the yoke of Acts 15 and John's believing as trust — asked
-only about grace and works. The reading of Galatians as a polemic stays, and so
-does the answer to James. -/
+/-- The Reformed case with **every** disputed reading removed: both of Paul's,
+Luke's "saved", the yoke of Acts 15 and believing as trust in John. It is asked
+only about grace and works. The reading of Galatians as a letter against
+requiring circumcision stays, and so does the answer to James. -/
 @[solaFideDefs]
 def graceAndWorksWithoutAnyLexicalPremise : ArgumentPackage Claim :=
   { reformed with
@@ -293,10 +295,10 @@ def graceAndWorksWithoutAnyLexicalPremise : ArgumentPackage Claim :=
     conclusion := graceNotWorks
     conclusionLabel := "salvation by grace, not by works" }
 
-/-- The New Perspective's critics (Gathercole, the *Variegated Nomism* volume),
-on the Pauline strand alone: the ἔργα νόμου premise derived from a denial of
-covenantal nomism rather than assumed, and the other three strands left out. Does
-Paul alone carry sola fide on Gathercole's history? -/
+/-- Paul's strand alone, on the critics' account of Judaism (Gathercole; Carson,
+O'Brien and Seifrid). The reading of "works of the law" is derived from their
+denial of Sanders' account, not assumed, and the other three strands are left
+out. The question: on that history, does Paul alone reach sola fide? -/
 @[solaFideDefs]
 def paulineStrandOnTheCritics : ArgumentPackage Claim :=
   { reformed with
@@ -305,7 +307,7 @@ def paulineStrandOnTheCritics : ArgumentPackage Claim :=
     premises :=
       caseOf [paulineWithoutWorksOfLaw, criticsLine] sharedGrounds closingSteps }
 
-/-- The same on Sanders' reading of Judaism. -/
+/-- The same on Sanders' account of Judaism. -/
 @[solaFideDefs]
 def paulineStrandOnSanders : ArgumentPackage Claim :=
   { reformed with
@@ -314,7 +316,7 @@ def paulineStrandOnSanders : ArgumentPackage Claim :=
     premises :=
       caseOf [paulineWithoutWorksOfLaw, sandersLine] sharedGrounds closingSteps }
 
-/-- The Reformed package without the premises that harmonise James. -/
+/-- The Reformed case without the premises that answer James. -/
 @[solaFideDefs]
 def reformedWithoutJamesHarmonisation : ArgumentPackage Claim :=
   { reformed with
@@ -332,10 +334,11 @@ def graceWithoutJamesHarmonisation : ArgumentPackage Claim :=
     conclusion := p .salvationByGrace
     conclusionLabel := "salvation by grace" }
 
-/-- Trent, as the argument it makes in a dispute: justification is the renewal of
-the inward man, that renewal grows through good works, so works done in grace
-merit an increase of justification, and salvation is not apart from works. The
-same premises as `tridentine`, concluding what Trent denies. -/
+/-- Trent, as the argument it makes when set against the others. Justification is
+the renewal of the inward person; that renewal grows through good works; so
+works done in grace merit an increase of justification, and salvation is not
+apart from works. The premises are those of `tridentine`. The conclusion is what
+Trent holds against sola fide. -/
 @[solaFideDefs]
 def tridentineCase : ArgumentPackage Claim :=
   { tridentine with
@@ -346,11 +349,11 @@ def tridentineCase : ArgumentPackage Claim :=
 
 /-! ### Paul's gospel, against Trent's definition -/
 
-/-- **Paul's gospel, against justification as renewal.** Galatians and
-1 Corinthians read as one claim — Christ's work is the whole ground — with the
-forensic sense of δικαιόω and Romans 8:33–34, concluding that justification is
-not the renewal of the inward man: the direct denial of Trent's definition
-(Session VI, ch. 7). -/
+/-- **Paul's gospel, against justification as renewal.** Galatians and 1 Corinthians
+read as one claim, that Christ's work is the whole ground. With the courtroom
+sense of "justify" and Romans 8:33–34, it concludes that justification is not
+the renewal of the inward person. That is the direct denial of Trent's
+definition (Session VI, ch. 7). -/
 @[solaFideDefs]
 def galatianGospel : ArgumentPackage Claim :=
   { reformed with
@@ -362,10 +365,11 @@ def galatianGospel : ArgumentPackage Claim :=
     conclusionLabel := "justification is not the renewal of the inward man"
     inferences := [galatianGospelReadingSource, verdictNotRenewalSource] }
 
-/-- **Romans 4, on what Paul's word means.** Paul glosses the righteousness God
-counts to the ungodly as sin not counted; by the rule of least meaning, the verb
-he glosses so does not also denote the renewal of the inward man. An exegetical
-route to what the lexical case reaches lexically. -/
+/-- **Romans 4, on what Paul's word means.** Paul explains the righteousness God
+counts to the ungodly as sin not counted. By the rule of least meaning, the verb
+he explains in that way does not also mean the renewal of the inward person.
+This reaches from one passage what the argument from the word reaches from
+usage. -/
 @[solaFideDefs]
 def romansFourOnTheWord : ArgumentPackage Claim :=
   { name := "Romans 4:3–8, on Paul's word (by the rule of least meaning)"
@@ -375,9 +379,9 @@ def romansFourOnTheWord : ArgumentPackage Claim :=
   , conclusionLabel := "Paul's δικαιόω does not denote the renewal of the inward man"
   , inferences := [romansFourExegesisSource, leastMeaningSource] }
 
-/-- **Romans 4, against justification as renewal.** Paul glosses the righteousness
-God counts to the ungodly as sin not counted; with the forensic sense of the
-verb, justification is not the renewal of the inward man. -/
+/-- **Romans 4, against justification as renewal.** Paul explains the righteousness
+God counts to the ungodly as sin not counted. With the courtroom sense of the
+verb, justification is not the renewal of the inward person. -/
 @[solaFideDefs]
 def romansFourCase : ArgumentPackage Claim :=
   { name := "Romans 4:3–8, against justification as renewal"
@@ -389,9 +393,9 @@ def romansFourCase : ArgumentPackage Claim :=
 
 /-! ### Paul's word, against justification as renewal -/
 
-/-- **Paul's word.** δικαιόω is forensic, Paul names renewal with words of its
-own, and a word contributes the least meaning its context requires: so Paul's
-δικαιόω does not denote the renewal of the inward man. -/
+/-- **Paul's word.** "Justify" (δικαιόω) is a courtroom word. Paul names renewal
+with words of its own. And a word contributes the least meaning its context
+requires. So Paul's "justify" does not mean the renewal of the inward person. -/
 @[solaFideDefs]
 def lexicalCase : ArgumentPackage Claim :=
   lexicalLine.asPackage baseCite "Paul's δικαιόω does not denote the renewal of the inward man"

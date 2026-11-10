@@ -3,13 +3,15 @@ import Testimony.Logic.Notation
 import Testimony.Scripture
 
 /-!
-# TestimonyArguments.SolaFide.Atoms — the atomic claims
+# TestimonyArguments.SolaFide.Atoms — the claims
 
-The prooftexts of the four strands, their five disputed premises, the reading
-of Galatians as a polemic, the authorship of the disputed letters, the rivals'
-premises — covenantal nomism, forensic justification, the apocalyptic reading —
-the James premises, and the three parts of the conclusion. See
-`TestimonyArguments.SolaFide` for the dispute this encodes.
+Every claim the argument uses, one at a time: the verses, the disputed readings
+of them, who wrote the disputed letters, what the rival positions hold, the
+premises that answer James, and the three parts of the conclusion.
+
+A claim here is only named and described. Who holds it, and how well supported
+it is, is recorded in `Sources.lean`. See `TestimonyArguments.SolaFide` for the
+debate these claims belong to.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -33,16 +35,19 @@ inductive Claim
   | romans4_4_5
   /-- Titus 3:5 teaches that God saved us not by works done in righteousness. -/
   | titus3_5
-  /-- Paul's ἔργα νόμου denotes human works in general, not specifically the
-  Jewish covenant boundary markers. **The first disputed Pauline premise.** -/
+  /-- Paul's "works of the law" (ἔργα νόμου) means human works in general, and not
+  only the practices that marked Jews off from gentiles. **The first disputed
+  reading in Paul's strand.** -/
   | worksOfLawMeansWorksGenerally
-  /-- πίστις Χριστοῦ in Galatians 2:16 — and at Romans 3:22 and Philippians 3:9 —
-  is an objective genitive: faith *in* Christ, not Christ's own faithfulness.
-  **The second disputed Pauline premise**, and the one that makes the believer's
-  faith, not only the exclusion of works, part of what Galatians 2:16 says. -/
+  /-- "Faith of Christ" (πίστις Χριστοῦ) in Galatians 2:16, and at Romans 3:22 and
+  Philippians 3:9, means our faith *in* Christ, and not Christ's own
+  faithfulness. Grammarians call the first an objective genitive and the second
+  a subjective one. **The second disputed reading in Paul's strand.** It is what
+  makes the believer's faith, and not only the exclusion of works, part of what
+  Galatians 2:16 says. -/
   | pistisChristouObjective
-  /-- Galatians is a polemic against requiring circumcision of believers, in
-  addition to faith, as a condition of justification (Galatians 2:3–5,
+  /-- Galatians is written against requiring believers to be circumcised, in
+  addition to believing, as a condition of justification (Galatians 2:3–5,
   5:2–4). -/
   | galatiansOpposesCircumcisionAsRequirement
   /-- Acts 15:9–11 — at the Jerusalem council, answering the demand that
@@ -50,15 +55,15 @@ inductive Claim
   says that God cleansed their hearts by faith, and that "we believe that we
   will be saved through the grace of the Lord Jesus, just as they will". -/
   | acts15_9_11
-  /-- The yoke Peter refuses at Acts 15:10 — one "that neither our fathers nor
-  we have been able to bear" — is the law as a whole taken as a condition of
-  salvation, and not only Israel's marks of belonging. **The disputed apostolic
-  premise.** -/
+  /-- The yoke Peter refuses at Acts 15:10, one "that neither our fathers nor we
+  have been able to bear", is the law as a whole taken as a condition of
+  salvation, and not only Israel's marks of belonging. **The disputed reading in
+  Peter's strand.** -/
   | acts15YokeIsLawAsCondition
-  /-- Acts 15:20–21 and 21:20–24 — the decree lays on gentile believers part of
-  what the law of Moses requires, and the Jewish believers in Jerusalem are
-  "all zealous for the law". Jervell's ground for reading Luke as law-observant.
-  -/
+  /-- Acts 15:20–21 and 21:20–24. The council's decree lays on gentile believers
+  part of what the law of Moses requires, and the Jewish believers in Jerusalem
+  are "all zealous for the law". This is Jervell's reason for reading Luke as
+  holding to the law. -/
   | lukeKeepsTheLaw
   /-- Ephesians was written by Paul. -/
   | ephesiansIsPauline
@@ -68,76 +73,75 @@ inductive Claim
   | firstPeterIsPetrine
   /-- 2 Peter was written by the apostle Peter. -/
   | secondPeterIsPetrine
-  /-- δικαιοσύνη θεοῦ in Romans names God's act of delivering the world in
-  Christ, not a status granted to those who meet the condition of faith. The
-  apocalyptic reading. -/
+  /-- "The righteousness of God" (δικαιοσύνη θεοῦ) in Romans names God's act of
+  rescuing the world in Christ, and not a standing given to those who meet the
+  condition of faith. The apocalyptic reading (Martyn, Campbell). -/
   | righteousnessOfGodIsDeliverance
   /-- Luke 7:50 — Jesus tells the woman who anointed him, "your faith has saved
   you", immediately after declaring her sins forgiven. -/
   | luke7_50FaithHasSavedYou
-  /-- σῴζω in Luke 7:50 denotes salvation rather than physical healing. **The
-  dominical strand's lexical premise.** -/
+  /-- "Saved" (σῴζω) at Luke 7:50 means saved from sin, and not healed of an
+  illness. **The reading of the word that Luke's strand needs.** -/
   | sozoIsSoteriological
-  /-- Luke 7:47 — "her sins, which are many, are forgiven, for she loved much":
-  her love is the evidence of her forgiveness, not its ground. The half-verse
-  that follows ("the one who is forgiven little loves little") and the parable
-  of the two debtors (7:41–43) put the forgiveness first and the love after it.
-  The Reformed answer, in advance, to reading 7:47 as salvation by love. -/
+  /-- Luke 7:47, "her sins, which are many, are forgiven—for she loved much": her
+  love is the evidence of her forgiveness, not its cause. The rest of the verse
+  ("he who is forgiven little, loves little") and the parable of the two debtors
+  (7:41–43) put the forgiveness first and the love after it. This is the
+  Reformed answer to reading 7:47 as salvation by love. -/
   | luke7_47LoveIsEvidence
-  /-- James 2:14–26 targets a barren faith — mere assent, which the demons also
-  have — rather than Paul's doctrine of justification. -/
+  /-- James 2:14–26 is aimed at a barren faith, mere assent, which "even the demons"
+  have (2:19), and not at Paul's teaching on justification. -/
   | james2TargetsDeadFaith
   /-- Good works are the fruit and evidence of saving faith, not a ground of
   justification. -/
   | worksAreFruitNotGround
-  /-- James 2:24 is compatible with Paul, using "justify" and "faith" in
+  /-- James 2:24 does not contradict Paul: the two use "justify" and "faith" in
   different senses. -/
   | james2_24Compatible
-  /-- James 2:24 — "You see that a person is justified by works and not by faith
-  alone." What the verse says, in its own words: what its "justified" and
-  "faith" mean is the question `james2_24Compatible` answers. -/
+  /-- James 2:24: "You see that a person is justified by works and not by faith
+  alone." This is what the verse says, in its own words. What its "justified"
+  and "faith" mean is the question `james2_24Compatible` answers. -/
   | james2_24NotByFaithAlone
   /-- Scripture does not contradict itself. -/
   | scriptureSelfConsistent
   /-- Justification is by faith alone. -/
   | justificationByFaithAlone
-  /-- Faith is sufficient: whoever believes is saved. Weaker than faith alone —
-  it says faith saves, not that nothing else is a condition — and all that Luke
-  7:50 and Peter at Jerusalem say. -/
+  /-- Faith is sufficient: whoever believes is saved. This is weaker than faith
+  alone. It says that faith saves, not that nothing else is a condition. It is
+  all that Luke 7:50 and Peter at Jerusalem say. -/
   | faithIsSufficient
   /-- Salvation is by grace: a gift, not wages owed. **First part of the
   conclusion.** -/
   | salvationByGrace
-  /-- Salvation is not by works: no work, however done, is its ground. **Second
-  part of the conclusion**, and the one the Tridentine position denies. -/
+  /-- Salvation is not by works: no work, however done, is its ground. **Second part
+  of the conclusion**, and the one Trent denies. -/
   | salvationNotByWorks
   /-- Salvation is received through faith: faith is the means by which it is
   received. **Third part of the conclusion**, and the one the apocalyptic
-  reading denies. -/
+  reading does not reach. -/
   | salvationThroughFaith
-  /-- Justification is forensic only: a declaration — pardon, and the
-  imputation of Christ's righteousness — and not an infusion of righteousness.
-  The Reformed account of what justification *is*, denied by Trent and by the
-  Finnish reading of Luther alike. -/
+  /-- Justification is a verdict and nothing more ("forensic only"): God pardons,
+  and counts Christ's righteousness to the believer. It is not righteousness
+  poured into the person. This is the Reformed account of what justification
+  *is*. Trent denies it, and so does the Finnish reading of Luther. -/
   | justificationIsForensicOnly
-  /-- Second Temple Judaism held entry to the covenant to be by grace, and works
-  to be the means of staying in it: Sanders' *covenantal nomism*. -/
+  /-- Judaism in Paul's day held that one enters the covenant by grace and stays in
+  it by obedience. Sanders named this *covenantal nomism*. -/
   | secondTempleCovenantalNomism
-  /-- Works performed in grace merit an increase of justification. The
-  Tridentine claim. -/
+  /-- Works done in grace merit an increase of justification. Trent's claim. -/
   | worksMeritIncreaseOfJustification
-  /-- Justification is not the remission of sins only, but also the
-  sanctification and renewal of the inward man. **Trent's definition of what
-  justification is**, from which its objection to "not by works" follows. -/
+  /-- Justification is "not remission of sins merely, but also the sanctification
+  and renewal of the inward man". **Trent's definition of what justification
+  is.** Its objection to "not by works" follows from it. -/
   | justificationIncludesSanctification
-  /-- Justification and sanctification are inseparable but distinct:
-  justification is God's pardon and acceptance, and sanctification is the
-  renewal that follows it. **The Reformed distinction** that Trent's definition
+  /-- Justification and sanctification cannot be separated and are not the same
+  thing. Justification is God's pardon and acceptance. Sanctification is the
+  renewal that follows. **The Reformed distinction**, which Trent's definition
   denies. -/
   | justificationDistinctFromSanctification
-  /-- The inward renewal of the justified grows as they do good works in grace.
-  Common ground: Trent calls the growth an increase of justification, and the
-  Reformed call it sanctification. -/
+  /-- The inward renewal of the justified grows as they do good works in grace. Both
+  sides accept this. Trent calls the growth an increase of justification, and
+  the Reformed call it sanctification. -/
   | renewalGrowsThroughGoodWorks
   /-- John 6:28–29 — asked what they must do to be doing the works of God, Jesus
   answers: "This is the work of God, that you believe in him whom he has sent."
@@ -146,20 +150,25 @@ inductive Claim
   /-- John 3:16–18, 3:36, 5:24 and 20:31 — eternal life, and passing out of
   judgement, through believing in the Son. -/
   | johnLifeThroughBelieving
-  /-- The believing of John 6:29 is trust in Christ, which brings nothing to God
-  and receives righteousness from him: faith as a "passive work" (Calvin). **The
-  Johannine strand's hinge.** -/
+  /-- John 3:36 — "Whoever believes in the Son has eternal life; whoever does not
+  obey the Son shall not see life." The opposite of believing is put, in Greek,
+  as not obeying (ὁ ἀπειθῶν). Every reader here grants the wording. -/
+  | john3_36WhoeverDoesNotObey
+  /-- The believing of John 6:29 is trust in Christ, which brings nothing to God and
+  receives righteousness from him. Calvin calls it a "passive work". **The
+  disputed reading in John's strand.** -/
   | johannineBelievingIsTrust
-  /-- The believing of John 6:29 — believing *in* him, as one's end — is faith
-  living through charity, the source of good works (Aquinas). The rival reading
-  of the hinge, and Trent's (Session VI, ch. 7). -/
+  /-- The believing of John 6:29, believing *in* him as the goal one moves toward,
+  is faith made alive by love ("formed by charity"), the source of good works.
+  Aquinas's reading, and the rival to Calvin's. Trent describes justifying faith
+  the same way (Session VI, ch. 7). -/
   | johannineBelievingIsFormedByCharity
   /-- Galatians 3:11–12 — no one is justified before God by the law; and the law
   is not of faith, for "the one who does them shall live by them". -/
   | gal3_11_12LawIsNotOfFaith
-  /-- Love of God and neighbour is what the law commands (Deuteronomy 6:5; the
-  two great commandments). Common ground: Luther argues from it, and Aquinas
-  would not deny it. -/
+  /-- Love of God and neighbour is what the law commands (Deuteronomy 6:5; the two
+  great commandments). Both sides accept this: Luther argues from it, and
+  Aquinas would not deny it. -/
   | lawCommandsCharity
   /-- Galatians 1:6–9 says that whoever preaches a gospel contrary to the one
   received — even an angel from heaven — is accursed. -/
@@ -176,76 +185,77 @@ inductive Claim
   | galatians5_2_4
   /-- Romans 8:33–34 says: it is God who justifies — who is to condemn? -/
   | romans8_33_34
-  /-- In Paul, δικαιόω is forensic: to declare righteous, a verdict — the
-  opposite of condemning, as in Deuteronomy 25:1 and Romans 8:33–34 — and not to
-  make virtuous. **The lexical premise.** -/
+  /-- In Paul, "justify" (δικαιόω) is a courtroom word: to declare righteous, to
+  give a verdict. Its opposite is to condemn, as in Deuteronomy 25:1 and Romans
+  8:33–34. It does not mean to make a person good. **The premise about the
+  word.** -/
   | dikaioIsForensic
-  /-- Paul names renewal with words of its own — ἀνακαίνωσις, renewal (Titus
-  3:5; Romans 12:2), and ἁγιασμός, sanctification (Romans 6:19, 22) — and sets
-  them beside δικαιόω rather than inside it: "the washing of regeneration and
-  renewal of the Holy Spirit … so that being justified by his grace" (Titus
-  3:5–7); "you were washed, you were sanctified, you were justified" (1
-  Corinthians 6:11). -/
+  /-- Paul has words of his own for renewal: "renewal" (ἀνακαίνωσις; Titus 3:5,
+  Romans 12:2) and "sanctification" (ἁγιασμός; Romans 6:19, 22). He sets them
+  beside "justify" and not inside it: "the washing of regeneration and renewal
+  of the Holy Spirit … so that being justified by his grace" (Titus 3:5–7); "you
+  were washed, you were sanctified, you were justified" (1 Corinthians 6:11). -/
   | paulNamesRenewalOtherwise
-  /-- A word contributes to a passage the least meaning its context requires,
-  and one occurrence of it does not carry everything the word — or the doctrine
-  it is used for — can carry: Joos's rule of least meaning, and Barr's
-  "illegitimate totality transfer", as Silva applies them to the words of the
-  New Testament. **The semantic razor.** -/
+  /-- A word adds to a passage the least meaning its context requires. One use of it
+  does not carry everything the word can mean elsewhere, or everything the
+  doctrine it is used for contains. This is Joos's rule of least meaning, and
+  the mistake it guards against is what Barr called "illegitimate totality
+  transfer". Silva applies both to the words of the New Testament. **The rule
+  for reading a word.** -/
   | leastMeaning
-  /-- Paul's word δικαιόω itself denotes the renewal of the inward man, and not
-  only the verdict: to be justified, in Paul's sense of the word, is to be made
-  inwardly just. What Trent's definition says, **read as a claim about Paul's
-  word**. -/
+  /-- Paul's word "justify" (δικαιόω) itself means the renewal of the inward person,
+  and not only the verdict: to be justified, in Paul's sense of the word, is to
+  be made inwardly just. This is Trent's definition, **read as a claim about
+  Paul's word**. -/
   | paulsJustifyDenotesRenewal
-  /-- When God justifies, he also renews: pardon and the renewal of the inward
-  man are given together, and are not to be separated. What Trent's definition
-  says, **read as a claim about what God does**; and, so stated, what the
-  *Joint Declaration* confesses and Calvin grants. -/
+  /-- When God justifies, he also renews. Pardon and the renewal of the inward
+  person are given together and are not to be separated. This is Trent's
+  definition, **read as a claim about what God does**. Stated this way, it is
+  what the *Joint Declaration* confesses and what Calvin grants. -/
   | justifyingGraceRenews
-  /-- Augustine glosses Paul's "being justified" as "being made righteous" —
-  "by Him, of course, who justifies the ungodly man, that he may become a godly
-  one" (*On the Spirit and the Letter* 26.45) — and the Latin West read
-  *iustificare* so after him. A claim about what Augustine wrote and what the
-  tradition received, not about what Paul meant. -/
+  /-- Augustine explains Paul's "being justified" as "being made righteous": "by
+  Him, of course, who justifies the ungodly man, that he may become a godly one"
+  (*On the Spirit and the Letter* 26.45). The Latin West read "justify"
+  (*iustificare*) that way after him. This is a claim about what Augustine wrote
+  and what the tradition received, not about what Paul meant. -/
   | augustineReadsJustifyAsMakeRighteous
   /-- Romans 4:6–8 says that David speaks of the blessing of the one to whom God
   counts righteousness apart from works: "Blessed are those whose lawless deeds
   are forgiven, and whose sins are covered; blessed is the man against whom the
   Lord will not count his sin." -/
   | romans4_6_8
-  /-- λογίζομαι in Romans 4:3–11 is the language of reckoning: to credit to
-  someone's account. The wage "is not counted as a gift but as his due" (4:4);
-  the one who does not work has faith "counted as righteousness" (4:5). -/
+  /-- "Count" (λογίζομαι) in Romans 4:3–11 is the language of an account: to credit
+  something to someone. The wage "is not counted as a gift but as his due"
+  (4:4); the one who does not work has faith "counted as righteousness" (4:5). -/
   | logizomaiIsReckoning
-  /-- In Romans 4:6–8 Paul glosses "God counts righteousness apart from works" by
-  the psalm he quotes: lawless deeds forgiven, sins covered, sin not counted. The
-  righteousness counted to the ungodly is described, in Paul's own argument, as
-  sin not counted. -/
+  /-- In Romans 4:6–8 Paul explains "God counts righteousness apart from works" by
+  the psalm he quotes: lawless deeds forgiven, sins covered, sin not counted. So
+  the righteousness counted to the ungodly is described, in Paul's own argument,
+  as sin not counted. -/
   | countedRighteousnessIsSinNotCounted
-  /-- Christ's death for our sins is the whole ground of justification: nothing
+  /-- Christ's death for our sins is the whole ground of justification. Nothing
   added to it completes it, and to add a ground is to preach another gospel.
-  **Paul's gospel, as Galatians reads it.** -/
+  **Paul's gospel, as Galatians is read here.** -/
   | christsWorkIsTheWholeGround
   /-- Luke 18:9–14 — the Pharisee lists his fasting and his tithes; the tax
   collector stands far off, beats his breast, and prays "God, be merciful to me,
   a sinner"; and Jesus says that he, "rather than the other", went down to his
   house justified. -/
   | luke18_9_14TaxCollectorJustified
-  /-- δεδικαιωμένος at Luke 18:14 is God's verdict: the tax collector goes home
-  accepted as righteous before God. What δικαιόω means here, in Jesus' own
-  parable — not a claim about what else God gives with the verdict. -/
+  /-- "Justified" (δεδικαιωμένος) at Luke 18:14 is God's verdict: the tax collector
+  goes home accepted as righteous before God. This says what the word means in
+  Jesus' own parable. It does not say what else God gives with the verdict. -/
   | luke18JustifiedIsVerdict
-  /-- The tax collector brings no works that merit, only a humble and contrite
-  plea for mercy; the Pharisee's works (18:11–12) do not justify him. His humility is in
-  the text, and this does not deny it: it says what he brings, not what his
-  humility is. -/
+  /-- The tax collector brings no works that merit anything, only a humble and
+  contrite plea for mercy. The Pharisee's works (18:11–12) do not justify him.
+  The tax collector's humility is in the text, and this claim does not deny it:
+  it says what he brings, not what his humility is. -/
   | taxCollectorBringsNoWorks
-  /-- Matthew 7:21–23 — not everyone who says "Lord, Lord" enters the kingdom,
-  but the one who does the will of the Father; to those who prophesied and did
-  mighty works in his name, "I never knew you". The criterion at the judgment is
-  doing the Father's will, not profession or mighty works. The text names no
-  faith. -/
+  /-- Matthew 7:21–23. Not everyone who says "Lord, Lord" enters the kingdom, but
+  the one who does the will of the Father. To those who prophesied and did
+  mighty works in his name: "I never knew you". The test at the judgement is
+  doing the Father's will, not profession or mighty works. The passage does not
+  mention faith. -/
   | matthew7_21_23DoingTheWill
   /-- **The Catholic reading of Matthew 7:21–23**: the passage condemns
   professing without obeying, and doing the Father's will is a condition of
@@ -295,10 +305,10 @@ inductive Claim
   /-- Luke 23:43 — to the thief on the cross, unbaptised, "Truly, I say to you,
   today you will be with me in paradise". -/
   | luke23_43ThiefPromisedParadise
-  /-- The thief's case bears on salvation under the Gospel, not only on the time
-  before baptism was commanded. The ground the argument from the thief needs:
-  held by Augustine, and by Aquinas quoting him; a reader who holds the washing
-  itself necessary for salvation must deny it. -/
+  /-- The thief's case bears on salvation under the Gospel, and not only on the time
+  before baptism was commanded. The argument from the thief needs this.
+  Augustine holds it, and Aquinas quotes him. A reader who holds that the
+  washing itself is necessary for salvation must deny it. -/
   | thiefBearsOnTheGospel
   /-- **The Spirit.** Acts 8:14–17 — the Samaritans, baptized in Jesus' name,
   receive the Spirit afterwards, when Peter and John lay hands on them. -/
@@ -306,9 +316,9 @@ inductive Claim
   /-- Acts 10:44–48 — the Spirit falls on Cornelius's household while Peter is
   still speaking, and they are baptized afterwards. -/
   | acts10SpiritThenWater
-  /-- God is not bound to water baptism: he gives the Spirit before it and after
-  it. "God has bound salvation to the sacrament of Baptism, but he himself is
-  not bound by his sacraments" (Catechism 1257). Common ground. -/
+  /-- God is not bound to water baptism: he gives the Spirit before it and after it.
+  "God has bound salvation to the sacrament of Baptism, but he himself is not
+  bound by his sacraments" (Catechism 1257). Both sides accept this. -/
   | godNotBoundToWater
   /-- John 3:5 — "unless one is born of water and the Spirit, he cannot enter the
   kingdom of God". -/
@@ -350,16 +360,16 @@ inductive Claim
   "was fulfilled" (2:23); Rahab "justified by works" when she received the
   messengers (2:25). What the text says. -/
   | james2JustifiedByWorks
-  /-- Outside Paul, δικαιόω declares, acquits or vindicates: the judges "justify
-  the righteous and condemn the wicked" (Deuteronomy 25:1); "wisdom is justified
-  by her works" (Matthew 11:19), shown to be in the right by what she does. It
-  does not denote making a person inwardly righteous. **The lexical premise for
-  James.** -/
+  /-- Outside Paul, "justify" (δικαιόω) declares, acquits or vindicates. The judges
+  "justify the righteous and condemn the wicked" (Deuteronomy 25:1). "Wisdom is
+  justified by her works" (Matthew 11:19): shown to be in the right by what she
+  does. It does not mean making a person inwardly righteous. **The premise about
+  the word, for James.** -/
   | dikaioIsDeclarativeOutsidePaul
-  /-- James's δικαιόω — "justified by works" (2:21, 24, 25) — denotes the increase
-  of the justice received: being made more just. **The Catholic reading of
-  James's word**, Trent's (Session VI, ch. 10), on which James 2:24 teaches the
-  increase of justification. -/
+  /-- James's "justified by works" (δικαιόω; 2:21, 24, 25) means the increase of the
+  justice already received: being made more just. **The Catholic reading of
+  James's word**, which is Trent's (Session VI, ch. 10). On it, James 2:24
+  teaches the increase of justification. -/
   | jamesJustifyDenotesIncrease
   /-- The "faith alone" that James 2:24 denies justifies is the faith of 2:14–26:
   faith apart from works, which James calls dead (2:17, 2:26). -/
@@ -376,9 +386,9 @@ inductive Claim
   /-- Scripture teaches that the justice received increases by good works — an
   **increase of justification** (Trent, Session VI, ch. 10; canon 24). -/
   | scriptureTeachesIncreaseOfJustification
-  /-- Good works done in grace are a cause of the increase of justification, and
-  not merely its fruits and signs (Trent, Session VI, canon 24). **The Catholic
-  reading of what works do**, as a claim about God's verdict rather than about a
+  /-- Good works done in grace are a cause of the increase of justification, and not
+  merely its fruits and signs (Trent, Session VI, canon 24). **The Catholic
+  reading of what works do.** It is a claim about God's verdict, not about a
   word. -/
   | worksCauseIncreaseOfJustification
   /-- The text of Revelation 22:11 — what its inspired author wrote — says "He that
@@ -398,12 +408,12 @@ inductive Claim
   is made, is about paying a vow promptly: "do not wait until death to fulfill
   them". It says nothing of growth in justice. -/
   | sir18_22GreekIsAVow
-  /-- The original text, "written by the inspired author himself, has more
-  authority and greater weight than any even the very best translation" (Pius
-  XII, *Divino Afflante Spiritu* §16): a reading the original lacks is not the
-  inspired author's word. Westminster says the same of the originals, which are
+  /-- The original text, "written by the inspired author himself, has more authority
+  and greater weight than any even the very best translation" (Pius XII, *Divino
+  Afflante Spiritu* §16). So a reading the original lacks is not the inspired
+  author's word. Westminster says the same of the originals, which are
   "authentical" and to which the Church is "finally to appeal" (I.8). **The
-  textual principle.** -/
+  principle about texts.** -/
   | originalTextDecides
   /-- The Vulgate, "in the sense in which the Church has understood and
   understands it", is "free from any error whatsoever in matters of faith and
@@ -412,9 +422,10 @@ inductive Claim
   (*Divino Afflante Spiritu* §21, on Trent's Session IV). -/
   | vulgateFreeFromDoctrinalError
   /-- Trent's "as it is written" at Revelation 22:11 and Sirach 18:22 quotes the
-  Vulgate as juridically authentic — a reading free from error in faith, to be
-  used in the Church's teaching — and not as what the inspired authors wrote.
-  Trent's citation, **read as Pius XII reads Trent's decree on the Vulgate**. -/
+  Vulgate as the Church's approved text: a reading free from error in faith, to
+  be used in teaching. It does not quote it as what the inspired authors wrote.
+  This is Trent's citation, **read as Pius XII reads Trent's decree on the
+  Vulgate**. -/
   | trentQuotesTheVulgateJuridically
   /-- A doctrine taught from the Vulgate is to be confirmed from the original
   texts: its authority "by no means prevents — nay rather today it almost
@@ -444,9 +455,9 @@ inductive Claim
   work"; "your confidence, which has a great reward"; "the crown of
   righteousness, which the Lord, the righteous judge, will award to me". -/
   | rewardTextsPromiseReward
-  /-- James's δικαιόω has the sense Paul's has: the "justified" of James 2:24 is
-  the justification of Romans and Galatians, and not a second, declarative use
-  of the word. -/
+  /-- James's "justify" (δικαιόω) has the sense Paul's has. The "justified" of James
+  2:24 is the justification of Romans and Galatians, and not a second use of the
+  word meaning "shown to be right". -/
   | jamesUsesDikaioAsPaul
   /-- The reward God renders to the good works of the justified is rendered to
   them as merits: by those works they "have truly merited eternal life" (Trent,

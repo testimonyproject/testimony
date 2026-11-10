@@ -3,21 +3,25 @@ import Testimony.Logic.Package
 import TestimonyArguments.Works
 
 /-!
-# TestimonyArguments.SolaFide.Sources — a citation for every atom
+# TestimonyArguments.SolaFide.Sources — a source for every claim
 
-Several `cite` functions, not one. The atoms are shared across the positions;
-the *citation* of a disputed premise is not, because each side of a dispute is
-cited to its own scholarship. The Reformed tradition and the New Perspective
-part over what Paul's ἔργα νόμου denotes; Dunn and Hays part over the genitive
-in πίστις Χριστοῦ; the apocalyptic reading parts from both.
+Every claim in the argument is given a source here: a passage of Scripture, or a
+work and the place in it. Each also has a rating that says how well supported it
+is among the sources cited.
 
-`baseCite` carries the default citation of every atom; `reformedCite`,
-`newPerspectiveCite`, `subjectiveGenitiveCite`, `apocalypticCite` and
-`lawObservantLukeCite` each override the one atom where their position parts
-from it, and `criticalAuthorshipCite` the four atoms on who wrote the disputed
-letters. That is the
-disagreement made mechanical: it shows up as a difference in the generated
-manifest rather than as a remark in a docstring.
+The claims are shared by all the positions. The *source* for a disputed reading
+is not, because each side of a disagreement is cited to its own scholars. The
+Reformed and the New Perspective part over what Paul's "works of the law" (ἔργα
+νόμου) means. Dunn and Hays part over "faith of Christ" (πίστις Χριστοῦ). The
+apocalyptic reading parts from both.
+
+So there are several lists of sources and not one. `baseCite` gives the default
+source for every claim. `reformedCite`, `newPerspectiveCite`,
+`subjectiveGenitiveCite`, `apocalypticCite` and `lawObservantLukeCite` each
+replace the one claim where that position parts from the default, and
+`criticalAuthorshipCite` replaces the four claims about who wrote the disputed
+letters. The disagreement between positions therefore shows up as a difference
+in the list of sources each one prints.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -26,97 +30,96 @@ open Testimony
 
 open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
-/-! ### Rated inferences
+/-! ### How the steps are rated
 
-A dispute weighs a position's inference steps as well as its premises (see
-`Testimony.Logic.Dispute`), and a step is rated `disputed` when a cited source
-grants its grounds and denies its conclusion. These are the ratings the
-positions in `SolaFide.Dispute` carry. -/
+When positions are weighed against each other, the steps a position takes are
+weighed as well as its premises. A step is rated `disputed` when a cited source
+accepts its starting points and denies its conclusion. These are the ratings the
+positions in the debate carry. -/
 
-/-- **Every Reformed strand's step is contested, by Trent.** Trent grants what
-each strand reads — Romans 3:28 and Galatians 2:16, that Jesus' words save, that
-salvation is through grace — and anathematises the conclusion each draws:
-justification by faith alone (Session VI, canon 9). -/
+/-- **Trent contests the step in every Reformed strand.** Trent accepts what each
+strand reads: Romans 3:28 and Galatians 2:16, that Jesus' words save, that
+salvation is through grace. It condemns the conclusion each draws, justification
+by faith alone (Session VI, canon 9). -/
 def trentAgainstFaithAlone : Source :=
   { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), canon 9")
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- Trent's own step, from merit to the denial of "not by works". Rated
-`consensus`: the step is conceded on both sides — it is *why* the Reformed deny
-merit — and the dispute is over its premise, not its inference. -/
+/-- Trent's own step, from merit to the denial of "not by works". Rated `consensus`:
+both sides accept the step. It is the reason the Reformed deny merit. The
+disagreement is over the premise, not the step. -/
 def trentOnMerit : Source :=
   { primary := .work tannerDecrees
       (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 16")
   , tradition := .romanCatholic
   , confidence := .consensus }
 
-/-- **The step from Luke 18 is contested, by Trent applied to it.** Trent never
-cites Luke 18, and grants that nothing before justification, "whether faith or
-works", merits it (ch. 8). But it requires the dispositions it lists — fear,
-hope, beginning to love God, penitence (ch. 6) — and anathematises whoever says
+/-- **Trent, applied to Luke 18, contests the step from it.** Trent never cites Luke
+18, and accepts that nothing before justification, "whether faith or works",
+merits it (ch. 8). But it requires the dispositions it lists, fear, hope,
+beginning to love God, and penitence (ch. 6), and it condemns whoever says
 "nothing else is required to co-operate" (canon 9). Read by those chapters, the
 tax collector's humility and contrition are dispositions his justification
-required, not a plea that sufficed alone. So the step from the plea to "faith
-suffices" is `disputed`. -/
+required, and not a plea that was enough alone. So the step from the plea to
+"faith suffices" is `disputed`. -/
 def trentAgainstThePleaAlone : Source :=
   { primary := .work waterworthTrent (.page 45)
   , supporting := [.work waterworthTrent (.pages 33 34)]
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- **The Catholic step from Matthew 7:21 is contested, by Calvin.** He grants
-the text, and that entry requires doing the Father's will, and denies that the
-doing is more than the fruit of faith: "These words, therefore, do not exclude faith, but presuppose
-it as the principle from which other good works flow." -/
+/-- **Calvin contests the Catholic step from Matthew 7:21.** He accepts the text,
+and that entry requires doing the Father's will. He denies that the doing is
+more than the fruit of faith: "These words, therefore, do not exclude faith, but
+presuppose it as the principle from which other good works flow." -/
 def calvinAgainstObedienceAsGround : Source :=
   { primary := .work calvinHarmony1 (.pages 367 368)
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
-/-- **The Reformed step from Matthew 7:21 is contested, by the Catechism.** It
-grants the text and reads it the other way: "one enters the kingdom of heaven
-not by speaking words, but by doing 'the will of my Father in heaven'" (§2826). -/
+/-- **The Catechism contests the Reformed step from Matthew 7:21.** It accepts the
+text and reads it the other way: "one enters the kingdom of heaven not by
+speaking words, but by doing 'the will of my Father in heaven'" (§2826). -/
 def catechismAgainstDoingAsBelieving : Source :=
   { primary := .work catechismCatholicChurch (.sectionRef "2826")
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- **The Catholic step from Matthew 19:17 is contested, by Calvin.** He grants
-the text — "we have no right, therefore, to deny that the keeping of the law is
-righteousness" — and denies that it is the way to life for any sinner: "this
+/-- **Calvin contests the Catholic step from Matthew 19:17.** He accepts the text:
+"we have no right, therefore, to deny that the keeping of the law is
+righteousness". He denies that it is the way to life for any sinner: "this
 passage was erroneously interpreted by some of the ancients, whom the Papists
 have followed, as if Christ taught that, by keeping the law, we may merit
-eternal life." Calvin answers the claim to merit; the reading encoded here
-claims less — the way made possible by grace — and he denies that too, since
+eternal life." Calvin is answering a claim to merit. The reading written down
+here claims less, the way made possible by grace, and he denies that too, since
 for him no sinner keeps the law. -/
 def calvinAgainstTheCommandmentsAsTheWay : Source :=
   { primary := .work calvinHarmony2 (.page 394)
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
-/-- **The Reformed step from Matthew 19:17 is contested, by John Paul II.** He
-grants the text and reads it as the real path: Jesus "proposes them to us as the
-way and condition of salvation" (*Veritatis Splendor* 12). -/
+/-- **John Paul II contests the Reformed step from Matthew 19:17.** He accepts the
+text and reads it as the real path: Jesus "proposes them to us as the way and
+condition of salvation" (*Veritatis Splendor* 12). -/
 def veritatisSplendorAgainstTheLegalReply : Source :=
   { primary := .work veritatisSplendor (.sectionRef "12")
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- **Trent's step from John 3:5 is contested, by Calvin.** He grants the verse
-and denies that it requires water baptism: "I cannot bring myself to believe
-that Christ speaks of baptism" (on John 3:5, 110). -/
+/-- **Calvin contests Trent's step from John 3:5.** He accepts the verse and denies
+that it requires water baptism: "I cannot bring myself to believe that Christ
+speaks of baptism" (on John 3:5, 110). -/
 def calvinAgainstBaptismInJohnThreeFive : Source :=
   { primary := .work calvinJohn (.page 110)
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
-/-- **The steps from each non-baptismal reading of John 3:5 are well supported.**
-If the water is natural birth, or Ezekiel's cleansing and not baptism, or the
-Spirit's own cleansing, the verse does not require water baptism: no reader was
+/-- **The steps from each non-baptismal reading of John 3:5 are well supported.** If
+the water is natural birth, or Ezekiel's cleansing and not baptism, or the
+Spirit's own cleansing, the verse does not require water baptism. No reader was
 found who holds one of these readings and still requires baptism from the verse.
-Those who require it deny the reading instead (Trent, Session VII, On Baptism,
-canon 2). -/
+Those who require it deny the reading (Trent, Session VII, On Baptism, canon 2). -/
 def readingsWithoutTheWater : Source :=
   { primary := .work oliverWaterJohn .whole
   , supporting := [.work calvinInstitutes (.sectionRef "IV.xvi.25")]
@@ -127,27 +130,27 @@ def readingsWithoutTheWater : Source :=
 paradise unbaptised, and that his case bears on salvation under the Gospel, and
 the washing itself is not necessary for salvation: "as in the thief, to whom the
 material administration of the sacrament was necessarily wanting, the salvation
-was complete" (Augustine, *On Baptism* IV.23.31), a passage Aquinas quotes with
-approval (III q.66 a.11). Feeney denies the conclusion; how he answers the thief
-could not be verified here. -/
+was complete" (Augustine, *On Baptism* IV.23.31). Aquinas quotes the passage
+with approval (III q.66 a.11). Feeney denies the conclusion. How he answers the
+thief could not be verified. -/
 def augustineOnTheThief : Source :=
   { primary := .work npnfAugustineManichaeans (.sectionRef "On Baptism IV.23.31")
   , supporting := [.work aquinasSumma (.sectionRef "III q.66 a.11")]
   , tradition := .christianHistoricalGrammatical
   , confidence := .wellSupported }
 
-/-- **The step from the desire to the salvation it assures is well supported.**
-If the desire for baptism brings about its fruits, the washing itself is not
+/-- **The step from the desire to the salvation it assures is well supported.** If
+the desire for baptism brings about its fruits, the washing itself is not
 necessary for salvation: the Catechism says it "assures them the salvation that
-they were not able to receive through the sacrament" (1259). Feeney grants that
-the desire justifies; he denies that it saves. It is this saving fruit, as the
-Catechism states it, that he denies — the ground, not the step. -/
+they were not able to receive through the sacrament" (1259). Feeney accepts that
+the desire justifies and denies that it saves. So what he denies is the starting
+point, this saving fruit as the Catechism states it, and not the step. -/
 def catechismOnDesire : Source :=
   { primary := .work catechismCatholicChurch (.sectionRef "1259")
   , tradition := .romanCatholic
   , confidence := .wellSupported }
 
-/-- **The Reformed step from the desire, as Westminster holds it**: grace and
+/-- **The Reformed step from the desire, as Westminster holds it.** Grace and
 salvation "are not so inseparably annexed unto it, as that no person can be
 regenerated, or saved, without it" (XXVIII.5), and faith is "the alone
 instrument of justification" (XI.2). -/
@@ -157,47 +160,48 @@ def westminsterOnTheDesire : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
-/-- **The Reformed step from the desire is contested, by Aquinas.** He grants that
+/-- **Aquinas contests the Reformed step from the desire.** He accepts that
 Cornelius and others "receive grace and virtues through their faith in Christ
-and their desire for Baptism", and denies that the sacrament is therefore not
-the instrument: the desire is for the sacrament, and "when baptized, they
-receive a yet greater fulness of grace and virtues" (III q.69 a.4 ad 2). -/
+and their desire for Baptism". He denies that the sacrament is therefore not the
+instrument: the desire is for the sacrament, and "when baptized, they receive a
+yet greater fulness of grace and virtues" (III q.69 a.4 ad 2). -/
 def aquinasOnTheDesire : Source :=
   { primary := .work aquinasSumma (.sectionRef "III q.69 a.4 ad 2")
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- **Where the Spirit comes before the water, and after it: common ground.**
-Both grant that God is not bound to the water: the Catechism, that God "himself
-is not bound by his sacraments" (1257). Calvin's own sentence on Acts 10:47 goes
-further — "the Spirit is not included in baptism" — and that further claim is
-not what is granted here. -/
+/-- **Where the Spirit comes before the water, and after it.** Both sides accept
+that God is not bound to the water; the Catechism says God "himself is not bound
+by his sacraments" (1257). Calvin's own sentence on Acts 10:47 goes further,
+"the Spirit is not included in baptism", and that further claim is not what is
+accepted here. -/
 def calvinOnActsTen : Source :=
   { primary := .work calvinActs1 (.page 454)
   , supporting := [.work catechismCatholicChurch (.sectionRef "1257")]
   , tradition := .christianHistoricalGrammatical
   , confidence := .consensus }
 
-/-- Where Melanchthon reads Luke 7:47 by 7:50, in the *Apology of the Augsburg
-Confession* (1531): the part of Article IV on love and the fulfilling of the
-law. The *Concordia Triglotta* numbers it Article III, 31–34; the reference is
-given by article and topic because paragraph numbers differ between editions. -/
+/-- Where Melanchthon reads Luke 7:47 in the light of 7:50, in the *Apology of the
+Augsburg Confession* (1531): the part of Article IV on love and the fulfilling
+of the law. The *Concordia Triglotta* numbers it Article III, 31–34. The
+reference is given by article and topic because paragraph numbers differ between
+editions. -/
 def melanchthonOnLuke7 : Locus :=
   .sectionRef "Apology IV, on love and the fulfilling of the law: Luke 7:47–50"
 
-/-- The apocalyptic reading's step, from Christ's faithfulness and God's
-deliverance to the denial that faith is the condition. Rated `plausible`: no
-source cited here grants both grounds and affirms faith as the condition of
-justification. -/
+/-- The step in the apocalyptic reading: from Christ's own faithfulness and God's
+act of rescue to the denial that faith is the condition. Rated `plausible`: no
+source cited here accepts both starting points and still holds that faith is the
+condition of justification. -/
 def campbellOnDeliverance : Source :=
   { primary := .work campbellDeliveranceOfGod .whole
   , supporting := [.work martynGalatians .whole]
   , tradition := .criticalScholarship
   , confidence := .plausible }
 
-/-- The Reformed reading of ἔργα νόμου, cited to the tradition that holds it and
-to its modern defenders against the New Perspective. Disputed precisely because
-the New Perspective denies it; see `newPerspectiveCite`. -/
+/-- The Reformed reading of "works of the law" (ἔργα νόμου), cited to the tradition
+that holds it and to those who defend it today against the New Perspective. It
+is `disputed` because the New Perspective denies it; see `newPerspectiveCite`. -/
 def reformedWorksOfLawSource : Source :=
   { primary := .work calvinInstitutes (.sectionRef "III.xi.19")
   , supporting :=
@@ -218,8 +222,8 @@ def reformedWorksOfLawSource : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
-/-- Citations shared by every package: the prooftexts and the hermeneutical
-premises, which none of the three positions disputes the wording of. -/
+/-- The sources shared by every position: for the verses, and for the premises about
+how to read them, whose wording none of the positions disputes. -/
 def baseCite : Claim → AtomMeta
   | .ephesians2_8_9 =>
     { label := "Ephesians 2:8–9 teaches salvation by grace through faith, not of works"
@@ -247,7 +251,7 @@ def baseCite : Claim → AtomMeta
         { s with
           supporting := s.supporting ++ [.work martynGalatians (.adLoc ⟨.galatians, 2, 16⟩)] } }
   | .pistisChristouObjective =>
-    { label := "πίστις Χριστοῦ in Galatians 2:16 means faith in Christ, not Christ's faithfulness"
+    { label := "In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means our faith in Christ"
     , kind := .linguistic
       -- Dunn holds the objective genitive and the New Perspective together,
       -- which is why this premise and `worksOfLawMeansWorksGenerally` are
@@ -352,7 +356,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .righteousnessOfGodIsDeliverance =>
-    { label := "δικαιοσύνη θεοῦ names God's deliverance in Christ, not a status faith obtains"
+    { label := "‘The righteousness of God’ (δικαιοσύνη θεοῦ) names God's act of rescue in Christ"
     , kind := .interpretive
     , source :=
         { primary := .work campbellDeliveranceOfGod .whole
@@ -379,7 +383,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .sozoIsSoteriological =>
-    { label := "σῴζω in Luke 7:50 denotes salvation, not physical healing"
+    { label := "‘Saved’ (σῴζω) at Luke 7:50 means saved from sin, not healed"
     , kind := .linguistic
       -- Melanchthon reads 7:50 as the remission of sins received by faith: "the
       -- remission of sins is properly received by faith, although love,
@@ -507,7 +511,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .dikaioIsDeclarativeOutsidePaul =>
-    { label := "Outside Paul, δικαιόω declares, acquits or vindicates, and does not denote " ++
+    { label := "Outside Paul, ‘justify’ (δικαιόω) declares or vindicates; it does not mean " ++
         "making righteous"
     , kind := .linguistic
     , source :=
@@ -523,7 +527,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .jamesJustifyDenotesIncrease =>
-    { label := "James's δικαιόω denotes the increase of the justice received"
+    { label := "James's ‘justified’ (δικαιόω) means the increase of the justice received"
     , kind := .linguistic
     , source :=
         { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")
@@ -729,8 +733,8 @@ def baseCite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .jamesUsesDikaioAsPaul =>
-    { label := "James's δικαιόω has the sense Paul's has: the justification of Romans and " ++
-        "Galatians"
+    { label := "James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of " ++
+        "Romans and Galatians"
     , kind := .linguistic
       -- Trent reads it so: chapter 10 quotes James 2:24 for the increase of
       -- "that justice received through the grace of Christ", the justice of
@@ -833,7 +837,7 @@ def baseCite : Claim → AtomMeta
             [ .scripture [{ ref := .range ⟨.firstPeter, 1, 3, 1, 5⟩ }]
             , .work jobesFirstPeter (.adLoc ⟨.firstPeter, 1, 5⟩) ] } }
   | .justificationIsForensicOnly =>
-    { label := "Justification is forensic only: pardon and imputation, not infusion"
+    { label := "Justification is a verdict only: pardon and righteousness counted, not poured in"
     , kind := .theological
       -- The Epistle to Diognetus, 9: "that the wickedness of many should be hid
       -- in a single righteous One, and that the righteousness of One should
@@ -922,6 +926,23 @@ def baseCite : Claim → AtomMeta
             .scripture
               [ { ref := .range john3_16to18 }, { ref := .verse john3_36 }
               , { ref := .verse john5_24 }, { ref := .verse john20_31 } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .john3_36WhoeverDoesNotObey =>
+    { label := "John 3:36 — whoever believes has life; whoever does not obey shall not see life"
+    , kind := .textual
+      -- The wording is common ground. What "does not obey" (ὁ ἀπειθῶν) amounts
+      -- to is read one way by the sources cited. Westcott: "believeth not]
+      -- disobeyeth (ὁ ἀπειθῶν). Disbelief is regarded in its activity" (p. 62).
+      -- Calvin's comment takes the clause of "all who do not believe in
+      -- Christ"; his translator notes that Calvin's French version gives "who
+      -- disobeyeth the Son" as an alternative rendering. No source has been
+      -- found that argues from the word that believing includes obeying.
+    , source :=
+        { primary := .scripture [{ ref := .verse john3_36 }]
+        , supporting :=
+            [ .work westcottJohn (.page 62)
+            , .work calvinJohn (.adLoc john3_36) ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .johannineBelievingIsTrust =>
@@ -1015,7 +1036,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .dikaioIsForensic =>
-    { label := "In Paul, δικαιόω is forensic: to declare righteous, not to make virtuous"
+    { label := "In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good"
     , kind := .linguistic
       -- `wellSupported`, not `consensus`. Held across traditions: the standard
       -- lexicon ("render a favorable verdict, vindicate"); Morris's lexical
@@ -1059,7 +1080,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .luke18JustifiedIsVerdict =>
-    { label := "δεδικαιωμένος at Luke 18:14 is God's verdict: accepted as righteous before God"
+    { label := "‘Justified’ at Luke 18:14 is God's verdict: accepted as righteous before God"
     , kind := .linguistic
       -- `wellSupported`: no reader was found who reads the word at 18:14 as
       -- an inner transformation. Calvin: "to stand before God as if we were
@@ -1321,7 +1342,7 @@ def baseCite : Claim → AtomMeta
         , confidence := .disputed } }
   | .paulNamesRenewalOtherwise =>
     { label := "Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them " ++
-        "beside δικαιόω"
+        "beside ‘justify’"
     , kind := .textual
       -- `consensus`: what the texts say, and no more. Trent itself builds its
       -- chapter 7 on Titus 3:5–7, where renewal and being justified are named
@@ -1349,7 +1370,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .paulsJustifyDenotesRenewal =>
-    { label := "Paul's δικαιόω itself denotes the renewal of the inward man, not only the verdict"
+    { label := "Paul's word ‘justify’ means the renewal of the inward man, not only a verdict"
     , kind := .linguistic
       -- `disputed`: Trent reads "the Apostle's" words (ch. 8), and says the
       -- justified are "not only reputed, but are truly called, and are, just"
@@ -1380,7 +1401,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .augustineReadsJustifyAsMakeRighteous =>
-    { label := "Augustine glosses \"being justified\" as \"being made righteous\", and the " ++
+    { label := "Augustine explains \"being justified\" as \"being made righteous\", and the " ++
         "Latin West read iustificare so"
     , kind := .historical
       -- `consensus`: what Augustine wrote, and what the tradition received,
@@ -1405,7 +1426,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .logizomaiIsReckoning =>
-    { label := "λογίζομαι in Romans 4:3–11 is the language of reckoning: credited to one's account"
+    { label := "‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one"
     , kind := .linguistic
       -- `wellSupported`: the standard lexicon and the commentators read the
       -- verb in Romans 4 as crediting, and 4:4 sets it in the language of
@@ -1416,7 +1437,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .countedRighteousnessIsSinNotCounted =>
-    { label := "In Romans 4:6–8 Paul glosses righteousness counted apart from works as sin not " ++
+    { label := "In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not " ++
         "counted"
     , kind := .interpretive
     , source :=
@@ -1425,24 +1446,24 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .worksOfLawMeansWorksGenerally =>
-    { label := "Paul's ἔργα νόμου denotes human works in general"
+    { label := "Paul's ‘works of the law’ (ἔργα νόμου) means human works in general"
     , kind := .linguistic
     , source := reformedWorksOfLawSource }
 
-/-- The Reformed reading of the disputed premise. -/
+/-- The Reformed sources for the disputed readings. -/
 def reformedCite : Claim → AtomMeta
   | .worksOfLawMeansWorksGenerally =>
-    { label := "Paul's ἔργα νόμου denotes human works in general, not boundary markers"
+    { label := "Paul's ‘works of the law’ means human works in general, not boundary markers"
     , kind := .linguistic
     , source := reformedWorksOfLawSource }
   | c => baseCite c
 
-/-- The New Perspective's reading of the disputed premise: ἔργα νόμου denotes
-the covenant boundary markers, so Paul is not addressing human effort in
-general. -/
+/-- The New Perspective's source for its reading: "works of the law" (ἔργα νόμου)
+means the practices that marked Israel off, so Paul is not speaking of human
+effort in general. -/
 def newPerspectiveCite : Claim → AtomMeta
   | .worksOfLawMeansWorksGenerally =>
-    { label := "Paul's ἔργα νόμου denotes Jewish covenant boundary markers, not works in general"
+    { label := "Paul's ‘works of the law’ means the Jewish boundary markers, not works in general"
     , kind := .linguistic
     , source :=
         { primary := .work dunnNewPerspective .whole
@@ -1457,11 +1478,11 @@ def newPerspectiveCite : Claim → AtomMeta
         , confidence := .disputed } }
   | c => baseCite c
 
-/-- Hays's reading of the genitive: πίστις Χριστοῦ is Christ's own
-faithfulness. Everything else as `baseCite`. -/
+/-- Hays's reading: "faith of Christ" (πίστις Χριστοῦ) is Christ's own faithfulness.
+Everything else as in `baseCite`. -/
 def subjectiveGenitiveCite : Claim → AtomMeta
   | .pistisChristouObjective =>
-    { label := "πίστις Χριστοῦ in Galatians 2:16 means Christ's own faithfulness"
+    { label := "In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means Christ's faithfulness"
     , kind := .linguistic
     , source :=
         { primary := .work haysFaithOfJesusChrist .whole
@@ -1470,9 +1491,9 @@ def subjectiveGenitiveCite : Claim → AtomMeta
         , confidence := .disputed } }
   | c => baseCite c
 
-/-- Jervell's reading of Luke-Acts: what Acts 15 withholds from gentiles is
+/-- Jervell's reading of Luke and Acts: what Acts 15 does not lay on gentiles is
 Israel's law as a mark of belonging, and the law is not refused as a means of
-salvation. Everything else as `baseCite`. -/
+salvation. Everything else as in `baseCite`. -/
 def lawObservantLukeCite : Claim → AtomMeta
   | .acts15YokeIsLawAsCondition =>
     { label := "The yoke of Acts 15:10 is Israel's law laid on gentiles, not the law as such"
@@ -1484,12 +1505,12 @@ def lawObservantLukeCite : Claim → AtomMeta
         , confidence := .disputed } }
   | c => baseCite c
 
-/-- The critical view of authorship: Ephesians and Titus are not by Paul, and
-1 and 2 Peter not by Peter. Each atom is cited to a scholar who holds that view
-of that letter, with Ehrman for the case across all four. Marshall's mediating
-view of the Pastorals — written by Paul's circle after his death, without
-intent to deceive — is cited with the critical side, because it too denies that
-Paul wrote Titus. -/
+/-- The critical view of authorship: Ephesians and Titus are not by Paul, and 1 and
+2 Peter are not by Peter. Each claim is cited to a scholar who holds that view
+of that letter, with Ehrman for the case across all four. Marshall's middle view
+of the Pastoral letters, that they were written by Paul's circle after his death
+without intent to deceive, is cited with the critical side, because it too
+denies that Paul wrote Titus. -/
 def criticalAuthorshipCite : Claim → AtomMeta
   | .ephesiansIsPauline =>
     { label := "Ephesians was written by a follower of Paul, not by Paul"
@@ -1525,9 +1546,10 @@ def criticalAuthorshipCite : Claim → AtomMeta
         , confidence := .disputed } }
   | c => baseCite c
 
-/-- The New Perspective's critics: Second Temple Judaism was not uniformly
-covenantal nomism, because final vindication according to works was widely
-held. Gathercole primary, the *Variegated Nomism* volume in support. -/
+/-- The critics of the New Perspective: Judaism in Paul's day was not uniformly "in
+by grace, staying in by obedience", because final vindication according to works
+was widely held. Gathercole is the main source, with the volume edited by
+Carson, O'Brien and Seifrid in support. -/
 def criticsCite : Claim → AtomMeta
   | .secondTempleCovenantalNomism =>
     { label := "Second Temple Judaism also held final vindication according to works"
@@ -1539,12 +1561,12 @@ def criticsCite : Claim → AtomMeta
         , confidence := .disputed } }
   | c => reformedCite c
 
-/-- The Tridentine reading of what justification is: "not remission of sins
-merely, but also the sanctification and renewal of the inward man". Everything
-else as `baseCite`. -/
+/-- Trent's account of what justification is: "not remission of sins merely, but
+also the sanctification and renewal of the inward man". Everything else as in
+`baseCite`. -/
 def tridentineCite : Claim → AtomMeta
   | .justificationIsForensicOnly =>
-    { label := "Justification is not forensic only: it renews the inward man"
+    { label := "Justification is not a verdict only: it renews the inward man"
     , kind := .theological
     , source :=
         { primary := .work tannerDecrees
@@ -1553,12 +1575,12 @@ def tridentineCite : Claim → AtomMeta
         , confidence := .wellSupported } }
   | c => baseCite c
 
-/-- The Finnish reading of Luther: justification is not forensic only, because
+/-- The Finnish reading of Luther: justification is not a verdict only, because
 Christ himself is present in faith and is the believer's righteousness.
-Everything else as `reformedCite`. -/
+Everything else as in `reformedCite`. -/
 def finnishCite : Claim → AtomMeta
   | .justificationIsForensicOnly =>
-    { label := "Justification is not forensic only: Christ is present in faith"
+    { label := "Justification is not a verdict only: Christ is present in faith"
     , kind := .theological
     , source :=
         { primary := .work mannermaaChristPresentInFaith .whole
@@ -1566,11 +1588,11 @@ def finnishCite : Claim → AtomMeta
         , confidence := .disputed } }
   | c => reformedCite c
 
-/-- The apocalyptic reading: the genitive is subjective, and it is Campbell's
-reason for reading it so that the citation records. -/
+/-- The apocalyptic reading: "faith of Christ" is Christ's own faithfulness. The
+source recorded is Campbell's reason for reading it so. -/
 def apocalypticCite : Claim → AtomMeta
   | .pistisChristouObjective =>
-    { label := "πίστις Χριστοῦ is Christ's faithfulness, the means of God's deliverance"
+    { label := "‘Faith of Christ’ is Christ's own faithfulness, the means of God's rescue"
     , kind := .linguistic
     , source :=
         { primary := .work campbellDeliveranceOfGod .whole
