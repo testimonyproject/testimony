@@ -3,6 +3,12 @@
 Two kinds of expertise make this project work, and **you only need one of
 them**.
 
+The project is two things, and a contribution serves one or both. It is a guide
+for people reading an English Bible, in language precise enough that a
+theologian can work with it. And it is a code library for encoding arguments and
+checking them for consistency. [Writing for the reader](./writing-for-readers.md)
+says what the first asks of anything you write.
+
 ## If you know theology or biblical studies (no Lean required)
 
 This is the contribution the project most needs, and it does not require
@@ -154,3 +160,48 @@ second time.
 
 See the [style guide](./style-guide.md) for conventions, and
 [Encoding arguments](./logic.md) for how to write a new one.
+
+## Pull requests and review
+
+Much of the work here is done with Claude Code, and a pull request should be
+reviewed by someone other than its author. GitHub does not let an author
+approve their own pull request, so who the author is matters.
+
+**Who authors a pull request today.** A pull request opened from a Claude Code
+session, on the web or in a terminal, is opened with the signed-in person's own
+GitHub account. That person is its author and cannot approve it. The commits
+carry a `Co-Authored-By: Claude` line, which records who wrote them and does
+not change who the author of the pull request is.
+
+**Claude cannot be added to the organisation as a member.** There is no Claude
+user account on GitHub to invite. Claude's identity on GitHub is the
+[Claude GitHub App](https://github.com/apps/claude), which an organisation
+owner installs on the organisation and grants this repository.
+
+**Routes by which the App is the author.** Each needs the App installed.
+
+- *Claude in Slack (Claude Tag).* Anthropic's documentation states that pull
+  requests opened this way "show the Claude GitHub App as the author". It is a
+  Team and Enterprise feature that an owner sets up. This is the route the
+  documentation vouches for.
+- *The GitHub Action, [`anthropics/claude-code-action`][action].* Mention
+  `@claude` in an issue or a pull-request comment, and Claude commits to a
+  branch as the App. By default it does not open the pull request: it posts a
+  link, and whoever clicks the link becomes the author. The documentation does
+  not describe a supported way to have the action open the pull request
+  itself, so no workflow for it is committed here. If one is added, test who
+  GitHub records as the author before relying on it.
+
+**A route that needs no setup.** Have a second maintainer, or the maintainer
+who did not start the session, review and approve. Branch protection on `main`
+with one required approval makes that the rule, and it works whoever the author
+is, as long as the author is not the only maintainer.
+
+**Review by Claude.** `REVIEW.md` at the repository root says what a review
+here must check. Claude Code's managed Code Review reads it when an owner has
+enabled it for the organisation (a Team and Enterprise feature). Its reviews
+are comments: they never approve or block a pull request, so they do not
+replace a maintainer's approval. The local `/code-review` command reads
+`CLAUDE.md` and not `REVIEW.md`.
+
+[action]: https://github.com/anthropics/claude-code-action

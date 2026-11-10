@@ -11,9 +11,10 @@ things. This is the workflow for improving one, learned on sola fide (the
 `Gospel`, `Definition` and `Hearings` modules), where it moved headline verdicts
 in both directions.
 
-The goal is a page a theologian or a lay Christian can follow, and a verdict
-they can trust because nobody tuned it. Everything below serves one or the
-other.
+The goal is a page a lay Christian with an English Bible can follow, exact
+enough that a theologian can work with it, and a verdict both can trust because
+nobody tuned it. Everything below serves one or the other. The prose itself is
+held to the `writing-for-readers` skill.
 
 ## 1 — Start from the reader's question
 
