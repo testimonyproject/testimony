@@ -219,8 +219,10 @@ by the main session.
 
 - `.claude/rules/lean.md` — the Lean gotchas, loaded when a `.lean` file is in
   play
-- `REVIEW.md` — what a review of a pull request here must check; read by
-  Claude Code's managed Code Review
+- `REVIEW.md` — what a review of a pull request here must check. Follow it
+  whenever you review a change, by `/code-review` or in
+  `.github/workflows/claude-code-review.yml`; Claude Code's managed Code Review
+  reads it by itself
 - `.claude/settings.json` — the hooks: the linter after each edit, and
   `.claude/hooks/session-start.sh` at the start of a cloud session
 
