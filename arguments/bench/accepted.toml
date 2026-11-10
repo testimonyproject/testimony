@@ -17,3 +17,63 @@
 # adds count: once it is merged, its entries are in the base, and accept
 # nothing for the changes after it. Remove them whenever convenient.
 # See .claude/skills/optimising-the-engine.
+
+[[accept]]
+benchmark = "table: sola fide, first six rows, 90 cells"
+metric = "time"
+up_to = 0.45
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: 90 cells where it was 72."
+
+[[accept]]
+benchmark = "table, certified: sola fide, first six rows, 90 cells"
+metric = "time"
+up_to = 0.45
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: 90 cells where it was 72."
+
+[[accept]]
+benchmark = "table, prepared: sola fide, first six rows, 90 cells"
+metric = "time"
+up_to = 0.45
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: 90 cells where it was 72."
+
+[[accept]]
+benchmark = "table, pruned: sola fide, first six rows, 90 cells"
+metric = "time"
+up_to = 0.45
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: 90 cells where it was 72."
+
+[[accept]]
+benchmark = "supports: sola fide, 225 cells"
+metric = "time"
+up_to = 0.75
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: 225 cells where it was 144."
+
+[[accept]]
+benchmark = "supports, certified: sola fide, 225 cells"
+metric = "time"
+up_to = 0.75
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: 225 cells where it was 144."
+
+[[accept]]
+benchmark = "part of: sola fide, 225 cells"
+metric = "time"
+up_to = 0.60
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: 225 cells where it was 144."
+
+[[accept]]
+benchmark = "part of, certified: sola fide, 225 cells"
+metric = "time"
+up_to = 0.60
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: 225 cells where it was 144."
+
+[[accept]]
+benchmark = "cross cells, searched: sola fide against Mark 7, 75 cells"
+metric = "time"
+up_to = 0.40
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: 75 cells where it was 60."
+
+[[accept]]
+benchmark = "checks: AIF, every dispute"
+metric = "time"
+up_to = 0.35
+reason = "John's case, Aquinas on John 6:29 and Luther's answer joined the sola fide dispute (#86): fifteen parties, not twelve. The benchmark does the same work per cell over more cells: the sola fide graph and the Howell hearing that embeds it each gained three parties."
