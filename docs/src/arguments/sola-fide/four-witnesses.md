@@ -4,12 +4,11 @@
 # Four witnesses: Paul, Luke, Acts and John
 
 
-The Reformed case reaches "through faith" by four routes, called *strands*.
-Each begins from a different speaker: Paul, Jesus as Luke reports him, Peter at
-Jerusalem, and Jesus as John reports him. Each rests on its own texts, and on a
-reading of them that the conclusion needs. And each has at least one such
-reading that a scholar cited here denies. This chapter takes them in turn, then
-asks what they show together.
+The first chapter named the four strands. Each begins from a different
+speaker: Paul, Jesus as Luke reports him, Peter at Jerusalem, and Jesus as John
+reports him. Each rests on its own texts, and on a reading of them that the
+conclusion needs. This chapter takes them in turn, then asks what they show
+together.
 
 ### Paul
 
@@ -19,14 +18,14 @@ believers to be circumcised as well as to believe:
 > "A person is not justified by works of the law but through faith in Jesus
 > Christ" (Galatians 2:16).
 
-Two questions about this verse carry the strand. The first is what "works of
-the law" (ἔργα νόμου) means. The traditional answer is human works in general.
-Dunn and Wright, building on Sanders, answer that it means what the law
-required of Israel as a people set apart, seen above all in the practices that
-marked Jews off from gentiles: circumcision, food laws and the sabbath. Their
-reading is known as the New Perspective on Paul. Only on the first answer does
-refusing circumcision mean refusing every work as a requirement
-(`worksOfLawMeansWorksGenerally`).
+Two questions about this verse carry the strand. The first is what "works of the
+law" (ἔργα νόμου) means. The traditional answer, Calvin's and among modern
+scholars Westerholm's, is human works in general. Dunn and Wright, building on
+Sanders, answer that it means what the law required of Israel as a people set
+apart, seen above all in the practices that marked Jews off from gentiles:
+circumcision, food laws and the sabbath. Their reading is known as the New
+Perspective on Paul. Only on the first answer does refusing circumcision mean
+refusing every work as a requirement (`worksOfLawMeansWorksGenerally`).
 
 The second question is what "faith in Jesus Christ" (πίστις Χριστοῦ) means:
 our faith in Christ, or Christ's own faithfulness, as Hays holds. Only on the
@@ -109,13 +108,13 @@ not see life", with Chrysostom's reading of it.
 
 ## What the four show together
 
-The case does not hang on any one disputed reading. Take any one away and the
+The case does not hang on any one of these readings. Take any one away and the
 other strands still reach the conclusion (`worksOfLaw_not_load_bearing`,
 `sozo_not_load_bearing`, `acts15Yoke_not_load_bearing`,
 `believing_as_trust_not_load_bearing`). Acts and John each reach it with every
-other strand's disputed reading left out
+other strand's reading left out
 (`apostolic_strand_survives_paul_and_luke`,
-`johannine_strand_survives_the_other_three`). Only when a disputed reading is
+`johannine_strand_survives_the_other_three`). Only when such a reading is
 taken from every strand at once does sola fide fail to follow
 (`lexical_premises_jointly_load_bearing`).
 
@@ -156,30 +155,28 @@ Seifrid, deny Sanders' starting point: Jewish texts of the period also speak of
 final vindication according to works, so the demand Paul refuses is a demand
 for obedience (`criticsLine`).
 
-On the critics' history, Paul alone carries sola fide
+On the critics' history, Paul's strand by itself reaches sola fide
 (`critics_carry_the_pauline_strand`). On Sanders', he does not
 (`sanders_costs_the_pauline_strand`). Whether Paul's strand reaches sola fide
-depends, in the end, on what Judaism in Paul's day taught about works.
+depends on what Judaism in Paul's day taught about works.
 
 ## Who wrote the letters
 
 Ephesians, Titus and 1 and 2 Peter are each disputed as to author, and each
 dispute is recorded from both sides: Hoehner and Lincoln on Ephesians; Mounce,
-Dibelius–Conzelmann and Marshall on the Pastorals; Jobes and Achtemeier on 1
-Peter; Schreiner and Bauckham on 2 Peter; Ehrman across all four. Granting every
-critical conclusion costs the case nothing (`authorship_not_load_bearing`),
-because it reads these letters as Scripture, not as the testimony of a named
-apostle. It does cost them their use as evidence of what *Paul* meant by
-"works", and that is why that premise is argued from Romans 4, 9 and 11, where
-the authorship is not in doubt.
+Dibelius–Conzelmann and Marshall on the Pastorals (1 and 2 Timothy and Titus);
+Jobes and Achtemeier on 1 Peter; Schreiner and Bauckham on 2 Peter; Ehrman
+across all four. Granting every critical conclusion costs the case nothing
+(`authorship_not_load_bearing`), because it reads these letters as Scripture,
+not as the testimony of a named apostle. It does cost them their use as evidence
+of what *Paul* meant by "works", and that is why that premise is argued from
+Romans 4, 9 and 11, where the authorship is not in doubt.
 
 ## The positions, written out
 
 
-Each position in the debate is written down as a list of premises, every one
-with its source. These are the positions heard so far:
+Besides the Reformed case, these positions are written out in this chapter:
 
-- **the Reformed case**, all four strands and the answer to James;
 - **the New Perspective** (Dunn, Wright), which reads "works of the law" as
   Israel's boundary markers;
 - **Hays**, who reads "faith of Christ" as Christ's own faithfulness;
@@ -191,30 +188,25 @@ with its source. These are the positions heard so far:
 - **the apocalyptic reading** (Martyn, Campbell);
 - and **Trent**.
 
-Beside them are variants of the Reformed case, each with one named premise
-taken out. They answer one question a reader keeps asking: does the case
-depend on this? Take the premise away and look. Either the conclusion still
-follows, or the checking names a reading on which it does not.
+Beside them are variants of the Reformed case. Each asks whether the case
+depends on one premise: with it taken out, either the conclusion still follows,
+or the checking names a way of taking the texts on which it does not.
 
 ## What follows, and what does not
 
 
 Each result takes one position and asks whether its conclusion follows from its
 premises. Where it does, the result says so. Where it does not, the result
-names a *reading*: a consistent way of taking the texts on which every premise
-holds and the conclusion fails. That reading is the rival position, written
-down, and a reader can check it verse by verse.
+names a consistent way of taking the texts on which every premise holds and the
+conclusion fails. That way of taking them is the rival position, written down,
+and a reader can check it verse by verse.
 
 Many results ask what the case depends on. A premise is taken out, everything
 else is kept, and the result says whether the conclusion still follows. If it
 does, the case never needed that premise.
 
-The central result is the one already met in the first chapter. The case needs
-a disputed reading from at least one strand, and does not need any particular
-one (`lexical_premises_jointly_load_bearing`). Acts and John each reach the
-conclusion with every other strand's disputed reading left out
-(`apostolic_strand_survives_paul_and_luke`,
-`johannine_strand_survives_the_other_three`).
+John's strand has more to answer than the others, and the next chapter takes
+it.
 
 
 ## How this is checked

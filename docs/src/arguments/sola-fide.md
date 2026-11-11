@@ -55,7 +55,9 @@ recur throughout:
 - A **premise** is something a position takes as given: a verse, or a claim
   about what a word in it means.
 - A **reading** is a premise about what a text means where readers disagree.
-- A **rating** says how well a premise is supported among the sources cited.
+- A **step** is an inference from some premises, its *starting points*, to a
+  conclusion. It is rated like a premise.
+- A **rating** says how well a premise or a step is supported among the sources cited.
   It is `disputed` when a cited source grants the evidence and still denies the
   claim; above that come `plausible`, `wellSupported` and `consensus`.
 
@@ -82,9 +84,9 @@ them apart, because the positions disagree about different parts.
 
 Splitting the claim also shows what the hard questions are for. Grace and "not
 by works" follow from the verses that say so in as many words, once James is
-answered, with every disputed reading taken away
-(`grace_and_works_rest_on_no_lexical_premise`). The disputed readings decide
-one thing only: *through faith*.
+answered, with every one of those readings taken away
+(`grace_and_works_rest_on_no_lexical_premise`). Those readings decide one
+thing only: *through faith*.
 
 ## Four witnesses
 
@@ -99,9 +101,11 @@ The Reformed case reaches "through faith" by four routes, called *strands*:
 - **Jesus, in John**: "this is the work of God, that you believe in him whom he
   has sent" (John 6:29).
 
-Each rests on its own texts, and on a reading of them that a scholar cited here
-denies. The case does not hang on any one of those readings: take any one away
-and the others still reach the conclusion. Only when a disputed reading is
+Each rests on its own texts and on a reading of them that the conclusion needs.
+For Paul, Peter and John that reading is one a scholar cited here denies; for
+Luke it is that "saved" at 7:50 means saved, which no scholar found denies. The
+case does not hang on any one of those readings: take any one away
+and the others still reach the conclusion. Only when such a reading is
 taken from every strand at once does sola fide fail to follow
 (`lexical_premises_jointly_load_bearing`). The next chapter takes the four in
 turn, and John has a chapter of his own.
@@ -121,8 +125,9 @@ chapters keep separate: what justification *is*. Three answers are heard.
   Christ himself is present in the believer, so justification is not a verdict
   *and nothing more*.
 
-The Finnish position denies that justification is only a verdict, and still
-establishes sola fide (`forensic_justification_not_load_bearing`). Trent
+The Reformed case with the Finnish denial added, that justification is not only
+a verdict, still establishes sola fide
+(`forensic_justification_not_load_bearing`). Trent
 denies it and does not. So denying the verdict-only account is not, by itself,
 what separates Trent from the Reformers. What Trent's objection needs is its
 fuller definition: justification includes the inner renewal, that renewal grows
@@ -184,8 +189,8 @@ what Paul's word means, cannot be defended against them
 Everything else ties. Every other position rests on something rated `disputed`,
 and every attack between Trent and a Reformed strand runs in both directions.
 Luke's case, Paul's gospel and Trent can each be defended, and none is forced.
-John's case ties with Trent and with Aquinas, as the other strands tie with
-their rivals.
+John's case ties with Trent, the apocalyptic reading, Aquinas and Chrysostom, as
+the other strands tie with their rivals.
 
 ## The questions the later chapters take
 

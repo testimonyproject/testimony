@@ -4,9 +4,9 @@
 # Weighing the positions
 
 
-The chapters so far take one position at a time and ask what follows from it.
-This one asks the question a reader has been waiting for: when the positions
-are set against each other, which are left standing?
+The earlier chapters each heard one question: Trent against Paul's gospel,
+James 2:24, Jesus' words, baptism. This one hears all the positions at once and
+asks which are left standing.
 
 Seventeen positions are heard.
 
@@ -36,6 +36,9 @@ is worked out from the two positions' premises and checked by machine.
   or step. Ratings run from `disputed`, the lowest, through `plausible` and
   `wellSupported`, to `consensus`. Denying a claim counts as `disputed`.
 - **Tie.** Two positions defeat each other. A reader may hold either.
+- **Meets.** One position meets another when they contradict each other, so
+  that one defeats the other unless it is the weaker. Where both defeat, they
+  meet "in both directions".
 - **Forced** (also: *prevails outright*). The position must be accepted however
   every tie is settled. Either nothing defeats it, or every position that
   defeats it is itself defeated by a forced position. The technical name for the
@@ -43,9 +46,10 @@ is worked out from the two positions' premises and checked by machine.
 - **Can be defended.** Some consistent set of positions includes it and answers
   every attack on its members. A set is consistent when no member defeats
   another.
-- **Not forced.** Some consistent set of positions leaves it out. Not forced
-  does not mean false. It means the debate, as argued here, cannot make a reader
-  accept it.
+- **Not forced.** Some set of positions that can be defended, and is as large
+  as it can be, leaves it out. Not forced does not mean false. It means the
+  debate, as argued here, cannot make a reader accept it. The verdicts below
+  that say *not forced* use this test; *forced* means the test above.
 - **Cannot be defended.** No consistent set of positions can include it and
   answer its attackers.
 
@@ -59,7 +63,8 @@ Almost every position here has a weakest link rated `disputed`.
   justification and sanctification, which Trent condemns.
 - Trent rests on its definition of justification, which the Westminster
   Confession denies.
-- The apocalyptic reading denies a claim, and a denial ranks at the bottom.
+- The apocalyptic reading denies a claim, and a premise that denies a claim is
+  rated `disputed` by rule.
 
 Between such positions no rating blocks an attack. The outcome depends only on
 who contradicts whom.
@@ -128,7 +133,8 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
   neither conflicts with Trent's case as Trent states it, whose definition,
   taken as it stands, says nothing about the word. Trent taken as a claim about
   Paul's word also meets every position Trent meets, in both directions: the
-  four strands, the apocalyptic reading and Paul's gospel.
+  four strands, the apocalyptic reading, Paul's gospel and the Reformed answer
+  to Chrysostom.
 
 ## What follows
 
@@ -180,21 +186,21 @@ not about Paul's word, and it names the one step on which that claim depends.
 
 ### An absence
 
-Luke's case is attacked by no one but Trent, however Trent's
-definition is taken, because no source cited here argues that "saved" (σῴζω) at
-Luke 7:50 means healed. That absence is also the premise's rating. It is
-`wellSupported`, not `disputed`: a search for a scholar arguing the healing
-sense *at 7:50* found none, and at 7:50 no one is ill. The saying follows "your
-sins are forgiven". Marshall's commentary on the Greek text says the same: the
-saying refers mainly to healing elsewhere in Luke, and is used here "in a case
-where physical healing is not involved". The rating is not `consensus`, because
-the same words mean "made you well" at Luke 8:48, 17:19 and 18:42. One older
-lexicon, Thayer's, lists 7:50 with the healing uses without arguing it. It is
-not yet cited, and whether an unargued listing should lower the rating is an
-open question. A cited argument for the healing reading would attack Luke's case
-and lower the rating.
+No source cited here argues that "saved" (σῴζω) at Luke 7:50 means healed, so no
+position attacks Luke's case at that reading. Trent, however its definition is
+taken, and Chrysostom attack it at the step to "faith suffices". That absence is
+also the premise's rating. It is `wellSupported`, not `disputed`: a search for a
+scholar arguing the healing sense *at 7:50* found none, and at 7:50 no one is
+ill. The saying follows "your sins are forgiven". Marshall's commentary on the
+Greek text says the same: the saying refers mainly to healing elsewhere in Luke,
+and is used here "in a case where physical healing is not involved". The rating
+is not `consensus`, because the same words mean "made you well" at Luke 8:48,
+17:19 and 18:42. One older lexicon, Thayer's, lists 7:50 with the healing uses
+without arguing it. It is not yet cited, and whether an unargued listing should
+lower the rating is an open question. A cited argument for the healing reading
+would attack Luke's case and lower the rating.
 
-### An objection answered in advance
+### An objection built in, not heard
 
 "Her sins, which are many, are
 forgiven—for she loved much" (7:47) is the verse a rival would use to make love,
@@ -229,42 +235,27 @@ it. A position for Hays alone, one for the *Joint Declaration*, and one for the
 Finnish reading of Luther would each be new arguments to weigh. So would a cited
 argument that Paul's "justify", granted to be a courtroom word, still means
 renewal: none was found, and the rating of the argument from the word says so.
-Romans 4 as an argument about what God does (`romansFourCase`) is answered
-where Trent's definition is examined, not added here. It meets Trent exactly
+Romans 4 as an argument about what God does (`romansFourCase`) is set against
+Trent in the chapter "What Trent means by justification", and is not added to
+this debate. It meets Trent exactly
 where Paul's gospel does, at Trent's definition, from a step rated `disputed`,
 and a position of its own would be a second argument to weigh.
-
-### Why these do not conflict
-
-The absences above are worked out by machine, and a machine's working gives no
-reason. The readings below do. Each is a way of holding one position that leaves
-a premise or conclusion of another standing, and each result checks that the
-reading holds everything the first position holds.
-
-### Why Luke's case stands against Trent
-
-The verdicts above say that Luke's case and Trent defeat each other, and that
-the debate chooses neither. This says *why*, claim by claim. The two part over
-what justification *is*. Trent defines it as the renewal of the inward person by
-charity poured in, and from that definition it follows that faith without
-charity does not suffice. Luke's words say that her faith saved her.
 
 ## Two narrower questions
 
 
-The full debate over sola fide puts a crowded question: the Reformers, Trent,
-and several schools of modern scholarship all at once. A reader usually wants
-something narrower. Two questions come up again and again. Each is answered here
-by hearing the same debate with some positions left out. Nothing is argued
-again. Every defeat the full debate established is kept; some positions are
-simply not heard.
+The full debate hears the Reformers, Trent and several schools of modern
+scholarship at once. The two hearings below each set some positions aside and
+keep every defeat the full debate established. Nothing is argued again.
 
 ### What did the Reformation itself decide?
 
-The sixteenth-century debate was
-between Rome and the Reformers, before anyone had proposed a New Perspective on
-Paul or an apocalyptic reading of him. Heard that way (`reformationAlone`), with
-the modern evidence cited for each side, one thing is forced: Paul's "justify"
+The sixteenth-century debate was between Rome and the Reformers, before anyone
+had proposed a New Perspective on Paul or an apocalyptic reading of him. Heard
+that way (`reformationAlone`), the apocalyptic reading, Sanders and his
+critics, and Jervell are set aside. Aquinas and Luther, and Chrysostom and the
+Reformed answer to him, are still heard, and modern scholars are still cited
+for the premises of the positions that remain. One thing is forced: Paul's "justify"
 (δικαιόω) does not mean the renewal of the inward person. So Trent cannot claim
 that its definition is what Paul's word means. What fails there is not
 Augustine's explanation of the word, which he certainly gave, but the step from
@@ -273,17 +264,17 @@ a Latin explanation to what the Greek word means.
 Trent's definition taken as a claim about what God does is not touched by
 anything about the word. There Trent and the Reformers tie: each defeats the
 other, and the ratings, all `disputed`, cannot choose. The Reformation debate,
-heard alone, comes down to what justification *is*, which is the question
-`whatTrentsDefinitionClaims` examines.
+heard alone, comes down to what justification *is*, which is the question of
+the chapter "What Trent means by justification" (`whatTrentsDefinitionClaims`).
 
 ### If Trent were not heard, would Scripture establish sola fide?
 
-A Protestant reader will naturally ask this. Heard without Trent (`withoutTrent`), two things
-are forced: the meaning of Paul's word; and Paul's gospel, that justification is
-not the renewal of the inward person. *Faith alone* is not forced, from Paul,
-from Peter or from John, and neither is Luke's "your faith has saved you", that
-faith suffices. Five disagreements remain with Rome left out: three in modern
-New Testament scholarship, and two older.
+Heard without Trent (`withoutTrent`), two things are forced: the meaning of
+Paul's word; and Paul's gospel, that justification is not the renewal of the
+inward person. *Faith alone* is not forced, from Paul, from Peter or from John,
+and neither is Luke's "your faith has saved you", that faith suffices. Five
+disagreements remain with Trent left out, though Aquinas, a Catholic reader, is
+still heard: three in modern New Testament scholarship, and two older.
 
 - Campbell's apocalyptic reading takes "faith of Christ" (πίστις Χριστοῦ) as
   Christ's own faithfulness, and meets Paul's case there.
@@ -298,7 +289,8 @@ New Testament scholarship, and two older.
   them. The Reformed answer, that the obedience those texts require is
   sanctification, the fruit of faith, meets him and is met in return.
 
-Each of these is a question about what a text says. Leaving Rome out does not
+Four of these are questions about what a text says, and one, Sanders against
+his critics, about what Judaism in Paul's day taught. Leaving Trent out does not
 make them go away.
 
 ### Augustine, in both hearings
@@ -1576,6 +1568,13 @@ theorem trent_on_pauls_word_does_not_defeat_lexical : ¬Defeats
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+##### Why these do not conflict
+
+The absences above are worked out by machine, and a machine's working gives no
+reason. The readings below do. Each is a way of holding one position that leaves
+a premise or conclusion of another standing, and each result checks that the
+reading holds everything the first position holds.
+
 <a id="apocalypticWithFaithReading"></a>
 **`apocalypticWithFaithReading`**
 
@@ -2529,14 +2528,14 @@ Why *Paul's gospel (Galatians 1), against justification as renewal* defeats *Tre
 **Trent can be defended.** A consistent set of positions includes it, with
 Sanders and Jervell, and answers every attack. Every position that defeats
 Trent, Trent defeats in return: Paul's case, Luke's, Peter's, John's, Paul's
-gospel and the apocalyptic reading. The ratings, all at the bottom, break no
-tie.
+gospel, the apocalyptic reading, and the Reformed answer to Chrysostom. The
+ratings, all at the bottom, break no tie.
 
 The arguments about Paul's word do not attack it. Trent's definition, taken as
 it stands, says nothing about what "justify" means.
 
 What this does not claim: that Trent prevails. It is not forced
-(`trent_not_forced`). It is in a tie with each of those six positions.
+(`trent_not_forced`). It is in a tie with each of those seven positions.
 
 ```lean
 theorem trent_defensible : Framework.CredulouslyAccepted
@@ -3276,6 +3275,14 @@ theorem gospel_not_forced : ¬Framework.SkepticallyAccepted
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+##### Where Luke's case and Trent part
+
+The verdicts above say that Luke's case and Trent defeat each other, and that
+the debate chooses neither. This says *why*, claim by claim. The two part over
+what justification *is*. Trent defines it as the renewal of the inward person by
+charity poured in, and from that definition it follows that faith without
+charity does not suffice. Luke's words say that her faith saved her.
+
 <a id="whyTheDominicalCaseStandsAgainstTrent"></a>
 **`whyTheDominicalCaseStandsAgainstTrent`**
 
@@ -3312,8 +3319,9 @@ faith sufficed. Grant that it did, and Trent's definition cannot stand.
 
 The positions of the sixteenth-century debate: the four Reformed strands, Paul's
 gospel, the two arguments about Paul's word, Trent as it states its definition
-and Trent taken as a claim about Paul's word, and the exchange over John 6:29
-between Aquinas and Luther. Not heard: the apocalyptic reading, Sanders and his
+and Trent taken as a claim about Paul's word, the exchange over John 6:29
+between Aquinas and Luther, and Chrysostom on John 3:36 with the Reformed
+answer to him. Not heard: the apocalyptic reading, Sanders and his
 critics, and Jervell.
 
 ```lean
