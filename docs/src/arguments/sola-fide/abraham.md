@@ -240,17 +240,15 @@ Maccabees 2:52 and Sirach 44:20, and the reading 1 Maccabees gives Genesis 15:6,
 that what was counted was credited for his faithfulness when tested, the
 righteousness counted to Abraham is tied to his obedience.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{112} \\
-\text{(2)} \quad &amp; P_{117} \\
-\text{(3)} \quad &amp; P_{118} \\
-\text{(4)} \quad &amp; P_{121} \\
-\text{(5)} \quad &amp; (P_{112} \land P_{117} \land P_{118} \land P_{121}) \rightarrow \lnot P_{116} \\[4pt]
-\vdash \quad &amp; \lnot P_{116}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-112}{P_{112}}\\) — Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness
+- (2) \\(\href{claims.html#claim-117}{P_{117}}\\) — Genesis 22:16–18, 26:5: blessed because Abraham obeyed
+- (3) \\(\href{claims.html#claim-118}{P_{118}}\\) — 1 Maccabees 2:52, Sirach 44:20: Abraham found faithful in trial, and it was credited to him as righteousness
+- (4) \\(\href{claims.html#claim-121}{P_{121}}\\) — The righteousness counted at Genesis 15:6 was credited for Abraham's faithfulness when tested
+- (5) \\((\href{claims.html#claim-112}{P_{112}} \land \href{claims.html#claim-117}{P_{117}} \land \href{claims.html#claim-118}{P_{118}} \land \href{claims.html#claim-121}{P_{121}}) \rightarrow \lnot \href{claims.html#claim-116}{P_{116}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-116}{P_{116}}\\) — *at issue, the denial of:* Abraham was counted righteous on believing, with no work as a condition
+
 </div>
 
 <a id="secondTempleAbraham"></a>
@@ -258,17 +256,15 @@ righteousness counted to Abraham is tied to his obedience.
 
 **The reading tied to Genesis 22**, as a position.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{112} \\
-\text{(2)} \quad &amp; P_{117} \\
-\text{(3)} \quad &amp; P_{118} \\
-\text{(4)} \quad &amp; P_{121} \\
-\text{(5)} \quad &amp; (P_{112} \land P_{117} \land P_{118} \land P_{121}) \rightarrow \lnot P_{116} \\[4pt]
-\vdash \quad &amp; \lnot P_{116}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-112}{P_{112}}\\) — Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness
+- (2) \\(\href{claims.html#claim-117}{P_{117}}\\) — Genesis 22:16–18, 26:5: blessed because Abraham obeyed
+- (3) \\(\href{claims.html#claim-118}{P_{118}}\\) — 1 Maccabees 2:52, Sirach 44:20: Abraham found faithful in trial, and it was credited to him as righteousness
+- (4) \\(\href{claims.html#claim-121}{P_{121}}\\) — The righteousness counted at Genesis 15:6 was credited for Abraham's faithfulness when tested
+- (5) \\((\href{claims.html#claim-112}{P_{112}} \land \href{claims.html#claim-117}{P_{117}} \land \href{claims.html#claim-118}{P_{118}} \land \href{claims.html#claim-121}{P_{121}}) \rightarrow \lnot \href{claims.html#claim-116}{P_{116}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-116}{P_{116}}\\) — *at issue, the denial of:* Abraham was counted righteous on believing, with no work as a condition
+
 </div>
 
 No premise here rests on scripture alone.
@@ -296,17 +292,15 @@ def genesisFifteenSource : Source
 ceremony of Genesis 15:12–17 and the reading of it as God's oath alone, Abraham
 was counted righteous with no work as a condition.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{112} \\
-\text{(2)} \quad &amp; P_{114} \\
-\text{(3)} \quad &amp; P_{113} \\
-\text{(4)} \quad &amp; P_{115} \\
-\text{(5)} \quad &amp; (P_{112} \land P_{114} \land P_{113} \land P_{115}) \rightarrow P_{116} \\[4pt]
-\vdash \quad &amp; P_{116}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-112}{P_{112}}\\) — Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness
+- (2) \\(\href{claims.html#claim-114}{P_{114}}\\) — Romans 4:10: righteousness was counted to Abraham before he was circumcised
+- (3) \\(\href{claims.html#claim-113}{P_{113}}\\) — Genesis 15:12, 17: Abram asleep; a fire pot and a torch pass between the pieces
+- (4) \\(\href{claims.html#claim-115}{P_{115}}\\) — The covenant of Genesis 15 binds God alone, by an oath on himself
+- (5) \\((\href{claims.html#claim-112}{P_{112}} \land \href{claims.html#claim-114}{P_{114}} \land \href{claims.html#claim-113}{P_{113}} \land \href{claims.html#claim-115}{P_{115}}) \rightarrow \href{claims.html#claim-116}{P_{116}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-116}{P_{116}}\\) — *at issue:* Abraham was counted righteous on believing, with no work as a condition
+
 </div>
 
 <a id="genesisFifteen"></a>
@@ -314,17 +308,15 @@ was counted righteous with no work as a condition.
 
 **The reading of the ceremony**, as a position.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{112} \\
-\text{(2)} \quad &amp; P_{114} \\
-\text{(3)} \quad &amp; P_{113} \\
-\text{(4)} \quad &amp; P_{115} \\
-\text{(5)} \quad &amp; (P_{112} \land P_{114} \land P_{113} \land P_{115}) \rightarrow P_{116} \\[4pt]
-\vdash \quad &amp; P_{116}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-112}{P_{112}}\\) — Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness
+- (2) \\(\href{claims.html#claim-114}{P_{114}}\\) — Romans 4:10: righteousness was counted to Abraham before he was circumcised
+- (3) \\(\href{claims.html#claim-113}{P_{113}}\\) — Genesis 15:12, 17: Abram asleep; a fire pot and a torch pass between the pieces
+- (4) \\(\href{claims.html#claim-115}{P_{115}}\\) — The covenant of Genesis 15 binds God alone, by an oath on himself
+- (5) \\((\href{claims.html#claim-112}{P_{112}} \land \href{claims.html#claim-114}{P_{114}} \land \href{claims.html#claim-113}{P_{113}} \land \href{claims.html#claim-115}{P_{115}}) \rightarrow \href{claims.html#claim-116}{P_{116}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-116}{P_{116}}\\) — *at issue:* Abraham was counted righteous on believing, with no work as a condition
+
 </div>
 
 No premise here rests on scripture alone.
@@ -350,14 +342,12 @@ def jamesIncreaseMeansDegreesSource : Source :=
 **James's increase, as degrees.** If James's "justified" means an increase of
 justice, justification has degrees.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{86} \\
-\text{(2)} \quad &amp; P_{86} \rightarrow P_{109} \\[4pt]
-\vdash \quad &amp; P_{109}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-86}{P_{86}}\\) — James's ‘justified’ (δικαιόω) means the increase of the justice received
+- (2) \\(\href{claims.html#claim-86}{P_{86}} \rightarrow \href{claims.html#claim-109}{P_{109}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-109}{P_{109}}\\) — *at issue:* Justification has degrees: the justified are still further justified
+
 </div>
 
 <a id="verdictOnJamesIncrease"></a>
@@ -367,19 +357,17 @@ justice, justification has degrees.
 degrees, with what an increase in James's word would mean. It concludes that
 James's "justified" does not mean an increase of justice.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{110} \\
-\text{(2)} \quad &amp; P_{48} \\
-\text{(3)} \quad &amp; (P_{110} \land P_{48}) \rightarrow P_{111} \\
-\text{(4)} \quad &amp; P_{30} \\
-\text{(5)} \quad &amp; (P_{30} \land P_{111}) \rightarrow \lnot P_{109} \\
-\text{(6)} \quad &amp; P_{32} \rightarrow P_{109} \\
-\text{(7)} \quad &amp; P_{86} \rightarrow P_{109} \\[4pt]
-\vdash \quad &amp; \lnot P_{86}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-110}{P_{110}}\\) — Deuteronomy 25:1, Proverbs 17:15: judges acquit the innocent and condemn the guilty
+- (2) \\(\href{claims.html#claim-48}{P_{48}}\\) — Romans 8:33–34: it is God who justifies — who is to condemn?
+- (3) \\((\href{claims.html#claim-110}{P_{110}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \href{claims.html#claim-111}{P_{111}}\\) — *would give:* A verdict acquits or condemns, and has no degrees
+- (4) \\(\href{claims.html#claim-30}{P_{30}}\\) — Justification is a verdict only: pardon and righteousness counted, not poured in
+- (5) \\((\href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-111}{P_{111}}) \rightarrow \lnot \href{claims.html#claim-109}{P_{109}}\\) — *would deny:* Justification has degrees: the justified are still further justified
+- (6) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-109}{P_{109}}\\) — *would give:* Justification has degrees: the justified are still further justified
+- (7) \\(\href{claims.html#claim-86}{P_{86}} \rightarrow \href{claims.html#claim-109}{P_{109}}\\) — *would give:* Justification has degrees: the justified are still further justified
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-86}{P_{86}}\\) — *at issue, the denial of:* James's ‘justified’ (δικαιόω) means the increase of the justice received
+
 </div>
 
 Grounded in scripture alone: Romans 8:33–34: it is God who justifies — who is to condemn?.
@@ -543,16 +531,14 @@ def weinfeldGrantSource : Source :=
 grant was, and Genesis 22:18 and 26:5, the grant to Abraham rewarded his
 obedience.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{115} \\
-\text{(2)} \quad &amp; P_{119} \\
-\text{(3)} \quad &amp; P_{117} \\
-\text{(4)} \quad &amp; (P_{115} \land P_{119} \land P_{117}) \rightarrow P_{120} \\[4pt]
-\vdash \quad &amp; P_{120}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-115}{P_{115}}\\) — The covenant of Genesis 15 binds God alone, by an oath on himself
+- (2) \\(\href{claims.html#claim-119}{P_{119}}\\) — A royal grant rewarded loyalty already shown
+- (3) \\(\href{claims.html#claim-117}{P_{117}}\\) — Genesis 22:16–18, 26:5: blessed because Abraham obeyed
+- (4) \\((\href{claims.html#claim-115}{P_{115}} \land \href{claims.html#claim-119}{P_{119}} \land \href{claims.html#claim-117}{P_{117}}) \rightarrow \href{claims.html#claim-120}{P_{120}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-120}{P_{120}}\\) — *at issue:* The grant to Abraham rewarded his obedience (Genesis 22:18; 26:5)
+
 </div>
 
 <a id="weinfeldOnAbraham"></a>
@@ -561,16 +547,14 @@ obedience.
 **Weinfeld, on Abraham**, as his own claims carry him: the grant to Abraham
 rewarded his obedience.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{115} \\
-\text{(2)} \quad &amp; P_{119} \\
-\text{(3)} \quad &amp; P_{117} \\
-\text{(4)} \quad &amp; (P_{115} \land P_{119} \land P_{117}) \rightarrow P_{120} \\[4pt]
-\vdash \quad &amp; P_{120}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-115}{P_{115}}\\) — The covenant of Genesis 15 binds God alone, by an oath on himself
+- (2) \\(\href{claims.html#claim-119}{P_{119}}\\) — A royal grant rewarded loyalty already shown
+- (3) \\(\href{claims.html#claim-117}{P_{117}}\\) — Genesis 22:16–18, 26:5: blessed because Abraham obeyed
+- (4) \\((\href{claims.html#claim-115}{P_{115}} \land \href{claims.html#claim-119}{P_{119}} \land \href{claims.html#claim-117}{P_{117}}) \rightarrow \href{claims.html#claim-120}{P_{120}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-120}{P_{120}}\\) — *at issue:* The grant to Abraham rewarded his obedience (Genesis 22:18; 26:5)
+
 </div>
 
 No premise here rests on scripture alone.
@@ -639,15 +623,13 @@ def kuruvillaSource : Source :=
 
 **The Aqedah's blessing, augmented for obedience** (Kuruvilla).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{112} \\
-\text{(2)} \quad &amp; P_{117} \\
-\text{(3)} \quad &amp; (P_{112} \land P_{117}) \rightarrow P_{122} \\[4pt]
-\vdash \quad &amp; P_{122}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-112}{P_{112}}\\) — Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness
+- (2) \\(\href{claims.html#claim-117}{P_{117}}\\) — Genesis 22:16–18, 26:5: blessed because Abraham obeyed
+- (3) \\((\href{claims.html#claim-112}{P_{112}} \land \href{claims.html#claim-117}{P_{117}}) \rightarrow \href{claims.html#claim-122}{P_{122}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-122}{P_{122}}\\) — *at issue:* The blessing of Genesis 22:16–18 was augmented because of Abraham's obedience
+
 </div>
 
 <a id="kuruvillaOnTheAqedah"></a>
@@ -656,15 +638,13 @@ def kuruvillaSource : Source :=
 **Kuruvilla, on the Aqedah**: the blessing of Genesis 22 was augmented
 because of Abraham's obedience.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{112} \\
-\text{(2)} \quad &amp; P_{117} \\
-\text{(3)} \quad &amp; (P_{112} \land P_{117}) \rightarrow P_{122} \\[4pt]
-\vdash \quad &amp; P_{122}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-112}{P_{112}}\\) — Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness
+- (2) \\(\href{claims.html#claim-117}{P_{117}}\\) — Genesis 22:16–18, 26:5: blessed because Abraham obeyed
+- (3) \\((\href{claims.html#claim-112}{P_{112}} \land \href{claims.html#claim-117}{P_{117}}) \rightarrow \href{claims.html#claim-122}{P_{122}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-122}{P_{122}}\\) — *at issue:* The blessing of Genesis 22:16–18 was augmented because of Abraham's obedience
+
 </div>
 
 No premise here rests on scripture alone.
@@ -706,15 +686,13 @@ def hahnSource : Source :=
 
 **The oath of the Aqedah, merited** (Hahn).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{112} \\
-\text{(2)} \quad &amp; P_{117} \\
-\text{(3)} \quad &amp; (P_{112} \land P_{117}) \rightarrow P_{123} \\[4pt]
-\vdash \quad &amp; P_{123}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-112}{P_{112}}\\) — Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness
+- (2) \\(\href{claims.html#claim-117}{P_{117}}\\) — Genesis 22:16–18, 26:5: blessed because Abraham obeyed
+- (3) \\((\href{claims.html#claim-112}{P_{112}} \land \href{claims.html#claim-117}{P_{117}}) \rightarrow \href{claims.html#claim-123}{P_{123}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-123}{P_{123}}\\) — *at issue:* The oath of Genesis 22:16–18 was merited by the binding of Isaac
+
 </div>
 
 <a id="hahnOnTheOath"></a>
@@ -723,15 +701,13 @@ def hahnSource : Source :=
 **Hahn, on the oath of Genesis 22**: the binding of Isaac merited the oath to
 bless the nations.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{112} \\
-\text{(2)} \quad &amp; P_{117} \\
-\text{(3)} \quad &amp; (P_{112} \land P_{117}) \rightarrow P_{123} \\[4pt]
-\vdash \quad &amp; P_{123}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-112}{P_{112}}\\) — Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness
+- (2) \\(\href{claims.html#claim-117}{P_{117}}\\) — Genesis 22:16–18, 26:5: blessed because Abraham obeyed
+- (3) \\((\href{claims.html#claim-112}{P_{112}} \land \href{claims.html#claim-117}{P_{117}}) \rightarrow \href{claims.html#claim-123}{P_{123}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-123}{P_{123}}\\) — *at issue:* The oath of Genesis 22:16–18 was merited by the binding of Isaac
+
 </div>
 
 No premise here rests on scripture alone.
@@ -935,7 +911,7 @@ theorem kuruvilla_does_not_reach_the_counting : ∀ (s : Standard),
 grant, Kuruvilla on the Aqedah, Hahn on its oath, and 1 Maccabees, the strongest
 known, which alone denies the step.
 
-**The rating, computed.** *Abraham, counted righteous before the covenant's sign (Genesis 15; Romans 4)* is cited at *well supported* (Rom 4:3-12; [`calvin-commentary-genesis-1847`](../../bibliography.md#calvin-commentary-genesis-1847), ad loc. Gen 22:15; [`calvin-commentaries-catholic-epistles`](../../bibliography.md#calvin-commentaries-catholic-epistles), ad loc. Jas 2:23; [`niehaus-gods-covenant-abraham-2013`](../../bibliography.md#niehaus-gods-covenant-abraham-2013), pp. 260–263; [`robertson-christ-covenants-1980`](../../bibliography.md#robertson-christ-covenants-1980); [`kline-kingdom-prologue-2006`](../../bibliography.md#kline-kingdom-prologue-2006)). Dissents encoded: *Weinfeld, The Covenant of Grant*, *1 Maccabees 2:52*, *Kuruvilla, The Aqedah*, *Hahn, Covenant, Oath, and the Aqedah*. The strongest known: *1 Maccabees 2:52*.
+**The rating, computed.** *Abraham, counted righteous before the covenant's sign (Genesis 15; Romans 4)* is cited at *well supported* (Rom 4:3-12; [Calvin 1847](../../bibliography.md#calvin-commentary-genesis-1847), ad loc. Gen 22:15; [Calvin](../../bibliography.md#calvin-commentaries-catholic-epistles), ad loc. Jas 2:23; [Niehaus 2013](../../bibliography.md#niehaus-gods-covenant-abraham-2013), pp. 260–263; [Robertson 1980](../../bibliography.md#robertson-christ-covenants-1980); [Kline 2006](../../bibliography.md#kline-kingdom-prologue-2006)). Dissents encoded: *Weinfeld, The Covenant of Grant*, *1 Maccabees 2:52*, *Kuruvilla, The Aqedah*, *Hahn, Covenant, Oath, and the Aqedah*. The strongest known: *1 Maccabees 2:52*.
 
 | Standard | Rating | Why |
 |---|---|---|

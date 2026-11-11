@@ -7,6 +7,8 @@
 
 Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
+Every argument is also set for print, the claims linked and the derivations in words as here, in [one PDF](../pdf/arguments.pdf), and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
+
 ## TestimonyArguments.BornInBethlehem — Phase 1 vertical slice
 
 Matthew 2:5–6 quotes Micah 5:2 as grounds that the Messiah is born in
@@ -27,19 +29,19 @@ and why `critical_not_establishes` costs the rival so little: deny the one
 interpretive premise and nothing is left standing. Compare `BornOfAVirgin`,
 which runs on four.
 
-## The claims, numbered
+### The claims, numbered
 
 <div class="testimony-legend">
 
 | | claim | kind | held | source |
 |---|---|---|---|---|
-| \\(P_{1}\\) | Micah 5:2 is a forward-looking Messianic prediction | interpretive | Christian, typological, well supported | [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:2 |
-| \\(P_{2}\\) | Matthew 2:6 quotes Micah 5:2 | textual | critical scholarship, consensus | [`na28-2012`](../bibliography.md#na28-2012), app. Matt 2:6; [`ubs5-2014`](../bibliography.md#ubs5-2014) |
-| \\(P_{3}\\) | Matthew's quotation intends predictive fulfilment | interpretive | Christian, historical-grammatical, well supported | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6 |
-| \\(P_{4}\\) | Jesus of Nazareth was born in Bethlehem ※ | historical | Christian, historical-grammatical, disputed | Matt 2:1; Luke 2:4-7 |
-| \\(P_{5}\\) | Micah 5:2 is a near-term oracle about a contemporary Judaean ruler | interpretive | critical scholarship, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{6}\\) | The Messiah must be born in Bethlehem | interpretive | Christian, typological, well supported | [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:2; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6 |
-| \\(P_{7}\\) | Jesus of Nazareth satisfies the Bethlehem criterion | interpretive | Christian, historical-grammatical, well supported | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6 |
+| <a id="claim-1"></a>\\(P_{1}\\) | Micah 5:2 is a forward-looking Messianic prediction | interpretive | Christian, typological, well supported | [Keil and Delitzsch 1949](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:2 |
+| <a id="claim-2"></a>\\(P_{2}\\) | Matthew 2:6 quotes Micah 5:2 | textual | critical scholarship, consensus | [Aland et al. 2012](../bibliography.md#na28-2012), app. Matt 2:6; [United Bible Societies 2014](../bibliography.md#ubs5-2014) |
+| <a id="claim-3"></a>\\(P_{3}\\) | Matthew's quotation intends predictive fulfilment | interpretive | Christian, hist.-gramm., well supported | [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6 |
+| <a id="claim-4"></a>\\(P_{4}\\) | Jesus of Nazareth was born in Bethlehem ※ | historical | Christian, hist.-gramm., disputed | Matt 2:1; Luke 2:4-7 |
+| <a id="claim-5"></a>\\(P_{5}\\) | Micah 5:2 is a near-term oracle about a contemporary Judaean ruler | interpretive | critical scholarship, plausible | [Brown 1993](../bibliography.md#brown-birth-messiah-1993) |
+| <a id="claim-6"></a>\\(P_{6}\\) | The Messiah must be born in Bethlehem | interpretive | Christian, typological, well supported | [Keil and Delitzsch 1949](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:2; [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6 |
+| <a id="claim-7"></a>\\(P_{7}\\) | Jesus of Nazareth satisfies the Bethlehem criterion | interpretive | Christian, hist.-gramm., well supported | [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6 |
 
 </div>
 
@@ -106,10 +108,10 @@ One strand, and the argument's whole weight is on it.
 
 From the predictive reading and Matthew's intent, the criterion follows.
 
-<div class="testimony-math">
-\[
-(P_{1} \land P_{3}) \rightarrow P_{6}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-1}{P_{1}} \land \href{#claim-3}{P_{3}}) \rightarrow \href{#claim-6}{P_{6}}\\) — *would give:* The Messiah must be born in Bethlehem
+
 </div>
 
 <a id="toFulfilment"></a>
@@ -117,10 +119,10 @@ From the predictive reading and Matthew's intent, the criterion follows.
 
 From the criterion and the historical claim, the fulfilment follows.
 
-<div class="testimony-math">
-\[
-(P_{6} \land P_{4}) \rightarrow P_{7}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-6}{P_{6}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-7}{P_{7}}\\) — *would give:* Jesus of Nazareth satisfies the Bethlehem criterion
+
 </div>
 
 <a id="predictiveLine"></a>
@@ -129,16 +131,14 @@ From the criterion and the historical claim, the fulfilment follows.
 **The predictive line.** Micah's oracle read as prophecy, Matthew's
 quotation read as a fulfilment claim, and the criterion that follows.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; (P_{1} \land P_{3}) \rightarrow P_{6} \\[4pt]
-\vdash \quad &amp; P_{6}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Micah 5:2 is a forward-looking Messianic prediction
+- (2) \\(\href{#claim-2}{P_{2}}\\) — Matthew 2:6 quotes Micah 5:2
+- (3) \\(\href{#claim-3}{P_{3}}\\) — Matthew's quotation intends predictive fulfilment
+- (4) \\((\href{#claim-1}{P_{1}} \land \href{#claim-3}{P_{3}}) \rightarrow \href{#claim-6}{P_{6}}\\)
+- \\(\vdash\\) \\(\href{#claim-6}{P_{6}}\\) — *at issue:* The Messiah must be born in Bethlehem
+
 </div>
 
 <a id="criticalLine"></a>
@@ -147,16 +147,14 @@ quotation read as a fulfilment claim, and the criterion that follows.
 The critical line: the quotation is granted and the prediction denied, so
 the same step delivers nothing.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{2} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; \lnot P_{1} \\
-\text{(4)} \quad &amp; (P_{1} \land P_{3}) \rightarrow P_{6} \\[4pt]
-\vdash \quad &amp; P_{6}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-2}{P_{2}}\\) — Matthew 2:6 quotes Micah 5:2
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Micah 5:2 is a near-term oracle about a contemporary Judaean ruler
+- (3) \\(\lnot \href{#claim-1}{P_{1}}\\) — *denied:* Micah 5:2 is a forward-looking Messianic prediction
+- (4) \\((\href{#claim-1}{P_{1}} \land \href{#claim-3}{P_{3}}) \rightarrow \href{#claim-6}{P_{6}}\\)
+- \\(\vdash\\) \\(\href{#claim-6}{P_{6}}\\) — *at issue:* The Messiah must be born in Bethlehem
+
 </div>
 
 #### Packages
@@ -166,18 +164,16 @@ the same step delivers nothing.
 
 The Christian predictive argument.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{4} \\
-\text{(5)} \quad &amp; (P_{1} \land P_{3}) \rightarrow P_{6} \\
-\text{(6)} \quad &amp; (P_{6} \land P_{4}) \rightarrow P_{7} \\[4pt]
-\vdash \quad &amp; P_{7}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Micah 5:2 is a forward-looking Messianic prediction
+- (2) \\(\href{#claim-2}{P_{2}}\\) — Matthew 2:6 quotes Micah 5:2
+- (3) \\(\href{#claim-3}{P_{3}}\\) — Matthew's quotation intends predictive fulfilment
+- (4) \\(\href{#claim-4}{P_{4}}\\) — Jesus of Nazareth was born in Bethlehem
+- (5) \\((\href{#claim-1}{P_{1}} \land \href{#claim-3}{P_{3}}) \rightarrow \href{#claim-6}{P_{6}}\\) — *would give:* The Messiah must be born in Bethlehem
+- (6) \\((\href{#claim-6}{P_{6}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-7}{P_{7}}\\)
+- \\(\vdash\\) \\(\href{#claim-7}{P_{7}}\\) — *at issue:* Jesus of Nazareth satisfies the Bethlehem criterion
+
 </div>
 
 Grounded in scripture alone: Jesus of Nazareth was born in Bethlehem.
@@ -187,17 +183,15 @@ Grounded in scripture alone: Jesus of Nazareth was born in Bethlehem.
 
 The critical reading: the quotation is granted, the prediction is not.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{2} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; \lnot P_{1} \\
-\text{(4)} \quad &amp; (P_{1} \land P_{3}) \rightarrow P_{6} \\
-\text{(5)} \quad &amp; (P_{6} \land P_{4}) \rightarrow P_{7} \\[4pt]
-\vdash \quad &amp; P_{7}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-2}{P_{2}}\\) — Matthew 2:6 quotes Micah 5:2
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Micah 5:2 is a near-term oracle about a contemporary Judaean ruler
+- (3) \\(\lnot \href{#claim-1}{P_{1}}\\) — *denied:* Micah 5:2 is a forward-looking Messianic prediction
+- (4) \\((\href{#claim-1}{P_{1}} \land \href{#claim-3}{P_{3}}) \rightarrow \href{#claim-6}{P_{6}}\\) — *would give:* The Messiah must be born in Bethlehem
+- (5) \\((\href{#claim-6}{P_{6}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-7}{P_{7}}\\)
+- \\(\vdash\\) \\(\href{#claim-7}{P_{7}}\\) — *at issue:* Jesus of Nazareth satisfies the Bethlehem criterion
+
 </div>
 
 Grounded in scripture alone: Jesus of Nazareth was born in Bethlehem.

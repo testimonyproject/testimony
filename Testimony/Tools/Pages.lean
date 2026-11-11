@@ -161,8 +161,8 @@ def render [DecidableEq α] (ns : Name) (allAtoms : List α)
       | [] => []
     let notes := mine.filter (!isProse ·)
     { module := m, subtitle := subtitle
-    , prose := "\n".intercalate (prose.map (Logic.Markdown.item order))
-    , notes := "\n".intercalate (notes.map (Logic.Markdown.item order))
+    , prose := "\n".intercalate (prose.map (Logic.Markdown.item order cite))
+    , notes := "\n".intercalate (notes.map (Logic.Markdown.item order cite))
     -- In print a chapter is a `\subsection*`, so a module's `###` sections are
     -- set one level up, as `\subsubsection*`.
     , proseTex := String.join ((prose.map fun

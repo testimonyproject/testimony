@@ -1,0 +1,87 @@
+name: PDF
+
+# Typesets the print editions: the arguments (docs/latex/arguments.tex) and the
+# examples package's documents (examples/docs/latex/*.tex), and uploads the
+# PDFs as the `pdfs` artifact.
+#
+# On a pull request this is the check that the print edition still typesets, so
+# a LaTeX error is caught before it reaches main. docs.yml calls it to put the
+# PDFs beside the site, and release.yml to attach them to a tagged release.
+#
+# arguments.tex and the examples' .tex files are generated but committed, and
+# ci.yml fails a change that leaves them stale, so they are typeset as
+# committed. Their bibliographies are not committed beside them: the arguments'
+# is the committed references.bib at the root, copied in; the examples' is
+# written by `lake exe exampletex`, which is why this job builds that package.
+on:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  image:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/devcontainer-image.yml
+    with:
+      push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+
+  typeset:
+    needs: image
+    runs-on: ubuntu-latest
+    container: ${{ needs.image.outputs.image }}
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      # The cache ci.yml saves. Restored only: this job builds nothing of its
+      # own worth keeping.
+      - name: Restore .lake
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .lake
+            arguments/.lake
+            examples/.lake
+          key: lake-packages-${{ runner.os }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}
+          restore-keys: |
+            lake-packages-${{ runner.os }}-
+            lake-${{ runner.os }}-
+
+      - name: Fetch Mathlib oleans
+        run: lake exe cache get
+
+      - name: Arguments
+        run: |
+          cp references.bib docs/latex/
+          cd docs/latex
+          tectonic arguments.tex
+
+      # `exampletex` writes the documents and the bibliography beside them;
+      # `--check` first, so a stale committed document fails here as in ci.yml
+      # rather than being typeset as regenerated.
+      - name: Examples
+        working-directory: examples
+        run: |
+          lake exe exampletex --check
+          lake exe exampletex
+          cd docs/latex
+          for f in *.tex; do tectonic "$f"; done
+
+      - name: Collect
+        run: |
+          mkdir -p pdf
+          cp docs/latex/arguments.pdf pdf/
+          cp examples/docs/latex/*.pdf pdf/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: pdf/
+          if-no-files-found: error

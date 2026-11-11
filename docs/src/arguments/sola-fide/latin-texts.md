@@ -86,15 +86,13 @@ wrote. The Greek, as the Catholic Church's own translation gives it. Pius XII's
 principle that the original outweighs any translation. And the step from the
 last two to "the inspired text does not say 'be justified still'".
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{92} \\
-\text{(2)} \quad &amp; P_{93} \\
-\text{(3)} \quad &amp; P_{96} \\
-\text{(4)} \quad &amp; (P_{93} \land P_{96}) \rightarrow \lnot P_{92}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-92}{P_{92}}\\) — Revelation 22:11 says: he that is just, let him be justified still
+- (2) \\(\href{claims.html#claim-93}{P_{93}}\\) — The Greek of Revelation 22:11 says: let the righteous still do righteousness
+- (3) \\(\href{claims.html#claim-96}{P_{96}}\\) — The original text, written by the inspired author, outweighs any translation: a reading it lacks is not his word
+- (4) \\((\href{claims.html#claim-93}{P_{93}} \land \href{claims.html#claim-96}{P_{96}}) \rightarrow \lnot \href{claims.html#claim-92}{P_{92}}\\) — *would deny:* Revelation 22:11 says: he that is just, let him be justified still
+
 </div>
 
 <a id="trent_as_the_inspired_text_contradicts_pius"></a>
@@ -150,21 +148,19 @@ originals of the two verses do not say what the Latin says. A doctrine taught
 from the Vulgate is to be confirmed from the originals. The conclusion: the two
 texts do not confirm the increase of justification from the originals.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{98} \\
-\text{(2)} \quad &amp; P_{97} \\
-\text{(3)} \quad &amp; P_{96} \\
-\text{(4)} \quad &amp; P_{93} \\
-\text{(5)} \quad &amp; P_{95} \\
-\text{(6)} \quad &amp; P_{99} \\
-\text{(7)} \quad &amp; (P_{93} \land P_{96}) \rightarrow \lnot P_{92} \\
-\text{(8)} \quad &amp; (P_{95} \land P_{96}) \rightarrow \lnot P_{94} \\
-\text{(9)} \quad &amp; (P_{99} \land \lnot P_{92} \land \lnot P_{94}) \rightarrow \lnot P_{100} \\[4pt]
-\vdash \quad &amp; \lnot P_{100}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-98}{P_{98}}\\) — Trent quotes the Vulgate's Revelation 22:11 and Sirach 18:22 as juridically authentic, not as the inspired authors' words
+- (2) \\(\href{claims.html#claim-97}{P_{97}}\\) — The Vulgate, as the Church understands it, is free from error in faith and morals: its authenticity is juridical
+- (3) \\(\href{claims.html#claim-96}{P_{96}}\\) — The original text, written by the inspired author, outweighs any translation: a reading it lacks is not his word
+- (4) \\(\href{claims.html#claim-93}{P_{93}}\\) — The Greek of Revelation 22:11 says: let the righteous still do righteousness
+- (5) \\(\href{claims.html#claim-95}{P_{95}}\\) — The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified
+- (6) \\(\href{claims.html#claim-99}{P_{99}}\\) — A doctrine taught from the Vulgate is to be confirmed from the original texts
+- (7) \\((\href{claims.html#claim-93}{P_{93}} \land \href{claims.html#claim-96}{P_{96}}) \rightarrow \lnot \href{claims.html#claim-92}{P_{92}}\\) — *would deny:* Revelation 22:11 says: he that is just, let him be justified still
+- (8) \\((\href{claims.html#claim-95}{P_{95}} \land \href{claims.html#claim-96}{P_{96}}) \rightarrow \lnot \href{claims.html#claim-94}{P_{94}}\\) — *would deny:* Sirach 18:22 says: be not afraid to be justified even to death
+- (9) \\((\href{claims.html#claim-99}{P_{99}} \land \lnot \href{claims.html#claim-92}{P_{92}} \land \lnot \href{claims.html#claim-94}{P_{94}}) \rightarrow \lnot \href{claims.html#claim-100}{P_{100}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-100}{P_{100}}\\) — *at issue, the denial of:* Revelation 22:11 and Sirach 18:22 confirm the increase of justification from the original texts
+
 </div>
 
 No premise here rests on scripture alone.

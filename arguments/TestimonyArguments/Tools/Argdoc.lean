@@ -21,7 +21,8 @@ open Testimony.Doc TestimonyArguments.Doc
 /-- Where the arguments' pages go, from this package's directory. -/
 def site : Site :=
   { tool := "argdoc", sourceRoot := "arguments/"
-  , pagesDir := "../docs/src/arguments", summaryPath := "../docs/src/SUMMARY.md" }
+  , pagesDir := "../docs/src/arguments", summaryPath := "../docs/src/SUMMARY.md"
+  , pdf := "../pdf/arguments.pdf" }
 
 /-- Entry point. -/
 def main (args : List String) : IO UInt32 := site.run arguments bodies args

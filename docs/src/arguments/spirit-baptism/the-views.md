@@ -76,10 +76,10 @@ From 1 Corinthians 12:13, read as Christ baptizing in the Spirit, to Spirit
 baptism at conversion. Rated `disputed`, conservatively: the Assemblies of God
 deny its conclusion by denying a ground, the conversion reading.
 
-<div class="testimony-math">
-\[
-(P_{1} \land P_{5}) \rightarrow P_{13}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* Every believer is baptized in the Spirit at conversion
+
 </div>
 
 <a id="conversionExcludesASecond"></a>
@@ -91,10 +91,10 @@ the Spirit comes at conversion and holds that Luke's is a second gift, to be
 sought. Whether he denies this step or uses the word in two senses is not yet
 encoded.
 
-<div class="testimony-math">
-\[
-P_{13} \rightarrow \lnot P_{14}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\) — *would deny:* A baptism in the Spirit distinct from and after conversion is to be sought
+
 </div>
 
 <a id="conversionCase"></a>
@@ -103,16 +103,14 @@ P_{13} \rightarrow \lnot P_{14}
 **The conversion view**, as Dunn and Stott hold it: every believer is baptized
 in the Spirit at conversion, so there is no second Spirit baptism to seek.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; (P_{1} \land P_{5}) \rightarrow P_{13} \\
-\text{(4)} \quad &amp; P_{13} \rightarrow \lnot P_{14} \\[4pt]
-\vdash \quad &amp; P_{13}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) — 1 Corinthians 12:13 — in one Spirit we were all baptized into one body
+- (2) \\(\href{claims.html#claim-5}{P_{5}}\\) — 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion
+- (3) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
+- (4) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\) — *would deny:* A baptism in the Spirit distinct from and after conversion is to be sought
+- \\(\vdash\\) \\(\href{claims.html#claim-13}{P_{13}}\\) — *at issue:* Every believer is baptized in the Spirit at conversion
+
 </div>
 
 Grounded in scripture alone: 1 Corinthians 12:13 — in one Spirit we were all baptized into one body.
@@ -127,10 +125,10 @@ reading: if the Spirit is the instrument baptizing into the body, the verse is
 not Christ baptizing in the Spirit. Rated `disputed`, conservatively: Dunn and
 Stott deny its conclusion by denying a ground, the instrumental reading.
 
-<div class="testimony-math">
-\[
-(P_{1} \land P_{6}) \rightarrow \lnot P_{5}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-6}{P_{6}}) \rightarrow \lnot \href{claims.html#claim-5}{P_{5}}\\) — *would deny:* 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion
+
 </div>
 
 <a id="actsToSecond"></a>
@@ -140,10 +138,10 @@ From the Acts narratives, read as a pattern of empowerment, to a second Spirit
 baptism to be sought. Rated `wellSupported`: its rejecters deny a ground, not
 the step.
 
-<div class="testimony-math">
-\[
-(P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-8}{P_{8}}) \rightarrow \href{claims.html#claim-14}{P_{14}}\\) — *would give:* A baptism in the Spirit distinct from and after conversion is to be sought
+
 </div>
 
 <a id="pentecostalCase"></a>
@@ -154,19 +152,17 @@ Spirit baptizes into the body of Christ (1 Corinthians 12:13); in a subsequent
 and distinct experience Christ baptizes in the Spirit, as in Samaria and at
 Ephesus, for empowerment.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; P_{2} \\
-\text{(4)} \quad &amp; P_{7} \\
-\text{(5)} \quad &amp; P_{8} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{6}) \rightarrow \lnot P_{5} \\
-\text{(7)} \quad &amp; (P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) — 1 Corinthians 12:13 — in one Spirit we were all baptized into one body
+- (2) \\(\href{claims.html#claim-6}{P_{6}}\\) — 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit
+- (3) \\(\href{claims.html#claim-2}{P_{2}}\\) — Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers)
+- (4) \\(\href{claims.html#claim-7}{P_{7}}\\) — In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion
+- (5) \\(\href{claims.html#claim-8}{P_{8}}\\) — Luke's narratives of receiving the Spirit are a pattern for believers today
+- (6) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-6}{P_{6}}) \rightarrow \lnot \href{claims.html#claim-5}{P_{5}}\\) — *would deny:* 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion
+- (7) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-8}{P_{8}}) \rightarrow \href{claims.html#claim-14}{P_{14}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-14}{P_{14}}\\) — *at issue:* A baptism in the Spirit distinct from and after conversion is to be sought
+
 </div>
 
 Grounded in scripture alone: 1 Corinthians 12:13 — in one Spirit we were all baptized into one body.
@@ -178,10 +174,10 @@ The holiness step: the second work of grace is the baptism with the Spirit,
 to be sought after conversion. Rated `disputed`: Wesley grants the second work
 and denies that it is "receiving the Holy Ghost".
 
-<div class="testimony-math">
-\[
-P_{10} \rightarrow P_{14}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{claims.html#claim-10}{P_{10}} \rightarrow \href{claims.html#claim-14}{P_{14}}\\) — *would give:* A baptism in the Spirit distinct from and after conversion is to be sought
+
 </div>
 
 <a id="holinessCase"></a>
@@ -192,14 +188,12 @@ sanctification is a second work of grace, and it "is wrought by the baptism with
 or infilling of the Holy Spirit" (*Manual* 2023, Article X). Contested from
 within its own tradition, by Wesley and by the Nazarene seminary faculty.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{10} \\
-\text{(2)} \quad &amp; P_{10} \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-10}{P_{10}}\\) — Entire sanctification is a second work of grace after justification
+- (2) \\(\href{claims.html#claim-10}{P_{10}} \rightarrow \href{claims.html#claim-14}{P_{14}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-14}{P_{14}}\\) — *at issue:* A baptism in the Spirit distinct from and after conversion is to be sought
+
 </div>
 
 No premise here rests on scripture alone.
@@ -215,10 +209,10 @@ sought. Rated `disputed`, conservatively: Westminster, which holds that the grac
 of baptism is not tied to the moment of the rite, denies a ground, not the
 step.
 
-<div class="testimony-math">
-\[
-(P_{4} \land P_{11} \land P_{12}) \rightarrow P_{15}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-11}{P_{11}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\) — *would give:* The Spirit is given in baptism and confirmation, not in a second baptism beyond the sacraments
+
 </div>
 
 <a id="sacramentsExcludeASeeking"></a>
@@ -228,10 +222,10 @@ If the Spirit is given in the sacraments, there is no second Spirit baptism to
 seek beyond them. Rated `disputed`, conservatively: the Catholic charismatic
 renewal is its natural contester, not yet cited.
 
-<div class="testimony-math">
-\[
-P_{15} \rightarrow \lnot P_{14}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{claims.html#claim-15}{P_{15}} \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\) — *would deny:* A baptism in the Spirit distinct from and after conversion is to be sought
+
 </div>
 
 <a id="sacramentalCase"></a>
@@ -244,17 +238,15 @@ sacramental one, not a second baptism beyond the sacraments. Lutherans hold the
 first half, and have no sacrament of confirmation, so the view as encoded is
 Rome's.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{4} \\
-\text{(2)} \quad &amp; P_{11} \\
-\text{(3)} \quad &amp; P_{12} \\
-\text{(4)} \quad &amp; (P_{4} \land P_{11} \land P_{12}) \rightarrow P_{15} \\
-\text{(5)} \quad &amp; P_{15} \rightarrow \lnot P_{14} \\[4pt]
-\vdash \quad &amp; P_{15}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit
+- (2) \\(\href{claims.html#claim-11}{P_{11}}\\) — The Spirit is given in water baptism: new birth in the Holy Spirit
+- (3) \\(\href{claims.html#claim-12}{P_{12}}\\) — Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria
+- (4) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-11}{P_{11}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\)
+- (5) \\(\href{claims.html#claim-15}{P_{15}} \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\) — *would deny:* A baptism in the Spirit distinct from and after conversion is to be sought
+- \\(\vdash\\) \\(\href{claims.html#claim-15}{P_{15}}\\) — *at issue:* The Spirit is given in baptism and confirmation, not in a second baptism beyond the sacraments
+
 </div>
 
 Grounded in scripture alone: Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit.
@@ -269,10 +261,10 @@ Acts gives no one order: the Spirit falls as Cornelius's household hears
 hands (8:17; 19:6). So no episode is the pattern. Rated `disputed`: the
 Assemblies of God grant Acts 10 and read it as evidence for subsequence.
 
-<div class="testimony-math">
-\[
-(P_{3} \land P_{4}) \rightarrow \lnot P_{8}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-4}{P_{4}}) \rightarrow \lnot \href{claims.html#claim-8}{P_{8}}\\) — *would deny:* Luke's narratives of receiving the Spirit are a pattern for believers today
+
 </div>
 
 <a id="varietyCase"></a>
@@ -281,15 +273,13 @@ Assemblies of God grant Acts 10 and read it as evidence for subsequence.
 **The variety of Acts**, as an argument: Acts gives the Spirit in more than
 one order, so no one episode is a pattern for believers today.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{3} \\
-\text{(2)} \quad &amp; P_{4} \\
-\text{(3)} \quad &amp; (P_{3} \land P_{4}) \rightarrow \lnot P_{8} \\[4pt]
-\vdash \quad &amp; \lnot P_{8}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-3}{P_{3}}\\) — Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism
+- (2) \\(\href{claims.html#claim-4}{P_{4}}\\) — Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit
+- (3) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-4}{P_{4}}) \rightarrow \lnot \href{claims.html#claim-8}{P_{8}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-8}{P_{8}}\\) — *at issue, the denial of:* Luke's narratives of receiving the Spirit are a pattern for believers today
+
 </div>
 
 Grounded in scripture alone: Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism, Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit.
@@ -301,10 +291,10 @@ If the Samaritan and Ephesian episodes are unrepeatable transitions, they set
 no norm: no second Spirit baptism is to be sought on their strength. Stott's
 step, rated `disputed` conservatively.
 
-<div class="testimony-math">
-\[
-(P_{2} \land P_{9}) \rightarrow \lnot P_{14}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-9}{P_{9}}) \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\) — *would deny:* A baptism in the Spirit distinct from and after conversion is to be sought
+
 </div>
 
 <a id="transitionCase"></a>
@@ -314,15 +304,13 @@ step, rated `disputed` conservatively.
 Spirit in Samaria and at Ephesus marks steps in the gospel's spread, and sets
 no norm.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{2} \\
-\text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{9}) \rightarrow \lnot P_{14} \\[4pt]
-\vdash \quad &amp; \lnot P_{14}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-2}{P_{2}}\\) — Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers)
+- (2) \\(\href{claims.html#claim-9}{P_{9}}\\) — The episodes of Acts 8, 10 and 19 are unrepeatable steps in the gospel's spread, not a pattern
+- (3) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-9}{P_{9}}) \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-14}{P_{14}}\\) — *at issue, the denial of:* A baptism in the Spirit distinct from and after conversion is to be sought
+
 </div>
 
 No premise here rests on scripture alone.
@@ -357,20 +345,18 @@ def asAPattern : Reading Claim :=
 
 The Pentecostal view, with the Acts narratives read as a pattern.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; P_{2} \\
-\text{(4)} \quad &amp; P_{7} \\
-\text{(5)} \quad &amp; P_{8} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{6}) \rightarrow \lnot P_{5} \\
-\text{(7)} \quad &amp; (P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14} \\
-\text{(8)} \quad &amp; P_{2} \rightarrow P_{8} \\[4pt]
-\vdash \quad &amp; P_{14}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) — 1 Corinthians 12:13 — in one Spirit we were all baptized into one body
+- (2) \\(\href{claims.html#claim-6}{P_{6}}\\) — 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit
+- (3) \\(\href{claims.html#claim-2}{P_{2}}\\) — Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers)
+- (4) \\(\href{claims.html#claim-7}{P_{7}}\\) — In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion
+- (5) \\(\href{claims.html#claim-8}{P_{8}}\\) — Luke's narratives of receiving the Spirit are a pattern for believers today
+- (6) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-6}{P_{6}}) \rightarrow \lnot \href{claims.html#claim-5}{P_{5}}\\) — *would deny:* 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion
+- (7) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-8}{P_{8}}) \rightarrow \href{claims.html#claim-14}{P_{14}}\\)
+- (8) \\(\href{claims.html#claim-2}{P_{2}} \rightarrow \href{claims.html#claim-8}{P_{8}}\\) — *would give:* Luke's narratives of receiving the Spirit are a pattern for believers today
+- \\(\vdash\\) \\(\href{claims.html#claim-14}{P_{14}}\\) — *at issue:* A baptism in the Spirit distinct from and after conversion is to be sought
+
 </div>
 
 Grounded in scripture alone: 1 Corinthians 12:13 — in one Spirit we were all baptized into one body.
@@ -566,14 +552,14 @@ as evidence for subsequence.
 
 **Why *Acts gives the Spirit in more than one order* stands against *After conversion (Assemblies of God; Menzies, Stronstad), read as a pattern for believers today*.**
 
-- **The crux:** \\((P_{3} \land P_{4}) \rightarrow \lnot P_{8}\\), a premise of *Acts gives the Spirit in more than one order*.
+- **The crux:** \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-4}{P_{4}}) \rightarrow \lnot \href{claims.html#claim-8}{P_{8}}\\), a premise of *Acts gives the Spirit in more than one order*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{3}\\), \\(P_{4}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{8}\\) cannot be held together with \\((P_{3} \land P_{4}) \rightarrow \lnot P_{8}\\) and \\(P_{3}\\), \\(P_{4}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-4}{P_{4}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-8}{P_{8}}\\) cannot be held together with \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-4}{P_{4}}) \rightarrow \lnot \href{claims.html#claim-8}{P_{8}}\\) and \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-4}{P_{4}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{3}\\) Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism — *consensus*: Acts 10:44-48
-  - \\(P_{4}\\) Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit — *consensus*: Acts 2:38
-  - the step itself — *disputed*: [`assemblies-of-god-baptism-holy-spirit-2010`](../../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - \\(\href{claims.html#claim-3}{P_{3}}\\) Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism — *consensus*: Acts 10:44-48
+  - \\(\href{claims.html#claim-4}{P_{4}}\\) Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit — *consensus*: Acts 2:38
+  - the step itself — *disputed*: [General Presbytery of the Assemblies of God 2010](../../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
 
 
 </details>

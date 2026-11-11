@@ -110,10 +110,21 @@ against one legend for the whole argument.
 
 The two tools share that harvest rather than each doing their own, so the page
 and the PDF are two settings of one text. Only the setting differs: Markdown
-tables and MathJax on the site, `longtable` and `\cite` in print. Print also
-links each variable in a formula to its row in the legend, and puts a
-derivation's premises, what each step would give and the conclusion at issue
-into the legend's words; the site sets the variables plain, for now.
+tables and MathJax on the site, `longtable` and `\cite` in print. Both name a
+cited work by author and year, both abbreviate the "held" column alike, and
+both link each variable in a formula to its row in the legend. Both set a
+derivation as a list of rows, each formula followed by its claims in the
+legend's words: a premise by what the position holds, a step by what it would
+give, and the turnstile row by the conclusion at issue. The words come from one
+function, `Latex.inWordsWith`, so the two settings cannot come to say different
+things.
+
+Only `arguments.tex` is committed, so the PDF has to be made somewhere. The `PDF`
+workflow (`.github/workflows/pdf.yml`) typesets it with `tectonic`, along with
+the examples' documents, on every pull request, and a LaTeX error fails there
+rather than on `main`. The `Docs` workflow puts the PDFs beside the site, at
+`pdf/arguments.pdf`, which every argument page links to; the `Release` workflow
+attaches them to the GitHub release a `v*` tag makes.
 
 ### An argument set as chapters
 

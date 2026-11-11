@@ -63,4 +63,6 @@ paths:
   silently mangled rather than failing. A raw-HTML block is passed through
   untouched — but only as far as the first blank line, so a display formula must
   contain none, and the legend table's wrapping `<div>` must be followed by one
-  so its table is read as Markdown.
+  so its table is read as Markdown. A derivation avoids display math altogether:
+  it is a Markdown list of inline formulas inside such a `<div>`, as
+  `Testimony.Logic.Markdown` explains.

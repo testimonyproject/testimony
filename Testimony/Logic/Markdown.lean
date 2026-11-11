@@ -11,8 +11,9 @@ typeset in the browser by MathJax and the prose around it is Markdown.
 The notation is not written twice. `Latex.formula` already produces what both
 media want — `P_{2} \land P_{3} \rightarrow P_{13}` is what MathJax reads too —
 so this module reuses it and supplies only what differs: Markdown tables
-instead of `longtable`, cite keys instead of `\cite`, and delimiters MathJax
-recognises.
+instead of `longtable`, an author and year linked to the bibliography instead of
+`\cite`, and delimiters MathJax recognises. What a derivation says in words is
+not written twice either: both renderers say it through `Latex.inWordsWith`.
 
 ## One legend for the page
 
@@ -23,21 +24,24 @@ comparing two of them needs `P_{9}` to mean the same claim in both. So the
 numbering here is fixed once for the whole page, from the atoms every item on
 it mentions, and the legend is given once at the top.
 
-## Why the display math sits inside a `<div>`
+## Why a derivation is a list inside a `<div>`
 
 mdBook runs Markdown over the page before MathJax sees it, and a display
-environment is full of the characters Markdown eats. `\\` opens a new row in
-`aligned` and is Markdown's escape character; `\[` is Markdown's escaped
-bracket. Doubling every one of them to survive that pass is possible, and it
-fails silently — a missed pair does not error, it just renders as text.
+environment is full of the characters Markdown eats: `\\` opens a new row in
+`aligned` and is Markdown's escape character, and a missed pair of them does not
+error, it just renders as text. So the site sets no display mathematics. A
+derivation is a Markdown list, one row to an item, each formula inline and each
+followed by its claims in the legend's words, as print sets it; it wraps on a
+narrow screen where a display would run off the side.
 
-A block-level raw-HTML element does not have the problem: CommonMark hands an
-HTML block through untouched as far as the first blank line, so what is written
-inside one is what MathJax receives. Every display formula a generated page
-carries is therefore emitted inside a `<div>` containing no blank line.
+The list sits in a `<div>` the stylesheet sets it by, with a blank line inside
+each end of it. CommonMark passes an HTML block through untouched only as far
+as the first blank line, so those blank lines are what hand the list back to
+the Markdown parser.
 
-Inline math, which needs no `\\`, is written the way mdBook documents:
-`\\(` in the source survives the Markdown pass as `\(`.
+Inline math is written the way mdBook documents: `\\(` in the source survives
+the Markdown pass as `\(`. A variable is a link, `\href{#claim-3}{P_{3}}`, to
+its row in the legend, which MathJax renders as a link.
 -/
 
 namespace Testimony.Logic.Markdown
@@ -114,40 +118,62 @@ def demote (md : String) : String :=
 the `\(…\)` it looks for. -/
 def inlineMath (body : String) : String := "\\\\(" ++ body ++ "\\\\)"
 
-/-- The alignment tab, HTML-escaped. A display block is raw HTML, and MathJax
-reads the text the browser decodes from it. -/
-def amp : String := "&amp;"
+/-- The anchor a legend row carries for its claim. A page holds one legend, so the
+number alone names the row. -/
+def claimAnchor (i : Nat) : String := "claim-" ++ toString (i + 1)
 
-/-- A display formula, inside the raw-HTML block that keeps Markdown away from
-it. There is deliberately no blank line within: a blank line would close the
-HTML block and hand the rest of the formula back to the Markdown parser. -/
-def display (body : String) : String :=
-  "<div class=\"testimony-math\">\n\\[\n" ++ body ++ "\n\\]\n</div>\n"
+/-- A propositional variable as a link to its row in the legend, as print links
+it. MathJax's `\href` takes a bare fragment, so the link stays within the page. -/
+def varLink (i : Nat) : String :=
+  "\\href{#" ++ claimAnchor i ++ "}{" ++ Latex.varName i ++ "}"
 
-/-- One row of an `aligned` environment: a label, then the formula it labels.
-`aligned` right-aligns its odd columns and left-aligns its even ones, so the
-labels line up on their right and the formulas on their left. -/
-def row (label body : String) : String :=
-  label ++ " \\quad " ++ amp ++ " " ++ body
+/-- A formula with each variable linked to its legend row, as in print. -/
+def formula [DecidableEq α] (order : List α) (φ : Formula α) : String :=
+  Latex.formulaPrec varLink order 0 φ
 
-/-- Rows joined into an `aligned` environment, ready for `display`. -/
-def aligned (rows : List String) : String :=
-  "\\begin{aligned}\n" ++ String.intercalate " \\\\\n" rows ++ "\n\\end{aligned}"
+/-- A derivation's words in the legend's: `Latex.inWordsWith`, set for the site, so
+the site says what print says. A variable links to its legend row, a label is
+escaped, and the mark is in italics. -/
+def inWords [DecidableEq α] (order : List α) (cite : α → AtomMeta) (lead : Latex.Lead)
+    (φ : Formula α) : Option String :=
+  Latex.inWordsWith (fun a => inlineMath (varLink (order.idxOf a)))
+    (fun a => escape (cite a).label) (fun s => "*" ++ s ++ ":* ") lead φ
 
-/-- Numbered premises above a turnstile, as one display formula.
+/-- One row of a derivation: its label, its formula, and the formula's words after
+a dash where there are any. -/
+def derivationRow [DecidableEq α] (order : List α) (label : String) (φ : Formula α)
+    (words : Option String) : String :=
+  "- " ++ (if label.isEmpty then "" else label ++ " ") ++ inlineMath (formula order φ) ++
+    (match words with | some w => " — " ++ w | none => "") ++ "\n"
+
+/-- Rows of a derivation, as a list inside the `<div>` the stylesheet sets it by.
+
+A list rather than an `aligned` display, as print sets a list rather than an
+`align*`, so that the words can wrap: a claim's label can run to a line of its
+own, which a display formula would push off the side of a phone. Each formula
+is inline, so it needs no `\\` and the list is ordinary Markdown; the blank
+lines inside the `<div>` are what hand it back to the Markdown parser. -/
+def derivationRows (rows : List String) : String :=
+  "<div class=\"testimony-derivation\">\n\n" ++ String.join rows ++ "\n</div>\n"
+
+/-- The label of numbered row `i`. -/
+def rowLabel (i : Nat) : String := "(" ++ toString (i + 1) ++ ")"
+
+/-- Numbered premises above a turnstile, each with its words where
+`Latex.glossWith` gives them, and on the turnstile row the conclusion at issue.
+Without a legend (`cite` is `none`) nothing is glossed.
 
 The order is the order the encoding puts them in, which for a package built by
 `caseOf` is every line's grounds first and every line's inference step last —
 the order a reader checks an argument in. -/
-def derivation [DecidableEq α] (order : List α) (prems : List (Formula α))
-    (concl : Formula α) : String :=
-  let numbered := prems.zipIdx.map fun (φ, i) =>
-    row ("\\text{(" ++ toString (i + 1) ++ ")}") (Latex.formula order φ)
-  let above :=
-    if numbered.isEmpty then ""
-    else String.intercalate " \\\\\n" numbered ++ " \\\\[4pt]\n"
-  display ("\\begin{aligned}\n" ++ above ++ row "\\vdash" (Latex.formula order concl) ++
-    "\n\\end{aligned}")
+def derivation [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta))
+    (prems : List (Formula α)) (concl : Formula α) : String :=
+  let words (c : α → AtomMeta) := inWords order c
+  derivationRows <|
+    prems.zipIdx.map (fun (φ, i) => derivationRow order (rowLabel i) φ
+      (cite.bind fun c => Latex.glossWith (words c) (some concl) φ)) ++
+    [derivationRow order (inlineMath "\\vdash") concl
+      (cite.bind fun c => words c .atIssue concl)]
 
 /-! ### Citations -/
 
@@ -165,15 +191,41 @@ def locus : Locus → String
 /-- Where the generated pages sit relative to the bibliography chapter. -/
 def bibliographyPath : String := "../bibliography.md"
 
-/-- A reference. Scripture renders as the passage; a work renders as its cite
-key, linked to its entry in the bibliography — `Bib.Render.toMarkdown` puts an
-anchor of that name on every line — and a proposal is marked as the library's
-own construction. -/
+/-- The family names a citation is made under: the authors, else the editors,
+else the title. Two names are joined by "and"; three or more are cut to the
+first and "et al.". -/
+def citedNames (e : BibEntry) : String :=
+  let c := e.core.contributors
+  let names := (if c.authors.isEmpty then c.editors else c.authors).map Agent.sortKey
+  match names with
+  | [] => e.core.title
+  | [a] => a
+  | [a, b] => a ++ " and " ++ b
+  | a :: _ => a ++ " et al."
+
+/-- A work's year as a citation gives it: "c." where approximate, "BC" where
+negative, and nothing where the entry has none. -/
+def citedYear (e : BibEntry) : String :=
+  match e.core.year with
+  | none => ""
+  | some y =>
+      (if y.approximate then "c. " else "") ++
+        (if y.value < 0 then toString y.value.natAbs ++ " BC" else toString y.value)
+
+/-- A work as a reader reads it: author and year, such as "Calvin 1960". -/
+def citedWork (e : BibEntry) : String :=
+  let y := citedYear e
+  escape (citedNames e) ++ (if y.isEmpty then "" else " " ++ y)
+
+/-- A reference. Scripture renders as the passage; a work renders as its author
+and year, linked to its entry in the bibliography — `Bib.Render.toMarkdown` puts
+an anchor of the entry's cite key on every line — and a proposal is marked as
+the library's own construction. -/
 def reference : Reference → String
   | .scripture refs =>
       String.intercalate "; " (refs.map fun r => escape r.ref.render)
   | .work e l =>
-      let link := "[`" ++ e.key ++ "`](" ++ bibliographyPath ++ "#" ++ e.key ++ ")"
+      let link := "[" ++ citedWork e ++ "](" ++ bibliographyPath ++ "#" ++ e.key ++ ")"
       let loc := locus l
       if loc.isEmpty then link else link ++ ", " ++ loc
   | .proposal r => "*proposed:* " ++ escape r
@@ -182,18 +234,8 @@ def reference : Reference → String
 def source (s : Source) : String :=
   String.intercalate "; " (s.references.map reference)
 
-/-- Which interpretive tradition advances a claim. -/
-def tradition : Tradition → String
-  | .christianTypological => "Christian, typological"
-  | .christianHistoricalGrammatical => "Christian, historical-grammatical"
-  | .secondTempleJewish => "Second Temple Jewish"
-  | .rabbinicJewish => "rabbinic Jewish"
-  | .criticalScholarship => "critical scholarship"
-  | .reformedProtestant => "Reformed Protestant"
-  | .romanCatholic => "Roman Catholic"
-  | .easternOrthodox => "Eastern Orthodox"
-  | .adversarialTrial => "adversarial trial"
-  | .formalOntology => "formal ontology"
+/-- Which interpretive tradition advances a claim, worded as print words it. -/
+def tradition : Tradition → String := Latex.tradition
 
 /-- How firmly that tradition holds it. -/
 def confidence : Confidence → String
@@ -219,9 +261,10 @@ def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String 
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
     let mark := if m.source.isScriptureOnly then " ※" else ""
-    "| " ++ inlineMath (Latex.varName i) ++ " | " ++ cell (escape m.label) ++ mark
-      ++ " | " ++ kind m.kind ++ " | " ++ tradition m.source.tradition ++ ", "
-      ++ confidence m.source.confidence ++ " | " ++ cell (source m.source) ++ " |"
+    "| <a id=\"" ++ claimAnchor i ++ "\"></a>" ++ inlineMath (Latex.varName i) ++ " | " ++
+      cell (escape m.label) ++ mark ++ " | " ++ kind m.kind ++ " | " ++
+      tradition m.source.tradition ++ ", " ++ confidence m.source.confidence ++ " | " ++
+      cell (source m.source) ++ " |"
   "<div class=\"testimony-legend\">\n\n" ++
   "| | claim | kind | held | source |\n|---|---|---|---|---|\n" ++
   String.intercalate "\n" rows ++ "\n\n</div>\n\n" ++
@@ -248,13 +291,13 @@ def leanBlock (body : String) : String := "```lean\n" ++ body ++ "\n```\n"
 
 /-- The formulas of a list, inline and joined. -/
 def inlineFormulas [DecidableEq α] (order : List α) (φs : List (Formula α)) : String :=
-  String.intercalate ", " (φs.map fun φ => inlineMath (Latex.formula order φ))
+  String.intercalate ", " (φs.map fun φ => inlineMath (formula order φ))
 
 /-- One claim an explanation rests on: its number, what it says, how firmly it
 is held and by whom. -/
 def restingClaim [DecidableEq α] (order : List α) (cite : α → AtomMeta) (a : α) : String :=
   let m := cite a
-  "  - " ++ inlineMath (Latex.varName (order.idxOf a)) ++ " " ++ escape m.label ++ " — *" ++
+  "  - " ++ inlineMath (varLink (order.idxOf a)) ++ " " ++ escape m.label ++ " — *" ++
     confidence m.source.confidence ++ "*: " ++ source m.source
 
 /-- Why one position stands against another, as a list a reader can check line
@@ -262,7 +305,7 @@ by line against the theorems it summarises. -/
 def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : String :=
   let given := if e.granted.isEmpty then "" else " and " ++ inlineFormulas order e.granted
   "**Why *" ++ escape e.holder ++ "* stands against *" ++ escape e.rival ++ "*.**\n\n" ++
-  "- **The crux:** " ++ inlineMath (Latex.formula order e.crux) ++ ", a premise of *" ++
+  "- **The crux:** " ++ inlineMath (formula order e.crux) ++ ", a premise of *" ++
     escape e.holder ++ "*.\n" ++
   "- **What it does:** " ++
     (if e.derives then "its conclusion does not follow without it."
@@ -272,7 +315,7 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
     "- **Granted:** " ++ inlineFormulas order e.granted ++
     ", which the break also needs.\n") ++
   "- **Where the rival breaks:** " ++ inlineFormulas order e.core ++
-    " cannot be held together with " ++ inlineMath (Latex.formula order e.crux) ++ given ++
+    " cannot be held together with " ++ inlineMath (formula order e.crux) ++ given ++
     "; each is needed for the break, and without the crux they stand.\n" ++
   "- **What this rests on:**\n" ++
     String.intercalate "\n" (e.restsOn.map (restingClaim order e.cite)) ++
@@ -287,7 +330,7 @@ commits the rival to, who reads it that way, and what happens to it against
 each position — the explanation where it cannot be held, and a sentence where
 it is not reached. -/
 def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
-  let claim := inlineMath (Latex.formula order d.claim)
+  let claim := inlineMath (formula order d.claim)
   let fate (f : Page.Fate α) : String := match f.falls with
     | some e =>
       "Against *" ++ escape f.against ++ "*, it cannot be held. Where it breaks:\n\n" ++
@@ -301,7 +344,7 @@ def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
     " here, and each reading is checked; none can be left out.\n\n" ++
   String.intercalate "\n" (d.horns.zipIdx.map fun (h, k) =>
     "**" ++ toString (k + 1) ++ ". Read " ++ escape h.reading ++ ".** The claim commits *" ++
-      escape d.rival ++ "* to " ++ inlineMath (Latex.formula order h.commits) ++
+      escape d.rival ++ "* to " ++ inlineMath (formula order h.commits) ++
       " — so read by " ++ source h.source ++ " (*" ++ confidence h.source.confidence ++
       "*)." ++
       (if h.grounds.isEmpty then "" else
@@ -498,12 +541,15 @@ def rated (r : Page.Rated) : String :=
   String.join (r.ratings.map fun (s, c, why) =>
     "| " ++ s ++ " | **" ++ confidence c ++ "** | " ++ escape why ++ " |\n")
 
-/-- Render one item against the page's atom ordering. -/
-def item [DecidableEq α] (order : List α) : Item α → String
+/-- Render one item against the page's atom ordering, and the legend's citations
+where the page has a legend. A lone formula, or a list of them, is set as rows of
+a derivation, as in print, so a step says what it delivers there too. -/
+def item [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta)) :
+    Item α → String
   | .prose md => demote md ++ "\n"
   | .package d doc pkg =>
       declLabel d (" — " ++ escape pkg.name) ++ "\n" ++ doc ++ "\n\n" ++
-      derivation order pkg.premises pkg.conclusion ++
+      derivation order cite pkg.premises pkg.conclusion ++
       (if !(order.any fun a => (pkg.cite a).source.citesScripture) then ""
        else if pkg.scriptureOnlyAtoms.isEmpty then
          "\nNo premise here rests on scripture alone.\n"
@@ -513,14 +559,15 @@ def item [DecidableEq α] (order : List α) : Item α → String
            (pkg.scriptureOnlyAtoms.map fun m => escape m.label) ++ ".\n")
   | .line d doc l =>
       declLabel d (" — " ++ escape l.name) ++ "\n" ++ doc ++ "\n\n" ++
-      derivation order l.premises l.delivers
+      derivation order cite l.premises l.delivers
   | .formula d doc φ =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
-      display (Latex.formula order φ)
+      derivationRows [derivationRow order "" φ
+        (cite.bind fun c => Latex.loneGlossWith (inWords order c) φ)]
   | .formulas d doc φs =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
-      display (aligned (φs.zipIdx.map fun (φ, i) =>
-        row ("\\text{(" ++ toString (i + 1) ++ ")}") (Latex.formula order φ)))
+      derivationRows (φs.zipIdx.map fun (φ, i) => derivationRow order (rowLabel i) φ
+        (cite.bind fun c => Latex.glossWith (inWords order c) none φ))
   | .other d doc sig =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock sig
   | .result d doc stmt proposed =>
@@ -550,10 +597,46 @@ def body [DecidableEq α] (allAtoms : List α) (intro : List (Item α))
     (items : List (Item α)) : String :=
   let all := intro ++ items
   let order := atomOrder allAtoms all
-  let table := match citeOf all with
-    | some cite => "## The claims, numbered\n\n" ++ legend cite order ++ "\n"
+  let cite := citeOf all
+  -- The legend sits under the module whose prose it follows, not beside it.
+  let table := match cite with
+    | some c => "### The claims, numbered\n\n" ++ legend c order ++ "\n"
     | none => ""
-  String.intercalate "\n" (intro.map (item order)) ++ "\n" ++ table ++
-    String.intercalate "\n" (items.map (item order))
+  String.intercalate "\n" (intro.map (item order cite)) ++ "\n" ++ table ++
+    String.intercalate "\n" (items.map (item order cite))
+
+/-! The derivation's links and words, pinned on three claims of a test argument:
+claim `k` says "claim k". They are the words `Latex`'s guards pin for print. -/
+
+/-- The test argument's claims. -/
+private def testCite (k : Nat) : AtomMeta :=
+  { label := "claim " ++ toString k, kind := .historical,
+    source := { primary := .proposal "a test", tradition := .adversarialTrial,
+                confidence := .disputed } }
+
+-- A claim the position holds says itself, a denied one is marked, a step that
+-- gives the conclusion leaves it to the turnstile row, and every variable links
+-- to its legend row.
+#guard derivation [0, 1, 2] (some testCite)
+    [.atom 0, .imp (.atom 1) .falsum, .imp (.and (.atom 0) (.imp (.atom 1) .falsum)) (.atom 2)]
+    (.atom 2) ==
+  "<div class=\"testimony-derivation\">\n\n" ++
+  "- (1) \\\\(\\href{#claim-1}{P_{1}}\\\\) — claim 0\n" ++
+  "- (2) \\\\(\\lnot \\href{#claim-2}{P_{2}}\\\\) — *denied:* claim 1\n" ++
+  "- (3) \\\\((\\href{#claim-1}{P_{1}} \\land \\lnot \\href{#claim-2}{P_{2}}) " ++
+    "\\rightarrow \\href{#claim-3}{P_{3}}\\\\)\n" ++
+  "- \\\\(\\vdash\\\\) \\\\(\\href{#claim-3}{P_{3}}\\\\) — *at issue:* claim 2\n" ++
+  "\n</div>\n"
+
+-- Of several claims, each is named by its variable, linked.
+#guard Latex.glossWith (inWords [0, 1, 2] testCite) none
+    (.imp (.atom 0) (.and (.atom 1) (.imp (.atom 2) .falsum))) ==
+  some ("*would give:* \\\\(\\href{#claim-2}{P_{2}}\\\\) claim 1; " ++
+    "\\\\(\\href{#claim-3}{P_{3}}\\\\) *denied:* claim 2")
+
+-- Without a legend, nothing is glossed.
+#guard derivation [0] none [] (.atom 0) ==
+  "<div class=\"testimony-derivation\">\n\n" ++
+  "- \\\\(\\vdash\\\\) \\\\(\\href{#claim-1}{P_{1}}\\\\)\n\n</div>\n"
 
 end Testimony.Logic.Markdown

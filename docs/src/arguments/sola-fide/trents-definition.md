@@ -220,27 +220,25 @@ def trentOnWhatGodDoes : Reading Claim :=
 
 Trent, with its definition taken as a claim about Paul's word.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{24} \\
-\text{(6)} \quad &amp; P_{33} \\
-\text{(7)} \quad &amp; P_{35} \\
-\text{(8)} \quad &amp; (P_{33} \land P_{35}) \rightarrow P_{32} \\
-\text{(9)} \quad &amp; P_{33} \rightarrow \lnot P_{30} \\
-\text{(10)} \quad &amp; P_{33} \rightarrow \lnot P_{34} \\
-\text{(11)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\
-\text{(12)} \quad &amp; P_{32} \rightarrow \lnot P_{28} \\
-\text{(13)} \quad &amp; P_{54} \\
-\text{(14)} \quad &amp; P_{54} \rightarrow P_{52} \\
-\text{(15)} \quad &amp; P_{33} \rightarrow P_{52} \\[4pt]
-\vdash \quad &amp; \lnot P_{28}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:8–9 teaches salvation by grace through faith, not of works
+- (2) \\(\href{claims.html#claim-2}{P_{2}}\\) — Romans 3:28 teaches justification by faith apart from works of the law
+- (3) \\(\href{claims.html#claim-3}{P_{3}}\\) — Galatians 2:16 teaches that no one is justified by works of the law
+- (4) \\(\href{claims.html#claim-5}{P_{5}}\\) — Titus 3:5 teaches that God saved us not by works done in righteousness
+- (5) \\(\href{claims.html#claim-24}{P_{24}}\\) — Scripture does not contradict itself
+- (6) \\(\href{claims.html#claim-33}{P_{33}}\\) — Justification is not remission of sins only, but renewal of the inward man
+- (7) \\(\href{claims.html#claim-35}{P_{35}}\\) — The inward renewal of the justified grows as they do good works in grace
+- (8) \\((\href{claims.html#claim-33}{P_{33}} \land \href{claims.html#claim-35}{P_{35}}) \rightarrow \href{claims.html#claim-32}{P_{32}}\\) — *would give:* Works performed in grace merit an increase of justification
+- (9) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* Justification is a verdict only: pardon and righteousness counted, not poured in
+- (10) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-34}{P_{34}}\\) — *would deny:* Justification and sanctification are inseparable but distinct
+- (11) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\) — *would deny:* Faith is sufficient: whoever believes is saved
+- (12) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\)
+- (13) \\(\href{claims.html#claim-54}{P_{54}}\\) — Augustine explains "being justified" as "being made righteous", and the Latin West read iustificare so
+- (14) \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) — *would give:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+- (15) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) — *would give:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) — *at issue, the denial of:* Salvation is not by works: no work is its ground
+
 </div>
 
 No premise here rests on scripture alone.
@@ -250,25 +248,23 @@ No premise here rests on scripture alone.
 
 Trent, with its definition taken as a claim about what God does.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{3} \\
-\text{(4)} \quad &amp; P_{5} \\
-\text{(5)} \quad &amp; P_{24} \\
-\text{(6)} \quad &amp; P_{33} \\
-\text{(7)} \quad &amp; P_{35} \\
-\text{(8)} \quad &amp; (P_{33} \land P_{35}) \rightarrow P_{32} \\
-\text{(9)} \quad &amp; P_{33} \rightarrow \lnot P_{30} \\
-\text{(10)} \quad &amp; P_{33} \rightarrow \lnot P_{34} \\
-\text{(11)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\
-\text{(12)} \quad &amp; P_{32} \rightarrow \lnot P_{28} \\
-\text{(13)} \quad &amp; P_{33} \rightarrow P_{53} \\[4pt]
-\vdash \quad &amp; \lnot P_{28}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:8–9 teaches salvation by grace through faith, not of works
+- (2) \\(\href{claims.html#claim-2}{P_{2}}\\) — Romans 3:28 teaches justification by faith apart from works of the law
+- (3) \\(\href{claims.html#claim-3}{P_{3}}\\) — Galatians 2:16 teaches that no one is justified by works of the law
+- (4) \\(\href{claims.html#claim-5}{P_{5}}\\) — Titus 3:5 teaches that God saved us not by works done in righteousness
+- (5) \\(\href{claims.html#claim-24}{P_{24}}\\) — Scripture does not contradict itself
+- (6) \\(\href{claims.html#claim-33}{P_{33}}\\) — Justification is not remission of sins only, but renewal of the inward man
+- (7) \\(\href{claims.html#claim-35}{P_{35}}\\) — The inward renewal of the justified grows as they do good works in grace
+- (8) \\((\href{claims.html#claim-33}{P_{33}} \land \href{claims.html#claim-35}{P_{35}}) \rightarrow \href{claims.html#claim-32}{P_{32}}\\) — *would give:* Works performed in grace merit an increase of justification
+- (9) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* Justification is a verdict only: pardon and righteousness counted, not poured in
+- (10) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-34}{P_{34}}\\) — *would deny:* Justification and sanctification are inseparable but distinct
+- (11) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\) — *would deny:* Faith is sufficient: whoever believes is saved
+- (12) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\)
+- (13) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \href{claims.html#claim-53}{P_{53}}\\) — *would give:* When God justifies, he also renews: pardon and renewal are given together, not to be separated
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) — *at issue, the denial of:* Salvation is not by works: no work is its ground
+
 </div>
 
 No premise here rests on scripture alone.
@@ -378,15 +374,15 @@ nothing else in Trent. Every link is rated above `disputed`.
 
 **Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{49} \land P_{50} \land P_{51}) \rightarrow \lnot P_{52}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **The crux:** \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{49}\\), \\(P_{50}\\), \\(P_{51}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow P_{52}\\) cannot be held together with \\((P_{49} \land P_{50} \land P_{51}) \rightarrow \lnot P_{52}\\) and \\(P_{49}\\), \\(P_{50}\\), \\(P_{51}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-49}{P_{49}}\\), \\(\href{claims.html#claim-50}{P_{50}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-33}{P_{33}}\\), \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) cannot be held together with \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\) and \\(\href{claims.html#claim-49}{P_{49}}\\), \\(\href{claims.html#claim-50}{P_{50}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{49}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{50}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’ — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
-  - \\(P_{51}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
-  - the step itself — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(\href{claims.html#claim-50}{P_{50}}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’ — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(\href{claims.html#claim-51}{P_{51}}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Joos 1972](../../bibliography.md#joos-semantic-axiom-1972); [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - the step itself — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
 
 <a id="whereTheLatinReadingFalls"></a>
 **`whereTheLatinReadingFalls`**
@@ -401,15 +397,15 @@ the rule of least meaning say it does not mean renewal.
 
 **Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{49} \land P_{50} \land P_{51}) \rightarrow \lnot P_{52}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **The crux:** \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{49}\\), \\(P_{50}\\), \\(P_{51}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{54}\\), \\(P_{54} \rightarrow P_{52}\\) cannot be held together with \\((P_{49} \land P_{50} \land P_{51}) \rightarrow \lnot P_{52}\\) and \\(P_{49}\\), \\(P_{50}\\), \\(P_{51}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-49}{P_{49}}\\), \\(\href{claims.html#claim-50}{P_{50}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-54}{P_{54}}\\), \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) cannot be held together with \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\) and \\(\href{claims.html#claim-49}{P_{49}}\\), \\(\href{claims.html#claim-50}{P_{50}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{49}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{50}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’ — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
-  - \\(P_{51}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
-  - the step itself — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(\href{claims.html#claim-50}{P_{50}}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’ — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(\href{claims.html#claim-51}{P_{51}}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Joos 1972](../../bibliography.md#joos-semantic-axiom-1972); [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - the step itself — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
 
 <a id="whereTrentsGraceReadingFalls"></a>
 **`whereTrentsGraceReadingFalls`**
@@ -422,19 +418,19 @@ and it is rated `disputed`.
 
 **Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
 
-- **The crux:** \\((P_{58} \land P_{49} \land P_{48}) \rightarrow \lnot P_{33}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
+- **The crux:** \\((\href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{44}\\), \\(P_{45}\\), \\(P_{46}\\), \\(P_{47}\\), \\((P_{44} \land P_{45} \land P_{46} \land P_{47}) \rightarrow P_{58}\\), \\(P_{48}\\), \\(P_{49}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{33}\\) cannot be held together with \\((P_{58} \land P_{49} \land P_{48}) \rightarrow \lnot P_{33}\\) and \\(P_{44}\\), \\(P_{45}\\), \\(P_{46}\\), \\(P_{47}\\), \\((P_{44} \land P_{45} \land P_{46} \land P_{47}) \rightarrow P_{58}\\), \\(P_{48}\\), \\(P_{49}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-44}{P_{44}}\\), \\(\href{claims.html#claim-45}{P_{45}}\\), \\(\href{claims.html#claim-46}{P_{46}}\\), \\(\href{claims.html#claim-47}{P_{47}}\\), \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-47}{P_{47}}) \rightarrow \href{claims.html#claim-58}{P_{58}}\\), \\(\href{claims.html#claim-48}{P_{48}}\\), \\(\href{claims.html#claim-49}{P_{49}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-33}{P_{33}}\\) cannot be held together with \\((\href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\) and \\(\href{claims.html#claim-44}{P_{44}}\\), \\(\href{claims.html#claim-45}{P_{45}}\\), \\(\href{claims.html#claim-46}{P_{46}}\\), \\(\href{claims.html#claim-47}{P_{47}}\\), \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-47}{P_{47}}) \rightarrow \href{claims.html#claim-58}{P_{58}}\\), \\(\href{claims.html#claim-48}{P_{48}}\\), \\(\href{claims.html#claim-49}{P_{49}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{44}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
-  - \\(P_{45}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
-  - \\(P_{46}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
-  - \\(P_{47}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
-  - \\(P_{58}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
-  - \\(P_{48}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
-  - \\(P_{49}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - the step itself — *disputed*: [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965)
+  - \\(\href{claims.html#claim-44}{P_{44}}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
+  - \\(\href{claims.html#claim-45}{P_{45}}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
+  - \\(\href{claims.html#claim-46}{P_{46}}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
+  - \\(\href{claims.html#claim-47}{P_{47}}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
+  - \\(\href{claims.html#claim-58}{P_{58}}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [Roberts et al. 1885](../../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+  - \\(\href{claims.html#claim-48}{P_{48}}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+  - \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - the step itself — *disputed*: [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 
 ### Romans 4
 
@@ -527,17 +523,17 @@ one passage where the argument from usage arrives from the word.
 
 **Why *Romans 4:3–8, on Paul's word (by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{57} \land P_{51}) \rightarrow \lnot P_{52}\\), a premise of *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.
+- **The crux:** \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\), a premise of *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{4}\\), \\(P_{55}\\), \\(P_{56}\\), \\(P_{51}\\), \\((P_{4} \land P_{55} \land P_{56}) \rightarrow P_{57}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow P_{52}\\) cannot be held together with \\((P_{57} \land P_{51}) \rightarrow \lnot P_{52}\\) and \\(P_{4}\\), \\(P_{55}\\), \\(P_{56}\\), \\(P_{51}\\), \\((P_{4} \land P_{55} \land P_{56}) \rightarrow P_{57}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-4}{P_{4}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\(\href{claims.html#claim-56}{P_{56}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\), \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-33}{P_{33}}\\), \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) cannot be held together with \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\) and \\(\href{claims.html#claim-4}{P_{4}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\(\href{claims.html#claim-56}{P_{56}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\), \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{4}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.18
-  - \\(P_{55}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
-  - \\(P_{56}\\) ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
-  - \\(P_{51}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
-  - \\(P_{57}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
-  - the step itself — *well supported*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - \\(\href{claims.html#claim-4}{P_{4}}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.18
+  - \\(\href{claims.html#claim-55}{P_{55}}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
+  - \\(\href{claims.html#claim-56}{P_{56}}\\) ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
+  - \\(\href{claims.html#claim-51}{P_{51}}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Joos 1972](../../bibliography.md#joos-semantic-axiom-1972); [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - \\(\href{claims.html#claim-57}{P_{57}}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+  - the step itself — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
 
 <a id="whereRomansFourMeetsWhatGodDoes"></a>
 **`whereRomansFourMeetsWhatGodDoes`**
@@ -555,17 +551,17 @@ share one starting point, the courtroom sense of the verb.
 
 **Why *Romans 4:3–8, against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
 
-- **The crux:** \\((P_{57} \land P_{49}) \rightarrow \lnot P_{33}\\), a premise of *Romans 4:3–8, against justification as renewal*.
+- **The crux:** \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\), a premise of *Romans 4:3–8, against justification as renewal*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{4}\\), \\(P_{55}\\), \\(P_{56}\\), \\(P_{49}\\), \\((P_{4} \land P_{55} \land P_{56}) \rightarrow P_{57}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{33}\\) cannot be held together with \\((P_{57} \land P_{49}) \rightarrow \lnot P_{33}\\) and \\(P_{4}\\), \\(P_{55}\\), \\(P_{56}\\), \\(P_{49}\\), \\((P_{4} \land P_{55} \land P_{56}) \rightarrow P_{57}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-4}{P_{4}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\(\href{claims.html#claim-56}{P_{56}}\\), \\(\href{claims.html#claim-49}{P_{49}}\\), \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-33}{P_{33}}\\) cannot be held together with \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\) and \\(\href{claims.html#claim-4}{P_{4}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\(\href{claims.html#claim-56}{P_{56}}\\), \\(\href{claims.html#claim-49}{P_{49}}\\), \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{4}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.18
-  - \\(P_{55}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
-  - \\(P_{56}\\) ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
-  - \\(P_{49}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{57}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
-  - the step itself — *well supported*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *disputed*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:5; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.1
+  - \\(\href{claims.html#claim-4}{P_{4}}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.18
+  - \\(\href{claims.html#claim-55}{P_{55}}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
+  - \\(\href{claims.html#claim-56}{P_{56}}\\) ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
+  - \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(\href{claims.html#claim-57}{P_{57}}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+  - the step itself — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *disputed*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:5; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
 
 ### The two put together
 
@@ -595,55 +591,55 @@ being made righteous" (Annex 2 A).
 Each way of taking it is fair: Trent's position, taken either way, can still be
 held without contradiction.
 
-**Every reading of \\(P_{33}\\), answered.** *Trent, against 'not by works'* holds \\(P_{33}\\). It is read 2 ways here, and each reading is checked; none can be left out.
+**Every reading of \\(\href{claims.html#claim-33}{P_{33}}\\), answered.** *Trent, against 'not by works'* holds \\(\href{claims.html#claim-33}{P_{33}}\\). It is read 2 ways here, and each reading is checked; none can be left out.
 
-**1. Read as what Paul's word means.** The claim commits *Trent, against 'not by works'* to \\(P_{52}\\) — so read by [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`npnf1-05-1887`](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [`mcgrath-iustitia-dei-2005`](../../bibliography.md#mcgrath-iustitia-dei-2005) (*disputed*). It rests the reading on \\(P_{54}\\), \\(P_{54} \rightarrow P_{52}\\).
-
-Against *Paul's word (δικαιόω, by the rule of least meaning)*, it cannot be held. Where it breaks:
-
-**Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
-
-- **The crux:** \\((P_{49} \land P_{50} \land P_{51}) \rightarrow \lnot P_{52}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
-- **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{49}\\), \\(P_{50}\\), \\(P_{51}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow P_{52}\\) cannot be held together with \\((P_{49} \land P_{50} \land P_{51}) \rightarrow \lnot P_{52}\\) and \\(P_{49}\\), \\(P_{50}\\), \\(P_{51}\\); each is needed for the break, and without the crux they stand.
-- **What this rests on:**
-  - \\(P_{49}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{50}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’ — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
-  - \\(P_{51}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
-  - the step itself — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+**1. Read as what Paul's word means.** The claim commits *Trent, against 'not by works'* to \\(\href{claims.html#claim-52}{P_{52}}\\) — so read by [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005) (*disputed*). It rests the reading on \\(\href{claims.html#claim-54}{P_{54}}\\), \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\).
 
 Against *Paul's word (δικαιόω, by the rule of least meaning)*, it cannot be held. Where it breaks:
 
 **Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{49} \land P_{50} \land P_{51}) \rightarrow \lnot P_{52}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **The crux:** \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{49}\\), \\(P_{50}\\), \\(P_{51}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{54}\\), \\(P_{54} \rightarrow P_{52}\\) cannot be held together with \\((P_{49} \land P_{50} \land P_{51}) \rightarrow \lnot P_{52}\\) and \\(P_{49}\\), \\(P_{50}\\), \\(P_{51}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-49}{P_{49}}\\), \\(\href{claims.html#claim-50}{P_{50}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-33}{P_{33}}\\), \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) cannot be held together with \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\) and \\(\href{claims.html#claim-49}{P_{49}}\\), \\(\href{claims.html#claim-50}{P_{50}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{49}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{50}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’ — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
-  - \\(P_{51}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
-  - the step itself — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(\href{claims.html#claim-50}{P_{50}}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’ — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(\href{claims.html#claim-51}{P_{51}}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Joos 1972](../../bibliography.md#joos-semantic-axiom-1972); [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - the step itself — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+
+Against *Paul's word (δικαιόω, by the rule of least meaning)*, it cannot be held. Where it breaks:
+
+**Why *Paul's word (δικαιόω, by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
+
+- **The crux:** \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\), a premise of *Paul's word (δικαιόω, by the rule of least meaning)*.
+- **What it does:** its conclusion does not follow without it.
+- **Granted:** \\(\href{claims.html#claim-49}{P_{49}}\\), \\(\href{claims.html#claim-50}{P_{50}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-54}{P_{54}}\\), \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) cannot be held together with \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\) and \\(\href{claims.html#claim-49}{P_{49}}\\), \\(\href{claims.html#claim-50}{P_{50}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(\href{claims.html#claim-50}{P_{50}}\\) Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’ — *consensus*: Titus 3:5-7; Rom 12:2; Rom 6:19-22; 1 Cor 6:11
+  - \\(\href{claims.html#claim-51}{P_{51}}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Joos 1972](../../bibliography.md#joos-semantic-axiom-1972); [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - the step itself — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
 
 Against *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, it cannot be held. Where it breaks:
 
 **Why *Romans 4:3–8, on Paul's word (by the rule of least meaning)* stands against *Trent, against 'not by works', read as what Paul's word means*.**
 
-- **The crux:** \\((P_{57} \land P_{51}) \rightarrow \lnot P_{52}\\), a premise of *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.
+- **The crux:** \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\), a premise of *Romans 4:3–8, on Paul's word (by the rule of least meaning)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{4}\\), \\(P_{55}\\), \\(P_{56}\\), \\(P_{51}\\), \\((P_{4} \land P_{55} \land P_{56}) \rightarrow P_{57}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow P_{52}\\) cannot be held together with \\((P_{57} \land P_{51}) \rightarrow \lnot P_{52}\\) and \\(P_{4}\\), \\(P_{55}\\), \\(P_{56}\\), \\(P_{51}\\), \\((P_{4} \land P_{55} \land P_{56}) \rightarrow P_{57}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-4}{P_{4}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\(\href{claims.html#claim-56}{P_{56}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\), \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-33}{P_{33}}\\), \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) cannot be held together with \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\) and \\(\href{claims.html#claim-4}{P_{4}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\(\href{claims.html#claim-56}{P_{56}}\\), \\(\href{claims.html#claim-51}{P_{51}}\\), \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{4}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.18
-  - \\(P_{55}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
-  - \\(P_{56}\\) ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
-  - \\(P_{51}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
-  - \\(P_{57}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
-  - the step itself — *well supported*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *well supported*: [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - \\(\href{claims.html#claim-4}{P_{4}}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.18
+  - \\(\href{claims.html#claim-55}{P_{55}}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
+  - \\(\href{claims.html#claim-56}{P_{56}}\\) ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
+  - \\(\href{claims.html#claim-51}{P_{51}}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Joos 1972](../../bibliography.md#joos-semantic-axiom-1972); [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - \\(\href{claims.html#claim-57}{P_{57}}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+  - the step itself — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
 
-**2. Read as what God does in justifying.** The claim commits *Trent, against 'not by works'* to \\(P_{53}\\) — so read by [`lwf-catholic-joint-declaration-2000`](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§22; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 (*disputed*).
+**2. Read as what God does in justifying.** The claim commits *Trent, against 'not by works'* to \\(\href{claims.html#claim-53}{P_{53}}\\) — so read by [Lutheran World Federation and Catholic Church 2000](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§22; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7 (*disputed*).
 
 Against *Paul's word (δικαιόω, by the rule of least meaning)*, it is not reached: *Paul's word (δικαιόω, by the rule of least meaning)* holds, and can be held together with it.
 
@@ -653,35 +649,35 @@ Against *Paul's gospel (Galatians 1), against justification as renewal*, it cann
 
 **Why *Paul's gospel (Galatians 1), against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
 
-- **The crux:** \\((P_{58} \land P_{49} \land P_{48}) \rightarrow \lnot P_{33}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
+- **The crux:** \\((\href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\), a premise of *Paul's gospel (Galatians 1), against justification as renewal*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{44}\\), \\(P_{45}\\), \\(P_{46}\\), \\(P_{47}\\), \\((P_{44} \land P_{45} \land P_{46} \land P_{47}) \rightarrow P_{58}\\), \\(P_{48}\\), \\(P_{49}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{33}\\) cannot be held together with \\((P_{58} \land P_{49} \land P_{48}) \rightarrow \lnot P_{33}\\) and \\(P_{44}\\), \\(P_{45}\\), \\(P_{46}\\), \\(P_{47}\\), \\((P_{44} \land P_{45} \land P_{46} \land P_{47}) \rightarrow P_{58}\\), \\(P_{48}\\), \\(P_{49}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-44}{P_{44}}\\), \\(\href{claims.html#claim-45}{P_{45}}\\), \\(\href{claims.html#claim-46}{P_{46}}\\), \\(\href{claims.html#claim-47}{P_{47}}\\), \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-47}{P_{47}}) \rightarrow \href{claims.html#claim-58}{P_{58}}\\), \\(\href{claims.html#claim-48}{P_{48}}\\), \\(\href{claims.html#claim-49}{P_{49}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-33}{P_{33}}\\) cannot be held together with \\((\href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\) and \\(\href{claims.html#claim-44}{P_{44}}\\), \\(\href{claims.html#claim-45}{P_{45}}\\), \\(\href{claims.html#claim-46}{P_{46}}\\), \\(\href{claims.html#claim-47}{P_{47}}\\), \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-47}{P_{47}}) \rightarrow \href{claims.html#claim-58}{P_{58}}\\), \\(\href{claims.html#claim-48}{P_{48}}\\), \\(\href{claims.html#claim-49}{P_{49}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{44}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
-  - \\(P_{45}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
-  - \\(P_{46}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
-  - \\(P_{47}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
-  - \\(P_{58}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [`roberts-ante-nicene-fathers-1-1885`](../../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
-  - \\(P_{48}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
-  - \\(P_{49}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - the step itself — *disputed*: [`moo-galatians-2013`](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.1; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965)
+  - \\(\href{claims.html#claim-44}{P_{44}}\\) Galatians 1:6–9: whoever preaches a gospel contrary to the one received is accursed — *consensus*: Gal 1:6-9; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6
+  - \\(\href{claims.html#claim-45}{P_{45}}\\) 1 Corinthians 15:3: the gospel of first importance — Christ died for our sins — *consensus*: 1 Cor 15:3
+  - \\(\href{claims.html#claim-46}{P_{46}}\\) Galatians 2:21: if righteousness were through the law, Christ died for no purpose — *consensus*: Gal 2:21; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21
+  - \\(\href{claims.html#claim-47}{P_{47}}\\) Galatians 5:2–4: you who would be justified by the law are severed from Christ — *consensus*: Gal 5:2-4; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2
+  - \\(\href{claims.html#claim-58}{P_{58}}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [Roberts et al. 1885](../../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+  - \\(\href{claims.html#claim-48}{P_{48}}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+  - \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - the step itself — *disputed*: [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 
 Against *Romans 4:3–8, against justification as renewal*, it cannot be held. Where it breaks:
 
 **Why *Romans 4:3–8, against justification as renewal* stands against *Trent, against 'not by works', read as what God does in justifying*.**
 
-- **The crux:** \\((P_{57} \land P_{49}) \rightarrow \lnot P_{33}\\), a premise of *Romans 4:3–8, against justification as renewal*.
+- **The crux:** \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\), a premise of *Romans 4:3–8, against justification as renewal*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{4}\\), \\(P_{55}\\), \\(P_{56}\\), \\(P_{49}\\), \\((P_{4} \land P_{55} \land P_{56}) \rightarrow P_{57}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{33}\\) cannot be held together with \\((P_{57} \land P_{49}) \rightarrow \lnot P_{33}\\) and \\(P_{4}\\), \\(P_{55}\\), \\(P_{56}\\), \\(P_{49}\\), \\((P_{4} \land P_{55} \land P_{56}) \rightarrow P_{57}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-4}{P_{4}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\(\href{claims.html#claim-56}{P_{56}}\\), \\(\href{claims.html#claim-49}{P_{49}}\\), \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-33}{P_{33}}\\) cannot be held together with \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\) and \\(\href{claims.html#claim-4}{P_{4}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\(\href{claims.html#claim-56}{P_{56}}\\), \\(\href{claims.html#claim-49}{P_{49}}\\), \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{4}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.18
-  - \\(P_{55}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
-  - \\(P_{56}\\) ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
-  - \\(P_{49}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [`morris-apostolic-preaching-1965`](../../bibliography.md#morris-apostolic-preaching-1965); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`irons-righteousness-of-god-2015`](../../bibliography.md#irons-righteousness-of-god-2015); [`wright-justification-2009`](../../bibliography.md#wright-justification-2009); [`fitzmyer-romans-1993`](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
-  - \\(P_{57}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
-  - the step itself — *well supported*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *disputed*: [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:5; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.1
+  - \\(\href{claims.html#claim-4}{P_{4}}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.18
+  - \\(\href{claims.html#claim-55}{P_{55}}\\) Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted — *consensus*: Rom 4:6-8; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6
+  - \\(\href{claims.html#claim-56}{P_{56}}\\) ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3
+  - \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+  - \\(\href{claims.html#claim-57}{P_{57}}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+  - the step itself — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; *disputed*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:5; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
 
 
 </details>

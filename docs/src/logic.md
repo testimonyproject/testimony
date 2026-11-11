@@ -283,10 +283,11 @@ so \\(P_{9}\\) means the same claim in the Protestant position and in the
 Tridentine one and a reader can compare them. Only the setting differs between
 the two: Markdown tables and MathJax on the site, `longtable` and live `\cite`
 commands in the PDF. The formulas themselves are rendered once, by
-`Testimony.Logic.Latex`, because what TeX wants is what MathJax reads. The PDF
-adds what a reader of a printed page cannot do without: each variable in a
-formula links to its row in the legend, and a derivation puts its claims into
-the legend's words (above). The site sets the variables plain, for now.
+`Testimony.Logic.Latex`, because what TeX wants is what MathJax reads. Both
+settings give the reader what saves turning back to the legend: each variable
+in a formula links to its row there, and a derivation puts its claims into the
+legend's words (above), through the one function both renderers call. The
+PDF is typeset by CI and put beside the site, at `pdf/arguments.pdf`.
 
 The practical consequence is for how you write docstrings. They are not
 commentary for the next contributor; they are the page. A module docstring that
