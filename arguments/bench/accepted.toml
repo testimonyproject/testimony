@@ -137,3 +137,15 @@ benchmark = "checks: AIF, every dispute"
 metric = "time"
 up_to = 0.25
 reason = "Chrysostom on John 3:36 and the Reformed answer, obedience as sanctification, joined the sola fide dispute (#198): seventeen parties, not fifteen. The benchmark does the same work per cell over more cells, or checks two more positions."
+
+[[accept]]
+benchmark = "satisfied_by: the Pauline case"
+metric = "time"
+up_to = 0.25
+reason = "Sola fide gained fourteen claims (113 to 127) for the chapters on whether justification has degrees and on Abraham (#203). satisfied_by checks a reading against every premise claim by claim, so the same work runs over more claims: about 2 ms on a 27 ms benchmark."
+
+[[accept]]
+benchmark = "satisfied_by: Trent grants the subjective genitive"
+metric = "time"
+up_to = 0.25
+reason = "Sola fide gained fourteen claims (113 to 127) for the chapters on whether justification has degrees and on Abraham (#203). satisfied_by checks a reading against every premise claim by claim, so the same work runs over more claims: about 2 ms on a 27 ms benchmark."
