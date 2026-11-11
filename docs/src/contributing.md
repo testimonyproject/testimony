@@ -191,6 +191,10 @@ owner installs on the organisation and grants this repository.
   clicks the link becomes the author. So have a maintainer other than the one
   who will review click it. The documentation does not describe a supported
   way to have the action open the pull request itself.
+  The job runs in the devcontainer image, as CI does, with Mathlib's build
+  restored from CI's cache. So it can build, regenerate the pages and run the
+  gates, as a cloud session can. It cannot change `.github/workflows/`: the
+  App is not granted that permission, so a maintainer makes those changes.
 
 **A route that needs no setup.** Have a second maintainer, or the maintainer
 who did not start the session, review and approve. Branch protection on `main`
