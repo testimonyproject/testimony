@@ -87,6 +87,11 @@ question, and is shaped like a short essay:
 6. **A road onward.** One sentence pointing to the chapter that takes the next
    question, when there is one.
 
+In the Lean, a chapter is the modules its argument's catalogue entry names
+(`Argument.chapters`). The module docstrings and their `/-! ### … -/` sections
+are the chapter's prose; a section opened with `####` goes behind it, with the
+declarations. See "An argument set as chapters" in `docs/src/architecture.md`.
+
 How the results are proved — the formula, the Lean, the claim tables — is not
 part of the chapter's story. It belongs in the declarations' own docstrings and
 the generated notes, where a reader who wants it can find it.

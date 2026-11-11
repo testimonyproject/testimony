@@ -3,19 +3,176 @@ import Testimony.Logic.Line
 import TestimonyArguments.Works
 
 /-!
-# TestimonyArguments.SolaFide.Lines — the strands, and what they share
+# TestimonyArguments.SolaFide.Lines — the four witnesses
 
-Four strands lead to the conclusion, each from a different speaker: Paul, Jesus
-as Luke reports him, Peter at Jerusalem, and Jesus as John reports him. Each is
-credited only with what its own texts say. Paul and John say that justification
-is by faith *alone*. Luke 7:50 and Acts 15 say that faith *suffices*, which is
-less, and is all that "through faith" in the conclusion needs.
+The Reformed case reaches "through faith" by four routes, called *strands*.
+Each begins from a different speaker: Paul, Jesus as Luke reports him, Peter at
+Jerusalem, and Jesus as John reports him. Each rests on its own texts, and on a
+reading of them that the conclusion needs. And each has at least one such
+reading that a scholar cited here denies. This chapter takes them in turn, then
+asks what they show together.
 
-Two further lines are here. One answers James 2:24. The other is the
-apocalyptic reading of Paul, which denies what Paul's strand delivers.
+### Paul
 
-What every package holds in common is collected here too, so that a variant
-package is a named difference from another and not a retyped list.
+The first is Paul's answer to the teachers in Galatia who required
+believers to be circumcised as well as to believe:
+
+> "A person is not justified by works of the law but through faith in Jesus
+> Christ" (Galatians 2:16).
+
+Two questions about this verse carry the strand. The first is what "works of
+the law" (ἔργα νόμου) means. The traditional answer is human works in general.
+Dunn and Wright, building on Sanders, answer that it means what the law
+required of Israel as a people set apart, seen above all in the practices that
+marked Jews off from gentiles: circumcision, food laws and the sabbath. Their
+reading is known as the New Perspective on Paul. Only on the first answer does
+refusing circumcision mean refusing every work as a requirement
+(`worksOfLawMeansWorksGenerally`).
+
+The second question is what "faith in Jesus Christ" (πίστις Χριστοῦ) means:
+our faith in Christ, or Christ's own faithfulness, as Hays holds. Only on the
+first does the verse name the believer's faith as the means
+(`pistisChristouObjective`). This is a premise inside Paul's strand rather than
+a strand of its own, because every verse with the phrase sets it against the
+law, so no route through it avoids the first question. Nor does it divide the
+same people: Dunn rejects the traditional reading of "works of the law" and
+keeps "faith in Christ".
+
+### Jesus, in Luke
+
+The second strand is a sentence Jesus spoke to the woman who
+anointed his feet:
+
+> "Your faith has saved you; go in peace" (Luke 7:50).
+
+Luke has the saying four times (7:50, 8:48, 17:19, 18:42). The Greek verb
+(σῴζω) means both *save* and *heal*, and in the other three places the person
+has just been healed, which is why most English Bibles print "made you well"
+there. So the strand rests on 7:50 alone, where the saying follows "your sins
+are forgiven" and no one is ill. That the word means *saved* there is a reading
+the strand needs (`sozoIsSoteriological`), and it is rated `wellSupported`,
+because no scholar found argues the healing sense at 7:50. As Marshall puts it,
+the saying is used at 7:50 "in a case where physical healing is not involved".
+
+The strand's disputed reading is of the verse before:
+
+> "Her sins, which are many, are forgiven—for she loved much" (Luke 7:47).
+
+Read one way, love is the reason she was forgiven. The strand reads it the
+other way: her love shows her forgiveness and does not earn it
+(`luke7_47LoveIsEvidence`). The rest of the verse ("he who is forgiven little,
+loves little") points that way, and so does the parable of the two debtors just
+before it (7:41–43). Three readers are cited for it:
+
+- Osvaldo Padilla: her actions "stem from the fact that she loves much because
+  she has been forgiven much".
+- Melanchthon, in the *Apology of the Augsburg Confession*: "Christ interprets
+  Himself when He adds: Thy faith hath saved thee".
+- Marshall, in his commentary on the Greek text, from the grammar: "for" here
+  means "as is evidenced by the fact that".
+
+Marshall also names those who read the love as the cause, most Roman Catholic
+commentators among them, and that is why this premise is rated `disputed`.
+
+### Peter, in Acts
+
+The third strand comes from the Jerusalem council, where
+some demanded:
+
+> "Unless you are circumcised according to the custom of Moses, you cannot be
+> saved" (Acts 15:1).
+
+Peter answered that God had cleansed the gentiles' hearts by faith, that the
+law is "a yoke… that neither our fathers nor we have been able to bear", and
+that "we believe that we will be saved through the grace of the Lord Jesus,
+just as they will" (15:9–11). The strand's disputed reading is that the yoke is
+the whole law treated as a condition of salvation
+(`acts15YokeIsLawAsCondition`). Jervell reads it instead as Israel's law laid
+on gentiles as a mark of belonging. On his reading, Peter refuses to make
+gentiles keep Israel's law, and says nothing about the law as a condition of
+salvation.
+
+### Jesus, in John
+
+The fourth strand is an exchange in John 6:
+
+> "What must we do, to be doing the works of God?" Jesus answered them, "This
+> is the work of God, that you believe in him whom he has sent" (John
+> 6:28–29).
+
+Its disputed reading is that this believing is trust, which brings nothing of
+its own to God (`johannineBelievingIsTrust`). Calvin reads it so. Aquinas reads
+it as faith formed by charity, that is, faith made alive by love, which is how
+Trent describes the faith that justifies. Luther answers Aquinas from Galatians
+3:11–12, and his answer rests on a step Aquinas denies. The chapter on John sets
+this out, and takes up John 3:36 as well, "whoever does not obey the Son shall
+not see life", with Chrysostom's reading of it.
+
+## What the four show together
+
+The case does not hang on any one disputed reading. Take any one away and the
+other strands still reach the conclusion (`worksOfLaw_not_load_bearing`,
+`sozo_not_load_bearing`, `acts15Yoke_not_load_bearing`,
+`believing_as_trust_not_load_bearing`). Acts and John each reach it with every
+other strand's disputed reading left out
+(`apostolic_strand_survives_paul_and_luke`,
+`johannine_strand_survives_the_other_three`). Only when a disputed reading is
+taken from every strand at once does sola fide fail to follow
+(`lexical_premises_jointly_load_bearing`).
+
+So a reader who wins the argument over "works of the law" has not thereby
+defeated sola fide. The New Perspective rejects the traditional reading of that
+phrase and still holds justification by faith, and its premises establish the
+conclusion too (`newPerspective_establishes`). Winning "the faithfulness of
+Christ" for Hays does not defeat it either: that costs the Reformed case its
+route through Paul, not its conclusion (`pistisChristou_not_load_bearing`).
+
+None of this shows that the strands are independent in practice. A reader who
+takes "works of the law" as Israel's boundary markers will usually read Peter's
+yoke the same way. But they are different premises about different texts, and
+an opponent has to answer each one.
+
+## Each witness is credited only with what it says
+
+On the Reformed reading, Paul argues for *alone*. The Galatians already
+believed, and adding circumcision to their faith is what he says severs them
+from Christ (5:4). John's strand, as Calvin reads it, claims the same: asked
+about works, Jesus names believing and nothing else.
+
+Luke 7:50 and Acts 15 say less. Her faith saved her; the gentiles are saved
+without the yoke. That is, faith *suffices* (`faithIsSufficient`). Neither says
+that nothing else could be a condition, and "through faith" needs only that
+much. The difference matters when positions are weighed against each other,
+because a case is attacked on what it claims. Credit Luke with *alone*, and the
+apocalyptic reading would attack Luke for a claim Luke never made.
+
+## Why the New Perspective reads Paul as it does
+
+In 1977 E. P. Sanders argued that Judaism in Paul's day taught that one enters
+the covenant by grace and stays in by obedience. He called it "covenantal
+nomism". If he is right, Paul's opponents were not trying to earn salvation,
+and Dunn infers that what Paul refuses is the boundary markers (`sandersLine`).
+Gathercole, and the *Variegated Nomism* volume edited by Carson, O'Brien and
+Seifrid, deny Sanders' starting point: Jewish texts of the period also speak of
+final vindication according to works, so the demand Paul refuses is a demand
+for obedience (`criticsLine`).
+
+On the critics' history, Paul alone carries sola fide
+(`critics_carry_the_pauline_strand`). On Sanders', he does not
+(`sanders_costs_the_pauline_strand`). Whether Paul's strand reaches sola fide
+depends, in the end, on what Judaism in Paul's day taught about works.
+
+## Who wrote the letters
+
+Ephesians, Titus and 1 and 2 Peter are each disputed as to author, and each
+dispute is recorded from both sides: Hoehner and Lincoln on Ephesians; Mounce,
+Dibelius–Conzelmann and Marshall on the Pastorals; Jobes and Achtemeier on 1
+Peter; Schreiner and Bauckham on 2 Peter; Ehrman across all four. Granting every
+critical conclusion costs the case nothing (`authorship_not_load_bearing`),
+because it reads these letters as Scripture, not as the testimony of a named
+apostle. It does cost them their use as evidence of what *Paul* meant by
+"works", and that is why that premise is argued from Romans 4, 9 and 11, where
+the authorship is not in doubt.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -24,29 +181,7 @@ open Testimony
 
 open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
-/-! ### Lines of reason
-
-Four strands lead to the conclusion, and a fifth line answers James. The
-strands do not all deliver the same thing.
-
-Paul argues for *alone*. His letter refuses circumcision added to faith, and
-Galatians 2:16 names faith as the one means ("not justified by works of the law
-but through faith", ἐὰν μή). John's strand delivers the same: asked what works
-God requires, Jesus names believing and nothing else (John 6:28–29).
-
-Luke 7:50 and Acts 15 say that faith saves, and that the woman's love and the
-law's yoke are not what saves. They do not say that nothing else could. So
-those two strands deliver `faithIsSufficient`, the weaker claim.
-
-The difference matters when the positions are weighed against each other. A
-case is attacked on what it derives as well as on what it assumes. Credit Luke
-with *alone*, and the apocalyptic reading, which denies faith alone, would
-attack Luke on a claim Luke never made.
-
-The answer to James is deliberately *not* a strand. It is not another route to
-`justificationByFaithAlone`; it supplies a premise the closing step needs. So
-it adds its grounds and its step to the case without being one of the lines
-that `caseOf` treats as arriving at the same place. -/
+/-! ### Lines of reason -/
 
 /-- **Paul's strand.** From Romans and Galatians to justification by faith alone,
 with Galatians 2:16 at the centre: "a person is not justified by works of the
@@ -396,20 +531,7 @@ three parts of the conclusion. -/
 @[solaFideDefs]
 def closingSteps : List (Formula Claim) := jamesLine.step :: conclusionSteps
 
-/-! ### Paul's gospel, against justification as renewal
-
-Galatians is a letter about another gospel. The teachers Paul opposes did not
-deny Christ. They added circumcision to him, and Paul calls that addition a
-different gospel and its preachers accursed (1:6–9). Against it he sets what he
-received: "Christ died for our sins" (1 Corinthians 15:3); "if righteousness
-were through the law, then Christ died for no purpose" (Galatians 2:21); whoever
-would be justified by the law is "severed from Christ" (5:2–4).
-
-This line reads those texts as one claim: Christ's work is the whole ground of
-justification. With the courtroom sense of Paul's verb "justify", it carries
-that claim to the denial of Trent's definition. If justification is God's
-verdict on the ground of a finished work, then the renewal worked in us is no
-part of it. -/
+/-! ### Paul's gospel, against justification as renewal -/
 
 /-- The reading of the gospel in Galatians: Christ's death is the whole ground of
 justification, and to add a ground is to preach another gospel. Cited to Moo on
@@ -439,7 +561,20 @@ def verdictNotRenewalSource : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
-/-- **Paul's gospel**, as Galatians states it and 1 Corinthians sums it up. -/
+/-- **Paul's gospel**, as Galatians states it and 1 Corinthians sums it up.
+
+Galatians is a letter about another gospel. The teachers Paul opposes did not
+deny Christ. They added circumcision to him, and Paul calls that addition a
+different gospel and its preachers accursed (1:6–9). Against it he sets what he
+received: "Christ died for our sins" (1 Corinthians 15:3); "if righteousness
+were through the law, then Christ died for no purpose" (Galatians 2:21); whoever
+would be justified by the law is "severed from Christ" (5:2–4).
+
+This line reads those texts as one claim: Christ's work is the whole ground of
+justification. With the courtroom sense of Paul's verb "justify", it carries
+that claim to the denial of Trent's definition. If justification is God's
+verdict on the ground of a finished work, then the renewal worked in us is no
+part of it. -/
 @[solaFideDefs]
 def galatianGospelLine : Line Claim :=
   { name := "Paul's gospel (Galatians 1:6–9; 2:21; 5:2–4; 1 Corinthians 15:3)"
@@ -460,22 +595,7 @@ def verdictExcludesRenewal : Formula Claim :=
   ⋀ [p .christsWorkIsTheWholeGround, p .dikaioIsForensic, p .romans8_33_34]
   ➝ notP .justificationIncludesSanctification
 
-/-! ### What Paul's word means
-
-Trent's definition can be read as a claim about Paul's word: that "justify"
-(δικαιόω), in Paul, means the renewal of the inward person. This line answers
-that reading from the word alone.
-
-The verb is a courtroom word: its opposite is "condemn". Paul has other words
-for renewal, and sets them beside it. And a word contributes the least meaning
-its context requires. Nothing in the setting of a verdict requires a second,
-inward sense, and to supply one from the doctrine is the mistake Barr called
-"illegitimate totality transfer": reading into one use of a word everything it
-can mean elsewhere. So Paul's "justify" does not mean renewal.
-
-The line says nothing about what God does when he justifies. That is the other
-way of reading Trent's definition, and this line does not reach it
-(`TestimonyArguments.SolaFide.Definition`). -/
+/-! ### What Paul's word means -/
 
 /-- The step from three things to "Paul's 'justify' does not mean renewal": the verb
 is a courtroom word; Paul has other words for renewal; and a word contributes
@@ -493,7 +613,22 @@ def leastMeaningSource : Source :=
   , confidence := .wellSupported }
 
 /-- **Paul's word**, read by the rule that a word means no more than its context
-requires. -/
+requires.
+
+Trent's definition can be read as a claim about Paul's word: that "justify"
+(δικαιόω), in Paul, means the renewal of the inward person. This line answers
+that reading from the word alone.
+
+The verb is a courtroom word: its opposite is "condemn". Paul has other words
+for renewal, and sets them beside it. And a word contributes the least meaning
+its context requires. Nothing in the setting of a verdict requires a second,
+inward sense, and to supply one from the doctrine is the mistake Barr called
+"illegitimate totality transfer": reading into one use of a word everything it
+can mean elsewhere. So Paul's "justify" does not mean renewal.
+
+The line says nothing about what God does when he justifies. That is the other
+way of reading Trent's definition, and this line does not reach it
+(the chapter "What Trent means by justification"). -/
 @[solaFideDefs]
 def lexicalLine : Line Claim :=
   { name := "Paul's word (δικαιόω, by the rule of least meaning)"
@@ -504,30 +639,7 @@ def lexicalLine : Line Claim :=
   , delivers := notP .paulsJustifyDenotesRenewal
   , inference := some leastMeaningSource }
 
-/-! ### Romans 4: the ungodly, justified
-
-An argument from one passage, in two steps.
-
-The first step is about what Paul says. God "justifies the ungodly" (4:5). What
-he counts to them is described in the psalm Paul quotes: "blessed are those
-whose lawless deeds are forgiven… blessed is the man against whom the Lord will
-not count his sin" (4:6–8). "Count" (λογίζομαι) is the language of an account,
-set against wages owed (4:4). So, in Paul's own argument, the righteousness
-counted to the ungodly is sin not counted. No source cited here accepts the
-texts and the sense of the verb and denies that.
-
-The second step puts the first to work, and it goes two ways.
-
-- **Against a claim about Paul's word.** With the rule of least meaning, the
-  verb Paul explains in that way does not also mean the renewal of the inward
-  person. Rated `wellSupported`, as the argument from the word is.
-- **Against a claim about what God does.** That what is counted is sin not
-  counted, and that the verdict is a courtroom one, excludes renewal from
-  justification. Augustine accepts every word of Romans 4 and reads the verse
-  the other way: God "justifies the ungodly man, that he may become a godly one"
-  (*On the Spirit and the Letter* 26.45). Trent makes the justice "whereby He
-  maketh us just" the formal cause of justification (ch. 7). So that step is
-  `disputed`, as the step from Galatians is. -/
+/-! ### Romans 4: the ungodly, justified -/
 
 /-- The reading of Romans 4:3–8. Paul uses the language of an account ("counted",
 λογίζομαι), sets it against wages, and explains what is counted by quoting a
@@ -552,7 +664,30 @@ def romansFourReadingSource : Source :=
   , confidence := .disputed }
 
 /-- **Romans 4:3–8, read.** God "justifies the ungodly", and the righteousness he
-counts to them is, in Paul's own explanation, sin not counted. -/
+counts to them is, in Paul's own explanation, sin not counted.
+
+An argument from one passage, in two steps.
+
+The first step is about what Paul says. God "justifies the ungodly" (4:5). What
+he counts to them is described in the psalm Paul quotes: "blessed are those
+whose lawless deeds are forgiven… blessed is the man against whom the Lord will
+not count his sin" (4:6–8). "Count" (λογίζομαι) is the language of an account,
+set against wages owed (4:4). So, in Paul's own argument, the righteousness
+counted to the ungodly is sin not counted. No source cited here accepts the
+texts and the sense of the verb and denies that.
+
+The second step puts the first to work, and it goes two ways.
+
+- **Against a claim about Paul's word.** With the rule of least meaning, the
+  verb Paul explains in that way does not also mean the renewal of the inward
+  person. Rated `wellSupported`, as the argument from the word is.
+- **Against a claim about what God does.** That what is counted is sin not
+  counted, and that the verdict is a courtroom one, excludes renewal from
+  justification. Augustine accepts every word of Romans 4 and reads the verse
+  the other way: God "justifies the ungodly man, that he may become a godly one"
+  (*On the Spirit and the Letter* 26.45). Trent makes the justice "whereby He
+  maketh us just" the formal cause of justification (ch. 7). So that step is
+  `disputed`, as the step from Galatians is. -/
 @[solaFideDefs]
 def romansFourExegesisLine : Line Claim :=
   { name := "Romans 4:3–8 (the ungodly, justified)"

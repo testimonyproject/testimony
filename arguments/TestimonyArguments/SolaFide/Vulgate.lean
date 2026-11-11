@@ -6,7 +6,7 @@ import Testimony.Logic.Because
 
 Two of the three texts Trent cites for the increase of justification read
 differently in the Latin Trent quotes and in the Greek
-(`TestimonyArguments.SolaFide.James`). "He that is just, let him be justified
+(the chapter "James 2:24"). "He that is just, let him be justified
 still" is Revelation 22:11 in the Latin Vulgate; the Greek, as the critical
 editions print it, says "let the righteous still do righteousness". "Be not
 afraid to be justified even to death" is Sirach 18:22 in the Vulgate; the Greek
@@ -15,11 +15,17 @@ until death to be justified". Trent introduces both with "as it is written"
 (Session VI, ch. 10), having declared the Vulgate "authentic" for "public
 lectures, disputations, sermons and expositions" (Session IV).
 
-A reader asks whether Rome contradicts itself here. Pius XII taught, in *Divino
-Afflante Spiritu* (1943), that the original texts outweigh any translation. Can
-that be held together with Trent's use of these two Latin readings? This section
-answers from Rome's own words only: Trent's, Pius XII's, and the Catholic
-Church's own translation of the Greek.
+In 1943 Pius XII urged Catholic scholars back to the Hebrew and the Greek. The
+original text, he wrote in *Divino Afflante Spiritu*,
+
+> "written by the inspired author himself, has more authority and greater weight
+> than any even the very best translation" (§16).
+
+Four centuries earlier, Trent had taught the increase of justification from two
+verses whose Latin reads differently from the Greek. Do the pope and the
+council contradict each other? The answer here is drawn from Rome's own
+documents and nothing else: the council's decree, the pope's letter, and the
+Catholic Church's own translation of the Greek.
 
 ## The answer depends on what "as it is written" claims
 
@@ -49,7 +55,7 @@ doctrine taught from the Vulgate be confirmed from the original texts (§22),
 which at these two verses do not confirm it (`pius_finds_no_confirmation`). So
 of the three texts chapter 10 cites, only James 2:24 is left to confirm the
 doctrine from the originals. It is weighed in
-`TestimonyArguments.SolaFide.James`.
+the chapter "James 2:24".
 
 ## What this does not show
 

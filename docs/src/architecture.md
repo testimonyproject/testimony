@@ -115,6 +115,26 @@ links each variable in a formula to its row in the legend, and puts a
 derivation's premises, what each step would give and the conclusion at issue
 into the legend's words; the site sets the variables plain, for now.
 
+### An argument set as chapters
+
+A long argument reads better as a book than as one page. Its catalogue entry
+(`Argument.chapters`, in `arguments/TestimonyArguments/Tools/Catalogue.lean`)
+lists its chapters in reading order, each with a title in the reader's words and
+the modules it is made of. Each chapter becomes a page of the site, nested under
+the argument in the summary, and a `\subsection*` of the PDF. The first chapter
+is the argument's own page, and one chapter, usually an appendix, carries the
+table of numbered claims that every formula refers to.
+
+A chapter is the modules' *prose*, their module docstrings, followed by "How
+this is checked": every declaration of those modules, each with its docstring
+and its formula or statement, folded away on the site. So a module is written as
+a chapter. Its opening docstring and its `/-! ### … -/` sections are what a
+reader reads. A section that only organises the declarations under it, a
+heading with no prose, goes behind the chapter, and so does a section opened
+with `####`, which is how a module marks a passage that is about the machinery
+rather than the argument. `argdoc` fails if the outline leaves out a module or
+names one twice.
+
 That is why there is no hand-written page describing an argument. There is
 nothing to keep in step, because there is no second copy — the docstring is the
 documentation, and `--check` fails if what is committed is not what the source

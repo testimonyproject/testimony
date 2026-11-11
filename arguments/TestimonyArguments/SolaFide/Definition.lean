@@ -4,13 +4,21 @@ import Testimony.Logic.Dilemma
 /-!
 # TestimonyArguments.SolaFide.Definition — what Trent's definition claims
 
-Trent defines justification as "not remission of sins merely, but also the
-sanctification and renewal of the inward man" (Session VI, ch. 7). The Reformed
-deny it, and `whereTrentPartsFromPaul` places the denial at one step. But the
-definition can be taken two ways, and each meets a different objection.
+The last chapter found that Trent and Paul part at one step
+(`whereTrentPartsFromPaul`). What lies on Trent's side of that step is its
+definition:
 
-**Taken as a claim about Paul's word**, it says that "justify" (δικαιόω), in
-Paul, means the renewal of the inward person. Trent invites this. Chapter 8 sets
+> justification is "not remission of sins merely, but also the sanctification
+> and renewal of the inward man" (Session VI, ch. 7).
+
+The Reformed deny it. But the definition can be taken in two ways, as a claim
+about a word or as a claim about what God does, and each way meets a different
+objection.
+
+### Taken as a claim about Paul's word
+
+On this reading the definition says that "justify" (δικαιόω), in Paul, means
+the renewal of the inward person. Trent invites it. Chapter 8 sets
 out how "the Apostle's" words, justified "by faith and freely", are to be
 understood, and chapter 7 says that the justified "are not only reputed, but are
 truly called, and are, just". Taken this way, the definition is a claim about a
@@ -21,7 +29,9 @@ Silva). To read renewal into the verdict from the doctrine is what Barr called
 "illegitimate totality transfer". Every link of that answer is rated above
 `disputed`.
 
-**Why Trent would take it so** can be said from history. The council read Paul
+### Why Trent would take it so
+
+The reason can be told from history. The council read Paul
 in the Latin it had declared "authentic" (Session IV), and in Latin "justify"
 (*iustificare*) had meant "to make righteous" since Augustine: "what else does
 the phrase 'being justified' signify than being made righteous" (*On the Spirit
@@ -33,7 +43,9 @@ where it fails. An explanation in one language does not settle what a word means
 in another, and the argument from usage says what the Greek word means in Paul
 (`whereTheLatinReadingFalls`).
 
-**Taken as a claim about what God does**, it says that when God justifies he
+### Taken as a claim about what God does
+
+Taken this way, it says that when God justifies he
 also renews: pardon and renewal given together, "not to be separated", as the
 *Joint Declaration* (§22) confesses. Taken this way, no argument about the word
 reaches it. It can be held with everything the argument from usage says about
@@ -63,7 +75,7 @@ at a step rated `wellSupported`. The second is untouched by anything about the
 word, and conflicts with Paul's gospel and with Romans 4, each time at a step
 rated `disputed`. So a reader who grants that step rejects the definition taken
 that way, and a reader who denies it need not. Which way Trent means it is not
-something this section decides.
+something this chapter decides.
 
 One premise, that Paul has his own words for renewal
 (`paulNamesRenewalOtherwise`), is cited to Scripture alone: it says what the

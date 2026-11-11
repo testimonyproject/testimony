@@ -11,9 +11,9 @@ import Testimony.Logic.Certificate
 /-!
 # TestimonyArguments.SolaFide.Dispute — the positions weighed against each other
 
-The results so far take one position at a time and ask what follows from it.
-This section asks a different question: when the positions are set against each
-other, which are left standing?
+The chapters so far take one position at a time and ask what follows from it.
+This one asks the question a reader has been waiting for: when the positions
+are set against each other, which are left standing?
 
 Seventeen positions are heard.
 
@@ -23,9 +23,9 @@ Seventeen positions are heard.
 - The apocalyptic reading of Paul (Martyn, Campbell).
 - Sanders and Dunn on Judaism in Paul's day, and the critics who answer them.
 - Jervell on the yoke of Acts 15.
-- Aquinas on John 6:29, and Luther's answer to him. - Chrysostom on John 3:36
-  and Matthew 7:21, and the Reformed answer to him: the obedience those texts
-  require is sanctification, the fruit of faith.
+- Aquinas on John 6:29, and Luther's answer to him.
+- Chrysostom on John 3:36 and Matthew 7:21, and the Reformed answer to him: the
+  obedience those texts require is sanctification, the fruit of faith.
 - Paul's gospel in Galatians, set against Trent's definition of justification.
 - The meaning of Paul's word "justify", argued two ways: from how the word is
   used, and from Romans 4.
@@ -1476,11 +1476,11 @@ between them runs in both directions.
 
 What would decide between them is what justification *is*. No rating here
 settles that. `whyTheDominicalCaseStandsAgainstTrent` places Luke's disagreement
-with Trent at Trent's definition. `whereTrentPartsFromPaul` (`Gospel.lean`)
-places Paul's at one step: that a verdict on Christ's finished work excludes the
-renewal worked in us. The one thing the ratings do decide is that Trent cannot
-claim its definition as the meaning of Paul's word
-(`trent_on_pauls_word_indefensible`). -/
+with Trent at Trent's definition. `whereTrentPartsFromPaul`, in the chapter
+"Where Trent parts from Paul", places Paul's at one step: that a verdict on
+Christ's finished work excludes the renewal worked in us. The one thing the
+ratings do decide is that Trent cannot claim its definition as the meaning of
+Paul's word (`trent_on_pauls_word_indefensible`). -/
 @[headline]
 theorem dominical_case_not_forced :
     ¬ SkepticallyAccepted solaFideDispute.defeats .dominical :=

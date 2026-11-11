@@ -9,8 +9,8 @@ justified" (Session VI, ch. 7). The "without which" refers to faith, not to
 baptism, as the translator Waterworth's bracket shows. The Reformed hold baptism
 to be Christ's own ordinance, a sign and seal of the covenant of grace
 (Westminster XXVIII.1), and faith to be "the alone instrument of justification"
-(XI.2). A reader asks: *does the New Testament make water baptism the instrument
-that justifies?*
+(XI.2). So the question this chapter takes is a plain one: does the New
+Testament make water baptism the instrument that justifies?
 
 A reminder of the ratings. A step is `disputed` when a cited reader accepts its
 starting points and denies its conclusion. It is `wellSupported` when no such

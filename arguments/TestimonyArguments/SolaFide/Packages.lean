@@ -2,17 +2,27 @@ import TestimonyArguments.SolaFide.Sources
 import TestimonyArguments.SolaFide.Lines
 
 /-!
-# TestimonyArguments.SolaFide.Packages — the positions, and their variants
+# TestimonyArguments.SolaFide.Packages — the positions, written out
 
-Each position in the debate is written here as a list of premises: the Reformed
-case, the New Perspective, Hays on "faith of Christ", Jervell on Acts, the
-Finnish reading of Luther, the critical view of authorship, the apocalyptic
-reading, and Trent.
+Each position in the debate is written down as a list of premises, every one
+with its source. These are the positions heard so far:
+
+- **the Reformed case**, all four strands and the answer to James;
+- **the New Perspective** (Dunn, Wright), which reads "works of the law" as
+  Israel's boundary markers;
+- **Hays**, who reads "faith of Christ" as Christ's own faithfulness;
+- **Jervell**, who reads Peter's yoke as Israel's law laid on gentiles;
+- **the Finnish reading of Luther** (Mannermaa), for which justification is
+  not a verdict and nothing more;
+- **the critical view of authorship**, which denies that Paul wrote Ephesians
+  and Titus, and that Peter wrote 1 and 2 Peter;
+- **the apocalyptic reading** (Martyn, Campbell);
+- and **Trent**.
 
 Beside them are variants of the Reformed case, each with one named premise
-removed. They exist to answer one kind of question: does the argument depend on
-this premise? Remove it and see. Either the conclusion still follows, or a
-reading is named on which it does not.
+taken out. They answer one question a reader keeps asking: does the case
+depend on this? Take the premise away and look. Either the conclusion still
+follows, or the checking names a reading on which it does not.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -204,7 +214,7 @@ def tridentine : ArgumentPackage Claim :=
     cite := tridentineCite
     premises := tridentinePremises tridentineLine }
 
-/-! ### Variants
+/-! #### Variants
 
 Each removes named premises from the Reformed case and keeps the rest. Paul's
 strand rests on two disputed readings, so it has two reduced forms. -/

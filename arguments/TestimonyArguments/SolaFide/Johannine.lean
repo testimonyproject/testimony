@@ -4,14 +4,18 @@ import Testimony.Logic.Because
 /-!
 # TestimonyArguments.SolaFide.Johannine — "this is the work of God, that you believe"
 
-The fourth strand of sola fide comes from John's Gospel. A crowd asks Jesus,
-"What must we do, to be doing the works of God?" He answers: "This is the work
-of God, that you believe in him whom he has sent" (John 6:28–29). The question
-is about works, and the answer is believing.
+The day after the feeding of the five thousand, the crowd finds Jesus across
+the lake and asks him a question about works:
 
-John says the same elsewhere. Whoever believes in the Son has eternal life and
-does not come into judgement (3:16–18, 3:36, 5:24), and the Gospel gives this as
-its own purpose: "that by believing you may have life in his name" (20:31).
+> "What must we do, to be doing the works of God?" Jesus answered them, "This
+> is the work of God, that you believe in him whom he has sent" (John
+> 6:28–29).
+
+The question is about works, and the answer is believing. This is the fourth
+strand of sola fide, and John says the same thing elsewhere. Whoever believes in
+the Son has eternal life and does not come into judgement (3:16–18, 3:36, 5:24),
+and the Gospel gives this as its own purpose: "that by believing you may have
+life in his name" (20:31).
 
 ## What both sides grant, and where they part
 
@@ -101,17 +105,7 @@ checked.
   Aquinas's each defeat the other, that is, each contradicts the other and
   neither is better supported. So do Aquinas's and Luther's, John's and Trent's,
   and John's and the apocalyptic reading's. Each pair is a tie, because each
-  side rests on a premise rated `disputed`.
-
-## John 3:36
-
-"Whoever does not obey the Son shall not see life" (John 3:36) is treated in a
-section of its own at the end of this page. In short: the commentators cited
-read "does not obey" as unbelief seen in what it does. Chrysostom, on the same
-verse, denies that believing is enough without a right life. The Reformed answer
-is that the obedience the verse requires is sanctification, the fruit of faith
-and not its ground. The wording of the verse does not decide between them, and
-in the main debate Chrysostom and the Reformed answer tie. -/
+  side rests on a premise rated `disputed`. -/
 
 namespace TestimonyArguments.SolaFide
 
@@ -347,15 +341,17 @@ def whyLutherAnswersAquinas : Because lutherOnGalatians thomistOnJohn :=
 
 /-! ### John 3:36: "whoever does not obey the Son"
 
-"Whoever believes in the Son has eternal life; whoever does not obey the Son
-shall not see life, but the wrath of God remains on him" (John 3:36). The verse
-sets *not obeying* against *believing*. A reader may fairly ask whether
-believing, in John, therefore includes obeying, and whether faith alone can then
-be what saves.
+Three chapters on, John sets two words side by side that a reader of this
+debate cannot pass over:
 
-Two things are on record, and they point in different directions.
+> "Whoever believes in the Son has eternal life; whoever does not obey the Son
+> shall not see life, but the wrath of God remains on him" (John 3:36).
 
-**On the word.** The Greek for "does not obey" (ὁ ἀπειθῶν) is read by the
+The verse sets *not obeying* against *believing*. Does believing, in John,
+include obeying? And if it does, can faith alone be what saves? The record
+points two ways, one on the word and one on the doctrine.
+
+The Greek for "does not obey" (ὁ ἀπειθῶν) is read by the
 commentators cited here as unbelief seen in what it does. Westcott: "believeth
 not] disobeyeth. Disbelief is regarded in its activity." Calvin's comment takes
 the clause of "all who do not believe in Christ". Among modern commentators,
@@ -364,7 +360,7 @@ verb as "disobeys", and adds that "failure to trust him is as much disobedience
 as unbelief". No source has been found that argues from this word that believing
 includes obeying.
 
-**On the doctrine.** Chrysostom, preaching on this verse, does deny that
+The doctrine is another matter. Chrysostom, preaching on this verse, does deny that
 believing is enough: "'Is it then enough,' saith one, 'to believe on the Son,
 that one may have eternal life?' By no means." He does not argue from the word.
 He argues from Jesus' saying in Matthew 7:21, "Not everyone who says to me,
@@ -393,7 +389,7 @@ works as what follows faith. Among modern readers Chrysostom has company:
 Stanley holds that "Endurance is a condition for final salvation", and reads
 Matthew 7:21 so.
 
-**In the main debate.** Chrysostom's case is heard in the main sola fide debate,
+Chrysostom's case is heard in the main sola fide debate,
 and so is the Reformed answer to it (below). His conclusion is general, so there
 he meets every case that concludes that faith suffices: Paul's, Luke's, Peter's
 and John's, and the Reformed answer. Each of those meets him in return, and

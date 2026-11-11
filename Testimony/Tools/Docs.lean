@@ -23,6 +23,26 @@ namespace Testimony.Doc
 
 open Lean
 
+/-- One chapter of an argument set as a book: a page of the site and a section
+of the PDF, made of the prose of the modules it names, with their declarations
+behind it.
+
+A chapter answers one reader's question, so its title is that question, or its
+subject, in the reader's words. The modules are set in the order given, which
+need not be the order they are imported in. -/
+structure Chapter where
+  /-- The page's file name, without the extension. The first chapter of an
+  argument is its landing page and takes the argument's own slug instead. -/
+  slug : String
+  /-- The chapter's title. -/
+  title : String
+  /-- The modules whose prose and declarations it is made of. -/
+  modules : List Name
+  /-- Whether the table of numbered claims is set here. One chapter of an
+  argument carries it, usually an appendix, and every formula links to it. -/
+  legend : Bool := false
+deriving Inhabited, Repr
+
 /-- One worked argument, as the generated documentation presents it. -/
 structure Argument where
   /-- The namespace its declarations live in. -/
@@ -33,6 +53,10 @@ structure Argument where
   /-- The heading it appears under. Editorial, and deliberately so: *why* an
   argument is worth making is not derivable from its statements. -/
   title : String
+  /-- The chapters it is set in, in reading order. Empty for an argument set as
+  one page. Every module the argument is built from belongs to exactly one, and
+  the generators check it. -/
+  chapters : List Chapter := []
 deriving Inhabited, Repr
 
 

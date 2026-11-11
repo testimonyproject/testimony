@@ -10,7 +10,9 @@ by hearing the same debate with some positions left out. Nothing is argued
 again. Every defeat the full debate established is kept; some positions are
 simply not heard.
 
-**What did the Reformation itself decide?** The sixteenth-century debate was
+### What did the Reformation itself decide?
+
+The sixteenth-century debate was
 between Rome and the Reformers, before anyone had proposed a New Perspective on
 Paul or an apocalyptic reading of him. Heard that way (`reformationAlone`), with
 the modern evidence cited for each side, one thing is forced: Paul's "justify"
@@ -25,8 +27,9 @@ other, and the ratings, all `disputed`, cannot choose. The Reformation debate,
 heard alone, comes down to what justification *is*, which is the question
 `whatTrentsDefinitionClaims` examines.
 
-**If Trent were not heard, would Scripture establish sola fide?** A Protestant
-reader will naturally ask this. Heard without Trent (`withoutTrent`), two things
+### If Trent were not heard, would Scripture establish sola fide?
+
+A Protestant reader will naturally ask this. Heard without Trent (`withoutTrent`), two things
 are forced: the meaning of Paul's word; and Paul's gospel, that justification is
 not the renewal of the inward person. *Faith alone* is not forced, from Paul,
 from Peter or from John, and neither is Luke's "your faith has saved you", that
@@ -40,8 +43,8 @@ New Testament scholarship, and two older.
 - Jervell reads the yoke of Acts 15 as something other than the law as a
   condition of salvation, and meets Peter's case.
 - Aquinas reads the believing of John 6:29 as faith formed by charity, and meets
-  John's case. Luther answers him from Galatians 3, and is answered in return. -
-  Chrysostom reads John 3:36 and Matthew 7:21 as requiring a right life beside
+  John's case. Luther answers him from Galatians 3, and is answered in return.
+- Chrysostom reads John 3:36 and Matthew 7:21 as requiring a right life beside
   believing, and meets every case that concludes faith suffices, Luke's among
   them. The Reformed answer, that the obedience those texts require is
   sanctification, the fruit of faith, meets him and is met in return.
@@ -49,7 +52,9 @@ New Testament scholarship, and two older.
 Each of these is a question about what a text says. Leaving Rome out does not
 make them go away.
 
-**Augustine** stays where the full debate has him. In the Reformation hearing,
+### Augustine, in both hearings
+
+Augustine stays where the full debate has him. In the Reformation hearing,
 his explanation is what Trent's reading of Paul's word rests on. Without Trent,
 it goes out with that reading, since nothing else rests on it. In both he
 remains the cited reader who accepts Romans 4:5–8 and reads it the other way,

@@ -128,3 +128,19 @@
   overflow-x: auto;
   margin: 1rem 0;
 }
+
+/* "How this is checked": the declarations behind a chapter of an argument set
+   as chapters, folded away under the prose (Testimony.Tools.Site). */
+details.testimony-checked {
+  margin: 1.5em 0;
+  padding: 0.6em 1em;
+  border-left: 3px solid var(--quote-border, #ccc);
+  background: var(--quote-bg, transparent);
+}
+details.testimony-checked > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+details.testimony-checked[open] > summary {
+  margin-bottom: 1em;
+}

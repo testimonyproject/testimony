@@ -170,8 +170,12 @@ should still be plain.
 ## What has been brought up to this standard
 
 The standard is newer than most of the prose. As of this writing the whole of
-the sola fide page follows it: every section's introduction, and the
-description of every claim, position and result. The other five argument pages
+sola fide follows it: every chapter's prose, and the description of every
+claim, position and result. Sola fide is also the first argument set as
+chapters, one for each question a reader brings to it (see "An argument set as
+chapters" in [Architecture](./architecture.md)), and its chapters' prose has had
+the editing pass in `removing-ai-tells`. The descriptions behind each chapter,
+under "How this is checked", have not had that pass yet. The other five argument pages
 were written before it and have not been revised. When you change a docstring
 on one of them for another reason, bring it up to the standard in the same
 change, and update this paragraph.

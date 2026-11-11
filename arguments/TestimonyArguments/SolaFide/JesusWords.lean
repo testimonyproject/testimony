@@ -4,15 +4,21 @@ import Testimony.Logic.Certificate
 /-!
 # TestimonyArguments.SolaFide.JesusWords — what Jesus' own words say about faith and works
 
-The main debate weighs Paul, Peter and two sayings of Jesus, Luke 7:50 and John
-6:29. A reader asks a narrower question: *what does Jesus himself say?* Three
-more passages are the ones each side cites.
+The four witnesses include two sayings of Jesus, Luke 7:50 and John 6:29. But a
+reader who has followed Paul and Peter this far will want to hear more from
+Jesus himself. Three more passages are the ones each side cites.
 
-**Luke 18:9–14.** The Pharisee lists his fasting and his tithes. The tax
-collector stands far off, beats his breast, and prays, "God, be merciful to me,
-a sinner!" Jesus says: "this man went down to his house justified, rather than
-the other." It is Jesus' own teaching on justification and works, and it uses
-Paul's word, "justified" (δεδικαιωμένος).
+### Luke 18:9–14: the Pharisee and the tax collector
+
+The Pharisee lists his fasting and his tithes. The tax collector stands far
+off, beats his breast, and prays, "God, be merciful to me, a sinner!" Then
+Jesus gives the verdict:
+
+> "I tell you, this man went down to his house justified, rather than the
+> other" (Luke 18:14).
+
+It is Jesus' own teaching on justification and works, and it uses Paul's word,
+"justified" (δεδικαιωμένος).
 
 Two things here are accepted on both sides. First, the word gives a verdict. No
 reader cited here takes "justified" at 18:14 as the inner renewal itself, and
@@ -39,8 +45,11 @@ The verdict sense at 18:14 is what the argument from Paul's word claims of
 argument. What a word means in Luke is evidence for what it means in Paul, not a
 premise of it, and that argument stands on its own sources.
 
-**Matthew 7:21–23.** "Not everyone who says to me, 'Lord, Lord,' will enter the
-kingdom of heaven, but the one who does the will of my Father who is in heaven."
+### Matthew 7:21–23: "Lord, Lord"
+
+> "Not everyone who says to me, 'Lord, Lord,' will enter the kingdom of heaven,
+> but the one who does the will of my Father who is in heaven."
+
 And to those who prophesied in his name: "I never knew you." The passage does
 not mention faith, and gives doing the Father's will as the test. Rome reads it
 as condemning profession without obedience, with obedience a condition of entry
@@ -49,8 +58,11 @@ you" as meaning they were never united to Christ. Both are written down here as
 readings, each cited and each rated `disputed`. Neither is given as what the
 passage plainly says (`matthew7_leaves_the_ground_open`).
 
-**Matthew 19:16–22.** "If you would enter life, keep the commandments", words
-Trent quotes (Session VI, ch. 7). Rome reads them as the way to life, possible
+### Matthew 19:16–22: the rich young man
+
+> "If you would enter life, keep the commandments" (Matthew 19:17).
+
+Trent quotes these words (Session VI, ch. 7). Rome reads them as the way to life, possible
 by grace (*Veritatis Splendor* 12). Calvin reads them as Christ answering on the
 law's own terms, so that the young man may see he has not kept it and turn to
 faith. Here too each reading is cited, and each is rated `disputed`.
