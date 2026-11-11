@@ -45,8 +45,13 @@ short form:
 - Name who holds a view. Say what a result claims, then what it does not.
 - Put identifiers in brackets after the sentence that states the point in
   words. A sentence that needs the identifier to make sense needs rewriting.
-- Short sentences. No clever contrasts, no announcing that a point matters, no
-  shorthand from the code left unexplained.
+- Plain sentences of varied length, joined with *because* and *so* where the
+  logic joins them. No clever contrasts, no announcing that a point matters, no
+  bold label on every paragraph, no shorthand from the code left unexplained.
+- It should sound like a person explaining, not a form being filled in: people
+  acting in history, quotations doing the arguing. Skills `prose-voice` and
+  `removing-ai-tells` hold the detail; `scripts/prose_tells.py` counts the
+  habits that make prose sound generated.
 
 Read the generated page before opening a pull request, not only the docstring.
 The `reader-review` agent does a first pass.
@@ -182,7 +187,7 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Logic/Latex`, `Testimony/Logic/Markdown` | The two renderings of it: for print, and for the browser |
 | `Testimony/Tools/` | What a package's generators are made of: `Docs` (`Argument`, a catalogue entry), `Pages` (the harvest, `derive_argument_bodies … under N`, `latexDocument`, `writeOrCheck`), `Site` (each argument as a page of the site), `Status` (the headline table), `Bibliography` (`references.bib` and the chapter). The root does not import them: they are the library target `TestimonyTools`, built by `lake build TestimonyTools` and by kernel replay |
 | `Testimony/Checks/` | The checks a package runs over its arguments: `Refutations` (`establish` fails on every refuted package), `Ontology` (what each definition does in every argument, pinned), `Meanings`, `Postulates`, `Citations` (every bibliography entry is a tagged definition, and a key names one), `Aif`, each `under N`; and `Fixture`, the library's own small case, which they run over in its build |
-| `scripts/` | Domain linter and its tests; `kernel-replay.sh [root targets…]` |
+| `scripts/` | Domain linter and its tests; `kernel-replay.sh [root targets…]`; `prose_tells.py`, an advisory count of generated-sounding habits in prose |
 | `arguments/` | `TestimonyArguments`: the worked arguments, a Lake package built on the library. Over ~500 lines an argument becomes a directory (`Atoms`, `Sources`, `Lines`, `Packages`, `Results`, the root module reduced to imports and the module docstring). Beside them: `Works` (what they cite beyond the library's works), `Attr` (their unfold sets), `Meanings` (one module per argument: what each claim means, and its pinned joins), `Articles` (published articles examined), `Checks` (the library's checks over them, pinned), `Tools` (the catalogue and the generators `bibgen`, `argtex`, `statusgen`, `argdoc`, each with `--check`, writing into the repository's `docs/`) |
 | `examples/` | `TestimonyExamples`: a separate Lake package that requires the library by path, the first user of it outside its tree. Its cases (`Grits`), works, checks and LaTeX documents (`lake exe exampletex`) are its own, and nothing of it is in the library's index. Build it after the library, from `examples/` |
 
@@ -193,6 +198,10 @@ name as `/<skill>`.
 
 - `writing-for-readers` — writing or revising a docstring or page for the two
   readers: the rules, the checklist, and how to review a generated page
+- `prose-voice` — drafting prose with a voice: how a paragraph and a chapter
+  move, people and history put back in, every fact kept
+- `removing-ai-tells` — the editing pass for habits that make prose sound
+  generated, with `scripts/prose_tells.py` to count them
 - `encoding-an-argument` — going from a commentary to a package
 - `supplementing-an-argument` — strengthening an existing argument for a reader:
   finding the crux, researching a better-than-disputed premise, auditing its

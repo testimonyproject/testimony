@@ -78,9 +78,11 @@ so that it sounds like "false".
 should recognise Trent's position in the paragraph that states it, and should
 find the Council's own words there.
 
-**Keep sentences short and make each one say something.** One idea to a
-sentence. If a sentence could be cut without the reader losing anything, cut
-it.
+**Make each sentence say something, and vary their length.** Plain words, and
+one point at a time. But a page of nothing but short sentences reads like a
+telegram: join the ones that belong together with *because*, *so* or *but*, and
+keep a short one where it lands a point. If a sentence could be cut without the
+reader losing anything, cut it.
 
 ## What to avoid
 
@@ -98,6 +100,23 @@ These are habits of writing quickly, and each one costs the lay reader.
   three hedges.
 - **Describing the machinery to people who came for the argument.** How a
   result is proved belongs in the Lean. What it shows belongs in the docstring.
+- **Writing to a template.** A bold label opening every paragraph, the same
+  "What this claims … What it does not claim" frame on every result, three-part
+  lists in every other sentence. Each is harmless once; together they make a
+  page read as generated, and readers have said so.
+
+## How it should sound
+
+The rules above are about what a reader can follow and trust. How the prose
+sounds matters as much: a page can keep every rule and still read like a form.
+Write as a good teacher writes for a study group that includes a retired
+professor, with people acting in history, quotations doing the arguing,
+paragraphs that develop a point with *because* and *so*, and verdicts stated
+plainly. Two skills in `.claude/skills/` hold the working detail: `prose-voice`
+for drafting, with how a paragraph and a chapter move, and `removing-ai-tells`
+for the editing pass, with the habits that make prose sound generated. The
+script `scripts/prose_tells.py` counts those habits on a page, as a prompt to
+look rather than a rule.
 
 ## An example
 
