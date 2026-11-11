@@ -114,6 +114,19 @@ def demote (md : String) : String :=
 the `\(…\)` it looks for. -/
 def inlineMath (body : String) : String := "\\\\(" ++ body ++ "\\\\)"
 
+/-- The anchor a legend row carries for its claim. A page holds one legend, so the
+number alone names the row. -/
+def claimAnchor (i : Nat) : String := "claim-" ++ toString (i + 1)
+
+/-- A propositional variable as a link to its row in the legend, as print links
+it. MathJax's `\href` takes a bare fragment, so the link stays within the page. -/
+def varLink (i : Nat) : String :=
+  "\\href{#" ++ claimAnchor i ++ "}{" ++ Latex.varName i ++ "}"
+
+/-- A formula with each variable linked to its legend row, as in print. -/
+def formula [DecidableEq α] (order : List α) (φ : Formula α) : String :=
+  Latex.formulaPrec varLink order 0 φ
+
 /-- The alignment tab, HTML-escaped. A display block is raw HTML, and MathJax
 reads the text the browser decodes from it. -/
 def amp : String := "&amp;"
@@ -142,11 +155,11 @@ the order a reader checks an argument in. -/
 def derivation [DecidableEq α] (order : List α) (prems : List (Formula α))
     (concl : Formula α) : String :=
   let numbered := prems.zipIdx.map fun (φ, i) =>
-    row ("\\text{(" ++ toString (i + 1) ++ ")}") (Latex.formula order φ)
+    row ("\\text{(" ++ toString (i + 1) ++ ")}") (formula order φ)
   let above :=
     if numbered.isEmpty then ""
     else String.intercalate " \\\\\n" numbered ++ " \\\\[4pt]\n"
-  display ("\\begin{aligned}\n" ++ above ++ row "\\vdash" (Latex.formula order concl) ++
+  display ("\\begin{aligned}\n" ++ above ++ row "\\vdash" (formula order concl) ++
     "\n\\end{aligned}")
 
 /-! ### Citations -/
@@ -165,15 +178,41 @@ def locus : Locus → String
 /-- Where the generated pages sit relative to the bibliography chapter. -/
 def bibliographyPath : String := "../bibliography.md"
 
-/-- A reference. Scripture renders as the passage; a work renders as its cite
-key, linked to its entry in the bibliography — `Bib.Render.toMarkdown` puts an
-anchor of that name on every line — and a proposal is marked as the library's
-own construction. -/
+/-- The family names a citation is made under: the authors, else the editors,
+else the title. Two names are joined by "and"; three or more are cut to the
+first and "et al.". -/
+def citedNames (e : BibEntry) : String :=
+  let c := e.core.contributors
+  let names := (if c.authors.isEmpty then c.editors else c.authors).map Agent.sortKey
+  match names with
+  | [] => e.core.title
+  | [a] => a
+  | [a, b] => a ++ " and " ++ b
+  | a :: _ => a ++ " et al."
+
+/-- A work's year as a citation gives it: "c." where approximate, "BC" where
+negative, and nothing where the entry has none. -/
+def citedYear (e : BibEntry) : String :=
+  match e.core.year with
+  | none => ""
+  | some y =>
+      (if y.approximate then "c. " else "") ++
+        (if y.value < 0 then toString y.value.natAbs ++ " BC" else toString y.value)
+
+/-- A work as a reader reads it: author and year, such as "Calvin 1960". -/
+def citedWork (e : BibEntry) : String :=
+  let y := citedYear e
+  escape (citedNames e) ++ (if y.isEmpty then "" else " " ++ y)
+
+/-- A reference. Scripture renders as the passage; a work renders as its author
+and year, linked to its entry in the bibliography — `Bib.Render.toMarkdown` puts
+an anchor of the entry's cite key on every line — and a proposal is marked as
+the library's own construction. -/
 def reference : Reference → String
   | .scripture refs =>
       String.intercalate "; " (refs.map fun r => escape r.ref.render)
   | .work e l =>
-      let link := "[`" ++ e.key ++ "`](" ++ bibliographyPath ++ "#" ++ e.key ++ ")"
+      let link := "[" ++ citedWork e ++ "](" ++ bibliographyPath ++ "#" ++ e.key ++ ")"
       let loc := locus l
       if loc.isEmpty then link else link ++ ", " ++ loc
   | .proposal r => "*proposed:* " ++ escape r
@@ -182,18 +221,8 @@ def reference : Reference → String
 def source (s : Source) : String :=
   String.intercalate "; " (s.references.map reference)
 
-/-- Which interpretive tradition advances a claim. -/
-def tradition : Tradition → String
-  | .christianTypological => "Christian, typological"
-  | .christianHistoricalGrammatical => "Christian, historical-grammatical"
-  | .secondTempleJewish => "Second Temple Jewish"
-  | .rabbinicJewish => "rabbinic Jewish"
-  | .criticalScholarship => "critical scholarship"
-  | .reformedProtestant => "Reformed Protestant"
-  | .romanCatholic => "Roman Catholic"
-  | .easternOrthodox => "Eastern Orthodox"
-  | .adversarialTrial => "adversarial trial"
-  | .formalOntology => "formal ontology"
+/-- Which interpretive tradition advances a claim, worded as print words it. -/
+def tradition : Tradition → String := Latex.tradition
 
 /-- How firmly that tradition holds it. -/
 def confidence : Confidence → String
@@ -219,7 +248,7 @@ def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String 
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
     let mark := if m.source.isScriptureOnly then " ※" else ""
-    "| " ++ inlineMath (Latex.varName i) ++ " | " ++ cell (escape m.label) ++ mark
+    "| <a id=\"" ++ claimAnchor i ++ "\"></a>" ++ inlineMath (Latex.varName i) ++ " | " ++ cell (escape m.label) ++ mark
       ++ " | " ++ kind m.kind ++ " | " ++ tradition m.source.tradition ++ ", "
       ++ confidence m.source.confidence ++ " | " ++ cell (source m.source) ++ " |"
   "<div class=\"testimony-legend\">\n\n" ++
@@ -248,13 +277,13 @@ def leanBlock (body : String) : String := "```lean\n" ++ body ++ "\n```\n"
 
 /-- The formulas of a list, inline and joined. -/
 def inlineFormulas [DecidableEq α] (order : List α) (φs : List (Formula α)) : String :=
-  String.intercalate ", " (φs.map fun φ => inlineMath (Latex.formula order φ))
+  String.intercalate ", " (φs.map fun φ => inlineMath (formula order φ))
 
 /-- One claim an explanation rests on: its number, what it says, how firmly it
 is held and by whom. -/
 def restingClaim [DecidableEq α] (order : List α) (cite : α → AtomMeta) (a : α) : String :=
   let m := cite a
-  "  - " ++ inlineMath (Latex.varName (order.idxOf a)) ++ " " ++ escape m.label ++ " — *" ++
+  "  - " ++ inlineMath (varLink (order.idxOf a)) ++ " " ++ escape m.label ++ " — *" ++
     confidence m.source.confidence ++ "*: " ++ source m.source
 
 /-- Why one position stands against another, as a list a reader can check line
@@ -262,7 +291,7 @@ by line against the theorems it summarises. -/
 def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : String :=
   let given := if e.granted.isEmpty then "" else " and " ++ inlineFormulas order e.granted
   "**Why *" ++ escape e.holder ++ "* stands against *" ++ escape e.rival ++ "*.**\n\n" ++
-  "- **The crux:** " ++ inlineMath (Latex.formula order e.crux) ++ ", a premise of *" ++
+  "- **The crux:** " ++ inlineMath (formula order e.crux) ++ ", a premise of *" ++
     escape e.holder ++ "*.\n" ++
   "- **What it does:** " ++
     (if e.derives then "its conclusion does not follow without it."
@@ -272,7 +301,7 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
     "- **Granted:** " ++ inlineFormulas order e.granted ++
     ", which the break also needs.\n") ++
   "- **Where the rival breaks:** " ++ inlineFormulas order e.core ++
-    " cannot be held together with " ++ inlineMath (Latex.formula order e.crux) ++ given ++
+    " cannot be held together with " ++ inlineMath (formula order e.crux) ++ given ++
     "; each is needed for the break, and without the crux they stand.\n" ++
   "- **What this rests on:**\n" ++
     String.intercalate "\n" (e.restsOn.map (restingClaim order e.cite)) ++
@@ -287,7 +316,7 @@ commits the rival to, who reads it that way, and what happens to it against
 each position — the explanation where it cannot be held, and a sentence where
 it is not reached. -/
 def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
-  let claim := inlineMath (Latex.formula order d.claim)
+  let claim := inlineMath (formula order d.claim)
   let fate (f : Page.Fate α) : String := match f.falls with
     | some e =>
       "Against *" ++ escape f.against ++ "*, it cannot be held. Where it breaks:\n\n" ++
@@ -301,7 +330,7 @@ def dilemma [DecidableEq α] (order : List α) (d : Page.Dilemma α) : String :=
     " here, and each reading is checked; none can be left out.\n\n" ++
   String.intercalate "\n" (d.horns.zipIdx.map fun (h, k) =>
     "**" ++ toString (k + 1) ++ ". Read " ++ escape h.reading ++ ".** The claim commits *" ++
-      escape d.rival ++ "* to " ++ inlineMath (Latex.formula order h.commits) ++
+      escape d.rival ++ "* to " ++ inlineMath (formula order h.commits) ++
       " — so read by " ++ source h.source ++ " (*" ++ confidence h.source.confidence ++
       "*)." ++
       (if h.grounds.isEmpty then "" else
@@ -516,11 +545,11 @@ def item [DecidableEq α] (order : List α) : Item α → String
       derivation order l.premises l.delivers
   | .formula d doc φ =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
-      display (Latex.formula order φ)
+      display (formula order φ)
   | .formulas d doc φs =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
       display (aligned (φs.zipIdx.map fun (φ, i) =>
-        row ("\\text{(" ++ toString (i + 1) ++ ")}") (Latex.formula order φ)))
+        row ("\\text{(" ++ toString (i + 1) ++ ")}") (formula order φ)))
   | .other d doc sig =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock sig
   | .result d doc stmt proposed =>

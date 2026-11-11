@@ -126,21 +126,21 @@ grounds and denies its conclusion.
 
 | | claim | kind | held | source |
 |---|---|---|---|---|
-| \\(P_{1}\\) | 1 Corinthians 12:13 — in one Spirit we were all baptized into one body ※ | textual | Christian, historical-grammatical, consensus | 1 Cor 12:13 |
-| \\(P_{2}\\) | Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) | textual | Christian, historical-grammatical, disputed | [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7 |
-| \\(P_{3}\\) | Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism ※ | textual | Christian, historical-grammatical, consensus | Acts 10:44-48 |
-| \\(P_{4}\\) | Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit ※ | textual | Christian, historical-grammatical, consensus | Acts 2:38 |
-| \\(P_{5}\\) | 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion | interpretive | Christian, historical-grammatical, disputed | [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975) |
-| \\(P_{6}\\) | 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit | interpretive | Christian, historical-grammatical, disputed | [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010) |
-| \\(P_{7}\\) | In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion | interpretive | Christian, historical-grammatical, disputed | [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994); [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984) |
-| \\(P_{8}\\) | Luke's narratives of receiving the Spirit are a pattern for believers today | interpretive | Christian, historical-grammatical, disputed | [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010) |
-| \\(P_{9}\\) | The episodes of Acts 8, 10 and 19 are unrepeatable steps in the gospel's spread, not a pattern | interpretive | Christian, historical-grammatical, disputed | [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975) |
-| \\(P_{10}\\) | Entire sanctification is a second work of grace after justification | theological | Christian, historical-grammatical, disputed | [`church-of-the-nazarene-manual-2023`](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010) |
-| \\(P_{11}\\) | The Spirit is given in water baptism: new birth in the Holy Spirit | theological | Roman Catholic, disputed | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1262; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1265; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part |
-| \\(P_{12}\\) | Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria | theological | Roman Catholic, disputed | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1288 |
-| \\(P_{13}\\) | Every believer is baptized in the Spirit at conversion | theological | Christian, historical-grammatical, disputed | [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975) |
-| \\(P_{14}\\) | A baptism in the Spirit distinct from and after conversion is to be sought | theological | Christian, historical-grammatical, disputed | [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [`church-of-the-nazarene-manual-2023`](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10 |
-| \\(P_{15}\\) | The Spirit is given in baptism and confirmation, not in a second baptism beyond the sacraments | theological | Roman Catholic, disputed | [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302 |
+| <a id="claim-1"></a>\\(P_{1}\\) | 1 Corinthians 12:13 — in one Spirit we were all baptized into one body ※ | textual | Christian, hist.-gramm., consensus | 1 Cor 12:13 |
+| <a id="claim-2"></a>\\(P_{2}\\) | Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) | textual | Christian, hist.-gramm., disputed | [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7 |
+| <a id="claim-3"></a>\\(P_{3}\\) | Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism ※ | textual | Christian, hist.-gramm., consensus | Acts 10:44-48 |
+| <a id="claim-4"></a>\\(P_{4}\\) | Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit ※ | textual | Christian, hist.-gramm., consensus | Acts 2:38 |
+| <a id="claim-5"></a>\\(P_{5}\\) | 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion | interpretive | Christian, hist.-gramm., disputed | [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975) |
+| <a id="claim-6"></a>\\(P_{6}\\) | 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit | interpretive | Christian, hist.-gramm., disputed | [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010) |
+| <a id="claim-7"></a>\\(P_{7}\\) | In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion | interpretive | Christian, hist.-gramm., disputed | [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994); [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984) |
+| <a id="claim-8"></a>\\(P_{8}\\) | Luke's narratives of receiving the Spirit are a pattern for believers today | interpretive | Christian, hist.-gramm., disputed | [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010) |
+| <a id="claim-9"></a>\\(P_{9}\\) | The episodes of Acts 8, 10 and 19 are unrepeatable steps in the gospel's spread, not a pattern | interpretive | Christian, hist.-gramm., disputed | [Stott 1975](../bibliography.md#stott-baptism-fullness-1975) |
+| <a id="claim-10"></a>\\(P_{10}\\) | Entire sanctification is a second work of grace after justification | theological | Christian, hist.-gramm., disputed | [Church of the Nazarene 2023](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010) |
+| <a id="claim-11"></a>\\(P_{11}\\) | The Spirit is given in water baptism: new birth in the Holy Spirit | theological | Roman Catholic, disputed | [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1262; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1265; [Kolb and Wengert 2000](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part |
+| <a id="claim-12"></a>\\(P_{12}\\) | Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria | theological | Roman Catholic, disputed | [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1288 |
+| <a id="claim-13"></a>\\(P_{13}\\) | Every believer is baptized in the Spirit at conversion | theological | Christian, hist.-gramm., disputed | [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975) |
+| <a id="claim-14"></a>\\(P_{14}\\) | A baptism in the Spirit distinct from and after conversion is to be sought | theological | Christian, hist.-gramm., disputed | [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [Church of the Nazarene 2023](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10 |
+| <a id="claim-15"></a>\\(P_{15}\\) | The Spirit is given in baptism and confirmation, not in a second baptism beyond the sacraments | theological | Roman Catholic, disputed | [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302 |
 
 </div>
 
@@ -352,7 +352,7 @@ deny its conclusion by denying a ground, the conversion reading.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{5}) \rightarrow P_{13}
+(\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}}) \rightarrow \href{#claim-13}{P_{13}}
 \]
 </div>
 
@@ -367,7 +367,7 @@ encoded.
 
 <div class="testimony-math">
 \[
-P_{13} \rightarrow \lnot P_{14}
+\href{#claim-13}{P_{13}} \rightarrow \lnot \href{#claim-14}{P_{14}}
 \]
 </div>
 
@@ -380,11 +380,11 @@ in the Spirit at conversion, so there is no second Spirit baptism to seek.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; (P_{1} \land P_{5}) \rightarrow P_{13} \\
-\text{(4)} \quad &amp; P_{13} \rightarrow \lnot P_{14} \\[4pt]
-\vdash \quad &amp; P_{13}
+\text{(1)} \quad &amp; \href{#claim-1}{P_{1}} \\
+\text{(2)} \quad &amp; \href{#claim-5}{P_{5}} \\
+\text{(3)} \quad &amp; (\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}}) \rightarrow \href{#claim-13}{P_{13}} \\
+\text{(4)} \quad &amp; \href{#claim-13}{P_{13}} \rightarrow \lnot \href{#claim-14}{P_{14}} \\[4pt]
+\vdash \quad &amp; \href{#claim-13}{P_{13}}
 \end{aligned}
 \]
 </div>
@@ -403,7 +403,7 @@ Stott deny its conclusion by denying a ground, the instrumental reading.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{6}) \rightarrow \lnot P_{5}
+(\href{#claim-1}{P_{1}} \land \href{#claim-6}{P_{6}}) \rightarrow \lnot \href{#claim-5}{P_{5}}
 \]
 </div>
 
@@ -416,7 +416,7 @@ the step.
 
 <div class="testimony-math">
 \[
-(P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14}
+(\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-14}{P_{14}}
 \]
 </div>
 
@@ -431,14 +431,14 @@ Ephesus, for empowerment.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; P_{2} \\
-\text{(4)} \quad &amp; P_{7} \\
-\text{(5)} \quad &amp; P_{8} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{6}) \rightarrow \lnot P_{5} \\
-\text{(7)} \quad &amp; (P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(1)} \quad &amp; \href{#claim-1}{P_{1}} \\
+\text{(2)} \quad &amp; \href{#claim-6}{P_{6}} \\
+\text{(3)} \quad &amp; \href{#claim-2}{P_{2}} \\
+\text{(4)} \quad &amp; \href{#claim-7}{P_{7}} \\
+\text{(5)} \quad &amp; \href{#claim-8}{P_{8}} \\
+\text{(6)} \quad &amp; (\href{#claim-1}{P_{1}} \land \href{#claim-6}{P_{6}}) \rightarrow \lnot \href{#claim-5}{P_{5}} \\
+\text{(7)} \quad &amp; (\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-14}{P_{14}} \\[4pt]
+\vdash \quad &amp; \href{#claim-14}{P_{14}}
 \end{aligned}
 \]
 </div>
@@ -454,7 +454,7 @@ and denies that it is "receiving the Holy Ghost".
 
 <div class="testimony-math">
 \[
-P_{10} \rightarrow P_{14}
+\href{#claim-10}{P_{10}} \rightarrow \href{#claim-14}{P_{14}}
 \]
 </div>
 
@@ -469,9 +469,9 @@ within its own tradition, by Wesley and by the Nazarene seminary faculty.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{10} \\
-\text{(2)} \quad &amp; P_{10} \rightarrow P_{14} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(1)} \quad &amp; \href{#claim-10}{P_{10}} \\
+\text{(2)} \quad &amp; \href{#claim-10}{P_{10}} \rightarrow \href{#claim-14}{P_{14}} \\[4pt]
+\vdash \quad &amp; \href{#claim-14}{P_{14}}
 \end{aligned}
 \]
 </div>
@@ -491,7 +491,7 @@ step.
 
 <div class="testimony-math">
 \[
-(P_{4} \land P_{11} \land P_{12}) \rightarrow P_{15}
+(\href{#claim-4}{P_{4}} \land \href{#claim-11}{P_{11}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-15}{P_{15}}
 \]
 </div>
 
@@ -504,7 +504,7 @@ renewal is its natural contester, not yet cited.
 
 <div class="testimony-math">
 \[
-P_{15} \rightarrow \lnot P_{14}
+\href{#claim-15}{P_{15}} \rightarrow \lnot \href{#claim-14}{P_{14}}
 \]
 </div>
 
@@ -521,12 +521,12 @@ Rome's.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{4} \\
-\text{(2)} \quad &amp; P_{11} \\
-\text{(3)} \quad &amp; P_{12} \\
-\text{(4)} \quad &amp; (P_{4} \land P_{11} \land P_{12}) \rightarrow P_{15} \\
-\text{(5)} \quad &amp; P_{15} \rightarrow \lnot P_{14} \\[4pt]
-\vdash \quad &amp; P_{15}
+\text{(1)} \quad &amp; \href{#claim-4}{P_{4}} \\
+\text{(2)} \quad &amp; \href{#claim-11}{P_{11}} \\
+\text{(3)} \quad &amp; \href{#claim-12}{P_{12}} \\
+\text{(4)} \quad &amp; (\href{#claim-4}{P_{4}} \land \href{#claim-11}{P_{11}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-15}{P_{15}} \\
+\text{(5)} \quad &amp; \href{#claim-15}{P_{15}} \rightarrow \lnot \href{#claim-14}{P_{14}} \\[4pt]
+\vdash \quad &amp; \href{#claim-15}{P_{15}}
 \end{aligned}
 \]
 </div>
@@ -545,7 +545,7 @@ Assemblies of God grant Acts 10 and read it as evidence for subsequence.
 
 <div class="testimony-math">
 \[
-(P_{3} \land P_{4}) \rightarrow \lnot P_{8}
+(\href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \lnot \href{#claim-8}{P_{8}}
 \]
 </div>
 
@@ -558,10 +558,10 @@ one order, so no one episode is a pattern for believers today.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{3} \\
-\text{(2)} \quad &amp; P_{4} \\
-\text{(3)} \quad &amp; (P_{3} \land P_{4}) \rightarrow \lnot P_{8} \\[4pt]
-\vdash \quad &amp; \lnot P_{8}
+\text{(1)} \quad &amp; \href{#claim-3}{P_{3}} \\
+\text{(2)} \quad &amp; \href{#claim-4}{P_{4}} \\
+\text{(3)} \quad &amp; (\href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \lnot \href{#claim-8}{P_{8}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-8}{P_{8}}
 \end{aligned}
 \]
 </div>
@@ -577,7 +577,7 @@ step, rated `disputed` conservatively.
 
 <div class="testimony-math">
 \[
-(P_{2} \land P_{9}) \rightarrow \lnot P_{14}
+(\href{#claim-2}{P_{2}} \land \href{#claim-9}{P_{9}}) \rightarrow \lnot \href{#claim-14}{P_{14}}
 \]
 </div>
 
@@ -591,10 +591,10 @@ no norm.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{2} \\
-\text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; (P_{2} \land P_{9}) \rightarrow \lnot P_{14} \\[4pt]
-\vdash \quad &amp; \lnot P_{14}
+\text{(1)} \quad &amp; \href{#claim-2}{P_{2}} \\
+\text{(2)} \quad &amp; \href{#claim-9}{P_{9}} \\
+\text{(3)} \quad &amp; (\href{#claim-2}{P_{2}} \land \href{#claim-9}{P_{9}}) \rightarrow \lnot \href{#claim-14}{P_{14}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-14}{P_{14}}
 \end{aligned}
 \]
 </div>
@@ -634,15 +634,15 @@ The Pentecostal view, with the Acts narratives read as a pattern.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; P_{2} \\
-\text{(4)} \quad &amp; P_{7} \\
-\text{(5)} \quad &amp; P_{8} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{6}) \rightarrow \lnot P_{5} \\
-\text{(7)} \quad &amp; (P_{2} \land P_{7} \land P_{8}) \rightarrow P_{14} \\
-\text{(8)} \quad &amp; P_{2} \rightarrow P_{8} \\[4pt]
-\vdash \quad &amp; P_{14}
+\text{(1)} \quad &amp; \href{#claim-1}{P_{1}} \\
+\text{(2)} \quad &amp; \href{#claim-6}{P_{6}} \\
+\text{(3)} \quad &amp; \href{#claim-2}{P_{2}} \\
+\text{(4)} \quad &amp; \href{#claim-7}{P_{7}} \\
+\text{(5)} \quad &amp; \href{#claim-8}{P_{8}} \\
+\text{(6)} \quad &amp; (\href{#claim-1}{P_{1}} \land \href{#claim-6}{P_{6}}) \rightarrow \lnot \href{#claim-5}{P_{5}} \\
+\text{(7)} \quad &amp; (\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-14}{P_{14}} \\
+\text{(8)} \quad &amp; \href{#claim-2}{P_{2}} \rightarrow \href{#claim-8}{P_{8}} \\[4pt]
+\vdash \quad &amp; \href{#claim-14}{P_{14}}
 \end{aligned}
 \]
 </div>
@@ -840,14 +840,14 @@ as evidence for subsequence.
 
 **Why *Acts gives the Spirit in more than one order* stands against *After conversion (Assemblies of God; Menzies, Stronstad), read as a pattern for believers today*.**
 
-- **The crux:** \\((P_{3} \land P_{4}) \rightarrow \lnot P_{8}\\), a premise of *Acts gives the Spirit in more than one order*.
+- **The crux:** \\((\href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \lnot \href{#claim-8}{P_{8}}\\), a premise of *Acts gives the Spirit in more than one order*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{3}\\), \\(P_{4}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{8}\\) cannot be held together with \\((P_{3} \land P_{4}) \rightarrow \lnot P_{8}\\) and \\(P_{3}\\), \\(P_{4}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{#claim-3}{P_{3}}\\), \\(\href{#claim-4}{P_{4}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{#claim-8}{P_{8}}\\) cannot be held together with \\((\href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \lnot \href{#claim-8}{P_{8}}\\) and \\(\href{#claim-3}{P_{3}}\\), \\(\href{#claim-4}{P_{4}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{3}\\) Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism — *consensus*: Acts 10:44-48
-  - \\(P_{4}\\) Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit — *consensus*: Acts 2:38
-  - the step itself — *disputed*: [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - \\(\href{#claim-3}{P_{3}}\\) Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism — *consensus*: Acts 10:44-48
+  - \\(\href{#claim-4}{P_{4}}\\) Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit — *consensus*: Acts 2:38
+  - the step itself — *disputed*: [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
 
 ## TestimonyArguments.SpiritBaptism.Dispute — the four views weighed
 
@@ -1178,23 +1178,23 @@ sacramental view has the Pentecostal.
 **What this rests on.** The reasons state 4 defeats and 0 absences of defeat, each a cell of the defeat table, [`spiritBaptismDispute_defeats`](#spiritBaptismDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *After conversion (Assemblies of God; Menzies, Stronstad)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
-  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994); [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984)
-  - Luke's narratives of receiving the Spirit are a pattern for believers today — [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
+  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
+  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994); [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984)
+  - Luke's narratives of receiving the Spirit are a pattern for believers today — [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
 - *At conversion (Dunn, Stott)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
-  - an inference step — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994)
+  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
+  - an inference step — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994)
 - *A second work of grace (the holiness tradition)*, weakest at *disputed*:
-  - Entire sanctification is a second work of grace after justification — [`church-of-the-nazarene-manual-2023`](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
-  - an inference step — [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
+  - Entire sanctification is a second work of grace after justification — [Church of the Nazarene 2023](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
+  - an inference step — [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
 - *In baptism and confirmation (Catholic)*, weakest at *disputed*:
-  - The Spirit is given in water baptism: new birth in the Holy Spirit — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1262; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1265; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
-  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1288
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.6
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302
+  - The Spirit is given in water baptism: new birth in the Holy Spirit — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1262; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1265; [Kolb and Wengert 2000](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
+  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1288
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XXVIII.6
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302
 
 <a id="spirit_baptism_forces_nothing"></a>
 **`spirit_baptism_forces_nothing`**
@@ -1229,23 +1229,23 @@ and answers both subsequence views, itself.
 **What this rests on.** The reasons state 6 defeats and 4 absences of defeat, each a cell of the defeat table, [`spiritBaptismDispute_defeats`](#spiritBaptismDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *At conversion (Dunn, Stott)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
-  - an inference step — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994)
+  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
+  - an inference step — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994)
 - *In baptism and confirmation (Catholic)*, weakest at *disputed*:
-  - The Spirit is given in water baptism: new birth in the Holy Spirit — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1262; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1265; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
-  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1288
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.6
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302
+  - The Spirit is given in water baptism: new birth in the Holy Spirit — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1262; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1265; [Kolb and Wengert 2000](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
+  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1288
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XXVIII.6
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302
 - *After conversion (Assemblies of God; Menzies, Stronstad)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
-  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994); [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984)
-  - Luke's narratives of receiving the Spirit are a pattern for believers today — [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
+  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
+  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994); [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984)
+  - Luke's narratives of receiving the Spirit are a pattern for believers today — [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
 - *A second work of grace (the holiness tradition)*, weakest at *disputed*:
-  - Entire sanctification is a second work of grace after justification — [`church-of-the-nazarene-manual-2023`](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
-  - an inference step — [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
+  - Entire sanctification is a second work of grace after justification — [Church of the Nazarene 2023](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
+  - an inference step — [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
 
 <a id="conversion_defensible"></a>
 **`conversion_defensible`**
@@ -1278,23 +1278,23 @@ Pentecostal view, and it defeats the conversion view.
 **What this rests on.** The reasons state 6 defeats and 4 absences of defeat, each a cell of the defeat table, [`spiritBaptismDispute_defeats`](#spiritBaptismDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *After conversion (Assemblies of God; Menzies, Stronstad)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
-  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994); [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984)
-  - Luke's narratives of receiving the Spirit are a pattern for believers today — [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
+  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
+  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994); [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984)
+  - Luke's narratives of receiving the Spirit are a pattern for believers today — [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
 - *At conversion (Dunn, Stott)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
-  - an inference step — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994)
+  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
+  - an inference step — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994)
 - *A second work of grace (the holiness tradition)*, weakest at *disputed*:
-  - Entire sanctification is a second work of grace after justification — [`church-of-the-nazarene-manual-2023`](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
-  - an inference step — [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
+  - Entire sanctification is a second work of grace after justification — [Church of the Nazarene 2023](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
+  - an inference step — [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
 - *In baptism and confirmation (Catholic)*, weakest at *disputed*:
-  - The Spirit is given in water baptism: new birth in the Holy Spirit — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1262; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1265; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
-  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1288
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.6
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302
+  - The Spirit is given in water baptism: new birth in the Holy Spirit — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1262; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1265; [Kolb and Wengert 2000](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
+  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1288
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XXVIII.6
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302
 
 <a id="conversion_not_forced"></a>
 **`conversion_not_forced`**
@@ -1326,23 +1326,23 @@ and answers both the conversion and sacramental views itself.
 **What this rests on.** The reasons state 6 defeats and 4 absences of defeat, each a cell of the defeat table, [`spiritBaptismDispute_defeats`](#spiritBaptismDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *After conversion (Assemblies of God; Menzies, Stronstad)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
-  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994); [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984)
-  - Luke's narratives of receiving the Spirit are a pattern for believers today — [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
+  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
+  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994); [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984)
+  - Luke's narratives of receiving the Spirit are a pattern for believers today — [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
 - *A second work of grace (the holiness tradition)*, weakest at *disputed*:
-  - Entire sanctification is a second work of grace after justification — [`church-of-the-nazarene-manual-2023`](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
-  - an inference step — [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
+  - Entire sanctification is a second work of grace after justification — [Church of the Nazarene 2023](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
+  - an inference step — [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
 - *At conversion (Dunn, Stott)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
-  - an inference step — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994)
+  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
+  - an inference step — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994)
 - *In baptism and confirmation (Catholic)*, weakest at *disputed*:
-  - The Spirit is given in water baptism: new birth in the Holy Spirit — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1262; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1265; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
-  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1288
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.6
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302
+  - The Spirit is given in water baptism: new birth in the Holy Spirit — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1262; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1265; [Kolb and Wengert 2000](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
+  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1288
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XXVIII.6
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302
 
 <a id="pentecostal_defensible"></a>
 **`pentecostal_defensible`**
@@ -1373,23 +1373,23 @@ conversion view, and it defeats the Pentecostal view.
 **What this rests on.** The reasons state 6 defeats and 4 absences of defeat, each a cell of the defeat table, [`spiritBaptismDispute_defeats`](#spiritBaptismDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *At conversion (Dunn, Stott)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
-  - an inference step — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994)
+  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
+  - an inference step — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994)
 - *After conversion (Assemblies of God; Menzies, Stronstad)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
-  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994); [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984)
-  - Luke's narratives of receiving the Spirit are a pattern for believers today — [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
+  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
+  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994); [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984)
+  - Luke's narratives of receiving the Spirit are a pattern for believers today — [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
 - *In baptism and confirmation (Catholic)*, weakest at *disputed*:
-  - The Spirit is given in water baptism: new birth in the Holy Spirit — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1262; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1265; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
-  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1288
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.6
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302
+  - The Spirit is given in water baptism: new birth in the Holy Spirit — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1262; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1265; [Kolb and Wengert 2000](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
+  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1288
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XXVIII.6
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302
 - *A second work of grace (the holiness tradition)*, weakest at *disputed*:
-  - Entire sanctification is a second work of grace after justification — [`church-of-the-nazarene-manual-2023`](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
-  - an inference step — [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
+  - Entire sanctification is a second work of grace after justification — [Church of the Nazarene 2023](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
+  - an inference step — [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
 
 <a id="pentecostal_not_forced"></a>
 **`pentecostal_not_forced`**
@@ -1423,23 +1423,23 @@ which answers the conversion and sacramental views.
 **What this rests on.** The reasons state 6 defeats and 4 absences of defeat, each a cell of the defeat table, [`spiritBaptismDispute_defeats`](#spiritBaptismDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *After conversion (Assemblies of God; Menzies, Stronstad)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
-  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994); [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984)
-  - Luke's narratives of receiving the Spirit are a pattern for believers today — [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
+  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
+  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994); [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984)
+  - Luke's narratives of receiving the Spirit are a pattern for believers today — [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
 - *A second work of grace (the holiness tradition)*, weakest at *disputed*:
-  - Entire sanctification is a second work of grace after justification — [`church-of-the-nazarene-manual-2023`](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
-  - an inference step — [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
+  - Entire sanctification is a second work of grace after justification — [Church of the Nazarene 2023](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
+  - an inference step — [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
 - *At conversion (Dunn, Stott)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
-  - an inference step — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994)
+  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
+  - an inference step — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994)
 - *In baptism and confirmation (Catholic)*, weakest at *disputed*:
-  - The Spirit is given in water baptism: new birth in the Holy Spirit — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1262; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1265; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
-  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1288
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.6
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302
+  - The Spirit is given in water baptism: new birth in the Holy Spirit — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1262; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1265; [Kolb and Wengert 2000](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
+  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1288
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XXVIII.6
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302
 
 <a id="holiness_defensible"></a>
 **`holiness_defensible`**
@@ -1471,23 +1471,23 @@ which answers both subsequence views.
 **What this rests on.** The reasons state 6 defeats and 4 absences of defeat, each a cell of the defeat table, [`spiritBaptismDispute_defeats`](#spiritBaptismDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *At conversion (Dunn, Stott)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
-  - an inference step — [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994)
+  - 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
+  - an inference step — [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994)
 - *In baptism and confirmation (Catholic)*, weakest at *disputed*:
-  - The Spirit is given in water baptism: new birth in the Holy Spirit — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1262; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1265; [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
-  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1288
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XXVIII.6
-  - an inference step — [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §1302
+  - The Spirit is given in water baptism: new birth in the Holy Spirit — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1262; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1265; [Kolb and Wengert 2000](../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
+  - Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1288
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XXVIII.6
+  - an inference step — [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §1302
 - *After conversion (Assemblies of God; Menzies, Stronstad)*, weakest at *disputed*:
-  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
-  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [`menzies-lukes-understanding-2017`](../bibliography.md#menzies-lukes-understanding-2017); [`menzies-empowered-witness-1994`](../bibliography.md#menzies-empowered-witness-1994); [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984)
-  - Luke's narratives of receiving the Spirit are a pattern for believers today — [`stronstad-charismatic-theology-1984`](../bibliography.md#stronstad-charismatic-theology-1984); [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
-  - an inference step — [`assemblies-of-god-baptism-holy-spirit-2010`](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [`dunn-baptism-holy-spirit-1970`](../bibliography.md#dunn-baptism-holy-spirit-1970); [`stott-baptism-fullness-1975`](../bibliography.md#stott-baptism-fullness-1975)
+  - 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
+  - In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — [Menzies 2017](../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../bibliography.md#menzies-empowered-witness-1994); [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984)
+  - Luke's narratives of receiving the Spirit are a pattern for believers today — [Stronstad 1984](../bibliography.md#stronstad-charismatic-theology-1984); [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+  - an inference step — [General Presbytery of the Assemblies of God 2010](../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); [Dunn 1970](../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../bibliography.md#stott-baptism-fullness-1975)
 - *A second work of grace (the holiness tradition)*, weakest at *disputed*:
-  - Entire sanctification is a second work of grace after justification — [`church-of-the-nazarene-manual-2023`](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
-  - an inference step — [`wesley-letters-1931`](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [`bassett-white-paper-article-x-2010`](../bibliography.md#bassett-white-paper-article-x-2010)
+  - Entire sanctification is a second work of grace after justification — [Church of the Nazarene 2023](../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
+  - an inference step — [Wesley 1931](../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../bibliography.md#bassett-white-paper-article-x-2010)
 
 <a id="sacramental_defensible"></a>
 **`sacramental_defensible`**

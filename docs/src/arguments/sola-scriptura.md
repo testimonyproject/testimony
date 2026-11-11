@@ -212,45 +212,45 @@ conclusion — or, where no one was found who does, to whoever grants both.
 
 | | claim | kind | held | source |
 |---|---|---|---|---|
-| \\(P_{1}\\) | 2 Timothy 3:16 — all scripture is God-breathed and profitable | textual | Reformed Protestant, well supported | 2 Tim 3:16; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii.1 |
-| \\(P_{2}\\) | 2 Timothy 3:17 — that the man of God may be complete, equipped for every good work | textual | Reformed Protestant, well supported | 2 Tim 3:17; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii.1 |
-| \\(P_{3}\\) | Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command | textual | Christian, historical-grammatical, consensus | Mark 7:1-13; Matt 15:1-9; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.10 |
-| \\(P_{4}\\) | Acts 17:11 — the Bereans tested apostolic preaching against scripture | textual | Reformed Protestant, well supported | Acts 17:11; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii.2 |
-| \\(P_{5}\\) | 2 Thessalonians 2:15 — hold to the traditions taught by word or letter ※ | textual | Christian, historical-grammatical, consensus | 2 Thess 2:15 |
-| \\(P_{6}\\) | Scripture is infallible | theological | Christian, historical-grammatical, consensus | [`grudem-systematic-theology-1994`](../bibliography.md#grudem-systematic-theology-1994), §ch. 5; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii |
-| \\(P_{7}\\) | Scripture is a sufficient rule of faith | theological | Reformed Protestant, disputed | [`grudem-systematic-theology-1994`](../bibliography.md#grudem-systematic-theology-1994), §ch. 8; [`webster-holy-scripture-2003`](../bibliography.md#webster-holy-scripture-2003); [`bavinck-prolegomena-2003`](../bibliography.md#bavinck-prolegomena-2003); [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6 |
-| \\(P_{8}\\) | Scripture is clear on what is necessary for salvation | theological | Reformed Protestant, disputed | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii.5 |
-| \\(P_{9}\\) | Scripture is the sole infallible rule of faith | theological | Reformed Protestant, disputed | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii–ix |
-| \\(P_{10}\\) | Scripture itself teaches that scripture is the sole infallible rule | interpretive | Reformed Protestant, disputed | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §I.vii.4 |
-| \\(P_{11}\\) | A doctrine is binding only if scripture teaches it | theological | Reformed Protestant, disputed | [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.8 |
-| \\(P_{12}\\) | No candidate rule of faith other than scripture is infallible | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001) |
-| \\(P_{13}\\) | Tradition is a coordinate source of revelation alongside scripture | theological | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966) |
-| \\(P_{14}\\) | The magisterium is an infallible interpreter of scripture | theological | Roman Catholic, well supported | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001) |
-| \\(P_{15}\\) | The mind of the Church, in the consensus of the Fathers and in received conciliar decisions, infallibly interprets scripture | theological | Eastern Orthodox, well supported | [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972); [`ware-orthodox-church-1993`](../bibliography.md#ware-orthodox-church-1993) |
-| \\(P_{16}\\) | The canon is known through the Church's reception of it | historical | Roman Catholic, consensus | [`npnf1-04-1887`](../bibliography.md#npnf1-04-1887), §Augustine, Contra epistolam Manichaei 5.6; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions |
-| \\(P_{17}\\) | Identifying the canon requires an infallible authority | theological | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions |
-| \\(P_{18}\\) | A rival's own foundational authority is self-authenticating too, so the circularity charge does not discriminate | interpretive | Reformed Protestant, disputed | [`kruger-canon-revisited-2012`](../bibliography.md#kruger-canon-revisited-2012), §ch. 2 |
-| \\(P_{19}\\) | Tradition carries real but fallible — ministerial — authority | theological | Reformed Protestant, disputed | [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`oberman-dawn-1986`](../bibliography.md#oberman-dawn-1986) |
-| \\(P_{20}\\) | Sola scriptura differs in principle from solo scriptura | theological | Reformed Protestant, disputed | [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001), §ch. 9 |
-| \\(P_{21}\\) | The individual retains ultimate interpretive authority, exercised indirectly by choosing which body to submit to | theological | Roman Catholic, disputed | [`cross-judisch-interpretive-authority-2009`](../bibliography.md#cross-judisch-interpretive-authority-2009), §§ III |
-| \\(P_{22}\\) | Choosing which authority to submit to is itself private judgement, whichever authority is chosen | interpretive | Reformed Protestant, disputed | [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001), §ch. 9 |
-| \\(P_{23}\\) | The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001) |
-| \\(P_{24}\\) | A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant | theological | Reformed Protestant, well supported | [`kolb-wengert-book-of-concord-2000`](../bibliography.md#kolb-wengert-book-of-concord-2000), §Formula of Concord, Solid Declaration X; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6 |
-| \\(P_{25}\\) | Creeds are informative without being normative | theological | Christian, historical-grammatical, disputed | [`geisler-review-mathison-2005`](../bibliography.md#geisler-review-mathison-2005), §120 |
-| \\(P_{26}\\) | The historical-grammatical method alone suffices to obtain the meaning of scripture on essential doctrine | interpretive | Christian, historical-grammatical, disputed | [`geisler-review-mathison-2005`](../bibliography.md#geisler-review-mathison-2005), §120–121 |
-| \\(P_{27}\\) | The creedal consensus is hermeneutically necessary for understanding scripture | interpretive | Reformed Protestant, disputed | [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001), §275 |
-| \\(P_{28}\\) | Doctrine develops without new revelation: the deposit is closed | theological | Christian, historical-grammatical, well supported | [`newman-development-1845`](../bibliography.md#newman-development-1845); [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001) |
-| \\(P_{29}\\) | The creedal consensus rests on the clarity of scripture | interpretive | Reformed Protestant, disputed | [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001), §279–280 |
-| \\(P_{30}\\) | Scripture's clear sense is not obtainable without the creedal consensus | interpretive | Reformed Protestant, disputed | [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001), §275 |
-| \\(P_{31}\\) | Tradition I's reasoning is circular | interpretive | Christian, historical-grammatical, disputed | [`geisler-review-mathison-2005`](../bibliography.md#geisler-review-mathison-2005), §122–123 |
-| \\(P_{32}\\) | The circularity defeats Tradition I | theological | Christian, historical-grammatical, disputed | [`geisler-review-mathison-2005`](../bibliography.md#geisler-review-mathison-2005), §123 |
-| \\(P_{33}\\) | Any appeal to an ultimate authority is circular, there being no higher authority to appeal to | theological | Reformed Protestant, disputed | [`barrett-gods-word-alone-2016`](../bibliography.md#barrett-gods-word-alone-2016), §ch. 11 |
-| \\(P_{34}\\) | The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it | theological | Reformed Protestant, disputed | [`allen-swain-reformed-catholicity-2015`](../bibliography.md#allen-swain-reformed-catholicity-2015), §ch. 3 |
-| \\(P_{35}\\) | Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer | textual | Christian, historical-grammatical, plausible | *proposed:* Advanced here, not found in the literature as a reply to the circularity charge. The texts are cited; the use is assembled. Note it claims only that scripture \*bounds\* the office, not that it \*confers\* it — conferral invites the recognition/conferral distinction Mathison himself presses against Rome.; Acts 20:32; Titus 1:9; 1 Pet 5:2-3 |
-| \\(P_{36}\\) | Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.7 |
-| \\(P_{37}\\) | God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void | theological | Christian, historical-grammatical, consensus | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972) |
-| \\(P_{38}\\) | A commandment of men may rightly be bound on the Church as God's word | interpretive | Reformed Protestant, disputed | Mark 7:7; Isa 29:13; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23 |
-| \\(P_{39}\\) | No apostolic teaching handed on outside Scripture survives, identifiable as the word of God | theological | Reformed Protestant, disputed | [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6 |
+| <a id="claim-1"></a>\\(P_{1}\\) | 2 Timothy 3:16 — all scripture is God-breathed and profitable | textual | Reformed Protestant, well supported | 2 Tim 3:16; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.1 |
+| <a id="claim-2"></a>\\(P_{2}\\) | 2 Timothy 3:17 — that the man of God may be complete, equipped for every good work | textual | Reformed Protestant, well supported | 2 Tim 3:17; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.1 |
+| <a id="claim-3"></a>\\(P_{3}\\) | Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command | textual | Christian, hist.-gramm., consensus | Mark 7:1-13; Matt 15:1-9; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.10 |
+| <a id="claim-4"></a>\\(P_{4}\\) | Acts 17:11 — the Bereans tested apostolic preaching against scripture | textual | Reformed Protestant, well supported | Acts 17:11; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.2 |
+| <a id="claim-5"></a>\\(P_{5}\\) | 2 Thessalonians 2:15 — hold to the traditions taught by word or letter ※ | textual | Christian, hist.-gramm., consensus | 2 Thess 2:15 |
+| <a id="claim-6"></a>\\(P_{6}\\) | Scripture is infallible | theological | Christian, hist.-gramm., consensus | [Grudem 1994](../bibliography.md#grudem-systematic-theology-1994), §ch. 5; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii |
+| <a id="claim-7"></a>\\(P_{7}\\) | Scripture is a sufficient rule of faith | theological | Reformed Protestant, disputed | [Grudem 1994](../bibliography.md#grudem-systematic-theology-1994), §ch. 8; [Webster 2003](../bibliography.md#webster-holy-scripture-2003); [Bavinck 2003](../bibliography.md#bavinck-prolegomena-2003); [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6 |
+| <a id="claim-8"></a>\\(P_{8}\\) | Scripture is clear on what is necessary for salvation | theological | Reformed Protestant, disputed | [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.5 |
+| <a id="claim-9"></a>\\(P_{9}\\) | Scripture is the sole infallible rule of faith | theological | Reformed Protestant, disputed | [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii–ix |
+| <a id="claim-10"></a>\\(P_{10}\\) | Scripture itself teaches that scripture is the sole infallible rule | interpretive | Reformed Protestant, disputed | [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.4 |
+| <a id="claim-11"></a>\\(P_{11}\\) | A doctrine is binding only if scripture teaches it | theological | Reformed Protestant, disputed | [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.8 |
+| <a id="claim-12"></a>\\(P_{12}\\) | No candidate rule of faith other than scripture is infallible | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001) |
+| <a id="claim-13"></a>\\(P_{13}\\) | Tradition is a coordinate source of revelation alongside scripture | theological | Roman Catholic, disputed | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966) |
+| <a id="claim-14"></a>\\(P_{14}\\) | The magisterium is an infallible interpreter of scripture | theological | Roman Catholic, well supported | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001) |
+| <a id="claim-15"></a>\\(P_{15}\\) | The mind of the Church, in the consensus of the Fathers and in received conciliar decisions, infallibly interprets scripture | theological | Eastern Orthodox, well supported | [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972); [Ware 1993](../bibliography.md#ware-orthodox-church-1993) |
+| <a id="claim-16"></a>\\(P_{16}\\) | The canon is known through the Church's reception of it | historical | Roman Catholic, consensus | [Schaff 1887](../bibliography.md#npnf1-04-1887), §Augustine, Contra epistolam Manichaei 5.6; [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions |
+| <a id="claim-17"></a>\\(P_{17}\\) | Identifying the canon requires an infallible authority | theological | Roman Catholic, disputed | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions |
+| <a id="claim-18"></a>\\(P_{18}\\) | A rival's own foundational authority is self-authenticating too, so the circularity charge does not discriminate | interpretive | Reformed Protestant, disputed | [Kruger 2012](../bibliography.md#kruger-canon-revisited-2012), §ch. 2 |
+| <a id="claim-19"></a>\\(P_{19}\\) | Tradition carries real but fallible — ministerial — authority | theological | Reformed Protestant, disputed | [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Oberman 1986](../bibliography.md#oberman-dawn-1986) |
+| <a id="claim-20"></a>\\(P_{20}\\) | Sola scriptura differs in principle from solo scriptura | theological | Reformed Protestant, disputed | [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001), §ch. 9 |
+| <a id="claim-21"></a>\\(P_{21}\\) | The individual retains ultimate interpretive authority, exercised indirectly by choosing which body to submit to | theological | Roman Catholic, disputed | [Cross and Judisch 2009](../bibliography.md#cross-judisch-interpretive-authority-2009), §§ III |
+| <a id="claim-22"></a>\\(P_{22}\\) | Choosing which authority to submit to is itself private judgement, whichever authority is chosen | interpretive | Reformed Protestant, disputed | [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001), §ch. 9 |
+| <a id="claim-23"></a>\\(P_{23}\\) | The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001) |
+| <a id="claim-24"></a>\\(P_{24}\\) | A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant | theological | Reformed Protestant, well supported | [Kolb and Wengert 2000](../bibliography.md#kolb-wengert-book-of-concord-2000), §Formula of Concord, Solid Declaration X; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6 |
+| <a id="claim-25"></a>\\(P_{25}\\) | Creeds are informative without being normative | theological | Christian, hist.-gramm., disputed | [Geisler 2005](../bibliography.md#geisler-review-mathison-2005), §120 |
+| <a id="claim-26"></a>\\(P_{26}\\) | The historical-grammatical method alone suffices to obtain the meaning of scripture on essential doctrine | interpretive | Christian, hist.-gramm., disputed | [Geisler 2005](../bibliography.md#geisler-review-mathison-2005), §120–121 |
+| <a id="claim-27"></a>\\(P_{27}\\) | The creedal consensus is hermeneutically necessary for understanding scripture | interpretive | Reformed Protestant, disputed | [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001), §275 |
+| <a id="claim-28"></a>\\(P_{28}\\) | Doctrine develops without new revelation: the deposit is closed | theological | Christian, hist.-gramm., well supported | [Newman 1845](../bibliography.md#newman-development-1845); [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001) |
+| <a id="claim-29"></a>\\(P_{29}\\) | The creedal consensus rests on the clarity of scripture | interpretive | Reformed Protestant, disputed | [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001), §279–280 |
+| <a id="claim-30"></a>\\(P_{30}\\) | Scripture's clear sense is not obtainable without the creedal consensus | interpretive | Reformed Protestant, disputed | [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001), §275 |
+| <a id="claim-31"></a>\\(P_{31}\\) | Tradition I's reasoning is circular | interpretive | Christian, hist.-gramm., disputed | [Geisler 2005](../bibliography.md#geisler-review-mathison-2005), §122–123 |
+| <a id="claim-32"></a>\\(P_{32}\\) | The circularity defeats Tradition I | theological | Christian, hist.-gramm., disputed | [Geisler 2005](../bibliography.md#geisler-review-mathison-2005), §123 |
+| <a id="claim-33"></a>\\(P_{33}\\) | Any appeal to an ultimate authority is circular, there being no higher authority to appeal to | theological | Reformed Protestant, disputed | [Barrett 2016](../bibliography.md#barrett-gods-word-alone-2016), §ch. 11 |
+| <a id="claim-34"></a>\\(P_{34}\\) | The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it | theological | Reformed Protestant, disputed | [Allen and Swain 2015](../bibliography.md#allen-swain-reformed-catholicity-2015), §ch. 3 |
+| <a id="claim-35"></a>\\(P_{35}\\) | Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer | textual | Christian, hist.-gramm., plausible | *proposed:* Advanced here, not found in the literature as a reply to the circularity charge. The texts are cited; the use is assembled. Note it claims only that scripture \*bounds\* the office, not that it \*confers\* it — conferral invites the recognition/conferral distinction Mathison himself presses against Rome.; Acts 20:32; Titus 1:9; 1 Pet 5:2-3 |
+| <a id="claim-36"></a>\\(P_{36}\\) | Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike | theological | Reformed Protestant, well supported | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.7 |
+| <a id="claim-37"></a>\\(P_{37}\\) | God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void | theological | Christian, hist.-gramm., consensus | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972) |
+| <a id="claim-38"></a>\\(P_{38}\\) | A commandment of men may rightly be bound on the Church as God's word | interpretive | Reformed Protestant, disputed | Mark 7:7; Isa 29:13; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23 |
+| <a id="claim-39"></a>\\(P_{39}\\) | No apostolic teaching handed on outside Scripture survives, identifiable as the word of God | theological | Reformed Protestant, disputed | [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6 |
 
 </div>
 
@@ -359,7 +359,7 @@ scripture teaches the principle, yield the sole infallible rule.
 
 <div class="testimony-math">
 \[
-(P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9}
+(\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}
 \]
 </div>
 
@@ -372,7 +372,7 @@ teaches the principle.
 
 <div class="testimony-math">
 \[
-(P_{6} \land P_{12}) \rightarrow P_{9}
+(\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}
 \]
 </div>
 
@@ -387,7 +387,7 @@ generalises from one pericope.
 
 <div class="testimony-math">
 \[
-P_{3} \rightarrow P_{37}
+\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}
 \]
 </div>
 
@@ -399,7 +399,7 @@ Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it.
 
 <div class="testimony-math">
 \[
-P_{37} \rightarrow \lnot P_{38}
+\href{#claim-37}{P_{37}} \rightarrow \lnot \href{#claim-38}{P_{38}}
 \]
 </div>
 
@@ -416,7 +416,7 @@ word to Scripture; both deny it is the *sole* infallible rule.
 
 <div class="testimony-math">
 \[
-(P_{37} \land P_{39}) \rightarrow P_{9}
+(\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}
 \]
 </div>
 
@@ -428,7 +428,7 @@ inform without binding, and no second infallible rule is needed.
 
 <div class="testimony-math">
 \[
-(P_{26} \land P_{25} \land P_{6} \land P_{12}) \rightarrow P_{9}
+(\href{#claim-26}{P_{26}} \land \href{#claim-25}{P_{25}} \land \href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}
 \]
 </div>
 
@@ -442,7 +442,7 @@ that scripture is the sole rule.
 
 <div class="testimony-math">
 \[
-(P_{5} \land P_{13}) \rightarrow \lnot P_{9}
+(\href{#claim-5}{P_{5}} \land \href{#claim-13}{P_{13}}) \rightarrow \lnot \href{#claim-9}{P_{9}}
 \]
 </div>
 
@@ -454,7 +454,7 @@ whatever is said about sources.
 
 <div class="testimony-math">
 \[
-P_{14} \rightarrow \lnot P_{9}
+\href{#claim-14}{P_{14}} \rightarrow \lnot \href{#claim-9}{P_{9}}
 \]
 </div>
 
@@ -466,7 +466,7 @@ second infallible rule — and it is not the magisterial premise.
 
 <div class="testimony-math">
 \[
-P_{15} \rightarrow \lnot P_{9}
+\href{#claim-15}{P_{15}} \rightarrow \lnot \href{#claim-9}{P_{9}}
 \]
 </div>
 
@@ -480,7 +480,7 @@ teach sola scriptura, then sola scriptura does not bind.
 
 <div class="testimony-math">
 \[
-(P_{11} \land \lnot P_{10}) \rightarrow \lnot P_{9}
+(\href{#claim-11}{P_{11}} \land \lnot \href{#claim-10}{P_{10}}) \rightarrow \lnot \href{#claim-9}{P_{9}}
 \]
 </div>
 
@@ -493,7 +493,7 @@ outside scripture is needed to identify scripture.
 
 <div class="testimony-math">
 \[
-(P_{16} \land P_{17}) \rightarrow \lnot P_{9}
+(\href{#claim-16}{P_{16}} \land \href{#claim-17}{P_{17}}) \rightarrow \lnot \href{#claim-9}{P_{9}}
 \]
 </div>
 
@@ -507,7 +507,7 @@ Tradition 0.
 
 <div class="testimony-math">
 \[
-(P_{19} \land P_{21}) \rightarrow \lnot P_{20}
+(\href{#claim-19}{P_{19}} \land \href{#claim-21}{P_{21}}) \rightarrow \lnot \href{#claim-20}{P_{20}}
 \]
 </div>
 
@@ -524,7 +524,7 @@ Leg one: the creedal consensus rests on scripture's clarity.
 
 <div class="testimony-math">
 \[
-P_{8} \rightarrow P_{27}
+\href{#claim-8}{P_{8}} \rightarrow \href{#claim-27}{P_{27}}
 \]
 </div>
 
@@ -536,7 +536,7 @@ consensus.
 
 <div class="testimony-math">
 \[
-P_{27} \rightarrow P_{8}
+\href{#claim-27}{P_{27}} \rightarrow \href{#claim-8}{P_{8}}
 \]
 </div>
 
@@ -551,13 +551,13 @@ teaches the principle.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; P_{10} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-1}{P_{1}} \\
+\text{(2)} \quad &amp; \href{#claim-2}{P_{2}} \\
+\text{(3)} \quad &amp; \href{#claim-7}{P_{7}} \\
+\text{(4)} \quad &amp; \href{#claim-8}{P_{8}} \\
+\text{(5)} \quad &amp; \href{#claim-10}{P_{10}} \\
+\text{(6)} \quad &amp; (\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -570,10 +570,10 @@ teaches the principle.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{6} \\
-\text{(2)} \quad &amp; P_{12} \\
-\text{(3)} \quad &amp; (P_{6} \land P_{12}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-6}{P_{6}} \\
+\text{(2)} \quad &amp; \href{#claim-12}{P_{12}} \\
+\text{(3)} \quad &amp; (\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -587,9 +587,9 @@ and the principle it enacts. It delivers the principle, and no more.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{3} \\
-\text{(2)} \quad &amp; P_{3} \rightarrow P_{37} \\[4pt]
-\vdash \quad &amp; P_{37}
+\text{(1)} \quad &amp; \href{#claim-3}{P_{3}} \\
+\text{(2)} \quad &amp; \href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}} \\[4pt]
+\vdash \quad &amp; \href{#claim-37}{P_{37}}
 \end{aligned}
 \]
 </div>
@@ -604,9 +604,9 @@ apostolic word survives outside Scripture. The principle is carried in by
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{39} \\
-\text{(2)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-39}{P_{39}} \\
+\text{(2)} \quad &amp; (\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -620,12 +620,12 @@ it.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{26} \\
-\text{(2)} \quad &amp; P_{25} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{12} \\
-\text{(5)} \quad &amp; (P_{26} \land P_{25} \land P_{6} \land P_{12}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-26}{P_{26}} \\
+\text{(2)} \quad &amp; \href{#claim-25}{P_{25}} \\
+\text{(3)} \quad &amp; \href{#claim-6}{P_{6}} \\
+\text{(4)} \quad &amp; \href{#claim-12}{P_{12}} \\
+\text{(5)} \quad &amp; (\href{#claim-26}{P_{26}} \land \href{#claim-25}{P_{25}} \land \href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -642,10 +642,10 @@ weighed in the ground's own rating.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{5} \\
-\text{(2)} \quad &amp; P_{13} \\
-\text{(3)} \quad &amp; (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-5}{P_{5}} \\
+\text{(2)} \quad &amp; \href{#claim-13}{P_{13}} \\
+\text{(3)} \quad &amp; (\href{#claim-5}{P_{5}} \land \href{#claim-13}{P_{13}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -658,9 +658,9 @@ weighed in the ground's own rating.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{14} \\
-\text{(2)} \quad &amp; P_{14} \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-14}{P_{14}} \\
+\text{(2)} \quad &amp; \href{#claim-14}{P_{14}} \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -673,9 +673,9 @@ weighed in the ground's own rating.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{15} \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-15}{P_{15}} \\
+\text{(2)} \quad &amp; \href{#claim-15}{P_{15}} \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -688,10 +688,10 @@ weighed in the ground's own rating.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{11} \\
-\text{(2)} \quad &amp; \lnot P_{10} \\
-\text{(3)} \quad &amp; (P_{11} \land \lnot P_{10}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-11}{P_{11}} \\
+\text{(2)} \quad &amp; \lnot \href{#claim-10}{P_{10}} \\
+\text{(3)} \quad &amp; (\href{#claim-11}{P_{11}} \land \lnot \href{#claim-10}{P_{10}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -704,10 +704,10 @@ weighed in the ground's own rating.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{16} \\
-\text{(2)} \quad &amp; P_{17} \\
-\text{(3)} \quad &amp; (P_{16} \land P_{17}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-16}{P_{16}} \\
+\text{(2)} \quad &amp; \href{#claim-17}{P_{17}} \\
+\text{(3)} \quad &amp; (\href{#claim-16}{P_{16}} \land \href{#claim-17}{P_{17}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -720,10 +720,10 @@ weighed in the ground's own rating.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{19} \\
-\text{(2)} \quad &amp; P_{21} \\
-\text{(3)} \quad &amp; (P_{19} \land P_{21}) \rightarrow \lnot P_{20} \\[4pt]
-\vdash \quad &amp; \lnot P_{20}
+\text{(1)} \quad &amp; \href{#claim-19}{P_{19}} \\
+\text{(2)} \quad &amp; \href{#claim-21}{P_{21}} \\
+\text{(3)} \quad &amp; (\href{#claim-19}{P_{19}} \land \href{#claim-21}{P_{21}}) \rightarrow \lnot \href{#claim-20}{P_{20}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-20}{P_{20}}
 \end{aligned}
 \]
 </div>
@@ -743,10 +743,10 @@ principle.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{11} \\
-\text{(2)} \quad &amp; P_{10} \\
-\text{(3)} \quad &amp; (P_{11} \land \lnot P_{10}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-11}{P_{11}} \\
+\text{(2)} \quad &amp; \href{#claim-10}{P_{10}} \\
+\text{(3)} \quad &amp; (\href{#claim-11}{P_{11}} \land \lnot \href{#claim-10}{P_{10}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -760,10 +760,10 @@ not a claim about where binding doctrine comes from.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{23} \\
-\text{(2)} \quad &amp; \lnot P_{10} \\
-\text{(3)} \quad &amp; (P_{11} \land \lnot P_{10}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-23}{P_{23}} \\
+\text{(2)} \quad &amp; \lnot \href{#claim-10}{P_{10}} \\
+\text{(3)} \quad &amp; (\href{#claim-11}{P_{11}} \land \lnot \href{#claim-10}{P_{10}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -779,10 +779,10 @@ too.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{16} \\
-\text{(2)} \quad &amp; P_{18} \\
-\text{(3)} \quad &amp; (P_{16} \land P_{17}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-16}{P_{16}} \\
+\text{(2)} \quad &amp; \href{#claim-18}{P_{18}} \\
+\text{(3)} \quad &amp; (\href{#claim-16}{P_{16}} \land \href{#claim-17}{P_{17}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -796,10 +796,10 @@ judgement, so private judgement does not separate the positions.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{19} \\
-\text{(2)} \quad &amp; P_{22} \\
-\text{(3)} \quad &amp; (P_{19} \land P_{21}) \rightarrow \lnot P_{20} \\[4pt]
-\vdash \quad &amp; \lnot P_{20}
+\text{(1)} \quad &amp; \href{#claim-19}{P_{19}} \\
+\text{(2)} \quad &amp; \href{#claim-22}{P_{22}} \\
+\text{(3)} \quad &amp; (\href{#claim-19}{P_{19}} \land \href{#claim-21}{P_{21}}) \rightarrow \lnot \href{#claim-20}{P_{20}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-20}{P_{20}}
 \end{aligned}
 \]
 </div>
@@ -823,7 +823,7 @@ Both legs together make the reasoning circular.
 
 <div class="testimony-math">
 \[
-(P_{29} \land P_{30}) \rightarrow P_{31}
+(\href{#claim-29}{P_{29}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-31}{P_{31}}
 \]
 </div>
 
@@ -836,7 +836,7 @@ what Barrett denies.
 
 <div class="testimony-math">
 \[
-(P_{31} \land \lnot P_{33}) \rightarrow P_{32}
+(\href{#claim-31}{P_{31}} \land \lnot \href{#claim-33}{P_{33}}) \rightarrow \href{#claim-32}{P_{32}}
 \]
 </div>
 
@@ -848,10 +848,10 @@ what Barrett denies.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{29} \\
-\text{(2)} \quad &amp; P_{30} \\
-\text{(3)} \quad &amp; (P_{29} \land P_{30}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
+\text{(1)} \quad &amp; \href{#claim-29}{P_{29}} \\
+\text{(2)} \quad &amp; \href{#claim-30}{P_{30}} \\
+\text{(3)} \quad &amp; (\href{#claim-29}{P_{29}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-31}{P_{31}} \\[4pt]
+\vdash \quad &amp; \href{#claim-31}{P_{31}}
 \end{aligned}
 \]
 </div>
@@ -864,10 +864,10 @@ The charge pressed home: the circularity defeats the position.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{31} \\
-\text{(2)} \quad &amp; \lnot P_{33} \\
-\text{(3)} \quad &amp; (P_{31} \land \lnot P_{33}) \rightarrow P_{32} \\[4pt]
-\vdash \quad &amp; P_{32}
+\text{(1)} \quad &amp; \href{#claim-31}{P_{31}} \\
+\text{(2)} \quad &amp; \lnot \href{#claim-33}{P_{33}} \\
+\text{(3)} \quad &amp; (\href{#claim-31}{P_{31}} \land \lnot \href{#claim-33}{P_{33}}) \rightarrow \href{#claim-32}{P_{32}} \\[4pt]
+\vdash \quad &amp; \href{#claim-32}{P_{32}}
 \end{aligned}
 \]
 </div>
@@ -882,10 +882,10 @@ precondition of it.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{29} \\
-\text{(2)} \quad &amp; P_{34} \\
-\text{(3)} \quad &amp; (P_{29} \land P_{30}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
+\text{(1)} \quad &amp; \href{#claim-29}{P_{29}} \\
+\text{(2)} \quad &amp; \href{#claim-34}{P_{34}} \\
+\text{(3)} \quad &amp; (\href{#claim-29}{P_{29}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-31}{P_{31}} \\[4pt]
+\vdash \quad &amp; \href{#claim-31}{P_{31}}
 \end{aligned}
 \]
 </div>
@@ -902,11 +902,11 @@ necessary for salvation.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{29} \\
-\text{(2)} \quad &amp; P_{35} \\
-\text{(3)} \quad &amp; P_{36} \\
-\text{(4)} \quad &amp; (P_{29} \land P_{30}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
+\text{(1)} \quad &amp; \href{#claim-29}{P_{29}} \\
+\text{(2)} \quad &amp; \href{#claim-35}{P_{35}} \\
+\text{(3)} \quad &amp; \href{#claim-36}{P_{36}} \\
+\text{(4)} \quad &amp; (\href{#claim-29}{P_{29}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-31}{P_{31}} \\[4pt]
+\vdash \quad &amp; \href{#claim-31}{P_{31}}
 \end{aligned}
 \]
 </div>
@@ -920,10 +920,10 @@ it is peculiar to this position.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{31} \\
-\text{(2)} \quad &amp; P_{33} \\
-\text{(3)} \quad &amp; (P_{31} \land \lnot P_{33}) \rightarrow P_{32} \\[4pt]
-\vdash \quad &amp; P_{32}
+\text{(1)} \quad &amp; \href{#claim-31}{P_{31}} \\
+\text{(2)} \quad &amp; \href{#claim-33}{P_{33}} \\
+\text{(3)} \quad &amp; (\href{#claim-31}{P_{31}} \land \lnot \href{#claim-33}{P_{33}}) \rightarrow \href{#claim-32}{P_{32}} \\[4pt]
+\vdash \quad &amp; \href{#claim-32}{P_{32}}
 \end{aligned}
 \]
 </div>
@@ -941,12 +941,12 @@ premise no step read; it is a line of its own now (`mark7Line`).
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{4} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{28} \\
-\text{(4)} \quad &amp; P_{19} \\
-\text{(5)} \quad &amp; P_{24} \\
-\text{(6)} \quad &amp; P_{23}
+\text{(1)} \quad &amp; \href{#claim-4}{P_{4}} \\
+\text{(2)} \quad &amp; \href{#claim-5}{P_{5}} \\
+\text{(3)} \quad &amp; \href{#claim-28}{P_{28}} \\
+\text{(4)} \quad &amp; \href{#claim-19}{P_{19}} \\
+\text{(5)} \quad &amp; \href{#claim-24}{P_{24}} \\
+\text{(6)} \quad &amp; \href{#claim-23}{P_{23}}
 \end{aligned}
 \]
 </div>
@@ -979,26 +979,26 @@ and practices neither commanded nor forbidden need no scriptural warrant.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; P_{10} \\
-\text{(6)} \quad &amp; P_{6} \\
-\text{(7)} \quad &amp; P_{12} \\
-\text{(8)} \quad &amp; P_{3} \\
-\text{(9)} \quad &amp; P_{39} \\
-\text{(10)} \quad &amp; P_{4} \\
-\text{(11)} \quad &amp; P_{5} \\
-\text{(12)} \quad &amp; P_{28} \\
-\text{(13)} \quad &amp; P_{19} \\
-\text{(14)} \quad &amp; P_{24} \\
-\text{(15)} \quad &amp; P_{23} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
-\text{(17)} \quad &amp; (P_{6} \land P_{12}) \rightarrow P_{9} \\
-\text{(18)} \quad &amp; P_{3} \rightarrow P_{37} \\
-\text{(19)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-1}{P_{1}} \\
+\text{(2)} \quad &amp; \href{#claim-2}{P_{2}} \\
+\text{(3)} \quad &amp; \href{#claim-7}{P_{7}} \\
+\text{(4)} \quad &amp; \href{#claim-8}{P_{8}} \\
+\text{(5)} \quad &amp; \href{#claim-10}{P_{10}} \\
+\text{(6)} \quad &amp; \href{#claim-6}{P_{6}} \\
+\text{(7)} \quad &amp; \href{#claim-12}{P_{12}} \\
+\text{(8)} \quad &amp; \href{#claim-3}{P_{3}} \\
+\text{(9)} \quad &amp; \href{#claim-39}{P_{39}} \\
+\text{(10)} \quad &amp; \href{#claim-4}{P_{4}} \\
+\text{(11)} \quad &amp; \href{#claim-5}{P_{5}} \\
+\text{(12)} \quad &amp; \href{#claim-28}{P_{28}} \\
+\text{(13)} \quad &amp; \href{#claim-19}{P_{19}} \\
+\text{(14)} \quad &amp; \href{#claim-24}{P_{24}} \\
+\text{(15)} \quad &amp; \href{#claim-23}{P_{23}} \\
+\text{(16)} \quad &amp; (\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}} \\
+\text{(17)} \quad &amp; (\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}} \\
+\text{(18)} \quad &amp; \href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}} \\
+\text{(19)} \quad &amp; (\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1015,12 +1015,12 @@ was supposed to do.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{26} \\
-\text{(2)} \quad &amp; P_{25} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{12} \\
-\text{(5)} \quad &amp; (P_{26} \land P_{25} \land P_{6} \land P_{12}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-26}{P_{26}} \\
+\text{(2)} \quad &amp; \href{#claim-25}{P_{25}} \\
+\text{(3)} \quad &amp; \href{#claim-6}{P_{6}} \\
+\text{(4)} \quad &amp; \href{#claim-12}{P_{12}} \\
+\text{(5)} \quad &amp; (\href{#claim-26}{P_{26}} \land \href{#claim-25}{P_{25}} \land \href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1038,10 +1038,10 @@ entail its negation.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{5} \\
-\text{(2)} \quad &amp; P_{13} \\
-\text{(3)} \quad &amp; (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-5}{P_{5}} \\
+\text{(2)} \quad &amp; \href{#claim-13}{P_{13}} \\
+\text{(3)} \quad &amp; (\href{#claim-5}{P_{5}} \land \href{#claim-13}{P_{13}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1058,9 +1058,9 @@ while incurring its own.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{14} \\
-\text{(2)} \quad &amp; P_{14} \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-14}{P_{14}} \\
+\text{(2)} \quad &amp; \href{#claim-14}{P_{14}} \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1076,9 +1076,9 @@ magisterium.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{15} \\
-\text{(2)} \quad &amp; P_{15} \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-15}{P_{15}} \\
+\text{(2)} \quad &amp; \href{#claim-15}{P_{15}} \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1095,10 +1095,10 @@ The self-refutation objection, as a package concluding the negation.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{11} \\
-\text{(2)} \quad &amp; \lnot P_{10} \\
-\text{(3)} \quad &amp; (P_{11} \land \lnot P_{10}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-11}{P_{11}} \\
+\text{(2)} \quad &amp; \lnot \href{#claim-10}{P_{10}} \\
+\text{(3)} \quad &amp; (\href{#claim-11}{P_{11}} \land \lnot \href{#claim-10}{P_{10}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1113,10 +1113,10 @@ The canon objection, likewise.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{16} \\
-\text{(2)} \quad &amp; P_{17} \\
-\text{(3)} \quad &amp; (P_{16} \land P_{17}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-16}{P_{16}} \\
+\text{(2)} \quad &amp; \href{#claim-17}{P_{17}} \\
+\text{(3)} \quad &amp; (\href{#claim-16}{P_{16}} \land \href{#claim-17}{P_{17}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1132,10 +1132,10 @@ principled distinct from Tradition 0.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{19} \\
-\text{(2)} \quad &amp; P_{21} \\
-\text{(3)} \quad &amp; (P_{19} \land P_{21}) \rightarrow \lnot P_{20} \\[4pt]
-\vdash \quad &amp; \lnot P_{20}
+\text{(1)} \quad &amp; \href{#claim-19}{P_{19}} \\
+\text{(2)} \quad &amp; \href{#claim-21}{P_{21}} \\
+\text{(3)} \quad &amp; (\href{#claim-19}{P_{19}} \land \href{#claim-21}{P_{21}}) \rightarrow \lnot \href{#claim-20}{P_{20}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-20}{P_{20}}
 \end{aligned}
 \]
 </div>
@@ -1152,10 +1152,10 @@ The objection with the classical answer in place of the ground it needed.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{11} \\
-\text{(2)} \quad &amp; P_{10} \\
-\text{(3)} \quad &amp; (P_{11} \land \lnot P_{10}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-11}{P_{11}} \\
+\text{(2)} \quad &amp; \href{#claim-10}{P_{10}} \\
+\text{(3)} \quad &amp; (\href{#claim-11}{P_{11}} \land \lnot \href{#claim-10}{P_{10}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1171,10 +1171,10 @@ needed.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{23} \\
-\text{(2)} \quad &amp; \lnot P_{10} \\
-\text{(3)} \quad &amp; (P_{11} \land \lnot P_{10}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-23}{P_{23}} \\
+\text{(2)} \quad &amp; \lnot \href{#claim-10}{P_{10}} \\
+\text{(3)} \quad &amp; (\href{#claim-11}{P_{11}} \land \lnot \href{#claim-10}{P_{10}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1202,25 +1202,25 @@ eliminative and Mark 7 routes are untouched.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; P_{6} \\
-\text{(6)} \quad &amp; P_{12} \\
-\text{(7)} \quad &amp; P_{3} \\
-\text{(8)} \quad &amp; P_{39} \\
-\text{(9)} \quad &amp; P_{4} \\
-\text{(10)} \quad &amp; P_{5} \\
-\text{(11)} \quad &amp; P_{28} \\
-\text{(12)} \quad &amp; P_{19} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; P_{23} \\
-\text{(15)} \quad &amp; (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\
-\text{(16)} \quad &amp; (P_{6} \land P_{12}) \rightarrow P_{9} \\
-\text{(17)} \quad &amp; P_{3} \rightarrow P_{37} \\
-\text{(18)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-1}{P_{1}} \\
+\text{(2)} \quad &amp; \href{#claim-2}{P_{2}} \\
+\text{(3)} \quad &amp; \href{#claim-7}{P_{7}} \\
+\text{(4)} \quad &amp; \href{#claim-8}{P_{8}} \\
+\text{(5)} \quad &amp; \href{#claim-6}{P_{6}} \\
+\text{(6)} \quad &amp; \href{#claim-12}{P_{12}} \\
+\text{(7)} \quad &amp; \href{#claim-3}{P_{3}} \\
+\text{(8)} \quad &amp; \href{#claim-39}{P_{39}} \\
+\text{(9)} \quad &amp; \href{#claim-4}{P_{4}} \\
+\text{(10)} \quad &amp; \href{#claim-5}{P_{5}} \\
+\text{(11)} \quad &amp; \href{#claim-28}{P_{28}} \\
+\text{(12)} \quad &amp; \href{#claim-19}{P_{19}} \\
+\text{(13)} \quad &amp; \href{#claim-24}{P_{24}} \\
+\text{(14)} \quad &amp; \href{#claim-23}{P_{23}} \\
+\text{(15)} \quad &amp; (\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}} \\
+\text{(16)} \quad &amp; (\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}} \\
+\text{(17)} \quad &amp; \href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}} \\
+\text{(18)} \quad &amp; (\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1235,12 +1235,12 @@ The classical line alone, stripped of the hinge.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{7} \land P_{8} \land P_{10}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-1}{P_{1}} \\
+\text{(2)} \quad &amp; \href{#claim-2}{P_{2}} \\
+\text{(3)} \quad &amp; \href{#claim-7}{P_{7}} \\
+\text{(4)} \quad &amp; \href{#claim-8}{P_{8}} \\
+\text{(5)} \quad &amp; (\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -1257,10 +1257,10 @@ Geisler's charge, stated as its holder states it.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{29} \\
-\text{(2)} \quad &amp; P_{30} \\
-\text{(3)} \quad &amp; (P_{29} \land P_{30}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
+\text{(1)} \quad &amp; \href{#claim-29}{P_{29}} \\
+\text{(2)} \quad &amp; \href{#claim-30}{P_{30}} \\
+\text{(3)} \quad &amp; (\href{#claim-29}{P_{29}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-31}{P_{31}} \\[4pt]
+\vdash \quad &amp; \href{#claim-31}{P_{31}}
 \end{aligned}
 \]
 </div>
@@ -1275,10 +1275,10 @@ The charge pressed home to a defeat.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{31} \\
-\text{(2)} \quad &amp; \lnot P_{33} \\
-\text{(3)} \quad &amp; (P_{31} \land \lnot P_{33}) \rightarrow P_{32} \\[4pt]
-\vdash \quad &amp; P_{32}
+\text{(1)} \quad &amp; \href{#claim-31}{P_{31}} \\
+\text{(2)} \quad &amp; \lnot \href{#claim-33}{P_{33}} \\
+\text{(3)} \quad &amp; (\href{#claim-31}{P_{31}} \land \lnot \href{#claim-33}{P_{33}}) \rightarrow \href{#claim-32}{P_{32}} \\[4pt]
+\vdash \quad &amp; \href{#claim-32}{P_{32}}
 \end{aligned}
 \]
 </div>
@@ -1293,10 +1293,10 @@ The charge with Allen and Swain's accountability reply in play.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{29} \\
-\text{(2)} \quad &amp; P_{34} \\
-\text{(3)} \quad &amp; (P_{29} \land P_{30}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
+\text{(1)} \quad &amp; \href{#claim-29}{P_{29}} \\
+\text{(2)} \quad &amp; \href{#claim-34}{P_{34}} \\
+\text{(3)} \quad &amp; (\href{#claim-29}{P_{29}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-31}{P_{31}} \\[4pt]
+\vdash \quad &amp; \href{#claim-31}{P_{31}}
 \end{aligned}
 \]
 </div>
@@ -1311,11 +1311,11 @@ The charge with the proposed scriptural-bounding reply in play.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{29} \\
-\text{(2)} \quad &amp; P_{35} \\
-\text{(3)} \quad &amp; P_{36} \\
-\text{(4)} \quad &amp; (P_{29} \land P_{30}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
+\text{(1)} \quad &amp; \href{#claim-29}{P_{29}} \\
+\text{(2)} \quad &amp; \href{#claim-35}{P_{35}} \\
+\text{(3)} \quad &amp; \href{#claim-36}{P_{36}} \\
+\text{(4)} \quad &amp; (\href{#claim-29}{P_{29}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-31}{P_{31}} \\[4pt]
+\vdash \quad &amp; \href{#claim-31}{P_{31}}
 \end{aligned}
 \]
 </div>
@@ -1336,10 +1336,10 @@ denial but that it delivers the charge. Asked the weaker question the answer is
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{31} \\
-\text{(2)} \quad &amp; P_{33} \\
-\text{(3)} \quad &amp; (P_{31} \land \lnot P_{33}) \rightarrow P_{32} \\[4pt]
-\vdash \quad &amp; P_{31}
+\text{(1)} \quad &amp; \href{#claim-31}{P_{31}} \\
+\text{(2)} \quad &amp; \href{#claim-33}{P_{33}} \\
+\text{(3)} \quad &amp; (\href{#claim-31}{P_{31}} \land \lnot \href{#claim-33}{P_{33}}) \rightarrow \href{#claim-32}{P_{32}} \\[4pt]
+\vdash \quad &amp; \href{#claim-31}{P_{31}}
 \end{aligned}
 \]
 </div>
@@ -1357,9 +1357,9 @@ consensus.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{8} \rightarrow P_{27} \\
-\text{(2)} \quad &amp; P_{27} \rightarrow P_{8} \\[4pt]
-\vdash \quad &amp; P_{27}
+\text{(1)} \quad &amp; \href{#claim-8}{P_{8}} \rightarrow \href{#claim-27}{P_{27}} \\
+\text{(2)} \quad &amp; \href{#claim-27}{P_{27}} \rightarrow \href{#claim-8}{P_{8}} \\[4pt]
+\vdash \quad &amp; \href{#claim-27}{P_{27}}
 \end{aligned}
 \]
 </div>
@@ -2354,10 +2354,10 @@ Scripture's place among the rules of faith.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{3} \\
-\text{(2)} \quad &amp; P_{3} \rightarrow P_{37} \\
-\text{(3)} \quad &amp; P_{37} \rightarrow \lnot P_{38} \\[4pt]
-\vdash \quad &amp; P_{37}
+\text{(1)} \quad &amp; \href{#claim-3}{P_{3}} \\
+\text{(2)} \quad &amp; \href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}} \\
+\text{(3)} \quad &amp; \href{#claim-37}{P_{37}} \rightarrow \lnot \href{#claim-38}{P_{38}} \\[4pt]
+\vdash \quad &amp; \href{#claim-37}{P_{37}}
 \end{aligned}
 \]
 </div>
@@ -2373,11 +2373,11 @@ apostolic word survives outside Scripture.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{3} \\
-\text{(2)} \quad &amp; P_{39} \\
-\text{(3)} \quad &amp; P_{3} \rightarrow P_{37} \\
-\text{(4)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-3}{P_{3}} \\
+\text{(2)} \quad &amp; \href{#claim-39}{P_{39}} \\
+\text{(3)} \quad &amp; \href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}} \\
+\text{(4)} \quad &amp; (\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -2393,10 +2393,10 @@ Scripture: the text, the principle, and the step to the sole rule.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{3} \\
-\text{(2)} \quad &amp; P_{3} \rightarrow P_{37} \\
-\text{(3)} \quad &amp; (P_{37} \land P_{39}) \rightarrow P_{9} \\[4pt]
-\vdash \quad &amp; P_{9}
+\text{(1)} \quad &amp; \href{#claim-3}{P_{3}} \\
+\text{(2)} \quad &amp; \href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}} \\
+\text{(3)} \quad &amp; (\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -2416,10 +2416,10 @@ dispute weighs.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{5} \\
-\text{(2)} \quad &amp; P_{13} \\
-\text{(3)} \quad &amp; (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-5}{P_{5}} \\
+\text{(2)} \quad &amp; \href{#claim-13}{P_{13}} \\
+\text{(3)} \quad &amp; (\href{#claim-5}{P_{5}} \land \href{#claim-13}{P_{13}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -2511,11 +2511,11 @@ Trent, with its tradition read as commandments of men.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{5} \\
-\text{(2)} \quad &amp; P_{13} \\
-\text{(3)} \quad &amp; (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\
-\text{(4)} \quad &amp; P_{13} \rightarrow P_{38} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-5}{P_{5}} \\
+\text{(2)} \quad &amp; \href{#claim-13}{P_{13}} \\
+\text{(3)} \quad &amp; (\href{#claim-5}{P_{5}} \land \href{#claim-13}{P_{13}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\
+\text{(4)} \quad &amp; \href{#claim-13}{P_{13}} \rightarrow \href{#claim-38}{P_{38}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -2530,11 +2530,11 @@ Trent, with its tradition read as the apostolic word handed on unwritten.
 <div class="testimony-math">
 \[
 \begin{aligned}
-\text{(1)} \quad &amp; P_{5} \\
-\text{(2)} \quad &amp; P_{13} \\
-\text{(3)} \quad &amp; (P_{5} \land P_{13}) \rightarrow \lnot P_{9} \\
-\text{(4)} \quad &amp; P_{13} \rightarrow \lnot P_{39} \\[4pt]
-\vdash \quad &amp; \lnot P_{9}
+\text{(1)} \quad &amp; \href{#claim-5}{P_{5}} \\
+\text{(2)} \quad &amp; \href{#claim-13}{P_{13}} \\
+\text{(3)} \quad &amp; (\href{#claim-5}{P_{5}} \land \href{#claim-13}{P_{13}}) \rightarrow \lnot \href{#claim-9}{P_{9}} \\
+\text{(4)} \quad &amp; \href{#claim-13}{P_{13}} \rightarrow \lnot \href{#claim-39}{P_{39}} \\[4pt]
+\vdash \quad &amp; \lnot \href{#claim-9}{P_{9}}
 \end{aligned}
 \]
 </div>
@@ -2763,14 +2763,14 @@ of its case for the principle, which follows without it.
 
 **Why *Mark 7: God's word judges human tradition* stands against *Trent (Tradition II), read as commandments of men*.**
 
-- **The crux:** \\(P_{37} \rightarrow \lnot P_{38}\\), a premise of *Mark 7: God's word judges human tradition*.
+- **The crux:** \\(\href{#claim-37}{P_{37}} \rightarrow \lnot \href{#claim-38}{P_{38}}\\), a premise of *Mark 7: God's word judges human tradition*.
 - **What it does:** its conclusion follows without it — the crux is its answer to *Trent (Tradition II), read as commandments of men*.
-- **Granted:** \\(P_{3}\\), \\(P_{3} \rightarrow P_{37}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{13}\\), \\(P_{13} \rightarrow P_{38}\\) cannot be held together with \\(P_{37} \rightarrow \lnot P_{38}\\) and \\(P_{3}\\), \\(P_{3} \rightarrow P_{37}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{#claim-3}{P_{3}}\\), \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{#claim-13}{P_{13}}\\), \\(\href{#claim-13}{P_{13}} \rightarrow \href{#claim-38}{P_{38}}\\) cannot be held together with \\(\href{#claim-37}{P_{37}} \rightarrow \lnot \href{#claim-38}{P_{38}}\\) and \\(\href{#claim-3}{P_{3}}\\), \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{3}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.10
-  - \\(P_{37}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
-  - the step itself — *well supported*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - \\(\href{#claim-3}{P_{3}}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.10
+  - \\(\href{#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - the step itself — *well supported*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 
 <a id="whereTheApostolicWordReadingFalls"></a>
 **`whereTheApostolicWordReadingFalls`**
@@ -2784,11 +2784,11 @@ alone settle the question.
 
 **Why *Sola scriptura from Mark 7* stands against *Trent (Tradition II), read as the apostolic word handed on unwritten*.**
 
-- **The crux:** \\(P_{39}\\), a premise of *Sola scriptura from Mark 7*.
+- **The crux:** \\(\href{#claim-39}{P_{39}}\\), a premise of *Sola scriptura from Mark 7*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(P_{13}\\), \\(P_{13} \rightarrow \lnot P_{39}\\) cannot be held together with \\(P_{39}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(\href{#claim-13}{P_{13}}\\), \\(\href{#claim-13}{P_{13}} \rightarrow \lnot \href{#claim-39}{P_{39}}\\) cannot be held together with \\(\href{#claim-39}{P_{39}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{39}\\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — *disputed*: [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - \\(\href{#claim-39}{P_{39}}\\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — *disputed*: [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
 
 #### The dilemma
 
@@ -2812,24 +2812,24 @@ Each reading is fair: Trent read either way can be held without contradiction. W
 fits Trent is not something the dilemma decides; what it shows is what each
 costs.
 
-**Every reading of \\(P_{13}\\), answered.** *Trent (Tradition II)* holds \\(P_{13}\\). It is read 2 ways here, and each reading is checked; none can be left out.
+**Every reading of \\(\href{#claim-13}{P_{13}}\\), answered.** *Trent (Tradition II)* holds \\(\href{#claim-13}{P_{13}}\\). It is read 2 ways here, and each reading is checked; none can be left out.
 
-**1. Read as commandments of men.** The claim commits *Trent (Tradition II)* to \\(P_{38}\\) — so read by [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23 (*disputed*).
+**1. Read as commandments of men.** The claim commits *Trent (Tradition II)* to \\(\href{#claim-38}{P_{38}}\\) — so read by [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23 (*disputed*).
 
 Against *Mark 7: God's word judges human tradition*, it cannot be held. Where it breaks:
 
 **Why *Mark 7: God's word judges human tradition* stands against *Trent (Tradition II), read as commandments of men*.**
 
-- **The crux:** \\(P_{37} \rightarrow \lnot P_{38}\\), a premise of *Mark 7: God's word judges human tradition*.
+- **The crux:** \\(\href{#claim-37}{P_{37}} \rightarrow \lnot \href{#claim-38}{P_{38}}\\), a premise of *Mark 7: God's word judges human tradition*.
 - **What it does:** its conclusion follows without it — the crux is its answer to *Trent (Tradition II), read as commandments of men*.
-- **Granted:** \\(P_{3}\\), \\(P_{3} \rightarrow P_{37}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{13}\\), \\(P_{13} \rightarrow P_{38}\\) cannot be held together with \\(P_{37} \rightarrow \lnot P_{38}\\) and \\(P_{3}\\), \\(P_{3} \rightarrow P_{37}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{#claim-3}{P_{3}}\\), \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{#claim-13}{P_{13}}\\), \\(\href{#claim-13}{P_{13}} \rightarrow \href{#claim-38}{P_{38}}\\) cannot be held together with \\(\href{#claim-37}{P_{37}} \rightarrow \lnot \href{#claim-38}{P_{38}}\\) and \\(\href{#claim-3}{P_{3}}\\), \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{3}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.10
-  - \\(P_{37}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
-  - the step itself — *well supported*: [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - \\(\href{#claim-3}{P_{3}}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.10
+  - \\(\href{#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - the step itself — *well supported*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 
-**2. Read as the apostolic word handed on unwritten.** The claim commits *Trent (Tradition II)* to \\(\lnot P_{39}\\) — so read by [`waterworth-trent-1848`](../bibliography.md#waterworth-trent-1848), p. 18; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 9; [`catholic-church-catechism-2000`](../bibliography.md#catholic-church-catechism-2000), §83 (*consensus*).
+**2. Read as the apostolic word handed on unwritten.** The claim commits *Trent (Tradition II)* to \\(\lnot \href{#claim-39}{P_{39}}\\) — so read by [Council of Trent 1848](../bibliography.md#waterworth-trent-1848), p. 18; [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 9; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §83 (*consensus*).
 
 Against *Mark 7: God's word judges human tradition*, it is not reached: *Mark 7: God's word judges human tradition* holds, and can be held together with it.
 
@@ -2837,11 +2837,11 @@ Against *Sola scriptura from Mark 7*, it cannot be held. Where it breaks:
 
 **Why *Sola scriptura from Mark 7* stands against *Trent (Tradition II), read as the apostolic word handed on unwritten*.**
 
-- **The crux:** \\(P_{39}\\), a premise of *Sola scriptura from Mark 7*.
+- **The crux:** \\(\href{#claim-39}{P_{39}}\\), a premise of *Sola scriptura from Mark 7*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(P_{13}\\), \\(P_{13} \rightarrow \lnot P_{39}\\) cannot be held together with \\(P_{39}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(\href{#claim-13}{P_{13}}\\), \\(\href{#claim-13}{P_{13}} \rightarrow \lnot \href{#claim-39}{P_{39}}\\) cannot be held together with \\(\href{#claim-39}{P_{39}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{39}\\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — *disputed*: [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
+  - \\(\href{#claim-39}{P_{39}}\\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — *disputed*: [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
 
 ## TestimonyArguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers
 
@@ -3253,17 +3253,17 @@ itself.
 **What this rests on.** The reasons state 4 defeats and 7 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
-  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II)*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
-  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 
 Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
 
@@ -3303,17 +3303,17 @@ principle defeats it, and nothing defeats the principle.
 **What this rests on.** The reasons state 1 defeat and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
-  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
-  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II)*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 
 Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
 
@@ -3354,17 +3354,17 @@ answers every party that defeats it — Trent, read or unread — itself.
 **What this rests on.** The reasons state 6 defeats and 7 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
-  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II)*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
-  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 
 Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
 
@@ -3399,17 +3399,17 @@ defeats it.
 **What this rests on.** The reasons state 3 defeats and 13 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent (Tradition II)*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
-  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
-  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 
 Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
 
@@ -3447,17 +3447,17 @@ itself.
 **What this rests on.** The reasons state 3 defeats and 13 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Trent (Tradition II)*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
-  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
-  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 
 Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
 
@@ -3493,17 +3493,17 @@ defeats Trent.
 **What this rests on.** The reasons state 6 defeats and 7 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
-  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II)*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
-  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 
 Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
 
@@ -3603,13 +3603,13 @@ reading answered Mark 7's case has no attacker left, so it comes second.
 **What this rests on.** The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
-  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
-  - an inference step — [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
+  - an inference step — [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 
 Why *Mark 7: God's word judges human tradition* defeats *Trent (Tradition II), read as commandments of men*, at the level of the claims: [`whereTheMensCommandmentsReadingFalls`](#whereTheMensCommandmentsReadingFalls).
 
@@ -3688,12 +3688,12 @@ other.
 **What this rests on.** The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
-  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 
 Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
 
@@ -3727,12 +3727,12 @@ the reading, with the principle, and the reading defeats Mark 7's case.
 **What this rests on.** The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
-  - Tradition is a coordinate source of revelation alongside scripture — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [`mathison-shape-sola-scriptura-2001`](../bibliography.md#mathison-shape-sola-scriptura-2001); [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`congar-tradition-and-traditions-1966`](../bibliography.md#congar-tradition-and-traditions-1966)
+  - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [`whitaker-disputation-1849`](../bibliography.md#whitaker-disputation-1849), p. 506; [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.6
-  - an inference step — [`geiselmann-meaning-of-tradition-1966`](../bibliography.md#geiselmann-meaning-of-tradition-1966); [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [`florovsky-bible-church-tradition-1972`](../bibliography.md#florovsky-bible-church-tradition-1972)
+  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 
 Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
 
