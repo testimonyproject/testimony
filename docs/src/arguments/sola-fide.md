@@ -7,14 +7,16 @@
 
 Claims are numbered once for the whole argument, so P₁ means the same claim in every chapter; the numbered list is in [Appendix: the claims and their sources](sola-fide/claims.md). [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
-This argument is set in 12 chapters:
+This argument is set in 14 chapters:
 
 - [What sola fide claims](sola-fide.md)
 - [Four witnesses: Paul, Luke, Acts and John](sola-fide/four-witnesses.md)
 - [John: "this is the work of God, that you believe"](sola-fide/john.md)
 - [Where Trent parts from Paul](sola-fide/trent-and-paul.md)
 - [What Trent means by justification](sola-fide/trents-definition.md)
+- [Does justification have degrees?](sola-fide/degrees.md)
 - [James 2:24: "not by faith alone"](sola-fide/james.md)
+- [Abraham, counted righteous](sola-fide/abraham.md)
 - [Trent's two Latin texts](sola-fide/latin-texts.md)
 - [What Jesus' own words say about faith and works](sola-fide/jesus-words.md)
 - [Is baptism how we are justified?](sola-fide/baptism.md)
@@ -223,9 +225,19 @@ Each later chapter takes one question a reader brings to this debate.
   apart, so that no argument slides from one sense of "baptism" to another, and
   John 3:5 is examined under each of the four readings of its "water" ("Is
   baptism how we are justified?").
+- **Does justification have degrees?** A verdict acquits or condemns, and has no
+  degrees, so if justification is only a verdict, Trent's "increase of
+  justification" has nothing to increase. Trent can grant the courtroom texts;
+  the two part only at the definition ([Does justification have degrees?](sola-fide/degrees.md)).
 - **What does "justified by works" mean in James?** The same kind of hearing,
   over James 2:24 and the two other texts Trent cites for the increase of
   justification ([James 2:24](sola-fide/james.md) and [Trent's two Latin texts](sola-fide/latin-texts.md)).
+- **What does Genesis say about Abraham?** "He believed the LORD, and he counted
+  it to him as righteousness" (Genesis 15:6), and then God alone passes between
+  the pieces of the covenant. Read so, Abraham was counted righteous with no work
+  as a condition; read from his testing in Genesis 22, as 1 Maccabees reads it,
+  he was not. The texts of Genesis alone do not decide ("Abraham, counted
+  righteous").
 - **How firm are the ratings?** Each rating a verdict depends on is recomputed
   under three standards ([Why each step is rated as it is](sola-fide/ratings.md)).
 
