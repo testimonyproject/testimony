@@ -10,7 +10,7 @@ import Testimony.Logic.Certificate
 # TestimonyArguments.SolaFide.Ratings — is an objection an argument, or only a disagreement?
 
 A step is rated `disputed` when someone objects to it. A reader's next question
-is: **is the objection an argument, or only a disagreement?** This section asks
+is: **is the objection an argument, or only a disagreement?** This chapter asks
 that of every objection written down here to several steps of the Reformed
 reading. An objection counts as an argument (the code calls it *credible*, or a
 *critique*) when it does all of these:

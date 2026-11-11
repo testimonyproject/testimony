@@ -58,16 +58,160 @@ def page (s : Site) (a : Argument) (b : Body) : String :=
   "<!-- Source of truth: " ++ s.source a ++ " -->\n\n" ++
   "# " ++ a.title ++ "\n\n" ++ s.preamble a ++ b.markdown
 
+/-! ### An argument set as chapters -/
+
+/-- The file a chapter is written to, under the pages directory: the
+argument's own page for the first, and a page in a directory named after the
+argument for the rest. -/
+def chapterFile (a : Argument) (i : Nat) (c : Chapter) : String :=
+  if i == 0 then a.slug ++ ".md" else a.slug ++ "/" ++ c.slug ++ ".md"
+
+/-- The relative link from one page under the pages directory to another. -/
+def relativeLink (src dst : String) : String :=
+  match src.splitOn "/" with
+  | [_] => dst
+  | dir :: _ => if dst.startsWith (dir ++ "/") then (dst.drop (dir.length + 1)).toString
+                else "../" ++ dst
+  | [] => dst
+
+/-- Raise every heading outside a fenced block by `k` levels, never above `##`
+(`promoteHeadings`). -/
+def promote (k : Nat) (md : String) : String := promoteHeadings k md
+
+/-- The anchors a rendered page defines, by the `<a id="…">` each declaration is
+introduced with. -/
+def anchorsIn (md : String) : List String :=
+  ((md.splitOn "<a id=\"").drop 1).map fun s => (s.splitOn "\"").headD ""
+
+/-- Repoint a chapter's links. An in-page link `](#x)` to an anchor another
+chapter defines goes to that chapter; a link up out of the pages directory,
+`](../…)`, goes one level further up from a page in the argument's directory. -/
+def relink (here : String) (owner : String → Option String) (md : String) : String :=
+  let deep := (here.splitOn "/").length > 1
+  let up := if deep then md.replace "](../" "](../../" else md
+  let pieces := up.splitOn "](#"
+  match pieces with
+  | [] => up
+  | first :: rest =>
+    first ++ String.join (rest.map fun piece =>
+      let anchor := (piece.splitOn ")").headD ""
+      match owner anchor with
+      | some page => if page == here then "](#" ++ piece
+                     else "](" ++ relativeLink here page ++ "#" ++ piece
+      | none => "](#" ++ piece)
+
+/-- The names a chapter can be mentioned by in prose: its title, and the part of
+the title before a colon, so that "James 2:24" names the chapter titled `James
+2:24: "not by faith alone"`. -/
+def chapterNames (c : Chapter) : List String :=
+  let lead := (c.title.splitOn ": ").headD c.title
+  if lead == c.title || lead.length < 4 then [c.title] else [c.title, lead]
+
+/-- Turn every mention of another chapter, by a name in quotation marks, into a
+link to it: `the chapter "Weighing the positions"` becomes `the chapter
+[Weighing the positions](weighing.md)`. A chapter does not link to itself. -/
+def linkChapters (a : Argument) (here : String) (md : String) : String :=
+  a.chapters.zipIdx.foldl (fun acc (c, i) =>
+    let target := chapterFile a i c
+    if target == here then acc
+    else (chapterNames c).foldl (fun acc' name =>
+      acc'.replace ("\"" ++ name ++ "\"")
+        ("[" ++ name ++ "](" ++ relativeLink here target ++ ")")) acc) md
+
+/-- Capitalise the first letter of a subtitle, to set it as a heading. -/
+def capitalise (s : String) : String :=
+  match s.toList with
+  | c :: cs => String.ofList (c.toUpper :: cs)
+  | [] => s
+
+/-- A chapter's text before its links are repointed: the module prose, the
+legend if it carries it, and the declarations behind it under "How this is
+checked", folded away so that the chapter reads as prose. -/
+def chapterText (a : Argument) (b : Body) (i : Nat) (c : Chapter) : String :=
+  let parts := c.modules.filterMap fun m => b.parts.find? (·.module == m)
+  let single := c.modules.length == 1
+  let lift := if single then 2 else 1
+  let prose := String.join (parts.zipIdx.map fun (p, j) =>
+    let head := if j == 0 || p.subtitle.isEmpty then ""
+                else "## " ++ capitalise p.subtitle ++ "\n\n"
+    head ++ promote lift p.prose ++ "\n")
+  let legend := if c.legend && !b.legend.isEmpty
+    then "\n## The claims, numbered\n\n" ++ b.legend else ""
+  let notes := String.join (parts.map fun p =>
+    if p.notes.trimAscii.toString.isEmpty then "" else promote (lift - 1) p.notes ++ "\n")
+  let checked := if notes.isEmpty then "" else
+    "\n## How this is checked\n\n" ++
+    "<details class=\"testimony-checked\">\n<summary>The positions, steps and results " ++
+    "behind this chapter, each with the formula or the Lean that checks it</summary>\n\n" ++
+    notes ++ "\n</details>\n"
+  let title := if i == 0 then a.title else c.title
+  let contents := if i == 0 then
+      "This argument is set in " ++ toString a.chapters.length ++ " chapters:\n\n" ++
+      String.join (a.chapters.zipIdx.map fun (ch, k) =>
+        "- [" ++ ch.title ++ "](" ++ relativeLink (chapterFile a 0 ch)
+          (chapterFile a k ch) ++ ")\n") ++ "\n"
+    else ""
+  "# " ++ title ++ "\n\n" ++ contents ++ prose ++ legend ++ checked
+
+/-- The modules of an argument's harvest that no chapter names, and those two
+chapters both name: what an outline that has fallen behind its source misses. -/
+def outlineGaps (a : Argument) (b : Body) : List Lean.Name × List Lean.Name :=
+  let named : List Lean.Name := a.chapters.flatMap (·.modules)
+  let missing := (b.parts.map (·.module)).filter fun m => !named.contains m
+  let twice := (named.filter fun m => named.count m > 1).eraseDups
+  (missing, twice)
+
+/-- The note under the first chapter of an argument set as chapters: as
+`preamble`, with the numbering said to run through every chapter, and the
+legend said to be in the chapter that carries it. -/
+def chapteredPreamble (s : Site) (a : Argument) : String :=
+  let legendAt := match (a.chapters.zipIdx.find? (·.1.legend)) with
+    | some (c, i) => "[" ++ c.title ++ "](" ++ chapterFile a i c ++ ")"
+    | none => "the legend"
+  "*These chapters are generated from [`" ++ s.source a ++ "`](https://github.com/" ++
+  "testimonyproject/testimony/blob/main/" ++ s.source a ++ "). Every heading and " ++
+  "paragraph is a docstring in those files; every formula is rendered from the " ++
+  "encoding they check. If a chapter and the source disagree, the chapter is the one " ++
+  "that is wrong, and regenerating it is the fix.*\n\n" ++
+  "Claims are numbered once for the whole argument, so P₁ means the same claim in " ++
+  "every chapter; the numbered list is in " ++ legendAt ++ ". " ++
+  "[Reading the logic](../reading-the-logic.md) is the short version of what the " ++
+  "notation means. A result marked ⚗ is one this library constructs rather than " ++
+  "reports.\n\n"
+
+/-- One argument's pages: one, or one per chapter. -/
+def argumentPages (s : Site) (a : Argument) (b : Body) : List (String × String) :=
+  if a.chapters.isEmpty then [(a.slug ++ ".md", s.page a b)]
+  else
+    let files := a.chapters.zipIdx.map fun (c, i) => (chapterFile a i c, chapterText a b i c)
+    let owner := fun (anchor : String) =>
+      (files.find? fun (_, text) => (anchorsIn text).contains anchor).map (·.1)
+    files.zipIdx.map fun ((name, text), i) =>
+      let header := "<!-- Generated by `lake exe " ++ s.tool ++ "`. Do not edit by hand. -->\n" ++
+        "<!-- Source of truth: " ++ s.source a ++ " -->\n\n"
+      let body := linkChapters a name (relink name owner text)
+      -- The standing note goes under the first chapter's title.
+      let body := if i == 0 then
+          match body.splitOn "\n\n" with
+          | t :: rest => t ++ "\n\n" ++ relink name owner (s.chapteredPreamble a) ++
+                         "\n\n".intercalate rest
+          | [] => body
+        else body
+      (name, header ++ body)
+
 /-- Every page, as a file name under the pages directory and its contents, in
 the catalogue's order. -/
 def pages (s : Site) (catalogue : List Argument) (harvest : List Body) :
     List (String × String) :=
-  (sectionsOf catalogue harvest).map fun (a, b) => (a.slug ++ ".md", s.page a b)
+  (sectionsOf catalogue harvest).flatMap fun (a, b) => s.argumentPages a b
 
-/-- The block the generator owns in the site's summary: a link to each page. -/
+/-- The block the generator owns in the site's summary: a link to each page,
+and under an argument set as chapters, a link to each chapter after the first. -/
 def summaryMarkdown (catalogue : List Argument) : String :=
   String.join (catalogue.map fun a =>
-    "- [" ++ a.title ++ "](./arguments/" ++ a.slug ++ ".md)\n")
+    "- [" ++ a.title ++ "](./arguments/" ++ a.slug ++ ".md)\n" ++
+    String.join ((a.chapters.zipIdx.drop 1).map fun (c, i) =>
+      "  - [" ++ c.title ++ "](./arguments/" ++ chapterFile a i c ++ ")\n"))
 
 /-- Opening marker of the block the generator owns in the summary. -/
 def beginMarker (s : Site) : String := "<!-- BEGIN GENERATED: lake exe " ++ s.tool ++ " -->"
@@ -88,6 +232,12 @@ def strayPages (s : Site) (wanted : List String) : IO (Array System.FilePath) :=
     let name := entry.fileName
     if name.endsWith ".md" && !wanted.contains name then
       stray := stray.push entry.path
+    -- An argument's chapters sit one directory down.
+    if ← entry.path.isDir then
+      for sub in ← entry.path.readDir do
+        let rel := name ++ "/" ++ sub.fileName
+        if sub.fileName.endsWith ".md" && !wanted.contains rel then
+          stray := stray.push sub.path
   return stray.qsort (·.toString < ·.toString)
 
 /-- **Write the pages and the summary's block, or check them**: with `--check`,
@@ -103,6 +253,13 @@ def run (s : Site) (catalogue : List Argument) (harvest : List Body) (args : Lis
   let updated ← match Testimony.Logic.Markdown.splice s.beginMarker s.endMarker summary body with
     | .error e => do IO.eprintln s!"{s.tool}: {s.summaryPath}: {e}"; return 1
     | .ok t => pure t
+  for (a, b) in sectionsOf catalogue harvest do
+    unless a.chapters.isEmpty do
+      let (missing, twice) := outlineGaps a b
+      unless missing.isEmpty && twice.isEmpty do
+        IO.eprintln s!"{s.tool}: the chapters of {a.slug} do not cover its modules once each: \
+          missing {missing}, named twice {twice}"
+        return 1
   let pages := s.pages catalogue harvest
   let stray ← s.strayPages (pages.map (·.1))
   if args.contains "--check" then
@@ -124,6 +281,7 @@ def run (s : Site) (catalogue : List Argument) (harvest : List Body) (args : Lis
     return 1
   IO.FS.createDirAll s.pagesDir
   for (name, text) in pages do
+    if let some dir := (s.pagesDir / name).parent then IO.FS.createDirAll dir
     IO.FS.writeFile (s.pagesDir / name) text
   IO.FS.writeFile s.summaryPath updated
   for p in stray do

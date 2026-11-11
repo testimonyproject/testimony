@@ -5,13 +5,13 @@ import Testimony.Scripture
 /-!
 # TestimonyArguments.SolaFide.Atoms — the claims
 
-Every claim the argument uses, one at a time: the verses, the disputed readings
-of them, who wrote the disputed letters, what the rival positions hold, the
-premises that answer James, and the three parts of the conclusion.
-
-A claim here is only named and described. Who holds it, and how well supported
-it is, is recorded in `Sources.lean`. See `TestimonyArguments.SolaFide` for the
-debate these claims belong to.
+Every claim the chapters use is listed here once, with the number every formula
+calls it by: the verses, the disputed readings of them, who wrote the disputed
+letters, what the rival positions hold, the premises that answer James, and the
+three parts of the conclusion. The table gives each claim's kind, who holds it
+and how firmly, and the sources that carry it. Behind the table, each claim's
+own description, and the reasoning for each source and rating, are kept for a
+reader who wants to check one.
 -/
 
 namespace TestimonyArguments.SolaFide

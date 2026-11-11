@@ -3,17 +3,18 @@ import TestimonyArguments.SolaFide.Dispute
 /-!
 # TestimonyArguments.SolaFide.Hearings — two narrower questions
 
-The full debate over sola fide puts a crowded question: the Reformers, Trent,
-and several schools of modern scholarship all at once. A reader usually wants
-something narrower. Two questions come up again and again. Each is answered here
-by hearing the same debate with some positions left out. Nothing is argued
-again. Every defeat the full debate established is kept; some positions are
-simply not heard.
+The full debate hears the Reformers, Trent and several schools of modern
+scholarship at once. The two hearings below each set some positions aside and
+keep every defeat the full debate established. Nothing is argued again.
 
-**What did the Reformation itself decide?** The sixteenth-century debate was
-between Rome and the Reformers, before anyone had proposed a New Perspective on
-Paul or an apocalyptic reading of him. Heard that way (`reformationAlone`), with
-the modern evidence cited for each side, one thing is forced: Paul's "justify"
+### What did the Reformation itself decide?
+
+The sixteenth-century debate was between Rome and the Reformers, before anyone
+had proposed a New Perspective on Paul or an apocalyptic reading of him. Heard
+that way (`reformationAlone`), the apocalyptic reading, Sanders and his
+critics, and Jervell are set aside. Aquinas and Luther, and Chrysostom and the
+Reformed answer to him, are still heard, and modern scholars are still cited
+for the premises of the positions that remain. One thing is forced: Paul's "justify"
 (δικαιόω) does not mean the renewal of the inward person. So Trent cannot claim
 that its definition is what Paul's word means. What fails there is not
 Augustine's explanation of the word, which he certainly gave, but the step from
@@ -22,16 +23,17 @@ a Latin explanation to what the Greek word means.
 Trent's definition taken as a claim about what God does is not touched by
 anything about the word. There Trent and the Reformers tie: each defeats the
 other, and the ratings, all `disputed`, cannot choose. The Reformation debate,
-heard alone, comes down to what justification *is*, which is the question
-`whatTrentsDefinitionClaims` examines.
+heard alone, comes down to what justification *is*, which is the question of
+the chapter "What Trent means by justification" (`whatTrentsDefinitionClaims`).
 
-**If Trent were not heard, would Scripture establish sola fide?** A Protestant
-reader will naturally ask this. Heard without Trent (`withoutTrent`), two things
-are forced: the meaning of Paul's word; and Paul's gospel, that justification is
-not the renewal of the inward person. *Faith alone* is not forced, from Paul,
-from Peter or from John, and neither is Luke's "your faith has saved you", that
-faith suffices. Five disagreements remain with Rome left out: three in modern
-New Testament scholarship, and two older.
+### If Trent were not heard, would Scripture establish sola fide?
+
+Heard without Trent (`withoutTrent`), two things are forced: the meaning of
+Paul's word; and Paul's gospel, that justification is not the renewal of the
+inward person. *Faith alone* is not forced, from Paul, from Peter or from John,
+and neither is Luke's "your faith has saved you", that faith suffices. Five
+disagreements remain with Trent left out, though Aquinas, a Catholic reader, is
+still heard: three in modern New Testament scholarship, and two older.
 
 - Campbell's apocalyptic reading takes "faith of Christ" (πίστις Χριστοῦ) as
   Christ's own faithfulness, and meets Paul's case there.
@@ -40,16 +42,19 @@ New Testament scholarship, and two older.
 - Jervell reads the yoke of Acts 15 as something other than the law as a
   condition of salvation, and meets Peter's case.
 - Aquinas reads the believing of John 6:29 as faith formed by charity, and meets
-  John's case. Luther answers him from Galatians 3, and is answered in return. -
-  Chrysostom reads John 3:36 and Matthew 7:21 as requiring a right life beside
+  John's case. Luther answers him from Galatians 3, and is answered in return.
+- Chrysostom reads John 3:36 and Matthew 7:21 as requiring a right life beside
   believing, and meets every case that concludes faith suffices, Luke's among
   them. The Reformed answer, that the obedience those texts require is
   sanctification, the fruit of faith, meets him and is met in return.
 
-Each of these is a question about what a text says. Leaving Rome out does not
+Four of these are questions about what a text says, and one, Sanders against
+his critics, about what Judaism in Paul's day taught. Leaving Trent out does not
 make them go away.
 
-**Augustine** stays where the full debate has him. In the Reformation hearing,
+### Augustine, in both hearings
+
+Augustine stays where the full debate has him. In the Reformation hearing,
 his explanation is what Trent's reading of Paul's word rests on. Without Trent,
 it goes out with that reading, since nothing else rests on it. In both he
 remains the cited reader who accepts Romans 4:5–8 and reads it the other way,
@@ -68,8 +73,9 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 
 /-- The positions of the sixteenth-century debate: the four Reformed strands, Paul's
 gospel, the two arguments about Paul's word, Trent as it states its definition
-and Trent taken as a claim about Paul's word, and the exchange over John 6:29
-between Aquinas and Luther. Not heard: the apocalyptic reading, Sanders and his
+and Trent taken as a claim about Paul's word, the exchange over John 6:29
+between Aquinas and Luther, and Chrysostom on John 3:36 with the Reformed
+answer to him. Not heard: the apocalyptic reading, Sanders and his
 critics, and Jervell. -/
 abbrev reformationAlone :=
   solaFideDispute.restrict (· ∉ [Party.apocalyptic, .sanders, .critics, .jervell])

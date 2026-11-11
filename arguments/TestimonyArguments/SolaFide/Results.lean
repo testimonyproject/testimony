@@ -4,22 +4,18 @@ import Testimony.Logic.Tactic
 /-!
 # TestimonyArguments.SolaFide.Results — what follows, and what does not
 
-Each result here takes one position and asks whether its conclusion follows from
-its premises.
+Each result takes one position and asks whether its conclusion follows from its
+premises. Where it does, the result says so. Where it does not, the result
+names a consistent way of taking the texts on which every premise holds and the
+conclusion fails. That way of taking them is the rival position, written down,
+and a reader can check it verse by verse.
 
-Where it follows, the result says so. Where it does not, the result names a
-reading: a consistent way of taking the texts on which every premise holds and
-the conclusion fails. That reading is the rival position, written down.
-
-Many results ask what an argument depends on. A premise is removed, everything
+Many results ask what the case depends on. A premise is taken out, everything
 else is kept, and the result says whether the conclusion still follows. If it
-does, the argument does not depend on that premise.
+does, the case never needed that premise.
 
-The central result is `lexical_premises_jointly_load_bearing`. The argument
-needs at least one strand's disputed reading, and does not need any particular
-one. `apostolic_strand_survives_paul_and_luke` and
-`johannine_strand_survives_the_other_three` show that Acts and John each reach
-the conclusion with the other strands' disputed readings left out.
+John's strand has more to answer than the others, and the next chapter takes
+it.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -398,7 +394,7 @@ theorem grace_needs_no_answer_to_james : Establishes graceWithoutJamesHarmonisat
 
 #print axioms grace_needs_no_answer_to_james
 
-/-! ### Can the premises be true together?
+/-! #### Can the premises be true together?
 
 Anything follows from premises that contradict each other. So a position that
 "establishes" its conclusion only because its premises could never all be true

@@ -4,25 +4,38 @@ import Testimony.Logic.Dilemma
 /-!
 # TestimonyArguments.SolaFide.Definition — what Trent's definition claims
 
-Trent defines justification as "not remission of sins merely, but also the
-sanctification and renewal of the inward man" (Session VI, ch. 7). The Reformed
-deny it, and `whereTrentPartsFromPaul` places the denial at one step. But the
-definition can be taken two ways, and each meets a different objection.
+The last chapter found that Trent and Paul part at one step
+(`whereTrentPartsFromPaul`). What lies on Trent's side of that step is its
+definition:
 
-**Taken as a claim about Paul's word**, it says that "justify" (δικαιόω), in
-Paul, means the renewal of the inward person. Trent invites this. Chapter 8 sets
+> justification is "not remission of sins merely, but also the sanctification
+> and renewal of the inward man" (Session VI, ch. 7).
+
+The Westminster Confession denies it (XI.1). But the definition can be taken in two ways, as a claim
+about a word or as a claim about what God does, and each way meets a different
+objection.
+
+### Taken as a claim about Paul's word
+
+On this reading the definition says that "justify" (δικαιόω), in Paul, means
+the renewal of the inward person. Trent invites it. Chapter 8 of the decree sets
 out how "the Apostle's" words, justified "by faith and freely", are to be
-understood, and chapter 7 says that the justified "are not only reputed, but are
-truly called, and are, just". Taken this way, the definition is a claim about a
-word, and it meets an answer about the word. The verb is a courtroom word. Paul
+understood, and chapter 7 of the decree says that the justified "are not only
+reputed, but are truly called, and are, just". So read, the definition is a
+claim about a word, and it meets an answer about the word. The verb is a
+courtroom word. Paul
 has other words for renewal and sets them beside it (Titus 3:5–7; 1 Corinthians
 6:11). And a word contributes the least meaning its context requires (Joos;
 Silva). To read renewal into the verdict from the doctrine is what Barr called
-"illegitimate totality transfer". Every link of that answer is rated above
-`disputed`.
+"illegitimate totality transfer". Romans 4 gives the same answer from one
+passage: Paul explains the righteousness God counts to the ungodly as sin not
+counted, and by the same rule the verb he explains in that way does not also
+mean renewal.
+Every step of that answer is rated above `disputed`.
 
-**Why Trent would take it so** can be said from history. The council read Paul
-in the Latin it had declared "authentic" (Session IV), and in Latin "justify"
+### Why Trent would take it so
+
+The council read Paul in the Latin it had declared "authentic" (Session IV), and in Latin "justify"
 (*iustificare*) had meant "to make righteous" since Augustine: "what else does
 the phrase 'being justified' signify than being made righteous" (*On the Spirit
 and the Letter* 26.45). McGrath traces that inheritance through the medieval
@@ -33,14 +46,16 @@ where it fails. An explanation in one language does not settle what a word means
 in another, and the argument from usage says what the Greek word means in Paul
 (`whereTheLatinReadingFalls`).
 
-**Taken as a claim about what God does**, it says that when God justifies he
-also renews: pardon and renewal given together, "not to be separated", as the
-*Joint Declaration* (§22) confesses. Taken this way, no argument about the word
-reaches it. It can be held with everything the argument from usage says about
-"justify", and Calvin himself grants that justification and sanctification
-cannot be separated. What still divides Trent from Paul is the step
-`whereTrentPartsFromPaul` names: that a verdict on Christ's finished work
-excludes renewal from justification. That step is `disputed`.
+### Taken as a claim about what God does
+
+On this reading the definition says that when God justifies he also renews:
+pardon and renewal given together, "not to be separated", as the *Joint
+Declaration* (§22) confesses. No argument about the word reaches it. It can be
+held with everything the argument from usage says about "justify", and Calvin
+himself grants that justification and sanctification cannot be separated. What
+still divides Trent from Paul is the step found in the last chapter: that a
+verdict on Christ's finished work excludes renewal from justification
+(`whereTrentPartsFromPaul`). That step is `disputed`.
 
 Romans 4 leads to the same place by another way, and does not raise the rating.
 God "justifies the ungodly" (4:5), and the blessing of righteousness counted
@@ -48,8 +63,9 @@ apart from works is sin not counted (4:6–8). Read with the courtroom sense of
 the verb, what is counted to the ungodly is not a righteousness worked in them.
 Trent can accept every word (`trent_grants_romans_four`), and Augustine reads
 the same verse the other way: God justifies the ungodly "that he may become a
-godly one". So the step is `disputed`, as the step from Galatians is. Romans 4
-adds a second argument, not a stronger one. Taken this way, Trent is met by Paul
+godly one" (*On the Spirit and the Letter* 26.45). So the step is `disputed`, as
+the step from Galatians is, and Romans 4 adds a second argument at the same
+rating. So read, Trent is met by Paul
 from Galatians and from Romans 4, and each has to be answered
 (`whereRomansFourMeetsWhatGodDoes`). The two arguments are not wholly separate:
 both start from the courtroom sense of the verb, so a reader who denies that
@@ -57,13 +73,13 @@ sense denies both.
 
 The two are put together and checked in one result
 (`whatTrentsDefinitionClaims`). Each way of taking the definition is fair, since
-Trent taken that way can still be held without contradiction. Each is answered.
-The first cannot be held with what Paul's word means: it fails three times, each
+Trent read either way can still be held without contradiction, and each is
+answered. The first cannot be held with what Paul's word means: it fails three times, each
 at a step rated `wellSupported`. The second is untouched by anything about the
 word, and conflicts with Paul's gospel and with Romans 4, each time at a step
 rated `disputed`. So a reader who grants that step rejects the definition taken
 that way, and a reader who denies it need not. Which way Trent means it is not
-something this section decides.
+something this chapter decides.
 
 One premise, that Paul has his own words for renewal
 (`paulNamesRenewalOtherwise`), is cited to Scripture alone: it says what the

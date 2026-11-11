@@ -50,9 +50,35 @@ open Lean Elab Command Testimony
 
 namespace Testimony.Doc
 
+/-- One module's share of an argument, rendered for both media: its prose, and
+the declarations behind it.
+
+An argument divided into chapters (`Argument.chapters`) is set from these. The
+prose is the module's docstrings, the chapter a reader reads; the notes are its
+declarations, each with its docstring and its formula or statement, the
+headings that only organise them, and any section opened with `####`, which is
+how a module says that a passage is about the machinery and not the argument.
+A chapter shows the notes after its prose, under "How this is checked". -/
+structure Part where
+  /-- The module the items were written in. -/
+  module : Name
+  /-- What the module's opening heading names, after its namespace: "where
+  Trent parts from Paul", for `TestimonyArguments.SolaFide.Gospel —
+  where Trent parts from Paul`. Empty if the module has no such heading. -/
+  subtitle : String := ""
+  /-- The module's prose, as Markdown, without its opening heading. -/
+  prose : String := ""
+  /-- Its declarations, as Markdown. -/
+  notes : String := ""
+  /-- The prose, as LaTeX. -/
+  proseTex : String := ""
+  /-- The declarations, as LaTeX. -/
+  notesTex : String := ""
+deriving Inhabited
+
 /-- One argument's harvest, rendered for both media.
 
-Both fields are computed from one item list — see `render` — so the page and
+Every field is computed from one item list — see `render` — so the page and
 the PDF cannot come from different readings of the source. -/
 structure Body where
   /-- The namespace the items were harvested from. -/
@@ -61,17 +87,98 @@ structure Body where
   markdown : String
   /-- The body of the generated LaTeX section, below its heading. -/
   latex : String
+  /-- The same items, module by module, for an argument set as chapters. -/
+  parts : List Part := []
+  /-- The legend alone, as Markdown: the table of numbered claims. -/
+  legend : String := ""
+  /-- The legend alone, as LaTeX. -/
+  legendTex : String := ""
 deriving Inhabited
 
-/-- Both renderings of one argument's harvest.
+/-- Raise every heading outside a fenced block by `k` levels, never above `##`,
+which is the highest a page's own sections go: `#` is its title. A chapter sets
+a module's `###` sections as its own `##`. -/
+def promoteHeadings (k : Nat) (md : String) : String :=
+  let step := fun ((acc : List String), inFence) (line : String) =>
+    if (line.trimAscii.toString).startsWith "```" then (acc ++ [line], !inFence)
+    else if inFence || !line.startsWith "#" then (acc ++ [line], inFence)
+    else
+      let hashes := (line.toList.takeWhile (· == '#')).length
+      let level := max 2 (hashes - k)
+      (acc ++ [String.ofList (List.replicate level '#') ++ (line.drop hashes).toString], inFence)
+  let (lines, _) := (md.splitOn "\n").foldl step ([], false)
+  "\n".intercalate lines
+
+/-- Whether a module docstring is only a heading: `/-! ### The lines -/`, which
+organises the declarations under it and has no prose of its own. -/
+def headingOnly (md : String) : Bool :=
+  match (md.splitOn "\n").filter (fun l => !(l.trimAscii.toString).isEmpty) with
+  | [l] => l.startsWith "#"
+  | _ => false
+
+/-- A module docstring's opening heading split off: the text after the
+namespace and its dash, and the rest of the docstring. A docstring that does not
+open with `# <namespace> — …` is returned whole, with no subtitle. -/
+def splitModuleHeading (md : String) : String × String :=
+  match md.splitOn "\n" with
+  | first :: rest =>
+    if first.startsWith "# " && (first.splitOn " — ").length ≥ 2 then
+      (" — ".intercalate ((first.splitOn " — ").drop 1), "\n".intercalate rest)
+    else ("", md)
+  | [] => ("", md)
+
+/-- The renderings of one argument's harvest, whole and module by module.
 
 The elaborated call names the item list once and hands it to both renderers,
-which is the point: two lists would be two chances to drift. -/
+which is the point: two lists would be two chances to drift. `mods` gives the
+module each item, of `intro` then `items`, was written in. -/
 def render [DecidableEq α] (ns : Name) (allAtoms : List α)
-    (intro items : List (Logic.Page.Item α)) : Body :=
+    (intro items : List (Logic.Page.Item α)) (mods : List Name := []) : Body :=
+  let all := intro ++ items
+  let order := Logic.Page.atomOrder allAtoms all
+  let cite := Logic.Page.citeOf all
+  let n : Logic.Latex.Numbering α :=
+    { order := order, cite := cite,
+      anchor := if cite.isSome then Logic.Latex.anchorName ns.toString else "" }
+  let tagged := mods.zip all
+  let modules := (mods.eraseDups)
+  let parts := modules.map fun m =>
+    let mine := (tagged.filter (·.1 == m)).map (·.2)
+    -- A `####` section is about the machinery, and goes behind the chapter.
+    let isProse : Logic.Page.Item α → Bool
+      | .prose md => !headingOnly md && !md.startsWith "####"
+      | _ => false
+    let opening := mine.find? isProse
+    let (subtitle, _) := match opening with
+      | some (.prose md) => splitModuleHeading md
+      | _ => ("", "")
+    -- The opening heading is the chapter's to set, so it comes off the prose.
+    let strip : Logic.Page.Item α → Logic.Page.Item α
+      | .prose md => if subtitle.isEmpty then .prose md else .prose (splitModuleHeading md).2
+      | i => i
+    let prose := match mine.filter isProse with
+      | first :: rest => strip first :: rest
+      | [] => []
+    let notes := mine.filter (!isProse ·)
+    { module := m, subtitle := subtitle
+    , prose := "\n".intercalate (prose.map (Logic.Markdown.item order))
+    , notes := "\n".intercalate (notes.map (Logic.Markdown.item order))
+    -- In print a chapter is a `\subsection*`, so a module's `###` sections are
+    -- set one level up, as `\subsubsection*`.
+    , proseTex := String.join ((prose.map fun
+        | .prose md => .prose (promoteHeadings 1 md)
+        | i => i).map (Logic.Latex.item n))
+    , notesTex := String.join (notes.map (Logic.Latex.item n)) : Part }
   { ns := ns
   , markdown := Logic.Markdown.body allAtoms intro items
-  , latex := Logic.Latex.body ns.toString allAtoms intro items }
+  , latex := Logic.Latex.body ns.toString allAtoms intro items
+  , parts := parts
+  , legend := match cite with
+      | some c => Logic.Markdown.legend c order
+      | none => ""
+  , legendTex := match cite with
+      | some c => Logic.Latex.legend n c
+      | none => "" }
 
 variable {α : Type}
 
@@ -180,6 +287,8 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
     -- flag rides along because the legend goes after the leading prose, and
     -- a term is not something to ask that question of afterwards.
     let mut items : Array (Nat × Nat × Bool × TSyntax `term) := #[]
+    let moduleAt : Std.HashMap Nat Name :=
+      ordered.toList.foldl (fun acc (_, m) => acc.insert (modOrder.getD m 0) m) {}
     for (_, m) in ordered do
       let k := modOrder.getD m 0
       for d in (getModuleDoc? env m).getD #[] do
@@ -333,6 +442,10 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
     -- under it, before the first thing that mentions an atom.
     let intro := (sorted.takeWhile (·.2.2.1)).map (·.2.2.2) |>.toArray
     let rest := (sorted.dropWhile (·.2.2.1)).map (·.2.2.2) |>.toArray
+    -- The module of each item, of `intro` and then `rest`, for the chapters.
+    let modsOf := (sorted.takeWhile (·.2.2.1) ++ sorted.dropWhile (·.2.2.1)).map
+      fun (k, _) => moduleAt.getD k .anonymous
+    let modTerms : Array (TSyntax `term) := modsOf.toArray.map fun m => quote m
     -- The atom type's constructors, in the order it declares them: the order
     -- the legend reads in, and the one `Atoms.lean` groups its prose by.
     let ctors : Array (TSyntax `term) :=
@@ -340,7 +453,8 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
       | some (.inductInfo val) => val.ctors.toArray.map fun c => mkIdent c
       | _ => #[]
     bodies := bodies.push
-      (ns, ← `(term| render $(quote ns) [$(ctors),*] [$(intro),*] [$(rest),*]))
+      (ns, ← `(term| render $(quote ns) [$(ctors),*] [$(intro),*] [$(rest),*]
+        [$(modTerms),*]))
 
   -- One definition per argument, then the list of them. Written as one list
   -- literal, every argument's body was a single term, and the code generator's
@@ -376,6 +490,27 @@ elab_rules : command
 def sectionsOf (catalogue : List Argument) (harvest : List Body) : List (Argument × Body) :=
   catalogue.filterMap fun a => (harvest.find? (·.ns == a.ns)).map (a, ·)
 
+/-- An argument set as chapters, in print: each chapter a `\subsection*` in the
+table of contents, its modules' prose, the legend where the outline puts it,
+and the declarations behind the chapter under "How this is checked", as the
+site sets them. -/
+def latexChapters (a : Argument) (b : Body) : String :=
+  String.join (a.chapters.map fun c =>
+    let parts := c.modules.filterMap fun m => b.parts.find? (·.module == m)
+    let heading := Logic.Latex.escape c.title
+    let sub (t : String) := "\\subsubsection*{" ++ Logic.Latex.escape t ++ "}\n"
+    "\\subsection*{" ++ heading ++ "}\n\\addcontentsline{toc}{subsection}{" ++ heading ++
+      "}\n" ++
+    String.join (parts.zipIdx.map fun (p, j) =>
+      (if j == 0 || p.subtitle.isEmpty then ""
+       else sub (match p.subtitle.toList with
+         | ch :: cs => String.ofList (ch.toUpper :: cs)
+         | [] => "")) ++ p.proseTex) ++
+    (if c.legend && !b.legendTex.isEmpty then sub "The claims, numbered" ++ b.legendTex
+     else "") ++
+    (let notes := String.join (parts.map (·.notesTex))
+     if (notes.trimAscii.toString).isEmpty then "" else sub "How this is checked" ++ notes))
+
 /-- **A printable document**: a title, a standing note under it, and a section
 for each argument — its heading the catalogue's title, its body the harvest's
 LaTeX. Every package built on the library sets its documents with it, so they
@@ -383,7 +518,9 @@ are set alike. `tool` is the generator the document says it was made by. -/
 def latexDocument (title note : String) (sections : List (Argument × Body))
     (tool : String := "argtex") : String :=
   Logic.Latex.preamble title tool ++ note ++ Logic.Latex.contents ++
-  String.join (sections.map fun (a, b) => Logic.Latex.sectionHeading a.title ++ b.latex) ++
+  String.join (sections.map fun (a, b) =>
+    Logic.Latex.sectionHeading a.title ++
+      (if a.chapters.isEmpty then b.latex else latexChapters a b)) ++
   Logic.Latex.postamble
 
 /-- A generated file's committed contents, or nothing if there is none, so that
