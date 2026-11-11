@@ -3,14 +3,17 @@ import TestimonyArguments.SolaFide.JesusWords
 /-!
 # TestimonyArguments.SolaFide.Baptism — is baptism the instrument of justification?
 
-Trent calls baptism "the instrumental cause" of justification: "the sacrament of
-baptism, which is the sacrament of faith, without which (faith) no man was ever
-justified" (Session VI, ch. 7). The "without which" refers to faith, not to
-baptism, as the translator Waterworth's bracket shows. The Reformed hold baptism
-to be Christ's own ordinance, a sign and seal of the covenant of grace
-(Westminster XXVIII.1), and faith to be "the alone instrument of justification"
-(XI.2). So the question this chapter takes is a plain one: does the New
-Testament make water baptism the instrument that justifies?
+When Trent lists the causes of justification, it names baptism among them:
+
+> "the instrumental cause is the sacrament of baptism, which is the sacrament of
+> faith, without which (faith) no man was ever justified" (Session VI, ch. 7).
+
+The "without which" refers to faith, not to baptism, as the translator
+Waterworth's bracket shows. The Reformed hold baptism to be Christ's own
+ordinance, a sign and seal of the covenant of grace (Westminster XXVIII.1), and
+faith to be "the alone instrument of justification" (XI.2). So the question this
+chapter takes is a plain one: does the New Testament make water baptism the
+instrument that justifies?
 
 A reminder of the ratings. A step is `disputed` when a cited reader accepts its
 starting points and denies its conclusion. It is `wellSupported` when no such
@@ -65,8 +68,10 @@ name.
 
 ## John 3:5
 
-"Unless one is born of water and the Spirit, he cannot enter the kingdom of God"
-is the verse Trent cites in chapter 4, and Session VII condemns whoever "wrests,
+> "Unless one is born of water and the Spirit, he cannot enter the kingdom of
+> God" (John 3:5).
+
+Trent cites this verse in chapter 4, and Session VII condemns whoever "wrests,
 to some sort of metaphor" its water. `whatJohnThreeFiveMeans` takes the four
 readings of "water" that are on record.
 

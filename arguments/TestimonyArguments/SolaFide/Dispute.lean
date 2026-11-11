@@ -118,10 +118,10 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
   to "faith suffices", and each contradicts his step to "faith does not
   suffice". Each pair is a tie at `disputed`. The Reformed answer meets Trent
   too, however Trent's definition is taken, because it holds the distinction
-  between justification and sanctification. - **Aquinas and Luther defeat each
-  other.** Luther concludes that the faith which justifies is not faith formed
-  by charity, which is Aquinas's premise. Luther meets no one else. Aquinas
-  meets only John's case besides.
+  between justification and sanctification.
+- **Aquinas and Luther defeat each other.** Luther concludes that the faith
+  which justifies is not faith formed by charity, which is Aquinas's premise.
+  Luther meets no one else. Aquinas meets only John's case besides.
 - **Paul's gospel and Trent defeat each other**, over Trent's definition. The
   gospel line concludes that justification is not the renewal of the inward
   person. Both rest on something rated `disputed`.
@@ -139,24 +139,31 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
 
 ## What follows
 
-**Only the meaning of Paul's word prevails outright**
+### Only the meaning of Paul's word prevails outright
+
+The checking finds that the meaning of Paul's word is the one thing forced
 (`only_pauls_word_prevails`). The forced positions are exactly the two arguments
 about it. Every other position is attacked by one the debate cannot rule out.
 One loses: Trent taken as a claim about Paul's word. Every other is in a tie
 with a rival the debate cannot choose between.
 
-**Trent, taken as a claim about Paul's word, cannot be defended**
-(`trent_on_pauls_word_indefensible`). Both arguments about the word defeat it,
-and nothing answers either.
+### Trent, taken as a claim about Paul's word, cannot be defended
 
-**Beyond that, nothing wins outright.** Luke's case, Paul's gospel and Trent as
+This is the one position that loses (`trent_on_pauls_word_indefensible`). Both
+arguments about the word defeat it, and nothing answers either.
+
+### Beyond that, nothing wins outright
+
+Luke's case, Paul's gospel and Trent as
 Trent states it can each be defended, and none is forced
 (`dominical_case_defensible`, `dominical_case_not_forced`, `gospel_defensible`,
 `gospel_not_forced`, `trent_defensible`, `trent_not_forced`). Every attack
 between Trent and a Reformed position runs in both directions, with every rating
 at the bottom, and the debate has no ground to choose between them.
 
-**Between Paul and the apocalyptic reading, the debate chooses neither.** Each
+### Between Paul and the apocalyptic reading, the debate chooses neither
+
+Each
 defeats the other over "faith of Christ" (πίστις Χριστοῦ). Each can be defended,
 and neither is forced (`apocalyptic_defensible`, `apocalyptic_not_forced`). The
 apocalyptic reading can be held together with Luke's case and Peter's, which
@@ -164,8 +171,10 @@ claim that faith saves and not that faith alone does.
 
 ## What the verdict rests on
 
-**What Trent's definition claims.** The definition can be taken two ways, and
-the section on Trent's definition answers both (`whatTrentsDefinitionClaims`).
+### What Trent's definition claims
+
+The definition can be taken two ways, and
+the chapter "What Trent means by justification" answers both (`whatTrentsDefinitionClaims`).
 Taken as a claim about Paul's word, it cannot be held with the evidence for what
 the word means, and in this debate it cannot be defended. Taken as a claim about
 what God does in justifying, the argument from the word does not reach it. What
@@ -176,7 +185,9 @@ way of taking it. So the debate does not settle between Trent and the Reformed.
 It shows that Trent can keep its definition only as a claim about what God does,
 not about Paul's word, and it names the one step on which that claim depends.
 
-**An absence.** Luke's case is attacked by no one but Trent, however Trent's
+### An absence
+
+Luke's case is attacked by no one but Trent, however Trent's
 definition is taken, because no source cited here argues that "saved" (σῴζω) at
 Luke 7:50 means healed. That absence is also the premise's rating. It is
 `wellSupported`, not `disputed`: a search for a scholar arguing the healing
@@ -190,7 +201,9 @@ not yet cited, and whether an unargued listing should lower the rating is an
 open question. A cited argument for the healing reading would attack Luke's case
 and lower the rating.
 
-**An objection answered in advance.** "Her sins, which are many, are
+### An objection answered in advance
+
+"Her sins, which are many, are
 forgiven—for she loved much" (7:47) is the verse a rival would use to make love,
 not faith, the reason she was forgiven. Luke's case does not leave that open. It
 carries, as a premise of its own, that her love is the evidence of her
@@ -207,20 +220,23 @@ dispositions to justification (Session VI, ch. 6). None of them is heard here as
 a position of his own. No one in this debate argues that reading of 7:47, and
 none of those commentators is yet cited from his own work.
 
-**John.** John's case, Aquinas's reading of John 6:29 and Luther's answer are
+### John
+
+John's case, Aquinas's reading of John 6:29 and Luther's answer are
 each in a tie with a position rated no higher than itself. So none of the three
 is forced, and none of them changes what is forced. Without Trent, John's case
 is still not forced, because Aquinas's reading can be defended
 (`sola_fide_from_john_not_forced_without_trent`).
 
-**Who is heard.** A debate is over the arguments put into it. Hays's reading of
+### Who is heard
+
+A debate is over the arguments put into it. Hays's reading of
 "faith of Christ" is represented through the apocalyptic reading, which holds
 it. A position for Hays alone, one for the *Joint Declaration*, and one for the
 Finnish reading of Luther would each be new arguments to weigh. So would a cited
 argument that Paul's "justify", granted to be a courtroom word, still means
 renewal: none was found, and the rating of the argument from the word says so.
-Chrysostom's reading of John 3:36 is not heard here either; see the section on
-John. Romans 4 as an argument about what God does (`romansFourCase`) is answered
+Romans 4 as an argument about what God does (`romansFourCase`) is answered
 where Trent's definition is examined, not added here. It meets Trent exactly
 where Paul's gospel does, at Trent's definition, from a step rated `disputed`,
 and a position of its own would be a second argument to weigh.
@@ -232,7 +248,7 @@ open Testimony
 
 open Testimony Testimony.Logic Testimony.Logic.Framework
 
-/-! ### The positions
+/-! #### The positions
 
 Each position heard is an argument in its own right: premises that can be held
 together, a conclusion that follows from them, and steps that someone has rated.
@@ -392,7 +408,7 @@ theorem tridentineCase_establishes : Establishes tridentineCase := by
 theorem tridentineCase_is_satisfiable : Satisfiable tridentineCase.premises := by
   satisfied_by tridentineReading [solaFideDefs]
 
-/-! ### Where Trent's objection comes from
+/-! #### Where Trent's objection comes from
 
 Trent's objection to "not by works" is not a separate thesis about works. It
 follows from what Trent says justification *is*: "not remission of sins merely,
@@ -539,7 +555,7 @@ theorem chrysostom_grants_the_pauline_texts :
 
 #print axioms chrysostom_grants_the_pauline_texts
 
-/-! ### How strong each position is
+/-! #### How strong each position is
 
 Every position but two rests on something rated `disputed`, or denies a claim,
 which ranks at the bottom. Between two such positions no rating blocks an
@@ -601,7 +617,7 @@ or better. So are the sense of "count" (λογίζομαι), Paul's explanation,
 of least meaning, and both steps. -/
 theorem romansFourOnTheWord_strength : romansFourOnTheWord.strength = 2 := by decide
 
-/-! ### The defeats
+/-! #### The defeats
 
 Each is worked out from the two positions' premises and checked by machine:
 first whether one contradicts the other, then which is the weaker. -/
@@ -688,7 +704,7 @@ denies. -/
 theorem apostolic_defeats_jervell : Defeats apostolicCase jervellCase :=
   Horn.defeats_of_certified apostolicCase_strength jervellCase_strength (by horn_certify)
 
-/-! ### What does not defeat
+/-! #### What does not defeat
 
 Most pairs of positions do not conflict: some consistent reading holds both.
 Seven such readings are named below, each one a way of holding a whole group of

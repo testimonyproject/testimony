@@ -143,6 +143,24 @@ def outlineGaps (a : Argument) (b : Body) : List Lean.Name × List Lean.Name :=
   let twice := (named.filter fun m => named.count m > 1).eraseDups
   (missing, twice)
 
+/-- The note under the first chapter of an argument set as chapters: as
+`preamble`, with the numbering said to run through every chapter, and the
+legend said to be in the chapter that carries it. -/
+def chapteredPreamble (s : Site) (a : Argument) : String :=
+  let legendAt := match (a.chapters.zipIdx.find? (·.1.legend)) with
+    | some (c, i) => "[" ++ c.title ++ "](" ++ chapterFile a i c ++ ")"
+    | none => "the legend"
+  "*These chapters are generated from [`" ++ s.source a ++ "`](https://github.com/" ++
+  "testimonyproject/testimony/blob/main/" ++ s.source a ++ "). Every heading and " ++
+  "paragraph is a docstring in those files; every formula is rendered from the " ++
+  "encoding they check. If a chapter and the source disagree, the chapter is the one " ++
+  "that is wrong, and regenerating it is the fix.*\n\n" ++
+  "Claims are numbered once for the whole argument, so P₁ means the same claim in " ++
+  "every chapter; the numbered list is in " ++ legendAt ++ ". " ++
+  "[Reading the logic](../reading-the-logic.md) is the short version of what the " ++
+  "notation means. A result marked ⚗ is one this library constructs rather than " ++
+  "reports.\n\n"
+
 /-- One argument's pages: one, or one per chapter. -/
 def argumentPages (s : Site) (a : Argument) (b : Body) : List (String × String) :=
   if a.chapters.isEmpty then [(a.slug ++ ".md", s.page a b)]
@@ -157,7 +175,7 @@ def argumentPages (s : Site) (a : Argument) (b : Body) : List (String × String)
       -- The standing note goes under the first chapter's title.
       let body := if i == 0 then
           match body.splitOn "\n\n" with
-          | t :: rest => t ++ "\n\n" ++ relink name owner (s.preamble a) ++
+          | t :: rest => t ++ "\n\n" ++ relink name owner (s.chapteredPreamble a) ++
                          "\n\n".intercalate rest
           | [] => body
         else body
