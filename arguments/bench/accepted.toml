@@ -167,3 +167,9 @@ benchmark = "joins: sola fide exclusions, 127 claims"
 metric = "time"
 up_to = 0.20
 reason = "Sola fide gained four claims (123 to 127) for Weinfeld's and Kuruvilla's dissents and the reading 1 Maccabees gives Genesis 15:6 (#203). The joins are read over every pair of claims, so the same work runs over more pairs."
+
+[[accept]]
+benchmark = "checks: postulates, every package"
+metric = "time"
+up_to = 0.20
+reason = "The check builds a model with its postulates for every package. The chapters on whether justification has degrees and on Abraham (#203) add eight (179 to 187): the same work over more packages, measured on CI at +7%."
