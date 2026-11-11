@@ -15,6 +15,10 @@
 # 4. Installs uv 0.11.32, likewise, for the Python scripts that declare their
 #    own requirements (scripts/bench-compare.py).
 #
+# A cloud environment can do all four, and fetch the Mathlib cache, once per
+# container in its setup script, with the same pins; this then finds nothing to
+# install. It stays as the fallback for an environment without one.
+#
 # Local sessions are left alone: use the devcontainer there.
 
 set -euo pipefail
