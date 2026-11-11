@@ -43,6 +43,15 @@ against it. Report:
    a count of strands or parties, or a rating that the theorems on the page no
    longer state. Check names and numbers against the theorems.
 
+**Last, as an editor.** Read the section aloud in your head. Report:
+
+7. **Prose that sounds generated**, using the habits listed in
+   `.claude/skills/removing-ai-tells/SKILL.md`: a bold label opening paragraph
+   after paragraph, runs of sentences of the same length, the same frame for
+   every result, announcing ("A reader asks", "This section"), "not X but Y"
+   built for effect, abstract nouns doing what people did. Give at most five, the
+   ones that most flatten the page, each with a rewrite that keeps every fact.
+
 For each finding give: the page section; the Lean declaration whose docstring
 produces it (search `arguments/TestimonyArguments/` for the name); which reader
 it fails and why; and a suggested rewording that keeps every fact and every

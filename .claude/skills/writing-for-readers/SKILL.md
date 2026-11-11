@@ -40,7 +40,9 @@ The first sets the vocabulary. The second sets the accuracy.
 6. State the point in words; put the identifier in brackets afterwards.
 7. Report the verdict the machine gave. A tie is a tie.
 8. Describe a rival in words its holders would accept, with their own source.
-9. Short sentences, one idea each.
+9. Plain sentences of varied length, joined where the logic joins them. How
+   the prose should sound is the `prose-voice` skill; the editing pass for
+   generated-sounding habits is `removing-ai-tells`.
 
 Avoid: contrasts built for effect ("not X but Y" where "Y" would do),
 sentences that announce importance, code shorthand left unglossed
@@ -77,6 +79,8 @@ lake exe statusgen         # the roadmap's table quotes each first sentence
 cd .. && python3 scripts/testimony_lint.py
 ```
 
+Before regenerating, run the editing pass in `removing-ai-tells`
+(`python3 scripts/prose_tells.py --lean <module>` counts what it looks for).
 Then read the generated page in `docs/src/arguments/` top to bottom as the
 first reader would. Run the `reader-review` agent on the sections you changed.
 It reports what it could not follow, mapped to the docstring that produced it.
