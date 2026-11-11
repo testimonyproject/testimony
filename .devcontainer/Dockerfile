@@ -1,13 +1,19 @@
 # Shared by the devcontainer and CI (see .github/workflows/devcontainer-image.yml,
-# ci.yml, docs.yml) so that "it works locally" and "it works in CI" mean the
+# ci.yml, docs.yml, claude.yml) so that "it works locally" and "it works in CI" mean the
 # same toolchain, not just the same commands.
 FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV PATH=/root/.elan/bin:/root/.local/bin:${PATH}
+# elan finds its toolchains under $ELAN_HOME, by default $HOME/.elan. GitHub's
+# container jobs set HOME to /github/home, where the toolchain installed below
+# is not, so pin the directory it was installed into.
+ENV ELAN_HOME=/root/.elan
 
+# unzip: oven-sh/setup-bun, which anthropics/claude-code-action runs in
+# claude.yml's container, extracts Bun's release zip with it.
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        build-essential ca-certificates curl git python3 libgraphite2-3 \
+        build-essential ca-certificates curl git python3 libgraphite2-3 unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # elan, installed the same way ci.yml does it. Arch-aware so this also works
