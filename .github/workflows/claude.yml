@@ -18,15 +18,8 @@ jobs:
       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
     runs-on: ubuntu-latest
-    # The image ci.yml and docs.yml run in, so that Claude has what a cloud
-    # session has: elan and the pinned Lean, tectonic, mdbook and uv. Without
-    # it the job has no `lake`, and can neither build, nor regenerate a page,
-    # nor run a gate (#199).
-    #
-    # Named directly, not through devcontainer-image.yml as ci.yml does: a
-    # reusable-workflow job would run on every comment, mentioning @claude or
-    # not, because the `if:` above cannot gate it. This pulls the image main's
-    # CI last published, which is the toolchain main builds with.
+    # The CI image, for lake, tectonic and mdbook. Named directly: calling
+    # devcontainer-image.yml would build it on every comment.
     container: ghcr.io/testimonyproject/testimony/devcontainer:latest
     permissions:
       contents: read
@@ -41,9 +34,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      # The .lake directories ci.yml saves on main, restored and never saved:
-      # a cache written from a comment's run would be keyed like main's and
-      # could shadow it. The key is ci.yml's, so the two must change together.
+      # ci.yml's cache, read-only. Keep the key in step with ci.yml.
       - name: Restore .lake
         uses: actions/cache/restore@v4
         with:
@@ -56,8 +47,6 @@ jobs:
             lake-packages-${{ runner.os }}-
             lake-${{ runner.os }}-
 
-      # What CLAUDE.md asks before the first build. Quick after a restore;
-      # without one, it is what keeps Mathlib from compiling from source.
       - name: Fetch Mathlib oleans
         run: lake exe cache get
 
@@ -77,10 +66,7 @@ jobs:
           # Optional: Add claude_args to customize behavior and configuration
           # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
           # or https://code.claude.com/docs/en/cli-reference for available options
-          #
-          # The action runs no Bash command it is not given. These are the
-          # commands of CLAUDE.md's "Commands, in order": the four gates, the
-          # generators with their --check runs, and the two renderers.
+          # The gates, generators and renderers from CLAUDE.md.
           claude_args: >-
             --allowedTools
             "Bash(lake:*),Bash(cd arguments && lake:*),Bash(cd examples && lake:*),Bash(python3 scripts/testimony_lint.py:*),Bash(python3 scripts/test_testimony_lint.py:*),Bash(scripts/kernel-replay.sh:*),Bash(../scripts/kernel-replay.sh:*),Bash(mdbook build:*),Bash(tectonic:*),Bash(cd docs/latex && tectonic:*)"
