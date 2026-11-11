@@ -159,6 +159,7 @@ lake build && lake exe exampletex --check
 # Engine benchmarks, after the arguments build (optimising-the-engine skill).
 scripts/bench.sh                     # every benchmark: time and peak memory
 scripts/bench-ab.sh origin/main      # A/B: this checkout against main, as CI does
+scripts/bench-ab.sh origin/main --shard 1/3   # ... one of the shards CI runs as jobs
 ```
 
 `lake build` in `arguments/` also runs `#check_refutations`: `establish` must

@@ -143,12 +143,24 @@ order of cost (re-measure; do not trust this list over a fresh profile):
 
 ## The CI gate
 
-On every pull request the `build` job runs `scripts/bench-ab.sh HEAD^1 --runs 5
---gate`: the merge commit against the base it merges into, five interleaved
-rounds (the fewest with which the U test can still reach p < 0.05, since the
-heaviest benchmark takes over a minute a run). It fails on a significant
-slowdown beyond the variance bound, or a rise in peak memory, and uploads both
-sides' samples and the base's build log as the `bench-results` artifact.
+On every pull request the `bench` job runs `scripts/bench-ab.sh HEAD^1 --runs 5
+--shard K/N --gate`: the merge commit against the base it merges into, five
+interleaved rounds (the fewest with which the U test can still reach p < 0.05).
+The benchmarks are split into N shards, each a job on a runner of its own,
+beside `build` rather than after it. Shard K takes every N-th benchmark from the
+K-th, by position in `Engine.lean`, and every shard also runs the calibration
+benchmark, so that each runner is checked for drift. Each shard is a whole A/B
+and a gate of its own: it fails on a significant slowdown beyond the variance
+bound, or a rise in peak memory, and uploads both sides' samples and the base's
+build log as the `bench-results-K` artifact. The `benchmarks` job passes when
+every shard did; it is the check to require.
+
+- **Reproducing a shard** locally: `scripts/bench-ab.sh origin/main --shard K/N`,
+  with the N CI uses (the length of the `shard` list in `ci.yml`).
+- **Rebalancing.** The split is by position, so a benchmark added to the file
+  moves the ones after it to other shards; each still meets its base on one
+  runner, so no comparison is lost. If one shard runs much longer than the
+  others, add a shard, or reorder the file.
 
 - **A regression the gate flags** is real until shown otherwise. Find it with
   the loop above and remove it.

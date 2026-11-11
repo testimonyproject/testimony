@@ -29,11 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ${{ needs.image.outputs.image }}
     steps:
-      # Two commits deep: on a pull request, HEAD is the merge commit and HEAD^1
-      # the base it merges into, which the engine benchmarks measure it against.
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
       # Mathlib arrives transitively via Foundation; without the cache this
       # step would compile it from source. The packages built on the library
@@ -109,37 +105,6 @@ jobs:
           lake exe statusgen --check
           lake exe argdoc --check
 
-      # Engine benchmarks, an ablation A/B: the engine with this change and
-      # without it (HEAD^1, the base it merges into), built side by side on this
-      # runner and run interleaved, five rounds, so that both sides meet the same
-      # machine. Each benchmark is compared by the Mann-Whitney U test; the step
-      # fails on a slowdown that is significant (p < 0.05) and larger than the
-      # variance bound, or on a rise in peak memory, unless the change accepts it
-      # with a reason in arguments/bench/accepted.toml. The calibration benchmark,
-      # which no change can move, shows whether the runner drifted
-      # (.claude/skills/optimising-the-engine).
-      - name: Engine benchmarks
-        if: github.event_name == 'pull_request'
-        run: |
-          if ! command -v uv >/dev/null 2>&1; then
-            # Until the devcontainer image with uv is published from main.
-            curl -fsSL https://github.com/astral-sh/uv/releases/download/0.11.32/uv-x86_64-unknown-linux-gnu.tar.gz \
-              | tar -xz --strip-components=1 -C /usr/local/bin
-          fi
-          git config --global --add safe.directory "$PWD"
-          scripts/bench-ab.sh HEAD^1 --runs 5 --out bench-results --gate
-
-      - name: Upload benchmark samples
-        if: always() && github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v4
-        with:
-          name: bench-results
-          path: |
-            bench-results/base.json
-            bench-results/head.json
-            bench-results/*.log
-          if-no-files-found: ignore
-
       # The examples: a package built on the library, held to the library's
       # gates. It requires the library by path and shares its .lake/packages, so
       # it reuses everything built above and compiles only its own modules. The
@@ -152,6 +117,91 @@ jobs:
           lake exe axiom-audit
           ../scripts/kernel-replay.sh TestimonyExamples exampletex
           lake exe exampletex --check
+
+  # Engine benchmarks, an ablation A/B: the engine with this change and without
+  # it (HEAD^1, the base it merges into), built side by side on one runner and
+  # run interleaved, five rounds, so that both sides meet the same machine. Each
+  # benchmark is compared by the Mann-Whitney U test; a shard fails on a
+  # slowdown that is significant (p < 0.05) and larger than the variance bound,
+  # or on a rise in peak memory, unless the change accepts it with a reason in
+  # arguments/bench/accepted.toml (.claude/skills/optimising-the-engine).
+  #
+  # The benchmarks are split into shards, each a job on a runner of its own,
+  # beside `build` rather than after it: of N shards, shard K takes every N-th
+  # benchmark from the K-th, by position in arguments/bench/Engine.lean. Each
+  # shard is a whole A/B, and each runs the calibration benchmark, which no
+  # change can move, so that each runner is checked for drift. The number of
+  # shards is the length of `shard`'s list; nothing else names it.
+  bench:
+    needs: image
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    container: ${{ needs.image.outputs.image }}
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
+    name: bench (${{ matrix.shard }} of ${{ strategy.job-total }})
+    steps:
+      # Two commits deep: on a pull request, HEAD is the merge commit and HEAD^1
+      # the base it merges into, which the benchmarks measure it against.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      # The cache `build` saves, restored only: the shards would race to save
+      # the same key.
+      - name: Restore .lake
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .lake
+            arguments/.lake
+            examples/.lake
+          key: lake-packages-${{ runner.os }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}
+          restore-keys: |
+            lake-packages-${{ runner.os }}-
+            lake-${{ runner.os }}-
+
+      - name: Fetch Mathlib oleans
+        run: lake exe cache get
+
+      # The modules the benchmarks import, and nothing else: the gates over
+      # them are `build`'s.
+      - name: Build
+        run: lake build && (cd arguments && lake build TestimonyArguments)
+
+      - name: Engine benchmarks
+        run: |
+          if ! command -v uv >/dev/null 2>&1; then
+            # Until the devcontainer image with uv is published from main.
+            curl -fsSL https://github.com/astral-sh/uv/releases/download/0.11.32/uv-x86_64-unknown-linux-gnu.tar.gz \
+              | tar -xz --strip-components=1 -C /usr/local/bin
+          fi
+          git config --global --add safe.directory "$PWD"
+          scripts/bench-ab.sh HEAD^1 --runs 5 --shard "${{ matrix.shard }}/${{ strategy.job-total }}" \
+            --out bench-results --gate
+
+      - name: Upload benchmark samples
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bench-results-${{ matrix.shard }}
+          path: |
+            bench-results/base.json
+            bench-results/head.json
+            bench-results/*.log
+          if-no-files-found: ignore
+
+  # One check for the shards together, whatever their number, for branch
+  # protection to require: it passes when every shard passed.
+  benchmarks:
+    needs: bench
+    if: always() && github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Every shard passed
+        run: test "${{ needs.bench.result }}" = success
 
   docs:
     needs: image
