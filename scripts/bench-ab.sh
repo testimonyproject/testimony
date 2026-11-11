@@ -2,14 +2,17 @@
 # Ablation A/B of the engine: measure this checkout and the same code with its
 # change backed out, on the same machine, interleaved, and compare them.
 #
-# Usage: scripts/bench-ab.sh BASE-REF [--runs N] [--filter TEXT] [--out DIR]
-#                                     [--gate]
+# Usage: scripts/bench-ab.sh BASE-REF [--runs N] [--filter TEXT] [--shard K/N]
+#                                     [--out DIR] [--gate]
 #
 #   BASE-REF       the revision without the change: in CI, HEAD^1 of a pull
 #                  request's merge commit, the base it would merge into
 #   --runs N       interleaved rounds (default 5): each round runs every
 #                  benchmark once on this checkout and once on the base
 #   --filter TEXT  only the benchmarks whose name contains TEXT
+#   --shard K/N    only the K-th of N shards, as scripts/bench.sh takes it: CI
+#                  runs each shard as a job of its own, on a machine of its own,
+#                  and each is a whole A/B, with its own calibration and gate
 #   --out DIR      where to keep base.json and head.json (default: a temporary
 #                  directory)
 #   --gate         exit 2 on an unaccepted regression and 0 otherwise, for CI
@@ -34,11 +37,12 @@
 
 set -euo pipefail
 
-base_ref="" runs=5 filter="" out="" gate=""
+base_ref="" runs=5 filter="" shard="" out="" gate=""
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --runs) runs="$2"; shift 2 ;;
     --filter) filter="$2"; shift 2 ;;
+    --shard) shard="$2"; shift 2 ;;
     --out) out="$2"; shift 2 ;;
     --gate) gate="--gate"; shift ;;
     -*) echo "bench-ab: unknown argument $1" >&2; exit 2 ;;
@@ -46,8 +50,14 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 if [[ -z "$base_ref" ]]; then
-  echo "usage: scripts/bench-ab.sh BASE-REF [--runs N] [--filter TEXT] [--out DIR] [--gate]" >&2
+  echo "usage: scripts/bench-ab.sh BASE-REF [--runs N] [--filter TEXT] [--shard K/N]" \
+    "[--out DIR] [--gate]" >&2
   exit 2
+fi
+# Checked here too, before the base is built, not only by bench.sh after it.
+if [[ -n "$shard" && ! "$shard" =~ ^([1-9][0-9]*)/([1-9][0-9]*)$ ]] \
+    || [[ -n "$shard" && "${BASH_REMATCH[1]}" -gt "${BASH_REMATCH[2]}" ]]; then
+  echo "bench-ab: --shard takes K/N with 1 <= K <= N, not $shard" >&2; exit 2
 fi
 
 head="$(cd "$(dirname "$0")/.." && pwd)"
@@ -95,7 +105,7 @@ for i in $(seq 1 "$runs"); do
     tree="$head"; [[ "$side" == base ]] && tree="$base"
     log "round $i of $runs: $side"
     "$head/scripts/bench.sh" --tree "$tree" --bench "$bench" --runs 1 \
-      ${filter:+--filter "$filter"} --out "$out/$side-$i.json" >/dev/null
+      ${filter:+--filter "$filter"} ${shard:+--shard "$shard"} --out "$out/$side-$i.json" >/dev/null
   done
 done
 
