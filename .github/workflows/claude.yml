@@ -34,6 +34,11 @@ jobs:
         with:
           fetch-depth: 1
 
+      # checkout marks the workspace safe only in a temporary HOME; the
+      # action's own git calls need it in the container's global config.
+      - name: Mark the workspace safe for git
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       # ci.yml's cache, read-only. Keep the key in step with ci.yml.
       - name: Restore .lake
         uses: actions/cache/restore@v4
