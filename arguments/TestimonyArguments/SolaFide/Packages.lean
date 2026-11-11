@@ -4,10 +4,8 @@ import TestimonyArguments.SolaFide.Lines
 /-!
 # TestimonyArguments.SolaFide.Packages — the positions, written out
 
-Each position in the debate is written down as a list of premises, every one
-with its source. These are the positions heard so far:
+Besides the Reformed case, these positions are written out in this chapter:
 
-- **the Reformed case**, all four strands and the answer to James;
 - **the New Perspective** (Dunn, Wright), which reads "works of the law" as
   Israel's boundary markers;
 - **Hays**, who reads "faith of Christ" as Christ's own faithfulness;
@@ -19,10 +17,9 @@ with its source. These are the positions heard so far:
 - **the apocalyptic reading** (Martyn, Campbell);
 - and **Trent**.
 
-Beside them are variants of the Reformed case, each with one named premise
-taken out. They answer one question a reader keeps asking: does the case
-depend on this? Take the premise away and look. Either the conclusion still
-follows, or the checking names a reading on which it does not.
+Beside them are variants of the Reformed case. Each asks whether the case
+depends on one premise: with it taken out, either the conclusion still follows,
+or the checking names a way of taking the texts on which it does not.
 -/
 
 namespace TestimonyArguments.SolaFide

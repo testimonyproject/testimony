@@ -17,30 +17,30 @@ Whoever would be justified by the law is "severed from Christ" (5:2–4). The
 gospel itself is the one Paul received and handed on, that "Christ died for our
 sins" (1 Corinthians 15:3).
 
-Fifteen centuries later the Council of Trent defined justification in words
-Paul never used:
+Fifteen centuries later the Council of Trent defined justification this way:
 
 > "not remission of sins merely, but also the sanctification and renewal of the
 > inward man" (Session VI, ch. 7).
 
-Where exactly do Trent and Paul part? The answer comes in three steps, each
-checked: what Trent can accept, what it denies, and where the two meet.
+Where exactly do Trent and Paul part? First, what Trent can accept; then the
+one step it denies; then what the checking found.
 
 ### What Trent can accept
 
 Trent can accept every text above. It can also accept that Paul's verb "justify"
 (δικαιόω) is a courtroom word, a verdict: scholars across the traditions read it
-so, the standard lexicon, Morris, Moo, Irons, Wright, and the Catholic scholar
-Fitzmyer among them (`dikaioIsForensic`, rated `wellSupported`). The *Joint
-Declaration on the Doctrine of Justification* (1999), signed by the Catholic
-Church, confesses that God "no longer imputes to them their sin" (§22). It does
-not speak to the sense of the verb.
+so, the standard lexicon of New Testament Greek (BDAG), Morris, Moo, Irons,
+Wright, and the Catholic scholar Fitzmyer among them (`dikaioIsForensic`, rated
+`wellSupported`). The *Joint Declaration on the Doctrine of Justification*
+(1999), signed by the Catholic Church, confesses that God "no longer imputes to
+them their sin" (§22). It does not speak to the sense of the verb.
 
 ### What Trent denies
 
-Trent denies one step: that a verdict given on the ground of Christ's
-finished work leaves no room for the renewal worked in us to be part of
-justification. The same paragraph of the *Joint Declaration* holds that
+Trent denies one step, which the Westminster Confession states (XI.1): that a
+verdict given on the ground of Christ's finished work leaves no room for the
+renewal worked in us to be part of justification. A modern Catholic text says
+the same as Trent. The same paragraph of the *Joint Declaration* holds that
 forgiveness and the love the Spirit brings about are "not to be separated", and
 its Annex defines justification as "forgiveness of sins and being made
 righteous" (Annex 2 A). Gorman reads the verdict as a word that does what it

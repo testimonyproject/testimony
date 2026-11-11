@@ -11,9 +11,9 @@ import Testimony.Logic.Certificate
 /-!
 # TestimonyArguments.SolaFide.Dispute — the positions weighed against each other
 
-The chapters so far take one position at a time and ask what follows from it.
-This one asks the question a reader has been waiting for: when the positions
-are set against each other, which are left standing?
+The earlier chapters each heard one question: Trent against Paul's gospel,
+James 2:24, Jesus' words, baptism. This one hears all the positions at once and
+asks which are left standing.
 
 Seventeen positions are heard.
 
@@ -43,6 +43,9 @@ is worked out from the two positions' premises and checked by machine.
   or step. Ratings run from `disputed`, the lowest, through `plausible` and
   `wellSupported`, to `consensus`. Denying a claim counts as `disputed`.
 - **Tie.** Two positions defeat each other. A reader may hold either.
+- **Meets.** One position meets another when they contradict each other, so
+  that one defeats the other unless it is the weaker. Where both defeat, they
+  meet "in both directions".
 - **Forced** (also: *prevails outright*). The position must be accepted however
   every tie is settled. Either nothing defeats it, or every position that
   defeats it is itself defeated by a forced position. The technical name for the
@@ -50,9 +53,10 @@ is worked out from the two positions' premises and checked by machine.
 - **Can be defended.** Some consistent set of positions includes it and answers
   every attack on its members. A set is consistent when no member defeats
   another.
-- **Not forced.** Some consistent set of positions leaves it out. Not forced
-  does not mean false. It means the debate, as argued here, cannot make a reader
-  accept it.
+- **Not forced.** Some set of positions that can be defended, and is as large
+  as it can be, leaves it out. Not forced does not mean false. It means the
+  debate, as argued here, cannot make a reader accept it. The verdicts below
+  that say *not forced* use this test; *forced* means the test above.
 - **Cannot be defended.** No consistent set of positions can include it and
   answer its attackers.
 
@@ -66,7 +70,8 @@ Almost every position here has a weakest link rated `disputed`.
   justification and sanctification, which Trent condemns.
 - Trent rests on its definition of justification, which the Westminster
   Confession denies.
-- The apocalyptic reading denies a claim, and a denial ranks at the bottom.
+- The apocalyptic reading denies a claim, and a premise that denies a claim is
+  rated `disputed` by rule.
 
 Between such positions no rating blocks an attack. The outcome depends only on
 who contradicts whom.
@@ -135,7 +140,8 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
   neither conflicts with Trent's case as Trent states it, whose definition,
   taken as it stands, says nothing about the word. Trent taken as a claim about
   Paul's word also meets every position Trent meets, in both directions: the
-  four strands, the apocalyptic reading and Paul's gospel.
+  four strands, the apocalyptic reading, Paul's gospel and the Reformed answer
+  to Chrysostom.
 
 ## What follows
 
@@ -187,21 +193,21 @@ not about Paul's word, and it names the one step on which that claim depends.
 
 ### An absence
 
-Luke's case is attacked by no one but Trent, however Trent's
-definition is taken, because no source cited here argues that "saved" (σῴζω) at
-Luke 7:50 means healed. That absence is also the premise's rating. It is
-`wellSupported`, not `disputed`: a search for a scholar arguing the healing
-sense *at 7:50* found none, and at 7:50 no one is ill. The saying follows "your
-sins are forgiven". Marshall's commentary on the Greek text says the same: the
-saying refers mainly to healing elsewhere in Luke, and is used here "in a case
-where physical healing is not involved". The rating is not `consensus`, because
-the same words mean "made you well" at Luke 8:48, 17:19 and 18:42. One older
-lexicon, Thayer's, lists 7:50 with the healing uses without arguing it. It is
-not yet cited, and whether an unargued listing should lower the rating is an
-open question. A cited argument for the healing reading would attack Luke's case
-and lower the rating.
+No source cited here argues that "saved" (σῴζω) at Luke 7:50 means healed, so no
+position attacks Luke's case at that reading. Trent, however its definition is
+taken, and Chrysostom attack it at the step to "faith suffices". That absence is
+also the premise's rating. It is `wellSupported`, not `disputed`: a search for a
+scholar arguing the healing sense *at 7:50* found none, and at 7:50 no one is
+ill. The saying follows "your sins are forgiven". Marshall's commentary on the
+Greek text says the same: the saying refers mainly to healing elsewhere in Luke,
+and is used here "in a case where physical healing is not involved". The rating
+is not `consensus`, because the same words mean "made you well" at Luke 8:48,
+17:19 and 18:42. One older lexicon, Thayer's, lists 7:50 with the healing uses
+without arguing it. It is not yet cited, and whether an unargued listing should
+lower the rating is an open question. A cited argument for the healing reading
+would attack Luke's case and lower the rating.
 
-### An objection answered in advance
+### An objection built in, not heard
 
 "Her sins, which are many, are
 forgiven—for she loved much" (7:47) is the verse a rival would use to make love,
@@ -236,8 +242,9 @@ it. A position for Hays alone, one for the *Joint Declaration*, and one for the
 Finnish reading of Luther would each be new arguments to weigh. So would a cited
 argument that Paul's "justify", granted to be a courtroom word, still means
 renewal: none was found, and the rating of the argument from the word says so.
-Romans 4 as an argument about what God does (`romansFourCase`) is answered
-where Trent's definition is examined, not added here. It meets Trent exactly
+Romans 4 as an argument about what God does (`romansFourCase`) is set against
+Trent in the chapter "What Trent means by justification", and is not added to
+this debate. It meets Trent exactly
 where Paul's gospel does, at Trent's definition, from a step rated `disputed`,
 and a position of its own would be a second argument to weigh.
 -/
@@ -847,7 +854,7 @@ theorem trent_on_pauls_word_does_not_defeat_lexical :
   Horn.not_defeats_of_certified tridentineOnPaulsWord_strength lexicalCase_strength
     (by horn_certify)
 
-/-! ### Why these do not conflict
+/-! #### Why these do not conflict
 
 The absences above are worked out by machine, and a machine's working gives no
 reason. The readings below do. Each is a way of holding one position that leaves
@@ -1381,14 +1388,14 @@ def trentStandsWithSandersAndJervell : Verdict solaFideDispute where
 /-- **Trent can be defended.** A consistent set of positions includes it, with
 Sanders and Jervell, and answers every attack. Every position that defeats
 Trent, Trent defeats in return: Paul's case, Luke's, Peter's, John's, Paul's
-gospel and the apocalyptic reading. The ratings, all at the bottom, break no
-tie.
+gospel, the apocalyptic reading, and the Reformed answer to Chrysostom. The
+ratings, all at the bottom, break no tie.
 
 The arguments about Paul's word do not attack it. Trent's definition, taken as
 it stands, says nothing about what "justify" means.
 
 What this does not claim: that Trent prevails. It is not forced
-(`trent_not_forced`). It is in a tie with each of those six positions. -/
+(`trent_not_forced`). It is in a tie with each of those seven positions. -/
 @[headline]
 theorem trent_defensible : CredulouslyAccepted solaFideDispute.defeats .trent :=
   trentStandsWithSandersAndJervell.holds
@@ -1542,7 +1549,7 @@ theorem gospel_not_forced : ¬ SkepticallyAccepted solaFideDispute.defeats .gosp
 
 #print axioms gospel_not_forced
 
-/-! ### Why Luke's case stands against Trent
+/-! #### Where Luke's case and Trent part
 
 The verdicts above say that Luke's case and Trent defeat each other, and that
 the debate chooses neither. This says *why*, claim by claim. The two part over

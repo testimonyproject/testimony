@@ -6,20 +6,16 @@ import Testimony.Logic.Tactic
 
 Each result takes one position and asks whether its conclusion follows from its
 premises. Where it does, the result says so. Where it does not, the result
-names a *reading*: a consistent way of taking the texts on which every premise
-holds and the conclusion fails. That reading is the rival position, written
-down, and a reader can check it verse by verse.
+names a consistent way of taking the texts on which every premise holds and the
+conclusion fails. That way of taking them is the rival position, written down,
+and a reader can check it verse by verse.
 
 Many results ask what the case depends on. A premise is taken out, everything
 else is kept, and the result says whether the conclusion still follows. If it
 does, the case never needed that premise.
 
-The central result is the one already met in the first chapter. The case needs
-a disputed reading from at least one strand, and does not need any particular
-one (`lexical_premises_jointly_load_bearing`). Acts and John each reach the
-conclusion with every other strand's disputed reading left out
-(`apostolic_strand_survives_paul_and_luke`,
-`johannine_strand_survives_the_other_three`).
+John's strand has more to answer than the others, and the next chapter takes
+it.
 -/
 
 namespace TestimonyArguments.SolaFide
