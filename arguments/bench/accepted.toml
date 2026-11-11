@@ -161,3 +161,9 @@ benchmark = "checks: refutations survive their postulates"
 metric = "time"
 up_to = 0.30
 reason = "The check runs over every non-entailment. The chapters on whether justification has degrees and on Abraham (#203) add six (87 to 93): the same work over more results, measured on CI runners between +6% and +16%."
+
+[[accept]]
+benchmark = "joins: sola fide exclusions, 127 claims"
+metric = "time"
+up_to = 0.20
+reason = "Sola fide gained four claims (123 to 127) for Weinfeld's and Kuruvilla's dissents and the reading 1 Maccabees gives Genesis 15:6 (#203). The joins are read over every pair of claims, so the same work runs over more pairs."
