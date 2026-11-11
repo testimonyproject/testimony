@@ -36,7 +36,7 @@ The benchmarks, from the smallest unit up:
 - **two disputes heard as one**: sola fide and Mark 7, 484 cells, and 85 of
   them searched one by one, and the same table composed from the two arguments' own, with its
   verdict;
-- **the joins**: the exclusions among sola fide's 113 claims, read for what
+- **the joins**: the exclusions among sola fide's 123 claims, read for what
   their words mean;
 - **an assessment** and **a rating**: Miller's dissent, searched and
   certified, and the laws' step;
@@ -334,7 +334,7 @@ example (j : JamesParty) :
     (rerated_strength .evidence .trentOnTheWord) (rerated_strength .evidence j) ?_
   cases j <;> horn_certify
 
-#bench (runs := 1) "joins: sola fide exclusions, 113 claims" in
+#bench (runs := 1) "joins: sola fide exclusions, 123 claims" in
 example : (Testimony.Semantics.HasMeanings.exclusions (α := Claim)).length = 6 := by
   decide +kernel
 

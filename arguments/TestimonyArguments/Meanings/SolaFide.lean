@@ -409,7 +409,7 @@ Trent's "laver, or the desire thereof", Luke's law-observance, the texts that
 promise a reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each
 needs a word the vocabulary lacks — a command, a curse, a disjunction, a story's
 outcome, a reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 123) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 123) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

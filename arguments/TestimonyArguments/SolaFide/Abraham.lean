@@ -43,6 +43,12 @@ ancient Near East, set the covenant with Abraham beside the royal grants that a
 king gave and did not take back. None of the four has been read for this
 chapter, so each is cited as a whole.
 
+Weinfeld is also the strongest reader against the step from the ceremony to
+"nothing Abram does is a condition". For him, as Gary Knoppers reports him, a
+grant is "a reward for loyalty and good deeds already performed", and he ties
+Abraham's to Genesis 26:5. He reads the covenant as one-sided and still makes
+Abraham's obedience its ground. That is why the step is rated `disputed`.
+
 ## The other way of reading Abraham
 
 Genesis does not stop at chapter 15. When Abraham has offered Isaac, the angel
@@ -93,6 +99,12 @@ already had (`no_degrees_answers_james_on_abraham`). That reason rests, as
 before, on the Reformed definition of justification, which Trent denies.
 
 ## What this does not show
+
+It does not take up a further question, which some readers press. Scott Hahn
+and Paul Williamson read Genesis 15, 17 and 22 as stages of one relationship,
+so that "the promise counted to him" may name the one-sided oath of Genesis 15
+or the promise as Genesis 22 and Hebrews 6 give it, sworn after the test. That
+would be a dilemma of its own, and it is not yet encoded.
 
 It does not show that Abraham's obedience did not matter. Every reader cited
 here holds that it did. The question is whether it was the condition of the
@@ -151,7 +163,10 @@ def secondTempleAbraham : ArgumentPackage Claim :=
 /-- The Reformed step: Abraham believed and it was counted to him (Genesis 15:6),
 before he was circumcised (Romans 4:10), and the covenant that followed bound God
 alone (15:12–17). So nothing he did was a condition of what was counted to him.
-Rated `disputed`, because the reading of the ceremony it rests on is. -/
+Rated `disputed`. Weinfeld, cited for the reading of the covenant as a grant,
+holds that a grant rewards "loyalty and good deeds already performed" and ties
+Abraham's to Genesis 26:5 (as Knoppers reports him): he grants the reading of the
+ceremony and denies that nothing Abraham did was a condition. -/
 def genesisFifteenSource : Source :=
   { primary := .scripture [{ ref := .range ⟨.romans, 4, 3, 4, 12⟩ }]
   , supporting :=

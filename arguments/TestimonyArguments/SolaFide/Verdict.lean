@@ -43,6 +43,15 @@ in 1867: justification is "an act, too, which is completed at once, and not a
 work which is gradually accomplished by successive acts", and "there is no
 second Justification, properly so called" (p. 251).
 
+Two limits on the courtroom picture. Wright and Dunn speak of a present and a
+future justification, a verdict given now and affirmed at the last judgment.
+That is a verdict given twice, not a verdict that grows, and the step here
+claims only that a verdict has no degrees, not that it is given once. And not
+every picture of a divine court has two outcomes: the Talmud's three books, for
+the wholly righteous, the wholly wicked and those in between (Rosh Hashanah
+16b), has three. Those readers do not grant Romans 8:33–34 as Paul reads it,
+and are not counted against the step.
+
 ## Where the argument has to go
 
 The courtroom texts settle what a verdict is. They do not settle whether
