@@ -85,7 +85,11 @@ None is wrong; each, used for emphasis, sounds generated. Use the plain word or
 nothing.
 
 **13. Lists where there is an argument.** Five bullets that are really one line
-of reasoning. Write the paragraph, with its joints.
+of reasoning, each step depending on the last. Write the paragraph, with its
+joints, and keep the bullets for what is parallel: the positions, the texts,
+a summary of what the paragraph showed. Bullets and block quotations are the
+house style as visual aids (`prose-voice`, "Visual aids"); this habit is only
+the list that replaces an argument.
 
 **14. Identifiers mid-sentence.** "`pius_reading_is_consistent` shows that…".
 State the point; put the name in brackets after (`writing-for-readers`, rule 6).

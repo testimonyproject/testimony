@@ -52,8 +52,9 @@ A paragraph develops one point, usually over four to seven sentences. It does
 not list facts; it makes an argument, and an argument has joints.
 
 - **Use the joints.** *Because, so, but, although, which is why, that is, then*.
-  These carry the logic a lay reader would otherwise have to rebuild. Bullet
-  lists drop them, which is why an argument should rarely be a list.
+  These carry the logic a lay reader would otherwise have to rebuild. A list
+  drops them, so the reasoning itself is told in paragraphs; a list then sets
+  out what the paragraph has argued, for the eye (see "Visual aids", below).
 - **Vary the sentence length.** Short sentences land a point. Longer ones carry
   a qualification or a chain of reasoning in one breath. A page of nothing but
   eight-word sentences reads like a telegram; a page of nothing but forty-word
@@ -90,15 +91,36 @@ How the results are proved — the formula, the Lean, the claim tables — is no
 part of the chapter's story. It belongs in the declarations' own docstrings and
 the generated notes, where a reader who wants it can find it.
 
-## Bold, lists and headings
+## Visual aids: quotations, bullets, bold and headings
 
+The house style uses visual aids freely, because a reader with a Bible open
+beside the page is looking back and forth. They serve the prose; they do not
+replace it.
+
+- **Block quotations** for every passage the chapter argues about, and for a
+  council's or a reader's words that carry the argument. Set the verse apart,
+  with its reference, before the paragraph that reads it:
+
+  > "If there is a dispute between men and they come into court and the judges
+  > decide between them, acquitting the innocent and condemning the guilty …"
+  > (Deuteronomy 25:1)
+
+  A short phrase the sentence builds on stays inline, in quotation marks.
+- **Bullets** wherever the items are parallel and the eye should find them:
+  the positions in a debate and who holds each, the texts a reading rests on,
+  what a result shows and what it leaves open, the steps of a command, a
+  summary at the end of a chapter. A bulleted item can be a full sentence or
+  two. What a bullet list cannot do is carry a chain of reasoning: if the items
+  need *because* and *so* between them, write the paragraph, and use the list
+  after it to gather what it established.
 - **Bold** marks a term the first time it is defined, or the one sentence on a
   page a skimming reader must not miss. It does not open every paragraph.
-- **Lists** are for things that are genuinely parallel and separate: the four
-  ratings, the books of a canon, the steps of a command. Not for an argument.
 - **Headings** name the question or the subject in the reader's words ("Does
   justification have degrees?"), not the machinery ("Results", "The dispute's
   table").
+- **Diagrams**, where the generator supports them, for the shape of a debate:
+  who answers whom, where two readings part. A diagram restates what the prose
+  says; it never says something the prose does not.
 
 ## Revising without changing a claim
 
