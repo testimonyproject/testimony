@@ -3,9 +3,9 @@
 
 # Sola fide
 
-*This page is generated from [`arguments/TestimonyArguments/SolaFide`](https://github.com/testimonyproject/testimony/blob/main/arguments/TestimonyArguments/SolaFide). Every heading and paragraph below is a docstring in those files; every formula is rendered from the encoding they check. If the page and the source disagree, the page is the one that is wrong, and regenerating it is the fix.*
+*These chapters are generated from [`arguments/TestimonyArguments/SolaFide`](https://github.com/testimonyproject/testimony/blob/main/arguments/TestimonyArguments/SolaFide). Every heading and paragraph is a docstring in those files; every formula is rendered from the encoding they check. If a chapter and the source disagree, the chapter is the one that is wrong, and regenerating it is the fix.*
 
-Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
+Claims are numbered once for the whole argument, so P₁ means the same claim in every chapter; the numbered list is in [Appendix: the claims and their sources](sola-fide/claims.md). [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
 This argument is set in 12 chapters:
 

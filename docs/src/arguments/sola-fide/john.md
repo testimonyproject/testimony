@@ -12,9 +12,10 @@ the lake and asks him a question about works:
 > 6:28–29).
 
 The question is about works, and the answer is believing. This is the fourth
-strand of sola fide, and John says the same thing elsewhere. Whoever believes in the Son has eternal life and
-does not come into judgement (3:16–18, 3:36, 5:24), and the Gospel gives this as
-its own purpose: "that by believing you may have life in his name" (20:31).
+strand of sola fide, and John says the same thing elsewhere. Whoever believes in
+the Son has eternal life and does not come into judgement (3:16–18, 3:36, 5:24),
+and the Gospel gives this as its own purpose: "that by believing you may have
+life in his name" (20:31).
 
 ## What both sides grant, and where they part
 
