@@ -520,6 +520,21 @@ inductive Claim
   was found loyal". Two Jewish writings of the second century before Christ,
   which tie the counting of Genesis 15:6 to Abraham's testing in Genesis 22. -/
   | abrahamFoundFaithfulWhenTested
+  /-- A royal grant in the ancient Near East was "a reward for loyalty and good
+  deeds already performed" (Weinfeld). -/
+  | grantRewardsPastLoyalty
+  /-- The grant God made to Abraham rewarded his obedience: "because you have
+  obeyed my voice" (Genesis 22:18; 26:5). **Weinfeld's reading of Abraham's
+  covenant.** -/
+  | abrahamsGrantRewardsHisObedience
+  /-- The righteousness counted to Abraham at Genesis 15:6 was credited for his
+  faithfulness when he was tested in Genesis 22. **The reading 1 Maccabees 2:52
+  gives Genesis 15:6.** -/
+  | countingWasForTheTesting
+  /-- The blessing sworn in Genesis 22:16–18 was augmented because of Abraham's
+  obedience: "Contingent upon his obedience, every aspect of the earlier promises
+  to Abraham is now 'augmented and guaranteed'" (Kuruvilla). -/
+  | aqedahBlessingAugmentedForObedience
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide

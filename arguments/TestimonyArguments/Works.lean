@@ -350,6 +350,64 @@ cited by topic and question. -/
   , place := some "Phillipsburg, N.J."
   , volume := some "2" }
 
+/-- Calvin's commentary on the Catholic Epistles, in John Owen's translation, read
+in the Christian Classics Ethereal Library's text, which has no page numbers; it
+is cited by verse. On James 2:23: "The imputation of righteousness which Moses
+mentions, preceded more than thirty years the work by which they would have
+Abraham to have been justified." The year of the translation is not verified,
+so none is given. -/
+@[bib_entry] def calvinCatholicEpistles : BibEntry := .book
+  { core :=
+      { key := "calvin-commentaries-catholic-epistles"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "John" "Owen"] }
+      , title := "Commentaries on the Catholic Epistles"
+      , identifiers :=
+          [ .url "https://www.ccel.org/ccel/calvin/calcom45.html" (some "2026-11-11") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
+/-- Knoppers's critique of Weinfeld's division of covenants into grants and
+treaties. He quotes Weinfeld, p. 185: "the grant is a reward for loyalty and good
+deeds already performed, the treaty is an inducement for future loyalty" (p.
+672). He answers that "Land grants are not predominantly unconditional" (p. 686),
+and that "Continuing or future loyalty can be assumed or stipulated, even though
+the basic promise may be unaffected by (dis)loyalty" (p. 696). Read in the
+JSTOR text. -/
+@[bib_entry] def knoppersRoyalGrants : BibEntry := .article
+  { core :=
+      { key := "knoppers-royal-grants-1996"
+      , contributors := { authors := [.person "Gary N." "Knoppers"] }
+      , title := "Ancient Near Eastern Royal Grants and the Davidic Covenant: A Parallel?"
+      , year := some { value := 1996 }
+      , identifiers := [.doi "10.2307/605439"] }
+  , journal := "Journal of the American Oriental Society"
+  , volume := some "116"
+  , issue := some "4"
+  , pages := some (670, 697) }
+
+/-- Kuruvilla on Genesis 22: the blessing sworn there is "contingent upon his
+obedience" (p. 507), an enhancement that is "more like an unexpected bonus,
+which, of course, is what grace is all about" (p. 506 n. 58). He grants that
+"faithlessness characterized Abraham's response to God" in the Hagar episode (p.
+497), and answers Calvin's reading of 22:15 as confirmation only (p. 506). He
+quotes Moberly (VT 38, 1988, 320–21) and Wenham. Read in the ETS PDF. -/
+@[bib_entry] def kuruvillaAqedah : BibEntry := .article
+  { core :=
+      { key := "kuruvilla-aqedah-2012"
+      , contributors := { authors := [.person "Abraham" "Kuruvilla"] }
+      , title := "The Aqedah (Genesis 22): What Is the Author Doing with What He Is Saying?"
+      , year := some { value := 2012 }
+      , identifiers :=
+          [ .url ("https://etsjets.org/wp-content/uploads/2012/10/files_JETS-PDFs_55_55-3_" ++
+                  "JETS_55-3_489-508_Kuruvilla.pdf") (some "2026-11-11") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "55"
+  , issue := some "3"
+  , pages := some (489, 508) }
+
 /-- Kline on Genesis 15 as a covenant ratified by God's oath. Not read; cited as a
 whole for the reading the commentators below share. -/
 @[bib_entry] def klineKingdomPrologue : BibEntry := .book

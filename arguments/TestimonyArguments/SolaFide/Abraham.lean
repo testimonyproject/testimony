@@ -43,11 +43,14 @@ ancient Near East, set the covenant with Abraham beside the royal grants that a
 king gave and did not take back. None of the four has been read for this
 chapter, so each is cited as a whole.
 
-Weinfeld is also the strongest reader against the step from the ceremony to
-"nothing Abram does is a condition". For him, as Gary Knoppers reports him, a
-grant is "a reward for loyalty and good deeds already performed", and he ties
-Abraham's to Genesis 26:5. He reads the covenant as one-sided and still makes
-Abraham's obedience its ground. That is why the step is rated `disputed`.
+Weinfeld also gives the strongest reason to doubt the step. For him, as Gary
+Knoppers quotes him, a grant is "a reward for loyalty and good deeds already
+performed", and he ties Abraham's to Genesis 26:5. Knoppers himself argues that
+the division is overdrawn, and in the other direction: "Land grants are not
+predominantly unconditional." So his critique does not help the step; but he
+adds that "Continuing or future loyalty can be assumed or stipulated, even
+though the basic promise may be unaffected by (dis)loyalty". The next sections
+test whether Weinfeld's reason reaches the step.
 
 ## The other way of reading Abraham
 
@@ -78,17 +81,89 @@ These are not books of the Protestant canon, and nothing here treats them as
 Scripture. They are witnesses to how Abraham was read in Paul's day, which is
 why Paul argues as he does in Romans 4.
 
+## Does Weinfeld's grant reach what was counted?
+
+Set Weinfeld's argument out step by step:
+
+- the covenant of Genesis 15 is a royal grant, one-sided;
+- a grant rewarded loyalty already shown;
+- the blessing came "because you have obeyed my voice" (Genesis 22:18; 26:5);
+- so the grant to Abraham rewarded his obedience.
+
+Every line may be true, and the step from Genesis 15 still stands. The step is
+about something else: what was counted to Abraham as righteousness at 15:6, and
+whether anything he did was its condition. A grant is not a counting. Weinfeld's
+premises are kept alike by a reading on which Abraham was counted righteous
+without works and by one on which he was not, so they decide nothing about it
+(`weinfeld_leaves_the_counting_open`). To reach the step, the argument needs one
+more premise: that what was counted at 15:6 was credited for Abraham's
+obedience. Weinfeld, as he has been read here, does not state it, so his
+objection does not dissent from the step at all
+(`weinfeld_does_not_reach_the_counting`). Treating "the grant rewarded his
+obedience" as if it said "his righteousness was credited for his obedience"
+runs two different claims together.
+
+Abraham Kuruvilla, writing in 2012, takes the same "because" further. He grants
+that "faithlessness characterized Abraham's response to God" in the Hagar
+episode, and holds that in Genesis 22, "Contingent upon his obedience, every
+aspect of the earlier promises to Abraham is now 'augmented and guaranteed'".
+He answers Calvin, who read the oath as "nothing more than confirmation". But
+his contingency, too, is of the blessing sworn in Genesis 22, and he calls it
+"more like an unexpected bonus, which, of course, is what grace is all about".
+It does not reach what was counted at 15:6
+(`kuruvilla_does_not_reach_the_counting`). R. W. L. Moberly, as Kuruvilla
+quotes him, puts the point exactly: "It is not that divine promise has become
+contingent upon Abraham's obedience, but that Abraham's obedience has been
+incorporated into the divine promise."
+
+## The missing premise, where it is stated
+
+1 Maccabees states it. "Was not Abraham found faithful in trial, and it was
+credited to him as righteousness?" reads the counting of Genesis 15:6 as
+credited for the testing of Genesis 22. With that premise, the argument does deny
+the step, and it is an argument and not a bare disagreement
+(`maccabees_unstruck_counts`).
+
+But Genesis reads otherwise, and in plain words. It counts Abram's believing at
+15:6:
+
+> "And he believed the LORD, and he counted it to him as righteousness"
+> (Genesis 15:6).
+
+And it places the testing later: "After these things God tested Abraham"
+(Genesis 22:1). The counting came first, decades before Mount Moriah. In
+between, Abraham and Sarah took matters into their own hands with Hagar
+(Genesis 16), and God still confirmed the covenant to him (Genesis 17). Paul
+argues from the same kind of order about circumcision (Romans 4:10), and Calvin
+made this very argument against reading James 2 as the ground of Genesis 15:6:
+"The imputation of righteousness which Moses mentions, preceded more than thirty
+years the work by which they would have Abraham to have been justified." No
+published reader was found who argues from the Hagar episode in particular; that
+part of the argument is made here, from the texts. So the
+reading 1 Maccabees gives Genesis 15:6 is refuted by what Genesis reads, and with
+it struck, 1 Maccabees no longer dissents from the step
+(`genesis_strikes_the_maccabees_reading`). What remains true in it is that
+Abraham was found faithful when tested. James says the same, and calls that
+testing the fulfilment of the earlier verse: "and the Scripture was fulfilled
+that says, 'Abraham believed God, and it was counted to him as righteousness'"
+(James 2:23).
+
 ## What the checking finds
 
-- **Granted the reading of the ceremony, Abraham was counted righteous with no
-  work as a condition** (`genesisFifteen_establishes`).
-- **Granted the reading tied to Genesis 22, he was not**
-  (`secondTempleAbraham_establishes`). Both positions can be held without
-  contradiction.
-- **The texts of Genesis alone do not decide between them.** Genesis 15:6, the
-  ceremony of 15:12–17, and Genesis 22:16–18 are kept alike by both readings
-  (`genesis_leaves_abraham_open`). What decides is the reading of the ceremony,
-  and that reading is rated `disputed`.
+- **Read from the ceremony, Abraham was counted righteous with no work as a
+  condition** (`genesisFifteen_establishes`).
+- **Read from his testing, he was not** (`secondTempleAbraham_establishes`), but
+  only through the reading of 15:6 that Genesis refutes.
+- **The texts of Genesis 15 and 22, quoted alone, do not decide**
+  (`genesis_leaves_abraham_open`): it takes the order of the narrative to strike
+  the other reading.
+- **No dissent found survives, so the step stands at `wellSupported` under every
+  standard** (`abraham_step_ratings`). The rating is worked out, not assigned: it
+  would fall again if a verified reader argued that the counting of 15:6 was
+  conditioned on Abraham's obedience in a way the order of Genesis does not
+  refute, for example on his leaving Haran (Genesis 12:4). Hebrews calls that
+  obedience itself an act of faith: "By faith Abraham obeyed when he was called"
+  (Hebrews 11:8).
 
 The Reformed answer to Genesis 22 is the answer this library already gives to
 James: Abraham's offering of Isaac shows the faith that was counted to him,
@@ -135,16 +210,18 @@ def secondTempleOnAbrahamSource : Source :=
   , confidence := .disputed }
 
 /-- **Abraham, read from his testing.** From Genesis 15:6 and 22:16–18, with 1
-Maccabees 2:52 and Sirach 44:20, the righteousness counted to Abraham is tied to
-his obedience when tested. -/
+Maccabees 2:52 and Sirach 44:20, and the reading 1 Maccabees gives Genesis 15:6,
+that what was counted was credited for his faithfulness when tested, the
+righteousness counted to Abraham is tied to his obedience. -/
 @[solaFideDefs]
 def secondTempleAbrahamLine : Line Claim :=
   { name := "Abraham found faithful when tested (1 Maccabees 2:52; Sirach 44:20)"
   , grounds :=
-      [p .gen15_6AbramBelieved, p .gen22_16BecauseYouObeyed, p .abrahamFoundFaithfulWhenTested]
+      [ p .gen15_6AbramBelieved, p .gen22_16BecauseYouObeyed, p .abrahamFoundFaithfulWhenTested
+      , p .countingWasForTheTesting ]
   , step :=
-      ⋀ [p .gen15_6AbramBelieved, p .gen22_16BecauseYouObeyed, p .abrahamFoundFaithfulWhenTested]
-        ➝ notP .abrahamCountedRighteousWithoutWorks
+      ⋀ [ p .gen15_6AbramBelieved, p .gen22_16BecauseYouObeyed, p .abrahamFoundFaithfulWhenTested
+        , p .countingWasForTheTesting ] ➝ notP .abrahamCountedRighteousWithoutWorks
   , delivers := notP .abrahamCountedRighteousWithoutWorks
   , inference := some secondTempleOnAbrahamSource }
 
@@ -163,16 +240,17 @@ def secondTempleAbraham : ArgumentPackage Claim :=
 /-- The Reformed step: Abraham believed and it was counted to him (Genesis 15:6),
 before he was circumcised (Romans 4:10), and the covenant that followed bound God
 alone (15:12–17). So nothing he did was a condition of what was counted to him.
-Rated `disputed`. Weinfeld, cited for the reading of the covenant as a grant,
-holds that a grant rewards "loyalty and good deeds already performed" and ties
-Abraham's to Genesis 26:5 (as Knoppers reports him): he grants the reading of the
-ceremony and denies that nothing Abraham did was a condition. -/
+Its support is Paul's own argument from the same verse and its timing (Romans
+4:3–12), rated `wellSupported`. The rating the page gives is worked out from the
+dissents found against it (`abraham_step_ratings`). -/
 def genesisFifteenSource : Source :=
   { primary := .scripture [{ ref := .range ⟨.romans, 4, 3, 4, 12⟩ }]
   , supporting :=
-      [ .work robertsonChristOfTheCovenants .whole, .work klineKingdomPrologue .whole ]
+      [ .work calvinGenesis (.adLoc ⟨.genesis, 22, 15⟩)
+      , .work calvinCatholicEpistles (.adLoc ⟨.james, 2, 23⟩)
+      , .work robertsonChristOfTheCovenants .whole, .work klineKingdomPrologue .whole ]
   , tradition := .reformedProtestant
-  , confidence := .disputed }
+  , confidence := .wellSupported }
 
 /-- **Abraham, read from the ceremony.** From Genesis 15:6, Romans 4:10, the
 ceremony of Genesis 15:12–17 and the reading of it as God's oath alone, Abraham
@@ -239,6 +317,7 @@ to his testing, from 1 Maccabees and Sirach, is not held. -/
 def genesisFifteenReading : Valuation Claim := fun a =>
   match a with
   | .abrahamFoundFaithfulWhenTested => False
+  | .countingWasForTheTesting => False
   | .justificationHasDegrees => False
   | .worksMeritIncreaseOfJustification => False
   | .jamesJustifyDenotesIncrease => False
@@ -318,5 +397,292 @@ theorem no_degrees_answers_james_on_abraham : Establishes verdictOnJamesIncrease
 theorem verdictOnJamesIncrease_is_satisfiable :
     Satisfiable verdictOnJamesIncrease.premises := by
   satisfied_by genesisFifteenReading [solaFideDefs]
+
+/-! ### Weinfeld's grant, and the bridge it would need -/
+
+/-- Weinfeld's step: the covenant of Genesis 15 is a grant, a grant rewards
+loyalty already shown, and Genesis 22:18 and 26:5 give the blessing "because"
+Abraham obeyed. So the grant rewarded his obedience. Rated `disputed`: Knoppers
+argues that Weinfeld's division of grants from treaties is overdrawn. -/
+def weinfeldGrantSource : Source :=
+  { primary := .work weinfeldCovenantOfGrant (.page 185)
+  , tradition := .criticalScholarship
+  , confidence := .disputed }
+
+/-- **Weinfeld's grant.** From the reading of Genesis 15 as one-sided, what a
+grant was, and Genesis 22:18 and 26:5, the grant to Abraham rewarded his
+obedience. -/
+@[solaFideDefs]
+def weinfeldGrantLine : Line Claim :=
+  { name := "Abraham's covenant as a royal grant (Weinfeld)"
+  , grounds :=
+      [ p .gen15CovenantIsGodsOathAlone, p .grantRewardsPastLoyalty
+      , p .gen22_16BecauseYouObeyed ]
+  , step :=
+      ⋀ [ p .gen15CovenantIsGodsOathAlone, p .grantRewardsPastLoyalty
+        , p .gen22_16BecauseYouObeyed ] ➝ p .abrahamsGrantRewardsHisObedience
+  , delivers := p .abrahamsGrantRewardsHisObedience
+  , inference := some weinfeldGrantSource }
+
+/-- **Weinfeld, on Abraham**, as his own claims carry him: the grant to Abraham
+rewarded his obedience. -/
+@[solaFideDefs]
+def weinfeldOnAbraham : ArgumentPackage Claim :=
+  { name := "Weinfeld, on Abraham's grant"
+  , cite := baseCite
+  , premises := weinfeldGrantLine.premises
+  , conclusion := p .abrahamsGrantRewardsHisObedience
+  , conclusionLabel := "the grant to Abraham rewarded his obedience"
+  , inferences := [weinfeldGrantSource] }
+
+/-- Weinfeld's reading, with the counting of Genesis 15:6 tied to Abraham's
+works: the grant rewarded his obedience, and he was not counted righteous
+without works. -/
+def weinfeldWithWorksReading : Valuation Claim := fun a =>
+  match a with
+  | .abrahamCountedRighteousWithoutWorks => False
+  | _ => True
+
+/-- Weinfeld's reading, with the counting of Genesis 15:6 left as the text gives
+it: the grant rewarded his obedience, and what was counted at 15:6 was his
+believing, with no work as its condition. -/
+def weinfeldWithFaithReading : Valuation Claim := fun a =>
+  match a with
+  | .countingWasForTheTesting => False
+  | _ => True
+
+/-- **What Genesis reads**: Genesis 15:6 counts Abram's believing as
+righteousness, and the testing comes afterwards, "after these things" (Genesis
+22:1). So what was counted at 15:6 was not credited for the faithfulness of
+Genesis 22. Paul argues from the same order in Romans 4:10, of circumcision. -/
+def genesisReadsTheOrder : Refutation Claim :=
+  { claim := .countingWasForTheTesting
+  , reads := "Genesis 15:6 counts Abram's believing as righteousness; the testing comes " ++
+      "\"after these things\" (Genesis 22:1)"
+  , reading :=
+      { primary := .scripture
+          [{ ref := .verse ⟨.genesis, 15, 6⟩ }, { ref := .verse ⟨.genesis, 22, 1⟩ }]
+      , supporting := [.work calvinCatholicEpistles (.adLoc ⟨.james, 2, 23⟩)]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .consensus } }
+
+/-! ### Kuruvilla on the Aqedah -/
+
+/-- Kuruvilla's step: the oath of Genesis 22:16–18 is sworn "because you have
+done this" and "because you have obeyed my voice", so the blessing it swears is
+augmented because of Abraham's obedience. Rated `disputed`: Calvin accepts the
+text and reads the oath as "nothing more than confirmation". -/
+def kuruvillaSource : Source :=
+  { primary := .work kuruvillaAqedah (.page 507)
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .disputed }
+
+/-- **The Aqedah's blessing, augmented for obedience** (Kuruvilla). -/
+@[solaFideDefs]
+def kuruvillaLine : Line Claim :=
+  { name := "The blessing of Genesis 22, augmented for obedience (Kuruvilla)"
+  , grounds := [p .gen15_6AbramBelieved, p .gen22_16BecauseYouObeyed]
+  , step :=
+      ⋀ [p .gen15_6AbramBelieved, p .gen22_16BecauseYouObeyed] ➝
+        p .aqedahBlessingAugmentedForObedience
+  , delivers := p .aqedahBlessingAugmentedForObedience
+  , inference := some kuruvillaSource }
+
+/-- **Kuruvilla, on the Aqedah**: the blessing of Genesis 22 was augmented
+because of Abraham's obedience. -/
+@[solaFideDefs]
+def kuruvillaOnTheAqedah : ArgumentPackage Claim :=
+  { name := "Kuruvilla, on the Aqedah"
+  , cite := baseCite
+  , premises := kuruvillaLine.premises
+  , conclusion := p .aqedahBlessingAugmentedForObedience
+  , conclusionLabel := "the blessing of Genesis 22 was augmented for obedience"
+  , inferences := [kuruvillaSource] }
+
+/-- **Kuruvilla, against the step from Genesis 15.** He grants Genesis 15:6 and
+reads the oath of Genesis 22 as a reward for obedience. His claims reach the
+augmented blessing, and say nothing of the condition of what was counted at
+15:6. -/
+def kuruvillaAssessment : Assessment Claim where
+  dissenter := "Kuruvilla, The Aqedah"
+  against := genesisFifteenLine.name
+  dissent :=
+    { claim := p .abrahamCountedRighteousWithoutWorks
+    , grounds := genesisFifteenLine.grounds
+    , position := kuruvillaOnTheAqedah }
+  findings :=
+    { consistent := true, denies := false, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
+  checked := by horn_certify
+
+/-- **Weinfeld, against the step from Genesis 15.** As his own claims carry him,
+he does not deny the step. He reaches the grant, and says nothing of what was
+counted at 15:6. Every claim he asserts is Scripture or the evidence of the
+ancient grants, so he would meet the evidence and tradition standards, if he
+denied the step. -/
+def weinfeldAssessment : Assessment Claim where
+  dissenter := "Weinfeld, The Covenant of Grant"
+  against := genesisFifteenLine.name
+  dissent :=
+    { claim := p .abrahamCountedRighteousWithoutWorks
+    , grounds := genesisFifteenLine.grounds
+    , position := weinfeldOnAbraham }
+  findings :=
+    { consistent := true, denies := false, grants := true, argued := true, bareDenial := false
+    , unadmitted :=
+        [ (.evidence, []), (.tradition, [])
+        , (.scriptural, [.grantRewardsPastLoyalty]) ] }
+  checked := by horn_certify
+
+/-- **1 Maccabees, against the step from Genesis 15, before anything is struck.**
+It denies the step, through its reading of Genesis 15:6: that what was counted
+was credited for Abraham's faithfulness when tested. Every claim it asserts is
+a text or a reading of one, so it is an argument under the evidence and
+tradition standards. Under the Scripture standard it is not: 1 Maccabees is
+not Scripture in the canon these chapters read, and neither is its reading of
+Genesis 15:6. -/
+def maccabeesUnstruckAssessment : Assessment Claim where
+  dissenter := "1 Maccabees 2:52, unstruck"
+  against := genesisFifteenLine.name
+  dissent :=
+    { claim := p .abrahamCountedRighteousWithoutWorks
+    , grounds := genesisFifteenLine.grounds
+    , position := secondTempleAbraham }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted :=
+        [ (.evidence, []), (.tradition, [])
+        , (.scriptural, [.abrahamFoundFaithfulWhenTested, .countingWasForTheTesting]) ] }
+  checked := by horn_certify
+
+/-- **1 Maccabees, against the step from Genesis 15**, with what Genesis reads
+struck: the reading that the counting of 15:6 was credited for the testing,
+which Genesis places "after these things" (22:1). -/
+def maccabeesAssessment : Assessment Claim where
+  dissenter := "1 Maccabees 2:52"
+  against := genesisFifteenLine.name
+  dissent :=
+    { claim := p .abrahamCountedRighteousWithoutWorks
+    , grounds := genesisFifteenLine.grounds
+    , position := secondTempleAbraham
+    , refuted := [genesisReadsTheOrder] }
+  findings :=
+    { consistent := true, denies := false, grants := true, argued := true, bareDenial := false
+    , unadmitted :=
+        [ (.evidence, []), (.tradition, [])
+        , (.scriptural, [.abrahamFoundFaithfulWhenTested]) ]
+    , struck := [.countingWasForTheTesting] }
+  checked := by horn_certify
+
+/-- **Weinfeld's grant leaves the counting open.** His premises, that Genesis 15 is
+a one-sided grant, that a grant rewarded loyalty already shown, and that the
+blessing came "because" Abraham obeyed, are kept alike by a reading on which
+Abraham was counted righteous without works and by one on which he was not.
+What they establish is the grant; what was counted at 15:6 is another claim.
+
+What this does not claim: that Weinfeld is wrong about the grant. It may well
+have rewarded Abraham's obedience. The result says that, even so, nothing
+follows about the condition of what was counted to him. -/
+@[headline]
+theorem weinfeld_leaves_the_counting_open :
+    Independent weinfeldOnAbraham.premises (p .abrahamCountedRighteousWithoutWorks) := by
+  leaves_open weinfeldWithWorksReading weinfeldWithFaithReading [solaFideDefs]
+
+#print axioms weinfeld_leaves_the_counting_open
+
+/-- **Weinfeld's grant reaches its own conclusion.** On his premises, the grant to
+Abraham rewarded his obedience. -/
+theorem weinfeld_reaches_the_grant : Establishes weinfeldOnAbraham := by
+  establish [solaFideDefs]
+
+/-- Weinfeld's premises can be held without contradiction. -/
+theorem weinfeldOnAbraham_is_satisfiable : Satisfiable weinfeldOnAbraham.premises := by
+  satisfied_by weinfeldWithFaithReading [solaFideDefs]
+
+/-- **Weinfeld does not dissent from the step from Genesis 15**, under any
+standard. His claims do not deny it: they reach the grant, not the counting.
+
+What this does not claim: that Weinfeld would agree with the step. A reader
+who adds that what was counted at 15:6 was credited for Abraham's obedience
+would deny it; that is what 1 Maccabees does. -/
+@[headline]
+theorem weinfeld_does_not_reach_the_counting :
+    ∀ s, ¬ Dissent.Credible s weinfeldAssessment.dissent := by
+  intro s
+  exact weinfeldAssessment.complete (by cases s <;> decide)
+
+#print axioms weinfeld_does_not_reach_the_counting
+
+/-- **Unstruck, 1 Maccabees is an argument against the step**, under the evidence
+and tradition standards: it reads Genesis 15:6 as credited for the testing, and
+from that denies that Abraham was counted righteous without works. -/
+theorem maccabees_unstruck_counts :
+    Dissent.Credible .evidence maccabeesUnstruckAssessment.dissent ∧
+      Dissent.Credible .tradition maccabeesUnstruckAssessment.dissent :=
+  ⟨maccabeesUnstruckAssessment.sound (by decide),
+    maccabeesUnstruckAssessment.sound (by decide)⟩
+
+/-- **Genesis strikes the reading 1 Maccabees needs, and then it no longer
+dissents.** Genesis counts Abram's believing at 15:6 and places the testing
+"after these things" (22:1). With the reading that the counting was credited for
+the testing struck, nothing in 1 Maccabees' position denies the step, under any
+standard.
+
+What this does not claim: that 1 Maccabees says nothing true of Abraham. He was
+found faithful when tested. What the text refutes is only that the counting of
+15:6 was credited for it. -/
+@[headline]
+theorem genesis_strikes_the_maccabees_reading :
+    maccabeesAssessment.findings.struck = [.countingWasForTheTesting] ∧
+      ∀ s, ¬ Dissent.Credible s maccabeesAssessment.dissent :=
+  ⟨rfl, fun s => maccabeesAssessment.complete (by cases s <;> decide)⟩
+
+#print axioms genesis_strikes_the_maccabees_reading
+
+/-- **Kuruvilla does not dissent from the step from Genesis 15**, under any
+standard. His claims reach the blessing of Genesis 22, augmented for obedience,
+and say nothing of the condition of what was counted at 15:6.
+
+What this does not claim: that Kuruvilla is wrong about Genesis 22. Calvin reads
+the oath as "nothing more than confirmation", and Kuruvilla answers him; that
+disagreement is about the blessing of Genesis 22, not the counting of 15:6. -/
+@[headline]
+theorem kuruvilla_does_not_reach_the_counting :
+    ∀ s, ¬ Dissent.Credible s kuruvillaAssessment.dissent := by
+  intro s
+  exact kuruvillaAssessment.complete (by cases s <;> decide)
+
+#print axioms kuruvilla_does_not_reach_the_counting
+
+/-- **The step from Genesis 15, with the dissents found against it**: Weinfeld's
+grant, Kuruvilla on the Aqedah, and 1 Maccabees, the strongest known, which
+alone denies the step. -/
+def genesisFifteenStep : RatedStep Claim where
+  step := genesisFifteenLine.name
+  support := genesisFifteenSource
+  register := [weinfeldAssessment, maccabeesAssessment, kuruvillaAssessment]
+  strongest := some 1
+
+/-- **The step from Genesis 15 stands at `wellSupported` under every standard.**
+No dissent found survives its checks. Weinfeld's and Kuruvilla's do not deny the
+step: they reach the grant and the blessing of Genesis 22, not the counting of
+15:6. 1 Maccabees denies it only through its reading of Genesis 15:6, which
+Genesis itself refutes by its order.
+
+What this does not claim: that no reader could dissent. A verified reader who
+argued that the counting of 15:6 was conditioned on Abraham's obedience without
+tying it to the later testing, for example on his leaving Haran (Genesis 12:4),
+would be a new dissent, and the rating would be worked out again. Hahn's
+*Kinship by Covenant*, which treats the covenant with Abraham as a grant, has not
+been read, and is not encoded. -/
+@[headline]
+theorem abraham_step_ratings :
+    genesisFifteenStep.ratings =
+      [ (.evidence, .stands .wellSupported)
+      , (.tradition, .stands .wellSupported)
+      , (.scriptural, .stands .wellSupported) ] := by
+  decide +kernel
+
+#print axioms abraham_step_ratings
 
 end TestimonyArguments.SolaFide

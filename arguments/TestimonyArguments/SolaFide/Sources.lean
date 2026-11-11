@@ -837,6 +837,52 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work nabre (.adLoc ⟨.sirach, 44, 20⟩)]
         , tradition := .secondTempleJewish
         , confidence := .consensus } }
+  | .grantRewardsPastLoyalty =>
+    { label := "A royal grant rewarded loyalty already shown"
+    , kind := .historical
+      -- Weinfeld, p. 185: "while the grant is a reward for loyalty and good
+      -- deeds already performed, the treaty is an inducement for future
+      -- loyalty". Quoted as Knoppers (JAOS 116, 1996) quotes it; Weinfeld's
+      -- own pages were not read. Knoppers argues that the dichotomy is
+      -- overdrawn, so the claim is `disputed`.
+    , source :=
+        { primary := .work weinfeldCovenantOfGrant (.page 185)
+        , supporting := [.work knoppersRoyalGrants (.page 672)]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | .abrahamsGrantRewardsHisObedience =>
+    { label := "The grant to Abraham rewarded his obedience (Genesis 22:18; 26:5)"
+    , kind := .interpretive
+    , source :=
+        { primary := .work weinfeldCovenantOfGrant .whole
+        , supporting :=
+            [ .scripture
+                [{ ref := .verse ⟨.genesis, 22, 18⟩ }, { ref := .verse ⟨.genesis, 26, 5⟩ }] ]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | .aqedahBlessingAugmentedForObedience =>
+    { label := "The blessing of Genesis 22:16–18 was augmented because of Abraham's obedience"
+    , kind := .interpretive
+      -- Kuruvilla, p. 507: "Contingent upon his obedience, every aspect of the
+      -- earlier promises to Abraham is now 'augmented and guaranteed by the LORD
+      -- unreservedly'"; p. 506 n. 58: "more like an unexpected bonus, which, of
+      -- course, is what grace is all about". Calvin on 22:15 denies it: the
+      -- promise "receives nothing more than confirmation".
+    , source :=
+        { primary := .work kuruvillaAqedah (.page 507)
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .countingWasForTheTesting =>
+    { label := "The righteousness counted at Genesis 15:6 was credited for Abraham's " ++
+        "faithfulness when tested"
+    , kind := .interpretive
+      -- 1 Maccabees 2:52 (NABRE): "Was not Abraham found faithful in trial, and
+      -- it was credited to him as righteousness?", cross-referenced to Genesis
+      -- 15:6 and 22:1–18.
+    , source :=
+        { primary := .work nabre (.adLoc ⟨.firstMaccabees, 2, 52⟩)
+        , tradition := .secondTempleJewish
+        , confidence := .disputed } }
   | .rewardRenderedToMerits =>
     { label := "The reward God renders to the works of the justified is rendered to them " ++
         "as merits"
