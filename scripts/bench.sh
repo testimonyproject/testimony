@@ -2,12 +2,17 @@
 # Engine benchmarks: run arguments/bench/Engine.lean and report each
 # benchmark's wall time and peak memory.
 #
-# Usage: scripts/bench.sh [--runs N] [--filter TEXT] [--out FILE.json]
-#                         [--tree DIR] [--bench FILE.lean]
+# Usage: scripts/bench.sh [--runs N] [--filter TEXT] [--shard K/N]
+#                         [--out FILE.json] [--tree DIR] [--bench FILE.lean]
 #
 # Run from anywhere in the repository after `lake build` in arguments/.
 #   --runs N        repetitions of every benchmark (default: each one's own)
 #   --filter TEXT   only the benchmarks whose name contains TEXT
+#   --shard K/N     only the K-th of N shards (K from 1): the benchmarks at
+#                   positions K, K+N, K+2N, ... in the file, after --filter,
+#                   and the calibration benchmark in every shard, so that each
+#                   machine a shard runs on can be checked for drift. CI runs
+#                   the shards as jobs of their own
 #   --out FILE      also write every sample as JSON in Google Benchmark's
 #                   format, one entry per repetition, for
 #                   scripts/bench-compare.py (or Google Benchmark's compare.py)
@@ -26,17 +31,22 @@
 
 set -euo pipefail
 
-runs="" filter="" out="" tree="" bench=""
+runs="" filter="" shard="" out="" tree="" bench=""
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --runs) runs="$2"; shift 2 ;;
     --filter) filter="$2"; shift 2 ;;
+    --shard) shard="$2"; shift 2 ;;
     --out) out="$2"; shift 2 ;;
     --tree) tree="$2"; shift 2 ;;
     --bench) bench="$(cd "$(dirname "$2")" && pwd)/$(basename "$2")"; shift 2 ;;
     *) echo "bench: unknown argument $1" >&2; exit 2 ;;
   esac
 done
+if [[ -n "$shard" && ! "$shard" =~ ^([1-9][0-9]*)/([1-9][0-9]*)$ ]] \
+    || [[ -n "$shard" && "${BASH_REMATCH[1]}" -gt "${BASH_REMATCH[2]}" ]]; then
+  echo "bench: --shard takes K/N with 1 <= K <= N, not $shard" >&2; exit 2
+fi
 
 root="${tree:-$(dirname "$0")/..}"
 root="$(cd "$root" && pwd)"
@@ -49,7 +59,7 @@ LEAN_PATH="$(lake env printenv LEAN_PATH)"
 lean="$(lake env printenv LEAN_SYSROOT)/bin/lean"
 export LEAN_PATH
 
-BENCH_RUNS="$runs" BENCH_FILTER="$filter" python3 - "$out" "$commit" "$lean" "$bench" <<'EOF'
+BENCH_RUNS="$runs" BENCH_FILTER="$filter" BENCH_SHARD="$shard" python3 - "$out" "$commit" "$lean" "$bench" <<'EOF'
 import json, os, re, subprocess, sys, time
 
 out, commit, lean, FILE = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
@@ -67,6 +77,12 @@ def lean_run(extra_env):
 filter_ = os.environ.get("BENCH_FILTER", "")
 names = [n for n in re.findall(r"bench-name (.+)", lean_run({"BENCH_LIST": "1"}))
          if filter_ in n]
+# A shard: every N-th benchmark by position, and calibration in each, since it
+# is what shows whether the machine a shard ran on drifted.
+if shard := os.environ.get("BENCH_SHARD", ""):
+    k, n = (int(x) for x in shard.split("/"))
+    names = [x for i, x in enumerate(names)
+             if i % n == k - 1 or x.startswith("calibration")]
 if not names:
     sys.exit("bench: no benchmark matches")
 
