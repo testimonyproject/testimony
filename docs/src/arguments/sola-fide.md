@@ -163,7 +163,7 @@ part he appears to contradict.
 ## The positions weighed against each other
 
 So far the question has been what follows from each position's own premises.
-The chapter "Weighing the positions" asks a different one: when the positions
+The chapter [Weighing the positions](sola-fide/weighing.md) asks a different one: when the positions
 are set against one another, which survive? It uses three words in a sense of
 its own.
 
@@ -212,7 +212,7 @@ Each later chapter takes one question a reader brings to this debate.
   gospel, and the meaning of Paul's word. *Faith alone* still is not, and
   neither is Luke's "faith suffices". Campbell, Sanders and Dunn, Jervell, and
   Aquinas each still stand against one strand, and Chrysostom against all four
-  ("Weighing the positions").
+  ([Weighing the positions](sola-fide/weighing.md)).
 - **What does Jesus himself say?** The tax collector "went down to his house
   justified" (Luke 18:14). Trent's case is consistent with every word of the
   parable, and meets it where it meets Luke 7:50. Matthew 7:21–23 and 19:16–22
@@ -225,9 +225,9 @@ Each later chapter takes one question a reader brings to this debate.
   baptism how we are justified?").
 - **What does "justified by works" mean in James?** The same kind of hearing,
   over James 2:24 and the two other texts Trent cites for the increase of
-  justification ("James 2:24" and "Trent's two Latin texts").
+  justification ([James 2:24](sola-fide/james.md) and [Trent's two Latin texts](sola-fide/latin-texts.md)).
 - **How firm are the ratings?** Each rating a verdict depends on is recomputed
-  under three standards ("Why each step is rated as it is").
+  under three standards ([Why each step is rated as it is](sola-fide/ratings.md)).
 
 The claims themselves, each with its number, its source and its rating, are
 listed in the appendix, "The claims and their sources".

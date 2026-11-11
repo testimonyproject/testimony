@@ -133,7 +133,9 @@ reader reads. A section that only organises the declarations under it, a
 heading with no prose, goes behind the chapter, and so does a section opened
 with `####`, which is how a module marks a passage that is about the machinery
 rather than the argument. `argdoc` fails if the outline leaves out a module or
-names one twice.
+names one twice. Prose that names another chapter in quotation marks, `the
+chapter "Weighing the positions"`, or by the part of its title before a colon,
+`"James 2:24"`, is set on the site as a link to it.
 
 That is why there is no hand-written page describing an argument. There is
 nothing to keep in step, because there is no second copy — the docstring is the

@@ -916,7 +916,7 @@ can mean elsewhere. So Paul's "justify" does not mean renewal.
 
 The line says nothing about what God does when he justifies. That is the other
 way of reading Trent's definition, and this line does not reach it
-(the chapter "What Trent means by justification").
+(the chapter [What Trent means by justification](trents-definition.md)).
 
 <div class="testimony-math">
 \[

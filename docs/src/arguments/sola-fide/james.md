@@ -74,7 +74,7 @@ authority is "juridical", that is, a matter of the Church's approval, and not a
 claim about the original wording (§21). Taken that way, Trent's "as it is
 written" at these two verses quotes the Church's approved Latin and not the
 inspired author's words, and is consistent with everything Pius XII says
-(the chapter "Trent's two Latin texts"). What it then rests on is the Church's
+(the chapter [Trent's two Latin texts](latin-texts.md)). What it then rests on is the Church's
 authority. Pius XII himself asks that a doctrine taught in this way be confirmed
 from the original texts (§22), and at these two verses the originals do not
 confirm it.
@@ -94,7 +94,7 @@ which is the question above.
 
 ## The words used here
 
-These are the words of the first chapter, which "Weighing the positions" uses
+These are the words of the first chapter, which [Weighing the positions](weighing.md) uses
 too. One position
 **defeats** another when it contradicts something the other rests on, concludes
 or derives, and is not the weaker. A position is **forced** when it must be
@@ -124,12 +124,12 @@ defended** when none does.
   denies that the reward is given to merits. When only evidence anyone can check
   is counted, neither of Trent's readings of what works do stands as an
   objection, and the Reformed reconciliation is forced
-  (the chapter "Why each step is rated as it is").
+  (the chapter [Why each step is rated as it is](ratings.md)).
 - **Cannot be defended, at the ratings the sources were given.** The reading on
   which James's word means renewal because Paul's does (`renewalWordLine`). The
   argument from James's word defeats it. When a tradition's own teaching is
   allowed to count as an objection, it does stand as one, and then the question
-  is contested (the chapter "Why each step is rated as it is"). It also meets the
+  is contested (the chapter [Why each step is rated as it is](ratings.md)). It also meets the
   Reformed reconciliation, and the two defeat each other: the reconciliation
   says James's word does not have Paul's sense, and this reading says it does.
 
@@ -150,7 +150,7 @@ it would have made Trent's reading impossible to defend, and that verdict would
 have come from the rating and not from the evidence.
 
 As a step (`fruitLine`), its rating is now worked out and not simply assigned
-(the chapter "Why each step is rated as it is"). Its support is `wellSupported`: the
+(the chapter [Why each step is rated as it is](ratings.md)). Its support is `wellSupported`: the
 *Joint Declaration* confesses works to be fruits (§37) and not the basis of
 justification (§25). On whether works contribute anything further, it records
 the sides apart: Catholics hold that good works "contribute to growth in grace"
@@ -192,7 +192,7 @@ reward the texts promise is given to merits, is a claim it makes on its own word
 So the Reformed reconciliation now rests on Scripture and not on the
 Confession's word. In this debate, at the ratings the sources were given,
 whether works are only fruit is still contested (`worksContested`). When only
-checkable evidence counts, it is not (the chapter "Why each step is rated as it is").
+checkable evidence counts, it is not (the chapter [Why each step is rated as it is](ratings.md)).
 
 ## What has been re-examined, and what has not
 
@@ -200,7 +200,7 @@ The steps in the argument from James's word and the argument about James's faith
 are cited at `wellSupported`.
 
 The rating of the step about the word is now worked out as well
-(the chapter "Why each step is rated as it is"). The strongest known objection to it is
+(the chapter [Why each step is rated as it is](ratings.md)). The strongest known objection to it is
 the reading that takes James's word as Paul's and Paul's as renewal
 (`renewalWordLine`). That reading accepts the step's starting points and argues
 for the opposite conclusion. But one of its own starting points, that James uses
@@ -677,7 +677,7 @@ deepened" (§38). That is the point canon 24 makes, and it is weighed as Trent's
 objection, not as part of this step's support.
 
 Whether an objection brings the step down is worked out separately
-(the chapter "Why each step is rated as it is"). Trent objects twice: in canon 24, and
+(the chapter [Why each step is rated as it is](ratings.md)). Trent objects twice: in canon 24, and
 in chapter 16's reading of the reward texts. When a tradition's teaching counts,
 both stand, and the step is `disputed`. When only checkable evidence counts,
 neither does, because each rests at one claim on the council's word.
@@ -1677,7 +1677,7 @@ What this does not claim: that Trent's citation is an error of doctrine. Taken
 as Pius XII takes Trent's decree on the Vulgate, as a reading the Church
 approves and holds free from error in faith, it is consistent with all he says,
 and rests on the Church's authority and not on the inspired text
-(the chapter "Trent's two Latin texts").
+(the chapter [Trent's two Latin texts](latin-texts.md)).
 
 ```lean
 theorem trent_on_revelation_indefensible : ∀ (S : Set JamesParty),

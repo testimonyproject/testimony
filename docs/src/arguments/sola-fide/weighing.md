@@ -173,7 +173,7 @@ claim that faith saves and not that faith alone does.
 ### What Trent's definition claims
 
 The definition can be taken two ways, and
-the chapter "What Trent means by justification" answers both (`whatTrentsDefinitionClaims`).
+the chapter [What Trent means by justification](trents-definition.md) answers both (`whatTrentsDefinitionClaims`).
 Taken as a claim about Paul's word, it cannot be held with the evidence for what
 the word means, and in this debate it cannot be defended. Taken as a claim about
 what God does in justifying, the argument from the word does not reach it. What
@@ -236,7 +236,7 @@ Finnish reading of Luther would each be new arguments to weigh. So would a cited
 argument that Paul's "justify", granted to be a courtroom word, still means
 renewal: none was found, and the rating of the argument from the word says so.
 Romans 4 as an argument about what God does (`romansFourCase`) is set against
-Trent in the chapter "What Trent means by justification", and is not added to
+Trent in the chapter [What Trent means by justification](trents-definition.md), and is not added to
 this debate. It meets Trent exactly
 where Paul's gospel does, at Trent's definition, from a step rated `disputed`,
 and a position of its own would be a second argument to weigh.
@@ -265,7 +265,7 @@ Trent's definition taken as a claim about what God does is not touched by
 anything about the word. There Trent and the Reformers tie: each defeats the
 other, and the ratings, all `disputed`, cannot choose. The Reformation debate,
 heard alone, comes down to what justification *is*, which is the question of
-the chapter "What Trent means by justification" (`whatTrentsDefinitionClaims`).
+the chapter [What Trent means by justification](trents-definition.md) (`whatTrentsDefinitionClaims`).
 
 ### If Trent were not heard, would Scripture establish sola fide?
 
@@ -3055,7 +3055,7 @@ between them runs in both directions.
 What would decide between them is what justification *is*. No rating here
 settles that. `whyTheDominicalCaseStandsAgainstTrent` places Luke's disagreement
 with Trent at Trent's definition. `whereTrentPartsFromPaul`, in the chapter
-"Where Trent parts from Paul", places Paul's at one step: that a verdict on
+[Where Trent parts from Paul](trent-and-paul.md), places Paul's at one step: that a verdict on
 Christ's finished work excludes the renewal worked in us. The one thing the
 ratings do decide is that Trent cannot claim its definition as the meaning of
 Paul's word (`trent_on_pauls_word_indefensible`).

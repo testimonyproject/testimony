@@ -6,7 +6,7 @@
 
 Two of the three texts Trent cites for the increase of justification read
 differently in the Latin Trent quotes and in the Greek
-(the chapter "James 2:24"). "He that is just, let him be justified
+(the chapter [James 2:24](james.md)). "He that is just, let him be justified
 still" is Revelation 22:11 in the Latin Vulgate; the Greek, as the critical
 editions print it, says "let the righteous still do righteousness". "Be not
 afraid to be justified even to death" is Sirach 18:22 in the Vulgate; the Greek
@@ -55,7 +55,7 @@ doctrine taught from the Vulgate be confirmed from the original texts (§22),
 which at these two verses do not confirm it (`pius_finds_no_confirmation`). So
 of the three texts chapter 10 cites, only James 2:24 is left to confirm the
 doctrine from the originals. It is weighed in
-the chapter "James 2:24".
+the chapter [James 2:24](james.md).
 
 ## What this does not show
 
