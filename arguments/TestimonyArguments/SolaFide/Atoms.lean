@@ -477,6 +477,49 @@ inductive Claim
   /-- 1 Peter 2:5 — "a holy priesthood, to offer spiritual sacrifices acceptable to
   God through Jesus Christ". -/
   | firstPeter2_5AcceptableThroughChrist
+  -- Whether justification has degrees: a verdict, and Trent's increase.
+  /-- Justification admits of more and less: the justified "increase in that
+  justice which they have received ... and are still further justified"
+  (Trent, Session VI, ch. 10). **What Trent's increase of justification
+  requires.** -/
+  | justificationHasDegrees
+  /-- Deuteronomy 25:1 and Proverbs 17:15 — "the judges decide between them,
+  acquitting the innocent and condemning the guilty"; "He who justifies the
+  wicked and he who condemns the righteous are both alike an abomination to the
+  LORD". -/
+  | deut25_1JudgesAcquitOrCondemn
+  /-- A verdict acquits or condemns, and has no degrees: one is not more or less
+  acquitted. **The courtroom reading of "justify"**, applied to the verdict
+  itself. -/
+  | verdictAdmitsNoDegrees
+  -- Abraham, counted righteous: Genesis 15, and the reading tied to Genesis 22.
+  /-- Genesis 15:6 — "And he believed the LORD, and he counted it to him as
+  righteousness." -/
+  | gen15_6AbramBelieved
+  /-- Genesis 15:12, 17 — "a deep sleep fell on Abram"; "a smoking fire pot and a
+  flaming torch passed between these pieces". Only the fire and the torch pass
+  between the pieces; Abram is asleep. -/
+  | gen15_17GodAlonePasses
+  /-- Romans 4:10 — "How then was it counted to him? Was it before or after he
+  had been circumcised? It was not after, but before he was circumcised." -/
+  | romans4_10BeforeCircumcision
+  /-- The covenant of Genesis 15 binds God alone: he alone passes between the
+  pieces, as one who swears an oath on his own life (compare Jeremiah 34:18), and
+  "he swore by himself" (Hebrews 6:13). **The Reformed reading of the
+  ritual.** -/
+  | gen15CovenantIsGodsOathAlone
+  /-- Abraham was counted righteous on believing, and nothing he did was a
+  condition of it. **The Reformed conclusion from Genesis 15.** -/
+  | abrahamCountedRighteousWithoutWorks
+  /-- Genesis 22:16–18 and 26:5 — "because you have done this and have not
+  withheld your son"; "because Abraham obeyed my voice and kept my charge, my
+  commandments, my statutes, and my laws". -/
+  | gen22_16BecauseYouObeyed
+  /-- 1 Maccabees 2:52 and Sirach 44:20, in the NABRE — "Was not Abraham found
+  faithful in trial, and it was credited to him as righteousness?"; "when tested
+  was found loyal". Two Jewish writings of the second century before Christ,
+  which tie the counting of Genesis 15:6 to Abraham's testing in Genesis 22. -/
+  | abrahamFoundFaithfulWhenTested
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide

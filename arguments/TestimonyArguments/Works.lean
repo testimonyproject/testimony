@@ -292,6 +292,114 @@ catalogued ISBN is that of a 2001 printing. -/
   , publisher := "Crossway"
   , place := some "Wheaton, Illinois" }
 
+/-- Calvin's *Antidote* to the decree on justification of Trent's sixth session,
+written in 1547. Beveridge's translation numbers the decree's chapter on
+the increase of justification XI ("Under the eleventh head"); in Trent's own
+numbering it is chapter 10. Quoted from the Internet Archive's scan of the
+1851 volume, whose title page gives the year (the scan's catalogue entry says
+1844). -/
+@[bib_entry] def calvinAntidote : BibEntry := .book
+  { core :=
+      { key := "calvin-antidote-trent-1851"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "Henry" "Beveridge"] }
+      , title := "Acts of the Council of Trent, with the Antidote"
+      , year := some { value := 1851 }
+      , identifiers :=
+          [ .url "https://archive.org/details/tractsrelatingto3calv" (some "2026-11-11") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , series := some "Tracts Relating to the Reformation"
+  , volume := some "3" }
+
+/-- Buchanan's Cunningham Lectures on justification. Justification is "an act ...
+which is completed at once, and not a work which is gradually accomplished by
+successive acts", and "there is no second Justification, properly so called"
+(p. 251, read on the page image). -/
+@[bib_entry] def buchananJustification : BibEntry := .book
+  { core :=
+      { key := "buchanan-justification-1867"
+      , contributors := { authors := [.person "James" "Buchanan"] }
+      , title := "The Doctrine of Justification: An Outline of Its History in the " ++
+          "Church, and of Its Exposition from Scripture"
+      , year := some { value := 1867 }
+      , identifiers :=
+          [ .url "https://archive.org/details/doctrineofjustif00buch" (some "2026-11-11") ] }
+  , publisher := "T. & T. Clark"
+  , place := some "Edinburgh" }
+
+/-- Turretin's *Institutes*, volume 2, in Giger's translation. Topic XVI, question
+10 is on the unity, perfection and certainty of justification. Justification is
+perfect, so that in itself it neither grows nor shrinks: in the Latin of the
+1847 Edinburgh edition (XVI.x.11), "expers quoad se incrementi et decrementi,
+nec recipiat magis et minus". The English pages are not verified, so it is
+cited by topic and question. -/
+@[bib_entry] def turretinInstitutes2 : BibEntry := .book
+  { core :=
+      { key := "turretin-institutes-2-1993"
+      , contributors :=
+          { authors := [.person "Francis" "Turretin"]
+          , editors := [.person "James T." "Dennison"]
+          , translators := [.person "George Musgrave" "Giger"] }
+      , title := "Institutes of Elenctic Theology: Eleventh Through Seventeenth Topics"
+      , year := some { value := 1993 }
+      , identifiers := [.isbn "9780875524528"] }
+  , publisher := "P & R Publishing"
+  , place := some "Phillipsburg, N.J."
+  , volume := some "2" }
+
+/-- Kline on Genesis 15 as a covenant ratified by God's oath. Not read; cited as a
+whole for the reading the commentators below share. -/
+@[bib_entry] def klineKingdomPrologue : BibEntry := .book
+  { core :=
+      { key := "kline-kingdom-prologue-2006"
+      , contributors := { authors := [.person "Meredith G." "Kline"] }
+      , title := "Kingdom Prologue: Genesis Foundations for a Covenantal Worldview"
+      , year := some { value := 2006 }
+      , identifiers := [.isbn "9781597525640"] }
+  , publisher := "Wipf and Stock" }
+
+/-- Robertson on the covenants, Genesis 15 among them. Not read; cited as a
+whole. -/
+@[bib_entry] def robertsonChristOfTheCovenants : BibEntry := .book
+  { core :=
+      { key := "robertson-christ-covenants-1980"
+      , contributors := { authors := [.person "O. Palmer" "Robertson"] }
+      , title := "The Christ of the Covenants"
+      , year := some { value := 1980 }
+      , identifiers := [.isbn "0875524184"] }
+  , publisher := "Presbyterian and Reformed" }
+
+/-- Wenham's commentary on Genesis 1–15. Not read; cited as a whole. -/
+@[bib_entry] def wenhamGenesis1 : BibEntry := .book
+  { core :=
+      { key := "wenham-genesis-1-15-1987"
+      , contributors := { authors := [.person "Gordon J." "Wenham"] }
+      , title := "Genesis 1–15"
+      , year := some { value := 1987 }
+      , identifiers := [.isbn "0849902002"] }
+  , publisher := "Word Books"
+  , place := some "Waco, Texas"
+  , series := some "Word Biblical Commentary"
+  , seriesNumber := some "1" }
+
+/-- Weinfeld's comparison of the covenants with Abraham and David to the royal
+grants of the ancient Near East. Volume, issue and DOI from Crossref; the last
+page from the KEIBI index. Not read; cited as a whole. -/
+@[bib_entry] def weinfeldCovenantOfGrant : BibEntry := .article
+  { core :=
+      { key := "weinfeld-covenant-of-grant-1970"
+      , contributors := { authors := [.person "M." "Weinfeld"] }
+      , title := "The Covenant of Grant in the Old Testament and in the Ancient Near East"
+      , year := some { value := 1970 }
+      , identifiers := [.doi "10.2307/598135"] }
+  , journal := "Journal of the American Oriental Society"
+  , volume := some "90"
+  , issue := some "2"
+  , pages := some (184, 203) }
+
 /-- Luther's 1535 lectures on Galatians, for his answer to faith formed by
 charity: at 3:11, "to speak of formed or unformed faith, a sort of double faith,
 is contrary to the Scriptures"; at 3:12, "if the law requires charity, charity
