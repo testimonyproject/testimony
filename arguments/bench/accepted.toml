@@ -149,3 +149,15 @@ benchmark = "satisfied_by: Trent grants the subjective genitive"
 metric = "time"
 up_to = 0.25
 reason = "Sola fide gained fourteen claims (113 to 127) for the chapters on whether justification has degrees and on Abraham (#203). satisfied_by checks a reading against every premise claim by claim, so the same work runs over more claims: about 2 ms on a 27 ms benchmark."
+
+[[accept]]
+benchmark = "checks: ontology"
+metric = "time"
+up_to = 0.20
+reason = "The ontology check reads every claim of every argument. Sola fide gained fourteen claims (113 to 127) for the chapters on whether justification has degrees and on Abraham (#203): the same work over more claims."
+
+[[accept]]
+benchmark = "checks: refutations survive their postulates"
+metric = "time"
+up_to = 0.20
+reason = "The check runs over every non-entailment. The chapters on whether justification has degrees and on Abraham (#203) add six (87 to 93): the same work over more results."
