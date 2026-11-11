@@ -165,6 +165,10 @@ positions in the debate carry.
 | \\(P_{116}\\) | Abraham was counted righteous on believing, with no work as a condition | theological | Reformed Protestant, disputed | Rom 4:3-5; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.18 |
 | \\(P_{117}\\) | Genesis 22:16–18, 26:5: blessed because Abraham obeyed | textual | Christian, historical-grammatical, consensus | Gen 22:16-18; Gen 26:5; [`crossway-esv-2001`](../../bibliography.md#crossway-esv-2001), ad loc. Gen 22:16 |
 | \\(P_{118}\\) | 1 Maccabees 2:52, Sirach 44:20: Abraham found faithful in trial, and it was credited to him as righteousness | textual | Second Temple Jewish, consensus | [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), ad loc. 1 Macc 2:52; [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), ad loc. Sir 44:20 |
+| \\(P_{119}\\) | A royal grant rewarded loyalty already shown | historical | critical scholarship, disputed | [`weinfeld-covenant-of-grant-1970`](../../bibliography.md#weinfeld-covenant-of-grant-1970), p. 185; [`knoppers-royal-grants-1996`](../../bibliography.md#knoppers-royal-grants-1996), p. 672 |
+| \\(P_{120}\\) | The grant to Abraham rewarded his obedience (Genesis 22:18; 26:5) | interpretive | critical scholarship, disputed | [`weinfeld-covenant-of-grant-1970`](../../bibliography.md#weinfeld-covenant-of-grant-1970); Gen 22:18; Gen 26:5 |
+| \\(P_{121}\\) | The righteousness counted at Genesis 15:6 was credited for Abraham's faithfulness when tested | interpretive | Second Temple Jewish, disputed | [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), ad loc. 1 Macc 2:52 |
+| \\(P_{122}\\) | The blessing of Genesis 22:16–18 was augmented because of Abraham's obedience | interpretive | Christian, historical-grammatical, disputed | [`kuruvilla-aqedah-2012`](../../bibliography.md#kuruvilla-aqedah-2012), p. 507 |
 
 </div>
 
