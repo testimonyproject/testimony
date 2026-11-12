@@ -252,7 +252,7 @@ def notAloneIfWorksGround : Formula Claim :=
 def corpora : List (Line Claim) :=
   [paulineLine, paulineFaithLine, hebrewsLine, johannineLine, petrineLine, dominicalLine]
 
-/-! ### The readings, by name
+/-! #### The readings, by name
 
 What an opponent can reject is a corpus's reading. The burden numbers the
 readings by their place among the lines — the corpora, then James — and

@@ -192,13 +192,14 @@ def cite : Claim → AtomMeta
         , tradition := .reformedProtestant
         , confidence := .disputed } }
 
-/-- Trent's citations: the argument's, except the one atom Trent denies — the
-demonstrative sense of "justified" in James 2:24, which Trent reads as the
-increase of a justification already received, quoting the verse. -/
+/-- Trent's citations: the argument's, except the one atom Trent denies, the
+demonstrative sense of "justified" in James 2:24. Trent reads it as the increase
+of a justification already received, quoting the verse. The label states the
+claim Trent denies, so that "not" before it reads correctly. -/
 def tridentineCite : Claim → AtomMeta
   | .jamesJustifiesDemonstratively =>
-    { label := "‘Justified’ in James 2:24 is an increase of justification, by works done in " ++
-        "grace"
+    { label := "‘Justified’ in James 2:21–24 means shown to be righteous (denied by Trent, " ++
+        "which reads 2:24 as an increase of justification by works done in grace)"
     , kind := .linguistic
     , source :=
         { primary := .work tannerDecrees
