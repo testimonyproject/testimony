@@ -12532,7 +12532,7 @@ And it places the testing later: “After these things God tested Abraham” (Ge
 The Reformed answer to Genesis 22 is the answer this library already gives to James: Abraham’s offering of Isaac shows the faith that was counted to him, years before. And the chapter “Does justification have degrees?” adds a reason of its own. If justification is a verdict, which has no degrees, then James’s “justified” at Genesis 22 cannot mean the \emph{increase} of the justice Abraham already had (\texttt{no\_\allowbreak{}degrees\_\allowbreak{}answers\_\allowbreak{}james\_\allowbreak{}on\_\allowbreak{}abraham}). That reason rests, as before, on the Reformed definition of justification, which Trent denies.
 
 \subsubsection*{What this does not show}
-It does not take up a further question, which some readers press. Scott Hahn and Paul Williamson read Genesis 15, 17 and 22 as stages of one relationship, so that “the promise counted to him” may name the one-sided oath of Genesis 15 or the promise as Genesis 22 and Hebrews 6 give it, sworn after the test. That would be a dilemma of its own, and it is not yet encoded.
+Some readers press a further question. Scott Hahn and Paul Williamson read Genesis 15, 17 and 22 as stages of one relationship, so that “the promise” may name the one-sided oath of Genesis 15 or the promise as Genesis 22 and Hebrews 6 give it, sworn after the test. Hahn takes the second: the covenant Paul means in Galatians 3:17 is “the Abrahamic covenant in its final form, as ratified most solemnly by God’s oath after the Aqedah”, and “the binding of Isaac ... merits from God a covenant oath to bless the ἔθνη [the nations] through Abraham’s ‘seed’”. But what he says the binding of Isaac merited is the oath and the blessing of the nations, not the righteousness counted at 15:6, which he does not discuss in what was read of him; he even calls that oath “unilaterally” sworn. So on either reading of “the promise”, nothing reaches what was counted (\texttt{hahn\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}reach\_\allowbreak{}the\_\allowbreak{}counting}). Jeffrey Niehaus, who reads one covenant cut in Genesis 15, says so in terms: Abraham is the father of “those who, like him, would be justified by faith without circumcision (as in Genesis 15)”, and the works that followed “showed that his faith was real”. Williamson’s own text has not been read, and he is not encoded.
 
 It does not show that Abraham’s obedience did not matter. Every reader cited here holds that it did. The question is whether it was the condition of the righteousness counted to him at Genesis 15:6, or its fruit. Nor does it show that Trent denies the reading of the ceremony: Trent holds that “none of those things which precede justification, whether faith or works, merit the grace itself of justification” (Session VI, ch. 8). Its disagreement is over what follows.
 
@@ -12835,6 +12835,53 @@ def kuruvillaSource : Source :=
 \item Under the tradition standard: not credible.
 \item Under the Scripture standard: not credible.
 \end{itemize}
+\paragraph*{Hahn on the oath of Genesis 22}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{hahn\allowbreak{}Source}}\par\nobreak\noindent
+Hahn’s step: the oath of Genesis 22:16–18 is sworn “because you have done this” and “because you have obeyed my voice”, so the oath to bless the nations was merited by the binding of Isaac. Rated \texttt{disputed}: Calvin accepts the text and reads the oath as “nothing more than confirmation”.
+
+{\small\begin{verbatim}
+def hahnSource : Source :=
+  { primary := Reference.work hahnCovenantOathAqedah (Bib.Locus.page 93),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{hahn\allowbreak{}Line}} --- The oath of Genesis 22, merited by the binding of Isaac (Hahn)\par\nobreak\noindent
+\textbf{The oath of the Aqedah, merited} (Hahn).
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaFide}{112}\)\gloss{Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaFide}{117}\)\gloss{Genesis 22:16–18, 26:5: blessed because Abraham obeyed}
+  \item[(3)] \((\pvar{TestimonyArguments.SolaFide}{112} \land \pvar{TestimonyArguments.SolaFide}{117}) \rightarrow \pvar{TestimonyArguments.SolaFide}{123}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaFide}{123}\)\gloss{\emph{at issue:} The oath of Genesis 22:16–18 was merited by the binding of Isaac}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{hahn\allowbreak{}On\allowbreak{}The\allowbreak{}Oath}} --- Hahn, on the oath of Genesis 22\par\nobreak\noindent
+\textbf{Hahn, on the oath of Genesis 22}: the binding of Isaac merited the oath to bless the nations.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaFide}{112}\)\gloss{Genesis 15:6: Abram believed the LORD, and he counted it to him as righteousness}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaFide}{117}\)\gloss{Genesis 22:16–18, 26:5: blessed because Abraham obeyed}
+  \item[(3)] \((\pvar{TestimonyArguments.SolaFide}{112} \land \pvar{TestimonyArguments.SolaFide}{117}) \rightarrow \pvar{TestimonyArguments.SolaFide}{123}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaFide}{123}\)\gloss{\emph{at issue:} The oath of Genesis 22:16–18 was merited by the binding of Isaac}
+  \keepwithnext
+\end{derivation}
+\emph{No premise here rests on scripture alone.}
+\par\medskip\noindent\textbf{\texttt{hahn\allowbreak{}Assessment}}\par\nobreak\noindent
+\textbf{Hahn, against the step from Genesis 15.} He reads the covenant Paul means as the oath sworn after the binding of Isaac, which the binding of Isaac merited. His claims reach the oath of Genesis 22, and say nothing of the condition of what was counted at 15:6.
+
+\paragraph{Dissent.} \emph{Hahn, Covenant, Oath, and the Aqedah}, against \emph{Abraham, counted righteous before the covenant’s sign (Genesis 15; Romans 4)}. \textbf{Not a critique.} Not a critique of this step: it does not deny what the step concludes.
+\begin{itemize}
+\item Under the evidence standard: not credible.
+\item Under the tradition standard: not credible.
+\item Under the Scripture standard: not credible.
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{hahn\_\allowbreak{}does\_\allowbreak{}not\_\allowbreak{}reach\_\allowbreak{}the\_\allowbreak{}counting}}\par\nobreak\noindent
+\textbf{Hahn does not dissent from the step from Genesis 15}, under any standard. What he says the binding of Isaac merited is the oath of Genesis 22 and the blessing of the nations it swears, not the righteousness counted at 15:6. It does not show that Hahn would accept the step: in what was read of him he does not discuss Genesis 15:6.
+
+{\small\begin{verbatim}
+theorem hahn_does_not_reach_the_counting : ∀ (s : Standard), ¬Dissent.Credible
+    s hahnAssessment.dissent
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{weinfeld\allowbreak{}Assessment}}\par\nobreak\noindent
 \textbf{Weinfeld, against the step from Genesis 15.} As his own claims carry him, he does not deny the step. He reaches the grant, and says nothing of what was counted at 15:6. Every claim he asserts is Scripture or the evidence of the ancient grants, so he would meet the evidence and tradition standards, if he denied the step.
 
@@ -12929,18 +12976,18 @@ theorem kuruvilla_does_not_reach_the_counting : ∀ (s : Standard),
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Fifteen\allowbreak{}Step}}\par\nobreak\noindent
-\textbf{The step from Genesis 15, with the dissents found against it}: Weinfeld’s grant, Kuruvilla on the Aqedah, and 1 Maccabees, the strongest known, which alone denies the step.
+\textbf{The step from Genesis 15, with the dissents found against it}: Weinfeld’s grant, Kuruvilla on the Aqedah, Hahn on its oath, and 1 Maccabees, the strongest known, which alone denies the step.
 
-\paragraph{The rating, computed.} \emph{Abraham, counted righteous before the covenant’s sign (Genesis 15; Romans 4)} is cited at \emph{well supported} (Rom 4:3-12; \cite[ad loc. Gen 22:15]{calvin-commentary-genesis-1847}; \cite[ad loc. Jas 2:23]{calvin-commentaries-catholic-epistles}; \cite{robertson-christ-covenants-1980}; \cite{kline-kingdom-prologue-2006}). Dissents encoded: \emph{Weinfeld, The Covenant of Grant}, \emph{1 Maccabees 2:52}, \emph{Kuruvilla, The Aqedah}. The strongest known: \emph{1 Maccabees 2:52}.
+\paragraph{The rating, computed.} \emph{Abraham, counted righteous before the covenant’s sign (Genesis 15; Romans 4)} is cited at \emph{well supported} (Rom 4:3-12; \cite[ad loc. Gen 22:15]{calvin-commentary-genesis-1847}; \cite[ad loc. Jas 2:23]{calvin-commentaries-catholic-epistles}; \cite[260--263]{niehaus-gods-covenant-abraham-2013}; \cite{robertson-christ-covenants-1980}; \cite{kline-kingdom-prologue-2006}). Dissents encoded: \emph{Weinfeld, The Covenant of Grant}, \emph{1 Maccabees 2:52}, \emph{Kuruvilla, The Aqedah}, \emph{Hahn, Covenant, Oath, and the Aqedah}. The strongest known: \emph{1 Maccabees 2:52}.
 \begin{itemize}
 \item Under the evidence standard: \textbf{well supported} --- every encoded dissent fails a check, the strongest known among them, so the step’s support stands.
 \item Under the tradition standard: \textbf{well supported} --- every encoded dissent fails a check, the strongest known among them, so the step’s support stands.
 \item Under the Scripture standard: \textbf{well supported} --- every encoded dissent fails a check, the strongest known among them, so the step’s support stands.
 \end{itemize}
 \par\medskip\noindent\textbf{\texttt{abraham\_\allowbreak{}step\_\allowbreak{}ratings}}\par\nobreak\noindent
-\textbf{The step from Genesis 15 stands at \texttt{well\allowbreak{}Supported} under every standard.} No dissent found survives its checks. Weinfeld’s and Kuruvilla’s do not deny the step: they reach the grant and the blessing of Genesis 22, not the counting of 15:6. 1 Maccabees denies it only through its reading of Genesis 15:6, which Genesis itself refutes by its order.
+\textbf{The step from Genesis 15 stands at \texttt{well\allowbreak{}Supported} under every standard.} No dissent found survives its checks. Weinfeld’s, Kuruvilla’s and Hahn’s do not deny the step: they reach the grant, and the blessing and the oath of Genesis 22, not the counting of 15:6. 1 Maccabees denies it only through its reading of Genesis 15:6, which Genesis itself refutes by its order.
 
-What this does not claim: that no reader could dissent. A verified reader who argued that the counting of 15:6 was conditioned on Abraham’s obedience without tying it to the later testing, for example on his leaving Haran (Genesis 12:4), would be a new dissent, and the rating would be worked out again. Hahn’s \emph{Kinship by Covenant}, which treats the covenant with Abraham as a grant, has not been read, and is not encoded.
+What this does not claim: that no reader could dissent. A verified reader who argued that the counting of 15:6 was conditioned on Abraham’s obedience without tying it to the later testing, for example on his leaving Haran (Genesis 12:4), would be a new dissent, and the rating would be worked out again. Hahn’s \emph{Kinship by Covenant} and Williamson’s books have not been read.
 
 {\small\begin{verbatim}
 theorem abraham_step_ratings : genesisFifteenStep.ratings =
@@ -19980,6 +20027,7 @@ When positions are weighed against each other, the steps a position takes are we
 \pvartarget{TestimonyArguments.SolaFide}{120}$P_{120}$ & The grant to Abraham rewarded his obedience (Genesis 22:18; 26:5) & interpretive & critical scholarship, disputed & \cite{weinfeld-covenant-of-grant-1970}; Gen 22:18; Gen 26:5 \\
 \pvartarget{TestimonyArguments.SolaFide}{121}$P_{121}$ & The righteousness counted at Genesis 15:6 was credited for Abraham’s faithfulness when tested & interpretive & Second Temple Jewish, disputed & \cite[ad loc. 1 Macc 2:52]{usccb-nabre-2011} \\
 \pvartarget{TestimonyArguments.SolaFide}{122}$P_{122}$ & The blessing of Genesis 22:16–18 was augmented because of Abraham’s obedience & interpretive & Christian, hist.-gramm., disputed & \cite[507]{kuruvilla-aqedah-2012} \\
+\pvartarget{TestimonyArguments.SolaFide}{123}$P_{123}$ & The oath of Genesis 22:16–18 was merited by the binding of Isaac & interpretive & Roman Catholic, disputed & \cite[93]{hahn-covenant-oath-aqedah-2005} \\
 \bottomrule
 \end{longtable}
 

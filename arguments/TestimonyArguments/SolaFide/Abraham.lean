@@ -175,11 +175,22 @@ before, on the Reformed definition of justification, which Trent denies.
 
 ## What this does not show
 
-It does not take up a further question, which some readers press. Scott Hahn
-and Paul Williamson read Genesis 15, 17 and 22 as stages of one relationship,
-so that "the promise counted to him" may name the one-sided oath of Genesis 15
-or the promise as Genesis 22 and Hebrews 6 give it, sworn after the test. That
-would be a dilemma of its own, and it is not yet encoded.
+Some readers press a further question. Scott Hahn and Paul Williamson read
+Genesis 15, 17 and 22 as stages of one relationship, so that "the promise" may
+name the one-sided oath of Genesis 15 or the promise as Genesis 22 and Hebrews 6
+give it, sworn after the test. Hahn takes the second: the covenant Paul means in
+Galatians 3:17 is "the Abrahamic covenant in its final form, as ratified most
+solemnly by God's oath after the Aqedah", and "the binding of Isaac ... merits
+from God a covenant oath to bless the ἔθνη [the nations] through Abraham's
+'seed'". But what he says the binding of Isaac merited is the oath and the
+blessing of the nations, not the righteousness counted at 15:6, which he does not
+discuss in what was read of him; he even calls that oath "unilaterally" sworn.
+So on either reading of "the promise", nothing reaches what was counted
+(`hahn_does_not_reach_the_counting`). Jeffrey Niehaus, who reads one covenant cut
+in Genesis 15, says so in terms: Abraham is the father of "those who, like him,
+would be justified by faith without circumcision (as in Genesis 15)", and the
+works that followed "showed that his faith was real". Williamson's own text has
+not been read, and he is not encoded.
 
 It does not show that Abraham's obedience did not matter. Every reader cited
 here holds that it did. The question is whether it was the condition of the
@@ -248,6 +259,7 @@ def genesisFifteenSource : Source :=
   , supporting :=
       [ .work calvinGenesis (.adLoc ⟨.genesis, 22, 15⟩)
       , .work calvinCatholicEpistles (.adLoc ⟨.james, 2, 23⟩)
+      , .work niehausAbrahamCovenant (.pages 260 263)
       , .work robertsonChristOfTheCovenants .whole, .work klineKingdomPrologue .whole ]
   , tradition := .reformedProtestant
   , confidence := .wellSupported }
@@ -515,6 +527,68 @@ def kuruvillaAssessment : Assessment Claim where
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by horn_certify
 
+/-! ### Hahn on the oath of Genesis 22 -/
+
+/-- Hahn's step: the oath of Genesis 22:16–18 is sworn "because you have done
+this" and "because you have obeyed my voice", so the oath to bless the nations was
+merited by the binding of Isaac. Rated `disputed`: Calvin accepts the text and
+reads the oath as "nothing more than confirmation". -/
+def hahnSource : Source :=
+  { primary := .work hahnCovenantOathAqedah (.page 93)
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- **The oath of the Aqedah, merited** (Hahn). -/
+@[solaFideDefs]
+def hahnLine : Line Claim :=
+  { name := "The oath of Genesis 22, merited by the binding of Isaac (Hahn)"
+  , grounds := [p .gen15_6AbramBelieved, p .gen22_16BecauseYouObeyed]
+  , step :=
+      ⋀ [p .gen15_6AbramBelieved, p .gen22_16BecauseYouObeyed] ➝
+        p .aqedahOathMeritedByObedience
+  , delivers := p .aqedahOathMeritedByObedience
+  , inference := some hahnSource }
+
+/-- **Hahn, on the oath of Genesis 22**: the binding of Isaac merited the oath to
+bless the nations. -/
+@[solaFideDefs]
+def hahnOnTheOath : ArgumentPackage Claim :=
+  { name := "Hahn, on the oath of Genesis 22"
+  , cite := baseCite
+  , premises := hahnLine.premises
+  , conclusion := p .aqedahOathMeritedByObedience
+  , conclusionLabel := "the oath of Genesis 22 was merited by the binding of Isaac"
+  , inferences := [hahnSource] }
+
+/-- **Hahn, against the step from Genesis 15.** He reads the covenant Paul means
+as the oath sworn after the binding of Isaac, which the binding of Isaac merited.
+His claims reach the oath of Genesis 22, and say nothing of the condition of what
+was counted at 15:6. -/
+def hahnAssessment : Assessment Claim where
+  dissenter := "Hahn, Covenant, Oath, and the Aqedah"
+  against := genesisFifteenLine.name
+  dissent :=
+    { claim := p .abrahamCountedRighteousWithoutWorks
+    , grounds := genesisFifteenLine.grounds
+    , position := hahnOnTheOath }
+  findings :=
+    { consistent := true, denies := false, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
+  checked := by horn_certify
+
+/-- **Hahn does not dissent from the step from Genesis 15**, under any standard.
+What he says the binding of Isaac merited is the oath of Genesis 22 and the
+blessing of the nations it swears, not the righteousness counted at 15:6. It does
+not show that Hahn would accept the step: in what was read of him he does not
+discuss Genesis 15:6. -/
+@[headline]
+theorem hahn_does_not_reach_the_counting :
+    ∀ s, ¬ Dissent.Credible s hahnAssessment.dissent := by
+  intro s
+  exact hahnAssessment.complete (by cases s <;> decide)
+
+#print axioms hahn_does_not_reach_the_counting
+
 /-- **Weinfeld, against the step from Genesis 15.** As his own claims carry him,
 he does not deny the step. He reaches the grant, and says nothing of what was
 counted at 15:6. Every claim he asserts is Scripture or the evidence of the
@@ -655,26 +729,25 @@ theorem kuruvilla_does_not_reach_the_counting :
 #print axioms kuruvilla_does_not_reach_the_counting
 
 /-- **The step from Genesis 15, with the dissents found against it**: Weinfeld's
-grant, Kuruvilla on the Aqedah, and 1 Maccabees, the strongest known, which
-alone denies the step. -/
+grant, Kuruvilla on the Aqedah, Hahn on its oath, and 1 Maccabees, the strongest
+known, which alone denies the step. -/
 def genesisFifteenStep : RatedStep Claim where
   step := genesisFifteenLine.name
   support := genesisFifteenSource
-  register := [weinfeldAssessment, maccabeesAssessment, kuruvillaAssessment]
+  register := [weinfeldAssessment, maccabeesAssessment, kuruvillaAssessment, hahnAssessment]
   strongest := some 1
 
 /-- **The step from Genesis 15 stands at `wellSupported` under every standard.**
-No dissent found survives its checks. Weinfeld's and Kuruvilla's do not deny the
-step: they reach the grant and the blessing of Genesis 22, not the counting of
-15:6. 1 Maccabees denies it only through its reading of Genesis 15:6, which
+No dissent found survives its checks. Weinfeld's, Kuruvilla's and Hahn's do not
+deny the step: they reach the grant, and the blessing and the oath of Genesis 22,
+not the counting of 15:6. 1 Maccabees denies it only through its reading of Genesis 15:6, which
 Genesis itself refutes by its order.
 
 What this does not claim: that no reader could dissent. A verified reader who
 argued that the counting of 15:6 was conditioned on Abraham's obedience without
 tying it to the later testing, for example on his leaving Haran (Genesis 12:4),
 would be a new dissent, and the rating would be worked out again. Hahn's
-*Kinship by Covenant*, which treats the covenant with Abraham as a grant, has not
-been read, and is not encoded. -/
+*Kinship by Covenant* and Williamson's books have not been read. -/
 @[headline]
 theorem abraham_step_ratings :
     genesisFifteenStep.ratings =

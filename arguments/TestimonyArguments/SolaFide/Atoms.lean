@@ -535,6 +535,9 @@ inductive Claim
   obedience: "Contingent upon his obedience, every aspect of the earlier promises
   to Abraham is now 'augmented and guaranteed'" (Kuruvilla). -/
   | aqedahBlessingAugmentedForObedience
+  /-- The covenant oath of Genesis 22:16–18, to bless the nations through
+  Abraham's seed, was merited by the binding of Isaac (Hahn). -/
+  | aqedahOathMeritedByObedience
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide
