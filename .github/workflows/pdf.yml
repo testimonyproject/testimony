@@ -35,8 +35,11 @@ jobs:
     needs: image
     runs-on: ubuntu-latest
     container: ${{ needs.image.outputs.image }}
+    # The container is a GHCR package: a job that names its permissions must
+    # ask to read it, as docs.yml explains.
     permissions:
       contents: read
+      packages: read
     steps:
       - uses: actions/checkout@v4
 
