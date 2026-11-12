@@ -121,14 +121,12 @@ def increaseMeansDegreesSource : Source :=
 **An increase of justification means degrees of it.** If works merit an
 increase of justification, then justification has degrees.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{32} \\
-\text{(2)} \quad &amp; P_{32} \rightarrow P_{109} \\[4pt]
-\vdash \quad &amp; P_{109}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — Works performed in grace merit an increase of justification
+- (2) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-109}{P_{109}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-109}{P_{109}}\\) — *at issue:* Justification has degrees: the justified are still further justified
+
 </div>
 
 <a id="trentOnDegrees"></a>
@@ -138,16 +136,14 @@ increase of justification, then justification has degrees.
 inward man, the renewal grows through good works, so good works increase
 justification (ch. 10, canon 24), and justification has degrees.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{35} \\
-\text{(3)} \quad &amp; (P_{33} \land P_{35}) \rightarrow P_{32} \\
-\text{(4)} \quad &amp; P_{32} \rightarrow P_{109} \\[4pt]
-\vdash \quad &amp; P_{109}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-33}{P_{33}}\\) — Justification is not remission of sins only, but renewal of the inward man
+- (2) \\(\href{claims.html#claim-35}{P_{35}}\\) — The inward renewal of the justified grows as they do good works in grace
+- (3) \\((\href{claims.html#claim-33}{P_{33}} \land \href{claims.html#claim-35}{P_{35}}) \rightarrow \href{claims.html#claim-32}{P_{32}}\\) — *would give:* Works performed in grace merit an increase of justification
+- (4) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-109}{P_{109}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-109}{P_{109}}\\) — *at issue:* Justification has degrees: the justified are still further justified
+
 </div>
 
 No premise here rests on scripture alone.
@@ -179,15 +175,13 @@ def courtroomSource : Source :=
 **The courtroom line.** From Deuteronomy 25:1, Proverbs 17:15 and Romans
 8:33–34, a verdict acquits or condemns and has no degrees.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{110} \\
-\text{(2)} \quad &amp; P_{48} \\
-\text{(3)} \quad &amp; (P_{110} \land P_{48}) \rightarrow P_{111} \\[4pt]
-\vdash \quad &amp; P_{111}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-110}{P_{110}}\\) — Deuteronomy 25:1, Proverbs 17:15: judges acquit the innocent and condemn the guilty
+- (2) \\(\href{claims.html#claim-48}{P_{48}}\\) — Romans 8:33–34: it is God who justifies — who is to condemn?
+- (3) \\((\href{claims.html#claim-110}{P_{110}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \href{claims.html#claim-111}{P_{111}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-111}{P_{111}}\\) — *at issue:* A verdict acquits or condemns, and has no degrees
+
 </div>
 
 <a id="noDegreesSource"></a>
@@ -213,15 +207,13 @@ def noDegreesSource : Source :=
 **No degrees.** If justification is a verdict and nothing more, and a verdict
 has no degrees, then justification has none.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{30} \\
-\text{(2)} \quad &amp; P_{111} \\
-\text{(3)} \quad &amp; (P_{30} \land P_{111}) \rightarrow \lnot P_{109} \\[4pt]
-\vdash \quad &amp; \lnot P_{109}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-30}{P_{30}}\\) — Justification is a verdict only: pardon and righteousness counted, not poured in
+- (2) \\(\href{claims.html#claim-111}{P_{111}}\\) — A verdict acquits or condemns, and has no degrees
+- (3) \\((\href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-111}{P_{111}}) \rightarrow \lnot \href{claims.html#claim-109}{P_{109}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-109}{P_{109}}\\) — *at issue, the denial of:* Justification has degrees: the justified are still further justified
+
 </div>
 
 <a id="verdictOnDegrees"></a>
@@ -232,18 +224,16 @@ no degrees, and the Reformed definition, that justification is a verdict only. S
 justification has no degrees. It also holds what an increase means, so that it
 can say what it denies of Trent.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{110} \\
-\text{(2)} \quad &amp; P_{48} \\
-\text{(3)} \quad &amp; (P_{110} \land P_{48}) \rightarrow P_{111} \\
-\text{(4)} \quad &amp; P_{30} \\
-\text{(5)} \quad &amp; (P_{30} \land P_{111}) \rightarrow \lnot P_{109} \\
-\text{(6)} \quad &amp; P_{32} \rightarrow P_{109} \\[4pt]
-\vdash \quad &amp; \lnot P_{109}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-110}{P_{110}}\\) — Deuteronomy 25:1, Proverbs 17:15: judges acquit the innocent and condemn the guilty
+- (2) \\(\href{claims.html#claim-48}{P_{48}}\\) — Romans 8:33–34: it is God who justifies — who is to condemn?
+- (3) \\((\href{claims.html#claim-110}{P_{110}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \href{claims.html#claim-111}{P_{111}}\\) — *would give:* A verdict acquits or condemns, and has no degrees
+- (4) \\(\href{claims.html#claim-30}{P_{30}}\\) — Justification is a verdict only: pardon and righteousness counted, not poured in
+- (5) \\((\href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-111}{P_{111}}) \rightarrow \lnot \href{claims.html#claim-109}{P_{109}}\\)
+- (6) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-109}{P_{109}}\\) — *would give:* Justification has degrees: the justified are still further justified
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-109}{P_{109}}\\) — *at issue, the denial of:* Justification has degrees: the justified are still further justified
+
 </div>
 
 Grounded in scripture alone: Romans 8:33–34: it is God who justifies — who is to condemn?.
@@ -254,18 +244,16 @@ Grounded in scripture alone: Romans 8:33–34: it is God who justifies — who i
 **The same position, against Trent's increase.** It concludes what canon 24
 condemns: good works do not merit an increase of justification.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{110} \\
-\text{(2)} \quad &amp; P_{48} \\
-\text{(3)} \quad &amp; (P_{110} \land P_{48}) \rightarrow P_{111} \\
-\text{(4)} \quad &amp; P_{30} \\
-\text{(5)} \quad &amp; (P_{30} \land P_{111}) \rightarrow \lnot P_{109} \\
-\text{(6)} \quad &amp; P_{32} \rightarrow P_{109} \\[4pt]
-\vdash \quad &amp; \lnot P_{32}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-110}{P_{110}}\\) — Deuteronomy 25:1, Proverbs 17:15: judges acquit the innocent and condemn the guilty
+- (2) \\(\href{claims.html#claim-48}{P_{48}}\\) — Romans 8:33–34: it is God who justifies — who is to condemn?
+- (3) \\((\href{claims.html#claim-110}{P_{110}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \href{claims.html#claim-111}{P_{111}}\\) — *would give:* A verdict acquits or condemns, and has no degrees
+- (4) \\(\href{claims.html#claim-30}{P_{30}}\\) — Justification is a verdict only: pardon and righteousness counted, not poured in
+- (5) \\((\href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-111}{P_{111}}) \rightarrow \lnot \href{claims.html#claim-109}{P_{109}}\\) — *would deny:* Justification has degrees: the justified are still further justified
+- (6) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-109}{P_{109}}\\) — *would give:* Justification has degrees: the justified are still further justified
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-32}{P_{32}}\\) — *at issue, the denial of:* Works performed in grace merit an increase of justification
+
 </div>
 
 Grounded in scripture alone: Romans 8:33–34: it is God who justifies — who is to condemn?.

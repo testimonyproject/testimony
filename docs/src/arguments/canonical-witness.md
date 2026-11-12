@@ -7,6 +7,8 @@
 
 Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
+Every argument is also set for print, the claims linked and the derivations in words as here, in [one PDF](../pdf/arguments.pdf), and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
+
 ## TestimonyArguments.CanonicalWitness — faith alone, from the texts every party accepts
 
 `TestimonyArguments.SolaFide` argues faith alone through the disputes that
@@ -139,41 +141,41 @@ each corpus's step carries its own rated source
 citations; `tridentineCite` overrides the one atom on which Trent parts from
 it, the sense of "justified" in James 2:24.
 
-## The claims, numbered
+### The claims, numbered
 
 <div class="testimony-legend">
 
 | | claim | kind | held | source |
 |---|---|---|---|---|
-| \\(P_{1}\\) | Romans 3:28: a person is justified by faith apart from works of the law ※ | textual | Christian, historical-grammatical, consensus | Rom 3:28 |
-| \\(P_{2}\\) | Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness ※ | textual | Christian, historical-grammatical, consensus | Rom 4:4-5 |
-| \\(P_{3}\\) | Galatians 2:16: not justified by works of the law but through faith in Christ ※ | textual | Christian, historical-grammatical, consensus | Gal 2:16 |
-| \\(P_{4}\\) | Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith ※ | textual | Christian, historical-grammatical, consensus | Gal 3:11 |
-| \\(P_{5}\\) | Ephesians 2:8–9: saved by grace through faith, not of works ※ | textual | Christian, historical-grammatical, consensus | Eph 2:8-9 |
-| \\(P_{6}\\) | Titus 3:5: saved not by works done in righteousness but by his mercy ※ | textual | Christian, historical-grammatical, consensus | Titus 3:5 |
-| \\(P_{7}\\) | Hebrews 10:38–39: the righteous one shall live by faith ※ | textual | Christian, historical-grammatical, consensus | Heb 10:38-39 |
-| \\(P_{8}\\) | Hebrews 11:6: without faith it is impossible to please God ※ | textual | Christian, historical-grammatical, consensus | Heb 11:6 |
-| \\(P_{9}\\) | John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already ※ | textual | Christian, historical-grammatical, consensus | John 3:16-18 |
-| \\(P_{10}\\) | John 5:24: whoever hears and believes has eternal life and does not come into judgement ※ | textual | Christian, historical-grammatical, consensus | John 5:24 |
-| \\(P_{11}\\) | John 6:28–29: the work of God is that you believe in him whom he has sent ※ | textual | Christian, historical-grammatical, consensus | John 6:28-29 |
-| \\(P_{12}\\) | Acts 10:43: everyone who believes in him receives forgiveness of sins ※ | textual | Christian, historical-grammatical, consensus | Acts 10:43 |
-| \\(P_{13}\\) | Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus ※ | textual | Christian, historical-grammatical, consensus | Acts 15:10-11 |
-| \\(P_{14}\\) | Luke 7:50: your faith has saved you ※ | textual | Christian, historical-grammatical, consensus | Luke 7:50 |
-| \\(P_{15}\\) | Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified ※ | textual | Christian, historical-grammatical, consensus | Luke 18:9-14 |
-| \\(P_{16}\\) | James 2:14–17: faith by itself, if it does not have works, is dead ※ | textual | Christian, historical-grammatical, consensus | Jas 2:14-17 |
-| \\(P_{17}\\) | James 2:19: even the demons believe, and shudder ※ | textual | Christian, historical-grammatical, consensus | Jas 2:19 |
-| \\(P_{18}\\) | James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled ※ | textual | Christian, historical-grammatical, consensus | Jas 2:21-23 |
-| \\(P_{19}\\) | James 2:24: a person is justified by works and not by faith alone ※ | textual | Christian, historical-grammatical, consensus | Jas 2:24 |
-| \\(P_{20}\\) | Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ ※ | textual | Christian, historical-grammatical, consensus | Jude 1:20-21 |
-| \\(P_{21}\\) | Faith is necessary: no one is saved without it | theological | Christian, historical-grammatical, consensus | Heb 11:6; John 3:16-18; [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8 |
-| \\(P_{22}\\) | Faith is sufficient: whoever believes is saved | theological | Reformed Protestant, disputed | Rom 4:4-5; John 5:24; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{23}\\) | Works are not the ground of justification | theological | Reformed Protestant, disputed | Rom 3:28; Eph 2:8-9; [`schreiner-faith-alone-2015`](../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{24}\\) | Justification is by faith alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.19; [`hilary-commentary-matthew-2013`](../bibliography.md#hilary-commentary-matthew-2013), §8.6; [`basil-ascetical-works-1999`](../bibliography.md#basil-ascetical-works-1999), §Homily 20, Of Humility |
-| \\(P_{25}\\) | Good works are the fruit and evidence of a true and lively faith | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XVI.2 |
-| \\(P_{26}\\) | Justification is by faith alone, by a faith that is never alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XI.2 |
-| \\(P_{27}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{28}\\) | ‘Justified’ in James 2:24 is an increase of justification, by works done in grace | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24 |
-| \\(P_{29}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §XIII.1; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xi.6; [`roberts-ante-nicene-fathers-1-1885`](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
+| <a id="claim-1"></a>\\(P_{1}\\) | Romans 3:28: a person is justified by faith apart from works of the law ※ | textual | Christian, hist.-gramm., consensus | Rom 3:28 |
+| <a id="claim-2"></a>\\(P_{2}\\) | Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness ※ | textual | Christian, hist.-gramm., consensus | Rom 4:4-5 |
+| <a id="claim-3"></a>\\(P_{3}\\) | Galatians 2:16: not justified by works of the law but through faith in Christ ※ | textual | Christian, hist.-gramm., consensus | Gal 2:16 |
+| <a id="claim-4"></a>\\(P_{4}\\) | Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith ※ | textual | Christian, hist.-gramm., consensus | Gal 3:11 |
+| <a id="claim-5"></a>\\(P_{5}\\) | Ephesians 2:8–9: saved by grace through faith, not of works ※ | textual | Christian, hist.-gramm., consensus | Eph 2:8-9 |
+| <a id="claim-6"></a>\\(P_{6}\\) | Titus 3:5: saved not by works done in righteousness but by his mercy ※ | textual | Christian, hist.-gramm., consensus | Titus 3:5 |
+| <a id="claim-7"></a>\\(P_{7}\\) | Hebrews 10:38–39: the righteous one shall live by faith ※ | textual | Christian, hist.-gramm., consensus | Heb 10:38-39 |
+| <a id="claim-8"></a>\\(P_{8}\\) | Hebrews 11:6: without faith it is impossible to please God ※ | textual | Christian, hist.-gramm., consensus | Heb 11:6 |
+| <a id="claim-9"></a>\\(P_{9}\\) | John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already ※ | textual | Christian, hist.-gramm., consensus | John 3:16-18 |
+| <a id="claim-10"></a>\\(P_{10}\\) | John 5:24: whoever hears and believes has eternal life and does not come into judgement ※ | textual | Christian, hist.-gramm., consensus | John 5:24 |
+| <a id="claim-11"></a>\\(P_{11}\\) | John 6:28–29: the work of God is that you believe in him whom he has sent ※ | textual | Christian, hist.-gramm., consensus | John 6:28-29 |
+| <a id="claim-12"></a>\\(P_{12}\\) | Acts 10:43: everyone who believes in him receives forgiveness of sins ※ | textual | Christian, hist.-gramm., consensus | Acts 10:43 |
+| <a id="claim-13"></a>\\(P_{13}\\) | Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus ※ | textual | Christian, hist.-gramm., consensus | Acts 15:10-11 |
+| <a id="claim-14"></a>\\(P_{14}\\) | Luke 7:50: your faith has saved you ※ | textual | Christian, hist.-gramm., consensus | Luke 7:50 |
+| <a id="claim-15"></a>\\(P_{15}\\) | Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified ※ | textual | Christian, hist.-gramm., consensus | Luke 18:9-14 |
+| <a id="claim-16"></a>\\(P_{16}\\) | James 2:14–17: faith by itself, if it does not have works, is dead ※ | textual | Christian, hist.-gramm., consensus | Jas 2:14-17 |
+| <a id="claim-17"></a>\\(P_{17}\\) | James 2:19: even the demons believe, and shudder ※ | textual | Christian, hist.-gramm., consensus | Jas 2:19 |
+| <a id="claim-18"></a>\\(P_{18}\\) | James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled ※ | textual | Christian, hist.-gramm., consensus | Jas 2:21-23 |
+| <a id="claim-19"></a>\\(P_{19}\\) | James 2:24: a person is justified by works and not by faith alone ※ | textual | Christian, hist.-gramm., consensus | Jas 2:24 |
+| <a id="claim-20"></a>\\(P_{20}\\) | Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ ※ | textual | Christian, hist.-gramm., consensus | Jude 1:20-21 |
+| <a id="claim-21"></a>\\(P_{21}\\) | Faith is necessary: no one is saved without it | theological | Christian, hist.-gramm., consensus | Heb 11:6; John 3:16-18; [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8 |
+| <a id="claim-22"></a>\\(P_{22}\\) | Faith is sufficient: whoever believes is saved | theological | Reformed Protestant, disputed | Rom 4:4-5; John 5:24; [Schreiner 2015](../bibliography.md#schreiner-faith-alone-2015) |
+| <a id="claim-23"></a>\\(P_{23}\\) | Works are not the ground of justification | theological | Reformed Protestant, disputed | Rom 3:28; Eph 2:8-9; [Schreiner 2015](../bibliography.md#schreiner-faith-alone-2015) |
+| <a id="claim-24"></a>\\(P_{24}\\) | Justification is by faith alone | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XI.2; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §III.xi.19; [of Poitiers 2013](../bibliography.md#hilary-commentary-matthew-2013), §8.6; [of Caesarea 1999](../bibliography.md#basil-ascetical-works-1999), §Homily 20, Of Humility |
+| <a id="claim-25"></a>\\(P_{25}\\) | Good works are the fruit and evidence of a true and lively faith | theological | Reformed Protestant, well supported | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XVI.2 |
+| <a id="claim-26"></a>\\(P_{26}\\) | Justification is by faith alone, by a faith that is never alone | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XI.2 |
+| <a id="claim-27"></a>\\(P_{27}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [Moo 2000](../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [Johnson 1995](../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
+| <a id="claim-28"></a>\\(P_{28}\\) | ‘Justified’ in James 2:24 is an increase of justification, by works done in grace | linguistic | Roman Catholic, disputed | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24 |
+| <a id="claim-29"></a>\\(P_{29}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XIII.1; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §III.xi.6; [Roberts et al. 1885](../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
 
 </div>
 
@@ -442,16 +444,14 @@ Titus, whoever wrote them. "Apart from works of the law" (Romans 3:28), "not of
 works" (Ephesians 2:9), "not by works done in righteousness" (Titus 3:5): works
 are not the ground.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\href{#claim-23}{P_{23}}\\) — *at issue:* Works are not the ground of justification
+
 </div>
 
 <a id="paulineFaithLine"></a>
@@ -462,16 +462,14 @@ it (Galatians 2:16, 3:11) — and sufficient — to the one who does not work bu
 believes, faith is counted as righteousness (Romans 4:4–5). Paul's own message,
 stated apart from what he says about works.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{2} \\
-\text{(2)} \quad &amp; P_{3} \\
-\text{(3)} \quad &amp; P_{4} \\
-\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\[4pt]
-\vdash \quad &amp; P_{21} \land P_{22}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (2) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (3) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (4) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\)
+- \\(\vdash\\) \\(\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *at issue:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+
 </div>
 
 <a id="hebrewsLine"></a>
@@ -479,15 +477,13 @@ stated apart from what he says about works.
 
 **Hebrews**, read as its own corpus: faith is necessary.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{7} \\
-\text{(2)} \quad &amp; P_{8} \\
-\text{(3)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\[4pt]
-\vdash \quad &amp; P_{21}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (2) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (3) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\)
+- \\(\vdash\\) \\(\href{#claim-21}{P_{21}}\\) — *at issue:* Faith is necessary: no one is saved without it
+
 </div>
 
 <a id="johannineLine"></a>
@@ -496,16 +492,14 @@ stated apart from what he says about works.
 **John**: whoever believes has life, and whoever does not is condemned
 already.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{10} \\
-\text{(3)} \quad &amp; P_{11} \\
-\text{(4)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\[4pt]
-\vdash \quad &amp; P_{22} \land P_{21}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (2) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (3) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (4) \\((\href{#claim-9}{P_{9}} \land \href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\)
+- \\(\vdash\\) \\(\href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\) — *at issue:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+
 </div>
 
 <a id="petrineLine"></a>
@@ -514,15 +508,13 @@ already.
 **Peter**, in Luke's report: forgiveness to everyone who believes, and
 salvation through grace, without the yoke.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{12} \\
-\text{(2)} \quad &amp; P_{13} \\
-\text{(3)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\[4pt]
-\vdash \quad &amp; P_{22} \land P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (2) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (3) \\((\href{#claim-12}{P_{12}} \land \href{#claim-13}{P_{13}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *at issue:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+
 </div>
 
 <a id="dominicalLine"></a>
@@ -531,15 +523,13 @@ salvation through grace, without the yoke.
 **Jesus**, in Luke: the woman whose faith saved her, and the tax collector
 who went home justified.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{14} \\
-\text{(2)} \quad &amp; P_{15} \\
-\text{(3)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\[4pt]
-\vdash \quad &amp; P_{22} \land P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (2) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (3) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *at issue:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+
 </div>
 
 <a id="toFaithAlone"></a>
@@ -547,10 +537,10 @@ who went home justified.
 
 The three parts, together, are *faith alone*.
 
-<div class="testimony-math">
-\[
-(P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\) — *would give:* Justification is by faith alone
+
 </div>
 
 <a id="jamesLine"></a>
@@ -561,20 +551,18 @@ sanctification: the faith he calls dead is the demons' assent, and the
 justification he means is the display of a faith already counted as
 righteousness. So works are the fruit of saving faith, not its ground.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{16} \\
-\text{(2)} \quad &amp; P_{17} \\
-\text{(3)} \quad &amp; P_{18} \\
-\text{(4)} \quad &amp; P_{19} \\
-\text{(5)} \quad &amp; P_{27} \\
-\text{(6)} \quad &amp; P_{28} \\
-\text{(7)} \quad &amp; P_{29} \\
-\text{(8)} \quad &amp; (P_{16} \land P_{18} \land P_{27} \land P_{28} \land P_{29}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-16}{P_{16}}\\) — James 2:14–17: faith by itself, if it does not have works, is dead
+- (2) \\(\href{#claim-17}{P_{17}}\\) — James 2:19: even the demons believe, and shudder
+- (3) \\(\href{#claim-18}{P_{18}}\\) — James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled
+- (4) \\(\href{#claim-19}{P_{19}}\\) — James 2:24: a person is justified by works and not by faith alone
+- (5) \\(\href{#claim-27}{P_{27}}\\) — James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine
+- (6) \\(\href{#claim-28}{P_{28}}\\) — ‘Justified’ in James 2:24 is an increase of justification, by works done in grace
+- (7) \\(\href{#claim-29}{P_{29}}\\) — Justification and sanctification are inseparable but distinct
+- (8) \\((\href{#claim-16}{P_{16}} \land \href{#claim-18}{P_{18}} \land \href{#claim-27}{P_{27}} \land \href{#claim-28}{P_{28}} \land \href{#claim-29}{P_{29}}) \rightarrow \href{#claim-25}{P_{25}}\\)
+- \\(\vdash\\) \\(\href{#claim-25}{P_{25}}\\) — *at issue:* Good works are the fruit and evidence of a true and lively faith
+
 </div>
 
 <a id="toNeverAlone"></a>
@@ -582,10 +570,10 @@ righteousness. So works are the fruit of saving faith, not its ground.
 
 Faith alone, with its fruit, is faith that is never alone.
 
-<div class="testimony-math">
-\[
-(P_{24} \land P_{25}) \rightarrow P_{26}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-24}{P_{24}} \land \href{#claim-25}{P_{25}}) \rightarrow \href{#claim-26}{P_{26}}\\) — *would give:* Justification is by faith alone, by a faith that is never alone
+
 </div>
 
 <a id="trentOnJames"></a>
@@ -595,10 +583,10 @@ Faith alone, with its fruit, is faith that is never alone.
 justification already received, by works done in grace; so works are part of
 its ground, and faith alone is denied.
 
-<div class="testimony-math">
-\[
-(P_{19} \land \lnot P_{28}) \rightarrow \lnot P_{23}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-19}{P_{19}} \land \lnot \href{#claim-28}{P_{28}}) \rightarrow \lnot \href{#claim-23}{P_{23}}\\) — *would deny:* Works are not the ground of justification
+
 </div>
 
 <a id="jamesAgainstSufficiency"></a>
@@ -611,10 +599,10 @@ The rival to the reading on which James and Paul cohere: there, the faith that
 cannot save is the faith 2:14–17 describes, faith without works
 (`james2TargetsDeadFaith`).
 
-<div class="testimony-math">
-\[
-(P_{16} \land P_{19}) \rightarrow \lnot P_{22}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-16}{P_{16}} \land \href{#claim-19}{P_{19}}) \rightarrow \lnot \href{#claim-22}{P_{22}}\\) — *would deny:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 <a id="notAloneIfWorksGround"></a>
@@ -622,10 +610,10 @@ cannot save is the faith 2:14–17 describes, faith without works
 
 And what follows from that: not faith alone.
 
-<div class="testimony-math">
-\[
-\lnot P_{23} \rightarrow \lnot P_{24}
-\]
+<div class="testimony-derivation">
+
+- \\(\lnot \href{#claim-23}{P_{23}} \rightarrow \lnot \href{#claim-24}{P_{24}}\\) — *would deny:* Justification is by faith alone
+
 </div>
 
 <a id="corpora"></a>
@@ -683,31 +671,29 @@ named burdens are instances of the computed one, and cannot drift from it.
 Every text the argument cites, from every corpus and from James. The rival
 holds all of them.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; P_{16} \\
-\text{(17)} \quad &amp; P_{17} \\
-\text{(18)} \quad &amp; P_{18} \\
-\text{(19)} \quad &amp; P_{19} \\
-\text{(20)} \quad &amp; P_{20}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\(\href{#claim-16}{P_{16}}\\) — James 2:14–17: faith by itself, if it does not have works, is dead
+- (17) \\(\href{#claim-17}{P_{17}}\\) — James 2:19: even the demons believe, and shudder
+- (18) \\(\href{#claim-18}{P_{18}}\\) — James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled
+- (19) \\(\href{#claim-19}{P_{19}}\\) — James 2:24: a person is justified by works and not by faith alone
+- (20) \\(\href{#claim-20}{P_{20}}\\) — Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ
+
 </div>
 
 <a id="tridentine"></a>
@@ -718,35 +704,33 @@ Justification quotes most of them — and reads James 2:24 as the increase of a
 justification already received, by works done in grace (Session VI, ch. 10).
 So works are part of the ground, and faith alone is denied.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; P_{16} \\
-\text{(17)} \quad &amp; P_{17} \\
-\text{(18)} \quad &amp; P_{18} \\
-\text{(19)} \quad &amp; P_{19} \\
-\text{(20)} \quad &amp; P_{20} \\
-\text{(21)} \quad &amp; \lnot P_{28} \\
-\text{(22)} \quad &amp; (P_{19} \land \lnot P_{28}) \rightarrow \lnot P_{23} \\
-\text{(23)} \quad &amp; \lnot P_{23} \rightarrow \lnot P_{24} \\[4pt]
-\vdash \quad &amp; \lnot P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\(\href{#claim-16}{P_{16}}\\) — James 2:14–17: faith by itself, if it does not have works, is dead
+- (17) \\(\href{#claim-17}{P_{17}}\\) — James 2:19: even the demons believe, and shudder
+- (18) \\(\href{#claim-18}{P_{18}}\\) — James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled
+- (19) \\(\href{#claim-19}{P_{19}}\\) — James 2:24: a person is justified by works and not by faith alone
+- (20) \\(\href{#claim-20}{P_{20}}\\) — Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ
+- (21) \\(\lnot \href{#claim-28}{P_{28}}\\) — *denied:* ‘Justified’ in James 2:24 is an increase of justification, by works done in grace
+- (22) \\((\href{#claim-19}{P_{19}} \land \lnot \href{#claim-28}{P_{28}}) \rightarrow \lnot \href{#claim-23}{P_{23}}\\) — *would deny:* Works are not the ground of justification
+- (23) \\(\lnot \href{#claim-23}{P_{23}} \rightarrow \lnot \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-24}{P_{24}}\\) — *at issue, the denial of:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
@@ -757,34 +741,32 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 **The canonical witness**: every corpus, each on its own reading, and the
 three parts of faith alone put together.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
-\text{(18)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
-\text{(20)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
-\text{(21)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
-\text{(22)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* Works are not the ground of justification
+- (17) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *would give:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+- (18) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (19) \\((\href{#claim-9}{P_{9}} \land \href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+- (20) \\((\href{#claim-12}{P_{12}} \land \href{#claim-13}{P_{13}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (21) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (22) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -796,44 +778,42 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 between justification and sanctification, and Jude as consistent with the rest.
 It concludes the Reformed formula — faith alone, but a faith never alone.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; P_{16} \\
-\text{(17)} \quad &amp; P_{17} \\
-\text{(18)} \quad &amp; P_{18} \\
-\text{(19)} \quad &amp; P_{19} \\
-\text{(20)} \quad &amp; P_{27} \\
-\text{(21)} \quad &amp; P_{28} \\
-\text{(22)} \quad &amp; P_{29} \\
-\text{(23)} \quad &amp; P_{20} \\
-\text{(24)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
-\text{(25)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
-\text{(26)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(27)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
-\text{(28)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
-\text{(29)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
-\text{(30)} \quad &amp; (P_{16} \land P_{18} \land P_{27} \land P_{28} \land P_{29}) \rightarrow P_{25} \\
-\text{(31)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\
-\text{(32)} \quad &amp; (P_{24} \land P_{25}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\(\href{#claim-16}{P_{16}}\\) — James 2:14–17: faith by itself, if it does not have works, is dead
+- (17) \\(\href{#claim-17}{P_{17}}\\) — James 2:19: even the demons believe, and shudder
+- (18) \\(\href{#claim-18}{P_{18}}\\) — James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled
+- (19) \\(\href{#claim-19}{P_{19}}\\) — James 2:24: a person is justified by works and not by faith alone
+- (20) \\(\href{#claim-27}{P_{27}}\\) — James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine
+- (21) \\(\href{#claim-28}{P_{28}}\\) — ‘Justified’ in James 2:24 is an increase of justification, by works done in grace
+- (22) \\(\href{#claim-29}{P_{29}}\\) — Justification and sanctification are inseparable but distinct
+- (23) \\(\href{#claim-20}{P_{20}}\\) — Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ
+- (24) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* Works are not the ground of justification
+- (25) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *would give:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+- (26) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (27) \\((\href{#claim-9}{P_{9}} \land \href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+- (28) \\((\href{#claim-12}{P_{12}} \land \href{#claim-13}{P_{13}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (29) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (30) \\((\href{#claim-16}{P_{16}} \land \href{#claim-18}{P_{18}} \land \href{#claim-27}{P_{27}} \land \href{#claim-28}{P_{28}} \land \href{#claim-29}{P_{29}}) \rightarrow \href{#claim-25}{P_{25}}\\) — *would give:* Good works are the fruit and evidence of a true and lively faith
+- (31) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\) — *would give:* Justification is by faith alone
+- (32) \\((\href{#claim-24}{P_{24}} \land \href{#claim-25}{P_{25}}) \rightarrow \href{#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\href{#claim-26}{P_{26}}\\) — *at issue:* Justification is by faith alone, by a faith that is never alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
@@ -845,32 +825,30 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 
 Without Paul: both his readings, on works and on faith.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(17)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
-\text{(18)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
-\text{(19)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
-\text{(20)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (17) \\((\href{#claim-9}{P_{9}} \land \href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+- (18) \\((\href{#claim-12}{P_{12}} \land \href{#claim-13}{P_{13}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (19) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (20) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -880,33 +858,31 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 
 Without Hebrews' reading.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
-\text{(19)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
-\text{(20)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
-\text{(21)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* Works are not the ground of justification
+- (17) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *would give:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+- (18) \\((\href{#claim-9}{P_{9}} \land \href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+- (19) \\((\href{#claim-12}{P_{12}} \land \href{#claim-13}{P_{13}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (20) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (21) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -916,33 +892,31 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 
 Without John's reading.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
-\text{(18)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(19)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
-\text{(20)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
-\text{(21)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* Works are not the ground of justification
+- (17) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *would give:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+- (18) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (19) \\((\href{#claim-12}{P_{12}} \land \href{#claim-13}{P_{13}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (20) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (21) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -952,33 +926,31 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 
 Without Peter's reading.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
-\text{(18)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
-\text{(20)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
-\text{(21)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* Works are not the ground of justification
+- (17) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *would give:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+- (18) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (19) \\((\href{#claim-9}{P_{9}} \land \href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+- (20) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (21) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -988,33 +960,31 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 
 Without the reading of Jesus' words.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
-\text{(18)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(19)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
-\text{(20)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
-\text{(21)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* Works are not the ground of justification
+- (17) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *would give:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+- (18) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (19) \\((\href{#claim-9}{P_{9}} \land \href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+- (20) \\((\href{#claim-12}{P_{12}} \land \href{#claim-13}{P_{13}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (21) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -1027,31 +997,29 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 Without the three readings that say works are not the ground — Paul's on
 works, Peter's and Jesus'.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
-\text{(17)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(18)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
-\text{(19)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *would give:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+- (17) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (18) \\((\href{#claim-9}{P_{9}} \land \href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+- (19) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -1062,31 +1030,29 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 Without the three readings that say faith is necessary — Paul's on faith,
 Hebrews' and John's.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
-\text{(18)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
-\text{(19)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* Works are not the ground of justification
+- (17) \\((\href{#claim-12}{P_{12}} \land \href{#claim-13}{P_{13}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (18) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (19) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -1097,30 +1063,28 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 Without the four readings that say faith is sufficient — Paul's on faith,
 John's, Peter's and Jesus'.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
-\text{(17)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(18)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* Works are not the ground of justification
+- (17) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (18) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -1131,30 +1095,28 @@ Grounded in scripture alone: Romans 3:28: a person is justified by faith apart f
 Two corpora alone: Hebrews and Jesus' words, with Paul's, John's and
 Peter's readings rejected.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(17)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
-\text{(18)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\[4pt]
-\vdash \quad &amp; P_{24}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (17) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (18) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{#claim-24}{P_{24}}\\) — *at issue:* Justification is by faith alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified.
@@ -1168,19 +1130,17 @@ James without the demonstrative reading of "justified": his texts, and the
 distinction between justification and sanctification, but not the sense of
 2:21–24 on which James and Trent part.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{16} \\
-\text{(2)} \quad &amp; P_{17} \\
-\text{(3)} \quad &amp; P_{18} \\
-\text{(4)} \quad &amp; P_{19} \\
-\text{(5)} \quad &amp; P_{27} \\
-\text{(6)} \quad &amp; P_{29} \\
-\text{(7)} \quad &amp; (P_{16} \land P_{18} \land P_{27} \land P_{28} \land P_{29}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-16}{P_{16}}\\) — James 2:14–17: faith by itself, if it does not have works, is dead
+- (2) \\(\href{#claim-17}{P_{17}}\\) — James 2:19: even the demons believe, and shudder
+- (3) \\(\href{#claim-18}{P_{18}}\\) — James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled
+- (4) \\(\href{#claim-19}{P_{19}}\\) — James 2:24: a person is justified by works and not by faith alone
+- (5) \\(\href{#claim-27}{P_{27}}\\) — James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine
+- (6) \\(\href{#claim-29}{P_{29}}\\) — Justification and sanctification are inseparable but distinct
+- (7) \\((\href{#claim-16}{P_{16}} \land \href{#claim-18}{P_{18}} \land \href{#claim-27}{P_{27}} \land \href{#claim-28}{P_{28}} \land \href{#claim-29}{P_{29}}) \rightarrow \href{#claim-25}{P_{25}}\\)
+- \\(\vdash\\) \\(\href{#claim-25}{P_{25}}\\) — *at issue:* Good works are the fruit and evidence of a true and lively faith
+
 </div>
 
 <a id="withJamesUndemonstrated"></a>
@@ -1188,43 +1148,41 @@ distinction between justification and sanctification, but not the sense of
 
 The canonical witness with James, on that reading.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{2} \\
-\text{(5)} \quad &amp; P_{3} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{7} \\
-\text{(8)} \quad &amp; P_{8} \\
-\text{(9)} \quad &amp; P_{9} \\
-\text{(10)} \quad &amp; P_{10} \\
-\text{(11)} \quad &amp; P_{11} \\
-\text{(12)} \quad &amp; P_{12} \\
-\text{(13)} \quad &amp; P_{13} \\
-\text{(14)} \quad &amp; P_{14} \\
-\text{(15)} \quad &amp; P_{15} \\
-\text{(16)} \quad &amp; P_{16} \\
-\text{(17)} \quad &amp; P_{17} \\
-\text{(18)} \quad &amp; P_{18} \\
-\text{(19)} \quad &amp; P_{19} \\
-\text{(20)} \quad &amp; P_{27} \\
-\text{(21)} \quad &amp; P_{29} \\
-\text{(22)} \quad &amp; P_{20} \\
-\text{(23)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\
-\text{(24)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\
-\text{(25)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\
-\text{(26)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\
-\text{(27)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\
-\text{(28)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\
-\text{(29)} \quad &amp; (P_{16} \land P_{18} \land P_{27} \land P_{28} \land P_{29}) \rightarrow P_{25} \\
-\text{(30)} \quad &amp; (P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24} \\
-\text{(31)} \quad &amp; (P_{24} \land P_{25}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (5) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (6) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (7) \\(\href{#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (8) \\(\href{#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (9) \\(\href{#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (10) \\(\href{#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (11) \\(\href{#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (12) \\(\href{#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (13) \\(\href{#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (14) \\(\href{#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (15) \\(\href{#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (16) \\(\href{#claim-16}{P_{16}}\\) — James 2:14–17: faith by itself, if it does not have works, is dead
+- (17) \\(\href{#claim-17}{P_{17}}\\) — James 2:19: even the demons believe, and shudder
+- (18) \\(\href{#claim-18}{P_{18}}\\) — James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled
+- (19) \\(\href{#claim-19}{P_{19}}\\) — James 2:24: a person is justified by works and not by faith alone
+- (20) \\(\href{#claim-27}{P_{27}}\\) — James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine
+- (21) \\(\href{#claim-29}{P_{29}}\\) — Justification and sanctification are inseparable but distinct
+- (22) \\(\href{#claim-20}{P_{20}}\\) — Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ
+- (23) \\((\href{#claim-1}{P_{1}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* Works are not the ground of justification
+- (24) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *would give:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+- (25) \\((\href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-21}{P_{21}}\\) — *would give:* Faith is necessary: no one is saved without it
+- (26) \\((\href{#claim-9}{P_{9}} \land \href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-21}{P_{21}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+- (27) \\((\href{#claim-12}{P_{12}} \land \href{#claim-13}{P_{13}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (28) \\((\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}}) \rightarrow \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}\\) — *would give:* \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{#claim-23}{P_{23}}\\) Works are not the ground of justification
+- (29) \\((\href{#claim-16}{P_{16}} \land \href{#claim-18}{P_{18}} \land \href{#claim-27}{P_{27}} \land \href{#claim-28}{P_{28}} \land \href{#claim-29}{P_{29}}) \rightarrow \href{#claim-25}{P_{25}}\\) — *would give:* Good works are the fruit and evidence of a true and lively faith
+- (30) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}} \land \href{#claim-23}{P_{23}}) \rightarrow \href{#claim-24}{P_{24}}\\) — *would give:* Justification is by faith alone
+- (31) \\((\href{#claim-24}{P_{24}} \land \href{#claim-25}{P_{25}}) \rightarrow \href{#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\href{#claim-26}{P_{26}}\\) — *at issue:* Justification is by faith alone, by a faith that is never alone
+
 </div>
 
 Grounded in scripture alone: Romans 3:28: a person is justified by faith apart from works of the law, Ephesians 2:8–9: saved by grace through faith, not of works, Titus 3:5: saved not by works done in righteousness but by his mercy, Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith, Hebrews 10:38–39: the righteous one shall live by faith, Hebrews 11:6: without faith it is impossible to please God, John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already, John 5:24: whoever hears and believes has eternal life and does not come into judgement, John 6:28–29: the work of God is that you believe in him whom he has sent, Acts 10:43: everyone who believes in him receives forgiveness of sins, Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus, Luke 7:50: your faith has saved you, Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified, James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone, Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ.
@@ -1242,16 +1200,14 @@ it rests on.
 **Paul: faith is necessary and sufficient.** Romans 4:4–5, Galatians 2:16
 and 3:11, read as Paul's own claim about faith.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{2} \\
-\text{(2)} \quad &amp; P_{3} \\
-\text{(3)} \quad &amp; P_{4} \\
-\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\[4pt]
-\vdash \quad &amp; P_{21} \land P_{22}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (2) \\(\href{#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (3) \\(\href{#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (4) \\((\href{#claim-2}{P_{2}} \land \href{#claim-3}{P_{3}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\)
+- \\(\vdash\\) \\(\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}\\) — *at issue:* \\(\href{#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+
 </div>
 
 Grounded in scripture alone: Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness, Galatians 2:16: not justified by works of the law but through faith in Christ, Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith.
@@ -1263,17 +1219,15 @@ Grounded in scripture alone: Romans 4:4–5: to the one who does not work but be
 with "that faith" in 2:14 and "not by faith alone" in 2:24 taken of faith as
 such. Then faith does not suffice.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{16} \\
-\text{(2)} \quad &amp; P_{17} \\
-\text{(3)} \quad &amp; P_{18} \\
-\text{(4)} \quad &amp; P_{19} \\
-\text{(5)} \quad &amp; (P_{16} \land P_{19}) \rightarrow \lnot P_{22} \\[4pt]
-\vdash \quad &amp; \lnot P_{22}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-16}{P_{16}}\\) — James 2:14–17: faith by itself, if it does not have works, is dead
+- (2) \\(\href{#claim-17}{P_{17}}\\) — James 2:19: even the demons believe, and shudder
+- (3) \\(\href{#claim-18}{P_{18}}\\) — James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled
+- (4) \\(\href{#claim-19}{P_{19}}\\) — James 2:24: a person is justified by works and not by faith alone
+- (5) \\((\href{#claim-16}{P_{16}} \land \href{#claim-19}{P_{19}}) \rightarrow \lnot \href{#claim-22}{P_{22}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-22}{P_{22}}\\) — *at issue, the denial of:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 Grounded in scripture alone: James 2:14–17: faith by itself, if it does not have works, is dead, James 2:19: even the demons believe, and shudder, James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled, James 2:24: a person is justified by works and not by faith alone.
@@ -1839,8 +1793,8 @@ of Trent — every text — the canonical witness holds too.
 
 **Why *The canonical witness, with James* stands against *Trent, reading James 2:24 as justification increased by works*.**
 
-- **The crux:** \\(P_{28}\\), a premise of *The canonical witness, with James*.
+- **The crux:** \\(\href{#claim-28}{P_{28}}\\), a premise of *The canonical witness, with James*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(\lnot P_{28}\\) cannot be held together with \\(P_{28}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(\lnot \href{#claim-28}{P_{28}}\\) cannot be held together with \\(\href{#claim-28}{P_{28}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{28}\\) ‘Justified’ in James 2:21–24 means shown to be righteous, not made righteous — *disputed*: [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §III.xvii.11; Jas 2:21-23
+  - \\(\href{#claim-28}{P_{28}}\\) ‘Justified’ in James 2:21–24 means shown to be righteous, not made righteous — *disputed*: [Calvin 1960](../bibliography.md#calvin-institutes-1960), §III.xvii.11; Jas 2:21-23

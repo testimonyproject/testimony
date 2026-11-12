@@ -177,10 +177,10 @@ justified him was not his works but his trust in God's mercy: faith sufficed.
 Rated `disputed`: Trent accepts the text and the absence of works, and denies
 that the plea was enough alone (Session VI, ch. 6 and canon 9).
 
-<div class="testimony-math">
-\[
-(P_{59} \land P_{60} \land P_{61}) \rightarrow P_{26}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-61}{P_{61}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 <a id="luke18Line"></a>
@@ -189,16 +189,14 @@ that the plea was enough alone (Session VI, ch. 6 and canon 9).
 **Luke 18, as a line of argument**: from the parable, the verdict, and the plea
 without works, to "faith suffices".
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{59} \\
-\text{(2)} \quad &amp; P_{60} \\
-\text{(3)} \quad &amp; P_{61} \\
-\text{(4)} \quad &amp; (P_{59} \land P_{60} \land P_{61}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-59}{P_{59}}\\) — Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works
+- (2) \\(\href{claims.html#claim-60}{P_{60}}\\) — ‘Justified’ at Luke 18:14 is God's verdict: accepted as righteous before God
+- (3) \\(\href{claims.html#claim-61}{P_{61}}\\) — The tax collector brings no works that merit, only a humble and contrite plea for mercy
+- (4) \\((\href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-61}{P_{61}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-26}{P_{26}}\\) — *at issue:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 <a id="luke18Case"></a>
@@ -208,16 +206,14 @@ without works, to "faith suffices".
 collector's faith sufficed, not that faith *alone* saves. Luke 7:50 makes the
 same claim from a second saying.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{59} \\
-\text{(2)} \quad &amp; P_{60} \\
-\text{(3)} \quad &amp; P_{61} \\
-\text{(4)} \quad &amp; (P_{59} \land P_{60} \land P_{61}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-59}{P_{59}}\\) — Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works
+- (2) \\(\href{claims.html#claim-60}{P_{60}}\\) — ‘Justified’ at Luke 18:14 is God's verdict: accepted as righteous before God
+- (3) \\(\href{claims.html#claim-61}{P_{61}}\\) — The tax collector brings no works that merit, only a humble and contrite plea for mercy
+- (4) \\((\href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-61}{P_{61}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-26}{P_{26}}\\) — *at issue:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 No premise here rests on scripture alone.
@@ -232,10 +228,10 @@ of entering the kingdom in its own right, then salvation is not apart from
 works. Rated `disputed`: Calvin accepts the text and denies that the doing is
 more than the fruit of faith.
 
-<div class="testimony-math">
-\[
-(P_{62} \land P_{63}) \rightarrow \lnot P_{28}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\) — *would deny:* Salvation is not by works: no work is its ground
+
 </div>
 
 <a id="matthew7ToFruit"></a>
@@ -246,10 +242,10 @@ believing, and those rejected were never known, then the doing is the fruit of
 faith and not a condition of entry in its own right. Rated `disputed`: the
 *Catechism* accepts the text and reads it the other way.
 
-<div class="testimony-math">
-\[
-(P_{62} \land P_{64}) \rightarrow \lnot P_{63}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-64}{P_{64}}) \rightarrow \lnot \href{claims.html#claim-63}{P_{63}}\\) — *would deny:* In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith
+
 </div>
 
 <a id="matthew7ObedienceLine"></a>
@@ -258,15 +254,13 @@ faith and not a condition of entry in its own right. Rated `disputed`: the
 **Matthew 7:21–23, as Rome reads it**: doing the Father's will is a condition of
 entry in its own right, so salvation is not apart from works.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{62} \\
-\text{(2)} \quad &amp; P_{63} \\
-\text{(3)} \quad &amp; (P_{62} \land P_{63}) \rightarrow \lnot P_{28} \\[4pt]
-\vdash \quad &amp; \lnot P_{28}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-62}{P_{62}}\\) — Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works
+- (2) \\(\href{claims.html#claim-63}{P_{63}}\\) — In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith
+- (3) \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) — *at issue, the denial of:* Salvation is not by works: no work is its ground
+
 </div>
 
 <a id="matthew7FaithLine"></a>
@@ -275,15 +269,13 @@ entry in its own right, so salvation is not apart from works.
 **Matthew 7:21–23, as Calvin reads it**: the doing includes believing, so
 obedience is not a condition of entry in its own right.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{62} \\
-\text{(2)} \quad &amp; P_{64} \\
-\text{(3)} \quad &amp; (P_{62} \land P_{64}) \rightarrow \lnot P_{63} \\[4pt]
-\vdash \quad &amp; \lnot P_{63}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-62}{P_{62}}\\) — Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works
+- (2) \\(\href{claims.html#claim-64}{P_{64}}\\) — In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith
+- (3) \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-64}{P_{64}}) \rightarrow \lnot \href{claims.html#claim-63}{P_{63}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-63}{P_{63}}\\) — *at issue, the denial of:* In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith
+
 </div>
 
 <a id="matthew7ObedienceCase"></a>
@@ -291,15 +283,13 @@ obedience is not a condition of entry in its own right.
 
 Rome's reading of Matthew 7:21–23, as a position in the debate.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{62} \\
-\text{(2)} \quad &amp; P_{63} \\
-\text{(3)} \quad &amp; (P_{62} \land P_{63}) \rightarrow \lnot P_{28} \\[4pt]
-\vdash \quad &amp; \lnot P_{28}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-62}{P_{62}}\\) — Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works
+- (2) \\(\href{claims.html#claim-63}{P_{63}}\\) — In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith
+- (3) \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) — *at issue, the denial of:* Salvation is not by works: no work is its ground
+
 </div>
 
 No premise here rests on scripture alone.
@@ -309,15 +299,13 @@ No premise here rests on scripture alone.
 
 Calvin's reading of Matthew 7:21–23, as a position in the debate.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{62} \\
-\text{(2)} \quad &amp; P_{64} \\
-\text{(3)} \quad &amp; (P_{62} \land P_{64}) \rightarrow \lnot P_{63} \\[4pt]
-\vdash \quad &amp; \lnot P_{63}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-62}{P_{62}}\\) — Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works
+- (2) \\(\href{claims.html#claim-64}{P_{64}}\\) — In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith
+- (3) \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-64}{P_{64}}) \rightarrow \lnot \href{claims.html#claim-63}{P_{63}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-63}{P_{63}}\\) — *at issue, the denial of:* In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith
+
 </div>
 
 No premise here rests on scripture alone.
@@ -331,10 +319,10 @@ The Catholic step from Matthew 19:17. If keeping the commandments is the way to
 life, then salvation is not apart from works. Rated `disputed`: Calvin accepts
 the text and denies that it is the way for any sinner.
 
-<div class="testimony-math">
-\[
-(P_{65} \land P_{66}) \rightarrow \lnot P_{28}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\) — *would deny:* Salvation is not by works: no work is its ground
+
 </div>
 
 <a id="matthew19ToLegalReply"></a>
@@ -345,10 +333,10 @@ to show the young man what he has not kept, then the commandments are not
 offered as the way to life. Rated `disputed`: *Veritatis Splendor* accepts the
 text and reads it as the way.
 
-<div class="testimony-math">
-\[
-(P_{65} \land P_{67}) \rightarrow \lnot P_{66}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-67}{P_{67}}) \rightarrow \lnot \href{claims.html#claim-66}{P_{66}}\\) — *would deny:* In Matthew 19:17, keeping the commandments is the way to life, made possible by grace
+
 </div>
 
 <a id="matthew19WayLine"></a>
@@ -357,15 +345,13 @@ text and reads it as the way.
 **Matthew 19:17, as Rome reads it**: the commandments are the way to life, so
 salvation is not apart from works.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{65} \\
-\text{(2)} \quad &amp; P_{66} \\
-\text{(3)} \quad &amp; (P_{65} \land P_{66}) \rightarrow \lnot P_{28} \\[4pt]
-\vdash \quad &amp; \lnot P_{28}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-65}{P_{65}}\\) — Matthew 19:17 — "If you would enter life, keep the commandments"
+- (2) \\(\href{claims.html#claim-66}{P_{66}}\\) — In Matthew 19:17, keeping the commandments is the way to life, made possible by grace
+- (3) \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) — *at issue, the denial of:* Salvation is not by works: no work is its ground
+
 </div>
 
 <a id="matthew19LegalLine"></a>
@@ -374,15 +360,13 @@ salvation is not apart from works.
 **Matthew 19:17, as Calvin reads it**: a reply on the law's own terms, showing
 the young man what he has not kept.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{65} \\
-\text{(2)} \quad &amp; P_{67} \\
-\text{(3)} \quad &amp; (P_{65} \land P_{67}) \rightarrow \lnot P_{66} \\[4pt]
-\vdash \quad &amp; \lnot P_{66}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-65}{P_{65}}\\) — Matthew 19:17 — "If you would enter life, keep the commandments"
+- (2) \\(\href{claims.html#claim-67}{P_{67}}\\) — In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith
+- (3) \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-67}{P_{67}}) \rightarrow \lnot \href{claims.html#claim-66}{P_{66}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-66}{P_{66}}\\) — *at issue, the denial of:* In Matthew 19:17, keeping the commandments is the way to life, made possible by grace
+
 </div>
 
 <a id="matthew19WayCase"></a>
@@ -390,15 +374,13 @@ the young man what he has not kept.
 
 Rome's reading of Matthew 19:17, as a position in the debate.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{65} \\
-\text{(2)} \quad &amp; P_{66} \\
-\text{(3)} \quad &amp; (P_{65} \land P_{66}) \rightarrow \lnot P_{28} \\[4pt]
-\vdash \quad &amp; \lnot P_{28}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-65}{P_{65}}\\) — Matthew 19:17 — "If you would enter life, keep the commandments"
+- (2) \\(\href{claims.html#claim-66}{P_{66}}\\) — In Matthew 19:17, keeping the commandments is the way to life, made possible by grace
+- (3) \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) — *at issue, the denial of:* Salvation is not by works: no work is its ground
+
 </div>
 
 No premise here rests on scripture alone.
@@ -408,15 +390,13 @@ No premise here rests on scripture alone.
 
 Calvin's reading of Matthew 19:17, as a position in the debate.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{65} \\
-\text{(2)} \quad &amp; P_{67} \\
-\text{(3)} \quad &amp; (P_{65} \land P_{67}) \rightarrow \lnot P_{66} \\[4pt]
-\vdash \quad &amp; \lnot P_{66}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-65}{P_{65}}\\) — Matthew 19:17 — "If you would enter life, keep the commandments"
+- (2) \\(\href{claims.html#claim-67}{P_{67}}\\) — In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith
+- (3) \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-67}{P_{67}}) \rightarrow \lnot \href{claims.html#claim-66}{P_{66}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-66}{P_{66}}\\) — *at issue, the denial of:* In Matthew 19:17, keeping the commandments is the way to life, made possible by grace
+
 </div>
 
 No premise here rests on scripture alone.
@@ -646,15 +626,15 @@ from the meaning of the word, and what cannot, is checked in
 
 **Why *Luke 18:14: "this man went down to his house justified"* stands against *Trent, against 'not by works'*.**
 
-- **The crux:** \\((P_{59} \land P_{60} \land P_{61}) \rightarrow P_{26}\\), a premise of *Luke 18:14: "this man went down to his house justified"*.
+- **The crux:** \\((\href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-61}{P_{61}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\), a premise of *Luke 18:14: "this man went down to his house justified"*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{59}\\), \\(P_{60}\\), \\(P_{61}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{33}\\), \\(P_{33} \rightarrow \lnot P_{26}\\) cannot be held together with \\((P_{59} \land P_{60} \land P_{61}) \rightarrow P_{26}\\) and \\(P_{59}\\), \\(P_{60}\\), \\(P_{61}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-59}{P_{59}}\\), \\(\href{claims.html#claim-60}{P_{60}}\\), \\(\href{claims.html#claim-61}{P_{61}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-33}{P_{33}}\\), \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\) cannot be held together with \\((\href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-61}{P_{61}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\) and \\(\href{claims.html#claim-59}{P_{59}}\\), \\(\href{claims.html#claim-60}{P_{60}}\\), \\(\href{claims.html#claim-61}{P_{61}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{59}\\) Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works — *consensus*: Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 201–207
-  - \\(P_{60}\\) ‘Justified’ at Luke 18:14 is God's verdict: accepted as righteous before God — *well supported*: [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; Luke 18:14
-  - \\(P_{61}\\) The tax collector brings no works that merit, only a humble and contrite plea for mercy — *consensus*: Luke 18:9-14; [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 36
-  - the step itself — *disputed*: [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), pp. 33–34
+  - \\(\href{claims.html#claim-59}{P_{59}}\\) Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works — *consensus*: Luke 18:9-14; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 201–207
+  - \\(\href{claims.html#claim-60}{P_{60}}\\) ‘Justified’ at Luke 18:14 is God's verdict: accepted as righteous before God — *well supported*: [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; Luke 18:14
+  - \\(\href{claims.html#claim-61}{P_{61}}\\) The tax collector brings no works that merit, only a humble and contrite plea for mercy — *consensus*: Luke 18:9-14; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36
+  - the step itself — *disputed*: [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 33–34
 
 <a id="luke18Case_strength"></a>
 **`luke18Case_strength`**
@@ -977,24 +957,24 @@ each have Trent, Trent has Luke 7:50, and each reading of Matthew has its rival.
 **What this rests on.** The reasons state 7 defeats and 0 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
-  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
-  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
-  - an inference step — [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), pp. 33–34
+  - an inference step — [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 33–34
 - *Matthew 7:21–23, read as the doing including faith*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
-  - an inference step — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826
+  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - an inference step — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
 - *Matthew 7:21–23, read as obedience a condition of entry*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §1821
-  - an inference step — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1821
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
 - *Matthew 19:17, read as the law exposing what he has not kept*, weakest at *disputed*:
-  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
-  - an inference step — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
+  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
+  - an inference step — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
 - *Matthew 19:17, read as the commandments the way to life*, weakest at *disputed*:
-  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 35
-  - an inference step — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
+  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](weighing.md#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -1035,24 +1015,24 @@ set, by Luke 7:50 and by Luke 18 itself.
 **What this rests on.** The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
-  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
-  - an inference step — [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), pp. 33–34
+  - an inference step — [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 33–34
 - *Matthew 7:21–23, read as obedience a condition of entry*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §1821
-  - an inference step — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1821
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
 - *Matthew 19:17, read as the commandments the way to life*, weakest at *disputed*:
-  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 35
-  - an inference step — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
+  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 - *Trent, against 'not by works'*, weakest at *disputed*:
-  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Matthew 7:21–23, read as the doing including faith*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
-  - an inference step — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826
+  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - an inference step — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
 - *Matthew 19:17, read as the law exposing what he has not kept*, weakest at *disputed*:
-  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
-  - an inference step — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
+  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
+  - an inference step — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](weighing.md#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -1091,24 +1071,24 @@ Trent, and Trent defeats it.
 **What this rests on.** The reasons state 8 defeats and 17 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent, against 'not by works'*, weakest at *disputed*:
-  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
-  - an inference step — [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), pp. 33–34
+  - an inference step — [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 33–34
 - *Matthew 7:21–23, read as obedience a condition of entry*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §1821
-  - an inference step — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1821
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
 - *Matthew 19:17, read as the commandments the way to life*, weakest at *disputed*:
-  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 35
-  - an inference step — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
+  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
-  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Matthew 7:21–23, read as the doing including faith*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
-  - an inference step — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826
+  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - an inference step — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
 - *Matthew 19:17, read as the law exposing what he has not kept*, weakest at *disputed*:
-  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
-  - an inference step — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
+  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
+  - an inference step — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
 
 Why *Luke 18:14: "this man went down to his house justified"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyLukeEighteenStandsAgainstTrent`](#whyLukeEighteenStandsAgainstTrent).
 
@@ -1148,24 +1128,24 @@ defended includes Calvin's reading, which defeats Rome's.
 **What this rests on.** The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Matthew 7:21–23, read as the doing including faith*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
-  - an inference step — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826
+  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - an inference step — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
 - *Matthew 7:21–23, read as obedience a condition of entry*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §1821
-  - an inference step — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1821
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
-  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
-  - an inference step — [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), pp. 33–34
+  - an inference step — [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 33–34
 - *Matthew 19:17, read as the law exposing what he has not kept*, weakest at *disputed*:
-  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
-  - an inference step — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
+  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
+  - an inference step — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
 - *Trent, against 'not by works'*, weakest at *disputed*:
-  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Matthew 19:17, read as the commandments the way to life*, weakest at *disputed*:
-  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 35
-  - an inference step — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
+  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](weighing.md#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -1201,24 +1181,24 @@ defended includes Rome's reading, which defeats Calvin's.
 **What this rests on.** The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Matthew 7:21–23, read as obedience a condition of entry*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §1821
-  - an inference step — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1821
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
 - *Matthew 7:21–23, read as the doing including faith*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
-  - an inference step — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826
+  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - an inference step — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
-  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
-  - an inference step — [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), pp. 33–34
+  - an inference step — [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 33–34
 - *Matthew 19:17, read as the commandments the way to life*, weakest at *disputed*:
-  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 35
-  - an inference step — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
+  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 - *Trent, against 'not by works'*, weakest at *disputed*:
-  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Matthew 19:17, read as the law exposing what he has not kept*, weakest at *disputed*:
-  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
-  - an inference step — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
+  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
+  - an inference step — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](weighing.md#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -1254,24 +1234,24 @@ defended includes Calvin's reading, which defeats Rome's.
 **What this rests on.** The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Matthew 19:17, read as the law exposing what he has not kept*, weakest at *disputed*:
-  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
-  - an inference step — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
+  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
+  - an inference step — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
 - *Matthew 19:17, read as the commandments the way to life*, weakest at *disputed*:
-  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 35
-  - an inference step — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
+  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
-  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
-  - an inference step — [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), pp. 33–34
+  - an inference step — [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 33–34
 - *Matthew 7:21–23, read as the doing including faith*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
-  - an inference step — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826
+  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - an inference step — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
 - *Trent, against 'not by works'*, weakest at *disputed*:
-  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Matthew 7:21–23, read as obedience a condition of entry*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §1821
-  - an inference step — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1821
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](weighing.md#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -1306,24 +1286,24 @@ defended includes Rome's reading, which defeats Calvin's.
 **What this rests on.** The reasons state 7 defeats and 24 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Matthew 19:17, read as the commandments the way to life*, weakest at *disputed*:
-  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 35
-  - an inference step — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
+  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 - *Matthew 19:17, read as the law exposing what he has not kept*, weakest at *disputed*:
-  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
-  - an inference step — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
+  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
+  - an inference step — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
-  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
-  - an inference step — [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), pp. 33–34
+  - an inference step — [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 33–34
 - *Matthew 7:21–23, read as obedience a condition of entry*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §1821
-  - an inference step — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1821
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
 - *Trent, against 'not by works'*, weakest at *disputed*:
-  - Justification is not remission of sins only, but renewal of the inward man — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
+  - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Matthew 7:21–23, read as the doing including faith*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
-  - an inference step — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826
+  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - an inference step — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
 
 Why *Luke 7:50: "your faith has saved you"* defeats *Trent, against 'not by works'*, at the level of the claims: [`whyTheDominicalCaseStandsAgainstTrent`](weighing.md#whyTheDominicalCaseStandsAgainstTrent).
 
@@ -1386,22 +1366,22 @@ Matthew still has its rival.
 **What this rests on.** The reasons state 4 defeats and 20 absences of defeat, each a cell of the defeat table, [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
-  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [`marshall-luke-1978`](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [`padilla-narrative-criticism-2021`](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [`kolb-wengert-book-of-concord-2000`](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Luke 18:14: "this man went down to his house justified"*, weakest at *disputed*:
-  - an inference step — [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 45; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), pp. 33–34
+  - an inference step — [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 33–34
 - *Matthew 7:21–23, read as obedience a condition of entry*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §1821
-  - an inference step — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1821
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
 - *Matthew 7:21–23, read as the doing including faith*, weakest at *disputed*:
-  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [`calvin-harmony-evangelists-1845`](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
-  - an inference step — [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2826
+  - In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+  - an inference step — [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
 - *Matthew 19:17, read as the commandments the way to life*, weakest at *disputed*:
-  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [`catholic-church-catechism-2000`](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [`waterworth-trent-1848`](../../bibliography.md#waterworth-trent-1848), p. 35
-  - an inference step — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
+  - In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+  - an inference step — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 394
 - *Matthew 19:17, read as the law exposing what he has not kept*, weakest at *disputed*:
-  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [`calvin-harmony-evangelists-2-1845`](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
-  - an inference step — [`john-paul-ii-veritatis-splendor-1993`](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
+  - In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
+  - an inference step — [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12
 
 <a id="without_trent_luke_is_forced"></a>
 **`without_trent_luke_is_forced`**

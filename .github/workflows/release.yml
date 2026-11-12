@@ -1,0 +1,34 @@
+name: Release
+
+# A tag `v*` publishes a release carrying the print editions, typeset by
+# pdf.yml from the tagged commit. The site links to the current PDF, which
+# docs.yml puts beside it; a release is the dated copy a reader can cite.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  pdf:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/pdf.yml
+
+  release:
+    needs: pdf
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: pdfs
+          path: pdf
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: pdf/*.pdf
+          generate_release_notes: true

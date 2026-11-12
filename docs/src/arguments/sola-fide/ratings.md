@@ -319,7 +319,7 @@ theorem trent_on_the_word_is_asserted : trentWordAssessment.findings.kind =
 chapter 16's. Chapter 16's is the strongest known: it argues from texts both
 sides accept.
 
-**The rating, computed.** *Works as fruit (Westminster XVI.2, XVI.5, and its proofs)* is cited at *well supported* ([`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [`lwf-catholic-joint-declaration-2000`](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38). Dissents encoded: *Trent, canon 24*, *Trent, Session VI, ch. 16*. The strongest known: *Trent, Session VI, ch. 16*.
+**The rating, computed.** *Works as fruit (Westminster XVI.2, XVI.5, and its proofs)* is cited at *well supported* ([Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [Lutheran World Federation and Catholic Church 2000](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38). Dissents encoded: *Trent, canon 24*, *Trent, Session VI, ch. 16*. The strongest known: *Trent, Session VI, ch. 16*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -357,7 +357,7 @@ theorem fruit_step_ratings : fruitStep.ratings = [(Standard.evidence,
 the word, and the reading through Paul, which is the strongest known objection
 because it argues for the increase from Paul's word.
 
-**The rating, computed.** *James's word (δικαιόω, by the rule of least meaning)* is cited at *well supported* ([`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)). Dissents encoded: *Trent, Session VI, ch. 10*, *The renewal reading*. The strongest known: *The renewal reading*.
+**The rating, computed.** *James's word (δικαιόω, by the rule of least meaning)* is cited at *well supported* ([Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Barr 2004](../../bibliography.md#barr-semantics-2004)). Dissents encoded: *Trent, Session VI, ch. 10*, *The renewal reading*. The strongest known: *The renewal reading*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -464,7 +464,7 @@ denies the second starting point (`westminsterAssessment`).
 **Trent's premise that the reward is given to merits, with the objection to
 it**: Westminster's, the strongest known.
 
-**The rating, computed.** *Trent: the reward is rendered to merits (ch. 16, canon 32)* is cited at *disputed* ([`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [`dulles-two-languages-1999`](../../bibliography.md#dulles-two-languages-1999)). Dissents encoded: *Westminster XVI.5, XVI.6*. The strongest known: *Westminster XVI.5, XVI.6*.
+**The rating, computed.** *Trent: the reward is rendered to merits (ch. 16, canon 32)* is cited at *disputed* ([Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [Dulles 1999](../../bibliography.md#dulles-two-languages-1999)). Dissents encoded: *Westminster XVI.5, XVI.6*. The strongest known: *Westminster XVI.5, XVI.6*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -477,7 +477,7 @@ it**: Westminster's, the strongest known.
 
 **Canon 24's step, with the objection to it**: the Reformed reconciliation's.
 
-**The rating, computed.** *James 2:24, read by canon 24* is cited at *disputed* ([`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24). Dissents encoded: *The Reformed harmony (Westminster XVI.2, XVI.5)*. The strongest known: *The Reformed harmony (Westminster XVI.2, XVI.5)*.
+**The rating, computed.** *James 2:24, read by canon 24* is cited at *disputed* ([Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24). Dissents encoded: *The Reformed harmony (Westminster XVI.2, XVI.5)*. The strongest known: *The Reformed harmony (Westminster XVI.2, XVI.5)*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -490,7 +490,7 @@ it**: Westminster's, the strongest known.
 
 **Chapter 16's step, with the objection to it**: the Reformed reconciliation's.
 
-**The rating, computed.** *The reward of works (Trent, Session VI, ch. 16)* is cited at *disputed* ([`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6). Dissents encoded: *The Reformed harmony (Westminster XVI.2, XVI.5)*. The strongest known: *The Reformed harmony (Westminster XVI.2, XVI.5)*.
+**The rating, computed.** *The reward of works (Trent, Session VI, ch. 16)* is cited at *disputed* ([Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6). Dissents encoded: *The Reformed harmony (Westminster XVI.2, XVI.5)*. The strongest known: *The Reformed harmony (Westminster XVI.2, XVI.5)*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -577,14 +577,12 @@ definition, and the step from it. This states Trent's denial as these pages
 state it throughout, as a consequence of what Trent says justification is
 (`trentDefinitionSteps`).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\[4pt]
-\vdash \quad &amp; \lnot P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-33}{P_{33}}\\) — Justification is not remission of sins only, but renewal of the inward man
+- (2) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-26}{P_{26}}\\) — *at issue, the denial of:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 <a id="trentOnSufficiency"></a>
@@ -592,14 +590,12 @@ state it throughout, as a consequence of what Trent says justification is
 
 Trent on whether faith suffices, as a position of its own.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{33} \rightarrow \lnot P_{26} \\[4pt]
-\vdash \quad &amp; \lnot P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-33}{P_{33}}\\) — Justification is not remission of sins only, but renewal of the inward man
+- (2) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-26}{P_{26}}\\) — *at issue, the denial of:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 No premise here rests on scripture alone.
@@ -613,14 +609,12 @@ Paul's "justify" (δικαιόω) means the renewal of the inward person. This i
 Trent's definition taken as a claim about the word (`trentOnPaulsWord`), set out
 as a line of argument.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{54} \\
-\text{(2)} \quad &amp; P_{54} \rightarrow P_{52} \\[4pt]
-\vdash \quad &amp; P_{52}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Augustine explains "being justified" as "being made righteous", and the Latin West read iustificare so
+- (2) \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-52}{P_{52}}\\) — *at issue:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+
 </div>
 
 <a id="trentOnTheWordOfPaul"></a>
@@ -628,14 +622,12 @@ as a line of argument.
 
 Trent's reading of Paul's word, as a position of its own.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{54} \\
-\text{(2)} \quad &amp; P_{54} \rightarrow P_{52} \\[4pt]
-\vdash \quad &amp; P_{52}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Augustine explains "being justified" as "being made righteous", and the Latin West read iustificare so
+- (2) \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-52}{P_{52}}\\) — *at issue:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+
 </div>
 
 No premise here rests on scripture alone.
@@ -731,7 +723,7 @@ sufficed. An argument under all three standards.
 
 **Trent's definition, with the objections to it**: Paul's gospel and Romans 4.
 
-**The rating, computed.** *Trent: justification is the renewal of the inward man (ch. 7)* is cited at *disputed* ([`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11). Dissents encoded: *Paul's gospel (Galatians 1; Westminster XI.1)*, *Romans 4:3–8*. The strongest known: *Paul's gospel (Galatians 1; Westminster XI.1)*.
+**The rating, computed.** *Trent: justification is the renewal of the inward man (ch. 7)* is cited at *disputed* ([Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11). Dissents encoded: *Paul's gospel (Galatians 1; Westminster XI.1)*, *Romans 4:3–8*. The strongest known: *Paul's gospel (Galatians 1; Westminster XI.1)*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -745,7 +737,7 @@ sufficed. An argument under all three standards.
 **Trent's reading of Paul's word, with the objections to it**: Romans 4 on the
 word, the strongest known, and the argument from Paul's word.
 
-**The rating, computed.** *Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)* is cited at *disputed* ([`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)). Dissents encoded: *Romans 4:3–8, on Paul's word*, *Paul's word (by the rule of least meaning)*. The strongest known: *Romans 4:3–8, on Paul's word*.
+**The rating, computed.** *Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)* is cited at *disputed* ([Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)). Dissents encoded: *Romans 4:3–8, on Paul's word*, *Paul's word (by the rule of least meaning)*. The strongest known: *Romans 4:3–8, on Paul's word*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -758,7 +750,7 @@ word, the strongest known, and the argument from Paul's word.
 
 **Trent's step to "faith does not suffice", with the objection to it**: Luke 18.
 
-**The rating, computed.** *Faith does not suffice (Trent, ch. 7, canon 9)* is cited at *disputed* ([`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; canon 9). Dissents encoded: *Luke 18:9–14 (the tax collector justified)*. The strongest known: *Luke 18:9–14 (the tax collector justified)*.
+**The rating, computed.** *Faith does not suffice (Trent, ch. 7, canon 9)* is cited at *disputed* ([Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; canon 9). Dissents encoded: *Luke 18:9–14 (the tax collector justified)*. The strongest known: *Luke 18:9–14 (the tax collector justified)*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -855,7 +847,7 @@ tradition standard only.
 **The step about Paul's word, with the objection to it**: Trent's reading of the
 word, the strongest known.
 
-**The rating, computed.** *Paul's word (δικαιόω, by the rule of least meaning)* is cited at *well supported* ([`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`moo-romans-1996`](../../bibliography.md#moo-romans-1996), §p. 80; [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)). Dissents encoded: *Trent, with Augustine (ch. 8)*. The strongest known: *Trent, with Augustine (ch. 8)*.
+**The rating, computed.** *Paul's word (δικαιόω, by the rule of least meaning)* is cited at *well supported* ([Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)). Dissents encoded: *Trent, with Augustine (ch. 8)*. The strongest known: *Trent, with Augustine (ch. 8)*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -1088,27 +1080,27 @@ denial, and so is not heard.
 **What this rests on.** The reasons state 2 defeats and 48 absences of defeat, each a cell of the defeat table, [`jamesUnderEvidence_defeats`](#jamesUnderEvidence_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *well supported*:
-  - Outside Paul, ‘justify’ (δικαιόω) declares or vindicates; it does not mean making righteous — [`bauer-danker-lexicon-2000`](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35; [`crossway-esv-2001`](../../bibliography.md#crossway-esv-2001), ad loc. Matt 11:19
-  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`joos-semantic-axiom-1972`](../../bibliography.md#joos-semantic-axiom-1972); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - Outside Paul, ‘justify’ (δικαιόω) declares or vindicates; it does not mean making righteous — [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; Deut 25:1; Matt 11:19; Luke 7:35; [The Holy Bible, English Standard Version 2001](../../bibliography.md#crossway-esv-2001), ad loc. Matt 11:19
+  - A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Joos 1972](../../bibliography.md#joos-semantic-axiom-1972); [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Barr 2004](../../bibliography.md#barr-semantics-2004)
 - *James's faith (the faith James calls dead)*, weakest at *well supported*:
-  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.2
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
-  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Revelation 22:11 says: he that is just, let him be justified still — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
-  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Sirach 18:22 says: be not afraid to be justified even to death — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
-  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [`swete-old-testament-in-greek`](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [Swete](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *The reward of works, of grace (Westminster XVI.5, XVI.6)*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 
 <a id="underTraditionSettled"></a>
 **`underTraditionSettled`**
@@ -1138,36 +1130,36 @@ reading of the word is not heard.
 **What this rests on.** The reasons state 8 defeats and 48 absences of defeat, each a cell of the defeat table, [`jamesUnderTradition_defeats`](#jamesUnderTradition_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Barr 2004](../../bibliography.md#barr-semantics-2004)
 - *James's faith (the faith James calls dead)*, weakest at *well supported*:
-  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.2
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [`lwf-catholic-joint-declaration-2000`](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [Lutheran World Federation and Catholic Church 2000](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *James 2:24, read by canon 24*, weakest at *disputed*:
-  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - Good works are a cause of the increase of justification, not merely its fruits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
 - *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
-  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Revelation 22:11 says: he that is just, let him be justified still — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
-  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Sirach 18:22 says: be not afraid to be justified even to death — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
-  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [`swete-old-testament-in-greek`](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [Swete](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
-  - The reward God renders to the works of the justified is rendered to them as merits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [`dulles-two-languages-1999`](../../bibliography.md#dulles-two-languages-1999)
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - The reward God renders to the works of the justified is rendered to them as merits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [Dulles 1999](../../bibliography.md#dulles-two-languages-1999)
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 - *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
-  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
-  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
 - *The reward of works, of grace (Westminster XVI.5, XVI.6)*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 
 <a id="renewal_holds_increase"></a>
 **`renewal_holds_increase`**
@@ -1209,36 +1201,36 @@ answers the argument from James's word, now that the two are rated alike.
 **What this rests on.** The reasons state 4 defeats and 42 absences of defeat, each a cell of the defeat table, [`jamesUnderTradition_defeats`](#jamesUnderTradition_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's faith (the faith James calls dead)*, weakest at *well supported*:
-  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.2
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2
 - *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
-  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
-  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
-  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [`swete-old-testament-in-greek`](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [Swete](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Barr 2004](../../bibliography.md#barr-semantics-2004)
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [`lwf-catholic-joint-declaration-2000`](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [Lutheran World Federation and Catholic Church 2000](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *James 2:24, read by canon 24*, weakest at *disputed*:
-  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - Good works are a cause of the increase of justification, not merely its fruits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
 - *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
-  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Revelation 22:11 says: he that is just, let him be justified still — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
-  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Sirach 18:22 says: be not afraid to be justified even to death — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
-  - The reward God renders to the works of the justified is rendered to them as merits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [`dulles-two-languages-1999`](../../bibliography.md#dulles-two-languages-1999)
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - The reward God renders to the works of the justified is rendered to them as merits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [Dulles 1999](../../bibliography.md#dulles-two-languages-1999)
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 - *The reward of works, of grace (Westminster XVI.5, XVI.6)*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 
 <a id="lexicalHeard"></a>
 **`lexicalHeard`**
@@ -1255,36 +1247,36 @@ through Paul.
 **What this rests on.** The reasons state 2 defeats and 43 absences of defeat, each a cell of the defeat table, [`jamesUnderTradition_defeats`](#jamesUnderTradition_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Barr 2004](../../bibliography.md#barr-semantics-2004)
 - *James's faith (the faith James calls dead)*, weakest at *well supported*:
-  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.2
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
-  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [`swete-old-testament-in-greek`](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [Swete](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [`lwf-catholic-joint-declaration-2000`](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [Lutheran World Federation and Catholic Church 2000](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *James 2:24, read by canon 24*, weakest at *disputed*:
-  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - Good works are a cause of the increase of justification, not merely its fruits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
 - *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
-  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Revelation 22:11 says: he that is just, let him be justified still — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
-  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Sirach 18:22 says: be not afraid to be justified even to death — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
-  - The reward God renders to the works of the justified is rendered to them as merits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [`dulles-two-languages-1999`](../../bibliography.md#dulles-two-languages-1999)
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - The reward God renders to the works of the justified is rendered to them as merits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [Dulles 1999](../../bibliography.md#dulles-two-languages-1999)
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 - *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
-  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
-  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
 - *The reward of works, of grace (Westminster XVI.5, XVI.6)*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 
 <a id="james_word_turns_on_the_standard"></a>
 **`james_word_turns_on_the_standard`**
@@ -1355,36 +1347,36 @@ answers canon 24 and chapter 16.
 **What this rests on.** The reasons state 7 defeats and 51 absences of defeat, each a cell of the defeat table, [`jamesUnderTradition_defeats`](#jamesUnderTradition_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Barr 2004](../../bibliography.md#barr-semantics-2004)
 - *James's faith (the faith James calls dead)*, weakest at *well supported*:
-  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.2
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [`lwf-catholic-joint-declaration-2000`](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [Lutheran World Federation and Catholic Church 2000](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
-  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [`swete-old-testament-in-greek`](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [Swete](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *James 2:24, read by canon 24*, weakest at *disputed*:
-  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - Good works are a cause of the increase of justification, not merely its fruits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
 - *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
-  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Revelation 22:11 says: he that is just, let him be justified still — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
-  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Sirach 18:22 says: be not afraid to be justified even to death — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
-  - The reward God renders to the works of the justified is rendered to them as merits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [`dulles-two-languages-1999`](../../bibliography.md#dulles-two-languages-1999)
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - The reward God renders to the works of the justified is rendered to them as merits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [Dulles 1999](../../bibliography.md#dulles-two-languages-1999)
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 - *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
-  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
-  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
 - *The reward of works, of grace (Westminster XVI.5, XVI.6)*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 
 <a id="rewardHeard"></a>
 **`rewardHeard`**
@@ -1404,36 +1396,36 @@ the Reformed reconciliation.
 **What this rests on.** The reasons state 7 defeats and 62 absences of defeat, each a cell of the defeat table, [`jamesUnderTradition_defeats`](#jamesUnderTradition_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *James's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [`silva-biblical-words-1994`](../../bibliography.md#silva-biblical-words-1994); [`barr-semantics-2004`](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:21; [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Barr 2004](../../bibliography.md#barr-semantics-2004)
 - *James's faith (the faith James calls dead)*, weakest at *well supported*:
-  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.2
+  - The faith alone that James 2:24 denies justifies is the dead faith of 2:14–26 — Jas 2:14-26; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 7; [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2
 - *James 2:24, read by canon 24*, weakest at *disputed*:
-  - Good works are a cause of the increase of justification, not merely its fruits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - Good works are a cause of the increase of justification, not merely its fruits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 24
 - *The reward of works (Trent, Session VI, ch. 16)*, weakest at *disputed*:
-  - The reward God renders to the works of the justified is rendered to them as merits — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [`dulles-two-languages-1999`](../../bibliography.md#dulles-two-languages-1999)
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - The reward God renders to the works of the justified is rendered to them as merits — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16; canon 32; [Dulles 1999](../../bibliography.md#dulles-two-languages-1999)
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 16, canon 32; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 - *Revelation 22:11, in the Greek*, weakest at *well supported*:
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *Sirach 18:22, in the Greek*, weakest at *well supported*:
-  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [`swete-old-testament-in-greek`](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
-  - an inference step — [`pius-divino-afflante-spiritu-1943`](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [`holmes-sblgnt-2010`](../../bibliography.md#holmes-sblgnt-2010); [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011)
+  - The Greek of Sirach 18:22 is about paying a vow: do not wait until death to be justified — [Swete](../../bibliography.md#swete-old-testament-in-greek), ad loc. Sir 18:22; [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011), §Sirach 18:22
+  - an inference step — [Pius XII 1943](../../bibliography.md#pius-divino-afflante-spiritu-1943), §§16; [Holmes 2010](../../bibliography.md#holmes-sblgnt-2010); [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011)
 - *Harmonisation of James 2:24*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [`lwf-catholic-joint-declaration-2000`](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
-  - an inference step — [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.2, XVI.5; [Lutheran World Federation and Catholic Church 2000](../../bibliography.md#lwf-catholic-joint-declaration-2000), §§§25, 37; see §38
+  - an inference step — [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
 - *Revelation 22:11, as Trent quotes it*, weakest at *disputed*:
-  - Revelation 22:11 says: he that is just, let him be justified still — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Revelation 22:11 says: he that is just, let him be justified still — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *Sirach 18:22, as Trent quotes it*, weakest at *disputed*:
-  - Sirach 18:22 says: be not afraid to be justified even to death — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - Sirach 18:22 says: be not afraid to be justified even to death — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
 - *James's word, read through Paul's (the renewal reading)*, weakest at *disputed*:
-  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
-  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
-  - an inference step — [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [`vanlandingham-judgment-justification-2006`](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - Paul's word ‘justify’ means the renewal of the inward man, not only a verdict — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, chs. 7–8; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
+  - James's ‘justify’ (δικαιόω) has the sense Paul's has: the justification of Romans and Galatians — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 10; [VanLandingham 2006](../../bibliography.md#vanlandingham-judgment-justification-2006)
 - *The reward of works, of grace (Westminster XVI.5, XVI.6)*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
+  - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.5, XVI.6
 
 <a id="fruit_turns_on_the_standard"></a>
 **`fruit_turns_on_the_standard`**

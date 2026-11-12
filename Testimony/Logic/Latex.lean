@@ -528,42 +528,63 @@ def Lead.atIssue : Lead := ⟨"at issue", "at issue, the denial of"⟩
 /-- What a formula says, in its claims' own words, when it is a list of claims
 (`literals`): one claim is its label, and a denied one is marked so; of several,
 each is named by its variable, since the reader is matching words to the formula
-beside them. `lead` says what the words are. -/
-def inWords [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) (lead : Lead)
+beside them. `lead` says what the words are.
+
+The renderer supplies how a variable is set, how a claim's label is escaped and
+how a mark is set. Print and the site both say a derivation's words through
+this, so the two cannot come to say different ones. -/
+def inWordsWith (var label : α → String) (mark : String → String) (lead : Lead)
     (φ : Formula α) : Option String :=
   (literals φ).map fun claims =>
-    let label (a : α) := escape (cite a).label
-    let mark (s : String) := if s.isEmpty then "" else "\\emph{" ++ s ++ ":} "
+    let mark' (s : String) := if s.isEmpty then "" else mark s
     match claims with
-    | [(a, true)] => mark lead.denial ++ label a
-    | [(a, false)] => mark lead.claim ++ label a
-    | _ => mark lead.claim ++ String.intercalate "; " (claims.map fun (a, denied) =>
-        linkedVar n a ++ " " ++ (if denied then mark Lead.held.denial else "") ++ label a)
+    | [(a, true)] => mark' lead.denial ++ label a
+    | [(a, false)] => mark' lead.claim ++ label a
+    | _ => mark' lead.claim ++ String.intercalate "; " (claims.map fun (a, denied) =>
+        var a ++ " " ++ (if denied then mark' Lead.held.denial else "") ++ label a)
 
-/-- The words a row of a derivation carries, if any.
+/-- `inWordsWith`, set for print: a linked variable, an escaped label, and the mark
+in italics. -/
+def inWords [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) (lead : Lead)
+    (φ : Formula α) : Option String :=
+  inWordsWith (linkedVar n) (fun a => escape (cite a).label)
+    (fun s => "\\emph{" ++ s ++ ":} ") lead φ
+
+/-- The words a row of a derivation carries, if any, given how a renderer says a
+formula in words.
 
 A premise that is a claim, or a list of them, says it: it is what the position
 holds. A step says what it *would give*: a step is a conditional, and holding it
 is not holding what it needs — in a rival's package it often does not. A step
 that gives the conclusion leaves it to the turnstile row. A
 step's antecedent is not glossed: a claim there is in words on the row where it
-is a premise, if it is one, and is otherwise left to its link. Nothing is
-glossed without a legend to take the words from. -/
-def gloss [DecidableEq α] (n : Numbering α) (concl : Option (Formula α)) (φ : Formula α) :
-    Option String :=
-  n.cite.bind fun cite => match φ with
-    | .imp _ .falsum => inWords n cite .held φ
-    | .imp _ q => if concl == some q then none else inWords n cite .step q
-    | _ => inWords n cite .held φ
+is a premise, if it is one, and is otherwise left to its link. -/
+def glossWith [DecidableEq α] (words : Lead → Formula α → Option String)
+    (concl : Option (Formula α)) (φ : Formula α) : Option String :=
+  match φ with
+  | .imp _ .falsum => words .held φ
+  | .imp _ q => if concl == some q then none else words .step q
+  | _ => words .held φ
 
 /-- The words of a lone formula, which is no position's premise: what a step would
 give. A claim, or a list of them, is left to its links, since nothing here holds
 it. -/
-def loneGloss [DecidableEq α] (n : Numbering α) (φ : Formula α) : Option String :=
+def loneGlossWith [DecidableEq α] (words : Lead → Formula α → Option String)
+    (φ : Formula α) : Option String :=
   match φ with
   | .imp _ .falsum => none
-  | .imp _ _ => gloss n none φ
+  | .imp _ _ => glossWith words none φ
   | _ => none
+
+/-- `glossWith`, set for print. Nothing is glossed without a legend to take the
+words from. -/
+def gloss [DecidableEq α] (n : Numbering α) (concl : Option (Formula α)) (φ : Formula α) :
+    Option String :=
+  n.cite.bind fun cite => glossWith (inWords n cite) concl φ
+
+/-- `loneGlossWith`, set for print. -/
+def loneGloss [DecidableEq α] (n : Numbering α) (φ : Formula α) : Option String :=
+  n.cite.bind fun cite => loneGlossWith (inWords n cite) φ
 
 /-- One row of a derivation: how it starts (an `\item` with its label, or the
 preamble's `\breakrow` where a page may break before it), its formula, and the
@@ -909,7 +930,7 @@ def body [DecidableEq α] (ns : String) (allAtoms : List α) (intro : List (Page
     { order := atomOrder allAtoms all, cite := cite,
       anchor := if cite.isSome then anchorName ns else "" }
   let legendPart := match cite with
-    | some c => "\\subsection*{The claims, numbered}\n" ++ legend n c ++ "\n"
+    | some c => "\\subsubsection*{The claims, numbered}\n" ++ legend n c ++ "\n"
     | none => ""
   String.join (intro.map (item n)) ++ legendPart ++
   String.join (items.map (item n))
