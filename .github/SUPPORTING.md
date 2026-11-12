@@ -8,6 +8,7 @@ challenge.
 
 - [GitHub Sponsors](https://github.com/sponsors/deanberris)
 - [Patreon](https://www.patreon.com/deanberris)
+- [PayPal](https://paypal.me/deanberris), for a one-off gift
 
 Readers and contributors also talk about the arguments and the library on the
 project's [Discord server](https://discord.gg/fHZwcq58b8).
