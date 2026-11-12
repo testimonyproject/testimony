@@ -408,6 +408,44 @@ quotes Moberly (VT 38, 1988, 320–21) and Wenham. Read in the ETS PDF. -/
   , issue := some "3"
   , pages := some (489, 508) }
 
+/-- Hahn on Galatians 3:15–18 and the binding of Isaac. The covenant Paul means
+is "the Abrahamic covenant in its final form, as ratified most solemnly by God's
+oath after the Aqedah (Gen 22:15-18)" (p. 92), and "the binding of Isaac ...
+merits from God a covenant oath to bless the ἔθνη through Abraham's 'seed'" (p.
+93). He calls the oath "unilaterally" sworn (p. 95). Read in the scan on the
+author's site, pp. 79 and 88–100; no DOI found. -/
+@[bib_entry] def hahnCovenantOathAqedah : BibEntry := .article
+  { core :=
+      { key := "hahn-covenant-oath-aqedah-2005"
+      , contributors := { authors := [.person "Scott W." "Hahn"] }
+      , title := "Covenant, Oath, and the Aqedah: Διαθήκη in Galatians 3:15-18"
+      , year := some { value := 2005 }
+      , identifiers :=
+          [ .url "https://scotthahn.com/s/CovenantOathAqedah.pdf" (some "2026-11-12") ] }
+  , journal := "The Catholic Biblical Quarterly"
+  , volume := some "67"
+  , pages := some (79, 100) }
+
+/-- Niehaus on the covenant with Abraham: one covenant, cut in Genesis 15, with
+Genesis 17 and 22 as its later instruction. Abraham is "the father both of those
+who, like him, would be justified by faith without circumcision (as in Genesis
+15), and those who, like him, would be circumcised" (p. 260); the works "which
+flowed from Abram's faith (and showed that his faith was real)" (p. 263). Read
+in the ETS PDF; no DOI found. -/
+@[bib_entry] def niehausAbrahamCovenant : BibEntry := .article
+  { core :=
+      { key := "niehaus-gods-covenant-abraham-2013"
+      , contributors := { authors := [.person "Jeffrey J." "Niehaus"] }
+      , title := "God's Covenant with Abraham"
+      , year := some { value := 2013 }
+      , identifiers :=
+          [ .url ("https://etsjets.org/wp-content/uploads/2013/06/files_JETS-PDFs_56_56-2_" ++
+                  "JETS_56-2_249-271_Niehaus.pdf") (some "2026-11-12") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "56"
+  , issue := some "2"
+  , pages := some (249, 271) }
+
 /-- Kline on Genesis 15 as a covenant ratified by God's oath. Not read; cited as a
 whole for the reading the commentators below share. -/
 @[bib_entry] def klineKingdomPrologue : BibEntry := .book
