@@ -725,6 +725,164 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work westminsterConfession (.sectionRef "XVI.6")]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .justificationHasDegrees =>
+    { label := "Justification has degrees: the justified are still further justified"
+    , kind := .theological
+      -- Waterworth, p. 37: the justified "increase in that justice which they
+      -- have received through the grace of Christ, and are still further
+      -- justified"; canon 24 (p. 47) condemns whoever says the justice received
+      -- "is not preserved and also increased before God through good works".
+    , source :=
+        { primary := .work waterworthTrent (.page 37)
+        , supporting := [.work waterworthTrent (.page 47)]
+        , tradition := .romanCatholic
+        , confidence := .wellSupported } }
+  | .deut25_1JudgesAcquitOrCondemn =>
+    { label := "Deuteronomy 25:1, Proverbs 17:15: judges acquit the innocent and " ++
+        "condemn the guilty"
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [ { ref := .verse ⟨.deuteronomy, 25, 1⟩ }, { ref := .verse ⟨.proverbs, 17, 15⟩ } ]
+        , supporting := [.work esv (.adLoc ⟨.deuteronomy, 25, 1⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .verdictAdmitsNoDegrees =>
+    { label := "A verdict acquits or condemns, and has no degrees"
+    , kind := .interpretive
+      -- Buchanan, p. 251 (read on the page image): justification is "an act,
+      -- too, which is completed at once, and not a work which is gradually
+      -- accomplished by successive acts", "just such as is consequent on the
+      -- sentence of a judge". Calvin, *Antidote*, p. 116: "I maintain that it is
+      -- one, and simple, and is wholly included in the gratuitous acceptance of
+      -- God." Turretin XVI.x.11 (Latin, 1847): "nec recipiat magis et minus".
+    , source :=
+        { primary := .work buchananJustification (.page 251)
+        , supporting :=
+            [ .work calvinAntidote (.page 116)
+            , .work turretinInstitutes2 (.sectionRef "Topic XVI, q. 10") ]
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
+  | .gen15_6AbramBelieved =>
+    { label := "Genesis 15:6: Abram believed the LORD, and he counted it to him as " ++
+        "righteousness"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.genesis, 15, 6⟩ }]
+        , supporting := [.work esv (.adLoc ⟨.genesis, 15, 6⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .gen15_17GodAlonePasses =>
+    { label := "Genesis 15:12, 17: Abram asleep; a fire pot and a torch pass between " ++
+        "the pieces"
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [ { ref := .verse ⟨.genesis, 15, 12⟩ }, { ref := .verse ⟨.genesis, 15, 17⟩ } ]
+        , supporting := [.work esv (.adLoc ⟨.genesis, 15, 17⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans4_10BeforeCircumcision =>
+    { label := "Romans 4:10: righteousness was counted to Abraham before he was circumcised"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 4, 10⟩ }]
+        , supporting := [.work esv (.adLoc ⟨.romans, 4, 10⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .gen15CovenantIsGodsOathAlone =>
+    { label := "The covenant of Genesis 15 binds God alone, by an oath on himself"
+    , kind := .interpretive
+      -- Jeremiah 34:18 shows the rite: those who broke a covenant become "like
+      -- the calf that they cut in two and passed between its parts". Hebrews
+      -- 6:13: "he swore by himself". Kline, Robertson and Wenham read Genesis
+      -- 15 so, and Weinfeld classes the covenant with Abraham as a royal grant;
+      -- none of the four has been read here, so each is cited as a whole.
+    , source :=
+        { primary := .scripture
+            [ { ref := .verse ⟨.jeremiah, 34, 18⟩ }
+            , { ref := .range ⟨.hebrews, 6, 13, 6, 18⟩ } ]
+        , supporting :=
+            [ .work robertsonChristOfTheCovenants .whole, .work klineKingdomPrologue .whole
+            , .work wenhamGenesis1 .whole, .work weinfeldCovenantOfGrant .whole ]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .abrahamCountedRighteousWithoutWorks =>
+    { label := "Abraham was counted righteous on believing, with no work as a condition"
+    , kind := .theological
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.romans, 4, 3, 4, 5⟩ }]
+        , supporting := [.work calvinInstitutes (.sectionRef "III.xi.18")]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .gen22_16BecauseYouObeyed =>
+    { label := "Genesis 22:16–18, 26:5: blessed because Abraham obeyed"
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [ { ref := .range ⟨.genesis, 22, 16, 22, 18⟩ }, { ref := .verse ⟨.genesis, 26, 5⟩ } ]
+        , supporting := [.work esv (.adLoc ⟨.genesis, 22, 16⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .abrahamFoundFaithfulWhenTested =>
+    { label := "1 Maccabees 2:52, Sirach 44:20: Abraham found faithful in trial, and it " ++
+        "was credited to him as righteousness"
+    , kind := .textual
+      -- NABRE 1 Macc 2:52: "Was not Abraham found faithful in trial, and it was
+      -- credited to him as righteousness?", cross-referenced to "Gn 15:6;
+      -- 22:1–18". Its note on Sirach 44:20, "when tested…loyal", reads it as
+      -- "Abraham's willingness to sacrifice his son Isaac".
+    , source :=
+        { primary := .work nabre (.adLoc ⟨.firstMaccabees, 2, 52⟩)
+        , supporting := [.work nabre (.adLoc ⟨.sirach, 44, 20⟩)]
+        , tradition := .secondTempleJewish
+        , confidence := .consensus } }
+  | .grantRewardsPastLoyalty =>
+    { label := "A royal grant rewarded loyalty already shown"
+    , kind := .historical
+      -- Weinfeld, p. 185: "while the grant is a reward for loyalty and good
+      -- deeds already performed, the treaty is an inducement for future
+      -- loyalty". Quoted as Knoppers (JAOS 116, 1996) quotes it; Weinfeld's
+      -- own pages were not read. Knoppers argues that the dichotomy is
+      -- overdrawn, so the claim is `disputed`.
+    , source :=
+        { primary := .work weinfeldCovenantOfGrant (.page 185)
+        , supporting := [.work knoppersRoyalGrants (.page 672)]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | .abrahamsGrantRewardsHisObedience =>
+    { label := "The grant to Abraham rewarded his obedience (Genesis 22:18; 26:5)"
+    , kind := .interpretive
+    , source :=
+        { primary := .work weinfeldCovenantOfGrant .whole
+        , supporting :=
+            [ .scripture
+                [{ ref := .verse ⟨.genesis, 22, 18⟩ }, { ref := .verse ⟨.genesis, 26, 5⟩ }] ]
+        , tradition := .criticalScholarship
+        , confidence := .disputed } }
+  | .aqedahBlessingAugmentedForObedience =>
+    { label := "The blessing of Genesis 22:16–18 was augmented because of Abraham's obedience"
+    , kind := .interpretive
+      -- Kuruvilla, p. 507: "Contingent upon his obedience, every aspect of the
+      -- earlier promises to Abraham is now 'augmented and guaranteed by the LORD
+      -- unreservedly'"; p. 506 n. 58: "more like an unexpected bonus, which, of
+      -- course, is what grace is all about". Calvin on 22:15 denies it: the
+      -- promise "receives nothing more than confirmation".
+    , source :=
+        { primary := .work kuruvillaAqedah (.page 507)
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .countingWasForTheTesting =>
+    { label := "The righteousness counted at Genesis 15:6 was credited for Abraham's " ++
+        "faithfulness when tested"
+    , kind := .interpretive
+      -- 1 Maccabees 2:52 (NABRE): "Was not Abraham found faithful in trial, and
+      -- it was credited to him as righteousness?", cross-referenced to Genesis
+      -- 15:6 and 22:1–18.
+    , source :=
+        { primary := .work nabre (.adLoc ⟨.firstMaccabees, 2, 52⟩)
+        , tradition := .secondTempleJewish
+        , confidence := .disputed } }
   | .rewardRenderedToMerits =>
     { label := "The reward God renders to the works of the justified is rendered to them " ++
         "as merits"

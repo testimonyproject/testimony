@@ -312,6 +312,33 @@ def means : Claim → Statement
   | .rewardRenderedToMerits => .holds (rl .merits (cn .works) (cn .eternalLife))
   | .rewardTextsPromiseReward =>
     .opaque "God rewards the labor of believers (1 Cor 15:58; Heb 6:10; 10:35; 2 Tim 4:8)"
+  | .justificationHasDegrees =>
+    .opaque "Justification has degrees: the justified are still further justified"
+  | .deut25_1JudgesAcquitOrCondemn =>
+    .opaque "Judges acquit the innocent and condemn the guilty (Deut 25:1; Prov 17:15)"
+  | .verdictAdmitsNoDegrees => .opaque "A verdict acquits or condemns, and has no degrees"
+  | .gen15_6AbramBelieved =>
+    .opaque "Abram believed the LORD, and he counted it to him as righteousness (Gen 15:6)"
+  | .gen15_17GodAlonePasses =>
+    .opaque "Abram asleep, a fire pot and a torch pass between the pieces (Gen 15:12, 17)"
+  | .romans4_10BeforeCircumcision =>
+    .opaque "Righteousness was counted to Abraham before he was circumcised (Rom 4:10)"
+  | .gen15CovenantIsGodsOathAlone =>
+    .opaque "The covenant of Genesis 15 binds God alone, by an oath on himself"
+  | .abrahamCountedRighteousWithoutWorks =>
+    .opaque "Abraham was counted righteous on believing, with no work as a condition"
+  | .gen22_16BecauseYouObeyed =>
+    .opaque "Abraham is blessed because he obeyed (Gen 22:16–18; 26:5)"
+  | .grantRewardsPastLoyalty =>
+    .opaque "A royal grant rewarded loyalty already shown (Weinfeld)"
+  | .abrahamsGrantRewardsHisObedience =>
+    .opaque "The grant to Abraham rewarded his obedience (Gen 22:18; 26:5)"
+  | .aqedahBlessingAugmentedForObedience =>
+    .opaque "The blessing of Gen 22:16–18 was augmented because of Abraham's obedience"
+  | .countingWasForTheTesting =>
+    .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
+  | .abrahamFoundFaithfulWhenTested =>
+    .opaque "Abraham found faithful in trial, and it was credited to him (1 Macc 2:52)"
 
 /-- Every sola fide atom, in declaration order. -/
 def all : List Claim :=
@@ -357,13 +384,19 @@ def all : List Claim :=
   , .latinTextsConfirmedFromOriginals, .ephesians2_10CreatedForGoodWorks
   , .james2_18ShowFaithByWorks, .romans6_22FruitToSanctification, .luke17_10UnworthyServants
   , .rewardTextsPromiseReward, .jamesUsesDikaioAsPaul
-  , .rewardRenderedToMerits, .firstPeter2_5AcceptableThroughChrist ]
+  , .rewardRenderedToMerits, .firstPeter2_5AcceptableThroughChrist
+  , .justificationHasDegrees, .deut25_1JudgesAcquitOrCondemn, .verdictAdmitsNoDegrees
+  , .gen15_6AbramBelieved, .gen15_17GodAlonePasses, .romans4_10BeforeCircumcision
+  , .gen15CovenantIsGodsOathAlone, .abrahamCountedRighteousWithoutWorks
+  , .gen22_16BecauseYouObeyed, .abrahamFoundFaithfulWhenTested, .grantRewardsPastLoyalty
+  , .abrahamsGrantRewardsHisObedience, .countingWasForTheTesting
+  , .aqedahBlessingAugmentedForObedience ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 
 /-- `all` has no repeats. -/
-theorem all_nodup : all.Nodup := by decide
+theorem all_nodup : all.Nodup := by decide +kernel
 
 /-- What each sola fide atom says. -/
 instance meanings : HasMeanings Claim where
@@ -372,8 +405,11 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **Ninety-seven of the hundred and thirteen are analysed.** Of the sixteen
-that are not, four are Pius XII's and Trent's claims about the Vulgate and one is the
+/-- **Ninety-seven of the hundred and twenty-seven are analysed.** Of the
+thirty that are not, fourteen are the claims of the chapters on whether
+justification has degrees and on Abraham, whose content (a verdict's degrees, a
+covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
+sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
 textual principle, whose content is a rule about texts and translations the
 vocabulary cannot yet state; the other eleven are the narrative texts of the
 thief and the tax collector, John 3:36's "whoever does not obey" and the
@@ -383,7 +419,7 @@ Trent's "laver, or the desire thereof", Luke's law-observance, the texts that
 promise a reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each
 needs a word the vocabulary lacks — a command, a curse, a disjunction, a story's
 outcome, a reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 113) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 127) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

@@ -13,6 +13,8 @@ import TestimonyArguments.SolaFide.Baptism
 import TestimonyArguments.SolaFide.James
 import TestimonyArguments.SolaFide.Vulgate
 import TestimonyArguments.SolaFide.Ratings
+import TestimonyArguments.SolaFide.Verdict
+import TestimonyArguments.SolaFide.Abraham
 
 /-!
 # TestimonyArguments.SolaFide — justified by grace, through faith, not by works
@@ -217,9 +219,19 @@ Each later chapter takes one question a reader brings to this debate.
   apart, so that no argument slides from one sense of "baptism" to another, and
   John 3:5 is examined under each of the four readings of its "water" ("Is
   baptism how we are justified?").
+- **Does justification have degrees?** A verdict acquits or condemns, and has no
+  degrees, so if justification is only a verdict, Trent's "increase of
+  justification" has nothing to increase. Trent can grant the courtroom texts;
+  the two part only at the definition ("Does justification have degrees?").
 - **What does "justified by works" mean in James?** The same kind of hearing,
   over James 2:24 and the two other texts Trent cites for the increase of
   justification ("James 2:24" and "Trent's two Latin texts").
+- **What does Genesis say about Abraham?** "He believed the LORD, and he counted
+  it to him as righteousness" (Genesis 15:6), and then God alone passes between
+  the pieces of the covenant. Read so, Abraham was counted righteous with no work
+  as a condition; read from his testing in Genesis 22, as 1 Maccabees reads it,
+  he was not. The texts of Genesis alone do not decide ("Abraham, counted
+  righteous").
 - **How firm are the ratings?** Each rating a verdict depends on is recomputed
   under three standards ("Why each step is rated as it is").
 

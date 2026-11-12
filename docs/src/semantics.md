@@ -78,9 +78,10 @@ Three distinctions in it do most of the work.
 
 The atoms are not replaced. An argument keeps its own claim type and its proofs are untouched;
 its instance says what each atom means, as `cite` says who holds it. Ninety-seven of the hundred
-and thirteen sola fide atoms are analysed; sixteen — the stories of the thief and the tax
-collector, a curse, a command, a disjunction, an opposite, and the claims about texts and
-their translations — are marked unanalysed and counted, not forced.
+and twenty-three sola fide atoms are analysed; twenty-six — the stories of the thief and the
+tax collector, a curse, a command, a disjunction, an opposite, the claims about texts and
+their translations, and a verdict's degrees and the covenant rite of Genesis 15 — are marked
+unanalysed and counted, not forced.
 
 What the meanings already make computable, from the meanings alone, for any argument:
 

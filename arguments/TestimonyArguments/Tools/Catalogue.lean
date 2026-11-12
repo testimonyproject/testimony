@@ -28,8 +28,12 @@ def solaFideChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaFide.Gospel] }
   , { slug := "trents-definition", title := "What Trent means by justification"
     , modules := [`TestimonyArguments.SolaFide.Definition] }
+  , { slug := "degrees", title := "Does justification have degrees?"
+    , modules := [`TestimonyArguments.SolaFide.Verdict] }
   , { slug := "james", title := "James 2:24: \"not by faith alone\""
     , modules := [`TestimonyArguments.SolaFide.James] }
+  , { slug := "abraham", title := "Abraham, counted righteous"
+    , modules := [`TestimonyArguments.SolaFide.Abraham] }
   , { slug := "latin-texts", title := "Trent's two Latin texts"
     , modules := [`TestimonyArguments.SolaFide.Vulgate] }
   , { slug := "jesus-words", title := "What Jesus' own words say about faith and works"
