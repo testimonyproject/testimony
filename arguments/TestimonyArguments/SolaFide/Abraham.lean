@@ -351,7 +351,7 @@ def secondTempleAbrahamReading : Valuation Claim := fun a =>
 condition.** Genesis 15:6, Romans 4:10, the ceremony of Genesis 15:12–17, and the
 reading of it as God's oath alone.
 
-What this does not claim: that the reading of the ceremony is beyond dispute. It
+It does not show that the reading of the ceremony is beyond dispute. It
 is rated `disputed`, and Genesis 22 is read the other way. -/
 @[headline]
 theorem genesisFifteen_establishes : Establishes genesisFifteen := by
@@ -366,7 +366,7 @@ theorem genesisFifteen_is_satisfiable : Satisfiable genesisFifteen.premises := b
 /-- **Read from his testing, Abraham was not counted righteous without works.**
 Genesis 15:6 and 22:16–18, with 1 Maccabees 2:52 and Sirach 44:20.
 
-What this does not claim: that 1 Maccabees or Sirach is Scripture. They are
+It does not show that 1 Maccabees or Sirach is Scripture. They are
 witnesses to how Abraham was read before Paul. -/
 @[headline]
 theorem secondTempleAbraham_establishes : Establishes secondTempleAbraham := by
@@ -397,7 +397,7 @@ works when he offered up his son Isaac" (James 2:21) cannot mean the increase of
 the justice he already had. That leaves the Reformed reading of James's word,
 "shown to be righteous".
 
-What this does not claim: that justification has no degrees. That rests on the
+It does not show that justification has no degrees. That rests on the
 Reformed definition, which Trent denies (`degrees_turn_on_the_definition`). -/
 @[headline]
 theorem no_degrees_answers_james_on_abraham : Establishes verdictOnJamesIncrease := by
@@ -654,7 +654,7 @@ blessing came "because" Abraham obeyed, are kept alike by a reading on which
 Abraham was counted righteous without works and by one on which he was not.
 What they establish is the grant; what was counted at 15:6 is another claim.
 
-What this does not claim: that Weinfeld is wrong about the grant. It may well
+It does not show that Weinfeld is wrong about the grant. It may well
 have rewarded Abraham's obedience. The result says that, even so, nothing
 follows about the condition of what was counted to him. -/
 @[headline]
@@ -676,7 +676,7 @@ theorem weinfeldOnAbraham_is_satisfiable : Satisfiable weinfeldOnAbraham.premise
 /-- **Weinfeld does not dissent from the step from Genesis 15**, under any
 standard. His claims do not deny it: they reach the grant, not the counting.
 
-What this does not claim: that Weinfeld would agree with the step. A reader
+It does not show that Weinfeld would agree with the step. A reader
 who adds that what was counted at 15:6 was credited for Abraham's obedience
 would deny it; that is what 1 Maccabees does. -/
 @[headline]
@@ -702,7 +702,7 @@ dissents.** Genesis counts Abram's believing at 15:6 and places the testing
 the testing struck, nothing in 1 Maccabees' position denies the step, under any
 standard.
 
-What this does not claim: that 1 Maccabees says nothing true of Abraham. He was
+It does not show that 1 Maccabees says nothing true of Abraham. He was
 found faithful when tested. What the text refutes is only that the counting of
 15:6 was credited for it. -/
 @[headline]
@@ -717,7 +717,7 @@ theorem genesis_strikes_the_maccabees_reading :
 standard. His claims reach the blessing of Genesis 22, augmented for obedience,
 and say nothing of the condition of what was counted at 15:6.
 
-What this does not claim: that Kuruvilla is wrong about Genesis 22. Calvin reads
+It does not show that Kuruvilla is wrong about Genesis 22. Calvin reads
 the oath as "nothing more than confirmation", and Kuruvilla answers him; that
 disagreement is about the blessing of Genesis 22, not the counting of 15:6. -/
 @[headline]
@@ -743,7 +743,7 @@ deny the step: they reach the grant, and the blessing and the oath of Genesis 22
 not the counting of 15:6. 1 Maccabees denies it only through its reading of Genesis 15:6, which
 Genesis itself refutes by its order.
 
-What this does not claim: that no reader could dissent. A verified reader who
+It does not show that no reader could dissent. A verified reader who
 argued that the counting of 15:6 was conditioned on Abraham's obedience without
 tying it to the later testing, for example on his leaving Haran (Genesis 12:4),
 would be a new dissent, and the rating would be worked out again. Hahn's

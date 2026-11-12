@@ -1532,7 +1532,7 @@ text, does not say "be justified still". And Sirach 18:22, in Greek, does not
 say "be not afraid to be justified even to death". Nothing in the debate answers
 any of them.
 
-What this does not claim: that James 2:24 agrees with Paul, or that works are
+It does not show that James 2:24 agrees with Paul, or that works are
 not a cause of the increase of justification. Neither is forced. Nor that the
 Greek of Sirach 18:22 lacks the word "justified": it has it, in a sentence about
 vows.
@@ -1604,7 +1604,7 @@ second, inward sense. The step from that evidence to "the word does not mean the
 increase of justice" is rated `wellSupported`. The reading rests on Trent's word
 alone.
 
-What this does not claim: that works are no cause of the increase of
+It does not show that works are no cause of the increase of
 justification. That is a claim about God's verdict, not about James's word, and
 it is weighed separately (`trent_on_works_defensible`).
 
@@ -1673,7 +1673,7 @@ and as the Catholic Church's own translation gives it, says "the righteous must
 still do right". And the original, "written by the inspired author himself",
 outweighs any translation (*Divino Afflante Spiritu* §16).
 
-What this does not claim: that Trent's citation is an error of doctrine. Taken
+It does not show that Trent's citation is an error of doctrine. Taken
 as Pius XII takes Trent's decree on the Vulgate, as a reading the Church
 approves and holds free from error in faith, it is consistent with all he says,
 and rests on the Church's authority and not on the inspired text
@@ -1744,7 +1744,7 @@ the Catholic Church's own translation renders that "do not wait until death to
 fulfill them". Whether Sirach is Scripture is not in question here: the verdict
 holds on Trent's own list of the biblical books.
 
-What this does not claim: that the Greek has no "be justified". It has the verb.
+It does not show that the Greek has no "be justified". It has the verb.
 What it lacks is the Latin's "be not afraid ... even to death", the words in
 which Trent reads continued growth in justice.
 
@@ -1815,7 +1815,7 @@ increase and not merely its fruit. The Reformed reconciliation denies this, and
 the debate cannot choose: at that point each side rests on its own confession,
 rated `disputed`.
 
-What this does not claim: that works are a cause of the increase. The reading is
+It does not show that works are a cause of the increase. The reading is
 not forced (`trent_on_works_not_forced`).
 
 ```lean
