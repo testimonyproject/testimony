@@ -30,11 +30,11 @@ is read as a corpus of its own, because it is anonymous. Trent grants all of
 them, and its Decree on Justification quotes most. So the texts are rated
 `consensus`, the highest rating, and nothing turns on them.
 
-The argument is made in the readings. Each corpus is a line whose single step
-reads its texts, and that step is cited and rated as a reading, because texts
-do not entail conclusions and readings do. Each corpus is made to deliver only
-what its own texts say, and *faith alone* is split into three parts, so that no
-corpus has to carry more than its share:
+The argument is made in the readings. Each part of the New Testament is read in
+one step, from its texts to what they say. That step is the reading, and it is
+cited and rated, because texts do not entail conclusions and readings do. Each
+corpus is made to deliver only what its own texts say, and *faith alone* is
+split into three parts, so that no corpus has to carry more than its share:
 
 - that faith is **necessary**: Paul ("not justified by works of the law except
   through faith", Galatians 2:16; "the righteous shall live by faith", 3:11),
@@ -46,10 +46,10 @@ corpus has to carry more than its share:
   Ephesians 2:9, Titus 3:5), Peter at the Jerusalem council, and Jesus' parable
   of the Pharisee and the tax collector.
 
-The rival is Trent, which holds every one of these texts. It parts from the
-canonical witness at exactly one reading: that "justified" in James 2:24 is the
-*increase* of a justification already received, by works done in grace
-(Session VI, ch. 10).
+The rival is Trent, which holds every one of these texts. Set beside the
+canonical witness with James, it parts at exactly one reading: that "justified"
+in James 2:24 is the *increase* of a justification already received, by works
+done in grace (Session VI, ch. 10).
 
 ## What the early church said
 
@@ -81,8 +81,8 @@ argued from Paul.
 
 It does not show that the Reformed readings are right. It shows where the
 disagreement is. Every text is common ground, every reading is cited to the
-people who hold it, and the burden results name, corpus by corpus, what a reader
-must reject to deny the conclusion.
+people who hold it, and the results name, corpus by corpus, which readings a
+reader must reject to deny the conclusion.
 
 ## The questions the later chapters take
 

@@ -59,7 +59,7 @@ it, the sense of "justified" in James 2:24.
 | \\(P_{25}\\) | Good works are the fruit and evidence of a true and lively faith | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.2 |
 | \\(P_{26}\\) | Justification is by faith alone, by a faith that is never alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.2 |
 | \\(P_{27}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{28}\\) | ‘Justified’ in James 2:24 is an increase of justification, by works done in grace | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24 |
+| \\(P_{28}\\) | ‘Justified’ in James 2:21–24 means shown to be righteous (denied by Trent, which reads 2:24 as an increase of justification by works done in grace) | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24 |
 | \\(P_{29}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XIII.1; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.6; [`roberts-ante-nicene-fathers-1-1885`](../../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
 
 </div>
@@ -123,9 +123,10 @@ def cite : Claim → AtomMeta
 <a id="tridentineCite"></a>
 **`tridentineCite`**
 
-Trent's citations: the argument's, except the one atom Trent denies — the
-demonstrative sense of "justified" in James 2:24, which Trent reads as the
-increase of a justification already received, quoting the verse.
+Trent's citations: the argument's, except the one atom Trent denies, the
+demonstrative sense of "justified" in James 2:24. Trent reads it as the increase
+of a justification already received, quoting the verse. The label states the
+claim Trent denies, so that "not" before it reads correctly.
 
 ```lean
 def tridentineCite : Claim → AtomMeta
