@@ -48,6 +48,22 @@ def solaFideChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaFide.Atoms, `TestimonyArguments.SolaFide.Sources]
     , legend := true } ]
 
+/-- The canonical witness, set as chapters: the question and its method; what
+each corpus says; what follows, what an opponent must reject, and James; and the
+claims, as an appendix. -/
+def canonicalWitnessChapters : List Chapter :=
+  [ { slug := "canonical-witness", title := "Faith alone from the texts every party accepts"
+    , modules := [`TestimonyArguments.CanonicalWitness] }
+  , { slug := "the-readings", title := "What each corpus says"
+    , modules := [`TestimonyArguments.CanonicalWitness.Lines] }
+  , { slug := "the-burden", title := "What follows, and what an opponent must reject"
+    , modules := [ `TestimonyArguments.CanonicalWitness.Results
+                 , `TestimonyArguments.CanonicalWitness.Packages ] }
+  , { slug := "claims", title := "Appendix: the claims and their sources"
+    , modules := [ `TestimonyArguments.CanonicalWitness.Atoms
+                 , `TestimonyArguments.CanonicalWitness.Sources ]
+    , legend := true } ]
+
 /-- Every argument the documentation presents, in the order it presents them.
 
 Every namespace carrying a `@[headline]` result must appear here. The page
@@ -66,7 +82,8 @@ def arguments : List Argument :=
     , chapters := solaFideChapters }
   , { ns := `TestimonyArguments.CanonicalWitness
     , slug := "canonical-witness"
-    , title := "The canonical witness — faith alone, from the texts all parties accept" }
+    , title := "The canonical witness — faith alone, from the texts all parties accept"
+    , chapters := canonicalWitnessChapters }
   , { ns := `TestimonyArguments.SolaScriptura
     , slug := "sola-scriptura"
     , title := "Sola scriptura" }
