@@ -5,14 +5,62 @@ import Testimony.Logic.Tactic
 /-!
 # TestimonyArguments.SpiritBaptism.Positions — the four views, and what Acts can carry
 
-Four views, each from a source that holds it — at conversion, Pentecostal,
-holiness, sacramental — and two arguments about the Acts narratives: that Acts
-gives the Spirit in more than one order, and that its episodes are transitions,
-as Stott reads them. Read for what its claims mean, the Pentecostal view must
-take the narratives as a pattern: "pattern" and Stott's "not a pattern" exclude
-each other (`pentecostal_cannot_read_acts_as_transitions`). Each is a line of
-reason: its own grounds, one step, what it delivers — and, where it answers a
-rival, the step it answers with.
+Each of the four views starts from a text and a reading of it. Dunn and Stott
+start from Paul: "in one Spirit we were all baptized into one body" (1
+Corinthians 12:13), read as the baptism Christ gives every believer. From that,
+Spirit baptism comes at conversion, and if it comes at conversion there is no
+second one to seek. The Assemblies of God start from the same verse read
+another way, as the Spirit baptizing the believer into the body, and then from
+Luke: in Samaria and at Ephesus people who had believed and been baptized
+received the Spirit afterwards, when the apostles laid hands on them (Acts
+8:14–17; 19:1–7). Read as a pattern of empowerment for believers today, those
+episodes give a second baptism in the Spirit to seek. The Church of the
+Nazarene starts from entire sanctification, the second work of grace, and holds
+that it is wrought by the baptism with the Spirit. Rome starts from Peter at
+Pentecost:
+
+> "Repent and be baptized every one of you in the name of Jesus Christ for the
+> forgiveness of your sins, and you will receive the gift of the Holy Spirit."
+> (Acts 2:38)
+
+The Spirit is given in water baptism and fully in confirmation, so there is no
+second baptism to seek beyond the sacraments.
+
+Each view, granted its premises, delivers its conclusion, and each can be held
+without contradiction (`conversionCase_establishes`,
+`pentecostalCase_establishes`, `holinessCase_establishes`,
+`sacramentalCase_establishes`). That much is a check of validity. It does not
+show that any of the readings is right, and every reading of 1 Corinthians 12:13
+here is rated `disputed`, because each side rejects the other's.
+
+## What Acts can carry
+
+So much rests on how Luke's narratives are read that two further arguments are
+set out about them. The first is from the variety of Acts. The Spirit falls on
+Cornelius's household as they hear the word, before they are baptized (10:44);
+at Pentecost it is promised with baptism (2:38); in Samaria and at Ephesus it
+comes later, with hands laid on (8:17; 19:6). Acts gives no one order, so no one
+episode is the pattern (`varietyCase_establishes`). The second is Stott's. The
+later reception of the Spirit in Samaria and at Ephesus marks steps in the
+gospel's spread, unrepeatable transitions, and so sets no norm for believers
+today (`transitionCase_establishes`).
+
+The Pentecostal view cannot take Stott's way out. Its own premise is that the
+narratives are a pattern, and Stott's reading says they are "not a pattern", so
+read for what the claims mean the two exclude each other
+(`pentecostal_cannot_read_acts_as_transitions`). Read as a pattern, the
+narratives then meet the variety of Acts. That meeting is at one step, from Acts
+10 and 2:38 to "no one episode is the pattern", and the Assemblies of God
+contest it: they grant Acts 10 and list it among the evidence *for* a
+subsequent experience (`whereTheVarietyMeetsThePattern`). So the Pentecostal
+view must read Acts as a pattern and answer its variety, and the answer it gives
+is a reading of Acts 10 that the step's rating records as disputed.
+
+What that costs the conversion view is not checked here. Stott owes an account
+of why Luke's narratives set no order for later believers. Dunn avoids the
+question by denying that the Samaritans were yet believers before they received
+the Spirit, and Rome reads Acts 8:17 and 19:6 as confirmation (Catechism 1288).
+The chapter "Weighing the four views" sets the four views against one another.
 -/
 
 namespace TestimonyArguments.SpiritBaptism

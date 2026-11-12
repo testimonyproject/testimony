@@ -6,99 +6,104 @@ import TestimonyArguments.SpiritBaptism.Dispute
 /-!
 # TestimonyArguments.SpiritBaptism — Spirit baptism: at conversion, after it, or in the sacraments
 
-John promised that the one coming after him would "baptize you with the Holy
-Spirit" (Mark 1:8). A reader asks: *is that something every Christian receives
-in becoming a Christian, or a second experience to seek after it?* The question
-is mostly asked *among* Protestants, and it is about what follows conversion,
-not about justification itself. So it is an argument of its own, not a party to
-the sola fide dispute.
+John the Baptist told the crowds at the Jordan that one was coming after him who
+was greater than he:
 
-The views do not line up with the sides of that dispute. Lutherans and Rome
-have confessed together "that sinners are justified by faith in the saving
-action of God in Christ" (the *Joint Declaration*, §25), and that the Lutheran
-teaching it states "does not fall under the condemnations from the Council of
-Trent" (§41); Baptists, Pentecostals and the holiness churches did not sign it.
-Lutherans, the Reformed, Baptists, Pentecostals and the holiness churches all
-hold that faith *alone* justifies; Rome, which holds the sacramental view, does
-not hold that faith alone justifies, in the sense Trent condemned. On Spirit
-baptism, Lutherans stand partly with Rome (the Spirit is given in water
-baptism), and Baptists with the Reformed.
+> "I have baptized you with water, but he will baptize you with the Holy
+> Spirit." (Mark 1:8)
+
+Every Christian tradition agrees that Jesus is the one John meant. They do not
+agree on when he does it. Is the baptism with the Spirit something every
+Christian receives in becoming a Christian? Or is it a second experience, to be
+sought after conversion? Or is the Spirit given in the sacraments, in water
+baptism and in confirmation? This argument sets out the answers, each in the
+words of those who give it, and checks what follows from each.
+
+The question is asked mostly *among* Protestants, and it concerns what follows
+conversion, not justification itself. So it is an argument of its own, and not a
+party to the sola fide dispute. Its sides do not line up with that dispute's
+either. Lutherans and Rome have confessed together "that sinners are justified
+by faith in the saving action of God in Christ" (the *Joint Declaration*, §25),
+and that the Lutheran teaching it states "does not fall under the condemnations
+from the Council of Trent" (§41). Baptists, Pentecostals and the holiness
+churches did not sign it. Lutherans, the Reformed, Baptists, Pentecostals and the
+holiness churches all hold that faith *alone* justifies, and Rome, which holds the
+sacramental view of the Spirit, does not hold it in the sense Trent condemned.
+But on Spirit baptism Lutherans stand partly with Rome, because they hold that
+the Spirit is given in water baptism, and Baptists stand with the Reformed.
 
 ## Three answers, four positions
 
-- **At conversion** — Dunn, the most-cited scholarly case, and Stott. "In one
-  Spirit we were all baptized into one body" (1 Corinthians 12:13): the baptism
-  in the Spirit Christ gives is part of becoming a Christian, so there is no
-  second one to seek.
-- **After conversion** — two traditions, which this page calls *the
-  subsequence views* when it means both.
-  - *The Pentecostal view* (the Assemblies of God, 2010; Menzies; Stronstad): at
-    conversion the Spirit baptizes into the body of Christ — 12:13 is baptism
-    *by* the Spirit, "the Holy Spirit is the instrument" — and in "a subsequent
-    and distinct experience, Christ will baptize in the Holy Spirit", as in
-    Samaria (Acts 8) and at Ephesus (Acts 19), for empowerment.
-  - *The holiness view*: *entire sanctification* — a second work of grace after
-    conversion, in which the believer is cleansed from sin and made perfect in
-    love — is the baptism with the Spirit. The Church of the Nazarene confesses
-    it: entire sanctification "is wrought by the baptism with or infilling of
-    the Holy Spirit" (*Manual* 2023, Article X). It is contested from within:
-    Wesley, whose teaching on the second work the holiness churches carry on,
-    held the second work and declined the name — "they all 'received the Holy
-    Ghost' when they were justified" — and in 2010 the faculty of the Nazarene
-    seminary, keeping entire sanctification, wrote that they no longer hold that
-    reading of the Spirit's baptism exegetically tenable.
-- **In baptism and confirmation** — Rome: the Spirit is given in water baptism,
-  "new birth in the Holy Spirit", and in confirmation "the full outpouring of the
-  Holy Spirit as once granted to the apostles on the day of Pentecost".
-  Lutherans hold the first half, and have no sacrament of confirmation. This is
-  a later gift too, but a sacramental one: not a second baptism beyond the
-  sacraments. The Catholic charismatic renewal, which speaks of a "baptism in
-  the Spirit" of its own, is not encoded here.
+Paul wrote to the church at Corinth, "in one Spirit we were all baptized into one
+body" (1 Corinthians 12:13). James Dunn, whose study is the most-cited scholarly
+case, and John Stott read that verse as the baptism in the Spirit that Christ
+gives. It is part of becoming a Christian, they hold, so there is no second one
+to seek.
 
-What is not encoded yet:
+Two traditions answer that there is a second, after conversion. This page calls
+them together *the subsequence views*.
+
+- **The Pentecostal view.** The Assemblies of God (in a position paper of 2010),
+  Robert Menzies and Roger Stronstad hold that at conversion the Spirit baptizes
+  the believer into the body of Christ. On their reading 1 Corinthians 12:13 is
+  baptism *by* the Spirit: "the Holy Spirit is the instrument". Then, in "a
+  subsequent and distinct experience, Christ will baptize in the Holy Spirit", as
+  in Samaria (Acts 8) and at Ephesus (Acts 19), to empower the believer.
+- **The holiness view.** *Entire sanctification* is a second work of grace after
+  conversion, in which the believer is cleansed from sin and made perfect in
+  love. The holiness view holds that this is the baptism with the Spirit. The
+  Church of the Nazarene confesses that entire sanctification "is wrought by the
+  baptism with or infilling of the Holy Spirit" (*Manual* 2023, Article X). The
+  view is contested from within its own tradition. John Wesley, whose teaching on
+  the second work the holiness churches carry on, held the second work and
+  declined the name: "they all 'received the Holy Ghost' when they were
+  justified". In 2010 the faculty of the Nazarene seminary, who keep entire
+  sanctification, wrote that they no longer hold that reading of the Spirit's
+  baptism to be exegetically tenable.
+
+The third answer is Rome's. The Spirit is given in water baptism, "new birth in
+the Holy Spirit", and in confirmation, "the full outpouring of the Holy Spirit as
+once granted to the apostles on the day of Pentecost". Lutherans hold the first
+half and have no sacrament of confirmation. This is a later gift too, but a
+sacramental one, not a second baptism beyond the sacraments. The Catholic
+charismatic renewal speaks of a "baptism in the Spirit" of its own, and it is
+not encoded here.
+
+Two questions are not encoded yet.
 
 - **Tongues.** The Assemblies of God hold that speaking in tongues is the
-  *initial evidence* of Spirit baptism — the first outward sign that a believer
+  *initial evidence* of Spirit baptism, the first outward sign that a believer
   has received it (their paper, summary statement 5). To rate that claim
   honestly needs a reader who grants the subsequence view and still denies the
   evidence doctrine, since everyone who denies subsequence denies it trivially.
-  Pentecostal dissenters are known (Fee; Bosworth), but their words could not
-  be verified, so the claim is left out rather than rated on memory.
-- **Paul's word and Luke's.** "Baptized in the Spirit" may not mean the same in
-  1 Corinthians 12:13 as in Acts. Menzies grants that Paul's baptism in the
-  Spirit comes at conversion and holds that Luke's is a different, later gift.
-  If he is right, the conversion view and the Pentecostal view are partly
-  answering different questions. The encoding uses one word for both; a dilemma
-  over the word is the natural next step.
+  Pentecostal dissenters are known, Gordon Fee and F. F. Bosworth among them,
+  but their words could not be verified. So the claim is left out rather than
+  rated from memory.
+- **Paul's word and Luke's.** "Baptized in the Spirit" may not mean the same in 1
+  Corinthians 12:13 as in Acts. Menzies grants that Paul's baptism in the Spirit
+  comes at conversion, and holds that Luke's is a different, later gift. If he
+  is right, the conversion view and the Pentecostal view are partly answering
+  different questions. The encoding uses one word for both, and a dilemma over
+  the word is the natural next step.
 
 ## Where it turns
 
-On the Acts narratives. The Pentecostal view holds that they are a pattern for
-believers today, and Stott reads them as unrepeatable transitions, "not a
-pattern"; read for what they mean, the two exclude each other, so the
-Pentecostal view cannot read Acts as transitions at all
-(`pentecostal_cannot_read_acts_as_transitions`), and Stott's reading denies one
-of its premises (`stott_undermines_the_pattern`). Read as a pattern, the
-narratives meet the variety of Acts itself — the Spirit falls on Cornelius's
-household as they hear (10:44), and is promised with baptism at Pentecost
-(2:38) — at a step the Assemblies of God contest. So the Pentecostal view must
-read Acts as a pattern and answer its variety. What that costs the conversion view is
-not checked here: Stott owes an account of why Luke's narratives set no order
-for later believers; Dunn avoids the question by denying that the Samaritans
-were yet believers before they received the Spirit; and Rome reads Acts 8:17
-and 19:6 as confirmation (Catechism 1288).
+The argument turns on the Acts narratives. The Pentecostal view holds that they
+are a pattern for believers today. Stott reads them as unrepeatable
+transitions, "not a pattern". Weighed as a dispute, nothing is forced
+(`spirit_baptism_forces_nothing`). The conversion and sacramental views can be
+held together, and so can the two subsequence views. Every view can be defended,
+in one of those two camps, and neither camp is forced.
 
-Weighed as a dispute, nothing is forced (`spirit_baptism_forces_nothing`). The
-conversion and sacramental views can be held together, and the two subsequence
-views can be held together; every view can be defended, in one of the two
-camps, and neither camp is forced.
+## The questions the later chapters take
 
-## Where things are
-
-| File | Contents |
-|---|---|
-| `Atoms.lean` | the texts, the readings, the three conclusions |
-| `Sources.lean` | `cite`, and the ratings of each step |
-| `Positions.lean` | the four views, and Acts read as a pattern |
-| `Dispute.lean` | the views weighed, the verdicts, and what Acts can be read as |
+- **What does each view rest on, and can Acts be read as Stott reads it?** Each
+  view is set out from its own texts and checked. The Pentecostal view cannot
+  read Acts as transitions at all, and the variety of Acts meets its pattern at a
+  step the Assemblies of God contest
+  ("Each view from its own texts, and what Acts can carry").
+- **Weighed against each other, which view wins?** None is forced. There are four
+  standoffs, and every view can be defended ("Weighing the four views").
+- **What does each claim mean, and who holds it?** Every claim, with its source
+  and its rating ("Appendix: the claims and their sources").
 -/
