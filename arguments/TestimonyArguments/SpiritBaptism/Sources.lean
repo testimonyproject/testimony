@@ -4,9 +4,10 @@ import TestimonyArguments.Works
 /-!
 # TestimonyArguments.SpiritBaptism.Sources — citation and classification for every atom
 
-`cite` is total, so an uncited atom does not compile. Each reading is cited to
-a source that holds it; each step's rating is cited to whoever grants its
-grounds and denies its conclusion.
+Every claim must name a source, or the encoding will not build (`cite`). Each
+reading is cited to a source that holds it. Each step's rating is cited to a
+reader who accepts the claims it starts from (its grounds) and still denies
+where it ends, or says that no such reader was found.
 -/
 
 namespace TestimonyArguments.SpiritBaptism

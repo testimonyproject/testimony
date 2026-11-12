@@ -44,6 +44,9 @@
 - [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 - [Sola scriptura](./arguments/sola-scriptura.md)
 - [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
+  - [Each view from its own texts, and what Acts can carry](./arguments/spirit-baptism/the-views.md)
+  - [Weighing the four views](./arguments/spirit-baptism/weighing.md)
+  - [Appendix: the claims and their sources](./arguments/spirit-baptism/claims.md)
 
 <!-- END GENERATED: lake exe argdoc -->
 

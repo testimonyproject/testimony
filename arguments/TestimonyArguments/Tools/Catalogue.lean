@@ -48,6 +48,21 @@ def solaFideChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaFide.Atoms, `TestimonyArguments.SolaFide.Sources]
     , legend := true } ]
 
+/-- Spirit baptism, set as chapters: what the question is and who answers it;
+each view from its own texts, with what Acts can carry; the views weighed
+against each other; and the claims, as an appendix. -/
+def spiritBaptismChapters : List Chapter :=
+  [ { slug := "spirit-baptism", title := "Spirit baptism: the question and its answers"
+    , modules := [`TestimonyArguments.SpiritBaptism] }
+  , { slug := "the-views", title := "Each view from its own texts, and what Acts can carry"
+    , modules := [`TestimonyArguments.SpiritBaptism.Positions] }
+  , { slug := "weighing", title := "Weighing the four views"
+    , modules := [`TestimonyArguments.SpiritBaptism.Dispute] }
+  , { slug := "claims", title := "Appendix: the claims and their sources"
+    , modules := [ `TestimonyArguments.SpiritBaptism.Atoms
+                 , `TestimonyArguments.SpiritBaptism.Sources ]
+    , legend := true } ]
+
 /-- Every argument the documentation presents, in the order it presents them.
 
 Every namespace carrying a `@[headline]` result must appear here. The page
@@ -72,6 +87,7 @@ def arguments : List Argument :=
     , title := "Sola scriptura" }
   , { ns := `TestimonyArguments.SpiritBaptism
     , slug := "spirit-baptism"
-    , title := "Spirit baptism — at conversion, after it, or in the sacraments" } ]
+    , title := "Spirit baptism — at conversion, after it, or in the sacraments"
+    , chapters := spiritBaptismChapters } ]
 
 end TestimonyArguments.Doc
