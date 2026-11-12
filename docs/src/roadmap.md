@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **246 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**6 arguments**, carrying **247 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -207,6 +207,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `secondTempleAbraham_establishes` | `Establishes secondTempleAbraham` | **Read from his testing, Abraham was not counted righteous without works.** Genesis 15:6 and 22:16–18, with 1 Maccabees 2:52 and Sirach 44:20. |
 | `genesis_leaves_abraham_open` | `Independent [p Claim.gen15_6AbramBelieved, p Claim.gen15_17GodAlonePasses, p Claim.gen22_16BecauseYouObeyed] (p Claim.abrahamCountedRighteousWithoutWorks)` | **The texts of Genesis alone do not decide.** Genesis 15:6, the ceremony of 15:12–17, and Genesis 22:16–18 are kept alike by the reading of the ceremony, on which Abraham was … |
 | `no_degrees_answers_james_on_abraham` | `Establishes verdictOnJamesIncrease` | **If justification has no degrees, James's "justified" at Genesis 22 is not an increase.** On the Reformed position on degrees, Abraham's being "justified by works when he offered … |
+| `hahn_does_not_reach_the_counting` | `∀ (s : Standard), ¬Dissent.Credible s hahnAssessment.dissent` | **Hahn does not dissent from the step from Genesis 15**, under any standard. |
 | `weinfeld_leaves_the_counting_open` | `Independent weinfeldOnAbraham.premises (p Claim.abrahamCountedRighteousWithoutWorks)` | **Weinfeld's grant leaves the counting open.** His premises, that Genesis 15 is a one-sided grant, that a grant rewarded loyalty already shown, and that the blessing came … |
 | `weinfeld_does_not_reach_the_counting` | `∀ (s : Standard), ¬Dissent.Credible s weinfeldAssessment.dissent` | **Weinfeld does not dissent from the step from Genesis 15**, under any standard. |
 | `genesis_strikes_the_maccabees_reading` | `maccabeesAssessment.findings.struck = [Claim.countingWasForTheTesting] ∧ ∀ (s : Standard), ¬Dissent.Credible s maccabeesAssessment.dissent` | **Genesis strikes the reading 1 Maccabees needs, and then it no longer dissents.** Genesis counts Abram's believing at 15:6 and places the testing "after these things" (22:1). |

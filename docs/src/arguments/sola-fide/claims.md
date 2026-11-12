@@ -169,6 +169,7 @@ positions in the debate carry.
 | \\(P_{120}\\) | The grant to Abraham rewarded his obedience (Genesis 22:18; 26:5) | interpretive | critical scholarship, disputed | [`weinfeld-covenant-of-grant-1970`](../../bibliography.md#weinfeld-covenant-of-grant-1970); Gen 22:18; Gen 26:5 |
 | \\(P_{121}\\) | The righteousness counted at Genesis 15:6 was credited for Abraham's faithfulness when tested | interpretive | Second Temple Jewish, disputed | [`usccb-nabre-2011`](../../bibliography.md#usccb-nabre-2011), ad loc. 1 Macc 2:52 |
 | \\(P_{122}\\) | The blessing of Genesis 22:16–18 was augmented because of Abraham's obedience | interpretive | Christian, historical-grammatical, disputed | [`kuruvilla-aqedah-2012`](../../bibliography.md#kuruvilla-aqedah-2012), p. 507 |
+| \\(P_{123}\\) | The oath of Genesis 22:16–18 was merited by the binding of Isaac | interpretive | Roman Catholic, disputed | [`hahn-covenant-oath-aqedah-2005`](../../bibliography.md#hahn-covenant-oath-aqedah-2005), p. 93 |
 
 </div>
 

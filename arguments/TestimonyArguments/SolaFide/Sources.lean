@@ -872,6 +872,17 @@ def baseCite : Claim → AtomMeta
         { primary := .work kuruvillaAqedah (.page 507)
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
+  | .aqedahOathMeritedByObedience =>
+    { label := "The oath of Genesis 22:16–18 was merited by the binding of Isaac"
+    , kind := .interpretive
+      -- Hahn, p. 93: "the binding of Isaac ... merits from God a covenant oath to
+      -- bless the ἔθνη through Abraham's 'seed'"; p. 94: the blessings "are
+      -- raised to the level of legally binding covenant stipulations ratified by
+      -- solemn oath". Calvin on 22:15 reads the oath as confirmation only.
+    , source :=
+        { primary := .work hahnCovenantOathAqedah (.page 93)
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
   | .countingWasForTheTesting =>
     { label := "The righteousness counted at Genesis 15:6 was credited for Abraham's " ++
         "faithfulness when tested"
