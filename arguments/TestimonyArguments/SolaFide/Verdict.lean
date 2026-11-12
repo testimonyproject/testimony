@@ -226,7 +226,7 @@ def trentOnDegreesReading : Valuation Claim := fun a =>
 courtroom texts, a verdict acquits or condemns and has no degrees; justification
 is a verdict and nothing more; so it has no degrees.
 
-What this does not claim: that justification is only a verdict. That is the
+It does not show that justification is only a verdict. That is the
 Reformed definition, and Trent denies it. -/
 @[headline]
 theorem verdictOnDegrees_establishes : Establishes verdictOnDegrees := by
@@ -242,7 +242,7 @@ theorem verdictOnDegrees_is_satisfiable : Satisfiable verdictOnDegrees.premises 
 This is what canon 24 condemns, reached from the courtroom and the Reformed
 definition.
 
-What this does not claim: that the justified do not grow. Both sides hold that
+It does not show that the justified do not grow. Both sides hold that
 the renewal of the justified grows; the Reformed call it sanctification. -/
 @[headline]
 theorem no_degrees_denies_the_increase : Establishes verdictAgainstIncrease := by
@@ -259,7 +259,7 @@ theorem verdictAgainstIncrease_is_satisfiable :
 renewal of the inward man, the renewal grows through good works, and so
 justification increases and has degrees.
 
-What this does not claim: that Trent's definition is right. The Westminster
+It does not show that Trent's definition is right. The Westminster
 Confession denies it (XI.1). -/
 @[headline]
 theorem trentOnDegrees_establishes : Establishes trentOnDegrees := by
@@ -277,7 +277,7 @@ Deuteronomy 25:1, Proverbs 17:15, Romans 8:33–34 and the step from them to "a
 verdict has no degrees". For Trent justification is more than a verdict, so a
 verdict's having no degrees does not touch it.
 
-What this does not claim: that Trent says verdicts have no degrees. The result
+It does not show that Trent says verdicts have no degrees. The result
 says only that nothing in its position denies it. -/
 @[headline]
 theorem trent_grants_that_verdicts_have_no_degrees :
@@ -292,7 +292,7 @@ verdict only, and the step from those two to "no degrees", and it can no longer
 be held. Together with `trent_grants_that_verdicts_have_no_degrees`, this puts
 the whole disagreement about degrees at the Reformed definition.
 
-What this does not claim: which side is right about the definition. That is
+It does not claim which side is right about the definition. That is
 weighed in the chapter "What Trent means by justification". -/
 @[headline]
 theorem degrees_turn_on_the_definition :

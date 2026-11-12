@@ -195,7 +195,7 @@ Luke's "faith suffices" is no longer among them. Chrysostom, reading John 3:36
 and Matthew 7:21, concludes that believing is not enough without a right life,
 and so stands against it (`luke_not_forced_without_trent`).
 
-What this does not claim: that *faith alone*, or even "faith suffices", is
+It does not show that *faith alone*, or even "faith suffices", is
 refuted. Each is in a tie; see the results that follow. -/
 @[headline]
 theorem without_trent_pauls_gospel_and_word_prevail :
@@ -222,8 +222,8 @@ with it. Chrysostom reads "whoever does not obey the Son shall not see life"
 requiring a right life beside believing. Luke's case reads "your faith has saved
 you" (Luke 7:50) as saying that faith sufficed.
 
-What this claims: a reading of two other sayings of Jesus, rated `disputed`, ties
-with Luke's. What it does not claim: that Chrysostom outranks Luke, or that any
+A reading of two other sayings of Jesus, rated `disputed`, ties
+with Luke's. It does not show that Chrysostom outranks Luke, or that any
 text of Luke's is contradicted. Luke's case defeats Chrysostom in return, and
 Chrysostom accepts every word of Luke 7:50; what he denies is the step from it
 to "faith suffices". -/
@@ -295,8 +295,8 @@ Trent describes justifying faith as he does: the believing Jesus names in John
 reading consistently and answer every objection raised here. John's case cannot
 be held with it.
 
-What this claims: without the Council, John 6:29 still does not compel faith
-alone, because what believing is remains contested. What it does not claim: that
+Without the Council, John 6:29 still does not compel faith
+alone, because what believing is remains contested. It does not show that
 Aquinas's reading wins. John's case can be held just as consistently. Luther's
 argument and Aquinas's each defeat the other, and neither is removed. -/
 @[headline]

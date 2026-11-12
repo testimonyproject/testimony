@@ -85,7 +85,7 @@ def galatianGospelReading : Valuation Claim :=
 (δικαιόω) as a courtroom word: justification is not the renewal of the inward
 person.
 
-What this does not claim: that the reading is beyond dispute. Two of its steps
+It does not show that the reading is beyond dispute. Two of its steps
 are rated `disputed`, and Trent accepts every text.
 
 ```lean
@@ -157,7 +157,7 @@ theorem trent_grants_the_gospel_texts : Grants tridentineCase (⋀[p
 Nothing in Trent's case denies that "justify" is a courtroom word. The meaning
 of the word is not where they part.
 
-What this does not claim: that Trent or the *Joint Declaration* teaches the
+It does not show that Trent or the *Joint Declaration* teaches the
 verdict sense. The Declaration confesses that God no longer counts sin (§22),
 and does not speak to the sense of the verb. This result says only that the two
 can be held together.

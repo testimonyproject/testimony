@@ -549,9 +549,9 @@ def chrysostomReading : Valuation Claim := fun a =>
 together with every verse the Reformed strands read from Paul: Romans 3:28,
 Galatians 2:16, Romans 4:4–5, Ephesians 2:8–9 and Titus 3:5.
 
-What this claims: where Chrysostom stands against the Reformed case, he stands
+Where Chrysostom stands against the Reformed case, he stands
 against a reading of those verses, the step from them to faith alone, and not
-against anything they say. What it does not claim: that his reading of John 3:36
+against anything they say. It does not show that his reading of John 3:36
 is right. -/
 @[headline]
 theorem chrysostom_grants_the_pauline_texts :
@@ -1338,7 +1338,7 @@ taken as a claim about Paul's word, rests on a definition rated `disputed`, and
 its replies fail against arguments whose every link is rated `wellSupported` or
 better.
 
-What this does not claim: that sola fide prevails, or that Trent's teaching is
+It does not show that sola fide prevails, or that Trent's teaching is
 refuted. Nothing else is forced. Every other position is attacked by one the
 debate cannot rule out. One loses, Trent taken as a claim about Paul's word, and
 every other is in a tie with a rival the debate cannot choose between. -/
@@ -1366,7 +1366,7 @@ debate (`whatTrentsDefinitionClaims`): if the definition says what Paul's
 "justify" means, it cannot be defended here, for a stated and cited reason, at a
 step rated `wellSupported`.
 
-What this does not claim: that Trent's definition is false as a statement of
+It does not show that Trent's definition is false as a statement of
 what God does. That is the other way of taking it, and it can be defended
 (`trent_defensible`). Nor that the position contradicts itself: taken alone it
 can be held without contradiction. -/
@@ -1394,7 +1394,7 @@ ratings, all at the bottom, break no tie.
 The arguments about Paul's word do not attack it. Trent's definition, taken as
 it stands, says nothing about what "justify" means.
 
-What this does not claim: that Trent prevails. It is not forced
+It does not show that Trent prevails. It is not forced
 (`trent_not_forced`). It is in a tie with each of those seven positions. -/
 @[headline]
 theorem trent_defensible : CredulouslyAccepted solaFideDispute.defeats .trent :=
