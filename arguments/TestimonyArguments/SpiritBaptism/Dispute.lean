@@ -38,7 +38,7 @@ subsequence views, and so does the sacramental view; the two subsequence views
 do not attack each other, and neither do the conversion and sacramental views.
 Nothing is forced (`spirit_baptism_forces_nothing`). Every view can be defended
 (`conversion_defensible`, `pentecostal_defensible`, `holiness_defensible`,
-`sacramental_defensible`), in one of two camps, and nothing joins them: the
+`sacramental_defensible`), in one of two camps, and no position holds views from both: the
 conversion and sacramental views together, and the Pentecostal and holiness
 views together.
 

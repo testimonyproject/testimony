@@ -27,28 +27,31 @@ by faith in the saving action of God in Christ" (the *Joint Declaration*, §25),
 and that the Lutheran teaching it states "does not fall under the condemnations
 from the Council of Trent" (§41). Baptists, Pentecostals and the holiness
 churches did not sign it. Lutherans, the Reformed, Baptists, Pentecostals and the
-holiness churches all hold that faith *alone* justifies, and Rome, which holds the
-sacramental view of the Spirit, does not hold it in the sense Trent condemned.
-But on Spirit baptism Lutherans stand partly with Rome, because they hold that
-the Spirit is given in water baptism, and Baptists stand with the Reformed.
+holiness churches all hold that faith *alone* justifies. Rome does not teach
+that, but agreed in the *Joint Declaration* that the Lutheran teaching is not
+condemned by Trent. On Spirit baptism the lines fall elsewhere. Lutherans stand
+partly with Rome, because they hold that the Spirit is given in water baptism,
+and Baptists stand with the Reformed.
 
 ## Three answers, four positions
 
 Paul wrote to the church at Corinth, "in one Spirit we were all baptized into one
-body" (1 Corinthians 12:13). James Dunn, whose study is the most-cited scholarly
-case, and John Stott read that verse as the baptism in the Spirit that Christ
+body" (1 Corinthians 12:13). James Dunn, in *Baptism in the Holy Spirit*, and
+John Stott read that verse as the baptism in the Spirit that Christ
 gives. It is part of becoming a Christian, they hold, so there is no second one
 to seek.
 
 Two traditions answer that there is a second, after conversion. This page calls
 them together *the subsequence views*.
 
-- **The Pentecostal view.** The Assemblies of God (in a position paper of 2010),
-  Robert Menzies and Roger Stronstad hold that at conversion the Spirit baptizes
-  the believer into the body of Christ. On their reading 1 Corinthians 12:13 is
-  baptism *by* the Spirit: "the Holy Spirit is the instrument". Then, in "a
-  subsequent and distinct experience, Christ will baptize in the Holy Spirit", as
-  in Samaria (Acts 8) and at Ephesus (Acts 19), to empower the believer.
+- **The Pentecostal view.** The Assemblies of God, in a position paper of 2010,
+  hold that at conversion the Spirit baptizes the believer into the body of
+  Christ. On their reading 1 Corinthians 12:13 is baptism *by* the Spirit: "the
+  Holy Spirit is the instrument". Then, in "a subsequent and distinct
+  experience, Christ will baptize in the Holy Spirit", as in Samaria (Acts 8)
+  and at Ephesus (Acts 19), to empower the believer. Robert Menzies and Roger
+  Stronstad reach the second gift from Luke rather than from Paul: Luke's
+  baptism in the Spirit, they hold, is prophetic empowerment.
 - **The holiness view.** *Entire sanctification* is a second work of grace after
   conversion, in which the believer is cleansed from sin and made perfect in
   love. The holiness view holds that this is the baptism with the Spirit. The
@@ -64,7 +67,7 @@ them together *the subsequence views*.
 The third answer is Rome's. The Spirit is given in water baptism, "new birth in
 the Holy Spirit", and in confirmation, "the full outpouring of the Holy Spirit as
 once granted to the apostles on the day of Pentecost". Lutherans hold the first
-half and have no sacrament of confirmation. This is a later gift too, but a
+half, and keep confirmation as a rite, not a sacrament. This is a later gift too, but a
 sacramental one, not a second baptism beyond the sacraments. The Catholic
 charismatic renewal speaks of a "baptism in the Spirit" of its own, and it is
 not encoded here.
@@ -90,10 +93,14 @@ Two questions are not encoded yet.
 
 The argument turns on the Acts narratives. The Pentecostal view holds that they
 are a pattern for believers today. Stott reads them as unrepeatable
-transitions, "not a pattern". Weighed as a dispute, nothing is forced
-(`spirit_baptism_forces_nothing`). The conversion and sacramental views can be
-held together, and so can the two subsequence views. Every view can be defended,
-in one of those two camps, and neither camp is forced.
+transitions, which set no pattern. When the four views are weighed against one
+another, no view wins outright. Each is answered by a rival it answers in turn,
+and every view rests somewhere on a claim rated `disputed`, the lowest rating,
+so the ratings cannot break the tie (`spirit_baptism_forces_nothing`). That is
+not the same as any view being false. The views fall into two groups that can
+each be held together: the conversion and sacramental views, and the two
+subsequence views. Each view can be defended from inside its group, and no
+position holds views from both.
 
 ## The questions the later chapters take
 
@@ -102,8 +109,9 @@ in one of those two camps, and neither camp is forced.
   read Acts as transitions at all, and the variety of Acts meets its pattern at a
   step the Assemblies of God contest
   ("Each view from its own texts, and what Acts can carry").
-- **Weighed against each other, which view wins?** None is forced. There are four
-  standoffs, and every view can be defended ("Weighing the four views").
+- **Weighed against each other, which view wins?** None wins outright. Four
+  pairs of views answer each other, and every view can be defended
+  ("Weighing the four views").
 - **What does each claim mean, and who holds it?** Every claim, with its source
   and its rating ("Appendix: the claims and their sources").
 -/
