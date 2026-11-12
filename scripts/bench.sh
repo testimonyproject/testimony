@@ -2,12 +2,15 @@
 # Engine benchmarks: run arguments/bench/Engine.lean and report each
 # benchmark's wall time and peak memory.
 #
-# Usage: scripts/bench.sh [--runs N] [--filter TEXT] [--shard K/N]
+# Usage: scripts/bench.sh [--runs N] [--filter TEXT] [--name NAME]... [--shard K/N]
 #                         [--out FILE.json] [--tree DIR] [--bench FILE.lean]
 #
 # Run from anywhere in the repository after `lake build` in arguments/.
 #   --runs N        repetitions of every benchmark (default: each one's own)
 #   --filter TEXT   only the benchmarks whose name contains TEXT
+#   --name NAME     only the benchmark named exactly NAME; repeatable.
+#                   scripts/bench-ab.sh measures a flagged slowdown again
+#                   with it, where a --filter could match a longer name too
 #   --shard K/N     only the K-th of N shards (K from 1): the benchmarks at
 #                   positions K, K+N, K+2N, ... in the file, after --filter,
 #                   and the calibration benchmark in every shard, so that each
@@ -31,11 +34,12 @@
 
 set -euo pipefail
 
-runs="" filter="" shard="" out="" tree="" bench=""
+runs="" filter="" shard="" out="" tree="" bench="" names=""
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --runs) runs="$2"; shift 2 ;;
     --filter) filter="$2"; shift 2 ;;
+    --name) names+="$2"$'\n'; shift 2 ;;
     --shard) shard="$2"; shift 2 ;;
     --out) out="$2"; shift 2 ;;
     --tree) tree="$2"; shift 2 ;;
@@ -59,7 +63,8 @@ LEAN_PATH="$(lake env printenv LEAN_PATH)"
 lean="$(lake env printenv LEAN_SYSROOT)/bin/lean"
 export LEAN_PATH
 
-BENCH_RUNS="$runs" BENCH_FILTER="$filter" BENCH_SHARD="$shard" python3 - "$out" "$commit" "$lean" "$bench" <<'EOF'
+BENCH_RUNS="$runs" BENCH_FILTER="$filter" BENCH_NAMES="$names" BENCH_SHARD="$shard" \
+  python3 - "$out" "$commit" "$lean" "$bench" <<'EOF'
 import json, os, re, subprocess, sys, time
 
 out, commit, lean, FILE = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
@@ -75,8 +80,14 @@ def lean_run(extra_env):
 
 
 filter_ = os.environ.get("BENCH_FILTER", "")
-names = [n for n in re.findall(r"bench-name (.+)", lean_run({"BENCH_LIST": "1"}))
-         if filter_ in n]
+# Named exactly, the benchmarks need no listing, which is a run of the whole
+# file: a name the file does not have gives no result below, as a benchmark that
+# does not elaborate does.
+if wanted := [n for n in os.environ.get("BENCH_NAMES", "").split("\n") if n]:
+    names = [n for n in wanted if filter_ in n]
+else:
+    names = [n for n in re.findall(r"bench-name (.+)", lean_run({"BENCH_LIST": "1"}))
+             if filter_ in n]
 # A shard: every N-th benchmark by position, and calibration in each, since it
 # is what shows whether the machine a shard ran on drifted.
 if shard := os.environ.get("BENCH_SHARD", ""):

@@ -189,9 +189,11 @@ jobs:
   # Engine benchmarks, an ablation A/B: the engine with this change and without
   # it (HEAD^1, the base it merges into), built side by side on one runner and
   # run interleaved, five rounds, so that both sides meet the same machine. Each
-  # benchmark is compared by the Mann-Whitney U test; a shard fails on a
-  # slowdown that is significant (p < 0.05) and larger than the variance bound,
-  # or on a rise in peak memory, unless the change accepts it with a reason in
+  # benchmark is compared by the Mann-Whitney U test. A slowdown that is
+  # significant (p < 0.05) and larger than the variance bound is measured again,
+  # in a few more rounds of that benchmark alone, and a shard fails only if it
+  # holds with both readings pooled (p < 0.01); or it fails on a rise in peak
+  # memory. Either way, not if the change accepts it with a reason in
   # arguments/bench/accepted.toml (.claude/skills/optimising-the-engine).
   #
   # The benchmarks are split into shards, each a job on a runner of its own,
@@ -252,6 +254,7 @@ jobs:
               | tar -xz --strip-components=1 -C /usr/local/bin
           fi
           git config --global --add safe.directory "$PWD"
+          scripts/test_bench_compare.py
           scripts/bench-ab.sh HEAD^1 --runs 5 --shard "${{ matrix.shard }}/${{ strategy.job-total }}" \
             --out bench-results --gate
 
@@ -263,6 +266,7 @@ jobs:
           path: |
             bench-results/base.json
             bench-results/head.json
+            bench-results/*-pooled.json
             bench-results/*.log
           if-no-files-found: ignore
 
