@@ -17,28 +17,34 @@ the readings is a text all parties accept as Scripture.
 
 Because the texts are granted, what an opponent can reject is a reading. The
 *opponent's burden* lists every smallest set of readings whose rejection
-overturns the case, and proves there is no other way (`canonical_burden`). It is
-computed, not chosen. There are exactly three sets, one for each part of faith
-alone.
+overturns the case, and proves there is no other way (`canonical_burden`). The
+library computes the sets, and no one picks them. There are exactly three, one
+for each part of faith alone.
 
 - To deny that works are not the ground, an opponent must reject three
-  readings: Paul's on works, Peter's and Jesus'.
+  readings: Paul's on works, Peter's and Jesus'. Trent's position, as encoded
+  here, takes this way: on its reading of James 2:24, works are part of the
+  ground.
 - To deny that faith is necessary, three: Paul's on faith, Hebrews' and John's.
   Trent does not take this way, since its chapter 8 reads the Apostle's
   "justified by faith" of faith as "the beginning of human salvation … without
   which it is impossible to please God".
 - To deny that faith suffices, four: Paul's on faith, John's, Peter's and
-  Jesus'. That is the way Trent takes.
+  Jesus'. Trent's canon 9, which condemns the claim that the ungodly is
+  justified by faith alone, denies this too. The reading of James that goes
+  with it is set out below as a rival of its own, not as part of Trent's
+  position.
 
-Hebrews' reading is rated `consensus`, and every other reading `disputed`.
-Every set holds more than one corpus, so no single corpus is load-bearing: take
-any one reading away and the conclusion still follows (`paul_not_load_bearing`, `hebrews_not_load_bearing`,
+Hebrews' reading is rated `consensus`, the highest rating, because Trent makes it
+too, and every other reading `disputed`, the lowest. Because every set holds
+more than one corpus, no single corpus is load-bearing: take any one reading
+away and the conclusion still follows (`paul_not_load_bearing`, `hebrews_not_load_bearing`,
 `john_not_load_bearing`, `peter_not_load_bearing`, `jesus_not_load_bearing`).
 Two corpora are enough, Hebrews and Jesus' words (`hebrews_and_jesus_suffice`).
 
 The burden is how this library lets several witnesses matter without counting
-them. Three corpora saying works are not the ground is not a score of three. It
-is three readings an opponent has to break, each on its own texts.
+them. When three corpora say works are not the ground, an opponent has to break
+three readings, each on its own texts.
 
 ## Paul and James
 
@@ -47,29 +53,38 @@ is sufficient, from Romans 4:4–5 and Galatians 2:16 and 3:11
 (`paul_on_faith_establishes`). Does James contradict it? Not on its texts, since
 none of them says either. It turns on one reading, of whom James means when he
 asks "can that faith save him?" (2:14). Read 2:14–17 as about faith without
-works, and leave aside the contested sense of "justified", and Paul stands with
-every text of James (`paul_on_faith_stands_with_james`). Read James's "that
+works, and leave aside the contested sense of "justified", and Paul can be held
+together with every text of James (`paul_on_faith_stands_with_james`). James
+does not contradict Paul on that reading, and does not support him either. Read James's "that
 faith" (2:14) and "not by faith alone" (2:24) of faith as such, as Trent does,
 and the two cannot both be held (`james_against_sufficiency_contradicts_paul`).
-So the harmony is a reading, not a given.
+So the harmony depends on how 2:14 is read.
 
-James is a witness to coherence, not to faith alone. He does not argue against
-works. He argues against a faith without them: the demons' belief of 2:19, and
+James does not argue for faith alone, and he does not argue against works. He
+argues against a faith without them: the demons' belief of 2:19, and
 the faith that says "go in peace" and gives nothing (2:14–17). Reformed readers
 distinguish justification, God's verdict, from sanctification, the believer's
 renewal. Read with that distinction, James 2:21–24 uses "justified" in a
 *demonstrative* sense: Abraham's offering of Isaac *showed* the faith already
 counted as righteousness in Genesis 15:6, which James himself quotes. So James
 adds what the other corpora do not say, that works are the fruit of saving
-faith. With him the conclusion becomes the Reformed formula of the Westminster
-Confession (XI.2): justification by faith alone, by a faith that is never alone.
+faith. With him the conclusion becomes the Reformed formula, justification by
+faith alone, by a faith that is never alone. That is a paraphrase of the
+Westminster Confession, which calls faith "the alone instrument of
+justification: yet is it not alone in the person justified" (XI.2).
 Every text of James is a premise, 2:24 included. Jude, which does not address
 the question, is granted as consistent with the rest and nothing more.
 
 ## Where Trent parts
 
-Trent and the canonical witness part at that sense of "justified". On Trent's
-reading of James 2:24, works are part of the ground, and faith alone fails. The
+Set beside the canonical witness with James, Trent parts at that sense of
+"justified". On Trent's reading of James 2:24, works are part of the ground, and
+faith alone fails. Trent's own decree says more than its reading of James. Its
+chapter 8 holds that nothing before justification, "whether faith or works",
+merits it, so Trent too denies that works ground the first justification. Its
+canon 24 condemns calling works "merely the fruits and signs of Justification
+obtained", which answers the demonstrative reading directly. The encoding takes
+Trent's position at chapter 10 only. The
 crux is found mechanically, as the one claim that breaks Trent at its reading of
 James (`whyTheCanonicalWitnessStandsAgainstTrent`). The Reformed formula needs
 it: without the demonstrative reading of James, "faith never alone" no longer
@@ -306,8 +321,10 @@ def noSufficiencyWitnessReading : Valuation Claim := fun a =>
   | _ => True
 
 /-- **To deny that faith suffices, an opponent must reject four readings** —
-Paul's on faith, John's, Peter's and Jesus'. This is the way Trent takes
-(canon 9), and the widest of the three: four corpora say it. -/
+Paul's on faith, John's, Peter's and Jesus'. It is the widest of the three, since
+four corpora say it. Trent's canon 9 denies that faith suffices, but Trent's
+position as encoded here (`tridentine`) takes the first way, at its reading of
+James 2:24. -/
 @[headline]
 theorem sufficiency_witnesses_jointly_load_bearing :
     ¬ Establishes withoutTheSufficiencyWitnesses := by
