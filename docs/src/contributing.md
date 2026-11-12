@@ -145,8 +145,13 @@ lake exe statusgen --check
 lake exe argdoc --check
 ```
 
-All of these run in CI. Small pull requests, one concern each. Discuss
-significant design changes in an issue first.
+All of these run in CI, whenever a change touches something a build reads. A
+change to nothing but hand-written pages, skills or notes like this one runs
+the domain linter and, if it touched `docs/`, builds the book; the builds, the
+benchmarks and the PDF are skipped, because they would have nothing new to
+check. `scripts/ci_changes.py` decides which jobs a change needs, and any file
+it does not know runs everything. Small pull requests, one concern each.
+Discuss significant design changes in an issue first.
 
 If the change touches `arguments/TestimonyArguments/`, it is not finished when
 it compiles: the documentation moves with it. Run `lake exe statusgen` and
