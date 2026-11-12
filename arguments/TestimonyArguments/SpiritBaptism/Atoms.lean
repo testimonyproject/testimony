@@ -6,9 +6,9 @@ import Testimony.Scripture
 # TestimonyArguments.SpiritBaptism.Atoms — the atomic claims
 
 The texts each side reads, the readings each side gives them, and the three
-positions' conclusions. The texts are kept apart from the readings, so that a
-reader can see which claims are what Luke and Paul say and which are what a
-tradition says they mean.
+conclusions the four views reach (the two subsequence views share one). The
+texts are kept apart from the readings, so that a reader can see which claims
+are what Luke and Paul say and which are what a tradition says they mean.
 -/
 
 namespace TestimonyArguments.SpiritBaptism

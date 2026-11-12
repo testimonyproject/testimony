@@ -31,14 +31,14 @@ kernel.
 - **Not forced.** Some consistent position leaves it out — which is not the same
   as false.
 
-## What the solver computed
+## What the weighing found
 
 Four standoffs, and nothing else. The conversion view stands off against both
 subsequence views, and so does the sacramental view; the two subsequence views
 do not attack each other, and neither do the conversion and sacramental views.
 Nothing is forced (`spirit_baptism_forces_nothing`). Every view can be defended
 (`conversion_defensible`, `pentecostal_defensible`, `holiness_defensible`,
-`sacramental_defensible`), in one of two camps, and nothing joins them: the
+`sacramental_defensible`), in one of two camps, and no position holds views from both: the
 conversion and sacramental views together, and the Pentecostal and holiness
 views together.
 
@@ -114,9 +114,9 @@ def spiritBaptismDispute : Dispute Claim View where
 satisfies both — every believer baptized in the Spirit at conversion, the Spirit
 given in the sacraments, and no second baptism to seek.
 
-What this does not claim: that the two agree. They differ over what the rite
-does, which this dispute does not weigh; the result says only that nothing
-encoded here makes them contradict each other. -/
+It does not show that the two agree. They differ over what the rite does, which
+this dispute does not weigh, and the result says only that nothing encoded here
+makes them contradict each other. -/
 theorem conversion_stands_with_the_sacraments :
     spiritBaptismDispute.StandTogether [.conversion, .sacramental] := by
   satisfied_by conversionReading [Dispute.StandTogether, spiritBaptismDefs]
@@ -213,8 +213,8 @@ def spiritBaptismSettlesNothing : Verdict spiritBaptismDispute where
 /-- **Nothing is forced.** Every view is in a standoff the dispute cannot resolve,
 and every weakest link is `disputed`, so no rating breaks a tie.
 
-What this does not claim: that the question is idle. Each view can be defended;
-what the dispute cannot do is choose between readings rated alike. -/
+It does not show that the question is idle. Each view can be defended, and what
+the dispute cannot do is choose between readings rated alike. -/
 @[headline]
 theorem spirit_baptism_forces_nothing : grounded spiritBaptismDispute.defeats = ∅ :=
   spiritBaptismSettlesNothing.holds
@@ -325,9 +325,9 @@ says, in its own words, that they are "not a pattern"
 (`TestimonyArguments.Meanings.SpiritBaptism.joins`). So what the view holds, read for
 what its claims mean, denies the transitions reading outright.
 
-What this claims: the Pentecostal view must read the Acts narratives as a
-pattern; the other reading is not open to it. What it does not claim: that the
-pattern reading is right. Read as a pattern, the narratives still meet the
+So the Pentecostal view must read the Acts narratives as a pattern, because the
+other reading is not open to it. It does not show that the pattern reading is
+right. Read as a pattern, the narratives still meet the
 variety of Acts (`whereTheVarietyMeetsThePattern`), at a step the Assemblies of
 God contest.
 
