@@ -44,21 +44,21 @@ later reception of the Spirit in Samaria and at Ephesus marks steps in the
 gospel's spread, unrepeatable transitions, and so sets no norm for believers
 today (`transitionCase_establishes`).
 
-The Pentecostal view cannot take Stott's way out. Its own premise is that the
-narratives are a pattern, and Stott's reading says they are "not a pattern", so
-read for what the claims mean the two exclude each other
+A Pentecostal cannot also read Acts as Stott does. The view's own premise is
+that the narratives are a pattern, and Stott's reading denies it, so the two
+claims, taken at their word, cannot both be held
 (`pentecostal_cannot_read_acts_as_transitions`). Read as a pattern, the
-narratives then meet the variety of Acts. That meeting is at one step, from Acts
-10 and 2:38 to "no one episode is the pattern", and the Assemblies of God
-contest it: they grant Acts 10 and list it among the evidence *for* a
-subsequent experience (`whereTheVarietyMeetsThePattern`). So the Pentecostal
-view must read Acts as a pattern and answer its variety, and the answer it gives
-is a reading of Acts 10 that the step's rating records as disputed.
+narratives then collide with the variety of Acts, at one step: from Acts 10 and
+2:38 to "no one episode is the pattern". The Assemblies of God deny that step.
+They grant Acts 10, and their paper lists Acts 10:44–46 as evidence *for* a
+later experience (`whereTheVarietyMeetsThePattern`). So the Pentecostal view
+must read Acts as a pattern and answer its variety, and its answer is a reading
+of Acts 10 that the step's rating records as disputed.
 
-What that costs the conversion view is not checked here. Stott owes an account
-of why Luke's narratives set no order for later believers. Dunn avoids the
-question by denying that the Samaritans were yet believers before they received
-the Spirit, and Rome reads Acts 8:17 and 19:6 as confirmation (Catechism 1288).
+The other views' readings of Acts are not checked here: Stott's reason for
+holding that Luke's narratives set no order for later believers, Dunn's argument
+that the Samaritans were not yet believers before they received the Spirit, and
+Rome's reading of Acts 8:17 and 19:6 as confirmation (Catechism 1288).
 The chapter [Weighing the four views](weighing.md) sets the four views against one another.
 
 
