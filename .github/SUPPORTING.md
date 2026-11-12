@@ -31,6 +31,10 @@ none of it.
 If that constraint makes a prospective supporter uncomfortable, the project
 would rather forgo the support than soften the constraint.
 
+## How to support
+
+- [Patreon](https://www.patreon.com/deanberris)
+
 ## Supporters
 
 Named supporters are listed in [SUPPORTERS.md](../SUPPORTERS.md), by consent.
