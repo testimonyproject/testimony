@@ -79,6 +79,20 @@ def spiritBaptismChapters : List Chapter :=
                  , `TestimonyArguments.SpiritBaptism.Sources ]
     , legend := true } ]
 
+/-- The Triune God, set as chapters: what LST says and why it is checked; the
+texts and what each side adds to them; the positions weighed; and the claims,
+as an appendix. -/
+def trinityChapters : List Chapter :=
+  [ { slug := "trinity", title := "The Triune God: what Scripture settles, and what it leaves open"
+    , modules := [`TestimonyArguments.Trinity] }
+  , { slug := "the-procession", title := "Does the Spirit proceed from the Son?"
+    , modules := [`TestimonyArguments.Trinity.Procession] }
+  , { slug := "weighing", title := "Weighing the positions"
+    , modules := [`TestimonyArguments.Trinity.Dispute] }
+  , { slug := "claims", title := "Appendix: the claims and their sources"
+    , modules := [`TestimonyArguments.Trinity.Atoms, `TestimonyArguments.Trinity.Sources]
+    , legend := true } ]
+
 /-- Every argument the documentation presents, in the order it presents them.
 
 Every namespace carrying a `@[headline]` result must appear here. The page
@@ -105,6 +119,10 @@ def arguments : List Argument :=
   , { ns := `TestimonyArguments.SpiritBaptism
     , slug := "spirit-baptism"
     , title := "Spirit baptism — at conversion, after it, or in the sacraments"
-    , chapters := spiritBaptismChapters } ]
+    , chapters := spiritBaptismChapters }
+  , { ns := `TestimonyArguments.Trinity
+    , slug := "trinity"
+    , title := "The Triune God — what Scripture settles, and what it leaves open"
+    , chapters := trinityChapters } ]
 
 end TestimonyArguments.Doc

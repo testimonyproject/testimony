@@ -4,6 +4,7 @@ import TestimonyArguments.Meanings.CanonicalWitness
 import TestimonyArguments.Meanings.SolaFide
 import TestimonyArguments.Meanings.SolaScriptura
 import TestimonyArguments.Meanings.SpiritBaptism
+import TestimonyArguments.Meanings.Trinity
 
 /-!
 # TestimonyArguments.Meanings — what every argument's claims say
