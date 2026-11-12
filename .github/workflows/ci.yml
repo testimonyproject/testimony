@@ -16,7 +16,49 @@ on:
   workflow_dispatch:
 
 jobs:
+  # Which jobs this change needs, from the files it touches
+  # (scripts/ci_changes.py). A change to a hand-written page, a skill or the
+  # README gives the build, the benchmarks and the image nothing to check, so
+  # they are skipped; the linter, which reads pages as well as Lean, always
+  # runs, and the book is built whenever docs/ changed. A skipped job counts as
+  # passed for branch protection, so a required check is never left waiting.
+  # A push is diffed against the commit it replaced, a pull request against the
+  # base it merges into; a dispatched run, or a diff git cannot compute, runs
+  # everything.
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      lean: ${{ steps.classify.outputs.lean }}
+      docs: ${{ steps.classify.outputs.docs }}
+      image: ${{ steps.classify.outputs.image }}
+    steps:
+      # Two commits deep: on a pull request, HEAD is the merge commit and HEAD^1
+      # the base it merges into.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - id: classify
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          case "$EVENT" in
+            pull_request)
+              python3 scripts/ci_changes.py --base HEAD^1 --head HEAD ;;
+            push)
+              git fetch --depth=1 origin "$BEFORE" || true
+              python3 scripts/ci_changes.py --base "$BEFORE" --head HEAD ;;
+            *)
+              python3 scripts/ci_changes.py --all ;;
+          esac
+
+  # Rebuilt only when its inputs change. The jobs below name the published
+  # image when this one is skipped — the same tag this job outputs, and what a
+  # pull request's jobs ran in already, since a pull request never pushes it.
   image:
+    needs: changes
+    if: needs.changes.outputs.image == 'true'
     permissions:
       contents: read
       packages: write
@@ -24,10 +66,43 @@ jobs:
     with:
       push: ${{ github.event_name == 'push' }}
 
-  build:
-    needs: image
+  # Tier 4, on every change: sub-second, and it reads the hand-written pages
+  # (L9, L12) as well as the Lean. L9 accepts names Foundation declares, so it
+  # wants Foundation's sources, which the restored .lake holds.
+  lint:
+    needs: [changes, image]
+    if: ${{ !cancelled() && !failure() }}
     runs-on: ubuntu-latest
-    container: ${{ needs.image.outputs.image }}
+    container: ${{ needs.image.outputs.image || 'ghcr.io/testimonyproject/testimony/devcontainer:latest' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # The cache `build` saves, restored only.
+      - name: Restore .lake
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .lake
+            arguments/.lake
+            examples/.lake
+          key: lake-packages-${{ runner.os }}-${{ hashFiles('lean-toolchain', '**/lake-manifest.json') }}
+          restore-keys: |
+            lake-packages-${{ runner.os }}-
+            lake-${{ runner.os }}-
+
+      - name: Domain linter tests
+        run: |
+          python3 scripts/test_testimony_lint.py
+          python3 scripts/test_ci_changes.py
+
+      - name: Domain linter
+        run: python3 scripts/testimony_lint.py
+
+  build:
+    needs: [changes, image]
+    if: ${{ !cancelled() && !failure() && needs.changes.outputs.lean == 'true' }}
+    runs-on: ubuntu-latest
+    container: ${{ needs.image.outputs.image || 'ghcr.io/testimonyproject/testimony/devcontainer:latest' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -57,13 +132,6 @@ jobs:
       # package's generators are built from.
       - name: Build
         run: lake build && lake build TestimonyTools
-
-      # Tier 4 first among the checks: sub-second, so it fails fast.
-      - name: Domain linter tests
-        run: python3 scripts/test_testimony_lint.py
-
-      - name: Domain linter
-        run: python3 scripts/testimony_lint.py
 
       # Tier 2: Batteries environment linters.
       - name: Environment linters
@@ -132,11 +200,16 @@ jobs:
   # shard is a whole A/B, and each runs the calibration benchmark, which no
   # change can move, so that each runner is checked for drift. The number of
   # shards is the length of `shard`'s list; nothing else names it.
+  #
+  # Only when the change touches a build input: a change no build reads cannot
+  # move the engine.
   bench:
-    needs: image
-    if: github.event_name == 'pull_request'
+    needs: [changes, image]
+    if: >-
+      ${{ !cancelled() && !failure() && github.event_name == 'pull_request'
+      && needs.changes.outputs.lean == 'true' }}
     runs-on: ubuntu-latest
-    container: ${{ needs.image.outputs.image }}
+    container: ${{ needs.image.outputs.image || 'ghcr.io/testimonyproject/testimony/devcontainer:latest' }}
     strategy:
       fail-fast: false
       matrix:
@@ -194,19 +267,27 @@ jobs:
           if-no-files-found: ignore
 
   # One check for the shards together, whatever their number, for branch
-  # protection to require: it passes when every shard passed.
+  # protection to require: it passes when every shard passed, or when the
+  # change touched nothing the benchmarks measure and they were skipped.
   benchmarks:
-    needs: bench
+    needs: [changes, bench]
     if: always() && github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Every shard passed
-        run: test "${{ needs.bench.result }}" = success
+        env:
+          CHANGES: ${{ needs.changes.result }}
+          LEAN: ${{ needs.changes.outputs.lean }}
+          BENCH: ${{ needs.bench.result }}
+        run: |
+          test "$CHANGES" = success
+          test "$BENCH" = success || { test "$LEAN" = false && test "$BENCH" = skipped; }
 
   docs:
-    needs: image
+    needs: [changes, image]
+    if: ${{ !cancelled() && !failure() && needs.changes.outputs.docs == 'true' }}
     runs-on: ubuntu-latest
-    container: ${{ needs.image.outputs.image }}
+    container: ${{ needs.image.outputs.image || 'ghcr.io/testimonyproject/testimony/devcontainer:latest' }}
     steps:
       - uses: actions/checkout@v4
       - name: Build book

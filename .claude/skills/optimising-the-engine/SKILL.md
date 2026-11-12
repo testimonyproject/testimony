@@ -143,7 +143,8 @@ order of cost (re-measure; do not trust this list over a fresh profile):
 
 ## The CI gate
 
-On every pull request the `bench` job runs `scripts/bench-ab.sh HEAD^1 --runs 5
+On every pull request that touches a build input (`scripts/ci_changes.py`;
+a change to pages or notes alone skips it) the `bench` job runs `scripts/bench-ab.sh HEAD^1 --runs 5
 --shard K/N --gate`: the merge commit against the base it merges into, five
 interleaved rounds (the fewest with which the U test can still reach p < 0.05).
 The benchmarks are split into N shards, each a job on a runner of its own,

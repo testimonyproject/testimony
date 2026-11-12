@@ -121,10 +121,11 @@ things.
 
 Only `arguments.tex` is committed, so the PDF has to be made somewhere. The `PDF`
 workflow (`.github/workflows/pdf.yml`) typesets it with `tectonic`, along with
-the examples' documents, on every pull request, and a LaTeX error fails there
-rather than on `main`. The `Docs` workflow puts the PDFs beside the site, at
-`pdf/arguments.pdf`, which every argument page links to; the `Release` workflow
-attaches them to the GitHub release a `v*` tag makes.
+the examples' documents, on every pull request that touches what they are made
+from, and a LaTeX error fails there rather than on `main`. The `Docs` workflow
+puts the PDFs beside the site, at `pdf/arguments.pdf`, which every argument page
+links to; the `Release` workflow attaches them to the GitHub release a `v*` tag
+makes.
 
 ### An argument set as chapters
 

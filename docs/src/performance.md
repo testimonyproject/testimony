@@ -30,8 +30,8 @@ page is its ledger: what was measured, what was tried, and what came of it.
   counts when p < 0.05 and it is larger than the variance bound. Peak memory is
   compared by threshold. A calibration benchmark, which no change can move,
   shows whether the machine drifted during the run.
-- **CI** runs the A/B on every pull request, against the base it merges into,
-  and fails on a regression that the pull request does not accept, with its
+- **CI** runs the A/B on every pull request that touches a build input, against
+  the base it merges into, and fails on a regression that the pull request does not accept, with its
   reason, in `arguments/bench/accepted.toml`. The benchmarks are split into
   shards (`--shard K/N`), each a job on a runner of its own, and each with the
   calibration benchmark, since drift is a property of one runner.

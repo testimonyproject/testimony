@@ -13,6 +13,11 @@ name: PDF
 # committed. Their bibliographies are not committed beside them: the arguments'
 # is the committed references.bib at the root, copied in; the examples' is
 # written by `lake exe exampletex`, which is why this job builds that package.
+#
+# On a pull request it runs only when the change touches a build input, as
+# ci.yml's build does (scripts/ci_changes.py), and the image is rebuilt only
+# when its own inputs change. Called by docs.yml or release.yml it always runs:
+# they need the PDFs whatever changed.
 on:
   pull_request:
   workflow_dispatch:
@@ -23,7 +28,25 @@ permissions:
   packages: write
 
 jobs:
+  changes:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    outputs:
+      lean: ${{ steps.classify.outputs.lean }}
+      image: ${{ steps.classify.outputs.image }}
+    steps:
+      # HEAD is the merge commit, HEAD^1 the base it merges into.
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - id: classify
+        run: python3 scripts/ci_changes.py --base HEAD^1 --head HEAD
+
   image:
+    needs: changes
+    if: >-
+      ${{ !cancelled() && !failure()
+      && (github.event_name != 'pull_request' || needs.changes.outputs.image == 'true') }}
     permissions:
       contents: read
       packages: write
@@ -32,9 +55,12 @@ jobs:
       push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
 
   typeset:
-    needs: image
+    needs: [changes, image]
+    if: >-
+      ${{ !cancelled() && !failure()
+      && (github.event_name != 'pull_request' || needs.changes.outputs.lean == 'true') }}
     runs-on: ubuntu-latest
-    container: ${{ needs.image.outputs.image }}
+    container: ${{ needs.image.outputs.image || 'ghcr.io/testimonyproject/testimony/devcontainer:latest' }}
     # The container is a GHCR package: a job that names its permissions must
     # ask to read it, as docs.yml explains.
     permissions:
