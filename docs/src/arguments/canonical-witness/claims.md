@@ -32,35 +32,35 @@ it, the sense of "justified" in James 2:24.
 
 | | claim | kind | held | source |
 |---|---|---|---|---|
-| \\(P_{1}\\) | Romans 3:28: a person is justified by faith apart from works of the law ※ | textual | Christian, historical-grammatical, consensus | Rom 3:28 |
-| \\(P_{2}\\) | Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness ※ | textual | Christian, historical-grammatical, consensus | Rom 4:4-5 |
-| \\(P_{3}\\) | Galatians 2:16: not justified by works of the law but through faith in Christ ※ | textual | Christian, historical-grammatical, consensus | Gal 2:16 |
-| \\(P_{4}\\) | Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith ※ | textual | Christian, historical-grammatical, consensus | Gal 3:11 |
-| \\(P_{5}\\) | Ephesians 2:8–9: saved by grace through faith, not of works ※ | textual | Christian, historical-grammatical, consensus | Eph 2:8-9 |
-| \\(P_{6}\\) | Titus 3:5: saved not by works done in righteousness but by his mercy ※ | textual | Christian, historical-grammatical, consensus | Titus 3:5 |
-| \\(P_{7}\\) | Hebrews 10:38–39: the righteous one shall live by faith ※ | textual | Christian, historical-grammatical, consensus | Heb 10:38-39 |
-| \\(P_{8}\\) | Hebrews 11:6: without faith it is impossible to please God ※ | textual | Christian, historical-grammatical, consensus | Heb 11:6 |
-| \\(P_{9}\\) | John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already ※ | textual | Christian, historical-grammatical, consensus | John 3:16-18 |
-| \\(P_{10}\\) | John 5:24: whoever hears and believes has eternal life and does not come into judgement ※ | textual | Christian, historical-grammatical, consensus | John 5:24 |
-| \\(P_{11}\\) | John 6:28–29: the work of God is that you believe in him whom he has sent ※ | textual | Christian, historical-grammatical, consensus | John 6:28-29 |
-| \\(P_{12}\\) | Acts 10:43: everyone who believes in him receives forgiveness of sins ※ | textual | Christian, historical-grammatical, consensus | Acts 10:43 |
-| \\(P_{13}\\) | Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus ※ | textual | Christian, historical-grammatical, consensus | Acts 15:10-11 |
-| \\(P_{14}\\) | Luke 7:50: your faith has saved you ※ | textual | Christian, historical-grammatical, consensus | Luke 7:50 |
-| \\(P_{15}\\) | Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified ※ | textual | Christian, historical-grammatical, consensus | Luke 18:9-14 |
-| \\(P_{16}\\) | James 2:14–17: faith by itself, if it does not have works, is dead ※ | textual | Christian, historical-grammatical, consensus | Jas 2:14-17 |
-| \\(P_{17}\\) | James 2:19: even the demons believe, and shudder ※ | textual | Christian, historical-grammatical, consensus | Jas 2:19 |
-| \\(P_{18}\\) | James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled ※ | textual | Christian, historical-grammatical, consensus | Jas 2:21-23 |
-| \\(P_{19}\\) | James 2:24: a person is justified by works and not by faith alone ※ | textual | Christian, historical-grammatical, consensus | Jas 2:24 |
-| \\(P_{20}\\) | Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ ※ | textual | Christian, historical-grammatical, consensus | Jude 1:20-21 |
-| \\(P_{21}\\) | Faith is necessary: no one is saved without it | theological | Christian, historical-grammatical, consensus | Heb 11:6; John 3:16-18; [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8 |
-| \\(P_{22}\\) | Faith is sufficient: whoever believes is saved | theological | Reformed Protestant, disputed | Rom 4:4-5; John 5:24; [`schreiner-faith-alone-2015`](../../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{23}\\) | Works are not the ground of justification | theological | Reformed Protestant, disputed | Rom 3:28; Eph 2:8-9; [`schreiner-faith-alone-2015`](../../bibliography.md#schreiner-faith-alone-2015) |
-| \\(P_{24}\\) | Justification is by faith alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.2; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.19; [`hilary-commentary-matthew-2013`](../../bibliography.md#hilary-commentary-matthew-2013), §8.6; [`basil-ascetical-works-1999`](../../bibliography.md#basil-ascetical-works-1999), §Homily 20, Of Humility |
-| \\(P_{25}\\) | Good works are the fruit and evidence of a true and lively faith | theological | Reformed Protestant, well supported | [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XVI.2 |
-| \\(P_{26}\\) | Justification is by faith alone, by a faith that is never alone | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XI.2 |
-| \\(P_{27}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [`moo-james-2000`](../../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [`johnson-james-1995`](../../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
-| \\(P_{28}\\) | ‘Justified’ in James 2:21–24 means shown to be righteous (denied by Trent, which reads 2:24 as an increase of justification by works done in grace) | linguistic | Roman Catholic, disputed | [`tanner-decrees-1990`](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24 |
-| \\(P_{29}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../../bibliography.md#westminster-confession-1647), §XIII.1; [`calvin-institutes-1960`](../../bibliography.md#calvin-institutes-1960), §III.xi.6; [`roberts-ante-nicene-fathers-1-1885`](../../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
+| <a id="claim-1"></a>\\(P_{1}\\) | Romans 3:28: a person is justified by faith apart from works of the law ※ | textual | Christian, hist.-gramm., consensus | Rom 3:28 |
+| <a id="claim-2"></a>\\(P_{2}\\) | Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness ※ | textual | Christian, hist.-gramm., consensus | Rom 4:4-5 |
+| <a id="claim-3"></a>\\(P_{3}\\) | Galatians 2:16: not justified by works of the law but through faith in Christ ※ | textual | Christian, hist.-gramm., consensus | Gal 2:16 |
+| <a id="claim-4"></a>\\(P_{4}\\) | Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith ※ | textual | Christian, hist.-gramm., consensus | Gal 3:11 |
+| <a id="claim-5"></a>\\(P_{5}\\) | Ephesians 2:8–9: saved by grace through faith, not of works ※ | textual | Christian, hist.-gramm., consensus | Eph 2:8-9 |
+| <a id="claim-6"></a>\\(P_{6}\\) | Titus 3:5: saved not by works done in righteousness but by his mercy ※ | textual | Christian, hist.-gramm., consensus | Titus 3:5 |
+| <a id="claim-7"></a>\\(P_{7}\\) | Hebrews 10:38–39: the righteous one shall live by faith ※ | textual | Christian, hist.-gramm., consensus | Heb 10:38-39 |
+| <a id="claim-8"></a>\\(P_{8}\\) | Hebrews 11:6: without faith it is impossible to please God ※ | textual | Christian, hist.-gramm., consensus | Heb 11:6 |
+| <a id="claim-9"></a>\\(P_{9}\\) | John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already ※ | textual | Christian, hist.-gramm., consensus | John 3:16-18 |
+| <a id="claim-10"></a>\\(P_{10}\\) | John 5:24: whoever hears and believes has eternal life and does not come into judgement ※ | textual | Christian, hist.-gramm., consensus | John 5:24 |
+| <a id="claim-11"></a>\\(P_{11}\\) | John 6:28–29: the work of God is that you believe in him whom he has sent ※ | textual | Christian, hist.-gramm., consensus | John 6:28-29 |
+| <a id="claim-12"></a>\\(P_{12}\\) | Acts 10:43: everyone who believes in him receives forgiveness of sins ※ | textual | Christian, hist.-gramm., consensus | Acts 10:43 |
+| <a id="claim-13"></a>\\(P_{13}\\) | Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus ※ | textual | Christian, hist.-gramm., consensus | Acts 15:10-11 |
+| <a id="claim-14"></a>\\(P_{14}\\) | Luke 7:50: your faith has saved you ※ | textual | Christian, hist.-gramm., consensus | Luke 7:50 |
+| <a id="claim-15"></a>\\(P_{15}\\) | Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified ※ | textual | Christian, hist.-gramm., consensus | Luke 18:9-14 |
+| <a id="claim-16"></a>\\(P_{16}\\) | James 2:14–17: faith by itself, if it does not have works, is dead ※ | textual | Christian, hist.-gramm., consensus | Jas 2:14-17 |
+| <a id="claim-17"></a>\\(P_{17}\\) | James 2:19: even the demons believe, and shudder ※ | textual | Christian, hist.-gramm., consensus | Jas 2:19 |
+| <a id="claim-18"></a>\\(P_{18}\\) | James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled ※ | textual | Christian, hist.-gramm., consensus | Jas 2:21-23 |
+| <a id="claim-19"></a>\\(P_{19}\\) | James 2:24: a person is justified by works and not by faith alone ※ | textual | Christian, hist.-gramm., consensus | Jas 2:24 |
+| <a id="claim-20"></a>\\(P_{20}\\) | Jude 20–21: keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ ※ | textual | Christian, hist.-gramm., consensus | Jude 1:20-21 |
+| <a id="claim-21"></a>\\(P_{21}\\) | Faith is necessary: no one is saved without it | theological | Christian, hist.-gramm., consensus | Heb 11:6; John 3:16-18; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8 |
+| <a id="claim-22"></a>\\(P_{22}\\) | Faith is sufficient: whoever believes is saved | theological | Reformed Protestant, disputed | Rom 4:4-5; John 5:24; [Schreiner 2015](../../bibliography.md#schreiner-faith-alone-2015) |
+| <a id="claim-23"></a>\\(P_{23}\\) | Works are not the ground of justification | theological | Reformed Protestant, disputed | Rom 3:28; Eph 2:8-9; [Schreiner 2015](../../bibliography.md#schreiner-faith-alone-2015) |
+| <a id="claim-24"></a>\\(P_{24}\\) | Justification is by faith alone | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.19; [of Poitiers 2013](../../bibliography.md#hilary-commentary-matthew-2013), §8.6; [of Caesarea 1999](../../bibliography.md#basil-ascetical-works-1999), §Homily 20, Of Humility |
+| <a id="claim-25"></a>\\(P_{25}\\) | Good works are the fruit and evidence of a true and lively faith | theological | Reformed Protestant, well supported | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.2 |
+| <a id="claim-26"></a>\\(P_{26}\\) | Justification is by faith alone, by a faith that is never alone | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2 |
+| <a id="claim-27"></a>\\(P_{27}\\) | James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine | interpretive | Reformed Protestant, well supported | [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [Johnson 1995](../../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19 |
+| <a id="claim-28"></a>\\(P_{28}\\) | ‘Justified’ in James 2:21–24 means shown to be righteous (denied by Trent, which reads 2:24 as an increase of justification by works done in grace) | linguistic | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24 |
+| <a id="claim-29"></a>\\(P_{29}\\) | Justification and sanctification are inseparable but distinct | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XIII.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.6; [Roberts et al. 1885](../../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9 |
 
 </div>
 

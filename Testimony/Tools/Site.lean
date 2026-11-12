@@ -28,8 +28,23 @@ structure Site where
   pagesDir : System.FilePath
   /-- The site's summary, whose marked block lists the pages. -/
   summaryPath : System.FilePath
+  /-- The print edition of the package's arguments, as a link from a page in the
+  pages directory: `../pdf/arguments.pdf`. Empty where there is none, and the
+  pages then say nothing of one. The PDF is typeset and put beside the site when
+  the site is built (`.github/workflows/pdf.yml`), so no page links to a file that
+  the repository holds. -/
+  pdf : String := ""
 
 namespace Site
+
+/-- The sentence that points a reader at the print edition, or nothing where
+there is none. -/
+def printEdition (s : Site) : String :=
+  if s.pdf.isEmpty then "" else
+    "Every argument is also set for print, the claims linked and the derivations " ++
+    "in words as here, in [one PDF](" ++ s.pdf ++ "), and each tagged " ++
+    "[release](https://github.com/testimonyproject/testimony/releases) of the project " ++
+    "carries a copy.\n\n"
 
 /-- The repository path an argument's sources live at. -/
 def source (s : Site) (a : Argument) : String := s.sourceRoot ++ sourcePath a.ns
@@ -49,7 +64,7 @@ def preamble (s : Site) (a : Argument) : String :=
   "the same variable means the same claim in every position below. " ++
   "[Reading the logic](../reading-the-logic.md) is the short version of what the " ++
   "notation means. A result marked ⚗ is one this library constructs rather than " ++
-  "reports.\n\n"
+  "reports.\n\n" ++ s.printEdition
 
 /-- One argument's page: the do-not-edit header, the title, the note, the
 generated body. -/
@@ -85,20 +100,29 @@ def anchorsIn (md : String) : List String :=
 
 /-- Repoint a chapter's links. An in-page link `](#x)` to an anchor another
 chapter defines goes to that chapter; a link up out of the pages directory,
-`](../…)`, goes one level further up from a page in the argument's directory. -/
+`](../…)`, goes one level further up from a page in the argument's directory.
+
+A variable's link inside a formula, `\href{#claim-3}{…}`, is repointed the same
+way, to the chapter that carries the legend. mdBook turns a Markdown link to
+`claims.md` into one to `claims.html`, but it never sees inside a formula, so
+there the link names the `.html` page itself. -/
 def relink (here : String) (owner : String → Option String) (md : String) : String :=
   let deep := (here.splitOn "/").length > 1
   let up := if deep then md.replace "](../" "](../../" else md
-  let pieces := up.splitOn "](#"
-  match pieces with
-  | [] => up
-  | first :: rest =>
-    first ++ String.join (rest.map fun piece =>
-      let anchor := (piece.splitOn ")").headD ""
-      match owner anchor with
-      | some page => if page == here then "](#" ++ piece
-                     else "](" ++ relativeLink here page ++ "#" ++ piece
-      | none => "](#" ++ piece)
+  let repoint (opener closer : String) (target : String → String) (text : String) :=
+    match text.splitOn opener with
+    | [] => text
+    | first :: rest =>
+      first ++ String.join (rest.map fun piece =>
+        let anchor := (piece.splitOn closer).headD ""
+        match owner anchor with
+        | some page => if page == here then opener ++ piece
+                       else (opener.dropEnd 1).toString ++ target (relativeLink here page) ++
+                         "#" ++ piece
+        | none => opener ++ piece)
+  let html (page : String) :=
+    if page.endsWith ".md" then (page.dropEnd 3).toString ++ ".html" else page
+  repoint "\\href{#" "}" html (repoint "](#" ")" id up)
 
 /-- The names a chapter can be mentioned by in prose: its title, and the part of
 the title before a colon, so that "James 2:24" names the chapter titled `James
@@ -177,7 +201,7 @@ def chapteredPreamble (s : Site) (a : Argument) : String :=
   "every chapter; the numbered list is in " ++ legendAt ++ ". " ++
   "[Reading the logic](../reading-the-logic.md) is the short version of what the " ++
   "notation means. A result marked ⚗ is one this library constructs rather than " ++
-  "reports.\n\n"
+  "reports.\n\n" ++ s.printEdition
 
 /-- One argument's pages: one, or one per chapter. -/
 def argumentPages (s : Site) (a : Argument) (b : Body) : List (String × String) :=

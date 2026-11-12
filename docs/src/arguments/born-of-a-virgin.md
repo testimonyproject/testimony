@@ -7,6 +7,8 @@
 
 Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
+Every argument is also set for print, the claims linked and the derivations in words as here, in [one PDF](../pdf/arguments.pdf), and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
+
 ## TestimonyArguments.BornOfAVirgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
 
 Matthew 1:22–23 quotes Isaiah 7:14 as grounds that the Messiah is born of a
@@ -433,106 +435,106 @@ These are values, so an atom that cites one of them *with something further*
 says so with `{ ... with supporting := ... }`, and the difference is the part a
 reader sees.
 
-## The claims, numbered
+### The claims, numbered
 
 <div class="testimony-legend">
 
 | | claim | kind | held | source |
 |---|---|---|---|---|
-| \\(P_{1}\\) | Isaiah 7:14 is a Messianic prediction of a virgin birth | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35 |
-| \\(P_{2}\\) | עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman | linguistic | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32 |
-| \\(P_{3}\\) | The semantic range of עַלְמָה does not exclude 'virgin' at Isaiah 7:14 | linguistic | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), pp. 120–124 |
-| \\(P_{4}\\) | עַלְמָה denotes a young woman of marriageable age | linguistic | critical scholarship, consensus | [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020); [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011) |
-| \\(P_{5}\\) | Being a virgin does not exclude a woman from the denotation of עַלְמָה | linguistic | critical scholarship, consensus | Gen 24:43; Gen 24:16; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020) |
-| \\(P_{6}\\) | Mary at the conception was a betrothed young woman of marriageable age | historical | critical scholarship, consensus | Matt 1:18; Luke 1:27; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
-| \\(P_{7}\\) | Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes | interpretive | Christian, historical-grammatical, well supported | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020); [`cyril-alexandria-commentary-isaiah`](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [`cyril-jerusalem-catechetical-lectures-350`](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.21; [`eusebius-demonstratio-evangelica-315`](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [`chrysostom-homilies-matthew-390`](../bibliography.md#chrysostom-homilies-matthew-390), §5 |
-| \\(P_{8}\\) | Matthew's fulfilment claim requires that עַלְמָה itself denote virginity | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{9}\\) | The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος | textual | critical scholarship, consensus | [`na28-2012`](../bibliography.md#na28-2012), app. Matt 1:23; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
-| \\(P_{10}\\) | Targum Jonathan renders עַלְמָה at Isaiah 7:14 as עוּלֵימְתָא, 'young woman' | textual | critical scholarship, consensus | [`chilton-isaiah-targum-1987`](../bibliography.md#chilton-isaiah-targum-1987), ad loc. Isa 7:14; Isa 7:14 |
-| \\(P_{11}\\) | Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις | textual | critical scholarship, consensus | [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020); [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.1; [`eusebius-demonstratio-evangelica-315`](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1 |
-| \\(P_{12}\\) | The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, 'virgin' | textual | critical scholarship, consensus | Isa 7:14; [`van-der-kooij-textzeugen-jesajabuches-1981`](../bibliography.md#van-der-kooij-textzeugen-jesajabuches-1981), p. 271; Gen 24:43; Exod 2:8; Ps 68:26; Song 1:3; Song 6:8; [`bloch-authorship-peshitta-1919`](../bibliography.md#bloch-authorship-peshitta-1919), pp. 218–219; [`chen-peshitta-isaiah-2020`](../bibliography.md#chen-peshitta-isaiah-2020), pp. 104–105 |
-| \\(P_{13}\\) | 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text | textual | critical scholarship, consensus | Isa 7:14; Isa 7:14; [`jull-radiocarbon-dating-scrolls-1995`](../bibliography.md#jull-radiocarbon-dating-scrolls-1995), pp. 14, 19 |
-| \\(P_{14}\\) | The split among the ancient versions shows עַלְמָה does not denote virginity | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993); [`chilton-isaiah-targum-1987`](../bibliography.md#chilton-isaiah-targum-1987) |
-| \\(P_{15}\\) | The Greek Isaiah was translated by Jews before the coming of Christ | historical | Christian, typological, consensus | [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.1; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §71; [`chrysostom-homilies-matthew-390`](../bibliography.md#chrysostom-homilies-matthew-390), §5; [`eusebius-demonstratio-evangelica-315`](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483 |
-| \\(P_{16}\\) | In the Greek of the Septuagint, παρθένος means a virgin | linguistic | Christian, historical-grammatical, disputed | [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472 |
-| \\(P_{17}\\) | In the Septuagint's day, παρθένος meant 'young woman'; not yet 'virgin' | linguistic | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013) |
-| \\(P_{18}\\) | In early Greek, παρθένος meant a young woman, with or without virginity | linguistic | Christian, historical-grammatical, well supported | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 482; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`bauer-danker-lexicon-2000`](../bibliography.md#bauer-danker-lexicon-2000), p. 777; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`walton-whats-in-a-name-1987`](../bibliography.md#walton-whats-in-a-name-1987), p. 293; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 112 |
-| \\(P_{19}\\) | The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2) | textual | critical scholarship, consensus | Gen 34:2-3; Gen 34:3; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113 |
-| \\(P_{20}\\) | Elsewhere in the Greek Isaiah, παρθένος renders בְּתוּלָה ※ | textual | critical scholarship, consensus | Isa 23:4; Isa 23:4; Isa 37:22; Isa 37:22; Isa 47:1; Isa 47:1; Isa 62:5; Isa 62:5 |
-| \\(P_{21}\\) | The high priest of the Greek Leviticus marries a παρθένος, not a widow or a harlot ※ | textual | critical scholarship, consensus | Lev 21:13-14; Lev 21:13-14 |
-| \\(P_{22}\\) | In the Greek Deuteronomy, a bride without τὰ παρθένια dies for playing the harlot | textual | critical scholarship, consensus | Deut 22:13-21; Deut 22:13-21; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια |
-| \\(P_{23}\\) | In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin' | linguistic | Christian, historical-grammatical, disputed | [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [`walton-whats-in-a-name-1987`](../bibliography.md#walton-whats-in-a-name-1987), p. 292; [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003) |
-| \\(P_{24}\\) | In the Greek Exodus, the seduced παρθένος is owed 'the bride-price of virgins' ※ | textual | critical scholarship, consensus | Exod 22:15-16; Exod 22:15-16 |
-| \\(P_{25}\\) | Genesis 34 tells Shechem's act in the words of the laws of the violated virgin ※ | textual | critical scholarship, consensus | Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; Exod 22:15-16; Exod 22:15-16 |
-| \\(P_{26}\\) | At Genesis 34:3 the Greek names Dinah a παρθένος as the law names the seduced virgin | linguistic | Christian, historical-grammatical, plausible | Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [`frymer-kensky-virginity-1998`](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113 |
-| \\(P_{27}\\) | Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος ※ | textual | critical scholarship, consensus | Matt 1:23; Isa 7:14 |
-| \\(P_{28}\\) | Matthew says Mary conceived before she and Joseph came together ※ | textual | critical scholarship, consensus | Matt 1:18; Matt 1:25 |
-| \\(P_{29}\\) | In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος means 'virgin' | linguistic | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.ix; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483 |
-| \\(P_{30}\\) | Trypho rejects the Septuagint's 'the virgin' and reads 'the young woman' | historical | Christian, typological, consensus | [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §67; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §71 |
-| \\(P_{31}\\) | Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin | interpretive | Christian, typological, disputed | [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.1; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 115–116; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67 |
-| \\(P_{32}\\) | The Septuagint puts the conception in the future: 'she shall be with child' | textual | critical scholarship, consensus | Isa 7:14; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67 |
-| \\(P_{33}\\) | הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant | linguistic | Christian, historical-grammatical, well supported | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 471; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), pp. 115–116 |
-| \\(P_{34}\\) | The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given | interpretive | Christian, historical-grammatical, well supported | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), pp. 116–117 |
-| \\(P_{35}\\) | The pregnancy Isaiah 7:14 announces is an ordinary conception | interpretive | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474 |
-| \\(P_{36}\\) | The עַלְמָה of Isaiah 7:14 is not a virgin | interpretive | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468 |
-| \\(P_{37}\\) | What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes | linguistic | Christian, historical-grammatical, disputed | [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152 |
-| \\(P_{38}\\) | In the other clear עַלְמָה passages Wegner lists, the women are virgins | linguistic | Christian, historical-grammatical, plausible | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 8; Gen 24:43; Song 6:8 |
-| \\(P_{39}\\) | The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 | interpretive | Christian, typological, disputed | [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`tertullian-answer-to-the-jews-200`](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [`eusebius-demonstratio-evangelica-315`](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [`cyril-jerusalem-catechetical-lectures-350`](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [`chrysostom-homilies-matthew-390`](../bibliography.md#chrysostom-homilies-matthew-390), §5; [`jerome-commentary-isaiah-410`](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [`cyril-alexandria-commentary-isaiah`](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [`theodoret-commentary-isaiah`](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11 |
-| \\(P_{40}\\) | An ordinary conception is nothing extraordinary: it happens to all women | interpretive | Christian, typological, consensus | [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 64 |
-| \\(P_{41}\\) | Signs elsewhere in Isaiah are ordinary events: his children, 8:18 | textual | critical scholarship, consensus | Isa 8:18; Isa 20:3; Isa 37:30; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 64; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 470 |
-| \\(P_{42}\\) | Isaiah 7:16 dates the deliverance by a child's infancy | textual | critical scholarship, consensus | Isa 7:16; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 477; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 14 |
-| \\(P_{43}\\) | Matthew 1:23 quotes Isaiah 7:14 | textual | critical scholarship, consensus | [`na28-2012`](../bibliography.md#na28-2012), app. Matt 1:23; [`ubs5-2014`](../bibliography.md#ubs5-2014) |
-| \\(P_{44}\\) | Matthew's quotation intends the virgin conception as fulfilment | interpretive | Christian, historical-grammatical, well supported | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
-| \\(P_{45}\\) | Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology | textual | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–490; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), pp. 122–123; Isa 2:1-4; Isa 11:1-12:6 |
-| \\(P_{46}\\) | An oracle's meaning in the finished book is set by its literary placement | interpretive | Christian, historical-grammatical, disputed | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486 |
-| \\(P_{47}\\) | Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation | interpretive | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; [`chilton-isaiah-targum-1987`](../bibliography.md#chilton-isaiah-targum-1987) |
-| \\(P_{48}\\) | Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14 | textual | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; Isa 8:7-8; Isa 9:8-11; Isa 10:5 |
-| \\(P_{49}\\) | Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth | interpretive | Christian, historical-grammatical, disputed | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493 |
-| \\(P_{50}\\) | Genesis 3:15 says that 'her seed' will strike the serpent's head | textual | critical scholarship, consensus | Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
-| \\(P_{51}\\) | Genesis 3:15 is the protoevangelium, the first promise of a redeemer | interpretive | Christian, historical-grammatical, disputed | [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318 |
-| \\(P_{52}\\) | Hebrew זֶרַע is ordinarily reckoned through the father | linguistic | Christian, historical-grammatical, well supported | [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 299; [`calvin-institutes-1960`](../bibliography.md#calvin-institutes-1960), §II.13.3; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15 |
-| \\(P_{53}\\) | The matrilineal wording of Genesis 3:15 marks a birth with no human father | interpretive | Christian, typological, disputed | [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15 |
-| \\(P_{54}\\) | The wording 'her seed' itself signifies a birth with no human father | interpretive | Christian, typological, disputed | [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999) |
-| \\(P_{55}\\) | The wording 'her seed' fits a birth with no human father, as fulfilled in Christ | interpretive | Christian, historical-grammatical, disputed | [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 |
-| \\(P_{56}\\) | 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person | interpretive | Christian, historical-grammatical, disputed | [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146 |
-| \\(P_{57}\\) | The seed is called the woman's because the serpent deceived the woman | interpretive | Christian, historical-grammatical, well supported | [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 165; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 |
-| \\(P_{58}\\) | Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's | textual | critical scholarship, consensus | Gen 16:10; Gen 24:60; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300 |
-| \\(P_{59}\\) | The Greek of Genesis 3:15 calls the woman's seed 'he', though σπέρμα is neuter | textual | critical scholarship, consensus | Gen 3:15; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 141 |
-| \\(P_{60}\\) | The Greek translator of Genesis read the woman's seed at 3:15 as one person | interpretive | Christian, historical-grammatical, disputed | [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300; [`philo-allegorical-interpretation-40`](../bibliography.md#philo-allegorical-interpretation-40), §III.188 |
-| \\(P_{61}\\) | Revelation calls the devil 'that old serpent' (12:9, 20:2) ※ | textual | critical scholarship, consensus | Rev 12:9; Rev 20:2 |
-| \\(P_{62}\\) | The Son came to destroy the devil and his works, through death ※ | textual | critical scholarship, consensus | Heb 2:14; 1 John 3:8 |
-| \\(P_{63}\\) | Paul says Christ died, was buried, and rose the third day ※ | textual | critical scholarship, consensus | 1 Cor 15:3-4 |
-| \\(P_{64}\\) | Paul says God sent his Son 'made of a woman' (Galatians 4:4) ※ | textual | critical scholarship, consensus | Gal 4:4 |
-| \\(P_{65}\\) | In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent's head | interpretive | Christian, typological, disputed | [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261 |
-| \\(P_{66}\\) | The seed in whom Genesis 3:15 is fulfilled was of the woman alone | interpretive | Christian, typological, disputed | [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 |
-| \\(P_{67}\\) | Genesis 3:14–15 is a curse on the serpent, in the form of a punishment oracle | interpretive | critical scholarship, well supported | [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 260; Gen 3:14 |
-| \\(P_{68}\\) | At Genesis 3:15 'her seed' is a line of descendants, and not an individual | linguistic | critical scholarship, disputed | [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), p. 363; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32 |
-| \\(P_{69}\\) | Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant | textual | critical scholarship, consensus | [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–145; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168 |
-| \\(P_{70}\\) | At Genesis 3:15b the striker is singular 'he', against the serpent's own head | textual | critical scholarship, consensus | Gen 3:15; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 146; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101 |
-| \\(P_{71}\\) | In Genesis 3 the serpent speaks, and knows and twists God's command | textual | critical scholarship, consensus | Gen 2:17; Gen 3:1-5; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 146 |
-| \\(P_{72}\\) | God sets the enmity himself: 'I will put enmity' (3:15) | textual | critical scholarship, consensus | Gen 3:15; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 203 |
-| \\(P_{73}\\) | The serpent of Genesis 3 is the instrument of an evil power | interpretive | Christian, historical-grammatical, disputed | [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261 |
-| \\(P_{74}\\) | The Greek of Joel 1:8 calls a young widow a παρθένος (Miller) | textual | critical scholarship, disputed | [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003) |
-| \\(P_{75}\\) | In the Septuagint, παρθένος did not by itself connote virginity (Miller) | linguistic | critical scholarship, disputed | [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113 |
-| \\(P_{76}\\) | At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller) | linguistic | critical scholarship, well supported | [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535 |
-| \\(P_{77}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [`keil-delitzsch-minor-prophets-1949`](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
-| \\(P_{78}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
-| \\(P_{79}\\) | Mary conceived Jesus while a virgin | historical | Christian, historical-grammatical, disputed | Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
-| \\(P_{80}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, historical-grammatical, plausible | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
-| \\(P_{81}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{82}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{83}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, historical-grammatical, well supported | [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
-| \\(P_{84}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [`young-immanuel-prophecy-1953`](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 122 |
-| \\(P_{85}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, historical-grammatical, well supported | [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
-| \\(P_{86}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
-| \\(P_{87}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, historical-grammatical, well supported | [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
-| \\(P_{88}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{89}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993) |
-| \\(P_{90}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{91}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
-| \\(P_{92}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.x |
-| \\(P_{93}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020) |
-| \\(P_{94}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, historical-grammatical, disputed | [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| <a id="claim-1"></a>\\(P_{1}\\) | Isaiah 7:14 is a Messianic prediction of a virgin birth | interpretive | Christian, typological, disputed | [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 123; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §66; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Origen](../bibliography.md#origen-against-celsus-248), §I.35 |
+| <a id="claim-2"></a>\\(P_{2}\\) | עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman | linguistic | Christian, typological, disputed | [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Isa 7:14; [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 125; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [Jerome](../bibliography.md#jerome-against-jovinianus-393), §I.32 |
+| <a id="claim-3"></a>\\(P_{3}\\) | The semantic range of עַלְמָה does not exclude 'virgin' at Isaiah 7:14 | linguistic | Christian, hist.-gramm., well supported | [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Young 1953](../bibliography.md#young-immanuel-prophecy-1953), pp. 120–124 |
+| <a id="claim-4"></a>\\(P_{4}\\) | עַלְמָה denotes a young woman of marriageable age | linguistic | critical scholarship, consensus | [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020); [Wegner 2011](../bibliography.md#wegner-virgin-births-2011) |
+| <a id="claim-5"></a>\\(P_{5}\\) | Being a virgin does not exclude a woman from the denotation of עַלְמָה | linguistic | critical scholarship, consensus | Gen 24:43; Gen 24:16; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020) |
+| <a id="claim-6"></a>\\(P_{6}\\) | Mary at the conception was a betrothed young woman of marriageable age | historical | critical scholarship, consensus | Matt 1:18; Luke 1:27; [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| <a id="claim-7"></a>\\(P_{7}\\) | Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes | interpretive | Christian, hist.-gramm., well supported | [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020); [Cyril of Alexandria](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [Cyril of Jerusalem](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.21; [Eusebius of Caesarea](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [John Chrysostom](../bibliography.md#chrysostom-homilies-matthew-390), §5 |
+| <a id="claim-8"></a>\\(P_{8}\\) | Matthew's fulfilment claim requires that עַלְמָה itself denote virginity | interpretive | critical scholarship, disputed | [Brown 1993](../bibliography.md#brown-birth-messiah-1993) |
+| <a id="claim-9"></a>\\(P_{9}\\) | The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος | textual | critical scholarship, consensus | [Aland et al. 2012](../bibliography.md#na28-2012), app. Matt 1:23; [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| <a id="claim-10"></a>\\(P_{10}\\) | Targum Jonathan renders עַלְמָה at Isaiah 7:14 as עוּלֵימְתָא, 'young woman' | textual | critical scholarship, consensus | [Chilton 1987](../bibliography.md#chilton-isaiah-targum-1987), ad loc. Isa 7:14; Isa 7:14 |
+| <a id="claim-11"></a>\\(P_{11}\\) | Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις | textual | critical scholarship, consensus | [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020); [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.1; [Eusebius of Caesarea](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1 |
+| <a id="claim-12"></a>\\(P_{12}\\) | The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, 'virgin' | textual | critical scholarship, consensus | Isa 7:14; [van der Kooij 1981](../bibliography.md#van-der-kooij-textzeugen-jesajabuches-1981), p. 271; Gen 24:43; Exod 2:8; Ps 68:26; Song 1:3; Song 6:8; [Bloch 1919](../bibliography.md#bloch-authorship-peshitta-1919), pp. 218–219; [Chen 2020](../bibliography.md#chen-peshitta-isaiah-2020), pp. 104–105 |
+| <a id="claim-13"></a>\\(P_{13}\\) | 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text | textual | critical scholarship, consensus | Isa 7:14; Isa 7:14; [Jull et al. 1995](../bibliography.md#jull-radiocarbon-dating-scrolls-1995), pp. 14, 19 |
+| <a id="claim-14"></a>\\(P_{14}\\) | The split among the ancient versions shows עַלְמָה does not denote virginity | interpretive | critical scholarship, well supported | [Brown 1993](../bibliography.md#brown-birth-messiah-1993); [Chilton 1987](../bibliography.md#chilton-isaiah-targum-1987) |
+| <a id="claim-15"></a>\\(P_{15}\\) | The Greek Isaiah was translated by Jews before the coming of Christ | historical | Christian, typological, consensus | [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.1; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §71; [John Chrysostom](../bibliography.md#chrysostom-homilies-matthew-390), §5; [Eusebius of Caesarea](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483 |
+| <a id="claim-16"></a>\\(P_{16}\\) | In the Greek of the Septuagint, παρθένος means a virgin | linguistic | Christian, hist.-gramm., disputed | [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 472 |
+| <a id="claim-17"></a>\\(P_{17}\\) | In the Septuagint's day, παρθένος meant 'young woman'; not yet 'virgin' | linguistic | Christian, hist.-gramm., disputed | [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [Meade 2013](../bibliography.md#meade-ancient-versions-comment-2013) |
+| <a id="claim-18"></a>\\(P_{18}\\) | In early Greek, παρθένος meant a young woman, with or without virginity | linguistic | Christian, hist.-gramm., well supported | [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 482; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [Bauer 2000](../bibliography.md#bauer-danker-lexicon-2000), p. 777; [Liddell and Scott 1940](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [Walton 1987](../bibliography.md#walton-whats-in-a-name-1987), p. 293; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 112 |
+| <a id="claim-19"></a>\\(P_{19}\\) | The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2) | textual | critical scholarship, consensus | Gen 34:2-3; Gen 34:3; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113 |
+| <a id="claim-20"></a>\\(P_{20}\\) | Elsewhere in the Greek Isaiah, παρθένος renders בְּתוּלָה ※ | textual | critical scholarship, consensus | Isa 23:4; Isa 23:4; Isa 37:22; Isa 37:22; Isa 47:1; Isa 47:1; Isa 62:5; Isa 62:5 |
+| <a id="claim-21"></a>\\(P_{21}\\) | The high priest of the Greek Leviticus marries a παρθένος, not a widow or a harlot ※ | textual | critical scholarship, consensus | Lev 21:13-14; Lev 21:13-14 |
+| <a id="claim-22"></a>\\(P_{22}\\) | In the Greek Deuteronomy, a bride without τὰ παρθένια dies for playing the harlot | textual | critical scholarship, consensus | Deut 22:13-21; Deut 22:13-21; [Liddell and Scott 1940](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [Muraoka 2009](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [Lust et al. 2003](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια |
+| <a id="claim-23"></a>\\(P_{23}\\) | In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin' | linguistic | Christian, hist.-gramm., disputed | [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [Walton 1987](../bibliography.md#walton-whats-in-a-name-1987), p. 292; [Miller 2003](../bibliography.md#miller-born-divine-2003) |
+| <a id="claim-24"></a>\\(P_{24}\\) | In the Greek Exodus, the seduced παρθένος is owed 'the bride-price of virgins' ※ | textual | critical scholarship, consensus | Exod 22:15-16; Exod 22:15-16 |
+| <a id="claim-25"></a>\\(P_{25}\\) | Genesis 34 tells Shechem's act in the words of the laws of the violated virgin ※ | textual | critical scholarship, consensus | Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; Exod 22:15-16; Exod 22:15-16 |
+| <a id="claim-26"></a>\\(P_{26}\\) | At Genesis 34:3 the Greek names Dinah a παρθένος as the law names the seduced virgin | linguistic | Christian, hist.-gramm., plausible | Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [Frymer-Kensky 1998](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113 |
+| <a id="claim-27"></a>\\(P_{27}\\) | Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος ※ | textual | critical scholarship, consensus | Matt 1:23; Isa 7:14 |
+| <a id="claim-28"></a>\\(P_{28}\\) | Matthew says Mary conceived before she and Joseph came together ※ | textual | critical scholarship, consensus | Matt 1:18; Matt 1:25 |
+| <a id="claim-29"></a>\\(P_{29}\\) | In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος means 'virgin' | linguistic | Reformed Protestant, disputed | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.ix; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483 |
+| <a id="claim-30"></a>\\(P_{30}\\) | Trypho rejects the Septuagint's 'the virgin' and reads 'the young woman' | historical | Christian, typological, consensus | [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §67; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §71 |
+| <a id="claim-31"></a>\\(P_{31}\\) | Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin | interpretive | Christian, typological, disputed | [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.1; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 115–116; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67 |
+| <a id="claim-32"></a>\\(P_{32}\\) | The Septuagint puts the conception in the future: 'she shall be with child' | textual | critical scholarship, consensus | Isa 7:14; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67 |
+| <a id="claim-33"></a>\\(P_{33}\\) | הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant | linguistic | Christian, hist.-gramm., well supported | [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 471; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474; [Young 1953](../bibliography.md#young-immanuel-prophecy-1953), pp. 115–116 |
+| <a id="claim-34"></a>\\(P_{34}\\) | The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given | interpretive | Christian, hist.-gramm., well supported | [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [Young 1953](../bibliography.md#young-immanuel-prophecy-1953), pp. 116–117 |
+| <a id="claim-35"></a>\\(P_{35}\\) | The pregnancy Isaiah 7:14 announces is an ordinary conception | interpretive | Christian, hist.-gramm., disputed | [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474 |
+| <a id="claim-36"></a>\\(P_{36}\\) | The עַלְמָה of Isaiah 7:14 is not a virgin | interpretive | Christian, hist.-gramm., disputed | [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 468 |
+| <a id="claim-37"></a>\\(P_{37}\\) | What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes | linguistic | Christian, hist.-gramm., disputed | [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 152 |
+| <a id="claim-38"></a>\\(P_{38}\\) | In the other clear עַלְמָה passages Wegner lists, the women are virgins | linguistic | Christian, hist.-gramm., plausible | [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [Jerome](../bibliography.md#jerome-against-jovinianus-393), §I.32; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 8; Gen 24:43; Song 6:8 |
+| <a id="claim-39"></a>\\(P_{39}\\) | The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 | interpretive | Christian, typological, disputed | [Origen](../bibliography.md#origen-against-celsus-248), §I.35; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §84; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Tertullian](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [Eusebius of Caesarea](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [Cyril of Jerusalem](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [John Chrysostom](../bibliography.md#chrysostom-homilies-matthew-390), §5; [Jerome](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [Cyril of Alexandria](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [Theodoret of Cyrrhus](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11 |
+| <a id="claim-40"></a>\\(P_{40}\\) | An ordinary conception is nothing extraordinary: it happens to all women | interpretive | Christian, typological, consensus | [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §84; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 64 |
+| <a id="claim-41"></a>\\(P_{41}\\) | Signs elsewhere in Isaiah are ordinary events: his children, 8:18 | textual | critical scholarship, consensus | Isa 8:18; Isa 20:3; Isa 37:30; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 64; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 470 |
+| <a id="claim-42"></a>\\(P_{42}\\) | Isaiah 7:16 dates the deliverance by a child's infancy | textual | critical scholarship, consensus | Isa 7:16; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 477; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 14 |
+| <a id="claim-43"></a>\\(P_{43}\\) | Matthew 1:23 quotes Isaiah 7:14 | textual | critical scholarship, consensus | [Aland et al. 2012](../bibliography.md#na28-2012), app. Matt 1:23; [United Bible Societies 2014](../bibliography.md#ubs5-2014) |
+| <a id="claim-44"></a>\\(P_{44}\\) | Matthew's quotation intends the virgin conception as fulfilment | interpretive | Christian, hist.-gramm., well supported | [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
+| <a id="claim-45"></a>\\(P_{45}\\) | Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology | textual | Christian, hist.-gramm., well supported | [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–490; [Motyer 1970](../bibliography.md#motyer-context-content-1970), pp. 122–123; Isa 2:1-4; Isa 11:1-12:6 |
+| <a id="claim-46"></a>\\(P_{46}\\) | An oracle's meaning in the finished book is set by its literary placement | interpretive | Christian, hist.-gramm., disputed | [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486 |
+| <a id="claim-47"></a>\\(P_{47}\\) | Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation | interpretive | Christian, hist.-gramm., well supported | [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; [Chilton 1987](../bibliography.md#chilton-isaiah-targum-1987) |
+| <a id="claim-48"></a>\\(P_{48}\\) | Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14 | textual | Christian, hist.-gramm., well supported | [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489; Isa 8:7-8; Isa 9:8-11; Isa 10:5 |
+| <a id="claim-49"></a>\\(P_{49}\\) | Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth | interpretive | Christian, hist.-gramm., disputed | [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493 |
+| <a id="claim-50"></a>\\(P_{50}\\) | Genesis 3:15 says that 'her seed' will strike the serpent's head | textual | critical scholarship, consensus | Gen 3:15; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Gen 3:15 |
+| <a id="claim-51"></a>\\(P_{51}\\) | Genesis 3:15 is the protoevangelium, the first promise of a redeemer | interpretive | Christian, hist.-gramm., disputed | [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318 |
+| <a id="claim-52"></a>\\(P_{52}\\) | Hebrew זֶרַע is ordinarily reckoned through the father | linguistic | Christian, hist.-gramm., well supported | [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 299; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §II.13.3; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Gen 3:15 |
+| <a id="claim-53"></a>\\(P_{53}\\) | The matrilineal wording of Genesis 3:15 marks a birth with no human father | interpretive | Christian, typological, disputed | [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15 |
+| <a id="claim-54"></a>\\(P_{54}\\) | The wording 'her seed' itself signifies a birth with no human father | interpretive | Christian, typological, disputed | [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [Akin 1999](../bibliography.md#akin-woman-seed-serpent-1999) |
+| <a id="claim-55"></a>\\(P_{55}\\) | The wording 'her seed' fits a birth with no human father, as fulfilled in Christ | interpretive | Christian, hist.-gramm., disputed | [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 |
+| <a id="claim-56"></a>\\(P_{56}\\) | 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person | interpretive | Christian, hist.-gramm., disputed | [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 145–146 |
+| <a id="claim-57"></a>\\(P_{57}\\) | The seed is called the woman's because the serpent deceived the woman | interpretive | Christian, hist.-gramm., well supported | [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 165; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 |
+| <a id="claim-58"></a>\\(P_{58}\\) | Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's | textual | critical scholarship, consensus | Gen 16:10; Gen 24:60; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), pp. 299–300 |
+| <a id="claim-59"></a>\\(P_{59}\\) | The Greek of Genesis 3:15 calls the woman's seed 'he', though σπέρμα is neuter | textual | critical scholarship, consensus | Gen 3:15; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 141 |
+| <a id="claim-60"></a>\\(P_{60}\\) | The Greek translator of Genesis read the woman's seed at 3:15 as one person | interpretive | Christian, hist.-gramm., disputed | [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 145; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 144; [Martin 1965](../bibliography.md#martin-earliest-messianic-1965); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 300; [Philo of Alexandria](../bibliography.md#philo-allegorical-interpretation-40), §III.188 |
+| <a id="claim-61"></a>\\(P_{61}\\) | Revelation calls the devil 'that old serpent' (12:9, 20:2) ※ | textual | critical scholarship, consensus | Rev 12:9; Rev 20:2 |
+| <a id="claim-62"></a>\\(P_{62}\\) | The Son came to destroy the devil and his works, through death ※ | textual | critical scholarship, consensus | Heb 2:14; 1 John 3:8 |
+| <a id="claim-63"></a>\\(P_{63}\\) | Paul says Christ died, was buried, and rose the third day ※ | textual | critical scholarship, consensus | 1 Cor 15:3-4 |
+| <a id="claim-64"></a>\\(P_{64}\\) | Paul says God sent his Son 'made of a woman' (Galatians 4:4) ※ | textual | critical scholarship, consensus | Gal 4:4 |
+| <a id="claim-65"></a>\\(P_{65}\\) | In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent's head | interpretive | Christian, typological, disputed | [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261 |
+| <a id="claim-66"></a>\\(P_{66}\\) | The seed in whom Genesis 3:15 is fulfilled was of the woman alone | interpretive | Christian, typological, disputed | [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 |
+| <a id="claim-67"></a>\\(P_{67}\\) | Genesis 3:14–15 is a curse on the serpent, in the form of a punishment oracle | interpretive | critical scholarship, well supported | [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), p. 260; Gen 3:14 |
+| <a id="claim-68"></a>\\(P_{68}\\) | At Genesis 3:15 'her seed' is a line of descendants, and not an individual | linguistic | critical scholarship, disputed | [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), p. 363; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32 |
+| <a id="claim-69"></a>\\(P_{69}\\) | Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant | textual | critical scholarship, consensus | [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 144–145; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 168 |
+| <a id="claim-70"></a>\\(P_{70}\\) | At Genesis 3:15b the striker is singular 'he', against the serpent's own head | textual | critical scholarship, consensus | Gen 3:15; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 146; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101 |
+| <a id="claim-71"></a>\\(P_{71}\\) | In Genesis 3 the serpent speaks, and knows and twists God's command | textual | critical scholarship, consensus | Gen 2:17; Gen 3:1-5; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 146 |
+| <a id="claim-72"></a>\\(P_{72}\\) | God sets the enmity himself: 'I will put enmity' (3:15) | textual | critical scholarship, consensus | Gen 3:15; [Woudstra 1971](../bibliography.md#woudstra-recent-translations-1971), p. 203 |
+| <a id="claim-73"></a>\\(P_{73}\\) | The serpent of Genesis 3 is the instrument of an evil power | interpretive | Christian, hist.-gramm., disputed | [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [Woudstra 1971](../bibliography.md#woudstra-recent-translations-1971), p. 197; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), p. 261 |
+| <a id="claim-74"></a>\\(P_{74}\\) | The Greek of Joel 1:8 calls a young widow a παρθένος (Miller) | textual | critical scholarship, disputed | [Miller 2003](../bibliography.md#miller-born-divine-2003) |
+| <a id="claim-75"></a>\\(P_{75}\\) | In the Septuagint, παρθένος did not by itself connote virginity (Miller) | linguistic | critical scholarship, disputed | [Miller 2003](../bibliography.md#miller-born-divine-2003); [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113 |
+| <a id="claim-76"></a>\\(P_{76}\\) | At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller) | linguistic | critical scholarship, well supported | [Miller 2003](../bibliography.md#miller-born-divine-2003); [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483; [Muraoka 2009](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535 |
+| <a id="claim-77"></a>\\(P_{77}\\) | Micah 5:3 names only the woman in labour as bearing the coming ruler | textual | Christian, typological, well supported | Mic 5:2-3; [Keil and Delitzsch 1949](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:3 |
+| <a id="claim-78"></a>\\(P_{78}\\) | Micah's mention of a mother and no father indicates a birth with no human father | interpretive | Roman Catholic, disputed | [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020) |
+| <a id="claim-79"></a>\\(P_{79}\\) | Mary conceived Jesus while a virgin | historical | Christian, hist.-gramm., disputed | Matt 1:18-25; Luke 1:26-38; [Brown 1972](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33 |
+| <a id="claim-80"></a>\\(P_{80}\\) | Matthew and Luke are independent traditions agreeing on the virgin conception | historical | Christian, hist.-gramm., plausible | [Brown 1993](../bibliography.md#brown-birth-messiah-1993), pp. 26–38; [Brown 1972](../bibliography.md#brown-problem-virginal-conception-1972), p. 24; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 71 |
+| <a id="claim-81"></a>\\(P_{81}\\) | Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation | interpretive | critical scholarship, disputed | [Brown 1993](../bibliography.md#brown-birth-messiah-1993) |
+| <a id="claim-82"></a>\\(P_{82}\\) | A sign given for Ahaz's generation is not also a prediction of a virgin birth | interpretive | critical scholarship, disputed | [Brown 1993](../bibliography.md#brown-birth-messiah-1993) |
+| <a id="claim-83"></a>\\(P_{83}\\) | How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question | interpretive | Christian, hist.-gramm., well supported | [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 5–9 |
+| <a id="claim-84"></a>\\(P_{84}\\) | Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz | textual | critical scholarship, consensus | Isa 7:13-14; Isa 7:16; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 12; [Young 1953](../bibliography.md#young-immanuel-prophecy-1953), p. 112; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 122 |
+| <a id="claim-85"></a>\\(P_{85}\\) | Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14 | textual | Christian, hist.-gramm., well supported | [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 124; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 13; Isa 7:16; Isa 8:4 |
+| <a id="claim-86"></a>\\(P_{86}\\) | Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion | textual | critical scholarship, consensus | Mic 5:5-6; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 481 |
+| <a id="claim-87"></a>\\(P_{87}\\) | Micah 5:2 was read messianically in first-century Judaism | historical | Christian, hist.-gramm., well supported | [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 481; [Brown 1972](../bibliography.md#brown-problem-virginal-conception-1972), p. 26; Matt 2:4-6; John 7:42 |
+| <a id="claim-88"></a>\\(P_{88}\\) | Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants | interpretive | critical scholarship, well supported | [Brown 1993](../bibliography.md#brown-birth-messiah-1993) |
+| <a id="claim-89"></a>\\(P_{89}\\) | Micah's silence about a father is an argument from silence and proves nothing | interpretive | critical scholarship, well supported | [Brown 1993](../bibliography.md#brown-birth-messiah-1993) |
+| <a id="claim-90"></a>\\(P_{90}\\) | Papal teaching affirms that Mary conceived while remaining a virgin | theological | Roman Catholic, consensus | [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| <a id="claim-91"></a>\\(P_{91}\\) | Magisterial teaching settles the question | theological | Roman Catholic, disputed | [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020), p. 23 |
+| <a id="claim-92"></a>\\(P_{92}\\) | Scripture is the supreme judge of controversies of religion | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.x |
+| <a id="claim-93"></a>\\(P_{93}\\) | The Messiah must be born of a virgin | interpretive | Christian, typological, disputed | [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020) |
+| <a id="claim-94"></a>\\(P_{94}\\) | Jesus of Nazareth satisfies the virgin-birth criterion | interpretive | Christian, hist.-gramm., disputed | [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23 |
 
 </div>
 
@@ -2494,10 +2496,10 @@ others.
 Isaianic strand: from the predictive reading, the lexical premise and
 Matthew's intent, the criterion follows.
 
-<div class="testimony-math">
-\[
-(P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="genesisToCriterion"></a>
@@ -2508,10 +2510,10 @@ man's line is ordinarily counted through the father; and naming the seed as the
 woman's marks a birth with no human father. So the Messiah must be born of a
 virgin.
 
-<div class="testimony-math">
-\[
-(P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="compositionalToCriterion"></a>
@@ -2525,10 +2527,10 @@ The weak joint is the last step. Postell's argument delivers a *miraculous*
 birth; it is `matthewIntendsFulfilment` that says which miracle. A reader who
 grants the composition and stops short of Matthew is entitled to.
 
-<div class="testimony-math">
-\[
-(P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-49}{P_{49}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="parityDefeatsNearTermExclusion"></a>
@@ -2545,10 +2547,10 @@ objection attacks, and it is the stronger of the two: Berry says the near-term
 fulfilment is unclear, while parity says the near-term setting was never the
 right kind of reason.
 
-<div class="testimony-math">
-\[
-(P_{47} \land P_{48}) \rightarrow \lnot P_{82}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-47}{P_{47}} \land \href{#claim-48}{P_{48}}) \rightarrow \lnot \href{#claim-82}{P_{82}}\\) — *would deny:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+
 </div>
 
 <a id="micahToCriterion"></a>
@@ -2557,10 +2559,10 @@ right kind of reason.
 Michean strand: from the maternal-only wording and the inference drawn from
 it, the criterion follows.
 
-<div class="testimony-math">
-\[
-(P_{77} \land P_{78}) \rightarrow P_{93}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-77}{P_{77}} \land \href{#claim-78}{P_{78}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="magisterialToCriterion"></a>
@@ -2569,10 +2571,10 @@ it, the criterion follows.
 Magisterial strand: from papal teaching and the authority granted it, the
 criterion follows. Encoded, but deliberately kept out of `christian`.
 
-<div class="testimony-math">
-\[
-(P_{90} \land P_{91}) \rightarrow P_{93}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-90}{P_{90}} \land \href{#claim-91}{P_{91}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="criticalExclusion"></a>
@@ -2586,10 +2588,10 @@ The earlier encoding of this module simply asserted the denial as a premise of
 `critical`. That was a weaker rival than the critical case actually is, and it
 left nothing for an objection to engage.
 
-<div class="testimony-math">
-\[
-(P_{81} \land P_{82}) \rightarrow \lnot P_{1}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-81}{P_{81}} \land \href{#claim-82}{P_{82}}) \rightarrow \lnot \href{#claim-1}{P_{1}}\\) — *would deny:* Isaiah 7:14 is a Messianic prediction of a virgin birth
+
 </div>
 
 <a id="berryBlocksExclusion"></a>
@@ -2604,10 +2606,10 @@ an unclear fulfilment is still a fulfilment, and Brown would answer that Isaiah
 8:3–4 settles the referent well enough. The step is rated in `berryLine`,
 where it is cited `disputed`.
 
-<div class="testimony-math">
-\[
-P_{83} \rightarrow \lnot P_{82}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{#claim-83}{P_{83}} \rightarrow \lnot \href{#claim-82}{P_{82}}\\) — *would deny:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+
 </div>
 
 <a id="micahParityDefeatsNearTermExclusion"></a>
@@ -2618,10 +2620,10 @@ read messianically, so a near-term Assyrian setting does not exclude a messianic
 sense. The same inference as `parityDefeatsNearTermExclusion`, from a different
 oracle in a different book (Postell 481 n. 72).
 
-<div class="testimony-math">
-\[
-(P_{86} \land P_{87}) \rightarrow \lnot P_{82}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-86}{P_{86}} \land \href{#claim-87}{P_{87}}) \rightarrow \lnot \href{#claim-82}{P_{82}}\\) — *would deny:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+
 </div>
 
 <a id="timetablePassesToMaherShalalHashBaz"></a>
@@ -2638,10 +2640,10 @@ on purpose, as Berry's and Postell's are: the two atoms it joins are what the
 text says, and the inference is what a reader who identifies the two children
 denies, and `motyerLine` rates it `disputed` for that reason.
 
-<div class="testimony-math">
-\[
-(P_{84} \land P_{85}) \rightarrow \lnot P_{81}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-84}{P_{84}} \land \href{#claim-85}{P_{85}}) \rightarrow \lnot \href{#claim-81}{P_{81}}\\) — *would deny:* Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+
 </div>
 
 ##### The referential strand
@@ -2657,10 +2659,10 @@ If virginity is compatible with the denotation of עַלְמָה, and Mary was b
 an עַלְמָה and a virgin, then Mary answers Isaiah's description — without the
 word having to carry the sense.
 
-<div class="testimony-math">
-\[
-(P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-4}{P_{4}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-7}{P_{7}}\\) — *would give:* Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes
+
 </div>
 
 <a id="descriptionFitDefeatsLexicalDemand"></a>
@@ -2669,10 +2671,10 @@ word having to carry the sense.
 ... and if she answers it, the fulfilment claim never needed the lexical
 sense in the first place.
 
-<div class="testimony-math">
-\[
-P_{7} \rightarrow \lnot P_{8}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{#claim-7}{P_{7}} \rightarrow \lnot \href{#claim-8}{P_{8}}\\) — *would deny:* Matthew's fulfilment claim requires that עַלְמָה itself denote virginity
+
 </div>
 
 <a id="lexicalObjection"></a>
@@ -2682,10 +2684,10 @@ The lexical objection in full: עַלְמָה does not denote virginity, Matthew
 claim requires that it does, so the fulfilment claim fails. Stated as the
 objector would state it, so that the reply has something real to answer.
 
-<div class="testimony-math">
-\[
-(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{94}
-\]
+<div class="testimony-derivation">
+
+- \\((\lnot \href{#claim-2}{P_{2}} \land \href{#claim-8}{P_{8}}) \rightarrow \lnot \href{#claim-94}{P_{94}}\\) — *would deny:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 <a id="versionalObjection"></a>
@@ -2694,10 +2696,10 @@ objector would state it, so that the reply has something real to answer.
 The versional route to the lexical premise: the Targum and the Three read
 the broad term, so the narrow sense is not the word's.
 
-<div class="testimony-math">
-\[
-(P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}} \land \href{#claim-14}{P_{14}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\) — *would deny:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 <a id="compatibilityDissolvesDivergence"></a>
@@ -2716,10 +2718,10 @@ Septuagint's influence, or a later Christian hand, Chen finds impossible to
 decide (104–5). The step needs only that the rendering is a faithful one, not
 why it was chosen.
 
-<div class="testimony-math">
-\[
-(P_{5} \land P_{9} \land P_{12}) \rightarrow \lnot P_{14}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-5}{P_{5}} \land \href{#claim-9}{P_{9}} \land \href{#claim-12}{P_{12}}) \rightarrow \lnot \href{#claim-14}{P_{14}}\\) — *would deny:* The split among the ancient versions shows עַלְמָה does not denote virginity
+
 </div>
 
 <a id="toFulfilment"></a>
@@ -2727,10 +2729,10 @@ why it was chosen.
 
 From the criterion and the historical claim, the fulfilment follows.
 
-<div class="testimony-math">
-\[
-(P_{93} \land P_{79}) \rightarrow P_{94}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\) — *would give:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 ##### Wegner's grammatical objection, and the circle Postell finds in it
@@ -2745,10 +2747,10 @@ which link carries its weight, and where that link comes from.
 Wegner's grammatical step: if הָרָה is a predicate adjective, the עַלְמָה of
 the sign is pregnant already, at the moment the sign is given.
 
-<div class="testimony-math">
-\[
-P_{33} \rightarrow P_{34}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+
 </div>
 
 <a id="ordinaryPregnancyExcludesVirginity"></a>
@@ -2762,10 +2764,10 @@ Rydelnik parses הָרָה exactly as Wegner does and reads the same clause as t
 miracle itself — the virgin *is* pregnant — which is available to him precisely
 because the parse leaves this open.
 
-<div class="testimony-math">
-\[
-(P_{34} \land P_{35}) \rightarrow P_{36}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-34}{P_{34}} \land \href{#claim-35}{P_{35}}) \rightarrow \href{#claim-36}{P_{36}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is not a virgin
+
 </div>
 
 <a id="referentYieldsLexicalConclusion"></a>
@@ -2774,10 +2776,10 @@ because the parse leaves this open.
 ... and if what the one clear Isaianic referent turns out to be settles what
 the word denotes, the lexical conclusion follows.
 
-<div class="testimony-math">
-\[
-(P_{36} \land P_{37}) \rightarrow \lnot P_{2}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-36}{P_{36}} \land \href{#claim-37}{P_{37}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\) — *would deny:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 <a id="readingSuppliesOrdinaryPregnancy"></a>
@@ -2792,10 +2794,10 @@ complaint: "because Wegner rejects the messianic interpretation on
 grammatical-historical grounds, he assumes that עַלְמָה cannot mean 'virgin' in
 Isaiah 7:14" (468 n. 22).
 
-<div class="testimony-math">
-\[
-(P_{81} \land \lnot P_{1}) \rightarrow P_{35}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-81}{P_{81}} \land \lnot \href{#claim-1}{P_{1}}) \rightarrow \href{#claim-35}{P_{35}}\\) — *would give:* The pregnancy Isaiah 7:14 announces is an ordinary conception
+
 </div>
 
 <a id="lexicalConclusionTellsAgainstPrediction"></a>
@@ -2814,10 +2816,10 @@ the weaker
 form the loop is evidential rather than deductive, which is the difference
 between a vicious circle and mutual support.
 
-<div class="testimony-math">
-\[
-(\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{1}
-\]
+<div class="testimony-derivation">
+
+- \\((\lnot \href{#claim-2}{P_{2}} \land \href{#claim-8}{P_{8}}) \rightarrow \lnot \href{#claim-1}{P_{1}}\\) — *would deny:* Isaiah 7:14 is a Messianic prediction of a virgin birth
+
 </div>
 
 <a id="usageParityBlocksReferentInference"></a>
@@ -2828,10 +2830,10 @@ denotation, the other clear עַלְמָה passages would settle it in the oppos
 direction, since the women there are virgins. So that principle is not
 available to the objection: it proves too much, and the wrong way.
 
-<div class="testimony-math">
-\[
-P_{38} \rightarrow \lnot P_{37}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{#claim-38}{P_{38}} \rightarrow \lnot \href{#claim-37}{P_{37}}\\) — *would deny:* What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+
 </div>
 
 ##### The fathers' sign argument, and the near-term reply
@@ -2853,10 +2855,10 @@ Wegner counts three parts in 7:14 and more in 7:15–16 (469, 477), but he does
 not grant the first ground and deny the conclusion: he denies the first
 ground.
 
-<div class="testimony-math">
-\[
-(P_{39} \land P_{40}) \rightarrow \lnot P_{35}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-39}{P_{39}} \land \href{#claim-40}{P_{40}}) \rightarrow \lnot \href{#claim-35}{P_{35}}\\) — *would deny:* The pregnancy Isaiah 7:14 announces is an ordinary conception
+
 </div>
 
 <a id="ordinarySignsAnswerTheDemand"></a>
@@ -2866,10 +2868,10 @@ ground.
 this one is dated by a child's infancy, so its point is its timing and it need
 not be extraordinary.
 
-<div class="testimony-math">
-\[
-(P_{41} \land P_{42}) \rightarrow \lnot P_{39}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}}) \rightarrow \lnot \href{#claim-39}{P_{39}}\\) — *would deny:* The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11
+
 </div>
 
 ##### The Septuagint, and what its word meant
@@ -2884,10 +2886,10 @@ questions apart: what the translator wrote, and what the word he wrote meant.
 **The Septuagint as a witness.** A Jewish translator, before Christ, chose
 for the woman of 7:14 a word that means a virgin; so he read her as one.
 
-<div class="testimony-math">
-\[
-(P_{9} \land P_{15} \land P_{16}) \rightarrow P_{31}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-9}{P_{9}} \land \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}) \rightarrow \href{#claim-31}{P_{31}}\\) — *would give:* Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin
+
 </div>
 
 <a id="dinahShowsTheOlderSense"></a>
@@ -2899,10 +2901,10 @@ at 34:3, and the noun there describes her as she then was, no longer a virgin;
 so in the Septuagint's day the word meant "young woman", and the sense "virgin"
 came later.
 
-<div class="testimony-math">
-\[
-(P_{18} \land P_{19} \land P_{76}) \rightarrow P_{17}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-18}{P_{18}} \land \href{#claim-19}{P_{19}} \land \href{#claim-76}{P_{76}}) \rightarrow \href{#claim-17}{P_{17}}\\) — *would give:* In the Septuagint's day, παρθένος meant 'young woman'; not yet 'virgin'
+
 </div>
 
 <a id="usageShowsTheVirginSense"></a>
@@ -2914,10 +2916,10 @@ woman" and the Three writing νεᾶνις. With it the library's own addition: 
 Greek Isaiah's παρθένος renders בְּתוּלָה wherever else it occurs. So the word
 meant a virgin.
 
-<div class="testimony-math">
-\[
-(P_{20} \land P_{11} \land P_{30}) \rightarrow P_{16}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-20}{P_{20}} \land \href{#claim-11}{P_{11}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-16}{P_{16}}\\) — *would give:* In the Greek of the Septuagint, παρθένος means a virgin
+
 </div>
 
 <a id="translatorsReadingFixesTheWord"></a>
@@ -2960,10 +2962,10 @@ Genesis 34:3 is. That is also how this argument's referential strand reads the
 versions
 (`compatibilityDissolvesDivergence`).
 
-<div class="testimony-math">
-\[
-P_{31} \rightarrow P_{2}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{#claim-31}{P_{31}} \rightarrow \href{#claim-2}{P_{2}}\\) — *would give:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 ##### Genesis 3:15, and what "her seed" says of a father
@@ -2981,10 +2983,10 @@ and Keil grant.
 first promise of a redeemer, and a man's seed is ordinarily reckoned through
 him; so the wording itself signifies a birth with no human father.
 
-<div class="testimony-math">
-\[
-(P_{50} \land P_{51} \land P_{52}) \rightarrow P_{54}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}}) \rightarrow \href{#claim-54}{P_{54}}\\) — *would give:* The wording 'her seed' itself signifies a birth with no human father
+
 </div>
 
 <a id="posterityExplainsTheWording"></a>
@@ -2994,10 +2996,10 @@ him; so the wording itself signifies a birth with no human father.
 and the seed is named hers because the serpent deceived her; so the wording does
 not itself signify a birth with no human father.
 
-<div class="testimony-math">
-\[
-(P_{50} \land P_{56} \land P_{57}) \rightarrow \lnot P_{54}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-50}{P_{50}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\) — *would deny:* The wording 'her seed' itself signifies a birth with no human father
+
 </div>
 
 <a id="ordinaryBirthsAnswerTheWording"></a>
@@ -3007,10 +3009,10 @@ not itself signify a birth with no human father.
 so the woman's seed at 3:15 does not by itself signify a birth with no human
 father.
 
-<div class="testimony-math">
-\[
-(P_{50} \land P_{58}) \rightarrow \lnot P_{54}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-50}{P_{50}} \land \href{#claim-58}{P_{58}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\) — *would deny:* The wording 'her seed' itself signifies a birth with no human father
+
 </div>
 
 <a id="heReadsOneDescendant"></a>
@@ -3019,10 +3021,10 @@ father.
 **The Greek's "he".** The Greek refers to the neuter seed with a masculine
 pronoun; so its translator read the seed as one person.
 
-<div class="testimony-math">
-\[
-P_{59} \rightarrow P_{60}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{#claim-59}{P_{59}} \rightarrow \href{#claim-60}{P_{60}}\\) — *would give:* The Greek translator of Genesis read the woman's seed at 3:15 as one person
+
 </div>
 
 #### The lines of reason
@@ -3044,18 +3046,16 @@ in common (Mary's conception, the agreement of the two narratives) is passed to
 Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
 `almahMeansVirgin`, and the whole lexical dispute is about that one ground.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{9} \\
-\text{(4)} \quad &amp; P_{43} \\
-\text{(5)} \quad &amp; P_{44} \\
-\text{(6)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (2) \\(\href{#claim-2}{P_{2}}\\) — עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+- (3) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (4) \\(\href{#claim-43}{P_{43}}\\) — Matthew 1:23 quotes Isaiah 7:14
+- (5) \\(\href{#claim-44}{P_{44}}\\) — Matthew's quotation intends the virgin conception as fulfilment
+- (6) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\)
+- \\(\vdash\\) \\(\href{#claim-93}{P_{93}}\\) — *at issue:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="protoevangeliumLine"></a>
@@ -3067,17 +3067,15 @@ seed as the woman's marks a birth with no human father. That claim is its hinge
 (`seedOfTheWomanImpliesNoHumanFather`), and `Results.Genesis` says what it can
 bear, read either way.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{51} \\
-\text{(3)} \quad &amp; P_{52} \\
-\text{(4)} \quad &amp; P_{53} \\
-\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (3) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (4) \\(\href{#claim-53}{P_{53}}\\) — The matrilineal wording of Genesis 3:15 marks a birth with no human father
+- (5) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\)
+- \\(\vdash\\) \\(\href{#claim-93}{P_{93}}\\) — *at issue:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="micheanLine"></a>
@@ -3087,15 +3085,13 @@ bear, read either way.
 inference drawn from it. Its hinge is an argument from silence, and the rival
 says so.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{77} \\
-\text{(2)} \quad &amp; P_{78} \\
-\text{(3)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-77}{P_{77}}\\) — Micah 5:3 names only the woman in labour as bearing the coming ruler
+- (2) \\(\href{#claim-78}{P_{78}}\\) — Micah's mention of a mother and no father indicates a birth with no human father
+- (3) \\((\href{#claim-77}{P_{77}} \land \href{#claim-78}{P_{78}}) \rightarrow \href{#claim-93}{P_{93}}\\)
+- \\(\vdash\\) \\(\href{#claim-93}{P_{93}}\\) — *at issue:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="compositionalLine"></a>
@@ -3105,16 +3101,14 @@ says so.
 framed unit, the principle that placement governs meaning, and the future birth
 that follows. Its hinge is `compositionGovernsMeaning`.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{45} \\
-\text{(2)} \quad &amp; P_{46} \\
-\text{(3)} \quad &amp; P_{49} \\
-\text{(4)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-45}{P_{45}}\\) — Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology
+- (2) \\(\href{#claim-46}{P_{46}}\\) — An oracle's meaning in the finished book is set by its literary placement
+- (3) \\(\href{#claim-49}{P_{49}}\\) — Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth
+- (4) \\((\href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-49}{P_{49}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\)
+- \\(\vdash\\) \\(\href{#claim-93}{P_{93}}\\) — *at issue:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="magisterialLine"></a>
@@ -3128,15 +3122,13 @@ rather than folding it into a package is what lets
 `magisterial_authority_is_load_bearing` ask what the route is worth on its
 own.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{90} \\
-\text{(2)} \quad &amp; P_{91} \\
-\text{(3)} \quad &amp; (P_{90} \land P_{91}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-90}{P_{90}}\\) — Papal teaching affirms that Mary conceived while remaining a virgin
+- (2) \\(\href{#claim-91}{P_{91}}\\) — Magisterial teaching settles the question
+- (3) \\((\href{#claim-90}{P_{90}} \land \href{#claim-91}{P_{91}}) \rightarrow \href{#claim-93}{P_{93}}\\)
+- \\(\vdash\\) \\(\href{#claim-93}{P_{93}}\\) — *at issue:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="referentialLine"></a>
@@ -3154,18 +3146,16 @@ means, not which word Isaiah wrote: 1QIsaᵃ, copied before Christ, has the
 Masoretic Text's עַלְמָה. If the Hebrew were in doubt the dispute would not be
 about the sense alone, and the reply would have more to answer.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{4} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{79} \\
-\text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7} \\[4pt]
-\vdash \quad &amp; P_{7}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-4}{P_{4}}\\) — עַלְמָה denotes a young woman of marriageable age
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Being a virgin does not exclude a woman from the denotation of עַלְמָה
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Mary at the conception was a betrothed young woman of marriageable age
+- (4) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (5) \\(\href{#claim-13}{P_{13}}\\) — 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text
+- (6) \\((\href{#claim-4}{P_{4}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-7}{P_{7}}\\)
+- \\(\vdash\\) \\(\href{#claim-7}{P_{7}}\\) — *at issue:* Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes
+
 </div>
 
 <a id="versionalLine"></a>
@@ -3176,18 +3166,16 @@ and the Three read the broad term, Qumran settles the Hebrew, and Matthew's
 claim is taken to need the narrow sense — so the word does not denote
 virginity.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{10} \\
-\text{(2)} \quad &amp; P_{11} \\
-\text{(3)} \quad &amp; P_{13} \\
-\text{(4)} \quad &amp; P_{14} \\
-\text{(5)} \quad &amp; P_{8} \\
-\text{(6)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\[4pt]
-\vdash \quad &amp; \lnot P_{2}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-10}{P_{10}}\\) — Targum Jonathan renders עַלְמָה at Isaiah 7:14 as עוּלֵימְתָא, 'young woman'
+- (2) \\(\href{#claim-11}{P_{11}}\\) — Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις
+- (3) \\(\href{#claim-13}{P_{13}}\\) — 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text
+- (4) \\(\href{#claim-14}{P_{14}}\\) — The split among the ancient versions shows עַלְמָה does not denote virginity
+- (5) \\(\href{#claim-8}{P_{8}}\\) — Matthew's fulfilment claim requires that עַלְמָה itself denote virginity
+- (6) \\((\href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}} \land \href{#claim-14}{P_{14}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-2}{P_{2}}\\) — *at issue, the denial of:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 <a id="wegnerLine"></a>
@@ -3207,17 +3195,15 @@ Wegner's view. He holds a prophetic pattern, on which Matthew's use of the
 verse survives the lexical finding, so the objection stops at the lexical
 conclusion rather than running on to the fulfilment claim.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{35} \\
-\text{(4)} \quad &amp; P_{37} \\
-\text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\[4pt]
-\vdash \quad &amp; P_{34}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-35}{P_{35}}\\) — The pregnancy Isaiah 7:14 announces is an ordinary conception
+- (4) \\(\href{#claim-37}{P_{37}}\\) — What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+- (5) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{#claim-34}{P_{34}}\\) — *at issue:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+
 </div>
 
 <a id="wegnerClosingSteps"></a>
@@ -3228,13 +3214,11 @@ pregnancy excludes virginity, and the referent settles the word. Passed to
 `caseOf` as closing steps, so that a variant can change the grounds without
 retyping them.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; (P_{34} \land P_{35}) \rightarrow P_{36} \\
-\text{(2)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{2}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\((\href{#claim-34}{P_{34}} \land \href{#claim-35}{P_{35}}) \rightarrow \href{#claim-36}{P_{36}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is not a virgin
+- (2) \\((\href{#claim-36}{P_{36}} \land \href{#claim-37}{P_{37}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\) — *would deny:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 <a id="signLine"></a>
@@ -3251,15 +3235,13 @@ holds the pregnancy ordinary. The rival denies the first ground instead, and the
 grounds are rated separately. It is not rated higher, because the step reads the
 conception as the whole of the sign.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{39} \\
-\text{(2)} \quad &amp; P_{40} \\
-\text{(3)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{35} \\[4pt]
-\vdash \quad &amp; \lnot P_{35}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-39}{P_{39}}\\) — The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11
+- (2) \\(\href{#claim-40}{P_{40}}\\) — An ordinary conception is nothing extraordinary: it happens to all women
+- (3) \\((\href{#claim-39}{P_{39}} \land \href{#claim-40}{P_{40}}) \rightarrow \lnot \href{#claim-35}{P_{35}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-35}{P_{35}}\\) — *at issue, the denial of:* The pregnancy Isaiah 7:14 announces is an ordinary conception
+
 </div>
 
 <a id="ordinarySignLine"></a>
@@ -3269,15 +3251,13 @@ conception as the whole of the sign.
 events, and this one is dated by a child's infancy, so it need not be
 extraordinary. Wegner (469–470) and Rhodea (64–65).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{42} \\
-\text{(3)} \quad &amp; (P_{41} \land P_{42}) \rightarrow \lnot P_{39} \\[4pt]
-\vdash \quad &amp; \lnot P_{39}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-41}{P_{41}}\\) — Signs elsewhere in Isaiah are ordinary events: his children, 8:18
+- (2) \\(\href{#claim-42}{P_{42}}\\) — Isaiah 7:16 dates the deliverance by a child's infancy
+- (3) \\((\href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}}) \rightarrow \lnot \href{#claim-39}{P_{39}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-39}{P_{39}}\\) — *at issue, the denial of:* The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11
+
 </div>
 
 <a id="septuagintLine"></a>
@@ -3310,16 +3290,14 @@ its readers argues for it beyond the word's sense.
 The main contest is over the third ground, rated `disputed`; the witness is no
 stronger than that ground, so the step's rating changes no verdict.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{15} \\
-\text{(3)} \quad &amp; P_{16} \\
-\text{(4)} \quad &amp; (P_{9} \land P_{15} \land P_{16}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (2) \\(\href{#claim-15}{P_{15}}\\) — The Greek Isaiah was translated by Jews before the coming of Christ
+- (3) \\(\href{#claim-16}{P_{16}}\\) — In the Greek of the Septuagint, παρθένος means a virgin
+- (4) \\((\href{#claim-9}{P_{9}} \land \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}) \rightarrow \href{#claim-31}{P_{31}}\\)
+- \\(\vdash\\) \\(\href{#claim-31}{P_{31}}\\) — *at issue:* Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin
+
 </div>
 
 <a id="driftLine"></a>
@@ -3361,16 +3339,14 @@ corpus Genesis 34:3 comes from, uses the word in its laws where virginity is the
 point (`lawsLine`). One passage in the broader sense does not show that the
 narrower sense was missing.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{18} \\
-\text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; P_{76} \\
-\text{(4)} \quad &amp; (P_{18} \land P_{19} \land P_{76}) \rightarrow P_{17} \\[4pt]
-\vdash \quad &amp; P_{17}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-18}{P_{18}}\\) — In early Greek, παρθένος meant a young woman, with or without virginity
+- (2) \\(\href{#claim-19}{P_{19}}\\) — The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2)
+- (3) \\(\href{#claim-76}{P_{76}}\\) — At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller)
+- (4) \\((\href{#claim-18}{P_{18}} \land \href{#claim-19}{P_{19}} \land \href{#claim-76}{P_{76}}) \rightarrow \href{#claim-17}{P_{17}}\\)
+- \\(\vdash\\) \\(\href{#claim-17}{P_{17}}\\) — *at issue:* In the Septuagint's day, παρθένος meant 'young woman'; not yet 'virgin'
+
 </div>
 
 <a id="usageLine"></a>
@@ -3418,16 +3394,14 @@ three grounds here too — it is the countermodel in
 The rating matters: rated higher, this step would decide the dispute over the
 Septuagint in the witness's favour (`Dispute.Septuagint` says why).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{20} \\
-\text{(2)} \quad &amp; P_{11} \\
-\text{(3)} \quad &amp; P_{30} \\
-\text{(4)} \quad &amp; (P_{20} \land P_{11} \land P_{30}) \rightarrow P_{16} \\[4pt]
-\vdash \quad &amp; P_{16}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-20}{P_{20}}\\) — Elsewhere in the Greek Isaiah, παρθένος renders בְּתוּלָה
+- (2) \\(\href{#claim-11}{P_{11}}\\) — Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις
+- (3) \\(\href{#claim-30}{P_{30}}\\) — Trypho rejects the Septuagint's 'the virgin' and reads 'the young woman'
+- (4) \\((\href{#claim-20}{P_{20}} \land \href{#claim-11}{P_{11}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-16}{P_{16}}\\)
+- \\(\vdash\\) \\(\href{#claim-16}{P_{16}}\\) — *at issue:* In the Greek of the Septuagint, παρθένος means a virgin
+
 </div>
 
 <a id="matthewReadsTheGreek"></a>
@@ -3437,10 +3411,10 @@ Septuagint in the witness's favour (`Dispute.Septuagint` says why).
 παρθένος of a woman who conceived before she and Joseph came together; so in the
 text he quotes, the word has the sense "virgin".
 
-<div class="testimony-math">
-\[
-(P_{27} \land P_{28}) \rightarrow P_{29}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-27}{P_{27}} \land \href{#claim-28}{P_{28}}) \rightarrow \href{#claim-29}{P_{29}}\\) — *would give:* In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος means 'virgin'
+
 </div>
 
 <a id="matthewReadingSource"></a>
@@ -3487,15 +3461,13 @@ critique; under the scriptural standard, a dissent from a step whose grounds are
 all Scripture counts only if it rests on Scripture alone, and Wegner's rests on
 early Greek usage. `Dispute.Matthew` computes the hearing under each.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{27} \\
-\text{(2)} \quad &amp; P_{28} \\
-\text{(3)} \quad &amp; (P_{27} \land P_{28}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{29}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-27}{P_{27}}\\) — Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος
+- (2) \\(\href{#claim-28}{P_{28}}\\) — Matthew says Mary conceived before she and Joseph came together
+- (3) \\((\href{#claim-27}{P_{27}} \land \href{#claim-28}{P_{28}}) \rightarrow \href{#claim-29}{P_{29}}\\)
+- \\(\vdash\\) \\(\href{#claim-29}{P_{29}}\\) — *at issue:* In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος means 'virgin'
+
 </div>
 
 <a id="herSeedLine"></a>
@@ -3529,16 +3501,14 @@ to be the addressee", but argues on grounds that do not need that doubt: "To say
 that the passage is messianic does not necessarily imply that it is
 virgin-birth messianic" (319).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{51} \\
-\text{(3)} \quad &amp; P_{52} \\
-\text{(4)} \quad &amp; (P_{50} \land P_{51} \land P_{52}) \rightarrow P_{54} \\[4pt]
-\vdash \quad &amp; P_{54}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (3) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (4) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}}) \rightarrow \href{#claim-54}{P_{54}}\\)
+- \\(\vdash\\) \\(\href{#claim-54}{P_{54}}\\) — *at issue:* The wording 'her seed' itself signifies a birth with no human father
+
 </div>
 
 <a id="posterityLine"></a>
@@ -3565,16 +3535,14 @@ Henry gives the woman's name the same reason — "because she it was whom the
 devil had beguiled" — and still reads the seed as "of a woman only, of a
 virgin".
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{56} \\
-\text{(3)} \quad &amp; P_{57} \\
-\text{(4)} \quad &amp; (P_{50} \land P_{56} \land P_{57}) \rightarrow \lnot P_{54} \\[4pt]
-\vdash \quad &amp; \lnot P_{54}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-56}{P_{56}}\\) — 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person
+- (3) \\(\href{#claim-57}{P_{57}}\\) — The seed is called the woman's because the serpent deceived the woman
+- (4) \\((\href{#claim-50}{P_{50}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-54}{P_{54}}\\) — *at issue, the denial of:* The wording 'her seed' itself signifies a birth with no human father
+
 </div>
 
 <a id="idiomLine"></a>
@@ -3598,15 +3566,13 @@ and still calls the wording "odd", and agrees with the "many" who have "rightly
 seen" it as "a hint of the Virgin Birth". A hint is less than a sign, and whether
 it denies Lewis's conclusion is arguable; it is the only dissent found.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{58} \\
-\text{(3)} \quad &amp; (P_{50} \land P_{58}) \rightarrow \lnot P_{54} \\[4pt]
-\vdash \quad &amp; \lnot P_{54}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-58}{P_{58}}\\) — Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's
+- (3) \\((\href{#claim-50}{P_{50}} \land \href{#claim-58}{P_{58}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-54}{P_{54}}\\) — *at issue, the denial of:* The wording 'her seed' itself signifies a birth with no human father
+
 </div>
 
 <a id="greekHeLine"></a>
@@ -3622,14 +3588,12 @@ that the translator reveals a messianic understanding" (300). What it does not
 reach in any case is whether that person has a human father
 (`Results.Genesis`).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{59} \\
-\text{(2)} \quad &amp; P_{59} \rightarrow P_{60} \\[4pt]
-\vdash \quad &amp; P_{60}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-59}{P_{59}}\\) — The Greek of Genesis 3:15 calls the woman's seed 'he', though σπέρμα is neuter
+- (2) \\(\href{#claim-59}{P_{59}} \rightarrow \href{#claim-60}{P_{60}}\\)
+- \\(\vdash\\) \\(\href{#claim-60}{P_{60}}\\) — *at issue:* The Greek translator of Genesis read the woman's seed at 3:15 as one person
+
 </div>
 
 ##### The fulfilment of Genesis 3:15, and the critical reading
@@ -3648,10 +3612,10 @@ serpent, called the Devil"; its head crushed when the Son destroys the devil
 "through death"; his heel struck in his death, and the wound not the end of him
 in his rising. So in Jesus the promise is fulfilled.
 
-<div class="testimony-math">
-\[
-(P_{50} \land P_{64} \land P_{61} \land P_{62} \land P_{63}) \rightarrow P_{65}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-50}{P_{50}} \land \href{#claim-64}{P_{64}} \land \href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \href{#claim-65}{P_{65}}\\) — *would give:* In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent's head
+
 </div>
 
 <a id="fulfilmentConfirmsThePromise"></a>
@@ -3660,10 +3624,10 @@ in his rising. So in Jesus the promise is fulfilled.
 **The fulfilment confirms the promise.** If in Jesus each term of Genesis
 3:15 is met, the verse is a promise of him: the protoevangelium.
 
-<div class="testimony-math">
-\[
-P_{65} \rightarrow P_{51}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{#claim-65}{P_{65}} \rightarrow \href{#claim-51}{P_{51}}\\) — *would give:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+
 </div>
 
 <a id="fulfilledInOneVirginBorn"></a>
@@ -3672,10 +3636,10 @@ P_{65} \rightarrow P_{51}
 **Of the woman alone.** If the promise is fulfilled in Jesus, and Jesus was
 conceived of a virgin, the seed in whom it is fulfilled had no human father.
 
-<div class="testimony-math">
-\[
-(P_{65} \land P_{79}) \rightarrow P_{66}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-65}{P_{65}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-66}{P_{66}}\\) — *would give:* The seed in whom Genesis 3:15 is fulfilled was of the woman alone
+
 </div>
 
 <a id="formExcludesAPromise"></a>
@@ -3685,10 +3649,10 @@ conceived of a virgin, the seed in whom it is fulfilled had no human father.
 a punishment oracle on the serpent; such a form has no promise or prophecy, "even
 as its secondary meaning", so the verse is not the protoevangelium.
 
-<div class="testimony-math">
-\[
-(P_{68} \land P_{67}) \rightarrow \lnot P_{51}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-68}{P_{68}} \land \href{#claim-67}{P_{67}}) \rightarrow \lnot \href{#claim-51}{P_{51}}\\) — *would deny:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+
 </div>
 
 <a id="sceneMakesItAPromise"></a>
@@ -3700,10 +3664,10 @@ the serpent itself, "your head"; and God himself sets the enmity. So the
 sentence on the serpent is God's promise of victory over that power: the
 protoevangelium.
 
-<div class="testimony-math">
-\[
-(P_{71} \land P_{73} \land P_{70} \land P_{72}) \rightarrow P_{51}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-71}{P_{71}} \land \href{#claim-73}{P_{73}} \land \href{#claim-70}{P_{70}} \land \href{#claim-72}{P_{72}}) \rightarrow \href{#claim-51}{P_{51}}\\) — *would give:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+
 </div>
 
 <a id="singularSyntaxNamesOne"></a>
@@ -3714,10 +3678,10 @@ one descendant elsewhere; at 3:15b the striker is singular "he", against the
 serpent's own head; and the Greek translator read one person. So "her seed" at
 3:15 is not only a line of descendants: the one who strikes is one of them.
 
-<div class="testimony-math">
-\[
-(P_{69} \land P_{70} \land P_{60}) \rightarrow \lnot P_{68}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-69}{P_{69}} \land \href{#claim-70}{P_{70}} \land \href{#claim-60}{P_{60}}) \rightarrow \lnot \href{#claim-68}{P_{68}}\\) — *would deny:* At Genesis 3:15 'her seed' is a line of descendants, and not an individual
+
 </div>
 
 <a id="fulfilmentSource"></a>
@@ -3784,18 +3748,16 @@ the verse (259–60): philology and form criticism, not a reading of Hebrews,
 the one who tramples the serpent" (303), denies that Scripture makes the link
 but not the conclusion, and is not counted.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{64} \\
-\text{(3)} \quad &amp; P_{61} \\
-\text{(4)} \quad &amp; P_{62} \\
-\text{(5)} \quad &amp; P_{63} \\
-\text{(6)} \quad &amp; (P_{50} \land P_{64} \land P_{61} \land P_{62} \land P_{63}) \rightarrow P_{65} \\[4pt]
-\vdash \quad &amp; P_{65}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-64}{P_{64}}\\) — Paul says God sent his Son 'made of a woman' (Galatians 4:4)
+- (3) \\(\href{#claim-61}{P_{61}}\\) — Revelation calls the devil 'that old serpent' (12:9, 20:2)
+- (4) \\(\href{#claim-62}{P_{62}}\\) — The Son came to destroy the devil and his works, through death
+- (5) \\(\href{#claim-63}{P_{63}}\\) — Paul says Christ died, was buried, and rose the third day
+- (6) \\((\href{#claim-50}{P_{50}} \land \href{#claim-64}{P_{64}} \land \href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \href{#claim-65}{P_{65}}\\)
+- \\(\vdash\\) \\(\href{#claim-65}{P_{65}}\\) — *at issue:* In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent's head
+
 </div>
 
 <a id="confirmationSource"></a>
@@ -3842,14 +3804,12 @@ Bible is accompanied by his first promise of salvation" (31). Rated no higher,
 because the step adds little to what its ground already says: to fulfil a
 promise there must have been one.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{65} \\
-\text{(2)} \quad &amp; P_{65} \rightarrow P_{51} \\[4pt]
-\vdash \quad &amp; P_{51}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-65}{P_{65}}\\) — In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent's head
+- (2) \\(\href{#claim-65}{P_{65}} \rightarrow \href{#claim-51}{P_{51}}\\)
+- \\(\vdash\\) \\(\href{#claim-51}{P_{51}}\\) — *at issue:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+
 </div>
 
 <a id="aloneLine"></a>
@@ -3868,15 +3828,13 @@ argument cites. It reads the fact of the birth back into the promise; it does
 not find the birth in the wording, which is Luther's claim and is weighed
 apart (`Results.Genesis`).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{65} \\
-\text{(2)} \quad &amp; P_{79} \\
-\text{(3)} \quad &amp; (P_{65} \land P_{79}) \rightarrow P_{66} \\[4pt]
-\vdash \quad &amp; P_{66}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-65}{P_{65}}\\) — In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent's head
+- (2) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (3) \\((\href{#claim-65}{P_{65}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-66}{P_{66}}\\)
+- \\(\vdash\\) \\(\href{#claim-66}{P_{66}}\\) — *at issue:* The seed in whom Genesis 3:15 is fulfilled was of the woman alone
+
 </div>
 
 <a id="westermannLine"></a>
@@ -3899,15 +3857,13 @@ and denies the conclusion: the promise is in the curse, and "we must necessarily
 come to one head" (171). Keil, who reads the seed as "the human race" and Christ
 "not as an individual, but as the head" (101–2), denies it too.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{68} \\
-\text{(2)} \quad &amp; P_{67} \\
-\text{(3)} \quad &amp; (P_{68} \land P_{67}) \rightarrow \lnot P_{51} \\[4pt]
-\vdash \quad &amp; \lnot P_{51}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-68}{P_{68}}\\) — At Genesis 3:15 'her seed' is a line of descendants, and not an individual
+- (2) \\(\href{#claim-67}{P_{67}}\\) — Genesis 3:14–15 is a curse on the serpent, in the form of a punishment oracle
+- (3) \\((\href{#claim-68}{P_{68}} \land \href{#claim-67}{P_{67}}) \rightarrow \lnot \href{#claim-51}{P_{51}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-51}{P_{51}}\\) — *at issue, the denial of:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+
 </div>
 
 <a id="sceneLine"></a>
@@ -3954,17 +3910,15 @@ None of this is the reading of the readers before Christ: Jubilees, Philo and
 Josephus read the serpent as an animal or an emblem, and none of them reads the
 verse as a promise. It is an exegesis of the section, from its own words.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{71} \\
-\text{(2)} \quad &amp; P_{73} \\
-\text{(3)} \quad &amp; P_{70} \\
-\text{(4)} \quad &amp; P_{72} \\
-\text{(5)} \quad &amp; (P_{71} \land P_{73} \land P_{70} \land P_{72}) \rightarrow P_{51} \\[4pt]
-\vdash \quad &amp; P_{51}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-71}{P_{71}}\\) — In Genesis 3 the serpent speaks, and knows and twists God's command
+- (2) \\(\href{#claim-73}{P_{73}}\\) — The serpent of Genesis 3 is the instrument of an evil power
+- (3) \\(\href{#claim-70}{P_{70}}\\) — At Genesis 3:15b the striker is singular 'he', against the serpent's own head
+- (4) \\(\href{#claim-72}{P_{72}}\\) — God sets the enmity himself: 'I will put enmity' (3:15)
+- (5) \\((\href{#claim-71}{P_{71}} \land \href{#claim-73}{P_{73}} \land \href{#claim-70}{P_{70}} \land \href{#claim-72}{P_{72}}) \rightarrow \href{#claim-51}{P_{51}}\\)
+- \\(\vdash\\) \\(\href{#claim-51}{P_{51}}\\) — *at issue:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+
 </div>
 
 <a id="syntaxLine"></a>
@@ -4002,16 +3956,14 @@ than consistency, from "a fairly low level of integration" (145–46), and
 Alexander notes that the same singular syntax is usually read collectively at
 Genesis 22:17–18a and 24:60 (364).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{69} \\
-\text{(2)} \quad &amp; P_{70} \\
-\text{(3)} \quad &amp; P_{60} \\
-\text{(4)} \quad &amp; (P_{69} \land P_{70} \land P_{60}) \rightarrow \lnot P_{68} \\[4pt]
-\vdash \quad &amp; \lnot P_{68}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-69}{P_{69}}\\) — Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant
+- (2) \\(\href{#claim-70}{P_{70}}\\) — At Genesis 3:15b the striker is singular 'he', against the serpent's own head
+- (3) \\(\href{#claim-60}{P_{60}}\\) — The Greek translator of Genesis read the woman's seed at 3:15 as one person
+- (4) \\((\href{#claim-69}{P_{69}} \land \href{#claim-70}{P_{70}} \land \href{#claim-60}{P_{60}}) \rightarrow \lnot \href{#claim-68}{P_{68}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-68}{P_{68}}\\) — *at issue, the denial of:* At Genesis 3:15 'her seed' is a line of descendants, and not an individual
+
 </div>
 
 <a id="lawsFixTheSense"></a>
@@ -4022,10 +3974,10 @@ woman put away, the defiled woman and the harlot, and the bride without τὰ
 παρθένια dies for playing the harlot; so in these laws παρθένος is used in the
 sense "virgin".
 
-<div class="testimony-math">
-\[
-(P_{21} \land P_{22}) \rightarrow P_{23}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}) \rightarrow \href{#claim-23}{P_{23}}\\) — *would give:* In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'
+
 </div>
 
 <a id="lawsSource"></a>
@@ -4107,15 +4059,13 @@ But his case from Genesis 34:3 cannot be defended in the dispute over the
 Septuagint: the status reading defeats it. So his dissent is overruled, and the
 step stands at the `wellSupported` its support is cited at.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{21} \\
-\text{(2)} \quad &amp; P_{22} \\
-\text{(3)} \quad &amp; (P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-21}{P_{21}}\\) — The high priest of the Greek Leviticus marries a παρθένος, not a widow or a harlot
+- (2) \\(\href{#claim-22}{P_{22}}\\) — In the Greek Deuteronomy, a bride without τὰ παρθένια dies for playing the harlot
+- (3) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}) \rightarrow \href{#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\href{#claim-23}{P_{23}}\\) — *at issue:* In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'
+
 </div>
 
 <a id="seductionLawNamesDinah"></a>
@@ -4127,10 +4077,10 @@ bride-price of virgins"; Genesis 34 tells Shechem's act in the words of that law
 and its neighbours. So when the Greek calls Dinah "the παρθένος" at 34:3, it
 names her by the standing he took, in the sense "virgin".
 
-<div class="testimony-math">
-\[
-(P_{24} \land P_{25}) \rightarrow P_{26}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-24}{P_{24}} \land \href{#claim-25}{P_{25}}) \rightarrow \href{#claim-26}{P_{26}}\\) — *would give:* At Genesis 34:3 the Greek names Dinah a παρθένος as the law names the seduced virgin
+
 </div>
 
 <a id="dinahLine"></a>
@@ -4197,15 +4147,13 @@ has the law before him and still reads 34:3 of a woman no longer a virgin would
 make the step `disputed`; and the verdict of `Dispute.Septuagint` turns on this
 rating.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{25} \\
-\text{(3)} \quad &amp; (P_{24} \land P_{25}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-24}{P_{24}}\\) — In the Greek Exodus, the seduced παρθένος is owed 'the bride-price of virgins'
+- (2) \\(\href{#claim-25}{P_{25}}\\) — Genesis 34 tells Shechem's act in the words of the laws of the violated virgin
+- (3) \\((\href{#claim-24}{P_{24}} \land \href{#claim-25}{P_{25}}) \rightarrow \href{#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\href{#claim-26}{P_{26}}\\) — *at issue:* At Genesis 34:3 the Greek names Dinah a παρθένος as the law names the seduced virgin
+
 </div>
 
 #### Miller on the laws
@@ -4234,10 +4182,10 @@ def millerSource : Source :=
 Joel 1:8 shows that the word does not connote virginity, Miller's way: the
 young widow is called a παρθένος.
 
-<div class="testimony-math">
-\[
-P_{74} \rightarrow P_{75}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{#claim-74}{P_{74}} \rightarrow \href{#claim-75}{P_{75}}\\) — *would give:* In the Septuagint, παρθένος did not by itself connote virginity (Miller)
+
 </div>
 
 <a id="dinahShowsNoConnotation"></a>
@@ -4246,10 +4194,10 @@ P_{74} \rightarrow P_{75}
 Genesis 34:3 shows the same: the Greek calls Dinah a παρθένος, and the word
 describes her as she then was, no longer a virgin.
 
-<div class="testimony-math">
-\[
-(P_{19} \land P_{76}) \rightarrow P_{75}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{#claim-19}{P_{19}} \land \href{#claim-76}{P_{76}}) \rightarrow \href{#claim-75}{P_{75}}\\) — *would give:* In the Septuagint, παρθένος did not by itself connote virginity (Miller)
+
 </div>
 
 <a id="contextNotWordInTheLaws"></a>
@@ -4258,10 +4206,10 @@ describes her as she then was, no longer a virgin.
 So in the laws the virginity "has to be inferred from the context", and the
 word is not used in the sense "virgin".
 
-<div class="testimony-math">
-\[
-P_{75} \rightarrow \lnot P_{23}
-\]
+<div class="testimony-derivation">
+
+- \\(\href{#claim-75}{P_{75}} \rightarrow \lnot \href{#claim-23}{P_{23}}\\) — *would deny:* In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'
+
 </div>
 
 <a id="millerJoelLine"></a>
@@ -4271,14 +4219,12 @@ P_{75} \rightarrow \lnot P_{23}
 the husband of her youth", a young widow (*Born Divine*). The Greek does not
 read so (`Dispute.Miller`).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\[4pt]
-\vdash \quad &amp; P_{75}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-74}{P_{74}}\\) — The Greek of Joel 1:8 calls a young widow a παρθένος (Miller)
+- (2) \\(\href{#claim-74}{P_{74}} \rightarrow \href{#claim-75}{P_{75}}\\)
+- \\(\vdash\\) \\(\href{#claim-75}{P_{75}}\\) — *at issue:* In the Septuagint, παρθένος did not by itself connote virginity (Miller)
+
 </div>
 
 <a id="millerDinahLine"></a>
@@ -4290,15 +4236,13 @@ the Greek reads, and Miller's premise that its noun describes Dinah as she then
 was. The second is his, not the text's: the order of the verses puts Shechem's
 love after his act, not the noun's description (`dinahLine`).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{19} \\
-\text{(2)} \quad &amp; P_{76} \\
-\text{(3)} \quad &amp; (P_{19} \land P_{76}) \rightarrow P_{75} \\[4pt]
-\vdash \quad &amp; P_{75}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-19}{P_{19}}\\) — The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2)
+- (2) \\(\href{#claim-76}{P_{76}}\\) — At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller)
+- (3) \\((\href{#claim-19}{P_{19}} \land \href{#claim-76}{P_{76}}) \rightarrow \href{#claim-75}{P_{75}}\\)
+- \\(\vdash\\) \\(\href{#claim-75}{P_{75}}\\) — *at issue:* In the Septuagint, παρθένος did not by itself connote virginity (Miller)
+
 </div>
 
 <a id="criticalExclusionLine"></a>
@@ -4311,15 +4255,13 @@ Its grounds are what the two defeaters attack. Berry replaces the second with
 `nearTermFulfilmentIsUnclear` plus `berryBlocksExclusion`; parity replaces it
 with Isaiah 9 and 11 plus `parityDefeatsNearTermExclusion`.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{81} \\
-\text{(2)} \quad &amp; P_{82} \\
-\text{(3)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\[4pt]
-\vdash \quad &amp; \lnot P_{1}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (2) \\(\href{#claim-82}{P_{82}}\\) — A sign given for Ahaz's generation is not also a prediction of a virgin birth
+- (3) \\((\href{#claim-81}{P_{81}} \land \href{#claim-82}{P_{82}}) \rightarrow \lnot \href{#claim-1}{P_{1}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-1}{P_{1}}\\) — *at issue, the denial of:* Isaiah 7:14 is a Messianic prediction of a virgin birth
+
 </div>
 
 #### The two defeaters, as arguments in their own right
@@ -4336,14 +4278,12 @@ defeated by, the line it answers — see `Dispute.lean`.
 **Berry's objection**, as an argument: the near-term fulfilment is unclear,
 so the near-term reading does not exclude the messianic sense.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{83} \\
-\text{(2)} \quad &amp; P_{83} \rightarrow \lnot P_{82} \\[4pt]
-\vdash \quad &amp; \lnot P_{82}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-83}{P_{83}}\\) — How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question
+- (2) \\(\href{#claim-83}{P_{83}} \rightarrow \lnot \href{#claim-82}{P_{82}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-82}{P_{82}}\\) — *at issue, the denial of:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+
 </div>
 
 <a id="postellLine"></a>
@@ -4353,15 +4293,13 @@ so the near-term reading does not exclude the messianic sense.
 on the same near-term timeline, so a near-term setting does not exclude the
 messianic sense.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{47} \\
-\text{(2)} \quad &amp; P_{48} \\
-\text{(3)} \quad &amp; (P_{47} \land P_{48}) \rightarrow \lnot P_{82} \\[4pt]
-\vdash \quad &amp; \lnot P_{82}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-47}{P_{47}}\\) — Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation
+- (2) \\(\href{#claim-48}{P_{48}}\\) — Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14
+- (3) \\((\href{#claim-47}{P_{47}} \land \href{#claim-48}{P_{48}}) \rightarrow \lnot \href{#claim-82}{P_{82}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-82}{P_{82}}\\) — *at issue, the denial of:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+
 </div>
 
 <a id="motyerLine"></a>
@@ -4372,15 +4310,13 @@ house of David and the near-term timetable passes to Isaiah's son, so Isaiah
 7:14 is not a near-term sign to Ahaz. The first reply to deny the critic's
 near-term premise rather than its exclusion premise.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{84} \\
-\text{(2)} \quad &amp; P_{85} \\
-\text{(3)} \quad &amp; (P_{84} \land P_{85}) \rightarrow \lnot P_{81} \\[4pt]
-\vdash \quad &amp; \lnot P_{81}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-84}{P_{84}}\\) — Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz
+- (2) \\(\href{#claim-85}{P_{85}}\\) — Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14
+- (3) \\((\href{#claim-84}{P_{84}} \land \href{#claim-85}{P_{85}}) \rightarrow \lnot \href{#claim-81}{P_{81}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-81}{P_{81}}\\) — *at issue, the denial of:* Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+
 </div>
 
 <a id="micahLine"></a>
@@ -4390,15 +4326,13 @@ near-term premise rather than its exclusion premise.
 set against the Assyrian invasion and was read messianically, so a near-term
 setting does not exclude a messianic sense.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{86} \\
-\text{(2)} \quad &amp; P_{87} \\
-\text{(3)} \quad &amp; (P_{86} \land P_{87}) \rightarrow \lnot P_{82} \\[4pt]
-\vdash \quad &amp; \lnot P_{82}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-86}{P_{86}}\\) — Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion
+- (2) \\(\href{#claim-87}{P_{87}}\\) — Micah 5:2 was read messianically in first-century Judaism
+- (3) \\((\href{#claim-86}{P_{86}} \land \href{#claim-87}{P_{87}}) \rightarrow \lnot \href{#claim-82}{P_{82}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-82}{P_{82}}\\) — *at issue, the denial of:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+
 </div>
 
 #### What the strands share
@@ -4410,13 +4344,11 @@ The premises no single strand owns: Mary's conception, and the agreement of
 the two birth narratives about it. Every scriptural package needs them and
 none of the four strands delivers them.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{79} \\
-\text{(2)} \quad &amp; P_{80}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (2) \\(\href{#claim-80}{P_{80}}\\) — Matthew and Luke are independent traditions agreeing on the virgin conception
+
 </div>
 
 <a id="scripturalLines"></a>
@@ -4456,33 +4388,31 @@ would describe them as something they are not.
 The scriptural argument: four strands, no appeal to magisterial
 authority.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{2} \\
-\text{(3)} \quad &amp; P_{9} \\
-\text{(4)} \quad &amp; P_{43} \\
-\text{(5)} \quad &amp; P_{44} \\
-\text{(6)} \quad &amp; P_{50} \\
-\text{(7)} \quad &amp; P_{51} \\
-\text{(8)} \quad &amp; P_{52} \\
-\text{(9)} \quad &amp; P_{53} \\
-\text{(10)} \quad &amp; P_{77} \\
-\text{(11)} \quad &amp; P_{78} \\
-\text{(12)} \quad &amp; P_{45} \\
-\text{(13)} \quad &amp; P_{46} \\
-\text{(14)} \quad &amp; P_{49} \\
-\text{(15)} \quad &amp; P_{79} \\
-\text{(16)} \quad &amp; P_{80} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
-\text{(18)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
-\text{(19)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
-\text{(20)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\
-\text{(21)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (2) \\(\href{#claim-2}{P_{2}}\\) — עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+- (3) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (4) \\(\href{#claim-43}{P_{43}}\\) — Matthew 1:23 quotes Isaiah 7:14
+- (5) \\(\href{#claim-44}{P_{44}}\\) — Matthew's quotation intends the virgin conception as fulfilment
+- (6) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (7) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (8) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (9) \\(\href{#claim-53}{P_{53}}\\) — The matrilineal wording of Genesis 3:15 marks a birth with no human father
+- (10) \\(\href{#claim-77}{P_{77}}\\) — Micah 5:3 names only the woman in labour as bearing the coming ruler
+- (11) \\(\href{#claim-78}{P_{78}}\\) — Micah's mention of a mother and no father indicates a birth with no human father
+- (12) \\(\href{#claim-45}{P_{45}}\\) — Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology
+- (13) \\(\href{#claim-46}{P_{46}}\\) — An oracle's meaning in the finished book is set by its literary placement
+- (14) \\(\href{#claim-49}{P_{49}}\\) — Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth
+- (15) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (16) \\(\href{#claim-80}{P_{80}}\\) — Matthew and Luke are independent traditions agreeing on the virgin conception
+- (17) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (18) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (19) \\((\href{#claim-77}{P_{77}} \land \href{#claim-78}{P_{78}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (20) \\((\href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-49}{P_{49}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (21) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4495,36 +4425,34 @@ magisterial one. This is the position as actually held — Scripture and Traditi
 together — and it is kept distinct from `christian` because its extra premise is
 one this library's author does not grant.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{90} \\
-\text{(2)} \quad &amp; P_{91} \\
-\text{(3)} \quad &amp; (P_{90} \land P_{91}) \rightarrow P_{93} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{9} \\
-\text{(7)} \quad &amp; P_{43} \\
-\text{(8)} \quad &amp; P_{44} \\
-\text{(9)} \quad &amp; P_{50} \\
-\text{(10)} \quad &amp; P_{51} \\
-\text{(11)} \quad &amp; P_{52} \\
-\text{(12)} \quad &amp; P_{53} \\
-\text{(13)} \quad &amp; P_{77} \\
-\text{(14)} \quad &amp; P_{78} \\
-\text{(15)} \quad &amp; P_{45} \\
-\text{(16)} \quad &amp; P_{46} \\
-\text{(17)} \quad &amp; P_{49} \\
-\text{(18)} \quad &amp; P_{79} \\
-\text{(19)} \quad &amp; P_{80} \\
-\text{(20)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
-\text{(21)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
-\text{(22)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
-\text{(23)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\
-\text{(24)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-90}{P_{90}}\\) — Papal teaching affirms that Mary conceived while remaining a virgin
+- (2) \\(\href{#claim-91}{P_{91}}\\) — Magisterial teaching settles the question
+- (3) \\((\href{#claim-90}{P_{90}} \land \href{#claim-91}{P_{91}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (4) \\(\href{#claim-1}{P_{1}}\\) — Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (5) \\(\href{#claim-2}{P_{2}}\\) — עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+- (6) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (7) \\(\href{#claim-43}{P_{43}}\\) — Matthew 1:23 quotes Isaiah 7:14
+- (8) \\(\href{#claim-44}{P_{44}}\\) — Matthew's quotation intends the virgin conception as fulfilment
+- (9) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (10) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (11) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (12) \\(\href{#claim-53}{P_{53}}\\) — The matrilineal wording of Genesis 3:15 marks a birth with no human father
+- (13) \\(\href{#claim-77}{P_{77}}\\) — Micah 5:3 names only the woman in labour as bearing the coming ruler
+- (14) \\(\href{#claim-78}{P_{78}}\\) — Micah's mention of a mother and no father indicates a birth with no human father
+- (15) \\(\href{#claim-45}{P_{45}}\\) — Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology
+- (16) \\(\href{#claim-46}{P_{46}}\\) — An oracle's meaning in the finished book is set by its literary placement
+- (17) \\(\href{#claim-49}{P_{49}}\\) — Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth
+- (18) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (19) \\(\href{#claim-80}{P_{80}}\\) — Matthew and Luke are independent traditions agreeing on the virgin conception
+- (20) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (21) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (22) \\((\href{#claim-77}{P_{77}} \land \href{#claim-78}{P_{78}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (23) \\((\href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-49}{P_{49}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (24) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4534,17 +4462,15 @@ No premise here rests on scripture alone.
 
 The magisterial route on its own, with no exegetical premise at all.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{90} \\
-\text{(2)} \quad &amp; P_{91} \\
-\text{(3)} \quad &amp; P_{79} \\
-\text{(4)} \quad &amp; (P_{90} \land P_{91}) \rightarrow P_{93} \\
-\text{(5)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-90}{P_{90}}\\) — Papal teaching affirms that Mary conceived while remaining a virgin
+- (2) \\(\href{#claim-91}{P_{91}}\\) — Magisterial teaching settles the question
+- (3) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (4) \\((\href{#claim-90}{P_{90}} \land \href{#claim-91}{P_{91}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (5) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4556,18 +4482,16 @@ The magisterial route as it stands for a reader who denies that magisterial
 teaching settles doctrinal questions, holding with Westminster I.x that
 Scripture is the supreme judge.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{90} \\
-\text{(2)} \quad &amp; \lnot P_{91} \\
-\text{(3)} \quad &amp; P_{92} \\
-\text{(4)} \quad &amp; P_{79} \\
-\text{(5)} \quad &amp; (P_{90} \land P_{91}) \rightarrow P_{93} \\
-\text{(6)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-90}{P_{90}}\\) — Papal teaching affirms that Mary conceived while remaining a virgin
+- (2) \\(\lnot \href{#claim-91}{P_{91}}\\) — *denied:* Magisterial teaching settles the question
+- (3) \\(\href{#claim-92}{P_{92}}\\) — Scripture is the supreme judge of controversies of religion
+- (4) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (5) \\((\href{#claim-90}{P_{90}} \land \href{#claim-91}{P_{91}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (6) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4579,17 +4503,15 @@ The Isaianic line with the lexical premise removed, everything else it
 rests on retained. The one difference that most of the results below turn
 on.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; P_{43} \\
-\text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (2) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (3) \\(\href{#claim-43}{P_{43}}\\) — Matthew 1:23 quotes Isaiah 7:14
+- (4) \\(\href{#claim-44}{P_{44}}\\) — Matthew's quotation intends the virgin conception as fulfilment
+- (5) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\)
+- \\(\vdash\\) \\(\href{#claim-93}{P_{93}}\\) — *at issue:* The Messiah must be born of a virgin
+
 </div>
 
 <a id="christianWithoutAlmah"></a>
@@ -4598,32 +4520,30 @@ on.
 The scriptural package with the lexical premise removed, everything else
 retained.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; P_{43} \\
-\text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; P_{50} \\
-\text{(6)} \quad &amp; P_{51} \\
-\text{(7)} \quad &amp; P_{52} \\
-\text{(8)} \quad &amp; P_{53} \\
-\text{(9)} \quad &amp; P_{77} \\
-\text{(10)} \quad &amp; P_{78} \\
-\text{(11)} \quad &amp; P_{45} \\
-\text{(12)} \quad &amp; P_{46} \\
-\text{(13)} \quad &amp; P_{49} \\
-\text{(14)} \quad &amp; P_{79} \\
-\text{(15)} \quad &amp; P_{80} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
-\text{(17)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
-\text{(18)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
-\text{(19)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\
-\text{(20)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (2) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (3) \\(\href{#claim-43}{P_{43}}\\) — Matthew 1:23 quotes Isaiah 7:14
+- (4) \\(\href{#claim-44}{P_{44}}\\) — Matthew's quotation intends the virgin conception as fulfilment
+- (5) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (6) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (7) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (8) \\(\href{#claim-53}{P_{53}}\\) — The matrilineal wording of Genesis 3:15 marks a birth with no human father
+- (9) \\(\href{#claim-77}{P_{77}}\\) — Micah 5:3 names only the woman in labour as bearing the coming ruler
+- (10) \\(\href{#claim-78}{P_{78}}\\) — Micah's mention of a mother and no father indicates a birth with no human father
+- (11) \\(\href{#claim-45}{P_{45}}\\) — Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology
+- (12) \\(\href{#claim-46}{P_{46}}\\) — An oracle's meaning in the finished book is set by its literary placement
+- (13) \\(\href{#claim-49}{P_{49}}\\) — Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth
+- (14) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (15) \\(\href{#claim-80}{P_{80}}\\) — Matthew and Luke are independent traditions agreeing on the virgin conception
+- (16) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (17) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (18) \\((\href{#claim-77}{P_{77}} \land \href{#claim-78}{P_{78}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (19) \\((\href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-49}{P_{49}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (20) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4635,20 +4555,18 @@ The Isaianic strand by itself, with the lexical premise removed: the
 argument exactly as this module encoded it before the other three strands were
 added. Kept so that the earlier finding stays checkable.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; P_{43} \\
-\text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; P_{79} \\
-\text{(6)} \quad &amp; P_{80} \\
-\text{(7)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
-\text{(8)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (2) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (3) \\(\href{#claim-43}{P_{43}}\\) — Matthew 1:23 quotes Isaiah 7:14
+- (4) \\(\href{#claim-44}{P_{44}}\\) — Matthew's quotation intends the virgin conception as fulfilment
+- (5) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (6) \\(\href{#claim-80}{P_{80}}\\) — Matthew and Luke are independent traditions agreeing on the virgin conception
+- (7) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (8) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4659,29 +4577,27 @@ No premise here rests on scripture alone.
 The scriptural package with all four interpretive hinges removed, every
 textual and historical premise retained.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{9} \\
-\text{(3)} \quad &amp; P_{43} \\
-\text{(4)} \quad &amp; P_{44} \\
-\text{(5)} \quad &amp; P_{50} \\
-\text{(6)} \quad &amp; P_{51} \\
-\text{(7)} \quad &amp; P_{52} \\
-\text{(8)} \quad &amp; P_{77} \\
-\text{(9)} \quad &amp; P_{45} \\
-\text{(10)} \quad &amp; P_{49} \\
-\text{(11)} \quad &amp; P_{79} \\
-\text{(12)} \quad &amp; P_{80} \\
-\text{(13)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
-\text{(14)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
-\text{(15)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
-\text{(16)} \quad &amp; (P_{45} \land P_{46} \land P_{49} \land P_{44}) \rightarrow P_{93} \\
-\text{(17)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (2) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (3) \\(\href{#claim-43}{P_{43}}\\) — Matthew 1:23 quotes Isaiah 7:14
+- (4) \\(\href{#claim-44}{P_{44}}\\) — Matthew's quotation intends the virgin conception as fulfilment
+- (5) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (6) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (7) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (8) \\(\href{#claim-77}{P_{77}}\\) — Micah 5:3 names only the woman in labour as bearing the coming ruler
+- (9) \\(\href{#claim-45}{P_{45}}\\) — Isaiah 7 sits inside Isaiah 2–12, a unit framed by eschatology
+- (10) \\(\href{#claim-49}{P_{49}}\\) — Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth
+- (11) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (12) \\(\href{#claim-80}{P_{80}}\\) — Matthew and Luke are independent traditions agreeing on the virgin conception
+- (13) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (14) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (15) \\((\href{#claim-77}{P_{77}} \land \href{#claim-78}{P_{78}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (16) \\((\href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-49}{P_{49}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (17) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4692,21 +4608,19 @@ No premise here rests on scripture alone.
 The Isaianic strand with Berry's defensive lexical premise in place of the
 assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* it.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{3} \\
-\text{(3)} \quad &amp; P_{9} \\
-\text{(4)} \quad &amp; P_{43} \\
-\text{(5)} \quad &amp; P_{44} \\
-\text{(6)} \quad &amp; P_{79} \\
-\text{(7)} \quad &amp; P_{80} \\
-\text{(8)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
-\text{(9)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-1}{P_{1}}\\) — Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (2) \\(\href{#claim-3}{P_{3}}\\) — The semantic range of עַלְמָה does not exclude 'virgin' at Isaiah 7:14
+- (3) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (4) \\(\href{#claim-43}{P_{43}}\\) — Matthew 1:23 quotes Isaiah 7:14
+- (5) \\(\href{#claim-44}{P_{44}}\\) — Matthew's quotation intends the virgin conception as fulfilment
+- (6) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (7) \\(\href{#claim-80}{P_{80}}\\) — Matthew and Luke are independent traditions agreeing on the virgin conception
+- (8) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (9) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4722,29 +4636,27 @@ Written flat rather than from the lines above, because that is its shape: the
 texts first, then the critical readings of them, then the denials. It is not
 four strands on shared ground; it is the refusal of four strands.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{43} \\
-\text{(3)} \quad &amp; P_{50} \\
-\text{(4)} \quad &amp; P_{77} \\
-\text{(5)} \quad &amp; P_{81} \\
-\text{(6)} \quad &amp; P_{82} \\
-\text{(7)} \quad &amp; P_{88} \\
-\text{(8)} \quad &amp; P_{89} \\
-\text{(9)} \quad &amp; \lnot P_{2} \\
-\text{(10)} \quad &amp; \lnot P_{51} \\
-\text{(11)} \quad &amp; \lnot P_{53} \\
-\text{(12)} \quad &amp; \lnot P_{78} \\
-\text{(13)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\
-\text{(14)} \quad &amp; (P_{1} \land P_{2} \land P_{44}) \rightarrow P_{93} \\
-\text{(15)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
-\text{(16)} \quad &amp; (P_{77} \land P_{78}) \rightarrow P_{93} \\
-\text{(17)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (2) \\(\href{#claim-43}{P_{43}}\\) — Matthew 1:23 quotes Isaiah 7:14
+- (3) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (4) \\(\href{#claim-77}{P_{77}}\\) — Micah 5:3 names only the woman in labour as bearing the coming ruler
+- (5) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (6) \\(\href{#claim-82}{P_{82}}\\) — A sign given for Ahaz's generation is not also a prediction of a virgin birth
+- (7) \\(\href{#claim-88}{P_{88}}\\) — Genesis 3:15 is an etiology of snake-human enmity, 'her seed' her descendants
+- (8) \\(\href{#claim-89}{P_{89}}\\) — Micah's silence about a father is an argument from silence and proves nothing
+- (9) \\(\lnot \href{#claim-2}{P_{2}}\\) — *denied:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+- (10) \\(\lnot \href{#claim-51}{P_{51}}\\) — *denied:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (11) \\(\lnot \href{#claim-53}{P_{53}}\\) — *denied:* The matrilineal wording of Genesis 3:15 marks a birth with no human father
+- (12) \\(\lnot \href{#claim-78}{P_{78}}\\) — *denied:* Micah's mention of a mother and no father indicates a birth with no human father
+- (13) \\((\href{#claim-81}{P_{81}} \land \href{#claim-82}{P_{82}}) \rightarrow \lnot \href{#claim-1}{P_{1}}\\) — *would deny:* Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (14) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-44}{P_{44}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (15) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (16) \\((\href{#claim-77}{P_{77}} \land \href{#claim-78}{P_{78}}) \rightarrow \href{#claim-93}{P_{93}}\\) — *would give:* The Messiah must be born of a virgin
+- (17) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4756,15 +4668,13 @@ The critical case for denying the predictive reading, stated as an argument
 in its own right rather than assumed inside `critical`. Its conclusion is the
 denial, not anything about Jesus.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{81} \\
-\text{(2)} \quad &amp; P_{82} \\
-\text{(3)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\[4pt]
-\vdash \quad &amp; \lnot P_{1}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (2) \\(\href{#claim-82}{P_{82}}\\) — A sign given for Ahaz's generation is not also a prediction of a virgin birth
+- (3) \\((\href{#claim-81}{P_{81}} \land \href{#claim-82}{P_{82}}) \rightarrow \lnot \href{#claim-1}{P_{1}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-1}{P_{1}}\\) — *at issue, the denial of:* Isaiah 7:14 is a Messianic prediction of a virgin birth
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4775,16 +4685,14 @@ No premise here rests on scripture alone.
 The same case with Berry's observation in play, and the exclusion premise
 no longer simply granted.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{81} \\
-\text{(2)} \quad &amp; P_{83} \\
-\text{(3)} \quad &amp; P_{83} \rightarrow \lnot P_{82} \\
-\text{(4)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\[4pt]
-\vdash \quad &amp; \lnot P_{1}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (2) \\(\href{#claim-83}{P_{83}}\\) — How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question
+- (3) \\(\href{#claim-83}{P_{83}} \rightarrow \lnot \href{#claim-82}{P_{82}}\\) — *would deny:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+- (4) \\((\href{#claim-81}{P_{81}} \land \href{#claim-82}{P_{82}}) \rightarrow \lnot \href{#claim-1}{P_{1}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-1}{P_{1}}\\) — *at issue, the denial of:* Isaiah 7:14 is a Messianic prediction of a virgin birth
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4795,14 +4703,12 @@ No premise here rests on scripture alone.
 Berry's objection as a position of its own: its conclusion is that the
 near-term reading does not exclude the messianic sense.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{83} \\
-\text{(2)} \quad &amp; P_{83} \rightarrow \lnot P_{82} \\[4pt]
-\vdash \quad &amp; \lnot P_{82}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-83}{P_{83}}\\) — How Isaiah 7:14 was fulfilled in Ahaz's own day is itself an open question
+- (2) \\(\href{#claim-83}{P_{83}} \rightarrow \lnot \href{#claim-82}{P_{82}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-82}{P_{82}}\\) — *at issue, the denial of:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4813,15 +4719,13 @@ No premise here rests on scripture alone.
 Postell's parity argument as a position of its own, with the same conclusion
 as Berry's reached from different grounds.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{47} \\
-\text{(2)} \quad &amp; P_{48} \\
-\text{(3)} \quad &amp; (P_{47} \land P_{48}) \rightarrow \lnot P_{82} \\[4pt]
-\vdash \quad &amp; \lnot P_{82}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-47}{P_{47}}\\) — Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation
+- (2) \\(\href{#claim-48}{P_{48}}\\) — Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14
+- (3) \\((\href{#claim-47}{P_{47}} \land \href{#claim-48}{P_{48}}) \rightarrow \lnot \href{#claim-82}{P_{82}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-82}{P_{82}}\\) — *at issue, the denial of:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4832,15 +4736,13 @@ No premise here rests on scripture alone.
 Postell's Micah counterexample as a position of its own, with the same
 conclusion as Berry's and Postell's Isaiah argument.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{86} \\
-\text{(2)} \quad &amp; P_{87} \\
-\text{(3)} \quad &amp; (P_{86} \land P_{87}) \rightarrow \lnot P_{82} \\[4pt]
-\vdash \quad &amp; \lnot P_{82}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-86}{P_{86}}\\) — Micah 5:5–6 sets the ruler from Bethlehem against the Assyrian invasion
+- (2) \\(\href{#claim-87}{P_{87}}\\) — Micah 5:2 was read messianically in first-century Judaism
+- (3) \\((\href{#claim-86}{P_{86}} \land \href{#claim-87}{P_{87}}) \rightarrow \lnot \href{#claim-82}{P_{82}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-82}{P_{82}}\\) — *at issue, the denial of:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4851,15 +4753,13 @@ No premise here rests on scripture alone.
 Motyer's reply as a position of its own: Isaiah 7:14 is not a near-term
 sign to Ahaz.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{84} \\
-\text{(2)} \quad &amp; P_{85} \\
-\text{(3)} \quad &amp; (P_{84} \land P_{85}) \rightarrow \lnot P_{81} \\[4pt]
-\vdash \quad &amp; \lnot P_{81}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-84}{P_{84}}\\) — Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz
+- (2) \\(\href{#claim-85}{P_{85}}\\) — Isaiah 8:4 gives Maher-shalal-hash-baz the timetable 7:16 gives the child of 7:14
+- (3) \\((\href{#claim-84}{P_{84}} \land \href{#claim-85}{P_{85}}) \rightarrow \lnot \href{#claim-81}{P_{81}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-81}{P_{81}}\\) — *at issue, the denial of:* Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4870,17 +4770,15 @@ No premise here rests on scripture alone.
 The critical denial with Postell's parity argument in play, and the
 exclusion premise no longer simply granted.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{81} \\
-\text{(2)} \quad &amp; P_{47} \\
-\text{(3)} \quad &amp; P_{48} \\
-\text{(4)} \quad &amp; (P_{47} \land P_{48}) \rightarrow \lnot P_{82} \\
-\text{(5)} \quad &amp; (P_{81} \land P_{82}) \rightarrow \lnot P_{1} \\[4pt]
-\vdash \quad &amp; \lnot P_{1}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (2) \\(\href{#claim-47}{P_{47}}\\) — Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation
+- (3) \\(\href{#claim-48}{P_{48}}\\) — Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14
+- (4) \\((\href{#claim-47}{P_{47}} \land \href{#claim-48}{P_{48}}) \rightarrow \lnot \href{#claim-82}{P_{82}}\\) — *would deny:* A sign given for Ahaz's generation is not also a prediction of a virgin birth
+- (5) \\((\href{#claim-81}{P_{81}} \land \href{#claim-82}{P_{82}}) \rightarrow \lnot \href{#claim-1}{P_{1}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-1}{P_{1}}\\) — *at issue, the denial of:* Isaiah 7:14 is a Messianic prediction of a virgin birth
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4893,19 +4791,17 @@ claim never required עַלְמָה to denote virginity. Its conclusion is the *
 of the objection's premise*, not the criterion — see
 `compatibility_does_not_establish_criterion`.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{4} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{79} \\
-\text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7} \\
-\text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\[4pt]
-\vdash \quad &amp; \lnot P_{8}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-4}{P_{4}}\\) — עַלְמָה denotes a young woman of marriageable age
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Being a virgin does not exclude a woman from the denotation of עַלְמָה
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Mary at the conception was a betrothed young woman of marriageable age
+- (4) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (5) \\(\href{#claim-13}{P_{13}}\\) — 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text
+- (6) \\((\href{#claim-4}{P_{4}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-7}{P_{7}}\\) — *would give:* Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes
+- (7) \\(\href{#claim-7}{P_{7}} \rightarrow \lnot \href{#claim-8}{P_{8}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-8}{P_{8}}\\) — *at issue, the denial of:* Matthew's fulfilment claim requires that עַלְמָה itself denote virginity
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4915,20 +4811,18 @@ No premise here rests on scripture alone.
 
 The same premises, asked to deliver the criterion instead. They do not.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{4} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; P_{79} \\
-\text{(5)} \quad &amp; P_{13} \\
-\text{(6)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7} \\
-\text{(7)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
-\text{(8)} \quad &amp; (P_{93} \land P_{79}) \rightarrow P_{94} \\[4pt]
-\vdash \quad &amp; P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-4}{P_{4}}\\) — עַלְמָה denotes a young woman of marriageable age
+- (2) \\(\href{#claim-5}{P_{5}}\\) — Being a virgin does not exclude a woman from the denotation of עַלְמָה
+- (3) \\(\href{#claim-6}{P_{6}}\\) — Mary at the conception was a betrothed young woman of marriageable age
+- (4) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (5) \\(\href{#claim-13}{P_{13}}\\) — 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text
+- (6) \\((\href{#claim-4}{P_{4}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-7}{P_{7}}\\) — *would give:* Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes
+- (7) \\(\href{#claim-7}{P_{7}} \rightarrow \lnot \href{#claim-8}{P_{8}}\\) — *would deny:* Matthew's fulfilment claim requires that עַלְמָה itself denote virginity
+- (8) \\((\href{#claim-93}{P_{93}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\href{#claim-94}{P_{94}}\\) — *at issue:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4950,19 +4844,17 @@ settles the word's denotation.
 Stated first and in full, because the results that follow are about where its
 weight rests and are worth nothing against a weakened rival.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{35} \\
-\text{(4)} \quad &amp; P_{37} \\
-\text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\
-\text{(6)} \quad &amp; (P_{34} \land P_{35}) \rightarrow P_{36} \\
-\text{(7)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{2} \\[4pt]
-\vdash \quad &amp; \lnot P_{2}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-35}{P_{35}}\\) — The pregnancy Isaiah 7:14 announces is an ordinary conception
+- (4) \\(\href{#claim-37}{P_{37}}\\) — What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+- (5) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+- (6) \\((\href{#claim-34}{P_{34}} \land \href{#claim-35}{P_{35}}) \rightarrow \href{#claim-36}{P_{36}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is not a virgin
+- (7) \\((\href{#claim-36}{P_{36}} \land \href{#claim-37}{P_{37}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-2}{P_{2}}\\) — *at issue, the denial of:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 No premise here rests on scripture alone.
@@ -4974,16 +4866,14 @@ Wegner's line with the ordinary pregnancy no longer granted. It is the one
 ground that goes; the parse, the near-term setting and the referent principle
 all stay.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{37} \\
-\text{(4)} \quad &amp; P_{33} \rightarrow P_{34} \\[4pt]
-\vdash \quad &amp; P_{34}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-37}{P_{37}}\\) — What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+- (4) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{#claim-34}{P_{34}}\\) — *at issue:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+
 </div>
 
 <a id="wegnerWithoutOrdinaryPregnancy"></a>
@@ -4993,19 +4883,17 @@ The same objection with the ordinary pregnancy derived instead of assumed —
 derived as Wegner derives it, from the reading of the sign, which is not
 granted either.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{37} \\
-\text{(4)} \quad &amp; P_{33} \rightarrow P_{34} \\
-\text{(5)} \quad &amp; (P_{81} \land \lnot P_{1}) \rightarrow P_{35} \\
-\text{(6)} \quad &amp; (P_{34} \land P_{35}) \rightarrow P_{36} \\
-\text{(7)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{2} \\[4pt]
-\vdash \quad &amp; \lnot P_{2}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-37}{P_{37}}\\) — What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+- (4) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+- (5) \\((\href{#claim-81}{P_{81}} \land \lnot \href{#claim-1}{P_{1}}) \rightarrow \href{#claim-35}{P_{35}}\\) — *would give:* The pregnancy Isaiah 7:14 announces is an ordinary conception
+- (6) \\((\href{#claim-34}{P_{34}} \land \href{#claim-35}{P_{35}}) \rightarrow \href{#claim-36}{P_{36}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is not a virgin
+- (7) \\((\href{#claim-36}{P_{36}} \land \href{#claim-37}{P_{37}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-2}{P_{2}}\\) — *at issue, the denial of:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5017,17 +4905,15 @@ Wegner's line as it stands inside the circle: the ordinary pregnancy gone
 from its grounds, and the demand that עַלְמָה carry the sense — which is what the
 return leg needs — put in.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{37} \\
-\text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\[4pt]
-\vdash \quad &amp; P_{34}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-37}{P_{37}}\\) — What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+- (4) \\(\href{#claim-8}{P_{8}}\\) — Matthew's fulfilment claim requires that עַלְמָה itself denote virginity
+- (5) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{#claim-34}{P_{34}}\\) — *at issue:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+
 </div>
 
 <a id="wegnerCircle"></a>
@@ -5037,21 +4923,19 @@ return leg needs — put in.
 the parse, the near-term setting, the referent principle, and the demand that
 עַלְמָה carry the sense. Asked for the lexical conclusion.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{37} \\
-\text{(4)} \quad &amp; P_{8} \\
-\text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\
-\text{(6)} \quad &amp; (P_{81} \land \lnot P_{1}) \rightarrow P_{35} \\
-\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{1} \\
-\text{(8)} \quad &amp; (P_{34} \land P_{35}) \rightarrow P_{36} \\
-\text{(9)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{2} \\[4pt]
-\vdash \quad &amp; \lnot P_{2}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-37}{P_{37}}\\) — What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+- (4) \\(\href{#claim-8}{P_{8}}\\) — Matthew's fulfilment claim requires that עַלְמָה itself denote virginity
+- (5) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+- (6) \\((\href{#claim-81}{P_{81}} \land \lnot \href{#claim-1}{P_{1}}) \rightarrow \href{#claim-35}{P_{35}}\\) — *would give:* The pregnancy Isaiah 7:14 announces is an ordinary conception
+- (7) \\((\lnot \href{#claim-2}{P_{2}} \land \href{#claim-8}{P_{8}}) \rightarrow \lnot \href{#claim-1}{P_{1}}\\) — *would deny:* Isaiah 7:14 is a Messianic prediction of a virgin birth
+- (8) \\((\href{#claim-34}{P_{34}} \land \href{#claim-35}{P_{35}}) \rightarrow \href{#claim-36}{P_{36}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is not a virgin
+- (9) \\((\href{#claim-36}{P_{36}} \land \href{#claim-37}{P_{37}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-2}{P_{2}}\\) — *at issue, the denial of:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5063,17 +4947,15 @@ Wegner's line with Postell's usage datum in place of the referent
 principle. The parse and the ordinary pregnancy both stay: this reply concedes
 the referent and contests only what may be inferred from it.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{35} \\
-\text{(4)} \quad &amp; P_{38} \\
-\text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\[4pt]
-\vdash \quad &amp; P_{34}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-35}{P_{35}}\\) — The pregnancy Isaiah 7:14 announces is an ordinary conception
+- (4) \\(\href{#claim-38}{P_{38}}\\) — In the other clear עַלְמָה passages Wegner lists, the women are virgins
+- (5) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{#claim-34}{P_{34}}\\) — *at issue:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+
 </div>
 
 <a id="wegnerUnderUsageParity"></a>
@@ -5081,20 +4963,18 @@ the referent and contests only what may be inferred from it.
 
 Wegner's objection with Postell's usage parity in play.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{35} \\
-\text{(4)} \quad &amp; P_{38} \\
-\text{(5)} \quad &amp; P_{33} \rightarrow P_{34} \\
-\text{(6)} \quad &amp; P_{38} \rightarrow \lnot P_{37} \\
-\text{(7)} \quad &amp; (P_{34} \land P_{35}) \rightarrow P_{36} \\
-\text{(8)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{2} \\[4pt]
-\vdash \quad &amp; \lnot P_{2}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-35}{P_{35}}\\) — The pregnancy Isaiah 7:14 announces is an ordinary conception
+- (4) \\(\href{#claim-38}{P_{38}}\\) — In the other clear עַלְמָה passages Wegner lists, the women are virgins
+- (5) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+- (6) \\(\href{#claim-38}{P_{38}} \rightarrow \lnot \href{#claim-37}{P_{37}}\\) — *would deny:* What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+- (7) \\((\href{#claim-34}{P_{34}} \land \href{#claim-35}{P_{35}}) \rightarrow \href{#claim-36}{P_{36}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is not a virgin
+- (8) \\((\href{#claim-36}{P_{36}} \land \href{#claim-37}{P_{37}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-2}{P_{2}}\\) — *at issue, the denial of:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5108,15 +4988,13 @@ The fathers' sign argument as a position of its own: its conclusion is that
 the pregnancy of Isaiah 7:14 is not an ordinary one, and nothing about the
 word.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{39} \\
-\text{(2)} \quad &amp; P_{40} \\
-\text{(3)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{35} \\[4pt]
-\vdash \quad &amp; \lnot P_{35}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-39}{P_{39}}\\) — The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11
+- (2) \\(\href{#claim-40}{P_{40}}\\) — An ordinary conception is nothing extraordinary: it happens to all women
+- (3) \\((\href{#claim-39}{P_{39}} \land \href{#claim-40}{P_{40}}) \rightarrow \lnot \href{#claim-35}{P_{35}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-35}{P_{35}}\\) — *at issue, the denial of:* The pregnancy Isaiah 7:14 announces is an ordinary conception
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5127,15 +5005,13 @@ No premise here rests on scripture alone.
 The near-term reply as a position of its own: the sign of Isaiah 7:14 need
 not be extraordinary.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{42} \\
-\text{(3)} \quad &amp; (P_{41} \land P_{42}) \rightarrow \lnot P_{39} \\[4pt]
-\vdash \quad &amp; \lnot P_{39}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-41}{P_{41}}\\) — Signs elsewhere in Isaiah are ordinary events: his children, 8:18
+- (2) \\(\href{#claim-42}{P_{42}}\\) — Isaiah 7:16 dates the deliverance by a child's infancy
+- (3) \\((\href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}}) \rightarrow \lnot \href{#claim-39}{P_{39}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-39}{P_{39}}\\) — *at issue, the denial of:* The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5147,18 +5023,16 @@ Wegner's line with the sign argument in play: the ordinary pregnancy no
 longer granted, and the fathers' two grounds in its place. The parse, the
 near-term setting and the referent principle all stay.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{39} \\
-\text{(4)} \quad &amp; P_{40} \\
-\text{(5)} \quad &amp; P_{37} \\
-\text{(6)} \quad &amp; P_{33} \rightarrow P_{34} \\[4pt]
-\vdash \quad &amp; P_{34}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-39}{P_{39}}\\) — The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11
+- (4) \\(\href{#claim-40}{P_{40}}\\) — An ordinary conception is nothing extraordinary: it happens to all women
+- (5) \\(\href{#claim-37}{P_{37}}\\) — What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+- (6) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{#claim-34}{P_{34}}\\) — *at issue:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+
 </div>
 
 <a id="wegnerUnderTheSign"></a>
@@ -5166,21 +5040,19 @@ near-term setting and the referent principle all stay.
 
 Wegner's objection with the fathers' sign argument in play.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{33} \\
-\text{(2)} \quad &amp; P_{81} \\
-\text{(3)} \quad &amp; P_{39} \\
-\text{(4)} \quad &amp; P_{40} \\
-\text{(5)} \quad &amp; P_{37} \\
-\text{(6)} \quad &amp; P_{33} \rightarrow P_{34} \\
-\text{(7)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{35} \\
-\text{(8)} \quad &amp; (P_{34} \land P_{35}) \rightarrow P_{36} \\
-\text{(9)} \quad &amp; (P_{36} \land P_{37}) \rightarrow \lnot P_{2} \\[4pt]
-\vdash \quad &amp; \lnot P_{2}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-33}{P_{33}}\\) — הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant
+- (2) \\(\href{#claim-81}{P_{81}}\\) — Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation
+- (3) \\(\href{#claim-39}{P_{39}}\\) — The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11
+- (4) \\(\href{#claim-40}{P_{40}}\\) — An ordinary conception is nothing extraordinary: it happens to all women
+- (5) \\(\href{#claim-37}{P_{37}}\\) — What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes
+- (6) \\(\href{#claim-33}{P_{33}} \rightarrow \href{#claim-34}{P_{34}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given
+- (7) \\((\href{#claim-39}{P_{39}} \land \href{#claim-40}{P_{40}}) \rightarrow \lnot \href{#claim-35}{P_{35}}\\) — *would deny:* The pregnancy Isaiah 7:14 announces is an ordinary conception
+- (8) \\((\href{#claim-34}{P_{34}} \land \href{#claim-35}{P_{35}}) \rightarrow \href{#claim-36}{P_{36}}\\) — *would give:* The עַלְמָה of Isaiah 7:14 is not a virgin
+- (9) \\((\href{#claim-36}{P_{36}} \land \href{#claim-37}{P_{37}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-2}{P_{2}}\\) — *at issue, the denial of:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5191,16 +5063,14 @@ No premise here rests on scripture alone.
 The sign argument with the near-term reply in play: its first ground no
 longer granted, and the reply's grounds in its place.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{40} \\
-\text{(2)} \quad &amp; P_{41} \\
-\text{(3)} \quad &amp; P_{42} \\
-\text{(4)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{35} \\[4pt]
-\vdash \quad &amp; \lnot P_{35}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-40}{P_{40}}\\) — An ordinary conception is nothing extraordinary: it happens to all women
+- (2) \\(\href{#claim-41}{P_{41}}\\) — Signs elsewhere in Isaiah are ordinary events: his children, 8:18
+- (3) \\(\href{#claim-42}{P_{42}}\\) — Isaiah 7:16 dates the deliverance by a child's infancy
+- (4) \\((\href{#claim-39}{P_{39}} \land \href{#claim-40}{P_{40}}) \rightarrow \lnot \href{#claim-35}{P_{35}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-35}{P_{35}}\\) — *at issue, the denial of:* The pregnancy Isaiah 7:14 announces is an ordinary conception
+
 </div>
 
 <a id="signArgumentUnderReply"></a>
@@ -5208,17 +5078,15 @@ longer granted, and the reply's grounds in its place.
 
 The fathers' sign argument with the near-term reply in play.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{40} \\
-\text{(2)} \quad &amp; P_{41} \\
-\text{(3)} \quad &amp; P_{42} \\
-\text{(4)} \quad &amp; (P_{39} \land P_{40}) \rightarrow \lnot P_{35} \\
-\text{(5)} \quad &amp; (P_{41} \land P_{42}) \rightarrow \lnot P_{39} \\[4pt]
-\vdash \quad &amp; \lnot P_{35}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-40}{P_{40}}\\) — An ordinary conception is nothing extraordinary: it happens to all women
+- (2) \\(\href{#claim-41}{P_{41}}\\) — Signs elsewhere in Isaiah are ordinary events: his children, 8:18
+- (3) \\(\href{#claim-42}{P_{42}}\\) — Isaiah 7:16 dates the deliverance by a child's infancy
+- (4) \\((\href{#claim-39}{P_{39}} \land \href{#claim-40}{P_{40}}) \rightarrow \lnot \href{#claim-35}{P_{35}}\\)
+- (5) \\((\href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}}) \rightarrow \lnot \href{#claim-39}{P_{39}}\\) — *would deny:* The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11
+- \\(\vdash\\) \\(\lnot \href{#claim-35}{P_{35}}\\) — *at issue, the denial of:* The pregnancy Isaiah 7:14 announces is an ordinary conception
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5231,16 +5099,14 @@ No premise here rests on scripture alone.
 The Septuagint as a witness, as a position of its own: its conclusion is
 what its translator read, and nothing yet about Isaiah's word.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{15} \\
-\text{(3)} \quad &amp; P_{16} \\
-\text{(4)} \quad &amp; (P_{9} \land P_{15} \land P_{16}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (2) \\(\href{#claim-15}{P_{15}}\\) — The Greek Isaiah was translated by Jews before the coming of Christ
+- (3) \\(\href{#claim-16}{P_{16}}\\) — In the Greek of the Septuagint, παρθένος means a virgin
+- (4) \\((\href{#claim-9}{P_{9}} \land \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}) \rightarrow \href{#claim-31}{P_{31}}\\)
+- \\(\vdash\\) \\(\href{#claim-31}{P_{31}}\\) — *at issue:* Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5251,16 +5117,14 @@ No premise here rests on scripture alone.
 Wegner on παρθένος, as a position of its own: in the Septuagint's day the
 word meant "young woman", and not yet "virgin".
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{18} \\
-\text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; P_{76} \\
-\text{(4)} \quad &amp; (P_{18} \land P_{19} \land P_{76}) \rightarrow P_{17} \\[4pt]
-\vdash \quad &amp; P_{17}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-18}{P_{18}}\\) — In early Greek, παρθένος meant a young woman, with or without virginity
+- (2) \\(\href{#claim-19}{P_{19}}\\) — The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2)
+- (3) \\(\href{#claim-76}{P_{76}}\\) — At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller)
+- (4) \\((\href{#claim-18}{P_{18}} \land \href{#claim-19}{P_{19}} \land \href{#claim-76}{P_{76}}) \rightarrow \href{#claim-17}{P_{17}}\\)
+- \\(\vdash\\) \\(\href{#claim-17}{P_{17}}\\) — *at issue:* In the Septuagint's day, παρθένος meant 'young woman'; not yet 'virgin'
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5271,16 +5135,14 @@ No premise here rests on scripture alone.
 Rico and Gentry's case from usage as a position of its own: "virgin" is a
 sense of παρθένος in the Septuagint's Greek.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{20} \\
-\text{(2)} \quad &amp; P_{11} \\
-\text{(3)} \quad &amp; P_{30} \\
-\text{(4)} \quad &amp; (P_{20} \land P_{11} \land P_{30}) \rightarrow P_{16} \\[4pt]
-\vdash \quad &amp; P_{16}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-20}{P_{20}}\\) — Elsewhere in the Greek Isaiah, παρθένος renders בְּתוּלָה
+- (2) \\(\href{#claim-11}{P_{11}}\\) — Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις
+- (3) \\(\href{#claim-30}{P_{30}}\\) — Trypho rejects the Septuagint's 'the virgin' and reads 'the young woman'
+- (4) \\((\href{#claim-20}{P_{20}} \land \href{#claim-11}{P_{11}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-16}{P_{16}}\\)
+- \\(\vdash\\) \\(\href{#claim-16}{P_{16}}\\) — *at issue:* In the Greek of the Septuagint, παρθένος means a virgin
+
 </div>
 
 Grounded in scripture alone: Elsewhere in the Greek Isaiah, παρθένος renders בְּתוּלָה.
@@ -5291,15 +5153,13 @@ Grounded in scripture alone: Elsewhere in the Greek Isaiah, παρθένος ren
 The case from the laws as a position of its own: in the Greek Pentateuch's
 laws, παρθένος is used in the sense "virgin".
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{21} \\
-\text{(2)} \quad &amp; P_{22} \\
-\text{(3)} \quad &amp; (P_{21} \land P_{22}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-21}{P_{21}}\\) — The high priest of the Greek Leviticus marries a παρθένος, not a widow or a harlot
+- (2) \\(\href{#claim-22}{P_{22}}\\) — In the Greek Deuteronomy, a bride without τὰ παρθένια dies for playing the harlot
+- (3) \\((\href{#claim-21}{P_{21}} \land \href{#claim-22}{P_{22}}) \rightarrow \href{#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\href{#claim-23}{P_{23}}\\) — *at issue:* In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'
+
 </div>
 
 Grounded in scripture alone: The high priest of the Greek Leviticus marries a παρθένος, not a widow or a harlot.
@@ -5310,15 +5170,13 @@ Grounded in scripture alone: The high priest of the Greek Leviticus marries a π
 The status reading of Genesis 34:3 as a position of its own: the Greek names
 Dinah a παρθένος as the law names the seduced virgin, in the sense "virgin".
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{24} \\
-\text{(2)} \quad &amp; P_{25} \\
-\text{(3)} \quad &amp; (P_{24} \land P_{25}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-24}{P_{24}}\\) — In the Greek Exodus, the seduced παρθένος is owed 'the bride-price of virgins'
+- (2) \\(\href{#claim-25}{P_{25}}\\) — Genesis 34 tells Shechem's act in the words of the laws of the violated virgin
+- (3) \\((\href{#claim-24}{P_{24}} \land \href{#claim-25}{P_{25}}) \rightarrow \href{#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\href{#claim-26}{P_{26}}\\) — *at issue:* At Genesis 34:3 the Greek names Dinah a παρθένος as the law names the seduced virgin
+
 </div>
 
 Grounded in scripture alone: In the Greek Exodus, the seduced παρθένος is owed 'the bride-price of virgins', Genesis 34 tells Shechem's act in the words of the laws of the violated virgin.
@@ -5330,18 +5188,16 @@ Grounded in scripture alone: In the Greek Exodus, the seduced παρθένος i
 are not virgins, so the word does not by itself connote virginity, so the laws'
 virginity is the context's.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{19} \\
-\text{(3)} \quad &amp; P_{76} \\
-\text{(4)} \quad &amp; P_{74} \rightarrow P_{75} \\
-\text{(5)} \quad &amp; (P_{19} \land P_{76}) \rightarrow P_{75} \\
-\text{(6)} \quad &amp; P_{75} \rightarrow \lnot P_{23} \\[4pt]
-\vdash \quad &amp; \lnot P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-74}{P_{74}}\\) — The Greek of Joel 1:8 calls a young widow a παρθένος (Miller)
+- (2) \\(\href{#claim-19}{P_{19}}\\) — The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2)
+- (3) \\(\href{#claim-76}{P_{76}}\\) — At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller)
+- (4) \\(\href{#claim-74}{P_{74}} \rightarrow \href{#claim-75}{P_{75}}\\) — *would give:* In the Septuagint, παρθένος did not by itself connote virginity (Miller)
+- (5) \\((\href{#claim-19}{P_{19}} \land \href{#claim-76}{P_{76}}) \rightarrow \href{#claim-75}{P_{75}}\\) — *would give:* In the Septuagint, παρθένος did not by itself connote virginity (Miller)
+- (6) \\(\href{#claim-75}{P_{75}} \rightarrow \lnot \href{#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-23}{P_{23}}\\) — *at issue, the denial of:* In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5353,16 +5209,14 @@ No premise here rests on scripture alone.
 standing: Joel 1:8, which the Greek refutes, taken out (`Dispute.Miller`). The
 position he holds in the dispute over the Septuagint's word.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{19} \\
-\text{(2)} \quad &amp; P_{76} \\
-\text{(3)} \quad &amp; (P_{19} \land P_{76}) \rightarrow P_{75} \\
-\text{(4)} \quad &amp; P_{75} \rightarrow \lnot P_{23} \\[4pt]
-\vdash \quad &amp; \lnot P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-19}{P_{19}}\\) — The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2)
+- (2) \\(\href{#claim-76}{P_{76}}\\) — At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller)
+- (3) \\((\href{#claim-19}{P_{19}} \land \href{#claim-76}{P_{76}}) \rightarrow \href{#claim-75}{P_{75}}\\) — *would give:* In the Septuagint, παρθένος did not by itself connote virginity (Miller)
+- (4) \\(\href{#claim-75}{P_{75}} \rightarrow \lnot \href{#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-23}{P_{23}}\\) — *at issue, the denial of:* In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5373,15 +5227,13 @@ No premise here rests on scripture alone.
 **Miller's dissent, had Joel 1:8 been all his evidence.** Not his argument as
 he makes it, written down to show what striking a refuted claim does.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{74} \\
-\text{(2)} \quad &amp; P_{74} \rightarrow P_{75} \\
-\text{(3)} \quad &amp; P_{75} \rightarrow \lnot P_{23} \\[4pt]
-\vdash \quad &amp; \lnot P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-74}{P_{74}}\\) — The Greek of Joel 1:8 calls a young widow a παρθένος (Miller)
+- (2) \\(\href{#claim-74}{P_{74}} \rightarrow \href{#claim-75}{P_{75}}\\) — *would give:* In the Septuagint, παρθένος did not by itself connote virginity (Miller)
+- (3) \\(\href{#claim-75}{P_{75}} \rightarrow \lnot \href{#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-23}{P_{23}}\\) — *at issue, the denial of:* In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5392,15 +5244,13 @@ No premise here rests on scripture alone.
 Matthew's quotation as a position of its own: in the Greek of Isaiah 7:14,
 which Matthew quotes, παρθένος has the sense "virgin".
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{27} \\
-\text{(2)} \quad &amp; P_{28} \\
-\text{(3)} \quad &amp; (P_{27} \land P_{28}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{29}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-27}{P_{27}}\\) — Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος
+- (2) \\(\href{#claim-28}{P_{28}}\\) — Matthew says Mary conceived before she and Joseph came together
+- (3) \\((\href{#claim-27}{P_{27}} \land \href{#claim-28}{P_{28}}) \rightarrow \href{#claim-29}{P_{29}}\\)
+- \\(\vdash\\) \\(\href{#claim-29}{P_{29}}\\) — *at issue:* In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος means 'virgin'
+
 </div>
 
 Grounded in scripture alone: Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος, Matthew says Mary conceived before she and Joseph came together.
@@ -5414,19 +5264,17 @@ promise of him. Two steps, each rated: the fulfilment (`fulfilmentLine`) and the
 confirmation (`confirmationLine`). The confirmation's ground is the fulfilment's
 conclusion, so it enters as a step, not as a premise.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{64} \\
-\text{(3)} \quad &amp; P_{61} \\
-\text{(4)} \quad &amp; P_{62} \\
-\text{(5)} \quad &amp; P_{63} \\
-\text{(6)} \quad &amp; (P_{50} \land P_{64} \land P_{61} \land P_{62} \land P_{63}) \rightarrow P_{65} \\
-\text{(7)} \quad &amp; P_{65} \rightarrow P_{51} \\[4pt]
-\vdash \quad &amp; P_{51}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-64}{P_{64}}\\) — Paul says God sent his Son 'made of a woman' (Galatians 4:4)
+- (3) \\(\href{#claim-61}{P_{61}}\\) — Revelation calls the devil 'that old serpent' (12:9, 20:2)
+- (4) \\(\href{#claim-62}{P_{62}}\\) — The Son came to destroy the devil and his works, through death
+- (5) \\(\href{#claim-63}{P_{63}}\\) — Paul says Christ died, was buried, and rose the third day
+- (6) \\((\href{#claim-50}{P_{50}} \land \href{#claim-64}{P_{64}} \land \href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \href{#claim-65}{P_{65}}\\) — *would give:* In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent's head
+- (7) \\(\href{#claim-65}{P_{65}} \rightarrow \href{#claim-51}{P_{51}}\\)
+- \\(\vdash\\) \\(\href{#claim-51}{P_{51}}\\) — *at issue:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+
 </div>
 
 Grounded in scripture alone: Paul says God sent his Son 'made of a woman' (Galatians 4:4), Revelation calls the devil 'that old serpent' (12:9, 20:2), The Son came to destroy the devil and his works, through death, Paul says Christ died, was buried, and rose the third day.
@@ -5441,16 +5289,14 @@ messianic reading "are found in late Judaism, but not in the New Testament"
 (261). So his denial that the verse is a promise is a denial that it is
 fulfilled in Jesus, and the package says so.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{68} \\
-\text{(2)} \quad &amp; P_{67} \\
-\text{(3)} \quad &amp; (P_{68} \land P_{67}) \rightarrow \lnot P_{51} \\
-\text{(4)} \quad &amp; P_{65} \rightarrow P_{51} \\[4pt]
-\vdash \quad &amp; \lnot P_{51}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-68}{P_{68}}\\) — At Genesis 3:15 'her seed' is a line of descendants, and not an individual
+- (2) \\(\href{#claim-67}{P_{67}}\\) — Genesis 3:14–15 is a curse on the serpent, in the form of a punishment oracle
+- (3) \\((\href{#claim-68}{P_{68}} \land \href{#claim-67}{P_{67}}) \rightarrow \lnot \href{#claim-51}{P_{51}}\\)
+- (4) \\(\href{#claim-65}{P_{65}} \rightarrow \href{#claim-51}{P_{51}}\\) — *would give:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- \\(\vdash\\) \\(\lnot \href{#claim-51}{P_{51}}\\) — *at issue, the denial of:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5461,16 +5307,14 @@ No premise here rests on scripture alone.
 **The syntax of the striker**, as a position: "her seed" at 3:15 is not only
 a line of descendants.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{69} \\
-\text{(2)} \quad &amp; P_{70} \\
-\text{(3)} \quad &amp; P_{60} \\
-\text{(4)} \quad &amp; (P_{69} \land P_{70} \land P_{60}) \rightarrow \lnot P_{68} \\[4pt]
-\vdash \quad &amp; \lnot P_{68}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-69}{P_{69}}\\) — Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant
+- (2) \\(\href{#claim-70}{P_{70}}\\) — At Genesis 3:15b the striker is singular 'he', against the serpent's own head
+- (3) \\(\href{#claim-60}{P_{60}}\\) — The Greek translator of Genesis read the woman's seed at 3:15 as one person
+- (4) \\((\href{#claim-69}{P_{69}} \land \href{#claim-70}{P_{70}} \land \href{#claim-60}{P_{60}}) \rightarrow \lnot \href{#claim-68}{P_{68}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-68}{P_{68}}\\) — *at issue, the denial of:* At Genesis 3:15 'her seed' is a line of descendants, and not an individual
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5481,17 +5325,15 @@ No premise here rests on scripture alone.
 **The scene read whole**, as a position: the verse is the protoevangelium,
 from the section's own words.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{71} \\
-\text{(2)} \quad &amp; P_{73} \\
-\text{(3)} \quad &amp; P_{70} \\
-\text{(4)} \quad &amp; P_{72} \\
-\text{(5)} \quad &amp; (P_{71} \land P_{73} \land P_{70} \land P_{72}) \rightarrow P_{51} \\[4pt]
-\vdash \quad &amp; P_{51}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-71}{P_{71}}\\) — In Genesis 3 the serpent speaks, and knows and twists God's command
+- (2) \\(\href{#claim-73}{P_{73}}\\) — The serpent of Genesis 3 is the instrument of an evil power
+- (3) \\(\href{#claim-70}{P_{70}}\\) — At Genesis 3:15b the striker is singular 'he', against the serpent's own head
+- (4) \\(\href{#claim-72}{P_{72}}\\) — God sets the enmity himself: 'I will put enmity' (3:15)
+- (5) \\((\href{#claim-71}{P_{71}} \land \href{#claim-73}{P_{73}} \land \href{#claim-70}{P_{70}} \land \href{#claim-72}{P_{72}}) \rightarrow \href{#claim-51}{P_{51}}\\)
+- \\(\vdash\\) \\(\href{#claim-51}{P_{51}}\\) — *at issue:* Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5502,20 +5344,18 @@ No premise here rests on scripture alone.
 **The seed of the woman alone**, as a position: the fulfilment, with the
 virginal conception.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{64} \\
-\text{(3)} \quad &amp; P_{61} \\
-\text{(4)} \quad &amp; P_{62} \\
-\text{(5)} \quad &amp; P_{63} \\
-\text{(6)} \quad &amp; P_{79} \\
-\text{(7)} \quad &amp; (P_{50} \land P_{64} \land P_{61} \land P_{62} \land P_{63}) \rightarrow P_{65} \\
-\text{(8)} \quad &amp; (P_{65} \land P_{79}) \rightarrow P_{66} \\[4pt]
-\vdash \quad &amp; P_{66}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-64}{P_{64}}\\) — Paul says God sent his Son 'made of a woman' (Galatians 4:4)
+- (3) \\(\href{#claim-61}{P_{61}}\\) — Revelation calls the devil 'that old serpent' (12:9, 20:2)
+- (4) \\(\href{#claim-62}{P_{62}}\\) — The Son came to destroy the devil and his works, through death
+- (5) \\(\href{#claim-63}{P_{63}}\\) — Paul says Christ died, was buried, and rose the third day
+- (6) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (7) \\((\href{#claim-50}{P_{50}} \land \href{#claim-64}{P_{64}} \land \href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \href{#claim-65}{P_{65}}\\) — *would give:* In Jesus the promise of Genesis 3:15 is fulfilled: he crushes the serpent's head
+- (8) \\((\href{#claim-65}{P_{65}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-66}{P_{66}}\\)
+- \\(\vdash\\) \\(\href{#claim-66}{P_{66}}\\) — *at issue:* The seed in whom Genesis 3:15 is fulfilled was of the woman alone
+
 </div>
 
 Grounded in scripture alone: Paul says God sent his Son 'made of a woman' (Galatians 4:4), Revelation calls the devil 'that old serpent' (12:9, 20:2), The Son came to destroy the devil and his works, through death, Paul says Christ died, was buried, and rose the third day.
@@ -5527,15 +5367,13 @@ The Septuagint as a witness, with the claim about its word taken away: the
 rendering and its date stay, and nothing is granted about what παρθένος meant.
 Its conclusion no longer follows (`parthenos_is_load_bearing`).
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{15} \\
-\text{(3)} \quad &amp; (P_{9} \land P_{15} \land P_{16}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (2) \\(\href{#claim-15}{P_{15}}\\) — The Greek Isaiah was translated by Jews before the coming of Christ
+- (3) \\((\href{#claim-9}{P_{9}} \land \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}) \rightarrow \href{#claim-31}{P_{31}}\\)
+- \\(\vdash\\) \\(\href{#claim-31}{P_{31}}\\) — *at issue:* Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5575,17 +5413,15 @@ def septuagintToTheWordSource : Source :=
 the translator's reading to what עַלְמָה denotes added. That step is rated
 `disputed`, and the case is only as good as it is.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{15} \\
-\text{(3)} \quad &amp; P_{16} \\
-\text{(4)} \quad &amp; (P_{9} \land P_{15} \land P_{16}) \rightarrow P_{31} \\
-\text{(5)} \quad &amp; P_{31} \rightarrow P_{2} \\[4pt]
-\vdash \quad &amp; P_{2}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (2) \\(\href{#claim-15}{P_{15}}\\) — The Greek Isaiah was translated by Jews before the coming of Christ
+- (3) \\(\href{#claim-16}{P_{16}}\\) — In the Greek of the Septuagint, παρθένος means a virgin
+- (4) \\((\href{#claim-9}{P_{9}} \land \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}) \rightarrow \href{#claim-31}{P_{31}}\\) — *would give:* Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin
+- (5) \\(\href{#claim-31}{P_{31}} \rightarrow \href{#claim-2}{P_{2}}\\)
+- \\(\vdash\\) \\(\href{#claim-2}{P_{2}}\\) — *at issue:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5596,17 +5432,15 @@ No premise here rests on scripture alone.
 The Septuagint's line with the tense of its verb among the grounds: the
 virgin *shall* be with child.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{15} \\
-\text{(3)} \quad &amp; P_{16} \\
-\text{(4)} \quad &amp; P_{32} \\
-\text{(5)} \quad &amp; (P_{9} \land P_{15} \land P_{16}) \rightarrow P_{31} \\[4pt]
-\vdash \quad &amp; P_{31}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (2) \\(\href{#claim-15}{P_{15}}\\) — The Greek Isaiah was translated by Jews before the coming of Christ
+- (3) \\(\href{#claim-16}{P_{16}}\\) — In the Greek of the Septuagint, παρθένος means a virgin
+- (4) \\(\href{#claim-32}{P_{32}}\\) — The Septuagint puts the conception in the future: 'she shall be with child'
+- (5) \\((\href{#claim-9}{P_{9}} \land \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}) \rightarrow \href{#claim-31}{P_{31}}\\)
+- \\(\vdash\\) \\(\href{#claim-31}{P_{31}}\\) — *at issue:* Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin
+
 </div>
 
 #### Genesis 3:15, and what "her seed" says of a father
@@ -5619,17 +5453,15 @@ promise, the seed named as the woman's, and the hinge that this marks a birth
 with no human father, delivering the criterion. The rival whose hinge
 `Results.Genesis` reads two ways.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{51} \\
-\text{(3)} \quad &amp; P_{52} \\
-\text{(4)} \quad &amp; P_{53} \\
-\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\[4pt]
-\vdash \quad &amp; P_{93}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (3) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (4) \\(\href{#claim-53}{P_{53}}\\) — The matrilineal wording of Genesis 3:15 marks a birth with no human father
+- (5) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\)
+- \\(\vdash\\) \\(\href{#claim-93}{P_{93}}\\) — *at issue:* The Messiah must be born of a virgin
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5639,16 +5471,14 @@ No premise here rests on scripture alone.
 
 Luther's case from the wording, as a position of its own.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{51} \\
-\text{(3)} \quad &amp; P_{52} \\
-\text{(4)} \quad &amp; (P_{50} \land P_{51} \land P_{52}) \rightarrow P_{54} \\[4pt]
-\vdash \quad &amp; P_{54}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (3) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (4) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}}) \rightarrow \href{#claim-54}{P_{54}}\\)
+- \\(\vdash\\) \\(\href{#claim-54}{P_{54}}\\) — *at issue:* The wording 'her seed' itself signifies a birth with no human father
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5658,16 +5488,14 @@ No premise here rests on scripture alone.
 
 Leupold's case from the woman's posterity, as a position of its own.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{56} \\
-\text{(3)} \quad &amp; P_{57} \\
-\text{(4)} \quad &amp; (P_{50} \land P_{56} \land P_{57}) \rightarrow \lnot P_{54} \\[4pt]
-\vdash \quad &amp; \lnot P_{54}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-56}{P_{56}}\\) — 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person
+- (3) \\(\href{#claim-57}{P_{57}}\\) — The seed is called the woman's because the serpent deceived the woman
+- (4) \\((\href{#claim-50}{P_{50}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-54}{P_{54}}\\) — *at issue, the denial of:* The wording 'her seed' itself signifies a birth with no human father
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5677,15 +5505,13 @@ No premise here rests on scripture alone.
 
 Lewis's case from the idiom, as a position of its own.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{58} \\
-\text{(3)} \quad &amp; (P_{50} \land P_{58}) \rightarrow \lnot P_{54} \\[4pt]
-\vdash \quad &amp; \lnot P_{54}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-58}{P_{58}}\\) — Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's
+- (3) \\((\href{#claim-50}{P_{50}} \land \href{#claim-58}{P_{58}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-54}{P_{54}}\\) — *at issue, the denial of:* The wording 'her seed' itself signifies a birth with no human father
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5695,14 +5521,12 @@ No premise here rests on scripture alone.
 
 The Greek's "he", as a position of its own.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{59} \\
-\text{(2)} \quad &amp; P_{59} \rightarrow P_{60} \\[4pt]
-\vdash \quad &amp; P_{60}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-59}{P_{59}}\\) — The Greek of Genesis 3:15 calls the woman's seed 'he', though σπέρμα is neuter
+- (2) \\(\href{#claim-59}{P_{59}} \rightarrow \href{#claim-60}{P_{60}}\\)
+- \\(\vdash\\) \\(\href{#claim-60}{P_{60}}\\) — *at issue:* The Greek translator of Genesis read the woman's seed at 3:15 as one person
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5714,17 +5538,15 @@ The Greek's line with the promise's grounds beside it: the seed named as the
 woman's, Genesis 3:15 as the first promise of a redeemer, and a man's seed
 reckoned through him. Luther's step is not among them.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{59} \\
-\text{(2)} \quad &amp; P_{50} \\
-\text{(3)} \quad &amp; P_{51} \\
-\text{(4)} \quad &amp; P_{52} \\
-\text{(5)} \quad &amp; P_{59} \rightarrow P_{60} \\[4pt]
-\vdash \quad &amp; P_{60}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-59}{P_{59}}\\) — The Greek of Genesis 3:15 calls the woman's seed 'he', though σπέρμα is neuter
+- (2) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (3) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (4) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (5) \\(\href{#claim-59}{P_{59}} \rightarrow \href{#claim-60}{P_{60}}\\)
+- \\(\vdash\\) \\(\href{#claim-60}{P_{60}}\\) — *at issue:* The Greek translator of Genesis read the woman's seed at 3:15 as one person
+
 </div>
 
 <a id="lexicalCritical"></a>
@@ -5733,19 +5555,17 @@ reckoned through him. Luther's step is not among them.
 The lexical objection with its versional support, stated as its holder
 would state it.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{10} \\
-\text{(2)} \quad &amp; P_{11} \\
-\text{(3)} \quad &amp; P_{13} \\
-\text{(4)} \quad &amp; P_{14} \\
-\text{(5)} \quad &amp; P_{8} \\
-\text{(6)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(7)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{94} \\[4pt]
-\vdash \quad &amp; \lnot P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-10}{P_{10}}\\) — Targum Jonathan renders עַלְמָה at Isaiah 7:14 as עוּלֵימְתָא, 'young woman'
+- (2) \\(\href{#claim-11}{P_{11}}\\) — Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις
+- (3) \\(\href{#claim-13}{P_{13}}\\) — 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text
+- (4) \\(\href{#claim-14}{P_{14}}\\) — The split among the ancient versions shows עַלְמָה does not denote virginity
+- (5) \\(\href{#claim-8}{P_{8}}\\) — Matthew's fulfilment claim requires that עַלְמָה itself denote virginity
+- (6) \\((\href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}} \land \href{#claim-14}{P_{14}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\) — *would deny:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+- (7) \\((\lnot \href{#claim-2}{P_{2}} \land \href{#claim-8}{P_{8}}) \rightarrow \lnot \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-94}{P_{94}}\\) — *at issue, the denial of:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -5759,26 +5579,24 @@ key premise no longer simply granted.
 Written flat: it is the objector's grounds and the replies to them side by
 side, which is neither one line nor several converging ones.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{10} \\
-\text{(2)} \quad &amp; P_{11} \\
-\text{(3)} \quad &amp; P_{13} \\
-\text{(4)} \quad &amp; P_{9} \\
-\text{(5)} \quad &amp; P_{12} \\
-\text{(6)} \quad &amp; P_{4} \\
-\text{(7)} \quad &amp; P_{5} \\
-\text{(8)} \quad &amp; P_{6} \\
-\text{(9)} \quad &amp; P_{79} \\
-\text{(10)} \quad &amp; (P_{4} \land P_{5} \land P_{6} \land P_{79}) \rightarrow P_{7} \\
-\text{(11)} \quad &amp; P_{7} \rightarrow \lnot P_{8} \\
-\text{(12)} \quad &amp; (P_{5} \land P_{9} \land P_{12}) \rightarrow \lnot P_{14} \\
-\text{(13)} \quad &amp; (P_{10} \land P_{11} \land P_{14}) \rightarrow \lnot P_{2} \\
-\text{(14)} \quad &amp; (\lnot P_{2} \land P_{8}) \rightarrow \lnot P_{94} \\[4pt]
-\vdash \quad &amp; \lnot P_{94}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-10}{P_{10}}\\) — Targum Jonathan renders עַלְמָה at Isaiah 7:14 as עוּלֵימְתָא, 'young woman'
+- (2) \\(\href{#claim-11}{P_{11}}\\) — Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις
+- (3) \\(\href{#claim-13}{P_{13}}\\) — 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14, as the Masoretic Text
+- (4) \\(\href{#claim-9}{P_{9}}\\) — The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος
+- (5) \\(\href{#claim-12}{P_{12}}\\) — The Syriac Peshitta renders Isaiah 7:14 with ܒܬܘܠܬܐ, 'virgin'
+- (6) \\(\href{#claim-4}{P_{4}}\\) — עַלְמָה denotes a young woman of marriageable age
+- (7) \\(\href{#claim-5}{P_{5}}\\) — Being a virgin does not exclude a woman from the denotation of עַלְמָה
+- (8) \\(\href{#claim-6}{P_{6}}\\) — Mary at the conception was a betrothed young woman of marriageable age
+- (9) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (10) \\((\href{#claim-4}{P_{4}} \land \href{#claim-5}{P_{5}} \land \href{#claim-6}{P_{6}} \land \href{#claim-79}{P_{79}}) \rightarrow \href{#claim-7}{P_{7}}\\) — *would give:* Mary answers the description at Isaiah 7:14 whatever עַלְמָה denotes
+- (11) \\(\href{#claim-7}{P_{7}} \rightarrow \lnot \href{#claim-8}{P_{8}}\\) — *would deny:* Matthew's fulfilment claim requires that עַלְמָה itself denote virginity
+- (12) \\((\href{#claim-5}{P_{5}} \land \href{#claim-9}{P_{9}} \land \href{#claim-12}{P_{12}}) \rightarrow \lnot \href{#claim-14}{P_{14}}\\) — *would deny:* The split among the ancient versions shows עַלְמָה does not denote virginity
+- (13) \\((\href{#claim-10}{P_{10}} \land \href{#claim-11}{P_{11}} \land \href{#claim-14}{P_{14}}) \rightarrow \lnot \href{#claim-2}{P_{2}}\\) — *would deny:* עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman
+- (14) \\((\lnot \href{#claim-2}{P_{2}} \land \href{#claim-8}{P_{8}}) \rightarrow \lnot \href{#claim-94}{P_{94}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-94}{P_{94}}\\) — *at issue, the denial of:* Jesus of Nazareth satisfies the virgin-birth criterion
+
 </div>
 
 No premise here rests on scripture alone.
@@ -7323,18 +7141,16 @@ def asWhatTheWordingFits : Reading Claim :=
 
 The protoevangelium strand with its hinge read as Luther reads it.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{51} \\
-\text{(3)} \quad &amp; P_{52} \\
-\text{(4)} \quad &amp; P_{53} \\
-\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
-\text{(6)} \quad &amp; P_{53} \rightarrow P_{54} \\[4pt]
-\vdash \quad &amp; P_{93}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (3) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (4) \\(\href{#claim-53}{P_{53}}\\) — The matrilineal wording of Genesis 3:15 marks a birth with no human father
+- (5) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\)
+- (6) \\(\href{#claim-53}{P_{53}} \rightarrow \href{#claim-54}{P_{54}}\\) — *would give:* The wording 'her seed' itself signifies a birth with no human father
+- \\(\vdash\\) \\(\href{#claim-93}{P_{93}}\\) — *at issue:* The Messiah must be born of a virgin
+
 </div>
 
 No premise here rests on scripture alone.
@@ -7344,20 +7160,18 @@ No premise here rests on scripture alone.
 
 The protoevangelium strand with its hinge read as Leupold reads it.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{50} \\
-\text{(2)} \quad &amp; P_{51} \\
-\text{(3)} \quad &amp; P_{52} \\
-\text{(4)} \quad &amp; P_{53} \\
-\text{(5)} \quad &amp; (P_{50} \land P_{51} \land P_{52} \land P_{53}) \rightarrow P_{93} \\
-\text{(6)} \quad &amp; P_{79} \\
-\text{(7)} \quad &amp; P_{79} \rightarrow P_{55} \\
-\text{(8)} \quad &amp; P_{53} \rightarrow P_{55} \\[4pt]
-\vdash \quad &amp; P_{93}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-50}{P_{50}}\\) — Genesis 3:15 says that 'her seed' will strike the serpent's head
+- (2) \\(\href{#claim-51}{P_{51}}\\) — Genesis 3:15 is the protoevangelium, the first promise of a redeemer
+- (3) \\(\href{#claim-52}{P_{52}}\\) — Hebrew זֶרַע is ordinarily reckoned through the father
+- (4) \\(\href{#claim-53}{P_{53}}\\) — The matrilineal wording of Genesis 3:15 marks a birth with no human father
+- (5) \\((\href{#claim-50}{P_{50}} \land \href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-53}{P_{53}}) \rightarrow \href{#claim-93}{P_{93}}\\)
+- (6) \\(\href{#claim-79}{P_{79}}\\) — Mary conceived Jesus while a virgin
+- (7) \\(\href{#claim-79}{P_{79}} \rightarrow \href{#claim-55}{P_{55}}\\) — *would give:* The wording 'her seed' fits a birth with no human father, as fulfilled in Christ
+- (8) \\(\href{#claim-53}{P_{53}} \rightarrow \href{#claim-55}{P_{55}}\\) — *would give:* The wording 'her seed' fits a birth with no human father, as fulfilled in Christ
+- \\(\vdash\\) \\(\href{#claim-93}{P_{93}}\\) — *at issue:* The Messiah must be born of a virgin
+
 </div>
 
 No premise here rests on scripture alone.
@@ -7425,15 +7239,15 @@ read the verse of the Virgin's son.
 
 **Why *Leupold on 'her seed': her posterity, named for the deception* stands against *Protoevangelium strand (Genesis 3:15), read as what the wording itself signifies*.**
 
-- **The crux:** \\((P_{50} \land P_{56} \land P_{57}) \rightarrow \lnot P_{54}\\), a premise of *Leupold on 'her seed': her posterity, named for the deception*.
+- **The crux:** \\((\href{#claim-50}{P_{50}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\), a premise of *Leupold on 'her seed': her posterity, named for the deception*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{50}\\), \\(P_{56}\\), \\(P_{57}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{53}\\), \\(P_{53} \rightarrow P_{54}\\) cannot be held together with \\((P_{50} \land P_{56} \land P_{57}) \rightarrow \lnot P_{54}\\) and \\(P_{50}\\), \\(P_{56}\\), \\(P_{57}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{#claim-50}{P_{50}}\\), \\(\href{#claim-56}{P_{56}}\\), \\(\href{#claim-57}{P_{57}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{#claim-53}{P_{53}}\\), \\(\href{#claim-53}{P_{53}} \rightarrow \href{#claim-54}{P_{54}}\\) cannot be held together with \\((\href{#claim-50}{P_{50}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\) and \\(\href{#claim-50}{P_{50}}\\), \\(\href{#claim-56}{P_{56}}\\), \\(\href{#claim-57}{P_{57}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{50}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - \\(P_{56}\\) 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — *disputed*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
-  - \\(P_{57}\\) The seed is called the woman's because the serpent deceived the woman — *well supported*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 165; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
-  - the step itself — *disputed*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - \\(\href{#claim-50}{P_{50}}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Gen 3:15
+  - \\(\href{#claim-56}{P_{56}}\\) 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — *disputed*: [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - \\(\href{#claim-57}{P_{57}}\\) The seed is called the woman's because the serpent deceived the woman — *well supported*: [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 165; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
+  - the step itself — *disputed*: [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
 
 <a id="whereTheSignifyingReadingMeetsLewis"></a>
 **`whereTheSignifyingReadingMeetsLewis`**
@@ -7447,14 +7261,14 @@ the wording as "a hint of the Virgin Birth".
 
 **Why *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* stands against *Protoevangelium strand (Genesis 3:15), read as what the wording itself signifies*.**
 
-- **The crux:** \\((P_{50} \land P_{58}) \rightarrow \lnot P_{54}\\), a premise of *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.
+- **The crux:** \\((\href{#claim-50}{P_{50}} \land \href{#claim-58}{P_{58}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\), a premise of *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{50}\\), \\(P_{58}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{53}\\), \\(P_{53} \rightarrow P_{54}\\) cannot be held together with \\((P_{50} \land P_{58}) \rightarrow \lnot P_{54}\\) and \\(P_{50}\\), \\(P_{58}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{#claim-50}{P_{50}}\\), \\(\href{#claim-58}{P_{58}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{#claim-53}{P_{53}}\\), \\(\href{#claim-53}{P_{53}} \rightarrow \href{#claim-54}{P_{54}}\\) cannot be held together with \\((\href{#claim-50}{P_{50}} \land \href{#claim-58}{P_{58}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\) and \\(\href{#claim-50}{P_{50}}\\), \\(\href{#claim-58}{P_{58}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{50}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - \\(P_{58}\\) Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's — *consensus*: Gen 16:10; Gen 24:60; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300
-  - the step itself — *disputed*: [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+  - \\(\href{#claim-50}{P_{50}}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Gen 3:15
+  - \\(\href{#claim-58}{P_{58}}\\) Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's — *consensus*: Gen 16:10; Gen 24:60; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), pp. 299–300
+  - the step itself — *disputed*: [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 319; [Akin 1999](../bibliography.md#akin-woman-seed-serpent-1999)
 
 <a id="whatHerSeedMarks"></a>
 **`whatHerSeedMarks`**
@@ -7488,38 +7302,38 @@ already believed, not that the promise foretold it.
 Neither reading is a straw man: read either way, the strand's premises can all
 be true together.
 
-**Every reading of \\(P_{53}\\), answered.** *Protoevangelium strand (Genesis 3:15)* holds \\(P_{53}\\). It is read 2 ways here, and each reading is checked; none can be left out.
+**Every reading of \\(\href{#claim-53}{P_{53}}\\), answered.** *Protoevangelium strand (Genesis 3:15)* holds \\(\href{#claim-53}{P_{53}}\\). It is read 2 ways here, and each reading is checked; none can be left out.
 
-**1. Read as what the wording itself signifies.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(P_{54}\\) — so read by [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15 (*disputed*).
+**1. Read as what the wording itself signifies.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(\href{#claim-54}{P_{54}}\\) — so read by [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15 (*disputed*).
 
 Against *Leupold on 'her seed': her posterity, named for the deception*, it cannot be held. Where it breaks:
 
 **Why *Leupold on 'her seed': her posterity, named for the deception* stands against *Protoevangelium strand (Genesis 3:15), read as what the wording itself signifies*.**
 
-- **The crux:** \\((P_{50} \land P_{56} \land P_{57}) \rightarrow \lnot P_{54}\\), a premise of *Leupold on 'her seed': her posterity, named for the deception*.
+- **The crux:** \\((\href{#claim-50}{P_{50}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\), a premise of *Leupold on 'her seed': her posterity, named for the deception*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{50}\\), \\(P_{56}\\), \\(P_{57}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{53}\\), \\(P_{53} \rightarrow P_{54}\\) cannot be held together with \\((P_{50} \land P_{56} \land P_{57}) \rightarrow \lnot P_{54}\\) and \\(P_{50}\\), \\(P_{56}\\), \\(P_{57}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{#claim-50}{P_{50}}\\), \\(\href{#claim-56}{P_{56}}\\), \\(\href{#claim-57}{P_{57}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{#claim-53}{P_{53}}\\), \\(\href{#claim-53}{P_{53}} \rightarrow \href{#claim-54}{P_{54}}\\) cannot be held together with \\((\href{#claim-50}{P_{50}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\) and \\(\href{#claim-50}{P_{50}}\\), \\(\href{#claim-56}{P_{56}}\\), \\(\href{#claim-57}{P_{57}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{50}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - \\(P_{56}\\) 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — *disputed*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
-  - \\(P_{57}\\) The seed is called the woman's because the serpent deceived the woman — *well supported*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 165; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
-  - the step itself — *disputed*: [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - \\(\href{#claim-50}{P_{50}}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Gen 3:15
+  - \\(\href{#claim-56}{P_{56}}\\) 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — *disputed*: [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - \\(\href{#claim-57}{P_{57}}\\) The seed is called the woman's because the serpent deceived the woman — *well supported*: [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 165; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
+  - the step itself — *disputed*: [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
 
 Against *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, it cannot be held. Where it breaks:
 
 **Why *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* stands against *Protoevangelium strand (Genesis 3:15), read as what the wording itself signifies*.**
 
-- **The crux:** \\((P_{50} \land P_{58}) \rightarrow \lnot P_{54}\\), a premise of *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.
+- **The crux:** \\((\href{#claim-50}{P_{50}} \land \href{#claim-58}{P_{58}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\), a premise of *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{50}\\), \\(P_{58}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{53}\\), \\(P_{53} \rightarrow P_{54}\\) cannot be held together with \\((P_{50} \land P_{58}) \rightarrow \lnot P_{54}\\) and \\(P_{50}\\), \\(P_{58}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{#claim-50}{P_{50}}\\), \\(\href{#claim-58}{P_{58}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{#claim-53}{P_{53}}\\), \\(\href{#claim-53}{P_{53}} \rightarrow \href{#claim-54}{P_{54}}\\) cannot be held together with \\((\href{#claim-50}{P_{50}} \land \href{#claim-58}{P_{58}}) \rightarrow \lnot \href{#claim-54}{P_{54}}\\) and \\(\href{#claim-50}{P_{50}}\\), \\(\href{#claim-58}{P_{58}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{50}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [`bhs-1997`](../bibliography.md#bhs-1997), app. Gen 3:15
-  - \\(P_{58}\\) Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's — *consensus*: Gen 16:10; Gen 24:60; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300
-  - the step itself — *disputed*: [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+  - \\(\href{#claim-50}{P_{50}}\\) Genesis 3:15 says that 'her seed' will strike the serpent's head — *consensus*: Gen 3:15; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Gen 3:15
+  - \\(\href{#claim-58}{P_{58}}\\) Genesis speaks of a woman's seed in ordinary births: Hagar's and Rebekah's — *consensus*: Gen 16:10; Gen 24:60; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), pp. 299–300
+  - the step itself — *disputed*: [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 319; [Akin 1999](../bibliography.md#akin-woman-seed-serpent-1999)
 
-**2. Read as what the wording fits, once fulfilled.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(P_{55}\\) — so read by [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 (*disputed*). It rests the reading on \\(P_{79}\\), \\(P_{79} \rightarrow P_{55}\\).
+**2. Read as what the wording fits, once fulfilled.** The claim commits *Protoevangelium strand (Genesis 3:15)* to \\(\href{#claim-55}{P_{55}}\\) — so read by [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102 (*disputed*). It rests the reading on \\(\href{#claim-79}{P_{79}}\\), \\(\href{#claim-79}{P_{79}} \rightarrow \href{#claim-55}{P_{55}}\\).
 
 Against *Leupold on 'her seed': her posterity, named for the deception*, it is not reached: *Leupold on 'her seed': her posterity, named for the deception* holds, and can be held together with it.
 
@@ -8410,30 +8224,30 @@ among the five answers the scriptural reading.
 **What this rests on.** The reasons state 5 defeats and 27 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
-  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
-  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
-  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
-  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
-  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 123; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §66; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Origen](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Isa 7:14; [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 125; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [Jerome](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Postell's parity argument against the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489
 - *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
 - *Berry's objection to the near-term exclusion*, weakest at *disputed*:
-  - an inference step — [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+  - an inference step — [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 - *Motyer's reply to the near-term reading*, weakest at *disputed*:
-  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+  - an inference step — [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 124; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 - *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 481
 
 <a id="scriptural_reading_prevails_once_replies_are_heard"></a>
 **`scriptural_reading_prevails_once_replies_are_heard`**
@@ -8464,30 +8278,30 @@ answers Postell.
 **What this rests on.** The reasons state 1 defeat and 6 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Postell's parity argument against the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489
 - *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
-  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
-  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
-  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
-  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
-  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 123; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §66; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Origen](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Isa 7:14; [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 125; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [Jerome](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Berry's objection to the near-term exclusion*, weakest at *disputed*:
-  - an inference step — [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+  - an inference step — [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 - *Motyer's reply to the near-term reading*, weakest at *disputed*:
-  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+  - an inference step — [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 124; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 - *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 481
 
 <a id="critical_denial_indefensible"></a>
 **`critical_denial_indefensible`**
@@ -8553,22 +8367,22 @@ Why nothing prevails unanswered: the two defeat each other.
 **What this rests on.** The reasons state 2 defeats and 0 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
-  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
-  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
-  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
-  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
-  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 123; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §66; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Origen](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Isa 7:14; [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 125; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [Jerome](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 
 <a id="nothing_prevails_unanswered"></a>
 **`nothing_prevails_unanswered`**
@@ -8611,24 +8425,24 @@ Why Motyer alone does not settle it: a defeater for each of the three.
 **What this rests on.** The reasons state 3 defeats and 0 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
-  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
-  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
-  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
-  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
-  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 123; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §66; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Origen](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Isa 7:14; [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 125; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [Jerome](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Motyer's reply to the near-term reading*, weakest at *disputed*:
-  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+  - an inference step — [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 124; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 
 <a id="nothing_prevails_on_motyer_alone"></a>
 **`nothing_prevails_on_motyer_alone`**
@@ -8672,28 +8486,28 @@ stages: the Micah counterexample first, then the three it defends.
 **What this rests on.** The reasons state 4 defeats and 17 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
-  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
-  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
-  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
-  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
-  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 123; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §66; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Origen](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Isa 7:14; [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 125; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [Jerome](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 481
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 481
 - *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
 - *Berry's objection to the near-term exclusion*, weakest at *disputed*:
-  - an inference step — [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+  - an inference step — [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 - *Motyer's reply to the near-term reading*, weakest at *disputed*:
-  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+  - an inference step — [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 124; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 
 <a id="scriptural_reading_prevails_without_postell"></a>
 **`scriptural_reading_prevails_without_postell`**
@@ -8736,26 +8550,26 @@ reply it faces, and the replies defeat it.
 **What this rests on.** The reasons state 4 defeats and 0 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
-  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 123; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §66; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35
-  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [`bhs-1997`](../bibliography.md#bhs-1997), app. Isa 7:14; [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 125; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [`jerome-against-jovinianus-393`](../bibliography.md#jerome-against-jovinianus-393), §I.32
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
-  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
-  - Micah's mention of a mother and no father indicates a birth with no human father — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
-  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [`brown-problem-virginal-conception-1972`](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
-  - an inference step — [`motyer-isaiah-1993`](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
-  - an inference step — [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014)
-  - an inference step — [`miravalle-introduction-mary-2020`](../bibliography.md#miravalle-introduction-mary-2020)
-  - an inference step — [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
-  - an inference step — [`france-matthew-2007`](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
+  - Isaiah 7:14 is a Messianic prediction of a virgin birth — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 123; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §66; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Origen](../bibliography.md#origen-against-celsus-248), §I.35
+  - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Elliger and Rudolph 1997](../bibliography.md#bhs-1997), app. Isa 7:14; [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 125; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [Jerome](../bibliography.md#jerome-against-jovinianus-393), §I.32
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
+  - an inference step — [Motyer 1993](../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
+  - an inference step — [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014)
+  - an inference step — [Miravalle 2020](../bibliography.md#miravalle-introduction-mary-2020)
+  - an inference step — [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
+  - an inference step — [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Berry's objection to the near-term exclusion*, weakest at *disputed*:
-  - an inference step — [`berry-virgin-birth-2003`](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+  - an inference step — [Berry 2003](../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 - *Motyer's reply to the near-term reading*, weakest at *disputed*:
-  - an inference step — [`motyer-context-content-1970`](../bibliography.md#motyer-context-content-1970), p. 124; [`compton-immanuel-prophecy-2007`](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+  - an inference step — [Motyer 1970](../bibliography.md#motyer-context-content-1970), p. 124; [Compton 2007](../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 
 <a id="nothing_prevails_without_the_counterexamples"></a>
 **`nothing_prevails_without_the_counterexamples`**
@@ -9163,13 +8977,13 @@ Why nothing prevails: a defeater for each party.
 **What this rests on.** The reasons state 3 defeats and 0 absences of defeat, each a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The fathers' sign argument (Isaiah 7:11, 14)*, weakest at *disputed*:
-  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`tertullian-answer-to-the-jews-200`](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [`eusebius-demonstratio-evangelica-315`](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [`cyril-jerusalem-catechetical-lectures-350`](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [`chrysostom-homilies-matthew-390`](../bibliography.md#chrysostom-homilies-matthew-390), §5; [`jerome-commentary-isaiah-410`](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [`cyril-alexandria-commentary-isaiah`](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [`theodoret-commentary-isaiah`](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
+  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [Origen](../bibliography.md#origen-against-celsus-248), §I.35; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §84; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Tertullian](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [Eusebius of Caesarea](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [Cyril of Jerusalem](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [John Chrysostom](../bibliography.md#chrysostom-homilies-matthew-390), §5; [Jerome](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [Cyril of Alexandria](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [Theodoret of Cyrrhus](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
 - *Wegner's grammatical objection: the עַלְמָה is already pregnant*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
-  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 152
 - *The near-term reply: a sign need not be a miracle*, weakest at *disputed*:
-  - an inference step — [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), pp. 64–65; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 469–470; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - an inference step — [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), pp. 64–65; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 469–470; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474
 
 <a id="nothing_prevails_over_wegner"></a>
 **`nothing_prevails_over_wegner`**
@@ -9201,13 +9015,13 @@ Why the fathers alone are one resolution.
 **What this rests on.** The reasons state 4 defeats and 1 absence of defeat, each a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The fathers' sign argument (Isaiah 7:11, 14)*, weakest at *disputed*:
-  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`tertullian-answer-to-the-jews-200`](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [`eusebius-demonstratio-evangelica-315`](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [`cyril-jerusalem-catechetical-lectures-350`](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [`chrysostom-homilies-matthew-390`](../bibliography.md#chrysostom-homilies-matthew-390), §5; [`jerome-commentary-isaiah-410`](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [`cyril-alexandria-commentary-isaiah`](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [`theodoret-commentary-isaiah`](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
+  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [Origen](../bibliography.md#origen-against-celsus-248), §I.35; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §84; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Tertullian](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [Eusebius of Caesarea](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [Cyril of Jerusalem](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [John Chrysostom](../bibliography.md#chrysostom-homilies-matthew-390), §5; [Jerome](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [Cyril of Alexandria](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [Theodoret of Cyrrhus](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
 - *Wegner's grammatical objection: the עַלְמָה is already pregnant*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
-  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 152
 - *The near-term reply: a sign need not be a miracle*, weakest at *disputed*:
-  - an inference step — [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), pp. 64–65; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 469–470; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - an inference step — [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), pp. 64–65; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 469–470; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474
 
 <a id="sign_is_one_resolution"></a>
 **`sign_is_one_resolution`**
@@ -9238,13 +9052,13 @@ Why Wegner with the reply is the other resolution.
 **What this rests on.** The reasons state 3 defeats and 4 absences of defeat, each a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Wegner's grammatical objection: the עַלְמָה is already pregnant*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
-  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 152
 - *The near-term reply: a sign need not be a miracle*, weakest at *disputed*:
-  - an inference step — [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), pp. 64–65; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 469–470; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - an inference step — [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), pp. 64–65; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 469–470; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474
 - *The fathers' sign argument (Isaiah 7:11, 14)*, weakest at *disputed*:
-  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`tertullian-answer-to-the-jews-200`](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [`eusebius-demonstratio-evangelica-315`](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [`cyril-jerusalem-catechetical-lectures-350`](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [`chrysostom-homilies-matthew-390`](../bibliography.md#chrysostom-homilies-matthew-390), §5; [`jerome-commentary-isaiah-410`](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [`cyril-alexandria-commentary-isaiah`](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [`theodoret-commentary-isaiah`](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
+  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [Origen](../bibliography.md#origen-against-celsus-248), §I.35; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §84; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Tertullian](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [Eusebius of Caesarea](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [Cyril of Jerusalem](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [John Chrysostom](../bibliography.md#chrysostom-homilies-matthew-390), §5; [Jerome](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [Cyril of Alexandria](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [Theodoret of Cyrrhus](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
 
 <a id="wegner_is_the_other_resolution"></a>
 **`wegner_is_the_other_resolution`**
@@ -9310,11 +9124,11 @@ other.
 **What this rests on.** The reasons state 2 defeats and 0 absences of defeat, each a cell of the defeat table, [`wegnerDispute_defeats`](#wegnerDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The fathers' sign argument (Isaiah 7:11, 14)*, weakest at *disputed*:
-  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [`origen-against-celsus-248`](../bibliography.md#origen-against-celsus-248), §I.35; [`justin-dialogue-with-trypho-160`](../bibliography.md#justin-dialogue-with-trypho-160), §84; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [`tertullian-answer-to-the-jews-200`](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [`eusebius-demonstratio-evangelica-315`](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [`cyril-jerusalem-catechetical-lectures-350`](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [`chrysostom-homilies-matthew-390`](../bibliography.md#chrysostom-homilies-matthew-390), §5; [`jerome-commentary-isaiah-410`](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [`cyril-alexandria-commentary-isaiah`](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [`theodoret-commentary-isaiah`](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
+  - The sign of Isaiah 7:14 must be extraordinary, like the sign offered at 7:11 — [Origen](../bibliography.md#origen-against-celsus-248), §I.35; [Justin Martyr](../bibliography.md#justin-dialogue-with-trypho-160), §84; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Tertullian](../bibliography.md#tertullian-answer-to-the-jews-200), §9; [Eusebius of Caesarea](../bibliography.md#eusebius-demonstratio-evangelica-315), §VII.1; [Cyril of Jerusalem](../bibliography.md#cyril-jerusalem-catechetical-lectures-350), §12.22; [John Chrysostom](../bibliography.md#chrysostom-homilies-matthew-390), §5; [Jerome](../bibliography.md#jerome-commentary-isaiah-410), ad loc. Isa 7:14; [Cyril of Alexandria](../bibliography.md#cyril-alexandria-commentary-isaiah), ad loc. Isa 7:14; [Theodoret of Cyrrhus](../bibliography.md#theodoret-commentary-isaiah), ad loc. Isa 7:14; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474; Isa 7:10-11
 - *Wegner's grammatical objection: the עַלְמָה is already pregnant*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [`brown-birth-messiah-1993`](../bibliography.md#brown-birth-messiah-1993)
-  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 474
-  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 152
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../bibliography.md#brown-birth-messiah-1993)
+  - The pregnancy Isaiah 7:14 announces is an ordinary conception — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 476–478; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 474
+  - What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 471–472; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 468; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 152
 
 <a id="nothing_prevails_without_the_reply"></a>
 **`nothing_prevails_without_the_reply`**
@@ -10203,17 +10017,17 @@ by the status reading.
 **What this rests on.** The reasons state 8 defeats and 18 absences of defeat, each a cell of the defeat table, [`septuagintDispute_defeats`](#septuagintDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The Septuagint as a witness (Isaiah 7:14 in Greek)*, weakest at *disputed*:
-  - In the Greek of the Septuagint, παρθένος means a virgin — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472
+  - In the Greek of the Septuagint, παρθένος means a virgin — [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 472
 - *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*, weakest at *plausible*:
-  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [`frymer-kensky-virginity-1998`](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [`enc-referential-analysis-1986`](../bibliography.md#enc-referential-analysis-1986), pp. 405–426; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [Frymer-Kensky 1998](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [Enç 1986](../bibliography.md#enc-referential-analysis-1986), pp. 405–426; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
 - *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, weakest at *disputed*:
-  - an inference step — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
+  - an inference step — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [Meade 2013](../bibliography.md#meade-ancient-versions-comment-2013); [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
 - *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures*, weakest at *disputed*:
-  - an inference step — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472; [`davidson-immanuel-1899`](../bibliography.md#davidson-immanuel-1899), p. 456; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013)
+  - an inference step — [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 472; [Davidson 1899](../bibliography.md#davidson-immanuel-1899), p. 456; [Meade 2013](../bibliography.md#meade-ancient-versions-comment-2013)
 - *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*, weakest at *disputed*:
-  - an inference step — [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+  - an inference step — [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [Liddell and Scott 1940](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [Muraoka 2009](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [Lust et al. 2003](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [Miller 2003](../bibliography.md#miller-born-divine-2003); [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
 - *Miller, from Genesis 34:3*, weakest at *disputed*:
-  - an inference step — [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113
+  - an inference step — [Miller 2003](../bibliography.md#miller-born-divine-2003); [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113
 
 <a id="septuagint_prevails_over_wegner"></a>
 **`septuagint_prevails_over_wegner`**
@@ -10245,17 +10059,17 @@ him, and nothing answers it.
 **What this rests on.** The reasons state 1 defeat and 6 absences of defeat, each a cell of the defeat table, [`septuagintDispute_defeats`](#septuagintDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*, weakest at *plausible*:
-  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [`frymer-kensky-virginity-1998`](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [`enc-referential-analysis-1986`](../bibliography.md#enc-referential-analysis-1986), pp. 405–426; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [Frymer-Kensky 1998](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [Enç 1986](../bibliography.md#enc-referential-analysis-1986), pp. 405–426; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
 - *Miller, from Genesis 34:3*, weakest at *disputed*:
-  - an inference step — [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113
+  - an inference step — [Miller 2003](../bibliography.md#miller-born-divine-2003); [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113
 - *The Septuagint as a witness (Isaiah 7:14 in Greek)*, weakest at *disputed*:
-  - In the Greek of the Septuagint, παρθένος means a virgin — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472
+  - In the Greek of the Septuagint, παρθένος means a virgin — [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 472
 - *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, weakest at *disputed*:
-  - an inference step — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
+  - an inference step — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [Meade 2013](../bibliography.md#meade-ancient-versions-comment-2013); [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
 - *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures*, weakest at *disputed*:
-  - an inference step — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472; [`davidson-immanuel-1899`](../bibliography.md#davidson-immanuel-1899), p. 456; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013)
+  - an inference step — [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 472; [Davidson 1899](../bibliography.md#davidson-immanuel-1899), p. 456; [Meade 2013](../bibliography.md#meade-ancient-versions-comment-2013)
 - *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*, weakest at *disputed*:
-  - an inference step — [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+  - an inference step — [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [Liddell and Scott 1940](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [Muraoka 2009](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [Lust et al. 2003](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [Miller 2003](../bibliography.md#miller-born-divine-2003); [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
 
 <a id="miller_indefensible"></a>
 **`miller_indefensible`**
@@ -10285,17 +10099,17 @@ and nothing answers it.
 **What this rests on.** The reasons state 1 defeat and 6 absences of defeat, each a cell of the defeat table, [`septuagintDispute_defeats`](#septuagintDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The law's name for Dinah: Genesis 34:3 read under Exodus 22:15–16*, weakest at *plausible*:
-  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [`frymer-kensky-virginity-1998`](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [`enc-referential-analysis-1986`](../bibliography.md#enc-referential-analysis-1986), pp. 405–426; [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+  - an inference step — Exod 22:15-16; Exod 22:15-16; Gen 34:2; Gen 34:2; Gen 34:7; Gen 34:12; Gen 34:12; Deut 22:29; Deut 22:29; Deut 22:21; [Frymer-Kensky 1998](../bibliography.md#frymer-kensky-virginity-1998), pp. 80, 91; [Enç 1986](../bibliography.md#enc-referential-analysis-1986), pp. 405–426; [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
 - *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, weakest at *disputed*:
-  - an inference step — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
+  - an inference step — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [Meade 2013](../bibliography.md#meade-ancient-versions-comment-2013); [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
 - *The Septuagint as a witness (Isaiah 7:14 in Greek)*, weakest at *disputed*:
-  - In the Greek of the Septuagint, παρθένος means a virgin — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472
+  - In the Greek of the Septuagint, παρθένος means a virgin — [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 472
 - *Rico and Gentry: παρθένος means 'virgin' in the Greek of the Scriptures*, weakest at *disputed*:
-  - an inference step — [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [`postell-isaiah-messianic-2025`](../bibliography.md#postell-isaiah-messianic-2025), p. 472; [`davidson-immanuel-1899`](../bibliography.md#davidson-immanuel-1899), p. 456; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013)
+  - an inference step — [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), p. 21; [Postell 2025](../bibliography.md#postell-isaiah-messianic-2025), p. 472; [Davidson 1899](../bibliography.md#davidson-immanuel-1899), p. 456; [Meade 2013](../bibliography.md#meade-ancient-versions-comment-2013)
 - *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'*, weakest at *disputed*:
-  - an inference step — [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
+  - an inference step — [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [Liddell and Scott 1940](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [Muraoka 2009](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [Lust et al. 2003](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [Miller 2003](../bibliography.md#miller-born-divine-2003); [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67
 - *Miller, from Genesis 34:3*, weakest at *disputed*:
-  - an inference step — [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113
+  - an inference step — [Miller 2003](../bibliography.md#miller-born-divine-2003); [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113
 
 <a id="drift_indefensible"></a>
 **`drift_indefensible`**
@@ -10554,7 +10368,7 @@ his case from Genesis 34:3 is a party and nothing defends it
 case from the laws cites it `disputed` there. So the overruling owes nothing to
 the rating it lets stand.
 
-**The rating, computed.** *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'* is cited at *well supported* ([`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [`liddell-scott-jones-lexicon-1940`](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [`muraoka-lexicon-septuagint-2009`](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [`lust-lexicon-septuagint-2003`](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [`miller-born-divine-2003`](../bibliography.md#miller-born-divine-2003); [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67). Dissents encoded: *Miller, Born Divine*. The strongest known: *Miller, Born Divine*.
+**The rating, computed.** *The laws of the Greek Pentateuch: παρθένος in the sense 'virgin'* is cited at *well supported* ([Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 113; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), p. 102; [Liddell and Scott 1940](../bibliography.md#liddell-scott-jones-lexicon-1940), p. 1339; [Muraoka 2009](../bibliography.md#muraoka-lexicon-septuagint-2009), p. 535; [Lust et al. 2003](../bibliography.md#lust-lexicon-septuagint-2003), s.v. παρθένια; [Miller 2003](../bibliography.md#miller-born-divine-2003); [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67). Dissents encoded: *Miller, Born Divine*. The strongest known: *Miller, Born Divine*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -10827,9 +10641,9 @@ Why nothing prevails: each party is defeated by the other.
 **What this rests on.** The reasons state 2 defeats and 0 absences of defeat, each a cell of the defeat table, [`matthewDispute_defeats`](#matthewDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, weakest at *disputed*:
-  - an inference step — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
+  - an inference step — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [Meade 2013](../bibliography.md#meade-ancient-versions-comment-2013); [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
 - *Scripture interprets Scripture: Matthew quotes ἡ παρθένος of Mary*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.ix; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483
+  - an inference step — [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.ix; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483
 
 <a id="nothing_prevails_between_matthew_and_wegner"></a>
 **`nothing_prevails_between_matthew_and_wegner`**
@@ -10872,7 +10686,7 @@ known. Its support is cited `plausible`: Westminster's rule, and Irenaeus on the
 apostles' agreement with the Seventy. It is not cited higher, because no reader
 the library cites argues the step from Matthew's grounds at length.
 
-**The rating, computed.** *Scripture interprets Scripture: Matthew quotes ἡ παρθένος of Mary* is cited at *plausible* ([`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.ix; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483). Dissents encoded: *Wegner on παρθένος (JETS 54, 482–83)*. The strongest known: *Wegner on παρθένος (JETS 54, 482–83)*.
+**The rating, computed.** *Scripture interprets Scripture: Matthew quotes ἡ παρθένος of Mary* is cited at *plausible* ([Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.ix; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483). Dissents encoded: *Wegner on παρθένος (JETS 54, 482–83)*. The strongest known: *Wegner on παρθένος (JETS 54, 482–83)*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -11023,9 +10837,9 @@ he and Matthew's reading defeat each other.
 **What this rests on.** The reasons state 2 defeats and 0 absences of defeat, each a cell of the defeat table, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Wegner on παρθένος: the word had not yet come to mean 'virgin'*, weakest at *disputed*:
-  - an inference step — [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [`rhodea-did-matthew-conceive-2013`](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [`meade-ancient-versions-comment-2013`](../bibliography.md#meade-ancient-versions-comment-2013); [`rico-gentry-infant-king-2020`](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [`bratcher-study-of-isaiah-1958`](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
+  - an inference step — [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), pp. 482–483; [Rhodea 2013](../bibliography.md#rhodea-did-matthew-conceive-2013), p. 67; [Meade 2013](../bibliography.md#meade-ancient-versions-comment-2013); [Rico and Gentry 2020](../bibliography.md#rico-gentry-infant-king-2020), pp. 18–21; [Bratcher 1958](../bibliography.md#bratcher-study-of-isaiah-1958), pp. 112–113
 - *Scripture interprets Scripture: Matthew quotes ἡ παρθένος of Mary*, weakest at *disputed*:
-  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.ix; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483
+  - an inference step — [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.ix; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483
 
 <a id="matthewUnderScriptureSettled"></a>
 **`matthewUnderScriptureSettled`**
@@ -11042,7 +10856,7 @@ alone, so he is not heard, and Matthew's reading stands unattacked.
 **What this rests on.** The reasons state 0 defeats and 1 absence of defeat, each a cell of the defeat table, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Scripture interprets Scripture: Matthew quotes ἡ παρθένος of Mary*, weakest at *plausible*:
-  - an inference step — [`westminster-confession-1647`](../bibliography.md#westminster-confession-1647), §I.ix; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [`wegner-virgin-births-2011`](../bibliography.md#wegner-virgin-births-2011), p. 483
+  - an inference step — [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.ix; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.21.3; [Wegner 2011](../bibliography.md#wegner-virgin-births-2011), p. 483
 
 <a id="matthew_step_turns_on_the_standard"></a>
 **`matthew_step_turns_on_the_standard`**
@@ -11471,13 +11285,13 @@ Why nothing prevails: a defeater for each party.
 **What this rests on.** The reasons state 3 defeats and 0 absences of defeat, each a cell of the defeat table, [`genesisDispute_defeats`](#genesisDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Leupold on 'her seed': her posterity, named for the deception*, weakest at *disputed*:
-  - 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
-  - an inference step — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - an inference step — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
 - *Luther on 'her seed': the wording itself signifies no human father*, weakest at *disputed*:
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
-  - an inference step — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - an inference step — [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 319
 - *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, weakest at *disputed*:
-  - an inference step — [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+  - an inference step — [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 319; [Akin 1999](../bibliography.md#akin-woman-seed-serpent-1999)
 
 <a id="nothing_prevails_over_her_seed"></a>
 **`nothing_prevails_over_her_seed`**
@@ -11509,13 +11323,13 @@ Why Luther alone is one resolution.
 **What this rests on.** The reasons state 4 defeats and 1 absence of defeat, each a cell of the defeat table, [`genesisDispute_defeats`](#genesisDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Luther on 'her seed': the wording itself signifies no human father*, weakest at *disputed*:
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
-  - an inference step — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - an inference step — [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 319
 - *Leupold on 'her seed': her posterity, named for the deception*, weakest at *disputed*:
-  - 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
-  - an inference step — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - an inference step — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
 - *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, weakest at *disputed*:
-  - an inference step — [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+  - an inference step — [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 319; [Akin 1999](../bibliography.md#akin-woman-seed-serpent-1999)
 
 <a id="wording_is_one_resolution"></a>
 **`wording_is_one_resolution`**
@@ -11546,13 +11360,13 @@ Why Leupold with Lewis is the other resolution.
 **What this rests on.** The reasons state 3 defeats and 4 absences of defeat, each a cell of the defeat table, [`genesisDispute_defeats`](#genesisDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Leupold on 'her seed': her posterity, named for the deception*, weakest at *disputed*:
-  - 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
-  - an inference step — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
+  - 'Her seed' at Genesis 3:15 is first collective: her posterity, not one person — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 145–146
+  - an inference step — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 170; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §V.21.1; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
 - *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too*, weakest at *disputed*:
-  - an inference step — [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319; [`akin-woman-seed-serpent-1999`](../bibliography.md#akin-woman-seed-serpent-1999)
+  - an inference step — [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), pp. 299–300; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 319; [Akin 1999](../bibliography.md#akin-woman-seed-serpent-1999)
 - *Luther on 'her seed': the wording itself signifies no human father*, weakest at *disputed*:
-  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`miravalle-meet-your-mother-2014`](../bibliography.md#miravalle-meet-your-mother-2014); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 318
-  - an inference step — [`luther-on-the-creation-1904`](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [`henry-commentary-whole-bible`](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 319
+  - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 318
+  - an inference step — [Luther 1904](../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Henry 1706](../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 167–169; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 319
 
 <a id="posterity_and_idiom_are_the_other_resolution"></a>
 **`posterity_and_idiom_are_the_other_resolution`**
@@ -12146,15 +11960,15 @@ Why nothing prevails: every party has a defeater.
 **What this rests on.** The reasons state 4 defeats and 0 absences of defeat, each a cell of the defeat table, [`promiseDispute_defeats`](#promiseDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Westermann: a punishment oracle on a line of descendants, and no promise*, weakest at *disputed*:
-  - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), p. 363; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
-  - an inference step — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
+  - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), p. 363; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
+  - an inference step — [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
 - *The fulfilment of Genesis 3:15 confirms the promise*, weakest at *disputed*:
-  - an inference step — [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
+  - an inference step — [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
 - *The syntax of the striker: 'he' who strikes is one descendant*, weakest at *disputed*:
-  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300; [`philo-allegorical-interpretation-40`](../bibliography.md#philo-allegorical-interpretation-40), §III.188
-  - an inference step — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 171
+  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 145; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 144; [Martin 1965](../bibliography.md#martin-earliest-messianic-1965); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 300; [Philo of Alexandria](../bibliography.md#philo-allegorical-interpretation-40), §III.188
+  - an inference step — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 171
 - *The scene read whole: God's sentence on the serpent's power*, weakest at *disputed*:
-  - The serpent of Genesis 3 is the instrument of an evil power — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261
+  - The serpent of Genesis 3 is the instrument of an evil power — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [Woudstra 1971](../bibliography.md#woudstra-recent-translations-1971), p. 197; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), p. 261
 
 <a id="nothing_prevails_over_the_promise"></a>
 **`nothing_prevails_over_the_promise`**
@@ -12186,15 +12000,15 @@ Why the fulfilment with the syntax and the scene is one resolution.
 **What this rests on.** The reasons state 4 defeats and 9 absences of defeat, each a cell of the defeat table, [`promiseDispute_defeats`](#promiseDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The fulfilment of Genesis 3:15 confirms the promise*, weakest at *disputed*:
-  - an inference step — [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
+  - an inference step — [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
 - *The syntax of the striker: 'he' who strikes is one descendant*, weakest at *disputed*:
-  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300; [`philo-allegorical-interpretation-40`](../bibliography.md#philo-allegorical-interpretation-40), §III.188
-  - an inference step — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 171
+  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 145; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 144; [Martin 1965](../bibliography.md#martin-earliest-messianic-1965); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 300; [Philo of Alexandria](../bibliography.md#philo-allegorical-interpretation-40), §III.188
+  - an inference step — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 171
 - *The scene read whole: God's sentence on the serpent's power*, weakest at *disputed*:
-  - The serpent of Genesis 3 is the instrument of an evil power — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261
+  - The serpent of Genesis 3 is the instrument of an evil power — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [Woudstra 1971](../bibliography.md#woudstra-recent-translations-1971), p. 197; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), p. 261
 - *Westermann: a punishment oracle on a line of descendants, and no promise*, weakest at *disputed*:
-  - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), p. 363; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
-  - an inference step — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
+  - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), p. 363; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
+  - an inference step — [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
 
 <a id="fulfilment_is_one_resolution"></a>
 **`fulfilment_is_one_resolution`**
@@ -12229,15 +12043,15 @@ Why Westermann is the other resolution.
 **What this rests on.** The reasons state 6 defeats and 1 absence of defeat, each a cell of the defeat table, [`promiseDispute_defeats`](#promiseDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Westermann: a punishment oracle on a line of descendants, and no promise*, weakest at *disputed*:
-  - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), p. 363; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
-  - an inference step — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
+  - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), p. 363; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
+  - an inference step — [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
 - *The fulfilment of Genesis 3:15 confirms the promise*, weakest at *disputed*:
-  - an inference step — [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
+  - an inference step — [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
 - *The syntax of the striker: 'he' who strikes is one descendant*, weakest at *disputed*:
-  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300; [`philo-allegorical-interpretation-40`](../bibliography.md#philo-allegorical-interpretation-40), §III.188
-  - an inference step — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 171
+  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 145; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 144; [Martin 1965](../bibliography.md#martin-earliest-messianic-1965); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 300; [Philo of Alexandria](../bibliography.md#philo-allegorical-interpretation-40), §III.188
+  - an inference step — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 171
 - *The scene read whole: God's sentence on the serpent's power*, weakest at *disputed*:
-  - The serpent of Genesis 3 is the instrument of an evil power — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261
+  - The serpent of Genesis 3 is the instrument of an evil power — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [Woudstra 1971](../bibliography.md#woudstra-recent-translations-1971), p. 197; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), p. 261
 
 <a id="westermann_is_the_other_resolution"></a>
 **`westermann_is_the_other_resolution`**
@@ -12324,7 +12138,7 @@ strongest known. Its support is cited `plausible`: Irenaeus, Keil, Leupold,
 Calvin and Hamilton argue it, and it is rated no higher because the readers
 before Christ do not read the verse so.
 
-**The rating, computed.** *The fulfilment of Genesis 3:15: struck at the heel, he crushes the serpent's head* is cited at *plausible* ([`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261). Dissents encoded: *Westermann, Genesis 1–11 (259–61)*. The strongest known: *Westermann, Genesis 1–11 (259–61)*.
+**The rating, computed.** *The fulfilment of Genesis 3:15: struck at the heel, he crushes the serpent's head* is cited at *plausible* ([Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261). Dissents encoded: *Westermann, Genesis 1–11 (259–61)*. The strongest known: *Westermann, Genesis 1–11 (259–61)*.
 
 | Standard | Rating | Why |
 |---|---|---|
@@ -12479,15 +12293,15 @@ and he and each of the others defeat one another.
 **What this rests on.** The reasons state 4 defeats and 0 absences of defeat, each a cell of the defeat table, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Westermann: a punishment oracle on a line of descendants, and no promise*, weakest at *disputed*:
-  - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), p. 363; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
-  - an inference step — [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
+  - At Genesis 3:15 'her seed' is a line of descendants, and not an individual — [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–260; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 140, 147; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 168; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), p. 363; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32
+  - an inference step — [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102
 - *The fulfilment of Genesis 3:15 confirms the promise*, weakest at *disputed*:
-  - an inference step — [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
+  - an inference step — [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
 - *The syntax of the striker: 'he' who strikes is one descendant*, weakest at *disputed*:
-  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300; [`philo-allegorical-interpretation-40`](../bibliography.md#philo-allegorical-interpretation-40), §III.188
-  - an inference step — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 171
+  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 145; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 144; [Martin 1965](../bibliography.md#martin-earliest-messianic-1965); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 300; [Philo of Alexandria](../bibliography.md#philo-allegorical-interpretation-40), §III.188
+  - an inference step — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 171
 - *The scene read whole: God's sentence on the serpent's power*, weakest at *disputed*:
-  - The serpent of Genesis 3 is the instrument of an evil power — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261
+  - The serpent of Genesis 3 is the instrument of an evil power — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [Woudstra 1971](../bibliography.md#woudstra-recent-translations-1971), p. 197; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), p. 261
 
 <a id="promiseUnderScriptureSettled"></a>
 **`promiseUnderScriptureSettled`**
@@ -12507,13 +12321,13 @@ unattacked.
 **What this rests on.** The reasons state 0 defeats and 9 absences of defeat, each a cell of the defeat table, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *The fulfilment of Genesis 3:15 confirms the promise*, weakest at *plausible*:
-  - an inference step — [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
-  - an inference step — [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 146; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 31; [`irenaeus-against-heresies-180`](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3
+  - an inference step — [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §III.23.7; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), pp. 42, 53; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 170; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), pp. 259–261
+  - an inference step — [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), pp. 170–171; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 146; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 31; [Irenaeus](../bibliography.md#irenaeus-against-heresies-180), §IV.40.3
 - *The syntax of the striker: 'he' who strikes is one descendant*, weakest at *disputed*:
-  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 145; [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), p. 144; [`martin-earliest-messianic-1965`](../bibliography.md#martin-earliest-messianic-1965); [`lewis-womans-seed-1991`](../bibliography.md#lewis-womans-seed-1991), p. 300; [`philo-allegorical-interpretation-40`](../bibliography.md#philo-allegorical-interpretation-40), §III.188
-  - an inference step — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [`alexander-further-observations-1997`](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [`leupold-exposition-genesis-1942`](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [`hamilton-skull-crushing-seed-2006`](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [`calvin-commentary-genesis-1847`](../bibliography.md#calvin-commentary-genesis-1847), p. 171
+  - The Greek translator of Genesis read the woman's seed at 3:15 as one person — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 145; [Collins 1997](../bibliography.md#collins-syntactical-note-1997), p. 144; [Martin 1965](../bibliography.md#martin-earliest-messianic-1965); [Lewis 1991](../bibliography.md#lewis-womans-seed-1991), p. 300; [Philo of Alexandria](../bibliography.md#philo-allegorical-interpretation-40), §III.188
+  - an inference step — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 144–146; [Alexander 1997](../bibliography.md#alexander-further-observations-1997), pp. 363, 364; [Leupold 1942](../bibliography.md#leupold-exposition-genesis-1942), pp. 166–168; [Hamilton 2006](../bibliography.md#hamilton-skull-crushing-seed-2006), p. 32; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), p. 101; [Calvin 1847](../bibliography.md#calvin-commentary-genesis-1847), p. 171
 - *The scene read whole: God's sentence on the serpent's power*, weakest at *disputed*:
-  - The serpent of Genesis 3 is the instrument of an evil power — [`collins-syntactical-note-1997`](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [`woudstra-recent-translations-1971`](../bibliography.md#woudstra-recent-translations-1971), p. 197; [`keil-delitzsch-pentateuch-1866`](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [`westermann-genesis-1-11-1984`](../bibliography.md#westermann-genesis-1-11-1984), p. 261
+  - The serpent of Genesis 3 is the instrument of an evil power — [Collins 1997](../bibliography.md#collins-syntactical-note-1997), pp. 146–147; [Woudstra 1971](../bibliography.md#woudstra-recent-translations-1971), p. 197; [Keil and Delitzsch 1866](../bibliography.md#keil-delitzsch-pentateuch-1866), pp. 101–102; [Westermann 1984](../bibliography.md#westermann-genesis-1-11-1984), p. 261
 
 <a id="promise_turns_on_the_standard"></a>
 **`promise_turns_on_the_standard`**

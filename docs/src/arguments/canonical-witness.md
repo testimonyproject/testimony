@@ -7,6 +7,8 @@
 
 Claims are numbered once for the whole argument, so P₁ means the same claim in every chapter; the numbered list is in [Appendix: the claims and their sources](canonical-witness/claims.md). [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
+Every argument is also set for print, the claims linked and the derivations in words as here, in [one PDF](../pdf/arguments.pdf), and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
+
 This argument is set in 4 chapters:
 
 - [Faith alone from the texts every party accepts](canonical-witness.md)

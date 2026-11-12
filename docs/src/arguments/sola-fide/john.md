@@ -235,14 +235,12 @@ def aquinasOnFormedFaith : Source :=
 love, and so not the bare trust that John's strand needs. The denial is derived
 from Aquinas's own reading of the verse, not assumed.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{41} \\
-\text{(2)} \quad &amp; P_{41} \rightarrow \lnot P_{40} \\[4pt]
-\vdash \quad &amp; \lnot P_{40}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-41}{P_{41}}\\) — The believing of John 6:29 is faith living through charity, the source of works
+- (2) \\(\href{claims.html#claim-41}{P_{41}} \rightarrow \lnot \href{claims.html#claim-40}{P_{40}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-40}{P_{40}}\\) — *at issue, the denial of:* The believing of John 6:29 is trust, which brings nothing and receives Christ
+
 </div>
 
 ### The packages
@@ -253,31 +251,29 @@ from Aquinas's own reading of the verse, not assumed.
 Sola fide from John alone: John's line, with the premises and closing steps
 every Reformed strand shares.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{37} \\
-\text{(3)} \quad &amp; P_{40} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{3} \\
-\text{(7)} \quad &amp; P_{4} \\
-\text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{17} \\
-\text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{20} \\
-\text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; (P_{36} \land P_{37} \land P_{40}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(18)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-36}{P_{36}}\\) — John 6:28–29 — the work God requires is that you believe in him whom he sent
+- (2) \\(\href{claims.html#claim-37}{P_{37}}\\) — John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son
+- (3) \\(\href{claims.html#claim-40}{P_{40}}\\) — The believing of John 6:29 is trust, which brings nothing and receives Christ
+- (4) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:8–9 teaches salvation by grace through faith, not of works
+- (5) \\(\href{claims.html#claim-2}{P_{2}}\\) — Romans 3:28 teaches justification by faith apart from works of the law
+- (6) \\(\href{claims.html#claim-3}{P_{3}}\\) — Galatians 2:16 teaches that no one is justified by works of the law
+- (7) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes
+- (8) \\(\href{claims.html#claim-5}{P_{5}}\\) — Titus 3:5 teaches that God saved us not by works done in righteousness
+- (9) \\(\href{claims.html#claim-17}{P_{17}}\\) — Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven
+- (10) \\(\href{claims.html#claim-9}{P_{9}}\\) — Acts 15:9–11 — Peter: hearts cleansed by faith; saved through grace
+- (11) \\(\href{claims.html#claim-20}{P_{20}}\\) — James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine
+- (12) \\(\href{claims.html#claim-21}{P_{21}}\\) — Good works are the fruit and evidence of saving faith, not its ground
+- (13) \\(\href{claims.html#claim-24}{P_{24}}\\) — Scripture does not contradict itself
+- (14) \\((\href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* Justification is by faith alone
+- (15) \\((\href{claims.html#claim-20}{P_{20}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\) — *would give:* James 2:24 is compatible with Paul, using ‘justify’ in a different sense
+- (16) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-27}{P_{27}}\\) — *would give:* Salvation is by grace, a gift and not wages owed
+- (17) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Salvation is not by works: no work is its ground
+- (18) \\(\href{claims.html#claim-25}{P_{25}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (19) \\((\href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is received through faith
+- \\(\vdash\\) \\(\href{claims.html#claim-27}{P_{27}} \land \href{claims.html#claim-28}{P_{28}} \land \href{claims.html#claim-29}{P_{29}}\\) — *at issue:* \\(\href{claims.html#claim-27}{P_{27}}\\) Salvation is by grace, a gift and not wages owed; \\(\href{claims.html#claim-28}{P_{28}}\\) Salvation is not by works: no work is its ground; \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is received through faith
+
 </div>
 
 Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
@@ -289,32 +285,30 @@ Aquinas on John: every text John's strand reads, and every shared premise, with
 the believing read as faith formed by charity. This is the rival John's strand
 was written against.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{37} \\
-\text{(3)} \quad &amp; P_{41} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{3} \\
-\text{(7)} \quad &amp; P_{4} \\
-\text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{17} \\
-\text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{20} \\
-\text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; (P_{36} \land P_{37} \land P_{40}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; P_{41} \rightarrow \lnot P_{40} \\
-\text{(16)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(18)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(19)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(20)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-36}{P_{36}}\\) — John 6:28–29 — the work God requires is that you believe in him whom he sent
+- (2) \\(\href{claims.html#claim-37}{P_{37}}\\) — John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son
+- (3) \\(\href{claims.html#claim-41}{P_{41}}\\) — The believing of John 6:29 is faith living through charity, the source of works
+- (4) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:8–9 teaches salvation by grace through faith, not of works
+- (5) \\(\href{claims.html#claim-2}{P_{2}}\\) — Romans 3:28 teaches justification by faith apart from works of the law
+- (6) \\(\href{claims.html#claim-3}{P_{3}}\\) — Galatians 2:16 teaches that no one is justified by works of the law
+- (7) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes
+- (8) \\(\href{claims.html#claim-5}{P_{5}}\\) — Titus 3:5 teaches that God saved us not by works done in righteousness
+- (9) \\(\href{claims.html#claim-17}{P_{17}}\\) — Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven
+- (10) \\(\href{claims.html#claim-9}{P_{9}}\\) — Acts 15:9–11 — Peter: hearts cleansed by faith; saved through grace
+- (11) \\(\href{claims.html#claim-20}{P_{20}}\\) — James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine
+- (12) \\(\href{claims.html#claim-21}{P_{21}}\\) — Good works are the fruit and evidence of saving faith, not its ground
+- (13) \\(\href{claims.html#claim-24}{P_{24}}\\) — Scripture does not contradict itself
+- (14) \\((\href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* Justification is by faith alone
+- (15) \\(\href{claims.html#claim-41}{P_{41}} \rightarrow \lnot \href{claims.html#claim-40}{P_{40}}\\) — *would deny:* The believing of John 6:29 is trust, which brings nothing and receives Christ
+- (16) \\((\href{claims.html#claim-20}{P_{20}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\) — *would give:* James 2:24 is compatible with Paul, using ‘justify’ in a different sense
+- (17) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-27}{P_{27}}\\) — *would give:* Salvation is by grace, a gift and not wages owed
+- (18) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Salvation is not by works: no work is its ground
+- (19) \\(\href{claims.html#claim-25}{P_{25}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (20) \\((\href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is received through faith
+- \\(\vdash\\) \\(\href{claims.html#claim-27}{P_{27}} \land \href{claims.html#claim-28}{P_{28}} \land \href{claims.html#claim-29}{P_{29}}\\) — *at issue:* \\(\href{claims.html#claim-27}{P_{27}}\\) Salvation is by grace, a gift and not wages owed; \\(\href{claims.html#claim-28}{P_{28}}\\) Salvation is not by works: no work is its ground; \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is received through faith
+
 </div>
 
 Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
@@ -380,41 +374,39 @@ The Reformed case with Aquinas granted his reading of John 6:29: the
 believing is faith formed by charity, and so not bare trust. The other three
 strands are kept whole.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{8} \\
-\text{(2)} \quad &amp; P_{6} \\
-\text{(3)} \quad &amp; P_{7} \\
-\text{(4)} \quad &amp; P_{18} \\
-\text{(5)} \quad &amp; P_{19} \\
-\text{(6)} \quad &amp; P_{10} \\
-\text{(7)} \quad &amp; P_{36} \\
-\text{(8)} \quad &amp; P_{37} \\
-\text{(9)} \quad &amp; P_{41} \\
-\text{(10)} \quad &amp; P_{1} \\
-\text{(11)} \quad &amp; P_{2} \\
-\text{(12)} \quad &amp; P_{3} \\
-\text{(13)} \quad &amp; P_{4} \\
-\text{(14)} \quad &amp; P_{5} \\
-\text{(15)} \quad &amp; P_{17} \\
-\text{(16)} \quad &amp; P_{9} \\
-\text{(17)} \quad &amp; P_{20} \\
-\text{(18)} \quad &amp; P_{21} \\
-\text{(19)} \quad &amp; P_{24} \\
-\text{(20)} \quad &amp; (P_{2} \land P_{3} \land P_{8} \land P_{7} \land P_{6}) \rightarrow P_{25} \\
-\text{(21)} \quad &amp; (P_{17} \land P_{18} \land P_{19}) \rightarrow P_{26} \\
-\text{(22)} \quad &amp; (P_{9} \land P_{10}) \rightarrow P_{26} \\
-\text{(23)} \quad &amp; (P_{36} \land P_{37} \land P_{40}) \rightarrow P_{25} \\
-\text{(24)} \quad &amp; P_{41} \rightarrow \lnot P_{40} \\
-\text{(25)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(26)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(27)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(28)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(29)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\[4pt]
-\vdash \quad &amp; P_{27} \land P_{28} \land P_{29}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-8}{P_{8}}\\) — Galatians opposes requiring circumcision, besides faith, for justification
+- (2) \\(\href{claims.html#claim-6}{P_{6}}\\) — Paul's ‘works of the law’ means human works in general, not boundary markers
+- (3) \\(\href{claims.html#claim-7}{P_{7}}\\) — In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means our faith in Christ
+- (4) \\(\href{claims.html#claim-18}{P_{18}}\\) — ‘Saved’ (σῴζω) at Luke 7:50 means saved from sin, not healed
+- (5) \\(\href{claims.html#claim-19}{P_{19}}\\) — Luke 7:47 — her love is the evidence of her forgiveness, not its ground
+- (6) \\(\href{claims.html#claim-10}{P_{10}}\\) — The yoke refused at Acts 15:10 is the whole law as a condition of salvation
+- (7) \\(\href{claims.html#claim-36}{P_{36}}\\) — John 6:28–29 — the work God requires is that you believe in him whom he sent
+- (8) \\(\href{claims.html#claim-37}{P_{37}}\\) — John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son
+- (9) \\(\href{claims.html#claim-41}{P_{41}}\\) — The believing of John 6:29 is faith living through charity, the source of works
+- (10) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:8–9 teaches salvation by grace through faith, not of works
+- (11) \\(\href{claims.html#claim-2}{P_{2}}\\) — Romans 3:28 teaches justification by faith apart from works of the law
+- (12) \\(\href{claims.html#claim-3}{P_{3}}\\) — Galatians 2:16 teaches that no one is justified by works of the law
+- (13) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes
+- (14) \\(\href{claims.html#claim-5}{P_{5}}\\) — Titus 3:5 teaches that God saved us not by works done in righteousness
+- (15) \\(\href{claims.html#claim-17}{P_{17}}\\) — Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven
+- (16) \\(\href{claims.html#claim-9}{P_{9}}\\) — Acts 15:9–11 — Peter: hearts cleansed by faith; saved through grace
+- (17) \\(\href{claims.html#claim-20}{P_{20}}\\) — James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine
+- (18) \\(\href{claims.html#claim-21}{P_{21}}\\) — Good works are the fruit and evidence of saving faith, not its ground
+- (19) \\(\href{claims.html#claim-24}{P_{24}}\\) — Scripture does not contradict itself
+- (20) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-6}{P_{6}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* Justification is by faith alone
+- (21) \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-18}{P_{18}} \land \href{claims.html#claim-19}{P_{19}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (22) \\((\href{claims.html#claim-9}{P_{9}} \land \href{claims.html#claim-10}{P_{10}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (23) \\((\href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* Justification is by faith alone
+- (24) \\(\href{claims.html#claim-41}{P_{41}} \rightarrow \lnot \href{claims.html#claim-40}{P_{40}}\\) — *would deny:* The believing of John 6:29 is trust, which brings nothing and receives Christ
+- (25) \\((\href{claims.html#claim-20}{P_{20}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\) — *would give:* James 2:24 is compatible with Paul, using ‘justify’ in a different sense
+- (26) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-27}{P_{27}}\\) — *would give:* Salvation is by grace, a gift and not wages owed
+- (27) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Salvation is not by works: no work is its ground
+- (28) \\(\href{claims.html#claim-25}{P_{25}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (29) \\((\href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is received through faith
+- \\(\vdash\\) \\(\href{claims.html#claim-27}{P_{27}} \land \href{claims.html#claim-28}{P_{28}} \land \href{claims.html#claim-29}{P_{29}}\\) — *at issue:* \\(\href{claims.html#claim-27}{P_{27}}\\) Salvation is by grace, a gift and not wages owed; \\(\href{claims.html#claim-28}{P_{28}}\\) Salvation is not by works: no work is its ground; \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is received through faith
+
 </div>
 
 Grounded in scripture alone: John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son.
@@ -508,15 +500,13 @@ love to the denial of Aquinas's reading: the believing that justifies is not
 faith formed by charity, since love is what the law commands and the law is not
 of faith.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{42} \\
-\text{(2)} \quad &amp; P_{43} \\
-\text{(3)} \quad &amp; (P_{42} \land P_{43}) \rightarrow \lnot P_{41} \\[4pt]
-\vdash \quad &amp; \lnot P_{41}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-42}{P_{42}}\\) — Galatians 3:11–12 — none is justified by the law; the law is not of faith
+- (2) \\(\href{claims.html#claim-43}{P_{43}}\\) — Love of God and neighbour is what the law commands
+- (3) \\((\href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-41}{P_{41}}\\) — *at issue, the denial of:* The believing of John 6:29 is faith living through charity, the source of works
+
 </div>
 
 <a id="lutherOnGalatians"></a>
@@ -525,15 +515,13 @@ of faith.
 Luther's answer to Aquinas as a position: what Aquinas grants, with Luther's
 step, against reading the believing of 6:29 as faith formed by charity.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{42} \\
-\text{(2)} \quad &amp; P_{43} \\
-\text{(3)} \quad &amp; (P_{42} \land P_{43}) \rightarrow \lnot P_{41} \\[4pt]
-\vdash \quad &amp; \lnot P_{41}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-42}{P_{42}}\\) — Galatians 3:11–12 — none is justified by the law; the law is not of faith
+- (2) \\(\href{claims.html#claim-43}{P_{43}}\\) — Love of God and neighbour is what the law commands
+- (3) \\((\href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-41}{P_{41}}\\) — *at issue, the denial of:* The believing of John 6:29 is faith living through charity, the source of works
+
 </div>
 
 No premise here rests on scripture alone.
@@ -544,14 +532,12 @@ No premise here rests on scripture alone.
 The same starting points without Luther's step: Galatians 3:11–12, and that the
 law commands love.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{42} \\
-\text{(2)} \quad &amp; P_{43} \\[4pt]
-\vdash \quad &amp; \lnot P_{41}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-42}{P_{42}}\\) — Galatians 3:11–12 — none is justified by the law; the law is not of faith
+- (2) \\(\href{claims.html#claim-43}{P_{43}}\\) — Love of God and neighbour is what the law commands
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-41}{P_{41}}\\) — *at issue, the denial of:* The believing of John 6:29 is faith living through charity, the source of works
+
 </div>
 
 No premise here rests on scripture alone.
@@ -630,14 +616,14 @@ and the texts are accepted by both sides.
 
 **Why *Luther on Galatians 3:11–12 (against faith formed by charity)* stands against *Aquinas on John 6:29 (faith formed by charity)*.**
 
-- **The crux:** \\((P_{42} \land P_{43}) \rightarrow \lnot P_{41}\\), a premise of *Luther on Galatians 3:11–12 (against faith formed by charity)*.
+- **The crux:** \\((\href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\), a premise of *Luther on Galatians 3:11–12 (against faith formed by charity)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(P_{42}\\), \\(P_{43}\\), which the break also needs.
-- **Where the rival breaks:** \\(P_{41}\\) cannot be held together with \\((P_{42} \land P_{43}) \rightarrow \lnot P_{41}\\) and \\(P_{42}\\), \\(P_{43}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-42}{P_{42}}\\), \\(\href{claims.html#claim-43}{P_{43}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-41}{P_{41}}\\) cannot be held together with \\((\href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\) and \\(\href{claims.html#claim-42}{P_{42}}\\), \\(\href{claims.html#claim-43}{P_{43}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(P_{42}\\) Galatians 3:11–12 — none is justified by the law; the law is not of faith — *consensus*: Gal 3:11-12; [`luther-commentary-galatians-1998`](../../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
-  - \\(P_{43}\\) Love of God and neighbour is what the law commands — *consensus*: Deut 6:5; Matt 22:37-40; [`luther-commentary-galatians-1998`](../../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12
-  - the step itself — *disputed*: [`luther-commentary-galatians-1998`](../../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [`luther-commentary-galatians-1998`](../../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
+  - \\(\href{claims.html#claim-42}{P_{42}}\\) Galatians 3:11–12 — none is justified by the law; the law is not of faith — *consensus*: Gal 3:11-12; [Luther 1998](../../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
+  - \\(\href{claims.html#claim-43}{P_{43}}\\) Love of God and neighbour is what the law commands — *consensus*: Deut 6:5; Matt 22:37-40; [Luther 1998](../../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12
+  - the step itself — *disputed*: [Luther 1998](../../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:12; [Luther 1998](../../bibliography.md#luther-commentary-galatians-1998), ad loc. Gal 3:11
 
 <a id="chrysostomOnJohnThreeThirtySix"></a>
 **`chrysostomOnJohnThreeThirtySix`**
@@ -665,15 +651,13 @@ def chrysostomOnJohnThreeThirtySix : Source :=
 life" (John 3:36) and "not everyone who says to me, 'Lord, Lord'" (Matthew
 7:21) to the conclusion that believing does not suffice without a right life.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{38} \\
-\text{(2)} \quad &amp; P_{62} \\
-\text{(3)} \quad &amp; (P_{38} \land P_{62}) \rightarrow \lnot P_{26} \\[4pt]
-\vdash \quad &amp; \lnot P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-38}{P_{38}}\\) — John 3:36 — whoever believes has life; whoever does not obey shall not see life
+- (2) \\(\href{claims.html#claim-62}{P_{62}}\\) — Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works
+- (3) \\((\href{claims.html#claim-38}{P_{38}} \land \href{claims.html#claim-62}{P_{62}}) \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-26}{P_{26}}\\) — *at issue, the denial of:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 <a id="chrysostomOnJohn"></a>
@@ -681,15 +665,13 @@ life" (John 3:36) and "not everyone who says to me, 'Lord, Lord'" (Matthew
 
 Chrysostom's argument as a position: the two texts, with his step.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{38} \\
-\text{(2)} \quad &amp; P_{62} \\
-\text{(3)} \quad &amp; (P_{38} \land P_{62}) \rightarrow \lnot P_{26} \\[4pt]
-\vdash \quad &amp; \lnot P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-38}{P_{38}}\\) — John 3:36 — whoever believes has life; whoever does not obey shall not see life
+- (2) \\(\href{claims.html#claim-62}{P_{62}}\\) — Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works
+- (3) \\((\href{claims.html#claim-38}{P_{38}} \land \href{claims.html#claim-62}{P_{62}}) \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-26}{P_{26}}\\) — *at issue, the denial of:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 No premise here rests on scripture alone.
@@ -750,33 +732,31 @@ theorem john3_36_leaves_faiths_sufficiency_open : Independent [p
 John's strand and Chrysostom's argument, held together: every premise of
 each.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{36} \\
-\text{(2)} \quad &amp; P_{37} \\
-\text{(3)} \quad &amp; P_{40} \\
-\text{(4)} \quad &amp; P_{1} \\
-\text{(5)} \quad &amp; P_{2} \\
-\text{(6)} \quad &amp; P_{3} \\
-\text{(7)} \quad &amp; P_{4} \\
-\text{(8)} \quad &amp; P_{5} \\
-\text{(9)} \quad &amp; P_{17} \\
-\text{(10)} \quad &amp; P_{9} \\
-\text{(11)} \quad &amp; P_{20} \\
-\text{(12)} \quad &amp; P_{21} \\
-\text{(13)} \quad &amp; P_{24} \\
-\text{(14)} \quad &amp; (P_{36} \land P_{37} \land P_{40}) \rightarrow P_{25} \\
-\text{(15)} \quad &amp; (P_{20} \land P_{21}) \rightarrow P_{22} \\
-\text{(16)} \quad &amp; (P_{1} \land P_{4} \land P_{5}) \rightarrow P_{27} \\
-\text{(17)} \quad &amp; (P_{1} \land P_{4} \land P_{5} \land P_{22} \land P_{24}) \rightarrow P_{28} \\
-\text{(18)} \quad &amp; P_{25} \rightarrow P_{26} \\
-\text{(19)} \quad &amp; (P_{26} \land P_{1}) \rightarrow P_{29} \\
-\text{(20)} \quad &amp; P_{38} \\
-\text{(21)} \quad &amp; P_{62} \\
-\text{(22)} \quad &amp; (P_{38} \land P_{62}) \rightarrow \lnot P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-36}{P_{36}}\\) — John 6:28–29 — the work God requires is that you believe in him whom he sent
+- (2) \\(\href{claims.html#claim-37}{P_{37}}\\) — John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son
+- (3) \\(\href{claims.html#claim-40}{P_{40}}\\) — The believing of John 6:29 is trust, which brings nothing and receives Christ
+- (4) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:8–9 teaches salvation by grace through faith, not of works
+- (5) \\(\href{claims.html#claim-2}{P_{2}}\\) — Romans 3:28 teaches justification by faith apart from works of the law
+- (6) \\(\href{claims.html#claim-3}{P_{3}}\\) — Galatians 2:16 teaches that no one is justified by works of the law
+- (7) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes
+- (8) \\(\href{claims.html#claim-5}{P_{5}}\\) — Titus 3:5 teaches that God saved us not by works done in righteousness
+- (9) \\(\href{claims.html#claim-17}{P_{17}}\\) — Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven
+- (10) \\(\href{claims.html#claim-9}{P_{9}}\\) — Acts 15:9–11 — Peter: hearts cleansed by faith; saved through grace
+- (11) \\(\href{claims.html#claim-20}{P_{20}}\\) — James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine
+- (12) \\(\href{claims.html#claim-21}{P_{21}}\\) — Good works are the fruit and evidence of saving faith, not its ground
+- (13) \\(\href{claims.html#claim-24}{P_{24}}\\) — Scripture does not contradict itself
+- (14) \\((\href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* Justification is by faith alone
+- (15) \\((\href{claims.html#claim-20}{P_{20}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\) — *would give:* James 2:24 is compatible with Paul, using ‘justify’ in a different sense
+- (16) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-27}{P_{27}}\\) — *would give:* Salvation is by grace, a gift and not wages owed
+- (17) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Salvation is not by works: no work is its ground
+- (18) \\(\href{claims.html#claim-25}{P_{25}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (19) \\((\href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is received through faith
+- (20) \\(\href{claims.html#claim-38}{P_{38}}\\) — John 3:36 — whoever believes has life; whoever does not obey shall not see life
+- (21) \\(\href{claims.html#claim-62}{P_{62}}\\) — Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works
+- (22) \\((\href{claims.html#claim-38}{P_{38}} \land \href{claims.html#claim-62}{P_{62}}) \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\) — *would deny:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 <a id="chrysostom_cannot_be_held_with_johns_case"></a>
@@ -834,16 +814,14 @@ sanctification, the fruit of faith. So they add no condition to faith, and the
 first half of John 3:36 holds as it is written: whoever believes has eternal
 life.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{38} \\
-\text{(2)} \quad &amp; P_{62} \\
-\text{(3)} \quad &amp; P_{39} \\
-\text{(4)} \quad &amp; (P_{38} \land P_{62} \land P_{39}) \rightarrow P_{26} \\[4pt]
-\vdash \quad &amp; P_{26}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-38}{P_{38}}\\) — John 3:36 — whoever believes has life; whoever does not obey shall not see life
+- (2) \\(\href{claims.html#claim-62}{P_{62}}\\) — Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works
+- (3) \\(\href{claims.html#claim-39}{P_{39}}\\) — The obedience of John 3:36 and Matthew 7:21 is sanctification, the fruit of faith
+- (4) \\((\href{claims.html#claim-38}{P_{38}} \land \href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-39}{P_{39}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-26}{P_{26}}\\) — *at issue:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 

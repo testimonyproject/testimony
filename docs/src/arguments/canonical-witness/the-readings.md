@@ -211,16 +211,14 @@ Titus, whoever wrote them. "Apart from works of the law" (Romans 3:28), "not of
 works" (Ephesians 2:9), "not by works done in righteousness" (Titus 3:5): works
 are not the ground.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{1} \\
-\text{(2)} \quad &amp; P_{5} \\
-\text{(3)} \quad &amp; P_{6} \\
-\text{(4)} \quad &amp; (P_{1} \land P_{5} \land P_{6}) \rightarrow P_{23} \\[4pt]
-\vdash \quad &amp; P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) — Romans 3:28: a person is justified by faith apart from works of the law
+- (2) \\(\href{claims.html#claim-5}{P_{5}}\\) — Ephesians 2:8–9: saved by grace through faith, not of works
+- (3) \\(\href{claims.html#claim-6}{P_{6}}\\) — Titus 3:5: saved not by works done in righteousness but by his mercy
+- (4) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-23}{P_{23}}\\) — *at issue:* Works are not the ground of justification
+
 </div>
 
 <a id="paulineFaithLine"></a>
@@ -231,16 +229,14 @@ it (Galatians 2:16, 3:11) — and sufficient — to the one who does not work bu
 believes, faith is counted as righteousness (Romans 4:4–5). Paul's own message,
 stated apart from what he says about works.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{2} \\
-\text{(2)} \quad &amp; P_{3} \\
-\text{(3)} \quad &amp; P_{4} \\
-\text{(4)} \quad &amp; (P_{2} \land P_{3} \land P_{4}) \rightarrow P_{21} \land P_{22} \\[4pt]
-\vdash \quad &amp; P_{21} \land P_{22}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-2}{P_{2}}\\) — Romans 4:4–5: to the one who does not work but believes, faith is counted as righteousness
+- (2) \\(\href{claims.html#claim-3}{P_{3}}\\) — Galatians 2:16: not justified by works of the law but through faith in Christ
+- (3) \\(\href{claims.html#claim-4}{P_{4}}\\) — Galatians 3:11: no one is justified before God by the law; the righteous shall live by faith
+- (4) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-4}{P_{4}}) \rightarrow \href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-22}{P_{22}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-22}{P_{22}}\\) — *at issue:* \\(\href{claims.html#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it; \\(\href{claims.html#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved
+
 </div>
 
 <a id="hebrewsLine"></a>
@@ -248,15 +244,13 @@ stated apart from what he says about works.
 
 **Hebrews**, read as its own corpus: faith is necessary.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{7} \\
-\text{(2)} \quad &amp; P_{8} \\
-\text{(3)} \quad &amp; (P_{7} \land P_{8}) \rightarrow P_{21} \\[4pt]
-\vdash \quad &amp; P_{21}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-7}{P_{7}}\\) — Hebrews 10:38–39: the righteous one shall live by faith
+- (2) \\(\href{claims.html#claim-8}{P_{8}}\\) — Hebrews 11:6: without faith it is impossible to please God
+- (3) \\((\href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-8}{P_{8}}) \rightarrow \href{claims.html#claim-21}{P_{21}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-21}{P_{21}}\\) — *at issue:* Faith is necessary: no one is saved without it
+
 </div>
 
 <a id="johannineLine"></a>
@@ -265,16 +259,14 @@ stated apart from what he says about works.
 **John**: whoever believes has life, and whoever does not is condemned
 already.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{9} \\
-\text{(2)} \quad &amp; P_{10} \\
-\text{(3)} \quad &amp; P_{11} \\
-\text{(4)} \quad &amp; (P_{9} \land P_{10} \land P_{11}) \rightarrow P_{22} \land P_{21} \\[4pt]
-\vdash \quad &amp; P_{22} \land P_{21}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-9}{P_{9}}\\) — John 3:16–18: whoever believes has eternal life; whoever does not believe is condemned already
+- (2) \\(\href{claims.html#claim-10}{P_{10}}\\) — John 5:24: whoever hears and believes has eternal life and does not come into judgement
+- (3) \\(\href{claims.html#claim-11}{P_{11}}\\) — John 6:28–29: the work of God is that you believe in him whom he has sent
+- (4) \\((\href{claims.html#claim-9}{P_{9}} \land \href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-21}{P_{21}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-21}{P_{21}}\\) — *at issue:* \\(\href{claims.html#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{claims.html#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it
+
 </div>
 
 <a id="petrineLine"></a>
@@ -283,15 +275,13 @@ already.
 **Peter**, in Luke's report: forgiveness to everyone who believes, and
 salvation through grace, without the yoke.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{12} \\
-\text{(2)} \quad &amp; P_{13} \\
-\text{(3)} \quad &amp; (P_{12} \land P_{13}) \rightarrow P_{22} \land P_{23} \\[4pt]
-\vdash \quad &amp; P_{22} \land P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-12}{P_{12}}\\) — Acts 10:43: everyone who believes in him receives forgiveness of sins
+- (2) \\(\href{claims.html#claim-13}{P_{13}}\\) — Acts 15:10–11: no yoke on the disciples; we are saved through the grace of the Lord Jesus
+- (3) \\((\href{claims.html#claim-12}{P_{12}} \land \href{claims.html#claim-13}{P_{13}}) \rightarrow \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-23}{P_{23}}\\) — *at issue:* \\(\href{claims.html#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{claims.html#claim-23}{P_{23}}\\) Works are not the ground of justification
+
 </div>
 
 <a id="dominicalLine"></a>
@@ -300,15 +290,13 @@ salvation through grace, without the yoke.
 **Jesus**, in Luke: the woman whose faith saved her, and the tax collector
 who went home justified.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{14} \\
-\text{(2)} \quad &amp; P_{15} \\
-\text{(3)} \quad &amp; (P_{14} \land P_{15}) \rightarrow P_{22} \land P_{23} \\[4pt]
-\vdash \quad &amp; P_{22} \land P_{23}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-14}{P_{14}}\\) — Luke 7:50: your faith has saved you
+- (2) \\(\href{claims.html#claim-15}{P_{15}}\\) — Luke 18:9–14: the tax collector, not the Pharisee who listed his works, went home justified
+- (3) \\((\href{claims.html#claim-14}{P_{14}} \land \href{claims.html#claim-15}{P_{15}}) \rightarrow \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-23}{P_{23}}\\) — *at issue:* \\(\href{claims.html#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved; \\(\href{claims.html#claim-23}{P_{23}}\\) Works are not the ground of justification
+
 </div>
 
 <a id="toFaithAlone"></a>
@@ -316,10 +304,10 @@ who went home justified.
 
 The three parts, together, are *faith alone*.
 
-<div class="testimony-math">
-\[
-(P_{21} \land P_{22} \land P_{23}) \rightarrow P_{24}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Justification is by faith alone
+
 </div>
 
 <a id="jamesLine"></a>
@@ -330,20 +318,18 @@ sanctification: the faith he calls dead is the demons' assent, and the
 justification he means is the display of a faith already counted as
 righteousness. So works are the fruit of saving faith, not its ground.
 
-<div class="testimony-math">
-\[
-\begin{aligned}
-\text{(1)} \quad &amp; P_{16} \\
-\text{(2)} \quad &amp; P_{17} \\
-\text{(3)} \quad &amp; P_{18} \\
-\text{(4)} \quad &amp; P_{19} \\
-\text{(5)} \quad &amp; P_{27} \\
-\text{(6)} \quad &amp; P_{28} \\
-\text{(7)} \quad &amp; P_{29} \\
-\text{(8)} \quad &amp; (P_{16} \land P_{18} \land P_{27} \land P_{28} \land P_{29}) \rightarrow P_{25} \\[4pt]
-\vdash \quad &amp; P_{25}
-\end{aligned}
-\]
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-16}{P_{16}}\\) — James 2:14–17: faith by itself, if it does not have works, is dead
+- (2) \\(\href{claims.html#claim-17}{P_{17}}\\) — James 2:19: even the demons believe, and shudder
+- (3) \\(\href{claims.html#claim-18}{P_{18}}\\) — James 2:21–23: Abraham's faith was completed by his works, and Genesis 15:6 was fulfilled
+- (4) \\(\href{claims.html#claim-19}{P_{19}}\\) — James 2:24: a person is justified by works and not by faith alone
+- (5) \\(\href{claims.html#claim-27}{P_{27}}\\) — James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine
+- (6) \\(\href{claims.html#claim-28}{P_{28}}\\) — ‘Justified’ in James 2:21–24 means shown to be righteous (denied by Trent, which reads 2:24 as an increase of justification by works done in grace)
+- (7) \\(\href{claims.html#claim-29}{P_{29}}\\) — Justification and sanctification are inseparable but distinct
+- (8) \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-18}{P_{18}} \land \href{claims.html#claim-27}{P_{27}} \land \href{claims.html#claim-28}{P_{28}} \land \href{claims.html#claim-29}{P_{29}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-25}{P_{25}}\\) — *at issue:* Good works are the fruit and evidence of a true and lively faith
+
 </div>
 
 <a id="toNeverAlone"></a>
@@ -351,10 +337,10 @@ righteousness. So works are the fruit of saving faith, not its ground.
 
 Faith alone, with its fruit, is faith that is never alone.
 
-<div class="testimony-math">
-\[
-(P_{24} \land P_{25}) \rightarrow P_{26}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Justification is by faith alone, by a faith that is never alone
+
 </div>
 
 <a id="trentOnJames"></a>
@@ -364,10 +350,10 @@ Faith alone, with its fruit, is faith that is never alone.
 justification already received, by works done in grace; so works are part of
 its ground, and faith alone is denied.
 
-<div class="testimony-math">
-\[
-(P_{19} \land \lnot P_{28}) \rightarrow \lnot P_{23}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-19}{P_{19}} \land \lnot \href{claims.html#claim-28}{P_{28}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\) — *would deny:* Works are not the ground of justification
+
 </div>
 
 <a id="jamesAgainstSufficiency"></a>
@@ -380,10 +366,10 @@ The rival to the reading on which James and Paul cohere: there, the faith that
 cannot save is the faith 2:14–17 describes, faith without works
 (`james2TargetsDeadFaith`).
 
-<div class="testimony-math">
-\[
-(P_{16} \land P_{19}) \rightarrow \lnot P_{22}
-\]
+<div class="testimony-derivation">
+
+- \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-19}{P_{19}}) \rightarrow \lnot \href{claims.html#claim-22}{P_{22}}\\) — *would deny:* Faith is sufficient: whoever believes is saved
+
 </div>
 
 <a id="notAloneIfWorksGround"></a>
@@ -391,10 +377,10 @@ cannot save is the faith 2:14–17 describes, faith without works
 
 And what follows from that: not faith alone.
 
-<div class="testimony-math">
-\[
-\lnot P_{23} \rightarrow \lnot P_{24}
-\]
+<div class="testimony-derivation">
+
+- \\(\lnot \href{claims.html#claim-23}{P_{23}} \rightarrow \lnot \href{claims.html#claim-24}{P_{24}}\\) — *would deny:* Justification is by faith alone
+
 </div>
 
 <a id="corpora"></a>
