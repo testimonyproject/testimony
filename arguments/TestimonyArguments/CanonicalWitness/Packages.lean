@@ -5,20 +5,22 @@ import Testimony.Logic.Burden
 /-!
 # TestimonyArguments.CanonicalWitness.Packages — the positions
 
-Trent first, because the rival is written before anything is proved. Then the
-canonical case, the case with James, and the specific burdens a reader can
-check one at a time: the case with one corpus's reading rejected, with the
-readings behind one part of faith alone rejected together, and with all but
-two rejected. Every text stays granted in each; what goes is the step that
-reads them.
+Trent's position is written first, because the rival is written before
+anything is proved. Then come the canonical case, the case with James, and the
+particular burdens a reader can check one at a time: the case with one corpus's
+reading rejected, with the readings behind one part of faith alone rejected
+together, and with all but two rejected. Every text stays granted in each, and
+what goes is the step that reads them.
+-/
+
+namespace TestimonyArguments.CanonicalWitness
+
+/-! #### How the burdens are built
 
 Each is built with `ArgumentPackage.rejecting`, the operation the opponent's
 burden quantifies over (`Testimony.Logic.Burden`), and its result is proved
 from that burden in `TestimonyArguments.CanonicalWitness.Results`. So the
-named burdens are instances of the computed one, and cannot drift from it.
--/
-
-namespace TestimonyArguments.CanonicalWitness
+named burdens are instances of the computed one, and cannot drift from it. -/
 
 open Testimony
 
@@ -160,7 +162,7 @@ def withJamesUndemonstrated : ArgumentPackage Claim :=
       caseOf (corpora ++ [jamesWithoutDemonstrative]) [p .jude20_21]
         [toFaithAlone, toNeverAlone] }
 
-/-! ### Paul on faith, on its own
+/-! #### Paul on faith, on its own
 
 Paul's message about faith, apart from what he says about works: faith is
 necessary, and it is sufficient. Stated as its own position, so it can be set
