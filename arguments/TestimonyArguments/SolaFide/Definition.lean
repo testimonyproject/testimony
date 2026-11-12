@@ -108,7 +108,7 @@ This follows from three things: the verb is a courtroom word; Paul has other
 words for renewal; and a word contributes the least meaning its context
 requires.
 
-What this does not claim: anything about what God does when he justifies. It is
+It does not claim anything about what God does when he justifies. It is
 a result about a word. -/
 @[headline]
 theorem lexicalCase_establishes : Establishes lexicalCase := by
@@ -303,7 +303,7 @@ def whereTrentsGraceReadingFalls : Because galatianGospel tridentineOnWhatGodDoe
 righteousness God counts to the ungodly as sin not counted. With the courtroom
 sense of the verb, renewal is no part of justification.
 
-What this does not claim: that the reading is beyond dispute. Augustine accepts
+It does not show that the reading is beyond dispute. Augustine accepts
 the same verses and reads them the other way, so the step is rated `disputed`. -/
 @[headline]
 theorem romansFourCase_establishes : Establishes romansFourCase := by

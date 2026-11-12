@@ -164,7 +164,7 @@ believing of 6:29 is trust, and the work God requires is believing, which earns
 nothing. Sola fide then follows without the readings Paul's, Luke's and Peter's
 strands depend on.
 
-What this does not claim: that John 6:29 is the only text used. Grace and "not
+It does not show that John 6:29 is the only text used. Grace and "not
 by works" come from the verses every strand shares and from the answer to
 James. -/
 @[headline]
@@ -212,8 +212,8 @@ def reformedGrantingAquinasOnJohn : ArgumentPackage Claim :=
 Grant Aquinas that the believing of John 6:29 is faith formed by charity, keep
 Paul, Luke and Acts as the Reformed read them, and sola fide still follows.
 
-What this claims: losing the argument over John 6:29 costs the Reformed case one
-strand and not its conclusion. What it does not claim: that Aquinas would accept
+Losing the argument over John 6:29 costs the Reformed case one
+strand and not its conclusion. It does not show that Aquinas would accept
 the rest. He would not, and the package is not his position; it is the Reformed
 case with one concession made. -/
 @[headline]
@@ -288,7 +288,7 @@ the believing of John 6:29 is not faith formed by charity: a faith that
 justified because love formed it would justify by the law, and the law is not of
 faith.
 
-What this does not claim: that Calvin's reading is thereby established. It
+It does not show that Calvin's reading is thereby established. It
 removes Aquinas's reading, and only if the step is granted. -/
 @[headline]
 theorem luther_answers_aquinas_from_galatians : Establishes lutherOnGalatians := by
@@ -433,8 +433,8 @@ def chrysostomOnJohn : ArgumentPackage Claim :=
 Matthew 7:21, read as he reads them, believing does not suffice for salvation
 without a right life.
 
-What this claims: his argument is valid, and its premises are two texts nobody
-here disputes. What it does not claim: that the step is sound. Calvin accepts
+His argument is valid, and its premises are two texts nobody
+here disputes. It does not show that the step is sound. Calvin accepts
 both texts and denies it, so the step is rated `disputed`. -/
 @[headline]
 theorem chrysostom_reads_john3_36_against_faith_alone : Establishes chrysostomOnJohn := by
@@ -454,8 +454,8 @@ suffices.** One consistent reading holds both texts and that faith suffices: the
 Reformed one, on which not obeying the Son is refusing to believe him. Another
 holds both texts and that faith does not suffice: Chrysostom's and Aquinas's.
 
-What this claims: neither side can settle the question by pointing at the
-words. What it does not claim: that the two readings are equally good. That is
+Neither side can settle the question by pointing at the
+words. It does not show that the two readings are equally good. That is
 a matter for the sources, and the page reports what they say. -/
 @[headline]
 theorem john3_36_leaves_faiths_sufficiency_open :
@@ -476,8 +476,8 @@ concludes that justification is by faith alone, and so that faith suffices.
 Chrysostom concludes that it does not. No consistent reading holds every premise
 of both.
 
-What this claims: a reader has to choose between Calvin's reading of John and
-Chrysostom's conclusion as written out here. What it does not claim: which to
+A reader has to choose between Calvin's reading of John and
+Chrysostom's conclusion as written out here. It does not claim which to
 choose. Each rests on a step rated `disputed`.
 
 Nor does it claim that the faith Chrysostom speaks of, right belief without a
