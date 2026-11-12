@@ -44,6 +44,22 @@ The verdict, for the fixed-point loop (.claude/skills/optimising-the-engine):
 Exit status: 0 for IMPROVED, 1 for NO CHANGE, 2 for REGRESSED, 3 on bad input.
 With --gate, as CI uses it: 2 for REGRESSED, 0 otherwise.
 
+A slowdown found this way is a first reading, not yet a verdict. With five
+samples a side the test can reach only a few p-values, and p < 0.05 means the
+new samples beat the old in all but two of the 25 pairings: with no change at
+all, chance does that to a benchmark 1.6% of the time. A benchmark of a few
+milliseconds varies by more than the 5% threshold from run to run, so the
+threshold does not filter it, and across the thirty-odd benchmarks a run had a
+one-in-three chance of a false alarm. So scripts/bench-ab.sh measures each
+slowdown again before it fails anything, and --plan FILE writes what to
+measure: each benchmark that regressed in time, unaccepted, with the extra
+rounds it gets (CONFIRM_ROUNDS), fewer for the long ones, whose runs vary less
+and cost more. The second comparison pools both readings and asks for p < 0.01
+(--alpha), with --no-memory, since peak memory has no samples to add and was
+judged the first time. Simulated over Gaussian samples, the two together cut a
+run's chance of a false alarm about tenfold, and catch nearly every slowdown
+the first reading alone caught.
+
 --accept FILE reads regressions accepted on purpose, from a TOML file of
 [[accept]] entries, each with benchmark, metric ("time" or "memory"), up_to
 (the largest accepted change, as a fraction) and reason. A regression within its
@@ -64,6 +80,23 @@ from scipy.stats import mannwhitneyu
 # With fewer repetitions on either side the test cannot reach p < 0.05 at all,
 # so compare.py warns; this script refuses.
 MIN_REPETITIONS = 4
+
+# Extra interleaved rounds to measure a flagged slowdown again, by the
+# benchmark's median on the base, in milliseconds: (below this, rounds). Each
+# run costs about 4 s before the benchmark starts (lake's paths, then a Lean
+# process of its own importing the arguments), so a benchmark of a few
+# milliseconds is cheap to measure again and one of fourteen seconds is not. A
+# long benchmark also varies less, relative to its time, and needs fewer
+# samples. Measured: 40 s for a short benchmark's five rounds a side; by the
+# same reckoning about 70 s for a 2 s benchmark's five, an 8 s one's three or
+# a 14 s one's two. Two extra rounds, seven samples a side, can still reach
+# p < 0.001.
+CONFIRM_ROUNDS = ((2000.0, 5), (8000.0, 3), (float("inf"), 2))
+
+
+def confirm_rounds(median_ms):
+    """The extra rounds a slowdown in a benchmark of this median gets."""
+    return next(r for bound, r in CONFIRM_ROUNDS if median_ms < bound)
 
 
 def samples(path):
@@ -140,6 +173,10 @@ def main(argv):
                         help="a benchmark no change can move; a difference in it is drift")
     parser.add_argument("--gate", action="store_true",
                         help="exit 2 on a regression and 0 otherwise, for CI")
+    parser.add_argument("--plan", metavar="JSON",
+                        help="write the slowdowns to measure again, and their rounds")
+    parser.add_argument("--no-memory", action="store_true",
+                        help="compare time only, as the second reading does")
     args = parser.parse_args(argv[1:])
 
     base, base_mem, base_ctx = samples(args.baseline)
@@ -164,6 +201,7 @@ def main(argv):
           f"{'change':>8}  {'p':>7}  verdict")
 
     improved, regressed, noisy = [], [], []
+    medians = {}
     for name in common:
         xs, ys = base[name], cont[name]
         if min(len(xs), len(ys)) < MIN_REPETITIONS:
@@ -171,6 +209,7 @@ def main(argv):
                   f"record with --runs {MIN_REPETITIONS} or more")
             continue
         mx, my = statistics.median(xs), statistics.median(ys)
+        medians[name] = mx
         change = (my - mx) / mx if mx else 0.0
         p = mannwhitneyu(xs, ys, alternative="two-sided").pvalue
         if max(cv(xs), cv(ys)) > args.max_cv:
@@ -193,7 +232,7 @@ def main(argv):
     # so there is no sample to test; it is close to deterministic, and a change
     # counts when it is larger than --mem-threshold and than --mem-floor MiB.
     mem_common = [name for name in common if name in base_mem and name in cont_mem]
-    if mem_common:
+    if mem_common and not args.no_memory:
         print(f"\npeak memory, threshold {args.mem_threshold:.0%} and {args.mem_floor:.0f} MiB")
         print(f"{'benchmark':<{width}}  {'base MiB':>10}  {'new MiB':>10}  {'change':>8}  verdict")
         for name in mem_common:
@@ -235,12 +274,21 @@ def main(argv):
             if entry:
                 print(f"\n{name} ({metric}) {change:+.1%} exceeds its accepted "
                       f"{float(entry['up_to']):+.0%}")
-            unaccepted.append(f"{name} ({metric})")
+            unaccepted.append((name, metric))
     for e in live.values():
         print(f"\nnote: accepted regression not seen: {e['benchmark']} ({e['metric']})")
 
+    if args.plan:
+        slower = [name for name, metric in unaccepted if metric == "time"]
+        with open(args.plan, "w") as f:
+            json.dump({
+                "confirm": [{"benchmark": name, "rounds": confirm_rounds(medians[name]),
+                             "median_ms": medians[name]} for name in slower],
+                "memory": [name for name, metric in unaccepted if metric == "memory"],
+            }, f, indent=1)
+
     if unaccepted:
-        print(f"\nREGRESSED: {', '.join(unaccepted)}")
+        print(f"\nREGRESSED: {', '.join(f'{name} ({metric})' for name, metric in unaccepted)}")
         return 2
     if improved:
         print(f"\nIMPROVED: {', '.join(improved)}; nothing worse")

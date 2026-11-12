@@ -55,6 +55,21 @@ scripts/bench-compare.py a.json b.json        # Mann-Whitney U, alpha 0.05
   so it is compared by threshold, not test: more than `--mem-threshold`
   (default 10%) and `--mem-floor` (default 32 MiB) is a change. `uv` provides
   the script's SciPy from its own header.
+- **A slowdown is read twice.** At five samples a side, p < 0.05 means the new
+  samples beat the old in all but two of the 25 pairings, and with no change at
+  all chance does that to a benchmark 1.6% of the time. A benchmark of a few
+  milliseconds varies by more than the 5% threshold from run to run, so the
+  threshold does not filter it. Across the thirty-odd benchmarks, CI's runs
+  raised a false alarm about one time in three. So `bench-ab.sh` treats a
+  slowdown as a first reading: it measures each flagged benchmark again, alone,
+  in extra interleaved rounds (five; three for a benchmark over two seconds, two
+  over eight, which vary less and cost more: 40 s for a short benchmark, about
+  70 s for the longest), pools both readings and fails only at p < 0.01 and
+  still beyond the threshold. Simulated over Gaussian samples, that cuts false
+  alarms about tenfold and loses almost none of the slowdowns the first reading
+  caught. A rise in peak memory is not read again: it has no samples to add.
+  `--no-confirm` skips the second reading, and `scripts/test_bench_compare.py`
+  tests both bars.
 - **The calibration benchmark** does kernel work that touches nothing of the
   library's, so no change can move it. In an A/B, `--drift` compares it like
   any other, and a difference in it means the machine drifted during the run:
@@ -152,8 +167,9 @@ beside `build` rather than after it. Shard K takes every N-th benchmark from the
 K-th, by position in `Engine.lean`, and every shard also runs the calibration
 benchmark, so that each runner is checked for drift. Each shard is a whole A/B
 and a gate of its own: it fails on a significant slowdown beyond the variance
-bound, or a rise in peak memory, and uploads both sides' samples and the base's
-build log as the `bench-results-K` artifact. The `benchmarks` job passes when
+bound that a second reading confirms, or on a rise in peak memory, and uploads
+both sides' samples (the second reading's too, pooled, as `*-pooled.json`) and
+the base's build log as the `bench-results-K` artifact. The `benchmarks` job passes when
 every shard did; it is the check to require.
 
 - **Reproducing a shard** locally: `scripts/bench-ab.sh origin/main --shard K/N`,

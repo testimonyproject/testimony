@@ -26,13 +26,17 @@ page is its ledger: what was measured, what was tried, and what came of it.
 - **Comparison** (`scripts/bench-ab.sh`, `scripts/bench-compare.py`): an
   ablation. The code with a change and without it are built side by side on one
   machine and run interleaved, and each benchmark is compared by the two-sided
-  Mann-Whitney U test, as Google Benchmark's `compare.py` does it. A change
-  counts when p < 0.05 and it is larger than the variance bound. Peak memory is
-  compared by threshold. A calibration benchmark, which no change can move,
+  Mann-Whitney U test, as Google Benchmark's `compare.py` does it. A slowdown
+  is flagged when p < 0.05 and it is larger than the variance bound, and counts
+  only if it holds when measured again: the benchmark alone, in a few more
+  rounds, both readings pooled and compared at p < 0.01. At five samples a side
+  the first test alone raised a false alarm in about a third of CI's runs, most
+  of them on benchmarks of a few milliseconds. Peak memory is compared by
+  threshold. A calibration benchmark, which no change can move,
   shows whether the machine drifted during the run.
 - **CI** runs the A/B on every pull request that touches a build input, against
-  the base it merges into, and fails on a regression that the pull request does not accept, with its
-  reason, in `arguments/bench/accepted.toml`. The benchmarks are split into
+  the base it merges into, and fails on a regression that the pull request does
+  not accept, with its reason, in `arguments/bench/accepted.toml`. The benchmarks are split into
   shards (`--shard K/N`), each a job on a runner of its own, and each with the
   calibration benchmark, since drift is a property of one runner.
 - **Build and kernel replay** are measured by hand, as below, until they have a
