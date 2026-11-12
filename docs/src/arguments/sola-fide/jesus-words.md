@@ -132,7 +132,7 @@ Which of the two Trent means is itself rated `disputed`, and the check does not
 decide it. In this debate Trent is heard as it states its definition, tied to
 neither, so the check changes no verdict above.
 
-What this does not claim: that logic refutes Rome. Trent's case can be held
+It does not show that logic refutes Rome. Trent's case can be held
 without contradiction taken either way. What the check shows is narrower, and it
 is as far as an argument from the meaning of words can go. The evidence about
 the word, rated `wellSupported`, tells against taking the definition as what the
@@ -1006,7 +1006,7 @@ debate cannot settle: each saying in Luke with Trent, over what justification
 is, and each reading of Matthew with its rival. Every weakest link is
 `disputed`, so no rating breaks a tie.
 
-What this does not claim: that Jesus' words say nothing. Each position can be
+It does not show that Jesus' words say nothing. Each position can be
 defended, and Trent accepts every word of Luke 18 (`trent_grants_the_parable`).
 What the debate cannot do is choose between readings rated alike.
 
@@ -1412,7 +1412,7 @@ justified. That faith suffices is forced twice, from Jesus' own words. The
 readings of Matthew 7 and 19 still tie, each with its rival, because they
 conflict with each other and not with Luke.
 
-What this does not claim: that faith *alone* is forced. Luke's sayings claim
+It does not show that faith *alone* is forced. Luke's sayings claim
 that faith sufficed, not that nothing else is a condition. Rome's readings of
 Matthew, which say that salvation is not apart from works, can be held with them
 (`luke_stands_with_rome_on_matthew`).

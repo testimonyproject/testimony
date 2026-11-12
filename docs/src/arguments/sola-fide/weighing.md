@@ -947,9 +947,9 @@ def chrysostomReading : Valuation Claim :=
 together with every verse the Reformed strands read from Paul: Romans 3:28,
 Galatians 2:16, Romans 4:4–5, Ephesians 2:8–9 and Titus 3:5.
 
-What this claims: where Chrysostom stands against the Reformed case, he stands
+Where Chrysostom stands against the Reformed case, he stands
 against a reading of those verses, the step from them to faith alone, and not
-against anything they say. What it does not claim: that his reading of John 3:36
+against anything they say. It does not show that his reading of John 3:36
 is right.
 
 ```lean
@@ -2324,7 +2324,7 @@ taken as a claim about Paul's word, rests on a definition rated `disputed`, and
 its replies fail against arguments whose every link is rated `wellSupported` or
 better.
 
-What this does not claim: that sola fide prevails, or that Trent's teaching is
+It does not show that sola fide prevails, or that Trent's teaching is
 refuted. Nothing else is forced. Every other position is attacked by one the
 debate cannot rule out. One loses, Trent taken as a claim about Paul's word, and
 every other is in a tie with a rival the debate cannot choose between.
@@ -2422,7 +2422,7 @@ debate (`whatTrentsDefinitionClaims`): if the definition says what Paul's
 "justify" means, it cannot be defended here, for a stated and cited reason, at a
 step rated `wellSupported`.
 
-What this does not claim: that Trent's definition is false as a statement of
+It does not show that Trent's definition is false as a statement of
 what God does. That is the other way of taking it, and it can be defended
 (`trent_defensible`). Nor that the position contradicts itself: taken alone it
 can be held without contradiction.
@@ -2534,7 +2534,7 @@ ratings, all at the bottom, break no tie.
 The arguments about Paul's word do not attack it. Trent's definition, taken as
 it stands, says nothing about what "justify" means.
 
-What this does not claim: that Trent prevails. It is not forced
+It does not show that Trent prevails. It is not forced
 (`trent_not_forced`). It is in a tie with each of those seven positions.
 
 ```lean
@@ -3751,7 +3751,7 @@ Luke's "faith suffices" is no longer among them. Chrysostom, reading John 3:36
 and Matthew 7:21, concludes that believing is not enough without a right life,
 and so stands against it (`luke_not_forced_without_trent`).
 
-What this does not claim: that *faith alone*, or even "faith suffices", is
+It does not show that *faith alone*, or even "faith suffices", is
 refuted. Each is in a tie; see the results that follow.
 
 ```lean
@@ -3851,8 +3851,8 @@ with it. Chrysostom reads "whoever does not obey the Son shall not see life"
 requiring a right life beside believing. Luke's case reads "your faith has saved
 you" (Luke 7:50) as saying that faith sufficed.
 
-What this claims: a reading of two other sayings of Jesus, rated `disputed`, ties
-with Luke's. What it does not claim: that Chrysostom outranks Luke, or that any
+A reading of two other sayings of Jesus, rated `disputed`, ties
+with Luke's. It does not show that Chrysostom outranks Luke, or that any
 text of Luke's is contradicted. Luke's case defeats Chrysostom in return, and
 Chrysostom accepts every word of Luke 7:50; what he denies is the step from it
 to "faith suffices".
@@ -4126,8 +4126,8 @@ Trent describes justifying faith as he does: the believing Jesus names in John
 reading consistently and answer every objection raised here. John's case cannot
 be held with it.
 
-What this claims: without the Council, John 6:29 still does not compel faith
-alone, because what believing is remains contested. What it does not claim: that
+Without the Council, John 6:29 still does not compel faith
+alone, because what believing is remains contested. It does not show that
 Aquinas's reading wins. John's case can be held just as consistently. Luther's
 argument and Aquinas's each defeat the other, and neither is removed.
 

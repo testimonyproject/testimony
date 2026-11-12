@@ -338,7 +338,7 @@ justification; and chapter 16's, that the reward the texts promise is given to
 the works as merits. Under the tradition standard, which allows the council's
 word, both count as arguments, and the step is `disputed`.
 
-What this does not claim: that the reward texts teach the Reformed reading. It
+It does not show that the reward texts teach the Reformed reading. It
 shows that Trent's objection, as written down here, needs one claim cited to the
 council alone.
 
@@ -513,7 +513,7 @@ Reformed objections to Trent's claims are arguments under each of the three
 standards. Trent's objections to the Reformed step are arguments only under the
 standard that allows the council's word.
 
-What this does not claim: that either side's step is right.
+It does not show that either side's step is right.
 
 ```lean
 theorem rome_steps_ratings : meritPremise.ratings = [(Standard.evidence,
@@ -776,7 +776,7 @@ Romans 4's explanation of the verb. Its step to "faith does not suffice" is met
 by Luke 18. Each of those argues from texts and from evidence anyone can check,
 so each is an argument under each of the three standards.
 
-What this does not claim: that the definition is false. `disputed` means there
+It does not show that the definition is false. `disputed` means there
 is an argued objection, not that the objection wins.
 
 ```lean

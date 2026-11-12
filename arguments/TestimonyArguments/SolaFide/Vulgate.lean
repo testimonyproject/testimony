@@ -96,7 +96,7 @@ it, says "the righteous must still do right". With those two, the claim that the
 inspired author wrote "let him be justified still" cannot be true. Every premise
 is Rome's own.
 
-What this does not claim: that Trent meant its citation that way. Taken as Pius
+It does not show that Trent meant its citation that way. Taken as Pius
 XII takes Trent's use of the Vulgate, there is no contradiction
 (`pius_reading_is_consistent`). -/
 @[headline]
@@ -175,7 +175,7 @@ sentence about paying a vow before death, and not the Latin's "be not afraid ...
 even to death". So of the three texts chapter 10 cites, only James 2:24 is left
 to confirm the doctrine from the originals.
 
-What this does not claim: that the Greek of Sirach 18:22 could not be read in
+It does not show that the Greek of Sirach 18:22 could not be read in
 Trent's favour. That would be a further argument about what its "be justified"
 means, and none is written down here. -/
 @[headline]
