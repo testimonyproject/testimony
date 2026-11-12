@@ -335,6 +335,8 @@ def means : Claim → Statement
     .opaque "The grant to Abraham rewarded his obedience (Gen 22:18; 26:5)"
   | .aqedahBlessingAugmentedForObedience =>
     .opaque "The blessing of Gen 22:16–18 was augmented because of Abraham's obedience"
+  | .aqedahOathMeritedByObedience =>
+    .opaque "The oath of Gen 22:16–18 was merited by the binding of Isaac (Hahn)"
   | .countingWasForTheTesting =>
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
   | .abrahamFoundFaithfulWhenTested =>
@@ -390,7 +392,7 @@ def all : List Claim :=
   , .gen15CovenantIsGodsOathAlone, .abrahamCountedRighteousWithoutWorks
   , .gen22_16BecauseYouObeyed, .abrahamFoundFaithfulWhenTested, .grantRewardsPastLoyalty
   , .abrahamsGrantRewardsHisObedience, .countingWasForTheTesting
-  , .aqedahBlessingAugmentedForObedience ]
+  , .aqedahBlessingAugmentedForObedience, .aqedahOathMeritedByObedience ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -405,8 +407,8 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **Ninety-seven of the hundred and twenty-seven are analysed.** Of the
-thirty that are not, fourteen are the claims of the chapters on whether
+/-- **Ninety-seven of the hundred and twenty-eight are analysed.** Of the
+thirty-one that are not, fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
 sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
@@ -419,7 +421,7 @@ Trent's "laver, or the desire thereof", Luke's law-observance, the texts that
 promise a reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each
 needs a word the vocabulary lacks — a command, a curse, a disjunction, a story's
 outcome, a reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 127) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 128) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

@@ -88,7 +88,7 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 187, and 0 undecided -/
+/-- info: every package has a model with its postulates: 188, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
@@ -101,13 +101,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2381 definitions, 198 entries
+info: every entry is a tagged definition, and every key names one: 2381 definitions, 200 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1707 definitions, 198 entries
+info: every entry is a tagged definition, and every key names one: 1712 definitions, 200 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
