@@ -4,6 +4,11 @@ Testimony is open-source research: a Lean 4 library that formalises Christian
 arguments from Scripture with every premise sourced, classified, and open to
 challenge.
 
+## How to give
+
+- [GitHub Sponsors](https://github.com/sponsors/deanberris)
+- [Patreon](https://www.patreon.com/deanberris)
+
 ## What funding buys
 
 Rigour and review time — not conclusions.
