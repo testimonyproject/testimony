@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **274 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **275 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -281,16 +281,17 @@ they are checked against — also generated, by `lake exe argdoc`.
 | Result | Statement | What it claims |
 |---|---|---|
 | `reformed_establishes` | `Establishes reformed` | **Grant the Reformed premises, and sola gratia follows.** The premises are Romans 11:6; Ephesians 2, with "this" pointing to the whole of being saved by grace through faith; … |
-| `tridentine_not_establishes` | `¬Establishes tridentine` | **Trent's premises do not lead to sola gratia.** On Trent's account the will, moved by God, cooperates by assenting and can refuse its consent; so the second and third parts of … |
+| `tridentine_not_establishes` | `¬Establishes tridentine` | **Trent's premises do not lead to sola gratia.** A *countermodel* shows it: a way of holding every one of Trent's premises while denying the conclusion. |
 | `remonstrant_not_establishes` | `¬Establishes remonstrant` | **The Remonstrants' premises do not lead to sola gratia either**, though they grant much of what the Reformed case rests on: that faith is God's gift, given to those dead in sin, … |
-| `rivals_hold_salvation_by_grace` | `Entails tridentine.premises (p Claim.salvationIsByGrace) ∧ Entails remonstrant.premises (p Claim.salvationIsByGrace)` | **Both rivals reach the first part: salvation is by grace.** Trent's premises deliver it, and so do the Remonstrants', by the same line from Romans 11:6. |
-| `trent_denies_passivity` | `Entails tridentine.premises (notP Claim.willIsPassiveInRegeneration)` | **Trent's premises deny the third part: the will is not passive.** Canon 4 condemns anyone who says the will "is merely passive", and the premises deliver the denial outright. |
-| `remonstrants_deny_effectual_grace` | `Entails remonstrant.premises (notP Claim.graceIsEffectualOfItself)` | **The Remonstrants' premises deny the second part: grace can be resisted.** |
-| `touto_not_load_bearing` | `Establishes reformedWithoutTouto` | **The case does not depend on the reading of "this".** Remove the reading on which "this" in Ephesians 2:8 points to the whole of being saved by grace through faith, keep … |
-| `romans_reading_not_load_bearing` | `Establishes reformedWithoutRomansReading` | **Nor on the reading of Romans 9:16.** Remove the reading on which the verse is about salvation, keep everything else, and sola gratia still follows by Ephesians 2. |
-| `readings_jointly_load_bearing` | `¬Establishes reformedWithoutEitherReading` | **The two readings together carry it.** Remove both, keep every text and every step, and sola gratia no longer follows: nothing is left that reaches God's work alone. |
-| `ephesians_strand_establishes` | `Establishes ephesiansStrand` | **The Ephesians strand, argued alone, reaches sola gratia.** It rests on two steps, both rated `disputed`: from "this" to faith as God's gift, and from the gift to God's work … |
-| `romans_strand_establishes` | `Establishes romansStrand` | **So does the Romans strand**, on one step rated `disputed`. |
+| `rivals_hold_salvation_by_grace` | `Entails tridentine.premises (p Claim.salvationIsByGrace) ∧ Entails remonstrant.premises (p Claim.salvationIsByGrace)` | Both rivals reach the first part, that salvation is by grace. |
+| `trent_denies_passivity` | `Entails tridentine.premises (notP Claim.willIsPassiveInRegeneration)` | Trent's premises deny the third part, that the will is passive. |
+| `trent_denies_effectual_grace` | `Entails tridentine.premises (notP Claim.graceIsEffectualOfItself)` | Trent's premises deny the second part too, that grace is effectual of itself. |
+| `remonstrants_deny_effectual_grace` | `Entails remonstrant.premises (notP Claim.graceIsEffectualOfItself)` | The Remonstrants' premises deny the second part: grace can be resisted. |
+| `touto_not_load_bearing` | `Establishes reformedWithoutTouto` | The case does not depend on the reading of "this". |
+| `romans_reading_not_load_bearing` | `Establishes reformedWithoutRomansReading` | Nor does it depend on the reading of Romans 9:16. |
+| `readings_jointly_load_bearing` | `¬Establishes reformedWithoutEitherReading` | The two readings together carry it. |
+| `ephesians_strand_establishes` | `Establishes ephesiansStrand` | The Ephesians strand, argued alone, reaches sola gratia. |
+| `romans_strand_establishes` | `Establishes romansStrand` | So does the Romans strand, on one step rated `disputed`. |
 | `gift_of_faith_does_not_settle_resistibility` | `¬Establishes ephesiansWithoutTheGiftStep` | **That faith is God's gift does not settle whether grace can be refused.** Grant everything the Ephesians strand rests on short of its last step: the texts, "this" pointing to the … |
 
 ### [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)

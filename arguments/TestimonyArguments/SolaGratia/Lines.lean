@@ -9,11 +9,12 @@ from Romans 11:6, delivers only the first part of the conclusion, that
 salvation is by grace, and every party walks it: Trent quotes the verse in the
 eighth chapter of its decree on justification.
 
-Trent and the Remonstrants each deny a different part of what the Reformed
-lines deliver, so each has lines of its own here. Trent's fourth canon on
-justification denies that the will is merely passive, and in the same sentence
-says the will can refuse if it wishes. The Remonstrants deny that grace cannot
-be resisted, from Stephen's speech in Acts 7.
+Trent and the Remonstrants each deny part of what the Reformed lines deliver,
+so each has lines of its own here. Trent's fourth canon on justification denies
+that the will is merely passive, and in the same sentence condemns anyone who
+says the will cannot refuse its consent: so Trent's lines deny both the second
+and third parts of the conclusion. The Remonstrants deny the second part, that
+grace cannot be resisted, from Stephen's speech in Acts 7.
 -/
 
 namespace TestimonyArguments.SolaGratia
@@ -26,7 +27,8 @@ open Testimony Testimony.Logic
 Salvation is by grace and not earned; the grace that saves brings about the
 consent it seeks; and in being made alive the will contributes nothing. The
 three parts are separate claims so that a rival can be shown holding the first
-and denying the others, which is what both rivals do. -/
+and denying one or both of the others: Trent's premises deny both, the
+Remonstrants' the second. -/
 @[solaGratiaDefs]
 def solaGratia : Formula Claim :=
   ⋀ [p .salvationIsByGrace, p .graceIsEffectualOfItself, p .willIsPassiveInRegeneration]
@@ -70,7 +72,12 @@ def romansStep : Formula Claim :=
 
 /-- What "God's work alone" means, unpacked into the conclusion's second and
 third parts: grace brings about the consent, and the will contributes nothing
-to its own new life. -/
+to its own new life. This step carries no rating. It is taken as what Dort means
+by the phrase: conversion "must be wholly ascribed to God" (III/IV, article 10),
+and the new life is "a making alive, which God works in us without our aid"
+(article 12). Through it, the will's passivity follows from God's work alone, so
+a reader who denies passivity must deny either this step or what it starts
+from. -/
 @[solaGratiaDefs]
 def monergismUnpacked : Formula Claim :=
   p .conversionIsGodsWorkAlone
@@ -123,11 +130,12 @@ def ephesiansLine : Line Claim :=
   , delivers := p .faithIsGodsGift
   , inference := some ephesiansInference }
 
-/-- **From the gift to the dead to God's work alone.** Its ground is
-Ephesians 2:1–5; the gift is carried in by `ephesiansLine`. -/
+/-- **From faith given to the dead, to God's work alone.** Its ground is
+Ephesians 2:1–5; that faith is God's gift comes from the Ephesians line above.
+-/
 @[solaGratiaDefs]
 def giftLine : Line Claim :=
-  { name := "Faith given to the dead (Ephesians 2:1–5)"
+  { name := "From faith given to the dead, to God's work alone (Ephesians 2:1–5)"
   , grounds := [p .ephesians2_1to5]
   , step := giftStep
   , delivers := p .conversionIsGodsWorkAlone
@@ -175,8 +183,9 @@ def resistanceLine : Line Claim :=
 /-! ### Shared grounds -/
 
 /-- What the Reformed packages rest on beyond any one line: Acts 7:51, which
-they must answer too, and Dort's answer to it, that what Stephen's hearers
-resisted was the preached word and not the grace that saves. -/
+they must answer too, and the Reformed answer to it, from Dort's account of
+those who refuse the call: what Stephen's hearers resisted was the outward call
+of the preached word, not the grace that saves. -/
 @[solaGratiaDefs]
 def reformedShared : List (Formula Claim) :=
   [p .acts7_51, notP .acts7_51ResistsSavingGrace]

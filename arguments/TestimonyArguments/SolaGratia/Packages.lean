@@ -58,7 +58,7 @@ def remonstrant : ArgumentPackage Claim :=
 /-- **The Reformed position**, as the Synod of Dort (1619) and the Westminster
 Confession (1647) state it. Two routes to God's work alone, one through
 Ephesians 2 and one through Romans 9:16, with Romans 11:6 for the first part of
-the conclusion, and Dort's answer to Acts 7:51. -/
+the conclusion, and the Reformed answer to Acts 7:51. -/
 @[solaGratiaDefs]
 def reformed : ArgumentPackage Claim :=
   { name := "Reformed (the Canons of Dort)"
@@ -88,7 +88,7 @@ def romansStrand : ArgumentPackage Claim :=
 
 /-- The Ephesians strand without the step Arminius refuses: every text and
 reading it rests on, and the step to faith as God's gift, with only the step
-from the gift to God's work alone left out. Dort's answer to Acts 7:51 is
+from the gift to God's work alone left out. The Reformed answer to Acts 7:51 is
 not part of the strand, and is left out with the rest of what the strand does
 not read. -/
 @[solaGratiaDefs]

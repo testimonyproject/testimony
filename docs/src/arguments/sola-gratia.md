@@ -14,8 +14,8 @@ Every argument is also set for print, the claims linked and the derivations in w
 "For by grace you have been saved through faith. And this is not your own
 doing; it is the gift of God, not a result of works, so that no one may boast"
 (Ephesians 2:8–9). Every party to this dispute reads the verse and agrees with
-it. That is the first thing to understand about *sola gratia*, "by grace alone",
-and the reason the conclusion below is stated with more care than the slogan.
+it. So *sola gratia*, "by grace alone", has to be stated more sharply than the
+slogan if it is to separate anyone.
 
 ### Everyone says "by grace"
 
@@ -26,8 +26,8 @@ any merits existing on their parts". It quoted Paul: "if it be a grace, it is
 not now by works, otherwise … grace is no more grace" (Romans 11:6). The
 Remonstrants, the followers of Arminius who petitioned the States of Holland in
 1610, called grace "the beginning, continuance, and accomplishment of all good".
-Neither is Pelagian. Neither thinks a person can begin to turn to God by their
-own power.
+Neither is Pelagian, after Pelagius, who was taken to teach that a person can
+turn to God by their own power: neither thinks a person can so much as begin.
 
 So a conclusion stated as "salvation is by grace" would follow from all three
 positions and separate none of them. When the Synod of Dort answered the
@@ -40,10 +40,11 @@ Spirit, he is thereby enabled to answer this call". The older name for this is
 *monergism*, from the Greek for "one at work".
 
 The conclusion here has those three parts. Salvation is by grace; the grace that
-saves is effectual of itself; and the will is passive in being made alive. Each
-rival holds the first part and denies one of the others.
+saves is *effectual of itself*, that is, it brings about the consent it asks
+for; and the will is passive in being made alive. Each rival holds the first
+part. Trent's canon denies both the others; the Remonstrants deny the second.
 
-- **Trent** denies the third. Its fourth canon on justification condemns anyone
+- **Trent** denies the third and the second. Its fourth canon on justification condemns anyone
   who says that the free will, "moved and excited by God", does not cooperate
   "by assenting to God exciting and calling", but "as something inanimate, …
   is merely passive". The same canon condemns anyone who says the will "cannot
@@ -56,8 +57,8 @@ rival holds the first part and denies one of the others.
 ### Two routes to the conclusion
 
 The Reformed case has two routes, called *strands* below, each from a different
-text. Each begins from a reading of its text and takes a step from that reading
-to the conclusion.
+text. Each begins from a reading of its text and takes one or two steps from
+that reading to the conclusion.
 
 **Ephesians 2.** Paul has just said that his readers "were dead in the trespasses
 and sins", and that God "made us alive together with Christ" (2:1, 5). Then:
@@ -75,7 +76,7 @@ only about his choice of a people for a part in history, the verse says that
 receiving mercy does not hang on anyone's willing. The Romans strand does not
 use the Ephesians grammar at all.
 
-### What the machine finds
+### What follows from each position
 
 Lean checks, for each position written as a list of premises, whether the
 conclusion follows. It does not check whether the premises are true.
@@ -84,16 +85,17 @@ The Reformed premises reach the conclusion, and neither rival's do, though both
 reach its first part. A reading is called *load-bearing* when removing it, with
 everything else kept, stops the conclusion following. Neither reading is
 load-bearing alone, because each strand reaches the conclusion without the other.
-Removed together they are, so the Reformed case needs one of the two readings,
-and either will do.
+Removed together, the conclusion no longer follows: the Reformed case needs at
+least one of the two readings, and either will do.
 
-The readings, though, are not where the rivals part from it. Robertson reads
-"this" exactly as Hoehner does, and draws the opposite lesson: the whole act of
-being saved is "conditioned on faith on our part". Calvin, on the next verse,
-writes that Paul's "meaning is, not that faith is the gift of God, but that
-salvation is given to us by God". So the step from the pronoun to faith as a gift
-is rated *disputed*: a reader the library cites grants its grounds and denies its
-conclusion.
+Readers who grant both readings still deny what the Reformed draw from them.
+Robertson reads "this" exactly as Hoehner does, and still takes the whole to be
+"conditioned on faith on our part": grace is "God's part, 'faith' ours". So the
+step from the pronoun to faith as a gift is rated *disputed*, which means that a
+reader the library cites grants its grounds and denies its conclusion. Calvin,
+himself Reformed and elsewhere clear that faith is God's gift, still says this
+verse does not teach it: Paul's "meaning is, not that faith is the gift of God,
+but that salvation is given to us by God".
 
 The next step is disputed too. Arminius acknowledged faith to be God's "benefit
 and gift", and ascribed to grace "the commencement, the continuance and the
@@ -102,25 +104,34 @@ on, up to its last step. He refused that step, believing "that many persons
 resist the Holy Spirit and reject the grace that is offered". Dort's answer is
 its article on faith, which it calls the gift of God "not on account of its
 being offered by God to man, to be accepted or rejected at his pleasure, but
-because it is in reality conferred". The difference between the two is the
-difference between those two senses of *gift*, and the grammar of the verse
-does not decide it (`gift_of_faith_does_not_settle_resistibility`).
+because it is in reality conferred". The two mean different things by *gift*.
+The encoding writes both as one claim, so the difference shows as Arminius
+refusing the step: grant the texts, the reading of "this" and faith as God's
+gift, leave out that step, and sola gratia does not follow
+(`gift_of_faith_does_not_settle_resistibility`).
 
 Romans goes the same way. Arminius read Romans 9 as being about salvation, "not
 to him that worketh, but to him that believeth". Abasciano, who reads its
 election as of a people rather than of individuals, still grants that "Paul's
 argument in Romans 9 surely concerns the salvation of Israel". The reading is
-widely granted. It is the step from it to God's work alone that Arminius denies.
+widely granted, and no reader who denies it is cited here with a verified
+location. It is the step from it to God's work alone that Arminius denies.
 
-Trent's canon has the same feature at both its halves. That the will "cannot
-refuse its consent, if it would" is condemned, which seems to deny that grace is
+Each half of Trent's canon meets a reader who grants its ground and denies its
+conclusion, and both times the reader is Aquinas. That the will "cannot refuse
+its consent, if it would" is condemned, which seems to deny that grace is
 effectual of itself. But Aquinas held both that if God moves the will, "it is
 incompatible with this supposition, that the will be not moved thereto. But it
 is not impossible simply", and that the man God moves to grace "will infallibly
 attain to it". And the canon's "cooperates" speaks of the will "disposing and
 preparing itself" for justification, while Aquinas and Dort both place the
-will's own activity after a first moment in which it "is moved and does not
-move". So both of Trent's steps are rated disputed.
+will's own activity after a first moment in which, in Aquinas's words, it "is
+moved and does not move"; Dort says the will once renewed "becomes itself
+active". So both of Trent's steps are rated disputed. Not every Catholic reads
+the canon so: the Molinists, after Luis de Molina, take its "can refuse" to rule
+out a grace effectual of itself, and Rome left the dispute between the two
+schools open in 1607. The rating stands on the Thomist reading, because one
+reader who grants the ground and denies the conclusion is enough.
 
 ### What is not encoded
 
@@ -159,15 +170,22 @@ it asks for, and that in being made alive the will contributes nothing.
 
 ## TestimonyArguments.SolaGratia.Sources — citation and classification for every atom
 
-`cite` is total, so an uncited atom does not compile. The three positions agree
-about the texts and disagree about what they mean, so each has its own `cite`,
-sharing `baseCite` for the texts and the conclusion. Each package's list of
-sources then names the people who hold its premises: the Remonstrant reading of
-Acts 7:51 cites the Remonstrants, and the Reformed denial of it cites Dort.
+Every claim has a source, and the build fails if one does not. The three
+positions agree about the texts and disagree about what they mean, so each
+position's list of sources is a common list with the entries it cites
+differently replaced. The Reformed position cites its own account of Acts 7:51,
+and the Remonstrant position cites Arminius for faith as God's gift.
 
-Dort and the Remonstrance are cited from Schaff's *Creeds of Christendom*,
-which prints both; Trent from Tanner's *Decrees*; Arminius from Nichols's
-translation of his works.
+Dort and the Remonstrance are cited from Schaff's *Creeds of Christendom*, which
+prints both. Trent is cited by session and canon from Tanner's *Decrees*, the
+critical edition, and quoted in Waterworth's translation of 1848, at its page.
+Arminius is cited from Nichols's translation of his works, and Aquinas from the
+English Dominicans' translation of the *Summa*.
+
+Every claim and every step carries one of four ratings: *consensus*, accepted
+across traditions; *well supported*, though not universally held; *plausible*;
+and *disputed*, actively contested. A step is rated *disputed* when a reader the
+library cites grants its grounds and denies its conclusion.
 
 #### Ratings for inference steps
 
@@ -185,15 +203,15 @@ conclusion, or, where no one was found who does, to whoever grants both.
 | <a id="claim-3"></a>\\(P_{3}\\) | Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy ※ | textual | Christian, hist.-gramm., consensus | Rom 9:16 |
 | <a id="claim-4"></a>\\(P_{4}\\) | Romans 11:6 — if it is by grace, it is no longer on the basis of works ※ | textual | Christian, hist.-gramm., consensus | Rom 11:6 |
 | <a id="claim-5"></a>\\(P_{5}\\) | Acts 7:51 — you always resist the Holy Spirit ※ | textual | Christian, hist.-gramm., consensus | Acts 7:51 |
-| <a id="claim-6"></a>\\(P_{6}\\) | Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord") | textual | Christian, hist.-gramm., consensus | Zech 1:3; Lam 5:21; [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 5 |
+| <a id="claim-6"></a>\\(P_{6}\\) | Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord") | textual | Christian, hist.-gramm., consensus | Zech 1:3; Lam 5:21; [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 5; [Council of Trent 1848](../bibliography.md#waterworth-trent-1848), p. 33 |
 | <a id="claim-7"></a>\\(P_{7}\\) | In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith | linguistic | Christian, hist.-gramm., well supported | [Hoehner 2002](../bibliography.md#hoehner-ephesians-2002), p. 343; [Robertson 1931](../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8 |
 | <a id="claim-8"></a>\\(P_{8}\\) | Romans 9:16 is about God's mercy in saving, not only in choosing a people for history | interpretive | Christian, hist.-gramm., well supported | [Arminius 1853](../bibliography.md#arminius-works-3-1853), pp. 527–565; [Abasciano 2006](../bibliography.md#abasciano-corporate-election-romans-9-2006), p. 351 |
-| <a id="claim-9"></a>\\(P_{9}\\) | Faith itself is God's gift, not something the believer adds | theological | Christian, hist.-gramm., well supported | [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 14; [Arminius 1825](../bibliography.md#arminius-works-1-1825), p. 681 |
+| <a id="claim-9"></a>\\(P_{9}\\) | Faith itself is God's gift | theological | Christian, hist.-gramm., well supported | [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 14; [Arminius 1825](../bibliography.md#arminius-works-1-1825), p. 681 |
 | <a id="claim-10"></a>\\(P_{10}\\) | What Stephen's hearers resisted in Acts 7:51 was the grace that saves | interpretive | Arminian, disputed | [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4 |
-| <a id="claim-11"></a>\\(P_{11}\\) | The free will, moved by God, cooperates by assenting to God's call | theological | Roman Catholic, disputed | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4 |
-| <a id="claim-12"></a>\\(P_{12}\\) | The free will, moved by God, can refuse its assent if it wishes | theological | Roman Catholic, disputed | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4 |
+| <a id="claim-11"></a>\\(P_{11}\\) | The free will, moved by God, cooperates by assenting to God's call | theological | Roman Catholic, disputed | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../bibliography.md#waterworth-trent-1848), p. 45 |
+| <a id="claim-12"></a>\\(P_{12}\\) | The free will, moved by God, can refuse its assent if it wishes | theological | Roman Catholic, disputed | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../bibliography.md#waterworth-trent-1848), p. 45 |
 | <a id="claim-13"></a>\\(P_{13}\\) | Conversion is God's work alone: grace brings about the sinner's consent | theological | Reformed Protestant, disputed | [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, arts. 10–12 |
-| <a id="claim-14"></a>\\(P_{14}\\) | Salvation is by grace and not earned: grace goes before every saving act | theological | Christian, hist.-gramm., consensus | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), chs. 5, 8; [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), arts. 3–4; [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10 |
+| <a id="claim-14"></a>\\(P_{14}\\) | Salvation is by grace and not earned: grace goes before every saving act | theological | Christian, hist.-gramm., consensus | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), chs. 5, 8; [Council of Trent 1848](../bibliography.md#waterworth-trent-1848), p. 32; [Council of Trent 1848](../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), arts. 3–4; [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10 |
 | <a id="claim-15"></a>\\(P_{15}\\) | The grace that saves brings about the consent it seeks | theological | Reformed Protestant, disputed | [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12 |
 | <a id="claim-16"></a>\\(P_{16}\\) | In being made alive the will is passive, and contributes nothing to it | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §X.2; [Schaff 1977](../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12 |
 
@@ -212,12 +230,10 @@ that conversion "must be wholly ascribed to God" (III/IV, article 10).
 
 ```lean
 def graceInference : Source :=
-  {
-    primary :=
-      Reference.work tannerDecrees
-        (Bib.Locus.sectionRef "Trent, Session VI (1547), ch. 8"),
+  { primary := trent✝ "ch. 8",
     supporting :=
-      [Reference.work schaffCreeds3
+      [waterworth✝ 36,
+        Reference.work schaffCreeds3
           (Bib.Locus.sectionRef "Five Arminian Articles (1610), art. 4"),
         Reference.work schaffCreeds3
           (Bib.Locus.sectionRef "Canons of Dort, III/IV, art. 10")],
@@ -229,11 +245,17 @@ def graceInference : Source :=
 **`ephesiansInference`**
 
 **The rating of the step from "this" pointing to the whole, to "faith is
-God's gift": `disputed`.** Robertson grants the ground and denies the conclusion:
-"this" refers "not to [pistis] (feminine) or to [charis] (feminine also), but to
-the act of being saved by grace conditioned on faith on our part". Calvin, on
-the next verse, says the same of "the gift of God": "His meaning is, not that
-faith is the gift of God, but that salvation is given to us by God."
+God's gift": `disputed`.** Robertson grants the ground and, in the same note,
+denies the conclusion. "This" refers "not to [pistis] (feminine) or to [charis]
+(feminine also), but to the act of being saved by grace conditioned on faith on
+our part", and of the two words he says that grace is "God's part, 'faith'
+ours".
+
+Calvin is cited for less. He is Reformed, and holds elsewhere that faith is God's
+gift, so he does not deny the conclusion. But he denies that this verse teaches
+it: Paul's "meaning is, not that faith is the gift of God, but that salvation is
+given to us by God". So a reader may grant the reading of "this" and still deny
+that the verse delivers faith as a gift.
 
 ```lean
 def ephesiansInference : Source :=
@@ -307,8 +329,8 @@ def cooperationInference : Source :=
     supporting :=
       [Reference.work schaffCreeds3
           (Bib.Locus.sectionRef "Canons of Dort, III/IV, art. 12"),
-        Reference.work tannerDecrees
-          (Bib.Locus.sectionRef "Trent, Session VI (1547), canon 4")],
+        trent✝ "canon 4",
+        waterworth✝ 45],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 ```
 
@@ -331,8 +353,8 @@ def dissentInference : Source :=
       Reference.work aquinasSumma (Bib.Locus.sectionRef "I-II q.10 a.4 ad 3"),
     supporting :=
       [Reference.work aquinasSumma (Bib.Locus.sectionRef "I-II q.112 a.3"),
-        Reference.work tannerDecrees
-          (Bib.Locus.sectionRef "Trent, Session VI (1547), canon 4")],
+        trent✝ "canon 4",
+        waterworth✝ 45],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 ```
 
@@ -342,9 +364,8 @@ def dissentInference : Source :=
 The rating of the Remonstrants' step from Acts 7:51 to "grace is not
 effectual of itself": `wellSupported`. Grant that what Stephen's hearers resisted
 was the grace that saves, and no reader was found who denies that grace can
-then be resisted. Reformed readers deny the ground instead: John Gill reads the
-resistance as made not "to any internal operation of his grace, but to the
-external ministry of the word".
+then be resisted. The Reformed deny the ground instead, reading the resistance
+as made to the preached word and not to the inward work of grace.
 
 ```lean
 def resistanceInference : Source :=
@@ -361,8 +382,9 @@ def resistanceInference : Source :=
 <a id="baseCite"></a>
 **`baseCite`**
 
-What every position cites alike: the texts, and the parts of the
-conclusion. A disputed reading has no entry here; each position cites its own.
+The common list of sources: the texts, the readings, the claims of each
+position, and the parts of the conclusion. Each position replaces only the
+entries it cites differently.
 
 ```lean
 def baseCite : Claim → AtomMeta
@@ -371,9 +393,13 @@ def baseCite : Claim → AtomMeta
 <a id="reformedCite"></a>
 **`reformedCite`**
 
-The Reformed citations. Dort denies that Acts 7:51 resists the grace that
-saves: "it is not the fault of the gospel … that those who are called … refuse
-to come"; the fault lies in themselves (III/IV, art. 9).
+The Reformed citations. Dort does not cite Acts 7:51. What it gives is an
+account of those who refuse the call: "It is not the fault of the gospel, nor of
+Christ offered therein, nor of God, who calls men by the gospel … that those who
+are called by the ministry of the Word refuse to come and be converted. The
+fault lies in themselves" (III/IV, article 9). Read with Acts 7:51, that is the
+Reformed answer: what Stephen's hearers resisted was the outward call of the
+preached word, not the grace that saves.
 
 ```lean
 def reformedCite : Claim → AtomMeta :=
@@ -416,8 +442,7 @@ def remonstrantCite : Claim → AtomMeta :=
   fun x =>
     match x with
     | Claim.faithIsGodsGift =>
-      { label := "Faith itself is God's gift, not something the believer adds",
-        kind := PremiseKind.theological,
+      { label := "Faith itself is God's gift", kind := PremiseKind.theological,
         source :=
           { primary := Reference.work arminiusWorks1 (Bib.Locus.page 681),
             tradition := Tradition.arminian,
@@ -433,11 +458,12 @@ from Romans 11:6, delivers only the first part of the conclusion, that
 salvation is by grace, and every party walks it: Trent quotes the verse in the
 eighth chapter of its decree on justification.
 
-Trent and the Remonstrants each deny a different part of what the Reformed
-lines deliver, so each has lines of its own here. Trent's fourth canon on
-justification denies that the will is merely passive, and in the same sentence
-says the will can refuse if it wishes. The Remonstrants deny that grace cannot
-be resisted, from Stephen's speech in Acts 7.
+Trent and the Remonstrants each deny part of what the Reformed lines deliver,
+so each has lines of its own here. Trent's fourth canon on justification denies
+that the will is merely passive, and in the same sentence condemns anyone who
+says the will cannot refuse its consent: so Trent's lines deny both the second
+and third parts of the conclusion. The Remonstrants deny the second part, that
+grace cannot be resisted, from Stephen's speech in Acts 7.
 
 #### The conclusion
 
@@ -448,7 +474,8 @@ be resisted, from Stephen's speech in Acts 7.
 Salvation is by grace and not earned; the grace that saves brings about the
 consent it seeks; and in being made alive the will contributes nothing. The
 three parts are separate claims so that a rival can be shown holding the first
-and denying the others, which is what both rivals do.
+and denying one or both of the others: Trent's premises deny both, the
+Remonstrants' the second.
 
 <div class="testimony-derivation">
 
@@ -481,7 +508,7 @@ that faith is the gift of God, but that salvation is given to us by God".
 
 <div class="testimony-derivation">
 
-- \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift, not something the believer adds
+- \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift
 
 </div>
 
@@ -522,7 +549,12 @@ mercy goes to believers and can be refused.
 
 What "God's work alone" means, unpacked into the conclusion's second and
 third parts: grace brings about the consent, and the will contributes nothing
-to its own new life.
+to its own new life. This step carries no rating. It is taken as what Dort means
+by the phrase: conversion "must be wholly ascribed to God" (III/IV, article 10),
+and the new life is "a making alive, which God works in us without our aid"
+(article 12). Through it, the will's passivity follows from God's work alone, so
+a reader who denies passivity must deny either this step or what it starts
+from.
 
 <div class="testimony-derivation">
 
@@ -599,15 +631,15 @@ conclusion.
 - (1) \\(\href{#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
 - (2) \\(\href{#claim-7}{P_{7}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
 - (3) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Faith itself is God's gift, not something the believer adds
+- \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Faith itself is God's gift
 
 </div>
 
 <a id="giftLine"></a>
-**`giftLine`** — Faith given to the dead (Ephesians 2:1–5)
+**`giftLine`** — From faith given to the dead, to God's work alone (Ephesians 2:1–5)
 
-**From the gift to the dead to God's work alone.** Its ground is
-Ephesians 2:1–5; the gift is carried in by `ephesiansLine`.
+**From faith given to the dead, to God's work alone.** Its ground is
+Ephesians 2:1–5; that faith is God's gift comes from the Ephesians line above.
 
 <div class="testimony-derivation">
 
@@ -681,8 +713,9 @@ that saves.
 **`reformedShared`**
 
 What the Reformed packages rest on beyond any one line: Acts 7:51, which
-they must answer too, and Dort's answer to it, that what Stephen's hearers
-resisted was the preached word and not the grace that saves.
+they must answer too, and the Reformed answer to it, from Dort's account of
+those who refuse the call: what Stephen's hearers resisted was the outward call
+of the preached word, not the grace that saves.
 
 <div class="testimony-derivation">
 
@@ -755,7 +788,7 @@ refuses.
 - (3) \\(\href{#claim-10}{P_{10}}\\) — What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 - (4) \\(\href{#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
 - (5) \\(\href{#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
-- (6) \\(\href{#claim-9}{P_{9}}\\) — Faith itself is God's gift, not something the believer adds
+- (6) \\(\href{#claim-9}{P_{9}}\\) — Faith itself is God's gift
 - (7) \\(\href{#claim-3}{P_{3}}\\) — Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy
 - (8) \\(\href{#claim-8}{P_{8}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
 - (9) \\(\href{#claim-4}{P_{4}} \rightarrow \href{#claim-14}{P_{14}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
@@ -774,7 +807,7 @@ Grounded in scripture alone: Romans 11:6 — if it is by grace, it is no longer 
 **The Reformed position**, as the Synod of Dort (1619) and the Westminster
 Confession (1647) state it. Two routes to God's work alone, one through
 Ephesians 2 and one through Romans 9:16, with Romans 11:6 for the first part of
-the conclusion, and Dort's answer to Acts 7:51.
+the conclusion, and the Reformed answer to Acts 7:51.
 
 <div class="testimony-derivation">
 
@@ -787,7 +820,7 @@ the conclusion, and Dort's answer to Acts 7:51.
 - (7) \\(\href{#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (8) \\(\lnot \href{#claim-10}{P_{10}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 - (9) \\(\href{#claim-4}{P_{4}} \rightarrow \href{#claim-14}{P_{14}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (10) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift, not something the believer adds
+- (10) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift
 - (11) \\((\href{#claim-9}{P_{9}} \land \href{#claim-1}{P_{1}}) \rightarrow \href{#claim-13}{P_{13}}\\) — *would give:* Conversion is God's work alone: grace brings about the sinner's consent
 - (12) \\((\href{#claim-3}{P_{3}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-13}{P_{13}}\\) — *would give:* Conversion is God's work alone: grace brings about the sinner's consent
 - (13) \\(\href{#claim-13}{P_{13}} \rightarrow \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}\\) — *would give:* \\(\href{#claim-15}{P_{15}}\\) The grace that saves brings about the consent it seeks; \\(\href{#claim-16}{P_{16}}\\) In being made alive the will is passive, and contributes nothing to it
@@ -814,7 +847,7 @@ The Ephesians strand alone: Romans 11:6, Ephesians 2 with its reading of
 - (5) \\(\href{#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (6) \\(\lnot \href{#claim-10}{P_{10}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 - (7) \\(\href{#claim-4}{P_{4}} \rightarrow \href{#claim-14}{P_{14}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (8) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift, not something the believer adds
+- (8) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift
 - (9) \\((\href{#claim-9}{P_{9}} \land \href{#claim-1}{P_{1}}) \rightarrow \href{#claim-13}{P_{13}}\\) — *would give:* Conversion is God's work alone: grace brings about the sinner's consent
 - (10) \\(\href{#claim-13}{P_{13}} \rightarrow \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}\\) — *would give:* \\(\href{#claim-15}{P_{15}}\\) The grace that saves brings about the consent it seeks; \\(\href{#claim-16}{P_{16}}\\) In being made alive the will is passive, and contributes nothing to it
 - \\(\vdash\\) \\(\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}\\) — *at issue:* \\(\href{#claim-14}{P_{14}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{#claim-15}{P_{15}}\\) The grace that saves brings about the consent it seeks; \\(\href{#claim-16}{P_{16}}\\) In being made alive the will is passive, and contributes nothing to it
@@ -850,7 +883,7 @@ Grounded in scripture alone: Romans 11:6 — if it is by grace, it is no longer 
 
 The Ephesians strand without the step Arminius refuses: every text and
 reading it rests on, and the step to faith as God's gift, with only the step
-from the gift to God's work alone left out. Dort's answer to Acts 7:51 is
+from the gift to God's work alone left out. The Reformed answer to Acts 7:51 is
 not part of the strand, and is left out with the rest of what the strand does
 not read.
 
@@ -861,7 +894,7 @@ not read.
 - (3) \\(\href{#claim-7}{P_{7}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
 - (4) \\(\href{#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
 - (5) \\(\href{#claim-4}{P_{4}} \rightarrow \href{#claim-14}{P_{14}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (6) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift, not something the believer adds
+- (6) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift
 - (7) \\(\href{#claim-13}{P_{13}} \rightarrow \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}\\) — *would give:* \\(\href{#claim-15}{P_{15}}\\) The grace that saves brings about the consent it seeks; \\(\href{#claim-16}{P_{16}}\\) In being made alive the will is passive, and contributes nothing to it
 - \\(\vdash\\) \\(\href{#claim-14}{P_{14}} \land \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}\\) — *at issue:* \\(\href{#claim-14}{P_{14}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{#claim-15}{P_{15}}\\) The grace that saves brings about the consent it seeks; \\(\href{#claim-16}{P_{16}}\\) In being made alive the will is passive, and contributes nothing to it
 
@@ -887,7 +920,7 @@ Romans strand is untouched.
 - (6) \\(\href{#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (7) \\(\lnot \href{#claim-10}{P_{10}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 - (8) \\(\href{#claim-4}{P_{4}} \rightarrow \href{#claim-14}{P_{14}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (9) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift, not something the believer adds
+- (9) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift
 - (10) \\((\href{#claim-9}{P_{9}} \land \href{#claim-1}{P_{1}}) \rightarrow \href{#claim-13}{P_{13}}\\) — *would give:* Conversion is God's work alone: grace brings about the sinner's consent
 - (11) \\((\href{#claim-3}{P_{3}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-13}{P_{13}}\\) — *would give:* Conversion is God's work alone: grace brings about the sinner's consent
 - (12) \\(\href{#claim-13}{P_{13}} \rightarrow \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}\\) — *would give:* \\(\href{#claim-15}{P_{15}}\\) The grace that saves brings about the consent it seeks; \\(\href{#claim-16}{P_{16}}\\) In being made alive the will is passive, and contributes nothing to it
@@ -913,7 +946,7 @@ salvation. The Ephesians strand is untouched.
 - (6) \\(\href{#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (7) \\(\lnot \href{#claim-10}{P_{10}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 - (8) \\(\href{#claim-4}{P_{4}} \rightarrow \href{#claim-14}{P_{14}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (9) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift, not something the believer adds
+- (9) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift
 - (10) \\((\href{#claim-9}{P_{9}} \land \href{#claim-1}{P_{1}}) \rightarrow \href{#claim-13}{P_{13}}\\) — *would give:* Conversion is God's work alone: grace brings about the sinner's consent
 - (11) \\((\href{#claim-3}{P_{3}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-13}{P_{13}}\\) — *would give:* Conversion is God's work alone: grace brings about the sinner's consent
 - (12) \\(\href{#claim-13}{P_{13}} \rightarrow \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}\\) — *would give:* \\(\href{#claim-15}{P_{15}}\\) The grace that saves brings about the consent it seeks; \\(\href{#claim-16}{P_{16}}\\) In being made alive the will is passive, and contributes nothing to it
@@ -938,7 +971,7 @@ step.
 - (5) \\(\href{#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (6) \\(\lnot \href{#claim-10}{P_{10}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 - (7) \\(\href{#claim-4}{P_{4}} \rightarrow \href{#claim-14}{P_{14}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (8) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift, not something the believer adds
+- (8) \\((\href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Faith itself is God's gift
 - (9) \\((\href{#claim-9}{P_{9}} \land \href{#claim-1}{P_{1}}) \rightarrow \href{#claim-13}{P_{13}}\\) — *would give:* Conversion is God's work alone: grace brings about the sinner's consent
 - (10) \\((\href{#claim-3}{P_{3}} \land \href{#claim-8}{P_{8}}) \rightarrow \href{#claim-13}{P_{13}}\\) — *would give:* Conversion is God's work alone: grace brings about the sinner's consent
 - (11) \\(\href{#claim-13}{P_{13}} \rightarrow \href{#claim-15}{P_{15}} \land \href{#claim-16}{P_{16}}\\) — *would give:* \\(\href{#claim-15}{P_{15}}\\) The grace that saves brings about the consent it seeks; \\(\href{#claim-16}{P_{16}}\\) In being made alive the will is passive, and contributes nothing to it
@@ -965,10 +998,12 @@ faith is granted to be God's gift.
 **Grant the Reformed premises, and sola gratia follows.** The premises are
 Romans 11:6; Ephesians 2, with "this" pointing to the whole of being saved by
 grace through faith; Romans 9:16, read as being about salvation; the steps from
-each of those to God's work alone; and Dort's answer to Acts 7:51. The result
+each of those to God's work alone; and the Reformed answer to Acts 7:51. The result
 does not say that the readings or the steps are right, only that the conclusion
 follows from them. Three of the steps are rated `disputed`, each on a reader who
-grants its grounds and denies its conclusion.
+grants its grounds and denies its conclusion. The step that unpacks "God's work
+alone" into the conclusion's last two parts carries no rating; it is taken as
+what Dort means by the phrase.
 
 ```lean
 theorem reformed_establishes : Establishes reformed
@@ -980,7 +1015,10 @@ theorem reformed_establishes : Establishes reformed
 
 Trent's reading, written down: salvation is by grace, the will cooperates
 and can refuse, so grace is not effectual of itself and the will is not passive
-in being made alive.
+in being made alive. Claims Trent's documents do not address, such as the
+readings of Ephesians 2 and Romans 9, are set true; nothing turns on them. On
+these sixteen claims Trent's reading and Arminius's coincide; the two positions
+differ in which premises they hold and whom they cite.
 
 ```lean
 def trentsReading : Valuation Claim :=
@@ -995,7 +1033,9 @@ def trentsReading : Valuation Claim :=
 <a id="tridentine_not_establishes"></a>
 **`tridentine_not_establishes`**
 
-**Trent's premises do not lead to sola gratia.** On Trent's account the will,
+**Trent's premises do not lead to sola gratia.** A *countermodel* shows it: a
+way of holding every one of Trent's premises while denying the conclusion. On
+Trent's account the will,
 moved by God, cooperates by assenting and can refuse its consent; so the second
 and third parts of the conclusion fail. Whether canon 4 really denies the second
 part is itself disputed, because Aquinas holds both that the will can refuse,
@@ -1011,7 +1051,11 @@ theorem tridentine_not_establishes : ¬Establishes tridentine
 **`arminiusReading`**
 
 Arminius's reading, written down: salvation is by grace, faith is God's gift,
-Romans 9:16 is about salvation, and the grace that saves can be refused.
+Romans 9:16 is about salvation, and the grace that saves can be refused. It also
+sets the will's passivity false. The Remonstrants denied that too, but their
+denial of it is not encoded, and nothing in their package turns on it. The
+reading of "this" in Ephesians 2:8 is set true, as Hoehner and Robertson hold
+it; no reading of the pronoun is cited to Arminius.
 
 ```lean
 def arminiusReading : Valuation Claim :=
@@ -1040,7 +1084,7 @@ theorem remonstrant_not_establishes : ¬Establishes remonstrant
 <a id="rivals_hold_salvation_by_grace"></a>
 **`rivals_hold_salvation_by_grace`**
 
-**Both rivals reach the first part: salvation is by grace.** Trent's premises
+Both rivals reach the first part, that salvation is by grace. Trent's premises
 deliver it, and so do the Remonstrants', by the same line from Romans 11:6. A
 conclusion stated only as "salvation is by grace" would be established by all
 three positions and would divide none of them, which is why the conclusion here
@@ -1056,7 +1100,7 @@ theorem rivals_hold_salvation_by_grace : Entails tridentine.premises (p
 <a id="trent_denies_passivity"></a>
 **`trent_denies_passivity`**
 
-**Trent's premises deny the third part: the will is not passive.** Canon 4
+Trent's premises deny the third part, that the will is passive. Canon 4
 condemns anyone who says the will "is merely passive", and the premises deliver
 the denial outright. The step is rated `disputed`, because the canon speaks of
 the will preparing itself for justification and the Reformed claim is about the
@@ -1068,10 +1112,27 @@ theorem trent_denies_passivity : Entails tridentine.premises (notP
 -- axioms: propext, Quot.sound
 ```
 
+<a id="trent_denies_effectual_grace"></a>
+**`trent_denies_effectual_grace`**
+
+Trent's premises deny the second part too, that grace is effectual of itself.
+Canon 4 condemns anyone who says the will "cannot refuse its consent, if it
+would", and the premises deliver the denial. The step is rated `disputed`:
+Aquinas grants that the will moved by God could, taken simply, refuse, and
+holds that the man God moves to grace "will infallibly attain to it". So a
+Catholic reader in his school grants the canon and not this conclusion.
+
+```lean
+theorem trent_denies_effectual_grace : Entails tridentine.premises (notP
+    Claim.graceIsEffectualOfItself)
+-- axioms: propext, Quot.sound
+```
+
 <a id="remonstrants_deny_effectual_grace"></a>
 **`remonstrants_deny_effectual_grace`**
 
-**The Remonstrants' premises deny the second part: grace can be resisted.**
+The Remonstrants' premises deny the second part: grace can be resisted. Their
+fourth article reads Acts 7:51 so.
 
 ```lean
 theorem remonstrants_deny_effectual_grace : Entails remonstrant.premises (notP
@@ -1084,11 +1145,11 @@ theorem remonstrants_deny_effectual_grace : Entails remonstrant.premises (notP
 <a id="touto_not_load_bearing"></a>
 **`touto_not_load_bearing`**
 
-**The case does not depend on the reading of "this".** Remove the reading on
+The case does not depend on the reading of "this". Remove the reading on
 which "this" in Ephesians 2:8 points to the whole of being saved by grace
 through faith, keep everything else, and sola gratia still follows by
-Romans 9:16. That is because the Romans strand does not use the Ephesians
-grammar, not because the reading is weak; Hoehner and Robertson both hold it.
+Romans 9:16, which does not use the Ephesians grammar. The reading itself is
+well supported: Hoehner and Robertson both hold it.
 
 ```lean
 theorem touto_not_load_bearing : Establishes reformedWithoutTouto
@@ -1098,7 +1159,7 @@ theorem touto_not_load_bearing : Establishes reformedWithoutTouto
 <a id="romans_reading_not_load_bearing"></a>
 **`romans_reading_not_load_bearing`**
 
-**Nor on the reading of Romans 9:16.** Remove the reading on which the verse
+Nor does it depend on the reading of Romans 9:16. Remove the reading on which the verse
 is about salvation, keep everything else, and sola gratia still follows by
 Ephesians 2.
 
@@ -1113,8 +1174,10 @@ theorem romans_reading_not_load_bearing : Establishes
 
 The reading on which neither of the two readings holds: "this" in
 Ephesians 2:8 does not point to the whole, and Romans 9:16 is about God's choice
-of a people for a part in history. Everything else the Reformed position grants
-is kept, Dort's answer to Acts 7:51 included.
+of a people for a part in history alone. No reader is cited who holds both
+denials; the countermodel shows what follows if both readings go, not that
+anyone has given them up. Everything else the Reformed position grants is kept,
+the Reformed answer to Acts 7:51 included.
 
 ```lean
 def neitherReadingGranted : Valuation Claim :=
@@ -1133,10 +1196,11 @@ def neitherReadingGranted : Valuation Claim :=
 <a id="readings_jointly_load_bearing"></a>
 **`readings_jointly_load_bearing`**
 
-**The two readings together carry it.** Remove both, keep every text and
-every step, and sola gratia no longer follows: nothing is left that reaches
+The two readings together carry it. Remove both, keep every text and every
+step, and sola gratia no longer follows, because nothing is left that reaches
 God's work alone. So the Reformed case needs at least one of the two readings,
-and either will do.
+and either will do. A reading whose removal stops the conclusion following is
+called *load-bearing*; here only the pair is.
 
 ```lean
 theorem readings_jointly_load_bearing : ¬Establishes
@@ -1147,7 +1211,7 @@ theorem readings_jointly_load_bearing : ¬Establishes
 <a id="ephesians_strand_establishes"></a>
 **`ephesians_strand_establishes`**
 
-**The Ephesians strand, argued alone, reaches sola gratia.** It rests on two
+The Ephesians strand, argued alone, reaches sola gratia. It rests on two
 steps, both rated `disputed`: from "this" to faith as God's gift, and from the
 gift to God's work alone.
 
@@ -1159,7 +1223,7 @@ theorem ephesians_strand_establishes : Establishes ephesiansStrand
 <a id="romans_strand_establishes"></a>
 **`romans_strand_establishes`**
 
-**So does the Romans strand**, on one step rated `disputed`.
+So does the Romans strand, on one step rated `disputed`.
 
 ```lean
 theorem romans_strand_establishes : Establishes romansStrand
@@ -1175,9 +1239,15 @@ theorem romans_strand_establishes : Establishes romansStrand
 Grant everything the Ephesians strand rests on short of its last step: the
 texts, "this" pointing to the whole, and so faith as God's gift, given to those
 who were dead in sin. Leave out only the step from that gift to God's work
-alone, and sola gratia does not follow. Arminius holds as much as this, and the
-countermodel is his reading. Where he parts from the strand is after the
-grammar of the pronoun and after the gift.
+alone, and sola gratia does not follow.
+
+Arminius grants the texts and that faith is God's gift; the reading of "this" is
+Hoehner's and Robertson's, not cited to him. On a reading that grants all of
+these, his, the conclusion fails. So where he parts from the strand is the step
+from the gift to God's work alone. The encoding writes "faith is God's gift" as
+one claim, and Dort and Arminius mean different things by it: for Dort a gift
+"in reality conferred", for Arminius one that can be refused. The difference
+shows here as Arminius refusing the step.
 
 ```lean
 theorem gift_of_faith_does_not_settle_resistibility : ¬Establishes
@@ -1187,9 +1257,10 @@ theorem gift_of_faith_does_not_settle_resistibility : ¬Establishes
 
 #### Satisfiability
 
-`Entails` holds vacuously of premises with no model, so every package carrying
-an `Establishes` result is shown to have one. These are claims about the health
-of the encoding, not about the dispute, and are not headline results.
+A list of premises that contradict each other would "prove" anything, so each
+position that reaches its conclusion is shown to be holdable without
+contradiction, by Dort's reading. These are claims about the health of the
+encoding, not about the dispute, and are not headline results.
 
 <a id="dortReading"></a>
 **`dortReading`**

@@ -41,8 +41,9 @@ inductive Claim
   | acts7_51
   /-- Zechariah 1:3, "Return to me … and I will return to you", read with
   Lamentations 5:21, "Restore us to yourself, O Lord, that we may be restored."
-  Trent reads the two together (Session VI, chapter 5): the first shows the
-  will's freedom, the second that grace comes first. -/
+  Trent pairs the two (Session VI, chapter 5): by the first "we are admonished of
+  our liberty", and in answering with the second "we confess that we are
+  prevented by the grace of God", that is, that grace goes first. -/
   | zechariah1_3WithLamentations5_21
   /-- In Ephesians 2:8 "this" (τοῦτο) points to the whole of "saved by grace
   through faith", and not to "faith" or "grace" on its own. **The reading of the
@@ -61,8 +62,9 @@ inductive Claim
   Ephesians strand delivers, and what Arminius affirms on grounds of his own. -/
   | faithIsGodsGift
   /-- What is resisted in Acts 7:51 is the grace that saves, not only the
-  preaching that calls. The Remonstrants hold it; the Synod of Dort denies it,
-  laying the fault of refusal on those called by the preached word. -/
+  preaching that calls. The Remonstrants hold it. The Reformed deny it, reading
+  the verse with Dort's account of those who refuse the call, which lays the
+  fault on them and does not itself cite Acts 7:51. -/
   | acts7_51ResistsSavingGrace
   /-- The free will, moved and roused by God, cooperates by assenting to God's
   call, and so disposes itself for justification. Trent, Session VI, canon 4. -/
