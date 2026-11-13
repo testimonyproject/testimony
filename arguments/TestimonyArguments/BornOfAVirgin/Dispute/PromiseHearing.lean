@@ -1,6 +1,6 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium
 import Testimony.Logic.Credibility
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.PromiseHearing — the promise, heard under each standard
@@ -117,72 +117,34 @@ def promiseRegister : Register promiseDispute where
     subst h; rfl
   steps := [fulfilmentStep]
 
-/-- Each party's weakest link at a standard's ratings: as cited, except that
-under the Scripture standard the fulfilment's step is weighed at `plausible`,
-its computed rating there. -/
-def promiseRatedStrength : Standard → PromiseParty → ℕ
-  | .scriptural, .fulfilment => 1
-  | _, _ => 0
-
-/-- Each party's weakest link, as the re-rated package computes it. -/
-theorem promise_rerated_strength (s : Standard) :
-    ∀ i, ((promiseRegister.rerated s).node i).strength = promiseRatedStrength s i := by
-  intro i
-  cases s <;> cases i <;> decide +kernel
-
-/-- Who defeats whom at a standard's ratings: under the evidence and tradition
-standards, as in the full dispute; under the Scripture standard, Westermann,
-now the weaker, no longer defeats the fulfilment. -/
-def promiseRatedDefeats : Standard → PromiseParty → PromiseParty → Prop
-  | .scriptural, .westermann, .fulfilment => False
-  | _, i, j => promisePartyDefeats i j
-
-/-- The table is finite, so membership in it is decidable. -/
-instance (s : Standard) : DecidableRel (promiseRatedDefeats s) := fun i j => by
-  cases s <;> cases i <;> cases j <;> unfold promiseRatedDefeats promisePartyDefeats <;>
-    infer_instance
-
-/-- **Who defeats whom at each standard's ratings**, computed from the parties'
-premises and the re-rated inferences and checked by the kernel. -/
-theorem promise_rerated_defeats (s : Standard) :
-    ∀ i j, (promiseRegister.rerated s).defeats i j ↔ promiseRatedDefeats s i j := by
-  intro i j
-  refine Horn.defeats_iff_of_certified
-    (promise_rerated_strength s i) (promise_rerated_strength s j) ?_
-  cases s <;> cases i <;> cases j <;> horn_certify
-
-/-- The dispute at a standard's ratings, in the form the verdict solver computes
-with. -/
-def promiseRatedFinite (s : Standard) :
-    Solver.Finite (promiseRegister.rerated s).defeats where
-  parties := promiseFinite.parties
-  complete := promiseFinite.complete
-  defeats i j := decide (promiseRatedDefeats s i j)
-  spec i j := by rw [promise_rerated_defeats]; simp
-
-/-- The hearing under a standard, in the form the verdict solver computes with. -/
-abbrev promiseUnderFinite (s : Standard) :=
-  (promiseRatedFinite s).restrict (promiseRegister.admits s)
+/-- The dispute at each standard's ratings. Each party's weakest link is as
+cited, except that under the Scripture standard the fulfilment's step is weighed
+at `plausible`, its computed rating there. -/
+declare_rerated promiseRegister
+  /-- **Who defeats whom at each standard's ratings**: under the evidence and
+  tradition standards, as in the full dispute; under the Scripture standard,
+  Westermann, now the weaker, no longer defeats the fulfilment. Computed from the
+  parties' premises and the re-rated inferences and checked by the kernel. -/
+  defeats fun
+    | .scriptural => promiseDispute.defeatsTable.erase (.westermann, .fulfilment)
+    | _ => promiseDispute.defeatsTable
 
 /-- How the hearing under the evidence standard is settled: Westermann is heard,
 and he and each of the others defeat one another. -/
-def promiseUnderEvidenceSettled : Verdict (promiseRegister.hearing .evidence) where
-  finite := promiseUnderFinite .evidence
-  claim := .nothingGrounded
-    (Witness.Table.sub _
-      [ (.fulfilment, .westermann), (.westermann, .fulfilment), (.syntax, .westermann)
-      , (.scene, .westermann) ])
-  checked := by decide +kernel
+declare_verdict promiseUnderEvidenceSettled for (promiseRegister.hearing .evidence)
+    using (promiseRegister.under .evidence) :
+    .nothingGrounded
+      (Witness.Table.sub _
+        [ (.fulfilment, .westermann), (.westermann, .fulfilment), (.syntax, .westermann)
+        , (.scene, .westermann) ])
 
 /-- How the hearing under the Scripture standard is settled: Westermann's dissent
 rests on what the standard does not admit against a step grounded in Scripture
 alone, so he is not heard, and the fulfilment, the syntax and the scene stand
 unattacked. -/
-def promiseUnderScriptureSettled : Verdict (promiseRegister.hearing .scriptural) where
-  finite := promiseUnderFinite .scriptural
-  claim := .groundedExactly
-    [Witness.listSub _ [.fulfilment, .syntax, .scene]] (Witness.Table.sub _ [])
-  checked := by decide +kernel
+declare_verdict promiseUnderScriptureSettled for (promiseRegister.hearing .scriptural)
+    using (promiseRegister.under .scriptural) :
+    .groundedExactly [Witness.listSub _ [.fulfilment, .syntax, .scene]] (Witness.Table.sub _ [])
 
 /-- **The promise turns on the standard, and the hearing and the rating agree.**
 Under the evidence standard Westermann is heard, and nothing prevails. Under the

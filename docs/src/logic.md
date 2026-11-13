@@ -867,9 +867,22 @@ declare_verdict westernWithTheTexts for processionDispute :
 
 A part-of table lists only the pairs besides each party's own, since every case
 is part of itself. Each generated declaration sits where its clause is written,
-so the page reads in source order. `Trinity/Dispute.lean` and
-`SpiritBaptism/Dispute.lean` are written this way. The other disputes still
-spell the steps out, and come to the same declarations.
+so the page reads in source order. A large table can be proved a few rows at a
+time (`rows 6`) and over each party's components (`pruned`), as sola fide's
+seventeen-party table is.
+
+Three more commands cover the rest. `declare_hearing H := D only [...]` (or
+`except [...]`) hears some of a dispute's parties and gives the hearing its
+solver form, `H.finite`. `declare_rerated R`, with one table for each standard,
+weighs a register's dispute at each standard's ratings (`Testimony.Logic.Credibility`).
+And `declare_verdict … using F` checks a verdict against a solver form other than
+the dispute's own, such as `R.under .scriptural`.
+
+Every dispute in `TestimonyArguments` is declared this way except one. The
+hearing in `Articles/Howell2003.lean` seats every party to the sola fide dispute
+inside its own, as `.sola q`, so its parties are not an enumeration. Its table is
+written as a function and proved from the sola fide table, and its verdicts use
+`declare_verdict`.
 
 **4. Say why a position stands against a rival.** A verdict says *who*
 survives; a reader also asks *why*. `Because P R` (`Testimony.Logic.Because`)

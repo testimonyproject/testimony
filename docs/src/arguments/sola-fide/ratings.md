@@ -913,85 +913,21 @@ def jamesRegister : Register jamesDispute :=
         rewardStep] }
 ```
 
-<a id="ratedStrength"></a>
-**`ratedStrength`**
+<a id="jamesRegister_defeats"></a>
+**`jamesRegister_defeats`**
 
-Each position's weakest link under a given standard. It is as cited, with one
-exception: under the tradition standard the argument from James's word is
-weighed as `disputed`, which is what is worked out for it there.
-
-```lean
-def ratedStrength : Standard → JamesParty → ℕ :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Standard.tradition, JamesParty.lexical => 0
-    | x, i => jamesPartyStrength i
-```
-
-<a id="rerated_strength"></a>
-**`rerated_strength`**
-
-Each position's weakest link, as worked out from its premises with the ratings
-for that standard.
-
-```lean
-theorem rerated_strength : ∀ (s : Standard) (i : JamesParty),
-    ((jamesRegister.rerated s).node i).strength = ratedStrength s i
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="ratedDefeats"></a>
-**`ratedDefeats`**
-
-Who defeats whom under a given standard. Under the evidence standard, as in the
-full debate. Under the tradition standard there is one difference: Trent's
+**Who defeats whom under each standard.** Under the evidence standard, as in
+the full debate. Under the tradition standard there is one difference: Trent's
 reading of the word and the reading through Paul each defeat the argument from
-James's word, now that it is weighed as `disputed`.
+James's word, now that it is weighed as `disputed`. Every answer is worked out
+from the positions' premises with the ratings for that standard, and checked by
+machine.
 
 ```lean
-def ratedDefeats : Standard → JamesParty → JamesParty → Prop :=
-  fun x x_1 x_2 =>
-    match x, x_1, x_2 with
-    | Standard.tradition, JamesParty.trentOnTheWord,
-      JamesParty.lexical => True
-    | Standard.tradition, JamesParty.renewalOnTheWord,
-      JamesParty.lexical => True
-    | x, i, j => jamesPartyDefeats i j
-```
-
-<a id="instDecidableRelJamesPartyRatedDefeats"></a>
-**`instDecidableRelJamesPartyRatedDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelJamesPartyRatedDefeats : (s : Standard) → DecidableRel
-    (ratedDefeats s)
-```
-
-<a id="rerated_defeats"></a>
-**`rerated_defeats`**
-
-**Who defeats whom under each standard.**
-
-```lean
-theorem rerated_defeats : ∀ (s : Standard) (i j : JamesParty),
-    (jamesRegister.rerated s).defeats i j ↔ ratedDefeats s i j
+theorem jamesRegister_defeats : ∀ (s : Standard) (i j : JamesParty),
+    (jamesRegister.rerated s).defeats i j ↔ (i, j) ∈
+    jamesRegister.defeatsTable s
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="ratedFinite"></a>
-**`ratedFinite`**
-
-The debate under a given standard, in the form the solver works with.
-
-```lean
-def ratedFinite : (s : Standard) → Solver.Finite (jamesRegister.rerated
-    s).defeats :=
-  fun s =>
-    { parties := jamesFinite.parties,
-      complete := ratedFinite._proof_1,
-      defeats := fun i j => decide (ratedDefeats s i j), spec := ⋯ }
 ```
 
 <a id="jamesUnderEvidence"></a>
@@ -1016,17 +952,6 @@ def jamesUnderTradition : Dispute Claim { i // jamesRegister.admits
   jamesRegister.hearing Standard.tradition
 ```
 
-<a id="jamesUnderFinite"></a>
-**`jamesUnderFinite`**
-
-The debate heard under a standard, in the form the solver works with.
-
-```lean
-def jamesUnderFinite : (s : Standard) → Solver.Finite fun i j =>
-    (jamesRegister.rerated s).defeats ↑i ↑j :=
-  fun s => (ratedFinite s).restrict (jamesRegister.admits s)
-```
-
 <a id="jamesUnderEvidence_defeats"></a>
 **`jamesUnderEvidence_defeats`**
 
@@ -1035,8 +960,8 @@ the positions heard.
 
 ```lean
 theorem jamesUnderEvidence_defeats : ∀ (i j : { i // jamesRegister.admits
-    Standard.evidence i }), jamesUnderEvidence.defeats i j ↔ ratedDefeats
-    Standard.evidence ↑i ↑j
+    Standard.evidence i }), jamesUnderEvidence.defeats i j ↔ (↑i, ↑j) ∈
+    jamesRegister.defeatsTable Standard.evidence
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -1048,8 +973,8 @@ word, weighed as `disputed`, and the reading through Paul defeat each other.
 
 ```lean
 theorem jamesUnderTradition_defeats : ∀ (i j : { i // jamesRegister.admits
-    Standard.tradition i }), jamesUnderTradition.defeats i j ↔ ratedDefeats
-    Standard.tradition ↑i ↑j
+    Standard.tradition i }), jamesUnderTradition.defeats i j ↔ (↑i, ↑j) ∈
+    jamesRegister.defeatsTable Standard.tradition
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 

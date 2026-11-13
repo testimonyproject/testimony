@@ -1,11 +1,6 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.Meanings.BornOfAVirgin
 import TestimonyArguments.BornOfAVirgin.Results.Genesis
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
-import Testimony.Logic.Map
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Genesis — what "her seed" says of a father
@@ -176,17 +171,20 @@ def genesisPartyNode : GenesisParty → ArgumentPackage Claim
 
 /-- The dispute over the woman's seed: every party's premises can all be true
 together, every party establishes its conclusion, and every party's inferences
-are rated. -/
-@[bornOfAVirginDefs]
-def genesisDispute : Dispute Claim GenesisParty where
-  node := genesisPartyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .wording => herSeedCase_establishes
-    | .posterity => posterityCase_establishes
-    | .idiom => idiomCase_establishes
-  rated i := by
-    cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
+are rated. Every party's weakest link ranks at the bottom. -/
+declare_dispute genesisDispute := genesisPartyNode using bornOfAVirginDefs
+  /-- **Who defeats whom**, all nine pairs: Luther and Leupold defeat each other,
+  Luther and Lewis defeat each other, and nothing else. Every cell is computed
+  from what the parties hold by `Horn.defeats?` and checked by the kernel. -/
+  defeats [(.wording, .posterity), (.posterity, .wording), (.wording, .idiom), (.idiom, .wording)]
+  /-- **No support**, in all nine pairs: no party's conclusion is another's
+  premise. Every cell is computed by `supports?` and checked by the kernel. -/
+  supports []
+  /-- **No case is part of another's** here, in all nine pairs, except each
+  party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
+  partOf []
+  /-- The dispute drawn: who defeats whom, with no support between the parties. -/
+  map genesisMap
 
 /-- **Leupold and Lewis stand together**, on Leupold's reading, in which
 Lewis's claims hold too. -/
@@ -194,93 +192,18 @@ theorem posterity_stands_with_the_idiom :
     genesisDispute.StandTogether [.posterity, .idiom] := by
   satisfied_by leupoldReading [Dispute.StandTogether, bornOfAVirginDefs]
 
-/-- The defeats of the dispute, as a table. -/
-def genesisPartyDefeats : GenesisParty → GenesisParty → Prop
-  | .wording, .posterity => True
-  | .posterity, .wording => True
-  | .wording, .idiom => True
-  | .idiom, .wording => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel genesisPartyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold genesisPartyDefeats <;> infer_instance
-
-/-- Every party's weakest link ranks at the bottom. -/
-theorem genesisPartyNode_strength : ∀ i, (genesisPartyNode i).strength = 0
-  | .wording => herSeedCase_strength
-  | .posterity => posterityCase_strength
-  | .idiom => idiomCase_strength
-
-prepare_clauses genesisDisputeClauses for genesisDispute
-
-/-- **Who defeats whom**, all nine pairs: Luther and Leupold defeat each other,
-Luther and Lewis defeat each other, and nothing else. Every cell is computed
-from what the parties hold by `Horn.defeats?` and checked by the kernel. -/
-theorem genesisDispute_defeats :
-    ∀ i j, genesisDispute.defeats i j ↔ genesisPartyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (genesisPartyNode_strength i) (genesisPartyNode_strength j)
-    (genesisDisputeClauses.spec i) (genesisDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute in the form the verdict solver computes with. -/
-def genesisFinite : Solver.Finite genesisDispute.defeats where
-  parties := [.wording, .posterity, .idiom]
-  complete i := by cases i <;> decide
-  defeats i j := decide (genesisPartyDefeats i j)
-  spec i j := by rw [genesisDispute_defeats]; simp
-
-/-- Who supports whom, as a table: no one. -/
-def genesisPartySupports : GenesisParty → GenesisParty → Prop := fun _ _ => False
-
-/-- The support table is finite, so membership in it is decidable. -/
-instance : DecidableRel genesisPartySupports := fun i j => by
-  unfold genesisPartySupports; infer_instance
-
-/-- **No support**, in all nine pairs: no party's conclusion is another's
-premise. Every cell is computed by `supports?` and checked by the kernel. -/
-theorem genesisDispute_supports :
-    ∀ i j, genesisDispute.supports i j ↔ genesisPartySupports i j := by
-  intro i j
-  refine supports_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- **No case is part of another's** here, in all nine pairs, except each
-party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
-theorem genesisDispute_partOf : ∀ i j, genesisDispute.partOf i j ↔ i = j := by
-  intro i j
-  refine partOf_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute drawn: who defeats whom, with no support between the parties. -/
-def genesisMap : ArgumentMap genesisDispute where
-  finite := genesisFinite
-  supports i j := decide (genesisPartySupports i j)
-  supports_spec i j := by rw [genesisDispute_supports]; simp
-  partOf i j := decide (i = j)
-  partOf_spec i j := by rw [genesisDispute_partOf]; simp
-
 /-- Why nothing prevails: a defeater for each party. -/
-def everyGenesisPartyDefeated : Verdict genesisDispute where
-  finite := genesisFinite
-  claim := .nothingGrounded [(.wording, .posterity), (.posterity, .wording), (.idiom, .wording)]
-  checked := by decide +kernel
-
-/-- **Nothing prevails.** Every party is defeated by someone — Luther by
-Leupold and by Lewis, each of them by Luther — so no position is accepted
-however the standoffs are resolved. -/
-@[headline]
-theorem nothing_prevails_over_her_seed : grounded genesisDispute.defeats = ∅ :=
-  everyGenesisPartyDefeated.holds
+declare_verdict everyGenesisPartyDefeated for genesisDispute :
+    .nothingGrounded [(.wording, .posterity), (.posterity, .wording), (.idiom, .wording)]
+  /-- **Nothing prevails.** Every party is defeated by someone — Luther by
+  Leupold and by Lewis, each of them by Luther — so no position is accepted
+  however the standoffs are resolved. -/
+  proves @[headline] nothing_prevails_over_her_seed
 
 #print axioms nothing_prevails_over_her_seed
 
 /-- Why Luther alone is one resolution. -/
-def wordingAlone : Verdict genesisDispute where
-  finite := genesisFinite
-  claim := .preferred [.wording]
-  checked := by decide +kernel
+declare_verdict wordingAlone for genesisDispute : .preferred [.wording]
 
 /-- **One resolution: Luther.** His case can be defended on its own, because it
 defeats both parties that defeat it; and it is in conflict with both, so no
@@ -292,10 +215,7 @@ theorem wording_is_one_resolution : Preferred genesisDispute.defeats {.wording} 
 #print axioms wording_is_one_resolution
 
 /-- Why Leupold with Lewis is the other resolution. -/
-def posterityWithTheIdiom : Verdict genesisDispute where
-  finite := genesisFinite
-  claim := .preferred [.posterity, .idiom]
-  checked := by decide +kernel
+declare_verdict posterityWithTheIdiom for genesisDispute : .preferred [.posterity, .idiom]
 
 /-- **The other resolution: Leupold, with Lewis.** Neither defeats the other,
 and each answers Luther, the only party to defeat either. Luther is in conflict

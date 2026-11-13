@@ -714,7 +714,7 @@ def wordsPartyNode : WordsParty → ArgumentPackage Claim :=
 
 The debate over Jesus' words. For every position heard: its premises can be held
 without contradiction, its conclusion follows from them, and every step it uses
-is rated.
+is rated. Each position's weakest link is `disputed`.
 
 ```lean
 def jesusWordsDispute : Dispute Claim WordsParty :=
@@ -722,100 +722,6 @@ def jesusWordsDispute : Dispute Claim WordsParty :=
     consistent := jesusWordsDispute._proof_1,
     sound := jesusWordsDispute._proof_2,
     rated := jesusWordsDispute._proof_10 }
-```
-
-<a id="lukeWithRomeOnMatthewReading"></a>
-**`lukeWithRomeOnMatthewReading`**
-
-**Rome's readings of Matthew can be held together with Luke's sayings.** One
-consistent reading holds Luke 7:50 and Luke 18, that faith sufficed, and Rome's
-readings of Matthew 7 and 19, that salvation is not apart from works. As written
-out here, "faith suffices" and "not apart from works" are different claims, and
-Luke's sayings make only the first. So whoever holds both is not contradicted by
-these texts. This reading takes neither of Trent's further claims: baptism as
-the instrument of justification, and justification as including sanctification.
-
-```lean
-def lukeWithRomeOnMatthewReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.paulsJustifyDenotesRenewal => False
-    | Claim.rev22_11BeJustifiedStill => False
-    | Claim.sir18_22BeJustifiedToDeath => False
-    | Claim.jamesUsesDikaioAsPaul => False
-    | Claim.salvationNotByWorks => False
-    | Claim.matthew7DoingIncludesBelieving => False
-    | Claim.matthew19LawExposesInability => False
-    | Claim.baptismIsInstrumentalCause => False
-    | Claim.justificationIncludesSanctification => False
-    | x => True
-```
-
-<a id="luke_stands_with_rome_on_matthew"></a>
-**`luke_stands_with_rome_on_matthew`**
-
-Luke's two sayings can be held together with Rome's readings of Matthew.
-
-```lean
-theorem luke_stands_with_rome_on_matthew : jesusWordsDispute.StandTogether
-    [WordsParty.luke7, WordsParty.luke18, WordsParty.matthew7Obedience,
-    WordsParty.matthew19Way]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="wordsPartyDefeats"></a>
-**`wordsPartyDefeats`**
-
-Who defeats whom, as a table.
-
-```lean
-def wordsPartyDefeats : WordsParty → WordsParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | WordsParty.luke7, WordsParty.trent => True
-    | WordsParty.trent, WordsParty.luke7 => True
-    | WordsParty.luke18, WordsParty.trent => True
-    | WordsParty.trent, WordsParty.luke18 => True
-    | WordsParty.matthew7Obedience,
-      WordsParty.matthew7Faith => True
-    | WordsParty.matthew7Faith,
-      WordsParty.matthew7Obedience => True
-    | WordsParty.matthew19Way, WordsParty.matthew19Legal =>
-      True
-    | WordsParty.matthew19Legal, WordsParty.matthew19Way =>
-      True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelWordsPartyWordsPartyDefeats"></a>
-**`instDecidableRelWordsPartyWordsPartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelWordsPartyWordsPartyDefeats : DecidableRel
-    wordsPartyDefeats
-```
-
-<a id="wordsPartyStrength"></a>
-**`wordsPartyStrength`**
-
-Each position's weakest link: `disputed` for every one.
-
-```lean
-def wordsPartyStrength : WordsParty → ℕ :=
-  fun x => 0
-```
-
-<a id="wordsPartyNode_strength"></a>
-**`wordsPartyNode_strength`**
-
-Each position's weakest link, as worked out from its premises.
-
-```lean
-theorem wordsPartyNode_strength : ∀ (i : WordsParty), (wordsPartyNode
-    i).strength = wordsPartyStrength i
--- axioms: propext
 ```
 
 <a id="jesusWordsDispute_defeats"></a>
@@ -829,26 +735,15 @@ checked by machine.
 
 ```lean
 theorem jesusWordsDispute_defeats : ∀ (i j : WordsParty),
-    jesusWordsDispute.defeats i j ↔ wordsPartyDefeats i j
+    jesusWordsDispute.defeats i j ↔ (i, j) ∈ [(WordsParty.luke7,
+    WordsParty.trent), (WordsParty.trent, WordsParty.luke7),
+    (WordsParty.luke18, WordsParty.trent), (WordsParty.trent,
+    WordsParty.luke18), (WordsParty.matthew7Obedience,
+    WordsParty.matthew7Faith), (WordsParty.matthew7Faith,
+    WordsParty.matthew7Obedience), (WordsParty.matthew19Way,
+    WordsParty.matthew19Legal), (WordsParty.matthew19Legal,
+    WordsParty.matthew19Way)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="jesusWordsFinite"></a>
-**`jesusWordsFinite`**
-
-The debate in the form the solver works with.
-
-```lean
-def jesusWordsFinite : Solver.Finite jesusWordsDispute.defeats :=
-  {
-    parties :=
-      [WordsParty.luke7, WordsParty.luke18,
-        WordsParty.trent, WordsParty.matthew7Obedience,
-        WordsParty.matthew7Faith, WordsParty.matthew19Way,
-        WordsParty.matthew19Legal],
-    complete := jesusWordsFinite._proof_1,
-    defeats := fun i j => decide (wordsPartyDefeats i j),
-    spec := jesusWordsFinite._proof_2 }
 ```
 
 <a id="jesusWordsDispute_supports"></a>
@@ -872,7 +767,7 @@ and checked by machine.
 
 ```lean
 theorem jesusWordsDispute_partOf : ∀ (i j : WordsParty),
-    jesusWordsDispute.partOf i j ↔ i = j
+    jesusWordsDispute.partOf i j ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -937,6 +832,45 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 7 *Matthew 19:17, read as the law exposing what he has not kept* | 6 *Matthew 19:17, read as the commandments the way to life* | defeats |
 
 The defeats are the cells of [`jesusWordsDispute_defeats`](#jesusWordsDispute_defeats), the supports the cells of [`jesusWordsDispute_supports`](#jesusWordsDispute_supports) and the parts the cells of [`jesusWordsDispute_partOf`](#jesusWordsDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+<a id="lukeWithRomeOnMatthewReading"></a>
+**`lukeWithRomeOnMatthewReading`**
+
+**Rome's readings of Matthew can be held together with Luke's sayings.** One
+consistent reading holds Luke 7:50 and Luke 18, that faith sufficed, and Rome's
+readings of Matthew 7 and 19, that salvation is not apart from works. As written
+out here, "faith suffices" and "not apart from works" are different claims, and
+Luke's sayings make only the first. So whoever holds both is not contradicted by
+these texts. This reading takes neither of Trent's further claims: baptism as
+the instrument of justification, and justification as including sanctification.
+
+```lean
+def lukeWithRomeOnMatthewReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
+    | Claim.salvationNotByWorks => False
+    | Claim.matthew7DoingIncludesBelieving => False
+    | Claim.matthew19LawExposesInability => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
+    | x => True
+```
+
+<a id="luke_stands_with_rome_on_matthew"></a>
+**`luke_stands_with_rome_on_matthew`**
+
+Luke's two sayings can be held together with Rome's readings of Matthew.
+
+```lean
+theorem luke_stands_with_rome_on_matthew : jesusWordsDispute.StandTogether
+    [WordsParty.luke7, WordsParty.luke18, WordsParty.matthew7Obedience,
+    WordsParty.matthew19Way]
+-- axioms: propext, Classical.choice, Quot.sound
+```
 
 <a id="jesusWordsSettleNothing"></a>
 **`jesusWordsSettleNothing`**
@@ -1330,19 +1264,8 @@ Every position but Trent: Luke's two sayings, and both readings of each passage
 in Matthew.
 
 ```lean
-def jesusWordsWithoutTrent : Dispute Claim { i // i ≠ WordsParty.trent } :=
-  jesusWordsDispute.restrict fun x => x ≠ WordsParty.trent
-```
-
-<a id="jesusWordsWithoutTrentFinite"></a>
-**`jesusWordsWithoutTrentFinite`**
-
-That hearing, in the form the solver works with.
-
-```lean
-def jesusWordsWithoutTrentFinite : Solver.Finite fun i j =>
-    jesusWordsDispute.defeats ↑i ↑j :=
-  jesusWordsFinite.restrict fun x => x ≠ WordsParty.trent
+def jesusWordsWithoutTrent : Dispute Claim { i // i ∉ [WordsParty.trent] } :=
+  jesusWordsDispute.restrict fun x => x ∉ [WordsParty.trent]
 ```
 
 <a id="withoutTrentLukeSettles"></a>
@@ -1400,7 +1323,7 @@ Matthew, which say that salvation is not apart from works, can be held with them
 ```lean
 theorem without_trent_luke_is_forced : Framework.grounded
     jesusWordsWithoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x
-    ≠ WordsParty.trent) [WordsParty.luke7, WordsParty.luke18])
+    ∉ [WordsParty.trent]) [WordsParty.luke7, WordsParty.luke18])
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 

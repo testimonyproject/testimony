@@ -1,12 +1,8 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.SolaFide.Hearings
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
 import Testimony.Logic.Dilemma
 import Testimony.Logic.Contest
 import Testimony.Logic.Warrant
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaFide.James — James 2:24, and the increase of justification
@@ -782,112 +778,42 @@ def jamesPartyNode : JamesParty → ArgumentPackage Claim
 
 /-- The debate over James 2:24 and the increase of justification. For every position
 heard: its premises can be held without contradiction, its conclusion follows
-from them, and every step it uses is rated. -/
-@[solaFideDefs]
-def jamesDispute : Dispute Claim JamesParty where
-  node := jamesPartyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .lexical => jamesLexicalCase_establishes
-    | .faith => jamesFaithCase_establishes
-    | .harmony => jamesHarmonyCase_establishes
-    | .trentOnTheWord => catholicJamesOnTheWord_establishes
-    | .trentOnWorks => catholicJamesOnWorks_establishes
-    | .trentOnRevelation => trentOnRevelation_establishes
-    | .trentOnSirach => trentOnSirach_establishes
-    | .revelationText => revelationTextCase_establishes
-    | .sirachText => sirachTextCase_establishes
-    | .trentOnReward => trentOnReward_establishes
-    | .renewalOnTheWord => renewalOnTheWord_establishes
-    | .westminsterOnReward => westminsterOnReward_establishes
-  rated i := by
-    cases i <;> simp [solaFideDefs, Line.asPackage]
-
-/-- Who defeats whom, as a table. -/
-def jamesPartyDefeats : JamesParty → JamesParty → Prop
-  | .lexical, .trentOnTheWord => True
-  | .harmony, .trentOnWorks => True
-  | .trentOnWorks, .harmony => True
-  | .revelationText, .trentOnRevelation => True
-  | .sirachText, .trentOnSirach => True
-  | .harmony, .trentOnReward => True
-  | .trentOnReward, .harmony => True
-  | .lexical, .renewalOnTheWord => True
-  | .westminsterOnReward, .trentOnReward => True
-  | .trentOnReward, .westminsterOnReward => True
-  | .harmony, .renewalOnTheWord => True
-  | .renewalOnTheWord, .harmony => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel jamesPartyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold jamesPartyDefeats <;> infer_instance
-
-/-- Each position's weakest link: `wellSupported` for the readings of the words and
+from them, and every step it uses is rated.
+Each position's weakest link is `wellSupported` for the readings of the words and
 the texts, and the bottom for the rest. -/
-def jamesPartyStrength : JamesParty → ℕ
-  | .lexical | .faith | .revelationText | .sirachText => 2
-  | _ => 0
+declare_dispute jamesDispute := jamesPartyNode using solaFideDefs
+  /-- **Who defeats whom**, for all 144 pairs.
 
-/-- Each position's weakest link, as worked out from its premises. -/
-theorem jamesPartyNode_strength : ∀ i, (jamesPartyNode i).strength = jamesPartyStrength i
-  | .lexical => jamesLexicalCase_strength
-  | .faith => jamesFaithCase_strength
-  | .harmony => jamesHarmonyCase_strength
-  | .trentOnTheWord => catholicJamesOnTheWord_strength
-  | .trentOnWorks => catholicJamesOnWorks_strength
-  | .trentOnRevelation => trentOnRevelation_strength
-  | .trentOnSirach => trentOnSirach_strength
-  | .revelationText => revelationTextCase_strength
-  | .sirachText => sirachTextCase_strength
-  | .trentOnReward => trentOnReward_strength
-  | .renewalOnTheWord => renewalOnTheWord_strength
-  | .westminsterOnReward => westminsterOnReward_strength
+  The argument from James's word defeats Trent's reading of that word, and the
+  reply fails. It defeats the reading through Paul too, whose reply fails for the
+  same reason: it rests on Paul's word as renewal, rated `disputed`, against an
+  argument rated `wellSupported`.
 
-prepare_clauses jamesDisputeClauses for jamesDispute
+  The Greek of Revelation 22:11 and of Sirach 18:22 defeat Trent's Latin readings
+  of them, and the replies fail.
 
-/-- **Who defeats whom**, for all 144 pairs.
+  The Reformed reconciliation and each of Trent's readings of what works do defeat
+  each other: canon 24's, and chapter 16's from the reward texts. Westminster's
+  reading of the reward texts and chapter 16's defeat each other: each denies what
+  the other holds about merit, and both rest on a reading rated `disputed`.
 
-The argument from James's word defeats Trent's reading of that word, and the
-reply fails. It defeats the reading through Paul too, whose reply fails for the
-same reason: it rests on Paul's word as renewal, rated `disputed`, against an
-argument rated `wellSupported`.
+  The Reformed reconciliation and the reading through Paul defeat each other
+  through what their claims mean. The reconciliation holds that James 2:24 does
+  not contradict Paul, which says James's word does not have Paul's sense; the
+  other holds that it does (`TestimonyArguments.Meanings.SolaFide.joins`). Both
+  rest on a reading rated `disputed`.
 
-The Greek of Revelation 22:11 and of Sirach 18:22 defeat Trent's Latin readings
-of them, and the replies fail.
+  Nothing else. In particular, nothing here contradicts the argument about James's
+  faith. And the argument from James's word does not bear on Trent's reading of
+  what works do, which accepts the word and makes a claim about God's verdict.
 
-The Reformed reconciliation and each of Trent's readings of what works do defeat
-each other: canon 24's, and chapter 16's from the reward texts. Westminster's
-reading of the reward texts and chapter 16's defeat each other: each denies what
-the other holds about merit, and both rest on a reading rated `disputed`.
-
-The Reformed reconciliation and the reading through Paul defeat each other
-through what their claims mean. The reconciliation holds that James 2:24 does
-not contradict Paul, which says James's word does not have Paul's sense; the
-other holds that it does (`TestimonyArguments.Meanings.SolaFide.joins`). Both
-rest on a reading rated `disputed`.
-
-Nothing else. In particular, nothing here contradicts the argument about James's
-faith. And the argument from James's word does not bear on Trent's reading of
-what works do, which accepts the word and makes a claim about God's verdict.
-
-Every answer is worked out from the positions' premises and checked by machine. -/
-theorem jamesDispute_defeats :
-    ∀ i j, jamesDispute.defeats i j ↔ jamesPartyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (jamesPartyNode_strength i) (jamesPartyNode_strength j)
-    (jamesDisputeClauses.spec i) (jamesDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The debate in the form the solver works with. -/
-def jamesFinite : Solver.Finite jamesDispute.defeats where
-  parties :=
-    [ .lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation
-    , .trentOnSirach, .revelationText, .sirachText, .trentOnReward, .renewalOnTheWord
-    , .westminsterOnReward ]
-  complete i := by cases i <;> decide
-  defeats i j := decide (jamesPartyDefeats i j)
-  spec i j := by rw [jamesDispute_defeats]; simp
+  Every answer is worked out from the positions' premises and checked by machine. -/
+  defeats
+    [ (.lexical, .trentOnTheWord), (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
+    , (.revelationText, .trentOnRevelation), (.sirachText, .trentOnSirach)
+    , (.harmony, .trentOnReward), (.trentOnReward, .harmony), (.lexical, .renewalOnTheWord)
+    , (.westminsterOnReward, .trentOnReward), (.trentOnReward, .westminsterOnReward)
+    , (.harmony, .renewalOnTheWord), (.renewalOnTheWord, .harmony) ]
 
 /-! ### What the debate decides -/
 
@@ -897,14 +823,12 @@ are accepted first, and nothing joins them. Trent's readings of James's word, of
 Revelation 22:11 and of Sirach 18:22 each have an attacker that remains: the one
 that defeats it. The Reformed reconciliation and Trent's reading of what works
 do have each other. -/
-def jamesWordsUnanswered : Verdict jamesDispute where
-  finite := jamesFinite
-  claim := .groundedExactly [[.lexical, .faith, .revelationText, .sirachText]]
-    [ (.trentOnTheWord, .lexical), (.trentOnRevelation, .revelationText)
-    , (.trentOnSirach, .sirachText), (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
-    , (.trentOnReward, .harmony), (.renewalOnTheWord, .lexical)
-    , (.westminsterOnReward, .trentOnReward) ]
-  checked := by decide +kernel
+declare_verdict jamesWordsUnanswered for jamesDispute :
+    .groundedExactly [[.lexical, .faith, .revelationText, .sirachText]]
+      [ (.trentOnTheWord, .lexical), (.trentOnRevelation, .revelationText)
+      , (.trentOnSirach, .sirachText), (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
+      , (.trentOnReward, .harmony), (.renewalOnTheWord, .lexical)
+      , (.westminsterOnReward, .trentOnReward) ]
 
 /-- **What James's words say, and what the Greek of Trent's other two texts says,
 prevails outright.** Exactly four positions are forced. James's "justified"
@@ -928,128 +852,95 @@ theorem james_words_prevail :
 
 /-- Why Trent's reading of James's word cannot be defended: the argument from
 James's word defeats it, and nothing defeats that argument. -/
-def trentOnTheWordAnswered : Verdict jamesDispute where
-  finite := jamesFinite
-  claim := .indefensible .trentOnTheWord [(.trentOnTheWord, .lexical)]
-  checked := by decide +kernel
+declare_verdict trentOnTheWordAnswered for jamesDispute :
+    .indefensible .trentOnTheWord [(.trentOnTheWord, .lexical)]
+  /-- **Trent's reading of James's word cannot be defended.** If "justified by works"
+  in James 2:24 is taken to mean the increase of the justice received, being made
+  more just, it cannot be defended in this debate. Outside Paul the word declares,
+  acquits or vindicates. James uses it of Abraham at Genesis 22, after Genesis
+  15:6 had been spoken, and of Rahab. And nothing in James's setting requires a
+  second, inward sense. The step from that evidence to "the word does not mean the
+  increase of justice" is rated `wellSupported`. The reading rests on Trent's word
+  alone.
 
-/-- **Trent's reading of James's word cannot be defended.** If "justified by works"
-in James 2:24 is taken to mean the increase of the justice received, being made
-more just, it cannot be defended in this debate. Outside Paul the word declares,
-acquits or vindicates. James uses it of Abraham at Genesis 22, after Genesis
-15:6 had been spoken, and of Rahab. And nothing in James's setting requires a
-second, inward sense. The step from that evidence to "the word does not mean the
-increase of justice" is rated `wellSupported`. The reading rests on Trent's word
-alone.
-
-It does not show that works are no cause of the increase of
-justification. That is a claim about God's verdict, not about James's word, and
-it is weighed separately (`trent_on_works_defensible`). -/
-@[headline]
-theorem trent_on_james_word_indefensible (S : Set JamesParty)
-    (hS : Admissible jamesDispute.defeats S) : JamesParty.trentOnTheWord ∉ S :=
-  trentOnTheWordAnswered.holds S hS
+  It does not show that works are no cause of the increase of
+  justification. That is a claim about God's verdict, not about James's word, and
+  it is weighed separately (`trent_on_works_defensible`). -/
+  proves @[headline] trent_on_james_word_indefensible
 
 #print axioms trent_on_james_word_indefensible
 
 /-- Why Trent's Revelation 22:11 cannot be defended: the Greek defeats it, and
 nothing defeats the Greek. -/
-def trentOnRevelationAnswered : Verdict jamesDispute where
-  finite := jamesFinite
-  claim := .indefensible .trentOnRevelation [(.trentOnRevelation, .revelationText)]
-  checked := by decide +kernel
+declare_verdict trentOnRevelationAnswered for jamesDispute :
+    .indefensible .trentOnRevelation [(.trentOnRevelation, .revelationText)]
+  /-- **Trent's Revelation 22:11 cannot be defended as a text for the increase of
+  justification.** "He that is just, let him be justified still" is the Latin
+  Vulgate's wording (*iustificetur adhuc*). The Greek, as modern editions print it
+  and as the Catholic Church's own translation gives it, says "the righteous must
+  still do right". And the original, "written by the inspired author himself",
+  outweighs any translation (*Divino Afflante Spiritu* §16).
 
-/-- **Trent's Revelation 22:11 cannot be defended as a text for the increase of
-justification.** "He that is just, let him be justified still" is the Latin
-Vulgate's wording (*iustificetur adhuc*). The Greek, as modern editions print it
-and as the Catholic Church's own translation gives it, says "the righteous must
-still do right". And the original, "written by the inspired author himself",
-outweighs any translation (*Divino Afflante Spiritu* §16).
-
-It does not show that Trent's citation is an error of doctrine. Taken
-as Pius XII takes Trent's decree on the Vulgate, as a reading the Church
-approves and holds free from error in faith, it is consistent with all he says,
-and rests on the Church's authority and not on the inspired text
-(the chapter "Trent's two Latin texts"). -/
-@[headline]
-theorem trent_on_revelation_indefensible (S : Set JamesParty)
-    (hS : Admissible jamesDispute.defeats S) : JamesParty.trentOnRevelation ∉ S :=
-  trentOnRevelationAnswered.holds S hS
+  It does not show that Trent's citation is an error of doctrine. Taken
+  as Pius XII takes Trent's decree on the Vulgate, as a reading the Church
+  approves and holds free from error in faith, it is consistent with all he says,
+  and rests on the Church's authority and not on the inspired text
+  (the chapter "Trent's two Latin texts"). -/
+  proves @[headline] trent_on_revelation_indefensible
 
 #print axioms trent_on_revelation_indefensible
 
 /-- Why Trent's Sirach 18:22 cannot be defended: the Greek defeats it, and nothing
 defeats the Greek. -/
-def trentOnSirachAnswered : Verdict jamesDispute where
-  finite := jamesFinite
-  claim := .indefensible .trentOnSirach [(.trentOnSirach, .sirachText)]
-  checked := by decide +kernel
+declare_verdict trentOnSirachAnswered for jamesDispute :
+    .indefensible .trentOnSirach [(.trentOnSirach, .sirachText)]
+  /-- **Trent's Sirach 18:22 cannot be defended as what the verse says.** "Be not
+  afraid to be justified even to death" is the Vulgate's verse. The Greek, in a
+  sentence about paying vows, says "do not wait until death to be justified", and
+  the Catholic Church's own translation renders that "do not wait until death to
+  fulfill them". Whether Sirach is Scripture is not in question here: the verdict
+  holds on Trent's own list of the biblical books.
 
-/-- **Trent's Sirach 18:22 cannot be defended as what the verse says.** "Be not
-afraid to be justified even to death" is the Vulgate's verse. The Greek, in a
-sentence about paying vows, says "do not wait until death to be justified", and
-the Catholic Church's own translation renders that "do not wait until death to
-fulfill them". Whether Sirach is Scripture is not in question here: the verdict
-holds on Trent's own list of the biblical books.
-
-It does not show that the Greek has no "be justified". It has the verb.
-What it lacks is the Latin's "be not afraid ... even to death", the words in
-which Trent reads continued growth in justice. -/
-@[headline]
-theorem trent_on_sirach_indefensible (S : Set JamesParty)
-    (hS : Admissible jamesDispute.defeats S) : JamesParty.trentOnSirach ∉ S :=
-  trentOnSirachAnswered.holds S hS
+  It does not show that the Greek has no "be justified". It has the verb.
+  What it lacks is the Latin's "be not afraid ... even to death", the words in
+  which Trent reads continued growth in justice. -/
+  proves @[headline] trent_on_sirach_indefensible
 
 #print axioms trent_on_sirach_indefensible
 
 /-- Why Trent's reading of what works do can be defended: it answers the one
 position that attacks it, the Reformed reconciliation. -/
-def trentOnWorksStands : Verdict jamesDispute where
-  finite := jamesFinite
-  claim := .credulous .trentOnWorks [.lexical, .faith, .trentOnWorks, .revelationText, .sirachText]
-  checked := by decide +kernel
+declare_verdict trentOnWorksStands for jamesDispute :
+    .credulous .trentOnWorks [.lexical, .faith, .trentOnWorks, .revelationText, .sirachText]
+  /-- **Trent's reading of what works do can be defended**, together with the argument
+  from James's word, the argument about James's faith, and the Greek of both
+  verses. It accepts that James's "justified" is a verdict, and holds that the
+  works by which James says a person is justified are a cause of that verdict's
+  increase and not merely its fruit. The Reformed reconciliation denies this, and
+  the debate cannot choose: at that point each side rests on its own confession,
+  rated `disputed`.
 
-/-- **Trent's reading of what works do can be defended**, together with the argument
-from James's word, the argument about James's faith, and the Greek of both
-verses. It accepts that James's "justified" is a verdict, and holds that the
-works by which James says a person is justified are a cause of that verdict's
-increase and not merely its fruit. The Reformed reconciliation denies this, and
-the debate cannot choose: at that point each side rests on its own confession,
-rated `disputed`.
-
-It does not show that works are a cause of the increase. The reading is
-not forced (`trent_on_works_not_forced`). -/
-@[headline]
-theorem trent_on_works_defensible :
-    CredulouslyAccepted jamesDispute.defeats .trentOnWorks :=
-  trentOnWorksStands.holds
+  It does not show that works are a cause of the increase. The reading is
+  not forced (`trent_on_works_not_forced`). -/
+  proves @[headline] trent_on_works_defensible
 
 #print axioms trent_on_works_defensible
 
 /-- Why it is not forced: a set of positions that can be defended includes the
 Reformed reconciliation, which defeats it. -/
-def trentOnWorksAnswered : Verdict jamesDispute where
-  finite := jamesFinite
-  claim := .notSkeptical .trentOnWorks .harmony
-    [.lexical, .faith, .harmony, .revelationText, .sirachText]
-  checked := by decide +kernel
-
-/-- **Nor is it forced.** A consistent set of positions that answers every attack
-holds the Reformed reconciliation, with the arguments from James's word and
-James's faith, and cannot hold Trent's reading of what works do with it. -/
-@[headline]
-theorem trent_on_works_not_forced :
-    ¬ SkepticallyAccepted jamesDispute.defeats .trentOnWorks :=
-  trentOnWorksAnswered.holds
+declare_verdict trentOnWorksAnswered for jamesDispute :
+    .notSkeptical .trentOnWorks .harmony [.lexical, .faith, .harmony, .revelationText, .sirachText]
+  /-- **Nor is it forced.** A consistent set of positions that answers every attack
+  holds the Reformed reconciliation, with the arguments from James's word and
+  James's faith, and cannot hold Trent's reading of what works do with it. -/
+  proves @[headline] trent_on_works_not_forced
 
 #print axioms trent_on_works_not_forced
 
 /-- Why the Reformed reconciliation can be defended: it answers Trent's reading of
 what works do. -/
-def harmonyStands : Verdict jamesDispute where
-  finite := jamesFinite
-  claim := .credulous .harmony [.lexical, .faith, .harmony, .revelationText, .sirachText]
-  checked := by decide +kernel
+declare_verdict harmonyStands for jamesDispute :
+    .credulous .harmony [.lexical, .faith, .harmony, .revelationText, .sirachText]
 
 /-- The Reformed reconciliation derives, from Westminster's proof texts, that works
 are the fruit of faith and not its ground. -/

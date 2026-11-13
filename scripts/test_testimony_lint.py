@@ -176,6 +176,11 @@ class RuleTests(unittest.TestCase):
         names = L.declared_names({"A.lean": "  proves @[headline] some_verdict_holds\n"})
         self.assertIn("some_verdict_holds", names)
 
+    def test_L9_a_declared_dispute_declares_its_tables(self):
+        names = L.declared_names({"A.lean": "declare_dispute fooDispute := node using defs\n"})
+        self.assertTrue({"fooDispute", "fooDispute_defeats", "fooDispute_supports",
+                         "fooDispute_partOf"} <= names)
+
     def test_L10_proposed_without_rationale(self):
         text = (
             "/-- A result with no account of what it adds. -/\n"
