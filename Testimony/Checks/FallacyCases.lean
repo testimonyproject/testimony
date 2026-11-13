@@ -30,16 +30,16 @@ namespace Testimony.Checks.FallacyCases
 open Testimony Testimony.Semantics Testimony.Semantics.Notation
 
 /-- Romans 3:28. -/
-abbrev rom3_28 : PassageRange := vs .romans 3 28
+@[nolint defsWithUnderscore] abbrev rom3_28 : PassageRange := vs .romans 3 28
 
 /-- James 2:24. -/
-abbrev jas2_24 : PassageRange := vs .james 2 24
+@[nolint defsWithUnderscore] abbrev jas2_24 : PassageRange := vs .james 2 24
 
 /-- James 2:19. -/
-abbrev jas2_19 : PassageRange := vs .james 2 19
+@[nolint defsWithUnderscore] abbrev jas2_19 : PassageRange := vs .james 2 19
 
 /-- Romans 4:5. -/
-abbrev rom4_5 : PassageRange := vs .romans 4 5
+@[nolint defsWithUnderscore] abbrev rom4_5 : PassageRange := vs .romans 4 5
 
 /-- A move, from its premises and its conclusion. -/
 def argues (ps : List Statement) (c : Statement) : Move :=

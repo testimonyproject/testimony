@@ -411,10 +411,10 @@ namespace FallacyExamples
 open Notation
 
 /-- Romans 3:28. -/
-abbrev rom3_28 : PassageRange := vs .romans 3 28
+@[nolint defsWithUnderscore] abbrev rom3_28 : PassageRange := vs .romans 3 28
 
 /-- James 2:24. -/
-abbrev jas2_24 : PassageRange := vs .james 2 24
+@[nolint defsWithUnderscore] abbrev jas2_24 : PassageRange := vs .james 2 24
 
 /-- Romans 3:28 says a person is justified by faith. -/
 abbrev romansSays : Statement := .says rom3_28 (rl .instrumentOf (wd .pistis rom3_28)
