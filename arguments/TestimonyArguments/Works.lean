@@ -3340,6 +3340,189 @@ EWTN library's page. -/
                  (some "2026-11-12") ] }
   , site := some "EWTN Library" }
 
+/-- *Nicene and Post-Nicene Fathers*, first series, volume 3: Augustine, *On the
+Holy Trinity*, tr. Arthur West Haddan, revised by W. G. T. Shedd. Cited for
+*On the Trinity* I.7.14, where Augustine answers those who "say … that the Son
+is less than the Father, because it is written that the Lord Himself said, My
+Father is greater than I": "in the form of a servant which He took He is less
+than the Father; but in the form of God … He is equal to the Father". Title
+page read in the Internet Archive's scan (aselectlibrary03unknuoft); the text
+in New Advent's revision. -/
+@[bib_entry] def npnf1v3 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-1-3-1887"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title := "Nicene and Post-Nicene Fathers, First Series"
+      , subtitle := some "St. Augustin: On the Holy Trinity; Doctrinal Treatises; Moral Treatises"
+      , year := some { value := 1887 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Company"
+  , place := some "Buffalo, NY"
+  , volume := some "3" }
+
+/-- *Nicene and Post-Nicene Fathers*, second series, volume 3, with Theodoret's
+*Ecclesiastical History*, tr. Blomfield Jackson. Cited for the letter of Arius
+to Eusebius of Nicomedia (I.4), in which Arius says "that the Son has a
+beginning, but that God is without beginning". New Advent gives Buffalo,
+1892. -/
+@[bib_entry] def npnf2v3 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-2-3-1892"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"] }
+      , title := "Nicene and Post-Nicene Fathers, Second Series"
+      , subtitle := some "Theodoret, Jerome, Gennadius, Rufinus: Historical Writings"
+      , year := some { value := 1892 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "3" }
+
+/-- *Nicene and Post-Nicene Fathers*, second series, volume 4: Athanasius, select
+works, with the *Discourses against the Arians*, tr. J. H. Newman and A.
+Robertson. Cited for Discourse I.58, on John 14:28: "greater," not indeed in
+greatness, nor in time, but because of His generation from the Father Himself".
+Title page read in the Internet Archive's scan (selectlibraryofn04schauoft),
+which gives New York, 1892. -/
+@[bib_entry] def npnf2v4 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-2-4-1892"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"] }
+      , title := "Nicene and Post-Nicene Fathers, Second Series"
+      , subtitle := some "St. Athanasius: Select Works and Letters"
+      , year := some { value := 1892 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Company"
+  , place := some "New York"
+  , volume := some "4" }
+
+/-- Calvin's commentary on John, volume 2, with John 14:28, pp. 102–103: "Christ
+does not now speak either of his human nature, or of his eternal Divinity, but,
+accommodating himself to our weakness, places himself between God and us". He
+reports that the Arians argued from the verse "that Christ is some sort of
+inferior God", and calls the Fathers' reply from his human nature "neither
+correct nor appropriate". Read in the Internet Archive's scan of the 1847
+Calvin Translation Society volume. -/
+@[bib_entry] def calvinJohn2 : BibEntry := .book
+  { core :=
+      { key := "calvin-commentary-john-2-1847"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentary on the Gospel According to John"
+      , year := some { value := 1847 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryongosp02calvuoft"
+                 (some "2026-11-13") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "2" }
+
+/-- Wayne Grudem's chapter in *One God in Three Persons* (2015), the volume of
+essays defending the eternal submission of the Son. Cited for p. 40: "at least
+seven passages of Scripture indicate that prior to creation, the Son was
+eternally subject to the planning and authority of the Father with regard to
+our salvation". Read in the publisher's sample; the volume's ISBN verified at
+Open Library (OL31041459M). The chapter's last page was not seen. -/
+@[bib_entry] def grudemDoctrinalDeviations : BibEntry := .inCollection
+  { core :=
+      { key := "grudem-doctrinal-deviations-2015"
+      , role := .witness
+      , contributors := { authors := [.person "Wayne" "Grudem"] }
+      , title := "Doctrinal Deviations in Evangelical-Feminist Arguments about the Trinity"
+      , year := some { value := 2015 }
+      , identifiers := [.isbn "9781433528422"] }
+  , containerTitle := "One God in Three Persons"
+  , containerEditors := [.person "Bruce A." "Ware", .person "John" "Starke"]
+  , publisher := "Crossway"
+  , place := some "Wheaton, IL" }
+
+/-- Grudem's outline for his paper at the Evangelical Theological Society, 15
+November 2016, "Why a denial of the Son's eternal submission threatens both the
+Trinity and the Bible", on his own site. Cited for its thesis that "the names
+Father and Son indicate an eternal relationship of authority and submission"
+(I.A.3), and for its quotation of Erickson, pp. 137–38. -/
+@[bib_entry] def grudemEts2016 : BibEntry := .webPage
+  { core :=
+      { key := "grudem-ets-trinity-2016"
+      , role := .witness
+      , contributors := { authors := [.person "Wayne" "Grudem"] }
+      , title :=
+          "Why a Denial of the Son's Eternal Submission Threatens Both the Trinity and the Bible"
+      , year := some { value := 2016 }
+      , identifiers :=
+          [ .url ("https://www.waynegrudem.com/wp-content/uploads/2016/11/" ++
+                  "ETS-Presentation-on-Trinity-11-15-16.pdf") (some "2026-11-13") ] }
+  , site := some "waynegrudem.com" }
+
+/-- Bruce Ware's *Father, Son, and Holy Spirit* (2005), the fullest statement of
+an eternal "authority-submission structure" among the persons. ISBN verified at
+Open Library (OL8783172M). No page of it was read, so it is cited whole; its
+wording is known here as Giles quotes it (Evangelical Quarterly, 2008, p. 325). -/
+@[bib_entry] def wareFatherSonSpirit : BibEntry := .book
+  { core :=
+      { key := "ware-father-son-holy-spirit-2005"
+      , role := .witness
+      , contributors := { authors := [.person "Bruce A." "Ware"] }
+      , title := "Father, Son, and Holy Spirit"
+      , subtitle := some "Relationships, Roles, and Relevance"
+      , year := some { value := 2005 }
+      , identifiers := [.isbn "9781581346688"] }
+  , publisher := "Crossway Books"
+  , place := some "Wheaton, IL" }
+
+/-- Kevin Giles's *Jesus and the Father* (2006), against the eternal
+subordination of the Son. ISBN verified at Open Library (OL3418203M); cited
+whole, since no page of it was read. -/
+@[bib_entry] def gilesJesusAndTheFather : BibEntry := .book
+  { core :=
+      { key := "giles-jesus-and-the-father-2006"
+      , role := .witness
+      , contributors := { authors := [.person "Kevin" "Giles"] }
+      , title := "Jesus and the Father"
+      , subtitle := some "Modern Evangelicals Reinvent the Doctrine of the Trinity"
+      , year := some { value := 2006 }
+      , identifiers := [.isbn "9780310266648"] }
+  , publisher := "Zondervan"
+  , place := some "Grand Rapids, MI" }
+
+/-- Giles, "The Evangelical Theological Society and the Doctrine of the
+Trinity", *Evangelical Quarterly* 80.4 (2008): "To argue that the Son is
+eternally subordinate in authority to the Father, denies that he is equal in
+power with the Father and the Spirit" (p. 323). DOI verified at Crossref; read in
+the copy at biblicalstudies.org.uk. -/
+@[bib_entry] def gilesEtsTrinity : BibEntry := .article
+  { core :=
+      { key := "giles-ets-trinity-2008"
+      , role := .witness
+      , contributors := { authors := [.person "Kevin" "Giles"] }
+      , title := "The Evangelical Theological Society and the Doctrine of the Trinity"
+      , year := some { value := 2008 }
+      , identifiers := [.doi "10.1163/27725472-08004003"] }
+  , journal := "Evangelical Quarterly"
+  , volume := some "80"
+  , issue := some "4"
+  , pages := some (323, 338) }
+
+/-- Millard Erickson's *Who's Tampering with the Trinity?* (2009), weighing the
+"gradational-authority" view against the "equivalent-authority" view and
+finding for the second. ISBN verified at Open Library (OL28676289M). No page of
+it was read; its words are known here as Grudem quotes them (2016). -/
+@[bib_entry] def ericksonWhosTampering : BibEntry := .book
+  { core :=
+      { key := "erickson-whos-tampering-2009"
+      , role := .witness
+      , contributors := { authors := [.person "Millard J." "Erickson"] }
+      , title := "Who's Tampering with the Trinity?"
+      , subtitle := some "An Assessment of the Subordination Debate"
+      , year := some { value := 2009 }
+      , identifiers := [.isbn "9780825425899"] }
+  , publisher := "Kregel Publications"
+  , place := some "Grand Rapids, MI" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

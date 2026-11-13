@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**7 arguments**, carrying **262 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**7 arguments**, carrying **281 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -312,6 +312,25 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `western_not_forced` | `¬Framework.SkepticallyAccepted processionDispute.defeats Party.western` | **Nor is it forced.** A maximal defensible position holds LST's position and the East's, and cannot hold the West's with them. |
 | `eastern_defensible` | `Framework.CredulouslyAccepted processionDispute.defeats Party.eastern` | **The Eastern position can be defended**, together with LST's. |
 | `eastern_not_forced` | `¬Framework.SkepticallyAccepted processionDispute.defeats Party.eastern` | **Nor is it forced.** A maximal defensible position holds LST's position and the West's, and cannot hold the East's with them. |
+| `lstOrder_establishes` | `Establishes lstOrderCase` | **Grant the order texts, and there is a real order of Father and Son.** This is what LST says they establish, and every party here grants it. |
+| `order_texts_leave_lesser_divinity_open` | `Independent lstOrderCase.premises (p Claim.sonLesserInDivinity)` | **The order texts leave open whether the Son is less in his divinity.** Granted the five texts and the order they establish, neither "the Son is less than the Father in his … |
+| `order_texts_leave_eternal_authority_open` | `Independent lstOrderCase.premises (p Claim.eternalAuthorityAndSubmission)` | **The order texts leave open whether the order is eternal.** Granted the texts and the order, neither an eternal relationship of authority and submission nor its denial follows: … |
+| `arianCase_establishes` | `Establishes arianCase` | **Grant John 14:28 read as lesser divinity, and the Son is less than the Father in his divinity.** |
+| `augustineCase_establishes` | `Establishes augustineCase` | **Grant Augustine's two forms, and the Son is not less in his divinity.** |
+| `athanasiusCase_establishes` | `Establishes athanasiusCase` | **Grant Athanasius's reading of "greater", and the Son is not less in his divinity.** |
+| `calvinCase_establishes` | `Establishes calvinCase` | **Grant Calvin's reading, and John 14:28 does not say the Son is less in his divinity.** |
+| `eternalAuthorityCase_establishes` | `Establishes eternalAuthorityCase` | **Grant the order read as eternal, and there is an eternal relationship of authority and submission.** |
+| `equalAuthorityCase_establishes` | `Establishes equalAuthorityCase` | **Grant the Son equal in power, and that eternal subordination would deny it, and there is no eternal subordination in authority.** |
+| `the_order_prevails` | `Framework.grounded orderDispute.defeats = Solver.toSet [OrderParty.lst]` | **What the order texts establish prevails, and nothing more.** What the dispute forces before any choice between rivals is exactly LST's position: a real order of Father and Son … |
+| `arian_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.arian` | **On the order texts alone, the Arian reading can be defended.** The Nicene readings of John 14:28 and the Arian one are each rated `disputed`, so each defeats the other and none … |
+| `arian_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.arian` | **Nor is it forced.** A maximal defensible position holds Augustine's and Athanasius's readings, and cannot hold the Arian one with them. |
+| `augustine_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.augustine` | **Augustine's reading can be defended**, with Athanasius's. |
+| `calvin_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.calvin` | **Calvin's reading can be defended**, with Athanasius's; not with Augustine's, which it denies. |
+| `athanasius_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.athanasius` | **Athanasius's reading can be defended.** It stands with Augustine's and with Calvin's, which do not stand with each other. |
+| `eternal_order_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.eternal` | **The eternal order of Grudem and Ware can be defended.** |
+| `eternal_order_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.eternal` | **Nor is it forced.** A maximal defensible position holds Giles's position, and cannot hold the eternal order with it. |
+| `equal_authority_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position can be defended.** |
+| `equal_authority_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.equal` | **Nor is it forced.** Between the eternal order and Giles's denial of it the dispute chooses neither, as LST says the texts do not. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -780,6 +799,25 @@ finding suggests the two sides may mean different things by "proceeds", which
 is not yet encoded. LST's other graded claims in §3 (each person God; order
 without inequality; eternal generation) are tracked in the same issue.
 
+**The texts of the Son's obedience establish an order, and leave open both
+questions read into them** ([#216]). LST says these texts (John 5:19–30; 14:28;
+20:17; 1 Corinthians 11:3; 15:28) "establish real personal and mediatorial
+order, but they do not by themselves establish inequality of divine nature or an
+eternal hierarchy of command and obedience". All three parts hold
+(`lstOrder_establishes`, `order_texts_leave_lesser_divinity_open`,
+`order_texts_leave_eternal_authority_open`). John 14:28 gets four readings: the
+Arians' lesser divinity, Augustine's two forms, Athanasius's "greater" as the one
+the Son is from, and Calvin's humbled Mediator, who denies that the verse speaks
+of either nature. Weighed, the order is forced (`the_order_prevails`) and every
+reading beyond it stands off, the Arian one included
+(`arian_reading_defensible`): the order texts alone do not settle the Son's
+divinity, which LST confesses from other texts. Grudem and Ware's eternal order
+of authority and Giles's denial of it stand off too. The audit placed both
+disputes in readings, not steps: Sirmium (357) and Gregory of Nazianzus's
+opponents grant "greater as the one he is from" and still conclude a lesser
+Godhead, and Grudem grants the Son's equality in power while denying that eternal
+submission contradicts it.
+
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no
 model entails everything. A package assembled from contradictory premises would
@@ -805,14 +843,12 @@ positions on tradition, three objections that do not reduce to one another, the
 two answers to the self-refutation objection, and a dispute over what Jesus'
 rebuke of tradition in Mark 7 decides.
 
-**The rest of the Triune God** ([#216]). The procession is encoded; LST §3's
-other graded claims are not. They are that each person is God and the three are
-not three gods, against the Arians, the modalists and the "a god" of John 1:1
-in the New World Translation; that the texts of the Son's obedience establish
-an order without an inequality of nature or an eternal chain of command,
-against Grudem and Ware; and that eternal generation is a defended synthesis.
-Then the "through the Son" of the Greek fathers as a third position on the
-procession, and an article check of LST's own sentences.
+**The rest of the Triune God** ([#216]). The procession and the order texts are
+encoded; LST §3's other graded claims are not. They are that each person is God
+and the three are not three gods, against the Arians, the modalists and the "a
+god" of John 1:1 in the New World Translation; and that eternal generation is a
+defended synthesis. Then the "through the Son" of the Greek fathers as a third
+position on the procession, and an article check of LST's own sentences.
 
 **Corpus grounding** ([#4]). Importers so `Passage` values resolve against real
 text data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite

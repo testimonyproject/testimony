@@ -81,6 +81,65 @@ inductive Claim
   definition, and tagged with Rome's tradition, because a citation carries one
   tradition. -/
   | filioque
+  /-- John 5:19, 30: "the Son can do nothing of his own accord, but only what he
+  sees the Father doing"; "I seek not my own will but the will of him who sent
+  me." -/
+  | sonDoesNothingOfHimself
+  /-- John 14:28: "the Father is greater than I." -/
+  | fatherIsGreater
+  /-- John 20:17: the risen Jesus says, "I am ascending to my Father and your
+  Father, to my God and your God." -/
+  | fatherIsGodOfTheRisenSon
+  /-- 1 Corinthians 11:3: "the head of Christ is God." -/
+  | headOfChristIsGod
+  /-- 1 Corinthians 15:28: "the Son himself will also be subjected to him who put
+  all things in subjection under him, that God may be all in all." -/
+  | sonSubjectAtTheEnd
+  /-- Philippians 2:6: Christ Jesus, "though he was in the form of God, did not
+  count equality with God a thing to be grasped." -/
+  | sonInTheFormOfGod
+  /-- **What every party grants.** There is a real order between the Father and
+  the Son in the work of salvation: the Father sends, and the Son is sent, obeys,
+  and at the end is subject. LST: "real personal and mediatorial order". The
+  claim leaves open whether Father and Son are two persons, which is LST's next
+  question; a modalist reads them as the deity and the humanity of one. -/
+  | realOrder
+  /-- **The Arian reading of John 14:28.** "Greater" means that the Son is less
+  than the Father in his divinity. Augustine reports it ("They say … that the Son
+  is less than the Father, because it is written … My Father is greater than I"),
+  and Calvin ("The Arians, in order to prove that Christ is some sort of inferior
+  God, argued that he is less than the Father"). -/
+  | greaterMeansLesserDivinity
+  /-- **Augustine's reading of John 14:28.** The Son is less than the Father in
+  the form of a servant which he took, and equal to him in the form of God, in
+  which he was before (Philippians 2:6–7): "equal to God the Father in nature, but
+  less in fashion" (*On the Trinity* I.7.14). -/
+  | lessInTheFormOfAServant
+  /-- **Athanasius's reading of John 14:28.** The Father is "greater" as the one
+  the Son is begotten from, "not indeed in greatness, nor in time"; so the word
+  "shows that He is proper to His essence" (*Against the Arians* I.58). -/
+  | greaterAsBegetter
+  /-- **Calvin's reading of John 14:28.** Christ compares his present humbled
+  state as Mediator with the heavenly glory he is going to, and "does not now
+  speak either of his human nature, or of his eternal Divinity". -/
+  | greaterAsMediatorsState
+  /-- **The reading of the order as eternal.** The Father's sending and the Son's
+  obedience are the outworking of an eternal relationship of authority and
+  submission between them. Grudem; Ware. -/
+  | orderIsEternal
+  /-- The Son is equal to the Father in power: the three persons are "of one
+  substance, power, and eternity" (Westminster II.3). -/
+  | sonEqualInPower
+  /-- **Giles's reading.** To hold the Son eternally subordinate in authority is
+  to deny that he is equal in power with the Father. -/
+  | subordinationDeniesEqualPower
+  /-- **The Arian conclusion.** The Son is less than the Father in his divinity.
+  Arius: "the Son has a beginning, but … God is without beginning." -/
+  | sonLesserInDivinity
+  /-- **The conclusion Grudem and Ware draw.** There is an eternal relationship of
+  authority and submission between the Father and the Son, as the persons are,
+  not only in the work of salvation. -/
+  | eternalAuthorityAndSubmission
 deriving DecidableEq, Repr
 
 end TestimonyArguments.Trinity

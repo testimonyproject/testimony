@@ -39,6 +39,22 @@ where it ends, or says that no such reader was found after a search for one.
 | <a id="claim-13"></a>\\(P_{13}\\) | In John 15:26 Jesus names the Spirit's source, the Father, and no other | interpretive | Eastern Orthodox, disputed | [Photius 1987](../../bibliography.md#photius-mystagogy-1987); [Ware 1993](../../bibliography.md#ware-orthodox-church-1993) |
 | <a id="claim-14"></a>\\(P_{14}\\) | The Father is the one cause of the Son and of the Spirit | theological | Eastern Orthodox, disputed | [Photius 1987](../../bibliography.md#photius-mystagogy-1987); [Ware 1993](../../bibliography.md#ware-orthodox-church-1993) |
 | <a id="claim-15"></a>\\(P_{15}\\) | The Spirit proceeds eternally from the Father and the Son | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Florence, Session 6 (1439), Laetentur caeli; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §II.3 |
+| <a id="claim-16"></a>\\(P_{16}\\) | John 5:19, 30 — the Son does nothing of his own accord, but the sender's will ※ | textual | Christian, hist.-gramm., consensus | John 5:19; John 5:30 |
+| <a id="claim-17"></a>\\(P_{17}\\) | John 14:28 — "the Father is greater than I" ※ | textual | Christian, hist.-gramm., consensus | John 14:28 |
+| <a id="claim-18"></a>\\(P_{18}\\) | John 20:17 — the risen Jesus: "my God and your God" ※ | textual | Christian, hist.-gramm., consensus | John 20:17 |
+| <a id="claim-19"></a>\\(P_{19}\\) | 1 Corinthians 11:3 — "the head of Christ is God" ※ | textual | Christian, hist.-gramm., consensus | 1 Cor 11:3 |
+| <a id="claim-20"></a>\\(P_{20}\\) | 1 Corinthians 15:28 — "the Son himself will also be subjected to him" ※ | textual | Christian, hist.-gramm., consensus | 1 Cor 15:28 |
+| <a id="claim-21"></a>\\(P_{21}\\) | Philippians 2:6 — "though he was in the form of God" ※ | textual | Christian, hist.-gramm., consensus | Phil 2:6 |
+| <a id="claim-22"></a>\\(P_{22}\\) | There is a real order of Father and Son in the work of salvation | theological | Christian, hist.-gramm., well supported | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §§3, The Triune God |
+| <a id="claim-23"></a>\\(P_{23}\\) | In John 14:28 "greater" means the Son is less in his divinity | interpretive | Christian, hist.-gramm., disputed | [Schaff 1887](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-3-1887), §On the Trinity I.7.14; [Calvin 1847](../../bibliography.md#calvin-commentary-john-2-1847), p. 102 |
+| <a id="claim-24"></a>\\(P_{24}\\) | The Son is less in the form of a servant, equal in the form of God | interpretive | Christian, hist.-gramm., disputed | [Schaff 1887](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-3-1887), §On the Trinity I.7.14 |
+| <a id="claim-25"></a>\\(P_{25}\\) | The Father is "greater" as the one the Son is begotten from | interpretive | Christian, hist.-gramm., disputed | [Schaff and Wace 1892](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-4-1892), §Against the Arians I.13.58 |
+| <a id="claim-26"></a>\\(P_{26}\\) | In John 14:28 Christ compares his humbled state as Mediator with his glory | interpretive | Reformed Protestant, disputed | [Calvin 1847](../../bibliography.md#calvin-commentary-john-2-1847), pp. 102–103 |
+| <a id="claim-27"></a>\\(P_{27}\\) | The sending and obeying are the outworking of an eternal authority and submission | theological | Christian, hist.-gramm., disputed | [Grudem 2015](../../bibliography.md#grudem-doctrinal-deviations-2015), p. 40; [Grudem 2016](../../bibliography.md#grudem-ets-trinity-2016); [Ware 2005](../../bibliography.md#ware-father-son-holy-spirit-2005) |
+| <a id="claim-28"></a>\\(P_{28}\\) | The Son is equal to the Father in power: "of one substance, power, and eternity" | theological | Reformed Protestant, well supported | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §II.3 |
+| <a id="claim-29"></a>\\(P_{29}\\) | Eternal subordination in authority would deny the Son's equality in power | theological | Christian, hist.-gramm., disputed | [Giles 2008](../../bibliography.md#giles-ets-trinity-2008), p. 323; [Giles 2006](../../bibliography.md#giles-jesus-and-the-father-2006) |
+| <a id="claim-30"></a>\\(P_{30}\\) | The Son is less than the Father in his divinity | theological | Christian, hist.-gramm., disputed | [Schaff and Wace 1892](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-3-1892), §Theodoret, Ecclesiastical History I.4 |
+| <a id="claim-31"></a>\\(P_{31}\\) | There is an eternal relationship of authority and submission of Father and Son | theological | Christian, hist.-gramm., disputed | [Grudem 2016](../../bibliography.md#grudem-ets-trinity-2016); [Ware 2005](../../bibliography.md#ware-father-son-holy-spirit-2005) |
 
 </div>
 
@@ -219,6 +235,186 @@ def onTheMonarchy : Source :=
       [Reference.work pcpcuGreekAndLatinTraditions,
         Reference.work photiusMystagogy],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+#### The order texts
+
+<a id="augustineOnJohn14"></a>
+**`augustineOnJohn14`**
+
+Augustine on John 14:28.
+
+```lean
+def augustineOnJohn14 : Bib.Locus :=
+  Bib.Locus.sectionRef "On the Trinity I.7.14"
+```
+
+<a id="athanasiusOnJohn14"></a>
+**`athanasiusOnJohn14`**
+
+Athanasius on John 14:28.
+
+```lean
+def athanasiusOnJohn14 : Bib.Locus :=
+  Bib.Locus.sectionRef "Against the Arians I.13.58"
+```
+
+#### Ratings for the steps over the order texts
+
+<a id="onTheOrder"></a>
+**`onTheOrder`**
+
+**The step from the order texts to a real order is well supported.** LST
+draws it: the texts "establish real personal and mediatorial order". It was
+audited for a reader who grants the texts and denies the order, and none was
+found. The nearest is the Oneness writer David Bernard (*The Oneness of God*,
+1983, ch. 8), who grants every text, and the sending, the obedience and the
+final subjection, and reads "Father" and "Son" as the deity and the humanity of
+one person: "The flesh was subject to the Spirit." The order as stated here does
+not say whether Father and Son are two persons, so he grants it too. That they
+are is LST's next question.
+
+```lean
+def onTheOrder : Source :=
+  {
+    primary :=
+      Reference.work kibbeyLivingSystematicTheology lstOnTheProcession,
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onTheArianReading"></a>
+**`onTheArianReading`**
+
+**The Arian step is well supported**: the reading it starts from already says
+the Son is less in divinity, and no reader was found who grants the reading and
+denies that. The dissent is from the reading, which is rated `disputed`.
+
+```lean
+def onTheArianReading : Source :=
+  { primary := Reference.work npnf1v3 augustineOnJohn14,
+    supporting :=
+      [Reference.work calvinJohn2 (Bib.Locus.page 102),
+        Reference.work npnf2v3
+          (Bib.Locus.sectionRef "Theodoret, Ecclesiastical History I.4")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onTheTwoForms"></a>
+**`onTheTwoForms`**
+
+**Augustine's step is well supported**: his reading already says the Son is
+equal in the form of God, and no reader was found who grants it and holds him
+less in divinity. Gregory of Nazianzus grants the reading: "to say that he is
+greater than the Son considered as man, is true indeed, but is no great thing"
+(*Oration* 30.7).
+
+```lean
+def onTheTwoForms : Source :=
+  { primary := Reference.work npnf1v3 augustineOnJohn14,
+    supporting :=
+      [Reference.work npnfCyrilGregory
+          (Bib.Locus.sectionRef "Gregory of Nazianzus, Oration 30.7")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onTheBegetter"></a>
+**`onTheBegetter`**
+
+**Athanasius's step is well supported, because his reading says "not in
+greatness".** Readers who grant only that the Father is greater as the one the
+Son is from, and still hold him greater in divinity, deny that clause. The
+creed of Sirmium (357) says the Father is "greater in honour and dignity and
+Godhead, and in the very name of Father, the Son Himself testifying, 'The Father
+that sent Me is greater than I'" (Athanasius, *De Synodis* 28). Gregory of
+Nazianzus reports opponents who, granting that "in respect of being the Cause
+the Father is greater than the Son", "deduce the conclusion that He is greater by
+Nature also", and calls the inference a fallacy (*Oration* 29.15). So the
+dispute sits in the reading, which is rated `disputed`.
+
+```lean
+def onTheBegetter : Source :=
+  { primary := Reference.work npnf2v4 athanasiusOnJohn14,
+    supporting :=
+      [Reference.work npnf2v4 (Bib.Locus.sectionRef "De Synodis 28"),
+        Reference.work npnfCyrilGregory
+          (Bib.Locus.sectionRef "Gregory of Nazianzus, Oration 29.15")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onTheMediatorsState"></a>
+**`onTheMediatorsState`**
+
+**Calvin's step is well supported**: no reader was found who grants that the
+verse compares the Mediator's humbled state with his glory and holds that it
+says the Son is less in divinity.
+
+```lean
+def onTheMediatorsState : Source :=
+  { primary := Reference.work calvinJohn2 (Bib.Locus.pages 102 103),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onCalvinAgainstTheFathers"></a>
+**`onCalvinAgainstTheFathers`**
+
+**Calvin against the Fathers' reply**: reading the verse of the Mediator's
+state, he denies that it speaks of the Son's human nature, and calls the
+Fathers' reply "neither correct nor appropriate". Rated `wellSupported`: his
+reading says that the comparison is of states, not natures, and no reader was
+found who grants that and reads the verse of the human nature.
+
+```lean
+def onCalvinAgainstTheFathers : Source :=
+  { primary := Reference.work calvinJohn2 (Bib.Locus.page 102),
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onTheEternalOrder"></a>
+**`onTheEternalOrder`**
+
+**The step from the order to an eternal order of authority is well
+supported**: its reading already says the order is the outworking of an eternal
+relationship, and no reader was found who grants that and denies the
+relationship. The dissent is from the reading. Augustine grants the order and
+reads it otherwise: the Son "was not sent in virtue of some disparity of power or
+substance … but in virtue of the Son being from the Father" (*On the Trinity*
+IV.20.27, as Grudem quotes it, 2016).
+
+```lean
+def onTheEternalOrder : Source :=
+  { primary := Reference.work grudemDoctrinalDeviations (Bib.Locus.page 40),
+    supporting :=
+      [Reference.work grudemEts2016, Reference.work wareFatherSonSpirit],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onEqualPower"></a>
+**`onEqualPower`**
+
+**Giles's step is well supported**: no reader was found who grants both its
+grounds and still affirms an eternal submission. Grudem grants the first, the
+Son's equality in power: the Evangelical Theological Society, of which he was
+president, confesses the persons "equal in power and glory", and he "zealously"
+guards "against greater ontological power" for the Father (2016, I.A.4). He
+denies the second, that eternal submission would deny that equality. Giles
+concedes that the second is his reading: "I cannot see how anyone could
+distinguish these terms" (2008, p. 327). So the dispute sits in the reading,
+which is rated `disputed`.
+
+```lean
+def onEqualPower : Source :=
+  { primary := Reference.work gilesEtsTrinity (Bib.Locus.page 327),
+    supporting :=
+      [Reference.work gilesJesusAndTheFather, Reference.work grudemEts2016],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
 ```
 
 #### Citations
