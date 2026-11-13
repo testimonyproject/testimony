@@ -22,8 +22,8 @@ private def text (refs : List ScriptureCitation) : Source :=
   , tradition := .christianHistoricalGrammatical
   , confidence := .consensus }
 
-/-- LST §3, the passage on the procession. -/
-def lstOnTheProcession : Locus := .sectionRef "§3, The Triune God"
+/-- LST §3, "The Triune God". The renderer adds the section sign. -/
+def lstOnTheTriuneGod : Locus := .sectionRef "3, The Triune God"
 
 /-- Aquinas on whether the Spirit proceeds from the Son. -/
 def aquinasOnTheSon : Locus := .sectionRef "I, q. 36, a. 2"
@@ -45,7 +45,7 @@ special eternal relationship between the Son and the Spirit". What they deny is
 that the relation is one of origin, and the claim the step delivers does not
 say that it is. -/
 def onTheRelation : Source :=
-  { primary := .work kibbeyLivingSystematicTheology lstOnTheProcession
+  { primary := .work kibbeyLivingSystematicTheology lstOnTheTriuneGod
   , supporting :=
       [ .work photiusMystagogy .whole, .work vischerSpiritOfGod (.page 178)
       , .work aquinasSumma aquinasOnTheSon ]
@@ -155,7 +155,7 @@ one person: "The flesh was subject to the Spirit." The order as stated here does
 not say whether Father and Son are two persons, so he grants it too. That they
 are is LST's next question. -/
 def onTheOrder : Source :=
-  { primary := .work kibbeyLivingSystematicTheology lstOnTheProcession
+  { primary := .work kibbeyLivingSystematicTheology lstOnTheTriuneGod
   , tradition := .christianHistoricalGrammatical
   , confidence := .wellSupported }
 
@@ -275,7 +275,7 @@ def cite : Claim → AtomMeta
     { label := "The Spirit is related to the Son as well as to the Father"
     , kind := .theological
     , source :=
-        { primary := .work kibbeyLivingSystematicTheology lstOnTheProcession
+        { primary := .work kibbeyLivingSystematicTheology lstOnTheTriuneGod
         , supporting := [.work photiusMystagogy .whole, .work aquinasSumma aquinasOnTheSon]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
@@ -299,7 +299,7 @@ def cite : Claim → AtomMeta
     , kind := .theological
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.john, 14, 16⟩ }]
-        , supporting := [.work kibbeyLivingSystematicTheology lstOnTheProcession]
+        , supporting := [.work kibbeyLivingSystematicTheology lstOnTheTriuneGod]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .distinctOnlyByOpposedRelations =>
@@ -376,19 +376,19 @@ def cite : Claim → AtomMeta
     { label := "There is a real order of Father and Son in the work of salvation"
     , kind := .theological
     , source :=
-        { primary := .work kibbeyLivingSystematicTheology lstOnTheProcession
+        { primary := .work kibbeyLivingSystematicTheology lstOnTheTriuneGod
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .greaterMeansLesserDivinity =>
     { label := "In John 14:28 \"greater\" means the Son is less in his divinity"
     , kind := .interpretive
     , source :=
-        { primary := .work npnf1v3 augustineOnJohn14
-        , supporting := [.work calvinJohn2 (.page 102)]
+        { primary := .work npnf2v4 (.sectionRef "De Synodis 28")
+        , supporting := [.work npnf1v3 augustineOnJohn14, .work calvinJohn2 (.page 102)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .lessInTheFormOfAServant =>
-    { label := "The Son is less in the form of a servant, equal in the form of God"
+    { label := "In John 14:28 the Son is less in the form of a servant, not in the form of God"
     , kind := .interpretive
     , source :=
         { primary := .work npnf1v3 augustineOnJohn14

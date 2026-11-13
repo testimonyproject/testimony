@@ -29,10 +29,10 @@ where it ends, or says that no such reader was found after a search for one.
 | <a id="claim-3"></a>\\(P_{3}\\) | Galatians 4:6; Romans 8:9 — the Spirit of his Son, the Spirit of Christ ※ | textual | Christian, hist.-gramm., consensus | Gal 4:6; Rom 8:9 |
 | <a id="claim-4"></a>\\(P_{4}\\) | Acts 2:33 — the exalted Son receives the promised Spirit and pours him out ※ | textual | Christian, hist.-gramm., consensus | Acts 2:33 |
 | <a id="claim-5"></a>\\(P_{5}\\) | John 16:14 — the Spirit will take what is the Son's and declare it ※ | textual | Christian, hist.-gramm., consensus | John 16:14 |
-| <a id="claim-6"></a>\\(P_{6}\\) | The Spirit is related to the Son as well as to the Father | theological | Christian, hist.-gramm., well supported | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §§3, The Triune God; [Photius 1987](../../bibliography.md#photius-mystagogy-1987); [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2 |
+| <a id="claim-6"></a>\\(P_{6}\\) | The Spirit is related to the Son as well as to the Father | theological | Christian, hist.-gramm., well supported | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Photius 1987](../../bibliography.md#photius-mystagogy-1987); [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2 |
 | <a id="claim-7"></a>\\(P_{7}\\) | In John 16:14 what the Spirit takes from the Son is his being, not only his word | interpretive | Roman Catholic, disputed | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2 |
 | <a id="claim-8"></a>\\(P_{8}\\) | The Son's sending of the Spirit rests on an eternal relation of Spirit to Son | theological | Roman Catholic, disputed | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2; [Vischer 1981](../../bibliography.md#vischer-spirit-of-god-1981), p. 165 |
-| <a id="claim-9"></a>\\(P_{9}\\) | John 14:16 — the Son and the Spirit are two persons: "another Helper" | theological | Christian, hist.-gramm., well supported | John 14:16; [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §§3, The Triune God |
+| <a id="claim-9"></a>\\(P_{9}\\) | John 14:16 — the Son and the Spirit are two persons: "another Helper" | theological | Christian, hist.-gramm., well supported | John 14:16; [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God |
 | <a id="claim-10"></a>\\(P_{10}\\) | The divine persons are distinguished only by opposed relations of origin | theological | Roman Catholic, disputed | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2 |
 | <a id="claim-11"></a>\\(P_{11}\\) | The Son is not from the Spirit: "which no one says" | theological | Roman Catholic, well supported | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2 |
 | <a id="claim-12"></a>\\(P_{12}\\) | John 15:26 "proceeds" speaks of the Spirit's eternal origin, not only of mission | interpretive | Christian, hist.-gramm., disputed | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2; [Photius 1987](../../bibliography.md#photius-mystagogy-1987) |
@@ -45,9 +45,9 @@ where it ends, or says that no such reader was found after a search for one.
 | <a id="claim-19"></a>\\(P_{19}\\) | 1 Corinthians 11:3 — "the head of Christ is God" ※ | textual | Christian, hist.-gramm., consensus | 1 Cor 11:3 |
 | <a id="claim-20"></a>\\(P_{20}\\) | 1 Corinthians 15:28 — "the Son himself will also be subjected to him" ※ | textual | Christian, hist.-gramm., consensus | 1 Cor 15:28 |
 | <a id="claim-21"></a>\\(P_{21}\\) | Philippians 2:6 — "though he was in the form of God" ※ | textual | Christian, hist.-gramm., consensus | Phil 2:6 |
-| <a id="claim-22"></a>\\(P_{22}\\) | There is a real order of Father and Son in the work of salvation | theological | Christian, hist.-gramm., well supported | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §§3, The Triune God |
-| <a id="claim-23"></a>\\(P_{23}\\) | In John 14:28 "greater" means the Son is less in his divinity | interpretive | Christian, hist.-gramm., disputed | [Schaff 1887](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-3-1887), §On the Trinity I.7.14; [Calvin 1847](../../bibliography.md#calvin-commentary-john-2-1847), p. 102 |
-| <a id="claim-24"></a>\\(P_{24}\\) | The Son is less in the form of a servant, equal in the form of God | interpretive | Christian, hist.-gramm., disputed | [Schaff 1887](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-3-1887), §On the Trinity I.7.14 |
+| <a id="claim-22"></a>\\(P_{22}\\) | There is a real order of Father and Son in the work of salvation | theological | Christian, hist.-gramm., well supported | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God |
+| <a id="claim-23"></a>\\(P_{23}\\) | In John 14:28 "greater" means the Son is less in his divinity | interpretive | Christian, hist.-gramm., disputed | [Schaff and Wace 1892](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-4-1892), §De Synodis 28; [Schaff 1887](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-3-1887), §On the Trinity I.7.14; [Calvin 1847](../../bibliography.md#calvin-commentary-john-2-1847), p. 102 |
+| <a id="claim-24"></a>\\(P_{24}\\) | In John 14:28 the Son is less in the form of a servant, not in the form of God | interpretive | Christian, hist.-gramm., disputed | [Schaff 1887](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-3-1887), §On the Trinity I.7.14 |
 | <a id="claim-25"></a>\\(P_{25}\\) | The Father is "greater" as the one the Son is begotten from | interpretive | Christian, hist.-gramm., disputed | [Schaff and Wace 1892](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-4-1892), §Against the Arians I.13.58 |
 | <a id="claim-26"></a>\\(P_{26}\\) | In John 14:28 Christ compares his humbled state as Mediator with his glory | interpretive | Reformed Protestant, disputed | [Calvin 1847](../../bibliography.md#calvin-commentary-john-2-1847), pp. 102–103 |
 | <a id="claim-27"></a>\\(P_{27}\\) | The sending and obeying are the outworking of an eternal authority and submission | theological | Christian, hist.-gramm., disputed | [Grudem 2015](../../bibliography.md#grudem-doctrinal-deviations-2015), p. 40; [Grudem 2016](../../bibliography.md#grudem-ets-trinity-2016); [Ware 2005](../../bibliography.md#ware-father-son-holy-spirit-2005) |
@@ -65,14 +65,14 @@ where it ends, or says that no such reader was found after a search for one.
 <details class="testimony-checked">
 <summary>The positions, steps and results behind this chapter, each with the formula or the Lean that checks it</summary>
 
-<a id="lstOnTheProcession"></a>
-**`lstOnTheProcession`**
+<a id="lstOnTheTriuneGod"></a>
+**`lstOnTheTriuneGod`**
 
-LST §3, the passage on the procession.
+LST §3, [The Triune God](../trinity.md). The renderer adds the section sign.
 
 ```lean
-def lstOnTheProcession : Bib.Locus :=
-  Bib.Locus.sectionRef "§3, The Triune God"
+def lstOnTheTriuneGod : Bib.Locus :=
+  Bib.Locus.sectionRef "3, The Triune God"
 ```
 
 <a id="aquinasOnTheSon"></a>
@@ -116,7 +116,7 @@ say that it is.
 def onTheRelation : Source :=
   {
     primary :=
-      Reference.work kibbeyLivingSystematicTheology lstOnTheProcession,
+      Reference.work kibbeyLivingSystematicTheology lstOnTheTriuneGod,
     supporting :=
       [Reference.work photiusMystagogy,
         Reference.work vischerSpiritOfGod (Bib.Locus.page 178),
@@ -278,7 +278,7 @@ are is LST's next question.
 def onTheOrder : Source :=
   {
     primary :=
-      Reference.work kibbeyLivingSystematicTheology lstOnTheProcession,
+      Reference.work kibbeyLivingSystematicTheology lstOnTheTriuneGod,
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 ```

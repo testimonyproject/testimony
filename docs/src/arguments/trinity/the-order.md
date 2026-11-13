@@ -11,22 +11,27 @@ greater than I" (John 14:28). The risen Jesus speaks of "my God and your God"
 "the Son himself will also be subjected to him who put all things in subjection
 under him" (1 Corinthians 15:28).
 
-LST grades them so: "These texts establish real personal and mediatorial order,
-but they do not by themselves establish inequality of divine nature or an
-eternal hierarchy of command and obedience between the divine persons as such."
-That is three claims. The texts establish an order (`lstOrder_establishes`).
-They leave open whether the Son is less than the Father in his divinity
-(`order_texts_leave_lesser_divinity_open`). And they leave open whether the
-order is eternal, an order of authority and submission between the persons as
-they are (`order_texts_leave_eternal_authority_open`). All three hold.
+Ken Kibbey's *Living Systematic Theology* (LST) grades these texts so: "These
+texts establish real personal and mediatorial order, but they do not by
+themselves establish inequality of divine nature or an eternal hierarchy of
+command and obedience between the divine persons as such." That is three claims,
+and all three hold. The texts establish an order of Father and Son in the work of
+salvation (`lstOrder_establishes`). They leave open whether the Son is less than
+the Father in his divinity (`order_texts_leave_lesser_divinity_open`). And they
+leave open whether the order is eternal, an order of authority and submission
+between the persons as they are (`order_texts_leave_eternal_authority_open`).
+LST calls the order "personal and mediatorial". What is checked here is the
+order in the work of salvation, the mediatorial one; whether it also belongs to
+the persons as they eternally are is the third claim, and is left open.
 
 ## Two questions, and who answers them
 
-The first question is the old one. The Arians, Augustine reports, argued "that
-the Son is less than the Father, because it is written that the Lord Himself
-said, My Father is greater than I". Arius had said that "the Son has a beginning,
-but that God is without beginning". Three readers answer the verse, and their
-answers differ.
+The first question is the old one. The party that followed Arius (died 336) held
+the Son to be a creature, or unlike the Father, and read John 14:28 as saying
+so. The creed of Sirmium (357) says the Father is "greater in honour and dignity
+and Godhead … the Son Himself testifying, 'The Father that sent Me is greater
+than I'". Arius had written that "the Son has a beginning, but … God is without
+beginning". Three readers answer the verse, and their answers differ.
 
 - Augustine reads it by the two "forms" of Philippians 2:6–7: "The Son of God,
   then, is equal to God the Father in nature, but less in fashion. For in the
@@ -35,34 +40,39 @@ answers differ.
 - Athanasius reads "greater" of the Father as the one the Son is from: "not
   indeed in greatness, nor in time, but because of His generation from the Father
   Himself, nay, in saying 'greater' He again shows that He is proper to His
-  essence."
-- Calvin reads it as the Mediator comparing his humbled state with the glory he
-  is going to: "Christ does not now speak either of his human nature, or of his
-  eternal Divinity". He thinks the Fathers' reply from the human nature was
-  "neither correct nor appropriate", so his reading and Augustine's exclude each
-  other.
+  essence", that is, belongs to the Father's own being.
+- Calvin reads it as Christ the Mediator, the one who stands between God and us
+  (1 Timothy 2:5), comparing his humbled state with the glory he is going to:
+  "Christ does not now speak either of his human nature, or of his eternal
+  Divinity". He calls the Fathers' reading of the verse from the human nature
+  "neither correct nor appropriate". He holds the two forms; he denies that this
+  verse speaks of them.
 
-The second question is recent. Wayne Grudem and Bruce Ware hold that the order
-of sending and obeying belongs to the persons as they eternally are: "the names
-Father and Son indicate an eternal relationship of authority and submission"
-(Grudem, 2016), and "prior to creation, the Son was eternally subject to the
-planning and authority of the Father" (Grudem, 2015, p. 40). Grudem confesses
-the persons "equal in power and glory", with the Evangelical Theological
-Society, and holds that eternal submission does not deny it. Kevin Giles answers
-that "to argue that the Son is eternally subordinate in authority to the Father,
-denies that he is equal in power with the Father" (2008, p. 323). The
-Westminster Confession calls the three persons "of one substance, power, and
-eternity" (II.3). Millard Erickson, in his assessment of the debate, holds that
-the texts of the Father's sending and commanding "do not count as evidence in
-support of an eternal supremacy of the Father" (as Grudem quotes him, 2016).
+The second question was argued among evangelicals, most sharply at the
+Evangelical Theological Society in 2016, as "eternal functional subordination"
+or "eternal relations of authority and submission". Wayne Grudem and Bruce Ware
+hold that the order of sending and obeying belongs to the persons as they
+eternally are: "the names Father and Son indicate an eternal relationship of
+authority and submission" (Grudem, 2016), and "prior to creation, the Son was
+eternally subject to the planning and authority of the Father" (Grudem, 2015, p.
+40). Grudem confesses the persons "equal in power and glory", with the
+Evangelical Theological Society, and holds that eternal submission does not deny
+it. Kevin Giles answers that "to argue that the Son is eternally subordinate in
+authority to the Father, denies that he is equal in power with the Father"
+(2008, p. 323). The Westminster Confession calls the three persons "of one
+substance, power, and eternity" (II.3). Millard Erickson, weighing the debate,
+holds that the texts of the Father's sending and commanding "do not count as
+evidence in support of an eternal supremacy of the Father"; his words are quoted
+here as Grudem quotes them (2016), and Ware's as Giles quotes them, since no
+page of either book was read.
 
-## What this does not claim
+## The limits of what is checked
 
-It does not weigh the texts that say the Son is God, which are the next question
-of LST §3: John 1:1, 20:28 and the rest. The order texts were not written to
-settle the Son's divinity, and LST does not claim they do. So the Arian reading
-here stands against readings of the same few verses, and the result is what
-those verses carry, not what the whole New Testament does.
+The dispute hears the five order texts, Philippians 2:6, the Westminster
+Confession's "power", and four readings of John 14:28. It does not hear the
+texts that say the Son is God, John 1:1 and 20:28 among them, which are the next
+question of LST §3. So whatever it finds about the Son's divinity is what those
+few verses carry, and no more.
 
 
 ## How this is checked
@@ -154,7 +164,8 @@ The Arian step: "greater" means lesser divinity.
 <a id="arianLine"></a>
 **`arianLine`** — "The Father is greater": a lesser divinity (the Arians)
 
-**The Arian line**, as Augustine and Calvin report it.
+**The Arian line**, as the creed of Sirmium (357) uses the verse, and as
+Augustine and Calvin report it.
 
 <div class="testimony-derivation">
 
@@ -205,7 +216,7 @@ Augustine's step: less in the form of a servant, equal in the form of God.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-21}{P_{21}}\\) — Philippians 2:6 — "though he was in the form of God"
-- (2) \\(\href{claims.html#claim-24}{P_{24}}\\) — The Son is less in the form of a servant, equal in the form of God
+- (2) \\(\href{claims.html#claim-24}{P_{24}}\\) — In John 14:28 the Son is less in the form of a servant, not in the form of God
 - (3) \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-30}{P_{30}}\\) — *at issue, the denial of:* The Son is less than the Father in his divinity
 
@@ -224,7 +235,7 @@ Augustine's step: less in the form of a servant, equal in the form of God.
 - (4) \\(\href{claims.html#claim-19}{P_{19}}\\) — 1 Corinthians 11:3 — "the head of Christ is God"
 - (5) \\(\href{claims.html#claim-20}{P_{20}}\\) — 1 Corinthians 15:28 — "the Son himself will also be subjected to him"
 - (6) \\(\href{claims.html#claim-21}{P_{21}}\\) — Philippians 2:6 — "though he was in the form of God"
-- (7) \\(\href{claims.html#claim-24}{P_{24}}\\) — The Son is less in the form of a servant, equal in the form of God
+- (7) \\(\href{claims.html#claim-24}{P_{24}}\\) — In John 14:28 the Son is less in the form of a servant, not in the form of God
 - (8) \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-18}{P_{18}} \land \href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\) — *would give:* There is a real order of Father and Son in the work of salvation
 - (9) \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-30}{P_{30}}\\) — *at issue, the denial of:* The Son is less than the Father in his divinity
@@ -299,7 +310,7 @@ human nature either.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-26}{P_{26}} \rightarrow \lnot \href{claims.html#claim-24}{P_{24}}\\) — *would deny:* The Son is less in the form of a servant, equal in the form of God
+- \\(\href{claims.html#claim-26}{P_{26}} \rightarrow \lnot \href{claims.html#claim-24}{P_{24}}\\) — *would deny:* In John 14:28 the Son is less in the form of a servant, not in the form of God
 
 </div>
 
@@ -332,7 +343,7 @@ nor speak of his human nature.
 - (6) \\(\href{claims.html#claim-26}{P_{26}}\\) — In John 14:28 Christ compares his humbled state as Mediator with his glory
 - (7) \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-18}{P_{18}} \land \href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\) — *would give:* There is a real order of Father and Son in the work of salvation
 - (8) \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-26}{P_{26}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\)
-- (9) \\(\href{claims.html#claim-26}{P_{26}} \rightarrow \lnot \href{claims.html#claim-24}{P_{24}}\\) — *would deny:* The Son is less in the form of a servant, equal in the form of God
+- (9) \\(\href{claims.html#claim-26}{P_{26}} \rightarrow \lnot \href{claims.html#claim-24}{P_{24}}\\) — *would deny:* In John 14:28 the Son is less in the form of a servant, not in the form of God
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-23}{P_{23}}\\) — *at issue, the denial of:* In John 14:28 "greater" means the Son is less in his divinity
 
 </div>
@@ -437,6 +448,25 @@ Grounded in scripture alone: John 5:19, 30 — the Son does nothing of his own a
 
 ### Readings, written down
 
+<a id="nicenWithGilesReading"></a>
+**`nicenWithGilesReading`**
+
+**A Nicene reading with Giles**: every order text, the order, Augustine's
+and Athanasius's readings of John 14:28, the Son not less in divinity, the Son
+equal in power, and no eternal order of authority.
+
+```lean
+def nicenWithGilesReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.greaterMeansLesserDivinity => False
+    | Claim.sonLesserInDivinity => False
+    | Claim.greaterAsMediatorsState => False
+    | Claim.orderIsEternal => False
+    | Claim.eternalAuthorityAndSubmission => False
+    | x => True
+```
+
 <a id="arianReading"></a>
 **`arianReading`**
 
@@ -459,7 +489,8 @@ def arianReading : Valuation Claim :=
 
 **Augustine's reading**: every order text, the order, the two forms, and the
 Son not less in divinity; not the Arian reading, and not Calvin's, which denies
-the two forms.
+that John 14:28 speaks of the two forms. It also makes the eternal order true.
+That is a choice of model, not Augustine's answer to the second question.
 
 ```lean
 def augustineReading : Valuation Claim :=
@@ -475,7 +506,8 @@ def augustineReading : Valuation Claim :=
 **`calvinReading`**
 
 **Calvin's reading**: every order text, the order, the Mediator's state, and
-neither the Arian reading nor the two forms.
+neither the Arian reading of John 14:28 nor Augustine's reading of it by the two
+forms.
 
 ```lean
 def calvinReading : Valuation Claim :=
@@ -548,9 +580,12 @@ Granted the five texts and the order they establish, neither "the Son is less
 than the Father in his divinity" nor its denial follows: the Arian reading
 satisfies every premise with it, and Augustine's without it.
 
-That is LST's claim, and it holds. Whether the Son is less in his divinity is
-argued from readings of John 14:28 the texts do not contain, and from other
-texts, which the next question of LST §3 takes up.
+That is LST's claim, and it holds. It is checked with each verse taken as its
+own words and each reading of it as a premise of its own. A reader who holds
+that "greater" plainly means greater in divinity puts that reading into the
+verse, and the reading is the premise rated `disputed`. Whether the Son is less
+in his divinity is argued from such readings, and from other texts, which the
+next question of LST §3 takes up.
 
 ```lean
 theorem order_texts_leave_lesser_divinity_open : Independent
@@ -566,9 +601,13 @@ texts and the order, neither an eternal relationship of authority and submission
 nor its denial follows: the reading of Grudem and Ware satisfies every premise
 with it, and Giles's without it.
 
-That is LST's further claim, and it holds. Erickson draws the same conclusion
-about the texts of sending and commanding, that "they do not count as evidence
-in support of an eternal supremacy of the Father" (as Grudem quotes him).
+That is LST's further claim, and it holds, checked in the same way: each verse
+as its own words, and the reading that the order is eternal as a premise of its
+own. Grudem argues that the subjection of 1 Corinthians 15:28 and the Son's being
+sent from before creation already show it; that argument is the reading, rated
+`disputed`. Erickson draws LST's conclusion about the texts of sending and
+commanding, that "they do not count as evidence in support of an eternal
+supremacy of the Father" (as Grudem quotes him).
 
 ```lean
 theorem order_texts_leave_eternal_authority_open : Independent

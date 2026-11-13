@@ -105,15 +105,17 @@ inductive Claim
   question; a modalist reads them as the deity and the humanity of one. -/
   | realOrder
   /-- **The Arian reading of John 14:28.** "Greater" means that the Son is less
-  than the Father in his divinity. Augustine reports it ("They say … that the Son
-  is less than the Father, because it is written … My Father is greater than I"),
-  and Calvin ("The Arians, in order to prove that Christ is some sort of inferior
-  God, argued that he is less than the Father"). -/
+  than the Father in his divinity. The creed of Sirmium (357), of the party after
+  Arius that held the Son a creature or unlike the Father, says the Father is
+  "greater in honour and dignity and Godhead … the Son Himself testifying, 'The
+  Father that sent Me is greater than I'" (Athanasius, *De Synodis* 28). Augustine
+  and Calvin report the same use of the verse, and deny it. -/
   | greaterMeansLesserDivinity
-  /-- **Augustine's reading of John 14:28.** The Son is less than the Father in
-  the form of a servant which he took, and equal to him in the form of God, in
-  which he was before (Philippians 2:6–7): "equal to God the Father in nature, but
-  less in fashion" (*On the Trinity* I.7.14). -/
+  /-- **Augustine's reading of John 14:28.** The verse speaks of the Son as less
+  than the Father in the form of a servant which he took, not in the form of God,
+  in which he is equal (Philippians 2:6–7): "equal to God the Father in nature,
+  but less in fashion" (*On the Trinity* I.7.14). Calvin denies this reading of
+  the verse, not the two forms themselves. -/
   | lessInTheFormOfAServant
   /-- **Athanasius's reading of John 14:28.** The Father is "greater" as the one
   the Son is begotten from, "not indeed in greatness, nor in time"; so the word

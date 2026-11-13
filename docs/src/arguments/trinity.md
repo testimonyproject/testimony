@@ -80,6 +80,8 @@ read John 14:28 to say and Augustine, Athanasius and Calvin each answer
 differently. And they leave open whether the order is eternal, which Wayne
 Grudem and Bruce Ware hold and Kevin Giles denies. Weighed, what the texts
 establish is forced, and every reading beyond it stands off against another.
+That includes the Arian reading, which means only that these few verses do not
+settle the Son's divinity. LST confesses it from other texts, the next question.
 
 ## Still to come
 

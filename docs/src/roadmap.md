@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**7 arguments**, carrying **281 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**7 arguments**, carrying **284 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -321,16 +321,19 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `calvinCase_establishes` | `Establishes calvinCase` | **Grant Calvin's reading, and John 14:28 does not say the Son is less in his divinity.** |
 | `eternalAuthorityCase_establishes` | `Establishes eternalAuthorityCase` | **Grant the order read as eternal, and there is an eternal relationship of authority and submission.** |
 | `equalAuthorityCase_establishes` | `Establishes equalAuthorityCase` | **Grant the Son equal in power, and that eternal subordination would deny it, and there is no eternal subordination in authority.** |
-| `the_order_prevails` | `Framework.grounded orderDispute.defeats = Solver.toSet [OrderParty.lst]` | **What the order texts establish prevails, and nothing more.** What the dispute forces before any choice between rivals is exactly LST's position: a real order of Father and Son … |
-| `arian_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.arian` | **On the order texts alone, the Arian reading can be defended.** The Nicene readings of John 14:28 and the Arian one are each rated `disputed`, so each defeats the other and none … |
-| `arian_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.arian` | **Nor is it forced.** A maximal defensible position holds Augustine's and Athanasius's readings, and cannot hold the Arian one with them. |
+| `the_order_prevails` | `Framework.grounded orderDispute.defeats = Solver.toSet [OrderParty.lst]` | **What the order texts establish is forced, and nothing more**: a real order of Father and Son in the work of salvation. |
+| `arian_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.arian` | **On the order texts alone, the Arian reading can be defended**: some consistent way of settling the dispute accepts it. |
+| `arian_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.arian` | **The Arian reading is not forced.** One consistent way of settling the dispute, which can take in no further position, holds Augustine's and Athanasius's readings, and the Arian … |
 | `augustine_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.augustine` | **Augustine's reading can be defended**, with Athanasius's. |
-| `calvin_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.calvin` | **Calvin's reading can be defended**, with Athanasius's; not with Augustine's, which it denies. |
-| `athanasius_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.athanasius` | **Athanasius's reading can be defended.** It stands with Augustine's and with Calvin's, which do not stand with each other. |
-| `eternal_order_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.eternal` | **The eternal order of Grudem and Ware can be defended.** |
-| `eternal_order_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.eternal` | **Nor is it forced.** A maximal defensible position holds Giles's position, and cannot hold the eternal order with it. |
-| `equal_authority_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position can be defended.** |
-| `equal_authority_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.equal` | **Nor is it forced.** Between the eternal order and Giles's denial of it the dispute chooses neither, as LST says the texts do not. |
+| `augustine_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.augustine` | **Augustine's reading is not forced**: the Arian reading, rated no lower, leaves it out of one consistent settlement. |
+| `athanasius_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.athanasius` | **Athanasius's reading can be defended.** It can be held with Augustine's and with Calvin's, which cannot be held with each other. |
+| `athanasius_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.athanasius` | **Athanasius's reading is not forced**, for the same reason as Augustine's. |
+| `calvin_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.calvin` | **Calvin's reading can be defended**, with Athanasius's, and not with Augustine's, whose reading of the verse it denies. |
+| `calvin_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.calvin` | **Calvin's reading is not forced**: the Arian reading leaves it out of one consistent settlement, and so does Augustine's. |
+| `eternal_order_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.eternal` | **Grudem and Ware's eternal order can be defended.** |
+| `eternal_order_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.eternal` | **The eternal order is not forced**: Giles's position can be held with LST's, and it rules the eternal order out. |
+| `equal_authority_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position can be defended**: held with LST's, it answers Grudem and Ware's position, which is the only one that attacks it. |
+| `equal_authority_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position is not forced** either. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
