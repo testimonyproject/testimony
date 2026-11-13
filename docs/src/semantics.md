@@ -418,6 +418,15 @@ courtroom sense alone. That change moves pinned joins, so it is left to its own 
 and the report says so until it is made. Twelve lines are conditional on a word keeping its
 sense, unstated, and the report lists the words.
 
+**What the checks are held to.** A check that calls every survey of a word an equivocation,
+or every argument from silence a fallacy, is a debater's reflex written down.
+`Testimony.Checks.FallacyCases` pins, for each charge, a classic case the check must catch and
+a near miss it must pass over, and runs `#check_fallacies` over an argument of its own whose
+lines equivocate and argue from silence alone, with the refusal pinned. The first near miss
+came from the library: the check's first version flagged sola fide's line on James's word,
+which gathers what δικαιόω means in Matthew and Deuteronomy, until it learned to tell a word
+used from a word talked about.
+
 **What the checks needed from the ontology.** The lookup of who denies a premise compares
 meanings under the shared definitions, and those did not know that "the same sense" runs both
 ways: "James's word is Paul's" and "Paul's word is not James's" read as unrelated facts. An
