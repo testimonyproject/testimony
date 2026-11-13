@@ -3250,6 +3250,96 @@ and none is recorded. -/
                  (some "2026-10-03") ] }
   , journal := "First Things" }
 
+/-- Ken Kibbey's *Living Systematic Theology*, a systematic theology published
+as one Markdown document and revised in the open. It grades each of its own
+claims by what it says Scripture does with them: establishes, grounds strongly
+without stating, or leaves unsettled. Cited for §3, "The Triune God", in
+version 2.9 (21 October 2026). The document is revised continuously, so the
+version matters: a later one may say something else. Its role is `witness`
+because it states its author's own position. -/
+@[bib_entry] def kibbeyLivingSystematicTheology : BibEntry := .webPage
+  { core :=
+      { key := "kibbey-living-systematic-theology-2026"
+      , role := .witness
+      , contributors := { authors := [.person "Ken" "Kibbey"] }
+      , title := "Living Systematic Theology"
+      , subtitle := some ("A Christ-Centered, Scripture-Governed, " ++
+                          "Continuously Reforming Systematic Theology")
+      , year := some { value := 2026 }
+      , identifiers :=
+          [ .url ("https://github.com/kenkibbey/living-systematic-theology/blob/" ++
+                  "e8926b097a353637f094e7159f5237196c525538/LIVING_SYSTEMATIC_THEOLOGY.md")
+                 (some "2026-11-12") ]
+      , note := some "Version 2.9, dated 21 October 2026; read at commit e8926b0." }
+  , site := some "GitHub" }
+
+/-- Photius, patriarch of Constantinople, *On the Mystagogy of the Holy Spirit*
+(ninth century): the classic Eastern case against the Filioque, from Christ's
+words in John 15:26 and from the Father as the one cause in the Godhead. Joseph
+P. Farrell's translation, Holy Cross Orthodox Press, 1987; ISBN and imprint
+verified at Open Library (OL3028289M). Cited whole: no page of it has been read
+for this library, so it is cited for the position it argues, not for its
+words. -/
+@[bib_entry] def photiusMystagogy : BibEntry := .book
+  { core :=
+      { key := "photius-mystagogy-1987"
+      , role := .witness
+      , contributors :=
+          { authors := [.single "Photius"]
+          , translators := [.person "Joseph P." "Farrell"] }
+      , title := "The Mystagogy of the Holy Spirit"
+      , year := some { value := 1987 }
+      , identifiers := [.isbn "9780916586881"] }
+  , publisher := "Holy Cross Orthodox Press"
+  , place := some "Brookline, MA" }
+
+/-- *Spirit of God, Spirit of Christ: Ecumenical Reflections on the Filioque
+Controversy*, edited by Lukas Vischer for the World Council of Churches'
+Commission on Faith and Order (Faith and Order Paper 103, 1981), the papers of
+the Klingenthal consultations. Cited for three readers who grant that the Son's
+sending of the Spirit has an eternal ground and deny that the Spirit is from
+the Son: Moltmann ("there must be an inner-trinitarian basis for the temporal
+sending of the Spirit through Christ", p. 165; the Spirit "receives from the
+Father his own perfect divine existence (hypostasis), and obtains from the Son
+his relational form", p. 169), Bobrinskoy (the Spirit "resting on the Son from
+all eternity", p. 144) and Staniloae ("though the Spirit's manifestation is by
+the Son, his coming into existence is not by the Son", pp. 183–184). Read in
+the Internet Archive's scan of the WCC's Faith and Order papers; no ISBN was
+verified, so none is recorded. -/
+@[bib_entry] def vischerSpiritOfGod : BibEntry := .book
+  { core :=
+      { key := "vischer-spirit-of-god-1981"
+      , role := .witness
+      , contributors := { editors := [.person "Lukas" "Vischer"] }
+      , title := "Spirit of God, Spirit of Christ"
+      , subtitle := some "Ecumenical Reflections on the Filioque Controversy"
+      , year := some { value := 1981 }
+      , identifiers := [.url "https://archive.org/details/wccfops2.110" (some "2026-11-12")]
+      , note := some "Faith and Order Paper 103." }
+  , publisher := "World Council of Churches" }
+
+/-- The Pontifical Council for Promoting Christian Unity's clarification of 1995,
+"The Greek and Latin Traditions regarding the Procession of the Holy Spirit".
+Cited because it grants the Eastern grounds almost word for word, the Father
+"the sole Trinitarian Cause (Aitia) or principle (principium) of the Son and the
+Holy Spirit", and still confesses the Father, "with the Son, the single
+principle from which the Spirit proceeds" (quoting the Catechism, 248), by
+distinguishing the Greek ἐκπόρευσις from the Latin *processio*. Read on the
+EWTN library's page. -/
+@[bib_entry] def pcpcuGreekAndLatinTraditions : BibEntry := .webPage
+  { core :=
+      { key := "pcpcu-greek-latin-traditions-1995"
+      , role := .authority
+      , contributors :=
+          { authors := [.corporate "Pontifical Council for Promoting Christian Unity"] }
+      , title := "The Greek and Latin Traditions regarding the Procession of the Holy Spirit"
+      , year := some { value := 1995 }
+      , identifiers :=
+          [ .url ("https://www.ewtn.com/catholicism/library/" ++
+                  "greek-and-latin-traditions-regarding-the-procession-of-the-holy-spirit-29259")
+                 (some "2026-11-12") ] }
+  , site := some "EWTN Library" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

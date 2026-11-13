@@ -4,6 +4,7 @@ import TestimonyArguments.CanonicalWitness
 import TestimonyArguments.SolaFide
 import TestimonyArguments.SolaScriptura
 import TestimonyArguments.SpiritBaptism
+import TestimonyArguments.Trinity
 import TestimonyArguments.Meanings
 import TestimonyArguments.Articles.Howell2003
 import Testimony.Checks.Aif
@@ -47,9 +48,10 @@ def unfoldSets : List (Name × Name) :=
   , (`TestimonyArguments.CanonicalWitness, `canonicalWitnessDefs)
   , (`TestimonyArguments.SolaFide, `solaFideDefs)
   , (`TestimonyArguments.SolaScriptura, `solaScripturaDefs)
-  , (`TestimonyArguments.SpiritBaptism, `spiritBaptismDefs) ]
+  , (`TestimonyArguments.SpiritBaptism, `spiritBaptismDefs)
+  , (`TestimonyArguments.Trinity, `trinityDefs) ]
 
-/-- info: every argument has meanings and pinned joins: 6 claim types -/
+/-- info: every argument has meanings and pinned joins: 7 claim types -/
 #guard_msgs in
 #check_meanings under TestimonyArguments
 
@@ -81,6 +83,8 @@ Sola scriptura
   the whole ground: held by 1, used of a text or voice by 0; derives nothing
 Spirit baptism
   joins: 2, with no definition: 2
+The Triune God
+  joins: 0, with no definition: 0
 The canonical witness
   joins: 7, with no definition: 7
   not a ground: held by 3, used of a text or voice by 0; derives nothing
@@ -88,26 +92,26 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 188, and 0 undecided -/
+/-- info: every package has a model with its postulates: 199, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 93, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 101, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
-/-- info: establish fails, as not Horn, on all 34 refuted packages -/
+/-- info: establish fails, as not Horn, on all 36 refuted packages -/
 #guard_msgs in
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2381 definitions, 200 entries
+info: every entry is a tagged definition, and every key names one: 2381 definitions, 204 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1712 definitions, 200 entries
+info: every entry is a tagged definition, and every key names one: 1807 definitions, 204 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
@@ -126,6 +130,7 @@ SolaFide.jesusWordsFinite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 SolaFide.solaFideFinite: 67 I, 30 RA, 33 CA, 2 PA, 164 edges
 SolaScriptura.mark7Finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 SpiritBaptism.spiritBaptismFinite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
+Trinity.processionFinite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
 and 5 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in

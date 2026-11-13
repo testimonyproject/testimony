@@ -173,3 +173,15 @@ benchmark = "checks: postulates, every package"
 metric = "time"
 up_to = 0.20
 reason = "The check builds a model with its postulates for every package. The chapters on whether justification has degrees and on Abraham (#203) add eight (179 to 187): the same work over more packages, measured on CI at +7%."
+
+[[accept]]
+benchmark = "checks: refutations survive their postulates"
+metric = "time"
+up_to = 0.20
+reason = "The check runs over every non-entailment. The Trinity argument's procession chapter (#216) adds eight (93 to 101): the same work over more results, measured on CI at +7.4%."
+
+[[accept]]
+benchmark = "checks: postulates, every package"
+metric = "time"
+up_to = 0.20
+reason = "The check builds a model with its postulates for every package. The Trinity argument's procession chapter (#216) adds eleven (188 to 199): the same work over more packages, measured on CI at +6.6%."

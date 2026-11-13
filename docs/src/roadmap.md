@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**6 arguments**, carrying **247 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**7 arguments**, carrying **262 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -292,6 +292,26 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `holiness_defensible` | `Framework.CredulouslyAccepted spiritBaptismDispute.defeats View.holiness` | **The holiness view can be defended**, with the Pentecostal view. |
 | `sacramental_defensible` | `Framework.CredulouslyAccepted spiritBaptismDispute.defeats View.sacramental` | **The sacramental view can be defended**, with the conversion view. |
 | `pentecostal_cannot_read_acts_as_transitions` | `Entails pentecostalCase.held (notP Claim.actsEpisodesAreTransitions)` | **The Pentecostal view cannot read Acts as transitions.** Its own premise is that Luke's narratives are a pattern for believers today, and Stott's reading says, in its own words, … |
+
+### [The Triune God — what Scripture settles, and what it leaves open](./arguments/trinity.md)
+
+| Result | Statement | What it claims |
+|---|---|---|
+| `lstCase_establishes` | `Establishes lstCase` | **Grant the texts, and the Spirit is related to the Son as well as to the Father.** This is what LST says the texts establish, and every party here grants it. |
+| `texts_leave_the_filioque_open` | `Independent lstCase.premises (p Claim.filioque)` | **The texts leave the Filioque open.** Granted the texts LST cites and the relation they establish, "and the Son" neither follows nor fails. |
+| `john16_14_leaves_it_open_too` | `Independent lstWithAquinassVerse.premises (p Claim.filioque)` | **Adding the verse Aquinas rests on leaves the question open too.** With John 16:14 among the texts, "and the Son" still neither follows nor fails: the same two readings satisfy … |
+| `texts_leave_john15_26_open` | `Independent lstCase.premises (p Claim.john15_26SpeaksOfEternalOrigin)` | **The texts leave open whether John 15:26 speaks of eternal origin.** Granted the texts, the reading on which "proceeds" speaks of mission satisfies every premise, and so does the … |
+| `westernCase_establishes` | `Establishes westernCase` | **Grant the Western position, and the Spirit proceeds from the Father and the Son.** Any one of its three lines would do (`western_rests_on_no_one_reading`). |
+| `easternCase_establishes` | `Establishes easternCase` | **Grant the Eastern position, and the Spirit does not proceed from the Son.** Either of its two lines would do (`eastern_rests_on_no_one_reading`). |
+| `western_rests_on_no_one_reading` | `Establishes westernWithoutTheReceiving ∧ Establishes westernWithoutTheMission ∧ Establishes westernWithoutTheOpposition` | **The Western case rests on no one of its readings.** Take away any one of the three (the reading of John 16:14, of the Son's sending, or the claim that only opposed relations … |
+| `western_needs_one_of_its_readings` | `¬Establishes westernOnTheTextsAlone` | **It rests on the three together.** Take away the three readings that divide the sides, and what is left (the texts, John 16:14, the distinction of Son and Spirit, and that the … |
+| `eastern_rests_on_no_one_reading` | `Establishes easternWithoutTheWords ∧ Establishes easternWithoutTheMonarchy` | **The Eastern case rests on neither of its readings alone.** Take away the reading of the Lord's words, or the monarchy of the Father, and the other line still excludes "and the … |
+| `eastern_needs_one_of_its_readings` | `¬Establishes easternOnTheTextsAlone` | **It rests on the two together.** Drop both readings, and the texts, with John 15:26 read as eternal origin, do not exclude "and the Son": the Western reading satisfies everything … |
+| `the_texts_prevail` | `Framework.grounded processionDispute.defeats = {Party.lst}` | **What the texts establish prevails, and nothing more.** What the dispute forces before any choice between rivals is exactly LST's position: the Spirit is related to the Son as … |
+| `western_defensible` | `Framework.CredulouslyAccepted processionDispute.defeats Party.western` | **The Western position can be defended**, together with LST's: some maximal defensible position, one no other party can join without losing that, holds both. |
+| `western_not_forced` | `¬Framework.SkepticallyAccepted processionDispute.defeats Party.western` | **Nor is it forced.** A maximal defensible position holds LST's position and the East's, and cannot hold the West's with them. |
+| `eastern_defensible` | `Framework.CredulouslyAccepted processionDispute.defeats Party.eastern` | **The Eastern position can be defended**, together with LST's. |
+| `eastern_not_forced` | `¬Framework.SkepticallyAccepted processionDispute.defeats Party.eastern` | **Nor is it forced.** A maximal defensible position holds LST's position and the West's, and cannot hold the East's with them. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -737,6 +757,29 @@ faculty, who keep entire sanctification and no longer hold the reading tenable.
 Tongues as initial evidence, and whether Paul and Luke mean the same by
 "baptized in the Spirit", are not yet encoded.
 
+**What Scripture settles about the procession of the Spirit is what LST says it
+settles** ([#216]). Ken Kibbey's *Living Systematic Theology* grades its own
+claims, and its section on the Triune God says the texts "establish a real
+relation of the Spirit to both Father and Son" but do not state that his eternal
+origin is "from the Father and the Son". Both grades hold of the texts it cites
+(`lstCase_establishes`, `texts_leave_the_filioque_open`), and the second still
+holds when John 16:14, the verse Aquinas rests on, is added
+(`john16_14_leaves_it_open_too`). Each side needs a reading of its own beyond the
+texts. The West has three (John 16:14, the Son's sending, Aquinas's argument
+from distinction) and the East two (the Lord's words in John 15:26, the
+monarchy of the Father). No single reading carries either side, but each side
+needs at least one of them (`western_rests_on_no_one_reading`,
+`western_needs_one_of_its_readings`, and their Eastern counterparts). Weighed as
+a dispute, what the texts establish is forced and nothing more
+(`the_texts_prevail`); the West and the East stand off, each defensible and
+neither forced. The rating audit found readers who grant the mission step's
+grounds and deny its conclusion (Moltmann, Bobrinskoy, Staniloae), and a Roman
+document that grants the monarchy step's grounds while confessing the Filioque
+(the Pontifical Council for Promoting Christian Unity, 1995). That second
+finding suggests the two sides may mean different things by "proceeds", which
+is not yet encoded. LST's other graded claims in §3 (each person God; order
+without inequality; eternal generation) are tracked in the same issue.
+
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no
 model entails everything. A package assembled from contradictory premises would
@@ -761,6 +804,15 @@ case is to its weakest link.
 positions on tradition, three objections that do not reduce to one another, the
 two answers to the self-refutation objection, and a dispute over what Jesus'
 rebuke of tradition in Mark 7 decides.
+
+**The rest of the Triune God** ([#216]). The procession is encoded; LST §3's
+other graded claims are not. They are that each person is God and the three are
+not three gods, against the Arians, the modalists and the "a god" of John 1:1
+in the New World Translation; that the texts of the Son's obedience establish
+an order without an inequality of nature or an eternal chain of command,
+against Grudem and Ware; and that eternal generation is a defended synthesis.
+Then the "through the Son" of the Greek fathers as a third position on the
+procession, and an article check of LST's own sentences.
 
 **Corpus grounding** ([#4]). Importers so `Passage` values resolve against real
 text data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite
@@ -898,4 +950,5 @@ the rest worth reading.
 [issues]: https://github.com/testimonyproject/testimony/issues
 [label-roadmap]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Aroadmap
 [label-infra]: https://github.com/testimonyproject/testimony/issues?q=is%3Aissue+label%3Ainfra
+[#216]: https://github.com/testimonyproject/testimony/issues/216
 [#122]: https://github.com/testimonyproject/testimony/issues/122

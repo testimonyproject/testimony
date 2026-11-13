@@ -30,9 +30,12 @@ register_simp_attr canonicalWitnessDefs
 /-- The definitions the Spirit-baptism proofs unfold. -/
 register_simp_attr spiritBaptismDefs
 
+/-- The definitions the Trinity proofs unfold. -/
+register_simp_attr trinityDefs
+
 -- `register_simp_attr` also declares a simproc set, named with a `_proc` suffix
 -- the naming linter cannot see is generated.
 attribute [nolint defsWithUnderscore] Parser.Attr.solaFideDefs_proc
   Parser.Attr.solaScripturaDefs_proc Parser.Attr.bornOfAVirginDefs_proc
   Parser.Attr.bornInBethlehemDefs_proc Parser.Attr.canonicalWitnessDefs_proc
-  Parser.Attr.spiritBaptismDefs_proc
+  Parser.Attr.spiritBaptismDefs_proc Parser.Attr.trinityDefs_proc
