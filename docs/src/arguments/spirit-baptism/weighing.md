@@ -51,53 +51,6 @@ not yet encoded.
 <details class="testimony-checked">
 <summary>The positions, steps and results behind this chapter, each with the formula or the Lean that checks it</summary>
 
-### Strength
-
-<a id="conversionCase_strength"></a>
-**`conversionCase_strength`**
-
-The conversion view's weakest link is `disputed`, at several places: its
-reading of 1 Corinthians 12:13 and both of its steps.
-
-```lean
-theorem conversionCase_strength : conversionCase.strength = 0
--- axioms: propext
-```
-
-<a id="pentecostalCase_strength"></a>
-**`pentecostalCase_strength`**
-
-The Pentecostal view's weakest link is `disputed`, at several places: its
-reading of 1 Corinthians 12:13, of Acts 8 and 19, of Luke's Spirit baptism, of
-the narratives as a pattern, and its step from the instrumental reading.
-
-```lean
-theorem pentecostalCase_strength : pentecostalCase.strength = 0
--- axioms: propext
-```
-
-<a id="holinessCase_strength"></a>
-**`holinessCase_strength`**
-
-The holiness view's weakest link is `disputed`: its premise, and the step
-Wesley contests.
-
-```lean
-theorem holinessCase_strength : holinessCase.strength = 0
--- axioms: propext
-```
-
-<a id="sacramentalCase_strength"></a>
-**`sacramentalCase_strength`**
-
-The sacramental view's weakest link is `disputed`, at several places: its
-readings of the rite and both of its steps.
-
-```lean
-theorem sacramentalCase_strength : sacramentalCase.strength = 0
--- axioms: propext
-```
-
 ### The dispute
 
 <a id="viewNode"></a>
@@ -129,86 +82,6 @@ def spiritBaptismDispute : Dispute Claim View :=
     rated := spiritBaptismDispute._proof_7 }
 ```
 
-<a id="conversion_stands_with_the_sacraments"></a>
-**`conversion_stands_with_the_sacraments`**
-
-**The conversion and sacramental views can be held together**: one reading
-satisfies both — every believer baptized in the Spirit at conversion, the Spirit
-given in the sacraments, and no second baptism to seek.
-
-It does not show that the two agree. They differ over what the rite does, which
-this dispute does not weigh, and the result says only that nothing encoded here
-makes them contradict each other.
-
-```lean
-theorem conversion_stands_with_the_sacraments :
-    spiritBaptismDispute.StandTogether [View.conversion, View.sacramental]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="the_subsequence_views_stand_together"></a>
-**`the_subsequence_views_stand_together`**
-
-**The two subsequence views can be held together**: a second baptism to
-seek, whether read as empowerment or as the second work of grace. Whether it is
-the same second experience, the encoding does not say.
-
-```lean
-theorem the_subsequence_views_stand_together :
-    spiritBaptismDispute.StandTogether [View.pentecostal, View.holiness]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="viewDefeats"></a>
-**`viewDefeats`**
-
-The defeats of the dispute, as a table.
-
-```lean
-def viewDefeats : View → View → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | View.conversion, View.pentecostal => True
-    | View.conversion, View.holiness => True
-    | View.pentecostal, View.conversion => True
-    | View.pentecostal, View.sacramental => True
-    | View.holiness, View.conversion => True
-    | View.holiness, View.sacramental => True
-    | View.sacramental, View.pentecostal => True
-    | View.sacramental, View.holiness => True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelViewViewDefeats"></a>
-**`instDecidableRelViewViewDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelViewViewDefeats : DecidableRel viewDefeats
-```
-
-<a id="viewStrength"></a>
-**`viewStrength`**
-
-Each view's weakest link: `disputed` for every one.
-
-```lean
-def viewStrength : View → ℕ :=
-  fun x => 0
-```
-
-<a id="viewNode_strength"></a>
-**`viewNode_strength`**
-
-Each view's weakest link, as its package computes it.
-
-```lean
-theorem viewNode_strength : ∀ (i : View), (viewNode i).strength = viewStrength
-    i
--- axioms: propext
-```
-
 <a id="spiritBaptismDispute_defeats"></a>
 **`spiritBaptismDispute_defeats`**
 
@@ -216,36 +89,24 @@ theorem viewNode_strength : ∀ (i : View), (viewNode i).strength = viewStrength
 conversion view and each subsequence view defeat each other — "no second to
 seek" against "a second to seek" — and the Pentecostal view also denies the
 conversion reading of 1 Corinthians 12:13. The sacramental view and each
-subsequence view defeat each other on the same point. Every cell is computed by
-`Horn.defeats?` and checked by the kernel.
+subsequence view defeat each other on the same point. Every cell is checked by
+the kernel.
 
 ```lean
 theorem spiritBaptismDispute_defeats : ∀ (i j : View),
-    spiritBaptismDispute.defeats i j ↔ viewDefeats i j
+    spiritBaptismDispute.defeats i j ↔ (i, j) ∈ [(View.conversion,
+    View.pentecostal), (View.conversion, View.holiness), (View.pentecostal,
+    View.conversion), (View.pentecostal, View.sacramental), (View.holiness,
+    View.conversion), (View.holiness, View.sacramental), (View.sacramental,
+    View.pentecostal), (View.sacramental, View.holiness)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="spiritBaptismFinite"></a>
-**`spiritBaptismFinite`**
-
-The dispute in the form the verdict solver computes with.
-
-```lean
-def spiritBaptismFinite : Solver.Finite spiritBaptismDispute.defeats :=
-  {
-    parties :=
-      [View.conversion, View.pentecostal,
-        View.holiness, View.sacramental],
-    complete := spiritBaptismFinite._proof_1,
-    defeats := fun i j => decide (viewDefeats i j),
-    spec := spiritBaptismFinite._proof_2 }
 ```
 
 <a id="spiritBaptismDispute_supports"></a>
 **`spiritBaptismDispute_supports`**
 
-**Nothing supports anything**, in all 16 pairs. Every cell is computed by
-`supports?` and checked by the kernel.
+**Nothing supports anything**, in all 16 pairs. Every cell is checked by
+the kernel.
 
 ```lean
 theorem spiritBaptismDispute_supports : ∀ (i j : View),
@@ -256,12 +117,12 @@ theorem spiritBaptismDispute_supports : ∀ (i j : View),
 <a id="spiritBaptismDispute_partOf"></a>
 **`spiritBaptismDispute_partOf`**
 
-Each view's case is part of its own and of no other's. Every cell is computed
-by `partOf?` and checked by the kernel.
+Each view's case is part of its own and of no other's. Every cell is
+checked by the kernel.
 
 ```lean
 theorem spiritBaptismDispute_partOf : ∀ (i j : View),
-    spiritBaptismDispute.partOf i j ↔ i = j
+    spiritBaptismDispute.partOf i j ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -318,6 +179,36 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 
 The defeats are the cells of [`spiritBaptismDispute_defeats`](#spiritBaptismDispute_defeats), the supports the cells of [`spiritBaptismDispute_supports`](#spiritBaptismDispute_supports) and the parts the cells of [`spiritBaptismDispute_partOf`](#spiritBaptismDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
 
+<a id="conversion_stands_with_the_sacraments"></a>
+**`conversion_stands_with_the_sacraments`**
+
+**The conversion and sacramental views can be held together**: one reading
+satisfies both — every believer baptized in the Spirit at conversion, the Spirit
+given in the sacraments, and no second baptism to seek.
+
+It does not show that the two agree. They differ over what the rite does, which
+this dispute does not weigh, and the result says only that nothing encoded here
+makes them contradict each other.
+
+```lean
+theorem conversion_stands_with_the_sacraments :
+    spiritBaptismDispute.StandTogether [View.conversion, View.sacramental]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="the_subsequence_views_stand_together"></a>
+**`the_subsequence_views_stand_together`**
+
+**The two subsequence views can be held together**: a second baptism to
+seek, whether read as empowerment or as the second work of grace. Whether it is
+the same second experience, the encoding does not say.
+
+```lean
+theorem the_subsequence_views_stand_together :
+    spiritBaptismDispute.StandTogether [View.pentecostal, View.holiness]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
 ### What the dispute decides
 
 <a id="spiritBaptismSettlesNothing"></a>
@@ -358,11 +249,11 @@ sacramental view has the Pentecostal.
 <a id="spirit_baptism_forces_nothing"></a>
 **`spirit_baptism_forces_nothing`**
 
-**Nothing is forced.** Every view is in a standoff the dispute cannot resolve,
-and every weakest link is `disputed`, so no rating breaks a tie.
+**Nothing is forced.** Every view is in a standoff the dispute cannot
+resolve, and every weakest link is `disputed`, so no rating breaks a tie.
 
-It does not show that the question is idle. Each view can be defended, and what
-the dispute cannot do is choose between readings rated alike.
+It does not show that the question is idle. Each view can be defended, and
+what the dispute cannot do is choose between readings rated alike.
 
 ```lean
 theorem spirit_baptism_forces_nothing : Framework.grounded
@@ -458,8 +349,8 @@ Pentecostal view, and it defeats the conversion view.
 <a id="conversion_not_forced"></a>
 **`conversion_not_forced`**
 
-**Nor is it forced.** A maximal defensible position holds the Pentecostal and
-holiness views, and cannot hold the conversion view with them.
+**Nor is it forced.** A maximal defensible position holds the Pentecostal
+and holiness views, and cannot hold the conversion view with them.
 
 ```lean
 theorem conversion_not_forced : ¬Framework.SkepticallyAccepted
@@ -553,9 +444,9 @@ conversion view, and it defeats the Pentecostal view.
 <a id="pentecostal_not_forced"></a>
 **`pentecostal_not_forced`**
 
-**Nor is it forced.** A maximal defensible position holds the conversion and
-sacramental views, and cannot hold the Pentecostal view with them. What would
-decide is argued, not weighed: what the Acts narratives are
+**Nor is it forced.** A maximal defensible position holds the conversion
+and sacramental views, and cannot hold the Pentecostal view with them. What
+would decide is argued, not weighed: what the Acts narratives are
 (`pentecostal_cannot_read_acts_as_transitions`).
 
 ```lean
@@ -603,8 +494,8 @@ which answers the conversion and sacramental views.
 <a id="holiness_defensible"></a>
 **`holiness_defensible`**
 
-**The holiness view can be defended**, with the Pentecostal view. Not forced,
-for the same reason the Pentecostal view is not.
+**The holiness view can be defended**, with the Pentecostal view. Not
+forced, for the same reason the Pentecostal view is not.
 
 ```lean
 theorem holiness_defensible : Framework.CredulouslyAccepted

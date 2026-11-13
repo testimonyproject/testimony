@@ -55,44 +55,6 @@ what testing that would take.
 <details class="testimony-checked">
 <summary>The positions, steps and results behind this chapter, each with the formula or the Lean that checks it</summary>
 
-### Strength
-
-<a id="lstCase_strength"></a>
-**`lstCase_strength`**
-
-LST's weakest link is `wellSupported`: its step from the texts to the
-relation, audited for a reader who grants the texts and denies the relation,
-and none found. The texts themselves are `consensus`.
-
-```lean
-theorem lstCase_strength : lstCase.strength = 2
--- axioms: propext
-```
-
-<a id="westernCase_strength"></a>
-**`westernCase_strength`**
-
-The Western position's weakest link is `disputed`: its readings of John 16:14
-and of the mission, the claim that only opposed relations distinguish the
-persons, and its steps from John 16:14 and from mission. Its step from
-distinction is rated `wellSupported`.
-
-```lean
-theorem westernCase_strength : westernCase.strength = 0
--- axioms: propext
-```
-
-<a id="easternCase_strength"></a>
-**`easternCase_strength`**
-
-The Eastern position's weakest link is `disputed`: each of its two readings,
-and each of its two steps.
-
-```lean
-theorem easternCase_strength : easternCase.strength = 0
--- axioms: propext
-```
-
 ### The dispute
 
 <a id="partyNode"></a>
@@ -122,78 +84,6 @@ def processionDispute : Dispute Claim Party :=
     rated := processionDispute._proof_6 }
 ```
 
-<a id="lst_stands_with_the_west"></a>
-**`lst_stands_with_the_west`**
-
-**LST stands with the West**: one reading satisfies both, the Western
-reading.
-
-```lean
-theorem lst_stands_with_the_west : processionDispute.StandTogether [Party.lst,
-    Party.western]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="lst_stands_with_the_east"></a>
-**`lst_stands_with_the_east`**
-
-**LST stands with the East** too: the Eastern reading satisfies both. So
-LST's position takes no side, which is what it says of itself.
-
-```lean
-theorem lst_stands_with_the_east : processionDispute.StandTogether [Party.lst,
-    Party.eastern]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="partyDefeats"></a>
-**`partyDefeats`**
-
-The defeats of the dispute, as a table: the West and the East, each way.
-
-```lean
-def partyDefeats : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.western, Party.eastern => True
-    | Party.eastern, Party.western => True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelPartyPartyDefeats"></a>
-**`instDecidableRelPartyPartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
-```
-
-<a id="partyStrength"></a>
-**`partyStrength`**
-
-Each party's weakest link: `wellSupported` for LST, `disputed` for the two
-sides.
-
-```lean
-def partyStrength : Party → ℕ :=
-  fun x =>
-    match x with
-    | Party.lst => 2
-    | x => 0
-```
-
-<a id="partyNode_strength"></a>
-**`partyNode_strength`**
-
-Each party's weakest link, as its package computes it.
-
-```lean
-theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
-    partyStrength i
--- axioms: propext
-```
-
 <a id="processionDispute_defeats"></a>
 **`processionDispute_defeats`**
 
@@ -203,23 +93,9 @@ premise LST holds. Every cell is checked by the kernel.
 
 ```lean
 theorem processionDispute_defeats : ∀ (i j : Party), processionDispute.defeats
-    i j ↔ partyDefeats i j
+    i j ↔ (i, j) ∈ [(Party.western, Party.eastern), (Party.eastern,
+    Party.western)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="processionFinite"></a>
-**`processionFinite`**
-
-The dispute in the form the verdict solver computes with.
-
-```lean
-def processionFinite : Solver.Finite processionDispute.defeats :=
-  {
-    parties :=
-      [Party.lst, Party.western, Party.eastern],
-    complete := processionFinite._proof_1,
-    defeats := fun i j => decide (partyDefeats i j),
-    spec := processionFinite._proof_2 }
 ```
 
 <a id="processionDispute_supports"></a>
@@ -235,41 +111,17 @@ theorem processionDispute_supports : ∀ (i j : Party),
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="partyPartOf"></a>
-**`partyPartOf`**
-
-Which party's case is part of which: LST's is part of every party's, since
-each holds the texts and the step LST draws from them; otherwise each case is
-part of its own only.
-
-```lean
-def partyPartOf : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.lst, x => True
-    | Party.western, Party.western => True
-    | Party.eastern, Party.eastern => True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelPartyPartyPartOf"></a>
-**`instDecidableRelPartyPartyPartOf`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelPartyPartyPartOf : DecidableRel partyPartOf
-```
-
 <a id="processionDispute_partOf"></a>
 **`processionDispute_partOf`**
 
-**LST's case is part of both the others'.** Every cell is checked by the
-kernel.
+**LST's case is part of both the others'**, since each holds the texts and
+the step LST draws from them. Otherwise each case is part of its own only.
+Every cell is checked by the kernel.
 
 ```lean
 theorem processionDispute_partOf : ∀ (i j : Party), processionDispute.partOf i
-    j ↔ partyPartOf i j
+    j ↔ i = j ∨ (i, j) ∈ [(Party.lst, Party.western), (Party.lst,
+    Party.eastern)]
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -315,6 +167,30 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 1 *The texts: the Spirit sent by the Son and named for him* | 3 *From the Father alone (Photius; Ware)* | is part of |
 
 The defeats are the cells of [`processionDispute_defeats`](#processionDispute_defeats), the supports the cells of [`processionDispute_supports`](#processionDispute_supports) and the parts the cells of [`processionDispute_partOf`](#processionDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+<a id="lst_stands_with_the_west"></a>
+**`lst_stands_with_the_west`**
+
+**LST stands with the West**: one reading satisfies both, the Western
+reading.
+
+```lean
+theorem lst_stands_with_the_west : processionDispute.StandTogether [Party.lst,
+    Party.western]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="lst_stands_with_the_east"></a>
+**`lst_stands_with_the_east`**
+
+**LST stands with the East** too: the Eastern reading satisfies both. So
+LST's position takes no side, which is what it says of itself.
+
+```lean
+theorem lst_stands_with_the_east : processionDispute.StandTogether [Party.lst,
+    Party.eastern]
+-- axioms: propext, Classical.choice, Quot.sound
+```
 
 ### What the dispute decides
 
@@ -363,7 +239,7 @@ West and the East are in a standoff, and neither is forced.
 
 ```lean
 theorem the_texts_prevail : Framework.grounded processionDispute.defeats =
-    {Party.lst}
+    Solver.toSet [Party.lst]
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -398,9 +274,9 @@ Why the West can be defended: with LST, it answers the East itself.
 <a id="western_defensible"></a>
 **`western_defensible`**
 
-**The Western position can be defended**, together with LST's: some maximal
-defensible position, one no other party can join without losing that, holds
-both.
+**The Western position can be defended**, together with LST's: some
+maximal defensible position, one no other party can join without losing that,
+holds both.
 
 ```lean
 theorem western_defensible : Framework.CredulouslyAccepted
@@ -440,8 +316,8 @@ East defeats the West.
 <a id="western_not_forced"></a>
 **`western_not_forced`**
 
-**Nor is it forced.** A maximal defensible position holds LST's position and
-the East's, and cannot hold the West's with them.
+**Nor is it forced.** A maximal defensible position holds LST's position
+and the East's, and cannot hold the West's with them.
 
 ```lean
 theorem western_not_forced : ¬Framework.SkepticallyAccepted
@@ -520,8 +396,8 @@ West defeats the East.
 <a id="eastern_not_forced"></a>
 **`eastern_not_forced`**
 
-**Nor is it forced.** A maximal defensible position holds LST's position and
-the West's, and cannot hold the East's with them.
+**Nor is it forced.** A maximal defensible position holds LST's position
+and the West's, and cannot hold the East's with them.
 
 ```lean
 theorem eastern_not_forced : ¬Framework.SkepticallyAccepted

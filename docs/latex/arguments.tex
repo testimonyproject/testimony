@@ -24382,36 +24382,6 @@ Four standoffs, and nothing else. The conversion view stands off against both su
 That is where the question stands in the literature, and the page says so rather than choosing. The conversion and sacramental views agree that there is no second baptism in the Spirit to seek, and differ over the rite, which this dispute does not weigh. What would decide between the two camps is argued, not weighed: what Luke’s narratives are (\texttt{pentecostal\_\allowbreak{}cannot\_\allowbreak{}read\_\allowbreak{}acts\_\allowbreak{}as\_\allowbreak{}transitions} says the Pentecostal view must read them as a pattern), and whether Paul’s word at 1 Corinthians 12:13 and Luke’s are the same baptism — a question not yet encoded.
 
 \subsubsection*{How this is checked}
-\paragraph*{Strength}
-\leavevmode\par\nobreak
-\par\medskip\noindent\textbf{\texttt{conversion\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The conversion view’s weakest link is \texttt{disputed}, at several places: its reading of 1 Corinthians 12:13 and both of its steps.
-
-{\small\begin{verbatim}
-theorem conversionCase_strength : conversionCase.strength = 0
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{pentecostal\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The Pentecostal view’s weakest link is \texttt{disputed}, at several places: its reading of 1 Corinthians 12:13, of Acts 8 and 19, of Luke’s Spirit baptism, of the narratives as a pattern, and its step from the instrumental reading.
-
-{\small\begin{verbatim}
-theorem pentecostalCase_strength : pentecostalCase.strength = 0
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{holiness\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The holiness view’s weakest link is \texttt{disputed}: its premise, and the step Wesley contests.
-
-{\small\begin{verbatim}
-theorem holinessCase_strength : holinessCase.strength = 0
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{sacramental\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The sacramental view’s weakest link is \texttt{disputed}, at several places: its readings of the rite and both of its steps.
-
-{\small\begin{verbatim}
-theorem sacramentalCase_strength : sacramentalCase.strength = 0
--- axioms: propext
-\end{verbatim}}
 \paragraph*{The dispute}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{view\allowbreak{}Node}}\par\nobreak\noindent
@@ -24436,85 +24406,20 @@ def spiritBaptismDispute : Dispute Claim View :=
     sound := spiritBaptismDispute._proof_2,
     rated := spiritBaptismDispute._proof_7 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{conversion\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}sacraments}}\par\nobreak\noindent
-\textbf{The conversion and sacramental views can be held together}: one reading satisfies both — every believer baptized in the Spirit at conversion, the Spirit given in the sacraments, and no second baptism to seek.
-
-It does not show that the two agree. They differ over what the rite does, which this dispute does not weigh, and the result says only that nothing encoded here makes them contradict each other.
-
-{\small\begin{verbatim}
-theorem conversion_stands_with_the_sacraments :
-    spiritBaptismDispute.StandTogether [View.conversion, View.sacramental]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{the\_\allowbreak{}subsequence\_\allowbreak{}views\_\allowbreak{}stand\_\allowbreak{}together}}\par\nobreak\noindent
-\textbf{The two subsequence views can be held together}: a second baptism to seek, whether read as empowerment or as the second work of grace. Whether it is the same second experience, the encoding does not say.
-
-{\small\begin{verbatim}
-theorem the_subsequence_views_stand_together :
-    spiritBaptismDispute.StandTogether [View.pentecostal, View.holiness]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{view\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table.
-
-{\small\begin{verbatim}
-def viewDefeats : View → View → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | View.conversion, View.pentecostal => True
-    | View.conversion, View.holiness => True
-    | View.pentecostal, View.conversion => True
-    | View.pentecostal, View.sacramental => True
-    | View.holiness, View.conversion => True
-    | View.holiness, View.sacramental => True
-    | View.sacramental, View.pentecostal => True
-    | View.sacramental, View.holiness => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}View\allowbreak{}View\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelViewViewDefeats : DecidableRel viewDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{view\allowbreak{}Strength}}\par\nobreak\noindent
-Each view’s weakest link: \texttt{disputed} for every one.
-
-{\small\begin{verbatim}
-def viewStrength : View → ℕ :=
-  fun x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{view\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each view’s weakest link, as its package computes it.
-
-{\small\begin{verbatim}
-theorem viewNode_strength : ∀ (i : View), (viewNode i).strength = viewStrength
-    i
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
-\textbf{Who defeats whom}, all 16 pairs: four standoffs, and nothing else. The conversion view and each subsequence view defeat each other — “no second to seek” against “a second to seek” — and the Pentecostal view also denies the conversion reading of 1 Corinthians 12:13. The sacramental view and each subsequence view defeat each other on the same point. Every cell is computed by \texttt{Horn.defeats?} and checked by the kernel.
+\textbf{Who defeats whom}, all 16 pairs: four standoffs, and nothing else. The conversion view and each subsequence view defeat each other — “no second to seek” against “a second to seek” — and the Pentecostal view also denies the conversion reading of 1 Corinthians 12:13. The sacramental view and each subsequence view defeat each other on the same point. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem spiritBaptismDispute_defeats : ∀ (i j : View),
-    spiritBaptismDispute.defeats i j ↔ viewDefeats i j
+    spiritBaptismDispute.defeats i j ↔ (i, j) ∈ [(View.conversion,
+    View.pentecostal), (View.conversion, View.holiness), (View.pentecostal,
+    View.conversion), (View.pentecostal, View.sacramental), (View.holiness,
+    View.conversion), (View.holiness, View.sacramental), (View.sacramental,
+    View.pentecostal), (View.sacramental, View.holiness)]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def spiritBaptismFinite : Solver.Finite spiritBaptismDispute.defeats :=
-  {
-    parties :=
-      [View.conversion, View.pentecostal,
-        View.holiness, View.sacramental],
-    complete := spiritBaptismFinite._proof_1,
-    defeats := fun i j => decide (viewDefeats i j),
-    spec := spiritBaptismFinite._proof_2 }
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
-\textbf{Nothing supports anything}, in all 16 pairs. Every cell is computed by \texttt{supports?} and checked by the kernel.
+\textbf{Nothing supports anything}, in all 16 pairs. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem spiritBaptismDispute_supports : ∀ (i j : View),
@@ -24522,11 +24427,11 @@ theorem spiritBaptismDispute_supports : ∀ (i j : View),
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
-Each view’s case is part of its own and of no other’s. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
+Each view’s case is part of its own and of no other’s. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem spiritBaptismDispute_partOf : ∀ (i j : View),
-    spiritBaptismDispute.partOf i j ↔ i = j
+    spiritBaptismDispute.partOf i j ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Map}}\par\nobreak\noindent
@@ -24571,6 +24476,24 @@ The dispute over Spirit baptism drawn: who defeats whom.
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{conversion\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}sacraments}}\par\nobreak\noindent
+\textbf{The conversion and sacramental views can be held together}: one reading satisfies both — every believer baptized in the Spirit at conversion, the Spirit given in the sacraments, and no second baptism to seek.
+
+It does not show that the two agree. They differ over what the rite does, which this dispute does not weigh, and the result says only that nothing encoded here makes them contradict each other.
+
+{\small\begin{verbatim}
+theorem conversion_stands_with_the_sacraments :
+    spiritBaptismDispute.StandTogether [View.conversion, View.sacramental]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{the\_\allowbreak{}subsequence\_\allowbreak{}views\_\allowbreak{}stand\_\allowbreak{}together}}\par\nobreak\noindent
+\textbf{The two subsequence views can be held together}: a second baptism to seek, whether read as empowerment or as the second work of grace. Whether it is the same second experience, the encoding does not say.
+
+{\small\begin{verbatim}
+theorem the_subsequence_views_stand_together :
+    spiritBaptismDispute.StandTogether [View.pentecostal, View.holiness]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \paragraph*{What the dispute decides}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Settles\allowbreak{}Nothing}}\par\nobreak\noindent
@@ -25648,29 +25571,6 @@ That is LST’s grading of the question, reproduced given these ratings: the rel
 The standoff rests on reading “proceeds” the same way on both sides. The Pontifical Council for Promoting Christian Unity (1995) distinguishes the Greek ἐκπόρευσις, origin from the Father alone, from the Latin \emph{processio}. On that distinction “and the Son” and “not from the Son” may not contradict each other, and the two defeats would not exist. The chapter on the procession says what testing that would take.
 
 \subsubsection*{How this is checked}
-\paragraph*{Strength}
-\leavevmode\par\nobreak
-\par\medskip\noindent\textbf{\texttt{lst\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-LST’s weakest link is \texttt{well\allowbreak{}Supported}: its step from the texts to the relation, audited for a reader who grants the texts and denies the relation, and none found. The texts themselves are \texttt{consensus}.
-
-{\small\begin{verbatim}
-theorem lstCase_strength : lstCase.strength = 2
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{western\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The Western position’s weakest link is \texttt{disputed}: its readings of John 16:14 and of the mission, the claim that only opposed relations distinguish the persons, and its steps from John 16:14 and from mission. Its step from distinction is rated \texttt{well\allowbreak{}Supported}.
-
-{\small\begin{verbatim}
-theorem westernCase_strength : westernCase.strength = 0
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{eastern\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The Eastern position’s weakest link is \texttt{disputed}: each of its two readings, and each of its two steps.
-
-{\small\begin{verbatim}
-theorem easternCase_strength : easternCase.strength = 0
--- axioms: propext
-\end{verbatim}}
 \paragraph*{The dispute}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node}}\par\nobreak\noindent
@@ -25693,76 +25593,14 @@ def processionDispute : Dispute Claim Party :=
     sound := processionDispute._proof_2,
     rated := processionDispute._proof_6 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{lst\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}west}}\par\nobreak\noindent
-\textbf{LST stands with the West}: one reading satisfies both, the Western reading.
-
-{\small\begin{verbatim}
-theorem lst_stands_with_the_west : processionDispute.StandTogether [Party.lst,
-    Party.western]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{lst\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}east}}\par\nobreak\noindent
-\textbf{LST stands with the East} too: the Eastern reading satisfies both. So LST’s position takes no side, which is what it says of itself.
-
-{\small\begin{verbatim}
-theorem lst_stands_with_the_east : processionDispute.StandTogether [Party.lst,
-    Party.eastern]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table: the West and the East, each way.
-
-{\small\begin{verbatim}
-def partyDefeats : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.western, Party.eastern => True
-    | Party.eastern, Party.western => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Strength}}\par\nobreak\noindent
-Each party’s weakest link: \texttt{well\allowbreak{}Supported} for LST, \texttt{disputed} for the two sides.
-
-{\small\begin{verbatim}
-def partyStrength : Party → ℕ :=
-  fun x =>
-    match x with
-    | Party.lst => 2
-    | x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each party’s weakest link, as its package computes it.
-
-{\small\begin{verbatim}
-theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
-    partyStrength i
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all 9 pairs: one standoff, the West and the East over “and the Son”, and nothing else. Neither attacks LST, because each holds every premise LST holds. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem processionDispute_defeats : ∀ (i j : Party), processionDispute.defeats
-    i j ↔ partyDefeats i j
+    i j ↔ (i, j) ∈ [(Party.western, Party.eastern), (Party.eastern,
+    Party.western)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def processionFinite : Solver.Finite processionDispute.defeats :=
-  {
-    parties :=
-      [Party.lst, Party.western, Party.eastern],
-    complete := processionFinite._proof_1,
-    defeats := fun i j => decide (partyDefeats i j),
-    spec := processionFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
 \textbf{Nothing supports anything}, in all 9 pairs: no party’s conclusion is a premise another party states. LST’s relation is derived inside the other two positions, not assumed by them. Every cell is checked by the kernel.
@@ -25772,30 +25610,13 @@ theorem processionDispute_supports : ∀ (i j : Party),
     ¬processionDispute.supports i j
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
-Which party’s case is part of which: LST’s is part of every party’s, since each holds the texts and the step LST draws from them; otherwise each case is part of its own only.
-
-{\small\begin{verbatim}
-def partyPartOf : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.lst, x => True
-    | Party.western, Party.western => True
-    | Party.eastern, Party.eastern => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelPartyPartyPartOf : DecidableRel partyPartOf
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
-\textbf{LST’s case is part of both the others’.} Every cell is checked by the kernel.
+\textbf{LST’s case is part of both the others’}, since each holds the texts and the step LST draws from them. Otherwise each case is part of its own only. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem processionDispute_partOf : ∀ (i j : Party), processionDispute.partOf i
-    j ↔ partyPartOf i j
+    j ↔ i = j ∨ (i, j) ∈ [(Party.lst, Party.western), (Party.lst,
+    Party.eastern)]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Map}}\par\nobreak\noindent
@@ -25830,6 +25651,22 @@ The dispute over the procession drawn: who defeats whom, and whose case is part 
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{procession\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{procession\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{procession\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{lst\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}west}}\par\nobreak\noindent
+\textbf{LST stands with the West}: one reading satisfies both, the Western reading.
+
+{\small\begin{verbatim}
+theorem lst_stands_with_the_west : processionDispute.StandTogether [Party.lst,
+    Party.western]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{lst\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}east}}\par\nobreak\noindent
+\textbf{LST stands with the East} too: the Eastern reading satisfies both. So LST’s position takes no side, which is what it says of itself.
+
+{\small\begin{verbatim}
+theorem lst_stands_with_the_east : processionDispute.StandTogether [Party.lst,
+    Party.eastern]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \paragraph*{What the dispute decides}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{texts\allowbreak{}Unanswered}}\par\nobreak\noindent
@@ -25877,7 +25714,7 @@ What this does not claim: that the Filioque is false, or that it is true. The We
 
 {\small\begin{verbatim}
 theorem the_texts_prevail : Framework.grounded processionDispute.defeats =
-    {Party.lst}
+    Solver.toSet [Party.lst]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{western\allowbreak{}With\allowbreak{}The\allowbreak{}Texts}}\par\nobreak\noindent

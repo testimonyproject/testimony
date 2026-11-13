@@ -160,6 +160,22 @@ class RuleTests(unittest.TestCase):
         )
         self.assertNotIn("L6", rules(self.lint(text)))
 
+    def test_L6_verdict_proves_headline_without_print_axioms(self):
+        """A `declare_verdict` names its theorem after `proves`, not `theorem`."""
+        text = "declare_verdict v for d : .credulous .a [.a]\n  proves @[headline] foo\n"
+        self.assertIn("L6", rules(self.lint(text)))
+
+    def test_L6_verdict_proves_headline_with_print_axioms(self):
+        text = (
+            "declare_verdict v for d : .credulous .a [.a]\n  proves @[headline] foo\n\n"
+            "#print axioms foo\n"
+        )
+        self.assertNotIn("L6", rules(self.lint(text)))
+
+    def test_L9_a_verdict_theorem_is_a_declared_name(self):
+        names = L.declared_names({"A.lean": "  proves @[headline] some_verdict_holds\n"})
+        self.assertIn("some_verdict_holds", names)
+
     def test_L10_proposed_without_rationale(self):
         text = (
             "/-- A result with no account of what it adds. -/\n"

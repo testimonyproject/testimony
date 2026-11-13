@@ -77,8 +77,12 @@ MARKDOWN_SKIP_DIRS = frozenset({".git", ".lake", "book", "node_modules"})
 
 # What counts as a declaration in a Lean file. Constructors and structure
 # fields are included: `romans3_28` is an atom constructor, and prose cites it.
+# `proves NAME`, with attributes before the name or not, is the theorem a
+# `declare_verdict` command declares (`Testimony.Logic.Declare`).
+PROVES = r"proves(?:\s+@\[[^\]]*\])?"
 LEAN_DECL_RE = re.compile(
-    r"\b(?:theorem|lemma|def|abbrev|structure|inductive|instance|class|axiom|opaque)"
+    r"\b(?:theorem|lemma|def|abbrev|structure|inductive|instance|class|axiom|opaque|"
+    + PROVES + r")"
     r"\s+([A-Za-z_][A-Za-z0-9_.'!?]*)"
 )
 LEAN_CTOR_RE = re.compile(r"^\s*\|\s*([A-Za-z_][A-Za-z0-9_.'!?]*)", re.M)
@@ -278,7 +282,7 @@ def lint_text(path: str, text: str) -> list[Finding]:
             continue
         name = None
         for follow in code[n - 1:]:
-            m = re.search(r"\b(?:theorem|lemma)\s+(\w+)", follow)
+            m = re.search(r"\b(?:theorem|lemma|" + PROVES + r")\s+(\w+)", follow)
             if m:
                 name = m.group(1)
                 break
@@ -293,7 +297,7 @@ def lint_text(path: str, text: str) -> list[Finding]:
         if NOVELTY_PHRASE not in doc:
             name = None
             for follow in code[n - 1:]:
-                m = re.search(r"\b(?:theorem|lemma|def)\s+(\w+)", follow)
+                m = re.search(r"\b(?:theorem|lemma|def|" + PROVES + r")\s+(\w+)", follow)
                 if m:
                     name = m.group(1)
                     break

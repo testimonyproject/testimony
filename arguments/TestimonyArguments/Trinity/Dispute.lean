@@ -1,10 +1,5 @@
 import TestimonyArguments.Trinity.Procession
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
-import Testimony.Logic.Map
-import Testimony.Logic.Certificate
+import Testimony.Logic.Declare
 
 /-!
 # TestimonyArguments.Trinity.Dispute — the three positions weighed
@@ -61,30 +56,21 @@ open Testimony
 
 open Testimony Testimony.Logic Testimony.Logic.Framework
 
-/-! ### Strength -/
-
-/-- LST's weakest link is `wellSupported`: its step from the texts to the
-relation, audited for a reader who grants the texts and denies the relation,
-and none found. The texts themselves are `consensus`. -/
-theorem lstCase_strength : lstCase.strength = 2 := by decide
-/-- The Western position's weakest link is `disputed`: its readings of John 16:14
-and of the mission, the claim that only opposed relations distinguish the
-persons, and its steps from John 16:14 and from mission. Its step from
-distinction is rated `wellSupported`. -/
-theorem westernCase_strength : westernCase.strength = 0 := by decide
-/-- The Eastern position's weakest link is `disputed`: each of its two readings,
-and each of its two steps. -/
-theorem easternCase_strength : easternCase.strength = 0 := by decide
-
 /-! ### The dispute -/
 
 /-- The parties to the dispute over the procession of the Spirit. -/
 inductive Party
-  /-- What the texts establish, and no more: LST. -/
+  /-- What the texts establish, and no more: LST. Its weakest link is
+  `wellSupported`, the step from the texts to the relation, audited for a reader
+  who grants the texts and denies the relation, and none found. -/
   | lst
-  /-- From the Father and the Son: Aquinas, Florence, Westminster. -/
+  /-- From the Father and the Son: Aquinas, Florence, Westminster. Its weakest
+  link is `disputed`: its readings of John 16:14 and of the mission, the claim
+  that only opposed relations distinguish the persons, and its steps from John
+  16:14 and from mission. Its step from distinction is `wellSupported`. -/
   | western
-  /-- From the Father alone: Photius, Ware. -/
+  /-- From the Father alone: Photius, Ware. Its weakest link is `disputed`: each
+  of its two readings, and each of its two steps. -/
   | eastern
 deriving DecidableEq
 
@@ -97,16 +83,22 @@ def partyNode : Party → ArgumentPackage Claim
 
 /-- The dispute over the procession: every party can be held without
 contradiction, delivers its conclusion, and has its steps rated. -/
-@[trinityDefs]
-def processionDispute : Dispute Claim Party where
-  node := partyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .lst => lstCase_establishes
-    | .western => westernCase_establishes
-    | .eastern => easternCase_establishes
-  rated i := by
-    cases i <;> simp [trinityDefs, Line.asPackage]
+declare_dispute processionDispute := partyNode using trinityDefs
+  /-- **Who defeats whom**, all 9 pairs: one standoff, the West and the East over
+  "and the Son", and nothing else. Neither attacks LST, because each holds every
+  premise LST holds. Every cell is checked by the kernel. -/
+  defeats [(.western, .eastern), (.eastern, .western)]
+  /-- **Nothing supports anything**, in all 9 pairs: no party's conclusion is a
+  premise another party states. LST's relation is derived inside the other two
+  positions, not assumed by them. Every cell is checked by the kernel. -/
+  supports []
+  /-- **LST's case is part of both the others'**, since each holds the texts and
+  the step LST draws from them. Otherwise each case is part of its own only.
+  Every cell is checked by the kernel. -/
+  partOf [(.lst, .western), (.lst, .eastern)]
+  /-- The dispute over the procession drawn: who defeats whom, and whose case is
+  part of whose. -/
+  map processionMap
 
 /-- **LST stands with the West**: one reading satisfies both, the Western
 reading. -/
@@ -118,163 +110,57 @@ LST's position takes no side, which is what it says of itself. -/
 theorem lst_stands_with_the_east : processionDispute.StandTogether [.lst, .eastern] := by
   satisfied_by easternReading [Dispute.StandTogether, trinityDefs]
 
-/-- The defeats of the dispute, as a table: the West and the East, each way. -/
-def partyDefeats : Party → Party → Prop
-  | .western, .eastern => True
-  | .eastern, .western => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel partyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold partyDefeats <;> infer_instance
-
-/-- Each party's weakest link: `wellSupported` for LST, `disputed` for the two
-sides. -/
-def partyStrength : Party → ℕ
-  | .lst => 2
-  | _ => 0
-
-/-- Each party's weakest link, as its package computes it. -/
-theorem partyNode_strength : ∀ i, (partyNode i).strength = partyStrength i
-  | .lst => lstCase_strength
-  | .western => westernCase_strength
-  | .eastern => easternCase_strength
-
-prepare_clauses processionDisputeClauses for processionDispute
-
-/-- **Who defeats whom**, all 9 pairs: one standoff, the West and the East over
-"and the Son", and nothing else. Neither attacks LST, because each holds every
-premise LST holds. Every cell is checked by the kernel. -/
-theorem processionDispute_defeats :
-    ∀ i j, processionDispute.defeats i j ↔ partyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (partyNode_strength i) (partyNode_strength j)
-    (processionDisputeClauses.spec i) (processionDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute in the form the verdict solver computes with. -/
-def processionFinite : Solver.Finite processionDispute.defeats where
-  parties := [.lst, .western, .eastern]
-  complete i := by cases i <;> decide
-  defeats i j := decide (partyDefeats i j)
-  spec i j := by rw [processionDispute_defeats]; simp
-
-/-- **Nothing supports anything**, in all 9 pairs: no party's conclusion is a
-premise another party states. LST's relation is derived inside the other two
-positions, not assumed by them. Every cell is checked by the kernel. -/
-theorem processionDispute_supports : ∀ i j, ¬ processionDispute.supports i j := by
-  intro i j
-  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> horn_certify
-
-/-- Which party's case is part of which: LST's is part of every party's, since
-each holds the texts and the step LST draws from them; otherwise each case is
-part of its own only. -/
-def partyPartOf : Party → Party → Prop
-  | .lst, _ => True
-  | .western, .western => True
-  | .eastern, .eastern => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel partyPartOf := fun i j => by
-  cases i <;> cases j <;> unfold partyPartOf <;> infer_instance
-
-/-- **LST's case is part of both the others'.** Every cell is checked by the
-kernel. -/
-theorem processionDispute_partOf :
-    ∀ i j, processionDispute.partOf i j ↔ partyPartOf i j := by
-  intro i j
-  refine partOf_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute over the procession drawn: who defeats whom, and whose case is
-part of whose. -/
-def processionMap : ArgumentMap processionDispute where
-  finite := processionFinite
-  supports _ _ := false
-  supports_spec i j := by simp [processionDispute_supports i j]
-  partOf i j := decide (partyPartOf i j)
-  partOf_spec i j := by rw [processionDispute_partOf]; simp
-
 /-! ### What the dispute decides -/
 
 /-- How far the dispute is settled, in one stage. Nothing defeats LST, so it
 comes first, and nothing joins it: the West has the East for a defeater, the
 East has the West, and LST answers neither. -/
-def textsUnanswered : Verdict processionDispute where
-  finite := processionFinite
-  claim := .groundedExactly [[.lst]] [(.western, .eastern), (.eastern, .western)]
-  checked := by decide +kernel
+declare_verdict textsUnanswered for processionDispute :
+    .groundedExactly [[.lst]] [(.western, .eastern), (.eastern, .western)]
+  /-- **What the texts establish prevails, and nothing more.** What the dispute
+  forces before any choice between rivals is exactly LST's position: the Spirit
+  is related to the Son as well as to the Father. Nothing defeats it, because
+  the West and the East both hold every premise it holds.
 
-/-- **What the texts establish prevails, and nothing more.** What the dispute
-forces before any choice between rivals is exactly LST's position: the Spirit
-is related to the Son as well as to the Father. Nothing defeats it, because
-the West and the East both hold every premise it holds.
-
-What this does not claim: that the Filioque is false, or that it is true. The
-West and the East are in a standoff, and neither is forced. -/
-@[headline]
-theorem the_texts_prevail : grounded processionDispute.defeats = {.lst} :=
-  Eq.trans textsUnanswered.holds (by ext x; cases x <;> simp [Solver.toSet])
+  What this does not claim: that the Filioque is false, or that it is true. The
+  West and the East are in a standoff, and neither is forced. -/
+  proves @[headline] the_texts_prevail
 
 #print axioms the_texts_prevail
 
 /-- Why the West can be defended: with LST, it answers the East itself. -/
-def westernWithTheTexts : Verdict processionDispute where
-  finite := processionFinite
-  claim := .credulous .western [.lst, .western]
-  checked := by decide +kernel
-
-/-- **The Western position can be defended**, together with LST's: some maximal
-defensible position, one no other party can join without losing that, holds
-both. -/
-@[headline]
-theorem western_defensible : CredulouslyAccepted processionDispute.defeats .western :=
-  westernWithTheTexts.holds
+declare_verdict westernWithTheTexts for processionDispute : .credulous .western [.lst, .western]
+  /-- **The Western position can be defended**, together with LST's: some
+  maximal defensible position, one no other party can join without losing that,
+  holds both. -/
+  proves @[headline] western_defensible
 
 #print axioms western_defensible
 
 /-- Why the West is not forced: a defensible position holds the East, and the
 East defeats the West. -/
-def westernAnsweredByTheEast : Verdict processionDispute where
-  finite := processionFinite
-  claim := .notSkeptical .western .eastern [.lst, .eastern]
-  checked := by decide +kernel
-
-/-- **Nor is it forced.** A maximal defensible position holds LST's position and
-the East's, and cannot hold the West's with them. -/
-@[headline]
-theorem western_not_forced : ¬ SkepticallyAccepted processionDispute.defeats .western :=
-  westernAnsweredByTheEast.holds
+declare_verdict westernAnsweredByTheEast for processionDispute :
+    .notSkeptical .western .eastern [.lst, .eastern]
+  /-- **Nor is it forced.** A maximal defensible position holds LST's position
+  and the East's, and cannot hold the West's with them. -/
+  proves @[headline] western_not_forced
 
 #print axioms western_not_forced
 
 /-- Why the East can be defended: with LST, it answers the West itself. -/
-def easternWithTheTexts : Verdict processionDispute where
-  finite := processionFinite
-  claim := .credulous .eastern [.lst, .eastern]
-  checked := by decide +kernel
-
-/-- **The Eastern position can be defended**, together with LST's. -/
-@[headline]
-theorem eastern_defensible : CredulouslyAccepted processionDispute.defeats .eastern :=
-  easternWithTheTexts.holds
+declare_verdict easternWithTheTexts for processionDispute : .credulous .eastern [.lst, .eastern]
+  /-- **The Eastern position can be defended**, together with LST's. -/
+  proves @[headline] eastern_defensible
 
 #print axioms eastern_defensible
 
 /-- Why the East is not forced: a defensible position holds the West, and the
 West defeats the East. -/
-def easternAnsweredByTheWest : Verdict processionDispute where
-  finite := processionFinite
-  claim := .notSkeptical .eastern .western [.lst, .western]
-  checked := by decide +kernel
-
-/-- **Nor is it forced.** A maximal defensible position holds LST's position and
-the West's, and cannot hold the East's with them. -/
-@[headline]
-theorem eastern_not_forced : ¬ SkepticallyAccepted processionDispute.defeats .eastern :=
-  easternAnsweredByTheWest.holds
+declare_verdict easternAnsweredByTheWest for processionDispute :
+    .notSkeptical .eastern .western [.lst, .western]
+  /-- **Nor is it forced.** A maximal defensible position holds LST's position
+  and the West's, and cannot hold the East's with them. -/
+  proves @[headline] eastern_not_forced
 
 #print axioms eastern_not_forced
 

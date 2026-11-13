@@ -105,13 +105,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2381 definitions, 204 entries
+info: every entry is a tagged definition, and every key names one: 2389 definitions, 204 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1807 definitions, 204 entries
+info: every entry is a tagged definition, and every key names one: 1801 definitions, 204 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
@@ -129,8 +129,8 @@ SolaFide.jamesFinite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 SolaFide.jesusWordsFinite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 SolaFide.solaFideFinite: 67 I, 30 RA, 33 CA, 2 PA, 164 edges
 SolaScriptura.mark7Finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
-SpiritBaptism.spiritBaptismFinite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
-Trinity.processionFinite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
+SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
+Trinity.processionDispute.finite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
 and 5 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
