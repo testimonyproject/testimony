@@ -43,10 +43,12 @@ import Testimony.Semantics.Grammar
 import Testimony.Semantics.Ontology
 import Testimony.Semantics.Meaning
 import Testimony.Semantics.Discourse
+import Testimony.Semantics.Fallacy
 import Testimony.Ontology
 import Testimony.Checks.Fixture
 import Testimony.Checks.Aif
 import Testimony.Checks.Meanings
+import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Refutations

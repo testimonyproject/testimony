@@ -66,12 +66,20 @@ voice's text: where a definition about a usage bears. -/
 def statingPassageSenses : List α :=
   (all : List α).filter fun a => (means a).senses.any fun (_, sc, _) => sc.isPassageOf
 
+/-- The atoms whose meaning states, or denies, that a word has the same sense at
+two places: where the definition of sameness bears. -/
+def statingSameSense : List α :=
+  (all : List α).filter fun a => (means a).shape.lits.any fun l =>
+    match l.fact with | .sameSense .. => true | _ => false
+
 /-- **Where a definition bears**: the atoms that hold its relation words as
 doctrine, and those that use them of a text or a voice; for the definition
 about a usage, the atoms that state a word's sense at a passage of a voice's
-text, and none in a frame. -/
+text, and none in a frame; for the definition of sameness, the atoms that
+state or deny that a word keeps its sense. -/
 def bearing : Axiom → List α × List α
   | .inUsage => (statingPassageSenses, [])
+  | .sameSenseBothWays => (statingSameSense, [])
   | ax => (holding ax.rels, framing ax.rels)
 
 /-- **What one definition of an ontology contributes**: the exclusions, and the

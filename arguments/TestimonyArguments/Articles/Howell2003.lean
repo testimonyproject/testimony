@@ -1,4 +1,5 @@
 import Testimony.Semantics.Discourse
+import Testimony.Semantics.Fallacy
 import TestimonyArguments.Meanings.SolaFide
 import TestimonyArguments.SolaFide
 import TestimonyArguments.SolaFide.James
@@ -171,6 +172,38 @@ not argue that it is. -/
 theorem faithAlone_meets_the_library :
     faithAloneMove.meets (α := TestimonyArguments.SolaFide.Claim) =
       [(.pistis, [.jamesFaithIsNotReformedFaith])] := by
+  decide
+
+/-! ### The three charges, on every move
+
+Each of the four moves is checked for the three charges a debate reaches for
+first (`Testimony.Semantics.Fallacy`). None is found. No move reads a word in
+two senses and needs it the same, so none equivocates on its own terms; what
+three of them do is leave the sameness of a word unstated, and those
+conditions are the ones found above. No premise of any move already asserts its
+conclusion, read for what its words mean, so none begs the question. And no
+move argues from a text's silence: the Catholic's remark that "alone" is not in
+Paul's Greek is an assertion about the text, true of it, and what a reader may
+take it to imply is not something the article argues. -/
+
+/-- The article's four moves, in its order. -/
+def moves : List Move := [worksMove, faithAloneMove, lutherMove, deadFaithMove]
+
+/-- **No move equivocates, begs the question or argues from silence.** Each is
+checked alike, the objector's as the Catholic's. What the moves do leave open is
+the sameness of words between James and Paul — "justify" and "faith" for the
+Catholic's two arguments, "faith" for the objector's — which is what makes each
+of them conditional, not fallacious.
+
+What this does not claim: that any move is sound. The phrase argument cannot be
+defended in the dispute (`howell_indefensible`); that is a finding about its
+premises, not a charge of fallacy. -/
+theorem no_move_commits_the_three :
+    moves.map Move.equivocates = [[], [], [], []] ∧
+      moves.map Move.carriers = [[], [], [], []] ∧
+      moves.map Move.fromSilenceAlone = [[], [], [], []] ∧
+      moves.map Move.conditionalOn = [[.dikaioo, .pistis], [.dikaioo, .pistis], [], [.pistis]] ∧
+      circular moves = [] := by
   decide
 
 /-! ### What consistency settles, and what it does not
