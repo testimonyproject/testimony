@@ -185,3 +185,9 @@ benchmark = "checks: postulates, every package"
 metric = "time"
 up_to = 0.20
 reason = "The check builds a model with its postulates for every package. The Trinity argument's procession chapter (#216) adds eleven (188 to 199): the same work over more packages, measured on CI at +6.6%."
+
+[[accept]]
+benchmark = "checks: ontology"
+metric = "time"
+up_to = 0.27
+reason = "The shared ontology gains a sixth definition, that the same sense runs both ways (Testimony.Ontology.Sense), which the fallacy checks' lookup of who denies a premise needs. The ontology check closes every meaning in one more round and recomputes sola fide's joins once more, without the new definition, to find what it contributes. CI measured +21%; nothing else moved."
