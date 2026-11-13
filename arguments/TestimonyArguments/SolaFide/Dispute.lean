@@ -1,12 +1,7 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.SolaFide.Definition
 import TestimonyArguments.SolaFide.Johannine
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
-import Testimony.Logic.Map
 import Testimony.Logic.Because
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaFide.Dispute — the positions weighed against each other
@@ -1039,30 +1034,61 @@ def partyNode : Party → ArgumentPackage Claim
 /-- The debate over sola fide. For every position heard: its premises can be held
 without contradiction, its conclusion follows from them, and every step it uses
 is rated. -/
-@[solaFideDefs]
-def solaFideDispute : Dispute Claim Party where
-  node := partyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .pauline => paulineCase_establishes
-    | .dominical => dominicalCase_establishes
-    | .apostolic => apostolicCase_establishes
-    | .trent => tridentineCase_establishes
-    | .apocalyptic => apocalypticCase_establishes
-    | .sanders => sandersCase_establishes
-    | .critics => criticsCase_establishes
-    | .jervell => jervellCase_establishes
-    | .gospel => galatianGospel_establishes
-    | .lexical => lexicalCase_establishes
-    | .trentOnPaulsWord => tridentineOnPaulsWord_establishes
-    | .romansOnTheWord => romansFourOnTheWord_establishes
-    | .johannine => johannineParty_establishes
-    | .aquinas => aquinasCase_establishes
-    | .luther => luther_answers_aquinas_from_galatians
-    | .chrysostom => chrysostomCase_establishes
-    | .sanctification => sanctificationCase_establishes
-  rated i := by
-    cases i <;> simp [solaFideDefs, Line.asPackage]
+declare_dispute solaFideDispute := partyNode using solaFideDefs pruned rows 6
+  /-- **Who defeats whom**, for all 289 pairs of positions.
+
+  Trent and each Reformed strand defeat each other. The apocalyptic reading and
+  Paul's case defeat each other; it does not conflict with Luke's case or Peter's;
+  it and Trent defeat each other. Sanders defeats Paul's case and the critics',
+  and both defeat him in return. Jervell and Peter's case defeat each other.
+  Paul's gospel and Trent defeat each other, over Trent's definition. John's case
+  meets Trent, the apocalyptic reading and Aquinas, each in both directions, and
+  Aquinas and Luther defeat each other. Trent taken as a claim about Paul's word
+  meets every position Trent meets, in both directions, and two more: the two
+  arguments about Paul's word defeat it, and it defeats neither in return. Nothing
+  else.
+
+  Every one of the 225 answers, the defeats and the absences alike, is worked out
+  from the positions' premises and checked by machine. The table above is what
+  that working is checked against. None of it is assumed. -/
+  defeats
+    [ (.trent, .pauline), (.trent, .dominical), (.trent, .apostolic), (.pauline, .trent)
+    , (.dominical, .trent), (.apostolic, .trent), (.apocalyptic, .trent)
+    , (.trent, .apocalyptic), (.apocalyptic, .pauline), (.pauline, .apocalyptic)
+    , (.sanders, .pauline), (.pauline, .sanders), (.sanders, .critics), (.critics, .sanders)
+    , (.jervell, .apostolic), (.apostolic, .jervell), (.gospel, .trent), (.trent, .gospel)
+    , (.gospel, .trentOnPaulsWord), (.trentOnPaulsWord, .gospel)
+    , (.lexical, .trentOnPaulsWord), (.romansOnTheWord, .trentOnPaulsWord)
+    , (.pauline, .trentOnPaulsWord), (.dominical, .trentOnPaulsWord)
+    , (.apostolic, .trentOnPaulsWord), (.apocalyptic, .trentOnPaulsWord)
+    , (.trentOnPaulsWord, .pauline), (.trentOnPaulsWord, .dominical)
+    , (.trentOnPaulsWord, .apostolic), (.trentOnPaulsWord, .apocalyptic)
+    , (.trent, .johannine), (.johannine, .trent), (.trentOnPaulsWord, .johannine)
+    , (.johannine, .trentOnPaulsWord), (.apocalyptic, .johannine)
+    , (.johannine, .apocalyptic), (.aquinas, .johannine), (.johannine, .aquinas)
+    , (.luther, .aquinas), (.aquinas, .luther), (.chrysostom, .pauline)
+    , (.pauline, .chrysostom), (.chrysostom, .dominical), (.dominical, .chrysostom)
+    , (.chrysostom, .apostolic), (.apostolic, .chrysostom), (.chrysostom, .johannine)
+    , (.johannine, .chrysostom), (.chrysostom, .sanctification)
+    , (.sanctification, .chrysostom), (.trent, .sanctification), (.sanctification, .trent)
+    , (.trentOnPaulsWord, .sanctification), (.sanctification, .trentOnPaulsWord) ]
+  /-- **No position supports another** in this debate, in any of the 289 pairs. One
+  position supports another when its conclusion gives the other a claim it rests
+  on. The critics' conclusion used to be one of Paul's premises. Now Paul's case
+  contains the critics' whole line (`paulineCase`), which is the closer relation
+  recorded below. The Reformed strands share a conclusion; that is agreement, not
+  support (see `Testimony.Logic.Support`). Every answer is worked out and checked
+  by machine. -/
+  supports []
+  /-- **Whose case is contained in whose**, for all 289 pairs. The critics' case is
+  contained in Paul's, since Paul's case derives its reading of "works of the law"
+  from the critics' line. Trent's case is contained in Trent taken as a claim
+  about Paul's word, which only adds to it. Every case contains itself. Nothing
+  else. Every answer is worked out and checked by machine. -/
+  partOf [(.critics, .pauline), (.trent, .trentOnPaulsWord)]
+  /-- The debate drawn as a map: who defeats whom, and whose case is contained in
+  whose. -/
+  map solaFideMap
 
 /-- Paul's, Luke's and Peter's cases can be held together with the critics', on the
 reading where Sanders' account of Judaism is denied and everything else holds. -/
@@ -1102,211 +1128,6 @@ theorem apocalyptic_stands_with_the_critics_and_jervell :
     solaFideDispute.StandTogether [.apocalyptic, .critics, .jervell] := by
   satisfied_by apocalypticCriticsJervellReading [Dispute.StandTogether, solaFideDefs]
 
-/-- Who defeats whom, as a table. -/
-def partyDefeats : Party → Party → Prop
-  | .trent, .pauline => True
-  | .trent, .dominical => True
-  | .trent, .apostolic => True
-  | .pauline, .trent => True
-  | .dominical, .trent => True
-  | .apostolic, .trent => True
-  | .apocalyptic, .trent => True
-  | .trent, .apocalyptic => True
-  | .apocalyptic, .pauline => True
-  | .pauline, .apocalyptic => True
-  | .sanders, .pauline => True
-  | .pauline, .sanders => True
-  | .sanders, .critics => True
-  | .critics, .sanders => True
-  | .jervell, .apostolic => True
-  | .apostolic, .jervell => True
-  | .gospel, .trent => True
-  | .trent, .gospel => True
-  | .gospel, .trentOnPaulsWord => True
-  | .trentOnPaulsWord, .gospel => True
-  | .lexical, .trentOnPaulsWord => True
-  | .romansOnTheWord, .trentOnPaulsWord => True
-  | .pauline, .trentOnPaulsWord => True
-  | .dominical, .trentOnPaulsWord => True
-  | .apostolic, .trentOnPaulsWord => True
-  | .apocalyptic, .trentOnPaulsWord => True
-  | .trentOnPaulsWord, .pauline => True
-  | .trentOnPaulsWord, .dominical => True
-  | .trentOnPaulsWord, .apostolic => True
-  | .trentOnPaulsWord, .apocalyptic => True
-  | .trent, .johannine => True
-  | .johannine, .trent => True
-  | .trentOnPaulsWord, .johannine => True
-  | .johannine, .trentOnPaulsWord => True
-  | .apocalyptic, .johannine => True
-  | .johannine, .apocalyptic => True
-  | .aquinas, .johannine => True
-  | .johannine, .aquinas => True
-  | .luther, .aquinas => True
-  | .aquinas, .luther => True
-  | .chrysostom, .pauline => True
-  | .pauline, .chrysostom => True
-  | .chrysostom, .dominical => True
-  | .dominical, .chrysostom => True
-  | .chrysostom, .apostolic => True
-  | .apostolic, .chrysostom => True
-  | .chrysostom, .johannine => True
-  | .johannine, .chrysostom => True
-  | .chrysostom, .sanctification => True
-  | .sanctification, .chrysostom => True
-  | .trent, .sanctification => True
-  | .sanctification, .trent => True
-  | .trentOnPaulsWord, .sanctification => True
-  | .sanctification, .trentOnPaulsWord => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel partyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold partyDefeats <;> infer_instance
-
-/-- Each position's weakest link: at the bottom for all but the two arguments about
-Paul's word. -/
-def partyStrength : Party → ℕ
-  | .lexical => 2
-  | .romansOnTheWord => 2
-  | _ => 0
-
-/-- Each position's weakest link, as worked out from its premises. -/
-theorem partyNode_strength : ∀ i, (partyNode i).strength = partyStrength i
-  | .pauline => paulineCase_strength
-  | .dominical => dominicalCase_strength
-  | .apostolic => apostolicCase_strength
-  | .trent => tridentineCase_strength
-  | .apocalyptic => apocalypticCase_strength
-  | .sanders => sandersCase_strength
-  | .critics => criticsCase_strength
-  | .jervell => jervellCase_strength
-  | .gospel => galatianGospel_strength
-  | .lexical => lexicalCase_strength
-  | .trentOnPaulsWord => tridentineOnPaulsWord_strength
-  | .romansOnTheWord => romansFourOnTheWord_strength
-  | .johannine => johannineParty_strength
-  | .aquinas => aquinasCase_strength
-  | .luther => lutherOnGalatians_strength
-  | .chrysostom => chrysostomCase_strength
-  | .sanctification => sanctificationCase_strength
-
-prepare_parts solaFideDisputeParts for solaFideDispute
-
-/-- The first six rows of the table, worked out from the positions' premises and
-checked by machine. The table is proved in three parts only to keep each proof
-within the time the checker allows. -/
-private theorem solaFideDispute_defeats_first (i : Party)
-    (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
-    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
-    (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
-    (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
-    (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
-  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
-
-/-- The next six rows. -/
-private theorem solaFideDispute_defeats_second (i : Party)
-    (hi : i ∈ [.critics, .jervell, .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord])
-    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
-    (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
-    (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
-    (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
-  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
-
-/-- The last five rows. -/
-private theorem solaFideDispute_defeats_third (i : Party)
-    (hi : i ∈ [.johannine, .aquinas, .luther, .chrysostom, .sanctification])
-    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
-    (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
-    (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j)
-    (solaFideDispute.consistent i) (solaFideDispute.consistent j) ?_
-  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
-
-/-- **Who defeats whom**, for all 289 pairs of positions.
-
-Trent and each Reformed strand defeat each other. The apocalyptic reading and
-Paul's case defeat each other; it does not conflict with Luke's case or Peter's;
-it and Trent defeat each other. Sanders defeats Paul's case and the critics',
-and both defeat him in return. Jervell and Peter's case defeat each other.
-Paul's gospel and Trent defeat each other, over Trent's definition. John's case
-meets Trent, the apocalyptic reading and Aquinas, each in both directions, and
-Aquinas and Luther defeat each other. Trent taken as a claim about Paul's word
-meets every position Trent meets, in both directions, and two more: the two
-arguments about Paul's word defeat it, and it defeats neither in return. Nothing
-else.
-
-Every one of the 225 answers, the defeats and the absences alike, is worked out
-from the positions' premises and checked by machine. The table above is what
-that working is checked against. None of it is assumed. -/
-theorem solaFideDispute_defeats :
-    ∀ i j, solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  intro i j
-  cases i
-  all_goals first
-    | (refine solaFideDispute_defeats_first _ ?_ j; decide)
-    | (refine solaFideDispute_defeats_second _ ?_ j; decide)
-    | (refine solaFideDispute_defeats_third _ ?_ j; decide)
-
-/-- The debate in the form the solver works with: every position, and the table. -/
-def solaFideFinite : Solver.Finite solaFideDispute.defeats where
-  parties :=
-    [ .pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders, .critics, .jervell
-    , .gospel, .lexical, .trentOnPaulsWord, .romansOnTheWord, .johannine, .aquinas
-    , .luther, .chrysostom, .sanctification ]
-  complete i := by cases i <;> decide
-  defeats i j := decide (partyDefeats i j)
-  spec i j := by rw [solaFideDispute_defeats]; simp
-
-/-! ### The dispute as a graph -/
-
-/-- **No position supports another** in this debate, in any of the 289 pairs. One
-position supports another when its conclusion gives the other a claim it rests
-on. The critics' conclusion used to be one of Paul's premises. Now Paul's case
-contains the critics' whole line (`paulineCase`), which is the closer relation
-recorded below. The Reformed strands share a conclusion; that is agreement, not
-support (see `Testimony.Logic.Support`). Every answer is worked out and checked
-by machine. -/
-theorem solaFideDispute_supports : ∀ i j, ¬ solaFideDispute.supports i j := by
-  intro i j
-  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> horn_certify
-
-/-- Whose case is contained in whose, as a table. Besides each position's own, there
-are two pairs. -/
-def partyPartOf : Party → Party → Prop
-  | .critics, .pauline => True
-  | .trent, .trentOnPaulsWord => True
-  | i, j => i = j
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel partyPartOf := fun i j => by
-  cases i <;> cases j <;> unfold partyPartOf <;> infer_instance
-
-/-- **Whose case is contained in whose**, for all 289 pairs. The critics' case is
-contained in Paul's, since Paul's case derives its reading of "works of the law"
-from the critics' line. Trent's case is contained in Trent taken as a claim
-about Paul's word, which only adds to it. Every case contains itself. Nothing
-else. Every answer is worked out and checked by machine. -/
-theorem solaFideDispute_partOf : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
-  intro i j
-  refine partOf_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The debate drawn as a map: who defeats whom, and whose case is contained in
-whose. -/
-def solaFideMap : ArgumentMap solaFideDispute where
-  finite := solaFideFinite
-  supports _ _ := false
-  supports_spec i j := by simp [solaFideDispute_supports i j]
-  partOf i j := decide (partyPartOf i j)
-  partOf_spec i j := by rw [solaFideDispute_partOf]; simp
-
 /-! ### What the dispute decides -/
 
 /-- How far the debate can be settled, and why no further. Nothing defeats either
@@ -1318,15 +1139,13 @@ has Peter's case. Paul's gospel has Trent. Aquinas has Luther, and Luther has
 Aquinas. And Trent taken as a claim about Paul's word has the argument from the
 word itself. Some of these are ties, not losses: Paul's gospel answers Trent as
 Trent answers it. -/
-def onlyPaulsWordUnanswered : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .groundedExactly [[.lexical, .romansOnTheWord]]
-    [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
-    , (.apocalyptic, .pauline), (.sanders, .critics), (.critics, .sanders)
-    , (.jervell, .apostolic), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
-    , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas)
-    , (.chrysostom, .pauline), (.sanctification, .trent) ]
-  checked := by decide +kernel
+declare_verdict onlyPaulsWordUnanswered for solaFideDispute :
+    .groundedExactly [[.lexical, .romansOnTheWord]]
+      [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
+      , (.apocalyptic, .pauline), (.sanders, .critics), (.critics, .sanders)
+      , (.jervell, .apostolic), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
+      , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas)
+      , (.chrysostom, .pauline), (.sanctification, .trent) ]
 
 /-- **Only the meaning of Paul's word prevails outright.** What the debate forces,
 before any choice between rivals, is exactly this: Paul's "justify" (δικαιόω)
@@ -1352,162 +1171,122 @@ theorem only_pauls_word_prevails :
 /-- Why Trent, taken as a claim about Paul's word, cannot be defended: the argument
 from the word defeats it, and nothing defeats that argument. Romans 4, read for
 the word, defeats it too; one unanswered attacker is enough. -/
-def trentsWordReadingAnswered : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .indefensible .trentOnPaulsWord [(.trentOnPaulsWord, .lexical)]
-  checked := by decide +kernel
+declare_verdict trentsWordReadingAnswered for solaFideDispute :
+    .indefensible .trentOnPaulsWord [(.trentOnPaulsWord, .lexical)]
+  /-- **Trent, taken as a claim about Paul's word, cannot be defended.** No consistent
+  set of positions that answers its attackers can include it. The two arguments
+  about the word defeat it, and nothing answers either.
 
-/-- **Trent, taken as a claim about Paul's word, cannot be defended.** No consistent
-set of positions that answers its attackers can include it. The two arguments
-about the word defeat it, and nothing answers either.
+  Trent's definition can be taken two ways. This is the first, weighed in the
+  debate (`whatTrentsDefinitionClaims`): if the definition says what Paul's
+  "justify" means, it cannot be defended here, for a stated and cited reason, at a
+  step rated `wellSupported`.
 
-Trent's definition can be taken two ways. This is the first, weighed in the
-debate (`whatTrentsDefinitionClaims`): if the definition says what Paul's
-"justify" means, it cannot be defended here, for a stated and cited reason, at a
-step rated `wellSupported`.
-
-It does not show that Trent's definition is false as a statement of
-what God does. That is the other way of taking it, and it can be defended
-(`trent_defensible`). Nor that the position contradicts itself: taken alone it
-can be held without contradiction. -/
-@[headline]
-theorem trent_on_pauls_word_indefensible (S : Set Party)
-    (hS : Admissible solaFideDispute.defeats S) : Party.trentOnPaulsWord ∉ S :=
-  trentsWordReadingAnswered.holds S hS
+  It does not show that Trent's definition is false as a statement of
+  what God does. That is the other way of taking it, and it can be defended
+  (`trent_defensible`). Nor that the position contradicts itself: taken alone it
+  can be held without contradiction. -/
+  proves @[headline] trent_on_pauls_word_indefensible
 
 #print axioms trent_on_pauls_word_indefensible
 
 /-- Why Trent can be defended: it can be held with Sanders and Jervell, and it
 answers every position that attacks it. Those are each Reformed strand, Paul's
 gospel, and the apocalyptic reading, whose "not by works" it denies. -/
-def trentStandsWithSandersAndJervell : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .credulous .trent [.trent, .sanders, .jervell]
-  checked := by decide +kernel
+declare_verdict trentStandsWithSandersAndJervell for solaFideDispute :
+    .credulous .trent [.trent, .sanders, .jervell]
+  /-- **Trent can be defended.** A consistent set of positions includes it, with
+  Sanders and Jervell, and answers every attack. Every position that defeats
+  Trent, Trent defeats in return: Paul's case, Luke's, Peter's, John's, Paul's
+  gospel, the apocalyptic reading, and the Reformed answer to Chrysostom. The
+  ratings, all at the bottom, break no tie.
 
-/-- **Trent can be defended.** A consistent set of positions includes it, with
-Sanders and Jervell, and answers every attack. Every position that defeats
-Trent, Trent defeats in return: Paul's case, Luke's, Peter's, John's, Paul's
-gospel, the apocalyptic reading, and the Reformed answer to Chrysostom. The
-ratings, all at the bottom, break no tie.
+  The arguments about Paul's word do not attack it. Trent's definition, taken as
+  it stands, says nothing about what "justify" means.
 
-The arguments about Paul's word do not attack it. Trent's definition, taken as
-it stands, says nothing about what "justify" means.
-
-It does not show that Trent prevails. It is not forced
-(`trent_not_forced`). It is in a tie with each of those seven positions. -/
-@[headline]
-theorem trent_defensible : CredulouslyAccepted solaFideDispute.defeats .trent :=
-  trentStandsWithSandersAndJervell.holds
+  It does not show that Trent prevails. It is not forced
+  (`trent_not_forced`). It is in a tie with each of those seven positions. -/
+  proves @[headline] trent_defensible
 
 #print axioms trent_defensible
 
 /-- Why Trent is not forced: a set of positions that can be defended includes Paul's
 case, and Paul's case defeats Trent. -/
-def trentAnsweredByPaul : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .notSkeptical .trent .pauline [.pauline, .dominical, .apostolic, .critics]
-  checked := by decide +kernel
-
-/-- **Nor is Trent forced.** A consistent set of positions that answers every attack
-holds Paul's case with Luke's and Peter's, and none of them can be held with
-Trent. -/
-@[headline]
-theorem trent_not_forced : ¬ SkepticallyAccepted solaFideDispute.defeats .trent :=
-  trentAnsweredByPaul.holds
+declare_verdict trentAnsweredByPaul for solaFideDispute :
+    .notSkeptical .trent .pauline [.pauline, .dominical, .apostolic, .critics]
+  /-- **Nor is Trent forced.** A consistent set of positions that answers every attack
+  holds Paul's case with Luke's and Peter's, and none of them can be held with
+  Trent. -/
+  proves @[headline] trent_not_forced
 
 #print axioms trent_not_forced
 
 /-- Why the apocalyptic reading can be defended: it can be held with Luke's case,
 Peter's and the critics', and it answers every position that defeats it. Those
 are Paul's case, John's, Trent, and Trent taken as a claim about Paul's word. -/
-def apocalypticStandsWithLuke : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .credulous .apocalyptic [.dominical, .apostolic, .apocalyptic, .critics]
-  checked := by decide +kernel
+declare_verdict apocalypticStandsWithLuke for solaFideDispute :
+    .credulous .apocalyptic [.dominical, .apostolic, .apocalyptic, .critics]
+  /-- **The apocalyptic reading can be defended.** A consistent set of positions
+  includes it and answers every attack, and that set holds Luke's case and Peter's
+  too. They claim that faith saves, and the apocalyptic reading grants that,
+  denying only that faith is the condition. Of the cases from Paul, Luke and Acts,
+  only Paul's defeats it, and it defeats Paul's in return, over "faith of Christ".
+  Trent it defeats in return over "not by works".
 
-/-- **The apocalyptic reading can be defended.** A consistent set of positions
-includes it and answers every attack, and that set holds Luke's case and Peter's
-too. They claim that faith saves, and the apocalyptic reading grants that,
-denying only that faith is the condition. Of the cases from Paul, Luke and Acts,
-only Paul's defeats it, and it defeats Paul's in return, over "faith of Christ".
-Trent it defeats in return over "not by works".
-
-So the disagreement between the Reformed reading and the apocalyptic one lies
-where scholars place it: between Paul and Campbell, over "faith of Christ"
-(πίστις Χριστοῦ). It does not lie between Campbell and Luke. -/
-@[headline]
-theorem apocalyptic_defensible :
-    CredulouslyAccepted solaFideDispute.defeats .apocalyptic :=
-  apocalypticStandsWithLuke.holds
+  So the disagreement between the Reformed reading and the apocalyptic one lies
+  where scholars place it: between Paul and Campbell, over "faith of Christ"
+  (πίστις Χριστοῦ). It does not lie between Campbell and Luke. -/
+  proves @[headline] apocalyptic_defensible
 
 #print axioms apocalyptic_defensible
 
 /-- Why the apocalyptic reading is not forced: a set of positions that can be
 defended includes Paul's case, and Paul's case defeats it. -/
-def apocalypticAnsweredByPaul : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .notSkeptical .apocalyptic .pauline [.pauline, .dominical, .apostolic, .critics]
-  checked := by decide +kernel
-
-/-- **Nor is it forced.** A consistent set of positions that answers every attack
-holds Paul's case, faith alone from Galatians 2:16 read as faith *in* Christ,
-and cannot hold the apocalyptic reading with it. Between Paul and Campbell the
-debate chooses neither: each can be defended, and neither is forced. -/
-@[headline]
-theorem apocalyptic_not_forced :
-    ¬ SkepticallyAccepted solaFideDispute.defeats .apocalyptic :=
-  apocalypticAnsweredByPaul.holds
+declare_verdict apocalypticAnsweredByPaul for solaFideDispute :
+    .notSkeptical .apocalyptic .pauline [.pauline, .dominical, .apostolic, .critics]
+  /-- **Nor is it forced.** A consistent set of positions that answers every attack
+  holds Paul's case, faith alone from Galatians 2:16 read as faith *in* Christ,
+  and cannot hold the apocalyptic reading with it. Between Paul and Campbell the
+  debate chooses neither: each can be defended, and neither is forced. -/
+  proves @[headline] apocalyptic_not_forced
 
 #print axioms apocalyptic_not_forced
 
 /-- Why Luke's case can be defended: it can be held with Peter's, the apocalyptic
 reading and the critics', and it answers every position that defeats it: Trent,
 Trent taken as a claim about Paul's word, and Chrysostom. -/
-def lukeStandsWithPeter : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .credulous .dominical [.dominical, .apostolic, .apocalyptic, .critics]
-  checked := by decide +kernel
-
-/-- **Luke's case can be defended.** "Your faith has saved you", read as Luke gives
-it, can be held with every position but Trent, however Trent's definition is
-taken, and Chrysostom. Those are its only attackers, and Luke's case defeats
-each in return. Against Trent the point at issue is what justification is:
-Trent's definition denies that faith without charity suffices, and Luke's words
-say her faith saved her. Against Chrysostom it is whether the right life Jesus
-requires elsewhere (John 3:36, Matthew 7:21) is a second condition beside faith. -/
-@[headline]
-theorem dominical_case_defensible :
-    CredulouslyAccepted solaFideDispute.defeats .dominical :=
-  lukeStandsWithPeter.holds
+declare_verdict lukeStandsWithPeter for solaFideDispute :
+    .credulous .dominical [.dominical, .apostolic, .apocalyptic, .critics]
+  /-- **Luke's case can be defended.** "Your faith has saved you", read as Luke gives
+  it, can be held with every position but Trent, however Trent's definition is
+  taken, and Chrysostom. Those are its only attackers, and Luke's case defeats
+  each in return. Against Trent the point at issue is what justification is:
+  Trent's definition denies that faith without charity suffices, and Luke's words
+  say her faith saved her. Against Chrysostom it is whether the right life Jesus
+  requires elsewhere (John 3:36, Matthew 7:21) is a second condition beside faith. -/
+  proves @[headline] dominical_case_defensible
 
 #print axioms dominical_case_defensible
 
 /-- Why Luke's case is not forced: a set of positions that can be defended includes
 Trent, and Trent defeats it. -/
-def lukeAnsweredByTrent : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .notSkeptical .dominical .trent [.trent, .sanders, .jervell]
-  checked := by decide +kernel
+declare_verdict lukeAnsweredByTrent for solaFideDispute :
+    .notSkeptical .dominical .trent [.trent, .sanders, .jervell]
+  /-- **Luke's case is not forced.** A consistent set of positions that answers every
+  attack holds Trent, and cannot hold Luke's case with it.
 
-/-- **Luke's case is not forced.** A consistent set of positions that answers every
-attack holds Trent, and cannot hold Luke's case with it.
+  Between Trent and each Reformed strand, the debate chooses neither. Their
+  weakest links are all `disputed`, so no rating breaks a tie, and every attack
+  between them runs in both directions.
 
-Between Trent and each Reformed strand, the debate chooses neither. Their
-weakest links are all `disputed`, so no rating breaks a tie, and every attack
-between them runs in both directions.
-
-What would decide between them is what justification *is*. No rating here
-settles that. `whyTheDominicalCaseStandsAgainstTrent` places Luke's disagreement
-with Trent at Trent's definition. `whereTrentPartsFromPaul`, in the chapter
-"Where Trent parts from Paul", places Paul's at one step: that a verdict on
-Christ's finished work excludes the renewal worked in us. The one thing the
-ratings do decide is that Trent cannot claim its definition as the meaning of
-Paul's word (`trent_on_pauls_word_indefensible`). -/
-@[headline]
-theorem dominical_case_not_forced :
-    ¬ SkepticallyAccepted solaFideDispute.defeats .dominical :=
-  lukeAnsweredByTrent.holds
+  What would decide between them is what justification *is*. No rating here
+  settles that. `whyTheDominicalCaseStandsAgainstTrent` places Luke's disagreement
+  with Trent at Trent's definition. `whereTrentPartsFromPaul`, in the chapter
+  "Where Trent parts from Paul", places Paul's at one step: that a verdict on
+  Christ's finished work excludes the renewal worked in us. The one thing the
+  ratings do decide is that Trent cannot claim its definition as the meaning of
+  Paul's word (`trent_on_pauls_word_indefensible`). -/
+  proves @[headline] dominical_case_not_forced
 
 #print axioms dominical_case_not_forced
 
@@ -1515,37 +1294,27 @@ theorem dominical_case_not_forced :
 Peter's, the critics' and the argument from Paul's word, and it answers both
 positions that defeat it. Those are Trent, and Trent taken as a claim about
 Paul's word. -/
-def gospelStandsWithTheStrands : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .credulous .gospel [.gospel, .pauline, .dominical, .apostolic, .critics, .lexical]
-  checked := by decide +kernel
-
-/-- **Paul's gospel can be defended**, together with Paul's, Luke's and Peter's
-cases and with the argument from Paul's word. A consistent set of positions that
-answers every attack holds them all. -/
-@[headline]
-theorem gospel_defensible : CredulouslyAccepted solaFideDispute.defeats .gospel :=
-  gospelStandsWithTheStrands.holds
+declare_verdict gospelStandsWithTheStrands for solaFideDispute :
+    .credulous .gospel [.gospel, .pauline, .dominical, .apostolic, .critics, .lexical]
+  /-- **Paul's gospel can be defended**, together with Paul's, Luke's and Peter's
+  cases and with the argument from Paul's word. A consistent set of positions that
+  answers every attack holds them all. -/
+  proves @[headline] gospel_defensible
 
 #print axioms gospel_defensible
 
 /-- Why Paul's gospel is not forced: a set of positions that can be defended
 includes Trent, and Trent defeats it. -/
-def gospelAnsweredByTrent : Verdict solaFideDispute where
-  finite := solaFideFinite
-  claim := .notSkeptical .gospel .trent [.trent, .sanders, .jervell]
-  checked := by decide +kernel
-
-/-- **Nor is it forced.** Trent as Trent states it can still be defended, and Paul's
-gospel cannot be held with it. What would decide between them is the step
-`whereTrentPartsFromPaul` names, that a verdict on Christ's finished work
-excludes renewal, and that step is rated `disputed`. The argument from Paul's
-word does not decide it. Taken as a claim about what God does, Trent's
-definition is not reached by anything the word's meaning shows
-(`lexical_case_does_not_reach_what_god_does`). -/
-@[headline]
-theorem gospel_not_forced : ¬ SkepticallyAccepted solaFideDispute.defeats .gospel :=
-  gospelAnsweredByTrent.holds
+declare_verdict gospelAnsweredByTrent for solaFideDispute :
+    .notSkeptical .gospel .trent [.trent, .sanders, .jervell]
+  /-- **Nor is it forced.** Trent as Trent states it can still be defended, and Paul's
+  gospel cannot be held with it. What would decide between them is the step
+  `whereTrentPartsFromPaul` names, that a verdict on Christ's finished work
+  excludes renewal, and that step is rated `disputed`. The argument from Paul's
+  word does not decide it. Taken as a claim about what God does, Trent's
+  definition is not reached by anything the word's meaning shows
+  (`lexical_case_does_not_reach_what_god_does`). -/
+  proves @[headline] gospel_not_forced
 
 #print axioms gospel_not_forced
 

@@ -1,10 +1,5 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.SolaScriptura.Mark7
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
-import Testimony.Logic.Map
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers
@@ -131,18 +126,31 @@ def mark7PartyNode : Mark7Party → ArgumentPackage Claim
 
 /-- The dispute over Mark 7: every party's premises have a model, every party
 establishes its conclusion, and every party's inferences are rated. -/
-@[solaScripturaDefs]
-def mark7Dispute : Dispute Claim Mark7Party where
-  node := mark7PartyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .principle => mark7Principle_establishes
-    | .mark7 => mark7Case_establishes
-    | .trent => tridentineCase_establishes
-    | .trentAsMensCommandments => tridentineAsMensCommandments_establishes
-    | .trentAsApostolicWord => tridentineAsApostolicWord_establishes
-  rated i := by
-    cases i <;> simp [solaScripturaDefs, Line.asPackage]
+declare_dispute mark7Dispute := mark7PartyNode using solaScripturaDefs
+  /-- **Who defeats whom**, all 25 pairs. Mark 7's principle defeats Trent read as
+  commandments of men, and that reading's reply fails against it. Mark 7's case
+  and Trent defeat each other, as Trent states it and read either way. Nothing
+  else.
+
+  Every cell is computed from the parties' premises by `Horn.defeats?` and checked
+  by the kernel — the defeats, and the absences of defeat, alike. -/
+  defeats
+    [ (.principle, .trentAsMensCommandments)
+    , (.mark7, .trent), (.mark7, .trentAsMensCommandments), (.mark7, .trentAsApostolicWord)
+    , (.trent, .mark7), (.trentAsMensCommandments, .mark7), (.trentAsApostolicWord, .mark7) ]
+  /-- **Nothing supports anything** in the dispute over Mark 7, in all 25 pairs: no
+  party's conclusion entails a claim another rests on. Mark 7's principle is
+  *derived* inside Mark 7's case, not assumed there, so the relation between them
+  is not support. Every cell is computed by `supports?` and checked by the
+  kernel. -/
+  supports []
+  /-- **Whose case is part of whose**, all 25 pairs: Trent's case is part of each
+  reading of it, which only adds to it; and every case is part of itself. Every
+  cell is computed by `partOf?` and checked by the kernel. -/
+  partOf [(.trent, .trentAsMensCommandments), (.trent, .trentAsApostolicWord)]
+  /-- The dispute over Mark 7 drawn: who defeats whom, and whose case is part of
+  whose. -/
+  map mark7Map
 
 /-- Mark 7's principle stands with Trent, as Trent states it and read as the
 apostolic word: Rome's world, in which the principle holds and apostolic
@@ -151,97 +159,6 @@ theorem marks_principle_stands_with_trent :
     mark7Dispute.StandTogether [.principle, .trent, .trentAsApostolicWord] := by
   satisfied_by romeGrantsMarksPrincipleReading [Dispute.StandTogether, solaScripturaDefs]
 
-/-- The defeats of the dispute, as a table. -/
-def mark7PartyDefeats : Mark7Party → Mark7Party → Prop
-  | .principle, .trentAsMensCommandments => True
-  | .mark7, .trent => True
-  | .mark7, .trentAsMensCommandments => True
-  | .mark7, .trentAsApostolicWord => True
-  | .trent, .mark7 => True
-  | .trentAsMensCommandments, .mark7 => True
-  | .trentAsApostolicWord, .mark7 => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel mark7PartyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold mark7PartyDefeats <;> infer_instance
-
-/-- Each party's weakest link: at the bottom for all but Mark 7's principle. -/
-def mark7PartyStrength : Mark7Party → ℕ
-  | .principle => 2
-  | _ => 0
-
-/-- Each party's weakest link, as its package computes it. -/
-theorem mark7PartyNode_strength : ∀ i, (mark7PartyNode i).strength = mark7PartyStrength i
-  | .principle => mark7Principle_strength
-  | .mark7 => mark7Case_strength
-  | .trent => tridentineCase_strength
-  | .trentAsMensCommandments => tridentineAsMensCommandments_strength
-  | .trentAsApostolicWord => tridentineAsApostolicWord_strength
-
-prepare_clauses mark7DisputeClauses for mark7Dispute
-
-/-- **Who defeats whom**, all 25 pairs. Mark 7's principle defeats Trent read as
-commandments of men, and that reading's reply fails against it. Mark 7's case
-and Trent defeat each other, as Trent states it and read either way. Nothing
-else.
-
-Every cell is computed from the parties' premises by `Horn.defeats?` and checked
-by the kernel — the defeats, and the absences of defeat, alike. -/
-theorem mark7Dispute_defeats :
-    ∀ i j, mark7Dispute.defeats i j ↔ mark7PartyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (mark7PartyNode_strength i) (mark7PartyNode_strength j)
-    (mark7DisputeClauses.spec i) (mark7DisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute in the form the verdict solver computes with. -/
-def mark7Finite : Solver.Finite mark7Dispute.defeats where
-  parties := [.principle, .mark7, .trent, .trentAsMensCommandments, .trentAsApostolicWord]
-  complete i := by cases i <;> decide
-  defeats i j := decide (mark7PartyDefeats i j)
-  spec i j := by rw [mark7Dispute_defeats]; simp
-
-/-! ### The dispute as a graph -/
-
-/-- **Nothing supports anything** in the dispute over Mark 7, in all 25 pairs: no
-party's conclusion entails a claim another rests on. Mark 7's principle is
-*derived* inside Mark 7's case, not assumed there, so the relation between them
-is not support. Every cell is computed by `supports?` and checked by the
-kernel. -/
-theorem mark7Dispute_supports : ∀ i j, ¬ mark7Dispute.supports i j := by
-  intro i j
-  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> horn_certify
-
-/-- Whose case is part of whose, as a table: besides each party's own, Trent's
-is part of each reading of it. -/
-def mark7PartyPartOf : Mark7Party → Mark7Party → Prop
-  | .trent, .trentAsMensCommandments => True
-  | .trent, .trentAsApostolicWord => True
-  | i, j => i = j
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel mark7PartyPartOf := fun i j => by
-  cases i <;> cases j <;> unfold mark7PartyPartOf <;> infer_instance
-
-/-- **Whose case is part of whose**, all 25 pairs: Trent's case is part of each
-reading of it, which only adds to it; and every case is part of itself. Every
-cell is computed by `partOf?` and checked by the kernel. -/
-theorem mark7Dispute_partOf : ∀ i j, mark7Dispute.partOf i j ↔ mark7PartyPartOf i j := by
-  intro i j
-  refine partOf_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute over Mark 7 drawn: who defeats whom, and whose case is part of
-whose. -/
-def mark7Map : ArgumentMap mark7Dispute where
-  finite := mark7Finite
-  supports _ _ := false
-  supports_spec i j := by simp [mark7Dispute_supports i j]
-  partOf i j := decide (mark7PartyPartOf i j)
-  partOf_spec i j := by rw [mark7Dispute_partOf]; simp
-
 /-! ### What the dispute decides -/
 
 /-- How the dispute is settled as far as it can be, in one stage: nothing defeats
@@ -249,12 +166,12 @@ Mark 7's principle, so it comes first; and nothing joins it. Mark 7's case has
 Trent, and Trent has Mark 7's case — a standoff; Trent read as the apostolic word
 has Mark 7's case; and Trent read as commandments of men has the principle
 itself. -/
-def marksPrincipleUnanswered : Verdict mark7Dispute where
-  finite := mark7Finite
-  claim := .groundedExactly [[.principle]]
-    [ (.mark7, .trent), (.trent, .mark7), (.trentAsMensCommandments, .principle)
-    , (.trentAsApostolicWord, .mark7) ]
-  checked := by decide +kernel
+declare_verdict marksPrincipleUnanswered for mark7Dispute :
+    .groundedExactly [[.principle]]
+      [ (.mark7, .trent)
+      , (.trent, .mark7)
+      , (.trentAsMensCommandments, .principle)
+      , (.trentAsApostolicWord, .mark7) ]
 
 /-- **Mark 7's principle prevails outright, and it is common ground.** The
 grounded extension — what the dispute forces before any choice between rivals —
@@ -276,96 +193,69 @@ theorem marks_principle_prevails :
 
 /-- Why Trent, read as commandments of men, cannot be defended: Mark 7's
 principle defeats it, and nothing defeats the principle. -/
-def mensCommandmentsReadingAnswered : Verdict mark7Dispute where
-  finite := mark7Finite
-  claim := .indefensible .trentAsMensCommandments [(.trentAsMensCommandments, .principle)]
-  checked := by decide +kernel
+declare_verdict mensCommandmentsReadingAnswered for mark7Dispute :
+    .indefensible .trentAsMensCommandments [(.trentAsMensCommandments, .principle)]
+  /-- **Trent, read as commandments of men, cannot be defended.** No consistent
+  position that answers its attackers can hold it: Mark 7's principle defeats it,
+  and nothing answers the principle. This is the first horn of
+  `whatTrentsTraditionIs`, weighed: if what Trent receives alongside Scripture
+  were a commandment of men, Jesus' words in Mark 7
+  would condemn it, at a step rated `wellSupported`.
 
-/-- **Trent, read as commandments of men, cannot be defended.** No consistent
-position that answers its attackers can hold it: Mark 7's principle defeats it,
-and nothing answers the principle. This is the first horn of
-`whatTrentsTraditionIs`, weighed: if what Trent receives alongside Scripture
-were a commandment of men, Jesus' words in Mark 7
-would condemn it, at a step rated `wellSupported`.
-
-What this does not claim: that Trent's tradition *is* a commandment of men.
-Trent says the opposite, and Calvin's reading of it is rated `disputed`. -/
-@[headline]
-theorem trent_as_mens_commandments_indefensible (S : Set Mark7Party)
-    (hS : Admissible mark7Dispute.defeats S) : Mark7Party.trentAsMensCommandments ∉ S :=
-  mensCommandmentsReadingAnswered.holds S hS
+  What this does not claim: that Trent's tradition *is* a commandment of men.
+  Trent says the opposite, and Calvin's reading of it is rated `disputed`. -/
+  proves @[headline] trent_as_mens_commandments_indefensible
 
 #print axioms trent_as_mens_commandments_indefensible
 
 /-- Why Mark 7's case can be defended: it stands with Mark 7's principle, and
 answers every party that defeats it — Trent, read or unread — itself. -/
-def mark7StandsWithItsPrinciple : Verdict mark7Dispute where
-  finite := mark7Finite
-  claim := .credulous .mark7 [.principle, .mark7]
-  checked := by decide +kernel
-
-/-- **Sola scriptura from Mark 7 can be defended.** Some maximal defensible
-position holds it, with Mark 7's principle. Every party that defeats it — Trent,
-as it states its position and read either way — it defeats back. -/
-@[headline]
-theorem mark7_case_defensible : CredulouslyAccepted mark7Dispute.defeats .mark7 :=
-  mark7StandsWithItsPrinciple.holds
+declare_verdict mark7StandsWithItsPrinciple for mark7Dispute :
+    .credulous .mark7 [.principle, .mark7]
+  /-- **Sola scriptura from Mark 7 can be defended.** Some maximal defensible
+  position holds it, with Mark 7's principle. Every party that defeats it — Trent,
+  as it states its position and read either way — it defeats back. -/
+  proves @[headline] mark7_case_defensible
 
 #print axioms mark7_case_defensible
 
 /-- Why Mark 7's case is not forced: a defensible position holds Trent, and Trent
 defeats it. -/
-def mark7AnsweredByTrent : Verdict mark7Dispute where
-  finite := mark7Finite
-  claim := .notSkeptical .mark7 .trent [.principle, .trent, .trentAsApostolicWord]
-  checked := by decide +kernel
-
-/-- **Nor is it forced.** A maximal defensible position holds Trent, with Mark 7's
-principle and with Trent read as the apostolic word, and cannot hold Mark 7's
-case with it. Their weakest links are all `disputed`, so no rating breaks the
-tie. What would decide it is argued, not weighed: whether any apostolic word
-survives outside Scripture (`whereTheApostolicWordReadingFalls`), and, even
-granting that none does, whether the principle then makes Scripture the *sole*
-infallible rule — a step Geiselmann and Florovsky deny. -/
-@[headline]
-theorem mark7_case_not_forced : ¬ SkepticallyAccepted mark7Dispute.defeats .mark7 :=
-  mark7AnsweredByTrent.holds
+declare_verdict mark7AnsweredByTrent for mark7Dispute :
+    .notSkeptical .mark7 .trent [.principle, .trent, .trentAsApostolicWord]
+  /-- **Nor is it forced.** A maximal defensible position holds Trent, with Mark 7's
+  principle and with Trent read as the apostolic word, and cannot hold Mark 7's
+  case with it. Their weakest links are all `disputed`, so no rating breaks the
+  tie. What would decide it is argued, not weighed: whether any apostolic word
+  survives outside Scripture (`whereTheApostolicWordReadingFalls`), and, even
+  granting that none does, whether the principle then makes Scripture the *sole*
+  infallible rule — a step Geiselmann and Florovsky deny. -/
+  proves @[headline] mark7_case_not_forced
 
 #print axioms mark7_case_not_forced
 
 /-- Why Trent can be defended against Mark 7: it stands with Mark 7's principle
 and with its own reading as the apostolic word, and answers Mark 7's case
 itself. -/
-def trentStandsWithMarksPrinciple : Verdict mark7Dispute where
-  finite := mark7Finite
-  claim := .credulous .trent [.principle, .trent, .trentAsApostolicWord]
-  checked := by decide +kernel
-
-/-- **Trent, as it states its position, can be defended against Mark 7** — and
-with Mark 7's principle. Some maximal defensible position holds Trent, the
-principle, and Trent read as the apostolic word. Granting everything Mark 7's
-principle says costs Trent nothing, so long as what it receives is the apostolic
-word and not a commandment of men. -/
-@[headline]
-theorem trent_defensible_against_mark7 :
-    CredulouslyAccepted mark7Dispute.defeats .trent :=
-  trentStandsWithMarksPrinciple.holds
+declare_verdict trentStandsWithMarksPrinciple for mark7Dispute :
+    .credulous .trent [.principle, .trent, .trentAsApostolicWord]
+  /-- **Trent, as it states its position, can be defended against Mark 7** — and
+  with Mark 7's principle. Some maximal defensible position holds Trent, the
+  principle, and Trent read as the apostolic word. Granting everything Mark 7's
+  principle says costs Trent nothing, so long as what it receives is the apostolic
+  word and not a commandment of men. -/
+  proves @[headline] trent_defensible_against_mark7
 
 #print axioms trent_defensible_against_mark7
 
 /-- Why Trent is not forced: a defensible position holds Mark 7's case, and it
 defeats Trent. -/
-def trentAnsweredByMark7 : Verdict mark7Dispute where
-  finite := mark7Finite
-  claim := .notSkeptical .trent .mark7 [.principle, .mark7]
-  checked := by decide +kernel
-
-/-- **Nor is Trent forced.** A maximal defensible position holds Mark 7's case
-for sola scriptura, and cannot hold Trent with it. Between them the dispute
-chooses neither. -/
-@[headline]
-theorem trent_not_forced_against_mark7 : ¬ SkepticallyAccepted mark7Dispute.defeats .trent :=
-  trentAnsweredByMark7.holds
+declare_verdict trentAnsweredByMark7 for mark7Dispute :
+    .notSkeptical .trent .mark7 [.principle, .mark7]
+  /-- **Nor is Trent forced.** A maximal defensible position holds Mark 7's case
+  for sola scriptura, and cannot hold Trent with it. Between them the dispute
+  chooses neither. -/
+  proves @[headline] trent_not_forced_against_mark7
 
 #print axioms trent_not_forced_against_mark7
 

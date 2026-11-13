@@ -1,10 +1,10 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.SolaFide.Vulgate
 import Testimony.Logic.Credibility
 import Testimony.Logic.Contest
 import TestimonyArguments.Meanings.SolaFide
 import TestimonyArguments.SolaFide.Definition
 import TestimonyArguments.SolaFide.JesusWords
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaFide.Ratings — is an objection an argument, or only a disagreement?
@@ -799,118 +799,20 @@ def jamesRegister : Register jamesDispute where
     cases i <;> simp only [Option.some.injEq, reduceCtorEq] at h <;> subst h <;> rfl
   steps := [fruitStep, lexicalStep, canon24Step, rewardStep]
 
-/-- Each position's weakest link under a given standard. It is as cited, with one
-exception: under the tradition standard the argument from James's word is
-weighed as `disputed`, which is what is worked out for it there. -/
-def ratedStrength : Standard → JamesParty → ℕ
-  | .tradition, .lexical => 0
-  | _, i => jamesPartyStrength i
-
-/-- Each position's weakest link, as worked out from its premises with the ratings
-for that standard. -/
-theorem rerated_strength (s : Standard) :
-    ∀ i, ((jamesRegister.rerated s).node i).strength = ratedStrength s i := by
-  intro i
-  cases s <;> cases i <;> decide +kernel
-
-/-- Who defeats whom under a given standard. Under the evidence standard, as in the
-full debate. Under the tradition standard there is one difference: Trent's
-reading of the word and the reading through Paul each defeat the argument from
-James's word, now that it is weighed as `disputed`. -/
-def ratedDefeats : Standard → JamesParty → JamesParty → Prop
-  | .tradition, .trentOnTheWord, .lexical => True
-  | .tradition, .renewalOnTheWord, .lexical => True
-  | _, i, j => jamesPartyDefeats i j
-
-/-- The table is finite, so membership in it is decidable. -/
-instance (s : Standard) : DecidableRel (ratedDefeats s) := fun i j => by
-  cases s <;> cases i <;> cases j <;> unfold ratedDefeats <;> infer_instance
-
-/-- The first six rows of the table under the evidence standard, worked out from the
-positions' premises with the ratings for that standard, and checked by machine.
-The table is proved in four parts, by standard and by row, only to keep each
-proof within the time the checker allows. -/
-private theorem rerated_evidence_first (i : JamesParty)
-    (hi : i ∈ [.lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation])
-    (j : JamesParty) :
-    (jamesRegister.rerated .evidence).defeats i j ↔ ratedDefeats .evidence i j := by
-  refine Horn.defeats_iff_of_certified
-    (rerated_strength .evidence i) (rerated_strength .evidence j) ?_
-  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
-
-/-- The same rows under the Scripture standard. -/
-private theorem rerated_scriptural_first (i : JamesParty)
-    (hi : i ∈ [.lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation])
-    (j : JamesParty) :
-    (jamesRegister.rerated .scriptural).defeats i j ↔ ratedDefeats .scriptural i j := by
-  refine Horn.defeats_iff_of_certified
-    (rerated_strength .scriptural i) (rerated_strength .scriptural j) ?_
-  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
-
-/-- The other six rows at the evidence standard. -/
-private theorem rerated_evidence_second (i : JamesParty)
-    (hi : i ∈ [.trentOnSirach, .revelationText, .sirachText, .trentOnReward,
-      .renewalOnTheWord, .westminsterOnReward])
-    (j : JamesParty) :
-    (jamesRegister.rerated .evidence).defeats i j ↔ ratedDefeats .evidence i j := by
-  refine Horn.defeats_iff_of_certified
-    (rerated_strength .evidence i) (rerated_strength .evidence j) ?_
-  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
-
-/-- The same rows under the Scripture standard. -/
-private theorem rerated_scriptural_second (i : JamesParty)
-    (hi : i ∈ [.trentOnSirach, .revelationText, .sirachText, .trentOnReward,
-      .renewalOnTheWord, .westminsterOnReward])
-    (j : JamesParty) :
-    (jamesRegister.rerated .scriptural).defeats i j ↔ ratedDefeats .scriptural i j := by
-  refine Horn.defeats_iff_of_certified
-    (rerated_strength .scriptural i) (rerated_strength .scriptural j) ?_
-  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
-
-/-- The first six rows at the tradition standard. -/
-private theorem rerated_tradition_first (i : JamesParty)
-    (hi : i ∈ [.lexical, .faith, .harmony, .trentOnTheWord, .trentOnWorks, .trentOnRevelation])
-    (j : JamesParty) :
-    (jamesRegister.rerated .tradition).defeats i j ↔ ratedDefeats .tradition i j := by
-  refine Horn.defeats_iff_of_certified
-    (rerated_strength .tradition i) (rerated_strength .tradition j) ?_
-  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
-
-/-- The other six rows at the tradition standard. -/
-private theorem rerated_tradition_second (i : JamesParty)
-    (hi : i ∈ [.trentOnSirach, .revelationText, .sirachText, .trentOnReward,
-      .renewalOnTheWord, .westminsterOnReward])
-    (j : JamesParty) :
-    (jamesRegister.rerated .tradition).defeats i j ↔ ratedDefeats .tradition i j := by
-  refine Horn.defeats_iff_of_certified
-    (rerated_strength .tradition i) (rerated_strength .tradition j) ?_
-  simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
-  rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
-
-/-- **Who defeats whom under each standard.** -/
-theorem rerated_defeats (s : Standard) :
-    ∀ i j, (jamesRegister.rerated s).defeats i j ↔ ratedDefeats s i j := by
-  intro i j
-  cases s <;> cases i
-  all_goals first
-    | (refine rerated_evidence_first _ ?_ j; decide)
-    | (refine rerated_evidence_second _ ?_ j; decide)
-    | (refine rerated_tradition_first _ ?_ j; decide)
-    | (refine rerated_tradition_second _ ?_ j; decide)
-    | (refine rerated_scriptural_first _ ?_ j; decide)
-    | (refine rerated_scriptural_second _ ?_ j; decide)
-
-/-- The debate under a given standard, in the form the solver works with. -/
-def ratedFinite (s : Standard) : Solver.Finite (jamesRegister.rerated s).defeats where
-  parties := jamesFinite.parties
-  complete := jamesFinite.complete
-  defeats i j := decide (ratedDefeats s i j)
-  spec i j := by rw [rerated_defeats]; simp
+/-- The debate at each standard's ratings. Each position's weakest link is as
+cited, with one exception: under the tradition standard the argument from James's
+word is weighed as `disputed`, which is what is worked out for it there. -/
+declare_rerated jamesRegister rows 2
+  /-- **Who defeats whom under each standard.** Under the evidence standard, as in
+  the full debate. Under the tradition standard there is one difference: Trent's
+  reading of the word and the reading through Paul each defeat the argument from
+  James's word, now that it is weighed as `disputed`. Every answer is worked out
+  from the positions' premises with the ratings for that standard, and checked by
+  machine. -/
+  defeats fun
+    | .tradition =>
+      jamesDispute.defeatsTable ++ [(.trentOnTheWord, .lexical), (.renewalOnTheWord, .lexical)]
+    | _ => jamesDispute.defeatsTable
 
 /-- The debate heard under the evidence standard. -/
 abbrev jamesUnderEvidence := jamesRegister.hearing .evidence
@@ -918,21 +820,18 @@ abbrev jamesUnderEvidence := jamesRegister.hearing .evidence
 /-- The debate heard under the tradition standard. -/
 abbrev jamesUnderTradition := jamesRegister.hearing .tradition
 
-/-- The debate heard under a standard, in the form the solver works with. -/
-abbrev jamesUnderFinite (s : Standard) :=
-  (ratedFinite s).restrict (jamesRegister.admits s)
-
 /-- **Who defeats whom under the evidence standard**: as in the full debate, among
 the positions heard. -/
 theorem jamesUnderEvidence_defeats :
-    ∀ i j, jamesUnderEvidence.defeats i j ↔ ratedDefeats .evidence i.1 j.1 :=
-  fun i j => rerated_defeats .evidence i.1 j.1
+    ∀ i j, jamesUnderEvidence.defeats i j ↔ (i.1, j.1) ∈ jamesRegister.defeatsTable .evidence :=
+  fun i j => jamesRegister_defeats .evidence i.1 j.1
 
 /-- **Who defeats whom under the tradition standard**: the argument from James's
 word, weighed as `disputed`, and the reading through Paul defeat each other. -/
 theorem jamesUnderTradition_defeats :
-    ∀ i j, jamesUnderTradition.defeats i j ↔ ratedDefeats .tradition i.1 j.1 :=
-  fun i j => rerated_defeats .tradition i.1 j.1
+    ∀ i j, jamesUnderTradition.defeats i j ↔
+      (i.1, j.1) ∈ jamesRegister.defeatsTable .tradition :=
+  fun i j => jamesRegister_defeats .tradition i.1 j.1
 
 /-- How the debate is settled under the evidence standard. The argument from James's
 word, the argument about James's faith, the Reformed reconciliation and the
@@ -941,30 +840,27 @@ Latin readings fall to the Greek. Every objection of Trent's to a rated step,
 namely canon 24, chapter 16, the reading through Paul, and Trent's reading of
 the word, either rests at some claim on the council's word or merely states its
 denial, and so is not heard. -/
-def underEvidenceSettled : Verdict jamesUnderEvidence where
-  finite := jamesUnderFinite .evidence
-  claim := .groundedExactly
-    [Witness.listSub _
-      [.lexical, .faith, .harmony, .revelationText, .sirachText, .westminsterOnReward]]
-    (Witness.Table.sub _
-      [ (.trentOnRevelation, .revelationText), (.trentOnSirach, .sirachText) ])
-  checked := by decide +kernel
+declare_verdict underEvidenceSettled for jamesUnderEvidence using (jamesRegister.under .evidence) :
+    .groundedExactly
+      [Witness.listSub _
+        [.lexical, .faith, .harmony, .revelationText, .sirachText, .westminsterOnReward]]
+      (Witness.Table.sub _
+        [ (.trentOnRevelation, .revelationText), (.trentOnSirach, .sirachText) ])
 
 /-- How the debate is settled under the tradition standard. The argument about
 James's faith and the Greek of both verses are accepted first. The argument from
 James's word and the reading through Paul defeat each other. So do the Reformed
 reconciliation and each of Trent's readings of what works do. Only Trent's
 reading of the word is not heard. -/
-def underTraditionSettled : Verdict jamesUnderTradition where
-  finite := jamesUnderFinite .tradition
-  claim := .groundedExactly
-    [Witness.listSub _ [.faith, .revelationText, .sirachText]]
-    (Witness.Table.sub _
-      [ (.lexical, .renewalOnTheWord), (.renewalOnTheWord, .lexical)
-      , (.trentOnRevelation, .revelationText), (.trentOnSirach, .sirachText)
-      , (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
-      , (.trentOnReward, .harmony), (.westminsterOnReward, .trentOnReward) ])
-  checked := by decide +kernel
+declare_verdict underTraditionSettled for jamesUnderTradition
+    using (jamesRegister.under .tradition) :
+    .groundedExactly
+      [Witness.listSub _ [.faith, .revelationText, .sirachText]]
+      (Witness.Table.sub _
+        [ (.lexical, .renewalOnTheWord), (.renewalOnTheWord, .lexical)
+        , (.trentOnRevelation, .revelationText), (.trentOnSirach, .sirachText)
+        , (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
+        , (.trentOnReward, .harmony), (.westminsterOnReward, .trentOnReward) ])
 
 /-- The reading through Paul holds that James's "justified" means the increase of
 justice. -/
@@ -979,19 +875,15 @@ theorem lexical_denies_increase :
 
 /-- Why the reading through Paul can be defended under the tradition standard: it
 answers the argument from James's word, now that the two are rated alike. -/
-def renewalHeard : Verdict jamesUnderTradition where
-  finite := jamesUnderFinite .tradition
-  claim := .credulous ⟨.renewalOnTheWord, by decide⟩
-    (Witness.listSub _ [.faith, .renewalOnTheWord, .revelationText, .sirachText])
-  checked := by decide +kernel
+declare_verdict renewalHeard for jamesUnderTradition using (jamesRegister.under .tradition) :
+    .credulous ⟨.renewalOnTheWord, by decide⟩
+      (Witness.listSub _ [.faith, .renewalOnTheWord, .revelationText, .sirachText])
 
 /-- Why the argument from James's word can be defended there: it answers the reading
 through Paul. -/
-def lexicalHeard : Verdict jamesUnderTradition where
-  finite := jamesUnderFinite .tradition
-  claim := .credulous ⟨.lexical, by decide⟩
-    (Witness.listSub _ [.lexical, .faith, .revelationText, .sirachText])
-  checked := by decide +kernel
+declare_verdict lexicalHeard for jamesUnderTradition using (jamesRegister.under .tradition) :
+    .credulous ⟨.lexical, by decide⟩
+      (Witness.listSub _ [.lexical, .faith, .revelationText, .sirachText])
 
 /-- **What James's "justified" means depends on the standard, and the verdict and
 the rating agree.**
@@ -1036,20 +928,16 @@ theorem trentOnReward_denies_fruit :
 
 /-- Why the Reformed reconciliation can be defended under the tradition standard: it
 answers canon 24 and chapter 16. -/
-def harmonyHeard : Verdict jamesUnderTradition where
-  finite := jamesUnderFinite .tradition
-  claim := .credulous ⟨.harmony, by decide⟩
-    (Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText])
-  checked := by decide +kernel
+declare_verdict harmonyHeard for jamesUnderTradition using (jamesRegister.under .tradition) :
+    .credulous ⟨.harmony, by decide⟩
+      (Witness.listSub _ [.lexical, .faith, .harmony, .revelationText, .sirachText])
 
 /-- Why chapter 16's reading of the reward texts can be defended there: it answers
 the Reformed reconciliation. -/
-def rewardHeard : Verdict jamesUnderTradition where
-  finite := jamesUnderFinite .tradition
-  claim := .credulous ⟨.trentOnReward, by decide⟩
-    (Witness.listSub _
-      [.lexical, .faith, .trentOnWorks, .trentOnReward, .revelationText, .sirachText])
-  checked := by decide +kernel
+declare_verdict rewardHeard for jamesUnderTradition using (jamesRegister.under .tradition) :
+    .credulous ⟨.trentOnReward, by decide⟩
+      (Witness.listSub _
+        [.lexical, .faith, .trentOnWorks, .trentOnReward, .revelationText, .sirachText])
 
 /-- **Whether works are fruit and not ground depends on whether a council's word
 counts, and the verdict and the rating agree.**

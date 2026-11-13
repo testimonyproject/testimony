@@ -77,83 +77,61 @@ and Trent taken as a claim about Paul's word, the exchange over John 6:29
 between Aquinas and Luther, and Chrysostom on John 3:36 with the Reformed
 answer to him. Not heard: the apocalyptic reading, Sanders and his
 critics, and Jervell. -/
-abbrev reformationAlone :=
-  solaFideDispute.restrict (· ∉ [Party.apocalyptic, .sanders, .critics, .jervell])
-
-/-- The Reformation debate, in the form the solver works with. -/
-abbrev reformationAloneFinite :=
-  solaFideFinite.restrict (· ∉ [Party.apocalyptic, .sanders, .critics, .jervell])
+declare_hearing reformationAlone := solaFideDispute
+  except [Party.apocalyptic, .sanders, .critics, .jervell]
 
 /-- How far the Reformation debate can be settled. Nothing defeats either argument
 about Paul's word, so both are accepted first, and nothing joins them. Each
 Reformed position is defeated by Trent. Trent is defeated by Paul's case, and by
 Luke's, Peter's and Paul's gospel. Trent taken as a claim about Paul's word is
 defeated by the argument from the word itself. -/
-def reformationSettlesTheWord : Verdict reformationAlone where
-  finite := reformationAloneFinite
-  claim := .groundedExactly [Witness.listSub _ [.lexical, .romansOnTheWord]]
-    (Witness.Table.sub _
-      [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent)
-      , (.trent, .pauline), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
-      , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas)
-      , (.chrysostom, .pauline), (.sanctification, .trent) ])
-  checked := by decide +kernel
+declare_verdict reformationSettlesTheWord for reformationAlone :
+    .groundedExactly [Witness.listSub _ [.lexical, .romansOnTheWord]]
+      (Witness.Table.sub _
+        [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent)
+        , (.trent, .pauline), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
+        , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas)
+        , (.chrysostom, .pauline), (.sanctification, .trent) ])
+  /-- **What the Reformation debate forces: the meaning of Paul's word, and nothing
+  else.** Heard as Rome and the Reformers alone, the forced positions are exactly
+  the two arguments about Paul's word. Trent cannot claim that its definition is
+  what Paul's "justify" (δικαιόω) means.
 
-/-- **What the Reformation debate forces: the meaning of Paul's word, and nothing
-else.** Heard as Rome and the Reformers alone, the forced positions are exactly
-the two arguments about Paul's word. Trent cannot claim that its definition is
-what Paul's "justify" (δικαιόω) means.
-
-Nothing else is forced. Sola fide from each strand, Paul's gospel, and Trent's
-definition as a claim about what God does each have an attacker they cannot
-remove. -/
-@[headline]
-theorem reformation_dispute_forces_only_pauls_word :
-    grounded reformationAlone.defeats =
-      Solver.toSet (Witness.listSub _ [.lexical, .romansOnTheWord]) :=
-  reformationSettlesTheWord.holds
+  Nothing else is forced. Sola fide from each strand, Paul's gospel, and Trent's
+  definition as a claim about what God does each have an attacker they cannot
+  remove. -/
+  proves @[headline] reformation_dispute_forces_only_pauls_word :
+      grounded reformationAlone.defeats =
+    Solver.toSet (Witness.listSub _ [.lexical, .romansOnTheWord])
 
 #print axioms reformation_dispute_forces_only_pauls_word
 
 /-- Why Trent can be defended in the Reformation debate: it can be held with the
 arguments about Paul's word, and it answers every position that attacks it. -/
-def trentStandsWithPaulsWord : Verdict reformationAlone where
-  finite := reformationAloneFinite
-  claim := .credulous ⟨.trent, by decide⟩
-    (Witness.listSub _ [.trent, .lexical, .romansOnTheWord])
-  checked := by decide +kernel
+declare_verdict trentStandsWithPaulsWord for reformationAlone :
+    .credulous ⟨.trent, by decide⟩ (Witness.listSub _ [.trent, .lexical, .romansOnTheWord])
+  /-- **Trent, as Trent states it, can be defended in the Reformation debate, together
+  with the arguments about Paul's word.** A consistent set of positions that
+  answers every attack holds Trent and both of those arguments.
 
-/-- **Trent, as Trent states it, can be defended in the Reformation debate, together
-with the arguments about Paul's word.** A consistent set of positions that
-answers every attack holds Trent and both of those arguments.
-
-This is what the two ways of taking Trent's definition come to when weighed:
-accepting everything the word's meaning shows costs Trent nothing, so long as
-its definition is a claim about what God does. -/
-@[headline]
-theorem trent_defensible_with_pauls_word :
-    CredulouslyAccepted reformationAlone.defeats ⟨.trent, by decide⟩ :=
-  trentStandsWithPaulsWord.holds
+  This is what the two ways of taking Trent's definition come to when weighed:
+  accepting everything the word's meaning shows costs Trent nothing, so long as
+  its definition is a claim about what God does. -/
+  proves @[headline] trent_defensible_with_pauls_word
 
 #print axioms trent_defensible_with_pauls_word
 
 /-- Why sola fide is not forced in the Reformation debate: a set of positions that
 can be defended includes Trent, and Trent defeats Paul's case. -/
-def reformationAnsweredByTrent : Verdict reformationAlone where
-  finite := reformationAloneFinite
-  claim := .notSkeptical ⟨.pauline, by decide⟩ ⟨.trent, by decide⟩
-    (Witness.listSub _ [.trent, .lexical, .romansOnTheWord])
-  checked := by decide +kernel
-
-/-- **Nor is sola fide forced there.** Rome and the Reformers, heard alone, tie.
-Each Reformed strand and Trent defeat each other over Trent's definition, and
-every rating on both sides is `disputed`. What would decide it is the step from
-a verdict to "renewal is no part of justification", which is `disputed` in
-Galatians and again in Romans 4 (see `whatTrentsDefinitionClaims`). -/
-@[headline]
-theorem sola_fide_not_forced_in_the_reformation_dispute :
-    ¬ SkepticallyAccepted reformationAlone.defeats ⟨.pauline, by decide⟩ :=
-  reformationAnsweredByTrent.holds
+declare_verdict reformationAnsweredByTrent for reformationAlone :
+    .notSkeptical ⟨.pauline, by decide⟩ ⟨.trent, by decide⟩
+      (Witness.listSub _ [.trent, .lexical, .romansOnTheWord])
+  /-- **Nor is sola fide forced there.** Rome and the Reformers, heard alone, tie.
+  Each Reformed strand and Trent defeat each other over Trent's definition, and
+  every rating on both sides is `disputed`. What would decide it is the step from
+  a verdict to "renewal is no part of justification", which is `disputed` in
+  Galatians and again in Romans 4 (see `whatTrentsDefinitionClaims`). -/
+  proves @[headline] sola_fide_not_forced_in_the_reformation_dispute
 
 #print axioms sola_fide_not_forced_in_the_reformation_dispute
 
@@ -162,10 +140,7 @@ theorem sola_fide_not_forced_in_the_reformation_dispute :
 /-- Every position but Trent's two: Trent as it states its definition, and Trent
 taken as a claim about Paul's word. Augustine's explanation of "justify" goes
 with the second, since that is what it rests on. -/
-abbrev withoutTrent := solaFideDispute.restrict (· ∉ [Party.trent, .trentOnPaulsWord])
-
-/-- The debate without Trent, in the form the solver works with. -/
-abbrev withoutTrentFinite := solaFideFinite.restrict (· ∉ [Party.trent, .trentOnPaulsWord])
+declare_hearing withoutTrent := solaFideDispute except [Party.trent, .trentOnPaulsWord]
 
 /-- What is settled without Trent. Nothing now defeats Paul's gospel or either
 argument about Paul's word, so those three are accepted first, and nothing joins
@@ -174,135 +149,106 @@ case is defeated by the apocalyptic reading, Peter's by Jervell, John's by
 Aquinas. Sanders is defeated by the critics and the critics by Sanders, the
 apocalyptic reading by Paul's case, Jervell by Peter's case, Aquinas by Luther
 and Luther by Aquinas, and the Reformed answer to Chrysostom by Chrysostom. -/
-def withoutTrentSettles : Verdict withoutTrent where
-  finite := withoutTrentFinite
-  claim := .groundedExactly
-    [Witness.listSub _ [.gospel, .lexical, .romansOnTheWord]]
-    (Witness.Table.sub _
-      [ (.pauline, .apocalyptic), (.apostolic, .jervell), (.apocalyptic, .pauline)
-      , (.sanders, .critics), (.critics, .sanders), (.jervell, .apostolic)
-      , (.johannine, .aquinas), (.aquinas, .luther), (.luther, .aquinas)
-      , (.dominical, .chrysostom), (.chrysostom, .dominical)
-      , (.sanctification, .chrysostom) ])
-  checked := by decide +kernel
+declare_verdict withoutTrentSettles for withoutTrent :
+    .groundedExactly
+      [Witness.listSub _ [.gospel, .lexical, .romansOnTheWord]]
+      (Witness.Table.sub _
+        [ (.pauline, .apocalyptic), (.apostolic, .jervell), (.apocalyptic, .pauline)
+        , (.sanders, .critics), (.critics, .sanders), (.jervell, .apostolic)
+        , (.johannine, .aquinas), (.aquinas, .luther), (.luther, .aquinas)
+        , (.dominical, .chrysostom), (.chrysostom, .dominical)
+        , (.sanctification, .chrysostom) ])
+  /-- **Without Trent, two things are forced.** That justification is not the
+  renewal of the inward person, from Paul's gospel. And that Paul's "justify"
+  (δικαιόω) does not mean that renewal, argued two ways. With Trent not heard,
+  nothing attacks either.
 
-/-- **Without Trent, two things are forced.** That justification is not the
-renewal of the inward person, from Paul's gospel. And that Paul's "justify"
-(δικαιόω) does not mean that renewal, argued two ways. With Trent not heard,
-nothing attacks either.
+  Luke's "faith suffices" is no longer among them. Chrysostom, reading John 3:36
+  and Matthew 7:21, concludes that believing is not enough without a right life,
+  and so stands against it (`luke_not_forced_without_trent`).
 
-Luke's "faith suffices" is no longer among them. Chrysostom, reading John 3:36
-and Matthew 7:21, concludes that believing is not enough without a right life,
-and so stands against it (`luke_not_forced_without_trent`).
-
-It does not show that *faith alone*, or even "faith suffices", is
-refuted. Each is in a tie; see the results that follow. -/
-@[headline]
-theorem without_trent_pauls_gospel_and_word_prevail :
-    grounded withoutTrent.defeats =
-      Solver.toSet (Witness.listSub _ [.gospel, .lexical, .romansOnTheWord]) :=
-  withoutTrentSettles.holds
+  It does not show that *faith alone*, or even "faith suffices", is
+  refuted. Each is in a tie; see the results that follow. -/
+  proves @[headline] without_trent_pauls_gospel_and_word_prevail :
+      grounded withoutTrent.defeats =
+    Solver.toSet (Witness.listSub _ [.gospel, .lexical, .romansOnTheWord])
 
 #print axioms without_trent_pauls_gospel_and_word_prevail
 
 /-- Why Luke's case is not forced without Trent: a set of positions that can be
 defended includes Chrysostom, who defeats it. -/
-def lukeAnsweredByChrysostom : Verdict withoutTrent where
-  finite := withoutTrentFinite
-  claim := .notSkeptical ⟨.dominical, by decide⟩ ⟨.chrysostom, by decide⟩
-    (Witness.listSub _
-      [ .apocalyptic, .aquinas, .chrysostom, .critics, .gospel, .jervell, .lexical
-      , .romansOnTheWord ])
-  checked := by decide +kernel
+declare_verdict lukeAnsweredByChrysostom for withoutTrent :
+    .notSkeptical ⟨.dominical, by decide⟩ ⟨.chrysostom, by decide⟩
+      (Witness.listSub _
+        [ .apocalyptic, .aquinas, .chrysostom, .critics, .gospel, .jervell, .lexical
+        , .romansOnTheWord ])
+  /-- **Without Trent, Luke's case is not forced either.** A consistent set of
+  positions that answers every attack holds Chrysostom, and cannot hold Luke's case
+  with it. Chrysostom reads "whoever does not obey the Son shall not see life"
+  (John 3:36) and "the one who does the will of my Father" (Matthew 7:21) as
+  requiring a right life beside believing. Luke's case reads "your faith has saved
+  you" (Luke 7:50) as saying that faith sufficed.
 
-/-- **Without Trent, Luke's case is not forced either.** A consistent set of
-positions that answers every attack holds Chrysostom, and cannot hold Luke's case
-with it. Chrysostom reads "whoever does not obey the Son shall not see life"
-(John 3:36) and "the one who does the will of my Father" (Matthew 7:21) as
-requiring a right life beside believing. Luke's case reads "your faith has saved
-you" (Luke 7:50) as saying that faith sufficed.
-
-A reading of two other sayings of Jesus, rated `disputed`, ties
-with Luke's. It does not show that Chrysostom outranks Luke, or that any
-text of Luke's is contradicted. Luke's case defeats Chrysostom in return, and
-Chrysostom accepts every word of Luke 7:50; what he denies is the step from it
-to "faith suffices". -/
-@[headline]
-theorem luke_not_forced_without_trent :
-    ¬ SkepticallyAccepted withoutTrent.defeats ⟨.dominical, by decide⟩ :=
-  lukeAnsweredByChrysostom.holds
+  A reading of two other sayings of Jesus, rated `disputed`, ties
+  with Luke's. It does not show that Chrysostom outranks Luke, or that any
+  text of Luke's is contradicted. Luke's case defeats Chrysostom in return, and
+  Chrysostom accepts every word of Luke 7:50; what he denies is the step from it
+  to "faith suffices". -/
+  proves @[headline] luke_not_forced_without_trent
 
 #print axioms luke_not_forced_without_trent
 
 /-- Why Paul's case is not forced without Trent: a set of positions that can be
 defended includes the apocalyptic reading, which defeats Paul's case over "faith
 of Christ". -/
-def paulAnsweredByCampbell : Verdict withoutTrent where
-  finite := withoutTrentFinite
-  claim := .notSkeptical ⟨.pauline, by decide⟩ ⟨.apocalyptic, by decide⟩
-    (Witness.listSub _
-      [.apocalyptic, .apostolic, .critics, .dominical, .gospel, .lexical, .romansOnTheWord])
-  checked := by decide +kernel
-
-/-- **Without Trent, sola fide from Paul is still not forced.** A consistent set of
-positions that answers every attack holds Campbell's apocalyptic reading, on
-which "faith of Christ" (πίστις Χριστοῦ) is Christ's own faithfulness, and
-cannot hold Paul's case with it. What stands in the way is a question about
-Paul's Greek, not about Rome. -/
-@[headline]
-theorem sola_fide_from_paul_not_forced_without_trent :
-    ¬ SkepticallyAccepted withoutTrent.defeats ⟨.pauline, by decide⟩ :=
-  paulAnsweredByCampbell.holds
+declare_verdict paulAnsweredByCampbell for withoutTrent :
+    .notSkeptical ⟨.pauline, by decide⟩ ⟨.apocalyptic, by decide⟩
+      (Witness.listSub _
+        [.apocalyptic, .apostolic, .critics, .dominical, .gospel, .lexical, .romansOnTheWord])
+  /-- **Without Trent, sola fide from Paul is still not forced.** A consistent set of
+  positions that answers every attack holds Campbell's apocalyptic reading, on
+  which "faith of Christ" (πίστις Χριστοῦ) is Christ's own faithfulness, and
+  cannot hold Paul's case with it. What stands in the way is a question about
+  Paul's Greek, not about Rome. -/
+  proves @[headline] sola_fide_from_paul_not_forced_without_trent
 
 #print axioms sola_fide_from_paul_not_forced_without_trent
 
 /-- Why Peter's case is not forced without Trent: a set of positions that can be
 defended includes Jervell, who defeats it over the yoke. -/
-def peterAnsweredByJervell : Verdict withoutTrent where
-  finite := withoutTrentFinite
-  claim := .notSkeptical ⟨.apostolic, by decide⟩ ⟨.jervell, by decide⟩
-    (Witness.listSub _
-      [.critics, .dominical, .gospel, .jervell, .lexical, .pauline, .romansOnTheWord])
-  checked := by decide +kernel
+declare_verdict peterAnsweredByJervell for withoutTrent :
+    .notSkeptical ⟨.apostolic, by decide⟩ ⟨.jervell, by decide⟩
+      (Witness.listSub _
+        [.critics, .dominical, .gospel, .jervell, .lexical, .pauline, .romansOnTheWord])
+  /-- **Nor from Peter.** A consistent set of positions that answers every attack
+  holds Jervell's reading of Acts 15, on which the yoke is not the law as a
+  condition of salvation, and cannot hold Peter's case with it.
 
-/-- **Nor from Peter.** A consistent set of positions that answers every attack
-holds Jervell's reading of Acts 15, on which the yoke is not the law as a
-condition of salvation, and cannot hold Peter's case with it.
-
-So without Trent it is forced that faith suffices (Luke) and that justification
-is not renewal (Paul's gospel). *Faith alone* still depends on questions about
-what the texts say: "faith of Christ", "works of the law", the yoke, and, for
-John, what believing is (`sola_fide_from_john_not_forced_without_trent`). -/
-@[headline]
-theorem sola_fide_from_peter_not_forced_without_trent :
-    ¬ SkepticallyAccepted withoutTrent.defeats ⟨.apostolic, by decide⟩ :=
-  peterAnsweredByJervell.holds
+  So without Trent it is forced that faith suffices (Luke) and that justification
+  is not renewal (Paul's gospel). *Faith alone* still depends on questions about
+  what the texts say: "faith of Christ", "works of the law", the yoke, and, for
+  John, what believing is (`sola_fide_from_john_not_forced_without_trent`). -/
+  proves @[headline] sola_fide_from_peter_not_forced_without_trent
 
 #print axioms sola_fide_from_peter_not_forced_without_trent
 
 /-- Why John's case is not forced without Trent: a set of positions that can be
 defended includes Aquinas, who defeats it over what believing is. -/
-def johnAnsweredByAquinas : Verdict withoutTrent where
-  finite := withoutTrentFinite
-  claim := .notSkeptical ⟨.johannine, by decide⟩ ⟨.aquinas, by decide⟩
-    (Witness.listSub _ [.aquinas, .dominical, .gospel, .lexical, .romansOnTheWord])
-  checked := by decide +kernel
+declare_verdict johnAnsweredByAquinas for withoutTrent :
+    .notSkeptical ⟨.johannine, by decide⟩ ⟨.aquinas, by decide⟩
+      (Witness.listSub _ [.aquinas, .dominical, .gospel, .lexical, .romansOnTheWord])
+  /-- **Nor from John.** Remove both of Trent's parties from the hearing: its
+  case, and its definition read as a claim about Paul's word. Aquinas remains, and
+  Trent describes justifying faith as he does: the believing Jesus names in John
+  6:29 is faith formed by charity, not bare trust. A reader can hold Aquinas's
+  reading consistently and answer every objection raised here. John's case cannot
+  be held with it.
 
-/-- **Nor from John.** Remove both of Trent's parties from the hearing: its
-case, and its definition read as a claim about Paul's word. Aquinas remains, and
-Trent describes justifying faith as he does: the believing Jesus names in John
-6:29 is faith formed by charity, not bare trust. A reader can hold Aquinas's
-reading consistently and answer every objection raised here. John's case cannot
-be held with it.
-
-Without the Council, John 6:29 still does not compel faith
-alone, because what believing is remains contested. It does not show that
-Aquinas's reading wins. John's case can be held just as consistently. Luther's
-argument and Aquinas's each defeat the other, and neither is removed. -/
-@[headline]
-theorem sola_fide_from_john_not_forced_without_trent :
-    ¬ SkepticallyAccepted withoutTrent.defeats ⟨.johannine, by decide⟩ :=
-  johnAnsweredByAquinas.holds
+  Without the Council, John 6:29 still does not compel faith
+  alone, because what believing is remains contested. It does not show that
+  Aquinas's reading wins. John's case can be held just as consistently. Luther's
+  argument and Aquinas's each defeat the other, and neither is removed. -/
+  proves @[headline] sola_fide_from_john_not_forced_without_trent
 
 #print axioms sola_fide_from_john_not_forced_without_trent
 

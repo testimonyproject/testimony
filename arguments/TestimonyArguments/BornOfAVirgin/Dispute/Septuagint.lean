@@ -1,11 +1,6 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.Meanings.BornOfAVirgin
 import TestimonyArguments.BornOfAVirgin.Results.Septuagint
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
-import Testimony.Logic.Map
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Septuagint — what the Septuagint's word meant
@@ -481,20 +476,32 @@ def septuagintPartyNode : SeptuagintParty → ArgumentPackage Claim
 
 /-- The dispute over the Septuagint's word: every party's premises have a model,
 every party establishes its conclusion, and every party's inferences are
-rated. -/
-@[bornOfAVirginDefs]
-def septuagintDispute : Dispute Claim SeptuagintParty where
-  node := septuagintPartyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .witness => septuagintWitness_establishes
-    | .drift => driftObjection_establishes
-    | .usage => usageCase_establishes
-    | .laws => lawsCase_establishes
-    | .dinah => dinahCase_establishes
-    | .miller => millerCase_establishes
-  rated i := by
-    cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
+rated. Each party's weakest link is at the bottom, but the status reading's,
+one step up. -/
+declare_dispute septuagintDispute := septuagintPartyNode using bornOfAVirginDefs
+  /-- **Who defeats whom**, all thirty-six pairs: Wegner defeats the witness,
+  Rico and Gentry and the laws, and each defeats him back; so does Miller, and
+  each defeats him back; the status reading defeats Wegner and Miller, and
+  neither defeats it; and nothing else. Every cell is computed from what the
+  parties hold by `Horn.defeats?` and checked by the kernel. -/
+  defeats
+    [ (.drift, .witness), (.witness, .drift), (.drift, .usage), (.usage, .drift)
+    , (.drift, .laws), (.laws, .drift), (.dinah, .drift)
+    , (.miller, .witness), (.witness, .miller), (.miller, .usage), (.usage, .miller)
+    , (.miller, .laws), (.laws, .miller), (.dinah, .miller) ]
+  /-- **One support**, in all thirty-six pairs: Rico and Gentry's conclusion is the
+  witness's contested ground, that "virgin" is a sense of παρθένος. The library
+  draws a support only where one party's conclusion is, word for word, another's
+  premise. The laws and the status reading reach the witness's ground through a
+  definition, so no support is drawn from them, though they lead to the same
+  ground. Every cell is computed
+  by `supports?` and checked by the kernel. -/
+  supports [(.usage, .witness)]
+  /-- **No case is part of another's** here, in all thirty-six pairs, except each
+  party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
+  partOf []
+  /-- The dispute drawn: who defeats whom, and the one support. -/
+  map septuagintMap
 
 /-- **The witness, Rico and Gentry, the laws and the status reading stand
 together**, on the reading Justin gives the elders' Greek, extended to the
@@ -504,112 +511,12 @@ theorem septuagint_stands_with_the_usage :
     septuagintDispute.StandTogether [.witness, .usage, .laws, .dinah] := by
   satisfied_by virginConceivesReading [Dispute.StandTogether, bornOfAVirginDefs]
 
-/-- The defeats of the dispute, as a table. -/
-def septuagintPartyDefeats : SeptuagintParty → SeptuagintParty → Prop
-  | .drift, .witness => True
-  | .witness, .drift => True
-  | .drift, .usage => True
-  | .usage, .drift => True
-  | .drift, .laws => True
-  | .laws, .drift => True
-  | .dinah, .drift => True
-  | .miller, .witness => True
-  | .witness, .miller => True
-  | .miller, .usage => True
-  | .usage, .miller => True
-  | .miller, .laws => True
-  | .laws, .miller => True
-  | .dinah, .miller => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel septuagintPartyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold septuagintPartyDefeats <;> infer_instance
-
-/-- Each party's strength, its weakest link: the bottom for every party but the
-status reading, one step up. -/
-def septuagintPartyStrength : SeptuagintParty → ℕ
-  | .dinah => 1
-  | _ => 0
-
-/-- Each party's weakest link, as computed. -/
-theorem septuagintPartyNode_strength :
-    ∀ i, (septuagintPartyNode i).strength = septuagintPartyStrength i
-  | .witness => septuagintWitness_strength
-  | .drift => driftObjection_strength
-  | .usage => usageCase_strength
-  | .laws => lawsCase_strength
-  | .dinah => dinahCase_strength
-  | .miller => millerCase_strength
-
-prepare_clauses septuagintDisputeClauses for septuagintDispute
-
-/-- **Who defeats whom**, all thirty-six pairs: Wegner defeats the witness,
-Rico and Gentry and the laws, and each defeats him back; so does Miller, and
-each defeats him back; the status reading defeats Wegner and Miller, and
-neither defeats it; and nothing else. Every cell is computed from what the
-parties hold by `Horn.defeats?` and checked by the kernel. -/
-theorem septuagintDispute_defeats :
-    ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (septuagintPartyNode_strength i)
-    (septuagintPartyNode_strength j)
-    (septuagintDisputeClauses.spec i) (septuagintDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute in the form the verdict solver computes with. -/
-def septuagintFinite : Solver.Finite septuagintDispute.defeats where
-  parties := [.witness, .drift, .usage, .laws, .dinah, .miller]
-  complete i := by cases i <;> decide
-  defeats i j := decide (septuagintPartyDefeats i j)
-  spec i j := by rw [septuagintDispute_defeats]; simp
-
-/-- Who supports whom, as a table: Rico and Gentry lend the witness its ground. -/
-def septuagintPartySupports : SeptuagintParty → SeptuagintParty → Prop
-  | .usage, .witness => True
-  | _, _ => False
-
-/-- The support table is finite, so membership in it is decidable. -/
-instance : DecidableRel septuagintPartySupports := fun i j => by
-  cases i <;> cases j <;> unfold septuagintPartySupports <;> infer_instance
-
-/-- **One support**, in all thirty-six pairs: Rico and Gentry's conclusion is the
-witness's contested ground, that "virgin" is a sense of παρθένος. The library
-draws a support only where one party's conclusion is, word for word, another's
-premise. The laws and the status reading reach the witness's ground through a
-definition, so no support is drawn from them, though they lead to the same
-ground. Every cell is computed
-by `supports?` and checked by the kernel. -/
-theorem septuagintDispute_supports :
-    ∀ i j, septuagintDispute.supports i j ↔ septuagintPartySupports i j := by
-  intro i j
-  refine supports_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- **No case is part of another's** here, in all thirty-six pairs, except each
-party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
-theorem septuagintDispute_partOf : ∀ i j, septuagintDispute.partOf i j ↔ i = j := by
-  intro i j
-  refine partOf_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute drawn: who defeats whom, and the one support. -/
-def septuagintMap : ArgumentMap septuagintDispute where
-  finite := septuagintFinite
-  supports i j := decide (septuagintPartySupports i j)
-  supports_spec i j := by rw [septuagintDispute_supports]; simp
-  partOf i j := decide (i = j)
-  partOf_spec i j := by rw [septuagintDispute_partOf]; simp
-
 /-- Why the Septuagint's side prevails, in stages: the status reading first,
 which nothing defeats; then the witness, Rico and Gentry and the laws, whom it
 defends by defeating Wegner and Miller; and Wegner and Miller out, each defeated
 by the status reading. -/
-def septuagintHeardInStages : Verdict septuagintDispute where
-  finite := septuagintFinite
-  claim := .groundedExactly [[.dinah], [.witness, .usage, .laws]]
-    [(.drift, .dinah), (.miller, .dinah)]
-  checked := by decide +kernel
+declare_verdict septuagintHeardInStages for septuagintDispute :
+    .groundedExactly [[.dinah], [.witness, .usage, .laws]] [(.drift, .dinah), (.miller, .dinah)]
 
 /-- **The Septuagint's side prevails, and neither Wegner nor Miller does.**
 Nothing defeats the status reading of Genesis 34:3, because Wegner and Miller
@@ -626,35 +533,22 @@ theorem septuagint_prevails_over_wegner :
 
 /-- Why Miller from Genesis 34:3 cannot be defended: the status reading defeats
 him, and nothing answers it. -/
-def millerAnsweredByDinah : Verdict septuagintDispute where
-  finite := septuagintFinite
-  claim := .indefensible .miller [(.miller, .dinah)]
-  checked := by decide +kernel
-
-/-- **Miller from Genesis 34:3 cannot be defended.** No admissible set contains
-him: the status reading defeats him, and nothing defeats the status reading. His
-case denies what it concludes, that the word names Dinah in the sense "virgin";
-he attacks it back, and fails, being the weaker. -/
-@[headline]
-theorem miller_indefensible (S : Set SeptuagintParty)
-    (hS : Admissible septuagintDispute.defeats S) : SeptuagintParty.miller ∉ S :=
-  millerAnsweredByDinah.holds S hS
+declare_verdict millerAnsweredByDinah for septuagintDispute :
+    .indefensible .miller [(.miller, .dinah)]
+  /-- **Miller from Genesis 34:3 cannot be defended.** No admissible set contains
+  him: the status reading defeats him, and nothing defeats the status reading. His
+  case denies what it concludes, that the word names Dinah in the sense "virgin";
+  he attacks it back, and fails, being the weaker. -/
+  proves @[headline] miller_indefensible
 
 #print axioms miller_indefensible
 
 /-- Why Wegner on παρθένος cannot be defended: the status reading defeats him,
 and nothing answers it. -/
-def driftAnsweredByDinah : Verdict septuagintDispute where
-  finite := septuagintFinite
-  claim := .indefensible .drift [(.drift, .dinah)]
-  checked := by decide +kernel
-
-/-- **Wegner on παρθένος cannot be defended.** No admissible set contains it:
-the status reading defeats it, and nothing defeats the status reading. -/
-@[headline]
-theorem drift_indefensible (S : Set SeptuagintParty)
-    (hS : Admissible septuagintDispute.defeats S) : SeptuagintParty.drift ∉ S :=
-  driftAnsweredByDinah.holds S hS
+declare_verdict driftAnsweredByDinah for septuagintDispute : .indefensible .drift [(.drift, .dinah)]
+  /-- **Wegner on παρθένος cannot be defended.** No admissible set contains it:
+  the status reading defeats it, and nothing defeats the status reading. -/
+  proves @[headline] drift_indefensible
 
 #print axioms drift_indefensible
 

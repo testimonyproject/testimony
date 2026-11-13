@@ -1,5 +1,5 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.SolaFide.Hearings
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.SolaFide.JesusWords — what Jesus' own words say about faith and works
@@ -493,21 +493,26 @@ def wordsPartyNode : WordsParty → ArgumentPackage Claim
 
 /-- The debate over Jesus' words. For every position heard: its premises can be held
 without contradiction, its conclusion follows from them, and every step it uses
-is rated. -/
-@[solaFideDefs]
-def jesusWordsDispute : Dispute Claim WordsParty where
-  node := wordsPartyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .luke7 => dominicalCase_establishes
-    | .luke18 => luke18Case_establishes
-    | .trent => tridentineCase_establishes
-    | .matthew7Obedience => matthew7ObedienceCase_establishes
-    | .matthew7Faith => matthew7FaithCase_establishes
-    | .matthew19Way => matthew19WayCase_establishes
-    | .matthew19Legal => matthew19LegalCase_establishes
-  rated i := by
-    cases i <;> simp [solaFideDefs, Line.asPackage]
+is rated. Each position's weakest link is `disputed`. -/
+declare_dispute jesusWordsDispute := wordsPartyNode using solaFideDefs
+  /-- **Who defeats whom**, for all 49 pairs: four ties, and nothing else. Luke 7:50
+  and Trent defeat each other, and so do Luke 18 and Trent, over Trent's
+  definition of justification. Each reading of Matthew defeats its rival and is
+  defeated in return. Every answer is worked out from the positions' premises and
+  checked by machine. -/
+  defeats
+    [ (.luke7, .trent), (.trent, .luke7), (.luke18, .trent), (.trent, .luke18)
+    , (.matthew7Obedience, .matthew7Faith), (.matthew7Faith, .matthew7Obedience)
+    , (.matthew19Way, .matthew19Legal), (.matthew19Legal, .matthew19Way) ]
+  /-- **No position supports another, and no position's case is contained in
+  another's**, in any of the 49 pairs. Every answer is worked out and checked by
+  machine. -/
+  supports []
+  /-- Each position's case contains itself and no other. Every answer is worked out
+  and checked by machine. -/
+  partOf []
+  /-- The debate over Jesus' words drawn as a map: who defeats whom. -/
+  map jesusWordsMap
 
 /-- **Rome's readings of Matthew can be held together with Luke's sayings.** One
 consistent reading holds Luke 7:50 and Luke 18, that faith sufficed, and Rome's
@@ -534,81 +539,6 @@ theorem luke_stands_with_rome_on_matthew :
     jesusWordsDispute.StandTogether [.luke7, .luke18, .matthew7Obedience, .matthew19Way] := by
   satisfied_by lukeWithRomeOnMatthewReading [Dispute.StandTogether, solaFideDefs]
 
-/-- Who defeats whom, as a table. -/
-def wordsPartyDefeats : WordsParty → WordsParty → Prop
-  | .luke7, .trent => True
-  | .trent, .luke7 => True
-  | .luke18, .trent => True
-  | .trent, .luke18 => True
-  | .matthew7Obedience, .matthew7Faith => True
-  | .matthew7Faith, .matthew7Obedience => True
-  | .matthew19Way, .matthew19Legal => True
-  | .matthew19Legal, .matthew19Way => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel wordsPartyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold wordsPartyDefeats <;> infer_instance
-
-/-- Each position's weakest link: `disputed` for every one. -/
-def wordsPartyStrength : WordsParty → ℕ := fun _ => 0
-
-/-- Each position's weakest link, as worked out from its premises. -/
-theorem wordsPartyNode_strength : ∀ i, (wordsPartyNode i).strength = wordsPartyStrength i
-  | .luke7 => dominicalCase_strength
-  | .luke18 => luke18Case_strength
-  | .trent => tridentineCase_strength
-  | .matthew7Obedience => matthew7ObedienceCase_strength
-  | .matthew7Faith => matthew7FaithCase_strength
-  | .matthew19Way => matthew19WayCase_strength
-  | .matthew19Legal => matthew19LegalCase_strength
-
-prepare_clauses jesusWordsDisputeClauses for jesusWordsDispute
-
-/-- **Who defeats whom**, for all 49 pairs: four ties, and nothing else. Luke 7:50
-and Trent defeat each other, and so do Luke 18 and Trent, over Trent's
-definition of justification. Each reading of Matthew defeats its rival and is
-defeated in return. Every answer is worked out from the positions' premises and
-checked by machine. -/
-theorem jesusWordsDispute_defeats :
-    ∀ i j, jesusWordsDispute.defeats i j ↔ wordsPartyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (wordsPartyNode_strength i) (wordsPartyNode_strength j)
-    (jesusWordsDisputeClauses.spec i) (jesusWordsDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The debate in the form the solver works with. -/
-def jesusWordsFinite : Solver.Finite jesusWordsDispute.defeats where
-  parties :=
-    [ .luke7, .luke18, .trent, .matthew7Obedience, .matthew7Faith, .matthew19Way
-    , .matthew19Legal ]
-  complete i := by cases i <;> decide
-  defeats i j := decide (wordsPartyDefeats i j)
-  spec i j := by rw [jesusWordsDispute_defeats]; simp
-
-/-- **No position supports another, and no position's case is contained in
-another's**, in any of the 49 pairs. Every answer is worked out and checked by
-machine. -/
-theorem jesusWordsDispute_supports : ∀ i j, ¬ jesusWordsDispute.supports i j := by
-  intro i j
-  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> horn_certify
-
-/-- Each position's case contains itself and no other. Every answer is worked out
-and checked by machine. -/
-theorem jesusWordsDispute_partOf : ∀ i j, jesusWordsDispute.partOf i j ↔ i = j := by
-  intro i j
-  refine partOf_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The debate over Jesus' words drawn as a map: who defeats whom. -/
-def jesusWordsMap : ArgumentMap jesusWordsDispute where
-  finite := jesusWordsFinite
-  supports _ _ := false
-  supports_spec i j := by simp [jesusWordsDispute_supports i j]
-  partOf i j := decide (i = j)
-  partOf_spec i j := by rw [jesusWordsDispute_partOf]; simp
-
 /-! ### What the debate decides
 
 A few words recur. **Forced**: accepted however every tie is settled. **Can be
@@ -618,140 +548,99 @@ the same as false. -/
 
 /-- Why nothing is forced: every position has an attacker. Luke 7:50 and Luke 18
 each have Trent, Trent has Luke 7:50, and each reading of Matthew has its rival. -/
-def jesusWordsSettleNothing : Verdict jesusWordsDispute where
-  finite := jesusWordsFinite
-  claim := .nothingGrounded
-    [ (.luke7, .trent), (.luke18, .trent), (.trent, .luke7)
-    , (.matthew7Obedience, .matthew7Faith), (.matthew7Faith, .matthew7Obedience)
-    , (.matthew19Way, .matthew19Legal), (.matthew19Legal, .matthew19Way) ]
-  checked := by decide +kernel
+declare_verdict jesusWordsSettleNothing for jesusWordsDispute :
+    .nothingGrounded
+      [ (.luke7, .trent), (.luke18, .trent), (.trent, .luke7)
+      , (.matthew7Obedience, .matthew7Faith), (.matthew7Faith, .matthew7Obedience)
+      , (.matthew19Way, .matthew19Legal), (.matthew19Legal, .matthew19Way) ]
+  /-- **Heard together, Jesus' words force nothing.** Every position is in a tie the
+  debate cannot settle: each saying in Luke with Trent, over what justification
+  is, and each reading of Matthew with its rival. Every weakest link is
+  `disputed`, so no rating breaks a tie.
 
-/-- **Heard together, Jesus' words force nothing.** Every position is in a tie the
-debate cannot settle: each saying in Luke with Trent, over what justification
-is, and each reading of Matthew with its rival. Every weakest link is
-`disputed`, so no rating breaks a tie.
-
-It does not show that Jesus' words say nothing. Each position can be
-defended, and Trent accepts every word of Luke 18 (`trent_grants_the_parable`).
-What the debate cannot do is choose between readings rated alike. -/
-@[headline]
-theorem jesus_words_force_nothing : grounded jesusWordsDispute.defeats = ∅ :=
-  jesusWordsSettleNothing.holds
+  It does not show that Jesus' words say nothing. Each position can be
+  defended, and Trent accepts every word of Luke 18 (`trent_grants_the_parable`).
+  What the debate cannot do is choose between readings rated alike. -/
+  proves @[headline] jesus_words_force_nothing
 
 #print axioms jesus_words_force_nothing
 
 /-- Why Luke 18 can be defended: it can be held with Luke 7:50 and with Rome's
 readings of Matthew, and Trent, its one attacker, is defeated from within that
 set, by Luke 7:50 and by Luke 18 itself. -/
-def luke18StandsWithLuke7 : Verdict jesusWordsDispute where
-  finite := jesusWordsFinite
-  claim := .credulous .luke18 [.luke7, .luke18, .matthew7Obedience, .matthew19Way]
-  checked := by decide +kernel
-
-/-- **Luke 18 can be defended.** A consistent set of positions that answers every
-attack holds it, with Luke 7:50. Its only attacker is Trent, over Trent's
-definition of justification, and it defeats Trent in return. It does not
-conflict with either reading of Matthew. The set that holds it here holds Rome's
-readings of Matthew 7 and 19 as well (`luke_stands_with_rome_on_matthew`), and
-the set that holds Calvin's readings holds it too
-(`matthew7RomeAnsweredByCalvin`). -/
-@[headline]
-theorem luke18_defensible : CredulouslyAccepted jesusWordsDispute.defeats .luke18 :=
-  luke18StandsWithLuke7.holds
+declare_verdict luke18StandsWithLuke7 for jesusWordsDispute :
+    .credulous .luke18 [.luke7, .luke18, .matthew7Obedience, .matthew19Way]
+  /-- **Luke 18 can be defended.** A consistent set of positions that answers every
+  attack holds it, with Luke 7:50. Its only attacker is Trent, over Trent's
+  definition of justification, and it defeats Trent in return. It does not
+  conflict with either reading of Matthew. The set that holds it here holds Rome's
+  readings of Matthew 7 and 19 as well (`luke_stands_with_rome_on_matthew`), and
+  the set that holds Calvin's readings holds it too
+  (`matthew7RomeAnsweredByCalvin`). -/
+  proves @[headline] luke18_defensible
 
 #print axioms luke18_defensible
 
 /-- Why Luke 18 is not forced: a set of positions that can be defended includes
 Trent, and Trent defeats it. -/
-def luke18AnsweredByTrent : Verdict jesusWordsDispute where
-  finite := jesusWordsFinite
-  claim := .notSkeptical .luke18 .trent [.trent, .matthew7Obedience, .matthew19Way]
-  checked := by decide +kernel
-
-/-- **Nor is Luke 18 forced.** A consistent set of positions that answers every
-attack holds Trent, and cannot hold Luke 18 with it. What would decide it is the
-step from the plea to "faith suffices". That step is rated `disputed`, because
-Trent requires the dispositions of chapter 6 and condemns "nothing else is
-required" (canon 9). Behind the step is Trent's definition of justification
-(`whyLukeEighteenStandsAgainstTrent`). -/
-@[headline]
-theorem luke18_not_forced : ¬ SkepticallyAccepted jesusWordsDispute.defeats .luke18 :=
-  luke18AnsweredByTrent.holds
+declare_verdict luke18AnsweredByTrent for jesusWordsDispute :
+    .notSkeptical .luke18 .trent [.trent, .matthew7Obedience, .matthew19Way]
+  /-- **Nor is Luke 18 forced.** A consistent set of positions that answers every
+  attack holds Trent, and cannot hold Luke 18 with it. What would decide it is the
+  step from the plea to "faith suffices". That step is rated `disputed`, because
+  Trent requires the dispositions of chapter 6 and condemns "nothing else is
+  required" (canon 9). Behind the step is Trent's definition of justification
+  (`whyLukeEighteenStandsAgainstTrent`). -/
+  proves @[headline] luke18_not_forced
 
 #print axioms luke18_not_forced
 
 /-- Why Rome's reading of Matthew 7 is not forced: a set of positions that can be
 defended includes Calvin's reading, which defeats Rome's. -/
-def matthew7RomeAnsweredByCalvin : Verdict jesusWordsDispute where
-  finite := jesusWordsFinite
-  claim := .notSkeptical .matthew7Obedience .matthew7Faith
-    [.luke7, .luke18, .matthew7Faith, .matthew19Legal]
-  checked := by decide +kernel
-
-/-- **Rome's reading of Matthew 7 is not forced.** A consistent set of positions
-that answers every attack holds Calvin's reading, on which the doing includes
-believing and is not a condition of entry in its own right, and cannot hold
-Rome's with it. -/
-@[headline]
-theorem matthew7_rome_reading_not_forced :
-    ¬ SkepticallyAccepted jesusWordsDispute.defeats .matthew7Obedience :=
-  matthew7RomeAnsweredByCalvin.holds
+declare_verdict matthew7RomeAnsweredByCalvin for jesusWordsDispute :
+    .notSkeptical .matthew7Obedience .matthew7Faith
+      [.luke7, .luke18, .matthew7Faith, .matthew19Legal]
+  /-- **Rome's reading of Matthew 7 is not forced.** A consistent set of positions
+  that answers every attack holds Calvin's reading, on which the doing includes
+  believing and is not a condition of entry in its own right, and cannot hold
+  Rome's with it. -/
+  proves @[headline] matthew7_rome_reading_not_forced
 
 #print axioms matthew7_rome_reading_not_forced
 
 /-- Why Calvin's reading of Matthew 7 is not forced: a set of positions that can be
 defended includes Rome's reading, which defeats Calvin's. -/
-def matthew7CalvinAnsweredByRome : Verdict jesusWordsDispute where
-  finite := jesusWordsFinite
-  claim := .notSkeptical .matthew7Faith .matthew7Obedience
-    [.luke7, .luke18, .matthew7Obedience, .matthew19Way]
-  checked := by decide +kernel
-
-/-- **Nor is Calvin's.** A consistent set of positions that answers every attack
-holds Rome's reading, on which obedience is a condition of entry, and cannot
-hold Calvin's with it. Between the two readings of Matthew 7 the debate chooses
-neither, as the passage itself does not (`matthew7_leaves_the_ground_open`). -/
-@[headline]
-theorem matthew7_calvin_reading_not_forced :
-    ¬ SkepticallyAccepted jesusWordsDispute.defeats .matthew7Faith :=
-  matthew7CalvinAnsweredByRome.holds
+declare_verdict matthew7CalvinAnsweredByRome for jesusWordsDispute :
+    .notSkeptical .matthew7Faith .matthew7Obedience
+      [.luke7, .luke18, .matthew7Obedience, .matthew19Way]
+  /-- **Nor is Calvin's.** A consistent set of positions that answers every attack
+  holds Rome's reading, on which obedience is a condition of entry, and cannot
+  hold Calvin's with it. Between the two readings of Matthew 7 the debate chooses
+  neither, as the passage itself does not (`matthew7_leaves_the_ground_open`). -/
+  proves @[headline] matthew7_calvin_reading_not_forced
 
 #print axioms matthew7_calvin_reading_not_forced
 
 /-- Why Rome's reading of Matthew 19 is not forced: a set of positions that can be
 defended includes Calvin's reading, which defeats Rome's. -/
-def matthew19RomeAnsweredByCalvin : Verdict jesusWordsDispute where
-  finite := jesusWordsFinite
-  claim := .notSkeptical .matthew19Way .matthew19Legal
-    [.luke7, .luke18, .matthew7Faith, .matthew19Legal]
-  checked := by decide +kernel
-
-/-- **Rome's reading of Matthew 19 is not forced.** A consistent set of positions
-that answers every attack holds Calvin's reading, a reply on the law's own terms
-that shows the young man what he has not kept, and cannot hold Rome's with it. -/
-@[headline]
-theorem matthew19_rome_reading_not_forced :
-    ¬ SkepticallyAccepted jesusWordsDispute.defeats .matthew19Way :=
-  matthew19RomeAnsweredByCalvin.holds
+declare_verdict matthew19RomeAnsweredByCalvin for jesusWordsDispute :
+    .notSkeptical .matthew19Way .matthew19Legal [.luke7, .luke18, .matthew7Faith, .matthew19Legal]
+  /-- **Rome's reading of Matthew 19 is not forced.** A consistent set of positions
+  that answers every attack holds Calvin's reading, a reply on the law's own terms
+  that shows the young man what he has not kept, and cannot hold Rome's with it. -/
+  proves @[headline] matthew19_rome_reading_not_forced
 
 #print axioms matthew19_rome_reading_not_forced
 
 /-- Why Calvin's reading of Matthew 19 is not forced: a set of positions that can be
 defended includes Rome's reading, which defeats Calvin's. -/
-def matthew19CalvinAnsweredByRome : Verdict jesusWordsDispute where
-  finite := jesusWordsFinite
-  claim := .notSkeptical .matthew19Legal .matthew19Way
-    [.luke7, .luke18, .matthew7Obedience, .matthew19Way]
-  checked := by decide +kernel
-
-/-- **Nor is Calvin's.** A consistent set of positions that answers every attack
-holds Rome's reading, on which the commandments are the way to life, and cannot
-hold Calvin's with it. Between the two readings of Matthew 19 the debate chooses
-neither (`matthew19_leaves_the_way_open`). -/
-@[headline]
-theorem matthew19_calvin_reading_not_forced :
-    ¬ SkepticallyAccepted jesusWordsDispute.defeats .matthew19Legal :=
-  matthew19CalvinAnsweredByRome.holds
+declare_verdict matthew19CalvinAnsweredByRome for jesusWordsDispute :
+    .notSkeptical .matthew19Legal .matthew19Way [.luke7, .luke18, .matthew7Obedience, .matthew19Way]
+  /-- **Nor is Calvin's.** A consistent set of positions that answers every attack
+  holds Rome's reading, on which the commandments are the way to life, and cannot
+  hold Calvin's with it. Between the two readings of Matthew 19 the debate chooses
+  neither (`matthew19_leaves_the_way_open`). -/
+  proves @[headline] matthew19_calvin_reading_not_forced
 
 #print axioms matthew19_calvin_reading_not_forced
 
@@ -759,37 +648,29 @@ theorem matthew19_calvin_reading_not_forced :
 
 /-- Every position but Trent: Luke's two sayings, and both readings of each passage
 in Matthew. -/
-abbrev jesusWordsWithoutTrent := jesusWordsDispute.restrict (· ≠ WordsParty.trent)
-
-/-- That hearing, in the form the solver works with. -/
-abbrev jesusWordsWithoutTrentFinite := jesusWordsFinite.restrict (· ≠ WordsParty.trent)
+declare_hearing jesusWordsWithoutTrent := jesusWordsDispute except [WordsParty.trent]
 
 /-- How the hearing is settled. With Trent not heard, nothing attacks Luke 7:50 or
 Luke 18, so both are accepted first. Nothing joins them, because each reading of
 Matthew still has its rival. -/
-def withoutTrentLukeSettles : Verdict jesusWordsWithoutTrent where
-  finite := jesusWordsWithoutTrentFinite
-  claim := .groundedExactly [Witness.listSub _ [.luke7, .luke18]]
-    (Witness.Table.sub _
-      [ (.matthew7Obedience, .matthew7Faith), (.matthew7Faith, .matthew7Obedience)
-      , (.matthew19Way, .matthew19Legal), (.matthew19Legal, .matthew19Way) ])
-  checked := by decide +kernel
+declare_verdict withoutTrentLukeSettles for jesusWordsWithoutTrent :
+    .groundedExactly [Witness.listSub _ [.luke7, .luke18]]
+      (Witness.Table.sub _
+        [ (.matthew7Obedience, .matthew7Faith), (.matthew7Faith, .matthew7Obedience)
+        , (.matthew19Way, .matthew19Legal), (.matthew19Legal, .matthew19Way) ])
+  /-- **Without Trent, Luke's two sayings are forced, and Matthew is not.** With Trent
+  not heard, nothing attacks "your faith has saved you" or the tax collector
+  justified. That faith suffices is forced twice, from Jesus' own words. The
+  readings of Matthew 7 and 19 still tie, each with its rival, because they
+  conflict with each other and not with Luke.
 
-/-- **Without Trent, Luke's two sayings are forced, and Matthew is not.** With Trent
-not heard, nothing attacks "your faith has saved you" or the tax collector
-justified. That faith suffices is forced twice, from Jesus' own words. The
-readings of Matthew 7 and 19 still tie, each with its rival, because they
-conflict with each other and not with Luke.
-
-It does not show that faith *alone* is forced. Luke's sayings claim
-that faith sufficed, not that nothing else is a condition. Rome's readings of
-Matthew, which say that salvation is not apart from works, can be held with them
-(`luke_stands_with_rome_on_matthew`). -/
-@[headline]
-theorem without_trent_luke_is_forced :
-    grounded jesusWordsWithoutTrent.defeats =
-      Solver.toSet (Witness.listSub _ [.luke7, .luke18]) :=
-  withoutTrentLukeSettles.holds
+  It does not show that faith *alone* is forced. Luke's sayings claim
+  that faith sufficed, not that nothing else is a condition. Rome's readings of
+  Matthew, which say that salvation is not apart from works, can be held with them
+  (`luke_stands_with_rome_on_matthew`). -/
+  proves @[headline] without_trent_luke_is_forced :
+      grounded jesusWordsWithoutTrent.defeats =
+    Solver.toSet (Witness.listSub _ [.luke7, .luke18])
 
 #print axioms without_trent_luke_is_forced
 
