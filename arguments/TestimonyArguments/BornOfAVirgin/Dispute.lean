@@ -1,11 +1,6 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.Meanings.BornOfAVirgin
 import TestimonyArguments.BornOfAVirgin.Results
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
-import Testimony.Logic.Map
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14
@@ -460,19 +455,32 @@ def partyNode : Party → ArgumentPackage Claim
 
 /-- The dispute over Isaiah 7:14: every party's premises have a model, every
 party establishes its conclusion, and every party's inferences are rated. -/
-@[bornOfAVirginDefs]
-def isaiahDispute : Dispute Claim Party where
-  node := partyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .scriptural => christian_establishes
-    | .critical => criticalDenial_establishes
-    | .berry => berryObjection_establishes
-    | .postell => postellParity_establishes
-    | .motyer => motyerReply_establishes
-    | .micah => micahParity_establishes
-  rated i := by
-    cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
+declare_dispute isaiahDispute := partyNode using bornOfAVirginDefs
+  /-- **Who defeats whom**, all thirty-six pairs: the critic and the scriptural
+  reading defeat each other; each reply defeats the critic; the critic defeats
+  Berry and Motyer back, but neither of Postell's counterexamples; nothing
+  else.
+
+  Every cell is computed from the parties' premises by `Horn.defeats?` and
+  checked by the kernel; the table is what the computation is checked
+  against. -/
+  defeats
+    [ (.critical, .scriptural), (.scriptural, .critical), (.berry, .critical)
+    , (.postell, .critical), (.motyer, .critical), (.micah, .critical)
+    , (.critical, .berry), (.critical, .motyer) ]
+  /-- **Nothing supports anything** in the Isaiah dispute, in all thirty-six pairs:
+  no party's conclusion entails a claim another rests on. Several conclusions do
+  entail other parties' inference steps — Berry's and Postell's entail each
+  other's, by entailing the step's own conclusion, and the replies entail the
+  critic's, vacuously — but a step is not a claim, and neither kind of
+  entailment lends a premise (see `Testimony.Logic.Support`). Every cell is
+  computed by `supports?` and checked by the kernel. -/
+  supports []
+  /-- **No case is part of another's** here, in all thirty-six pairs, except each
+  party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
+  partOf []
+  /-- The dispute drawn: who defeats whom. -/
+  map isaiahMap
 
 /-- **The scriptural reading and all four replies stand together**, in the
 world Motyer describes: none of the five defeats another. One fact, settling
@@ -481,98 +489,13 @@ theorem replies_stand_with_the_scriptural_reading :
     isaiahDispute.StandTogether [.scriptural, .berry, .postell, .motyer, .micah] := by
   satisfied_by motyerReading [Dispute.StandTogether, bornOfAVirginDefs]
 
-/-- The defeats of the dispute, as a table. -/
-def partyDefeats : Party → Party → Prop
-  | .critical, .scriptural => True
-  | .scriptural, .critical => True
-  | .berry, .critical => True
-  | .postell, .critical => True
-  | .motyer, .critical => True
-  | .micah, .critical => True
-  | .critical, .berry => True
-  | .critical, .motyer => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel partyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold partyDefeats <;> infer_instance
-
-/-- Each party's weakest link. -/
-@[bornOfAVirginDefs]
-def partyStrength : Party → ℕ
-  | .postell => 1
-  | .micah => 1
-  | _ => 0
-
-/-- Each party's strength is what `partyStrength` says. -/
-theorem partyNode_strength : ∀ i, (partyNode i).strength = partyStrength i
-  | .scriptural => christian_strength
-  | .critical => criticalDenial_strength
-  | .berry => berryObjection_strength
-  | .postell => postellParity_strength
-  | .motyer => motyerReply_strength
-  | .micah => micahParity_strength
-
-prepare_clauses isaiahDisputeClauses for isaiahDispute
-
-/-- **Who defeats whom**, all thirty-six pairs: the critic and the scriptural
-reading defeat each other; each reply defeats the critic; the critic defeats
-Berry and Motyer back, but neither of Postell's counterexamples; nothing
-else.
-
-Every cell is computed from the parties' premises by `Horn.defeats?` and
-checked by the kernel; the table is what the computation is checked
-against. -/
-theorem isaiahDispute_defeats : ∀ i j, isaiahDispute.defeats i j ↔ partyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (partyNode_strength i) (partyNode_strength j)
-    (isaiahDisputeClauses.spec i) (isaiahDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute in the form the verdict solver computes with. -/
-def isaiahFinite : Solver.Finite isaiahDispute.defeats where
-  parties := [.scriptural, .critical, .berry, .postell, .motyer, .micah]
-  complete i := by cases i <;> decide
-  defeats i j := decide (partyDefeats i j)
-  spec i j := by rw [isaiahDispute_defeats]; simp
-
-/-- **Nothing supports anything** in the Isaiah dispute, in all thirty-six pairs:
-no party's conclusion entails a claim another rests on. Several conclusions do
-entail other parties' inference steps — Berry's and Postell's entail each
-other's, by entailing the step's own conclusion, and the replies entail the
-critic's, vacuously — but a step is not a claim, and neither kind of
-entailment lends a premise (see `Testimony.Logic.Support`). Every cell is
-computed by `supports?` and checked by the kernel. -/
-theorem isaiahDispute_supports : ∀ i j, ¬ isaiahDispute.supports i j := by
-  intro i j
-  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> horn_certify
-
-/-- **No case is part of another's** here, in all thirty-six pairs, except each
-party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
-theorem isaiahDispute_partOf : ∀ i j, isaiahDispute.partOf i j ↔ i = j := by
-  intro i j
-  refine partOf_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute drawn: who defeats whom. -/
-def isaiahMap : ArgumentMap isaiahDispute where
-  finite := isaiahFinite
-  supports _ _ := false
-  supports_spec i j := by simp [isaiahDispute_supports i j]
-  partOf i j := decide (i = j)
-  partOf_spec i j := by rw [isaiahDispute_partOf]; simp
-
 /-- How the scriptural reading prevails, in stages: nothing attacks Postell's
 two counterexamples, so they come first; they answer the critic, the only party
 that attacks the scriptural reading, Berry and Motyer, so those three come next.
 And the critic does not join them: the scriptural reading attacks it, and nothing
 among the five answers the scriptural reading. -/
-def repliesHeardInStages : Verdict isaiahDispute where
-  finite := isaiahFinite
-  claim := .groundedExactly [[.postell, .micah], [.scriptural, .berry, .motyer]]
-    [(.critical, .scriptural)]
-  checked := by decide +kernel
+declare_verdict repliesHeardInStages for isaiahDispute :
+    .groundedExactly [[.postell, .micah], [.scriptural, .berry, .motyer]] [(.critical, .scriptural)]
 
 /-- **Heard out, the scriptural reading prevails.** Nothing defeats either of
 Postell's counterexamples, so both are in the grounded extension from the first
@@ -589,17 +512,11 @@ theorem scriptural_reading_prevails_once_replies_are_heard :
 
 /-- Why the critical denial cannot be defended: Postell attacks it, and nothing
 answers Postell. -/
-def criticAnsweredByPostell : Verdict isaiahDispute where
-  finite := isaiahFinite
-  claim := .indefensible .critical [(.critical, .postell)]
-  checked := by decide +kernel
-
-/-- **The critical denial cannot be defended.** No admissible set contains it:
-Postell defeats it, and nothing defeats Postell. -/
-@[headline]
-theorem critical_denial_indefensible (S : Set Party)
-    (hS : Admissible isaiahDispute.defeats S) : Party.critical ∉ S :=
-  criticAnsweredByPostell.holds S hS
+declare_verdict criticAnsweredByPostell for isaiahDispute :
+    .indefensible .critical [(.critical, .postell)]
+  /-- **The critical denial cannot be defended.** No admissible set contains it:
+  Postell defeats it, and nothing defeats Postell. -/
+  proves @[headline] critical_denial_indefensible
 
 #print axioms critical_denial_indefensible
 
@@ -620,53 +537,40 @@ The same dispute with some parties not heard. Each hearing is a restriction of
 every party has a defeater, and so nothing prevails. -/
 
 /-- The scriptural reading and the critic alone. -/
-abbrev unanswered := isaiahDispute.restrict (· ∈ [Party.scriptural, .critical])
+declare_hearing unanswered := isaiahDispute only [Party.scriptural, .critical]
 
 /-- Why nothing prevails unanswered: the two defeat each other. -/
-def eachDefeatsTheOther : Verdict unanswered where
-  finite := isaiahFinite.restrict (· ∈ [Party.scriptural, .critical])
-  claim := .nothingGrounded
-    (Witness.Table.sub _ [(.scriptural, .critical), (.critical, .scriptural)])
-  checked := by decide +kernel
-
-/-- **Unanswered, nothing prevails.** The scriptural reading and the critical
-denial defeat each other, so neither is forced, and the grounded extension is
-empty. -/
-@[headline]
-theorem nothing_prevails_unanswered : grounded unanswered.defeats = ∅ :=
-  eachDefeatsTheOther.holds
+declare_verdict eachDefeatsTheOther for unanswered :
+    .nothingGrounded (Witness.Table.sub _ [(.scriptural, .critical), (.critical, .scriptural)])
+  /-- **Unanswered, nothing prevails.** The scriptural reading and the critical
+  denial defeat each other, so neither is forced, and the grounded extension is
+  empty. -/
+  proves @[headline] nothing_prevails_unanswered
 
 #print axioms nothing_prevails_unanswered
 
 /-- The scriptural reading, the critic, and Motyer. -/
-abbrev motyerAlone := isaiahDispute.restrict (· ∈ [Party.scriptural, .critical, .motyer])
+declare_hearing motyerAlone := isaiahDispute only [Party.scriptural, .critical, .motyer]
 
 /-- Why Motyer alone does not settle it: a defeater for each of the three. -/
-def motyerTiesWithTheCritic : Verdict motyerAlone where
-  finite := isaiahFinite.restrict (· ∈ [Party.scriptural, .critical, .motyer])
-  claim := .nothingGrounded (Witness.Table.sub _
-    [(.scriptural, .critical), (.critical, .scriptural), (.motyer, .critical)])
-  checked := by decide +kernel
-
-/-- **Motyer alone does not settle it.** He and the critic defeat each other, as
-the scriptural reading and the critic do, so nothing is forced. His inference is
-contested as the critic's premises are, and a contested reply cannot carry the
-verdict alone. -/
-@[headline]
-theorem nothing_prevails_on_motyer_alone : grounded motyerAlone.defeats = ∅ :=
-  motyerTiesWithTheCritic.holds
+declare_verdict motyerTiesWithTheCritic for motyerAlone :
+    .nothingGrounded (Witness.Table.sub _
+      [(.scriptural, .critical), (.critical, .scriptural), (.motyer, .critical)])
+  /-- **Motyer alone does not settle it.** He and the critic defeat each other, as
+  the scriptural reading and the critic do, so nothing is forced. His inference is
+  contested as the critic's premises are, and a contested reply cannot carry the
+  verdict alone. -/
+  proves @[headline] nothing_prevails_on_motyer_alone
 
 #print axioms nothing_prevails_on_motyer_alone
 
 /-- Every party but Postell's Isaiah counterexample. -/
-abbrev withoutPostell := isaiahDispute.restrict (· ≠ Party.postell)
+declare_hearing withoutPostell := isaiahDispute except [Party.postell]
 
 /-- How the scriptural reading prevails without Postell's Isaiah argument, in
 stages: the Micah counterexample first, then the three it defends. -/
-def micahCarriesTheVerdict : Verdict withoutPostell where
-  finite := isaiahFinite.restrict (· ≠ Party.postell)
-  claim := .grounded [Witness.listSub _ [.micah], Witness.listSub _ [.scriptural, .berry, .motyer]]
-  checked := by decide +kernel
+declare_verdict micahCarriesTheVerdict for withoutPostell :
+    .grounded [Witness.listSub _ [.micah], Witness.listSub _ [.scriptural, .berry, .motyer]]
 
 /-- **Without Postell's Isaiah argument, the scriptural reading still
 prevails.** His Micah counterexample is defeated by nothing, and it defends the
@@ -674,34 +578,27 @@ scriptural reading against the critic, as the Isaiah argument did. An attack on
 the grounds of either counterexample leaves the verdict standing. -/
 @[headline]
 theorem scriptural_reading_prevails_without_postell :
-    (⟨.scriptural, by decide⟩ : {i // i ≠ Party.postell}) ∈
+    (⟨.scriptural, by decide⟩ : {i // i ∉ [Party.postell]}) ∈
       grounded withoutPostell.defeats :=
   micahCarriesTheVerdict.holds _ (by decide)
 
 #print axioms scriptural_reading_prevails_without_postell
 
 /-- Every party but the two counterexamples. -/
-abbrev withoutParity :=
-  isaiahDispute.restrict (· ∉ [Party.postell, .micah])
+declare_hearing withoutParity := isaiahDispute except [Party.postell, .micah]
 
 /-- Why nothing prevails without the counterexamples: the critic defeats every
 reply it faces, and the replies defeat it. -/
-def everyReplyTiesWithTheCritic : Verdict withoutParity where
-  finite := isaiahFinite.restrict (· ∉ [Party.postell, .micah])
-  claim := .nothingGrounded (Witness.Table.sub _
-    [(.scriptural, .critical), (.critical, .scriptural), (.berry, .critical),
-      (.motyer, .critical)])
-  checked := by decide +kernel
-
-/-- **Without the counterexamples, nothing prevails.** Berry and Motyer each tie
-with the critic, as the scriptural reading does, so every party is defeated by
-someone. The verdict rests on the one kind of reply the critic cannot answer —
-an oracle on the Assyrian timeline, read messianically — and so on the rating
-of that inference. -/
-@[headline]
-theorem nothing_prevails_without_the_counterexamples :
-    grounded withoutParity.defeats = ∅ :=
-  everyReplyTiesWithTheCritic.holds
+declare_verdict everyReplyTiesWithTheCritic for withoutParity :
+    .nothingGrounded (Witness.Table.sub _
+      [(.scriptural, .critical), (.critical, .scriptural), (.berry, .critical),
+        (.motyer, .critical)])
+  /-- **Without the counterexamples, nothing prevails.** Berry and Motyer each tie
+  with the critic, as the scriptural reading does, so every party is defeated by
+  someone. The verdict rests on the one kind of reply the critic cannot answer —
+  an oracle on the Assyrian timeline, read messianically — and so on the rating
+  of that inference. -/
+  proves @[headline] nothing_prevails_without_the_counterexamples
 
 #print axioms nothing_prevails_without_the_counterexamples
 

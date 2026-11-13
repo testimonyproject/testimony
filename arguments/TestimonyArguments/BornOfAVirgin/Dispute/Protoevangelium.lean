@@ -1,9 +1,5 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.BornOfAVirgin.Dispute.Genesis
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium — the promise, and its fulfilment
@@ -336,82 +332,29 @@ def promisePartyNode : PromiseParty → ArgumentPackage Claim
 
 /-- The dispute over whether Genesis 3:15 is a promise: every party's premises
 have a model, every party establishes its conclusion, and every party's
-inferences are rated. -/
-@[bornOfAVirginDefs]
-def promiseDispute : Dispute Claim PromiseParty where
-  node := promisePartyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .fulfilment => fulfilmentCase_establishes
-    | .westermann => westermannCase_establishes
-    | .syntax => syntaxCase_establishes
-    | .scene => sceneCase_establishes
-  rated i := by
-    cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
-
-/-- The defeats of the dispute, as a table: Westermann and each of the others
-defeat each other. -/
-def promisePartyDefeats : PromiseParty → PromiseParty → Prop
-  | .fulfilment, .westermann => True
-  | .westermann, .fulfilment => True
-  | .syntax, .westermann => True
-  | .westermann, .syntax => True
-  | .scene, .westermann => True
-  | .westermann, .scene => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel promisePartyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold promisePartyDefeats <;> infer_instance
-
-/-- Every party's weakest link ranks at the bottom. -/
-theorem promisePartyNode_strength : ∀ i, (promisePartyNode i).strength = 0
-  | .fulfilment => fulfilmentCase_strength
-  | .westermann => westermannCase_strength
-  | .syntax => syntaxCase_strength
-  | .scene => sceneCase_strength
-
-prepare_clauses promiseDisputeClauses for promiseDispute
-
-/-- **Who defeats whom**, all sixteen pairs: Westermann defeats the fulfilment,
-the syntax and the scene, and each defeats him back; and nothing else. Every cell is computed
-from what the parties hold by `Horn.defeats?` and checked by the kernel. -/
-theorem promiseDispute_defeats :
-    ∀ i j, promiseDispute.defeats i j ↔ promisePartyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (promisePartyNode_strength i) (promisePartyNode_strength j)
-    (promiseDisputeClauses.spec i) (promiseDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute in the form the verdict solver computes with. -/
-def promiseFinite : Solver.Finite promiseDispute.defeats where
-  parties := [.fulfilment, .westermann, .syntax, .scene]
-  complete i := by cases i <;> decide
-  defeats i j := decide (promisePartyDefeats i j)
-  spec i j := by rw [promiseDispute_defeats]; simp
+inferences are rated. Every party's weakest link ranks at the bottom. -/
+declare_dispute promiseDispute := promisePartyNode using bornOfAVirginDefs
+  /-- **Who defeats whom**, all sixteen pairs: Westermann defeats the fulfilment,
+  the syntax and the scene, and each defeats him back; and nothing else. Every cell is computed
+  from what the parties hold by `Horn.defeats?` and checked by the kernel. -/
+  defeats
+    [ (.fulfilment, .westermann), (.westermann, .fulfilment), (.syntax, .westermann)
+    , (.westermann, .syntax), (.scene, .westermann), (.westermann, .scene) ]
 
 /-- Why nothing prevails: every party has a defeater. -/
-def promiseStandoff : Verdict promiseDispute where
-  finite := promiseFinite
-  claim := .nothingGrounded
-    [ (.fulfilment, .westermann), (.westermann, .fulfilment), (.syntax, .westermann)
-    , (.scene, .westermann) ]
-  checked := by decide +kernel
-
-/-- **As the evidence weighs it, nothing prevails**: Westermann defeats the
-fulfilment, the syntax and the scene, each defeats him back, and none outranks
-another. -/
-@[headline]
-theorem nothing_prevails_over_the_promise : grounded promiseDispute.defeats = ∅ :=
-  promiseStandoff.holds
+declare_verdict promiseStandoff for promiseDispute :
+    .nothingGrounded
+      [ (.fulfilment, .westermann), (.westermann, .fulfilment), (.syntax, .westermann)
+      , (.scene, .westermann) ]
+  /-- **As the evidence weighs it, nothing prevails**: Westermann defeats the
+  fulfilment, the syntax and the scene, each defeats him back, and none outranks
+  another. -/
+  proves @[headline] nothing_prevails_over_the_promise
 
 #print axioms nothing_prevails_over_the_promise
 
 /-- Why the fulfilment with the syntax and the scene is one resolution. -/
-def fulfilmentAlone : Verdict promiseDispute where
-  finite := promiseFinite
-  claim := .preferred [.fulfilment, .syntax, .scene]
-  checked := by decide +kernel
+declare_verdict fulfilmentAlone for promiseDispute : .preferred [.fulfilment, .syntax, .scene]
 
 /-- **The fulfilment can be defended, with the syntax and the scene**: none of
 the three attacks another, and each answers Westermann, the only party that
@@ -426,10 +369,7 @@ theorem fulfilment_is_one_resolution :
 #print axioms fulfilment_is_one_resolution
 
 /-- Why Westermann is the other resolution. -/
-def westermannAlone : Verdict promiseDispute where
-  finite := promiseFinite
-  claim := .preferred [.westermann]
-  checked := by decide +kernel
+declare_verdict westermannAlone for promiseDispute : .preferred [.westermann]
 
 /-- **So can Westermann**, as the evidence weighs it. -/
 @[headline]

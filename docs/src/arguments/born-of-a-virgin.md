@@ -8010,74 +8010,6 @@ def isaiahDispute : Dispute Claim Party :=
     rated := isaiahDispute._proof_9 }
 ```
 
-<a id="replies_stand_with_the_scriptural_reading"></a>
-**`replies_stand_with_the_scriptural_reading`**
-
-**The scriptural reading and all four replies stand together**, in the
-world Motyer describes: none of the five defeats another. One fact, settling
-twenty ordered pairs.
-
-```lean
-theorem replies_stand_with_the_scriptural_reading :
-    isaiahDispute.StandTogether [Party.scriptural, Party.berry, Party.postell,
-    Party.motyer, Party.micah]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="partyDefeats"></a>
-**`partyDefeats`**
-
-The defeats of the dispute, as a table.
-
-```lean
-def partyDefeats : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.critical, Party.scriptural => True
-    | Party.scriptural, Party.critical => True
-    | Party.berry, Party.critical => True
-    | Party.postell, Party.critical => True
-    | Party.motyer, Party.critical => True
-    | Party.micah, Party.critical => True
-    | Party.critical, Party.berry => True
-    | Party.critical, Party.motyer => True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelPartyPartyDefeats"></a>
-**`instDecidableRelPartyPartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
-```
-
-<a id="partyStrength"></a>
-**`partyStrength`**
-
-Each party's weakest link.
-
-```lean
-def partyStrength : Party → ℕ :=
-  fun x =>
-    match x with
-    | Party.postell => 1
-    | Party.micah => 1
-    | x => 0
-```
-
-<a id="partyNode_strength"></a>
-**`partyNode_strength`**
-
-Each party's strength is what `partyStrength` says.
-
-```lean
-theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
-    partyStrength i
--- axioms: propext
-```
-
 <a id="isaiahDispute_defeats"></a>
 **`isaiahDispute_defeats`**
 
@@ -8092,25 +8024,12 @@ against.
 
 ```lean
 theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
-    partyDefeats i j
+    (i, j) ∈ [(Party.critical, Party.scriptural), (Party.scriptural,
+    Party.critical), (Party.berry, Party.critical), (Party.postell,
+    Party.critical), (Party.motyer, Party.critical), (Party.micah,
+    Party.critical), (Party.critical, Party.berry), (Party.critical,
+    Party.motyer)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="isaiahFinite"></a>
-**`isaiahFinite`**
-
-The dispute in the form the verdict solver computes with.
-
-```lean
-def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
-  {
-    parties :=
-      [Party.scriptural, Party.critical,
-        Party.berry, Party.postell,
-        Party.motyer, Party.micah],
-    complete := isaiahFinite._proof_1,
-    defeats := fun i j => decide (partyDefeats i j),
-    spec := isaiahFinite._proof_2 }
 ```
 
 <a id="isaiahDispute_supports"></a>
@@ -8137,7 +8056,7 @@ party's own. Every cell is computed by `partOf?` and checked by the kernel.
 
 ```lean
 theorem isaiahDispute_partOf : ∀ (i j : Party), isaiahDispute.partOf i j ↔ i =
-    j
+    j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -8199,6 +8118,20 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 6 *Postell's Micah counterexample to the near-term exclusion* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
 
 The defeats are the cells of [`isaiahDispute_defeats`](#isaiahDispute_defeats), the supports the cells of [`isaiahDispute_supports`](#isaiahDispute_supports) and the parts the cells of [`isaiahDispute_partOf`](#isaiahDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+<a id="replies_stand_with_the_scriptural_reading"></a>
+**`replies_stand_with_the_scriptural_reading`**
+
+**The scriptural reading and all four replies stand together**, in the
+world Motyer describes: none of the five defeats another. One fact, settling
+twenty ordered pairs.
+
+```lean
+theorem replies_stand_with_the_scriptural_reading :
+    isaiahDispute.StandTogether [Party.scriptural, Party.berry, Party.postell,
+    Party.motyer, Party.micah]
+-- axioms: propext, Classical.choice, Quot.sound
+```
 
 <a id="repliesHeardInStages"></a>
 **`repliesHeardInStages`**
@@ -8464,8 +8397,9 @@ theorem nothing_prevails_on_motyer_alone : Framework.grounded
 Every party but Postell's Isaiah counterexample.
 
 ```lean
-def withoutPostell : Dispute Claim { i // i ≠ Party.postell } :=
-  isaiahDispute.restrict fun x => x ≠ Party.postell
+def withoutPostell : Dispute Claim { i // i ∉ [Party.postell] } :=
+  isaiahDispute.restrict fun x =>
+    x ∉ [Party.postell]
 ```
 
 <a id="micahCarriesTheVerdict"></a>
@@ -8807,7 +8741,7 @@ def wegnerPartyNode : WegnerParty → ArgumentPackage Claim :=
 
 The dispute over Wegner's objection: every party's premises have a model,
 every party establishes its conclusion, and every party's inferences are
-rated.
+rated. Every party's weakest link ranks at the bottom.
 
 ```lean
 def wegnerDispute : Dispute Claim WegnerParty :=
@@ -8815,55 +8749,6 @@ def wegnerDispute : Dispute Claim WegnerParty :=
     consistent := wegnerDispute._proof_1,
     sound := wegnerDispute._proof_2,
     rated := wegnerDispute._proof_6 }
-```
-
-<a id="wegner_stands_with_the_reply"></a>
-**`wegner_stands_with_the_reply`**
-
-**Wegner and the near-term reply stand together**, in Wegner's own world:
-the word does not denote a virgin, and the sign need not be a miracle.
-
-```lean
-theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether
-    [WegnerParty.wegner, WegnerParty.reply]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="wegnerPartyDefeats"></a>
-**`wegnerPartyDefeats`**
-
-The defeats of the dispute, as a table.
-
-```lean
-def wegnerPartyDefeats : WegnerParty → WegnerParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | WegnerParty.sign, WegnerParty.wegner => True
-    | WegnerParty.wegner, WegnerParty.sign => True
-    | WegnerParty.reply, WegnerParty.sign => True
-    | WegnerParty.sign, WegnerParty.reply => True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelWegnerPartyWegnerPartyDefeats"></a>
-**`instDecidableRelWegnerPartyWegnerPartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelWegnerPartyWegnerPartyDefeats : DecidableRel
-    wegnerPartyDefeats
-```
-
-<a id="wegnerPartyNode_strength"></a>
-**`wegnerPartyNode_strength`**
-
-Every party's weakest link ranks at the bottom.
-
-```lean
-theorem wegnerPartyNode_strength : ∀ (i : WegnerParty), (wegnerPartyNode
-    i).strength = 0
--- axioms: propext
 ```
 
 <a id="wegnerDispute_defeats"></a>
@@ -8876,24 +8761,10 @@ the kernel.
 
 ```lean
 theorem wegnerDispute_defeats : ∀ (i j : WegnerParty), wegnerDispute.defeats i
-    j ↔ wegnerPartyDefeats i j
+    j ↔ (i, j) ∈ [(WegnerParty.sign, WegnerParty.wegner), (WegnerParty.wegner,
+    WegnerParty.sign), (WegnerParty.reply, WegnerParty.sign),
+    (WegnerParty.sign, WegnerParty.reply)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="wegnerFinite"></a>
-**`wegnerFinite`**
-
-The dispute in the form the verdict solver computes with.
-
-```lean
-def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
-  {
-    parties :=
-      [WegnerParty.wegner, WegnerParty.sign,
-        WegnerParty.reply],
-    complete := wegnerFinite._proof_1,
-    defeats := fun i j => decide (wegnerPartyDefeats i j),
-    spec := wegnerFinite._proof_2 }
 ```
 
 <a id="wegnerDispute_supports"></a>
@@ -8917,7 +8788,7 @@ party's own. Every cell is computed by `partOf?` and checked by the kernel.
 
 ```lean
 theorem wegnerDispute_partOf : ∀ (i j : WegnerParty), wegnerDispute.partOf i j
-    ↔ i = j
+    ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -8962,6 +8833,18 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 3 *The near-term reply: a sign need not be a miracle* | 2 *The fathers' sign argument (Isaiah 7:11, 14)* | defeats |
 
 The defeats are the cells of [`wegnerDispute_defeats`](#wegnerDispute_defeats), the supports the cells of [`wegnerDispute_supports`](#wegnerDispute_supports) and the parts the cells of [`wegnerDispute_partOf`](#wegnerDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+<a id="wegner_stands_with_the_reply"></a>
+**`wegner_stands_with_the_reply`**
+
+**Wegner and the near-term reply stand together**, in Wegner's own world:
+the word does not denote a virgin, and the sign need not be a miracle.
+
+```lean
+theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether
+    [WegnerParty.wegner, WegnerParty.reply]
+-- axioms: propext, Classical.choice, Quot.sound
+```
 
 <a id="everyWegnerPartyDefeated"></a>
 **`everyWegnerPartyDefeated`**
@@ -9758,7 +9641,8 @@ def septuagintPartyNode : SeptuagintParty → ArgumentPackage Claim :=
 
 The dispute over the Septuagint's word: every party's premises have a model,
 every party establishes its conclusion, and every party's inferences are
-rated.
+rated. Each party's weakest link is at the bottom, but the status reading's,
+one step up.
 
 ```lean
 def septuagintDispute : Dispute Claim SeptuagintParty :=
@@ -9766,65 +9650,6 @@ def septuagintDispute : Dispute Claim SeptuagintParty :=
     consistent := septuagintDispute._proof_1,
     sound := septuagintDispute._proof_2,
     rated := septuagintDispute._proof_9 }
-```
-
-<a id="septuagint_stands_with_the_usage"></a>
-**`septuagint_stands_with_the_usage`**
-
-**The witness, Rico and Gentry, the laws and the status reading stand
-together**, on the reading Justin gives the elders' Greek, extended to the
-Pentateuch: "virgin" is a sense of the word, the laws use it so, Genesis 34:3
-names Dinah by it, and the translator read the woman of 7:14 as a virgin.
-
-```lean
-theorem septuagint_stands_with_the_usage : septuagintDispute.StandTogether
-    [SeptuagintParty.witness, SeptuagintParty.usage, SeptuagintParty.laws,
-    SeptuagintParty.dinah]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="septuagintPartyDefeats"></a>
-**`septuagintPartyDefeats`**
-
-The defeats of the dispute, as a table.
-
-```lean
-def septuagintPartyDefeats : SeptuagintParty → SeptuagintParty → Prop
-```
-
-<a id="instDecidableRelSeptuagintPartySeptuagintPartyDefeats"></a>
-**`instDecidableRelSeptuagintPartySeptuagintPartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelSeptuagintPartySeptuagintPartyDefeats : DecidableRel
-    septuagintPartyDefeats
-```
-
-<a id="septuagintPartyStrength"></a>
-**`septuagintPartyStrength`**
-
-Each party's strength, its weakest link: the bottom for every party but the
-status reading, one step up.
-
-```lean
-def septuagintPartyStrength : SeptuagintParty → ℕ :=
-  fun x =>
-    match x with
-    | SeptuagintParty.dinah => 1
-    | x => 0
-```
-
-<a id="septuagintPartyNode_strength"></a>
-**`septuagintPartyNode_strength`**
-
-Each party's weakest link, as computed.
-
-```lean
-theorem septuagintPartyNode_strength : ∀ (i : SeptuagintParty),
-    (septuagintPartyNode i).strength = septuagintPartyStrength i
--- axioms: propext
 ```
 
 <a id="septuagintDispute_defeats"></a>
@@ -9838,51 +9663,18 @@ parties hold by `Horn.defeats?` and checked by the kernel.
 
 ```lean
 theorem septuagintDispute_defeats : ∀ (i j : SeptuagintParty),
-    septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j
+    septuagintDispute.defeats i j ↔ (i, j) ∈ [(SeptuagintParty.drift,
+    SeptuagintParty.witness), (SeptuagintParty.witness,
+    SeptuagintParty.drift), (SeptuagintParty.drift, SeptuagintParty.usage),
+    (SeptuagintParty.usage, SeptuagintParty.drift), (SeptuagintParty.drift,
+    SeptuagintParty.laws), (SeptuagintParty.laws, SeptuagintParty.drift),
+    (SeptuagintParty.dinah, SeptuagintParty.drift), (SeptuagintParty.miller,
+    SeptuagintParty.witness), (SeptuagintParty.witness,
+    SeptuagintParty.miller), (SeptuagintParty.miller, SeptuagintParty.usage),
+    (SeptuagintParty.usage, SeptuagintParty.miller), (SeptuagintParty.miller,
+    SeptuagintParty.laws), (SeptuagintParty.laws, SeptuagintParty.miller),
+    (SeptuagintParty.dinah, SeptuagintParty.miller)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="septuagintFinite"></a>
-**`septuagintFinite`**
-
-The dispute in the form the verdict solver computes with.
-
-```lean
-def septuagintFinite : Solver.Finite septuagintDispute.defeats :=
-  {
-    parties :=
-      [SeptuagintParty.witness,
-        SeptuagintParty.drift,
-        SeptuagintParty.usage, SeptuagintParty.laws,
-        SeptuagintParty.dinah,
-        SeptuagintParty.miller],
-    complete := septuagintFinite._proof_1,
-    defeats := fun i j => decide (septuagintPartyDefeats i j),
-    spec := septuagintFinite._proof_2 }
-```
-
-<a id="septuagintPartySupports"></a>
-**`septuagintPartySupports`**
-
-Who supports whom, as a table: Rico and Gentry lend the witness its ground.
-
-```lean
-def septuagintPartySupports : SeptuagintParty → SeptuagintParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | SeptuagintParty.usage,
-      SeptuagintParty.witness => True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelSeptuagintPartySeptuagintPartySupports"></a>
-**`instDecidableRelSeptuagintPartySeptuagintPartySupports`**
-
-The support table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelSeptuagintPartySeptuagintPartySupports : DecidableRel
-    septuagintPartySupports
 ```
 
 <a id="septuagintDispute_supports"></a>
@@ -9898,7 +9690,8 @@ by `supports?` and checked by the kernel.
 
 ```lean
 theorem septuagintDispute_supports : ∀ (i j : SeptuagintParty),
-    septuagintDispute.supports i j ↔ septuagintPartySupports i j
+    septuagintDispute.supports i j ↔ (i, j) ∈ [(SeptuagintParty.usage,
+    SeptuagintParty.witness)]
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -9910,7 +9703,7 @@ party's own. Every cell is computed by `partOf?` and checked by the kernel.
 
 ```lean
 theorem septuagintDispute_partOf : ∀ (i j : SeptuagintParty),
-    septuagintDispute.partOf i j ↔ i = j
+    septuagintDispute.partOf i j ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -9990,6 +9783,21 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 6 *Miller, from Genesis 34:3* | 1 *The Septuagint as a witness (Isaiah 7:14 in Greek)* | secondary attack — already a defeat |
 
 The defeats are the cells of [`septuagintDispute_defeats`](#septuagintDispute_defeats), the supports the cells of [`septuagintDispute_supports`](#septuagintDispute_supports) and the parts the cells of [`septuagintDispute_partOf`](#septuagintDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+<a id="septuagint_stands_with_the_usage"></a>
+**`septuagint_stands_with_the_usage`**
+
+**The witness, Rico and Gentry, the laws and the status reading stand
+together**, on the reading Justin gives the elders' Greek, extended to the
+Pentateuch: "virgin" is a sense of the word, the laws use it so, Genesis 34:3
+names Dinah by it, and the translator read the woman of 7:14 as a virgin.
+
+```lean
+theorem septuagint_stands_with_the_usage : septuagintDispute.StandTogether
+    [SeptuagintParty.witness, SeptuagintParty.usage, SeptuagintParty.laws,
+    SeptuagintParty.dinah]
+-- axioms: propext, Classical.choice, Quot.sound
+```
 
 <a id="septuagintHeardInStages"></a>
 **`septuagintHeardInStages`**
@@ -10553,7 +10361,7 @@ def matthewPartyNode : MatthewParty → ArgumentPackage Claim :=
 
 The dispute over Scripture's reading of the Greek word: every party's
 premises have a model, every party establishes its conclusion, and every party's
-inferences are rated.
+inferences are rated. Both parties' weakest links rank at the bottom.
 
 ```lean
 def matthewDispute : Dispute Claim MatthewParty :=
@@ -10561,43 +10369,6 @@ def matthewDispute : Dispute Claim MatthewParty :=
     consistent := matthewDispute._proof_1,
     sound := matthewDispute._proof_2,
     rated := matthewDispute._proof_5 }
-```
-
-<a id="matthewPartyDefeats"></a>
-**`matthewPartyDefeats`**
-
-The defeats of the dispute, as a table: each party defeats the other.
-
-```lean
-def matthewPartyDefeats : MatthewParty → MatthewParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | MatthewParty.matthew, MatthewParty.drift =>
-      True
-    | MatthewParty.drift, MatthewParty.matthew =>
-      True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelMatthewPartyMatthewPartyDefeats"></a>
-**`instDecidableRelMatthewPartyMatthewPartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelMatthewPartyMatthewPartyDefeats : DecidableRel
-    matthewPartyDefeats
-```
-
-<a id="matthewPartyNode_strength"></a>
-**`matthewPartyNode_strength`**
-
-Both parties' weakest links rank at the bottom.
-
-```lean
-theorem matthewPartyNode_strength : ∀ (i : MatthewParty), (matthewPartyNode
-    i).strength = 0
--- axioms: propext
 ```
 
 <a id="matthewDispute_defeats"></a>
@@ -10609,23 +10380,9 @@ by `Horn.defeats?` and checked by the kernel.
 
 ```lean
 theorem matthewDispute_defeats : ∀ (i j : MatthewParty),
-    matthewDispute.defeats i j ↔ matthewPartyDefeats i j
+    matthewDispute.defeats i j ↔ (i, j) ∈ [(MatthewParty.matthew,
+    MatthewParty.drift), (MatthewParty.drift, MatthewParty.matthew)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="matthewFinite"></a>
-**`matthewFinite`**
-
-The dispute in the form the verdict solver computes with.
-
-```lean
-def matthewFinite : Solver.Finite matthewDispute.defeats :=
-  {
-    parties :=
-      [MatthewParty.matthew, MatthewParty.drift],
-    complete := matthewFinite._proof_1,
-    defeats := fun i j => decide (matthewPartyDefeats i j),
-    spec := matthewFinite._proof_2 }
 ```
 
 <a id="matthewStandoff"></a>
@@ -10730,97 +10487,20 @@ def matthewRegister : Register matthewDispute :=
     steps := [matthewStep] }
 ```
 
-<a id="matthewRatedStrength"></a>
-**`matthewRatedStrength`**
+<a id="matthewRegister_defeats"></a>
+**`matthewRegister_defeats`**
 
-Each party's weakest link at a standard's ratings: as cited, except that
-under the Scripture standard Matthew's step is weighed at `plausible`, its
-computed rating there.
-
-```lean
-def matthewRatedStrength : Standard → MatthewParty → ℕ :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Standard.scriptural, MatthewParty.matthew => 1
-    | x, x_2 => 0
-```
-
-<a id="matthew_rerated_strength"></a>
-**`matthew_rerated_strength`**
-
-Each party's weakest link, as the re-rated package computes it.
+**Who defeats whom at each standard's ratings**: under the evidence and
+tradition standards, as in the full dispute; under the Scripture standard,
+Matthew's reading defeats Wegner, and Wegner, now the weaker, does not defeat
+it. Computed from the parties' premises and the re-rated inferences and checked
+by the kernel.
 
 ```lean
-theorem matthew_rerated_strength : ∀ (s : Standard) (i : MatthewParty),
-    ((matthewRegister.rerated s).node i).strength = matthewRatedStrength s i
+theorem matthewRegister_defeats : ∀ (s : Standard) (i j : MatthewParty),
+    (matthewRegister.rerated s).defeats i j ↔ (i, j) ∈
+    matthewRegister.defeatsTable s
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="matthewRatedDefeats"></a>
-**`matthewRatedDefeats`**
-
-Who defeats whom at a standard's ratings: under the evidence and tradition
-standards, as in the full dispute; under the Scripture standard, Matthew's
-reading defeats Wegner, and Wegner, now the weaker, does not defeat it.
-
-```lean
-def matthewRatedDefeats : Standard → MatthewParty → MatthewParty → Prop :=
-  fun x x_1 x_2 =>
-    match x, x_1, x_2 with
-    | Standard.scriptural, MatthewParty.drift,
-      MatthewParty.matthew => False
-    | x, i, j => matthewPartyDefeats i j
-```
-
-<a id="instDecidableRelMatthewPartyMatthewRatedDefeats"></a>
-**`instDecidableRelMatthewPartyMatthewRatedDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelMatthewPartyMatthewRatedDefeats : (s : Standard) →
-    DecidableRel (matthewRatedDefeats s)
-```
-
-<a id="matthew_rerated_defeats"></a>
-**`matthew_rerated_defeats`**
-
-**Who defeats whom at each standard's ratings**, computed from the parties'
-premises and the re-rated inferences and checked by the kernel.
-
-```lean
-theorem matthew_rerated_defeats : ∀ (s : Standard) (i j : MatthewParty),
-    (matthewRegister.rerated s).defeats i j ↔ matthewRatedDefeats s i j
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="matthewRatedFinite"></a>
-**`matthewRatedFinite`**
-
-The dispute at a standard's ratings, in the form the verdict solver computes
-with.
-
-```lean
-def matthewRatedFinite : (s : Standard) → Solver.Finite
-    (matthewRegister.rerated s).defeats :=
-  fun s =>
-    { parties := matthewFinite.parties,
-      complete := matthewRatedFinite._proof_1,
-      defeats := fun i j => decide (matthewRatedDefeats s i j),
-      spec := ⋯ }
-```
-
-<a id="matthewUnderFinite"></a>
-**`matthewUnderFinite`**
-
-The hearing under a standard, in the form the verdict solver computes with.
-
-```lean
-def matthewUnderFinite : (s : Standard) → Solver.Finite fun i j =>
-    (matthewRegister.rerated s).defeats ↑i ↑j :=
-  fun s =>
-    (matthewRatedFinite s).restrict
-      (matthewRegister.admits s)
 ```
 
 <a id="matthewUnderEvidenceSettled"></a>
@@ -11092,7 +10772,7 @@ def genesisPartyNode : GenesisParty → ArgumentPackage Claim :=
 
 The dispute over the woman's seed: every party's premises can all be true
 together, every party establishes its conclusion, and every party's inferences
-are rated.
+are rated. Every party's weakest link ranks at the bottom.
 
 ```lean
 def genesisDispute : Dispute Claim GenesisParty :=
@@ -11100,59 +10780,6 @@ def genesisDispute : Dispute Claim GenesisParty :=
     consistent := genesisDispute._proof_1,
     sound := genesisDispute._proof_2,
     rated := genesisDispute._proof_6 }
-```
-
-<a id="posterity_stands_with_the_idiom"></a>
-**`posterity_stands_with_the_idiom`**
-
-**Leupold and Lewis stand together**, on Leupold's reading, in which
-Lewis's claims hold too.
-
-```lean
-theorem posterity_stands_with_the_idiom : genesisDispute.StandTogether
-    [GenesisParty.posterity, GenesisParty.idiom]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="genesisPartyDefeats"></a>
-**`genesisPartyDefeats`**
-
-The defeats of the dispute, as a table.
-
-```lean
-def genesisPartyDefeats : GenesisParty → GenesisParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | GenesisParty.wording,
-      GenesisParty.posterity => True
-    | GenesisParty.posterity,
-      GenesisParty.wording => True
-    | GenesisParty.wording, GenesisParty.idiom =>
-      True
-    | GenesisParty.idiom, GenesisParty.wording =>
-      True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelGenesisPartyGenesisPartyDefeats"></a>
-**`instDecidableRelGenesisPartyGenesisPartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelGenesisPartyGenesisPartyDefeats : DecidableRel
-    genesisPartyDefeats
-```
-
-<a id="genesisPartyNode_strength"></a>
-**`genesisPartyNode_strength`**
-
-Every party's weakest link ranks at the bottom.
-
-```lean
-theorem genesisPartyNode_strength : ∀ (i : GenesisParty), (genesisPartyNode
-    i).strength = 0
--- axioms: propext
 ```
 
 <a id="genesisDispute_defeats"></a>
@@ -11164,45 +10791,11 @@ from what the parties hold by `Horn.defeats?` and checked by the kernel.
 
 ```lean
 theorem genesisDispute_defeats : ∀ (i j : GenesisParty),
-    genesisDispute.defeats i j ↔ genesisPartyDefeats i j
+    genesisDispute.defeats i j ↔ (i, j) ∈ [(GenesisParty.wording,
+    GenesisParty.posterity), (GenesisParty.posterity, GenesisParty.wording),
+    (GenesisParty.wording, GenesisParty.idiom), (GenesisParty.idiom,
+    GenesisParty.wording)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="genesisFinite"></a>
-**`genesisFinite`**
-
-The dispute in the form the verdict solver computes with.
-
-```lean
-def genesisFinite : Solver.Finite genesisDispute.defeats :=
-  {
-    parties :=
-      [GenesisParty.wording, GenesisParty.posterity,
-        GenesisParty.idiom],
-    complete := genesisFinite._proof_1,
-    defeats := fun i j => decide (genesisPartyDefeats i j),
-    spec := genesisFinite._proof_2 }
-```
-
-<a id="genesisPartySupports"></a>
-**`genesisPartySupports`**
-
-Who supports whom, as a table: no one.
-
-```lean
-def genesisPartySupports : GenesisParty → GenesisParty → Prop :=
-  fun x x_1 => False
-```
-
-<a id="instDecidableRelGenesisPartyGenesisPartySupports"></a>
-**`instDecidableRelGenesisPartyGenesisPartySupports`**
-
-The support table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelGenesisPartyGenesisPartySupports : DecidableRel
-    genesisPartySupports :=
-  fun i j => id inferInstance
 ```
 
 <a id="genesisDispute_supports"></a>
@@ -11213,7 +10806,7 @@ premise. Every cell is computed by `supports?` and checked by the kernel.
 
 ```lean
 theorem genesisDispute_supports : ∀ (i j : GenesisParty),
-    genesisDispute.supports i j ↔ genesisPartySupports i j
+    ¬genesisDispute.supports i j
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -11225,7 +10818,7 @@ party's own. Every cell is computed by `partOf?` and checked by the kernel.
 
 ```lean
 theorem genesisDispute_partOf : ∀ (i j : GenesisParty), genesisDispute.partOf
-    i j ↔ i = j
+    i j ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -11270,6 +10863,18 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 3 *Lewis on 'her seed': Genesis says it of Hagar and Rebekah too* | 1 *Luther on 'her seed': the wording itself signifies no human father* | defeats |
 
 The defeats are the cells of [`genesisDispute_defeats`](#genesisDispute_defeats), the supports the cells of [`genesisDispute_supports`](#genesisDispute_supports) and the parts the cells of [`genesisDispute_partOf`](#genesisDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+<a id="posterity_stands_with_the_idiom"></a>
+**`posterity_stands_with_the_idiom`**
+
+**Leupold and Lewis stand together**, on Leupold's reading, in which
+Lewis's claims hold too.
+
+```lean
+theorem posterity_stands_with_the_idiom : genesisDispute.StandTogether
+    [GenesisParty.posterity, GenesisParty.idiom]
+-- axioms: propext, Classical.choice, Quot.sound
+```
 
 <a id="everyGenesisPartyDefeated"></a>
 **`everyGenesisPartyDefeated`**
@@ -11859,7 +11464,7 @@ def promisePartyNode : PromiseParty → ArgumentPackage Claim :=
 
 The dispute over whether Genesis 3:15 is a promise: every party's premises
 have a model, every party establishes its conclusion, and every party's
-inferences are rated.
+inferences are rated. Every party's weakest link ranks at the bottom.
 
 ```lean
 def promiseDispute : Dispute Claim PromiseParty :=
@@ -11867,52 +11472,6 @@ def promiseDispute : Dispute Claim PromiseParty :=
     consistent := promiseDispute._proof_1,
     sound := promiseDispute._proof_2,
     rated := promiseDispute._proof_7 }
-```
-
-<a id="promisePartyDefeats"></a>
-**`promisePartyDefeats`**
-
-The defeats of the dispute, as a table: Westermann and each of the others
-defeat each other.
-
-```lean
-def promisePartyDefeats : PromiseParty → PromiseParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | PromiseParty.fulfilment,
-      PromiseParty.westermann => True
-    | PromiseParty.westermann,
-      PromiseParty.fulfilment => True
-    | PromiseParty.syntax,
-      PromiseParty.westermann => True
-    | PromiseParty.westermann,
-      PromiseParty.syntax => True
-    | PromiseParty.scene, PromiseParty.westermann =>
-      True
-    | PromiseParty.westermann, PromiseParty.scene =>
-      True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelPromisePartyPromisePartyDefeats"></a>
-**`instDecidableRelPromisePartyPromisePartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelPromisePartyPromisePartyDefeats : DecidableRel
-    promisePartyDefeats
-```
-
-<a id="promisePartyNode_strength"></a>
-**`promisePartyNode_strength`**
-
-Every party's weakest link ranks at the bottom.
-
-```lean
-theorem promisePartyNode_strength : ∀ (i : PromiseParty), (promisePartyNode
-    i).strength = 0
--- axioms: propext
 ```
 
 <a id="promiseDispute_defeats"></a>
@@ -11924,25 +11483,12 @@ from what the parties hold by `Horn.defeats?` and checked by the kernel.
 
 ```lean
 theorem promiseDispute_defeats : ∀ (i j : PromiseParty),
-    promiseDispute.defeats i j ↔ promisePartyDefeats i j
+    promiseDispute.defeats i j ↔ (i, j) ∈ [(PromiseParty.fulfilment,
+    PromiseParty.westermann), (PromiseParty.westermann,
+    PromiseParty.fulfilment), (PromiseParty.syntax, PromiseParty.westermann),
+    (PromiseParty.westermann, PromiseParty.syntax), (PromiseParty.scene,
+    PromiseParty.westermann), (PromiseParty.westermann, PromiseParty.scene)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="promiseFinite"></a>
-**`promiseFinite`**
-
-The dispute in the form the verdict solver computes with.
-
-```lean
-def promiseFinite : Solver.Finite promiseDispute.defeats :=
-  {
-    parties :=
-      [PromiseParty.fulfilment,
-        PromiseParty.westermann,
-        PromiseParty.syntax, PromiseParty.scene],
-    complete := promiseFinite._proof_1,
-    defeats := fun i j => decide (promisePartyDefeats i j),
-    spec := promiseFinite._proof_2 }
 ```
 
 <a id="promiseStandoff"></a>
@@ -12184,97 +11730,19 @@ def promiseRegister : Register promiseDispute :=
     steps := [fulfilmentStep] }
 ```
 
-<a id="promiseRatedStrength"></a>
-**`promiseRatedStrength`**
+<a id="promiseRegister_defeats"></a>
+**`promiseRegister_defeats`**
 
-Each party's weakest link at a standard's ratings: as cited, except that
-under the Scripture standard the fulfilment's step is weighed at `plausible`,
-its computed rating there.
-
-```lean
-def promiseRatedStrength : Standard → PromiseParty → ℕ :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Standard.scriptural, PromiseParty.fulfilment => 1
-    | x, x_2 => 0
-```
-
-<a id="promise_rerated_strength"></a>
-**`promise_rerated_strength`**
-
-Each party's weakest link, as the re-rated package computes it.
+**Who defeats whom at each standard's ratings**: under the evidence and
+tradition standards, as in the full dispute; under the Scripture standard,
+Westermann, now the weaker, no longer defeats the fulfilment. Computed from the
+parties' premises and the re-rated inferences and checked by the kernel.
 
 ```lean
-theorem promise_rerated_strength : ∀ (s : Standard) (i : PromiseParty),
-    ((promiseRegister.rerated s).node i).strength = promiseRatedStrength s i
+theorem promiseRegister_defeats : ∀ (s : Standard) (i j : PromiseParty),
+    (promiseRegister.rerated s).defeats i j ↔ (i, j) ∈
+    promiseRegister.defeatsTable s
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="promiseRatedDefeats"></a>
-**`promiseRatedDefeats`**
-
-Who defeats whom at a standard's ratings: under the evidence and tradition
-standards, as in the full dispute; under the Scripture standard, Westermann,
-now the weaker, no longer defeats the fulfilment.
-
-```lean
-def promiseRatedDefeats : Standard → PromiseParty → PromiseParty → Prop :=
-  fun x x_1 x_2 =>
-    match x, x_1, x_2 with
-    | Standard.scriptural, PromiseParty.westermann,
-      PromiseParty.fulfilment => False
-    | x, i, j => promisePartyDefeats i j
-```
-
-<a id="instDecidableRelPromisePartyPromiseRatedDefeats"></a>
-**`instDecidableRelPromisePartyPromiseRatedDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelPromisePartyPromiseRatedDefeats : (s : Standard) →
-    DecidableRel (promiseRatedDefeats s)
-```
-
-<a id="promise_rerated_defeats"></a>
-**`promise_rerated_defeats`**
-
-**Who defeats whom at each standard's ratings**, computed from the parties'
-premises and the re-rated inferences and checked by the kernel.
-
-```lean
-theorem promise_rerated_defeats : ∀ (s : Standard) (i j : PromiseParty),
-    (promiseRegister.rerated s).defeats i j ↔ promiseRatedDefeats s i j
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="promiseRatedFinite"></a>
-**`promiseRatedFinite`**
-
-The dispute at a standard's ratings, in the form the verdict solver computes
-with.
-
-```lean
-def promiseRatedFinite : (s : Standard) → Solver.Finite
-    (promiseRegister.rerated s).defeats :=
-  fun s =>
-    { parties := promiseFinite.parties,
-      complete := promiseRatedFinite._proof_1,
-      defeats := fun i j => decide (promiseRatedDefeats s i j),
-      spec := ⋯ }
-```
-
-<a id="promiseUnderFinite"></a>
-**`promiseUnderFinite`**
-
-The hearing under a standard, in the form the verdict solver computes with.
-
-```lean
-def promiseUnderFinite : (s : Standard) → Solver.Finite fun i j =>
-    (promiseRegister.rerated s).defeats ↑i ↑j :=
-  fun s =>
-    (promiseRatedFinite s).restrict
-      (promiseRegister.admits s)
 ```
 
 <a id="promiseUnderEvidenceSettled"></a>

@@ -4732,57 +4732,6 @@ def isaiahDispute : Dispute Claim Party :=
     sound := isaiahDispute._proof_2,
     rated := isaiahDispute._proof_9 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{replies\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}scriptural\_\allowbreak{}reading}}\par\nobreak\noindent
-\textbf{The scriptural reading and all four replies stand together}, in the world Motyer describes: none of the five defeats another. One fact, settling twenty ordered pairs.
-
-{\small\begin{verbatim}
-theorem replies_stand_with_the_scriptural_reading :
-    isaiahDispute.StandTogether [Party.scriptural, Party.berry, Party.postell,
-    Party.motyer, Party.micah]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table.
-
-{\small\begin{verbatim}
-def partyDefeats : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.critical, Party.scriptural => True
-    | Party.scriptural, Party.critical => True
-    | Party.berry, Party.critical => True
-    | Party.postell, Party.critical => True
-    | Party.motyer, Party.critical => True
-    | Party.micah, Party.critical => True
-    | Party.critical, Party.berry => True
-    | Party.critical, Party.motyer => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Strength}}\par\nobreak\noindent
-Each party’s weakest link.
-
-{\small\begin{verbatim}
-def partyStrength : Party → ℕ :=
-  fun x =>
-    match x with
-    | Party.postell => 1
-    | Party.micah => 1
-    | x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each party’s strength is what \texttt{party\allowbreak{}Strength} says.
-
-{\small\begin{verbatim}
-theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
-    partyStrength i
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all thirty-six pairs: the critic and the scriptural reading defeat each other; each reply defeats the critic; the critic defeats Berry and Motyer back, but neither of Postell’s counterexamples; nothing else.
 
@@ -4790,22 +4739,12 @@ Every cell is computed from the parties’ premises by \texttt{Horn.defeats?} an
 
 {\small\begin{verbatim}
 theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
-    partyDefeats i j
+    (i, j) ∈ [(Party.critical, Party.scriptural), (Party.scriptural,
+    Party.critical), (Party.berry, Party.critical), (Party.postell,
+    Party.critical), (Party.motyer, Party.critical), (Party.micah,
+    Party.critical), (Party.critical, Party.berry), (Party.critical,
+    Party.motyer)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def isaiahFinite : Solver.Finite isaiahDispute.defeats :=
-  {
-    parties :=
-      [Party.scriptural, Party.critical,
-        Party.berry, Party.postell,
-        Party.motyer, Party.micah],
-    complete := isaiahFinite._proof_1,
-    defeats := fun i j => decide (partyDefeats i j),
-    spec := isaiahFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
 \textbf{Nothing supports anything} in the Isaiah dispute, in all thirty-six pairs: no party’s conclusion entails a claim another rests on. Several conclusions do entail other parties’ inference steps — Berry’s and Postell’s entail each other’s, by entailing the step’s own conclusion, and the replies entail the critic’s, vacuously — but a step is not a claim, and neither kind of entailment lends a premise (see \texttt{Testimony.Logic.Support}). Every cell is computed by \texttt{supports?} and checked by the kernel.
@@ -4819,7 +4758,7 @@ theorem isaiahDispute_supports : ∀ (i j : Party), ¬isaiahDispute.supports i j
 
 {\small\begin{verbatim}
 theorem isaiahDispute_partOf : ∀ (i j : Party), isaiahDispute.partOf i j ↔ i =
-    j
+    j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{isaiah\allowbreak{}Map}}\par\nobreak\noindent
@@ -4868,6 +4807,15 @@ The dispute drawn: who defeats whom.
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{isaiah\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{replies\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}scriptural\_\allowbreak{}reading}}\par\nobreak\noindent
+\textbf{The scriptural reading and all four replies stand together}, in the world Motyer describes: none of the five defeats another. One fact, settling twenty ordered pairs.
+
+{\small\begin{verbatim}
+theorem replies_stand_with_the_scriptural_reading :
+    isaiahDispute.StandTogether [Party.scriptural, Party.berry, Party.postell,
+    Party.motyer, Party.micah]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{replies\allowbreak{}Heard\allowbreak{}In\allowbreak{}Stages}}\par\nobreak\noindent
 How the scriptural reading prevails, in stages: nothing attacks Postell’s two counterexamples, so they come first; they answer the critic, the only party that attacks the scriptural reading, Berry and Motyer, so those three come next. And the critic does not join them: the scriptural reading attacks it, and nothing among the five answers the scriptural reading.
 
@@ -5121,8 +5069,9 @@ theorem nothing_prevails_on_motyer_alone : Framework.grounded
 Every party but Postell’s Isaiah counterexample.
 
 {\small\begin{verbatim}
-def withoutPostell : Dispute Claim { i // i ≠ Party.postell } :=
-  isaiahDispute.restrict fun x => x ≠ Party.postell
+def withoutPostell : Dispute Claim { i // i ∉ [Party.postell] } :=
+  isaiahDispute.restrict fun x =>
+    x ∉ [Party.postell]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{micah\allowbreak{}Carries\allowbreak{}The\allowbreak{}Verdict}}\par\nobreak\noindent
 How the scriptural reading prevails without Postell’s Isaiah argument, in stages: the Micah counterexample first, then the three it defends.
@@ -5372,7 +5321,7 @@ def wegnerPartyNode : WegnerParty → ArgumentPackage Claim :=
     | WegnerParty.reply => ordinarySignReply
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute}}\par\nobreak\noindent
-The dispute over Wegner’s objection: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated.
+The dispute over Wegner’s objection: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated. Every party’s weakest link ranks at the bottom.
 
 {\small\begin{verbatim}
 def wegnerDispute : Dispute Claim WegnerParty :=
@@ -5381,62 +5330,15 @@ def wegnerDispute : Dispute Claim WegnerParty :=
     sound := wegnerDispute._proof_2,
     rated := wegnerDispute._proof_6 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{wegner\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}reply}}\par\nobreak\noindent
-\textbf{Wegner and the near-term reply stand together}, in Wegner’s own world: the word does not denote a virgin, and the sign need not be a miracle.
-
-{\small\begin{verbatim}
-theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether
-    [WegnerParty.wegner, WegnerParty.reply]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table.
-
-{\small\begin{verbatim}
-def wegnerPartyDefeats : WegnerParty → WegnerParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | WegnerParty.sign, WegnerParty.wegner => True
-    | WegnerParty.wegner, WegnerParty.sign => True
-    | WegnerParty.reply, WegnerParty.sign => True
-    | WegnerParty.sign, WegnerParty.reply => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelWegnerPartyWegnerPartyDefeats : DecidableRel
-    wegnerPartyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Every party’s weakest link ranks at the bottom.
-
-{\small\begin{verbatim}
-theorem wegnerPartyNode_strength : ∀ (i : WegnerParty), (wegnerPartyNode
-    i).strength = 0
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all nine pairs: the fathers and Wegner defeat each other, the fathers and the reply defeat each other, and nothing else. Every cell is computed from the parties’ premises by \texttt{Horn.defeats?} and checked by the kernel.
 
 {\small\begin{verbatim}
 theorem wegnerDispute_defeats : ∀ (i j : WegnerParty), wegnerDispute.defeats i
-    j ↔ wegnerPartyDefeats i j
+    j ↔ (i, j) ∈ [(WegnerParty.sign, WegnerParty.wegner), (WegnerParty.wegner,
+    WegnerParty.sign), (WegnerParty.reply, WegnerParty.sign),
+    (WegnerParty.sign, WegnerParty.reply)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def wegnerFinite : Solver.Finite wegnerDispute.defeats :=
-  {
-    parties :=
-      [WegnerParty.wegner, WegnerParty.sign,
-        WegnerParty.reply],
-    complete := wegnerFinite._proof_1,
-    defeats := fun i j => decide (wegnerPartyDefeats i j),
-    spec := wegnerFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
 \textbf{Nothing supports anything} among Wegner, the fathers and the reply, in all nine pairs. Every cell is computed by \texttt{supports?} and checked by the kernel.
@@ -5451,7 +5353,7 @@ theorem wegnerDispute_supports : ∀ (i j : WegnerParty),
 
 {\small\begin{verbatim}
 theorem wegnerDispute_partOf : ∀ (i j : WegnerParty), wegnerDispute.partOf i j
-    ↔ i = j
+    ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{wegner\allowbreak{}Map}}\par\nobreak\noindent
@@ -5486,6 +5388,14 @@ The dispute drawn: who defeats whom.
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{wegner\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{wegner\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}reply}}\par\nobreak\noindent
+\textbf{Wegner and the near-term reply stand together}, in Wegner’s own world: the word does not denote a virgin, and the sign need not be a miracle.
+
+{\small\begin{verbatim}
+theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether
+    [WegnerParty.wegner, WegnerParty.reply]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{every\allowbreak{}Wegner\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
 Why nothing prevails: a defeater for each party.
 
@@ -5963,7 +5873,7 @@ def septuagintPartyNode : SeptuagintParty → ArgumentPackage Claim :=
     | SeptuagintParty.miller => millerCase
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Dispute}}\par\nobreak\noindent
-The dispute over the Septuagint’s word: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated.
+The dispute over the Septuagint’s word: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated. Each party’s weakest link is at the bottom, but the status reading’s, one step up.
 
 {\small\begin{verbatim}
 def septuagintDispute : Dispute Claim SeptuagintParty :=
@@ -5972,94 +5882,31 @@ def septuagintDispute : Dispute Claim SeptuagintParty :=
     sound := septuagintDispute._proof_2,
     rated := septuagintDispute._proof_9 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{septuagint\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}usage}}\par\nobreak\noindent
-\textbf{The witness, Rico and Gentry, the laws and the status reading stand together}, on the reading Justin gives the elders’ Greek, extended to the Pentateuch: “virgin” is a sense of the word, the laws use it so, Genesis 34:3 names Dinah by it, and the translator read the woman of 7:14 as a virgin.
-
-{\small\begin{verbatim}
-theorem septuagint_stands_with_the_usage : septuagintDispute.StandTogether
-    [SeptuagintParty.witness, SeptuagintParty.usage, SeptuagintParty.laws,
-    SeptuagintParty.dinah]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table.
-
-{\small\begin{verbatim}
-def septuagintPartyDefeats : SeptuagintParty → SeptuagintParty → Prop
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Septuagint\allowbreak{}Party\allowbreak{}Septuagint\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelSeptuagintPartySeptuagintPartyDefeats : DecidableRel
-    septuagintPartyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Party\allowbreak{}Strength}}\par\nobreak\noindent
-Each party’s strength, its weakest link: the bottom for every party but the status reading, one step up.
-
-{\small\begin{verbatim}
-def septuagintPartyStrength : SeptuagintParty → ℕ :=
-  fun x =>
-    match x with
-    | SeptuagintParty.dinah => 1
-    | x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each party’s weakest link, as computed.
-
-{\small\begin{verbatim}
-theorem septuagintPartyNode_strength : ∀ (i : SeptuagintParty),
-    (septuagintPartyNode i).strength = septuagintPartyStrength i
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all thirty-six pairs: Wegner defeats the witness, Rico and Gentry and the laws, and each defeats him back; so does Miller, and each defeats him back; the status reading defeats Wegner and Miller, and neither defeats it; and nothing else. Every cell is computed from what the parties hold by \texttt{Horn.defeats?} and checked by the kernel.
 
 {\small\begin{verbatim}
 theorem septuagintDispute_defeats : ∀ (i j : SeptuagintParty),
-    septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j
+    septuagintDispute.defeats i j ↔ (i, j) ∈ [(SeptuagintParty.drift,
+    SeptuagintParty.witness), (SeptuagintParty.witness,
+    SeptuagintParty.drift), (SeptuagintParty.drift, SeptuagintParty.usage),
+    (SeptuagintParty.usage, SeptuagintParty.drift), (SeptuagintParty.drift,
+    SeptuagintParty.laws), (SeptuagintParty.laws, SeptuagintParty.drift),
+    (SeptuagintParty.dinah, SeptuagintParty.drift), (SeptuagintParty.miller,
+    SeptuagintParty.witness), (SeptuagintParty.witness,
+    SeptuagintParty.miller), (SeptuagintParty.miller, SeptuagintParty.usage),
+    (SeptuagintParty.usage, SeptuagintParty.miller), (SeptuagintParty.miller,
+    SeptuagintParty.laws), (SeptuagintParty.laws, SeptuagintParty.miller),
+    (SeptuagintParty.dinah, SeptuagintParty.miller)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def septuagintFinite : Solver.Finite septuagintDispute.defeats :=
-  {
-    parties :=
-      [SeptuagintParty.witness,
-        SeptuagintParty.drift,
-        SeptuagintParty.usage, SeptuagintParty.laws,
-        SeptuagintParty.dinah,
-        SeptuagintParty.miller],
-    complete := septuagintFinite._proof_1,
-    defeats := fun i j => decide (septuagintPartyDefeats i j),
-    spec := septuagintFinite._proof_2 }
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Party\allowbreak{}Supports}}\par\nobreak\noindent
-Who supports whom, as a table: Rico and Gentry lend the witness its ground.
-
-{\small\begin{verbatim}
-def septuagintPartySupports : SeptuagintParty → SeptuagintParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | SeptuagintParty.usage,
-      SeptuagintParty.witness => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Septuagint\allowbreak{}Party\allowbreak{}Septuagint\allowbreak{}Party\allowbreak{}Supports}}\par\nobreak\noindent
-The support table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelSeptuagintPartySeptuagintPartySupports : DecidableRel
-    septuagintPartySupports
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
 \textbf{One support}, in all thirty-six pairs: Rico and Gentry’s conclusion is the witness’s contested ground, that “virgin” is a sense of παρθένος. The library draws a support only where one party’s conclusion is, word for word, another’s premise. The laws and the status reading reach the witness’s ground through a definition, so no support is drawn from them, though they lead to the same ground. Every cell is computed by \texttt{supports?} and checked by the kernel.
 
 {\small\begin{verbatim}
 theorem septuagintDispute_supports : ∀ (i j : SeptuagintParty),
-    septuagintDispute.supports i j ↔ septuagintPartySupports i j
+    septuagintDispute.supports i j ↔ (i, j) ∈ [(SeptuagintParty.usage,
+    SeptuagintParty.witness)]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
@@ -6067,7 +5914,7 @@ theorem septuagintDispute_supports : ∀ (i j : SeptuagintParty),
 
 {\small\begin{verbatim}
 theorem septuagintDispute_partOf : ∀ (i j : SeptuagintParty),
-    septuagintDispute.partOf i j ↔ i = j
+    septuagintDispute.partOf i j ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Map}}\par\nobreak\noindent
@@ -6134,6 +5981,15 @@ The dispute drawn: who defeats whom, and the one support.
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{septuagint\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{septuagint\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{septuagint\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{septuagint\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}usage}}\par\nobreak\noindent
+\textbf{The witness, Rico and Gentry, the laws and the status reading stand together}, on the reading Justin gives the elders’ Greek, extended to the Pentateuch: “virgin” is a sense of the word, the laws use it so, Genesis 34:3 names Dinah by it, and the translator read the woman of 7:14 as a virgin.
+
+{\small\begin{verbatim}
+theorem septuagint_stands_with_the_usage : septuagintDispute.StandTogether
+    [SeptuagintParty.witness, SeptuagintParty.usage, SeptuagintParty.laws,
+    SeptuagintParty.dinah]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{septuagint\allowbreak{}Heard\allowbreak{}In\allowbreak{}Stages}}\par\nobreak\noindent
 Why the Septuagint’s side prevails, in stages: the status reading first, which nothing defeats; then the witness, Rico and Gentry and the laws, whom it defends by defeating Wegner and Miller; and Wegner and Miller out, each defeated by the status reading.
 
@@ -6509,7 +6365,7 @@ def matthewPartyNode : MatthewParty → ArgumentPackage Claim :=
     | MatthewParty.drift => driftObjection
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Dispute}}\par\nobreak\noindent
-The dispute over Scripture’s reading of the Greek word: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated.
+The dispute over Scripture’s reading of the Greek word: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated. Both parties’ weakest links rank at the bottom.
 
 {\small\begin{verbatim}
 def matthewDispute : Dispute Claim MatthewParty :=
@@ -6518,53 +6374,14 @@ def matthewDispute : Dispute Claim MatthewParty :=
     sound := matthewDispute._proof_2,
     rated := matthewDispute._proof_5 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table: each party defeats the other.
-
-{\small\begin{verbatim}
-def matthewPartyDefeats : MatthewParty → MatthewParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | MatthewParty.matthew, MatthewParty.drift =>
-      True
-    | MatthewParty.drift, MatthewParty.matthew =>
-      True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Matthew\allowbreak{}Party\allowbreak{}Matthew\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelMatthewPartyMatthewPartyDefeats : DecidableRel
-    matthewPartyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Both parties’ weakest links rank at the bottom.
-
-{\small\begin{verbatim}
-theorem matthewPartyNode_strength : ∀ (i : MatthewParty), (matthewPartyNode
-    i).strength = 0
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all four pairs: Matthew’s reading and Wegner defeat each other, and nothing else. Every cell is computed from what the parties hold by \texttt{Horn.defeats?} and checked by the kernel.
 
 {\small\begin{verbatim}
 theorem matthewDispute_defeats : ∀ (i j : MatthewParty),
-    matthewDispute.defeats i j ↔ matthewPartyDefeats i j
+    matthewDispute.defeats i j ↔ (i, j) ∈ [(MatthewParty.matthew,
+    MatthewParty.drift), (MatthewParty.drift, MatthewParty.matthew)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def matthewFinite : Solver.Finite matthewDispute.defeats :=
-  {
-    parties :=
-      [MatthewParty.matthew, MatthewParty.drift],
-    complete := matthewFinite._proof_1,
-    defeats := fun i j => decide (matthewPartyDefeats i j),
-    spec := matthewFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Standoff}}\par\nobreak\noindent
 Why nothing prevails: each party is defeated by the other.
@@ -6639,71 +6456,14 @@ def matthewRegister : Register matthewDispute :=
     ownPosition := matthewRegister._proof_1,
     steps := [matthewStep] }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Rated\allowbreak{}Strength}}\par\nobreak\noindent
-Each party’s weakest link at a standard’s ratings: as cited, except that under the Scripture standard Matthew’s step is weighed at \texttt{plausible}, its computed rating there.
+\par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Register\_\allowbreak{}defeats}}\par\nobreak\noindent
+\textbf{Who defeats whom at each standard’s ratings}: under the evidence and tradition standards, as in the full dispute; under the Scripture standard, Matthew’s reading defeats Wegner, and Wegner, now the weaker, does not defeat it. Computed from the parties’ premises and the re-rated inferences and checked by the kernel.
 
 {\small\begin{verbatim}
-def matthewRatedStrength : Standard → MatthewParty → ℕ :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Standard.scriptural, MatthewParty.matthew => 1
-    | x, x_2 => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{matthew\_\allowbreak{}rerated\_\allowbreak{}strength}}\par\nobreak\noindent
-Each party’s weakest link, as the re-rated package computes it.
-
-{\small\begin{verbatim}
-theorem matthew_rerated_strength : ∀ (s : Standard) (i : MatthewParty),
-    ((matthewRegister.rerated s).node i).strength = matthewRatedStrength s i
+theorem matthewRegister_defeats : ∀ (s : Standard) (i j : MatthewParty),
+    (matthewRegister.rerated s).defeats i j ↔ (i, j) ∈
+    matthewRegister.defeatsTable s
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Rated\allowbreak{}Defeats}}\par\nobreak\noindent
-Who defeats whom at a standard’s ratings: under the evidence and tradition standards, as in the full dispute; under the Scripture standard, Matthew’s reading defeats Wegner, and Wegner, now the weaker, does not defeat it.
-
-{\small\begin{verbatim}
-def matthewRatedDefeats : Standard → MatthewParty → MatthewParty → Prop :=
-  fun x x_1 x_2 =>
-    match x, x_1, x_2 with
-    | Standard.scriptural, MatthewParty.drift,
-      MatthewParty.matthew => False
-    | x, i, j => matthewPartyDefeats i j
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Matthew\allowbreak{}Party\allowbreak{}Matthew\allowbreak{}Rated\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelMatthewPartyMatthewRatedDefeats : (s : Standard) →
-    DecidableRel (matthewRatedDefeats s)
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{matthew\_\allowbreak{}rerated\_\allowbreak{}defeats}}\par\nobreak\noindent
-\textbf{Who defeats whom at each standard’s ratings}, computed from the parties’ premises and the re-rated inferences and checked by the kernel.
-
-{\small\begin{verbatim}
-theorem matthew_rerated_defeats : ∀ (s : Standard) (i j : MatthewParty),
-    (matthewRegister.rerated s).defeats i j ↔ matthewRatedDefeats s i j
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Rated\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute at a standard’s ratings, in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def matthewRatedFinite : (s : Standard) → Solver.Finite
-    (matthewRegister.rerated s).defeats :=
-  fun s =>
-    { parties := matthewFinite.parties,
-      complete := matthewRatedFinite._proof_1,
-      defeats := fun i j => decide (matthewRatedDefeats s i j),
-      spec := ⋯ }
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Under\allowbreak{}Finite}}\par\nobreak\noindent
-The hearing under a standard, in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def matthewUnderFinite : (s : Standard) → Solver.Finite fun i j =>
-    (matthewRegister.rerated s).defeats ↑i ↑j :=
-  fun s =>
-    (matthewRatedFinite s).restrict
-      (matthewRegister.admits s)
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{matthew\allowbreak{}Under\allowbreak{}Evidence\allowbreak{}Settled}}\par\nobreak\noindent
 How the hearing under the evidence standard is settled: Wegner is heard, and he and Matthew’s reading defeat each other.
@@ -6869,7 +6629,7 @@ def genesisPartyNode : GenesisParty → ArgumentPackage Claim :=
     | GenesisParty.idiom => idiomCase
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Dispute}}\par\nobreak\noindent
-The dispute over the woman’s seed: every party’s premises can all be true together, every party establishes its conclusion, and every party’s inferences are rated.
+The dispute over the woman’s seed: every party’s premises can all be true together, every party establishes its conclusion, and every party’s inferences are rated. Every party’s weakest link ranks at the bottom.
 
 {\small\begin{verbatim}
 def genesisDispute : Dispute Claim GenesisParty :=
@@ -6878,88 +6638,23 @@ def genesisDispute : Dispute Claim GenesisParty :=
     sound := genesisDispute._proof_2,
     rated := genesisDispute._proof_6 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{posterity\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}idiom}}\par\nobreak\noindent
-\textbf{Leupold and Lewis stand together}, on Leupold’s reading, in which Lewis’s claims hold too.
-
-{\small\begin{verbatim}
-theorem posterity_stands_with_the_idiom : genesisDispute.StandTogether
-    [GenesisParty.posterity, GenesisParty.idiom]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table.
-
-{\small\begin{verbatim}
-def genesisPartyDefeats : GenesisParty → GenesisParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | GenesisParty.wording,
-      GenesisParty.posterity => True
-    | GenesisParty.posterity,
-      GenesisParty.wording => True
-    | GenesisParty.wording, GenesisParty.idiom =>
-      True
-    | GenesisParty.idiom, GenesisParty.wording =>
-      True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Genesis\allowbreak{}Party\allowbreak{}Genesis\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelGenesisPartyGenesisPartyDefeats : DecidableRel
-    genesisPartyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Every party’s weakest link ranks at the bottom.
-
-{\small\begin{verbatim}
-theorem genesisPartyNode_strength : ∀ (i : GenesisParty), (genesisPartyNode
-    i).strength = 0
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all nine pairs: Luther and Leupold defeat each other, Luther and Lewis defeat each other, and nothing else. Every cell is computed from what the parties hold by \texttt{Horn.defeats?} and checked by the kernel.
 
 {\small\begin{verbatim}
 theorem genesisDispute_defeats : ∀ (i j : GenesisParty),
-    genesisDispute.defeats i j ↔ genesisPartyDefeats i j
+    genesisDispute.defeats i j ↔ (i, j) ∈ [(GenesisParty.wording,
+    GenesisParty.posterity), (GenesisParty.posterity, GenesisParty.wording),
+    (GenesisParty.wording, GenesisParty.idiom), (GenesisParty.idiom,
+    GenesisParty.wording)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def genesisFinite : Solver.Finite genesisDispute.defeats :=
-  {
-    parties :=
-      [GenesisParty.wording, GenesisParty.posterity,
-        GenesisParty.idiom],
-    complete := genesisFinite._proof_1,
-    defeats := fun i j => decide (genesisPartyDefeats i j),
-    spec := genesisFinite._proof_2 }
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Party\allowbreak{}Supports}}\par\nobreak\noindent
-Who supports whom, as a table: no one.
-
-{\small\begin{verbatim}
-def genesisPartySupports : GenesisParty → GenesisParty → Prop :=
-  fun x x_1 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Genesis\allowbreak{}Party\allowbreak{}Genesis\allowbreak{}Party\allowbreak{}Supports}}\par\nobreak\noindent
-The support table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelGenesisPartyGenesisPartySupports : DecidableRel
-    genesisPartySupports :=
-  fun i j => id inferInstance
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
 \textbf{No support}, in all nine pairs: no party’s conclusion is another’s premise. Every cell is computed by \texttt{supports?} and checked by the kernel.
 
 {\small\begin{verbatim}
 theorem genesisDispute_supports : ∀ (i j : GenesisParty),
-    genesisDispute.supports i j ↔ genesisPartySupports i j
+    ¬genesisDispute.supports i j
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
@@ -6967,7 +6662,7 @@ theorem genesisDispute_supports : ∀ (i j : GenesisParty),
 
 {\small\begin{verbatim}
 theorem genesisDispute_partOf : ∀ (i j : GenesisParty), genesisDispute.partOf
-    i j ↔ i = j
+    i j ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{genesis\allowbreak{}Map}}\par\nobreak\noindent
@@ -7002,6 +6697,14 @@ The dispute drawn: who defeats whom, with no support between the parties.
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{genesis\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{genesis\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{genesis\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{posterity\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}idiom}}\par\nobreak\noindent
+\textbf{Leupold and Lewis stand together}, on Leupold’s reading, in which Lewis’s claims hold too.
+
+{\small\begin{verbatim}
+theorem posterity_stands_with_the_idiom : genesisDispute.StandTogether
+    [GenesisParty.posterity, GenesisParty.idiom]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{every\allowbreak{}Genesis\allowbreak{}Party\allowbreak{}Defeated}}\par\nobreak\noindent
 Why nothing prevails: a defeater for each party.
 
@@ -7418,7 +7121,7 @@ def promisePartyNode : PromiseParty → ArgumentPackage Claim :=
     | PromiseParty.scene => sceneCase
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Dispute}}\par\nobreak\noindent
-The dispute over whether Genesis 3:15 is a promise: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated.
+The dispute over whether Genesis 3:15 is a promise: every party’s premises have a model, every party establishes its conclusion, and every party’s inferences are rated. Every party’s weakest link ranks at the bottom.
 
 {\small\begin{verbatim}
 def promiseDispute : Dispute Claim PromiseParty :=
@@ -7427,63 +7130,17 @@ def promiseDispute : Dispute Claim PromiseParty :=
     sound := promiseDispute._proof_2,
     rated := promiseDispute._proof_7 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table: Westermann and each of the others defeat each other.
-
-{\small\begin{verbatim}
-def promisePartyDefeats : PromiseParty → PromiseParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | PromiseParty.fulfilment,
-      PromiseParty.westermann => True
-    | PromiseParty.westermann,
-      PromiseParty.fulfilment => True
-    | PromiseParty.syntax,
-      PromiseParty.westermann => True
-    | PromiseParty.westermann,
-      PromiseParty.syntax => True
-    | PromiseParty.scene, PromiseParty.westermann =>
-      True
-    | PromiseParty.westermann, PromiseParty.scene =>
-      True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Promise\allowbreak{}Party\allowbreak{}Promise\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelPromisePartyPromisePartyDefeats : DecidableRel
-    promisePartyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Every party’s weakest link ranks at the bottom.
-
-{\small\begin{verbatim}
-theorem promisePartyNode_strength : ∀ (i : PromiseParty), (promisePartyNode
-    i).strength = 0
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all sixteen pairs: Westermann defeats the fulfilment, the syntax and the scene, and each defeats him back; and nothing else. Every cell is computed from what the parties hold by \texttt{Horn.defeats?} and checked by the kernel.
 
 {\small\begin{verbatim}
 theorem promiseDispute_defeats : ∀ (i j : PromiseParty),
-    promiseDispute.defeats i j ↔ promisePartyDefeats i j
+    promiseDispute.defeats i j ↔ (i, j) ∈ [(PromiseParty.fulfilment,
+    PromiseParty.westermann), (PromiseParty.westermann,
+    PromiseParty.fulfilment), (PromiseParty.syntax, PromiseParty.westermann),
+    (PromiseParty.westermann, PromiseParty.syntax), (PromiseParty.scene,
+    PromiseParty.westermann), (PromiseParty.westermann, PromiseParty.scene)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def promiseFinite : Solver.Finite promiseDispute.defeats :=
-  {
-    parties :=
-      [PromiseParty.fulfilment,
-        PromiseParty.westermann,
-        PromiseParty.syntax, PromiseParty.scene],
-    complete := promiseFinite._proof_1,
-    defeats := fun i j => decide (promisePartyDefeats i j),
-    spec := promiseFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Standoff}}\par\nobreak\noindent
 Why nothing prevails: every party has a defeater.
@@ -7682,71 +7339,14 @@ def promiseRegister : Register promiseDispute :=
     ownPosition := promiseRegister._proof_1,
     steps := [fulfilmentStep] }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Rated\allowbreak{}Strength}}\par\nobreak\noindent
-Each party’s weakest link at a standard’s ratings: as cited, except that under the Scripture standard the fulfilment’s step is weighed at \texttt{plausible}, its computed rating there.
+\par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Register\_\allowbreak{}defeats}}\par\nobreak\noindent
+\textbf{Who defeats whom at each standard’s ratings}: under the evidence and tradition standards, as in the full dispute; under the Scripture standard, Westermann, now the weaker, no longer defeats the fulfilment. Computed from the parties’ premises and the re-rated inferences and checked by the kernel.
 
 {\small\begin{verbatim}
-def promiseRatedStrength : Standard → PromiseParty → ℕ :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Standard.scriptural, PromiseParty.fulfilment => 1
-    | x, x_2 => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{promise\_\allowbreak{}rerated\_\allowbreak{}strength}}\par\nobreak\noindent
-Each party’s weakest link, as the re-rated package computes it.
-
-{\small\begin{verbatim}
-theorem promise_rerated_strength : ∀ (s : Standard) (i : PromiseParty),
-    ((promiseRegister.rerated s).node i).strength = promiseRatedStrength s i
+theorem promiseRegister_defeats : ∀ (s : Standard) (i j : PromiseParty),
+    (promiseRegister.rerated s).defeats i j ↔ (i, j) ∈
+    promiseRegister.defeatsTable s
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Rated\allowbreak{}Defeats}}\par\nobreak\noindent
-Who defeats whom at a standard’s ratings: under the evidence and tradition standards, as in the full dispute; under the Scripture standard, Westermann, now the weaker, no longer defeats the fulfilment.
-
-{\small\begin{verbatim}
-def promiseRatedDefeats : Standard → PromiseParty → PromiseParty → Prop :=
-  fun x x_1 x_2 =>
-    match x, x_1, x_2 with
-    | Standard.scriptural, PromiseParty.westermann,
-      PromiseParty.fulfilment => False
-    | x, i, j => promisePartyDefeats i j
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Promise\allowbreak{}Party\allowbreak{}Promise\allowbreak{}Rated\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelPromisePartyPromiseRatedDefeats : (s : Standard) →
-    DecidableRel (promiseRatedDefeats s)
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{promise\_\allowbreak{}rerated\_\allowbreak{}defeats}}\par\nobreak\noindent
-\textbf{Who defeats whom at each standard’s ratings}, computed from the parties’ premises and the re-rated inferences and checked by the kernel.
-
-{\small\begin{verbatim}
-theorem promise_rerated_defeats : ∀ (s : Standard) (i j : PromiseParty),
-    (promiseRegister.rerated s).defeats i j ↔ promiseRatedDefeats s i j
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Rated\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute at a standard’s ratings, in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def promiseRatedFinite : (s : Standard) → Solver.Finite
-    (promiseRegister.rerated s).defeats :=
-  fun s =>
-    { parties := promiseFinite.parties,
-      complete := promiseRatedFinite._proof_1,
-      defeats := fun i j => decide (promiseRatedDefeats s i j),
-      spec := ⋯ }
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Under\allowbreak{}Finite}}\par\nobreak\noindent
-The hearing under a standard, in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def promiseUnderFinite : (s : Standard) → Solver.Finite fun i j =>
-    (promiseRegister.rerated s).defeats ↑i ↑j :=
-  fun s =>
-    (promiseRatedFinite s).restrict
-      (promiseRegister.admits s)
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{promise\allowbreak{}Under\allowbreak{}Evidence\allowbreak{}Settled}}\par\nobreak\noindent
 How the hearing under the evidence standard is settled: Westermann is heard, and he and each of the others defeat one another.
@@ -11746,7 +11346,7 @@ The premises each position argues from.
 def jamesPartyNode : JamesParty → ArgumentPackage Claim
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Dispute}}\par\nobreak\noindent
-The debate over James 2:24 and the increase of justification. For every position heard: its premises can be held without contradiction, its conclusion follows from them, and every step it uses is rated.
+The debate over James 2:24 and the increase of justification. For every position heard: its premises can be held without contradiction, its conclusion follows from them, and every step it uses is rated. Each position’s weakest link is \texttt{well\allowbreak{}Supported} for the readings of the words and the texts, and the bottom for the rest.
 
 {\small\begin{verbatim}
 def jamesDispute : Dispute Claim JamesParty :=
@@ -11754,40 +11354,6 @@ def jamesDispute : Dispute Claim JamesParty :=
     consistent := jamesDispute._proof_1,
     sound := jamesDispute._proof_2,
     rated := jamesDispute._proof_15 }
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{james\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-Who defeats whom, as a table.
-
-{\small\begin{verbatim}
-def jamesPartyDefeats : JamesParty → JamesParty → Prop
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}James\allowbreak{}Party\allowbreak{}James\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelJamesPartyJamesPartyDefeats : DecidableRel
-    jamesPartyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{james\allowbreak{}Party\allowbreak{}Strength}}\par\nobreak\noindent
-Each position’s weakest link: \texttt{well\allowbreak{}Supported} for the readings of the words and the texts, and the bottom for the rest.
-
-{\small\begin{verbatim}
-def jamesPartyStrength : JamesParty → ℕ :=
-  fun x =>
-    match x with
-    | JamesParty.lexical => 2
-    | JamesParty.faith => 2
-    | JamesParty.revelationText => 2
-    | JamesParty.sirachText => 2
-    | x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{james\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each position’s weakest link, as worked out from its premises.
-
-{\small\begin{verbatim}
-theorem jamesPartyNode_strength : ∀ (i : JamesParty), (jamesPartyNode
-    i).strength = jamesPartyStrength i
--- axioms: propext
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, for all 144 pairs.
@@ -11806,26 +11372,18 @@ Every answer is worked out from the positions’ premises and checked by machine
 
 {\small\begin{verbatim}
 theorem jamesDispute_defeats : ∀ (i j : JamesParty), jamesDispute.defeats i j
-    ↔ jamesPartyDefeats i j
+    ↔ (i, j) ∈ [(JamesParty.lexical, JamesParty.trentOnTheWord),
+    (JamesParty.harmony, JamesParty.trentOnWorks), (JamesParty.trentOnWorks,
+    JamesParty.harmony), (JamesParty.revelationText,
+    JamesParty.trentOnRevelation), (JamesParty.sirachText,
+    JamesParty.trentOnSirach), (JamesParty.harmony, JamesParty.trentOnReward),
+    (JamesParty.trentOnReward, JamesParty.harmony), (JamesParty.lexical,
+    JamesParty.renewalOnTheWord), (JamesParty.westminsterOnReward,
+    JamesParty.trentOnReward), (JamesParty.trentOnReward,
+    JamesParty.westminsterOnReward), (JamesParty.harmony,
+    JamesParty.renewalOnTheWord), (JamesParty.renewalOnTheWord,
+    JamesParty.harmony)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{james\allowbreak{}Finite}}\par\nobreak\noindent
-The debate in the form the solver works with.
-
-{\small\begin{verbatim}
-def jamesFinite : Solver.Finite jamesDispute.defeats :=
-  {
-    parties :=
-      [JamesParty.lexical, JamesParty.faith,
-        JamesParty.harmony, JamesParty.trentOnTheWord,
-        JamesParty.trentOnWorks, JamesParty.trentOnRevelation,
-        JamesParty.trentOnSirach, JamesParty.revelationText,
-        JamesParty.sirachText, JamesParty.trentOnReward,
-        JamesParty.renewalOnTheWord,
-        JamesParty.westminsterOnReward],
-    complete := jamesFinite._proof_1,
-    defeats := fun i j => decide (jamesPartyDefeats i j),
-    spec := jamesFinite._proof_2 }
 \end{verbatim}}
 \paragraph*{What the debate decides}
 \leavevmode\par\nobreak
@@ -13523,7 +13081,7 @@ def wordsPartyNode : WordsParty → ArgumentPackage Claim :=
     | WordsParty.matthew19Legal => matthew19LegalCase
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Dispute}}\par\nobreak\noindent
-The debate over Jesus’ words. For every position heard: its premises can be held without contradiction, its conclusion follows from them, and every step it uses is rated.
+The debate over Jesus’ words. For every position heard: its premises can be held without contradiction, its conclusion follows from them, and every step it uses is rated. Each position’s weakest link is \texttt{disputed}.
 
 {\small\begin{verbatim}
 def jesusWordsDispute : Dispute Claim WordsParty :=
@@ -13532,98 +13090,20 @@ def jesusWordsDispute : Dispute Claim WordsParty :=
     sound := jesusWordsDispute._proof_2,
     rated := jesusWordsDispute._proof_10 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{luke\allowbreak{}With\allowbreak{}Rome\allowbreak{}On\allowbreak{}Matthew\allowbreak{}Reading}}\par\nobreak\noindent
-\textbf{Rome’s readings of Matthew can be held together with Luke’s sayings.} One consistent reading holds Luke 7:50 and Luke 18, that faith sufficed, and Rome’s readings of Matthew 7 and 19, that salvation is not apart from works. As written out here, “faith suffices” and “not apart from works” are different claims, and Luke’s sayings make only the first. So whoever holds both is not contradicted by these texts. This reading takes neither of Trent’s further claims: baptism as the instrument of justification, and justification as including sanctification.
-
-{\small\begin{verbatim}
-def lukeWithRomeOnMatthewReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.paulsJustifyDenotesRenewal => False
-    | Claim.rev22_11BeJustifiedStill => False
-    | Claim.sir18_22BeJustifiedToDeath => False
-    | Claim.jamesUsesDikaioAsPaul => False
-    | Claim.salvationNotByWorks => False
-    | Claim.matthew7DoingIncludesBelieving => False
-    | Claim.matthew19LawExposesInability => False
-    | Claim.baptismIsInstrumentalCause => False
-    | Claim.justificationIncludesSanctification => False
-    | x => True
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{luke\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}rome\_\allowbreak{}on\_\allowbreak{}matthew}}\par\nobreak\noindent
-Luke’s two sayings can be held together with Rome’s readings of Matthew.
-
-{\small\begin{verbatim}
-theorem luke_stands_with_rome_on_matthew : jesusWordsDispute.StandTogether
-    [WordsParty.luke7, WordsParty.luke18, WordsParty.matthew7Obedience,
-    WordsParty.matthew19Way]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{words\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-Who defeats whom, as a table.
-
-{\small\begin{verbatim}
-def wordsPartyDefeats : WordsParty → WordsParty → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | WordsParty.luke7, WordsParty.trent => True
-    | WordsParty.trent, WordsParty.luke7 => True
-    | WordsParty.luke18, WordsParty.trent => True
-    | WordsParty.trent, WordsParty.luke18 => True
-    | WordsParty.matthew7Obedience,
-      WordsParty.matthew7Faith => True
-    | WordsParty.matthew7Faith,
-      WordsParty.matthew7Obedience => True
-    | WordsParty.matthew19Way, WordsParty.matthew19Legal =>
-      True
-    | WordsParty.matthew19Legal, WordsParty.matthew19Way =>
-      True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Words\allowbreak{}Party\allowbreak{}Words\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelWordsPartyWordsPartyDefeats : DecidableRel
-    wordsPartyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{words\allowbreak{}Party\allowbreak{}Strength}}\par\nobreak\noindent
-Each position’s weakest link: \texttt{disputed} for every one.
-
-{\small\begin{verbatim}
-def wordsPartyStrength : WordsParty → ℕ :=
-  fun x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{words\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each position’s weakest link, as worked out from its premises.
-
-{\small\begin{verbatim}
-theorem wordsPartyNode_strength : ∀ (i : WordsParty), (wordsPartyNode
-    i).strength = wordsPartyStrength i
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, for all 49 pairs: four ties, and nothing else. Luke 7:50 and Trent defeat each other, and so do Luke 18 and Trent, over Trent’s definition of justification. Each reading of Matthew defeats its rival and is defeated in return. Every answer is worked out from the positions’ premises and checked by machine.
 
 {\small\begin{verbatim}
 theorem jesusWordsDispute_defeats : ∀ (i j : WordsParty),
-    jesusWordsDispute.defeats i j ↔ wordsPartyDefeats i j
+    jesusWordsDispute.defeats i j ↔ (i, j) ∈ [(WordsParty.luke7,
+    WordsParty.trent), (WordsParty.trent, WordsParty.luke7),
+    (WordsParty.luke18, WordsParty.trent), (WordsParty.trent,
+    WordsParty.luke18), (WordsParty.matthew7Obedience,
+    WordsParty.matthew7Faith), (WordsParty.matthew7Faith,
+    WordsParty.matthew7Obedience), (WordsParty.matthew19Way,
+    WordsParty.matthew19Legal), (WordsParty.matthew19Legal,
+    WordsParty.matthew19Way)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Finite}}\par\nobreak\noindent
-The debate in the form the solver works with.
-
-{\small\begin{verbatim}
-def jesusWordsFinite : Solver.Finite jesusWordsDispute.defeats :=
-  {
-    parties :=
-      [WordsParty.luke7, WordsParty.luke18,
-        WordsParty.trent, WordsParty.matthew7Obedience,
-        WordsParty.matthew7Faith, WordsParty.matthew19Way,
-        WordsParty.matthew19Legal],
-    complete := jesusWordsFinite._proof_1,
-    defeats := fun i j => decide (wordsPartyDefeats i j),
-    spec := jesusWordsFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
 \textbf{No position supports another, and no position’s case is contained in another’s}, in any of the 49 pairs. Every answer is worked out and checked by machine.
@@ -13638,7 +13118,7 @@ Each position’s case contains itself and no other. Every answer is worked out 
 
 {\small\begin{verbatim}
 theorem jesusWordsDispute_partOf : ∀ (i j : WordsParty),
-    jesusWordsDispute.partOf i j ↔ i = j
+    jesusWordsDispute.partOf i j ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Map}}\par\nobreak\noindent
@@ -13689,6 +13169,33 @@ The debate over Jesus’ words drawn as a map: who defeats whom.
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{jesus\allowbreak{}Words\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{luke\allowbreak{}With\allowbreak{}Rome\allowbreak{}On\allowbreak{}Matthew\allowbreak{}Reading}}\par\nobreak\noindent
+\textbf{Rome’s readings of Matthew can be held together with Luke’s sayings.} One consistent reading holds Luke 7:50 and Luke 18, that faith sufficed, and Rome’s readings of Matthew 7 and 19, that salvation is not apart from works. As written out here, “faith suffices” and “not apart from works” are different claims, and Luke’s sayings make only the first. So whoever holds both is not contradicted by these texts. This reading takes neither of Trent’s further claims: baptism as the instrument of justification, and justification as including sanctification.
+
+{\small\begin{verbatim}
+def lukeWithRomeOnMatthewReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.rev22_11BeJustifiedStill => False
+    | Claim.sir18_22BeJustifiedToDeath => False
+    | Claim.jamesUsesDikaioAsPaul => False
+    | Claim.salvationNotByWorks => False
+    | Claim.matthew7DoingIncludesBelieving => False
+    | Claim.matthew19LawExposesInability => False
+    | Claim.baptismIsInstrumentalCause => False
+    | Claim.justificationIncludesSanctification => False
+    | x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{luke\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}rome\_\allowbreak{}on\_\allowbreak{}matthew}}\par\nobreak\noindent
+Luke’s two sayings can be held together with Rome’s readings of Matthew.
+
+{\small\begin{verbatim}
+theorem luke_stands_with_rome_on_matthew : jesusWordsDispute.StandTogether
+    [WordsParty.luke7, WordsParty.luke18, WordsParty.matthew7Obedience,
+    WordsParty.matthew19Way]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Settle\allowbreak{}Nothing}}\par\nobreak\noindent
 Why nothing is forced: every position has an attacker. Luke 7:50 and Luke 18 each have Trent, Trent has Luke 7:50, and each reading of Matthew has its rival.
 
@@ -14110,16 +13617,8 @@ theorem matthew19_calvin_reading_not_forced : ¬Framework.SkepticallyAccepted
 Every position but Trent: Luke’s two sayings, and both readings of each passage in Matthew.
 
 {\small\begin{verbatim}
-def jesusWordsWithoutTrent : Dispute Claim { i // i ≠ WordsParty.trent } :=
-  jesusWordsDispute.restrict fun x => x ≠ WordsParty.trent
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{jesus\allowbreak{}Words\allowbreak{}Without\allowbreak{}Trent\allowbreak{}Finite}}\par\nobreak\noindent
-That hearing, in the form the solver works with.
-
-{\small\begin{verbatim}
-def jesusWordsWithoutTrentFinite : Solver.Finite fun i j =>
-    jesusWordsDispute.defeats ↑i ↑j :=
-  jesusWordsFinite.restrict fun x => x ≠ WordsParty.trent
+def jesusWordsWithoutTrent : Dispute Claim { i // i ∉ [WordsParty.trent] } :=
+  jesusWordsDispute.restrict fun x => x ∉ [WordsParty.trent]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{without\allowbreak{}Trent\allowbreak{}Luke\allowbreak{}Settles}}\par\nobreak\noindent
 How the hearing is settled. With Trent not heard, nothing attacks Luke 7:50 or Luke 18, so both are accepted first. Nothing joins them, because each reading of Matthew still has its rival.
@@ -14179,7 +13678,7 @@ It does not show that faith \emph{alone} is forced. Luke’s sayings claim that 
 {\small\begin{verbatim}
 theorem without_trent_luke_is_forced : Framework.grounded
     jesusWordsWithoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x
-    ≠ WordsParty.trent) [WordsParty.luke7, WordsParty.luke18])
+    ∉ [WordsParty.trent]) [WordsParty.luke7, WordsParty.luke18])
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \subsection*{Is baptism how we are justified?}
@@ -16216,96 +15715,6 @@ def solaFideDispute : Dispute Claim Party :=
     sound := solaFideDispute._proof_2,
     rated := solaFideDispute._proof_20 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{reformed\_\allowbreak{}strands\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}critics}}\par\nobreak\noindent
-Paul’s, Luke’s and Peter’s cases can be held together with the critics’, on the reading where Sanders’ account of Judaism is denied and everything else holds.
-
-{\small\begin{verbatim}
-theorem reformed_strands_stand_with_the_critics :
-    solaFideDispute.StandTogether [Party.pauline, Party.dominical,
-    Party.apostolic, Party.critics]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{paul\_\allowbreak{}and\_\allowbreak{}luke\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}jervell}}\par\nobreak\noindent
-Paul’s case and Luke’s can be held together with the critics’ and with Jervell’s.
-
-{\small\begin{verbatim}
-theorem paul_and_luke_stand_with_jervell : solaFideDispute.StandTogether
-    [Party.pauline, Party.dominical, Party.jervell, Party.critics]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{luke\_\allowbreak{}and\_\allowbreak{}acts\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}sanders}}\par\nobreak\noindent
-Luke’s case and Peter’s can be held together with Sanders’: neither rests on the reading of “works of the law”.
-
-{\small\begin{verbatim}
-theorem luke_and_acts_stand_with_sanders : solaFideDispute.StandTogether
-    [Party.dominical, Party.apostolic, Party.sanders]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}sanders\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
-Trent can be held together with Sanders and Jervell.
-
-{\small\begin{verbatim}
-theorem trent_stands_with_sanders_and_jervell : solaFideDispute.StandTogether
-    [Party.trent, Party.sanders, Party.jervell]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}critics\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
-Trent can be held together with the critics and Jervell.
-
-{\small\begin{verbatim}
-theorem trent_stands_with_the_critics_and_jervell :
-    solaFideDispute.StandTogether [Party.trent, Party.critics, Party.jervell]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}sanders\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
-The apocalyptic reading can be held together with Sanders and Jervell.
-
-{\small\begin{verbatim}
-theorem apocalyptic_stands_with_sanders_and_jervell :
-    solaFideDispute.StandTogether [Party.apocalyptic, Party.sanders,
-    Party.jervell]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}critics\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
-The apocalyptic reading can be held together with the critics and Jervell.
-
-{\small\begin{verbatim}
-theorem apocalyptic_stands_with_the_critics_and_jervell :
-    solaFideDispute.StandTogether [Party.apocalyptic, Party.critics,
-    Party.jervell]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Defeats}}\par\nobreak\noindent
-Who defeats whom, as a table.
-
-{\small\begin{verbatim}
-def partyDefeats : Party → Party → Prop
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Strength}}\par\nobreak\noindent
-Each position’s weakest link: at the bottom for all but the two arguments about Paul’s word.
-
-{\small\begin{verbatim}
-def partyStrength : Party → ℕ :=
-  fun x =>
-    match x with
-    | Party.lexical => 2
-    | Party.romansOnTheWord => 2
-    | x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each position’s weakest link, as worked out from its premises.
-
-{\small\begin{verbatim}
-theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
-    partyStrength i
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, for all 289 pairs of positions.
 
@@ -16314,31 +15723,56 @@ Trent and each Reformed strand defeat each other. The apocalyptic reading and Pa
 Every one of the 225 answers, the defeats and the absences alike, is worked out from the positions’ premises and checked by machine. The table above is what that working is checked against. None of it is assumed.
 
 {\small\begin{verbatim}
-theorem solaFideDispute_defeats : ∀ (i j : Party), solaFideDispute.defeats i j
-    ↔ partyDefeats i j
+theorem solaFideDispute_defeats : ∀ (i j : Party),
+ solaFideDispute.defeats i
+    j ↔
+ (i, j) ∈
+ have y :=
+ have y :=
+ have y := [(Party.johannine,
+    Party.chrysostom), (Party.chrysostom, Party.sanctification),
+    (Party.sanctification, Party.chrysostom), (Party.trent,
+    Party.sanctification), (Party.sanctification, Party.trent),
+    (Party.trentOnPaulsWord, Party.sanctification), (Party.sanctification,
+    Party.trentOnPaulsWord)];
+ (Party.chrysostom, Party.pauline) ::
+    (Party.pauline, Party.chrysostom) :: (Party.chrysostom, Party.dominical)
+    :: (Party.dominical, Party.chrysostom) :: (Party.chrysostom,
+    Party.apostolic) :: (Party.apostolic, Party.chrysostom) ::
+    (Party.chrysostom, Party.johannine) :: y;
+ have y := (Party.johannine,
+    Party.trentOnPaulsWord) :: (Party.apocalyptic, Party.johannine) ::
+    (Party.johannine, Party.apocalyptic) :: (Party.aquinas, Party.johannine)
+    :: (Party.johannine, Party.aquinas) :: (Party.luther, Party.aquinas) ::
+    (Party.aquinas, Party.luther) :: y;
+ (Party.trentOnPaulsWord,
+    Party.dominical) :: (Party.trentOnPaulsWord, Party.apostolic) ::
+    (Party.trentOnPaulsWord, Party.apocalyptic) :: (Party.trent,
+    Party.johannine) :: (Party.johannine, Party.trent) ::
+    (Party.trentOnPaulsWord, Party.johannine) :: y;
+ have y :=
+ have y :=
+    (Party.lexical, Party.trentOnPaulsWord) :: (Party.romansOnTheWord,
+    Party.trentOnPaulsWord) :: (Party.pauline, Party.trentOnPaulsWord) ::
+    (Party.dominical, Party.trentOnPaulsWord) :: (Party.apostolic,
+    Party.trentOnPaulsWord) :: (Party.apocalyptic, Party.trentOnPaulsWord) ::
+    (Party.trentOnPaulsWord, Party.pauline) :: y;
+ (Party.critics,
+    Party.sanders) :: (Party.jervell, Party.apostolic) :: (Party.apostolic,
+    Party.jervell) :: (Party.gospel, Party.trent) :: (Party.trent,
+    Party.gospel) :: (Party.gospel, Party.trentOnPaulsWord) ::
+    (Party.trentOnPaulsWord, Party.gospel) :: y;
+ have y :=
+    (Party.apocalyptic, Party.trent) :: (Party.trent, Party.apocalyptic) ::
+    (Party.apocalyptic, Party.pauline) :: (Party.pauline, Party.apocalyptic)
+    :: (Party.sanders, Party.pauline) :: (Party.pauline, Party.sanders) ::
+    (Party.sanders, Party.critics) :: y;
+ (Party.trent, Party.pauline) ::
+    (Party.trent, Party.dominical) :: (Party.trent, Party.apostolic) ::
+    (Party.pauline, Party.trent) :: (Party.dominical, Party.trent) ::
+    (Party.apostolic, Party.trent) :: y
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Finite}}\par\nobreak\noindent
-The debate in the form the solver works with: every position, and the table.
-
-{\small\begin{verbatim}
-def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
-  {
-    parties :=
-      [Party.pauline, Party.dominical,
-        Party.apostolic, Party.trent,
-        Party.apocalyptic, Party.sanders,
-        Party.critics, Party.jervell, Party.gospel,
-        Party.lexical, Party.trentOnPaulsWord,
-        Party.romansOnTheWord, Party.johannine,
-        Party.aquinas, Party.luther,
-        Party.chrysostom, Party.sanctification],
-    complete := solaFideFinite._proof_1,
-    defeats := fun i j => decide (partyDefeats i j),
-    spec := solaFideFinite._proof_2 }
-\end{verbatim}}
-\paragraph*{The dispute as a graph}
-\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
 \textbf{No position supports another} in this debate, in any of the 289 pairs. One position supports another when its conclusion gives the other a claim it rests on. The critics’ conclusion used to be one of Paul’s premises. Now Paul’s case contains the critics’ whole line (\texttt{pauline\allowbreak{}Case}), which is the closer relation recorded below. The Reformed strands share a conclusion; that is agreement, not support (see \texttt{Testimony.Logic.Support}). Every answer is worked out and checked by machine.
 
@@ -16347,29 +15781,13 @@ theorem solaFideDispute_supports : ∀ (i j : Party), ¬solaFideDispute.supports
     i j
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
-Whose case is contained in whose, as a table. Besides each position’s own, there are two pairs.
-
-{\small\begin{verbatim}
-def partyPartOf : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.critics, Party.pauline => True
-    | Party.trent, Party.trentOnPaulsWord => True
-    | i, j => i = j
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelPartyPartyPartOf : DecidableRel partyPartOf
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
 \textbf{Whose case is contained in whose}, for all 289 pairs. The critics’ case is contained in Paul’s, since Paul’s case derives its reading of “works of the law” from the critics’ line. Trent’s case is contained in Trent taken as a claim about Paul’s word, which only adds to it. Every case contains itself. Nothing else. Every answer is worked out and checked by machine.
 
 {\small\begin{verbatim}
 theorem solaFideDispute_partOf : ∀ (i j : Party), solaFideDispute.partOf i j ↔
-    partyPartOf i j
+    i = j ∨ (i, j) ∈ [(Party.critics, Party.pauline), (Party.trent,
+    Party.trentOnPaulsWord)]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{sola\allowbreak{}Fide\allowbreak{}Map}}\par\nobreak\noindent
@@ -16544,6 +15962,65 @@ The debate drawn as a map: who defeats whom, and whose case is contained in whos
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{sola\allowbreak{}Fide\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{reformed\_\allowbreak{}strands\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}critics}}\par\nobreak\noindent
+Paul’s, Luke’s and Peter’s cases can be held together with the critics’, on the reading where Sanders’ account of Judaism is denied and everything else holds.
+
+{\small\begin{verbatim}
+theorem reformed_strands_stand_with_the_critics :
+    solaFideDispute.StandTogether [Party.pauline, Party.dominical,
+    Party.apostolic, Party.critics]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{paul\_\allowbreak{}and\_\allowbreak{}luke\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}jervell}}\par\nobreak\noindent
+Paul’s case and Luke’s can be held together with the critics’ and with Jervell’s.
+
+{\small\begin{verbatim}
+theorem paul_and_luke_stand_with_jervell : solaFideDispute.StandTogether
+    [Party.pauline, Party.dominical, Party.jervell, Party.critics]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{luke\_\allowbreak{}and\_\allowbreak{}acts\_\allowbreak{}stand\_\allowbreak{}with\_\allowbreak{}sanders}}\par\nobreak\noindent
+Luke’s case and Peter’s can be held together with Sanders’: neither rests on the reading of “works of the law”.
+
+{\small\begin{verbatim}
+theorem luke_and_acts_stand_with_sanders : solaFideDispute.StandTogether
+    [Party.dominical, Party.apostolic, Party.sanders]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}sanders\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
+Trent can be held together with Sanders and Jervell.
+
+{\small\begin{verbatim}
+theorem trent_stands_with_sanders_and_jervell : solaFideDispute.StandTogether
+    [Party.trent, Party.sanders, Party.jervell]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}critics\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
+Trent can be held together with the critics and Jervell.
+
+{\small\begin{verbatim}
+theorem trent_stands_with_the_critics_and_jervell :
+    solaFideDispute.StandTogether [Party.trent, Party.critics, Party.jervell]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}sanders\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
+The apocalyptic reading can be held together with Sanders and Jervell.
+
+{\small\begin{verbatim}
+theorem apocalyptic_stands_with_sanders_and_jervell :
+    solaFideDispute.StandTogether [Party.apocalyptic, Party.sanders,
+    Party.jervell]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{apocalyptic\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}critics\_\allowbreak{}and\_\allowbreak{}jervell}}\par\nobreak\noindent
+The apocalyptic reading can be held together with the critics and Jervell.
+
+{\small\begin{verbatim}
+theorem apocalyptic_stands_with_the_critics_and_jervell :
+    solaFideDispute.StandTogether [Party.apocalyptic, Party.critics,
+    Party.jervell]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \paragraph*{What the dispute decides}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{only\allowbreak{}Pauls\allowbreak{}Word\allowbreak{}Unanswered}}\par\nobreak\noindent
@@ -17865,17 +17342,6 @@ def reformationAlone : Dispute Claim { i // i ∉ [Party.apocalyptic,
       [Party.apocalyptic, Party.sanders,
         Party.critics, Party.jervell]
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{reformation\allowbreak{}Alone\allowbreak{}Finite}}\par\nobreak\noindent
-The Reformation debate, in the form the solver works with.
-
-{\small\begin{verbatim}
-def reformationAloneFinite : Solver.Finite fun i j => solaFideDispute.defeats
-    ↑i ↑j :=
-  solaFideFinite.restrict fun x =>
-    x ∉
-      [Party.apocalyptic, Party.sanders,
-        Party.critics, Party.jervell]
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{reformation\allowbreak{}Settles\allowbreak{}The\allowbreak{}Word}}\par\nobreak\noindent
 How far the Reformation debate can be settled. Nothing defeats either argument about Paul’s word, so both are accepted first, and nothing joins them. Each Reformed position is defeated by Trent. Trent is defeated by Paul’s case, and by Luke’s, Peter’s and Paul’s gospel. Trent taken as a claim about Paul’s word is defeated by the argument from the word itself.
 
@@ -18093,7 +17559,7 @@ This is what the two ways of taking Trent’s definition come to when weighed: a
 
 {\small\begin{verbatim}
 theorem trent_defensible_with_pauls_word : Framework.CredulouslyAccepted
-    reformationAlone.defeats ⟨Party.trent, ⋯⟩
+    reformationAlone.defeats ⟨Party.trent, trentStandsWithPaulsWord._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{reformation\allowbreak{}Answered\allowbreak{}By\allowbreak{}Trent}}\par\nobreak\noindent
@@ -18196,7 +17662,8 @@ Why sola fide is not forced in the Reformation debate: a set of positions that c
 
 {\small\begin{verbatim}
 theorem sola_fide_not_forced_in_the_reformation_dispute :
-    ¬Framework.SkepticallyAccepted reformationAlone.defeats ⟨Party.pauline, ⋯⟩
+    ¬Framework.SkepticallyAccepted reformationAlone.defeats ⟨Party.pauline,
+    reformationAnsweredByTrent._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \paragraph*{The debate without Trent}
@@ -18208,15 +17675,6 @@ Every position but Trent’s two: Trent as it states its definition, and Trent t
 def withoutTrent : Dispute Claim { i // i ∉ [Party.trent,
     Party.trentOnPaulsWord] } :=
   solaFideDispute.restrict fun x =>
-    x ∉ [Party.trent, Party.trentOnPaulsWord]
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{without\allowbreak{}Trent\allowbreak{}Finite}}\par\nobreak\noindent
-The debate without Trent, in the form the solver works with.
-
-{\small\begin{verbatim}
-def withoutTrentFinite : Solver.Finite fun i j => solaFideDispute.defeats ↑i
-    ↑j :=
-  solaFideFinite.restrict fun x =>
     x ∉ [Party.trent, Party.trentOnPaulsWord]
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{without\allowbreak{}Trent\allowbreak{}Settles}}\par\nobreak\noindent
@@ -18462,7 +17920,7 @@ A reading of two other sayings of Jesus, rated \texttt{disputed}, ties with Luke
 
 {\small\begin{verbatim}
 theorem luke_not_forced_without_trent : ¬Framework.SkepticallyAccepted
-    withoutTrent.defeats ⟨Party.dominical, ⋯⟩
+    withoutTrent.defeats ⟨Party.dominical, lukeAnsweredByChrysostom._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{paul\allowbreak{}Answered\allowbreak{}By\allowbreak{}Campbell}}\par\nobreak\noindent
@@ -18573,7 +18031,8 @@ Why Paul’s case is not forced without Trent: a set of positions that can be de
 
 {\small\begin{verbatim}
 theorem sola_fide_from_paul_not_forced_without_trent :
-    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.pauline, ⋯⟩
+    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.pauline,
+    paulAnsweredByCampbell._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{peter\allowbreak{}Answered\allowbreak{}By\allowbreak{}Jervell}}\par\nobreak\noindent
@@ -18686,7 +18145,8 @@ So without Trent it is forced that faith suffices (Luke) and that justification 
 
 {\small\begin{verbatim}
 theorem sola_fide_from_peter_not_forced_without_trent :
-    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, ⋯⟩
+    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic,
+    peterAnsweredByJervell._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{john\allowbreak{}Answered\allowbreak{}By\allowbreak{}Aquinas}}\par\nobreak\noindent
@@ -18796,7 +18256,8 @@ Without the Council, John 6:29 still does not compel faith alone, because what b
 
 {\small\begin{verbatim}
 theorem sola_fide_from_john_not_forced_without_trent :
-    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.johannine, ⋯⟩
+    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.johannine,
+    johnAnsweredByAquinas._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \subsection*{Why each step is rated as it is}
@@ -19304,62 +18765,14 @@ def jamesRegister : Register jamesDispute :=
       [fruitStep, lexicalStep, canon24Step,
         rewardStep] }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{rated\allowbreak{}Strength}}\par\nobreak\noindent
-Each position’s weakest link under a given standard. It is as cited, with one exception: under the tradition standard the argument from James’s word is weighed as \texttt{disputed}, which is what is worked out for it there.
+\par\medskip\noindent\textbf{\texttt{james\allowbreak{}Register\_\allowbreak{}defeats}}\par\nobreak\noindent
+\textbf{Who defeats whom under each standard.} Under the evidence standard, as in the full debate. Under the tradition standard there is one difference: Trent’s reading of the word and the reading through Paul each defeat the argument from James’s word, now that it is weighed as \texttt{disputed}. Every answer is worked out from the positions’ premises with the ratings for that standard, and checked by machine.
 
 {\small\begin{verbatim}
-def ratedStrength : Standard → JamesParty → ℕ :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Standard.tradition, JamesParty.lexical => 0
-    | x, i => jamesPartyStrength i
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{rerated\_\allowbreak{}strength}}\par\nobreak\noindent
-Each position’s weakest link, as worked out from its premises with the ratings for that standard.
-
-{\small\begin{verbatim}
-theorem rerated_strength : ∀ (s : Standard) (i : JamesParty),
-    ((jamesRegister.rerated s).node i).strength = ratedStrength s i
+theorem jamesRegister_defeats : ∀ (s : Standard) (i j : JamesParty),
+    (jamesRegister.rerated s).defeats i j ↔ (i, j) ∈
+    jamesRegister.defeatsTable s
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{rated\allowbreak{}Defeats}}\par\nobreak\noindent
-Who defeats whom under a given standard. Under the evidence standard, as in the full debate. Under the tradition standard there is one difference: Trent’s reading of the word and the reading through Paul each defeat the argument from James’s word, now that it is weighed as \texttt{disputed}.
-
-{\small\begin{verbatim}
-def ratedDefeats : Standard → JamesParty → JamesParty → Prop :=
-  fun x x_1 x_2 =>
-    match x, x_1, x_2 with
-    | Standard.tradition, JamesParty.trentOnTheWord,
-      JamesParty.lexical => True
-    | Standard.tradition, JamesParty.renewalOnTheWord,
-      JamesParty.lexical => True
-    | x, i, j => jamesPartyDefeats i j
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}James\allowbreak{}Party\allowbreak{}Rated\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelJamesPartyRatedDefeats : (s : Standard) → DecidableRel
-    (ratedDefeats s)
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{rerated\_\allowbreak{}defeats}}\par\nobreak\noindent
-\textbf{Who defeats whom under each standard.}
-
-{\small\begin{verbatim}
-theorem rerated_defeats : ∀ (s : Standard) (i j : JamesParty),
-    (jamesRegister.rerated s).defeats i j ↔ ratedDefeats s i j
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{rated\allowbreak{}Finite}}\par\nobreak\noindent
-The debate under a given standard, in the form the solver works with.
-
-{\small\begin{verbatim}
-def ratedFinite : (s : Standard) → Solver.Finite (jamesRegister.rerated
-    s).defeats :=
-  fun s =>
-    { parties := jamesFinite.parties,
-      complete := ratedFinite._proof_1,
-      defeats := fun i j => decide (ratedDefeats s i j), spec := ⋯ }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Under\allowbreak{}Evidence}}\par\nobreak\noindent
 The debate heard under the evidence standard.
@@ -19377,21 +18790,13 @@ def jamesUnderTradition : Dispute Claim { i // jamesRegister.admits
     Standard.tradition i } :=
   jamesRegister.hearing Standard.tradition
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{james\allowbreak{}Under\allowbreak{}Finite}}\par\nobreak\noindent
-The debate heard under a standard, in the form the solver works with.
-
-{\small\begin{verbatim}
-def jamesUnderFinite : (s : Standard) → Solver.Finite fun i j =>
-    (jamesRegister.rerated s).defeats ↑i ↑j :=
-  fun s => (ratedFinite s).restrict (jamesRegister.admits s)
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Under\allowbreak{}Evidence\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom under the evidence standard}: as in the full debate, among the positions heard.
 
 {\small\begin{verbatim}
 theorem jamesUnderEvidence_defeats : ∀ (i j : { i // jamesRegister.admits
-    Standard.evidence i }), jamesUnderEvidence.defeats i j ↔ ratedDefeats
-    Standard.evidence ↑i ↑j
+    Standard.evidence i }), jamesUnderEvidence.defeats i j ↔ (↑i, ↑j) ∈
+    jamesRegister.defeatsTable Standard.evidence
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{james\allowbreak{}Under\allowbreak{}Tradition\_\allowbreak{}defeats}}\par\nobreak\noindent
@@ -19399,8 +18804,8 @@ theorem jamesUnderEvidence_defeats : ∀ (i j : { i // jamesRegister.admits
 
 {\small\begin{verbatim}
 theorem jamesUnderTradition_defeats : ∀ (i j : { i // jamesRegister.admits
-    Standard.tradition i }), jamesUnderTradition.defeats i j ↔ ratedDefeats
-    Standard.tradition ↑i ↑j
+    Standard.tradition i }), jamesUnderTradition.defeats i j ↔ (↑i, ↑j) ∈
+    jamesRegister.defeatsTable Standard.tradition
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{under\allowbreak{}Evidence\allowbreak{}Settled}}\par\nobreak\noindent
@@ -23360,60 +22765,6 @@ def mark7Dispute : Dispute Claim Mark7Party :=
     sound := mark7Dispute._proof_2,
     rated := mark7Dispute._proof_8 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{marks\_\allowbreak{}principle\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}trent}}\par\nobreak\noindent
-Mark 7’s principle stands with Trent, as Trent states it and read as the apostolic word: Rome’s world, in which the principle holds and apostolic teaching survives outside Scripture.
-
-{\small\begin{verbatim}
-theorem marks_principle_stands_with_trent : mark7Dispute.StandTogether
-    [Mark7Party.principle, Mark7Party.trent, Mark7Party.trentAsApostolicWord]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table.
-
-{\small\begin{verbatim}
-def mark7PartyDefeats : Mark7Party → Mark7Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Mark7Party.principle,
-      Mark7Party.trentAsMensCommandments => True
-    | Mark7Party.mark7, Mark7Party.trent => True
-    | Mark7Party.mark7,
-      Mark7Party.trentAsMensCommandments => True
-    | Mark7Party.mark7,
-      Mark7Party.trentAsApostolicWord => True
-    | Mark7Party.trent, Mark7Party.mark7 => True
-    | Mark7Party.trentAsMensCommandments,
-      Mark7Party.mark7 => True
-    | Mark7Party.trentAsApostolicWord,
-      Mark7Party.mark7 => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Mark7\allowbreak{}Party\allowbreak{}Mark7\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelMark7PartyMark7PartyDefeats : DecidableRel
-    mark7PartyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Party\allowbreak{}Strength}}\par\nobreak\noindent
-Each party’s weakest link: at the bottom for all but Mark 7’s principle.
-
-{\small\begin{verbatim}
-def mark7PartyStrength : Mark7Party → ℕ :=
-  fun x =>
-    match x with
-    | Mark7Party.principle => 2
-    | x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each party’s weakest link, as its package computes it.
-
-{\small\begin{verbatim}
-theorem mark7PartyNode_strength : ∀ (i : Mark7Party), (mark7PartyNode
-    i).strength = mark7PartyStrength i
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all 25 pairs. Mark 7’s principle defeats Trent read as commandments of men, and that reading’s reply fails against it. Mark 7’s case and Trent defeat each other, as Trent states it and read either way. Nothing else.
 
@@ -23421,26 +22772,14 @@ Every cell is computed from the parties’ premises by \texttt{Horn.defeats?} an
 
 {\small\begin{verbatim}
 theorem mark7Dispute_defeats : ∀ (i j : Mark7Party), mark7Dispute.defeats i j
-    ↔ mark7PartyDefeats i j
+    ↔ (i, j) ∈ [(Mark7Party.principle, Mark7Party.trentAsMensCommandments),
+    (Mark7Party.mark7, Mark7Party.trent), (Mark7Party.mark7,
+    Mark7Party.trentAsMensCommandments), (Mark7Party.mark7,
+    Mark7Party.trentAsApostolicWord), (Mark7Party.trent, Mark7Party.mark7),
+    (Mark7Party.trentAsMensCommandments, Mark7Party.mark7),
+    (Mark7Party.trentAsApostolicWord, Mark7Party.mark7)]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def mark7Finite : Solver.Finite mark7Dispute.defeats :=
-  {
-    parties :=
-      [Mark7Party.principle, Mark7Party.mark7,
-        Mark7Party.trent,
-        Mark7Party.trentAsMensCommandments,
-        Mark7Party.trentAsApostolicWord],
-    complete := mark7Finite._proof_1,
-    defeats := fun i j => decide (mark7PartyDefeats i j),
-    spec := mark7Finite._proof_2 }
-\end{verbatim}}
-\paragraph*{The dispute as a graph}
-\leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
 \textbf{Nothing supports anything} in the dispute over Mark 7, in all 25 pairs: no party’s conclusion entails a claim another rests on. Mark 7’s principle is \emph{derived} inside Mark 7’s case, not assumed there, so the relation between them is not support. Every cell is computed by \texttt{supports?} and checked by the kernel.
 
@@ -23449,31 +22788,13 @@ theorem mark7Dispute_supports : ∀ (i j : Mark7Party), ¬mark7Dispute.supports 
     j
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
-Whose case is part of whose, as a table: besides each party’s own, Trent’s is part of each reading of it.
-
-{\small\begin{verbatim}
-def mark7PartyPartOf : Mark7Party → Mark7Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Mark7Party.trent,
-      Mark7Party.trentAsMensCommandments => True
-    | Mark7Party.trent,
-      Mark7Party.trentAsApostolicWord => True
-    | i, j => i = j
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Mark7\allowbreak{}Party\allowbreak{}Mark7\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelMark7PartyMark7PartyPartOf : DecidableRel mark7PartyPartOf
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
 \textbf{Whose case is part of whose}, all 25 pairs: Trent’s case is part of each reading of it, which only adds to it; and every case is part of itself. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
 
 {\small\begin{verbatim}
 theorem mark7Dispute_partOf : ∀ (i j : Mark7Party), mark7Dispute.partOf i j ↔
-    mark7PartyPartOf i j
+    i = j ∨ (i, j) ∈ [(Mark7Party.trent, Mark7Party.trentAsMensCommandments),
+    (Mark7Party.trent, Mark7Party.trentAsApostolicWord)]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{mark7\allowbreak{}Map}}\par\nobreak\noindent
@@ -23524,6 +22845,14 @@ The dispute over Mark 7 drawn: who defeats whom, and whose case is part of whose
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{mark7\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{marks\_\allowbreak{}principle\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}trent}}\par\nobreak\noindent
+Mark 7’s principle stands with Trent, as Trent states it and read as the apostolic word: Rome’s world, in which the principle holds and apostolic teaching survives outside Scripture.
+
+{\small\begin{verbatim}
+theorem marks_principle_stands_with_trent : mark7Dispute.StandTogether
+    [Mark7Party.principle, Mark7Party.trent, Mark7Party.trentAsApostolicWord]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \paragraph*{What the dispute decides}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{marks\allowbreak{}Principle\allowbreak{}Unanswered}}\par\nobreak\noindent
@@ -23834,17 +23163,6 @@ def mensCommandmentsHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
       [Mark7Party.principle, Mark7Party.mark7,
         Mark7Party.trentAsMensCommandments]
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{mens\allowbreak{}Commandments\allowbreak{}Hearing\allowbreak{}Finite}}\par\nobreak\noindent
-The hearing, in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def mensCommandmentsHearingFinite : Solver.Finite fun i j =>
-    mark7Dispute.defeats ↑i ↑j :=
-  mark7Finite.restrict fun x =>
-    x ∈
-      [Mark7Party.principle, Mark7Party.mark7,
-        Mark7Party.trentAsMensCommandments]
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{mens\allowbreak{}Commandments\allowbreak{}Hearing\allowbreak{}Settles}}\par\nobreak\noindent
 How the hearing is settled, in two stages: nothing defeats Mark 7’s principle, so it comes first; the principle defeats the reading, and with the reading answered Mark 7’s case has no attacker left, so it comes second.
 
@@ -23903,17 +23221,6 @@ Mark 7’s principle and case, heard against Trent read as the apostolic word ha
 def apostolicWordHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
     Mark7Party.mark7, Mark7Party.trentAsApostolicWord] } :=
   mark7Dispute.restrict fun x =>
-    x ∈
-      [Mark7Party.principle, Mark7Party.mark7,
-        Mark7Party.trentAsApostolicWord]
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{apostolic\allowbreak{}Word\allowbreak{}Hearing\allowbreak{}Finite}}\par\nobreak\noindent
-The hearing, in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def apostolicWordHearingFinite : Solver.Finite fun i j => mark7Dispute.defeats
-    ↑i ↑j :=
-  mark7Finite.restrict fun x =>
     x ∈
       [Mark7Party.principle, Mark7Party.mark7,
         Mark7Party.trentAsApostolicWord]
@@ -23994,7 +23301,7 @@ Why Mark 7’s case is not forced in this hearing: a defensible position holds t
 {\small\begin{verbatim}
 theorem mark7_not_forced_against_the_apostolic_word :
     ¬Framework.SkepticallyAccepted apostolicWordHearing.defeats
-    ⟨Mark7Party.mark7, ⋯⟩
+    ⟨Mark7Party.mark7, mark7AnsweredByTheApostolicWord._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \clearpage
@@ -25141,36 +24448,6 @@ Four standoffs, and nothing else. The conversion view stands off against both su
 That is where the question stands in the literature, and the page says so rather than choosing. The conversion and sacramental views agree that there is no second baptism in the Spirit to seek, and differ over the rite, which this dispute does not weigh. What would decide between the two camps is argued, not weighed: what Luke’s narratives are (\texttt{pentecostal\_\allowbreak{}cannot\_\allowbreak{}read\_\allowbreak{}acts\_\allowbreak{}as\_\allowbreak{}transitions} says the Pentecostal view must read them as a pattern), and whether Paul’s word at 1 Corinthians 12:13 and Luke’s are the same baptism — a question not yet encoded.
 
 \subsubsection*{How this is checked}
-\paragraph*{Strength}
-\leavevmode\par\nobreak
-\par\medskip\noindent\textbf{\texttt{conversion\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The conversion view’s weakest link is \texttt{disputed}, at several places: its reading of 1 Corinthians 12:13 and both of its steps.
-
-{\small\begin{verbatim}
-theorem conversionCase_strength : conversionCase.strength = 0
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{pentecostal\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The Pentecostal view’s weakest link is \texttt{disputed}, at several places: its reading of 1 Corinthians 12:13, of Acts 8 and 19, of Luke’s Spirit baptism, of the narratives as a pattern, and its step from the instrumental reading.
-
-{\small\begin{verbatim}
-theorem pentecostalCase_strength : pentecostalCase.strength = 0
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{holiness\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The holiness view’s weakest link is \texttt{disputed}: its premise, and the step Wesley contests.
-
-{\small\begin{verbatim}
-theorem holinessCase_strength : holinessCase.strength = 0
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{sacramental\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The sacramental view’s weakest link is \texttt{disputed}, at several places: its readings of the rite and both of its steps.
-
-{\small\begin{verbatim}
-theorem sacramentalCase_strength : sacramentalCase.strength = 0
--- axioms: propext
-\end{verbatim}}
 \paragraph*{The dispute}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{view\allowbreak{}Node}}\par\nobreak\noindent
@@ -25195,85 +24472,20 @@ def spiritBaptismDispute : Dispute Claim View :=
     sound := spiritBaptismDispute._proof_2,
     rated := spiritBaptismDispute._proof_7 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{conversion\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}sacraments}}\par\nobreak\noindent
-\textbf{The conversion and sacramental views can be held together}: one reading satisfies both — every believer baptized in the Spirit at conversion, the Spirit given in the sacraments, and no second baptism to seek.
-
-It does not show that the two agree. They differ over what the rite does, which this dispute does not weigh, and the result says only that nothing encoded here makes them contradict each other.
-
-{\small\begin{verbatim}
-theorem conversion_stands_with_the_sacraments :
-    spiritBaptismDispute.StandTogether [View.conversion, View.sacramental]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{the\_\allowbreak{}subsequence\_\allowbreak{}views\_\allowbreak{}stand\_\allowbreak{}together}}\par\nobreak\noindent
-\textbf{The two subsequence views can be held together}: a second baptism to seek, whether read as empowerment or as the second work of grace. Whether it is the same second experience, the encoding does not say.
-
-{\small\begin{verbatim}
-theorem the_subsequence_views_stand_together :
-    spiritBaptismDispute.StandTogether [View.pentecostal, View.holiness]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{view\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table.
-
-{\small\begin{verbatim}
-def viewDefeats : View → View → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | View.conversion, View.pentecostal => True
-    | View.conversion, View.holiness => True
-    | View.pentecostal, View.conversion => True
-    | View.pentecostal, View.sacramental => True
-    | View.holiness, View.conversion => True
-    | View.holiness, View.sacramental => True
-    | View.sacramental, View.pentecostal => True
-    | View.sacramental, View.holiness => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}View\allowbreak{}View\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelViewViewDefeats : DecidableRel viewDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{view\allowbreak{}Strength}}\par\nobreak\noindent
-Each view’s weakest link: \texttt{disputed} for every one.
-
-{\small\begin{verbatim}
-def viewStrength : View → ℕ :=
-  fun x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{view\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each view’s weakest link, as its package computes it.
-
-{\small\begin{verbatim}
-theorem viewNode_strength : ∀ (i : View), (viewNode i).strength = viewStrength
-    i
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
-\textbf{Who defeats whom}, all 16 pairs: four standoffs, and nothing else. The conversion view and each subsequence view defeat each other — “no second to seek” against “a second to seek” — and the Pentecostal view also denies the conversion reading of 1 Corinthians 12:13. The sacramental view and each subsequence view defeat each other on the same point. Every cell is computed by \texttt{Horn.defeats?} and checked by the kernel.
+\textbf{Who defeats whom}, all 16 pairs: four standoffs, and nothing else. The conversion view and each subsequence view defeat each other — “no second to seek” against “a second to seek” — and the Pentecostal view also denies the conversion reading of 1 Corinthians 12:13. The sacramental view and each subsequence view defeat each other on the same point. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem spiritBaptismDispute_defeats : ∀ (i j : View),
-    spiritBaptismDispute.defeats i j ↔ viewDefeats i j
+    spiritBaptismDispute.defeats i j ↔ (i, j) ∈ [(View.conversion,
+    View.pentecostal), (View.conversion, View.holiness), (View.pentecostal,
+    View.conversion), (View.pentecostal, View.sacramental), (View.holiness,
+    View.conversion), (View.holiness, View.sacramental), (View.sacramental,
+    View.pentecostal), (View.sacramental, View.holiness)]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def spiritBaptismFinite : Solver.Finite spiritBaptismDispute.defeats :=
-  {
-    parties :=
-      [View.conversion, View.pentecostal,
-        View.holiness, View.sacramental],
-    complete := spiritBaptismFinite._proof_1,
-    defeats := fun i j => decide (viewDefeats i j),
-    spec := spiritBaptismFinite._proof_2 }
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
-\textbf{Nothing supports anything}, in all 16 pairs. Every cell is computed by \texttt{supports?} and checked by the kernel.
+\textbf{Nothing supports anything}, in all 16 pairs. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem spiritBaptismDispute_supports : ∀ (i j : View),
@@ -25281,11 +24493,11 @@ theorem spiritBaptismDispute_supports : ∀ (i j : View),
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
-Each view’s case is part of its own and of no other’s. Every cell is computed by \texttt{part\allowbreak{}Of?} and checked by the kernel.
+Each view’s case is part of its own and of no other’s. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem spiritBaptismDispute_partOf : ∀ (i j : View),
-    spiritBaptismDispute.partOf i j ↔ i = j
+    spiritBaptismDispute.partOf i j ↔ i = j ∨ (i, j) ∈ []
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Map}}\par\nobreak\noindent
@@ -25330,6 +24542,24 @@ The dispute over Spirit baptism drawn: who defeats whom.
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{spirit\allowbreak{}Baptism\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{conversion\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}sacraments}}\par\nobreak\noindent
+\textbf{The conversion and sacramental views can be held together}: one reading satisfies both — every believer baptized in the Spirit at conversion, the Spirit given in the sacraments, and no second baptism to seek.
+
+It does not show that the two agree. They differ over what the rite does, which this dispute does not weigh, and the result says only that nothing encoded here makes them contradict each other.
+
+{\small\begin{verbatim}
+theorem conversion_stands_with_the_sacraments :
+    spiritBaptismDispute.StandTogether [View.conversion, View.sacramental]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{the\_\allowbreak{}subsequence\_\allowbreak{}views\_\allowbreak{}stand\_\allowbreak{}together}}\par\nobreak\noindent
+\textbf{The two subsequence views can be held together}: a second baptism to seek, whether read as empowerment or as the second work of grace. Whether it is the same second experience, the encoding does not say.
+
+{\small\begin{verbatim}
+theorem the_subsequence_views_stand_together :
+    spiritBaptismDispute.StandTogether [View.pentecostal, View.holiness]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \paragraph*{What the dispute decides}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{spirit\allowbreak{}Baptism\allowbreak{}Settles\allowbreak{}Nothing}}\par\nobreak\noindent
@@ -26407,29 +25637,6 @@ That is LST’s grading of the question, reproduced given these ratings: the rel
 The standoff rests on reading “proceeds” the same way on both sides. The Pontifical Council for Promoting Christian Unity (1995) distinguishes the Greek ἐκπόρευσις, origin from the Father alone, from the Latin \emph{processio}. On that distinction “and the Son” and “not from the Son” may not contradict each other, and the two defeats would not exist. The chapter on the procession says what testing that would take.
 
 \subsubsection*{How this is checked}
-\paragraph*{Strength}
-\leavevmode\par\nobreak
-\par\medskip\noindent\textbf{\texttt{lst\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-LST’s weakest link is \texttt{well\allowbreak{}Supported}: its step from the texts to the relation, audited for a reader who grants the texts and denies the relation, and none found. The texts themselves are \texttt{consensus}.
-
-{\small\begin{verbatim}
-theorem lstCase_strength : lstCase.strength = 2
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{western\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The Western position’s weakest link is \texttt{disputed}: its readings of John 16:14 and of the mission, the claim that only opposed relations distinguish the persons, and its steps from John 16:14 and from mission. Its step from distinction is rated \texttt{well\allowbreak{}Supported}.
-
-{\small\begin{verbatim}
-theorem westernCase_strength : westernCase.strength = 0
--- axioms: propext
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{eastern\allowbreak{}Case\_\allowbreak{}strength}}\par\nobreak\noindent
-The Eastern position’s weakest link is \texttt{disputed}: each of its two readings, and each of its two steps.
-
-{\small\begin{verbatim}
-theorem easternCase_strength : easternCase.strength = 0
--- axioms: propext
-\end{verbatim}}
 \paragraph*{The dispute}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node}}\par\nobreak\noindent
@@ -26452,76 +25659,14 @@ def processionDispute : Dispute Claim Party :=
     sound := processionDispute._proof_2,
     rated := processionDispute._proof_6 }
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{lst\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}west}}\par\nobreak\noindent
-\textbf{LST stands with the West}: one reading satisfies both, the Western reading.
-
-{\small\begin{verbatim}
-theorem lst_stands_with_the_west : processionDispute.StandTogether [Party.lst,
-    Party.western]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{lst\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}east}}\par\nobreak\noindent
-\textbf{LST stands with the East} too: the Eastern reading satisfies both. So LST’s position takes no side, which is what it says of itself.
-
-{\small\begin{verbatim}
-theorem lst_stands_with_the_east : processionDispute.StandTogether [Party.lst,
-    Party.eastern]
--- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Defeats}}\par\nobreak\noindent
-The defeats of the dispute, as a table: the West and the East, each way.
-
-{\small\begin{verbatim}
-def partyDefeats : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.western, Party.eastern => True
-    | Party.eastern, Party.western => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Defeats}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Strength}}\par\nobreak\noindent
-Each party’s weakest link: \texttt{well\allowbreak{}Supported} for LST, \texttt{disputed} for the two sides.
-
-{\small\begin{verbatim}
-def partyStrength : Party → ℕ :=
-  fun x =>
-    match x with
-    | Party.lst => 2
-    | x => 0
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Node\_\allowbreak{}strength}}\par\nobreak\noindent
-Each party’s weakest link, as its package computes it.
-
-{\small\begin{verbatim}
-theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
-    partyStrength i
--- axioms: propext
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
 \textbf{Who defeats whom}, all 9 pairs: one standoff, the West and the East over “and the Son”, and nothing else. Neither attacks LST, because each holds every premise LST holds. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem processionDispute_defeats : ∀ (i j : Party), processionDispute.defeats
-    i j ↔ partyDefeats i j
+    i j ↔ (i, j) ∈ [(Party.western, Party.eastern), (Party.eastern,
+    Party.western)]
 -- axioms: propext, Classical.choice, Quot.sound
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Finite}}\par\nobreak\noindent
-The dispute in the form the verdict solver computes with.
-
-{\small\begin{verbatim}
-def processionFinite : Solver.Finite processionDispute.defeats :=
-  {
-    parties :=
-      [Party.lst, Party.western, Party.eastern],
-    complete := processionFinite._proof_1,
-    defeats := fun i j => decide (partyDefeats i j),
-    spec := processionFinite._proof_2 }
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Dispute\_\allowbreak{}supports}}\par\nobreak\noindent
 \textbf{Nothing supports anything}, in all 9 pairs: no party’s conclusion is a premise another party states. LST’s relation is derived inside the other two positions, not assumed by them. Every cell is checked by the kernel.
@@ -26531,30 +25676,13 @@ theorem processionDispute_supports : ∀ (i j : Party),
     ¬processionDispute.supports i j
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
-Which party’s case is part of which: LST’s is part of every party’s, since each holds the texts and the step LST draws from them; otherwise each case is part of its own only.
-
-{\small\begin{verbatim}
-def partyPartOf : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.lst, x => True
-    | Party.western, Party.western => True
-    | Party.eastern, Party.eastern => True
-    | x, x_2 => False
-\end{verbatim}}
-\par\medskip\noindent\textbf{\texttt{inst\allowbreak{}Decidable\allowbreak{}Rel\allowbreak{}Party\allowbreak{}Party\allowbreak{}Part\allowbreak{}Of}}\par\nobreak\noindent
-The table is finite, so membership in it is decidable.
-
-{\small\begin{verbatim}
-def instDecidableRelPartyPartyPartOf : DecidableRel partyPartOf
-\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}}\par\nobreak\noindent
-\textbf{LST’s case is part of both the others’.} Every cell is checked by the kernel.
+\textbf{LST’s case is part of both the others’}, since each holds the texts and the step LST draws from them. Otherwise each case is part of its own only. Every cell is checked by the kernel.
 
 {\small\begin{verbatim}
 theorem processionDispute_partOf : ∀ (i j : Party), processionDispute.partOf i
-    j ↔ partyPartOf i j
+    j ↔ i = j ∨ (i, j) ∈ [(Party.lst, Party.western), (Party.lst,
+    Party.eastern)]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{procession\allowbreak{}Map}}\par\nobreak\noindent
@@ -26589,6 +25717,22 @@ The dispute over the procession drawn: who defeats whom, and whose case is part 
 \bottomrule
 \end{longtable}
 \noindent The defeats are the cells of \texttt{procession\allowbreak{}Dispute\_\allowbreak{}defeats}, the supports the cells of \texttt{procession\allowbreak{}Dispute\_\allowbreak{}supports} and the parts the cells of \texttt{procession\allowbreak{}Dispute\_\allowbreak{}part\allowbreak{}Of}, each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+\par\medskip\noindent\textbf{\texttt{lst\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}west}}\par\nobreak\noindent
+\textbf{LST stands with the West}: one reading satisfies both, the Western reading.
+
+{\small\begin{verbatim}
+theorem lst_stands_with_the_west : processionDispute.StandTogether [Party.lst,
+    Party.western]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{lst\_\allowbreak{}stands\_\allowbreak{}with\_\allowbreak{}the\_\allowbreak{}east}}\par\nobreak\noindent
+\textbf{LST stands with the East} too: the Eastern reading satisfies both. So LST’s position takes no side, which is what it says of itself.
+
+{\small\begin{verbatim}
+theorem lst_stands_with_the_east : processionDispute.StandTogether [Party.lst,
+    Party.eastern]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \paragraph*{What the dispute decides}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{texts\allowbreak{}Unanswered}}\par\nobreak\noindent
@@ -26636,7 +25780,7 @@ What this does not claim: that the Filioque is false, or that it is true. The We
 
 {\small\begin{verbatim}
 theorem the_texts_prevail : Framework.grounded processionDispute.defeats =
-    {Party.lst}
+    Solver.toSet [Party.lst]
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{western\allowbreak{}With\allowbreak{}The\allowbreak{}Texts}}\par\nobreak\noindent

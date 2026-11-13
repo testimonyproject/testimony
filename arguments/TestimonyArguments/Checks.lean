@@ -109,13 +109,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2382 definitions, 210 entries
+info: every entry is a tagged definition, and every key names one: 2398 definitions, 210 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1880 definitions, 210 entries
+info: every entry is a tagged definition, and every key names one: 1897 definitions, 210 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
@@ -123,19 +123,19 @@ info: every entry is a tagged definition, and every key names one: 1880 definiti
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
 Articles.Howell2003.hearingFinite: 74 I, 32 RA, 36 CA, 3 PA, 180 edges
-BornOfAVirgin.genesisFinite: 8 I, 3 RA, 2 CA, 0 PA, 15 edges
-BornOfAVirgin.isaiahFinite: 30 I, 10 RA, 6 CA, 1 PA, 48 edges
-BornOfAVirgin.matthewFinite: 7 I, 2 RA, 2 CA, 0 PA, 11 edges
-BornOfAVirgin.promiseFinite: 17 I, 5 RA, 5 CA, 0 PA, 30 edges
-BornOfAVirgin.septuagintFinite: 19 I, 7 RA, 13 CA, 3 PA, 55 edges
-BornOfAVirgin.wegnerFinite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
-SolaFide.jamesFinite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
-SolaFide.jesusWordsFinite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-SolaFide.solaFideFinite: 67 I, 30 RA, 33 CA, 2 PA, 164 edges
-SolaScriptura.mark7Finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
-SpiritBaptism.spiritBaptismFinite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
-Trinity.processionFinite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
-and 5 hearings, drawn with the disputes they restrict
+BornOfAVirgin.genesisDispute.finite: 8 I, 3 RA, 2 CA, 0 PA, 15 edges
+BornOfAVirgin.isaiahDispute.finite: 30 I, 10 RA, 6 CA, 1 PA, 48 edges
+BornOfAVirgin.matthewDispute.finite: 7 I, 2 RA, 2 CA, 0 PA, 11 edges
+BornOfAVirgin.promiseDispute.finite: 17 I, 5 RA, 5 CA, 0 PA, 30 edges
+BornOfAVirgin.septuagintDispute.finite: 19 I, 7 RA, 13 CA, 3 PA, 55 edges
+BornOfAVirgin.wegnerDispute.finite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
+SolaFide.jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
+SolaFide.jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
+SolaFide.solaFideDispute.finite: 67 I, 30 RA, 33 CA, 2 PA, 164 edges
+SolaScriptura.mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
+SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
+Trinity.processionDispute.finite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
+and 10 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
 #check_aif under TestimonyArguments

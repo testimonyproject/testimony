@@ -2918,77 +2918,6 @@ def mark7Dispute : Dispute Claim Mark7Party :=
     rated := mark7Dispute._proof_8 }
 ```
 
-<a id="marks_principle_stands_with_trent"></a>
-**`marks_principle_stands_with_trent`**
-
-Mark 7's principle stands with Trent, as Trent states it and read as the
-apostolic word: Rome's world, in which the principle holds and apostolic
-teaching survives outside Scripture.
-
-```lean
-theorem marks_principle_stands_with_trent : mark7Dispute.StandTogether
-    [Mark7Party.principle, Mark7Party.trent, Mark7Party.trentAsApostolicWord]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="mark7PartyDefeats"></a>
-**`mark7PartyDefeats`**
-
-The defeats of the dispute, as a table.
-
-```lean
-def mark7PartyDefeats : Mark7Party → Mark7Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Mark7Party.principle,
-      Mark7Party.trentAsMensCommandments => True
-    | Mark7Party.mark7, Mark7Party.trent => True
-    | Mark7Party.mark7,
-      Mark7Party.trentAsMensCommandments => True
-    | Mark7Party.mark7,
-      Mark7Party.trentAsApostolicWord => True
-    | Mark7Party.trent, Mark7Party.mark7 => True
-    | Mark7Party.trentAsMensCommandments,
-      Mark7Party.mark7 => True
-    | Mark7Party.trentAsApostolicWord,
-      Mark7Party.mark7 => True
-    | x, x_2 => False
-```
-
-<a id="instDecidableRelMark7PartyMark7PartyDefeats"></a>
-**`instDecidableRelMark7PartyMark7PartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelMark7PartyMark7PartyDefeats : DecidableRel
-    mark7PartyDefeats
-```
-
-<a id="mark7PartyStrength"></a>
-**`mark7PartyStrength`**
-
-Each party's weakest link: at the bottom for all but Mark 7's principle.
-
-```lean
-def mark7PartyStrength : Mark7Party → ℕ :=
-  fun x =>
-    match x with
-    | Mark7Party.principle => 2
-    | x => 0
-```
-
-<a id="mark7PartyNode_strength"></a>
-**`mark7PartyNode_strength`**
-
-Each party's weakest link, as its package computes it.
-
-```lean
-theorem mark7PartyNode_strength : ∀ (i : Mark7Party), (mark7PartyNode
-    i).strength = mark7PartyStrength i
--- axioms: propext
-```
-
 <a id="mark7Dispute_defeats"></a>
 **`mark7Dispute_defeats`**
 
@@ -3002,29 +2931,14 @@ by the kernel — the defeats, and the absences of defeat, alike.
 
 ```lean
 theorem mark7Dispute_defeats : ∀ (i j : Mark7Party), mark7Dispute.defeats i j
-    ↔ mark7PartyDefeats i j
+    ↔ (i, j) ∈ [(Mark7Party.principle, Mark7Party.trentAsMensCommandments),
+    (Mark7Party.mark7, Mark7Party.trent), (Mark7Party.mark7,
+    Mark7Party.trentAsMensCommandments), (Mark7Party.mark7,
+    Mark7Party.trentAsApostolicWord), (Mark7Party.trent, Mark7Party.mark7),
+    (Mark7Party.trentAsMensCommandments, Mark7Party.mark7),
+    (Mark7Party.trentAsApostolicWord, Mark7Party.mark7)]
 -- axioms: propext, Classical.choice, Quot.sound
 ```
-
-<a id="mark7Finite"></a>
-**`mark7Finite`**
-
-The dispute in the form the verdict solver computes with.
-
-```lean
-def mark7Finite : Solver.Finite mark7Dispute.defeats :=
-  {
-    parties :=
-      [Mark7Party.principle, Mark7Party.mark7,
-        Mark7Party.trent,
-        Mark7Party.trentAsMensCommandments,
-        Mark7Party.trentAsApostolicWord],
-    complete := mark7Finite._proof_1,
-    defeats := fun i j => decide (mark7PartyDefeats i j),
-    spec := mark7Finite._proof_2 }
-```
-
-#### The dispute as a graph
 
 <a id="mark7Dispute_supports"></a>
 **`mark7Dispute_supports`**
@@ -3041,32 +2955,6 @@ theorem mark7Dispute_supports : ∀ (i j : Mark7Party), ¬mark7Dispute.supports 
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="mark7PartyPartOf"></a>
-**`mark7PartyPartOf`**
-
-Whose case is part of whose, as a table: besides each party's own, Trent's
-is part of each reading of it.
-
-```lean
-def mark7PartyPartOf : Mark7Party → Mark7Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Mark7Party.trent,
-      Mark7Party.trentAsMensCommandments => True
-    | Mark7Party.trent,
-      Mark7Party.trentAsApostolicWord => True
-    | i, j => i = j
-```
-
-<a id="instDecidableRelMark7PartyMark7PartyPartOf"></a>
-**`instDecidableRelMark7PartyMark7PartyPartOf`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelMark7PartyMark7PartyPartOf : DecidableRel mark7PartyPartOf
-```
-
 <a id="mark7Dispute_partOf"></a>
 **`mark7Dispute_partOf`**
 
@@ -3076,7 +2964,8 @@ cell is computed by `partOf?` and checked by the kernel.
 
 ```lean
 theorem mark7Dispute_partOf : ∀ (i j : Mark7Party), mark7Dispute.partOf i j ↔
-    mark7PartyPartOf i j
+    i = j ∨ (i, j) ∈ [(Mark7Party.trent, Mark7Party.trentAsMensCommandments),
+    (Mark7Party.trent, Mark7Party.trentAsApostolicWord)]
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -3140,6 +3029,19 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 2 *Sola scriptura from Mark 7* | 5 *Trent (Tradition II), read as the apostolic word handed on unwritten* | attack on a part — already a defeat |
 
 The defeats are the cells of [`mark7Dispute_defeats`](#mark7Dispute_defeats), the supports the cells of [`mark7Dispute_supports`](#mark7Dispute_supports) and the parts the cells of [`mark7Dispute_partOf`](#mark7Dispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+<a id="marks_principle_stands_with_trent"></a>
+**`marks_principle_stands_with_trent`**
+
+Mark 7's principle stands with Trent, as Trent states it and read as the
+apostolic word: Rome's world, in which the principle holds and apostolic
+teaching survives outside Scripture.
+
+```lean
+theorem marks_principle_stands_with_trent : mark7Dispute.StandTogether
+    [Mark7Party.principle, Mark7Party.trent, Mark7Party.trentAsApostolicWord]
+-- axioms: propext, Classical.choice, Quot.sound
+```
 
 #### What the dispute decides
 
@@ -3482,20 +3384,6 @@ def mensCommandmentsHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
         Mark7Party.trentAsMensCommandments]
 ```
 
-<a id="mensCommandmentsHearingFinite"></a>
-**`mensCommandmentsHearingFinite`**
-
-The hearing, in the form the verdict solver computes with.
-
-```lean
-def mensCommandmentsHearingFinite : Solver.Finite fun i j =>
-    mark7Dispute.defeats ↑i ↑j :=
-  mark7Finite.restrict fun x =>
-    x ∈
-      [Mark7Party.principle, Mark7Party.mark7,
-        Mark7Party.trentAsMensCommandments]
-```
-
 <a id="mensCommandmentsHearingSettles"></a>
 **`mensCommandmentsHearingSettles`**
 
@@ -3563,20 +3451,6 @@ as commandments of men.
 def apostolicWordHearing : Dispute Claim { i // i ∈ [Mark7Party.principle,
     Mark7Party.mark7, Mark7Party.trentAsApostolicWord] } :=
   mark7Dispute.restrict fun x =>
-    x ∈
-      [Mark7Party.principle, Mark7Party.mark7,
-        Mark7Party.trentAsApostolicWord]
-```
-
-<a id="apostolicWordHearingFinite"></a>
-**`apostolicWordHearingFinite`**
-
-The hearing, in the form the verdict solver computes with.
-
-```lean
-def apostolicWordHearingFinite : Solver.Finite fun i j => mark7Dispute.defeats
-    ↑i ↑j :=
-  mark7Finite.restrict fun x =>
     x ∈
       [Mark7Party.principle, Mark7Party.mark7,
         Mark7Party.trentAsApostolicWord]
@@ -3662,6 +3536,6 @@ something Mark 7 speaks to.
 ```lean
 theorem mark7_not_forced_against_the_apostolic_word :
     ¬Framework.SkepticallyAccepted apostolicWordHearing.defeats
-    ⟨Mark7Party.mark7, ⋯⟩
+    ⟨Mark7Party.mark7, mark7AnsweredByTheApostolicWord._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 ```

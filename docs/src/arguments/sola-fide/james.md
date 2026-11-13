@@ -1293,6 +1293,8 @@ def jamesPartyNode : JamesParty → ArgumentPackage Claim
 The debate over James 2:24 and the increase of justification. For every position
 heard: its premises can be held without contradiction, its conclusion follows
 from them, and every step it uses is rated.
+Each position's weakest link is `wellSupported` for the readings of the words and
+the texts, and the bottom for the rest.
 
 ```lean
 def jamesDispute : Dispute Claim JamesParty :=
@@ -1300,53 +1302,6 @@ def jamesDispute : Dispute Claim JamesParty :=
     consistent := jamesDispute._proof_1,
     sound := jamesDispute._proof_2,
     rated := jamesDispute._proof_15 }
-```
-
-<a id="jamesPartyDefeats"></a>
-**`jamesPartyDefeats`**
-
-Who defeats whom, as a table.
-
-```lean
-def jamesPartyDefeats : JamesParty → JamesParty → Prop
-```
-
-<a id="instDecidableRelJamesPartyJamesPartyDefeats"></a>
-**`instDecidableRelJamesPartyJamesPartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelJamesPartyJamesPartyDefeats : DecidableRel
-    jamesPartyDefeats
-```
-
-<a id="jamesPartyStrength"></a>
-**`jamesPartyStrength`**
-
-Each position's weakest link: `wellSupported` for the readings of the words and
-the texts, and the bottom for the rest.
-
-```lean
-def jamesPartyStrength : JamesParty → ℕ :=
-  fun x =>
-    match x with
-    | JamesParty.lexical => 2
-    | JamesParty.faith => 2
-    | JamesParty.revelationText => 2
-    | JamesParty.sirachText => 2
-    | x => 0
-```
-
-<a id="jamesPartyNode_strength"></a>
-**`jamesPartyNode_strength`**
-
-Each position's weakest link, as worked out from its premises.
-
-```lean
-theorem jamesPartyNode_strength : ∀ (i : JamesParty), (jamesPartyNode
-    i).strength = jamesPartyStrength i
--- axioms: propext
 ```
 
 <a id="jamesDispute_defeats"></a>
@@ -1381,29 +1336,18 @@ Every answer is worked out from the positions' premises and checked by machine.
 
 ```lean
 theorem jamesDispute_defeats : ∀ (i j : JamesParty), jamesDispute.defeats i j
-    ↔ jamesPartyDefeats i j
+    ↔ (i, j) ∈ [(JamesParty.lexical, JamesParty.trentOnTheWord),
+    (JamesParty.harmony, JamesParty.trentOnWorks), (JamesParty.trentOnWorks,
+    JamesParty.harmony), (JamesParty.revelationText,
+    JamesParty.trentOnRevelation), (JamesParty.sirachText,
+    JamesParty.trentOnSirach), (JamesParty.harmony, JamesParty.trentOnReward),
+    (JamesParty.trentOnReward, JamesParty.harmony), (JamesParty.lexical,
+    JamesParty.renewalOnTheWord), (JamesParty.westminsterOnReward,
+    JamesParty.trentOnReward), (JamesParty.trentOnReward,
+    JamesParty.westminsterOnReward), (JamesParty.harmony,
+    JamesParty.renewalOnTheWord), (JamesParty.renewalOnTheWord,
+    JamesParty.harmony)]
 -- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="jamesFinite"></a>
-**`jamesFinite`**
-
-The debate in the form the solver works with.
-
-```lean
-def jamesFinite : Solver.Finite jamesDispute.defeats :=
-  {
-    parties :=
-      [JamesParty.lexical, JamesParty.faith,
-        JamesParty.harmony, JamesParty.trentOnTheWord,
-        JamesParty.trentOnWorks, JamesParty.trentOnRevelation,
-        JamesParty.trentOnSirach, JamesParty.revelationText,
-        JamesParty.sirachText, JamesParty.trentOnReward,
-        JamesParty.renewalOnTheWord,
-        JamesParty.westminsterOnReward],
-    complete := jamesFinite._proof_1,
-    defeats := fun i j => decide (jamesPartyDefeats i j),
-    spec := jamesFinite._proof_2 }
 ```
 
 ### What the debate decides
