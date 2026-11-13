@@ -436,17 +436,28 @@ private def continuesItem (line : String) : Bool :=
   line.startsWith " " && !line.trimAscii.toString.isEmpty && (bulletBody line).isNone &&
     !isFence line
 
+/-- The text of a block-quote line, with its `>` and one following space taken
+off, or `none` if the line is not part of a quotation. -/
+private def quoteBody (line : String) : Option String :=
+  let t := line.trimAsciiStart.toString
+  if t.startsWith ">" then
+    let rest := (t.drop 1).toString
+    some (if rest.startsWith " " then (rest.drop 1).toString else rest)
+  else none
+
 /-- Whether a line starts a paragraph rather than some other block. -/
 private def isPlain (line : String) : Bool :=
   let t := line.trimAscii.toString
   !t.isEmpty && !t.startsWith "#" && !t.startsWith "|" && !isFence line &&
-    (bulletBody line).isNone
+    (bulletBody line).isNone && (quoteBody line).isNone
 
 /-- Markdown prose as LaTeX.
 
 Line-based, because that is how Markdown's block structure works: a run of
 non-blank lines is a paragraph, a run of `|` lines is a table, a run of `- `
-lines is a list, and anything between fences is left alone. -/
+lines is a list, a run of `>` lines is a quotation, and anything between fences
+is left alone. A quotation's lines, their `>` taken off, are prose in their own
+right, so a quote may hold several paragraphs or a list. -/
 partial def prose (md : String) : String :=
   let rec go : List String → String
     | [] => ""
@@ -463,6 +474,10 @@ partial def prose (md : String) : String :=
         let block := (line :: rest).takeWhile fun l => l.trimAscii.toString.startsWith "|"
         let cells := (block.map rowCells).filter (!isSeparatorRow ·)
         table cells ++ go (rest.drop (block.length - 1))
+      else if (quoteBody line).isSome then
+        let block := (line :: rest).takeWhile fun l => (quoteBody l).isSome
+        "\\begin{quote}\n" ++ prose (String.intercalate "\n" (block.filterMap quoteBody)) ++
+        "\\end{quote}\n" ++ go (rest.drop (block.length - 1))
       else if (bulletBody line).isSome then
         -- An item's wrapped lines are part of it: Markdown reads an indented
         -- line under an item as its continuation, and so does this.
@@ -1069,6 +1084,12 @@ build rather than silently rewriting `docs/latex/arguments.tex`. -/
 -- Nothing inside a fence is escaped, and the prose after it resumes.
 #guard prose "```sh\nlake build\n```\n\nafter" ==
   "{\\small\\begin{verbatim}\nlake build\n\\end{verbatim}}\nafter\n\n"
+
+-- A quotation's lines lose their `>` and are prose again: a blank `>` line
+-- parts its paragraphs, and a `>` line ends the paragraph above it.
+#guard prose "Before:\n> one\n> two\n>\n> - item\n\nafter" ==
+  "Before:\n\n\\begin{quote}\none two\n\n\\begin{itemize}\n  \\item item\n" ++
+  "\\end{itemize}\n\\end{quote}\nafter\n\n"
 
 /-! The derivation's links and words, pinned on three claims of a test argument
 `A`: claim `k` says "claim k". -/
