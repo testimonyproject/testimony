@@ -46,6 +46,7 @@
   - [What follows, and what an opponent must reject](./arguments/canonical-witness/the-burden.md)
   - [Appendix: the claims and their sources](./arguments/canonical-witness/claims.md)
 - [Sola scriptura](./arguments/sola-scriptura.md)
+- [Sola gratia — Ephesians 2:8–9 and Romans 9:16](./arguments/sola-gratia.md)
 - [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
   - [Each view from its own texts, and what Acts can carry](./arguments/spirit-baptism/the-views.md)
   - [Weighing the four views](./arguments/spirit-baptism/weighing.md)

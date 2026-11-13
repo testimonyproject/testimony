@@ -5,6 +5,7 @@ import TestimonyArguments.BornInBethlehem
 import TestimonyArguments.BornOfAVirgin
 import TestimonyArguments.CanonicalWitness
 import TestimonyArguments.SolaFide
+import TestimonyArguments.SolaGratia
 import TestimonyArguments.SolaScriptura
 import TestimonyArguments.SpiritBaptism
 import TestimonyArguments.Trinity
