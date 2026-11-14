@@ -846,12 +846,26 @@ then the renewal of the inward person is no part of it.
 The step from three things to "Paul's 'justify' does not mean renewal": the verb
 is a courtroom word; Paul has other words for renewal; and a word contributes
 the least meaning its context requires. The method is Silva's, applied as Moo
-applies it to Romans. Rated `wellSupported`: no source cited here accepts the
-three starting points and denies the conclusion. Those who hold that the verb
-means "make righteous", VanLandingham and the Latin tradition from Augustine,
-deny the first starting point, and are weighed in that premise's rating. Those
-who hold that God's verdict renews, Gorman and the *Joint Declaration*, make a
-claim about what God does, not about the word.
+applies it to Romans.
+
+Cited at `wellSupported`, and that rating is held, not settled. Trent keeps the
+first starting point, the verdict, for the justified "are not only reputed, but
+are truly called, and are, just" (Session VI, ch. 7), and denies that the word
+means no more; Augustine himself gives the forensic sense beside "made
+righteous", "deemed, or reckoned as just" (*On the Spirit and the Letter*
+26.45). So a cited reader grants the starting points and denies the conclusion,
+and the checks count Trent's reading a credible critique of this step under
+every standard (`trent_dissents_from_the_definition_steps`). By the library's
+rule that makes the step `disputed`. The rating is held where it is until the
+literature on the contested texts, Romans 6:7 and 1 Corinthians 6:11, has been
+read, in case it answers Trent; until then the disputes weigh the step at
+`wellSupported`, and this is the one place they rest on a rating the rule does
+not license.
+
+Those who deny the first starting point itself, VanLandingham among them, are
+weighed in that premise's rating. Those who hold that God's verdict renews,
+Gorman and the *Joint Declaration*, make a claim about what God does, not about
+the word.
 
 ```lean
 def leastMeaningSource : Source :=
