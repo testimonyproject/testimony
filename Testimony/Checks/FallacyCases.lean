@@ -35,8 +35,8 @@ open Testimony Testimony.Semantics Testimony.Semantics.Notation
 /-- James 2:24. -/
 @[nolint defsWithUnderscore] abbrev jas2_24 : PassageRange := vs .james 2 24
 
-/-- James 2:19. -/
-@[nolint defsWithUnderscore] abbrev jas2_19 : PassageRange := vs .james 2 19
+/-- James 2:14. -/
+@[nolint defsWithUnderscore] abbrev jas2_14 : PassageRange := vs .james 2 14
 
 /-- Romans 4:5. -/
 @[nolint defsWithUnderscore] abbrev rom4_5 : PassageRange := vs .romans 4 5
@@ -47,26 +47,29 @@ def argues (ps : List Statement) (c : Statement) : Move :=
 
 /-! ### Equivocation -/
 
-/-- **Caught: faith that trusts, and faith that demons have.** Romans 4:5 says
-the one who trusts is counted righteous by faith; James 2:19 says the demons
-believe, and shudder; "faith" is trust at the one and bare assent at the other;
-so the demons' faith counts them righteous. -/
-def demonsFaith : Move :=
+/-- **Caught: the faith Paul counts, and the faith James asks about.** Romans
+4:5 says that to the one who trusts, his faith is counted as righteousness; James
+2:14 asks of a faith without works, "Can that faith save him?"; "faith" is trust
+at the one and bare assent at the other; so faith is not what Romans 4:5 says it
+is. The move needs one faith in both verses, and has just read two. -/
+def thatFaith : Move :=
   argues
     [ .says rom4_5 (rl .instrumentOf (wd .pistis rom4_5) (wd .dikaioo rom4_5))
-    , .says jas2_19 (rl .isA (pt "the demons" .agent) (wd .pistis jas2_19))
+    , .says jas2_14 (.not (rl .sufficientFor (wd .pistis jas2_14) (wd .sozo jas2_14)))
     , .means .pistis (.passage rom4_5) .trust
-    , .means .pistis (.passage jas2_19) .mereAssent ]
-    (.holds (rl .instrumentOf (wd .pistis jas2_19) (wd .dikaioo rom4_5)))
+    , .means .pistis (.passage jas2_14) .mereAssent ]
+    (.holds (.not (rl .instrumentOf (wd .pistis rom4_5) (wd .dikaioo rom4_5))))
 
-/-- **Passed over: the same, with "faith" read the same throughout**, and said
-to be. It may be false; it does not equivocate. -/
-def demonsFaithGranted : Move :=
+/-- **Passed over: the same, with "faith" said to be one in both verses.** Whether
+it is one is disputed: Trent reads James's faith as the same assent, unformed by
+charity, and the Reformers read it as a profession without trust. Stated as a
+premise, it can be weighed; the move does not equivocate. -/
+def thatFaithGranted : Move :=
   argues
     [ .says rom4_5 (rl .instrumentOf (wd .pistis rom4_5) (wd .dikaioo rom4_5))
-    , .says jas2_19 (rl .isA (pt "the demons" .agent) (wd .pistis jas2_19))
-    , .sameSense .pistis (.passage jas2_19) (.passage rom4_5) ]
-    (.holds (rl .instrumentOf (wd .pistis jas2_19) (wd .dikaioo rom4_5)))
+    , .says jas2_14 (.not (rl .sufficientFor (wd .pistis jas2_14) (wd .sozo jas2_14)))
+    , .sameSense .pistis (.passage jas2_14) (.passage rom4_5) ]
+    (.holds (.not (rl .instrumentOf (wd .pistis rom4_5) (wd .dikaioo rom4_5))))
 
 /-- **Passed over: a survey of the word.** What δικαιόω means in Matthew 11:19
 and in Deuteronomy 25:1, gathered to say what it does not mean in James. The two
@@ -86,15 +89,16 @@ def worksDiffer : Move :=
     , .means .erga (.passage jas2_24) .worksOfFaith ]
     (.denied (.sameSense .erga (.passage rom3_28) (.passage jas2_24)))
 
-/-- **The equivocation check, caught and passed over.** The demons' faith is
-read two ways and needed one. Granted the same, it is not; nor is the survey,
-which only talks about the word; nor the move whose conclusion is that "works"
-differs. The granted move needs nothing unstated about "faith", only about
-"justify" at Romans 4:5 against itself, which is one place. -/
+/-- **The equivocation check, caught and passed over.** "Faith" in Romans 4:5
+and James 2:14 is read two ways and needed one. Granted the same, it needs
+nothing unstated. The survey does not equivocate, since it only talks about the
+word, but it is not free either: it is conditional on "justify" keeping, in
+James, a sense it has elsewhere. The move whose conclusion is that "works"
+differs assumes nothing about "works". -/
 theorem equivocation_cases :
-    demonsFaith.equivocates = [.pistis] ∧
-      demonsFaithGranted.equivocates = [] ∧ demonsFaithGranted.conditionalOn = [] ∧
-      survey.equivocates = [] ∧
+    thatFaith.equivocates = [.pistis] ∧
+      thatFaithGranted.equivocates = [] ∧ thatFaithGranted.conditionalOn = [] ∧
+      survey.equivocates = [] ∧ survey.conditionalOn = [.dikaioo] ∧
       worksDiffer.equivocates = [] ∧ worksDiffer.conditionalOn = [] := by
   decide
 
@@ -113,10 +117,12 @@ def restated : Move := argues [faithOnly] faithOnly
 def throughOnly : Move := argues [faithOnly] worksNot
 
 /-- **Passed over: a text's words, which carry no doctrine by themselves.**
-Romans 3:28 saying "apart from works" is what the text says. Whether it
-teaches that works are no means is a reading, and the move needs it. -/
+Romans 3:28 saying "apart from works of the law" is what the text says. Whether
+it teaches that works are no means — and whether "works of the law" are works in
+general — are readings, and the move needs them. -/
 def fromTheText : Move :=
-  argues [.says rom3_28 (.not (rl .instrumentOf (wd .erga rom3_28) (wd .dikaioo rom3_28)))]
+  argues [.says rom3_28 (.not (rl .instrumentOf (wd .ergaNomou rom3_28)
+      (wd .dikaioo rom3_28)))]
     worksNot
 
 /-- **Passed over: the premise and the conclusion about different things.** -/
@@ -178,8 +184,9 @@ does not say it, so the verse does not say it, argues from nothing; the begging
 check finds it, not this one. -/
 def onlyTheSilence : Move := argues [.denied romansSaysOnly] (.denied romansSaysOnly)
 
-/-- **Passed over: an expectation about something else.** Its expectation is
-for a different silence, so the silence it argues from is still alone. -/
+/-- **Caught: an expectation about something else.** Its expectation is for a
+different silence, so it does not reach the silence the move argues from, which
+is still alone. -/
 def wrongExpectation : Move :=
   argues [.denied romansSaysOnly, .expects paulTaught (.occurs .monos rom3_28)]
     (.denied paulTaught)
@@ -187,8 +194,9 @@ def wrongExpectation : Move :=
 /-- **The silence check, caught and passed over.** Both silences argued from
 alone are caught, the second though its conclusion is written as a doctrine
 denied, not a denial. With the expectation stated, the move rests on it. A
-silence that concludes itself is not an argument from silence. And an
-expectation about a different silence does not carry this one. -/
+silence that concludes itself is not an argument from silence. And a move whose
+expectation is about a different silence is caught too: its expectation does
+not reach the silence it argues from. -/
 theorem silence_cases :
     notSaid.fromSilenceAlone = [romansSaysOnly] ∧
       notThere.fromSilenceAlone = [.occurs .monos rom3_28] ∧
