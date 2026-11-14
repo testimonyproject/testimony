@@ -16,6 +16,7 @@
 - [Writing for the reader](./writing-for-readers.md)
 - [Style guide](./style-guide.md)
 - [Meanings and articles (draft)](./semantics.md)
+- [Checking an argument for fallacies](./fallacies.md)
 - [Computed ratings (design)](./computed-ratings.md)
 - [Performance: the engine, measured](./performance.md)
 - [Standards the library aligns to](./standards.md)

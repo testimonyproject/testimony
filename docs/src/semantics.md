@@ -369,6 +369,9 @@ rest reuse machinery that exists, or that the open issues propose.
 
 ### The three charges a debate reaches for first
 
+[Checking an argument for fallacies](./fallacies.md) is the tutorial: the catalogue, and each
+check worked through on the examples the build checks.
+
 "That's an equivocation", "you're begging the question", "that's an argument from silence":
 each names a real way to fail, and each is often said of an argument that does not fail that
 way. `Testimony.Semantics.Fallacy` checks all three on one move at a time, from what the move's
