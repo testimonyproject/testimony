@@ -77,7 +77,7 @@ Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
     dinahIsTheLawsParthenos entails parthenosMeansVirgin
     lxxIsaiahUsesParthenosAsVirgin entails parthenosMeansVirgin
 Sola fide
-  joins: 6, with no definition: 5
+  joins: 5, with no definition: 4
   not a ground: held by 4, used of a text or voice by 13; derives nothing
   the only means: held by 3, used of a text or voice by 9; derives:
     justificationByFaithAlone excludes baptismIsInstrumentalCause
@@ -106,8 +106,6 @@ Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
   lines: 41, read: 0
 Sola fide
   lines: 49, read: 31
-  carry what they deliver in a premise:
-    lexicalLine: its premise denied by paulsJustifyDenotesRenewal
   need a word to keep its sense, unstated:
     catholicJamesWordLine: erga, dikaioo
     catholicJamesWorksLine: erga, dikaioo
@@ -157,7 +155,7 @@ info: every entry is a tagged definition, and every key names one: 1920 definiti
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
-Articles.Howell2003.hearingFinite: 74 I, 32 RA, 36 CA, 3 PA, 180 edges
+Articles.Howell2003.hearingFinite: 74 I, 32 RA, 35 CA, 2 PA, 176 edges
 BornOfAVirgin.genesisDispute.finite: 8 I, 3 RA, 2 CA, 0 PA, 15 edges
 BornOfAVirgin.isaiahDispute.finite: 30 I, 10 RA, 6 CA, 1 PA, 48 edges
 BornOfAVirgin.matthewDispute.finite: 7 I, 2 RA, 2 CA, 0 PA, 11 edges
@@ -166,7 +164,7 @@ BornOfAVirgin.septuagintDispute.finite: 19 I, 7 RA, 13 CA, 3 PA, 55 edges
 BornOfAVirgin.wegnerDispute.finite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
 SolaFide.jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 SolaFide.jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-SolaFide.solaFideDispute.finite: 67 I, 30 RA, 33 CA, 2 PA, 164 edges
+SolaFide.solaFideDispute.finite: 67 I, 30 RA, 32 CA, 1 PA, 160 edges
 SolaScriptura.mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
 Trinity.orderDispute.finite: 20 I, 8 RA, 8 CA, 0 PA, 43 edges
