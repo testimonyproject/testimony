@@ -197,3 +197,9 @@ benchmark = "checks: postulates, every package"
 metric = "time"
 up_to = 0.20
 reason = "The check builds a model with its postulates for every package. Sola gratia (#226) adds twenty, the positions of Dort, Trent, the Remonstrants, the Lutherans and Wesley, the third way and its two readings, the objection, and the variants its results ask about (206 to 226): the same work over more packages, measured on CI at +8.4%."
+
+[[accept]]
+benchmark = "checks: AIF, every dispute"
+metric = "time"
+up_to = 0.20
+reason = "The check draws every dispute as an AIF graph and checks it against Definition 1.1. Sola gratia (#226) adds a dispute of its own, eight parties: 36 claim nodes, 12 inferences, 33 conflicts, 99 edges. The same work over one more graph, measured on CI at +6.7%."
