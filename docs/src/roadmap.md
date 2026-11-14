@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**7 arguments**, carrying **262 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **275 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -275,6 +275,24 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `mark7_forced_against_mens_commandments` | `Framework.grounded mensCommandmentsHearing.defeats = Solver.toSet (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7, Mark7Party.trentAsMensCommandments]) [Mark7Party.principle, Mark7Party.mark7])` | **Against Rome's tradition read as commandments of men, Mark 7's case is unopposed.** Heard against that reading alone, Mark 7's principle and Mark 7's case for sola scriptura are … |
 | `against_the_apostolic_word_only_the_principle_is_forced` | `Framework.grounded apostolicWordHearing.defeats = Solver.toSet (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7, Mark7Party.trentAsApostolicWord]) [Mark7Party.principle])` | **If Rome's tradition is the apostolic word, Mark 7 forces only its principle** — which that reading grants. |
 | `mark7_not_forced_against_the_apostolic_word` | `¬Framework.SkepticallyAccepted apostolicWordHearing.defeats ⟨Mark7Party.mark7, mark7AnsweredByTheApostolicWord._proof_2⟩` | **So, against the apostolic word, sola scriptura from Mark 7 is not forced.** A defensible position that cannot be enlarged holds Mark 7's principle together with Trent read as … |
+
+### [Sola gratia — Ephesians 2:8–9 and Romans 9:16](./arguments/sola-gratia.md)
+
+| Result | Statement | What it claims |
+|---|---|---|
+| `reformed_establishes` | `Establishes reformed` | **Grant the Reformed premises, and sola gratia follows.** The premises are Romans 11:6; Ephesians 2, with "this" pointing to the whole of being saved by grace through faith; … |
+| `tridentine_not_establishes` | `¬Establishes tridentine` | **Trent's premises do not lead to sola gratia.** A *countermodel* shows it: a way of holding every one of Trent's premises while denying the conclusion. |
+| `remonstrant_not_establishes` | `¬Establishes remonstrant` | **The Remonstrants' premises do not lead to sola gratia either**, though they grant much of what the Reformed case rests on: that faith is God's gift, given to those dead in sin, … |
+| `rivals_hold_salvation_by_grace` | `Entails tridentine.premises (p Claim.salvationIsByGrace) ∧ Entails remonstrant.premises (p Claim.salvationIsByGrace)` | Both rivals reach the first part, that salvation is by grace. |
+| `trent_denies_passivity` | `Entails tridentine.premises (notP Claim.willIsPassiveInRegeneration)` | Trent's premises deny the third part, that the will is passive. |
+| `trent_denies_effectual_grace` | `Entails tridentine.premises (notP Claim.graceIsEffectualOfItself)` | Trent's premises deny the second part too, that grace is effectual of itself. |
+| `remonstrants_deny_effectual_grace` | `Entails remonstrant.premises (notP Claim.graceIsEffectualOfItself)` | The Remonstrants' premises deny the second part: grace can be resisted. |
+| `touto_not_load_bearing` | `Establishes reformedWithoutTouto` | The case does not depend on the reading of "this". |
+| `romans_reading_not_load_bearing` | `Establishes reformedWithoutRomansReading` | Nor does it depend on the reading of Romans 9:16. |
+| `readings_jointly_load_bearing` | `¬Establishes reformedWithoutEitherReading` | The two readings together carry it. |
+| `ephesians_strand_establishes` | `Establishes ephesiansStrand` | The Ephesians strand, argued alone, reaches sola gratia. |
+| `romans_strand_establishes` | `Establishes romansStrand` | So does the Romans strand, on one step rated `disputed`. |
+| `gift_of_faith_does_not_settle_resistibility` | `¬Establishes ephesiansWithoutTheGiftStep` | **That faith is God's gift does not settle whether grace can be refused.** Grant everything the Ephesians strand rests on short of its last step: the texts, "this" pointing to the … |
 
 ### [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
 
@@ -780,6 +798,26 @@ finding suggests the two sides may mean different things by "proceeds", which
 is not yet encoded. LST's other graded claims in §3 (each person God; order
 without inequality; eternal generation) are tracked in the same issue.
 
+**Sola gratia divides its rivals only once it is stated sharply, and its
+readings are not where they part** ([#24]). Trent and the Remonstrants both say
+salvation is by grace, and both reach that part of the conclusion
+(`rivals_hold_salvation_by_grace`). What separates them from Dort is two further
+claims: that the grace that saves brings about the consent it seeks, which the
+Remonstrants deny (`remonstrants_deny_effectual_grace`), and that the will is
+passive in being made alive, which Trent's fourth canon denies
+(`trent_denies_passivity`). The Reformed case runs through Ephesians 2 and
+through Romans 9:16, and needs one of the two readings and not both
+(`touto_not_load_bearing`, `romans_reading_not_load_bearing`,
+`readings_jointly_load_bearing`). The rating audit found that the readings
+themselves are widely granted: Robertson reads "this" in Ephesians 2:8 as Hoehner
+does, and Arminius and Abasciano read Romans 9 as being about salvation. The
+dissent is at the steps after them. Robertson and Calvin deny that the verse
+makes faith the gift; Arminius grants that faith is God's gift and denies that
+it cannot be refused (`gift_of_faith_does_not_settle_resistibility`); and
+Aquinas grants each half of Trent's canon while holding grace infallibly
+effectual. The Thomist position, which may reach the sharpened conclusion too, is
+not yet encoded.
+
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no
 model entails everything. A package assembled from contradictory premises would
@@ -799,11 +837,13 @@ Then the first aggregate result: a `MessiahDefinition` with several criteria
 and a `MeetsDefinition` theorem, which will expose how sensitive a cumulative
 case is to its weakest link.
 
-**The remaining solas** ([#3]). *Sola gratia*, *solus Christus* and
-*soli Deo gloria*. *Sola scriptura* is no longer a seed: it now carries four
-positions on tradition, three objections that do not reduce to one another, the
-two answers to the self-refutation objection, and a dispute over what Jesus'
-rebuke of tradition in Mark 7 decides.
+**The remaining solas** ([#3]). *Solus Christus* and *soli Deo gloria*.
+*Sola scriptura* is no longer a seed: it now carries four positions on
+tradition, three objections that do not reduce to one another, the two answers
+to the self-refutation objection, and a dispute over what Jesus' rebuke of
+tradition in Mark 7 decides. *Sola gratia* is encoded with Trent and the
+Remonstrants as its rivals ([#24]); what it lacks is a Thomist position, John
+6:44 as a third strand, and the positions weighed as a dispute.
 
 **The rest of the Triune God** ([#216]). The procession is encoded; LST §3's
 other graded claims are not. They are that each person is God and the three are
@@ -940,6 +980,7 @@ the rest worth reading.
 [#1]: https://github.com/testimonyproject/testimony/issues/1
 [#2]: https://github.com/testimonyproject/testimony/issues/2
 [#3]: https://github.com/testimonyproject/testimony/issues/3
+[#24]: https://github.com/testimonyproject/testimony/issues/24
 [#4]: https://github.com/testimonyproject/testimony/issues/4
 [#7]: https://github.com/testimonyproject/testimony/issues/7
 [#8]: https://github.com/testimonyproject/testimony/issues/8

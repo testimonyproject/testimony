@@ -35,6 +35,9 @@ inductive Tradition
   | reformedProtestant
   /-- Roman Catholic magisterial teaching. -/
   | romanCatholic
+  /-- Arminian Protestant theology: Arminius, the Remonstrants of 1610, and
+  their heirs, Wesleyan Methodism among them. -/
+  | arminian
   /-- Eastern Orthodox theology. -/
   | easternOrthodox
   /-- The adversarial trial: testimony given, and the cross-examination that

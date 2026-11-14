@@ -2,6 +2,7 @@ import TestimonyArguments.BornInBethlehem
 import TestimonyArguments.BornOfAVirgin
 import TestimonyArguments.CanonicalWitness
 import TestimonyArguments.SolaFide
+import TestimonyArguments.SolaGratia
 import TestimonyArguments.SolaScriptura
 import TestimonyArguments.SpiritBaptism
 import TestimonyArguments.Trinity
@@ -47,11 +48,12 @@ def unfoldSets : List (Name × Name) :=
   , (`TestimonyArguments.BornOfAVirgin, `bornOfAVirginDefs)
   , (`TestimonyArguments.CanonicalWitness, `canonicalWitnessDefs)
   , (`TestimonyArguments.SolaFide, `solaFideDefs)
+  , (`TestimonyArguments.SolaGratia, `solaGratiaDefs)
   , (`TestimonyArguments.SolaScriptura, `solaScripturaDefs)
   , (`TestimonyArguments.SpiritBaptism, `spiritBaptismDefs)
   , (`TestimonyArguments.Trinity, `trinityDefs) ]
 
-/-- info: every argument has meanings and pinned joins: 7 claim types -/
+/-- info: every argument has meanings and pinned joins: 8 claim types -/
 #guard_msgs in
 #check_meanings under TestimonyArguments
 
@@ -77,6 +79,8 @@ Sola fide
   the only means: held by 3, used of a text or voice by 9; derives:
     justificationByFaithAlone excludes baptismIsInstrumentalCause
   the whole ground: held by 3, used of a text or voice by 6; derives nothing
+Sola gratia — Ephesians 2:8–9 and Romans 9:16
+  joins: 0, with no definition: 0
 Sola scriptura
   joins: 3, with no definition: 3
   not a ground: held by 1, used of a text or voice by 0; derives nothing
@@ -92,26 +96,26 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 199, and 0 undecided -/
+/-- info: every package has a model with its postulates: 208, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 101, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 105, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
-/-- info: establish fails, as not Horn, on all 36 refuted packages -/
+/-- info: establish fails, as not Horn, on all 40 refuted packages -/
 #guard_msgs in
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2397 definitions, 204 entries
+info: every entry is a tagged definition, and every key names one: 2398 definitions, 210 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1824 definitions, 204 entries
+info: every entry is a tagged definition, and every key names one: 1897 definitions, 210 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments

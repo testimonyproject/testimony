@@ -6,8 +6,8 @@ library.
 The library is the machinery: the logic, the provenance types, the vocabulary
 and its ontology, the solver, the checks and the generators. This package is
 what the documentation presents — born in Bethlehem, born of a virgin, sola
-fide, the canonical witness, sola scriptura, Spirit baptism, and the published
-articles examined against them. It requires the library as a Lake dependency,
+fide, the canonical witness, sola gratia, sola scriptura, Spirit baptism, and
+the published articles examined against them. It requires the library as a Lake dependency,
 imports it, and changes nothing in it; the library imports nothing from here.
 
 ## Building

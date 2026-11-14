@@ -235,6 +235,7 @@ def tradition : Tradition → String
   | .criticalScholarship => "critical scholarship"
   | .reformedProtestant => "Reformed Protestant"
   | .romanCatholic => "Roman Catholic"
+  | .arminian => "Arminian"
   | .easternOrthodox => "Eastern Orthodox"
   | .adversarialTrial => "adversarial trial"
   | .formalOntology => "formal ontology"
