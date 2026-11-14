@@ -351,20 +351,90 @@ the article stands in 2:14, which words recur through 2:14–26 — rather than 
 
 ## The checks an article audit needs
 
-Each common charge of fallacy is a question the library can make precise. Two are built; the
+Each common charge of fallacy is a question the library can make precise. Five are built; the
 rest reuse machinery that exists, or that the open issues propose.
 
 | Charge | What is checked | What does it |
 |---|---|---|
-| Equivocation | senses a move needs and does not state | `Move.unstated` — built |
+| Equivocation | a word used in two senses where the move needs one | `Move.equivocation` — built |
+| Begging the question | does a premise already assert the conclusion? | `Move.begsAgainst` — built |
+| Argument from silence | does the move state the expectation its silence needs? | `Move.silences` — built |
 | Non sequitur | does the conclusion follow from what the move states? | `refute_with` — built |
 | Indefensible claim | can the move's position survive the dispute? | a hearing — built |
 | False dilemma | does a move pick one reading where others are fair? | `Dilemma` |
 | Straw man | does an attribution match what its subject holds? | meanings of the position |
 | Misquotation | does a quotation say what the move says it says? | `says`, then the corpus |
 | Cherry-picking | texts on the same words and relation the move ignores | a query over meanings |
-| Begging the question | is the conclusion among what the premises assume? | commitment propagation |
 | Double standard | is the article's own principle applied to its own moves? | a refutation on own terms |
+
+### The three charges a debate reaches for first
+
+[Checking an argument for fallacies](./fallacies.md) is the tutorial: the catalogue, and each
+check worked through on the examples the build checks.
+
+"That's an equivocation", "you're begging the question", "that's an argument from silence":
+each names a real way to fail, and each is often said of an argument that does not fail that
+way. `Testimony.Semantics.Fallacy` checks all three on one move at a time, from what the move's
+words mean and what the shared definitions commit a reader to. None of them returns a bare
+"fallacy". Each says which premise, stated or not, the move's weight falls on.
+
+- **Equivocation.** A word *used* at two places — inside what a text says, what a reader held,
+  what is held to be so — must keep its sense between them if the move sets one against the
+  other. A word only *talked about*, in a claim of what it means, need not: a survey of what
+  δικαιόω means in Matthew and in Deuteronomy needs the two no more alike than a dictionary
+  needs its entries alike. For each word the move needs the same, it either says so
+  (*granted*), gives the word different senses at the two places itself (*read apart*, an
+  equivocation on its own terms), or says nothing (*unstated*, and the move is conditional on
+  it).
+- **Begging the question.** A premise *carries* the conclusion when, read for what its words
+  mean, it entails the conclusion or cannot be held with its denial. "Faith is the only means
+  of justification" carries "baptism is not a means", by what "only" means. Whether that begs
+  the question depends on who the move is addressed to: a premise no one denies only restates;
+  a premise denied by the readers who deny the conclusion assumes what the move was to show
+  them. So the check names, from the library's own claims, who denies the premise. Over a
+  whole article the same lookup finds a circle of moves (`circular`).
+- **Argument from silence.** "The word is not in the verse, so Paul did not teach it" holds
+  only if, had Paul taught it, the word would be there. That **expectation** is a premise the
+  grammar can now state (`Statement.expects`). With it the move is a valid modus tollens and
+  the expectation is what to weigh; without it the text's silence is compatible with what the
+  move denies, and the conclusion does not follow (`silence_needs_its_expectation`). Many
+  arguments from silence are good ones. The check asks only whether the move says what makes
+  it good.
+
+Howell's four moves pass all three (`no_move_commits_the_three`): none equivocates on its own
+terms, none has a premise that already states its conclusion, none argues from silence. The
+Catholic's remark that "alone" is not in Paul's Greek is an assertion, true of the text, and
+what it may be heard to imply is not charged.
+
+**The library's own lines, checked the same way.** Every line of reason is one step, and read
+through its argument's meanings a step is a move. `Testimony.Checks.Fallacies` runs the three
+checks over every line the library has, and the build fails if one equivocates on its own terms
+or argues from silence alone. Thirty-two lines can be read today, all of sola fide's and one of
+sola scriptura's; the rest wait on their meanings. None equivocates, and none argues from
+silence. One carries what it delivers in a premise: the sola fide line on Paul's word
+(`lexicalLine`), whose premise that Paul's "justify" is a courtroom word also says, in its own
+words, that "it does not mean to make a person good" — the line's conclusion. That premise is
+the one Trent's reading of Paul's word denies, so as an answer to Trent the line assumes its
+point. The line's other grounds, that Paul names renewal with other words and that a word
+means no more than its context requires, are the argument; the premise should state the
+courtroom sense alone. That change moves pinned joins, so it is left to its own pull request,
+and the report says so until it is made. Twelve lines are conditional on a word keeping its
+sense, unstated, and the report lists the words.
+
+**What the checks are held to.** A check that calls every survey of a word an equivocation,
+or every argument from silence a fallacy, is a debater's reflex written down.
+`Testimony.Checks.FallacyCases` pins, for each charge, a classic case the check must catch and
+a near miss it must pass over, and runs `#check_fallacies` over an argument of its own whose
+lines equivocate and argue from silence alone, with the refusal pinned. The first near miss
+came from the library: the check's first version flagged sola fide's line on James's word,
+which gathers what δικαιόω means in Matthew and Deuteronomy, until it learned to tell a word
+used from a word talked about.
+
+**What the checks needed from the ontology.** The lookup of who denies a premise compares
+meanings under the shared definitions, and those did not know that "the same sense" runs both
+ways: "James's word is Paul's" and "Paul's word is not James's" read as unrelated facts. An
+article, `Testimony.Ontology.Sense`, now defines it (`both_ways_at_work`). It derives no new
+join in any argument; it makes the lookup blind to the order a claim happens to be written in.
 
 Two of these are worth a word, because Howell's article already supplies them.
 
@@ -402,7 +472,8 @@ The library's own rules carry over, and four more follow from them.
 2. **A James dispute**, with the Catholic reading as a party, so that the question the Howell
    hearing leaves contested is asked directly.
 3. **The remaining checks**, in the order of the table, each as a checked certificate that
-   reuses `Because`, `Dilemma` and the solver.
+   reuses `Because`, `Dilemma` and the solver; and every line the fallacy check cannot yet read,
+   read once its argument's meanings are analysed.
 4. **Articles as pages.** An audit, or an ontology article, is published prose like an
    argument page, generated from its docstrings. Today an ontology article's prose is its
    module's docstrings, and the generators render arguments only.

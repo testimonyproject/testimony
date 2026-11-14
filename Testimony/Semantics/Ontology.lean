@@ -31,7 +31,7 @@ and the definitions below are claims about what doctrine's words mean.
 
 ## What a definition can say
 
-Each definition is one of five forms, and each comes with a `Source`, as a
+Each definition is one of six forms, and each comes with a `Source`, as a
 premise does:
 
 - **implies** — whatever stands in the one relation stands in the other.
@@ -42,8 +42,12 @@ premise does:
 - **functional** — a thing stands in the relation to one thing only: an
   occurrence lasts one length of time.
 - **in a usage** — a sense a word has in one passage of a voice's text is a
-  sense it has in that voice's usage. The first four are about relation words;
-  this one is about what "a usage as a whole" means.
+  sense it has in that voice's usage.
+- **the same sense, both ways** — a word with the same sense at one place as
+  at another has the same sense at the other as at the first.
+
+The first four are about relation words; the last two, about senses: what "a
+usage as a whole" means, and what "the same sense" means.
 
 The definitions themselves are written in the articles of `Testimony.Ontology`,
 each with the search that found where it bears and what follows from it. This
@@ -100,6 +104,8 @@ inductive Fact
   | occurs (w : Lexeme) (p : PassageRange)
   /-- This word occurs in this passage and nowhere else in the New Testament. -/
   | occursOnlyIn (w : Lexeme) (p : PassageRange)
+  /-- Were the first statement so, the second would be: kept whole. -/
+  | expects (s t : Statement)
 deriving DecidableEq, Repr
 
 /-- A fact, affirmed or denied. -/
@@ -181,6 +187,7 @@ def Statement.shape : Statement → Shape
   | .principle h => .lit ⟨true, .principle h⟩
   | .occurs w p => .lit ⟨true, .occurs w p⟩
   | .occursOnlyIn w p => .lit ⟨true, .occursOnlyIn w p⟩
+  | .expects s t => .lit ⟨true, .expects s t⟩
   | .denied s => s.shape.deny
   | .also s t => s.shape.union t.shape
   | .opaque _ => .unread
@@ -202,6 +209,9 @@ inductive Axiom
   that voice's usage. Not the converse: a word with two senses in a usage need
   not have both in every passage. -/
   | inUsage
+  /-- A word that has the same sense at one place as at another has the same
+  sense at the other as at the first: sameness of sense runs both ways. -/
+  | sameSenseBothWays
 deriving DecidableEq, Repr
 
 /-- **A definition**: what one of the vocabulary's words commits its reader to,
@@ -233,13 +243,14 @@ def yields : Axiom → Lit → List Lit
     (if r' = r then [⟨!pos, .rel s a b⟩] else []) ++
       (if r' = s then [⟨!pos, .rel r a b⟩] else [])
   | .inUsage, ⟨true, .means w (.passageOf v _) s⟩ => [⟨true, .means w (.usage v) s⟩]
+  | .sameSenseBothWays, ⟨pos, .sameSense w a b⟩ => [⟨pos, .sameSense w b a⟩]
   | _, _ => []
 
 /-- The relations a definition is about: none, for one about a usage. -/
 def rels : Axiom → List Rel
   | .implies r s | .denies r s | .only r s => [r, s]
   | .functional r => [r]
-  | .inUsage => []
+  | .inUsage | .sameSenseBothWays => []
 
 /-- Whether two literals clash under one definition: for **only**, two
 different things each standing in the relation to the same thing, one of them

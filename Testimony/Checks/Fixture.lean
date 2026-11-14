@@ -154,6 +154,17 @@ def means : Claim → Statement
 instance meanings : HasMeanings Claim :=
   { argument := "The fixture", all, complete := all_complete, means }
 
+/-- **A line that carries what it delivers.** The meeting lasted an hour, so it
+did not last two: true, by what "lasts" means, and no argument to a witness who
+says two hours, since its ground is what the witness denies. For the fallacy
+check (`Testimony.Checks.Fallacies`), which reports it and says whom it is
+addressed to. -/
+def byTheHour : Line Claim :=
+  { name := "By the hour"
+  , grounds := [p .lastedAnHour]
+  , step := p .lastedAnHour ➝ notP .lastedTwoHours
+  , delivers := notP .lastedTwoHours }
+
 /-- The one join: an hour and two hours exclude each other, by what "lasts"
 means (`Testimony.Ontology.Time.oneLength`). -/
 instance joins : HasJoins Claim where

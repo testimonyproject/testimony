@@ -126,6 +126,12 @@ inductive Statement
   /-- This word occurs in this passage and nowhere else in the New Testament.
   -/
   | occursOnlyIn (w : Lexeme) (p : PassageRange)
+  /-- **An expectation**: were the first statement so, the second would be — had
+  Paul taught it, the word would be in Romans 3:28. Kept whole, as a frame is,
+  because it is a claim about what a text or a writer would have done, not a
+  rule the reasoner applies. It is the premise an argument from silence needs
+  and seldom states (`Testimony.Semantics.Fallacy`). -/
+  | expects (s t : Statement)
   /-- Not this statement. -/
   | denied (s : Statement)
   /-- Both statements. -/
@@ -162,7 +168,7 @@ def words : Statement → List (Lexeme × Scope)
   | .glosses v w _ => [(w, .usage v)]
   | .occurs w p | .occursOnlyIn w p => [(w, .passage p)]
   | .denied s => s.words
-  | .also s t => s.words ++ t.words
+  | .also s t | .expects s t => s.words ++ t.words
   | .wrote .. | .principle _ | .opaque _ => []
 
 /-- The lexemes a statement turns on. -/
