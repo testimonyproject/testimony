@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**7 arguments**, carrying **284 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**7 arguments**, carrying **296 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -334,6 +334,18 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `eternal_order_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.eternal` | **The eternal order is not forced**: Giles's position can be held with LST's, and it rules the eternal order out. |
 | `equal_authority_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position can be defended**: held with LST's, it answers Grudem and Ware's position, which is the only one that attacks it. |
 | `equal_authority_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position is not forced** either. |
+| `lstDeity_establishes` | `Establishes lstDeityCase` | **Grant the Nicene readings of John 1:1 and 1:3, of Acts 5:3–4, and of the texts that name three, and LST's confession follows**: the Father, the Son and the Spirit are God, three … |
+| `witnesses_establish` | `Establishes witnessesCase` | **Grant John 1:1c read as "a god" and Colossians 1:15 as the first thing made, and the Son is a creature, not God.** |
+| `oneness_establishes` | `Establishes onenessCase` | **Grant the Oneness readings of John 1:1, 17:5 and Matthew 28:19, and the Father, the Son and the Spirit are one person.** |
+| `deity_forces_nothing` | `Framework.grounded deityDispute.defeats = ∅` | **Nothing is forced.** Every position is in a standoff the weighing cannot resolve, and every one rests on a reading rated `disputed`, so no rating breaks a tie. |
+| `lst_deity_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.lst` | **LST's position can be defended**, with each of its lines: some maximal defensible position, one no other party can join without losing that, holds all four. |
+| `lst_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.lst` | **Nor is it forced.** A maximal defensible position holds the Oneness position and LST's first two lines, and cannot hold LST's with them. |
+| `word_deity_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.word` | **That the Word is God can be defended**, with LST's position. |
+| `word_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.word` | **Nor is it forced.** The Witnesses' position, on its own, is a maximal defensible position, and it cannot hold that the Word is God. |
+| `witnesses_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.witnesses` | **The Witnesses' position can be defended**, on its own. |
+| `witnesses_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.witnesses` | **Nor is it forced.** A maximal defensible position holds LST's position and cannot hold the Witnesses'. |
+| `oneness_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.oneness` | **The Oneness position can be defended**, with LST's first two lines. |
+| `oneness_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.oneness` | **Nor is it forced.** A maximal defensible position holds LST's position and cannot hold the Oneness one. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -799,8 +811,8 @@ grounds and deny its conclusion (Moltmann, Bobrinskoy, Staniloae), and a Roman
 document that grants the monarchy step's grounds while confessing the Filioque
 (the Pontifical Council for Promoting Christian Unity, 1995). That second
 finding suggests the two sides may mean different things by "proceeds", which
-is not yet encoded. LST's other graded claims in §3 (each person God; order
-without inequality; eternal generation) are tracked in the same issue.
+is not yet encoded. LST's other graded claims in §3 are tracked in the same
+issue.
 
 **The texts of the Son's obedience establish an order, and leave open both
 questions read into them** ([#216]). LST says these texts (John 5:19–30; 14:28;
@@ -820,6 +832,21 @@ disputes in readings, not steps: Sirmium (357) and Gregory of Nazianzus's
 opponents grant "greater as the one he is from" and still conclude a lesser
 Godhead, and Grudem grants the Son's equality in power while denying that eternal
 submission contradicts it.
+
+**On the deity of the Son and the Spirit, the weighing cannot choose** ([#216]).
+LST confesses, from John 1:1, 20:28, Acts 5:3–4 and other texts, that "the
+Father is God, the Son is God, and the Holy Spirit is God; they are personally
+distinct without being separate gods". Its case follows from its readings
+(`lstDeity_establishes`), and so do the two rivals': the Jehovah's Witnesses'
+"a god" at John 1:1 and Son created first at Colossians 1:15
+(`witnesses_establish`), and David Bernard's Oneness reading of "with God" as
+God's own thought (`oneness_establishes`). Weighed, nothing is forced
+(`deity_forces_nothing`). The Witnesses stand off against LST and the Oneness
+position, and Oneness against LST over the three persons. Each position can be
+defended and none is forced, because every reading that divides them, Harner's
+"qualitative" θεός against the brochure's "a god" among them, is rated
+`disputed`. LST and the Oneness position stand together on the Word and the
+Spirit (`oneness_stands_with_the_deity`).
 
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no
@@ -846,12 +873,10 @@ positions on tradition, three objections that do not reduce to one another, the
 two answers to the self-refutation objection, and a dispute over what Jesus'
 rebuke of tradition in Mark 7 decides.
 
-**The rest of the Triune God** ([#216]). The procession and the order texts are
-encoded; LST §3's other graded claims are not. They are that each person is God
-and the three are not three gods, against the Arians, the modalists and the "a
-god" of John 1:1 in the New World Translation; and that eternal generation is a
-defended synthesis. Then the "through the Son" of the Greek fathers as a third
-position on the procession, and an article check of LST's own sentences.
+**The rest of the Triune God** ([#216]). The deity and the persons, the order
+texts and the procession are encoded. Eternal generation, which LST calls a
+defended synthesis, is not. Then the "through the Son" of the Greek fathers as a
+third position on the procession, and an article check of LST's own sentences.
 
 **Corpus grounding** ([#4]). Importers so `Passage` values resolve against real
 text data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite

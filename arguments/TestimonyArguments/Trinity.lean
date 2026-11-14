@@ -4,6 +4,8 @@ import TestimonyArguments.Trinity.Procession
 import TestimonyArguments.Trinity.Dispute
 import TestimonyArguments.Trinity.Order
 import TestimonyArguments.Trinity.OrderDispute
+import TestimonyArguments.Trinity.Deity
+import TestimonyArguments.Trinity.DeityDispute
 
 /-!
 # TestimonyArguments.Trinity — the Triune God: what Scripture settles, and what it leaves open
@@ -56,6 +58,24 @@ them is enough, so answering one does not answer the side. The chapter
 What the texts establish is accepted however the disagreement is settled. The
 two sides defeat each other, so neither is.
 
+## The first question: are the Son and the Spirit God, and three persons?
+
+LST's section opens with the confession every other claim rests on: "The Father
+is God, the Son is God, and the Holy Spirit is God; they are personally distinct
+without being separate gods," citing John 1:1–18, 20:28 and Acts 5:3–4 among
+others. Unlike the claims below, LST confesses this one as what Scripture
+establishes. Two positions read the same texts against it. Jehovah's Witnesses
+read John 1:1 as "the Word was a god", the Son as the first thing God made, and
+the holy spirit as God's force. Oneness Pentecostals, with David Bernard, confess
+the Son and the Spirit God and deny that they are persons distinct from the
+Father. The chapter "Are the Son and the Spirit God, and three persons?" encodes
+all three. Each gives its conclusion from its own readings of the verses, and
+each can be held without contradiction. Weighed, nothing is forced: the
+Witnesses stand off against the other two over the Son and the Spirit, Oneness
+stands off against LST over the three persons, and every reading that divides
+them is rated `disputed`. On the deity of the Word and the Spirit, LST and the
+Oneness position stand together.
+
 ## The second question: is the Son less than the Father?
 
 LST also grades the texts of the Son's obedience: "These texts establish real
@@ -70,13 +90,11 @@ differently. And they leave open whether the order is eternal, which Wayne
 Grudem and Bruce Ware hold and Kevin Giles denies. Weighed, what the texts
 establish is forced, and every reading beyond it stands off against another.
 That includes the Arian reading, which means only that these few verses do not
-settle the Son's divinity. LST confesses it from other texts, the next question.
+settle the Son's divinity. LST confesses it from other texts, the first question.
 
 ## Still to come
 
-LST's other graded claims in §3 are not yet encoded: that the Father, the Son
-and the Spirit are each God and are three persons, not three gods, against the
-Arians, the modalists and the "a god" of the New World Translation at John 1:1;
-and that eternal generation is a "defended synthesis" rather than a stated
-proposition. The issue that tracks this work lists them.
+One graded claim of §3 is not yet encoded: that eternal generation is a "defended
+synthesis" rather than a stated proposition. The issue that tracks this work
+lists it.
 -/

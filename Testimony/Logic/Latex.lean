@@ -236,6 +236,8 @@ def tradition : Tradition → String
   | .reformedProtestant => "Reformed Protestant"
   | .romanCatholic => "Roman Catholic"
   | .easternOrthodox => "Eastern Orthodox"
+  | .jehovahsWitness => "Jehovah's Witnesses"
+  | .onenessPentecostal => "Oneness Pentecostal"
   | .adversarialTrial => "adversarial trial"
   | .formalOntology => "formal ontology"
 

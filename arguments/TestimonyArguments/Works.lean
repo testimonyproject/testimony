@@ -3523,6 +3523,96 @@ it was read; its words are known here as Grudem quotes them (2016). -/
   , publisher := "Kregel Publications"
   , place := some "Grand Rapids, MI" }
 
+/-- The Watch Tower Society's brochure *Should You Believe in the Trinity? Is
+Jesus Christ the Almighty God?* (1989), 30 pages, OCLC 20957023 (Open Library
+OL58153292M, which gives no ISBN). Read in the 2006 printing on the Watchtower
+Online Library, publication code "ti". Cited for its readings of John 1:1 ("a
+god", p. 27), John 20:28 (p. 29), Colossians 1:15 (p. 14) and the holy spirit
+as "God's active force" (pp. 20–23). The pages are the 2006 printing's. -/
+@[bib_entry] def watchtowerTrinity : BibEntry := .book
+  { core :=
+      { key := "watchtower-should-you-believe-trinity-1989"
+      , role := .witness
+      , contributors := { authors := [.corporate "Watch Tower Bible and Tract Society"] }
+      , title := "Should You Believe in the Trinity?"
+      , subtitle := some "Is Jesus Christ the Almighty God?"
+      , year := some { value := 1989 }
+      , identifiers :=
+          [ .url ("https://wol.jw.org/en/wol/library/r1/lp-e/all-publications/" ++
+                  "brochures-and-booklets/trinity-ti") (some "2026-11-14") ]
+      , note := some "Consulted in the 2006 printing on the Watchtower Online Library." }
+  , publisher := "Watchtower Bible and Tract Society of New York"
+  , place := some "Brooklyn, NY" }
+
+/-- The New World Translation, the Jehovah's Witnesses' Bible, in its 2013
+revision, read on jw.org. Cited for John 1:1, "and the Word was a god", and
+Colossians 1:16, "all other things were created", with "other" unbracketed. -/
+@[bib_entry] def nwt2013 : BibEntry := .webPage
+  { core :=
+      { key := "new-world-translation-2013"
+      , role := .witness
+      , contributors := { authors := [.corporate "Watch Tower Bible and Tract Society"] }
+      , title := "New World Translation of the Holy Scriptures"
+      , subtitle := some "2013 Revision"
+      , year := some { value := 2013 }
+      , identifiers :=
+          [ .url "https://www.jw.org/en/library/bible/nwt/books/john/1/"
+                 (some "2026-11-14") ] } }
+
+/-- David K. Bernard, *The Oneness of God* (1983), the first volume of his
+Series in Pentecostal Theology. ISBN-10 0912315121, resolved at Open Library
+(OL2725313M) as 9780912315126; the Spanish translation has another. Read in the
+revised edition of 2001, whose pages the copy consulted does not show, so it is
+cited by chapter and section. Cited for "Jesus is the one God" (ch. 4), the Word
+as "the thought, plan, or mind of God" (ch. 4, "The Word"; ch. 8, "The With
+Passages"), the glory of John 17:5 "in the plan of God" (ch. 8), the one name of
+Matthew 28:19 (ch. 6) and the Holy Spirit as God (ch. 6). -/
+@[bib_entry] def bernardOnenessOfGod : BibEntry := .book
+  { core :=
+      { key := "bernard-oneness-of-god-1983"
+      , role := .witness
+      , contributors := { authors := [.person "David K." "Bernard"] }
+      , title := "The Oneness of God"
+      , year := some { value := 1983 }
+      , identifiers := [.isbn "9780912315126"]
+      , note := some "Consulted in the revised edition of 2001." }
+  , publisher := "Word Aflame Press"
+  , place := some "Hazelwood, MO" }
+
+/-- Philip B. Harner, "Qualitative Anarthrous Predicate Nouns: Mark 15:39 and
+John 1:1", *Journal of Biblical Literature* 92.1 (1973). DOI verified at
+Crossref, which gives the first page, 75, and no last page; so no range is
+given. The article was not read; his words are quoted as the New World
+Translation's reference edition (appendix 6A) quotes them. -/
+@[bib_entry] def harnerAnarthrous : BibEntry := .article
+  { core :=
+      { key := "harner-qualitative-anarthrous-1973"
+      , role := .witness
+      , contributors := { authors := [.person "Philip B." "Harner"] }
+      , title := "Qualitative Anarthrous Predicate Nouns: Mark 15:39 and John 1:1"
+      , year := some { value := 1973 }
+      , identifiers := [.doi "10.2307/3262756"] }
+  , journal := "Journal of Biblical Literature"
+  , volume := some "92"
+  , issue := some "1" }
+
+/-- *Nicene and Post-Nicene Fathers*, first series, volume 7: Augustine's
+*Tractates on the Gospel of John*, tr. John Gibb. Cited for Tractate I.11–12 on
+John 1:3: "that by which all things were made could not be made by itself".
+CCEL gives 1886 and Schaff's preface is dated 1888, so no year is given. -/
+@[bib_entry] def npnf1v7 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-1-7"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title := "Nicene and Post-Nicene Fathers, First Series"
+      , subtitle := some "St. Augustin: Homilies on the Gospel of John"
+      , identifiers :=
+          [ .url "https://ccel.org/ccel/schaff/npnf107.iii.ii.html" (some "2026-11-14") ] }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "New York"
+  , volume := some "7" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'
