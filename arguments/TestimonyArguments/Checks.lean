@@ -10,6 +10,7 @@ import TestimonyArguments.Articles.Howell2003
 import Testimony.Checks.Aif
 import Testimony.Checks.Citations
 import Testimony.Checks.Ontology
+import Testimony.Checks.Fallacies
 import Testimony.Checks.Postulates
 import Testimony.Checks.Refutations
 
@@ -25,6 +26,10 @@ them is a change a reviewer sees:
   from its pinned joins and nowhere else;
 - **the shared ontology**: what each of the library's definitions does in each
   argument — where its words are held, and the joins it derives;
+- **fallacies**: every line of reason, read through its argument's meanings,
+  checked for equivocation, begging the question and arguing from silence, as
+  an article's moves are; a line that equivocates on its own terms, or argues
+  from silence alone, fails the build;
 - **postulates**: no package is emptied by its meanings, and no refutation is
   undone by them;
 - **refutations**: `establish` fails, as not Horn, on every package an argument
@@ -77,6 +82,7 @@ Sola fide
   the only means: held by 3, used of a text or voice by 9; derives:
     justificationByFaithAlone excludes baptismIsInstrumentalCause
   the whole ground: held by 3, used of a text or voice by 6; derives nothing
+  the same sense, both ways: stated or denied by 3; derives nothing
 Sola scriptura
   joins: 3, with no definition: 3
   not a ground: held by 1, used of a text or voice by 0; derives nothing
@@ -92,6 +98,39 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
+/--
+info: the charges, against every argument's lines:
+Born in Bethlehem — Micah 5:2
+  lines: 2, read: 0
+Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
+  lines: 41, read: 0
+Sola fide
+  lines: 49, read: 31
+  carry what they deliver in a premise:
+    lexicalLine: its premise denied by paulsJustifyDenotesRenewal
+  need a word to keep its sense, unstated:
+    catholicJamesWordLine: erga, dikaioo
+    catholicJamesWorksLine: erga, dikaioo
+    fruitLine: pistis, erga
+    jamesLexicalLine: dikaioo
+    johannineLine: pisteuo
+    johannineWithoutTrust: pisteuo
+    lexicalLine: dikaioo
+    paulineLine: dikaioo, ergaNomou
+    paulineWithoutPistisChristou: dikaioo, ergaNomou
+    paulineWithoutWorksOfLaw: dikaioo, ergaNomou
+    renewalWordLine: dikaioo
+    romansFourExegesisLine: logizomai, erga
+Sola scriptura
+  lines: 20, read: 1
+The Triune God
+  lines: 13, read: 0
+The canonical witness
+  lines: 8, read: 0
+-/
+#guard_msgs in
+#check_fallacies under TestimonyArguments
+
 /-- info: every package has a model with its postulates: 206, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
@@ -105,13 +144,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2397 definitions, 214 entries
+info: every entry is a tagged definition, and every key names one: 2505 definitions, 214 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1919 definitions, 214 entries
+info: every entry is a tagged definition, and every key names one: 1920 definitions, 214 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
