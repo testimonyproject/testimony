@@ -15,6 +15,21 @@ that the will is merely passive, and in the same sentence condemns anyone who
 says the will cannot refuse its consent: so Trent's lines deny both the second
 and third parts of the conclusion. The Remonstrants deny the second part, that
 grace cannot be resisted, from Stephen's speech in Acts 7.
+
+The texts of resistance are common ground. Stephen's hearers "always resist the
+Holy Spirit" (Acts 7:51), and Paul tells believers not to grieve the Spirit
+(Ephesians 4:30) or quench him (1 Thessalonians 5:19); every party grants that
+the Spirit's work meets resistance. What is disputed is the step from there to
+the claim that the grace that saves can be *finally* refused. The word "resist"
+can mean resisting for a time, as the Reformed say even the elect do before
+grace overcomes them, or refusing to the end. A second route to the final
+refusal runs through the sin that is never forgiven (Matthew 12:31–32), read
+with Augustine as impenitence persisted in until death.
+
+The closing step is two steps. From God's work alone to the will's passivity,
+the Lutherans agree with Dort. From God's work alone to grace that cannot be
+finally refused, they do not: the Formula of Concord holds conversion to be the
+Spirit's work alone and grace resistible all the same.
 -/
 
 namespace TestimonyArguments.SolaGratia
@@ -70,18 +85,61 @@ mercy goes to believers and can be refused. -/
 def romansStep : Formula Claim :=
   ⋀ [p .romans9_16, p .romans9_16ConcernsSalvation] ➝ p .conversionIsGodsWorkAlone
 
-/-- What "God's work alone" means, unpacked into the conclusion's second and
-third parts: grace brings about the consent, and the will contributes nothing
-to its own new life. This step carries no rating. It is taken as what Dort means
-by the phrase: conversion "must be wholly ascribed to God" (III/IV, article 10),
-and the new life is "a making alive, which God works in us without our aid"
-(article 12). Through it, the will's passivity follows from God's work alone, so
-a reader who denies passivity must deny either this step or what it starts
-from. -/
+/-- From God's work alone to the third part of the conclusion: the will is
+passive in being made alive. Rated `wellSupported`: the Lutherans, who part from
+Dort on the next step, grant this one. It is taken as what Dort means by the
+phrase: the new life is "a making alive, which God works in us without our aid"
+(III/IV, article 12). -/
 @[solaGratiaDefs]
-def monergismUnpacked : Formula Claim :=
-  p .conversionIsGodsWorkAlone
-  ➝ ⋀ [p .graceIsEffectualOfItself, p .willIsPassiveInRegeneration]
+def passiveStep : Formula Claim :=
+  p .conversionIsGodsWorkAlone ➝ p .willIsPassiveInRegeneration
+
+/-- **From God's work alone to the second part of the conclusion: the grace that
+saves cannot be finally refused.** Rated `disputed`: the Formula of Concord holds
+conversion to be the Spirit's work alone, with the will "purely passive", and
+holds grace resistible all the same. -/
+@[solaGratiaDefs]
+def effectualStep : Formula Claim :=
+  p .conversionIsGodsWorkAlone ➝ p .graceIsEffectualOfItself
+
+/-- What the texts of resistance say together: the Spirit's work is resisted.
+Acts 7:51 says so of Stephen's hearers, and Paul's commands not to grieve the
+Spirit (Ephesians 4:30) or quench him (1 Thessalonians 5:19) presuppose it of
+believers. -/
+@[solaGratiaDefs]
+def textsOfResistanceStep : Formula Claim :=
+  ⋀ [p .acts7_51, p .ephesians4_30, p .thessalonians5_19] ➝ p .theSpiritIsResisted
+
+/-- **From resistance to final refusal.** If the Spirit is resisted, and what is
+resisted is the grace that saves, that grace can be finally refused. The
+Remonstrants' fourth article, made explicit. -/
+@[solaGratiaDefs]
+def resistanceStep : Formula Claim :=
+  ⋀ [p .theSpiritIsResisted, p .acts7_51ResistsSavingGrace]
+  ➝ p .savingGraceCanBeFinallyRefused
+
+/-- **From grieving the Spirit to final refusal.** If the Spirit is resisted,
+and those who obstinately resist him can grieve and lose him, the grace that
+saves can be finally refused. The Formula of Concord's reading of
+Ephesians 4:30. -/
+@[solaGratiaDefs]
+def griefStep : Formula Claim :=
+  ⋀ [p .theSpiritIsResisted, p .grievingCanLoseTheSpirit] ➝ p .savingGraceCanBeFinallyRefused
+
+/-- **From the unforgivable sin to final refusal.** If the blasphemy against the
+Spirit is never forgiven (Matthew 12:31–32), and it is the final refusal of the
+grace offered, then that grace can be finally refused. -/
+@[solaGratiaDefs]
+def blasphemyStep : Formula Claim :=
+  ⋀ [p .matthew12_31to32, p .blasphemyIsFinalRefusalOfGrace]
+  ➝ p .savingGraceCanBeFinallyRefused
+
+/-- What final refusal means for the second part of the conclusion: grace that
+can be finally refused is not effectual of itself. Rated `consensus`: it is what
+the two claims say, and their meanings exclude each other. -/
+@[solaGratiaDefs]
+def refusalStep : Formula Claim :=
+  p .savingGraceCanBeFinallyRefused ➝ notP .graceIsEffectualOfItself
 
 /-- **Trent's fourth canon, first half.** The will, moved by God, cooperates by
 assenting, as "Return to me" calls on it to; so it is not passive. Rated
@@ -99,13 +157,6 @@ holds that the man God moves to grace attains it infallibly. -/
 @[solaGratiaDefs]
 def dissentStep : Formula Claim :=
   p .freeWillCanDissent ➝ notP .graceIsEffectualOfItself
-
-/-- **The Remonstrants' fourth article.** Stephen's hearers resisted the Holy
-Spirit, and what they resisted was the grace that saves; so that grace is not
-effectual of itself. -/
-@[solaGratiaDefs]
-def resistanceStep : Formula Claim :=
-  ⋀ [p .acts7_51, p .acts7_51ResistsSavingGrace] ➝ notP .graceIsEffectualOfItself
 
 /-! ### The lines -/
 
@@ -170,29 +221,72 @@ def dissentLine : Line Claim :=
   , delivers := notP .graceIsEffectualOfItself
   , inference := some dissentInference }
 
-/-- **The Remonstrants on resistance**: Acts 7:51, read as resisting the grace
-that saves. -/
+/-- **The texts of resistance**: Acts 7:51, Ephesians 4:30 and
+1 Thessalonians 5:19, delivering that the Spirit's work is resisted. Every party
+walks this line. -/
+@[solaGratiaDefs]
+def textsOfResistanceLine : Line Claim :=
+  { name := "The texts of resistance (Acts 7:51; Ephesians 4:30; 1 Thessalonians 5:19)"
+  , grounds := [p .acts7_51, p .ephesians4_30, p .thessalonians5_19]
+  , step := textsOfResistanceStep
+  , delivers := p .theSpiritIsResisted
+  , inference := some textsOfResistanceInference }
+
+/-- **The Remonstrants on resistance**: what Stephen's hearers resisted was the
+grace that saves, so that grace can be finally refused. -/
 @[solaGratiaDefs]
 def resistanceLine : Line Claim :=
   { name := "Remonstrance, article 4: grace is not irresistible (Acts 7:51)"
-  , grounds := [p .acts7_51, p .acts7_51ResistsSavingGrace]
+  , grounds := [p .acts7_51ResistsSavingGrace]
   , step := resistanceStep
-  , delivers := notP .graceIsEffectualOfItself
+  , delivers := p .savingGraceCanBeFinallyRefused
   , inference := some resistanceInference }
+
+/-- **Grieving the Spirit**, read as able to end in losing him. -/
+@[solaGratiaDefs]
+def griefLine : Line Claim :=
+  { name := "Grieving the Spirit (Ephesians 4:30), as able to lose him"
+  , grounds := [p .grievingCanLoseTheSpirit]
+  , step := griefStep
+  , delivers := p .savingGraceCanBeFinallyRefused
+  , inference := some griefInference }
+
+/-- **The unforgivable sin**, read as the final refusal of grace. -/
+@[solaGratiaDefs]
+def blasphemyLine : Line Claim :=
+  { name := "The sin against the Spirit (Matthew 12:31–32), as final refusal"
+  , grounds := [p .matthew12_31to32, p .blasphemyIsFinalRefusalOfGrace]
+  , step := blasphemyStep
+  , delivers := p .savingGraceCanBeFinallyRefused
+  , inference := some blasphemyInference }
+
+/-- **Final refusal, and what it denies.** -/
+@[solaGratiaDefs]
+def refusalLine : Line Claim :=
+  { name := "Grace that can be finally refused is not effectual of itself"
+  , grounds := []
+  , step := refusalStep
+  , delivers := notP .graceIsEffectualOfItself
+  , inference := some refusalInference }
 
 /-! ### Shared grounds -/
 
-/-- What the Reformed packages rest on beyond any one line: Acts 7:51, which
-they must answer too, and the Reformed answer to it, from Dort's account of
-those who refuse the call: what Stephen's hearers resisted was the outward call
-of the preached word, not the grace that saves. -/
+/-- What the Reformed packages rest on beyond any one line: the Reformed answer
+to Acts 7:51, from Dort's account of those who refuse the call. What Stephen's
+hearers resisted was the outward call of the preached word, not the grace that
+saves. The texts of resistance themselves are a line the Reformed walk too. -/
 @[solaGratiaDefs]
 def reformedShared : List (Formula Claim) :=
-  [p .acts7_51, notP .acts7_51ResistsSavingGrace]
+  [notP .acts7_51ResistsSavingGrace]
 
-/-- The step that closes every Reformed package: God's work alone, unpacked. -/
+/-- The steps that close every Reformed package: God's work alone, unpacked into
+the conclusion's last two parts, one step each. -/
 @[solaGratiaDefs]
 def closingSteps : List (Formula Claim) :=
-  [monergismUnpacked]
+  [passiveStep, effectualStep]
+
+/-- The ratings of the closing steps, which belong to no line. -/
+def closingInferences : List Source :=
+  [passiveInference, effectualInference]
 
 end TestimonyArguments.SolaGratia

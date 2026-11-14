@@ -23,10 +23,11 @@ Romans 11:6; Ephesians 2, with "this" pointing to the whole of being saved by
 grace through faith; Romans 9:16, read as being about salvation; the steps from
 each of those to God's work alone; and the Reformed answer to Acts 7:51. The result
 does not say that the readings or the steps are right, only that the conclusion
-follows from them. Three of the steps are rated `disputed`, each on a reader who
-grants its grounds and denies its conclusion. The step that unpacks "God's work
-alone" into the conclusion's last two parts carries no rating; it is taken as
-what Dort means by the phrase. -/
+follows from them. Four of the steps are rated `disputed`, each on a reader who
+grants its grounds and denies its conclusion: the step from "this" to faith as
+a gift (Robertson), the steps from each strand to God's work alone (Arminius),
+and the step from God's work alone to grace that cannot be finally refused (the
+Formula of Concord). -/
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
   establish [solaGratiaDefs]
@@ -35,12 +36,14 @@ theorem reformed_establishes : Establishes reformed := by
 
 /-- Trent's reading, written down: salvation is by grace, the will cooperates
 and can refuse, so grace is not effectual of itself and the will is not passive
-in being made alive. Claims Trent's documents do not address, such as the
+in being made alive, and grace is not received by faith alone (canon 9). Claims
+Trent's documents do not address, such as the
 readings of Ephesians 2 and Romans 9, are set true; nothing turns on them. On
 these sixteen claims Trent's reading and Arminius's coincide; the two positions
 differ in which premises they hold and whom they cite. -/
 def trentsReading : Valuation Claim := fun a =>
   match a with
+  | .faithAloneReceivesGrace => False
   | .conversionIsGodsWorkAlone => False
   | .graceIsEffectualOfItself => False
   | .willIsPassiveInRegeneration => False
@@ -226,11 +229,16 @@ position that reaches its conclusion is shown to be holdable without
 contradiction, by Dort's reading. These are claims about the health of the
 encoding, not about the dispute, and are not headline results. -/
 
-/-- Dort's reading: every claim of the Reformed position holds, and what
-Stephen's hearers resisted was the preached word, not the grace that saves. -/
+/-- Dort's reading: every claim of the Reformed position holds. What Stephen's
+hearers resisted was the preached word, not the grace that saves; grieving the
+Spirit does not end in losing him; the unforgivable sin is not the final refusal
+of saving grace; and that grace cannot be finally refused. -/
 def dortReading : Valuation Claim := fun a =>
   match a with
   | .acts7_51ResistsSavingGrace => False
+  | .savingGraceCanBeFinallyRefused => False
+  | .grievingCanLoseTheSpirit => False
+  | .blasphemyIsFinalRefusalOfGrace => False
   | _ => True
 
 /-- The Reformed package has a model. -/

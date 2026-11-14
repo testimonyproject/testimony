@@ -3,6 +3,8 @@ import TestimonyArguments.SolaGratia.Sources
 import TestimonyArguments.SolaGratia.Lines
 import TestimonyArguments.SolaGratia.Packages
 import TestimonyArguments.SolaGratia.Results
+import TestimonyArguments.SolaGratia.ThirdWay
+import TestimonyArguments.SolaGratia.Dispute
 
 /-!
 # TestimonyArguments.SolaGratia — salvation by grace alone
@@ -129,7 +131,44 @@ out a grace effectual of itself, and Rome left the dispute between the two
 schools open in 1607. The rating stands on the Thomist reading, because one
 reader who grants the ground and denies the conclusion is enough.
 
+## Freedom to refuse, and two more positions
+
+The strongest objection comes from the other side, and it is an objection from
+Scripture: the Spirit is resisted (Acts 7:51), grieved (Ephesians 4:30) and
+quenched (1 Thessalonians 5:19), and one sin against him is never forgiven
+(Matthew 12:31–32). Every party grants that the Spirit's work is resisted. What
+divides them is whether the grace that saves can be *finally* refused, and each
+route from the texts to that claim needs a reading that a cited reader denies.
+The chapter on freedom to refuse sets them out, with two positions between Dort
+and the Remonstrants: the Lutherans of the Formula of Concord, for whom the will
+is passive in conversion and grace resistible all the same, and Wesley, for whom
+preventing grace restores to everyone an ability that can be used or refused.
+
+The Lutherans are why the step from God's work alone to grace that cannot be
+finally refused is rated `disputed`. They hold conversion to be "altogether an
+operation, gift, and present, and work of the Holy Ghost alone", and they hold
+that those who "always resist the Holy Ghost … are not converted".
+
+The third way, as it was put to this argument, is that God gives the ability to
+believe as Adam and Eve were made able to obey or to fall, and that the offer is
+received by faith alone. As stated, it leaves open whether grace can be finally
+refused (`third_way_leaves_resistibility_open`). Augustine's distinction between
+the help "without which" a thing does not come to pass, which Adam had, and the
+help "by which" it does, which the saints have, is the dilemma it meets: read
+the first way it is Wesley's and falls to Dort, read the second it is Dort's and
+falls to the Remonstrants (`whatTheAbilityIs`).
+
+Weighed as one dispute, only what every party holds is forced: salvation is by
+grace (`only_grace_prevails`). Every other position, Dort's included, can be
+defended and is not forced, and the third way can be defended with Dort or with
+Wesley.
+
 ## What is not encoded
+
+The Remonstrants' denial of the will's passivity, and Wesley's view of it, are
+not encoded: each position here concludes only what its cited sources say. Nor
+is the cooperation of the renewed will, which Dort, the Formula of Concord and
+Trent all grant in some sense, and which a dilemma over "cooperate" would split.
 
 Aquinas and the Thomist school are cited here for two ratings, and are not a
 position of their own. They hold that grace is infallibly effectual, and Aquinas
@@ -150,6 +189,8 @@ which is a dispute of its own.
 | `Atoms.lean` | the claims |
 | `Sources.lean` | who holds each claim, and the rating of each step |
 | `Lines.lean` | the steps and the lines of reason |
-| `Packages.lean` | the three positions, and the variants the results ask about |
+| `Packages.lean` | the positions, and the variants the results ask about |
 | `Results.lean` | what follows, what does not, and which readings carry it |
+| `ThirdWay.lean` | freedom to refuse, the Lutherans, Wesley, and the third way's dilemma |
+| `Dispute.lean` | the positions weighed, and the verdicts |
 -/

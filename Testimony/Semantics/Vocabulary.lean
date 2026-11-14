@@ -273,6 +273,19 @@ inductive Concept
   | patternForBelievers
   /-- An unrepeatable step in the gospel's spread. -/
   | unrepeatableTransition
+  /-- The human will: the power by which a person consents or refuses. -/
+  | will
+  /-- The act of believing: a person's consent to the gospel, when it happens.
+  -/
+  | actOfBelieving
+  /-- The ability to believe: what a person must have before any act of
+  believing, whether or not it is used. -/
+  | abilityToBelieve
+  /-- Regeneration: being made alive by God (Ephesians 2:5), the new birth. -/
+  | regeneration
+  /-- The will's disposing and preparing itself for justification, as Trent's
+  sixth session describes it (canon 4). -/
+  | preparationForJustification
   /-- A length of time, in minutes. -/
   | minutes (n : Nat)
 deriving DecidableEq, Repr
@@ -340,6 +353,9 @@ inductive Rel
   | endsWith
   /-- The first is part of the second: DOLCE's and BFO's *part of*. -/
   | partOf
+  /-- The first brings about the second, so that the second does not fail to
+  follow: an efficient cause that cannot be frustrated. -/
+  | effects
 deriving DecidableEq, Repr
 
 /-- A principle of reading, held for its own sake. -/

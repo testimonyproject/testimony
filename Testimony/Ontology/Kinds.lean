@@ -100,6 +100,11 @@ def category : Concept → Option Category
   | .actsSpiritEpisodes => some .event
   | .patternForBelievers => some .role
   | .unrepeatableTransition => some .event
+  | .will => some .quality
+  | .actOfBelieving => some .event
+  | .abilityToBelieve => some .quality
+  | .regeneration => some .event
+  | .preparationForJustification => some .process
   | .minutes _ => some .temporalRegion
 
 /-- The concepts whose category is in dispute: each named in the module

@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **275 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **288 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -293,6 +293,19 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `ephesians_strand_establishes` | `Establishes ephesiansStrand` | The Ephesians strand, argued alone, reaches sola gratia. |
 | `romans_strand_establishes` | `Establishes romansStrand` | So does the Romans strand, on one step rated `disputed`. |
 | `gift_of_faith_does_not_settle_resistibility` | `¬Establishes ephesiansWithoutTheGiftStep` | **That faith is God's gift does not settle whether grace can be refused.** Grant everything the Ephesians strand rests on short of its last step: the texts, "this" pointing to the … |
+| `lutheranPosition_establishes` | `Establishes lutheranPosition` | **The Lutheran position holds together, and reaches what it holds**: the will passive in conversion, and the grace that does it resistible. |
+| `wesleyanPosition_establishes` | `Establishes wesleyanPosition` | **Wesley's premises reach what Wesley holds**: grace that goes before, can be refused, and is received by faith alone. |
+| `thirdWay_establishes` | `Establishes thirdWay` | **The third way reaches what it says**: salvation by grace, received by faith alone. |
+| `objection_establishes` | `Establishes objection` | **The objection from the Spirit's resistance is valid on its own grounds.** Grant the texts of resistance and any one of its three readings, and the grace that saves is not … |
+| `third_way_leaves_resistibility_open` | `Independent thirdWay.premises (p Claim.graceIsEffectualOfItself)` | **The third way leaves resistibility open.** Grant everything it says: Adam made able to stand or fall, the ability to believe given by God, faith alone, and that grace which can … |
+| `only_grace_prevails` | `Framework.grounded solaGratiaDispute.defeats = Solver.toSet [Party.grace]` | **Only what every party holds prevails: salvation is by grace.** What the dispute forces before any choice between rivals is that, and nothing more. |
+| `reformed_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.reformed` | **Dort can be defended**, together with what every party holds and the third way: some maximal defensible position holds all three. |
+| `reformed_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.reformed` | **Nor is it forced.** A maximal defensible position holds the Remonstrants, the Lutherans, Wesley, the third way and the objection, and cannot hold Dort with them. |
+| `lutheran_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.lutheran` | **The Lutheran position can be defended**, with the Remonstrants, Wesley, the third way and the objection. |
+| `tridentine_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.trent` | **Trent can be defended**, with what every party holds. |
+| `third_way_defensible_with_dort` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | **The third way can be defended with Dort**, against Trent: Dort answers Trent's attack on faith alone, and the third way grants everything Dort holds. |
+| `third_way_defensible_with_wesley` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | **And it can be defended with Wesley**, the Lutherans and the Remonstrants, against both Dort and Trent. |
+| `third_way_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.thirdWay` | **Nor is the third way forced.** A maximal defensible position holds Trent, which condemns faith alone, and cannot hold the third way with it. |
 
 ### [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
 
@@ -815,8 +828,20 @@ dissent is at the steps after them. Robertson and Calvin deny that the verse
 makes faith the gift; Arminius grants that faith is God's gift and denies that
 it cannot be refused (`gift_of_faith_does_not_settle_resistibility`); and
 Aquinas grants each half of Trent's canon while holding grace infallibly
-effectual. The Thomist position, which may reach the sharpened conclusion too, is
-not yet encoded.
+effectual. The strongest objection, that the Spirit is resisted, grieved and
+quenched and one sin against him never forgiven, starts from texts every party
+grants; each route from them to grace that can be *finally* refused needs a
+reading a cited reader denies, and Augustine himself grants the unforgivable sin
+is impenitence to the end while holding saving grace irresistible. The
+Lutherans of the Formula of Concord hold the will passive in conversion and
+grace resistible, which made the step from "God's work alone" to irresistible
+grace a disputed step of its own (`lutheranPosition_establishes`). The third
+way, an ability given as Adam was made able, received by faith alone, leaves
+resistibility open (`third_way_leaves_resistibility_open`) until it says what
+kind of help the ability is, and Augustine's "help without which" and "help by
+which" are the two horns of its dilemma. Weighed as one dispute, only salvation
+by grace is forced (`only_grace_prevails`). The Thomist position, which may
+reach the sharpened conclusion too, is not yet encoded.
 
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no
@@ -842,8 +867,9 @@ case is to its weakest link.
 tradition, three objections that do not reduce to one another, the two answers
 to the self-refutation objection, and a dispute over what Jesus' rebuke of
 tradition in Mark 7 decides. *Sola gratia* is encoded with Trent and the
-Remonstrants as its rivals ([#24]); what it lacks is a Thomist position, John
-6:44 as a third strand, and the positions weighed as a dispute.
+Remonstrants as its rivals, and the Lutherans, Wesley and a third way between
+them, weighed as one dispute ([#24]); what it lacks is a Thomist position and
+John 6:44 as a third strand.
 
 **The rest of the Triune God** ([#216]). The procession is encoded; LST §3's
 other graded claims are not. They are that each person is God and the three are

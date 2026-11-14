@@ -3475,6 +3475,85 @@ corporate, of a people. -/
   , issue := some "2"
   , pages := some (351, 371) }
 
+/-- The *Triglot Concordia* (1921), the Lutheran confessions in German, Latin
+and English, whose English is the translation bookofconcord.org reproduces.
+Cited by article and paragraph for the Formula of Concord and the Augsburg
+Confession where its wording is quoted; Kolb and Wengert's translation, the
+library's other edition, words them differently. Public domain; no ISBN. -/
+@[bib_entry] def concordiaTriglotta : BibEntry := .book
+  { core :=
+      { key := "concordia-triglotta-1921"
+      , role := .authority
+      , contributors := { translators := [.person "W. H. T." "Dau", .person "F." "Bente"] }
+      , title := "Concordia Triglotta"
+      , subtitle := some
+          "The Symbolical Books of the Ev. Lutheran Church, German-Latin-English"
+      , year := some { value := 1921 }
+      , identifiers :=
+          [ .url "https://archive.org/details/concordiatriglot00unse" (some "2026-11-14")
+          , .url "https://bookofconcord.org/about-the-translation/" (some "2026-11-14") ] }
+  , publisher := "Concordia Publishing House"
+  , place := some "St. Louis" }
+
+/-- Wesley's works, volume 9, in the first American edition, read on the
+Internet Archive's scan (its title page reads 1827, its catalogue 1826). Cited
+for *Predestination Calmly Considered*, §§XLVI–XLVII, p. 397: "there is a
+measure of free-will supernaturally restored to every man", and "power either to
+resist or yield to the grace of God". -/
+@[bib_entry] def wesleyWorks9 : BibEntry := .book
+  { core :=
+      { key := "wesley-works-9-1827"
+      , role := .witness
+      , contributors := { authors := [.person "John" "Wesley"] }
+      , title := "The Works of the Rev. John Wesley"
+      , subtitle := some "In Ten Volumes. First American Edition"
+      , year := some { value := 1827 }
+      , identifiers :=
+          [ .url "https://archive.org/details/worksofrevjohnwe09wesl" (some "2026-11-14") ] }
+  , publisher := "J. & J. Harper"
+  , place := some "New York"
+  , volume := some "9" }
+
+/-- Wesley's sermons in Thomas Jackson's edition of 1872, as the Wesley Center
+transcribes them, without the edition's pages; cited by sermon and section.
+Sermon 85, "On Working Out Our Own Salvation", III.4: no man "is wholly void of
+the grace of God … It is more properly termed preventing grace". Sermon 1,
+"Salvation by Faith", III.3: "Of yourselves cometh neither your faith nor your
+salvation". -/
+@[bib_entry] def wesleySermons : BibEntry := .webPage
+  { core :=
+      { key := "wesley-sermons-1872"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Wesley"], editors := [.person "Thomas" "Jackson"] }
+      , title := "The Sermons of John Wesley (1872 Edition)"
+      , year := some { value := 1872 }
+      , identifiers :=
+          [ .url ("https://wesley.nnu.edu/john-wesley/" ++
+                  "the-sermons-of-john-wesley-1872-edition/") (some "2026-11-14") ] }
+  , site := some "Wesley Center Online" }
+
+/-- Schaff's Nicene and Post-Nicene Fathers, first series volume 6, read on the
+Internet Archive's scan of the 1888 printing (CCEL's header says 1886). Cited for
+Augustine's sermon on Matthew 12:32 (Sermon XXI in this volume, LXXI in the
+Benedictine numbering), §20, p. 325: "This impenitence then is 'the blasphemy of
+the Spirit, which shall not be forgiven'". -/
+@[bib_entry] def npnfAugustineSermons : BibEntry := .book
+  { core :=
+      { key := "npnf1-06-1888"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title :=
+          "A Select Library of the Nicene and Post-Nicene Fathers of the Christian Church"
+      , subtitle := some
+          ("First Series, Volume 6: St. Augustin — Sermon on the Mount; Harmony of " ++
+           "the Gospels; Homilies on the Gospels")
+      , year := some { value := 1888 }
+      , identifiers :=
+          [ .url "https://archive.org/details/aselectlibrary06unknuoft" (some "2026-11-14") ] }
+  , publisher := "The Christian Literature Company"
+  , place := some "New York" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

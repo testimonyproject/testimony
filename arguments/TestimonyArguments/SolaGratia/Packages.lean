@@ -9,6 +9,16 @@ justification, the Remonstrants from their five articles of 1610 and from
 Arminius. Neither is Pelagian. Both say, in so many words, that salvation is by
 grace, and both packages carry the line from Romans 11:6 that delivers it.
 
+Two more positions follow, each a way of holding grace and freedom together
+that is neither Dort's nor the Remonstrants'. The Lutherans of the Formula of
+Concord hold the will "purely passive" in conversion and grace resistible all
+the same. Wesley holds that God restores to everyone a measure of the freedom
+lost in Adam, so that each can receive the offer by faith or refuse it. And the
+third way as it was put to this argument, that God gives the ability to believe
+as Adam was made able to stand or fall, and faith alone receives, is stated
+without saying which kind of help that ability is, because that is what a
+dilemma below asks.
+
 The variants after the Reformed package each change one thing, named, so that a
 result about a variant is a result about that one change.
 -/
@@ -32,13 +42,16 @@ if it wishes. -/
 def tridentine : ArgumentPackage Claim :=
   { name := "Trent (Session VI, canon 4)"
   , cite := tridentineCite
-  , premises := caseOf [graceLine, cooperationLine, dissentLine] [] []
+  , premises :=
+      caseOf [graceLine, cooperationLine, dissentLine] [notP .faithAloneReceivesGrace] []
   , conclusion := solaGratia
-  , conclusionLabel := solaGratiaLabel }
+  , conclusionLabel := solaGratiaLabel
+  , inferences := [graceInference, cooperationInference, dissentInference] }
 
 /-- **The Remonstrants**, from their articles of 1610 and from Arminius.
-Romans 11:6; the fourth article, that grace is not irresistible, from Acts 7:51;
-and what Arminius grants of the Reformed case: the texts of Ephesians 2, that
+Romans 11:6; the texts of resistance, which every party grants; the fourth
+article, that grace is not irresistible, read from Acts 7:51; and what Arminius
+grants of the Reformed case: the texts of Ephesians 2, that
 faith is God's gift, and that Romans 9:16 is about salvation. What is left out
 is the two steps from those to God's work alone, which are the steps he
 refuses. -/
@@ -47,11 +60,85 @@ def remonstrant : ArgumentPackage Claim :=
   { name := "Remonstrant (the Five Articles, 1610)"
   , cite := remonstrantCite
   , premises :=
-      caseOf [graceLine, resistanceLine]
+      caseOf [graceLine, textsOfResistanceLine, resistanceLine, refusalLine]
         [ p .ephesians2_1to5, p .ephesians2_8to9, p .faithIsGodsGift
         , p .romans9_16, p .romans9_16ConcernsSalvation ] []
   , conclusion := solaGratia
-  , conclusionLabel := solaGratiaLabel }
+  , conclusionLabel := solaGratiaLabel
+  , inferences :=
+      [graceInference, textsOfResistanceInference, resistanceInference, refusalInference] }
+
+/-- **The Lutherans**, from the Formula of Concord (1577) and the Augsburg
+Confession (1530). Conversion is the Holy Spirit's work alone, and in it the
+will is "purely passive"; yet those who obstinately resist the Spirit "grieve
+and lose" him, so the grace that saves can be finally refused, and where it is,
+the fault is the person's own. Grace is received by faith
+alone. -/
+@[solaGratiaDefs]
+def lutheran : ArgumentPackage Claim :=
+  { name := "Lutheran (the Formula of Concord)"
+  , cite := lutheranCite
+  , premises :=
+      caseOf [graceLine, textsOfResistanceLine, griefLine, refusalLine]
+        [p .conversionIsGodsWorkAlone, p .faithAloneReceivesGrace] [passiveStep]
+  , conclusion := solaGratia
+  , conclusionLabel := solaGratiaLabel
+  , inferences :=
+      [ graceInference, textsOfResistanceInference, griefInference, refusalInference
+      , passiveInference ] }
+
+/-- **Wesley.** God restores to every person a measure of free will, by the
+grace that goes before ("preventing grace"), so that each is able to believe;
+that grace can be resisted or yielded to; and it is received by faith alone. -/
+@[solaGratiaDefs]
+def wesleyan : ArgumentPackage Claim :=
+  { name := "Wesleyan (preventing grace)"
+  , cite := wesleyanCite
+  , premises :=
+      caseOf [graceLine, textsOfResistanceLine, refusalLine]
+        [ p .abilityToBelieveIsGiven, p .savingGraceCanBeFinallyRefused
+        , p .faithAloneReceivesGrace ] []
+  , conclusion := solaGratia
+  , conclusionLabel := solaGratiaLabel
+  , inferences := [graceInference, textsOfResistanceInference, refusalInference] }
+
+/-- **The third way, as it was put to this argument.** As Adam was made able to
+stand or to fall (Genesis 2:16–17), so God gives the one who hears the gospel
+the ability to believe; the offer is real, and grace is received by faith alone.
+Stated this way it does not say what kind of help the ability is, whether one
+that makes believing possible or one that brings it about. It carries the step
+every party grants, that grace which can be finally refused is not effectual of
+itself, and nothing that would decide whether it can be. -/
+@[solaGratiaDefs]
+def thirdWay : ArgumentPackage Claim :=
+  { name := "The third way (an ability given, received by faith)"
+  , cite := baseCite
+  , premises :=
+      caseOf [graceLine, refusalLine]
+        [p .genesis2_16to17, p .abilityToBelieveIsGiven, p .faithAloneReceivesGrace] []
+  , conclusion := ⋀ [p .salvationIsByGrace, p .faithAloneReceivesGrace]
+  , conclusionLabel :=
+      "salvation is by grace, through an ability God gives, received by faith alone"
+  , inferences := [graceInference, refusalInference] }
+
+/-- **The objection from the Spirit's resistance, strengthened.** Three routes to
+the claim that the grace that saves can be finally refused. Two run from the
+texts of resistance: with the Remonstrants' reading of what Stephen's hearers
+resisted, and with the Formula of Concord's reading of grieving the Spirit, that
+it can end in losing him. The third runs from the sin that is never forgiven,
+read with Augustine as impenitence to the end. It concludes the denial of the
+second part of sola gratia, and nothing about the others. -/
+@[solaGratiaDefs]
+def objection : ArgumentPackage Claim :=
+  { name := "The objection from the Spirit's resistance"
+  , cite := remonstrantCite
+  , premises :=
+      caseOf [textsOfResistanceLine, resistanceLine, griefLine, blasphemyLine, refusalLine] [] []
+  , conclusion := notP .graceIsEffectualOfItself
+  , conclusionLabel := "the grace that saves is not effectual of itself"
+  , inferences :=
+      [ textsOfResistanceInference, resistanceInference, griefInference, blasphemyInference
+      , refusalInference ] }
 
 /-! ### The position argued for -/
 
@@ -64,9 +151,13 @@ def reformed : ArgumentPackage Claim :=
   { name := "Reformed (the Canons of Dort)"
   , cite := reformedCite
   , premises :=
-      caseOf [graceLine, ephesiansLine, giftLine, romansLine] reformedShared closingSteps
+      caseOf [graceLine, ephesiansLine, giftLine, romansLine, textsOfResistanceLine]
+        reformedShared closingSteps
   , conclusion := solaGratia
-  , conclusionLabel := solaGratiaLabel }
+  , conclusionLabel := solaGratiaLabel
+  , inferences :=
+      [ graceInference, ephesiansInference, giftInference, romansInference
+      , textsOfResistanceInference ] ++ closingInferences }
 
 /-! ### Each strand alone -/
 
@@ -106,7 +197,9 @@ def reformedWithoutTouto : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus its reading of \"this\" in Ephesians 2:8"
     premises :=
-      caseOf [graceLine, ephesiansLine.onGrounds [p .ephesians2_8to9], giftLine, romansLine]
+      caseOf
+        [ graceLine, ephesiansLine.onGrounds [p .ephesians2_8to9], giftLine, romansLine
+        , textsOfResistanceLine ]
         reformedShared closingSteps }
 
 /-- The Reformed position without the reading of Romans 9:16 as being about
@@ -116,7 +209,9 @@ def reformedWithoutRomansReading : ArgumentPackage Claim :=
   { reformed with
     name := "Reformed, minus Romans 9:16 as being about salvation"
     premises :=
-      caseOf [graceLine, ephesiansLine, giftLine, romansLine.onGrounds [p .romans9_16]]
+      caseOf
+        [ graceLine, ephesiansLine, giftLine, romansLine.onGrounds [p .romans9_16]
+        , textsOfResistanceLine ]
         reformedShared closingSteps }
 
 /-- The Reformed position without either reading. Every text is kept, and every
@@ -128,7 +223,7 @@ def reformedWithoutEitherReading : ArgumentPackage Claim :=
     premises :=
       caseOf
         [ graceLine, ephesiansLine.onGrounds [p .ephesians2_8to9], giftLine
-        , romansLine.onGrounds [p .romans9_16] ]
+        , romansLine.onGrounds [p .romans9_16], textsOfResistanceLine ]
         reformedShared closingSteps }
 
 end TestimonyArguments.SolaGratia

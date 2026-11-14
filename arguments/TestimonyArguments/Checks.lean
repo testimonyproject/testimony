@@ -80,7 +80,10 @@ Sola fide
     justificationByFaithAlone excludes baptismIsInstrumentalCause
   the whole ground: held by 3, used of a text or voice by 6; derives nothing
 Sola gratia — Ephesians 2:8–9 and Romans 9:16
-  joins: 0, with no definition: 0
+  joins: 1, with no definition: 1
+  not a ground: held by 2, used of a text or voice by 0; derives nothing
+  the only means: held by 1, used of a text or voice by 0; derives nothing
+  the whole ground: held by 2, used of a text or voice by 0; derives nothing
 Sola scriptura
   joins: 3, with no definition: 3
   not a ground: held by 1, used of a text or voice by 0; derives nothing
@@ -96,11 +99,11 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 208, and 0 undecided -/
+/-- info: every package has a model with its postulates: 219, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 105, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 107, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
@@ -109,13 +112,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2398 definitions, 210 entries
+info: every entry is a tagged definition, and every key names one: 2404 definitions, 214 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1897 definitions, 210 entries
+info: every entry is a tagged definition, and every key names one: 1979 definitions, 214 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
@@ -132,6 +135,7 @@ BornOfAVirgin.wegnerDispute.finite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
 SolaFide.jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 SolaFide.jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 SolaFide.solaFideDispute.finite: 67 I, 30 RA, 33 CA, 2 PA, 164 edges
+SolaGratia.solaGratiaDispute.finite: 36 I, 13 RA, 33 CA, 0 PA, 101 edges
 SolaScriptura.mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
 Trinity.processionDispute.finite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges

@@ -34,6 +34,15 @@ private def trent (loc : String) : Reference :=
 private def waterworth (page : Nat) : Reference :=
   .work waterworthTrent (.page page)
 
+/-- The Formula of Concord or the Augsburg Confession, by article and paragraph,
+in the Triglot's English. -/
+private def concord (loc : String) : Reference :=
+  .work concordiaTriglotta (.sectionRef loc)
+
+/-- Dort, from Schaff's volume, at the page of its English. -/
+private def dort (page : Nat) : Reference :=
+  .work schaffCreeds3 (.page page)
+
 /-- A text, as Scripture states it: no party disputes what it says. -/
 private def text (refs : List ScriptureCitation) : Source :=
   { primary := .scripture refs
@@ -138,16 +147,127 @@ def dissentInference : Source :=
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- The rating of the Remonstrants' step from Acts 7:51 to "grace is not
-effectual of itself": `wellSupported`. Grant that what Stephen's hearers resisted
-was the grace that saves, and no reader was found who denies that grace can
-then be resisted. The Reformed deny the ground instead, reading the resistance
-as made to the preached word and not to the inward work of grace. -/
+/-- The rating of the step from the texts of resistance to "the Spirit's work is
+resisted": `consensus`. Every party grants it. Dort says that believers "grieve
+the Holy Spirit" (V, article 5); Calvin, on Ephesians 4:30, that "we grieve him
+when we do not follow his guidance"; the Formula of Concord, citing Acts 7:51,
+that "those who always resist the Holy Ghost … are not converted" (Solid
+Declaration II.60). -/
+def textsOfResistanceInference : Source :=
+  { primary := dort 593
+  , supporting :=
+      [.work calvinGalatiansEphesians (.page 301), concord "Solid Declaration II.60"]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .consensus }
+
+/-- The rating of the Remonstrants' step from resistance, read as resistance to
+the grace that saves, to "that grace can be finally refused": `wellSupported`.
+Grant that what Stephen's hearers resisted was the grace that saves, and no
+reader was found who denies that it can be finally refused. The Reformed deny
+the ground instead, reading the resistance as made to the preached word and not
+to the inward work of grace. The word "resist" carries two senses here,
+resisting for a time and refusing to the end, and the step needs the second. -/
 def resistanceInference : Source :=
   { primary := .work schaffCreeds3 (.sectionRef "Five Arminian Articles (1610), art. 4")
   , supporting := [.work arminiusWorks1 (.page 600)]
   , tradition := .arminian
   , confidence := .wellSupported }
+
+/-- The rating of the step from grieving the Spirit, read as able to end in
+losing him, to "the grace that saves can be finally refused": `wellSupported`.
+The Formula of Concord holds both: the obstinate "do not receive, but grieve and
+lose, the Holy Ghost" (Solid Declaration II.83). Dort denies the ground instead:
+God "does not wholly withdraw the Holy Spirit from his own people" (V, article
+6). -/
+def griefInference : Source :=
+  { primary := concord "Solid Declaration II.83"
+  , supporting := [concord "Solid Declaration XI.42", dort 593]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- **The rating of the step from the unforgivable sin to final refusal:
+`disputed`.** Augustine grants both grounds. The sin that is never forgiven is
+impenitence: "This impenitence then is 'the blasphemy of the Spirit, which shall
+not be forgiven'" (Sermon 71, §20). And he denies the conclusion: God is the one
+"whom no man's will resists when He wills to give salvation" (*On Rebuke and
+Grace*, ch. 43). The grace refused to the end is, for him, not the grace that
+saves. -/
+def blasphemyInference : Source :=
+  { primary := .work npnfAugustineSermons (.page 325)
+  , supporting := [.work npnfAugustineAntiPelagian (.sectionRef "On Rebuke and Grace, ch. 43")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .disputed }
+
+/-- The rating of the step from "can be finally refused" to "is not effectual of
+itself": `consensus`. It is what the two claims say. The Reformed hold the
+second because they deny the first, and the Remonstrants deny the second because
+they hold the first. -/
+def refusalInference : Source :=
+  { primary := .work schaffCreeds3 (.sectionRef "Five Arminian Articles (1610), art. 4")
+  , supporting := [.work schaffCreeds3 (.sectionRef "Canons of Dort, III/IV, art. 12")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .consensus }
+
+/-- The rating of the step from God's work alone to the will's passivity:
+`wellSupported`. The Lutherans, who part from Dort at the next step, grant this
+one: man "does nothing whatever towards it, but only suffers what God works in
+him" (Formula of Concord, Solid Declaration II.89). No reader was found who
+grants that God alone regenerates and denies that the will is passive in it.
+Aquinas holds that in the justification of one who has the use of reason, God's
+motion "does not take place without a movement of the free-will" (I-II q.113
+a.3); that is passivity in another sense, the will moved and so moving, which
+is not what this step denies. -/
+def passiveInference : Source :=
+  { primary := concord "Solid Declaration II.89"
+  , supporting := [.work schaffCreeds3 (.sectionRef "Canons of Dort, III/IV, art. 12")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- **The rating of the step from God's work alone to "grace cannot be finally
+refused": `disputed`.** The Formula of Concord grants the ground: conversion "is
+not only in part, but altogether an operation, gift, and present, and work of
+the Holy Ghost alone" (Solid Declaration II.89). And it denies the conclusion:
+"God does not force man to become godly (for those who always resist the Holy
+Ghost … as Stephen says of the hardened Jews, Acts 7:51, are not converted)"
+(II.60); the perverse will "resists the Holy Ghost, who wishes to be
+efficacious" (XI.41). -/
+def effectualInference : Source :=
+  { primary := concord "Solid Declaration II.89"
+  , supporting := [concord "Solid Declaration II.60", concord "Solid Declaration XI.41"]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .disputed }
+
+/-! ### Two readings of the ability God gives
+
+Augustine distinguishes two kinds of help. "The aid without which a thing does
+not come to pass is one thing, and the aid by which a thing comes to pass is
+another." Adam was given the first, "not that by which it should be brought
+about that he should persevere, but that without which he could not of free will
+persevere"; the saints are given the second, "so that by means of this gift they
+cannot help persevering" (*On Rebuke and Grace*, ch. 34). The third way's claim,
+that God gives the ability to believe as Adam was made able, can be read as
+either. -/
+
+/-- Who reads the ability as Adam's kind of help, one that makes believing
+possible and can be refused: Wesley, for whom "a measure of free-will" is
+"supernaturally restored to every man", with "power either to resist or yield to
+the grace of God" (*Predestination Calmly Considered*, §§XLVI–XLVII). -/
+def asAidWithoutWhichSource : Source :=
+  { primary := .work wesleyWorks9 (.page 397)
+  , supporting := [.work npnfAugustineAntiPelagian (.page 485)]
+  , tradition := .arminian
+  , confidence := .disputed }
+
+/-- Who reads the ability as the saints' kind of help, one that brings believing
+about: Augustine, of the grace given to the saints (*On Rebuke and Grace*,
+ch. 34), and Dort, for which faith is God's gift "not on account of its being
+offered by God to man, to be accepted or rejected at his pleasure, but because it
+is in reality conferred" (III/IV, article 14). -/
+def asAidByWhichSource : Source :=
+  { primary := .work npnfAugustineAntiPelagian (.page 485)
+  , supporting := [dort 591]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
 
 /-! ### The citations -/
 
@@ -177,6 +297,85 @@ def baseCite : Claim → AtomMeta
     { label := "Acts 7:51 — you always resist the Holy Spirit"
     , kind := .textual
     , source := text [{ ref := .verse ⟨.acts, 7, 51⟩ }] }
+  | .ephesians4_30 =>
+    { label := "Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed"
+    , kind := .textual
+    , source := text [{ ref := .verse ⟨.ephesians, 4, 30⟩ }] }
+  | .thessalonians5_19 =>
+    { label := "1 Thessalonians 5:19 — do not quench the Spirit"
+    , kind := .textual
+    , source := text [{ ref := .verse ⟨.firstThessalonians, 5, 19⟩ }] }
+  | .matthew12_31to32 =>
+    { label := "Matthew 12:31–32 — the blasphemy against the Spirit will not be forgiven"
+    , kind := .textual
+    , source := text [{ ref := .range ⟨.matthew, 12, 31, 12, 32⟩ }] }
+  | .genesis2_16to17 =>
+    { label :=
+        "Genesis 2:16–17 — of the tree of the knowledge of good and evil you shall not eat"
+    , kind := .textual
+    , source := text [{ ref := .range ⟨.genesis, 2, 16, 2, 17⟩ }] }
+  | .theSpiritIsResisted =>
+    { label := "The Holy Spirit's work is resisted, by unbelievers and by believers"
+    , kind := .theological
+    , source :=
+        { primary := dort 593
+        , supporting := [concord "Solid Declaration II.60"]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .grievingCanLoseTheSpirit =>
+    { label := "Those who obstinately resist the Spirit can grieve and lose him"
+    , kind := .interpretive
+      -- `disputed`: Dort denies that God wholly withdraws the Spirit from his
+      -- own (V, article 6).
+    , source :=
+        { primary := concord "Solid Declaration II.83"
+        , supporting := [concord "Solid Declaration XI.42"]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .blasphemyIsFinalRefusalOfGrace =>
+    { label :=
+        "The blasphemy against the Spirit is impenitence to the end: grace refused till death"
+    , kind := .interpretive
+      -- `disputed`: Calvin rejects it outright, "Those who define it to be
+      -- impenitence may be refuted without any difficulty", and takes the sin
+      -- to be knowing contempt of the Spirit (Harmony, vol. 2, p. 74).
+    , source :=
+        { primary := .work npnfAugustineSermons (.page 325)
+        , supporting :=
+            [ .work aquinasSumma (.sectionRef "II-II q.14 a.1")
+            , .work calvinHarmony2 (.page 74) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .savingGraceCanBeFinallyRefused =>
+    { label := "The grace that saves can be finally refused"
+    , kind := .theological
+    , source :=
+        { primary := .work schaffCreeds3 (.sectionRef "Five Arminian Articles (1610), art. 4")
+        , supporting := [concord "Solid Declaration XI.41", .work wesleyWorks9 (.page 397)]
+        , tradition := .arminian
+        , confidence := .disputed } }
+  | .abilityToBelieveIsGiven =>
+    { label := "God gives the ability to believe, as Adam was made able to stand or fall"
+    , kind := .theological
+      -- `wellSupported`: Augustine grants that Adam had the help without which
+      -- he could not persevere, and Wesley that preventing grace restores to
+      -- every person a measure of free will; Dort grants that faith is God's
+      -- gift and holds it to be more than an ability. What kind of help it is
+      -- is the dilemma, not this rating.
+    , source :=
+        { primary := .work npnfAugustineAntiPelagian (.page 484)
+        , supporting := [.work wesleySermons (.sectionRef "Sermon 85, III.4")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .faithAloneReceivesGrace =>
+    { label := "Grace is received by faith alone"
+    , kind := .theological
+      -- `disputed`: Trent condemns it (Session VI, canon 9).
+    , source :=
+        { primary := concord "Augsburg Confession IV.1–3"
+        , supporting := [.work wesleySermons (.sectionRef "Sermon 1, III.3"), trent "canon 9"]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
   | .zechariah1_3WithLamentations5_21 =>
     { label :=
         "Zechariah 1:3 (\"return to me, and I will return to you\") with Lamentations 5:21 " ++
@@ -248,7 +447,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .conversionIsGodsWorkAlone =>
-    { label := "Conversion is God's work alone: grace brings about the sinner's consent"
+    { label := "Conversion is God's work alone: God regenerates, and the will does nothing to it"
     , kind := .theological
     , source :=
         { primary := .work schaffCreeds3 (.sectionRef "Canons of Dort, III/IV, arts. 10–12")
@@ -312,6 +511,46 @@ def remonstrantCite : Claim → AtomMeta
         { primary := .work arminiusWorks1 (.page 681)
         , tradition := .arminian
         , confidence := .wellSupported } }
+  | a => baseCite a
+
+/-- The Lutheran citations: the Formula of Concord for what the Lutherans hold,
+in its own words. -/
+def lutheranCite : Claim → AtomMeta
+  | .conversionIsGodsWorkAlone =>
+    { label := "Conversion is God's work alone: God regenerates, and the will does nothing to it"
+    , kind := .theological
+    , source :=
+        { primary := concord "Solid Declaration II.89"
+        , supporting := [concord "Solid Declaration II.90"]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .savingGraceCanBeFinallyRefused =>
+    { label := "The grace that saves can be finally refused"
+    , kind := .theological
+    , source :=
+        { primary := concord "Solid Declaration XI.41"
+        , supporting := [concord "Solid Declaration II.60", concord "Solid Declaration XI.78"]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | a => baseCite a
+
+/-- The Wesleyan citations: Wesley for what Wesley holds. -/
+def wesleyanCite : Claim → AtomMeta
+  | .abilityToBelieveIsGiven =>
+    { label := "God gives the ability to believe, as Adam was made able to stand or fall"
+    , kind := .theological
+    , source :=
+        { primary := .work wesleySermons (.sectionRef "Sermon 85, III.4")
+        , supporting := [.work wesleyWorks9 (.page 397)]
+        , tradition := .arminian
+        , confidence := .wellSupported } }
+  | .savingGraceCanBeFinallyRefused =>
+    { label := "The grace that saves can be finally refused"
+    , kind := .theological
+    , source :=
+        { primary := .work wesleyWorks9 (.page 397)
+        , tradition := .arminian
+        , confidence := .disputed } }
   | a => baseCite a
 
 end TestimonyArguments.SolaGratia

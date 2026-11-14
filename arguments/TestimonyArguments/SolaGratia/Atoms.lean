@@ -39,6 +39,45 @@ inductive Claim
   resist the Holy Spirit." The Remonstrants' text, cited in their fourth
   article. -/
   | acts7_51
+  /-- Ephesians 4:30: "And do not grieve the Holy Spirit of God, by whom you were
+  sealed for the day of redemption." Paul, to believers. -/
+  | ephesians4_30
+  /-- 1 Thessalonians 5:19: "Do not quench the Spirit." Paul, to believers. -/
+  | thessalonians5_19
+  /-- Matthew 12:31–32: "every sin and blasphemy will be forgiven people, but the
+  blasphemy against the Spirit will not be forgiven … either in this age or in
+  the age to come." Jesus, answering the Pharisees who said he cast out demons
+  by Beelzebul. The unforgivable sin is in the Gospels, not in Paul. -/
+  | matthew12_31to32
+  /-- Genesis 2:16–17: God commanded the man that he might eat of every tree of
+  the garden, "but of the tree of the knowledge of good and evil you shall not
+  eat". The man was made able to obey and able to disobey. -/
+  | genesis2_16to17
+  /-- The Holy Spirit's work is resisted: Stephen's hearers resisted him, and
+  believers can grieve and quench him. What the texts of resistance say
+  together, and what every party grants. -/
+  | theSpiritIsResisted
+  /-- Those who obstinately resist the Spirit, believers among them, can grieve
+  him and lose him. The Formula of Concord's reading of Ephesians 4:30; Dort
+  holds that God "does not wholly withdraw the Holy Spirit from his own people,
+  even in their melancholy falls" (V, article 6). -/
+  | grievingCanLoseTheSpirit
+  /-- The blasphemy against the Spirit is the final refusal of the grace that is
+  offered, persisted in until death. Augustine's reading: the sin that is never
+  forgiven is impenitence to the end. -/
+  | blasphemyIsFinalRefusalOfGrace
+  /-- The grace that saves can be finally refused: one to whom it is given may
+  refuse it to the end. What the Remonstrants, the Lutherans and Wesley hold,
+  each on grounds of their own. Its meaning excludes the conclusion's second
+  part. -/
+  | savingGraceCanBeFinallyRefused
+  /-- God gives the ability to believe: as Adam was made able to stand or to
+  fall, so the one who hears the gospel is made able to receive it. The third
+  way, stated without saying what kind of help the ability is. -/
+  | abilityToBelieveIsGiven
+  /-- Grace is received by faith alone. Sola fide, which the Reformed, the
+  Lutherans and Wesley hold, and Trent condemns (Session VI, canon 9). -/
+  | faithAloneReceivesGrace
   /-- Zechariah 1:3, "Return to me … and I will return to you", read with
   Lamentations 5:21, "Restore us to yourself, O Lord, that we may be restored."
   Trent pairs the two (Session VI, chapter 5): by the first "we are admonished of
@@ -72,10 +111,12 @@ inductive Claim
   /-- The free will, moved and roused by God, can refuse its assent if it
   wishes. Trent, Session VI, canon 4. -/
   | freeWillCanDissent
-  /-- Conversion is God's work alone: the grace that turns a sinner does not
-  wait on the sinner's consent but brings it about. What each Reformed strand
-  delivers, and what the second and third parts of the conclusion unpack. The
-  older word for it is monergism, "one at work". -/
+  /-- Conversion is God's work alone: God is the one who regenerates, and the
+  sinner's will does nothing to bring it about. What each Reformed strand
+  delivers, and what the Lutherans hold too. It does not by itself say that the
+  grace which does this cannot be refused; the step from here to that claim is
+  where the Lutherans part from Dort. The older word for it is monergism, "one
+  at work". -/
   | conversionIsGodsWorkAlone
   /-- Salvation is by grace and not earned: grace goes before every saving act
   and makes it possible. **The first part of the conclusion**, which Trent and

@@ -64,6 +64,24 @@ def canonicalWitnessChapters : List Chapter :=
                  , `TestimonyArguments.CanonicalWitness.Sources ]
     , legend := true } ]
 
+/-- Sola gratia, set as chapters: what it claims and why it must be stated
+sharply; the two Reformed routes and what each depends on; freedom to refuse,
+with the Lutherans, Wesley and the third way; the positions weighed; and the
+claims, as an appendix. -/
+def solaGratiaChapters : List Chapter :=
+  [ { slug := "sola-gratia", title := "Sola gratia: what everyone grants, and what divides them"
+    , modules := [`TestimonyArguments.SolaGratia] }
+  , { slug := "two-routes", title := "Two routes: Ephesians 2 and Romans 9"
+    , modules := [ `TestimonyArguments.SolaGratia.Lines, `TestimonyArguments.SolaGratia.Packages
+                 , `TestimonyArguments.SolaGratia.Results ] }
+  , { slug := "freedom-to-refuse", title := "Freedom to refuse, and the ability God gives"
+    , modules := [`TestimonyArguments.SolaGratia.ThirdWay] }
+  , { slug := "weighing", title := "Weighing the positions"
+    , modules := [`TestimonyArguments.SolaGratia.Dispute] }
+  , { slug := "claims", title := "Appendix: the claims and their sources"
+    , modules := [`TestimonyArguments.SolaGratia.Atoms, `TestimonyArguments.SolaGratia.Sources]
+    , legend := true } ]
+
 /-- Spirit baptism, set as chapters: what the question is and who answers it;
 each view from its own texts, with what Acts can carry; the views weighed
 against each other; and the claims, as an appendix. -/
@@ -118,7 +136,8 @@ def arguments : List Argument :=
     , title := "Sola scriptura" }
   , { ns := `TestimonyArguments.SolaGratia
     , slug := "sola-gratia"
-    , title := "Sola gratia — Ephesians 2:8–9 and Romans 9:16" }
+    , title := "Sola gratia — Ephesians 2:8–9 and Romans 9:16"
+    , chapters := solaGratiaChapters }
   , { ns := `TestimonyArguments.SpiritBaptism
     , slug := "spirit-baptism"
     , title := "Spirit baptism — at conversion, after it, or in the sacraments"
