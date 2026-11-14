@@ -142,6 +142,105 @@ inductive Claim
   authority and submission between the Father and the Son, as the persons are,
   not only in the work of salvation. -/
   | eternalAuthorityAndSubmission
+  /-- There is one God: "Hear, O Israel: The LORD our God, the LORD is one"
+  (Deuteronomy 6:4); "there is no God but one" (1 Corinthians 8:4). -/
+  | oneGod
+  /-- John 1:1: "In the beginning was the Word, and the Word was with God". -/
+  | wordWithGod
+  /-- John 1:1: "and the Word was God" (καὶ θεὸς ἦν ὁ λόγος). The Greek word for
+  God, θεός, stands first and has no article. The New World Translation renders
+  it "and the Word was a god". -/
+  | wordWasGod
+  /-- John 1:3: "All things were made through him, and without him was not any
+  thing made that was made." -/
+  | allThingsThroughTheWord
+  /-- John 20:28: "Thomas answered him, 'My Lord and my God!'" -/
+  | thomasMyLordAndMyGod
+  /-- Acts 5:3–4: "Ananias, why has Satan filled your heart to lie to the Holy
+  Spirit …? You have not lied to man but to God." -/
+  | lyingToTheSpirit
+  /-- The Spirit speaks of himself as "I" and can be grieved: "the Holy Spirit
+  said, 'Set apart for me Barnabas and Saul for the work to which I have called
+  them'" (Acts 13:2); "do not grieve the Holy Spirit of God" (Ephesians 4:30). -/
+  | spiritSpeaksAsHimself
+  /-- John 17:5: "Father, glorify me in your own presence with the glory that I
+  had with you before the world existed." -/
+  | gloryBeforeTheWorld
+  /-- Matthew 28:19: "baptizing them in the name of the Father and of the Son and
+  of the Holy Spirit". -/
+  | oneNameOfThree
+  /-- Colossians 1:15: the Son "is the image of the invisible God, the firstborn
+  of all creation." -/
+  | firstbornOfAllCreation
+  /-- **The Nicene reading of "the Word was God" (John 1:1).** "Nicene", here and
+  below, is named for the creed of Nicaea (325), which confessed the Son of one
+  being with the Father. God (θεός), without "the", says what the Word is: he has
+  the nature of the one God. Harner: "the logos [the Word] has the nature of theos
+  [God]" (as the New World Translation's reference edition quotes him). -/
+  | wordIsGodByNature
+  /-- **The Nicene reading of John 1:3.** Everything that was made was made through
+  the Word, so the Word himself is not among the things made. Augustine: "that by
+  which all things were made could not be made by itself". -/
+  | wordIsUnmade
+  /-- **The Nicene reading of Acts 5:3–4.** Peter names the Spirit that Ananias
+  lied to as God: to lie to the Holy Spirit is to lie, "not to man but to God".
+  Calvin: "the divinity of the Holy Ghost is manifestly proved by this form of
+  speech". -/
+  | spiritLiedToIsGod
+  /-- **The Nicene reading of the Spirit's speech.** The Spirit who says "set apart
+  for me" and can be grieved is a person, not a power or a force. -/
+  | spiritIsAPerson
+  /-- **The Nicene reading of John 1:1 and 17:5.** "With God" and "the glory that
+  I had with you" speak of one person beside another before the world was made,
+  not of a thought or a plan in God's mind. -/
+  | wordIsAnotherWithGod
+  /-- **The Nicene reading of Matthew 28:19.** Three are named, the Father, the
+  Son and the Holy Spirit, and the one "name" is theirs together. -/
+  | threeNamedInOneName
+  /-- **The Witnesses' reading of "the Word was God" (John 1:1).** God (θεός),
+  without "the", means "a god": the Word is "'divine,' 'godlike,' 'a god,' but not
+  Almighty God" (*Should You Believe in the Trinity?*). -/
+  | wordIsAGod
+  /-- **The Witnesses' reading of Colossians 1:15.** "Firstborn of all creation"
+  means that the Son is the first thing God created, through whom he made all
+  other things: "Jesus was created by God as the beginning of God's invisible
+  creations". The New World Translation renders Colossians 1:16 "all other
+  things were created". -/
+  | firstbornIsFirstCreated
+  /-- **The Witnesses' reading of the Spirit.** The holy spirit is God's active
+  force, not a person; where Scripture has it speak or be grieved, it is
+  personified: "nor does personifying the holy spirit make it a spirit
+  person". -/
+  | spiritIsGodsForce
+  /-- **The Oneness reading of John 1:1.** The Word is God's own thought and
+  self-expression, "with God" as a man's word is with him, and not a second
+  person beside him. Bernard: "the Word was the thought, plan, or mind of
+  God". -/
+  | wordIsGodsThought
+  /-- **The Oneness reading of John 17:5.** The glory the Son "had with" the
+  Father before the world was his in God's plan and foreknowledge, not the glory
+  of a second person then present. -/
+  | gloryInGodsPlan
+  /-- **The Oneness reading of Matthew 28:19.** "The name" is singular, and it is
+  the name of Jesus, in which the apostles then baptized (Acts 2:38). Father, Son
+  and Holy Spirit are titles of the one God, not names of three persons. -/
+  | oneNameIsJesus
+  /-- **What LST, and the Oneness believers with it, conclude of the Word.** The
+  Word who became flesh in Jesus (John 1:14) is God: of the nature of the one
+  God, and not created. -/
+  | wordIsGod
+  /-- **What LST, and the Oneness believers with it, conclude of the Spirit.** The
+  Holy Spirit is God. -/
+  | spiritIsGod
+  /-- **What LST concludes of the persons.** The Father, the Son and the Holy
+  Spirit are three persons, none of them the other. -/
+  | threePersons
+  /-- **The Witnesses' conclusion.** The Son is a creature, the first and greatest
+  of God's works, and so is not God. -/
+  | sonIsACreature
+  /-- **LST's confession.** "The Father is God, the Son is God, and the Holy
+  Spirit is God; they are personally distinct without being separate gods." -/
+  | triuneGod
 deriving DecidableEq, Repr
 
 end TestimonyArguments.Trinity

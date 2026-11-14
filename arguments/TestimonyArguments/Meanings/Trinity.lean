@@ -35,7 +35,13 @@ def all : List Claim :=
   , .sonSubjectAtTheEnd, .sonInTheFormOfGod, .realOrder, .greaterMeansLesserDivinity
   , .lessInTheFormOfAServant, .greaterAsBegetter, .greaterAsMediatorsState, .orderIsEternal
   , .sonEqualInPower, .subordinationDeniesEqualPower, .sonLesserInDivinity
-  , .eternalAuthorityAndSubmission ]
+  , .eternalAuthorityAndSubmission
+  , .oneGod, .wordWithGod, .wordWasGod, .allThingsThroughTheWord, .thomasMyLordAndMyGod
+  , .lyingToTheSpirit, .spiritSpeaksAsHimself, .gloryBeforeTheWorld, .oneNameOfThree
+  , .firstbornOfAllCreation, .wordIsGodByNature, .wordIsUnmade, .spiritLiedToIsGod
+  , .spiritIsAPerson, .wordIsAnotherWithGod, .threeNamedInOneName, .wordIsAGod
+  , .firstbornIsFirstCreated, .spiritIsGodsForce, .wordIsGodsThought, .gloryInGodsPlan
+  , .oneNameIsJesus, .wordIsGod, .spiritIsGod, .threePersons, .sonIsACreature, .triuneGod ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -44,8 +50,8 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 instance meanings : HasMeanings Claim :=
   HasMeanings.ofLabels "The Triune God" all cite all_complete
 
-/-- **None of the 31 atoms is analysed yet.** -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (0, 31) := by decide
+/-- **None of the 58 atoms is analysed yet.** -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (0, 58) := by decide
 
 /-- **No joins yet**: with no meaning analysed, no claim's meaning excludes or
 entails another's, so the argument's checks hold no postulates. Analysing a

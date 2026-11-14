@@ -51,6 +51,8 @@
   - [Weighing the four views](./arguments/spirit-baptism/weighing.md)
   - [Appendix: the claims and their sources](./arguments/spirit-baptism/claims.md)
 - [The Triune God — what Scripture settles, and what it leaves open](./arguments/trinity.md)
+  - [Are the Son and the Spirit God, and three persons?](./arguments/trinity/the-deity.md)
+  - [Weighing the positions on the deity and the persons](./arguments/trinity/weighing-the-deity.md)
   - [Is the Son less than the Father?](./arguments/trinity/the-order.md)
   - [Weighing the readings of the order texts](./arguments/trinity/weighing-the-order.md)
   - [Does the Spirit proceed from the Son?](./arguments/trinity/the-procession.md)

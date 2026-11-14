@@ -37,6 +37,12 @@ inductive Tradition
   | romanCatholic
   /-- Eastern Orthodox theology. -/
   | easternOrthodox
+  /-- The teaching of Jehovah's Witnesses, as the Watch Tower Bible and Tract
+  Society publishes it. -/
+  | jehovahsWitness
+  /-- Oneness Pentecostal theology: one God, who is one person, revealed as Father,
+  Son and Holy Spirit. -/
+  | onenessPentecostal
   /-- The adversarial trial: testimony given, and the cross-examination that
   tests it. For cases outside theology, where the parties are a witness and
   counsel rather than a tradition of reading. -/

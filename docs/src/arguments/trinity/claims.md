@@ -55,6 +55,33 @@ where it ends, or says that no such reader was found after a search for one.
 | <a id="claim-29"></a>\\(P_{29}\\) | Eternal subordination in authority would deny the Son's equality in power | theological | Christian, hist.-gramm., disputed | [Giles 2008](../../bibliography.md#giles-ets-trinity-2008), p. 323; [Giles 2006](../../bibliography.md#giles-jesus-and-the-father-2006) |
 | <a id="claim-30"></a>\\(P_{30}\\) | The Son is less than the Father in his divinity | theological | Christian, hist.-gramm., disputed | [Schaff and Wace 1892](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-3-1892), §Theodoret, Ecclesiastical History I.4 |
 | <a id="claim-31"></a>\\(P_{31}\\) | There is an eternal relationship of authority and submission of Father and Son | theological | Christian, hist.-gramm., disputed | [Grudem 2016](../../bibliography.md#grudem-ets-trinity-2016); [Ware 2005](../../bibliography.md#ware-father-son-holy-spirit-2005) |
+| <a id="claim-32"></a>\\(P_{32}\\) | Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one" ※ | textual | Christian, hist.-gramm., consensus | Deut 6:4; 1 Cor 8:4 |
+| <a id="claim-33"></a>\\(P_{33}\\) | John 1:1 — "the Word was with God" ※ | textual | Christian, hist.-gramm., consensus | John 1:1 |
+| <a id="claim-34"></a>\\(P_{34}\\) | John 1:1 — "and the Word was God": God (θεός), without "the" ※ | textual | Christian, hist.-gramm., consensus | John 1:1 |
+| <a id="claim-35"></a>\\(P_{35}\\) | John 1:3 — "all things were made through him" ※ | textual | Christian, hist.-gramm., consensus | John 1:3 |
+| <a id="claim-36"></a>\\(P_{36}\\) | John 20:28 — "Thomas answered him, 'My Lord and my God!'" ※ | textual | Christian, hist.-gramm., consensus | John 20:28 |
+| <a id="claim-37"></a>\\(P_{37}\\) | Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God" ※ | textual | Christian, hist.-gramm., consensus | Acts 5:3; Acts 5:4 |
+| <a id="claim-38"></a>\\(P_{38}\\) | Acts 13:2; Ephesians 4:30 — the Spirit says "set apart for me", and is grieved ※ | textual | Christian, hist.-gramm., consensus | Acts 13:2; Eph 4:30 |
+| <a id="claim-39"></a>\\(P_{39}\\) | John 17:5 — "the glory that I had with you before the world existed" ※ | textual | Christian, hist.-gramm., consensus | John 17:5 |
+| <a id="claim-40"></a>\\(P_{40}\\) | Matthew 28:19 — "in the name of the Father and of the Son and of the Holy Spirit" ※ | textual | Christian, hist.-gramm., consensus | Matt 28:19 |
+| <a id="claim-41"></a>\\(P_{41}\\) | Colossians 1:15 — "the firstborn of all creation" ※ | textual | Christian, hist.-gramm., consensus | Col 1:15 |
+| <a id="claim-42"></a>\\(P_{42}\\) | In "the Word was God" (John 1:1) the Word has the nature of the one God | interpretive | Christian, hist.-gramm., disputed | [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God |
+| <a id="claim-43"></a>\\(P_{43}\\) | By John 1:3 the Word is not among the things made | interpretive | Christian, hist.-gramm., disputed | [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11 |
+| <a id="claim-44"></a>\\(P_{44}\\) | In Acts 5:3–4 Peter names the Holy Spirit God | interpretive | Reformed Protestant, disputed | [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198 |
+| <a id="claim-45"></a>\\(P_{45}\\) | The Spirit who speaks and is grieved is a person, not a force | interpretive | Christian, hist.-gramm., disputed | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God |
+| <a id="claim-46"></a>\\(P_{46}\\) | "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan | interpretive | Christian, hist.-gramm., disputed | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27 |
+| <a id="claim-47"></a>\\(P_{47}\\) | In Matthew 28:19 three are named, and the one name is theirs together | interpretive | Christian, hist.-gramm., disputed | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God |
+| <a id="claim-48"></a>\\(P_{48}\\) | In "the Word was God" (John 1:1) God, without "the", means "a god" | interpretive | Jehovah's Witnesses, disputed | [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013) |
+| <a id="claim-49"></a>\\(P_{49}\\) | "Firstborn of all creation" means the first thing God created | interpretive | Jehovah's Witnesses, disputed | [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14 |
+| <a id="claim-50"></a>\\(P_{50}\\) | The holy spirit is God's active force, personified, not a person | interpretive | Jehovah's Witnesses, disputed | [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23 |
+| <a id="claim-51"></a>\\(P_{51}\\) | The Word of John 1:1 is God's thought and self-expression, not a second person | interpretive | Oneness Pentecostal, disputed | [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1 |
+| <a id="claim-52"></a>\\(P_{52}\\) | The glory of John 17:5 was the Son's in God's plan before the world | interpretive | Oneness Pentecostal, disputed | [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus |
+| <a id="claim-53"></a>\\(P_{53}\\) | The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles | interpretive | Oneness Pentecostal, disputed | [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19 |
+| <a id="claim-54"></a>\\(P_{54}\\) | The Word who became flesh in Jesus is God, of God's nature and not created | theological | Christian, hist.-gramm., disputed | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion |
+| <a id="claim-55"></a>\\(P_{55}\\) | The Holy Spirit is God | theological | Christian, hist.-gramm., disputed | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, The Holy Ghost |
+| <a id="claim-56"></a>\\(P_{56}\\) | The Father, the Son and the Holy Spirit are three persons | theological | Christian, hist.-gramm., disputed | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §II.3 |
+| <a id="claim-57"></a>\\(P_{57}\\) | The Son is a creature, the first of God's works, and not God | theological | Jehovah's Witnesses, disputed | [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14 |
+| <a id="claim-58"></a>\\(P_{58}\\) | The Father, the Son and the Spirit are God: three persons, one God | theological | Christian, hist.-gramm., disputed | [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God |
 
 </div>
 
@@ -414,6 +441,178 @@ def onEqualPower : Source :=
     supporting :=
       [Reference.work gilesJesusAndTheFather, Reference.work grudemEts2016],
     tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+#### Ratings for the steps over the deity and the persons
+
+<a id="onTheWordsDeity"></a>
+**`onTheWordsDeity`**
+
+**The step to the Word's deity is rated `disputed`**, because a reader grants
+its grounds and denies where it ends. Anthony Buzzard, a biblical unitarian,
+grants that in John 1:1 the Word has God's own nature, and more: "For John the
+word was the one God Himself, not a second person" (2001, p. 19). What he denies
+is that Jesus is that Word as a person who was God: "There was no Son of God
+until the Messiah was conceived in history" (p. 17). So the step from the Word's
+nature to "the Word who became flesh in Jesus is God" is where he parts from LST.
+The Oneness writer David Bernard grants the grounds and draws the conclusion:
+"Jesus is the one God" (ch. 4). The Witnesses deny the grounds.
+
+```lean
+def onTheWordsDeity : Source :=
+  {
+    primary :=
+      Reference.work kibbeyLivingSystematicTheology lstOnTheTriuneGod,
+    supporting :=
+      [Reference.work bernardOnenessOfGod
+          (Bib.Locus.sectionRef "ch. 4, Conclusion"),
+        Reference.work buzzardCaveatLector (Bib.Locus.pages 17 19)],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.disputed }
+```
+
+<a id="onTheSpiritsDeity"></a>
+**`onTheSpiritsDeity`**
+
+**The step to the Spirit's deity is well supported**: its reading already
+says that Peter names the Spirit God, and no reader was found who grants that and
+denies that the Spirit is God. Calvin draws the conclusion at Acts 5:4: "the
+divinity of the Holy Ghost is manifestly proved by this form of speech". Bernard
+draws it too, from "a comparison of Acts 5:3 with 5:4" (ch. 6). The Witnesses'
+brochure does not discuss the verse; its denial that the spirit is God rests on
+its reading of the spirit as God's force.
+
+```lean
+def onTheSpiritsDeity : Source :=
+  { primary := Reference.work calvinActs1 (Bib.Locus.page 198),
+    supporting :=
+      [Reference.work kibbeyLivingSystematicTheology lstOnTheTriuneGod,
+        Reference.work bernardOnenessOfGod
+          (Bib.Locus.sectionRef "ch. 6, The Holy Ghost")],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onThePersons"></a>
+**`onThePersons`**
+
+**The step to three persons is well supported**: its readings already say
+that the Word was with God as one person with another, that the Spirit is a
+person, and that three are named. No reader was found who grants all three and
+denies that the three are persons. The Oneness and the Witnesses' dissent is from
+the readings.
+
+```lean
+def onThePersons : Source :=
+  {
+    primary :=
+      Reference.work kibbeyLivingSystematicTheology lstOnTheTriuneGod,
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onTheConfession"></a>
+**`onTheConfession`**
+
+**Drawing LST's confession together is rated `disputed`.** It does more than
+join what the three lines deliver: it adds that the three persons are one God,
+"not separate gods". Joseph Smith grants every ground, the one God of 1
+Corinthians 8:4–6 included, and denies that: "these 3 constit[ute] 3 distinct
+personages & 3 Gods", though "to us there is but one God pertaining to us"
+(discourse of 16 June 1844, as Thomas Bullock reported it).
+
+```lean
+def onTheConfession : Source :=
+  {
+    primary :=
+      Reference.work kibbeyLivingSystematicTheology lstOnTheTriuneGod,
+    supporting :=
+      [Reference.work smithDiscourse1844 (Bib.Locus.sectionRef "page [1]")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.disputed }
+```
+
+<a id="onTheCreature"></a>
+**`onTheCreature`**
+
+**The Witnesses' step to a creature is well supported**: its readings already
+say that the Word is "a god" and the first thing God made, and no reader was found
+who grants both and denies that he is a creature. The brochure draws it: "Jesus
+was created by God as the beginning of God's invisible creations" (p. 14).
+
+```lean
+def onTheCreature : Source :=
+  { primary := Reference.work watchtowerTrinity (Bib.Locus.page 14),
+    tradition := Tradition.jehovahsWitness,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onCreatureNotGod"></a>
+**`onCreatureNotGod`**
+
+**That a creature is not God is well supported**: every party grants it. The
+Witnesses hold the Son created, and so "not Almighty God" (p. 27). Augustine
+holds the Word God, and so not made: "that by which all things were made could
+not be made by itself" (*Tractates on John* I.11).
+
+```lean
+def onCreatureNotGod : Source :=
+  { primary := Reference.work watchtowerTrinity (Bib.Locus.page 14),
+    supporting :=
+      [Reference.work kibbeyLivingSystematicTheology lstOnTheTriuneGod],
+    tradition := Tradition.jehovahsWitness,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onTheForce"></a>
+**`onTheForce`**
+
+**The Witnesses' step from a force is well supported**: its reading already
+says the spirit is God's force, personified where it speaks, and no reader was
+found who grants that and holds it a person. The brochure: "nor does
+personifying the holy spirit make it a spirit person" (p. 21).
+
+```lean
+def onTheForce : Source :=
+  { primary := Reference.work watchtowerTrinity (Bib.Locus.pages 20 23),
+    tradition := Tradition.jehovahsWitness,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="onForceNotGod"></a>
+**`onForceNotGod`**
+
+**That God's force is not God himself is rated `disputed`.** The brochure
+draws it: the spirit "is not equal to God but is always at his disposition and
+subordinate to him" (p. 23). But the Christadelphian Robert Roberts grants that
+the Spirit is "an agency used by the Father in the accomplishment of His designs"
+(p. 123), and personified (p. 174), and still holds it one with God: "The Father
+and the Spirit are one", as light "is one with the body of the sun" (p. 122).
+
+```lean
+def onForceNotGod : Source :=
+  { primary := Reference.work watchtowerTrinity (Bib.Locus.page 23),
+    supporting :=
+      [Reference.work robertsChristendomAstray (Bib.Locus.pages 122 123)],
+    tradition := Tradition.jehovahsWitness, confidence := Confidence.disputed }
+```
+
+<a id="onTheOneness"></a>
+**`onTheOneness`**
+
+**The Oneness step is well supported**: its readings already say that the
+Word is God's own thought, the glory was in his plan, and the one name is Jesus'.
+No reader was found who grants all three and holds three persons. Bernard draws
+it: the titles "identify one name and therefore one being" (ch. 6).
+
+```lean
+def onTheOneness : Source :=
+  {
+    primary :=
+      Reference.work bernardOnenessOfGod
+        (Bib.Locus.sectionRef "ch. 6, Matthew 28:19"),
+    tradition := Tradition.onenessPentecostal,
     confidence := Confidence.wellSupported }
 ```
 
