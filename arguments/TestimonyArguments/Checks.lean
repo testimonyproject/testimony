@@ -92,11 +92,11 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 199, and 0 undecided -/
+/-- info: every package has a model with its postulates: 206, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 101, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 105, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
@@ -105,13 +105,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2397 definitions, 204 entries
+info: every entry is a tagged definition, and every key names one: 2397 definitions, 214 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1824 definitions, 204 entries
+info: every entry is a tagged definition, and every key names one: 1919 definitions, 214 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
@@ -130,6 +130,7 @@ SolaFide.jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 SolaFide.solaFideDispute.finite: 67 I, 30 RA, 33 CA, 2 PA, 164 edges
 SolaScriptura.mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
+Trinity.orderDispute.finite: 20 I, 8 RA, 8 CA, 0 PA, 43 edges
 Trinity.processionDispute.finite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
 and 10 hearings, drawn with the disputes they restrict
 -/
