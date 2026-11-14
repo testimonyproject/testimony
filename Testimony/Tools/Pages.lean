@@ -528,6 +528,35 @@ a check reports a missing file as stale. -/
 def readGenerated (p : System.FilePath) : IO String := do
   if ← p.pathExists then IO.FS.readFile p else pure ""
 
+/-- **Markdown quotation marks that reached the LaTeX.** The lines of a
+generated document, outside verbatim blocks, that begin with `>`: a docstring's
+block quote that the renderer set as running text instead of as a quotation,
+which the PDF shows as stray marks mid-sentence. A generator refuses to write or
+pass a document that has any. -/
+def strayQuoteLines (tex : String) : List String :=
+  let step := fun (acc : Bool × Array String) (line : String) =>
+    let (inVerbatim, found) := acc
+    let t := line.trimAscii.toString
+    if t.startsWith "{\\small\\begin{verbatim}" || t.startsWith "\\begin{verbatim}" then
+      (true, found)
+    else if t.startsWith "\\end{verbatim}" then (false, found)
+    else if !inVerbatim && t.startsWith ">" then (inVerbatim, found.push line)
+    else (inVerbatim, found)
+  ((tex.splitOn "\n").foldl step (false, #[])).2.toList
+
+/-- Report a document's stray quotation lines, if it has any, and say whether it
+is clean. -/
+def reportStrayQuotes (tool : String) (path : System.FilePath) (tex : String) : IO Bool := do
+  let stray := strayQuoteLines tex
+  if stray.isEmpty then return true
+  IO.eprintln (s!"{tool}: {path} has {stray.length} line(s) beginning with `>`, " ++
+    "a Markdown block quote not set as a quotation:")
+  for l in stray.take 5 do IO.eprintln s!"  {l}"
+  return false
+
+#guard strayQuoteLines "a\n> quoted\n\\begin{verbatim}\n> prompt\n\\end{verbatim}\nb" ==
+  ["> quoted"]
+
 /-- **Write generated files, or check that they are current**, as every
 generator here does: with `check`, report each file whose committed contents
 differ and fail; otherwise write them all. Returns the exit code. -/
